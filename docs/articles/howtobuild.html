@@ -87,7 +87,7 @@
 <p>Let's start with the tools needed to achieve the goal:</p>
 <ul>
 <li>An installed version of <strong>git for Windows</strong></li>
-<li>An installed version of .NET 6 SDK</li>
+<li>An installed version of .NET 8 SDK</li>
 <li>An installed version of Apache Maven (&gt; 3.8.1)</li>
 </ul>
 <p>Then the steps are the following (the steps are made for Windows shell):</p>
@@ -129,13 +129,6 @@ dotnet build --no-incremental --configuration Release /p:Platform=&quot;Any CPU&
 <ul>
 <li>bin
 <ul>
-<li>net5.0
-<ul>
-<li>config</li>
-<li>jars</li>
-<li>other folders</li>
-</ul>
-</li>
 <li>net6.0
 <ul>
 <li>config</li>
@@ -143,17 +136,17 @@ dotnet build --no-incremental --configuration Release /p:Platform=&quot;Any CPU&
 <li>other folders</li>
 </ul>
 </li>
-<li>net461
-<ul>
-<li>config</li>
-<li>jars</li>
-</ul>
-</li>
-<li>netcoreapp3.1
+<li>net8.0
 <ul>
 <li>config</li>
 <li>jars</li>
 <li>other folders</li>
+</ul>
+</li>
+<li>net462
+<ul>
+<li>config</li>
+<li>jars</li>
 </ul>
 </li>
 </ul>

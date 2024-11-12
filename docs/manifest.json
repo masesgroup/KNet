@@ -3254,6 +3254,36 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Admin.AdminUtils.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Admin.AdminUtils.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Admin.BrokerMetadata.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Admin.BrokerMetadata.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Admin.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Admin.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Org.Apache.Kafka.Clients.Admin.AbortTransactionOptions.yml",
       "output": {
         ".html": {
@@ -3298,6 +3328,26 @@
       "output": {
         ".html": {
           "relative_path": "api/Org.Apache.Kafka.Clients.Admin.AbstractOptions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Clients.Admin.AddRaftVoterOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Clients.Admin.AddRaftVoterOptions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Clients.Admin.AddRaftVoterResult.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Clients.Admin.AddRaftVoterResult.html"
         }
       },
       "version": ""
@@ -4444,6 +4494,16 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Clients.Admin.OffsetSpec.EarliestLocalSpec.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Clients.Admin.OffsetSpec.EarliestLocalSpec.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Org.Apache.Kafka.Clients.Admin.OffsetSpec.EarliestSpec.yml",
       "output": {
         ".html": {
@@ -4458,6 +4518,16 @@
       "output": {
         ".html": {
           "relative_path": "api/Org.Apache.Kafka.Clients.Admin.OffsetSpec.LatestSpec.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Clients.Admin.OffsetSpec.LatestTieredSpec.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Clients.Admin.OffsetSpec.LatestTieredSpec.html"
         }
       },
       "version": ""
@@ -4514,6 +4584,16 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Clients.Admin.QuorumInfo.Node.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Clients.Admin.QuorumInfo.Node.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Org.Apache.Kafka.Clients.Admin.QuorumInfo.ReplicaState.yml",
       "output": {
         ".html": {
@@ -4528,6 +4608,16 @@
       "output": {
         ".html": {
           "relative_path": "api/Org.Apache.Kafka.Clients.Admin.QuorumInfo.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Clients.Admin.RaftVoterEndpoint.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Clients.Admin.RaftVoterEndpoint.html"
         }
       },
       "version": ""
@@ -4558,6 +4648,26 @@
       "output": {
         ".html": {
           "relative_path": "api/Org.Apache.Kafka.Clients.Admin.RemoveMembersFromConsumerGroupResult.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Clients.Admin.RemoveRaftVoterOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Clients.Admin.RemoveRaftVoterOptions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Clients.Admin.RemoveRaftVoterResult.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Clients.Admin.RemoveRaftVoterResult.html"
         }
       },
       "version": ""
@@ -4824,6 +4934,26 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Clients.Consumer.AcknowledgeType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Clients.Consumer.AcknowledgeType.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Clients.Consumer.AcknowledgementCommitCallback.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Clients.Consumer.AcknowledgementCommitCallback.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Org.Apache.Kafka.Clients.Consumer.CommitFailedException.yml",
       "output": {
         ".html": {
@@ -5064,6 +5194,16 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Clients.Consumer.IAcknowledgementCommitCallback.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Clients.Consumer.IAcknowledgementCommitCallback.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Org.Apache.Kafka.Clients.Consumer.IConsumer-2.yml",
       "output": {
         ".html": {
@@ -5124,6 +5264,16 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Clients.Consumer.IShareConsumer-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Clients.Consumer.IShareConsumer-2.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Org.Apache.Kafka.Clients.Consumer.InvalidOffsetException.yml",
       "output": {
         ".html": {
@@ -5154,6 +5304,26 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Clients.Consumer.KafkaShareConsumer-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Clients.Consumer.KafkaShareConsumer-2.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Clients.Consumer.KafkaShareConsumer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Clients.Consumer.KafkaShareConsumer.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Org.Apache.Kafka.Clients.Consumer.LogTruncationException.yml",
       "output": {
         ".html": {
@@ -5178,6 +5348,26 @@
       "output": {
         ".html": {
           "relative_path": "api/Org.Apache.Kafka.Clients.Consumer.MockConsumer.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Clients.Consumer.MockShareConsumer-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Clients.Consumer.MockShareConsumer-2.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Clients.Consumer.MockShareConsumer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Clients.Consumer.MockShareConsumer.html"
         }
       },
       "version": ""
@@ -5278,6 +5468,26 @@
       "output": {
         ".html": {
           "relative_path": "api/Org.Apache.Kafka.Clients.Consumer.RoundRobinAssignor.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Clients.Consumer.ShareConsumer-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Clients.Consumer.ShareConsumer-2.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Clients.Consumer.ShareConsumer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Clients.Consumer.ShareConsumer.html"
         }
       },
       "version": ""
@@ -6474,6 +6684,16 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Common.DirectoryId.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Common.DirectoryId.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Org.Apache.Kafka.Common.ElectionType.yml",
       "output": {
         ".html": {
@@ -6704,6 +6924,16 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Common.Errors.DuplicateVoterException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Common.Errors.DuplicateVoterException.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Org.Apache.Kafka.Common.Errors.ElectionNotNeededException.yml",
       "output": {
         ".html": {
@@ -6758,6 +6988,16 @@
       "output": {
         ".html": {
           "relative_path": "api/Org.Apache.Kafka.Common.Errors.FencedMemberEpochException.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Common.Errors.FencedStateEpochException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Common.Errors.FencedStateEpochException.html"
         }
       },
       "version": ""
@@ -7024,6 +7264,16 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Common.Errors.InvalidRecordStateException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Common.Errors.InvalidRecordStateException.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Org.Apache.Kafka.Common.Errors.InvalidRegistrationException.yml",
       "output": {
         ".html": {
@@ -7084,6 +7334,16 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Common.Errors.InvalidShareSessionEpochException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Common.Errors.InvalidShareSessionEpochException.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Org.Apache.Kafka.Common.Errors.InvalidTimestampException.yml",
       "output": {
         ".html": {
@@ -7128,6 +7388,16 @@
       "output": {
         ".html": {
           "relative_path": "api/Org.Apache.Kafka.Common.Errors.InvalidUpdateVersionException.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Common.Errors.InvalidVoterKeyException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Common.Errors.InvalidVoterKeyException.html"
         }
       },
       "version": ""
@@ -7514,6 +7784,16 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Common.Errors.ShareSessionNotFoundException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Common.Errors.ShareSessionNotFoundException.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Org.Apache.Kafka.Common.Errors.SnapshotNotFoundException.yml",
       "output": {
         ".html": {
@@ -7838,6 +8118,16 @@
       "output": {
         ".html": {
           "relative_path": "api/Org.Apache.Kafka.Common.Errors.UnsupportedVersionException.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Common.Errors.VoterNotFoundException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Common.Errors.VoterNotFoundException.html"
         }
       },
       "version": ""
@@ -10624,6 +10914,16 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Common.ShareGroupState.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Common.ShareGroupState.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Org.Apache.Kafka.Common.Telemetry.ClientTelemetryState.yml",
       "output": {
         ".html": {
@@ -11238,16 +11538,6 @@
       "output": {
         ".html": {
           "relative_path": "api/Org.Apache.Kafka.Common.Utils.SystemScheduler.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Org.Apache.Kafka.Common.Utils.SystemTime.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Org.Apache.Kafka.Common.Utils.SystemTime.html"
         }
       },
       "version": ""
@@ -14084,6 +14374,216 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Deferred.DeferredEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Deferred.DeferredEvent.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Deferred.DeferredEventQueue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Deferred.DeferredEventQueue.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Deferred.IDeferredEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Deferred.IDeferredEvent.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Deferred.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Deferred.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Metadata.AssignmentsHelper.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Metadata.AssignmentsHelper.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Metadata.FeatureLevelListener.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Metadata.FeatureLevelListener.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Metadata.FeatureLevelListenerDirect.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Metadata.FeatureLevelListenerDirect.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Metadata.IFeatureLevelListener.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Metadata.IFeatureLevelListener.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Metadata.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Metadata.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Queue.EventQueue.DeadlineFunction.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Queue.EventQueue.DeadlineFunction.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Queue.EventQueue.EarliestDeadlineFunction.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Queue.EventQueue.EarliestDeadlineFunction.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Queue.EventQueue.Event.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Queue.EventQueue.Event.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Queue.EventQueue.EventInsertionType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Queue.EventQueue.EventInsertionType.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Queue.EventQueue.FailureLoggingEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Queue.EventQueue.FailureLoggingEvent.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Queue.EventQueue.LatestDeadlineFunction.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Queue.EventQueue.LatestDeadlineFunction.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Queue.EventQueue.NoDeadlineFunction.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Queue.EventQueue.NoDeadlineFunction.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Queue.EventQueue.VoidEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Queue.EventQueue.VoidEvent.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Queue.EventQueue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Queue.EventQueue.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Queue.IEventQueue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Queue.IEventQueue.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Queue.KafkaEventQueue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Queue.KafkaEventQueue.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Queue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Queue.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Org.Apache.Kafka.Raft.Batch-1.yml",
       "output": {
         ".html": {
@@ -14144,10 +14644,40 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Raft.DynamicVoter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Raft.DynamicVoter.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Raft.DynamicVoters.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Raft.DynamicVoters.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Org.Apache.Kafka.Raft.ElectionState.yml",
       "output": {
         ".html": {
           "relative_path": "api/Org.Apache.Kafka.Raft.ElectionState.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Raft.Endpoints.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Raft.Endpoints.html"
         }
       },
       "version": ""
@@ -14188,16 +14718,6 @@
       "output": {
         ".html": {
           "relative_path": "api/Org.Apache.Kafka.Raft.Errors.RaftException.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Org.Apache.Kafka.Raft.Errors.UnexpectedBaseOffsetException.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Org.Apache.Kafka.Raft.Errors.UnexpectedBaseOffsetException.html"
         }
       },
       "version": ""
@@ -14474,6 +14994,16 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Raft.LeaderState.ReplicaState.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Raft.LeaderState.ReplicaState.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Org.Apache.Kafka.Raft.LeaderState.yml",
       "output": {
         ".html": {
@@ -14744,6 +15274,16 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Raft.ReplicaKey.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Raft.ReplicaKey.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Org.Apache.Kafka.Raft.ReplicatedCounter.yml",
       "output": {
         ".html": {
@@ -14814,10 +15354,20 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Org.Apache.Kafka.Raft.VotedState.yml",
+      "source_relative_path": "api/Org.Apache.Kafka.Raft.VoterSet.VoterNode.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Org.Apache.Kafka.Raft.VotedState.html"
+          "relative_path": "api/Org.Apache.Kafka.Raft.VoterSet.VoterNode.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Raft.VoterSet.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Raft.VoterSet.html"
         }
       },
       "version": ""
@@ -14828,6 +15378,96 @@
       "output": {
         ".html": {
           "relative_path": "api/Org.Apache.Kafka.Raft.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Security.CipherParamsEncoder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Security.CipherParamsEncoder.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Security.EncryptingPasswordEncoder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Security.EncryptingPasswordEncoder.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Security.GcmParamsEncoder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Security.GcmParamsEncoder.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Security.ICipherParamsEncoder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Security.ICipherParamsEncoder.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Security.IPasswordEncoder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Security.IPasswordEncoder.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Security.IvParamsEncoder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Security.IvParamsEncoder.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Security.PasswordEncoder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Security.PasswordEncoder.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Security.PasswordEncoderConfigs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Security.PasswordEncoderConfigs.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Security.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Security.html"
         }
       },
       "version": ""
@@ -15144,10 +15784,40 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Streams.Errors.ErrorHandlerContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Streams.Errors.ErrorHandlerContext.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Org.Apache.Kafka.Streams.Errors.IDeserializationExceptionHandler.yml",
       "output": {
         ".html": {
           "relative_path": "api/Org.Apache.Kafka.Streams.Errors.IDeserializationExceptionHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Streams.Errors.IErrorHandlerContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Streams.Errors.IErrorHandlerContext.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Streams.Errors.IProcessingExceptionHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Streams.Errors.IProcessingExceptionHandler.html"
         }
       },
       "version": ""
@@ -15168,6 +15838,36 @@
       "output": {
         ".html": {
           "relative_path": "api/Org.Apache.Kafka.Streams.Errors.IStreamsUncaughtExceptionHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Streams.Errors.Internals.DefaultErrorHandlerContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Streams.Errors.Internals.DefaultErrorHandlerContext.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Streams.Errors.Internals.FailedProcessingException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Streams.Errors.Internals.FailedProcessingException.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Streams.Errors.Internals.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Streams.Errors.Internals.html"
         }
       },
       "version": ""
@@ -15214,6 +15914,16 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Streams.Errors.LogAndContinueProcessingExceptionHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Streams.Errors.LogAndContinueProcessingExceptionHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Org.Apache.Kafka.Streams.Errors.LogAndFailExceptionHandler.yml",
       "output": {
         ".html": {
@@ -15224,10 +15934,40 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Streams.Errors.LogAndFailProcessingExceptionHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Streams.Errors.LogAndFailProcessingExceptionHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Org.Apache.Kafka.Streams.Errors.MissingSourceTopicException.yml",
       "output": {
         ".html": {
           "relative_path": "api/Org.Apache.Kafka.Streams.Errors.MissingSourceTopicException.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Streams.Errors.ProcessingExceptionHandler.ProcessingHandlerResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Streams.Errors.ProcessingExceptionHandler.ProcessingHandlerResponse.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Streams.Errors.ProcessingExceptionHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Streams.Errors.ProcessingExceptionHandler.html"
         }
       },
       "version": ""
@@ -15248,6 +15988,16 @@
       "output": {
         ".html": {
           "relative_path": "api/Org.Apache.Kafka.Streams.Errors.ProductionExceptionHandler.ProductionExceptionHandlerResponse.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Streams.Errors.ProductionExceptionHandler.SerializationExceptionOrigin.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Streams.Errors.ProductionExceptionHandler.SerializationExceptionOrigin.html"
         }
       },
       "version": ""
@@ -19864,6 +20614,16 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Tools.Consumer.ApiMessageFormatter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Tools.Consumer.ApiMessageFormatter.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Org.Apache.Kafka.Tools.Consumer.ConsoleConsumer.ConsumerWrapper.yml",
       "output": {
         ".html": {
@@ -19948,6 +20708,36 @@
       "output": {
         ".html": {
           "relative_path": "api/Org.Apache.Kafka.Tools.Consumer.Group.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Tools.Consumer.GroupMetadataMessageFormatter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Tools.Consumer.GroupMetadataMessageFormatter.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Tools.Consumer.OffsetsMessageFormatter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Tools.Consumer.OffsetsMessageFormatter.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Tools.Consumer.TransactionLogMessageFormatter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Tools.Consumer.TransactionLogMessageFormatter.html"
         }
       },
       "version": ""
