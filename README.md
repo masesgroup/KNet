@@ -41,7 +41,7 @@ Currently the project tries to support, at our best, the [supported Apache Kafka
   - branch [master](https://github.com/masesgroup/KNet)
   - KNet version 2.9.*
 - Apache Kafka™ version 3.8.*:
-  - branch [release/2.8.X](https://github.com/masesgroup/KNet)
+  - branch [release/2.8.X](https://github.com/masesgroup/KNet/tree/release/2.8.X)
   - KNet version 2.8.*
 - Apache Kafka™ version 3.7.*:
   - branch [release/2.7.X](https://github.com/masesgroup/KNet/tree/release/2.7.X)
@@ -104,6 +104,7 @@ This project adheres to the Contributor [Covenant code of conduct](CODE_OF_CONDU
   * serializers supports data exchange based on `byte` array and `ByteBuffer`
   * version 2.7.2 introduces `ISerDesSelector` to optimize serialization selection based on `byte` array or `ByteBuffer`
 * V2.8.0+: From version 2.8.0: supports Apache Kafka™ version 3.8.*
+* V2.9.0+: From version 2.8.0: supports Apache Kafka™ version 3.9.*
 
 ---
 
