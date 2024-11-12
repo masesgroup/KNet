@@ -41,7 +41,7 @@ Currently the project tries to support, at our best, the [supported Apache Kafka
   - branch [master](https://github.com/masesgroup/KNet)
   - KNet version 2.9.*
 - Apache Kafka™ version 3.8.*:
-  - branch [master](https://github.com/masesgroup/KNet)
+  - branch [release/2.8.X](https://github.com/masesgroup/KNet)
   - KNet version 2.8.*
 - Apache Kafka™ version 3.7.*:
   - branch [release/2.7.X](https://github.com/masesgroup/KNet/tree/release/2.7.X)

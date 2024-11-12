@@ -36,8 +36,11 @@ There are many client libraries written to manage communication with Apache Kafk
 * measured high [performance](articles/performance.md) in many operating conditions.
 
 Currently the project tries to support, at our best, the [supported Apache Kafka™ binary distribution](https://kafka.apache.org/downloads):
-- Apache Kafka™ version 3.8.*:
+- Apache Kafka™ version 3.9.*:
   - branch [master](https://github.com/masesgroup/KNet)
+  - KNet version 2.9.*
+- Apache Kafka™ version 3.8.*:
+  - branch [release/2.8.X](https://github.com/masesgroup/KNet)
   - KNet version 2.8.*
 - Apache Kafka™ version 3.7.*:
   - branch [release/2.7.X](https://github.com/masesgroup/KNet/tree/release/2.7.X)
