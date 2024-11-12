@@ -25,6 +25,7 @@ import org.apache.kafka.common.utils.Time;
 import org.apache.kafka.common.utils.Utils;
 import org.apache.kafka.connect.connector.policy.ConnectorClientConfigOverridePolicy;
 import org.apache.kafka.connect.json.JsonConverter;
+import org.apache.kafka.connect.json.JsonConverterConfig;
 import org.apache.kafka.connect.runtime.*;
 import org.apache.kafka.connect.runtime.distributed.DistributedConfig;
 import org.apache.kafka.connect.runtime.distributed.DistributedHerder;
@@ -42,6 +43,8 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 
+import static org.apache.kafka.clients.CommonClientConfigs.CLIENT_ID_CONFIG;
+
 /**
  * <p>
  * Command line utility that runs Kafka Connect in distributed mode. In this mode, the process joints a group of other workers
@@ -51,31 +54,48 @@ import java.util.Map;
  * instances.
  * </p>
  */
-public class ConnectDistributed extends AbstractConnectCli<DistributedConfig> {
+public class ConnectDistributed extends AbstractConnectCli<DistributedHerder, DistributedConfig> {
     private static final Logger log = LoggerFactory.getLogger(ConnectDistributed.class);
 
     public ConnectDistributed(String... args) {
         super(args);
     }
 
-    protected Herder createHerder(DistributedConfig config, String workerId, Plugins plugins, ConnectorClientConfigOverridePolicy connectorClientConfigOverridePolicy, RestServer restServer, RestClient restClient) {
+    @Override
+    protected DistributedHerder createHerder(DistributedConfig config, String workerId, Plugins plugins, ConnectorClientConfigOverridePolicy connectorClientConfigOverridePolicy, RestServer restServer, RestClient restClient) {
+
         String kafkaClusterId = config.kafkaClusterId();
         String clientIdBase = ConnectUtils.clientIdBase(config);
-        Map<String, Object> adminProps = new HashMap(config.originals());
+        // Create the admin client to be shared by all backing stores.
+        Map<String, Object> adminProps = new HashMap<>(config.originals());
         ConnectUtils.addMetricsContextProperties(adminProps, config, kafkaClusterId);
-        adminProps.put("client.id", clientIdBase + "shared-admin");
+        adminProps.put(CLIENT_ID_CONFIG, clientIdBase + "shared-admin");
         SharedTopicAdmin sharedAdmin = new SharedTopicAdmin(adminProps);
-        KafkaOffsetBackingStore offsetBackingStore = new KafkaOffsetBackingStore(sharedAdmin, () -> {
-            return clientIdBase;
-        }, plugins.newInternalConverter(true, JsonConverter.class.getName(), Collections.singletonMap("schemas.enable", "false")));
+
+        KafkaOffsetBackingStore offsetBackingStore = new KafkaOffsetBackingStore(sharedAdmin, () -> clientIdBase,
+                plugins.newInternalConverter(true, JsonConverter.class.getName(), Collections.singletonMap(JsonConverterConfig.SCHEMAS_ENABLE_CONFIG, "false")));
         offsetBackingStore.configure(config);
+
         Worker worker = new Worker(workerId, Time.SYSTEM, plugins, config, offsetBackingStore, connectorClientConfigOverridePolicy);
         WorkerConfigTransformer configTransformer = worker.configTransformer();
+
         Converter internalValueConverter = worker.getInternalValueConverter();
         StatusBackingStore statusBackingStore = new KafkaStatusBackingStore(Time.SYSTEM, internalValueConverter, sharedAdmin, clientIdBase);
         statusBackingStore.configure(config);
-        ConfigBackingStore configBackingStore = new KafkaConfigBackingStore(internalValueConverter, config, configTransformer, sharedAdmin, clientIdBase);
-        return new DistributedHerder(config, Time.SYSTEM, worker, kafkaClusterId, statusBackingStore, configBackingStore, restServer.advertisedUrl().toString(), restClient, connectorClientConfigOverridePolicy, Collections.emptyList(), new AutoCloseable[]{sharedAdmin});
+
+        ConfigBackingStore configBackingStore = new KafkaConfigBackingStore(
+                internalValueConverter,
+                config,
+                configTransformer,
+                sharedAdmin,
+                clientIdBase);
+
+        // Pass the shared admin to the distributed herder as an additional AutoCloseable object that should be closed when the
+        // herder is stopped. This is easier than having to track and own the lifecycle ourselves.
+        return new DistributedHerder(config, Time.SYSTEM, worker,
+                kafkaClusterId, statusBackingStore, configBackingStore,
+                restServer.advertisedUrl().toString(), restClient, connectorClientConfigOverridePolicy,
+                Collections.emptyList(), sharedAdmin);
     }
 
     protected String usage() {

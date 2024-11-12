@@ -20,26 +20,21 @@
 
 package org.mases.knet.developed.connect.cli;
 
-import org.apache.kafka.common.utils.Exit;
 import org.apache.kafka.common.utils.Time;
 import org.apache.kafka.connect.connector.policy.ConnectorClientConfigOverridePolicy;
 import org.apache.kafka.connect.json.JsonConverter;
-import org.apache.kafka.connect.runtime.Connect;
-import org.apache.kafka.connect.runtime.Herder;
+import org.apache.kafka.connect.json.JsonConverterConfig;
 import org.apache.kafka.connect.runtime.Worker;
 import org.apache.kafka.connect.runtime.isolation.Plugins;
 import org.apache.kafka.connect.runtime.rest.RestClient;
 import org.apache.kafka.connect.runtime.rest.RestServer;
-import org.apache.kafka.connect.runtime.rest.entities.ConnectorInfo;
 import org.apache.kafka.connect.runtime.standalone.StandaloneConfig;
 import org.apache.kafka.connect.runtime.standalone.StandaloneHerder;
 import org.apache.kafka.connect.storage.FileOffsetBackingStore;
 import org.apache.kafka.connect.storage.OffsetBackingStore;
-import org.apache.kafka.connect.util.FutureCallback;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.Map;
 
@@ -54,7 +49,7 @@ import java.util.Map;
  * fault tolerant by overriding the settings to use file storage for both.
  * </p>
  */
-public class ConnectStandalone extends AbstractConnectCli<StandaloneConfig> {
+public class ConnectStandalone extends AbstractConnectCli<StandaloneHerder, StandaloneConfig> {
     private static final Logger log = LoggerFactory.getLogger(ConnectStandalone.class);
 
     protected ConnectStandalone(String... args) {
@@ -65,8 +60,9 @@ public class ConnectStandalone extends AbstractConnectCli<StandaloneConfig> {
         return "ConnectStandalone <Env of worker.properties> [<Env of connector1.properties> <Env of connector2.properties> ...]";
     }
 
-    protected Herder createHerder(StandaloneConfig config, String workerId, Plugins plugins, ConnectorClientConfigOverridePolicy connectorClientConfigOverridePolicy, RestServer restServer, RestClient restClient) {
-        OffsetBackingStore offsetBackingStore = new FileOffsetBackingStore(plugins.newInternalConverter(true, JsonConverter.class.getName(), Collections.singletonMap("schemas.enable", "false")));
+    @Override
+    protected StandaloneHerder createHerder(StandaloneConfig config, String workerId, Plugins plugins, ConnectorClientConfigOverridePolicy connectorClientConfigOverridePolicy, RestServer restServer, RestClient restClient) {
+        OffsetBackingStore offsetBackingStore = new FileOffsetBackingStore(plugins.newInternalConverter(true, JsonConverter.class.getName(), Collections.singletonMap(JsonConverterConfig.SCHEMAS_ENABLE_CONFIG, "false")));
         offsetBackingStore.configure(config);
         Worker worker = new Worker(workerId, Time.SYSTEM, plugins, config, offsetBackingStore, connectorClientConfigOverridePolicy);
         return new StandaloneHerder(worker, config.kafkaClusterId(), connectorClientConfigOverridePolicy);

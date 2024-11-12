@@ -19,7 +19,8 @@
     "connect-mirror-3.9.0.jar",
     "connect-mirror-client-3.9.0.jar",
     "connect-runtime-3.9.0.jar",
-    "connect-transforms-3.9.0.jar"
+    "connect-transforms-3.9.0.jar",
+	"kafka-server-common-3.9.0.jar"
   ],
   "OriginJavadocJARVersionAndUrls": [
     {
@@ -73,6 +74,10 @@
     {
       "Version": 8,
       "Url": "https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.9.0/"
+    },
+    {
+      "Version": 8,
+      "Url": "https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/3.9.0/"
     }
   ],
   "NamespacesToAvoid": [
@@ -139,6 +144,7 @@
     "org.apache.kafka.streams.state.internals",
     "org.apache.kafka.streams.kstream.internals",
     "org.apache.kafka.streams.query.internals",
+    "org.apache.kafka.timeline",
     "org.apache.zookeeper.client",
     "org.eclipse.jetty",
     "org.glassfish",
