@@ -9,7 +9,7 @@ If the user clones the repo, the following steps shall be done to use the projec
 
 Let's start with the tools needed to achieve the goal:
 * An installed version of __git for Windows__
-* An installed version of .NET 6 SDK
+* An installed version of .NET 8 SDK
 * An installed version of Apache Maven (> 3.8.1)
 
 Then the steps are the following (the steps are made for Windows shell):
@@ -42,19 +42,15 @@ Then the steps are the following (the steps are made for Windows shell):
 The final result shall look like this:
 * RootFolder
   * bin
-    * net5.0
-      * config
-	  * jars
-	  * other folders
     * net6.0
       * config
 	  * jars
 	  * other folders
-    * net461
-      * config
-	  * jars
-    * netcoreapp3.1
+    * net8.0
       * config
 	  * jars
 	  * other folders
+    * net462
+      * config
+	  * jars
   * Other folders
