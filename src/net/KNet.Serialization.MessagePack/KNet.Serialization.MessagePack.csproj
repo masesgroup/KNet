@@ -18,7 +18,7 @@
 		<None Include="..\..\documentation\articles\usageSerDes.md" Pack="true" PackagePath="\" />
 	</ItemGroup>
 	<ItemGroup Condition="'$(TargetFramework)' == 'net462'">
-		<PackageReference Include="System.Memory" Version="4.5.5" />
+		<PackageReference Include="System.Memory" Version="4.6.0" />
 	</ItemGroup>
 	<ItemGroup>
 	  <PackageReference Include="MessagePack" Version="2.5.187" />
