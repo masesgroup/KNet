@@ -247,7 +247,7 @@
 		<dependency>
 			<groupId>com.google.protobuf</groupId>
 			<artifactId>protobuf-java</artifactId>
-			<version>3.23.4</version>
+			<version>4.29.0</version>
 		</dependency>
 		<dependency>
 			<groupId>io.netty</groupId>
