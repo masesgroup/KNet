@@ -22,11 +22,15 @@
 	</PropertyGroup>
 	<PropertyGroup Condition="'$(KNET_DOCKER_BUILD_ACTIONS)' != 'true'">
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-		<TargetFrameworks>net462;net6.0;net8.0</TargetFrameworks>
+		<TargetFrameworks>net462;net8.0;net9.0</TargetFrameworks>
 	</PropertyGroup>
 	<PropertyGroup Condition="'$(KNET_DOCKER_BUILD_ACTIONS)' == 'true'">
 		<GeneratePackageOnBuild>false</GeneratePackageOnBuild>
 		<TargetFramework>net8.0</TargetFramework>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(TargetFramework)' == 'net9.0'">
+		<!--see https://learn.microsoft.com/en-us/dotnet/core/compatibility/interop/9.0/cet-support-->
+		<CETCompat>false</CETCompat>
 	</PropertyGroup>
 	<ItemGroup Condition="'$(KNET_DOCKER_BUILD_ACTIONS)' != 'true'">
 		<None Include="..\..\..\LICENSE" Pack="true" PackagePath="" />

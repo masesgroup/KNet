@@ -41,7 +41,7 @@
 		<maven.compiler.target>11</maven.compiler.target>
 		<classpathfile>${basedir}/classpathfile.classpath</classpathfile>
 		<mavenSkipMain>false</mavenSkipMain> <!-- set mavenSkipMain to true to avoid source compilation: use directive in command-line -->
-		<jnetVersion>2.5.10.0</jnetVersion>
+		<jnetVersion>2.5.11.0</jnetVersion>
 		<kafkaVersion>3.9.0</kafkaVersion>
 		<knetVersion>2.9.0.0</knetVersion>
 		<jcobridgepath>../../../bin/net8.0/JCOBridge.jar</jcobridgepath>
