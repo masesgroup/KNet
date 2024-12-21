@@ -192,12 +192,12 @@ jobs:
           Copy-Item src\container\config_container\zookeeper.properties -Destination bin\net462\zookeeper.properties -Force
           Copy-Item src\container\config_container\server.properties -Destination bin\net462\server.properties -Force
           Copy-Item src\config\log4j.properties -Destination bin\net462\log4j.properties -Force
-          Copy-Item src\container\config_container\zookeeper.properties -Destination bin\net6.0\zookeeper.properties -Force
-          Copy-Item src\container\config_container\server.properties -Destination bin\net6.0\server.properties -Force
-          Copy-Item src\config\log4j.properties -Destination bin\net6.0\log4j.properties -Force
           Copy-Item src\container\config_container\zookeeper.properties -Destination bin\net8.0\zookeeper.properties -Force
           Copy-Item src\container\config_container\server.properties -Destination bin\net8.0\server.properties -Force
           Copy-Item src\config\log4j.properties -Destination bin\net8.0\log4j.properties -Force
+          Copy-Item src\container\config_container\zookeeper.properties -Destination bin\net9.0\zookeeper.properties -Force
+          Copy-Item src\container\config_container\server.properties -Destination bin\net9.0\server.properties -Force
+          Copy-Item src\config\log4j.properties -Destination bin\net9.0\log4j.properties -Force
 
       - name: Save KNet net462 bin in cache
         uses: actions/cache/save@v4
@@ -206,19 +206,19 @@ jobs:
           path: ./bin/net462/
           key: KNet_${{ github.run_number }}_${{ github.run_attempt }}_net462_bin_${{ github.sha }}
           
-      - name: Save KNet net6.0 bin in cache
-        uses: actions/cache/save@v4
-        with:
-          enableCrossOsArchive: true
-          path: ./bin/net6.0/
-          key: KNet_${{ github.run_number }}_${{ github.run_attempt }}_net6.0_bin_${{ github.sha }}
-          
       - name: Save KNet net8.0 bin in cache
         uses: actions/cache/save@v4
         with:
           enableCrossOsArchive: true
           path: ./bin/net8.0/
           key: KNet_${{ github.run_number }}_${{ github.run_attempt }}_net8.0_bin_${{ github.sha }}
+          
+      - name: Save KNet net9.0 bin in cache
+        uses: actions/cache/save@v4
+        with:
+          enableCrossOsArchive: true
+          path: ./bin/net9.0/
+          key: KNet_${{ github.run_number }}_${{ github.run_attempt }}_net9.0_bin_${{ github.sha }}
 
       - name: Save KNet net462 binCLI in cache
         uses: actions/cache/save@v4
@@ -227,19 +227,19 @@ jobs:
           path: ./binCLI/net462/
           key: KNet_${{ github.run_number }}_${{ github.run_attempt }}_net462_binCLI_${{ github.sha }}
           
-      - name: Save KNet net6.0 binCLI in cache
-        uses: actions/cache/save@v4
-        with:
-          enableCrossOsArchive: true
-          path: ./binCLI/net6.0/
-          key: KNet_${{ github.run_number }}_${{ github.run_attempt }}_net6.0_binCLI_${{ github.sha }}
-          
       - name: Save KNet net8.0 binCLI in cache
         uses: actions/cache/save@v4
         with:
           enableCrossOsArchive: true
           path: ./binCLI/net8.0/
           key: KNet_${{ github.run_number }}_${{ github.run_attempt }}_net8.0_binCLI_${{ github.sha }}
+          
+      - name: Save KNet net9.0 binCLI in cache
+        uses: actions/cache/save@v4
+        with:
+          enableCrossOsArchive: true
+          path: ./binCLI/net9.0/
+          key: KNet_${{ github.run_number }}_${{ github.run_attempt }}_net9.0_binCLI_${{ github.sha }}
 
   build_container_knet:
     needs: check_changes
@@ -259,6 +259,11 @@ jobs:
         with:
           fetch-depth: '1'
           submodules: 'true'
+
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: |
+            9.x
 
       - name: Pre compile
         run: dotnet build --no-incremental --configuration Release /p:Platform="Any CPU" /p:NoWarn="0108%3B1030%3B0618" src/net/KNet/KNet.csproj
@@ -343,13 +348,13 @@ jobs:
           - 9092:9092
         env:
           KNET_DOCKER_RUNNING_MODE: server
-          JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ENCODED_2_5_17 }}
+          JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ENCODED_2_5_21 }}
           
     strategy:
       fail-fast: false
       matrix:
         os: [ 'ubuntu-latest' ] #, 'macos-latest', 'macos-13' , 'windows-latest' ] # not available services in this runners, checks done in execute_tests_other
-        framework: [ 'net6.0', 'net8.0' ]
+        framework: [ 'net8.0', 'net9.0' ]
         jdk_vendor: [ 'temurin', 'microsoft', 'corretto', 'zulu', 'oracle']
         jdk_version: [ '11', '17', '21' ] # only LTS versions
         exclude:
@@ -357,6 +362,15 @@ jobs:
             jdk_version: 11
         
     runs-on: ${{ matrix.os }}
+    env:
+      DOTNET_DbgEnableMiniDump: 1
+      DOTNET_DbgMiniDumpType: 3
+      DOTNET_DbgMiniDumpName: ${{ github.workspace }}/coredump.%p
+      DOTNET_CreateDumpDiagnostics: 1
+      DOTNET_CreateDumpVerboseDiagnostics: 1
+      DOTNET_EnableCrashReport: 1
+      JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ENCODED_2_5_21 }}
+      
     steps:
       - name: Restore KNet ${{ matrix.framework }} bin from cache
         uses: actions/cache/restore@v4
@@ -373,58 +387,66 @@ jobs:
           java-version: ${{ matrix.jdk_version }}
           check-latest: true
 
+      - uses: actions/setup-dotnet@v4
+        if: ${{ matrix.framework == 'net9.0' }}
+        with:
+          dotnet-version: |
+            9.x
+
       - name: Execute KNetTest on ${{ matrix.os }} with ${{ matrix.jdk_vendor }} ${{ matrix.jdk_version }}
         if: ${{ matrix.os == 'ubuntu-latest' || matrix.os == 'macos-latest' || matrix.os == 'macos-13' }}
         run: dotnet ./bin/${{ matrix.framework }}/KNetTest.dll localhost:9092 useConsumeCallback randomizeTopicName
-        env:
-          JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ENCODED_2_5_17 }}
 
       - name: Execute KNetTest withBigBigExtraValue on ${{ matrix.os }} with ${{ matrix.jdk_vendor }} ${{ matrix.jdk_version }}
         if: ${{ matrix.os == 'ubuntu-latest' || matrix.os == 'macos-latest' || matrix.os == 'macos-13' }}
         run: dotnet ./bin/${{ matrix.framework }}/KNetTest.dll localhost:9092 useConsumeCallback randomizeTopicName withBigBigExtraValue
-        env:
-          JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ENCODED_2_5_17 }}
-          
+
       - name: Execute KNetTest runBuffered on ${{ matrix.os }} with ${{ matrix.jdk_vendor }} ${{ matrix.jdk_version }}
         if: ${{ matrix.os == 'ubuntu-latest' || matrix.os == 'macos-latest' || matrix.os == 'macos-13' }}
         run: dotnet ./bin/${{ matrix.framework }}/KNetTest.dll localhost:9092 useConsumeCallback randomizeTopicName runBuffered
-        env:
-          JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ENCODED_2_5_17 }}
 
       - name: Execute KNetTest runBuffered withBigBigExtraValue on ${{ matrix.os }} with ${{ matrix.jdk_vendor }} ${{ matrix.jdk_version }}
         if: ${{ matrix.os == 'ubuntu-latest' || matrix.os == 'macos-latest' || matrix.os == 'macos-13' }}
         run: dotnet ./bin/${{ matrix.framework }}/KNetTest.dll localhost:9092 useConsumeCallback randomizeTopicName runBuffered withBigBigExtraValue
-        env:
-          JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ENCODED_2_5_17 }}
 
       - name: Execute KNetTestSerDes on ${{ matrix.os }} with ${{ matrix.jdk_vendor }} ${{ matrix.jdk_version }}
         shell: pwsh
         run: dotnet ${{ github.workspace }}/bin/${{ matrix.framework }}/KNetTestSerDes.dll
-        env:
-          JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ENCODED_2_5_17 }}
+
+      - uses: actions/upload-artifact@v4
+        with:
+          if-no-files-found: ignore
+          name: Crash_tests_${{ matrix.os }}_${{ matrix.framework }}_${{ matrix.jdk_vendor }}_${{ matrix.jdk_version }}
+          path: ${{ github.workspace }}/coredump.*
+          retention-days: 7
 
   execute_tests_other:
     needs: [build_windows]
     strategy:
       fail-fast: false
       matrix:
-        os: [ 'macos-latest', 'macos-13' , 'windows-latest' ]
-        framework: [ 'net462', 'net6.0', 'net8.0' ]
+        os: [ 'macos-latest', 'windows-latest' ] # 'macos-13' removed waiting https://github.com/masesgroup/JNet/issues/518
+        framework: [ 'net462', 'net8.0', 'net9.0' ]
         jdk_vendor: [ 'temurin', 'microsoft', 'corretto', 'zulu', 'oracle']
         jdk_version: [ '11', '17', '21' ] # only LTS versions
         exclude:
           - os: macos-latest
             framework: net462
-          - os: macos-latest
-            framework: net6.0
           - os: macos-13
             framework: net462
-          - os: macos-13
-            framework: net6.0
           - jdk_vendor: oracle
             jdk_version: 11
         
     runs-on: ${{ matrix.os }}
+    env:
+      DOTNET_DbgEnableMiniDump: 1
+      DOTNET_DbgMiniDumpType: 3
+      DOTNET_DbgMiniDumpName: ${{ github.workspace }}/coredump.%p
+      DOTNET_CreateDumpDiagnostics: 1
+      DOTNET_CreateDumpVerboseDiagnostics: 1
+      DOTNET_EnableCrashReport: 1
+      JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ENCODED_2_5_21 }}
+      
     steps:
       - name: Restore KNet ${{ matrix.framework }} bin from cache
         uses: actions/cache/restore@v4
@@ -449,6 +471,23 @@ jobs:
           java-version: ${{ matrix.jdk_version }}
           check-latest: true
 
+      - uses: actions/setup-dotnet@v4
+        if: ${{ matrix.os == 'macos-latest' && matrix.framework == 'net9.0' }}
+        with:
+          dotnet-version: |
+            9.x
+
+      - name: Download Procdump and prepare
+        if: ${{ matrix.os == 'windows-latest' }} # see https://gist.github.com/Sedeniono/e6d6504e3bf0645937852ee5681ef9ee and https://learn.microsoft.com/it-it/sysinternals/downloads/procdump
+        continue-on-error: true
+        run: |
+          C:\msys64\usr\bin\wget.exe https://download.sysinternals.com/files/Procdump.zip
+          Expand-Archive -LiteralPath '${{ github.workspace }}\Procdump.zip' -DestinationPath ${{ github.workspace }}\Procdump -Force
+          dir .\Procdump
+          ${{ github.workspace }}\Procdump\procdump.exe -accepteula
+          mkdir CrashDumpsDir
+          ${{ github.workspace }}\Procdump\procdump.exe -ma -i ${{ github.workspace }}\CrashDumpsDir
+
       - name: Start Kafka on ${{ matrix.os }} with ${{ matrix.jdk_vendor }} ${{ matrix.jdk_version }}
         if: ${{ matrix.os != 'windows-latest' }}
         shell: pwsh
@@ -456,37 +495,27 @@ jobs:
           New-Item -Path "${{ github.workspace }}" -Name "logfiles" -ItemType Directory
           Start-Process -RSE ${{ github.workspace }}/logfiles/PWSH_zookeeper_err.log -RSO ${{ github.workspace }}/logfiles/PWSH_zookeeper_out.log -FilePath dotnet -ArgumentList ( '${{ github.workspace }}/binCLI/${{ matrix.framework }}/MASES.KNetCLI.dll', 'zookeeperstart', '-LogPath', '${{ github.workspace }}/logfiles/', '-Log4JConfiguration', '${{ github.workspace }}/bin/${{ matrix.framework }}/log4j.properties', '${{ github.workspace }}/bin/${{ matrix.framework }}/zookeeper.properties' )
           Start-Process -RSE ${{ github.workspace }}/logfiles/PWSH_kafka_err.log -RSO ${{ github.workspace }}/logfiles/PWSH_kafka_out.log -FilePath dotnet -ArgumentList ( '${{ github.workspace }}/binCLI/${{ matrix.framework }}/MASES.KNetCLI.dll', 'kafkastart', '-LogPath', '${{ github.workspace }}/logfiles/', '-Log4JConfiguration', '${{ github.workspace }}/bin/${{ matrix.framework }}/log4j.properties', '${{ github.workspace }}/bin/${{ matrix.framework }}/server.properties' )
-        env:
-          JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ENCODED_2_5_17 }}
 
       - name: Execute KNetTest on ${{ matrix.os }} with ${{ matrix.jdk_vendor }} ${{ matrix.jdk_version }}
         if: ${{ matrix.os != 'windows-latest' }}
         shell: pwsh
         run: dotnet ${{ github.workspace }}/bin/${{ matrix.framework }}/KNetTest.dll localhost:9092 useConsumeCallback randomizeTopicName
-        env:
-          JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ENCODED_2_5_17 }}
 
       - name: Execute KNetTest withBigBigExtraValue on ${{ matrix.os }} with ${{ matrix.jdk_vendor }} ${{ matrix.jdk_version }}
         if: ${{ matrix.os != 'windows-latest' }}
         shell: pwsh
         run: dotnet ${{ github.workspace }}/bin/${{ matrix.framework }}/KNetTest.dll localhost:9092 useConsumeCallback randomizeTopicName withBigBigExtraValue
-        env:
-          JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ENCODED_2_5_17 }}
 
       - name: Execute KNetTest runBuffered on ${{ matrix.os }} with ${{ matrix.jdk_vendor }} ${{ matrix.jdk_version }}
         if: ${{ matrix.os != 'windows-latest' }}
         shell: pwsh
         run: dotnet ${{ github.workspace }}/bin/${{ matrix.framework }}/KNetTest.dll localhost:9092 useConsumeCallback randomizeTopicName runBuffered
-        env:
-          JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ENCODED_2_5_17 }}
 
       - name: Execute KNetTest runBuffered withBigBigExtraValue on ${{ matrix.os }} with ${{ matrix.jdk_vendor }} ${{ matrix.jdk_version }}
         if: ${{ matrix.os != 'windows-latest' }}
         shell: pwsh
         run: dotnet ${{ github.workspace }}/bin/${{ matrix.framework }}/KNetTest.dll localhost:9092 useConsumeCallback randomizeTopicName runBuffered withBigBigExtraValue
-        env:
-          JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ENCODED_2_5_17 }}
-          
+
       - name: WINDOWS ONLY - Start Kafka and execute KNetTest on ${{ matrix.os }} with ${{ matrix.jdk_vendor }} ${{ matrix.jdk_version }}
         if: ${{ matrix.os == 'windows-latest' }}
         shell: pwsh
@@ -499,26 +528,37 @@ jobs:
           ${{ github.workspace }}\bin\${{ matrix.framework }}/KNetTest.exe localhost:9092 useConsumeCallback randomizeTopicName withBigBigExtraValue
           ${{ github.workspace }}\bin\${{ matrix.framework }}/KNetTest.exe localhost:9092 useConsumeCallback randomizeTopicName runBuffered
           ${{ github.workspace }}\bin\${{ matrix.framework }}/KNetTest.exe localhost:9092 useConsumeCallback randomizeTopicName runBuffered withBigBigExtraValue
-        env:
-          JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ENCODED_2_5_17 }}
 
       - name: Execute KNetTestSerDes on ${{ matrix.os }} with ${{ matrix.jdk_vendor }} ${{ matrix.jdk_version }}
         if: ${{ matrix.os != 'windows-latest' }}
         shell: pwsh
         run: dotnet ${{ github.workspace }}/bin/${{ matrix.framework }}/KNetTestSerDes.dll
-        env:
-          JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ENCODED_2_5_17 }}
 
       - name: Execute KNetTestSerDes on ${{ matrix.os }} with ${{ matrix.jdk_vendor }} ${{ matrix.jdk_version }}
         if: ${{ matrix.os == 'windows-latest' }}
         shell: pwsh
         run: ${{ github.workspace }}\bin\${{ matrix.framework }}\KNetTestSerDes.exe
-        env:
-          JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ENCODED_2_5_17 }}
+
+      - uses: actions/upload-artifact@v4
+        if: ${{ matrix.os == 'windows-latest' }}
+        with:
+          if-no-files-found: ignore
+          name: Crash_tests_${{ matrix.os }}_${{ matrix.framework }}_${{ matrix.jdk_vendor }}_${{ matrix.jdk_version }}
+          path: .\CrashDumpsDir\*
+          retention-days: 7
+
+      - uses: actions/upload-artifact@v4
+        if: ${{ matrix.os != 'windows-latest' }}
+        with:
+          if-no-files-found: ignore
+          name: Crash_tests_${{ matrix.os }}_${{ matrix.framework }}_${{ matrix.jdk_vendor }}_${{ matrix.jdk_version }}
+          path: ${{ github.workspace }}/coredump.*
+          retention-days: 7
 
       - uses: actions/upload-artifact@v4
         if: ${{ failure() || cancelled() }}
         with:
+          if-no-files-found: ignore
           name: KNet_Server_${{ matrix.os }}_${{ matrix.framework }}_${{ matrix.jdk_vendor }}_${{ matrix.jdk_version }}_${{ matrix.buffered }}_${{ matrix.extraValue }}
           path: ${{ github.workspace }}/logfiles/
           retention-days: 7
