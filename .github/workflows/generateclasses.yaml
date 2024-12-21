@@ -86,6 +86,29 @@ jobs:
       - name: Clear Java generated files
         run: Remove-Item .\src\jvm\knet\src\main\java\org\mases\knet\generated\* -Recurse -Force -Exclude README.md
 
+      - name: Get last workflow run of JNet
+        if: ${{ inputs.UseLastRepositoryBuild == true }}
+        shell: bash
+        run: echo "JNET_LAST_RUN=$(curl -sL https://api.github.com/repos/masesgroup/JNet/actions/workflows/build.yaml/runs | jq -r '.workflow_runs[0].id?')" >> $GITHUB_ENV
+
+      - name: Download artifact
+        if: ${{ inputs.UseLastRepositoryBuild == true }}
+        run: gh run download ${{ env.JNET_LAST_RUN }} --name JNetNuGet --repo masesgroup/JNet --dir JNetNuGet
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: List NuGet packages downloaded
+        if: ${{ inputs.UseLastRepositoryBuild == true }}
+        continue-on-error: true
+        shell: cmd
+        run: dir .\JNetNuGet\*nupkg
+
+      - name: Add local repo
+        if: ${{ success() && inputs.UseLastRepositoryBuild == true }}
+        run: |
+          dotnet nuget add source --name local "${{ github.workspace }}\JNetNuGet\"
+          dotnet nuget disable source nuget.org
+
       - name: Prebuild JNetReflector
         if: ${{ inputs.UseLatestJNetReflector == true }}
         run: dotnet build --no-incremental --configuration Release JNet\src\net\JNetReflector\JNetReflector.csproj
