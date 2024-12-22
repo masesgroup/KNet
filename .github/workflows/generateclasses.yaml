@@ -17,7 +17,7 @@ on:
         required: true
         default: false
         type: boolean
-      UseLatestJNetReflector:
+      UseLatestJNetReflectorSource:
         description: 'Shall use latest unpublished code of JNetReflector'
         required: true
         default: false
@@ -56,7 +56,7 @@ jobs:
           submodules: 'true'
 
       - uses: actions/checkout@v4
-        if: ${{ inputs.UseLatestJNetReflector == true }}
+        if: ${{ inputs.UseLatestJNetReflectorSource == true }}
         with:
           repository: masesgroup/JNet
           path: JNet
@@ -115,11 +115,11 @@ jobs:
           dotnet nuget disable source nuget.org
 
       - name: Prebuild JNetReflector
-        if: ${{ inputs.UseLatestJNetReflector == true }}
+        if: ${{ inputs.UseLatestJNetReflectorSource == true }}
         run: dotnet build --no-incremental --configuration Release JNet\src\net\JNetReflector\JNetReflector.csproj
 
       - name: Create Jars of JNetReflector
-        if: ${{ inputs.UseLatestJNetReflector == true }}
+        if: ${{ inputs.UseLatestJNetReflectorSource == true }}
         run: mvn "-Djcobridgepath=../../../binReflector/net8.0/JCOBridge.jar" --file ./JNet/src/jvm/jnet/pom.xml --no-transfer-progress package
         env:
           MAVEN_USERNAME: ${{ secrets.MAVEN_USERNAME }}
@@ -127,26 +127,26 @@ jobs:
           MAVEN_GPG_PASSPHRASE: ${{ secrets.MAVEN_GPG_PASSPHRASE }}
 
       - name: Build JNetReflector
-        if: ${{ inputs.UseLatestJNetReflector == true }}
+        if: ${{ inputs.UseLatestJNetReflectorSource == true }}
         run: dotnet build --no-incremental --configuration Release JNet\src\net\JNetReflector\JNetReflector.csproj
 
       - name: Use latest unpublished NuGet of JNetReflector
-        if: ${{ inputs.UseLastRepositoryBuild == true && inputs.UseLatestJNetReflector == false }}
+        if: ${{ inputs.UseLastRepositoryBuild == true && inputs.UseLatestJNetReflectorSource == false }}
         run: dotnet tool update -g MASES.JNetReflector
 
       - name: Download latest published version of JNetReflector
-        if: ${{ inputs.UseLatestJNetReflector == false }}
+        if: ${{ inputs.UseLastRepositoryBuild == false && inputs.UseLatestJNetReflectorSource == true }}
         run: dotnet tool update --version 2.5.11 -g MASES.JNetReflector
 
       - name: Build classes with unpublished JNetReflector
-        if: ${{ inputs.UseLatestJNetReflector == true }}
+        if: ${{ inputs.UseLatestJNetReflectorSource == true }}
         shell: cmd
         run: |
           cd JNet\binReflector\net8.0
           MASES.JNetReflector.exe -TraceLevel 1 -TraceTo %GITHUB_WORKSPACE%\JNetReflector.txt -OriginRootPath %GITHUB_WORKSPACE%\jars -DestinationRootPath %GITHUB_WORKSPACE%\src\ -ConfigurationFile %GITHUB_WORKSPACE%\src\configuration.json
 
       - name: Disable CET for dotnet process
-        if: ${{ inputs.UseLatestJNetReflector == false || inputs.UseLastRepositoryBuild == true }}
+        if: ${{ inputs.UseLatestJNetReflectorSource == true || inputs.UseLastRepositoryBuild == true }}
         run: |
           reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\dotnet.exe" /v MitigationOptions /t REG_BINARY /d "0000000000000000000000000000002000" /f
           Get-ProcessMitigation -Name "dotnet.exe"
@@ -154,9 +154,11 @@ jobs:
           Get-ProcessMitigation -Name "mases.jnetreflector.exe"
 
       - name: Build classes with latest published version of JNetReflector
-        if: ${{ inputs.UseLatestJNetReflector == false }}
+        if: ${{ inputs.UseLatestJNetReflectorSource == false }}
         shell: cmd
         run: jnetreflector -TraceLevel 1 -TraceTo %GITHUB_WORKSPACE%\JNetReflector.txt -OriginRootPath %GITHUB_WORKSPACE%\jars -DestinationRootPath %GITHUB_WORKSPACE%\src\ -ConfigurationFile %GITHUB_WORKSPACE%\src\configuration.json
+
+      - run: (Get-EventLog -LogName Application -Newest 5).Message
 
       - uses: actions/upload-artifact@v4
         with:
@@ -165,16 +167,16 @@ jobs:
 
       - name: Try compilation of Jars
         continue-on-error: ${{ inputs.ContinueOnLatestJNetReflectorError == true }}
-        if: ${{ inputs.UseLatestJNetReflector == true }}
+        if: ${{ inputs.UseLatestJNetReflectorSource == true }}
         run: mvn --file ./src/jvm/knet/pom.xml --no-transfer-progress package
 
       - name: Try compilation of C#
         continue-on-error: ${{ inputs.ContinueOnLatestJNetReflectorError == true }}
-        if: ${{ inputs.UseLatestJNetReflector == true }}
+        if: ${{ inputs.UseLatestJNetReflectorSource == true }}
         run: dotnet build --no-incremental --configuration Release /p:Platform="Any CPU" /p:NoWarn="0108%3B1030%3B0618" src\net\KNet\KNet.csproj
 
       - name: Request a PR to commit changes made with unpublished version of JNetReflector
-        if: ${{ github.repository_owner == 'masesgroup' && inputs.GeneratePR == true && inputs.UseLatestJNetReflector == true }} #do not push any changes outside main repo or GeneratePR is false
+        if: ${{ github.repository_owner == 'masesgroup' && inputs.GeneratePR == true && inputs.UseLatestJNetReflectorSource == true }} #do not push any changes outside main repo or GeneratePR is false
         uses: peter-evans/create-pull-request@v7
         with:
           branch-suffix: short-commit-hash
@@ -188,13 +190,13 @@ jobs:
           labels: java, .NET, enhancement 
 
       - name: Extract commit SHA
-        if: ${{ github.repository_owner == 'masesgroup' && inputs.GeneratePR == true && inputs.UseLatestJNetReflector == false }}
+        if: ${{ github.repository_owner == 'masesgroup' && inputs.GeneratePR == true && inputs.UseLatestJNetReflectorSource == false }}
         run: |
           echo "GITHUB_COMMIT_MESSAGE=$(echo $GITHUB_SHA | cut -c 1-7)" >> $GITHUB_ENV
         shell: bash
 
       - name: Request a PR to commit changes made with latest published version of JNetReflector
-        if: ${{ github.repository_owner == 'masesgroup' && inputs.GeneratePR == true && inputs.UseLatestJNetReflector == false }} #do not push any changes outside main repo or GeneratePR is false
+        if: ${{ github.repository_owner == 'masesgroup' && inputs.GeneratePR == true && inputs.UseLatestJNetReflectorSource == false }} #do not push any changes outside main repo or GeneratePR is false
         uses: peter-evans/create-pull-request@v7
         with:
           branch-suffix: short-commit-hash
