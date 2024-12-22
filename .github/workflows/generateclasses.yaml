@@ -145,10 +145,6 @@ jobs:
           cd JNet\binReflector\net8.0
           MASES.JNetReflector.exe -TraceLevel 1 -TraceTo %GITHUB_WORKSPACE%\JNetReflector.txt -OriginRootPath %GITHUB_WORKSPACE%\jars -DestinationRootPath %GITHUB_WORKSPACE%\src\ -ConfigurationFile %GITHUB_WORKSPACE%\src\configuration.json
 
-      - name: Use latest unpublished NuGet of JNetReflector
-        if: ${{ inputs.UseLastRepositoryBuild == true && inputs.UseLatestJNetReflector == false }}
-        run: MASES.JNetReflector -TraceLevel 1 -TraceTo %GITHUB_WORKSPACE%\JNetReflector.txt -OriginRootPath %GITHUB_WORKSPACE%\jars -DestinationRootPath %GITHUB_WORKSPACE%\src\ -ConfigurationFile %GITHUB_WORKSPACE%\src\configuration.json
-
       - name: Build classes with latest published version of JNetReflector
         if: ${{ inputs.UseLatestJNetReflector == false }}
         shell: cmd
