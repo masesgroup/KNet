@@ -102,6 +102,7 @@ This project adheres to the Contributor [Covenant code of conduct](https://githu
   * serializers supports data exchange based on `byte` array and `ByteBuffer`
   * version 2.7.2 introduces `ISerDesSelector` to optimize serialization selection based on `byte` array or `ByteBuffer`
 * V2.8.0+: From version 2.8.0: supports Apache Kafka™ version 3.8.*
+* V2.9.0+: From version 2.9.0: supports Apache Kafka™ version 3.9.*
 
 ---
 
