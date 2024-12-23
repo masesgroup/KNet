@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -91,7 +91,7 @@
 </ul>
 <div class="IMPORTANT">
 <h5>Important</h5>
-<p>The <strong>dotnet tool</strong> needs a JRE/JDK installed within the system</p>
+<p>The <strong>dotnet tool</strong> needs a JRE/JDK installed within the system.</p>
 </div>
 <h2 id="usage">Usage</h2>
 <h3 id="execute-an-apache-kafka-command">Execute an Apache Kafka™ command</h3>
@@ -101,6 +101,12 @@
 </ul>
 <pre><code class="lang-sh">knet -ClassToRun ConsoleConsumer --bootstrap-server SERVER-ADDRESS:9093 --topic topic_name --from-beginning
 </code></pre>
+<div class="IMPORTANT">
+<h5>Important</h5>
+<p>If the previous command raises the error described in <a href="usage.html#intel-cet-and-knet">Intel CET and KNet</a> the only solution is to apply the following workaround (within an <strong>elevated shell</strong>) and disable CET:</p>
+<pre><code class="lang-sh">  reg add &quot;HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\knet.exe&quot; /v MitigationOptions /t REG_BINARY /d &quot;0000000000000000000000000000002000&quot; /f
+</code></pre>
+</div>
 <ul>
 <li><strong>Docker image</strong></li>
 </ul>

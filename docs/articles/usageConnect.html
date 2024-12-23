@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -102,6 +102,12 @@
 </code></pre>
 <pre><code class="lang-sh">knetconnect -d connect-distributed.properties
 </code></pre>
+<div class="IMPORTANT">
+<h5>Important</h5>
+<p>If the previous commands raise the error described in <a href="usage.html#intel-cet-and-knet">Intel CET and KNet</a> the only solution is to apply the following workaround (within an <strong>elevated shell</strong>) and disable CET:</p>
+<pre><code class="lang-sh">  reg add &quot;HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\knetconnect.exe&quot; /v MitigationOptions /t REG_BINARY /d &quot;0000000000000000000000000000002000&quot; /f
+</code></pre>
+</div>
 <ul>
 <li><strong>Docker image</strong></li>
 </ul>
