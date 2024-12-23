@@ -135,7 +135,7 @@ jobs:
         run: dotnet tool update -g MASES.JNetReflector
 
       - name: Download latest published version of JNetReflector
-        if: ${{ inputs.UseLastRepositoryBuild == false && inputs.UseLatestJNetReflectorSource == true }}
+        if: ${{ inputs.UseLastRepositoryBuild == false && inputs.UseLatestJNetReflectorSource == false }}
         run: dotnet tool update --version 2.5.11 -g MASES.JNetReflector
 
       - name: Build classes with unpublished JNetReflector
@@ -146,7 +146,7 @@ jobs:
           MASES.JNetReflector.exe -TraceLevel 1 -TraceTo %GITHUB_WORKSPACE%\JNetReflector.txt -OriginRootPath %GITHUB_WORKSPACE%\jars -DestinationRootPath %GITHUB_WORKSPACE%\src\ -ConfigurationFile %GITHUB_WORKSPACE%\src\configuration.json
 
       - name: Disable CET for dotnet process
-        if: ${{ inputs.UseLatestJNetReflectorSource == true || inputs.UseLastRepositoryBuild == true }}
+        if: ${{ inputs.UseLatestJNetReflectorSource == false }}
         run: |
           reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\jnetreflector.exe" /v MitigationOptions /t REG_BINARY /d "0000000000000000000000000000002000" /f
           Get-ProcessMitigation -Name "jnetreflector.exe"
