@@ -81,7 +81,7 @@ To solve the issue there are four possible solutions:
 	MyApplication.exe
 ```
 
-4. If you want to run the classic application execute the following command:
+4. If you want to run the classic application execute the following command in an **elevated shell**:
 
  ```sh
 	reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\MyApplication.exe" /v MitigationOptions /t REG_BINARY /d "0000000000000000000000000000002000" /f
