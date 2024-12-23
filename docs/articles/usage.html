@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -102,11 +102,14 @@ If a developer is using KNet within its own product it is possible to override t
         }
     }
 </code></pre>
-<p><strong>IMPORTANT NOTE</strong>: <code>pathToJVM</code> shall be escaped</p>
+<div class="IMPORTANT">
+<h5>Important</h5>
+<p><code>pathToJVM</code> shall be escaped</p>
 <ol>
 <li><code>string pathToJVM = &quot;C:\\Program Files\\Eclipse Adoptium\\jdk-11.0.18.10-hotspot\\bin\\server\\jvm.dll&quot;;</code></li>
 <li><code>string pathToJVM = @&quot;C:\Program Files\Eclipse Adoptium\jdk-11.0.18.10-hotspot\bin\server\jvm.dll&quot;;</code></li>
 </ol>
+</div>
 <h3 id="special-initialization-conditions">Special initialization conditions</h3>
 <p><a href="https://www.jcobridge.com/">JCOBridge</a> try to identify a suitable JRE/JDK installation within the system using some standard mechanism of JRE/JDK: <code>JAVA_HOME</code> environment variable or Windows registry if available.
 However it is possible, on Windows operating systems, that the library raises an <strong>InvalidOperationException: Missing Java Key in registry: Couldn't find Java installed on the machine</strong>.
@@ -118,12 +121,47 @@ If the developer/user encounter this condition can do the following steps:</p>
 <li>Try to set <code>JAVA_HOME</code> at system level e.g. <code>JAVA_HOME=C:\Program Files\Eclipse Adoptium\jdk-11.0.18.10-hotspot\</code>;</li>
 <li>Try to set <code>JCOBRIDGE_JVMPath</code> at system level e.g. <code>JCOBRIDGE_JVMPath=C:\Program Files\Eclipse Adoptium\jdk-11.0.18.10-hotspot\</code>.</li>
 </ol>
-<p><strong>IMPORTANT NOTES</strong>:</p>
+<div class="IMPORTANT">
+<h5>Important</h5>
 <ul>
 <li>One of <code>JCOBRIDGE_JVMPath</code> or <code>JAVA_HOME</code> environment variables or Windows registry (on Windows OSes) shall be available</li>
 <li><code>JCOBRIDGE_JVMPath</code> environment variable takes precedence over <code>JAVA_HOME</code> and Windows registry: you can set <code>JCOBRIDGE_JVMPath</code> to <code>C:\Program Files\Eclipse Adoptium\jdk-11.0.18.10-hotspot\bin\server\jvm.dll</code> and avoid to override <code>JVMPath</code> in your code</li>
 <li>After first initialization steps, <code>JVMPath</code> takes precedence over <code>JCOBRIDGE_JVMPath</code>/<code>JAVA_HOME</code> environment variables or Windows registry</li>
 </ul>
+</div>
+<h3 id="intel-cet-and-knet">Intel CET and KNet</h3>
+<p>KNet uses an embedded JVM through JNet/JCOBridge, however JVM initialization is incompatible with <a href="https://www.intel.com/content/www/us/en/developer/articles/technical/technical-look-control-flow-enforcement-technology.html">CET</a> because the code used to identify CPU try to modify the return address and this is considered from CET a violation: see <a href="https://github.com/masesgroup/JNet/issues/573#issuecomment-2544249107">this comment</a>.</p>
+<p>From .NET 9 preview 6, <a href="https://learn.microsoft.com/en-us/dotnet/core/compatibility/interop/9.0/cet-support">CET is enabled by default on supported hardware</a> when the final stage produce an executable artifact, i.e. the csproj file contains <code>&lt;OutputType&gt;Exe&lt;/OutputType&gt;</code>.</p>
+<p>If the application, upon startup, fails with the error 0xc0000409 (subcode 0x30) it was compiled with CET enabled and it fails during JVM initialization.</p>
+<p>To solve the issue there are four possible solutions:</p>
+<ol>
+<li>use a .NET version, e.g. 8, that does not enable CET by default</li>
+<li>Add the following snippet to disable CET on executable (templates available for KNet are ready made and solve this issue):</li>
+</ol>
+<pre><code class="lang-xml">	&lt;PropertyGroup Condition=&quot;'$(TargetFramework)' == 'net9.0'&quot;&gt;
+		&lt;!--see https://learn.microsoft.com/en-us/dotnet/core/compatibility/interop/9.0/cet-support--&gt;
+		&lt;CETCompat&gt;false&lt;/CETCompat&gt;
+	&lt;/PropertyGroup&gt;
+</code></pre>
+<ol start="3">
+<li>Use the <code>dotnet</code> app host, as reported in <a href="https://github.com/masesgroup/JCOBridgePublic/issues/7#issuecomment-2550031946">https://github.com/masesgroup/JCOBridgePublic/issues/7#issuecomment-2550031946</a>, with a syntax like:</li>
+</ol>
+<pre><code class="lang-sh">	dotnet MyApplication.dll
+</code></pre>
+<p>instead of the classic:</p>
+<pre><code class="lang-sh">	MyApplication.exe
+</code></pre>
+<ol start="4">
+<li>If you want to run the classic application execute the following command in an <strong>elevated shell</strong>:</li>
+</ol>
+<pre><code class="lang-sh">	reg add &quot;HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\MyApplication.exe&quot; /v MitigationOptions /t REG_BINARY /d &quot;0000000000000000000000000000002000&quot; /f
+</code></pre>
+<p>then run:</p>
+<pre><code class="lang-sh">	MyApplication.exe
+</code></pre>
+<p>Use the following to enable again CET:</p>
+<pre><code class="lang-sh">	reg delete &quot;HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\MyApplication.exe&quot; /v MitigationOptions /f
+</code></pre>
 <h2 id="producer-example">Producer example</h2>
 <p>Below the reader can found two different version of producer examples.</p>
 <h3 id="simple-producer">Simple producer</h3>
