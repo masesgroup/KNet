@@ -13,7 +13,7 @@ KNet CLI is available in two different formats:
 - **Docker image** hosted on [GitHub](https://github.com/masesgroup/KNet/pkgs/container/knet) and [Docker Hub](https://hub.docker.com/repository/docker/masesgroup/knet/general): follow instruction within the page and general instruction on https://docs.docker.com
 
 > [!IMPORTANT]
-> The **dotnet tool** needs a JRE/JDK installed within the system
+> The **dotnet tool** needs a JRE/JDK installed within the system.
 
 ## Usage
 
@@ -26,6 +26,12 @@ To use the CLI interface (KNetCLI) runs a command like the following:
 ```sh
 knet -ClassToRun ConsoleConsumer --bootstrap-server SERVER-ADDRESS:9093 --topic topic_name --from-beginning
 ```
+
+> [!IMPORTANT]
+> If the previous command raises the error described in [Intel CET and KNet](usage.md#intel-cet-and-knet) the only solution is to apply the following workaround and disable CET:
+> ```sh
+> 	reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\knet.exe" /v MitigationOptions /t REG_BINARY /d "0000000000000000000000000000002000" /f
+> ```
 
 - **Docker image**
 
