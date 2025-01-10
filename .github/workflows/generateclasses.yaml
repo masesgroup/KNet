@@ -163,21 +163,25 @@ jobs:
 
       - name: Try compilation of Jars
         continue-on-error: ${{ inputs.ContinueOnLatestJNetReflectorError == true }}
-        if: ${{ inputs.UseLatestJNetReflectorSource == true }}
         run: mvn --file ./src/jvm/knet/pom.xml --no-transfer-progress package
 
       - name: Try compilation of C#
         continue-on-error: ${{ inputs.ContinueOnLatestJNetReflectorError == true }}
-        if: ${{ inputs.UseLatestJNetReflectorSource == true }}
         run: dotnet build --no-incremental --configuration Release /p:Platform="Any CPU" /p:NoWarn="0108%3B1030%3B0618" src\net\KNet\KNet.csproj
 
+      - name: Extract commit SHA
+        if: ${{ inputs.GeneratePR == true }}
+        run: |
+          echo "GITHUB_COMMIT_MESSAGE=$(echo $GITHUB_SHA | cut -c 1-7)" >> $GITHUB_ENV
+        shell: bash
+
       - name: Request a PR to commit changes made with unpublished version of JNetReflector
-        if: ${{ github.repository_owner == 'masesgroup' && inputs.GeneratePR == true && inputs.UseLatestJNetReflectorSource == true }} #do not push any changes outside main repo or GeneratePR is false
+        if: ${{ inputs.GeneratePR == true && (inputs.UseLatestJNetReflectorSource == true || inputs.UseLastRepositoryBuild == true) }}
         uses: peter-evans/create-pull-request@v7
         with:
           branch-suffix: short-commit-hash
           add-paths: src/*.*
-          commit-message: Update generated classes using last unpublished version of JNetReflector
+          commit-message: Update generated classes using last unpublished version of JNetReflector after commit ${{ env.GITHUB_COMMIT_MESSAGE }}
           title: Changes by GitHub action
           body: |
             Automated changes by GitHub action, fix #92
@@ -185,19 +189,13 @@ jobs:
           assignees: masesdevelopers
           labels: java, .NET, enhancement 
 
-      - name: Extract commit SHA
-        if: ${{ github.repository_owner == 'masesgroup' && inputs.GeneratePR == true && inputs.UseLatestJNetReflectorSource == false }}
-        run: |
-          echo "GITHUB_COMMIT_MESSAGE=$(echo $GITHUB_SHA | cut -c 1-7)" >> $GITHUB_ENV
-        shell: bash
-
       - name: Request a PR to commit changes made with latest published version of JNetReflector
-        if: ${{ github.repository_owner == 'masesgroup' && inputs.GeneratePR == true && inputs.UseLatestJNetReflectorSource == false }} #do not push any changes outside main repo or GeneratePR is false
+        if: ${{ inputs.GeneratePR == true && inputs.UseLatestJNetReflectorSource == false && inputs.UseLastRepositoryBuild == false }}
         uses: peter-evans/create-pull-request@v7
         with:
           branch-suffix: short-commit-hash
           add-paths: src/*.*
-          commit-message: Update generated classes after commit ${{ env.GITHUB_COMMIT_MESSAGE }}
+          commit-message: Update generated classes using last public version of JNetReflector after commit ${{ env.GITHUB_COMMIT_MESSAGE }}
           title: Changes by GitHub action
           body: |
             Automated changes by GitHub action, fix #92
