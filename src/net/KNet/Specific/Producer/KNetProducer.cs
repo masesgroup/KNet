@@ -260,10 +260,28 @@ namespace MASES.KNet.Producer
         /// </summary>
         ~KNetProducer()
         {
-            if (_autoCreateSerDes)
+            Dispose();
+        }
+
+        object _disposedLock = new object();
+        bool _disposed = false;
+
+        /// <inheritdoc cref="IDisposable.Dispose"/>
+        public override void Dispose()
+        {
+            lock (_disposedLock)
             {
-                _keySerializer?.Dispose();
-                _valueSerializer?.Dispose();
+                if (_disposed) return;
+                try
+                {
+                    base.Dispose();
+                    if (_autoCreateSerDes)
+                    {
+                        _keySerializer?.Dispose();
+                        _valueSerializer?.Dispose();
+                    }
+                }
+                finally { _disposed = true; }
             }
         }
 

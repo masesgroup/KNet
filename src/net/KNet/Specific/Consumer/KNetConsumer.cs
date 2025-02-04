@@ -185,7 +185,7 @@ namespace MASES.KNet.Consumer
         /// </summary>
         ~KNetConsumer()
         {
-            this.Dispose();
+            Dispose();
         }
 
         /// <inheritdoc cref="IConsumer{K, V, TJVMK, TJVMV}.Poll(long)"/>
@@ -212,30 +212,44 @@ namespace MASES.KNet.Consumer
         {
             actionCallback?.Invoke(message);
         }
+
+        object _disposedLock = new object();
+        bool _disposed = false;
+
         /// <inheritdoc cref="IDisposable.Dispose"/>
         public override void Dispose()
         {
-            if (_consumerCallback != null)
+            lock (_disposedLock)
             {
-                IExecute("setCallback", null);
-                _consumerCallback?.Dispose();
-            }
-            _threadRunning = false;
-            if (_consumedRecords != null)
-            {
-                lock (_consumedRecords)
+                if (_disposed) return;
+                try
                 {
-                    System.Threading.Monitor.Pulse(_consumedRecords);
+                    if (_consumerCallback != null)
+                    {
+                        IExecute("setCallback", null);
+                        _consumerCallback?.Dispose();
+                    }
+                    _threadRunning = false;
+                    if (_consumedRecords != null)
+                    {
+                        lock (_consumedRecords)
+                        {
+                            System.Threading.Monitor.Pulse(_consumedRecords);
+                        }
+                        if (IsCompleting) { _consumeThread?.Join(); };
+                        actionCallback = null;
+                    }
+
+                    base.Dispose();
+
+                    if (_autoCreateSerDes)
+                    {
+                        _keyDeserializer?.Dispose();
+                        _valueDeserializer?.Dispose();
+                    }
                 }
-                if (IsCompleting) { _consumeThread?.Join(); };
-                actionCallback = null;
+                finally { _disposed = true; }
             }
-            if (_autoCreateSerDes)
-            {
-                _keyDeserializer?.Dispose();
-                _valueDeserializer?.Dispose();
-            }
-            base.Dispose();
         }
 #if NET7_0_OR_GREATER
         /// <inheritdoc cref="IConsumer{K, V, TJVMK, TJVMV}.ApplyPrefetch(bool, int)"/>
