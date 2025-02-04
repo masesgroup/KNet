@@ -185,7 +185,7 @@ namespace MASES.KNet.Consumer
         /// </summary>
         ~KNetConsumer()
         {
-            DestroyResources();
+            Dispose();
         }
 
         /// <inheritdoc cref="IConsumer{K, V, TJVMK, TJVMV}.Poll(long)"/>
@@ -213,15 +213,15 @@ namespace MASES.KNet.Consumer
             actionCallback?.Invoke(message);
         }
 
-        object _resourceDestroyedLock = new object();
-        bool _resourceDestroyed = false;
+        object _disposedLock = new object();
+        bool _disposed = false;
 
-        void DestroyResources()
+        /// <inheritdoc cref="IDisposable.Dispose"/>
+        public override void Dispose()
         {
-            lock (_resourceDestroyedLock)
+            lock (_disposedLock)
             {
-                if (_resourceDestroyed) return;
-
+                if (_disposed) return;
                 try
                 {
                     if (_consumerCallback != null)
@@ -239,29 +239,14 @@ namespace MASES.KNet.Consumer
                         if (IsCompleting) { _consumeThread?.Join(); };
                         actionCallback = null;
                     }
+
+                    base.Dispose();
+
                     if (_autoCreateSerDes)
                     {
                         _keyDeserializer?.Dispose();
                         _valueDeserializer?.Dispose();
                     }
-                }
-                finally { _resourceDestroyed = true; }
-            }
-        }
-
-        object _disposedLock = new object();
-        bool _disposed = false;
-
-        /// <inheritdoc cref="IDisposable.Dispose"/>
-        public override void Dispose()
-        {
-            lock (_disposedLock)
-            {
-                if (_disposed) return;
-                try
-                {
-                    DestroyResources();
-                    base.Dispose();
                 }
                 finally { _disposed = true; }
             }

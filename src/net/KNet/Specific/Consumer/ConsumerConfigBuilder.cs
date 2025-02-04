@@ -174,11 +174,11 @@ namespace MASES.KNet.Consumer
         /// <summary>
         /// Manages <see cref="ConsumerConfig.GROUP_PROTOCOL_CONFIG"/>
         /// </summary>
-        public string GroupProtocol { get { return GetProperty<string>(ConsumerConfig.GROUP_PROTOCOL_CONFIG); } set { SetProperty(ConsumerConfig.GROUP_PROTOCOL_CONFIG, value); } }
+        public GroupProtocol GroupProtocol { get { return GetProperty<GroupProtocol>(ConsumerConfig.GROUP_PROTOCOL_CONFIG); } set { SetProperty(ConsumerConfig.GROUP_PROTOCOL_CONFIG, value); } }
         /// <summary>
         /// Manages <see cref="ConsumerConfig.GROUP_PROTOCOL_CONFIG"/>
         /// </summary>
-        public ConsumerConfigBuilder WithGroupProtocol(string groupProtocol)
+        public ConsumerConfigBuilder WithGroupProtocol(GroupProtocol groupProtocol)
         {
             var clone = Clone();
             clone.GroupProtocol = groupProtocol;
