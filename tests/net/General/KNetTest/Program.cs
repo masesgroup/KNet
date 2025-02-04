@@ -435,7 +435,7 @@ namespace MASES.KNetTest
                     keyDeserializer?.Dispose();
                     valueDeserializer?.Dispose();
                     topics?.Dispose();
-                    if (elements != 0) Console.WriteLine($"Total mean time is {TimeSpan.FromTicks(watcherTotal.ElapsedTicks / elements)}, console write mean time is {TimeSpan.FromTicks(watcher.ElapsedTicks / elements)}");
+                    if (elements != 0) Console.WriteLine($"Total time is {watcherTotal.Elapsed}, consume mean time is {TimeSpan.FromTicks(watcherTotal.ElapsedTicks / elements)}, console write mean time is {TimeSpan.FromTicks(watcher.ElapsedTicks / elements)}");
                 }
             }
             catch (Java.Util.Concurrent.ExecutionException ex)
@@ -663,7 +663,7 @@ namespace MASES.KNetTest
                     keyDeserializer?.Dispose();
                     valueDeserializer?.Dispose();
                     topics?.Dispose();
-                    if (elements != 0) Console.WriteLine($"Total mean time is {TimeSpan.FromTicks(watcherTotal.ElapsedTicks / elements)}, console write mean time is {TimeSpan.FromTicks(watcher.ElapsedTicks / elements)}");
+                    if (elements != 0) Console.WriteLine($"Total time is {watcherTotal.Elapsed}, consume mean time is {TimeSpan.FromTicks(watcherTotal.ElapsedTicks / elements)}, console write mean time is {TimeSpan.FromTicks(watcher.ElapsedTicks / elements)}");
                 }
             }
             catch (Java.Util.Concurrent.ExecutionException ex)
