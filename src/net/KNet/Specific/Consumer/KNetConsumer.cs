@@ -185,7 +185,7 @@ namespace MASES.KNet.Consumer
         /// </summary>
         ~KNetConsumer()
         {
-            this.Dispose();
+            DestroyResources();
         }
 
         /// <inheritdoc cref="IConsumer{K, V, TJVMK, TJVMV}.Poll(long)"/>
@@ -212,30 +212,59 @@ namespace MASES.KNet.Consumer
         {
             actionCallback?.Invoke(message);
         }
+
+        object _resourceDestroyedLock = new object();
+        bool _resourceDestroyed = false;
+
+        void DestroyResources()
+        {
+            lock (_resourceDestroyedLock)
+            {
+                if (_resourceDestroyed) return;
+
+                try
+                {
+                    if (_consumerCallback != null)
+                    {
+                        IExecute("setCallback", null);
+                        _consumerCallback?.Dispose();
+                    }
+                    _threadRunning = false;
+                    if (_consumedRecords != null)
+                    {
+                        lock (_consumedRecords)
+                        {
+                            System.Threading.Monitor.Pulse(_consumedRecords);
+                        }
+                        if (IsCompleting) { _consumeThread?.Join(); };
+                        actionCallback = null;
+                    }
+                    if (_autoCreateSerDes)
+                    {
+                        _keyDeserializer?.Dispose();
+                        _valueDeserializer?.Dispose();
+                    }
+                }
+                finally { _resourceDestroyed = true; }
+            }
+        }
+
+        object _disposedLock = new object();
+        bool _disposed = false;
+
         /// <inheritdoc cref="IDisposable.Dispose"/>
         public override void Dispose()
         {
-            if (_consumerCallback != null)
+            lock (_disposedLock)
             {
-                IExecute("setCallback", null);
-                _consumerCallback?.Dispose();
-            }
-            _threadRunning = false;
-            if (_consumedRecords != null)
-            {
-                lock (_consumedRecords)
+                if (_disposed) return;
+                try
                 {
-                    System.Threading.Monitor.Pulse(_consumedRecords);
+                    DestroyResources();
+                    base.Dispose();
                 }
-                if (IsCompleting) { _consumeThread?.Join(); };
-                actionCallback = null;
+                finally { _disposed = true; }
             }
-            if (_autoCreateSerDes)
-            {
-                _keyDeserializer?.Dispose();
-                _valueDeserializer?.Dispose();
-            }
-            base.Dispose();
         }
 #if NET7_0_OR_GREATER
         /// <inheritdoc cref="IConsumer{K, V, TJVMK, TJVMV}.ApplyPrefetch(bool, int)"/>
