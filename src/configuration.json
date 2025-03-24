@@ -7,20 +7,21 @@
   "DisableInterfaceMethodGeneration": true,
   "CreateInterfaceInheritance": true,
   "JarList": [
-    "kafka_2.13-3.9.0.jar",
-    "kafka-clients-3.9.0.jar",
-    "kafka-streams-3.9.0.jar",
-    "kafka-tools-3.9.0.jar",
-    "kafka-raft-3.9.0.jar",
-    "kafka-shell-3.9.0.jar",
-    "connect-api-3.9.0.jar",
-    "connect-basic-auth-extension-3.9.0.jar",
-    "connect-json-3.9.0.jar",
-    "connect-mirror-3.9.0.jar",
-    "connect-mirror-client-3.9.0.jar",
-    "connect-runtime-3.9.0.jar",
-    "connect-transforms-3.9.0.jar",
-	"kafka-server-common-3.9.0.jar"
+    "kafka_2.13-4.0.0.jar",
+    "kafka-clients-4.0.0.jar",
+    "kafka-streams-4.0.0.jar",
+    "kafka-streams-scala_2.13-4.0.0.jar",
+    "kafka-tools-4.0.0.jar",
+    "kafka-raft-4.0.0.jar",
+    "kafka-shell-4.0.0.jar",
+    "connect-api-4.0.0.jar",
+    "connect-basic-auth-extension-4.0.0.jar",
+    "connect-json-4.0.0.jar",
+    "connect-mirror-4.0.0.jar",
+    "connect-mirror-client-4.0.0.jar",
+    "connect-runtime-4.0.0.jar",
+    "connect-transforms-4.0.0.jar",
+	"kafka-server-common-4.0.0.jar"
   ],
   "OriginJavadocJARVersionAndUrls": [
     {
@@ -34,6 +35,10 @@
     {
       "Version": 8,
       "Url": "https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.0/"
+    },
+    {
+      "Version": 8,
+      "Url": "https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/3.9.0/"
     },
     {
       "Version": 8,
