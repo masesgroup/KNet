@@ -69,14 +69,14 @@ namespace MASES.KNet.Streams.Kstream
             return new Consumed<K, V, TJVMK, TJVMV>(cons);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/kstream/Consumed.html#with-org.apache.kafka.common.serialization.Serde-org.apache.kafka.common.serialization.Serde-org.apache.kafka.streams.processor.TimestampExtractor-org.apache.kafka.streams.Topology.AutoOffsetReset-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/kstream/Consumed.html#with-org.apache.kafka.common.serialization.Serde-org.apache.kafka.common.serialization.Serde-org.apache.kafka.streams.processor.TimestampExtractor-Org.Apache.Kafka.Streams.AutoOffsetReset-"/>
         /// </summary>
         /// <param name="arg0"><see cref="ISerDes{K, TJVMK}"/></param>
         /// <param name="arg1"><see cref="ISerDes{V, TJVMV}"/></param>
         /// <param name="arg2"><see cref="TimestampExtractor{K, V, TJVMK, TJVMV}"/></param>
-        /// <param name="arg3"><see cref="Org.Apache.Kafka.Streams.Topology.AutoOffsetReset"/></param>
+        /// <param name="arg3"><see cref="Org.Apache.Kafka.Streams.AutoOffsetReset"/></param>
         /// <returns><see cref="Consumed{K, V, TJVMK, TJVMV}"/></returns>
-        public static Consumed<K, V, TJVMK, TJVMV> With(ISerDes<K, TJVMK> arg0, ISerDes<V, TJVMV> arg1, TimestampExtractor<K, V, TJVMK, TJVMV> arg2, Org.Apache.Kafka.Streams.Topology.AutoOffsetReset arg3)
+        public static Consumed<K, V, TJVMK, TJVMV> With(ISerDes<K, TJVMK> arg0, ISerDes<V, TJVMV> arg1, TimestampExtractor<K, V, TJVMK, TJVMV> arg2, Org.Apache.Kafka.Streams.AutoOffsetReset arg3)
         {
             var cons = Org.Apache.Kafka.Streams.Kstream.Consumed<TJVMK, TJVMV>.With(arg0.KafkaSerde, arg1.KafkaSerde, arg2, arg3);
             var instance = new Consumed<K, V, TJVMK, TJVMV>(cons);
@@ -112,11 +112,11 @@ namespace MASES.KNet.Streams.Kstream
             return instance;
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/kstream/Consumed.html#with-org.apache.kafka.streams.Topology.AutoOffsetReset-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/kstream/Consumed.html#with-Org.Apache.Kafka.Streams.AutoOffsetReset-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Topology.AutoOffsetReset"/></param>
+        /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.AutoOffsetReset"/></param>
         /// <returns><see cref="Consumed{K, V, TJVMK, TJVMV}"/></returns>
-        public static Consumed<K, V, TJVMK, TJVMV> With(Org.Apache.Kafka.Streams.Topology.AutoOffsetReset arg0)
+        public static Consumed<K, V, TJVMK, TJVMV> With(Org.Apache.Kafka.Streams.AutoOffsetReset arg0)
         {
             var cons = Org.Apache.Kafka.Streams.Kstream.Consumed<TJVMK, TJVMV>.With(arg0);
             return new Consumed<K, V, TJVMK, TJVMV>(cons);
@@ -137,11 +137,11 @@ namespace MASES.KNet.Streams.Kstream
             return this;
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/kstream/Consumed.html#withOffsetResetPolicy-org.apache.kafka.streams.Topology.AutoOffsetReset-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/kstream/Consumed.html#withOffsetResetPolicy-Org.Apache.Kafka.Streams.AutoOffsetReset-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Topology.AutoOffsetReset"/></param>
+        /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.AutoOffsetReset"/></param>
         /// <returns><see cref="Consumed{K, V, TJVMK, TJVMV}"/></returns>
-        public Consumed<K, V, TJVMK, TJVMV> WithOffsetResetPolicy(Org.Apache.Kafka.Streams.Topology.AutoOffsetReset arg0)
+        public Consumed<K, V, TJVMK, TJVMV> WithOffsetResetPolicy(Org.Apache.Kafka.Streams.AutoOffsetReset arg0)
         {
             _inner?.WithOffsetResetPolicy(arg0);
             return this;

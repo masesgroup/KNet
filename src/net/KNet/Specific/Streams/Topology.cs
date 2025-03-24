@@ -272,112 +272,112 @@ namespace MASES.KNet.Streams
             return new Topology(top, _factory);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/Topology.html#addSource-org.apache.kafka.streams.Topology.AutoOffsetReset-java.lang.String-java.lang.String[]-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/Topology.html#addSource-Org.Apache.Kafka.Streams.AutoOffsetReset-java.lang.String-java.lang.String[]-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Topology.AutoOffsetReset"/></param>
+        /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.AutoOffsetReset"/></param>
         /// <param name="arg1"><see cref="string"/></param>
         /// <param name="arg2"><see cref="string"/></param>
         /// <returns><see cref="Topology"/></returns>
-        public Topology AddSource(Org.Apache.Kafka.Streams.Topology.AutoOffsetReset arg0, string arg1, params string[] arg2)
+        public Topology AddSource(Org.Apache.Kafka.Streams.AutoOffsetReset arg0, string arg1, params string[] arg2)
         {
             var top = _topology.AddSource(arg0, arg1, arg2.ToJVMArray<Java.Lang.String, string>());
             return new Topology(top, _factory);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/Topology.html#addSource-org.apache.kafka.streams.Topology.AutoOffsetReset-java.lang.String-java.util.regex.Pattern-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/Topology.html#addSource-Org.Apache.Kafka.Streams.AutoOffsetReset-java.lang.String-java.util.regex.Pattern-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Topology.AutoOffsetReset"/></param>
+        /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.AutoOffsetReset"/></param>
         /// <param name="arg1"><see cref="string"/></param>
         /// <param name="arg2"><see cref="Java.Util.Regex.Pattern"/></param>
         /// <returns><see cref="Topology"/></returns>
-        public Topology AddSource(Org.Apache.Kafka.Streams.Topology.AutoOffsetReset arg0, string arg1, Java.Util.Regex.Pattern arg2)
+        public Topology AddSource(Org.Apache.Kafka.Streams.AutoOffsetReset arg0, string arg1, Java.Util.Regex.Pattern arg2)
         {
             var top = _topology.AddSource(arg0, arg1, arg2);
             return new Topology(top, _factory);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/Topology.html#addSource-org.apache.kafka.streams.Topology.AutoOffsetReset-java.lang.String-IKNetDeserializer-IKNetDeserializer-java.lang.String[]-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/Topology.html#addSource-Org.Apache.Kafka.Streams.AutoOffsetReset-java.lang.String-IKNetDeserializer-IKNetDeserializer-java.lang.String[]-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Topology.AutoOffsetReset"/></param>
+        /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.AutoOffsetReset"/></param>
         /// <param name="arg1"><see cref="string"/></param>
         /// <param name="arg2"><see cref="IDeserializer{T, TJVMT}"/></param>
         /// <param name="arg3"><see cref="IDeserializer{T, TJVMT}"/></param>
         /// <param name="arg4"><see cref="string"/></param>
         /// <returns><see cref="Topology"/></returns>
-        public Topology AddSource(Org.Apache.Kafka.Streams.Topology.AutoOffsetReset arg0, string arg1, IDeserializer<object, byte[]> arg2, IDeserializer<object, byte[]> arg3, params string[] arg4)
+        public Topology AddSource(Org.Apache.Kafka.Streams.AutoOffsetReset arg0, string arg1, IDeserializer<object, byte[]> arg2, IDeserializer<object, byte[]> arg3, params string[] arg4)
         {
             var top = (arg4.Length == 0) ? _topology.IExecute<Org.Apache.Kafka.Streams.Topology>("addSource", arg0, arg1, arg2.KafkaDeserializer, arg3.KafkaDeserializer) : _topology.IExecute<Org.Apache.Kafka.Streams.Topology>("addSource", arg0, arg1, arg2.KafkaDeserializer, arg3.KafkaDeserializer, arg4);
             return new Topology(top, _factory);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/Topology.html#addSource-org.apache.kafka.streams.Topology.AutoOffsetReset-java.lang.String-IKNetDeserializer-IKNetDeserializer-java.util.regex.Pattern-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/Topology.html#addSource-Org.Apache.Kafka.Streams.AutoOffsetReset-java.lang.String-IKNetDeserializer-IKNetDeserializer-java.util.regex.Pattern-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Topology.AutoOffsetReset"/></param>
+        /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.AutoOffsetReset"/></param>
         /// <param name="arg1"><see cref="string"/></param>
         /// <param name="arg2"><see cref="IDeserializer{T, TJVMT}"/></param>
         /// <param name="arg3"><see cref="IDeserializer{T, TJVMT}"/></param>
         /// <param name="arg4"><see cref="Java.Util.Regex.Pattern"/></param>
         /// <returns><see cref="Topology"/></returns>
-        public Topology AddSource(Org.Apache.Kafka.Streams.Topology.AutoOffsetReset arg0, string arg1, IDeserializer<object, byte[]> arg2, IDeserializer<object, byte[]> arg3, Java.Util.Regex.Pattern arg4)
+        public Topology AddSource(Org.Apache.Kafka.Streams.AutoOffsetReset arg0, string arg1, IDeserializer<object, byte[]> arg2, IDeserializer<object, byte[]> arg3, Java.Util.Regex.Pattern arg4)
         {
             var top = _topology.IExecute<Org.Apache.Kafka.Streams.Topology>("addSource", arg0, arg1, arg2.KafkaDeserializer, arg3.KafkaDeserializer, arg4);
             return new Topology(top, _factory);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/Topology.html#addSource-org.apache.kafka.streams.Topology.AutoOffsetReset-java.lang.String-org.apache.kafka.streams.processor.TimestampExtractor-IKNetDeserializer-IKNetDeserializer-java.lang.String[]-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/Topology.html#addSource-Org.Apache.Kafka.Streams.AutoOffsetReset-java.lang.String-org.apache.kafka.streams.processor.TimestampExtractor-IKNetDeserializer-IKNetDeserializer-java.lang.String[]-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Topology.AutoOffsetReset"/></param>
+        /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.AutoOffsetReset"/></param>
         /// <param name="arg1"><see cref="string"/></param>
         /// <param name="arg2"><see cref="Org.Apache.Kafka.Streams.Processor.TimestampExtractor"/></param>
         /// <param name="arg3"><see cref="IDeserializer{T, TJVMT}"/></param>
         /// <param name="arg4"><see cref="IDeserializer{T, TJVMT}"/></param>
         /// <param name="arg5"><see cref="string"/></param>
         /// <returns><see cref="Topology"/></returns>
-        public Topology AddSource(Org.Apache.Kafka.Streams.Topology.AutoOffsetReset arg0, string arg1, Org.Apache.Kafka.Streams.Processor.TimestampExtractor arg2, IDeserializer<object, byte[]> arg3, IDeserializer<object, byte[]> arg4, params string[] arg5)
+        public Topology AddSource(Org.Apache.Kafka.Streams.AutoOffsetReset arg0, string arg1, Org.Apache.Kafka.Streams.Processor.TimestampExtractor arg2, IDeserializer<object, byte[]> arg3, IDeserializer<object, byte[]> arg4, params string[] arg5)
         {
             if (arg2 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
             var top = (arg5.Length == 0) ? _topology.IExecute<Org.Apache.Kafka.Streams.Topology>("addSource", arg0, arg1, arg2, arg3.KafkaDeserializer, arg4.KafkaDeserializer) : _topology.IExecute<Org.Apache.Kafka.Streams.Topology>("addSource", arg0, arg1, arg2, arg3.KafkaDeserializer, arg4.KafkaDeserializer, arg5);
             return new Topology(top, _factory);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/Topology.html#addSource-org.apache.kafka.streams.Topology.AutoOffsetReset-java.lang.String-org.apache.kafka.streams.processor.TimestampExtractor-IKNetDeserializer-IKNetDeserializer-java.util.regex.Pattern-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/Topology.html#addSource-Org.Apache.Kafka.Streams.AutoOffsetReset-java.lang.String-org.apache.kafka.streams.processor.TimestampExtractor-IKNetDeserializer-IKNetDeserializer-java.util.regex.Pattern-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Topology.AutoOffsetReset"/></param>
+        /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.AutoOffsetReset"/></param>
         /// <param name="arg1"><see cref="string"/></param>
         /// <param name="arg2"><see cref="Org.Apache.Kafka.Streams.Processor.TimestampExtractor"/></param>
         /// <param name="arg3"><see cref="IDeserializer{T, TJVMT}"/></param>
         /// <param name="arg4"><see cref="IDeserializer{T, TJVMT}"/></param>
         /// <param name="arg5"><see cref="Java.Util.Regex.Pattern"/></param>
         /// <returns><see cref="Topology"/></returns>
-        public Topology AddSource(Org.Apache.Kafka.Streams.Topology.AutoOffsetReset arg0, string arg1, Org.Apache.Kafka.Streams.Processor.TimestampExtractor arg2, IDeserializer<object, byte[]> arg3, IDeserializer<object, byte[]> arg4, Java.Util.Regex.Pattern arg5)
+        public Topology AddSource(Org.Apache.Kafka.Streams.AutoOffsetReset arg0, string arg1, Org.Apache.Kafka.Streams.Processor.TimestampExtractor arg2, IDeserializer<object, byte[]> arg3, IDeserializer<object, byte[]> arg4, Java.Util.Regex.Pattern arg5)
         {
             if (arg2 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
             var top = _topology.IExecute<Org.Apache.Kafka.Streams.Topology>("addSource", arg0, arg1, arg2, arg3.KafkaDeserializer, arg4.KafkaDeserializer, arg5);
             return new Topology(top, _factory);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/Topology.html#addSource-org.apache.kafka.streams.Topology.AutoOffsetReset-org.apache.kafka.streams.processor.TimestampExtractor-java.lang.String-java.lang.String[]-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/Topology.html#addSource-Org.Apache.Kafka.Streams.AutoOffsetReset-org.apache.kafka.streams.processor.TimestampExtractor-java.lang.String-java.lang.String[]-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Topology.AutoOffsetReset"/></param>
+        /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.AutoOffsetReset"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Streams.Processor.TimestampExtractor"/></param>
         /// <param name="arg2"><see cref="string"/></param>
         /// <param name="arg3"><see cref="string"/></param>
         /// <returns><see cref="Topology"/></returns>
-        public Topology AddSource(Org.Apache.Kafka.Streams.Topology.AutoOffsetReset arg0, Org.Apache.Kafka.Streams.Processor.TimestampExtractor arg1, string arg2, params string[] arg3)
+        public Topology AddSource(Org.Apache.Kafka.Streams.AutoOffsetReset arg0, Org.Apache.Kafka.Streams.Processor.TimestampExtractor arg1, string arg2, params string[] arg3)
         {
             if (arg1 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
             var top = _topology.AddSource(arg0, arg1, arg2, arg3.ToJVMArray<Java.Lang.String, string>());
             return new Topology(top, _factory);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/Topology.html#addSource-org.apache.kafka.streams.Topology.AutoOffsetReset-org.apache.kafka.streams.processor.TimestampExtractor-java.lang.String-java.util.regex.Pattern-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/Topology.html#addSource-Org.Apache.Kafka.Streams.AutoOffsetReset-org.apache.kafka.streams.processor.TimestampExtractor-java.lang.String-java.util.regex.Pattern-"/>
         /// </summary>
-        /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Topology.AutoOffsetReset"/></param>
+        /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.AutoOffsetReset"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Streams.Processor.TimestampExtractor"/></param>
         /// <param name="arg2"><see cref="string"/></param>
         /// <param name="arg3"><see cref="Java.Util.Regex.Pattern"/></param>
         /// <returns><see cref="Topology"/></returns>
-        public Topology AddSource(Org.Apache.Kafka.Streams.Topology.AutoOffsetReset arg0, Org.Apache.Kafka.Streams.Processor.TimestampExtractor arg1, string arg2, Java.Util.Regex.Pattern arg3)
+        public Topology AddSource(Org.Apache.Kafka.Streams.AutoOffsetReset arg0, Org.Apache.Kafka.Streams.Processor.TimestampExtractor arg1, string arg2, Java.Util.Regex.Pattern arg3)
         {
             if (arg1 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
             var top = _topology.AddSource(arg0, arg1, arg2, arg3);
