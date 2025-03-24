@@ -85,14 +85,5 @@ public final class Partitioner implements org.mases.jcobridge.IJCListener, org.a
         org.mases.jnet.developed.JNetEventResult eventDataExchange = new org.mases.jnet.developed.JNetEventResult();
         raiseEvent("configure", eventDataExchange, arg0); if (!eventDataExchange.getHasOverride()) throw new UnsupportedOperationException("The method shall be implemented in .NET side since does not have a default implementation within the JVM");
     }
-    //@Override
-    public void onNewBatch(java.lang.String arg0, org.apache.kafka.common.Cluster arg1, int arg2) {
-        org.mases.jnet.developed.JNetEventResult eventDataExchange = new org.mases.jnet.developed.JNetEventResult();
-        raiseEvent("onNewBatch", eventDataExchange, arg0, arg1, arg2); if (!eventDataExchange.getHasOverride()) org.apache.kafka.clients.producer.Partitioner.super.onNewBatch(arg0, arg1, arg2);
-    }
-    //@Override
-    public void onNewBatchDefault(java.lang.String arg0, org.apache.kafka.common.Cluster arg1, int arg2) {
-        org.apache.kafka.clients.producer.Partitioner.super.onNewBatch(arg0, arg1, arg2);
-    }
 
 }
