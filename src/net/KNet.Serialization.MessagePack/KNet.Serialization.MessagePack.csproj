@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 	<Import Project="..\Common\Common.props" />
 	<PropertyGroup>
 		<OutputPath>..\..\..\bin\</OutputPath>
@@ -18,7 +18,7 @@
 		<None Include="..\..\documentation\articles\usageSerDes.md" Pack="true" PackagePath="\" />
 	</ItemGroup>
 	<ItemGroup Condition="'$(TargetFramework)' == 'net462'">
-		<PackageReference Include="System.Memory" Version="4.6.0" />
+		<PackageReference Include="System.Memory" Version="4.6.2" />
 	</ItemGroup>
 	<ItemGroup>
 	  <PackageReference Include="MessagePack" Version="3.1.3" />
