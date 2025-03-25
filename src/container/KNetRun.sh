@@ -22,13 +22,23 @@ else
 		export KAFKA_ADVERTISED_PORT
 	fi
 	
-	if [[ -z "$KAFKA_BROKER_ID" ]]; then
-		if [[ -n "$BROKER_ID_COMMAND" ]]; then
-			KAFKA_BROKER_ID=$(eval "$BROKER_ID_COMMAND")
-			export KAFKA_BROKER_ID
+	if [[ -z "KAFKA_NODE_ID" ]]; then
+		if [[ -n "$NODE_ID_COMMAND" ]]; then
+			KAFKA_NODE_ID=$(eval "$NODE_ID_COMMAND")
+			export KAFKA_NODE_ID
 		else
-			# By default auto allocate broker ID
-			export KAFKA_BROKER_ID=-1
+			# By default auto allocate node ID
+			export KAFKA_NODE_ID=-1
+		fi
+	fi
+
+	if [[ -z "KAFKA_PROCESS_ROLES" ]]; then
+		if [[ -n "$KAFKA_PROCESS_ROLES_COMMAND" ]]; then
+			KAFKA_PROCESS_ROLES=$(eval "$KAFKA_PROCESS_ROLES_COMMAND")
+			export KAFKA_PROCESS_ROLES
+		else
+			# By default auto allocate node ID
+			export KAFKA_PROCESS_ROLES=-broker,controller
 		fi
 	fi
 
@@ -126,12 +136,9 @@ else
 	
 			if [[ $env_var =~ ^KAFKA_ ]]; then
 				kafka_name=$(echo "$env_var" | cut -d_ -f2- | tr '[:upper:]' '[:lower:]' | tr _ .)
-				updateConfig "$kafka_name" "${!env_var}" "/app/config_container/server.properties"
-			fi
-			
-			if [[ $env_var =~ ^ZOOKEEPER_ ]]; then
-				zookeeper_name=$(echo "$env_var" | cut -d_ -f2- | tr '[:upper:]' '[:lower:]' | tr _ .)
-				updateConfig "$zookeeper_name" "${!env_var}" "/app/config_container/zookeeper.properties"
+				updateConfig "$kraft_name" "${!env_var}" "/app/config_container/broker.properties"
+				updateConfig "$kraft_name" "${!env_var}" "/app/config_container/controller.properties"
+				updateConfig "$kraft_name" "${!env_var}" "/app/config_container/server.properties"
 			fi
 	
 			if [[ $env_var =~ ^LOG4J_ ]]; then
@@ -166,7 +173,22 @@ else
 
 ### end inherited from https://github.com/wurstmeister/kafka-docker/blob/901c084811fa9395f00af3c51e0ac6c32c697034/start-kafka.sh
 
-	if [ ${KNET_DOCKER_RUNNING_MODE} = "knet-connect-standalone" ]; then
+	if [ ${KNET_DOCKER_RUNNING_MODE} = "kraft-broker" ]; then
+		echo "Starting KRaft broker"
+		export KAFKA_PROCESS_ROLES=-broker
+		# Start kafka broker
+		dotnet /app/MASES.KNetCLI.dll kafkastart -Log4JConfiguration /app/config_container/log4j.properties /app/config_container/kraft/broker.properties
+	elif [ ${KNET_DOCKER_RUNNING_MODE} = "kraft-controller" ]; then
+		echo "Starting KRaft controller"
+		export KAFKA_PROCESS_ROLES=-controller
+		# Start kafka broker
+		dotnet /app/MASES.KNetCLI.dll kafkastart -Log4JConfiguration /app/config_container/log4j.properties /app/config_container/kraft/controller.properties
+	elif [ ${KNET_DOCKER_RUNNING_MODE} = "kraft-server" ]; then
+		echo "Starting KRaft server"
+		export KAFKA_PROCESS_ROLES=-broker,controller
+		# Start kafka broker
+		dotnet /app/MASES.KNetCLI.dll kafkastart -Log4JConfiguration /app/config_container/log4j.properties /app/config_container/kraft/server.properties
+	elif [ ${KNET_DOCKER_RUNNING_MODE} = "knet-connect-standalone" ]; then
 		echo "Starting KNet Connect standalone mode"
 		# Start zookeeper
 		dotnet /app/MASES.KNetConnect.dll -s -k -Log4JConfiguration /app/config_container/log4j.properties /app/config_container/connect-standalone.properties /app/config_container/connect-knet-specific.properties &
@@ -242,18 +264,6 @@ else
 		
 		# Exit with status of process that exited first
 		exit $?
-	elif [ ${KNET_DOCKER_RUNNING_MODE} = "kraft-broker" ]; then
-		echo "Starting KRaft broker"
-		# Start kafka broker
-		dotnet /app/MASES.KNetCLI.dll kafkastart -Log4JConfiguration /app/config_container/log4j.properties /app/config_container/kraft/broker.properties
-	elif [ ${KNET_DOCKER_RUNNING_MODE} = "kraft-controller" ]; then
-		echo "Starting KRaft controller"
-		# Start kafka broker
-		dotnet /app/MASES.KNetCLI.dll kafkastart -Log4JConfiguration /app/config_container/log4j.properties /app/config_container/kraft/controller.properties
-	elif [ ${KNET_DOCKER_RUNNING_MODE} = "kraft-server" ]; then
-		echo "Starting KRaft server"
-		# Start kafka broker
-		dotnet /app/MASES.KNetCLI.dll kafkastart -Log4JConfiguration /app/config_container/log4j.properties /app/config_container/kraft/server.properties
 	else
 		echo "KNET_DOCKER_RUNNING_MODE exist, but its value (${KNET_DOCKER_RUNNING_MODE}) is not zookeeper, broker, server, (knet)connect-standalone, (knet)connect-distributed or (knet)connect-standalone-server"
 	fi
