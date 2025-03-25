@@ -131,11 +131,6 @@ namespace MASES.KNet.Streams.Kstream
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/kstream/Joined.html#gracePeriod--"/>
-        /// </summary>
-        /// <returns><see cref="System.TimeSpan"/></returns>
-        public System.TimeSpan GracePeriod => TimeSpan.FromMilliseconds(_inner.GracePeriod().ToMillis());
-        /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/kstream/Joined.html#withGracePeriod-java.time.Duration-"/>
         /// </summary>
         /// <param name="arg0"><see cref="System.TimeSpan"/></param>
