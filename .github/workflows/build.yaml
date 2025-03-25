@@ -189,13 +189,16 @@ jobs:
 
       - name: Prepare configuration files
         run: |
-          Copy-Item src\container\config_container\zookeeper.properties -Destination bin\net462\zookeeper.properties -Force
+          Copy-Item src\container\config_container\broker.properties -Destination bin\net462\broker.properties -Force
+          Copy-Item src\container\config_container\controller.properties -Destination bin\net462\controller.properties -Force
           Copy-Item src\container\config_container\server.properties -Destination bin\net462\server.properties -Force
           Copy-Item src\config\log4j.properties -Destination bin\net462\log4j.properties -Force
-          Copy-Item src\container\config_container\zookeeper.properties -Destination bin\net8.0\zookeeper.properties -Force
+          Copy-Item src\container\config_container\broker.properties -Destination bin\net8.0\broker.properties -Force
+          Copy-Item src\container\config_container\controller.properties -Destination bin\net8.0\controller.properties -Force
           Copy-Item src\container\config_container\server.properties -Destination bin\net8.0\server.properties -Force
           Copy-Item src\config\log4j.properties -Destination bin\net8.0\log4j.properties -Force
-          Copy-Item src\container\config_container\zookeeper.properties -Destination bin\net9.0\zookeeper.properties -Force
+          Copy-Item src\container\config_container\broker.properties -Destination bin\net9.0\broker.properties -Force
+          Copy-Item src\container\config_container\controller.properties -Destination bin\net9.0\controller.properties -Force
           Copy-Item src\container\config_container\server.properties -Destination bin\net9.0\server.properties -Force
           Copy-Item src\config\log4j.properties -Destination bin\net9.0\log4j.properties -Force
 
@@ -347,7 +350,7 @@ jobs:
         ports:
           - 9092:9092
         env:
-          KNET_DOCKER_RUNNING_MODE: server
+          KNET_DOCKER_RUNNING_MODE: kafka-server
           JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ENCODED_2_5_21 }}
           
     strategy:
@@ -493,7 +496,6 @@ jobs:
         shell: pwsh
         run: |
           New-Item -Path "${{ github.workspace }}" -Name "logfiles" -ItemType Directory
-          Start-Process -RSE ${{ github.workspace }}/logfiles/PWSH_zookeeper_err.log -RSO ${{ github.workspace }}/logfiles/PWSH_zookeeper_out.log -FilePath dotnet -ArgumentList ( '${{ github.workspace }}/binCLI/${{ matrix.framework }}/MASES.KNetCLI.dll', 'zookeeperstart', '-LogPath', '${{ github.workspace }}/logfiles/', '-Log4JConfiguration', '${{ github.workspace }}/bin/${{ matrix.framework }}/log4j.properties', '${{ github.workspace }}/bin/${{ matrix.framework }}/zookeeper.properties' )
           Start-Process -RSE ${{ github.workspace }}/logfiles/PWSH_kafka_err.log -RSO ${{ github.workspace }}/logfiles/PWSH_kafka_out.log -FilePath dotnet -ArgumentList ( '${{ github.workspace }}/binCLI/${{ matrix.framework }}/MASES.KNetCLI.dll', 'kafkastart', '-LogPath', '${{ github.workspace }}/logfiles/', '-Log4JConfiguration', '${{ github.workspace }}/bin/${{ matrix.framework }}/log4j.properties', '${{ github.workspace }}/bin/${{ matrix.framework }}/server.properties' )
 
       - name: Execute KNetTest on ${{ matrix.os }} with ${{ matrix.jdk_vendor }} ${{ matrix.jdk_version }}
@@ -522,7 +524,6 @@ jobs:
         run: |
           Add-Content -Path ${{ github.workspace }}\bin\${{ matrix.framework }}\server.properties -Value 'log.cleaner.enable=false'
           New-Item -Path "${{ github.workspace }}" -Name "logfiles" -ItemType Directory
-          Start-Process -RSE ${{ github.workspace }}/logfiles/PWSH_zookeeper_err.log -RSO ${{ github.workspace }}\logfiles\PWSH_zookeeper_out.log -FilePath ${{ github.workspace }}\binCLI\${{ matrix.framework }}\MASES.KNetCLI.exe -ArgumentList ( 'zookeeperstart', '-LogPath', '${{ github.workspace }}\logfiles\', '-Log4JConfiguration', '${{ github.workspace }}\bin\${{ matrix.framework }}\log4j.properties', '${{ github.workspace }}\bin\${{ matrix.framework }}\zookeeper.properties' )
           Start-Process -RSE ${{ github.workspace }}/logfiles/PWSH_kafka_err.log -RSO ${{ github.workspace }}\logfiles\PWSH_kafka_out.log -FilePath ${{ github.workspace }}\binCLI\${{ matrix.framework }}\MASES.KNetCLI.exe -ArgumentList ( 'kafkastart', '-LogPath', '${{ github.workspace }}\logfiles\', '-Log4JConfiguration', '${{ github.workspace }}\bin\${{ matrix.framework }}\log4j.properties', '${{ github.workspace }}\bin\${{ matrix.framework }}\server.properties' )
           ${{ github.workspace }}\bin\${{ matrix.framework }}/KNetTest.exe localhost:9092 useConsumeCallback randomizeTopicName
           ${{ github.workspace }}\bin\${{ matrix.framework }}/KNetTest.exe localhost:9092 useConsumeCallback randomizeTopicName withBigBigExtraValue

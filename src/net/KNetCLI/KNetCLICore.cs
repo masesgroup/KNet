@@ -212,14 +212,6 @@ namespace MASES.KNetCLI
                 case "streamsresetter":
                     ApplicationHeapSize = "512M";
                     break;
-                case "zookeeperstart":
-                    ApplicationHeapSize = "512M";
-                    ApplicationInitialHeapSize = "512M";
-                    break;
-                case "zookeepershell":
-                    ApplicationHeapSize = "512M";
-                    ApplicationInitialHeapSize = "512M";
-                    break;
                 case "kafkastart":
                     ApplicationHeapSize = Environment.Is64BitOperatingSystem ? "1G" : "512M";
                     ApplicationInitialHeapSize = Environment.Is64BitOperatingSystem ? "1G" : "512M";
