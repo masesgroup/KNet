@@ -93,19 +93,6 @@ namespace MASES.KNet.Streams
             return clone;
         }
         /// <summary>
-        /// Manages <see cref="StreamsConfig.DEFAULT_DESERIALIZATION_EXCEPTION_HANDLER_CLASS_CONFIG"/>
-        /// </summary>
-        public Java.Lang.Class DefaultDeserializationExceptionHandlerClass { get { return GetProperty<Java.Lang.Class>(StreamsConfig.DEFAULT_DESERIALIZATION_EXCEPTION_HANDLER_CLASS_CONFIG); } set { SetProperty(StreamsConfig.DEFAULT_DESERIALIZATION_EXCEPTION_HANDLER_CLASS_CONFIG, value); } }
-        /// <summary>
-        /// Manages <see cref="StreamsConfig.DEFAULT_DESERIALIZATION_EXCEPTION_HANDLER_CLASS_CONFIG"/>
-        /// </summary>
-        public StreamsConfigBuilder WithDefaultDeserializationExceptionHandlerClass(Java.Lang.Class defaultDeserializationExceptionHandlerClass)
-        {
-            var clone = Clone();
-            clone.DefaultDeserializationExceptionHandlerClass = defaultDeserializationExceptionHandlerClass;
-            return clone;
-        }
-        /// <summary>
         /// Manages <see cref="StreamsConfig.DEFAULT_KEY_SERDE_CLASS_CONFIG"/>
         /// </summary>
         public Java.Lang.Class DefaultKeySerdeClass { get { return GetProperty<Java.Lang.Class>(StreamsConfig.DEFAULT_KEY_SERDE_CLASS_CONFIG); } set { SetProperty(StreamsConfig.DEFAULT_KEY_SERDE_CLASS_CONFIG, value); } }
@@ -116,19 +103,6 @@ namespace MASES.KNet.Streams
         {
             var clone = Clone();
             clone.DefaultKeySerdeClass = defaultKeySerdeClass;
-            return clone;
-        }
-        /// <summary>
-        /// Manages <see cref="StreamsConfig.DEFAULT_PRODUCTION_EXCEPTION_HANDLER_CLASS_CONFIG"/>
-        /// </summary>
-        public Java.Lang.Class DefaultProductionExceptionHandlerClass { get { return GetProperty<Java.Lang.Class>(StreamsConfig.DEFAULT_PRODUCTION_EXCEPTION_HANDLER_CLASS_CONFIG); } set { SetProperty(StreamsConfig.DEFAULT_PRODUCTION_EXCEPTION_HANDLER_CLASS_CONFIG, value); } }
-        /// <summary>
-        /// Manages <see cref="StreamsConfig.DEFAULT_PRODUCTION_EXCEPTION_HANDLER_CLASS_CONFIG"/>
-        /// </summary>
-        public StreamsConfigBuilder WithDefaultProductionExceptionHandlerClass(Java.Lang.Class defaultProductionExceptionHandlerClass)
-        {
-            var clone = Clone();
-            clone.DefaultProductionExceptionHandlerClass = defaultProductionExceptionHandlerClass;
             return clone;
         }
         /// <summary>

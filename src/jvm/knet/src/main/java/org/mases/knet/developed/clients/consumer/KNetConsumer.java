@@ -49,7 +49,7 @@ public class KNetConsumer extends KafkaConsumer<byte[], byte[]> {
     }
 
     public void consume(long timeoutMs) {
-        ConsumerRecords<byte[], byte[]> records = super.poll(timeoutMs);
+        ConsumerRecords<byte[], byte[]> records = super.poll(Duration.ofMillis(timeoutMs));
         for (ConsumerRecord<byte[], byte[]> record : records) {
             if (_callback != null) _callback.recordReady(record);
         }
