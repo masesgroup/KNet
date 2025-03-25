@@ -2,18 +2,15 @@
   <ItemGroup>
     <knet_jars Include="$(MSBuildThisFileDirectory)\jars\*.*" />
     <knet_config Include="$(MSBuildThisFileDirectory)\config\*.*" />
-    <knet_configKraft Include="$(MSBuildThisFileDirectory)\config\kraft\*.*" />
   </ItemGroup>
 
   <Target Name="KNet_CopyFilesNative" BeforeTargets="Build">
     <Copy SourceFiles="@(knet_jars)" DestinationFolder="$(TargetDir)/jars" />
     <Copy SourceFiles="@(knet_config)" DestinationFolder="$(TargetDir)/config" />
-    <Copy SourceFiles="@(knet_configKraft)" DestinationFolder="$(TargetDir)/config/kraft" />
   </Target>
   
   <Target Name="KNet_CopyFilesNativePublish" BeforeTargets="Publish">
     <Copy SourceFiles="@(knet_jars)" DestinationFolder="$(PublishDir)/jars" />
     <Copy SourceFiles="@(knet_config)" DestinationFolder="$(PublishDir)/config" />
-    <Copy SourceFiles="@(knet_configKraft)" DestinationFolder="$(PublishDir)/config/kraft" />
   </Target>
 </Project>

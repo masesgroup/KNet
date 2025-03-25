@@ -5,7 +5,7 @@
 		<AssemblyName>MASES.KNet</AssemblyName>
 		<RootNamespace>MASES.KNet</RootNamespace>
 		<Title>KNet Core - .NET suite for Apache Kafka</Title>
-		<Description>Core of .NET suite for Apache Kafka. KNet is a comprehensive .NET suite for Apache Kafka providing all features: Producer, Consumer, Admin, Streams, Connect, backends (ZooKeeper and Kafka).</Description>
+		<Description>Core of .NET suite for Apache Kafka. KNet is a comprehensive .NET suite for Apache Kafka providing all features: Producer, Consumer, Admin, Streams, Connect, backends (KRaft).</Description>
 		<Product>KNet</Product>
 		<PackageTags>knet kafka apache-kafka dotnet clr netcore net6 net8 kafka connect streams producer consumer providers streamprovider gateway</PackageTags>
 		<PackageId>MASES.KNet</PackageId>
@@ -18,18 +18,15 @@
 	<ItemGroup Condition="True">
 		<knetcore_jars Include="$(ProjectDir)\..\..\..\jars\*.*" />
 		<knetcore_config Include="$(ProjectDir)\..\..\config\*.*" />
-		<knetcore_kraft Include="$(ProjectDir)\..\..\config\kraft\*.*" />
 	</ItemGroup>
 
 	<Target Name="CopyCustomContent" AfterTargets="AfterBuild" Condition="'$(GITHUB_ACTIONS)' != 'true' Or '$(GITHUB_TEST_PREPARATION)' == 'true'">
 		<Copy SourceFiles="@(knetcore_jars)" DestinationFolder="$(OutDir)\jars" />
 		<Copy SourceFiles="@(knetcore_config)" DestinationFolder="$(OutDir)\config" />
-		<Copy SourceFiles="@(knetcore_kraft)" DestinationFolder="$(OutDir)\config\kraft" />
 	</Target>
 	<Target Name="CopyCustomContentOnPublish" AfterTargets="Publish" Condition="'$(GITHUB_ACTIONS)' != 'true' Or '$(GITHUB_TEST_PREPARATION)' == 'true'">
 		<Copy SourceFiles="@(knetcore_jars)" DestinationFolder="$(OutDir)\jars" />
 		<Copy SourceFiles="@(knetcore_config)" DestinationFolder="$(OutDir)\config" />
-		<Copy SourceFiles="@(knetcore_kraft)" DestinationFolder="$(OutDir)\config\kraft" />
 	</Target>
 	<ItemGroup Condition="'$(GITHUB_SIMPLIFIED_GENERATION)' == 'true'">
 		<Compile Remove="Developed\**" />

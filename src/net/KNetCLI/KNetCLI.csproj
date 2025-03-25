@@ -7,7 +7,7 @@
 		<AssemblyName>MASES.KNetCLI</AssemblyName>
 		<RootNamespace>MASES.KNetCLI</RootNamespace>
 		<Title>KNet command line interface - .NET suite for Apache Kafka</Title>
-		<Description>Command line interface of .NET suite for Apache Kafka. KNet is a comprehensive .NET suite for Apache Kafka providing all features: Producer, Consumer, Admin, Streams, Connect, backends (ZooKeeper and Kafka).</Description>
+		<Description>Command line interface of .NET suite for Apache Kafka. KNet is a comprehensive .NET suite for Apache Kafka providing all features: Producer, Consumer, Admin, Streams, Connect, backends (KRaft).</Description>
 		<Product>KNetCLI</Product>
 		<GeneratePackageOnBuild>false</GeneratePackageOnBuild>
 		<PackageTags>knet cli kafka apache-kafka dotnet clr netcore net6 kafka connect streams producer consumer providers streamprovider gateway</PackageTags>
@@ -20,18 +20,15 @@
 	<ItemGroup Condition="True">
 		<knetcli_jars Include="$(ProjectDir)\..\..\..\jars\*.*" />
 		<knetcli_config Include="$(ProjectDir)\..\..\config\*.*" />
-		<knetcli_kraft Include="$(ProjectDir)\..\..\config\kraft\*.*" />
 	</ItemGroup>
 
 	<Target Name="CopyCustomContent" AfterTargets="AfterBuild">
 		<Copy SourceFiles="@(knetcli_jars)" DestinationFolder="$(OutDir)\jars" />
 		<Copy SourceFiles="@(knetcli_config)" DestinationFolder="$(OutDir)\config" />
-		<Copy SourceFiles="@(knetcli_kraft)" DestinationFolder="$(OutDir)\config\kraft" />
 	</Target>
 	<Target Name="CopyCustomContentOnPublish" AfterTargets="Publish">
 		<Copy SourceFiles="@(knetcli_jars)" DestinationFolder="$(OutDir)\jars" />
 		<Copy SourceFiles="@(knetcli_config)" DestinationFolder="$(OutDir)\config" />
-		<Copy SourceFiles="@(knetcli_kraft)" DestinationFolder="$(OutDir)\config\kraft" />
 	</Target>
 	
 	<ItemGroup>

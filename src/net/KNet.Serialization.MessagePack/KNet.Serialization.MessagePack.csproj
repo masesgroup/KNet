@@ -5,7 +5,7 @@
 		<AssemblyName>MASES.KNet.Serialization.MessagePack</AssemblyName>
 		<RootNamespace>MASES.KNet.Serialization.MessagePack</RootNamespace>
 		<Title>KNet MessagePack Serialization - .NET suite for Apache Kafka</Title>
-		<Description>MessagePack Serializer/Deserializer of .NET suite for Apache Kafka. KNet is a comprehensive .NET suite for Apache Kafka providing all features: Producer, Consumer, Admin, Streams, Connect, backends (ZooKeeper and Kafka).</Description>
+		<Description>MessagePack Serializer/Deserializer of .NET suite for Apache Kafka. KNet is a comprehensive .NET suite for Apache Kafka providing all features: Producer, Consumer, Admin, Streams, Connect, backends (KRaft).</Description>
 		<Product>KNet</Product>
 		<PackageTags>knet kafka apache-kafka dotnet clr netcore net6 kafka connect streams producer consumer providers streamprovider gateway</PackageTags>
 		<PackageId>MASES.KNet.Serialization.MessagePack</PackageId>
