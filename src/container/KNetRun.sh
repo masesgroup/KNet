@@ -50,9 +50,9 @@ else
 
 		CALCULATED_CLUSTER_ID=$(eval "dotnet /app/MASES.KNetCLI.dll storagetools random-uuid")
 
-		kraft-combined-logs/meta.properties << "cluster.id=$CALCULATED_CLUSTER_ID"
-		kraft-combined-logs/meta.properties << "node.id=$KAFKA_NODE_ID"
-		kraft-combined-logs/meta.properties << "version=1"
+		echo "cluster.id=$CALCULATED_CLUSTER_ID" >> kraft-combined-logs/meta.properties
+		echo "node.id=$KAFKA_NODE_ID" >> kraft-combined-logs/meta.properties
+		echo "version=1" >> kraft-combined-logs/meta.properties
 	fi
 
 	if [[ -n "$KAFKA_HEAP_OPTS" ]]; then
