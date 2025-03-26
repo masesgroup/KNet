@@ -193,21 +193,21 @@ else
 		echo "Starting KRaft broker"
 		export KAFKA_PROCESS_ROLES=broker
 		# Start kafka broker
-		dotnet /app/MASES.KNetCLI.dll kafkastart -Log4JConfiguration /app/config_container/log4j.properties /app/config_container/broker.properties
+		dotnet /app/MASES.KNetCLI.dll kafkastart -Log4JConfiguration /app/config_container/log4j2.yaml /app/config_container/broker.properties
 	elif [ ${KNET_DOCKER_RUNNING_MODE} = "controller" ]; then
 		echo "Starting KRaft controller"
 		export KAFKA_PROCESS_ROLES=controller
 		# Start kafka broker
-		dotnet /app/MASES.KNetCLI.dll kafkastart -Log4JConfiguration /app/config_container/log4j.properties /app/config_container/controller.properties
+		dotnet /app/MASES.KNetCLI.dll kafkastart -Log4JConfiguration /app/config_container/log4j2.yaml /app/config_container/controller.properties
 	elif [ ${KNET_DOCKER_RUNNING_MODE} = "server" ]; then
 		echo "Starting KRaft server"
 		export KAFKA_PROCESS_ROLES=broker,controller
 		# Start kafka broker
-		dotnet /app/MASES.KNetCLI.dll kafkastart -Log4JConfiguration /app/config_container/log4j.properties /app/config_container/server.properties
+		dotnet /app/MASES.KNetCLI.dll kafkastart -Log4JConfiguration /app/config_container/log4j2.yaml /app/config_container/server.properties
 	elif [ ${KNET_DOCKER_RUNNING_MODE} = "knet-connect-standalone" ]; then
 		echo "Starting KNet Connect standalone mode"
 		# Start KNetConnect
-		dotnet /app/MASES.KNetConnect.dll -s -k -Log4JConfiguration /app/config_container/log4j.properties /app/config_container/connect-standalone.properties /app/config_container/connect-knet-specific.properties &
+		dotnet /app/MASES.KNetConnect.dll -s -k -Log4JConfiguration /app/config_container/log4j2.yaml /app/config_container/connect-standalone.properties /app/config_container/connect-knet-specific.properties &
 
 		# Wait for any process to exit
 		wait -n
@@ -217,7 +217,7 @@ else
 	elif [ ${KNET_DOCKER_RUNNING_MODE} = "connect-standalone" ]; then
 		echo "Starting Apache Kafka Connect standalone mode"
 		# Start KNetConnect
-		dotnet /app/MASES.KNetConnect.dll -s -Log4JConfiguration /app/config_container/log4j.properties /app/config_container/connect-standalone.properties /app/config_container/connect-knet-specific.properties &
+		dotnet /app/MASES.KNetConnect.dll -s -Log4JConfiguration /app/config_container/log4j2.yaml /app/config_container/connect-standalone.properties /app/config_container/connect-knet-specific.properties &
 
 		# Wait for any process to exit
 		wait -n
@@ -228,11 +228,11 @@ else
 		echo "Starting KRaft server"
 		export KAFKA_PROCESS_ROLES=-broker,controller
 		# Start KRaft server
-		dotnet /app/MASES.KNetCLI.dll kafkastart -Log4JConfiguration /app/config_container/log4j.properties /app/config_container/server.properties &
+		dotnet /app/MASES.KNetCLI.dll kafkastart -Log4JConfiguration /app/config_container/log4j2.yaml /app/config_container/server.properties &
 		
 		echo "Starting KNet Connect standalone full mode"
 		# Start KNetConnect
-		dotnet /app/MASES.KNetConnect.dll -s -k -Log4JConfiguration /app/config_container/log4j.properties /app/config_container/connect-standalone.properties /app/config_container/connect-knet-specific.properties &
+		dotnet /app/MASES.KNetConnect.dll -s -k -Log4JConfiguration /app/config_container/log4j2.yaml /app/config_container/connect-standalone.properties /app/config_container/connect-knet-specific.properties &
 
 		# Wait for any process to exit
 		wait -n
@@ -243,11 +243,11 @@ else
 		echo "Starting KRaft server"
 		export KAFKA_PROCESS_ROLES=-broker,controller
 		# Start KRaft broker
-		dotnet /app/MASES.KNetCLI.dll kafkastart -Log4JConfiguration /app/config_container/log4j.properties /app/config_container/server.properties &
+		dotnet /app/MASES.KNetCLI.dll kafkastart -Log4JConfiguration /app/config_container/log4j2.yaml /app/config_container/server.properties &
 		
 		echo "Starting Apache Kafka Connect standalone full mode"
 		# Start KNetConnect
-		dotnet /app/MASES.KNetConnect.dll -s -Log4JConfiguration /app/config_container/log4j.properties /app/config_container/connect-standalone.properties /app/config_container/connect-knet-specific.properties &
+		dotnet /app/MASES.KNetConnect.dll -s -Log4JConfiguration /app/config_container/log4j2.yaml /app/config_container/connect-standalone.properties /app/config_container/connect-knet-specific.properties &
 
 		# Wait for any process to exit
 		wait -n
@@ -257,7 +257,7 @@ else
 	elif [ ${KNET_DOCKER_RUNNING_MODE} = "knet-connect-distributed" ]; then
 		echo "Starting KNet Connect distributed mode"
 		# Start KNetConnect
-		dotnet /app/MASES.KNetConnect.dll -d -k -Log4JConfiguration /app/config_container/log4j.properties /app/config_container/connect-distributed.properties &
+		dotnet /app/MASES.KNetConnect.dll -d -k -Log4JConfiguration /app/config_container/log4j2.yaml /app/config_container/connect-distributed.properties &
 
 		# Wait for any process to exit
 		wait -n
@@ -267,7 +267,7 @@ else
 	elif [ ${KNET_DOCKER_RUNNING_MODE} = "connect-distributed" ]; then
 		echo "Starting Apache Kafka Connect distributed mode"
 		# Start KNetConnect
-		dotnet /app/MASES.KNetConnect.dll -d -Log4JConfiguration /app/config_container/log4j.properties /app/config_container/connect-distributed.properties &
+		dotnet /app/MASES.KNetConnect.dll -d -Log4JConfiguration /app/config_container/log4j2.yaml /app/config_container/connect-distributed.properties &
 
 		# Wait for any process to exit
 		wait -n
