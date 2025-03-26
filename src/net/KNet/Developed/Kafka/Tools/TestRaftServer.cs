@@ -19,15 +19,15 @@
 namespace Kafka.Tools
 {
     /// <summary>
-    /// Class managing GetOffsetShell
+    /// Class managing TestRaftServer
     /// </summary>
-    public class GetOffsetShell : MASES.JCOBridge.C2JBridge.JVMBridgeMain<GetOffsetShell>
+    public class TestRaftServer : MASES.JCOBridge.C2JBridge.JVMBridgeMain<TestRaftServer>
     {
         /// <summary>
-        /// Initialize a new <see cref="GetOffsetShell"/>
+        /// Initialize a new <see cref="TestRaftServer"/>
         /// </summary>
-        public GetOffsetShell()
-            : base("kafka.tools.GetOffsetShell")
+        public TestRaftServer()
+            : base("kafka.tools.TestRaftServer")
         {
         }
     }
