@@ -235,7 +235,7 @@ namespace MASES.KNet
         /// <summary>
         /// The log4j configuration
         /// </summary>
-        public virtual string Log4JOpts { get { return string.Format("file:{0}", Path.Combine(JarRootPath, "config", "tools-log4j.properties")); } }
+        public virtual string Log4JOpts { get { return string.Format("file:{0}", Path.Combine(JarRootPath, "config", "tools-log4j2.yaml")); } }
 
         bool _disableJMX;
         /// <summary>
@@ -271,6 +271,7 @@ namespace MASES.KNet
                 IDictionary<string, string> options = new Dictionary<string, string>(base.Options)
                 {
                     { "log4j.configuration", string.IsNullOrEmpty(Log4JPath) ? ((JarRootPath == Const.DefaultRootPath) ? Log4JOpts : null) : $"file:{Log4JPath}"},
+                    { "log4j2.configurationFile", string.IsNullOrEmpty(Log4JPath) ? ((JarRootPath == Const.DefaultRootPath) ? Log4JOpts : null) : $"{Log4JPath}"},
                     { "kafka.logs.dir", LogDir},
                     { "java.awt.headless", "true" },
                 };

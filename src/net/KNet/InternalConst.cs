@@ -60,9 +60,9 @@ namespace MASES.KNet
         /// </summary>
         public static readonly string DefaultRootPath = DefaultJarsPath + Path.DirectorySeparatorChar;
         /// <summary>
-        /// Default log4j configuration file, i.e. considering a relative location to <see cref="DefaultConfigurationPath"/>
+        /// Default log4j2 configuration file, i.e. considering a relative location to <see cref="DefaultConfigurationPath"/>
         /// </summary>
-        public static readonly string DefaultLog4JConfigurationPath = Path.Combine(DefaultConfigurationPath, "knet-log4j.properties");
+        public static readonly string DefaultLog4JConfigurationPath = Path.Combine(DefaultConfigurationPath, "knet-log4j2.yaml");
         /// <summary>
         /// Default log path, i.e. consider installation within bin folder
         /// </summary>
