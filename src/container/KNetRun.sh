@@ -22,7 +22,7 @@ else
 		export KAFKA_ADVERTISED_PORT
 	fi
 	
-	if [[ -z "KAFKA_NODE_ID" ]]; then
+	if [[ -z "$KAFKA_NODE_ID" ]]; then
 		if [[ -n "$NODE_ID_COMMAND" ]]; then
 			KAFKA_NODE_ID=$(eval "$NODE_ID_COMMAND")
 			export KAFKA_NODE_ID
@@ -32,7 +32,7 @@ else
 		fi
 	fi
 
-	if [[ -z "KAFKA_PROCESS_ROLES" ]]; then
+	if [[ -z "$KAFKA_PROCESS_ROLES" ]]; then
 		if [[ -n "$KAFKA_PROCESS_ROLES_COMMAND" ]]; then
 			KAFKA_PROCESS_ROLES=$(eval "$KAFKA_PROCESS_ROLES_COMMAND")
 			export KAFKA_PROCESS_ROLES
@@ -42,7 +42,7 @@ else
 		fi
 	fi
 
-	if [[ -z "KAFKA_LOG_DIRS" ]]; then
+	if [[ -z "$KAFKA_LOG_DIRS" ]]; then
 	    echo "Creating meta.properties"
 	    export KAFKA_LOG_DIRS=-/tmp/kraft-combined-logs
 	    cd /tmp
