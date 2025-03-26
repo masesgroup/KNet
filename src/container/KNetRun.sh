@@ -43,16 +43,25 @@ else
 	fi
 
 	if [[ -z "KAFKA_LOG_DIRS" ]]; then
+	    echo "Creating meta.properties"
 	    export KAFKA_LOG_DIRS=-/tmp/kraft-combined-logs
 	    cd /tmp
 	    mkdir kraft-combined-logs
-	    touch kraft-combined-logs/meta.properties
+		cd kraft-combined-logs
+	    touch meta.properties
+
+		ls -las /tmp/kraft-combined-logs
 
 		CALCULATED_CLUSTER_ID=$(eval "dotnet /app/MASES.KNetCLI.dll storagetools random-uuid")
 
-		echo "cluster.id=$CALCULATED_CLUSTER_ID" >> kraft-combined-logs/meta.properties
-		echo "node.id=$KAFKA_NODE_ID" >> kraft-combined-logs/meta.properties
-		echo "version=1" >> kraft-combined-logs/meta.properties
+		echo "Cluster Id is $CALCULATED_CLUSTER_ID"
+
+		echo "cluster.id=$CALCULATED_CLUSTER_ID" >> meta.properties
+		echo "node.id=$KAFKA_NODE_ID" >> meta.properties
+		echo "version=1" >> meta.properties
+
+		echo "Generated meta.properties is"
+		cat meta.properties
 	fi
 
 	if [[ -n "$KAFKA_HEAP_OPTS" ]]; then
