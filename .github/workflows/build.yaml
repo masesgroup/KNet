@@ -350,7 +350,7 @@ jobs:
         ports:
           - 9092:9092
         env:
-          KNET_DOCKER_RUNNING_MODE: kraft-server
+          KNET_DOCKER_RUNNING_MODE: server
           JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ENCODED_2_5_21 }}
           
     strategy:
