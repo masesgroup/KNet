@@ -28,7 +28,7 @@ else
 			export KAFKA_NODE_ID
 		else
 			# By default auto allocate node ID
-			export KAFKA_NODE_ID=-1
+			export KAFKA_NODE_ID=1
 		fi
 	fi
 
@@ -52,7 +52,7 @@ else
 
 		ls -las /tmp/kraft-combined-logs
 
-		CALCULATED_CLUSTER_ID=$(eval "dotnet /app/MASES.KNetCLI.dll storagetools random-uuid")
+		CALCULATED_CLUSTER_ID=$(eval "dotnet /app/MASES.KNetCLI.dll storagetool random-uuid")
 
 		echo "Cluster Id is $CALCULATED_CLUSTER_ID"
 
