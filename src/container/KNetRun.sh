@@ -38,7 +38,7 @@ else
 			export KAFKA_PROCESS_ROLES
 		else
 			# By default auto allocate node ID
-			export KAFKA_PROCESS_ROLES=-broker,controller
+			export KAFKA_PROCESS_ROLES=broker,controller
 		fi
 	fi
 
@@ -191,17 +191,17 @@ else
 
 	if [ ${KNET_DOCKER_RUNNING_MODE} = "broker" ]; then
 		echo "Starting KRaft broker"
-		export KAFKA_PROCESS_ROLES=-broker
+		export KAFKA_PROCESS_ROLES=broker
 		# Start kafka broker
 		dotnet /app/MASES.KNetCLI.dll kafkastart -Log4JConfiguration /app/config_container/log4j.properties /app/config_container/broker.properties
 	elif [ ${KNET_DOCKER_RUNNING_MODE} = "controller" ]; then
 		echo "Starting KRaft controller"
-		export KAFKA_PROCESS_ROLES=-controller
+		export KAFKA_PROCESS_ROLES=controller
 		# Start kafka broker
 		dotnet /app/MASES.KNetCLI.dll kafkastart -Log4JConfiguration /app/config_container/log4j.properties /app/config_container/controller.properties
 	elif [ ${KNET_DOCKER_RUNNING_MODE} = "server" ]; then
 		echo "Starting KRaft server"
-		export KAFKA_PROCESS_ROLES=-broker,controller
+		export KAFKA_PROCESS_ROLES=broker,controller
 		# Start kafka broker
 		dotnet /app/MASES.KNetCLI.dll kafkastart -Log4JConfiguration /app/config_container/log4j.properties /app/config_container/server.properties
 	elif [ ${KNET_DOCKER_RUNNING_MODE} = "knet-connect-standalone" ]; then
