@@ -42,6 +42,19 @@ else
 		fi
 	fi
 
+	if [[ -z "KAFKA_LOG_DIRS" ]]; then
+	    export KAFKA_LOG_DIRS=-/tmp/kraft-combined-logs
+	    cd /tmp
+	    mkdir kraft-combined-logs
+	    touch kraft-combined-logs/meta.properties
+
+		CALCULATED_CLUSTER_ID=$(eval "dotnet /app/MASES.KNetCLI.dll storagetools random-uuid")
+
+		kraft-combined-logs/meta.properties << "cluster.id=$CALCULATED_CLUSTER_ID"
+		kraft-combined-logs/meta.properties << "node.id=$KAFKA_NODE_ID"
+		kraft-combined-logs/meta.properties << "version=1"
+	fi
+
 	if [[ -n "$KAFKA_HEAP_OPTS" ]]; then
 		sed -r -i 's/(export KAFKA_HEAP_OPTS)="(.*)"/\1="'"$KAFKA_HEAP_OPTS"'"/g' "$KAFKA_HOME/bin/kafka-server-start.sh"
 		unset KAFKA_HEAP_OPTS
@@ -136,9 +149,9 @@ else
 	
 			if [[ $env_var =~ ^KAFKA_ ]]; then
 				kafka_name=$(echo "$env_var" | cut -d_ -f2- | tr '[:upper:]' '[:lower:]' | tr _ .)
-				updateConfig "kafka_name" "${!env_var}" "/app/config_container/broker.properties"
-				updateConfig "kafka_name" "${!env_var}" "/app/config_container/controller.properties"
-				updateConfig "kafka_name" "${!env_var}" "/app/config_container/server.properties"
+				updateConfig "$kafka_name" "${!env_var}" "/app/config_container/broker.properties"
+				updateConfig "$kafka_name" "${!env_var}" "/app/config_container/controller.properties"
+				updateConfig "$kafka_name" "${!env_var}" "/app/config_container/server.properties"
 			fi
 	
 			if [[ $env_var =~ ^LOG4J_ ]]; then
