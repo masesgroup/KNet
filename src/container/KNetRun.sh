@@ -211,13 +211,13 @@ else
 		export KAFKA_PROCESS_ROLES=broker
 		# Start kafka broker
 		dotnet /app/MASES.KNetCLI.dll kafkastart -Log4JConfiguration /app/config_container/log4j2.yaml /app/config_container/broker.properties
-	elif [ ${KNET_DOCKER_RUNNING_MODE} = "controller" || ${KNET_DOCKER_RUNNING_MODE} = "controller-standalone" ]; then
+	elif [ ${KNET_DOCKER_RUNNING_MODE} = "controller" ] || [ ${KNET_DOCKER_RUNNING_MODE} = "controller-standalone" ]; then
 		echo "Starting KRaft controller"
 		export KAFKA_PROCESS_ROLES=controller
-		formatLogDir ${KNET_DOCKER_RUNNING_MODE} /app/config_container/server.properties
+		formatLogDir ${KNET_DOCKER_RUNNING_MODE} /app/config_container/controller.properties
 		# Start kafka broker
 		dotnet /app/MASES.KNetCLI.dll kafkastart -Log4JConfiguration /app/config_container/log4j2.yaml /app/config_container/controller.properties
-	elif [ ${KNET_DOCKER_RUNNING_MODE} = "server" || ${KNET_DOCKER_RUNNING_MODE} = "server-standalone"]; then
+	elif [ ${KNET_DOCKER_RUNNING_MODE} = "server" ] || [ ${KNET_DOCKER_RUNNING_MODE} = "server-standalone" ]; then
 		echo "Starting KRaft server"
 		export KAFKA_PROCESS_ROLES=broker,controller
 		formatLogDir ${KNET_DOCKER_RUNNING_MODE} /app/config_container/server.properties
