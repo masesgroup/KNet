@@ -353,10 +353,7 @@ jobs:
         os: [ 'ubuntu-latest' ] #, 'macos-latest', 'macos-13' , 'windows-latest' ] # not available services in this runners, checks done in execute_tests_other
         framework: [ 'net8.0', 'net9.0' ]
         jdk_vendor: [ 'temurin', 'microsoft', 'corretto', 'zulu', 'oracle']
-        jdk_version: [ '11', '17', '21' ] # only LTS versions
-        exclude:
-          - jdk_vendor: oracle
-            jdk_version: 11
+        jdk_version: [ '17', '21' ] # only supported LTS versions
         
     runs-on: ${{ matrix.os }}
     env:
@@ -425,14 +422,10 @@ jobs:
         os: [ 'macos-latest', 'windows-latest' ] # 'macos-13' removed waiting https://github.com/masesgroup/JNet/issues/518
         framework: [ 'net462', 'net8.0', 'net9.0' ]
         jdk_vendor: [ 'temurin', 'microsoft', 'corretto', 'zulu', 'oracle']
-        jdk_version: [ '11', '17', '21' ] # only LTS versions
+        jdk_version: [ '17', '21' ] # only supported LTS versions
         exclude:
           - os: macos-latest
             framework: net462
-          - os: macos-13
-            framework: net462
-          - jdk_vendor: oracle
-            jdk_version: 11
         
     runs-on: ${{ matrix.os }}
     env:
@@ -487,11 +480,11 @@ jobs:
 
       - name: Prepare Kafka on ${{ matrix.os }} with ${{ matrix.jdk_vendor }} ${{ matrix.jdk_version }}
         if: ${{ matrix.os != 'windows-latest' }}
-        run: dotnet ${{ github.workspace }}/bin/${{ matrix.framework }}/MASES.KNetCLI.dll storagetool format --standalone --ignore-formatted -t 6oTi4odMSVSmroqyy5rubw -c ${{ github.workspace }}/bin/${{ matrix.framework }}/server.properties
+        run: dotnet ${{ github.workspace }}/binCLI/${{ matrix.framework }}/MASES.KNetCLI.dll storagetool format --standalone --ignore-formatted -t 6oTi4odMSVSmroqyy5rubw -c ${{ github.workspace }}/bin/${{ matrix.framework }}/server.properties
 
       - name: Prepare Kafka on ${{ matrix.os }} with ${{ matrix.jdk_vendor }} ${{ matrix.jdk_version }}
         if: ${{ matrix.os == 'windows-latest' }}
-        run: ${{ github.workspace }}/bin/${{ matrix.framework }}/MASES.KNetCLI.exe storagetool format --standalone --ignore-formatted -t 6oTi4odMSVSmroqyy5rubw -c ${{ github.workspace }}/bin/${{ matrix.framework }}/server.properties
+        run: ${{ github.workspace }}/binCLI/${{ matrix.framework }}/MASES.KNetCLI.exe storagetool format --standalone --ignore-formatted -t 6oTi4odMSVSmroqyy5rubw -c ${{ github.workspace }}/bin/${{ matrix.framework }}/server.properties
 
       - name: Start Kafka on ${{ matrix.os }} with ${{ matrix.jdk_vendor }} ${{ matrix.jdk_version }}
         if: ${{ matrix.os != 'windows-latest' }}
