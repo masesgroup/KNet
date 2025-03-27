@@ -28,7 +28,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
         /// <inheritdoc cref="IConsumer{K, V}.Poll(Duration)"/>
         public ConsumerRecords<K, V> Poll(long timeoutMs)
         {
-            return IExecute<ConsumerRecords<K, V>>("poll", timeoutMs);
+            return Poll(Duration.OfMillis(timeoutMs));
         }
     }
 }
