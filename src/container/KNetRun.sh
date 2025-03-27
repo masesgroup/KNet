@@ -42,30 +42,6 @@ else
 		fi
 	fi
 
-	if [[ -z "$KAFKA_LOG_DIRS" || -z "$KAFKA_METADATA_LOG_DIR" ]]; then
-	    echo "Creating meta.properties"
-	    export KAFKA_LOG_DIRS=-/tmp/kraft-combined-logs
-	    cd /tmp
-	    mkdir kraft-combined-logs
-		cd kraft-combined-logs
-	    touch meta.properties
-
-		ls -las /tmp/kraft-combined-logs
-
-		CALCULATED_CLUSTER_ID=$(eval "dotnet /app/MASES.KNetCLI.dll storagetool random-uuid")
-
-		echo "Cluster Id is $CALCULATED_CLUSTER_ID"
-
-		echo "cluster.id=$CALCULATED_CLUSTER_ID" >> meta.properties
-		echo "node.id=$KAFKA_NODE_ID" >> meta.properties
-		echo "version=1" >> meta.properties
-
-		echo "Generated meta.properties is"
-		cat meta.properties
-
-
-	fi
-
 	if [[ -n "$KAFKA_HEAP_OPTS" ]]; then
 		sed -r -i 's/(export KAFKA_HEAP_OPTS)="(.*)"/\1="'"$KAFKA_HEAP_OPTS"'"/g' "$KAFKA_HOME/bin/kafka-server-start.sh"
 		unset KAFKA_HEAP_OPTS
@@ -195,13 +171,13 @@ else
 		runningMode=$1
 		configurationFile=$2
 
-		if [ $runningMode = "controller-standalone" || $runningMode = "server-standalone" ]; then
-			if [[ -z "$KAFKA_LOG_DIRS" || -z "$KAFKA_METADATA_LOG_DIR" ]]; then
+		if [ $runningMode = "controller-standalone" ] || [ $runningMode = "server-standalone" ]; then
+			if [ -z "$KAFKA_LOG_DIRS" ] || [ -z "$KAFKA_METADATA_LOG_DIR" ]; then
 				echo "Formatting and creating meta.properties"
 				CALCULATED_CLUSTER_ID=$(eval "dotnet /app/MASES.KNetCLI.dll storagetool random-uuid")
 				echo "Cluster Id is $CALCULATED_CLUSTER_ID"
 
-				eval "dotnet MASES.KNetCLI.dll storagetool format --standalone --ignore-formatted -t $CALCULATED_CLUSTER_ID -c $configurationFile"
+				eval "dotnet /app/MASES.KNetCLI.dll storagetool format --standalone --ignore-formatted -t $CALCULATED_CLUSTER_ID -c $configurationFile"
 			fi
 		fi
 	}
@@ -214,13 +190,13 @@ else
 	elif [ ${KNET_DOCKER_RUNNING_MODE} = "controller" ] || [ ${KNET_DOCKER_RUNNING_MODE} = "controller-standalone" ]; then
 		echo "Starting KRaft controller"
 		export KAFKA_PROCESS_ROLES=controller
-		formatLogDir ${KNET_DOCKER_RUNNING_MODE} /app/config_container/controller.properties
+		formatStandloneLogDir ${KNET_DOCKER_RUNNING_MODE} /app/config_container/controller.properties
 		# Start kafka broker
 		dotnet /app/MASES.KNetCLI.dll kafkastart -Log4JConfiguration /app/config_container/log4j2.yaml /app/config_container/controller.properties
 	elif [ ${KNET_DOCKER_RUNNING_MODE} = "server" ] || [ ${KNET_DOCKER_RUNNING_MODE} = "server-standalone" ]; then
 		echo "Starting KRaft server"
 		export KAFKA_PROCESS_ROLES=broker,controller
-		formatLogDir ${KNET_DOCKER_RUNNING_MODE} /app/config_container/server.properties
+		formatStandloneLogDir ${KNET_DOCKER_RUNNING_MODE} /app/config_container/server.properties
 		# Start kafka broker
 		dotnet /app/MASES.KNetCLI.dll kafkastart -Log4JConfiguration /app/config_container/log4j2.yaml /app/config_container/server.properties
 	elif [ ${KNET_DOCKER_RUNNING_MODE} = "knet-connect-standalone" ]; then
