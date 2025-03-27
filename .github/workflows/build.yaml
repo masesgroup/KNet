@@ -189,18 +189,12 @@ jobs:
 
       - name: Prepare configuration files
         run: |
-          Copy-Item src\container\config_container\broker.properties -Destination bin\net462\broker.properties -Force
-          Copy-Item src\container\config_container\controller.properties -Destination bin\net462\controller.properties -Force
-          Copy-Item src\container\config_container\server.properties -Destination bin\net462\server.properties -Force
-          Copy-Item src\container\config_container\log4j.properties -Destination bin\net462\log4j.properties -Force
-          Copy-Item src\container\config_container\broker.properties -Destination bin\net8.0\broker.properties -Force
-          Copy-Item src\container\config_container\controller.properties -Destination bin\net8.0\controller.properties -Force
-          Copy-Item src\container\config_container\server.properties -Destination bin\net8.0\server.properties -Force
-          Copy-Item src\container\config_container\log4j.properties -Destination bin\net8.0\log4j.properties -Force
-          Copy-Item src\container\config_container\broker.properties -Destination bin\net9.0\broker.properties -Force
-          Copy-Item src\container\config_container\controller.properties -Destination bin\net9.0\controller.properties -Force
-          Copy-Item src\container\config_container\server.properties -Destination bin\net9.0\server.properties -Force
-          Copy-Item src\container\config_container\log4j.properties -Destination bin\net9.0\log4j.properties -Force
+          Copy-Item .github\workflows\support\server.properties -Destination bin\net462\server.properties -Force
+          Copy-Item .github\workflows\support\log4j2.yaml -Destination bin\net462\log4j2.yaml -Force
+          Copy-Item .github\workflows\support\server.properties -Destination bin\net8.0\server.properties -Force
+          Copy-Item .github\workflows\support\log4j2.yaml -Destination bin\net8.0\log4j2.yaml -Force
+          Copy-Item .github\workflows\support\server.properties -Destination bin\net9.0\server.properties -Force
+          Copy-Item .github\workflows\support\log4j2.yaml -Destination bin\net9.0\log4j2.yaml -Force
 
       - name: Save KNet net462 bin in cache
         uses: actions/cache/save@v4
@@ -350,7 +344,7 @@ jobs:
         ports:
           - 9092:9092
         env:
-          KNET_DOCKER_RUNNING_MODE: server
+          KNET_DOCKER_RUNNING_MODE: server-standalone
           JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ENCODED_2_5_21 }}
           
     strategy:
@@ -490,6 +484,10 @@ jobs:
           ${{ github.workspace }}\Procdump\procdump.exe -accepteula
           mkdir CrashDumpsDir
           ${{ github.workspace }}\Procdump\procdump.exe -ma -i ${{ github.workspace }}\CrashDumpsDir
+
+      - name: Prepare Kafka on ${{ matrix.os }} with ${{ matrix.jdk_vendor }} ${{ matrix.jdk_version }}
+        shell: cmd
+        run: dotnet ${{ github.workspace }}/bin/${{ matrix.framework }}/MASES.KNetCLI.dll storagetool format --standalone --ignore-formatted -t 6oTi4odMSVSmroqyy5rubw -c ${{ github.workspace }}/bin/${{ matrix.framework }}/server.properties
 
       - name: Start Kafka on ${{ matrix.os }} with ${{ matrix.jdk_vendor }} ${{ matrix.jdk_version }}
         if: ${{ matrix.os != 'windows-latest' }}
