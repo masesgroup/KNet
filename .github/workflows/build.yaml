@@ -479,6 +479,7 @@ jobs:
           ${{ github.workspace }}\bin\${{ matrix.framework }}/KNetTest.exe localhost:9092 deleteTopic useConsumeCallback randomizeTopicName withBigBigExtraValue
           ${{ github.workspace }}\bin\${{ matrix.framework }}/KNetTest.exe localhost:9092 deleteTopic useConsumeCallback randomizeTopicName runBuffered
           ${{ github.workspace }}\bin\${{ matrix.framework }}/KNetTest.exe localhost:9092 deleteTopic useConsumeCallback randomizeTopicName runBuffered withBigBigExtraValue
+          Start-Sleep -Seconds 10
 
       - name: Execute KNetTestSerDes on ${{ matrix.os }} with ${{ matrix.jdk_vendor }} ${{ matrix.jdk_version }}
         shell: pwsh
