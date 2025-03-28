@@ -37,6 +37,7 @@ namespace MASES.KNetTest
 {
     class Program
     {
+        static bool deleteTopic = false;
         static bool withBigExtraValue = false;
         static bool withBigBigExtraValue = false;
         static bool consoleOutput = System.Diagnostics.Debugger.IsAttached ? true : false;
@@ -73,19 +74,22 @@ namespace MASES.KNetTest
                 {
                     for (int i = 1; i < args.Length; i++)
                     {
-                        if (args[i] == "runBuffered") { runBuffered = true; continue; }
-                        if (args[i] == "consoleOutput") { consoleOutput = true; continue; }
-                        if (args[i] == "useProduceCallback") { useProduceCallback = true; continue; }
-                        if (args[i] == "useConsumeCallback") { useConsumeCallback = true; continue; }
-                        if (args[i] == "withBigExtraValue") { withBigExtraValue = true; NonParallelLimit /= 10; continue; }
-                        if (args[i] == "withBigBigExtraValue") { withBigBigExtraValue = true; NonParallelLimit /= 100; continue; }
-                        if (args[i] == "onlyProduce") { onlyProduce = true; continue; }
-                        if (args[i] == "flushWhileSend") { flushWhileSend = true; continue; }
-                        if (args[i] == "withAck") { withAck = true; continue; }
-                        if (args[i] == "runInParallel") { runInParallel = true; continue; }
-                        if (args[i] == "avoidThrows") { avoidThrows = true; continue; }
-                        if (args[i] == "randomizeTopicName") { randomizeTopicName = true; continue; }
-                        Console.WriteLine($"Unknown {args[i]}");
+                        var arg = args[i].ToLowerInvariant();
+
+                        if (arg == "deleteTopic".ToLowerInvariant()) { deleteTopic = true; continue; }
+                        if (arg == "runBuffered".ToLowerInvariant()) { runBuffered = true; continue; }
+                        if (arg == "consoleOutput".ToLowerInvariant()) { consoleOutput = true; continue; }
+                        if (arg == "useProduceCallback".ToLowerInvariant()) { useProduceCallback = true; continue; }
+                        if (arg == "useConsumeCallback".ToLowerInvariant()) { useConsumeCallback = true; continue; }
+                        if (arg == "withBigExtraValue".ToLowerInvariant()) { withBigExtraValue = true; NonParallelLimit /= 10; continue; }
+                        if (arg == "withBigBigExtraValue".ToLowerInvariant()) { withBigBigExtraValue = true; NonParallelLimit /= 100; continue; }
+                        if (arg == "onlyProduce".ToLowerInvariant()) { onlyProduce = true; continue; }
+                        if (arg == "flushWhileSend".ToLowerInvariant()) { flushWhileSend = true; continue; }
+                        if (arg == "withAck".ToLowerInvariant()) { withAck = true; continue; }
+                        if (arg == "runInParallel".ToLowerInvariant()) { runInParallel = true; continue; }
+                        if (arg == "avoidThrows".ToLowerInvariant()) { avoidThrows = true; continue; }
+                        if (arg == "randomizeTopicName".ToLowerInvariant()) { randomizeTopicName = true; continue; }
+                        Console.WriteLine($"Unknown {arg[i]}");
                     }
                 }
             }
@@ -98,7 +102,7 @@ namespace MASES.KNetTest
 
             try
             {
-                CreateTopic();
+                CreateTopic(topicToUse);
                 Console.CancelKeyPress += Console_CancelKeyPress;
                 Console.WriteLine("Press Ctrl-C to exit");
                 if (runInParallel)
@@ -155,6 +159,10 @@ namespace MASES.KNetTest
             {
                 Environment.ExitCode = SharedKNetCore.ManageException(e);
             }
+            finally
+            {
+                DeleteTopic(topicToUse);
+            }
         }
 
         private static void Console_CancelKeyPress(object sender, ConsoleCancelEventArgs e)
@@ -162,11 +170,10 @@ namespace MASES.KNetTest
             if (e.Cancel) resetEvent.Set();
         }
 
-        static void CreateTopic()
+        static void CreateTopic(string topicName)
         {
             try
             {
-                string topicName = topicToUse;
                 int partitions = 1;
                 short replicationFactor = 1;
 
@@ -207,6 +214,34 @@ namespace MASES.KNetTest
                     future.Get();
                     ********/
                     admin.CreateTopic(topic);
+                }
+            }
+            catch (Java.Util.Concurrent.ExecutionException ex)
+            {
+                if (!avoidThrows) throw;
+                Console.WriteLine(ex.InnerException.Message);
+            }
+            catch (TopicExistsException) { }
+            catch (Exception e)
+            {
+                if (!avoidThrows) throw;
+                Console.WriteLine(e.Message);
+            }
+        }
+
+        static void DeleteTopic(string topicName)
+        {
+            if (!deleteTopic) return;
+
+            try
+            {
+                Properties props = AdminClientConfigBuilder.Create().WithBootstrapServers(serverToUse).ToProperties();
+
+                Console.WriteLine($"Deleting {topicName} using an AdminClient based on {props}");
+
+                using (IAdmin admin = KafkaAdminClient.Create(props))
+                {
+                    admin.DeleteTopic(topicName);
                 }
             }
             catch (Java.Util.Concurrent.ExecutionException ex)
