@@ -38,13 +38,13 @@ There are many client libraries written to manage communication with Apache Kafk
 
 Currently the project tries to support, at our best, the [supported Apache Kafka™ binary distribution](https://kafka.apache.org/downloads):
 
-|KNet | State | Apache Kafka™ | Branch | .NET Framework | .NET | JVM |
-|:---:	|:---:	|:---:	|:---:	|:---:	|:---:	|
-|3.0.*|Active|4.0.*|[master](https://github.com/masesgroup/KNet)| 462+ | 8+ | 17+ |
-|2.9.*|Active|3.9.*|[release/2.9.X](https://github.com/masesgroup/KNet/tree/release/2.9.X)| 462+ | 8+ | 11+ |
-|2.8.*|Active|3.8.*|[release/2.8.X](https://github.com/masesgroup/KNet/tree/release/2.8.X)| 462+ | 6+ | 11+ |
-|2.7.*|Deprecated|3.7.*|[release/2.7.X](https://github.com/masesgroup/KNet/tree/release/2.7.X)| 462+ | 6+ | 11+ |
-|2.6.*|Deprecated|3.6.*|[release/2.6.X](https://github.com/masesgroup/KNet/tree/release/2.6.X)| 462+ | 6+ | 11+ |
+| KNet | State | Apache Kafka™ | Branch | .NET Framework | .NET | JVM |
+|:---:	|:---:	|:---:	|:---:	|:---:	|:---:	|:---:	|
+| 3.0.* | Active | 4.0.* | [master](https://github.com/masesgroup/KNet) | 462+ | 8+ | 17+ |
+| 2.9.* | Active | 3.9.* | [release/2.9.X](https://github.com/masesgroup/KNet/tree/release/2.9.X) | 462+ | 8+ | 11+ |
+| 2.8.* | Active | 3.8.* | [release/2.8.X](https://github.com/masesgroup/KNet/tree/release/2.8.X) | 462+ | 6+ | 11+ |
+| 2.7.* | Deprecated | 3.7.* | [release/2.7.X](https://github.com/masesgroup/KNet/tree/release/2.7.X) | 462+ | 6+ | 11+ |
+| 2.6.* | Deprecated | 3.6.* | [release/2.6.X](https://github.com/masesgroup/KNet/tree/release/2.6.X) | 462+ | 6+ | 11+ |
 
 The Apache Kafka™ packages are downloaded from:
 
