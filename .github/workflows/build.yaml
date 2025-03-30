@@ -190,10 +190,13 @@ jobs:
       - name: Prepare configuration files
         run: |
           Copy-Item .github\workflows\support\server.properties -Destination bin\net462\server.properties -Force
+          Copy-Item .github\workflows\support\windows_server.properties -Destination bin\net462\windows_server.properties -Force
           Copy-Item .github\workflows\support\log4j2.yaml -Destination bin\net462\log4j2.yaml -Force
           Copy-Item .github\workflows\support\server.properties -Destination bin\net8.0\server.properties -Force
+          Copy-Item .github\workflows\support\windows_server.properties -Destination bin\net8.0\windows_server.properties -Force
           Copy-Item .github\workflows\support\log4j2.yaml -Destination bin\net8.0\log4j2.yaml -Force
           Copy-Item .github\workflows\support\server.properties -Destination bin\net9.0\server.properties -Force
+          Copy-Item .github\workflows\support\windows_server.properties -Destination bin\net9.0\windows_server.properties -Force
           Copy-Item .github\workflows\support\log4j2.yaml -Destination bin\net9.0\log4j2.yaml -Force
 
       - name: Save KNet net462 bin in cache
@@ -466,12 +469,7 @@ jobs:
 
       - name: Prepare Kafka on ${{ matrix.os }} with ${{ matrix.jdk_vendor }} ${{ matrix.jdk_version }}
         if: ${{ matrix.os == 'windows-latest' }}
-        run: |
-          $file = '${{ github.workspace }}/bin/${{ matrix.framework }}/server.properties'
-          $find = 'log.dirs=/tmp/kraft-combined-logs'
-          $replace = 'log.dirs=${{ github.workspace }}/kafka-combined-logs'
-          (Get-Content $file).replace($find, $replace) | Set-Content $file
-          {{ github.workspace }}/binCLI/${{ matrix.framework }}/MASES.KNetCLI.exe storagetool format --standalone --ignore-formatted -t 6oTi4odMSVSmroqyy5rubw -c $file
+        run: {{ github.workspace }}/binCLI/${{ matrix.framework }}/MASES.KNetCLI.exe storagetool format --standalone --ignore-formatted -t 6oTi4odMSVSmroqyy5rubw -c ${{ github.workspace }}/bin/${{ matrix.framework }}/windows_server.properties
 
       - name: Start Kafka and execute KNetTest on ${{ matrix.os }} with ${{ matrix.jdk_vendor }} ${{ matrix.jdk_version }}
         if: ${{ matrix.os == 'windows-latest' }}
