@@ -409,6 +409,7 @@ jobs:
         run: dotnet ${{ github.workspace }}/bin/${{ matrix.framework }}/KNetTestSerDes.dll
 
       - uses: actions/upload-artifact@v4
+        if: ${{ failure() || cancelled() }}
         with:
           if-no-files-found: ignore
           name: Crash_tests_${{ matrix.os }}_${{ matrix.framework }}_${{ matrix.jdk_vendor }}_${{ matrix.jdk_version }}
@@ -493,11 +494,15 @@ jobs:
       #    ${{ github.workspace }}\bin\${{ matrix.framework }}/KNetTest.exe localhost:9092 useConsumeCallback randomizeTopicName runBuffered
       #    ${{ github.workspace }}\bin\${{ matrix.framework }}/KNetTest.exe localhost:9092 useConsumeCallback randomizeTopicName runBuffered withExtraValue
 
+      - if: ${{ failure() || cancelled() }}
+        run: Get-PSDrive
+
       - name: Execute KNetTestSerDes on ${{ matrix.os }} with ${{ matrix.jdk_vendor }} ${{ matrix.jdk_version }}
         shell: pwsh
         run: ${{ github.workspace }}\bin\${{ matrix.framework }}\KNetTestSerDes.exe
 
       - uses: actions/upload-artifact@v4
+        if: ${{ failure() || cancelled() }}
         with:
           if-no-files-found: ignore
           name: Crash_tests_${{ matrix.os }}_${{ matrix.framework }}_${{ matrix.jdk_vendor }}_${{ matrix.jdk_version }}
@@ -592,6 +597,7 @@ jobs:
         run: dotnet ${{ github.workspace }}/bin/${{ matrix.framework }}/KNetTestSerDes.dll
 
       - uses: actions/upload-artifact@v4
+        if: ${{ failure() || cancelled() }}
         with:
           if-no-files-found: ignore
           name: Crash_tests_${{ matrix.os }}_${{ matrix.framework }}_${{ matrix.jdk_vendor }}_${{ matrix.jdk_version }}
