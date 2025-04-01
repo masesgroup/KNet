@@ -38,6 +38,7 @@ namespace MASES.KNetTest
     class Program
     {
         static bool deleteTopic = false;
+        static bool withExtraValue = false;
         static bool withBigExtraValue = false;
         static bool withBigBigExtraValue = false;
         static bool consoleOutput = System.Diagnostics.Debugger.IsAttached ? true : false;
@@ -81,6 +82,7 @@ namespace MASES.KNetTest
                         if (arg == "consoleOutput".ToLowerInvariant()) { consoleOutput = true; continue; }
                         if (arg == "useProduceCallback".ToLowerInvariant()) { useProduceCallback = true; continue; }
                         if (arg == "useConsumeCallback".ToLowerInvariant()) { useConsumeCallback = true; continue; }
+                        if (arg == "withExtraValue".ToLowerInvariant()) { withExtraValue = true; NonParallelLimit /= 1; continue; }
                         if (arg == "withBigExtraValue".ToLowerInvariant()) { withBigExtraValue = true; NonParallelLimit /= 10; continue; }
                         if (arg == "withBigBigExtraValue".ToLowerInvariant()) { withBigBigExtraValue = true; NonParallelLimit /= 100; continue; }
                         if (arg == "onlyProduce".ToLowerInvariant()) { onlyProduce = true; continue; }
@@ -303,7 +305,7 @@ namespace MASES.KNetTest
                             while (runInParallel ? !resetEvent.WaitOne(0) : i < NonParallelLimit)
                             {
                                 watcher.Start();
-                                var record = producer.NewRecord(topicToUse, i.ToString(), new TestType(i, withBigExtraValue, withBigBigExtraValue));
+                                var record = producer.NewRecord(topicToUse, i.ToString(), new TestType(i, withExtraValue, withBigExtraValue, withBigBigExtraValue));
                                 var result = useProduceCallback ? producer.Send(record, callback) : producer.Send(record);
                                 if (!runInParallel && _firstOffset == -1)
                                 {
@@ -531,7 +533,7 @@ namespace MASES.KNetTest
                             while (runInParallel ? !resetEvent.WaitOne(0) : i < NonParallelLimit)
                             {
                                 watcher.Start();
-                                var record = producer.NewRecord(topicToUse, i.ToString(), new TestType(i, withBigExtraValue, withBigBigExtraValue));
+                                var record = producer.NewRecord(topicToUse, i.ToString(), new TestType(i, withExtraValue, withBigExtraValue, withBigBigExtraValue));
                                 var result = useProduceCallback ? producer.Send(record, callback) : producer.Send(record);
                                 if (!runInParallel && _firstOffset == -1)
                                 {

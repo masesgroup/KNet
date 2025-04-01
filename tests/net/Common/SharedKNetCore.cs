@@ -23,10 +23,16 @@ namespace MASES.KNet.TestCommon
 {
     public class TestType
     {
+        static byte[] _extraValue = null;
         static byte[] _bigExtraValue = null;
         static byte[] _bigBigExtraValue = null;
         static TestType()
         {
+            _extraValue = new byte[1000];
+            for (int i = 0; i < _extraValue.LongLength; i++)
+            {
+                _extraValue[i] = (byte)(i % byte.MaxValue);
+            }
             _bigExtraValue = new byte[100000];
             for (int i = 0; i < _bigExtraValue.LongLength; i++)
             {
@@ -41,14 +47,18 @@ namespace MASES.KNet.TestCommon
 
         public TestType() { }
 
-        public TestType(int i, bool withBigExtraValue, bool bigBigExtraValue)
+        public TestType(int i, bool withExtraValue, bool withBigExtraValue, bool withBigBigExtraValue)
         {
             name = description = value = i.ToString();
-            if (withBigExtraValue)
+            if (withExtraValue)
+            {
+                extraValue = _extraValue;
+            }
+            else if (withBigExtraValue)
             {
                 extraValue = _bigExtraValue;
             }
-            else if (bigBigExtraValue)
+            else if (withBigBigExtraValue)
             {
                 extraValue = _bigBigExtraValue;
             }

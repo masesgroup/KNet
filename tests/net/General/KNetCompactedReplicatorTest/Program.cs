@@ -100,7 +100,7 @@ namespace MASES.KNetCompactedReplicatorTest
 
                 for (int i = 0; i < length; i++)
                 {
-                    replicator[i] = new TestType(i, false, false);
+                    replicator[i] = new TestType(i, false, false, false);
                 }
 
                 replicator.SyncWait();
@@ -129,7 +129,7 @@ namespace MASES.KNetCompactedReplicatorTest
 
                 for (int i = 0; i < length; i++)
                 {
-                    replicator[i] = new TestType(i, false, false);
+                    replicator[i] = new TestType(i, false, false, false);
                 }
 
                 replicator.SyncWait();
