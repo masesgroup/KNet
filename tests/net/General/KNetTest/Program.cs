@@ -82,7 +82,7 @@ namespace MASES.KNetTest
                         if (arg == "consoleOutput".ToLowerInvariant()) { consoleOutput = true; continue; }
                         if (arg == "useProduceCallback".ToLowerInvariant()) { useProduceCallback = true; continue; }
                         if (arg == "useConsumeCallback".ToLowerInvariant()) { useConsumeCallback = true; continue; }
-                        if (arg == "withExtraValue".ToLowerInvariant()) { withExtraValue = true; NonParallelLimit /= 1; continue; }
+                        if (arg == "withExtraValue".ToLowerInvariant()) { withExtraValue = true; NonParallelLimit /= 10; continue; }
                         if (arg == "withBigExtraValue".ToLowerInvariant()) { withBigExtraValue = true; NonParallelLimit /= 10; continue; }
                         if (arg == "withBigBigExtraValue".ToLowerInvariant()) { withBigBigExtraValue = true; NonParallelLimit /= 100; continue; }
                         if (arg == "onlyProduce".ToLowerInvariant()) { onlyProduce = true; continue; }

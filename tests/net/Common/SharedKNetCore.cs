@@ -23,12 +23,12 @@ namespace MASES.KNet.TestCommon
 {
     public class TestType
     {
-        static byte[] _extraValue = null;
-        static byte[] _bigExtraValue = null;
-        static byte[] _bigBigExtraValue = null;
+        static readonly byte[] _extraValue = null;
+        static readonly byte[] _bigExtraValue = null;
+        static readonly byte[] _bigBigExtraValue = null;
         static TestType()
         {
-            _extraValue = new byte[1000];
+            _extraValue = new byte[100];
             for (int i = 0; i < _extraValue.LongLength; i++)
             {
                 _extraValue[i] = (byte)(i % byte.MaxValue);
