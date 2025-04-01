@@ -89,7 +89,9 @@ jobs:
       # Support longpaths
       - name: Support long paths
         run: git config --system core.longpaths true
-      
+
+      - run: Get-PSDrive
+        
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v4
         with:
@@ -466,6 +468,8 @@ jobs:
           ${{ github.workspace }}\Procdump\procdump.exe -accepteula
           mkdir CrashDumpsDir
           ${{ github.workspace }}\Procdump\procdump.exe -ma -i ${{ github.workspace }}\CrashDumpsDir
+
+      - run: Get-PSDrive
 
       - name: Start Kafka and execute KNetTest on ${{ matrix.os }} with ${{ matrix.jdk_vendor }} ${{ matrix.jdk_version }}
         if: ${{ matrix.os == 'windows-latest' }}
