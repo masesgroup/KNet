@@ -56,7 +56,7 @@ namespace MASES.KNetTest
         const string theServer = "localhost:9092";
         const string theTopic = "myTopic";
 
-        static int NonParallelLimit = RuntimeInformation.IsOSPlatform(OSPlatform.Windows) ? 1000 : 100000;
+        static int NonParallelLimit = RuntimeInformation.IsOSPlatform(OSPlatform.Windows) ? 10000 : 100000;
         static long _firstOffset = -1;
         static int waitMultiplier = 1;
 
