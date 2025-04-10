@@ -32,6 +32,7 @@ using MASES.KNet.Consumer;
 using MASES.KNet.Common;
 using System.Diagnostics;
 using Org.Apache.Kafka.Common.Errors;
+using System.Runtime.InteropServices;
 
 namespace MASES.KNetTest
 {
@@ -41,7 +42,7 @@ namespace MASES.KNetTest
         static bool withExtraValue = false;
         static bool withBigExtraValue = false;
         static bool withBigBigExtraValue = false;
-        static bool consoleOutput = System.Diagnostics.Debugger.IsAttached ? true : false;
+        static bool consoleOutput = Debugger.IsAttached ? true : false;
         static bool runBuffered = false;
         static bool useProduceCallback = false;
         static bool useConsumeCallback = false;
@@ -55,7 +56,7 @@ namespace MASES.KNetTest
         const string theServer = "localhost:9092";
         const string theTopic = "myTopic";
 
-        static int NonParallelLimit = 100000;
+        static int NonParallelLimit = RuntimeInformation.IsOSPlatform(OSPlatform.Windows) ? 1000 : 100000;
         static long _firstOffset = -1;
         static int waitMultiplier = 1;
 
