@@ -17,18 +17,13 @@
 		<RunAnalyzersDuringBuild>False</RunAnalyzersDuringBuild>
 	</PropertyGroup>
 
-	<ItemGroup Condition="True">
-		<knetcli_jars Include="$(ProjectDir)\..\..\..\jars\*.*" />
-		<knetcli_config Include="$(ProjectDir)\..\..\config\*.*" />
-	</ItemGroup>
-
 	<Target Name="CopyCustomContent" AfterTargets="AfterBuild">
-		<Copy SourceFiles="@(knetcli_jars)" DestinationFolder="$(OutDir)\jars" />
-		<Copy SourceFiles="@(knetcli_config)" DestinationFolder="$(OutDir)\config" />
+		<Copy SourceFiles="@(knetfiles_jars)" DestinationFolder="$(OutDir)\jars" />
+		<Copy SourceFiles="@(knetfiles_config)" DestinationFolder="$(OutDir)\config" />
 	</Target>
 	<Target Name="CopyCustomContentOnPublish" AfterTargets="Publish">
-		<Copy SourceFiles="@(knetcli_jars)" DestinationFolder="$(OutDir)\jars" />
-		<Copy SourceFiles="@(knetcli_config)" DestinationFolder="$(OutDir)\config" />
+		<Copy SourceFiles="@(knetfiles_jars)" DestinationFolder="$(OutDir)\jars" />
+		<Copy SourceFiles="@(knetfiles_config)" DestinationFolder="$(OutDir)\config" />
 	</Target>
 	
 	<ItemGroup>
