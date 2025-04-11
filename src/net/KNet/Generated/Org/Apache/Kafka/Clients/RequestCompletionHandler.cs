@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Clients
 {
     #region RequestCompletionHandler declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/RequestCompletionHandler.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/RequestCompletionHandler.html"/>
     /// </summary>
     public partial class RequestCompletionHandler : MASES.JCOBridge.C2JBridge.JVMBridgeBase<RequestCompletionHandler>
     {
@@ -111,7 +111,7 @@ namespace Org.Apache.Kafka.Clients
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/RequestCompletionHandler.html#onComplete-org.apache.kafka.clients.ClientResponse-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/RequestCompletionHandler.html#onComplete-org.apache.kafka.clients.ClientResponse-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Clients.ClientResponse"/></param>
         public void OnComplete(Org.Apache.Kafka.Clients.ClientResponse arg0)

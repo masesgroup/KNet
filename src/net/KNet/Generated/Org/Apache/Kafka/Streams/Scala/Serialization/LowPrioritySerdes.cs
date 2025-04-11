@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Streams.Scala.Serialization
 {
     #region LowPrioritySerdes declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/3.9.0/org/apache/kafka/streams/scala/serialization/LowPrioritySerdes.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/serialization/LowPrioritySerdes.html"/>
     /// </summary>
     public partial class LowPrioritySerdes : MASES.JCOBridge.C2JBridge.JVMBridgeBase<LowPrioritySerdes>
     {

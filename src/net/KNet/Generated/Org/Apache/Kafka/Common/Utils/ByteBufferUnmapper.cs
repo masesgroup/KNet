@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common.Utils
 {
     #region ByteBufferUnmapper declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/utils/ByteBufferUnmapper.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/utils/ByteBufferUnmapper.html"/>
     /// </summary>
     public partial class ByteBufferUnmapper : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ByteBufferUnmapper>
     {
@@ -87,7 +87,7 @@ namespace Org.Apache.Kafka.Common.Utils
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/utils/ByteBufferUnmapper.html#unmap-java.lang.String-java.nio.ByteBuffer-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/utils/ByteBufferUnmapper.html#unmap-java.lang.String-java.nio.ByteBuffer-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Java.Nio.ByteBuffer"/></param>

@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common.Header
 {
     #region Headers declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/header/Headers.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/header/Headers.html"/>
     /// </summary>
     public partial class Headers : Java.Lang.Iterable<Org.Apache.Kafka.Common.Header.Header>
     {
@@ -111,7 +111,7 @@ namespace Org.Apache.Kafka.Common.Header
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/header/Headers.html#headers-java.lang.String-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/header/Headers.html#headers-java.lang.String-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Java.Lang.Iterable"/></returns>
@@ -120,7 +120,7 @@ namespace Org.Apache.Kafka.Common.Header
             return IExecuteWithSignature<Java.Lang.Iterable<Org.Apache.Kafka.Common.Header.Header>>("headers", "(Ljava/lang/String;)Ljava/lang/Iterable;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/header/Headers.html#lastHeader-java.lang.String-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/header/Headers.html#lastHeader-java.lang.String-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.Header.Header"/></returns>
@@ -129,7 +129,7 @@ namespace Org.Apache.Kafka.Common.Header
             return IExecuteWithSignature<Org.Apache.Kafka.Common.Header.Header>("lastHeader", "(Ljava/lang/String;)Lorg/apache/kafka/common/header/Header;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/header/Headers.html#toArray--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/header/Headers.html#toArray--"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.Header.Header"/></returns>
         public Org.Apache.Kafka.Common.Header.Header[] ToArray()
@@ -137,7 +137,7 @@ namespace Org.Apache.Kafka.Common.Header
             return IExecuteWithSignatureArray<Org.Apache.Kafka.Common.Header.Header>("toArray", "()[Lorg/apache/kafka/common/header/Header;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/header/Headers.html#add-java.lang.String-byte[]-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/header/Headers.html#add-java.lang.String-byte[]-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="byte"/></param>
@@ -148,7 +148,7 @@ namespace Org.Apache.Kafka.Common.Header
             return IExecuteWithSignature<Org.Apache.Kafka.Common.Header.Headers>("add", "(Ljava/lang/String;[B)Lorg/apache/kafka/common/header/Headers;", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/header/Headers.html#add-org.apache.kafka.common.header.Header-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/header/Headers.html#add-org.apache.kafka.common.header.Header-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Header.Header"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.Header.Headers"/></returns>
@@ -158,7 +158,7 @@ namespace Org.Apache.Kafka.Common.Header
             return IExecuteWithSignature<Org.Apache.Kafka.Common.Header.Headers>("add", "(Lorg/apache/kafka/common/header/Header;)Lorg/apache/kafka/common/header/Headers;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/header/Headers.html#remove-java.lang.String-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/header/Headers.html#remove-java.lang.String-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.Header.Headers"/></returns>

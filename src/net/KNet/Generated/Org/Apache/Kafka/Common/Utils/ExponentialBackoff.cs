@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common.Utils
 {
     #region ExponentialBackoff declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/utils/ExponentialBackoff.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/utils/ExponentialBackoff.html"/>
     /// </summary>
     public partial class ExponentialBackoff : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ExponentialBackoff>
     {
@@ -75,7 +75,7 @@ namespace Org.Apache.Kafka.Common.Utils
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/utils/ExponentialBackoff.html#org.apache.kafka.common.utils.ExponentialBackoff(long,int,long,double)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/utils/ExponentialBackoff.html#org.apache.kafka.common.utils.ExponentialBackoff(long,int,long,double)"/>
         /// </summary>
         /// <param name="arg0"><see cref="long"/></param>
         /// <param name="arg1"><see cref="int"/></param>
@@ -102,7 +102,7 @@ namespace Org.Apache.Kafka.Common.Utils
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/utils/ExponentialBackoff.html#backoff-long-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/utils/ExponentialBackoff.html#backoff-long-"/>
         /// </summary>
         /// <param name="arg0"><see cref="long"/></param>
         /// <returns><see cref="long"/></returns>
@@ -111,7 +111,7 @@ namespace Org.Apache.Kafka.Common.Utils
             return IExecuteWithSignature<long>("backoff", "(J)J", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/utils/ExponentialBackoff.html#initialInterval--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/utils/ExponentialBackoff.html#initialInterval--"/>
         /// </summary>
         /// <returns><see cref="long"/></returns>
         public long InitialInterval()

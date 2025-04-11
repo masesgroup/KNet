@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Streams.State
 {
     #region VersionedBytesStoreSupplier declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.0/org/apache/kafka/streams/state/VersionedBytesStoreSupplier.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/state/VersionedBytesStoreSupplier.html"/>
     /// </summary>
     public partial class VersionedBytesStoreSupplier : Org.Apache.Kafka.Streams.State.KeyValueBytesStoreSupplier
     {
@@ -111,7 +111,7 @@ namespace Org.Apache.Kafka.Streams.State
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.0/org/apache/kafka/streams/state/VersionedBytesStoreSupplier.html#historyRetentionMs--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/state/VersionedBytesStoreSupplier.html#historyRetentionMs--"/>
         /// </summary>
         /// <returns><see cref="long"/></returns>
         public long HistoryRetentionMs()

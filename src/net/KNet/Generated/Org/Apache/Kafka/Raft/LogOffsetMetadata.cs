@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Raft
 {
     #region LogOffsetMetadata declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.0/org/apache/kafka/raft/LogOffsetMetadata.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/LogOffsetMetadata.html"/>
     /// </summary>
     public partial class LogOffsetMetadata : MASES.JCOBridge.C2JBridge.JVMBridgeBase<LogOffsetMetadata>
     {
@@ -75,7 +75,7 @@ namespace Org.Apache.Kafka.Raft
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.0/org/apache/kafka/raft/LogOffsetMetadata.html#org.apache.kafka.raft.LogOffsetMetadata(long,java.util.Optional)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/LogOffsetMetadata.html#org.apache.kafka.raft.LogOffsetMetadata(long,java.util.Optional)"/>
         /// </summary>
         /// <param name="arg0"><see cref="long"/></param>
         /// <param name="arg1"><see cref="Java.Util.Optional"/></param>
@@ -84,7 +84,7 @@ namespace Org.Apache.Kafka.Raft
         {
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.0/org/apache/kafka/raft/LogOffsetMetadata.html#org.apache.kafka.raft.LogOffsetMetadata(long)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/LogOffsetMetadata.html#org.apache.kafka.raft.LogOffsetMetadata(long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="long"/></param>
         public LogOffsetMetadata(long arg0)
@@ -108,7 +108,7 @@ namespace Org.Apache.Kafka.Raft
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.0/org/apache/kafka/raft/LogOffsetMetadata.html#metadata--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/LogOffsetMetadata.html#metadata--"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Optional"/></returns>
         public Java.Util.Optional<Org.Apache.Kafka.Raft.OffsetMetadata> Metadata()
@@ -116,7 +116,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<Java.Util.Optional<Org.Apache.Kafka.Raft.OffsetMetadata>>("metadata", "()Ljava/util/Optional;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.0/org/apache/kafka/raft/LogOffsetMetadata.html#offset--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/LogOffsetMetadata.html#offset--"/>
         /// </summary>
         /// <returns><see cref="long"/></returns>
         public long Offset()

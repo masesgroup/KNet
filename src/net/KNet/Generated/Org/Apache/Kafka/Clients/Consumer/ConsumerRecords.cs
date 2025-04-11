@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
 {
     #region ConsumerRecords declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/ConsumerRecords.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/ConsumerRecords.html"/>
     /// </summary>
     public partial class ConsumerRecords : Java.Lang.Iterable
     {
@@ -72,7 +72,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
 
     #region ConsumerRecords<K, V> declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/ConsumerRecords.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/ConsumerRecords.html"/>
     /// </summary>
     /// <typeparam name="K"></typeparam>
     /// <typeparam name="V"></typeparam>
@@ -122,7 +122,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/ConsumerRecords.html#org.apache.kafka.clients.consumer.ConsumerRecords(java.util.Map,java.util.Map)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/ConsumerRecords.html#org.apache.kafka.clients.consumer.ConsumerRecords(java.util.Map,java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <param name="arg1"><see cref="Java.Util.Map"/></param>
@@ -139,7 +139,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/ConsumerRecords.html#EMPTY"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/ConsumerRecords.html#EMPTY"/>
         /// </summary>
         public static Org.Apache.Kafka.Clients.Consumer.ConsumerRecords EMPTY { get { if (!_EMPTYReady) { _EMPTYContent = SGetField<Org.Apache.Kafka.Clients.Consumer.ConsumerRecords>(LocalBridgeClazz, "EMPTY"); _EMPTYReady = true; } return _EMPTYContent; } }
         private static Org.Apache.Kafka.Clients.Consumer.ConsumerRecords _EMPTYContent = default;
@@ -149,7 +149,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/ConsumerRecords.html#empty--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/ConsumerRecords.html#empty--"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Consumer.ConsumerRecords"/></returns>
         public static Org.Apache.Kafka.Clients.Consumer.ConsumerRecords Empty()
@@ -161,7 +161,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/ConsumerRecords.html#isEmpty--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/ConsumerRecords.html#isEmpty--"/>
         /// </summary>
         /// <returns><see cref="bool"/></returns>
         public bool IsEmpty()
@@ -169,7 +169,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
             return IExecuteWithSignature<bool>("isEmpty", "()Z");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/ConsumerRecords.html#count--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/ConsumerRecords.html#count--"/>
         /// </summary>
         /// <returns><see cref="int"/></returns>
         public int Count()
@@ -177,7 +177,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
             return IExecuteWithSignature<int>("count", "()I");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/ConsumerRecords.html#records-java.lang.String-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/ConsumerRecords.html#records-java.lang.String-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Java.Lang.Iterable"/></returns>
@@ -186,7 +186,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
             return IExecuteWithSignature<Java.Lang.Iterable>("records", "(Ljava/lang/String;)Ljava/lang/Iterable;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/ConsumerRecords.html#iterator--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/ConsumerRecords.html#iterator--"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Iterator"/></returns>
         public Java.Util.Iterator Iterator()
@@ -194,7 +194,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
             return IExecuteWithSignature<Java.Util.Iterator>("iterator", "()Ljava/util/Iterator;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/ConsumerRecords.html#records-org.apache.kafka.common.TopicPartition-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/ConsumerRecords.html#records-org.apache.kafka.common.TopicPartition-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.TopicPartition"/></param>
         /// <returns><see cref="Java.Util.List"/></returns>
@@ -203,7 +203,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
             return IExecuteWithSignature<Java.Util.List>("records", "(Lorg/apache/kafka/common/TopicPartition;)Ljava/util/List;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/ConsumerRecords.html#nextOffsets--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/ConsumerRecords.html#nextOffsets--"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Map"/></returns>
         public Java.Util.Map NextOffsets()
@@ -211,7 +211,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
             return IExecuteWithSignature<Java.Util.Map>("nextOffsets", "()Ljava/util/Map;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/ConsumerRecords.html#partitions--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/ConsumerRecords.html#partitions--"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Set"/></returns>
         public Java.Util.Set Partitions()
@@ -234,7 +234,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/ConsumerRecords.html#org.apache.kafka.clients.consumer.ConsumerRecords(java.util.Map,java.util.Map)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/ConsumerRecords.html#org.apache.kafka.clients.consumer.ConsumerRecords(java.util.Map,java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <param name="arg1"><see cref="Java.Util.Map"/></param>
@@ -255,7 +255,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/ConsumerRecords.html#EMPTY"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/ConsumerRecords.html#EMPTY"/>
         /// </summary>
         public static Org.Apache.Kafka.Clients.Consumer.ConsumerRecords<object, object> EMPTY { get { if (!_EMPTYReady) { _EMPTYContent = SGetField<Org.Apache.Kafka.Clients.Consumer.ConsumerRecords<object, object>>(LocalBridgeClazz, "EMPTY"); _EMPTYReady = true; } return _EMPTYContent; } }
         private static Org.Apache.Kafka.Clients.Consumer.ConsumerRecords<object, object> _EMPTYContent = default;
@@ -265,7 +265,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/ConsumerRecords.html#empty--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/ConsumerRecords.html#empty--"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Consumer.ConsumerRecords"/></returns>
         public static Org.Apache.Kafka.Clients.Consumer.ConsumerRecords<K, V> Empty()
@@ -277,7 +277,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/ConsumerRecords.html#isEmpty--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/ConsumerRecords.html#isEmpty--"/>
         /// </summary>
         /// <returns><see cref="bool"/></returns>
         public bool IsEmpty()
@@ -285,7 +285,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
             return IExecuteWithSignature<bool>("isEmpty", "()Z");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/ConsumerRecords.html#count--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/ConsumerRecords.html#count--"/>
         /// </summary>
         /// <returns><see cref="int"/></returns>
         public int Count()
@@ -293,7 +293,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
             return IExecuteWithSignature<int>("count", "()I");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/ConsumerRecords.html#records-java.lang.String-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/ConsumerRecords.html#records-java.lang.String-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Java.Lang.Iterable"/></returns>
@@ -302,7 +302,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
             return IExecuteWithSignature<Java.Lang.Iterable<Org.Apache.Kafka.Clients.Consumer.ConsumerRecord<K, V>>>("records", "(Ljava/lang/String;)Ljava/lang/Iterable;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/ConsumerRecords.html#iterator--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/ConsumerRecords.html#iterator--"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Iterator"/></returns>
         public Java.Util.Iterator<Org.Apache.Kafka.Clients.Consumer.ConsumerRecord<K, V>> Iterator()
@@ -310,7 +310,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
             return IExecuteWithSignature<Java.Util.Iterator<Org.Apache.Kafka.Clients.Consumer.ConsumerRecord<K, V>>>("iterator", "()Ljava/util/Iterator;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/ConsumerRecords.html#records-org.apache.kafka.common.TopicPartition-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/ConsumerRecords.html#records-org.apache.kafka.common.TopicPartition-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.TopicPartition"/></param>
         /// <returns><see cref="Java.Util.List"/></returns>
@@ -319,7 +319,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
             return IExecuteWithSignature<Java.Util.List<Org.Apache.Kafka.Clients.Consumer.ConsumerRecord<K, V>>>("records", "(Lorg/apache/kafka/common/TopicPartition;)Ljava/util/List;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/ConsumerRecords.html#nextOffsets--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/ConsumerRecords.html#nextOffsets--"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Map"/></returns>
         public Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Org.Apache.Kafka.Clients.Consumer.OffsetAndMetadata> NextOffsets()
@@ -327,7 +327,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
             return IExecuteWithSignature<Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Org.Apache.Kafka.Clients.Consumer.OffsetAndMetadata>>("nextOffsets", "()Ljava/util/Map;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/ConsumerRecords.html#partitions--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/ConsumerRecords.html#partitions--"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Set"/></returns>
         public Java.Util.Set<Org.Apache.Kafka.Common.TopicPartition> Partitions()

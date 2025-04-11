@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Raft
 {
     #region FileQuorumStateStore declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.0/org/apache/kafka/raft/FileQuorumStateStore.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/FileQuorumStateStore.html"/>
     /// </summary>
     public partial class FileQuorumStateStore : Org.Apache.Kafka.Raft.QuorumStateStore
     {
@@ -75,7 +75,7 @@ namespace Org.Apache.Kafka.Raft
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.0/org/apache/kafka/raft/FileQuorumStateStore.html#org.apache.kafka.raft.FileQuorumStateStore(java.io.File)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/FileQuorumStateStore.html#org.apache.kafka.raft.FileQuorumStateStore(java.io.File)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Io.File"/></param>
         public FileQuorumStateStore(Java.Io.File arg0)
@@ -91,7 +91,7 @@ namespace Org.Apache.Kafka.Raft
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.0/org/apache/kafka/raft/FileQuorumStateStore.html#DEFAULT_FILE_NAME"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/FileQuorumStateStore.html#DEFAULT_FILE_NAME"/>
         /// </summary>
         public static Java.Lang.String DEFAULT_FILE_NAME { get { if (!_DEFAULT_FILE_NAMEReady) { _DEFAULT_FILE_NAMEContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "DEFAULT_FILE_NAME"); _DEFAULT_FILE_NAMEReady = true; } return _DEFAULT_FILE_NAMEContent; } }
         private static Java.Lang.String _DEFAULT_FILE_NAMEContent = default;
@@ -105,7 +105,7 @@ namespace Org.Apache.Kafka.Raft
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.0/org/apache/kafka/raft/FileQuorumStateStore.html#path--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/FileQuorumStateStore.html#path--"/>
         /// </summary>
         /// <returns><see cref="Java.Nio.File.Path"/></returns>
         public Java.Nio.File.Path Path()
@@ -113,7 +113,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<Java.Nio.File.Path>("path", "()Ljava/nio/file/Path;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.0/org/apache/kafka/raft/FileQuorumStateStore.html#readElectionState--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/FileQuorumStateStore.html#readElectionState--"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Optional"/></returns>
         public Java.Util.Optional<Org.Apache.Kafka.Raft.ElectionState> ReadElectionState()
@@ -121,7 +121,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<Java.Util.Optional<Org.Apache.Kafka.Raft.ElectionState>>("readElectionState", "()Ljava/util/Optional;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.0/org/apache/kafka/raft/FileQuorumStateStore.html#clear--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/FileQuorumStateStore.html#clear--"/>
         /// </summary>
         public void Clear()
         {

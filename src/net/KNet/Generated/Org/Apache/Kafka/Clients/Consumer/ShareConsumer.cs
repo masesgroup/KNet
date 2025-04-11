@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
 {
     #region ShareConsumer declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/ShareConsumer.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/ShareConsumer.html"/>
     /// </summary>
     public partial class ShareConsumer : Java.Io.Closeable
     {
@@ -74,7 +74,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
 
     #region ShareConsumer<K, V> declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/ShareConsumer.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/ShareConsumer.html"/>
     /// </summary>
     /// <typeparam name="K"></typeparam>
     /// <typeparam name="V"></typeparam>
@@ -142,7 +142,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/ShareConsumer.html#metrics--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/ShareConsumer.html#metrics--"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Map"/></returns>
         public Java.Util.Map Metrics()
@@ -150,7 +150,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
             return IExecuteWithSignature<Java.Util.Map>("metrics", "()Ljava/util/Map;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/ShareConsumer.html#commitSync--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/ShareConsumer.html#commitSync--"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Map"/></returns>
         public Java.Util.Map CommitSync()
@@ -158,7 +158,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
             return IExecuteWithSignature<Java.Util.Map>("commitSync", "()Ljava/util/Map;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/ShareConsumer.html#commitSync-java.time.Duration-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/ShareConsumer.html#commitSync-java.time.Duration-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Time.Duration"/></param>
         /// <returns><see cref="Java.Util.Map"/></returns>
@@ -167,7 +167,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
             return IExecuteWithSignature<Java.Util.Map>("commitSync", "(Ljava/time/Duration;)Ljava/util/Map;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/ShareConsumer.html#subscription--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/ShareConsumer.html#subscription--"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Set"/></returns>
         public Java.Util.Set Subscription()
@@ -175,7 +175,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
             return IExecuteWithSignature<Java.Util.Set>("subscription", "()Ljava/util/Set;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/ShareConsumer.html#poll-java.time.Duration-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/ShareConsumer.html#poll-java.time.Duration-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Time.Duration"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Consumer.ConsumerRecords"/></returns>
@@ -184,7 +184,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
             return IExecuteWithSignature<Org.Apache.Kafka.Clients.Consumer.ConsumerRecords>("poll", "(Ljava/time/Duration;)Lorg/apache/kafka/clients/consumer/ConsumerRecords;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/ShareConsumer.html#clientInstanceId-java.time.Duration-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/ShareConsumer.html#clientInstanceId-java.time.Duration-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Time.Duration"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.Uuid"/></returns>
@@ -193,7 +193,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
             return IExecuteWithSignature<Org.Apache.Kafka.Common.Uuid>("clientInstanceId", "(Ljava/time/Duration;)Lorg/apache/kafka/common/Uuid;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/ShareConsumer.html#acknowledge-org.apache.kafka.clients.consumer.ConsumerRecord-org.apache.kafka.clients.consumer.AcknowledgeType-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/ShareConsumer.html#acknowledge-org.apache.kafka.clients.consumer.ConsumerRecord-org.apache.kafka.clients.consumer.AcknowledgeType-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Clients.Consumer.ConsumerRecord"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Clients.Consumer.AcknowledgeType"/></param>
@@ -202,7 +202,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
             IExecuteWithSignature("acknowledge", "(Lorg/apache/kafka/clients/consumer/ConsumerRecord;Lorg/apache/kafka/clients/consumer/AcknowledgeType;)V", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/ShareConsumer.html#acknowledge-org.apache.kafka.clients.consumer.ConsumerRecord-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/ShareConsumer.html#acknowledge-org.apache.kafka.clients.consumer.ConsumerRecord-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Clients.Consumer.ConsumerRecord"/></param>
         public void Acknowledge(Org.Apache.Kafka.Clients.Consumer.ConsumerRecord arg0)
@@ -210,14 +210,14 @@ namespace Org.Apache.Kafka.Clients.Consumer
             IExecuteWithSignature("acknowledge", "(Lorg/apache/kafka/clients/consumer/ConsumerRecord;)V", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/ShareConsumer.html#close--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/ShareConsumer.html#close--"/>
         /// </summary>
         public void Close()
         {
             IExecuteWithSignature("close", "()V");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/ShareConsumer.html#close-java.time.Duration-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/ShareConsumer.html#close-java.time.Duration-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Time.Duration"/></param>
         public void Close(Java.Time.Duration arg0)
@@ -225,14 +225,14 @@ namespace Org.Apache.Kafka.Clients.Consumer
             IExecuteWithSignature("close", "(Ljava/time/Duration;)V", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/ShareConsumer.html#commitAsync--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/ShareConsumer.html#commitAsync--"/>
         /// </summary>
         public void CommitAsync()
         {
             IExecuteWithSignature("commitAsync", "()V");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/ShareConsumer.html#setAcknowledgementCommitCallback-org.apache.kafka.clients.consumer.AcknowledgementCommitCallback-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/ShareConsumer.html#setAcknowledgementCommitCallback-org.apache.kafka.clients.consumer.AcknowledgementCommitCallback-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Clients.Consumer.AcknowledgementCommitCallback"/></param>
         public void SetAcknowledgementCommitCallback(Org.Apache.Kafka.Clients.Consumer.AcknowledgementCommitCallback arg0)
@@ -240,7 +240,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
             IExecuteWithSignature("setAcknowledgementCommitCallback", "(Lorg/apache/kafka/clients/consumer/AcknowledgementCommitCallback;)V", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/ShareConsumer.html#subscribe-java.util.Collection-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/ShareConsumer.html#subscribe-java.util.Collection-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Collection"/></param>
         public void Subscribe(Java.Util.Collection arg0)
@@ -248,14 +248,14 @@ namespace Org.Apache.Kafka.Clients.Consumer
             IExecuteWithSignature("subscribe", "(Ljava/util/Collection;)V", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/ShareConsumer.html#unsubscribe--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/ShareConsumer.html#unsubscribe--"/>
         /// </summary>
         public void Unsubscribe()
         {
             IExecuteWithSignature("unsubscribe", "()V");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/ShareConsumer.html#wakeup--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/ShareConsumer.html#wakeup--"/>
         /// </summary>
         public void Wakeup()
         {
@@ -315,7 +315,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/ShareConsumer.html#metrics--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/ShareConsumer.html#metrics--"/>
         /// </summary>
         /// <typeparam name="ReturnExtendsOrg_Apache_Kafka_Common_Metric"><see cref="Org.Apache.Kafka.Common.Metric"/></typeparam>
         /// <returns><see cref="Java.Util.Map"/></returns>
@@ -324,7 +324,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
             return IExecuteWithSignature<Java.Util.Map<Org.Apache.Kafka.Common.MetricName, ReturnExtendsOrg_Apache_Kafka_Common_Metric>>("metrics", "()Ljava/util/Map;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/ShareConsumer.html#commitSync--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/ShareConsumer.html#commitSync--"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Map"/></returns>
         public Java.Util.Map<Org.Apache.Kafka.Common.TopicIdPartition, Java.Util.Optional<Org.Apache.Kafka.Common.KafkaException>> CommitSync()
@@ -332,7 +332,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
             return IExecuteWithSignature<Java.Util.Map<Org.Apache.Kafka.Common.TopicIdPartition, Java.Util.Optional<Org.Apache.Kafka.Common.KafkaException>>>("commitSync", "()Ljava/util/Map;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/ShareConsumer.html#commitSync-java.time.Duration-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/ShareConsumer.html#commitSync-java.time.Duration-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Time.Duration"/></param>
         /// <returns><see cref="Java.Util.Map"/></returns>
@@ -341,7 +341,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
             return IExecuteWithSignature<Java.Util.Map<Org.Apache.Kafka.Common.TopicIdPartition, Java.Util.Optional<Org.Apache.Kafka.Common.KafkaException>>>("commitSync", "(Ljava/time/Duration;)Ljava/util/Map;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/ShareConsumer.html#subscription--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/ShareConsumer.html#subscription--"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Set"/></returns>
         public Java.Util.Set<Java.Lang.String> Subscription()
@@ -349,7 +349,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
             return IExecuteWithSignature<Java.Util.Set<Java.Lang.String>>("subscription", "()Ljava/util/Set;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/ShareConsumer.html#poll-java.time.Duration-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/ShareConsumer.html#poll-java.time.Duration-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Time.Duration"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Consumer.ConsumerRecords"/></returns>
@@ -358,7 +358,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
             return IExecuteWithSignature<Org.Apache.Kafka.Clients.Consumer.ConsumerRecords<K, V>>("poll", "(Ljava/time/Duration;)Lorg/apache/kafka/clients/consumer/ConsumerRecords;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/ShareConsumer.html#clientInstanceId-java.time.Duration-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/ShareConsumer.html#clientInstanceId-java.time.Duration-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Time.Duration"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.Uuid"/></returns>
@@ -367,7 +367,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
             return IExecuteWithSignature<Org.Apache.Kafka.Common.Uuid>("clientInstanceId", "(Ljava/time/Duration;)Lorg/apache/kafka/common/Uuid;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/ShareConsumer.html#acknowledge-org.apache.kafka.clients.consumer.ConsumerRecord-org.apache.kafka.clients.consumer.AcknowledgeType-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/ShareConsumer.html#acknowledge-org.apache.kafka.clients.consumer.ConsumerRecord-org.apache.kafka.clients.consumer.AcknowledgeType-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Clients.Consumer.ConsumerRecord"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Clients.Consumer.AcknowledgeType"/></param>
@@ -376,7 +376,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
             IExecuteWithSignature("acknowledge", "(Lorg/apache/kafka/clients/consumer/ConsumerRecord;Lorg/apache/kafka/clients/consumer/AcknowledgeType;)V", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/ShareConsumer.html#acknowledge-org.apache.kafka.clients.consumer.ConsumerRecord-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/ShareConsumer.html#acknowledge-org.apache.kafka.clients.consumer.ConsumerRecord-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Clients.Consumer.ConsumerRecord"/></param>
         public void Acknowledge(Org.Apache.Kafka.Clients.Consumer.ConsumerRecord<K, V> arg0)
@@ -384,14 +384,14 @@ namespace Org.Apache.Kafka.Clients.Consumer
             IExecuteWithSignature("acknowledge", "(Lorg/apache/kafka/clients/consumer/ConsumerRecord;)V", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/ShareConsumer.html#close--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/ShareConsumer.html#close--"/>
         /// </summary>
         public void Close()
         {
             IExecuteWithSignature("close", "()V");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/ShareConsumer.html#close-java.time.Duration-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/ShareConsumer.html#close-java.time.Duration-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Time.Duration"/></param>
         public void Close(Java.Time.Duration arg0)
@@ -399,14 +399,14 @@ namespace Org.Apache.Kafka.Clients.Consumer
             IExecuteWithSignature("close", "(Ljava/time/Duration;)V", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/ShareConsumer.html#commitAsync--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/ShareConsumer.html#commitAsync--"/>
         /// </summary>
         public void CommitAsync()
         {
             IExecuteWithSignature("commitAsync", "()V");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/ShareConsumer.html#setAcknowledgementCommitCallback-org.apache.kafka.clients.consumer.AcknowledgementCommitCallback-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/ShareConsumer.html#setAcknowledgementCommitCallback-org.apache.kafka.clients.consumer.AcknowledgementCommitCallback-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Clients.Consumer.AcknowledgementCommitCallback"/></param>
         public void SetAcknowledgementCommitCallback(Org.Apache.Kafka.Clients.Consumer.AcknowledgementCommitCallback arg0)
@@ -414,7 +414,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
             IExecuteWithSignature("setAcknowledgementCommitCallback", "(Lorg/apache/kafka/clients/consumer/AcknowledgementCommitCallback;)V", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/ShareConsumer.html#subscribe-java.util.Collection-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/ShareConsumer.html#subscribe-java.util.Collection-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Collection"/></param>
         public void Subscribe(Java.Util.Collection<Java.Lang.String> arg0)
@@ -422,14 +422,14 @@ namespace Org.Apache.Kafka.Clients.Consumer
             IExecuteWithSignature("subscribe", "(Ljava/util/Collection;)V", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/ShareConsumer.html#unsubscribe--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/ShareConsumer.html#unsubscribe--"/>
         /// </summary>
         public void Unsubscribe()
         {
             IExecuteWithSignature("unsubscribe", "()V");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/ShareConsumer.html#wakeup--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/ShareConsumer.html#wakeup--"/>
         /// </summary>
         public void Wakeup()
         {

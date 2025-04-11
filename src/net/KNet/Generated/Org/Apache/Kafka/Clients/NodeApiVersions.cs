@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Clients
 {
     #region NodeApiVersions declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/NodeApiVersions.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/NodeApiVersions.html"/>
     /// </summary>
     public partial class NodeApiVersions : MASES.JCOBridge.C2JBridge.JVMBridgeBase<NodeApiVersions>
     {
@@ -87,7 +87,7 @@ namespace Org.Apache.Kafka.Clients
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/NodeApiVersions.html#create--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/NodeApiVersions.html#create--"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Clients.NodeApiVersions"/></returns>
         public static Org.Apache.Kafka.Clients.NodeApiVersions Create()
@@ -95,7 +95,7 @@ namespace Org.Apache.Kafka.Clients
             return SExecuteWithSignature<Org.Apache.Kafka.Clients.NodeApiVersions>(LocalBridgeClazz, "create", "()Lorg/apache/kafka/clients/NodeApiVersions;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/NodeApiVersions.html#create-short-short-short-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/NodeApiVersions.html#create-short-short-short-"/>
         /// </summary>
         /// <param name="arg0"><see cref="short"/></param>
         /// <param name="arg1"><see cref="short"/></param>
@@ -110,7 +110,7 @@ namespace Org.Apache.Kafka.Clients
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/NodeApiVersions.html#toString-boolean-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/NodeApiVersions.html#toString-boolean-"/>
         /// </summary>
         /// <param name="arg0"><see cref="bool"/></param>
         /// <returns><see cref="Java.Lang.String"/></returns>
@@ -119,7 +119,7 @@ namespace Org.Apache.Kafka.Clients
             return IExecuteWithSignature<Java.Lang.String>("toString", "(Z)Ljava/lang/String;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/NodeApiVersions.html#finalizedFeatures--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/NodeApiVersions.html#finalizedFeatures--"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Map"/></returns>
         public Java.Util.Map<Java.Lang.String, Java.Lang.Short> FinalizedFeatures()
@@ -127,7 +127,7 @@ namespace Org.Apache.Kafka.Clients
             return IExecuteWithSignature<Java.Util.Map<Java.Lang.String, Java.Lang.Short>>("finalizedFeatures", "()Ljava/util/Map;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/NodeApiVersions.html#finalizedFeaturesEpoch--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/NodeApiVersions.html#finalizedFeaturesEpoch--"/>
         /// </summary>
         /// <returns><see cref="long"/></returns>
         public long FinalizedFeaturesEpoch()

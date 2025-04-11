@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Raft
 {
     #region OffsetMetadata declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.0/org/apache/kafka/raft/OffsetMetadata.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/OffsetMetadata.html"/>
     /// </summary>
     public partial class OffsetMetadata : MASES.JCOBridge.C2JBridge.JVMBridgeBase<OffsetMetadata>
     {

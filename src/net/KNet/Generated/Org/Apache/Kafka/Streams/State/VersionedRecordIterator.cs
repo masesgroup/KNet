@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Streams.State
 {
     #region VersionedRecordIterator declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.0/org/apache/kafka/streams/state/VersionedRecordIterator.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/state/VersionedRecordIterator.html"/>
     /// </summary>
     public partial class VersionedRecordIterator : Java.Util.Iterator
     {
@@ -74,7 +74,7 @@ namespace Org.Apache.Kafka.Streams.State
 
     #region VersionedRecordIterator<V> declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.0/org/apache/kafka/streams/state/VersionedRecordIterator.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/state/VersionedRecordIterator.html"/>
     /// </summary>
     /// <typeparam name="V"></typeparam>
     public partial class VersionedRecordIterator<V> : Java.Util.Iterator<Org.Apache.Kafka.Streams.State.VersionedRecord<V>>
@@ -145,7 +145,7 @@ namespace Org.Apache.Kafka.Streams.State
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.0/org/apache/kafka/streams/state/VersionedRecordIterator.html#close--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/state/VersionedRecordIterator.html#close--"/>
         /// </summary>
         public void Close()
         {
@@ -209,7 +209,7 @@ namespace Org.Apache.Kafka.Streams.State
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.0/org/apache/kafka/streams/state/VersionedRecordIterator.html#close--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/state/VersionedRecordIterator.html#close--"/>
         /// </summary>
         public void Close()
         {

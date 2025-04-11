@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Raft
 {
     #region LogAppendInfo declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.0/org/apache/kafka/raft/LogAppendInfo.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/LogAppendInfo.html"/>
     /// </summary>
     public partial class LogAppendInfo : MASES.JCOBridge.C2JBridge.JVMBridgeBase<LogAppendInfo>
     {
@@ -75,7 +75,7 @@ namespace Org.Apache.Kafka.Raft
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.0/org/apache/kafka/raft/LogAppendInfo.html#org.apache.kafka.raft.LogAppendInfo(long,long)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/LogAppendInfo.html#org.apache.kafka.raft.LogAppendInfo(long,long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="long"/></param>
         /// <param name="arg1"><see cref="long"/></param>
@@ -92,13 +92,13 @@ namespace Org.Apache.Kafka.Raft
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.0/org/apache/kafka/raft/LogAppendInfo.html#firstOffset"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/LogAppendInfo.html#firstOffset"/>
         /// </summary>
         public long firstOffset { get { if (!_firstOffsetReady) { _firstOffsetContent = IGetField<long>("firstOffset"); _firstOffsetReady = true; } return _firstOffsetContent; } }
         private long _firstOffsetContent = default;
         private bool _firstOffsetReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.0/org/apache/kafka/raft/LogAppendInfo.html#lastOffset"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/LogAppendInfo.html#lastOffset"/>
         /// </summary>
         public long lastOffset { get { if (!_lastOffsetReady) { _lastOffsetContent = IGetField<long>("lastOffset"); _lastOffsetReady = true; } return _lastOffsetContent; } }
         private long _lastOffsetContent = default;

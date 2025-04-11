@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
 {
     #region IdentityReplicationPolicy declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/3.9.0/org/apache/kafka/connect/mirror/IdentityReplicationPolicy.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/4.0.0/org/apache/kafka/connect/mirror/IdentityReplicationPolicy.html"/>
     /// </summary>
     public partial class IdentityReplicationPolicy : Org.Apache.Kafka.Connect.Mirror.DefaultReplicationPolicy
     {
@@ -83,7 +83,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/3.9.0/org/apache/kafka/connect/mirror/IdentityReplicationPolicy.html#SOURCE_CLUSTER_ALIAS_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/4.0.0/org/apache/kafka/connect/mirror/IdentityReplicationPolicy.html#SOURCE_CLUSTER_ALIAS_CONFIG"/>
         /// </summary>
         public static Java.Lang.String SOURCE_CLUSTER_ALIAS_CONFIG { get { if (!_SOURCE_CLUSTER_ALIAS_CONFIGReady) { _SOURCE_CLUSTER_ALIAS_CONFIGContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "SOURCE_CLUSTER_ALIAS_CONFIG"); _SOURCE_CLUSTER_ALIAS_CONFIGReady = true; } return _SOURCE_CLUSTER_ALIAS_CONFIGContent; } }
         private static Java.Lang.String _SOURCE_CLUSTER_ALIAS_CONFIGContent = default;

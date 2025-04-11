@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common.Record
 {
     #region MultiRecordsSend declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/record/MultiRecordsSend.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/MultiRecordsSend.html"/>
     /// </summary>
     public partial class MultiRecordsSend : MASES.JCOBridge.C2JBridge.JVMBridgeBase<MultiRecordsSend>
     {
@@ -91,7 +91,7 @@ namespace Org.Apache.Kafka.Common.Record
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/record/MultiRecordsSend.html#completed--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/MultiRecordsSend.html#completed--"/>
         /// </summary>
         /// <returns><see cref="bool"/></returns>
         public bool Completed()
@@ -99,7 +99,7 @@ namespace Org.Apache.Kafka.Common.Record
             return IExecuteWithSignature<bool>("completed", "()Z");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/record/MultiRecordsSend.html#size--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/MultiRecordsSend.html#size--"/>
         /// </summary>
         /// <returns><see cref="long"/></returns>
         public long Size()

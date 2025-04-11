@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Streams
 {
     #region LagInfo declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.0/org/apache/kafka/streams/LagInfo.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/LagInfo.html"/>
     /// </summary>
     public partial class LagInfo : MASES.JCOBridge.C2JBridge.JVMBridgeBase<LagInfo>
     {
@@ -91,7 +91,7 @@ namespace Org.Apache.Kafka.Streams
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.0/org/apache/kafka/streams/LagInfo.html#currentOffsetPosition--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/LagInfo.html#currentOffsetPosition--"/>
         /// </summary>
         /// <returns><see cref="long"/></returns>
         public long CurrentOffsetPosition()
@@ -99,7 +99,7 @@ namespace Org.Apache.Kafka.Streams
             return IExecuteWithSignature<long>("currentOffsetPosition", "()J");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.0/org/apache/kafka/streams/LagInfo.html#endOffsetPosition--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/LagInfo.html#endOffsetPosition--"/>
         /// </summary>
         /// <returns><see cref="long"/></returns>
         public long EndOffsetPosition()
@@ -107,7 +107,7 @@ namespace Org.Apache.Kafka.Streams
             return IExecuteWithSignature<long>("endOffsetPosition", "()J");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.0/org/apache/kafka/streams/LagInfo.html#offsetLag--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/LagInfo.html#offsetLag--"/>
         /// </summary>
         /// <returns><see cref="long"/></returns>
         public long OffsetLag()

@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common.Errors
 {
     #region CorruptRecordException declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/errors/CorruptRecordException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/errors/CorruptRecordException.html"/>
     /// </summary>
     public partial class CorruptRecordException : Org.Apache.Kafka.Common.Errors.RetriableException
     {

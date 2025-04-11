@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Connect.Json
 {
     #region JsonSerializer declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-json/3.9.0/org/apache/kafka/connect/json/JsonSerializer.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-json/4.0.0/org/apache/kafka/connect/json/JsonSerializer.html"/>
     /// </summary>
     public partial class JsonSerializer : MASES.JCOBridge.C2JBridge.JVMBridgeBase<JsonSerializer>
     {
@@ -95,7 +95,7 @@ namespace Org.Apache.Kafka.Connect.Json
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-json/3.9.0/org/apache/kafka/connect/json/JsonSerializer.html#serialize-java.lang.String-java.lang.Object-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-json/4.0.0/org/apache/kafka/connect/json/JsonSerializer.html#serialize-java.lang.String-java.lang.Object-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="object"/></param>

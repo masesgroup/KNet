@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Connect.Converters
 {
     #region IntegerConverter declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.9.0/org/apache/kafka/connect/converters/IntegerConverter.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.0.0/org/apache/kafka/connect/converters/IntegerConverter.html"/>
     /// </summary>
     public partial class IntegerConverter : MASES.JCOBridge.C2JBridge.JVMBridgeBase<IntegerConverter>
     {

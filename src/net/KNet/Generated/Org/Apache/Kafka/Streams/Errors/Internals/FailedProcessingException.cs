@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Streams.Errors.Internals
 {
     #region FailedProcessingException declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.0/org/apache/kafka/streams/errors/internals/FailedProcessingException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/errors/internals/FailedProcessingException.html"/>
     /// </summary>
     public partial class FailedProcessingException : Org.Apache.Kafka.Streams.Errors.StreamsException
     {

@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
 {
     #region WrappedFixedKeyProcessorSupplier declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.0/org/apache/kafka/streams/processor/api/WrappedFixedKeyProcessorSupplier.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/api/WrappedFixedKeyProcessorSupplier.html"/>
     /// </summary>
     public partial class WrappedFixedKeyProcessorSupplier : MASES.JCOBridge.C2JBridge.JVMBridgeBase<WrappedFixedKeyProcessorSupplier>
     {
@@ -74,7 +74,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
 
     #region WrappedFixedKeyProcessorSupplier<KIn, VIn, VOut> declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.0/org/apache/kafka/streams/processor/api/WrappedFixedKeyProcessorSupplier.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/api/WrappedFixedKeyProcessorSupplier.html"/>
     /// </summary>
     /// <typeparam name="KIn"></typeparam>
     /// <typeparam name="VIn"></typeparam>

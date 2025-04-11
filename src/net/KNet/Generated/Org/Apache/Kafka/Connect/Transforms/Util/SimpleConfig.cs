@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Connect.Transforms.Util
 {
     #region SimpleConfig declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.9.0/org/apache/kafka/connect/transforms/util/SimpleConfig.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.0.0/org/apache/kafka/connect/transforms/util/SimpleConfig.html"/>
     /// </summary>
     public partial class SimpleConfig : Org.Apache.Kafka.Common.Config.AbstractConfig
     {
@@ -75,7 +75,7 @@ namespace Org.Apache.Kafka.Connect.Transforms.Util
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.9.0/org/apache/kafka/connect/transforms/util/SimpleConfig.html#org.apache.kafka.connect.transforms.util.SimpleConfig(org.apache.kafka.common.config.ConfigDef,java.util.Map)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.0.0/org/apache/kafka/connect/transforms/util/SimpleConfig.html#org.apache.kafka.connect.transforms.util.SimpleConfig(org.apache.kafka.common.config.ConfigDef,java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Config.ConfigDef"/></param>
         /// <param name="arg1"><see cref="Java.Util.Map"/></param>

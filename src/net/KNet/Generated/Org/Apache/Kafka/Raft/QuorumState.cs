@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Raft
 {
     #region QuorumState declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.0/org/apache/kafka/raft/QuorumState.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumState.html"/>
     /// </summary>
     public partial class QuorumState : MASES.JCOBridge.C2JBridge.JVMBridgeBase<QuorumState>
     {
@@ -91,7 +91,7 @@ namespace Org.Apache.Kafka.Raft
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.0/org/apache/kafka/raft/QuorumState.html#maybeLeaderState--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumState.html#maybeLeaderState--"/>
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <returns><see cref="Java.Util.Optional"/></returns>
@@ -100,7 +100,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<Java.Util.Optional<Org.Apache.Kafka.Raft.LeaderState<T>>>("maybeLeaderState", "()Ljava/util/Optional;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.0/org/apache/kafka/raft/QuorumState.html#leaderStateOrThrow--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumState.html#leaderStateOrThrow--"/>
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <returns><see cref="Org.Apache.Kafka.Raft.LeaderState"/></returns>
@@ -109,7 +109,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<Org.Apache.Kafka.Raft.LeaderState<T>>("leaderStateOrThrow", "()Lorg/apache/kafka/raft/LeaderState;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.0/org/apache/kafka/raft/QuorumState.html#canGrantVote-org.apache.kafka.raft.ReplicaKey-boolean-boolean-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumState.html#canGrantVote-org.apache.kafka.raft.ReplicaKey-boolean-boolean-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Raft.ReplicaKey"/></param>
         /// <param name="arg1"><see cref="bool"/></param>
@@ -120,7 +120,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<bool>("canGrantVote", "(Lorg/apache/kafka/raft/ReplicaKey;ZZ)Z", arg0, arg1, arg2);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.0/org/apache/kafka/raft/QuorumState.html#hasLeader--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumState.html#hasLeader--"/>
         /// </summary>
         /// <returns><see cref="bool"/></returns>
         public bool HasLeader()
@@ -128,7 +128,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<bool>("hasLeader", "()Z");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.0/org/apache/kafka/raft/QuorumState.html#hasRemoteLeader--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumState.html#hasRemoteLeader--"/>
         /// </summary>
         /// <returns><see cref="bool"/></returns>
         public bool HasRemoteLeader()
@@ -136,7 +136,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<bool>("hasRemoteLeader", "()Z");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.0/org/apache/kafka/raft/QuorumState.html#isCandidate--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumState.html#isCandidate--"/>
         /// </summary>
         /// <returns><see cref="bool"/></returns>
         public bool IsCandidate()
@@ -144,7 +144,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<bool>("isCandidate", "()Z");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.0/org/apache/kafka/raft/QuorumState.html#isFollower--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumState.html#isFollower--"/>
         /// </summary>
         /// <returns><see cref="bool"/></returns>
         public bool IsFollower()
@@ -152,7 +152,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<bool>("isFollower", "()Z");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.0/org/apache/kafka/raft/QuorumState.html#isLeader--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumState.html#isLeader--"/>
         /// </summary>
         /// <returns><see cref="bool"/></returns>
         public bool IsLeader()
@@ -160,7 +160,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<bool>("isLeader", "()Z");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.0/org/apache/kafka/raft/QuorumState.html#isNomineeState--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumState.html#isNomineeState--"/>
         /// </summary>
         /// <returns><see cref="bool"/></returns>
         public bool IsNomineeState()
@@ -168,7 +168,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<bool>("isNomineeState", "()Z");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.0/org/apache/kafka/raft/QuorumState.html#isObserver--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumState.html#isObserver--"/>
         /// </summary>
         /// <returns><see cref="bool"/></returns>
         public bool IsObserver()
@@ -176,7 +176,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<bool>("isObserver", "()Z");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.0/org/apache/kafka/raft/QuorumState.html#isOnlyVoter--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumState.html#isOnlyVoter--"/>
         /// </summary>
         /// <returns><see cref="bool"/></returns>
         public bool IsOnlyVoter()
@@ -184,7 +184,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<bool>("isOnlyVoter", "()Z");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.0/org/apache/kafka/raft/QuorumState.html#isProspective--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumState.html#isProspective--"/>
         /// </summary>
         /// <returns><see cref="bool"/></returns>
         public bool IsProspective()
@@ -192,7 +192,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<bool>("isProspective", "()Z");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.0/org/apache/kafka/raft/QuorumState.html#isProspectiveAndVoted--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumState.html#isProspectiveAndVoted--"/>
         /// </summary>
         /// <returns><see cref="bool"/></returns>
         public bool IsProspectiveAndVoted()
@@ -200,7 +200,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<bool>("isProspectiveAndVoted", "()Z");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.0/org/apache/kafka/raft/QuorumState.html#isProspectiveNotVoted--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumState.html#isProspectiveNotVoted--"/>
         /// </summary>
         /// <returns><see cref="bool"/></returns>
         public bool IsProspectiveNotVoted()
@@ -208,7 +208,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<bool>("isProspectiveNotVoted", "()Z");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.0/org/apache/kafka/raft/QuorumState.html#isResigned--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumState.html#isResigned--"/>
         /// </summary>
         /// <returns><see cref="bool"/></returns>
         public bool IsResigned()
@@ -216,7 +216,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<bool>("isResigned", "()Z");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.0/org/apache/kafka/raft/QuorumState.html#isUnattached--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumState.html#isUnattached--"/>
         /// </summary>
         /// <returns><see cref="bool"/></returns>
         public bool IsUnattached()
@@ -224,7 +224,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<bool>("isUnattached", "()Z");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.0/org/apache/kafka/raft/QuorumState.html#isUnattachedAndVoted--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumState.html#isUnattachedAndVoted--"/>
         /// </summary>
         /// <returns><see cref="bool"/></returns>
         public bool IsUnattachedAndVoted()
@@ -232,7 +232,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<bool>("isUnattachedAndVoted", "()Z");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.0/org/apache/kafka/raft/QuorumState.html#isUnattachedNotVoted--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumState.html#isUnattachedNotVoted--"/>
         /// </summary>
         /// <returns><see cref="bool"/></returns>
         public bool IsUnattachedNotVoted()
@@ -240,7 +240,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<bool>("isUnattachedNotVoted", "()Z");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.0/org/apache/kafka/raft/QuorumState.html#isVoter--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumState.html#isVoter--"/>
         /// </summary>
         /// <returns><see cref="bool"/></returns>
         public bool IsVoter()
@@ -248,7 +248,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<bool>("isVoter", "()Z");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.0/org/apache/kafka/raft/QuorumState.html#isVoter-org.apache.kafka.raft.ReplicaKey-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumState.html#isVoter-org.apache.kafka.raft.ReplicaKey-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Raft.ReplicaKey"/></param>
         /// <returns><see cref="bool"/></returns>
@@ -257,7 +257,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<bool>("isVoter", "(Lorg/apache/kafka/raft/ReplicaKey;)Z", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.0/org/apache/kafka/raft/QuorumState.html#epoch--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumState.html#epoch--"/>
         /// </summary>
         /// <returns><see cref="int"/></returns>
         public int Epoch()
@@ -265,7 +265,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<int>("epoch", "()I");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.0/org/apache/kafka/raft/QuorumState.html#leaderIdOrSentinel--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumState.html#leaderIdOrSentinel--"/>
         /// </summary>
         /// <returns><see cref="int"/></returns>
         public int LeaderIdOrSentinel()
@@ -273,7 +273,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<int>("leaderIdOrSentinel", "()I");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.0/org/apache/kafka/raft/QuorumState.html#localIdOrSentinel--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumState.html#localIdOrSentinel--"/>
         /// </summary>
         /// <returns><see cref="int"/></returns>
         public int LocalIdOrSentinel()
@@ -281,7 +281,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<int>("localIdOrSentinel", "()I");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.0/org/apache/kafka/raft/QuorumState.html#localIdOrThrow--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumState.html#localIdOrThrow--"/>
         /// </summary>
         /// <returns><see cref="int"/></returns>
         public int LocalIdOrThrow()
@@ -289,7 +289,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<int>("localIdOrThrow", "()I");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.0/org/apache/kafka/raft/QuorumState.html#highWatermark--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumState.html#highWatermark--"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Optional"/></returns>
         public Java.Util.Optional<Org.Apache.Kafka.Raft.LogOffsetMetadata> HighWatermark()
@@ -297,7 +297,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<Java.Util.Optional<Org.Apache.Kafka.Raft.LogOffsetMetadata>>("highWatermark", "()Ljava/util/Optional;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.0/org/apache/kafka/raft/QuorumState.html#maybeProspectiveState--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumState.html#maybeProspectiveState--"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Optional"/></returns>
         public Java.Util.Optional<Org.Apache.Kafka.Raft.ProspectiveState> MaybeProspectiveState()
@@ -305,7 +305,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<Java.Util.Optional<Org.Apache.Kafka.Raft.ProspectiveState>>("maybeProspectiveState", "()Ljava/util/Optional;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.0/org/apache/kafka/raft/QuorumState.html#votedKey--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumState.html#votedKey--"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Optional"/></returns>
         public Java.Util.Optional<Org.Apache.Kafka.Raft.ReplicaKey> VotedKey()
@@ -313,7 +313,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<Java.Util.Optional<Org.Apache.Kafka.Raft.ReplicaKey>>("votedKey", "()Ljava/util/Optional;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.0/org/apache/kafka/raft/QuorumState.html#maybeUnattachedState--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumState.html#maybeUnattachedState--"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Optional"/></returns>
         public Java.Util.Optional<Org.Apache.Kafka.Raft.UnattachedState> MaybeUnattachedState()
@@ -321,7 +321,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<Java.Util.Optional<Org.Apache.Kafka.Raft.UnattachedState>>("maybeUnattachedState", "()Ljava/util/Optional;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.0/org/apache/kafka/raft/QuorumState.html#leaderId--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumState.html#leaderId--"/>
         /// </summary>
         /// <returns><see cref="Java.Util.OptionalInt"/></returns>
         public Java.Util.OptionalInt LeaderId()
@@ -329,7 +329,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<Java.Util.OptionalInt>("leaderId", "()Ljava/util/OptionalInt;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.0/org/apache/kafka/raft/QuorumState.html#localId--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumState.html#localId--"/>
         /// </summary>
         /// <returns><see cref="Java.Util.OptionalInt"/></returns>
         public Java.Util.OptionalInt LocalId()
@@ -337,7 +337,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<Java.Util.OptionalInt>("localId", "()Ljava/util/OptionalInt;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.0/org/apache/kafka/raft/QuorumState.html#localDirectoryId--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumState.html#localDirectoryId--"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.Uuid"/></returns>
         public Org.Apache.Kafka.Common.Uuid LocalDirectoryId()
@@ -345,7 +345,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<Org.Apache.Kafka.Common.Uuid>("localDirectoryId", "()Lorg/apache/kafka/common/Uuid;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.0/org/apache/kafka/raft/QuorumState.html#candidateStateOrThrow--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumState.html#candidateStateOrThrow--"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Raft.CandidateState"/></returns>
         public Org.Apache.Kafka.Raft.CandidateState CandidateStateOrThrow()
@@ -353,7 +353,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<Org.Apache.Kafka.Raft.CandidateState>("candidateStateOrThrow", "()Lorg/apache/kafka/raft/CandidateState;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.0/org/apache/kafka/raft/QuorumState.html#leaderEndpoints--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumState.html#leaderEndpoints--"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Raft.Endpoints"/></returns>
         public Org.Apache.Kafka.Raft.Endpoints LeaderEndpoints()
@@ -361,7 +361,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<Org.Apache.Kafka.Raft.Endpoints>("leaderEndpoints", "()Lorg/apache/kafka/raft/Endpoints;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.0/org/apache/kafka/raft/QuorumState.html#followerStateOrThrow--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumState.html#followerStateOrThrow--"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Raft.FollowerState"/></returns>
         public Org.Apache.Kafka.Raft.FollowerState FollowerStateOrThrow()
@@ -369,7 +369,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<Org.Apache.Kafka.Raft.FollowerState>("followerStateOrThrow", "()Lorg/apache/kafka/raft/FollowerState;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.0/org/apache/kafka/raft/QuorumState.html#leaderAndEpoch--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumState.html#leaderAndEpoch--"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Raft.LeaderAndEpoch"/></returns>
         public Org.Apache.Kafka.Raft.LeaderAndEpoch LeaderAndEpoch()
@@ -377,7 +377,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<Org.Apache.Kafka.Raft.LeaderAndEpoch>("leaderAndEpoch", "()Lorg/apache/kafka/raft/LeaderAndEpoch;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.0/org/apache/kafka/raft/QuorumState.html#prospectiveStateOrThrow--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumState.html#prospectiveStateOrThrow--"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Raft.ProspectiveState"/></returns>
         public Org.Apache.Kafka.Raft.ProspectiveState ProspectiveStateOrThrow()
@@ -385,7 +385,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<Org.Apache.Kafka.Raft.ProspectiveState>("prospectiveStateOrThrow", "()Lorg/apache/kafka/raft/ProspectiveState;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.0/org/apache/kafka/raft/QuorumState.html#localReplicaKeyOrThrow--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumState.html#localReplicaKeyOrThrow--"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Raft.ReplicaKey"/></returns>
         public Org.Apache.Kafka.Raft.ReplicaKey LocalReplicaKeyOrThrow()
@@ -393,7 +393,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<Org.Apache.Kafka.Raft.ReplicaKey>("localReplicaKeyOrThrow", "()Lorg/apache/kafka/raft/ReplicaKey;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.0/org/apache/kafka/raft/QuorumState.html#resignedStateOrThrow--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumState.html#resignedStateOrThrow--"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Raft.ResignedState"/></returns>
         public Org.Apache.Kafka.Raft.ResignedState ResignedStateOrThrow()
@@ -401,7 +401,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<Org.Apache.Kafka.Raft.ResignedState>("resignedStateOrThrow", "()Lorg/apache/kafka/raft/ResignedState;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.0/org/apache/kafka/raft/QuorumState.html#unattachedStateOrThrow--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumState.html#unattachedStateOrThrow--"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Raft.UnattachedState"/></returns>
         public Org.Apache.Kafka.Raft.UnattachedState UnattachedStateOrThrow()
@@ -409,7 +409,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<Org.Apache.Kafka.Raft.UnattachedState>("unattachedStateOrThrow", "()Lorg/apache/kafka/raft/UnattachedState;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.0/org/apache/kafka/raft/QuorumState.html#localVoterNodeOrThrow--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumState.html#localVoterNodeOrThrow--"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Raft.VoterSet.VoterNode"/></returns>
         public Org.Apache.Kafka.Raft.VoterSet.VoterNode LocalVoterNodeOrThrow()
@@ -417,7 +417,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<Org.Apache.Kafka.Raft.VoterSet.VoterNode>("localVoterNodeOrThrow", "()Lorg/apache/kafka/raft/VoterSet$VoterNode;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.0/org/apache/kafka/raft/QuorumState.html#initialize-org.apache.kafka.raft.OffsetAndEpoch-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumState.html#initialize-org.apache.kafka.raft.OffsetAndEpoch-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Raft.OffsetAndEpoch"/></param>
         /// <exception cref="Java.Lang.IllegalStateException"/>
@@ -426,7 +426,7 @@ namespace Org.Apache.Kafka.Raft
             IExecuteWithSignature("initialize", "(Lorg/apache/kafka/raft/OffsetAndEpoch;)V", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.0/org/apache/kafka/raft/QuorumState.html#prospectiveAddVotedState-int-org.apache.kafka.raft.ReplicaKey-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumState.html#prospectiveAddVotedState-int-org.apache.kafka.raft.ReplicaKey-"/>
         /// </summary>
         /// <param name="arg0"><see cref="int"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Raft.ReplicaKey"/></param>
@@ -435,14 +435,14 @@ namespace Org.Apache.Kafka.Raft
             IExecuteWithSignature("prospectiveAddVotedState", "(ILorg/apache/kafka/raft/ReplicaKey;)V", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.0/org/apache/kafka/raft/QuorumState.html#transitionToCandidate--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumState.html#transitionToCandidate--"/>
         /// </summary>
         public void TransitionToCandidate()
         {
             IExecuteWithSignature("transitionToCandidate", "()V");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.0/org/apache/kafka/raft/QuorumState.html#transitionToFollower-int-int-org.apache.kafka.raft.Endpoints-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumState.html#transitionToFollower-int-int-org.apache.kafka.raft.Endpoints-"/>
         /// </summary>
         /// <param name="arg0"><see cref="int"/></param>
         /// <param name="arg1"><see cref="int"/></param>
@@ -452,14 +452,14 @@ namespace Org.Apache.Kafka.Raft
             IExecuteWithSignature("transitionToFollower", "(IILorg/apache/kafka/raft/Endpoints;)V", arg0, arg1, arg2);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.0/org/apache/kafka/raft/QuorumState.html#transitionToProspective--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumState.html#transitionToProspective--"/>
         /// </summary>
         public void TransitionToProspective()
         {
             IExecuteWithSignature("transitionToProspective", "()V");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.0/org/apache/kafka/raft/QuorumState.html#transitionToResigned-java.util.List-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumState.html#transitionToResigned-java.util.List-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.List"/></param>
         public void TransitionToResigned(Java.Util.List<Org.Apache.Kafka.Raft.ReplicaKey> arg0)
@@ -467,7 +467,7 @@ namespace Org.Apache.Kafka.Raft
             IExecuteWithSignature("transitionToResigned", "(Ljava/util/List;)V", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.0/org/apache/kafka/raft/QuorumState.html#transitionToUnattached-int-java.util.OptionalInt-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumState.html#transitionToUnattached-int-java.util.OptionalInt-"/>
         /// </summary>
         /// <param name="arg0"><see cref="int"/></param>
         /// <param name="arg1"><see cref="Java.Util.OptionalInt"/></param>
@@ -476,7 +476,7 @@ namespace Org.Apache.Kafka.Raft
             IExecuteWithSignature("transitionToUnattached", "(ILjava/util/OptionalInt;)V", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.0/org/apache/kafka/raft/QuorumState.html#unattachedAddVotedState-int-org.apache.kafka.raft.ReplicaKey-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumState.html#unattachedAddVotedState-int-org.apache.kafka.raft.ReplicaKey-"/>
         /// </summary>
         /// <param name="arg0"><see cref="int"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Raft.ReplicaKey"/></param>

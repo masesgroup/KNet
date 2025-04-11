@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Deferred
 {
     #region DeferredEvent declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/3.9.0/org/apache/kafka/deferred/DeferredEvent.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.0.0/org/apache/kafka/deferred/DeferredEvent.html"/>
     /// </summary>
     public partial class DeferredEvent : MASES.JCOBridge.C2JBridge.JVMBridgeBase<DeferredEvent>
     {
@@ -111,7 +111,7 @@ namespace Org.Apache.Kafka.Deferred
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/3.9.0/org/apache/kafka/deferred/DeferredEvent.html#complete-java.lang.Throwable-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.0.0/org/apache/kafka/deferred/DeferredEvent.html#complete-java.lang.Throwable-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.Throwable"/></param>
         public void Complete(MASES.JCOBridge.C2JBridge.JVMBridgeException arg0)

@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common.Errors
 {
     #region InvalidPidMappingException declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/errors/InvalidPidMappingException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/errors/InvalidPidMappingException.html"/>
     /// </summary>
     public partial class InvalidPidMappingException : Org.Apache.Kafka.Common.Errors.ApiException
     {

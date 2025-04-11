@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Connect.Sink
 {
     #region SinkConnectorContext declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.0/org/apache/kafka/connect/sink/SinkConnectorContext.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.0.0/org/apache/kafka/connect/sink/SinkConnectorContext.html"/>
     /// </summary>
     public partial class SinkConnectorContext : Org.Apache.Kafka.Connect.Connector.ConnectorContext
     {

@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
 {
     #region InternalFixedKeyRecordFactory declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.0/org/apache/kafka/streams/processor/api/InternalFixedKeyRecordFactory.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/api/InternalFixedKeyRecordFactory.html"/>
     /// </summary>
     public partial class InternalFixedKeyRecordFactory : MASES.JCOBridge.C2JBridge.JVMBridgeBase<InternalFixedKeyRecordFactory>
     {
@@ -87,7 +87,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.0/org/apache/kafka/streams/processor/api/InternalFixedKeyRecordFactory.html#create-org.apache.kafka.streams.processor.api.Record-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/api/InternalFixedKeyRecordFactory.html#create-org.apache.kafka.streams.processor.api.Record-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Processor.Api.Record"/></param>
         /// <typeparam name="KIn"></typeparam>

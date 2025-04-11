@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common.Config
 {
     #region TopicConfig declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/config/TopicConfig.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/TopicConfig.html"/>
     /// </summary>
     public partial class TopicConfig : MASES.JCOBridge.C2JBridge.JVMBridgeBase<TopicConfig>
     {
@@ -83,385 +83,385 @@ namespace Org.Apache.Kafka.Common.Config
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/config/TopicConfig.html#CLEANUP_POLICY_COMPACT"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/TopicConfig.html#CLEANUP_POLICY_COMPACT"/>
         /// </summary>
         public static Java.Lang.String CLEANUP_POLICY_COMPACT { get { if (!_CLEANUP_POLICY_COMPACTReady) { _CLEANUP_POLICY_COMPACTContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "CLEANUP_POLICY_COMPACT"); _CLEANUP_POLICY_COMPACTReady = true; } return _CLEANUP_POLICY_COMPACTContent; } }
         private static Java.Lang.String _CLEANUP_POLICY_COMPACTContent = default;
         private static bool _CLEANUP_POLICY_COMPACTReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/config/TopicConfig.html#CLEANUP_POLICY_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/TopicConfig.html#CLEANUP_POLICY_CONFIG"/>
         /// </summary>
         public static Java.Lang.String CLEANUP_POLICY_CONFIG { get { if (!_CLEANUP_POLICY_CONFIGReady) { _CLEANUP_POLICY_CONFIGContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "CLEANUP_POLICY_CONFIG"); _CLEANUP_POLICY_CONFIGReady = true; } return _CLEANUP_POLICY_CONFIGContent; } }
         private static Java.Lang.String _CLEANUP_POLICY_CONFIGContent = default;
         private static bool _CLEANUP_POLICY_CONFIGReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/config/TopicConfig.html#CLEANUP_POLICY_DELETE"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/TopicConfig.html#CLEANUP_POLICY_DELETE"/>
         /// </summary>
         public static Java.Lang.String CLEANUP_POLICY_DELETE { get { if (!_CLEANUP_POLICY_DELETEReady) { _CLEANUP_POLICY_DELETEContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "CLEANUP_POLICY_DELETE"); _CLEANUP_POLICY_DELETEReady = true; } return _CLEANUP_POLICY_DELETEContent; } }
         private static Java.Lang.String _CLEANUP_POLICY_DELETEContent = default;
         private static bool _CLEANUP_POLICY_DELETEReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/config/TopicConfig.html#CLEANUP_POLICY_DOC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/TopicConfig.html#CLEANUP_POLICY_DOC"/>
         /// </summary>
         public static Java.Lang.String CLEANUP_POLICY_DOC { get { if (!_CLEANUP_POLICY_DOCReady) { _CLEANUP_POLICY_DOCContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "CLEANUP_POLICY_DOC"); _CLEANUP_POLICY_DOCReady = true; } return _CLEANUP_POLICY_DOCContent; } }
         private static Java.Lang.String _CLEANUP_POLICY_DOCContent = default;
         private static bool _CLEANUP_POLICY_DOCReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/config/TopicConfig.html#COMPRESSION_GZIP_LEVEL_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/TopicConfig.html#COMPRESSION_GZIP_LEVEL_CONFIG"/>
         /// </summary>
         public static Java.Lang.String COMPRESSION_GZIP_LEVEL_CONFIG { get { if (!_COMPRESSION_GZIP_LEVEL_CONFIGReady) { _COMPRESSION_GZIP_LEVEL_CONFIGContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "COMPRESSION_GZIP_LEVEL_CONFIG"); _COMPRESSION_GZIP_LEVEL_CONFIGReady = true; } return _COMPRESSION_GZIP_LEVEL_CONFIGContent; } }
         private static Java.Lang.String _COMPRESSION_GZIP_LEVEL_CONFIGContent = default;
         private static bool _COMPRESSION_GZIP_LEVEL_CONFIGReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/config/TopicConfig.html#COMPRESSION_GZIP_LEVEL_DOC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/TopicConfig.html#COMPRESSION_GZIP_LEVEL_DOC"/>
         /// </summary>
         public static Java.Lang.String COMPRESSION_GZIP_LEVEL_DOC { get { if (!_COMPRESSION_GZIP_LEVEL_DOCReady) { _COMPRESSION_GZIP_LEVEL_DOCContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "COMPRESSION_GZIP_LEVEL_DOC"); _COMPRESSION_GZIP_LEVEL_DOCReady = true; } return _COMPRESSION_GZIP_LEVEL_DOCContent; } }
         private static Java.Lang.String _COMPRESSION_GZIP_LEVEL_DOCContent = default;
         private static bool _COMPRESSION_GZIP_LEVEL_DOCReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/config/TopicConfig.html#COMPRESSION_LZ4_LEVEL_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/TopicConfig.html#COMPRESSION_LZ4_LEVEL_CONFIG"/>
         /// </summary>
         public static Java.Lang.String COMPRESSION_LZ4_LEVEL_CONFIG { get { if (!_COMPRESSION_LZ4_LEVEL_CONFIGReady) { _COMPRESSION_LZ4_LEVEL_CONFIGContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "COMPRESSION_LZ4_LEVEL_CONFIG"); _COMPRESSION_LZ4_LEVEL_CONFIGReady = true; } return _COMPRESSION_LZ4_LEVEL_CONFIGContent; } }
         private static Java.Lang.String _COMPRESSION_LZ4_LEVEL_CONFIGContent = default;
         private static bool _COMPRESSION_LZ4_LEVEL_CONFIGReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/config/TopicConfig.html#COMPRESSION_LZ4_LEVEL_DOC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/TopicConfig.html#COMPRESSION_LZ4_LEVEL_DOC"/>
         /// </summary>
         public static Java.Lang.String COMPRESSION_LZ4_LEVEL_DOC { get { if (!_COMPRESSION_LZ4_LEVEL_DOCReady) { _COMPRESSION_LZ4_LEVEL_DOCContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "COMPRESSION_LZ4_LEVEL_DOC"); _COMPRESSION_LZ4_LEVEL_DOCReady = true; } return _COMPRESSION_LZ4_LEVEL_DOCContent; } }
         private static Java.Lang.String _COMPRESSION_LZ4_LEVEL_DOCContent = default;
         private static bool _COMPRESSION_LZ4_LEVEL_DOCReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/config/TopicConfig.html#COMPRESSION_TYPE_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/TopicConfig.html#COMPRESSION_TYPE_CONFIG"/>
         /// </summary>
         public static Java.Lang.String COMPRESSION_TYPE_CONFIG { get { if (!_COMPRESSION_TYPE_CONFIGReady) { _COMPRESSION_TYPE_CONFIGContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "COMPRESSION_TYPE_CONFIG"); _COMPRESSION_TYPE_CONFIGReady = true; } return _COMPRESSION_TYPE_CONFIGContent; } }
         private static Java.Lang.String _COMPRESSION_TYPE_CONFIGContent = default;
         private static bool _COMPRESSION_TYPE_CONFIGReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/config/TopicConfig.html#COMPRESSION_TYPE_DOC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/TopicConfig.html#COMPRESSION_TYPE_DOC"/>
         /// </summary>
         public static Java.Lang.String COMPRESSION_TYPE_DOC { get { if (!_COMPRESSION_TYPE_DOCReady) { _COMPRESSION_TYPE_DOCContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "COMPRESSION_TYPE_DOC"); _COMPRESSION_TYPE_DOCReady = true; } return _COMPRESSION_TYPE_DOCContent; } }
         private static Java.Lang.String _COMPRESSION_TYPE_DOCContent = default;
         private static bool _COMPRESSION_TYPE_DOCReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/config/TopicConfig.html#COMPRESSION_ZSTD_LEVEL_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/TopicConfig.html#COMPRESSION_ZSTD_LEVEL_CONFIG"/>
         /// </summary>
         public static Java.Lang.String COMPRESSION_ZSTD_LEVEL_CONFIG { get { if (!_COMPRESSION_ZSTD_LEVEL_CONFIGReady) { _COMPRESSION_ZSTD_LEVEL_CONFIGContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "COMPRESSION_ZSTD_LEVEL_CONFIG"); _COMPRESSION_ZSTD_LEVEL_CONFIGReady = true; } return _COMPRESSION_ZSTD_LEVEL_CONFIGContent; } }
         private static Java.Lang.String _COMPRESSION_ZSTD_LEVEL_CONFIGContent = default;
         private static bool _COMPRESSION_ZSTD_LEVEL_CONFIGReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/config/TopicConfig.html#COMPRESSION_ZSTD_LEVEL_DOC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/TopicConfig.html#COMPRESSION_ZSTD_LEVEL_DOC"/>
         /// </summary>
         public static Java.Lang.String COMPRESSION_ZSTD_LEVEL_DOC { get { if (!_COMPRESSION_ZSTD_LEVEL_DOCReady) { _COMPRESSION_ZSTD_LEVEL_DOCContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "COMPRESSION_ZSTD_LEVEL_DOC"); _COMPRESSION_ZSTD_LEVEL_DOCReady = true; } return _COMPRESSION_ZSTD_LEVEL_DOCContent; } }
         private static Java.Lang.String _COMPRESSION_ZSTD_LEVEL_DOCContent = default;
         private static bool _COMPRESSION_ZSTD_LEVEL_DOCReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/config/TopicConfig.html#DELETE_RETENTION_MS_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/TopicConfig.html#DELETE_RETENTION_MS_CONFIG"/>
         /// </summary>
         public static Java.Lang.String DELETE_RETENTION_MS_CONFIG { get { if (!_DELETE_RETENTION_MS_CONFIGReady) { _DELETE_RETENTION_MS_CONFIGContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "DELETE_RETENTION_MS_CONFIG"); _DELETE_RETENTION_MS_CONFIGReady = true; } return _DELETE_RETENTION_MS_CONFIGContent; } }
         private static Java.Lang.String _DELETE_RETENTION_MS_CONFIGContent = default;
         private static bool _DELETE_RETENTION_MS_CONFIGReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/config/TopicConfig.html#DELETE_RETENTION_MS_DOC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/TopicConfig.html#DELETE_RETENTION_MS_DOC"/>
         /// </summary>
         public static Java.Lang.String DELETE_RETENTION_MS_DOC { get { if (!_DELETE_RETENTION_MS_DOCReady) { _DELETE_RETENTION_MS_DOCContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "DELETE_RETENTION_MS_DOC"); _DELETE_RETENTION_MS_DOCReady = true; } return _DELETE_RETENTION_MS_DOCContent; } }
         private static Java.Lang.String _DELETE_RETENTION_MS_DOCContent = default;
         private static bool _DELETE_RETENTION_MS_DOCReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/config/TopicConfig.html#FILE_DELETE_DELAY_MS_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/TopicConfig.html#FILE_DELETE_DELAY_MS_CONFIG"/>
         /// </summary>
         public static Java.Lang.String FILE_DELETE_DELAY_MS_CONFIG { get { if (!_FILE_DELETE_DELAY_MS_CONFIGReady) { _FILE_DELETE_DELAY_MS_CONFIGContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "FILE_DELETE_DELAY_MS_CONFIG"); _FILE_DELETE_DELAY_MS_CONFIGReady = true; } return _FILE_DELETE_DELAY_MS_CONFIGContent; } }
         private static Java.Lang.String _FILE_DELETE_DELAY_MS_CONFIGContent = default;
         private static bool _FILE_DELETE_DELAY_MS_CONFIGReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/config/TopicConfig.html#FILE_DELETE_DELAY_MS_DOC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/TopicConfig.html#FILE_DELETE_DELAY_MS_DOC"/>
         /// </summary>
         public static Java.Lang.String FILE_DELETE_DELAY_MS_DOC { get { if (!_FILE_DELETE_DELAY_MS_DOCReady) { _FILE_DELETE_DELAY_MS_DOCContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "FILE_DELETE_DELAY_MS_DOC"); _FILE_DELETE_DELAY_MS_DOCReady = true; } return _FILE_DELETE_DELAY_MS_DOCContent; } }
         private static Java.Lang.String _FILE_DELETE_DELAY_MS_DOCContent = default;
         private static bool _FILE_DELETE_DELAY_MS_DOCReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/config/TopicConfig.html#FLUSH_MESSAGES_INTERVAL_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/TopicConfig.html#FLUSH_MESSAGES_INTERVAL_CONFIG"/>
         /// </summary>
         public static Java.Lang.String FLUSH_MESSAGES_INTERVAL_CONFIG { get { if (!_FLUSH_MESSAGES_INTERVAL_CONFIGReady) { _FLUSH_MESSAGES_INTERVAL_CONFIGContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "FLUSH_MESSAGES_INTERVAL_CONFIG"); _FLUSH_MESSAGES_INTERVAL_CONFIGReady = true; } return _FLUSH_MESSAGES_INTERVAL_CONFIGContent; } }
         private static Java.Lang.String _FLUSH_MESSAGES_INTERVAL_CONFIGContent = default;
         private static bool _FLUSH_MESSAGES_INTERVAL_CONFIGReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/config/TopicConfig.html#FLUSH_MESSAGES_INTERVAL_DOC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/TopicConfig.html#FLUSH_MESSAGES_INTERVAL_DOC"/>
         /// </summary>
         public static Java.Lang.String FLUSH_MESSAGES_INTERVAL_DOC { get { if (!_FLUSH_MESSAGES_INTERVAL_DOCReady) { _FLUSH_MESSAGES_INTERVAL_DOCContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "FLUSH_MESSAGES_INTERVAL_DOC"); _FLUSH_MESSAGES_INTERVAL_DOCReady = true; } return _FLUSH_MESSAGES_INTERVAL_DOCContent; } }
         private static Java.Lang.String _FLUSH_MESSAGES_INTERVAL_DOCContent = default;
         private static bool _FLUSH_MESSAGES_INTERVAL_DOCReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/config/TopicConfig.html#FLUSH_MS_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/TopicConfig.html#FLUSH_MS_CONFIG"/>
         /// </summary>
         public static Java.Lang.String FLUSH_MS_CONFIG { get { if (!_FLUSH_MS_CONFIGReady) { _FLUSH_MS_CONFIGContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "FLUSH_MS_CONFIG"); _FLUSH_MS_CONFIGReady = true; } return _FLUSH_MS_CONFIGContent; } }
         private static Java.Lang.String _FLUSH_MS_CONFIGContent = default;
         private static bool _FLUSH_MS_CONFIGReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/config/TopicConfig.html#FLUSH_MS_DOC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/TopicConfig.html#FLUSH_MS_DOC"/>
         /// </summary>
         public static Java.Lang.String FLUSH_MS_DOC { get { if (!_FLUSH_MS_DOCReady) { _FLUSH_MS_DOCContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "FLUSH_MS_DOC"); _FLUSH_MS_DOCReady = true; } return _FLUSH_MS_DOCContent; } }
         private static Java.Lang.String _FLUSH_MS_DOCContent = default;
         private static bool _FLUSH_MS_DOCReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/config/TopicConfig.html#INDEX_INTERVAL_BYTES_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/TopicConfig.html#INDEX_INTERVAL_BYTES_CONFIG"/>
         /// </summary>
         public static Java.Lang.String INDEX_INTERVAL_BYTES_CONFIG { get { if (!_INDEX_INTERVAL_BYTES_CONFIGReady) { _INDEX_INTERVAL_BYTES_CONFIGContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "INDEX_INTERVAL_BYTES_CONFIG"); _INDEX_INTERVAL_BYTES_CONFIGReady = true; } return _INDEX_INTERVAL_BYTES_CONFIGContent; } }
         private static Java.Lang.String _INDEX_INTERVAL_BYTES_CONFIGContent = default;
         private static bool _INDEX_INTERVAL_BYTES_CONFIGReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/config/TopicConfig.html#INDEX_INTERVAL_BYTES_DOC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/TopicConfig.html#INDEX_INTERVAL_BYTES_DOC"/>
         /// </summary>
         public static Java.Lang.String INDEX_INTERVAL_BYTES_DOC { get { if (!_INDEX_INTERVAL_BYTES_DOCReady) { _INDEX_INTERVAL_BYTES_DOCContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "INDEX_INTERVAL_BYTES_DOC"); _INDEX_INTERVAL_BYTES_DOCReady = true; } return _INDEX_INTERVAL_BYTES_DOCContent; } }
         private static Java.Lang.String _INDEX_INTERVAL_BYTES_DOCContent = default;
         private static bool _INDEX_INTERVAL_BYTES_DOCReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/config/TopicConfig.html#LOCAL_LOG_RETENTION_BYTES_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/TopicConfig.html#LOCAL_LOG_RETENTION_BYTES_CONFIG"/>
         /// </summary>
         public static Java.Lang.String LOCAL_LOG_RETENTION_BYTES_CONFIG { get { if (!_LOCAL_LOG_RETENTION_BYTES_CONFIGReady) { _LOCAL_LOG_RETENTION_BYTES_CONFIGContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "LOCAL_LOG_RETENTION_BYTES_CONFIG"); _LOCAL_LOG_RETENTION_BYTES_CONFIGReady = true; } return _LOCAL_LOG_RETENTION_BYTES_CONFIGContent; } }
         private static Java.Lang.String _LOCAL_LOG_RETENTION_BYTES_CONFIGContent = default;
         private static bool _LOCAL_LOG_RETENTION_BYTES_CONFIGReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/config/TopicConfig.html#LOCAL_LOG_RETENTION_BYTES_DOC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/TopicConfig.html#LOCAL_LOG_RETENTION_BYTES_DOC"/>
         /// </summary>
         public static Java.Lang.String LOCAL_LOG_RETENTION_BYTES_DOC { get { if (!_LOCAL_LOG_RETENTION_BYTES_DOCReady) { _LOCAL_LOG_RETENTION_BYTES_DOCContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "LOCAL_LOG_RETENTION_BYTES_DOC"); _LOCAL_LOG_RETENTION_BYTES_DOCReady = true; } return _LOCAL_LOG_RETENTION_BYTES_DOCContent; } }
         private static Java.Lang.String _LOCAL_LOG_RETENTION_BYTES_DOCContent = default;
         private static bool _LOCAL_LOG_RETENTION_BYTES_DOCReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/config/TopicConfig.html#LOCAL_LOG_RETENTION_MS_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/TopicConfig.html#LOCAL_LOG_RETENTION_MS_CONFIG"/>
         /// </summary>
         public static Java.Lang.String LOCAL_LOG_RETENTION_MS_CONFIG { get { if (!_LOCAL_LOG_RETENTION_MS_CONFIGReady) { _LOCAL_LOG_RETENTION_MS_CONFIGContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "LOCAL_LOG_RETENTION_MS_CONFIG"); _LOCAL_LOG_RETENTION_MS_CONFIGReady = true; } return _LOCAL_LOG_RETENTION_MS_CONFIGContent; } }
         private static Java.Lang.String _LOCAL_LOG_RETENTION_MS_CONFIGContent = default;
         private static bool _LOCAL_LOG_RETENTION_MS_CONFIGReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/config/TopicConfig.html#LOCAL_LOG_RETENTION_MS_DOC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/TopicConfig.html#LOCAL_LOG_RETENTION_MS_DOC"/>
         /// </summary>
         public static Java.Lang.String LOCAL_LOG_RETENTION_MS_DOC { get { if (!_LOCAL_LOG_RETENTION_MS_DOCReady) { _LOCAL_LOG_RETENTION_MS_DOCContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "LOCAL_LOG_RETENTION_MS_DOC"); _LOCAL_LOG_RETENTION_MS_DOCReady = true; } return _LOCAL_LOG_RETENTION_MS_DOCContent; } }
         private static Java.Lang.String _LOCAL_LOG_RETENTION_MS_DOCContent = default;
         private static bool _LOCAL_LOG_RETENTION_MS_DOCReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/config/TopicConfig.html#MAX_COMPACTION_LAG_MS_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/TopicConfig.html#MAX_COMPACTION_LAG_MS_CONFIG"/>
         /// </summary>
         public static Java.Lang.String MAX_COMPACTION_LAG_MS_CONFIG { get { if (!_MAX_COMPACTION_LAG_MS_CONFIGReady) { _MAX_COMPACTION_LAG_MS_CONFIGContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "MAX_COMPACTION_LAG_MS_CONFIG"); _MAX_COMPACTION_LAG_MS_CONFIGReady = true; } return _MAX_COMPACTION_LAG_MS_CONFIGContent; } }
         private static Java.Lang.String _MAX_COMPACTION_LAG_MS_CONFIGContent = default;
         private static bool _MAX_COMPACTION_LAG_MS_CONFIGReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/config/TopicConfig.html#MAX_COMPACTION_LAG_MS_DOC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/TopicConfig.html#MAX_COMPACTION_LAG_MS_DOC"/>
         /// </summary>
         public static Java.Lang.String MAX_COMPACTION_LAG_MS_DOC { get { if (!_MAX_COMPACTION_LAG_MS_DOCReady) { _MAX_COMPACTION_LAG_MS_DOCContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "MAX_COMPACTION_LAG_MS_DOC"); _MAX_COMPACTION_LAG_MS_DOCReady = true; } return _MAX_COMPACTION_LAG_MS_DOCContent; } }
         private static Java.Lang.String _MAX_COMPACTION_LAG_MS_DOCContent = default;
         private static bool _MAX_COMPACTION_LAG_MS_DOCReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/config/TopicConfig.html#MAX_MESSAGE_BYTES_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/TopicConfig.html#MAX_MESSAGE_BYTES_CONFIG"/>
         /// </summary>
         public static Java.Lang.String MAX_MESSAGE_BYTES_CONFIG { get { if (!_MAX_MESSAGE_BYTES_CONFIGReady) { _MAX_MESSAGE_BYTES_CONFIGContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "MAX_MESSAGE_BYTES_CONFIG"); _MAX_MESSAGE_BYTES_CONFIGReady = true; } return _MAX_MESSAGE_BYTES_CONFIGContent; } }
         private static Java.Lang.String _MAX_MESSAGE_BYTES_CONFIGContent = default;
         private static bool _MAX_MESSAGE_BYTES_CONFIGReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/config/TopicConfig.html#MAX_MESSAGE_BYTES_DOC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/TopicConfig.html#MAX_MESSAGE_BYTES_DOC"/>
         /// </summary>
         public static Java.Lang.String MAX_MESSAGE_BYTES_DOC { get { if (!_MAX_MESSAGE_BYTES_DOCReady) { _MAX_MESSAGE_BYTES_DOCContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "MAX_MESSAGE_BYTES_DOC"); _MAX_MESSAGE_BYTES_DOCReady = true; } return _MAX_MESSAGE_BYTES_DOCContent; } }
         private static Java.Lang.String _MAX_MESSAGE_BYTES_DOCContent = default;
         private static bool _MAX_MESSAGE_BYTES_DOCReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/config/TopicConfig.html#MESSAGE_TIMESTAMP_AFTER_MAX_MS_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/TopicConfig.html#MESSAGE_TIMESTAMP_AFTER_MAX_MS_CONFIG"/>
         /// </summary>
         public static Java.Lang.String MESSAGE_TIMESTAMP_AFTER_MAX_MS_CONFIG { get { if (!_MESSAGE_TIMESTAMP_AFTER_MAX_MS_CONFIGReady) { _MESSAGE_TIMESTAMP_AFTER_MAX_MS_CONFIGContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "MESSAGE_TIMESTAMP_AFTER_MAX_MS_CONFIG"); _MESSAGE_TIMESTAMP_AFTER_MAX_MS_CONFIGReady = true; } return _MESSAGE_TIMESTAMP_AFTER_MAX_MS_CONFIGContent; } }
         private static Java.Lang.String _MESSAGE_TIMESTAMP_AFTER_MAX_MS_CONFIGContent = default;
         private static bool _MESSAGE_TIMESTAMP_AFTER_MAX_MS_CONFIGReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/config/TopicConfig.html#MESSAGE_TIMESTAMP_AFTER_MAX_MS_DOC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/TopicConfig.html#MESSAGE_TIMESTAMP_AFTER_MAX_MS_DOC"/>
         /// </summary>
         public static Java.Lang.String MESSAGE_TIMESTAMP_AFTER_MAX_MS_DOC { get { if (!_MESSAGE_TIMESTAMP_AFTER_MAX_MS_DOCReady) { _MESSAGE_TIMESTAMP_AFTER_MAX_MS_DOCContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "MESSAGE_TIMESTAMP_AFTER_MAX_MS_DOC"); _MESSAGE_TIMESTAMP_AFTER_MAX_MS_DOCReady = true; } return _MESSAGE_TIMESTAMP_AFTER_MAX_MS_DOCContent; } }
         private static Java.Lang.String _MESSAGE_TIMESTAMP_AFTER_MAX_MS_DOCContent = default;
         private static bool _MESSAGE_TIMESTAMP_AFTER_MAX_MS_DOCReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/config/TopicConfig.html#MESSAGE_TIMESTAMP_BEFORE_MAX_MS_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/TopicConfig.html#MESSAGE_TIMESTAMP_BEFORE_MAX_MS_CONFIG"/>
         /// </summary>
         public static Java.Lang.String MESSAGE_TIMESTAMP_BEFORE_MAX_MS_CONFIG { get { if (!_MESSAGE_TIMESTAMP_BEFORE_MAX_MS_CONFIGReady) { _MESSAGE_TIMESTAMP_BEFORE_MAX_MS_CONFIGContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "MESSAGE_TIMESTAMP_BEFORE_MAX_MS_CONFIG"); _MESSAGE_TIMESTAMP_BEFORE_MAX_MS_CONFIGReady = true; } return _MESSAGE_TIMESTAMP_BEFORE_MAX_MS_CONFIGContent; } }
         private static Java.Lang.String _MESSAGE_TIMESTAMP_BEFORE_MAX_MS_CONFIGContent = default;
         private static bool _MESSAGE_TIMESTAMP_BEFORE_MAX_MS_CONFIGReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/config/TopicConfig.html#MESSAGE_TIMESTAMP_BEFORE_MAX_MS_DOC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/TopicConfig.html#MESSAGE_TIMESTAMP_BEFORE_MAX_MS_DOC"/>
         /// </summary>
         public static Java.Lang.String MESSAGE_TIMESTAMP_BEFORE_MAX_MS_DOC { get { if (!_MESSAGE_TIMESTAMP_BEFORE_MAX_MS_DOCReady) { _MESSAGE_TIMESTAMP_BEFORE_MAX_MS_DOCContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "MESSAGE_TIMESTAMP_BEFORE_MAX_MS_DOC"); _MESSAGE_TIMESTAMP_BEFORE_MAX_MS_DOCReady = true; } return _MESSAGE_TIMESTAMP_BEFORE_MAX_MS_DOCContent; } }
         private static Java.Lang.String _MESSAGE_TIMESTAMP_BEFORE_MAX_MS_DOCContent = default;
         private static bool _MESSAGE_TIMESTAMP_BEFORE_MAX_MS_DOCReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/config/TopicConfig.html#MESSAGE_TIMESTAMP_TYPE_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/TopicConfig.html#MESSAGE_TIMESTAMP_TYPE_CONFIG"/>
         /// </summary>
         public static Java.Lang.String MESSAGE_TIMESTAMP_TYPE_CONFIG { get { if (!_MESSAGE_TIMESTAMP_TYPE_CONFIGReady) { _MESSAGE_TIMESTAMP_TYPE_CONFIGContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "MESSAGE_TIMESTAMP_TYPE_CONFIG"); _MESSAGE_TIMESTAMP_TYPE_CONFIGReady = true; } return _MESSAGE_TIMESTAMP_TYPE_CONFIGContent; } }
         private static Java.Lang.String _MESSAGE_TIMESTAMP_TYPE_CONFIGContent = default;
         private static bool _MESSAGE_TIMESTAMP_TYPE_CONFIGReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/config/TopicConfig.html#MESSAGE_TIMESTAMP_TYPE_DOC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/TopicConfig.html#MESSAGE_TIMESTAMP_TYPE_DOC"/>
         /// </summary>
         public static Java.Lang.String MESSAGE_TIMESTAMP_TYPE_DOC { get { if (!_MESSAGE_TIMESTAMP_TYPE_DOCReady) { _MESSAGE_TIMESTAMP_TYPE_DOCContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "MESSAGE_TIMESTAMP_TYPE_DOC"); _MESSAGE_TIMESTAMP_TYPE_DOCReady = true; } return _MESSAGE_TIMESTAMP_TYPE_DOCContent; } }
         private static Java.Lang.String _MESSAGE_TIMESTAMP_TYPE_DOCContent = default;
         private static bool _MESSAGE_TIMESTAMP_TYPE_DOCReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/config/TopicConfig.html#MIN_CLEANABLE_DIRTY_RATIO_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/TopicConfig.html#MIN_CLEANABLE_DIRTY_RATIO_CONFIG"/>
         /// </summary>
         public static Java.Lang.String MIN_CLEANABLE_DIRTY_RATIO_CONFIG { get { if (!_MIN_CLEANABLE_DIRTY_RATIO_CONFIGReady) { _MIN_CLEANABLE_DIRTY_RATIO_CONFIGContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "MIN_CLEANABLE_DIRTY_RATIO_CONFIG"); _MIN_CLEANABLE_DIRTY_RATIO_CONFIGReady = true; } return _MIN_CLEANABLE_DIRTY_RATIO_CONFIGContent; } }
         private static Java.Lang.String _MIN_CLEANABLE_DIRTY_RATIO_CONFIGContent = default;
         private static bool _MIN_CLEANABLE_DIRTY_RATIO_CONFIGReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/config/TopicConfig.html#MIN_CLEANABLE_DIRTY_RATIO_DOC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/TopicConfig.html#MIN_CLEANABLE_DIRTY_RATIO_DOC"/>
         /// </summary>
         public static Java.Lang.String MIN_CLEANABLE_DIRTY_RATIO_DOC { get { if (!_MIN_CLEANABLE_DIRTY_RATIO_DOCReady) { _MIN_CLEANABLE_DIRTY_RATIO_DOCContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "MIN_CLEANABLE_DIRTY_RATIO_DOC"); _MIN_CLEANABLE_DIRTY_RATIO_DOCReady = true; } return _MIN_CLEANABLE_DIRTY_RATIO_DOCContent; } }
         private static Java.Lang.String _MIN_CLEANABLE_DIRTY_RATIO_DOCContent = default;
         private static bool _MIN_CLEANABLE_DIRTY_RATIO_DOCReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/config/TopicConfig.html#MIN_COMPACTION_LAG_MS_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/TopicConfig.html#MIN_COMPACTION_LAG_MS_CONFIG"/>
         /// </summary>
         public static Java.Lang.String MIN_COMPACTION_LAG_MS_CONFIG { get { if (!_MIN_COMPACTION_LAG_MS_CONFIGReady) { _MIN_COMPACTION_LAG_MS_CONFIGContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "MIN_COMPACTION_LAG_MS_CONFIG"); _MIN_COMPACTION_LAG_MS_CONFIGReady = true; } return _MIN_COMPACTION_LAG_MS_CONFIGContent; } }
         private static Java.Lang.String _MIN_COMPACTION_LAG_MS_CONFIGContent = default;
         private static bool _MIN_COMPACTION_LAG_MS_CONFIGReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/config/TopicConfig.html#MIN_COMPACTION_LAG_MS_DOC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/TopicConfig.html#MIN_COMPACTION_LAG_MS_DOC"/>
         /// </summary>
         public static Java.Lang.String MIN_COMPACTION_LAG_MS_DOC { get { if (!_MIN_COMPACTION_LAG_MS_DOCReady) { _MIN_COMPACTION_LAG_MS_DOCContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "MIN_COMPACTION_LAG_MS_DOC"); _MIN_COMPACTION_LAG_MS_DOCReady = true; } return _MIN_COMPACTION_LAG_MS_DOCContent; } }
         private static Java.Lang.String _MIN_COMPACTION_LAG_MS_DOCContent = default;
         private static bool _MIN_COMPACTION_LAG_MS_DOCReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/config/TopicConfig.html#MIN_IN_SYNC_REPLICAS_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/TopicConfig.html#MIN_IN_SYNC_REPLICAS_CONFIG"/>
         /// </summary>
         public static Java.Lang.String MIN_IN_SYNC_REPLICAS_CONFIG { get { if (!_MIN_IN_SYNC_REPLICAS_CONFIGReady) { _MIN_IN_SYNC_REPLICAS_CONFIGContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "MIN_IN_SYNC_REPLICAS_CONFIG"); _MIN_IN_SYNC_REPLICAS_CONFIGReady = true; } return _MIN_IN_SYNC_REPLICAS_CONFIGContent; } }
         private static Java.Lang.String _MIN_IN_SYNC_REPLICAS_CONFIGContent = default;
         private static bool _MIN_IN_SYNC_REPLICAS_CONFIGReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/config/TopicConfig.html#MIN_IN_SYNC_REPLICAS_DOC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/TopicConfig.html#MIN_IN_SYNC_REPLICAS_DOC"/>
         /// </summary>
         public static Java.Lang.String MIN_IN_SYNC_REPLICAS_DOC { get { if (!_MIN_IN_SYNC_REPLICAS_DOCReady) { _MIN_IN_SYNC_REPLICAS_DOCContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "MIN_IN_SYNC_REPLICAS_DOC"); _MIN_IN_SYNC_REPLICAS_DOCReady = true; } return _MIN_IN_SYNC_REPLICAS_DOCContent; } }
         private static Java.Lang.String _MIN_IN_SYNC_REPLICAS_DOCContent = default;
         private static bool _MIN_IN_SYNC_REPLICAS_DOCReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/config/TopicConfig.html#PREALLOCATE_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/TopicConfig.html#PREALLOCATE_CONFIG"/>
         /// </summary>
         public static Java.Lang.String PREALLOCATE_CONFIG { get { if (!_PREALLOCATE_CONFIGReady) { _PREALLOCATE_CONFIGContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "PREALLOCATE_CONFIG"); _PREALLOCATE_CONFIGReady = true; } return _PREALLOCATE_CONFIGContent; } }
         private static Java.Lang.String _PREALLOCATE_CONFIGContent = default;
         private static bool _PREALLOCATE_CONFIGReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/config/TopicConfig.html#PREALLOCATE_DOC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/TopicConfig.html#PREALLOCATE_DOC"/>
         /// </summary>
         public static Java.Lang.String PREALLOCATE_DOC { get { if (!_PREALLOCATE_DOCReady) { _PREALLOCATE_DOCContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "PREALLOCATE_DOC"); _PREALLOCATE_DOCReady = true; } return _PREALLOCATE_DOCContent; } }
         private static Java.Lang.String _PREALLOCATE_DOCContent = default;
         private static bool _PREALLOCATE_DOCReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/config/TopicConfig.html#REMOTE_LOG_COPY_DISABLE_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/TopicConfig.html#REMOTE_LOG_COPY_DISABLE_CONFIG"/>
         /// </summary>
         public static Java.Lang.String REMOTE_LOG_COPY_DISABLE_CONFIG { get { if (!_REMOTE_LOG_COPY_DISABLE_CONFIGReady) { _REMOTE_LOG_COPY_DISABLE_CONFIGContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "REMOTE_LOG_COPY_DISABLE_CONFIG"); _REMOTE_LOG_COPY_DISABLE_CONFIGReady = true; } return _REMOTE_LOG_COPY_DISABLE_CONFIGContent; } }
         private static Java.Lang.String _REMOTE_LOG_COPY_DISABLE_CONFIGContent = default;
         private static bool _REMOTE_LOG_COPY_DISABLE_CONFIGReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/config/TopicConfig.html#REMOTE_LOG_COPY_DISABLE_DOC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/TopicConfig.html#REMOTE_LOG_COPY_DISABLE_DOC"/>
         /// </summary>
         public static Java.Lang.String REMOTE_LOG_COPY_DISABLE_DOC { get { if (!_REMOTE_LOG_COPY_DISABLE_DOCReady) { _REMOTE_LOG_COPY_DISABLE_DOCContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "REMOTE_LOG_COPY_DISABLE_DOC"); _REMOTE_LOG_COPY_DISABLE_DOCReady = true; } return _REMOTE_LOG_COPY_DISABLE_DOCContent; } }
         private static Java.Lang.String _REMOTE_LOG_COPY_DISABLE_DOCContent = default;
         private static bool _REMOTE_LOG_COPY_DISABLE_DOCReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/config/TopicConfig.html#REMOTE_LOG_DELETE_ON_DISABLE_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/TopicConfig.html#REMOTE_LOG_DELETE_ON_DISABLE_CONFIG"/>
         /// </summary>
         public static Java.Lang.String REMOTE_LOG_DELETE_ON_DISABLE_CONFIG { get { if (!_REMOTE_LOG_DELETE_ON_DISABLE_CONFIGReady) { _REMOTE_LOG_DELETE_ON_DISABLE_CONFIGContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "REMOTE_LOG_DELETE_ON_DISABLE_CONFIG"); _REMOTE_LOG_DELETE_ON_DISABLE_CONFIGReady = true; } return _REMOTE_LOG_DELETE_ON_DISABLE_CONFIGContent; } }
         private static Java.Lang.String _REMOTE_LOG_DELETE_ON_DISABLE_CONFIGContent = default;
         private static bool _REMOTE_LOG_DELETE_ON_DISABLE_CONFIGReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/config/TopicConfig.html#REMOTE_LOG_DELETE_ON_DISABLE_DOC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/TopicConfig.html#REMOTE_LOG_DELETE_ON_DISABLE_DOC"/>
         /// </summary>
         public static Java.Lang.String REMOTE_LOG_DELETE_ON_DISABLE_DOC { get { if (!_REMOTE_LOG_DELETE_ON_DISABLE_DOCReady) { _REMOTE_LOG_DELETE_ON_DISABLE_DOCContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "REMOTE_LOG_DELETE_ON_DISABLE_DOC"); _REMOTE_LOG_DELETE_ON_DISABLE_DOCReady = true; } return _REMOTE_LOG_DELETE_ON_DISABLE_DOCContent; } }
         private static Java.Lang.String _REMOTE_LOG_DELETE_ON_DISABLE_DOCContent = default;
         private static bool _REMOTE_LOG_DELETE_ON_DISABLE_DOCReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/config/TopicConfig.html#REMOTE_LOG_STORAGE_ENABLE_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/TopicConfig.html#REMOTE_LOG_STORAGE_ENABLE_CONFIG"/>
         /// </summary>
         public static Java.Lang.String REMOTE_LOG_STORAGE_ENABLE_CONFIG { get { if (!_REMOTE_LOG_STORAGE_ENABLE_CONFIGReady) { _REMOTE_LOG_STORAGE_ENABLE_CONFIGContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "REMOTE_LOG_STORAGE_ENABLE_CONFIG"); _REMOTE_LOG_STORAGE_ENABLE_CONFIGReady = true; } return _REMOTE_LOG_STORAGE_ENABLE_CONFIGContent; } }
         private static Java.Lang.String _REMOTE_LOG_STORAGE_ENABLE_CONFIGContent = default;
         private static bool _REMOTE_LOG_STORAGE_ENABLE_CONFIGReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/config/TopicConfig.html#REMOTE_LOG_STORAGE_ENABLE_DOC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/TopicConfig.html#REMOTE_LOG_STORAGE_ENABLE_DOC"/>
         /// </summary>
         public static Java.Lang.String REMOTE_LOG_STORAGE_ENABLE_DOC { get { if (!_REMOTE_LOG_STORAGE_ENABLE_DOCReady) { _REMOTE_LOG_STORAGE_ENABLE_DOCContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "REMOTE_LOG_STORAGE_ENABLE_DOC"); _REMOTE_LOG_STORAGE_ENABLE_DOCReady = true; } return _REMOTE_LOG_STORAGE_ENABLE_DOCContent; } }
         private static Java.Lang.String _REMOTE_LOG_STORAGE_ENABLE_DOCContent = default;
         private static bool _REMOTE_LOG_STORAGE_ENABLE_DOCReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/config/TopicConfig.html#RETENTION_BYTES_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/TopicConfig.html#RETENTION_BYTES_CONFIG"/>
         /// </summary>
         public static Java.Lang.String RETENTION_BYTES_CONFIG { get { if (!_RETENTION_BYTES_CONFIGReady) { _RETENTION_BYTES_CONFIGContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "RETENTION_BYTES_CONFIG"); _RETENTION_BYTES_CONFIGReady = true; } return _RETENTION_BYTES_CONFIGContent; } }
         private static Java.Lang.String _RETENTION_BYTES_CONFIGContent = default;
         private static bool _RETENTION_BYTES_CONFIGReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/config/TopicConfig.html#RETENTION_BYTES_DOC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/TopicConfig.html#RETENTION_BYTES_DOC"/>
         /// </summary>
         public static Java.Lang.String RETENTION_BYTES_DOC { get { if (!_RETENTION_BYTES_DOCReady) { _RETENTION_BYTES_DOCContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "RETENTION_BYTES_DOC"); _RETENTION_BYTES_DOCReady = true; } return _RETENTION_BYTES_DOCContent; } }
         private static Java.Lang.String _RETENTION_BYTES_DOCContent = default;
         private static bool _RETENTION_BYTES_DOCReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/config/TopicConfig.html#RETENTION_MS_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/TopicConfig.html#RETENTION_MS_CONFIG"/>
         /// </summary>
         public static Java.Lang.String RETENTION_MS_CONFIG { get { if (!_RETENTION_MS_CONFIGReady) { _RETENTION_MS_CONFIGContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "RETENTION_MS_CONFIG"); _RETENTION_MS_CONFIGReady = true; } return _RETENTION_MS_CONFIGContent; } }
         private static Java.Lang.String _RETENTION_MS_CONFIGContent = default;
         private static bool _RETENTION_MS_CONFIGReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/config/TopicConfig.html#RETENTION_MS_DOC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/TopicConfig.html#RETENTION_MS_DOC"/>
         /// </summary>
         public static Java.Lang.String RETENTION_MS_DOC { get { if (!_RETENTION_MS_DOCReady) { _RETENTION_MS_DOCContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "RETENTION_MS_DOC"); _RETENTION_MS_DOCReady = true; } return _RETENTION_MS_DOCContent; } }
         private static Java.Lang.String _RETENTION_MS_DOCContent = default;
         private static bool _RETENTION_MS_DOCReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/config/TopicConfig.html#SEGMENT_BYTES_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/TopicConfig.html#SEGMENT_BYTES_CONFIG"/>
         /// </summary>
         public static Java.Lang.String SEGMENT_BYTES_CONFIG { get { if (!_SEGMENT_BYTES_CONFIGReady) { _SEGMENT_BYTES_CONFIGContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "SEGMENT_BYTES_CONFIG"); _SEGMENT_BYTES_CONFIGReady = true; } return _SEGMENT_BYTES_CONFIGContent; } }
         private static Java.Lang.String _SEGMENT_BYTES_CONFIGContent = default;
         private static bool _SEGMENT_BYTES_CONFIGReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/config/TopicConfig.html#SEGMENT_BYTES_DOC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/TopicConfig.html#SEGMENT_BYTES_DOC"/>
         /// </summary>
         public static Java.Lang.String SEGMENT_BYTES_DOC { get { if (!_SEGMENT_BYTES_DOCReady) { _SEGMENT_BYTES_DOCContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "SEGMENT_BYTES_DOC"); _SEGMENT_BYTES_DOCReady = true; } return _SEGMENT_BYTES_DOCContent; } }
         private static Java.Lang.String _SEGMENT_BYTES_DOCContent = default;
         private static bool _SEGMENT_BYTES_DOCReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/config/TopicConfig.html#SEGMENT_INDEX_BYTES_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/TopicConfig.html#SEGMENT_INDEX_BYTES_CONFIG"/>
         /// </summary>
         public static Java.Lang.String SEGMENT_INDEX_BYTES_CONFIG { get { if (!_SEGMENT_INDEX_BYTES_CONFIGReady) { _SEGMENT_INDEX_BYTES_CONFIGContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "SEGMENT_INDEX_BYTES_CONFIG"); _SEGMENT_INDEX_BYTES_CONFIGReady = true; } return _SEGMENT_INDEX_BYTES_CONFIGContent; } }
         private static Java.Lang.String _SEGMENT_INDEX_BYTES_CONFIGContent = default;
         private static bool _SEGMENT_INDEX_BYTES_CONFIGReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/config/TopicConfig.html#SEGMENT_INDEX_BYTES_DOC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/TopicConfig.html#SEGMENT_INDEX_BYTES_DOC"/>
         /// </summary>
         public static Java.Lang.String SEGMENT_INDEX_BYTES_DOC { get { if (!_SEGMENT_INDEX_BYTES_DOCReady) { _SEGMENT_INDEX_BYTES_DOCContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "SEGMENT_INDEX_BYTES_DOC"); _SEGMENT_INDEX_BYTES_DOCReady = true; } return _SEGMENT_INDEX_BYTES_DOCContent; } }
         private static Java.Lang.String _SEGMENT_INDEX_BYTES_DOCContent = default;
         private static bool _SEGMENT_INDEX_BYTES_DOCReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/config/TopicConfig.html#SEGMENT_JITTER_MS_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/TopicConfig.html#SEGMENT_JITTER_MS_CONFIG"/>
         /// </summary>
         public static Java.Lang.String SEGMENT_JITTER_MS_CONFIG { get { if (!_SEGMENT_JITTER_MS_CONFIGReady) { _SEGMENT_JITTER_MS_CONFIGContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "SEGMENT_JITTER_MS_CONFIG"); _SEGMENT_JITTER_MS_CONFIGReady = true; } return _SEGMENT_JITTER_MS_CONFIGContent; } }
         private static Java.Lang.String _SEGMENT_JITTER_MS_CONFIGContent = default;
         private static bool _SEGMENT_JITTER_MS_CONFIGReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/config/TopicConfig.html#SEGMENT_JITTER_MS_DOC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/TopicConfig.html#SEGMENT_JITTER_MS_DOC"/>
         /// </summary>
         public static Java.Lang.String SEGMENT_JITTER_MS_DOC { get { if (!_SEGMENT_JITTER_MS_DOCReady) { _SEGMENT_JITTER_MS_DOCContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "SEGMENT_JITTER_MS_DOC"); _SEGMENT_JITTER_MS_DOCReady = true; } return _SEGMENT_JITTER_MS_DOCContent; } }
         private static Java.Lang.String _SEGMENT_JITTER_MS_DOCContent = default;
         private static bool _SEGMENT_JITTER_MS_DOCReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/config/TopicConfig.html#SEGMENT_MS_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/TopicConfig.html#SEGMENT_MS_CONFIG"/>
         /// </summary>
         public static Java.Lang.String SEGMENT_MS_CONFIG { get { if (!_SEGMENT_MS_CONFIGReady) { _SEGMENT_MS_CONFIGContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "SEGMENT_MS_CONFIG"); _SEGMENT_MS_CONFIGReady = true; } return _SEGMENT_MS_CONFIGContent; } }
         private static Java.Lang.String _SEGMENT_MS_CONFIGContent = default;
         private static bool _SEGMENT_MS_CONFIGReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/config/TopicConfig.html#SEGMENT_MS_DOC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/TopicConfig.html#SEGMENT_MS_DOC"/>
         /// </summary>
         public static Java.Lang.String SEGMENT_MS_DOC { get { if (!_SEGMENT_MS_DOCReady) { _SEGMENT_MS_DOCContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "SEGMENT_MS_DOC"); _SEGMENT_MS_DOCReady = true; } return _SEGMENT_MS_DOCContent; } }
         private static Java.Lang.String _SEGMENT_MS_DOCContent = default;
         private static bool _SEGMENT_MS_DOCReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/config/TopicConfig.html#UNCLEAN_LEADER_ELECTION_ENABLE_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/TopicConfig.html#UNCLEAN_LEADER_ELECTION_ENABLE_CONFIG"/>
         /// </summary>
         public static Java.Lang.String UNCLEAN_LEADER_ELECTION_ENABLE_CONFIG { get { if (!_UNCLEAN_LEADER_ELECTION_ENABLE_CONFIGReady) { _UNCLEAN_LEADER_ELECTION_ENABLE_CONFIGContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "UNCLEAN_LEADER_ELECTION_ENABLE_CONFIG"); _UNCLEAN_LEADER_ELECTION_ENABLE_CONFIGReady = true; } return _UNCLEAN_LEADER_ELECTION_ENABLE_CONFIGContent; } }
         private static Java.Lang.String _UNCLEAN_LEADER_ELECTION_ENABLE_CONFIGContent = default;
         private static bool _UNCLEAN_LEADER_ELECTION_ENABLE_CONFIGReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/config/TopicConfig.html#UNCLEAN_LEADER_ELECTION_ENABLE_DOC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/TopicConfig.html#UNCLEAN_LEADER_ELECTION_ENABLE_DOC"/>
         /// </summary>
         public static Java.Lang.String UNCLEAN_LEADER_ELECTION_ENABLE_DOC { get { if (!_UNCLEAN_LEADER_ELECTION_ENABLE_DOCReady) { _UNCLEAN_LEADER_ELECTION_ENABLE_DOCContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "UNCLEAN_LEADER_ELECTION_ENABLE_DOC"); _UNCLEAN_LEADER_ELECTION_ENABLE_DOCReady = true; } return _UNCLEAN_LEADER_ELECTION_ENABLE_DOCContent; } }
         private static Java.Lang.String _UNCLEAN_LEADER_ELECTION_ENABLE_DOCContent = default;

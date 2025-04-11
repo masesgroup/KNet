@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Streams.State
 {
     #region RocksDBConfigSetter declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.0/org/apache/kafka/streams/state/RocksDBConfigSetter.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/state/RocksDBConfigSetter.html"/>
     /// </summary>
     public partial class RocksDBConfigSetter : MASES.JCOBridge.C2JBridge.JVMBridgeBase<RocksDBConfigSetter>
     {

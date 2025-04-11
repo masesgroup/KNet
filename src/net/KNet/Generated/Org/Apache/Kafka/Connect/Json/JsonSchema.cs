@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Connect.Json
 {
     #region JsonSchema declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-json/3.9.0/org/apache/kafka/connect/json/JsonSchema.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-json/4.0.0/org/apache/kafka/connect/json/JsonSchema.html"/>
     /// </summary>
     public partial class JsonSchema : MASES.JCOBridge.C2JBridge.JVMBridgeBase<JsonSchema>
     {

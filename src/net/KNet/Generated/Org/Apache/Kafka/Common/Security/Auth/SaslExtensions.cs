@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common.Security.Auth
 {
     #region SaslExtensions declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/security/auth/SaslExtensions.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/security/auth/SaslExtensions.html"/>
     /// </summary>
     public partial class SaslExtensions : MASES.JCOBridge.C2JBridge.JVMBridgeBase<SaslExtensions>
     {
@@ -75,7 +75,7 @@ namespace Org.Apache.Kafka.Common.Security.Auth
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/security/auth/SaslExtensions.html#org.apache.kafka.common.security.auth.SaslExtensions(java.util.Map)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/security/auth/SaslExtensions.html#org.apache.kafka.common.security.auth.SaslExtensions(java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         public SaslExtensions(Java.Util.Map<Java.Lang.String, Java.Lang.String> arg0)
@@ -95,7 +95,7 @@ namespace Org.Apache.Kafka.Common.Security.Auth
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/security/auth/SaslExtensions.html#empty--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/security/auth/SaslExtensions.html#empty--"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.Security.Auth.SaslExtensions"/></returns>
         public static Org.Apache.Kafka.Common.Security.Auth.SaslExtensions Empty()
@@ -107,7 +107,7 @@ namespace Org.Apache.Kafka.Common.Security.Auth
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/security/auth/SaslExtensions.html#map--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/security/auth/SaslExtensions.html#map--"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Map"/></returns>
         public Java.Util.Map<Java.Lang.String, Java.Lang.String> Map()

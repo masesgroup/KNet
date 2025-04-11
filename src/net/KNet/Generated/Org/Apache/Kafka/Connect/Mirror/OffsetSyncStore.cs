@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
 {
     #region OffsetSyncStore declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.9.0/org/apache/kafka/connect/mirror/OffsetSyncStore.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.0.0/org/apache/kafka/connect/mirror/OffsetSyncStore.html"/>
     /// </summary>
     public partial class OffsetSyncStore : Java.Lang.AutoCloseable
     {
@@ -91,7 +91,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.9.0/org/apache/kafka/connect/mirror/OffsetSyncStore.html#translateDownstream-java.lang.String-org.apache.kafka.common.TopicPartition-long-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.0.0/org/apache/kafka/connect/mirror/OffsetSyncStore.html#translateDownstream-java.lang.String-org.apache.kafka.common.TopicPartition-long-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.TopicPartition"/></param>
@@ -102,14 +102,14 @@ namespace Org.Apache.Kafka.Connect.Mirror
             return IExecuteWithSignature<Java.Util.OptionalLong>("translateDownstream", "(Ljava/lang/String;Lorg/apache/kafka/common/TopicPartition;J)Ljava/util/OptionalLong;", arg0, arg1, arg2);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.9.0/org/apache/kafka/connect/mirror/OffsetSyncStore.html#close--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.0.0/org/apache/kafka/connect/mirror/OffsetSyncStore.html#close--"/>
         /// </summary>
         public void Close()
         {
             IExecuteWithSignature("close", "()V");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.9.0/org/apache/kafka/connect/mirror/OffsetSyncStore.html#start-boolean-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.0.0/org/apache/kafka/connect/mirror/OffsetSyncStore.html#start-boolean-"/>
         /// </summary>
         /// <param name="arg0"><see cref="bool"/></param>
         public void Start(bool arg0)
