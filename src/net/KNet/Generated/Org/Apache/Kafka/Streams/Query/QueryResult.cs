@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Streams.Query
 {
     #region QueryResult declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.0/org/apache/kafka/streams/query/QueryResult.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/query/QueryResult.html"/>
     /// </summary>
     public partial class QueryResult : MASES.JCOBridge.C2JBridge.JVMBridgeBase<QueryResult>
     {
@@ -74,7 +74,7 @@ namespace Org.Apache.Kafka.Streams.Query
 
     #region QueryResult<R> declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.0/org/apache/kafka/streams/query/QueryResult.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/query/QueryResult.html"/>
     /// </summary>
     /// <typeparam name="R"></typeparam>
     public partial class QueryResult<R> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<QueryResult<R>>
@@ -137,7 +137,7 @@ namespace Org.Apache.Kafka.Streams.Query
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.0/org/apache/kafka/streams/query/QueryResult.html#forFailure-org.apache.kafka.streams.query.FailureReason-java.lang.String-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/query/QueryResult.html#forFailure-org.apache.kafka.streams.query.FailureReason-java.lang.String-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Query.FailureReason"/></param>
         /// <param name="arg1"><see cref="Java.Lang.String"/></param>
@@ -147,7 +147,7 @@ namespace Org.Apache.Kafka.Streams.Query
             return SExecuteWithSignature<Org.Apache.Kafka.Streams.Query.QueryResult>(LocalBridgeClazz, "forFailure", "(Lorg/apache/kafka/streams/query/FailureReason;Ljava/lang/String;)Lorg/apache/kafka/streams/query/QueryResult;", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.0/org/apache/kafka/streams/query/QueryResult.html#forResult-java.lang.Object-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/query/QueryResult.html#forResult-java.lang.Object-"/>
         /// </summary>
         /// <param name="arg0"><see cref="object"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Query.QueryResult"/></returns>
@@ -156,7 +156,7 @@ namespace Org.Apache.Kafka.Streams.Query
             return SExecuteWithSignature<Org.Apache.Kafka.Streams.Query.QueryResult>(LocalBridgeClazz, "forResult", "(Ljava/lang/Object;)Lorg/apache/kafka/streams/query/QueryResult;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.0/org/apache/kafka/streams/query/QueryResult.html#forUnknownQueryType-org.apache.kafka.streams.query.Query-org.apache.kafka.streams.processor.StateStore-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/query/QueryResult.html#forUnknownQueryType-org.apache.kafka.streams.query.Query-org.apache.kafka.streams.processor.StateStore-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Query.Query"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Streams.Processor.StateStore"/></param>
@@ -166,7 +166,7 @@ namespace Org.Apache.Kafka.Streams.Query
             return SExecuteWithSignature<Org.Apache.Kafka.Streams.Query.QueryResult>(LocalBridgeClazz, "forUnknownQueryType", "(Lorg/apache/kafka/streams/query/Query;Lorg/apache/kafka/streams/processor/StateStore;)Lorg/apache/kafka/streams/query/QueryResult;", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.0/org/apache/kafka/streams/query/QueryResult.html#notUpToBound-org.apache.kafka.streams.query.Position-org.apache.kafka.streams.query.PositionBound-java.lang.Integer-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/query/QueryResult.html#notUpToBound-org.apache.kafka.streams.query.Position-org.apache.kafka.streams.query.PositionBound-java.lang.Integer-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Query.Position"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Streams.Query.PositionBound"/></param>
@@ -181,42 +181,42 @@ namespace Org.Apache.Kafka.Streams.Query
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.0/org/apache/kafka/streams/query/QueryResult.html#getExecutionInfo--"/> 
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/query/QueryResult.html#getExecutionInfo--"/> 
         /// </summary>
         public Java.Util.List ExecutionInfo
         {
             get { return IExecuteWithSignature<Java.Util.List>("getExecutionInfo", "()Ljava/util/List;"); }
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.0/org/apache/kafka/streams/query/QueryResult.html#getFailureMessage--"/> 
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/query/QueryResult.html#getFailureMessage--"/> 
         /// </summary>
         public Java.Lang.String FailureMessage
         {
             get { return IExecuteWithSignature<Java.Lang.String>("getFailureMessage", "()Ljava/lang/String;"); }
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.0/org/apache/kafka/streams/query/QueryResult.html#getFailureReason--"/> 
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/query/QueryResult.html#getFailureReason--"/> 
         /// </summary>
         public Org.Apache.Kafka.Streams.Query.FailureReason FailureReason
         {
             get { return IExecuteWithSignature<Org.Apache.Kafka.Streams.Query.FailureReason>("getFailureReason", "()Lorg/apache/kafka/streams/query/FailureReason;"); }
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.0/org/apache/kafka/streams/query/QueryResult.html#getPosition--"/> <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.0/org/apache/kafka/streams/query/QueryResult.html#setPosition-org.apache.kafka.streams.query.Position-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/query/QueryResult.html#getPosition--"/> <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/query/QueryResult.html#setPosition-org.apache.kafka.streams.query.Position-"/>
         /// </summary>
         public Org.Apache.Kafka.Streams.Query.Position Position
         {
             get { return IExecuteWithSignature<Org.Apache.Kafka.Streams.Query.Position>("getPosition", "()Lorg/apache/kafka/streams/query/Position;"); } set { IExecuteWithSignature("setPosition", "(Lorg/apache/kafka/streams/query/Position;)V", value); }
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.0/org/apache/kafka/streams/query/QueryResult.html#getResult--"/> 
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/query/QueryResult.html#getResult--"/> 
         /// </summary>
         public object Result
         {
             get { return IExecuteWithSignature("getResult", "()Ljava/lang/Object;"); }
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.0/org/apache/kafka/streams/query/QueryResult.html#isFailure--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/query/QueryResult.html#isFailure--"/>
         /// </summary>
         /// <returns><see cref="bool"/></returns>
         public bool IsFailure()
@@ -224,7 +224,7 @@ namespace Org.Apache.Kafka.Streams.Query
             return IExecuteWithSignature<bool>("isFailure", "()Z");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.0/org/apache/kafka/streams/query/QueryResult.html#isSuccess--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/query/QueryResult.html#isSuccess--"/>
         /// </summary>
         /// <returns><see cref="bool"/></returns>
         public bool IsSuccess()
@@ -232,7 +232,7 @@ namespace Org.Apache.Kafka.Streams.Query
             return IExecuteWithSignature<bool>("isSuccess", "()Z");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.0/org/apache/kafka/streams/query/QueryResult.html#addExecutionInfo-java.lang.String-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/query/QueryResult.html#addExecutionInfo-java.lang.String-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         public void AddExecutionInfo(Java.Lang.String arg0)
@@ -289,7 +289,7 @@ namespace Org.Apache.Kafka.Streams.Query
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.0/org/apache/kafka/streams/query/QueryResult.html#forFailure-org.apache.kafka.streams.query.FailureReason-java.lang.String-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/query/QueryResult.html#forFailure-org.apache.kafka.streams.query.FailureReason-java.lang.String-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Query.FailureReason"/></param>
         /// <param name="arg1"><see cref="Java.Lang.String"/></param>
@@ -299,7 +299,7 @@ namespace Org.Apache.Kafka.Streams.Query
             return SExecuteWithSignature<Org.Apache.Kafka.Streams.Query.QueryResult<R>>(LocalBridgeClazz, "forFailure", "(Lorg/apache/kafka/streams/query/FailureReason;Ljava/lang/String;)Lorg/apache/kafka/streams/query/QueryResult;", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.0/org/apache/kafka/streams/query/QueryResult.html#forResult-java.lang.Object-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/query/QueryResult.html#forResult-java.lang.Object-"/>
         /// </summary>
         /// <param name="arg0"><typeparamref name="R"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Query.QueryResult"/></returns>
@@ -308,7 +308,7 @@ namespace Org.Apache.Kafka.Streams.Query
             return SExecuteWithSignature<Org.Apache.Kafka.Streams.Query.QueryResult<R>>(LocalBridgeClazz, "forResult", "(Ljava/lang/Object;)Lorg/apache/kafka/streams/query/QueryResult;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.0/org/apache/kafka/streams/query/QueryResult.html#forUnknownQueryType-org.apache.kafka.streams.query.Query-org.apache.kafka.streams.processor.StateStore-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/query/QueryResult.html#forUnknownQueryType-org.apache.kafka.streams.query.Query-org.apache.kafka.streams.processor.StateStore-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Query.Query"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Streams.Processor.StateStore"/></param>
@@ -318,7 +318,7 @@ namespace Org.Apache.Kafka.Streams.Query
             return SExecuteWithSignature<Org.Apache.Kafka.Streams.Query.QueryResult<R>>(LocalBridgeClazz, "forUnknownQueryType", "(Lorg/apache/kafka/streams/query/Query;Lorg/apache/kafka/streams/processor/StateStore;)Lorg/apache/kafka/streams/query/QueryResult;", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.0/org/apache/kafka/streams/query/QueryResult.html#notUpToBound-org.apache.kafka.streams.query.Position-org.apache.kafka.streams.query.PositionBound-java.lang.Integer-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/query/QueryResult.html#notUpToBound-org.apache.kafka.streams.query.Position-org.apache.kafka.streams.query.PositionBound-java.lang.Integer-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Query.Position"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Streams.Query.PositionBound"/></param>
@@ -333,42 +333,42 @@ namespace Org.Apache.Kafka.Streams.Query
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.0/org/apache/kafka/streams/query/QueryResult.html#getExecutionInfo--"/> 
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/query/QueryResult.html#getExecutionInfo--"/> 
         /// </summary>
         public Java.Util.List<Java.Lang.String> ExecutionInfo
         {
             get { return IExecuteWithSignature<Java.Util.List<Java.Lang.String>>("getExecutionInfo", "()Ljava/util/List;"); }
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.0/org/apache/kafka/streams/query/QueryResult.html#getFailureMessage--"/> 
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/query/QueryResult.html#getFailureMessage--"/> 
         /// </summary>
         public Java.Lang.String FailureMessage
         {
             get { return IExecuteWithSignature<Java.Lang.String>("getFailureMessage", "()Ljava/lang/String;"); }
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.0/org/apache/kafka/streams/query/QueryResult.html#getFailureReason--"/> 
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/query/QueryResult.html#getFailureReason--"/> 
         /// </summary>
         public Org.Apache.Kafka.Streams.Query.FailureReason FailureReason
         {
             get { return IExecuteWithSignature<Org.Apache.Kafka.Streams.Query.FailureReason>("getFailureReason", "()Lorg/apache/kafka/streams/query/FailureReason;"); }
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.0/org/apache/kafka/streams/query/QueryResult.html#getPosition--"/> <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.0/org/apache/kafka/streams/query/QueryResult.html#setPosition-org.apache.kafka.streams.query.Position-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/query/QueryResult.html#getPosition--"/> <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/query/QueryResult.html#setPosition-org.apache.kafka.streams.query.Position-"/>
         /// </summary>
         public Org.Apache.Kafka.Streams.Query.Position Position
         {
             get { return IExecuteWithSignature<Org.Apache.Kafka.Streams.Query.Position>("getPosition", "()Lorg/apache/kafka/streams/query/Position;"); } set { IExecuteWithSignature("setPosition", "(Lorg/apache/kafka/streams/query/Position;)V", value); }
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.0/org/apache/kafka/streams/query/QueryResult.html#getResult--"/> 
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/query/QueryResult.html#getResult--"/> 
         /// </summary>
         public R Result
         {
             get { return IExecuteWithSignature<R>("getResult", "()Ljava/lang/Object;"); }
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.0/org/apache/kafka/streams/query/QueryResult.html#isFailure--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/query/QueryResult.html#isFailure--"/>
         /// </summary>
         /// <returns><see cref="bool"/></returns>
         public bool IsFailure()
@@ -376,7 +376,7 @@ namespace Org.Apache.Kafka.Streams.Query
             return IExecuteWithSignature<bool>("isFailure", "()Z");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.0/org/apache/kafka/streams/query/QueryResult.html#isSuccess--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/query/QueryResult.html#isSuccess--"/>
         /// </summary>
         /// <returns><see cref="bool"/></returns>
         public bool IsSuccess()
@@ -384,7 +384,7 @@ namespace Org.Apache.Kafka.Streams.Query
             return IExecuteWithSignature<bool>("isSuccess", "()Z");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.0/org/apache/kafka/streams/query/QueryResult.html#addExecutionInfo-java.lang.String-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/query/QueryResult.html#addExecutionInfo-java.lang.String-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         public void AddExecutionInfo(Java.Lang.String arg0)

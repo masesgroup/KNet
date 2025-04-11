@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Streams.Errors
 {
     #region MissingSourceTopicException declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.0/org/apache/kafka/streams/errors/MissingSourceTopicException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/errors/MissingSourceTopicException.html"/>
     /// </summary>
     public partial class MissingSourceTopicException : Org.Apache.Kafka.Streams.Errors.StreamsException
     {

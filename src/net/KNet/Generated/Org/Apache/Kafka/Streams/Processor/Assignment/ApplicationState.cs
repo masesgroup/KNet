@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Assignment
 {
     #region ApplicationState declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.0/org/apache/kafka/streams/processor/assignment/ApplicationState.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/assignment/ApplicationState.html"/>
     /// </summary>
     public partial class ApplicationState : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ApplicationState>
     {
@@ -111,7 +111,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Assignment
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.0/org/apache/kafka/streams/processor/assignment/ApplicationState.html#kafkaStreamsStates-boolean-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/assignment/ApplicationState.html#kafkaStreamsStates-boolean-"/>
         /// </summary>
         /// <param name="arg0"><see cref="bool"/></param>
         /// <returns><see cref="Java.Util.Map"/></returns>
@@ -120,7 +120,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Assignment
             return IExecuteWithSignature<Java.Util.Map<Org.Apache.Kafka.Streams.Processor.Assignment.ProcessId, Org.Apache.Kafka.Streams.Processor.Assignment.KafkaStreamsState>>("kafkaStreamsStates", "(Z)Ljava/util/Map;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.0/org/apache/kafka/streams/processor/assignment/ApplicationState.html#allTasks--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/assignment/ApplicationState.html#allTasks--"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Map"/></returns>
         public Java.Util.Map<Org.Apache.Kafka.Streams.Processor.TaskId, Org.Apache.Kafka.Streams.Processor.Assignment.TaskInfo> AllTasks()
@@ -128,7 +128,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Assignment
             return IExecuteWithSignature<Java.Util.Map<Org.Apache.Kafka.Streams.Processor.TaskId, Org.Apache.Kafka.Streams.Processor.Assignment.TaskInfo>>("allTasks", "()Ljava/util/Map;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.0/org/apache/kafka/streams/processor/assignment/ApplicationState.html#assignmentConfigs--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/assignment/ApplicationState.html#assignmentConfigs--"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Processor.Assignment.AssignmentConfigs"/></returns>
         public Org.Apache.Kafka.Streams.Processor.Assignment.AssignmentConfigs AssignmentConfigs()

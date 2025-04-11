@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Connect.Errors
 {
     #region NotFoundException declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.0/org/apache/kafka/connect/errors/NotFoundException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.0.0/org/apache/kafka/connect/errors/NotFoundException.html"/>
     /// </summary>
     public partial class NotFoundException : Org.Apache.Kafka.Connect.Errors.ConnectException
     {

@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Deferred
 {
     #region DeferredEventQueue declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/3.9.0/org/apache/kafka/deferred/DeferredEventQueue.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.0.0/org/apache/kafka/deferred/DeferredEventQueue.html"/>
     /// </summary>
     public partial class DeferredEventQueue : MASES.JCOBridge.C2JBridge.JVMBridgeBase<DeferredEventQueue>
     {
@@ -75,7 +75,7 @@ namespace Org.Apache.Kafka.Deferred
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/3.9.0/org/apache/kafka/deferred/DeferredEventQueue.html#org.apache.kafka.deferred.DeferredEventQueue(org.apache.kafka.common.utils.LogContext)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.0.0/org/apache/kafka/deferred/DeferredEventQueue.html#org.apache.kafka.deferred.DeferredEventQueue(org.apache.kafka.common.utils.LogContext)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Utils.LogContext"/></param>
         public DeferredEventQueue(Org.Apache.Kafka.Common.Utils.LogContext arg0)
@@ -99,7 +99,7 @@ namespace Org.Apache.Kafka.Deferred
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/3.9.0/org/apache/kafka/deferred/DeferredEventQueue.html#highestPendingOffset--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.0.0/org/apache/kafka/deferred/DeferredEventQueue.html#highestPendingOffset--"/>
         /// </summary>
         /// <returns><see cref="Java.Util.OptionalLong"/></returns>
         public Java.Util.OptionalLong HighestPendingOffset()
@@ -107,7 +107,7 @@ namespace Org.Apache.Kafka.Deferred
             return IExecuteWithSignature<Java.Util.OptionalLong>("highestPendingOffset", "()Ljava/util/OptionalLong;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/3.9.0/org/apache/kafka/deferred/DeferredEventQueue.html#add-long-org.apache.kafka.deferred.DeferredEvent-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.0.0/org/apache/kafka/deferred/DeferredEventQueue.html#add-long-org.apache.kafka.deferred.DeferredEvent-"/>
         /// </summary>
         /// <param name="arg0"><see cref="long"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Deferred.DeferredEvent"/></param>
@@ -116,7 +116,7 @@ namespace Org.Apache.Kafka.Deferred
             IExecuteWithSignature("add", "(JLorg/apache/kafka/deferred/DeferredEvent;)V", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/3.9.0/org/apache/kafka/deferred/DeferredEventQueue.html#completeUpTo-long-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.0.0/org/apache/kafka/deferred/DeferredEventQueue.html#completeUpTo-long-"/>
         /// </summary>
         /// <param name="arg0"><see cref="long"/></param>
         public void CompleteUpTo(long arg0)
@@ -124,7 +124,7 @@ namespace Org.Apache.Kafka.Deferred
             IExecuteWithSignature("completeUpTo", "(J)V", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/3.9.0/org/apache/kafka/deferred/DeferredEventQueue.html#failAll-java.lang.Exception-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.0.0/org/apache/kafka/deferred/DeferredEventQueue.html#failAll-java.lang.Exception-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.Exception"/></param>
         public void FailAll(MASES.JCOBridge.C2JBridge.JVMBridgeException arg0)

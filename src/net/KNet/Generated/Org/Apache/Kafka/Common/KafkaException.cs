@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common
 {
     #region KafkaException declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/KafkaException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/KafkaException.html"/>
     /// </summary>
     public partial class KafkaException : Java.Lang.RuntimeException
     {

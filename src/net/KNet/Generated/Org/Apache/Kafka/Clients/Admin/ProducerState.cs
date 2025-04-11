@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 {
     #region ProducerState declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/admin/ProducerState.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/ProducerState.html"/>
     /// </summary>
     public partial class ProducerState : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ProducerState>
     {
@@ -75,7 +75,7 @@ namespace Org.Apache.Kafka.Clients.Admin
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/admin/ProducerState.html#org.apache.kafka.clients.admin.ProducerState(long,int,int,long,java.util.OptionalInt,java.util.OptionalLong)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/ProducerState.html#org.apache.kafka.clients.admin.ProducerState(long,int,int,long,java.util.OptionalInt,java.util.OptionalLong)"/>
         /// </summary>
         /// <param name="arg0"><see cref="long"/></param>
         /// <param name="arg1"><see cref="int"/></param>
@@ -104,7 +104,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/admin/ProducerState.html#lastSequence--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/ProducerState.html#lastSequence--"/>
         /// </summary>
         /// <returns><see cref="int"/></returns>
         public int LastSequence()
@@ -112,7 +112,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<int>("lastSequence", "()I");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/admin/ProducerState.html#producerEpoch--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/ProducerState.html#producerEpoch--"/>
         /// </summary>
         /// <returns><see cref="int"/></returns>
         public int ProducerEpoch()
@@ -120,7 +120,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<int>("producerEpoch", "()I");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/admin/ProducerState.html#coordinatorEpoch--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/ProducerState.html#coordinatorEpoch--"/>
         /// </summary>
         /// <returns><see cref="Java.Util.OptionalInt"/></returns>
         public Java.Util.OptionalInt CoordinatorEpoch()
@@ -128,7 +128,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<Java.Util.OptionalInt>("coordinatorEpoch", "()Ljava/util/OptionalInt;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/admin/ProducerState.html#currentTransactionStartOffset--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/ProducerState.html#currentTransactionStartOffset--"/>
         /// </summary>
         /// <returns><see cref="Java.Util.OptionalLong"/></returns>
         public Java.Util.OptionalLong CurrentTransactionStartOffset()
@@ -136,7 +136,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<Java.Util.OptionalLong>("currentTransactionStartOffset", "()Ljava/util/OptionalLong;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/admin/ProducerState.html#lastTimestamp--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/ProducerState.html#lastTimestamp--"/>
         /// </summary>
         /// <returns><see cref="long"/></returns>
         public long LastTimestamp()
@@ -144,7 +144,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<long>("lastTimestamp", "()J");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/admin/ProducerState.html#producerId--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/ProducerState.html#producerId--"/>
         /// </summary>
         /// <returns><see cref="long"/></returns>
         public long ProducerId()

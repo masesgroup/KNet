@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common.Errors
 {
     #region UnknownSubscriptionIdException declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/errors/UnknownSubscriptionIdException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/errors/UnknownSubscriptionIdException.html"/>
     /// </summary>
     public partial class UnknownSubscriptionIdException : Org.Apache.Kafka.Common.Errors.ApiException
     {

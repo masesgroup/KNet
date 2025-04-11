@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common.Security.Authenticator
 {
     #region SaslInternalConfigs declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/security/authenticator/SaslInternalConfigs.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/security/authenticator/SaslInternalConfigs.html"/>
     /// </summary>
     public partial class SaslInternalConfigs : MASES.JCOBridge.C2JBridge.JVMBridgeBase<SaslInternalConfigs>
     {
@@ -83,7 +83,7 @@ namespace Org.Apache.Kafka.Common.Security.Authenticator
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/security/authenticator/SaslInternalConfigs.html#CREDENTIAL_LIFETIME_MS_SASL_NEGOTIATED_PROPERTY_KEY"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/security/authenticator/SaslInternalConfigs.html#CREDENTIAL_LIFETIME_MS_SASL_NEGOTIATED_PROPERTY_KEY"/>
         /// </summary>
         public static Java.Lang.String CREDENTIAL_LIFETIME_MS_SASL_NEGOTIATED_PROPERTY_KEY { get { if (!_CREDENTIAL_LIFETIME_MS_SASL_NEGOTIATED_PROPERTY_KEYReady) { _CREDENTIAL_LIFETIME_MS_SASL_NEGOTIATED_PROPERTY_KEYContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "CREDENTIAL_LIFETIME_MS_SASL_NEGOTIATED_PROPERTY_KEY"); _CREDENTIAL_LIFETIME_MS_SASL_NEGOTIATED_PROPERTY_KEYReady = true; } return _CREDENTIAL_LIFETIME_MS_SASL_NEGOTIATED_PROPERTY_KEYContent; } }
         private static Java.Lang.String _CREDENTIAL_LIFETIME_MS_SASL_NEGOTIATED_PROPERTY_KEYContent = default;

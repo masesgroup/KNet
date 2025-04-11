@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Raft
 {
     #region DynamicVoter declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.0/org/apache/kafka/raft/DynamicVoter.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/DynamicVoter.html"/>
     /// </summary>
     public partial class DynamicVoter : MASES.JCOBridge.C2JBridge.JVMBridgeBase<DynamicVoter>
     {
@@ -75,7 +75,7 @@ namespace Org.Apache.Kafka.Raft
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.0/org/apache/kafka/raft/DynamicVoter.html#org.apache.kafka.raft.DynamicVoter(org.apache.kafka.common.Uuid,int,java.lang.String,int)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/DynamicVoter.html#org.apache.kafka.raft.DynamicVoter(org.apache.kafka.common.Uuid,int,java.lang.String,int)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Uuid"/></param>
         /// <param name="arg1"><see cref="int"/></param>
@@ -98,7 +98,7 @@ namespace Org.Apache.Kafka.Raft
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.0/org/apache/kafka/raft/DynamicVoter.html#parse-java.lang.String-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/DynamicVoter.html#parse-java.lang.String-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Raft.DynamicVoter"/></returns>
@@ -111,7 +111,7 @@ namespace Org.Apache.Kafka.Raft
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.0/org/apache/kafka/raft/DynamicVoter.html#nodeId--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/DynamicVoter.html#nodeId--"/>
         /// </summary>
         /// <returns><see cref="int"/></returns>
         public int NodeId()
@@ -119,7 +119,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<int>("nodeId", "()I");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.0/org/apache/kafka/raft/DynamicVoter.html#port--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/DynamicVoter.html#port--"/>
         /// </summary>
         /// <returns><see cref="int"/></returns>
         public int Port()
@@ -127,7 +127,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<int>("port", "()I");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.0/org/apache/kafka/raft/DynamicVoter.html#host--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/DynamicVoter.html#host--"/>
         /// </summary>
         /// <returns><see cref="Java.Lang.String"/></returns>
         public Java.Lang.String Host()
@@ -135,7 +135,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<Java.Lang.String>("host", "()Ljava/lang/String;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.0/org/apache/kafka/raft/DynamicVoter.html#directoryId--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/DynamicVoter.html#directoryId--"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.Uuid"/></returns>
         public Org.Apache.Kafka.Common.Uuid DirectoryId()
@@ -143,7 +143,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<Org.Apache.Kafka.Common.Uuid>("directoryId", "()Lorg/apache/kafka/common/Uuid;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.0/org/apache/kafka/raft/DynamicVoter.html#toVoterNode-java.lang.String-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/DynamicVoter.html#toVoterNode-java.lang.String-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Raft.VoterSet.VoterNode"/></returns>

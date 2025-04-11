@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Streams.Errors
 {
     #region LogAndFailProcessingExceptionHandler declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.0/org/apache/kafka/streams/errors/LogAndFailProcessingExceptionHandler.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/errors/LogAndFailProcessingExceptionHandler.html"/>
     /// </summary>
     public partial class LogAndFailProcessingExceptionHandler : Org.Apache.Kafka.Streams.Errors.ProcessingExceptionHandler
     {
@@ -91,7 +91,7 @@ namespace Org.Apache.Kafka.Streams.Errors
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.0/org/apache/kafka/streams/errors/LogAndFailProcessingExceptionHandler.html#handle-org.apache.kafka.streams.errors.ErrorHandlerContext-org.apache.kafka.streams.processor.api.Record-java.lang.Exception-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/errors/LogAndFailProcessingExceptionHandler.html#handle-org.apache.kafka.streams.errors.ErrorHandlerContext-org.apache.kafka.streams.processor.api.Record-java.lang.Exception-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Errors.ErrorHandlerContext"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Streams.Processor.Api.Record"/></param>
@@ -102,7 +102,7 @@ namespace Org.Apache.Kafka.Streams.Errors
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.Errors.ProcessingExceptionHandler.ProcessingHandlerResponse>("handle", "(Lorg/apache/kafka/streams/errors/ErrorHandlerContext;Lorg/apache/kafka/streams/processor/api/Record;Ljava/lang/Exception;)Lorg/apache/kafka/streams/errors/ProcessingExceptionHandler$ProcessingHandlerResponse;", arg0, arg1, arg2);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.0/org/apache/kafka/streams/errors/LogAndFailProcessingExceptionHandler.html#configure-java.util.Map-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/errors/LogAndFailProcessingExceptionHandler.html#configure-java.util.Map-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         public void Configure(Java.Util.Map<Java.Lang.String, object> arg0)

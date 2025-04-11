@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Streams.Errors
 {
     #region TaskIdFormatException declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.0/org/apache/kafka/streams/errors/TaskIdFormatException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/errors/TaskIdFormatException.html"/>
     /// </summary>
     public partial class TaskIdFormatException : Org.Apache.Kafka.Streams.Errors.StreamsException
     {

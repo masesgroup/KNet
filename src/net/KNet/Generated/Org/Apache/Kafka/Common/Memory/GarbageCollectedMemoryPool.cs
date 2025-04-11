@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common.Memory
 {
     #region GarbageCollectedMemoryPool declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/memory/GarbageCollectedMemoryPool.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/memory/GarbageCollectedMemoryPool.html"/>
     /// </summary>
     public partial class GarbageCollectedMemoryPool : Org.Apache.Kafka.Common.Memory.SimpleMemoryPool
     {
@@ -75,7 +75,7 @@ namespace Org.Apache.Kafka.Common.Memory
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/memory/GarbageCollectedMemoryPool.html#org.apache.kafka.common.memory.GarbageCollectedMemoryPool(long,int,boolean,org.apache.kafka.common.metrics.Sensor)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/memory/GarbageCollectedMemoryPool.html#org.apache.kafka.common.memory.GarbageCollectedMemoryPool(long,int,boolean,org.apache.kafka.common.metrics.Sensor)"/>
         /// </summary>
         /// <param name="arg0"><see cref="long"/></param>
         /// <param name="arg1"><see cref="int"/></param>
@@ -106,7 +106,7 @@ namespace Org.Apache.Kafka.Common.Memory
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/memory/GarbageCollectedMemoryPool.html#close--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/memory/GarbageCollectedMemoryPool.html#close--"/>
         /// </summary>
         public void Close()
         {

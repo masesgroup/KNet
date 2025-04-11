@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common.Security.Auth
 {
     #region Login declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/security/auth/Login.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/security/auth/Login.html"/>
     /// </summary>
     public partial class Login : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Login>
     {
@@ -111,7 +111,7 @@ namespace Org.Apache.Kafka.Common.Security.Auth
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/security/auth/Login.html#serviceName--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/security/auth/Login.html#serviceName--"/>
         /// </summary>
         /// <returns><see cref="Java.Lang.String"/></returns>
         public Java.Lang.String ServiceName()
@@ -119,7 +119,7 @@ namespace Org.Apache.Kafka.Common.Security.Auth
             return IExecuteWithSignature<Java.Lang.String>("serviceName", "()Ljava/lang/String;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/security/auth/Login.html#login--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/security/auth/Login.html#login--"/>
         /// </summary>
         /// <returns><see cref="Javax.Security.Auth.Login.LoginContext"/></returns>
         /// <exception cref="Javax.Security.Auth.Login.LoginException"/>
@@ -128,7 +128,7 @@ namespace Org.Apache.Kafka.Common.Security.Auth
             return IExecuteWithSignature<Javax.Security.Auth.Login.LoginContext>("login", "()Ljavax/security/auth/login/LoginContext;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/security/auth/Login.html#subject--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/security/auth/Login.html#subject--"/>
         /// </summary>
         /// <returns><see cref="Javax.Security.Auth.Subject"/></returns>
         public Javax.Security.Auth.Subject Subject()
@@ -136,14 +136,14 @@ namespace Org.Apache.Kafka.Common.Security.Auth
             return IExecuteWithSignature<Javax.Security.Auth.Subject>("subject", "()Ljavax/security/auth/Subject;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/security/auth/Login.html#close--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/security/auth/Login.html#close--"/>
         /// </summary>
         public void Close()
         {
             IExecuteWithSignature("close", "()V");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/security/auth/Login.html#configure-java.util.Map-java.lang.String-javax.security.auth.login.Configuration-org.apache.kafka.common.security.auth.AuthenticateCallbackHandler-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/security/auth/Login.html#configure-java.util.Map-java.lang.String-javax.security.auth.login.Configuration-org.apache.kafka.common.security.auth.AuthenticateCallbackHandler-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <param name="arg1"><see cref="Java.Lang.String"/></param>

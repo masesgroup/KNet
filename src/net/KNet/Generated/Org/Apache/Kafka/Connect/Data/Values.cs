@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Connect.Data
 {
     #region Values declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.0/org/apache/kafka/connect/data/Values.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.0.0/org/apache/kafka/connect/data/Values.html"/>
     /// </summary>
     public partial class Values : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Values>
     {
@@ -87,7 +87,7 @@ namespace Org.Apache.Kafka.Connect.Data
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.0/org/apache/kafka/connect/data/Values.html#convertToBoolean-org.apache.kafka.connect.data.Schema-java.lang.Object-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.0.0/org/apache/kafka/connect/data/Values.html#convertToBoolean-org.apache.kafka.connect.data.Schema-java.lang.Object-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Connect.Data.Schema"/></param>
         /// <param name="arg1"><see cref="object"/></param>
@@ -98,7 +98,7 @@ namespace Org.Apache.Kafka.Connect.Data
             return SExecuteWithSignature<Java.Lang.Boolean>(LocalBridgeClazz, "convertToBoolean", "(Lorg/apache/kafka/connect/data/Schema;Ljava/lang/Object;)Ljava/lang/Boolean;", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.0/org/apache/kafka/connect/data/Values.html#convertToByte-org.apache.kafka.connect.data.Schema-java.lang.Object-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.0.0/org/apache/kafka/connect/data/Values.html#convertToByte-org.apache.kafka.connect.data.Schema-java.lang.Object-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Connect.Data.Schema"/></param>
         /// <param name="arg1"><see cref="object"/></param>
@@ -109,7 +109,7 @@ namespace Org.Apache.Kafka.Connect.Data
             return SExecuteWithSignature<Java.Lang.Byte>(LocalBridgeClazz, "convertToByte", "(Lorg/apache/kafka/connect/data/Schema;Ljava/lang/Object;)Ljava/lang/Byte;", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.0/org/apache/kafka/connect/data/Values.html#convertToDouble-org.apache.kafka.connect.data.Schema-java.lang.Object-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.0.0/org/apache/kafka/connect/data/Values.html#convertToDouble-org.apache.kafka.connect.data.Schema-java.lang.Object-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Connect.Data.Schema"/></param>
         /// <param name="arg1"><see cref="object"/></param>
@@ -120,7 +120,7 @@ namespace Org.Apache.Kafka.Connect.Data
             return SExecuteWithSignature<Java.Lang.Double>(LocalBridgeClazz, "convertToDouble", "(Lorg/apache/kafka/connect/data/Schema;Ljava/lang/Object;)Ljava/lang/Double;", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.0/org/apache/kafka/connect/data/Values.html#convertToFloat-org.apache.kafka.connect.data.Schema-java.lang.Object-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.0.0/org/apache/kafka/connect/data/Values.html#convertToFloat-org.apache.kafka.connect.data.Schema-java.lang.Object-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Connect.Data.Schema"/></param>
         /// <param name="arg1"><see cref="object"/></param>
@@ -131,7 +131,7 @@ namespace Org.Apache.Kafka.Connect.Data
             return SExecuteWithSignature<Java.Lang.Float>(LocalBridgeClazz, "convertToFloat", "(Lorg/apache/kafka/connect/data/Schema;Ljava/lang/Object;)Ljava/lang/Float;", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.0/org/apache/kafka/connect/data/Values.html#convertToInteger-org.apache.kafka.connect.data.Schema-java.lang.Object-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.0.0/org/apache/kafka/connect/data/Values.html#convertToInteger-org.apache.kafka.connect.data.Schema-java.lang.Object-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Connect.Data.Schema"/></param>
         /// <param name="arg1"><see cref="object"/></param>
@@ -142,7 +142,7 @@ namespace Org.Apache.Kafka.Connect.Data
             return SExecuteWithSignature<Java.Lang.Integer>(LocalBridgeClazz, "convertToInteger", "(Lorg/apache/kafka/connect/data/Schema;Ljava/lang/Object;)Ljava/lang/Integer;", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.0/org/apache/kafka/connect/data/Values.html#convertToLong-org.apache.kafka.connect.data.Schema-java.lang.Object-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.0.0/org/apache/kafka/connect/data/Values.html#convertToLong-org.apache.kafka.connect.data.Schema-java.lang.Object-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Connect.Data.Schema"/></param>
         /// <param name="arg1"><see cref="object"/></param>
@@ -153,7 +153,7 @@ namespace Org.Apache.Kafka.Connect.Data
             return SExecuteWithSignature<Java.Lang.Long>(LocalBridgeClazz, "convertToLong", "(Lorg/apache/kafka/connect/data/Schema;Ljava/lang/Object;)Ljava/lang/Long;", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.0/org/apache/kafka/connect/data/Values.html#convertToShort-org.apache.kafka.connect.data.Schema-java.lang.Object-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.0.0/org/apache/kafka/connect/data/Values.html#convertToShort-org.apache.kafka.connect.data.Schema-java.lang.Object-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Connect.Data.Schema"/></param>
         /// <param name="arg1"><see cref="object"/></param>
@@ -164,7 +164,7 @@ namespace Org.Apache.Kafka.Connect.Data
             return SExecuteWithSignature<Java.Lang.Short>(LocalBridgeClazz, "convertToShort", "(Lorg/apache/kafka/connect/data/Schema;Ljava/lang/Object;)Ljava/lang/Short;", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.0/org/apache/kafka/connect/data/Values.html#convertToString-org.apache.kafka.connect.data.Schema-java.lang.Object-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.0.0/org/apache/kafka/connect/data/Values.html#convertToString-org.apache.kafka.connect.data.Schema-java.lang.Object-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Connect.Data.Schema"/></param>
         /// <param name="arg1"><see cref="object"/></param>
@@ -174,7 +174,7 @@ namespace Org.Apache.Kafka.Connect.Data
             return SExecuteWithSignature<Java.Lang.String>(LocalBridgeClazz, "convertToString", "(Lorg/apache/kafka/connect/data/Schema;Ljava/lang/Object;)Ljava/lang/String;", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.0/org/apache/kafka/connect/data/Values.html#convertToDecimal-org.apache.kafka.connect.data.Schema-java.lang.Object-int-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.0.0/org/apache/kafka/connect/data/Values.html#convertToDecimal-org.apache.kafka.connect.data.Schema-java.lang.Object-int-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Connect.Data.Schema"/></param>
         /// <param name="arg1"><see cref="object"/></param>
@@ -185,7 +185,7 @@ namespace Org.Apache.Kafka.Connect.Data
             return SExecuteWithSignature<Java.Math.BigDecimal>(LocalBridgeClazz, "convertToDecimal", "(Lorg/apache/kafka/connect/data/Schema;Ljava/lang/Object;I)Ljava/math/BigDecimal;", arg0, arg1, arg2);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.0/org/apache/kafka/connect/data/Values.html#dateFormatFor-java.util.Date-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.0.0/org/apache/kafka/connect/data/Values.html#dateFormatFor-java.util.Date-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Date"/></param>
         /// <returns><see cref="Java.Text.DateFormat"/></returns>
@@ -194,7 +194,7 @@ namespace Org.Apache.Kafka.Connect.Data
             return SExecuteWithSignature<Java.Text.DateFormat>(LocalBridgeClazz, "dateFormatFor", "(Ljava/util/Date;)Ljava/text/DateFormat;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.0/org/apache/kafka/connect/data/Values.html#convertToDate-org.apache.kafka.connect.data.Schema-java.lang.Object-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.0.0/org/apache/kafka/connect/data/Values.html#convertToDate-org.apache.kafka.connect.data.Schema-java.lang.Object-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Connect.Data.Schema"/></param>
         /// <param name="arg1"><see cref="object"/></param>
@@ -204,7 +204,7 @@ namespace Org.Apache.Kafka.Connect.Data
             return SExecuteWithSignature<Java.Util.Date>(LocalBridgeClazz, "convertToDate", "(Lorg/apache/kafka/connect/data/Schema;Ljava/lang/Object;)Ljava/util/Date;", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.0/org/apache/kafka/connect/data/Values.html#convertToTime-org.apache.kafka.connect.data.Schema-java.lang.Object-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.0.0/org/apache/kafka/connect/data/Values.html#convertToTime-org.apache.kafka.connect.data.Schema-java.lang.Object-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Connect.Data.Schema"/></param>
         /// <param name="arg1"><see cref="object"/></param>
@@ -214,7 +214,7 @@ namespace Org.Apache.Kafka.Connect.Data
             return SExecuteWithSignature<Java.Util.Date>(LocalBridgeClazz, "convertToTime", "(Lorg/apache/kafka/connect/data/Schema;Ljava/lang/Object;)Ljava/util/Date;", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.0/org/apache/kafka/connect/data/Values.html#convertToTimestamp-org.apache.kafka.connect.data.Schema-java.lang.Object-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.0.0/org/apache/kafka/connect/data/Values.html#convertToTimestamp-org.apache.kafka.connect.data.Schema-java.lang.Object-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Connect.Data.Schema"/></param>
         /// <param name="arg1"><see cref="object"/></param>
@@ -224,7 +224,7 @@ namespace Org.Apache.Kafka.Connect.Data
             return SExecuteWithSignature<Java.Util.Date>(LocalBridgeClazz, "convertToTimestamp", "(Lorg/apache/kafka/connect/data/Schema;Ljava/lang/Object;)Ljava/util/Date;", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.0/org/apache/kafka/connect/data/Values.html#convertToList-org.apache.kafka.connect.data.Schema-java.lang.Object-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.0.0/org/apache/kafka/connect/data/Values.html#convertToList-org.apache.kafka.connect.data.Schema-java.lang.Object-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Connect.Data.Schema"/></param>
         /// <param name="arg1"><see cref="object"/></param>
@@ -234,7 +234,7 @@ namespace Org.Apache.Kafka.Connect.Data
             return SExecuteWithSignature<Java.Util.List<object>>(LocalBridgeClazz, "convertToList", "(Lorg/apache/kafka/connect/data/Schema;Ljava/lang/Object;)Ljava/util/List;", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.0/org/apache/kafka/connect/data/Values.html#convertToMap-org.apache.kafka.connect.data.Schema-java.lang.Object-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.0.0/org/apache/kafka/connect/data/Values.html#convertToMap-org.apache.kafka.connect.data.Schema-java.lang.Object-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Connect.Data.Schema"/></param>
         /// <param name="arg1"><see cref="object"/></param>
@@ -244,7 +244,7 @@ namespace Org.Apache.Kafka.Connect.Data
             return SExecuteWithSignature<Java.Util.Map<object, object>>(LocalBridgeClazz, "convertToMap", "(Lorg/apache/kafka/connect/data/Schema;Ljava/lang/Object;)Ljava/util/Map;", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.0/org/apache/kafka/connect/data/Values.html#inferSchema-java.lang.Object-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.0.0/org/apache/kafka/connect/data/Values.html#inferSchema-java.lang.Object-"/>
         /// </summary>
         /// <param name="arg0"><see cref="object"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Connect.Data.Schema"/></returns>
@@ -253,7 +253,7 @@ namespace Org.Apache.Kafka.Connect.Data
             return SExecuteWithSignature<Org.Apache.Kafka.Connect.Data.Schema>(LocalBridgeClazz, "inferSchema", "(Ljava/lang/Object;)Lorg/apache/kafka/connect/data/Schema;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.0/org/apache/kafka/connect/data/Values.html#parseString-java.lang.String-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.0.0/org/apache/kafka/connect/data/Values.html#parseString-java.lang.String-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Connect.Data.SchemaAndValue"/></returns>
@@ -262,7 +262,7 @@ namespace Org.Apache.Kafka.Connect.Data
             return SExecuteWithSignature<Org.Apache.Kafka.Connect.Data.SchemaAndValue>(LocalBridgeClazz, "parseString", "(Ljava/lang/String;)Lorg/apache/kafka/connect/data/SchemaAndValue;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.0/org/apache/kafka/connect/data/Values.html#convertToStruct-org.apache.kafka.connect.data.Schema-java.lang.Object-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.0.0/org/apache/kafka/connect/data/Values.html#convertToStruct-org.apache.kafka.connect.data.Schema-java.lang.Object-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Connect.Data.Schema"/></param>
         /// <param name="arg1"><see cref="object"/></param>

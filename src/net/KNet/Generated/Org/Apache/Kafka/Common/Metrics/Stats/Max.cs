@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common.Metrics.Stats
 {
     #region Max declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/metrics/stats/Max.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/metrics/stats/Max.html"/>
     /// </summary>
     public partial class Max : Org.Apache.Kafka.Common.Metrics.Stats.SampledStat
     {

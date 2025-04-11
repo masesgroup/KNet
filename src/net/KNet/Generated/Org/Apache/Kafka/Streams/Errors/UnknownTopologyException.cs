@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Streams.Errors
 {
     #region UnknownTopologyException declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.0/org/apache/kafka/streams/errors/UnknownTopologyException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/errors/UnknownTopologyException.html"/>
     /// </summary>
     public partial class UnknownTopologyException : Org.Apache.Kafka.Streams.Errors.StreamsException
     {

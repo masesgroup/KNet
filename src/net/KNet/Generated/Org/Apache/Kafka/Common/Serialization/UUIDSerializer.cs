@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common.Serialization
 {
     #region UUIDSerializer declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/serialization/UUIDSerializer.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/serialization/UUIDSerializer.html"/>
     /// </summary>
     public partial class UUIDSerializer : MASES.JCOBridge.C2JBridge.JVMBridgeBase<UUIDSerializer>
     {
@@ -95,7 +95,7 @@ namespace Org.Apache.Kafka.Common.Serialization
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/serialization/UUIDSerializer.html#serialize-java.lang.String-java.lang.Object-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/serialization/UUIDSerializer.html#serialize-java.lang.String-java.lang.Object-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="object"/></param>
@@ -105,7 +105,7 @@ namespace Org.Apache.Kafka.Common.Serialization
             return IExecuteWithSignatureArray<byte>("serialize", "(Ljava/lang/String;Ljava/lang/Object;)[B", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/serialization/UUIDSerializer.html#serialize-java.lang.String-java.util.UUID-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/serialization/UUIDSerializer.html#serialize-java.lang.String-java.util.UUID-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Java.Util.UUID"/></param>
@@ -115,7 +115,7 @@ namespace Org.Apache.Kafka.Common.Serialization
             return IExecuteWithSignatureArray<byte>("serialize", "(Ljava/lang/String;Ljava/util/UUID;)[B", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/serialization/UUIDSerializer.html#configure-java.util.Map-boolean-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/serialization/UUIDSerializer.html#configure-java.util.Map-boolean-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <param name="arg1"><see cref="bool"/></param>

@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Tools.Api
 {
     #region StringDecoder declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools-api/3.9.0/org/apache/kafka/tools/api/StringDecoder.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools-api/4.0.0/org/apache/kafka/tools/api/StringDecoder.html"/>
     /// </summary>
     public partial class StringDecoder : Org.Apache.Kafka.Tools.Api.Decoder<Java.Lang.String>
     {
@@ -91,7 +91,7 @@ namespace Org.Apache.Kafka.Tools.Api
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools-api/3.9.0/org/apache/kafka/tools/api/StringDecoder.html#fromBytes-byte[]-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools-api/4.0.0/org/apache/kafka/tools/api/StringDecoder.html#fromBytes-byte[]-"/>
         /// </summary>
         /// <param name="arg0"><see cref="byte"/></param>
         /// <returns><see cref="object"/></returns>

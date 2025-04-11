@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common
 {
     #region MetricNameTemplate declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/MetricNameTemplate.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/MetricNameTemplate.html"/>
     /// </summary>
     public partial class MetricNameTemplate : MASES.JCOBridge.C2JBridge.JVMBridgeBase<MetricNameTemplate>
     {
@@ -75,7 +75,7 @@ namespace Org.Apache.Kafka.Common
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/MetricNameTemplate.html#org.apache.kafka.common.MetricNameTemplate(java.lang.String,java.lang.String,java.lang.String,java.lang.String[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/MetricNameTemplate.html#org.apache.kafka.common.MetricNameTemplate(java.lang.String,java.lang.String,java.lang.String,java.lang.String[])"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Java.Lang.String"/></param>
@@ -86,7 +86,7 @@ namespace Org.Apache.Kafka.Common
         {
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/MetricNameTemplate.html#org.apache.kafka.common.MetricNameTemplate(java.lang.String,java.lang.String,java.lang.String,java.util.Set)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/MetricNameTemplate.html#org.apache.kafka.common.MetricNameTemplate(java.lang.String,java.lang.String,java.lang.String,java.util.Set)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Java.Lang.String"/></param>
@@ -113,7 +113,7 @@ namespace Org.Apache.Kafka.Common
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/MetricNameTemplate.html#description--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/MetricNameTemplate.html#description--"/>
         /// </summary>
         /// <returns><see cref="Java.Lang.String"/></returns>
         public Java.Lang.String Description()
@@ -121,7 +121,7 @@ namespace Org.Apache.Kafka.Common
             return IExecuteWithSignature<Java.Lang.String>("description", "()Ljava/lang/String;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/MetricNameTemplate.html#group--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/MetricNameTemplate.html#group--"/>
         /// </summary>
         /// <returns><see cref="Java.Lang.String"/></returns>
         public Java.Lang.String Group()
@@ -129,7 +129,7 @@ namespace Org.Apache.Kafka.Common
             return IExecuteWithSignature<Java.Lang.String>("group", "()Ljava/lang/String;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/MetricNameTemplate.html#name--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/MetricNameTemplate.html#name--"/>
         /// </summary>
         /// <returns><see cref="Java.Lang.String"/></returns>
         public Java.Lang.String Name()
@@ -137,7 +137,7 @@ namespace Org.Apache.Kafka.Common
             return IExecuteWithSignature<Java.Lang.String>("name", "()Ljava/lang/String;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/MetricNameTemplate.html#tags--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/MetricNameTemplate.html#tags--"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Set"/></returns>
         public Java.Util.Set<Java.Lang.String> Tags()

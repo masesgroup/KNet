@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Raft
 {
     #region ExternalKRaftMetrics declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.0/org/apache/kafka/raft/ExternalKRaftMetrics.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/ExternalKRaftMetrics.html"/>
     /// </summary>
     public partial class ExternalKRaftMetrics : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ExternalKRaftMetrics>
     {
@@ -111,7 +111,7 @@ namespace Org.Apache.Kafka.Raft
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.0/org/apache/kafka/raft/ExternalKRaftMetrics.html#setIgnoredStaticVoters-boolean-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/ExternalKRaftMetrics.html#setIgnoredStaticVoters-boolean-"/>
         /// </summary>
         /// <param name="arg0"><see cref="bool"/></param>
         public void SetIgnoredStaticVoters(bool arg0)

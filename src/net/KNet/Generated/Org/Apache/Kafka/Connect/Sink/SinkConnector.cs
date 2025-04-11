@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Connect.Sink
 {
     #region SinkConnector declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.0/org/apache/kafka/connect/sink/SinkConnector.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.0.0/org/apache/kafka/connect/sink/SinkConnector.html"/>
     /// </summary>
     public partial class SinkConnector : Org.Apache.Kafka.Connect.Connector.Connector
     {
@@ -85,7 +85,7 @@ namespace Org.Apache.Kafka.Connect.Sink
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.0/org/apache/kafka/connect/sink/SinkConnector.html#TOPICS_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.0.0/org/apache/kafka/connect/sink/SinkConnector.html#TOPICS_CONFIG"/>
         /// </summary>
         public static Java.Lang.String TOPICS_CONFIG { get { if (!_TOPICS_CONFIGReady) { _TOPICS_CONFIGContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "TOPICS_CONFIG"); _TOPICS_CONFIGReady = true; } return _TOPICS_CONFIGContent; } }
         private static Java.Lang.String _TOPICS_CONFIGContent = default;
@@ -99,7 +99,7 @@ namespace Org.Apache.Kafka.Connect.Sink
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.0/org/apache/kafka/connect/sink/SinkConnector.html#alterOffsets-java.util.Map-java.util.Map-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.0.0/org/apache/kafka/connect/sink/SinkConnector.html#alterOffsets-java.util.Map-java.util.Map-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <param name="arg1"><see cref="Java.Util.Map"/></param>

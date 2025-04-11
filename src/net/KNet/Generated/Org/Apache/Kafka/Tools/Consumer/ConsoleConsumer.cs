@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Tools.Consumer
 {
     #region ConsoleConsumer declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.9.0/org/apache/kafka/tools/consumer/ConsoleConsumer.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/consumer/ConsoleConsumer.html"/>
     /// </summary>
     public partial class ConsoleConsumer : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ConsoleConsumer>, MASES.JCOBridge.C2JBridge.IJVMBridgeMain
     {
@@ -68,7 +68,7 @@ namespace Org.Apache.Kafka.Tools.Consumer
         // TODO: complete the class
         #region ConsumerWrapper declaration
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.9.0/org/apache/kafka/tools/consumer/ConsoleConsumer.ConsumerWrapper.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/consumer/ConsoleConsumer.ConsumerWrapper.html"/>
         /// </summary>
         public partial class ConsumerWrapper : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ConsumerWrapper>
         {
@@ -132,7 +132,7 @@ namespace Org.Apache.Kafka.Tools.Consumer
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.9.0/org/apache/kafka/tools/consumer/ConsoleConsumer.html#main-java.lang.String[]-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/consumer/ConsoleConsumer.html#main-java.lang.String[]-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <exception cref="Java.Lang.Exception"/>
@@ -141,7 +141,7 @@ namespace Org.Apache.Kafka.Tools.Consumer
             SExecuteWithSignature(LocalBridgeClazz, "main", "([Ljava/lang/String;)V", new object[] { arg0 });
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.9.0/org/apache/kafka/tools/consumer/ConsoleConsumer.html#run-org.apache.kafka.tools.consumer.ConsoleConsumerOptions-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/consumer/ConsoleConsumer.html#run-org.apache.kafka.tools.consumer.ConsoleConsumerOptions-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Tools.Consumer.ConsoleConsumerOptions"/></param>
         public static void Run(Org.Apache.Kafka.Tools.Consumer.ConsoleConsumerOptions arg0)
@@ -161,7 +161,7 @@ namespace Org.Apache.Kafka.Tools.Consumer
         {
             #region Constructors
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.9.0/org/apache/kafka/tools/consumer/ConsoleConsumer.ConsumerWrapper.html#org.apache.kafka.tools.consumer.ConsoleConsumer$ConsumerWrapper(org.apache.kafka.tools.consumer.ConsoleConsumerOptions,org.apache.kafka.clients.consumer.Consumer)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/consumer/ConsoleConsumer.ConsumerWrapper.html#org.apache.kafka.tools.consumer.ConsoleConsumer$ConsumerWrapper(org.apache.kafka.tools.consumer.ConsoleConsumerOptions,org.apache.kafka.clients.consumer.Consumer)"/>
             /// </summary>
             /// <param name="arg0"><see cref="Org.Apache.Kafka.Tools.Consumer.ConsoleConsumerOptions"/></param>
             /// <param name="arg1"><see cref="Org.Apache.Kafka.Clients.Consumer.Consumer"/></param>

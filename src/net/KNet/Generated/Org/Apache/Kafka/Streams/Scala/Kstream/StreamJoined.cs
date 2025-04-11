@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Streams.Scala.Kstream
 {
     #region StreamJoined declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/3.9.0/org/apache/kafka/streams/scala/kstream/StreamJoined.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/kstream/StreamJoined.html"/>
     /// </summary>
     public partial class StreamJoined : MASES.JCOBridge.C2JBridge.JVMBridgeBase<StreamJoined>
     {
@@ -87,7 +87,7 @@ namespace Org.Apache.Kafka.Streams.Scala.Kstream
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/3.9.0/org/apache/kafka/streams/scala/kstream/StreamJoined.html#as-java.lang.String-org.apache.kafka.common.serialization.Serde-org.apache.kafka.common.serialization.Serde-org.apache.kafka.common.serialization.Serde-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/kstream/StreamJoined.html#as-java.lang.String-org.apache.kafka.common.serialization.Serde-org.apache.kafka.common.serialization.Serde-org.apache.kafka.common.serialization.Serde-"/>
         /// </summary>
         /// <param name="storeName"><see cref="Java.Lang.String"/></param>
         /// <param name="keySerde"><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></param>
@@ -102,7 +102,7 @@ namespace Org.Apache.Kafka.Streams.Scala.Kstream
             return SExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.StreamJoined<K, V, VO>>(LocalBridgeClazz, "as", "(Ljava/lang/String;Lorg/apache/kafka/common/serialization/Serde;Lorg/apache/kafka/common/serialization/Serde;Lorg/apache/kafka/common/serialization/Serde;)Lorg/apache/kafka/streams/kstream/StreamJoined;", storeName, keySerde, valueSerde, otherValueSerde);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/3.9.0/org/apache/kafka/streams/scala/kstream/StreamJoined.html#with-org.apache.kafka.common.serialization.Serde-org.apache.kafka.common.serialization.Serde-org.apache.kafka.common.serialization.Serde-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/kstream/StreamJoined.html#with-org.apache.kafka.common.serialization.Serde-org.apache.kafka.common.serialization.Serde-org.apache.kafka.common.serialization.Serde-"/>
         /// </summary>
         /// <param name="keySerde"><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></param>
         /// <param name="valueSerde"><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></param>
@@ -116,7 +116,7 @@ namespace Org.Apache.Kafka.Streams.Scala.Kstream
             return SExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.StreamJoined<K, V, VO>>(LocalBridgeClazz, "with", "(Lorg/apache/kafka/common/serialization/Serde;Lorg/apache/kafka/common/serialization/Serde;Lorg/apache/kafka/common/serialization/Serde;)Lorg/apache/kafka/streams/kstream/StreamJoined;", keySerde, valueSerde, otherValueSerde);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/3.9.0/org/apache/kafka/streams/scala/kstream/StreamJoined.html#with-org.apache.kafka.streams.state.WindowBytesStoreSupplier-org.apache.kafka.streams.state.WindowBytesStoreSupplier-org.apache.kafka.common.serialization.Serde-org.apache.kafka.common.serialization.Serde-org.apache.kafka.common.serialization.Serde-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/kstream/StreamJoined.html#with-org.apache.kafka.streams.state.WindowBytesStoreSupplier-org.apache.kafka.streams.state.WindowBytesStoreSupplier-org.apache.kafka.common.serialization.Serde-org.apache.kafka.common.serialization.Serde-org.apache.kafka.common.serialization.Serde-"/>
         /// </summary>
         /// <param name="supplier"><see cref="Org.Apache.Kafka.Streams.State.WindowBytesStoreSupplier"/></param>
         /// <param name="otherSupplier"><see cref="Org.Apache.Kafka.Streams.State.WindowBytesStoreSupplier"/></param>

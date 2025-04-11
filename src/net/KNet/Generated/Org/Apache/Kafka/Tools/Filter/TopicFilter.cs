@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Tools.Filter
 {
     #region TopicFilter declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.9.0/org/apache/kafka/tools/filter/TopicFilter.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/filter/TopicFilter.html"/>
     /// </summary>
     public partial class TopicFilter : MASES.JCOBridge.C2JBridge.JVMBridgeBase<TopicFilter>
     {
@@ -70,7 +70,7 @@ namespace Org.Apache.Kafka.Tools.Filter
         // TODO: complete the class
         #region IncludeList declaration
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.9.0/org/apache/kafka/tools/filter/TopicFilter.IncludeList.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/filter/TopicFilter.IncludeList.html"/>
         /// </summary>
         public partial class IncludeList : Org.Apache.Kafka.Tools.Filter.TopicFilter
         {
@@ -122,7 +122,7 @@ namespace Org.Apache.Kafka.Tools.Filter
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.9.0/org/apache/kafka/tools/filter/TopicFilter.html#org.apache.kafka.tools.filter.TopicFilter(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/filter/TopicFilter.html#org.apache.kafka.tools.filter.TopicFilter(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         public TopicFilter(Java.Lang.String arg0)
@@ -146,14 +146,14 @@ namespace Org.Apache.Kafka.Tools.Filter
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.9.0/org/apache/kafka/tools/filter/TopicFilter.html#getPattern--"/> 
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/filter/TopicFilter.html#getPattern--"/> 
         /// </summary>
         public Java.Util.Regex.Pattern Pattern
         {
             get { return IExecuteWithSignature<Java.Util.Regex.Pattern>("getPattern", "()Ljava/util/regex/Pattern;"); }
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.9.0/org/apache/kafka/tools/filter/TopicFilter.html#isTopicAllowed-java.lang.String-boolean-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/filter/TopicFilter.html#isTopicAllowed-java.lang.String-boolean-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="bool"/></param>
@@ -171,7 +171,7 @@ namespace Org.Apache.Kafka.Tools.Filter
         {
             #region Constructors
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.9.0/org/apache/kafka/tools/filter/TopicFilter.IncludeList.html#org.apache.kafka.tools.filter.TopicFilter$IncludeList(java.lang.String)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/filter/TopicFilter.IncludeList.html#org.apache.kafka.tools.filter.TopicFilter$IncludeList(java.lang.String)"/>
             /// </summary>
             /// <param name="arg0"><see cref="Java.Lang.String"/></param>
             public IncludeList(Java.Lang.String arg0)

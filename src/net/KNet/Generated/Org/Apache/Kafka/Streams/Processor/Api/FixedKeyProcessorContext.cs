@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
 {
     #region FixedKeyProcessorContext declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.0/org/apache/kafka/streams/processor/api/FixedKeyProcessorContext.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/api/FixedKeyProcessorContext.html"/>
     /// </summary>
     public partial class FixedKeyProcessorContext : Org.Apache.Kafka.Streams.Processor.Api.ProcessingContext
     {
@@ -74,7 +74,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
 
     #region FixedKeyProcessorContext<KForward, VForward> declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.0/org/apache/kafka/streams/processor/api/FixedKeyProcessorContext.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/api/FixedKeyProcessorContext.html"/>
     /// </summary>
     /// <typeparam name="KForward"></typeparam>
     /// <typeparam name="VForward"></typeparam>
@@ -142,7 +142,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.0/org/apache/kafka/streams/processor/api/FixedKeyProcessorContext.html#forward-org.apache.kafka.streams.processor.api.FixedKeyRecord-java.lang.String-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/api/FixedKeyProcessorContext.html#forward-org.apache.kafka.streams.processor.api.FixedKeyRecord-java.lang.String-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Processor.Api.FixedKeyRecord"/></param>
         /// <param name="arg1"><see cref="Java.Lang.String"/></param>
@@ -151,7 +151,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
             IExecuteWithSignature("forward", "(Lorg/apache/kafka/streams/processor/api/FixedKeyRecord;Ljava/lang/String;)V", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.0/org/apache/kafka/streams/processor/api/FixedKeyProcessorContext.html#forward-org.apache.kafka.streams.processor.api.FixedKeyRecord-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/api/FixedKeyProcessorContext.html#forward-org.apache.kafka.streams.processor.api.FixedKeyRecord-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Processor.Api.FixedKeyRecord"/></param>
         public void Forward(Org.Apache.Kafka.Streams.Processor.Api.FixedKeyRecord arg0)
@@ -212,7 +212,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.0/org/apache/kafka/streams/processor/api/FixedKeyProcessorContext.html#forward-org.apache.kafka.streams.processor.api.FixedKeyRecord-java.lang.String-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/api/FixedKeyProcessorContext.html#forward-org.apache.kafka.streams.processor.api.FixedKeyRecord-java.lang.String-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Processor.Api.FixedKeyRecord"/></param>
         /// <param name="arg1"><see cref="Java.Lang.String"/></param>
@@ -223,7 +223,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
             IExecuteWithSignature("forward", "(Lorg/apache/kafka/streams/processor/api/FixedKeyRecord;Ljava/lang/String;)V", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.0/org/apache/kafka/streams/processor/api/FixedKeyProcessorContext.html#forward-org.apache.kafka.streams.processor.api.FixedKeyRecord-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/api/FixedKeyProcessorContext.html#forward-org.apache.kafka.streams.processor.api.FixedKeyRecord-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Processor.Api.FixedKeyRecord"/></param>
         /// <typeparam name="K"><typeparamref name="KForward"/></typeparam>

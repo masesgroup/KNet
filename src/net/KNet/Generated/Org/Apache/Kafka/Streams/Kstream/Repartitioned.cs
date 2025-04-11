@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 {
     #region Repartitioned declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.0/org/apache/kafka/streams/kstream/Repartitioned.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/Repartitioned.html"/>
     /// </summary>
     public partial class Repartitioned : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Repartitioned>
     {
@@ -72,7 +72,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
     #region Repartitioned<K, V> declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.0/org/apache/kafka/streams/kstream/Repartitioned.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/Repartitioned.html"/>
     /// </summary>
     /// <typeparam name="K"></typeparam>
     /// <typeparam name="V"></typeparam>
@@ -134,7 +134,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.0/org/apache/kafka/streams/kstream/Repartitioned.html#as-java.lang.String-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/Repartitioned.html#as-java.lang.String-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.Repartitioned"/></returns>
@@ -143,7 +143,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
             return SExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.Repartitioned>(LocalBridgeClazz, "as", "(Ljava/lang/String;)Lorg/apache/kafka/streams/kstream/Repartitioned;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.0/org/apache/kafka/streams/kstream/Repartitioned.html#numberOfPartitions-int-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/Repartitioned.html#numberOfPartitions-int-"/>
         /// </summary>
         /// <param name="arg0"><see cref="int"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.Repartitioned"/></returns>
@@ -152,7 +152,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
             return SExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.Repartitioned>(LocalBridgeClazz, "numberOfPartitions", "(I)Lorg/apache/kafka/streams/kstream/Repartitioned;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.0/org/apache/kafka/streams/kstream/Repartitioned.html#streamPartitioner-org.apache.kafka.streams.processor.StreamPartitioner-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/Repartitioned.html#streamPartitioner-org.apache.kafka.streams.processor.StreamPartitioner-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Processor.StreamPartitioner"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.Repartitioned"/></returns>
@@ -161,7 +161,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
             return SExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.Repartitioned>(LocalBridgeClazz, "streamPartitioner", "(Lorg/apache/kafka/streams/processor/StreamPartitioner;)Lorg/apache/kafka/streams/kstream/Repartitioned;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.0/org/apache/kafka/streams/kstream/Repartitioned.html#with-org.apache.kafka.common.serialization.Serde-org.apache.kafka.common.serialization.Serde-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/Repartitioned.html#with-org.apache.kafka.common.serialization.Serde-org.apache.kafka.common.serialization.Serde-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></param>
@@ -175,7 +175,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.0/org/apache/kafka/streams/kstream/Repartitioned.html#withKeySerde-org.apache.kafka.common.serialization.Serde-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/Repartitioned.html#withKeySerde-org.apache.kafka.common.serialization.Serde-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.Repartitioned"/></returns>
@@ -184,7 +184,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.Repartitioned>("withKeySerde", "(Lorg/apache/kafka/common/serialization/Serde;)Lorg/apache/kafka/streams/kstream/Repartitioned;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.0/org/apache/kafka/streams/kstream/Repartitioned.html#withNumberOfPartitions-int-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/Repartitioned.html#withNumberOfPartitions-int-"/>
         /// </summary>
         /// <param name="arg0"><see cref="int"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.Repartitioned"/></returns>
@@ -193,7 +193,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.Repartitioned>("withNumberOfPartitions", "(I)Lorg/apache/kafka/streams/kstream/Repartitioned;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.0/org/apache/kafka/streams/kstream/Repartitioned.html#withStreamPartitioner-org.apache.kafka.streams.processor.StreamPartitioner-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/Repartitioned.html#withStreamPartitioner-org.apache.kafka.streams.processor.StreamPartitioner-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Processor.StreamPartitioner"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.Repartitioned"/></returns>
@@ -202,7 +202,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.Repartitioned>("withStreamPartitioner", "(Lorg/apache/kafka/streams/processor/StreamPartitioner;)Lorg/apache/kafka/streams/kstream/Repartitioned;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.0/org/apache/kafka/streams/kstream/Repartitioned.html#withValueSerde-org.apache.kafka.common.serialization.Serde-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/Repartitioned.html#withValueSerde-org.apache.kafka.common.serialization.Serde-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.Repartitioned"/></returns>
@@ -242,7 +242,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.0/org/apache/kafka/streams/kstream/Repartitioned.html#as-java.lang.String-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/Repartitioned.html#as-java.lang.String-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.Repartitioned"/></returns>
@@ -251,7 +251,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
             return SExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.Repartitioned<K, V>>(LocalBridgeClazz, "as", "(Ljava/lang/String;)Lorg/apache/kafka/streams/kstream/Repartitioned;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.0/org/apache/kafka/streams/kstream/Repartitioned.html#numberOfPartitions-int-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/Repartitioned.html#numberOfPartitions-int-"/>
         /// </summary>
         /// <param name="arg0"><see cref="int"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.Repartitioned"/></returns>
@@ -260,7 +260,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
             return SExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.Repartitioned<K, V>>(LocalBridgeClazz, "numberOfPartitions", "(I)Lorg/apache/kafka/streams/kstream/Repartitioned;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.0/org/apache/kafka/streams/kstream/Repartitioned.html#streamPartitioner-org.apache.kafka.streams.processor.StreamPartitioner-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/Repartitioned.html#streamPartitioner-org.apache.kafka.streams.processor.StreamPartitioner-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Processor.StreamPartitioner"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.Repartitioned"/></returns>
@@ -269,7 +269,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
             return SExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.Repartitioned<K, V>>(LocalBridgeClazz, "streamPartitioner", "(Lorg/apache/kafka/streams/processor/StreamPartitioner;)Lorg/apache/kafka/streams/kstream/Repartitioned;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.0/org/apache/kafka/streams/kstream/Repartitioned.html#with-org.apache.kafka.common.serialization.Serde-org.apache.kafka.common.serialization.Serde-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/Repartitioned.html#with-org.apache.kafka.common.serialization.Serde-org.apache.kafka.common.serialization.Serde-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></param>
@@ -283,7 +283,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.0/org/apache/kafka/streams/kstream/Repartitioned.html#withKeySerde-org.apache.kafka.common.serialization.Serde-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/Repartitioned.html#withKeySerde-org.apache.kafka.common.serialization.Serde-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.Repartitioned"/></returns>
@@ -292,7 +292,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.Repartitioned<K, V>>("withKeySerde", "(Lorg/apache/kafka/common/serialization/Serde;)Lorg/apache/kafka/streams/kstream/Repartitioned;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.0/org/apache/kafka/streams/kstream/Repartitioned.html#withNumberOfPartitions-int-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/Repartitioned.html#withNumberOfPartitions-int-"/>
         /// </summary>
         /// <param name="arg0"><see cref="int"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.Repartitioned"/></returns>
@@ -301,7 +301,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.Repartitioned<K, V>>("withNumberOfPartitions", "(I)Lorg/apache/kafka/streams/kstream/Repartitioned;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.0/org/apache/kafka/streams/kstream/Repartitioned.html#withStreamPartitioner-org.apache.kafka.streams.processor.StreamPartitioner-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/Repartitioned.html#withStreamPartitioner-org.apache.kafka.streams.processor.StreamPartitioner-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Processor.StreamPartitioner"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.Repartitioned"/></returns>
@@ -310,7 +310,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.Repartitioned<K, V>>("withStreamPartitioner", "(Lorg/apache/kafka/streams/processor/StreamPartitioner;)Lorg/apache/kafka/streams/kstream/Repartitioned;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.0/org/apache/kafka/streams/kstream/Repartitioned.html#withValueSerde-org.apache.kafka.common.serialization.Serde-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/Repartitioned.html#withValueSerde-org.apache.kafka.common.serialization.Serde-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.Repartitioned"/></returns>

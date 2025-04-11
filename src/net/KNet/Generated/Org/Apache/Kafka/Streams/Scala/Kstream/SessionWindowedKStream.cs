@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Streams.Scala.Kstream
 {
     #region SessionWindowedKStream declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/3.9.0/org/apache/kafka/streams/scala/kstream/SessionWindowedKStream.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/kstream/SessionWindowedKStream.html"/>
     /// </summary>
     public partial class SessionWindowedKStream : MASES.JCOBridge.C2JBridge.JVMBridgeBase<SessionWindowedKStream>
     {
@@ -72,7 +72,7 @@ namespace Org.Apache.Kafka.Streams.Scala.Kstream
 
     #region SessionWindowedKStream<K, V> declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/3.9.0/org/apache/kafka/streams/scala/kstream/SessionWindowedKStream.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/kstream/SessionWindowedKStream.html"/>
     /// </summary>
     /// <typeparam name="K"></typeparam>
     /// <typeparam name="V"></typeparam>
@@ -122,7 +122,7 @@ namespace Org.Apache.Kafka.Streams.Scala.Kstream
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/3.9.0/org/apache/kafka/streams/scala/kstream/SessionWindowedKStream.html#org.apache.kafka.streams.scala.kstream.SessionWindowedKStream(org.apache.kafka.streams.kstream.SessionWindowedKStream)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/kstream/SessionWindowedKStream.html#org.apache.kafka.streams.scala.kstream.SessionWindowedKStream(org.apache.kafka.streams.kstream.SessionWindowedKStream)"/>
         /// </summary>
         /// <param name="inner"><see cref="Org.Apache.Kafka.Streams.Kstream.SessionWindowedKStream"/></param>
         public SessionWindowedKStream(Org.Apache.Kafka.Streams.Kstream.SessionWindowedKStream inner)
@@ -146,7 +146,7 @@ namespace Org.Apache.Kafka.Streams.Scala.Kstream
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/3.9.0/org/apache/kafka/streams/scala/kstream/SessionWindowedKStream.html#inner--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/kstream/SessionWindowedKStream.html#inner--"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.SessionWindowedKStream"/></returns>
         public Org.Apache.Kafka.Streams.Kstream.SessionWindowedKStream Inner()
@@ -154,7 +154,7 @@ namespace Org.Apache.Kafka.Streams.Scala.Kstream
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.SessionWindowedKStream>("inner", "()Lorg/apache/kafka/streams/kstream/SessionWindowedKStream;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/3.9.0/org/apache/kafka/streams/scala/kstream/SessionWindowedKStream.html#count-org.apache.kafka.streams.kstream.Materialized-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/kstream/SessionWindowedKStream.html#count-org.apache.kafka.streams.kstream.Materialized-"/>
         /// </summary>
         /// <param name="materialized"><see cref="Org.Apache.Kafka.Streams.Kstream.Materialized"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Scala.Kstream.KTable"/></returns>
@@ -163,7 +163,7 @@ namespace Org.Apache.Kafka.Streams.Scala.Kstream
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.Scala.Kstream.KTable>("count", "(Lorg/apache/kafka/streams/kstream/Materialized;)Lorg/apache/kafka/streams/scala/kstream/KTable;", materialized);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/3.9.0/org/apache/kafka/streams/scala/kstream/SessionWindowedKStream.html#count-org.apache.kafka.streams.kstream.Named-org.apache.kafka.streams.kstream.Materialized-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/kstream/SessionWindowedKStream.html#count-org.apache.kafka.streams.kstream.Named-org.apache.kafka.streams.kstream.Materialized-"/>
         /// </summary>
         /// <param name="named"><see cref="Org.Apache.Kafka.Streams.Kstream.Named"/></param>
         /// <param name="materialized"><see cref="Org.Apache.Kafka.Streams.Kstream.Materialized"/></param>
@@ -188,7 +188,7 @@ namespace Org.Apache.Kafka.Streams.Scala.Kstream
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/3.9.0/org/apache/kafka/streams/scala/kstream/SessionWindowedKStream.html#org.apache.kafka.streams.scala.kstream.SessionWindowedKStream(org.apache.kafka.streams.kstream.SessionWindowedKStream)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/kstream/SessionWindowedKStream.html#org.apache.kafka.streams.scala.kstream.SessionWindowedKStream(org.apache.kafka.streams.kstream.SessionWindowedKStream)"/>
         /// </summary>
         /// <param name="inner"><see cref="Org.Apache.Kafka.Streams.Kstream.SessionWindowedKStream"/></param>
         public SessionWindowedKStream(Org.Apache.Kafka.Streams.Kstream.SessionWindowedKStream<K, V> inner)
@@ -216,7 +216,7 @@ namespace Org.Apache.Kafka.Streams.Scala.Kstream
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/3.9.0/org/apache/kafka/streams/scala/kstream/SessionWindowedKStream.html#inner--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/kstream/SessionWindowedKStream.html#inner--"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.SessionWindowedKStream"/></returns>
         public Org.Apache.Kafka.Streams.Kstream.SessionWindowedKStream<K, V> Inner()
@@ -224,7 +224,7 @@ namespace Org.Apache.Kafka.Streams.Scala.Kstream
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.SessionWindowedKStream<K, V>>("inner", "()Lorg/apache/kafka/streams/kstream/SessionWindowedKStream;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/3.9.0/org/apache/kafka/streams/scala/kstream/SessionWindowedKStream.html#count-org.apache.kafka.streams.kstream.Materialized-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/kstream/SessionWindowedKStream.html#count-org.apache.kafka.streams.kstream.Materialized-"/>
         /// </summary>
         /// <param name="materialized"><see cref="Org.Apache.Kafka.Streams.Kstream.Materialized"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Scala.Kstream.KTable"/></returns>
@@ -233,7 +233,7 @@ namespace Org.Apache.Kafka.Streams.Scala.Kstream
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.Scala.Kstream.KTable<Org.Apache.Kafka.Streams.Kstream.Windowed<K>, object>>("count", "(Lorg/apache/kafka/streams/kstream/Materialized;)Lorg/apache/kafka/streams/scala/kstream/KTable;", materialized);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/3.9.0/org/apache/kafka/streams/scala/kstream/SessionWindowedKStream.html#count-org.apache.kafka.streams.kstream.Named-org.apache.kafka.streams.kstream.Materialized-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/kstream/SessionWindowedKStream.html#count-org.apache.kafka.streams.kstream.Named-org.apache.kafka.streams.kstream.Materialized-"/>
         /// </summary>
         /// <param name="named"><see cref="Org.Apache.Kafka.Streams.Kstream.Named"/></param>
         /// <param name="materialized"><see cref="Org.Apache.Kafka.Streams.Kstream.Materialized"/></param>

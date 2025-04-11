@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Snapshot
 {
     #region RawSnapshotReader declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.0/org/apache/kafka/snapshot/RawSnapshotReader.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/snapshot/RawSnapshotReader.html"/>
     /// </summary>
     public partial class RawSnapshotReader : MASES.JCOBridge.C2JBridge.JVMBridgeBase<RawSnapshotReader>
     {
@@ -111,7 +111,7 @@ namespace Org.Apache.Kafka.Snapshot
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.0/org/apache/kafka/snapshot/RawSnapshotReader.html#sizeInBytes--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/snapshot/RawSnapshotReader.html#sizeInBytes--"/>
         /// </summary>
         /// <returns><see cref="long"/></returns>
         public long SizeInBytes()
@@ -119,7 +119,7 @@ namespace Org.Apache.Kafka.Snapshot
             return IExecuteWithSignature<long>("sizeInBytes", "()J");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.0/org/apache/kafka/snapshot/RawSnapshotReader.html#slice-long-int-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/snapshot/RawSnapshotReader.html#slice-long-int-"/>
         /// </summary>
         /// <param name="arg0"><see cref="long"/></param>
         /// <param name="arg1"><see cref="int"/></param>
@@ -129,7 +129,7 @@ namespace Org.Apache.Kafka.Snapshot
             return IExecuteWithSignature<Org.Apache.Kafka.Common.Record.UnalignedRecords>("slice", "(JI)Lorg/apache/kafka/common/record/UnalignedRecords;", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.0/org/apache/kafka/snapshot/RawSnapshotReader.html#snapshotId--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/snapshot/RawSnapshotReader.html#snapshotId--"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Raft.OffsetAndEpoch"/></returns>
         public Org.Apache.Kafka.Raft.OffsetAndEpoch SnapshotId()
