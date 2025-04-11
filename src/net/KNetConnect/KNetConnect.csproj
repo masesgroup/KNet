@@ -17,6 +17,15 @@
 		<RunAnalyzersDuringBuild>False</RunAnalyzersDuringBuild>
 	</PropertyGroup>
 
+	<Target Name="CopyCustomContent" AfterTargets="AfterBuild">
+		<Copy SourceFiles="@(knetfiles_jars)" DestinationFolder="$(OutDir)\jars" />
+		<Copy SourceFiles="@(knetfiles_config)" DestinationFolder="$(OutDir)\config" />
+	</Target>
+	<Target Name="CopyCustomContentOnPublish" AfterTargets="Publish">
+		<Copy SourceFiles="@(knetfiles_jars)" DestinationFolder="$(OutDir)\jars" />
+		<Copy SourceFiles="@(knetfiles_config)" DestinationFolder="$(OutDir)\config" />
+	</Target>
+	
 	<ItemGroup>
 		<None Include="..\..\documentation\articles\usageConnect.md" Pack="true" PackagePath="\" />
 	</ItemGroup>

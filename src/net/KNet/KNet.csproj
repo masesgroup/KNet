@@ -15,6 +15,15 @@
 		<RunAnalyzersDuringLiveAnalysis>False</RunAnalyzersDuringLiveAnalysis>
 	</PropertyGroup>
 
+	<Target Name="CopyCustomContent" AfterTargets="AfterBuild" Condition="'$(GITHUB_ACTIONS)' != 'true' Or '$(GITHUB_TEST_PREPARATION)' == 'true'">
+		<Copy SourceFiles="@(knetfiles_jars)" DestinationFolder="$(OutDir)\jars" />
+		<Copy SourceFiles="@(knetfiles_config)" DestinationFolder="$(OutDir)\config" />
+	</Target>
+	<Target Name="CopyCustomContentOnPublish" AfterTargets="Publish" Condition="'$(GITHUB_ACTIONS)' != 'true' Or '$(GITHUB_TEST_PREPARATION)' == 'true'">
+		<Copy SourceFiles="@(knetfiles_jars)" DestinationFolder="$(OutDir)\jars" />
+		<Copy SourceFiles="@(knetfiles_config)" DestinationFolder="$(OutDir)\config" />
+	</Target>
+	
 	<ItemGroup Condition="'$(GITHUB_SIMPLIFIED_GENERATION)' == 'true'">
 		<Compile Remove="Developed\**" />
 		<Compile Remove="Generated\**" />
