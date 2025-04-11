@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common.Metrics.Stats
 {
     #region WindowedCount declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/metrics/stats/WindowedCount.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/metrics/stats/WindowedCount.html"/>
     /// </summary>
     public partial class WindowedCount : Org.Apache.Kafka.Common.Metrics.Stats.WindowedSum
     {

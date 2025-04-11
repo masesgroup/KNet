@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common.Utils
 {
     #region PrimitiveRef declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/utils/PrimitiveRef.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/utils/PrimitiveRef.html"/>
     /// </summary>
     public partial class PrimitiveRef : MASES.JCOBridge.C2JBridge.JVMBridgeBase<PrimitiveRef>
     {
@@ -68,7 +68,7 @@ namespace Org.Apache.Kafka.Common.Utils
         // TODO: complete the class
         #region IntRef declaration
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/utils/PrimitiveRef.IntRef.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/utils/PrimitiveRef.IntRef.html"/>
         /// </summary>
         public partial class IntRef : MASES.JCOBridge.C2JBridge.JVMBridgeBase<IntRef>
         {
@@ -113,7 +113,7 @@ namespace Org.Apache.Kafka.Common.Utils
 
         #region LongRef declaration
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/utils/PrimitiveRef.LongRef.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/utils/PrimitiveRef.LongRef.html"/>
         /// </summary>
         public partial class LongRef : MASES.JCOBridge.C2JBridge.JVMBridgeBase<LongRef>
         {
@@ -177,7 +177,7 @@ namespace Org.Apache.Kafka.Common.Utils
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/utils/PrimitiveRef.html#ofInt-int-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/utils/PrimitiveRef.html#ofInt-int-"/>
         /// </summary>
         /// <param name="arg0"><see cref="int"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.Utils.PrimitiveRef.IntRef"/></returns>
@@ -186,7 +186,7 @@ namespace Org.Apache.Kafka.Common.Utils
             return SExecuteWithSignature<Org.Apache.Kafka.Common.Utils.PrimitiveRef.IntRef>(LocalBridgeClazz, "ofInt", "(I)Lorg/apache/kafka/common/utils/PrimitiveRef$IntRef;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/utils/PrimitiveRef.html#ofLong-long-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/utils/PrimitiveRef.html#ofLong-long-"/>
         /// </summary>
         /// <param name="arg0"><see cref="long"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.Utils.PrimitiveRef.LongRef"/></returns>
@@ -215,7 +215,7 @@ namespace Org.Apache.Kafka.Common.Utils
 
             #region Fields
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/utils/PrimitiveRef.IntRef.html#value"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/utils/PrimitiveRef.IntRef.html#value"/>
             /// </summary>
             public int value { get { return IGetField<int>("value"); } set { ISetField("value", value); } }
 
@@ -250,7 +250,7 @@ namespace Org.Apache.Kafka.Common.Utils
 
             #region Fields
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/utils/PrimitiveRef.LongRef.html#value"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/utils/PrimitiveRef.LongRef.html#value"/>
             /// </summary>
             public long value { get { return IGetField<long>("value"); } set { ISetField("value", value); } }
 

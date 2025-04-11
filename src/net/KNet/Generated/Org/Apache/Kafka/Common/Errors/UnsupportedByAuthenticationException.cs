@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common.Errors
 {
     #region UnsupportedByAuthenticationException declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/errors/UnsupportedByAuthenticationException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/errors/UnsupportedByAuthenticationException.html"/>
     /// </summary>
     public partial class UnsupportedByAuthenticationException : Org.Apache.Kafka.Common.Errors.ApiException
     {

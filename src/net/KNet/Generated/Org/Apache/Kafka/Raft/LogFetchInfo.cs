@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Raft
 {
     #region LogFetchInfo declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.0/org/apache/kafka/raft/LogFetchInfo.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/LogFetchInfo.html"/>
     /// </summary>
     public partial class LogFetchInfo : MASES.JCOBridge.C2JBridge.JVMBridgeBase<LogFetchInfo>
     {
@@ -83,7 +83,7 @@ namespace Org.Apache.Kafka.Raft
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.0/org/apache/kafka/raft/LogFetchInfo.html#startOffsetMetadata"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/LogFetchInfo.html#startOffsetMetadata"/>
         /// </summary>
         public Org.Apache.Kafka.Raft.LogOffsetMetadata startOffsetMetadata { get { if (!_startOffsetMetadataReady) { _startOffsetMetadataContent = IGetField<Org.Apache.Kafka.Raft.LogOffsetMetadata>("startOffsetMetadata"); _startOffsetMetadataReady = true; } return _startOffsetMetadataContent; } }
         private Org.Apache.Kafka.Raft.LogOffsetMetadata _startOffsetMetadataContent = default;

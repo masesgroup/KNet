@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Raft
 {
     #region ReplicaKey declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.0/org/apache/kafka/raft/ReplicaKey.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/ReplicaKey.html"/>
     /// </summary>
     public partial class ReplicaKey : Java.Lang.Comparable<Org.Apache.Kafka.Raft.ReplicaKey>
     {
@@ -83,7 +83,7 @@ namespace Org.Apache.Kafka.Raft
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.0/org/apache/kafka/raft/ReplicaKey.html#NO_DIRECTORY_ID"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/ReplicaKey.html#NO_DIRECTORY_ID"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Uuid NO_DIRECTORY_ID { get { if (!_NO_DIRECTORY_IDReady) { _NO_DIRECTORY_IDContent = SGetField<Org.Apache.Kafka.Common.Uuid>(LocalBridgeClazz, "NO_DIRECTORY_ID"); _NO_DIRECTORY_IDReady = true; } return _NO_DIRECTORY_IDContent; } }
         private static Org.Apache.Kafka.Common.Uuid _NO_DIRECTORY_IDContent = default;
@@ -93,7 +93,7 @@ namespace Org.Apache.Kafka.Raft
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.0/org/apache/kafka/raft/ReplicaKey.html#of-int-org.apache.kafka.common.Uuid-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/ReplicaKey.html#of-int-org.apache.kafka.common.Uuid-"/>
         /// </summary>
         /// <param name="arg0"><see cref="int"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Uuid"/></param>
@@ -107,7 +107,7 @@ namespace Org.Apache.Kafka.Raft
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.0/org/apache/kafka/raft/ReplicaKey.html#compareTo-java.lang.Object-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/ReplicaKey.html#compareTo-java.lang.Object-"/>
         /// </summary>
         /// <param name="arg0"><see cref="object"/></param>
         /// <returns><see cref="int"/></returns>
@@ -116,7 +116,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<int>("compareTo", "(Ljava/lang/Object;)I", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.0/org/apache/kafka/raft/ReplicaKey.html#compareTo-org.apache.kafka.raft.ReplicaKey-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/ReplicaKey.html#compareTo-org.apache.kafka.raft.ReplicaKey-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Raft.ReplicaKey"/></param>
         /// <returns><see cref="int"/></returns>
@@ -125,7 +125,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<int>("compareTo", "(Lorg/apache/kafka/raft/ReplicaKey;)I", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.0/org/apache/kafka/raft/ReplicaKey.html#id--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/ReplicaKey.html#id--"/>
         /// </summary>
         /// <returns><see cref="int"/></returns>
         public int Id()
@@ -133,7 +133,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<int>("id", "()I");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.0/org/apache/kafka/raft/ReplicaKey.html#directoryId--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/ReplicaKey.html#directoryId--"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Optional"/></returns>
         public Java.Util.Optional<Org.Apache.Kafka.Common.Uuid> DirectoryId()

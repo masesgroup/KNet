@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Connect.Source
 {
     #region SourceConnector declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.0/org/apache/kafka/connect/source/SourceConnector.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.0.0/org/apache/kafka/connect/source/SourceConnector.html"/>
     /// </summary>
     public partial class SourceConnector : Org.Apache.Kafka.Connect.Connector.Connector
     {
@@ -93,7 +93,7 @@ namespace Org.Apache.Kafka.Connect.Source
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.0/org/apache/kafka/connect/source/SourceConnector.html#alterOffsets-java.util.Map-java.util.Map-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.0.0/org/apache/kafka/connect/source/SourceConnector.html#alterOffsets-java.util.Map-java.util.Map-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <param name="arg1"><see cref="Java.Util.Map"/></param>
@@ -103,7 +103,7 @@ namespace Org.Apache.Kafka.Connect.Source
             return IExecuteWithSignature<bool>("alterOffsets", "(Ljava/util/Map;Ljava/util/Map;)Z", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.0/org/apache/kafka/connect/source/SourceConnector.html#canDefineTransactionBoundaries-java.util.Map-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.0.0/org/apache/kafka/connect/source/SourceConnector.html#canDefineTransactionBoundaries-java.util.Map-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Connect.Source.ConnectorTransactionBoundaries"/></returns>
@@ -112,7 +112,7 @@ namespace Org.Apache.Kafka.Connect.Source
             return IExecuteWithSignature<Org.Apache.Kafka.Connect.Source.ConnectorTransactionBoundaries>("canDefineTransactionBoundaries", "(Ljava/util/Map;)Lorg/apache/kafka/connect/source/ConnectorTransactionBoundaries;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.0/org/apache/kafka/connect/source/SourceConnector.html#exactlyOnceSupport-java.util.Map-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.0.0/org/apache/kafka/connect/source/SourceConnector.html#exactlyOnceSupport-java.util.Map-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Connect.Source.ExactlyOnceSupport"/></returns>

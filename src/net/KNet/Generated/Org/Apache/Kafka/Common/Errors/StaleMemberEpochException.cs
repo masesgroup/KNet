@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common.Errors
 {
     #region StaleMemberEpochException declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/errors/StaleMemberEpochException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/errors/StaleMemberEpochException.html"/>
     /// </summary>
     public partial class StaleMemberEpochException : Org.Apache.Kafka.Common.Errors.ApiException
     {

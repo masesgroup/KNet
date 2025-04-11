@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Connect.Health
 {
     #region ConnectClusterDetails declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.0/org/apache/kafka/connect/health/ConnectClusterDetails.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.0.0/org/apache/kafka/connect/health/ConnectClusterDetails.html"/>
     /// </summary>
     public partial class ConnectClusterDetails : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ConnectClusterDetails>
     {
@@ -111,7 +111,7 @@ namespace Org.Apache.Kafka.Connect.Health
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.0/org/apache/kafka/connect/health/ConnectClusterDetails.html#kafkaClusterId--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.0.0/org/apache/kafka/connect/health/ConnectClusterDetails.html#kafkaClusterId--"/>
         /// </summary>
         /// <returns><see cref="Java.Lang.String"/></returns>
         public Java.Lang.String KafkaClusterId()

@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Metadata
 {
     #region AssignmentsHelper declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/3.9.0/org/apache/kafka/metadata/AssignmentsHelper.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.0.0/org/apache/kafka/metadata/AssignmentsHelper.html"/>
     /// </summary>
     public partial class AssignmentsHelper : MASES.JCOBridge.C2JBridge.JVMBridgeBase<AssignmentsHelper>
     {

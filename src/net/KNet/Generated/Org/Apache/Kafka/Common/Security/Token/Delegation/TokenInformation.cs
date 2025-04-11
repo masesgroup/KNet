@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common.Security.Token.Delegation
 {
     #region TokenInformation declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/security/token/delegation/TokenInformation.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/security/token/delegation/TokenInformation.html"/>
     /// </summary>
     public partial class TokenInformation : MASES.JCOBridge.C2JBridge.JVMBridgeBase<TokenInformation>
     {
@@ -75,7 +75,7 @@ namespace Org.Apache.Kafka.Common.Security.Token.Delegation
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/security/token/delegation/TokenInformation.html#org.apache.kafka.common.security.token.delegation.TokenInformation(java.lang.String,org.apache.kafka.common.security.auth.KafkaPrincipal,java.util.Collection,long,long,long)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/security/token/delegation/TokenInformation.html#org.apache.kafka.common.security.token.delegation.TokenInformation(java.lang.String,org.apache.kafka.common.security.auth.KafkaPrincipal,java.util.Collection,long,long,long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Security.Auth.KafkaPrincipal"/></param>
@@ -88,7 +88,7 @@ namespace Org.Apache.Kafka.Common.Security.Token.Delegation
         {
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/security/token/delegation/TokenInformation.html#org.apache.kafka.common.security.token.delegation.TokenInformation(java.lang.String,org.apache.kafka.common.security.auth.KafkaPrincipal,org.apache.kafka.common.security.auth.KafkaPrincipal,java.util.Collection,long,long,long)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/security/token/delegation/TokenInformation.html#org.apache.kafka.common.security.token.delegation.TokenInformation(java.lang.String,org.apache.kafka.common.security.auth.KafkaPrincipal,org.apache.kafka.common.security.auth.KafkaPrincipal,java.util.Collection,long,long,long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Security.Auth.KafkaPrincipal"/></param>
@@ -114,7 +114,7 @@ namespace Org.Apache.Kafka.Common.Security.Token.Delegation
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/security/token/delegation/TokenInformation.html#fromRecord-java.lang.String-org.apache.kafka.common.security.auth.KafkaPrincipal-org.apache.kafka.common.security.auth.KafkaPrincipal-java.util.Collection-long-long-long-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/security/token/delegation/TokenInformation.html#fromRecord-java.lang.String-org.apache.kafka.common.security.auth.KafkaPrincipal-org.apache.kafka.common.security.auth.KafkaPrincipal-java.util.Collection-long-long-long-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Security.Auth.KafkaPrincipal"/></param>
@@ -133,7 +133,7 @@ namespace Org.Apache.Kafka.Common.Security.Token.Delegation
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/security/token/delegation/TokenInformation.html#ownerOrRenewer-org.apache.kafka.common.security.auth.KafkaPrincipal-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/security/token/delegation/TokenInformation.html#ownerOrRenewer-org.apache.kafka.common.security.auth.KafkaPrincipal-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Security.Auth.KafkaPrincipal"/></param>
         /// <returns><see cref="bool"/></returns>
@@ -142,7 +142,7 @@ namespace Org.Apache.Kafka.Common.Security.Token.Delegation
             return IExecuteWithSignature<bool>("ownerOrRenewer", "(Lorg/apache/kafka/common/security/auth/KafkaPrincipal;)Z", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/security/token/delegation/TokenInformation.html#ownerAsString--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/security/token/delegation/TokenInformation.html#ownerAsString--"/>
         /// </summary>
         /// <returns><see cref="Java.Lang.String"/></returns>
         public Java.Lang.String OwnerAsString()
@@ -150,7 +150,7 @@ namespace Org.Apache.Kafka.Common.Security.Token.Delegation
             return IExecuteWithSignature<Java.Lang.String>("ownerAsString", "()Ljava/lang/String;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/security/token/delegation/TokenInformation.html#tokenId--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/security/token/delegation/TokenInformation.html#tokenId--"/>
         /// </summary>
         /// <returns><see cref="Java.Lang.String"/></returns>
         public Java.Lang.String TokenId()
@@ -158,7 +158,7 @@ namespace Org.Apache.Kafka.Common.Security.Token.Delegation
             return IExecuteWithSignature<Java.Lang.String>("tokenId", "()Ljava/lang/String;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/security/token/delegation/TokenInformation.html#tokenRequesterAsString--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/security/token/delegation/TokenInformation.html#tokenRequesterAsString--"/>
         /// </summary>
         /// <returns><see cref="Java.Lang.String"/></returns>
         public Java.Lang.String TokenRequesterAsString()
@@ -166,7 +166,7 @@ namespace Org.Apache.Kafka.Common.Security.Token.Delegation
             return IExecuteWithSignature<Java.Lang.String>("tokenRequesterAsString", "()Ljava/lang/String;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/security/token/delegation/TokenInformation.html#renewersAsString--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/security/token/delegation/TokenInformation.html#renewersAsString--"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Collection"/></returns>
         public Java.Util.Collection<Java.Lang.String> RenewersAsString()
@@ -174,7 +174,7 @@ namespace Org.Apache.Kafka.Common.Security.Token.Delegation
             return IExecuteWithSignature<Java.Util.Collection<Java.Lang.String>>("renewersAsString", "()Ljava/util/Collection;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/security/token/delegation/TokenInformation.html#renewers--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/security/token/delegation/TokenInformation.html#renewers--"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Collection"/></returns>
         public Java.Util.Collection<Org.Apache.Kafka.Common.Security.Auth.KafkaPrincipal> Renewers()
@@ -182,7 +182,7 @@ namespace Org.Apache.Kafka.Common.Security.Token.Delegation
             return IExecuteWithSignature<Java.Util.Collection<Org.Apache.Kafka.Common.Security.Auth.KafkaPrincipal>>("renewers", "()Ljava/util/Collection;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/security/token/delegation/TokenInformation.html#expiryTimestamp--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/security/token/delegation/TokenInformation.html#expiryTimestamp--"/>
         /// </summary>
         /// <returns><see cref="long"/></returns>
         public long ExpiryTimestamp()
@@ -190,7 +190,7 @@ namespace Org.Apache.Kafka.Common.Security.Token.Delegation
             return IExecuteWithSignature<long>("expiryTimestamp", "()J");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/security/token/delegation/TokenInformation.html#issueTimestamp--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/security/token/delegation/TokenInformation.html#issueTimestamp--"/>
         /// </summary>
         /// <returns><see cref="long"/></returns>
         public long IssueTimestamp()
@@ -198,7 +198,7 @@ namespace Org.Apache.Kafka.Common.Security.Token.Delegation
             return IExecuteWithSignature<long>("issueTimestamp", "()J");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/security/token/delegation/TokenInformation.html#maxTimestamp--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/security/token/delegation/TokenInformation.html#maxTimestamp--"/>
         /// </summary>
         /// <returns><see cref="long"/></returns>
         public long MaxTimestamp()
@@ -206,7 +206,7 @@ namespace Org.Apache.Kafka.Common.Security.Token.Delegation
             return IExecuteWithSignature<long>("maxTimestamp", "()J");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/security/token/delegation/TokenInformation.html#owner--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/security/token/delegation/TokenInformation.html#owner--"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.Security.Auth.KafkaPrincipal"/></returns>
         public Org.Apache.Kafka.Common.Security.Auth.KafkaPrincipal Owner()
@@ -214,7 +214,7 @@ namespace Org.Apache.Kafka.Common.Security.Token.Delegation
             return IExecuteWithSignature<Org.Apache.Kafka.Common.Security.Auth.KafkaPrincipal>("owner", "()Lorg/apache/kafka/common/security/auth/KafkaPrincipal;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/security/token/delegation/TokenInformation.html#tokenRequester--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/security/token/delegation/TokenInformation.html#tokenRequester--"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.Security.Auth.KafkaPrincipal"/></returns>
         public Org.Apache.Kafka.Common.Security.Auth.KafkaPrincipal TokenRequester()
@@ -222,7 +222,7 @@ namespace Org.Apache.Kafka.Common.Security.Token.Delegation
             return IExecuteWithSignature<Org.Apache.Kafka.Common.Security.Auth.KafkaPrincipal>("tokenRequester", "()Lorg/apache/kafka/common/security/auth/KafkaPrincipal;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/security/token/delegation/TokenInformation.html#setExpiryTimestamp-long-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/security/token/delegation/TokenInformation.html#setExpiryTimestamp-long-"/>
         /// </summary>
         /// <param name="arg0"><see cref="long"/></param>
         public void SetExpiryTimestamp(long arg0)

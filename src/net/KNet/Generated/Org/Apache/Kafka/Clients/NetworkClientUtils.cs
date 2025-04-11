@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Clients
 {
     #region NetworkClientUtils declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/NetworkClientUtils.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/NetworkClientUtils.html"/>
     /// </summary>
     public partial class NetworkClientUtils : MASES.JCOBridge.C2JBridge.JVMBridgeBase<NetworkClientUtils>
     {

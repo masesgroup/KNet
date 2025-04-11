@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Tools.Consumer
 {
     #region TransactionLogMessageFormatter declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.9.0/org/apache/kafka/tools/consumer/TransactionLogMessageFormatter.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/consumer/TransactionLogMessageFormatter.html"/>
     /// </summary>
     public partial class TransactionLogMessageFormatter : Org.Apache.Kafka.Tools.Consumer.ApiMessageFormatter
     {

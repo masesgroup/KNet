@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Streams.Processor
 {
     #region LogAndSkipOnInvalidTimestamp declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.0/org/apache/kafka/streams/processor/LogAndSkipOnInvalidTimestamp.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/LogAndSkipOnInvalidTimestamp.html"/>
     /// </summary>
     public partial class LogAndSkipOnInvalidTimestamp : MASES.JCOBridge.C2JBridge.JVMBridgeBase<LogAndSkipOnInvalidTimestamp>
     {

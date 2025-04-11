@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Streams.Processor
 {
     #region PunctuationType declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.0/org/apache/kafka/streams/processor/PunctuationType.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/PunctuationType.html"/>
     /// </summary>
     public partial class PunctuationType : Java.Lang.Enum<Org.Apache.Kafka.Streams.Processor.PunctuationType>
     {
@@ -83,13 +83,13 @@ namespace Org.Apache.Kafka.Streams.Processor
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.0/org/apache/kafka/streams/processor/PunctuationType.html#STREAM_TIME"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/PunctuationType.html#STREAM_TIME"/>
         /// </summary>
         public static Org.Apache.Kafka.Streams.Processor.PunctuationType STREAM_TIME { get { if (!_STREAM_TIMEReady) { _STREAM_TIMEContent = SGetField<Org.Apache.Kafka.Streams.Processor.PunctuationType>(LocalBridgeClazz, "STREAM_TIME"); _STREAM_TIMEReady = true; } return _STREAM_TIMEContent; } }
         private static Org.Apache.Kafka.Streams.Processor.PunctuationType _STREAM_TIMEContent = default;
         private static bool _STREAM_TIMEReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.0/org/apache/kafka/streams/processor/PunctuationType.html#WALL_CLOCK_TIME"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/PunctuationType.html#WALL_CLOCK_TIME"/>
         /// </summary>
         public static Org.Apache.Kafka.Streams.Processor.PunctuationType WALL_CLOCK_TIME { get { if (!_WALL_CLOCK_TIMEReady) { _WALL_CLOCK_TIMEContent = SGetField<Org.Apache.Kafka.Streams.Processor.PunctuationType>(LocalBridgeClazz, "WALL_CLOCK_TIME"); _WALL_CLOCK_TIMEReady = true; } return _WALL_CLOCK_TIMEContent; } }
         private static Org.Apache.Kafka.Streams.Processor.PunctuationType _WALL_CLOCK_TIMEContent = default;
@@ -99,7 +99,7 @@ namespace Org.Apache.Kafka.Streams.Processor
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.0/org/apache/kafka/streams/processor/PunctuationType.html#valueOf-java.lang.String-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/PunctuationType.html#valueOf-java.lang.String-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Processor.PunctuationType"/></returns>
@@ -108,7 +108,7 @@ namespace Org.Apache.Kafka.Streams.Processor
             return SExecuteWithSignature<Org.Apache.Kafka.Streams.Processor.PunctuationType>(LocalBridgeClazz, "valueOf", "(Ljava/lang/String;)Lorg/apache/kafka/streams/processor/PunctuationType;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.0/org/apache/kafka/streams/processor/PunctuationType.html#values--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/PunctuationType.html#values--"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Processor.PunctuationType"/></returns>
         public static Org.Apache.Kafka.Streams.Processor.PunctuationType[] Values()

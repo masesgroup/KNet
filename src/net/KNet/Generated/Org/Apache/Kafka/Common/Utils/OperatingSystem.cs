@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common.Utils
 {
     #region OperatingSystem declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/utils/OperatingSystem.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/utils/OperatingSystem.html"/>
     /// </summary>
     public partial class OperatingSystem : MASES.JCOBridge.C2JBridge.JVMBridgeBase<OperatingSystem>
     {
@@ -83,19 +83,19 @@ namespace Org.Apache.Kafka.Common.Utils
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/utils/OperatingSystem.html#IS_WINDOWS"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/utils/OperatingSystem.html#IS_WINDOWS"/>
         /// </summary>
         public static bool IS_WINDOWS { get { if (!_IS_WINDOWSReady) { _IS_WINDOWSContent = SGetField<bool>(LocalBridgeClazz, "IS_WINDOWS"); _IS_WINDOWSReady = true; } return _IS_WINDOWSContent; } }
         private static bool _IS_WINDOWSContent = default;
         private static bool _IS_WINDOWSReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/utils/OperatingSystem.html#IS_ZOS"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/utils/OperatingSystem.html#IS_ZOS"/>
         /// </summary>
         public static bool IS_ZOS { get { if (!_IS_ZOSReady) { _IS_ZOSContent = SGetField<bool>(LocalBridgeClazz, "IS_ZOS"); _IS_ZOSReady = true; } return _IS_ZOSContent; } }
         private static bool _IS_ZOSContent = default;
         private static bool _IS_ZOSReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/utils/OperatingSystem.html#NAME"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/utils/OperatingSystem.html#NAME"/>
         /// </summary>
         public static Java.Lang.String NAME { get { if (!_NAMEReady) { _NAMEContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "NAME"); _NAMEReady = true; } return _NAMEContent; } }
         private static Java.Lang.String _NAMEContent = default;

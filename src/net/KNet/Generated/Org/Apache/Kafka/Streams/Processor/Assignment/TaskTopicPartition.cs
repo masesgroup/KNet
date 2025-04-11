@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Assignment
 {
     #region TaskTopicPartition declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.0/org/apache/kafka/streams/processor/assignment/TaskTopicPartition.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/assignment/TaskTopicPartition.html"/>
     /// </summary>
     public partial class TaskTopicPartition : MASES.JCOBridge.C2JBridge.JVMBridgeBase<TaskTopicPartition>
     {
@@ -111,7 +111,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Assignment
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.0/org/apache/kafka/streams/processor/assignment/TaskTopicPartition.html#isChangelog--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/assignment/TaskTopicPartition.html#isChangelog--"/>
         /// </summary>
         /// <returns><see cref="bool"/></returns>
         public bool IsChangelog()
@@ -119,7 +119,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Assignment
             return IExecuteWithSignature<bool>("isChangelog", "()Z");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.0/org/apache/kafka/streams/processor/assignment/TaskTopicPartition.html#isSource--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/assignment/TaskTopicPartition.html#isSource--"/>
         /// </summary>
         /// <returns><see cref="bool"/></returns>
         public bool IsSource()
@@ -127,7 +127,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Assignment
             return IExecuteWithSignature<bool>("isSource", "()Z");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.0/org/apache/kafka/streams/processor/assignment/TaskTopicPartition.html#rackIds--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/assignment/TaskTopicPartition.html#rackIds--"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Optional"/></returns>
         public Java.Util.Optional<Java.Util.Set<Java.Lang.String>> RackIds()
@@ -135,7 +135,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Assignment
             return IExecuteWithSignature<Java.Util.Optional<Java.Util.Set<Java.Lang.String>>>("rackIds", "()Ljava/util/Optional;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.0/org/apache/kafka/streams/processor/assignment/TaskTopicPartition.html#topicPartition--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/assignment/TaskTopicPartition.html#topicPartition--"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.TopicPartition"/></returns>
         public Org.Apache.Kafka.Common.TopicPartition TopicPartition()

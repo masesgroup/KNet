@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Connect.Transforms
 {
     #region ValueToKey declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.9.0/org/apache/kafka/connect/transforms/ValueToKey.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.0.0/org/apache/kafka/connect/transforms/ValueToKey.html"/>
     /// </summary>
     public partial class ValueToKey : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ValueToKey>
     {
@@ -72,7 +72,7 @@ namespace Org.Apache.Kafka.Connect.Transforms
 
     #region ValueToKey<R> declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.9.0/org/apache/kafka/connect/transforms/ValueToKey.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.0.0/org/apache/kafka/connect/transforms/ValueToKey.html"/>
     /// </summary>
     /// <typeparam name="R"><see cref="Org.Apache.Kafka.Connect.Connector.ConnectRecord{R}"/></typeparam>
     public partial class ValueToKey<R> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ValueToKey<R>> where R : Org.Apache.Kafka.Connect.Connector.ConnectRecord<R>
@@ -137,25 +137,25 @@ namespace Org.Apache.Kafka.Connect.Transforms
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.9.0/org/apache/kafka/connect/transforms/ValueToKey.html#FIELDS_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.0.0/org/apache/kafka/connect/transforms/ValueToKey.html#FIELDS_CONFIG"/>
         /// </summary>
         public static Java.Lang.String FIELDS_CONFIG { get { if (!_FIELDS_CONFIGReady) { _FIELDS_CONFIGContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "FIELDS_CONFIG"); _FIELDS_CONFIGReady = true; } return _FIELDS_CONFIGContent; } }
         private static Java.Lang.String _FIELDS_CONFIGContent = default;
         private static bool _FIELDS_CONFIGReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.9.0/org/apache/kafka/connect/transforms/ValueToKey.html#OVERVIEW_DOC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.0.0/org/apache/kafka/connect/transforms/ValueToKey.html#OVERVIEW_DOC"/>
         /// </summary>
         public static Java.Lang.String OVERVIEW_DOC { get { if (!_OVERVIEW_DOCReady) { _OVERVIEW_DOCContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "OVERVIEW_DOC"); _OVERVIEW_DOCReady = true; } return _OVERVIEW_DOCContent; } }
         private static Java.Lang.String _OVERVIEW_DOCContent = default;
         private static bool _OVERVIEW_DOCReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.9.0/org/apache/kafka/connect/transforms/ValueToKey.html#REPLACE_NULL_WITH_DEFAULT_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.0.0/org/apache/kafka/connect/transforms/ValueToKey.html#REPLACE_NULL_WITH_DEFAULT_CONFIG"/>
         /// </summary>
         public static Java.Lang.String REPLACE_NULL_WITH_DEFAULT_CONFIG { get { if (!_REPLACE_NULL_WITH_DEFAULT_CONFIGReady) { _REPLACE_NULL_WITH_DEFAULT_CONFIGContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "REPLACE_NULL_WITH_DEFAULT_CONFIG"); _REPLACE_NULL_WITH_DEFAULT_CONFIGReady = true; } return _REPLACE_NULL_WITH_DEFAULT_CONFIGContent; } }
         private static Java.Lang.String _REPLACE_NULL_WITH_DEFAULT_CONFIGContent = default;
         private static bool _REPLACE_NULL_WITH_DEFAULT_CONFIGReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.9.0/org/apache/kafka/connect/transforms/ValueToKey.html#CONFIG_DEF"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.0.0/org/apache/kafka/connect/transforms/ValueToKey.html#CONFIG_DEF"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Config.ConfigDef CONFIG_DEF { get { if (!_CONFIG_DEFReady) { _CONFIG_DEFContent = SGetField<Org.Apache.Kafka.Common.Config.ConfigDef>(LocalBridgeClazz, "CONFIG_DEF"); _CONFIG_DEFReady = true; } return _CONFIG_DEFContent; } }
         private static Org.Apache.Kafka.Common.Config.ConfigDef _CONFIG_DEFContent = default;
@@ -169,7 +169,7 @@ namespace Org.Apache.Kafka.Connect.Transforms
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.9.0/org/apache/kafka/connect/transforms/ValueToKey.html#version--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.0.0/org/apache/kafka/connect/transforms/ValueToKey.html#version--"/>
         /// </summary>
         /// <returns><see cref="Java.Lang.String"/></returns>
         public Java.Lang.String Version()
@@ -177,7 +177,7 @@ namespace Org.Apache.Kafka.Connect.Transforms
             return IExecuteWithSignature<Java.Lang.String>("version", "()Ljava/lang/String;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.9.0/org/apache/kafka/connect/transforms/ValueToKey.html#config--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.0.0/org/apache/kafka/connect/transforms/ValueToKey.html#config--"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.Config.ConfigDef"/></returns>
         public Org.Apache.Kafka.Common.Config.ConfigDef Config()
@@ -185,7 +185,7 @@ namespace Org.Apache.Kafka.Connect.Transforms
             return IExecuteWithSignature<Org.Apache.Kafka.Common.Config.ConfigDef>("config", "()Lorg/apache/kafka/common/config/ConfigDef;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.9.0/org/apache/kafka/connect/transforms/ValueToKey.html#apply-org.apache.kafka.connect.connector.ConnectRecord-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.0.0/org/apache/kafka/connect/transforms/ValueToKey.html#apply-org.apache.kafka.connect.connector.ConnectRecord-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Connect.Connector.ConnectRecord"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Connect.Connector.ConnectRecord"/></returns>
@@ -194,14 +194,14 @@ namespace Org.Apache.Kafka.Connect.Transforms
             return IExecuteWithSignature<Org.Apache.Kafka.Connect.Connector.ConnectRecord>("apply", "(Lorg/apache/kafka/connect/connector/ConnectRecord;)Lorg/apache/kafka/connect/connector/ConnectRecord;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.9.0/org/apache/kafka/connect/transforms/ValueToKey.html#close--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.0.0/org/apache/kafka/connect/transforms/ValueToKey.html#close--"/>
         /// </summary>
         public void Close()
         {
             IExecuteWithSignature("close", "()V");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.9.0/org/apache/kafka/connect/transforms/ValueToKey.html#configure-java.util.Map-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.0.0/org/apache/kafka/connect/transforms/ValueToKey.html#configure-java.util.Map-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         public void Configure(Java.Util.Map arg0)
@@ -244,25 +244,25 @@ namespace Org.Apache.Kafka.Connect.Transforms
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.9.0/org/apache/kafka/connect/transforms/ValueToKey.html#FIELDS_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.0.0/org/apache/kafka/connect/transforms/ValueToKey.html#FIELDS_CONFIG"/>
         /// </summary>
         public static Java.Lang.String FIELDS_CONFIG { get { if (!_FIELDS_CONFIGReady) { _FIELDS_CONFIGContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "FIELDS_CONFIG"); _FIELDS_CONFIGReady = true; } return _FIELDS_CONFIGContent; } }
         private static Java.Lang.String _FIELDS_CONFIGContent = default;
         private static bool _FIELDS_CONFIGReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.9.0/org/apache/kafka/connect/transforms/ValueToKey.html#OVERVIEW_DOC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.0.0/org/apache/kafka/connect/transforms/ValueToKey.html#OVERVIEW_DOC"/>
         /// </summary>
         public static Java.Lang.String OVERVIEW_DOC { get { if (!_OVERVIEW_DOCReady) { _OVERVIEW_DOCContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "OVERVIEW_DOC"); _OVERVIEW_DOCReady = true; } return _OVERVIEW_DOCContent; } }
         private static Java.Lang.String _OVERVIEW_DOCContent = default;
         private static bool _OVERVIEW_DOCReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.9.0/org/apache/kafka/connect/transforms/ValueToKey.html#REPLACE_NULL_WITH_DEFAULT_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.0.0/org/apache/kafka/connect/transforms/ValueToKey.html#REPLACE_NULL_WITH_DEFAULT_CONFIG"/>
         /// </summary>
         public static Java.Lang.String REPLACE_NULL_WITH_DEFAULT_CONFIG { get { if (!_REPLACE_NULL_WITH_DEFAULT_CONFIGReady) { _REPLACE_NULL_WITH_DEFAULT_CONFIGContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "REPLACE_NULL_WITH_DEFAULT_CONFIG"); _REPLACE_NULL_WITH_DEFAULT_CONFIGReady = true; } return _REPLACE_NULL_WITH_DEFAULT_CONFIGContent; } }
         private static Java.Lang.String _REPLACE_NULL_WITH_DEFAULT_CONFIGContent = default;
         private static bool _REPLACE_NULL_WITH_DEFAULT_CONFIGReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.9.0/org/apache/kafka/connect/transforms/ValueToKey.html#CONFIG_DEF"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.0.0/org/apache/kafka/connect/transforms/ValueToKey.html#CONFIG_DEF"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Config.ConfigDef CONFIG_DEF { get { if (!_CONFIG_DEFReady) { _CONFIG_DEFContent = SGetField<Org.Apache.Kafka.Common.Config.ConfigDef>(LocalBridgeClazz, "CONFIG_DEF"); _CONFIG_DEFReady = true; } return _CONFIG_DEFContent; } }
         private static Org.Apache.Kafka.Common.Config.ConfigDef _CONFIG_DEFContent = default;
@@ -276,7 +276,7 @@ namespace Org.Apache.Kafka.Connect.Transforms
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.9.0/org/apache/kafka/connect/transforms/ValueToKey.html#version--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.0.0/org/apache/kafka/connect/transforms/ValueToKey.html#version--"/>
         /// </summary>
         /// <returns><see cref="Java.Lang.String"/></returns>
         public Java.Lang.String Version()
@@ -284,7 +284,7 @@ namespace Org.Apache.Kafka.Connect.Transforms
             return IExecuteWithSignature<Java.Lang.String>("version", "()Ljava/lang/String;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.9.0/org/apache/kafka/connect/transforms/ValueToKey.html#config--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.0.0/org/apache/kafka/connect/transforms/ValueToKey.html#config--"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.Config.ConfigDef"/></returns>
         public Org.Apache.Kafka.Common.Config.ConfigDef Config()
@@ -292,7 +292,7 @@ namespace Org.Apache.Kafka.Connect.Transforms
             return IExecuteWithSignature<Org.Apache.Kafka.Common.Config.ConfigDef>("config", "()Lorg/apache/kafka/common/config/ConfigDef;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.9.0/org/apache/kafka/connect/transforms/ValueToKey.html#apply-org.apache.kafka.connect.connector.ConnectRecord-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.0.0/org/apache/kafka/connect/transforms/ValueToKey.html#apply-org.apache.kafka.connect.connector.ConnectRecord-"/>
         /// </summary>
         /// <param name="arg0"><typeparamref name="R"/></param>
         /// <returns><typeparamref name="R"/></returns>
@@ -301,14 +301,14 @@ namespace Org.Apache.Kafka.Connect.Transforms
             return IExecuteWithSignature<R>("apply", "(Lorg/apache/kafka/connect/connector/ConnectRecord;)Lorg/apache/kafka/connect/connector/ConnectRecord;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.9.0/org/apache/kafka/connect/transforms/ValueToKey.html#close--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.0.0/org/apache/kafka/connect/transforms/ValueToKey.html#close--"/>
         /// </summary>
         public void Close()
         {
             IExecuteWithSignature("close", "()V");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.9.0/org/apache/kafka/connect/transforms/ValueToKey.html#configure-java.util.Map-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.0.0/org/apache/kafka/connect/transforms/ValueToKey.html#configure-java.util.Map-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         public void Configure(Java.Util.Map<Java.Lang.String, object> arg0)

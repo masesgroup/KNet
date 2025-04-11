@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Connect.Converters
 {
     #region DoubleConverter declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.9.0/org/apache/kafka/connect/converters/DoubleConverter.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.0.0/org/apache/kafka/connect/converters/DoubleConverter.html"/>
     /// </summary>
     public partial class DoubleConverter : MASES.JCOBridge.C2JBridge.JVMBridgeBase<DoubleConverter>
     {

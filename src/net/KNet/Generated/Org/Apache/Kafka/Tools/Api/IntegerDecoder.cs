@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Tools.Api
 {
     #region IntegerDecoder declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools-api/3.9.0/org/apache/kafka/tools/api/IntegerDecoder.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools-api/4.0.0/org/apache/kafka/tools/api/IntegerDecoder.html"/>
     /// </summary>
     public partial class IntegerDecoder : Org.Apache.Kafka.Tools.Api.Decoder<Java.Lang.Integer>
     {
@@ -91,7 +91,7 @@ namespace Org.Apache.Kafka.Tools.Api
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools-api/3.9.0/org/apache/kafka/tools/api/IntegerDecoder.html#fromBytes-byte[]-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools-api/4.0.0/org/apache/kafka/tools/api/IntegerDecoder.html#fromBytes-byte[]-"/>
         /// </summary>
         /// <param name="arg0"><see cref="byte"/></param>
         /// <returns><see cref="object"/></returns>

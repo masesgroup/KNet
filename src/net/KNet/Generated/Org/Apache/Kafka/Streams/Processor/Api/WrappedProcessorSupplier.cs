@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
 {
     #region WrappedProcessorSupplier declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.0/org/apache/kafka/streams/processor/api/WrappedProcessorSupplier.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/api/WrappedProcessorSupplier.html"/>
     /// </summary>
     public partial class WrappedProcessorSupplier : MASES.JCOBridge.C2JBridge.JVMBridgeBase<WrappedProcessorSupplier>
     {
@@ -74,7 +74,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
 
     #region WrappedProcessorSupplier<KIn, VIn, KOut, VOut> declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.0/org/apache/kafka/streams/processor/api/WrappedProcessorSupplier.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/api/WrappedProcessorSupplier.html"/>
     /// </summary>
     /// <typeparam name="KIn"></typeparam>
     /// <typeparam name="VIn"></typeparam>

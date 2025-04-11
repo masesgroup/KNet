@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common.Errors
 {
     #region TransactionalIdNotFoundException declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/errors/TransactionalIdNotFoundException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/errors/TransactionalIdNotFoundException.html"/>
     /// </summary>
     public partial class TransactionalIdNotFoundException : Org.Apache.Kafka.Common.Errors.ApiException
     {

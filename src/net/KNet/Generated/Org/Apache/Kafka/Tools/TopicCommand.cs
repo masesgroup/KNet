@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Tools
 {
     #region TopicCommand declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.9.0/org/apache/kafka/tools/TopicCommand.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/TopicCommand.html"/>
     /// </summary>
     public partial class TopicCommand : MASES.JCOBridge.C2JBridge.JVMBridgeBase<TopicCommand>, MASES.JCOBridge.C2JBridge.IJVMBridgeMain
     {
@@ -70,7 +70,7 @@ namespace Org.Apache.Kafka.Tools
         // TODO: complete the class
         #region TopicCommandOptions declaration
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.9.0/org/apache/kafka/tools/TopicCommand.TopicCommandOptions.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/TopicCommand.TopicCommandOptions.html"/>
         /// </summary>
         public partial class TopicCommandOptions : MASES.JCOBridge.C2JBridge.JVMBridgeBase<TopicCommandOptions>
         {
@@ -115,7 +115,7 @@ namespace Org.Apache.Kafka.Tools
 
         #region TopicService declaration
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.9.0/org/apache/kafka/tools/TopicCommand.TopicService.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/TopicCommand.TopicService.html"/>
         /// </summary>
         public partial class TopicService : Java.Lang.AutoCloseable
         {
@@ -179,7 +179,7 @@ namespace Org.Apache.Kafka.Tools
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.9.0/org/apache/kafka/tools/TopicCommand.html#isReassignmentInProgress-org.apache.kafka.common.TopicPartitionInfo-org.apache.kafka.clients.admin.PartitionReassignment-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/TopicCommand.html#isReassignmentInProgress-org.apache.kafka.common.TopicPartitionInfo-org.apache.kafka.clients.admin.PartitionReassignment-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.TopicPartitionInfo"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Clients.Admin.PartitionReassignment"/></param>
@@ -189,7 +189,7 @@ namespace Org.Apache.Kafka.Tools
             return SExecuteWithSignature<bool>(LocalBridgeClazz, "isReassignmentInProgress", "(Lorg/apache/kafka/common/TopicPartitionInfo;Lorg/apache/kafka/clients/admin/PartitionReassignment;)Z", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.9.0/org/apache/kafka/tools/TopicCommand.html#main-java.lang.String[]-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/TopicCommand.html#main-java.lang.String[]-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         public static void Main(Java.Lang.String[] arg0)
@@ -209,7 +209,7 @@ namespace Org.Apache.Kafka.Tools
         {
             #region Constructors
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.9.0/org/apache/kafka/tools/TopicCommand.TopicCommandOptions.html#org.apache.kafka.tools.TopicCommand$TopicCommandOptions(java.lang.String[])"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/TopicCommand.TopicCommandOptions.html#org.apache.kafka.tools.TopicCommand$TopicCommandOptions(java.lang.String[])"/>
             /// </summary>
             /// <param name="arg0"><see cref="Java.Lang.String"/></param>
             public TopicCommandOptions(Java.Lang.String[] arg0)
@@ -233,7 +233,7 @@ namespace Org.Apache.Kafka.Tools
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.9.0/org/apache/kafka/tools/TopicCommand.TopicCommandOptions.html#excludeInternalTopics--"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/TopicCommand.TopicCommandOptions.html#excludeInternalTopics--"/>
             /// </summary>
             /// <returns><see cref="Java.Lang.Boolean"/></returns>
             public Java.Lang.Boolean ExcludeInternalTopics()
@@ -241,7 +241,7 @@ namespace Org.Apache.Kafka.Tools
                 return IExecuteWithSignature<Java.Lang.Boolean>("excludeInternalTopics", "()Ljava/lang/Boolean;");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.9.0/org/apache/kafka/tools/TopicCommand.TopicCommandOptions.html#hasAlterOption--"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/TopicCommand.TopicCommandOptions.html#hasAlterOption--"/>
             /// </summary>
             /// <returns><see cref="Java.Lang.Boolean"/></returns>
             public Java.Lang.Boolean HasAlterOption()
@@ -249,7 +249,7 @@ namespace Org.Apache.Kafka.Tools
                 return IExecuteWithSignature<Java.Lang.Boolean>("hasAlterOption", "()Ljava/lang/Boolean;");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.9.0/org/apache/kafka/tools/TopicCommand.TopicCommandOptions.html#hasCreateOption--"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/TopicCommand.TopicCommandOptions.html#hasCreateOption--"/>
             /// </summary>
             /// <returns><see cref="Java.Lang.Boolean"/></returns>
             public Java.Lang.Boolean HasCreateOption()
@@ -257,7 +257,7 @@ namespace Org.Apache.Kafka.Tools
                 return IExecuteWithSignature<Java.Lang.Boolean>("hasCreateOption", "()Ljava/lang/Boolean;");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.9.0/org/apache/kafka/tools/TopicCommand.TopicCommandOptions.html#hasDeleteOption--"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/TopicCommand.TopicCommandOptions.html#hasDeleteOption--"/>
             /// </summary>
             /// <returns><see cref="Java.Lang.Boolean"/></returns>
             public Java.Lang.Boolean HasDeleteOption()
@@ -265,7 +265,7 @@ namespace Org.Apache.Kafka.Tools
                 return IExecuteWithSignature<Java.Lang.Boolean>("hasDeleteOption", "()Ljava/lang/Boolean;");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.9.0/org/apache/kafka/tools/TopicCommand.TopicCommandOptions.html#hasDescribeOption--"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/TopicCommand.TopicCommandOptions.html#hasDescribeOption--"/>
             /// </summary>
             /// <returns><see cref="Java.Lang.Boolean"/></returns>
             public Java.Lang.Boolean HasDescribeOption()
@@ -273,7 +273,7 @@ namespace Org.Apache.Kafka.Tools
                 return IExecuteWithSignature<Java.Lang.Boolean>("hasDescribeOption", "()Ljava/lang/Boolean;");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.9.0/org/apache/kafka/tools/TopicCommand.TopicCommandOptions.html#hasListOption--"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/TopicCommand.TopicCommandOptions.html#hasListOption--"/>
             /// </summary>
             /// <returns><see cref="Java.Lang.Boolean"/></returns>
             public Java.Lang.Boolean HasListOption()
@@ -281,7 +281,7 @@ namespace Org.Apache.Kafka.Tools
                 return IExecuteWithSignature<Java.Lang.Boolean>("hasListOption", "()Ljava/lang/Boolean;");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.9.0/org/apache/kafka/tools/TopicCommand.TopicCommandOptions.html#ifExists--"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/TopicCommand.TopicCommandOptions.html#ifExists--"/>
             /// </summary>
             /// <returns><see cref="Java.Lang.Boolean"/></returns>
             public Java.Lang.Boolean IfExists()
@@ -289,7 +289,7 @@ namespace Org.Apache.Kafka.Tools
                 return IExecuteWithSignature<Java.Lang.Boolean>("ifExists", "()Ljava/lang/Boolean;");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.9.0/org/apache/kafka/tools/TopicCommand.TopicCommandOptions.html#ifNotExists--"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/TopicCommand.TopicCommandOptions.html#ifNotExists--"/>
             /// </summary>
             /// <returns><see cref="Java.Lang.Boolean"/></returns>
             public Java.Lang.Boolean IfNotExists()
@@ -297,7 +297,7 @@ namespace Org.Apache.Kafka.Tools
                 return IExecuteWithSignature<Java.Lang.Boolean>("ifNotExists", "()Ljava/lang/Boolean;");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.9.0/org/apache/kafka/tools/TopicCommand.TopicCommandOptions.html#reportAtMinIsrPartitions--"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/TopicCommand.TopicCommandOptions.html#reportAtMinIsrPartitions--"/>
             /// </summary>
             /// <returns><see cref="Java.Lang.Boolean"/></returns>
             public Java.Lang.Boolean ReportAtMinIsrPartitions()
@@ -305,7 +305,7 @@ namespace Org.Apache.Kafka.Tools
                 return IExecuteWithSignature<Java.Lang.Boolean>("reportAtMinIsrPartitions", "()Ljava/lang/Boolean;");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.9.0/org/apache/kafka/tools/TopicCommand.TopicCommandOptions.html#reportOverriddenConfigs--"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/TopicCommand.TopicCommandOptions.html#reportOverriddenConfigs--"/>
             /// </summary>
             /// <returns><see cref="Java.Lang.Boolean"/></returns>
             public Java.Lang.Boolean ReportOverriddenConfigs()
@@ -313,7 +313,7 @@ namespace Org.Apache.Kafka.Tools
                 return IExecuteWithSignature<Java.Lang.Boolean>("reportOverriddenConfigs", "()Ljava/lang/Boolean;");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.9.0/org/apache/kafka/tools/TopicCommand.TopicCommandOptions.html#reportUnavailablePartitions--"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/TopicCommand.TopicCommandOptions.html#reportUnavailablePartitions--"/>
             /// </summary>
             /// <returns><see cref="Java.Lang.Boolean"/></returns>
             public Java.Lang.Boolean ReportUnavailablePartitions()
@@ -321,7 +321,7 @@ namespace Org.Apache.Kafka.Tools
                 return IExecuteWithSignature<Java.Lang.Boolean>("reportUnavailablePartitions", "()Ljava/lang/Boolean;");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.9.0/org/apache/kafka/tools/TopicCommand.TopicCommandOptions.html#reportUnderMinIsrPartitions--"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/TopicCommand.TopicCommandOptions.html#reportUnderMinIsrPartitions--"/>
             /// </summary>
             /// <returns><see cref="Java.Lang.Boolean"/></returns>
             public Java.Lang.Boolean ReportUnderMinIsrPartitions()
@@ -329,7 +329,7 @@ namespace Org.Apache.Kafka.Tools
                 return IExecuteWithSignature<Java.Lang.Boolean>("reportUnderMinIsrPartitions", "()Ljava/lang/Boolean;");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.9.0/org/apache/kafka/tools/TopicCommand.TopicCommandOptions.html#reportUnderReplicatedPartitions--"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/TopicCommand.TopicCommandOptions.html#reportUnderReplicatedPartitions--"/>
             /// </summary>
             /// <returns><see cref="Java.Lang.Boolean"/></returns>
             public Java.Lang.Boolean ReportUnderReplicatedPartitions()
@@ -337,7 +337,7 @@ namespace Org.Apache.Kafka.Tools
                 return IExecuteWithSignature<Java.Lang.Boolean>("reportUnderReplicatedPartitions", "()Ljava/lang/Boolean;");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.9.0/org/apache/kafka/tools/TopicCommand.TopicCommandOptions.html#partitions--"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/TopicCommand.TopicCommandOptions.html#partitions--"/>
             /// </summary>
             /// <returns><see cref="Java.Util.Optional"/></returns>
             public Java.Util.Optional<Java.Lang.Integer> Partitions()
@@ -345,7 +345,7 @@ namespace Org.Apache.Kafka.Tools
                 return IExecuteWithSignature<Java.Util.Optional<Java.Lang.Integer>>("partitions", "()Ljava/util/Optional;");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.9.0/org/apache/kafka/tools/TopicCommand.TopicCommandOptions.html#partitionSizeLimitPerResponse--"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/TopicCommand.TopicCommandOptions.html#partitionSizeLimitPerResponse--"/>
             /// </summary>
             /// <returns><see cref="Java.Util.Optional"/></returns>
             public Java.Util.Optional<Java.Lang.Integer> PartitionSizeLimitPerResponse()
@@ -353,7 +353,7 @@ namespace Org.Apache.Kafka.Tools
                 return IExecuteWithSignature<Java.Util.Optional<Java.Lang.Integer>>("partitionSizeLimitPerResponse", "()Ljava/util/Optional;");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.9.0/org/apache/kafka/tools/TopicCommand.TopicCommandOptions.html#replicationFactor--"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/TopicCommand.TopicCommandOptions.html#replicationFactor--"/>
             /// </summary>
             /// <returns><see cref="Java.Util.Optional"/></returns>
             public Java.Util.Optional<Java.Lang.Integer> ReplicationFactor()
@@ -361,7 +361,7 @@ namespace Org.Apache.Kafka.Tools
                 return IExecuteWithSignature<Java.Util.Optional<Java.Lang.Integer>>("replicationFactor", "()Ljava/util/Optional;");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.9.0/org/apache/kafka/tools/TopicCommand.TopicCommandOptions.html#bootstrapServer--"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/TopicCommand.TopicCommandOptions.html#bootstrapServer--"/>
             /// </summary>
             /// <returns><see cref="Java.Util.Optional"/></returns>
             public Java.Util.Optional<Java.Lang.String> BootstrapServer()
@@ -369,7 +369,7 @@ namespace Org.Apache.Kafka.Tools
                 return IExecuteWithSignature<Java.Util.Optional<Java.Lang.String>>("bootstrapServer", "()Ljava/util/Optional;");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.9.0/org/apache/kafka/tools/TopicCommand.TopicCommandOptions.html#topic--"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/TopicCommand.TopicCommandOptions.html#topic--"/>
             /// </summary>
             /// <returns><see cref="Java.Util.Optional"/></returns>
             public Java.Util.Optional<Java.Lang.String> Topic()
@@ -377,7 +377,7 @@ namespace Org.Apache.Kafka.Tools
                 return IExecuteWithSignature<Java.Util.Optional<Java.Lang.String>>("topic", "()Ljava/util/Optional;");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.9.0/org/apache/kafka/tools/TopicCommand.TopicCommandOptions.html#topicId--"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/TopicCommand.TopicCommandOptions.html#topicId--"/>
             /// </summary>
             /// <returns><see cref="Java.Util.Optional"/></returns>
             public Java.Util.Optional<Java.Lang.String> TopicId()
@@ -385,7 +385,7 @@ namespace Org.Apache.Kafka.Tools
                 return IExecuteWithSignature<Java.Util.Optional<Java.Lang.String>>("topicId", "()Ljava/util/Optional;");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.9.0/org/apache/kafka/tools/TopicCommand.TopicCommandOptions.html#topicConfig--"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/TopicCommand.TopicCommandOptions.html#topicConfig--"/>
             /// </summary>
             /// <returns><see cref="Java.Util.Optional"/></returns>
             public Java.Util.Optional<Java.Util.List<Java.Lang.String>> TopicConfig()
@@ -393,7 +393,7 @@ namespace Org.Apache.Kafka.Tools
                 return IExecuteWithSignature<Java.Util.Optional<Java.Util.List<Java.Lang.String>>>("topicConfig", "()Ljava/util/Optional;");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.9.0/org/apache/kafka/tools/TopicCommand.TopicCommandOptions.html#replicaAssignment--"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/TopicCommand.TopicCommandOptions.html#replicaAssignment--"/>
             /// </summary>
             /// <returns><see cref="Java.Util.Optional"/></returns>
             public Java.Util.Optional<Java.Util.Map<Java.Lang.Integer, Java.Util.List<Java.Lang.Integer>>> ReplicaAssignment()
@@ -401,7 +401,7 @@ namespace Org.Apache.Kafka.Tools
                 return IExecuteWithSignature<Java.Util.Optional<Java.Util.Map<Java.Lang.Integer, Java.Util.List<Java.Lang.Integer>>>>("replicaAssignment", "()Ljava/util/Optional;");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.9.0/org/apache/kafka/tools/TopicCommand.TopicCommandOptions.html#commandConfig--"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/TopicCommand.TopicCommandOptions.html#commandConfig--"/>
             /// </summary>
             /// <returns><see cref="Java.Util.Properties"/></returns>
             /// <exception cref="Java.Io.IOException"/>
@@ -410,7 +410,7 @@ namespace Org.Apache.Kafka.Tools
                 return IExecuteWithSignature<Java.Util.Properties>("commandConfig", "()Ljava/util/Properties;");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.9.0/org/apache/kafka/tools/TopicCommand.TopicCommandOptions.html#checkArgs--"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/TopicCommand.TopicCommandOptions.html#checkArgs--"/>
             /// </summary>
             public void CheckArgs()
             {
@@ -432,7 +432,7 @@ namespace Org.Apache.Kafka.Tools
         {
             #region Constructors
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.9.0/org/apache/kafka/tools/TopicCommand.TopicService.html#org.apache.kafka.tools.TopicCommand$TopicService(java.util.Properties,java.util.Optional)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/TopicCommand.TopicService.html#org.apache.kafka.tools.TopicCommand$TopicService(java.util.Properties,java.util.Optional)"/>
             /// </summary>
             /// <param name="arg0"><see cref="Java.Util.Properties"/></param>
             /// <param name="arg1"><see cref="Java.Util.Optional"/></param>
@@ -441,7 +441,7 @@ namespace Org.Apache.Kafka.Tools
             {
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.9.0/org/apache/kafka/tools/TopicCommand.TopicService.html#org.apache.kafka.tools.TopicCommand$TopicService(org.apache.kafka.clients.admin.Admin)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/TopicCommand.TopicService.html#org.apache.kafka.tools.TopicCommand$TopicService(org.apache.kafka.clients.admin.Admin)"/>
             /// </summary>
             /// <param name="arg0"><see cref="Org.Apache.Kafka.Clients.Admin.Admin"/></param>
             public TopicService(Org.Apache.Kafka.Clients.Admin.Admin arg0)
@@ -465,7 +465,7 @@ namespace Org.Apache.Kafka.Tools
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.9.0/org/apache/kafka/tools/TopicCommand.TopicService.html#getTopics-java.util.Optional-boolean-"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/TopicCommand.TopicService.html#getTopics-java.util.Optional-boolean-"/>
             /// </summary>
             /// <param name="arg0"><see cref="Java.Util.Optional"/></param>
             /// <param name="arg1"><see cref="bool"/></param>
@@ -477,7 +477,7 @@ namespace Org.Apache.Kafka.Tools
                 return IExecuteWithSignature<Java.Util.List<Java.Lang.String>>("getTopics", "(Ljava/util/Optional;Z)Ljava/util/List;", arg0, arg1);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.9.0/org/apache/kafka/tools/TopicCommand.TopicService.html#getTopicIds-org.apache.kafka.common.Uuid-boolean-"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/TopicCommand.TopicService.html#getTopicIds-org.apache.kafka.common.Uuid-boolean-"/>
             /// </summary>
             /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Uuid"/></param>
             /// <param name="arg1"><see cref="bool"/></param>
@@ -489,7 +489,7 @@ namespace Org.Apache.Kafka.Tools
                 return IExecuteWithSignature<Java.Util.List<Org.Apache.Kafka.Common.Uuid>>("getTopicIds", "(Lorg/apache/kafka/common/Uuid;Z)Ljava/util/List;", arg0, arg1);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.9.0/org/apache/kafka/tools/TopicCommand.TopicService.html#listAllReassignments-java.util.Set-"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/TopicCommand.TopicService.html#listAllReassignments-java.util.Set-"/>
             /// </summary>
             /// <param name="arg0"><see cref="Java.Util.Set"/></param>
             /// <returns><see cref="Java.Util.Map"/></returns>
@@ -498,7 +498,7 @@ namespace Org.Apache.Kafka.Tools
                 return IExecuteWithSignature<Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Org.Apache.Kafka.Clients.Admin.PartitionReassignment>>("listAllReassignments", "(Ljava/util/Set;)Ljava/util/Map;", arg0);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.9.0/org/apache/kafka/tools/TopicCommand.TopicService.html#alterTopic-org.apache.kafka.tools.TopicCommand.TopicCommandOptions-"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/TopicCommand.TopicService.html#alterTopic-org.apache.kafka.tools.TopicCommand.TopicCommandOptions-"/>
             /// </summary>
             /// <param name="arg0"><see cref="Org.Apache.Kafka.Tools.TopicCommand.TopicCommandOptions"/></param>
             /// <exception cref="Java.Util.Concurrent.ExecutionException"/>
@@ -508,7 +508,7 @@ namespace Org.Apache.Kafka.Tools
                 IExecuteWithSignature("alterTopic", "(Lorg/apache/kafka/tools/TopicCommand$TopicCommandOptions;)V", arg0);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.9.0/org/apache/kafka/tools/TopicCommand.TopicService.html#close--"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/TopicCommand.TopicService.html#close--"/>
             /// </summary>
             /// <exception cref="Java.Lang.Exception"/>
             public void Close()
@@ -516,7 +516,7 @@ namespace Org.Apache.Kafka.Tools
                 IExecuteWithSignature("close", "()V");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.9.0/org/apache/kafka/tools/TopicCommand.TopicService.html#createTopic-org.apache.kafka.tools.TopicCommand.TopicCommandOptions-"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/TopicCommand.TopicService.html#createTopic-org.apache.kafka.tools.TopicCommand.TopicCommandOptions-"/>
             /// </summary>
             /// <param name="arg0"><see cref="Org.Apache.Kafka.Tools.TopicCommand.TopicCommandOptions"/></param>
             /// <exception cref="Java.Lang.Exception"/>
@@ -525,7 +525,7 @@ namespace Org.Apache.Kafka.Tools
                 IExecuteWithSignature("createTopic", "(Lorg/apache/kafka/tools/TopicCommand$TopicCommandOptions;)V", arg0);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.9.0/org/apache/kafka/tools/TopicCommand.TopicService.html#deleteTopic-org.apache.kafka.tools.TopicCommand.TopicCommandOptions-"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/TopicCommand.TopicService.html#deleteTopic-org.apache.kafka.tools.TopicCommand.TopicCommandOptions-"/>
             /// </summary>
             /// <param name="arg0"><see cref="Org.Apache.Kafka.Tools.TopicCommand.TopicCommandOptions"/></param>
             /// <exception cref="Java.Util.Concurrent.ExecutionException"/>
@@ -535,7 +535,7 @@ namespace Org.Apache.Kafka.Tools
                 IExecuteWithSignature("deleteTopic", "(Lorg/apache/kafka/tools/TopicCommand$TopicCommandOptions;)V", arg0);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.9.0/org/apache/kafka/tools/TopicCommand.TopicService.html#describeTopic-org.apache.kafka.tools.TopicCommand.TopicCommandOptions-"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/TopicCommand.TopicService.html#describeTopic-org.apache.kafka.tools.TopicCommand.TopicCommandOptions-"/>
             /// </summary>
             /// <param name="arg0"><see cref="Org.Apache.Kafka.Tools.TopicCommand.TopicCommandOptions"/></param>
             /// <exception cref="Java.Util.Concurrent.ExecutionException"/>
@@ -545,7 +545,7 @@ namespace Org.Apache.Kafka.Tools
                 IExecuteWithSignature("describeTopic", "(Lorg/apache/kafka/tools/TopicCommand$TopicCommandOptions;)V", arg0);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.9.0/org/apache/kafka/tools/TopicCommand.TopicService.html#listTopics-org.apache.kafka.tools.TopicCommand.TopicCommandOptions-"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/TopicCommand.TopicService.html#listTopics-org.apache.kafka.tools.TopicCommand.TopicCommandOptions-"/>
             /// </summary>
             /// <param name="arg0"><see cref="Org.Apache.Kafka.Tools.TopicCommand.TopicCommandOptions"/></param>
             /// <exception cref="Java.Util.Concurrent.ExecutionException"/>

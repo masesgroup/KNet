@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Connect.Sink
 {
     #region ErrantRecordReporter declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.0/org/apache/kafka/connect/sink/ErrantRecordReporter.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.0.0/org/apache/kafka/connect/sink/ErrantRecordReporter.html"/>
     /// </summary>
     public partial class ErrantRecordReporter : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ErrantRecordReporter>
     {
@@ -111,7 +111,7 @@ namespace Org.Apache.Kafka.Connect.Sink
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.0/org/apache/kafka/connect/sink/ErrantRecordReporter.html#report-org.apache.kafka.connect.sink.SinkRecord-java.lang.Throwable-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.0.0/org/apache/kafka/connect/sink/ErrantRecordReporter.html#report-org.apache.kafka.connect.sink.SinkRecord-java.lang.Throwable-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Connect.Sink.SinkRecord"/></param>
         /// <param name="arg1"><see cref="Java.Lang.Throwable"/></param>

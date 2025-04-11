@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Streams.Scala
 {
     #region FunctionsCompatConversions declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/3.9.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.html"/>
     /// </summary>
     public partial class FunctionsCompatConversions : MASES.JCOBridge.C2JBridge.JVMBridgeBase<FunctionsCompatConversions>
     {
@@ -68,7 +68,7 @@ namespace Org.Apache.Kafka.Streams.Scala
         // TODO: complete the class
         #region AggregatorFromFunction declaration
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/3.9.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.AggregatorFromFunction.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.AggregatorFromFunction.html"/>
         /// </summary>
         public partial class AggregatorFromFunction : MASES.JCOBridge.C2JBridge.JVMBridgeBase<AggregatorFromFunction>
         {
@@ -113,7 +113,7 @@ namespace Org.Apache.Kafka.Streams.Scala
 
         #region AggregatorFromFunction<K, V, VA> declaration
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/3.9.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.AggregatorFromFunction.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.AggregatorFromFunction.html"/>
         /// </summary>
         /// <typeparam name="K"></typeparam>
         /// <typeparam name="V"></typeparam>
@@ -161,7 +161,7 @@ namespace Org.Apache.Kafka.Streams.Scala
 
         #region FlatValueMapperFromFunction declaration
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/3.9.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.FlatValueMapperFromFunction.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.FlatValueMapperFromFunction.html"/>
         /// </summary>
         public partial class FlatValueMapperFromFunction : MASES.JCOBridge.C2JBridge.JVMBridgeBase<FlatValueMapperFromFunction>
         {
@@ -206,7 +206,7 @@ namespace Org.Apache.Kafka.Streams.Scala
 
         #region FlatValueMapperFromFunction<V, VR> declaration
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/3.9.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.FlatValueMapperFromFunction.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.FlatValueMapperFromFunction.html"/>
         /// </summary>
         /// <typeparam name="V"></typeparam>
         /// <typeparam name="VR"></typeparam>
@@ -253,7 +253,7 @@ namespace Org.Apache.Kafka.Streams.Scala
 
         #region FlatValueMapperWithKeyFromFunction declaration
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/3.9.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.FlatValueMapperWithKeyFromFunction.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.FlatValueMapperWithKeyFromFunction.html"/>
         /// </summary>
         public partial class FlatValueMapperWithKeyFromFunction : MASES.JCOBridge.C2JBridge.JVMBridgeBase<FlatValueMapperWithKeyFromFunction>
         {
@@ -298,7 +298,7 @@ namespace Org.Apache.Kafka.Streams.Scala
 
         #region FlatValueMapperWithKeyFromFunction<K, V, VR> declaration
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/3.9.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.FlatValueMapperWithKeyFromFunction.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.FlatValueMapperWithKeyFromFunction.html"/>
         /// </summary>
         /// <typeparam name="K"></typeparam>
         /// <typeparam name="V"></typeparam>
@@ -346,7 +346,7 @@ namespace Org.Apache.Kafka.Streams.Scala
 
         #region ForeachActionFromFunction declaration
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/3.9.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.ForeachActionFromFunction.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.ForeachActionFromFunction.html"/>
         /// </summary>
         public partial class ForeachActionFromFunction : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ForeachActionFromFunction>
         {
@@ -391,7 +391,7 @@ namespace Org.Apache.Kafka.Streams.Scala
 
         #region ForeachActionFromFunction<K, V> declaration
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/3.9.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.ForeachActionFromFunction.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.ForeachActionFromFunction.html"/>
         /// </summary>
         /// <typeparam name="K"></typeparam>
         /// <typeparam name="V"></typeparam>
@@ -438,7 +438,7 @@ namespace Org.Apache.Kafka.Streams.Scala
 
         #region FunctionFromFunction declaration
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/3.9.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.FunctionFromFunction.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.FunctionFromFunction.html"/>
         /// </summary>
         public partial class FunctionFromFunction : MASES.JCOBridge.C2JBridge.JVMBridgeBase<FunctionFromFunction>
         {
@@ -483,7 +483,7 @@ namespace Org.Apache.Kafka.Streams.Scala
 
         #region FunctionFromFunction<V, VR> declaration
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/3.9.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.FunctionFromFunction.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.FunctionFromFunction.html"/>
         /// </summary>
         /// <typeparam name="V"></typeparam>
         /// <typeparam name="VR"></typeparam>
@@ -530,7 +530,7 @@ namespace Org.Apache.Kafka.Streams.Scala
 
         #region InitializerFromFunction declaration
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/3.9.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.InitializerFromFunction.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.InitializerFromFunction.html"/>
         /// </summary>
         public partial class InitializerFromFunction : MASES.JCOBridge.C2JBridge.JVMBridgeBase<InitializerFromFunction>
         {
@@ -575,7 +575,7 @@ namespace Org.Apache.Kafka.Streams.Scala
 
         #region InitializerFromFunction<VA> declaration
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/3.9.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.InitializerFromFunction.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.InitializerFromFunction.html"/>
         /// </summary>
         /// <typeparam name="VA"></typeparam>
         public partial class InitializerFromFunction<VA> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<InitializerFromFunction<VA>>
@@ -621,7 +621,7 @@ namespace Org.Apache.Kafka.Streams.Scala
 
         #region KeyValueMapperFromFunction declaration
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/3.9.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.KeyValueMapperFromFunction.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.KeyValueMapperFromFunction.html"/>
         /// </summary>
         public partial class KeyValueMapperFromFunction : MASES.JCOBridge.C2JBridge.JVMBridgeBase<KeyValueMapperFromFunction>
         {
@@ -666,7 +666,7 @@ namespace Org.Apache.Kafka.Streams.Scala
 
         #region KeyValueMapperFromFunction<K, V, KR, VR> declaration
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/3.9.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.KeyValueMapperFromFunction.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.KeyValueMapperFromFunction.html"/>
         /// </summary>
         /// <typeparam name="K"></typeparam>
         /// <typeparam name="V"></typeparam>
@@ -715,7 +715,7 @@ namespace Org.Apache.Kafka.Streams.Scala
 
         #region MapperFromFunction declaration
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/3.9.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.MapperFromFunction.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.MapperFromFunction.html"/>
         /// </summary>
         public partial class MapperFromFunction : MASES.JCOBridge.C2JBridge.JVMBridgeBase<MapperFromFunction>
         {
@@ -760,7 +760,7 @@ namespace Org.Apache.Kafka.Streams.Scala
 
         #region MapperFromFunction<T, U, VR> declaration
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/3.9.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.MapperFromFunction.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.MapperFromFunction.html"/>
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <typeparam name="U"></typeparam>
@@ -808,7 +808,7 @@ namespace Org.Apache.Kafka.Streams.Scala
 
         #region MergerFromFunction declaration
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/3.9.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.MergerFromFunction.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.MergerFromFunction.html"/>
         /// </summary>
         public partial class MergerFromFunction : MASES.JCOBridge.C2JBridge.JVMBridgeBase<MergerFromFunction>
         {
@@ -853,7 +853,7 @@ namespace Org.Apache.Kafka.Streams.Scala
 
         #region MergerFromFunction<K, VR> declaration
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/3.9.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.MergerFromFunction.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.MergerFromFunction.html"/>
         /// </summary>
         /// <typeparam name="K"></typeparam>
         /// <typeparam name="VR"></typeparam>
@@ -900,7 +900,7 @@ namespace Org.Apache.Kafka.Streams.Scala
 
         #region PredicateFromFunction declaration
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/3.9.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.PredicateFromFunction.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.PredicateFromFunction.html"/>
         /// </summary>
         public partial class PredicateFromFunction : MASES.JCOBridge.C2JBridge.JVMBridgeBase<PredicateFromFunction>
         {
@@ -945,7 +945,7 @@ namespace Org.Apache.Kafka.Streams.Scala
 
         #region PredicateFromFunction<K, V> declaration
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/3.9.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.PredicateFromFunction.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.PredicateFromFunction.html"/>
         /// </summary>
         /// <typeparam name="K"></typeparam>
         /// <typeparam name="V"></typeparam>
@@ -992,7 +992,7 @@ namespace Org.Apache.Kafka.Streams.Scala
 
         #region ReducerFromFunction declaration
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/3.9.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.ReducerFromFunction.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.ReducerFromFunction.html"/>
         /// </summary>
         public partial class ReducerFromFunction : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ReducerFromFunction>
         {
@@ -1037,7 +1037,7 @@ namespace Org.Apache.Kafka.Streams.Scala
 
         #region ReducerFromFunction<V> declaration
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/3.9.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.ReducerFromFunction.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.ReducerFromFunction.html"/>
         /// </summary>
         /// <typeparam name="V"></typeparam>
         public partial class ReducerFromFunction<V> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ReducerFromFunction<V>>
@@ -1083,7 +1083,7 @@ namespace Org.Apache.Kafka.Streams.Scala
 
         #region TransformerSupplierAsJava declaration
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/3.9.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.TransformerSupplierAsJava.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.TransformerSupplierAsJava.html"/>
         /// </summary>
         public partial class TransformerSupplierAsJava : MASES.JCOBridge.C2JBridge.JVMBridgeBase<TransformerSupplierAsJava>
         {
@@ -1128,7 +1128,7 @@ namespace Org.Apache.Kafka.Streams.Scala
 
         #region TransformerSupplierAsJava<K, V, VO> declaration
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/3.9.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.TransformerSupplierAsJava.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.TransformerSupplierAsJava.html"/>
         /// </summary>
         /// <typeparam name="K"></typeparam>
         /// <typeparam name="V"></typeparam>
@@ -1176,7 +1176,7 @@ namespace Org.Apache.Kafka.Streams.Scala
 
         #region TransformerSupplierFromFunction declaration
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/3.9.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.TransformerSupplierFromFunction.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.TransformerSupplierFromFunction.html"/>
         /// </summary>
         public partial class TransformerSupplierFromFunction : MASES.JCOBridge.C2JBridge.JVMBridgeBase<TransformerSupplierFromFunction>
         {
@@ -1221,7 +1221,7 @@ namespace Org.Apache.Kafka.Streams.Scala
 
         #region TransformerSupplierFromFunction<K, V, VO> declaration
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/3.9.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.TransformerSupplierFromFunction.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.TransformerSupplierFromFunction.html"/>
         /// </summary>
         /// <typeparam name="K"></typeparam>
         /// <typeparam name="V"></typeparam>
@@ -1269,7 +1269,7 @@ namespace Org.Apache.Kafka.Streams.Scala
 
         #region ValueMapperFromFunction declaration
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/3.9.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.ValueMapperFromFunction.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.ValueMapperFromFunction.html"/>
         /// </summary>
         public partial class ValueMapperFromFunction : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ValueMapperFromFunction>
         {
@@ -1314,7 +1314,7 @@ namespace Org.Apache.Kafka.Streams.Scala
 
         #region ValueMapperFromFunction<V, VR> declaration
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/3.9.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.ValueMapperFromFunction.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.ValueMapperFromFunction.html"/>
         /// </summary>
         /// <typeparam name="V"></typeparam>
         /// <typeparam name="VR"></typeparam>
@@ -1361,7 +1361,7 @@ namespace Org.Apache.Kafka.Streams.Scala
 
         #region ValueMapperWithKeyFromFunction declaration
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/3.9.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.ValueMapperWithKeyFromFunction.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.ValueMapperWithKeyFromFunction.html"/>
         /// </summary>
         public partial class ValueMapperWithKeyFromFunction : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ValueMapperWithKeyFromFunction>
         {
@@ -1406,7 +1406,7 @@ namespace Org.Apache.Kafka.Streams.Scala
 
         #region ValueMapperWithKeyFromFunction<K, V, VR> declaration
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/3.9.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.ValueMapperWithKeyFromFunction.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.ValueMapperWithKeyFromFunction.html"/>
         /// </summary>
         /// <typeparam name="K"></typeparam>
         /// <typeparam name="V"></typeparam>
@@ -1454,7 +1454,7 @@ namespace Org.Apache.Kafka.Streams.Scala
 
         #region ValueTransformerSupplierAsJava declaration
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/3.9.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.ValueTransformerSupplierAsJava.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.ValueTransformerSupplierAsJava.html"/>
         /// </summary>
         public partial class ValueTransformerSupplierAsJava : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ValueTransformerSupplierAsJava>
         {
@@ -1499,7 +1499,7 @@ namespace Org.Apache.Kafka.Streams.Scala
 
         #region ValueTransformerSupplierAsJava<V, VO> declaration
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/3.9.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.ValueTransformerSupplierAsJava.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.ValueTransformerSupplierAsJava.html"/>
         /// </summary>
         /// <typeparam name="V"></typeparam>
         /// <typeparam name="VO"></typeparam>
@@ -1546,7 +1546,7 @@ namespace Org.Apache.Kafka.Streams.Scala
 
         #region ValueTransformerSupplierWithKeyAsJava declaration
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/3.9.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.ValueTransformerSupplierWithKeyAsJava.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.ValueTransformerSupplierWithKeyAsJava.html"/>
         /// </summary>
         public partial class ValueTransformerSupplierWithKeyAsJava : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ValueTransformerSupplierWithKeyAsJava>
         {
@@ -1591,7 +1591,7 @@ namespace Org.Apache.Kafka.Streams.Scala
 
         #region ValueTransformerSupplierWithKeyAsJava<K, V, VO> declaration
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/3.9.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.ValueTransformerSupplierWithKeyAsJava.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.ValueTransformerSupplierWithKeyAsJava.html"/>
         /// </summary>
         /// <typeparam name="K"></typeparam>
         /// <typeparam name="V"></typeparam>
@@ -1686,7 +1686,7 @@ namespace Org.Apache.Kafka.Streams.Scala
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/3.9.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.AggregatorFromFunction.html#asAggregator--"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.AggregatorFromFunction.html#asAggregator--"/>
             /// </summary>
             /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.Aggregator"/></returns>
             public Org.Apache.Kafka.Streams.Kstream.Aggregator AsAggregator()
@@ -1694,7 +1694,7 @@ namespace Org.Apache.Kafka.Streams.Scala
                 return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.Aggregator>("asAggregator", "()Lorg/apache/kafka/streams/kstream/Aggregator;");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/3.9.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.AggregatorFromFunction.html#asAggregator--"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.AggregatorFromFunction.html#asAggregator--"/>
             /// </summary>
             /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.Aggregator"/></returns>
             public Org.Apache.Kafka.Streams.Kstream.Aggregator AsAggregatorDirect()
@@ -1737,7 +1737,7 @@ namespace Org.Apache.Kafka.Streams.Scala
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/3.9.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.AggregatorFromFunction.html#asAggregator--"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.AggregatorFromFunction.html#asAggregator--"/>
             /// </summary>
             /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.Aggregator"/></returns>
             public Org.Apache.Kafka.Streams.Kstream.Aggregator<K, V, VA> AsAggregator()
@@ -1745,7 +1745,7 @@ namespace Org.Apache.Kafka.Streams.Scala
                 return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.Aggregator<K, V, VA>>("asAggregator", "()Lorg/apache/kafka/streams/kstream/Aggregator;");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/3.9.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.AggregatorFromFunction.html#asAggregator--"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.AggregatorFromFunction.html#asAggregator--"/>
             /// </summary>
             /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.Aggregator"/></returns>
             public Org.Apache.Kafka.Streams.Kstream.Aggregator<K, V, VA> AsAggregatorDirect()
@@ -1784,7 +1784,7 @@ namespace Org.Apache.Kafka.Streams.Scala
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/3.9.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.FlatValueMapperFromFunction.html#asValueMapper--"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.FlatValueMapperFromFunction.html#asValueMapper--"/>
             /// </summary>
             /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.ValueMapper"/></returns>
             public Org.Apache.Kafka.Streams.Kstream.ValueMapper AsValueMapper()
@@ -1792,7 +1792,7 @@ namespace Org.Apache.Kafka.Streams.Scala
                 return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.ValueMapper>("asValueMapper", "()Lorg/apache/kafka/streams/kstream/ValueMapper;");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/3.9.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.FlatValueMapperFromFunction.html#asValueMapper--"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.FlatValueMapperFromFunction.html#asValueMapper--"/>
             /// </summary>
             /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.ValueMapper"/></returns>
             public Org.Apache.Kafka.Streams.Kstream.ValueMapper AsValueMapperDirect()
@@ -1835,7 +1835,7 @@ namespace Org.Apache.Kafka.Streams.Scala
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/3.9.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.FlatValueMapperFromFunction.html#asValueMapper--"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.FlatValueMapperFromFunction.html#asValueMapper--"/>
             /// </summary>
             /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.ValueMapper"/></returns>
             public Org.Apache.Kafka.Streams.Kstream.ValueMapper<V, Java.Lang.Iterable<VR>> AsValueMapper()
@@ -1843,7 +1843,7 @@ namespace Org.Apache.Kafka.Streams.Scala
                 return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.ValueMapper<V, Java.Lang.Iterable<VR>>>("asValueMapper", "()Lorg/apache/kafka/streams/kstream/ValueMapper;");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/3.9.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.FlatValueMapperFromFunction.html#asValueMapper--"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.FlatValueMapperFromFunction.html#asValueMapper--"/>
             /// </summary>
             /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.ValueMapper"/></returns>
             public Org.Apache.Kafka.Streams.Kstream.ValueMapper<V, Java.Lang.Iterable<VR>> AsValueMapperDirect()
@@ -1882,7 +1882,7 @@ namespace Org.Apache.Kafka.Streams.Scala
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/3.9.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.FlatValueMapperWithKeyFromFunction.html#asValueMapperWithKey--"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.FlatValueMapperWithKeyFromFunction.html#asValueMapperWithKey--"/>
             /// </summary>
             /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.ValueMapperWithKey"/></returns>
             public Org.Apache.Kafka.Streams.Kstream.ValueMapperWithKey AsValueMapperWithKey()
@@ -1890,7 +1890,7 @@ namespace Org.Apache.Kafka.Streams.Scala
                 return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.ValueMapperWithKey>("asValueMapperWithKey", "()Lorg/apache/kafka/streams/kstream/ValueMapperWithKey;");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/3.9.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.FlatValueMapperWithKeyFromFunction.html#asValueMapperWithKey--"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.FlatValueMapperWithKeyFromFunction.html#asValueMapperWithKey--"/>
             /// </summary>
             /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.ValueMapperWithKey"/></returns>
             public Org.Apache.Kafka.Streams.Kstream.ValueMapperWithKey AsValueMapperWithKeyDirect()
@@ -1933,7 +1933,7 @@ namespace Org.Apache.Kafka.Streams.Scala
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/3.9.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.FlatValueMapperWithKeyFromFunction.html#asValueMapperWithKey--"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.FlatValueMapperWithKeyFromFunction.html#asValueMapperWithKey--"/>
             /// </summary>
             /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.ValueMapperWithKey"/></returns>
             public Org.Apache.Kafka.Streams.Kstream.ValueMapperWithKey<K, V, Java.Lang.Iterable<VR>> AsValueMapperWithKey()
@@ -1941,7 +1941,7 @@ namespace Org.Apache.Kafka.Streams.Scala
                 return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.ValueMapperWithKey<K, V, Java.Lang.Iterable<VR>>>("asValueMapperWithKey", "()Lorg/apache/kafka/streams/kstream/ValueMapperWithKey;");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/3.9.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.FlatValueMapperWithKeyFromFunction.html#asValueMapperWithKey--"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.FlatValueMapperWithKeyFromFunction.html#asValueMapperWithKey--"/>
             /// </summary>
             /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.ValueMapperWithKey"/></returns>
             public Org.Apache.Kafka.Streams.Kstream.ValueMapperWithKey<K, V, Java.Lang.Iterable<VR>> AsValueMapperWithKeyDirect()
@@ -1980,7 +1980,7 @@ namespace Org.Apache.Kafka.Streams.Scala
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/3.9.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.ForeachActionFromFunction.html#asForeachAction--"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.ForeachActionFromFunction.html#asForeachAction--"/>
             /// </summary>
             /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.ForeachAction"/></returns>
             public Org.Apache.Kafka.Streams.Kstream.ForeachAction AsForeachAction()
@@ -1988,7 +1988,7 @@ namespace Org.Apache.Kafka.Streams.Scala
                 return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.ForeachAction>("asForeachAction", "()Lorg/apache/kafka/streams/kstream/ForeachAction;");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/3.9.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.ForeachActionFromFunction.html#asForeachAction--"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.ForeachActionFromFunction.html#asForeachAction--"/>
             /// </summary>
             /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.ForeachAction"/></returns>
             public Org.Apache.Kafka.Streams.Kstream.ForeachAction AsForeachActionDirect()
@@ -2031,7 +2031,7 @@ namespace Org.Apache.Kafka.Streams.Scala
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/3.9.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.ForeachActionFromFunction.html#asForeachAction--"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.ForeachActionFromFunction.html#asForeachAction--"/>
             /// </summary>
             /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.ForeachAction"/></returns>
             public Org.Apache.Kafka.Streams.Kstream.ForeachAction<K, V> AsForeachAction()
@@ -2039,7 +2039,7 @@ namespace Org.Apache.Kafka.Streams.Scala
                 return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.ForeachAction<K, V>>("asForeachAction", "()Lorg/apache/kafka/streams/kstream/ForeachAction;");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/3.9.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.ForeachActionFromFunction.html#asForeachAction--"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.ForeachActionFromFunction.html#asForeachAction--"/>
             /// </summary>
             /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.ForeachAction"/></returns>
             public Org.Apache.Kafka.Streams.Kstream.ForeachAction<K, V> AsForeachActionDirect()
@@ -2078,7 +2078,7 @@ namespace Org.Apache.Kafka.Streams.Scala
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/3.9.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.FunctionFromFunction.html#asJavaFunction--"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.FunctionFromFunction.html#asJavaFunction--"/>
             /// </summary>
             /// <returns><see cref="Java.Util.Function.Function"/></returns>
             public Java.Util.Function.Function AsJavaFunction()
@@ -2086,7 +2086,7 @@ namespace Org.Apache.Kafka.Streams.Scala
                 return IExecuteWithSignature<Java.Util.Function.Function>("asJavaFunction", "()Ljava/util/function/Function;");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/3.9.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.FunctionFromFunction.html#asJavaFunction--"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.FunctionFromFunction.html#asJavaFunction--"/>
             /// </summary>
             /// <returns><see cref="Java.Util.Function.Function"/></returns>
             public Java.Util.Function.Function AsJavaFunctionDirect()
@@ -2129,7 +2129,7 @@ namespace Org.Apache.Kafka.Streams.Scala
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/3.9.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.FunctionFromFunction.html#asJavaFunction--"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.FunctionFromFunction.html#asJavaFunction--"/>
             /// </summary>
             /// <returns><see cref="Java.Util.Function.Function"/></returns>
             public Java.Util.Function.Function<V, VR> AsJavaFunction()
@@ -2137,7 +2137,7 @@ namespace Org.Apache.Kafka.Streams.Scala
                 return IExecuteWithSignature<Java.Util.Function.Function<V, VR>>("asJavaFunction", "()Ljava/util/function/Function;");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/3.9.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.FunctionFromFunction.html#asJavaFunction--"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.FunctionFromFunction.html#asJavaFunction--"/>
             /// </summary>
             /// <returns><see cref="Java.Util.Function.Function"/></returns>
             public Java.Util.Function.Function<V, VR> AsJavaFunctionDirect()
@@ -2176,7 +2176,7 @@ namespace Org.Apache.Kafka.Streams.Scala
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/3.9.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.InitializerFromFunction.html#asInitializer--"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.InitializerFromFunction.html#asInitializer--"/>
             /// </summary>
             /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.Initializer"/></returns>
             public Org.Apache.Kafka.Streams.Kstream.Initializer AsInitializer()
@@ -2184,7 +2184,7 @@ namespace Org.Apache.Kafka.Streams.Scala
                 return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.Initializer>("asInitializer", "()Lorg/apache/kafka/streams/kstream/Initializer;");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/3.9.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.InitializerFromFunction.html#asInitializer--"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.InitializerFromFunction.html#asInitializer--"/>
             /// </summary>
             /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.Initializer"/></returns>
             public Org.Apache.Kafka.Streams.Kstream.Initializer AsInitializerDirect()
@@ -2227,7 +2227,7 @@ namespace Org.Apache.Kafka.Streams.Scala
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/3.9.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.InitializerFromFunction.html#asInitializer--"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.InitializerFromFunction.html#asInitializer--"/>
             /// </summary>
             /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.Initializer"/></returns>
             public Org.Apache.Kafka.Streams.Kstream.Initializer<VA> AsInitializer()
@@ -2235,7 +2235,7 @@ namespace Org.Apache.Kafka.Streams.Scala
                 return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.Initializer<VA>>("asInitializer", "()Lorg/apache/kafka/streams/kstream/Initializer;");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/3.9.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.InitializerFromFunction.html#asInitializer--"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.InitializerFromFunction.html#asInitializer--"/>
             /// </summary>
             /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.Initializer"/></returns>
             public Org.Apache.Kafka.Streams.Kstream.Initializer<VA> AsInitializerDirect()
@@ -2274,7 +2274,7 @@ namespace Org.Apache.Kafka.Streams.Scala
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/3.9.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.KeyValueMapperFromFunction.html#asKeyValueMapper--"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.KeyValueMapperFromFunction.html#asKeyValueMapper--"/>
             /// </summary>
             /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KeyValueMapper"/></returns>
             public Org.Apache.Kafka.Streams.Kstream.KeyValueMapper AsKeyValueMapper()
@@ -2282,7 +2282,7 @@ namespace Org.Apache.Kafka.Streams.Scala
                 return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.KeyValueMapper>("asKeyValueMapper", "()Lorg/apache/kafka/streams/kstream/KeyValueMapper;");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/3.9.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.KeyValueMapperFromFunction.html#asKeyValueMapper--"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.KeyValueMapperFromFunction.html#asKeyValueMapper--"/>
             /// </summary>
             /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KeyValueMapper"/></returns>
             public Org.Apache.Kafka.Streams.Kstream.KeyValueMapper AsKeyValueMapperDirect()
@@ -2325,7 +2325,7 @@ namespace Org.Apache.Kafka.Streams.Scala
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/3.9.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.KeyValueMapperFromFunction.html#asKeyValueMapper--"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.KeyValueMapperFromFunction.html#asKeyValueMapper--"/>
             /// </summary>
             /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KeyValueMapper"/></returns>
             public Org.Apache.Kafka.Streams.Kstream.KeyValueMapper<K, V, Org.Apache.Kafka.Streams.KeyValue<KR, VR>> AsKeyValueMapper()
@@ -2333,7 +2333,7 @@ namespace Org.Apache.Kafka.Streams.Scala
                 return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.KeyValueMapper<K, V, Org.Apache.Kafka.Streams.KeyValue<KR, VR>>>("asKeyValueMapper", "()Lorg/apache/kafka/streams/kstream/KeyValueMapper;");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/3.9.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.KeyValueMapperFromFunction.html#asKeyValueMapper--"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.KeyValueMapperFromFunction.html#asKeyValueMapper--"/>
             /// </summary>
             /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KeyValueMapper"/></returns>
             public Org.Apache.Kafka.Streams.Kstream.KeyValueMapper<K, V, Org.Apache.Kafka.Streams.KeyValue<KR, VR>> AsKeyValueMapperDirect()
@@ -2372,7 +2372,7 @@ namespace Org.Apache.Kafka.Streams.Scala
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/3.9.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.MapperFromFunction.html#asKeyValueMapper--"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.MapperFromFunction.html#asKeyValueMapper--"/>
             /// </summary>
             /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KeyValueMapper"/></returns>
             public Org.Apache.Kafka.Streams.Kstream.KeyValueMapper AsKeyValueMapper()
@@ -2380,7 +2380,7 @@ namespace Org.Apache.Kafka.Streams.Scala
                 return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.KeyValueMapper>("asKeyValueMapper", "()Lorg/apache/kafka/streams/kstream/KeyValueMapper;");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/3.9.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.MapperFromFunction.html#asKeyValueMapper--"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.MapperFromFunction.html#asKeyValueMapper--"/>
             /// </summary>
             /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KeyValueMapper"/></returns>
             public Org.Apache.Kafka.Streams.Kstream.KeyValueMapper AsKeyValueMapperDirect()
@@ -2388,7 +2388,7 @@ namespace Org.Apache.Kafka.Streams.Scala
                 return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.KeyValueMapperDirect, Org.Apache.Kafka.Streams.Kstream.KeyValueMapper>("asKeyValueMapper", "()Lorg/apache/kafka/streams/kstream/KeyValueMapper;");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/3.9.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.MapperFromFunction.html#asValueJoiner--"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.MapperFromFunction.html#asValueJoiner--"/>
             /// </summary>
             /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.ValueJoiner"/></returns>
             public Org.Apache.Kafka.Streams.Kstream.ValueJoiner AsValueJoiner()
@@ -2396,7 +2396,7 @@ namespace Org.Apache.Kafka.Streams.Scala
                 return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.ValueJoiner>("asValueJoiner", "()Lorg/apache/kafka/streams/kstream/ValueJoiner;");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/3.9.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.MapperFromFunction.html#asValueJoiner--"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.MapperFromFunction.html#asValueJoiner--"/>
             /// </summary>
             /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.ValueJoiner"/></returns>
             public Org.Apache.Kafka.Streams.Kstream.ValueJoiner AsValueJoinerDirect()
@@ -2439,7 +2439,7 @@ namespace Org.Apache.Kafka.Streams.Scala
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/3.9.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.MapperFromFunction.html#asKeyValueMapper--"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.MapperFromFunction.html#asKeyValueMapper--"/>
             /// </summary>
             /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KeyValueMapper"/></returns>
             public Org.Apache.Kafka.Streams.Kstream.KeyValueMapper<T, U, VR> AsKeyValueMapper()
@@ -2447,7 +2447,7 @@ namespace Org.Apache.Kafka.Streams.Scala
                 return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.KeyValueMapper<T, U, VR>>("asKeyValueMapper", "()Lorg/apache/kafka/streams/kstream/KeyValueMapper;");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/3.9.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.MapperFromFunction.html#asKeyValueMapper--"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.MapperFromFunction.html#asKeyValueMapper--"/>
             /// </summary>
             /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KeyValueMapper"/></returns>
             public Org.Apache.Kafka.Streams.Kstream.KeyValueMapper<T, U, VR> AsKeyValueMapperDirect()
@@ -2455,7 +2455,7 @@ namespace Org.Apache.Kafka.Streams.Scala
                 return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.KeyValueMapperDirect<T, U, VR>, Org.Apache.Kafka.Streams.Kstream.KeyValueMapper<T, U, VR>>("asKeyValueMapper", "()Lorg/apache/kafka/streams/kstream/KeyValueMapper;");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/3.9.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.MapperFromFunction.html#asValueJoiner--"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.MapperFromFunction.html#asValueJoiner--"/>
             /// </summary>
             /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.ValueJoiner"/></returns>
             public Org.Apache.Kafka.Streams.Kstream.ValueJoiner<T, U, VR> AsValueJoiner()
@@ -2463,7 +2463,7 @@ namespace Org.Apache.Kafka.Streams.Scala
                 return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.ValueJoiner<T, U, VR>>("asValueJoiner", "()Lorg/apache/kafka/streams/kstream/ValueJoiner;");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/3.9.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.MapperFromFunction.html#asValueJoiner--"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.MapperFromFunction.html#asValueJoiner--"/>
             /// </summary>
             /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.ValueJoiner"/></returns>
             public Org.Apache.Kafka.Streams.Kstream.ValueJoiner<T, U, VR> AsValueJoinerDirect()
@@ -2502,7 +2502,7 @@ namespace Org.Apache.Kafka.Streams.Scala
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/3.9.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.MergerFromFunction.html#asMerger--"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.MergerFromFunction.html#asMerger--"/>
             /// </summary>
             /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.Merger"/></returns>
             public Org.Apache.Kafka.Streams.Kstream.Merger AsMerger()
@@ -2510,7 +2510,7 @@ namespace Org.Apache.Kafka.Streams.Scala
                 return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.Merger>("asMerger", "()Lorg/apache/kafka/streams/kstream/Merger;");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/3.9.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.MergerFromFunction.html#asMerger--"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.MergerFromFunction.html#asMerger--"/>
             /// </summary>
             /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.Merger"/></returns>
             public Org.Apache.Kafka.Streams.Kstream.Merger AsMergerDirect()
@@ -2553,7 +2553,7 @@ namespace Org.Apache.Kafka.Streams.Scala
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/3.9.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.MergerFromFunction.html#asMerger--"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.MergerFromFunction.html#asMerger--"/>
             /// </summary>
             /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.Merger"/></returns>
             public Org.Apache.Kafka.Streams.Kstream.Merger<K, VR> AsMerger()
@@ -2561,7 +2561,7 @@ namespace Org.Apache.Kafka.Streams.Scala
                 return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.Merger<K, VR>>("asMerger", "()Lorg/apache/kafka/streams/kstream/Merger;");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/3.9.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.MergerFromFunction.html#asMerger--"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.MergerFromFunction.html#asMerger--"/>
             /// </summary>
             /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.Merger"/></returns>
             public Org.Apache.Kafka.Streams.Kstream.Merger<K, VR> AsMergerDirect()
@@ -2600,7 +2600,7 @@ namespace Org.Apache.Kafka.Streams.Scala
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/3.9.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.PredicateFromFunction.html#asPredicate--"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.PredicateFromFunction.html#asPredicate--"/>
             /// </summary>
             /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.Predicate"/></returns>
             public Org.Apache.Kafka.Streams.Kstream.Predicate AsPredicate()
@@ -2608,7 +2608,7 @@ namespace Org.Apache.Kafka.Streams.Scala
                 return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.Predicate>("asPredicate", "()Lorg/apache/kafka/streams/kstream/Predicate;");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/3.9.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.PredicateFromFunction.html#asPredicate--"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.PredicateFromFunction.html#asPredicate--"/>
             /// </summary>
             /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.Predicate"/></returns>
             public Org.Apache.Kafka.Streams.Kstream.Predicate AsPredicateDirect()
@@ -2651,7 +2651,7 @@ namespace Org.Apache.Kafka.Streams.Scala
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/3.9.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.PredicateFromFunction.html#asPredicate--"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.PredicateFromFunction.html#asPredicate--"/>
             /// </summary>
             /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.Predicate"/></returns>
             public Org.Apache.Kafka.Streams.Kstream.Predicate<K, V> AsPredicate()
@@ -2659,7 +2659,7 @@ namespace Org.Apache.Kafka.Streams.Scala
                 return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.Predicate<K, V>>("asPredicate", "()Lorg/apache/kafka/streams/kstream/Predicate;");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/3.9.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.PredicateFromFunction.html#asPredicate--"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.PredicateFromFunction.html#asPredicate--"/>
             /// </summary>
             /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.Predicate"/></returns>
             public Org.Apache.Kafka.Streams.Kstream.Predicate<K, V> AsPredicateDirect()
@@ -2698,7 +2698,7 @@ namespace Org.Apache.Kafka.Streams.Scala
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/3.9.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.ReducerFromFunction.html#asReducer--"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.ReducerFromFunction.html#asReducer--"/>
             /// </summary>
             /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.Reducer"/></returns>
             public Org.Apache.Kafka.Streams.Kstream.Reducer AsReducer()
@@ -2706,7 +2706,7 @@ namespace Org.Apache.Kafka.Streams.Scala
                 return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.Reducer>("asReducer", "()Lorg/apache/kafka/streams/kstream/Reducer;");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/3.9.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.ReducerFromFunction.html#asReducer--"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.ReducerFromFunction.html#asReducer--"/>
             /// </summary>
             /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.Reducer"/></returns>
             public Org.Apache.Kafka.Streams.Kstream.Reducer AsReducerDirect()
@@ -2749,7 +2749,7 @@ namespace Org.Apache.Kafka.Streams.Scala
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/3.9.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.ReducerFromFunction.html#asReducer--"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.ReducerFromFunction.html#asReducer--"/>
             /// </summary>
             /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.Reducer"/></returns>
             public Org.Apache.Kafka.Streams.Kstream.Reducer<V> AsReducer()
@@ -2757,7 +2757,7 @@ namespace Org.Apache.Kafka.Streams.Scala
                 return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.Reducer<V>>("asReducer", "()Lorg/apache/kafka/streams/kstream/Reducer;");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/3.9.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.ReducerFromFunction.html#asReducer--"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.ReducerFromFunction.html#asReducer--"/>
             /// </summary>
             /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.Reducer"/></returns>
             public Org.Apache.Kafka.Streams.Kstream.Reducer<V> AsReducerDirect()
@@ -2928,7 +2928,7 @@ namespace Org.Apache.Kafka.Streams.Scala
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/3.9.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.ValueMapperFromFunction.html#asValueMapper--"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.ValueMapperFromFunction.html#asValueMapper--"/>
             /// </summary>
             /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.ValueMapper"/></returns>
             public Org.Apache.Kafka.Streams.Kstream.ValueMapper AsValueMapper()
@@ -2936,7 +2936,7 @@ namespace Org.Apache.Kafka.Streams.Scala
                 return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.ValueMapper>("asValueMapper", "()Lorg/apache/kafka/streams/kstream/ValueMapper;");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/3.9.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.ValueMapperFromFunction.html#asValueMapper--"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.ValueMapperFromFunction.html#asValueMapper--"/>
             /// </summary>
             /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.ValueMapper"/></returns>
             public Org.Apache.Kafka.Streams.Kstream.ValueMapper AsValueMapperDirect()
@@ -2979,7 +2979,7 @@ namespace Org.Apache.Kafka.Streams.Scala
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/3.9.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.ValueMapperFromFunction.html#asValueMapper--"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.ValueMapperFromFunction.html#asValueMapper--"/>
             /// </summary>
             /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.ValueMapper"/></returns>
             public Org.Apache.Kafka.Streams.Kstream.ValueMapper<V, VR> AsValueMapper()
@@ -2987,7 +2987,7 @@ namespace Org.Apache.Kafka.Streams.Scala
                 return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.ValueMapper<V, VR>>("asValueMapper", "()Lorg/apache/kafka/streams/kstream/ValueMapper;");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/3.9.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.ValueMapperFromFunction.html#asValueMapper--"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.ValueMapperFromFunction.html#asValueMapper--"/>
             /// </summary>
             /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.ValueMapper"/></returns>
             public Org.Apache.Kafka.Streams.Kstream.ValueMapper<V, VR> AsValueMapperDirect()
@@ -3026,7 +3026,7 @@ namespace Org.Apache.Kafka.Streams.Scala
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/3.9.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.ValueMapperWithKeyFromFunction.html#asValueMapperWithKey--"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.ValueMapperWithKeyFromFunction.html#asValueMapperWithKey--"/>
             /// </summary>
             /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.ValueMapperWithKey"/></returns>
             public Org.Apache.Kafka.Streams.Kstream.ValueMapperWithKey AsValueMapperWithKey()
@@ -3034,7 +3034,7 @@ namespace Org.Apache.Kafka.Streams.Scala
                 return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.ValueMapperWithKey>("asValueMapperWithKey", "()Lorg/apache/kafka/streams/kstream/ValueMapperWithKey;");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/3.9.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.ValueMapperWithKeyFromFunction.html#asValueMapperWithKey--"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.ValueMapperWithKeyFromFunction.html#asValueMapperWithKey--"/>
             /// </summary>
             /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.ValueMapperWithKey"/></returns>
             public Org.Apache.Kafka.Streams.Kstream.ValueMapperWithKey AsValueMapperWithKeyDirect()
@@ -3077,7 +3077,7 @@ namespace Org.Apache.Kafka.Streams.Scala
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/3.9.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.ValueMapperWithKeyFromFunction.html#asValueMapperWithKey--"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.ValueMapperWithKeyFromFunction.html#asValueMapperWithKey--"/>
             /// </summary>
             /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.ValueMapperWithKey"/></returns>
             public Org.Apache.Kafka.Streams.Kstream.ValueMapperWithKey<K, V, VR> AsValueMapperWithKey()
@@ -3085,7 +3085,7 @@ namespace Org.Apache.Kafka.Streams.Scala
                 return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.ValueMapperWithKey<K, V, VR>>("asValueMapperWithKey", "()Lorg/apache/kafka/streams/kstream/ValueMapperWithKey;");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/3.9.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.ValueMapperWithKeyFromFunction.html#asValueMapperWithKey--"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.ValueMapperWithKeyFromFunction.html#asValueMapperWithKey--"/>
             /// </summary>
             /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.ValueMapperWithKey"/></returns>
             public Org.Apache.Kafka.Streams.Kstream.ValueMapperWithKey<K, V, VR> AsValueMapperWithKeyDirect()
