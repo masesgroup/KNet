@@ -197,13 +197,11 @@ namespace MASES.KNet.Consumer
         /// <inheritdoc cref="IConsumer{K, V, TJVMK, TJVMV}.Poll(TimeSpan)"/>
         public ConsumerRecords<K, V, TJVMK, TJVMV> Poll(TimeSpan timeout)
         {
-            Duration duration = timeout;
-            try
+            using (Duration duration = timeout)
             {
                 var records = base.Poll(duration);
                 return new ConsumerRecords<K, V, TJVMK, TJVMV>(records, _keyDeserializer, _valueDeserializer);
             }
-            finally { duration?.Dispose(); }
         }
 
         Action<ConsumerRecord<K, V, TJVMK, TJVMV>> actionCallback = null;

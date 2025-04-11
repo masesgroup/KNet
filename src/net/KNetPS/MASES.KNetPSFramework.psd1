@@ -25,7 +25,7 @@ CompanyName = 'MASES s.r.l.'
 Copyright = 'Copyright ©  MASES s.r.l. 2025'
 
 # Description of the functionality provided by this module
-Description = 'PowerShell command line interface of .NET suite for Apache Kafka. KNet is a comprehensive .NET suite for Apache Kafka providing all features: Producer, Consumer, Admin, Streams, Connect, backends (ZooKeeper and Kafka).'
+Description = 'PowerShell command line interface of .NET suite for Apache Kafka. KNet is a comprehensive .NET suite for Apache Kafka providing all features: Producer, Consumer, Admin, Streams, Connect, backends (KRaft).'
 
 # Minimum version of the Windows PowerShell engine required by this module
 PowerShellVersion = '5.1'
@@ -87,8 +87,6 @@ CmdletsToExport = @(
     'Start-TopicCommand',
     'Start-ZkSecurityMigrator',
     'Start-KafkaStart',
-    'Start-ZooKeeperShell',
-    'Start-ZooKeeperStart',
     'Start-MetadataShell',
     'Start-ClusterTool',
     'Start-ConsoleConsumer',
@@ -141,7 +139,7 @@ PrivateData = @{
 
     PSData = @{
 
-        Tags = @('KNetPS', 'PSEdition_Core', 'PSEdition_Desktop', 'Windows', 'Linux', 'ZooKeeper', 'Apache', 'Kafka', 'ApacheKafka', 'Admin', 'Consumer', 'Producer')
+        Tags = @('KNetPS', 'PSEdition_Core', 'PSEdition_Desktop', 'Windows', 'Linux', 'Apache', 'Kafka', 'ApacheKafka', 'Admin', 'Consumer', 'Producer')
 
         LicenseUri = 'https://github.com/masesgroup/KNet/blob/master/LICENSE'
 

@@ -22,13 +22,23 @@ else
 		export KAFKA_ADVERTISED_PORT
 	fi
 	
-	if [[ -z "$KAFKA_BROKER_ID" ]]; then
-		if [[ -n "$BROKER_ID_COMMAND" ]]; then
-			KAFKA_BROKER_ID=$(eval "$BROKER_ID_COMMAND")
-			export KAFKA_BROKER_ID
+	if [[ -z "$KAFKA_NODE_ID" ]]; then
+		if [[ -n "$NODE_ID_COMMAND" ]]; then
+			KAFKA_NODE_ID=$(eval "$NODE_ID_COMMAND")
+			export KAFKA_NODE_ID
 		else
-			# By default auto allocate broker ID
-			export KAFKA_BROKER_ID=-1
+			# By default auto allocate node ID
+			export KAFKA_NODE_ID=1
+		fi
+	fi
+
+	if [[ -z "$KAFKA_PROCESS_ROLES" ]]; then
+		if [[ -n "$KAFKA_PROCESS_ROLES_COMMAND" ]]; then
+			KAFKA_PROCESS_ROLES=$(eval "$KAFKA_PROCESS_ROLES_COMMAND")
+			export KAFKA_PROCESS_ROLES
+		else
+			# By default auto allocate node ID
+			export KAFKA_PROCESS_ROLES=broker,controller
 		fi
 	fi
 
@@ -77,9 +87,12 @@ else
 	
 	#Issue newline to config file in case there is not one already
 	echo "" >> /app/config_container/server.properties
+
+	#Issue newline to config file in case there is not one already
+	echo "" >> /app/config_container/broker.properties
 	
 	#Issue newline to config file in case there is not one already
-	echo "" >> /app/config_container/zookeeper.properties
+	echo "" >> /app/config_container/controller.properties
 
 	#Issue newline to config file in case there is not one already
 	echo "" >> /app/config_container/connect-distributed.properties
@@ -89,15 +102,6 @@ else
 
 	#Issue newline to config file in case there is not one already
 	echo "" >> /app/config_container/connect-knet-specific.properties
-
-	#Issue newline to config file in case there is not one already
-	echo "" >> /app/config_container/kraft/broker.properties
-	
-	#Issue newline to config file in case there is not one already
-	echo "" >> /app/config_container/kraft/controller.properties
-	
-	#Issue newline to config file in case there is not one already
-	echo "" >> /app/config_container/kraft/server.properties
 	
 	(
 		function updateConfig() {
@@ -132,72 +136,73 @@ else
 	
 			if [[ $env_var =~ ^KAFKA_ ]]; then
 				kafka_name=$(echo "$env_var" | cut -d_ -f2- | tr '[:upper:]' '[:lower:]' | tr _ .)
+				updateConfig "$kafka_name" "${!env_var}" "/app/config_container/broker.properties"
+				updateConfig "$kafka_name" "${!env_var}" "/app/config_container/controller.properties"
 				updateConfig "$kafka_name" "${!env_var}" "/app/config_container/server.properties"
-			fi
-			
-			if [[ $env_var =~ ^ZOOKEEPER_ ]]; then
-				zookeeper_name=$(echo "$env_var" | cut -d_ -f2- | tr '[:upper:]' '[:lower:]' | tr _ .)
-				updateConfig "$zookeeper_name" "${!env_var}" "/app/config_container/zookeeper.properties"
 			fi
 	
 			if [[ $env_var =~ ^LOG4J_ ]]; then
-				log4j_name=$(echo "$env_var" | tr '[:upper:]' '[:lower:]' | tr _ .)
+				log4j_name=$(echo "$env_var" | cut -d_ -f2- | tr '[:upper:]' '[:lower:]' | tr _ .)
 				updateConfig "$log4j_name" "${!env_var}" "/app/config_container/log4j.properties"
 			fi
 			
 			if [[ $env_var =~ ^CONNECT_ ]]; then
-				connect_standalone_name=$(echo "$env_var" | tr '[:upper:]' '[:lower:]' | tr _ .)
+				connect_standalone_name=$(echo "$env_var" | cut -d_ -f2- | tr '[:upper:]' '[:lower:]' | tr _ .)
 				updateConfig "$connect_standalone_name" "${!env_var}" "/app/config_container/connect-standalone.properties"
 				updateConfig "$connect_distributed_name" "${!env_var}" "/app/config_container/connect-distributed.properties"
 			fi
 
 			if [[ $env_var =~ ^KNETCONNECT_ ]]; then
-				knetconnect_specific_name=$(echo "$env_var" | tr '[:upper:]' '[:lower:]' | tr _ .)
+				knetconnect_specific_name=$(echo "$env_var" | cut -d_ -f2- | tr '[:upper:]' '[:lower:]' | tr _ .)
 				updateConfig "$knetconnect_specific_name" "${!env_var}" "/app/config_container/connect-knet-specific.properties"
 			fi
 			
 			if [[ $env_var =~ ^KNETCONNECT_ ]]; then
-				knetconnect_specific_name=$(echo "$env_var" | tr '[:upper:]' '[:lower:]' | tr _ .)
+				knetconnect_specific_name=$(echo "$env_var" | cut -d_ -f2- | tr '[:upper:]' '[:lower:]' | tr _ .)
 				updateConfig "$knetconnect_specific_name" "${!env_var}" "/app/config_container/connect-knet-specific.properties"
 			fi
-			
-			if [[ $env_var =~ ^KRAFT_ ]]; then
-				kraft_name=$(echo "$env_var" | tr '[:upper:]' '[:lower:]' | tr _ .)
-				updateConfig "$kraft_name" "${!env_var}" "/app/config_container/broker.properties"
-				updateConfig "$kraft_name" "${!env_var}" "/app/config_container/controller.properties"
-				updateConfig "$kraft_name" "${!env_var}" "/app/config_container/server.properties"
-			fi
+
 		done
 	)
 
 ### end inherited from https://github.com/wurstmeister/kafka-docker/blob/901c084811fa9395f00af3c51e0ac6c32c697034/start-kafka.sh
 
-	if [ ${KNET_DOCKER_RUNNING_MODE} = "zookeeper" ]; then
-		echo "Starting zookeeper"
-		# Start zookeeper
-		dotnet /app/MASES.KNetCLI.dll zookeeperstart -Log4JConfiguration /app/config_container/log4j.properties /app/config_container/zookeeper.properties
-	elif [ ${KNET_DOCKER_RUNNING_MODE} = "broker" ]; then
-		echo "Starting broker"
+	function formatStandloneLogDir() {
+		runningMode=$1
+		configurationFile=$2
+
+		if [ $runningMode = "controller-standalone" ] || [ $runningMode = "server-standalone" ]; then
+			if [ -z "$KAFKA_LOG_DIRS" ] || [ -z "$KAFKA_METADATA_LOG_DIR" ]; then
+				echo "Formatting and creating meta.properties"
+				CALCULATED_CLUSTER_ID=$(eval "dotnet /app/MASES.KNetCLI.dll storagetool random-uuid")
+				echo "Cluster Id is $CALCULATED_CLUSTER_ID"
+
+				eval "dotnet /app/MASES.KNetCLI.dll storagetool format --standalone --ignore-formatted -t $CALCULATED_CLUSTER_ID -c $configurationFile"
+			fi
+		fi
+	}
+
+	if [ ${KNET_DOCKER_RUNNING_MODE} = "broker" ]; then
+		echo "Starting KRaft broker"
+		export KAFKA_PROCESS_ROLES=broker
 		# Start kafka broker
-		dotnet /app/MASES.KNetCLI.dll kafkastart -Log4JConfiguration /app/config_container/log4j.properties /app/config_container/server.properties
-	elif [ ${KNET_DOCKER_RUNNING_MODE} = "server" ]; then
-		echo "Starting zookeeper"
-		# Start zookeeper
-		dotnet /app/MASES.KNetCLI.dll zookeeperstart -Log4JConfiguration /app/config_container/log4j.properties /app/config_container/zookeeper.properties &
-	
-		echo "Starting broker"   
+		dotnet /app/MASES.KNetCLI.dll kafkastart -Log4JConfiguration /app/config_container/log4j2.yaml /app/config_container/broker.properties
+	elif [ ${KNET_DOCKER_RUNNING_MODE} = "controller" ] || [ ${KNET_DOCKER_RUNNING_MODE} = "controller-standalone" ]; then
+		echo "Starting KRaft controller"
+		export KAFKA_PROCESS_ROLES=controller
+		formatStandloneLogDir ${KNET_DOCKER_RUNNING_MODE} /app/config_container/controller.properties
 		# Start kafka broker
-		dotnet /app/MASES.KNetCLI.dll kafkastart -Log4JConfiguration /app/config_container/log4j.properties /app/config_container/server.properties &
-		
-		# Wait for any process to exit
-		wait -n
-		
-		# Exit with status of process that exited first
-		exit $?
+		dotnet /app/MASES.KNetCLI.dll kafkastart -Log4JConfiguration /app/config_container/log4j2.yaml /app/config_container/controller.properties
+	elif [ ${KNET_DOCKER_RUNNING_MODE} = "server" ] || [ ${KNET_DOCKER_RUNNING_MODE} = "server-standalone" ]; then
+		echo "Starting KRaft server"
+		export KAFKA_PROCESS_ROLES=broker,controller
+		formatStandloneLogDir ${KNET_DOCKER_RUNNING_MODE} /app/config_container/server.properties
+		# Start kafka broker
+		dotnet /app/MASES.KNetCLI.dll kafkastart -Log4JConfiguration /app/config_container/log4j2.yaml /app/config_container/server.properties
 	elif [ ${KNET_DOCKER_RUNNING_MODE} = "knet-connect-standalone" ]; then
 		echo "Starting KNet Connect standalone mode"
-		# Start zookeeper
-		dotnet /app/MASES.KNetConnect.dll -s -k -Log4JConfiguration /app/config_container/log4j.properties /app/config_container/connect-standalone.properties /app/config_container/connect-knet-specific.properties &
+		# Start KNetConnect
+		dotnet /app/MASES.KNetConnect.dll -s -k -Log4JConfiguration /app/config_container/log4j2.yaml /app/config_container/connect-standalone.properties /app/config_container/connect-knet-specific.properties &
 
 		# Wait for any process to exit
 		wait -n
@@ -206,8 +211,8 @@ else
 		exit $?
 	elif [ ${KNET_DOCKER_RUNNING_MODE} = "connect-standalone" ]; then
 		echo "Starting Apache Kafka Connect standalone mode"
-		# Start zookeeper
-		dotnet /app/MASES.KNetConnect.dll -s -Log4JConfiguration /app/config_container/log4j.properties /app/config_container/connect-standalone.properties /app/config_container/connect-knet-specific.properties &
+		# Start KNetConnect
+		dotnet /app/MASES.KNetConnect.dll -s -Log4JConfiguration /app/config_container/log4j2.yaml /app/config_container/connect-standalone.properties /app/config_container/connect-knet-specific.properties &
 
 		# Wait for any process to exit
 		wait -n
@@ -215,17 +220,14 @@ else
 		# Exit with status of process that exited first
 		exit $?
 	elif [ ${KNET_DOCKER_RUNNING_MODE} = "knet-connect-standalone-server" ]; then
-		echo "Starting zookeeper"
-		# Start zookeeper
-		dotnet /app/MASES.KNetCLI.dll zookeeperstart -Log4JConfiguration /app/config_container/log4j.properties /app/config_container/zookeeper.properties  &
-	
-		echo "Starting broker"   
-		# Start kafka broker
-		dotnet /app/MASES.KNetCLI.dll kafkastart -Log4JConfiguration /app/config_container/log4j.properties /app/config_container/server.properties &
+		echo "Starting KRaft server"
+		export KAFKA_PROCESS_ROLES=-broker,controller
+		# Start KRaft server
+		dotnet /app/MASES.KNetCLI.dll kafkastart -Log4JConfiguration /app/config_container/log4j2.yaml /app/config_container/server.properties &
 		
 		echo "Starting KNet Connect standalone full mode"
-		# Start zookeeper
-		dotnet /app/MASES.KNetConnect.dll -s -k -Log4JConfiguration /app/config_container/log4j.properties /app/config_container/connect-standalone.properties /app/config_container/connect-knet-specific.properties &
+		# Start KNetConnect
+		dotnet /app/MASES.KNetConnect.dll -s -k -Log4JConfiguration /app/config_container/log4j2.yaml /app/config_container/connect-standalone.properties /app/config_container/connect-knet-specific.properties &
 
 		# Wait for any process to exit
 		wait -n
@@ -233,17 +235,14 @@ else
 		# Exit with status of process that exited first
 		exit $?
 	elif [ ${KNET_DOCKER_RUNNING_MODE} = "connect-standalone-server" ]; then
-		echo "Starting zookeeper"
-		# Start zookeeper
-		dotnet /app/MASES.KNetCLI.dll zookeeperstart -Log4JConfiguration /app/config_container/log4j.properties /app/config_container/zookeeper.properties  &
-	
-		echo "Starting broker"   
-		# Start kafka broker
-		dotnet /app/MASES.KNetCLI.dll kafkastart -Log4JConfiguration /app/config_container/log4j.properties /app/config_container/server.properties &
+		echo "Starting KRaft server"
+		export KAFKA_PROCESS_ROLES=-broker,controller
+		# Start KRaft broker
+		dotnet /app/MASES.KNetCLI.dll kafkastart -Log4JConfiguration /app/config_container/log4j2.yaml /app/config_container/server.properties &
 		
 		echo "Starting Apache Kafka Connect standalone full mode"
-		# Start zookeeper
-		dotnet /app/MASES.KNetConnect.dll -s -Log4JConfiguration /app/config_container/log4j.properties /app/config_container/connect-standalone.properties /app/config_container/connect-knet-specific.properties &
+		# Start KNetConnect
+		dotnet /app/MASES.KNetConnect.dll -s -Log4JConfiguration /app/config_container/log4j2.yaml /app/config_container/connect-standalone.properties /app/config_container/connect-knet-specific.properties &
 
 		# Wait for any process to exit
 		wait -n
@@ -252,8 +251,8 @@ else
 		exit $?
 	elif [ ${KNET_DOCKER_RUNNING_MODE} = "knet-connect-distributed" ]; then
 		echo "Starting KNet Connect distributed mode"
-		# Start zookeeper
-		dotnet /app/MASES.KNetConnect.dll -d -k -Log4JConfiguration /app/config_container/log4j.properties /app/config_container/connect-distributed.properties &
+		# Start KNetConnect
+		dotnet /app/MASES.KNetConnect.dll -d -k -Log4JConfiguration /app/config_container/log4j2.yaml /app/config_container/connect-distributed.properties &
 
 		# Wait for any process to exit
 		wait -n
@@ -262,26 +261,14 @@ else
 		exit $?
 	elif [ ${KNET_DOCKER_RUNNING_MODE} = "connect-distributed" ]; then
 		echo "Starting Apache Kafka Connect distributed mode"
-		# Start zookeeper
-		dotnet /app/MASES.KNetConnect.dll -d -Log4JConfiguration /app/config_container/log4j.properties /app/config_container/connect-distributed.properties &
+		# Start KNetConnect
+		dotnet /app/MASES.KNetConnect.dll -d -Log4JConfiguration /app/config_container/log4j2.yaml /app/config_container/connect-distributed.properties &
 
 		# Wait for any process to exit
 		wait -n
 		
 		# Exit with status of process that exited first
 		exit $?
-	elif [ ${KNET_DOCKER_RUNNING_MODE} = "kraft-broker" ]; then
-		echo "Starting KRaft broker"
-		# Start kafka broker
-		dotnet /app/MASES.KNetCLI.dll kafkastart -Log4JConfiguration /app/config_container/log4j.properties /app/config_container/kraft/broker.properties
-	elif [ ${KNET_DOCKER_RUNNING_MODE} = "kraft-controller" ]; then
-		echo "Starting KRaft controller"
-		# Start kafka broker
-		dotnet /app/MASES.KNetCLI.dll kafkastart -Log4JConfiguration /app/config_container/log4j.properties /app/config_container/kraft/controller.properties
-	elif [ ${KNET_DOCKER_RUNNING_MODE} = "kraft-server" ]; then
-		echo "Starting KRaft server"
-		# Start kafka broker
-		dotnet /app/MASES.KNetCLI.dll kafkastart -Log4JConfiguration /app/config_container/log4j.properties /app/config_container/kraft/server.properties
 	else
 		echo "KNET_DOCKER_RUNNING_MODE exist, but its value (${KNET_DOCKER_RUNNING_MODE}) is not zookeeper, broker, server, (knet)connect-standalone, (knet)connect-distributed or (knet)connect-standalone-server"
 	fi

@@ -476,18 +476,5 @@ namespace MASES.KNet.Common
             clone.MessageTimestampBeforeMaxMs = messageTimestampBeforeMaxMs;
             return clone;
         }
-        /// <summary>
-        /// Manages <see cref="TopicConfig.MESSAGE_DOWNCONVERSION_ENABLE_CONFIG"/>
-        /// </summary>
-        public bool MessageDownConversionEnable { get { return GetProperty<bool>(TopicConfig.MESSAGE_DOWNCONVERSION_ENABLE_CONFIG); } set { SetProperty(TopicConfig.MESSAGE_DOWNCONVERSION_ENABLE_CONFIG, value); } }
-        /// <summary>
-        /// Manages <see cref="TopicConfig.MESSAGE_DOWNCONVERSION_ENABLE_CONFIG"/>
-        /// </summary>
-        public TopicConfigBuilder WithMessageDownConversionEnable(bool messageDownConversionEnable)
-        {
-            var clone = Clone();
-            clone.MessageDownConversionEnable = messageDownConversionEnable;
-            return clone;
-        }
     }
 }

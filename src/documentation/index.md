@@ -5,7 +5,7 @@ _description: Main page of .NET suite for Apache Kafka™
 
 # KNet: .NET suite for [Apache Kafka™](https://kafka.apache.org/)
 
-KNet is a comprehensive .NET suite for [Apache Kafka™](https://kafka.apache.org/) providing access to all [APIs](https://kafka.apache.org/documentation/#api) and features: Producer, Consumer, Admin, Streams, Connect, backends (ZooKeeper and Kafka).
+KNet is a comprehensive .NET suite for [Apache Kafka™](https://kafka.apache.org/) providing access to all [APIs](https://kafka.apache.org/documentation/#api) and features: Producer, Consumer, Admin, Streams, Connect, backends (KRaft).
 
 ### Libraries and Tools
 
@@ -36,18 +36,14 @@ There are many client libraries written to manage communication with Apache Kafk
 * measured high [performance](articles/performance.md) in many operating conditions.
 
 Currently the project tries to support, at our best, the [supported Apache Kafka™ binary distribution](https://kafka.apache.org/downloads):
-- Apache Kafka™ version 3.9.*:
-  - branch [master](https://github.com/masesgroup/KNet)
-  - KNet version 2.9.*
-- Apache Kafka™ version 3.8.*:
-  - branch [release/2.8.X](https://github.com/masesgroup/KNet/tree/release/2.8.X)
-  - KNet version 2.8.*
-- Apache Kafka™ version 3.7.*:
-  - branch [release/2.7.X](https://github.com/masesgroup/KNet/tree/release/2.7.X)
-  - KNet version 2.7.*
-- Apache Kafka™ version 3.6.*:
-  - branch [release/2.6.X](https://github.com/masesgroup/KNet/tree/release/2.6.X)
-  - KNet version 2.6.*
+
+| KNet | State | Apache Kafka™ | Branch | .NET Framework | .NET | JVM |
+|:---:	|:---:	|:---:	|:---:	|:---:	|:---:	|:---:	|
+| 3.0.* | Active | 4.0.* | [master](https://github.com/masesgroup/KNet) | 462+ | 8+ | 17+ |
+| 2.9.* | Active | 3.9.* | [release/2.9.X](https://github.com/masesgroup/KNet/tree/release/2.9.X) | 462+ | 8+ | 11+ |
+| 2.8.* | Active | 3.8.* | [release/2.8.X](https://github.com/masesgroup/KNet/tree/release/2.8.X) | 462+ | 6+ | 11+ |
+| 2.7.* | Deprecated | 3.7.* | [release/2.7.X](https://github.com/masesgroup/KNet/tree/release/2.7.X) | 462+ | 6+ | 11+ |
+| 2.6.* | Deprecated | 3.6.* | [release/2.6.X](https://github.com/masesgroup/KNet/tree/release/2.6.X) | 462+ | 6+ | 11+ |
 
 The Apache Kafka™ packages are downloaded from:
 
