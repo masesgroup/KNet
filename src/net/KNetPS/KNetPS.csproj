@@ -16,20 +16,7 @@
 	<PropertyGroup Condition="'$(TargetFramework)' == 'net8.0'">
 		<OutputType>Exe</OutputType>
 	</PropertyGroup>
-	
-	<ItemGroup Condition="True">
-		<knetps_jars Include="$(ProjectDir)\..\..\..\jars\*.*" />
-		<knetps_config Include="$(ProjectDir)\..\..\config\*.*" />
-	</ItemGroup>
 
-	<Target Name="CopyCustomContent" AfterTargets="AfterBuild">
-		<Copy SourceFiles="@(knetps_jars)" DestinationFolder="$(OutDir)\jars" />
-		<Copy SourceFiles="@(knetps_config)" DestinationFolder="$(OutDir)\config" />
-	</Target>
-	<Target Name="CopyCustomContentOnPublish" AfterTargets="Publish">
-		<Copy SourceFiles="@(knetps_jars)" DestinationFolder="$(OutDir)\jars" />
-		<Copy SourceFiles="@(knetps_config)" DestinationFolder="$(OutDir)\config" />
-	</Target>
 	<ItemGroup>
 	  <Compile Include="..\KNetCLI\KNetCLICore.cs" Link="KNetCLICore.cs" />
 	</ItemGroup>

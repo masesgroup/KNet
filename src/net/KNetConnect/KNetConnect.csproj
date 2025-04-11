@@ -17,20 +17,6 @@
 		<RunAnalyzersDuringBuild>False</RunAnalyzersDuringBuild>
 	</PropertyGroup>
 
-	<ItemGroup Condition="True">
-		<knetconnect_jars Include="$(ProjectDir)\..\..\..\jars\*.*" />
-		<knetconnect_config Include="$(ProjectDir)\..\..\config\*.*" />
-	</ItemGroup>
-
-	<Target Name="CopyCustomContent" AfterTargets="AfterBuild">
-		<Copy SourceFiles="@(knetconnect_jars)" DestinationFolder="$(OutDir)\jars" />
-		<Copy SourceFiles="@(knetconnect_config)" DestinationFolder="$(OutDir)\config" />
-	</Target>
-	<Target Name="CopyCustomContentOnPublish" AfterTargets="Publish">
-		<Copy SourceFiles="@(knetconnect_jars)" DestinationFolder="$(OutDir)\jars" />
-		<Copy SourceFiles="@(knetconnect_config)" DestinationFolder="$(OutDir)\config" />
-	</Target>
-	
 	<ItemGroup>
 		<None Include="..\..\documentation\articles\usageConnect.md" Pack="true" PackagePath="\" />
 	</ItemGroup>
