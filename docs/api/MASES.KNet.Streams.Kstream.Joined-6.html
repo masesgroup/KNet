@@ -97,7 +97,7 @@ Class Joined&lt;K, V, VO, TJVMK, TJVMV, TJVMVO&gt;  <a class="header-action link
   <dl><dt>Assembly</dt><dd>MASES.KNet.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>KNet extension of <a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Joined-3.html">Joined&lt;K, V, VO&gt;</a></p>
+  <div class="markdown summary"><p>KNet extension of <a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Joined-3.html">Joined&lt;K, VLeft, VRight&gt;</a></p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -173,43 +173,6 @@ Class Joined&lt;K, V, VO, TJVMK, TJVMV, TJVMVO&gt;  <a class="header-action link
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
     </div>
   </dd></dl>
-
-
-
-
-
-
-  <h2 class="section" id="properties">Properties
-</h2>
-
-
-  <a id="MASES_KNet_Streams_Kstream_Joined_6_GracePeriod_" data-uid="MASES.KNet.Streams.Kstream.Joined`6.GracePeriod*"></a>
-
-  <h3 id="MASES_KNet_Streams_Kstream_Joined_6_GracePeriod" data-uid="MASES.KNet.Streams.Kstream.Joined`6.GracePeriod">
-  GracePeriod
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/Joined.cs/#L137"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/kstream/Joined.html#gracePeriod--">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/kstream/Joined.html#gracePeriod--</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public TimeSpan GracePeriod { get; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></dt>
-    <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></p>
-</dd>
-  </dl>
-
-
 
 
 
@@ -524,7 +487,7 @@ Class Joined&lt;K, V, VO, TJVMK, TJVMV, TJVMVO&gt;  <a class="header-action link
 
   <h3 id="MASES_KNet_Streams_Kstream_Joined_6_WithGracePeriod_System_TimeSpan_" data-uid="MASES.KNet.Streams.Kstream.Joined`6.WithGracePeriod(System.TimeSpan)">
   WithGracePeriod(TimeSpan)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/Joined.cs/#L143"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/Joined.cs/#L138"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/kstream/Joined.html#withGracePeriod-java.time.Duration-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/kstream/Joined.html#withGracePeriod-java.time.Duration-</a></p>
@@ -563,7 +526,7 @@ Class Joined&lt;K, V, VO, TJVMK, TJVMV, TJVMVO&gt;  <a class="header-action link
 
   <h3 id="MASES_KNet_Streams_Kstream_Joined_6_WithKeySerde_MASES_KNet_Serialization_ISerDes__0__3__" data-uid="MASES.KNet.Streams.Kstream.Joined`6.WithKeySerde(MASES.KNet.Serialization.ISerDes{`0,`3})">
   WithKeySerde(ISerDes&lt;K, TJVMK&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/Joined.cs/#L153"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/Joined.cs/#L148"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/kstream/Joined.html#withKeySerde-org.apache.kafka.common.serialization.Serde-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/kstream/Joined.html#withKeySerde-org.apache.kafka.common.serialization.Serde-</a></p>
@@ -602,7 +565,7 @@ Class Joined&lt;K, V, VO, TJVMK, TJVMV, TJVMVO&gt;  <a class="header-action link
 
   <h3 id="MASES_KNet_Streams_Kstream_Joined_6_WithOtherValueSerde_MASES_KNet_Serialization_ISerDes__2__5__" data-uid="MASES.KNet.Streams.Kstream.Joined`6.WithOtherValueSerde(MASES.KNet.Serialization.ISerDes{`2,`5})">
   WithOtherValueSerde(ISerDes&lt;VO, TJVMVO&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/Joined.cs/#L163"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/Joined.cs/#L158"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/kstream/Joined.html#withOtherValueSerde-org.apache.kafka.common.serialization.Serde-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/kstream/Joined.html#withOtherValueSerde-org.apache.kafka.common.serialization.Serde-</a></p>
@@ -641,7 +604,7 @@ Class Joined&lt;K, V, VO, TJVMK, TJVMV, TJVMVO&gt;  <a class="header-action link
 
   <h3 id="MASES_KNet_Streams_Kstream_Joined_6_WithValueSerde_MASES_KNet_Serialization_ISerDes__1__4__" data-uid="MASES.KNet.Streams.Kstream.Joined`6.WithValueSerde(MASES.KNet.Serialization.ISerDes{`1,`4})">
   WithValueSerde(ISerDes&lt;V, TJVMV&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/Joined.cs/#L173"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/Joined.cs/#L168"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/kstream/Joined.html#withValueSerde-org.apache.kafka.common.serialization.Serde-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/kstream/Joined.html#withValueSerde-org.apache.kafka.common.serialization.Serde-</a></p>
@@ -687,7 +650,7 @@ Class Joined&lt;K, V, VO, TJVMK, TJVMV, TJVMVO&gt;  <a class="header-action link
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/Joined.cs/#L47"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Converter from <a class="xref" href="MASES.KNet.Streams.Kstream.Joined-6.html">Joined&lt;K, V, VO, TJVMK, TJVMV, TJVMVO&gt;</a> to <a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Joined-3.html">Joined&lt;K, V, VO&gt;</a></p>
+  <div class="markdown level1 summary"><p>Converter from <a class="xref" href="MASES.KNet.Streams.Kstream.Joined-6.html">Joined&lt;K, V, VO, TJVMK, TJVMV, TJVMVO&gt;</a> to <a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Joined-3.html">Joined&lt;K, VLeft, VRight&gt;</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 

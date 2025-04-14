@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class EpochState | MASES Group - KNet ">
       <meta name="description" content="This is a descriptive page of KNet, the .NET suite for Apache Kafka">
-      <meta name="description" content="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.0/org/apache/kafka/raft/EpochState.html">
+      <meta name="description" content="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/EpochState.html">
       <link rel="icon" href="../images/favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -97,7 +97,7 @@ Class EpochState  <a class="header-action link-secondary" title="View source" hr
   <dl><dt>Assembly</dt><dd>MASES.KNet.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.0/org/apache/kafka/raft/EpochState.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.0/org/apache/kafka/raft/EpochState.html</a></p>
+  <div class="markdown summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/EpochState.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/EpochState.html</a></p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -139,7 +139,6 @@ Class EpochState  <a class="header-action link-secondary" title="View source" hr
   <dl class="typelist derived">
     <dt>Derived</dt>
     <dd>
-      <div><a class="xref" href="Org.Apache.Kafka.Raft.CandidateState.html">CandidateState</a></div>
       <div><a class="xref" href="Org.Apache.Kafka.Raft.FollowerState.html">FollowerState</a></div>
       <div><a class="xref" href="Org.Apache.Kafka.Raft.LeaderState.html">LeaderState</a></div>
       <div><a class="xref" href="Org.Apache.Kafka.Raft.LeaderState-1.html">LeaderState&lt;T&gt;</a></div>
@@ -741,17 +740,17 @@ public EpochState(params object[] args)</code></pre>
 
   <a id="Org_Apache_Kafka_Raft_EpochState_CanGrantVote_" data-uid="Org.Apache.Kafka.Raft.EpochState.CanGrantVote*"></a>
 
-  <h3 id="Org_Apache_Kafka_Raft_EpochState_CanGrantVote_Org_Apache_Kafka_Raft_ReplicaKey_System_Boolean_" data-uid="Org.Apache.Kafka.Raft.EpochState.CanGrantVote(Org.Apache.Kafka.Raft.ReplicaKey,System.Boolean)">
-  CanGrantVote(ReplicaKey, bool)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/EpochState.cs/#L119"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Org_Apache_Kafka_Raft_EpochState_CanGrantVote_Org_Apache_Kafka_Raft_ReplicaKey_System_Boolean_System_Boolean_" data-uid="Org.Apache.Kafka.Raft.EpochState.CanGrantVote(Org.Apache.Kafka.Raft.ReplicaKey,System.Boolean,System.Boolean)">
+  CanGrantVote(ReplicaKey, bool, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/EpochState.cs/#L120"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.0/org/apache/kafka/raft/EpochState.html#canGrantVote-org.apache.kafka.raft.ReplicaKey-boolean-">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.0/org/apache/kafka/raft/EpochState.html#canGrantVote-org.apache.kafka.raft.ReplicaKey-boolean-</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/EpochState.html#canGrantVote-org.apache.kafka.raft.ReplicaKey-boolean-boolean-">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/EpochState.html#canGrantVote-org.apache.kafka.raft.ReplicaKey-boolean-boolean-</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool CanGrantVote(ReplicaKey arg0, bool arg1)</code></pre>
+    <pre><code class="lang-csharp hljs">public bool CanGrantVote(ReplicaKey arg0, bool arg1, bool arg2)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -760,6 +759,9 @@ public EpochState(params object[] args)</code></pre>
     <dd><p><a class="xref" href="Org.Apache.Kafka.Raft.ReplicaKey.html">ReplicaKey</a></p>
 </dd>
     <dt><code>arg1</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></p>
+</dd>
+    <dt><code>arg2</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
     <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></p>
 </dd>
   </dl>
@@ -785,10 +787,10 @@ public EpochState(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Raft_EpochState_Election" data-uid="Org.Apache.Kafka.Raft.EpochState.Election">
   Election()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/EpochState.cs/#L143"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/EpochState.cs/#L144"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.0/org/apache/kafka/raft/EpochState.html#election--">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.0/org/apache/kafka/raft/EpochState.html#election--</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/EpochState.html#election--">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/EpochState.html#election--</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -818,10 +820,10 @@ public EpochState(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Raft_EpochState_Epoch" data-uid="Org.Apache.Kafka.Raft.EpochState.Epoch">
   Epoch()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/EpochState.cs/#L127"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/EpochState.cs/#L128"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.0/org/apache/kafka/raft/EpochState.html#epoch--">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.0/org/apache/kafka/raft/EpochState.html#epoch--</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/EpochState.html#epoch--">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/EpochState.html#epoch--</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -851,10 +853,10 @@ public EpochState(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Raft_EpochState_HighWatermark" data-uid="Org.Apache.Kafka.Raft.EpochState.HighWatermark">
   HighWatermark()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/EpochState.cs/#L159"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/EpochState.cs/#L160"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.0/org/apache/kafka/raft/EpochState.html#highWatermark--">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.0/org/apache/kafka/raft/EpochState.html#highWatermark--</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/EpochState.html#highWatermark--">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/EpochState.html#highWatermark--</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -884,10 +886,10 @@ public EpochState(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Raft_EpochState_LeaderEndpoints" data-uid="Org.Apache.Kafka.Raft.EpochState.LeaderEndpoints">
   LeaderEndpoints()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/EpochState.cs/#L151"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/EpochState.cs/#L152"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.0/org/apache/kafka/raft/EpochState.html#leaderEndpoints--">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.0/org/apache/kafka/raft/EpochState.html#leaderEndpoints--</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/EpochState.html#leaderEndpoints--">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/EpochState.html#leaderEndpoints--</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -917,10 +919,10 @@ public EpochState(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Raft_EpochState_Name" data-uid="Org.Apache.Kafka.Raft.EpochState.Name">
   Name()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/EpochState.cs/#L135"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/EpochState.cs/#L136"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.0/org/apache/kafka/raft/EpochState.html#name--">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.0/org/apache/kafka/raft/EpochState.html#name--</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/EpochState.html#name--">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/EpochState.html#name--</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 

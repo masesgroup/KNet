@@ -89,7 +89,7 @@
 
 
   <h1 id="MASES_KNet_Consumer_KNetConsumerBuffered_2" data-uid="MASES.KNet.Consumer.KNetConsumerBuffered`2" class="text-break">
-Class KNetConsumerBuffered&lt;K, V&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Consumer/KNetConsumer.cs/#L378"><i class="bi bi-code-slash"></i></a>
+Class KNetConsumerBuffered&lt;K, V&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Consumer/KNetConsumer.cs/#L390"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -308,6 +308,9 @@ Class KNetConsumerBuffered&lt;K, V&gt;  <a class="header-action link-secondary" 
       <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.KafkaConsumer-2.html#Org_Apache_Kafka_Clients_Consumer_KafkaConsumer_2_Pause_Java_Util_Collection_Org_Apache_Kafka_Common_TopicPartition__">KafkaConsumer&lt;ByteBuffer, ByteBuffer&gt;.Pause(Collection&lt;TopicPartition&gt;)</a>
     </div>
     <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.KafkaConsumer-2.html#Org_Apache_Kafka_Clients_Consumer_KafkaConsumer_2_RegisterMetricForSubscription_Org_Apache_Kafka_Common_Metrics_KafkaMetric_">KafkaConsumer&lt;ByteBuffer, ByteBuffer&gt;.RegisterMetricForSubscription(KafkaMetric)</a>
+    </div>
+    <div>
       <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.KafkaConsumer-2.html#Org_Apache_Kafka_Clients_Consumer_KafkaConsumer_2_Resume_Java_Util_Collection_Org_Apache_Kafka_Common_TopicPartition__">KafkaConsumer&lt;ByteBuffer, ByteBuffer&gt;.Resume(Collection&lt;TopicPartition&gt;)</a>
     </div>
     <div>
@@ -333,6 +336,15 @@ Class KNetConsumerBuffered&lt;K, V&gt;  <a class="header-action link-secondary" 
     </div>
     <div>
       <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.KafkaConsumer-2.html#Org_Apache_Kafka_Clients_Consumer_KafkaConsumer_2_Subscribe_Java_Util_Regex_Pattern_">KafkaConsumer&lt;ByteBuffer, ByteBuffer&gt;.Subscribe(Pattern)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.KafkaConsumer-2.html#Org_Apache_Kafka_Clients_Consumer_KafkaConsumer_2_Subscribe_Org_Apache_Kafka_Clients_Consumer_SubscriptionPattern_Org_Apache_Kafka_Clients_Consumer_ConsumerRebalanceListener_">KafkaConsumer&lt;ByteBuffer, ByteBuffer&gt;.Subscribe(SubscriptionPattern, ConsumerRebalanceListener)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.KafkaConsumer-2.html#Org_Apache_Kafka_Clients_Consumer_KafkaConsumer_2_Subscribe_Org_Apache_Kafka_Clients_Consumer_SubscriptionPattern_">KafkaConsumer&lt;ByteBuffer, ByteBuffer&gt;.Subscribe(SubscriptionPattern)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.KafkaConsumer-2.html#Org_Apache_Kafka_Clients_Consumer_KafkaConsumer_2_UnregisterMetricFromSubscription_Org_Apache_Kafka_Common_Metrics_KafkaMetric_">KafkaConsumer&lt;ByteBuffer, ByteBuffer&gt;.UnregisterMetricFromSubscription(KafkaMetric)</a>
     </div>
     <div>
       <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.KafkaConsumer-2.html#Org_Apache_Kafka_Clients_Consumer_KafkaConsumer_2_Unsubscribe">KafkaConsumer&lt;ByteBuffer, ByteBuffer&gt;.Unsubscribe()</a>
@@ -728,7 +740,7 @@ Class KNetConsumerBuffered&lt;K, V&gt;  <a class="header-action link-secondary" 
 
   <h3 id="MASES_KNet_Consumer_KNetConsumerBuffered_2__ctor_MASES_KNet_Consumer_ConsumerConfigBuilder_MASES_KNet_Serialization_ISerDes__0_Java_Nio_ByteBuffer__MASES_KNet_Serialization_ISerDes__1_Java_Nio_ByteBuffer__System_Boolean_" data-uid="MASES.KNet.Consumer.KNetConsumerBuffered`2.#ctor(MASES.KNet.Consumer.ConsumerConfigBuilder,MASES.KNet.Serialization.ISerDes{`0,Java.Nio.ByteBuffer},MASES.KNet.Serialization.ISerDes{`1,Java.Nio.ByteBuffer},System.Boolean)">
   KNetConsumerBuffered(ConsumerConfigBuilder, ISerDes&lt;K, ByteBuffer&gt;, ISerDes&lt;V, ByteBuffer&gt;, bool)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Consumer/KNetConsumer.cs/#L396"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Consumer/KNetConsumer.cs/#L408"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Initialize a new instance of <a class="xref" href="MASES.KNet.Consumer.KNetConsumer-4.html">KNetConsumer&lt;K, V, TJVMK, TJVMV&gt;</a></p>
@@ -770,7 +782,7 @@ Class KNetConsumerBuffered&lt;K, V&gt;  <a class="header-action link-secondary" 
 
   <h3 id="MASES_KNet_Consumer_KNetConsumerBuffered_2__ctor_MASES_KNet_Consumer_ConsumerConfigBuilder_System_Boolean_" data-uid="MASES.KNet.Consumer.KNetConsumerBuffered`2.#ctor(MASES.KNet.Consumer.ConsumerConfigBuilder,System.Boolean)">
   KNetConsumerBuffered(ConsumerConfigBuilder, bool)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Consumer/KNetConsumer.cs/#L385"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Consumer/KNetConsumer.cs/#L397"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Initialize a new instance of <a class="xref" href="MASES.KNet.Consumer.KNetConsumer-4.html">KNetConsumer&lt;K, V, TJVMK, TJVMV&gt;</a></p>
@@ -806,7 +818,7 @@ Class KNetConsumerBuffered&lt;K, V&gt;  <a class="header-action link-secondary" 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Consumer/KNetConsumer.cs/#L378" class="edit-link">Edit this page</a>
+          <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Consumer/KNetConsumer.cs/#L390" class="edit-link">Edit this page</a>
         </div>
 
 

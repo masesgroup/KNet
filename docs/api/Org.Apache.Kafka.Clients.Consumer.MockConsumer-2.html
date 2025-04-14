@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class MockConsumer&lt;K, V&gt; | MASES Group - KNet ">
       <meta name="description" content="This is a descriptive page of KNet, the .NET suite for Apache Kafka">
-      <meta name="description" content="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/MockConsumer.html">
+      <meta name="description" content="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockConsumer.html">
       <link rel="icon" href="../images/favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -89,7 +89,7 @@
 
 
   <h1 id="Org_Apache_Kafka_Clients_Consumer_MockConsumer_2" data-uid="Org.Apache.Kafka.Clients.Consumer.MockConsumer`2" class="text-break">
-Class MockConsumer&lt;K, V&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockConsumer.cs/#L676"><i class="bi bi-code-slash"></i></a>
+Class MockConsumer&lt;K, V&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockConsumer.cs/#L725"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -97,7 +97,7 @@ Class MockConsumer&lt;K, V&gt;  <a class="header-action link-secondary" title="V
   <dl><dt>Assembly</dt><dd>MASES.KNet.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/MockConsumer.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/MockConsumer.html</a></p>
+  <div class="markdown summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockConsumer.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockConsumer.html</a></p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -270,6 +270,9 @@ Class MockConsumer&lt;K, V&gt;  <a class="header-action link-secondary" title="V
       <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.Consumer-2.html#Org_Apache_Kafka_Clients_Consumer_Consumer_2_Pause_Java_Util_Collection_Org_Apache_Kafka_Common_TopicPartition__">Consumer&lt;K, V&gt;.Pause(Collection&lt;TopicPartition&gt;)</a>
     </div>
     <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.Consumer-2.html#Org_Apache_Kafka_Clients_Consumer_Consumer_2_RegisterMetricForSubscription_Org_Apache_Kafka_Common_Metrics_KafkaMetric_">Consumer&lt;K, V&gt;.RegisterMetricForSubscription(KafkaMetric)</a>
+    </div>
+    <div>
       <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.Consumer-2.html#Org_Apache_Kafka_Clients_Consumer_Consumer_2_Resume_Java_Util_Collection_Org_Apache_Kafka_Common_TopicPartition__">Consumer&lt;K, V&gt;.Resume(Collection&lt;TopicPartition&gt;)</a>
     </div>
     <div>
@@ -295,6 +298,15 @@ Class MockConsumer&lt;K, V&gt;  <a class="header-action link-secondary" title="V
     </div>
     <div>
       <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.Consumer-2.html#Org_Apache_Kafka_Clients_Consumer_Consumer_2_Subscribe_Java_Util_Regex_Pattern_">Consumer&lt;K, V&gt;.Subscribe(Pattern)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.Consumer-2.html#Org_Apache_Kafka_Clients_Consumer_Consumer_2_Subscribe_Org_Apache_Kafka_Clients_Consumer_SubscriptionPattern_Org_Apache_Kafka_Clients_Consumer_ConsumerRebalanceListener_">Consumer&lt;K, V&gt;.Subscribe(SubscriptionPattern, ConsumerRebalanceListener)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.Consumer-2.html#Org_Apache_Kafka_Clients_Consumer_Consumer_2_Subscribe_Org_Apache_Kafka_Clients_Consumer_SubscriptionPattern_">Consumer&lt;K, V&gt;.Subscribe(SubscriptionPattern)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.Consumer-2.html#Org_Apache_Kafka_Clients_Consumer_Consumer_2_UnregisterMetricFromSubscription_Org_Apache_Kafka_Common_Metrics_KafkaMetric_">Consumer&lt;K, V&gt;.UnregisterMetricFromSubscription(KafkaMetric)</a>
     </div>
     <div>
       <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.Consumer-2.html#Org_Apache_Kafka_Clients_Consumer_Consumer_2_Unsubscribe">Consumer&lt;K, V&gt;.Unsubscribe()</a>
@@ -697,23 +709,23 @@ Class MockConsumer&lt;K, V&gt;  <a class="header-action link-secondary" title="V
 
   <a id="Org_Apache_Kafka_Clients_Consumer_MockConsumer_2__ctor_" data-uid="Org.Apache.Kafka.Clients.Consumer.MockConsumer`2.#ctor*"></a>
 
-  <h3 id="Org_Apache_Kafka_Clients_Consumer_MockConsumer_2__ctor_Org_Apache_Kafka_Clients_Consumer_OffsetResetStrategy_" data-uid="Org.Apache.Kafka.Clients.Consumer.MockConsumer`2.#ctor(Org.Apache.Kafka.Clients.Consumer.OffsetResetStrategy)">
-  MockConsumer(OffsetResetStrategy)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockConsumer.cs/#L683"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Org_Apache_Kafka_Clients_Consumer_MockConsumer_2__ctor_Java_Lang_String_" data-uid="Org.Apache.Kafka.Clients.Consumer.MockConsumer`2.#ctor(Java.Lang.String)">
+  MockConsumer(String)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockConsumer.cs/#L732"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/MockConsumer.html#org.apache.kafka.clients.consumer.MockConsumer(org.apache.kafka.clients.consumer.OffsetResetStrategy)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/MockConsumer.html#org.apache.kafka.clients.consumer.MockConsumer(org.apache.kafka.clients.consumer.OffsetResetStrategy)</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockConsumer.html#org.apache.kafka.clients.consumer.MockConsumer(java.lang.String)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockConsumer.html#org.apache.kafka.clients.consumer.MockConsumer(java.lang.String)</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public MockConsumer(OffsetResetStrategy arg0)</code></pre>
+    <pre><code class="lang-csharp hljs">public MockConsumer(String arg0)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.OffsetResetStrategy.html">OffsetResetStrategy</a></dt>
-    <dd><p><a class="xref" href="Org.Apache.Kafka.Clients.Consumer.OffsetResetStrategy.html">OffsetResetStrategy</a></p>
+    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></p>
 </dd>
   </dl>
 
@@ -932,10 +944,10 @@ Class MockConsumer&lt;K, V&gt;  <a class="header-action link-secondary" title="V
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_MockConsumer_2_AddRecord_Org_Apache_Kafka_Clients_Consumer_ConsumerRecord__0__1__" data-uid="Org.Apache.Kafka.Clients.Consumer.MockConsumer`2.AddRecord(Org.Apache.Kafka.Clients.Consumer.ConsumerRecord{`0,`1})">
   AddRecord(ConsumerRecord&lt;K, V&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockConsumer.cs/#L934"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockConsumer.cs/#L991"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/MockConsumer.html#addRecord-org.apache.kafka.clients.consumer.ConsumerRecord-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/MockConsumer.html#addRecord-org.apache.kafka.clients.consumer.ConsumerRecord-</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockConsumer.html#addRecord-org.apache.kafka.clients.consumer.ConsumerRecord-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockConsumer.html#addRecord-org.apache.kafka.clients.consumer.ConsumerRecord-</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -961,14 +973,47 @@ Class MockConsumer&lt;K, V&gt;  <a class="header-action link-secondary" title="V
 
 
 
+  <a id="Org_Apache_Kafka_Clients_Consumer_MockConsumer_2_AddedMetrics_" data-uid="Org.Apache.Kafka.Clients.Consumer.MockConsumer`2.AddedMetrics*"></a>
+
+  <h3 id="Org_Apache_Kafka_Clients_Consumer_MockConsumer_2_AddedMetrics" data-uid="Org.Apache.Kafka.Clients.Consumer.MockConsumer`2.AddedMetrics">
+  AddedMetrics()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockConsumer.cs/#L776"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockConsumer.html#addedMetrics--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockConsumer.html#addedMetrics--</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;KafkaMetric&gt; AddedMetrics()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.List-1.html">List</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.Metrics.KafkaMetric.html">KafkaMetric</a>&gt;</dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.List.html">List</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="Org_Apache_Kafka_Clients_Consumer_MockConsumer_2_Assign_" data-uid="Org.Apache.Kafka.Clients.Consumer.MockConsumer`2.Assign*"></a>
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_MockConsumer_2_Assign_Java_Util_Collection_Org_Apache_Kafka_Common_TopicPartition__" data-uid="Org.Apache.Kafka.Clients.Consumer.MockConsumer`2.Assign(Java.Util.Collection{Org.Apache.Kafka.Common.TopicPartition})">
   Assign(Collection&lt;TopicPartition&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockConsumer.cs/#L942"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockConsumer.cs/#L999"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/MockConsumer.html#assign-java.util.Collection-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/MockConsumer.html#assign-java.util.Collection-</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockConsumer.html#assign-java.util.Collection-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockConsumer.html#assign-java.util.Collection-</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -998,10 +1043,10 @@ Class MockConsumer&lt;K, V&gt;  <a class="header-action link-secondary" title="V
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_MockConsumer_2_Assignment" data-uid="Org.Apache.Kafka.Clients.Consumer.MockConsumer`2.Assignment">
   Assignment()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockConsumer.cs/#L890"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockConsumer.cs/#L947"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/MockConsumer.html#assignment--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/MockConsumer.html#assignment--</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockConsumer.html#assignment--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockConsumer.html#assignment--</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1031,10 +1076,10 @@ Class MockConsumer&lt;K, V&gt;  <a class="header-action link-secondary" title="V
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_MockConsumer_2_BeginningOffsets_Java_Util_Collection_Org_Apache_Kafka_Common_TopicPartition__" data-uid="Org.Apache.Kafka.Clients.Consumer.MockConsumer`2.BeginningOffsets(Java.Util.Collection{Org.Apache.Kafka.Common.TopicPartition})">
   BeginningOffsets(Collection&lt;TopicPartition&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockConsumer.cs/#L837"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockConsumer.cs/#L894"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/MockConsumer.html#beginningOffsets-java.util.Collection-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/MockConsumer.html#beginningOffsets-java.util.Collection-</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockConsumer.html#beginningOffsets-java.util.Collection-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockConsumer.html#beginningOffsets-java.util.Collection-</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1070,10 +1115,10 @@ Class MockConsumer&lt;K, V&gt;  <a class="header-action link-secondary" title="V
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_MockConsumer_2_BeginningOffsets_Java_Util_Collection_Org_Apache_Kafka_Common_TopicPartition__Java_Time_Duration_" data-uid="Org.Apache.Kafka.Clients.Consumer.MockConsumer`2.BeginningOffsets(Java.Util.Collection{Org.Apache.Kafka.Common.TopicPartition},Java.Time.Duration)">
   BeginningOffsets(Collection&lt;TopicPartition&gt;, Duration)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockConsumer.cs/#L748"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockConsumer.cs/#L805"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/MockConsumer.html#beginningOffsets-java.util.Collection-java.time.Duration-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/MockConsumer.html#beginningOffsets-java.util.Collection-java.time.Duration-</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockConsumer.html#beginningOffsets-java.util.Collection-java.time.Duration-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockConsumer.html#beginningOffsets-java.util.Collection-java.time.Duration-</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1112,10 +1157,10 @@ Class MockConsumer&lt;K, V&gt;  <a class="header-action link-secondary" title="V
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_MockConsumer_2_ClientInstanceId_Java_Time_Duration_" data-uid="Org.Apache.Kafka.Clients.Consumer.MockConsumer`2.ClientInstanceId(Java.Time.Duration)">
   ClientInstanceId(Duration)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockConsumer.cs/#L794"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockConsumer.cs/#L851"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/MockConsumer.html#clientInstanceId-java.time.Duration-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/MockConsumer.html#clientInstanceId-java.time.Duration-</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockConsumer.html#clientInstanceId-java.time.Duration-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockConsumer.html#clientInstanceId-java.time.Duration-</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1151,10 +1196,10 @@ Class MockConsumer&lt;K, V&gt;  <a class="header-action link-secondary" title="V
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_MockConsumer_2_Close" data-uid="Org.Apache.Kafka.Clients.Consumer.MockConsumer`2.Close">
   Close()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockConsumer.cs/#L1148"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockConsumer.cs/#L1213"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/MockConsumer.html#close--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/MockConsumer.html#close--</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockConsumer.html#close--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockConsumer.html#close--</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1178,10 +1223,10 @@ Class MockConsumer&lt;K, V&gt;  <a class="header-action link-secondary" title="V
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_MockConsumer_2_Close_Java_Time_Duration_" data-uid="Org.Apache.Kafka.Clients.Consumer.MockConsumer`2.Close(Java.Time.Duration)">
   Close(Duration)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockConsumer.cs/#L950"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockConsumer.cs/#L1007"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/MockConsumer.html#close-java.time.Duration-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/MockConsumer.html#close-java.time.Duration-</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockConsumer.html#close-java.time.Duration-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockConsumer.html#close-java.time.Duration-</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1211,10 +1256,10 @@ Class MockConsumer&lt;K, V&gt;  <a class="header-action link-secondary" title="V
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_MockConsumer_2_Closed" data-uid="Org.Apache.Kafka.Clients.Consumer.MockConsumer`2.Closed">
   Closed()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockConsumer.cs/#L802"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockConsumer.cs/#L859"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/MockConsumer.html#closed--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/MockConsumer.html#closed--</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockConsumer.html#closed--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockConsumer.html#closed--</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1244,10 +1289,10 @@ Class MockConsumer&lt;K, V&gt;  <a class="header-action link-secondary" title="V
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_MockConsumer_2_CommitAsync" data-uid="Org.Apache.Kafka.Clients.Consumer.MockConsumer`2.CommitAsync">
   CommitAsync()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockConsumer.cs/#L957"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockConsumer.cs/#L1014"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/MockConsumer.html#commitAsync--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/MockConsumer.html#commitAsync--</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockConsumer.html#commitAsync--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockConsumer.html#commitAsync--</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1271,10 +1316,10 @@ Class MockConsumer&lt;K, V&gt;  <a class="header-action link-secondary" title="V
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_MockConsumer_2_CommitAsync_Java_Util_Map_Org_Apache_Kafka_Common_TopicPartition_Org_Apache_Kafka_Clients_Consumer_OffsetAndMetadata__Org_Apache_Kafka_Clients_Consumer_OffsetCommitCallback_" data-uid="Org.Apache.Kafka.Clients.Consumer.MockConsumer`2.CommitAsync(Java.Util.Map{Org.Apache.Kafka.Common.TopicPartition,Org.Apache.Kafka.Clients.Consumer.OffsetAndMetadata},Org.Apache.Kafka.Clients.Consumer.OffsetCommitCallback)">
   CommitAsync(Map&lt;TopicPartition, OffsetAndMetadata&gt;, OffsetCommitCallback)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockConsumer.cs/#L966"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockConsumer.cs/#L1023"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/MockConsumer.html#commitAsync-java.util.Map-org.apache.kafka.clients.consumer.OffsetCommitCallback-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/MockConsumer.html#commitAsync-java.util.Map-org.apache.kafka.clients.consumer.OffsetCommitCallback-</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockConsumer.html#commitAsync-java.util.Map-org.apache.kafka.clients.consumer.OffsetCommitCallback-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockConsumer.html#commitAsync-java.util.Map-org.apache.kafka.clients.consumer.OffsetCommitCallback-</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1307,10 +1352,10 @@ Class MockConsumer&lt;K, V&gt;  <a class="header-action link-secondary" title="V
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_MockConsumer_2_CommitAsync_Org_Apache_Kafka_Clients_Consumer_OffsetCommitCallback_" data-uid="Org.Apache.Kafka.Clients.Consumer.MockConsumer`2.CommitAsync(Org.Apache.Kafka.Clients.Consumer.OffsetCommitCallback)">
   CommitAsync(OffsetCommitCallback)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockConsumer.cs/#L974"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockConsumer.cs/#L1031"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/MockConsumer.html#commitAsync-org.apache.kafka.clients.consumer.OffsetCommitCallback-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/MockConsumer.html#commitAsync-org.apache.kafka.clients.consumer.OffsetCommitCallback-</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockConsumer.html#commitAsync-org.apache.kafka.clients.consumer.OffsetCommitCallback-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockConsumer.html#commitAsync-org.apache.kafka.clients.consumer.OffsetCommitCallback-</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1340,10 +1385,10 @@ Class MockConsumer&lt;K, V&gt;  <a class="header-action link-secondary" title="V
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_MockConsumer_2_CommitSync" data-uid="Org.Apache.Kafka.Clients.Consumer.MockConsumer`2.CommitSync">
   CommitSync()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockConsumer.cs/#L981"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockConsumer.cs/#L1038"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/MockConsumer.html#commitSync--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/MockConsumer.html#commitSync--</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockConsumer.html#commitSync--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockConsumer.html#commitSync--</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1367,10 +1412,10 @@ Class MockConsumer&lt;K, V&gt;  <a class="header-action link-secondary" title="V
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_MockConsumer_2_CommitSync_Java_Time_Duration_" data-uid="Org.Apache.Kafka.Clients.Consumer.MockConsumer`2.CommitSync(Java.Time.Duration)">
   CommitSync(Duration)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockConsumer.cs/#L989"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockConsumer.cs/#L1046"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/MockConsumer.html#commitSync-java.time.Duration-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/MockConsumer.html#commitSync-java.time.Duration-</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockConsumer.html#commitSync-java.time.Duration-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockConsumer.html#commitSync-java.time.Duration-</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1400,10 +1445,10 @@ Class MockConsumer&lt;K, V&gt;  <a class="header-action link-secondary" title="V
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_MockConsumer_2_CommitSync_Java_Util_Map_Org_Apache_Kafka_Common_TopicPartition_Org_Apache_Kafka_Clients_Consumer_OffsetAndMetadata__" data-uid="Org.Apache.Kafka.Clients.Consumer.MockConsumer`2.CommitSync(Java.Util.Map{Org.Apache.Kafka.Common.TopicPartition,Org.Apache.Kafka.Clients.Consumer.OffsetAndMetadata})">
   CommitSync(Map&lt;TopicPartition, OffsetAndMetadata&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockConsumer.cs/#L997"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockConsumer.cs/#L1054"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/MockConsumer.html#commitSync-java.util.Map-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/MockConsumer.html#commitSync-java.util.Map-</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockConsumer.html#commitSync-java.util.Map-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockConsumer.html#commitSync-java.util.Map-</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1433,10 +1478,10 @@ Class MockConsumer&lt;K, V&gt;  <a class="header-action link-secondary" title="V
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_MockConsumer_2_CommitSync_Java_Util_Map_Org_Apache_Kafka_Common_TopicPartition_Org_Apache_Kafka_Clients_Consumer_OffsetAndMetadata__Java_Time_Duration_" data-uid="Org.Apache.Kafka.Clients.Consumer.MockConsumer`2.CommitSync(Java.Util.Map{Org.Apache.Kafka.Common.TopicPartition,Org.Apache.Kafka.Clients.Consumer.OffsetAndMetadata},Java.Time.Duration)">
   CommitSync(Map&lt;TopicPartition, OffsetAndMetadata&gt;, Duration)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockConsumer.cs/#L1157"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockConsumer.cs/#L1222"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/MockConsumer.html#commitSync-java.util.Map-java.time.Duration-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/MockConsumer.html#commitSync-java.util.Map-java.time.Duration-</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockConsumer.html#commitSync-java.util.Map-java.time.Duration-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockConsumer.html#commitSync-java.util.Map-java.time.Duration-</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1469,10 +1514,10 @@ Class MockConsumer&lt;K, V&gt;  <a class="header-action link-secondary" title="V
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_MockConsumer_2_Committed_Java_Util_Set_Org_Apache_Kafka_Common_TopicPartition__" data-uid="Org.Apache.Kafka.Clients.Consumer.MockConsumer`2.Committed(Java.Util.Set{Org.Apache.Kafka.Common.TopicPartition})">
   Committed(Set&lt;TopicPartition&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockConsumer.cs/#L865"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockConsumer.cs/#L922"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/MockConsumer.html#committed-java.util.Set-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/MockConsumer.html#committed-java.util.Set-</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockConsumer.html#committed-java.util.Set-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockConsumer.html#committed-java.util.Set-</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1508,10 +1553,10 @@ Class MockConsumer&lt;K, V&gt;  <a class="header-action link-secondary" title="V
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_MockConsumer_2_Committed_Java_Util_Set_Org_Apache_Kafka_Common_TopicPartition__Java_Time_Duration_" data-uid="Org.Apache.Kafka.Clients.Consumer.MockConsumer`2.Committed(Java.Util.Set{Org.Apache.Kafka.Common.TopicPartition},Java.Time.Duration)">
   Committed(Set&lt;TopicPartition&gt;, Duration)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockConsumer.cs/#L856"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockConsumer.cs/#L913"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/MockConsumer.html#committed-java.util.Set-java.time.Duration-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/MockConsumer.html#committed-java.util.Set-java.time.Duration-</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockConsumer.html#committed-java.util.Set-java.time.Duration-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockConsumer.html#committed-java.util.Set-java.time.Duration-</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1550,10 +1595,10 @@ Class MockConsumer&lt;K, V&gt;  <a class="header-action link-secondary" title="V
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_MockConsumer_2_CurrentLag_Org_Apache_Kafka_Common_TopicPartition_" data-uid="Org.Apache.Kafka.Clients.Consumer.MockConsumer`2.CurrentLag(Org.Apache.Kafka.Common.TopicPartition)">
   CurrentLag(TopicPartition)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockConsumer.cs/#L777"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockConsumer.cs/#L834"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/MockConsumer.html#currentLag-org.apache.kafka.common.TopicPartition-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/MockConsumer.html#currentLag-org.apache.kafka.common.TopicPartition-</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockConsumer.html#currentLag-org.apache.kafka.common.TopicPartition-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockConsumer.html#currentLag-org.apache.kafka.common.TopicPartition-</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1589,10 +1634,10 @@ Class MockConsumer&lt;K, V&gt;  <a class="header-action link-secondary" title="V
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_MockConsumer_2_DisableTelemetry" data-uid="Org.Apache.Kafka.Clients.Consumer.MockConsumer`2.DisableTelemetry">
   DisableTelemetry()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockConsumer.cs/#L1164"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockConsumer.cs/#L1229"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/MockConsumer.html#disableTelemetry--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/MockConsumer.html#disableTelemetry--</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockConsumer.html#disableTelemetry--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockConsumer.html#disableTelemetry--</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1616,10 +1661,10 @@ Class MockConsumer&lt;K, V&gt;  <a class="header-action link-secondary" title="V
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_MockConsumer_2_EndOffsets_Java_Util_Collection_Org_Apache_Kafka_Common_TopicPartition__" data-uid="Org.Apache.Kafka.Clients.Consumer.MockConsumer`2.EndOffsets(Java.Util.Collection{Org.Apache.Kafka.Common.TopicPartition})">
   EndOffsets(Collection&lt;TopicPartition&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockConsumer.cs/#L846"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockConsumer.cs/#L903"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/MockConsumer.html#endOffsets-java.util.Collection-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/MockConsumer.html#endOffsets-java.util.Collection-</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockConsumer.html#endOffsets-java.util.Collection-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockConsumer.html#endOffsets-java.util.Collection-</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1655,10 +1700,10 @@ Class MockConsumer&lt;K, V&gt;  <a class="header-action link-secondary" title="V
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_MockConsumer_2_EndOffsets_Java_Util_Collection_Org_Apache_Kafka_Common_TopicPartition__Java_Time_Duration_" data-uid="Org.Apache.Kafka.Clients.Consumer.MockConsumer`2.EndOffsets(Java.Util.Collection{Org.Apache.Kafka.Common.TopicPartition},Java.Time.Duration)">
   EndOffsets(Collection&lt;TopicPartition&gt;, Duration)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockConsumer.cs/#L758"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockConsumer.cs/#L815"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/MockConsumer.html#endOffsets-java.util.Collection-java.time.Duration-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/MockConsumer.html#endOffsets-java.util.Collection-java.time.Duration-</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockConsumer.html#endOffsets-java.util.Collection-java.time.Duration-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockConsumer.html#endOffsets-java.util.Collection-java.time.Duration-</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1697,10 +1742,10 @@ Class MockConsumer&lt;K, V&gt;  <a class="header-action link-secondary" title="V
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_MockConsumer_2_EnforceRebalance" data-uid="Org.Apache.Kafka.Clients.Consumer.MockConsumer`2.EnforceRebalance">
   EnforceRebalance()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockConsumer.cs/#L1171"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockConsumer.cs/#L1236"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/MockConsumer.html#enforceRebalance--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/MockConsumer.html#enforceRebalance--</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockConsumer.html#enforceRebalance--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockConsumer.html#enforceRebalance--</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1724,10 +1769,10 @@ Class MockConsumer&lt;K, V&gt;  <a class="header-action link-secondary" title="V
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_MockConsumer_2_EnforceRebalance_Java_Lang_String_" data-uid="Org.Apache.Kafka.Clients.Consumer.MockConsumer`2.EnforceRebalance(Java.Lang.String)">
   EnforceRebalance(String)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockConsumer.cs/#L1179"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockConsumer.cs/#L1244"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/MockConsumer.html#enforceRebalance-java.lang.String-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/MockConsumer.html#enforceRebalance-java.lang.String-</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockConsumer.html#enforceRebalance-java.lang.String-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockConsumer.html#enforceRebalance-java.lang.String-</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1757,10 +1802,10 @@ Class MockConsumer&lt;K, V&gt;  <a class="header-action link-secondary" title="V
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_MockConsumer_2_GroupMetadata" data-uid="Org.Apache.Kafka.Clients.Consumer.MockConsumer`2.GroupMetadata">
   GroupMetadata()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockConsumer.cs/#L785"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockConsumer.cs/#L842"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/MockConsumer.html#groupMetadata--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/MockConsumer.html#groupMetadata--</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockConsumer.html#groupMetadata--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockConsumer.html#groupMetadata--</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1790,10 +1835,10 @@ Class MockConsumer&lt;K, V&gt;  <a class="header-action link-secondary" title="V
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_MockConsumer_2_InjectTimeoutException_System_Int32_" data-uid="Org.Apache.Kafka.Clients.Consumer.MockConsumer`2.InjectTimeoutException(System.Int32)">
   InjectTimeoutException(int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockConsumer.cs/#L1187"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockConsumer.cs/#L1252"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/MockConsumer.html#injectTimeoutException-int-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/MockConsumer.html#injectTimeoutException-int-</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockConsumer.html#injectTimeoutException-int-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockConsumer.html#injectTimeoutException-int-</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1823,10 +1868,10 @@ Class MockConsumer&lt;K, V&gt;  <a class="header-action link-secondary" title="V
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_MockConsumer_2_LastPollTimeout" data-uid="Org.Apache.Kafka.Clients.Consumer.MockConsumer`2.LastPollTimeout">
   LastPollTimeout()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockConsumer.cs/#L719"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockConsumer.cs/#L768"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/MockConsumer.html#lastPollTimeout--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/MockConsumer.html#lastPollTimeout--</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockConsumer.html#lastPollTimeout--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockConsumer.html#lastPollTimeout--</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1856,10 +1901,10 @@ Class MockConsumer&lt;K, V&gt;  <a class="header-action link-secondary" title="V
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_MockConsumer_2_ListTopics" data-uid="Org.Apache.Kafka.Clients.Consumer.MockConsumer`2.ListTopics">
   ListTopics()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockConsumer.cs/#L819"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockConsumer.cs/#L876"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/MockConsumer.html#listTopics--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/MockConsumer.html#listTopics--</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockConsumer.html#listTopics--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockConsumer.html#listTopics--</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1889,10 +1934,10 @@ Class MockConsumer&lt;K, V&gt;  <a class="header-action link-secondary" title="V
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_MockConsumer_2_ListTopics_Java_Time_Duration_" data-uid="Org.Apache.Kafka.Clients.Consumer.MockConsumer`2.ListTopics(Java.Time.Duration)">
   ListTopics(Duration)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockConsumer.cs/#L738"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockConsumer.cs/#L795"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/MockConsumer.html#listTopics-java.time.Duration-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/MockConsumer.html#listTopics-java.time.Duration-</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockConsumer.html#listTopics-java.time.Duration-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockConsumer.html#listTopics-java.time.Duration-</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1928,10 +1973,10 @@ Class MockConsumer&lt;K, V&gt;  <a class="header-action link-secondary" title="V
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_MockConsumer_2_Metrics__1" data-uid="Org.Apache.Kafka.Clients.Consumer.MockConsumer`2.Metrics``1">
   Metrics&lt;ReturnExtendsOrg_Apache_Kafka_Common_Metric&gt;()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockConsumer.cs/#L828"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockConsumer.cs/#L885"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/MockConsumer.html#metrics--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/MockConsumer.html#metrics--</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockConsumer.html#metrics--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockConsumer.html#metrics--</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1967,10 +2012,10 @@ Class MockConsumer&lt;K, V&gt;  <a class="header-action link-secondary" title="V
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_MockConsumer_2_OffsetsForTimes_Java_Util_Map_Org_Apache_Kafka_Common_TopicPartition_Java_Lang_Long__" data-uid="Org.Apache.Kafka.Clients.Consumer.MockConsumer`2.OffsetsForTimes(Java.Util.Map{Org.Apache.Kafka.Common.TopicPartition,Java.Lang.Long})">
   OffsetsForTimes(Map&lt;TopicPartition, Long&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockConsumer.cs/#L874"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockConsumer.cs/#L931"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/MockConsumer.html#offsetsForTimes-java.util.Map-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/MockConsumer.html#offsetsForTimes-java.util.Map-</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockConsumer.html#offsetsForTimes-java.util.Map-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockConsumer.html#offsetsForTimes-java.util.Map-</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -2006,10 +2051,10 @@ Class MockConsumer&lt;K, V&gt;  <a class="header-action link-secondary" title="V
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_MockConsumer_2_OffsetsForTimes_Java_Util_Map_Org_Apache_Kafka_Common_TopicPartition_Java_Lang_Long__Java_Time_Duration_" data-uid="Org.Apache.Kafka.Clients.Consumer.MockConsumer`2.OffsetsForTimes(Java.Util.Map{Org.Apache.Kafka.Common.TopicPartition,Java.Lang.Long},Java.Time.Duration)">
   OffsetsForTimes(Map&lt;TopicPartition, Long&gt;, Duration)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockConsumer.cs/#L768"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockConsumer.cs/#L825"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/MockConsumer.html#offsetsForTimes-java.util.Map-java.time.Duration-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/MockConsumer.html#offsetsForTimes-java.util.Map-java.time.Duration-</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockConsumer.html#offsetsForTimes-java.util.Map-java.time.Duration-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockConsumer.html#offsetsForTimes-java.util.Map-java.time.Duration-</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -2048,10 +2093,10 @@ Class MockConsumer&lt;K, V&gt;  <a class="header-action link-secondary" title="V
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_MockConsumer_2_PartitionsFor_Java_Lang_String_" data-uid="Org.Apache.Kafka.Clients.Consumer.MockConsumer`2.PartitionsFor(Java.Lang.String)">
   PartitionsFor(String)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockConsumer.cs/#L811"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockConsumer.cs/#L868"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/MockConsumer.html#partitionsFor-java.lang.String-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/MockConsumer.html#partitionsFor-java.lang.String-</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockConsumer.html#partitionsFor-java.lang.String-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockConsumer.html#partitionsFor-java.lang.String-</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -2087,10 +2132,10 @@ Class MockConsumer&lt;K, V&gt;  <a class="header-action link-secondary" title="V
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_MockConsumer_2_PartitionsFor_Java_Lang_String_Java_Time_Duration_" data-uid="Org.Apache.Kafka.Clients.Consumer.MockConsumer`2.PartitionsFor(Java.Lang.String,Java.Time.Duration)">
   PartitionsFor(String, Duration)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockConsumer.cs/#L729"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockConsumer.cs/#L786"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/MockConsumer.html#partitionsFor-java.lang.String-java.time.Duration-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/MockConsumer.html#partitionsFor-java.lang.String-java.time.Duration-</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockConsumer.html#partitionsFor-java.lang.String-java.time.Duration-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockConsumer.html#partitionsFor-java.lang.String-java.time.Duration-</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -2129,10 +2174,10 @@ Class MockConsumer&lt;K, V&gt;  <a class="header-action link-secondary" title="V
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_MockConsumer_2_Pause_Java_Util_Collection_Org_Apache_Kafka_Common_TopicPartition__" data-uid="Org.Apache.Kafka.Clients.Consumer.MockConsumer`2.Pause(Java.Util.Collection{Org.Apache.Kafka.Common.TopicPartition})">
   Pause(Collection&lt;TopicPartition&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockConsumer.cs/#L1005"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockConsumer.cs/#L1062"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/MockConsumer.html#pause-java.util.Collection-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/MockConsumer.html#pause-java.util.Collection-</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockConsumer.html#pause-java.util.Collection-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockConsumer.html#pause-java.util.Collection-</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -2162,10 +2207,10 @@ Class MockConsumer&lt;K, V&gt;  <a class="header-action link-secondary" title="V
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_MockConsumer_2_Paused" data-uid="Org.Apache.Kafka.Clients.Consumer.MockConsumer`2.Paused">
   Paused()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockConsumer.cs/#L898"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockConsumer.cs/#L955"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/MockConsumer.html#paused--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/MockConsumer.html#paused--</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockConsumer.html#paused--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockConsumer.html#paused--</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -2195,10 +2240,10 @@ Class MockConsumer&lt;K, V&gt;  <a class="header-action link-secondary" title="V
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_MockConsumer_2_Poll_Java_Time_Duration_" data-uid="Org.Apache.Kafka.Clients.Consumer.MockConsumer`2.Poll(Java.Time.Duration)">
   Poll(Duration)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockConsumer.cs/#L926"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockConsumer.cs/#L983"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/MockConsumer.html#poll-java.time.Duration-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/MockConsumer.html#poll-java.time.Duration-</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockConsumer.html#poll-java.time.Duration-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockConsumer.html#poll-java.time.Duration-</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -2234,10 +2279,10 @@ Class MockConsumer&lt;K, V&gt;  <a class="header-action link-secondary" title="V
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_MockConsumer_2_Position_Org_Apache_Kafka_Common_TopicPartition_" data-uid="Org.Apache.Kafka.Clients.Consumer.MockConsumer`2.Position(Org.Apache.Kafka.Common.TopicPartition)">
   Position(TopicPartition)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockConsumer.cs/#L917"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockConsumer.cs/#L974"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/MockConsumer.html#position-org.apache.kafka.common.TopicPartition-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/MockConsumer.html#position-org.apache.kafka.common.TopicPartition-</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockConsumer.html#position-org.apache.kafka.common.TopicPartition-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockConsumer.html#position-org.apache.kafka.common.TopicPartition-</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -2273,10 +2318,10 @@ Class MockConsumer&lt;K, V&gt;  <a class="header-action link-secondary" title="V
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_MockConsumer_2_Position_Org_Apache_Kafka_Common_TopicPartition_Java_Time_Duration_" data-uid="Org.Apache.Kafka.Clients.Consumer.MockConsumer`2.Position(Org.Apache.Kafka.Common.TopicPartition,Java.Time.Duration)">
   Position(TopicPartition, Duration)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockConsumer.cs/#L908"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockConsumer.cs/#L965"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/MockConsumer.html#position-org.apache.kafka.common.TopicPartition-java.time.Duration-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/MockConsumer.html#position-org.apache.kafka.common.TopicPartition-java.time.Duration-</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockConsumer.html#position-org.apache.kafka.common.TopicPartition-java.time.Duration-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockConsumer.html#position-org.apache.kafka.common.TopicPartition-java.time.Duration-</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -2315,10 +2360,10 @@ Class MockConsumer&lt;K, V&gt;  <a class="header-action link-secondary" title="V
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_MockConsumer_2_Rebalance_Java_Util_Collection_Org_Apache_Kafka_Common_TopicPartition__" data-uid="Org.Apache.Kafka.Clients.Consumer.MockConsumer`2.Rebalance(Java.Util.Collection{Org.Apache.Kafka.Common.TopicPartition})">
   Rebalance(Collection&lt;TopicPartition&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockConsumer.cs/#L1013"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockConsumer.cs/#L1070"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/MockConsumer.html#rebalance-java.util.Collection-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/MockConsumer.html#rebalance-java.util.Collection-</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockConsumer.html#rebalance-java.util.Collection-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockConsumer.html#rebalance-java.util.Collection-</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -2344,14 +2389,47 @@ Class MockConsumer&lt;K, V&gt;  <a class="header-action link-secondary" title="V
 
 
 
+  <a id="Org_Apache_Kafka_Clients_Consumer_MockConsumer_2_RegisterMetricForSubscription_" data-uid="Org.Apache.Kafka.Clients.Consumer.MockConsumer`2.RegisterMetricForSubscription*"></a>
+
+  <h3 id="Org_Apache_Kafka_Clients_Consumer_MockConsumer_2_RegisterMetricForSubscription_Org_Apache_Kafka_Common_Metrics_KafkaMetric_" data-uid="Org.Apache.Kafka.Clients.Consumer.MockConsumer`2.RegisterMetricForSubscription(Org.Apache.Kafka.Common.Metrics.KafkaMetric)">
+  RegisterMetricForSubscription(KafkaMetric)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockConsumer.cs/#L1260"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockConsumer.html#registerMetricForSubscription-org.apache.kafka.common.metrics.KafkaMetric-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockConsumer.html#registerMetricForSubscription-org.apache.kafka.common.metrics.KafkaMetric-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RegisterMetricForSubscription(KafkaMetric arg0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="Org.Apache.Kafka.Common.Metrics.KafkaMetric.html">KafkaMetric</a></dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Common.Metrics.KafkaMetric.html">KafkaMetric</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
   <a id="Org_Apache_Kafka_Clients_Consumer_MockConsumer_2_ResetShouldRebalance_" data-uid="Org.Apache.Kafka.Clients.Consumer.MockConsumer`2.ResetShouldRebalance*"></a>
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_MockConsumer_2_ResetShouldRebalance" data-uid="Org.Apache.Kafka.Clients.Consumer.MockConsumer`2.ResetShouldRebalance">
   ResetShouldRebalance()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockConsumer.cs/#L1194"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockConsumer.cs/#L1267"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/MockConsumer.html#resetShouldRebalance--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/MockConsumer.html#resetShouldRebalance--</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockConsumer.html#resetShouldRebalance--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockConsumer.html#resetShouldRebalance--</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -2375,10 +2453,10 @@ Class MockConsumer&lt;K, V&gt;  <a class="header-action link-secondary" title="V
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_MockConsumer_2_Resume_Java_Util_Collection_Org_Apache_Kafka_Common_TopicPartition__" data-uid="Org.Apache.Kafka.Clients.Consumer.MockConsumer`2.Resume(Java.Util.Collection{Org.Apache.Kafka.Common.TopicPartition})">
   Resume(Collection&lt;TopicPartition&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockConsumer.cs/#L1021"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockConsumer.cs/#L1078"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/MockConsumer.html#resume-java.util.Collection-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/MockConsumer.html#resume-java.util.Collection-</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockConsumer.html#resume-java.util.Collection-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockConsumer.html#resume-java.util.Collection-</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -2408,10 +2486,10 @@ Class MockConsumer&lt;K, V&gt;  <a class="header-action link-secondary" title="V
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_MockConsumer_2_ScheduleNopPollTask" data-uid="Org.Apache.Kafka.Clients.Consumer.MockConsumer`2.ScheduleNopPollTask">
   ScheduleNopPollTask()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockConsumer.cs/#L1028"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockConsumer.cs/#L1085"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/MockConsumer.html#scheduleNopPollTask--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/MockConsumer.html#scheduleNopPollTask--</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockConsumer.html#scheduleNopPollTask--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockConsumer.html#scheduleNopPollTask--</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -2435,10 +2513,10 @@ Class MockConsumer&lt;K, V&gt;  <a class="header-action link-secondary" title="V
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_MockConsumer_2_SchedulePollTask_Java_Lang_Runnable_" data-uid="Org.Apache.Kafka.Clients.Consumer.MockConsumer`2.SchedulePollTask(Java.Lang.Runnable)">
   SchedulePollTask(Runnable)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockConsumer.cs/#L1036"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockConsumer.cs/#L1093"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/MockConsumer.html#schedulePollTask-java.lang.Runnable-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/MockConsumer.html#schedulePollTask-java.lang.Runnable-</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockConsumer.html#schedulePollTask-java.lang.Runnable-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockConsumer.html#schedulePollTask-java.lang.Runnable-</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -2468,10 +2546,10 @@ Class MockConsumer&lt;K, V&gt;  <a class="header-action link-secondary" title="V
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_MockConsumer_2_Seek_Org_Apache_Kafka_Common_TopicPartition_Org_Apache_Kafka_Clients_Consumer_OffsetAndMetadata_" data-uid="Org.Apache.Kafka.Clients.Consumer.MockConsumer`2.Seek(Org.Apache.Kafka.Common.TopicPartition,Org.Apache.Kafka.Clients.Consumer.OffsetAndMetadata)">
   Seek(TopicPartition, OffsetAndMetadata)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockConsumer.cs/#L1203"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockConsumer.cs/#L1276"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/MockConsumer.html#seek-org.apache.kafka.common.TopicPartition-org.apache.kafka.clients.consumer.OffsetAndMetadata-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/MockConsumer.html#seek-org.apache.kafka.common.TopicPartition-org.apache.kafka.clients.consumer.OffsetAndMetadata-</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockConsumer.html#seek-org.apache.kafka.common.TopicPartition-org.apache.kafka.clients.consumer.OffsetAndMetadata-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockConsumer.html#seek-org.apache.kafka.common.TopicPartition-org.apache.kafka.clients.consumer.OffsetAndMetadata-</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -2504,10 +2582,10 @@ Class MockConsumer&lt;K, V&gt;  <a class="header-action link-secondary" title="V
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_MockConsumer_2_Seek_Org_Apache_Kafka_Common_TopicPartition_System_Int64_" data-uid="Org.Apache.Kafka.Clients.Consumer.MockConsumer`2.Seek(Org.Apache.Kafka.Common.TopicPartition,System.Int64)">
   Seek(TopicPartition, long)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockConsumer.cs/#L1045"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockConsumer.cs/#L1102"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/MockConsumer.html#seek-org.apache.kafka.common.TopicPartition-long-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/MockConsumer.html#seek-org.apache.kafka.common.TopicPartition-long-</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockConsumer.html#seek-org.apache.kafka.common.TopicPartition-long-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockConsumer.html#seek-org.apache.kafka.common.TopicPartition-long-</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -2540,10 +2618,10 @@ Class MockConsumer&lt;K, V&gt;  <a class="header-action link-secondary" title="V
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_MockConsumer_2_SeekToBeginning_Java_Util_Collection_Org_Apache_Kafka_Common_TopicPartition__" data-uid="Org.Apache.Kafka.Clients.Consumer.MockConsumer`2.SeekToBeginning(Java.Util.Collection{Org.Apache.Kafka.Common.TopicPartition})">
   SeekToBeginning(Collection&lt;TopicPartition&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockConsumer.cs/#L1053"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockConsumer.cs/#L1110"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/MockConsumer.html#seekToBeginning-java.util.Collection-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/MockConsumer.html#seekToBeginning-java.util.Collection-</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockConsumer.html#seekToBeginning-java.util.Collection-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockConsumer.html#seekToBeginning-java.util.Collection-</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -2573,10 +2651,10 @@ Class MockConsumer&lt;K, V&gt;  <a class="header-action link-secondary" title="V
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_MockConsumer_2_SeekToEnd_Java_Util_Collection_Org_Apache_Kafka_Common_TopicPartition__" data-uid="Org.Apache.Kafka.Clients.Consumer.MockConsumer`2.SeekToEnd(Java.Util.Collection{Org.Apache.Kafka.Common.TopicPartition})">
   SeekToEnd(Collection&lt;TopicPartition&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockConsumer.cs/#L1061"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockConsumer.cs/#L1118"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/MockConsumer.html#seekToEnd-java.util.Collection-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/MockConsumer.html#seekToEnd-java.util.Collection-</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockConsumer.html#seekToEnd-java.util.Collection-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockConsumer.html#seekToEnd-java.util.Collection-</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -2606,10 +2684,10 @@ Class MockConsumer&lt;K, V&gt;  <a class="header-action link-secondary" title="V
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_MockConsumer_2_SetClientInstanceId_Org_Apache_Kafka_Common_Uuid_" data-uid="Org.Apache.Kafka.Clients.Consumer.MockConsumer`2.SetClientInstanceId(Org.Apache.Kafka.Common.Uuid)">
   SetClientInstanceId(Uuid)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockConsumer.cs/#L1211"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockConsumer.cs/#L1284"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/MockConsumer.html#setClientInstanceId-org.apache.kafka.common.Uuid-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/MockConsumer.html#setClientInstanceId-org.apache.kafka.common.Uuid-</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockConsumer.html#setClientInstanceId-org.apache.kafka.common.Uuid-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockConsumer.html#setClientInstanceId-org.apache.kafka.common.Uuid-</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -2639,10 +2717,10 @@ Class MockConsumer&lt;K, V&gt;  <a class="header-action link-secondary" title="V
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_MockConsumer_2_SetOffsetsException_MASES_JCOBridge_C2JBridge_JVMBridgeException_" data-uid="Org.Apache.Kafka.Clients.Consumer.MockConsumer`2.SetOffsetsException(MASES.JCOBridge.C2JBridge.JVMBridgeException)">
   SetOffsetsException(JVMBridgeException)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockConsumer.cs/#L1069"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockConsumer.cs/#L1126"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/MockConsumer.html#setOffsetsException-org.apache.kafka.common.KafkaException-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/MockConsumer.html#setOffsetsException-org.apache.kafka.common.KafkaException-</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockConsumer.html#setOffsetsException-org.apache.kafka.common.KafkaException-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockConsumer.html#setOffsetsException-org.apache.kafka.common.KafkaException-</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -2672,10 +2750,10 @@ Class MockConsumer&lt;K, V&gt;  <a class="header-action link-secondary" title="V
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_MockConsumer_2_SetPollException_MASES_JCOBridge_C2JBridge_JVMBridgeException_" data-uid="Org.Apache.Kafka.Clients.Consumer.MockConsumer`2.SetPollException(MASES.JCOBridge.C2JBridge.JVMBridgeException)">
   SetPollException(JVMBridgeException)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockConsumer.cs/#L1077"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockConsumer.cs/#L1134"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/MockConsumer.html#setPollException-org.apache.kafka.common.KafkaException-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/MockConsumer.html#setPollException-org.apache.kafka.common.KafkaException-</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockConsumer.html#setPollException-org.apache.kafka.common.KafkaException-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockConsumer.html#setPollException-org.apache.kafka.common.KafkaException-</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -2705,10 +2783,10 @@ Class MockConsumer&lt;K, V&gt;  <a class="header-action link-secondary" title="V
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_MockConsumer_2_ShouldRebalance" data-uid="Org.Apache.Kafka.Clients.Consumer.MockConsumer`2.ShouldRebalance">
   ShouldRebalance()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockConsumer.cs/#L711"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockConsumer.cs/#L760"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/MockConsumer.html#shouldRebalance--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/MockConsumer.html#shouldRebalance--</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockConsumer.html#shouldRebalance--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockConsumer.html#shouldRebalance--</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -2738,10 +2816,10 @@ Class MockConsumer&lt;K, V&gt;  <a class="header-action link-secondary" title="V
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_MockConsumer_2_Subscribe_Java_Util_Collection_Java_Lang_String__" data-uid="Org.Apache.Kafka.Clients.Consumer.MockConsumer`2.Subscribe(Java.Util.Collection{Java.Lang.String})">
   Subscribe(Collection&lt;String&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockConsumer.cs/#L1085"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockConsumer.cs/#L1142"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/MockConsumer.html#subscribe-java.util.Collection-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/MockConsumer.html#subscribe-java.util.Collection-</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockConsumer.html#subscribe-java.util.Collection-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockConsumer.html#subscribe-java.util.Collection-</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -2771,10 +2849,10 @@ Class MockConsumer&lt;K, V&gt;  <a class="header-action link-secondary" title="V
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_MockConsumer_2_Subscribe_Java_Util_Collection_Java_Lang_String__Org_Apache_Kafka_Clients_Consumer_ConsumerRebalanceListener_" data-uid="Org.Apache.Kafka.Clients.Consumer.MockConsumer`2.Subscribe(Java.Util.Collection{Java.Lang.String},Org.Apache.Kafka.Clients.Consumer.ConsumerRebalanceListener)">
   Subscribe(Collection&lt;String&gt;, ConsumerRebalanceListener)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockConsumer.cs/#L1220"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockConsumer.cs/#L1293"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/MockConsumer.html#subscribe-java.util.Collection-org.apache.kafka.clients.consumer.ConsumerRebalanceListener-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/MockConsumer.html#subscribe-java.util.Collection-org.apache.kafka.clients.consumer.ConsumerRebalanceListener-</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockConsumer.html#subscribe-java.util.Collection-org.apache.kafka.clients.consumer.ConsumerRebalanceListener-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockConsumer.html#subscribe-java.util.Collection-org.apache.kafka.clients.consumer.ConsumerRebalanceListener-</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -2807,10 +2885,10 @@ Class MockConsumer&lt;K, V&gt;  <a class="header-action link-secondary" title="V
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_MockConsumer_2_Subscribe_Java_Util_Regex_Pattern_" data-uid="Org.Apache.Kafka.Clients.Consumer.MockConsumer`2.Subscribe(Java.Util.Regex.Pattern)">
   Subscribe(Pattern)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockConsumer.cs/#L1102"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockConsumer.cs/#L1159"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/MockConsumer.html#subscribe-java.util.regex.Pattern-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/MockConsumer.html#subscribe-java.util.regex.Pattern-</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockConsumer.html#subscribe-java.util.regex.Pattern-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockConsumer.html#subscribe-java.util.regex.Pattern-</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -2840,10 +2918,10 @@ Class MockConsumer&lt;K, V&gt;  <a class="header-action link-secondary" title="V
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_MockConsumer_2_Subscribe_Java_Util_Regex_Pattern_Org_Apache_Kafka_Clients_Consumer_ConsumerRebalanceListener_" data-uid="Org.Apache.Kafka.Clients.Consumer.MockConsumer`2.Subscribe(Java.Util.Regex.Pattern,Org.Apache.Kafka.Clients.Consumer.ConsumerRebalanceListener)">
   Subscribe(Pattern, ConsumerRebalanceListener)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockConsumer.cs/#L1094"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockConsumer.cs/#L1151"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/MockConsumer.html#subscribe-java.util.regex.Pattern-org.apache.kafka.clients.consumer.ConsumerRebalanceListener-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/MockConsumer.html#subscribe-java.util.regex.Pattern-org.apache.kafka.clients.consumer.ConsumerRebalanceListener-</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockConsumer.html#subscribe-java.util.regex.Pattern-org.apache.kafka.clients.consumer.ConsumerRebalanceListener-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockConsumer.html#subscribe-java.util.regex.Pattern-org.apache.kafka.clients.consumer.ConsumerRebalanceListener-</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -2872,14 +2950,83 @@ Class MockConsumer&lt;K, V&gt;  <a class="header-action link-secondary" title="V
 
 
 
+  <a id="Org_Apache_Kafka_Clients_Consumer_MockConsumer_2_Subscribe_" data-uid="Org.Apache.Kafka.Clients.Consumer.MockConsumer`2.Subscribe*"></a>
+
+  <h3 id="Org_Apache_Kafka_Clients_Consumer_MockConsumer_2_Subscribe_Org_Apache_Kafka_Clients_Consumer_SubscriptionPattern_" data-uid="Org.Apache.Kafka.Clients.Consumer.MockConsumer`2.Subscribe(Org.Apache.Kafka.Clients.Consumer.SubscriptionPattern)">
+  Subscribe(SubscriptionPattern)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockConsumer.cs/#L1310"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockConsumer.html#subscribe-org.apache.kafka.clients.consumer.SubscriptionPattern-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockConsumer.html#subscribe-org.apache.kafka.clients.consumer.SubscriptionPattern-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Subscribe(SubscriptionPattern arg0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.SubscriptionPattern.html">SubscriptionPattern</a></dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Clients.Consumer.SubscriptionPattern.html">SubscriptionPattern</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Apache_Kafka_Clients_Consumer_MockConsumer_2_Subscribe_" data-uid="Org.Apache.Kafka.Clients.Consumer.MockConsumer`2.Subscribe*"></a>
+
+  <h3 id="Org_Apache_Kafka_Clients_Consumer_MockConsumer_2_Subscribe_Org_Apache_Kafka_Clients_Consumer_SubscriptionPattern_Org_Apache_Kafka_Clients_Consumer_ConsumerRebalanceListener_" data-uid="Org.Apache.Kafka.Clients.Consumer.MockConsumer`2.Subscribe(Org.Apache.Kafka.Clients.Consumer.SubscriptionPattern,Org.Apache.Kafka.Clients.Consumer.ConsumerRebalanceListener)">
+  Subscribe(SubscriptionPattern, ConsumerRebalanceListener)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockConsumer.cs/#L1302"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockConsumer.html#subscribe-org.apache.kafka.clients.consumer.SubscriptionPattern-org.apache.kafka.clients.consumer.ConsumerRebalanceListener-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockConsumer.html#subscribe-org.apache.kafka.clients.consumer.SubscriptionPattern-org.apache.kafka.clients.consumer.ConsumerRebalanceListener-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Subscribe(SubscriptionPattern arg0, ConsumerRebalanceListener arg1)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.SubscriptionPattern.html">SubscriptionPattern</a></dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Clients.Consumer.SubscriptionPattern.html">SubscriptionPattern</a></p>
+</dd>
+    <dt><code>arg1</code> <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.ConsumerRebalanceListener.html">ConsumerRebalanceListener</a></dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Clients.Consumer.ConsumerRebalanceListener.html">ConsumerRebalanceListener</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
   <a id="Org_Apache_Kafka_Clients_Consumer_MockConsumer_2_Subscription_" data-uid="Org.Apache.Kafka.Clients.Consumer.MockConsumer`2.Subscription*"></a>
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_MockConsumer_2_Subscription" data-uid="Org.Apache.Kafka.Clients.Consumer.MockConsumer`2.Subscription">
   Subscription()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockConsumer.cs/#L882"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockConsumer.cs/#L939"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/MockConsumer.html#subscription--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/MockConsumer.html#subscription--</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockConsumer.html#subscription--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockConsumer.html#subscription--</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -2905,14 +3052,47 @@ Class MockConsumer&lt;K, V&gt;  <a class="header-action link-secondary" title="V
 
 
 
+  <a id="Org_Apache_Kafka_Clients_Consumer_MockConsumer_2_UnregisterMetricFromSubscription_" data-uid="Org.Apache.Kafka.Clients.Consumer.MockConsumer`2.UnregisterMetricFromSubscription*"></a>
+
+  <h3 id="Org_Apache_Kafka_Clients_Consumer_MockConsumer_2_UnregisterMetricFromSubscription_Org_Apache_Kafka_Common_Metrics_KafkaMetric_" data-uid="Org.Apache.Kafka.Clients.Consumer.MockConsumer`2.UnregisterMetricFromSubscription(Org.Apache.Kafka.Common.Metrics.KafkaMetric)">
+  UnregisterMetricFromSubscription(KafkaMetric)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockConsumer.cs/#L1318"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockConsumer.html#unregisterMetricFromSubscription-org.apache.kafka.common.metrics.KafkaMetric-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockConsumer.html#unregisterMetricFromSubscription-org.apache.kafka.common.metrics.KafkaMetric-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void UnregisterMetricFromSubscription(KafkaMetric arg0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="Org.Apache.Kafka.Common.Metrics.KafkaMetric.html">KafkaMetric</a></dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Common.Metrics.KafkaMetric.html">KafkaMetric</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
   <a id="Org_Apache_Kafka_Clients_Consumer_MockConsumer_2_Unsubscribe_" data-uid="Org.Apache.Kafka.Clients.Consumer.MockConsumer`2.Unsubscribe*"></a>
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_MockConsumer_2_Unsubscribe" data-uid="Org.Apache.Kafka.Clients.Consumer.MockConsumer`2.Unsubscribe">
   Unsubscribe()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockConsumer.cs/#L1109"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockConsumer.cs/#L1166"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/MockConsumer.html#unsubscribe--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/MockConsumer.html#unsubscribe--</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockConsumer.html#unsubscribe--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockConsumer.html#unsubscribe--</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -2936,10 +3116,10 @@ Class MockConsumer&lt;K, V&gt;  <a class="header-action link-secondary" title="V
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_MockConsumer_2_UpdateBeginningOffsets_Java_Util_Map_Org_Apache_Kafka_Common_TopicPartition_Java_Lang_Long__" data-uid="Org.Apache.Kafka.Clients.Consumer.MockConsumer`2.UpdateBeginningOffsets(Java.Util.Map{Org.Apache.Kafka.Common.TopicPartition,Java.Lang.Long})">
   UpdateBeginningOffsets(Map&lt;TopicPartition, Long&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockConsumer.cs/#L1117"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockConsumer.cs/#L1174"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/MockConsumer.html#updateBeginningOffsets-java.util.Map-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/MockConsumer.html#updateBeginningOffsets-java.util.Map-</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockConsumer.html#updateBeginningOffsets-java.util.Map-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockConsumer.html#updateBeginningOffsets-java.util.Map-</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -2965,14 +3145,47 @@ Class MockConsumer&lt;K, V&gt;  <a class="header-action link-secondary" title="V
 
 
 
+  <a id="Org_Apache_Kafka_Clients_Consumer_MockConsumer_2_UpdateDurationOffsets_" data-uid="Org.Apache.Kafka.Clients.Consumer.MockConsumer`2.UpdateDurationOffsets*"></a>
+
+  <h3 id="Org_Apache_Kafka_Clients_Consumer_MockConsumer_2_UpdateDurationOffsets_Java_Util_Map_Org_Apache_Kafka_Common_TopicPartition_Java_Lang_Long__" data-uid="Org.Apache.Kafka.Clients.Consumer.MockConsumer`2.UpdateDurationOffsets(Java.Util.Map{Org.Apache.Kafka.Common.TopicPartition,Java.Lang.Long})">
+  UpdateDurationOffsets(Map&lt;TopicPartition, Long&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockConsumer.cs/#L1182"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockConsumer.html#updateDurationOffsets-java.util.Map-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockConsumer.html#updateDurationOffsets-java.util.Map-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void UpdateDurationOffsets(Map&lt;TopicPartition, Long&gt; arg0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.TopicPartition.html">TopicPartition</a>, <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.Long.html">Long</a>&gt;</dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map.html">Map</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
   <a id="Org_Apache_Kafka_Clients_Consumer_MockConsumer_2_UpdateEndOffsets_" data-uid="Org.Apache.Kafka.Clients.Consumer.MockConsumer`2.UpdateEndOffsets*"></a>
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_MockConsumer_2_UpdateEndOffsets_Java_Util_Map_Org_Apache_Kafka_Common_TopicPartition_Java_Lang_Long__" data-uid="Org.Apache.Kafka.Clients.Consumer.MockConsumer`2.UpdateEndOffsets(Java.Util.Map{Org.Apache.Kafka.Common.TopicPartition,Java.Lang.Long})">
   UpdateEndOffsets(Map&lt;TopicPartition, Long&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockConsumer.cs/#L1125"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockConsumer.cs/#L1190"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/MockConsumer.html#updateEndOffsets-java.util.Map-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/MockConsumer.html#updateEndOffsets-java.util.Map-</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockConsumer.html#updateEndOffsets-java.util.Map-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockConsumer.html#updateEndOffsets-java.util.Map-</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -3002,10 +3215,10 @@ Class MockConsumer&lt;K, V&gt;  <a class="header-action link-secondary" title="V
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_MockConsumer_2_UpdatePartitions_Java_Lang_String_Java_Util_List_Org_Apache_Kafka_Common_PartitionInfo__" data-uid="Org.Apache.Kafka.Clients.Consumer.MockConsumer`2.UpdatePartitions(Java.Lang.String,Java.Util.List{Org.Apache.Kafka.Common.PartitionInfo})">
   UpdatePartitions(String, List&lt;PartitionInfo&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockConsumer.cs/#L1134"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockConsumer.cs/#L1199"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/MockConsumer.html#updatePartitions-java.lang.String-java.util.List-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/MockConsumer.html#updatePartitions-java.lang.String-java.util.List-</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockConsumer.html#updatePartitions-java.lang.String-java.util.List-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockConsumer.html#updatePartitions-java.lang.String-java.util.List-</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -3038,10 +3251,10 @@ Class MockConsumer&lt;K, V&gt;  <a class="header-action link-secondary" title="V
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_MockConsumer_2_Wakeup" data-uid="Org.Apache.Kafka.Clients.Consumer.MockConsumer`2.Wakeup">
   Wakeup()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockConsumer.cs/#L1141"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockConsumer.cs/#L1206"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/MockConsumer.html#wakeup--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/MockConsumer.html#wakeup--</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockConsumer.html#wakeup--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockConsumer.html#wakeup--</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -3069,7 +3282,7 @@ Class MockConsumer&lt;K, V&gt;  <a class="header-action link-secondary" title="V
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_MockConsumer_2_op_Implicit_Org_Apache_Kafka_Clients_Consumer_MockConsumer__0__1___Org_Apache_Kafka_Clients_Consumer_MockConsumer" data-uid="Org.Apache.Kafka.Clients.Consumer.MockConsumer`2.op_Implicit(Org.Apache.Kafka.Clients.Consumer.MockConsumer{`0,`1})~Org.Apache.Kafka.Clients.Consumer.MockConsumer">
   implicit operator MockConsumer(MockConsumer&lt;K, V&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockConsumer.cs/#L694"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockConsumer.cs/#L743"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Converter from <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.MockConsumer-2.html">MockConsumer&lt;K, V&gt;</a> to <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.MockConsumer.html">MockConsumer</a></p>
@@ -3106,7 +3319,7 @@ Class MockConsumer&lt;K, V&gt;  <a class="header-action link-secondary" title="V
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockConsumer.cs/#L676" class="edit-link">Edit this page</a>
+          <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockConsumer.cs/#L725" class="edit-link">Edit this page</a>
         </div>
 
 
