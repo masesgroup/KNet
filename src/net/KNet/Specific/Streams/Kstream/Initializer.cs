@@ -48,7 +48,7 @@ namespace MASES.KNet.Streams.Kstream
             }
         }
         /// <summary>
-        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/kstream/Initializer.html#apply--"/>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/Initializer.html#apply()"/>
         /// </summary>
         /// <remarks>If <see cref="OnApply2"/> has a value it takes precedence over corresponding class method</remarks>
         public System.Func<VA> OnApply2 { get; set; } = null;
@@ -62,7 +62,7 @@ namespace MASES.KNet.Streams.Kstream
             return _valueSerializer.Serialize(null, res);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/kstream/Initializer.html#apply--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/Initializer.html#apply()"/>
         /// </summary>
         /// <returns><typeparamref name="VA"/></returns>
         public virtual VA Apply2()

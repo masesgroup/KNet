@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
     public partial class OffsetOutOfRangeException
     {
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/latest/org/apache/kafka/clients/consumer/OffsetOutOfRangeException.html#offsetOutOfRangePartitions--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/latest/org/apache/kafka/clients/consumer/OffsetOutOfRangeException.html#offsetOutOfRangePartitions()"/>
         /// </summary>
         public Map<TopicPartition, long> OffsetOutOfRangePartitions => JVMBridgeBase.WrapsDirect<Map<TopicPartition, long>>(BridgeInstance.Invoke("offsetOutOfRangePartitions") as IJavaObject);
     }

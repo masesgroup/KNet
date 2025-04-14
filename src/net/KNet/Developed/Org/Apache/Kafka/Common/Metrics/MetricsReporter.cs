@@ -41,11 +41,11 @@ namespace Org.Apache.Kafka.Common.Metrics
         /// </summary>
         void MetricRemoval(KafkaMetric metric);
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/common/metrics/MetricsReporter.html#close--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/common/metrics/MetricsReporter.html#close()"/>
         /// </summary>
         void Close();
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/common/metrics/MetricsReporter.html#reconfigurableConfigs--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/common/metrics/MetricsReporter.html#reconfigurableConfigs()"/>
         /// </summary>
         Set<Java.Lang.String> ReconfigurableConfigs();
         /// <summary>
