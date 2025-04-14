@@ -87,7 +87,7 @@ namespace Org.Apache.Kafka.Tools.Consumer.Group
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/consumer/group/ShareGroupCommand.html#main-java.lang.String[]-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/consumer/group/ShareGroupCommand.html#main(java.lang.String[])"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         public static void Main(Java.Lang.String[] arg0)
@@ -95,7 +95,7 @@ namespace Org.Apache.Kafka.Tools.Consumer.Group
             SExecuteWithSignature(LocalBridgeClazz, "main", "([Ljava/lang/String;)V", new object[] { arg0 });
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/consumer/group/ShareGroupCommand.html#printError-java.lang.String-java.util.Optional-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/consumer/group/ShareGroupCommand.html#printError(java.lang.String,java.util.Optional)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Java.Util.Optional"/></param>
@@ -104,7 +104,7 @@ namespace Org.Apache.Kafka.Tools.Consumer.Group
             SExecuteWithSignature(LocalBridgeClazz, "printError", "(Ljava/lang/String;Ljava/util/Optional;)V", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/consumer/group/ShareGroupCommand.html#run-org.apache.kafka.tools.consumer.group.ShareGroupCommandOptions-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/consumer/group/ShareGroupCommand.html#run(org.apache.kafka.tools.consumer.group.ShareGroupCommandOptions)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Tools.Consumer.Group.ShareGroupCommandOptions"/></param>
         public static void Run(Org.Apache.Kafka.Tools.Consumer.Group.ShareGroupCommandOptions arg0)

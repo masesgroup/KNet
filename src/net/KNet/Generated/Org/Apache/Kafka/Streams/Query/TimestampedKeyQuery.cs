@@ -134,7 +134,7 @@ namespace Org.Apache.Kafka.Streams.Query
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/query/TimestampedKeyQuery.html#withKey-java.lang.Object-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/query/TimestampedKeyQuery.html#withKey(java.lang.Object)"/>
         /// </summary>
         /// <param name="arg0"><see cref="object"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Query.TimestampedKeyQuery"/></returns>
@@ -147,7 +147,7 @@ namespace Org.Apache.Kafka.Streams.Query
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/query/TimestampedKeyQuery.html#isSkipCache--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/query/TimestampedKeyQuery.html#isSkipCache()"/>
         /// </summary>
         /// <returns><see cref="bool"/></returns>
         public bool IsSkipCache()
@@ -155,7 +155,7 @@ namespace Org.Apache.Kafka.Streams.Query
             return IExecuteWithSignature<bool>("isSkipCache", "()Z");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/query/TimestampedKeyQuery.html#key--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/query/TimestampedKeyQuery.html#key()"/>
         /// </summary>
         /// <returns><see cref="object"/></returns>
         public object Key()
@@ -163,7 +163,7 @@ namespace Org.Apache.Kafka.Streams.Query
             return IExecuteWithSignature("key", "()Ljava/lang/Object;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/query/TimestampedKeyQuery.html#skipCache--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/query/TimestampedKeyQuery.html#skipCache()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Query.TimestampedKeyQuery"/></returns>
         public Org.Apache.Kafka.Streams.Query.TimestampedKeyQuery SkipCache()
@@ -202,7 +202,7 @@ namespace Org.Apache.Kafka.Streams.Query
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/query/TimestampedKeyQuery.html#withKey-java.lang.Object-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/query/TimestampedKeyQuery.html#withKey(java.lang.Object)"/>
         /// </summary>
         /// <param name="arg0"><typeparamref name="K"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Query.TimestampedKeyQuery"/></returns>
@@ -215,7 +215,7 @@ namespace Org.Apache.Kafka.Streams.Query
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/query/TimestampedKeyQuery.html#isSkipCache--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/query/TimestampedKeyQuery.html#isSkipCache()"/>
         /// </summary>
         /// <returns><see cref="bool"/></returns>
         public bool IsSkipCache()
@@ -223,7 +223,7 @@ namespace Org.Apache.Kafka.Streams.Query
             return IExecuteWithSignature<bool>("isSkipCache", "()Z");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/query/TimestampedKeyQuery.html#key--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/query/TimestampedKeyQuery.html#key()"/>
         /// </summary>
         /// <returns><typeparamref name="K"/></returns>
         public K Key()
@@ -231,7 +231,7 @@ namespace Org.Apache.Kafka.Streams.Query
             return IExecuteWithSignature<K>("key", "()Ljava/lang/Object;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/query/TimestampedKeyQuery.html#skipCache--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/query/TimestampedKeyQuery.html#skipCache()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Query.TimestampedKeyQuery"/></returns>
         public Org.Apache.Kafka.Streams.Query.TimestampedKeyQuery<K, V> SkipCache()

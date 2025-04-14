@@ -87,7 +87,7 @@ namespace Org.Apache.Kafka.Connect.Transforms.Util
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.0.0/org/apache/kafka/connect/transforms/util/SchemaUtil.html#copySchemaBasics-org.apache.kafka.connect.data.Schema-org.apache.kafka.connect.data.SchemaBuilder-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.0.0/org/apache/kafka/connect/transforms/util/SchemaUtil.html#copySchemaBasics(org.apache.kafka.connect.data.Schema,org.apache.kafka.connect.data.SchemaBuilder)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Connect.Data.Schema"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Connect.Data.SchemaBuilder"/></param>
@@ -97,7 +97,7 @@ namespace Org.Apache.Kafka.Connect.Transforms.Util
             return SExecuteWithSignature<Org.Apache.Kafka.Connect.Data.SchemaBuilder>(LocalBridgeClazz, "copySchemaBasics", "(Lorg/apache/kafka/connect/data/Schema;Lorg/apache/kafka/connect/data/SchemaBuilder;)Lorg/apache/kafka/connect/data/SchemaBuilder;", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.0.0/org/apache/kafka/connect/transforms/util/SchemaUtil.html#copySchemaBasics-org.apache.kafka.connect.data.Schema-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.0.0/org/apache/kafka/connect/transforms/util/SchemaUtil.html#copySchemaBasics(org.apache.kafka.connect.data.Schema)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Connect.Data.Schema"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Connect.Data.SchemaBuilder"/></returns>

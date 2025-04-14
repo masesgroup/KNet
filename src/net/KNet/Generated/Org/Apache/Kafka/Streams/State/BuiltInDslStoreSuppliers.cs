@@ -217,7 +217,7 @@ namespace Org.Apache.Kafka.Streams.State
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/state/BuiltInDslStoreSuppliers.InMemoryDslStoreSuppliers.html#keyValueStore-org.apache.kafka.streams.state.DslKeyValueParams-"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/state/BuiltInDslStoreSuppliers.InMemoryDslStoreSuppliers.html#keyValueStore(org.apache.kafka.streams.state.DslKeyValueParams)"/>
             /// </summary>
             /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.State.DslKeyValueParams"/></param>
             /// <returns><see cref="Org.Apache.Kafka.Streams.State.KeyValueBytesStoreSupplier"/></returns>
@@ -226,7 +226,7 @@ namespace Org.Apache.Kafka.Streams.State
                 return IExecuteWithSignature<Org.Apache.Kafka.Streams.State.KeyValueBytesStoreSupplier>("keyValueStore", "(Lorg/apache/kafka/streams/state/DslKeyValueParams;)Lorg/apache/kafka/streams/state/KeyValueBytesStoreSupplier;", arg0);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/state/BuiltInDslStoreSuppliers.InMemoryDslStoreSuppliers.html#sessionStore-org.apache.kafka.streams.state.DslSessionParams-"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/state/BuiltInDslStoreSuppliers.InMemoryDslStoreSuppliers.html#sessionStore(org.apache.kafka.streams.state.DslSessionParams)"/>
             /// </summary>
             /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.State.DslSessionParams"/></param>
             /// <returns><see cref="Org.Apache.Kafka.Streams.State.SessionBytesStoreSupplier"/></returns>
@@ -235,7 +235,7 @@ namespace Org.Apache.Kafka.Streams.State
                 return IExecuteWithSignature<Org.Apache.Kafka.Streams.State.SessionBytesStoreSupplier>("sessionStore", "(Lorg/apache/kafka/streams/state/DslSessionParams;)Lorg/apache/kafka/streams/state/SessionBytesStoreSupplier;", arg0);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/state/BuiltInDslStoreSuppliers.InMemoryDslStoreSuppliers.html#windowStore-org.apache.kafka.streams.state.DslWindowParams-"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/state/BuiltInDslStoreSuppliers.InMemoryDslStoreSuppliers.html#windowStore(org.apache.kafka.streams.state.DslWindowParams)"/>
             /// </summary>
             /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.State.DslWindowParams"/></param>
             /// <returns><see cref="Org.Apache.Kafka.Streams.State.WindowBytesStoreSupplier"/></returns>
@@ -275,7 +275,7 @@ namespace Org.Apache.Kafka.Streams.State
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/state/BuiltInDslStoreSuppliers.RocksDBDslStoreSuppliers.html#keyValueStore-org.apache.kafka.streams.state.DslKeyValueParams-"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/state/BuiltInDslStoreSuppliers.RocksDBDslStoreSuppliers.html#keyValueStore(org.apache.kafka.streams.state.DslKeyValueParams)"/>
             /// </summary>
             /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.State.DslKeyValueParams"/></param>
             /// <returns><see cref="Org.Apache.Kafka.Streams.State.KeyValueBytesStoreSupplier"/></returns>
@@ -284,7 +284,7 @@ namespace Org.Apache.Kafka.Streams.State
                 return IExecuteWithSignature<Org.Apache.Kafka.Streams.State.KeyValueBytesStoreSupplier>("keyValueStore", "(Lorg/apache/kafka/streams/state/DslKeyValueParams;)Lorg/apache/kafka/streams/state/KeyValueBytesStoreSupplier;", arg0);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/state/BuiltInDslStoreSuppliers.RocksDBDslStoreSuppliers.html#sessionStore-org.apache.kafka.streams.state.DslSessionParams-"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/state/BuiltInDslStoreSuppliers.RocksDBDslStoreSuppliers.html#sessionStore(org.apache.kafka.streams.state.DslSessionParams)"/>
             /// </summary>
             /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.State.DslSessionParams"/></param>
             /// <returns><see cref="Org.Apache.Kafka.Streams.State.SessionBytesStoreSupplier"/></returns>
@@ -293,7 +293,7 @@ namespace Org.Apache.Kafka.Streams.State
                 return IExecuteWithSignature<Org.Apache.Kafka.Streams.State.SessionBytesStoreSupplier>("sessionStore", "(Lorg/apache/kafka/streams/state/DslSessionParams;)Lorg/apache/kafka/streams/state/SessionBytesStoreSupplier;", arg0);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/state/BuiltInDslStoreSuppliers.RocksDBDslStoreSuppliers.html#windowStore-org.apache.kafka.streams.state.DslWindowParams-"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/state/BuiltInDslStoreSuppliers.RocksDBDslStoreSuppliers.html#windowStore(org.apache.kafka.streams.state.DslWindowParams)"/>
             /// </summary>
             /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.State.DslWindowParams"/></param>
             /// <returns><see cref="Org.Apache.Kafka.Streams.State.WindowBytesStoreSupplier"/></returns>

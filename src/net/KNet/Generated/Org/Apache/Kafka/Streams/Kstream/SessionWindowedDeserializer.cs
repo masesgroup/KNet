@@ -121,7 +121,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/SessionWindowedDeserializer.html#org.apache.kafka.streams.kstream.SessionWindowedDeserializer(org.apache.kafka.common.serialization.Deserializer)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/SessionWindowedDeserializer.html#%3Cinit%3E(org.apache.kafka.common.serialization.Deserializer)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Serialization.Deserializer"/></param>
         public SessionWindowedDeserializer(Org.Apache.Kafka.Common.Serialization.Deserializer arg0)
@@ -149,7 +149,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/SessionWindowedDeserializer.html#deserialize-java.lang.String-byte[]-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/SessionWindowedDeserializer.html#deserialize(java.lang.String,byte[])"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="byte"/></param>
@@ -159,14 +159,14 @@ namespace Org.Apache.Kafka.Streams.Kstream
             return IExecuteWithSignature("deserialize", "(Ljava/lang/String;[B)Ljava/lang/Object;", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/SessionWindowedDeserializer.html#close--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/SessionWindowedDeserializer.html#close()"/>
         /// </summary>
         public void Close()
         {
             IExecuteWithSignature("close", "()V");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/SessionWindowedDeserializer.html#configure-java.util.Map-boolean-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/SessionWindowedDeserializer.html#configure(java.util.Map,boolean)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <param name="arg1"><see cref="bool"/></param>
@@ -190,7 +190,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/SessionWindowedDeserializer.html#org.apache.kafka.streams.kstream.SessionWindowedDeserializer(org.apache.kafka.common.serialization.Deserializer)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/SessionWindowedDeserializer.html#%3Cinit%3E(org.apache.kafka.common.serialization.Deserializer)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Serialization.Deserializer"/></param>
         public SessionWindowedDeserializer(Org.Apache.Kafka.Common.Serialization.Deserializer<T> arg0)
@@ -222,7 +222,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/SessionWindowedDeserializer.html#deserialize-java.lang.String-byte[]-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/SessionWindowedDeserializer.html#deserialize(java.lang.String,byte[])"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="byte"/></param>
@@ -232,14 +232,14 @@ namespace Org.Apache.Kafka.Streams.Kstream
             return IExecuteWithSignature("deserialize", "(Ljava/lang/String;[B)Ljava/lang/Object;", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/SessionWindowedDeserializer.html#close--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/SessionWindowedDeserializer.html#close()"/>
         /// </summary>
         public void Close()
         {
             IExecuteWithSignature("close", "()V");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/SessionWindowedDeserializer.html#configure-java.util.Map-boolean-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/SessionWindowedDeserializer.html#configure(java.util.Map,boolean)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <param name="arg1"><see cref="bool"/></param>

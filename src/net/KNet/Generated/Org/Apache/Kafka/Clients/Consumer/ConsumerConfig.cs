@@ -75,7 +75,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/ConsumerConfig.html#org.apache.kafka.clients.consumer.ConsumerConfig(java.util.Map)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/ConsumerConfig.html#%3Cinit%3E(java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         public ConsumerConfig(Java.Util.Map<Java.Lang.String, object> arg0)
@@ -83,7 +83,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
         {
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/ConsumerConfig.html#org.apache.kafka.clients.consumer.ConsumerConfig(java.util.Properties)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/ConsumerConfig.html#%3Cinit%3E(java.util.Properties)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Properties"/></param>
         public ConsumerConfig(Java.Util.Properties arg0)
@@ -493,7 +493,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/ConsumerConfig.html#appendDeserializerToConfig-java.util.Map-org.apache.kafka.common.serialization.Deserializer-org.apache.kafka.common.serialization.Deserializer-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/ConsumerConfig.html#appendDeserializerToConfig(java.util.Map,org.apache.kafka.common.serialization.Deserializer,org.apache.kafka.common.serialization.Deserializer)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Serialization.Deserializer"/></param>
@@ -504,7 +504,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
             return SExecuteWithSignature<Java.Util.Map<Java.Lang.String, object>>(LocalBridgeClazz, "appendDeserializerToConfig", "(Ljava/util/Map;Lorg/apache/kafka/common/serialization/Deserializer;Lorg/apache/kafka/common/serialization/Deserializer;)Ljava/util/Map;", arg0, arg1, arg2);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/ConsumerConfig.html#configNames--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/ConsumerConfig.html#configNames()"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Set"/></returns>
         public static Java.Util.Set<Java.Lang.String> ConfigNames()
@@ -512,7 +512,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
             return SExecuteWithSignature<Java.Util.Set<Java.Lang.String>>(LocalBridgeClazz, "configNames", "()Ljava/util/Set;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/ConsumerConfig.html#configDef--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/ConsumerConfig.html#configDef()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.Config.ConfigDef"/></returns>
         public static Org.Apache.Kafka.Common.Config.ConfigDef ConfigDef()
@@ -520,7 +520,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
             return SExecuteWithSignature<Org.Apache.Kafka.Common.Config.ConfigDef>(LocalBridgeClazz, "configDef", "()Lorg/apache/kafka/common/config/ConfigDef;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/ConsumerConfig.html#main-java.lang.String[]-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/ConsumerConfig.html#main(java.lang.String[])"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         public static void Main(Java.Lang.String[] arg0)

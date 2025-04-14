@@ -122,7 +122,7 @@ namespace Org.Apache.Kafka.Common.Cache
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/cache/SynchronizedCache.html#org.apache.kafka.common.cache.SynchronizedCache(org.apache.kafka.common.cache.Cache)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/cache/SynchronizedCache.html#%3Cinit%3E(org.apache.kafka.common.cache.Cache)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Cache.Cache"/></param>
         public SynchronizedCache(Org.Apache.Kafka.Common.Cache.Cache arg0)
@@ -146,7 +146,7 @@ namespace Org.Apache.Kafka.Common.Cache
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/cache/SynchronizedCache.html#remove-java.lang.Object-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/cache/SynchronizedCache.html#remove(java.lang.Object)"/>
         /// </summary>
         /// <param name="arg0"><see cref="object"/></param>
         /// <returns><see cref="bool"/></returns>
@@ -155,7 +155,7 @@ namespace Org.Apache.Kafka.Common.Cache
             return IExecuteWithSignature<bool>("remove", "(Ljava/lang/Object;)Z", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/cache/SynchronizedCache.html#size--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/cache/SynchronizedCache.html#size()"/>
         /// </summary>
         /// <returns><see cref="long"/></returns>
         public long Size()
@@ -163,7 +163,7 @@ namespace Org.Apache.Kafka.Common.Cache
             return IExecuteWithSignature<long>("size", "()J");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/cache/SynchronizedCache.html#get-java.lang.Object-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/cache/SynchronizedCache.html#get(java.lang.Object)"/>
         /// </summary>
         /// <param name="arg0"><see cref="object"/></param>
         /// <returns><see cref="object"/></returns>
@@ -172,7 +172,7 @@ namespace Org.Apache.Kafka.Common.Cache
             return IExecuteWithSignature("get", "(Ljava/lang/Object;)Ljava/lang/Object;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/cache/SynchronizedCache.html#put-java.lang.Object-java.lang.Object-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/cache/SynchronizedCache.html#put(java.lang.Object,java.lang.Object)"/>
         /// </summary>
         /// <param name="arg0"><see cref="object"/></param>
         /// <param name="arg1"><see cref="object"/></param>
@@ -196,7 +196,7 @@ namespace Org.Apache.Kafka.Common.Cache
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/cache/SynchronizedCache.html#org.apache.kafka.common.cache.SynchronizedCache(org.apache.kafka.common.cache.Cache)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/cache/SynchronizedCache.html#%3Cinit%3E(org.apache.kafka.common.cache.Cache)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Cache.Cache"/></param>
         public SynchronizedCache(Org.Apache.Kafka.Common.Cache.Cache<K, V> arg0)
@@ -224,7 +224,7 @@ namespace Org.Apache.Kafka.Common.Cache
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/cache/SynchronizedCache.html#remove-java.lang.Object-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/cache/SynchronizedCache.html#remove(java.lang.Object)"/>
         /// </summary>
         /// <param name="arg0"><typeparamref name="K"/></param>
         /// <returns><see cref="bool"/></returns>
@@ -233,7 +233,7 @@ namespace Org.Apache.Kafka.Common.Cache
             return IExecuteWithSignature<bool>("remove", "(Ljava/lang/Object;)Z", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/cache/SynchronizedCache.html#size--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/cache/SynchronizedCache.html#size()"/>
         /// </summary>
         /// <returns><see cref="long"/></returns>
         public long Size()
@@ -241,7 +241,7 @@ namespace Org.Apache.Kafka.Common.Cache
             return IExecuteWithSignature<long>("size", "()J");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/cache/SynchronizedCache.html#get-java.lang.Object-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/cache/SynchronizedCache.html#get(java.lang.Object)"/>
         /// </summary>
         /// <param name="arg0"><typeparamref name="K"/></param>
         /// <returns><typeparamref name="V"/></returns>
@@ -250,7 +250,7 @@ namespace Org.Apache.Kafka.Common.Cache
             return IExecuteWithSignature<V>("get", "(Ljava/lang/Object;)Ljava/lang/Object;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/cache/SynchronizedCache.html#put-java.lang.Object-java.lang.Object-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/cache/SynchronizedCache.html#put(java.lang.Object,java.lang.Object)"/>
         /// </summary>
         /// <param name="arg0"><typeparamref name="K"/></param>
         /// <param name="arg1"><typeparamref name="V"/></param>

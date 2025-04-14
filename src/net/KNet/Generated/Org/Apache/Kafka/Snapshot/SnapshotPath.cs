@@ -75,7 +75,7 @@ namespace Org.Apache.Kafka.Snapshot
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/snapshot/SnapshotPath.html#org.apache.kafka.snapshot.SnapshotPath(java.nio.file.Path,org.apache.kafka.raft.OffsetAndEpoch,boolean,boolean)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/snapshot/SnapshotPath.html#%3Cinit%3E(java.nio.file.Path,org.apache.kafka.raft.OffsetAndEpoch,boolean,boolean)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Nio.File.Path"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Raft.OffsetAndEpoch"/></param>

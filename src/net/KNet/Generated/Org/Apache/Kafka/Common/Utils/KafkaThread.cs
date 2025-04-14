@@ -75,7 +75,7 @@ namespace Org.Apache.Kafka.Common.Utils
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/utils/KafkaThread.html#org.apache.kafka.common.utils.KafkaThread(java.lang.String,boolean)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/utils/KafkaThread.html#%3Cinit%3E(java.lang.String,boolean)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="bool"/></param>
@@ -84,7 +84,7 @@ namespace Org.Apache.Kafka.Common.Utils
         {
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/utils/KafkaThread.html#org.apache.kafka.common.utils.KafkaThread(java.lang.String,java.lang.Runnable,boolean)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/utils/KafkaThread.html#%3Cinit%3E(java.lang.String,java.lang.Runnable,boolean)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Java.Lang.Runnable"/></param>
@@ -106,7 +106,7 @@ namespace Org.Apache.Kafka.Common.Utils
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/utils/KafkaThread.html#daemon-java.lang.String-java.lang.Runnable-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/utils/KafkaThread.html#daemon(java.lang.String,java.lang.Runnable)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Java.Lang.Runnable"/></param>
@@ -116,7 +116,7 @@ namespace Org.Apache.Kafka.Common.Utils
             return SExecuteWithSignature<Org.Apache.Kafka.Common.Utils.KafkaThread>(LocalBridgeClazz, "daemon", "(Ljava/lang/String;Ljava/lang/Runnable;)Lorg/apache/kafka/common/utils/KafkaThread;", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/utils/KafkaThread.html#nonDaemon-java.lang.String-java.lang.Runnable-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/utils/KafkaThread.html#nonDaemon(java.lang.String,java.lang.Runnable)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Java.Lang.Runnable"/></param>

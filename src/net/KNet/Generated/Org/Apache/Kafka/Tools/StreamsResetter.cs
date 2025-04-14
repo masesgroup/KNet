@@ -87,7 +87,7 @@ namespace Org.Apache.Kafka.Tools
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/StreamsResetter.html#matchesInternalTopicFormat-java.lang.String-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/StreamsResetter.html#matchesInternalTopicFormat(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="bool"/></returns>
@@ -96,7 +96,7 @@ namespace Org.Apache.Kafka.Tools
             return SExecuteWithSignature<bool>(LocalBridgeClazz, "matchesInternalTopicFormat", "(Ljava/lang/String;)Z", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/StreamsResetter.html#main-java.lang.String[]-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/StreamsResetter.html#main(java.lang.String[])"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         public static void Main(Java.Lang.String[] arg0)
@@ -108,7 +108,7 @@ namespace Org.Apache.Kafka.Tools
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/StreamsResetter.html#execute-java.lang.String[]-java.util.Properties-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/StreamsResetter.html#execute(java.lang.String[],java.util.Properties)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Java.Util.Properties"/></param>
@@ -118,7 +118,7 @@ namespace Org.Apache.Kafka.Tools
             return IExecuteWithSignature<int>("execute", "([Ljava/lang/String;Ljava/util/Properties;)I", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/StreamsResetter.html#execute-java.lang.String[]-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/StreamsResetter.html#execute(java.lang.String[])"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="int"/></returns>
@@ -127,7 +127,7 @@ namespace Org.Apache.Kafka.Tools
             return IExecuteWithSignature<int>("execute", "([Ljava/lang/String;)I", new object[] { arg0 });
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/StreamsResetter.html#doDelete-java.util.List-org.apache.kafka.clients.admin.Admin-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/StreamsResetter.html#doDelete(java.util.List,org.apache.kafka.clients.admin.Admin)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.List"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Clients.Admin.Admin"/></param>
@@ -136,7 +136,7 @@ namespace Org.Apache.Kafka.Tools
             IExecuteWithSignature("doDelete", "(Ljava/util/List;Lorg/apache/kafka/clients/admin/Admin;)V", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/StreamsResetter.html#maybeSeekToEnd-java.lang.String-org.apache.kafka.clients.consumer.Consumer-java.util.Set-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/StreamsResetter.html#maybeSeekToEnd(java.lang.String,org.apache.kafka.clients.consumer.Consumer,java.util.Set)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Clients.Consumer.Consumer"/></param>
@@ -146,7 +146,7 @@ namespace Org.Apache.Kafka.Tools
             IExecuteWithSignature("maybeSeekToEnd", "(Ljava/lang/String;Lorg/apache/kafka/clients/consumer/Consumer;Ljava/util/Set;)V", arg0, arg1, arg2);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/StreamsResetter.html#resetOffsetsFromResetPlan-org.apache.kafka.clients.consumer.Consumer-java.util.Set-java.util.Map-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/StreamsResetter.html#resetOffsetsFromResetPlan(org.apache.kafka.clients.consumer.Consumer,java.util.Set,java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Clients.Consumer.Consumer"/></param>
         /// <param name="arg1"><see cref="Java.Util.Set"/></param>
@@ -156,7 +156,7 @@ namespace Org.Apache.Kafka.Tools
             IExecuteWithSignature("resetOffsetsFromResetPlan", "(Lorg/apache/kafka/clients/consumer/Consumer;Ljava/util/Set;Ljava/util/Map;)V", arg0, arg1, arg2);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/StreamsResetter.html#resetOffsetsTo-org.apache.kafka.clients.consumer.Consumer-java.util.Set-java.lang.Long-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/StreamsResetter.html#resetOffsetsTo(org.apache.kafka.clients.consumer.Consumer,java.util.Set,java.lang.Long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Clients.Consumer.Consumer"/></param>
         /// <param name="arg1"><see cref="Java.Util.Set"/></param>
@@ -166,7 +166,7 @@ namespace Org.Apache.Kafka.Tools
             IExecuteWithSignature("resetOffsetsTo", "(Lorg/apache/kafka/clients/consumer/Consumer;Ljava/util/Set;Ljava/lang/Long;)V", arg0, arg1, arg2);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/StreamsResetter.html#resetToDatetime-org.apache.kafka.clients.consumer.Consumer-java.util.Set-java.lang.Long-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/StreamsResetter.html#resetToDatetime(org.apache.kafka.clients.consumer.Consumer,java.util.Set,java.lang.Long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Clients.Consumer.Consumer"/></param>
         /// <param name="arg1"><see cref="Java.Util.Set"/></param>
@@ -176,7 +176,7 @@ namespace Org.Apache.Kafka.Tools
             IExecuteWithSignature("resetToDatetime", "(Lorg/apache/kafka/clients/consumer/Consumer;Ljava/util/Set;Ljava/lang/Long;)V", arg0, arg1, arg2);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/StreamsResetter.html#shiftOffsetsBy-org.apache.kafka.clients.consumer.Consumer-java.util.Set-long-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/StreamsResetter.html#shiftOffsetsBy(org.apache.kafka.clients.consumer.Consumer,java.util.Set,long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Clients.Consumer.Consumer"/></param>
         /// <param name="arg1"><see cref="Java.Util.Set"/></param>

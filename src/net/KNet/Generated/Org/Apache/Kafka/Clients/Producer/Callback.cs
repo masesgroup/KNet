@@ -140,7 +140,7 @@ namespace Org.Apache.Kafka.Clients.Producer
         }
 
         /// <summary>
-        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/producer/Callback.html#onCompletion-org.apache.kafka.clients.producer.RecordMetadata-java.lang.Exception-"/>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/producer/Callback.html#onCompletion(org.apache.kafka.clients.producer.RecordMetadata,java.lang.Exception)"/>
         /// </summary>
         /// <remarks>If <see cref="OnOnCompletion"/> has a value it takes precedence over corresponding class method</remarks>
         public global::System.Action<Org.Apache.Kafka.Clients.Producer.RecordMetadata, MASES.JCOBridge.C2JBridge.JVMBridgeException> OnOnCompletion { get; set; } = null;
@@ -155,7 +155,7 @@ namespace Org.Apache.Kafka.Clients.Producer
         }
 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/producer/Callback.html#onCompletion-org.apache.kafka.clients.producer.RecordMetadata-java.lang.Exception-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/producer/Callback.html#onCompletion(org.apache.kafka.clients.producer.RecordMetadata,java.lang.Exception)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Clients.Producer.RecordMetadata"/></param>
         /// <param name="arg1"><see cref="Java.Lang.Exception"/></param>
@@ -195,7 +195,7 @@ namespace Org.Apache.Kafka.Clients.Producer
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/producer/Callback.html#onCompletion-org.apache.kafka.clients.producer.RecordMetadata-java.lang.Exception-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/producer/Callback.html#onCompletion(org.apache.kafka.clients.producer.RecordMetadata,java.lang.Exception)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Clients.Producer.RecordMetadata"/></param>
         /// <param name="arg1"><see cref="Java.Lang.Exception"/></param>

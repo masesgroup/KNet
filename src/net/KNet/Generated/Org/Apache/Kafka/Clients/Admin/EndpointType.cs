@@ -105,7 +105,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/EndpointType.html#fromId-byte-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/EndpointType.html#fromId(byte)"/>
         /// </summary>
         /// <param name="arg0"><see cref="byte"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.EndpointType"/></returns>
@@ -114,7 +114,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return SExecuteWithSignature<Org.Apache.Kafka.Clients.Admin.EndpointType>(LocalBridgeClazz, "fromId", "(B)Lorg/apache/kafka/clients/admin/EndpointType;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/EndpointType.html#valueOf-java.lang.String-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/EndpointType.html#valueOf(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.EndpointType"/></returns>
@@ -123,7 +123,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return SExecuteWithSignature<Org.Apache.Kafka.Clients.Admin.EndpointType>(LocalBridgeClazz, "valueOf", "(Ljava/lang/String;)Lorg/apache/kafka/clients/admin/EndpointType;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/EndpointType.html#values--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/EndpointType.html#values()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.EndpointType"/></returns>
         public static Org.Apache.Kafka.Clients.Admin.EndpointType[] Values()
@@ -135,7 +135,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/EndpointType.html#id--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/EndpointType.html#id()"/>
         /// </summary>
         /// <returns><see cref="byte"/></returns>
         public byte Id()

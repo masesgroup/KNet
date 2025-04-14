@@ -75,7 +75,7 @@ namespace Org.Apache.Kafka.Connect.Util
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.0.0/org/apache/kafka/connect/util/TemporaryStage.html#org.apache.kafka.connect.util.TemporaryStage(java.lang.String,org.apache.kafka.connect.util.Callback,org.apache.kafka.common.utils.Time)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.0.0/org/apache/kafka/connect/util/TemporaryStage.html#%3Cinit%3E(java.lang.String,org.apache.kafka.connect.util.Callback,org.apache.kafka.common.utils.Time)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Connect.Util.Callback"/></param>
@@ -101,7 +101,7 @@ namespace Org.Apache.Kafka.Connect.Util
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.0.0/org/apache/kafka/connect/util/TemporaryStage.html#close--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.0.0/org/apache/kafka/connect/util/TemporaryStage.html#close()"/>
         /// </summary>
         public void Close()
         {

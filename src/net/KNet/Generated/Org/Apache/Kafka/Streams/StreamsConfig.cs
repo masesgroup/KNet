@@ -120,7 +120,7 @@ namespace Org.Apache.Kafka.Streams
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/StreamsConfig.html#org.apache.kafka.streams.StreamsConfig(java.util.Map)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/StreamsConfig.html#%3Cinit%3E(java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         public StreamsConfig(Java.Util.Map<object, object> arg0)
@@ -764,7 +764,7 @@ namespace Org.Apache.Kafka.Streams
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/StreamsConfig.html#adminClientPrefix-java.lang.String-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/StreamsConfig.html#adminClientPrefix(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Java.Lang.String"/></returns>
@@ -773,7 +773,7 @@ namespace Org.Apache.Kafka.Streams
             return SExecuteWithSignature<Java.Lang.String>(LocalBridgeClazz, "adminClientPrefix", "(Ljava/lang/String;)Ljava/lang/String;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/StreamsConfig.html#clientTagPrefix-java.lang.String-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/StreamsConfig.html#clientTagPrefix(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Java.Lang.String"/></returns>
@@ -782,7 +782,7 @@ namespace Org.Apache.Kafka.Streams
             return SExecuteWithSignature<Java.Lang.String>(LocalBridgeClazz, "clientTagPrefix", "(Ljava/lang/String;)Ljava/lang/String;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/StreamsConfig.html#consumerPrefix-java.lang.String-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/StreamsConfig.html#consumerPrefix(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Java.Lang.String"/></returns>
@@ -791,7 +791,7 @@ namespace Org.Apache.Kafka.Streams
             return SExecuteWithSignature<Java.Lang.String>(LocalBridgeClazz, "consumerPrefix", "(Ljava/lang/String;)Ljava/lang/String;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/StreamsConfig.html#globalConsumerPrefix-java.lang.String-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/StreamsConfig.html#globalConsumerPrefix(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Java.Lang.String"/></returns>
@@ -800,7 +800,7 @@ namespace Org.Apache.Kafka.Streams
             return SExecuteWithSignature<Java.Lang.String>(LocalBridgeClazz, "globalConsumerPrefix", "(Ljava/lang/String;)Ljava/lang/String;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/StreamsConfig.html#mainConsumerPrefix-java.lang.String-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/StreamsConfig.html#mainConsumerPrefix(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Java.Lang.String"/></returns>
@@ -809,7 +809,7 @@ namespace Org.Apache.Kafka.Streams
             return SExecuteWithSignature<Java.Lang.String>(LocalBridgeClazz, "mainConsumerPrefix", "(Ljava/lang/String;)Ljava/lang/String;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/StreamsConfig.html#producerPrefix-java.lang.String-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/StreamsConfig.html#producerPrefix(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Java.Lang.String"/></returns>
@@ -818,7 +818,7 @@ namespace Org.Apache.Kafka.Streams
             return SExecuteWithSignature<Java.Lang.String>(LocalBridgeClazz, "producerPrefix", "(Ljava/lang/String;)Ljava/lang/String;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/StreamsConfig.html#restoreConsumerPrefix-java.lang.String-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/StreamsConfig.html#restoreConsumerPrefix(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Java.Lang.String"/></returns>
@@ -827,7 +827,7 @@ namespace Org.Apache.Kafka.Streams
             return SExecuteWithSignature<Java.Lang.String>(LocalBridgeClazz, "restoreConsumerPrefix", "(Ljava/lang/String;)Ljava/lang/String;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/StreamsConfig.html#topicPrefix-java.lang.String-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/StreamsConfig.html#topicPrefix(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Java.Lang.String"/></returns>
@@ -836,7 +836,7 @@ namespace Org.Apache.Kafka.Streams
             return SExecuteWithSignature<Java.Lang.String>(LocalBridgeClazz, "topicPrefix", "(Ljava/lang/String;)Ljava/lang/String;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/StreamsConfig.html#verifyTopologyOptimizationConfigs-java.lang.String-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/StreamsConfig.html#verifyTopologyOptimizationConfigs(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Java.Util.Set"/></returns>
@@ -845,7 +845,7 @@ namespace Org.Apache.Kafka.Streams
             return SExecuteWithSignature<Java.Util.Set<Java.Lang.String>>(LocalBridgeClazz, "verifyTopologyOptimizationConfigs", "(Ljava/lang/String;)Ljava/util/Set;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/StreamsConfig.html#configDef--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/StreamsConfig.html#configDef()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.Config.ConfigDef"/></returns>
         public static Org.Apache.Kafka.Common.Config.ConfigDef ConfigDef()
@@ -853,7 +853,7 @@ namespace Org.Apache.Kafka.Streams
             return SExecuteWithSignature<Org.Apache.Kafka.Common.Config.ConfigDef>(LocalBridgeClazz, "configDef", "()Lorg/apache/kafka/common/config/ConfigDef;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/StreamsConfig.html#main-java.lang.String[]-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/StreamsConfig.html#main(java.lang.String[])"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         public static void Main(Java.Lang.String[] arg0)
@@ -865,21 +865,21 @@ namespace Org.Apache.Kafka.Streams
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/StreamsConfig.html#getClientTags--"/> 
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/StreamsConfig.html#getClientTags()"/> 
         /// </summary>
         public Java.Util.Map<Java.Lang.String, Java.Lang.String> ClientTags
         {
             get { return IExecuteWithSignature<Java.Util.Map<Java.Lang.String, Java.Lang.String>>("getClientTags", "()Ljava/util/Map;"); }
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/StreamsConfig.html#getKafkaClientSupplier--"/> 
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/StreamsConfig.html#getKafkaClientSupplier()"/> 
         /// </summary>
         public Org.Apache.Kafka.Streams.KafkaClientSupplier KafkaClientSupplier
         {
             get { return IExecuteWithSignature<Org.Apache.Kafka.Streams.KafkaClientSupplier>("getKafkaClientSupplier", "()Lorg/apache/kafka/streams/KafkaClientSupplier;"); }
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/StreamsConfig.html#getAdminConfigs-java.lang.String-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/StreamsConfig.html#getAdminConfigs(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Java.Util.Map"/></returns>
@@ -888,7 +888,7 @@ namespace Org.Apache.Kafka.Streams
             return IExecuteWithSignature<Java.Util.Map<Java.Lang.String, object>>("getAdminConfigs", "(Ljava/lang/String;)Ljava/util/Map;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/StreamsConfig.html#getGlobalConsumerConfigs-java.lang.String-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/StreamsConfig.html#getGlobalConsumerConfigs(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Java.Util.Map"/></returns>
@@ -897,7 +897,7 @@ namespace Org.Apache.Kafka.Streams
             return IExecuteWithSignature<Java.Util.Map<Java.Lang.String, object>>("getGlobalConsumerConfigs", "(Ljava/lang/String;)Ljava/util/Map;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/StreamsConfig.html#getMainConsumerConfigs-java.lang.String-java.lang.String-int-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/StreamsConfig.html#getMainConsumerConfigs(java.lang.String,java.lang.String,int)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Java.Lang.String"/></param>
@@ -908,7 +908,7 @@ namespace Org.Apache.Kafka.Streams
             return IExecuteWithSignature<Java.Util.Map<Java.Lang.String, object>>("getMainConsumerConfigs", "(Ljava/lang/String;Ljava/lang/String;I)Ljava/util/Map;", arg0, arg1, arg2);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/StreamsConfig.html#getProducerConfigs-java.lang.String-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/StreamsConfig.html#getProducerConfigs(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Java.Util.Map"/></returns>
@@ -917,7 +917,7 @@ namespace Org.Apache.Kafka.Streams
             return IExecuteWithSignature<Java.Util.Map<Java.Lang.String, object>>("getProducerConfigs", "(Ljava/lang/String;)Ljava/util/Map;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/StreamsConfig.html#getRestoreConsumerConfigs-java.lang.String-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/StreamsConfig.html#getRestoreConsumerConfigs(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Java.Util.Map"/></returns>
@@ -926,7 +926,7 @@ namespace Org.Apache.Kafka.Streams
             return IExecuteWithSignature<Java.Util.Map<Java.Lang.String, object>>("getRestoreConsumerConfigs", "(Ljava/lang/String;)Ljava/util/Map;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/StreamsConfig.html#defaultKeySerde--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/StreamsConfig.html#defaultKeySerde()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></returns>
         public Org.Apache.Kafka.Common.Serialization.Serde<object> DefaultKeySerde()
@@ -934,7 +934,7 @@ namespace Org.Apache.Kafka.Streams
             return IExecuteWithSignature<Org.Apache.Kafka.Common.Serialization.Serde<object>>("defaultKeySerde", "()Lorg/apache/kafka/common/serialization/Serde;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/StreamsConfig.html#defaultKeySerde--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/StreamsConfig.html#defaultKeySerde()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></returns>
         public Org.Apache.Kafka.Common.Serialization.Serde<object> DefaultKeySerdeDirect()
@@ -942,7 +942,7 @@ namespace Org.Apache.Kafka.Streams
             return IExecuteWithSignature<Org.Apache.Kafka.Common.Serialization.SerdeDirect<object>, Org.Apache.Kafka.Common.Serialization.Serde<object>>("defaultKeySerde", "()Lorg/apache/kafka/common/serialization/Serde;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/StreamsConfig.html#defaultValueSerde--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/StreamsConfig.html#defaultValueSerde()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></returns>
         public Org.Apache.Kafka.Common.Serialization.Serde<object> DefaultValueSerde()
@@ -950,7 +950,7 @@ namespace Org.Apache.Kafka.Streams
             return IExecuteWithSignature<Org.Apache.Kafka.Common.Serialization.Serde<object>>("defaultValueSerde", "()Lorg/apache/kafka/common/serialization/Serde;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/StreamsConfig.html#defaultValueSerde--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/StreamsConfig.html#defaultValueSerde()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></returns>
         public Org.Apache.Kafka.Common.Serialization.Serde<object> DefaultValueSerdeDirect()
@@ -958,7 +958,7 @@ namespace Org.Apache.Kafka.Streams
             return IExecuteWithSignature<Org.Apache.Kafka.Common.Serialization.SerdeDirect<object>, Org.Apache.Kafka.Common.Serialization.Serde<object>>("defaultValueSerde", "()Lorg/apache/kafka/common/serialization/Serde;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/StreamsConfig.html#deserializationExceptionHandler--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/StreamsConfig.html#deserializationExceptionHandler()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Errors.DeserializationExceptionHandler"/></returns>
         public Org.Apache.Kafka.Streams.Errors.DeserializationExceptionHandler DeserializationExceptionHandler()
@@ -966,7 +966,7 @@ namespace Org.Apache.Kafka.Streams
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.Errors.DeserializationExceptionHandler>("deserializationExceptionHandler", "()Lorg/apache/kafka/streams/errors/DeserializationExceptionHandler;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/StreamsConfig.html#processingExceptionHandler--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/StreamsConfig.html#processingExceptionHandler()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Errors.ProcessingExceptionHandler"/></returns>
         public Org.Apache.Kafka.Streams.Errors.ProcessingExceptionHandler ProcessingExceptionHandler()
@@ -974,7 +974,7 @@ namespace Org.Apache.Kafka.Streams
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.Errors.ProcessingExceptionHandler>("processingExceptionHandler", "()Lorg/apache/kafka/streams/errors/ProcessingExceptionHandler;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/StreamsConfig.html#productionExceptionHandler--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/StreamsConfig.html#productionExceptionHandler()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Errors.ProductionExceptionHandler"/></returns>
         public Org.Apache.Kafka.Streams.Errors.ProductionExceptionHandler ProductionExceptionHandler()
@@ -982,7 +982,7 @@ namespace Org.Apache.Kafka.Streams
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.Errors.ProductionExceptionHandler>("productionExceptionHandler", "()Lorg/apache/kafka/streams/errors/ProductionExceptionHandler;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/StreamsConfig.html#defaultTimestampExtractor--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/StreamsConfig.html#defaultTimestampExtractor()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Processor.TimestampExtractor"/></returns>
         public Org.Apache.Kafka.Streams.Processor.TimestampExtractor DefaultTimestampExtractor()
@@ -990,7 +990,7 @@ namespace Org.Apache.Kafka.Streams
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.Processor.TimestampExtractor>("defaultTimestampExtractor", "()Lorg/apache/kafka/streams/processor/TimestampExtractor;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/StreamsConfig.html#defaultTimestampExtractor--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/StreamsConfig.html#defaultTimestampExtractor()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Processor.TimestampExtractor"/></returns>
         public Org.Apache.Kafka.Streams.Processor.TimestampExtractor DefaultTimestampExtractorDirect()
@@ -1072,7 +1072,7 @@ namespace Org.Apache.Kafka.Streams
 
             #region Static methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/StreamsConfig.InternalConfig.html#getBoolean-java.util.Map-java.lang.String-boolean-"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/StreamsConfig.InternalConfig.html#getBoolean(java.util.Map,java.lang.String,boolean)"/>
             /// </summary>
             /// <param name="arg0"><see cref="Java.Util.Map"/></param>
             /// <param name="arg1"><see cref="Java.Lang.String"/></param>
@@ -1083,7 +1083,7 @@ namespace Org.Apache.Kafka.Streams
                 return SExecuteWithSignature<bool>(LocalBridgeClazz, "getBoolean", "(Ljava/util/Map;Ljava/lang/String;Z)Z", arg0, arg1, arg2);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/StreamsConfig.InternalConfig.html#processingThreadsEnabled-java.util.Map-"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/StreamsConfig.InternalConfig.html#processingThreadsEnabled(java.util.Map)"/>
             /// </summary>
             /// <param name="arg0"><see cref="Java.Util.Map"/></param>
             /// <returns><see cref="bool"/></returns>
@@ -1092,7 +1092,7 @@ namespace Org.Apache.Kafka.Streams
                 return SExecuteWithSignature<bool>(LocalBridgeClazz, "processingThreadsEnabled", "(Ljava/util/Map;)Z", arg0);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/StreamsConfig.InternalConfig.html#stateUpdaterEnabled-java.util.Map-"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/StreamsConfig.InternalConfig.html#stateUpdaterEnabled(java.util.Map)"/>
             /// </summary>
             /// <param name="arg0"><see cref="Java.Util.Map"/></param>
             /// <returns><see cref="bool"/></returns>
@@ -1101,7 +1101,7 @@ namespace Org.Apache.Kafka.Streams
                 return SExecuteWithSignature<bool>(LocalBridgeClazz, "stateUpdaterEnabled", "(Ljava/util/Map;)Z", arg0);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/StreamsConfig.InternalConfig.html#getString-java.util.Map-java.lang.String-java.lang.String-"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/StreamsConfig.InternalConfig.html#getString(java.util.Map,java.lang.String,java.lang.String)"/>
             /// </summary>
             /// <param name="arg0"><see cref="Java.Util.Map"/></param>
             /// <param name="arg1"><see cref="Java.Lang.String"/></param>
@@ -1112,7 +1112,7 @@ namespace Org.Apache.Kafka.Streams
                 return SExecuteWithSignature<Java.Lang.String>(LocalBridgeClazz, "getString", "(Ljava/util/Map;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;", arg0, arg1, arg2);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/StreamsConfig.InternalConfig.html#getLong-java.util.Map-java.lang.String-long-"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/StreamsConfig.InternalConfig.html#getLong(java.util.Map,java.lang.String,long)"/>
             /// </summary>
             /// <param name="arg0"><see cref="Java.Util.Map"/></param>
             /// <param name="arg1"><see cref="Java.Lang.String"/></param>

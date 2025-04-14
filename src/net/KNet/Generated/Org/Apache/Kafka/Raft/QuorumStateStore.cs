@@ -111,7 +111,7 @@ namespace Org.Apache.Kafka.Raft
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumStateStore.html#path--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumStateStore.html#path()"/>
         /// </summary>
         /// <returns><see cref="Java.Nio.File.Path"/></returns>
         public Java.Nio.File.Path Path()
@@ -119,7 +119,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<Java.Nio.File.Path>("path", "()Ljava/nio/file/Path;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumStateStore.html#readElectionState--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumStateStore.html#readElectionState()"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Optional"/></returns>
         public Java.Util.Optional<Org.Apache.Kafka.Raft.ElectionState> ReadElectionState()
@@ -127,7 +127,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<Java.Util.Optional<Org.Apache.Kafka.Raft.ElectionState>>("readElectionState", "()Ljava/util/Optional;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumStateStore.html#clear--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumStateStore.html#clear()"/>
         /// </summary>
         public void Clear()
         {

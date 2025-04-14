@@ -156,7 +156,7 @@ namespace Org.Apache.Kafka.Common.Metrics
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/metrics/CompoundStat.html#stats--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/metrics/CompoundStat.html#stats()"/>
         /// </summary>
         /// <returns><see cref="Java.Util.List"/></returns>
         public Java.Util.List<Org.Apache.Kafka.Common.Metrics.CompoundStat.NamedMeasurable> Stats()
@@ -172,7 +172,7 @@ namespace Org.Apache.Kafka.Common.Metrics
         {
             #region Constructors
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/metrics/CompoundStat.NamedMeasurable.html#org.apache.kafka.common.metrics.CompoundStat$NamedMeasurable(org.apache.kafka.common.MetricName,org.apache.kafka.common.metrics.Measurable)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/metrics/CompoundStat.NamedMeasurable.html#%3Cinit%3E(org.apache.kafka.common.MetricName,org.apache.kafka.common.metrics.Measurable)"/>
             /// </summary>
             /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.MetricName"/></param>
             /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Metrics.Measurable"/></param>
@@ -197,7 +197,7 @@ namespace Org.Apache.Kafka.Common.Metrics
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/metrics/CompoundStat.NamedMeasurable.html#name--"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/metrics/CompoundStat.NamedMeasurable.html#name()"/>
             /// </summary>
             /// <returns><see cref="Org.Apache.Kafka.Common.MetricName"/></returns>
             public Org.Apache.Kafka.Common.MetricName Name()
@@ -205,7 +205,7 @@ namespace Org.Apache.Kafka.Common.Metrics
                 return IExecuteWithSignature<Org.Apache.Kafka.Common.MetricName>("name", "()Lorg/apache/kafka/common/MetricName;");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/metrics/CompoundStat.NamedMeasurable.html#stat--"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/metrics/CompoundStat.NamedMeasurable.html#stat()"/>
             /// </summary>
             /// <returns><see cref="Org.Apache.Kafka.Common.Metrics.Measurable"/></returns>
             public Org.Apache.Kafka.Common.Metrics.Measurable Stat()

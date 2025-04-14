@@ -111,7 +111,7 @@ namespace Org.Apache.Kafka.Common.Record
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/DefaultRecordBatch.html#decrementSequence-int-int-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/DefaultRecordBatch.html#decrementSequence(int,int)"/>
         /// </summary>
         /// <param name="arg0"><see cref="int"/></param>
         /// <param name="arg1"><see cref="int"/></param>
@@ -121,7 +121,7 @@ namespace Org.Apache.Kafka.Common.Record
             return SExecuteWithSignature<int>(LocalBridgeClazz, "decrementSequence", "(II)I", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/DefaultRecordBatch.html#incrementSequence-int-int-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/DefaultRecordBatch.html#incrementSequence(int,int)"/>
         /// </summary>
         /// <param name="arg0"><see cref="int"/></param>
         /// <param name="arg1"><see cref="int"/></param>
@@ -131,7 +131,7 @@ namespace Org.Apache.Kafka.Common.Record
             return SExecuteWithSignature<int>(LocalBridgeClazz, "incrementSequence", "(II)I", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/DefaultRecordBatch.html#sizeInBytes-java.lang.Iterable-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/DefaultRecordBatch.html#sizeInBytes(java.lang.Iterable)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.Iterable"/></param>
         /// <returns><see cref="int"/></returns>
@@ -140,7 +140,7 @@ namespace Org.Apache.Kafka.Common.Record
             return SExecuteWithSignature<int>(LocalBridgeClazz, "sizeInBytes", "(Ljava/lang/Iterable;)I", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/DefaultRecordBatch.html#sizeInBytes-long-java.lang.Iterable-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/DefaultRecordBatch.html#sizeInBytes(long,java.lang.Iterable)"/>
         /// </summary>
         /// <param name="arg0"><see cref="long"/></param>
         /// <param name="arg1"><see cref="Java.Lang.Iterable"/></param>
@@ -150,7 +150,7 @@ namespace Org.Apache.Kafka.Common.Record
             return SExecuteWithSignature<int>(LocalBridgeClazz, "sizeInBytes", "(JLjava/lang/Iterable;)I", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/DefaultRecordBatch.html#writeEmptyHeader-java.nio.ByteBuffer-byte-long-short-int-long-long-int-org.apache.kafka.common.record.TimestampType-long-boolean-boolean-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/DefaultRecordBatch.html#writeEmptyHeader(java.nio.ByteBuffer,byte,long,short,int,long,long,int,org.apache.kafka.common.record.TimestampType,long,boolean,boolean)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Nio.ByteBuffer"/></param>
         /// <param name="arg1"><see cref="byte"/></param>
@@ -169,7 +169,7 @@ namespace Org.Apache.Kafka.Common.Record
             SExecuteWithSignature(LocalBridgeClazz, "writeEmptyHeader", "(Ljava/nio/ByteBuffer;BJSIJJILorg/apache/kafka/common/record/TimestampType;JZZ)V", arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/DefaultRecordBatch.html#writeHeader-java.nio.ByteBuffer-long-int-int-byte-org.apache.kafka.common.record.CompressionType-org.apache.kafka.common.record.TimestampType-long-long-long-short-int-boolean-boolean-boolean-int-int-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/DefaultRecordBatch.html#writeHeader(java.nio.ByteBuffer,long,int,int,byte,org.apache.kafka.common.record.CompressionType,org.apache.kafka.common.record.TimestampType,long,long,long,short,int,boolean,boolean,boolean,int,int)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Nio.ByteBuffer"/></param>
         /// <param name="arg1"><see cref="long"/></param>
@@ -197,7 +197,7 @@ namespace Org.Apache.Kafka.Common.Record
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/DefaultRecordBatch.html#recordInputStream-org.apache.kafka.common.utils.BufferSupplier-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/DefaultRecordBatch.html#recordInputStream(org.apache.kafka.common.utils.BufferSupplier)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Utils.BufferSupplier"/></param>
         /// <returns><see cref="Java.Io.InputStream"/></returns>
@@ -206,7 +206,7 @@ namespace Org.Apache.Kafka.Common.Record
             return IExecuteWithSignature<Java.Io.InputStream>("recordInputStream", "(Lorg/apache/kafka/common/utils/BufferSupplier;)Ljava/io/InputStream;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/DefaultRecordBatch.html#baseTimestamp--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/DefaultRecordBatch.html#baseTimestamp()"/>
         /// </summary>
         /// <returns><see cref="long"/></returns>
         public long BaseTimestamp()
@@ -214,7 +214,7 @@ namespace Org.Apache.Kafka.Common.Record
             return IExecuteWithSignature<long>("baseTimestamp", "()J");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/DefaultRecordBatch.html#skipKeyValueIterator-org.apache.kafka.common.utils.BufferSupplier-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/DefaultRecordBatch.html#skipKeyValueIterator(org.apache.kafka.common.utils.BufferSupplier)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Utils.BufferSupplier"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.Utils.CloseableIterator"/></returns>
@@ -223,7 +223,7 @@ namespace Org.Apache.Kafka.Common.Record
             return IExecuteWithSignature<Org.Apache.Kafka.Common.Utils.CloseableIterator<Org.Apache.Kafka.Common.Record.Record>>("skipKeyValueIterator", "(Lorg/apache/kafka/common/utils/BufferSupplier;)Lorg/apache/kafka/common/utils/CloseableIterator;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/DefaultRecordBatch.html#setLastOffset-long-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/DefaultRecordBatch.html#setLastOffset(long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="long"/></param>
         public void SetLastOffset(long arg0)
@@ -231,7 +231,7 @@ namespace Org.Apache.Kafka.Common.Record
             IExecuteWithSignature("setLastOffset", "(J)V", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/DefaultRecordBatch.html#setMaxTimestamp-org.apache.kafka.common.record.TimestampType-long-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/DefaultRecordBatch.html#setMaxTimestamp(org.apache.kafka.common.record.TimestampType,long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Record.TimestampType"/></param>
         /// <param name="arg1"><see cref="long"/></param>
@@ -240,7 +240,7 @@ namespace Org.Apache.Kafka.Common.Record
             IExecuteWithSignature("setMaxTimestamp", "(Lorg/apache/kafka/common/record/TimestampType;J)V", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/DefaultRecordBatch.html#setPartitionLeaderEpoch-int-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/DefaultRecordBatch.html#setPartitionLeaderEpoch(int)"/>
         /// </summary>
         /// <param name="arg0"><see cref="int"/></param>
         public void SetPartitionLeaderEpoch(int arg0)
@@ -248,7 +248,7 @@ namespace Org.Apache.Kafka.Common.Record
             IExecuteWithSignature("setPartitionLeaderEpoch", "(I)V", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/DefaultRecordBatch.html#writeTo-org.apache.kafka.common.utils.ByteBufferOutputStream-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/DefaultRecordBatch.html#writeTo(org.apache.kafka.common.utils.ByteBufferOutputStream)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Utils.ByteBufferOutputStream"/></param>
         public void WriteTo(Org.Apache.Kafka.Common.Utils.ByteBufferOutputStream arg0)

@@ -75,7 +75,7 @@ namespace Org.Apache.Kafka.Common.Utils
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/utils/ProducerIdAndEpoch.html#org.apache.kafka.common.utils.ProducerIdAndEpoch(long,short)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/utils/ProducerIdAndEpoch.html#%3Cinit%3E(long,short)"/>
         /// </summary>
         /// <param name="arg0"><see cref="long"/></param>
         /// <param name="arg1"><see cref="short"/></param>
@@ -118,7 +118,7 @@ namespace Org.Apache.Kafka.Common.Utils
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/utils/ProducerIdAndEpoch.html#isValid--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/utils/ProducerIdAndEpoch.html#isValid()"/>
         /// </summary>
         /// <returns><see cref="bool"/></returns>
         public bool IsValid()

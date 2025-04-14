@@ -105,7 +105,7 @@ namespace Org.Apache.Kafka.Snapshot
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/snapshot/Snapshots.html#deleteIfExists-java.nio.file.Path-org.apache.kafka.raft.OffsetAndEpoch-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/snapshot/Snapshots.html#deleteIfExists(java.nio.file.Path,org.apache.kafka.raft.OffsetAndEpoch)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Nio.File.Path"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Raft.OffsetAndEpoch"/></param>
@@ -115,7 +115,7 @@ namespace Org.Apache.Kafka.Snapshot
             return SExecuteWithSignature<bool>(LocalBridgeClazz, "deleteIfExists", "(Ljava/nio/file/Path;Lorg/apache/kafka/raft/OffsetAndEpoch;)Z", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/snapshot/Snapshots.html#filenameFromSnapshotId-org.apache.kafka.raft.OffsetAndEpoch-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/snapshot/Snapshots.html#filenameFromSnapshotId(org.apache.kafka.raft.OffsetAndEpoch)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Raft.OffsetAndEpoch"/></param>
         /// <returns><see cref="Java.Lang.String"/></returns>
@@ -124,7 +124,7 @@ namespace Org.Apache.Kafka.Snapshot
             return SExecuteWithSignature<Java.Lang.String>(LocalBridgeClazz, "filenameFromSnapshotId", "(Lorg/apache/kafka/raft/OffsetAndEpoch;)Ljava/lang/String;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/snapshot/Snapshots.html#createTempFile-java.nio.file.Path-org.apache.kafka.raft.OffsetAndEpoch-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/snapshot/Snapshots.html#createTempFile(java.nio.file.Path,org.apache.kafka.raft.OffsetAndEpoch)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Nio.File.Path"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Raft.OffsetAndEpoch"/></param>
@@ -134,7 +134,7 @@ namespace Org.Apache.Kafka.Snapshot
             return SExecuteWithSignature<Java.Nio.File.Path>(LocalBridgeClazz, "createTempFile", "(Ljava/nio/file/Path;Lorg/apache/kafka/raft/OffsetAndEpoch;)Ljava/nio/file/Path;", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/snapshot/Snapshots.html#markForDelete-java.nio.file.Path-org.apache.kafka.raft.OffsetAndEpoch-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/snapshot/Snapshots.html#markForDelete(java.nio.file.Path,org.apache.kafka.raft.OffsetAndEpoch)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Nio.File.Path"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Raft.OffsetAndEpoch"/></param>
@@ -144,7 +144,7 @@ namespace Org.Apache.Kafka.Snapshot
             return SExecuteWithSignature<Java.Nio.File.Path>(LocalBridgeClazz, "markForDelete", "(Ljava/nio/file/Path;Lorg/apache/kafka/raft/OffsetAndEpoch;)Ljava/nio/file/Path;", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/snapshot/Snapshots.html#snapshotPath-java.nio.file.Path-org.apache.kafka.raft.OffsetAndEpoch-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/snapshot/Snapshots.html#snapshotPath(java.nio.file.Path,org.apache.kafka.raft.OffsetAndEpoch)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Nio.File.Path"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Raft.OffsetAndEpoch"/></param>
@@ -154,7 +154,7 @@ namespace Org.Apache.Kafka.Snapshot
             return SExecuteWithSignature<Java.Nio.File.Path>(LocalBridgeClazz, "snapshotPath", "(Ljava/nio/file/Path;Lorg/apache/kafka/raft/OffsetAndEpoch;)Ljava/nio/file/Path;", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/snapshot/Snapshots.html#parse-java.nio.file.Path-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/snapshot/Snapshots.html#parse(java.nio.file.Path)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Nio.File.Path"/></param>
         /// <returns><see cref="Java.Util.Optional"/></returns>
@@ -163,7 +163,7 @@ namespace Org.Apache.Kafka.Snapshot
             return SExecuteWithSignature<Java.Util.Optional<Org.Apache.Kafka.Snapshot.SnapshotPath>>(LocalBridgeClazz, "parse", "(Ljava/nio/file/Path;)Ljava/util/Optional;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/snapshot/Snapshots.html#lastContainedLogTimestamp-java.nio.file.Path-org.apache.kafka.raft.OffsetAndEpoch-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/snapshot/Snapshots.html#lastContainedLogTimestamp(java.nio.file.Path,org.apache.kafka.raft.OffsetAndEpoch)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Nio.File.Path"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Raft.OffsetAndEpoch"/></param>
@@ -173,7 +173,7 @@ namespace Org.Apache.Kafka.Snapshot
             return SExecuteWithSignature<long>(LocalBridgeClazz, "lastContainedLogTimestamp", "(Ljava/nio/file/Path;Lorg/apache/kafka/raft/OffsetAndEpoch;)J", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/snapshot/Snapshots.html#lastContainedLogTimestamp-org.apache.kafka.snapshot.RawSnapshotReader-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/snapshot/Snapshots.html#lastContainedLogTimestamp(org.apache.kafka.snapshot.RawSnapshotReader)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Snapshot.RawSnapshotReader"/></param>
         /// <returns><see cref="long"/></returns>

@@ -156,7 +156,7 @@ namespace Org.Apache.Kafka.Streams.Errors
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/errors/ProcessingExceptionHandler.html#handle-org.apache.kafka.streams.errors.ErrorHandlerContext-org.apache.kafka.streams.processor.api.Record-java.lang.Exception-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/errors/ProcessingExceptionHandler.html#handle(org.apache.kafka.streams.errors.ErrorHandlerContext,org.apache.kafka.streams.processor.api.Record,java.lang.Exception)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Errors.ErrorHandlerContext"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Streams.Processor.Api.Record"/></param>
@@ -211,7 +211,7 @@ namespace Org.Apache.Kafka.Streams.Errors
 
             #region Static methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/errors/ProcessingExceptionHandler.ProcessingHandlerResponse.html#valueOf-java.lang.String-"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/errors/ProcessingExceptionHandler.ProcessingHandlerResponse.html#valueOf(java.lang.String)"/>
             /// </summary>
             /// <param name="arg0"><see cref="Java.Lang.String"/></param>
             /// <returns><see cref="Org.Apache.Kafka.Streams.Errors.ProcessingExceptionHandler.ProcessingHandlerResponse"/></returns>
@@ -220,7 +220,7 @@ namespace Org.Apache.Kafka.Streams.Errors
                 return SExecuteWithSignature<Org.Apache.Kafka.Streams.Errors.ProcessingExceptionHandler.ProcessingHandlerResponse>(LocalBridgeClazz, "valueOf", "(Ljava/lang/String;)Lorg/apache/kafka/streams/errors/ProcessingExceptionHandler$ProcessingHandlerResponse;", arg0);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/errors/ProcessingExceptionHandler.ProcessingHandlerResponse.html#values--"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/errors/ProcessingExceptionHandler.ProcessingHandlerResponse.html#values()"/>
             /// </summary>
             /// <returns><see cref="Org.Apache.Kafka.Streams.Errors.ProcessingExceptionHandler.ProcessingHandlerResponse"/></returns>
             public static Org.Apache.Kafka.Streams.Errors.ProcessingExceptionHandler.ProcessingHandlerResponse[] Values()

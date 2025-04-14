@@ -87,7 +87,7 @@ namespace Org.Apache.Kafka.Common.Security.Plain.Internals
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/security/plain/internals/PlainSaslServerProvider.html#initialize--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/security/plain/internals/PlainSaslServerProvider.html#initialize()"/>
         /// </summary>
         public static void Initialize()
         {

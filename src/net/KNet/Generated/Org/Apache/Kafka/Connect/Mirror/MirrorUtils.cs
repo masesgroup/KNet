@@ -111,7 +111,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.0.0/org/apache/kafka/connect/mirror/MirrorUtils.html#wrapOffset-long-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.0.0/org/apache/kafka/connect/mirror/MirrorUtils.html#wrapOffset(long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="long"/></param>
         /// <returns><see cref="Java.Util.Map"/></returns>
@@ -120,7 +120,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
             return SExecuteWithSignature<Java.Util.Map<Java.Lang.String, object>>(LocalBridgeClazz, "wrapOffset", "(J)Ljava/util/Map;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.0.0/org/apache/kafka/connect/mirror/MirrorUtils.html#unwrapPartition-java.util.Map-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.0.0/org/apache/kafka/connect/mirror/MirrorUtils.html#unwrapPartition(java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.TopicPartition"/></returns>

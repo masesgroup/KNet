@@ -75,7 +75,7 @@ namespace Org.Apache.Kafka.Common.Config.Provider
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/provider/EnvVarConfigProvider.html#org.apache.kafka.common.config.provider.EnvVarConfigProvider(java.util.Map)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/provider/EnvVarConfigProvider.html#%3Cinit%3E(java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         public EnvVarConfigProvider(Java.Util.Map<Java.Lang.String, Java.Lang.String> arg0)
@@ -111,7 +111,7 @@ namespace Org.Apache.Kafka.Common.Config.Provider
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/provider/EnvVarConfigProvider.html#get-java.lang.String-java.util.Set-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/provider/EnvVarConfigProvider.html#get(java.lang.String,java.util.Set)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Java.Util.Set"/></param>
@@ -121,7 +121,7 @@ namespace Org.Apache.Kafka.Common.Config.Provider
             return IExecuteWithSignature<Org.Apache.Kafka.Common.Config.ConfigData>("get", "(Ljava/lang/String;Ljava/util/Set;)Lorg/apache/kafka/common/config/ConfigData;", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/provider/EnvVarConfigProvider.html#get-java.lang.String-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/provider/EnvVarConfigProvider.html#get(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.Config.ConfigData"/></returns>
@@ -130,7 +130,7 @@ namespace Org.Apache.Kafka.Common.Config.Provider
             return IExecuteWithSignature<Org.Apache.Kafka.Common.Config.ConfigData>("get", "(Ljava/lang/String;)Lorg/apache/kafka/common/config/ConfigData;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/provider/EnvVarConfigProvider.html#close--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/provider/EnvVarConfigProvider.html#close()"/>
         /// </summary>
         /// <exception cref="Java.Io.IOException"/>
         public void Close()
@@ -138,7 +138,7 @@ namespace Org.Apache.Kafka.Common.Config.Provider
             IExecuteWithSignature("close", "()V");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/provider/EnvVarConfigProvider.html#configure-java.util.Map-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/provider/EnvVarConfigProvider.html#configure(java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         public void Configure(Java.Util.Map<Java.Lang.String, object> arg0)

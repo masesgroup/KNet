@@ -91,7 +91,7 @@ namespace Org.Apache.Kafka.Connect.Rest.Basic.Auth.Extension
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-basic-auth-extension/4.0.0/org/apache/kafka/connect/rest/basic/auth/extension/PropertyFileLoginModule.html#abort--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-basic-auth-extension/4.0.0/org/apache/kafka/connect/rest/basic/auth/extension/PropertyFileLoginModule.html#abort()"/>
         /// </summary>
         /// <returns><see cref="bool"/></returns>
         public bool Abort()
@@ -99,7 +99,7 @@ namespace Org.Apache.Kafka.Connect.Rest.Basic.Auth.Extension
             return IExecuteWithSignature<bool>("abort", "()Z");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-basic-auth-extension/4.0.0/org/apache/kafka/connect/rest/basic/auth/extension/PropertyFileLoginModule.html#commit--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-basic-auth-extension/4.0.0/org/apache/kafka/connect/rest/basic/auth/extension/PropertyFileLoginModule.html#commit()"/>
         /// </summary>
         /// <returns><see cref="bool"/></returns>
         public bool Commit()
@@ -107,7 +107,7 @@ namespace Org.Apache.Kafka.Connect.Rest.Basic.Auth.Extension
             return IExecuteWithSignature<bool>("commit", "()Z");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-basic-auth-extension/4.0.0/org/apache/kafka/connect/rest/basic/auth/extension/PropertyFileLoginModule.html#login--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-basic-auth-extension/4.0.0/org/apache/kafka/connect/rest/basic/auth/extension/PropertyFileLoginModule.html#login()"/>
         /// </summary>
         /// <returns><see cref="bool"/></returns>
         /// <exception cref="Javax.Security.Auth.Login.LoginException"/>
@@ -116,7 +116,7 @@ namespace Org.Apache.Kafka.Connect.Rest.Basic.Auth.Extension
             return IExecuteWithSignature<bool>("login", "()Z");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-basic-auth-extension/4.0.0/org/apache/kafka/connect/rest/basic/auth/extension/PropertyFileLoginModule.html#logout--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-basic-auth-extension/4.0.0/org/apache/kafka/connect/rest/basic/auth/extension/PropertyFileLoginModule.html#logout()"/>
         /// </summary>
         /// <returns><see cref="bool"/></returns>
         public bool Logout()
@@ -124,7 +124,7 @@ namespace Org.Apache.Kafka.Connect.Rest.Basic.Auth.Extension
             return IExecuteWithSignature<bool>("logout", "()Z");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-basic-auth-extension/4.0.0/org/apache/kafka/connect/rest/basic/auth/extension/PropertyFileLoginModule.html#initialize-javax.security.auth.Subject-javax.security.auth.callback.CallbackHandler-java.util.Map-java.util.Map-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-basic-auth-extension/4.0.0/org/apache/kafka/connect/rest/basic/auth/extension/PropertyFileLoginModule.html#initialize(javax.security.auth.Subject,javax.security.auth.callback.CallbackHandler,java.util.Map,java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Javax.Security.Auth.Subject"/></param>
         /// <param name="arg1"><see cref="Javax.Security.Auth.Callback.CallbackHandler"/></param>

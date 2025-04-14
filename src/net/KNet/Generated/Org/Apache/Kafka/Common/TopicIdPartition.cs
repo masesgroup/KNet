@@ -75,7 +75,7 @@ namespace Org.Apache.Kafka.Common
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/TopicIdPartition.html#org.apache.kafka.common.TopicIdPartition(org.apache.kafka.common.Uuid,int,java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/TopicIdPartition.html#%3Cinit%3E(org.apache.kafka.common.Uuid,int,java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Uuid"/></param>
         /// <param name="arg1"><see cref="int"/></param>
@@ -85,7 +85,7 @@ namespace Org.Apache.Kafka.Common
         {
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/TopicIdPartition.html#org.apache.kafka.common.TopicIdPartition(org.apache.kafka.common.Uuid,org.apache.kafka.common.TopicPartition)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/TopicIdPartition.html#%3Cinit%3E(org.apache.kafka.common.Uuid,org.apache.kafka.common.TopicPartition)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Uuid"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.TopicPartition"/></param>
@@ -110,7 +110,7 @@ namespace Org.Apache.Kafka.Common
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/TopicIdPartition.html#partition--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/TopicIdPartition.html#partition()"/>
         /// </summary>
         /// <returns><see cref="int"/></returns>
         public int Partition()
@@ -118,7 +118,7 @@ namespace Org.Apache.Kafka.Common
             return IExecuteWithSignature<int>("partition", "()I");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/TopicIdPartition.html#topic--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/TopicIdPartition.html#topic()"/>
         /// </summary>
         /// <returns><see cref="Java.Lang.String"/></returns>
         public Java.Lang.String Topic()
@@ -126,7 +126,7 @@ namespace Org.Apache.Kafka.Common
             return IExecuteWithSignature<Java.Lang.String>("topic", "()Ljava/lang/String;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/TopicIdPartition.html#topicPartition--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/TopicIdPartition.html#topicPartition()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.TopicPartition"/></returns>
         public Org.Apache.Kafka.Common.TopicPartition TopicPartition()
@@ -134,7 +134,7 @@ namespace Org.Apache.Kafka.Common
             return IExecuteWithSignature<Org.Apache.Kafka.Common.TopicPartition>("topicPartition", "()Lorg/apache/kafka/common/TopicPartition;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/TopicIdPartition.html#topicId--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/TopicIdPartition.html#topicId()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.Uuid"/></returns>
         public Org.Apache.Kafka.Common.Uuid TopicId()

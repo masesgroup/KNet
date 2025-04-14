@@ -212,7 +212,7 @@ namespace Org.Apache.Kafka.Common.Metrics.Stats
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/metrics/stats/Histogram.html#org.apache.kafka.common.metrics.stats.Histogram(org.apache.kafka.common.metrics.stats.Histogram.BinScheme)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/metrics/stats/Histogram.html#%3Cinit%3E(org.apache.kafka.common.metrics.stats.Histogram.BinScheme)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Metrics.Stats.Histogram.BinScheme"/></param>
         public Histogram(Org.Apache.Kafka.Common.Metrics.Stats.Histogram.BinScheme arg0)
@@ -236,7 +236,7 @@ namespace Org.Apache.Kafka.Common.Metrics.Stats
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/metrics/stats/Histogram.html#value-double-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/metrics/stats/Histogram.html#value(double)"/>
         /// </summary>
         /// <param name="arg0"><see cref="double"/></param>
         /// <returns><see cref="double"/></returns>
@@ -245,7 +245,7 @@ namespace Org.Apache.Kafka.Common.Metrics.Stats
             return IExecuteWithSignature<double>("value", "(D)D", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/metrics/stats/Histogram.html#counts--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/metrics/stats/Histogram.html#counts()"/>
         /// </summary>
         /// <returns><see cref="float"/></returns>
         public float[] Counts()
@@ -253,14 +253,14 @@ namespace Org.Apache.Kafka.Common.Metrics.Stats
             return IExecuteWithSignatureArray<float>("counts", "()[F");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/metrics/stats/Histogram.html#clear--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/metrics/stats/Histogram.html#clear()"/>
         /// </summary>
         public void Clear()
         {
             IExecuteWithSignature("clear", "()V");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/metrics/stats/Histogram.html#record-double-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/metrics/stats/Histogram.html#record(double)"/>
         /// </summary>
         /// <param name="arg0"><see cref="double"/></param>
         public void Record(double arg0)
@@ -292,7 +292,7 @@ namespace Org.Apache.Kafka.Common.Metrics.Stats
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/metrics/stats/Histogram.BinScheme.html#fromBin-int-"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/metrics/stats/Histogram.BinScheme.html#fromBin(int)"/>
             /// </summary>
             /// <param name="arg0"><see cref="int"/></param>
             /// <returns><see cref="double"/></returns>
@@ -301,7 +301,7 @@ namespace Org.Apache.Kafka.Common.Metrics.Stats
                 return IExecuteWithSignature<double>("fromBin", "(I)D", arg0);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/metrics/stats/Histogram.BinScheme.html#bins--"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/metrics/stats/Histogram.BinScheme.html#bins()"/>
             /// </summary>
             /// <returns><see cref="int"/></returns>
             public int Bins()
@@ -309,7 +309,7 @@ namespace Org.Apache.Kafka.Common.Metrics.Stats
                 return IExecuteWithSignature<int>("bins", "()I");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/metrics/stats/Histogram.BinScheme.html#toBin-double-"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/metrics/stats/Histogram.BinScheme.html#toBin(double)"/>
             /// </summary>
             /// <param name="arg0"><see cref="double"/></param>
             /// <returns><see cref="int"/></returns>
@@ -333,7 +333,7 @@ namespace Org.Apache.Kafka.Common.Metrics.Stats
         {
             #region Constructors
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/metrics/stats/Histogram.ConstantBinScheme.html#org.apache.kafka.common.metrics.stats.Histogram$ConstantBinScheme(int,double,double)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/metrics/stats/Histogram.ConstantBinScheme.html#%3Cinit%3E(int,double,double)"/>
             /// </summary>
             /// <param name="arg0"><see cref="int"/></param>
             /// <param name="arg1"><see cref="double"/></param>
@@ -359,7 +359,7 @@ namespace Org.Apache.Kafka.Common.Metrics.Stats
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/metrics/stats/Histogram.ConstantBinScheme.html#fromBin-int-"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/metrics/stats/Histogram.ConstantBinScheme.html#fromBin(int)"/>
             /// </summary>
             /// <param name="arg0"><see cref="int"/></param>
             /// <returns><see cref="double"/></returns>
@@ -368,7 +368,7 @@ namespace Org.Apache.Kafka.Common.Metrics.Stats
                 return IExecuteWithSignature<double>("fromBin", "(I)D", arg0);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/metrics/stats/Histogram.ConstantBinScheme.html#bins--"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/metrics/stats/Histogram.ConstantBinScheme.html#bins()"/>
             /// </summary>
             /// <returns><see cref="int"/></returns>
             public int Bins()
@@ -376,7 +376,7 @@ namespace Org.Apache.Kafka.Common.Metrics.Stats
                 return IExecuteWithSignature<int>("bins", "()I");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/metrics/stats/Histogram.ConstantBinScheme.html#toBin-double-"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/metrics/stats/Histogram.ConstantBinScheme.html#toBin(double)"/>
             /// </summary>
             /// <param name="arg0"><see cref="double"/></param>
             /// <returns><see cref="int"/></returns>
@@ -400,7 +400,7 @@ namespace Org.Apache.Kafka.Common.Metrics.Stats
         {
             #region Constructors
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/metrics/stats/Histogram.LinearBinScheme.html#org.apache.kafka.common.metrics.stats.Histogram$LinearBinScheme(int,double)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/metrics/stats/Histogram.LinearBinScheme.html#%3Cinit%3E(int,double)"/>
             /// </summary>
             /// <param name="arg0"><see cref="int"/></param>
             /// <param name="arg1"><see cref="double"/></param>
@@ -425,7 +425,7 @@ namespace Org.Apache.Kafka.Common.Metrics.Stats
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/metrics/stats/Histogram.LinearBinScheme.html#fromBin-int-"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/metrics/stats/Histogram.LinearBinScheme.html#fromBin(int)"/>
             /// </summary>
             /// <param name="arg0"><see cref="int"/></param>
             /// <returns><see cref="double"/></returns>
@@ -434,7 +434,7 @@ namespace Org.Apache.Kafka.Common.Metrics.Stats
                 return IExecuteWithSignature<double>("fromBin", "(I)D", arg0);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/metrics/stats/Histogram.LinearBinScheme.html#bins--"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/metrics/stats/Histogram.LinearBinScheme.html#bins()"/>
             /// </summary>
             /// <returns><see cref="int"/></returns>
             public int Bins()
@@ -442,7 +442,7 @@ namespace Org.Apache.Kafka.Common.Metrics.Stats
                 return IExecuteWithSignature<int>("bins", "()I");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/metrics/stats/Histogram.LinearBinScheme.html#toBin-double-"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/metrics/stats/Histogram.LinearBinScheme.html#toBin(double)"/>
             /// </summary>
             /// <param name="arg0"><see cref="double"/></param>
             /// <returns><see cref="int"/></returns>

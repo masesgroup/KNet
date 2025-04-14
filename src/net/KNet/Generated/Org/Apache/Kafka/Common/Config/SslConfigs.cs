@@ -369,7 +369,7 @@ namespace Org.Apache.Kafka.Common.Config
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/SslConfigs.html#addClientSslSupport-org.apache.kafka.common.config.ConfigDef-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/SslConfigs.html#addClientSslSupport(org.apache.kafka.common.config.ConfigDef)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Config.ConfigDef"/></param>
         public static void AddClientSslSupport(Org.Apache.Kafka.Common.Config.ConfigDef arg0)

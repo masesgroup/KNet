@@ -75,7 +75,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.0.0/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#org.apache.kafka.connect.mirror.MirrorSourceConfig(java.util.Map)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.0.0/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#%3Cinit%3E(java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         public MirrorSourceConfig(Java.Util.Map<Java.Lang.String, Java.Lang.String> arg0)
@@ -83,7 +83,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
         {
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.0.0/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#org.apache.kafka.connect.mirror.MirrorSourceConfig(org.apache.kafka.common.config.ConfigDef,java.util.Map)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.0.0/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#%3Cinit%3E(org.apache.kafka.common.config.ConfigDef,java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Config.ConfigDef"/></param>
         /// <param name="arg1"><see cref="Java.Util.Map"/></param>

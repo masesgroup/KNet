@@ -122,7 +122,7 @@ namespace Org.Apache.Kafka.Streams.Scala.Kstream
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/kstream/TimeWindowedCogroupedKStream.html#org.apache.kafka.streams.scala.kstream.TimeWindowedCogroupedKStream(org.apache.kafka.streams.kstream.TimeWindowedCogroupedKStream)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/kstream/TimeWindowedCogroupedKStream.html#%3Cinit%3E(org.apache.kafka.streams.kstream.TimeWindowedCogroupedKStream)"/>
         /// </summary>
         /// <param name="inner"><see cref="Org.Apache.Kafka.Streams.Kstream.TimeWindowedCogroupedKStream"/></param>
         public TimeWindowedCogroupedKStream(Org.Apache.Kafka.Streams.Kstream.TimeWindowedCogroupedKStream inner)
@@ -146,7 +146,7 @@ namespace Org.Apache.Kafka.Streams.Scala.Kstream
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/kstream/TimeWindowedCogroupedKStream.html#inner--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/kstream/TimeWindowedCogroupedKStream.html#inner()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.TimeWindowedCogroupedKStream"/></returns>
         public Org.Apache.Kafka.Streams.Kstream.TimeWindowedCogroupedKStream Inner()
@@ -169,7 +169,7 @@ namespace Org.Apache.Kafka.Streams.Scala.Kstream
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/kstream/TimeWindowedCogroupedKStream.html#org.apache.kafka.streams.scala.kstream.TimeWindowedCogroupedKStream(org.apache.kafka.streams.kstream.TimeWindowedCogroupedKStream)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/kstream/TimeWindowedCogroupedKStream.html#%3Cinit%3E(org.apache.kafka.streams.kstream.TimeWindowedCogroupedKStream)"/>
         /// </summary>
         /// <param name="inner"><see cref="Org.Apache.Kafka.Streams.Kstream.TimeWindowedCogroupedKStream"/></param>
         public TimeWindowedCogroupedKStream(Org.Apache.Kafka.Streams.Kstream.TimeWindowedCogroupedKStream<K, V> inner)
@@ -197,7 +197,7 @@ namespace Org.Apache.Kafka.Streams.Scala.Kstream
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/kstream/TimeWindowedCogroupedKStream.html#inner--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/kstream/TimeWindowedCogroupedKStream.html#inner()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.TimeWindowedCogroupedKStream"/></returns>
         public Org.Apache.Kafka.Streams.Kstream.TimeWindowedCogroupedKStream<K, V> Inner()

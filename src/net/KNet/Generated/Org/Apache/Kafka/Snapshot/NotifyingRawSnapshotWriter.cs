@@ -75,7 +75,7 @@ namespace Org.Apache.Kafka.Snapshot
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/snapshot/NotifyingRawSnapshotWriter.html#org.apache.kafka.snapshot.NotifyingRawSnapshotWriter(org.apache.kafka.snapshot.RawSnapshotWriter,java.util.function.Consumer)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/snapshot/NotifyingRawSnapshotWriter.html#%3Cinit%3E(org.apache.kafka.snapshot.RawSnapshotWriter,java.util.function.Consumer)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Snapshot.RawSnapshotWriter"/></param>
         /// <param name="arg1"><see cref="Java.Util.Function.Consumer"/></param>
@@ -100,7 +100,7 @@ namespace Org.Apache.Kafka.Snapshot
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/snapshot/NotifyingRawSnapshotWriter.html#isFrozen--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/snapshot/NotifyingRawSnapshotWriter.html#isFrozen()"/>
         /// </summary>
         /// <returns><see cref="bool"/></returns>
         public bool IsFrozen()
@@ -108,7 +108,7 @@ namespace Org.Apache.Kafka.Snapshot
             return IExecuteWithSignature<bool>("isFrozen", "()Z");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/snapshot/NotifyingRawSnapshotWriter.html#sizeInBytes--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/snapshot/NotifyingRawSnapshotWriter.html#sizeInBytes()"/>
         /// </summary>
         /// <returns><see cref="long"/></returns>
         public long SizeInBytes()
@@ -116,7 +116,7 @@ namespace Org.Apache.Kafka.Snapshot
             return IExecuteWithSignature<long>("sizeInBytes", "()J");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/snapshot/NotifyingRawSnapshotWriter.html#snapshotId--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/snapshot/NotifyingRawSnapshotWriter.html#snapshotId()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Raft.OffsetAndEpoch"/></returns>
         public Org.Apache.Kafka.Raft.OffsetAndEpoch SnapshotId()
@@ -124,7 +124,7 @@ namespace Org.Apache.Kafka.Snapshot
             return IExecuteWithSignature<Org.Apache.Kafka.Raft.OffsetAndEpoch>("snapshotId", "()Lorg/apache/kafka/raft/OffsetAndEpoch;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/snapshot/NotifyingRawSnapshotWriter.html#append-org.apache.kafka.common.record.UnalignedMemoryRecords-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/snapshot/NotifyingRawSnapshotWriter.html#append(org.apache.kafka.common.record.UnalignedMemoryRecords)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Record.UnalignedMemoryRecords"/></param>
         public void Append(Org.Apache.Kafka.Common.Record.UnalignedMemoryRecords arg0)
@@ -132,14 +132,14 @@ namespace Org.Apache.Kafka.Snapshot
             IExecuteWithSignature("append", "(Lorg/apache/kafka/common/record/UnalignedMemoryRecords;)V", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/snapshot/NotifyingRawSnapshotWriter.html#close--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/snapshot/NotifyingRawSnapshotWriter.html#close()"/>
         /// </summary>
         public void Close()
         {
             IExecuteWithSignature("close", "()V");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/snapshot/NotifyingRawSnapshotWriter.html#freeze--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/snapshot/NotifyingRawSnapshotWriter.html#freeze()"/>
         /// </summary>
         public void Freeze()
         {

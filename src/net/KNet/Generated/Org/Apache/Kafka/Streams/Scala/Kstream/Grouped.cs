@@ -87,7 +87,7 @@ namespace Org.Apache.Kafka.Streams.Scala.Kstream
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/kstream/Grouped.html#with-java.lang.String-org.apache.kafka.common.serialization.Serde-org.apache.kafka.common.serialization.Serde-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/kstream/Grouped.html#with(java.lang.String,org.apache.kafka.common.serialization.Serde,org.apache.kafka.common.serialization.Serde)"/>
         /// </summary>
         /// <param name="name"><see cref="Java.Lang.String"/></param>
         /// <param name="keySerde"><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></param>
@@ -100,7 +100,7 @@ namespace Org.Apache.Kafka.Streams.Scala.Kstream
             return SExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.Grouped<K, V>>(LocalBridgeClazz, "with", "(Ljava/lang/String;Lorg/apache/kafka/common/serialization/Serde;Lorg/apache/kafka/common/serialization/Serde;)Lorg/apache/kafka/streams/kstream/Grouped;", name, keySerde, valueSerde);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/kstream/Grouped.html#with-org.apache.kafka.common.serialization.Serde-org.apache.kafka.common.serialization.Serde-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/kstream/Grouped.html#with(org.apache.kafka.common.serialization.Serde,org.apache.kafka.common.serialization.Serde)"/>
         /// </summary>
         /// <param name="keySerde"><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></param>
         /// <param name="valueSerde"><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></param>

@@ -111,7 +111,7 @@ namespace Org.Apache.Kafka.Common.Record
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/RecordVersion.html#current--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/RecordVersion.html#current()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.Record.RecordVersion"/></returns>
         public static Org.Apache.Kafka.Common.Record.RecordVersion Current()
@@ -119,7 +119,7 @@ namespace Org.Apache.Kafka.Common.Record
             return SExecuteWithSignature<Org.Apache.Kafka.Common.Record.RecordVersion>(LocalBridgeClazz, "current", "()Lorg/apache/kafka/common/record/RecordVersion;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/RecordVersion.html#lookup-byte-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/RecordVersion.html#lookup(byte)"/>
         /// </summary>
         /// <param name="arg0"><see cref="byte"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.Record.RecordVersion"/></returns>
@@ -128,7 +128,7 @@ namespace Org.Apache.Kafka.Common.Record
             return SExecuteWithSignature<Org.Apache.Kafka.Common.Record.RecordVersion>(LocalBridgeClazz, "lookup", "(B)Lorg/apache/kafka/common/record/RecordVersion;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/RecordVersion.html#valueOf-java.lang.String-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/RecordVersion.html#valueOf(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.Record.RecordVersion"/></returns>
@@ -137,7 +137,7 @@ namespace Org.Apache.Kafka.Common.Record
             return SExecuteWithSignature<Org.Apache.Kafka.Common.Record.RecordVersion>(LocalBridgeClazz, "valueOf", "(Ljava/lang/String;)Lorg/apache/kafka/common/record/RecordVersion;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/RecordVersion.html#values--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/RecordVersion.html#values()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.Record.RecordVersion"/></returns>
         public static Org.Apache.Kafka.Common.Record.RecordVersion[] Values()
@@ -149,7 +149,7 @@ namespace Org.Apache.Kafka.Common.Record
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/RecordVersion.html#precedes-org.apache.kafka.common.record.RecordVersion-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/RecordVersion.html#precedes(org.apache.kafka.common.record.RecordVersion)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Record.RecordVersion"/></param>
         /// <returns><see cref="bool"/></returns>

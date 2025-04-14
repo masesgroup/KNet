@@ -75,7 +75,7 @@ namespace Org.Apache.Kafka.Common.Metrics
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/metrics/Quota.html#org.apache.kafka.common.metrics.Quota(double,boolean)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/metrics/Quota.html#%3Cinit%3E(double,boolean)"/>
         /// </summary>
         /// <param name="arg0"><see cref="double"/></param>
         /// <param name="arg1"><see cref="bool"/></param>
@@ -96,7 +96,7 @@ namespace Org.Apache.Kafka.Common.Metrics
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/metrics/Quota.html#lowerBound-double-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/metrics/Quota.html#lowerBound(double)"/>
         /// </summary>
         /// <param name="arg0"><see cref="double"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.Metrics.Quota"/></returns>
@@ -105,7 +105,7 @@ namespace Org.Apache.Kafka.Common.Metrics
             return SExecuteWithSignature<Org.Apache.Kafka.Common.Metrics.Quota>(LocalBridgeClazz, "lowerBound", "(D)Lorg/apache/kafka/common/metrics/Quota;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/metrics/Quota.html#upperBound-double-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/metrics/Quota.html#upperBound(double)"/>
         /// </summary>
         /// <param name="arg0"><see cref="double"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.Metrics.Quota"/></returns>
@@ -118,7 +118,7 @@ namespace Org.Apache.Kafka.Common.Metrics
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/metrics/Quota.html#acceptable-double-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/metrics/Quota.html#acceptable(double)"/>
         /// </summary>
         /// <param name="arg0"><see cref="double"/></param>
         /// <returns><see cref="bool"/></returns>
@@ -127,7 +127,7 @@ namespace Org.Apache.Kafka.Common.Metrics
             return IExecuteWithSignature<bool>("acceptable", "(D)Z", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/metrics/Quota.html#isUpperBound--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/metrics/Quota.html#isUpperBound()"/>
         /// </summary>
         /// <returns><see cref="bool"/></returns>
         public bool IsUpperBound()
@@ -135,7 +135,7 @@ namespace Org.Apache.Kafka.Common.Metrics
             return IExecuteWithSignature<bool>("isUpperBound", "()Z");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/metrics/Quota.html#bound--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/metrics/Quota.html#bound()"/>
         /// </summary>
         /// <returns><see cref="double"/></returns>
         public double Bound()

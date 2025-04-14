@@ -123,7 +123,7 @@ namespace Org.Apache.Kafka.Streams.Query
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/query/FailureReason.html#valueOf-java.lang.String-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/query/FailureReason.html#valueOf(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Query.FailureReason"/></returns>
@@ -132,7 +132,7 @@ namespace Org.Apache.Kafka.Streams.Query
             return SExecuteWithSignature<Org.Apache.Kafka.Streams.Query.FailureReason>(LocalBridgeClazz, "valueOf", "(Ljava/lang/String;)Lorg/apache/kafka/streams/query/FailureReason;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/query/FailureReason.html#values--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/query/FailureReason.html#values()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Query.FailureReason"/></returns>
         public static Org.Apache.Kafka.Streams.Query.FailureReason[] Values()

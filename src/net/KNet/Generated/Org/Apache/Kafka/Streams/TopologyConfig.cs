@@ -120,7 +120,7 @@ namespace Org.Apache.Kafka.Streams
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/TopologyConfig.html#org.apache.kafka.streams.TopologyConfig(java.lang.String,org.apache.kafka.streams.StreamsConfig,java.util.Properties)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/TopologyConfig.html#%3Cinit%3E(java.lang.String,org.apache.kafka.streams.StreamsConfig,java.util.Properties)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Streams.StreamsConfig"/></param>
@@ -130,7 +130,7 @@ namespace Org.Apache.Kafka.Streams
         {
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/TopologyConfig.html#org.apache.kafka.streams.TopologyConfig(org.apache.kafka.streams.StreamsConfig)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/TopologyConfig.html#%3Cinit%3E(org.apache.kafka.streams.StreamsConfig)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.StreamsConfig"/></param>
         public TopologyConfig(Org.Apache.Kafka.Streams.StreamsConfig arg0)
@@ -232,14 +232,14 @@ namespace Org.Apache.Kafka.Streams
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/TopologyConfig.html#getTaskConfig--"/> 
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/TopologyConfig.html#getTaskConfig()"/> 
         /// </summary>
         public Org.Apache.Kafka.Streams.TopologyConfig.TaskConfig GetTaskConfig
         {
             get { return IExecuteWithSignature<Org.Apache.Kafka.Streams.TopologyConfig.TaskConfig>("getTaskConfig", "()Lorg/apache/kafka/streams/TopologyConfig$TaskConfig;"); }
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/TopologyConfig.html#isNamedTopology--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/TopologyConfig.html#isNamedTopology()"/>
         /// </summary>
         /// <returns><see cref="bool"/></returns>
         public bool IsNamedTopology()
@@ -247,7 +247,7 @@ namespace Org.Apache.Kafka.Streams
             return IExecuteWithSignature<bool>("isNamedTopology", "()Z");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/TopologyConfig.html#resolveDslStoreSuppliers--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/TopologyConfig.html#resolveDslStoreSuppliers()"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Optional"/></returns>
         public Java.Util.Optional<Org.Apache.Kafka.Streams.State.DslStoreSuppliers> ResolveDslStoreSuppliers()
