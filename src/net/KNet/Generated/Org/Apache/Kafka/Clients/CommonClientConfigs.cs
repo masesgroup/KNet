@@ -585,7 +585,7 @@ namespace Org.Apache.Kafka.Clients
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/CommonClientConfigs.html#metricsReporters-java.lang.String-org.apache.kafka.common.config.AbstractConfig-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/CommonClientConfigs.html#metricsReporters(java.lang.String,org.apache.kafka.common.config.AbstractConfig)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Config.AbstractConfig"/></param>
@@ -595,7 +595,7 @@ namespace Org.Apache.Kafka.Clients
             return SExecuteWithSignature<Java.Util.List<Org.Apache.Kafka.Common.Metrics.MetricsReporter>>(LocalBridgeClazz, "metricsReporters", "(Ljava/lang/String;Lorg/apache/kafka/common/config/AbstractConfig;)Ljava/util/List;", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/CommonClientConfigs.html#metricsReporters-java.util.Map-org.apache.kafka.common.config.AbstractConfig-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/CommonClientConfigs.html#metricsReporters(java.util.Map,org.apache.kafka.common.config.AbstractConfig)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Config.AbstractConfig"/></param>
@@ -605,7 +605,7 @@ namespace Org.Apache.Kafka.Clients
             return SExecuteWithSignature<Java.Util.List<Org.Apache.Kafka.Common.Metrics.MetricsReporter>>(LocalBridgeClazz, "metricsReporters", "(Ljava/util/Map;Lorg/apache/kafka/common/config/AbstractConfig;)Ljava/util/List;", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/CommonClientConfigs.html#metricsReporters-org.apache.kafka.common.config.AbstractConfig-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/CommonClientConfigs.html#metricsReporters(org.apache.kafka.common.config.AbstractConfig)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Config.AbstractConfig"/></param>
         /// <returns><see cref="Java.Util.List"/></returns>
@@ -614,7 +614,7 @@ namespace Org.Apache.Kafka.Clients
             return SExecuteWithSignature<Java.Util.List<Org.Apache.Kafka.Common.Metrics.MetricsReporter>>(LocalBridgeClazz, "metricsReporters", "(Lorg/apache/kafka/common/config/AbstractConfig;)Ljava/util/List;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/CommonClientConfigs.html#postProcessReconnectBackoffConfigs-org.apache.kafka.common.config.AbstractConfig-java.util.Map-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/CommonClientConfigs.html#postProcessReconnectBackoffConfigs(org.apache.kafka.common.config.AbstractConfig,java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Config.AbstractConfig"/></param>
         /// <param name="arg1"><see cref="Java.Util.Map"/></param>
@@ -624,7 +624,7 @@ namespace Org.Apache.Kafka.Clients
             return SExecuteWithSignature<Java.Util.Map<Java.Lang.String, object>>(LocalBridgeClazz, "postProcessReconnectBackoffConfigs", "(Lorg/apache/kafka/common/config/AbstractConfig;Ljava/util/Map;)Ljava/util/Map;", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/CommonClientConfigs.html#postValidateSaslMechanismConfig-org.apache.kafka.common.config.AbstractConfig-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/CommonClientConfigs.html#postValidateSaslMechanismConfig(org.apache.kafka.common.config.AbstractConfig)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Config.AbstractConfig"/></param>
         public static void PostValidateSaslMechanismConfig(Org.Apache.Kafka.Common.Config.AbstractConfig arg0)
@@ -632,7 +632,7 @@ namespace Org.Apache.Kafka.Clients
             SExecuteWithSignature(LocalBridgeClazz, "postValidateSaslMechanismConfig", "(Lorg/apache/kafka/common/config/AbstractConfig;)V", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/CommonClientConfigs.html#warnDisablingExponentialBackoff-org.apache.kafka.common.config.AbstractConfig-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/CommonClientConfigs.html#warnDisablingExponentialBackoff(org.apache.kafka.common.config.AbstractConfig)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Config.AbstractConfig"/></param>
         public static void WarnDisablingExponentialBackoff(Org.Apache.Kafka.Common.Config.AbstractConfig arg0)

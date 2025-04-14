@@ -111,7 +111,7 @@ namespace Org.Apache.Kafka.Streams.Processor
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/CommitCallback.html#onCommit--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/CommitCallback.html#onCommit()"/>
         /// </summary>
         /// <exception cref="Java.Io.IOException"/>
         public void OnCommit()

@@ -75,7 +75,7 @@ namespace Org.Apache.Kafka.Connect.Json
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-json/4.0.0/org/apache/kafka/connect/json/JsonConverterConfig.html#org.apache.kafka.connect.json.JsonConverterConfig(java.util.Map)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-json/4.0.0/org/apache/kafka/connect/json/JsonConverterConfig.html#%3Cinit%3E(java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         public JsonConverterConfig(Java.Util.Map<Java.Lang.String, object> arg0)
@@ -143,7 +143,7 @@ namespace Org.Apache.Kafka.Connect.Json
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-json/4.0.0/org/apache/kafka/connect/json/JsonConverterConfig.html#configDef--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-json/4.0.0/org/apache/kafka/connect/json/JsonConverterConfig.html#configDef()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.Config.ConfigDef"/></returns>
         public static Org.Apache.Kafka.Common.Config.ConfigDef ConfigDef()
@@ -155,7 +155,7 @@ namespace Org.Apache.Kafka.Connect.Json
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-json/4.0.0/org/apache/kafka/connect/json/JsonConverterConfig.html#replaceNullWithDefault--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-json/4.0.0/org/apache/kafka/connect/json/JsonConverterConfig.html#replaceNullWithDefault()"/>
         /// </summary>
         /// <returns><see cref="bool"/></returns>
         public bool ReplaceNullWithDefault()
@@ -163,7 +163,7 @@ namespace Org.Apache.Kafka.Connect.Json
             return IExecuteWithSignature<bool>("replaceNullWithDefault", "()Z");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-json/4.0.0/org/apache/kafka/connect/json/JsonConverterConfig.html#schemasEnabled--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-json/4.0.0/org/apache/kafka/connect/json/JsonConverterConfig.html#schemasEnabled()"/>
         /// </summary>
         /// <returns><see cref="bool"/></returns>
         public bool SchemasEnabled()
@@ -171,7 +171,7 @@ namespace Org.Apache.Kafka.Connect.Json
             return IExecuteWithSignature<bool>("schemasEnabled", "()Z");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-json/4.0.0/org/apache/kafka/connect/json/JsonConverterConfig.html#schemaCacheSize--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-json/4.0.0/org/apache/kafka/connect/json/JsonConverterConfig.html#schemaCacheSize()"/>
         /// </summary>
         /// <returns><see cref="int"/></returns>
         public int SchemaCacheSize()
@@ -179,7 +179,7 @@ namespace Org.Apache.Kafka.Connect.Json
             return IExecuteWithSignature<int>("schemaCacheSize", "()I");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-json/4.0.0/org/apache/kafka/connect/json/JsonConverterConfig.html#decimalFormat--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-json/4.0.0/org/apache/kafka/connect/json/JsonConverterConfig.html#decimalFormat()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Connect.Json.DecimalFormat"/></returns>
         public Org.Apache.Kafka.Connect.Json.DecimalFormat DecimalFormat()

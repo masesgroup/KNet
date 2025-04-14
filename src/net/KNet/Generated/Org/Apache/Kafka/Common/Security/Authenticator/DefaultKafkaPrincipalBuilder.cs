@@ -99,7 +99,7 @@ namespace Org.Apache.Kafka.Common.Security.Authenticator
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/security/authenticator/DefaultKafkaPrincipalBuilder.html#serialize-org.apache.kafka.common.security.auth.KafkaPrincipal-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/security/authenticator/DefaultKafkaPrincipalBuilder.html#serialize(org.apache.kafka.common.security.auth.KafkaPrincipal)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Security.Auth.KafkaPrincipal"/></param>
         /// <returns><see cref="byte"/></returns>
@@ -108,7 +108,7 @@ namespace Org.Apache.Kafka.Common.Security.Authenticator
             return IExecuteWithSignatureArray<byte>("serialize", "(Lorg/apache/kafka/common/security/auth/KafkaPrincipal;)[B", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/security/authenticator/DefaultKafkaPrincipalBuilder.html#build-org.apache.kafka.common.security.auth.AuthenticationContext-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/security/authenticator/DefaultKafkaPrincipalBuilder.html#build(org.apache.kafka.common.security.auth.AuthenticationContext)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Security.Auth.AuthenticationContext"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.Security.Auth.KafkaPrincipal"/></returns>
@@ -117,7 +117,7 @@ namespace Org.Apache.Kafka.Common.Security.Authenticator
             return IExecuteWithSignature<Org.Apache.Kafka.Common.Security.Auth.KafkaPrincipal>("build", "(Lorg/apache/kafka/common/security/auth/AuthenticationContext;)Lorg/apache/kafka/common/security/auth/KafkaPrincipal;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/security/authenticator/DefaultKafkaPrincipalBuilder.html#deserialize-byte[]-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/security/authenticator/DefaultKafkaPrincipalBuilder.html#deserialize(byte[])"/>
         /// </summary>
         /// <param name="arg0"><see cref="byte"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.Security.Auth.KafkaPrincipal"/></returns>

@@ -99,7 +99,7 @@ namespace Org.Apache.Kafka.Tools
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/ConnectPluginPath.html#mainNoExit-java.lang.String[]-java.io.PrintStream-java.io.PrintStream-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/ConnectPluginPath.html#mainNoExit(java.lang.String[],java.io.PrintStream,java.io.PrintStream)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Java.Io.PrintStream"/></param>
@@ -110,7 +110,7 @@ namespace Org.Apache.Kafka.Tools
             return SExecuteWithSignature<int>(LocalBridgeClazz, "mainNoExit", "([Ljava/lang/String;Ljava/io/PrintStream;Ljava/io/PrintStream;)I", arg0, arg1, arg2);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/ConnectPluginPath.html#main-java.lang.String[]-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/ConnectPluginPath.html#main(java.lang.String[])"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         public static void Main(Java.Lang.String[] arg0)

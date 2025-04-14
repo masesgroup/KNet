@@ -99,7 +99,7 @@ namespace Org.Apache.Kafka.Raft
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/Isolation.html#valueOf-java.lang.String-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/Isolation.html#valueOf(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Raft.Isolation"/></returns>
@@ -108,7 +108,7 @@ namespace Org.Apache.Kafka.Raft
             return SExecuteWithSignature<Org.Apache.Kafka.Raft.Isolation>(LocalBridgeClazz, "valueOf", "(Ljava/lang/String;)Lorg/apache/kafka/raft/Isolation;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/Isolation.html#values--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/Isolation.html#values()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Raft.Isolation"/></returns>
         public static Org.Apache.Kafka.Raft.Isolation[] Values()

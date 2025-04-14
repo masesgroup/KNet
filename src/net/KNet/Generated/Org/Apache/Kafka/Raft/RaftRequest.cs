@@ -183,7 +183,7 @@ namespace Org.Apache.Kafka.Raft
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/RaftRequest.html#correlationId--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/RaftRequest.html#correlationId()"/>
         /// </summary>
         /// <returns><see cref="int"/></returns>
         public int CorrelationId()
@@ -191,7 +191,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<int>("correlationId", "()I");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/RaftRequest.html#createdTimeMs--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/RaftRequest.html#createdTimeMs()"/>
         /// </summary>
         /// <returns><see cref="long"/></returns>
         public long CreatedTimeMs()
@@ -229,7 +229,7 @@ namespace Org.Apache.Kafka.Raft
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/RaftRequest.Inbound.html#apiVersion--"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/RaftRequest.Inbound.html#apiVersion()"/>
             /// </summary>
             /// <returns><see cref="short"/></returns>
             public short ApiVersion()
@@ -274,7 +274,7 @@ namespace Org.Apache.Kafka.Raft
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/RaftRequest.Outbound.html#destination--"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/RaftRequest.Outbound.html#destination()"/>
             /// </summary>
             /// <returns><see cref="Org.Apache.Kafka.Common.Node"/></returns>
             public Org.Apache.Kafka.Common.Node Destination()

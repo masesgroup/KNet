@@ -120,7 +120,7 @@ namespace Org.Apache.Kafka.Clients
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/GroupRebalanceConfig.html#org.apache.kafka.clients.GroupRebalanceConfig(int,int,int,java.lang.String,java.util.Optional,long,long,boolean)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/GroupRebalanceConfig.html#%3Cinit%3E(int,int,int,java.lang.String,java.util.Optional,long,long,boolean)"/>
         /// </summary>
         /// <param name="arg0"><see cref="int"/></param>
         /// <param name="arg1"><see cref="int"/></param>
@@ -135,7 +135,7 @@ namespace Org.Apache.Kafka.Clients
         {
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/GroupRebalanceConfig.html#org.apache.kafka.clients.GroupRebalanceConfig(org.apache.kafka.common.config.AbstractConfig,org.apache.kafka.clients.GroupRebalanceConfig.ProtocolType)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/GroupRebalanceConfig.html#%3Cinit%3E(org.apache.kafka.common.config.AbstractConfig,org.apache.kafka.clients.GroupRebalanceConfig.ProtocolType)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Config.AbstractConfig"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Clients.GroupRebalanceConfig.ProtocolType"/></param>
@@ -246,7 +246,7 @@ namespace Org.Apache.Kafka.Clients
 
             #region Static methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/GroupRebalanceConfig.ProtocolType.html#valueOf-java.lang.String-"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/GroupRebalanceConfig.ProtocolType.html#valueOf(java.lang.String)"/>
             /// </summary>
             /// <param name="arg0"><see cref="Java.Lang.String"/></param>
             /// <returns><see cref="Org.Apache.Kafka.Clients.GroupRebalanceConfig.ProtocolType"/></returns>
@@ -255,7 +255,7 @@ namespace Org.Apache.Kafka.Clients
                 return SExecuteWithSignature<Org.Apache.Kafka.Clients.GroupRebalanceConfig.ProtocolType>(LocalBridgeClazz, "valueOf", "(Ljava/lang/String;)Lorg/apache/kafka/clients/GroupRebalanceConfig$ProtocolType;", arg0);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/GroupRebalanceConfig.ProtocolType.html#values--"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/GroupRebalanceConfig.ProtocolType.html#values()"/>
             /// </summary>
             /// <returns><see cref="Org.Apache.Kafka.Clients.GroupRebalanceConfig.ProtocolType"/></returns>
             public static Org.Apache.Kafka.Clients.GroupRebalanceConfig.ProtocolType[] Values()

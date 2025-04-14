@@ -149,7 +149,7 @@ namespace Org.Apache.Kafka.Connect.Transforms.Predicates
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.0.0/org/apache/kafka/connect/transforms/predicates/Predicate.html#test-org.apache.kafka.connect.connector.ConnectRecord-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.0.0/org/apache/kafka/connect/transforms/predicates/Predicate.html#test(org.apache.kafka.connect.connector.ConnectRecord)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Connect.Connector.ConnectRecord"/></param>
         /// <returns><see cref="bool"/></returns>
@@ -158,7 +158,7 @@ namespace Org.Apache.Kafka.Connect.Transforms.Predicates
             return IExecuteWithSignature<bool>("test", "(Lorg/apache/kafka/connect/connector/ConnectRecord;)Z", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.0.0/org/apache/kafka/connect/transforms/predicates/Predicate.html#config--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.0.0/org/apache/kafka/connect/transforms/predicates/Predicate.html#config()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.Config.ConfigDef"/></returns>
         public Org.Apache.Kafka.Common.Config.ConfigDef Config()
@@ -166,7 +166,7 @@ namespace Org.Apache.Kafka.Connect.Transforms.Predicates
             return IExecuteWithSignature<Org.Apache.Kafka.Common.Config.ConfigDef>("config", "()Lorg/apache/kafka/common/config/ConfigDef;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.0.0/org/apache/kafka/connect/transforms/predicates/Predicate.html#close--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.0.0/org/apache/kafka/connect/transforms/predicates/Predicate.html#close()"/>
         /// </summary>
         public void Close()
         {
@@ -234,7 +234,7 @@ namespace Org.Apache.Kafka.Connect.Transforms.Predicates
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.0.0/org/apache/kafka/connect/transforms/predicates/Predicate.html#test-org.apache.kafka.connect.connector.ConnectRecord-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.0.0/org/apache/kafka/connect/transforms/predicates/Predicate.html#test(org.apache.kafka.connect.connector.ConnectRecord)"/>
         /// </summary>
         /// <param name="arg0"><typeparamref name="R"/></param>
         /// <returns><see cref="bool"/></returns>
@@ -243,7 +243,7 @@ namespace Org.Apache.Kafka.Connect.Transforms.Predicates
             return IExecuteWithSignature<bool>("test", "(Lorg/apache/kafka/connect/connector/ConnectRecord;)Z", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.0.0/org/apache/kafka/connect/transforms/predicates/Predicate.html#config--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.0.0/org/apache/kafka/connect/transforms/predicates/Predicate.html#config()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.Config.ConfigDef"/></returns>
         public Org.Apache.Kafka.Common.Config.ConfigDef Config()
@@ -251,7 +251,7 @@ namespace Org.Apache.Kafka.Connect.Transforms.Predicates
             return IExecuteWithSignature<Org.Apache.Kafka.Common.Config.ConfigDef>("config", "()Lorg/apache/kafka/common/config/ConfigDef;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.0.0/org/apache/kafka/connect/transforms/predicates/Predicate.html#close--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.0.0/org/apache/kafka/connect/transforms/predicates/Predicate.html#close()"/>
         /// </summary>
         public void Close()
         {

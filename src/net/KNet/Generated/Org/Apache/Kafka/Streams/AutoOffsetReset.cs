@@ -87,7 +87,7 @@ namespace Org.Apache.Kafka.Streams
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/AutoOffsetReset.html#byDuration-java.time.Duration-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/AutoOffsetReset.html#byDuration(java.time.Duration)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Time.Duration"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.AutoOffsetReset"/></returns>
@@ -96,7 +96,7 @@ namespace Org.Apache.Kafka.Streams
             return SExecuteWithSignature<Org.Apache.Kafka.Streams.AutoOffsetReset>(LocalBridgeClazz, "byDuration", "(Ljava/time/Duration;)Lorg/apache/kafka/streams/AutoOffsetReset;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/AutoOffsetReset.html#earliest--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/AutoOffsetReset.html#earliest()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Streams.AutoOffsetReset"/></returns>
         public static Org.Apache.Kafka.Streams.AutoOffsetReset Earliest()
@@ -104,7 +104,7 @@ namespace Org.Apache.Kafka.Streams
             return SExecuteWithSignature<Org.Apache.Kafka.Streams.AutoOffsetReset>(LocalBridgeClazz, "earliest", "()Lorg/apache/kafka/streams/AutoOffsetReset;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/AutoOffsetReset.html#latest--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/AutoOffsetReset.html#latest()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Streams.AutoOffsetReset"/></returns>
         public static Org.Apache.Kafka.Streams.AutoOffsetReset Latest()
@@ -112,7 +112,7 @@ namespace Org.Apache.Kafka.Streams
             return SExecuteWithSignature<Org.Apache.Kafka.Streams.AutoOffsetReset>(LocalBridgeClazz, "latest", "()Lorg/apache/kafka/streams/AutoOffsetReset;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/AutoOffsetReset.html#none--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/AutoOffsetReset.html#none()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Streams.AutoOffsetReset"/></returns>
         public static Org.Apache.Kafka.Streams.AutoOffsetReset None()

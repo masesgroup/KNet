@@ -75,7 +75,7 @@ namespace Org.Apache.Kafka.Common.Config
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/AbstractConfig.html#org.apache.kafka.common.config.AbstractConfig(org.apache.kafka.common.config.ConfigDef,java.util.Map,boolean)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/AbstractConfig.html#%3Cinit%3E(org.apache.kafka.common.config.ConfigDef,java.util.Map,boolean)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Config.ConfigDef"/></param>
         /// <param name="arg1"><see cref="Java.Util.Map"/></param>
@@ -85,7 +85,7 @@ namespace Org.Apache.Kafka.Common.Config
         {
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/AbstractConfig.html#org.apache.kafka.common.config.AbstractConfig(org.apache.kafka.common.config.ConfigDef,java.util.Map,java.util.Map,boolean)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/AbstractConfig.html#%3Cinit%3E(org.apache.kafka.common.config.ConfigDef,java.util.Map,java.util.Map,boolean)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Config.ConfigDef"/></param>
         /// <param name="arg1"><see cref="Java.Util.Map"/></param>
@@ -96,7 +96,7 @@ namespace Org.Apache.Kafka.Common.Config
         {
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/AbstractConfig.html#org.apache.kafka.common.config.AbstractConfig(org.apache.kafka.common.config.ConfigDef,java.util.Map)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/AbstractConfig.html#%3Cinit%3E(org.apache.kafka.common.config.ConfigDef,java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Config.ConfigDef"/></param>
         /// <param name="arg1"><see cref="Java.Util.Map"/></param>
@@ -133,7 +133,7 @@ namespace Org.Apache.Kafka.Common.Config
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/AbstractConfig.html#getConfiguredInstances-java.lang.String-java.lang.Class-java.util.Map-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/AbstractConfig.html#getConfiguredInstances(java.lang.String,java.lang.Class,java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Java.Lang.Class"/></param>
@@ -145,7 +145,7 @@ namespace Org.Apache.Kafka.Common.Config
             return IExecuteWithSignature<Java.Util.List<T>>("getConfiguredInstances", "(Ljava/lang/String;Ljava/lang/Class;Ljava/util/Map;)Ljava/util/List;", arg0, arg1, arg2);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/AbstractConfig.html#getConfiguredInstances-java.lang.String-java.lang.Class-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/AbstractConfig.html#getConfiguredInstances(java.lang.String,java.lang.Class)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Java.Lang.Class"/></param>
@@ -156,7 +156,7 @@ namespace Org.Apache.Kafka.Common.Config
             return IExecuteWithSignature<Java.Util.List<T>>("getConfiguredInstances", "(Ljava/lang/String;Ljava/lang/Class;)Ljava/util/List;", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/AbstractConfig.html#getConfiguredInstances-java.util.List-java.lang.Class-java.util.Map-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/AbstractConfig.html#getConfiguredInstances(java.util.List,java.lang.Class,java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.List"/></param>
         /// <param name="arg1"><see cref="Java.Lang.Class"/></param>
@@ -168,7 +168,7 @@ namespace Org.Apache.Kafka.Common.Config
             return IExecuteWithSignature<Java.Util.List<T>>("getConfiguredInstances", "(Ljava/util/List;Ljava/lang/Class;Ljava/util/Map;)Ljava/util/List;", arg0, arg1, arg2);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/AbstractConfig.html#getConfiguredInstance-java.lang.String-java.lang.Class-java.util.Map-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/AbstractConfig.html#getConfiguredInstance(java.lang.String,java.lang.Class,java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Java.Lang.Class"/></param>
@@ -180,7 +180,7 @@ namespace Org.Apache.Kafka.Common.Config
             return IExecuteWithSignature<T>("getConfiguredInstance", "(Ljava/lang/String;Ljava/lang/Class;Ljava/util/Map;)Ljava/lang/Object;", arg0, arg1, arg2);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/AbstractConfig.html#getConfiguredInstance-java.lang.String-java.lang.Class-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/AbstractConfig.html#getConfiguredInstance(java.lang.String,java.lang.Class)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Java.Lang.Class"/></param>
@@ -191,7 +191,7 @@ namespace Org.Apache.Kafka.Common.Config
             return IExecuteWithSignature<T>("getConfiguredInstance", "(Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/AbstractConfig.html#getBoolean-java.lang.String-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/AbstractConfig.html#getBoolean(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Java.Lang.Boolean"/></returns>
@@ -200,7 +200,7 @@ namespace Org.Apache.Kafka.Common.Config
             return IExecuteWithSignature<Java.Lang.Boolean>("getBoolean", "(Ljava/lang/String;)Ljava/lang/Boolean;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/AbstractConfig.html#getClass-java.lang.String-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/AbstractConfig.html#getClass(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Java.Lang.Class"/></returns>
@@ -209,7 +209,7 @@ namespace Org.Apache.Kafka.Common.Config
             return IExecuteWithSignature<Java.Lang.Class>("getClass", "(Ljava/lang/String;)Ljava/lang/Class;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/AbstractConfig.html#getDouble-java.lang.String-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/AbstractConfig.html#getDouble(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Java.Lang.Double"/></returns>
@@ -218,7 +218,7 @@ namespace Org.Apache.Kafka.Common.Config
             return IExecuteWithSignature<Java.Lang.Double>("getDouble", "(Ljava/lang/String;)Ljava/lang/Double;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/AbstractConfig.html#getInt-java.lang.String-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/AbstractConfig.html#getInt(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Java.Lang.Integer"/></returns>
@@ -227,7 +227,7 @@ namespace Org.Apache.Kafka.Common.Config
             return IExecuteWithSignature<Java.Lang.Integer>("getInt", "(Ljava/lang/String;)Ljava/lang/Integer;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/AbstractConfig.html#getLong-java.lang.String-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/AbstractConfig.html#getLong(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Java.Lang.Long"/></returns>
@@ -236,7 +236,7 @@ namespace Org.Apache.Kafka.Common.Config
             return IExecuteWithSignature<Java.Lang.Long>("getLong", "(Ljava/lang/String;)Ljava/lang/Long;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/AbstractConfig.html#getShort-java.lang.String-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/AbstractConfig.html#getShort(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Java.Lang.Short"/></returns>
@@ -245,7 +245,7 @@ namespace Org.Apache.Kafka.Common.Config
             return IExecuteWithSignature<Java.Lang.Short>("getShort", "(Ljava/lang/String;)Ljava/lang/Short;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/AbstractConfig.html#documentationOf-java.lang.String-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/AbstractConfig.html#documentationOf(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Java.Lang.String"/></returns>
@@ -254,7 +254,7 @@ namespace Org.Apache.Kafka.Common.Config
             return IExecuteWithSignature<Java.Lang.String>("documentationOf", "(Ljava/lang/String;)Ljava/lang/String;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/AbstractConfig.html#getString-java.lang.String-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/AbstractConfig.html#getString(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Java.Lang.String"/></returns>
@@ -263,7 +263,7 @@ namespace Org.Apache.Kafka.Common.Config
             return IExecuteWithSignature<Java.Lang.String>("getString", "(Ljava/lang/String;)Ljava/lang/String;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/AbstractConfig.html#getList-java.lang.String-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/AbstractConfig.html#getList(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Java.Util.List"/></returns>
@@ -272,7 +272,7 @@ namespace Org.Apache.Kafka.Common.Config
             return IExecuteWithSignature<Java.Util.List<Java.Lang.String>>("getList", "(Ljava/lang/String;)Ljava/util/List;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/AbstractConfig.html#nonInternalValues--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/AbstractConfig.html#nonInternalValues()"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Map"/></returns>
         public Java.Util.Map<Java.Lang.String, object> NonInternalValues()
@@ -280,7 +280,7 @@ namespace Org.Apache.Kafka.Common.Config
             return IExecuteWithSignature<Java.Util.Map<Java.Lang.String, object>>("nonInternalValues", "()Ljava/util/Map;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/AbstractConfig.html#values--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/AbstractConfig.html#values()"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Map"/></returns>
         public Java.Util.Map<Java.Lang.String, object> Values()
@@ -288,7 +288,7 @@ namespace Org.Apache.Kafka.Common.Config
             return IExecuteWithSignature<Java.Util.Map<Java.Lang.String, object>>("values", "()Ljava/util/Map;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/AbstractConfig.html#originals--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/AbstractConfig.html#originals()"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Map"/></returns>
         public Java.Util.Map<Java.Lang.String, object> Originals()
@@ -296,7 +296,7 @@ namespace Org.Apache.Kafka.Common.Config
             return IExecuteWithSignature<Java.Util.Map<Java.Lang.String, object>>("originals", "()Ljava/util/Map;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/AbstractConfig.html#originals-java.util.Map-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/AbstractConfig.html#originals(java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <returns><see cref="Java.Util.Map"/></returns>
@@ -305,7 +305,7 @@ namespace Org.Apache.Kafka.Common.Config
             return IExecuteWithSignature<Java.Util.Map<Java.Lang.String, object>>("originals", "(Ljava/util/Map;)Ljava/util/Map;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/AbstractConfig.html#originalsWithPrefix-java.lang.String-boolean-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/AbstractConfig.html#originalsWithPrefix(java.lang.String,boolean)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="bool"/></param>
@@ -315,7 +315,7 @@ namespace Org.Apache.Kafka.Common.Config
             return IExecuteWithSignature<Java.Util.Map<Java.Lang.String, object>>("originalsWithPrefix", "(Ljava/lang/String;Z)Ljava/util/Map;", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/AbstractConfig.html#originalsWithPrefix-java.lang.String-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/AbstractConfig.html#originalsWithPrefix(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Java.Util.Map"/></returns>
@@ -324,7 +324,7 @@ namespace Org.Apache.Kafka.Common.Config
             return IExecuteWithSignature<Java.Util.Map<Java.Lang.String, object>>("originalsWithPrefix", "(Ljava/lang/String;)Ljava/util/Map;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/AbstractConfig.html#valuesWithPrefixAllOrNothing-java.lang.String-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/AbstractConfig.html#valuesWithPrefixAllOrNothing(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Java.Util.Map"/></returns>
@@ -333,7 +333,7 @@ namespace Org.Apache.Kafka.Common.Config
             return IExecuteWithSignature<Java.Util.Map<Java.Lang.String, object>>("valuesWithPrefixAllOrNothing", "(Ljava/lang/String;)Ljava/util/Map;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/AbstractConfig.html#valuesWithPrefixOverride-java.lang.String-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/AbstractConfig.html#valuesWithPrefixOverride(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Java.Util.Map"/></returns>
@@ -342,7 +342,7 @@ namespace Org.Apache.Kafka.Common.Config
             return IExecuteWithSignature<Java.Util.Map<Java.Lang.String, object>>("valuesWithPrefixOverride", "(Ljava/lang/String;)Ljava/util/Map;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/AbstractConfig.html#originalsStrings--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/AbstractConfig.html#originalsStrings()"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Map"/></returns>
         public Java.Util.Map<Java.Lang.String, Java.Lang.String> OriginalsStrings()
@@ -350,7 +350,7 @@ namespace Org.Apache.Kafka.Common.Config
             return IExecuteWithSignature<Java.Util.Map<Java.Lang.String, Java.Lang.String>>("originalsStrings", "()Ljava/util/Map;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/AbstractConfig.html#unused--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/AbstractConfig.html#unused()"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Set"/></returns>
         public Java.Util.Set<Java.Lang.String> Unused()
@@ -358,7 +358,7 @@ namespace Org.Apache.Kafka.Common.Config
             return IExecuteWithSignature<Java.Util.Set<Java.Lang.String>>("unused", "()Ljava/util/Set;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/AbstractConfig.html#typeOf-java.lang.String-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/AbstractConfig.html#typeOf(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.Config.ConfigDef.Type"/></returns>
@@ -367,7 +367,7 @@ namespace Org.Apache.Kafka.Common.Config
             return IExecuteWithSignature<Org.Apache.Kafka.Common.Config.ConfigDef.Type>("typeOf", "(Ljava/lang/String;)Lorg/apache/kafka/common/config/ConfigDef$Type;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/AbstractConfig.html#getPassword-java.lang.String-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/AbstractConfig.html#getPassword(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.Config.Types.Password"/></returns>
@@ -376,7 +376,7 @@ namespace Org.Apache.Kafka.Common.Config
             return IExecuteWithSignature<Org.Apache.Kafka.Common.Config.Types.Password>("getPassword", "(Ljava/lang/String;)Lorg/apache/kafka/common/config/types/Password;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/AbstractConfig.html#ignore-java.lang.String-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/AbstractConfig.html#ignore(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         public void Ignore(Java.Lang.String arg0)
@@ -384,7 +384,7 @@ namespace Org.Apache.Kafka.Common.Config
             IExecuteWithSignature("ignore", "(Ljava/lang/String;)V", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/AbstractConfig.html#logUnused--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/AbstractConfig.html#logUnused()"/>
         /// </summary>
         public void LogUnused()
         {

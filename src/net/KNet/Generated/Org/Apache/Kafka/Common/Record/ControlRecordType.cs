@@ -135,7 +135,7 @@ namespace Org.Apache.Kafka.Common.Record
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/ControlRecordType.html#fromTypeId-short-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/ControlRecordType.html#fromTypeId(short)"/>
         /// </summary>
         /// <param name="arg0"><see cref="short"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.Record.ControlRecordType"/></returns>
@@ -144,7 +144,7 @@ namespace Org.Apache.Kafka.Common.Record
             return SExecuteWithSignature<Org.Apache.Kafka.Common.Record.ControlRecordType>(LocalBridgeClazz, "fromTypeId", "(S)Lorg/apache/kafka/common/record/ControlRecordType;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/ControlRecordType.html#parse-java.nio.ByteBuffer-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/ControlRecordType.html#parse(java.nio.ByteBuffer)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Nio.ByteBuffer"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.Record.ControlRecordType"/></returns>
@@ -153,7 +153,7 @@ namespace Org.Apache.Kafka.Common.Record
             return SExecuteWithSignature<Org.Apache.Kafka.Common.Record.ControlRecordType>(LocalBridgeClazz, "parse", "(Ljava/nio/ByteBuffer;)Lorg/apache/kafka/common/record/ControlRecordType;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/ControlRecordType.html#valueOf-java.lang.String-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/ControlRecordType.html#valueOf(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.Record.ControlRecordType"/></returns>
@@ -162,7 +162,7 @@ namespace Org.Apache.Kafka.Common.Record
             return SExecuteWithSignature<Org.Apache.Kafka.Common.Record.ControlRecordType>(LocalBridgeClazz, "valueOf", "(Ljava/lang/String;)Lorg/apache/kafka/common/record/ControlRecordType;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/ControlRecordType.html#values--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/ControlRecordType.html#values()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.Record.ControlRecordType"/></returns>
         public static Org.Apache.Kafka.Common.Record.ControlRecordType[] Values()
@@ -170,7 +170,7 @@ namespace Org.Apache.Kafka.Common.Record
             return SExecuteWithSignatureArray<Org.Apache.Kafka.Common.Record.ControlRecordType>(LocalBridgeClazz, "values", "()[Lorg/apache/kafka/common/record/ControlRecordType;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/ControlRecordType.html#parseTypeId-java.nio.ByteBuffer-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/ControlRecordType.html#parseTypeId(java.nio.ByteBuffer)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Nio.ByteBuffer"/></param>
         /// <returns><see cref="short"/></returns>
@@ -183,7 +183,7 @@ namespace Org.Apache.Kafka.Common.Record
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/ControlRecordType.html#type--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/ControlRecordType.html#type()"/>
         /// </summary>
         /// <returns><see cref="short"/></returns>
         public short Type()

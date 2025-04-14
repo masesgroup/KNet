@@ -75,7 +75,7 @@ namespace Org.Apache.Kafka.Admin
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.0.0/org/apache/kafka/admin/BrokerMetadata.html#org.apache.kafka.admin.BrokerMetadata(int,java.util.Optional)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.0.0/org/apache/kafka/admin/BrokerMetadata.html#%3Cinit%3E(int,java.util.Optional)"/>
         /// </summary>
         /// <param name="arg0"><see cref="int"/></param>
         /// <param name="arg1"><see cref="Java.Util.Optional"/></param>

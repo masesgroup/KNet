@@ -75,7 +75,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Assignment.Assignors
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/assignment/assignors/StickyTaskAssignor.html#org.apache.kafka.streams.processor.assignment.assignors.StickyTaskAssignor(boolean)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/assignment/assignors/StickyTaskAssignor.html#%3Cinit%3E(boolean)"/>
         /// </summary>
         /// <param name="arg0"><see cref="bool"/></param>
         public StickyTaskAssignor(bool arg0)
@@ -111,7 +111,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Assignment.Assignors
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/assignment/assignors/StickyTaskAssignor.html#assign-org.apache.kafka.streams.processor.assignment.ApplicationState-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/assignment/assignors/StickyTaskAssignor.html#assign(org.apache.kafka.streams.processor.assignment.ApplicationState)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Processor.Assignment.ApplicationState"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Processor.Assignment.TaskAssignor.TaskAssignment"/></returns>

@@ -75,7 +75,7 @@ namespace Org.Apache.Kafka.Clients.Admin
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/SupportedVersionRange.html#org.apache.kafka.clients.admin.SupportedVersionRange(short,short)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/SupportedVersionRange.html#%3Cinit%3E(short,short)"/>
         /// </summary>
         /// <param name="arg0"><see cref="short"/></param>
         /// <param name="arg1"><see cref="short"/></param>
@@ -100,7 +100,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/SupportedVersionRange.html#maxVersion--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/SupportedVersionRange.html#maxVersion()"/>
         /// </summary>
         /// <returns><see cref="short"/></returns>
         public short MaxVersion()
@@ -108,7 +108,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<short>("maxVersion", "()S");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/SupportedVersionRange.html#minVersion--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/SupportedVersionRange.html#minVersion()"/>
         /// </summary>
         /// <returns><see cref="short"/></returns>
         public short MinVersion()

@@ -201,7 +201,7 @@ namespace Org.Apache.Kafka.Tools.Filter
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/filter/TopicPartitionFilter.html#isTopicAllowed-java.lang.String-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/filter/TopicPartitionFilter.html#isTopicAllowed(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="bool"/></returns>
@@ -210,7 +210,7 @@ namespace Org.Apache.Kafka.Tools.Filter
             return IExecuteWithSignature<bool>("isTopicAllowed", "(Ljava/lang/String;)Z", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/filter/TopicPartitionFilter.html#isTopicPartitionAllowed-org.apache.kafka.common.TopicPartition-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/filter/TopicPartitionFilter.html#isTopicPartitionAllowed(org.apache.kafka.common.TopicPartition)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.TopicPartition"/></param>
         /// <returns><see cref="bool"/></returns>
@@ -227,7 +227,7 @@ namespace Org.Apache.Kafka.Tools.Filter
         {
             #region Constructors
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/filter/TopicPartitionFilter.CompositeTopicPartitionFilter.html#org.apache.kafka.tools.filter.TopicPartitionFilter$CompositeTopicPartitionFilter(java.util.List)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/filter/TopicPartitionFilter.CompositeTopicPartitionFilter.html#%3Cinit%3E(java.util.List)"/>
             /// </summary>
             /// <param name="arg0"><see cref="Java.Util.List"/></param>
             public CompositeTopicPartitionFilter(Java.Util.List<Org.Apache.Kafka.Tools.Filter.TopicPartitionFilter> arg0)
@@ -251,7 +251,7 @@ namespace Org.Apache.Kafka.Tools.Filter
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/filter/TopicPartitionFilter.CompositeTopicPartitionFilter.html#isTopicAllowed-java.lang.String-"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/filter/TopicPartitionFilter.CompositeTopicPartitionFilter.html#isTopicAllowed(java.lang.String)"/>
             /// </summary>
             /// <param name="arg0"><see cref="Java.Lang.String"/></param>
             /// <returns><see cref="bool"/></returns>
@@ -260,7 +260,7 @@ namespace Org.Apache.Kafka.Tools.Filter
                 return IExecuteWithSignature<bool>("isTopicAllowed", "(Ljava/lang/String;)Z", arg0);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/filter/TopicPartitionFilter.CompositeTopicPartitionFilter.html#isTopicPartitionAllowed-org.apache.kafka.common.TopicPartition-"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/filter/TopicPartitionFilter.CompositeTopicPartitionFilter.html#isTopicPartitionAllowed(org.apache.kafka.common.TopicPartition)"/>
             /// </summary>
             /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.TopicPartition"/></param>
             /// <returns><see cref="bool"/></returns>
@@ -284,7 +284,7 @@ namespace Org.Apache.Kafka.Tools.Filter
         {
             #region Constructors
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/filter/TopicPartitionFilter.TopicFilterAndPartitionFilter.html#org.apache.kafka.tools.filter.TopicPartitionFilter$TopicFilterAndPartitionFilter(org.apache.kafka.tools.filter.TopicFilter.IncludeList,org.apache.kafka.tools.filter.PartitionFilter)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/filter/TopicPartitionFilter.TopicFilterAndPartitionFilter.html#%3Cinit%3E(org.apache.kafka.tools.filter.TopicFilter.IncludeList,org.apache.kafka.tools.filter.PartitionFilter)"/>
             /// </summary>
             /// <param name="arg0"><see cref="Org.Apache.Kafka.Tools.Filter.TopicFilter.IncludeList"/></param>
             /// <param name="arg1"><see cref="Org.Apache.Kafka.Tools.Filter.PartitionFilter"/></param>
@@ -309,7 +309,7 @@ namespace Org.Apache.Kafka.Tools.Filter
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/filter/TopicPartitionFilter.TopicFilterAndPartitionFilter.html#isTopicAllowed-java.lang.String-"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/filter/TopicPartitionFilter.TopicFilterAndPartitionFilter.html#isTopicAllowed(java.lang.String)"/>
             /// </summary>
             /// <param name="arg0"><see cref="Java.Lang.String"/></param>
             /// <returns><see cref="bool"/></returns>
@@ -318,7 +318,7 @@ namespace Org.Apache.Kafka.Tools.Filter
                 return IExecuteWithSignature<bool>("isTopicAllowed", "(Ljava/lang/String;)Z", arg0);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/filter/TopicPartitionFilter.TopicFilterAndPartitionFilter.html#isTopicPartitionAllowed-org.apache.kafka.common.TopicPartition-"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/filter/TopicPartitionFilter.TopicFilterAndPartitionFilter.html#isTopicPartitionAllowed(org.apache.kafka.common.TopicPartition)"/>
             /// </summary>
             /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.TopicPartition"/></param>
             /// <returns><see cref="bool"/></returns>

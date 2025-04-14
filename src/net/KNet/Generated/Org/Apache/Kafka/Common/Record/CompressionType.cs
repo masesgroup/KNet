@@ -135,7 +135,7 @@ namespace Org.Apache.Kafka.Common.Record
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/CompressionType.html#forId-int-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/CompressionType.html#forId(int)"/>
         /// </summary>
         /// <param name="arg0"><see cref="int"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.Record.CompressionType"/></returns>
@@ -144,7 +144,7 @@ namespace Org.Apache.Kafka.Common.Record
             return SExecuteWithSignature<Org.Apache.Kafka.Common.Record.CompressionType>(LocalBridgeClazz, "forId", "(I)Lorg/apache/kafka/common/record/CompressionType;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/CompressionType.html#forName-java.lang.String-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/CompressionType.html#forName(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.Record.CompressionType"/></returns>
@@ -153,7 +153,7 @@ namespace Org.Apache.Kafka.Common.Record
             return SExecuteWithSignature<Org.Apache.Kafka.Common.Record.CompressionType>(LocalBridgeClazz, "forName", "(Ljava/lang/String;)Lorg/apache/kafka/common/record/CompressionType;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/CompressionType.html#valueOf-java.lang.String-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/CompressionType.html#valueOf(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.Record.CompressionType"/></returns>
@@ -162,7 +162,7 @@ namespace Org.Apache.Kafka.Common.Record
             return SExecuteWithSignature<Org.Apache.Kafka.Common.Record.CompressionType>(LocalBridgeClazz, "valueOf", "(Ljava/lang/String;)Lorg/apache/kafka/common/record/CompressionType;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/CompressionType.html#values--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/CompressionType.html#values()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.Record.CompressionType"/></returns>
         public static Org.Apache.Kafka.Common.Record.CompressionType[] Values()
@@ -174,7 +174,7 @@ namespace Org.Apache.Kafka.Common.Record
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/CompressionType.html#defaultLevel--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/CompressionType.html#defaultLevel()"/>
         /// </summary>
         /// <returns><see cref="int"/></returns>
         public int DefaultLevel()
@@ -182,7 +182,7 @@ namespace Org.Apache.Kafka.Common.Record
             return IExecuteWithSignature<int>("defaultLevel", "()I");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/CompressionType.html#maxLevel--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/CompressionType.html#maxLevel()"/>
         /// </summary>
         /// <returns><see cref="int"/></returns>
         public int MaxLevel()
@@ -190,7 +190,7 @@ namespace Org.Apache.Kafka.Common.Record
             return IExecuteWithSignature<int>("maxLevel", "()I");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/CompressionType.html#minLevel--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/CompressionType.html#minLevel()"/>
         /// </summary>
         /// <returns><see cref="int"/></returns>
         public int MinLevel()
@@ -198,7 +198,7 @@ namespace Org.Apache.Kafka.Common.Record
             return IExecuteWithSignature<int>("minLevel", "()I");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/CompressionType.html#levelValidator--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/CompressionType.html#levelValidator()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.Config.ConfigDef.Validator"/></returns>
         public Org.Apache.Kafka.Common.Config.ConfigDef.Validator LevelValidator()

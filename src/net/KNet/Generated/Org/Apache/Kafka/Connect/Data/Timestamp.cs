@@ -99,7 +99,7 @@ namespace Org.Apache.Kafka.Connect.Data
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.0.0/org/apache/kafka/connect/data/Timestamp.html#toLogical-org.apache.kafka.connect.data.Schema-long-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.0.0/org/apache/kafka/connect/data/Timestamp.html#toLogical(org.apache.kafka.connect.data.Schema,long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Connect.Data.Schema"/></param>
         /// <param name="arg1"><see cref="long"/></param>
@@ -109,7 +109,7 @@ namespace Org.Apache.Kafka.Connect.Data
             return SExecuteWithSignature<Java.Util.Date>(LocalBridgeClazz, "toLogical", "(Lorg/apache/kafka/connect/data/Schema;J)Ljava/util/Date;", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.0.0/org/apache/kafka/connect/data/Timestamp.html#fromLogical-org.apache.kafka.connect.data.Schema-java.util.Date-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.0.0/org/apache/kafka/connect/data/Timestamp.html#fromLogical(org.apache.kafka.connect.data.Schema,java.util.Date)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Connect.Data.Schema"/></param>
         /// <param name="arg1"><see cref="Java.Util.Date"/></param>
@@ -119,7 +119,7 @@ namespace Org.Apache.Kafka.Connect.Data
             return SExecuteWithSignature<long>(LocalBridgeClazz, "fromLogical", "(Lorg/apache/kafka/connect/data/Schema;Ljava/util/Date;)J", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.0.0/org/apache/kafka/connect/data/Timestamp.html#builder--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.0.0/org/apache/kafka/connect/data/Timestamp.html#builder()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Connect.Data.SchemaBuilder"/></returns>
         public static Org.Apache.Kafka.Connect.Data.SchemaBuilder Builder()
