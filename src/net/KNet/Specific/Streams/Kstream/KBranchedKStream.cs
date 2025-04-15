@@ -62,7 +62,7 @@ namespace MASES.KNet.Streams.Kstream
             return dict;
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/BranchedKStream.html#defaultBranch-org.apache.kafka.streams.kstream.Branched-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/BranchedKStream.html#defaultBranch(org.apache.kafka.streams.kstream.Branched)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Branched{K, V, TJVMK, TJVMV}"/></param>
         /// <returns><see cref="Java.Util.Map"/></returns>
@@ -96,7 +96,7 @@ namespace MASES.KNet.Streams.Kstream
             return dict;
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/BranchedKStream.html#branch-org.apache.kafka.streams.kstream.Predicate-org.apache.kafka.streams.kstream.Branched-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/BranchedKStream.html#branch(org.apache.kafka.streams.kstream.Predicate,org.apache.kafka.streams.kstream.Branched)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Predicate{K, V, TJVMK, TJVMV}"/></param>
         /// <param name="arg1"><see cref="Branched{K, V, TJVMK, TJVMV}"/></param>
@@ -110,7 +110,7 @@ namespace MASES.KNet.Streams.Kstream
             return new BranchedKStream<K, V, TJVMK, TJVMV>(_factory, _inner.Branch<TJVMK, TJVMV>(arg0, arg1));
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/BranchedKStream.html#branch-org.apache.kafka.streams.kstream.Predicate-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/BranchedKStream.html#branch(org.apache.kafka.streams.kstream.Predicate)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Predicate{K, V, TJVMK, TJVMV}"/></param>
         /// <typeparam name="Arg0objectSuperK"><typeparamref name="K"/></typeparam>

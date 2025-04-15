@@ -61,10 +61,7 @@ namespace MASES.KNet.Streams.Kstream
             var res = methodToExecute();
             return _valueSerializer.Serialize(null, res);
         }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/Initializer.html#apply()"/>
-        /// </summary>
-        /// <returns><typeparamref name="VA"/></returns>
+        /// <inheritdoc cref="Org.Apache.Kafka.Streams.Kstream.Initializer{VAgg}.Apply"/>
         public virtual VA Apply2()
         {
             return default;

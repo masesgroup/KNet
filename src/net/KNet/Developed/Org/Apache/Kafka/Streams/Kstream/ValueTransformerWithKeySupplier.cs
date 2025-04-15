@@ -117,7 +117,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         }
 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/ConnectedStoreProvider.html#stores--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/ConnectedStoreProvider.html#stores()"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Set"/> of <see cref="Org.Apache.Kafka.Streams.State.StoreBuilder"/></returns>
         /// <remarks>The method invokes the default implementation in the JVM interface</remarks>
@@ -127,7 +127,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         }
 
         /// <summary>
-        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/ConnectedStoreProvider.html#stores--"/>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/ConnectedStoreProvider.html#stores()"/>
         /// </summary>
         /// <remarks>If <see cref="OnStores"/> has a value it takes precedence over corresponding class method</remarks>
         public System.Func<Java.Util.Set<Org.Apache.Kafka.Streams.State.StoreBuilder>> OnStores { get; set; } = null;
@@ -140,7 +140,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         }
 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/ConnectedStoreProvider.html#stores--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/ConnectedStoreProvider.html#stores()"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Set"/> of <see cref="Org.Apache.Kafka.Streams.State.StoreBuilder"/></returns>
         /// <remarks>The method invokes the default implementation in the JVM interface using <see cref="StoresDefault"/>; override the method to implement a different behavior</remarks>

@@ -31,7 +31,7 @@ namespace MASES.KNet.Streams
         IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/TopologyConfig.html#org.apache.kafka.streams.TopologyConfig(java.lang.String,org.apache.kafka.streams.StreamsConfig,java.util.Properties)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/TopologyConfig.html#%3Cinit%3E(java.lang.String,org.apache.kafka.streams.StreamsConfig,java.util.Properties)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <param name="arg1"><see cref="StreamsConfigBuilder"/></param>
@@ -42,7 +42,7 @@ namespace MASES.KNet.Streams
             _factory = arg1;
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/TopologyConfig.html#org.apache.kafka.streams.TopologyConfig(org.apache.kafka.streams.StreamsConfig)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/TopologyConfig.html#%3Cinit%3E(org.apache.kafka.streams.StreamsConfig)"/>
         /// </summary>
         /// <param name="arg0"><see cref="StreamsConfigBuilder"/></param>
         public TopologyConfig(StreamsConfigBuilder arg0)

@@ -63,7 +63,7 @@ namespace MASES.KNet.Streams.Kstream
             }
         }
         /// <summary>
-        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/Aggregator.html#apply-java.lang.Object-java.lang.Object-java.lang.Object-"/>
+        /// Handler for <see cref="Org.Apache.Kafka.Streams.Kstream.Aggregator{K, V, VAgg}.Apply(K, V, VAgg)"/>
         /// </summary>
         /// <remarks>If <see cref="OnApply"/> has a value it takes precedence over corresponding class method <see cref="Apply()"/></remarks>
         public new System.Func<Aggregator<K, V, VA, TJVMK, TJVMV, TJVMVA>, VA> OnApply { get; set; } = null;
@@ -91,10 +91,7 @@ namespace MASES.KNet.Streams.Kstream
             _vaSerializer ??= Factory?.BuildValueSerDes<VA, TJVMVA>();
             return _vaSerializer.Serialize(null, res);
         }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/Aggregator.html#apply-java.lang.Object-java.lang.Object-java.lang.Object-"/>
-        /// </summary>
-        /// <returns><typeparamref name="VA"/></returns>
+        /// <inheritdoc cref="Org.Apache.Kafka.Streams.Kstream.Aggregator{K, V, VAgg}.Apply(K, V, VAgg)"/>
         public virtual VA Apply()
         {
             return default;

@@ -47,7 +47,7 @@ namespace MASES.KNet.Streams.Processor.Api
         public static implicit operator Org.Apache.Kafka.Streams.Processor.Api.Record<TJVMK, TJVMV>(Record<K, V, TJVMK, TJVMV> t) => t._record;
 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/api/Record.html#withKey-java.lang.Object-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/api/Record.html#withKey(java.lang.Object)"/>
         /// </summary>
         /// <param name="arg0"><typeparamref name="NewK"/></param>
         /// <typeparam name="NewK"></typeparam>
@@ -60,7 +60,7 @@ namespace MASES.KNet.Streams.Processor.Api
             return new Record<NewK, V, TJVMNewK, TJVMV>(_builder, record, _metadata);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/api/Record.html#withValue-java.lang.Object-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/api/Record.html#withValue(java.lang.Object)"/>
         /// </summary>
         /// <param name="arg0"><typeparamref name="NewV"/></param>
         /// <typeparam name="NewV"></typeparam>
@@ -110,7 +110,7 @@ namespace MASES.KNet.Streams.Processor.Api
         /// <returns><see cref="Org.Apache.Kafka.Common.Header.Headers"/></returns>
         public Org.Apache.Kafka.Common.Header.Headers Headers => _record.Headers();
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/api/Record.html#withHeaders-org.apache.kafka.common.header.Headers-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/api/Record.html#withHeaders(org.apache.kafka.common.header.Headers)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Header.Headers"/></param>
         /// <returns><see cref="Record{K, V, TJVMK, TJVMV}"/></returns>
@@ -120,7 +120,7 @@ namespace MASES.KNet.Streams.Processor.Api
             return new Record<K, V, TJVMK, TJVMV>(_builder, record, _metadata);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/api/Record.html#withTimestamp-long-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/api/Record.html#withTimestamp(long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="long"/></param>
         /// <returns><see cref="Record{K, V, TJVMK, TJVMV}"/></returns>
@@ -130,7 +130,7 @@ namespace MASES.KNet.Streams.Processor.Api
             return new Record<K, V, TJVMK, TJVMV>(_builder, record, _metadata);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/api/Record.html#withTimestamp-long-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/api/Record.html#withTimestamp(long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="long"/></param>
         /// <returns><see cref="Record{K, V, TJVMK, TJVMV}"/></returns>
