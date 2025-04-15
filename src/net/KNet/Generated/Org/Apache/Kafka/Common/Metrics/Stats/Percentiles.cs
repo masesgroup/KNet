@@ -120,7 +120,7 @@ namespace Org.Apache.Kafka.Common.Metrics.Stats
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/metrics/stats/Percentiles.html#%3Cinit%3E(int,double,double,org.apache.kafka.common.metrics.stats.Percentiles.BucketSizing,org.apache.kafka.common.metrics.stats.Percentile[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/metrics/stats/Percentiles.html#%3Cinit%3E(int,double,double,org.apache.kafka.common.metrics.stats.Percentiles.BucketSizing,org.apache.kafka.common.metrics.stats.Percentile...)"/>
         /// </summary>
         /// <param name="arg0"><see cref="int"/></param>
         /// <param name="arg1"><see cref="double"/></param>
@@ -132,7 +132,7 @@ namespace Org.Apache.Kafka.Common.Metrics.Stats
         {
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/metrics/stats/Percentiles.html#%3Cinit%3E(int,double,org.apache.kafka.common.metrics.stats.Percentiles.BucketSizing,org.apache.kafka.common.metrics.stats.Percentile[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/metrics/stats/Percentiles.html#%3Cinit%3E(int,double,org.apache.kafka.common.metrics.stats.Percentiles.BucketSizing,org.apache.kafka.common.metrics.stats.Percentile...)"/>
         /// </summary>
         /// <param name="arg0"><see cref="int"/></param>
         /// <param name="arg1"><see cref="double"/></param>
