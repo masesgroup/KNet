@@ -75,7 +75,7 @@ namespace Org.Apache.Kafka.Common.Metrics.Stats
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/metrics/stats/Frequencies.html#%3Cinit%3E(int,double,double,org.apache.kafka.common.metrics.stats.Frequency[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/metrics/stats/Frequencies.html#%3Cinit%3E(int,double,double,org.apache.kafka.common.metrics.stats.Frequency...)"/>
         /// </summary>
         /// <param name="arg0"><see cref="int"/></param>
         /// <param name="arg1"><see cref="double"/></param>
