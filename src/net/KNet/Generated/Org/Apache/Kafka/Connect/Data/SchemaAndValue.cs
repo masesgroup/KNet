@@ -75,7 +75,7 @@ namespace Org.Apache.Kafka.Connect.Data
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.0.0/org/apache/kafka/connect/data/SchemaAndValue.html#org.apache.kafka.connect.data.SchemaAndValue(org.apache.kafka.connect.data.Schema,java.lang.Object)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.0.0/org/apache/kafka/connect/data/SchemaAndValue.html#%3Cinit%3E(org.apache.kafka.connect.data.Schema,java.lang.Object)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Connect.Data.Schema"/></param>
         /// <param name="arg1"><see cref="object"/></param>
@@ -106,7 +106,7 @@ namespace Org.Apache.Kafka.Connect.Data
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.0.0/org/apache/kafka/connect/data/SchemaAndValue.html#value--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.0.0/org/apache/kafka/connect/data/SchemaAndValue.html#value()"/>
         /// </summary>
         /// <returns><see cref="object"/></returns>
         public object Value()
@@ -114,7 +114,7 @@ namespace Org.Apache.Kafka.Connect.Data
             return IExecuteWithSignature("value", "()Ljava/lang/Object;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.0.0/org/apache/kafka/connect/data/SchemaAndValue.html#schema--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.0.0/org/apache/kafka/connect/data/SchemaAndValue.html#schema()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Connect.Data.Schema"/></returns>
         public Org.Apache.Kafka.Connect.Data.Schema Schema()

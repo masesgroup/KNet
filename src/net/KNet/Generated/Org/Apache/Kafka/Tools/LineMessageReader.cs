@@ -91,7 +91,7 @@ namespace Org.Apache.Kafka.Tools
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/LineMessageReader.html#readRecords-java.io.InputStream-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/LineMessageReader.html#readRecords(java.io.InputStream)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Io.InputStream"/></param>
         /// <returns><see cref="Java.Util.Iterator"/></returns>
@@ -100,7 +100,7 @@ namespace Org.Apache.Kafka.Tools
             return IExecuteWithSignature<Java.Util.Iterator<Org.Apache.Kafka.Clients.Producer.ProducerRecord<byte[], byte[]>>>("readRecords", "(Ljava/io/InputStream;)Ljava/util/Iterator;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/LineMessageReader.html#configure-java.util.Map-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/LineMessageReader.html#configure(java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         public void Configure(Java.Util.Map<Java.Lang.String, object> arg0)

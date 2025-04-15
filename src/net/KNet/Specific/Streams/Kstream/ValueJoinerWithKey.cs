@@ -66,7 +66,7 @@ namespace MASES.KNet.Streams.Kstream
             }
         }
         /// <summary>
-        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/kstream/ValueJoinerWithKey.html#apply-java.lang.Object-java.lang.Object-java.lang.Object-"/>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/ValueJoinerWithKey.html#apply(java.lang.Object,java.lang.Object,java.lang.Object)"/>
         /// </summary>
         /// <remarks>If <see cref="OnApply"/> has a value it takes precedence over corresponding <see cref="Apply()"/> class method</remarks>
         public new System.Func<ValueJoinerWithKey<K1, V1, V2, VR, TJVMK1, TJVMV1, TJVMV2, TJVMVR>, VR> OnApply { get; set; } = null;
@@ -94,10 +94,7 @@ namespace MASES.KNet.Streams.Kstream
             _vrSerializer ??= Factory?.BuildValueSerDes<VR, TJVMVR>();
             return _vrSerializer.Serialize(null, res);
         }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/kstream/ValueJoinerWithKey.html#apply-java.lang.Object-java.lang.Object-java.lang.Object-"/>
-        /// </summary>
-        /// <returns><typeparamref name="VR"/></returns>
+        /// <inheritdoc cref="Org.Apache.Kafka.Streams.Kstream.ValueJoinerWithKey{K1, V1, V2, VR}.Apply(K1, V1, V2)"/>
         public virtual VR Apply()
         {
             return default;

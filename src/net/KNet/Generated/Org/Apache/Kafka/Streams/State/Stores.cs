@@ -87,7 +87,7 @@ namespace Org.Apache.Kafka.Streams.State
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/state/Stores.html#keyValueStoreBuilder-org.apache.kafka.streams.state.KeyValueBytesStoreSupplier-org.apache.kafka.common.serialization.Serde-org.apache.kafka.common.serialization.Serde-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/state/Stores.html#keyValueStoreBuilder(org.apache.kafka.streams.state.KeyValueBytesStoreSupplier,org.apache.kafka.common.serialization.Serde,org.apache.kafka.common.serialization.Serde)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.State.KeyValueBytesStoreSupplier"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></param>
@@ -100,7 +100,7 @@ namespace Org.Apache.Kafka.Streams.State
             return SExecuteWithSignature<Org.Apache.Kafka.Streams.State.StoreBuilder<Org.Apache.Kafka.Streams.State.KeyValueStore<K, V>>>(LocalBridgeClazz, "keyValueStoreBuilder", "(Lorg/apache/kafka/streams/state/KeyValueBytesStoreSupplier;Lorg/apache/kafka/common/serialization/Serde;Lorg/apache/kafka/common/serialization/Serde;)Lorg/apache/kafka/streams/state/StoreBuilder;", arg0, arg1, arg2);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/state/Stores.html#sessionStoreBuilder-org.apache.kafka.streams.state.SessionBytesStoreSupplier-org.apache.kafka.common.serialization.Serde-org.apache.kafka.common.serialization.Serde-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/state/Stores.html#sessionStoreBuilder(org.apache.kafka.streams.state.SessionBytesStoreSupplier,org.apache.kafka.common.serialization.Serde,org.apache.kafka.common.serialization.Serde)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.State.SessionBytesStoreSupplier"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></param>
@@ -113,7 +113,7 @@ namespace Org.Apache.Kafka.Streams.State
             return SExecuteWithSignature<Org.Apache.Kafka.Streams.State.StoreBuilder<Org.Apache.Kafka.Streams.State.SessionStore<K, V>>>(LocalBridgeClazz, "sessionStoreBuilder", "(Lorg/apache/kafka/streams/state/SessionBytesStoreSupplier;Lorg/apache/kafka/common/serialization/Serde;Lorg/apache/kafka/common/serialization/Serde;)Lorg/apache/kafka/streams/state/StoreBuilder;", arg0, arg1, arg2);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/state/Stores.html#timestampedKeyValueStoreBuilder-org.apache.kafka.streams.state.KeyValueBytesStoreSupplier-org.apache.kafka.common.serialization.Serde-org.apache.kafka.common.serialization.Serde-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/state/Stores.html#timestampedKeyValueStoreBuilder(org.apache.kafka.streams.state.KeyValueBytesStoreSupplier,org.apache.kafka.common.serialization.Serde,org.apache.kafka.common.serialization.Serde)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.State.KeyValueBytesStoreSupplier"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></param>
@@ -126,7 +126,7 @@ namespace Org.Apache.Kafka.Streams.State
             return SExecuteWithSignature<Org.Apache.Kafka.Streams.State.StoreBuilder<Org.Apache.Kafka.Streams.State.TimestampedKeyValueStore<K, V>>>(LocalBridgeClazz, "timestampedKeyValueStoreBuilder", "(Lorg/apache/kafka/streams/state/KeyValueBytesStoreSupplier;Lorg/apache/kafka/common/serialization/Serde;Lorg/apache/kafka/common/serialization/Serde;)Lorg/apache/kafka/streams/state/StoreBuilder;", arg0, arg1, arg2);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/state/Stores.html#timestampedWindowStoreBuilder-org.apache.kafka.streams.state.WindowBytesStoreSupplier-org.apache.kafka.common.serialization.Serde-org.apache.kafka.common.serialization.Serde-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/state/Stores.html#timestampedWindowStoreBuilder(org.apache.kafka.streams.state.WindowBytesStoreSupplier,org.apache.kafka.common.serialization.Serde,org.apache.kafka.common.serialization.Serde)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.State.WindowBytesStoreSupplier"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></param>
@@ -139,7 +139,7 @@ namespace Org.Apache.Kafka.Streams.State
             return SExecuteWithSignature<Org.Apache.Kafka.Streams.State.StoreBuilder<Org.Apache.Kafka.Streams.State.TimestampedWindowStore<K, V>>>(LocalBridgeClazz, "timestampedWindowStoreBuilder", "(Lorg/apache/kafka/streams/state/WindowBytesStoreSupplier;Lorg/apache/kafka/common/serialization/Serde;Lorg/apache/kafka/common/serialization/Serde;)Lorg/apache/kafka/streams/state/StoreBuilder;", arg0, arg1, arg2);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/state/Stores.html#versionedKeyValueStoreBuilder-org.apache.kafka.streams.state.VersionedBytesStoreSupplier-org.apache.kafka.common.serialization.Serde-org.apache.kafka.common.serialization.Serde-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/state/Stores.html#versionedKeyValueStoreBuilder(org.apache.kafka.streams.state.VersionedBytesStoreSupplier,org.apache.kafka.common.serialization.Serde,org.apache.kafka.common.serialization.Serde)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.State.VersionedBytesStoreSupplier"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></param>
@@ -152,7 +152,7 @@ namespace Org.Apache.Kafka.Streams.State
             return SExecuteWithSignature<Org.Apache.Kafka.Streams.State.StoreBuilder<Org.Apache.Kafka.Streams.State.VersionedKeyValueStore<K, V>>>(LocalBridgeClazz, "versionedKeyValueStoreBuilder", "(Lorg/apache/kafka/streams/state/VersionedBytesStoreSupplier;Lorg/apache/kafka/common/serialization/Serde;Lorg/apache/kafka/common/serialization/Serde;)Lorg/apache/kafka/streams/state/StoreBuilder;", arg0, arg1, arg2);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/state/Stores.html#windowStoreBuilder-org.apache.kafka.streams.state.WindowBytesStoreSupplier-org.apache.kafka.common.serialization.Serde-org.apache.kafka.common.serialization.Serde-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/state/Stores.html#windowStoreBuilder(org.apache.kafka.streams.state.WindowBytesStoreSupplier,org.apache.kafka.common.serialization.Serde,org.apache.kafka.common.serialization.Serde)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.State.WindowBytesStoreSupplier"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></param>
@@ -165,7 +165,7 @@ namespace Org.Apache.Kafka.Streams.State
             return SExecuteWithSignature<Org.Apache.Kafka.Streams.State.StoreBuilder<Org.Apache.Kafka.Streams.State.WindowStore<K, V>>>(LocalBridgeClazz, "windowStoreBuilder", "(Lorg/apache/kafka/streams/state/WindowBytesStoreSupplier;Lorg/apache/kafka/common/serialization/Serde;Lorg/apache/kafka/common/serialization/Serde;)Lorg/apache/kafka/streams/state/StoreBuilder;", arg0, arg1, arg2);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/state/Stores.html#inMemoryKeyValueStore-java.lang.String-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/state/Stores.html#inMemoryKeyValueStore(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.State.KeyValueBytesStoreSupplier"/></returns>
@@ -174,7 +174,7 @@ namespace Org.Apache.Kafka.Streams.State
             return SExecuteWithSignature<Org.Apache.Kafka.Streams.State.KeyValueBytesStoreSupplier>(LocalBridgeClazz, "inMemoryKeyValueStore", "(Ljava/lang/String;)Lorg/apache/kafka/streams/state/KeyValueBytesStoreSupplier;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/state/Stores.html#lruMap-java.lang.String-int-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/state/Stores.html#lruMap(java.lang.String,int)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="int"/></param>
@@ -184,7 +184,7 @@ namespace Org.Apache.Kafka.Streams.State
             return SExecuteWithSignature<Org.Apache.Kafka.Streams.State.KeyValueBytesStoreSupplier>(LocalBridgeClazz, "lruMap", "(Ljava/lang/String;I)Lorg/apache/kafka/streams/state/KeyValueBytesStoreSupplier;", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/state/Stores.html#persistentKeyValueStore-java.lang.String-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/state/Stores.html#persistentKeyValueStore(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.State.KeyValueBytesStoreSupplier"/></returns>
@@ -193,7 +193,7 @@ namespace Org.Apache.Kafka.Streams.State
             return SExecuteWithSignature<Org.Apache.Kafka.Streams.State.KeyValueBytesStoreSupplier>(LocalBridgeClazz, "persistentKeyValueStore", "(Ljava/lang/String;)Lorg/apache/kafka/streams/state/KeyValueBytesStoreSupplier;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/state/Stores.html#persistentTimestampedKeyValueStore-java.lang.String-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/state/Stores.html#persistentTimestampedKeyValueStore(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.State.KeyValueBytesStoreSupplier"/></returns>
@@ -202,7 +202,7 @@ namespace Org.Apache.Kafka.Streams.State
             return SExecuteWithSignature<Org.Apache.Kafka.Streams.State.KeyValueBytesStoreSupplier>(LocalBridgeClazz, "persistentTimestampedKeyValueStore", "(Ljava/lang/String;)Lorg/apache/kafka/streams/state/KeyValueBytesStoreSupplier;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/state/Stores.html#inMemorySessionStore-java.lang.String-java.time.Duration-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/state/Stores.html#inMemorySessionStore(java.lang.String,java.time.Duration)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Java.Time.Duration"/></param>
@@ -212,7 +212,7 @@ namespace Org.Apache.Kafka.Streams.State
             return SExecuteWithSignature<Org.Apache.Kafka.Streams.State.SessionBytesStoreSupplier>(LocalBridgeClazz, "inMemorySessionStore", "(Ljava/lang/String;Ljava/time/Duration;)Lorg/apache/kafka/streams/state/SessionBytesStoreSupplier;", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/state/Stores.html#persistentSessionStore-java.lang.String-java.time.Duration-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/state/Stores.html#persistentSessionStore(java.lang.String,java.time.Duration)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Java.Time.Duration"/></param>
@@ -222,7 +222,7 @@ namespace Org.Apache.Kafka.Streams.State
             return SExecuteWithSignature<Org.Apache.Kafka.Streams.State.SessionBytesStoreSupplier>(LocalBridgeClazz, "persistentSessionStore", "(Ljava/lang/String;Ljava/time/Duration;)Lorg/apache/kafka/streams/state/SessionBytesStoreSupplier;", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/state/Stores.html#persistentVersionedKeyValueStore-java.lang.String-java.time.Duration-java.time.Duration-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/state/Stores.html#persistentVersionedKeyValueStore(java.lang.String,java.time.Duration,java.time.Duration)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Java.Time.Duration"/></param>
@@ -233,7 +233,7 @@ namespace Org.Apache.Kafka.Streams.State
             return SExecuteWithSignature<Org.Apache.Kafka.Streams.State.VersionedBytesStoreSupplier>(LocalBridgeClazz, "persistentVersionedKeyValueStore", "(Ljava/lang/String;Ljava/time/Duration;Ljava/time/Duration;)Lorg/apache/kafka/streams/state/VersionedBytesStoreSupplier;", arg0, arg1, arg2);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/state/Stores.html#persistentVersionedKeyValueStore-java.lang.String-java.time.Duration-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/state/Stores.html#persistentVersionedKeyValueStore(java.lang.String,java.time.Duration)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Java.Time.Duration"/></param>
@@ -243,7 +243,7 @@ namespace Org.Apache.Kafka.Streams.State
             return SExecuteWithSignature<Org.Apache.Kafka.Streams.State.VersionedBytesStoreSupplier>(LocalBridgeClazz, "persistentVersionedKeyValueStore", "(Ljava/lang/String;Ljava/time/Duration;)Lorg/apache/kafka/streams/state/VersionedBytesStoreSupplier;", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/state/Stores.html#inMemoryWindowStore-java.lang.String-java.time.Duration-java.time.Duration-boolean-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/state/Stores.html#inMemoryWindowStore(java.lang.String,java.time.Duration,java.time.Duration,boolean)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Java.Time.Duration"/></param>
@@ -256,7 +256,7 @@ namespace Org.Apache.Kafka.Streams.State
             return SExecuteWithSignature<Org.Apache.Kafka.Streams.State.WindowBytesStoreSupplier>(LocalBridgeClazz, "inMemoryWindowStore", "(Ljava/lang/String;Ljava/time/Duration;Ljava/time/Duration;Z)Lorg/apache/kafka/streams/state/WindowBytesStoreSupplier;", arg0, arg1, arg2, arg3);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/state/Stores.html#persistentTimestampedWindowStore-java.lang.String-java.time.Duration-java.time.Duration-boolean-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/state/Stores.html#persistentTimestampedWindowStore(java.lang.String,java.time.Duration,java.time.Duration,boolean)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Java.Time.Duration"/></param>
@@ -269,7 +269,7 @@ namespace Org.Apache.Kafka.Streams.State
             return SExecuteWithSignature<Org.Apache.Kafka.Streams.State.WindowBytesStoreSupplier>(LocalBridgeClazz, "persistentTimestampedWindowStore", "(Ljava/lang/String;Ljava/time/Duration;Ljava/time/Duration;Z)Lorg/apache/kafka/streams/state/WindowBytesStoreSupplier;", arg0, arg1, arg2, arg3);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/state/Stores.html#persistentWindowStore-java.lang.String-java.time.Duration-java.time.Duration-boolean-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/state/Stores.html#persistentWindowStore(java.lang.String,java.time.Duration,java.time.Duration,boolean)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Java.Time.Duration"/></param>

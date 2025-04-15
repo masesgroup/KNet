@@ -87,7 +87,7 @@ namespace Org.Apache.Kafka.Tools
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/GetOffsetShell.html#main-java.lang.String[]-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/GetOffsetShell.html#main(java.lang.String[])"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         public static void Main(Java.Lang.String[] arg0)
@@ -99,7 +99,7 @@ namespace Org.Apache.Kafka.Tools
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/GetOffsetShell.html#createTopicPartitionFilterWithPatternList-java.lang.String-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/GetOffsetShell.html#createTopicPartitionFilterWithPatternList(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Tools.Filter.TopicPartitionFilter"/></returns>
@@ -108,7 +108,7 @@ namespace Org.Apache.Kafka.Tools
             return IExecuteWithSignature<Org.Apache.Kafka.Tools.Filter.TopicPartitionFilter>("createTopicPartitionFilterWithPatternList", "(Ljava/lang/String;)Lorg/apache/kafka/tools/filter/TopicPartitionFilter;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/GetOffsetShell.html#createTopicPartitionFilterWithTopicAndPartitionPattern-java.lang.String-java.lang.String-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/GetOffsetShell.html#createTopicPartitionFilterWithTopicAndPartitionPattern(java.lang.String,java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Java.Lang.String"/></param>

@@ -183,7 +183,7 @@ namespace Org.Apache.Kafka.Raft
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/RaftResponse.html#correlationId--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/RaftResponse.html#correlationId()"/>
         /// </summary>
         /// <returns><see cref="int"/></returns>
         public int CorrelationId()
@@ -215,7 +215,7 @@ namespace Org.Apache.Kafka.Raft
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/RaftResponse.Inbound.html#source--"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/RaftResponse.Inbound.html#source()"/>
             /// </summary>
             /// <returns><see cref="Org.Apache.Kafka.Common.Node"/></returns>
             public Org.Apache.Kafka.Common.Node Source()

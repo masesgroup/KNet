@@ -111,7 +111,7 @@ namespace Org.Apache.Kafka.Common.Config
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/SslClientAuth.html#forConfig-java.lang.String-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/SslClientAuth.html#forConfig(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.Config.SslClientAuth"/></returns>
@@ -120,7 +120,7 @@ namespace Org.Apache.Kafka.Common.Config
             return SExecuteWithSignature<Org.Apache.Kafka.Common.Config.SslClientAuth>(LocalBridgeClazz, "forConfig", "(Ljava/lang/String;)Lorg/apache/kafka/common/config/SslClientAuth;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/SslClientAuth.html#valueOf-java.lang.String-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/SslClientAuth.html#valueOf(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.Config.SslClientAuth"/></returns>
@@ -129,7 +129,7 @@ namespace Org.Apache.Kafka.Common.Config
             return SExecuteWithSignature<Org.Apache.Kafka.Common.Config.SslClientAuth>(LocalBridgeClazz, "valueOf", "(Ljava/lang/String;)Lorg/apache/kafka/common/config/SslClientAuth;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/SslClientAuth.html#values--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/SslClientAuth.html#values()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.Config.SslClientAuth"/></returns>
         public static Org.Apache.Kafka.Common.Config.SslClientAuth[] Values()

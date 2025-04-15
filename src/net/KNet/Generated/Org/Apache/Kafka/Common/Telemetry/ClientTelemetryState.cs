@@ -129,7 +129,7 @@ namespace Org.Apache.Kafka.Common.Telemetry
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/telemetry/ClientTelemetryState.html#valueOf-java.lang.String-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/telemetry/ClientTelemetryState.html#valueOf(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.Telemetry.ClientTelemetryState"/></returns>
@@ -138,7 +138,7 @@ namespace Org.Apache.Kafka.Common.Telemetry
             return SExecuteWithSignature<Org.Apache.Kafka.Common.Telemetry.ClientTelemetryState>(LocalBridgeClazz, "valueOf", "(Ljava/lang/String;)Lorg/apache/kafka/common/telemetry/ClientTelemetryState;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/telemetry/ClientTelemetryState.html#values--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/telemetry/ClientTelemetryState.html#values()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.Telemetry.ClientTelemetryState"/></returns>
         public static Org.Apache.Kafka.Common.Telemetry.ClientTelemetryState[] Values()
@@ -150,7 +150,7 @@ namespace Org.Apache.Kafka.Common.Telemetry
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/telemetry/ClientTelemetryState.html#validateTransition-org.apache.kafka.common.telemetry.ClientTelemetryState-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/telemetry/ClientTelemetryState.html#validateTransition(org.apache.kafka.common.telemetry.ClientTelemetryState)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Telemetry.ClientTelemetryState"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.Telemetry.ClientTelemetryState"/></returns>

@@ -75,7 +75,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Assignment
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/assignment/ProcessId.html#org.apache.kafka.streams.processor.assignment.ProcessId(java.util.UUID)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/assignment/ProcessId.html#%3Cinit%3E(java.util.UUID)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.UUID"/></param>
         public ProcessId(Java.Util.UUID arg0)
@@ -95,7 +95,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Assignment
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/assignment/ProcessId.html#randomProcessId--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/assignment/ProcessId.html#randomProcessId()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Processor.Assignment.ProcessId"/></returns>
         public static Org.Apache.Kafka.Streams.Processor.Assignment.ProcessId RandomProcessId()
@@ -107,7 +107,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Assignment
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/assignment/ProcessId.html#compareTo-java.lang.Object-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/assignment/ProcessId.html#compareTo(java.lang.Object)"/>
         /// </summary>
         /// <param name="arg0"><see cref="object"/></param>
         /// <returns><see cref="int"/></returns>
@@ -116,7 +116,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Assignment
             return IExecuteWithSignature<int>("compareTo", "(Ljava/lang/Object;)I", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/assignment/ProcessId.html#compareTo-org.apache.kafka.streams.processor.assignment.ProcessId-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/assignment/ProcessId.html#compareTo(org.apache.kafka.streams.processor.assignment.ProcessId)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Processor.Assignment.ProcessId"/></param>
         /// <returns><see cref="int"/></returns>
@@ -125,7 +125,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Assignment
             return IExecuteWithSignature<int>("compareTo", "(Lorg/apache/kafka/streams/processor/assignment/ProcessId;)I", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/assignment/ProcessId.html#id--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/assignment/ProcessId.html#id()"/>
         /// </summary>
         /// <returns><see cref="Java.Util.UUID"/></returns>
         public Java.Util.UUID Id()

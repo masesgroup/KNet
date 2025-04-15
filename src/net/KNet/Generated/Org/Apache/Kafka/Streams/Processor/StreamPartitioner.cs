@@ -191,7 +191,7 @@ namespace Org.Apache.Kafka.Streams.Processor
         }
 
         /// <summary>
-        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/StreamPartitioner.html#partitions-java.lang.String-java.lang.Object-java.lang.Object-int-"/>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/StreamPartitioner.html#partitions(java.lang.String,java.lang.Object,java.lang.Object,int)"/>
         /// </summary>
         /// <remarks>If <see cref="OnPartitions"/> has a value it takes precedence over corresponding class method</remarks>
         public global::System.Func<Java.Lang.String, object, object, int, Java.Util.Optional> OnPartitions { get; set; } = null;
@@ -206,7 +206,7 @@ namespace Org.Apache.Kafka.Streams.Processor
         }
 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/StreamPartitioner.html#partitions-java.lang.String-java.lang.Object-java.lang.Object-int-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/StreamPartitioner.html#partitions(java.lang.String,java.lang.Object,java.lang.Object,int)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="object"/></param>
@@ -249,7 +249,7 @@ namespace Org.Apache.Kafka.Streams.Processor
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/StreamPartitioner.html#partitions-java.lang.String-java.lang.Object-java.lang.Object-int-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/StreamPartitioner.html#partitions(java.lang.String,java.lang.Object,java.lang.Object,int)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="object"/></param>
@@ -319,7 +319,7 @@ namespace Org.Apache.Kafka.Streams.Processor
         }
 
         /// <summary>
-        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/StreamPartitioner.html#partitions-java.lang.String-java.lang.Object-java.lang.Object-int-"/>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/StreamPartitioner.html#partitions(java.lang.String,java.lang.Object,java.lang.Object,int)"/>
         /// </summary>
         /// <remarks>If <see cref="OnPartitions"/> has a value it takes precedence over corresponding class method</remarks>
         public global::System.Func<Java.Lang.String, K, V, int, Java.Util.Optional<Java.Util.Set<Java.Lang.Integer>>> OnPartitions { get; set; } = null;
@@ -334,7 +334,7 @@ namespace Org.Apache.Kafka.Streams.Processor
         }
 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/StreamPartitioner.html#partitions-java.lang.String-java.lang.Object-java.lang.Object-int-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/StreamPartitioner.html#partitions(java.lang.String,java.lang.Object,java.lang.Object,int)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><typeparamref name="K"/></param>
@@ -377,7 +377,7 @@ namespace Org.Apache.Kafka.Streams.Processor
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/StreamPartitioner.html#partitions-java.lang.String-java.lang.Object-java.lang.Object-int-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/StreamPartitioner.html#partitions(java.lang.String,java.lang.Object,java.lang.Object,int)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><typeparamref name="K"/></param>

@@ -120,7 +120,7 @@ namespace Org.Apache.Kafka.Common.Config
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/ConfigResource.html#org.apache.kafka.common.config.ConfigResource(org.apache.kafka.common.config.ConfigResource.Type,java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/ConfigResource.html#%3Cinit%3E(org.apache.kafka.common.config.ConfigResource.Type,java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Config.ConfigResource.Type"/></param>
         /// <param name="arg1"><see cref="Java.Lang.String"/></param>
@@ -145,7 +145,7 @@ namespace Org.Apache.Kafka.Common.Config
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/ConfigResource.html#isDefault--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/ConfigResource.html#isDefault()"/>
         /// </summary>
         /// <returns><see cref="bool"/></returns>
         public bool IsDefault()
@@ -153,7 +153,7 @@ namespace Org.Apache.Kafka.Common.Config
             return IExecuteWithSignature<bool>("isDefault", "()Z");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/ConfigResource.html#name--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/ConfigResource.html#name()"/>
         /// </summary>
         /// <returns><see cref="Java.Lang.String"/></returns>
         public Java.Lang.String Name()
@@ -161,7 +161,7 @@ namespace Org.Apache.Kafka.Common.Config
             return IExecuteWithSignature<Java.Lang.String>("name", "()Ljava/lang/String;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/ConfigResource.html#type--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/ConfigResource.html#type()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.Config.ConfigResource.Type"/></returns>
         public Org.Apache.Kafka.Common.Config.ConfigResource.Type TypeMethod()
@@ -225,7 +225,7 @@ namespace Org.Apache.Kafka.Common.Config
 
             #region Static methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/ConfigResource.Type.html#forId-byte-"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/ConfigResource.Type.html#forId(byte)"/>
             /// </summary>
             /// <param name="arg0"><see cref="byte"/></param>
             /// <returns><see cref="Org.Apache.Kafka.Common.Config.ConfigResource.Type"/></returns>
@@ -234,7 +234,7 @@ namespace Org.Apache.Kafka.Common.Config
                 return SExecuteWithSignature<Org.Apache.Kafka.Common.Config.ConfigResource.Type>(LocalBridgeClazz, "forId", "(B)Lorg/apache/kafka/common/config/ConfigResource$Type;", arg0);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/ConfigResource.Type.html#valueOf-java.lang.String-"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/ConfigResource.Type.html#valueOf(java.lang.String)"/>
             /// </summary>
             /// <param name="arg0"><see cref="Java.Lang.String"/></param>
             /// <returns><see cref="Org.Apache.Kafka.Common.Config.ConfigResource.Type"/></returns>
@@ -243,7 +243,7 @@ namespace Org.Apache.Kafka.Common.Config
                 return SExecuteWithSignature<Org.Apache.Kafka.Common.Config.ConfigResource.Type>(LocalBridgeClazz, "valueOf", "(Ljava/lang/String;)Lorg/apache/kafka/common/config/ConfigResource$Type;", arg0);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/ConfigResource.Type.html#values--"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/ConfigResource.Type.html#values()"/>
             /// </summary>
             /// <returns><see cref="Org.Apache.Kafka.Common.Config.ConfigResource.Type"/></returns>
             public static Org.Apache.Kafka.Common.Config.ConfigResource.Type[] Values()
@@ -255,7 +255,7 @@ namespace Org.Apache.Kafka.Common.Config
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/ConfigResource.Type.html#id--"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/ConfigResource.Type.html#id()"/>
             /// </summary>
             /// <returns><see cref="byte"/></returns>
             public byte Id()

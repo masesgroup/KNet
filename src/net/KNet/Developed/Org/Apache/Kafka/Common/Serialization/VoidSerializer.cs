@@ -21,7 +21,7 @@ using Java.Lang;
 namespace Org.Apache.Kafka.Common.Serialization
 {
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/common/serialization/VoidSerializer.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/serialization/VoidSerializer.html"/>
     /// </summary>
     public class VoidSerializer : MASES.JCOBridge.C2JBridge.JVMBridgeBase<VoidSerializer>
     {
@@ -30,7 +30,7 @@ namespace Org.Apache.Kafka.Common.Serialization
         /// </summary>
         public override string BridgeClassName => "org.apache.kafka.common.serialization.VoidSerializer";
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/common/serialization/VoidSerializer.html#serialize-java.lang.String-java.lang.Void-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/serialization/VoidSerializer.html#serialize(java.lang.String,java.lang.Void)"/>
         /// </summary>
         public byte[] Serialize(string topic, Void data) => IExecute<byte[]>("serialize", topic, data);
     }

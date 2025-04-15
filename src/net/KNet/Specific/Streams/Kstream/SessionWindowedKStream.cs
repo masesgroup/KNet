@@ -47,7 +47,7 @@ namespace MASES.KNet.Streams.Kstream
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/kstream/SessionWindowedKStream.html#aggregate-org.apache.kafka.streams.kstream.Initializer-org.apache.kafka.streams.kstream.Aggregator-org.apache.kafka.streams.kstream.Merger-Materialized{K, V, TJVMK, TJVMV}-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/SessionWindowedKStream.html#aggregate(org.apache.kafka.streams.kstream.Initializer,org.apache.kafka.streams.kstream.Aggregator,org.apache.kafka.streams.kstream.Merger,org.apache.kafka.streams.kstream.Materialized)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Initializer{VA, TJVMVA}"/></param>
         /// <param name="arg1"><see cref="Aggregator{K, V, VA, TJVMK, TJVMV, TJVMVA}"/></param>
@@ -68,7 +68,7 @@ namespace MASES.KNet.Streams.Kstream
             return new KTable<K, VR, Org.Apache.Kafka.Streams.Kstream.Windowed<TJVMK>, TJVMVR>(_factory, _inner.Aggregate(arg0, arg1, arg2, arg3));
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/kstream/SessionWindowedKStream.html#aggregate-org.apache.kafka.streams.kstream.Initializer-org.apache.kafka.streams.kstream.Aggregator-org.apache.kafka.streams.kstream.Merger-org.apache.kafka.streams.kstream.Named-Materialized{K, V, TJVMK, TJVMV}-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/SessionWindowedKStream.html#aggregate(org.apache.kafka.streams.kstream.Initializer,org.apache.kafka.streams.kstream.Aggregator,org.apache.kafka.streams.kstream.Merger,org.apache.kafka.streams.kstream.Named,org.apache.kafka.streams.kstream.Materialized)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Initializer{VA, TJVMVA}"/></param>
         /// <param name="arg1"><see cref="Aggregator{K, V, VA, TJVMK, TJVMV, TJVMVA}"/></param>
@@ -90,7 +90,7 @@ namespace MASES.KNet.Streams.Kstream
             return new KTable<K, VR, Org.Apache.Kafka.Streams.Kstream.Windowed<TJVMK>, TJVMVR>(_factory, _inner.Aggregate(arg0, arg1, arg2, arg3, arg4));
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/kstream/SessionWindowedKStream.html#aggregate-org.apache.kafka.streams.kstream.Initializer-org.apache.kafka.streams.kstream.Aggregator-org.apache.kafka.streams.kstream.Merger-org.apache.kafka.streams.kstream.Named-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/SessionWindowedKStream.html#aggregate(org.apache.kafka.streams.kstream.Initializer,org.apache.kafka.streams.kstream.Aggregator,org.apache.kafka.streams.kstream.Merger,org.apache.kafka.streams.kstream.Named)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Initializer{VA, TJVMVA}"/></param>
         /// <param name="arg1"><see cref="Aggregator{K, V, VA, TJVMK, TJVMV, TJVMVA}"/></param>
@@ -110,7 +110,7 @@ namespace MASES.KNet.Streams.Kstream
             return new KTable<K, VR, Org.Apache.Kafka.Streams.Kstream.Windowed<TJVMK>, TJVMVR>(_factory, _inner.Aggregate(arg0, arg1, arg2, arg3));
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/kstream/SessionWindowedKStream.html#aggregate-org.apache.kafka.streams.kstream.Initializer-org.apache.kafka.streams.kstream.Aggregator-org.apache.kafka.streams.kstream.Merger-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/SessionWindowedKStream.html#aggregate(org.apache.kafka.streams.kstream.Initializer,org.apache.kafka.streams.kstream.Aggregator,org.apache.kafka.streams.kstream.Merger)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Initializer{VA, TJVMVA}"/></param>
         /// <param name="arg1"><see cref="Aggregator{K, V, VA, TJVMK, TJVMV, TJVMVA}"/></param>
@@ -129,7 +129,7 @@ namespace MASES.KNet.Streams.Kstream
             return new KTable<K, VR, Org.Apache.Kafka.Streams.Kstream.Windowed<TJVMK>, TJVMVR>(_factory, _inner.Aggregate(arg0, arg1, arg2));
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/kstream/SessionWindowedKStream.html#count--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/SessionWindowedKStream.html#count()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KTable"/></returns>
         public KTable<K, long, Org.Apache.Kafka.Streams.Kstream.Windowed<TJVMK>, Java.Lang.Long> Count()
@@ -137,7 +137,7 @@ namespace MASES.KNet.Streams.Kstream
             return new KTable<K, long, Org.Apache.Kafka.Streams.Kstream.Windowed<TJVMK>, Java.Lang.Long>(_factory, _inner.Count());
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/kstream/SessionWindowedKStream.html#count-Materialized{K, V, TJVMK, TJVMV}-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/SessionWindowedKStream.html#count(org.apache.kafka.streams.kstream.Materialized)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Materialized{K, V, TJVMK, TJVMV}"/></param>
         /// <returns><see cref="KTable{K, V, TJVMK, TJVMV}"/></returns>
@@ -147,7 +147,7 @@ namespace MASES.KNet.Streams.Kstream
             return new KTable<K, long, Org.Apache.Kafka.Streams.Kstream.Windowed<TJVMK>, Java.Lang.Long>(_factory, _inner.Count(arg0));
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/kstream/SessionWindowedKStream.html#count-org.apache.kafka.streams.kstream.Named-Materialized{K, V, TJVMK, TJVMV}-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/SessionWindowedKStream.html#count(org.apache.kafka.streams.kstream.Named,org.apache.kafka.streams.kstream.Materialized)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Kstream.Named"/></param>
         /// <param name="arg1"><see cref="Materialized{K, V, TJVMK, TJVMV}"/></param>
@@ -158,7 +158,7 @@ namespace MASES.KNet.Streams.Kstream
             return new KTable<K, long, Org.Apache.Kafka.Streams.Kstream.Windowed<TJVMK>, Java.Lang.Long>(_factory, _inner.Count(arg0, arg1));
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/kstream/SessionWindowedKStream.html#count-org.apache.kafka.streams.kstream.Named-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/SessionWindowedKStream.html#count(org.apache.kafka.streams.kstream.Named)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Kstream.Named"/></param>
         /// <returns><see cref="KTable{K, V, TJVMK, TJVMV}"/></returns>
@@ -167,7 +167,7 @@ namespace MASES.KNet.Streams.Kstream
             return new KTable<K, long, Org.Apache.Kafka.Streams.Kstream.Windowed<TJVMK>, Java.Lang.Long>(_factory, _inner.Count(arg0));
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/kstream/SessionWindowedKStream.html#reduce-Reducer{V, TJVMV}-Materialized{K, V, TJVMK, TJVMV}-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/SessionWindowedKStream.html#reduce(org.apache.kafka.streams.kstream.Reducer,org.apache.kafka.streams.kstream.Materialized)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Reducer{V, TJVMV}"/></param>
         /// <param name="arg1"><see cref="Materialized{K, V, TJVMK, TJVMV}"/></param>
@@ -179,7 +179,7 @@ namespace MASES.KNet.Streams.Kstream
             return new KTable<K, V, Org.Apache.Kafka.Streams.Kstream.Windowed<TJVMK>, TJVMV>(_factory, _inner.Reduce(arg0, arg1));
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/kstream/SessionWindowedKStream.html#reduce-Reducer{V, TJVMV}-org.apache.kafka.streams.kstream.Named-Materialized{K, V, TJVMK, TJVMV}-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/SessionWindowedKStream.html#reduce(org.apache.kafka.streams.kstream.Reducer,org.apache.kafka.streams.kstream.Named,org.apache.kafka.streams.kstream.Materialized)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Reducer{V, TJVMV}"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Streams.Kstream.Named"/></param>
@@ -192,7 +192,7 @@ namespace MASES.KNet.Streams.Kstream
             return new KTable<K, V, Org.Apache.Kafka.Streams.Kstream.Windowed<TJVMK>, TJVMV>(_factory, _inner.Reduce(arg0, arg1, arg2));
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/kstream/SessionWindowedKStream.html#reduce-Reducer{V, TJVMV}-org.apache.kafka.streams.kstream.Named-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/SessionWindowedKStream.html#reduce(org.apache.kafka.streams.kstream.Reducer,org.apache.kafka.streams.kstream.Named)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Reducer{V, TJVMV}"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Streams.Kstream.Named"/></param>
@@ -203,7 +203,7 @@ namespace MASES.KNet.Streams.Kstream
             return new KTable<K, V, Org.Apache.Kafka.Streams.Kstream.Windowed<TJVMK>, TJVMV>(_factory, _inner.Reduce(arg0, arg1));
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/kstream/SessionWindowedKStream.html#reduce-Reducer{V, TJVMV}-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/SessionWindowedKStream.html#reduce(org.apache.kafka.streams.kstream.Reducer)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Reducer{V, TJVMV}"/></param>
         /// <returns><see cref="KTable{K, V, TJVMK, TJVMV}"/></returns>
@@ -213,7 +213,7 @@ namespace MASES.KNet.Streams.Kstream
             return new KTable<K, V, Org.Apache.Kafka.Streams.Kstream.Windowed<TJVMK>, TJVMV>(_factory, _inner.Reduce(arg0));
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/kstream/SessionWindowedKStream.html#emitStrategy-org.apache.kafka.streams.kstream.EmitStrategy-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/SessionWindowedKStream.html#emitStrategy(org.apache.kafka.streams.kstream.EmitStrategy)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Kstream.EmitStrategy"/></param>
         /// <returns><see cref="SessionWindowedKStream{K, V, TJVMK, TJVMV}"/></returns>

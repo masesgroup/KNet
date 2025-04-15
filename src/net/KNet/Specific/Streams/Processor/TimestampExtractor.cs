@@ -39,7 +39,7 @@ namespace MASES.KNet.Streams.Processor
         IGenericSerDesFactory _factory;
         IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
         /// <summary>
-        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/processor/TimestampExtractor.html#extract-org.apache.kafka.clients.consumer.ConsumerRecord-long-"/>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/TimestampExtractor.html#extract(org.apache.kafka.clients.consumer.ConsumerRecord,long)"/>
         /// </summary>
         /// <remarks>If <see cref="OnExtract"/> has a value it takes precedence over corresponding class method</remarks>
         public new System.Func<TimestampExtractor<K, V, TJVMK, TJVMV>, DateTime> OnExtract { get; set; } = null;

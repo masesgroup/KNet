@@ -24,15 +24,15 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
     public partial interface IProcessor<KIn, VIn, KOut, VOut> : IJVMBridgeBase
     {
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.5.0/org/apache/kafka/streams/processor/api/Processor.html#init-org.apache.kafka.streams.processor.api.ProcessorContext-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/api/Processor.html#init(org.apache.kafka.streams.processor.api.ProcessorContext)"/>
         /// </summary>
         void Init(ProcessorContext<KOut, VOut> context);
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.5.0/org/apache/kafka/streams/processor/api/Processor.html#process-org.apache.kafka.streams.processor.api.Record-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/api/Processor.html#process(org.apache.kafka.streams.processor.api.Record)"/>
         /// </summary>
         void Process(Record<KIn, VIn> record);
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.5.0/org/apache/kafka/streams/processor/api/Processor.html#close--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/api/Processor.html#close()"/>
         /// </summary>
         void Close();
     }

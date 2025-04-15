@@ -75,7 +75,7 @@ namespace Org.Apache.Kafka.Common.Security.Auth
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/security/auth/PlaintextAuthenticationContext.html#org.apache.kafka.common.security.auth.PlaintextAuthenticationContext(java.net.InetAddress,java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/security/auth/PlaintextAuthenticationContext.html#%3Cinit%3E(java.net.InetAddress,java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Net.InetAddress"/></param>
         /// <param name="arg1"><see cref="Java.Lang.String"/></param>
@@ -100,7 +100,7 @@ namespace Org.Apache.Kafka.Common.Security.Auth
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/security/auth/PlaintextAuthenticationContext.html#listenerName--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/security/auth/PlaintextAuthenticationContext.html#listenerName()"/>
         /// </summary>
         /// <returns><see cref="Java.Lang.String"/></returns>
         public Java.Lang.String ListenerName()
@@ -108,7 +108,7 @@ namespace Org.Apache.Kafka.Common.Security.Auth
             return IExecuteWithSignature<Java.Lang.String>("listenerName", "()Ljava/lang/String;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/security/auth/PlaintextAuthenticationContext.html#clientAddress--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/security/auth/PlaintextAuthenticationContext.html#clientAddress()"/>
         /// </summary>
         /// <returns><see cref="Java.Net.InetAddress"/></returns>
         public Java.Net.InetAddress ClientAddress()
@@ -116,7 +116,7 @@ namespace Org.Apache.Kafka.Common.Security.Auth
             return IExecuteWithSignature<Java.Net.InetAddress>("clientAddress", "()Ljava/net/InetAddress;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/security/auth/PlaintextAuthenticationContext.html#securityProtocol--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/security/auth/PlaintextAuthenticationContext.html#securityProtocol()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.Security.Auth.SecurityProtocol"/></returns>
         public Org.Apache.Kafka.Common.Security.Auth.SecurityProtocol SecurityProtocol()

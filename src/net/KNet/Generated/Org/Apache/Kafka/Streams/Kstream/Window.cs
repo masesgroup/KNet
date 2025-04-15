@@ -77,7 +77,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/Window.html#org.apache.kafka.streams.kstream.Window(long,long)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/Window.html#%3Cinit%3E(long,long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="long"/></param>
         /// <param name="arg1"><see cref="long"/></param>
@@ -103,7 +103,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/Window.html#overlap-org.apache.kafka.streams.kstream.Window-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/Window.html#overlap(org.apache.kafka.streams.kstream.Window)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Kstream.Window"/></param>
         /// <returns><see cref="bool"/></returns>
@@ -112,7 +112,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
             return IExecuteWithSignature<bool>("overlap", "(Lorg/apache/kafka/streams/kstream/Window;)Z", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/Window.html#endTime--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/Window.html#endTime()"/>
         /// </summary>
         /// <returns><see cref="Java.Time.Instant"/></returns>
         public Java.Time.Instant EndTime()
@@ -120,7 +120,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
             return IExecuteWithSignature<Java.Time.Instant>("endTime", "()Ljava/time/Instant;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/Window.html#startTime--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/Window.html#startTime()"/>
         /// </summary>
         /// <returns><see cref="Java.Time.Instant"/></returns>
         public Java.Time.Instant StartTime()
@@ -128,7 +128,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
             return IExecuteWithSignature<Java.Time.Instant>("startTime", "()Ljava/time/Instant;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/Window.html#end--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/Window.html#end()"/>
         /// </summary>
         /// <returns><see cref="long"/></returns>
         public long End()
@@ -136,7 +136,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
             return IExecuteWithSignature<long>("end", "()J");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/Window.html#start--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/Window.html#start()"/>
         /// </summary>
         /// <returns><see cref="long"/></returns>
         public long Start()

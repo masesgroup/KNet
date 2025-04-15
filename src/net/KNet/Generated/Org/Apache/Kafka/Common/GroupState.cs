@@ -135,7 +135,7 @@ namespace Org.Apache.Kafka.Common
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/GroupState.html#groupStatesForType-org.apache.kafka.common.GroupType-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/GroupState.html#groupStatesForType(org.apache.kafka.common.GroupType)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.GroupType"/></param>
         /// <returns><see cref="Java.Util.Set"/></returns>
@@ -144,7 +144,7 @@ namespace Org.Apache.Kafka.Common
             return SExecuteWithSignature<Java.Util.Set<Org.Apache.Kafka.Common.GroupState>>(LocalBridgeClazz, "groupStatesForType", "(Lorg/apache/kafka/common/GroupType;)Ljava/util/Set;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/GroupState.html#parse-java.lang.String-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/GroupState.html#parse(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.GroupState"/></returns>
@@ -153,7 +153,7 @@ namespace Org.Apache.Kafka.Common
             return SExecuteWithSignature<Org.Apache.Kafka.Common.GroupState>(LocalBridgeClazz, "parse", "(Ljava/lang/String;)Lorg/apache/kafka/common/GroupState;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/GroupState.html#valueOf-java.lang.String-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/GroupState.html#valueOf(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.GroupState"/></returns>
@@ -162,7 +162,7 @@ namespace Org.Apache.Kafka.Common
             return SExecuteWithSignature<Org.Apache.Kafka.Common.GroupState>(LocalBridgeClazz, "valueOf", "(Ljava/lang/String;)Lorg/apache/kafka/common/GroupState;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/GroupState.html#values--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/GroupState.html#values()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.GroupState"/></returns>
         public static Org.Apache.Kafka.Common.GroupState[] Values()

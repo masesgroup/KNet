@@ -75,7 +75,7 @@ namespace Org.Apache.Kafka.Common.Resource
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/resource/Resource.html#org.apache.kafka.common.resource.Resource(org.apache.kafka.common.resource.ResourceType,java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/resource/Resource.html#%3Cinit%3E(org.apache.kafka.common.resource.ResourceType,java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Resource.ResourceType"/></param>
         /// <param name="arg1"><see cref="Java.Lang.String"/></param>
@@ -112,7 +112,7 @@ namespace Org.Apache.Kafka.Common.Resource
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/resource/Resource.html#isUnknown--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/resource/Resource.html#isUnknown()"/>
         /// </summary>
         /// <returns><see cref="bool"/></returns>
         public bool IsUnknown()
@@ -120,7 +120,7 @@ namespace Org.Apache.Kafka.Common.Resource
             return IExecuteWithSignature<bool>("isUnknown", "()Z");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/resource/Resource.html#name--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/resource/Resource.html#name()"/>
         /// </summary>
         /// <returns><see cref="Java.Lang.String"/></returns>
         public Java.Lang.String Name()
@@ -128,7 +128,7 @@ namespace Org.Apache.Kafka.Common.Resource
             return IExecuteWithSignature<Java.Lang.String>("name", "()Ljava/lang/String;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/resource/Resource.html#resourceType--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/resource/Resource.html#resourceType()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.Resource.ResourceType"/></returns>
         public Org.Apache.Kafka.Common.Resource.ResourceType ResourceType()

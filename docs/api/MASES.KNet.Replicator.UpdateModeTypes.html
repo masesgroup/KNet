@@ -119,16 +119,20 @@ public enum UpdateModeTypes</code></pre>
 </h2>
   <dl class="parameters">
     <dt id="MASES_KNet_Replicator_UpdateModeTypes_Delayed"><code>Delayed = 4096</code></dt>
-    <dd><p>The value is stored in <a class="xref" href="MASES.KNet.Replicator.KNetCompactedReplicator-2.html">KNetCompactedReplicator&lt;K, V&gt;</a> only upon a request, otherwise only the key is stored</p>
+  
+  <dd><p>The value is stored in <a class="xref" href="MASES.KNet.Replicator.KNetCompactedReplicator-2.html">KNetCompactedReplicator&lt;K, V&gt;</a> only upon a request, otherwise only the key is stored</p>
 </dd>
     <dt id="MASES_KNet_Replicator_UpdateModeTypes_OnConsume"><code>OnConsume = 2</code></dt>
-    <dd><p>The <a class="xref" href="MASES.KNet.Replicator.KNetCompactedReplicator-2.html">KNetCompactedReplicator&lt;K, V&gt;</a> is updated only after an update is consumed from Kafka, even if the add or update is made locally by the current instance</p>
+  
+  <dd><p>The <a class="xref" href="MASES.KNet.Replicator.KNetCompactedReplicator-2.html">KNetCompactedReplicator&lt;K, V&gt;</a> is updated only after an update is consumed from Kafka, even if the add or update is made locally by the current instance</p>
 </dd>
     <dt id="MASES_KNet_Replicator_UpdateModeTypes_OnConsumeSync"><code>OnConsumeSync = OnDelivery | OnConsume</code></dt>
-    <dd><p>The <a class="xref" href="MASES.KNet.Replicator.KNetCompactedReplicator-2.html">KNetCompactedReplicator&lt;K, V&gt;</a> is updated only after an update is consumed from Kafka, even if the add or update is made locally by the current instance. Plus the update waits the consume of the data before unlock</p>
+  
+  <dd><p>The <a class="xref" href="MASES.KNet.Replicator.KNetCompactedReplicator-2.html">KNetCompactedReplicator&lt;K, V&gt;</a> is updated only after an update is consumed from Kafka, even if the add or update is made locally by the current instance. Plus the update waits the consume of the data before unlock</p>
 </dd>
     <dt id="MASES_KNet_Replicator_UpdateModeTypes_OnDelivery"><code>OnDelivery = 1</code></dt>
-    <dd><p>The <a class="xref" href="MASES.KNet.Replicator.KNetCompactedReplicator-2.html">KNetCompactedReplicator&lt;K, V&gt;</a> is updated as soon as an update is delivered to Kafka by the current application</p>
+  
+  <dd><p>The <a class="xref" href="MASES.KNet.Replicator.KNetCompactedReplicator-2.html">KNetCompactedReplicator&lt;K, V&gt;</a> is updated as soon as an update is delivered to Kafka by the current application</p>
 </dd>
   </dl>
 

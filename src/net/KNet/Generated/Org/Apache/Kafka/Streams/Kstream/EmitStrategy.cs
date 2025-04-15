@@ -152,7 +152,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/EmitStrategy.html#onWindowClose--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/EmitStrategy.html#onWindowClose()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.EmitStrategy"/></returns>
         public static Org.Apache.Kafka.Streams.Kstream.EmitStrategy OnWindowClose()
@@ -160,7 +160,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
             return SExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.EmitStrategy>(LocalBridgeClazz, "onWindowClose", "()Lorg/apache/kafka/streams/kstream/EmitStrategy;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/EmitStrategy.html#onWindowUpdate--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/EmitStrategy.html#onWindowUpdate()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.EmitStrategy"/></returns>
         public static Org.Apache.Kafka.Streams.Kstream.EmitStrategy OnWindowUpdate()
@@ -172,7 +172,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/EmitStrategy.html#type--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/EmitStrategy.html#type()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.EmitStrategy.StrategyType"/></returns>
         public Org.Apache.Kafka.Streams.Kstream.EmitStrategy.StrategyType Type()
@@ -212,7 +212,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
             #region Static methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/EmitStrategy.StrategyType.html#forType-org.apache.kafka.streams.kstream.EmitStrategy.StrategyType-"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/EmitStrategy.StrategyType.html#forType(org.apache.kafka.streams.kstream.EmitStrategy.StrategyType)"/>
             /// </summary>
             /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Kstream.EmitStrategy.StrategyType"/></param>
             /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.EmitStrategy"/></returns>
@@ -221,7 +221,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
                 return SExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.EmitStrategy>(LocalBridgeClazz, "forType", "(Lorg/apache/kafka/streams/kstream/EmitStrategy$StrategyType;)Lorg/apache/kafka/streams/kstream/EmitStrategy;", arg0);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/EmitStrategy.StrategyType.html#valueOf-java.lang.String-"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/EmitStrategy.StrategyType.html#valueOf(java.lang.String)"/>
             /// </summary>
             /// <param name="arg0"><see cref="Java.Lang.String"/></param>
             /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.EmitStrategy.StrategyType"/></returns>
@@ -230,7 +230,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
                 return SExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.EmitStrategy.StrategyType>(LocalBridgeClazz, "valueOf", "(Ljava/lang/String;)Lorg/apache/kafka/streams/kstream/EmitStrategy$StrategyType;", arg0);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/EmitStrategy.StrategyType.html#values--"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/EmitStrategy.StrategyType.html#values()"/>
             /// </summary>
             /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.EmitStrategy.StrategyType"/></returns>
             public static Org.Apache.Kafka.Streams.Kstream.EmitStrategy.StrategyType[] Values()

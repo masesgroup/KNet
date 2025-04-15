@@ -75,7 +75,7 @@ namespace Org.Apache.Kafka.Common.Record
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/UnalignedFileRecords.html#org.apache.kafka.common.record.UnalignedFileRecords(java.nio.channels.FileChannel,long,int)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/UnalignedFileRecords.html#%3Cinit%3E(java.nio.channels.FileChannel,long,int)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Nio.Channels.FileChannel"/></param>
         /// <param name="arg1"><see cref="long"/></param>
@@ -101,7 +101,7 @@ namespace Org.Apache.Kafka.Common.Record
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/UnalignedFileRecords.html#sizeInBytes--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/UnalignedFileRecords.html#sizeInBytes()"/>
         /// </summary>
         /// <returns><see cref="int"/></returns>
         public int SizeInBytes()

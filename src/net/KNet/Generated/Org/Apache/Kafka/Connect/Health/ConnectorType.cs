@@ -105,7 +105,7 @@ namespace Org.Apache.Kafka.Connect.Health
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.0.0/org/apache/kafka/connect/health/ConnectorType.html#valueOf-java.lang.String-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.0.0/org/apache/kafka/connect/health/ConnectorType.html#valueOf(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Connect.Health.ConnectorType"/></returns>
@@ -114,7 +114,7 @@ namespace Org.Apache.Kafka.Connect.Health
             return SExecuteWithSignature<Org.Apache.Kafka.Connect.Health.ConnectorType>(LocalBridgeClazz, "valueOf", "(Ljava/lang/String;)Lorg/apache/kafka/connect/health/ConnectorType;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.0.0/org/apache/kafka/connect/health/ConnectorType.html#values--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.0.0/org/apache/kafka/connect/health/ConnectorType.html#values()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Connect.Health.ConnectorType"/></returns>
         public static Org.Apache.Kafka.Connect.Health.ConnectorType[] Values()

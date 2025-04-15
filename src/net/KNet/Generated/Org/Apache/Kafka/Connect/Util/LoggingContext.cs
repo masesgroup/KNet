@@ -144,7 +144,7 @@ namespace Org.Apache.Kafka.Connect.Util
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.0.0/org/apache/kafka/connect/util/LoggingContext.html#forConnector-java.lang.String-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.0.0/org/apache/kafka/connect/util/LoggingContext.html#forConnector(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Connect.Util.LoggingContext"/></returns>
@@ -153,7 +153,7 @@ namespace Org.Apache.Kafka.Connect.Util
             return SExecuteWithSignature<Org.Apache.Kafka.Connect.Util.LoggingContext>(LocalBridgeClazz, "forConnector", "(Ljava/lang/String;)Lorg/apache/kafka/connect/util/LoggingContext;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.0.0/org/apache/kafka/connect/util/LoggingContext.html#forOffsets-org.apache.kafka.connect.util.ConnectorTaskId-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.0.0/org/apache/kafka/connect/util/LoggingContext.html#forOffsets(org.apache.kafka.connect.util.ConnectorTaskId)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Connect.Util.ConnectorTaskId"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Connect.Util.LoggingContext"/></returns>
@@ -162,7 +162,7 @@ namespace Org.Apache.Kafka.Connect.Util
             return SExecuteWithSignature<Org.Apache.Kafka.Connect.Util.LoggingContext>(LocalBridgeClazz, "forOffsets", "(Lorg/apache/kafka/connect/util/ConnectorTaskId;)Lorg/apache/kafka/connect/util/LoggingContext;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.0.0/org/apache/kafka/connect/util/LoggingContext.html#forTask-org.apache.kafka.connect.util.ConnectorTaskId-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.0.0/org/apache/kafka/connect/util/LoggingContext.html#forTask(org.apache.kafka.connect.util.ConnectorTaskId)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Connect.Util.ConnectorTaskId"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Connect.Util.LoggingContext"/></returns>
@@ -171,7 +171,7 @@ namespace Org.Apache.Kafka.Connect.Util
             return SExecuteWithSignature<Org.Apache.Kafka.Connect.Util.LoggingContext>(LocalBridgeClazz, "forTask", "(Lorg/apache/kafka/connect/util/ConnectorTaskId;)Lorg/apache/kafka/connect/util/LoggingContext;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.0.0/org/apache/kafka/connect/util/LoggingContext.html#clear--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.0.0/org/apache/kafka/connect/util/LoggingContext.html#clear()"/>
         /// </summary>
         public static void Clear()
         {
@@ -182,7 +182,7 @@ namespace Org.Apache.Kafka.Connect.Util
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.0.0/org/apache/kafka/connect/util/LoggingContext.html#close--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.0.0/org/apache/kafka/connect/util/LoggingContext.html#close()"/>
         /// </summary>
         public void Close()
         {
@@ -233,7 +233,7 @@ namespace Org.Apache.Kafka.Connect.Util
 
             #region Static methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.0.0/org/apache/kafka/connect/util/LoggingContext.Scope.html#valueOf-java.lang.String-"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.0.0/org/apache/kafka/connect/util/LoggingContext.Scope.html#valueOf(java.lang.String)"/>
             /// </summary>
             /// <param name="arg0"><see cref="Java.Lang.String"/></param>
             /// <returns><see cref="Org.Apache.Kafka.Connect.Util.LoggingContext.Scope"/></returns>
@@ -242,7 +242,7 @@ namespace Org.Apache.Kafka.Connect.Util
                 return SExecuteWithSignature<Org.Apache.Kafka.Connect.Util.LoggingContext.Scope>(LocalBridgeClazz, "valueOf", "(Ljava/lang/String;)Lorg/apache/kafka/connect/util/LoggingContext$Scope;", arg0);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.0.0/org/apache/kafka/connect/util/LoggingContext.Scope.html#values--"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.0.0/org/apache/kafka/connect/util/LoggingContext.Scope.html#values()"/>
             /// </summary>
             /// <returns><see cref="Org.Apache.Kafka.Connect.Util.LoggingContext.Scope"/></returns>
             public static Org.Apache.Kafka.Connect.Util.LoggingContext.Scope[] Values()

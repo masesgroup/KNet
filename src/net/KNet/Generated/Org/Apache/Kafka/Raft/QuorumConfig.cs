@@ -165,7 +165,7 @@ namespace Org.Apache.Kafka.Raft
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumConfig.html#org.apache.kafka.raft.QuorumConfig(org.apache.kafka.common.config.AbstractConfig)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumConfig.html#%3Cinit%3E(org.apache.kafka.common.config.AbstractConfig)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Config.AbstractConfig"/></param>
         public QuorumConfig(Org.Apache.Kafka.Common.Config.AbstractConfig arg0)
@@ -341,7 +341,7 @@ namespace Org.Apache.Kafka.Raft
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumConfig.html#parseBootstrapServers-java.util.List-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumConfig.html#parseBootstrapServers(java.util.List)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.List"/></param>
         /// <returns><see cref="Java.Util.List"/></returns>
@@ -350,7 +350,7 @@ namespace Org.Apache.Kafka.Raft
             return SExecuteWithSignature<Java.Util.List<Java.Net.InetSocketAddress>>(LocalBridgeClazz, "parseBootstrapServers", "(Ljava/util/List;)Ljava/util/List;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumConfig.html#quorumVoterStringsToNodes-java.util.List-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumConfig.html#quorumVoterStringsToNodes(java.util.List)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.List"/></param>
         /// <returns><see cref="Java.Util.List"/></returns>
@@ -359,7 +359,7 @@ namespace Org.Apache.Kafka.Raft
             return SExecuteWithSignature<Java.Util.List<Org.Apache.Kafka.Common.Node>>(LocalBridgeClazz, "quorumVoterStringsToNodes", "(Ljava/util/List;)Ljava/util/List;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumConfig.html#voterConnectionsToNodes-java.util.Map-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumConfig.html#voterConnectionsToNodes(java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <returns><see cref="Java.Util.List"/></returns>
@@ -368,7 +368,7 @@ namespace Org.Apache.Kafka.Raft
             return SExecuteWithSignature<Java.Util.List<Org.Apache.Kafka.Common.Node>>(LocalBridgeClazz, "voterConnectionsToNodes", "(Ljava/util/Map;)Ljava/util/List;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumConfig.html#parseVoterConnections-java.util.List-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumConfig.html#parseVoterConnections(java.util.List)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.List"/></param>
         /// <returns><see cref="Java.Util.Map"/></returns>
@@ -377,7 +377,7 @@ namespace Org.Apache.Kafka.Raft
             return SExecuteWithSignature<Java.Util.Map<Java.Lang.Integer, Java.Net.InetSocketAddress>>(LocalBridgeClazz, "parseVoterConnections", "(Ljava/util/List;)Ljava/util/Map;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumConfig.html#parseVoterIds-java.util.List-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumConfig.html#parseVoterIds(java.util.List)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.List"/></param>
         /// <returns><see cref="Java.Util.Set"/></returns>
@@ -390,7 +390,7 @@ namespace Org.Apache.Kafka.Raft
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumConfig.html#appendLingerMs--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumConfig.html#appendLingerMs()"/>
         /// </summary>
         /// <returns><see cref="int"/></returns>
         public int AppendLingerMs()
@@ -398,7 +398,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<int>("appendLingerMs", "()I");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumConfig.html#electionBackoffMaxMs--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumConfig.html#electionBackoffMaxMs()"/>
         /// </summary>
         /// <returns><see cref="int"/></returns>
         public int ElectionBackoffMaxMs()
@@ -406,7 +406,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<int>("electionBackoffMaxMs", "()I");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumConfig.html#electionTimeoutMs--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumConfig.html#electionTimeoutMs()"/>
         /// </summary>
         /// <returns><see cref="int"/></returns>
         public int ElectionTimeoutMs()
@@ -414,7 +414,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<int>("electionTimeoutMs", "()I");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumConfig.html#fetchTimeoutMs--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumConfig.html#fetchTimeoutMs()"/>
         /// </summary>
         /// <returns><see cref="int"/></returns>
         public int FetchTimeoutMs()
@@ -422,7 +422,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<int>("fetchTimeoutMs", "()I");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumConfig.html#requestTimeoutMs--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumConfig.html#requestTimeoutMs()"/>
         /// </summary>
         /// <returns><see cref="int"/></returns>
         public int RequestTimeoutMs()
@@ -430,7 +430,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<int>("requestTimeoutMs", "()I");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumConfig.html#retryBackoffMs--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumConfig.html#retryBackoffMs()"/>
         /// </summary>
         /// <returns><see cref="int"/></returns>
         public int RetryBackoffMs()
@@ -438,7 +438,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<int>("retryBackoffMs", "()I");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumConfig.html#bootstrapServers--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumConfig.html#bootstrapServers()"/>
         /// </summary>
         /// <returns><see cref="Java.Util.List"/></returns>
         public Java.Util.List<Java.Lang.String> BootstrapServers()
@@ -446,7 +446,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<Java.Util.List<Java.Lang.String>>("bootstrapServers", "()Ljava/util/List;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumConfig.html#voters--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumConfig.html#voters()"/>
         /// </summary>
         /// <returns><see cref="Java.Util.List"/></returns>
         public Java.Util.List<Java.Lang.String> Voters()
@@ -478,7 +478,7 @@ namespace Org.Apache.Kafka.Raft
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumConfig.ControllerQuorumBootstrapServersValidator.html#ensureValid-java.lang.String-java.lang.Object-"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumConfig.ControllerQuorumBootstrapServersValidator.html#ensureValid(java.lang.String,java.lang.Object)"/>
             /// </summary>
             /// <param name="arg0"><see cref="Java.Lang.String"/></param>
             /// <param name="arg1"><see cref="object"/></param>
@@ -518,7 +518,7 @@ namespace Org.Apache.Kafka.Raft
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumConfig.ControllerQuorumVotersValidator.html#ensureValid-java.lang.String-java.lang.Object-"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumConfig.ControllerQuorumVotersValidator.html#ensureValid(java.lang.String,java.lang.Object)"/>
             /// </summary>
             /// <param name="arg0"><see cref="Java.Lang.String"/></param>
             /// <param name="arg1"><see cref="object"/></param>

@@ -57,7 +57,7 @@ namespace MASES.KNet.Streams.Kstream
             }
         }
         /// <summary>
-        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/kstream/ForeachAction.html#apply-java.lang.Object-java.lang.Object-"/>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/ForeachAction.html#apply(java.lang.Object-java.lang.Object)"/>
         /// </summary>
         /// <remarks>If <see cref="OnApply"/> has a value it takes precedence over corresponding <see cref="Apply()"/> class method</remarks>
         public new System.Action<ForeachAction<K, V, TJVMK, TJVMV>> OnApply { get; set; } = null;
@@ -80,9 +80,7 @@ namespace MASES.KNet.Streams.Kstream
 
             if (OnApply != null) OnApply(this); else Apply();
         }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/kstream/ForeachAction.html#apply-java.lang.Object-java.lang.Object-"/>
-        /// </summary>
+        /// <inheritdoc cref="Org.Apache.Kafka.Streams.Kstream.ForeachAction{K, V}.Apply(K, V)"/>
         public virtual void Apply()
         {
 

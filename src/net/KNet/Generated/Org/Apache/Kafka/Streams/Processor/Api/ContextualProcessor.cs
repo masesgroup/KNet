@@ -148,7 +148,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/api/ContextualProcessor.html#init-org.apache.kafka.streams.processor.api.ProcessorContext-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/api/ContextualProcessor.html#init(org.apache.kafka.streams.processor.api.ProcessorContext)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Processor.Api.ProcessorContext"/></param>
         public void Init(Org.Apache.Kafka.Streams.Processor.Api.ProcessorContext arg0)
@@ -195,7 +195,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/api/ContextualProcessor.html#init-org.apache.kafka.streams.processor.api.ProcessorContext-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/api/ContextualProcessor.html#init(org.apache.kafka.streams.processor.api.ProcessorContext)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Processor.Api.ProcessorContext"/></param>
         public void Init(Org.Apache.Kafka.Streams.Processor.Api.ProcessorContext<KOut, VOut> arg0)

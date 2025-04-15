@@ -75,7 +75,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/4.0.0/org/apache/kafka/connect/mirror/Heartbeat.html#org.apache.kafka.connect.mirror.Heartbeat(java.lang.String,java.lang.String,long)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/4.0.0/org/apache/kafka/connect/mirror/Heartbeat.html#%3Cinit%3E(java.lang.String,java.lang.String,long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Java.Lang.String"/></param>
@@ -127,7 +127,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/4.0.0/org/apache/kafka/connect/mirror/Heartbeat.html#deserializeRecord-org.apache.kafka.clients.consumer.ConsumerRecord-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/4.0.0/org/apache/kafka/connect/mirror/Heartbeat.html#deserializeRecord(org.apache.kafka.clients.consumer.ConsumerRecord)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Clients.Consumer.ConsumerRecord"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Connect.Mirror.Heartbeat"/></returns>
@@ -140,7 +140,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/4.0.0/org/apache/kafka/connect/mirror/Heartbeat.html#sourceClusterAlias--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/4.0.0/org/apache/kafka/connect/mirror/Heartbeat.html#sourceClusterAlias()"/>
         /// </summary>
         /// <returns><see cref="Java.Lang.String"/></returns>
         public Java.Lang.String SourceClusterAlias()
@@ -148,7 +148,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
             return IExecuteWithSignature<Java.Lang.String>("sourceClusterAlias", "()Ljava/lang/String;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/4.0.0/org/apache/kafka/connect/mirror/Heartbeat.html#targetClusterAlias--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/4.0.0/org/apache/kafka/connect/mirror/Heartbeat.html#targetClusterAlias()"/>
         /// </summary>
         /// <returns><see cref="Java.Lang.String"/></returns>
         public Java.Lang.String TargetClusterAlias()
@@ -156,7 +156,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
             return IExecuteWithSignature<Java.Lang.String>("targetClusterAlias", "()Ljava/lang/String;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/4.0.0/org/apache/kafka/connect/mirror/Heartbeat.html#timestamp--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/4.0.0/org/apache/kafka/connect/mirror/Heartbeat.html#timestamp()"/>
         /// </summary>
         /// <returns><see cref="long"/></returns>
         public long Timestamp()

@@ -132,7 +132,7 @@ namespace Org.Apache.Kafka.Shell
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-shell/4.0.0/org/apache/kafka/shell/MetadataShell.html#main-java.lang.String[]-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-shell/4.0.0/org/apache/kafka/shell/MetadataShell.html#main(java.lang.String[])"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         public static void Main(Java.Lang.String[] arg0)
@@ -144,14 +144,14 @@ namespace Org.Apache.Kafka.Shell
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-shell/4.0.0/org/apache/kafka/shell/MetadataShell.html#close--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-shell/4.0.0/org/apache/kafka/shell/MetadataShell.html#close()"/>
         /// </summary>
         public void Close()
         {
             IExecuteWithSignature("close", "()V");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-shell/4.0.0/org/apache/kafka/shell/MetadataShell.html#run-java.util.List-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-shell/4.0.0/org/apache/kafka/shell/MetadataShell.html#run(java.util.List)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.List"/></param>
         /// <exception cref="Java.Lang.Exception"/>
@@ -184,7 +184,7 @@ namespace Org.Apache.Kafka.Shell
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-shell/4.0.0/org/apache/kafka/shell/MetadataShell.Builder.html#build--"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-shell/4.0.0/org/apache/kafka/shell/MetadataShell.Builder.html#build()"/>
             /// </summary>
             /// <returns><see cref="Org.Apache.Kafka.Shell.MetadataShell"/></returns>
             public Org.Apache.Kafka.Shell.MetadataShell Build()
@@ -192,7 +192,7 @@ namespace Org.Apache.Kafka.Shell
                 return IExecuteWithSignature<Org.Apache.Kafka.Shell.MetadataShell>("build", "()Lorg/apache/kafka/shell/MetadataShell;");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-shell/4.0.0/org/apache/kafka/shell/MetadataShell.Builder.html#setSnapshotPath-java.lang.String-"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-shell/4.0.0/org/apache/kafka/shell/MetadataShell.Builder.html#setSnapshotPath(java.lang.String)"/>
             /// </summary>
             /// <param name="arg0"><see cref="Java.Lang.String"/></param>
             /// <returns><see cref="Org.Apache.Kafka.Shell.MetadataShell.Builder"/></returns>

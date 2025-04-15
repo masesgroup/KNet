@@ -119,7 +119,7 @@ namespace Org.Apache.Kafka.Streams.State
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/state/VersionedBytesStore.html#delete-org.apache.kafka.common.utils.Bytes-long-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/state/VersionedBytesStore.html#delete(org.apache.kafka.common.utils.Bytes,long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Utils.Bytes"/></param>
         /// <param name="arg1"><see cref="long"/></param>
@@ -129,7 +129,7 @@ namespace Org.Apache.Kafka.Streams.State
             return IExecuteWithSignatureArray<byte>("delete", "(Lorg/apache/kafka/common/utils/Bytes;J)[B", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/state/VersionedBytesStore.html#get-org.apache.kafka.common.utils.Bytes-long-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/state/VersionedBytesStore.html#get(org.apache.kafka.common.utils.Bytes,long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Utils.Bytes"/></param>
         /// <param name="arg1"><see cref="long"/></param>
@@ -139,7 +139,7 @@ namespace Org.Apache.Kafka.Streams.State
             return IExecuteWithSignatureArray<byte>("get", "(Lorg/apache/kafka/common/utils/Bytes;J)[B", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/state/VersionedBytesStore.html#put-org.apache.kafka.common.utils.Bytes-byte[]-long-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/state/VersionedBytesStore.html#put(org.apache.kafka.common.utils.Bytes,byte[],long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Utils.Bytes"/></param>
         /// <param name="arg1"><see cref="byte"/></param>

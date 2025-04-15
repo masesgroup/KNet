@@ -170,7 +170,7 @@ namespace Org.Apache.Kafka.Tools
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/ManifestWorkspace.html#org.apache.kafka.tools.ManifestWorkspace(java.io.PrintStream)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/ManifestWorkspace.html#%3Cinit%3E(java.io.PrintStream)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Io.PrintStream"/></param>
         public ManifestWorkspace(Java.Io.PrintStream arg0)
@@ -194,7 +194,7 @@ namespace Org.Apache.Kafka.Tools
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/ManifestWorkspace.html#commit-boolean-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/ManifestWorkspace.html#commit(boolean)"/>
         /// </summary>
         /// <param name="arg0"><see cref="bool"/></param>
         /// <returns><see cref="bool"/></returns>
@@ -229,7 +229,7 @@ namespace Org.Apache.Kafka.Tools
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/ManifestWorkspace.SourceWorkspace.html#location--"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/ManifestWorkspace.SourceWorkspace.html#location()"/>
             /// </summary>
             /// <returns><see cref="Java.Nio.File.Path"/></returns>
             public Java.Nio.File.Path Location()
@@ -272,7 +272,7 @@ namespace Org.Apache.Kafka.Tools
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/ManifestWorkspace.SourceWorkspace.html#location--"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/ManifestWorkspace.SourceWorkspace.html#location()"/>
             /// </summary>
             /// <returns><see cref="Java.Nio.File.Path"/></returns>
             public Java.Nio.File.Path Location()

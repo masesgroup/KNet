@@ -156,7 +156,7 @@ namespace Org.Apache.Kafka.Common.Replica
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/replica/PartitionView.html#replicas--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/replica/PartitionView.html#replicas()"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Set"/></returns>
         public Java.Util.Set<Org.Apache.Kafka.Common.Replica.ReplicaView> Replicas()
@@ -164,7 +164,7 @@ namespace Org.Apache.Kafka.Common.Replica
             return IExecuteWithSignature<Java.Util.Set<Org.Apache.Kafka.Common.Replica.ReplicaView>>("replicas", "()Ljava/util/Set;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/replica/PartitionView.html#leader--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/replica/PartitionView.html#leader()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.Replica.ReplicaView"/></returns>
         public Org.Apache.Kafka.Common.Replica.ReplicaView Leader()
@@ -180,7 +180,7 @@ namespace Org.Apache.Kafka.Common.Replica
         {
             #region Constructors
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/replica/PartitionView.DefaultPartitionView.html#org.apache.kafka.common.replica.PartitionView$DefaultPartitionView(java.util.Set,org.apache.kafka.common.replica.ReplicaView)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/replica/PartitionView.DefaultPartitionView.html#%3Cinit%3E(java.util.Set,org.apache.kafka.common.replica.ReplicaView)"/>
             /// </summary>
             /// <param name="arg0"><see cref="Java.Util.Set"/></param>
             /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Replica.ReplicaView"/></param>
@@ -205,7 +205,7 @@ namespace Org.Apache.Kafka.Common.Replica
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/replica/PartitionView.DefaultPartitionView.html#replicas--"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/replica/PartitionView.DefaultPartitionView.html#replicas()"/>
             /// </summary>
             /// <returns><see cref="Java.Util.Set"/></returns>
             public Java.Util.Set<Org.Apache.Kafka.Common.Replica.ReplicaView> Replicas()
@@ -213,7 +213,7 @@ namespace Org.Apache.Kafka.Common.Replica
                 return IExecuteWithSignature<Java.Util.Set<Org.Apache.Kafka.Common.Replica.ReplicaView>>("replicas", "()Ljava/util/Set;");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/replica/PartitionView.DefaultPartitionView.html#leader--"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/replica/PartitionView.DefaultPartitionView.html#leader()"/>
             /// </summary>
             /// <returns><see cref="Org.Apache.Kafka.Common.Replica.ReplicaView"/></returns>
             public Org.Apache.Kafka.Common.Replica.ReplicaView Leader()

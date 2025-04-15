@@ -136,7 +136,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/DescribeProducersResult.html#all--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/DescribeProducersResult.html#all()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.KafkaFuture"/></returns>
         public Org.Apache.Kafka.Common.KafkaFuture<Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Org.Apache.Kafka.Clients.Admin.DescribeProducersResult.PartitionProducerState>> All()
@@ -144,7 +144,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<Org.Apache.Kafka.Common.KafkaFuture<Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Org.Apache.Kafka.Clients.Admin.DescribeProducersResult.PartitionProducerState>>>("all", "()Lorg/apache/kafka/common/KafkaFuture;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/DescribeProducersResult.html#partitionResult-org.apache.kafka.common.TopicPartition-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/DescribeProducersResult.html#partitionResult(org.apache.kafka.common.TopicPartition)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.TopicPartition"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.KafkaFuture"/></returns>
@@ -161,7 +161,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         {
             #region Constructors
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/DescribeProducersResult.PartitionProducerState.html#org.apache.kafka.clients.admin.DescribeProducersResult$PartitionProducerState(java.util.List)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/DescribeProducersResult.PartitionProducerState.html#%3Cinit%3E(java.util.List)"/>
             /// </summary>
             /// <param name="arg0"><see cref="Java.Util.List"/></param>
             public PartitionProducerState(Java.Util.List<Org.Apache.Kafka.Clients.Admin.ProducerState> arg0)
@@ -185,7 +185,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/DescribeProducersResult.PartitionProducerState.html#activeProducers--"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/DescribeProducersResult.PartitionProducerState.html#activeProducers()"/>
             /// </summary>
             /// <returns><see cref="Java.Util.List"/></returns>
             public Java.Util.List<Org.Apache.Kafka.Clients.Admin.ProducerState> ActiveProducers()

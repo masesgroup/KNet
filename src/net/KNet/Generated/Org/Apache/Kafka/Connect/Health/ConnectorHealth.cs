@@ -75,7 +75,7 @@ namespace Org.Apache.Kafka.Connect.Health
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.0.0/org/apache/kafka/connect/health/ConnectorHealth.html#org.apache.kafka.connect.health.ConnectorHealth(java.lang.String,org.apache.kafka.connect.health.ConnectorState,java.util.Map,org.apache.kafka.connect.health.ConnectorType)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.0.0/org/apache/kafka/connect/health/ConnectorHealth.html#%3Cinit%3E(java.lang.String,org.apache.kafka.connect.health.ConnectorState,java.util.Map,org.apache.kafka.connect.health.ConnectorType)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Connect.Health.ConnectorState"/></param>
@@ -102,7 +102,7 @@ namespace Org.Apache.Kafka.Connect.Health
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.0.0/org/apache/kafka/connect/health/ConnectorHealth.html#name--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.0.0/org/apache/kafka/connect/health/ConnectorHealth.html#name()"/>
         /// </summary>
         /// <returns><see cref="Java.Lang.String"/></returns>
         public Java.Lang.String Name()
@@ -110,7 +110,7 @@ namespace Org.Apache.Kafka.Connect.Health
             return IExecuteWithSignature<Java.Lang.String>("name", "()Ljava/lang/String;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.0.0/org/apache/kafka/connect/health/ConnectorHealth.html#tasksState--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.0.0/org/apache/kafka/connect/health/ConnectorHealth.html#tasksState()"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Map"/></returns>
         public Java.Util.Map<Java.Lang.Integer, Org.Apache.Kafka.Connect.Health.TaskState> TasksState()
@@ -118,7 +118,7 @@ namespace Org.Apache.Kafka.Connect.Health
             return IExecuteWithSignature<Java.Util.Map<Java.Lang.Integer, Org.Apache.Kafka.Connect.Health.TaskState>>("tasksState", "()Ljava/util/Map;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.0.0/org/apache/kafka/connect/health/ConnectorHealth.html#connectorState--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.0.0/org/apache/kafka/connect/health/ConnectorHealth.html#connectorState()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Connect.Health.ConnectorState"/></returns>
         public Org.Apache.Kafka.Connect.Health.ConnectorState ConnectorState()
@@ -126,7 +126,7 @@ namespace Org.Apache.Kafka.Connect.Health
             return IExecuteWithSignature<Org.Apache.Kafka.Connect.Health.ConnectorState>("connectorState", "()Lorg/apache/kafka/connect/health/ConnectorState;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.0.0/org/apache/kafka/connect/health/ConnectorHealth.html#type--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.0.0/org/apache/kafka/connect/health/ConnectorHealth.html#type()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Connect.Health.ConnectorType"/></returns>
         public Org.Apache.Kafka.Connect.Health.ConnectorType Type()

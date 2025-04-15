@@ -89,7 +89,7 @@
 
 
   <h1 id="MASES_KNet_Consumer_KNetConsumer_2" data-uid="MASES.KNet.Consumer.KNetConsumer`2" class="text-break">
-Class KNetConsumer&lt;K, V&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Consumer/KNetConsumer.cs/#L346"><i class="bi bi-code-slash"></i></a>
+Class KNetConsumer&lt;K, V&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Consumer/KNetConsumer.cs/#L358"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -308,6 +308,9 @@ Class KNetConsumer&lt;K, V&gt;  <a class="header-action link-secondary" title="V
       <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.KafkaConsumer-2.html#Org_Apache_Kafka_Clients_Consumer_KafkaConsumer_2_Pause_Java_Util_Collection_Org_Apache_Kafka_Common_TopicPartition__">KafkaConsumer&lt;byte[], byte[]&gt;.Pause(Collection&lt;TopicPartition&gt;)</a>
     </div>
     <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.KafkaConsumer-2.html#Org_Apache_Kafka_Clients_Consumer_KafkaConsumer_2_RegisterMetricForSubscription_Org_Apache_Kafka_Common_Metrics_KafkaMetric_">KafkaConsumer&lt;byte[], byte[]&gt;.RegisterMetricForSubscription(KafkaMetric)</a>
+    </div>
+    <div>
       <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.KafkaConsumer-2.html#Org_Apache_Kafka_Clients_Consumer_KafkaConsumer_2_Resume_Java_Util_Collection_Org_Apache_Kafka_Common_TopicPartition__">KafkaConsumer&lt;byte[], byte[]&gt;.Resume(Collection&lt;TopicPartition&gt;)</a>
     </div>
     <div>
@@ -333,6 +336,15 @@ Class KNetConsumer&lt;K, V&gt;  <a class="header-action link-secondary" title="V
     </div>
     <div>
       <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.KafkaConsumer-2.html#Org_Apache_Kafka_Clients_Consumer_KafkaConsumer_2_Subscribe_Java_Util_Regex_Pattern_">KafkaConsumer&lt;byte[], byte[]&gt;.Subscribe(Pattern)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.KafkaConsumer-2.html#Org_Apache_Kafka_Clients_Consumer_KafkaConsumer_2_Subscribe_Org_Apache_Kafka_Clients_Consumer_SubscriptionPattern_Org_Apache_Kafka_Clients_Consumer_ConsumerRebalanceListener_">KafkaConsumer&lt;byte[], byte[]&gt;.Subscribe(SubscriptionPattern, ConsumerRebalanceListener)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.KafkaConsumer-2.html#Org_Apache_Kafka_Clients_Consumer_KafkaConsumer_2_Subscribe_Org_Apache_Kafka_Clients_Consumer_SubscriptionPattern_">KafkaConsumer&lt;byte[], byte[]&gt;.Subscribe(SubscriptionPattern)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.KafkaConsumer-2.html#Org_Apache_Kafka_Clients_Consumer_KafkaConsumer_2_UnregisterMetricFromSubscription_Org_Apache_Kafka_Common_Metrics_KafkaMetric_">KafkaConsumer&lt;byte[], byte[]&gt;.UnregisterMetricFromSubscription(KafkaMetric)</a>
     </div>
     <div>
       <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.KafkaConsumer-2.html#Org_Apache_Kafka_Clients_Consumer_KafkaConsumer_2_Unsubscribe">KafkaConsumer&lt;byte[], byte[]&gt;.Unsubscribe()</a>
@@ -728,7 +740,7 @@ Class KNetConsumer&lt;K, V&gt;  <a class="header-action link-secondary" title="V
 
   <h3 id="MASES_KNet_Consumer_KNetConsumer_2__ctor_MASES_KNet_Consumer_ConsumerConfigBuilder_MASES_KNet_Serialization_ISerDes__0_System_Byte____MASES_KNet_Serialization_ISerDes__1_System_Byte____System_Boolean_" data-uid="MASES.KNet.Consumer.KNetConsumer`2.#ctor(MASES.KNet.Consumer.ConsumerConfigBuilder,MASES.KNet.Serialization.ISerDes{`0,System.Byte[]},MASES.KNet.Serialization.ISerDes{`1,System.Byte[]},System.Boolean)">
   KNetConsumer(ConsumerConfigBuilder, ISerDes&lt;K, byte[]&gt;, ISerDes&lt;V, byte[]&gt;, bool)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Consumer/KNetConsumer.cs/#L364"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Consumer/KNetConsumer.cs/#L376"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Initialize a new instance of <a class="xref" href="MASES.KNet.Consumer.KNetConsumer-4.html">KNetConsumer&lt;K, V, TJVMK, TJVMV&gt;</a></p>
@@ -770,7 +782,7 @@ Class KNetConsumer&lt;K, V&gt;  <a class="header-action link-secondary" title="V
 
   <h3 id="MASES_KNet_Consumer_KNetConsumer_2__ctor_MASES_KNet_Consumer_ConsumerConfigBuilder_System_Boolean_" data-uid="MASES.KNet.Consumer.KNetConsumer`2.#ctor(MASES.KNet.Consumer.ConsumerConfigBuilder,System.Boolean)">
   KNetConsumer(ConsumerConfigBuilder, bool)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Consumer/KNetConsumer.cs/#L353"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Consumer/KNetConsumer.cs/#L365"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Initialize a new instance of <a class="xref" href="MASES.KNet.Consumer.KNetConsumer-4.html">KNetConsumer&lt;K, V, TJVMK, TJVMV&gt;</a></p>
@@ -806,7 +818,7 @@ Class KNetConsumer&lt;K, V&gt;  <a class="header-action link-secondary" title="V
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Consumer/KNetConsumer.cs/#L346" class="edit-link">Edit this page</a>
+          <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Consumer/KNetConsumer.cs/#L358" class="edit-link">Edit this page</a>
         </div>
 
 

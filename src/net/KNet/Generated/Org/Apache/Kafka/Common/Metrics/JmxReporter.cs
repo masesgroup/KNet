@@ -127,7 +127,7 @@ namespace Org.Apache.Kafka.Common.Metrics
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/metrics/JmxReporter.html#compilePredicate-java.util.Map-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/metrics/JmxReporter.html#compilePredicate(java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <returns><see cref="Java.Util.Function.Predicate"/></returns>
@@ -136,7 +136,7 @@ namespace Org.Apache.Kafka.Common.Metrics
             return SExecuteWithSignature<Java.Util.Function.Predicate<Java.Lang.String>>(LocalBridgeClazz, "compilePredicate", "(Ljava/util/Map;)Ljava/util/function/Predicate;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/metrics/JmxReporter.html#compilePredicate-java.util.Map-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/metrics/JmxReporter.html#compilePredicate(java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <returns><see cref="Java.Util.Function.Predicate"/></returns>
@@ -149,7 +149,7 @@ namespace Org.Apache.Kafka.Common.Metrics
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/metrics/JmxReporter.html#containsMbean-java.lang.String-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/metrics/JmxReporter.html#containsMbean(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="bool"/></returns>
@@ -158,7 +158,7 @@ namespace Org.Apache.Kafka.Common.Metrics
             return IExecuteWithSignature<bool>("containsMbean", "(Ljava/lang/String;)Z", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/metrics/JmxReporter.html#reconfigurableConfigs--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/metrics/JmxReporter.html#reconfigurableConfigs()"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Set"/></returns>
         public Java.Util.Set<Java.Lang.String> ReconfigurableConfigs()
@@ -166,14 +166,14 @@ namespace Org.Apache.Kafka.Common.Metrics
             return IExecuteWithSignature<Java.Util.Set<Java.Lang.String>>("reconfigurableConfigs", "()Ljava/util/Set;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/metrics/JmxReporter.html#close--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/metrics/JmxReporter.html#close()"/>
         /// </summary>
         public void Close()
         {
             IExecuteWithSignature("close", "()V");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/metrics/JmxReporter.html#configure-java.util.Map-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/metrics/JmxReporter.html#configure(java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         public void Configure(Java.Util.Map<Java.Lang.String, object> arg0)
@@ -181,7 +181,7 @@ namespace Org.Apache.Kafka.Common.Metrics
             IExecuteWithSignature("configure", "(Ljava/util/Map;)V", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/metrics/JmxReporter.html#contextChange-org.apache.kafka.common.metrics.MetricsContext-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/metrics/JmxReporter.html#contextChange(org.apache.kafka.common.metrics.MetricsContext)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Metrics.MetricsContext"/></param>
         public void ContextChange(Org.Apache.Kafka.Common.Metrics.MetricsContext arg0)
@@ -189,7 +189,7 @@ namespace Org.Apache.Kafka.Common.Metrics
             IExecuteWithSignature("contextChange", "(Lorg/apache/kafka/common/metrics/MetricsContext;)V", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/metrics/JmxReporter.html#init-java.util.List-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/metrics/JmxReporter.html#init(java.util.List)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.List"/></param>
         public void Init(Java.Util.List<Org.Apache.Kafka.Common.Metrics.KafkaMetric> arg0)
@@ -197,7 +197,7 @@ namespace Org.Apache.Kafka.Common.Metrics
             IExecuteWithSignature("init", "(Ljava/util/List;)V", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/metrics/JmxReporter.html#metricChange-org.apache.kafka.common.metrics.KafkaMetric-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/metrics/JmxReporter.html#metricChange(org.apache.kafka.common.metrics.KafkaMetric)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Metrics.KafkaMetric"/></param>
         public void MetricChange(Org.Apache.Kafka.Common.Metrics.KafkaMetric arg0)
@@ -205,7 +205,7 @@ namespace Org.Apache.Kafka.Common.Metrics
             IExecuteWithSignature("metricChange", "(Lorg/apache/kafka/common/metrics/KafkaMetric;)V", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/metrics/JmxReporter.html#metricRemoval-org.apache.kafka.common.metrics.KafkaMetric-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/metrics/JmxReporter.html#metricRemoval(org.apache.kafka.common.metrics.KafkaMetric)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Metrics.KafkaMetric"/></param>
         public void MetricRemoval(Org.Apache.Kafka.Common.Metrics.KafkaMetric arg0)
@@ -213,7 +213,7 @@ namespace Org.Apache.Kafka.Common.Metrics
             IExecuteWithSignature("metricRemoval", "(Lorg/apache/kafka/common/metrics/KafkaMetric;)V", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/metrics/JmxReporter.html#reconfigure-java.util.Map-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/metrics/JmxReporter.html#reconfigure(java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         public void Reconfigure(Java.Util.Map<Java.Lang.String, object> arg0)
@@ -221,7 +221,7 @@ namespace Org.Apache.Kafka.Common.Metrics
             IExecuteWithSignature("reconfigure", "(Ljava/util/Map;)V", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/metrics/JmxReporter.html#validateReconfiguration-java.util.Map-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/metrics/JmxReporter.html#validateReconfiguration(java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <exception cref="Org.Apache.Kafka.Common.Config.ConfigException"/>

@@ -117,7 +117,7 @@ namespace Org.Apache.Kafka.Security
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.0.0/org/apache/kafka/security/PasswordEncoder.html#encode-org.apache.kafka.common.config.types.Password-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.0.0/org/apache/kafka/security/PasswordEncoder.html#encode(org.apache.kafka.common.config.types.Password)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Config.Types.Password"/></param>
         /// <returns><see cref="Java.Lang.String"/></returns>
@@ -127,7 +127,7 @@ namespace Org.Apache.Kafka.Security
             return IExecuteWithSignature<Java.Lang.String>("encode", "(Lorg/apache/kafka/common/config/types/Password;)Ljava/lang/String;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.0.0/org/apache/kafka/security/PasswordEncoder.html#decode-java.lang.String-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.0.0/org/apache/kafka/security/PasswordEncoder.html#decode(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.Config.Types.Password"/></returns>

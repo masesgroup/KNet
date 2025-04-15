@@ -136,21 +136,21 @@ namespace Org.Apache.Kafka.Clients
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/ApiVersions.html#getFinalizedFeaturesInfo--"/> 
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/ApiVersions.html#getFinalizedFeaturesInfo()"/> 
         /// </summary>
         public Org.Apache.Kafka.Clients.ApiVersions.FinalizedFeaturesInfo GetFinalizedFeaturesInfo
         {
             get { return IExecuteWithSignature<Org.Apache.Kafka.Clients.ApiVersions.FinalizedFeaturesInfo>("getFinalizedFeaturesInfo", "()Lorg/apache/kafka/clients/ApiVersions$FinalizedFeaturesInfo;"); }
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/ApiVersions.html#getMaxFinalizedFeaturesEpoch--"/> 
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/ApiVersions.html#getMaxFinalizedFeaturesEpoch()"/> 
         /// </summary>
         public long MaxFinalizedFeaturesEpoch
         {
             get { return IExecuteWithSignature<long>("getMaxFinalizedFeaturesEpoch", "()J"); }
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/ApiVersions.html#get-java.lang.String-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/ApiVersions.html#get(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Clients.NodeApiVersions"/></returns>
@@ -159,7 +159,7 @@ namespace Org.Apache.Kafka.Clients
             return IExecuteWithSignature<Org.Apache.Kafka.Clients.NodeApiVersions>("get", "(Ljava/lang/String;)Lorg/apache/kafka/clients/NodeApiVersions;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/ApiVersions.html#remove-java.lang.String-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/ApiVersions.html#remove(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         public void Remove(Java.Lang.String arg0)
@@ -167,7 +167,7 @@ namespace Org.Apache.Kafka.Clients
             IExecuteWithSignature("remove", "(Ljava/lang/String;)V", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/ApiVersions.html#update-java.lang.String-org.apache.kafka.clients.NodeApiVersions-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/ApiVersions.html#update(java.lang.String,org.apache.kafka.clients.NodeApiVersions)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Clients.NodeApiVersions"/></param>

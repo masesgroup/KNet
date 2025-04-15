@@ -127,14 +127,14 @@ namespace Org.Apache.Kafka.Common.Security.Oauthbearer
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/security/oauthbearer/OAuthBearerLoginCallbackHandler.html#close--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/security/oauthbearer/OAuthBearerLoginCallbackHandler.html#close()"/>
         /// </summary>
         public void Close()
         {
             IExecuteWithSignature("close", "()V");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/security/oauthbearer/OAuthBearerLoginCallbackHandler.html#configure-java.util.Map-java.lang.String-java.util.List-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/security/oauthbearer/OAuthBearerLoginCallbackHandler.html#configure(java.util.Map,java.lang.String,java.util.List)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <param name="arg1"><see cref="Java.Lang.String"/></param>
@@ -144,7 +144,7 @@ namespace Org.Apache.Kafka.Common.Security.Oauthbearer
             IExecuteWithSignature("configure", "(Ljava/util/Map;Ljava/lang/String;Ljava/util/List;)V", arg0, arg1, arg2);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/security/oauthbearer/OAuthBearerLoginCallbackHandler.html#handle-javax.security.auth.callback.Callback[]-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/security/oauthbearer/OAuthBearerLoginCallbackHandler.html#handle(javax.security.auth.callback.Callback[])"/>
         /// </summary>
         /// <param name="arg0"><see cref="Javax.Security.Auth.Callback.Callback"/></param>
         /// <exception cref="Java.Io.IOException"/>

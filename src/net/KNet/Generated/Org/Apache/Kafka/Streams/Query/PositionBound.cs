@@ -87,7 +87,7 @@ namespace Org.Apache.Kafka.Streams.Query
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/query/PositionBound.html#at-org.apache.kafka.streams.query.Position-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/query/PositionBound.html#at(org.apache.kafka.streams.query.Position)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Query.Position"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Query.PositionBound"/></returns>
@@ -96,7 +96,7 @@ namespace Org.Apache.Kafka.Streams.Query
             return SExecuteWithSignature<Org.Apache.Kafka.Streams.Query.PositionBound>(LocalBridgeClazz, "at", "(Lorg/apache/kafka/streams/query/Position;)Lorg/apache/kafka/streams/query/PositionBound;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/query/PositionBound.html#unbounded--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/query/PositionBound.html#unbounded()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Query.PositionBound"/></returns>
         public static Org.Apache.Kafka.Streams.Query.PositionBound Unbounded()
@@ -108,7 +108,7 @@ namespace Org.Apache.Kafka.Streams.Query
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/query/PositionBound.html#isUnbounded--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/query/PositionBound.html#isUnbounded()"/>
         /// </summary>
         /// <returns><see cref="bool"/></returns>
         public bool IsUnbounded()
@@ -116,7 +116,7 @@ namespace Org.Apache.Kafka.Streams.Query
             return IExecuteWithSignature<bool>("isUnbounded", "()Z");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/query/PositionBound.html#position--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/query/PositionBound.html#position()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Query.Position"/></returns>
         public Org.Apache.Kafka.Streams.Query.Position Position()
