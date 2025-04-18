@@ -32,6 +32,12 @@ jobs:
           fetch-depth: '1'
           submodules: 'true'
 
+      - name: Common site
+        uses: actions/checkout@v4
+        with:
+          repository: masesgroup/CommonTools
+          path: CommonTools
+
       - name: Clear documentation folder 
         run: Remove-Item .\docs\* -Recurse -Force -Exclude _config.yml,CNAME
 
@@ -39,6 +45,7 @@ jobs:
 
       - name: Build documentation
         run: |
+          Copy-Item ${{ github.workspace }}\CommonTools\website\en\* -Destination ${{ github.workspace }}\src\documentation\ -Force -Recurse -Verbose
           cd src\documentation
           docfx
 
@@ -53,7 +60,7 @@ jobs:
         with:
           branch-suffix: short-commit-hash
           add-paths: docs/*.*
-          commit-message: Changes by GitHub action
+          commit-message: Update documentation after commit ${{ env.GITHUB_COMMIT_MESSAGE }}
           title: Update documentation after commit ${{ env.GITHUB_COMMIT_MESSAGE }}
           body: Automated changes by GitHub action
           reviewers: masesdevelopers
