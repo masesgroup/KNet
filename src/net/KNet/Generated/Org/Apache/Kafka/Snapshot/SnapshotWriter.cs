@@ -208,7 +208,7 @@ namespace Org.Apache.Kafka.Snapshot
 
     #region ISnapshotWriter<T>
     /// <summary>
-    /// .NET interface for TO BE DEFINED FROM USER
+    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/snapshot/SnapshotWriter.html"/>
     /// </summary>
     public partial interface ISnapshotWriter<T> : Java.Lang.IAutoCloseable
     {

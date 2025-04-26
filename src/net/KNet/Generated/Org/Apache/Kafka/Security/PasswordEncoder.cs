@@ -74,7 +74,7 @@ namespace Org.Apache.Kafka.Security
 
     #region IPasswordEncoder
     /// <summary>
-    /// .NET interface for TO BE DEFINED FROM USER
+    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.0.0/org/apache/kafka/security/PasswordEncoder.html"/>
     /// </summary>
     public partial interface IPasswordEncoder
     {

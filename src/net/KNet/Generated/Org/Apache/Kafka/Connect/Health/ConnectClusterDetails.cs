@@ -74,7 +74,7 @@ namespace Org.Apache.Kafka.Connect.Health
 
     #region IConnectClusterDetails
     /// <summary>
-    /// .NET interface for TO BE DEFINED FROM USER
+    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.0.0/org/apache/kafka/connect/health/ConnectClusterDetails.html"/>
     /// </summary>
     public partial interface IConnectClusterDetails
     {

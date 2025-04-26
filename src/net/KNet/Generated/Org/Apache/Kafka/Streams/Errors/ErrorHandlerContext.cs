@@ -74,7 +74,7 @@ namespace Org.Apache.Kafka.Streams.Errors
 
     #region IErrorHandlerContext
     /// <summary>
-    /// .NET interface for TO BE DEFINED FROM USER
+    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/errors/ErrorHandlerContext.html"/>
     /// </summary>
     public partial interface IErrorHandlerContext
     {

@@ -206,7 +206,7 @@ namespace Org.Apache.Kafka.Streams.State
 
     #region IVersionedKeyValueStore<K, V>
     /// <summary>
-    /// .NET interface for TO BE DEFINED FROM USER
+    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/state/VersionedKeyValueStore.html"/>
     /// </summary>
     public partial interface IVersionedKeyValueStore<K, V> : Org.Apache.Kafka.Streams.Processor.IStateStore
     {

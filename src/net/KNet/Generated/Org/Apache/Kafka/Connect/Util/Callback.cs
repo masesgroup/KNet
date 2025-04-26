@@ -179,7 +179,7 @@ namespace Org.Apache.Kafka.Connect.Util
 
     #region ICallback<V>
     /// <summary>
-    /// .NET interface for TO BE DEFINED FROM USER
+    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.0.0/org/apache/kafka/connect/util/Callback.html"/>
     /// </summary>
     public partial interface ICallback<V>
     {

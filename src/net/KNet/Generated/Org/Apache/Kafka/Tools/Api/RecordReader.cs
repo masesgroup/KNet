@@ -74,7 +74,7 @@ namespace Org.Apache.Kafka.Tools.Api
 
     #region IRecordReader
     /// <summary>
-    /// .NET interface for TO BE DEFINED FROM USER
+    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools-api/4.0.0/org/apache/kafka/tools/api/RecordReader.html"/>
     /// </summary>
     public partial interface IRecordReader
     {

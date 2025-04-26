@@ -97,7 +97,7 @@ namespace Org.Apache.Kafka.Tools
             return SExecuteWithSignature<Java.Util.Set<T>>(LocalBridgeClazz, "duplicates", "(Ljava/util/List;)Ljava/util/Set;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/ToolsUtils.html#minus(java.util.Set,java.lang.Object[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/ToolsUtils.html#minus(java.util.Set,java.lang.Object...)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Set"/></param>
         /// <param name="arg1"><typeparamref name="T"/></param>

@@ -74,7 +74,7 @@ namespace Org.Apache.Kafka.Clients
 
     #region IRequestCompletionHandler
     /// <summary>
-    /// .NET interface for TO BE DEFINED FROM USER
+    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/RequestCompletionHandler.html"/>
     /// </summary>
     public partial interface IRequestCompletionHandler
     {

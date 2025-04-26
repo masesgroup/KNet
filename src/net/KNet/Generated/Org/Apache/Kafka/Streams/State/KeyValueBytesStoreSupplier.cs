@@ -74,7 +74,7 @@ namespace Org.Apache.Kafka.Streams.State
 
     #region IKeyValueBytesStoreSupplier
     /// <summary>
-    /// .NET interface for TO BE DEFINED FROM USER
+    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/state/KeyValueBytesStoreSupplier.html"/>
     /// </summary>
     public partial interface IKeyValueBytesStoreSupplier : Org.Apache.Kafka.Streams.State.IStoreSupplier<Org.Apache.Kafka.Streams.State.KeyValueStore<Org.Apache.Kafka.Common.Utils.Bytes, byte[]>>
     {

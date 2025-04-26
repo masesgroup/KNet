@@ -154,7 +154,7 @@ namespace Org.Apache.Kafka.Streams.State
 
     #region ITimestampedKeyValueStore<K, V>
     /// <summary>
-    /// .NET interface for TO BE DEFINED FROM USER
+    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/state/TimestampedKeyValueStore.html"/>
     /// </summary>
     public partial interface ITimestampedKeyValueStore<K, V> : Org.Apache.Kafka.Streams.State.IKeyValueStore<K, Org.Apache.Kafka.Streams.State.ValueAndTimestamp<V>>
     {

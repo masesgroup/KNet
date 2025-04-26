@@ -74,7 +74,7 @@ namespace Org.Apache.Kafka.Connect.Sink
 
     #region ISinkTaskContext
     /// <summary>
-    /// .NET interface for TO BE DEFINED FROM USER
+    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.0.0/org/apache/kafka/connect/sink/SinkTaskContext.html"/>
     /// </summary>
     public partial interface ISinkTaskContext
     {
@@ -144,7 +144,7 @@ namespace Org.Apache.Kafka.Connect.Sink
             IExecuteWithSignature("offset", "(Lorg/apache/kafka/common/TopicPartition;J)V", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.0.0/org/apache/kafka/connect/sink/SinkTaskContext.html#pause(org.apache.kafka.common.TopicPartition[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.0.0/org/apache/kafka/connect/sink/SinkTaskContext.html#pause(org.apache.kafka.common.TopicPartition...)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.TopicPartition"/></param>
         public void Pause(params Org.Apache.Kafka.Common.TopicPartition[] arg0)
@@ -159,7 +159,7 @@ namespace Org.Apache.Kafka.Connect.Sink
             IExecuteWithSignature("requestCommit", "()V");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.0.0/org/apache/kafka/connect/sink/SinkTaskContext.html#resume(org.apache.kafka.common.TopicPartition[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.0.0/org/apache/kafka/connect/sink/SinkTaskContext.html#resume(org.apache.kafka.common.TopicPartition...)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.TopicPartition"/></param>
         public void Resume(params Org.Apache.Kafka.Common.TopicPartition[] arg0)
