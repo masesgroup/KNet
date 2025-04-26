@@ -162,7 +162,7 @@ namespace Org.Apache.Kafka.Tools.Api
 
     #region IDecoder<T>
     /// <summary>
-    /// .NET interface for TO BE DEFINED FROM USER
+    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools-api/4.0.0/org/apache/kafka/tools/api/Decoder.html"/>
     /// </summary>
     public partial interface IDecoder<T>
     {

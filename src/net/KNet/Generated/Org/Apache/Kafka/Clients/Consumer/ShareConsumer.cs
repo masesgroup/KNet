@@ -274,7 +274,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
 
     #region IShareConsumer<K, V>
     /// <summary>
-    /// .NET interface for TO BE DEFINED FROM USER
+    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/ShareConsumer.html"/>
     /// </summary>
     public partial interface IShareConsumer<K, V> : Java.Io.ICloseable
     {

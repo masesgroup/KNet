@@ -29,7 +29,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
     /// <summary>
     /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/api/WrappedProcessorSupplier.html"/>
     /// </summary>
-    public partial class WrappedProcessorSupplier : MASES.JCOBridge.C2JBridge.JVMBridgeBase<WrappedProcessorSupplier>
+    public partial class WrappedProcessorSupplier : Org.Apache.Kafka.Streams.Processor.Api.ProcessorSupplier
     {
         const string _bridgeClassName = "org.apache.kafka.streams.processor.api.WrappedProcessorSupplier";
         /// <summary>
@@ -80,7 +80,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
     /// <typeparam name="VIn"></typeparam>
     /// <typeparam name="KOut"></typeparam>
     /// <typeparam name="VOut"></typeparam>
-    public partial class WrappedProcessorSupplier<KIn, VIn, KOut, VOut> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<WrappedProcessorSupplier<KIn, VIn, KOut, VOut>>
+    public partial class WrappedProcessorSupplier<KIn, VIn, KOut, VOut> : Org.Apache.Kafka.Streams.Processor.Api.ProcessorSupplier<KIn, VIn, KOut, VOut>
     {
         const string _bridgeClassName = "org.apache.kafka.streams.processor.api.WrappedProcessorSupplier";
         /// <summary>
@@ -156,9 +156,9 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
 
     #region IWrappedProcessorSupplier<KIn, VIn, KOut, VOut>
     /// <summary>
-    /// .NET interface for TO BE DEFINED FROM USER
+    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/api/WrappedProcessorSupplier.html"/>
     /// </summary>
-    public partial interface IWrappedProcessorSupplier<KIn, VIn, KOut, VOut>
+    public partial interface IWrappedProcessorSupplier<KIn, VIn, KOut, VOut> : Org.Apache.Kafka.Streams.Processor.Api.IProcessorSupplier<KIn, VIn, KOut, VOut>
     {
         #region Instance methods
 

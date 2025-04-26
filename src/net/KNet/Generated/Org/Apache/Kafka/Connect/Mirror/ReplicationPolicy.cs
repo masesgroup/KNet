@@ -74,7 +74,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
 
     #region IReplicationPolicy
     /// <summary>
-    /// .NET interface for TO BE DEFINED FROM USER
+    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/4.0.0/org/apache/kafka/connect/mirror/ReplicationPolicy.html"/>
     /// </summary>
     public partial interface IReplicationPolicy
     {

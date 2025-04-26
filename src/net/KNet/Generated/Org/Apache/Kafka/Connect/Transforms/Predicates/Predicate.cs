@@ -185,7 +185,7 @@ namespace Org.Apache.Kafka.Connect.Transforms.Predicates
 
     #region IPredicate<R>
     /// <summary>
-    /// .NET interface for TO BE DEFINED FROM USER
+    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.0.0/org/apache/kafka/connect/transforms/predicates/Predicate.html"/>
     /// </summary>
     public partial interface IPredicate<R>
     {

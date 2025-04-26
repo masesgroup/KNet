@@ -338,7 +338,7 @@ namespace Org.Apache.Kafka.Common
             return SExecuteWithSignature<Org.Apache.Kafka.Common.KafkaFuture>(LocalBridgeClazz, "completedFuture", "(Ljava/lang/Object;)Lorg/apache/kafka/common/KafkaFuture;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/KafkaFuture.html#allOf(org.apache.kafka.common.KafkaFuture[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/KafkaFuture.html#allOf(org.apache.kafka.common.KafkaFuture...)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.KafkaFuture"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.KafkaFuture"/></returns>
@@ -653,7 +653,7 @@ namespace Org.Apache.Kafka.Common
             return SExecuteWithSignature<Org.Apache.Kafka.Common.KafkaFuture<U>>(LocalBridgeClazz, "completedFuture", "(Ljava/lang/Object;)Lorg/apache/kafka/common/KafkaFuture;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/KafkaFuture.html#allOf(org.apache.kafka.common.KafkaFuture[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/KafkaFuture.html#allOf(org.apache.kafka.common.KafkaFuture...)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.KafkaFuture"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.KafkaFuture"/></returns>

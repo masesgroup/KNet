@@ -74,7 +74,7 @@ namespace Org.Apache.Kafka.Common
 
     #region IReconfigurable
     /// <summary>
-    /// .NET interface for TO BE DEFINED FROM USER
+    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/Reconfigurable.html"/>
     /// </summary>
     public partial interface IReconfigurable : Org.Apache.Kafka.Common.IConfigurable
     {

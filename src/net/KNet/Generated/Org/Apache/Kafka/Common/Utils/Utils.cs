@@ -260,7 +260,7 @@ namespace Org.Apache.Kafka.Common.Utils
             return SExecuteWithSignature<Java.Util.Set<E>>(LocalBridgeClazz, "diff", "(Ljava/util/function/Supplier;Ljava/util/Set;Ljava/util/Set;)Ljava/util/Set;", arg0, arg1, arg2);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/utils/Utils.html#intersection(java.util.function.Supplier,java.util.Set,java.util.Set[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/utils/Utils.html#intersection(java.util.function.Supplier,java.util.Set,java.util.Set...)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Function.Supplier"/></param>
         /// <param name="arg1"><see cref="Java.Util.Set"/></param>
@@ -272,7 +272,7 @@ namespace Org.Apache.Kafka.Common.Utils
             if (arg2.Length == 0) return SExecuteWithSignature<Java.Util.Set<E>>(LocalBridgeClazz, "intersection", "(Ljava/util/function/Supplier;Ljava/util/Set;[Ljava/util/Set;)Ljava/util/Set;", arg0, arg1); else return SExecuteWithSignature<Java.Util.Set<E>>(LocalBridgeClazz, "intersection", "(Ljava/util/function/Supplier;Ljava/util/Set;[Ljava/util/Set;)Ljava/util/Set;", arg0, arg1, arg2);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/utils/Utils.html#union(java.util.function.Supplier,java.util.Set[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/utils/Utils.html#union(java.util.function.Supplier,java.util.Set...)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Function.Supplier"/></param>
         /// <param name="arg1"><see cref="Java.Util.Set"/></param>
@@ -322,7 +322,7 @@ namespace Org.Apache.Kafka.Common.Utils
             return SExecuteWithSignature<Java.Util.Map<K, V>>(LocalBridgeClazz, "filterMap", "(Ljava/util/Map;Ljava/util/function/Predicate;)Ljava/util/Map;", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/utils/Utils.html#mkMap(java.util.Map.Entry[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/utils/Utils.html#mkMap(java.util.Map.Entry...)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map.Entry"/></param>
         /// <typeparam name="K"></typeparam>
@@ -355,7 +355,7 @@ namespace Org.Apache.Kafka.Common.Utils
             return SExecuteWithSignature<Java.Util.List<T>>(LocalBridgeClazz, "sorted", "(Ljava/util/Collection;)Ljava/util/List;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/utils/Utils.html#mkSortedSet(java.lang.Comparable[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/utils/Utils.html#mkSortedSet(java.lang.Comparable...)"/>
         /// </summary>
         /// <param name="arg0"><typeparamref name="T"/></param>
         /// <typeparam name="T"><see cref="Java.Lang.Comparable{T}"/></typeparam>
@@ -452,7 +452,7 @@ namespace Org.Apache.Kafka.Common.Utils
             return SExecuteWithSignature<T>(LocalBridgeClazz, "newInstance", "(Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/utils/Utils.html#newParameterizedInstance(java.lang.String,java.lang.Object[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/utils/Utils.html#newParameterizedInstance(java.lang.String,java.lang.Object...)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="object"/></param>
@@ -940,7 +940,7 @@ namespace Org.Apache.Kafka.Common.Utils
             return SExecuteWithSignature<long>(LocalBridgeClazz, "getDateTime", "(Ljava/lang/String;)J", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/utils/Utils.html#max(long,long[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/utils/Utils.html#max(long,long...)"/>
         /// </summary>
         /// <param name="arg0"><see cref="long"/></param>
         /// <param name="arg1"><see cref="long"/></param>
@@ -950,7 +950,7 @@ namespace Org.Apache.Kafka.Common.Utils
             if (arg1.Length == 0) return SExecuteWithSignature<long>(LocalBridgeClazz, "max", "(J[J)J", arg0); else return SExecuteWithSignature<long>(LocalBridgeClazz, "max", "(J[J)J", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/utils/Utils.html#min(long,long[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/utils/Utils.html#min(long,long...)"/>
         /// </summary>
         /// <param name="arg0"><see cref="long"/></param>
         /// <param name="arg1"><see cref="long"/></param>
@@ -1000,7 +1000,7 @@ namespace Org.Apache.Kafka.Common.Utils
             SExecuteWithSignature(LocalBridgeClazz, "atomicMoveWithFallback", "(Ljava/nio/file/Path;Ljava/nio/file/Path;)V", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/utils/Utils.html#closeAll(java.io.Closeable[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/utils/Utils.html#closeAll(java.io.Closeable...)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Io.Closeable"/></param>
         /// <exception cref="Java.Io.IOException"/>
@@ -1009,7 +1009,7 @@ namespace Org.Apache.Kafka.Common.Utils
             if (arg0.Length == 0) SExecuteWithSignature(LocalBridgeClazz, "closeAll", "([Ljava/io/Closeable;)V"); else SExecuteWithSignature(LocalBridgeClazz, "closeAll", "([Ljava/io/Closeable;)V", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/utils/Utils.html#closeAllQuietly(java.util.concurrent.atomic.AtomicReference,java.lang.String,java.lang.AutoCloseable[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/utils/Utils.html#closeAllQuietly(java.util.concurrent.atomic.AtomicReference,java.lang.String,java.lang.AutoCloseable...)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Concurrent.Atomic.AtomicReference"/></param>
         /// <param name="arg1"><see cref="Java.Lang.String"/></param>
