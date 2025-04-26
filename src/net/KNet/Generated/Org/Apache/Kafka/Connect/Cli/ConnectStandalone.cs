@@ -75,7 +75,7 @@ namespace Org.Apache.Kafka.Connect.Cli
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.0.0/org/apache/kafka/connect/cli/ConnectStandalone.html#%3Cinit%3E(java.lang.String...)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.0.0/org/apache/kafka/connect/cli/ConnectStandalone.html#%3Cinit%3E(java.lang.String[])"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         public ConnectStandalone(params Java.Lang.String[] arg0)

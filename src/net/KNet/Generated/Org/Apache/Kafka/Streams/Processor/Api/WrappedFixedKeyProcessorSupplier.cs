@@ -29,7 +29,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
     /// <summary>
     /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/api/WrappedFixedKeyProcessorSupplier.html"/>
     /// </summary>
-    public partial class WrappedFixedKeyProcessorSupplier : MASES.JCOBridge.C2JBridge.JVMBridgeBase<WrappedFixedKeyProcessorSupplier>
+    public partial class WrappedFixedKeyProcessorSupplier : Org.Apache.Kafka.Streams.Processor.Api.FixedKeyProcessorSupplier
     {
         const string _bridgeClassName = "org.apache.kafka.streams.processor.api.WrappedFixedKeyProcessorSupplier";
         /// <summary>
@@ -79,7 +79,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
     /// <typeparam name="KIn"></typeparam>
     /// <typeparam name="VIn"></typeparam>
     /// <typeparam name="VOut"></typeparam>
-    public partial class WrappedFixedKeyProcessorSupplier<KIn, VIn, VOut> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<WrappedFixedKeyProcessorSupplier<KIn, VIn, VOut>>
+    public partial class WrappedFixedKeyProcessorSupplier<KIn, VIn, VOut> : Org.Apache.Kafka.Streams.Processor.Api.FixedKeyProcessorSupplier<KIn, VIn, VOut>
     {
         const string _bridgeClassName = "org.apache.kafka.streams.processor.api.WrappedFixedKeyProcessorSupplier";
         /// <summary>
@@ -157,7 +157,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
     /// <summary>
     /// .NET interface for TO BE DEFINED FROM USER
     /// </summary>
-    public partial interface IWrappedFixedKeyProcessorSupplier<KIn, VIn, VOut>
+    public partial interface IWrappedFixedKeyProcessorSupplier<KIn, VIn, VOut> : Org.Apache.Kafka.Streams.Processor.Api.IFixedKeyProcessorSupplier<KIn, VIn, VOut>
     {
         #region Instance methods
 
