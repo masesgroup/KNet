@@ -50,10 +50,24 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
     /// </summary>
     public partial class FixedKeyProcessorSupplier : JVMBridgeListener
     {
+        #region Constructors
+        /// <summary>
+        /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
+        /// </summary>
+        public FixedKeyProcessorSupplier() { }
+
+        /// <summary>
+        /// Generic constructor: it is useful for JCOBridge when there is a derived class which needs to pass arguments to the highest JVMBridgeBase class
+        /// </summary>
+        [global::System.Obsolete("This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
+        public FixedKeyProcessorSupplier(params object[] args) { }
+
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeListener_BridgeClassName.htm"/>
         /// </summary>
         public override string BridgeClassName => "org.mases.knet.developed.streams.processor.api.FixedKeyProcessorSupplier";
+
+        #endregion
     }
     #endregion
 
@@ -68,6 +82,12 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
         #endregion
 
         #region Constructors
+        /// <summary>
+        /// Generic constructor: it is useful for JCOBridge when there is a derived class which needs to pass arguments to the highest JVMBridgeBase class
+        /// </summary>
+        [global::System.Obsolete("This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
+        public FixedKeyProcessorSupplier(params object[] args) : base(args) { }
+
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
         /// </summary>
