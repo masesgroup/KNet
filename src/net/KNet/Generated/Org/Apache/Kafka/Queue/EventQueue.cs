@@ -438,7 +438,7 @@ namespace Org.Apache.Kafka.Queue
 
     #region IEventQueue
     /// <summary>
-    /// .NET interface for TO BE DEFINED FROM USER
+    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.0.0/org/apache/kafka/queue/EventQueue.html"/>
     /// </summary>
     public partial interface IEventQueue : Java.Lang.IAutoCloseable
     {

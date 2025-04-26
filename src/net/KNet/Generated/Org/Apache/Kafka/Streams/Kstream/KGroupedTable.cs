@@ -271,7 +271,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
     #region IKGroupedTable<K, V>
     /// <summary>
-    /// .NET interface for TO BE DEFINED FROM USER
+    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/KGroupedTable.html"/>
     /// </summary>
     public partial interface IKGroupedTable<K, V>
     {

@@ -278,7 +278,7 @@ namespace Org.Apache.Kafka.Clients.Producer
 
     #region IProducer<K, V>
     /// <summary>
-    /// .NET interface for TO BE DEFINED FROM USER
+    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/producer/Producer.html"/>
     /// </summary>
     public partial interface IProducer<K, V> : Java.Io.ICloseable
     {

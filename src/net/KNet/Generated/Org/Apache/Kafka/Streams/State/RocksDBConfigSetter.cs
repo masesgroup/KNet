@@ -74,7 +74,7 @@ namespace Org.Apache.Kafka.Streams.State
 
     #region IRocksDBConfigSetter
     /// <summary>
-    /// .NET interface for TO BE DEFINED FROM USER
+    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/state/RocksDBConfigSetter.html"/>
     /// </summary>
     public partial interface IRocksDBConfigSetter
     {

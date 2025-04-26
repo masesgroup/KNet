@@ -74,7 +74,7 @@ namespace Org.Apache.Kafka.Raft
 
     #region IEpochState
     /// <summary>
-    /// .NET interface for TO BE DEFINED FROM USER
+    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/EpochState.html"/>
     /// </summary>
     public partial interface IEpochState : Java.Io.ICloseable
     {

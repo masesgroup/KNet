@@ -74,7 +74,7 @@ namespace Org.Apache.Kafka.Raft
 
     #region IOffsetMetadata
     /// <summary>
-    /// .NET interface for TO BE DEFINED FROM USER
+    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/OffsetMetadata.html"/>
     /// </summary>
     public partial interface IOffsetMetadata
     {

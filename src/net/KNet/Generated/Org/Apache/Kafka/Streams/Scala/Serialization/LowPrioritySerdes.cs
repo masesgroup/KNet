@@ -74,7 +74,7 @@ namespace Org.Apache.Kafka.Streams.Scala.Serialization
 
     #region ILowPrioritySerdes
     /// <summary>
-    /// .NET interface for TO BE DEFINED FROM USER
+    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/serialization/LowPrioritySerdes.html"/>
     /// </summary>
     public partial interface ILowPrioritySerdes
     {

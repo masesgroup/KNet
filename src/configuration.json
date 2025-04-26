@@ -197,6 +197,10 @@
     "org.apache.kafka.streams.processor.api.FixedKeyProcessor",
     "org.apache.kafka.streams.processor.api.Processor"
   ],
+  "ClassesManuallyDeveloped": [
+    "org.apache.kafka.streams.processor.api.FixedKeyProcessorSupplier",
+    "org.apache.kafka.streams.processor.api.ProcessorSupplier"
+  ],
   "ClassesToAvoid": [
     "kafka.Kafka",
     "kafka.admin.ElectionTypeConverter",
@@ -239,8 +243,6 @@
     "org.apache.kafka.streams.kstream.ValueTransformerSupplier",
     "org.apache.kafka.streams.kstream.ValueTransformerWithKeySupplier",
     "org.apache.kafka.streams.processor.assignment.KafkaStreamsAssignment$AssignedTask",
-    "org.apache.kafka.streams.processor.api.FixedKeyProcessorSupplier",
-    "org.apache.kafka.streams.processor.api.ProcessorSupplier",
     "org.apache.kafka.tools.ClientCompatibilityTest$ClientCompatibilityTestDeserializer",
     "org.apache.kafka.tools.ConsumerPerformance$ConsumerPerfRebListener",
     "org.apache.kafka.tools.ThroughputThrottler",

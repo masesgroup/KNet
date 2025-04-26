@@ -26,72 +26,87 @@ The configuration is:
   "DisableInterfaceMethodGeneration": true,
   "CreateInterfaceInheritance": true,
   "JarList": [
-    "kafka_2.13-3.9.0.jar",
-    "kafka-clients-3.9.0.jar",
-    "kafka-streams-3.9.0.jar",
-    "kafka-tools-3.9.0.jar",
-    "kafka-raft-3.9.0.jar",
-    "kafka-shell-3.9.0.jar",
-    "connect-api-3.9.0.jar",
-    "connect-basic-auth-extension-3.9.0.jar",
-    "connect-json-3.9.0.jar",
-    "connect-mirror-3.9.0.jar",
-    "connect-mirror-client-3.9.0.jar",
-    "connect-runtime-3.9.0.jar",
-    "connect-transforms-3.9.0.jar"
+    "kafka_2.13-4.0.0.jar",
+    "kafka-clients-4.0.0.jar",
+    "kafka-streams-4.0.0.jar",
+    "kafka-streams-scala_2.13-4.0.0.jar",
+    "kafka-tools-4.0.0.jar",
+    "kafka-tools-api-4.0.0.jar",
+    "kafka-raft-4.0.0.jar",
+    "kafka-shell-4.0.0.jar",
+    "connect-api-4.0.0.jar",
+    "connect-basic-auth-extension-4.0.0.jar",
+    "connect-json-4.0.0.jar",
+    "connect-mirror-4.0.0.jar",
+    "connect-mirror-client-4.0.0.jar",
+    "connect-runtime-4.0.0.jar",
+    "connect-transforms-4.0.0.jar",
+    "kafka-server-common-4.0.0.jar"
   ],
   "OriginJavadocJARVersionAndUrls": [
     {
-      "Version": 8,
-      "Url": "https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.9.0/"
+      "Version": 11,
+      "Url": "https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/4.0.0/"
     },
     {
-      "Version": 8,
-      "Url": "https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/"
+      "Version": 11,
+      "Url": "https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/"
     },
     {
-      "Version": 8,
-      "Url": "https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.0/"
+      "Version": 11,
+      "Url": "https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/"
     },
     {
-      "Version": 8,
-      "Url": "https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.9.0/"
+      "Version": 11,
+      "Url": "https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/"
     },
     {
-      "Version": 8,
-      "Url": "https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.0/"
+      "Version": 11,
+      "Url": "https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/"
     },
     {
-      "Version": 8,
-      "Url": "https://www.javadoc.io/doc/org.apache.kafka/kafka-shell/3.9.0/"
+      "Version": 11,
+      "Url": "https://www.javadoc.io/doc/org.apache.kafka/kafka-tools-api/4.0.0/"
     },
     {
-      "Version": 8,
-      "Url": "https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.0/"
+      "Version": 11,
+      "Url": "https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/"
     },
     {
-      "Version": 8,
-      "Url": "https://www.javadoc.io/doc/org.apache.kafka/connect-basic-auth-extension/3.9.0/"
+      "Version": 11,
+      "Url": "https://www.javadoc.io/doc/org.apache.kafka/kafka-shell/4.0.0/"
     },
     {
-      "Version": 8,
-      "Url": "https://www.javadoc.io/doc/org.apache.kafka/connect-json/3.9.0/"
+      "Version": 11,
+      "Url": "https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.0.0/"
     },
     {
-      "Version": 8,
-      "Url": "https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.9.0/"
+      "Version": 11,
+      "Url": "https://www.javadoc.io/doc/org.apache.kafka/connect-basic-auth-extension/4.0.0/"
     },
     {
-      "Version": 8,
-      "Url": "https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/3.9.0/"
+      "Version": 11,
+      "Url": "https://www.javadoc.io/doc/org.apache.kafka/connect-json/4.0.0/"
     },
     {
-      "Version": 8,
-      "Url": "https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.9.0/"
+      "Version": 11,
+      "Url": "https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.0.0/"
     },
     {
-      "Version": 8,
-      "Url": "https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.9.0/"
+      "Version": 11,
+      "Url": "https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/4.0.0/"
+    },
+    {
+      "Version": 11,
+      "Url": "https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.0.0/"
+    },
+    {
+      "Version": 11,
+      "Url": "https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.0.0/"
+    },
+    {
+      "Version": 11,
+      "Url": "https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.0.0/"
     }
   ],
   "NamespacesToAvoid": [
@@ -158,6 +173,7 @@ The configuration is:
     "org.apache.kafka.streams.state.internals",
     "org.apache.kafka.streams.kstream.internals",
     "org.apache.kafka.streams.query.internals",
+    "org.apache.kafka.timeline",
     "org.apache.zookeeper.client",
     "org.eclipse.jetty",
     "org.glassfish",
@@ -200,6 +216,10 @@ The configuration is:
     "org.apache.kafka.streams.processor.api.FixedKeyProcessor",
     "org.apache.kafka.streams.processor.api.Processor"
   ],
+  "ClassesManuallyDeveloped": [
+    "org.apache.kafka.streams.processor.api.FixedKeyProcessorSupplier",
+    "org.apache.kafka.streams.processor.api.ProcessorSupplier"
+  ],
   "ClassesToAvoid": [
     "kafka.Kafka",
     "kafka.admin.ElectionTypeConverter",
@@ -232,6 +252,7 @@ The configuration is:
     "org.apache.kafka.connect.cli.AbstractConnectCli",
     "org.apache.kafka.connect.rest.ConnectRestExtensionContext",
     "org.apache.kafka.connect.rest.ConnectRestExtension",
+    "org.apache.kafka.connect.rest.basic.auth.extension.JaasBasicAuthFilter",
     "org.apache.kafka.connect.storage.HeaderConverter",
     "org.apache.kafka.connect.storage.SimpleHeaderConverter",
     "org.apache.kafka.connect.util.SharedTopicAdmin",
@@ -241,8 +262,6 @@ The configuration is:
     "org.apache.kafka.streams.kstream.ValueTransformerSupplier",
     "org.apache.kafka.streams.kstream.ValueTransformerWithKeySupplier",
     "org.apache.kafka.streams.processor.assignment.KafkaStreamsAssignment$AssignedTask",
-    "org.apache.kafka.streams.processor.api.FixedKeyProcessorSupplier",
-    "org.apache.kafka.streams.processor.api.ProcessorSupplier",
     "org.apache.kafka.tools.ClientCompatibilityTest$ClientCompatibilityTestDeserializer",
     "org.apache.kafka.tools.ConsumerPerformance$ConsumerPerfRebListener",
     "org.apache.kafka.tools.ThroughputThrottler",

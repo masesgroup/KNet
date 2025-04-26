@@ -153,7 +153,7 @@ namespace Org.Apache.Kafka.Streams.Query
 
     #region IQuery<R>
     /// <summary>
-    /// .NET interface for TO BE DEFINED FROM USER
+    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/query/Query.html"/>
     /// </summary>
     public partial interface IQuery<R>
     {
