@@ -44,11 +44,24 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
     }
     #endregion
 
+    #region FixedKeyProcessorSupplier
+    /// <summary>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/api/FixedKeyProcessorSupplier.html"/>
+    /// </summary>
+    public partial class FixedKeyProcessorSupplier : JVMBridgeListener
+    {
+        /// <summary>
+        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeListener_BridgeClassName.htm"/>
+        /// </summary>
+        public override string BridgeClassName => "org.mases.knet.developed.streams.processor.api.FixedKeyProcessorSupplier";
+    }
+    #endregion
+
     #region FixedKeyProcessorSupplier<KIn, VIn, VOut>
     /// <summary>
     /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/api/FixedKeyProcessorSupplier.html"/>
     /// </summary>
-    public partial class FixedKeyProcessorSupplier<KIn, VIn, VOut> : JVMBridgeListener, Org.Apache.Kafka.Streams.Processor.Api.IFixedKeyProcessorSupplier<KIn, VIn, VOut>, Org.Apache.Kafka.Streams.Processor.IConnectedStoreProvider, Java.Util.Function.ISupplier<Org.Apache.Kafka.Streams.Processor.Api.FixedKeyProcessor<KIn, VIn, VOut>>
+    public partial class FixedKeyProcessorSupplier<KIn, VIn, VOut> : FixedKeyProcessorSupplier, Org.Apache.Kafka.Streams.Processor.Api.IFixedKeyProcessorSupplier<KIn, VIn, VOut>, Org.Apache.Kafka.Streams.Processor.IConnectedStoreProvider, Java.Util.Function.ISupplier<Org.Apache.Kafka.Streams.Processor.Api.FixedKeyProcessor<KIn, VIn, VOut>>
     {
         #region Private
         readonly List<JVMBridgeListener> m_list = new List<JVMBridgeListener>();
@@ -60,10 +73,6 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
         /// </summary>
         public FixedKeyProcessorSupplier() { InitializeHandlers(); }
 
-        /// <summary>
-        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeListener_BridgeClassName.htm"/>
-        /// </summary>
-        public override string BridgeClassName => "org.mases.knet.developed.streams.processor.api.FixedKeyProcessorSupplier";
         #endregion
 
         #region Instance methods

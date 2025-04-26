@@ -39,11 +39,27 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
     }
     #endregion
 
+    #region ProcessorSupplier
+    /// <summary>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/api/ProcessorSupplier.html"/>
+    /// </summary>
+    public partial class ProcessorSupplier : JVMBridgeListener
+    {
+        #region Constructors
+        /// <summary>
+        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeListener_BridgeClassName.htm"/>
+        /// </summary>
+        public override string BridgeClassName => "org.mases.knet.developed.streams.processor.api.ProcessorSupplier";
+        #endregion
+
+    }
+    #endregion
+
     #region ProcessorSupplier<KIn, VIn, KOut, VOut>
     /// <summary>
     /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/api/ProcessorSupplier.html"/>
     /// </summary>
-    public partial class ProcessorSupplier<KIn, VIn, KOut, VOut> : JVMBridgeListener, Org.Apache.Kafka.Streams.Processor.Api.IProcessorSupplier<KIn, VIn, KOut, VOut>, Org.Apache.Kafka.Streams.Processor.IConnectedStoreProvider, Java.Util.Function.ISupplier<Org.Apache.Kafka.Streams.Processor.Api.Processor<KIn, VIn, KOut, VOut>>
+    public partial class ProcessorSupplier<KIn, VIn, KOut, VOut> : ProcessorSupplier, Org.Apache.Kafka.Streams.Processor.Api.IProcessorSupplier<KIn, VIn, KOut, VOut>, Org.Apache.Kafka.Streams.Processor.IConnectedStoreProvider, Java.Util.Function.ISupplier<Org.Apache.Kafka.Streams.Processor.Api.Processor<KIn, VIn, KOut, VOut>>
     {
         #region Private
         readonly List<JVMBridgeListener> m_list = new List<JVMBridgeListener>();
