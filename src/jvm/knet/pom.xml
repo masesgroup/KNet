@@ -263,7 +263,7 @@ project.properties.originalClassPath = file.getText()
 		<dependency>
 			<groupId>com.google.protobuf</groupId>
 			<artifactId>protobuf-java</artifactId>
-			<version>3.25.5</version>
+			<version>4.31.1</version>
 		</dependency>
 		<!--dependency>
 			<groupId>io.netty</groupId>
