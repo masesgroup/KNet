@@ -298,7 +298,7 @@ project.properties.originalClassPath = file.getText()
 		<dependency>
 			<groupId>org.apache.logging.log4j</groupId>
 			<artifactId>log4j-1.2-api</artifactId>
-			<version>2.24.3</version>
+			<version>2.25.0</version>
 		</dependency>		
 	</dependencies>
 </project>
