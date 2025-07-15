@@ -18,12 +18,12 @@
 	</PropertyGroup>
 
 	<Target Name="CopyCustomContent" AfterTargets="AfterBuild">
-		<Copy SourceFiles="@(knetfiles_jars)" DestinationFolder="$(OutDir)\jars" />
-		<Copy SourceFiles="@(knetfiles_config)" DestinationFolder="$(OutDir)\config" />
+		<Copy SourceFiles="@(knetfiles_jars)" DestinationFolder="$(OutDir)\jars\%(RecursiveDir)" />
+		<Copy SourceFiles="@(knetfiles_config)" DestinationFolder="$(OutDir)\config\%(RecursiveDir)" />
 	</Target>
 	<Target Name="CopyCustomContentOnPublish" AfterTargets="Publish">
-		<Copy SourceFiles="@(knetfiles_jars)" DestinationFolder="$(OutDir)\jars" />
-		<Copy SourceFiles="@(knetfiles_config)" DestinationFolder="$(OutDir)\config" />
+		<Copy SourceFiles="@(knetfiles_jars)" DestinationFolder="$(OutDir)\jars\%(RecursiveDir)" />
+		<Copy SourceFiles="@(knetfiles_config)" DestinationFolder="$(OutDir)\config\%(RecursiveDir)" />
 	</Target>
 	
 	<ItemGroup>
