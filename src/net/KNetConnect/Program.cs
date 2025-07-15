@@ -18,6 +18,7 @@
 
 using MASES.JNet.CLI;
 using System;
+using System.Threading.Tasks;
 
 namespace MASES.KNet.Connect
 {
@@ -38,13 +39,13 @@ namespace MASES.KNet.Connect
         public override string ExampleLines => $"{ProgramName} -s connect-standalone.properties specific-connector.properties" + Environment.NewLine +
                                                $"{ProgramName} -d connect-distributed.properties";
         /// <inheritdoc/>
-        public override bool EnableInteractive = false;
+        public override bool EnableInteractive => false;
         /// <inheritdoc/>
-        public override bool EnableScript = false;
+        public override bool EnableScript => false;
         /// <inheritdoc/>
-        public override bool EnableRunCommand = false;
+        public override bool EnableRunCommand => false;
 
-        static async void Main(string[] args)
+        static async Task Main(string[] args)
         {
             await InternalMain(args);
         }
