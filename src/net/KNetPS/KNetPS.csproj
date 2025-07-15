@@ -9,7 +9,7 @@
 		<Product>KNetPS</Product>
 		<OutputPath>..\..\..\MASES.KNetPS\</OutputPath>
 		<TargetFrameworks>net462;net8.0</TargetFrameworks>
-		<RunAnalyzersDuringLiveAnalysis>True</RunAnalyzersDuringLiveAnalysis>
+		<RunAnalyzersDuringLiveAnalysis>False</RunAnalyzersDuringLiveAnalysis>
 		<RunAnalyzersDuringBuild>False</RunAnalyzersDuringBuild>
 	</PropertyGroup>
 
