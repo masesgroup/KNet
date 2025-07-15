@@ -16,11 +16,11 @@
 *  Refer to LICENSE for more information.
 */
 
-using MASES.JNetPSCore.Cmdlet;
+using MASES.JNet.PowerShell.Cmdlet;
 using MASES.KNet;
 using System.Management.Automation;
 
-namespace MASES.KNetPS.Cmdlet
+namespace MASES.KNet.PowerShell.Cmdlet
 {
     public class StartKNetPSCmdletCommandBase<TCmdlet> : StartJNetPSCmdletCommandBase<TCmdlet, KNetPSCore>
         where TCmdlet : StartKNetPSCmdletCommandBase<TCmdlet>

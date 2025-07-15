@@ -17,13 +17,11 @@
 */
 
 using MASES.JCOBridge.C2JBridge;
-using MASES.KNet;
 using System;
-using System.Collections.Generic;
 using System.Reflection;
 using System.Text;
 
-namespace MASES.KNetCLI
+namespace MASES.KNet.Connect
 {
     class Program
     {

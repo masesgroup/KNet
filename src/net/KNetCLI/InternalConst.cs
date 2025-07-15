@@ -16,7 +16,7 @@
 *  Refer to LICENSE for more information.
 */
 
-namespace MASES.KNetCLI
+namespace MASES.KNet.CLI
 {
     class InternalConst
     {

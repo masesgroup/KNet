@@ -38,7 +38,7 @@
 	<ItemGroup>
 		<None Include="mases.knet.targets" Pack="true" PackagePath="build" />
 		<None Include="..\..\..\jars\*.jar"
-		      Exclude="..\..\..\jars\animal-sniffer-annotations-*.jar;
+              Exclude="..\..\..\jars\animal-sniffer-annotations-*.jar;
 					   ..\..\..\jars\checker-compat-qual-*.jar;
 					   ..\..\..\jars\failureaccess-*.jar;
 					   ..\..\..\jars\groovy-*.jar;
@@ -57,7 +57,7 @@
 		<None Include="..\..\documentation\articles\usage.md" Pack="true" PackagePath="\" />
 	</ItemGroup>
 	<ItemGroup>
-		<PackageReference Include="MASES.JNet" Version="2.5.12">
+		<PackageReference Include="MASES.JNet" Version="2.5.13">
 			<IncludeAssets>All</IncludeAssets>
 			<PrivateAssets>None</PrivateAssets>
 		</PackageReference>

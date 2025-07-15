@@ -16,11 +16,10 @@
 *  Refer to LICENSE for more information.
 */
 
-using MASES.KNetPS.Cmdlet;
-using MASES.JNetPSCore.Cmdlet;
+using MASES.JNet.PowerShell.Cmdlet;
 using System.Management.Automation;
 
-namespace MASES.KNetPS.ToolsCmdlet
+namespace MASES.KNet.PowerShell.Cmdlet.Tools
 {
     [Cmdlet(VerbsLifecycle.Start, "ConnectStandalone")]
     [JNetPSExternalize]

@@ -43,11 +43,6 @@ namespace MASES.KNet
                 {
                     new ArgumentMetadata<string>()
                     {
-                        Name = CLIParam.ClassToRun,
-                        Help = "The class to be instantiated from CLI.",
-                    },
-                    new ArgumentMetadata<string>()
-                    {
                         Name = CLIParam.ScalaVersion,
                         Default = Const.DefaultScalaVersion,
                         Help = "The version of scala to be used.",
@@ -117,7 +112,6 @@ namespace MASES.KNet
         {
             var result = base.ProcessCommandLine();
 
-            _classToRun = ParsedArgs.Get<string>(CLIParam.ClassToRun);
             _JarRootPath = ParsedArgs.Get<string>(CLIParam.KafkaLocation);
             _log4JPath = ParsedArgs.Get<string>(CLIParam.Log4JConfiguration);
             if (!Path.IsPathRooted(_log4JPath)) // it is not a full path
@@ -137,37 +131,6 @@ namespace MASES.KNet
             _disableJMX = ParsedArgs.Exist(CLIParam.DisableJMX);
             return result;
         }
-        /// <summary>
-        /// Prepare <see cref="MainClassToRun"/> property
-        /// </summary>
-        /// <param name="className">The class to search</param>
-        /// <exception cref="ArgumentException">If <paramref name="className"/> does not have a corresponding implemented <see cref="Type"/></exception>
-        protected virtual void PrepareMainClassToRun(string className)
-        {
-            if (string.IsNullOrWhiteSpace(className)) return;
-            var invariantLowClassName = className.ToLowerInvariant();
-            Type type = null;
-            foreach (var item in typeof(KNetCore<>).Assembly.ExportedTypes)
-            {
-                if (item.Name.ToLowerInvariant() == invariantLowClassName
-                    || item.FullName.ToLowerInvariant() == invariantLowClassName)
-                {
-                    type = item;
-                    break;
-                }
-            }
-            MainClassToRun = type ?? throw new ArgumentException($"Requested class {className} is not a valid class name.");
-        }
-
-        /// <summary>
-        /// Sets the <see cref="Type"/> to be invoked at startup
-        /// </summary>
-        public static Type MainClassToRun { get; protected set; }
-
-        /// <summary>
-        /// Sets the global value of class to run
-        /// </summary>
-        public static string ApplicationClassToRun { get; set; }
 
         /// <summary>
         /// Sets the global value of Jar root path
@@ -193,15 +156,6 @@ namespace MASES.KNet
         /// Sets the global value to disable JMX
         /// </summary>
         public static bool? ApplicationDisableJMX { get; set; }
-
-        /// <summary>
-        /// value can be overridden in subclasses
-        /// </summary>
-        protected string _classToRun;
-        /// <summary>
-        /// The class to run in CLI version
-        /// </summary>
-        public virtual string ClassToRun { get { return ApplicationClassToRun ?? _classToRun; } }
 
         string _scalaVersion;
         /// <summary>

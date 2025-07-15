@@ -5,7 +5,7 @@
 		<PackageType>DotnetTool</PackageType>
 		<OutputType>Exe</OutputType>
 		<AssemblyName>MASES.KNetConnect</AssemblyName>
-		<RootNamespace>MASES.KNetConnect</RootNamespace>
+		<RootNamespace>MASES.KNet.Connect</RootNamespace>
 		<Title>KNet Connect SDK command line interface - .NET suite for Apache Kafka</Title>
 		<Description>Connect SDK command line interface of .NET suite for Apache Kafka. KNet is a comprehensive .NET suite for Apache Kafka providing all features: Producer, Consumer, Admin, Streams, Connect, backends (KRaft).</Description>
 		<Product>KNetConnect</Product>

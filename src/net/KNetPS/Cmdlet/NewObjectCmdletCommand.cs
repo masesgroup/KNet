@@ -16,10 +16,10 @@
 *  Refer to LICENSE for more information.
 */
 
-using MASES.JNetPSCore.Cmdlet;
+using MASES.JNet.PowerShell.Cmdlet;
 using System.Management.Automation;
 
-namespace MASES.KNetPS.Cmdlet
+namespace MASES.KNet.PowerShell.Cmdlet
 {
     [Cmdlet(VerbsCommon.New, "KObject")]
     public class NewObjectCmdletCommand : NewObjectCmdletCommandBase<NewObjectCmdletCommand, KNetPSCore>

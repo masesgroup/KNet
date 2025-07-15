@@ -17,12 +17,13 @@
 */
 
 using MASES.JCOBridge.C2JBridge;
-using MASES.JNetPSCore;
+using MASES.JNet.PowerShell;
+using MASES.JNet.Specific.CLI;
 using System;
 using System.Management.Automation;
 using System.Reflection;
 
-namespace MASES.KNetPS.Cmdlet
+namespace MASES.KNet.PowerShell.Cmdlet
 {
     public class KafkaClassToRunCmdletCommandBase<TCmdlet> : StartKNetPSCmdletCommandBase<TCmdlet>
         where TCmdlet : KafkaClassToRunCmdletCommandBase<TCmdlet>
@@ -37,20 +38,15 @@ namespace MASES.KNetPS.Cmdlet
         {
             base.OnBeforeCreateGlobalInstance();
             var nounName = JNetPSHelper.NounName<TCmdlet>();
-            KNetPSHelper<KNetPSCore>.SetClassToRun(nounName);
+            JNetPSHelper<KNetPSCore>.SetClassToRun(nounName);
         }
 
         protected override void OnAfterCreateGlobalInstance()
         {
-            string[] arguments = Array.Empty<string>();
-            if (Arguments != null)
-            {
-                arguments = Arguments.Split(' ');
-            }
-
+            string[] arguments = JNetPSHelper.ExtractArguments(Arguments).ToArray();
             try
             {
-                JNetPSHelper<KNetPSCore>.Launch(KNetPSCore.MainClassToRun, arguments);
+                JNetPSHelper<KNetPSCore>.Launch(JNetCLICoreHelper.MainClassToRun, arguments);
             }
             catch (TargetInvocationException tie)
             {
