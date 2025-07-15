@@ -24,7 +24,7 @@
 	</ItemGroup>
 
 	<Target Name="CopyCustomContent" AfterTargets="AfterBuild">
-		<Copy SourceFiles="@(knetps_jars)" DestinationFolder="$(OutDir)\jars" />
+		<Copy SourceFiles="@(knetps_jars)" DestinationFolder="$(OutDir)\..\jars" />
 		<Copy SourceFiles="@(knetps_config)" DestinationFolder="$(OutDir)\config" />
 		<Copy SourceFiles="@(knetps_kraft)" DestinationFolder="$(OutDir)\config\kraft" />
 	</Target>
