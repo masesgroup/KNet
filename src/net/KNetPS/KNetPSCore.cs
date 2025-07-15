@@ -17,6 +17,9 @@
 */
 
 using MASES.KNetCLI;
+using System.Collections.Generic;
+using System.IO;
+using System.Reflection;
 
 namespace MASES.KNetPS
 {
@@ -25,8 +28,18 @@ namespace MASES.KNetPS
     /// </summary>
     public class KNetPSCore : KNetCLICore<KNetPSCore>
     {
+        static Assembly assembly = typeof(KNetPSCore).Assembly;
 #if NET6_0_OR_GREATER
         public static void Main(string[] args) { } // used in conjunction with project of executable type to produce artifacts with all needed assemblies
 #endif
+        protected override IList<string> PathToParse
+        {
+            get
+            {
+                var lst = base.PathToParse;
+                lst.Add(Path.Combine(assembly.Location, "..", JarRootPath, "*.jar"));
+                return lst;
+            }
+        }
     }
 }

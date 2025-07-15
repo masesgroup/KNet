@@ -45,8 +45,10 @@
 		<jnetVersion>2.5.12.0</jnetVersion>
 		<kafkaVersion>4.0.0</kafkaVersion>
 		<knetVersion>3.0.0.0</knetVersion>
-		<jcobridgepath>../../../bin/net8.0/JCOBridge.jar</jcobridgepath>
-		<jnetpath>../../../bin/net8.0/jars/jnet-${jnetVersion}.jar</jnetpath>
+		<rootDir>${basedir}/../../../</rootDir>
+		<jcobridgepath>${rootDir}/bin/net8.0/JCOBridge.jar</jcobridgepath>
+		<jnetpath>${rootDir}/bin/net8.0/jars/jnet-${jnetVersion}.jar</jnetpath>
+		<jarsDestination>${rootDir}/jars/</jarsDestination>
 	</properties>
 	<distributionManagement>
 		<snapshotRepository>
@@ -84,7 +86,7 @@
 							<goal>copy-dependencies</goal>
 						</goals>
 						<configuration>
-							<outputDirectory>${basedir}/../../../jars/</outputDirectory>
+							<outputDirectory>${jarsDestination}</outputDirectory>
 							<overWriteReleases>false</overWriteReleases>
 							<overWriteSnapshots>false</overWriteSnapshots>
 							<overWriteIfNewer>true</overWriteIfNewer>
@@ -105,7 +107,7 @@
 									<type>${project.packaging}</type>
 								</artifactItem>
 							</artifactItems>
-							<outputDirectory>${basedir}/../../../jars/</outputDirectory>
+							<outputDirectory>${jarsDestination}</outputDirectory>
 							<overWriteIfNewer>true</overWriteIfNewer>
 						</configuration>
 					</execution>
@@ -149,7 +151,7 @@ project.properties.originalClassPath = file.getText()
 				<configuration>
 					<compilerArgs>
 						<arg>-cp</arg>
-						<arg>${originalClassPath}${path.separator}${basedir}/${jcobridgepath}${path.separator}${basedir}/${jnetpath}</arg>
+						<arg>${originalClassPath}${path.separator}${jcobridgepath}${path.separator}${jnetpath}</arg>
 					</compilerArgs>
 					<skipMain>${mavenSkipMain}</skipMain>
 				</configuration>
@@ -299,6 +301,6 @@ project.properties.originalClassPath = file.getText()
 			<groupId>org.apache.logging.log4j</groupId>
 			<artifactId>log4j-1.2-api</artifactId>
 			<version>2.24.3</version>
-		</dependency>		
+		</dependency>
 	</dependencies>
 </project>
