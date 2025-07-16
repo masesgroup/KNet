@@ -276,12 +276,11 @@ jobs:
       - name: List NuGet packages downloaded
         if: ${{ inputs.UseLastRepositoryBuild == true }}
         continue-on-error: true
-        shell: cmd
-        run: dir .\JNetNuGet\*nupkg
+        run: ls -las ./JNetNuGet/*nupkg
 
       - name: Add local repo
         if: ${{ success() && inputs.UseLastRepositoryBuild == true }}
-        run: dotnet nuget add source --name local "${{ github.workspace }}\JNetNuGet\"
+        run: dotnet nuget add source --name local "${{ github.workspace }}/JNetNuGet/"
 
       - uses: actions/setup-dotnet@v4
         with:
