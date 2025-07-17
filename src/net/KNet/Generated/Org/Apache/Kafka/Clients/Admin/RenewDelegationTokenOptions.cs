@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 {
     #region RenewDelegationTokenOptions declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/admin/RenewDelegationTokenOptions.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/admin/RenewDelegationTokenOptions.html"/>
     /// </summary>
     public partial class RenewDelegationTokenOptions : Org.Apache.Kafka.Clients.Admin.AbstractOptions<Org.Apache.Kafka.Clients.Admin.RenewDelegationTokenOptions>
     {
@@ -91,7 +91,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/admin/RenewDelegationTokenOptions.html#renewTimePeriodMs--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/admin/RenewDelegationTokenOptions.html#renewTimePeriodMs--"/>
         /// </summary>
         /// <returns><see cref="long"/></returns>
         public long RenewTimePeriodMs()
@@ -99,7 +99,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<long>("renewTimePeriodMs", "()J");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/admin/RenewDelegationTokenOptions.html#renewTimePeriodMs-long-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/admin/RenewDelegationTokenOptions.html#renewTimePeriodMs-long-"/>
         /// </summary>
         /// <param name="arg0"><see cref="long"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.RenewDelegationTokenOptions"/></returns>

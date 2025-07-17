@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Connect.Converters
 {
     #region LongConverter declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.9.0/org/apache/kafka/connect/converters/LongConverter.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.9.1/org/apache/kafka/connect/converters/LongConverter.html"/>
     /// </summary>
     public partial class LongConverter : MASES.JCOBridge.C2JBridge.JVMBridgeBase<LongConverter>
     {

@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common.Serialization
 {
     #region ListDeserializer declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/serialization/ListDeserializer.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/serialization/ListDeserializer.html"/>
     /// </summary>
     public partial class ListDeserializer : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ListDeserializer>
     {
@@ -72,7 +72,7 @@ namespace Org.Apache.Kafka.Common.Serialization
 
     #region ListDeserializer<Inner> declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/serialization/ListDeserializer.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/serialization/ListDeserializer.html"/>
     /// </summary>
     /// <typeparam name="Inner"></typeparam>
     public partial class ListDeserializer<Inner> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ListDeserializer<Inner>>
@@ -121,7 +121,7 @@ namespace Org.Apache.Kafka.Common.Serialization
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/serialization/ListDeserializer.html#org.apache.kafka.common.serialization.ListDeserializer(java.lang.Class,org.apache.kafka.common.serialization.Deserializer)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/serialization/ListDeserializer.html#org.apache.kafka.common.serialization.ListDeserializer(java.lang.Class,org.apache.kafka.common.serialization.Deserializer)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.Class"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Serialization.Deserializer"/></param>
@@ -150,7 +150,7 @@ namespace Org.Apache.Kafka.Common.Serialization
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/serialization/ListDeserializer.html#deserialize-java.lang.String-byte[]-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/serialization/ListDeserializer.html#deserialize-java.lang.String-byte[]-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="byte"/></param>
@@ -160,7 +160,7 @@ namespace Org.Apache.Kafka.Common.Serialization
             return IExecuteWithSignature("deserialize", "(Ljava/lang/String;[B)Ljava/lang/Object;", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/serialization/ListDeserializer.html#innerDeserializer--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/serialization/ListDeserializer.html#innerDeserializer--"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.Serialization.Deserializer"/></returns>
         public Org.Apache.Kafka.Common.Serialization.Deserializer InnerDeserializer()
@@ -168,7 +168,7 @@ namespace Org.Apache.Kafka.Common.Serialization
             return IExecuteWithSignature<Org.Apache.Kafka.Common.Serialization.Deserializer>("innerDeserializer", "()Lorg/apache/kafka/common/serialization/Deserializer;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/serialization/ListDeserializer.html#innerDeserializer--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/serialization/ListDeserializer.html#innerDeserializer--"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.Serialization.Deserializer"/></returns>
         public Org.Apache.Kafka.Common.Serialization.Deserializer InnerDeserializerDirect()
@@ -176,14 +176,14 @@ namespace Org.Apache.Kafka.Common.Serialization
             return IExecuteWithSignature<Org.Apache.Kafka.Common.Serialization.DeserializerDirect, Org.Apache.Kafka.Common.Serialization.Deserializer>("innerDeserializer", "()Lorg/apache/kafka/common/serialization/Deserializer;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/serialization/ListDeserializer.html#close--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/serialization/ListDeserializer.html#close--"/>
         /// </summary>
         public void Close()
         {
             IExecuteWithSignature("close", "()V");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/serialization/ListDeserializer.html#configure-java.util.Map-boolean-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/serialization/ListDeserializer.html#configure-java.util.Map-boolean-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <param name="arg1"><see cref="bool"/></param>
@@ -207,7 +207,7 @@ namespace Org.Apache.Kafka.Common.Serialization
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/serialization/ListDeserializer.html#org.apache.kafka.common.serialization.ListDeserializer(java.lang.Class,org.apache.kafka.common.serialization.Deserializer)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/serialization/ListDeserializer.html#org.apache.kafka.common.serialization.ListDeserializer(java.lang.Class,org.apache.kafka.common.serialization.Deserializer)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.Class"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Serialization.Deserializer"/></param>
@@ -240,7 +240,7 @@ namespace Org.Apache.Kafka.Common.Serialization
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/serialization/ListDeserializer.html#deserialize-java.lang.String-byte[]-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/serialization/ListDeserializer.html#deserialize-java.lang.String-byte[]-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="byte"/></param>
@@ -250,7 +250,7 @@ namespace Org.Apache.Kafka.Common.Serialization
             return IExecuteWithSignature("deserialize", "(Ljava/lang/String;[B)Ljava/lang/Object;", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/serialization/ListDeserializer.html#innerDeserializer--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/serialization/ListDeserializer.html#innerDeserializer--"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.Serialization.Deserializer"/></returns>
         public Org.Apache.Kafka.Common.Serialization.Deserializer<Inner> InnerDeserializer()
@@ -258,7 +258,7 @@ namespace Org.Apache.Kafka.Common.Serialization
             return IExecuteWithSignature<Org.Apache.Kafka.Common.Serialization.Deserializer<Inner>>("innerDeserializer", "()Lorg/apache/kafka/common/serialization/Deserializer;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/serialization/ListDeserializer.html#innerDeserializer--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/serialization/ListDeserializer.html#innerDeserializer--"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.Serialization.Deserializer"/></returns>
         public Org.Apache.Kafka.Common.Serialization.Deserializer<Inner> InnerDeserializerDirect()
@@ -266,14 +266,14 @@ namespace Org.Apache.Kafka.Common.Serialization
             return IExecuteWithSignature<Org.Apache.Kafka.Common.Serialization.DeserializerDirect<Inner>, Org.Apache.Kafka.Common.Serialization.Deserializer<Inner>>("innerDeserializer", "()Lorg/apache/kafka/common/serialization/Deserializer;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/serialization/ListDeserializer.html#close--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/serialization/ListDeserializer.html#close--"/>
         /// </summary>
         public void Close()
         {
             IExecuteWithSignature("close", "()V");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/serialization/ListDeserializer.html#configure-java.util.Map-boolean-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/serialization/ListDeserializer.html#configure-java.util.Map-boolean-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <param name="arg1"><see cref="bool"/></param>

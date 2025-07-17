@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common.Acl
 {
     #region AclPermissionType declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/acl/AclPermissionType.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/acl/AclPermissionType.html"/>
     /// </summary>
     public partial class AclPermissionType : Java.Lang.Enum<Org.Apache.Kafka.Common.Acl.AclPermissionType>
     {
@@ -83,25 +83,25 @@ namespace Org.Apache.Kafka.Common.Acl
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/acl/AclPermissionType.html#ALLOW"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/acl/AclPermissionType.html#ALLOW"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Acl.AclPermissionType ALLOW { get { if (!_ALLOWReady) { _ALLOWContent = SGetField<Org.Apache.Kafka.Common.Acl.AclPermissionType>(LocalBridgeClazz, "ALLOW"); _ALLOWReady = true; } return _ALLOWContent; } }
         private static Org.Apache.Kafka.Common.Acl.AclPermissionType _ALLOWContent = default;
         private static bool _ALLOWReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/acl/AclPermissionType.html#ANY"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/acl/AclPermissionType.html#ANY"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Acl.AclPermissionType ANY { get { if (!_ANYReady) { _ANYContent = SGetField<Org.Apache.Kafka.Common.Acl.AclPermissionType>(LocalBridgeClazz, "ANY"); _ANYReady = true; } return _ANYContent; } }
         private static Org.Apache.Kafka.Common.Acl.AclPermissionType _ANYContent = default;
         private static bool _ANYReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/acl/AclPermissionType.html#DENY"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/acl/AclPermissionType.html#DENY"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Acl.AclPermissionType DENY { get { if (!_DENYReady) { _DENYContent = SGetField<Org.Apache.Kafka.Common.Acl.AclPermissionType>(LocalBridgeClazz, "DENY"); _DENYReady = true; } return _DENYContent; } }
         private static Org.Apache.Kafka.Common.Acl.AclPermissionType _DENYContent = default;
         private static bool _DENYReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/acl/AclPermissionType.html#UNKNOWN"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/acl/AclPermissionType.html#UNKNOWN"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Acl.AclPermissionType UNKNOWN { get { if (!_UNKNOWNReady) { _UNKNOWNContent = SGetField<Org.Apache.Kafka.Common.Acl.AclPermissionType>(LocalBridgeClazz, "UNKNOWN"); _UNKNOWNReady = true; } return _UNKNOWNContent; } }
         private static Org.Apache.Kafka.Common.Acl.AclPermissionType _UNKNOWNContent = default;
@@ -111,7 +111,7 @@ namespace Org.Apache.Kafka.Common.Acl
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/acl/AclPermissionType.html#fromCode-byte-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/acl/AclPermissionType.html#fromCode-byte-"/>
         /// </summary>
         /// <param name="arg0"><see cref="byte"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.Acl.AclPermissionType"/></returns>
@@ -120,7 +120,7 @@ namespace Org.Apache.Kafka.Common.Acl
             return SExecuteWithSignature<Org.Apache.Kafka.Common.Acl.AclPermissionType>(LocalBridgeClazz, "fromCode", "(B)Lorg/apache/kafka/common/acl/AclPermissionType;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/acl/AclPermissionType.html#fromString-java.lang.String-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/acl/AclPermissionType.html#fromString-java.lang.String-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.Acl.AclPermissionType"/></returns>
@@ -129,7 +129,7 @@ namespace Org.Apache.Kafka.Common.Acl
             return SExecuteWithSignature<Org.Apache.Kafka.Common.Acl.AclPermissionType>(LocalBridgeClazz, "fromString", "(Ljava/lang/String;)Lorg/apache/kafka/common/acl/AclPermissionType;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/acl/AclPermissionType.html#valueOf-java.lang.String-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/acl/AclPermissionType.html#valueOf-java.lang.String-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.Acl.AclPermissionType"/></returns>
@@ -138,7 +138,7 @@ namespace Org.Apache.Kafka.Common.Acl
             return SExecuteWithSignature<Org.Apache.Kafka.Common.Acl.AclPermissionType>(LocalBridgeClazz, "valueOf", "(Ljava/lang/String;)Lorg/apache/kafka/common/acl/AclPermissionType;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/acl/AclPermissionType.html#values--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/acl/AclPermissionType.html#values--"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.Acl.AclPermissionType"/></returns>
         public static Org.Apache.Kafka.Common.Acl.AclPermissionType[] Values()
@@ -150,7 +150,7 @@ namespace Org.Apache.Kafka.Common.Acl
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/acl/AclPermissionType.html#isUnknown--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/acl/AclPermissionType.html#isUnknown--"/>
         /// </summary>
         /// <returns><see cref="bool"/></returns>
         public bool IsUnknown()
@@ -158,7 +158,7 @@ namespace Org.Apache.Kafka.Common.Acl
             return IExecuteWithSignature<bool>("isUnknown", "()Z");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/acl/AclPermissionType.html#code--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/acl/AclPermissionType.html#code--"/>
         /// </summary>
         /// <returns><see cref="byte"/></returns>
         public byte Code()

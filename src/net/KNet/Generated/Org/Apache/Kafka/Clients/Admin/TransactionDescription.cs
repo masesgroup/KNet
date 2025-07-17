@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 {
     #region TransactionDescription declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/admin/TransactionDescription.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/admin/TransactionDescription.html"/>
     /// </summary>
     public partial class TransactionDescription : MASES.JCOBridge.C2JBridge.JVMBridgeBase<TransactionDescription>
     {
@@ -75,7 +75,7 @@ namespace Org.Apache.Kafka.Clients.Admin
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/admin/TransactionDescription.html#org.apache.kafka.clients.admin.TransactionDescription(int,org.apache.kafka.clients.admin.TransactionState,long,int,long,java.util.OptionalLong,java.util.Set)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/admin/TransactionDescription.html#org.apache.kafka.clients.admin.TransactionDescription(int,org.apache.kafka.clients.admin.TransactionState,long,int,long,java.util.OptionalLong,java.util.Set)"/>
         /// </summary>
         /// <param name="arg0"><see cref="int"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Clients.Admin.TransactionState"/></param>
@@ -105,7 +105,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/admin/TransactionDescription.html#coordinatorId--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/admin/TransactionDescription.html#coordinatorId--"/>
         /// </summary>
         /// <returns><see cref="int"/></returns>
         public int CoordinatorId()
@@ -113,7 +113,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<int>("coordinatorId", "()I");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/admin/TransactionDescription.html#producerEpoch--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/admin/TransactionDescription.html#producerEpoch--"/>
         /// </summary>
         /// <returns><see cref="int"/></returns>
         public int ProducerEpoch()
@@ -121,7 +121,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<int>("producerEpoch", "()I");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/admin/TransactionDescription.html#transactionStartTimeMs--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/admin/TransactionDescription.html#transactionStartTimeMs--"/>
         /// </summary>
         /// <returns><see cref="Java.Util.OptionalLong"/></returns>
         public Java.Util.OptionalLong TransactionStartTimeMs()
@@ -129,7 +129,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<Java.Util.OptionalLong>("transactionStartTimeMs", "()Ljava/util/OptionalLong;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/admin/TransactionDescription.html#topicPartitions--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/admin/TransactionDescription.html#topicPartitions--"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Set"/></returns>
         public Java.Util.Set<Org.Apache.Kafka.Common.TopicPartition> TopicPartitions()
@@ -137,7 +137,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<Java.Util.Set<Org.Apache.Kafka.Common.TopicPartition>>("topicPartitions", "()Ljava/util/Set;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/admin/TransactionDescription.html#producerId--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/admin/TransactionDescription.html#producerId--"/>
         /// </summary>
         /// <returns><see cref="long"/></returns>
         public long ProducerId()
@@ -145,7 +145,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<long>("producerId", "()J");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/admin/TransactionDescription.html#transactionTimeoutMs--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/admin/TransactionDescription.html#transactionTimeoutMs--"/>
         /// </summary>
         /// <returns><see cref="long"/></returns>
         public long TransactionTimeoutMs()
@@ -153,7 +153,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<long>("transactionTimeoutMs", "()J");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/admin/TransactionDescription.html#state--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/admin/TransactionDescription.html#state--"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.TransactionState"/></returns>
         public Org.Apache.Kafka.Clients.Admin.TransactionState State()

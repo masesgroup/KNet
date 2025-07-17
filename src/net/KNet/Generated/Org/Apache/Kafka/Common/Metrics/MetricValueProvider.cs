@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common.Metrics
 {
     #region MetricValueProvider declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/metrics/MetricValueProvider.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/metrics/MetricValueProvider.html"/>
     /// </summary>
     public partial class MetricValueProvider : MASES.JCOBridge.C2JBridge.JVMBridgeBase<MetricValueProvider>
     {
@@ -74,7 +74,7 @@ namespace Org.Apache.Kafka.Common.Metrics
 
     #region MetricValueProvider<T> declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/metrics/MetricValueProvider.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/metrics/MetricValueProvider.html"/>
     /// </summary>
     /// <typeparam name="T"></typeparam>
     public partial class MetricValueProvider<T> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<MetricValueProvider<T>>

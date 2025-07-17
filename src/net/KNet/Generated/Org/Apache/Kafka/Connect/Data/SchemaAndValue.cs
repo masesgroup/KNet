@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Connect.Data
 {
     #region SchemaAndValue declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.0/org/apache/kafka/connect/data/SchemaAndValue.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.1/org/apache/kafka/connect/data/SchemaAndValue.html"/>
     /// </summary>
     public partial class SchemaAndValue : MASES.JCOBridge.C2JBridge.JVMBridgeBase<SchemaAndValue>
     {
@@ -75,7 +75,7 @@ namespace Org.Apache.Kafka.Connect.Data
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.0/org/apache/kafka/connect/data/SchemaAndValue.html#org.apache.kafka.connect.data.SchemaAndValue(org.apache.kafka.connect.data.Schema,java.lang.Object)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.1/org/apache/kafka/connect/data/SchemaAndValue.html#org.apache.kafka.connect.data.SchemaAndValue(org.apache.kafka.connect.data.Schema,java.lang.Object)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Connect.Data.Schema"/></param>
         /// <param name="arg1"><see cref="object"/></param>
@@ -92,7 +92,7 @@ namespace Org.Apache.Kafka.Connect.Data
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.0/org/apache/kafka/connect/data/SchemaAndValue.html#NULL"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.1/org/apache/kafka/connect/data/SchemaAndValue.html#NULL"/>
         /// </summary>
         public static Org.Apache.Kafka.Connect.Data.SchemaAndValue NULL { get { if (!_NULLReady) { _NULLContent = SGetField<Org.Apache.Kafka.Connect.Data.SchemaAndValue>(LocalBridgeClazz, "NULL"); _NULLReady = true; } return _NULLContent; } }
         private static Org.Apache.Kafka.Connect.Data.SchemaAndValue _NULLContent = default;
@@ -106,7 +106,7 @@ namespace Org.Apache.Kafka.Connect.Data
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.0/org/apache/kafka/connect/data/SchemaAndValue.html#value--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.1/org/apache/kafka/connect/data/SchemaAndValue.html#value--"/>
         /// </summary>
         /// <returns><see cref="object"/></returns>
         public object Value()
@@ -114,7 +114,7 @@ namespace Org.Apache.Kafka.Connect.Data
             return IExecuteWithSignature("value", "()Ljava/lang/Object;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.0/org/apache/kafka/connect/data/SchemaAndValue.html#schema--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.1/org/apache/kafka/connect/data/SchemaAndValue.html#schema--"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Connect.Data.Schema"/></returns>
         public Org.Apache.Kafka.Connect.Data.Schema Schema()

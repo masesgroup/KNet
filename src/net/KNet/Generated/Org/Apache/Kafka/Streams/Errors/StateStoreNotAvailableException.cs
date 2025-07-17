@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Streams.Errors
 {
     #region StateStoreNotAvailableException declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.0/org/apache/kafka/streams/errors/StateStoreNotAvailableException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/errors/StateStoreNotAvailableException.html"/>
     /// </summary>
     public partial class StateStoreNotAvailableException : Org.Apache.Kafka.Streams.Errors.InvalidStateStoreException
     {

@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common.Utils
 {
     #region CopyOnWriteMap declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/utils/CopyOnWriteMap.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/utils/CopyOnWriteMap.html"/>
     /// </summary>
     public partial class CopyOnWriteMap : Java.Util.Concurrent.ConcurrentMap
     {
@@ -72,7 +72,7 @@ namespace Org.Apache.Kafka.Common.Utils
 
     #region CopyOnWriteMap<K, V> declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/utils/CopyOnWriteMap.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/utils/CopyOnWriteMap.html"/>
     /// </summary>
     /// <typeparam name="K"></typeparam>
     /// <typeparam name="V"></typeparam>
@@ -122,7 +122,7 @@ namespace Org.Apache.Kafka.Common.Utils
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/utils/CopyOnWriteMap.html#org.apache.kafka.common.utils.CopyOnWriteMap(java.util.Map)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/utils/CopyOnWriteMap.html#org.apache.kafka.common.utils.CopyOnWriteMap(java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         public CopyOnWriteMap(Java.Util.Map arg0)
@@ -146,7 +146,7 @@ namespace Org.Apache.Kafka.Common.Utils
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/utils/CopyOnWriteMap.html#containsKey-java.lang.Object-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/utils/CopyOnWriteMap.html#containsKey-java.lang.Object-"/>
         /// </summary>
         /// <param name="arg0"><see cref="object"/></param>
         /// <returns><see cref="bool"/></returns>
@@ -155,7 +155,7 @@ namespace Org.Apache.Kafka.Common.Utils
             return IExecuteWithSignature<bool>("containsKey", "(Ljava/lang/Object;)Z", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/utils/CopyOnWriteMap.html#containsValue-java.lang.Object-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/utils/CopyOnWriteMap.html#containsValue-java.lang.Object-"/>
         /// </summary>
         /// <param name="arg0"><see cref="object"/></param>
         /// <returns><see cref="bool"/></returns>
@@ -164,7 +164,7 @@ namespace Org.Apache.Kafka.Common.Utils
             return IExecuteWithSignature<bool>("containsValue", "(Ljava/lang/Object;)Z", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/utils/CopyOnWriteMap.html#isEmpty--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/utils/CopyOnWriteMap.html#isEmpty--"/>
         /// </summary>
         /// <returns><see cref="bool"/></returns>
         public bool IsEmpty()
@@ -172,7 +172,7 @@ namespace Org.Apache.Kafka.Common.Utils
             return IExecuteWithSignature<bool>("isEmpty", "()Z");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/utils/CopyOnWriteMap.html#size--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/utils/CopyOnWriteMap.html#size--"/>
         /// </summary>
         /// <returns><see cref="int"/></returns>
         public int Size()
@@ -180,7 +180,7 @@ namespace Org.Apache.Kafka.Common.Utils
             return IExecuteWithSignature<int>("size", "()I");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/utils/CopyOnWriteMap.html#values--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/utils/CopyOnWriteMap.html#values--"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Collection"/></returns>
         public Java.Util.Collection Values()
@@ -188,7 +188,7 @@ namespace Org.Apache.Kafka.Common.Utils
             return IExecuteWithSignature<Java.Util.Collection>("values", "()Ljava/util/Collection;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/utils/CopyOnWriteMap.html#entrySet--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/utils/CopyOnWriteMap.html#entrySet--"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Set"/></returns>
         public Java.Util.Set EntrySet()
@@ -196,7 +196,7 @@ namespace Org.Apache.Kafka.Common.Utils
             return IExecuteWithSignature<Java.Util.Set>("entrySet", "()Ljava/util/Set;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/utils/CopyOnWriteMap.html#keySet--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/utils/CopyOnWriteMap.html#keySet--"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Set"/></returns>
         public Java.Util.Set KeySet()
@@ -204,7 +204,7 @@ namespace Org.Apache.Kafka.Common.Utils
             return IExecuteWithSignature<Java.Util.Set>("keySet", "()Ljava/util/Set;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/utils/CopyOnWriteMap.html#remove-java.lang.Object-java.lang.Object-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/utils/CopyOnWriteMap.html#remove-java.lang.Object-java.lang.Object-"/>
         /// </summary>
         /// <param name="arg0"><see cref="object"/></param>
         /// <param name="arg1"><see cref="object"/></param>
@@ -214,7 +214,7 @@ namespace Org.Apache.Kafka.Common.Utils
             return IExecuteWithSignature<bool>("remove", "(Ljava/lang/Object;Ljava/lang/Object;)Z", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/utils/CopyOnWriteMap.html#replace-java.lang.Object-java.lang.Object-java.lang.Object-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/utils/CopyOnWriteMap.html#replace-java.lang.Object-java.lang.Object-java.lang.Object-"/>
         /// </summary>
         /// <param name="arg0"><see cref="object"/></param>
         /// <param name="arg1"><see cref="object"/></param>
@@ -225,7 +225,7 @@ namespace Org.Apache.Kafka.Common.Utils
             return IExecuteWithSignature<bool>("replace", "(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Z", arg0, arg1, arg2);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/utils/CopyOnWriteMap.html#put-java.lang.Object-java.lang.Object-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/utils/CopyOnWriteMap.html#put-java.lang.Object-java.lang.Object-"/>
         /// </summary>
         /// <param name="arg0"><see cref="object"/></param>
         /// <param name="arg1"><see cref="object"/></param>
@@ -235,7 +235,7 @@ namespace Org.Apache.Kafka.Common.Utils
             return IExecuteWithSignature("put", "(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/utils/CopyOnWriteMap.html#putIfAbsent-java.lang.Object-java.lang.Object-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/utils/CopyOnWriteMap.html#putIfAbsent-java.lang.Object-java.lang.Object-"/>
         /// </summary>
         /// <param name="arg0"><see cref="object"/></param>
         /// <param name="arg1"><see cref="object"/></param>
@@ -245,7 +245,7 @@ namespace Org.Apache.Kafka.Common.Utils
             return IExecuteWithSignature("putIfAbsent", "(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/utils/CopyOnWriteMap.html#remove-java.lang.Object-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/utils/CopyOnWriteMap.html#remove-java.lang.Object-"/>
         /// </summary>
         /// <param name="arg0"><see cref="object"/></param>
         /// <returns><see cref="object"/></returns>
@@ -254,7 +254,7 @@ namespace Org.Apache.Kafka.Common.Utils
             return IExecuteWithSignature("remove", "(Ljava/lang/Object;)Ljava/lang/Object;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/utils/CopyOnWriteMap.html#replace-java.lang.Object-java.lang.Object-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/utils/CopyOnWriteMap.html#replace-java.lang.Object-java.lang.Object-"/>
         /// </summary>
         /// <param name="arg0"><see cref="object"/></param>
         /// <param name="arg1"><see cref="object"/></param>
@@ -264,14 +264,14 @@ namespace Org.Apache.Kafka.Common.Utils
             return IExecuteWithSignature("replace", "(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/utils/CopyOnWriteMap.html#clear--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/utils/CopyOnWriteMap.html#clear--"/>
         /// </summary>
         public void Clear()
         {
             IExecuteWithSignature("clear", "()V");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/utils/CopyOnWriteMap.html#putAll-java.util.Map-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/utils/CopyOnWriteMap.html#putAll-java.util.Map-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         public void PutAll(Java.Util.Map arg0)
@@ -279,7 +279,7 @@ namespace Org.Apache.Kafka.Common.Utils
             IExecuteWithSignature("putAll", "(Ljava/util/Map;)V", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/utils/CopyOnWriteMap.html#get-java.lang.Object-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/utils/CopyOnWriteMap.html#get-java.lang.Object-"/>
         /// </summary>
         /// <param name="arg0"><see cref="object"/></param>
         /// <returns><see cref="object"/></returns>
@@ -303,7 +303,7 @@ namespace Org.Apache.Kafka.Common.Utils
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/utils/CopyOnWriteMap.html#org.apache.kafka.common.utils.CopyOnWriteMap(java.util.Map)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/utils/CopyOnWriteMap.html#org.apache.kafka.common.utils.CopyOnWriteMap(java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         public CopyOnWriteMap(Java.Util.Map<K, V> arg0)
@@ -331,7 +331,7 @@ namespace Org.Apache.Kafka.Common.Utils
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/utils/CopyOnWriteMap.html#containsKey-java.lang.Object-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/utils/CopyOnWriteMap.html#containsKey-java.lang.Object-"/>
         /// </summary>
         /// <param name="arg0"><see cref="object"/></param>
         /// <returns><see cref="bool"/></returns>
@@ -340,7 +340,7 @@ namespace Org.Apache.Kafka.Common.Utils
             return IExecuteWithSignature<bool>("containsKey", "(Ljava/lang/Object;)Z", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/utils/CopyOnWriteMap.html#containsValue-java.lang.Object-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/utils/CopyOnWriteMap.html#containsValue-java.lang.Object-"/>
         /// </summary>
         /// <param name="arg0"><see cref="object"/></param>
         /// <returns><see cref="bool"/></returns>
@@ -349,7 +349,7 @@ namespace Org.Apache.Kafka.Common.Utils
             return IExecuteWithSignature<bool>("containsValue", "(Ljava/lang/Object;)Z", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/utils/CopyOnWriteMap.html#isEmpty--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/utils/CopyOnWriteMap.html#isEmpty--"/>
         /// </summary>
         /// <returns><see cref="bool"/></returns>
         public bool IsEmpty()
@@ -357,7 +357,7 @@ namespace Org.Apache.Kafka.Common.Utils
             return IExecuteWithSignature<bool>("isEmpty", "()Z");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/utils/CopyOnWriteMap.html#size--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/utils/CopyOnWriteMap.html#size--"/>
         /// </summary>
         /// <returns><see cref="int"/></returns>
         public int Size()
@@ -365,7 +365,7 @@ namespace Org.Apache.Kafka.Common.Utils
             return IExecuteWithSignature<int>("size", "()I");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/utils/CopyOnWriteMap.html#values--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/utils/CopyOnWriteMap.html#values--"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Collection"/></returns>
         public Java.Util.Collection<V> Values()
@@ -373,7 +373,7 @@ namespace Org.Apache.Kafka.Common.Utils
             return IExecuteWithSignature<Java.Util.Collection<V>>("values", "()Ljava/util/Collection;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/utils/CopyOnWriteMap.html#entrySet--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/utils/CopyOnWriteMap.html#entrySet--"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Set"/></returns>
         public Java.Util.Set<Java.Util.Map.Entry<K, V>> EntrySet()
@@ -381,7 +381,7 @@ namespace Org.Apache.Kafka.Common.Utils
             return IExecuteWithSignature<Java.Util.Set<Java.Util.Map.Entry<K, V>>>("entrySet", "()Ljava/util/Set;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/utils/CopyOnWriteMap.html#keySet--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/utils/CopyOnWriteMap.html#keySet--"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Set"/></returns>
         public Java.Util.Set<K> KeySet()
@@ -389,7 +389,7 @@ namespace Org.Apache.Kafka.Common.Utils
             return IExecuteWithSignature<Java.Util.Set<K>>("keySet", "()Ljava/util/Set;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/utils/CopyOnWriteMap.html#remove-java.lang.Object-java.lang.Object-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/utils/CopyOnWriteMap.html#remove-java.lang.Object-java.lang.Object-"/>
         /// </summary>
         /// <param name="arg0"><see cref="object"/></param>
         /// <param name="arg1"><see cref="object"/></param>
@@ -399,7 +399,7 @@ namespace Org.Apache.Kafka.Common.Utils
             return IExecuteWithSignature<bool>("remove", "(Ljava/lang/Object;Ljava/lang/Object;)Z", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/utils/CopyOnWriteMap.html#replace-java.lang.Object-java.lang.Object-java.lang.Object-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/utils/CopyOnWriteMap.html#replace-java.lang.Object-java.lang.Object-java.lang.Object-"/>
         /// </summary>
         /// <param name="arg0"><typeparamref name="K"/></param>
         /// <param name="arg1"><typeparamref name="V"/></param>
@@ -410,7 +410,7 @@ namespace Org.Apache.Kafka.Common.Utils
             return IExecuteWithSignature<bool>("replace", "(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Z", arg0, arg1, arg2);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/utils/CopyOnWriteMap.html#put-java.lang.Object-java.lang.Object-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/utils/CopyOnWriteMap.html#put-java.lang.Object-java.lang.Object-"/>
         /// </summary>
         /// <param name="arg0"><typeparamref name="K"/></param>
         /// <param name="arg1"><typeparamref name="V"/></param>
@@ -420,7 +420,7 @@ namespace Org.Apache.Kafka.Common.Utils
             return IExecuteWithSignature<V>("put", "(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/utils/CopyOnWriteMap.html#putIfAbsent-java.lang.Object-java.lang.Object-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/utils/CopyOnWriteMap.html#putIfAbsent-java.lang.Object-java.lang.Object-"/>
         /// </summary>
         /// <param name="arg0"><typeparamref name="K"/></param>
         /// <param name="arg1"><typeparamref name="V"/></param>
@@ -430,7 +430,7 @@ namespace Org.Apache.Kafka.Common.Utils
             return IExecuteWithSignature<V>("putIfAbsent", "(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/utils/CopyOnWriteMap.html#remove-java.lang.Object-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/utils/CopyOnWriteMap.html#remove-java.lang.Object-"/>
         /// </summary>
         /// <param name="arg0"><see cref="object"/></param>
         /// <returns><typeparamref name="V"/></returns>
@@ -439,7 +439,7 @@ namespace Org.Apache.Kafka.Common.Utils
             return IExecuteWithSignature<V>("remove", "(Ljava/lang/Object;)Ljava/lang/Object;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/utils/CopyOnWriteMap.html#replace-java.lang.Object-java.lang.Object-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/utils/CopyOnWriteMap.html#replace-java.lang.Object-java.lang.Object-"/>
         /// </summary>
         /// <param name="arg0"><typeparamref name="K"/></param>
         /// <param name="arg1"><typeparamref name="V"/></param>
@@ -449,14 +449,14 @@ namespace Org.Apache.Kafka.Common.Utils
             return IExecuteWithSignature<V>("replace", "(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/utils/CopyOnWriteMap.html#clear--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/utils/CopyOnWriteMap.html#clear--"/>
         /// </summary>
         public void Clear()
         {
             IExecuteWithSignature("clear", "()V");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/utils/CopyOnWriteMap.html#putAll-java.util.Map-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/utils/CopyOnWriteMap.html#putAll-java.util.Map-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <typeparam name="Arg0ExtendsK"><typeparamref name="K"/></typeparam>
@@ -466,7 +466,7 @@ namespace Org.Apache.Kafka.Common.Utils
             IExecuteWithSignature("putAll", "(Ljava/util/Map;)V", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/utils/CopyOnWriteMap.html#get-java.lang.Object-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/utils/CopyOnWriteMap.html#get-java.lang.Object-"/>
         /// </summary>
         /// <param name="arg0"><see cref="object"/></param>
         /// <returns><typeparamref name="V"/></returns>

@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
 {
     #region MirrorSourceTaskConfig declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.9.0/org/apache/kafka/connect/mirror/MirrorSourceTaskConfig.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.9.1/org/apache/kafka/connect/mirror/MirrorSourceTaskConfig.html"/>
     /// </summary>
     public partial class MirrorSourceTaskConfig : Org.Apache.Kafka.Connect.Mirror.MirrorSourceConfig
     {
@@ -75,7 +75,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.9.0/org/apache/kafka/connect/mirror/MirrorSourceTaskConfig.html#org.apache.kafka.connect.mirror.MirrorSourceTaskConfig(java.util.Map)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.9.1/org/apache/kafka/connect/mirror/MirrorSourceTaskConfig.html#org.apache.kafka.connect.mirror.MirrorSourceTaskConfig(java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         public MirrorSourceTaskConfig(Java.Util.Map<Java.Lang.String, Java.Lang.String> arg0)

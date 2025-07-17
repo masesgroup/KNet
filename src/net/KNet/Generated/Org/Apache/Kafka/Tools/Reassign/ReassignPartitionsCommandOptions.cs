@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Tools.Reassign
 {
     #region ReassignPartitionsCommandOptions declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.9.0/org/apache/kafka/tools/reassign/ReassignPartitionsCommandOptions.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.9.1/org/apache/kafka/tools/reassign/ReassignPartitionsCommandOptions.html"/>
     /// </summary>
     public partial class ReassignPartitionsCommandOptions : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ReassignPartitionsCommandOptions>
     {
@@ -75,7 +75,7 @@ namespace Org.Apache.Kafka.Tools.Reassign
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.9.0/org/apache/kafka/tools/reassign/ReassignPartitionsCommandOptions.html#org.apache.kafka.tools.reassign.ReassignPartitionsCommandOptions(java.lang.String[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.9.1/org/apache/kafka/tools/reassign/ReassignPartitionsCommandOptions.html#org.apache.kafka.tools.reassign.ReassignPartitionsCommandOptions(java.lang.String[])"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         public ReassignPartitionsCommandOptions(Java.Lang.String[] arg0)

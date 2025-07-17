@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Connect.Data
 {
     #region SchemaProjector declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.0/org/apache/kafka/connect/data/SchemaProjector.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.1/org/apache/kafka/connect/data/SchemaProjector.html"/>
     /// </summary>
     public partial class SchemaProjector : MASES.JCOBridge.C2JBridge.JVMBridgeBase<SchemaProjector>
     {
@@ -87,7 +87,7 @@ namespace Org.Apache.Kafka.Connect.Data
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.0/org/apache/kafka/connect/data/SchemaProjector.html#project-org.apache.kafka.connect.data.Schema-java.lang.Object-org.apache.kafka.connect.data.Schema-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.1/org/apache/kafka/connect/data/SchemaProjector.html#project-org.apache.kafka.connect.data.Schema-java.lang.Object-org.apache.kafka.connect.data.Schema-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Connect.Data.Schema"/></param>
         /// <param name="arg1"><see cref="object"/></param>

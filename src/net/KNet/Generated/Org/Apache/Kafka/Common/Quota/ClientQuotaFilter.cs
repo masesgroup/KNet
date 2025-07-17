@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common.Quota
 {
     #region ClientQuotaFilter declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/quota/ClientQuotaFilter.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/quota/ClientQuotaFilter.html"/>
     /// </summary>
     public partial class ClientQuotaFilter : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ClientQuotaFilter>
     {
@@ -87,7 +87,7 @@ namespace Org.Apache.Kafka.Common.Quota
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/quota/ClientQuotaFilter.html#all--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/quota/ClientQuotaFilter.html#all--"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.Quota.ClientQuotaFilter"/></returns>
         public static Org.Apache.Kafka.Common.Quota.ClientQuotaFilter All()
@@ -95,7 +95,7 @@ namespace Org.Apache.Kafka.Common.Quota
             return SExecuteWithSignature<Org.Apache.Kafka.Common.Quota.ClientQuotaFilter>(LocalBridgeClazz, "all", "()Lorg/apache/kafka/common/quota/ClientQuotaFilter;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/quota/ClientQuotaFilter.html#contains-java.util.Collection-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/quota/ClientQuotaFilter.html#contains-java.util.Collection-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Collection"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.Quota.ClientQuotaFilter"/></returns>
@@ -104,7 +104,7 @@ namespace Org.Apache.Kafka.Common.Quota
             return SExecuteWithSignature<Org.Apache.Kafka.Common.Quota.ClientQuotaFilter>(LocalBridgeClazz, "contains", "(Ljava/util/Collection;)Lorg/apache/kafka/common/quota/ClientQuotaFilter;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/quota/ClientQuotaFilter.html#containsOnly-java.util.Collection-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/quota/ClientQuotaFilter.html#containsOnly-java.util.Collection-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Collection"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.Quota.ClientQuotaFilter"/></returns>
@@ -117,7 +117,7 @@ namespace Org.Apache.Kafka.Common.Quota
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/quota/ClientQuotaFilter.html#strict--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/quota/ClientQuotaFilter.html#strict--"/>
         /// </summary>
         /// <returns><see cref="bool"/></returns>
         public bool Strict()
@@ -125,7 +125,7 @@ namespace Org.Apache.Kafka.Common.Quota
             return IExecuteWithSignature<bool>("strict", "()Z");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/quota/ClientQuotaFilter.html#components--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/quota/ClientQuotaFilter.html#components--"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Collection"/></returns>
         public Java.Util.Collection<Org.Apache.Kafka.Common.Quota.ClientQuotaFilterComponent> Components()

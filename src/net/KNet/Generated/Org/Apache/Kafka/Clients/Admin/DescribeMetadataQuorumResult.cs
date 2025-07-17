@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 {
     #region DescribeMetadataQuorumResult declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/admin/DescribeMetadataQuorumResult.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/admin/DescribeMetadataQuorumResult.html"/>
     /// </summary>
     public partial class DescribeMetadataQuorumResult : MASES.JCOBridge.C2JBridge.JVMBridgeBase<DescribeMetadataQuorumResult>
     {
@@ -91,7 +91,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/admin/DescribeMetadataQuorumResult.html#quorumInfo--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/admin/DescribeMetadataQuorumResult.html#quorumInfo--"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.KafkaFuture"/></returns>
         public Org.Apache.Kafka.Common.KafkaFuture<Org.Apache.Kafka.Clients.Admin.QuorumInfo> QuorumInfo()

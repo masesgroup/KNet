@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common.Errors
 {
     #region InvalidTopicException declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/errors/InvalidTopicException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/errors/InvalidTopicException.html"/>
     /// </summary>
     public partial class InvalidTopicException : Org.Apache.Kafka.Common.Errors.ApiException
     {

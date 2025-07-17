@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Connect.Errors
 {
     #region RetriableException declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.0/org/apache/kafka/connect/errors/RetriableException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.1/org/apache/kafka/connect/errors/RetriableException.html"/>
     /// </summary>
     public partial class RetriableException : Org.Apache.Kafka.Connect.Errors.ConnectException
     {

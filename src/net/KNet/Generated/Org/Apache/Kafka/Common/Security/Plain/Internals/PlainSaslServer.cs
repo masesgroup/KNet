@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common.Security.Plain.Internals
 {
     #region PlainSaslServer declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/security/plain/internals/PlainSaslServer.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/security/plain/internals/PlainSaslServer.html"/>
     /// </summary>
     public partial class PlainSaslServer : Javax.Security.Sasl.SaslServer
     {
@@ -68,7 +68,7 @@ namespace Org.Apache.Kafka.Common.Security.Plain.Internals
         // TODO: complete the class
         #region PlainSaslServerFactory declaration
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/security/plain/internals/PlainSaslServer.PlainSaslServerFactory.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/security/plain/internals/PlainSaslServer.PlainSaslServerFactory.html"/>
         /// </summary>
         public partial class PlainSaslServerFactory : Javax.Security.Sasl.SaslServerFactory
         {
@@ -120,7 +120,7 @@ namespace Org.Apache.Kafka.Common.Security.Plain.Internals
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/security/plain/internals/PlainSaslServer.html#org.apache.kafka.common.security.plain.internals.PlainSaslServer(javax.security.auth.callback.CallbackHandler)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/security/plain/internals/PlainSaslServer.html#org.apache.kafka.common.security.plain.internals.PlainSaslServer(javax.security.auth.callback.CallbackHandler)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Javax.Security.Auth.Callback.CallbackHandler"/></param>
         public PlainSaslServer(Javax.Security.Auth.Callback.CallbackHandler arg0)
@@ -136,7 +136,7 @@ namespace Org.Apache.Kafka.Common.Security.Plain.Internals
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/security/plain/internals/PlainSaslServer.html#PLAIN_MECHANISM"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/security/plain/internals/PlainSaslServer.html#PLAIN_MECHANISM"/>
         /// </summary>
         public static Java.Lang.String PLAIN_MECHANISM { get { if (!_PLAIN_MECHANISMReady) { _PLAIN_MECHANISMContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "PLAIN_MECHANISM"); _PLAIN_MECHANISMReady = true; } return _PLAIN_MECHANISMContent; } }
         private static Java.Lang.String _PLAIN_MECHANISMContent = default;
@@ -150,21 +150,21 @@ namespace Org.Apache.Kafka.Common.Security.Plain.Internals
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/security/plain/internals/PlainSaslServer.html#getAuthorizationID--"/> 
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/security/plain/internals/PlainSaslServer.html#getAuthorizationID--"/> 
         /// </summary>
         public Java.Lang.String AuthorizationID
         {
             get { return IExecuteWithSignature<Java.Lang.String>("getAuthorizationID", "()Ljava/lang/String;"); }
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/security/plain/internals/PlainSaslServer.html#getMechanismName--"/> 
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/security/plain/internals/PlainSaslServer.html#getMechanismName--"/> 
         /// </summary>
         public Java.Lang.String MechanismName
         {
             get { return IExecuteWithSignature<Java.Lang.String>("getMechanismName", "()Ljava/lang/String;"); }
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/security/plain/internals/PlainSaslServer.html#isComplete--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/security/plain/internals/PlainSaslServer.html#isComplete--"/>
         /// </summary>
         /// <returns><see cref="bool"/></returns>
         public bool IsComplete()
@@ -172,7 +172,7 @@ namespace Org.Apache.Kafka.Common.Security.Plain.Internals
             return IExecuteWithSignature<bool>("isComplete", "()Z");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/security/plain/internals/PlainSaslServer.html#evaluateResponse-byte[]-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/security/plain/internals/PlainSaslServer.html#evaluateResponse-byte[]-"/>
         /// </summary>
         /// <param name="arg0"><see cref="byte"/></param>
         /// <returns><see cref="byte"/></returns>
@@ -182,7 +182,7 @@ namespace Org.Apache.Kafka.Common.Security.Plain.Internals
             return IExecuteWithSignatureArray<byte>("evaluateResponse", "([B)[B", new object[] { arg0 });
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/security/plain/internals/PlainSaslServer.html#unwrap-byte[]-int-int-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/security/plain/internals/PlainSaslServer.html#unwrap-byte[]-int-int-"/>
         /// </summary>
         /// <param name="arg0"><see cref="byte"/></param>
         /// <param name="arg1"><see cref="int"/></param>
@@ -193,7 +193,7 @@ namespace Org.Apache.Kafka.Common.Security.Plain.Internals
             return IExecuteWithSignatureArray<byte>("unwrap", "([BII)[B", arg0, arg1, arg2);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/security/plain/internals/PlainSaslServer.html#wrap-byte[]-int-int-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/security/plain/internals/PlainSaslServer.html#wrap-byte[]-int-int-"/>
         /// </summary>
         /// <param name="arg0"><see cref="byte"/></param>
         /// <param name="arg1"><see cref="int"/></param>
@@ -204,7 +204,7 @@ namespace Org.Apache.Kafka.Common.Security.Plain.Internals
             return IExecuteWithSignatureArray<byte>("wrap", "([BII)[B", arg0, arg1, arg2);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/security/plain/internals/PlainSaslServer.html#getNegotiatedProperty-java.lang.String-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/security/plain/internals/PlainSaslServer.html#getNegotiatedProperty-java.lang.String-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="object"/></returns>
@@ -213,7 +213,7 @@ namespace Org.Apache.Kafka.Common.Security.Plain.Internals
             return IExecuteWithSignature("getNegotiatedProperty", "(Ljava/lang/String;)Ljava/lang/Object;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/security/plain/internals/PlainSaslServer.html#dispose--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/security/plain/internals/PlainSaslServer.html#dispose--"/>
         /// </summary>
         public new void Dispose()
         {
@@ -244,7 +244,7 @@ namespace Org.Apache.Kafka.Common.Security.Plain.Internals
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/security/plain/internals/PlainSaslServer.PlainSaslServerFactory.html#getMechanismNames-java.util.Map-"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/security/plain/internals/PlainSaslServer.PlainSaslServerFactory.html#getMechanismNames-java.util.Map-"/>
             /// </summary>
             /// <param name="arg0"><see cref="Java.Util.Map"/></param>
             /// <returns><see cref="Java.Lang.String"/></returns>
@@ -253,7 +253,7 @@ namespace Org.Apache.Kafka.Common.Security.Plain.Internals
                 return IExecuteWithSignatureArray<Java.Lang.String>("getMechanismNames", "(Ljava/util/Map;)[Ljava/lang/String;", arg0);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/security/plain/internals/PlainSaslServer.PlainSaslServerFactory.html#createSaslServer-java.lang.String-java.lang.String-java.lang.String-java.util.Map-javax.security.auth.callback.CallbackHandler-"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/security/plain/internals/PlainSaslServer.PlainSaslServerFactory.html#createSaslServer-java.lang.String-java.lang.String-java.lang.String-java.util.Map-javax.security.auth.callback.CallbackHandler-"/>
             /// </summary>
             /// <param name="arg0"><see cref="Java.Lang.String"/></param>
             /// <param name="arg1"><see cref="Java.Lang.String"/></param>

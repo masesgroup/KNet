@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Connect.Cli
 {
     #region ConnectDistributed declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.9.0/org/apache/kafka/connect/cli/ConnectDistributed.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.9.1/org/apache/kafka/connect/cli/ConnectDistributed.html"/>
     /// </summary>
     public partial class ConnectDistributed : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ConnectDistributed>, MASES.JCOBridge.C2JBridge.IJVMBridgeMain
     {
@@ -75,7 +75,7 @@ namespace Org.Apache.Kafka.Connect.Cli
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.9.0/org/apache/kafka/connect/cli/ConnectDistributed.html#org.apache.kafka.connect.cli.ConnectDistributed(java.lang.String[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.9.1/org/apache/kafka/connect/cli/ConnectDistributed.html#org.apache.kafka.connect.cli.ConnectDistributed(java.lang.String[])"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         public ConnectDistributed(params Java.Lang.String[] arg0)
@@ -95,7 +95,7 @@ namespace Org.Apache.Kafka.Connect.Cli
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.9.0/org/apache/kafka/connect/cli/ConnectDistributed.html#main-java.lang.String[]-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.9.1/org/apache/kafka/connect/cli/ConnectDistributed.html#main-java.lang.String[]-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         public static void Main(Java.Lang.String[] arg0)

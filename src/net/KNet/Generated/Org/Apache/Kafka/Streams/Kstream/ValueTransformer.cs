@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 {
     #region ValueTransformer declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.0/org/apache/kafka/streams/kstream/ValueTransformer.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/kstream/ValueTransformer.html"/>
     /// </summary>
     public partial class ValueTransformer : MASES.JCOBridge.C2JBridge.JVMBridgeListener
     {
@@ -94,7 +94,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
     #region ValueTransformer<V, VR> declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.0/org/apache/kafka/streams/kstream/ValueTransformer.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/kstream/ValueTransformer.html"/>
     /// </summary>
     /// <typeparam name="V"></typeparam>
     /// <typeparam name="VR"></typeparam>
@@ -193,7 +193,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         }
 
         /// <summary>
-        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.0/org/apache/kafka/streams/kstream/ValueTransformer.html#close--"/>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/kstream/ValueTransformer.html#close--"/>
         /// </summary>
         /// <remarks>If <see cref="OnClose"/> has a value it takes precedence over corresponding class method</remarks>
         public global::System.Action OnClose { get; set; } = null;
@@ -208,7 +208,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         }
 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.0/org/apache/kafka/streams/kstream/ValueTransformer.html#close--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/kstream/ValueTransformer.html#close--"/>
         /// </summary>
         public virtual void Close()
         {
@@ -216,7 +216,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         }
 
         /// <summary>
-        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.0/org/apache/kafka/streams/kstream/ValueTransformer.html#init-org.apache.kafka.streams.processor.ProcessorContext-"/>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/kstream/ValueTransformer.html#init-org.apache.kafka.streams.processor.ProcessorContext-"/>
         /// </summary>
         /// <remarks>If <see cref="OnInit"/> has a value it takes precedence over corresponding class method</remarks>
         public global::System.Action<Org.Apache.Kafka.Streams.Processor.ProcessorContext> OnInit { get; set; } = null;
@@ -231,7 +231,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         }
 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.0/org/apache/kafka/streams/kstream/ValueTransformer.html#init-org.apache.kafka.streams.processor.ProcessorContext-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/kstream/ValueTransformer.html#init-org.apache.kafka.streams.processor.ProcessorContext-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Processor.ProcessorContext"/></param>
         public virtual void Init(Org.Apache.Kafka.Streams.Processor.ProcessorContext arg0)
@@ -240,7 +240,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         }
 
         /// <summary>
-        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.0/org/apache/kafka/streams/kstream/ValueTransformer.html#transform-java.lang.Object-"/>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/kstream/ValueTransformer.html#transform-java.lang.Object-"/>
         /// </summary>
         /// <remarks>If <see cref="OnTransform"/> has a value it takes precedence over corresponding class method</remarks>
         public global::System.Func<object, object> OnTransform { get; set; } = null;
@@ -255,7 +255,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         }
 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.0/org/apache/kafka/streams/kstream/ValueTransformer.html#transform-java.lang.Object-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/kstream/ValueTransformer.html#transform-java.lang.Object-"/>
         /// </summary>
         /// <param name="arg0"><see cref="object"/></param>
         /// <returns><see cref="object"/></returns>
@@ -295,14 +295,14 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.0/org/apache/kafka/streams/kstream/ValueTransformer.html#close--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/kstream/ValueTransformer.html#close--"/>
         /// </summary>
         public override void Close()
         {
             IExecuteWithSignature("close", "()V");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.0/org/apache/kafka/streams/kstream/ValueTransformer.html#init-org.apache.kafka.streams.processor.ProcessorContext-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/kstream/ValueTransformer.html#init-org.apache.kafka.streams.processor.ProcessorContext-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Processor.ProcessorContext"/></param>
         public override void Init(Org.Apache.Kafka.Streams.Processor.ProcessorContext arg0)
@@ -310,7 +310,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
             IExecuteWithSignature("init", "(Lorg/apache/kafka/streams/processor/ProcessorContext;)V", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.0/org/apache/kafka/streams/kstream/ValueTransformer.html#transform-java.lang.Object-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/kstream/ValueTransformer.html#transform-java.lang.Object-"/>
         /// </summary>
         /// <param name="arg0"><see cref="object"/></param>
         /// <returns><see cref="object"/></returns>
@@ -331,7 +331,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
     #region IValueTransformer<V, VR>
     /// <summary>
-    /// .NET interface for org.mases.knet.generated.org.apache.kafka.streams.kstream.ValueTransformer implementing <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.0/org/apache/kafka/streams/kstream/ValueTransformer.html"/>
+    /// .NET interface for org.mases.knet.generated.org.apache.kafka.streams.kstream.ValueTransformer implementing <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/kstream/ValueTransformer.html"/>
     /// </summary>
     public partial interface IValueTransformer<V, VR>
     {
@@ -379,7 +379,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         }
 
         /// <summary>
-        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.0/org/apache/kafka/streams/kstream/ValueTransformer.html#close--"/>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/kstream/ValueTransformer.html#close--"/>
         /// </summary>
         /// <remarks>If <see cref="OnClose"/> has a value it takes precedence over corresponding class method</remarks>
         public global::System.Action OnClose { get; set; } = null;
@@ -394,7 +394,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         }
 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.0/org/apache/kafka/streams/kstream/ValueTransformer.html#close--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/kstream/ValueTransformer.html#close--"/>
         /// </summary>
         public virtual void Close()
         {
@@ -402,7 +402,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         }
 
         /// <summary>
-        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.0/org/apache/kafka/streams/kstream/ValueTransformer.html#init-org.apache.kafka.streams.processor.ProcessorContext-"/>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/kstream/ValueTransformer.html#init-org.apache.kafka.streams.processor.ProcessorContext-"/>
         /// </summary>
         /// <remarks>If <see cref="OnInit"/> has a value it takes precedence over corresponding class method</remarks>
         public global::System.Action<Org.Apache.Kafka.Streams.Processor.ProcessorContext> OnInit { get; set; } = null;
@@ -417,7 +417,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         }
 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.0/org/apache/kafka/streams/kstream/ValueTransformer.html#init-org.apache.kafka.streams.processor.ProcessorContext-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/kstream/ValueTransformer.html#init-org.apache.kafka.streams.processor.ProcessorContext-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Processor.ProcessorContext"/></param>
         public virtual void Init(Org.Apache.Kafka.Streams.Processor.ProcessorContext arg0)
@@ -426,7 +426,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         }
 
         /// <summary>
-        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.0/org/apache/kafka/streams/kstream/ValueTransformer.html#transform-java.lang.Object-"/>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/kstream/ValueTransformer.html#transform-java.lang.Object-"/>
         /// </summary>
         /// <remarks>If <see cref="OnTransform"/> has a value it takes precedence over corresponding class method</remarks>
         public global::System.Func<V, VR> OnTransform { get; set; } = null;
@@ -441,7 +441,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         }
 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.0/org/apache/kafka/streams/kstream/ValueTransformer.html#transform-java.lang.Object-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/kstream/ValueTransformer.html#transform-java.lang.Object-"/>
         /// </summary>
         /// <param name="arg0"><typeparamref name="V"/></param>
         /// <returns><typeparamref name="VR"/></returns>
@@ -481,14 +481,14 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.0/org/apache/kafka/streams/kstream/ValueTransformer.html#close--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/kstream/ValueTransformer.html#close--"/>
         /// </summary>
         public override void Close()
         {
             IExecuteWithSignature("close", "()V");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.0/org/apache/kafka/streams/kstream/ValueTransformer.html#init-org.apache.kafka.streams.processor.ProcessorContext-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/kstream/ValueTransformer.html#init-org.apache.kafka.streams.processor.ProcessorContext-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Processor.ProcessorContext"/></param>
         public override void Init(Org.Apache.Kafka.Streams.Processor.ProcessorContext arg0)
@@ -496,7 +496,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
             IExecuteWithSignature("init", "(Lorg/apache/kafka/streams/processor/ProcessorContext;)V", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.0/org/apache/kafka/streams/kstream/ValueTransformer.html#transform-java.lang.Object-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/kstream/ValueTransformer.html#transform-java.lang.Object-"/>
         /// </summary>
         /// <param name="arg0"><typeparamref name="V"/></param>
         /// <returns><typeparamref name="VR"/></returns>

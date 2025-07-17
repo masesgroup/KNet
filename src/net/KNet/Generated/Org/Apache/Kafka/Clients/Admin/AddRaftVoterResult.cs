@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 {
     #region AddRaftVoterResult declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/admin/AddRaftVoterResult.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/admin/AddRaftVoterResult.html"/>
     /// </summary>
     public partial class AddRaftVoterResult : MASES.JCOBridge.C2JBridge.JVMBridgeBase<AddRaftVoterResult>
     {
@@ -91,7 +91,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/admin/AddRaftVoterResult.html#all--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/admin/AddRaftVoterResult.html#all--"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.KafkaFuture"/></returns>
         public Org.Apache.Kafka.Common.KafkaFuture<Java.Lang.Void> All()

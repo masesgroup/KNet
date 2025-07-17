@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common.Errors
 {
     #region GroupAuthorizationException declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/errors/GroupAuthorizationException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/errors/GroupAuthorizationException.html"/>
     /// </summary>
     public partial class GroupAuthorizationException : Org.Apache.Kafka.Common.Errors.AuthorizationException
     {

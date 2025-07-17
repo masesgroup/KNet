@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Tools.Consumer
 {
     #region GroupMetadataMessageFormatter declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.9.0/org/apache/kafka/tools/consumer/GroupMetadataMessageFormatter.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.9.1/org/apache/kafka/tools/consumer/GroupMetadataMessageFormatter.html"/>
     /// </summary>
     public partial class GroupMetadataMessageFormatter : Org.Apache.Kafka.Tools.Consumer.ApiMessageFormatter
     {

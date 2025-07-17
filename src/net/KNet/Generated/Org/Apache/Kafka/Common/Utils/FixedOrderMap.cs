@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common.Utils
 {
     #region FixedOrderMap declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/utils/FixedOrderMap.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/utils/FixedOrderMap.html"/>
     /// </summary>
     public partial class FixedOrderMap : Java.Util.LinkedHashMap
     {
@@ -72,7 +72,7 @@ namespace Org.Apache.Kafka.Common.Utils
 
     #region FixedOrderMap<K, V> declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/utils/FixedOrderMap.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/utils/FixedOrderMap.html"/>
     /// </summary>
     /// <typeparam name="K"></typeparam>
     /// <typeparam name="V"></typeparam>

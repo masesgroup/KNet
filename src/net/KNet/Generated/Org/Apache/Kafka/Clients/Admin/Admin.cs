@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 {
     #region Admin declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/admin/Admin.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/admin/Admin.html"/>
     /// </summary>
     public partial class Admin : Java.Lang.AutoCloseable
     {
@@ -107,7 +107,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/admin/Admin.html#create-java.util.Map-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/admin/Admin.html#create-java.util.Map-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.Admin"/></returns>
@@ -116,7 +116,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return SExecuteWithSignature<Org.Apache.Kafka.Clients.Admin.Admin>(LocalBridgeClazz, "create", "(Ljava/util/Map;)Lorg/apache/kafka/clients/admin/Admin;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/admin/Admin.html#create-java.util.Properties-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/admin/Admin.html#create-java.util.Properties-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Properties"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.Admin"/></returns>
@@ -129,7 +129,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/admin/Admin.html#metrics--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/admin/Admin.html#metrics--"/>
         /// </summary>
         /// <typeparam name="ReturnExtendsOrg_Apache_Kafka_Common_Metric"><see cref="Org.Apache.Kafka.Common.Metric"/></typeparam>
         /// <returns><see cref="Java.Util.Map"/></returns>
@@ -138,7 +138,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<Java.Util.Map<Org.Apache.Kafka.Common.MetricName, ReturnExtendsOrg_Apache_Kafka_Common_Metric>>("metrics", "()Ljava/util/Map;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/admin/Admin.html#abortTransaction-org.apache.kafka.clients.admin.AbortTransactionSpec-org.apache.kafka.clients.admin.AbortTransactionOptions-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/admin/Admin.html#abortTransaction-org.apache.kafka.clients.admin.AbortTransactionSpec-org.apache.kafka.clients.admin.AbortTransactionOptions-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Clients.Admin.AbortTransactionSpec"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Clients.Admin.AbortTransactionOptions"/></param>
@@ -148,7 +148,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<Org.Apache.Kafka.Clients.Admin.AbortTransactionResult>("abortTransaction", "(Lorg/apache/kafka/clients/admin/AbortTransactionSpec;Lorg/apache/kafka/clients/admin/AbortTransactionOptions;)Lorg/apache/kafka/clients/admin/AbortTransactionResult;", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/admin/Admin.html#addRaftVoter-int-org.apache.kafka.common.Uuid-java.util.Set-org.apache.kafka.clients.admin.AddRaftVoterOptions-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/admin/Admin.html#addRaftVoter-int-org.apache.kafka.common.Uuid-java.util.Set-org.apache.kafka.clients.admin.AddRaftVoterOptions-"/>
         /// </summary>
         /// <param name="arg0"><see cref="int"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Uuid"/></param>
@@ -160,7 +160,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<Org.Apache.Kafka.Clients.Admin.AddRaftVoterResult>("addRaftVoter", "(ILorg/apache/kafka/common/Uuid;Ljava/util/Set;Lorg/apache/kafka/clients/admin/AddRaftVoterOptions;)Lorg/apache/kafka/clients/admin/AddRaftVoterResult;", arg0, arg1, arg2, arg3);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/admin/Admin.html#alterClientQuotas-java.util.Collection-org.apache.kafka.clients.admin.AlterClientQuotasOptions-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/admin/Admin.html#alterClientQuotas-java.util.Collection-org.apache.kafka.clients.admin.AlterClientQuotasOptions-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Collection"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Clients.Admin.AlterClientQuotasOptions"/></param>
@@ -170,7 +170,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<Org.Apache.Kafka.Clients.Admin.AlterClientQuotasResult>("alterClientQuotas", "(Ljava/util/Collection;Lorg/apache/kafka/clients/admin/AlterClientQuotasOptions;)Lorg/apache/kafka/clients/admin/AlterClientQuotasResult;", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/admin/Admin.html#incrementalAlterConfigs-java.util.Map-org.apache.kafka.clients.admin.AlterConfigsOptions-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/admin/Admin.html#incrementalAlterConfigs-java.util.Map-org.apache.kafka.clients.admin.AlterConfigsOptions-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Clients.Admin.AlterConfigsOptions"/></param>
@@ -180,7 +180,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<Org.Apache.Kafka.Clients.Admin.AlterConfigsResult>("incrementalAlterConfigs", "(Ljava/util/Map;Lorg/apache/kafka/clients/admin/AlterConfigsOptions;)Lorg/apache/kafka/clients/admin/AlterConfigsResult;", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/admin/Admin.html#alterConsumerGroupOffsets-java.lang.String-java.util.Map-org.apache.kafka.clients.admin.AlterConsumerGroupOffsetsOptions-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/admin/Admin.html#alterConsumerGroupOffsets-java.lang.String-java.util.Map-org.apache.kafka.clients.admin.AlterConsumerGroupOffsetsOptions-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Java.Util.Map"/></param>
@@ -191,7 +191,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<Org.Apache.Kafka.Clients.Admin.AlterConsumerGroupOffsetsResult>("alterConsumerGroupOffsets", "(Ljava/lang/String;Ljava/util/Map;Lorg/apache/kafka/clients/admin/AlterConsumerGroupOffsetsOptions;)Lorg/apache/kafka/clients/admin/AlterConsumerGroupOffsetsResult;", arg0, arg1, arg2);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/admin/Admin.html#alterPartitionReassignments-java.util.Map-org.apache.kafka.clients.admin.AlterPartitionReassignmentsOptions-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/admin/Admin.html#alterPartitionReassignments-java.util.Map-org.apache.kafka.clients.admin.AlterPartitionReassignmentsOptions-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Clients.Admin.AlterPartitionReassignmentsOptions"/></param>
@@ -201,7 +201,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<Org.Apache.Kafka.Clients.Admin.AlterPartitionReassignmentsResult>("alterPartitionReassignments", "(Ljava/util/Map;Lorg/apache/kafka/clients/admin/AlterPartitionReassignmentsOptions;)Lorg/apache/kafka/clients/admin/AlterPartitionReassignmentsResult;", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/admin/Admin.html#alterReplicaLogDirs-java.util.Map-org.apache.kafka.clients.admin.AlterReplicaLogDirsOptions-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/admin/Admin.html#alterReplicaLogDirs-java.util.Map-org.apache.kafka.clients.admin.AlterReplicaLogDirsOptions-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Clients.Admin.AlterReplicaLogDirsOptions"/></param>
@@ -211,7 +211,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<Org.Apache.Kafka.Clients.Admin.AlterReplicaLogDirsResult>("alterReplicaLogDirs", "(Ljava/util/Map;Lorg/apache/kafka/clients/admin/AlterReplicaLogDirsOptions;)Lorg/apache/kafka/clients/admin/AlterReplicaLogDirsResult;", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/admin/Admin.html#alterUserScramCredentials-java.util.List-org.apache.kafka.clients.admin.AlterUserScramCredentialsOptions-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/admin/Admin.html#alterUserScramCredentials-java.util.List-org.apache.kafka.clients.admin.AlterUserScramCredentialsOptions-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.List"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Clients.Admin.AlterUserScramCredentialsOptions"/></param>
@@ -221,7 +221,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<Org.Apache.Kafka.Clients.Admin.AlterUserScramCredentialsResult>("alterUserScramCredentials", "(Ljava/util/List;Lorg/apache/kafka/clients/admin/AlterUserScramCredentialsOptions;)Lorg/apache/kafka/clients/admin/AlterUserScramCredentialsResult;", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/admin/Admin.html#createAcls-java.util.Collection-org.apache.kafka.clients.admin.CreateAclsOptions-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/admin/Admin.html#createAcls-java.util.Collection-org.apache.kafka.clients.admin.CreateAclsOptions-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Collection"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Clients.Admin.CreateAclsOptions"/></param>
@@ -231,7 +231,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<Org.Apache.Kafka.Clients.Admin.CreateAclsResult>("createAcls", "(Ljava/util/Collection;Lorg/apache/kafka/clients/admin/CreateAclsOptions;)Lorg/apache/kafka/clients/admin/CreateAclsResult;", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/admin/Admin.html#createDelegationToken-org.apache.kafka.clients.admin.CreateDelegationTokenOptions-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/admin/Admin.html#createDelegationToken-org.apache.kafka.clients.admin.CreateDelegationTokenOptions-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Clients.Admin.CreateDelegationTokenOptions"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.CreateDelegationTokenResult"/></returns>
@@ -240,7 +240,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<Org.Apache.Kafka.Clients.Admin.CreateDelegationTokenResult>("createDelegationToken", "(Lorg/apache/kafka/clients/admin/CreateDelegationTokenOptions;)Lorg/apache/kafka/clients/admin/CreateDelegationTokenResult;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/admin/Admin.html#createPartitions-java.util.Map-org.apache.kafka.clients.admin.CreatePartitionsOptions-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/admin/Admin.html#createPartitions-java.util.Map-org.apache.kafka.clients.admin.CreatePartitionsOptions-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Clients.Admin.CreatePartitionsOptions"/></param>
@@ -250,7 +250,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<Org.Apache.Kafka.Clients.Admin.CreatePartitionsResult>("createPartitions", "(Ljava/util/Map;Lorg/apache/kafka/clients/admin/CreatePartitionsOptions;)Lorg/apache/kafka/clients/admin/CreatePartitionsResult;", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/admin/Admin.html#createTopics-java.util.Collection-org.apache.kafka.clients.admin.CreateTopicsOptions-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/admin/Admin.html#createTopics-java.util.Collection-org.apache.kafka.clients.admin.CreateTopicsOptions-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Collection"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Clients.Admin.CreateTopicsOptions"/></param>
@@ -260,7 +260,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<Org.Apache.Kafka.Clients.Admin.CreateTopicsResult>("createTopics", "(Ljava/util/Collection;Lorg/apache/kafka/clients/admin/CreateTopicsOptions;)Lorg/apache/kafka/clients/admin/CreateTopicsResult;", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/admin/Admin.html#deleteAcls-java.util.Collection-org.apache.kafka.clients.admin.DeleteAclsOptions-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/admin/Admin.html#deleteAcls-java.util.Collection-org.apache.kafka.clients.admin.DeleteAclsOptions-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Collection"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Clients.Admin.DeleteAclsOptions"/></param>
@@ -270,7 +270,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<Org.Apache.Kafka.Clients.Admin.DeleteAclsResult>("deleteAcls", "(Ljava/util/Collection;Lorg/apache/kafka/clients/admin/DeleteAclsOptions;)Lorg/apache/kafka/clients/admin/DeleteAclsResult;", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/admin/Admin.html#deleteConsumerGroupOffsets-java.lang.String-java.util.Set-org.apache.kafka.clients.admin.DeleteConsumerGroupOffsetsOptions-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/admin/Admin.html#deleteConsumerGroupOffsets-java.lang.String-java.util.Set-org.apache.kafka.clients.admin.DeleteConsumerGroupOffsetsOptions-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Java.Util.Set"/></param>
@@ -281,7 +281,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<Org.Apache.Kafka.Clients.Admin.DeleteConsumerGroupOffsetsResult>("deleteConsumerGroupOffsets", "(Ljava/lang/String;Ljava/util/Set;Lorg/apache/kafka/clients/admin/DeleteConsumerGroupOffsetsOptions;)Lorg/apache/kafka/clients/admin/DeleteConsumerGroupOffsetsResult;", arg0, arg1, arg2);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/admin/Admin.html#deleteConsumerGroups-java.util.Collection-org.apache.kafka.clients.admin.DeleteConsumerGroupsOptions-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/admin/Admin.html#deleteConsumerGroups-java.util.Collection-org.apache.kafka.clients.admin.DeleteConsumerGroupsOptions-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Collection"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Clients.Admin.DeleteConsumerGroupsOptions"/></param>
@@ -291,7 +291,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<Org.Apache.Kafka.Clients.Admin.DeleteConsumerGroupsResult>("deleteConsumerGroups", "(Ljava/util/Collection;Lorg/apache/kafka/clients/admin/DeleteConsumerGroupsOptions;)Lorg/apache/kafka/clients/admin/DeleteConsumerGroupsResult;", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/admin/Admin.html#deleteRecords-java.util.Map-org.apache.kafka.clients.admin.DeleteRecordsOptions-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/admin/Admin.html#deleteRecords-java.util.Map-org.apache.kafka.clients.admin.DeleteRecordsOptions-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Clients.Admin.DeleteRecordsOptions"/></param>
@@ -301,7 +301,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<Org.Apache.Kafka.Clients.Admin.DeleteRecordsResult>("deleteRecords", "(Ljava/util/Map;Lorg/apache/kafka/clients/admin/DeleteRecordsOptions;)Lorg/apache/kafka/clients/admin/DeleteRecordsResult;", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/admin/Admin.html#deleteTopics-org.apache.kafka.common.TopicCollection-org.apache.kafka.clients.admin.DeleteTopicsOptions-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/admin/Admin.html#deleteTopics-org.apache.kafka.common.TopicCollection-org.apache.kafka.clients.admin.DeleteTopicsOptions-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.TopicCollection"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Clients.Admin.DeleteTopicsOptions"/></param>
@@ -311,7 +311,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<Org.Apache.Kafka.Clients.Admin.DeleteTopicsResult>("deleteTopics", "(Lorg/apache/kafka/common/TopicCollection;Lorg/apache/kafka/clients/admin/DeleteTopicsOptions;)Lorg/apache/kafka/clients/admin/DeleteTopicsResult;", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/admin/Admin.html#describeAcls-org.apache.kafka.common.acl.AclBindingFilter-org.apache.kafka.clients.admin.DescribeAclsOptions-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/admin/Admin.html#describeAcls-org.apache.kafka.common.acl.AclBindingFilter-org.apache.kafka.clients.admin.DescribeAclsOptions-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Acl.AclBindingFilter"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Clients.Admin.DescribeAclsOptions"/></param>
@@ -321,7 +321,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<Org.Apache.Kafka.Clients.Admin.DescribeAclsResult>("describeAcls", "(Lorg/apache/kafka/common/acl/AclBindingFilter;Lorg/apache/kafka/clients/admin/DescribeAclsOptions;)Lorg/apache/kafka/clients/admin/DescribeAclsResult;", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/admin/Admin.html#describeClientQuotas-org.apache.kafka.common.quota.ClientQuotaFilter-org.apache.kafka.clients.admin.DescribeClientQuotasOptions-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/admin/Admin.html#describeClientQuotas-org.apache.kafka.common.quota.ClientQuotaFilter-org.apache.kafka.clients.admin.DescribeClientQuotasOptions-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Quota.ClientQuotaFilter"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Clients.Admin.DescribeClientQuotasOptions"/></param>
@@ -331,7 +331,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<Org.Apache.Kafka.Clients.Admin.DescribeClientQuotasResult>("describeClientQuotas", "(Lorg/apache/kafka/common/quota/ClientQuotaFilter;Lorg/apache/kafka/clients/admin/DescribeClientQuotasOptions;)Lorg/apache/kafka/clients/admin/DescribeClientQuotasResult;", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/admin/Admin.html#describeCluster-org.apache.kafka.clients.admin.DescribeClusterOptions-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/admin/Admin.html#describeCluster-org.apache.kafka.clients.admin.DescribeClusterOptions-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Clients.Admin.DescribeClusterOptions"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.DescribeClusterResult"/></returns>
@@ -340,7 +340,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<Org.Apache.Kafka.Clients.Admin.DescribeClusterResult>("describeCluster", "(Lorg/apache/kafka/clients/admin/DescribeClusterOptions;)Lorg/apache/kafka/clients/admin/DescribeClusterResult;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/admin/Admin.html#describeConfigs-java.util.Collection-org.apache.kafka.clients.admin.DescribeConfigsOptions-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/admin/Admin.html#describeConfigs-java.util.Collection-org.apache.kafka.clients.admin.DescribeConfigsOptions-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Collection"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Clients.Admin.DescribeConfigsOptions"/></param>
@@ -350,7 +350,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<Org.Apache.Kafka.Clients.Admin.DescribeConfigsResult>("describeConfigs", "(Ljava/util/Collection;Lorg/apache/kafka/clients/admin/DescribeConfigsOptions;)Lorg/apache/kafka/clients/admin/DescribeConfigsResult;", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/admin/Admin.html#describeConsumerGroups-java.util.Collection-org.apache.kafka.clients.admin.DescribeConsumerGroupsOptions-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/admin/Admin.html#describeConsumerGroups-java.util.Collection-org.apache.kafka.clients.admin.DescribeConsumerGroupsOptions-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Collection"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Clients.Admin.DescribeConsumerGroupsOptions"/></param>
@@ -360,7 +360,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<Org.Apache.Kafka.Clients.Admin.DescribeConsumerGroupsResult>("describeConsumerGroups", "(Ljava/util/Collection;Lorg/apache/kafka/clients/admin/DescribeConsumerGroupsOptions;)Lorg/apache/kafka/clients/admin/DescribeConsumerGroupsResult;", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/admin/Admin.html#describeDelegationToken-org.apache.kafka.clients.admin.DescribeDelegationTokenOptions-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/admin/Admin.html#describeDelegationToken-org.apache.kafka.clients.admin.DescribeDelegationTokenOptions-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Clients.Admin.DescribeDelegationTokenOptions"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.DescribeDelegationTokenResult"/></returns>
@@ -369,7 +369,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<Org.Apache.Kafka.Clients.Admin.DescribeDelegationTokenResult>("describeDelegationToken", "(Lorg/apache/kafka/clients/admin/DescribeDelegationTokenOptions;)Lorg/apache/kafka/clients/admin/DescribeDelegationTokenResult;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/admin/Admin.html#describeFeatures-org.apache.kafka.clients.admin.DescribeFeaturesOptions-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/admin/Admin.html#describeFeatures-org.apache.kafka.clients.admin.DescribeFeaturesOptions-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Clients.Admin.DescribeFeaturesOptions"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.DescribeFeaturesResult"/></returns>
@@ -378,7 +378,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<Org.Apache.Kafka.Clients.Admin.DescribeFeaturesResult>("describeFeatures", "(Lorg/apache/kafka/clients/admin/DescribeFeaturesOptions;)Lorg/apache/kafka/clients/admin/DescribeFeaturesResult;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/admin/Admin.html#describeLogDirs-java.util.Collection-org.apache.kafka.clients.admin.DescribeLogDirsOptions-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/admin/Admin.html#describeLogDirs-java.util.Collection-org.apache.kafka.clients.admin.DescribeLogDirsOptions-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Collection"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Clients.Admin.DescribeLogDirsOptions"/></param>
@@ -388,7 +388,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<Org.Apache.Kafka.Clients.Admin.DescribeLogDirsResult>("describeLogDirs", "(Ljava/util/Collection;Lorg/apache/kafka/clients/admin/DescribeLogDirsOptions;)Lorg/apache/kafka/clients/admin/DescribeLogDirsResult;", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/admin/Admin.html#describeMetadataQuorum-org.apache.kafka.clients.admin.DescribeMetadataQuorumOptions-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/admin/Admin.html#describeMetadataQuorum-org.apache.kafka.clients.admin.DescribeMetadataQuorumOptions-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Clients.Admin.DescribeMetadataQuorumOptions"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.DescribeMetadataQuorumResult"/></returns>
@@ -397,7 +397,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<Org.Apache.Kafka.Clients.Admin.DescribeMetadataQuorumResult>("describeMetadataQuorum", "(Lorg/apache/kafka/clients/admin/DescribeMetadataQuorumOptions;)Lorg/apache/kafka/clients/admin/DescribeMetadataQuorumResult;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/admin/Admin.html#describeProducers-java.util.Collection-org.apache.kafka.clients.admin.DescribeProducersOptions-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/admin/Admin.html#describeProducers-java.util.Collection-org.apache.kafka.clients.admin.DescribeProducersOptions-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Collection"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Clients.Admin.DescribeProducersOptions"/></param>
@@ -407,7 +407,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<Org.Apache.Kafka.Clients.Admin.DescribeProducersResult>("describeProducers", "(Ljava/util/Collection;Lorg/apache/kafka/clients/admin/DescribeProducersOptions;)Lorg/apache/kafka/clients/admin/DescribeProducersResult;", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/admin/Admin.html#describeReplicaLogDirs-java.util.Collection-org.apache.kafka.clients.admin.DescribeReplicaLogDirsOptions-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/admin/Admin.html#describeReplicaLogDirs-java.util.Collection-org.apache.kafka.clients.admin.DescribeReplicaLogDirsOptions-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Collection"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Clients.Admin.DescribeReplicaLogDirsOptions"/></param>
@@ -417,7 +417,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<Org.Apache.Kafka.Clients.Admin.DescribeReplicaLogDirsResult>("describeReplicaLogDirs", "(Ljava/util/Collection;Lorg/apache/kafka/clients/admin/DescribeReplicaLogDirsOptions;)Lorg/apache/kafka/clients/admin/DescribeReplicaLogDirsResult;", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/admin/Admin.html#describeTopics-org.apache.kafka.common.TopicCollection-org.apache.kafka.clients.admin.DescribeTopicsOptions-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/admin/Admin.html#describeTopics-org.apache.kafka.common.TopicCollection-org.apache.kafka.clients.admin.DescribeTopicsOptions-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.TopicCollection"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Clients.Admin.DescribeTopicsOptions"/></param>
@@ -427,7 +427,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<Org.Apache.Kafka.Clients.Admin.DescribeTopicsResult>("describeTopics", "(Lorg/apache/kafka/common/TopicCollection;Lorg/apache/kafka/clients/admin/DescribeTopicsOptions;)Lorg/apache/kafka/clients/admin/DescribeTopicsResult;", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/admin/Admin.html#describeTransactions-java.util.Collection-org.apache.kafka.clients.admin.DescribeTransactionsOptions-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/admin/Admin.html#describeTransactions-java.util.Collection-org.apache.kafka.clients.admin.DescribeTransactionsOptions-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Collection"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Clients.Admin.DescribeTransactionsOptions"/></param>
@@ -437,7 +437,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<Org.Apache.Kafka.Clients.Admin.DescribeTransactionsResult>("describeTransactions", "(Ljava/util/Collection;Lorg/apache/kafka/clients/admin/DescribeTransactionsOptions;)Lorg/apache/kafka/clients/admin/DescribeTransactionsResult;", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/admin/Admin.html#describeUserScramCredentials-java.util.List-org.apache.kafka.clients.admin.DescribeUserScramCredentialsOptions-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/admin/Admin.html#describeUserScramCredentials-java.util.List-org.apache.kafka.clients.admin.DescribeUserScramCredentialsOptions-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.List"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Clients.Admin.DescribeUserScramCredentialsOptions"/></param>
@@ -447,7 +447,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<Org.Apache.Kafka.Clients.Admin.DescribeUserScramCredentialsResult>("describeUserScramCredentials", "(Ljava/util/List;Lorg/apache/kafka/clients/admin/DescribeUserScramCredentialsOptions;)Lorg/apache/kafka/clients/admin/DescribeUserScramCredentialsResult;", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/admin/Admin.html#electLeaders-org.apache.kafka.common.ElectionType-java.util.Set-org.apache.kafka.clients.admin.ElectLeadersOptions-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/admin/Admin.html#electLeaders-org.apache.kafka.common.ElectionType-java.util.Set-org.apache.kafka.clients.admin.ElectLeadersOptions-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.ElectionType"/></param>
         /// <param name="arg1"><see cref="Java.Util.Set"/></param>
@@ -458,7 +458,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<Org.Apache.Kafka.Clients.Admin.ElectLeadersResult>("electLeaders", "(Lorg/apache/kafka/common/ElectionType;Ljava/util/Set;Lorg/apache/kafka/clients/admin/ElectLeadersOptions;)Lorg/apache/kafka/clients/admin/ElectLeadersResult;", arg0, arg1, arg2);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/admin/Admin.html#expireDelegationToken-byte[]-org.apache.kafka.clients.admin.ExpireDelegationTokenOptions-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/admin/Admin.html#expireDelegationToken-byte[]-org.apache.kafka.clients.admin.ExpireDelegationTokenOptions-"/>
         /// </summary>
         /// <param name="arg0"><see cref="byte"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Clients.Admin.ExpireDelegationTokenOptions"/></param>
@@ -468,7 +468,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<Org.Apache.Kafka.Clients.Admin.ExpireDelegationTokenResult>("expireDelegationToken", "([BLorg/apache/kafka/clients/admin/ExpireDelegationTokenOptions;)Lorg/apache/kafka/clients/admin/ExpireDelegationTokenResult;", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/admin/Admin.html#fenceProducers-java.util.Collection-org.apache.kafka.clients.admin.FenceProducersOptions-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/admin/Admin.html#fenceProducers-java.util.Collection-org.apache.kafka.clients.admin.FenceProducersOptions-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Collection"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Clients.Admin.FenceProducersOptions"/></param>
@@ -478,7 +478,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<Org.Apache.Kafka.Clients.Admin.FenceProducersResult>("fenceProducers", "(Ljava/util/Collection;Lorg/apache/kafka/clients/admin/FenceProducersOptions;)Lorg/apache/kafka/clients/admin/FenceProducersResult;", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/admin/Admin.html#listClientMetricsResources-org.apache.kafka.clients.admin.ListClientMetricsResourcesOptions-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/admin/Admin.html#listClientMetricsResources-org.apache.kafka.clients.admin.ListClientMetricsResourcesOptions-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Clients.Admin.ListClientMetricsResourcesOptions"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.ListClientMetricsResourcesResult"/></returns>
@@ -487,7 +487,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<Org.Apache.Kafka.Clients.Admin.ListClientMetricsResourcesResult>("listClientMetricsResources", "(Lorg/apache/kafka/clients/admin/ListClientMetricsResourcesOptions;)Lorg/apache/kafka/clients/admin/ListClientMetricsResourcesResult;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/admin/Admin.html#listConsumerGroupOffsets-java.util.Map-org.apache.kafka.clients.admin.ListConsumerGroupOffsetsOptions-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/admin/Admin.html#listConsumerGroupOffsets-java.util.Map-org.apache.kafka.clients.admin.ListConsumerGroupOffsetsOptions-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Clients.Admin.ListConsumerGroupOffsetsOptions"/></param>
@@ -497,7 +497,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<Org.Apache.Kafka.Clients.Admin.ListConsumerGroupOffsetsResult>("listConsumerGroupOffsets", "(Ljava/util/Map;Lorg/apache/kafka/clients/admin/ListConsumerGroupOffsetsOptions;)Lorg/apache/kafka/clients/admin/ListConsumerGroupOffsetsResult;", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/admin/Admin.html#listConsumerGroups-org.apache.kafka.clients.admin.ListConsumerGroupsOptions-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/admin/Admin.html#listConsumerGroups-org.apache.kafka.clients.admin.ListConsumerGroupsOptions-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Clients.Admin.ListConsumerGroupsOptions"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.ListConsumerGroupsResult"/></returns>
@@ -506,7 +506,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<Org.Apache.Kafka.Clients.Admin.ListConsumerGroupsResult>("listConsumerGroups", "(Lorg/apache/kafka/clients/admin/ListConsumerGroupsOptions;)Lorg/apache/kafka/clients/admin/ListConsumerGroupsResult;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/admin/Admin.html#listOffsets-java.util.Map-org.apache.kafka.clients.admin.ListOffsetsOptions-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/admin/Admin.html#listOffsets-java.util.Map-org.apache.kafka.clients.admin.ListOffsetsOptions-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Clients.Admin.ListOffsetsOptions"/></param>
@@ -516,7 +516,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<Org.Apache.Kafka.Clients.Admin.ListOffsetsResult>("listOffsets", "(Ljava/util/Map;Lorg/apache/kafka/clients/admin/ListOffsetsOptions;)Lorg/apache/kafka/clients/admin/ListOffsetsResult;", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/admin/Admin.html#listPartitionReassignments-java.util.Optional-org.apache.kafka.clients.admin.ListPartitionReassignmentsOptions-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/admin/Admin.html#listPartitionReassignments-java.util.Optional-org.apache.kafka.clients.admin.ListPartitionReassignmentsOptions-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Optional"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Clients.Admin.ListPartitionReassignmentsOptions"/></param>
@@ -526,7 +526,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<Org.Apache.Kafka.Clients.Admin.ListPartitionReassignmentsResult>("listPartitionReassignments", "(Ljava/util/Optional;Lorg/apache/kafka/clients/admin/ListPartitionReassignmentsOptions;)Lorg/apache/kafka/clients/admin/ListPartitionReassignmentsResult;", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/admin/Admin.html#listTopics-org.apache.kafka.clients.admin.ListTopicsOptions-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/admin/Admin.html#listTopics-org.apache.kafka.clients.admin.ListTopicsOptions-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Clients.Admin.ListTopicsOptions"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.ListTopicsResult"/></returns>
@@ -535,7 +535,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<Org.Apache.Kafka.Clients.Admin.ListTopicsResult>("listTopics", "(Lorg/apache/kafka/clients/admin/ListTopicsOptions;)Lorg/apache/kafka/clients/admin/ListTopicsResult;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/admin/Admin.html#listTransactions-org.apache.kafka.clients.admin.ListTransactionsOptions-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/admin/Admin.html#listTransactions-org.apache.kafka.clients.admin.ListTransactionsOptions-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Clients.Admin.ListTransactionsOptions"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.ListTransactionsResult"/></returns>
@@ -544,7 +544,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<Org.Apache.Kafka.Clients.Admin.ListTransactionsResult>("listTransactions", "(Lorg/apache/kafka/clients/admin/ListTransactionsOptions;)Lorg/apache/kafka/clients/admin/ListTransactionsResult;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/admin/Admin.html#removeMembersFromConsumerGroup-java.lang.String-org.apache.kafka.clients.admin.RemoveMembersFromConsumerGroupOptions-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/admin/Admin.html#removeMembersFromConsumerGroup-java.lang.String-org.apache.kafka.clients.admin.RemoveMembersFromConsumerGroupOptions-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Clients.Admin.RemoveMembersFromConsumerGroupOptions"/></param>
@@ -554,7 +554,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<Org.Apache.Kafka.Clients.Admin.RemoveMembersFromConsumerGroupResult>("removeMembersFromConsumerGroup", "(Ljava/lang/String;Lorg/apache/kafka/clients/admin/RemoveMembersFromConsumerGroupOptions;)Lorg/apache/kafka/clients/admin/RemoveMembersFromConsumerGroupResult;", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/admin/Admin.html#removeRaftVoter-int-org.apache.kafka.common.Uuid-org.apache.kafka.clients.admin.RemoveRaftVoterOptions-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/admin/Admin.html#removeRaftVoter-int-org.apache.kafka.common.Uuid-org.apache.kafka.clients.admin.RemoveRaftVoterOptions-"/>
         /// </summary>
         /// <param name="arg0"><see cref="int"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Uuid"/></param>
@@ -565,7 +565,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<Org.Apache.Kafka.Clients.Admin.RemoveRaftVoterResult>("removeRaftVoter", "(ILorg/apache/kafka/common/Uuid;Lorg/apache/kafka/clients/admin/RemoveRaftVoterOptions;)Lorg/apache/kafka/clients/admin/RemoveRaftVoterResult;", arg0, arg1, arg2);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/admin/Admin.html#renewDelegationToken-byte[]-org.apache.kafka.clients.admin.RenewDelegationTokenOptions-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/admin/Admin.html#renewDelegationToken-byte[]-org.apache.kafka.clients.admin.RenewDelegationTokenOptions-"/>
         /// </summary>
         /// <param name="arg0"><see cref="byte"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Clients.Admin.RenewDelegationTokenOptions"/></param>
@@ -575,7 +575,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<Org.Apache.Kafka.Clients.Admin.RenewDelegationTokenResult>("renewDelegationToken", "([BLorg/apache/kafka/clients/admin/RenewDelegationTokenOptions;)Lorg/apache/kafka/clients/admin/RenewDelegationTokenResult;", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/admin/Admin.html#unregisterBroker-int-org.apache.kafka.clients.admin.UnregisterBrokerOptions-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/admin/Admin.html#unregisterBroker-int-org.apache.kafka.clients.admin.UnregisterBrokerOptions-"/>
         /// </summary>
         /// <param name="arg0"><see cref="int"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Clients.Admin.UnregisterBrokerOptions"/></param>
@@ -585,7 +585,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<Org.Apache.Kafka.Clients.Admin.UnregisterBrokerResult>("unregisterBroker", "(ILorg/apache/kafka/clients/admin/UnregisterBrokerOptions;)Lorg/apache/kafka/clients/admin/UnregisterBrokerResult;", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/admin/Admin.html#updateFeatures-java.util.Map-org.apache.kafka.clients.admin.UpdateFeaturesOptions-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/admin/Admin.html#updateFeatures-java.util.Map-org.apache.kafka.clients.admin.UpdateFeaturesOptions-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Clients.Admin.UpdateFeaturesOptions"/></param>
@@ -595,7 +595,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<Org.Apache.Kafka.Clients.Admin.UpdateFeaturesResult>("updateFeatures", "(Ljava/util/Map;Lorg/apache/kafka/clients/admin/UpdateFeaturesOptions;)Lorg/apache/kafka/clients/admin/UpdateFeaturesResult;", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/admin/Admin.html#clientInstanceId-java.time.Duration-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/admin/Admin.html#clientInstanceId-java.time.Duration-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Time.Duration"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.Uuid"/></returns>
@@ -604,7 +604,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<Org.Apache.Kafka.Common.Uuid>("clientInstanceId", "(Ljava/time/Duration;)Lorg/apache/kafka/common/Uuid;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/admin/Admin.html#close-java.time.Duration-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/admin/Admin.html#close-java.time.Duration-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Time.Duration"/></param>
         public void Close(Java.Time.Duration arg0)
@@ -612,7 +612,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             IExecuteWithSignature("close", "(Ljava/time/Duration;)V", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/admin/Admin.html#abortTransaction-org.apache.kafka.clients.admin.AbortTransactionSpec-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/admin/Admin.html#abortTransaction-org.apache.kafka.clients.admin.AbortTransactionSpec-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Clients.Admin.AbortTransactionSpec"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.AbortTransactionResult"/></returns>
@@ -621,7 +621,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<Org.Apache.Kafka.Clients.Admin.AbortTransactionResult>("abortTransaction", "(Lorg/apache/kafka/clients/admin/AbortTransactionSpec;)Lorg/apache/kafka/clients/admin/AbortTransactionResult;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/admin/Admin.html#addRaftVoter-int-org.apache.kafka.common.Uuid-java.util.Set-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/admin/Admin.html#addRaftVoter-int-org.apache.kafka.common.Uuid-java.util.Set-"/>
         /// </summary>
         /// <param name="arg0"><see cref="int"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Uuid"/></param>
@@ -632,7 +632,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<Org.Apache.Kafka.Clients.Admin.AddRaftVoterResult>("addRaftVoter", "(ILorg/apache/kafka/common/Uuid;Ljava/util/Set;)Lorg/apache/kafka/clients/admin/AddRaftVoterResult;", arg0, arg1, arg2);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/admin/Admin.html#alterClientQuotas-java.util.Collection-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/admin/Admin.html#alterClientQuotas-java.util.Collection-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Collection"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.AlterClientQuotasResult"/></returns>
@@ -641,7 +641,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<Org.Apache.Kafka.Clients.Admin.AlterClientQuotasResult>("alterClientQuotas", "(Ljava/util/Collection;)Lorg/apache/kafka/clients/admin/AlterClientQuotasResult;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/admin/Admin.html#incrementalAlterConfigs-java.util.Map-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/admin/Admin.html#incrementalAlterConfigs-java.util.Map-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.AlterConfigsResult"/></returns>
@@ -650,7 +650,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<Org.Apache.Kafka.Clients.Admin.AlterConfigsResult>("incrementalAlterConfigs", "(Ljava/util/Map;)Lorg/apache/kafka/clients/admin/AlterConfigsResult;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/admin/Admin.html#alterConsumerGroupOffsets-java.lang.String-java.util.Map-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/admin/Admin.html#alterConsumerGroupOffsets-java.lang.String-java.util.Map-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Java.Util.Map"/></param>
@@ -660,7 +660,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<Org.Apache.Kafka.Clients.Admin.AlterConsumerGroupOffsetsResult>("alterConsumerGroupOffsets", "(Ljava/lang/String;Ljava/util/Map;)Lorg/apache/kafka/clients/admin/AlterConsumerGroupOffsetsResult;", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/admin/Admin.html#alterPartitionReassignments-java.util.Map-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/admin/Admin.html#alterPartitionReassignments-java.util.Map-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.AlterPartitionReassignmentsResult"/></returns>
@@ -669,7 +669,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<Org.Apache.Kafka.Clients.Admin.AlterPartitionReassignmentsResult>("alterPartitionReassignments", "(Ljava/util/Map;)Lorg/apache/kafka/clients/admin/AlterPartitionReassignmentsResult;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/admin/Admin.html#alterReplicaLogDirs-java.util.Map-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/admin/Admin.html#alterReplicaLogDirs-java.util.Map-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.AlterReplicaLogDirsResult"/></returns>
@@ -678,7 +678,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<Org.Apache.Kafka.Clients.Admin.AlterReplicaLogDirsResult>("alterReplicaLogDirs", "(Ljava/util/Map;)Lorg/apache/kafka/clients/admin/AlterReplicaLogDirsResult;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/admin/Admin.html#alterUserScramCredentials-java.util.List-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/admin/Admin.html#alterUserScramCredentials-java.util.List-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.List"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.AlterUserScramCredentialsResult"/></returns>
@@ -687,7 +687,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<Org.Apache.Kafka.Clients.Admin.AlterUserScramCredentialsResult>("alterUserScramCredentials", "(Ljava/util/List;)Lorg/apache/kafka/clients/admin/AlterUserScramCredentialsResult;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/admin/Admin.html#createAcls-java.util.Collection-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/admin/Admin.html#createAcls-java.util.Collection-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Collection"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.CreateAclsResult"/></returns>
@@ -696,7 +696,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<Org.Apache.Kafka.Clients.Admin.CreateAclsResult>("createAcls", "(Ljava/util/Collection;)Lorg/apache/kafka/clients/admin/CreateAclsResult;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/admin/Admin.html#createDelegationToken--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/admin/Admin.html#createDelegationToken--"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.CreateDelegationTokenResult"/></returns>
         public Org.Apache.Kafka.Clients.Admin.CreateDelegationTokenResult CreateDelegationToken()
@@ -704,7 +704,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<Org.Apache.Kafka.Clients.Admin.CreateDelegationTokenResult>("createDelegationToken", "()Lorg/apache/kafka/clients/admin/CreateDelegationTokenResult;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/admin/Admin.html#createPartitions-java.util.Map-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/admin/Admin.html#createPartitions-java.util.Map-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.CreatePartitionsResult"/></returns>
@@ -713,7 +713,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<Org.Apache.Kafka.Clients.Admin.CreatePartitionsResult>("createPartitions", "(Ljava/util/Map;)Lorg/apache/kafka/clients/admin/CreatePartitionsResult;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/admin/Admin.html#createTopics-java.util.Collection-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/admin/Admin.html#createTopics-java.util.Collection-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Collection"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.CreateTopicsResult"/></returns>
@@ -722,7 +722,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<Org.Apache.Kafka.Clients.Admin.CreateTopicsResult>("createTopics", "(Ljava/util/Collection;)Lorg/apache/kafka/clients/admin/CreateTopicsResult;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/admin/Admin.html#deleteAcls-java.util.Collection-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/admin/Admin.html#deleteAcls-java.util.Collection-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Collection"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.DeleteAclsResult"/></returns>
@@ -731,7 +731,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<Org.Apache.Kafka.Clients.Admin.DeleteAclsResult>("deleteAcls", "(Ljava/util/Collection;)Lorg/apache/kafka/clients/admin/DeleteAclsResult;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/admin/Admin.html#deleteConsumerGroupOffsets-java.lang.String-java.util.Set-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/admin/Admin.html#deleteConsumerGroupOffsets-java.lang.String-java.util.Set-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Java.Util.Set"/></param>
@@ -741,7 +741,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<Org.Apache.Kafka.Clients.Admin.DeleteConsumerGroupOffsetsResult>("deleteConsumerGroupOffsets", "(Ljava/lang/String;Ljava/util/Set;)Lorg/apache/kafka/clients/admin/DeleteConsumerGroupOffsetsResult;", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/admin/Admin.html#deleteConsumerGroups-java.util.Collection-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/admin/Admin.html#deleteConsumerGroups-java.util.Collection-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Collection"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.DeleteConsumerGroupsResult"/></returns>
@@ -750,7 +750,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<Org.Apache.Kafka.Clients.Admin.DeleteConsumerGroupsResult>("deleteConsumerGroups", "(Ljava/util/Collection;)Lorg/apache/kafka/clients/admin/DeleteConsumerGroupsResult;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/admin/Admin.html#deleteRecords-java.util.Map-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/admin/Admin.html#deleteRecords-java.util.Map-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.DeleteRecordsResult"/></returns>
@@ -759,7 +759,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<Org.Apache.Kafka.Clients.Admin.DeleteRecordsResult>("deleteRecords", "(Ljava/util/Map;)Lorg/apache/kafka/clients/admin/DeleteRecordsResult;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/admin/Admin.html#deleteTopics-java.util.Collection-org.apache.kafka.clients.admin.DeleteTopicsOptions-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/admin/Admin.html#deleteTopics-java.util.Collection-org.apache.kafka.clients.admin.DeleteTopicsOptions-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Collection"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Clients.Admin.DeleteTopicsOptions"/></param>
@@ -769,7 +769,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<Org.Apache.Kafka.Clients.Admin.DeleteTopicsResult>("deleteTopics", "(Ljava/util/Collection;Lorg/apache/kafka/clients/admin/DeleteTopicsOptions;)Lorg/apache/kafka/clients/admin/DeleteTopicsResult;", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/admin/Admin.html#deleteTopics-java.util.Collection-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/admin/Admin.html#deleteTopics-java.util.Collection-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Collection"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.DeleteTopicsResult"/></returns>
@@ -778,7 +778,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<Org.Apache.Kafka.Clients.Admin.DeleteTopicsResult>("deleteTopics", "(Ljava/util/Collection;)Lorg/apache/kafka/clients/admin/DeleteTopicsResult;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/admin/Admin.html#deleteTopics-org.apache.kafka.common.TopicCollection-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/admin/Admin.html#deleteTopics-org.apache.kafka.common.TopicCollection-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.TopicCollection"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.DeleteTopicsResult"/></returns>
@@ -787,7 +787,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<Org.Apache.Kafka.Clients.Admin.DeleteTopicsResult>("deleteTopics", "(Lorg/apache/kafka/common/TopicCollection;)Lorg/apache/kafka/clients/admin/DeleteTopicsResult;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/admin/Admin.html#describeAcls-org.apache.kafka.common.acl.AclBindingFilter-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/admin/Admin.html#describeAcls-org.apache.kafka.common.acl.AclBindingFilter-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Acl.AclBindingFilter"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.DescribeAclsResult"/></returns>
@@ -796,7 +796,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<Org.Apache.Kafka.Clients.Admin.DescribeAclsResult>("describeAcls", "(Lorg/apache/kafka/common/acl/AclBindingFilter;)Lorg/apache/kafka/clients/admin/DescribeAclsResult;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/admin/Admin.html#describeClientQuotas-org.apache.kafka.common.quota.ClientQuotaFilter-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/admin/Admin.html#describeClientQuotas-org.apache.kafka.common.quota.ClientQuotaFilter-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Quota.ClientQuotaFilter"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.DescribeClientQuotasResult"/></returns>
@@ -805,7 +805,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<Org.Apache.Kafka.Clients.Admin.DescribeClientQuotasResult>("describeClientQuotas", "(Lorg/apache/kafka/common/quota/ClientQuotaFilter;)Lorg/apache/kafka/clients/admin/DescribeClientQuotasResult;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/admin/Admin.html#describeCluster--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/admin/Admin.html#describeCluster--"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.DescribeClusterResult"/></returns>
         public Org.Apache.Kafka.Clients.Admin.DescribeClusterResult DescribeCluster()
@@ -813,7 +813,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<Org.Apache.Kafka.Clients.Admin.DescribeClusterResult>("describeCluster", "()Lorg/apache/kafka/clients/admin/DescribeClusterResult;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/admin/Admin.html#describeConfigs-java.util.Collection-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/admin/Admin.html#describeConfigs-java.util.Collection-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Collection"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.DescribeConfigsResult"/></returns>
@@ -822,7 +822,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<Org.Apache.Kafka.Clients.Admin.DescribeConfigsResult>("describeConfigs", "(Ljava/util/Collection;)Lorg/apache/kafka/clients/admin/DescribeConfigsResult;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/admin/Admin.html#describeConsumerGroups-java.util.Collection-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/admin/Admin.html#describeConsumerGroups-java.util.Collection-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Collection"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.DescribeConsumerGroupsResult"/></returns>
@@ -831,7 +831,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<Org.Apache.Kafka.Clients.Admin.DescribeConsumerGroupsResult>("describeConsumerGroups", "(Ljava/util/Collection;)Lorg/apache/kafka/clients/admin/DescribeConsumerGroupsResult;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/admin/Admin.html#describeDelegationToken--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/admin/Admin.html#describeDelegationToken--"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.DescribeDelegationTokenResult"/></returns>
         public Org.Apache.Kafka.Clients.Admin.DescribeDelegationTokenResult DescribeDelegationToken()
@@ -839,7 +839,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<Org.Apache.Kafka.Clients.Admin.DescribeDelegationTokenResult>("describeDelegationToken", "()Lorg/apache/kafka/clients/admin/DescribeDelegationTokenResult;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/admin/Admin.html#describeFeatures--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/admin/Admin.html#describeFeatures--"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.DescribeFeaturesResult"/></returns>
         public Org.Apache.Kafka.Clients.Admin.DescribeFeaturesResult DescribeFeatures()
@@ -847,7 +847,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<Org.Apache.Kafka.Clients.Admin.DescribeFeaturesResult>("describeFeatures", "()Lorg/apache/kafka/clients/admin/DescribeFeaturesResult;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/admin/Admin.html#describeLogDirs-java.util.Collection-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/admin/Admin.html#describeLogDirs-java.util.Collection-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Collection"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.DescribeLogDirsResult"/></returns>
@@ -856,7 +856,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<Org.Apache.Kafka.Clients.Admin.DescribeLogDirsResult>("describeLogDirs", "(Ljava/util/Collection;)Lorg/apache/kafka/clients/admin/DescribeLogDirsResult;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/admin/Admin.html#describeMetadataQuorum--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/admin/Admin.html#describeMetadataQuorum--"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.DescribeMetadataQuorumResult"/></returns>
         public Org.Apache.Kafka.Clients.Admin.DescribeMetadataQuorumResult DescribeMetadataQuorum()
@@ -864,7 +864,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<Org.Apache.Kafka.Clients.Admin.DescribeMetadataQuorumResult>("describeMetadataQuorum", "()Lorg/apache/kafka/clients/admin/DescribeMetadataQuorumResult;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/admin/Admin.html#describeProducers-java.util.Collection-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/admin/Admin.html#describeProducers-java.util.Collection-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Collection"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.DescribeProducersResult"/></returns>
@@ -873,7 +873,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<Org.Apache.Kafka.Clients.Admin.DescribeProducersResult>("describeProducers", "(Ljava/util/Collection;)Lorg/apache/kafka/clients/admin/DescribeProducersResult;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/admin/Admin.html#describeReplicaLogDirs-java.util.Collection-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/admin/Admin.html#describeReplicaLogDirs-java.util.Collection-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Collection"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.DescribeReplicaLogDirsResult"/></returns>
@@ -882,7 +882,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<Org.Apache.Kafka.Clients.Admin.DescribeReplicaLogDirsResult>("describeReplicaLogDirs", "(Ljava/util/Collection;)Lorg/apache/kafka/clients/admin/DescribeReplicaLogDirsResult;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/admin/Admin.html#describeTopics-java.util.Collection-org.apache.kafka.clients.admin.DescribeTopicsOptions-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/admin/Admin.html#describeTopics-java.util.Collection-org.apache.kafka.clients.admin.DescribeTopicsOptions-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Collection"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Clients.Admin.DescribeTopicsOptions"/></param>
@@ -892,7 +892,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<Org.Apache.Kafka.Clients.Admin.DescribeTopicsResult>("describeTopics", "(Ljava/util/Collection;Lorg/apache/kafka/clients/admin/DescribeTopicsOptions;)Lorg/apache/kafka/clients/admin/DescribeTopicsResult;", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/admin/Admin.html#describeTopics-java.util.Collection-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/admin/Admin.html#describeTopics-java.util.Collection-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Collection"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.DescribeTopicsResult"/></returns>
@@ -901,7 +901,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<Org.Apache.Kafka.Clients.Admin.DescribeTopicsResult>("describeTopics", "(Ljava/util/Collection;)Lorg/apache/kafka/clients/admin/DescribeTopicsResult;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/admin/Admin.html#describeTopics-org.apache.kafka.common.TopicCollection-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/admin/Admin.html#describeTopics-org.apache.kafka.common.TopicCollection-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.TopicCollection"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.DescribeTopicsResult"/></returns>
@@ -910,7 +910,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<Org.Apache.Kafka.Clients.Admin.DescribeTopicsResult>("describeTopics", "(Lorg/apache/kafka/common/TopicCollection;)Lorg/apache/kafka/clients/admin/DescribeTopicsResult;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/admin/Admin.html#describeTransactions-java.util.Collection-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/admin/Admin.html#describeTransactions-java.util.Collection-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Collection"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.DescribeTransactionsResult"/></returns>
@@ -919,7 +919,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<Org.Apache.Kafka.Clients.Admin.DescribeTransactionsResult>("describeTransactions", "(Ljava/util/Collection;)Lorg/apache/kafka/clients/admin/DescribeTransactionsResult;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/admin/Admin.html#describeUserScramCredentials--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/admin/Admin.html#describeUserScramCredentials--"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.DescribeUserScramCredentialsResult"/></returns>
         public Org.Apache.Kafka.Clients.Admin.DescribeUserScramCredentialsResult DescribeUserScramCredentials()
@@ -927,7 +927,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<Org.Apache.Kafka.Clients.Admin.DescribeUserScramCredentialsResult>("describeUserScramCredentials", "()Lorg/apache/kafka/clients/admin/DescribeUserScramCredentialsResult;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/admin/Admin.html#describeUserScramCredentials-java.util.List-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/admin/Admin.html#describeUserScramCredentials-java.util.List-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.List"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.DescribeUserScramCredentialsResult"/></returns>
@@ -936,7 +936,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<Org.Apache.Kafka.Clients.Admin.DescribeUserScramCredentialsResult>("describeUserScramCredentials", "(Ljava/util/List;)Lorg/apache/kafka/clients/admin/DescribeUserScramCredentialsResult;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/admin/Admin.html#electLeaders-org.apache.kafka.common.ElectionType-java.util.Set-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/admin/Admin.html#electLeaders-org.apache.kafka.common.ElectionType-java.util.Set-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.ElectionType"/></param>
         /// <param name="arg1"><see cref="Java.Util.Set"/></param>
@@ -946,7 +946,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<Org.Apache.Kafka.Clients.Admin.ElectLeadersResult>("electLeaders", "(Lorg/apache/kafka/common/ElectionType;Ljava/util/Set;)Lorg/apache/kafka/clients/admin/ElectLeadersResult;", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/admin/Admin.html#expireDelegationToken-byte[]-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/admin/Admin.html#expireDelegationToken-byte[]-"/>
         /// </summary>
         /// <param name="arg0"><see cref="byte"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.ExpireDelegationTokenResult"/></returns>
@@ -955,7 +955,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<Org.Apache.Kafka.Clients.Admin.ExpireDelegationTokenResult>("expireDelegationToken", "([B)Lorg/apache/kafka/clients/admin/ExpireDelegationTokenResult;", new object[] { arg0 });
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/admin/Admin.html#fenceProducers-java.util.Collection-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/admin/Admin.html#fenceProducers-java.util.Collection-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Collection"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.FenceProducersResult"/></returns>
@@ -964,7 +964,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<Org.Apache.Kafka.Clients.Admin.FenceProducersResult>("fenceProducers", "(Ljava/util/Collection;)Lorg/apache/kafka/clients/admin/FenceProducersResult;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/admin/Admin.html#listClientMetricsResources--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/admin/Admin.html#listClientMetricsResources--"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.ListClientMetricsResourcesResult"/></returns>
         public Org.Apache.Kafka.Clients.Admin.ListClientMetricsResourcesResult ListClientMetricsResources()
@@ -972,7 +972,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<Org.Apache.Kafka.Clients.Admin.ListClientMetricsResourcesResult>("listClientMetricsResources", "()Lorg/apache/kafka/clients/admin/ListClientMetricsResourcesResult;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/admin/Admin.html#listConsumerGroupOffsets-java.lang.String-org.apache.kafka.clients.admin.ListConsumerGroupOffsetsOptions-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/admin/Admin.html#listConsumerGroupOffsets-java.lang.String-org.apache.kafka.clients.admin.ListConsumerGroupOffsetsOptions-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Clients.Admin.ListConsumerGroupOffsetsOptions"/></param>
@@ -982,7 +982,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<Org.Apache.Kafka.Clients.Admin.ListConsumerGroupOffsetsResult>("listConsumerGroupOffsets", "(Ljava/lang/String;Lorg/apache/kafka/clients/admin/ListConsumerGroupOffsetsOptions;)Lorg/apache/kafka/clients/admin/ListConsumerGroupOffsetsResult;", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/admin/Admin.html#listConsumerGroupOffsets-java.lang.String-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/admin/Admin.html#listConsumerGroupOffsets-java.lang.String-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.ListConsumerGroupOffsetsResult"/></returns>
@@ -991,7 +991,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<Org.Apache.Kafka.Clients.Admin.ListConsumerGroupOffsetsResult>("listConsumerGroupOffsets", "(Ljava/lang/String;)Lorg/apache/kafka/clients/admin/ListConsumerGroupOffsetsResult;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/admin/Admin.html#listConsumerGroupOffsets-java.util.Map-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/admin/Admin.html#listConsumerGroupOffsets-java.util.Map-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.ListConsumerGroupOffsetsResult"/></returns>
@@ -1000,7 +1000,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<Org.Apache.Kafka.Clients.Admin.ListConsumerGroupOffsetsResult>("listConsumerGroupOffsets", "(Ljava/util/Map;)Lorg/apache/kafka/clients/admin/ListConsumerGroupOffsetsResult;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/admin/Admin.html#listConsumerGroups--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/admin/Admin.html#listConsumerGroups--"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.ListConsumerGroupsResult"/></returns>
         public Org.Apache.Kafka.Clients.Admin.ListConsumerGroupsResult ListConsumerGroups()
@@ -1008,7 +1008,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<Org.Apache.Kafka.Clients.Admin.ListConsumerGroupsResult>("listConsumerGroups", "()Lorg/apache/kafka/clients/admin/ListConsumerGroupsResult;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/admin/Admin.html#listOffsets-java.util.Map-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/admin/Admin.html#listOffsets-java.util.Map-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.ListOffsetsResult"/></returns>
@@ -1017,7 +1017,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<Org.Apache.Kafka.Clients.Admin.ListOffsetsResult>("listOffsets", "(Ljava/util/Map;)Lorg/apache/kafka/clients/admin/ListOffsetsResult;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/admin/Admin.html#listPartitionReassignments--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/admin/Admin.html#listPartitionReassignments--"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.ListPartitionReassignmentsResult"/></returns>
         public Org.Apache.Kafka.Clients.Admin.ListPartitionReassignmentsResult ListPartitionReassignments()
@@ -1025,7 +1025,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<Org.Apache.Kafka.Clients.Admin.ListPartitionReassignmentsResult>("listPartitionReassignments", "()Lorg/apache/kafka/clients/admin/ListPartitionReassignmentsResult;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/admin/Admin.html#listPartitionReassignments-java.util.Set-org.apache.kafka.clients.admin.ListPartitionReassignmentsOptions-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/admin/Admin.html#listPartitionReassignments-java.util.Set-org.apache.kafka.clients.admin.ListPartitionReassignmentsOptions-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Set"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Clients.Admin.ListPartitionReassignmentsOptions"/></param>
@@ -1035,7 +1035,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<Org.Apache.Kafka.Clients.Admin.ListPartitionReassignmentsResult>("listPartitionReassignments", "(Ljava/util/Set;Lorg/apache/kafka/clients/admin/ListPartitionReassignmentsOptions;)Lorg/apache/kafka/clients/admin/ListPartitionReassignmentsResult;", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/admin/Admin.html#listPartitionReassignments-java.util.Set-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/admin/Admin.html#listPartitionReassignments-java.util.Set-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Set"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.ListPartitionReassignmentsResult"/></returns>
@@ -1044,7 +1044,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<Org.Apache.Kafka.Clients.Admin.ListPartitionReassignmentsResult>("listPartitionReassignments", "(Ljava/util/Set;)Lorg/apache/kafka/clients/admin/ListPartitionReassignmentsResult;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/admin/Admin.html#listPartitionReassignments-org.apache.kafka.clients.admin.ListPartitionReassignmentsOptions-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/admin/Admin.html#listPartitionReassignments-org.apache.kafka.clients.admin.ListPartitionReassignmentsOptions-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Clients.Admin.ListPartitionReassignmentsOptions"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.ListPartitionReassignmentsResult"/></returns>
@@ -1053,7 +1053,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<Org.Apache.Kafka.Clients.Admin.ListPartitionReassignmentsResult>("listPartitionReassignments", "(Lorg/apache/kafka/clients/admin/ListPartitionReassignmentsOptions;)Lorg/apache/kafka/clients/admin/ListPartitionReassignmentsResult;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/admin/Admin.html#listTopics--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/admin/Admin.html#listTopics--"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.ListTopicsResult"/></returns>
         public Org.Apache.Kafka.Clients.Admin.ListTopicsResult ListTopics()
@@ -1061,7 +1061,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<Org.Apache.Kafka.Clients.Admin.ListTopicsResult>("listTopics", "()Lorg/apache/kafka/clients/admin/ListTopicsResult;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/admin/Admin.html#listTransactions--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/admin/Admin.html#listTransactions--"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.ListTransactionsResult"/></returns>
         public Org.Apache.Kafka.Clients.Admin.ListTransactionsResult ListTransactions()
@@ -1069,7 +1069,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<Org.Apache.Kafka.Clients.Admin.ListTransactionsResult>("listTransactions", "()Lorg/apache/kafka/clients/admin/ListTransactionsResult;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/admin/Admin.html#removeRaftVoter-int-org.apache.kafka.common.Uuid-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/admin/Admin.html#removeRaftVoter-int-org.apache.kafka.common.Uuid-"/>
         /// </summary>
         /// <param name="arg0"><see cref="int"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Uuid"/></param>
@@ -1079,7 +1079,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<Org.Apache.Kafka.Clients.Admin.RemoveRaftVoterResult>("removeRaftVoter", "(ILorg/apache/kafka/common/Uuid;)Lorg/apache/kafka/clients/admin/RemoveRaftVoterResult;", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/admin/Admin.html#renewDelegationToken-byte[]-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/admin/Admin.html#renewDelegationToken-byte[]-"/>
         /// </summary>
         /// <param name="arg0"><see cref="byte"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.RenewDelegationTokenResult"/></returns>
@@ -1088,7 +1088,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<Org.Apache.Kafka.Clients.Admin.RenewDelegationTokenResult>("renewDelegationToken", "([B)Lorg/apache/kafka/clients/admin/RenewDelegationTokenResult;", new object[] { arg0 });
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/admin/Admin.html#unregisterBroker-int-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/admin/Admin.html#unregisterBroker-int-"/>
         /// </summary>
         /// <param name="arg0"><see cref="int"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.UnregisterBrokerResult"/></returns>
@@ -1097,7 +1097,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<Org.Apache.Kafka.Clients.Admin.UnregisterBrokerResult>("unregisterBroker", "(I)Lorg/apache/kafka/clients/admin/UnregisterBrokerResult;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/admin/Admin.html#close--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/admin/Admin.html#close--"/>
         /// </summary>
         public void Close()
         {

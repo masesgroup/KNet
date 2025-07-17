@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 {
     #region DescribeTransactionsOptions declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/admin/DescribeTransactionsOptions.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/admin/DescribeTransactionsOptions.html"/>
     /// </summary>
     public partial class DescribeTransactionsOptions : Org.Apache.Kafka.Clients.Admin.AbstractOptions<Org.Apache.Kafka.Clients.Admin.DescribeTransactionsOptions>
     {

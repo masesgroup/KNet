@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Connect.Rest.Basic.Auth.Extension
 {
     #region JaasBasicAuthFilter declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-basic-auth-extension/3.9.0/org/apache/kafka/connect/rest/basic/auth/extension/JaasBasicAuthFilter.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-basic-auth-extension/3.9.1/org/apache/kafka/connect/rest/basic/auth/extension/JaasBasicAuthFilter.html"/>
     /// </summary>
     public partial class JaasBasicAuthFilter : MASES.JCOBridge.C2JBridge.JVMBridgeBase<JaasBasicAuthFilter>
     {
@@ -68,7 +68,7 @@ namespace Org.Apache.Kafka.Connect.Rest.Basic.Auth.Extension
         // TODO: complete the class
         #region BasicAuthCallBackHandler declaration
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-basic-auth-extension/3.9.0/org/apache/kafka/connect/rest/basic/auth/extension/JaasBasicAuthFilter.BasicAuthCallBackHandler.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-basic-auth-extension/3.9.1/org/apache/kafka/connect/rest/basic/auth/extension/JaasBasicAuthFilter.BasicAuthCallBackHandler.html"/>
         /// </summary>
         public partial class BasicAuthCallBackHandler : Javax.Security.Auth.Callback.CallbackHandler
         {
@@ -120,7 +120,7 @@ namespace Org.Apache.Kafka.Connect.Rest.Basic.Auth.Extension
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-basic-auth-extension/3.9.0/org/apache/kafka/connect/rest/basic/auth/extension/JaasBasicAuthFilter.html#org.apache.kafka.connect.rest.basic.auth.extension.JaasBasicAuthFilter(javax.security.auth.login.Configuration)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-basic-auth-extension/3.9.1/org/apache/kafka/connect/rest/basic/auth/extension/JaasBasicAuthFilter.html#org.apache.kafka.connect.rest.basic.auth.extension.JaasBasicAuthFilter(javax.security.auth.login.Configuration)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Javax.Security.Auth.Login.Configuration"/></param>
         public JaasBasicAuthFilter(Javax.Security.Auth.Login.Configuration arg0)
@@ -168,7 +168,7 @@ namespace Org.Apache.Kafka.Connect.Rest.Basic.Auth.Extension
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-basic-auth-extension/3.9.0/org/apache/kafka/connect/rest/basic/auth/extension/JaasBasicAuthFilter.BasicAuthCallBackHandler.html#handle-javax.security.auth.callback.Callback[]-"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-basic-auth-extension/3.9.1/org/apache/kafka/connect/rest/basic/auth/extension/JaasBasicAuthFilter.BasicAuthCallBackHandler.html#handle-javax.security.auth.callback.Callback[]-"/>
             /// </summary>
             /// <param name="arg0"><see cref="Javax.Security.Auth.Callback.Callback"/></param>
             public void Handle(Javax.Security.Auth.Callback.Callback[] arg0)

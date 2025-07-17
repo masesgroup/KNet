@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 {
     #region Named declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.0/org/apache/kafka/streams/kstream/Named.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/kstream/Named.html"/>
     /// </summary>
     public partial class Named : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Named>
     {
@@ -87,7 +87,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.0/org/apache/kafka/streams/kstream/Named.html#as-java.lang.String-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/kstream/Named.html#as-java.lang.String-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.Named"/></returns>

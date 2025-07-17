@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Raft.Errors
 {
     #region BufferAllocationException declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.0/org/apache/kafka/raft/errors/BufferAllocationException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.1/org/apache/kafka/raft/errors/BufferAllocationException.html"/>
     /// </summary>
     public partial class BufferAllocationException : Org.Apache.Kafka.Raft.Errors.RaftException
     {

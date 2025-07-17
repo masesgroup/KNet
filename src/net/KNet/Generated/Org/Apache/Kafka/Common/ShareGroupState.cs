@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common
 {
     #region ShareGroupState declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/ShareGroupState.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/ShareGroupState.html"/>
     /// </summary>
     public partial class ShareGroupState : Java.Lang.Enum<Org.Apache.Kafka.Common.ShareGroupState>
     {
@@ -83,25 +83,25 @@ namespace Org.Apache.Kafka.Common
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/ShareGroupState.html#DEAD"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/ShareGroupState.html#DEAD"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.ShareGroupState DEAD { get { if (!_DEADReady) { _DEADContent = SGetField<Org.Apache.Kafka.Common.ShareGroupState>(LocalBridgeClazz, "DEAD"); _DEADReady = true; } return _DEADContent; } }
         private static Org.Apache.Kafka.Common.ShareGroupState _DEADContent = default;
         private static bool _DEADReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/ShareGroupState.html#EMPTY"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/ShareGroupState.html#EMPTY"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.ShareGroupState EMPTY { get { if (!_EMPTYReady) { _EMPTYContent = SGetField<Org.Apache.Kafka.Common.ShareGroupState>(LocalBridgeClazz, "EMPTY"); _EMPTYReady = true; } return _EMPTYContent; } }
         private static Org.Apache.Kafka.Common.ShareGroupState _EMPTYContent = default;
         private static bool _EMPTYReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/ShareGroupState.html#STABLE"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/ShareGroupState.html#STABLE"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.ShareGroupState STABLE { get { if (!_STABLEReady) { _STABLEContent = SGetField<Org.Apache.Kafka.Common.ShareGroupState>(LocalBridgeClazz, "STABLE"); _STABLEReady = true; } return _STABLEContent; } }
         private static Org.Apache.Kafka.Common.ShareGroupState _STABLEContent = default;
         private static bool _STABLEReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/ShareGroupState.html#UNKNOWN"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/ShareGroupState.html#UNKNOWN"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.ShareGroupState UNKNOWN { get { if (!_UNKNOWNReady) { _UNKNOWNContent = SGetField<Org.Apache.Kafka.Common.ShareGroupState>(LocalBridgeClazz, "UNKNOWN"); _UNKNOWNReady = true; } return _UNKNOWNContent; } }
         private static Org.Apache.Kafka.Common.ShareGroupState _UNKNOWNContent = default;
@@ -111,7 +111,7 @@ namespace Org.Apache.Kafka.Common
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/ShareGroupState.html#parse-java.lang.String-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/ShareGroupState.html#parse-java.lang.String-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.ShareGroupState"/></returns>
@@ -120,7 +120,7 @@ namespace Org.Apache.Kafka.Common
             return SExecuteWithSignature<Org.Apache.Kafka.Common.ShareGroupState>(LocalBridgeClazz, "parse", "(Ljava/lang/String;)Lorg/apache/kafka/common/ShareGroupState;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/ShareGroupState.html#valueOf-java.lang.String-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/ShareGroupState.html#valueOf-java.lang.String-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.ShareGroupState"/></returns>
@@ -129,7 +129,7 @@ namespace Org.Apache.Kafka.Common
             return SExecuteWithSignature<Org.Apache.Kafka.Common.ShareGroupState>(LocalBridgeClazz, "valueOf", "(Ljava/lang/String;)Lorg/apache/kafka/common/ShareGroupState;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/ShareGroupState.html#values--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/ShareGroupState.html#values--"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.ShareGroupState"/></returns>
         public static Org.Apache.Kafka.Common.ShareGroupState[] Values()

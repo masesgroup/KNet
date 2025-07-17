@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Clients
 {
     #region ApiVersions declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/ApiVersions.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/ApiVersions.html"/>
     /// </summary>
     public partial class ApiVersions : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ApiVersions>
     {
@@ -91,7 +91,7 @@ namespace Org.Apache.Kafka.Clients
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/ApiVersions.html#maxUsableProduceMagic--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/ApiVersions.html#maxUsableProduceMagic--"/>
         /// </summary>
         /// <returns><see cref="byte"/></returns>
         public byte MaxUsableProduceMagic()
@@ -99,7 +99,7 @@ namespace Org.Apache.Kafka.Clients
             return IExecuteWithSignature<byte>("maxUsableProduceMagic", "()B");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/ApiVersions.html#get-java.lang.String-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/ApiVersions.html#get-java.lang.String-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Clients.NodeApiVersions"/></returns>
@@ -108,7 +108,7 @@ namespace Org.Apache.Kafka.Clients
             return IExecuteWithSignature<Org.Apache.Kafka.Clients.NodeApiVersions>("get", "(Ljava/lang/String;)Lorg/apache/kafka/clients/NodeApiVersions;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/ApiVersions.html#remove-java.lang.String-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/ApiVersions.html#remove-java.lang.String-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         public void Remove(Java.Lang.String arg0)
@@ -116,7 +116,7 @@ namespace Org.Apache.Kafka.Clients
             IExecuteWithSignature("remove", "(Ljava/lang/String;)V", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/ApiVersions.html#update-java.lang.String-org.apache.kafka.clients.NodeApiVersions-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/ApiVersions.html#update-java.lang.String-org.apache.kafka.clients.NodeApiVersions-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Clients.NodeApiVersions"/></param>

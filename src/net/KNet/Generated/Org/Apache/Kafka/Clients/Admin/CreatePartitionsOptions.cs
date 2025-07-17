@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 {
     #region CreatePartitionsOptions declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/admin/CreatePartitionsOptions.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/admin/CreatePartitionsOptions.html"/>
     /// </summary>
     public partial class CreatePartitionsOptions : Org.Apache.Kafka.Clients.Admin.AbstractOptions<Org.Apache.Kafka.Clients.Admin.CreatePartitionsOptions>
     {
@@ -91,7 +91,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/admin/CreatePartitionsOptions.html#shouldRetryOnQuotaViolation--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/admin/CreatePartitionsOptions.html#shouldRetryOnQuotaViolation--"/>
         /// </summary>
         /// <returns><see cref="bool"/></returns>
         public bool ShouldRetryOnQuotaViolation()
@@ -99,7 +99,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<bool>("shouldRetryOnQuotaViolation", "()Z");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/admin/CreatePartitionsOptions.html#validateOnly--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/admin/CreatePartitionsOptions.html#validateOnly--"/>
         /// </summary>
         /// <returns><see cref="bool"/></returns>
         public bool ValidateOnly()
@@ -107,7 +107,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<bool>("validateOnly", "()Z");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/admin/CreatePartitionsOptions.html#retryOnQuotaViolation-boolean-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/admin/CreatePartitionsOptions.html#retryOnQuotaViolation-boolean-"/>
         /// </summary>
         /// <param name="arg0"><see cref="bool"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.CreatePartitionsOptions"/></returns>
@@ -116,7 +116,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<Org.Apache.Kafka.Clients.Admin.CreatePartitionsOptions>("retryOnQuotaViolation", "(Z)Lorg/apache/kafka/clients/admin/CreatePartitionsOptions;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/admin/CreatePartitionsOptions.html#validateOnly-boolean-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/admin/CreatePartitionsOptions.html#validateOnly-boolean-"/>
         /// </summary>
         /// <param name="arg0"><see cref="bool"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.CreatePartitionsOptions"/></returns>

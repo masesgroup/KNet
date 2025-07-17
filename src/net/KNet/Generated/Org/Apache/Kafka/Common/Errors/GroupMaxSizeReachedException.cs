@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common.Errors
 {
     #region GroupMaxSizeReachedException declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/errors/GroupMaxSizeReachedException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/errors/GroupMaxSizeReachedException.html"/>
     /// </summary>
     public partial class GroupMaxSizeReachedException : Org.Apache.Kafka.Common.Errors.ApiException
     {

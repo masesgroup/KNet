@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Raft
 {
     #region OffsetAndEpoch declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.0/org/apache/kafka/raft/OffsetAndEpoch.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.1/org/apache/kafka/raft/OffsetAndEpoch.html"/>
     /// </summary>
     public partial class OffsetAndEpoch : Java.Lang.Comparable<Org.Apache.Kafka.Raft.OffsetAndEpoch>
     {
@@ -75,7 +75,7 @@ namespace Org.Apache.Kafka.Raft
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.0/org/apache/kafka/raft/OffsetAndEpoch.html#org.apache.kafka.raft.OffsetAndEpoch(long,int)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.1/org/apache/kafka/raft/OffsetAndEpoch.html#org.apache.kafka.raft.OffsetAndEpoch(long,int)"/>
         /// </summary>
         /// <param name="arg0"><see cref="long"/></param>
         /// <param name="arg1"><see cref="int"/></param>
@@ -100,7 +100,7 @@ namespace Org.Apache.Kafka.Raft
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.0/org/apache/kafka/raft/OffsetAndEpoch.html#compareTo-java.lang.Object-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.1/org/apache/kafka/raft/OffsetAndEpoch.html#compareTo-java.lang.Object-"/>
         /// </summary>
         /// <param name="arg0"><see cref="object"/></param>
         /// <returns><see cref="int"/></returns>
@@ -109,7 +109,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<int>("compareTo", "(Ljava/lang/Object;)I", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.0/org/apache/kafka/raft/OffsetAndEpoch.html#compareTo-org.apache.kafka.raft.OffsetAndEpoch-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.1/org/apache/kafka/raft/OffsetAndEpoch.html#compareTo-org.apache.kafka.raft.OffsetAndEpoch-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Raft.OffsetAndEpoch"/></param>
         /// <returns><see cref="int"/></returns>
@@ -118,7 +118,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<int>("compareTo", "(Lorg/apache/kafka/raft/OffsetAndEpoch;)I", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.0/org/apache/kafka/raft/OffsetAndEpoch.html#epoch--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.1/org/apache/kafka/raft/OffsetAndEpoch.html#epoch--"/>
         /// </summary>
         /// <returns><see cref="int"/></returns>
         public int Epoch()
@@ -126,7 +126,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<int>("epoch", "()I");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.0/org/apache/kafka/raft/OffsetAndEpoch.html#offset--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.1/org/apache/kafka/raft/OffsetAndEpoch.html#offset--"/>
         /// </summary>
         /// <returns><see cref="long"/></returns>
         public long Offset()

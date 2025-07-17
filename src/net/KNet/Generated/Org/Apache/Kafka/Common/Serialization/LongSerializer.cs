@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common.Serialization
 {
     #region LongSerializer declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/serialization/LongSerializer.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/serialization/LongSerializer.html"/>
     /// </summary>
     public partial class LongSerializer : MASES.JCOBridge.C2JBridge.JVMBridgeBase<LongSerializer>
     {
@@ -95,7 +95,7 @@ namespace Org.Apache.Kafka.Common.Serialization
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/serialization/LongSerializer.html#serialize-java.lang.String-java.lang.Long-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/serialization/LongSerializer.html#serialize-java.lang.String-java.lang.Long-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Java.Lang.Long"/></param>
@@ -105,7 +105,7 @@ namespace Org.Apache.Kafka.Common.Serialization
             return IExecuteWithSignatureArray<byte>("serialize", "(Ljava/lang/String;Ljava/lang/Long;)[B", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/serialization/LongSerializer.html#serialize-java.lang.String-java.lang.Object-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/serialization/LongSerializer.html#serialize-java.lang.String-java.lang.Object-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="object"/></param>

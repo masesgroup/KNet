@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Shell
 {
     #region InteractiveShell declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-shell/3.9.0/org/apache/kafka/shell/InteractiveShell.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-shell/3.9.1/org/apache/kafka/shell/InteractiveShell.html"/>
     /// </summary>
     public partial class InteractiveShell : Java.Lang.AutoCloseable
     {
@@ -68,7 +68,7 @@ namespace Org.Apache.Kafka.Shell
         // TODO: complete the class
         #region HistoryIterator declaration
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-shell/3.9.0/org/apache/kafka/shell/InteractiveShell.HistoryIterator.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-shell/3.9.1/org/apache/kafka/shell/InteractiveShell.HistoryIterator.html"/>
         /// </summary>
         public partial class HistoryIterator : Java.Util.Iterator<Java.Util.Map.Entry<Java.Lang.Integer, Java.Lang.String>>
         {
@@ -136,7 +136,7 @@ namespace Org.Apache.Kafka.Shell
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-shell/3.9.0/org/apache/kafka/shell/InteractiveShell.html#screenWidth--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-shell/3.9.1/org/apache/kafka/shell/InteractiveShell.html#screenWidth--"/>
         /// </summary>
         /// <returns><see cref="int"/></returns>
         public int ScreenWidth()
@@ -144,7 +144,7 @@ namespace Org.Apache.Kafka.Shell
             return IExecuteWithSignature<int>("screenWidth", "()I");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-shell/3.9.0/org/apache/kafka/shell/InteractiveShell.html#history-int-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-shell/3.9.1/org/apache/kafka/shell/InteractiveShell.html#history-int-"/>
         /// </summary>
         /// <param name="arg0"><see cref="int"/></param>
         /// <returns><see cref="Java.Util.Iterator"/></returns>
@@ -153,7 +153,7 @@ namespace Org.Apache.Kafka.Shell
             return IExecuteWithSignature<Java.Util.Iterator<Java.Util.Map.Entry<Java.Lang.Integer, Java.Lang.String>>>("history", "(I)Ljava/util/Iterator;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-shell/3.9.0/org/apache/kafka/shell/InteractiveShell.html#close--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-shell/3.9.1/org/apache/kafka/shell/InteractiveShell.html#close--"/>
         /// </summary>
         /// <exception cref="Java.Io.IOException"/>
         public void Close()
@@ -161,7 +161,7 @@ namespace Org.Apache.Kafka.Shell
             IExecuteWithSignature("close", "()V");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-shell/3.9.0/org/apache/kafka/shell/InteractiveShell.html#runMainLoop--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-shell/3.9.1/org/apache/kafka/shell/InteractiveShell.html#runMainLoop--"/>
         /// </summary>
         /// <exception cref="Java.Lang.Exception"/>
         public void RunMainLoop()
@@ -193,7 +193,7 @@ namespace Org.Apache.Kafka.Shell
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-shell/3.9.0/org/apache/kafka/shell/InteractiveShell.HistoryIterator.html#hasNext--"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-shell/3.9.1/org/apache/kafka/shell/InteractiveShell.HistoryIterator.html#hasNext--"/>
             /// </summary>
             /// <returns><see cref="bool"/></returns>
             public bool HasNext()
@@ -201,7 +201,7 @@ namespace Org.Apache.Kafka.Shell
                 return IExecuteWithSignature<bool>("hasNext", "()Z");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-shell/3.9.0/org/apache/kafka/shell/InteractiveShell.HistoryIterator.html#next--"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-shell/3.9.1/org/apache/kafka/shell/InteractiveShell.HistoryIterator.html#next--"/>
             /// </summary>
             /// <returns><see cref="object"/></returns>
             public object Next()

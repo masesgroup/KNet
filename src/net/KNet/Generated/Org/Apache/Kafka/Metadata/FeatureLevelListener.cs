@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Metadata
 {
     #region FeatureLevelListener declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/3.9.0/org/apache/kafka/metadata/FeatureLevelListener.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/3.9.1/org/apache/kafka/metadata/FeatureLevelListener.html"/>
     /// </summary>
     public partial class FeatureLevelListener : MASES.JCOBridge.C2JBridge.JVMBridgeListener
     {
@@ -94,7 +94,7 @@ namespace Org.Apache.Kafka.Metadata
 
     #region IFeatureLevelListener
     /// <summary>
-    /// .NET interface for org.mases.knet.generated.org.apache.kafka.metadata.FeatureLevelListener implementing <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/3.9.0/org/apache/kafka/metadata/FeatureLevelListener.html"/>
+    /// .NET interface for org.mases.knet.generated.org.apache.kafka.metadata.FeatureLevelListener implementing <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/3.9.1/org/apache/kafka/metadata/FeatureLevelListener.html"/>
     /// </summary>
     public partial interface IFeatureLevelListener
     {
@@ -140,7 +140,7 @@ namespace Org.Apache.Kafka.Metadata
         }
 
         /// <summary>
-        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/3.9.0/org/apache/kafka/metadata/FeatureLevelListener.html#handle-java.lang.String-short-"/>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/3.9.1/org/apache/kafka/metadata/FeatureLevelListener.html#handle-java.lang.String-short-"/>
         /// </summary>
         /// <remarks>If <see cref="OnHandle"/> has a value it takes precedence over corresponding class method</remarks>
         public global::System.Action<Java.Lang.String, short> OnHandle { get; set; } = null;
@@ -155,7 +155,7 @@ namespace Org.Apache.Kafka.Metadata
         }
 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/3.9.0/org/apache/kafka/metadata/FeatureLevelListener.html#handle-java.lang.String-short-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/3.9.1/org/apache/kafka/metadata/FeatureLevelListener.html#handle-java.lang.String-short-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="short"/></param>
@@ -195,7 +195,7 @@ namespace Org.Apache.Kafka.Metadata
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/3.9.0/org/apache/kafka/metadata/FeatureLevelListener.html#handle-java.lang.String-short-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/3.9.1/org/apache/kafka/metadata/FeatureLevelListener.html#handle-java.lang.String-short-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="short"/></param>

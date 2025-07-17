@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common.Config.Provider
 {
     #region FileConfigProvider declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/config/provider/FileConfigProvider.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/config/provider/FileConfigProvider.html"/>
     /// </summary>
     public partial class FileConfigProvider : Org.Apache.Kafka.Common.Config.Provider.ConfigProvider
     {
@@ -83,13 +83,13 @@ namespace Org.Apache.Kafka.Common.Config.Provider
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/config/provider/FileConfigProvider.html#ALLOWED_PATHS_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/config/provider/FileConfigProvider.html#ALLOWED_PATHS_CONFIG"/>
         /// </summary>
         public static Java.Lang.String ALLOWED_PATHS_CONFIG { get { if (!_ALLOWED_PATHS_CONFIGReady) { _ALLOWED_PATHS_CONFIGContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "ALLOWED_PATHS_CONFIG"); _ALLOWED_PATHS_CONFIGReady = true; } return _ALLOWED_PATHS_CONFIGContent; } }
         private static Java.Lang.String _ALLOWED_PATHS_CONFIGContent = default;
         private static bool _ALLOWED_PATHS_CONFIGReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/config/provider/FileConfigProvider.html#ALLOWED_PATHS_DOC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/config/provider/FileConfigProvider.html#ALLOWED_PATHS_DOC"/>
         /// </summary>
         public static Java.Lang.String ALLOWED_PATHS_DOC { get { if (!_ALLOWED_PATHS_DOCReady) { _ALLOWED_PATHS_DOCContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "ALLOWED_PATHS_DOC"); _ALLOWED_PATHS_DOCReady = true; } return _ALLOWED_PATHS_DOCContent; } }
         private static Java.Lang.String _ALLOWED_PATHS_DOCContent = default;
@@ -103,7 +103,7 @@ namespace Org.Apache.Kafka.Common.Config.Provider
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/config/provider/FileConfigProvider.html#get-java.lang.String-java.util.Set-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/config/provider/FileConfigProvider.html#get-java.lang.String-java.util.Set-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Java.Util.Set"/></param>
@@ -113,7 +113,7 @@ namespace Org.Apache.Kafka.Common.Config.Provider
             return IExecuteWithSignature<Org.Apache.Kafka.Common.Config.ConfigData>("get", "(Ljava/lang/String;Ljava/util/Set;)Lorg/apache/kafka/common/config/ConfigData;", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/config/provider/FileConfigProvider.html#get-java.lang.String-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/config/provider/FileConfigProvider.html#get-java.lang.String-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.Config.ConfigData"/></returns>
@@ -122,14 +122,14 @@ namespace Org.Apache.Kafka.Common.Config.Provider
             return IExecuteWithSignature<Org.Apache.Kafka.Common.Config.ConfigData>("get", "(Ljava/lang/String;)Lorg/apache/kafka/common/config/ConfigData;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/config/provider/FileConfigProvider.html#close--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/config/provider/FileConfigProvider.html#close--"/>
         /// </summary>
         public void Close()
         {
             IExecuteWithSignature("close", "()V");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/config/provider/FileConfigProvider.html#configure-java.util.Map-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/config/provider/FileConfigProvider.html#configure-java.util.Map-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         public void Configure(Java.Util.Map<Java.Lang.String, object> arg0)

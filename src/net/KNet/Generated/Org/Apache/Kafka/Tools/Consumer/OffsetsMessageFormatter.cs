@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Tools.Consumer
 {
     #region OffsetsMessageFormatter declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.9.0/org/apache/kafka/tools/consumer/OffsetsMessageFormatter.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.9.1/org/apache/kafka/tools/consumer/OffsetsMessageFormatter.html"/>
     /// </summary>
     public partial class OffsetsMessageFormatter : Org.Apache.Kafka.Tools.Consumer.ApiMessageFormatter
     {

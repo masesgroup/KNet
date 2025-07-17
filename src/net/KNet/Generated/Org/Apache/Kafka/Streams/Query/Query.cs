@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Streams.Query
 {
     #region Query declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.0/org/apache/kafka/streams/query/Query.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/query/Query.html"/>
     /// </summary>
     public partial class Query : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Query>
     {
@@ -74,7 +74,7 @@ namespace Org.Apache.Kafka.Streams.Query
 
     #region Query<R> declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.0/org/apache/kafka/streams/query/Query.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/query/Query.html"/>
     /// </summary>
     /// <typeparam name="R"></typeparam>
     public partial class Query<R> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Query<R>>

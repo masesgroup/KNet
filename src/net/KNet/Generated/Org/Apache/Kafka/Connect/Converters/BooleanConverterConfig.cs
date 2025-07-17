@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Connect.Converters
 {
     #region BooleanConverterConfig declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.9.0/org/apache/kafka/connect/converters/BooleanConverterConfig.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.9.1/org/apache/kafka/connect/converters/BooleanConverterConfig.html"/>
     /// </summary>
     public partial class BooleanConverterConfig : MASES.JCOBridge.C2JBridge.JVMBridgeBase<BooleanConverterConfig>
     {
@@ -75,7 +75,7 @@ namespace Org.Apache.Kafka.Connect.Converters
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.9.0/org/apache/kafka/connect/converters/BooleanConverterConfig.html#org.apache.kafka.connect.converters.BooleanConverterConfig(java.util.Map)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.9.1/org/apache/kafka/connect/converters/BooleanConverterConfig.html#org.apache.kafka.connect.converters.BooleanConverterConfig(java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         public BooleanConverterConfig(Java.Util.Map<Java.Lang.String, object> arg0)
@@ -95,7 +95,7 @@ namespace Org.Apache.Kafka.Connect.Converters
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.9.0/org/apache/kafka/connect/converters/BooleanConverterConfig.html#configDef--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.9.1/org/apache/kafka/connect/converters/BooleanConverterConfig.html#configDef--"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.Config.ConfigDef"/></returns>
         public static Org.Apache.Kafka.Common.Config.ConfigDef ConfigDef()

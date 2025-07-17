@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Clients
 {
     #region ConnectionState declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/ConnectionState.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/ConnectionState.html"/>
     /// </summary>
     public partial class ConnectionState : Java.Lang.Enum<Org.Apache.Kafka.Clients.ConnectionState>
     {
@@ -83,31 +83,31 @@ namespace Org.Apache.Kafka.Clients
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/ConnectionState.html#AUTHENTICATION_FAILED"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/ConnectionState.html#AUTHENTICATION_FAILED"/>
         /// </summary>
         public static Org.Apache.Kafka.Clients.ConnectionState AUTHENTICATION_FAILED { get { if (!_AUTHENTICATION_FAILEDReady) { _AUTHENTICATION_FAILEDContent = SGetField<Org.Apache.Kafka.Clients.ConnectionState>(LocalBridgeClazz, "AUTHENTICATION_FAILED"); _AUTHENTICATION_FAILEDReady = true; } return _AUTHENTICATION_FAILEDContent; } }
         private static Org.Apache.Kafka.Clients.ConnectionState _AUTHENTICATION_FAILEDContent = default;
         private static bool _AUTHENTICATION_FAILEDReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/ConnectionState.html#CHECKING_API_VERSIONS"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/ConnectionState.html#CHECKING_API_VERSIONS"/>
         /// </summary>
         public static Org.Apache.Kafka.Clients.ConnectionState CHECKING_API_VERSIONS { get { if (!_CHECKING_API_VERSIONSReady) { _CHECKING_API_VERSIONSContent = SGetField<Org.Apache.Kafka.Clients.ConnectionState>(LocalBridgeClazz, "CHECKING_API_VERSIONS"); _CHECKING_API_VERSIONSReady = true; } return _CHECKING_API_VERSIONSContent; } }
         private static Org.Apache.Kafka.Clients.ConnectionState _CHECKING_API_VERSIONSContent = default;
         private static bool _CHECKING_API_VERSIONSReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/ConnectionState.html#CONNECTING"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/ConnectionState.html#CONNECTING"/>
         /// </summary>
         public static Org.Apache.Kafka.Clients.ConnectionState CONNECTING { get { if (!_CONNECTINGReady) { _CONNECTINGContent = SGetField<Org.Apache.Kafka.Clients.ConnectionState>(LocalBridgeClazz, "CONNECTING"); _CONNECTINGReady = true; } return _CONNECTINGContent; } }
         private static Org.Apache.Kafka.Clients.ConnectionState _CONNECTINGContent = default;
         private static bool _CONNECTINGReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/ConnectionState.html#DISCONNECTED"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/ConnectionState.html#DISCONNECTED"/>
         /// </summary>
         public static Org.Apache.Kafka.Clients.ConnectionState DISCONNECTED { get { if (!_DISCONNECTEDReady) { _DISCONNECTEDContent = SGetField<Org.Apache.Kafka.Clients.ConnectionState>(LocalBridgeClazz, "DISCONNECTED"); _DISCONNECTEDReady = true; } return _DISCONNECTEDContent; } }
         private static Org.Apache.Kafka.Clients.ConnectionState _DISCONNECTEDContent = default;
         private static bool _DISCONNECTEDReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/ConnectionState.html#READY"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/ConnectionState.html#READY"/>
         /// </summary>
         public static Org.Apache.Kafka.Clients.ConnectionState READY { get { if (!_READYReady) { _READYContent = SGetField<Org.Apache.Kafka.Clients.ConnectionState>(LocalBridgeClazz, "READY"); _READYReady = true; } return _READYContent; } }
         private static Org.Apache.Kafka.Clients.ConnectionState _READYContent = default;
@@ -117,7 +117,7 @@ namespace Org.Apache.Kafka.Clients
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/ConnectionState.html#valueOf-java.lang.String-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/ConnectionState.html#valueOf-java.lang.String-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Clients.ConnectionState"/></returns>
@@ -126,7 +126,7 @@ namespace Org.Apache.Kafka.Clients
             return SExecuteWithSignature<Org.Apache.Kafka.Clients.ConnectionState>(LocalBridgeClazz, "valueOf", "(Ljava/lang/String;)Lorg/apache/kafka/clients/ConnectionState;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/ConnectionState.html#values--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/ConnectionState.html#values--"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Clients.ConnectionState"/></returns>
         public static Org.Apache.Kafka.Clients.ConnectionState[] Values()
@@ -138,7 +138,7 @@ namespace Org.Apache.Kafka.Clients
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/ConnectionState.html#isConnected--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/ConnectionState.html#isConnected--"/>
         /// </summary>
         /// <returns><see cref="bool"/></returns>
         public bool IsConnected()
@@ -146,7 +146,7 @@ namespace Org.Apache.Kafka.Clients
             return IExecuteWithSignature<bool>("isConnected", "()Z");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/ConnectionState.html#isDisconnected--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/ConnectionState.html#isDisconnected--"/>
         /// </summary>
         /// <returns><see cref="bool"/></returns>
         public bool IsDisconnected()

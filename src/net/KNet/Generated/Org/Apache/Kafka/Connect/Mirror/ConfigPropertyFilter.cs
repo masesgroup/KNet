@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
 {
     #region ConfigPropertyFilter declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.9.0/org/apache/kafka/connect/mirror/ConfigPropertyFilter.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.9.1/org/apache/kafka/connect/mirror/ConfigPropertyFilter.html"/>
     /// </summary>
     public partial class ConfigPropertyFilter : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ConfigPropertyFilter>
     {
@@ -119,7 +119,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.9.0/org/apache/kafka/connect/mirror/ConfigPropertyFilter.html#shouldReplicateConfigProperty-java.lang.String-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.9.1/org/apache/kafka/connect/mirror/ConfigPropertyFilter.html#shouldReplicateConfigProperty-java.lang.String-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="bool"/></returns>
@@ -128,7 +128,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
             return IExecuteWithSignature<bool>("shouldReplicateConfigProperty", "(Ljava/lang/String;)Z", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.9.0/org/apache/kafka/connect/mirror/ConfigPropertyFilter.html#shouldReplicateSourceDefault-java.lang.String-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.9.1/org/apache/kafka/connect/mirror/ConfigPropertyFilter.html#shouldReplicateSourceDefault-java.lang.String-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="bool"/></returns>
@@ -137,14 +137,14 @@ namespace Org.Apache.Kafka.Connect.Mirror
             return IExecuteWithSignature<bool>("shouldReplicateSourceDefault", "(Ljava/lang/String;)Z", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.9.0/org/apache/kafka/connect/mirror/ConfigPropertyFilter.html#close--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.9.1/org/apache/kafka/connect/mirror/ConfigPropertyFilter.html#close--"/>
         /// </summary>
         public void Close()
         {
             IExecuteWithSignature("close", "()V");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.9.0/org/apache/kafka/connect/mirror/ConfigPropertyFilter.html#configure-java.util.Map-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.9.1/org/apache/kafka/connect/mirror/ConfigPropertyFilter.html#configure-java.util.Map-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         public void Configure(Java.Util.Map<Java.Lang.String, object> arg0)

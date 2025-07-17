@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Connect.Health
 {
     #region ConnectorState declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.0/org/apache/kafka/connect/health/ConnectorState.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.1/org/apache/kafka/connect/health/ConnectorState.html"/>
     /// </summary>
     public partial class ConnectorState : Org.Apache.Kafka.Connect.Health.AbstractState
     {
@@ -75,7 +75,7 @@ namespace Org.Apache.Kafka.Connect.Health
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.0/org/apache/kafka/connect/health/ConnectorState.html#org.apache.kafka.connect.health.ConnectorState(java.lang.String,java.lang.String,java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.1/org/apache/kafka/connect/health/ConnectorState.html#org.apache.kafka.connect.health.ConnectorState(java.lang.String,java.lang.String,java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Java.Lang.String"/></param>

@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Connect.Transforms
 {
     #region TimestampConverter declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.9.0/org/apache/kafka/connect/transforms/TimestampConverter.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.9.1/org/apache/kafka/connect/transforms/TimestampConverter.html"/>
     /// </summary>
     public partial class TimestampConverter : MASES.JCOBridge.C2JBridge.JVMBridgeBase<TimestampConverter>
     {
@@ -70,7 +70,7 @@ namespace Org.Apache.Kafka.Connect.Transforms
         // TODO: complete the class
         #region Key declaration
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.9.0/org/apache/kafka/connect/transforms/TimestampConverter.Key.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.9.1/org/apache/kafka/connect/transforms/TimestampConverter.Key.html"/>
         /// </summary>
         public partial class Key : Org.Apache.Kafka.Connect.Transforms.TimestampConverter
         {
@@ -115,7 +115,7 @@ namespace Org.Apache.Kafka.Connect.Transforms
 
         #region Key<R> declaration
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.9.0/org/apache/kafka/connect/transforms/TimestampConverter.Key.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.9.1/org/apache/kafka/connect/transforms/TimestampConverter.Key.html"/>
         /// </summary>
         /// <typeparam name="R"><see cref="Org.Apache.Kafka.Connect.Connector.ConnectRecord{R}"/></typeparam>
         public partial class Key<R> : Org.Apache.Kafka.Connect.Transforms.TimestampConverter<R> where R : Org.Apache.Kafka.Connect.Connector.ConnectRecord<R>
@@ -161,7 +161,7 @@ namespace Org.Apache.Kafka.Connect.Transforms
 
         #region Value declaration
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.9.0/org/apache/kafka/connect/transforms/TimestampConverter.Value.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.9.1/org/apache/kafka/connect/transforms/TimestampConverter.Value.html"/>
         /// </summary>
         public partial class Value : Org.Apache.Kafka.Connect.Transforms.TimestampConverter
         {
@@ -206,7 +206,7 @@ namespace Org.Apache.Kafka.Connect.Transforms
 
         #region Value<R> declaration
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.9.0/org/apache/kafka/connect/transforms/TimestampConverter.Value.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.9.1/org/apache/kafka/connect/transforms/TimestampConverter.Value.html"/>
         /// </summary>
         /// <typeparam name="R"><see cref="Org.Apache.Kafka.Connect.Connector.ConnectRecord{R}"/></typeparam>
         public partial class Value<R> : Org.Apache.Kafka.Connect.Transforms.TimestampConverter<R> where R : Org.Apache.Kafka.Connect.Connector.ConnectRecord<R>
@@ -256,7 +256,7 @@ namespace Org.Apache.Kafka.Connect.Transforms
 
     #region TimestampConverter<R> declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.9.0/org/apache/kafka/connect/transforms/TimestampConverter.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.9.1/org/apache/kafka/connect/transforms/TimestampConverter.html"/>
     /// </summary>
     /// <typeparam name="R"><see cref="Org.Apache.Kafka.Connect.Connector.ConnectRecord{R}"/></typeparam>
     public partial class TimestampConverter<R> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<TimestampConverter<R>> where R : Org.Apache.Kafka.Connect.Connector.ConnectRecord<R>
@@ -323,61 +323,61 @@ namespace Org.Apache.Kafka.Connect.Transforms
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.9.0/org/apache/kafka/connect/transforms/TimestampConverter.html#FIELD_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.9.1/org/apache/kafka/connect/transforms/TimestampConverter.html#FIELD_CONFIG"/>
         /// </summary>
         public static Java.Lang.String FIELD_CONFIG { get { if (!_FIELD_CONFIGReady) { _FIELD_CONFIGContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "FIELD_CONFIG"); _FIELD_CONFIGReady = true; } return _FIELD_CONFIGContent; } }
         private static Java.Lang.String _FIELD_CONFIGContent = default;
         private static bool _FIELD_CONFIGReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.9.0/org/apache/kafka/connect/transforms/TimestampConverter.html#FORMAT_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.9.1/org/apache/kafka/connect/transforms/TimestampConverter.html#FORMAT_CONFIG"/>
         /// </summary>
         public static Java.Lang.String FORMAT_CONFIG { get { if (!_FORMAT_CONFIGReady) { _FORMAT_CONFIGContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "FORMAT_CONFIG"); _FORMAT_CONFIGReady = true; } return _FORMAT_CONFIGContent; } }
         private static Java.Lang.String _FORMAT_CONFIGContent = default;
         private static bool _FORMAT_CONFIGReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.9.0/org/apache/kafka/connect/transforms/TimestampConverter.html#OVERVIEW_DOC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.9.1/org/apache/kafka/connect/transforms/TimestampConverter.html#OVERVIEW_DOC"/>
         /// </summary>
         public static Java.Lang.String OVERVIEW_DOC { get { if (!_OVERVIEW_DOCReady) { _OVERVIEW_DOCContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "OVERVIEW_DOC"); _OVERVIEW_DOCReady = true; } return _OVERVIEW_DOCContent; } }
         private static Java.Lang.String _OVERVIEW_DOCContent = default;
         private static bool _OVERVIEW_DOCReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.9.0/org/apache/kafka/connect/transforms/TimestampConverter.html#REPLACE_NULL_WITH_DEFAULT_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.9.1/org/apache/kafka/connect/transforms/TimestampConverter.html#REPLACE_NULL_WITH_DEFAULT_CONFIG"/>
         /// </summary>
         public static Java.Lang.String REPLACE_NULL_WITH_DEFAULT_CONFIG { get { if (!_REPLACE_NULL_WITH_DEFAULT_CONFIGReady) { _REPLACE_NULL_WITH_DEFAULT_CONFIGContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "REPLACE_NULL_WITH_DEFAULT_CONFIG"); _REPLACE_NULL_WITH_DEFAULT_CONFIGReady = true; } return _REPLACE_NULL_WITH_DEFAULT_CONFIGContent; } }
         private static Java.Lang.String _REPLACE_NULL_WITH_DEFAULT_CONFIGContent = default;
         private static bool _REPLACE_NULL_WITH_DEFAULT_CONFIGReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.9.0/org/apache/kafka/connect/transforms/TimestampConverter.html#TARGET_TYPE_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.9.1/org/apache/kafka/connect/transforms/TimestampConverter.html#TARGET_TYPE_CONFIG"/>
         /// </summary>
         public static Java.Lang.String TARGET_TYPE_CONFIG { get { if (!_TARGET_TYPE_CONFIGReady) { _TARGET_TYPE_CONFIGContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "TARGET_TYPE_CONFIG"); _TARGET_TYPE_CONFIGReady = true; } return _TARGET_TYPE_CONFIGContent; } }
         private static Java.Lang.String _TARGET_TYPE_CONFIGContent = default;
         private static bool _TARGET_TYPE_CONFIGReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.9.0/org/apache/kafka/connect/transforms/TimestampConverter.html#UNIX_PRECISION_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.9.1/org/apache/kafka/connect/transforms/TimestampConverter.html#UNIX_PRECISION_CONFIG"/>
         /// </summary>
         public static Java.Lang.String UNIX_PRECISION_CONFIG { get { if (!_UNIX_PRECISION_CONFIGReady) { _UNIX_PRECISION_CONFIGContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "UNIX_PRECISION_CONFIG"); _UNIX_PRECISION_CONFIGReady = true; } return _UNIX_PRECISION_CONFIGContent; } }
         private static Java.Lang.String _UNIX_PRECISION_CONFIGContent = default;
         private static bool _UNIX_PRECISION_CONFIGReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.9.0/org/apache/kafka/connect/transforms/TimestampConverter.html#CONFIG_DEF"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.9.1/org/apache/kafka/connect/transforms/TimestampConverter.html#CONFIG_DEF"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Config.ConfigDef CONFIG_DEF { get { if (!_CONFIG_DEFReady) { _CONFIG_DEFContent = SGetField<Org.Apache.Kafka.Common.Config.ConfigDef>(LocalBridgeClazz, "CONFIG_DEF"); _CONFIG_DEFReady = true; } return _CONFIG_DEFContent; } }
         private static Org.Apache.Kafka.Common.Config.ConfigDef _CONFIG_DEFContent = default;
         private static bool _CONFIG_DEFReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.9.0/org/apache/kafka/connect/transforms/TimestampConverter.html#OPTIONAL_DATE_SCHEMA"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.9.1/org/apache/kafka/connect/transforms/TimestampConverter.html#OPTIONAL_DATE_SCHEMA"/>
         /// </summary>
         public static Org.Apache.Kafka.Connect.Data.Schema OPTIONAL_DATE_SCHEMA { get { if (!_OPTIONAL_DATE_SCHEMAReady) { _OPTIONAL_DATE_SCHEMAContent = SGetField<Org.Apache.Kafka.Connect.Data.Schema>(LocalBridgeClazz, "OPTIONAL_DATE_SCHEMA"); _OPTIONAL_DATE_SCHEMAReady = true; } return _OPTIONAL_DATE_SCHEMAContent; } }
         private static Org.Apache.Kafka.Connect.Data.Schema _OPTIONAL_DATE_SCHEMAContent = default;
         private static bool _OPTIONAL_DATE_SCHEMAReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.9.0/org/apache/kafka/connect/transforms/TimestampConverter.html#OPTIONAL_TIME_SCHEMA"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.9.1/org/apache/kafka/connect/transforms/TimestampConverter.html#OPTIONAL_TIME_SCHEMA"/>
         /// </summary>
         public static Org.Apache.Kafka.Connect.Data.Schema OPTIONAL_TIME_SCHEMA { get { if (!_OPTIONAL_TIME_SCHEMAReady) { _OPTIONAL_TIME_SCHEMAContent = SGetField<Org.Apache.Kafka.Connect.Data.Schema>(LocalBridgeClazz, "OPTIONAL_TIME_SCHEMA"); _OPTIONAL_TIME_SCHEMAReady = true; } return _OPTIONAL_TIME_SCHEMAContent; } }
         private static Org.Apache.Kafka.Connect.Data.Schema _OPTIONAL_TIME_SCHEMAContent = default;
         private static bool _OPTIONAL_TIME_SCHEMAReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.9.0/org/apache/kafka/connect/transforms/TimestampConverter.html#OPTIONAL_TIMESTAMP_SCHEMA"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.9.1/org/apache/kafka/connect/transforms/TimestampConverter.html#OPTIONAL_TIMESTAMP_SCHEMA"/>
         /// </summary>
         public static Org.Apache.Kafka.Connect.Data.Schema OPTIONAL_TIMESTAMP_SCHEMA { get { if (!_OPTIONAL_TIMESTAMP_SCHEMAReady) { _OPTIONAL_TIMESTAMP_SCHEMAContent = SGetField<Org.Apache.Kafka.Connect.Data.Schema>(LocalBridgeClazz, "OPTIONAL_TIMESTAMP_SCHEMA"); _OPTIONAL_TIMESTAMP_SCHEMAReady = true; } return _OPTIONAL_TIMESTAMP_SCHEMAContent; } }
         private static Org.Apache.Kafka.Connect.Data.Schema _OPTIONAL_TIMESTAMP_SCHEMAContent = default;
@@ -391,7 +391,7 @@ namespace Org.Apache.Kafka.Connect.Transforms
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.9.0/org/apache/kafka/connect/transforms/TimestampConverter.html#version--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.9.1/org/apache/kafka/connect/transforms/TimestampConverter.html#version--"/>
         /// </summary>
         /// <returns><see cref="Java.Lang.String"/></returns>
         public Java.Lang.String Version()
@@ -399,7 +399,7 @@ namespace Org.Apache.Kafka.Connect.Transforms
             return IExecuteWithSignature<Java.Lang.String>("version", "()Ljava/lang/String;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.9.0/org/apache/kafka/connect/transforms/TimestampConverter.html#config--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.9.1/org/apache/kafka/connect/transforms/TimestampConverter.html#config--"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.Config.ConfigDef"/></returns>
         public Org.Apache.Kafka.Common.Config.ConfigDef ConfigMethod()
@@ -407,7 +407,7 @@ namespace Org.Apache.Kafka.Connect.Transforms
             return IExecuteWithSignature<Org.Apache.Kafka.Common.Config.ConfigDef>("config", "()Lorg/apache/kafka/common/config/ConfigDef;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.9.0/org/apache/kafka/connect/transforms/TimestampConverter.html#apply-org.apache.kafka.connect.connector.ConnectRecord-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.9.1/org/apache/kafka/connect/transforms/TimestampConverter.html#apply-org.apache.kafka.connect.connector.ConnectRecord-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Connect.Connector.ConnectRecord"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Connect.Connector.ConnectRecord"/></returns>
@@ -416,14 +416,14 @@ namespace Org.Apache.Kafka.Connect.Transforms
             return IExecuteWithSignature<Org.Apache.Kafka.Connect.Connector.ConnectRecord>("apply", "(Lorg/apache/kafka/connect/connector/ConnectRecord;)Lorg/apache/kafka/connect/connector/ConnectRecord;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.9.0/org/apache/kafka/connect/transforms/TimestampConverter.html#close--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.9.1/org/apache/kafka/connect/transforms/TimestampConverter.html#close--"/>
         /// </summary>
         public void Close()
         {
             IExecuteWithSignature("close", "()V");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.9.0/org/apache/kafka/connect/transforms/TimestampConverter.html#configure-java.util.Map-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.9.1/org/apache/kafka/connect/transforms/TimestampConverter.html#configure-java.util.Map-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         public void Configure(Java.Util.Map arg0)
@@ -598,61 +598,61 @@ namespace Org.Apache.Kafka.Connect.Transforms
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.9.0/org/apache/kafka/connect/transforms/TimestampConverter.html#FIELD_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.9.1/org/apache/kafka/connect/transforms/TimestampConverter.html#FIELD_CONFIG"/>
         /// </summary>
         public static Java.Lang.String FIELD_CONFIG { get { if (!_FIELD_CONFIGReady) { _FIELD_CONFIGContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "FIELD_CONFIG"); _FIELD_CONFIGReady = true; } return _FIELD_CONFIGContent; } }
         private static Java.Lang.String _FIELD_CONFIGContent = default;
         private static bool _FIELD_CONFIGReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.9.0/org/apache/kafka/connect/transforms/TimestampConverter.html#FORMAT_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.9.1/org/apache/kafka/connect/transforms/TimestampConverter.html#FORMAT_CONFIG"/>
         /// </summary>
         public static Java.Lang.String FORMAT_CONFIG { get { if (!_FORMAT_CONFIGReady) { _FORMAT_CONFIGContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "FORMAT_CONFIG"); _FORMAT_CONFIGReady = true; } return _FORMAT_CONFIGContent; } }
         private static Java.Lang.String _FORMAT_CONFIGContent = default;
         private static bool _FORMAT_CONFIGReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.9.0/org/apache/kafka/connect/transforms/TimestampConverter.html#OVERVIEW_DOC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.9.1/org/apache/kafka/connect/transforms/TimestampConverter.html#OVERVIEW_DOC"/>
         /// </summary>
         public static Java.Lang.String OVERVIEW_DOC { get { if (!_OVERVIEW_DOCReady) { _OVERVIEW_DOCContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "OVERVIEW_DOC"); _OVERVIEW_DOCReady = true; } return _OVERVIEW_DOCContent; } }
         private static Java.Lang.String _OVERVIEW_DOCContent = default;
         private static bool _OVERVIEW_DOCReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.9.0/org/apache/kafka/connect/transforms/TimestampConverter.html#REPLACE_NULL_WITH_DEFAULT_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.9.1/org/apache/kafka/connect/transforms/TimestampConverter.html#REPLACE_NULL_WITH_DEFAULT_CONFIG"/>
         /// </summary>
         public static Java.Lang.String REPLACE_NULL_WITH_DEFAULT_CONFIG { get { if (!_REPLACE_NULL_WITH_DEFAULT_CONFIGReady) { _REPLACE_NULL_WITH_DEFAULT_CONFIGContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "REPLACE_NULL_WITH_DEFAULT_CONFIG"); _REPLACE_NULL_WITH_DEFAULT_CONFIGReady = true; } return _REPLACE_NULL_WITH_DEFAULT_CONFIGContent; } }
         private static Java.Lang.String _REPLACE_NULL_WITH_DEFAULT_CONFIGContent = default;
         private static bool _REPLACE_NULL_WITH_DEFAULT_CONFIGReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.9.0/org/apache/kafka/connect/transforms/TimestampConverter.html#TARGET_TYPE_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.9.1/org/apache/kafka/connect/transforms/TimestampConverter.html#TARGET_TYPE_CONFIG"/>
         /// </summary>
         public static Java.Lang.String TARGET_TYPE_CONFIG { get { if (!_TARGET_TYPE_CONFIGReady) { _TARGET_TYPE_CONFIGContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "TARGET_TYPE_CONFIG"); _TARGET_TYPE_CONFIGReady = true; } return _TARGET_TYPE_CONFIGContent; } }
         private static Java.Lang.String _TARGET_TYPE_CONFIGContent = default;
         private static bool _TARGET_TYPE_CONFIGReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.9.0/org/apache/kafka/connect/transforms/TimestampConverter.html#UNIX_PRECISION_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.9.1/org/apache/kafka/connect/transforms/TimestampConverter.html#UNIX_PRECISION_CONFIG"/>
         /// </summary>
         public static Java.Lang.String UNIX_PRECISION_CONFIG { get { if (!_UNIX_PRECISION_CONFIGReady) { _UNIX_PRECISION_CONFIGContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "UNIX_PRECISION_CONFIG"); _UNIX_PRECISION_CONFIGReady = true; } return _UNIX_PRECISION_CONFIGContent; } }
         private static Java.Lang.String _UNIX_PRECISION_CONFIGContent = default;
         private static bool _UNIX_PRECISION_CONFIGReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.9.0/org/apache/kafka/connect/transforms/TimestampConverter.html#CONFIG_DEF"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.9.1/org/apache/kafka/connect/transforms/TimestampConverter.html#CONFIG_DEF"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Config.ConfigDef CONFIG_DEF { get { if (!_CONFIG_DEFReady) { _CONFIG_DEFContent = SGetField<Org.Apache.Kafka.Common.Config.ConfigDef>(LocalBridgeClazz, "CONFIG_DEF"); _CONFIG_DEFReady = true; } return _CONFIG_DEFContent; } }
         private static Org.Apache.Kafka.Common.Config.ConfigDef _CONFIG_DEFContent = default;
         private static bool _CONFIG_DEFReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.9.0/org/apache/kafka/connect/transforms/TimestampConverter.html#OPTIONAL_DATE_SCHEMA"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.9.1/org/apache/kafka/connect/transforms/TimestampConverter.html#OPTIONAL_DATE_SCHEMA"/>
         /// </summary>
         public static Org.Apache.Kafka.Connect.Data.Schema OPTIONAL_DATE_SCHEMA { get { if (!_OPTIONAL_DATE_SCHEMAReady) { _OPTIONAL_DATE_SCHEMAContent = SGetField<Org.Apache.Kafka.Connect.Data.Schema>(LocalBridgeClazz, "OPTIONAL_DATE_SCHEMA"); _OPTIONAL_DATE_SCHEMAReady = true; } return _OPTIONAL_DATE_SCHEMAContent; } }
         private static Org.Apache.Kafka.Connect.Data.Schema _OPTIONAL_DATE_SCHEMAContent = default;
         private static bool _OPTIONAL_DATE_SCHEMAReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.9.0/org/apache/kafka/connect/transforms/TimestampConverter.html#OPTIONAL_TIME_SCHEMA"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.9.1/org/apache/kafka/connect/transforms/TimestampConverter.html#OPTIONAL_TIME_SCHEMA"/>
         /// </summary>
         public static Org.Apache.Kafka.Connect.Data.Schema OPTIONAL_TIME_SCHEMA { get { if (!_OPTIONAL_TIME_SCHEMAReady) { _OPTIONAL_TIME_SCHEMAContent = SGetField<Org.Apache.Kafka.Connect.Data.Schema>(LocalBridgeClazz, "OPTIONAL_TIME_SCHEMA"); _OPTIONAL_TIME_SCHEMAReady = true; } return _OPTIONAL_TIME_SCHEMAContent; } }
         private static Org.Apache.Kafka.Connect.Data.Schema _OPTIONAL_TIME_SCHEMAContent = default;
         private static bool _OPTIONAL_TIME_SCHEMAReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.9.0/org/apache/kafka/connect/transforms/TimestampConverter.html#OPTIONAL_TIMESTAMP_SCHEMA"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.9.1/org/apache/kafka/connect/transforms/TimestampConverter.html#OPTIONAL_TIMESTAMP_SCHEMA"/>
         /// </summary>
         public static Org.Apache.Kafka.Connect.Data.Schema OPTIONAL_TIMESTAMP_SCHEMA { get { if (!_OPTIONAL_TIMESTAMP_SCHEMAReady) { _OPTIONAL_TIMESTAMP_SCHEMAContent = SGetField<Org.Apache.Kafka.Connect.Data.Schema>(LocalBridgeClazz, "OPTIONAL_TIMESTAMP_SCHEMA"); _OPTIONAL_TIMESTAMP_SCHEMAReady = true; } return _OPTIONAL_TIMESTAMP_SCHEMAContent; } }
         private static Org.Apache.Kafka.Connect.Data.Schema _OPTIONAL_TIMESTAMP_SCHEMAContent = default;
@@ -666,7 +666,7 @@ namespace Org.Apache.Kafka.Connect.Transforms
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.9.0/org/apache/kafka/connect/transforms/TimestampConverter.html#version--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.9.1/org/apache/kafka/connect/transforms/TimestampConverter.html#version--"/>
         /// </summary>
         /// <returns><see cref="Java.Lang.String"/></returns>
         public Java.Lang.String Version()
@@ -674,7 +674,7 @@ namespace Org.Apache.Kafka.Connect.Transforms
             return IExecuteWithSignature<Java.Lang.String>("version", "()Ljava/lang/String;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.9.0/org/apache/kafka/connect/transforms/TimestampConverter.html#config--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.9.1/org/apache/kafka/connect/transforms/TimestampConverter.html#config--"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.Config.ConfigDef"/></returns>
         public Org.Apache.Kafka.Common.Config.ConfigDef ConfigMethod()
@@ -682,7 +682,7 @@ namespace Org.Apache.Kafka.Connect.Transforms
             return IExecuteWithSignature<Org.Apache.Kafka.Common.Config.ConfigDef>("config", "()Lorg/apache/kafka/common/config/ConfigDef;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.9.0/org/apache/kafka/connect/transforms/TimestampConverter.html#apply-org.apache.kafka.connect.connector.ConnectRecord-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.9.1/org/apache/kafka/connect/transforms/TimestampConverter.html#apply-org.apache.kafka.connect.connector.ConnectRecord-"/>
         /// </summary>
         /// <param name="arg0"><typeparamref name="R"/></param>
         /// <returns><typeparamref name="R"/></returns>
@@ -691,14 +691,14 @@ namespace Org.Apache.Kafka.Connect.Transforms
             return IExecuteWithSignature<R>("apply", "(Lorg/apache/kafka/connect/connector/ConnectRecord;)Lorg/apache/kafka/connect/connector/ConnectRecord;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.9.0/org/apache/kafka/connect/transforms/TimestampConverter.html#close--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.9.1/org/apache/kafka/connect/transforms/TimestampConverter.html#close--"/>
         /// </summary>
         public void Close()
         {
             IExecuteWithSignature("close", "()V");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.9.0/org/apache/kafka/connect/transforms/TimestampConverter.html#configure-java.util.Map-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.9.1/org/apache/kafka/connect/transforms/TimestampConverter.html#configure-java.util.Map-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         public void Configure(Java.Util.Map<Java.Lang.String, object> arg0)

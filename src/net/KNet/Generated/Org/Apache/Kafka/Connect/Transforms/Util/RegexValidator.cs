@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Connect.Transforms.Util
 {
     #region RegexValidator declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.9.0/org/apache/kafka/connect/transforms/util/RegexValidator.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.9.1/org/apache/kafka/connect/transforms/util/RegexValidator.html"/>
     /// </summary>
     public partial class RegexValidator : Org.Apache.Kafka.Common.Config.ConfigDef.Validator
     {
@@ -91,7 +91,7 @@ namespace Org.Apache.Kafka.Connect.Transforms.Util
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.9.0/org/apache/kafka/connect/transforms/util/RegexValidator.html#ensureValid-java.lang.String-java.lang.Object-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.9.1/org/apache/kafka/connect/transforms/util/RegexValidator.html#ensureValid-java.lang.String-java.lang.Object-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="object"/></param>

@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common.Errors
 {
     #region RebalanceInProgressException declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/errors/RebalanceInProgressException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/errors/RebalanceInProgressException.html"/>
     /// </summary>
     public partial class RebalanceInProgressException : Org.Apache.Kafka.Common.Errors.ApiException
     {

@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Streams.State
 {
     #region VersionedKeyValueStore declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.0/org/apache/kafka/streams/state/VersionedKeyValueStore.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/state/VersionedKeyValueStore.html"/>
     /// </summary>
     public partial class VersionedKeyValueStore : Org.Apache.Kafka.Streams.Processor.StateStore
     {
@@ -74,7 +74,7 @@ namespace Org.Apache.Kafka.Streams.State
 
     #region VersionedKeyValueStore<K, V> declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.0/org/apache/kafka/streams/state/VersionedKeyValueStore.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/state/VersionedKeyValueStore.html"/>
     /// </summary>
     /// <typeparam name="K"></typeparam>
     /// <typeparam name="V"></typeparam>
@@ -134,13 +134,13 @@ namespace Org.Apache.Kafka.Streams.State
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.0/org/apache/kafka/streams/state/VersionedKeyValueStore.html#PUT_RETURN_CODE_NOT_PUT"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/state/VersionedKeyValueStore.html#PUT_RETURN_CODE_NOT_PUT"/>
         /// </summary>
         public static long PUT_RETURN_CODE_NOT_PUT { get { if (!_PUT_RETURN_CODE_NOT_PUTReady) { _PUT_RETURN_CODE_NOT_PUTContent = SGetField<long>(LocalBridgeClazz, "PUT_RETURN_CODE_NOT_PUT"); _PUT_RETURN_CODE_NOT_PUTReady = true; } return _PUT_RETURN_CODE_NOT_PUTContent; } }
         private static long _PUT_RETURN_CODE_NOT_PUTContent = default;
         private static bool _PUT_RETURN_CODE_NOT_PUTReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.0/org/apache/kafka/streams/state/VersionedKeyValueStore.html#PUT_RETURN_CODE_VALID_TO_UNDEFINED"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/state/VersionedKeyValueStore.html#PUT_RETURN_CODE_VALID_TO_UNDEFINED"/>
         /// </summary>
         public static long PUT_RETURN_CODE_VALID_TO_UNDEFINED { get { if (!_PUT_RETURN_CODE_VALID_TO_UNDEFINEDReady) { _PUT_RETURN_CODE_VALID_TO_UNDEFINEDContent = SGetField<long>(LocalBridgeClazz, "PUT_RETURN_CODE_VALID_TO_UNDEFINED"); _PUT_RETURN_CODE_VALID_TO_UNDEFINEDReady = true; } return _PUT_RETURN_CODE_VALID_TO_UNDEFINEDContent; } }
         private static long _PUT_RETURN_CODE_VALID_TO_UNDEFINEDContent = default;
@@ -154,7 +154,7 @@ namespace Org.Apache.Kafka.Streams.State
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.0/org/apache/kafka/streams/state/VersionedKeyValueStore.html#put-java.lang.Object-java.lang.Object-long-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/state/VersionedKeyValueStore.html#put-java.lang.Object-java.lang.Object-long-"/>
         /// </summary>
         /// <param name="arg0"><see cref="object"/></param>
         /// <param name="arg1"><see cref="object"/></param>
@@ -165,7 +165,7 @@ namespace Org.Apache.Kafka.Streams.State
             return IExecuteWithSignature<long>("put", "(Ljava/lang/Object;Ljava/lang/Object;J)J", arg0, arg1, arg2);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.0/org/apache/kafka/streams/state/VersionedKeyValueStore.html#delete-java.lang.Object-long-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/state/VersionedKeyValueStore.html#delete-java.lang.Object-long-"/>
         /// </summary>
         /// <param name="arg0"><see cref="object"/></param>
         /// <param name="arg1"><see cref="long"/></param>
@@ -175,7 +175,7 @@ namespace Org.Apache.Kafka.Streams.State
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.State.VersionedRecord>("delete", "(Ljava/lang/Object;J)Lorg/apache/kafka/streams/state/VersionedRecord;", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.0/org/apache/kafka/streams/state/VersionedKeyValueStore.html#get-java.lang.Object-long-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/state/VersionedKeyValueStore.html#get-java.lang.Object-long-"/>
         /// </summary>
         /// <param name="arg0"><see cref="object"/></param>
         /// <param name="arg1"><see cref="long"/></param>
@@ -185,7 +185,7 @@ namespace Org.Apache.Kafka.Streams.State
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.State.VersionedRecord>("get", "(Ljava/lang/Object;J)Lorg/apache/kafka/streams/state/VersionedRecord;", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.0/org/apache/kafka/streams/state/VersionedKeyValueStore.html#get-java.lang.Object-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/state/VersionedKeyValueStore.html#get-java.lang.Object-"/>
         /// </summary>
         /// <param name="arg0"><see cref="object"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.State.VersionedRecord"/></returns>
@@ -239,13 +239,13 @@ namespace Org.Apache.Kafka.Streams.State
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.0/org/apache/kafka/streams/state/VersionedKeyValueStore.html#PUT_RETURN_CODE_NOT_PUT"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/state/VersionedKeyValueStore.html#PUT_RETURN_CODE_NOT_PUT"/>
         /// </summary>
         public static long PUT_RETURN_CODE_NOT_PUT { get { if (!_PUT_RETURN_CODE_NOT_PUTReady) { _PUT_RETURN_CODE_NOT_PUTContent = SGetField<long>(LocalBridgeClazz, "PUT_RETURN_CODE_NOT_PUT"); _PUT_RETURN_CODE_NOT_PUTReady = true; } return _PUT_RETURN_CODE_NOT_PUTContent; } }
         private static long _PUT_RETURN_CODE_NOT_PUTContent = default;
         private static bool _PUT_RETURN_CODE_NOT_PUTReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.0/org/apache/kafka/streams/state/VersionedKeyValueStore.html#PUT_RETURN_CODE_VALID_TO_UNDEFINED"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/state/VersionedKeyValueStore.html#PUT_RETURN_CODE_VALID_TO_UNDEFINED"/>
         /// </summary>
         public static long PUT_RETURN_CODE_VALID_TO_UNDEFINED { get { if (!_PUT_RETURN_CODE_VALID_TO_UNDEFINEDReady) { _PUT_RETURN_CODE_VALID_TO_UNDEFINEDContent = SGetField<long>(LocalBridgeClazz, "PUT_RETURN_CODE_VALID_TO_UNDEFINED"); _PUT_RETURN_CODE_VALID_TO_UNDEFINEDReady = true; } return _PUT_RETURN_CODE_VALID_TO_UNDEFINEDContent; } }
         private static long _PUT_RETURN_CODE_VALID_TO_UNDEFINEDContent = default;
@@ -259,7 +259,7 @@ namespace Org.Apache.Kafka.Streams.State
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.0/org/apache/kafka/streams/state/VersionedKeyValueStore.html#put-java.lang.Object-java.lang.Object-long-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/state/VersionedKeyValueStore.html#put-java.lang.Object-java.lang.Object-long-"/>
         /// </summary>
         /// <param name="arg0"><typeparamref name="K"/></param>
         /// <param name="arg1"><typeparamref name="V"/></param>
@@ -270,7 +270,7 @@ namespace Org.Apache.Kafka.Streams.State
             return IExecuteWithSignature<long>("put", "(Ljava/lang/Object;Ljava/lang/Object;J)J", arg0, arg1, arg2);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.0/org/apache/kafka/streams/state/VersionedKeyValueStore.html#delete-java.lang.Object-long-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/state/VersionedKeyValueStore.html#delete-java.lang.Object-long-"/>
         /// </summary>
         /// <param name="arg0"><typeparamref name="K"/></param>
         /// <param name="arg1"><see cref="long"/></param>
@@ -280,7 +280,7 @@ namespace Org.Apache.Kafka.Streams.State
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.State.VersionedRecord<V>>("delete", "(Ljava/lang/Object;J)Lorg/apache/kafka/streams/state/VersionedRecord;", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.0/org/apache/kafka/streams/state/VersionedKeyValueStore.html#get-java.lang.Object-long-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/state/VersionedKeyValueStore.html#get-java.lang.Object-long-"/>
         /// </summary>
         /// <param name="arg0"><typeparamref name="K"/></param>
         /// <param name="arg1"><see cref="long"/></param>
@@ -290,7 +290,7 @@ namespace Org.Apache.Kafka.Streams.State
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.State.VersionedRecord<V>>("get", "(Ljava/lang/Object;J)Lorg/apache/kafka/streams/state/VersionedRecord;", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.0/org/apache/kafka/streams/state/VersionedKeyValueStore.html#get-java.lang.Object-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/state/VersionedKeyValueStore.html#get-java.lang.Object-"/>
         /// </summary>
         /// <param name="arg0"><typeparamref name="K"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.State.VersionedRecord"/></returns>

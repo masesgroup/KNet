@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Streams.State
 {
     #region TimestampedKeyValueStore declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.0/org/apache/kafka/streams/state/TimestampedKeyValueStore.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/state/TimestampedKeyValueStore.html"/>
     /// </summary>
     public partial class TimestampedKeyValueStore : Org.Apache.Kafka.Streams.State.KeyValueStore
     {
@@ -74,7 +74,7 @@ namespace Org.Apache.Kafka.Streams.State
 
     #region TimestampedKeyValueStore<K, V> declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.0/org/apache/kafka/streams/state/TimestampedKeyValueStore.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/state/TimestampedKeyValueStore.html"/>
     /// </summary>
     /// <typeparam name="K"></typeparam>
     /// <typeparam name="V"></typeparam>

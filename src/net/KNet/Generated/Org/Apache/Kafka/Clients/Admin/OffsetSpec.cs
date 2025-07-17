@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 {
     #region OffsetSpec declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/admin/OffsetSpec.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/admin/OffsetSpec.html"/>
     /// </summary>
     public partial class OffsetSpec : MASES.JCOBridge.C2JBridge.JVMBridgeBase<OffsetSpec>
     {
@@ -68,7 +68,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         // TODO: complete the class
         #region EarliestLocalSpec declaration
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/admin/OffsetSpec.EarliestLocalSpec.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/admin/OffsetSpec.EarliestLocalSpec.html"/>
         /// </summary>
         public partial class EarliestLocalSpec : Org.Apache.Kafka.Clients.Admin.OffsetSpec
         {
@@ -113,7 +113,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
         #region EarliestSpec declaration
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/admin/OffsetSpec.EarliestSpec.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/admin/OffsetSpec.EarliestSpec.html"/>
         /// </summary>
         public partial class EarliestSpec : Org.Apache.Kafka.Clients.Admin.OffsetSpec
         {
@@ -158,7 +158,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
         #region LatestSpec declaration
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/admin/OffsetSpec.LatestSpec.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/admin/OffsetSpec.LatestSpec.html"/>
         /// </summary>
         public partial class LatestSpec : Org.Apache.Kafka.Clients.Admin.OffsetSpec
         {
@@ -203,7 +203,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
         #region LatestTieredSpec declaration
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/admin/OffsetSpec.LatestTieredSpec.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/admin/OffsetSpec.LatestTieredSpec.html"/>
         /// </summary>
         public partial class LatestTieredSpec : Org.Apache.Kafka.Clients.Admin.OffsetSpec
         {
@@ -248,7 +248,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
         #region MaxTimestampSpec declaration
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/admin/OffsetSpec.MaxTimestampSpec.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/admin/OffsetSpec.MaxTimestampSpec.html"/>
         /// </summary>
         public partial class MaxTimestampSpec : Org.Apache.Kafka.Clients.Admin.OffsetSpec
         {
@@ -293,7 +293,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
         #region TimestampSpec declaration
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/admin/OffsetSpec.TimestampSpec.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/admin/OffsetSpec.TimestampSpec.html"/>
         /// </summary>
         public partial class TimestampSpec : Org.Apache.Kafka.Clients.Admin.OffsetSpec
         {
@@ -357,7 +357,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/admin/OffsetSpec.html#earliest--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/admin/OffsetSpec.html#earliest--"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.OffsetSpec"/></returns>
         public static Org.Apache.Kafka.Clients.Admin.OffsetSpec Earliest()
@@ -365,7 +365,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return SExecuteWithSignature<Org.Apache.Kafka.Clients.Admin.OffsetSpec>(LocalBridgeClazz, "earliest", "()Lorg/apache/kafka/clients/admin/OffsetSpec;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/admin/OffsetSpec.html#earliestLocal--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/admin/OffsetSpec.html#earliestLocal--"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.OffsetSpec"/></returns>
         public static Org.Apache.Kafka.Clients.Admin.OffsetSpec EarliestLocal()
@@ -373,7 +373,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return SExecuteWithSignature<Org.Apache.Kafka.Clients.Admin.OffsetSpec>(LocalBridgeClazz, "earliestLocal", "()Lorg/apache/kafka/clients/admin/OffsetSpec;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/admin/OffsetSpec.html#forTimestamp-long-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/admin/OffsetSpec.html#forTimestamp-long-"/>
         /// </summary>
         /// <param name="arg0"><see cref="long"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.OffsetSpec"/></returns>
@@ -382,7 +382,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return SExecuteWithSignature<Org.Apache.Kafka.Clients.Admin.OffsetSpec>(LocalBridgeClazz, "forTimestamp", "(J)Lorg/apache/kafka/clients/admin/OffsetSpec;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/admin/OffsetSpec.html#latest--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/admin/OffsetSpec.html#latest--"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.OffsetSpec"/></returns>
         public static Org.Apache.Kafka.Clients.Admin.OffsetSpec Latest()
@@ -390,7 +390,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return SExecuteWithSignature<Org.Apache.Kafka.Clients.Admin.OffsetSpec>(LocalBridgeClazz, "latest", "()Lorg/apache/kafka/clients/admin/OffsetSpec;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/admin/OffsetSpec.html#latestTiered--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/admin/OffsetSpec.html#latestTiered--"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.OffsetSpec"/></returns>
         public static Org.Apache.Kafka.Clients.Admin.OffsetSpec LatestTiered()
@@ -398,7 +398,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return SExecuteWithSignature<Org.Apache.Kafka.Clients.Admin.OffsetSpec>(LocalBridgeClazz, "latestTiered", "()Lorg/apache/kafka/clients/admin/OffsetSpec;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/admin/OffsetSpec.html#maxTimestamp--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/admin/OffsetSpec.html#maxTimestamp--"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.OffsetSpec"/></returns>
         public static Org.Apache.Kafka.Clients.Admin.OffsetSpec MaxTimestamp()
