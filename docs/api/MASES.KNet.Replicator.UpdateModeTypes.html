@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Replicator_UpdateModeTypes.md&amp;value=---%0Auid%3A%20MASES.KNet.Replicator.UpdateModeTypes%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="docfx:docurl" content="https://github.com/masesgroup/KNet/new/release/2.9.X/apiSpec/new?filename=MASES_KNet_Replicator_UpdateModeTypes.md&amp;value=---%0Auid%3A%20MASES.KNet.Replicator.UpdateModeTypes%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -90,7 +90,7 @@
 
 
   <h1 id="MASES_KNet_Replicator_UpdateModeTypes" data-uid="MASES.KNet.Replicator.UpdateModeTypes" class="text-break">
-Enum UpdateModeTypes  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Replicator/KNetCompactedReplicator.cs/#L64"><i class="bi bi-code-slash"></i></a>
+Enum UpdateModeTypes  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Replicator/KNetCompactedReplicator.cs/#L64"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -119,16 +119,20 @@ public enum UpdateModeTypes</code></pre>
 </h2>
   <dl class="parameters">
     <dt id="MASES_KNet_Replicator_UpdateModeTypes_Delayed"><code>Delayed = 4096</code></dt>
-    <dd><p>The value is stored in <a class="xref" href="MASES.KNet.Replicator.KNetCompactedReplicator-2.html">KNetCompactedReplicator&lt;K, V&gt;</a> only upon a request, otherwise only the key is stored</p>
+  
+  <dd><p>The value is stored in <a class="xref" href="MASES.KNet.Replicator.KNetCompactedReplicator-2.html">KNetCompactedReplicator&lt;K, V&gt;</a> only upon a request, otherwise only the key is stored</p>
 </dd>
     <dt id="MASES_KNet_Replicator_UpdateModeTypes_OnConsume"><code>OnConsume = 2</code></dt>
-    <dd><p>The <a class="xref" href="MASES.KNet.Replicator.KNetCompactedReplicator-2.html">KNetCompactedReplicator&lt;K, V&gt;</a> is updated only after an update is consumed from Kafka, even if the add or update is made locally by the current instance</p>
+  
+  <dd><p>The <a class="xref" href="MASES.KNet.Replicator.KNetCompactedReplicator-2.html">KNetCompactedReplicator&lt;K, V&gt;</a> is updated only after an update is consumed from Kafka, even if the add or update is made locally by the current instance</p>
 </dd>
     <dt id="MASES_KNet_Replicator_UpdateModeTypes_OnConsumeSync"><code>OnConsumeSync = OnDelivery | OnConsume</code></dt>
-    <dd><p>The <a class="xref" href="MASES.KNet.Replicator.KNetCompactedReplicator-2.html">KNetCompactedReplicator&lt;K, V&gt;</a> is updated only after an update is consumed from Kafka, even if the add or update is made locally by the current instance. Plus the update waits the consume of the data before unlock</p>
+  
+  <dd><p>The <a class="xref" href="MASES.KNet.Replicator.KNetCompactedReplicator-2.html">KNetCompactedReplicator&lt;K, V&gt;</a> is updated only after an update is consumed from Kafka, even if the add or update is made locally by the current instance. Plus the update waits the consume of the data before unlock</p>
 </dd>
     <dt id="MASES_KNet_Replicator_UpdateModeTypes_OnDelivery"><code>OnDelivery = 1</code></dt>
-    <dd><p>The <a class="xref" href="MASES.KNet.Replicator.KNetCompactedReplicator-2.html">KNetCompactedReplicator&lt;K, V&gt;</a> is updated as soon as an update is delivered to Kafka by the current application</p>
+  
+  <dd><p>The <a class="xref" href="MASES.KNet.Replicator.KNetCompactedReplicator-2.html">KNetCompactedReplicator&lt;K, V&gt;</a> is updated as soon as an update is delivered to Kafka by the current application</p>
 </dd>
   </dl>
 
@@ -137,7 +141,7 @@ public enum UpdateModeTypes</code></pre>
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Replicator/KNetCompactedReplicator.cs/#L64" class="edit-link">Edit this page</a>
+          <a href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Replicator/KNetCompactedReplicator.cs/#L64" class="edit-link">Edit this page</a>
         </div>
 
 
