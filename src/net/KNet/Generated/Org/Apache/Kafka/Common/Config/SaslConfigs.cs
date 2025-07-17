@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common.Config
 {
     #region SaslConfigs declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/config/SaslConfigs.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/config/SaslConfigs.html"/>
     /// </summary>
     public partial class SaslConfigs : MASES.JCOBridge.C2JBridge.JVMBridgeBase<SaslConfigs>
     {
@@ -83,463 +83,463 @@ namespace Org.Apache.Kafka.Common.Config
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/config/SaslConfigs.html#DEFAULT_SASL_OAUTHBEARER_HEADER_URLENCODE"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/config/SaslConfigs.html#DEFAULT_SASL_OAUTHBEARER_HEADER_URLENCODE"/>
         /// </summary>
         public static bool DEFAULT_SASL_OAUTHBEARER_HEADER_URLENCODE { get { if (!_DEFAULT_SASL_OAUTHBEARER_HEADER_URLENCODEReady) { _DEFAULT_SASL_OAUTHBEARER_HEADER_URLENCODEContent = SGetField<bool>(LocalBridgeClazz, "DEFAULT_SASL_OAUTHBEARER_HEADER_URLENCODE"); _DEFAULT_SASL_OAUTHBEARER_HEADER_URLENCODEReady = true; } return _DEFAULT_SASL_OAUTHBEARER_HEADER_URLENCODEContent; } }
         private static bool _DEFAULT_SASL_OAUTHBEARER_HEADER_URLENCODEContent = default;
         private static bool _DEFAULT_SASL_OAUTHBEARER_HEADER_URLENCODEReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/config/SaslConfigs.html#DEFAULT_KERBEROS_TICKET_RENEW_JITTER"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/config/SaslConfigs.html#DEFAULT_KERBEROS_TICKET_RENEW_JITTER"/>
         /// </summary>
         public static double DEFAULT_KERBEROS_TICKET_RENEW_JITTER { get { if (!_DEFAULT_KERBEROS_TICKET_RENEW_JITTERReady) { _DEFAULT_KERBEROS_TICKET_RENEW_JITTERContent = SGetField<double>(LocalBridgeClazz, "DEFAULT_KERBEROS_TICKET_RENEW_JITTER"); _DEFAULT_KERBEROS_TICKET_RENEW_JITTERReady = true; } return _DEFAULT_KERBEROS_TICKET_RENEW_JITTERContent; } }
         private static double _DEFAULT_KERBEROS_TICKET_RENEW_JITTERContent = default;
         private static bool _DEFAULT_KERBEROS_TICKET_RENEW_JITTERReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/config/SaslConfigs.html#DEFAULT_KERBEROS_TICKET_RENEW_WINDOW_FACTOR"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/config/SaslConfigs.html#DEFAULT_KERBEROS_TICKET_RENEW_WINDOW_FACTOR"/>
         /// </summary>
         public static double DEFAULT_KERBEROS_TICKET_RENEW_WINDOW_FACTOR { get { if (!_DEFAULT_KERBEROS_TICKET_RENEW_WINDOW_FACTORReady) { _DEFAULT_KERBEROS_TICKET_RENEW_WINDOW_FACTORContent = SGetField<double>(LocalBridgeClazz, "DEFAULT_KERBEROS_TICKET_RENEW_WINDOW_FACTOR"); _DEFAULT_KERBEROS_TICKET_RENEW_WINDOW_FACTORReady = true; } return _DEFAULT_KERBEROS_TICKET_RENEW_WINDOW_FACTORContent; } }
         private static double _DEFAULT_KERBEROS_TICKET_RENEW_WINDOW_FACTORContent = default;
         private static bool _DEFAULT_KERBEROS_TICKET_RENEW_WINDOW_FACTORReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/config/SaslConfigs.html#DEFAULT_LOGIN_REFRESH_WINDOW_FACTOR"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/config/SaslConfigs.html#DEFAULT_LOGIN_REFRESH_WINDOW_FACTOR"/>
         /// </summary>
         public static double DEFAULT_LOGIN_REFRESH_WINDOW_FACTOR { get { if (!_DEFAULT_LOGIN_REFRESH_WINDOW_FACTORReady) { _DEFAULT_LOGIN_REFRESH_WINDOW_FACTORContent = SGetField<double>(LocalBridgeClazz, "DEFAULT_LOGIN_REFRESH_WINDOW_FACTOR"); _DEFAULT_LOGIN_REFRESH_WINDOW_FACTORReady = true; } return _DEFAULT_LOGIN_REFRESH_WINDOW_FACTORContent; } }
         private static double _DEFAULT_LOGIN_REFRESH_WINDOW_FACTORContent = default;
         private static bool _DEFAULT_LOGIN_REFRESH_WINDOW_FACTORReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/config/SaslConfigs.html#DEFAULT_LOGIN_REFRESH_WINDOW_JITTER"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/config/SaslConfigs.html#DEFAULT_LOGIN_REFRESH_WINDOW_JITTER"/>
         /// </summary>
         public static double DEFAULT_LOGIN_REFRESH_WINDOW_JITTER { get { if (!_DEFAULT_LOGIN_REFRESH_WINDOW_JITTERReady) { _DEFAULT_LOGIN_REFRESH_WINDOW_JITTERContent = SGetField<double>(LocalBridgeClazz, "DEFAULT_LOGIN_REFRESH_WINDOW_JITTER"); _DEFAULT_LOGIN_REFRESH_WINDOW_JITTERReady = true; } return _DEFAULT_LOGIN_REFRESH_WINDOW_JITTERContent; } }
         private static double _DEFAULT_LOGIN_REFRESH_WINDOW_JITTERContent = default;
         private static bool _DEFAULT_LOGIN_REFRESH_WINDOW_JITTERReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/config/SaslConfigs.html#DEFAULT_SASL_OAUTHBEARER_CLOCK_SKEW_SECONDS"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/config/SaslConfigs.html#DEFAULT_SASL_OAUTHBEARER_CLOCK_SKEW_SECONDS"/>
         /// </summary>
         public static int DEFAULT_SASL_OAUTHBEARER_CLOCK_SKEW_SECONDS { get { if (!_DEFAULT_SASL_OAUTHBEARER_CLOCK_SKEW_SECONDSReady) { _DEFAULT_SASL_OAUTHBEARER_CLOCK_SKEW_SECONDSContent = SGetField<int>(LocalBridgeClazz, "DEFAULT_SASL_OAUTHBEARER_CLOCK_SKEW_SECONDS"); _DEFAULT_SASL_OAUTHBEARER_CLOCK_SKEW_SECONDSReady = true; } return _DEFAULT_SASL_OAUTHBEARER_CLOCK_SKEW_SECONDSContent; } }
         private static int _DEFAULT_SASL_OAUTHBEARER_CLOCK_SKEW_SECONDSContent = default;
         private static bool _DEFAULT_SASL_OAUTHBEARER_CLOCK_SKEW_SECONDSReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/config/SaslConfigs.html#DEFAULT_KERBEROS_KINIT_CMD"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/config/SaslConfigs.html#DEFAULT_KERBEROS_KINIT_CMD"/>
         /// </summary>
         public static Java.Lang.String DEFAULT_KERBEROS_KINIT_CMD { get { if (!_DEFAULT_KERBEROS_KINIT_CMDReady) { _DEFAULT_KERBEROS_KINIT_CMDContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "DEFAULT_KERBEROS_KINIT_CMD"); _DEFAULT_KERBEROS_KINIT_CMDReady = true; } return _DEFAULT_KERBEROS_KINIT_CMDContent; } }
         private static Java.Lang.String _DEFAULT_KERBEROS_KINIT_CMDContent = default;
         private static bool _DEFAULT_KERBEROS_KINIT_CMDReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/config/SaslConfigs.html#DEFAULT_SASL_MECHANISM"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/config/SaslConfigs.html#DEFAULT_SASL_MECHANISM"/>
         /// </summary>
         public static Java.Lang.String DEFAULT_SASL_MECHANISM { get { if (!_DEFAULT_SASL_MECHANISMReady) { _DEFAULT_SASL_MECHANISMContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "DEFAULT_SASL_MECHANISM"); _DEFAULT_SASL_MECHANISMReady = true; } return _DEFAULT_SASL_MECHANISMContent; } }
         private static Java.Lang.String _DEFAULT_SASL_MECHANISMContent = default;
         private static bool _DEFAULT_SASL_MECHANISMReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/config/SaslConfigs.html#DEFAULT_SASL_OAUTHBEARER_SCOPE_CLAIM_NAME"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/config/SaslConfigs.html#DEFAULT_SASL_OAUTHBEARER_SCOPE_CLAIM_NAME"/>
         /// </summary>
         public static Java.Lang.String DEFAULT_SASL_OAUTHBEARER_SCOPE_CLAIM_NAME { get { if (!_DEFAULT_SASL_OAUTHBEARER_SCOPE_CLAIM_NAMEReady) { _DEFAULT_SASL_OAUTHBEARER_SCOPE_CLAIM_NAMEContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "DEFAULT_SASL_OAUTHBEARER_SCOPE_CLAIM_NAME"); _DEFAULT_SASL_OAUTHBEARER_SCOPE_CLAIM_NAMEReady = true; } return _DEFAULT_SASL_OAUTHBEARER_SCOPE_CLAIM_NAMEContent; } }
         private static Java.Lang.String _DEFAULT_SASL_OAUTHBEARER_SCOPE_CLAIM_NAMEContent = default;
         private static bool _DEFAULT_SASL_OAUTHBEARER_SCOPE_CLAIM_NAMEReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/config/SaslConfigs.html#DEFAULT_SASL_OAUTHBEARER_SUB_CLAIM_NAME"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/config/SaslConfigs.html#DEFAULT_SASL_OAUTHBEARER_SUB_CLAIM_NAME"/>
         /// </summary>
         public static Java.Lang.String DEFAULT_SASL_OAUTHBEARER_SUB_CLAIM_NAME { get { if (!_DEFAULT_SASL_OAUTHBEARER_SUB_CLAIM_NAMEReady) { _DEFAULT_SASL_OAUTHBEARER_SUB_CLAIM_NAMEContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "DEFAULT_SASL_OAUTHBEARER_SUB_CLAIM_NAME"); _DEFAULT_SASL_OAUTHBEARER_SUB_CLAIM_NAMEReady = true; } return _DEFAULT_SASL_OAUTHBEARER_SUB_CLAIM_NAMEContent; } }
         private static Java.Lang.String _DEFAULT_SASL_OAUTHBEARER_SUB_CLAIM_NAMEContent = default;
         private static bool _DEFAULT_SASL_OAUTHBEARER_SUB_CLAIM_NAMEReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/config/SaslConfigs.html#GSSAPI_MECHANISM"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/config/SaslConfigs.html#GSSAPI_MECHANISM"/>
         /// </summary>
         public static Java.Lang.String GSSAPI_MECHANISM { get { if (!_GSSAPI_MECHANISMReady) { _GSSAPI_MECHANISMContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "GSSAPI_MECHANISM"); _GSSAPI_MECHANISMReady = true; } return _GSSAPI_MECHANISMContent; } }
         private static Java.Lang.String _GSSAPI_MECHANISMContent = default;
         private static bool _GSSAPI_MECHANISMReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_CLIENT_CALLBACK_HANDLER_CLASS"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/config/SaslConfigs.html#SASL_CLIENT_CALLBACK_HANDLER_CLASS"/>
         /// </summary>
         public static Java.Lang.String SASL_CLIENT_CALLBACK_HANDLER_CLASS { get { if (!_SASL_CLIENT_CALLBACK_HANDLER_CLASSReady) { _SASL_CLIENT_CALLBACK_HANDLER_CLASSContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "SASL_CLIENT_CALLBACK_HANDLER_CLASS"); _SASL_CLIENT_CALLBACK_HANDLER_CLASSReady = true; } return _SASL_CLIENT_CALLBACK_HANDLER_CLASSContent; } }
         private static Java.Lang.String _SASL_CLIENT_CALLBACK_HANDLER_CLASSContent = default;
         private static bool _SASL_CLIENT_CALLBACK_HANDLER_CLASSReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_CLIENT_CALLBACK_HANDLER_CLASS_DOC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/config/SaslConfigs.html#SASL_CLIENT_CALLBACK_HANDLER_CLASS_DOC"/>
         /// </summary>
         public static Java.Lang.String SASL_CLIENT_CALLBACK_HANDLER_CLASS_DOC { get { if (!_SASL_CLIENT_CALLBACK_HANDLER_CLASS_DOCReady) { _SASL_CLIENT_CALLBACK_HANDLER_CLASS_DOCContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "SASL_CLIENT_CALLBACK_HANDLER_CLASS_DOC"); _SASL_CLIENT_CALLBACK_HANDLER_CLASS_DOCReady = true; } return _SASL_CLIENT_CALLBACK_HANDLER_CLASS_DOCContent; } }
         private static Java.Lang.String _SASL_CLIENT_CALLBACK_HANDLER_CLASS_DOCContent = default;
         private static bool _SASL_CLIENT_CALLBACK_HANDLER_CLASS_DOCReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_JAAS_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/config/SaslConfigs.html#SASL_JAAS_CONFIG"/>
         /// </summary>
         public static Java.Lang.String SASL_JAAS_CONFIG { get { if (!_SASL_JAAS_CONFIGReady) { _SASL_JAAS_CONFIGContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "SASL_JAAS_CONFIG"); _SASL_JAAS_CONFIGReady = true; } return _SASL_JAAS_CONFIGContent; } }
         private static Java.Lang.String _SASL_JAAS_CONFIGContent = default;
         private static bool _SASL_JAAS_CONFIGReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_JAAS_CONFIG_DOC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/config/SaslConfigs.html#SASL_JAAS_CONFIG_DOC"/>
         /// </summary>
         public static Java.Lang.String SASL_JAAS_CONFIG_DOC { get { if (!_SASL_JAAS_CONFIG_DOCReady) { _SASL_JAAS_CONFIG_DOCContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "SASL_JAAS_CONFIG_DOC"); _SASL_JAAS_CONFIG_DOCReady = true; } return _SASL_JAAS_CONFIG_DOCContent; } }
         private static Java.Lang.String _SASL_JAAS_CONFIG_DOCContent = default;
         private static bool _SASL_JAAS_CONFIG_DOCReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_KERBEROS_KINIT_CMD"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/config/SaslConfigs.html#SASL_KERBEROS_KINIT_CMD"/>
         /// </summary>
         public static Java.Lang.String SASL_KERBEROS_KINIT_CMD { get { if (!_SASL_KERBEROS_KINIT_CMDReady) { _SASL_KERBEROS_KINIT_CMDContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "SASL_KERBEROS_KINIT_CMD"); _SASL_KERBEROS_KINIT_CMDReady = true; } return _SASL_KERBEROS_KINIT_CMDContent; } }
         private static Java.Lang.String _SASL_KERBEROS_KINIT_CMDContent = default;
         private static bool _SASL_KERBEROS_KINIT_CMDReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_KERBEROS_KINIT_CMD_DOC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/config/SaslConfigs.html#SASL_KERBEROS_KINIT_CMD_DOC"/>
         /// </summary>
         public static Java.Lang.String SASL_KERBEROS_KINIT_CMD_DOC { get { if (!_SASL_KERBEROS_KINIT_CMD_DOCReady) { _SASL_KERBEROS_KINIT_CMD_DOCContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "SASL_KERBEROS_KINIT_CMD_DOC"); _SASL_KERBEROS_KINIT_CMD_DOCReady = true; } return _SASL_KERBEROS_KINIT_CMD_DOCContent; } }
         private static Java.Lang.String _SASL_KERBEROS_KINIT_CMD_DOCContent = default;
         private static bool _SASL_KERBEROS_KINIT_CMD_DOCReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_KERBEROS_MIN_TIME_BEFORE_RELOGIN"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/config/SaslConfigs.html#SASL_KERBEROS_MIN_TIME_BEFORE_RELOGIN"/>
         /// </summary>
         public static Java.Lang.String SASL_KERBEROS_MIN_TIME_BEFORE_RELOGIN { get { if (!_SASL_KERBEROS_MIN_TIME_BEFORE_RELOGINReady) { _SASL_KERBEROS_MIN_TIME_BEFORE_RELOGINContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "SASL_KERBEROS_MIN_TIME_BEFORE_RELOGIN"); _SASL_KERBEROS_MIN_TIME_BEFORE_RELOGINReady = true; } return _SASL_KERBEROS_MIN_TIME_BEFORE_RELOGINContent; } }
         private static Java.Lang.String _SASL_KERBEROS_MIN_TIME_BEFORE_RELOGINContent = default;
         private static bool _SASL_KERBEROS_MIN_TIME_BEFORE_RELOGINReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_KERBEROS_MIN_TIME_BEFORE_RELOGIN_DOC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/config/SaslConfigs.html#SASL_KERBEROS_MIN_TIME_BEFORE_RELOGIN_DOC"/>
         /// </summary>
         public static Java.Lang.String SASL_KERBEROS_MIN_TIME_BEFORE_RELOGIN_DOC { get { if (!_SASL_KERBEROS_MIN_TIME_BEFORE_RELOGIN_DOCReady) { _SASL_KERBEROS_MIN_TIME_BEFORE_RELOGIN_DOCContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "SASL_KERBEROS_MIN_TIME_BEFORE_RELOGIN_DOC"); _SASL_KERBEROS_MIN_TIME_BEFORE_RELOGIN_DOCReady = true; } return _SASL_KERBEROS_MIN_TIME_BEFORE_RELOGIN_DOCContent; } }
         private static Java.Lang.String _SASL_KERBEROS_MIN_TIME_BEFORE_RELOGIN_DOCContent = default;
         private static bool _SASL_KERBEROS_MIN_TIME_BEFORE_RELOGIN_DOCReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_KERBEROS_SERVICE_NAME"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/config/SaslConfigs.html#SASL_KERBEROS_SERVICE_NAME"/>
         /// </summary>
         public static Java.Lang.String SASL_KERBEROS_SERVICE_NAME { get { if (!_SASL_KERBEROS_SERVICE_NAMEReady) { _SASL_KERBEROS_SERVICE_NAMEContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "SASL_KERBEROS_SERVICE_NAME"); _SASL_KERBEROS_SERVICE_NAMEReady = true; } return _SASL_KERBEROS_SERVICE_NAMEContent; } }
         private static Java.Lang.String _SASL_KERBEROS_SERVICE_NAMEContent = default;
         private static bool _SASL_KERBEROS_SERVICE_NAMEReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_KERBEROS_SERVICE_NAME_DOC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/config/SaslConfigs.html#SASL_KERBEROS_SERVICE_NAME_DOC"/>
         /// </summary>
         public static Java.Lang.String SASL_KERBEROS_SERVICE_NAME_DOC { get { if (!_SASL_KERBEROS_SERVICE_NAME_DOCReady) { _SASL_KERBEROS_SERVICE_NAME_DOCContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "SASL_KERBEROS_SERVICE_NAME_DOC"); _SASL_KERBEROS_SERVICE_NAME_DOCReady = true; } return _SASL_KERBEROS_SERVICE_NAME_DOCContent; } }
         private static Java.Lang.String _SASL_KERBEROS_SERVICE_NAME_DOCContent = default;
         private static bool _SASL_KERBEROS_SERVICE_NAME_DOCReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_KERBEROS_TICKET_RENEW_JITTER"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/config/SaslConfigs.html#SASL_KERBEROS_TICKET_RENEW_JITTER"/>
         /// </summary>
         public static Java.Lang.String SASL_KERBEROS_TICKET_RENEW_JITTER { get { if (!_SASL_KERBEROS_TICKET_RENEW_JITTERReady) { _SASL_KERBEROS_TICKET_RENEW_JITTERContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "SASL_KERBEROS_TICKET_RENEW_JITTER"); _SASL_KERBEROS_TICKET_RENEW_JITTERReady = true; } return _SASL_KERBEROS_TICKET_RENEW_JITTERContent; } }
         private static Java.Lang.String _SASL_KERBEROS_TICKET_RENEW_JITTERContent = default;
         private static bool _SASL_KERBEROS_TICKET_RENEW_JITTERReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_KERBEROS_TICKET_RENEW_JITTER_DOC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/config/SaslConfigs.html#SASL_KERBEROS_TICKET_RENEW_JITTER_DOC"/>
         /// </summary>
         public static Java.Lang.String SASL_KERBEROS_TICKET_RENEW_JITTER_DOC { get { if (!_SASL_KERBEROS_TICKET_RENEW_JITTER_DOCReady) { _SASL_KERBEROS_TICKET_RENEW_JITTER_DOCContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "SASL_KERBEROS_TICKET_RENEW_JITTER_DOC"); _SASL_KERBEROS_TICKET_RENEW_JITTER_DOCReady = true; } return _SASL_KERBEROS_TICKET_RENEW_JITTER_DOCContent; } }
         private static Java.Lang.String _SASL_KERBEROS_TICKET_RENEW_JITTER_DOCContent = default;
         private static bool _SASL_KERBEROS_TICKET_RENEW_JITTER_DOCReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_KERBEROS_TICKET_RENEW_WINDOW_FACTOR"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/config/SaslConfigs.html#SASL_KERBEROS_TICKET_RENEW_WINDOW_FACTOR"/>
         /// </summary>
         public static Java.Lang.String SASL_KERBEROS_TICKET_RENEW_WINDOW_FACTOR { get { if (!_SASL_KERBEROS_TICKET_RENEW_WINDOW_FACTORReady) { _SASL_KERBEROS_TICKET_RENEW_WINDOW_FACTORContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "SASL_KERBEROS_TICKET_RENEW_WINDOW_FACTOR"); _SASL_KERBEROS_TICKET_RENEW_WINDOW_FACTORReady = true; } return _SASL_KERBEROS_TICKET_RENEW_WINDOW_FACTORContent; } }
         private static Java.Lang.String _SASL_KERBEROS_TICKET_RENEW_WINDOW_FACTORContent = default;
         private static bool _SASL_KERBEROS_TICKET_RENEW_WINDOW_FACTORReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_KERBEROS_TICKET_RENEW_WINDOW_FACTOR_DOC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/config/SaslConfigs.html#SASL_KERBEROS_TICKET_RENEW_WINDOW_FACTOR_DOC"/>
         /// </summary>
         public static Java.Lang.String SASL_KERBEROS_TICKET_RENEW_WINDOW_FACTOR_DOC { get { if (!_SASL_KERBEROS_TICKET_RENEW_WINDOW_FACTOR_DOCReady) { _SASL_KERBEROS_TICKET_RENEW_WINDOW_FACTOR_DOCContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "SASL_KERBEROS_TICKET_RENEW_WINDOW_FACTOR_DOC"); _SASL_KERBEROS_TICKET_RENEW_WINDOW_FACTOR_DOCReady = true; } return _SASL_KERBEROS_TICKET_RENEW_WINDOW_FACTOR_DOCContent; } }
         private static Java.Lang.String _SASL_KERBEROS_TICKET_RENEW_WINDOW_FACTOR_DOCContent = default;
         private static bool _SASL_KERBEROS_TICKET_RENEW_WINDOW_FACTOR_DOCReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_LOGIN_CALLBACK_HANDLER_CLASS"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/config/SaslConfigs.html#SASL_LOGIN_CALLBACK_HANDLER_CLASS"/>
         /// </summary>
         public static Java.Lang.String SASL_LOGIN_CALLBACK_HANDLER_CLASS { get { if (!_SASL_LOGIN_CALLBACK_HANDLER_CLASSReady) { _SASL_LOGIN_CALLBACK_HANDLER_CLASSContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "SASL_LOGIN_CALLBACK_HANDLER_CLASS"); _SASL_LOGIN_CALLBACK_HANDLER_CLASSReady = true; } return _SASL_LOGIN_CALLBACK_HANDLER_CLASSContent; } }
         private static Java.Lang.String _SASL_LOGIN_CALLBACK_HANDLER_CLASSContent = default;
         private static bool _SASL_LOGIN_CALLBACK_HANDLER_CLASSReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_LOGIN_CALLBACK_HANDLER_CLASS_DOC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/config/SaslConfigs.html#SASL_LOGIN_CALLBACK_HANDLER_CLASS_DOC"/>
         /// </summary>
         public static Java.Lang.String SASL_LOGIN_CALLBACK_HANDLER_CLASS_DOC { get { if (!_SASL_LOGIN_CALLBACK_HANDLER_CLASS_DOCReady) { _SASL_LOGIN_CALLBACK_HANDLER_CLASS_DOCContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "SASL_LOGIN_CALLBACK_HANDLER_CLASS_DOC"); _SASL_LOGIN_CALLBACK_HANDLER_CLASS_DOCReady = true; } return _SASL_LOGIN_CALLBACK_HANDLER_CLASS_DOCContent; } }
         private static Java.Lang.String _SASL_LOGIN_CALLBACK_HANDLER_CLASS_DOCContent = default;
         private static bool _SASL_LOGIN_CALLBACK_HANDLER_CLASS_DOCReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_LOGIN_CLASS"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/config/SaslConfigs.html#SASL_LOGIN_CLASS"/>
         /// </summary>
         public static Java.Lang.String SASL_LOGIN_CLASS { get { if (!_SASL_LOGIN_CLASSReady) { _SASL_LOGIN_CLASSContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "SASL_LOGIN_CLASS"); _SASL_LOGIN_CLASSReady = true; } return _SASL_LOGIN_CLASSContent; } }
         private static Java.Lang.String _SASL_LOGIN_CLASSContent = default;
         private static bool _SASL_LOGIN_CLASSReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_LOGIN_CLASS_DOC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/config/SaslConfigs.html#SASL_LOGIN_CLASS_DOC"/>
         /// </summary>
         public static Java.Lang.String SASL_LOGIN_CLASS_DOC { get { if (!_SASL_LOGIN_CLASS_DOCReady) { _SASL_LOGIN_CLASS_DOCContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "SASL_LOGIN_CLASS_DOC"); _SASL_LOGIN_CLASS_DOCReady = true; } return _SASL_LOGIN_CLASS_DOCContent; } }
         private static Java.Lang.String _SASL_LOGIN_CLASS_DOCContent = default;
         private static bool _SASL_LOGIN_CLASS_DOCReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_LOGIN_CONNECT_TIMEOUT_MS"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/config/SaslConfigs.html#SASL_LOGIN_CONNECT_TIMEOUT_MS"/>
         /// </summary>
         public static Java.Lang.String SASL_LOGIN_CONNECT_TIMEOUT_MS { get { if (!_SASL_LOGIN_CONNECT_TIMEOUT_MSReady) { _SASL_LOGIN_CONNECT_TIMEOUT_MSContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "SASL_LOGIN_CONNECT_TIMEOUT_MS"); _SASL_LOGIN_CONNECT_TIMEOUT_MSReady = true; } return _SASL_LOGIN_CONNECT_TIMEOUT_MSContent; } }
         private static Java.Lang.String _SASL_LOGIN_CONNECT_TIMEOUT_MSContent = default;
         private static bool _SASL_LOGIN_CONNECT_TIMEOUT_MSReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_LOGIN_CONNECT_TIMEOUT_MS_DOC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/config/SaslConfigs.html#SASL_LOGIN_CONNECT_TIMEOUT_MS_DOC"/>
         /// </summary>
         public static Java.Lang.String SASL_LOGIN_CONNECT_TIMEOUT_MS_DOC { get { if (!_SASL_LOGIN_CONNECT_TIMEOUT_MS_DOCReady) { _SASL_LOGIN_CONNECT_TIMEOUT_MS_DOCContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "SASL_LOGIN_CONNECT_TIMEOUT_MS_DOC"); _SASL_LOGIN_CONNECT_TIMEOUT_MS_DOCReady = true; } return _SASL_LOGIN_CONNECT_TIMEOUT_MS_DOCContent; } }
         private static Java.Lang.String _SASL_LOGIN_CONNECT_TIMEOUT_MS_DOCContent = default;
         private static bool _SASL_LOGIN_CONNECT_TIMEOUT_MS_DOCReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_LOGIN_READ_TIMEOUT_MS"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/config/SaslConfigs.html#SASL_LOGIN_READ_TIMEOUT_MS"/>
         /// </summary>
         public static Java.Lang.String SASL_LOGIN_READ_TIMEOUT_MS { get { if (!_SASL_LOGIN_READ_TIMEOUT_MSReady) { _SASL_LOGIN_READ_TIMEOUT_MSContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "SASL_LOGIN_READ_TIMEOUT_MS"); _SASL_LOGIN_READ_TIMEOUT_MSReady = true; } return _SASL_LOGIN_READ_TIMEOUT_MSContent; } }
         private static Java.Lang.String _SASL_LOGIN_READ_TIMEOUT_MSContent = default;
         private static bool _SASL_LOGIN_READ_TIMEOUT_MSReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_LOGIN_READ_TIMEOUT_MS_DOC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/config/SaslConfigs.html#SASL_LOGIN_READ_TIMEOUT_MS_DOC"/>
         /// </summary>
         public static Java.Lang.String SASL_LOGIN_READ_TIMEOUT_MS_DOC { get { if (!_SASL_LOGIN_READ_TIMEOUT_MS_DOCReady) { _SASL_LOGIN_READ_TIMEOUT_MS_DOCContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "SASL_LOGIN_READ_TIMEOUT_MS_DOC"); _SASL_LOGIN_READ_TIMEOUT_MS_DOCReady = true; } return _SASL_LOGIN_READ_TIMEOUT_MS_DOCContent; } }
         private static Java.Lang.String _SASL_LOGIN_READ_TIMEOUT_MS_DOCContent = default;
         private static bool _SASL_LOGIN_READ_TIMEOUT_MS_DOCReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_LOGIN_REFRESH_BUFFER_SECONDS"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/config/SaslConfigs.html#SASL_LOGIN_REFRESH_BUFFER_SECONDS"/>
         /// </summary>
         public static Java.Lang.String SASL_LOGIN_REFRESH_BUFFER_SECONDS { get { if (!_SASL_LOGIN_REFRESH_BUFFER_SECONDSReady) { _SASL_LOGIN_REFRESH_BUFFER_SECONDSContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "SASL_LOGIN_REFRESH_BUFFER_SECONDS"); _SASL_LOGIN_REFRESH_BUFFER_SECONDSReady = true; } return _SASL_LOGIN_REFRESH_BUFFER_SECONDSContent; } }
         private static Java.Lang.String _SASL_LOGIN_REFRESH_BUFFER_SECONDSContent = default;
         private static bool _SASL_LOGIN_REFRESH_BUFFER_SECONDSReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_LOGIN_REFRESH_BUFFER_SECONDS_DOC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/config/SaslConfigs.html#SASL_LOGIN_REFRESH_BUFFER_SECONDS_DOC"/>
         /// </summary>
         public static Java.Lang.String SASL_LOGIN_REFRESH_BUFFER_SECONDS_DOC { get { if (!_SASL_LOGIN_REFRESH_BUFFER_SECONDS_DOCReady) { _SASL_LOGIN_REFRESH_BUFFER_SECONDS_DOCContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "SASL_LOGIN_REFRESH_BUFFER_SECONDS_DOC"); _SASL_LOGIN_REFRESH_BUFFER_SECONDS_DOCReady = true; } return _SASL_LOGIN_REFRESH_BUFFER_SECONDS_DOCContent; } }
         private static Java.Lang.String _SASL_LOGIN_REFRESH_BUFFER_SECONDS_DOCContent = default;
         private static bool _SASL_LOGIN_REFRESH_BUFFER_SECONDS_DOCReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_LOGIN_REFRESH_MIN_PERIOD_SECONDS"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/config/SaslConfigs.html#SASL_LOGIN_REFRESH_MIN_PERIOD_SECONDS"/>
         /// </summary>
         public static Java.Lang.String SASL_LOGIN_REFRESH_MIN_PERIOD_SECONDS { get { if (!_SASL_LOGIN_REFRESH_MIN_PERIOD_SECONDSReady) { _SASL_LOGIN_REFRESH_MIN_PERIOD_SECONDSContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "SASL_LOGIN_REFRESH_MIN_PERIOD_SECONDS"); _SASL_LOGIN_REFRESH_MIN_PERIOD_SECONDSReady = true; } return _SASL_LOGIN_REFRESH_MIN_PERIOD_SECONDSContent; } }
         private static Java.Lang.String _SASL_LOGIN_REFRESH_MIN_PERIOD_SECONDSContent = default;
         private static bool _SASL_LOGIN_REFRESH_MIN_PERIOD_SECONDSReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_LOGIN_REFRESH_MIN_PERIOD_SECONDS_DOC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/config/SaslConfigs.html#SASL_LOGIN_REFRESH_MIN_PERIOD_SECONDS_DOC"/>
         /// </summary>
         public static Java.Lang.String SASL_LOGIN_REFRESH_MIN_PERIOD_SECONDS_DOC { get { if (!_SASL_LOGIN_REFRESH_MIN_PERIOD_SECONDS_DOCReady) { _SASL_LOGIN_REFRESH_MIN_PERIOD_SECONDS_DOCContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "SASL_LOGIN_REFRESH_MIN_PERIOD_SECONDS_DOC"); _SASL_LOGIN_REFRESH_MIN_PERIOD_SECONDS_DOCReady = true; } return _SASL_LOGIN_REFRESH_MIN_PERIOD_SECONDS_DOCContent; } }
         private static Java.Lang.String _SASL_LOGIN_REFRESH_MIN_PERIOD_SECONDS_DOCContent = default;
         private static bool _SASL_LOGIN_REFRESH_MIN_PERIOD_SECONDS_DOCReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_LOGIN_REFRESH_WINDOW_FACTOR"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/config/SaslConfigs.html#SASL_LOGIN_REFRESH_WINDOW_FACTOR"/>
         /// </summary>
         public static Java.Lang.String SASL_LOGIN_REFRESH_WINDOW_FACTOR { get { if (!_SASL_LOGIN_REFRESH_WINDOW_FACTORReady) { _SASL_LOGIN_REFRESH_WINDOW_FACTORContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "SASL_LOGIN_REFRESH_WINDOW_FACTOR"); _SASL_LOGIN_REFRESH_WINDOW_FACTORReady = true; } return _SASL_LOGIN_REFRESH_WINDOW_FACTORContent; } }
         private static Java.Lang.String _SASL_LOGIN_REFRESH_WINDOW_FACTORContent = default;
         private static bool _SASL_LOGIN_REFRESH_WINDOW_FACTORReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_LOGIN_REFRESH_WINDOW_FACTOR_DOC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/config/SaslConfigs.html#SASL_LOGIN_REFRESH_WINDOW_FACTOR_DOC"/>
         /// </summary>
         public static Java.Lang.String SASL_LOGIN_REFRESH_WINDOW_FACTOR_DOC { get { if (!_SASL_LOGIN_REFRESH_WINDOW_FACTOR_DOCReady) { _SASL_LOGIN_REFRESH_WINDOW_FACTOR_DOCContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "SASL_LOGIN_REFRESH_WINDOW_FACTOR_DOC"); _SASL_LOGIN_REFRESH_WINDOW_FACTOR_DOCReady = true; } return _SASL_LOGIN_REFRESH_WINDOW_FACTOR_DOCContent; } }
         private static Java.Lang.String _SASL_LOGIN_REFRESH_WINDOW_FACTOR_DOCContent = default;
         private static bool _SASL_LOGIN_REFRESH_WINDOW_FACTOR_DOCReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_LOGIN_REFRESH_WINDOW_JITTER"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/config/SaslConfigs.html#SASL_LOGIN_REFRESH_WINDOW_JITTER"/>
         /// </summary>
         public static Java.Lang.String SASL_LOGIN_REFRESH_WINDOW_JITTER { get { if (!_SASL_LOGIN_REFRESH_WINDOW_JITTERReady) { _SASL_LOGIN_REFRESH_WINDOW_JITTERContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "SASL_LOGIN_REFRESH_WINDOW_JITTER"); _SASL_LOGIN_REFRESH_WINDOW_JITTERReady = true; } return _SASL_LOGIN_REFRESH_WINDOW_JITTERContent; } }
         private static Java.Lang.String _SASL_LOGIN_REFRESH_WINDOW_JITTERContent = default;
         private static bool _SASL_LOGIN_REFRESH_WINDOW_JITTERReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_LOGIN_REFRESH_WINDOW_JITTER_DOC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/config/SaslConfigs.html#SASL_LOGIN_REFRESH_WINDOW_JITTER_DOC"/>
         /// </summary>
         public static Java.Lang.String SASL_LOGIN_REFRESH_WINDOW_JITTER_DOC { get { if (!_SASL_LOGIN_REFRESH_WINDOW_JITTER_DOCReady) { _SASL_LOGIN_REFRESH_WINDOW_JITTER_DOCContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "SASL_LOGIN_REFRESH_WINDOW_JITTER_DOC"); _SASL_LOGIN_REFRESH_WINDOW_JITTER_DOCReady = true; } return _SASL_LOGIN_REFRESH_WINDOW_JITTER_DOCContent; } }
         private static Java.Lang.String _SASL_LOGIN_REFRESH_WINDOW_JITTER_DOCContent = default;
         private static bool _SASL_LOGIN_REFRESH_WINDOW_JITTER_DOCReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_LOGIN_RETRY_BACKOFF_MAX_MS"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/config/SaslConfigs.html#SASL_LOGIN_RETRY_BACKOFF_MAX_MS"/>
         /// </summary>
         public static Java.Lang.String SASL_LOGIN_RETRY_BACKOFF_MAX_MS { get { if (!_SASL_LOGIN_RETRY_BACKOFF_MAX_MSReady) { _SASL_LOGIN_RETRY_BACKOFF_MAX_MSContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "SASL_LOGIN_RETRY_BACKOFF_MAX_MS"); _SASL_LOGIN_RETRY_BACKOFF_MAX_MSReady = true; } return _SASL_LOGIN_RETRY_BACKOFF_MAX_MSContent; } }
         private static Java.Lang.String _SASL_LOGIN_RETRY_BACKOFF_MAX_MSContent = default;
         private static bool _SASL_LOGIN_RETRY_BACKOFF_MAX_MSReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_LOGIN_RETRY_BACKOFF_MAX_MS_DOC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/config/SaslConfigs.html#SASL_LOGIN_RETRY_BACKOFF_MAX_MS_DOC"/>
         /// </summary>
         public static Java.Lang.String SASL_LOGIN_RETRY_BACKOFF_MAX_MS_DOC { get { if (!_SASL_LOGIN_RETRY_BACKOFF_MAX_MS_DOCReady) { _SASL_LOGIN_RETRY_BACKOFF_MAX_MS_DOCContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "SASL_LOGIN_RETRY_BACKOFF_MAX_MS_DOC"); _SASL_LOGIN_RETRY_BACKOFF_MAX_MS_DOCReady = true; } return _SASL_LOGIN_RETRY_BACKOFF_MAX_MS_DOCContent; } }
         private static Java.Lang.String _SASL_LOGIN_RETRY_BACKOFF_MAX_MS_DOCContent = default;
         private static bool _SASL_LOGIN_RETRY_BACKOFF_MAX_MS_DOCReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_LOGIN_RETRY_BACKOFF_MS"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/config/SaslConfigs.html#SASL_LOGIN_RETRY_BACKOFF_MS"/>
         /// </summary>
         public static Java.Lang.String SASL_LOGIN_RETRY_BACKOFF_MS { get { if (!_SASL_LOGIN_RETRY_BACKOFF_MSReady) { _SASL_LOGIN_RETRY_BACKOFF_MSContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "SASL_LOGIN_RETRY_BACKOFF_MS"); _SASL_LOGIN_RETRY_BACKOFF_MSReady = true; } return _SASL_LOGIN_RETRY_BACKOFF_MSContent; } }
         private static Java.Lang.String _SASL_LOGIN_RETRY_BACKOFF_MSContent = default;
         private static bool _SASL_LOGIN_RETRY_BACKOFF_MSReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_LOGIN_RETRY_BACKOFF_MS_DOC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/config/SaslConfigs.html#SASL_LOGIN_RETRY_BACKOFF_MS_DOC"/>
         /// </summary>
         public static Java.Lang.String SASL_LOGIN_RETRY_BACKOFF_MS_DOC { get { if (!_SASL_LOGIN_RETRY_BACKOFF_MS_DOCReady) { _SASL_LOGIN_RETRY_BACKOFF_MS_DOCContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "SASL_LOGIN_RETRY_BACKOFF_MS_DOC"); _SASL_LOGIN_RETRY_BACKOFF_MS_DOCReady = true; } return _SASL_LOGIN_RETRY_BACKOFF_MS_DOCContent; } }
         private static Java.Lang.String _SASL_LOGIN_RETRY_BACKOFF_MS_DOCContent = default;
         private static bool _SASL_LOGIN_RETRY_BACKOFF_MS_DOCReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_MECHANISM"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/config/SaslConfigs.html#SASL_MECHANISM"/>
         /// </summary>
         public static Java.Lang.String SASL_MECHANISM { get { if (!_SASL_MECHANISMReady) { _SASL_MECHANISMContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "SASL_MECHANISM"); _SASL_MECHANISMReady = true; } return _SASL_MECHANISMContent; } }
         private static Java.Lang.String _SASL_MECHANISMContent = default;
         private static bool _SASL_MECHANISMReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_MECHANISM_DOC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/config/SaslConfigs.html#SASL_MECHANISM_DOC"/>
         /// </summary>
         public static Java.Lang.String SASL_MECHANISM_DOC { get { if (!_SASL_MECHANISM_DOCReady) { _SASL_MECHANISM_DOCContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "SASL_MECHANISM_DOC"); _SASL_MECHANISM_DOCReady = true; } return _SASL_MECHANISM_DOCContent; } }
         private static Java.Lang.String _SASL_MECHANISM_DOCContent = default;
         private static bool _SASL_MECHANISM_DOCReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_OAUTHBEARER_CLOCK_SKEW_SECONDS"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/config/SaslConfigs.html#SASL_OAUTHBEARER_CLOCK_SKEW_SECONDS"/>
         /// </summary>
         public static Java.Lang.String SASL_OAUTHBEARER_CLOCK_SKEW_SECONDS { get { if (!_SASL_OAUTHBEARER_CLOCK_SKEW_SECONDSReady) { _SASL_OAUTHBEARER_CLOCK_SKEW_SECONDSContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "SASL_OAUTHBEARER_CLOCK_SKEW_SECONDS"); _SASL_OAUTHBEARER_CLOCK_SKEW_SECONDSReady = true; } return _SASL_OAUTHBEARER_CLOCK_SKEW_SECONDSContent; } }
         private static Java.Lang.String _SASL_OAUTHBEARER_CLOCK_SKEW_SECONDSContent = default;
         private static bool _SASL_OAUTHBEARER_CLOCK_SKEW_SECONDSReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_OAUTHBEARER_CLOCK_SKEW_SECONDS_DOC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/config/SaslConfigs.html#SASL_OAUTHBEARER_CLOCK_SKEW_SECONDS_DOC"/>
         /// </summary>
         public static Java.Lang.String SASL_OAUTHBEARER_CLOCK_SKEW_SECONDS_DOC { get { if (!_SASL_OAUTHBEARER_CLOCK_SKEW_SECONDS_DOCReady) { _SASL_OAUTHBEARER_CLOCK_SKEW_SECONDS_DOCContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "SASL_OAUTHBEARER_CLOCK_SKEW_SECONDS_DOC"); _SASL_OAUTHBEARER_CLOCK_SKEW_SECONDS_DOCReady = true; } return _SASL_OAUTHBEARER_CLOCK_SKEW_SECONDS_DOCContent; } }
         private static Java.Lang.String _SASL_OAUTHBEARER_CLOCK_SKEW_SECONDS_DOCContent = default;
         private static bool _SASL_OAUTHBEARER_CLOCK_SKEW_SECONDS_DOCReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_OAUTHBEARER_EXPECTED_AUDIENCE"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/config/SaslConfigs.html#SASL_OAUTHBEARER_EXPECTED_AUDIENCE"/>
         /// </summary>
         public static Java.Lang.String SASL_OAUTHBEARER_EXPECTED_AUDIENCE { get { if (!_SASL_OAUTHBEARER_EXPECTED_AUDIENCEReady) { _SASL_OAUTHBEARER_EXPECTED_AUDIENCEContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "SASL_OAUTHBEARER_EXPECTED_AUDIENCE"); _SASL_OAUTHBEARER_EXPECTED_AUDIENCEReady = true; } return _SASL_OAUTHBEARER_EXPECTED_AUDIENCEContent; } }
         private static Java.Lang.String _SASL_OAUTHBEARER_EXPECTED_AUDIENCEContent = default;
         private static bool _SASL_OAUTHBEARER_EXPECTED_AUDIENCEReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_OAUTHBEARER_EXPECTED_AUDIENCE_DOC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/config/SaslConfigs.html#SASL_OAUTHBEARER_EXPECTED_AUDIENCE_DOC"/>
         /// </summary>
         public static Java.Lang.String SASL_OAUTHBEARER_EXPECTED_AUDIENCE_DOC { get { if (!_SASL_OAUTHBEARER_EXPECTED_AUDIENCE_DOCReady) { _SASL_OAUTHBEARER_EXPECTED_AUDIENCE_DOCContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "SASL_OAUTHBEARER_EXPECTED_AUDIENCE_DOC"); _SASL_OAUTHBEARER_EXPECTED_AUDIENCE_DOCReady = true; } return _SASL_OAUTHBEARER_EXPECTED_AUDIENCE_DOCContent; } }
         private static Java.Lang.String _SASL_OAUTHBEARER_EXPECTED_AUDIENCE_DOCContent = default;
         private static bool _SASL_OAUTHBEARER_EXPECTED_AUDIENCE_DOCReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_OAUTHBEARER_EXPECTED_ISSUER"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/config/SaslConfigs.html#SASL_OAUTHBEARER_EXPECTED_ISSUER"/>
         /// </summary>
         public static Java.Lang.String SASL_OAUTHBEARER_EXPECTED_ISSUER { get { if (!_SASL_OAUTHBEARER_EXPECTED_ISSUERReady) { _SASL_OAUTHBEARER_EXPECTED_ISSUERContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "SASL_OAUTHBEARER_EXPECTED_ISSUER"); _SASL_OAUTHBEARER_EXPECTED_ISSUERReady = true; } return _SASL_OAUTHBEARER_EXPECTED_ISSUERContent; } }
         private static Java.Lang.String _SASL_OAUTHBEARER_EXPECTED_ISSUERContent = default;
         private static bool _SASL_OAUTHBEARER_EXPECTED_ISSUERReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_OAUTHBEARER_EXPECTED_ISSUER_DOC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/config/SaslConfigs.html#SASL_OAUTHBEARER_EXPECTED_ISSUER_DOC"/>
         /// </summary>
         public static Java.Lang.String SASL_OAUTHBEARER_EXPECTED_ISSUER_DOC { get { if (!_SASL_OAUTHBEARER_EXPECTED_ISSUER_DOCReady) { _SASL_OAUTHBEARER_EXPECTED_ISSUER_DOCContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "SASL_OAUTHBEARER_EXPECTED_ISSUER_DOC"); _SASL_OAUTHBEARER_EXPECTED_ISSUER_DOCReady = true; } return _SASL_OAUTHBEARER_EXPECTED_ISSUER_DOCContent; } }
         private static Java.Lang.String _SASL_OAUTHBEARER_EXPECTED_ISSUER_DOCContent = default;
         private static bool _SASL_OAUTHBEARER_EXPECTED_ISSUER_DOCReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_OAUTHBEARER_HEADER_URLENCODE"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/config/SaslConfigs.html#SASL_OAUTHBEARER_HEADER_URLENCODE"/>
         /// </summary>
         public static Java.Lang.String SASL_OAUTHBEARER_HEADER_URLENCODE { get { if (!_SASL_OAUTHBEARER_HEADER_URLENCODEReady) { _SASL_OAUTHBEARER_HEADER_URLENCODEContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "SASL_OAUTHBEARER_HEADER_URLENCODE"); _SASL_OAUTHBEARER_HEADER_URLENCODEReady = true; } return _SASL_OAUTHBEARER_HEADER_URLENCODEContent; } }
         private static Java.Lang.String _SASL_OAUTHBEARER_HEADER_URLENCODEContent = default;
         private static bool _SASL_OAUTHBEARER_HEADER_URLENCODEReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_OAUTHBEARER_HEADER_URLENCODE_DOC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/config/SaslConfigs.html#SASL_OAUTHBEARER_HEADER_URLENCODE_DOC"/>
         /// </summary>
         public static Java.Lang.String SASL_OAUTHBEARER_HEADER_URLENCODE_DOC { get { if (!_SASL_OAUTHBEARER_HEADER_URLENCODE_DOCReady) { _SASL_OAUTHBEARER_HEADER_URLENCODE_DOCContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "SASL_OAUTHBEARER_HEADER_URLENCODE_DOC"); _SASL_OAUTHBEARER_HEADER_URLENCODE_DOCReady = true; } return _SASL_OAUTHBEARER_HEADER_URLENCODE_DOCContent; } }
         private static Java.Lang.String _SASL_OAUTHBEARER_HEADER_URLENCODE_DOCContent = default;
         private static bool _SASL_OAUTHBEARER_HEADER_URLENCODE_DOCReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_OAUTHBEARER_JWKS_ENDPOINT_REFRESH_MS"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/config/SaslConfigs.html#SASL_OAUTHBEARER_JWKS_ENDPOINT_REFRESH_MS"/>
         /// </summary>
         public static Java.Lang.String SASL_OAUTHBEARER_JWKS_ENDPOINT_REFRESH_MS { get { if (!_SASL_OAUTHBEARER_JWKS_ENDPOINT_REFRESH_MSReady) { _SASL_OAUTHBEARER_JWKS_ENDPOINT_REFRESH_MSContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "SASL_OAUTHBEARER_JWKS_ENDPOINT_REFRESH_MS"); _SASL_OAUTHBEARER_JWKS_ENDPOINT_REFRESH_MSReady = true; } return _SASL_OAUTHBEARER_JWKS_ENDPOINT_REFRESH_MSContent; } }
         private static Java.Lang.String _SASL_OAUTHBEARER_JWKS_ENDPOINT_REFRESH_MSContent = default;
         private static bool _SASL_OAUTHBEARER_JWKS_ENDPOINT_REFRESH_MSReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_OAUTHBEARER_JWKS_ENDPOINT_REFRESH_MS_DOC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/config/SaslConfigs.html#SASL_OAUTHBEARER_JWKS_ENDPOINT_REFRESH_MS_DOC"/>
         /// </summary>
         public static Java.Lang.String SASL_OAUTHBEARER_JWKS_ENDPOINT_REFRESH_MS_DOC { get { if (!_SASL_OAUTHBEARER_JWKS_ENDPOINT_REFRESH_MS_DOCReady) { _SASL_OAUTHBEARER_JWKS_ENDPOINT_REFRESH_MS_DOCContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "SASL_OAUTHBEARER_JWKS_ENDPOINT_REFRESH_MS_DOC"); _SASL_OAUTHBEARER_JWKS_ENDPOINT_REFRESH_MS_DOCReady = true; } return _SASL_OAUTHBEARER_JWKS_ENDPOINT_REFRESH_MS_DOCContent; } }
         private static Java.Lang.String _SASL_OAUTHBEARER_JWKS_ENDPOINT_REFRESH_MS_DOCContent = default;
         private static bool _SASL_OAUTHBEARER_JWKS_ENDPOINT_REFRESH_MS_DOCReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_OAUTHBEARER_JWKS_ENDPOINT_RETRY_BACKOFF_MAX_MS"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/config/SaslConfigs.html#SASL_OAUTHBEARER_JWKS_ENDPOINT_RETRY_BACKOFF_MAX_MS"/>
         /// </summary>
         public static Java.Lang.String SASL_OAUTHBEARER_JWKS_ENDPOINT_RETRY_BACKOFF_MAX_MS { get { if (!_SASL_OAUTHBEARER_JWKS_ENDPOINT_RETRY_BACKOFF_MAX_MSReady) { _SASL_OAUTHBEARER_JWKS_ENDPOINT_RETRY_BACKOFF_MAX_MSContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "SASL_OAUTHBEARER_JWKS_ENDPOINT_RETRY_BACKOFF_MAX_MS"); _SASL_OAUTHBEARER_JWKS_ENDPOINT_RETRY_BACKOFF_MAX_MSReady = true; } return _SASL_OAUTHBEARER_JWKS_ENDPOINT_RETRY_BACKOFF_MAX_MSContent; } }
         private static Java.Lang.String _SASL_OAUTHBEARER_JWKS_ENDPOINT_RETRY_BACKOFF_MAX_MSContent = default;
         private static bool _SASL_OAUTHBEARER_JWKS_ENDPOINT_RETRY_BACKOFF_MAX_MSReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_OAUTHBEARER_JWKS_ENDPOINT_RETRY_BACKOFF_MAX_MS_DOC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/config/SaslConfigs.html#SASL_OAUTHBEARER_JWKS_ENDPOINT_RETRY_BACKOFF_MAX_MS_DOC"/>
         /// </summary>
         public static Java.Lang.String SASL_OAUTHBEARER_JWKS_ENDPOINT_RETRY_BACKOFF_MAX_MS_DOC { get { if (!_SASL_OAUTHBEARER_JWKS_ENDPOINT_RETRY_BACKOFF_MAX_MS_DOCReady) { _SASL_OAUTHBEARER_JWKS_ENDPOINT_RETRY_BACKOFF_MAX_MS_DOCContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "SASL_OAUTHBEARER_JWKS_ENDPOINT_RETRY_BACKOFF_MAX_MS_DOC"); _SASL_OAUTHBEARER_JWKS_ENDPOINT_RETRY_BACKOFF_MAX_MS_DOCReady = true; } return _SASL_OAUTHBEARER_JWKS_ENDPOINT_RETRY_BACKOFF_MAX_MS_DOCContent; } }
         private static Java.Lang.String _SASL_OAUTHBEARER_JWKS_ENDPOINT_RETRY_BACKOFF_MAX_MS_DOCContent = default;
         private static bool _SASL_OAUTHBEARER_JWKS_ENDPOINT_RETRY_BACKOFF_MAX_MS_DOCReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_OAUTHBEARER_JWKS_ENDPOINT_RETRY_BACKOFF_MS"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/config/SaslConfigs.html#SASL_OAUTHBEARER_JWKS_ENDPOINT_RETRY_BACKOFF_MS"/>
         /// </summary>
         public static Java.Lang.String SASL_OAUTHBEARER_JWKS_ENDPOINT_RETRY_BACKOFF_MS { get { if (!_SASL_OAUTHBEARER_JWKS_ENDPOINT_RETRY_BACKOFF_MSReady) { _SASL_OAUTHBEARER_JWKS_ENDPOINT_RETRY_BACKOFF_MSContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "SASL_OAUTHBEARER_JWKS_ENDPOINT_RETRY_BACKOFF_MS"); _SASL_OAUTHBEARER_JWKS_ENDPOINT_RETRY_BACKOFF_MSReady = true; } return _SASL_OAUTHBEARER_JWKS_ENDPOINT_RETRY_BACKOFF_MSContent; } }
         private static Java.Lang.String _SASL_OAUTHBEARER_JWKS_ENDPOINT_RETRY_BACKOFF_MSContent = default;
         private static bool _SASL_OAUTHBEARER_JWKS_ENDPOINT_RETRY_BACKOFF_MSReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_OAUTHBEARER_JWKS_ENDPOINT_RETRY_BACKOFF_MS_DOC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/config/SaslConfigs.html#SASL_OAUTHBEARER_JWKS_ENDPOINT_RETRY_BACKOFF_MS_DOC"/>
         /// </summary>
         public static Java.Lang.String SASL_OAUTHBEARER_JWKS_ENDPOINT_RETRY_BACKOFF_MS_DOC { get { if (!_SASL_OAUTHBEARER_JWKS_ENDPOINT_RETRY_BACKOFF_MS_DOCReady) { _SASL_OAUTHBEARER_JWKS_ENDPOINT_RETRY_BACKOFF_MS_DOCContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "SASL_OAUTHBEARER_JWKS_ENDPOINT_RETRY_BACKOFF_MS_DOC"); _SASL_OAUTHBEARER_JWKS_ENDPOINT_RETRY_BACKOFF_MS_DOCReady = true; } return _SASL_OAUTHBEARER_JWKS_ENDPOINT_RETRY_BACKOFF_MS_DOCContent; } }
         private static Java.Lang.String _SASL_OAUTHBEARER_JWKS_ENDPOINT_RETRY_BACKOFF_MS_DOCContent = default;
         private static bool _SASL_OAUTHBEARER_JWKS_ENDPOINT_RETRY_BACKOFF_MS_DOCReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_OAUTHBEARER_JWKS_ENDPOINT_URL"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/config/SaslConfigs.html#SASL_OAUTHBEARER_JWKS_ENDPOINT_URL"/>
         /// </summary>
         public static Java.Lang.String SASL_OAUTHBEARER_JWKS_ENDPOINT_URL { get { if (!_SASL_OAUTHBEARER_JWKS_ENDPOINT_URLReady) { _SASL_OAUTHBEARER_JWKS_ENDPOINT_URLContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "SASL_OAUTHBEARER_JWKS_ENDPOINT_URL"); _SASL_OAUTHBEARER_JWKS_ENDPOINT_URLReady = true; } return _SASL_OAUTHBEARER_JWKS_ENDPOINT_URLContent; } }
         private static Java.Lang.String _SASL_OAUTHBEARER_JWKS_ENDPOINT_URLContent = default;
         private static bool _SASL_OAUTHBEARER_JWKS_ENDPOINT_URLReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_OAUTHBEARER_JWKS_ENDPOINT_URL_DOC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/config/SaslConfigs.html#SASL_OAUTHBEARER_JWKS_ENDPOINT_URL_DOC"/>
         /// </summary>
         public static Java.Lang.String SASL_OAUTHBEARER_JWKS_ENDPOINT_URL_DOC { get { if (!_SASL_OAUTHBEARER_JWKS_ENDPOINT_URL_DOCReady) { _SASL_OAUTHBEARER_JWKS_ENDPOINT_URL_DOCContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "SASL_OAUTHBEARER_JWKS_ENDPOINT_URL_DOC"); _SASL_OAUTHBEARER_JWKS_ENDPOINT_URL_DOCReady = true; } return _SASL_OAUTHBEARER_JWKS_ENDPOINT_URL_DOCContent; } }
         private static Java.Lang.String _SASL_OAUTHBEARER_JWKS_ENDPOINT_URL_DOCContent = default;
         private static bool _SASL_OAUTHBEARER_JWKS_ENDPOINT_URL_DOCReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_OAUTHBEARER_SCOPE_CLAIM_NAME"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/config/SaslConfigs.html#SASL_OAUTHBEARER_SCOPE_CLAIM_NAME"/>
         /// </summary>
         public static Java.Lang.String SASL_OAUTHBEARER_SCOPE_CLAIM_NAME { get { if (!_SASL_OAUTHBEARER_SCOPE_CLAIM_NAMEReady) { _SASL_OAUTHBEARER_SCOPE_CLAIM_NAMEContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "SASL_OAUTHBEARER_SCOPE_CLAIM_NAME"); _SASL_OAUTHBEARER_SCOPE_CLAIM_NAMEReady = true; } return _SASL_OAUTHBEARER_SCOPE_CLAIM_NAMEContent; } }
         private static Java.Lang.String _SASL_OAUTHBEARER_SCOPE_CLAIM_NAMEContent = default;
         private static bool _SASL_OAUTHBEARER_SCOPE_CLAIM_NAMEReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_OAUTHBEARER_SCOPE_CLAIM_NAME_DOC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/config/SaslConfigs.html#SASL_OAUTHBEARER_SCOPE_CLAIM_NAME_DOC"/>
         /// </summary>
         public static Java.Lang.String SASL_OAUTHBEARER_SCOPE_CLAIM_NAME_DOC { get { if (!_SASL_OAUTHBEARER_SCOPE_CLAIM_NAME_DOCReady) { _SASL_OAUTHBEARER_SCOPE_CLAIM_NAME_DOCContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "SASL_OAUTHBEARER_SCOPE_CLAIM_NAME_DOC"); _SASL_OAUTHBEARER_SCOPE_CLAIM_NAME_DOCReady = true; } return _SASL_OAUTHBEARER_SCOPE_CLAIM_NAME_DOCContent; } }
         private static Java.Lang.String _SASL_OAUTHBEARER_SCOPE_CLAIM_NAME_DOCContent = default;
         private static bool _SASL_OAUTHBEARER_SCOPE_CLAIM_NAME_DOCReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_OAUTHBEARER_SUB_CLAIM_NAME"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/config/SaslConfigs.html#SASL_OAUTHBEARER_SUB_CLAIM_NAME"/>
         /// </summary>
         public static Java.Lang.String SASL_OAUTHBEARER_SUB_CLAIM_NAME { get { if (!_SASL_OAUTHBEARER_SUB_CLAIM_NAMEReady) { _SASL_OAUTHBEARER_SUB_CLAIM_NAMEContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "SASL_OAUTHBEARER_SUB_CLAIM_NAME"); _SASL_OAUTHBEARER_SUB_CLAIM_NAMEReady = true; } return _SASL_OAUTHBEARER_SUB_CLAIM_NAMEContent; } }
         private static Java.Lang.String _SASL_OAUTHBEARER_SUB_CLAIM_NAMEContent = default;
         private static bool _SASL_OAUTHBEARER_SUB_CLAIM_NAMEReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_OAUTHBEARER_SUB_CLAIM_NAME_DOC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/config/SaslConfigs.html#SASL_OAUTHBEARER_SUB_CLAIM_NAME_DOC"/>
         /// </summary>
         public static Java.Lang.String SASL_OAUTHBEARER_SUB_CLAIM_NAME_DOC { get { if (!_SASL_OAUTHBEARER_SUB_CLAIM_NAME_DOCReady) { _SASL_OAUTHBEARER_SUB_CLAIM_NAME_DOCContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "SASL_OAUTHBEARER_SUB_CLAIM_NAME_DOC"); _SASL_OAUTHBEARER_SUB_CLAIM_NAME_DOCReady = true; } return _SASL_OAUTHBEARER_SUB_CLAIM_NAME_DOCContent; } }
         private static Java.Lang.String _SASL_OAUTHBEARER_SUB_CLAIM_NAME_DOCContent = default;
         private static bool _SASL_OAUTHBEARER_SUB_CLAIM_NAME_DOCReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_OAUTHBEARER_TOKEN_ENDPOINT_URL"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/config/SaslConfigs.html#SASL_OAUTHBEARER_TOKEN_ENDPOINT_URL"/>
         /// </summary>
         public static Java.Lang.String SASL_OAUTHBEARER_TOKEN_ENDPOINT_URL { get { if (!_SASL_OAUTHBEARER_TOKEN_ENDPOINT_URLReady) { _SASL_OAUTHBEARER_TOKEN_ENDPOINT_URLContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "SASL_OAUTHBEARER_TOKEN_ENDPOINT_URL"); _SASL_OAUTHBEARER_TOKEN_ENDPOINT_URLReady = true; } return _SASL_OAUTHBEARER_TOKEN_ENDPOINT_URLContent; } }
         private static Java.Lang.String _SASL_OAUTHBEARER_TOKEN_ENDPOINT_URLContent = default;
         private static bool _SASL_OAUTHBEARER_TOKEN_ENDPOINT_URLReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_OAUTHBEARER_TOKEN_ENDPOINT_URL_DOC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/config/SaslConfigs.html#SASL_OAUTHBEARER_TOKEN_ENDPOINT_URL_DOC"/>
         /// </summary>
         public static Java.Lang.String SASL_OAUTHBEARER_TOKEN_ENDPOINT_URL_DOC { get { if (!_SASL_OAUTHBEARER_TOKEN_ENDPOINT_URL_DOCReady) { _SASL_OAUTHBEARER_TOKEN_ENDPOINT_URL_DOCContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "SASL_OAUTHBEARER_TOKEN_ENDPOINT_URL_DOC"); _SASL_OAUTHBEARER_TOKEN_ENDPOINT_URL_DOCReady = true; } return _SASL_OAUTHBEARER_TOKEN_ENDPOINT_URL_DOCContent; } }
         private static Java.Lang.String _SASL_OAUTHBEARER_TOKEN_ENDPOINT_URL_DOCContent = default;
         private static bool _SASL_OAUTHBEARER_TOKEN_ENDPOINT_URL_DOCReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/config/SaslConfigs.html#DEFAULT_KERBEROS_MIN_TIME_BEFORE_RELOGIN"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/config/SaslConfigs.html#DEFAULT_KERBEROS_MIN_TIME_BEFORE_RELOGIN"/>
         /// </summary>
         public static long DEFAULT_KERBEROS_MIN_TIME_BEFORE_RELOGIN { get { if (!_DEFAULT_KERBEROS_MIN_TIME_BEFORE_RELOGINReady) { _DEFAULT_KERBEROS_MIN_TIME_BEFORE_RELOGINContent = SGetField<long>(LocalBridgeClazz, "DEFAULT_KERBEROS_MIN_TIME_BEFORE_RELOGIN"); _DEFAULT_KERBEROS_MIN_TIME_BEFORE_RELOGINReady = true; } return _DEFAULT_KERBEROS_MIN_TIME_BEFORE_RELOGINContent; } }
         private static long _DEFAULT_KERBEROS_MIN_TIME_BEFORE_RELOGINContent = default;
         private static bool _DEFAULT_KERBEROS_MIN_TIME_BEFORE_RELOGINReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/config/SaslConfigs.html#DEFAULT_SASL_LOGIN_RETRY_BACKOFF_MAX_MS"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/config/SaslConfigs.html#DEFAULT_SASL_LOGIN_RETRY_BACKOFF_MAX_MS"/>
         /// </summary>
         public static long DEFAULT_SASL_LOGIN_RETRY_BACKOFF_MAX_MS { get { if (!_DEFAULT_SASL_LOGIN_RETRY_BACKOFF_MAX_MSReady) { _DEFAULT_SASL_LOGIN_RETRY_BACKOFF_MAX_MSContent = SGetField<long>(LocalBridgeClazz, "DEFAULT_SASL_LOGIN_RETRY_BACKOFF_MAX_MS"); _DEFAULT_SASL_LOGIN_RETRY_BACKOFF_MAX_MSReady = true; } return _DEFAULT_SASL_LOGIN_RETRY_BACKOFF_MAX_MSContent; } }
         private static long _DEFAULT_SASL_LOGIN_RETRY_BACKOFF_MAX_MSContent = default;
         private static bool _DEFAULT_SASL_LOGIN_RETRY_BACKOFF_MAX_MSReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/config/SaslConfigs.html#DEFAULT_SASL_LOGIN_RETRY_BACKOFF_MS"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/config/SaslConfigs.html#DEFAULT_SASL_LOGIN_RETRY_BACKOFF_MS"/>
         /// </summary>
         public static long DEFAULT_SASL_LOGIN_RETRY_BACKOFF_MS { get { if (!_DEFAULT_SASL_LOGIN_RETRY_BACKOFF_MSReady) { _DEFAULT_SASL_LOGIN_RETRY_BACKOFF_MSContent = SGetField<long>(LocalBridgeClazz, "DEFAULT_SASL_LOGIN_RETRY_BACKOFF_MS"); _DEFAULT_SASL_LOGIN_RETRY_BACKOFF_MSReady = true; } return _DEFAULT_SASL_LOGIN_RETRY_BACKOFF_MSContent; } }
         private static long _DEFAULT_SASL_LOGIN_RETRY_BACKOFF_MSContent = default;
         private static bool _DEFAULT_SASL_LOGIN_RETRY_BACKOFF_MSReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/config/SaslConfigs.html#DEFAULT_SASL_OAUTHBEARER_JWKS_ENDPOINT_REFRESH_MS"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/config/SaslConfigs.html#DEFAULT_SASL_OAUTHBEARER_JWKS_ENDPOINT_REFRESH_MS"/>
         /// </summary>
         public static long DEFAULT_SASL_OAUTHBEARER_JWKS_ENDPOINT_REFRESH_MS { get { if (!_DEFAULT_SASL_OAUTHBEARER_JWKS_ENDPOINT_REFRESH_MSReady) { _DEFAULT_SASL_OAUTHBEARER_JWKS_ENDPOINT_REFRESH_MSContent = SGetField<long>(LocalBridgeClazz, "DEFAULT_SASL_OAUTHBEARER_JWKS_ENDPOINT_REFRESH_MS"); _DEFAULT_SASL_OAUTHBEARER_JWKS_ENDPOINT_REFRESH_MSReady = true; } return _DEFAULT_SASL_OAUTHBEARER_JWKS_ENDPOINT_REFRESH_MSContent; } }
         private static long _DEFAULT_SASL_OAUTHBEARER_JWKS_ENDPOINT_REFRESH_MSContent = default;
         private static bool _DEFAULT_SASL_OAUTHBEARER_JWKS_ENDPOINT_REFRESH_MSReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/config/SaslConfigs.html#DEFAULT_SASL_OAUTHBEARER_JWKS_ENDPOINT_RETRY_BACKOFF_MAX_MS"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/config/SaslConfigs.html#DEFAULT_SASL_OAUTHBEARER_JWKS_ENDPOINT_RETRY_BACKOFF_MAX_MS"/>
         /// </summary>
         public static long DEFAULT_SASL_OAUTHBEARER_JWKS_ENDPOINT_RETRY_BACKOFF_MAX_MS { get { if (!_DEFAULT_SASL_OAUTHBEARER_JWKS_ENDPOINT_RETRY_BACKOFF_MAX_MSReady) { _DEFAULT_SASL_OAUTHBEARER_JWKS_ENDPOINT_RETRY_BACKOFF_MAX_MSContent = SGetField<long>(LocalBridgeClazz, "DEFAULT_SASL_OAUTHBEARER_JWKS_ENDPOINT_RETRY_BACKOFF_MAX_MS"); _DEFAULT_SASL_OAUTHBEARER_JWKS_ENDPOINT_RETRY_BACKOFF_MAX_MSReady = true; } return _DEFAULT_SASL_OAUTHBEARER_JWKS_ENDPOINT_RETRY_BACKOFF_MAX_MSContent; } }
         private static long _DEFAULT_SASL_OAUTHBEARER_JWKS_ENDPOINT_RETRY_BACKOFF_MAX_MSContent = default;
         private static bool _DEFAULT_SASL_OAUTHBEARER_JWKS_ENDPOINT_RETRY_BACKOFF_MAX_MSReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/config/SaslConfigs.html#DEFAULT_SASL_OAUTHBEARER_JWKS_ENDPOINT_RETRY_BACKOFF_MS"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/config/SaslConfigs.html#DEFAULT_SASL_OAUTHBEARER_JWKS_ENDPOINT_RETRY_BACKOFF_MS"/>
         /// </summary>
         public static long DEFAULT_SASL_OAUTHBEARER_JWKS_ENDPOINT_RETRY_BACKOFF_MS { get { if (!_DEFAULT_SASL_OAUTHBEARER_JWKS_ENDPOINT_RETRY_BACKOFF_MSReady) { _DEFAULT_SASL_OAUTHBEARER_JWKS_ENDPOINT_RETRY_BACKOFF_MSContent = SGetField<long>(LocalBridgeClazz, "DEFAULT_SASL_OAUTHBEARER_JWKS_ENDPOINT_RETRY_BACKOFF_MS"); _DEFAULT_SASL_OAUTHBEARER_JWKS_ENDPOINT_RETRY_BACKOFF_MSReady = true; } return _DEFAULT_SASL_OAUTHBEARER_JWKS_ENDPOINT_RETRY_BACKOFF_MSContent; } }
         private static long _DEFAULT_SASL_OAUTHBEARER_JWKS_ENDPOINT_RETRY_BACKOFF_MSContent = default;
         private static bool _DEFAULT_SASL_OAUTHBEARER_JWKS_ENDPOINT_RETRY_BACKOFF_MSReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/config/SaslConfigs.html#DEFAULT_LOGIN_REFRESH_BUFFER_SECONDS"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/config/SaslConfigs.html#DEFAULT_LOGIN_REFRESH_BUFFER_SECONDS"/>
         /// </summary>
         public static short DEFAULT_LOGIN_REFRESH_BUFFER_SECONDS { get { if (!_DEFAULT_LOGIN_REFRESH_BUFFER_SECONDSReady) { _DEFAULT_LOGIN_REFRESH_BUFFER_SECONDSContent = SGetField<short>(LocalBridgeClazz, "DEFAULT_LOGIN_REFRESH_BUFFER_SECONDS"); _DEFAULT_LOGIN_REFRESH_BUFFER_SECONDSReady = true; } return _DEFAULT_LOGIN_REFRESH_BUFFER_SECONDSContent; } }
         private static short _DEFAULT_LOGIN_REFRESH_BUFFER_SECONDSContent = default;
         private static bool _DEFAULT_LOGIN_REFRESH_BUFFER_SECONDSReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/config/SaslConfigs.html#DEFAULT_LOGIN_REFRESH_MIN_PERIOD_SECONDS"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/config/SaslConfigs.html#DEFAULT_LOGIN_REFRESH_MIN_PERIOD_SECONDS"/>
         /// </summary>
         public static short DEFAULT_LOGIN_REFRESH_MIN_PERIOD_SECONDS { get { if (!_DEFAULT_LOGIN_REFRESH_MIN_PERIOD_SECONDSReady) { _DEFAULT_LOGIN_REFRESH_MIN_PERIOD_SECONDSContent = SGetField<short>(LocalBridgeClazz, "DEFAULT_LOGIN_REFRESH_MIN_PERIOD_SECONDS"); _DEFAULT_LOGIN_REFRESH_MIN_PERIOD_SECONDSReady = true; } return _DEFAULT_LOGIN_REFRESH_MIN_PERIOD_SECONDSContent; } }
         private static short _DEFAULT_LOGIN_REFRESH_MIN_PERIOD_SECONDSContent = default;
@@ -549,7 +549,7 @@ namespace Org.Apache.Kafka.Common.Config
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/config/SaslConfigs.html#addClientSaslSupport-org.apache.kafka.common.config.ConfigDef-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/config/SaslConfigs.html#addClientSaslSupport-org.apache.kafka.common.config.ConfigDef-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Config.ConfigDef"/></param>
         public static void AddClientSaslSupport(Org.Apache.Kafka.Common.Config.ConfigDef arg0)

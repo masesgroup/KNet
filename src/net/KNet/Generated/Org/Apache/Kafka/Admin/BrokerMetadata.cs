@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Admin
 {
     #region BrokerMetadata declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/3.9.0/org/apache/kafka/admin/BrokerMetadata.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/3.9.1/org/apache/kafka/admin/BrokerMetadata.html"/>
     /// </summary>
     public partial class BrokerMetadata : MASES.JCOBridge.C2JBridge.JVMBridgeBase<BrokerMetadata>
     {
@@ -75,7 +75,7 @@ namespace Org.Apache.Kafka.Admin
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/3.9.0/org/apache/kafka/admin/BrokerMetadata.html#org.apache.kafka.admin.BrokerMetadata(int,java.util.Optional)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/3.9.1/org/apache/kafka/admin/BrokerMetadata.html#org.apache.kafka.admin.BrokerMetadata(int,java.util.Optional)"/>
         /// </summary>
         /// <param name="arg0"><see cref="int"/></param>
         /// <param name="arg1"><see cref="Java.Util.Optional"/></param>
@@ -92,13 +92,13 @@ namespace Org.Apache.Kafka.Admin
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/3.9.0/org/apache/kafka/admin/BrokerMetadata.html#id"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/3.9.1/org/apache/kafka/admin/BrokerMetadata.html#id"/>
         /// </summary>
         public int id { get { if (!_idReady) { _idContent = IGetField<int>("id"); _idReady = true; } return _idContent; } }
         private int _idContent = default;
         private bool _idReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/3.9.0/org/apache/kafka/admin/BrokerMetadata.html#rack"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/3.9.1/org/apache/kafka/admin/BrokerMetadata.html#rack"/>
         /// </summary>
         public Java.Util.Optional rack { get { if (!_rackReady) { _rackContent = IGetField<Java.Util.Optional>("rack"); _rackReady = true; } return _rackContent; } }
         private Java.Util.Optional _rackContent = default;

@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common.Metrics.Stats
 {
     #region Frequency declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/metrics/stats/Frequency.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/metrics/stats/Frequency.html"/>
     /// </summary>
     public partial class Frequency : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Frequency>
     {
@@ -75,7 +75,7 @@ namespace Org.Apache.Kafka.Common.Metrics.Stats
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/metrics/stats/Frequency.html#org.apache.kafka.common.metrics.stats.Frequency(org.apache.kafka.common.MetricName,double)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/metrics/stats/Frequency.html#org.apache.kafka.common.metrics.stats.Frequency(org.apache.kafka.common.MetricName,double)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.MetricName"/></param>
         /// <param name="arg1"><see cref="double"/></param>
@@ -100,7 +100,7 @@ namespace Org.Apache.Kafka.Common.Metrics.Stats
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/metrics/stats/Frequency.html#centerValue--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/metrics/stats/Frequency.html#centerValue--"/>
         /// </summary>
         /// <returns><see cref="double"/></returns>
         public double CenterValue()
@@ -108,7 +108,7 @@ namespace Org.Apache.Kafka.Common.Metrics.Stats
             return IExecuteWithSignature<double>("centerValue", "()D");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/metrics/stats/Frequency.html#name--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/metrics/stats/Frequency.html#name--"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.MetricName"/></returns>
         public Org.Apache.Kafka.Common.MetricName Name()

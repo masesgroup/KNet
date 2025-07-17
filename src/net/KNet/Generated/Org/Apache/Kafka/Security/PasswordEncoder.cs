@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Security
 {
     #region PasswordEncoder declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/3.9.0/org/apache/kafka/security/PasswordEncoder.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/3.9.1/org/apache/kafka/security/PasswordEncoder.html"/>
     /// </summary>
     public partial class PasswordEncoder : MASES.JCOBridge.C2JBridge.JVMBridgeBase<PasswordEncoder>
     {
@@ -103,55 +103,55 @@ namespace Org.Apache.Kafka.Security
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/3.9.0/org/apache/kafka/security/PasswordEncoder.html#CIPHER_ALGORITHM"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/3.9.1/org/apache/kafka/security/PasswordEncoder.html#CIPHER_ALGORITHM"/>
         /// </summary>
         public static Java.Lang.String CIPHER_ALGORITHM { get { if (!_CIPHER_ALGORITHMReady) { _CIPHER_ALGORITHMContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "CIPHER_ALGORITHM"); _CIPHER_ALGORITHMReady = true; } return _CIPHER_ALGORITHMContent; } }
         private static Java.Lang.String _CIPHER_ALGORITHMContent = default;
         private static bool _CIPHER_ALGORITHMReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/3.9.0/org/apache/kafka/security/PasswordEncoder.html#ENCRYPTED_PASSWORD"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/3.9.1/org/apache/kafka/security/PasswordEncoder.html#ENCRYPTED_PASSWORD"/>
         /// </summary>
         public static Java.Lang.String ENCRYPTED_PASSWORD { get { if (!_ENCRYPTED_PASSWORDReady) { _ENCRYPTED_PASSWORDContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "ENCRYPTED_PASSWORD"); _ENCRYPTED_PASSWORDReady = true; } return _ENCRYPTED_PASSWORDContent; } }
         private static Java.Lang.String _ENCRYPTED_PASSWORDContent = default;
         private static bool _ENCRYPTED_PASSWORDReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/3.9.0/org/apache/kafka/security/PasswordEncoder.html#INITIALIZATION_VECTOR"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/3.9.1/org/apache/kafka/security/PasswordEncoder.html#INITIALIZATION_VECTOR"/>
         /// </summary>
         public static Java.Lang.String INITIALIZATION_VECTOR { get { if (!_INITIALIZATION_VECTORReady) { _INITIALIZATION_VECTORContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "INITIALIZATION_VECTOR"); _INITIALIZATION_VECTORReady = true; } return _INITIALIZATION_VECTORContent; } }
         private static Java.Lang.String _INITIALIZATION_VECTORContent = default;
         private static bool _INITIALIZATION_VECTORReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/3.9.0/org/apache/kafka/security/PasswordEncoder.html#ITERATIONS"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/3.9.1/org/apache/kafka/security/PasswordEncoder.html#ITERATIONS"/>
         /// </summary>
         public static Java.Lang.String ITERATIONS { get { if (!_ITERATIONSReady) { _ITERATIONSContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "ITERATIONS"); _ITERATIONSReady = true; } return _ITERATIONSContent; } }
         private static Java.Lang.String _ITERATIONSContent = default;
         private static bool _ITERATIONSReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/3.9.0/org/apache/kafka/security/PasswordEncoder.html#KEY_FACTORY_ALGORITHM"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/3.9.1/org/apache/kafka/security/PasswordEncoder.html#KEY_FACTORY_ALGORITHM"/>
         /// </summary>
         public static Java.Lang.String KEY_FACTORY_ALGORITHM { get { if (!_KEY_FACTORY_ALGORITHMReady) { _KEY_FACTORY_ALGORITHMContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "KEY_FACTORY_ALGORITHM"); _KEY_FACTORY_ALGORITHMReady = true; } return _KEY_FACTORY_ALGORITHMContent; } }
         private static Java.Lang.String _KEY_FACTORY_ALGORITHMContent = default;
         private static bool _KEY_FACTORY_ALGORITHMReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/3.9.0/org/apache/kafka/security/PasswordEncoder.html#KEY_LENGTH"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/3.9.1/org/apache/kafka/security/PasswordEncoder.html#KEY_LENGTH"/>
         /// </summary>
         public static Java.Lang.String KEY_LENGTH { get { if (!_KEY_LENGTHReady) { _KEY_LENGTHContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "KEY_LENGTH"); _KEY_LENGTHReady = true; } return _KEY_LENGTHContent; } }
         private static Java.Lang.String _KEY_LENGTHContent = default;
         private static bool _KEY_LENGTHReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/3.9.0/org/apache/kafka/security/PasswordEncoder.html#PASSWORD_LENGTH"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/3.9.1/org/apache/kafka/security/PasswordEncoder.html#PASSWORD_LENGTH"/>
         /// </summary>
         public static Java.Lang.String PASSWORD_LENGTH { get { if (!_PASSWORD_LENGTHReady) { _PASSWORD_LENGTHContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "PASSWORD_LENGTH"); _PASSWORD_LENGTHReady = true; } return _PASSWORD_LENGTHContent; } }
         private static Java.Lang.String _PASSWORD_LENGTHContent = default;
         private static bool _PASSWORD_LENGTHReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/3.9.0/org/apache/kafka/security/PasswordEncoder.html#SALT"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/3.9.1/org/apache/kafka/security/PasswordEncoder.html#SALT"/>
         /// </summary>
         public static Java.Lang.String SALT { get { if (!_SALTReady) { _SALTContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "SALT"); _SALTReady = true; } return _SALTContent; } }
         private static Java.Lang.String _SALTContent = default;
         private static bool _SALTReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/3.9.0/org/apache/kafka/security/PasswordEncoder.html#NOOP"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/3.9.1/org/apache/kafka/security/PasswordEncoder.html#NOOP"/>
         /// </summary>
         public static Org.Apache.Kafka.Security.PasswordEncoder NOOP { get { if (!_NOOPReady) { _NOOPContent = SGetField<Org.Apache.Kafka.Security.PasswordEncoder>(LocalBridgeClazz, "NOOP"); _NOOPReady = true; } return _NOOPContent; } }
         private static Org.Apache.Kafka.Security.PasswordEncoder _NOOPContent = default;
@@ -161,7 +161,7 @@ namespace Org.Apache.Kafka.Security
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/3.9.0/org/apache/kafka/security/PasswordEncoder.html#base64Decode-java.lang.String-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/3.9.1/org/apache/kafka/security/PasswordEncoder.html#base64Decode-java.lang.String-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="byte"/></returns>
@@ -170,7 +170,7 @@ namespace Org.Apache.Kafka.Security
             return SExecuteWithSignatureArray<byte>(LocalBridgeClazz, "base64Decode", "(Ljava/lang/String;)[B", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/3.9.0/org/apache/kafka/security/PasswordEncoder.html#base64Encode-byte[]-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/3.9.1/org/apache/kafka/security/PasswordEncoder.html#base64Encode-byte[]-"/>
         /// </summary>
         /// <param name="arg0"><see cref="byte"/></param>
         /// <returns><see cref="Java.Lang.String"/></returns>
@@ -179,7 +179,7 @@ namespace Org.Apache.Kafka.Security
             return SExecuteWithSignature<Java.Lang.String>(LocalBridgeClazz, "base64Encode", "([B)Ljava/lang/String;", new object[] { arg0 });
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/3.9.0/org/apache/kafka/security/PasswordEncoder.html#encrypting-org.apache.kafka.common.config.types.Password-java.lang.String-java.lang.String-int-int-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/3.9.1/org/apache/kafka/security/PasswordEncoder.html#encrypting-org.apache.kafka.common.config.types.Password-java.lang.String-java.lang.String-int-int-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Config.Types.Password"/></param>
         /// <param name="arg1"><see cref="Java.Lang.String"/></param>
@@ -196,7 +196,7 @@ namespace Org.Apache.Kafka.Security
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/3.9.0/org/apache/kafka/security/PasswordEncoder.html#encode-org.apache.kafka.common.config.types.Password-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/3.9.1/org/apache/kafka/security/PasswordEncoder.html#encode-org.apache.kafka.common.config.types.Password-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Config.Types.Password"/></param>
         /// <returns><see cref="Java.Lang.String"/></returns>
@@ -206,7 +206,7 @@ namespace Org.Apache.Kafka.Security
             return IExecuteWithSignature<Java.Lang.String>("encode", "(Lorg/apache/kafka/common/config/types/Password;)Ljava/lang/String;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/3.9.0/org/apache/kafka/security/PasswordEncoder.html#decode-java.lang.String-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/3.9.1/org/apache/kafka/security/PasswordEncoder.html#decode-java.lang.String-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.Config.Types.Password"/></returns>

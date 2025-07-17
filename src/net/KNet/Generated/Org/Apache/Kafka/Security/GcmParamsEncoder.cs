@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Security
 {
     #region GcmParamsEncoder declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/3.9.0/org/apache/kafka/security/GcmParamsEncoder.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/3.9.1/org/apache/kafka/security/GcmParamsEncoder.html"/>
     /// </summary>
     public partial class GcmParamsEncoder : Org.Apache.Kafka.Security.CipherParamsEncoder
     {
@@ -91,7 +91,7 @@ namespace Org.Apache.Kafka.Security
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/3.9.0/org/apache/kafka/security/GcmParamsEncoder.html#toParameterSpec-java.util.Map-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/3.9.1/org/apache/kafka/security/GcmParamsEncoder.html#toParameterSpec-java.util.Map-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <returns><see cref="Java.Security.Spec.AlgorithmParameterSpec"/></returns>
@@ -100,7 +100,7 @@ namespace Org.Apache.Kafka.Security
             return IExecuteWithSignature<Java.Security.Spec.AlgorithmParameterSpec>("toParameterSpec", "(Ljava/util/Map;)Ljava/security/spec/AlgorithmParameterSpec;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/3.9.0/org/apache/kafka/security/GcmParamsEncoder.html#toMap-java.security.AlgorithmParameters-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/3.9.1/org/apache/kafka/security/GcmParamsEncoder.html#toMap-java.security.AlgorithmParameters-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Security.AlgorithmParameters"/></param>
         /// <returns><see cref="Java.Util.Map"/></returns>

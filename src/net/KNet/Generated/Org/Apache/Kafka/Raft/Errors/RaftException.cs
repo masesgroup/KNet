@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Raft.Errors
 {
     #region RaftException declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.0/org/apache/kafka/raft/errors/RaftException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.1/org/apache/kafka/raft/errors/RaftException.html"/>
     /// </summary>
     public partial class RaftException : Org.Apache.Kafka.Common.KafkaException
     {

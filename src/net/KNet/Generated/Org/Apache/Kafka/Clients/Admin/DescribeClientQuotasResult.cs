@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 {
     #region DescribeClientQuotasResult declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/admin/DescribeClientQuotasResult.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/admin/DescribeClientQuotasResult.html"/>
     /// </summary>
     public partial class DescribeClientQuotasResult : MASES.JCOBridge.C2JBridge.JVMBridgeBase<DescribeClientQuotasResult>
     {
@@ -75,7 +75,7 @@ namespace Org.Apache.Kafka.Clients.Admin
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/admin/DescribeClientQuotasResult.html#org.apache.kafka.clients.admin.DescribeClientQuotasResult(org.apache.kafka.common.KafkaFuture)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/admin/DescribeClientQuotasResult.html#org.apache.kafka.clients.admin.DescribeClientQuotasResult(org.apache.kafka.common.KafkaFuture)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.KafkaFuture"/></param>
         public DescribeClientQuotasResult(Org.Apache.Kafka.Common.KafkaFuture<Java.Util.Map<Org.Apache.Kafka.Common.Quota.ClientQuotaEntity, Java.Util.Map<Java.Lang.String, Java.Lang.Double>>> arg0)
@@ -99,7 +99,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/admin/DescribeClientQuotasResult.html#entities--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/admin/DescribeClientQuotasResult.html#entities--"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.KafkaFuture"/></returns>
         public Org.Apache.Kafka.Common.KafkaFuture<Java.Util.Map<Org.Apache.Kafka.Common.Quota.ClientQuotaEntity, Java.Util.Map<Java.Lang.String, Java.Lang.Double>>> Entities()

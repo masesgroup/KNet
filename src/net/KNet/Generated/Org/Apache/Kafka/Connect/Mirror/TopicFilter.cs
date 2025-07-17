@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
 {
     #region TopicFilter declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.9.0/org/apache/kafka/connect/mirror/TopicFilter.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.9.1/org/apache/kafka/connect/mirror/TopicFilter.html"/>
     /// </summary>
     public partial class TopicFilter : MASES.JCOBridge.C2JBridge.JVMBridgeBase<TopicFilter>
     {
@@ -119,7 +119,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.9.0/org/apache/kafka/connect/mirror/TopicFilter.html#shouldReplicateTopic-java.lang.String-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.9.1/org/apache/kafka/connect/mirror/TopicFilter.html#shouldReplicateTopic-java.lang.String-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="bool"/></returns>
@@ -128,14 +128,14 @@ namespace Org.Apache.Kafka.Connect.Mirror
             return IExecuteWithSignature<bool>("shouldReplicateTopic", "(Ljava/lang/String;)Z", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.9.0/org/apache/kafka/connect/mirror/TopicFilter.html#close--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.9.1/org/apache/kafka/connect/mirror/TopicFilter.html#close--"/>
         /// </summary>
         public void Close()
         {
             IExecuteWithSignature("close", "()V");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.9.0/org/apache/kafka/connect/mirror/TopicFilter.html#configure-java.util.Map-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.9.1/org/apache/kafka/connect/mirror/TopicFilter.html#configure-java.util.Map-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         public void Configure(Java.Util.Map<Java.Lang.String, object> arg0)

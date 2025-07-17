@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common.Errors
 {
     #region FencedInstanceIdException declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/errors/FencedInstanceIdException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/errors/FencedInstanceIdException.html"/>
     /// </summary>
     public partial class FencedInstanceIdException : Org.Apache.Kafka.Common.Errors.ApiException
     {

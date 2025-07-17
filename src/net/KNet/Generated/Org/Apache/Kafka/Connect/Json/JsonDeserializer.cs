@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Connect.Json
 {
     #region JsonDeserializer declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-json/3.9.0/org/apache/kafka/connect/json/JsonDeserializer.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-json/3.9.1/org/apache/kafka/connect/json/JsonDeserializer.html"/>
     /// </summary>
     public partial class JsonDeserializer : MASES.JCOBridge.C2JBridge.JVMBridgeBase<JsonDeserializer>
     {
@@ -95,7 +95,7 @@ namespace Org.Apache.Kafka.Connect.Json
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-json/3.9.0/org/apache/kafka/connect/json/JsonDeserializer.html#deserialize-java.lang.String-byte[]-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-json/3.9.1/org/apache/kafka/connect/json/JsonDeserializer.html#deserialize-java.lang.String-byte[]-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="byte"/></param>

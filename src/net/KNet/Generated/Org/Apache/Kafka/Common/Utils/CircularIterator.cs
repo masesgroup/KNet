@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common.Utils
 {
     #region CircularIterator declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/utils/CircularIterator.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/utils/CircularIterator.html"/>
     /// </summary>
     public partial class CircularIterator : Java.Util.Iterator
     {
@@ -72,7 +72,7 @@ namespace Org.Apache.Kafka.Common.Utils
 
     #region CircularIterator<T> declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/utils/CircularIterator.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/utils/CircularIterator.html"/>
     /// </summary>
     /// <typeparam name="T"></typeparam>
     public partial class CircularIterator<T> : Java.Util.Iterator<T>
@@ -121,7 +121,7 @@ namespace Org.Apache.Kafka.Common.Utils
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/utils/CircularIterator.html#org.apache.kafka.common.utils.CircularIterator(java.util.Collection)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/utils/CircularIterator.html#org.apache.kafka.common.utils.CircularIterator(java.util.Collection)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Collection"/></param>
         public CircularIterator(Java.Util.Collection arg0)
@@ -145,7 +145,7 @@ namespace Org.Apache.Kafka.Common.Utils
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/utils/CircularIterator.html#hasNext--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/utils/CircularIterator.html#hasNext--"/>
         /// </summary>
         /// <returns><see cref="bool"/></returns>
         public bool HasNext()
@@ -153,7 +153,7 @@ namespace Org.Apache.Kafka.Common.Utils
             return IExecuteWithSignature<bool>("hasNext", "()Z");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/utils/CircularIterator.html#next--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/utils/CircularIterator.html#next--"/>
         /// </summary>
         /// <returns><see cref="object"/></returns>
         public object Next()
@@ -161,7 +161,7 @@ namespace Org.Apache.Kafka.Common.Utils
             return IExecuteWithSignature("next", "()Ljava/lang/Object;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/utils/CircularIterator.html#peek--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/utils/CircularIterator.html#peek--"/>
         /// </summary>
         /// <returns><see cref="object"/></returns>
         public object Peek()
@@ -169,7 +169,7 @@ namespace Org.Apache.Kafka.Common.Utils
             return IExecuteWithSignature("peek", "()Ljava/lang/Object;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/utils/CircularIterator.html#remove--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/utils/CircularIterator.html#remove--"/>
         /// </summary>
         public void Remove()
         {
@@ -191,7 +191,7 @@ namespace Org.Apache.Kafka.Common.Utils
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/utils/CircularIterator.html#org.apache.kafka.common.utils.CircularIterator(java.util.Collection)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/utils/CircularIterator.html#org.apache.kafka.common.utils.CircularIterator(java.util.Collection)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Collection"/></param>
         public CircularIterator(Java.Util.Collection<T> arg0)
@@ -219,7 +219,7 @@ namespace Org.Apache.Kafka.Common.Utils
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/utils/CircularIterator.html#hasNext--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/utils/CircularIterator.html#hasNext--"/>
         /// </summary>
         /// <returns><see cref="bool"/></returns>
         public bool HasNext()
@@ -227,7 +227,7 @@ namespace Org.Apache.Kafka.Common.Utils
             return IExecuteWithSignature<bool>("hasNext", "()Z");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/utils/CircularIterator.html#next--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/utils/CircularIterator.html#next--"/>
         /// </summary>
         /// <returns><typeparamref name="T"/></returns>
         public T Next()
@@ -235,7 +235,7 @@ namespace Org.Apache.Kafka.Common.Utils
             return IExecuteWithSignature<T>("next", "()Ljava/lang/Object;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/utils/CircularIterator.html#peek--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/utils/CircularIterator.html#peek--"/>
         /// </summary>
         /// <returns><typeparamref name="T"/></returns>
         public T Peek()
@@ -243,7 +243,7 @@ namespace Org.Apache.Kafka.Common.Utils
             return IExecuteWithSignature<T>("peek", "()Ljava/lang/Object;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/utils/CircularIterator.html#remove--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/utils/CircularIterator.html#remove--"/>
         /// </summary>
         public void Remove()
         {

@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Connect.Mirror.Formatters
 {
     #region HeartbeatFormatter declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.9.0/org/apache/kafka/connect/mirror/formatters/HeartbeatFormatter.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.9.1/org/apache/kafka/connect/mirror/formatters/HeartbeatFormatter.html"/>
     /// </summary>
     public partial class HeartbeatFormatter : Org.Apache.Kafka.Common.MessageFormatter
     {
@@ -91,7 +91,7 @@ namespace Org.Apache.Kafka.Connect.Mirror.Formatters
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.9.0/org/apache/kafka/connect/mirror/formatters/HeartbeatFormatter.html#writeTo-org.apache.kafka.clients.consumer.ConsumerRecord-java.io.PrintStream-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.9.1/org/apache/kafka/connect/mirror/formatters/HeartbeatFormatter.html#writeTo-org.apache.kafka.clients.consumer.ConsumerRecord-java.io.PrintStream-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Clients.Consumer.ConsumerRecord"/></param>
         /// <param name="arg1"><see cref="Java.Io.PrintStream"/></param>

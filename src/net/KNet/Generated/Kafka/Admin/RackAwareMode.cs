@@ -27,7 +27,7 @@ namespace Kafka.Admin
 {
     #region RackAwareMode declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.9.0/kafka/admin/RackAwareMode.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.9.1/kafka/admin/RackAwareMode.html"/>
     /// </summary>
     public partial class RackAwareMode : MASES.JCOBridge.C2JBridge.JVMBridgeBase<RackAwareMode>
     {

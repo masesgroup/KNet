@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Streams.Errors
 {
     #region InvalidStateStoreException declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.0/org/apache/kafka/streams/errors/InvalidStateStoreException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/errors/InvalidStateStoreException.html"/>
     /// </summary>
     public partial class InvalidStateStoreException : Org.Apache.Kafka.Streams.Errors.StreamsException
     {

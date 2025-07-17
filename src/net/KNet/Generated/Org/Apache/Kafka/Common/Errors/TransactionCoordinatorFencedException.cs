@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common.Errors
 {
     #region TransactionCoordinatorFencedException declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/errors/TransactionCoordinatorFencedException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/errors/TransactionCoordinatorFencedException.html"/>
     /// </summary>
     public partial class TransactionCoordinatorFencedException : Org.Apache.Kafka.Common.Errors.ApiException
     {

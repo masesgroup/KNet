@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common.Security.Scram
 {
     #region ScramLoginModule declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/security/scram/ScramLoginModule.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/security/scram/ScramLoginModule.html"/>
     /// </summary>
     public partial class ScramLoginModule : Javax.Security.Auth.Spi.LoginModule
     {
@@ -83,7 +83,7 @@ namespace Org.Apache.Kafka.Common.Security.Scram
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/security/scram/ScramLoginModule.html#TOKEN_AUTH_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/security/scram/ScramLoginModule.html#TOKEN_AUTH_CONFIG"/>
         /// </summary>
         public static Java.Lang.String TOKEN_AUTH_CONFIG { get { if (!_TOKEN_AUTH_CONFIGReady) { _TOKEN_AUTH_CONFIGContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "TOKEN_AUTH_CONFIG"); _TOKEN_AUTH_CONFIGReady = true; } return _TOKEN_AUTH_CONFIGContent; } }
         private static Java.Lang.String _TOKEN_AUTH_CONFIGContent = default;
@@ -97,7 +97,7 @@ namespace Org.Apache.Kafka.Common.Security.Scram
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/security/scram/ScramLoginModule.html#abort--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/security/scram/ScramLoginModule.html#abort--"/>
         /// </summary>
         /// <returns><see cref="bool"/></returns>
         public bool Abort()
@@ -105,7 +105,7 @@ namespace Org.Apache.Kafka.Common.Security.Scram
             return IExecuteWithSignature<bool>("abort", "()Z");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/security/scram/ScramLoginModule.html#commit--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/security/scram/ScramLoginModule.html#commit--"/>
         /// </summary>
         /// <returns><see cref="bool"/></returns>
         public bool Commit()
@@ -113,7 +113,7 @@ namespace Org.Apache.Kafka.Common.Security.Scram
             return IExecuteWithSignature<bool>("commit", "()Z");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/security/scram/ScramLoginModule.html#login--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/security/scram/ScramLoginModule.html#login--"/>
         /// </summary>
         /// <returns><see cref="bool"/></returns>
         public bool Login()
@@ -121,7 +121,7 @@ namespace Org.Apache.Kafka.Common.Security.Scram
             return IExecuteWithSignature<bool>("login", "()Z");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/security/scram/ScramLoginModule.html#logout--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/security/scram/ScramLoginModule.html#logout--"/>
         /// </summary>
         /// <returns><see cref="bool"/></returns>
         public bool Logout()
@@ -129,7 +129,7 @@ namespace Org.Apache.Kafka.Common.Security.Scram
             return IExecuteWithSignature<bool>("logout", "()Z");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/security/scram/ScramLoginModule.html#initialize-javax.security.auth.Subject-javax.security.auth.callback.CallbackHandler-java.util.Map-java.util.Map-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/security/scram/ScramLoginModule.html#initialize-javax.security.auth.Subject-javax.security.auth.callback.CallbackHandler-java.util.Map-java.util.Map-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Javax.Security.Auth.Subject"/></param>
         /// <param name="arg1"><see cref="Javax.Security.Auth.Callback.CallbackHandler"/></param>

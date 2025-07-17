@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Clients
 {
     #region NodeApiVersions declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/NodeApiVersions.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/NodeApiVersions.html"/>
     /// </summary>
     public partial class NodeApiVersions : MASES.JCOBridge.C2JBridge.JVMBridgeBase<NodeApiVersions>
     {
@@ -87,7 +87,7 @@ namespace Org.Apache.Kafka.Clients
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/NodeApiVersions.html#create--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/NodeApiVersions.html#create--"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Clients.NodeApiVersions"/></returns>
         public static Org.Apache.Kafka.Clients.NodeApiVersions Create()
@@ -95,7 +95,7 @@ namespace Org.Apache.Kafka.Clients
             return SExecuteWithSignature<Org.Apache.Kafka.Clients.NodeApiVersions>(LocalBridgeClazz, "create", "()Lorg/apache/kafka/clients/NodeApiVersions;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/NodeApiVersions.html#create-short-short-short-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/NodeApiVersions.html#create-short-short-short-"/>
         /// </summary>
         /// <param name="arg0"><see cref="short"/></param>
         /// <param name="arg1"><see cref="short"/></param>
@@ -110,7 +110,7 @@ namespace Org.Apache.Kafka.Clients
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/NodeApiVersions.html#zkMigrationEnabled--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/NodeApiVersions.html#zkMigrationEnabled--"/>
         /// </summary>
         /// <returns><see cref="bool"/></returns>
         public bool ZkMigrationEnabled()
@@ -118,7 +118,7 @@ namespace Org.Apache.Kafka.Clients
             return IExecuteWithSignature<bool>("zkMigrationEnabled", "()Z");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/NodeApiVersions.html#toString-boolean-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/NodeApiVersions.html#toString-boolean-"/>
         /// </summary>
         /// <param name="arg0"><see cref="bool"/></param>
         /// <returns><see cref="Java.Lang.String"/></returns>

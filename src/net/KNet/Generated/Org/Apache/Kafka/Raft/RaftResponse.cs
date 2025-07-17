@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Raft
 {
     #region RaftResponse declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.0/org/apache/kafka/raft/RaftResponse.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.1/org/apache/kafka/raft/RaftResponse.html"/>
     /// </summary>
     public partial class RaftResponse : Org.Apache.Kafka.Raft.RaftMessage
     {
@@ -70,7 +70,7 @@ namespace Org.Apache.Kafka.Raft
         // TODO: complete the class
         #region Inbound declaration
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.0/org/apache/kafka/raft/RaftResponse.Inbound.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.1/org/apache/kafka/raft/RaftResponse.Inbound.html"/>
         /// </summary>
         public partial class Inbound : Org.Apache.Kafka.Raft.RaftResponse
         {
@@ -115,7 +115,7 @@ namespace Org.Apache.Kafka.Raft
 
         #region Outbound declaration
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.0/org/apache/kafka/raft/RaftResponse.Outbound.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.1/org/apache/kafka/raft/RaftResponse.Outbound.html"/>
         /// </summary>
         public partial class Outbound : Org.Apache.Kafka.Raft.RaftResponse
         {
@@ -183,7 +183,7 @@ namespace Org.Apache.Kafka.Raft
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.0/org/apache/kafka/raft/RaftResponse.html#correlationId--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.1/org/apache/kafka/raft/RaftResponse.html#correlationId--"/>
         /// </summary>
         /// <returns><see cref="int"/></returns>
         public int CorrelationId()
@@ -215,7 +215,7 @@ namespace Org.Apache.Kafka.Raft
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.0/org/apache/kafka/raft/RaftResponse.Inbound.html#source--"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.1/org/apache/kafka/raft/RaftResponse.Inbound.html#source--"/>
             /// </summary>
             /// <returns><see cref="Org.Apache.Kafka.Common.Node"/></returns>
             public Org.Apache.Kafka.Common.Node Source()

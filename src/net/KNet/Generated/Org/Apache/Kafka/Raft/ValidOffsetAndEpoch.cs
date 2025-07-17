@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Raft
 {
     #region ValidOffsetAndEpoch declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.0/org/apache/kafka/raft/ValidOffsetAndEpoch.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.1/org/apache/kafka/raft/ValidOffsetAndEpoch.html"/>
     /// </summary>
     public partial class ValidOffsetAndEpoch : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ValidOffsetAndEpoch>
     {
@@ -68,7 +68,7 @@ namespace Org.Apache.Kafka.Raft
         // TODO: complete the class
         #region Kind declaration
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.0/org/apache/kafka/raft/ValidOffsetAndEpoch.Kind.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.1/org/apache/kafka/raft/ValidOffsetAndEpoch.Kind.html"/>
         /// </summary>
         public partial class Kind : Java.Lang.Enum<Org.Apache.Kafka.Raft.ValidOffsetAndEpoch.Kind>
         {
@@ -132,7 +132,7 @@ namespace Org.Apache.Kafka.Raft
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.0/org/apache/kafka/raft/ValidOffsetAndEpoch.html#diverging-org.apache.kafka.raft.OffsetAndEpoch-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.1/org/apache/kafka/raft/ValidOffsetAndEpoch.html#diverging-org.apache.kafka.raft.OffsetAndEpoch-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Raft.OffsetAndEpoch"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Raft.ValidOffsetAndEpoch"/></returns>
@@ -141,7 +141,7 @@ namespace Org.Apache.Kafka.Raft
             return SExecuteWithSignature<Org.Apache.Kafka.Raft.ValidOffsetAndEpoch>(LocalBridgeClazz, "diverging", "(Lorg/apache/kafka/raft/OffsetAndEpoch;)Lorg/apache/kafka/raft/ValidOffsetAndEpoch;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.0/org/apache/kafka/raft/ValidOffsetAndEpoch.html#snapshot-org.apache.kafka.raft.OffsetAndEpoch-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.1/org/apache/kafka/raft/ValidOffsetAndEpoch.html#snapshot-org.apache.kafka.raft.OffsetAndEpoch-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Raft.OffsetAndEpoch"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Raft.ValidOffsetAndEpoch"/></returns>
@@ -150,7 +150,7 @@ namespace Org.Apache.Kafka.Raft
             return SExecuteWithSignature<Org.Apache.Kafka.Raft.ValidOffsetAndEpoch>(LocalBridgeClazz, "snapshot", "(Lorg/apache/kafka/raft/OffsetAndEpoch;)Lorg/apache/kafka/raft/ValidOffsetAndEpoch;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.0/org/apache/kafka/raft/ValidOffsetAndEpoch.html#valid--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.1/org/apache/kafka/raft/ValidOffsetAndEpoch.html#valid--"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Raft.ValidOffsetAndEpoch"/></returns>
         public static Org.Apache.Kafka.Raft.ValidOffsetAndEpoch Valid()
@@ -158,7 +158,7 @@ namespace Org.Apache.Kafka.Raft
             return SExecuteWithSignature<Org.Apache.Kafka.Raft.ValidOffsetAndEpoch>(LocalBridgeClazz, "valid", "()Lorg/apache/kafka/raft/ValidOffsetAndEpoch;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.0/org/apache/kafka/raft/ValidOffsetAndEpoch.html#valid-org.apache.kafka.raft.OffsetAndEpoch-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.1/org/apache/kafka/raft/ValidOffsetAndEpoch.html#valid-org.apache.kafka.raft.OffsetAndEpoch-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Raft.OffsetAndEpoch"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Raft.ValidOffsetAndEpoch"/></returns>
@@ -171,7 +171,7 @@ namespace Org.Apache.Kafka.Raft
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.0/org/apache/kafka/raft/ValidOffsetAndEpoch.html#offsetAndEpoch--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.1/org/apache/kafka/raft/ValidOffsetAndEpoch.html#offsetAndEpoch--"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Raft.OffsetAndEpoch"/></returns>
         public Org.Apache.Kafka.Raft.OffsetAndEpoch OffsetAndEpoch()
@@ -179,7 +179,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<Org.Apache.Kafka.Raft.OffsetAndEpoch>("offsetAndEpoch", "()Lorg/apache/kafka/raft/OffsetAndEpoch;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.0/org/apache/kafka/raft/ValidOffsetAndEpoch.html#kind--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.1/org/apache/kafka/raft/ValidOffsetAndEpoch.html#kind--"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Raft.ValidOffsetAndEpoch.Kind"/></returns>
         public Org.Apache.Kafka.Raft.ValidOffsetAndEpoch.Kind KindMethod()
@@ -203,19 +203,19 @@ namespace Org.Apache.Kafka.Raft
 
             #region Fields
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.0/org/apache/kafka/raft/ValidOffsetAndEpoch.Kind.html#DIVERGING"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.1/org/apache/kafka/raft/ValidOffsetAndEpoch.Kind.html#DIVERGING"/>
             /// </summary>
             public static Org.Apache.Kafka.Raft.ValidOffsetAndEpoch.Kind DIVERGING { get { if (!_DIVERGINGReady) { _DIVERGINGContent = SGetField<Org.Apache.Kafka.Raft.ValidOffsetAndEpoch.Kind>(LocalBridgeClazz, "DIVERGING"); _DIVERGINGReady = true; } return _DIVERGINGContent; } }
             private static Org.Apache.Kafka.Raft.ValidOffsetAndEpoch.Kind _DIVERGINGContent = default;
             private static bool _DIVERGINGReady = false; // this is used because in case of generics 
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.0/org/apache/kafka/raft/ValidOffsetAndEpoch.Kind.html#SNAPSHOT"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.1/org/apache/kafka/raft/ValidOffsetAndEpoch.Kind.html#SNAPSHOT"/>
             /// </summary>
             public static Org.Apache.Kafka.Raft.ValidOffsetAndEpoch.Kind SNAPSHOT { get { if (!_SNAPSHOTReady) { _SNAPSHOTContent = SGetField<Org.Apache.Kafka.Raft.ValidOffsetAndEpoch.Kind>(LocalBridgeClazz, "SNAPSHOT"); _SNAPSHOTReady = true; } return _SNAPSHOTContent; } }
             private static Org.Apache.Kafka.Raft.ValidOffsetAndEpoch.Kind _SNAPSHOTContent = default;
             private static bool _SNAPSHOTReady = false; // this is used because in case of generics 
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.0/org/apache/kafka/raft/ValidOffsetAndEpoch.Kind.html#VALID"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.1/org/apache/kafka/raft/ValidOffsetAndEpoch.Kind.html#VALID"/>
             /// </summary>
             public static Org.Apache.Kafka.Raft.ValidOffsetAndEpoch.Kind VALID { get { if (!_VALIDReady) { _VALIDContent = SGetField<Org.Apache.Kafka.Raft.ValidOffsetAndEpoch.Kind>(LocalBridgeClazz, "VALID"); _VALIDReady = true; } return _VALIDContent; } }
             private static Org.Apache.Kafka.Raft.ValidOffsetAndEpoch.Kind _VALIDContent = default;
@@ -225,7 +225,7 @@ namespace Org.Apache.Kafka.Raft
 
             #region Static methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.0/org/apache/kafka/raft/ValidOffsetAndEpoch.Kind.html#valueOf-java.lang.String-"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.1/org/apache/kafka/raft/ValidOffsetAndEpoch.Kind.html#valueOf-java.lang.String-"/>
             /// </summary>
             /// <param name="arg0"><see cref="Java.Lang.String"/></param>
             /// <returns><see cref="Org.Apache.Kafka.Raft.ValidOffsetAndEpoch.Kind"/></returns>
@@ -234,7 +234,7 @@ namespace Org.Apache.Kafka.Raft
                 return SExecuteWithSignature<Org.Apache.Kafka.Raft.ValidOffsetAndEpoch.Kind>(LocalBridgeClazz, "valueOf", "(Ljava/lang/String;)Lorg/apache/kafka/raft/ValidOffsetAndEpoch$Kind;", arg0);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.0/org/apache/kafka/raft/ValidOffsetAndEpoch.Kind.html#values--"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.1/org/apache/kafka/raft/ValidOffsetAndEpoch.Kind.html#values--"/>
             /// </summary>
             /// <returns><see cref="Org.Apache.Kafka.Raft.ValidOffsetAndEpoch.Kind"/></returns>
             public static Org.Apache.Kafka.Raft.ValidOffsetAndEpoch.Kind[] Values()

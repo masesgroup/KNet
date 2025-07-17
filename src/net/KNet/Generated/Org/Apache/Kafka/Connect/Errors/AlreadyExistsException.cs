@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Connect.Errors
 {
     #region AlreadyExistsException declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.0/org/apache/kafka/connect/errors/AlreadyExistsException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.1/org/apache/kafka/connect/errors/AlreadyExistsException.html"/>
     /// </summary>
     public partial class AlreadyExistsException : Org.Apache.Kafka.Connect.Errors.ConnectException
     {

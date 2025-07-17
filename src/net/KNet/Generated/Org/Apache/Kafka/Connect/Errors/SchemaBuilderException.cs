@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Connect.Errors
 {
     #region SchemaBuilderException declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.0/org/apache/kafka/connect/errors/SchemaBuilderException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.1/org/apache/kafka/connect/errors/SchemaBuilderException.html"/>
     /// </summary>
     public partial class SchemaBuilderException : Org.Apache.Kafka.Connect.Errors.DataException
     {

@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Clients
 {
     #region HostResolver declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/HostResolver.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/HostResolver.html"/>
     /// </summary>
     public partial class HostResolver : MASES.JCOBridge.C2JBridge.JVMBridgeBase<HostResolver>
     {
@@ -111,7 +111,7 @@ namespace Org.Apache.Kafka.Clients
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/HostResolver.html#resolve-java.lang.String-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/HostResolver.html#resolve-java.lang.String-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Java.Net.InetAddress"/></returns>

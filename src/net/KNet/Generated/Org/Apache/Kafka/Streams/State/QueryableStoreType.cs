@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Streams.State
 {
     #region QueryableStoreType declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.0/org/apache/kafka/streams/state/QueryableStoreType.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/state/QueryableStoreType.html"/>
     /// </summary>
     public partial class QueryableStoreType : MASES.JCOBridge.C2JBridge.JVMBridgeBase<QueryableStoreType>
     {
@@ -74,7 +74,7 @@ namespace Org.Apache.Kafka.Streams.State
 
     #region QueryableStoreType<T> declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.0/org/apache/kafka/streams/state/QueryableStoreType.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/state/QueryableStoreType.html"/>
     /// </summary>
     /// <typeparam name="T"></typeparam>
     public partial class QueryableStoreType<T> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<QueryableStoreType<T>>
@@ -141,7 +141,7 @@ namespace Org.Apache.Kafka.Streams.State
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.0/org/apache/kafka/streams/state/QueryableStoreType.html#accepts-org.apache.kafka.streams.processor.StateStore-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/state/QueryableStoreType.html#accepts-org.apache.kafka.streams.processor.StateStore-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Processor.StateStore"/></param>
         /// <returns><see cref="bool"/></returns>
@@ -203,7 +203,7 @@ namespace Org.Apache.Kafka.Streams.State
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.0/org/apache/kafka/streams/state/QueryableStoreType.html#accepts-org.apache.kafka.streams.processor.StateStore-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/state/QueryableStoreType.html#accepts-org.apache.kafka.streams.processor.StateStore-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Processor.StateStore"/></param>
         /// <returns><see cref="bool"/></returns>

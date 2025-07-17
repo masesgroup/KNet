@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common.Errors
 {
     #region InvalidShareSessionEpochException declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/errors/InvalidShareSessionEpochException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/errors/InvalidShareSessionEpochException.html"/>
     /// </summary>
     public partial class InvalidShareSessionEpochException : Org.Apache.Kafka.Common.Errors.RetriableException
     {

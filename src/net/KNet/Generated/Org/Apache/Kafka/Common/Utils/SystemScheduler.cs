@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common.Utils
 {
     #region SystemScheduler declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/utils/SystemScheduler.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/utils/SystemScheduler.html"/>
     /// </summary>
     public partial class SystemScheduler : Org.Apache.Kafka.Common.Utils.Scheduler
     {
@@ -91,7 +91,7 @@ namespace Org.Apache.Kafka.Common.Utils
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/utils/SystemScheduler.html#schedule-java.util.concurrent.ScheduledExecutorService-java.util.concurrent.Callable-long-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/utils/SystemScheduler.html#schedule-java.util.concurrent.ScheduledExecutorService-java.util.concurrent.Callable-long-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Concurrent.ScheduledExecutorService"/></param>
         /// <param name="arg1"><see cref="Java.Util.Concurrent.Callable"/></param>
@@ -103,7 +103,7 @@ namespace Org.Apache.Kafka.Common.Utils
             return IExecuteWithSignature<Java.Util.Concurrent.Future<T>>("schedule", "(Ljava/util/concurrent/ScheduledExecutorService;Ljava/util/concurrent/Callable;J)Ljava/util/concurrent/Future;", arg0, arg1, arg2);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/utils/SystemScheduler.html#time--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/utils/SystemScheduler.html#time--"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.Utils.Time"/></returns>
         public Org.Apache.Kafka.Common.Utils.Time Time()

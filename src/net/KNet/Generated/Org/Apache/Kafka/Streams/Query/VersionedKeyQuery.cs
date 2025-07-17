@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Streams.Query
 {
     #region VersionedKeyQuery declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.0/org/apache/kafka/streams/query/VersionedKeyQuery.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/query/VersionedKeyQuery.html"/>
     /// </summary>
     public partial class VersionedKeyQuery : Org.Apache.Kafka.Streams.Query.Query
     {
@@ -72,7 +72,7 @@ namespace Org.Apache.Kafka.Streams.Query
 
     #region VersionedKeyQuery<K, V> declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.0/org/apache/kafka/streams/query/VersionedKeyQuery.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/query/VersionedKeyQuery.html"/>
     /// </summary>
     /// <typeparam name="K"></typeparam>
     /// <typeparam name="V"></typeparam>
@@ -134,7 +134,7 @@ namespace Org.Apache.Kafka.Streams.Query
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.0/org/apache/kafka/streams/query/VersionedKeyQuery.html#withKey-java.lang.Object-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/query/VersionedKeyQuery.html#withKey-java.lang.Object-"/>
         /// </summary>
         /// <param name="arg0"><see cref="object"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Query.VersionedKeyQuery"/></returns>
@@ -147,7 +147,7 @@ namespace Org.Apache.Kafka.Streams.Query
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.0/org/apache/kafka/streams/query/VersionedKeyQuery.html#asOfTimestamp--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/query/VersionedKeyQuery.html#asOfTimestamp--"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Optional"/></returns>
         public Java.Util.Optional AsOfTimestamp()
@@ -155,7 +155,7 @@ namespace Org.Apache.Kafka.Streams.Query
             return IExecuteWithSignature<Java.Util.Optional>("asOfTimestamp", "()Ljava/util/Optional;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.0/org/apache/kafka/streams/query/VersionedKeyQuery.html#key--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/query/VersionedKeyQuery.html#key--"/>
         /// </summary>
         /// <returns><see cref="object"/></returns>
         public object Key()
@@ -163,7 +163,7 @@ namespace Org.Apache.Kafka.Streams.Query
             return IExecuteWithSignature("key", "()Ljava/lang/Object;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.0/org/apache/kafka/streams/query/VersionedKeyQuery.html#asOf-java.time.Instant-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/query/VersionedKeyQuery.html#asOf-java.time.Instant-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Time.Instant"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Query.VersionedKeyQuery"/></returns>
@@ -203,7 +203,7 @@ namespace Org.Apache.Kafka.Streams.Query
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.0/org/apache/kafka/streams/query/VersionedKeyQuery.html#withKey-java.lang.Object-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/query/VersionedKeyQuery.html#withKey-java.lang.Object-"/>
         /// </summary>
         /// <param name="arg0"><typeparamref name="K"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Query.VersionedKeyQuery"/></returns>
@@ -216,7 +216,7 @@ namespace Org.Apache.Kafka.Streams.Query
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.0/org/apache/kafka/streams/query/VersionedKeyQuery.html#asOfTimestamp--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/query/VersionedKeyQuery.html#asOfTimestamp--"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Optional"/></returns>
         public Java.Util.Optional<Java.Time.Instant> AsOfTimestamp()
@@ -224,7 +224,7 @@ namespace Org.Apache.Kafka.Streams.Query
             return IExecuteWithSignature<Java.Util.Optional<Java.Time.Instant>>("asOfTimestamp", "()Ljava/util/Optional;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.0/org/apache/kafka/streams/query/VersionedKeyQuery.html#key--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/query/VersionedKeyQuery.html#key--"/>
         /// </summary>
         /// <returns><typeparamref name="K"/></returns>
         public K Key()
@@ -232,7 +232,7 @@ namespace Org.Apache.Kafka.Streams.Query
             return IExecuteWithSignature<K>("key", "()Ljava/lang/Object;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.0/org/apache/kafka/streams/query/VersionedKeyQuery.html#asOf-java.time.Instant-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/query/VersionedKeyQuery.html#asOf-java.time.Instant-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Time.Instant"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Query.VersionedKeyQuery"/></returns>

@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common.Utils
 {
     #region PureJavaCrc32C declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/utils/PureJavaCrc32C.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/utils/PureJavaCrc32C.html"/>
     /// </summary>
     public partial class PureJavaCrc32C : Java.Util.Zip.Checksum
     {
@@ -91,21 +91,21 @@ namespace Org.Apache.Kafka.Common.Utils
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/utils/PureJavaCrc32C.html#getValue--"/> 
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/utils/PureJavaCrc32C.html#getValue--"/> 
         /// </summary>
         public long Value
         {
             get { return IExecuteWithSignature<long>("getValue", "()J"); }
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/utils/PureJavaCrc32C.html#reset--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/utils/PureJavaCrc32C.html#reset--"/>
         /// </summary>
         public void Reset()
         {
             IExecuteWithSignature("reset", "()V");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/utils/PureJavaCrc32C.html#update-int-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/utils/PureJavaCrc32C.html#update-int-"/>
         /// </summary>
         /// <param name="arg0"><see cref="int"/></param>
         public void Update(int arg0)
@@ -113,7 +113,7 @@ namespace Org.Apache.Kafka.Common.Utils
             IExecuteWithSignature("update", "(I)V", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/utils/PureJavaCrc32C.html#update-byte[]-int-int-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/utils/PureJavaCrc32C.html#update-byte[]-int-int-"/>
         /// </summary>
         /// <param name="arg0"><see cref="byte"/></param>
         /// <param name="arg1"><see cref="int"/></param>

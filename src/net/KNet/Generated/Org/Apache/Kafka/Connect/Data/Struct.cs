@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Connect.Data
 {
     #region Struct declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.0/org/apache/kafka/connect/data/Struct.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.1/org/apache/kafka/connect/data/Struct.html"/>
     /// </summary>
     public partial class Struct : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Struct>
     {
@@ -75,7 +75,7 @@ namespace Org.Apache.Kafka.Connect.Data
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.0/org/apache/kafka/connect/data/Struct.html#org.apache.kafka.connect.data.Struct(org.apache.kafka.connect.data.Schema)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.1/org/apache/kafka/connect/data/Struct.html#org.apache.kafka.connect.data.Struct(org.apache.kafka.connect.data.Schema)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Connect.Data.Schema"/></param>
         public Struct(Org.Apache.Kafka.Connect.Data.Schema arg0)
@@ -99,7 +99,7 @@ namespace Org.Apache.Kafka.Connect.Data
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.0/org/apache/kafka/connect/data/Struct.html#getMap-java.lang.String-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.1/org/apache/kafka/connect/data/Struct.html#getMap-java.lang.String-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <typeparam name="K"></typeparam>
@@ -110,7 +110,7 @@ namespace Org.Apache.Kafka.Connect.Data
             return IExecuteWithSignature<Java.Util.Map<K, V>>("getMap", "(Ljava/lang/String;)Ljava/util/Map;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.0/org/apache/kafka/connect/data/Struct.html#getArray-java.lang.String-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.1/org/apache/kafka/connect/data/Struct.html#getArray-java.lang.String-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <typeparam name="T"></typeparam>
@@ -120,7 +120,7 @@ namespace Org.Apache.Kafka.Connect.Data
             return IExecuteWithSignature<Java.Util.List<T>>("getArray", "(Ljava/lang/String;)Ljava/util/List;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.0/org/apache/kafka/connect/data/Struct.html#getBytes-java.lang.String-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.1/org/apache/kafka/connect/data/Struct.html#getBytes-java.lang.String-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="byte"/></returns>
@@ -129,7 +129,7 @@ namespace Org.Apache.Kafka.Connect.Data
             return IExecuteWithSignatureArray<byte>("getBytes", "(Ljava/lang/String;)[B", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.0/org/apache/kafka/connect/data/Struct.html#getBoolean-java.lang.String-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.1/org/apache/kafka/connect/data/Struct.html#getBoolean-java.lang.String-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Java.Lang.Boolean"/></returns>
@@ -138,7 +138,7 @@ namespace Org.Apache.Kafka.Connect.Data
             return IExecuteWithSignature<Java.Lang.Boolean>("getBoolean", "(Ljava/lang/String;)Ljava/lang/Boolean;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.0/org/apache/kafka/connect/data/Struct.html#getInt8-java.lang.String-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.1/org/apache/kafka/connect/data/Struct.html#getInt8-java.lang.String-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Java.Lang.Byte"/></returns>
@@ -147,7 +147,7 @@ namespace Org.Apache.Kafka.Connect.Data
             return IExecuteWithSignature<Java.Lang.Byte>("getInt8", "(Ljava/lang/String;)Ljava/lang/Byte;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.0/org/apache/kafka/connect/data/Struct.html#getFloat64-java.lang.String-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.1/org/apache/kafka/connect/data/Struct.html#getFloat64-java.lang.String-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Java.Lang.Double"/></returns>
@@ -156,7 +156,7 @@ namespace Org.Apache.Kafka.Connect.Data
             return IExecuteWithSignature<Java.Lang.Double>("getFloat64", "(Ljava/lang/String;)Ljava/lang/Double;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.0/org/apache/kafka/connect/data/Struct.html#getFloat32-java.lang.String-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.1/org/apache/kafka/connect/data/Struct.html#getFloat32-java.lang.String-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Java.Lang.Float"/></returns>
@@ -165,7 +165,7 @@ namespace Org.Apache.Kafka.Connect.Data
             return IExecuteWithSignature<Java.Lang.Float>("getFloat32", "(Ljava/lang/String;)Ljava/lang/Float;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.0/org/apache/kafka/connect/data/Struct.html#getInt32-java.lang.String-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.1/org/apache/kafka/connect/data/Struct.html#getInt32-java.lang.String-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Java.Lang.Integer"/></returns>
@@ -174,7 +174,7 @@ namespace Org.Apache.Kafka.Connect.Data
             return IExecuteWithSignature<Java.Lang.Integer>("getInt32", "(Ljava/lang/String;)Ljava/lang/Integer;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.0/org/apache/kafka/connect/data/Struct.html#getInt64-java.lang.String-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.1/org/apache/kafka/connect/data/Struct.html#getInt64-java.lang.String-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Java.Lang.Long"/></returns>
@@ -183,7 +183,7 @@ namespace Org.Apache.Kafka.Connect.Data
             return IExecuteWithSignature<Java.Lang.Long>("getInt64", "(Ljava/lang/String;)Ljava/lang/Long;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.0/org/apache/kafka/connect/data/Struct.html#get-java.lang.String-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.1/org/apache/kafka/connect/data/Struct.html#get-java.lang.String-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="object"/></returns>
@@ -192,7 +192,7 @@ namespace Org.Apache.Kafka.Connect.Data
             return IExecuteWithSignature("get", "(Ljava/lang/String;)Ljava/lang/Object;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.0/org/apache/kafka/connect/data/Struct.html#get-org.apache.kafka.connect.data.Field-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.1/org/apache/kafka/connect/data/Struct.html#get-org.apache.kafka.connect.data.Field-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Connect.Data.Field"/></param>
         /// <returns><see cref="object"/></returns>
@@ -201,7 +201,7 @@ namespace Org.Apache.Kafka.Connect.Data
             return IExecuteWithSignature("get", "(Lorg/apache/kafka/connect/data/Field;)Ljava/lang/Object;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.0/org/apache/kafka/connect/data/Struct.html#getWithoutDefault-java.lang.String-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.1/org/apache/kafka/connect/data/Struct.html#getWithoutDefault-java.lang.String-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="object"/></returns>
@@ -210,7 +210,7 @@ namespace Org.Apache.Kafka.Connect.Data
             return IExecuteWithSignature("getWithoutDefault", "(Ljava/lang/String;)Ljava/lang/Object;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.0/org/apache/kafka/connect/data/Struct.html#getInt16-java.lang.String-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.1/org/apache/kafka/connect/data/Struct.html#getInt16-java.lang.String-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Java.Lang.Short"/></returns>
@@ -219,7 +219,7 @@ namespace Org.Apache.Kafka.Connect.Data
             return IExecuteWithSignature<Java.Lang.Short>("getInt16", "(Ljava/lang/String;)Ljava/lang/Short;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.0/org/apache/kafka/connect/data/Struct.html#getString-java.lang.String-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.1/org/apache/kafka/connect/data/Struct.html#getString-java.lang.String-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Java.Lang.String"/></returns>
@@ -228,7 +228,7 @@ namespace Org.Apache.Kafka.Connect.Data
             return IExecuteWithSignature<Java.Lang.String>("getString", "(Ljava/lang/String;)Ljava/lang/String;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.0/org/apache/kafka/connect/data/Struct.html#schema--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.1/org/apache/kafka/connect/data/Struct.html#schema--"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Connect.Data.Schema"/></returns>
         public Org.Apache.Kafka.Connect.Data.Schema Schema()
@@ -236,7 +236,7 @@ namespace Org.Apache.Kafka.Connect.Data
             return IExecuteWithSignature<Org.Apache.Kafka.Connect.Data.Schema>("schema", "()Lorg/apache/kafka/connect/data/Schema;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.0/org/apache/kafka/connect/data/Struct.html#getStruct-java.lang.String-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.1/org/apache/kafka/connect/data/Struct.html#getStruct-java.lang.String-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Connect.Data.Struct"/></returns>
@@ -245,7 +245,7 @@ namespace Org.Apache.Kafka.Connect.Data
             return IExecuteWithSignature<Org.Apache.Kafka.Connect.Data.Struct>("getStruct", "(Ljava/lang/String;)Lorg/apache/kafka/connect/data/Struct;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.0/org/apache/kafka/connect/data/Struct.html#put-java.lang.String-java.lang.Object-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.1/org/apache/kafka/connect/data/Struct.html#put-java.lang.String-java.lang.Object-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="object"/></param>
@@ -255,7 +255,7 @@ namespace Org.Apache.Kafka.Connect.Data
             return IExecuteWithSignature<Org.Apache.Kafka.Connect.Data.Struct>("put", "(Ljava/lang/String;Ljava/lang/Object;)Lorg/apache/kafka/connect/data/Struct;", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.0/org/apache/kafka/connect/data/Struct.html#put-org.apache.kafka.connect.data.Field-java.lang.Object-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.1/org/apache/kafka/connect/data/Struct.html#put-org.apache.kafka.connect.data.Field-java.lang.Object-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Connect.Data.Field"/></param>
         /// <param name="arg1"><see cref="object"/></param>
@@ -265,7 +265,7 @@ namespace Org.Apache.Kafka.Connect.Data
             return IExecuteWithSignature<Org.Apache.Kafka.Connect.Data.Struct>("put", "(Lorg/apache/kafka/connect/data/Field;Ljava/lang/Object;)Lorg/apache/kafka/connect/data/Struct;", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.0/org/apache/kafka/connect/data/Struct.html#validate--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.1/org/apache/kafka/connect/data/Struct.html#validate--"/>
         /// </summary>
         public void Validate()
         {

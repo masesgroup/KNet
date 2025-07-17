@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common.Utils
 {
     #region ProducerIdAndEpoch declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/utils/ProducerIdAndEpoch.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/utils/ProducerIdAndEpoch.html"/>
     /// </summary>
     public partial class ProducerIdAndEpoch : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ProducerIdAndEpoch>
     {
@@ -75,7 +75,7 @@ namespace Org.Apache.Kafka.Common.Utils
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/utils/ProducerIdAndEpoch.html#org.apache.kafka.common.utils.ProducerIdAndEpoch(long,short)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/utils/ProducerIdAndEpoch.html#org.apache.kafka.common.utils.ProducerIdAndEpoch(long,short)"/>
         /// </summary>
         /// <param name="arg0"><see cref="long"/></param>
         /// <param name="arg1"><see cref="short"/></param>
@@ -92,19 +92,19 @@ namespace Org.Apache.Kafka.Common.Utils
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/utils/ProducerIdAndEpoch.html#producerId"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/utils/ProducerIdAndEpoch.html#producerId"/>
         /// </summary>
         public long producerId { get { if (!_producerIdReady) { _producerIdContent = IGetField<long>("producerId"); _producerIdReady = true; } return _producerIdContent; } }
         private long _producerIdContent = default;
         private bool _producerIdReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/utils/ProducerIdAndEpoch.html#epoch"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/utils/ProducerIdAndEpoch.html#epoch"/>
         /// </summary>
         public short epoch { get { if (!_epochReady) { _epochContent = IGetField<short>("epoch"); _epochReady = true; } return _epochContent; } }
         private short _epochContent = default;
         private bool _epochReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/utils/ProducerIdAndEpoch.html#NONE"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/utils/ProducerIdAndEpoch.html#NONE"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Utils.ProducerIdAndEpoch NONE { get { if (!_NONEReady) { _NONEContent = SGetField<Org.Apache.Kafka.Common.Utils.ProducerIdAndEpoch>(LocalBridgeClazz, "NONE"); _NONEReady = true; } return _NONEContent; } }
         private static Org.Apache.Kafka.Common.Utils.ProducerIdAndEpoch _NONEContent = default;
@@ -118,7 +118,7 @@ namespace Org.Apache.Kafka.Common.Utils
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/utils/ProducerIdAndEpoch.html#isValid--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/utils/ProducerIdAndEpoch.html#isValid--"/>
         /// </summary>
         /// <returns><see cref="bool"/></returns>
         public bool IsValid()

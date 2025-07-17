@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Streams.Query
 {
     #region QueryConfig declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.0/org/apache/kafka/streams/query/QueryConfig.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/query/QueryConfig.html"/>
     /// </summary>
     public partial class QueryConfig : MASES.JCOBridge.C2JBridge.JVMBridgeBase<QueryConfig>
     {
@@ -75,7 +75,7 @@ namespace Org.Apache.Kafka.Streams.Query
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.0/org/apache/kafka/streams/query/QueryConfig.html#org.apache.kafka.streams.query.QueryConfig(boolean)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/query/QueryConfig.html#org.apache.kafka.streams.query.QueryConfig(boolean)"/>
         /// </summary>
         /// <param name="arg0"><see cref="bool"/></param>
         public QueryConfig(bool arg0)
@@ -99,7 +99,7 @@ namespace Org.Apache.Kafka.Streams.Query
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.0/org/apache/kafka/streams/query/QueryConfig.html#isCollectExecutionInfo--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/query/QueryConfig.html#isCollectExecutionInfo--"/>
         /// </summary>
         /// <returns><see cref="bool"/></returns>
         public bool IsCollectExecutionInfo()

@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
 {
     #region OffsetResetStrategy declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/OffsetResetStrategy.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/consumer/OffsetResetStrategy.html"/>
     /// </summary>
     public partial class OffsetResetStrategy : Java.Lang.Enum<Org.Apache.Kafka.Clients.Consumer.OffsetResetStrategy>
     {
@@ -83,19 +83,19 @@ namespace Org.Apache.Kafka.Clients.Consumer
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/OffsetResetStrategy.html#EARLIEST"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/consumer/OffsetResetStrategy.html#EARLIEST"/>
         /// </summary>
         public static Org.Apache.Kafka.Clients.Consumer.OffsetResetStrategy EARLIEST { get { if (!_EARLIESTReady) { _EARLIESTContent = SGetField<Org.Apache.Kafka.Clients.Consumer.OffsetResetStrategy>(LocalBridgeClazz, "EARLIEST"); _EARLIESTReady = true; } return _EARLIESTContent; } }
         private static Org.Apache.Kafka.Clients.Consumer.OffsetResetStrategy _EARLIESTContent = default;
         private static bool _EARLIESTReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/OffsetResetStrategy.html#LATEST"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/consumer/OffsetResetStrategy.html#LATEST"/>
         /// </summary>
         public static Org.Apache.Kafka.Clients.Consumer.OffsetResetStrategy LATEST { get { if (!_LATESTReady) { _LATESTContent = SGetField<Org.Apache.Kafka.Clients.Consumer.OffsetResetStrategy>(LocalBridgeClazz, "LATEST"); _LATESTReady = true; } return _LATESTContent; } }
         private static Org.Apache.Kafka.Clients.Consumer.OffsetResetStrategy _LATESTContent = default;
         private static bool _LATESTReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/OffsetResetStrategy.html#NONE"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/consumer/OffsetResetStrategy.html#NONE"/>
         /// </summary>
         public static Org.Apache.Kafka.Clients.Consumer.OffsetResetStrategy NONE { get { if (!_NONEReady) { _NONEContent = SGetField<Org.Apache.Kafka.Clients.Consumer.OffsetResetStrategy>(LocalBridgeClazz, "NONE"); _NONEReady = true; } return _NONEContent; } }
         private static Org.Apache.Kafka.Clients.Consumer.OffsetResetStrategy _NONEContent = default;
@@ -105,7 +105,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/OffsetResetStrategy.html#valueOf-java.lang.String-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/consumer/OffsetResetStrategy.html#valueOf-java.lang.String-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Consumer.OffsetResetStrategy"/></returns>
@@ -114,7 +114,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
             return SExecuteWithSignature<Org.Apache.Kafka.Clients.Consumer.OffsetResetStrategy>(LocalBridgeClazz, "valueOf", "(Ljava/lang/String;)Lorg/apache/kafka/clients/consumer/OffsetResetStrategy;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/OffsetResetStrategy.html#values--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/consumer/OffsetResetStrategy.html#values--"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Consumer.OffsetResetStrategy"/></returns>
         public static Org.Apache.Kafka.Clients.Consumer.OffsetResetStrategy[] Values()

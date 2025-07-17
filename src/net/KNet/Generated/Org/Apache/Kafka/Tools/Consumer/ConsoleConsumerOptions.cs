@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Tools.Consumer
 {
     #region ConsoleConsumerOptions declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.9.0/org/apache/kafka/tools/consumer/ConsoleConsumerOptions.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.9.1/org/apache/kafka/tools/consumer/ConsoleConsumerOptions.html"/>
     /// </summary>
     public partial class ConsoleConsumerOptions : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ConsoleConsumerOptions>
     {
@@ -75,7 +75,7 @@ namespace Org.Apache.Kafka.Tools.Consumer
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.9.0/org/apache/kafka/tools/consumer/ConsoleConsumerOptions.html#org.apache.kafka.tools.consumer.ConsoleConsumerOptions(java.lang.String[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.9.1/org/apache/kafka/tools/consumer/ConsoleConsumerOptions.html#org.apache.kafka.tools.consumer.ConsoleConsumerOptions(java.lang.String[])"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <exception cref="Java.Io.IOException"/>

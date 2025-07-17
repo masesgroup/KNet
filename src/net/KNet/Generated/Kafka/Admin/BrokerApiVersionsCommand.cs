@@ -27,7 +27,7 @@ namespace Kafka.Admin
 {
     #region BrokerApiVersionsCommand declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.9.0/kafka/admin/BrokerApiVersionsCommand.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.9.1/kafka/admin/BrokerApiVersionsCommand.html"/>
     /// </summary>
     public partial class BrokerApiVersionsCommand : MASES.JCOBridge.C2JBridge.JVMBridgeBase<BrokerApiVersionsCommand>, MASES.JCOBridge.C2JBridge.IJVMBridgeMain
     {
@@ -87,7 +87,7 @@ namespace Kafka.Admin
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.9.0/kafka/admin/BrokerApiVersionsCommand.html#execute-java.lang.String[]-java.io.PrintStream-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.9.1/kafka/admin/BrokerApiVersionsCommand.html#execute-java.lang.String[]-java.io.PrintStream-"/>
         /// </summary>
         /// <param name="args"><see cref="Java.Lang.String"/></param>
         /// <param name="_out"><see cref="Java.Io.PrintStream"/></param>
@@ -96,7 +96,7 @@ namespace Kafka.Admin
             SExecuteWithSignature(LocalBridgeClazz, "execute", "([Ljava/lang/String;Ljava/io/PrintStream;)V", args, _out);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.9.0/kafka/admin/BrokerApiVersionsCommand.html#main-java.lang.String[]-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.9.1/kafka/admin/BrokerApiVersionsCommand.html#main-java.lang.String[]-"/>
         /// </summary>
         /// <param name="args"><see cref="Java.Lang.String"/></param>
         public static void Main(Java.Lang.String[] args)

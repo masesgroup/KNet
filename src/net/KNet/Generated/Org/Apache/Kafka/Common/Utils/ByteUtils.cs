@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common.Utils
 {
     #region ByteUtils declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/utils/ByteUtils.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/utils/ByteUtils.html"/>
     /// </summary>
     public partial class ByteUtils : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ByteUtils>
     {
@@ -83,7 +83,7 @@ namespace Org.Apache.Kafka.Common.Utils
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/utils/ByteUtils.html#EMPTY_BUF"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/utils/ByteUtils.html#EMPTY_BUF"/>
         /// </summary>
         public static Java.Nio.ByteBuffer EMPTY_BUF { get { if (!_EMPTY_BUFReady) { _EMPTY_BUFContent = SGetField<Java.Nio.ByteBuffer>(LocalBridgeClazz, "EMPTY_BUF"); _EMPTY_BUFReady = true; } return _EMPTY_BUFContent; } }
         private static Java.Nio.ByteBuffer _EMPTY_BUFContent = default;
@@ -93,7 +93,7 @@ namespace Org.Apache.Kafka.Common.Utils
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/utils/ByteUtils.html#readDouble-java.io.DataInput-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/utils/ByteUtils.html#readDouble-java.io.DataInput-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Io.DataInput"/></param>
         /// <returns><see cref="double"/></returns>
@@ -103,7 +103,7 @@ namespace Org.Apache.Kafka.Common.Utils
             return SExecuteWithSignature<double>(LocalBridgeClazz, "readDouble", "(Ljava/io/DataInput;)D", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/utils/ByteUtils.html#readDouble-java.nio.ByteBuffer-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/utils/ByteUtils.html#readDouble-java.nio.ByteBuffer-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Nio.ByteBuffer"/></param>
         /// <returns><see cref="double"/></returns>
@@ -112,7 +112,7 @@ namespace Org.Apache.Kafka.Common.Utils
             return SExecuteWithSignature<double>(LocalBridgeClazz, "readDouble", "(Ljava/nio/ByteBuffer;)D", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/utils/ByteUtils.html#readIntBE-byte[]-int-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/utils/ByteUtils.html#readIntBE-byte[]-int-"/>
         /// </summary>
         /// <param name="arg0"><see cref="byte"/></param>
         /// <param name="arg1"><see cref="int"/></param>
@@ -122,7 +122,7 @@ namespace Org.Apache.Kafka.Common.Utils
             return SExecuteWithSignature<int>(LocalBridgeClazz, "readIntBE", "([BI)I", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/utils/ByteUtils.html#readUnsignedIntLE-byte[]-int-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/utils/ByteUtils.html#readUnsignedIntLE-byte[]-int-"/>
         /// </summary>
         /// <param name="arg0"><see cref="byte"/></param>
         /// <param name="arg1"><see cref="int"/></param>
@@ -132,7 +132,7 @@ namespace Org.Apache.Kafka.Common.Utils
             return SExecuteWithSignature<int>(LocalBridgeClazz, "readUnsignedIntLE", "([BI)I", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/utils/ByteUtils.html#readUnsignedIntLE-java.io.InputStream-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/utils/ByteUtils.html#readUnsignedIntLE-java.io.InputStream-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Io.InputStream"/></param>
         /// <returns><see cref="int"/></returns>
@@ -142,7 +142,7 @@ namespace Org.Apache.Kafka.Common.Utils
             return SExecuteWithSignature<int>(LocalBridgeClazz, "readUnsignedIntLE", "(Ljava/io/InputStream;)I", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/utils/ByteUtils.html#readUnsignedVarint-java.nio.ByteBuffer-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/utils/ByteUtils.html#readUnsignedVarint-java.nio.ByteBuffer-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Nio.ByteBuffer"/></param>
         /// <returns><see cref="int"/></returns>
@@ -151,7 +151,7 @@ namespace Org.Apache.Kafka.Common.Utils
             return SExecuteWithSignature<int>(LocalBridgeClazz, "readUnsignedVarint", "(Ljava/nio/ByteBuffer;)I", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/utils/ByteUtils.html#readVarint-java.io.InputStream-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/utils/ByteUtils.html#readVarint-java.io.InputStream-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Io.InputStream"/></param>
         /// <returns><see cref="int"/></returns>
@@ -161,7 +161,7 @@ namespace Org.Apache.Kafka.Common.Utils
             return SExecuteWithSignature<int>(LocalBridgeClazz, "readVarint", "(Ljava/io/InputStream;)I", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/utils/ByteUtils.html#readVarint-java.nio.ByteBuffer-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/utils/ByteUtils.html#readVarint-java.nio.ByteBuffer-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Nio.ByteBuffer"/></param>
         /// <returns><see cref="int"/></returns>
@@ -170,7 +170,7 @@ namespace Org.Apache.Kafka.Common.Utils
             return SExecuteWithSignature<int>(LocalBridgeClazz, "readVarint", "(Ljava/nio/ByteBuffer;)I", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/utils/ByteUtils.html#sizeOfUnsignedVarint-int-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/utils/ByteUtils.html#sizeOfUnsignedVarint-int-"/>
         /// </summary>
         /// <param name="arg0"><see cref="int"/></param>
         /// <returns><see cref="int"/></returns>
@@ -179,7 +179,7 @@ namespace Org.Apache.Kafka.Common.Utils
             return SExecuteWithSignature<int>(LocalBridgeClazz, "sizeOfUnsignedVarint", "(I)I", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/utils/ByteUtils.html#sizeOfUnsignedVarlong-long-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/utils/ByteUtils.html#sizeOfUnsignedVarlong-long-"/>
         /// </summary>
         /// <param name="arg0"><see cref="long"/></param>
         /// <returns><see cref="int"/></returns>
@@ -188,7 +188,7 @@ namespace Org.Apache.Kafka.Common.Utils
             return SExecuteWithSignature<int>(LocalBridgeClazz, "sizeOfUnsignedVarlong", "(J)I", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/utils/ByteUtils.html#sizeOfVarint-int-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/utils/ByteUtils.html#sizeOfVarint-int-"/>
         /// </summary>
         /// <param name="arg0"><see cref="int"/></param>
         /// <returns><see cref="int"/></returns>
@@ -197,7 +197,7 @@ namespace Org.Apache.Kafka.Common.Utils
             return SExecuteWithSignature<int>(LocalBridgeClazz, "sizeOfVarint", "(I)I", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/utils/ByteUtils.html#sizeOfVarlong-long-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/utils/ByteUtils.html#sizeOfVarlong-long-"/>
         /// </summary>
         /// <param name="arg0"><see cref="long"/></param>
         /// <returns><see cref="int"/></returns>
@@ -206,7 +206,7 @@ namespace Org.Apache.Kafka.Common.Utils
             return SExecuteWithSignature<int>(LocalBridgeClazz, "sizeOfVarlong", "(J)I", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/utils/ByteUtils.html#readUnsignedInt-java.nio.ByteBuffer-int-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/utils/ByteUtils.html#readUnsignedInt-java.nio.ByteBuffer-int-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Nio.ByteBuffer"/></param>
         /// <param name="arg1"><see cref="int"/></param>
@@ -216,7 +216,7 @@ namespace Org.Apache.Kafka.Common.Utils
             return SExecuteWithSignature<long>(LocalBridgeClazz, "readUnsignedInt", "(Ljava/nio/ByteBuffer;I)J", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/utils/ByteUtils.html#readUnsignedInt-java.nio.ByteBuffer-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/utils/ByteUtils.html#readUnsignedInt-java.nio.ByteBuffer-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Nio.ByteBuffer"/></param>
         /// <returns><see cref="long"/></returns>
@@ -225,7 +225,7 @@ namespace Org.Apache.Kafka.Common.Utils
             return SExecuteWithSignature<long>(LocalBridgeClazz, "readUnsignedInt", "(Ljava/nio/ByteBuffer;)J", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/utils/ByteUtils.html#readVarlong-java.io.InputStream-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/utils/ByteUtils.html#readVarlong-java.io.InputStream-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Io.InputStream"/></param>
         /// <returns><see cref="long"/></returns>
@@ -235,7 +235,7 @@ namespace Org.Apache.Kafka.Common.Utils
             return SExecuteWithSignature<long>(LocalBridgeClazz, "readVarlong", "(Ljava/io/InputStream;)J", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/utils/ByteUtils.html#readVarlong-java.nio.ByteBuffer-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/utils/ByteUtils.html#readVarlong-java.nio.ByteBuffer-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Nio.ByteBuffer"/></param>
         /// <returns><see cref="long"/></returns>
@@ -244,7 +244,7 @@ namespace Org.Apache.Kafka.Common.Utils
             return SExecuteWithSignature<long>(LocalBridgeClazz, "readVarlong", "(Ljava/nio/ByteBuffer;)J", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/utils/ByteUtils.html#writeDouble-double-java.io.DataOutput-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/utils/ByteUtils.html#writeDouble-double-java.io.DataOutput-"/>
         /// </summary>
         /// <param name="arg0"><see cref="double"/></param>
         /// <param name="arg1"><see cref="Java.Io.DataOutput"/></param>
@@ -254,7 +254,7 @@ namespace Org.Apache.Kafka.Common.Utils
             SExecuteWithSignature(LocalBridgeClazz, "writeDouble", "(DLjava/io/DataOutput;)V", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/utils/ByteUtils.html#writeDouble-double-java.nio.ByteBuffer-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/utils/ByteUtils.html#writeDouble-double-java.nio.ByteBuffer-"/>
         /// </summary>
         /// <param name="arg0"><see cref="double"/></param>
         /// <param name="arg1"><see cref="Java.Nio.ByteBuffer"/></param>
@@ -263,7 +263,7 @@ namespace Org.Apache.Kafka.Common.Utils
             SExecuteWithSignature(LocalBridgeClazz, "writeDouble", "(DLjava/nio/ByteBuffer;)V", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/utils/ByteUtils.html#writeUnsignedInt-java.nio.ByteBuffer-int-long-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/utils/ByteUtils.html#writeUnsignedInt-java.nio.ByteBuffer-int-long-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Nio.ByteBuffer"/></param>
         /// <param name="arg1"><see cref="int"/></param>
@@ -273,7 +273,7 @@ namespace Org.Apache.Kafka.Common.Utils
             SExecuteWithSignature(LocalBridgeClazz, "writeUnsignedInt", "(Ljava/nio/ByteBuffer;IJ)V", arg0, arg1, arg2);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/utils/ByteUtils.html#writeUnsignedInt-java.nio.ByteBuffer-long-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/utils/ByteUtils.html#writeUnsignedInt-java.nio.ByteBuffer-long-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Nio.ByteBuffer"/></param>
         /// <param name="arg1"><see cref="long"/></param>
@@ -282,7 +282,7 @@ namespace Org.Apache.Kafka.Common.Utils
             SExecuteWithSignature(LocalBridgeClazz, "writeUnsignedInt", "(Ljava/nio/ByteBuffer;J)V", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/utils/ByteUtils.html#writeUnsignedIntLE-byte[]-int-int-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/utils/ByteUtils.html#writeUnsignedIntLE-byte[]-int-int-"/>
         /// </summary>
         /// <param name="arg0"><see cref="byte"/></param>
         /// <param name="arg1"><see cref="int"/></param>
@@ -292,7 +292,7 @@ namespace Org.Apache.Kafka.Common.Utils
             SExecuteWithSignature(LocalBridgeClazz, "writeUnsignedIntLE", "([BII)V", arg0, arg1, arg2);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/utils/ByteUtils.html#writeUnsignedIntLE-java.io.OutputStream-int-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/utils/ByteUtils.html#writeUnsignedIntLE-java.io.OutputStream-int-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Io.OutputStream"/></param>
         /// <param name="arg1"><see cref="int"/></param>
@@ -302,7 +302,7 @@ namespace Org.Apache.Kafka.Common.Utils
             SExecuteWithSignature(LocalBridgeClazz, "writeUnsignedIntLE", "(Ljava/io/OutputStream;I)V", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/utils/ByteUtils.html#writeUnsignedVarint-int-java.io.DataOutput-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/utils/ByteUtils.html#writeUnsignedVarint-int-java.io.DataOutput-"/>
         /// </summary>
         /// <param name="arg0"><see cref="int"/></param>
         /// <param name="arg1"><see cref="Java.Io.DataOutput"/></param>
@@ -312,7 +312,7 @@ namespace Org.Apache.Kafka.Common.Utils
             SExecuteWithSignature(LocalBridgeClazz, "writeUnsignedVarint", "(ILjava/io/DataOutput;)V", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/utils/ByteUtils.html#writeUnsignedVarint-int-java.nio.ByteBuffer-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/utils/ByteUtils.html#writeUnsignedVarint-int-java.nio.ByteBuffer-"/>
         /// </summary>
         /// <param name="arg0"><see cref="int"/></param>
         /// <param name="arg1"><see cref="Java.Nio.ByteBuffer"/></param>
@@ -321,7 +321,7 @@ namespace Org.Apache.Kafka.Common.Utils
             SExecuteWithSignature(LocalBridgeClazz, "writeUnsignedVarint", "(ILjava/nio/ByteBuffer;)V", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/utils/ByteUtils.html#writeUnsignedVarlong-long-java.nio.ByteBuffer-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/utils/ByteUtils.html#writeUnsignedVarlong-long-java.nio.ByteBuffer-"/>
         /// </summary>
         /// <param name="arg0"><see cref="long"/></param>
         /// <param name="arg1"><see cref="Java.Nio.ByteBuffer"/></param>
@@ -330,7 +330,7 @@ namespace Org.Apache.Kafka.Common.Utils
             SExecuteWithSignature(LocalBridgeClazz, "writeUnsignedVarlong", "(JLjava/nio/ByteBuffer;)V", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/utils/ByteUtils.html#writeVarint-int-java.io.DataOutput-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/utils/ByteUtils.html#writeVarint-int-java.io.DataOutput-"/>
         /// </summary>
         /// <param name="arg0"><see cref="int"/></param>
         /// <param name="arg1"><see cref="Java.Io.DataOutput"/></param>
@@ -340,7 +340,7 @@ namespace Org.Apache.Kafka.Common.Utils
             SExecuteWithSignature(LocalBridgeClazz, "writeVarint", "(ILjava/io/DataOutput;)V", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/utils/ByteUtils.html#writeVarint-int-java.nio.ByteBuffer-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/utils/ByteUtils.html#writeVarint-int-java.nio.ByteBuffer-"/>
         /// </summary>
         /// <param name="arg0"><see cref="int"/></param>
         /// <param name="arg1"><see cref="Java.Nio.ByteBuffer"/></param>
@@ -349,7 +349,7 @@ namespace Org.Apache.Kafka.Common.Utils
             SExecuteWithSignature(LocalBridgeClazz, "writeVarint", "(ILjava/nio/ByteBuffer;)V", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/utils/ByteUtils.html#writeVarlong-long-java.io.DataOutput-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/utils/ByteUtils.html#writeVarlong-long-java.io.DataOutput-"/>
         /// </summary>
         /// <param name="arg0"><see cref="long"/></param>
         /// <param name="arg1"><see cref="Java.Io.DataOutput"/></param>
@@ -359,7 +359,7 @@ namespace Org.Apache.Kafka.Common.Utils
             SExecuteWithSignature(LocalBridgeClazz, "writeVarlong", "(JLjava/io/DataOutput;)V", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/utils/ByteUtils.html#writeVarlong-long-java.nio.ByteBuffer-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/utils/ByteUtils.html#writeVarlong-long-java.nio.ByteBuffer-"/>
         /// </summary>
         /// <param name="arg0"><see cref="long"/></param>
         /// <param name="arg1"><see cref="Java.Nio.ByteBuffer"/></param>

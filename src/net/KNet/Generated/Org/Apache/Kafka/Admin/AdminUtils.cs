@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Admin
 {
     #region AdminUtils declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/3.9.0/org/apache/kafka/admin/AdminUtils.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/3.9.1/org/apache/kafka/admin/AdminUtils.html"/>
     /// </summary>
     public partial class AdminUtils : MASES.JCOBridge.C2JBridge.JVMBridgeBase<AdminUtils>
     {
@@ -83,7 +83,7 @@ namespace Org.Apache.Kafka.Admin
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/3.9.0/org/apache/kafka/admin/AdminUtils.html#ADMIN_CLIENT_ID"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/3.9.1/org/apache/kafka/admin/AdminUtils.html#ADMIN_CLIENT_ID"/>
         /// </summary>
         public static Java.Lang.String ADMIN_CLIENT_ID { get { if (!_ADMIN_CLIENT_IDReady) { _ADMIN_CLIENT_IDContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "ADMIN_CLIENT_ID"); _ADMIN_CLIENT_IDReady = true; } return _ADMIN_CLIENT_IDContent; } }
         private static Java.Lang.String _ADMIN_CLIENT_IDContent = default;
@@ -93,7 +93,7 @@ namespace Org.Apache.Kafka.Admin
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/3.9.0/org/apache/kafka/admin/AdminUtils.html#getRackAlternatedBrokerList-java.util.Map-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/3.9.1/org/apache/kafka/admin/AdminUtils.html#getRackAlternatedBrokerList-java.util.Map-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <returns><see cref="Java.Util.List"/></returns>
@@ -102,7 +102,7 @@ namespace Org.Apache.Kafka.Admin
             return SExecuteWithSignature<Java.Util.List<Java.Lang.Integer>>(LocalBridgeClazz, "getRackAlternatedBrokerList", "(Ljava/util/Map;)Ljava/util/List;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/3.9.0/org/apache/kafka/admin/AdminUtils.html#assignReplicasToBrokers-java.util.Collection-int-int-int-int-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/3.9.1/org/apache/kafka/admin/AdminUtils.html#assignReplicasToBrokers-java.util.Collection-int-int-int-int-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Collection"/></param>
         /// <param name="arg1"><see cref="int"/></param>
@@ -115,7 +115,7 @@ namespace Org.Apache.Kafka.Admin
             return SExecuteWithSignature<Java.Util.Map<Java.Lang.Integer, Java.Util.List<Java.Lang.Integer>>>(LocalBridgeClazz, "assignReplicasToBrokers", "(Ljava/util/Collection;IIII)Ljava/util/Map;", arg0, arg1, arg2, arg3, arg4);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/3.9.0/org/apache/kafka/admin/AdminUtils.html#assignReplicasToBrokers-java.util.Collection-int-int-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/3.9.1/org/apache/kafka/admin/AdminUtils.html#assignReplicasToBrokers-java.util.Collection-int-int-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Collection"/></param>
         /// <param name="arg1"><see cref="int"/></param>

@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common.Errors
 {
     #region DelegationTokenAuthorizationException declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/errors/DelegationTokenAuthorizationException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/errors/DelegationTokenAuthorizationException.html"/>
     /// </summary>
     public partial class DelegationTokenAuthorizationException : Org.Apache.Kafka.Common.Errors.AuthorizationException
     {

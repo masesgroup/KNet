@@ -27,7 +27,7 @@ namespace Kafka.Admin
 {
     #region FeatureCommand declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.9.0/kafka/admin/FeatureCommand.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.9.1/kafka/admin/FeatureCommand.html"/>
     /// </summary>
     public partial class FeatureCommand : MASES.JCOBridge.C2JBridge.JVMBridgeBase<FeatureCommand>, MASES.JCOBridge.C2JBridge.IJVMBridgeMain
     {
@@ -87,7 +87,7 @@ namespace Kafka.Admin
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.9.0/kafka/admin/FeatureCommand.html#main-java.lang.String[]-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.9.1/kafka/admin/FeatureCommand.html#main-java.lang.String[]-"/>
         /// </summary>
         /// <param name="args"><see cref="Java.Lang.String"/></param>
         public static void Main(Java.Lang.String[] args)

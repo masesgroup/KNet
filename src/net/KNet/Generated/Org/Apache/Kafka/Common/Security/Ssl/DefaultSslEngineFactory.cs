@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common.Security.Ssl
 {
     #region DefaultSslEngineFactory declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/security/ssl/DefaultSslEngineFactory.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/security/ssl/DefaultSslEngineFactory.html"/>
     /// </summary>
     public partial class DefaultSslEngineFactory : Org.Apache.Kafka.Common.Security.Auth.SslEngineFactory
     {
@@ -83,7 +83,7 @@ namespace Org.Apache.Kafka.Common.Security.Ssl
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/security/ssl/DefaultSslEngineFactory.html#PEM_TYPE"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/security/ssl/DefaultSslEngineFactory.html#PEM_TYPE"/>
         /// </summary>
         public static Java.Lang.String PEM_TYPE { get { if (!_PEM_TYPEReady) { _PEM_TYPEContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "PEM_TYPE"); _PEM_TYPEReady = true; } return _PEM_TYPEContent; } }
         private static Java.Lang.String _PEM_TYPEContent = default;
@@ -97,7 +97,7 @@ namespace Org.Apache.Kafka.Common.Security.Ssl
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/security/ssl/DefaultSslEngineFactory.html#shouldBeRebuilt-java.util.Map-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/security/ssl/DefaultSslEngineFactory.html#shouldBeRebuilt-java.util.Map-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <returns><see cref="bool"/></returns>
@@ -106,7 +106,7 @@ namespace Org.Apache.Kafka.Common.Security.Ssl
             return IExecuteWithSignature<bool>("shouldBeRebuilt", "(Ljava/util/Map;)Z", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/security/ssl/DefaultSslEngineFactory.html#keystore--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/security/ssl/DefaultSslEngineFactory.html#keystore--"/>
         /// </summary>
         /// <returns><see cref="Java.Security.KeyStore"/></returns>
         public Java.Security.KeyStore Keystore()
@@ -114,7 +114,7 @@ namespace Org.Apache.Kafka.Common.Security.Ssl
             return IExecuteWithSignature<Java.Security.KeyStore>("keystore", "()Ljava/security/KeyStore;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/security/ssl/DefaultSslEngineFactory.html#truststore--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/security/ssl/DefaultSslEngineFactory.html#truststore--"/>
         /// </summary>
         /// <returns><see cref="Java.Security.KeyStore"/></returns>
         public Java.Security.KeyStore Truststore()
@@ -122,7 +122,7 @@ namespace Org.Apache.Kafka.Common.Security.Ssl
             return IExecuteWithSignature<Java.Security.KeyStore>("truststore", "()Ljava/security/KeyStore;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/security/ssl/DefaultSslEngineFactory.html#reconfigurableConfigs--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/security/ssl/DefaultSslEngineFactory.html#reconfigurableConfigs--"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Set"/></returns>
         public Java.Util.Set<Java.Lang.String> ReconfigurableConfigs()
@@ -130,7 +130,7 @@ namespace Org.Apache.Kafka.Common.Security.Ssl
             return IExecuteWithSignature<Java.Util.Set<Java.Lang.String>>("reconfigurableConfigs", "()Ljava/util/Set;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/security/ssl/DefaultSslEngineFactory.html#sslContext--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/security/ssl/DefaultSslEngineFactory.html#sslContext--"/>
         /// </summary>
         /// <returns><see cref="Javax.Net.Ssl.SSLContext"/></returns>
         public Javax.Net.Ssl.SSLContext SslContext()
@@ -138,7 +138,7 @@ namespace Org.Apache.Kafka.Common.Security.Ssl
             return IExecuteWithSignature<Javax.Net.Ssl.SSLContext>("sslContext", "()Ljavax/net/ssl/SSLContext;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/security/ssl/DefaultSslEngineFactory.html#createClientSslEngine-java.lang.String-int-java.lang.String-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/security/ssl/DefaultSslEngineFactory.html#createClientSslEngine-java.lang.String-int-java.lang.String-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="int"/></param>
@@ -149,7 +149,7 @@ namespace Org.Apache.Kafka.Common.Security.Ssl
             return IExecuteWithSignature<Javax.Net.Ssl.SSLEngine>("createClientSslEngine", "(Ljava/lang/String;ILjava/lang/String;)Ljavax/net/ssl/SSLEngine;", arg0, arg1, arg2);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/security/ssl/DefaultSslEngineFactory.html#createServerSslEngine-java.lang.String-int-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/security/ssl/DefaultSslEngineFactory.html#createServerSslEngine-java.lang.String-int-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="int"/></param>
@@ -159,14 +159,14 @@ namespace Org.Apache.Kafka.Common.Security.Ssl
             return IExecuteWithSignature<Javax.Net.Ssl.SSLEngine>("createServerSslEngine", "(Ljava/lang/String;I)Ljavax/net/ssl/SSLEngine;", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/security/ssl/DefaultSslEngineFactory.html#close--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/security/ssl/DefaultSslEngineFactory.html#close--"/>
         /// </summary>
         public void Close()
         {
             IExecuteWithSignature("close", "()V");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/security/ssl/DefaultSslEngineFactory.html#configure-java.util.Map-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/security/ssl/DefaultSslEngineFactory.html#configure-java.util.Map-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         public void Configure(Java.Util.Map<Java.Lang.String, object> arg0)

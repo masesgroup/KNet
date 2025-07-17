@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Connect.Rest.Basic.Auth.Extension
 {
     #region BasicAuthSecurityRestExtension declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-basic-auth-extension/3.9.0/org/apache/kafka/connect/rest/basic/auth/extension/BasicAuthSecurityRestExtension.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-basic-auth-extension/3.9.1/org/apache/kafka/connect/rest/basic/auth/extension/BasicAuthSecurityRestExtension.html"/>
     /// </summary>
     public partial class BasicAuthSecurityRestExtension : MASES.JCOBridge.C2JBridge.JVMBridgeBase<BasicAuthSecurityRestExtension>
     {
@@ -91,7 +91,7 @@ namespace Org.Apache.Kafka.Connect.Rest.Basic.Auth.Extension
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-basic-auth-extension/3.9.0/org/apache/kafka/connect/rest/basic/auth/extension/BasicAuthSecurityRestExtension.html#version--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-basic-auth-extension/3.9.1/org/apache/kafka/connect/rest/basic/auth/extension/BasicAuthSecurityRestExtension.html#version--"/>
         /// </summary>
         /// <returns><see cref="Java.Lang.String"/></returns>
         public Java.Lang.String Version()
@@ -99,14 +99,14 @@ namespace Org.Apache.Kafka.Connect.Rest.Basic.Auth.Extension
             return IExecuteWithSignature<Java.Lang.String>("version", "()Ljava/lang/String;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-basic-auth-extension/3.9.0/org/apache/kafka/connect/rest/basic/auth/extension/BasicAuthSecurityRestExtension.html#close--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-basic-auth-extension/3.9.1/org/apache/kafka/connect/rest/basic/auth/extension/BasicAuthSecurityRestExtension.html#close--"/>
         /// </summary>
         public void Close()
         {
             IExecuteWithSignature("close", "()V");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-basic-auth-extension/3.9.0/org/apache/kafka/connect/rest/basic/auth/extension/BasicAuthSecurityRestExtension.html#configure-java.util.Map-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-basic-auth-extension/3.9.1/org/apache/kafka/connect/rest/basic/auth/extension/BasicAuthSecurityRestExtension.html#configure-java.util.Map-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         public void Configure(Java.Util.Map<Java.Lang.String, object> arg0)

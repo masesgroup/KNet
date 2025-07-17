@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
 {
     #region RetriableCommitFailedException declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/clients/consumer/RetriableCommitFailedException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/consumer/RetriableCommitFailedException.html"/>
     /// </summary>
     public partial class RetriableCommitFailedException : Org.Apache.Kafka.Common.Errors.RetriableException
     {

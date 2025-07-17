@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Connect.Util
 {
     #region ConnectUtils declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.9.0/org/apache/kafka/connect/util/ConnectUtils.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.9.1/org/apache/kafka/connect/util/ConnectUtils.html"/>
     /// </summary>
     public partial class ConnectUtils : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ConnectUtils>
     {
@@ -87,7 +87,7 @@ namespace Org.Apache.Kafka.Connect.Util
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.9.0/org/apache/kafka/connect/util/ConnectUtils.html#combineCollections-java.util.Collection-java.util.function.Function-java.util.stream.Collector-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.9.1/org/apache/kafka/connect/util/ConnectUtils.html#combineCollections-java.util.Collection-java.util.function.Function-java.util.stream.Collector-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Collection"/></param>
         /// <param name="arg1"><see cref="Java.Util.Function.Function"/></param>
@@ -101,7 +101,7 @@ namespace Org.Apache.Kafka.Connect.Util
             return SExecuteWithSignature<C>(LocalBridgeClazz, "combineCollections", "(Ljava/util/Collection;Ljava/util/function/Function;Ljava/util/stream/Collector;)Ljava/lang/Object;", arg0, arg1, arg2);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.9.0/org/apache/kafka/connect/util/ConnectUtils.html#combineCollections-java.util.Collection-java.util.function.Function-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.9.1/org/apache/kafka/connect/util/ConnectUtils.html#combineCollections-java.util.Collection-java.util.function.Function-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Collection"/></param>
         /// <param name="arg1"><see cref="Java.Util.Function.Function"/></param>
@@ -113,7 +113,7 @@ namespace Org.Apache.Kafka.Connect.Util
             return SExecuteWithSignature<Java.Util.List<T>>(LocalBridgeClazz, "combineCollections", "(Ljava/util/Collection;Ljava/util/function/Function;)Ljava/util/List;", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.9.0/org/apache/kafka/connect/util/ConnectUtils.html#combineCollections-java.util.Collection-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.9.1/org/apache/kafka/connect/util/ConnectUtils.html#combineCollections-java.util.Collection-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Collection"/></param>
         /// <typeparam name="I"></typeparam>
@@ -123,7 +123,7 @@ namespace Org.Apache.Kafka.Connect.Util
             return SExecuteWithSignature<Java.Util.List<I>>(LocalBridgeClazz, "combineCollections", "(Ljava/util/Collection;)Ljava/util/List;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.9.0/org/apache/kafka/connect/util/ConnectUtils.html#transformValues-java.util.Map-java.util.function.Function-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.9.1/org/apache/kafka/connect/util/ConnectUtils.html#transformValues-java.util.Map-java.util.function.Function-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <param name="arg1"><see cref="Java.Util.Function.Function"/></param>
@@ -136,7 +136,7 @@ namespace Org.Apache.Kafka.Connect.Util
             return SExecuteWithSignature<Java.Util.Map<K, O>>(LocalBridgeClazz, "transformValues", "(Ljava/util/Map;Ljava/util/function/Function;)Ljava/util/Map;", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.9.0/org/apache/kafka/connect/util/ConnectUtils.html#isSinkConnector-org.apache.kafka.connect.connector.Connector-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.9.1/org/apache/kafka/connect/util/ConnectUtils.html#isSinkConnector-org.apache.kafka.connect.connector.Connector-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Connect.Connector.Connector"/></param>
         /// <returns><see cref="bool"/></returns>
@@ -145,7 +145,7 @@ namespace Org.Apache.Kafka.Connect.Util
             return SExecuteWithSignature<bool>(LocalBridgeClazz, "isSinkConnector", "(Lorg/apache/kafka/connect/connector/Connector;)Z", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.9.0/org/apache/kafka/connect/util/ConnectUtils.html#isSourceConnector-org.apache.kafka.connect.connector.Connector-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.9.1/org/apache/kafka/connect/util/ConnectUtils.html#isSourceConnector-org.apache.kafka.connect.connector.Connector-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Connect.Connector.Connector"/></param>
         /// <returns><see cref="bool"/></returns>
@@ -154,7 +154,7 @@ namespace Org.Apache.Kafka.Connect.Util
             return SExecuteWithSignature<bool>(LocalBridgeClazz, "isSourceConnector", "(Lorg/apache/kafka/connect/connector/Connector;)Z", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.9.0/org/apache/kafka/connect/util/ConnectUtils.html#checkAndConvertTimestamp-java.lang.Long-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.9.1/org/apache/kafka/connect/util/ConnectUtils.html#checkAndConvertTimestamp-java.lang.Long-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.Long"/></param>
         /// <returns><see cref="Java.Lang.Long"/></returns>
@@ -163,7 +163,7 @@ namespace Org.Apache.Kafka.Connect.Util
             return SExecuteWithSignature<Java.Lang.Long>(LocalBridgeClazz, "checkAndConvertTimestamp", "(Ljava/lang/Long;)Ljava/lang/Long;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.9.0/org/apache/kafka/connect/util/ConnectUtils.html#className-java.lang.Object-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.9.1/org/apache/kafka/connect/util/ConnectUtils.html#className-java.lang.Object-"/>
         /// </summary>
         /// <param name="arg0"><see cref="object"/></param>
         /// <returns><see cref="Java.Lang.String"/></returns>
@@ -172,7 +172,7 @@ namespace Org.Apache.Kafka.Connect.Util
             return SExecute<Java.Lang.String>(LocalBridgeClazz, "className", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.9.0/org/apache/kafka/connect/util/ConnectUtils.html#patchConfig-java.util.Map-java.util.Map-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.9.1/org/apache/kafka/connect/util/ConnectUtils.html#patchConfig-java.util.Map-java.util.Map-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <param name="arg1"><see cref="Java.Util.Map"/></param>
@@ -182,7 +182,7 @@ namespace Org.Apache.Kafka.Connect.Util
             return SExecuteWithSignature<Java.Util.Map<Java.Lang.String, Java.Lang.String>>(LocalBridgeClazz, "patchConfig", "(Ljava/util/Map;Ljava/util/Map;)Ljava/util/Map;", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.9.0/org/apache/kafka/connect/util/ConnectUtils.html#maybeWrap-java.lang.Throwable-java.lang.String-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.9.1/org/apache/kafka/connect/util/ConnectUtils.html#maybeWrap-java.lang.Throwable-java.lang.String-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.Throwable"/></param>
         /// <param name="arg1"><see cref="Java.Lang.String"/></param>
@@ -192,7 +192,7 @@ namespace Org.Apache.Kafka.Connect.Util
             var obj = SExecuteWithSignature<MASES.JCOBridge.C2JBridge.JVMInterop.IJavaObject>(LocalBridgeClazz, "maybeWrap", "(Ljava/lang/Throwable;Ljava/lang/String;)Lorg/apache/kafka/connect/errors/ConnectException;", arg0, arg1); return MASES.JCOBridge.C2JBridge.JVMBridgeException.New<Org.Apache.Kafka.Connect.Errors.ConnectException>(obj);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.9.0/org/apache/kafka/connect/util/ConnectUtils.html#ensureProperty-java.util.Map-java.lang.String-java.lang.String-java.lang.String-boolean-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.9.1/org/apache/kafka/connect/util/ConnectUtils.html#ensureProperty-java.util.Map-java.lang.String-java.lang.String-java.lang.String-boolean-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <param name="arg1"><see cref="Java.Lang.String"/></param>

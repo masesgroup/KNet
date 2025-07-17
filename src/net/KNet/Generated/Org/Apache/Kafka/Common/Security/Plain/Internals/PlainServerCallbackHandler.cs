@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common.Security.Plain.Internals
 {
     #region PlainServerCallbackHandler declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/security/plain/internals/PlainServerCallbackHandler.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/security/plain/internals/PlainServerCallbackHandler.html"/>
     /// </summary>
     public partial class PlainServerCallbackHandler : Org.Apache.Kafka.Common.Security.Auth.AuthenticateCallbackHandler
     {
@@ -91,7 +91,7 @@ namespace Org.Apache.Kafka.Common.Security.Plain.Internals
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/security/plain/internals/PlainServerCallbackHandler.html#close--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/security/plain/internals/PlainServerCallbackHandler.html#close--"/>
         /// </summary>
         /// <exception cref="Org.Apache.Kafka.Common.KafkaException"/>
         public void Close()
@@ -99,7 +99,7 @@ namespace Org.Apache.Kafka.Common.Security.Plain.Internals
             IExecuteWithSignature("close", "()V");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/security/plain/internals/PlainServerCallbackHandler.html#configure-java.util.Map-java.lang.String-java.util.List-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/security/plain/internals/PlainServerCallbackHandler.html#configure-java.util.Map-java.lang.String-java.util.List-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <param name="arg1"><see cref="Java.Lang.String"/></param>
@@ -109,7 +109,7 @@ namespace Org.Apache.Kafka.Common.Security.Plain.Internals
             IExecuteWithSignature("configure", "(Ljava/util/Map;Ljava/lang/String;Ljava/util/List;)V", arg0, arg1, arg2);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/org/apache/kafka/common/security/plain/internals/PlainServerCallbackHandler.html#handle-javax.security.auth.callback.Callback[]-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/security/plain/internals/PlainServerCallbackHandler.html#handle-javax.security.auth.callback.Callback[]-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Javax.Security.Auth.Callback.Callback"/></param>
         /// <exception cref="Java.Io.IOException"/>
