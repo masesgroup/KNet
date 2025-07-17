@@ -53,7 +53,7 @@ jobs:
         with:
           branch-suffix: short-commit-hash
           add-paths: docs/*.*
-          commit-message: Changes by GitHub action
+          commit-message: Update documentation after commit ${{ env.GITHUB_COMMIT_MESSAGE }}
           title: Update documentation after commit ${{ env.GITHUB_COMMIT_MESSAGE }}
           body: Automated changes by GitHub action
           reviewers: masesdevelopers
