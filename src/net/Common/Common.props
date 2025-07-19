@@ -23,22 +23,7 @@
 		<CETCompat>false</CETCompat>
 	</PropertyGroup>
 	<ItemGroup Condition="True">
-		<knetfiles_jars Include="$(ProjectDir)\..\..\..\jars\*.*" 
-						Exclude="$(ProjectDir)\..\..\..\jars\animal-sniffer-annotations-*.jar;
-							     $(ProjectDir)\..\..\..\jars\checker-compat-qual-*.jar;
-							     $(ProjectDir)\..\..\..\jars\failureaccess-*.jar;
-							     $(ProjectDir)\..\..\..\jars\groovy-*.jar;
-							     $(ProjectDir)\..\..\..\jars\grpc-api-*.jar;
-							     $(ProjectDir)\..\..\..\jars\grpc-context-*.jar;
-							     $(ProjectDir)\..\..\..\jars\grpc-protobuf-*.jar;
-							     $(ProjectDir)\..\..\..\jars\grpc-protobuf-lite-*.jar;
-							     $(ProjectDir)\..\..\..\jars\grpc-stub-*.jar;
-							     $(ProjectDir)\..\..\..\jars\guava-30.0-android.jar;
-							     $(ProjectDir)\..\..\..\jars\j2objc-annotations-*.jar;
-							     $(ProjectDir)\..\..\..\jars\jsr305-*.jar;
-							     $(ProjectDir)\..\..\..\jars\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar;
-							     $(ProjectDir)\..\..\..\jars\proto-google-common-protos-*.jar;"
-						/>
+		<knetfiles_jars Include="$(ProjectDir)\..\..\..\jars\*.*" Exclude="$(ProjectDir)\..\..\..\jars\animal-sniffer-annotations-*.jar;             $(ProjectDir)\..\..\..\jars\checker-compat-qual-*.jar;             $(ProjectDir)\..\..\..\jars\failureaccess-*.jar;             $(ProjectDir)\..\..\..\jars\groovy-*.jar;             $(ProjectDir)\..\..\..\jars\grpc-api-*.jar;             $(ProjectDir)\..\..\..\jars\grpc-context-*.jar;             $(ProjectDir)\..\..\..\jars\grpc-protobuf-*.jar;             $(ProjectDir)\..\..\..\jars\grpc-protobuf-lite-*.jar;             $(ProjectDir)\..\..\..\jars\grpc-stub-*.jar;             $(ProjectDir)\..\..\..\jars\guava-30.0-android.jar;             $(ProjectDir)\..\..\..\jars\j2objc-annotations-*.jar;             $(ProjectDir)\..\..\..\jars\jsr305-*.jar;             $(ProjectDir)\..\..\..\jars\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar;             $(ProjectDir)\..\..\..\jars\proto-google-common-protos-*.jar;" />
 		<knetfiles_config Include="$(ProjectDir)\..\..\config\*.*" />
 	</ItemGroup>
 	
