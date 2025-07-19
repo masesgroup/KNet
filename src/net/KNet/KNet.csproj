@@ -23,7 +23,7 @@
 		<Copy SourceFiles="@(knetfiles_jars)" DestinationFolder="$(OutDir)\jars\%(RecursiveDir)" />
 		<Copy SourceFiles="@(knetfiles_config)" DestinationFolder="$(OutDir)\config\%(RecursiveDir)" />
 	</Target>
-	
+
 	<ItemGroup Condition="'$(GITHUB_SIMPLIFIED_GENERATION)' == 'true'">
 		<Compile Remove="Developed\**" />
 		<Compile Remove="Generated\**" />
@@ -38,7 +38,7 @@
 	<ItemGroup>
 		<None Include="mases.knet.targets" Pack="true" PackagePath="build" />
 		<None Include="..\..\..\jars\*.jar"
-		      Exclude="..\..\..\jars\animal-sniffer-annotations-*.jar;
+              Exclude="..\..\..\jars\animal-sniffer-annotations-*.jar;
 					   ..\..\..\jars\checker-compat-qual-*.jar;
 					   ..\..\..\jars\failureaccess-*.jar;
 					   ..\..\..\jars\groovy-*.jar;
@@ -52,12 +52,12 @@
 					   ..\..\..\jars\jsr305-*.jar;
 					   ..\..\..\jars\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar;
 					   ..\..\..\jars\proto-google-common-protos-*.jar;"
-			  Pack="true" PackagePath="build\jars" />
+              Pack="true" PackagePath="build\jars" />
 		<None Include="..\..\config\**\*" Pack="true" PackagePath="build\config" />
 		<None Include="..\..\documentation\articles\usage.md" Pack="true" PackagePath="\" />
 	</ItemGroup>
 	<ItemGroup>
-		<PackageReference Include="MASES.JNet" Version="2.5.12">
+		<PackageReference Include="MASES.JNet" Version="2.5.13">
 			<IncludeAssets>All</IncludeAssets>
 			<PrivateAssets>None</PrivateAssets>
 		</PackageReference>

@@ -262,6 +262,26 @@ jobs:
           fetch-depth: '1'
           submodules: 'true'
 
+      - name: Get last workflow run of JNet
+        if: ${{ inputs.UseLastRepositoryBuild == true }}
+        shell: bash
+        run: echo "JNET_LAST_RUN=$(curl -sL https://api.github.com/repos/masesgroup/JNet/actions/workflows/build.yaml/runs | jq -r '.workflow_runs[0].id?')" >> $GITHUB_ENV
+
+      - name: Download artifact
+        if: ${{ inputs.UseLastRepositoryBuild == true }}
+        run: gh run download ${{ env.JNET_LAST_RUN }} --name JNetNuGet --repo masesgroup/JNet --dir JNetNuGet
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: List NuGet packages downloaded
+        if: ${{ inputs.UseLastRepositoryBuild == true }}
+        continue-on-error: true
+        run: ls -las ./JNetNuGet/*nupkg
+
+      - name: Add local repo
+        if: ${{ success() && inputs.UseLastRepositoryBuild == true }}
+        run: dotnet nuget add source --name local "${{ github.workspace }}/JNetNuGet/"
+
       - uses: actions/setup-dotnet@v4
         with:
           dotnet-version: |

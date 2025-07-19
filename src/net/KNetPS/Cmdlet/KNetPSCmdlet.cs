@@ -16,9 +16,9 @@
 *  Refer to LICENSE for more information.
 */
 
-using MASES.JNetPSCore.Cmdlet;
+using MASES.JNet.PowerShell.Cmdlet;
 
-namespace MASES.KNetPS.Cmdlet
+namespace MASES.KNet.PowerShell.Cmdlet
 {
     public abstract class KNetPSCmdlet : JNetPSCmdlet<KNetPSCore>
     {

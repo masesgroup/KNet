@@ -18,10 +18,9 @@
 
 using Java.Util.Concurrent;
 using Org.Apache.Kafka.Clients.Producer;
-using MASES.KNetPS.Cmdlet;
 using System.Management.Automation;
 
-namespace MASES.KNetPS.ClientCmdlet
+namespace MASES.KNet.PowerShell.Cmdlet.Client
 {
     [Cmdlet(VerbsLifecycle.Invoke, "Send")]
     [OutputType(typeof(Future<RecordMetadata>))]

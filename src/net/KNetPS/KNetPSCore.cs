@@ -16,12 +16,12 @@
 *  Refer to LICENSE for more information.
 */
 
-using MASES.KNetCLI;
+using MASES.KNet.CLI;
 using System.Collections.Generic;
 using System.IO;
 using System.Reflection;
 
-namespace MASES.KNetPS
+namespace MASES.KNet.PowerShell
 {
     /// <summary>
     /// Directly usable implementation of <see cref="KNetCLICore{T}"/>

@@ -18,7 +18,7 @@
 
 using System.Management.Automation;
 
-namespace MASES.KNetPS.Cmdlet
+namespace MASES.KNet.PowerShell.Cmdlet
 {
     [Cmdlet(VerbsLifecycle.Start, "KNetPS")]
     public class StartKNetPSCmdletCommand : StartKNetPSCmdletCommandBase<StartKNetPSCmdletCommand>

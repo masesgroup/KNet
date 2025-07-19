@@ -3,7 +3,7 @@
 	<PropertyGroup>
 		<GeneratePackageOnBuild>false</GeneratePackageOnBuild>
 		<AssemblyName>MASES.KNetPS</AssemblyName>
-		<RootNamespace>MASES.KNetPS</RootNamespace>
+		<RootNamespace>MASES.KNet.PowerShell</RootNamespace>
 		<Title>KNet PowerShell command line interface - .NET suite for Apache Kafka</Title>
 		<Description>PowerShell command line interface of .NET suite for Apache Kafka. KNet is a comprehensive .NET suite for Apache Kafka providing all features: Producer, Consumer, Admin, Streams, Connect, backends (KRaft).</Description>
 		<Product>KNetPS</Product>
@@ -35,7 +35,7 @@
 			<!--<IncludeAssets>All</IncludeAssets>-->
 			<!--<PrivateAssets>None</PrivateAssets>-->
 		</ProjectReference>
-		<PackageReference Include="MASES.JNetPSCore" Version="2.5.12" />
+		<PackageReference Include="MASES.JNetPSCore" Version="2.5.13" />
 		<PackageReference Include="Microsoft.SourceLink.GitHub" Version="8.0.0">
 		  <PrivateAssets>all</PrivateAssets>
 		  <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>

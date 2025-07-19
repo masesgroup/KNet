@@ -16,11 +16,10 @@
 *  Refer to LICENSE for more information.
 */
 
-using MASES.KNetPS.Cmdlet;
 using System.Management.Automation;
 using MASES.KNet.Producer;
 
-namespace MASES.KNetPS.ClientCmdlet
+namespace MASES.KNet.PowerShell.Cmdlet.Client
 {
     [Cmdlet(VerbsCommon.New, "ProducerConfigBuilder")]
     [OutputType(typeof(ProducerConfigBuilder))]
