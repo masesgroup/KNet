@@ -751,11 +751,69 @@ Class StreamsBuilder  <a class="header-action link-secondary" title="View source
 </h2>
 
 
+  <a id="Org_Apache_Kafka_Streams_Scala_StreamsBuilder_AddGlobalStore_" data-uid="Org.Apache.Kafka.Streams.Scala.StreamsBuilder.AddGlobalStore*"></a>
+
+  <h3 id="Org_Apache_Kafka_Streams_Scala_StreamsBuilder_AddGlobalStore__3_Org_Apache_Kafka_Streams_State_StoreBuilder___0__Java_Lang_String_Org_Apache_Kafka_Streams_Kstream_Consumed___1___2__Org_Apache_Kafka_Streams_Processor_Api_ProcessorSupplier___1___2_Java_Lang_Void_Java_Lang_Void__" data-uid="Org.Apache.Kafka.Streams.Scala.StreamsBuilder.AddGlobalStore``3(Org.Apache.Kafka.Streams.State.StoreBuilder{``0},Java.Lang.String,Org.Apache.Kafka.Streams.Kstream.Consumed{``1,``2},Org.Apache.Kafka.Streams.Processor.Api.ProcessorSupplier{``1,``2,Java.Lang.Void,Java.Lang.Void})">
+  AddGlobalStore&lt;StoreBuilderExtendsOrg_Apache_Kafka_Streams_Processor_StateStore, K, V&gt;(StoreBuilder&lt;StoreBuilderExtendsOrg_Apache_Kafka_Streams_Processor_StateStore&gt;, String, Consumed&lt;K, V&gt;, ProcessorSupplier&lt;K, V, Void, Void&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Scala/StreamsBuilder.cs/#L186"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/StreamsBuilder.html#addGlobalStore(org.apache.kafka.streams.state.StoreBuilder,java.lang.String,org.apache.kafka.streams.kstream.Consumed,org.apache.kafka.streams.processor.api.ProcessorSupplier)">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/StreamsBuilder.html#addGlobalStore(org.apache.kafka.streams.state.StoreBuilder,java.lang.String,org.apache.kafka.streams.kstream.Consumed,org.apache.kafka.streams.processor.api.ProcessorSupplier)</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StreamsBuilder AddGlobalStore&lt;StoreBuilderExtendsOrg_Apache_Kafka_Streams_Processor_StateStore, K, V&gt;(StoreBuilder&lt;StoreBuilderExtendsOrg_Apache_Kafka_Streams_Processor_StateStore&gt; storeBuilder, String topic, Consumed&lt;K, V&gt; consumed, ProcessorSupplier&lt;K, V, Void, Void&gt; stateUpdateSupplier) where StoreBuilderExtendsOrg_Apache_Kafka_Streams_Processor_StateStore : StateStore, new()</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>storeBuilder</code> <a class="xref" href="Org.Apache.Kafka.Streams.State.StoreBuilder-1.html">StoreBuilder</a>&lt;StoreBuilderExtendsOrg_Apache_Kafka_Streams_Processor_StateStore&gt;</dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Streams.State.StoreBuilder.html">StoreBuilder</a></p>
+</dd>
+    <dt><code>topic</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></p>
+</dd>
+    <dt><code>consumed</code> <a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Consumed-2.html">Consumed</a>&lt;K, V&gt;</dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Consumed.html">Consumed</a></p>
+</dd>
+    <dt><code>stateUpdateSupplier</code> <a class="xref" href="Org.Apache.Kafka.Streams.Processor.Api.ProcessorSupplier-4.html">ProcessorSupplier</a>&lt;K, V, <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.Void.html">Void</a>, <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.Void.html">Void</a>&gt;</dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Streams.Processor.Api.ProcessorSupplier.html">ProcessorSupplier</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Apache.Kafka.Streams.StreamsBuilder.html">StreamsBuilder</a></dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Streams.StreamsBuilder.html">StreamsBuilder</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>StoreBuilderExtendsOrg_Apache_Kafka_Streams_Processor_StateStore</code></dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Streams.Processor.StateStore.html">StateStore</a></p>
+</dd>
+    <dt><code>K</code></dt>
+    <dd></dd>
+    <dt><code>V</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
   <a id="Org_Apache_Kafka_Streams_Scala_StreamsBuilder_AddStateStore_" data-uid="Org.Apache.Kafka.Streams.Scala.StreamsBuilder.AddStateStore*"></a>
 
   <h3 id="Org_Apache_Kafka_Streams_Scala_StreamsBuilder_AddStateStore__1_Org_Apache_Kafka_Streams_State_StoreBuilder___0__" data-uid="Org.Apache.Kafka.Streams.Scala.StreamsBuilder.AddStateStore``1(Org.Apache.Kafka.Streams.State.StoreBuilder{``0})">
   AddStateStore&lt;BuilderExtendsOrg_Apache_Kafka_Streams_Processor_StateStore&gt;(StoreBuilder&lt;BuilderExtendsOrg_Apache_Kafka_Streams_Processor_StateStore&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Scala/StreamsBuilder.cs/#L181"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Scala/StreamsBuilder.cs/#L196"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/StreamsBuilder.html#addStateStore(org.apache.kafka.streams.state.StoreBuilder)">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/StreamsBuilder.html#addStateStore(org.apache.kafka.streams.state.StoreBuilder)</a></p>
@@ -800,7 +858,7 @@ Class StreamsBuilder  <a class="header-action link-secondary" title="View source
 
   <h3 id="Org_Apache_Kafka_Streams_Scala_StreamsBuilder_Build" data-uid="Org.Apache.Kafka.Streams.Scala.StreamsBuilder.Build">
   Build()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Scala/StreamsBuilder.cs/#L189"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Scala/StreamsBuilder.cs/#L204"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/StreamsBuilder.html#build()">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/StreamsBuilder.html#build()</a></p>
@@ -833,7 +891,7 @@ Class StreamsBuilder  <a class="header-action link-secondary" title="View source
 
   <h3 id="Org_Apache_Kafka_Streams_Scala_StreamsBuilder_Build_Java_Util_Properties_" data-uid="Org.Apache.Kafka.Streams.Scala.StreamsBuilder.Build(Java.Util.Properties)">
   Build(Properties)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Scala/StreamsBuilder.cs/#L198"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Scala/StreamsBuilder.cs/#L213"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/StreamsBuilder.html#build(java.util.Properties)">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/StreamsBuilder.html#build(java.util.Properties)</a></p>

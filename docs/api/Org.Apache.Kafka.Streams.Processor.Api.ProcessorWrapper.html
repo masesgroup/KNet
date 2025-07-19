@@ -723,11 +723,109 @@ public ProcessorWrapper(params object[] args)</code></pre>
 </h2>
 
 
+  <a id="Org_Apache_Kafka_Streams_Processor_Api_ProcessorWrapper_AsWrappedFixedKey_" data-uid="Org.Apache.Kafka.Streams.Processor.Api.ProcessorWrapper.AsWrappedFixedKey*"></a>
+
+  <h3 id="Org_Apache_Kafka_Streams_Processor_Api_ProcessorWrapper_AsWrappedFixedKey__3_Org_Apache_Kafka_Streams_Processor_Api_FixedKeyProcessorSupplier___0___1___2__" data-uid="Org.Apache.Kafka.Streams.Processor.Api.ProcessorWrapper.AsWrappedFixedKey``3(Org.Apache.Kafka.Streams.Processor.Api.FixedKeyProcessorSupplier{``0,``1,``2})">
+  AsWrappedFixedKey&lt;KIn, VIn, VOut&gt;(FixedKeyProcessorSupplier&lt;KIn, VIn, VOut&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Processor/Api/ProcessorWrapper.cs/#L130"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/api/ProcessorWrapper.html#asWrappedFixedKey(org.apache.kafka.streams.processor.api.FixedKeyProcessorSupplier)">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/api/ProcessorWrapper.html#asWrappedFixedKey(org.apache.kafka.streams.processor.api.FixedKeyProcessorSupplier)</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static WrappedFixedKeyProcessorSupplier&lt;KIn, VIn, VOut&gt; AsWrappedFixedKey&lt;KIn, VIn, VOut&gt;(FixedKeyProcessorSupplier&lt;KIn, VIn, VOut&gt; arg0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="Org.Apache.Kafka.Streams.Processor.Api.FixedKeyProcessorSupplier-3.html">FixedKeyProcessorSupplier</a>&lt;KIn, VIn, VOut&gt;</dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Streams.Processor.Api.FixedKeyProcessorSupplier.html">FixedKeyProcessorSupplier</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Apache.Kafka.Streams.Processor.Api.WrappedFixedKeyProcessorSupplier-3.html">WrappedFixedKeyProcessorSupplier</a>&lt;KIn, VIn, VOut&gt;</dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Streams.Processor.Api.WrappedFixedKeyProcessorSupplier.html">WrappedFixedKeyProcessorSupplier</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>KIn</code></dt>
+    <dd></dd>
+    <dt><code>VIn</code></dt>
+    <dd></dd>
+    <dt><code>VOut</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Apache_Kafka_Streams_Processor_Api_ProcessorWrapper_AsWrapped_" data-uid="Org.Apache.Kafka.Streams.Processor.Api.ProcessorWrapper.AsWrapped*"></a>
+
+  <h3 id="Org_Apache_Kafka_Streams_Processor_Api_ProcessorWrapper_AsWrapped__4_Org_Apache_Kafka_Streams_Processor_Api_ProcessorSupplier___0___1___2___3__" data-uid="Org.Apache.Kafka.Streams.Processor.Api.ProcessorWrapper.AsWrapped``4(Org.Apache.Kafka.Streams.Processor.Api.ProcessorSupplier{``0,``1,``2,``3})">
+  AsWrapped&lt;KIn, VIn, KOut, VOut&gt;(ProcessorSupplier&lt;KIn, VIn, KOut, VOut&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Processor/Api/ProcessorWrapper.cs/#L118"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/api/ProcessorWrapper.html#asWrapped(org.apache.kafka.streams.processor.api.ProcessorSupplier)">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/api/ProcessorWrapper.html#asWrapped(org.apache.kafka.streams.processor.api.ProcessorSupplier)</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static WrappedProcessorSupplier&lt;KIn, VIn, KOut, VOut&gt; AsWrapped&lt;KIn, VIn, KOut, VOut&gt;(ProcessorSupplier&lt;KIn, VIn, KOut, VOut&gt; arg0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="Org.Apache.Kafka.Streams.Processor.Api.ProcessorSupplier-4.html">ProcessorSupplier</a>&lt;KIn, VIn, KOut, VOut&gt;</dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Streams.Processor.Api.ProcessorSupplier.html">ProcessorSupplier</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Apache.Kafka.Streams.Processor.Api.WrappedProcessorSupplier-4.html">WrappedProcessorSupplier</a>&lt;KIn, VIn, KOut, VOut&gt;</dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Streams.Processor.Api.WrappedProcessorSupplier.html">WrappedProcessorSupplier</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>KIn</code></dt>
+    <dd></dd>
+    <dt><code>VIn</code></dt>
+    <dd></dd>
+    <dt><code>KOut</code></dt>
+    <dd></dd>
+    <dt><code>VOut</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
   <a id="Org_Apache_Kafka_Streams_Processor_Api_ProcessorWrapper_Configure_" data-uid="Org.Apache.Kafka.Streams.Processor.Api.ProcessorWrapper.Configure*"></a>
 
   <h3 id="Org_Apache_Kafka_Streams_Processor_Api_ProcessorWrapper_Configure_Java_Util_Map_Java_Lang_String_System_Object__" data-uid="Org.Apache.Kafka.Streams.Processor.Api.ProcessorWrapper.Configure(Java.Util.Map{Java.Lang.String,System.Object})">
   Configure(Map&lt;String, object&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Processor/Api/ProcessorWrapper.cs/#L117"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Processor/Api/ProcessorWrapper.cs/#L169"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/api/ProcessorWrapper.html#configure(java.util.Map)">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/api/ProcessorWrapper.html#configure(java.util.Map)</a></p>
@@ -746,6 +844,110 @@ public ProcessorWrapper(params object[] args)</code></pre>
   </dl>
 
 
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Apache_Kafka_Streams_Processor_Api_ProcessorWrapper_WrapFixedKeyProcessorSupplier_" data-uid="Org.Apache.Kafka.Streams.Processor.Api.ProcessorWrapper.WrapFixedKeyProcessorSupplier*"></a>
+
+  <h3 id="Org_Apache_Kafka_Streams_Processor_Api_ProcessorWrapper_WrapFixedKeyProcessorSupplier__3_Java_Lang_String_Org_Apache_Kafka_Streams_Processor_Api_FixedKeyProcessorSupplier___0___1___2__" data-uid="Org.Apache.Kafka.Streams.Processor.Api.ProcessorWrapper.WrapFixedKeyProcessorSupplier``3(Java.Lang.String,Org.Apache.Kafka.Streams.Processor.Api.FixedKeyProcessorSupplier{``0,``1,``2})">
+  WrapFixedKeyProcessorSupplier&lt;KIn, VIn, VOut&gt;(String, FixedKeyProcessorSupplier&lt;KIn, VIn, VOut&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Processor/Api/ProcessorWrapper.cs/#L161"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/api/ProcessorWrapper.html#wrapFixedKeyProcessorSupplier(java.lang.String,org.apache.kafka.streams.processor.api.FixedKeyProcessorSupplier)">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/api/ProcessorWrapper.html#wrapFixedKeyProcessorSupplier(java.lang.String,org.apache.kafka.streams.processor.api.FixedKeyProcessorSupplier)</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public WrappedFixedKeyProcessorSupplier&lt;KIn, VIn, VOut&gt; WrapFixedKeyProcessorSupplier&lt;KIn, VIn, VOut&gt;(String arg0, FixedKeyProcessorSupplier&lt;KIn, VIn, VOut&gt; arg1)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></p>
+</dd>
+    <dt><code>arg1</code> <a class="xref" href="Org.Apache.Kafka.Streams.Processor.Api.FixedKeyProcessorSupplier-3.html">FixedKeyProcessorSupplier</a>&lt;KIn, VIn, VOut&gt;</dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Streams.Processor.Api.FixedKeyProcessorSupplier.html">FixedKeyProcessorSupplier</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Apache.Kafka.Streams.Processor.Api.WrappedFixedKeyProcessorSupplier-3.html">WrappedFixedKeyProcessorSupplier</a>&lt;KIn, VIn, VOut&gt;</dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Streams.Processor.Api.WrappedFixedKeyProcessorSupplier.html">WrappedFixedKeyProcessorSupplier</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>KIn</code></dt>
+    <dd></dd>
+    <dt><code>VIn</code></dt>
+    <dd></dd>
+    <dt><code>VOut</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Apache_Kafka_Streams_Processor_Api_ProcessorWrapper_WrapProcessorSupplier_" data-uid="Org.Apache.Kafka.Streams.Processor.Api.ProcessorWrapper.WrapProcessorSupplier*"></a>
+
+  <h3 id="Org_Apache_Kafka_Streams_Processor_Api_ProcessorWrapper_WrapProcessorSupplier__4_Java_Lang_String_Org_Apache_Kafka_Streams_Processor_Api_ProcessorSupplier___0___1___2___3__" data-uid="Org.Apache.Kafka.Streams.Processor.Api.ProcessorWrapper.WrapProcessorSupplier``4(Java.Lang.String,Org.Apache.Kafka.Streams.Processor.Api.ProcessorSupplier{``0,``1,``2,``3})">
+  WrapProcessorSupplier&lt;KIn, VIn, KOut, VOut&gt;(String, ProcessorSupplier&lt;KIn, VIn, KOut, VOut&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Processor/Api/ProcessorWrapper.cs/#L148"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/api/ProcessorWrapper.html#wrapProcessorSupplier(java.lang.String,org.apache.kafka.streams.processor.api.ProcessorSupplier)">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/api/ProcessorWrapper.html#wrapProcessorSupplier(java.lang.String,org.apache.kafka.streams.processor.api.ProcessorSupplier)</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public WrappedProcessorSupplier&lt;KIn, VIn, KOut, VOut&gt; WrapProcessorSupplier&lt;KIn, VIn, KOut, VOut&gt;(String arg0, ProcessorSupplier&lt;KIn, VIn, KOut, VOut&gt; arg1)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></p>
+</dd>
+    <dt><code>arg1</code> <a class="xref" href="Org.Apache.Kafka.Streams.Processor.Api.ProcessorSupplier-4.html">ProcessorSupplier</a>&lt;KIn, VIn, KOut, VOut&gt;</dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Streams.Processor.Api.ProcessorSupplier.html">ProcessorSupplier</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Apache.Kafka.Streams.Processor.Api.WrappedProcessorSupplier-4.html">WrappedProcessorSupplier</a>&lt;KIn, VIn, KOut, VOut&gt;</dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Streams.Processor.Api.WrappedProcessorSupplier.html">WrappedProcessorSupplier</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>KIn</code></dt>
+    <dd></dd>
+    <dt><code>VIn</code></dt>
+    <dd></dd>
+    <dt><code>KOut</code></dt>
+    <dd></dd>
+    <dt><code>VOut</code></dt>
+    <dd></dd>
+  </dl>
 
 
 

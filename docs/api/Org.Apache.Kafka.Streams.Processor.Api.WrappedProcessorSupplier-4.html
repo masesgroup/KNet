@@ -102,7 +102,7 @@ Class WrappedProcessorSupplier&lt;KIn, VIn, KOut, VOut&gt;  <a class="header-act
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class WrappedProcessorSupplier&lt;KIn, VIn, KOut, VOut&gt; : JVMBridgeBase&lt;WrappedProcessorSupplier&lt;KIn, VIn, KOut, VOut&gt;&gt;, IDynamicMetaObjectProvider, IJVMBridgeCore, IDisposable, IJVMBridgeBaseStatic, IJVMBridgeBase, IJVMBridgeDefinition, IWrappedProcessorSupplier&lt;KIn, VIn, KOut, VOut&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public class WrappedProcessorSupplier&lt;KIn, VIn, KOut, VOut&gt; : ProcessorSupplier&lt;KIn, VIn, KOut, VOut&gt;, IDynamicMetaObjectProvider, IJVMBridgeCore, IDisposable, IJVMBridgeBaseStatic, IConnectedStoreProvider, ISupplier&lt;Processor&lt;KIn, VIn, KOut, VOut&gt;&gt;, IJVMBridgeBase, IJVMBridgeDefinition, IWrappedProcessorSupplier&lt;KIn, VIn, KOut, VOut&gt;, IProcessorSupplier&lt;KIn, VIn, KOut, VOut&gt;</code></pre>
   </div>
 
 
@@ -125,7 +125,10 @@ Class WrappedProcessorSupplier&lt;KIn, VIn, KOut, VOut&gt;  <a class="header-act
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject">DynamicObject</a></div>
       <div><span class="xref">JVMBridgeBase</span></div>
-      <div><span class="xref">JVMBridgeBase</span>&lt;<a class="xref" href="Org.Apache.Kafka.Streams.Processor.Api.WrappedProcessorSupplier-4.html">WrappedProcessorSupplier</a>&lt;KIn, VIn, KOut, VOut&gt;&gt;</div>
+      <div><span class="xref">JVMBridgeBase</span>&lt;<span class="xref">JVMBridgeListener</span>&gt;</div>
+      <div><span class="xref">JVMBridgeListener</span></div>
+      <div><a class="xref" href="Org.Apache.Kafka.Streams.Processor.Api.ProcessorSupplier.html">ProcessorSupplier</a></div>
+      <div><a class="xref" href="Org.Apache.Kafka.Streams.Processor.Api.ProcessorSupplier-4.html">ProcessorSupplier</a>&lt;KIn, VIn, KOut, VOut&gt;</div>
       <div><span class="xref">WrappedProcessorSupplier&lt;KIn, VIn, KOut, VOut&gt;</span></div>
     </dd>
   </dl>
@@ -137,9 +140,12 @@ Class WrappedProcessorSupplier&lt;KIn, VIn, KOut, VOut&gt;  <a class="header-act
       <div><span class="xref">IJVMBridgeCore</span></div>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
       <div><span class="xref">IJVMBridgeBaseStatic</span></div>
+      <div><a class="xref" href="Org.Apache.Kafka.Streams.Processor.IConnectedStoreProvider.html">IConnectedStoreProvider</a></div>
+      <div><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Function.ISupplier-1.html">ISupplier</a>&lt;<a class="xref" href="Org.Apache.Kafka.Streams.Processor.Api.Processor-4.html">Processor</a>&lt;KIn, VIn, KOut, VOut&gt;&gt;</div>
       <div><span class="xref">IJVMBridgeBase</span></div>
       <div><span class="xref">IJVMBridgeDefinition</span></div>
       <div><a class="xref" href="Org.Apache.Kafka.Streams.Processor.Api.IWrappedProcessorSupplier-4.html">IWrappedProcessorSupplier</a>&lt;KIn, VIn, KOut, VOut&gt;</div>
+      <div><a class="xref" href="Org.Apache.Kafka.Streams.Processor.Api.IProcessorSupplier-4.html">IProcessorSupplier</a>&lt;KIn, VIn, KOut, VOut&gt;</div>
     </dd>
   </dl>
 
@@ -148,154 +154,196 @@ Class WrappedProcessorSupplier&lt;KIn, VIn, KOut, VOut&gt;  <a class="header-act
     <dt>Inherited Members</dt>
     <dd>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;WrappedProcessorSupplier&lt;KIn, VIn, KOut, VOut&gt;&gt;.SExecute(IJavaType, string, params object[])</a>
+      <a class="xref" href="Org.Apache.Kafka.Streams.Processor.Api.ProcessorSupplier-4.html#Org_Apache_Kafka_Streams_Processor_Api_ProcessorSupplier_4_BridgeClassName">ProcessorSupplier&lt;KIn, VIn, KOut, VOut&gt;.BridgeClassName</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;WrappedProcessorSupplier&lt;KIn, VIn, KOut, VOut&gt;&gt;.SExecuteWithSignature(IJavaType, string, string, params object[])</a>
+      <a class="xref" href="Org.Apache.Kafka.Streams.Processor.Api.ProcessorSupplier-4.html#Org_Apache_Kafka_Streams_Processor_Api_ProcessorSupplier_4_InitializeHandlers">ProcessorSupplier&lt;KIn, VIn, KOut, VOut&gt;.InitializeHandlers()</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;WrappedProcessorSupplier&lt;KIn, VIn, KOut, VOut&gt;&gt;.SExecute(string, params object[])</a>
+      <a class="xref" href="Org.Apache.Kafka.Streams.Processor.Api.ProcessorSupplier-4.html#Org_Apache_Kafka_Streams_Processor_Api_ProcessorSupplier_4_OnInit">ProcessorSupplier&lt;KIn, VIn, KOut, VOut&gt;.OnInit</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;WrappedProcessorSupplier&lt;KIn, VIn, KOut, VOut&gt;&gt;.SExecuteWithSignature(string, string, params object[])</a>
+      <a class="xref" href="Org.Apache.Kafka.Streams.Processor.Api.ProcessorSupplier-4.html#Org_Apache_Kafka_Streams_Processor_Api_ProcessorSupplier_4_OnProcess">ProcessorSupplier&lt;KIn, VIn, KOut, VOut&gt;.OnProcess</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;WrappedProcessorSupplier&lt;KIn, VIn, KOut, VOut&gt;&gt;.SExecute&lt;TReturn&gt;(IJavaType, string, params object[])</a>
+      <a class="xref" href="Org.Apache.Kafka.Streams.Processor.Api.ProcessorSupplier-4.html#Org_Apache_Kafka_Streams_Processor_Api_ProcessorSupplier_4_OnGet">ProcessorSupplier&lt;KIn, VIn, KOut, VOut&gt;.OnGet</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;WrappedProcessorSupplier&lt;KIn, VIn, KOut, VOut&gt;&gt;.SExecuteWithSignature&lt;TReturn&gt;(IJavaType, string, string, params object[])</a>
+      <a class="xref" href="Org.Apache.Kafka.Streams.Processor.Api.ProcessorSupplier-4.html#Org_Apache_Kafka_Streams_Processor_Api_ProcessorSupplier_4_Get">ProcessorSupplier&lt;KIn, VIn, KOut, VOut&gt;.Get()</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;WrappedProcessorSupplier&lt;KIn, VIn, KOut, VOut&gt;&gt;.SExecute&lt;TReturn&gt;(string, params object[])</a>
+      <a class="xref" href="Org.Apache.Kafka.Streams.Processor.Api.ProcessorSupplier-4.html#Org_Apache_Kafka_Streams_Processor_Api_ProcessorSupplier_4_StoresDefault">ProcessorSupplier&lt;KIn, VIn, KOut, VOut&gt;.StoresDefault()</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;WrappedProcessorSupplier&lt;KIn, VIn, KOut, VOut&gt;&gt;.SExecuteWithSignature&lt;TReturn&gt;(string, string, params object[])</a>
+      <a class="xref" href="Org.Apache.Kafka.Streams.Processor.Api.ProcessorSupplier-4.html#Org_Apache_Kafka_Streams_Processor_Api_ProcessorSupplier_4_OnStores">ProcessorSupplier&lt;KIn, VIn, KOut, VOut&gt;.OnStores</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;WrappedProcessorSupplier&lt;KIn, VIn, KOut, VOut&gt;&gt;.SExecute(Type, IJavaType, string, params object[])</a>
+      <a class="xref" href="Org.Apache.Kafka.Streams.Processor.Api.ProcessorSupplier-4.html#Org_Apache_Kafka_Streams_Processor_Api_ProcessorSupplier_4_Stores">ProcessorSupplier&lt;KIn, VIn, KOut, VOut&gt;.Stores()</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;WrappedProcessorSupplier&lt;KIn, VIn, KOut, VOut&gt;&gt;.SExecuteWithSignature(Type, IJavaType, string, string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeListener.AddEventHandler(string, EventHandler)</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;WrappedProcessorSupplier&lt;KIn, VIn, KOut, VOut&gt;&gt;.SExecute(Type, string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeListener.AddEventHandler&lt;TDataClass&gt;(string, EventHandler&lt;CLRListenerEventArgs&lt;TDataClass&gt;&gt;)</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;WrappedProcessorSupplier&lt;KIn, VIn, KOut, VOut&gt;&gt;.SExecuteWithSignature(Type, string, string, params object[])</a>
+      <span class="xref">JVMBridgeListener.Dispose()</span>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;WrappedProcessorSupplier&lt;KIn, VIn, KOut, VOut&gt;&gt;.SExecute&lt;TNewClass, TReturn&gt;(IJavaType, string, params object[])</a>
+      <span class="xref">JVMBridgeListener.AutoInit</span>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;WrappedProcessorSupplier&lt;KIn, VIn, KOut, VOut&gt;&gt;.SExecuteWithSignature&lt;TNewClass, TReturn&gt;(IJavaType, string, string, params object[])</a>
+      <span class="xref">JVMBridgeListener.IsBridgeListener</span>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;WrappedProcessorSupplier&lt;KIn, VIn, KOut, VOut&gt;&gt;.SExecute&lt;TNewClass, TReturn&gt;(string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;JVMBridgeListener&gt;.SExecute(IJavaType, string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;WrappedProcessorSupplier&lt;KIn, VIn, KOut, VOut&gt;&gt;.SExecuteWithSignature&lt;TNewClass, TReturn&gt;(string, string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;JVMBridgeListener&gt;.SExecuteWithSignature(IJavaType, string, string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;WrappedProcessorSupplier&lt;KIn, VIn, KOut, VOut&gt;&gt;.SExecute&lt;TReturn&gt;(Type, IJavaType, string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;JVMBridgeListener&gt;.SExecute(string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;WrappedProcessorSupplier&lt;KIn, VIn, KOut, VOut&gt;&gt;.SExecuteWithSignature&lt;TReturn&gt;(Type, IJavaType, string, string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;JVMBridgeListener&gt;.SExecuteWithSignature(string, string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;WrappedProcessorSupplier&lt;KIn, VIn, KOut, VOut&gt;&gt;.SExecute&lt;TReturn&gt;(Type, string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;JVMBridgeListener&gt;.SExecute&lt;TReturn&gt;(IJavaType, string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;WrappedProcessorSupplier&lt;KIn, VIn, KOut, VOut&gt;&gt;.SExecuteWithSignature&lt;TReturn&gt;(Type, string, string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;JVMBridgeListener&gt;.SExecuteWithSignature&lt;TReturn&gt;(IJavaType, string, string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;WrappedProcessorSupplier&lt;KIn, VIn, KOut, VOut&gt;&gt;.SExecute&lt;TNewClass, TReturn, TConverter&gt;(IJavaType, string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;JVMBridgeListener&gt;.SExecute&lt;TReturn&gt;(string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;WrappedProcessorSupplier&lt;KIn, VIn, KOut, VOut&gt;&gt;.SExecuteWithSignature&lt;TNewClass, TReturn, TConverter&gt;(IJavaType, string, string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;JVMBridgeListener&gt;.SExecuteWithSignature&lt;TReturn&gt;(string, string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;WrappedProcessorSupplier&lt;KIn, VIn, KOut, VOut&gt;&gt;.SExecute&lt;TNewClass, TReturn, TConverter&gt;(string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;JVMBridgeListener&gt;.SExecute(Type, IJavaType, string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;WrappedProcessorSupplier&lt;KIn, VIn, KOut, VOut&gt;&gt;.SExecuteWithSignature&lt;TNewClass, TReturn, TConverter&gt;(string, string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;JVMBridgeListener&gt;.SExecuteWithSignature(Type, IJavaType, string, string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;WrappedProcessorSupplier&lt;KIn, VIn, KOut, VOut&gt;&gt;.SExecute&lt;TReturn, TConverter&gt;(Type, IJavaType, string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;JVMBridgeListener&gt;.SExecute(Type, string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;WrappedProcessorSupplier&lt;KIn, VIn, KOut, VOut&gt;&gt;.SExecuteWithSignature&lt;TReturn, TConverter&gt;(Type, IJavaType, string, string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;JVMBridgeListener&gt;.SExecuteWithSignature(Type, string, string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;WrappedProcessorSupplier&lt;KIn, VIn, KOut, VOut&gt;&gt;.SExecute&lt;TReturn, TConverter&gt;(Type, string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;JVMBridgeListener&gt;.SExecute&lt;TNewClass, TReturn&gt;(IJavaType, string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;WrappedProcessorSupplier&lt;KIn, VIn, KOut, VOut&gt;&gt;.SExecuteWithSignature&lt;TReturn, TConverter&gt;(Type, string, string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;JVMBridgeListener&gt;.SExecuteWithSignature&lt;TNewClass, TReturn&gt;(IJavaType, string, string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;WrappedProcessorSupplier&lt;KIn, VIn, KOut, VOut&gt;&gt;.SExecuteArray&lt;T&gt;(IJavaType, string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;JVMBridgeListener&gt;.SExecute&lt;TNewClass, TReturn&gt;(string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;WrappedProcessorSupplier&lt;KIn, VIn, KOut, VOut&gt;&gt;.SExecuteWithSignatureArray&lt;T&gt;(IJavaType, string, string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;JVMBridgeListener&gt;.SExecuteWithSignature&lt;TNewClass, TReturn&gt;(string, string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;WrappedProcessorSupplier&lt;KIn, VIn, KOut, VOut&gt;&gt;.SExecuteArray&lt;T&gt;(string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;JVMBridgeListener&gt;.SExecute&lt;TReturn&gt;(Type, IJavaType, string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;WrappedProcessorSupplier&lt;KIn, VIn, KOut, VOut&gt;&gt;.SExecuteWithSignatureArray&lt;T&gt;(string, string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;JVMBridgeListener&gt;.SExecuteWithSignature&lt;TReturn&gt;(Type, IJavaType, string, string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;WrappedProcessorSupplier&lt;KIn, VIn, KOut, VOut&gt;&gt;.SGetField(IJavaType, string)</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;JVMBridgeListener&gt;.SExecute&lt;TReturn&gt;(Type, string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;WrappedProcessorSupplier&lt;KIn, VIn, KOut, VOut&gt;&gt;.SGetField(string)</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;JVMBridgeListener&gt;.SExecuteWithSignature&lt;TReturn&gt;(Type, string, string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;WrappedProcessorSupplier&lt;KIn, VIn, KOut, VOut&gt;&gt;.SGetField&lt;TReturn&gt;(IJavaType, string)</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;JVMBridgeListener&gt;.SExecute&lt;TNewClass, TReturn, TConverter&gt;(IJavaType, string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;WrappedProcessorSupplier&lt;KIn, VIn, KOut, VOut&gt;&gt;.SGetField&lt;TReturn&gt;(string)</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;JVMBridgeListener&gt;.SExecuteWithSignature&lt;TNewClass, TReturn, TConverter&gt;(IJavaType, string, string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;WrappedProcessorSupplier&lt;KIn, VIn, KOut, VOut&gt;&gt;.SGetFieldArray&lt;TReturn&gt;(IJavaType, string)</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;JVMBridgeListener&gt;.SExecute&lt;TNewClass, TReturn, TConverter&gt;(string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;WrappedProcessorSupplier&lt;KIn, VIn, KOut, VOut&gt;&gt;.SGetFieldArray&lt;TReturn&gt;(string)</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;JVMBridgeListener&gt;.SExecuteWithSignature&lt;TNewClass, TReturn, TConverter&gt;(string, string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;WrappedProcessorSupplier&lt;KIn, VIn, KOut, VOut&gt;&gt;.SSetField(IJavaType, string, object)</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;JVMBridgeListener&gt;.SExecute&lt;TReturn, TConverter&gt;(Type, IJavaType, string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;WrappedProcessorSupplier&lt;KIn, VIn, KOut, VOut&gt;&gt;.SSetField(string, object)</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;JVMBridgeListener&gt;.SExecuteWithSignature&lt;TReturn, TConverter&gt;(Type, IJavaType, string, string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;WrappedProcessorSupplier&lt;KIn, VIn, KOut, VOut&gt;&gt;.SSetField&lt;TValue&gt;(IJavaType, string, TValue)</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;JVMBridgeListener&gt;.SExecute&lt;TReturn, TConverter&gt;(Type, string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;WrappedProcessorSupplier&lt;KIn, VIn, KOut, VOut&gt;&gt;.SSetField&lt;TValue&gt;(string, TValue)</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;JVMBridgeListener&gt;.SExecuteWithSignature&lt;TReturn, TConverter&gt;(Type, string, string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;WrappedProcessorSupplier&lt;KIn, VIn, KOut, VOut&gt;&gt;.IsAssignableFrom(string)</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;JVMBridgeListener&gt;.SExecuteArray&lt;T&gt;(IJavaType, string, params object[])</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase&lt;WrappedProcessorSupplier&lt;KIn, VIn, KOut, VOut&gt;&gt;.IsAssignableFrom(IJavaType)</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;JVMBridgeListener&gt;.SExecuteWithSignatureArray&lt;T&gt;(IJavaType, string, string, params object[])</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase&lt;WrappedProcessorSupplier&lt;KIn, VIn, KOut, VOut&gt;&gt;.IsAssignableFrom&lt;T&gt;()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;JVMBridgeListener&gt;.SExecuteArray&lt;T&gt;(string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">JVMBridgeBase&lt;WrappedProcessorSupplier&lt;KIn, VIn, KOut, VOut&gt;&gt;.New(params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;JVMBridgeListener&gt;.SExecuteWithSignatureArray&lt;T&gt;(string, string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;WrappedProcessorSupplier&lt;KIn, VIn, KOut, VOut&gt;&gt;.NewWithSignature(string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;JVMBridgeListener&gt;.SGetField(IJavaType, string)</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase&lt;WrappedProcessorSupplier&lt;KIn, VIn, KOut, VOut&gt;&gt;.Execute&lt;T&gt;(params T[])</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;JVMBridgeListener&gt;.SGetField(string)</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase&lt;WrappedProcessorSupplier&lt;KIn, VIn, KOut, VOut&gt;&gt;.DynBridgeClazz</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;JVMBridgeListener&gt;.SGetField&lt;TReturn&gt;(IJavaType, string)</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase&lt;WrappedProcessorSupplier&lt;KIn, VIn, KOut, VOut&gt;&gt;.BridgeClazz</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;JVMBridgeListener&gt;.SGetField&lt;TReturn&gt;(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;JVMBridgeListener&gt;.SGetFieldArray&lt;TReturn&gt;(IJavaType, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;JVMBridgeListener&gt;.SGetFieldArray&lt;TReturn&gt;(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;JVMBridgeListener&gt;.SSetField(IJavaType, string, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;JVMBridgeListener&gt;.SSetField(string, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;JVMBridgeListener&gt;.SSetField&lt;TValue&gt;(IJavaType, string, TValue)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;JVMBridgeListener&gt;.SSetField&lt;TValue&gt;(string, TValue)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;JVMBridgeListener&gt;.IsAssignableFrom(string)</a>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase&lt;JVMBridgeListener&gt;.IsAssignableFrom(IJavaType)</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase&lt;JVMBridgeListener&gt;.IsAssignableFrom&lt;T&gt;()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">JVMBridgeBase&lt;JVMBridgeListener&gt;.New(params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;JVMBridgeListener&gt;.NewWithSignature(string, params object[])</a>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase&lt;JVMBridgeListener&gt;.Execute&lt;T&gt;(params T[])</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase&lt;JVMBridgeListener&gt;.DynBridgeClazz</span>
+    </div>
+    <div>
+      <span class="xref">JVMBridgeBase&lt;JVMBridgeListener&gt;.BridgeClazz</span>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">JVMBridgeBase.ClazzOf&lt;TClass&gt;(bool)</a>
@@ -356,9 +404,6 @@ Class WrappedProcessorSupplier&lt;KIn, VIn, KOut, VOut&gt;  <a class="header-act
     </div>
     <div>
       <span class="xref">JVMBridgeBase.CastDirect&lt;TNewClass&gt;()</span>
-    </div>
-    <div>
-      <span class="xref">JVMBridgeBase.Dispose()</span>
     </div>
     <div>
       <span class="xref">JVMBridgeBase.ToString()</span>
@@ -434,9 +479,6 @@ Class WrappedProcessorSupplier&lt;KIn, VIn, KOut, VOut&gt;  <a class="header-act
     </div>
     <div>
       <span class="xref">JVMBridgeBase.BridgeInstance</span>
-    </div>
-    <div>
-      <span class="xref">JVMBridgeBase.IsBridgeListener</span>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trygetmember">DynamicObject.TryGetMember(GetMemberBinder, out object)</a>

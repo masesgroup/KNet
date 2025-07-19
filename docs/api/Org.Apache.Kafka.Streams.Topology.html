@@ -751,14 +751,332 @@ Class Topology  <a class="header-action link-secondary" title="View source" href
 </h2>
 
 
+  <a id="Org_Apache_Kafka_Streams_Topology_AddGlobalStore_" data-uid="Org.Apache.Kafka.Streams.Topology.AddGlobalStore*"></a>
+
+  <h3 id="Org_Apache_Kafka_Streams_Topology_AddGlobalStore__2_Org_Apache_Kafka_Streams_State_StoreBuilder_Java_Lang_String_Org_Apache_Kafka_Common_Serialization_Deserializer___0__Org_Apache_Kafka_Common_Serialization_Deserializer___1__Java_Lang_String_Java_Lang_String_Org_Apache_Kafka_Streams_Processor_Api_ProcessorSupplier___0___1_Java_Lang_Void_Java_Lang_Void__" data-uid="Org.Apache.Kafka.Streams.Topology.AddGlobalStore``2(Org.Apache.Kafka.Streams.State.StoreBuilder,Java.Lang.String,Org.Apache.Kafka.Common.Serialization.Deserializer{``0},Org.Apache.Kafka.Common.Serialization.Deserializer{``1},Java.Lang.String,Java.Lang.String,Org.Apache.Kafka.Streams.Processor.Api.ProcessorSupplier{``0,``1,Java.Lang.Void,Java.Lang.Void})">
+  AddGlobalStore&lt;KIn, VIn&gt;(StoreBuilder, String, Deserializer&lt;KIn&gt;, Deserializer&lt;VIn&gt;, String, String, ProcessorSupplier&lt;KIn, VIn, Void, Void&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Topology.cs/#L240"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/Topology.html#addGlobalStore(org.apache.kafka.streams.state.StoreBuilder,java.lang.String,org.apache.kafka.common.serialization.Deserializer,org.apache.kafka.common.serialization.Deserializer,java.lang.String,java.lang.String,org.apache.kafka.streams.processor.api.ProcessorSupplier)">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/Topology.html#addGlobalStore(org.apache.kafka.streams.state.StoreBuilder,java.lang.String,org.apache.kafka.common.serialization.Deserializer,org.apache.kafka.common.serialization.Deserializer,java.lang.String,java.lang.String,org.apache.kafka.streams.processor.api.ProcessorSupplier)</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Topology AddGlobalStore&lt;KIn, VIn&gt;(StoreBuilder arg0, String arg1, Deserializer&lt;KIn&gt; arg2, Deserializer&lt;VIn&gt; arg3, String arg4, String arg5, ProcessorSupplier&lt;KIn, VIn, Void, Void&gt; arg6)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="Org.Apache.Kafka.Streams.State.StoreBuilder.html">StoreBuilder</a></dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Streams.State.StoreBuilder.html">StoreBuilder</a></p>
+</dd>
+    <dt><code>arg1</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></p>
+</dd>
+    <dt><code>arg2</code> <a class="xref" href="Org.Apache.Kafka.Common.Serialization.Deserializer-1.html">Deserializer</a>&lt;KIn&gt;</dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Common.Serialization.Deserializer.html">Deserializer</a></p>
+</dd>
+    <dt><code>arg3</code> <a class="xref" href="Org.Apache.Kafka.Common.Serialization.Deserializer-1.html">Deserializer</a>&lt;VIn&gt;</dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Common.Serialization.Deserializer.html">Deserializer</a></p>
+</dd>
+    <dt><code>arg4</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></p>
+</dd>
+    <dt><code>arg5</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></p>
+</dd>
+    <dt><code>arg6</code> <a class="xref" href="Org.Apache.Kafka.Streams.Processor.Api.ProcessorSupplier-4.html">ProcessorSupplier</a>&lt;KIn, VIn, <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.Void.html">Void</a>, <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.Void.html">Void</a>&gt;</dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Streams.Processor.Api.ProcessorSupplier.html">ProcessorSupplier</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Apache.Kafka.Streams.Topology.html">Topology</a></dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Streams.Topology.html">Topology</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>KIn</code></dt>
+    <dd></dd>
+    <dt><code>VIn</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Apache_Kafka_Streams_Topology_AddGlobalStore_" data-uid="Org.Apache.Kafka.Streams.Topology.AddGlobalStore*"></a>
+
+  <h3 id="Org_Apache_Kafka_Streams_Topology_AddGlobalStore__2_Org_Apache_Kafka_Streams_State_StoreBuilder_Java_Lang_String_Org_Apache_Kafka_Streams_Processor_TimestampExtractor_Org_Apache_Kafka_Common_Serialization_Deserializer___0__Org_Apache_Kafka_Common_Serialization_Deserializer___1__Java_Lang_String_Java_Lang_String_Org_Apache_Kafka_Streams_Processor_Api_ProcessorSupplier___0___1_Java_Lang_Void_Java_Lang_Void__" data-uid="Org.Apache.Kafka.Streams.Topology.AddGlobalStore``2(Org.Apache.Kafka.Streams.State.StoreBuilder,Java.Lang.String,Org.Apache.Kafka.Streams.Processor.TimestampExtractor,Org.Apache.Kafka.Common.Serialization.Deserializer{``0},Org.Apache.Kafka.Common.Serialization.Deserializer{``1},Java.Lang.String,Java.Lang.String,Org.Apache.Kafka.Streams.Processor.Api.ProcessorSupplier{``0,``1,Java.Lang.Void,Java.Lang.Void})">
+  AddGlobalStore&lt;KIn, VIn&gt;(StoreBuilder, String, TimestampExtractor, Deserializer&lt;KIn&gt;, Deserializer&lt;VIn&gt;, String, String, ProcessorSupplier&lt;KIn, VIn, Void, Void&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Topology.cs/#L258"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/Topology.html#addGlobalStore(org.apache.kafka.streams.state.StoreBuilder,java.lang.String,org.apache.kafka.streams.processor.TimestampExtractor,org.apache.kafka.common.serialization.Deserializer,org.apache.kafka.common.serialization.Deserializer,java.lang.String,java.lang.String,org.apache.kafka.streams.processor.api.ProcessorSupplier)">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/Topology.html#addGlobalStore(org.apache.kafka.streams.state.StoreBuilder,java.lang.String,org.apache.kafka.streams.processor.TimestampExtractor,org.apache.kafka.common.serialization.Deserializer,org.apache.kafka.common.serialization.Deserializer,java.lang.String,java.lang.String,org.apache.kafka.streams.processor.api.ProcessorSupplier)</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Topology AddGlobalStore&lt;KIn, VIn&gt;(StoreBuilder arg0, String arg1, TimestampExtractor arg2, Deserializer&lt;KIn&gt; arg3, Deserializer&lt;VIn&gt; arg4, String arg5, String arg6, ProcessorSupplier&lt;KIn, VIn, Void, Void&gt; arg7)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="Org.Apache.Kafka.Streams.State.StoreBuilder.html">StoreBuilder</a></dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Streams.State.StoreBuilder.html">StoreBuilder</a></p>
+</dd>
+    <dt><code>arg1</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></p>
+</dd>
+    <dt><code>arg2</code> <a class="xref" href="Org.Apache.Kafka.Streams.Processor.TimestampExtractor.html">TimestampExtractor</a></dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Streams.Processor.TimestampExtractor.html">TimestampExtractor</a></p>
+</dd>
+    <dt><code>arg3</code> <a class="xref" href="Org.Apache.Kafka.Common.Serialization.Deserializer-1.html">Deserializer</a>&lt;KIn&gt;</dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Common.Serialization.Deserializer.html">Deserializer</a></p>
+</dd>
+    <dt><code>arg4</code> <a class="xref" href="Org.Apache.Kafka.Common.Serialization.Deserializer-1.html">Deserializer</a>&lt;VIn&gt;</dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Common.Serialization.Deserializer.html">Deserializer</a></p>
+</dd>
+    <dt><code>arg5</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></p>
+</dd>
+    <dt><code>arg6</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></p>
+</dd>
+    <dt><code>arg7</code> <a class="xref" href="Org.Apache.Kafka.Streams.Processor.Api.ProcessorSupplier-4.html">ProcessorSupplier</a>&lt;KIn, VIn, <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.Void.html">Void</a>, <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.Void.html">Void</a>&gt;</dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Streams.Processor.Api.ProcessorSupplier.html">ProcessorSupplier</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Apache.Kafka.Streams.Topology.html">Topology</a></dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Streams.Topology.html">Topology</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>KIn</code></dt>
+    <dd></dd>
+    <dt><code>VIn</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Apache_Kafka_Streams_Topology_AddProcessor_" data-uid="Org.Apache.Kafka.Streams.Topology.AddProcessor*"></a>
+
+  <h3 id="Org_Apache_Kafka_Streams_Topology_AddProcessor__4_Java_Lang_String_Org_Apache_Kafka_Streams_Processor_Api_ProcessorSupplier___0___1___2___3__Java_Lang_String___" data-uid="Org.Apache.Kafka.Streams.Topology.AddProcessor``4(Java.Lang.String,Org.Apache.Kafka.Streams.Processor.Api.ProcessorSupplier{``0,``1,``2,``3},Java.Lang.String[])">
+  AddProcessor&lt;KIn, VIn, KOut, VOut&gt;(String, ProcessorSupplier&lt;KIn, VIn, KOut, VOut&gt;, params String[])
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Topology.cs/#L223"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/Topology.html#addProcessor(java.lang.String,org.apache.kafka.streams.processor.api.ProcessorSupplier,java.lang.String...)">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/Topology.html#addProcessor(java.lang.String,org.apache.kafka.streams.processor.api.ProcessorSupplier,java.lang.String...)</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Topology AddProcessor&lt;KIn, VIn, KOut, VOut&gt;(String arg0, ProcessorSupplier&lt;KIn, VIn, KOut, VOut&gt; arg1, params String[] arg2)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></p>
+</dd>
+    <dt><code>arg1</code> <a class="xref" href="Org.Apache.Kafka.Streams.Processor.Api.ProcessorSupplier-4.html">ProcessorSupplier</a>&lt;KIn, VIn, KOut, VOut&gt;</dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Streams.Processor.Api.ProcessorSupplier.html">ProcessorSupplier</a></p>
+</dd>
+    <dt><code>arg2</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a>[]</dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Apache.Kafka.Streams.Topology.html">Topology</a></dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Streams.Topology.html">Topology</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>KIn</code></dt>
+    <dd></dd>
+    <dt><code>VIn</code></dt>
+    <dd></dd>
+    <dt><code>KOut</code></dt>
+    <dd></dd>
+    <dt><code>VOut</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Apache_Kafka_Streams_Topology_AddReadOnlyStateStore_" data-uid="Org.Apache.Kafka.Streams.Topology.AddReadOnlyStateStore*"></a>
+
+  <h3 id="Org_Apache_Kafka_Streams_Topology_AddReadOnlyStateStore__2_Org_Apache_Kafka_Streams_State_StoreBuilder_Java_Lang_String_Org_Apache_Kafka_Common_Serialization_Deserializer___0__Org_Apache_Kafka_Common_Serialization_Deserializer___1__Java_Lang_String_Java_Lang_String_Org_Apache_Kafka_Streams_Processor_Api_ProcessorSupplier___0___1_Java_Lang_Void_Java_Lang_Void__" data-uid="Org.Apache.Kafka.Streams.Topology.AddReadOnlyStateStore``2(Org.Apache.Kafka.Streams.State.StoreBuilder,Java.Lang.String,Org.Apache.Kafka.Common.Serialization.Deserializer{``0},Org.Apache.Kafka.Common.Serialization.Deserializer{``1},Java.Lang.String,Java.Lang.String,Org.Apache.Kafka.Streams.Processor.Api.ProcessorSupplier{``0,``1,Java.Lang.Void,Java.Lang.Void})">
+  AddReadOnlyStateStore&lt;KIn, VIn&gt;(StoreBuilder, String, Deserializer&lt;KIn&gt;, Deserializer&lt;VIn&gt;, String, String, ProcessorSupplier&lt;KIn, VIn, Void, Void&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Topology.cs/#L275"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/Topology.html#addReadOnlyStateStore(org.apache.kafka.streams.state.StoreBuilder,java.lang.String,org.apache.kafka.common.serialization.Deserializer,org.apache.kafka.common.serialization.Deserializer,java.lang.String,java.lang.String,org.apache.kafka.streams.processor.api.ProcessorSupplier)">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/Topology.html#addReadOnlyStateStore(org.apache.kafka.streams.state.StoreBuilder,java.lang.String,org.apache.kafka.common.serialization.Deserializer,org.apache.kafka.common.serialization.Deserializer,java.lang.String,java.lang.String,org.apache.kafka.streams.processor.api.ProcessorSupplier)</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Topology AddReadOnlyStateStore&lt;KIn, VIn&gt;(StoreBuilder arg0, String arg1, Deserializer&lt;KIn&gt; arg2, Deserializer&lt;VIn&gt; arg3, String arg4, String arg5, ProcessorSupplier&lt;KIn, VIn, Void, Void&gt; arg6)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="Org.Apache.Kafka.Streams.State.StoreBuilder.html">StoreBuilder</a></dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Streams.State.StoreBuilder.html">StoreBuilder</a></p>
+</dd>
+    <dt><code>arg1</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></p>
+</dd>
+    <dt><code>arg2</code> <a class="xref" href="Org.Apache.Kafka.Common.Serialization.Deserializer-1.html">Deserializer</a>&lt;KIn&gt;</dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Common.Serialization.Deserializer.html">Deserializer</a></p>
+</dd>
+    <dt><code>arg3</code> <a class="xref" href="Org.Apache.Kafka.Common.Serialization.Deserializer-1.html">Deserializer</a>&lt;VIn&gt;</dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Common.Serialization.Deserializer.html">Deserializer</a></p>
+</dd>
+    <dt><code>arg4</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></p>
+</dd>
+    <dt><code>arg5</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></p>
+</dd>
+    <dt><code>arg6</code> <a class="xref" href="Org.Apache.Kafka.Streams.Processor.Api.ProcessorSupplier-4.html">ProcessorSupplier</a>&lt;KIn, VIn, <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.Void.html">Void</a>, <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.Void.html">Void</a>&gt;</dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Streams.Processor.Api.ProcessorSupplier.html">ProcessorSupplier</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Apache.Kafka.Streams.Topology.html">Topology</a></dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Streams.Topology.html">Topology</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>KIn</code></dt>
+    <dd></dd>
+    <dt><code>VIn</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Apache_Kafka_Streams_Topology_AddReadOnlyStateStore_" data-uid="Org.Apache.Kafka.Streams.Topology.AddReadOnlyStateStore*"></a>
+
+  <h3 id="Org_Apache_Kafka_Streams_Topology_AddReadOnlyStateStore__2_Org_Apache_Kafka_Streams_State_StoreBuilder_Java_Lang_String_Org_Apache_Kafka_Streams_Processor_TimestampExtractor_Org_Apache_Kafka_Common_Serialization_Deserializer___0__Org_Apache_Kafka_Common_Serialization_Deserializer___1__Java_Lang_String_Java_Lang_String_Org_Apache_Kafka_Streams_Processor_Api_ProcessorSupplier___0___1_Java_Lang_Void_Java_Lang_Void__" data-uid="Org.Apache.Kafka.Streams.Topology.AddReadOnlyStateStore``2(Org.Apache.Kafka.Streams.State.StoreBuilder,Java.Lang.String,Org.Apache.Kafka.Streams.Processor.TimestampExtractor,Org.Apache.Kafka.Common.Serialization.Deserializer{``0},Org.Apache.Kafka.Common.Serialization.Deserializer{``1},Java.Lang.String,Java.Lang.String,Org.Apache.Kafka.Streams.Processor.Api.ProcessorSupplier{``0,``1,Java.Lang.Void,Java.Lang.Void})">
+  AddReadOnlyStateStore&lt;KIn, VIn&gt;(StoreBuilder, String, TimestampExtractor, Deserializer&lt;KIn&gt;, Deserializer&lt;VIn&gt;, String, String, ProcessorSupplier&lt;KIn, VIn, Void, Void&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Topology.cs/#L293"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/Topology.html#addReadOnlyStateStore(org.apache.kafka.streams.state.StoreBuilder,java.lang.String,org.apache.kafka.streams.processor.TimestampExtractor,org.apache.kafka.common.serialization.Deserializer,org.apache.kafka.common.serialization.Deserializer,java.lang.String,java.lang.String,org.apache.kafka.streams.processor.api.ProcessorSupplier)">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/Topology.html#addReadOnlyStateStore(org.apache.kafka.streams.state.StoreBuilder,java.lang.String,org.apache.kafka.streams.processor.TimestampExtractor,org.apache.kafka.common.serialization.Deserializer,org.apache.kafka.common.serialization.Deserializer,java.lang.String,java.lang.String,org.apache.kafka.streams.processor.api.ProcessorSupplier)</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Topology AddReadOnlyStateStore&lt;KIn, VIn&gt;(StoreBuilder arg0, String arg1, TimestampExtractor arg2, Deserializer&lt;KIn&gt; arg3, Deserializer&lt;VIn&gt; arg4, String arg5, String arg6, ProcessorSupplier&lt;KIn, VIn, Void, Void&gt; arg7)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="Org.Apache.Kafka.Streams.State.StoreBuilder.html">StoreBuilder</a></dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Streams.State.StoreBuilder.html">StoreBuilder</a></p>
+</dd>
+    <dt><code>arg1</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></p>
+</dd>
+    <dt><code>arg2</code> <a class="xref" href="Org.Apache.Kafka.Streams.Processor.TimestampExtractor.html">TimestampExtractor</a></dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Streams.Processor.TimestampExtractor.html">TimestampExtractor</a></p>
+</dd>
+    <dt><code>arg3</code> <a class="xref" href="Org.Apache.Kafka.Common.Serialization.Deserializer-1.html">Deserializer</a>&lt;KIn&gt;</dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Common.Serialization.Deserializer.html">Deserializer</a></p>
+</dd>
+    <dt><code>arg4</code> <a class="xref" href="Org.Apache.Kafka.Common.Serialization.Deserializer-1.html">Deserializer</a>&lt;VIn&gt;</dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Common.Serialization.Deserializer.html">Deserializer</a></p>
+</dd>
+    <dt><code>arg5</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></p>
+</dd>
+    <dt><code>arg6</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></p>
+</dd>
+    <dt><code>arg7</code> <a class="xref" href="Org.Apache.Kafka.Streams.Processor.Api.ProcessorSupplier-4.html">ProcessorSupplier</a>&lt;KIn, VIn, <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.Void.html">Void</a>, <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.Void.html">Void</a>&gt;</dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Streams.Processor.Api.ProcessorSupplier.html">ProcessorSupplier</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Apache.Kafka.Streams.Topology.html">Topology</a></dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Streams.Topology.html">Topology</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>KIn</code></dt>
+    <dd></dd>
+    <dt><code>VIn</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
   <a id="Org_Apache_Kafka_Streams_Topology_AddSink_" data-uid="Org.Apache.Kafka.Streams.Topology.AddSink*"></a>
 
   <h3 id="Org_Apache_Kafka_Streams_Topology_AddSink_Java_Lang_String_Java_Lang_String_Java_Lang_String___" data-uid="Org.Apache.Kafka.Streams.Topology.AddSink(Java.Lang.String,Java.Lang.String,Java.Lang.String[])">
   AddSink(String, String, params String[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Topology.cs/#L219"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Topology.cs/#L304"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/Topology.html#addSink(java.lang.String,java.lang.String,java.lang.String[])">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/Topology.html#addSink(java.lang.String,java.lang.String,java.lang.String[])</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/Topology.html#addSink(java.lang.String,java.lang.String,java.lang.String...)">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/Topology.html#addSink(java.lang.String,java.lang.String,java.lang.String...)</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -803,7 +1121,7 @@ Class Topology  <a class="header-action link-secondary" title="View source" href
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Topology.cs/#L112"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/Topology.html#addSink(java.lang.String,java.lang.String,org.apache.kafka.common.serialization.Serializer,org.apache.kafka.common.serialization.Serializer,java.lang.String[])">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/Topology.html#addSink(java.lang.String,java.lang.String,org.apache.kafka.common.serialization.Serializer,org.apache.kafka.common.serialization.Serializer,java.lang.String[])</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/Topology.html#addSink(java.lang.String,java.lang.String,org.apache.kafka.common.serialization.Serializer,org.apache.kafka.common.serialization.Serializer,java.lang.String...)">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/Topology.html#addSink(java.lang.String,java.lang.String,org.apache.kafka.common.serialization.Serializer,org.apache.kafka.common.serialization.Serializer,java.lang.String...)</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -861,7 +1179,7 @@ Class Topology  <a class="header-action link-secondary" title="View source" href
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Topology.cs/#L159"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/Topology.html#addSink(java.lang.String,org.apache.kafka.streams.processor.TopicNameExtractor,java.lang.String[])">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/Topology.html#addSink(java.lang.String,org.apache.kafka.streams.processor.TopicNameExtractor,java.lang.String[])</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/Topology.html#addSink(java.lang.String,org.apache.kafka.streams.processor.TopicNameExtractor,java.lang.String...)">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/Topology.html#addSink(java.lang.String,org.apache.kafka.streams.processor.TopicNameExtractor,java.lang.String...)</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -913,7 +1231,7 @@ Class Topology  <a class="header-action link-secondary" title="View source" href
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Topology.cs/#L174"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/Topology.html#addSink(java.lang.String,org.apache.kafka.streams.processor.TopicNameExtractor,org.apache.kafka.common.serialization.Serializer,org.apache.kafka.common.serialization.Serializer,java.lang.String[])">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/Topology.html#addSink(java.lang.String,org.apache.kafka.streams.processor.TopicNameExtractor,org.apache.kafka.common.serialization.Serializer,org.apache.kafka.common.serialization.Serializer,java.lang.String[])</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/Topology.html#addSink(java.lang.String,org.apache.kafka.streams.processor.TopicNameExtractor,org.apache.kafka.common.serialization.Serializer,org.apache.kafka.common.serialization.Serializer,java.lang.String...)">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/Topology.html#addSink(java.lang.String,org.apache.kafka.streams.processor.TopicNameExtractor,org.apache.kafka.common.serialization.Serializer,org.apache.kafka.common.serialization.Serializer,java.lang.String...)</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -971,7 +1289,7 @@ Class Topology  <a class="header-action link-secondary" title="View source" href
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Topology.cs/#L130"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/Topology.html#addSink(java.lang.String,java.lang.String,org.apache.kafka.common.serialization.Serializer,org.apache.kafka.common.serialization.Serializer,org.apache.kafka.streams.processor.StreamPartitioner,java.lang.String[])">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/Topology.html#addSink(java.lang.String,java.lang.String,org.apache.kafka.common.serialization.Serializer,org.apache.kafka.common.serialization.Serializer,org.apache.kafka.streams.processor.StreamPartitioner,java.lang.String[])</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/Topology.html#addSink(java.lang.String,java.lang.String,org.apache.kafka.common.serialization.Serializer,org.apache.kafka.common.serialization.Serializer,org.apache.kafka.streams.processor.StreamPartitioner,java.lang.String...)">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/Topology.html#addSink(java.lang.String,java.lang.String,org.apache.kafka.common.serialization.Serializer,org.apache.kafka.common.serialization.Serializer,org.apache.kafka.streams.processor.StreamPartitioner,java.lang.String...)</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1038,7 +1356,7 @@ Class Topology  <a class="header-action link-secondary" title="View source" href
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Topology.cs/#L146"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/Topology.html#addSink(java.lang.String,java.lang.String,org.apache.kafka.streams.processor.StreamPartitioner,java.lang.String[])">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/Topology.html#addSink(java.lang.String,java.lang.String,org.apache.kafka.streams.processor.StreamPartitioner,java.lang.String[])</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/Topology.html#addSink(java.lang.String,java.lang.String,org.apache.kafka.streams.processor.StreamPartitioner,java.lang.String...)">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/Topology.html#addSink(java.lang.String,java.lang.String,org.apache.kafka.streams.processor.StreamPartitioner,java.lang.String...)</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1099,7 +1417,7 @@ Class Topology  <a class="header-action link-secondary" title="View source" href
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Topology.cs/#L192"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/Topology.html#addSink(java.lang.String,org.apache.kafka.streams.processor.TopicNameExtractor,org.apache.kafka.common.serialization.Serializer,org.apache.kafka.common.serialization.Serializer,org.apache.kafka.streams.processor.StreamPartitioner,java.lang.String[])">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/Topology.html#addSink(java.lang.String,org.apache.kafka.streams.processor.TopicNameExtractor,org.apache.kafka.common.serialization.Serializer,org.apache.kafka.common.serialization.Serializer,org.apache.kafka.streams.processor.StreamPartitioner,java.lang.String[])</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/Topology.html#addSink(java.lang.String,org.apache.kafka.streams.processor.TopicNameExtractor,org.apache.kafka.common.serialization.Serializer,org.apache.kafka.common.serialization.Serializer,org.apache.kafka.streams.processor.StreamPartitioner,java.lang.String...)">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/Topology.html#addSink(java.lang.String,org.apache.kafka.streams.processor.TopicNameExtractor,org.apache.kafka.common.serialization.Serializer,org.apache.kafka.common.serialization.Serializer,org.apache.kafka.streams.processor.StreamPartitioner,java.lang.String...)</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1166,7 +1484,7 @@ Class Topology  <a class="header-action link-secondary" title="View source" href
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Topology.cs/#L208"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/Topology.html#addSink(java.lang.String,org.apache.kafka.streams.processor.TopicNameExtractor,org.apache.kafka.streams.processor.StreamPartitioner,java.lang.String[])">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/Topology.html#addSink(java.lang.String,org.apache.kafka.streams.processor.TopicNameExtractor,org.apache.kafka.streams.processor.StreamPartitioner,java.lang.String[])</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/Topology.html#addSink(java.lang.String,org.apache.kafka.streams.processor.TopicNameExtractor,org.apache.kafka.streams.processor.StreamPartitioner,java.lang.String...)">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/Topology.html#addSink(java.lang.String,org.apache.kafka.streams.processor.TopicNameExtractor,org.apache.kafka.streams.processor.StreamPartitioner,java.lang.String...)</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1224,10 +1542,10 @@ Class Topology  <a class="header-action link-secondary" title="View source" href
 
   <h3 id="Org_Apache_Kafka_Streams_Topology_AddSource_Java_Lang_String_Java_Lang_String___" data-uid="Org.Apache.Kafka.Streams.Topology.AddSource(Java.Lang.String,Java.Lang.String[])">
   AddSource(String, params String[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Topology.cs/#L229"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Topology.cs/#L314"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/Topology.html#addSource(java.lang.String,java.lang.String[])">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/Topology.html#addSource(java.lang.String,java.lang.String[])</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/Topology.html#addSource(java.lang.String,java.lang.String...)">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/Topology.html#addSource(java.lang.String,java.lang.String...)</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1266,7 +1584,7 @@ Class Topology  <a class="header-action link-secondary" title="View source" href
 
   <h3 id="Org_Apache_Kafka_Streams_Topology_AddSource_Java_Lang_String_Java_Util_Regex_Pattern_" data-uid="Org.Apache.Kafka.Streams.Topology.AddSource(Java.Lang.String,Java.Util.Regex.Pattern)">
   AddSource(String, Pattern)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Topology.cs/#L239"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Topology.cs/#L324"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/Topology.html#addSource(java.lang.String,java.util.regex.Pattern)">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/Topology.html#addSource(java.lang.String,java.util.regex.Pattern)</a></p>
@@ -1308,10 +1626,10 @@ Class Topology  <a class="header-action link-secondary" title="View source" href
 
   <h3 id="Org_Apache_Kafka_Streams_Topology_AddSource_Java_Lang_String_Org_Apache_Kafka_Common_Serialization_Deserializer_System_Object__Org_Apache_Kafka_Common_Serialization_Deserializer_System_Object__Java_Lang_String___" data-uid="Org.Apache.Kafka.Streams.Topology.AddSource(Java.Lang.String,Org.Apache.Kafka.Common.Serialization.Deserializer{System.Object},Org.Apache.Kafka.Common.Serialization.Deserializer{System.Object},Java.Lang.String[])">
   AddSource(String, Deserializer&lt;object&gt;, Deserializer&lt;object&gt;, params String[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Topology.cs/#L251"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Topology.cs/#L336"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/Topology.html#addSource(java.lang.String,org.apache.kafka.common.serialization.Deserializer,org.apache.kafka.common.serialization.Deserializer,java.lang.String[])">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/Topology.html#addSource(java.lang.String,org.apache.kafka.common.serialization.Deserializer,org.apache.kafka.common.serialization.Deserializer,java.lang.String[])</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/Topology.html#addSource(java.lang.String,org.apache.kafka.common.serialization.Deserializer,org.apache.kafka.common.serialization.Deserializer,java.lang.String...)">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/Topology.html#addSource(java.lang.String,org.apache.kafka.common.serialization.Deserializer,org.apache.kafka.common.serialization.Deserializer,java.lang.String...)</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1356,7 +1674,7 @@ Class Topology  <a class="header-action link-secondary" title="View source" href
 
   <h3 id="Org_Apache_Kafka_Streams_Topology_AddSource_Java_Lang_String_Org_Apache_Kafka_Common_Serialization_Deserializer_System_Object__Org_Apache_Kafka_Common_Serialization_Deserializer_System_Object__Java_Util_Regex_Pattern_" data-uid="Org.Apache.Kafka.Streams.Topology.AddSource(Java.Lang.String,Org.Apache.Kafka.Common.Serialization.Deserializer{System.Object},Org.Apache.Kafka.Common.Serialization.Deserializer{System.Object},Java.Util.Regex.Pattern)">
   AddSource(String, Deserializer&lt;object&gt;, Deserializer&lt;object&gt;, Pattern)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Topology.cs/#L263"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Topology.cs/#L348"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/Topology.html#addSource(java.lang.String,org.apache.kafka.common.serialization.Deserializer,org.apache.kafka.common.serialization.Deserializer,java.util.regex.Pattern)">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/Topology.html#addSource(java.lang.String,org.apache.kafka.common.serialization.Deserializer,org.apache.kafka.common.serialization.Deserializer,java.util.regex.Pattern)</a></p>
@@ -1404,10 +1722,10 @@ Class Topology  <a class="header-action link-secondary" title="View source" href
 
   <h3 id="Org_Apache_Kafka_Streams_Topology_AddSource_Org_Apache_Kafka_Streams_AutoOffsetReset_Java_Lang_String_Java_Lang_String___" data-uid="Org.Apache.Kafka.Streams.Topology.AddSource(Org.Apache.Kafka.Streams.AutoOffsetReset,Java.Lang.String,Java.Lang.String[])">
   AddSource(AutoOffsetReset, String, params String[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Topology.cs/#L274"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Topology.cs/#L359"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/Topology.html#addSource(org.apache.kafka.streams.AutoOffsetReset,java.lang.String,java.lang.String[])">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/Topology.html#addSource(org.apache.kafka.streams.AutoOffsetReset,java.lang.String,java.lang.String[])</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/Topology.html#addSource(org.apache.kafka.streams.AutoOffsetReset,java.lang.String,java.lang.String...)">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/Topology.html#addSource(org.apache.kafka.streams.AutoOffsetReset,java.lang.String,java.lang.String...)</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1449,7 +1767,7 @@ Class Topology  <a class="header-action link-secondary" title="View source" href
 
   <h3 id="Org_Apache_Kafka_Streams_Topology_AddSource_Org_Apache_Kafka_Streams_AutoOffsetReset_Java_Lang_String_Java_Util_Regex_Pattern_" data-uid="Org.Apache.Kafka.Streams.Topology.AddSource(Org.Apache.Kafka.Streams.AutoOffsetReset,Java.Lang.String,Java.Util.Regex.Pattern)">
   AddSource(AutoOffsetReset, String, Pattern)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Topology.cs/#L285"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Topology.cs/#L370"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/Topology.html#addSource(org.apache.kafka.streams.AutoOffsetReset,java.lang.String,java.util.regex.Pattern)">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/Topology.html#addSource(org.apache.kafka.streams.AutoOffsetReset,java.lang.String,java.util.regex.Pattern)</a></p>
@@ -1494,10 +1812,10 @@ Class Topology  <a class="header-action link-secondary" title="View source" href
 
   <h3 id="Org_Apache_Kafka_Streams_Topology_AddSource_Org_Apache_Kafka_Streams_AutoOffsetReset_Java_Lang_String_Org_Apache_Kafka_Common_Serialization_Deserializer_System_Object__Org_Apache_Kafka_Common_Serialization_Deserializer_System_Object__Java_Lang_String___" data-uid="Org.Apache.Kafka.Streams.Topology.AddSource(Org.Apache.Kafka.Streams.AutoOffsetReset,Java.Lang.String,Org.Apache.Kafka.Common.Serialization.Deserializer{System.Object},Org.Apache.Kafka.Common.Serialization.Deserializer{System.Object},Java.Lang.String[])">
   AddSource(AutoOffsetReset, String, Deserializer&lt;object&gt;, Deserializer&lt;object&gt;, params String[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Topology.cs/#L298"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Topology.cs/#L383"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/Topology.html#addSource(org.apache.kafka.streams.AutoOffsetReset,java.lang.String,org.apache.kafka.common.serialization.Deserializer,org.apache.kafka.common.serialization.Deserializer,java.lang.String[])">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/Topology.html#addSource(org.apache.kafka.streams.AutoOffsetReset,java.lang.String,org.apache.kafka.common.serialization.Deserializer,org.apache.kafka.common.serialization.Deserializer,java.lang.String[])</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/Topology.html#addSource(org.apache.kafka.streams.AutoOffsetReset,java.lang.String,org.apache.kafka.common.serialization.Deserializer,org.apache.kafka.common.serialization.Deserializer,java.lang.String...)">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/Topology.html#addSource(org.apache.kafka.streams.AutoOffsetReset,java.lang.String,org.apache.kafka.common.serialization.Deserializer,org.apache.kafka.common.serialization.Deserializer,java.lang.String...)</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1545,7 +1863,7 @@ Class Topology  <a class="header-action link-secondary" title="View source" href
 
   <h3 id="Org_Apache_Kafka_Streams_Topology_AddSource_Org_Apache_Kafka_Streams_AutoOffsetReset_Java_Lang_String_Org_Apache_Kafka_Common_Serialization_Deserializer_System_Object__Org_Apache_Kafka_Common_Serialization_Deserializer_System_Object__Java_Util_Regex_Pattern_" data-uid="Org.Apache.Kafka.Streams.Topology.AddSource(Org.Apache.Kafka.Streams.AutoOffsetReset,Java.Lang.String,Org.Apache.Kafka.Common.Serialization.Deserializer{System.Object},Org.Apache.Kafka.Common.Serialization.Deserializer{System.Object},Java.Util.Regex.Pattern)">
   AddSource(AutoOffsetReset, String, Deserializer&lt;object&gt;, Deserializer&lt;object&gt;, Pattern)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Topology.cs/#L311"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Topology.cs/#L396"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/Topology.html#addSource(org.apache.kafka.streams.AutoOffsetReset,java.lang.String,org.apache.kafka.common.serialization.Deserializer,org.apache.kafka.common.serialization.Deserializer,java.util.regex.Pattern)">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/Topology.html#addSource(org.apache.kafka.streams.AutoOffsetReset,java.lang.String,org.apache.kafka.common.serialization.Deserializer,org.apache.kafka.common.serialization.Deserializer,java.util.regex.Pattern)</a></p>
@@ -1596,10 +1914,10 @@ Class Topology  <a class="header-action link-secondary" title="View source" href
 
   <h3 id="Org_Apache_Kafka_Streams_Topology_AddSource_Org_Apache_Kafka_Streams_AutoOffsetReset_Java_Lang_String_Org_Apache_Kafka_Streams_Processor_TimestampExtractor_Org_Apache_Kafka_Common_Serialization_Deserializer_System_Object__Org_Apache_Kafka_Common_Serialization_Deserializer_System_Object__Java_Lang_String___" data-uid="Org.Apache.Kafka.Streams.Topology.AddSource(Org.Apache.Kafka.Streams.AutoOffsetReset,Java.Lang.String,Org.Apache.Kafka.Streams.Processor.TimestampExtractor,Org.Apache.Kafka.Common.Serialization.Deserializer{System.Object},Org.Apache.Kafka.Common.Serialization.Deserializer{System.Object},Java.Lang.String[])">
   AddSource(AutoOffsetReset, String, TimestampExtractor, Deserializer&lt;object&gt;, Deserializer&lt;object&gt;, params String[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Topology.cs/#L325"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Topology.cs/#L410"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/Topology.html#addSource(org.apache.kafka.streams.AutoOffsetReset,java.lang.String,org.apache.kafka.streams.processor.TimestampExtractor,org.apache.kafka.common.serialization.Deserializer,org.apache.kafka.common.serialization.Deserializer,java.lang.String[])">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/Topology.html#addSource(org.apache.kafka.streams.AutoOffsetReset,java.lang.String,org.apache.kafka.streams.processor.TimestampExtractor,org.apache.kafka.common.serialization.Deserializer,org.apache.kafka.common.serialization.Deserializer,java.lang.String[])</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/Topology.html#addSource(org.apache.kafka.streams.AutoOffsetReset,java.lang.String,org.apache.kafka.streams.processor.TimestampExtractor,org.apache.kafka.common.serialization.Deserializer,org.apache.kafka.common.serialization.Deserializer,java.lang.String...)">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/Topology.html#addSource(org.apache.kafka.streams.AutoOffsetReset,java.lang.String,org.apache.kafka.streams.processor.TimestampExtractor,org.apache.kafka.common.serialization.Deserializer,org.apache.kafka.common.serialization.Deserializer,java.lang.String...)</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1650,7 +1968,7 @@ Class Topology  <a class="header-action link-secondary" title="View source" href
 
   <h3 id="Org_Apache_Kafka_Streams_Topology_AddSource_Org_Apache_Kafka_Streams_AutoOffsetReset_Java_Lang_String_Org_Apache_Kafka_Streams_Processor_TimestampExtractor_Org_Apache_Kafka_Common_Serialization_Deserializer_System_Object__Org_Apache_Kafka_Common_Serialization_Deserializer_System_Object__Java_Util_Regex_Pattern_" data-uid="Org.Apache.Kafka.Streams.Topology.AddSource(Org.Apache.Kafka.Streams.AutoOffsetReset,Java.Lang.String,Org.Apache.Kafka.Streams.Processor.TimestampExtractor,Org.Apache.Kafka.Common.Serialization.Deserializer{System.Object},Org.Apache.Kafka.Common.Serialization.Deserializer{System.Object},Java.Util.Regex.Pattern)">
   AddSource(AutoOffsetReset, String, TimestampExtractor, Deserializer&lt;object&gt;, Deserializer&lt;object&gt;, Pattern)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Topology.cs/#L339"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Topology.cs/#L424"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/Topology.html#addSource(org.apache.kafka.streams.AutoOffsetReset,java.lang.String,org.apache.kafka.streams.processor.TimestampExtractor,org.apache.kafka.common.serialization.Deserializer,org.apache.kafka.common.serialization.Deserializer,java.util.regex.Pattern)">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/Topology.html#addSource(org.apache.kafka.streams.AutoOffsetReset,java.lang.String,org.apache.kafka.streams.processor.TimestampExtractor,org.apache.kafka.common.serialization.Deserializer,org.apache.kafka.common.serialization.Deserializer,java.util.regex.Pattern)</a></p>
@@ -1704,10 +2022,10 @@ Class Topology  <a class="header-action link-secondary" title="View source" href
 
   <h3 id="Org_Apache_Kafka_Streams_Topology_AddSource_Org_Apache_Kafka_Streams_AutoOffsetReset_Org_Apache_Kafka_Streams_Processor_TimestampExtractor_Java_Lang_String_Java_Lang_String___" data-uid="Org.Apache.Kafka.Streams.Topology.AddSource(Org.Apache.Kafka.Streams.AutoOffsetReset,Org.Apache.Kafka.Streams.Processor.TimestampExtractor,Java.Lang.String,Java.Lang.String[])">
   AddSource(AutoOffsetReset, TimestampExtractor, String, params String[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Topology.cs/#L351"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Topology.cs/#L436"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/Topology.html#addSource(org.apache.kafka.streams.AutoOffsetReset,org.apache.kafka.streams.processor.TimestampExtractor,java.lang.String,java.lang.String[])">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/Topology.html#addSource(org.apache.kafka.streams.AutoOffsetReset,org.apache.kafka.streams.processor.TimestampExtractor,java.lang.String,java.lang.String[])</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/Topology.html#addSource(org.apache.kafka.streams.AutoOffsetReset,org.apache.kafka.streams.processor.TimestampExtractor,java.lang.String,java.lang.String...)">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/Topology.html#addSource(org.apache.kafka.streams.AutoOffsetReset,org.apache.kafka.streams.processor.TimestampExtractor,java.lang.String,java.lang.String...)</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1752,7 +2070,7 @@ Class Topology  <a class="header-action link-secondary" title="View source" href
 
   <h3 id="Org_Apache_Kafka_Streams_Topology_AddSource_Org_Apache_Kafka_Streams_AutoOffsetReset_Org_Apache_Kafka_Streams_Processor_TimestampExtractor_Java_Lang_String_Java_Util_Regex_Pattern_" data-uid="Org.Apache.Kafka.Streams.Topology.AddSource(Org.Apache.Kafka.Streams.AutoOffsetReset,Org.Apache.Kafka.Streams.Processor.TimestampExtractor,Java.Lang.String,Java.Util.Regex.Pattern)">
   AddSource(AutoOffsetReset, TimestampExtractor, String, Pattern)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Topology.cs/#L363"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Topology.cs/#L448"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/Topology.html#addSource(org.apache.kafka.streams.AutoOffsetReset,org.apache.kafka.streams.processor.TimestampExtractor,java.lang.String,java.util.regex.Pattern)">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/Topology.html#addSource(org.apache.kafka.streams.AutoOffsetReset,org.apache.kafka.streams.processor.TimestampExtractor,java.lang.String,java.util.regex.Pattern)</a></p>
@@ -1800,10 +2118,10 @@ Class Topology  <a class="header-action link-secondary" title="View source" href
 
   <h3 id="Org_Apache_Kafka_Streams_Topology_AddSource_Org_Apache_Kafka_Streams_Processor_TimestampExtractor_Java_Lang_String_Java_Lang_String___" data-uid="Org.Apache.Kafka.Streams.Topology.AddSource(Org.Apache.Kafka.Streams.Processor.TimestampExtractor,Java.Lang.String,Java.Lang.String[])">
   AddSource(TimestampExtractor, String, params String[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Topology.cs/#L374"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Topology.cs/#L459"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/Topology.html#addSource(org.apache.kafka.streams.processor.TimestampExtractor,java.lang.String,java.lang.String[])">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/Topology.html#addSource(org.apache.kafka.streams.processor.TimestampExtractor,java.lang.String,java.lang.String[])</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/Topology.html#addSource(org.apache.kafka.streams.processor.TimestampExtractor,java.lang.String,java.lang.String...)">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/Topology.html#addSource(org.apache.kafka.streams.processor.TimestampExtractor,java.lang.String,java.lang.String...)</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1845,7 +2163,7 @@ Class Topology  <a class="header-action link-secondary" title="View source" href
 
   <h3 id="Org_Apache_Kafka_Streams_Topology_AddSource_Org_Apache_Kafka_Streams_Processor_TimestampExtractor_Java_Lang_String_Java_Util_Regex_Pattern_" data-uid="Org.Apache.Kafka.Streams.Topology.AddSource(Org.Apache.Kafka.Streams.Processor.TimestampExtractor,Java.Lang.String,Java.Util.Regex.Pattern)">
   AddSource(TimestampExtractor, String, Pattern)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Topology.cs/#L385"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Topology.cs/#L470"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/Topology.html#addSource(org.apache.kafka.streams.processor.TimestampExtractor,java.lang.String,java.util.regex.Pattern)">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/Topology.html#addSource(org.apache.kafka.streams.processor.TimestampExtractor,java.lang.String,java.util.regex.Pattern)</a></p>
@@ -1890,10 +2208,10 @@ Class Topology  <a class="header-action link-secondary" title="View source" href
 
   <h3 id="Org_Apache_Kafka_Streams_Topology_AddStateStore_Org_Apache_Kafka_Streams_State_StoreBuilder_Java_Lang_String___" data-uid="Org.Apache.Kafka.Streams.Topology.AddStateStore(Org.Apache.Kafka.Streams.State.StoreBuilder,Java.Lang.String[])">
   AddStateStore(StoreBuilder, params String[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Topology.cs/#L395"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Topology.cs/#L480"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/Topology.html#addStateStore(org.apache.kafka.streams.state.StoreBuilder,java.lang.String[])">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/Topology.html#addStateStore(org.apache.kafka.streams.state.StoreBuilder,java.lang.String[])</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/Topology.html#addStateStore(org.apache.kafka.streams.state.StoreBuilder,java.lang.String...)">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/Topology.html#addStateStore(org.apache.kafka.streams.state.StoreBuilder,java.lang.String...)</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1932,10 +2250,10 @@ Class Topology  <a class="header-action link-secondary" title="View source" href
 
   <h3 id="Org_Apache_Kafka_Streams_Topology_ConnectProcessorAndStateStores_Java_Lang_String_Java_Lang_String___" data-uid="Org.Apache.Kafka.Streams.Topology.ConnectProcessorAndStateStores(Java.Lang.String,Java.Lang.String[])">
   ConnectProcessorAndStateStores(String, params String[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Topology.cs/#L405"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Topology.cs/#L490"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/Topology.html#connectProcessorAndStateStores(java.lang.String,java.lang.String[])">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/Topology.html#connectProcessorAndStateStores(java.lang.String,java.lang.String[])</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/Topology.html#connectProcessorAndStateStores(java.lang.String,java.lang.String...)">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/Topology.html#connectProcessorAndStateStores(java.lang.String,java.lang.String...)</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1974,7 +2292,7 @@ Class Topology  <a class="header-action link-secondary" title="View source" href
 
   <h3 id="Org_Apache_Kafka_Streams_Topology_Describe" data-uid="Org.Apache.Kafka.Streams.Topology.Describe">
   Describe()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Topology.cs/#L413"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Topology.cs/#L498"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/Topology.html#describe()">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/Topology.html#describe()</a></p>

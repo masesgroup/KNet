@@ -137,7 +137,7 @@ Class KNetCore&lt;T&gt;  <a class="header-action link-secondary" title="View sou
   <dl class="typelist derived">
     <dt>Derived</dt>
     <dd>
-      <div><a class="xref" href="MASES.KNetCLI.KNetCLICore-1.html">KNetCLICore&lt;T&gt;</a></div>
+      <div><a class="xref" href="MASES.KNet.CLI.KNetCLICore-1.html">KNetCLICore&lt;T&gt;</a></div>
     </dd>
   </dl>
 
@@ -154,6 +154,9 @@ Class KNetCore&lt;T&gt;  <a class="header-action link-secondary" title="View sou
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JNetCoreBase&lt;T&gt;.ReplaceEnvironmentVariable(string)</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JNetCoreBase&lt;T&gt;.AddJVMOption(string, string)</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">JNetCoreBase&lt;T&gt;.HelpInfo(int?)</a>
     </div>
     <div>
@@ -163,7 +166,13 @@ Class KNetCore&lt;T&gt;  <a class="header-action link-secondary" title="View sou
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JNetCoreBase&lt;T&gt;.New(string, params object[])</a>
     </div>
     <div>
+      <a class="xref" href="https://jnet.masesgroup.com/api/MASES.JNet.JNetCoreBase-1.html#MASES_JNet_JNetCoreBase_1_LaunchWithFilteredArgs__1">JNetCoreBase&lt;T&gt;.LaunchWithFilteredArgs&lt;TClass&gt;()</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JNetCoreBase&lt;T&gt;.Launch&lt;TClass&gt;(params string[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JNetCoreBase&lt;T&gt;.LaunchWithFilteredArgs(Type)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JNetCoreBase&lt;T&gt;.Launch(Type, params string[])</a>
@@ -206,6 +215,9 @@ Class KNetCore&lt;T&gt;  <a class="header-action link-secondary" title="View sou
     </div>
     <div>
       <a class="xref" href="https://jnet.masesgroup.com/api/MASES.JNet.JNetCoreBase-1.html#MASES_JNet_JNetCoreBase_1_ApplicationLogClassPath">JNetCoreBase&lt;T&gt;.ApplicationLogClassPath</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jnet.masesgroup.com/api/MASES.JNet.JNetCoreBase-1.html#MASES_JNet_JNetCoreBase_1_ApplicationJVMExtraOptions">JNetCoreBase&lt;T&gt;.ApplicationJVMExtraOptions</a>
     </div>
     <div>
       <a class="xref" href="https://jnet.masesgroup.com/api/MASES.JNet.JNetCoreBase-1.html#MASES_JNet_JNetCoreBase_1_LicensePath">JNetCoreBase&lt;T&gt;.LicensePath</a>
@@ -420,7 +432,7 @@ Class KNetCore&lt;T&gt;  <a class="header-action link-secondary" title="View sou
 
   <h3 id="MASES_KNet_KNetCore_1__ctor" data-uid="MASES.KNet.KNetCore`1.#ctor">
   KNetCore()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/KNetCore.cs/#L110"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/KNetCore.cs/#L105"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Public initializer</p>
@@ -443,82 +455,15 @@ Class KNetCore&lt;T&gt;  <a class="header-action link-secondary" title="View sou
 
 
 
-  <h2 class="section" id="fields">Fields
-</h2>
-
-
-
-  <h3 id="MASES_KNet_KNetCore_1__classToRun" data-uid="MASES.KNet.KNetCore`1._classToRun">
-  _classToRun
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/KNetCore.cs/#L200"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>value can be overridden in subclasses</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected string _classToRun</code></pre>
-  </div>
-
-
-
-
-  <h4 class="section">Field Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
   <h2 class="section" id="properties">Properties
 </h2>
-
-
-  <a id="MASES_KNet_KNetCore_1_ApplicationClassToRun_" data-uid="MASES.KNet.KNetCore`1.ApplicationClassToRun*"></a>
-
-  <h3 id="MASES_KNet_KNetCore_1_ApplicationClassToRun" data-uid="MASES.KNet.KNetCore`1.ApplicationClassToRun">
-  ApplicationClassToRun
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/KNetCore.cs/#L170"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>Sets the global value of class to run</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static string ApplicationClassToRun { get; set; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
 
 
   <a id="MASES_KNet_KNetCore_1_ApplicationDisableJMX_" data-uid="MASES.KNet.KNetCore`1.ApplicationDisableJMX*"></a>
 
   <h3 id="MASES_KNet_KNetCore_1_ApplicationDisableJMX" data-uid="MASES.KNet.KNetCore`1.ApplicationDisableJMX">
   ApplicationDisableJMX
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/KNetCore.cs/#L195"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/KNetCore.cs/#L158"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Sets the global value to disable JMX</p>
@@ -550,7 +495,7 @@ Class KNetCore&lt;T&gt;  <a class="header-action link-secondary" title="View sou
 
   <h3 id="MASES_KNet_KNetCore_1_ApplicationJarRootPath" data-uid="MASES.KNet.KNetCore`1.ApplicationJarRootPath">
   ApplicationJarRootPath
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/KNetCore.cs/#L175"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/KNetCore.cs/#L138"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Sets the global value of Jar root path</p>
@@ -582,7 +527,7 @@ Class KNetCore&lt;T&gt;  <a class="header-action link-secondary" title="View sou
 
   <h3 id="MASES_KNet_KNetCore_1_ApplicationLog4JPath" data-uid="MASES.KNet.KNetCore`1.ApplicationLog4JPath">
   ApplicationLog4JPath
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/KNetCore.cs/#L180"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/KNetCore.cs/#L143"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Sets the global value of log4j path</p>
@@ -614,7 +559,7 @@ Class KNetCore&lt;T&gt;  <a class="header-action link-secondary" title="View sou
 
   <h3 id="MASES_KNet_KNetCore_1_ApplicationLogPath" data-uid="MASES.KNet.KNetCore`1.ApplicationLogPath">
   ApplicationLogPath
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/KNetCore.cs/#L185"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/KNetCore.cs/#L148"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Sets the global value of log path</p>
@@ -646,7 +591,7 @@ Class KNetCore&lt;T&gt;  <a class="header-action link-secondary" title="View sou
 
   <h3 id="MASES_KNet_KNetCore_1_ApplicationScalaVersion" data-uid="MASES.KNet.KNetCore`1.ApplicationScalaVersion">
   ApplicationScalaVersion
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/KNetCore.cs/#L190"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/KNetCore.cs/#L153"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Sets the global value of scala version</p>
@@ -655,38 +600,6 @@ Class KNetCore&lt;T&gt;  <a class="header-action link-secondary" title="View sou
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static string ApplicationScalaVersion { get; set; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <a id="MASES_KNet_KNetCore_1_ClassToRun_" data-uid="MASES.KNet.KNetCore`1.ClassToRun*"></a>
-
-  <h3 id="MASES_KNet_KNetCore_1_ClassToRun" data-uid="MASES.KNet.KNetCore`1.ClassToRun">
-  ClassToRun
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/KNetCore.cs/#L204"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>The class to run in CLI version</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual string ClassToRun { get; }</code></pre>
   </div>
 
 
@@ -742,7 +655,7 @@ Class KNetCore&lt;T&gt;  <a class="header-action link-secondary" title="View sou
 
   <h3 id="MASES_KNet_KNetCore_1_DisableJMX" data-uid="MASES.KNet.KNetCore`1.DisableJMX">
   DisableJMX
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/KNetCore.cs/#L244"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/KNetCore.cs/#L198"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Disable JMX</p>
@@ -774,7 +687,7 @@ Class KNetCore&lt;T&gt;  <a class="header-action link-secondary" title="View sou
 
   <h3 id="MASES_KNet_KNetCore_1_JarRootPath" data-uid="MASES.KNet.KNetCore`1.JarRootPath">
   JarRootPath
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/KNetCore.cs/#L221"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/KNetCore.cs/#L175"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>The root path where Apache Kafka is installed</p>
@@ -806,7 +719,7 @@ Class KNetCore&lt;T&gt;  <a class="header-action link-secondary" title="View sou
 
   <h3 id="MASES_KNet_KNetCore_1_Log4JOpts" data-uid="MASES.KNet.KNetCore`1.Log4JOpts">
   Log4JOpts
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/KNetCore.cs/#L238"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/KNetCore.cs/#L192"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>The log4j configuration</p>
@@ -838,7 +751,7 @@ Class KNetCore&lt;T&gt;  <a class="header-action link-secondary" title="View sou
 
   <h3 id="MASES_KNet_KNetCore_1_Log4JPath" data-uid="MASES.KNet.KNetCore`1.Log4JPath">
   Log4JPath
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/KNetCore.cs/#L227"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/KNetCore.cs/#L181"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>The log4j folder</p>
@@ -870,7 +783,7 @@ Class KNetCore&lt;T&gt;  <a class="header-action link-secondary" title="View sou
 
   <h3 id="MASES_KNet_KNetCore_1_LogDir" data-uid="MASES.KNet.KNetCore`1.LogDir">
   LogDir
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/KNetCore.cs/#L233"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/KNetCore.cs/#L187"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>The log folder</p>
@@ -898,43 +811,11 @@ Class KNetCore&lt;T&gt;  <a class="header-action link-secondary" title="View sou
 
 
 
-  <a id="MASES_KNet_KNetCore_1_MainClassToRun_" data-uid="MASES.KNet.KNetCore`1.MainClassToRun*"></a>
-
-  <h3 id="MASES_KNet_KNetCore_1_MainClassToRun" data-uid="MASES.KNet.KNetCore`1.MainClassToRun">
-  MainClassToRun
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/KNetCore.cs/#L165"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>Sets the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a> to be invoked at startup</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Type MainClassToRun { get; protected set; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
   <a id="MASES_KNet_KNetCore_1_Options_" data-uid="MASES.KNet.KNetCore`1.Options*"></a>
 
   <h3 id="MASES_KNet_KNetCore_1_Options" data-uid="MASES.KNet.KNetCore`1.Options">
   Options
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/KNetCore.cs/#L265"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/KNetCore.cs/#L219"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Adds options to the JVM</p>
@@ -966,7 +847,7 @@ Class KNetCore&lt;T&gt;  <a class="header-action link-secondary" title="View sou
 
   <h3 id="MASES_KNet_KNetCore_1_PathToParse" data-uid="MASES.KNet.KNetCore`1.PathToParse">
   PathToParse
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/KNetCore.cs/#L291"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/KNetCore.cs/#L245"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>A list of paths to be used in initialization of JVM ClassPath</p>
@@ -998,7 +879,7 @@ Class KNetCore&lt;T&gt;  <a class="header-action link-secondary" title="View sou
 
   <h3 id="MASES_KNet_KNetCore_1_PerformanceOptions" data-uid="MASES.KNet.KNetCore`1.PerformanceOptions">
   PerformanceOptions
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/KNetCore.cs/#L247"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/KNetCore.cs/#L201"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Default performance options used in initialization</p>
@@ -1030,7 +911,7 @@ Class KNetCore&lt;T&gt;  <a class="header-action link-secondary" title="View sou
 
   <h3 id="MASES_KNet_KNetCore_1_ScalaBinaryVersion" data-uid="MASES.KNet.KNetCore`1.ScalaBinaryVersion">
   ScalaBinaryVersion
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/KNetCore.cs/#L215"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/KNetCore.cs/#L169"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>The Scala binary version to be used</p>
@@ -1062,7 +943,7 @@ Class KNetCore&lt;T&gt;  <a class="header-action link-secondary" title="View sou
 
   <h3 id="MASES_KNet_KNetCore_1_ScalaVersion" data-uid="MASES.KNet.KNetCore`1.ScalaVersion">
   ScalaVersion
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/KNetCore.cs/#L210"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/KNetCore.cs/#L164"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>The Scala version to be used</p>
@@ -1098,7 +979,7 @@ Class KNetCore&lt;T&gt;  <a class="header-action link-secondary" title="View sou
 
   <h3 id="MASES_KNet_KNetCore_1_DefaultLog4JConfiguration" data-uid="MASES.KNet.KNetCore`1.DefaultLog4JConfiguration">
   DefaultLog4JConfiguration()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/KNetCore.cs/#L102"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/KNetCore.cs/#L97"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Returns the default configuration file to use when initializing command line defaults</p>
@@ -1130,50 +1011,11 @@ Class KNetCore&lt;T&gt;  <a class="header-action link-secondary" title="View sou
 
 
 
-  <a id="MASES_KNet_KNetCore_1_PrepareMainClassToRun_" data-uid="MASES.KNet.KNetCore`1.PrepareMainClassToRun*"></a>
-
-  <h3 id="MASES_KNet_KNetCore_1_PrepareMainClassToRun_System_String_" data-uid="MASES.KNet.KNetCore`1.PrepareMainClassToRun(System.String)">
-  PrepareMainClassToRun(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/KNetCore.cs/#L145"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>Prepare <a class="xref" href="MASES.KNet.KNetCore-1.html#MASES_KNet_KNetCore_1_MainClassToRun">MainClassToRun</a> property</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected virtual void PrepareMainClassToRun(string className)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>className</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>The class to search</p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-  <h4 class="section">Exceptions</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
-    <dd><p>If <code class="paramref">className</code> does not have a corresponding implemented <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></p>
-</dd>
-  </dl>
-
-
-
   <a id="MASES_KNet_KNetCore_1_ProcessCommandLine_" data-uid="MASES.KNet.KNetCore`1.ProcessCommandLine*"></a>
 
   <h3 id="MASES_KNet_KNetCore_1_ProcessCommandLine" data-uid="MASES.KNet.KNetCore`1.ProcessCommandLine">
   ProcessCommandLine()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/KNetCore.cs/#L116"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/KNetCore.cs/#L111"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/M_MASES_JCOBridge_C2JBridge_SetupJVMWrapper_ProcessCommandLine.htm">https://www.jcobridge.com/api-clr/html/M_MASES_JCOBridge_C2JBridge_SetupJVMWrapper_ProcessCommandLine.htm</a></p>
