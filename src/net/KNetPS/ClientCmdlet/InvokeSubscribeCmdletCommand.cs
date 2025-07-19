@@ -19,10 +19,9 @@
 using Java.Util;
 using Java.Util.Regex;
 using Org.Apache.Kafka.Clients.Consumer;
-using MASES.KNetPS.Cmdlet;
 using System.Management.Automation;
 
-namespace MASES.KNetPS.ClientCmdlet
+namespace MASES.KNet.PowerShell.Cmdlet.Client
 {
     [Cmdlet(VerbsLifecycle.Invoke, "Subscribe")]
     public class InvokeSubscribeCmdletCommand : KNetPSCmdlet

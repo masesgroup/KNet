@@ -16,11 +16,10 @@
 *  Refer to LICENSE for more information.
 */
 
-using MASES.KNetPS.Cmdlet;
-using MASES.JNetPSCore.Cmdlet;
 using System.Management.Automation;
+using MASES.JNet.PowerShell.Cmdlet;
 
-namespace MASES.KNetPS.ToolsCmdlet
+namespace MASES.KNet.PowerShell.Cmdlet.Tools
 {
     [Cmdlet(VerbsLifecycle.Start, "ZkSecurityMigrator")]
     [JNetPSExternalize]

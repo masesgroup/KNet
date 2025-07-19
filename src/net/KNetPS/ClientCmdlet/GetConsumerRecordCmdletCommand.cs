@@ -19,13 +19,12 @@
 using MASES.JCOBridge.C2JBridge;
 using MASES.JCOBridge.C2JBridge.JVMInterop;
 using Org.Apache.Kafka.Clients.Consumer;
-using MASES.KNetPS.Cmdlet;
 using System;
 using System.Collections;
 using System.Management.Automation;
 using System.Reflection;
 
-namespace MASES.KNetPS.ClientCmdlet
+namespace MASES.KNet.PowerShell.Cmdlet.Client
 {
     [Cmdlet(VerbsCommon.Get, "ConsumerRecord")]
     [OutputType(typeof(ConsumerRecord<,>))]

@@ -37,7 +37,22 @@
 	</ItemGroup>
 	<ItemGroup>
 		<None Include="mases.knet.targets" Pack="true" PackagePath="build" />
-		<None Include="..\..\..\jars\*.jar" Exclude="..\..\..\jars\animal-sniffer-annotations-*.jar;         ..\..\..\jars\checker-compat-qual-*.jar;         ..\..\..\jars\failureaccess-*.jar;         ..\..\..\jars\groovy-*.jar;         ..\..\..\jars\grpc-api-*.jar;         ..\..\..\jars\grpc-context-*.jar;         ..\..\..\jars\grpc-protobuf-*.jar;         ..\..\..\jars\grpc-protobuf-lite-*.jar;         ..\..\..\jars\grpc-stub-*.jar;         ..\..\..\jars\guava-30.0-android.jar;         ..\..\..\jars\j2objc-annotations-*.jar;         ..\..\..\jars\jsr305-*.jar;         ..\..\..\jars\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar;         ..\..\..\jars\proto-google-common-protos-*.jar;" Pack="true" PackagePath="build\jars" />
+		<None Include="..\..\..\jars\*.jar"
+          Exclude="..\..\..\jars\animal-sniffer-annotations-*.jar;
+					         ..\..\..\jars\checker-compat-qual-*.jar;
+					         ..\..\..\jars\failureaccess-*.jar;
+					         ..\..\..\jars\groovy-*.jar;
+					         ..\..\..\jars\grpc-api-*.jar;
+					         ..\..\..\jars\grpc-context-*.jar;
+					         ..\..\..\jars\grpc-protobuf-*.jar;
+					         ..\..\..\jars\grpc-protobuf-lite-*.jar;
+					         ..\..\..\jars\grpc-stub-*.jar;
+					         ..\..\..\jars\guava-30.0-android.jar;
+					         ..\..\..\jars\j2objc-annotations-*.jar;
+					         ..\..\..\jars\jsr305-*.jar;
+					         ..\..\..\jars\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar;
+					         ..\..\..\jars\proto-google-common-protos-*.jar;"
+          Pack="true" PackagePath="build\jars" />
 		<None Include="..\..\config\**\*" Pack="true" PackagePath="build\config" />
 		<None Include="..\..\documentation\articles\usage.md" Pack="true" PackagePath="\" />
 	</ItemGroup>

@@ -24,7 +24,6 @@ namespace MASES.KNet
     class CLIParam
     {
         // CommonArgs
-        public const string ClassToRun = "ClassToRun";
         public const string ScalaVersion = "ScalaVersion";
         public const string KafkaLocation = "KafkaLocation";
         public const string Log4JConfiguration = "Log4JConfiguration";

@@ -17,11 +17,10 @@
 */
 
 using Org.Apache.Kafka.Clients.Admin;
-using MASES.KNetPS.Cmdlet;
 using System.Management.Automation;
 using MASES.KNet.Admin;
 
-namespace MASES.KNetPS.ClientCmdlet
+namespace MASES.KNet.PowerShell.Cmdlet.Client
 {
     [Cmdlet(VerbsCommon.New, "KafkaAdminClient")]
     [OutputType(typeof(KafkaAdminClient))]

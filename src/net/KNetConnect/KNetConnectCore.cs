@@ -17,14 +17,12 @@
 */
 
 using MASES.CLIParser;
-using MASES.KNet;
-using MASES.KNet.Connect;
-using Org.Apache.Kafka.Connect;
+using MASES.JNet.Specific.CLI;
 using System;
 using System.Collections.Generic;
 using System.IO;
 
-namespace MASES.KNetCLI
+namespace MASES.KNet.Connect
 {
     /// <summary>
     /// Directly usable implementation of <see cref="KNetCore{T}"/>
@@ -82,11 +80,9 @@ namespace MASES.KNetCLI
                 throw new ArgumentException("Cannote define both Distributed and Standalone.");
             }
 
-            string _classToRun = string.Empty;
-
             if (ParsedArgs.Exist(CLIParam.Standalone))
             {
-                _classToRun = ParsedArgs.Exist(CLIParam.KNetVersion) ? "KNetConnectStandalone" : "ConnectStandalone";
+                JNetCLICoreHelper.DefaultClassToRun = ParsedArgs.Exist(CLIParam.KNetVersion) ? "KNetConnectStandalone" : "ConnectStandalone";
                 KNetConnectProxy.Initialize(this);
                 if (Log4JPath == DefaultLog4JConfiguration())
                 {
@@ -109,7 +105,7 @@ namespace MASES.KNetCLI
 
             if (ParsedArgs.Exist(CLIParam.Distributed))
             {
-                _classToRun = ParsedArgs.Exist(CLIParam.KNetVersion) ? "KNetConnectDistributed" : "ConnectDistributed";
+                JNetCLICoreHelper.DefaultClassToRun = ParsedArgs.Exist(CLIParam.KNetVersion) ? "KNetConnectDistributed" : "ConnectDistributed";
                 KNetConnectProxy.Initialize(this);
                 if (Log4JPath == DefaultLog4JConfiguration())
                 {
@@ -130,9 +126,7 @@ namespace MASES.KNetCLI
                 }
             }
 
-            PrepareMainClassToRun(_classToRun);
-
-            return result;
+            return this.ProcessCLIParsedArgs(result);
         }
     }
 }
