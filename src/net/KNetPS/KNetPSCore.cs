@@ -28,7 +28,7 @@ namespace MASES.KNetPS
     /// </summary>
     public class KNetPSCore : KNetCLICore<KNetPSCore>
     {
-        static Assembly assembly = typeof(KNetPSCore).Assembly;
+        static string location = Path.GetDirectoryName(typeof(KNetPSCore).Assembly.Location);
 #if NET6_0_OR_GREATER
         public static void Main(string[] args) { } // used in conjunction with project of executable type to produce artifacts with all needed assemblies
 #endif
@@ -37,7 +37,7 @@ namespace MASES.KNetPS
             get
             {
                 var lst = base.PathToParse;
-                lst.Add(Path.Combine(assembly.Location, "..", JarRootPath, "*.jar"));
+                lst.Add(Path.Combine(location, "..", JARsSubFolder, "*.jar"));
                 return lst;
             }
         }
