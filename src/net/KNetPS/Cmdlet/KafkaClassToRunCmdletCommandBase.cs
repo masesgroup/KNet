@@ -39,7 +39,7 @@ namespace MASES.KNet.PowerShell.Cmdlet
         {
             base.OnBeforeCreateGlobalInstance();
             var nounName = JNetPSHelper.NounName<TCmdlet>();
-            JNetPSHelper<KNetPSCore>.SetClassToRun(nounName);
+            JNetCLICoreHelper.ApplicationClassToRun = nounName;
         }
 
         protected override void OnAfterCreateGlobalInstance()
