@@ -16,22 +16,22 @@
 	<PropertyGroup Condition="'$(TargetFramework)' == 'net8.0'">
 		<OutputType>Exe</OutputType>
 	</PropertyGroup>
-	
+
 	<ItemGroup Condition="True">
-		<knetps_jars Include="$(ProjectDir)\..\..\..\jars\*.*" />
-		<knetps_config Include="$(ProjectDir)\..\..\config\*.*" />
-		<knetps_kraft Include="$(ProjectDir)\..\..\config\kraft\*.*" />
+		<knets_jars_specific Include="$(ProjectDir)\..\..\..\jars\knet-*.*" />
+		<knetps_jars Include="$(ProjectDir)\..\..\..\jars\**\*.*" />
+		<knetps_config Include="$(ProjectDir)\..\..\config\**\*.*" />
 	</ItemGroup>
 
 	<Target Name="CopyCustomContent" AfterTargets="AfterBuild">
-		<Copy SourceFiles="@(knetps_jars)" DestinationFolder="$(OutDir)\..\jars" />
-		<Copy SourceFiles="@(knetps_config)" DestinationFolder="$(OutDir)\config" />
-		<Copy SourceFiles="@(knetps_kraft)" DestinationFolder="$(OutDir)\config\kraft" />
+		<Copy SourceFiles="@(knetfiles_jars_specific)" DestinationFolder="$(OutDir)\jars\%(RecursiveDir)" />
+		<Copy SourceFiles="@(knetps_jars)" DestinationFolder="$(OutDir)\..\jars\%(RecursiveDir)" />
+		<Copy SourceFiles="@(knetps_config)" DestinationFolder="$(OutDir)\config\%(RecursiveDir)" />
 	</Target>
 	<Target Name="CopyCustomContentOnPublish" AfterTargets="Publish">
-		<Copy SourceFiles="@(knetps_jars)" DestinationFolder="$(OutDir)\jars" />
-		<Copy SourceFiles="@(knetps_config)" DestinationFolder="$(OutDir)\config" />
-		<Copy SourceFiles="@(knetps_kraft)" DestinationFolder="$(OutDir)\config\kraft" />
+		<Copy SourceFiles="@(knetfiles_jars_specific)" DestinationFolder="$(OutDir)\jars\%(RecursiveDir)" />
+		<Copy SourceFiles="@(knetps_jars)" DestinationFolder="$(OutDir)\jars\%(RecursiveDir)" />
+		<Copy SourceFiles="@(knetps_config)" DestinationFolder="$(OutDir)\config\%(RecursiveDir)" />
 	</Target>
 	<ItemGroup>
 	  <Compile Include="..\KNetCLI\KNetCLICore.cs" Link="KNetCLICore.cs" />
