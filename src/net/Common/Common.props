@@ -38,7 +38,7 @@
 								 $(ProjectDir)\..\..\..\jars\jsr305-*.jar;
 								 $(ProjectDir)\..\..\..\jars\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar;
 								 $(ProjectDir)\..\..\..\jars\proto-google-common-protos-*.jar;" />
-		<knetfiles_config Include="$(ProjectDir)\..\..\config\*.*" />
+		<knetfiles_config Include="$(ProjectDir)\..\..\config\**\*.*" />
 	</ItemGroup>
 	
 	<PropertyGroup Condition="'$(KNET_DOCKER_BUILD_ACTIONS)' != 'true'">
