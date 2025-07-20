@@ -43,7 +43,7 @@
 		<mavenSkipMain>false</mavenSkipMain> <!-- set mavenSkipMain to true to avoid source compilation: use directive in command-line -->
 		<jnetVersion>2.5.12.0</jnetVersion>
 		<kafkaVersion>3.9.1</kafkaVersion>
-		<knetVersion>2.9.2.0</knetVersion>
+		<knetVersion>2.9.3.0</knetVersion>
 		<rootDir>${basedir}/../../../</rootDir>
 		<jcobridgepath>${rootDir}/bin/net8.0/JCOBridge.jar</jcobridgepath>
 		<jnetpath>${rootDir}/bin/net8.0/jars/jnet-${jnetVersion}.jar</jnetpath>
