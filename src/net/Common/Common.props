@@ -1,6 +1,6 @@
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
 	<PropertyGroup>
-		<Copyright>Copyright ©  MASES s.r.l. 2025</Copyright>
+		<Copyright>Copyright (c) 2021-2025 MASES s.r.l.</Copyright>
 		<Owners>MASES s.r.l.</Owners>
 		<Authors>MASES s.r.l.</Authors>
 		<Company>MASES s.r.l.</Company>
