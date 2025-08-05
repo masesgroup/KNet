@@ -31,7 +31,7 @@ The files named **connect-knet-sink.properties** and **connect-knet-source.prope
 
 Copy within __C:\MyConnect__ **connect-standalone.properties** and update it especially on line containing __bootstrap.servers__, then copy **connect-knet-sink.properties** or **connect-knet-source.properties** depending on the connector type.
 The main options related to KNet Connect SDK are:
-- __connector.class=**KNetSinkConnector**__ where the value is the connector Java class and must be:
+- __connector.class=**KNetSinkConnector**__ where the value is the connector Java™ class and must be:
   - __KNetSinkConnector__ for sink connectors
   - __KNetSourceConnector__ for source connectors
 - __knet.dotnet.classname=MASES.KNetTemplate.KNetConnect.KNetConnectSink, knetConnectSink__ where the value is the .NET class name in the form of __**FullName**, **AssemblyName**__

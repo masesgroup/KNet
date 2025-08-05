@@ -35,7 +35,7 @@ Looking for the help of Apache Kafka™ experts? MASES Group can help you design
 
 This project aims to create a set of libraries and tools to direct access, from .NET, all the features available in the [Apache Kafka™ binary distribution](https://kafka.apache.org/downloads). 
 
-There are many client libraries written to manage communication with Apache Kafka™. Conversely, this project use directly the Java packages released from The Apache Foundation giving more than one benefit:
+There are many client libraries written to manage communication with Apache Kafka™. Conversely, this project use directly the Java™ packages released from The Apache Foundation giving more than one benefit:
 * all implemented features are availables at no extra implementation costs, see [KNet usage](usage.md);
 * avoids any third party communication protocol implementation;
 * access all features made available from Apache Kafka™: the most important are Apache Kafka™ Streams and Apache Kafka™ Connect which does not have any C# implementation;
@@ -43,7 +43,7 @@ There are many client libraries written to manage communication with Apache Kafk
 
 Currently the project tries to support, at our best, the [supported Apache Kafka™ binary distribution](https://kafka.apache.org/downloads):
 
-| KNet | State | Apache Kafka™ | Branch | .NET Framework | .NET | JVM |
+| KNet | State | Apache Kafka™ | Branch | .NET Framework | .NET | JVM™ |
 |:---:	|:---:	|:---:	|:---:	|:---:	|:---:	|:---:	|
 | 3.0.* | Active | 4.0.* | [master](https://github.com/masesgroup/KNet) | 462+ | 8+ | 17+ |
 | 2.9.* | Active | 3.9.* | [release/2.9.X](https://github.com/masesgroup/KNet/tree/release/2.9.X) | 462+ | 8+ | 11+ |

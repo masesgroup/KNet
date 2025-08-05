@@ -119,7 +119,7 @@ Here a list of cmdlets which executes well known tasks defined from Apache Kafka
 	* Log4JPath
 	* LogPath
 	* DisableJMX
-* **New-KObject**: Creates a new JVM object of the class specified in argument using the parameters within command line for constructor. The arguments are:
+* **New-KObject**: Creates a new JVM™ object of the class specified in argument using the parameters within command line for constructor. The arguments are:
   * Inherited from JnetPS:
     * Class
     * Arguments

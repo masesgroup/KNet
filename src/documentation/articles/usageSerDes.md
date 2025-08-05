@@ -8,7 +8,7 @@ _description: Describes how to use serialization of .NET suite for Apache Kafka�
 KNet comes with a base set of serializer and deserializer. Most of them are usable with primitives types (`bool`, `int`, etc) and array of `byte`s.
 
 If the user wants to use structures types there are two ways:
-  1. Creates types in Java and reflects them in C#
+  1. Creates types in Java™ and reflects them in C#
   2. Creates types in C# and extend the available serializer/deserializer
 
 KNet suite offers some ready made serializer/deserializer usable with the specific APIs (KNetProducer/KNetConsumer).
@@ -22,8 +22,8 @@ The current available packages are:
   - [MASES.KNet.Serialization.Protobuf](https://www.nuget.org/packages/MASES.KNet.Serialization.Protobuf/): it is a serdes which uses [Google.Protobuf](https://en.wikipedia.org/wiki/Protocol_Buffers); till now it is at its first stage and it is based on general purpose API from [Google.Protobuf](https://www.nuget.org/packages/Google.Protobuf) package
 
 Starting from version 2.7.0, KNet comes with two kind of data exchange mechanisms:
-- **Raw**: data exchanges, across JVM-CLR boundary, using `byte` array transfer and this is the standard used since last version
-- **Buffered**: data exchanges, across JVM-CLR boundary, using `ByteBuffer` objects:
+- **Raw**: data exchanges, across JVM™-CLR boundary, using `byte` array transfer and this is the standard used since last version
+- **Buffered**: data exchanges, across JVM™-CLR boundary, using `ByteBuffer` objects:
   - this version avoids a real data move, only references to `ByteBuffer` are exchanged
   - the serializer/deserializer shares, with the `ByteBuffer`, the memory pointers originating the information and the counterpart reads that memory without make copies
 
@@ -50,7 +50,7 @@ public class TestType
 }
 ```
 
-To manage it within C#, without create `TestType` in Java, an user can create:
+To manage it within C#, without create `TestType` in Java™, an user can create:
 
 - serializer (the body must be updated with the user serializer):
 ```c#
