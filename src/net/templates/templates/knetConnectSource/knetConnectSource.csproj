@@ -16,7 +16,7 @@
 	</ItemGroup>
 	<ItemGroup Condition="!Exists('$(ProjectDir)..\..\..\KNet\KNet.csproj')">
 		<!--Outside GitHub repo-->
-		<PackageReference Include="MASES.KNet" Version="3.0.1" IncludeAssets="All" PrivateAssets="None" />
+		<PackageReference Include="MASES.KNet" Version="3.0.2" IncludeAssets="All" PrivateAssets="None" />
 	</ItemGroup>
 	<ItemGroup>
 		<None Update="connect-knet-source.properties">
