@@ -128,7 +128,7 @@ Here below a set of results using 1000/10000 messages, in bold the results which
 
 #### Analysis
 
-KNet Produce is more efficient when the length of packets is high: this is related to the overhead introduced from JVM method invocations. With 10000 messages and 10000 bytes the result is better with Confluent.Kafka™, we have not yet identified if some parameters are limiting KNet or really Conflent.Kafka™ is more efficient.
+KNet Produce is more efficient when the length of packets is high: this is related to the overhead introduced from JVM™ method invocations. With 10000 messages and 10000 bytes the result is better with Confluent.Kafka™, we have not yet identified if some parameters are limiting KNet or really Conflent.Kafka™ is more efficient.
 
 KNet Consume is more efficient when the length of packets is small; when the length of packets is higher Confluent.Kafka™ becomes more efficient, however less are the packets better KNet performs, so there is a kind of bottleneck to be identified which limits KNet efficency.
 
@@ -240,7 +240,7 @@ Using KNetProducer the numbers of JNI invocation are less than using KafkaProduc
 The same consideration can be applied on the consume side: KNetConsumer does not reduce the impact of JNI interface and it does not give any great improvement.
 The JNI interface has an impact even when the number of messages is high because during processing the Garbage Collector is activated many times increasing the JNI overhead.
 
-Another option to be considered in consumption is related to _UsePrefetch_: it activates an external thread to execute the methods on JVM while the main thread iterates over records; this behavior helps to reduce the impact on main iterator coming from the JVM invocations:
+Another option to be considered in consumption is related to _UsePrefetch_: it activates an external thread to execute the methods on JVM™ while the main thread iterates over records; this behavior helps to reduce the impact on main iterator coming from the JVM™ invocations:
 ```C#
 var records = consumer.Poll(duration);
 if (UsePrefetch)

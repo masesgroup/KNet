@@ -1,6 +1,6 @@
 ---
 title: How to build .NET suite for Apache Kafka™
-_description: Describes how to build the Java/JVM suite for .NET from scatch
+_description: Describes how to build the Java™/JVM™ suite for .NET from scatch
 ---
 
 # KNet: How to build from scratch
@@ -20,7 +20,7 @@ Then the steps are the following (the steps are made for Windows shell):
   > git clone https://github.com/masesgroup/KNet.git
   >
 
-* The project now needs to compile Java classes and obtains the Maven artifacts; this is done with a single step (it is important to use the **package** key as command for Maven):
+* The project now needs to compile Java™ classes and obtains the Maven artifacts; this is done with a single step (it is important to use the **package** key as command for Maven):
 
   > cd RootFolder
   > {PathToMavenInstallation}\bin\mvn -f src/java/knet/pom.xml package
