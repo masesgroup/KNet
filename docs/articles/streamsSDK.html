@@ -89,21 +89,21 @@
 
 <p>This is only a quick introduction to KNet Streams SDK, many other information related to Apache Kafka™ Streams can be found at the following links: <a href="https://kafka.apache.org/documentation/#streams">https://kafka.apache.org/documentation/#streams</a> and <a href="https://kafka.apache.org/documentation/streams/">https://kafka.apache.org/documentation/streams/</a></p>
 <h2 id="why-knet-streams-sdk">Why KNet Streams SDK</h2>
-<p>KNet Streams SDK adds the ability to manage complex .NET types in Apache Kafka™ Streams without manage them in the JVM.
+<p>KNet Streams SDK adds the ability to manage complex .NET types in Apache Kafka™ Streams without manage them in the JVM™.
 <strong>The Apache Kafka™ Streams APIs available in .NET suite for Apache Kafka™ works well if the types used are known within the JVM.</strong>
-Starting from the previous sentence, it works well using native types (bool, string, long, int, and so on), however it does not work if the type in .NET does not have a JVM counterpart.</p>
+Starting from the previous sentence, it works well using native types (bool, string, long, int, and so on), however it does not work if the type in .NET does not have a JVM™ counterpart.</p>
 <p>To solve this limitation there are two ways:</p>
 <ol>
-<li>if there is the need of a complex type in .NET, an equivalent class shall be avalable in the JVM; so the right steps are:
+<li>if there is the need of a complex type in .NET, an equivalent class shall be avalable in the JVM™; so the right steps are:
 <ul>
-<li>create the JVM class (in Java or any other language supported)</li>
-<li>reflect the JVM class with JNetReflector, or manually create it, in .NET</li>
+<li>create the JVM™ class (in Java™ or any other language supported)</li>
+<li>reflect the JVM™ class with JNetReflector, or manually create it, in .NET</li>
 <li>use the generated .NET class as key, or value, type in Apache Kafka™ Streams API available in <em>.NET suite for Apache Kafka</em></li>
 </ul>
 </li>
 <li>otherwise use directly the .NET types in the KNet Streams API available in <em>.NET suite for Apache Kafka</em>; this implies:
 <ul>
-<li>the developer does not need any knowledge of the JVM</li>
+<li>the developer does not need any knowledge of the JVM™</li>
 <li>everything is mananged, behind the scene, from KNet Streams API</li>
 </ul>
 </li>
@@ -117,17 +117,17 @@ Starting from the previous sentence, it works well using native types (bool, str
 <h2 id="api-set">API set</h2>
 <p>The available classes are under the following namespaces:</p>
 <ul>
-<li><strong>MASES.KNet.Streams</strong>: covers <em>org.apache.kafka.streams</em> Java package</li>
-<li><strong>MASES.KNet.Streams.Kstream</strong>: covers <em>org.apache.kafka.streams.kstream</em> Java package</li>
-<li><strong>MASES.KNet.Streams.Processor</strong>: covers <em>org.apache.kafka.streams.processor</em> Java package</li>
-<li><strong>MASES.KNet.Streams.Processor.Api</strong>: covers <em>org.apache.kafka.streams.processor.api</em> Java package</li>
-<li><strong>MASES.KNet.Streams.State</strong>: covers <em>org.apache.kafka.streams.state</em> Java package</li>
+<li><strong>MASES.KNet.Streams</strong>: covers <em>org.apache.kafka.streams</em> Java™ package</li>
+<li><strong>MASES.KNet.Streams.Kstream</strong>: covers <em>org.apache.kafka.streams.kstream</em> Java™ package</li>
+<li><strong>MASES.KNet.Streams.Processor</strong>: covers <em>org.apache.kafka.streams.processor</em> Java™ package</li>
+<li><strong>MASES.KNet.Streams.Processor.Api</strong>: covers <em>org.apache.kafka.streams.processor.api</em> Java™ package</li>
+<li><strong>MASES.KNet.Streams.State</strong>: covers <em>org.apache.kafka.streams.state</em> Java™ package</li>
 <li><strong>MASES.KNet.Streams.Utils</strong>: adds some useful functions</li>
 </ul>
 <p>All KNet Streams SDK APIs starts with the KNet prefix to avoid confusion during development; some examples are:</p>
 <ul>
 <li><em>org.apache.kafka.streams.KafkaStreams</em> is managed from <strong>MASES.KNet.Streams.Streams</strong></li>
-<li><em>org.apache.kafka.streams.state.KeyValueIterator&lt;K, V&gt;</em> is managed from <strong>MASES.KNet.Streams.State.KeyValueIterator&lt;TKey, TValue&gt;</strong> applying byte[] on both K and V on <em>org.apache.kafka.streams.state.KeyValueIterator&lt;K, V&gt;</em>; there are special cases for this, and other classes, to manage different JVM types:
+<li><em>org.apache.kafka.streams.state.KeyValueIterator&lt;K, V&gt;</em> is managed from <strong>MASES.KNet.Streams.State.KeyValueIterator&lt;TKey, TValue&gt;</strong> applying byte[] on both K and V on <em>org.apache.kafka.streams.state.KeyValueIterator&lt;K, V&gt;</em>; there are special cases for this, and other classes, to manage different JVM™ types:
 <ul>
 <li><strong>MASES.KNet.Streams.State.TimestampedKeyValueIterator&lt;TKey, TValue&gt;</strong> uses an <em>org.apache.kafka.streams.state.KeyValueIterator&lt;K, V&gt;</em> applying byte[] on K and <em>org.apache.kafka.streams.state.ValueAndTimestamp&lt;byte[]&gt;</em> on V;</li>
 <li><strong>MASES.KNet.Streams.State.TimestampedWindowedKeyValueIterator&lt;TKey, TValue&gt;</strong> uses an <em>org.apache.kafka.streams.state.KeyValueIterator&lt;K, V&gt;</em> applying <em>org.apache.kafka.streams.kstream.Windowed&lt;byte[]&gt;</em> on K and <em>org.apache.kafka.streams.state.ValueAndTimestamp&lt;byte[]&gt;</em> on V;</li>

@@ -263,7 +263,7 @@ The information collected are analyzed with statistics in mind; for every test t
 </tbody>
 </table>
 <h4 id="analysis">Analysis</h4>
-<p>KNet Produce is more efficient when the length of packets is high: this is related to the overhead introduced from JVM method invocations. With 10000 messages and 10000 bytes the result is better with Confluent.Kafka™, we have not yet identified if some parameters are limiting KNet or really Conflent.Kafka™ is more efficient.</p>
+<p>KNet Produce is more efficient when the length of packets is high: this is related to the overhead introduced from JVM™ method invocations. With 10000 messages and 10000 bytes the result is better with Confluent.Kafka™, we have not yet identified if some parameters are limiting KNet or really Conflent.Kafka™ is more efficient.</p>
 <p>KNet Consume is more efficient when the length of packets is small; when the length of packets is higher Confluent.Kafka™ becomes more efficient, however less are the packets better KNet performs, so there is a kind of bottleneck to be identified which limits KNet efficency.</p>
 <div class="NOTE">
 <h5>Note</h5>
@@ -402,7 +402,7 @@ KNet suffers the JNI interface overhead needed to performs the operations (the u
 Using KNetProducer the numbers of JNI invocation are less than using KafkaProducer, so reducing the number of JNI calls have a great impact on overall performance.
 The same consideration can be applied on the consume side: KNetConsumer does not reduce the impact of JNI interface and it does not give any great improvement.
 The JNI interface has an impact even when the number of messages is high because during processing the Garbage Collector is activated many times increasing the JNI overhead.</p>
-<p>Another option to be considered in consumption is related to <em>UsePrefetch</em>: it activates an external thread to execute the methods on JVM while the main thread iterates over records; this behavior helps to reduce the impact on main iterator coming from the JVM invocations:</p>
+<p>Another option to be considered in consumption is related to <em>UsePrefetch</em>: it activates an external thread to execute the methods on JVM™ while the main thread iterates over records; this behavior helps to reduce the impact on main iterator coming from the JVM™ invocations:</p>
 <pre><code class="lang-C#">var records = consumer.Poll(duration);
 if (UsePrefetch)
 {

@@ -90,7 +90,7 @@
 <p>KNet comes with a base set of serializer and deserializer. Most of them are usable with primitives types (<code>bool</code>, <code>int</code>, etc) and array of <code>byte</code>s.</p>
 <p>If the user wants to use structures types there are two ways:</p>
 <ol>
-<li>Creates types in Java and reflects them in C#</li>
+<li>Creates types in Java™ and reflects them in C#</li>
 <li>Creates types in C# and extend the available serializer/deserializer</li>
 </ol>
 <p>KNet suite offers some ready made serializer/deserializer usable with the specific APIs (KNetProducer/KNetConsumer).</p>
@@ -108,8 +108,8 @@
 </ul>
 <p>Starting from version 2.7.0, KNet comes with two kind of data exchange mechanisms:</p>
 <ul>
-<li><strong>Raw</strong>: data exchanges, across JVM-CLR boundary, using <code>byte</code> array transfer and this is the standard used since last version</li>
-<li><strong>Buffered</strong>: data exchanges, across JVM-CLR boundary, using <code>ByteBuffer</code> objects:
+<li><strong>Raw</strong>: data exchanges, across JVM™-CLR boundary, using <code>byte</code> array transfer and this is the standard used since last version</li>
+<li><strong>Buffered</strong>: data exchanges, across JVM™-CLR boundary, using <code>ByteBuffer</code> objects:
 <ul>
 <li>this version avoids a real data move, only references to <code>ByteBuffer</code> are exchanged</li>
 <li>the serializer/deserializer shares, with the <code>ByteBuffer</code>, the memory pointers originating the information and the counterpart reads that memory without make copies</li>
@@ -135,7 +135,7 @@
     }
 }
 </code></pre>
-<p>To manage it within C#, without create <code>TestType</code> in Java, an user can create:</p>
+<p>To manage it within C#, without create <code>TestType</code> in Java™, an user can create:</p>
 <ul>
 <li>serializer (the body must be updated with the user serializer):</li>
 </ul>
