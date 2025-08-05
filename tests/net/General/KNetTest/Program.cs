@@ -1,5 +1,5 @@
 ﻿/*
-*  Copyright 2025 MASES s.r.l.
+*  Copyright (c) 2021-2025 MASES s.r.l.
 *
 *  Licensed under the Apache License, Version 2.0 (the "License");
 *  you may not use this file except in compliance with the License.
@@ -42,7 +42,7 @@ namespace MASES.KNetTest
         static bool withExtraValue = false;
         static bool withBigExtraValue = false;
         static bool withBigBigExtraValue = false;
-        static bool consoleOutput = Debugger.IsAttached ? true : false;
+        static bool consoleOutput = Debugger.IsAttached;
         static bool runBuffered = false;
         static bool useProduceCallback = false;
         static bool useConsumeCallback = false;
@@ -58,7 +58,7 @@ namespace MASES.KNetTest
 
         static int NonParallelLimit = RuntimeInformation.IsOSPlatform(OSPlatform.Windows) ? 10000 : 100000;
         static long _firstOffset = -1;
-        static int waitMultiplier = 1;
+        static readonly int waitMultiplier = 1;
 
         static string serverToUse = theServer;
         static string topicToUse = theTopic;
