@@ -151,6 +151,12 @@ Class KNetCore&lt;T&gt;  <a class="header-action link-secondary" title="View sou
       <a class="xref" href="https://jnet.masesgroup.com/api/MASES.JNet.JNetCoreBase-1.html#MASES_JNet_JNetCoreBase_1_Parser">JNetCoreBase&lt;T&gt;.Parser</a>
     </div>
     <div>
+      <a class="xref" href="https://jnet.masesgroup.com/api/MASES.JNet.JNetCoreBase-1.html#MASES_JNet_JNetCoreBase_1_EventOrExceptionHandler_MASES_JCOBridge_C2JBridge_EventOrExceptionEventArgs_">JNetCoreBase&lt;T&gt;.EventOrExceptionHandler(EventOrExceptionEventArgs)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JNetCoreBase&lt;T&gt;.PreInitialization(ref string, ref Version)</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JNetCoreBase&lt;T&gt;.ReplaceEnvironmentVariable(string)</a>
     </div>
     <div>
@@ -217,6 +223,9 @@ Class KNetCore&lt;T&gt;  <a class="header-action link-secondary" title="View sou
       <a class="xref" href="https://jnet.masesgroup.com/api/MASES.JNet.JNetCoreBase-1.html#MASES_JNet_JNetCoreBase_1_ApplicationLogClassPath">JNetCoreBase&lt;T&gt;.ApplicationLogClassPath</a>
     </div>
     <div>
+      <a class="xref" href="https://jnet.masesgroup.com/api/MASES.JNet.JNetCoreBase-1.html#MASES_JNet_JNetCoreBase_1_ApplicationWriteEventOrExceptionOnCmdLine">JNetCoreBase&lt;T&gt;.ApplicationWriteEventOrExceptionOnCmdLine</a>
+    </div>
+    <div>
       <a class="xref" href="https://jnet.masesgroup.com/api/MASES.JNet.JNetCoreBase-1.html#MASES_JNet_JNetCoreBase_1_ApplicationJVMExtraOptions">JNetCoreBase&lt;T&gt;.ApplicationJVMExtraOptions</a>
     </div>
     <div>
@@ -259,7 +268,13 @@ Class KNetCore&lt;T&gt;  <a class="header-action link-secondary" title="View sou
       <a class="xref" href="https://jnet.masesgroup.com/api/MASES.JNet.JNetCoreBase-1.html#MASES_JNet_JNetCoreBase_1_LogClassPath">JNetCoreBase&lt;T&gt;.LogClassPath</a>
     </div>
     <div>
+      <a class="xref" href="https://jnet.masesgroup.com/api/MASES.JNet.JNetCoreBase-1.html#MASES_JNet_JNetCoreBase_1_WriteEventOrExceptionOnCmdLine">JNetCoreBase&lt;T&gt;.WriteEventOrExceptionOnCmdLine</a>
+    </div>
+    <div>
       <a class="xref" href="https://jnet.masesgroup.com/api/MASES.JNet.JNetCoreBase-1.html#MASES_JNet_JNetCoreBase_1_ParsedArgs">JNetCoreBase&lt;T&gt;.ParsedArgs</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jnet.masesgroup.com/api/MASES.JNet.JNetCoreBase-1.html#MASES_JNet_JNetCoreBase_1_EventOrExceptionEvent">JNetCoreBase&lt;T&gt;.EventOrExceptionEvent</a>
     </div>
     <div>
       <a class="xref" href="https://jnet.masesgroup.com/api/MASES.JNet.JNetCoreBase-1.html#MASES_JNet_JNetCoreBase_1_JVMOptions">JNetCoreBase&lt;T&gt;.JVMOptions</a>
@@ -287,6 +302,9 @@ Class KNetCore&lt;T&gt;  <a class="header-action link-secondary" title="View sou
     </div>
     <div>
       <span class="xref">SetupJVMWrapper&lt;T&gt;.ScopedOnVersion</span>
+    </div>
+    <div>
+      <span class="xref">SetupJVMWrapper.PostInitialization()</span>
     </div>
     <div>
       <span class="xref">SetupJVMWrapper.Initialize()</span>
@@ -1018,7 +1036,7 @@ Class KNetCore&lt;T&gt;  <a class="header-action link-secondary" title="View sou
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/KNetCore.cs/#L111"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/M_MASES_JCOBridge_C2JBridge_SetupJVMWrapper_ProcessCommandLine.htm">https://www.jcobridge.com/api-clr/html/M_MASES_JCOBridge_C2JBridge_SetupJVMWrapper_ProcessCommandLine.htm</a></p>
+  <div class="markdown level1 summary"><p>Process command line arguments</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1030,7 +1048,8 @@ Class KNetCore&lt;T&gt;  <a class="header-action link-secondary" title="View sou
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>[]</dt>
-    <dd></dd>
+    <dd><p>The filtered residual arguments</p>
+</dd>
   </dl>
 
 

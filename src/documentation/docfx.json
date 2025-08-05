@@ -53,7 +53,8 @@
     ],
     "xref": [
       "https://cliparser.masesgroup.com/xrefmap.yml",
-      "https://jnet.masesgroup.com/xrefmap.yml"
+      "https://jnet.masesgroup.com/xrefmap.yml",
+      "https://jcobridge-api.masesgroup.com/xrefmap.yml"
     ],
     "postProcessors": [ "ExtractSearchIndex" ],
     "globalMetadata": {
