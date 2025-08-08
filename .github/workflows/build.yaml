@@ -17,6 +17,24 @@ on:
         required: true
         default: false
         type: boolean
+      ForceContinueOnError:
+        description: 'Force continue-on-error'
+        required: false
+        default: true
+        type: boolean
+      UploadServerLogs:
+        description: 'Upload server logs'
+        required: false
+        default: false
+        type: boolean
+      EnableProcessDump:
+        description: 'Enable .NET process dump'
+        required: false
+        default: '0'
+        type: choice
+        options:
+          - "0"
+          - "1"
 
 concurrency:
   group: '${{ github.workflow }} @ ${{ github.event.pull_request.head.label || github.head_ref || github.ref }}'
@@ -111,7 +129,7 @@ jobs:
 
       - name: List NuGet packages downloaded
         if: ${{ inputs.UseLastRepositoryBuild == true }}
-        continue-on-error: true
+        continue-on-error: ${{ inputs.ForceContinueOnError == true }}
         shell: cmd
         run: dir .\JNetNuGet\*nupkg
 
@@ -275,7 +293,7 @@ jobs:
 
       - name: List NuGet packages downloaded
         if: ${{ inputs.UseLastRepositoryBuild == true }}
-        continue-on-error: true
+        continue-on-error: ${{ inputs.ForceContinueOnError == true }}
         run: ls -las ./JNetNuGet/*nupkg
 
       - name: Add local repo
@@ -382,12 +400,12 @@ jobs:
         
     runs-on: ${{ matrix.os }}
     env:
-      DOTNET_DbgEnableMiniDump: 1
+      DOTNET_DbgEnableMiniDump: ${{ inputs.EnableProcessDump }}
       DOTNET_DbgMiniDumpType: 3
       DOTNET_DbgMiniDumpName: ${{ github.workspace }}/coredump.%p
-      DOTNET_CreateDumpDiagnostics: 1
-      DOTNET_CreateDumpVerboseDiagnostics: 1
-      DOTNET_EnableCrashReport: 1
+      DOTNET_CreateDumpDiagnostics: ${{ inputs.EnableProcessDump }}
+      DOTNET_CreateDumpVerboseDiagnostics: ${{ inputs.EnableProcessDump }}
+      DOTNET_EnableCrashReport: ${{ inputs.EnableProcessDump }}
       JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ENCODED_2_6_1 }}
       
     steps:
@@ -413,23 +431,27 @@ jobs:
             9.x
 
       - name: Execute KNetTest on ${{ matrix.os }} with ${{ matrix.jdk_vendor }} ${{ matrix.jdk_version }}
+        continue-on-error: ${{ inputs.ForceContinueOnError == true }}
         run: dotnet ./bin/${{ matrix.framework }}/KNetTest.dll localhost:9092 useConsumeCallback randomizeTopicName
 
       - name: Execute KNetTest withBigBigExtraValue on ${{ matrix.os }} with ${{ matrix.jdk_vendor }} ${{ matrix.jdk_version }}
+        continue-on-error: ${{ inputs.ForceContinueOnError == true }}
         run: dotnet ./bin/${{ matrix.framework }}/KNetTest.dll localhost:9092 useConsumeCallback randomizeTopicName withBigBigExtraValue
 
       - name: Execute KNetTest runBuffered on ${{ matrix.os }} with ${{ matrix.jdk_vendor }} ${{ matrix.jdk_version }}
+        continue-on-error: ${{ inputs.ForceContinueOnError == true }}
         run: dotnet ./bin/${{ matrix.framework }}/KNetTest.dll localhost:9092 useConsumeCallback randomizeTopicName runBuffered
 
       - name: Execute KNetTest runBuffered withBigBigExtraValue on ${{ matrix.os }} with ${{ matrix.jdk_vendor }} ${{ matrix.jdk_version }}
+        continue-on-error: ${{ inputs.ForceContinueOnError == true }}
         run: dotnet ./bin/${{ matrix.framework }}/KNetTest.dll localhost:9092 useConsumeCallback randomizeTopicName runBuffered withBigBigExtraValue
 
       - name: Execute KNetTestSerDes on ${{ matrix.os }} with ${{ matrix.jdk_vendor }} ${{ matrix.jdk_version }}
+        continue-on-error: ${{ inputs.ForceContinueOnError == true }}
         shell: pwsh
         run: dotnet ${{ github.workspace }}/bin/${{ matrix.framework }}/KNetTestSerDes.dll
 
       - uses: actions/upload-artifact@v4
-        if: ${{ failure() || cancelled() }}
         with:
           if-no-files-found: ignore
           name: Crash_tests_${{ matrix.os }}_${{ matrix.framework }}_${{ matrix.jdk_vendor }}_${{ matrix.jdk_version }}
@@ -448,12 +470,12 @@ jobs:
         
     runs-on: ${{ matrix.os }}
     env:
-      DOTNET_DbgEnableMiniDump: 1
+      DOTNET_DbgEnableMiniDump: ${{ inputs.EnableProcessDump }}
       DOTNET_DbgMiniDumpType: 3
       DOTNET_DbgMiniDumpName: ${{ github.workspace }}/coredump.%p
-      DOTNET_CreateDumpDiagnostics: 1
-      DOTNET_CreateDumpVerboseDiagnostics: 1
-      DOTNET_EnableCrashReport: 1
+      DOTNET_CreateDumpDiagnostics: ${{ inputs.EnableProcessDump }}
+      DOTNET_CreateDumpVerboseDiagnostics: ${{ inputs.EnableProcessDump }}
+      DOTNET_EnableCrashReport: ${{ inputs.EnableProcessDump }}
       JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ENCODED_2_6_1 }}
       
     steps:
@@ -481,6 +503,7 @@ jobs:
           check-latest: true
 
       - name: Download Procdump and prepare # see https://gist.github.com/Sedeniono/e6d6504e3bf0645937852ee5681ef9ee and https://learn.microsoft.com/it-it/sysinternals/downloads/procdump
+        if: ${{ inputs.EnableProcessDump == 1 }}
         continue-on-error: true
         run: |
           C:\msys64\usr\bin\wget.exe https://download.sysinternals.com/files/Procdump.zip
@@ -493,7 +516,7 @@ jobs:
       - run: Get-PSDrive
 
       - name: Start Kafka and execute KNetTest on ${{ matrix.os }} with ${{ matrix.jdk_vendor }} ${{ matrix.jdk_version }}
-        if: ${{ matrix.os == 'windows-latest' }}
+        continue-on-error: ${{ inputs.ForceContinueOnError == true }}
         shell: pwsh
         run: |
           ${{ github.workspace }}/binCLI/${{ matrix.framework }}/MASES.KNetCLI.exe storagetool format --standalone --ignore-formatted -t 6oTi4odMSVSmroqyy5rubw -c ${{ github.workspace }}/bin/${{ matrix.framework }}/windows_server.properties
@@ -524,7 +547,6 @@ jobs:
         run: ${{ github.workspace }}\bin\${{ matrix.framework }}\KNetTestSerDes.exe
 
       - uses: actions/upload-artifact@v4
-        if: ${{ failure() || cancelled() }}
         with:
           if-no-files-found: ignore
           name: Crash_tests_${{ matrix.os }}_${{ matrix.framework }}_${{ matrix.jdk_vendor }}_${{ matrix.jdk_version }}
@@ -532,7 +554,7 @@ jobs:
           retention-days: 7
 
       - uses: actions/upload-artifact@v4
-        if: ${{ failure() || cancelled() }}
+        if: ${{ inputs.UploadServerLogs == true }}
         with:
           if-no-files-found: ignore
           name: KNet_Server_${{ matrix.os }}_${{ matrix.framework }}_${{ matrix.jdk_vendor }}_${{ matrix.jdk_version }}_${{ matrix.buffered }}_${{ matrix.extraValue }}
@@ -551,12 +573,12 @@ jobs:
         
     runs-on: ${{ matrix.os }}
     env:
-      DOTNET_DbgEnableMiniDump: 1
+      DOTNET_DbgEnableMiniDump: ${{ inputs.EnableProcessDump }}
       DOTNET_DbgMiniDumpType: 3
       DOTNET_DbgMiniDumpName: ${{ github.workspace }}/coredump.%p
-      DOTNET_CreateDumpDiagnostics: 1
-      DOTNET_CreateDumpVerboseDiagnostics: 1
-      DOTNET_EnableCrashReport: 1
+      DOTNET_CreateDumpDiagnostics: ${{ inputs.EnableProcessDump }}
+      DOTNET_CreateDumpVerboseDiagnostics: ${{ inputs.EnableProcessDump }}
+      DOTNET_EnableCrashReport: ${{ inputs.EnableProcessDump }}
       JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ENCODED_2_6_1 }}
       
     steps:
@@ -599,27 +621,31 @@ jobs:
           Start-Process -RSE ${{ github.workspace }}/logfiles/PWSH_kafka_err.log -RSO ${{ github.workspace }}/logfiles/PWSH_kafka_out.log -FilePath dotnet -ArgumentList ( '${{ github.workspace }}/binCLI/${{ matrix.framework }}/MASES.KNetCLI.dll', 'kafkastart', '-LogPath', '${{ github.workspace }}/logfiles/', '-Log4JConfiguration', '${{ github.workspace }}/bin/${{ matrix.framework }}/log4j2.yaml', '${{ github.workspace }}/bin/${{ matrix.framework }}/server.properties' )
 
       - name: Execute KNetTest on ${{ matrix.os }} with ${{ matrix.jdk_vendor }} ${{ matrix.jdk_version }}
+        continue-on-error: ${{ inputs.ForceContinueOnError == true }}
         shell: pwsh
         run: dotnet ${{ github.workspace }}/bin/${{ matrix.framework }}/KNetTest.dll localhost:9092 useConsumeCallback randomizeTopicName
 
       - name: Execute KNetTest withBigBigExtraValue on ${{ matrix.os }} with ${{ matrix.jdk_vendor }} ${{ matrix.jdk_version }}
+        continue-on-error: ${{ inputs.ForceContinueOnError == true }}
         shell: pwsh
         run: dotnet ${{ github.workspace }}/bin/${{ matrix.framework }}/KNetTest.dll localhost:9092 useConsumeCallback randomizeTopicName withBigBigExtraValue
 
       - name: Execute KNetTest runBuffered on ${{ matrix.os }} with ${{ matrix.jdk_vendor }} ${{ matrix.jdk_version }}
+        continue-on-error: ${{ inputs.ForceContinueOnError == true }}
         shell: pwsh
         run: dotnet ${{ github.workspace }}/bin/${{ matrix.framework }}/KNetTest.dll localhost:9092 useConsumeCallback randomizeTopicName runBuffered
 
       - name: Execute KNetTest runBuffered withBigBigExtraValue on ${{ matrix.os }} with ${{ matrix.jdk_vendor }} ${{ matrix.jdk_version }}
+        continue-on-error: ${{ inputs.ForceContinueOnError == true }}
         shell: pwsh
         run: dotnet ${{ github.workspace }}/bin/${{ matrix.framework }}/KNetTest.dll localhost:9092 useConsumeCallback randomizeTopicName runBuffered withBigBigExtraValue
 
       - name: Execute KNetTestSerDes on ${{ matrix.os }} with ${{ matrix.jdk_vendor }} ${{ matrix.jdk_version }}
+        continue-on-error: ${{ inputs.ForceContinueOnError == true }}
         shell: pwsh
         run: dotnet ${{ github.workspace }}/bin/${{ matrix.framework }}/KNetTestSerDes.dll
 
       - uses: actions/upload-artifact@v4
-        if: ${{ failure() || cancelled() }}
         with:
           if-no-files-found: ignore
           name: Crash_tests_${{ matrix.os }}_${{ matrix.framework }}_${{ matrix.jdk_vendor }}_${{ matrix.jdk_version }}
@@ -627,7 +653,7 @@ jobs:
           retention-days: 7
 
       - uses: actions/upload-artifact@v4
-        if: ${{ failure() || cancelled() }}
+        if: ${{ inputs.UploadServerLogs == true }}
         with:
           if-no-files-found: ignore
           name: KNet_Server_${{ matrix.os }}_${{ matrix.framework }}_${{ matrix.jdk_vendor }}_${{ matrix.jdk_version }}_${{ matrix.buffered }}_${{ matrix.extraValue }}
