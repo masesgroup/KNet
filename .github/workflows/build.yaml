@@ -209,15 +209,9 @@ jobs:
 
       - name: Prepare configuration files
         run: |
-          Copy-Item .github\workflows\support\server.properties -Destination bin\net462\server.properties -Force
-          Copy-Item .github\workflows\support\windows_server.properties -Destination bin\net462\windows_server.properties -Force
-          Copy-Item .github\workflows\support\log4j2.yaml -Destination bin\net462\log4j2.yaml -Force
-          Copy-Item .github\workflows\support\server.properties -Destination bin\net8.0\server.properties -Force
-          Copy-Item .github\workflows\support\windows_server.properties -Destination bin\net8.0\windows_server.properties -Force
-          Copy-Item .github\workflows\support\log4j2.yaml -Destination bin\net8.0\log4j2.yaml -Force
-          Copy-Item .github\workflows\support\server.properties -Destination bin\net9.0\server.properties -Force
-          Copy-Item .github\workflows\support\windows_server.properties -Destination bin\net9.0\windows_server.properties -Force
-          Copy-Item .github\workflows\support\log4j2.yaml -Destination bin\net9.0\log4j2.yaml -Force
+          Copy-Item .github\workflows\support\* -Destination bin\net462\ -Force
+          Copy-Item .github\workflows\support\* -Destination bin\net8.0\ -Force
+          Copy-Item .github\workflows\support\* -Destination bin\net9.0\ -Force
 
       - name: Save KNet net462 bin in cache
         uses: actions/cache/save@v4
