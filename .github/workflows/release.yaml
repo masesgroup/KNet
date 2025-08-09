@@ -23,7 +23,7 @@ jobs:
       - name: Support long paths
         run: git config --system core.longpaths true
       
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it                                                                                  
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v4
         with:
           fetch-depth: '1'
