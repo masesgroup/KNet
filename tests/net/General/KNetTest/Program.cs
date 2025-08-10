@@ -71,12 +71,12 @@ namespace MASES.KNetTest
 
             if (appArgs.Length != 0)
             {
-                serverToUse = args[0];
-                if (args.Length > 1)
+                serverToUse = appArgs[0];
+                if (appArgs.Length > 1)
                 {
-                    for (int i = 1; i < args.Length; i++)
+                    for (int i = 1; i < appArgs.Length; i++)
                     {
-                        var arg = args[i].ToLowerInvariant();
+                        var arg = appArgs[i].ToLowerInvariant();
 
                         if (arg == "deleteTopic".ToLowerInvariant()) { deleteTopic = true; continue; }
                         if (arg == "runBuffered".ToLowerInvariant()) { runBuffered = true; continue; }
@@ -92,7 +92,7 @@ namespace MASES.KNetTest
                         if (arg == "runInParallel".ToLowerInvariant()) { runInParallel = true; continue; }
                         if (arg == "avoidThrows".ToLowerInvariant()) { avoidThrows = true; continue; }
                         if (arg == "randomizeTopicName".ToLowerInvariant()) { randomizeTopicName = true; continue; }
-                        Console.WriteLine($"Unknown {arg[i]}");
+                        Console.WriteLine($"Unknown {arg}");
                     }
                 }
             }

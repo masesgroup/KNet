@@ -98,10 +98,10 @@ Configuration:
     Logger:
       # Kafka logger
       - name: kafka
-        level: INFO
+        level: WARN
       # Kafka org.apache logger
       - name: org.apache.kafka
-        level: INFO
+        level: WARN
       # Kafka request logger
       - name: kafka.request.logger
         level: WARN
