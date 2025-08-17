@@ -32,11 +32,13 @@ import java.io.IOException;
 import java.util.Collections;
 import java.util.List;
 import java.util.Map;
-import java.util.concurrent.atomic.AtomicLong;
 
 public class KNetSourceTask extends SourceTask implements KNetConnectLogging {
     private static final Logger log = LoggerFactory.getLogger(KNetSourceTask.class);
-    static final AtomicLong taskId = new AtomicLong(0);
+
+    long taskId = 0;
+
+    String indexedRegistrationName;
 
     JCObject sourceTask = null;
 
@@ -52,11 +54,14 @@ public class KNetSourceTask extends SourceTask implements KNetConnectLogging {
 
     public KNetSourceTask() throws ConnectException, JCException, IOException {
         super();
-        long taskid = taskId.incrementAndGet();
-        JCOBridge.RegisterJVMGlobal(String.format("KNetSourceTask_%d", taskid), this);
-        JCObject source = KNetConnectProxy.getSourceConnector();
-        if (source == null) throw new ConnectException("getSourceConnector returned null.");
-        sourceTask = (JCObject) source.Invoke("AllocateTask", taskid);
+        taskId = KNetConnectProxy.getNewTaskId();
+        indexedRegistrationName = String.format("KNetSourceTask_%d", taskId);
+        if (JCOBridge.isCLRHostingProcess()) {
+            JCOBridge.RegisterJVMGlobal(indexedRegistrationName, this);
+            JCObject source = KNetConnectProxy.getSourceConnector();
+            if (source == null) throw new ConnectException("getSourceConnector returned null.");
+            sourceTask = (JCObject) source.Invoke("AllocateTask", taskId);
+        }
     }
 
     public SourceTaskContext getContext() {
@@ -78,13 +83,21 @@ public class KNetSourceTask extends SourceTask implements KNetConnectLogging {
     @Override
     public void start(Map<String, String> map) {
         try {
+            if (!JCOBridge.isCLRHostingProcess()) {
+                JCOBridge.RegisterJVMGlobal(indexedRegistrationName, this);
+                String connectorId = KNetConnectProxy.getConnectorId(map);
+                JCObject source = KNetConnectProxy.getConnector(connectorId);
+                if (source == null) throw new ConnectException("getConnector returned null.");
+                sourceTask = (JCObject) source.Invoke("AllocateTask", taskId);
+            }
+
             try {
                 dataToExchange = map;
                 sourceTask.Invoke("StartInternal");
             } finally {
                 dataToExchange = null;
             }
-        } catch (JCNativeException jcne) {
+        } catch (JCException | IOException jcne) {
             log.error("Failed Invoke of \"start\"", jcne);
         }
     }
@@ -117,6 +130,15 @@ public class KNetSourceTask extends SourceTask implements KNetConnectLogging {
             sourceTask.Invoke("StopInternal");
         } catch (JCNativeException jcne) {
             log.error("Failed Invoke of \"stop\"", jcne);
+        }
+        finally {
+            if (!JCOBridge.isCLRHostingProcess()) {
+                try {
+                    JCOBridge.UnregisterJVMGlobal(indexedRegistrationName);
+                } catch (JCNativeException e) {
+                    throw new RuntimeException(e);
+                }
+            }
         }
     }
 

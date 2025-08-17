@@ -40,6 +40,14 @@ public class KNetSinkConnector extends SinkConnector implements KNetConnectLoggi
 
     private static final String registrationName = "KNetSinkConnector";
 
+    long connectorId = 0;
+
+    String indexedRegistrationName;
+
+    JCObject sinkConnector;
+
+    private Map<String, String> instance_props;
+
     Object dataToExchange = null;
 
     public Object getDataToExchange() {
@@ -56,23 +64,40 @@ public class KNetSinkConnector extends SinkConnector implements KNetConnectLoggi
 
     @Override
     public void start(Map<String, String> props) {
+        this.instance_props = props;
         try {
-            if (!KNetConnectProxy.initializeSinkConnector(props)) {
-                log.error("Failed Invoke of \"initializeSinkConnector\"");
-                throw new ConnectException("Failed Invoke of \"initializeSinkConnector\"");
-            } else {
-                JCOBridge.RegisterJVMGlobal(registrationName, this);
-                try {
-                    dataToExchange = props;
-                    JCObject sink = KNetConnectProxy.getSinkConnector();
+            KNetConnectProxy.initAndGetConnectProxy(instance_props);
+            connectorId = KNetConnectProxy.getNewConnectorId();
+            JCObject sink;
+            if (JCOBridge.isCLRHostingProcess()) {
+                if (!KNetConnectProxy.initializeSinkConnector(instance_props)) {
+                    log.error("Failed Invoke of \"initializeSinkConnector\"");
+                    throw new ConnectException("Failed Invoke of \"initializeSinkConnector\"");
+                } else {
+                    JCOBridge.RegisterJVMGlobal(registrationName, this);
+                    sink = KNetConnectProxy.getSinkConnector();
                     if (sink == null) throw new ConnectException("getSinkConnector returned null.");
-                    sink.Invoke("StartInternal");
-                } finally {
-                    dataToExchange = null;
                 }
+            }
+            else {
+                indexedRegistrationName = registrationName + "_" + connectorId;
+                if (!KNetConnectProxy.initializeConnector(instance_props, indexedRegistrationName)){
+                    log.error("Failed Invoke of \"initializeConnector\"");
+                    throw new ConnectException("Failed Invoke of \"initializeConnector\"");
+                }
+                JCOBridge.RegisterJVMGlobal(indexedRegistrationName, this);
+                sinkConnector = KNetConnectProxy.getConnector(indexedRegistrationName);
+                sink = sinkConnector;
+            }
+            try {
+                dataToExchange = instance_props;
+                sink.Invoke("StartInternal");
+            } finally {
+                dataToExchange = null;
             }
         } catch (JCException | IOException jcne) {
             log.error("Failed Invoke of \"start\"", jcne);
+            throw new ConnectException(jcne);
         }
     }
 
@@ -87,9 +112,16 @@ public class KNetSinkConnector extends SinkConnector implements KNetConnectLoggi
         for (int i = 0; i < maxTasks; i++) {
             Map<String, String> config = new HashMap<>();
             try {
+                JCObject sink;
+                if (JCOBridge.isCLRHostingProcess()) {
+                    sink = KNetConnectProxy.getSinkConnector();
+                    if (sink == null) throw new ConnectException("getSinkConnector returned null.");
+                }
+                else {
+                    sink = sinkConnector;
+                    KNetConnectProxy.applyConnectorId(config, indexedRegistrationName);
+                }
                 dataToExchange = config;
-                JCObject sink = KNetConnectProxy.getSinkConnector();
-                if (sink == null) throw new ConnectException("getSinkConnector returned null.");
                 sink.Invoke("TaskConfigsInternal", i);
             } catch (JCException | IOException jcne) {
                 log.error("Failed Invoke of \"start\"", jcne);
@@ -105,11 +137,22 @@ public class KNetSinkConnector extends SinkConnector implements KNetConnectLoggi
     public void stop() {
         try {
             try {
-                JCObject sink = KNetConnectProxy.getSinkConnector();
-                if (sink == null) throw new ConnectException("getSinkConnector returned null.");
+                JCObject sink;
+                if (JCOBridge.isCLRHostingProcess()) {
+                    sink = KNetConnectProxy.getSinkConnector();
+                    if (sink == null) throw new ConnectException("getSinkConnector returned null.");
+                }
+                else {
+                    sink = sinkConnector;
+                }
                 sink.Invoke("StopInternal");
             } finally {
-                JCOBridge.UnregisterJVMGlobal(registrationName);
+                if (JCOBridge.isCLRHostingProcess()) {
+                    JCOBridge.UnregisterJVMGlobal(registrationName);
+                }
+                else{
+                    JCOBridge.UnregisterJVMGlobal(indexedRegistrationName);
+                }
             }
         } catch (JCException | IOException jcne) {
             log.error("Failed Invoke of \"stop\"", jcne);
@@ -124,7 +167,13 @@ public class KNetSinkConnector extends SinkConnector implements KNetConnectLoggi
     @Override
     public String version() {
         try {
-            JCObject sink = KNetConnectProxy.getSinkConnector();
+            JCObject sink;
+            if (JCOBridge.isCLRHostingProcess()) {
+                sink = KNetConnectProxy.getSinkConnector();
+            }
+            else {
+                sink = sinkConnector;
+            }
             if (sink != null) {
                 return (String) sink.Invoke("VersionInternal");
             }

@@ -31,12 +31,14 @@ import org.slf4j.LoggerFactory;
 import java.io.IOException;
 import java.util.Collection;
 import java.util.Map;
-import java.util.concurrent.atomic.AtomicLong;
 
 public class KNetSinkTask extends SinkTask implements KNetConnectLogging {
     private static final Logger log = LoggerFactory.getLogger(KNetSinkTask.class);
 
-    static final AtomicLong taskId = new AtomicLong(0);
+    long taskId = 0;
+
+    String indexedRegistrationName;
+
     JCObject sinkTask = null;
 
     Object dataToExchange = null;
@@ -51,11 +53,14 @@ public class KNetSinkTask extends SinkTask implements KNetConnectLogging {
 
     public KNetSinkTask() throws ConnectException, JCException, IOException {
         super();
-        long taskid = taskId.incrementAndGet();
-        JCOBridge.RegisterJVMGlobal(String.format("KNetSinkTask_%d", taskid), this);
-        JCObject sink = KNetConnectProxy.getSinkConnector();
-        if (sink == null) throw new ConnectException("getSinkConnector returned null.");
-        sinkTask = (JCObject) sink.Invoke("AllocateTask", taskid);
+        taskId = KNetConnectProxy.getNewTaskId();
+        indexedRegistrationName = String.format("KNetSinkTask_%d", taskId);
+        if (JCOBridge.isCLRHostingProcess()) {
+            JCOBridge.RegisterJVMGlobal(indexedRegistrationName, this);
+            JCObject sink = KNetConnectProxy.getSinkConnector();
+            if (sink == null) throw new ConnectException("getSinkConnector returned null.");
+            sinkTask = (JCObject) sink.Invoke("AllocateTask", taskId);
+        }
     }
 
     public SinkTaskContext getContext() {
@@ -77,13 +82,21 @@ public class KNetSinkTask extends SinkTask implements KNetConnectLogging {
     @Override
     public void start(Map<String, String> map) {
         try {
+            if (!JCOBridge.isCLRHostingProcess()) {
+                JCOBridge.RegisterJVMGlobal(indexedRegistrationName, this);
+                String connectorId = KNetConnectProxy.getConnectorId(map);
+                JCObject sink = KNetConnectProxy.getConnector(connectorId);
+                if (sink == null) throw new ConnectException("getConnector returned null.");
+                sinkTask = (JCObject) sink.Invoke("AllocateTask", taskId);
+            }
+
             try {
                 dataToExchange = map;
                 sinkTask.Invoke("StartInternal");
             } finally {
                 dataToExchange = null;
             }
-        } catch (JCNativeException jcne) {
+        } catch (JCException | IOException jcne) {
             log.error("Failed Invoke of \"start\"", jcne);
         }
     }
@@ -108,6 +121,15 @@ public class KNetSinkTask extends SinkTask implements KNetConnectLogging {
             sinkTask.Invoke("StopInternal");
         } catch (JCNativeException jcne) {
             log.error("Failed Invoke of \"stop\"", jcne);
+        }
+        finally {
+            if (!JCOBridge.isCLRHostingProcess()) {
+                try {
+                    JCOBridge.UnregisterJVMGlobal(indexedRegistrationName);
+                } catch (JCNativeException e) {
+                    throw new RuntimeException(e);
+                }
+            }
         }
     }
 
