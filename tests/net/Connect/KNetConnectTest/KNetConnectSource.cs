@@ -17,15 +17,13 @@
 */
 
 using Java.Util;
-using MASES.KNet.Connect;
-using Org.Apache.Kafka.Connect;
 using Org.Apache.Kafka.Connect.Data;
 using Org.Apache.Kafka.Connect.Source;
 using System;
 using System.Collections.Generic;
 using System.IO;
 
-namespace MASES.KNetConnectTest
+namespace MASES.KNet.Connect.Test
 {
     public class KNetSourceTestConnector : KNetSourceConnector<KNetSourceTestConnector, KNetSourceTestTask>
     {
