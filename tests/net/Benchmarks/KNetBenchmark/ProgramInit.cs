@@ -366,11 +366,9 @@ namespace MASES.KNet.Benchmark
             }
         }
 
-        protected override string[] ProcessCommandLine()
+        protected override void PostInitialization()
         {
-            var ret = base.ProcessCommandLine();
-            EnableCriticalMethods = ParsedArgs.Exist(CLIParam.EnableCriticalMethods);
-            return ret;
+            Management.EnableCriticalMethods = ParsedArgs.Exist(CLIParam.EnableCriticalMethods);
         }
     }
 
