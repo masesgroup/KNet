@@ -40,12 +40,6 @@ public class KNetSourceConnector extends SourceConnector implements KNetConnectL
 
     private static final String registrationName = "KNetSourceConnector";
 
-    long connectorId = 0;
-
-    String indexedRegistrationName;
-
-    JCObject sourceConnector;
-
     public static final String DOTNET_EXACTLYONCESUPPORT_CONFIG = "knet.dotnet.source.exactlyOnceSupport";
     public static final String DOTNET_CANDEFINETRANSACTIONBOUNDARIES_CONFIG = "knet.dotnet.source.canDefineTransactionBoundaries";
 
@@ -53,7 +47,11 @@ public class KNetSourceConnector extends SourceConnector implements KNetConnectL
             .define(DOTNET_EXACTLYONCESUPPORT_CONFIG, ConfigDef.Type.BOOLEAN, false, ConfigDef.Importance.LOW, "Fallback value if infrastructure is not ready to receive request in .NET side to get exactlyOnceSupport")
             .define(DOTNET_CANDEFINETRANSACTIONBOUNDARIES_CONFIG, ConfigDef.Type.BOOLEAN, false, ConfigDef.Importance.LOW, "Fallback value if infrastructure is not ready to receive request in .NET side to get canDefineTransactionBoundaries");
 
-    Map<String, String> instance_props;
+    long connectorId = 0;
+
+    String indexedRegistrationName;
+
+    JCObject sourceConnector;
 
     Object dataToExchange = null;
 
@@ -71,13 +69,12 @@ public class KNetSourceConnector extends SourceConnector implements KNetConnectL
 
     @Override
     public void start(Map<String, String> props) {
-        this.instance_props = props;
         try {
-            KNetConnectProxy.initAndGetConnectProxy(instance_props);
+            KNetConnectProxy.initAndGetConnectProxy(props);
             connectorId = KNetConnectProxy.getNewConnectorId();
             JCObject source;
             if (JCOBridge.isCLRHostingProcess()) {
-                if (!KNetConnectProxy.initializeSourceConnector(instance_props)) {
+                if (!KNetConnectProxy.initializeSourceConnector(props)) {
                     log.error("Failed Invoke of \"initializeSourceConnector\"");
                     throw new ConnectException("Failed Invoke of \"initializeSourceConnector\"");
                 } else {
@@ -86,8 +83,8 @@ public class KNetSourceConnector extends SourceConnector implements KNetConnectL
                     if (source == null) throw new ConnectException("getSourceConnector returned null.");
                 }
             } else {
-                indexedRegistrationName = registrationName + "_" + connectorId;
-                if (!KNetConnectProxy.initializeConnector(instance_props, indexedRegistrationName)) {
+                indexedRegistrationName = String.format("%s_%d", registrationName, connectorId);
+                if (!KNetConnectProxy.initializeConnector(props, indexedRegistrationName)) {
                     log.error("Failed Invoke of \"initializeConnector\"");
                     throw new ConnectException("Failed Invoke of \"initializeConnector\"");
                 }
@@ -96,7 +93,7 @@ public class KNetSourceConnector extends SourceConnector implements KNetConnectL
                 source = sourceConnector;
             }
             try {
-                dataToExchange = instance_props;
+                dataToExchange = props;
                 source.Invoke("StartInternal");
             } finally {
                 dataToExchange = null;

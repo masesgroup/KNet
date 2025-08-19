@@ -36,6 +36,8 @@ import java.util.Map;
 public class KNetSourceTask extends SourceTask implements KNetConnectLogging {
     private static final Logger log = LoggerFactory.getLogger(KNetSourceTask.class);
 
+    private static final String registrationName = "KNetSourceTask";
+
     long taskId = 0;
 
     String indexedRegistrationName;
@@ -55,7 +57,7 @@ public class KNetSourceTask extends SourceTask implements KNetConnectLogging {
     public KNetSourceTask() throws ConnectException, JCException, IOException {
         super();
         taskId = KNetConnectProxy.getNewTaskId();
-        indexedRegistrationName = String.format("KNetSourceTask_%d", taskId);
+        indexedRegistrationName = String.format("%s_%d",registrationName, taskId);
         if (JCOBridge.isCLRHostingProcess()) {
             JCOBridge.RegisterJVMGlobal(indexedRegistrationName, this);
             JCObject source = KNetConnectProxy.getSourceConnector();

@@ -35,6 +35,8 @@ import java.util.Map;
 public class KNetSinkTask extends SinkTask implements KNetConnectLogging {
     private static final Logger log = LoggerFactory.getLogger(KNetSinkTask.class);
 
+    private static final String registrationName = "KNetSinkTask";
+
     long taskId = 0;
 
     String indexedRegistrationName;
@@ -54,7 +56,7 @@ public class KNetSinkTask extends SinkTask implements KNetConnectLogging {
     public KNetSinkTask() throws ConnectException, JCException, IOException {
         super();
         taskId = KNetConnectProxy.getNewTaskId();
-        indexedRegistrationName = String.format("KNetSinkTask_%d", taskId);
+        indexedRegistrationName = String.format("%s_%d", registrationName, taskId);
         if (JCOBridge.isCLRHostingProcess()) {
             JCOBridge.RegisterJVMGlobal(indexedRegistrationName, this);
             JCObject sink = KNetConnectProxy.getSinkConnector();

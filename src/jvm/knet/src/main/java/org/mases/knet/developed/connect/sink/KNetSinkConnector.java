@@ -46,8 +46,6 @@ public class KNetSinkConnector extends SinkConnector implements KNetConnectLoggi
 
     JCObject sinkConnector;
 
-    private Map<String, String> instance_props;
-
     Object dataToExchange = null;
 
     public Object getDataToExchange() {
@@ -64,13 +62,12 @@ public class KNetSinkConnector extends SinkConnector implements KNetConnectLoggi
 
     @Override
     public void start(Map<String, String> props) {
-        this.instance_props = props;
         try {
-            KNetConnectProxy.initAndGetConnectProxy(instance_props);
+            KNetConnectProxy.initAndGetConnectProxy(props);
             connectorId = KNetConnectProxy.getNewConnectorId();
             JCObject sink;
             if (JCOBridge.isCLRHostingProcess()) {
-                if (!KNetConnectProxy.initializeSinkConnector(instance_props)) {
+                if (!KNetConnectProxy.initializeSinkConnector(props)) {
                     log.error("Failed Invoke of \"initializeSinkConnector\"");
                     throw new ConnectException("Failed Invoke of \"initializeSinkConnector\"");
                 } else {
@@ -80,8 +77,8 @@ public class KNetSinkConnector extends SinkConnector implements KNetConnectLoggi
                 }
             }
             else {
-                indexedRegistrationName = registrationName + "_" + connectorId;
-                if (!KNetConnectProxy.initializeConnector(instance_props, indexedRegistrationName)){
+                indexedRegistrationName = String.format("%s_%d", registrationName, connectorId);
+                if (!KNetConnectProxy.initializeConnector(props, indexedRegistrationName)){
                     log.error("Failed Invoke of \"initializeConnector\"");
                     throw new ConnectException("Failed Invoke of \"initializeConnector\"");
                 }
@@ -90,7 +87,7 @@ public class KNetSinkConnector extends SinkConnector implements KNetConnectLoggi
                 sink = sinkConnector;
             }
             try {
-                dataToExchange = instance_props;
+                dataToExchange = props;
                 sink.Invoke("StartInternal");
             } finally {
                 dataToExchange = null;
