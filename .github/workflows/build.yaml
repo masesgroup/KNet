@@ -20,7 +20,7 @@ on:
       ForceContinueOnError:
         description: 'Force continue-on-error'
         required: false
-        default: true
+        default: false
         type: boolean
       UploadServerLogs:
         description: 'Upload server logs'
