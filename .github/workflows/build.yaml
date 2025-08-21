@@ -238,7 +238,7 @@ jobs:
         uses: actions/cache/save@v4
         with:
           enableCrossOsArchive: true
-          path: ./bin/*.nupkg
+          path: ./bin/MASES.KNetCLI.*.nupkg
           key: KNet_${{ github.run_number }}_${{ github.run_attempt }}_Nuget_${{ github.sha }}
 
   build_container_knet:
@@ -472,7 +472,7 @@ jobs:
         with:
           fail-on-cache-miss: true
           enableCrossOsArchive: true
-          path: ./bin/*.nupkg
+          path: ./bin/MASES.KNetCLI.*.nupkg
           key: KNet_${{ github.run_number }}_${{ github.run_attempt }}_Nuget_${{ github.sha }}
 
       - name: Set up JDK distribution
@@ -583,7 +583,7 @@ jobs:
         with:
           fail-on-cache-miss: true
           enableCrossOsArchive: true
-          path: ./bin/*.nupkg
+          path: ./bin/MASES.KNetCLI.*.nupkg
           key: KNet_${{ github.run_number }}_${{ github.run_attempt }}_Nuget_${{ github.sha }}
 
       - name: Set up JDK distribution
