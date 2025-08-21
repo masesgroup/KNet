@@ -12,6 +12,7 @@
 #    folder   #
 ###############
 /**/.idea/
+/**/.run/
 /**/target/
 /**/DROP/
 /**/TEMP/
