@@ -69,6 +69,7 @@ public class KNetSourceConnector extends SourceConnector implements KNetConnectL
 
     @Override
     public void start(Map<String, String> props) {
+        log.debug("Invoking start");
         try {
             KNetConnectProxy.initAndGetConnectProxy(props);
             connectorId = KNetConnectProxy.getNewConnectorId();
@@ -79,16 +80,19 @@ public class KNetSourceConnector extends SourceConnector implements KNetConnectL
                     throw new ConnectException("Failed Invoke of \"initializeSourceConnector\"");
                 } else {
                     JCOBridge.RegisterJVMGlobal(registrationName, this);
+                    log.info("RegisterJVMGlobal done for %s", registrationName);
                     source = KNetConnectProxy.getSourceConnector();
                     if (source == null) throw new ConnectException("getSourceConnector returned null.");
                 }
             } else {
                 indexedRegistrationName = String.format("%s_%d", registrationName, connectorId);
+                log.info("Preparing KNetSourceConnector with name %s", indexedRegistrationName);
                 if (!KNetConnectProxy.initializeConnector(props, indexedRegistrationName)) {
                     log.error("Failed Invoke of \"initializeConnector\"");
                     throw new ConnectException("Failed Invoke of \"initializeConnector\"");
                 }
                 JCOBridge.RegisterJVMGlobal(indexedRegistrationName, this);
+                log.info("RegisterJVMGlobal done for %s", indexedRegistrationName);
                 sourceConnector = KNetConnectProxy.getConnector(indexedRegistrationName);
                 source = sourceConnector;
             }
@@ -105,11 +109,13 @@ public class KNetSourceConnector extends SourceConnector implements KNetConnectL
 
     @Override
     public Class<? extends Task> taskClass() {
+        log.debug("Invoking taskClass");
         return KNetSourceTask.class;
     }
 
     @Override
     public List<Map<String, String>> taskConfigs(int maxTasks) {
+        log.debug("Invoking taskConfigs for maxTasks %d", maxTasks);
         ArrayList<Map<String, String>> configs = new ArrayList<>();
         for (int i = 0; i < maxTasks; i++) {
             Map<String, String> config = new HashMap<>();
@@ -136,6 +142,7 @@ public class KNetSourceConnector extends SourceConnector implements KNetConnectL
 
     @Override
     public void stop() {
+        log.debug("Invoking stop");
         try {
             try {
                 JCObject source;
@@ -160,11 +167,13 @@ public class KNetSourceConnector extends SourceConnector implements KNetConnectL
 
     @Override
     public ConfigDef config() {
+        log.debug("Invoking config");
         return CONFIG_DEF;
     }
 
     @Override
     public String version() {
+        log.debug("Invoking version");
         try {
             JCObject source;
             if (JCOBridge.isCLRHostingProcess()) {
@@ -183,6 +192,7 @@ public class KNetSourceConnector extends SourceConnector implements KNetConnectL
 
     @Override
     public ExactlyOnceSupport exactlyOnceSupport(Map<String, String> connectorConfig) {
+        log.debug("Invoking exactlyOnceSupport");
         try {
             JCObject source;
             if (JCOBridge.isCLRHostingProcess()) {
@@ -209,6 +219,7 @@ public class KNetSourceConnector extends SourceConnector implements KNetConnectL
 
     @Override
     public ConnectorTransactionBoundaries canDefineTransactionBoundaries(Map<String, String> connectorConfig) {
+        log.debug("Invoking canDefineTransactionBoundaries");
         try {
             JCObject source;
             if (JCOBridge.isCLRHostingProcess()) {

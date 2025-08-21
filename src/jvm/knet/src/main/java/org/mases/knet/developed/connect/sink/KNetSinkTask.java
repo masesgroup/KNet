@@ -55,6 +55,7 @@ public class KNetSinkTask extends SinkTask implements KNetConnectLogging {
 
     public KNetSinkTask() throws ConnectException, JCException, IOException {
         super();
+        log.debug("Invoking ctor of KNetSinkTask");
         taskId = KNetConnectProxy.getNewTaskId();
         indexedRegistrationName = String.format("%s_%d", registrationName, taskId);
         if (JCOBridge.isCLRHostingProcess()) {
@@ -71,6 +72,7 @@ public class KNetSinkTask extends SinkTask implements KNetConnectLogging {
 
     @Override
     public String version() {
+        log.debug("Invoking version");
         try {
             if (sinkTask != null) {
                 return (String) sinkTask.Invoke("VersionInternal");
@@ -83,6 +85,7 @@ public class KNetSinkTask extends SinkTask implements KNetConnectLogging {
 
     @Override
     public void start(Map<String, String> map) {
+        log.debug("Invoking start");
         try {
             if (!JCOBridge.isCLRHostingProcess()) {
                 JCOBridge.RegisterJVMGlobal(indexedRegistrationName, this);
@@ -105,6 +108,7 @@ public class KNetSinkTask extends SinkTask implements KNetConnectLogging {
 
     @Override
     public void put(Collection<SinkRecord> collection) {
+        log.debug("Invoking put");
         try {
             try {
                 dataToExchange = collection;
@@ -119,6 +123,7 @@ public class KNetSinkTask extends SinkTask implements KNetConnectLogging {
 
     @Override
     public void stop() {
+        log.debug("Invoking stop");
         try {
             sinkTask.Invoke("StopInternal");
         } catch (JCNativeException jcne) {

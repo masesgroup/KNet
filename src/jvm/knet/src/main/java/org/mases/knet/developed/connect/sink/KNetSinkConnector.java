@@ -62,6 +62,7 @@ public class KNetSinkConnector extends SinkConnector implements KNetConnectLoggi
 
     @Override
     public void start(Map<String, String> props) {
+        log.debug("Invoking start");
         try {
             KNetConnectProxy.initAndGetConnectProxy(props);
             connectorId = KNetConnectProxy.getNewConnectorId();
@@ -72,21 +73,25 @@ public class KNetSinkConnector extends SinkConnector implements KNetConnectLoggi
                     throw new ConnectException("Failed Invoke of \"initializeSinkConnector\"");
                 } else {
                     JCOBridge.RegisterJVMGlobal(registrationName, this);
+                    log.debug("RegisterJVMGlobal done for %s", registrationName);
                     sink = KNetConnectProxy.getSinkConnector();
                     if (sink == null) throw new ConnectException("getSinkConnector returned null.");
                 }
             }
             else {
                 indexedRegistrationName = String.format("%s_%d", registrationName, connectorId);
+                log.debug("Preparing KNetSinkConnector with name %s", indexedRegistrationName);
                 if (!KNetConnectProxy.initializeConnector(props, indexedRegistrationName)){
                     log.error("Failed Invoke of \"initializeConnector\"");
                     throw new ConnectException("Failed Invoke of \"initializeConnector\"");
                 }
                 JCOBridge.RegisterJVMGlobal(indexedRegistrationName, this);
+                log.debug("RegisterJVMGlobal done for %s", indexedRegistrationName);
                 sinkConnector = KNetConnectProxy.getConnector(indexedRegistrationName);
                 sink = sinkConnector;
             }
             try {
+                log.debug("Executing StartInternal");
                 dataToExchange = props;
                 sink.Invoke("StartInternal");
             } finally {
@@ -100,11 +105,13 @@ public class KNetSinkConnector extends SinkConnector implements KNetConnectLoggi
 
     @Override
     public Class<? extends Task> taskClass() {
+        log.debug("Invoking taskClass");
         return KNetSinkTask.class;
     }
 
     @Override
     public List<Map<String, String>> taskConfigs(int maxTasks) {
+        log.debug("Invoking taskConfigs for maxTasks %d", maxTasks);
         ArrayList<Map<String, String>> configs = new ArrayList<>();
         for (int i = 0; i < maxTasks; i++) {
             Map<String, String> config = new HashMap<>();
@@ -132,6 +139,7 @@ public class KNetSinkConnector extends SinkConnector implements KNetConnectLoggi
 
     @Override
     public void stop() {
+        log.debug("Invoking stop");
         try {
             try {
                 JCObject sink;
@@ -158,11 +166,13 @@ public class KNetSinkConnector extends SinkConnector implements KNetConnectLoggi
 
     @Override
     public ConfigDef config() {
+        log.debug("Invoking config");
         return KNetConnectProxy.CONFIG_DEF;
     }
 
     @Override
     public String version() {
+        log.debug("Invoking version");
         try {
             JCObject sink;
             if (JCOBridge.isCLRHostingProcess()) {

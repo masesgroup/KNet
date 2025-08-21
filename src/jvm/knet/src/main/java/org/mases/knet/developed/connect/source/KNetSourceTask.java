@@ -56,6 +56,7 @@ public class KNetSourceTask extends SourceTask implements KNetConnectLogging {
 
     public KNetSourceTask() throws ConnectException, JCException, IOException {
         super();
+        log.debug("Invoking ctor of KNetSourceTask");
         taskId = KNetConnectProxy.getNewTaskId();
         indexedRegistrationName = String.format("%s_%d",registrationName, taskId);
         if (JCOBridge.isCLRHostingProcess()) {
@@ -72,6 +73,7 @@ public class KNetSourceTask extends SourceTask implements KNetConnectLogging {
 
     @Override
     public String version() {
+        log.debug("Invoking version");
         try {
             if (sourceTask != null) {
                 return (String) sourceTask.Invoke("VersionInternal");
@@ -84,6 +86,7 @@ public class KNetSourceTask extends SourceTask implements KNetConnectLogging {
 
     @Override
     public void start(Map<String, String> map) {
+        log.debug("Invoking start");
         try {
             if (!JCOBridge.isCLRHostingProcess()) {
                 JCOBridge.RegisterJVMGlobal(indexedRegistrationName, this);
@@ -106,6 +109,7 @@ public class KNetSourceTask extends SourceTask implements KNetConnectLogging {
 
     @Override
     public List<SourceRecord> poll() throws InterruptedException {
+        log.debug("Invoking poll");
         try {
             try {
                 dataToExchange = null;
@@ -122,12 +126,14 @@ public class KNetSourceTask extends SourceTask implements KNetConnectLogging {
 
     public <V> Map<String, Object> offsetAt(String key, V value)
     {
+        log.debug("Invoking offsetAt");
         if (context == null || context.offsetStorageReader() == null) return null;
         return context.offsetStorageReader().offset(Collections.singletonMap(key, value));
     }
 
     @Override
     public void stop() {
+        log.debug("Invoking stop");
         try {
             sourceTask.Invoke("StopInternal");
         } catch (JCNativeException jcne) {

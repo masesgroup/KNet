@@ -70,8 +70,10 @@ public class KNetConnectProxy implements KNetConnectLogging, IJCEventLog {
 
     public static synchronized JCObject initAndGetConnectProxy(Map<String, String> props) throws JCException, IOException {
         if (knetConnectProxy == null) {
+            log.info("Initialize KNetConnectProxy");
             AbstractConfig parsedConfig = new AbstractConfig(CONFIG_DEF, props);
             if (!JCOBridge.isCLRHostingProcess()) {
+                log.info("Initialize of KNetConnectProxy starts from JVM");
                 // prepare environment variables for JCOBridge
                 String var = parsedConfig.getString(DOTNET_CLR_VERSION_CONFIG);
                 if (var == null) {
@@ -80,51 +82,67 @@ public class KNetConnectProxy implements KNetConnectLogging, IJCEventLog {
                 JCOBridge.setCoreCLRVersion(var);
                 var = parsedConfig.getString(DOTNET_CLR_RID_CONFIG);
                 if (var != null) {
+                    log.info("%s has value %s", DOTNET_CLR_RID_CONFIG, var);
                     JCOBridge.setCLRRID(var);
                 }
                 var = parsedConfig.getString(JCOBRIDGE_LICENSE_PATH_CONFIG);
                 if (var != null) {
+                    log.info("%s has value %s", JCOBRIDGE_LICENSE_PATH_CONFIG, var);
                     JCOBridge.setLicensePath(var);
                 }
                 var = parsedConfig.getString(JCOBRIDGE_SCOPE_ON_CONFIG);
                 if (var != null) {
+                    log.info("%s has value %s", JCOBRIDGE_SCOPE_ON_CONFIG, var);
                     JCOBridge.setScopeOn(var);
                 }
                 var = parsedConfig.getString(JCOBRIDGE_SCOPE_ON_VERSION_CONFIG);
                 if (var != null) {
+                    log.info("%s has value %s", JCOBRIDGE_SCOPE_ON_VERSION_CONFIG, var);
                     JCOBridge.setScopeOnVersion(var);
                 }
             }
 
             // initialize JCOBridge
+            log.info("Initializing JCOBridge");
             JCOBridge.Initialize();
+            log.info("Initialized JCOBridge");
 
             // get proxy
             if (JCOBridge.isCLRHostingProcess()) {
                 knetConnectProxy = (JCObject) JCOBridge.GetCLRGlobal("KNetConnectProxy");
+                log.info("Recoved KNetConnectProxy from CLR");
             } else {
                 bridgeInstance = JCOBridge.CreateNew();
                 knetConnectProxy = (JCObject) bridgeInstance.NewObject("MASES.KNet.Connect.KNetConnectProxy, MASES.KNet");
+                log.info("Created KNetConnectProxy in the CLR");
                 localKNetConnectProxy = new KNetConnectProxy();
                 bridgeInstance.RegisterEventLog(localKNetConnectProxy);
             }
         }
+        log.debug("Returning KNetConnectProxy instance");
         return knetConnectProxy;
     }
 
     public static synchronized boolean initializeSinkConnector(Map<String, String> props) throws JCException, IOException {
+        log.info("Invoking initializeSinkConnector");
+
         if (knetConnectProxy == null)
             throw new ConnectException("Missing initialization of infrastructure using initAndGetConnectProxy");
 
         AbstractConfig parsedConfig = new AbstractConfig(CONFIG_DEF, props);
         String className = parsedConfig.getString(DOTNET_CLASSNAME_CONFIG);
+
         if (className == null)
             throw new ConfigException(String.format("'%s' in KNetSinkConnector configuration requires a definition", DOTNET_CLASSNAME_CONFIG));
+
+        log.info("Trying to allocate Sink Connector with class name %s", className);
 
         return (boolean) knetConnectProxy.Invoke("AllocateSinkConnector", className);
     }
 
     public static synchronized boolean initializeSourceConnector(Map<String, String> props) throws JCException, IOException {
+        log.info("Invoking initializeSourceConnector");
+
         if (knetConnectProxy == null)
             throw new ConnectException("Missing initialization of infrastructure using initAndGetConnectProxy");
 
@@ -133,10 +151,14 @@ public class KNetConnectProxy implements KNetConnectLogging, IJCEventLog {
         if (className == null)
             throw new ConfigException(String.format("'%s' in KNetSourceConnector configuration requires a definition", DOTNET_CLASSNAME_CONFIG));
 
+        log.info("Trying to allocate Source Connector with class name %s", className);
+
         return (boolean) knetConnectProxy.Invoke("AllocateSourceConnector", className);
     }
 
     public static synchronized boolean initializeConnector(Map<String, String> props, String uniqueId) throws JCException, IOException {
+        log.info("Invoking initializeConnector");
+
         if (knetConnectProxy == null)
             throw new ConnectException("Missing initialization of infrastructure using initAndGetConnectProxy");
 
@@ -145,38 +167,49 @@ public class KNetConnectProxy implements KNetConnectLogging, IJCEventLog {
         if (className == null)
             throw new ConfigException(String.format("'%s' in connector configuration requires a definition", DOTNET_CLASSNAME_CONFIG));
 
+        log.info("Trying to allocate Connector with class name %s", className);
+
         return (boolean) knetConnectProxy.Invoke("AllocateConnector", className, uniqueId);
     }
 
     public static synchronized JCObject getSinkConnector() throws JCException, IOException {
+        log.info("Invoking getSinkConnector");
+
         if (knetConnectProxy == null)
             throw new ConnectException("Missing initialization of infrastructure using initAndGetConnectProxy");
 
         if (sinkConnector == null) {
+            log.info("Trying to recover name of Sink Connector");
             sinkConnectorName = (String) knetConnectProxy.Invoke("SinkConnectorName");
-
+            log.info("Trying to recover Sink Connector with name %s", sinkConnectorName);
             if (sinkConnectorName != null) {
                 sinkConnector = (JCObject) JCOBridge.GetCLRGlobal(sinkConnectorName);
+                log.info("Recovered Sink Connector with name %s", sinkConnectorName);
             }
         }
         return sinkConnector;
     }
 
     public static synchronized JCObject getSourceConnector() throws JCException, IOException {
+        log.info("Invoking getSourceConnector");
+
         if (knetConnectProxy == null)
             throw new ConnectException("Missing initialization of infrastructure using initAndGetConnectProxy");
 
         if (sourceConnector == null) {
+            log.info("Trying to recover name of Source Connector");
             sourceConnectorName = (String) knetConnectProxy.Invoke("SourceConnectorName");
-
+            log.info("Trying to recover Source Connector with name %s", sourceConnectorName);
             if (sourceConnectorName != null) {
                 sourceConnector = (JCObject) JCOBridge.GetCLRGlobal(sourceConnectorName);
+                log.info("Recovered Source Connector with name %s", sinkConnectorName);
             }
         }
         return sourceConnector;
     }
 
     public static synchronized JCObject getConnector(String uniqueId) throws JCException, IOException {
+        log.info("Invoking getConnector with id %s", uniqueId);
         return (JCObject) JCOBridge.GetCLRGlobal(uniqueId);
     }
 
@@ -191,12 +224,10 @@ public class KNetConnectProxy implements KNetConnectLogging, IJCEventLog {
       return connectorId;
     }
 
-    @Override
     public void FusionLog(String var1) {
         debug(var1);
     }
 
-    @Override
     public void EventLog(String var1) {
         info(var1);
     }
