@@ -5,7 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 
-namespace MASES.KNetTemplate.KNetConnect
+namespace MASES.KNet.Template.KNetConnect
 {
     public class KNetConnectSource : KNetSourceConnector<KNetConnectSource, KNetConnectSourceTask>
     {

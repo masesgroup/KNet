@@ -16,13 +16,11 @@
 *  Refer to LICENSE for more information.
 */
 
-using MASES.KNet.Connect;
-using Org.Apache.Kafka.Connect;
 using Org.Apache.Kafka.Connect.Sink;
 using System;
 using System.Collections.Generic;
 
-namespace MASES.KNetConnectTest
+namespace MASES.KNet.Connect.Test
 {
     public class KNetSinkTestConnector : KNetSinkConnector<KNetSinkTestConnector, KNetSinkTestTask>
     {

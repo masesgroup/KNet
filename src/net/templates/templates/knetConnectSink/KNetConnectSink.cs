@@ -3,7 +3,7 @@ using Org.Apache.Kafka.Connect.Sink;
 using System;
 using System.Collections.Generic;
 
-namespace MASES.KNetTemplate.KNetConnect
+namespace MASES.KNet.Template.KNetConnect
 {
     public class KNetConnectSink : KNetSinkConnector<KNetConnectSink, KNetConnectSinkTask>
     {

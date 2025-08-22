@@ -1,5 +1,4 @@
 ﻿using MASES.JCOBridge.C2JBridge;
-using MASES.KNet;
 using Org.Apache.Kafka.Clients.Consumer;
 using Org.Apache.Kafka.Common.Serialization;
 using Java.Util;
@@ -7,7 +6,7 @@ using Org.Apache.Kafka.Streams;
 using System;
 using System.Threading;
 
-namespace MASES.KNetTemplate.KNetStreamPipe
+namespace MASES.KNet.Template.KNetStreamPipe
 {
     class LocalKNetCore : KNetCore<LocalKNetCore> { }
 

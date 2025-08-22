@@ -3,7 +3,7 @@
 	<PropertyGroup>
 		<OutputPath>..\..\..\..\binConnect\</OutputPath>
 		<AssemblyName>KNetConnectTest</AssemblyName>
-		<RootNamespace>MASES.KNetConnectTest</RootNamespace>
+		<RootNamespace>MASES.KNet.Connect.Test</RootNamespace>
 		<Title>KNetConnectTest - a test tool for KNet Connect</Title>
 		<Description>KNetConnectTest - a test tool for KNet Connect</Description>
 	</PropertyGroup>

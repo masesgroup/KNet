@@ -14,13 +14,13 @@ on:
     inputs:
       UseLastRepositoryBuild:
         description: 'Use latest NuGet packages from JNet'
-        required: true
+        required: false
         default: false
         type: boolean
       ForceContinueOnError:
         description: 'Force continue-on-error'
         required: false
-        default: true
+        default: false
         type: boolean
       UploadServerLogs:
         description: 'Upload server logs'
@@ -234,26 +234,12 @@ jobs:
           path: ./bin/net9.0/
           key: KNet_${{ github.run_number }}_${{ github.run_attempt }}_net9.0_bin_${{ github.sha }}
 
-      - name: Save KNet net462 binCLI in cache
+      - name: Save KNet NuGet in cache
         uses: actions/cache/save@v4
         with:
           enableCrossOsArchive: true
-          path: ./binCLI/net462/
-          key: KNet_${{ github.run_number }}_${{ github.run_attempt }}_net462_binCLI_${{ github.sha }}
-          
-      - name: Save KNet net8.0 binCLI in cache
-        uses: actions/cache/save@v4
-        with:
-          enableCrossOsArchive: true
-          path: ./binCLI/net8.0/
-          key: KNet_${{ github.run_number }}_${{ github.run_attempt }}_net8.0_binCLI_${{ github.sha }}
-          
-      - name: Save KNet net9.0 binCLI in cache
-        uses: actions/cache/save@v4
-        with:
-          enableCrossOsArchive: true
-          path: ./binCLI/net9.0/
-          key: KNet_${{ github.run_number }}_${{ github.run_attempt }}_net9.0_binCLI_${{ github.sha }}
+          path: ./bin/MASES.KNetCLI.*.nupkg
+          key: KNet_${{ github.run_number }}_${{ github.run_attempt }}_Nuget_${{ github.sha }}
 
   build_container_knet:
     needs: check_changes
@@ -382,7 +368,7 @@ jobs:
           - 9092:9092
         env:
           KNET_DOCKER_RUNNING_MODE: server-standalone
-          JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ENCODED_2_6_1 }}
+          JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ENCODED_2_6_2 }}
           
     strategy:
       fail-fast: false
@@ -400,7 +386,7 @@ jobs:
       DOTNET_CreateDumpDiagnostics: ${{ inputs.EnableProcessDump }}
       DOTNET_CreateDumpVerboseDiagnostics: ${{ inputs.EnableProcessDump }}
       DOTNET_EnableCrashReport: ${{ inputs.EnableProcessDump }}
-      JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ENCODED_2_6_1 }}
+      JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ENCODED_2_6_2 }}
       
     steps:
       - name: Restore KNet ${{ matrix.framework }} bin from cache
@@ -470,7 +456,7 @@ jobs:
       DOTNET_CreateDumpDiagnostics: ${{ inputs.EnableProcessDump }}
       DOTNET_CreateDumpVerboseDiagnostics: ${{ inputs.EnableProcessDump }}
       DOTNET_EnableCrashReport: ${{ inputs.EnableProcessDump }}
-      JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ENCODED_2_6_1 }}
+      JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ENCODED_2_6_2 }}
       
     steps:
       - name: Restore KNet ${{ matrix.framework }} bin from cache
@@ -481,13 +467,13 @@ jobs:
           path: ./bin/${{ matrix.framework }}/
           key: KNet_${{ github.run_number }}_${{ github.run_attempt }}_${{ matrix.framework }}_bin_${{ github.sha }}
 
-      - name: Restore KNetCLI ${{ matrix.framework }} binCLI from cache
+      - name: Restore Nuget from cache
         uses: actions/cache/restore@v4
         with:
           fail-on-cache-miss: true
           enableCrossOsArchive: true
-          path: ./binCLI/${{ matrix.framework }}/
-          key: KNet_${{ github.run_number }}_${{ github.run_attempt }}_${{ matrix.framework }}_binCLI_${{ github.sha }}
+          path: ./bin/MASES.KNetCLI.*.nupkg
+          key: KNet_${{ github.run_number }}_${{ github.run_attempt }}_Nuget_${{ github.sha }}
 
       - name: Set up JDK distribution
         uses: actions/setup-java@v4
@@ -509,13 +495,21 @@ jobs:
 
       - run: Get-PSDrive
 
+      - name: Download latest published version of KNetCLI
+        run: dotnet tool update -g MASES.KNetCLI --source ${{ github.workspace }}\bin
+
+      - name: Disable CET for dotnet process
+        run: |
+          reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\knet.exe" /v MitigationOptions /t REG_BINARY /d "0000000000000000000000000000002000" /f
+          Get-ProcessMitigation -Name "knet.exe"
+
       - name: Start Kafka and execute KNetTest on ${{ matrix.os }} with ${{ matrix.jdk_vendor }} ${{ matrix.jdk_version }}
         continue-on-error: ${{ inputs.ForceContinueOnError == true }}
         shell: pwsh
         run: |
-          ${{ github.workspace }}/binCLI/${{ matrix.framework }}/MASES.KNetCLI.exe storagetool format --standalone --ignore-formatted -t 6oTi4odMSVSmroqyy5rubw -c ${{ github.workspace }}/bin/${{ matrix.framework }}/windows_server.properties
+          knet storagetool format --standalone --ignore-formatted -t 6oTi4odMSVSmroqyy5rubw -c ${{ github.workspace }}/bin/${{ matrix.framework }}/windows_server.properties
           New-Item -Path "${{ github.workspace }}" -Name "logfiles" -ItemType Directory
-          Start-Process -RSE ${{ github.workspace }}/logfiles/PWSH_kafka_err.log -RSO ${{ github.workspace }}\logfiles\PWSH_kafka_out.log -FilePath ${{ github.workspace }}\binCLI\${{ matrix.framework }}\MASES.KNetCLI.exe -ArgumentList ( 'kafkastart', '-LogPath', '${{ github.workspace }}\logfiles\', '-Log4JConfiguration', '${{ github.workspace }}\bin\${{ matrix.framework }}\log4j2.yaml', '${{ github.workspace }}\bin\${{ matrix.framework }}\windows_server.properties' )
+          Start-Process -RSE ${{ github.workspace }}/logfiles/PWSH_kafka_err.log -RSO ${{ github.workspace }}\logfiles\PWSH_kafka_out.log -FilePath knet -ArgumentList ( 'kafkastart', '-LogPath', '${{ github.workspace }}\logfiles\', '-Log4JConfiguration', '${{ github.workspace }}\bin\${{ matrix.framework }}\log4j2.yaml', '${{ github.workspace }}\bin\${{ matrix.framework }}\windows_server.properties' )
           ${{ github.workspace }}\bin\${{ matrix.framework }}\KNetTest.exe -Log4JConfiguration '${{ github.workspace }}\bin\${{ matrix.framework }}\log4j2.yaml' localhost:9092 useConsumeCallback randomizeTopicName
           ${{ github.workspace }}\bin\${{ matrix.framework }}\KNetTest.exe -Log4JConfiguration '${{ github.workspace }}\bin\${{ matrix.framework }}\log4j2.yaml' localhost:9092 useConsumeCallback randomizeTopicName withExtraValue
           ${{ github.workspace }}\bin\${{ matrix.framework }}\KNetTest.exe -Log4JConfiguration '${{ github.workspace }}\bin\${{ matrix.framework }}\log4j2.yaml' localhost:9092 useConsumeCallback randomizeTopicName runBuffered
@@ -573,7 +567,7 @@ jobs:
       DOTNET_CreateDumpDiagnostics: ${{ inputs.EnableProcessDump }}
       DOTNET_CreateDumpVerboseDiagnostics: ${{ inputs.EnableProcessDump }}
       DOTNET_EnableCrashReport: ${{ inputs.EnableProcessDump }}
-      JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ENCODED_2_6_1 }}
+      JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ENCODED_2_6_2 }}
       
     steps:
       - name: Restore KNet ${{ matrix.framework }} bin from cache
@@ -584,13 +578,13 @@ jobs:
           path: ./bin/${{ matrix.framework }}/
           key: KNet_${{ github.run_number }}_${{ github.run_attempt }}_${{ matrix.framework }}_bin_${{ github.sha }}
 
-      - name: Restore KNetCLI ${{ matrix.framework }} binCLI from cache
+      - name: Restore Nuget from cache
         uses: actions/cache/restore@v4
         with:
           fail-on-cache-miss: true
           enableCrossOsArchive: true
-          path: ./binCLI/${{ matrix.framework }}/
-          key: KNet_${{ github.run_number }}_${{ github.run_attempt }}_${{ matrix.framework }}_binCLI_${{ github.sha }}
+          path: ./bin/MASES.KNetCLI.*.nupkg
+          key: KNet_${{ github.run_number }}_${{ github.run_attempt }}_Nuget_${{ github.sha }}
 
       - name: Set up JDK distribution
         uses: actions/setup-java@v4
@@ -605,14 +599,17 @@ jobs:
           dotnet-version: |
             9.x
 
+      - name: Download latest published version of KNetCLI
+        run: dotnet tool update -g MASES.KNetCLI --source ${{ github.workspace }}/bin
+
       - name: Prepare Kafka on ${{ matrix.os }} with ${{ matrix.jdk_vendor }} ${{ matrix.jdk_version }}
-        run: dotnet ${{ github.workspace }}/binCLI/${{ matrix.framework }}/MASES.KNetCLI.dll storagetool format --standalone --ignore-formatted -t 6oTi4odMSVSmroqyy5rubw -c ${{ github.workspace }}/bin/${{ matrix.framework }}/server.properties
+        run: knet storagetool format --standalone --ignore-formatted -t 6oTi4odMSVSmroqyy5rubw -c ${{ github.workspace }}/bin/${{ matrix.framework }}/server.properties
 
       - name: Start Kafka on ${{ matrix.os }} with ${{ matrix.jdk_vendor }} ${{ matrix.jdk_version }}
         shell: pwsh
         run: |
           New-Item -Path "${{ github.workspace }}" -Name "logfiles" -ItemType Directory
-          Start-Process -RSE ${{ github.workspace }}/logfiles/PWSH_kafka_err.log -RSO ${{ github.workspace }}/logfiles/PWSH_kafka_out.log -FilePath dotnet -ArgumentList ( '${{ github.workspace }}/binCLI/${{ matrix.framework }}/MASES.KNetCLI.dll', 'kafkastart', '-LogPath', '${{ github.workspace }}/logfiles/', '-Log4JConfiguration', '${{ github.workspace }}/bin/${{ matrix.framework }}/log4j2.yaml', '${{ github.workspace }}/bin/${{ matrix.framework }}/server.properties' )
+          Start-Process -RSE ${{ github.workspace }}/logfiles/PWSH_kafka_err.log -RSO ${{ github.workspace }}/logfiles/PWSH_kafka_out.log -FilePath knet -ArgumentList ( 'kafkastart', '-LogPath', '${{ github.workspace }}/logfiles/', '-Log4JConfiguration', '${{ github.workspace }}/bin/${{ matrix.framework }}/log4j2.yaml', '${{ github.workspace }}/bin/${{ matrix.framework }}/server.properties' )
 
       - name: Execute KNetTest on ${{ matrix.os }} with ${{ matrix.jdk_vendor }} ${{ matrix.jdk_version }}
         continue-on-error: ${{ inputs.ForceContinueOnError == true }}

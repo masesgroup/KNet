@@ -100,6 +100,7 @@ This project adheres to the Contributor [Covenant code of conduct](https://githu
 * V2.8.0+: From version 2.8.0: supports Apache Kafka™ version 3.8.*
 * V2.9.0+: From version 2.9.0: supports Apache Kafka™ version 3.9.*
 * V3.0.0+: From version 3.0.0: supports Apache Kafka™ version 4.0.*
+* V3.0.3+: From version 3.0.3: KNet Connect SDK supports JVM hosted runtime
 
 ---
 
