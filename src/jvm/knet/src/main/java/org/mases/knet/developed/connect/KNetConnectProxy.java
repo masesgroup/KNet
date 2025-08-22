@@ -36,18 +36,20 @@ public class KNetConnectProxy implements KNetConnectLogging, IJCEventLog {
     public static final String JCOBRIDGE_LICENSE_PATH_CONFIG = "knet.jcobridge.license.path";
     public static final String JCOBRIDGE_SCOPE_ON_CONFIG = "knet.jcobridge.scope.on";
     public static final String JCOBRIDGE_SCOPE_ON_VERSION_CONFIG = "knet.jcobridge.scope.on.version";
-    public static final String DOTNET_CLR_VERSION_CONFIG = "knet.dotnet.clr.version";
-    public static final String DOTNET_CLR_RID_CONFIG = "knet.dotnet.clr.rid";
+    public static final String JCOBRIDGE_CLR_VERSION_CONFIG = "knet.jcobridge.clr.version";
+    public static final String JCOBRIDGE_CLR_RID_CONFIG = "knet.jcobridge.clr.rid";
+    public static final String DOTNET_ASSEMBLY_LOCATION_CONFIG = "knet.dotnet.assembly.location";
     public static final String DOTNET_CLASSNAME_CONFIG = "knet.dotnet.classname";
 
     public static final String CONNECTOR_ID_PROP_NAME = "connector.id.prop.name";
 
     public static final ConfigDef CONFIG_DEF = new ConfigDef()
-            .define(JCOBRIDGE_LICENSE_PATH_CONFIG, ConfigDef.Type.STRING, null, ConfigDef.Importance.LOW, "Set to the license to be used in case knet.dotnet.hosting.process is set to false or absent.")
-            .define(JCOBRIDGE_SCOPE_ON_CONFIG, ConfigDef.Type.STRING, null, ConfigDef.Importance.LOW, "Set to the Scope On to be used in case knet.dotnet.hosting.process is set to false or absent.")
-            .define(JCOBRIDGE_SCOPE_ON_VERSION_CONFIG, ConfigDef.Type.STRING, null, ConfigDef.Importance.LOW, "Set to the Scope On Version to be used in case knet.dotnet.hosting.process is set to false or absent.")
-            .define(DOTNET_CLR_VERSION_CONFIG, ConfigDef.Type.STRING, "8", ConfigDef.Importance.LOW, "Set to the version of the CLR to be used in case knet.dotnet.hosting.process is set to false or absent.")
-            .define(DOTNET_CLR_RID_CONFIG, ConfigDef.Type.STRING, null, ConfigDef.Importance.LOW, "Set to the RID to be used in case knet.dotnet.hosting.process is set to false or absent.")
+            .define(JCOBRIDGE_LICENSE_PATH_CONFIG, ConfigDef.Type.STRING, null, ConfigDef.Importance.LOW, "Set to the license to be used in case of Apache Kafka Connect JVM hosted runtime.")
+            .define(JCOBRIDGE_SCOPE_ON_CONFIG, ConfigDef.Type.STRING, null, ConfigDef.Importance.LOW, "Set to the Scope On to be used in case of Apache Kafka Connect JVM hosted runtime.")
+            .define(JCOBRIDGE_SCOPE_ON_VERSION_CONFIG, ConfigDef.Type.STRING, null, ConfigDef.Importance.LOW, "Set to the Scope On Version to be used in case of Apache Kafka Connect JVM hosted runtime.")
+            .define(JCOBRIDGE_CLR_VERSION_CONFIG, ConfigDef.Type.STRING, "8", ConfigDef.Importance.LOW, "Set to the version of the CLR to be used in case of Apache Kafka Connect JVM hosted runtime.")
+            .define(JCOBRIDGE_CLR_RID_CONFIG, ConfigDef.Type.STRING, null, ConfigDef.Importance.LOW, "Set to the RID to be used in case of Apache Kafka Connect JVM hosted runtime.")
+            .define(DOTNET_ASSEMBLY_LOCATION_CONFIG, ConfigDef.Type.STRING, null, ConfigDef.Importance.LOW, "Location of the assembly containing the .NET class referred from \"knet.dotnet.classname\".")
             .define(DOTNET_CLASSNAME_CONFIG, ConfigDef.Type.STRING, null, ConfigDef.Importance.HIGH, ".NET class name in the form usable from .NET like \"classname, assembly name\".");
 
     static JCOBridge bridgeInstance = null;
@@ -75,14 +77,14 @@ public class KNetConnectProxy implements KNetConnectLogging, IJCEventLog {
             if (!JCOBridge.isCLRHostingProcess()) {
                 log.info("Initialize of KNetConnectProxy starts from JVM");
                 // prepare environment variables for JCOBridge
-                String var = parsedConfig.getString(DOTNET_CLR_VERSION_CONFIG);
+                String var = parsedConfig.getString(JCOBRIDGE_CLR_VERSION_CONFIG);
                 if (var == null) {
-                    throw new ConfigException(String.format("'%s' cannot be null", DOTNET_CLR_VERSION_CONFIG));
+                    throw new ConfigException(String.format("'%s' cannot be null", JCOBRIDGE_CLR_VERSION_CONFIG));
                 }
                 JCOBridge.setCoreCLRVersion(var);
-                var = parsedConfig.getString(DOTNET_CLR_RID_CONFIG);
+                var = parsedConfig.getString(JCOBRIDGE_CLR_RID_CONFIG);
                 if (var != null) {
-                    log.info("%s has value %s", DOTNET_CLR_RID_CONFIG, var);
+                    log.info("%s has value %s", JCOBRIDGE_CLR_RID_CONFIG, var);
                     JCOBridge.setCLRRID(var);
                 }
                 var = parsedConfig.getString(JCOBRIDGE_LICENSE_PATH_CONFIG);
@@ -163,6 +165,14 @@ public class KNetConnectProxy implements KNetConnectLogging, IJCEventLog {
             throw new ConnectException("Missing initialization of infrastructure using initAndGetConnectProxy");
 
         AbstractConfig parsedConfig = new AbstractConfig(CONFIG_DEF, props);
+
+        String location = parsedConfig.getString(DOTNET_ASSEMBLY_LOCATION_CONFIG);
+        if (location != null) {
+            if (bridgeInstance == null)
+                throw new ConnectException("Missing initialization of infrastructure using initAndGetConnectProxy");
+            bridgeInstance.AddPath(location);
+        }
+
         String className = parsedConfig.getString(DOTNET_CLASSNAME_CONFIG);
         if (className == null)
             throw new ConfigException(String.format("'%s' in connector configuration requires a definition", DOTNET_CLASSNAME_CONFIG));
@@ -213,15 +223,14 @@ public class KNetConnectProxy implements KNetConnectLogging, IJCEventLog {
         return (JCObject) JCOBridge.GetCLRGlobal(uniqueId);
     }
 
-    public static synchronized void applyConnectorId(Map<String, String> props, String uniqueId)
-    {
+    public static synchronized void applyConnectorId(Map<String, String> props, String uniqueId) {
         props.put(CONNECTOR_ID_PROP_NAME, uniqueId);
     }
 
     public static synchronized String getConnectorId(Map<String, String> props) throws ConnectException {
-      String connectorId = props.get(CONNECTOR_ID_PROP_NAME);
-      if (connectorId == null) throw new ConnectException(String.format("Failed to get %s", CONNECTOR_ID_PROP_NAME));
-      return connectorId;
+        String connectorId = props.get(CONNECTOR_ID_PROP_NAME);
+        if (connectorId == null) throw new ConnectException(String.format("Failed to get %s", CONNECTOR_ID_PROP_NAME));
+        return connectorId;
     }
 
     public void FusionLog(String var1) {
