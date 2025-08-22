@@ -209,7 +209,7 @@ namespace MASES.KNet.Connect
         public void CreateAndPushRecord<TKey, TValue>(string topic, int? partition, Schema keySchema, TKey key, Schema valueSchema, TValue value)
         {
             if (_arrayList == null) throw new InvalidOperationException($"The method cannot be invoked outside the body of {nameof(Poll)} method.");
-            _arrayList.Add(CreateRecord<TKey, TValue>(topic, partition, keySchema, key, valueSchema, value);
+            _arrayList.Add(CreateRecord<TKey, TValue>(topic, partition, keySchema, key, valueSchema, value));
         }
 
         /// <summary>
@@ -238,7 +238,7 @@ namespace MASES.KNet.Connect
         public void CreateAndPushRecord<TValue>(string topic, Schema valueSchema, TValue value, DateTime timestamp)
         {
             if (_arrayList == null) throw new InvalidOperationException($"The method cannot be invoked outside the body of {nameof(Poll)} method.");
-            _arrayList.Add(CreateRecord<TValue>(topic, valueSchema, value, timestamp);
+            _arrayList.Add(CreateRecord<TValue>(topic, valueSchema, value, timestamp));
         }
 
         /// <summary>
@@ -269,7 +269,7 @@ namespace MASES.KNet.Connect
         public void CreateAndPushRecord<TValue>(string topic, int? partition, Schema valueSchema, TValue value, DateTime timestamp)
         {
             if (_arrayList == null) throw new InvalidOperationException($"The method cannot be invoked outside the body of {nameof(Poll)} method.");
-            _arrayList.Add(CreateRecord<TValue>(topic, partition, valueSchema, value, timestamp);
+            _arrayList.Add(CreateRecord<TValue>(topic, partition, valueSchema, value, timestamp));
         }
 
         /// <summary>
@@ -306,7 +306,7 @@ namespace MASES.KNet.Connect
         public void CreateAndPushRecord<TKey, TValue>(string topic, int? partition, Schema keySchema, TKey key, Schema valueSchema, TValue value, DateTime timestamp)
         {
             if (_arrayList == null) throw new InvalidOperationException($"The method cannot be invoked outside the body of {nameof(Poll)} method.");
-            _arrayList.Add(CreateRecord<TKey, TValue>(topic, partition, keySchema, key, valueSchema, value, timestamp);
+            _arrayList.Add(CreateRecord<TKey, TValue>(topic, partition, keySchema, key, valueSchema, value, timestamp));
         }
 
         /// <summary>
@@ -345,7 +345,7 @@ namespace MASES.KNet.Connect
         public void CreateAndPushRecord<TKey, TValue>(string topic, int? partition, Schema keySchema, TKey key, Schema valueSchema, TValue value, DateTime timestamp, Headers headers)
         {
             if (_arrayList == null) throw new InvalidOperationException($"The method cannot be invoked outside the body of {nameof(Poll)} method.");
-            _arrayList.Add(CreateRecord<TKey, TValue>(topic, partition, keySchema, key, valueSchema, value, timestamp, headers);
+            _arrayList.Add(CreateRecord<TKey, TValue>(topic, partition, keySchema, key, valueSchema, value, timestamp, headers));
         }
 
         /// <summary>
@@ -386,7 +386,7 @@ namespace MASES.KNet.Connect
         public void CreateAndPushRecord<TKeySource, TOffset, TKey, TValue>(Map<Java.Lang.String, TKeySource> sourcePartition, Map<Java.Lang.String, TOffset> sourceOffset, string topic, int? partition, Schema valueSchema, TValue value)
         {
             if (_arrayList == null) throw new InvalidOperationException($"The method cannot be invoked outside the body of {nameof(Poll)} method.");
-            _arrayList.Add(CreateRecord<TKeySource, TOffset, TKey, TValue>(sourcePartition, sourceOffset, topic, partition, valueSchema, value);
+            _arrayList.Add(CreateRecord<TKeySource, TOffset, TKey, TValue>(sourcePartition, sourceOffset, topic, partition, valueSchema, value));
         }
 
         /// <summary>
@@ -425,7 +425,7 @@ namespace MASES.KNet.Connect
         public void CreateAndPushRecord<TKeySource, TOffset, TKey, TValue>(Map<Java.Lang.String, TKeySource> sourcePartition, Map<Java.Lang.String, TOffset> sourceOffset, string topic, Schema valueSchema, TValue value)
         {
             if (_arrayList == null) throw new InvalidOperationException($"The method cannot be invoked outside the body of {nameof(Poll)} method.");
-            _arrayList.Add(CreateRecord<TKeySource, TOffset, TKey, TValue>(sourcePartition, sourceOffset, topic, valueSchema, value);
+            _arrayList.Add(CreateRecord<TKeySource, TOffset, TKey, TValue>(sourcePartition, sourceOffset, topic, valueSchema, value));
         }
 
         /// <summary>
@@ -468,7 +468,7 @@ namespace MASES.KNet.Connect
         public void CreateAndPushRecord<TKeySource, TOffset, TKey, TValue>(Map<Java.Lang.String, TKeySource> sourcePartition, Map<Java.Lang.String, TOffset> sourceOffset, string topic, Schema keySchema, TKey key, Schema valueSchema, TValue value)
         {
             if (_arrayList == null) throw new InvalidOperationException($"The method cannot be invoked outside the body of {nameof(Poll)} method.");
-            _arrayList.Add(CreateRecord<TKeySource, TOffset, TKey, TValue>(sourcePartition, sourceOffset, topic, keySchema, key, valueSchema, value);
+            _arrayList.Add(CreateRecord<TKeySource, TOffset, TKey, TValue>(sourcePartition, sourceOffset, topic, keySchema, key, valueSchema, value));
         }
 
         /// <summary>
@@ -552,7 +552,7 @@ namespace MASES.KNet.Connect
         public void CreateAndPushRecord<TKeySource, TOffset, TValue>(Map<Java.Lang.String, TKeySource> sourcePartition, Map<Java.Lang.String, TOffset> sourceOffset, string topic, Schema valueSchema, TValue value, DateTime timestamp)
         {
             if (_arrayList == null) throw new InvalidOperationException($"The method cannot be invoked outside the body of {nameof(Poll)} method.");
-            _arrayList.Add(CreateRecord<TKeySource, TOffset, TValue>(sourcePartition, sourceOffset, topic, valueSchema, value, timestamp);
+            _arrayList.Add(CreateRecord<TKeySource, TOffset, TValue>(sourcePartition, sourceOffset, topic, valueSchema, value, timestamp));
         }
 
         /// <summary>
@@ -593,7 +593,7 @@ namespace MASES.KNet.Connect
         public void CreateAndPushRecord<TKeySource, TOffset, TValue>(Map<Java.Lang.String, TKeySource> sourcePartition, Map<Java.Lang.String, TOffset> sourceOffset, string topic, int? partition, Schema valueSchema, TValue value, DateTime timestamp)
         {
             if (_arrayList == null) throw new InvalidOperationException($"The method cannot be invoked outside the body of {nameof(Poll)} method.");
-            _arrayList.Add(CreateRecord<TKeySource, TOffset, TValue>(sourcePartition, sourceOffset, topic, partition, valueSchema, value, timestamp);
+            _arrayList.Add(CreateRecord<TKeySource, TOffset, TValue>(sourcePartition, sourceOffset, topic, partition, valueSchema, value, timestamp));
         }
 
         /// <summary>
@@ -648,7 +648,7 @@ namespace MASES.KNet.Connect
                                                                                                                DateTime timestamp)
         {
             if (_arrayList == null) throw new InvalidOperationException($"The method cannot be invoked outside the body of {nameof(Poll)} method.");
-            _arrayList.Add(CreateRecord<TKeySource, TOffset, TKey, TValue>(sourcePartition, sourceOffset, topic, partition, keySchema, key, valueSchema, value, timestamp);
+            _arrayList.Add(CreateRecord<TKeySource, TOffset, TKey, TValue>(sourcePartition, sourceOffset, topic, partition, keySchema, key, valueSchema, value, timestamp));
         }
 
         /// <summary>
@@ -705,7 +705,7 @@ namespace MASES.KNet.Connect
                                                                                                                DateTime timestamp, Headers headers)
         {
             if (_arrayList == null) throw new InvalidOperationException($"The method cannot be invoked outside the body of {nameof(Poll)} method.");
-            _arrayList.Add(CreateRecord<TKeySource, TOffset, TKey, TValue>(sourcePartition, sourceOffset, topic, partition, keySchema, key, valueSchema, value, timestamp, headers);
+            _arrayList.Add(CreateRecord<TKeySource, TOffset, TKey, TValue>(sourcePartition, sourceOffset, topic, partition, keySchema, key, valueSchema, value, timestamp, headers));
         }
     }
 }
