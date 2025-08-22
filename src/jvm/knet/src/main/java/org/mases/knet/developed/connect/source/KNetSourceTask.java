@@ -29,6 +29,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Map;
@@ -112,9 +113,9 @@ public class KNetSourceTask extends SourceTask implements KNetConnectLogging {
         log.debug("Invoking poll");
         try {
             try {
-                dataToExchange = null;
+                dataToExchange = new ArrayList<SourceRecord>();
                 sourceTask.Invoke("PollInternal");
-                if (dataToExchange != null) return (List<SourceRecord>) dataToExchange;
+                return (List<SourceRecord>) dataToExchange;
             } finally {
                 dataToExchange = null;
             }

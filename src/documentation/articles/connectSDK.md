@@ -35,7 +35,12 @@ The mandatory method to be implemented is:
 ```c#
 public abstract System.Collections.Generic.IList<SourceRecord> Poll();
 ```
-which returns a set of `SourceRecord` can be created directly or by using the `CreateRecord` methods available.
+which returns a set of `SourceRecord`, each `SourceRecord` can be created directly or by using the `CreateRecord` helper methods available.
+
+> [!TIP]
+> Starting from KNet 3.0.3, beside the standard invocation where the `SourceRecord`s will be returned once at the end of the `Poll` invocation and then pushed to the JVM,
+by using the `CreateAndPushRecord` helper methods available each `SourceRecord` is created and directly pushed to the JVM: 
+this new way can be used to take advantage of the idle time if the `KNetSourceTask<TTask>` is waiting to receive data, e.g. socket, disk access, etc.
 
 ### Sink connector
 
