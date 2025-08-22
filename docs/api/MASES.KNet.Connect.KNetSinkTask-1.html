@@ -89,7 +89,7 @@
 
 
   <h1 id="MASES_KNet_Connect_KNetSinkTask_1" data-uid="MASES.KNet.Connect.KNetSinkTask`1" class="text-break">
-Class KNetSinkTask&lt;TTask&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Connect/KNetSinkTask.cs/#L30"><i class="bi bi-code-slash"></i></a>
+Class KNetSinkTask&lt;TTask&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Connect/KNetSinkTask.cs/#L32"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -136,7 +136,7 @@ Class KNetSinkTask&lt;TTask&gt;  <a class="header-action link-secondary" title="
   <dl class="typelist derived">
     <dt>Derived</dt>
     <dd>
-      <div><a class="xref" href="MASES.KNetTemplate.KNetConnect.KNetConnectSinkTask.html">KNetConnectSinkTask</a></div>
+      <div><a class="xref" href="MASES.KNet.Template.KNetConnect.KNetConnectSinkTask.html">KNetConnectSinkTask</a></div>
     </dd>
   </dl>
 
@@ -269,7 +269,7 @@ Class KNetSinkTask&lt;TTask&gt;  <a class="header-action link-secondary" title="
 
   <h3 id="MASES_KNet_Connect_KNetSinkTask_1_Context" data-uid="MASES.KNet.Connect.KNetSinkTask`1.Context">
   Context
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Connect/KNetSinkTask.cs/#L36"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Connect/KNetSinkTask.cs/#L50"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>The <a class="xref" href="Org.Apache.Kafka.Connect.Sink.SinkTaskContext.html">SinkTaskContext</a></p>
@@ -301,7 +301,7 @@ Class KNetSinkTask&lt;TTask&gt;  <a class="header-action link-secondary" title="
 
   <h3 id="MASES_KNet_Connect_KNetSinkTask_1_ReflectedTaskClassName" data-uid="MASES.KNet.Connect.KNetSinkTask`1.ReflectedTaskClassName">
   ReflectedTaskClassName
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Connect/KNetSinkTask.cs/#L40"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Connect/KNetSinkTask.cs/#L54"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Set the <a class="xref" href="MASES.KNet.Connect.KNetSinkTask-1.html#MASES_KNet_Connect_KNetSinkTask_1_ReflectedTaskClassName">ReflectedTaskClassName</a> of the connector to a fixed value</p>
@@ -329,6 +329,102 @@ Class KNetSinkTask&lt;TTask&gt;  <a class="header-action link-secondary" title="
 
 
 
+  <a id="MASES_KNet_Connect_KNetSinkTask_1_ThreadPriority_" data-uid="MASES.KNet.Connect.KNetSinkTask`1.ThreadPriority*"></a>
+
+  <h3 id="MASES_KNet_Connect_KNetSinkTask_1_ThreadPriority" data-uid="MASES.KNet.Connect.KNetSinkTask`1.ThreadPriority">
+  ThreadPriority
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Connect/KNetSinkTask.cs/#L46"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.threadpriority">ThreadPriority</a> to be used when <a class="xref" href="MASES.KNet.Connect.KNetSinkTask-1.html#MASES_KNet_Connect_KNetSinkTask_1_UseThread">UseThread</a> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual ThreadPriority ThreadPriority { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.threadpriority">ThreadPriority</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Connect_KNetSinkTask_1_UsePrefetch_" data-uid="MASES.KNet.Connect.KNetSinkTask`1.UsePrefetch*"></a>
+
+  <h3 id="MASES_KNet_Connect_KNetSinkTask_1_UsePrefetch" data-uid="MASES.KNet.Connect.KNetSinkTask`1.UsePrefetch">
+  UsePrefetch
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Connect/KNetSinkTask.cs/#L38"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <a class="xref" href="MASES.KNet.Connect.KNetSinkTask-1.html#MASES_KNet_Connect_KNetSinkTask_1_Put_System_Collections_Generic_IEnumerable_Org_Apache_Kafka_Connect_Sink_SinkRecord__">Put(IEnumerable&lt;SinkRecord&gt;)</a> uses the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">WithPrefetch&lt;TEnumerable&gt;(TEnumerable, bool)</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool UsePrefetch { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Connect_KNetSinkTask_1_UseThread_" data-uid="MASES.KNet.Connect.KNetSinkTask`1.UseThread*"></a>
+
+  <h3 id="MASES_KNet_Connect_KNetSinkTask_1_UseThread" data-uid="MASES.KNet.Connect.KNetSinkTask`1.UseThread">
+  UseThread
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Connect/KNetSinkTask.cs/#L42"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <a class="xref" href="MASES.KNet.Connect.KNetSinkTask-1.html#MASES_KNet_Connect_KNetSinkTask_1_Put_System_Collections_Generic_IEnumerable_Org_Apache_Kafka_Connect_Sink_SinkRecord__">Put(IEnumerable&lt;SinkRecord&gt;)</a> uses the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">WithThread&lt;TEnumerable&gt;(TEnumerable, bool, ThreadPriority)</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool UseThread { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <h2 class="section" id="methods">Methods
 </h2>
 
@@ -337,7 +433,7 @@ Class KNetSinkTask&lt;TTask&gt;  <a class="header-action link-secondary" title="
 
   <h3 id="MASES_KNet_Connect_KNetSinkTask_1_Put_System_Collections_Generic_IEnumerable_Org_Apache_Kafka_Connect_Sink_SinkRecord__" data-uid="MASES.KNet.Connect.KNetSinkTask`1.Put(System.Collections.Generic.IEnumerable{Org.Apache.Kafka.Connect.Sink.SinkRecord})">
   Put(IEnumerable&lt;SinkRecord&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Connect/KNetSinkTask.cs/#L55"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Connect/KNetSinkTask.cs/#L79"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Implement the method to execute the Put action</p>
@@ -370,7 +466,7 @@ Class KNetSinkTask&lt;TTask&gt;  <a class="header-action link-secondary" title="
 
   <h3 id="MASES_KNet_Connect_KNetSinkTask_1_PutInternal" data-uid="MASES.KNet.Connect.KNetSinkTask`1.PutInternal">
   PutInternal()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Connect/KNetSinkTask.cs/#L44"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Connect/KNetSinkTask.cs/#L58"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Public method used from Java to trigger <a class="xref" href="MASES.KNet.Connect.KNetSinkTask-1.html#MASES_KNet_Connect_KNetSinkTask_1_Put_System_Collections_Generic_IEnumerable_Org_Apache_Kafka_Connect_Sink_SinkRecord__">Put(IEnumerable&lt;SinkRecord&gt;)</a></p>
@@ -397,7 +493,7 @@ Class KNetSinkTask&lt;TTask&gt;  <a class="header-action link-secondary" title="
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Connect/KNetSinkTask.cs/#L30" class="edit-link">Edit this page</a>
+          <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Connect/KNetSinkTask.cs/#L32" class="edit-link">Edit this page</a>
         </div>
 
 

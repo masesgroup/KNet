@@ -4240,6 +4240,76 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Template.KNetConnect.KNetConnectSink.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Template.KNetConnect.KNetConnectSink.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MASES.KNet.Template.KNetConnect.KNetConnectSink",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Template.KNetConnect.KNetConnectSinkTask.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Template.KNetConnect.KNetConnectSinkTask.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MASES.KNet.Template.KNetConnect.KNetConnectSinkTask",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Template.KNetConnect.KNetConnectSource.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Template.KNetConnect.KNetConnectSource.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MASES.KNet.Template.KNetConnect.KNetConnectSource",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Template.KNetConnect.KNetConnectSourceTask.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Template.KNetConnect.KNetConnectSourceTask.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MASES.KNet.Template.KNetConnect.KNetConnectSourceTask",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Template.KNetConnect.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Template.KNetConnect.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MASES.KNet.Template.KNetConnect",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/MASES.KNet.yml",
       "output": {
         ".html": {
@@ -4250,76 +4320,6 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "MASES.KNet",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/MASES.KNetTemplate.KNetConnect.KNetConnectSink.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MASES.KNetTemplate.KNetConnect.KNetConnectSink.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "MASES.KNetTemplate.KNetConnect.KNetConnectSink",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/MASES.KNetTemplate.KNetConnect.KNetConnectSinkTask.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MASES.KNetTemplate.KNetConnect.KNetConnectSinkTask.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "MASES.KNetTemplate.KNetConnect.KNetConnectSinkTask",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/MASES.KNetTemplate.KNetConnect.KNetConnectSource.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MASES.KNetTemplate.KNetConnect.KNetConnectSource.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "MASES.KNetTemplate.KNetConnect.KNetConnectSource",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/MASES.KNetTemplate.KNetConnect.KNetConnectSourceTask.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MASES.KNetTemplate.KNetConnect.KNetConnectSourceTask.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "MASES.KNetTemplate.KNetConnect.KNetConnectSourceTask",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/MASES.KNetTemplate.KNetConnect.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MASES.KNetTemplate.KNetConnect.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "MASES.KNetTemplate.KNetConnect",
       "Summary": null
     },
     {
