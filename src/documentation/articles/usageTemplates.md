@@ -34,7 +34,7 @@ dotnet new knetConsumerApp
 
 the previous command will create a .NET project for an executable. The user can modify the code or just execute it against an Apache Kafka™ server.
 
-## SDK templates
+## Connect SDK templates
 
 The last two templates (knetConnectSink, knetConnectSource) are not ready made project: they are skeletons for Apache Kafka™ Connect Source/Sink Connector written in .NET.
 The available code does not do anything: the functions in the code shall be filled to obtain some results.
