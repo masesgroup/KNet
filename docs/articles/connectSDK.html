@@ -5,7 +5,7 @@
       <title>Connect SDK of .NET suite for Apache Kafka™ | MASES Group - KNet </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Connect SDK of .NET suite for Apache Kafka™ | MASES Group - KNet ">
-      <meta name="description" content="Describes how to use a connector build over KNet Connect SDK of .NET suite for Apache Kafka™">
+      <meta name="description" content="Describes how to use a connector based on KNet Connect SDK of .NET suite for Apache Kafka™">
       
       <link rel="icon" href="../images/favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
@@ -87,13 +87,53 @@
         <article data-uid="">
 <h1 id="knet-connect-sdk">KNet: Connect SDK</h1>
 
-<p>This is only a quick start guide, many other information related to Apache Kafka™ Connect can be found at the following link <a href="https://kafka.apache.org/documentation/#connect">https://kafka.apache.org/documentation/#connect</a></p>
+<p>This is only a quick start guide for KNet Connect SDK, other information related to Apache Kafka™ Connect can be found at the following link <a href="https://kafka.apache.org/documentation/#connect">https://kafka.apache.org/documentation/#connect</a></p>
+<div class="IMPORTANT">
+<h5>Important</h5>
+<p>Starting from KNet 3.0.3, the infrastructure of the KNet Connect SDK supports both the .NET hosted runtime and the JVM hosted runtime: supporting the JVM hosted runtime guarantee that the connectors written in .NET languages can be deployed using the <a href="https://kafka.apache.org/documentation/#connect">official documentation</a></p>
+</div>
+<h2 id="code-structure">Code structure</h2>
+<p>The code for a connector based on KNet Connect SDK follows the same rules for both .NET and the JVM hosted runtimes.</p>
+<h3 id="source-connector">Source connector</h3>
+<p>A source connector shall be defined extending the following class:</p>
+<pre><code class="lang-c#">public abstract class KNetSourceConnector&lt;TSourceConnector, TTask&gt; : KNetConnector&lt;TSourceConnector&gt;
+    where TSourceConnector : KNetSourceConnector&lt;TSourceConnector, TTask&gt;
+    where TTask : KNetSourceTask&lt;TTask&gt;
+</code></pre>
+<p>where the <code>TTask</code> type shall extend the following class:</p>
+<pre><code class="lang-c#">public abstract class KNetSourceTask&lt;TTask&gt; : KNetTask&lt;TTask&gt;
+    where TTask : KNetSourceTask&lt;TTask&gt;
+</code></pre>
+<p>The mandatory method to be implemented is:</p>
+<pre><code class="lang-c#">public abstract System.Collections.Generic.IList&lt;SourceRecord&gt; Poll();
+</code></pre>
+<p>which returns a set of <code>SourceRecord</code>, each <code>SourceRecord</code> can be created directly or by using the <code>CreateRecord</code> helper methods available.</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>Starting from KNet 3.0.3, beside the standard invocation where the <code>SourceRecord</code>s will be returned once at the end of the <code>Poll</code> invocation and then pushed to the JVM,
+by using the <code>CreateAndPushRecord</code> helper methods available each <code>SourceRecord</code> is created and directly pushed to the JVM:
+this new way can be used to take advantage of the idle time if the <code>KNetSourceTask&lt;TTask&gt;</code> is waiting to receive data, e.g. socket, disk access, etc.</p>
+</div>
+<h3 id="sink-connector">Sink connector</h3>
+<p>A sink connector shall be defined extending the following class:</p>
+<pre><code class="lang-c#">public abstract class KNetSinkConnector&lt;TSinkConnector, TTask&gt; : KNetConnector&lt;TSinkConnector&gt;
+    where TSinkConnector : KNetSinkConnector&lt;TSinkConnector, TTask&gt;
+    where TTask : KNetSinkTask&lt;TTask&gt;
+</code></pre>
+<p>where the <code>TTask</code> type shall extend the following class:</p>
+<pre><code class="lang-c#">public abstract class KNetSinkTask&lt;TTask&gt; : KNetTask&lt;TTask&gt;
+    where TTask : KNetSinkTask&lt;TTask&gt;
+</code></pre>
+<p>The mandatory method to be implemented is:</p>
+<pre><code class="lang-c#">public abstract void Put(IEnumerable&lt;SinkRecord&gt; collection);
+</code></pre>
+<p>which gives a set of <code>SinkRecord</code> to be used.</p>
 <h2 id="general">General</h2>
-<p>To start a Connect session the user shall use the <a href="usageConnect.html">KNet Connect</a>.</p>
+<p>To start a Connect session the user shall use the <a href="usageConnect.html">KNet Connect</a> or the information available at <a href="https://kafka.apache.org/documentation/#connect">https://kafka.apache.org/documentation/#connect</a> and <a href="https://kafka.apache.org/quickstart#quickstart_kafkaconnect">https://kafka.apache.org/quickstart#quickstart_kafkaconnect</a>.</p>
 <p>The commands related to Apache Kafka™ Connect are:</p>
 <ul>
-<li>ConnectDistributed</li>
-<li>ConnectStandalone</li>
+<li>ConnectDistributed: starts a distributed session</li>
+<li>ConnectStandalone: starts a standalone session</li>
 </ul>
 <p>To go in detail look at <a href="https://kafka.apache.org/documentation/#connect">https://kafka.apache.org/documentation/#connect</a> and <a href="https://kafka.apache.org/quickstart#quickstart_kafkaconnect">https://kafka.apache.org/quickstart#quickstart_kafkaconnect</a>.</p>
 <h2 id="standalone">Standalone</h2>
@@ -103,38 +143,79 @@ Put the assembly within a folder (<strong>C:\MyConnect</strong>), then go within
 As explained in <a href="https://kafka.apache.org/documentation/#connect">https://kafka.apache.org/documentation/#connect</a> Apache Kafka™ Connect needs at least one configuration file, in standalone mode it needs two configuration files:</p>
 <ol>
 <li>The first file is <strong>connect-standalone.properties</strong> (or <strong>connect-distributed.properties</strong> for distributed environments): this file contains configuration information for Apache Kafka™ Connect;</li>
-<li>The second optional file defines the connector to use and its options.</li>
+<li>The second file (optional for distributed version) defines the connector to use and its options.</li>
 </ol>
 <p>In the <a href="https://github.com/masesgroup/KNet/tree/master/src/config">config folder</a> the user can found many configuration files.
 The files named <strong>connect-knet-sink.properties</strong> and <strong>connect-knet-source.properties</strong> contain examples for sink and source connectors.</p>
-<p>Copy within <strong>C:\MyConnect</strong> <strong>connect-standalone.properties</strong> and update it especially on line containing <strong>bootstrap.servers</strong>, then copy <strong>connect-knet-sink.properties</strong> or <strong>connect-knet-source.properties</strong> depending on the connector type.
-The main options related to KNet Connect SDK are:</p>
+<p>Copy within <strong>C:\MyConnect</strong> <strong>connect-standalone.properties</strong> and update it especially within the line containing <strong>bootstrap.servers</strong>; then copy <strong>connect-knet-sink.properties</strong> or <strong>connect-knet-source.properties</strong> depending on the connector type and update using the information available in <a href="#configuration-properties">Configuration properties</a>.</p>
+<h3 id="execution">Execution</h3>
+<p>When the <strong>C:\MyConnect</strong> folder contains all the files it is possible to run Apache Kafka™ Connect:</p>
 <ul>
-<li><strong>connector.class=<strong>KNetSinkConnector</strong></strong> where the value is the connector Java™ class and must be:
+<li>.NET hosted runtime:</li>
+</ul>
+<pre><code class="lang-shell">knetconnect -s connect-standalone.properties connect-knet-sink.properties
+</code></pre>
+<ul>
+<li>JVM hosted runtime:</li>
+</ul>
+<pre><code class="lang-shell">connect-standalone.sh connect-standalone.properties connect-knet-sink.properties
+</code></pre>
+<h2 id="distributed">Distributed</h2>
+<p>As stated in <a href="https://kafka.apache.org/documentation/#connect">Apache Kafka™ Connect Guide</a> the distributed version does not use the connector file definition, instead it shall be managed using the REST interface.
+The start-up command within <strong>C:\MyConnect</strong> folder becomes:</p>
+<ul>
+<li>.NET hosted runtime</li>
+</ul>
+<pre><code class="lang-shell">knetconnect -d connect-distributed.properties
+</code></pre>
+<ul>
+<li>JVM hosted runtime</li>
+</ul>
+<pre><code class="lang-shell">connect-distributed.sh connect-distributed.properties
+</code></pre>
+<h2 id="configuration-properties">Configuration properties</h2>
+<p>Each connector needs some configuration properties.
+Some common configuration properties, inherited from Apache Kafka™ Connect, are:</p>
+<ul>
+<li><strong>name=<strong>name of connector</strong></strong> where the <strong>name of connector</strong> is the connector name</li>
+<li><strong>connector.class=<strong>value</strong></strong> where the <strong>value</strong> is the connector Java™ class and must be:
 <ul>
 <li><strong>KNetSinkConnector</strong> for sink connectors</li>
 <li><strong>KNetSourceConnector</strong> for source connectors</li>
 </ul>
 </li>
-<li><strong>knet.dotnet.classname=MASES.KNetTemplate.KNetConnect.KNetConnectSink, knetConnectSink</strong> where the value is the .NET class name in the form of <strong><strong>FullName</strong>, <strong>AssemblyName</strong></strong></li>
+<li><strong>tasks.max=<strong>value</strong></strong> where the <strong>value</strong> represents the maximum number of tasks the connector can allocate</li>
 </ul>
-<p>When the <strong>C:\MyConnect</strong> folder contains all the files it is possible to run Apache Kafka™ Connect:</p>
-<blockquote>
-<p>knetconnect -s connect-standalone.properties connect-knet-sink.properties</p>
-</blockquote>
-<h3 id="exactly-once-and-transaction-properties-for-source-connector">Exactly Once and Transaction properties for Source Connector</h3>
+<p>The mandatory configuration property needed by KNet Connect SDK is:</p>
+<ul>
+<li><strong>knet.dotnet.classname=<strong>value</strong></strong> where the <strong>value</strong> is the .NET class name in the form of <strong><strong>FullName</strong>, <strong>AssemblyName</strong></strong>, e.g. MASES.KNet.Template.KNetConnect.KNetConnectSink, knetConnectSink</li>
+</ul>
+<p>When the connector is based on a JVM hosted runtime other optional properties are available:</p>
+<ul>
+<li><strong>knet.jcobridge.license.path=<strong>value</strong></strong> where the <strong>value</strong> represents the license to be used by JCOBridge</li>
+<li><strong>knet.jcobridge.scope.on=<strong>value</strong></strong> where the <strong>value</strong> represents the <strong>scope on</strong> to be used by JCOBridge</li>
+<li><strong>knet.jcobridge.scope.on.version=<strong>value</strong></strong> where the <strong>value</strong> represents the <strong>scope on version</strong> used by JCOBridge</li>
+<li><strong>knet.jcobridge.clr.version=<strong>value</strong></strong> where the <strong>value</strong> represents the .NET version to be used by JCOBridge, default is .NET 8</li>
+<li><strong>knet.jcobridge.clr.rid=<strong>value</strong></strong> where the <strong>value</strong> represents the RID to be used by JCOBridge</li>
+<li><strong>knet.dotnet.assembly.location=<strong>value</strong></strong> where the <strong>value</strong> represents the location where to find the connector assembly</li>
+</ul>
+<h3 id="source-connector-1">Source connector</h3>
+<p>A source connector needs other configuration properties inherited from Apache Kafka™ Connect like:</p>
+<ul>
+<li><strong>topic=<strong>value</strong></strong> where the <strong>value</strong> represents the name of topic where the records will be sent</li>
+</ul>
+<h4 id="exactly-once-and-transaction-properties-for-source-connector">Exactly Once and Transaction properties for Source Connector</h4>
 <p>From version 3.3.1 of Apache Kafka™ Connect it is possible to manage Exactly Once and Transaction in the source connector.</p>
 <p>Two new fallback options are available in case the infrastructure is not ready to receive request in .NET side to obtain values related to Exactly Once and Transaction:</p>
 <ul>
-<li><code>knet.dotnet.source.exactlyOnceSupport</code>: set to true if .NET Source Connector supports Exactly Once</li>
-<li><code>knet.dotnet.source.canDefineTransactionBoundaries</code>: set to true if .NET Source Connector can define Transaction Boundaries</li>
+<li><strong>knet.dotnet.source.exactlyOnceSupport=<strong>value</strong></strong>: set <strong>value</strong> to true if .NET Source Connector supports Exactly Once</li>
+<li><strong>knet.dotnet.source.canDefineTransactionBoundaries=<strong>value</strong></strong>: set <strong>value</strong> to true if .NET Source Connector can define Transaction Boundaries</li>
 </ul>
-<h2 id="distributed">Distributed</h2>
-<p>As stated in <a href="https://kafka.apache.org/documentation/#connect">Apache Kafka™ Connect Guide</a> the distributed version does not use the connector file definition, instead it shall be managed using the REST interface.
-The start-up command within <strong>C:\MyConnect</strong> folder becomes:</p>
-<blockquote>
-<p>knetconnect -d connect-distributed.properties</p>
-</blockquote>
+<h3 id="sink-connector-1">Sink connector</h3>
+<p>A source connector needs other configuration properties inherited from Apache Kafka™ Connect like:</p>
+<ul>
+<li><strong>topics=<strong>value</strong></strong> where the <strong>value</strong> represents the CSV list of the topics will be the source of the records</li>
+</ul>
 
 </article>
 

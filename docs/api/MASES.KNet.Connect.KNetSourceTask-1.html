@@ -136,7 +136,7 @@ Class KNetSourceTask&lt;TTask&gt;  <a class="header-action link-secondary" title
   <dl class="typelist derived">
     <dt>Derived</dt>
     <dd>
-      <div><a class="xref" href="MASES.KNetTemplate.KNetConnect.KNetConnectSourceTask.html">KNetConnectSourceTask</a></div>
+      <div><a class="xref" href="MASES.KNet.Template.KNetConnect.KNetConnectSourceTask.html">KNetConnectSourceTask</a></div>
     </dd>
   </dl>
 
@@ -333,11 +333,1027 @@ Class KNetSourceTask&lt;TTask&gt;  <a class="header-action link-secondary" title
 </h2>
 
 
+  <a id="MASES_KNet_Connect_KNetSourceTask_1_CreateAndPushRecord_" data-uid="MASES.KNet.Connect.KNetSourceTask`1.CreateAndPushRecord*"></a>
+
+  <h3 id="MASES_KNet_Connect_KNetSourceTask_1_CreateAndPushRecord__1_System_String_Org_Apache_Kafka_Connect_Data_Schema___0_System_DateTime_" data-uid="MASES.KNet.Connect.KNetSourceTask`1.CreateAndPushRecord``1(System.String,Org.Apache.Kafka.Connect.Data.Schema,``0,System.DateTime)">
+  CreateAndPushRecord&lt;TValue&gt;(string, Schema, TValue, DateTime)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L238"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord-2.html">SourceRecord&lt;TKey, TValue&gt;</a> and push it to JVM</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CreateAndPushRecord&lt;TValue&gt;(string topic, Schema valueSchema, TValue value, DateTime timestamp)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>topic</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The name of the topic; may be null</p>
+</dd>
+    <dt><code>valueSchema</code> <a class="xref" href="Org.Apache.Kafka.Connect.Data.Schema.html">Schema</a></dt>
+    <dd><p>The schema for the value; may be null</p>
+</dd>
+    <dt><code>value</code> <span class="xref">TValue</span></dt>
+    <dd><p>The value; may be null</p>
+</dd>
+    <dt><code>timestamp</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a></dt>
+    <dd><p>The timestamp; may be null</p>
+</dd>
+  </dl>
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TValue</code></dt>
+    <dd><p>The type of value to be inserted in Kafka</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+  <h4 class="section" id="MASES_KNet_Connect_KNetSourceTask_1_CreateAndPushRecord__1_System_String_Org_Apache_Kafka_Connect_Data_Schema___0_System_DateTime__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>These values can have arbitrary structure and should be represented using Org.Apache.Kafka.Connect.Data.* objects (or primitive values).</p>
+</div>
+
+
+
+
+  <a id="MASES_KNet_Connect_KNetSourceTask_1_CreateAndPushRecord_" data-uid="MASES.KNet.Connect.KNetSourceTask`1.CreateAndPushRecord*"></a>
+
+  <h3 id="MASES_KNet_Connect_KNetSourceTask_1_CreateAndPushRecord__1_System_String_System_Nullable_System_Int32__Org_Apache_Kafka_Connect_Data_Schema___0_System_DateTime_" data-uid="MASES.KNet.Connect.KNetSourceTask`1.CreateAndPushRecord``1(System.String,System.Nullable{System.Int32},Org.Apache.Kafka.Connect.Data.Schema,``0,System.DateTime)">
+  CreateAndPushRecord&lt;TValue&gt;(string, int?, Schema, TValue, DateTime)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L269"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord-2.html">SourceRecord&lt;TKey, TValue&gt;</a> and push it to JVM</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CreateAndPushRecord&lt;TValue&gt;(string topic, int? partition, Schema valueSchema, TValue value, DateTime timestamp)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>topic</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The name of the topic; may be null</p>
+</dd>
+    <dt><code>partition</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</dt>
+    <dd><p>The partition number for the Kafka topic; may be null</p>
+</dd>
+    <dt><code>valueSchema</code> <a class="xref" href="Org.Apache.Kafka.Connect.Data.Schema.html">Schema</a></dt>
+    <dd><p>The schema for the value; may be null</p>
+</dd>
+    <dt><code>value</code> <span class="xref">TValue</span></dt>
+    <dd><p>The value; may be null</p>
+</dd>
+    <dt><code>timestamp</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a></dt>
+    <dd><p>The timestamp; may be null</p>
+</dd>
+  </dl>
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TValue</code></dt>
+    <dd><p>The type of value to be inserted in Kafka</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+  <h4 class="section" id="MASES_KNet_Connect_KNetSourceTask_1_CreateAndPushRecord__1_System_String_System_Nullable_System_Int32__Org_Apache_Kafka_Connect_Data_Schema___0_System_DateTime__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>These values can have arbitrary structure and should be represented using Org.Apache.Kafka.Connect.Data.* objects (or primitive values).</p>
+</div>
+
+
+
+
+  <a id="MASES_KNet_Connect_KNetSourceTask_1_CreateAndPushRecord_" data-uid="MASES.KNet.Connect.KNetSourceTask`1.CreateAndPushRecord*"></a>
+
+  <h3 id="MASES_KNet_Connect_KNetSourceTask_1_CreateAndPushRecord__2_System_String_Org_Apache_Kafka_Connect_Data_Schema___0_Org_Apache_Kafka_Connect_Data_Schema___1_" data-uid="MASES.KNet.Connect.KNetSourceTask`1.CreateAndPushRecord``2(System.String,Org.Apache.Kafka.Connect.Data.Schema,``0,Org.Apache.Kafka.Connect.Data.Schema,``1)">
+  CreateAndPushRecord&lt;TKey, TValue&gt;(string, Schema, TKey, Schema, TValue)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L174"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord-2.html">SourceRecord&lt;TKey, TValue&gt;</a> and push it to JVM</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CreateAndPushRecord&lt;TKey, TValue&gt;(string topic, Schema keySchema, TKey key, Schema valueSchema, TValue value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>topic</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The name of the topic; may be null</p>
+</dd>
+    <dt><code>keySchema</code> <a class="xref" href="Org.Apache.Kafka.Connect.Data.Schema.html">Schema</a></dt>
+    <dd><p>The schema for the key; may be null</p>
+</dd>
+    <dt><code>key</code> <span class="xref">TKey</span></dt>
+    <dd><p>The key; may be null</p>
+</dd>
+    <dt><code>valueSchema</code> <a class="xref" href="Org.Apache.Kafka.Connect.Data.Schema.html">Schema</a></dt>
+    <dd><p>The schema for the value; may be null</p>
+</dd>
+    <dt><code>value</code> <span class="xref">TValue</span></dt>
+    <dd><p>The value; may be null</p>
+</dd>
+  </dl>
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TKey</code></dt>
+    <dd><p>The type of the key to be inserted in Kafka</p>
+</dd>
+    <dt><code>TValue</code></dt>
+    <dd><p>The type of value to be inserted in Kafka</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+  <h4 class="section" id="MASES_KNet_Connect_KNetSourceTask_1_CreateAndPushRecord__2_System_String_Org_Apache_Kafka_Connect_Data_Schema___0_Org_Apache_Kafka_Connect_Data_Schema___1__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>These values can have arbitrary structure and should be represented using Org.Apache.Kafka.Connect.Data.* objects (or primitive values).</p>
+</div>
+
+
+
+
+  <a id="MASES_KNet_Connect_KNetSourceTask_1_CreateAndPushRecord_" data-uid="MASES.KNet.Connect.KNetSourceTask`1.CreateAndPushRecord*"></a>
+
+  <h3 id="MASES_KNet_Connect_KNetSourceTask_1_CreateAndPushRecord__2_System_String_Org_Apache_Kafka_Connect_Data_Schema___1_" data-uid="MASES.KNet.Connect.KNetSourceTask`1.CreateAndPushRecord``2(System.String,Org.Apache.Kafka.Connect.Data.Schema,``1)">
+  CreateAndPushRecord&lt;TKey, TValue&gt;(string, Schema, TValue)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L141"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord-2.html">SourceRecord&lt;TKey, TValue&gt;</a> and push it to JVM</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CreateAndPushRecord&lt;TKey, TValue&gt;(string topic, Schema valueSchema, TValue value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>topic</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The name of the topic; may be null</p>
+</dd>
+    <dt><code>valueSchema</code> <a class="xref" href="Org.Apache.Kafka.Connect.Data.Schema.html">Schema</a></dt>
+    <dd><p>The schema for the value; may be null</p>
+</dd>
+    <dt><code>value</code> <span class="xref">TValue</span></dt>
+    <dd><p>The value; may be null</p>
+</dd>
+  </dl>
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TKey</code></dt>
+    <dd><p>The type of the key to be inserted in Kafka</p>
+</dd>
+    <dt><code>TValue</code></dt>
+    <dd><p>The type of value to be inserted in Kafka</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+  <h4 class="section" id="MASES_KNet_Connect_KNetSourceTask_1_CreateAndPushRecord__2_System_String_Org_Apache_Kafka_Connect_Data_Schema___1__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>These values can have arbitrary structure and should be represented using Org.Apache.Kafka.Connect.Data.* objects (or primitive values).</p>
+</div>
+
+
+
+
+  <a id="MASES_KNet_Connect_KNetSourceTask_1_CreateAndPushRecord_" data-uid="MASES.KNet.Connect.KNetSourceTask`1.CreateAndPushRecord*"></a>
+
+  <h3 id="MASES_KNet_Connect_KNetSourceTask_1_CreateAndPushRecord__2_System_String_System_Nullable_System_Int32__Org_Apache_Kafka_Connect_Data_Schema___0_Org_Apache_Kafka_Connect_Data_Schema___1_" data-uid="MASES.KNet.Connect.KNetSourceTask`1.CreateAndPushRecord``2(System.String,System.Nullable{System.Int32},Org.Apache.Kafka.Connect.Data.Schema,``0,Org.Apache.Kafka.Connect.Data.Schema,``1)">
+  CreateAndPushRecord&lt;TKey, TValue&gt;(string, int?, Schema, TKey, Schema, TValue)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L209"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord-2.html">SourceRecord&lt;TKey, TValue&gt;</a> and push it to JVM</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CreateAndPushRecord&lt;TKey, TValue&gt;(string topic, int? partition, Schema keySchema, TKey key, Schema valueSchema, TValue value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>topic</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The name of the topic; may be null</p>
+</dd>
+    <dt><code>partition</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</dt>
+    <dd><p>The partition number for the Kafka topic; may be null</p>
+</dd>
+    <dt><code>keySchema</code> <a class="xref" href="Org.Apache.Kafka.Connect.Data.Schema.html">Schema</a></dt>
+    <dd><p>The schema for the key; may be null</p>
+</dd>
+    <dt><code>key</code> <span class="xref">TKey</span></dt>
+    <dd><p>The key; may be null</p>
+</dd>
+    <dt><code>valueSchema</code> <a class="xref" href="Org.Apache.Kafka.Connect.Data.Schema.html">Schema</a></dt>
+    <dd><p>The schema for the value; may be null</p>
+</dd>
+    <dt><code>value</code> <span class="xref">TValue</span></dt>
+    <dd><p>The value; may be null</p>
+</dd>
+  </dl>
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TKey</code></dt>
+    <dd><p>The type of the key to be inserted in Kafka</p>
+</dd>
+    <dt><code>TValue</code></dt>
+    <dd><p>The type of value to be inserted in Kafka</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+  <h4 class="section" id="MASES_KNet_Connect_KNetSourceTask_1_CreateAndPushRecord__2_System_String_System_Nullable_System_Int32__Org_Apache_Kafka_Connect_Data_Schema___0_Org_Apache_Kafka_Connect_Data_Schema___1__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>These values can have arbitrary structure and should be represented using Org.Apache.Kafka.Connect.Data.* objects (or primitive values).</p>
+</div>
+
+
+
+
+  <a id="MASES_KNet_Connect_KNetSourceTask_1_CreateAndPushRecord_" data-uid="MASES.KNet.Connect.KNetSourceTask`1.CreateAndPushRecord*"></a>
+
+  <h3 id="MASES_KNet_Connect_KNetSourceTask_1_CreateAndPushRecord__2_System_String_System_Nullable_System_Int32__Org_Apache_Kafka_Connect_Data_Schema___0_Org_Apache_Kafka_Connect_Data_Schema___1_System_DateTime_" data-uid="MASES.KNet.Connect.KNetSourceTask`1.CreateAndPushRecord``2(System.String,System.Nullable{System.Int32},Org.Apache.Kafka.Connect.Data.Schema,``0,Org.Apache.Kafka.Connect.Data.Schema,``1,System.DateTime)">
+  CreateAndPushRecord&lt;TKey, TValue&gt;(string, int?, Schema, TKey, Schema, TValue, DateTime)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L306"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord-2.html">SourceRecord&lt;TKey, TValue&gt;</a> and push it to JVM</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CreateAndPushRecord&lt;TKey, TValue&gt;(string topic, int? partition, Schema keySchema, TKey key, Schema valueSchema, TValue value, DateTime timestamp)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>topic</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The name of the topic; may be null</p>
+</dd>
+    <dt><code>partition</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</dt>
+    <dd><p>The partition number for the Kafka topic; may be null</p>
+</dd>
+    <dt><code>keySchema</code> <a class="xref" href="Org.Apache.Kafka.Connect.Data.Schema.html">Schema</a></dt>
+    <dd><p>The schema for the key; may be null</p>
+</dd>
+    <dt><code>key</code> <span class="xref">TKey</span></dt>
+    <dd><p>The key; may be null</p>
+</dd>
+    <dt><code>valueSchema</code> <a class="xref" href="Org.Apache.Kafka.Connect.Data.Schema.html">Schema</a></dt>
+    <dd><p>The schema for the value; may be null</p>
+</dd>
+    <dt><code>value</code> <span class="xref">TValue</span></dt>
+    <dd><p>The value; may be null</p>
+</dd>
+    <dt><code>timestamp</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a></dt>
+    <dd><p>The timestamp; may be null</p>
+</dd>
+  </dl>
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TKey</code></dt>
+    <dd><p>The type of the key to be inserted in Kafka</p>
+</dd>
+    <dt><code>TValue</code></dt>
+    <dd><p>The type of value to be inserted in Kafka</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+  <h4 class="section" id="MASES_KNet_Connect_KNetSourceTask_1_CreateAndPushRecord__2_System_String_System_Nullable_System_Int32__Org_Apache_Kafka_Connect_Data_Schema___0_Org_Apache_Kafka_Connect_Data_Schema___1_System_DateTime__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>These values can have arbitrary structure and should be represented using Org.Apache.Kafka.Connect.Data.* objects (or primitive values).</p>
+</div>
+
+
+
+
+  <a id="MASES_KNet_Connect_KNetSourceTask_1_CreateAndPushRecord_" data-uid="MASES.KNet.Connect.KNetSourceTask`1.CreateAndPushRecord*"></a>
+
+  <h3 id="MASES_KNet_Connect_KNetSourceTask_1_CreateAndPushRecord__2_System_String_System_Nullable_System_Int32__Org_Apache_Kafka_Connect_Data_Schema___0_Org_Apache_Kafka_Connect_Data_Schema___1_System_DateTime_Org_Apache_Kafka_Connect_Header_Headers_" data-uid="MASES.KNet.Connect.KNetSourceTask`1.CreateAndPushRecord``2(System.String,System.Nullable{System.Int32},Org.Apache.Kafka.Connect.Data.Schema,``0,Org.Apache.Kafka.Connect.Data.Schema,``1,System.DateTime,Org.Apache.Kafka.Connect.Header.Headers)">
+  CreateAndPushRecord&lt;TKey, TValue&gt;(string, int?, Schema, TKey, Schema, TValue, DateTime, Headers)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L345"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord-2.html">SourceRecord&lt;TKey, TValue&gt;</a> and push it to JVM</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CreateAndPushRecord&lt;TKey, TValue&gt;(string topic, int? partition, Schema keySchema, TKey key, Schema valueSchema, TValue value, DateTime timestamp, Headers headers)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>topic</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The name of the topic; may be null</p>
+</dd>
+    <dt><code>partition</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</dt>
+    <dd><p>The partition number for the Kafka topic; may be null</p>
+</dd>
+    <dt><code>keySchema</code> <a class="xref" href="Org.Apache.Kafka.Connect.Data.Schema.html">Schema</a></dt>
+    <dd><p>The schema for the key; may be null</p>
+</dd>
+    <dt><code>key</code> <span class="xref">TKey</span></dt>
+    <dd><p>The key; may be null</p>
+</dd>
+    <dt><code>valueSchema</code> <a class="xref" href="Org.Apache.Kafka.Connect.Data.Schema.html">Schema</a></dt>
+    <dd><p>The schema for the value; may be null</p>
+</dd>
+    <dt><code>value</code> <span class="xref">TValue</span></dt>
+    <dd><p>The value; may be null</p>
+</dd>
+    <dt><code>timestamp</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a></dt>
+    <dd><p>The timestamp; may be null</p>
+</dd>
+    <dt><code>headers</code> <a class="xref" href="Org.Apache.Kafka.Connect.Header.Headers.html">Headers</a></dt>
+    <dd><p>The <a class="xref" href="Org.Apache.Kafka.Connect.Header.Headers.html">Headers</a>s; may be null or empty</p>
+</dd>
+  </dl>
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TKey</code></dt>
+    <dd><p>The type of the key to be inserted in Kafka</p>
+</dd>
+    <dt><code>TValue</code></dt>
+    <dd><p>The type of value to be inserted in Kafka</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+  <h4 class="section" id="MASES_KNet_Connect_KNetSourceTask_1_CreateAndPushRecord__2_System_String_System_Nullable_System_Int32__Org_Apache_Kafka_Connect_Data_Schema___0_Org_Apache_Kafka_Connect_Data_Schema___1_System_DateTime_Org_Apache_Kafka_Connect_Header_Headers__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>These values can have arbitrary structure and should be represented using Org.Apache.Kafka.Connect.Data.* objects (or primitive values).</p>
+</div>
+
+
+
+
+  <a id="MASES_KNet_Connect_KNetSourceTask_1_CreateAndPushRecord_" data-uid="MASES.KNet.Connect.KNetSourceTask`1.CreateAndPushRecord*"></a>
+
+  <h3 id="MASES_KNet_Connect_KNetSourceTask_1_CreateAndPushRecord__2_System_String_System_Nullable_System_Int32__Org_Apache_Kafka_Connect_Data_Schema___1_" data-uid="MASES.KNet.Connect.KNetSourceTask`1.CreateAndPushRecord``2(System.String,System.Nullable{System.Int32},Org.Apache.Kafka.Connect.Data.Schema,``1)">
+  CreateAndPushRecord&lt;TKey, TValue&gt;(string, int?, Schema, TValue)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L112"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord-2.html">SourceRecord&lt;TKey, TValue&gt;</a> and push it to JVM</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CreateAndPushRecord&lt;TKey, TValue&gt;(string topic, int? partition, Schema valueSchema, TValue value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>topic</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The name of the topic; may be null</p>
+</dd>
+    <dt><code>partition</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</dt>
+    <dd><p>The partition number for the Kafka topic; may be null</p>
+</dd>
+    <dt><code>valueSchema</code> <a class="xref" href="Org.Apache.Kafka.Connect.Data.Schema.html">Schema</a></dt>
+    <dd><p>The schema for the value; may be null</p>
+</dd>
+    <dt><code>value</code> <span class="xref">TValue</span></dt>
+    <dd><p>The value; may be null</p>
+</dd>
+  </dl>
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TKey</code></dt>
+    <dd><p>The type of the key to be inserted in Kafka</p>
+</dd>
+    <dt><code>TValue</code></dt>
+    <dd><p>The type of value to be inserted in Kafka</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+  <h4 class="section" id="MASES_KNet_Connect_KNetSourceTask_1_CreateAndPushRecord__2_System_String_System_Nullable_System_Int32__Org_Apache_Kafka_Connect_Data_Schema___1__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>These values can have arbitrary structure and should be represented using Org.Apache.Kafka.Connect.Data.* objects (or primitive values).</p>
+</div>
+
+
+
+
+  <a id="MASES_KNet_Connect_KNetSourceTask_1_CreateAndPushRecord_" data-uid="MASES.KNet.Connect.KNetSourceTask`1.CreateAndPushRecord*"></a>
+
+  <h3 id="MASES_KNet_Connect_KNetSourceTask_1_CreateAndPushRecord__3_Java_Util_Map_Java_Lang_String___0__Java_Util_Map_Java_Lang_String___1__System_String_Org_Apache_Kafka_Connect_Data_Schema___2_System_DateTime_" data-uid="MASES.KNet.Connect.KNetSourceTask`1.CreateAndPushRecord``3(Java.Util.Map{Java.Lang.String,``0},Java.Util.Map{Java.Lang.String,``1},System.String,Org.Apache.Kafka.Connect.Data.Schema,``2,System.DateTime)">
+  CreateAndPushRecord&lt;TKeySource, TOffset, TValue&gt;(Map&lt;String, TKeySource&gt;, Map&lt;String, TOffset&gt;, string, Schema, TValue, DateTime)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L552"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord-4.html">SourceRecord&lt;TKeySource, TOffset, TKey, TValue&gt;</a> and push it to JVM</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CreateAndPushRecord&lt;TKeySource, TOffset, TValue&gt;(Map&lt;String, TKeySource&gt; sourcePartition, Map&lt;String, TOffset&gt; sourceOffset, string topic, Schema valueSchema, TValue value, DateTime timestamp)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>sourcePartition</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a>, TKeySource&gt;</dt>
+    <dd><p>The parameter represents a single input sourcePartition that the record came from (e.g. a filename, table name, or topic-partition).</p>
+</dd>
+    <dt><code>sourceOffset</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a>, TOffset&gt;</dt>
+    <dd><p>The parameter represents a position in that <code class="paramref">sourcePartition</code> which can be used to resume consumption of data.</p>
+</dd>
+    <dt><code>topic</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The name of the topic; may be null</p>
+</dd>
+    <dt><code>valueSchema</code> <a class="xref" href="Org.Apache.Kafka.Connect.Data.Schema.html">Schema</a></dt>
+    <dd><p>The schema for the value; may be null</p>
+</dd>
+    <dt><code>value</code> <span class="xref">TValue</span></dt>
+    <dd><p>The value; may be null</p>
+</dd>
+    <dt><code>timestamp</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a></dt>
+    <dd><p>The timestamp; may be null</p>
+</dd>
+  </dl>
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TKeySource</code></dt>
+    <dd><p>The type within <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map&lt;K, V&gt;</a> of <code class="paramref">sourcePartition</code></p>
+</dd>
+    <dt><code>TOffset</code></dt>
+    <dd><p>The type within <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map&lt;K, V&gt;</a> of <code class="paramref">sourceOffset</code></p>
+</dd>
+    <dt><code>TValue</code></dt>
+    <dd><p>The type of value to be inserted in Kafka</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+  <h4 class="section" id="MASES_KNet_Connect_KNetSourceTask_1_CreateAndPushRecord__3_Java_Util_Map_Java_Lang_String___0__Java_Util_Map_Java_Lang_String___1__System_String_Org_Apache_Kafka_Connect_Data_Schema___2_System_DateTime__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>These values can have arbitrary structure and should be represented using Org.Apache.Kafka.Connect.Data.* objects (or primitive values).
+For example, a database connector might specify the <code class="paramref">sourcePartition</code> as a record containing { &quot;db&quot;: &quot;database_name&quot;, &quot;table&quot;: &quot;table_name&quot;} and the <code class="paramref">sourceOffset</code> as a <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/integral-numeric-types">long</a> containing the timestamp of the row.</p>
+</div>
+
+
+
+
+  <a id="MASES_KNet_Connect_KNetSourceTask_1_CreateAndPushRecord_" data-uid="MASES.KNet.Connect.KNetSourceTask`1.CreateAndPushRecord*"></a>
+
+  <h3 id="MASES_KNet_Connect_KNetSourceTask_1_CreateAndPushRecord__3_Java_Util_Map_Java_Lang_String___0__Java_Util_Map_Java_Lang_String___1__System_String_System_Nullable_System_Int32__Org_Apache_Kafka_Connect_Data_Schema___2_System_DateTime_" data-uid="MASES.KNet.Connect.KNetSourceTask`1.CreateAndPushRecord``3(Java.Util.Map{Java.Lang.String,``0},Java.Util.Map{Java.Lang.String,``1},System.String,System.Nullable{System.Int32},Org.Apache.Kafka.Connect.Data.Schema,``2,System.DateTime)">
+  CreateAndPushRecord&lt;TKeySource, TOffset, TValue&gt;(Map&lt;String, TKeySource&gt;, Map&lt;String, TOffset&gt;, string, int?, Schema, TValue, DateTime)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L593"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord-4.html">SourceRecord&lt;TKeySource, TOffset, TKey, TValue&gt;</a> and push it to JVM</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CreateAndPushRecord&lt;TKeySource, TOffset, TValue&gt;(Map&lt;String, TKeySource&gt; sourcePartition, Map&lt;String, TOffset&gt; sourceOffset, string topic, int? partition, Schema valueSchema, TValue value, DateTime timestamp)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>sourcePartition</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a>, TKeySource&gt;</dt>
+    <dd><p>The parameter represents a single input sourcePartition that the record came from (e.g. a filename, table name, or topic-partition).</p>
+</dd>
+    <dt><code>sourceOffset</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a>, TOffset&gt;</dt>
+    <dd><p>The parameter represents a position in that <code class="paramref">sourcePartition</code> which can be used to resume consumption of data.</p>
+</dd>
+    <dt><code>topic</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The name of the topic; may be null</p>
+</dd>
+    <dt><code>partition</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</dt>
+    <dd><p>The partition number for the Kafka topic; may be null</p>
+</dd>
+    <dt><code>valueSchema</code> <a class="xref" href="Org.Apache.Kafka.Connect.Data.Schema.html">Schema</a></dt>
+    <dd><p>The schema for the value; may be null</p>
+</dd>
+    <dt><code>value</code> <span class="xref">TValue</span></dt>
+    <dd><p>The value; may be null</p>
+</dd>
+    <dt><code>timestamp</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a></dt>
+    <dd><p>The timestamp; may be null</p>
+</dd>
+  </dl>
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TKeySource</code></dt>
+    <dd><p>The type within <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map&lt;K, V&gt;</a> of <code class="paramref">sourcePartition</code></p>
+</dd>
+    <dt><code>TOffset</code></dt>
+    <dd><p>The type within <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map&lt;K, V&gt;</a> of <code class="paramref">sourceOffset</code></p>
+</dd>
+    <dt><code>TValue</code></dt>
+    <dd><p>The type of value to be inserted in Kafka</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+  <h4 class="section" id="MASES_KNet_Connect_KNetSourceTask_1_CreateAndPushRecord__3_Java_Util_Map_Java_Lang_String___0__Java_Util_Map_Java_Lang_String___1__System_String_System_Nullable_System_Int32__Org_Apache_Kafka_Connect_Data_Schema___2_System_DateTime__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>These values can have arbitrary structure and should be represented using Org.Apache.Kafka.Connect.Data.* objects (or primitive values).
+For example, a database connector might specify the <code class="paramref">sourcePartition</code> as a record containing { &quot;db&quot;: &quot;database_name&quot;, &quot;table&quot;: &quot;table_name&quot;} and the <code class="paramref">sourceOffset</code> as a <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/integral-numeric-types">long</a> containing the timestamp of the row.</p>
+</div>
+
+
+
+
+  <a id="MASES_KNet_Connect_KNetSourceTask_1_CreateAndPushRecord_" data-uid="MASES.KNet.Connect.KNetSourceTask`1.CreateAndPushRecord*"></a>
+
+  <h3 id="MASES_KNet_Connect_KNetSourceTask_1_CreateAndPushRecord__4_Java_Util_Map_Java_Lang_String___0__Java_Util_Map_Java_Lang_String___1__System_String_Org_Apache_Kafka_Connect_Data_Schema___2_Org_Apache_Kafka_Connect_Data_Schema___3_" data-uid="MASES.KNet.Connect.KNetSourceTask`1.CreateAndPushRecord``4(Java.Util.Map{Java.Lang.String,``0},Java.Util.Map{Java.Lang.String,``1},System.String,Org.Apache.Kafka.Connect.Data.Schema,``2,Org.Apache.Kafka.Connect.Data.Schema,``3)">
+  CreateAndPushRecord&lt;TKeySource, TOffset, TKey, TValue&gt;(Map&lt;String, TKeySource&gt;, Map&lt;String, TOffset&gt;, string, Schema, TKey, Schema, TValue)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L468"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord-4.html">SourceRecord&lt;TKeySource, TOffset, TKey, TValue&gt;</a> and push it to JVM</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CreateAndPushRecord&lt;TKeySource, TOffset, TKey, TValue&gt;(Map&lt;String, TKeySource&gt; sourcePartition, Map&lt;String, TOffset&gt; sourceOffset, string topic, Schema keySchema, TKey key, Schema valueSchema, TValue value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>sourcePartition</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a>, TKeySource&gt;</dt>
+    <dd><p>The parameter represents a single input sourcePartition that the record came from (e.g. a filename, table name, or topic-partition).</p>
+</dd>
+    <dt><code>sourceOffset</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a>, TOffset&gt;</dt>
+    <dd><p>The parameter represents a position in that <code class="paramref">sourcePartition</code> which can be used to resume consumption of data.</p>
+</dd>
+    <dt><code>topic</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The name of the topic; may be null</p>
+</dd>
+    <dt><code>keySchema</code> <a class="xref" href="Org.Apache.Kafka.Connect.Data.Schema.html">Schema</a></dt>
+    <dd><p>The schema for the key; may be null</p>
+</dd>
+    <dt><code>key</code> <span class="xref">TKey</span></dt>
+    <dd><p>The key; may be null</p>
+</dd>
+    <dt><code>valueSchema</code> <a class="xref" href="Org.Apache.Kafka.Connect.Data.Schema.html">Schema</a></dt>
+    <dd><p>The schema for the value; may be null</p>
+</dd>
+    <dt><code>value</code> <span class="xref">TValue</span></dt>
+    <dd><p>The value; may be null</p>
+</dd>
+  </dl>
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TKeySource</code></dt>
+    <dd><p>The type within <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map&lt;K, V&gt;</a> of <code class="paramref">sourcePartition</code></p>
+</dd>
+    <dt><code>TOffset</code></dt>
+    <dd><p>The type within <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map&lt;K, V&gt;</a> of <code class="paramref">sourceOffset</code></p>
+</dd>
+    <dt><code>TKey</code></dt>
+    <dd><p>The type within <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map&lt;K, V&gt;</a> of <code class="paramref">sourcePartition</code></p>
+</dd>
+    <dt><code>TValue</code></dt>
+    <dd><p>The type of value to be inserted in Kafka</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+  <h4 class="section" id="MASES_KNet_Connect_KNetSourceTask_1_CreateAndPushRecord__4_Java_Util_Map_Java_Lang_String___0__Java_Util_Map_Java_Lang_String___1__System_String_Org_Apache_Kafka_Connect_Data_Schema___2_Org_Apache_Kafka_Connect_Data_Schema___3__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>These values can have arbitrary structure and should be represented using Org.Apache.Kafka.Connect.Data.* objects (or primitive values).
+For example, a database connector might specify the <code class="paramref">sourcePartition</code> as a record containing { &quot;db&quot;: &quot;database_name&quot;, &quot;table&quot;: &quot;table_name&quot;} and the <code class="paramref">sourceOffset</code> as a <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/integral-numeric-types">long</a> containing the timestamp of the row.</p>
+</div>
+
+
+
+
+  <a id="MASES_KNet_Connect_KNetSourceTask_1_CreateAndPushRecord_" data-uid="MASES.KNet.Connect.KNetSourceTask`1.CreateAndPushRecord*"></a>
+
+  <h3 id="MASES_KNet_Connect_KNetSourceTask_1_CreateAndPushRecord__4_Java_Util_Map_Java_Lang_String___0__Java_Util_Map_Java_Lang_String___1__System_String_Org_Apache_Kafka_Connect_Data_Schema___3_" data-uid="MASES.KNet.Connect.KNetSourceTask`1.CreateAndPushRecord``4(Java.Util.Map{Java.Lang.String,``0},Java.Util.Map{Java.Lang.String,``1},System.String,Org.Apache.Kafka.Connect.Data.Schema,``3)">
+  CreateAndPushRecord&lt;TKeySource, TOffset, TKey, TValue&gt;(Map&lt;String, TKeySource&gt;, Map&lt;String, TOffset&gt;, string, Schema, TValue)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L425"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord-4.html">SourceRecord&lt;TKeySource, TOffset, TKey, TValue&gt;</a> and push it to JVM</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CreateAndPushRecord&lt;TKeySource, TOffset, TKey, TValue&gt;(Map&lt;String, TKeySource&gt; sourcePartition, Map&lt;String, TOffset&gt; sourceOffset, string topic, Schema valueSchema, TValue value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>sourcePartition</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a>, TKeySource&gt;</dt>
+    <dd><p>The parameter represents a single input sourcePartition that the record came from (e.g. a filename, table name, or topic-partition).</p>
+</dd>
+    <dt><code>sourceOffset</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a>, TOffset&gt;</dt>
+    <dd><p>The parameter represents a position in that <code class="paramref">sourcePartition</code> which can be used to resume consumption of data.</p>
+</dd>
+    <dt><code>topic</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The name of the topic; may be null</p>
+</dd>
+    <dt><code>valueSchema</code> <a class="xref" href="Org.Apache.Kafka.Connect.Data.Schema.html">Schema</a></dt>
+    <dd><p>The schema for the value; may be null</p>
+</dd>
+    <dt><code>value</code> <span class="xref">TValue</span></dt>
+    <dd><p>The value; may be null</p>
+</dd>
+  </dl>
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TKeySource</code></dt>
+    <dd><p>The type within <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map&lt;K, V&gt;</a> of <code class="paramref">sourcePartition</code></p>
+</dd>
+    <dt><code>TOffset</code></dt>
+    <dd><p>The type within <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map&lt;K, V&gt;</a> of <code class="paramref">sourceOffset</code></p>
+</dd>
+    <dt><code>TKey</code></dt>
+    <dd><p>The type within <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map&lt;K, V&gt;</a> of <code class="paramref">sourcePartition</code></p>
+</dd>
+    <dt><code>TValue</code></dt>
+    <dd><p>The type of value to be inserted in Kafka</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+  <h4 class="section" id="MASES_KNet_Connect_KNetSourceTask_1_CreateAndPushRecord__4_Java_Util_Map_Java_Lang_String___0__Java_Util_Map_Java_Lang_String___1__System_String_Org_Apache_Kafka_Connect_Data_Schema___3__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>These values can have arbitrary structure and should be represented using Org.Apache.Kafka.Connect.Data.* objects (or primitive values).
+For example, a database connector might specify the <code class="paramref">sourcePartition</code> as a record containing { &quot;db&quot;: &quot;database_name&quot;, &quot;table&quot;: &quot;table_name&quot;} and the <code class="paramref">sourceOffset</code> as a <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/integral-numeric-types">long</a> containing the timestamp of the row.</p>
+</div>
+
+
+
+
+  <a id="MASES_KNet_Connect_KNetSourceTask_1_CreateAndPushRecord_" data-uid="MASES.KNet.Connect.KNetSourceTask`1.CreateAndPushRecord*"></a>
+
+  <h3 id="MASES_KNet_Connect_KNetSourceTask_1_CreateAndPushRecord__4_Java_Util_Map_Java_Lang_String___0__Java_Util_Map_Java_Lang_String___1__System_String_System_Nullable_System_Int32__Org_Apache_Kafka_Connect_Data_Schema___2_Org_Apache_Kafka_Connect_Data_Schema___3_" data-uid="MASES.KNet.Connect.KNetSourceTask`1.CreateAndPushRecord``4(Java.Util.Map{Java.Lang.String,``0},Java.Util.Map{Java.Lang.String,``1},System.String,System.Nullable{System.Int32},Org.Apache.Kafka.Connect.Data.Schema,``2,Org.Apache.Kafka.Connect.Data.Schema,``3)">
+  CreateAndPushRecord&lt;TKeySource, TOffset, TKey, TValue&gt;(Map&lt;String, TKeySource&gt;, Map&lt;String, TOffset&gt;, string, int?, Schema, TKey, Schema, TValue)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L513"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord-4.html">SourceRecord&lt;TKeySource, TOffset, TKey, TValue&gt;</a> and push it to JVM</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CreateAndPushRecord&lt;TKeySource, TOffset, TKey, TValue&gt;(Map&lt;String, TKeySource&gt; sourcePartition, Map&lt;String, TOffset&gt; sourceOffset, string topic, int? partition, Schema keySchema, TKey key, Schema valueSchema, TValue value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>sourcePartition</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a>, TKeySource&gt;</dt>
+    <dd><p>The parameter represents a single input sourcePartition that the record came from (e.g. a filename, table name, or topic-partition).</p>
+</dd>
+    <dt><code>sourceOffset</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a>, TOffset&gt;</dt>
+    <dd><p>The parameter represents a position in that <code class="paramref">sourcePartition</code> which can be used to resume consumption of data.</p>
+</dd>
+    <dt><code>topic</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The name of the topic; may be null</p>
+</dd>
+    <dt><code>partition</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</dt>
+    <dd><p>The partition number for the Kafka topic; may be null</p>
+</dd>
+    <dt><code>keySchema</code> <a class="xref" href="Org.Apache.Kafka.Connect.Data.Schema.html">Schema</a></dt>
+    <dd><p>The schema for the key; may be null</p>
+</dd>
+    <dt><code>key</code> <span class="xref">TKey</span></dt>
+    <dd><p>The key; may be null</p>
+</dd>
+    <dt><code>valueSchema</code> <a class="xref" href="Org.Apache.Kafka.Connect.Data.Schema.html">Schema</a></dt>
+    <dd><p>The schema for the value; may be null</p>
+</dd>
+    <dt><code>value</code> <span class="xref">TValue</span></dt>
+    <dd><p>The value; may be null</p>
+</dd>
+  </dl>
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TKeySource</code></dt>
+    <dd><p>The type within <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map&lt;K, V&gt;</a> of <code class="paramref">sourcePartition</code></p>
+</dd>
+    <dt><code>TOffset</code></dt>
+    <dd><p>The type within <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map&lt;K, V&gt;</a> of <code class="paramref">sourceOffset</code></p>
+</dd>
+    <dt><code>TKey</code></dt>
+    <dd><p>The type within <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map&lt;K, V&gt;</a> of <code class="paramref">sourcePartition</code></p>
+</dd>
+    <dt><code>TValue</code></dt>
+    <dd><p>The type of value to be inserted in Kafka</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+  <h4 class="section" id="MASES_KNet_Connect_KNetSourceTask_1_CreateAndPushRecord__4_Java_Util_Map_Java_Lang_String___0__Java_Util_Map_Java_Lang_String___1__System_String_System_Nullable_System_Int32__Org_Apache_Kafka_Connect_Data_Schema___2_Org_Apache_Kafka_Connect_Data_Schema___3__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>These values can have arbitrary structure and should be represented using Org.Apache.Kafka.Connect.Data.* objects (or primitive values).
+For example, a database connector might specify the <code class="paramref">sourcePartition</code> as a record containing { &quot;db&quot;: &quot;database_name&quot;, &quot;table&quot;: &quot;table_name&quot;} and the <code class="paramref">sourceOffset</code> as a <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/integral-numeric-types">long</a> containing the timestamp of the row.</p>
+</div>
+
+
+
+
+  <a id="MASES_KNet_Connect_KNetSourceTask_1_CreateAndPushRecord_" data-uid="MASES.KNet.Connect.KNetSourceTask`1.CreateAndPushRecord*"></a>
+
+  <h3 id="MASES_KNet_Connect_KNetSourceTask_1_CreateAndPushRecord__4_Java_Util_Map_Java_Lang_String___0__Java_Util_Map_Java_Lang_String___1__System_String_System_Nullable_System_Int32__Org_Apache_Kafka_Connect_Data_Schema___2_Org_Apache_Kafka_Connect_Data_Schema___3_System_DateTime_" data-uid="MASES.KNet.Connect.KNetSourceTask`1.CreateAndPushRecord``4(Java.Util.Map{Java.Lang.String,``0},Java.Util.Map{Java.Lang.String,``1},System.String,System.Nullable{System.Int32},Org.Apache.Kafka.Connect.Data.Schema,``2,Org.Apache.Kafka.Connect.Data.Schema,``3,System.DateTime)">
+  CreateAndPushRecord&lt;TKeySource, TOffset, TKey, TValue&gt;(Map&lt;String, TKeySource&gt;, Map&lt;String, TOffset&gt;, string, int?, Schema, TKey, Schema, TValue, DateTime)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L644"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord-4.html">SourceRecord&lt;TKeySource, TOffset, TKey, TValue&gt;</a> and push it to JVM</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CreateAndPushRecord&lt;TKeySource, TOffset, TKey, TValue&gt;(Map&lt;String, TKeySource&gt; sourcePartition, Map&lt;String, TOffset&gt; sourceOffset, string topic, int? partition, Schema keySchema, TKey key, Schema valueSchema, TValue value, DateTime timestamp)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>sourcePartition</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a>, TKeySource&gt;</dt>
+    <dd><p>The parameter represents a single input sourcePartition that the record came from (e.g. a filename, table name, or topic-partition).</p>
+</dd>
+    <dt><code>sourceOffset</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a>, TOffset&gt;</dt>
+    <dd><p>The parameter represents a position in that <code class="paramref">sourcePartition</code> which can be used to resume consumption of data.</p>
+</dd>
+    <dt><code>topic</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The name of the topic; may be null</p>
+</dd>
+    <dt><code>partition</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</dt>
+    <dd><p>The partition number for the Kafka topic; may be null</p>
+</dd>
+    <dt><code>keySchema</code> <a class="xref" href="Org.Apache.Kafka.Connect.Data.Schema.html">Schema</a></dt>
+    <dd><p>The schema for the key; may be null</p>
+</dd>
+    <dt><code>key</code> <span class="xref">TKey</span></dt>
+    <dd><p>The key; may be null</p>
+</dd>
+    <dt><code>valueSchema</code> <a class="xref" href="Org.Apache.Kafka.Connect.Data.Schema.html">Schema</a></dt>
+    <dd><p>The schema for the value; may be null</p>
+</dd>
+    <dt><code>value</code> <span class="xref">TValue</span></dt>
+    <dd><p>The value; may be null</p>
+</dd>
+    <dt><code>timestamp</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a></dt>
+    <dd><p>The timestamp; may be null</p>
+</dd>
+  </dl>
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TKeySource</code></dt>
+    <dd><p>The type within <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map&lt;K, V&gt;</a> of <code class="paramref">sourcePartition</code></p>
+</dd>
+    <dt><code>TOffset</code></dt>
+    <dd><p>The type within <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map&lt;K, V&gt;</a> of <code class="paramref">sourceOffset</code></p>
+</dd>
+    <dt><code>TKey</code></dt>
+    <dd><p>The type within <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map&lt;K, V&gt;</a> of <code class="paramref">sourcePartition</code></p>
+</dd>
+    <dt><code>TValue</code></dt>
+    <dd><p>The type of value to be inserted in Kafka</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+  <h4 class="section" id="MASES_KNet_Connect_KNetSourceTask_1_CreateAndPushRecord__4_Java_Util_Map_Java_Lang_String___0__Java_Util_Map_Java_Lang_String___1__System_String_System_Nullable_System_Int32__Org_Apache_Kafka_Connect_Data_Schema___2_Org_Apache_Kafka_Connect_Data_Schema___3_System_DateTime__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>These values can have arbitrary structure and should be represented using Org.Apache.Kafka.Connect.Data.* objects (or primitive values).
+For example, a database connector might specify the <code class="paramref">sourcePartition</code> as a record containing { &quot;db&quot;: &quot;database_name&quot;, &quot;table&quot;: &quot;table_name&quot;} and the <code class="paramref">sourceOffset</code> as a <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/integral-numeric-types">long</a> containing the timestamp of the row.</p>
+</div>
+
+
+
+
+  <a id="MASES_KNet_Connect_KNetSourceTask_1_CreateAndPushRecord_" data-uid="MASES.KNet.Connect.KNetSourceTask`1.CreateAndPushRecord*"></a>
+
+  <h3 id="MASES_KNet_Connect_KNetSourceTask_1_CreateAndPushRecord__4_Java_Util_Map_Java_Lang_String___0__Java_Util_Map_Java_Lang_String___1__System_String_System_Nullable_System_Int32__Org_Apache_Kafka_Connect_Data_Schema___2_Org_Apache_Kafka_Connect_Data_Schema___3_System_DateTime_Org_Apache_Kafka_Connect_Header_Headers_" data-uid="MASES.KNet.Connect.KNetSourceTask`1.CreateAndPushRecord``4(Java.Util.Map{Java.Lang.String,``0},Java.Util.Map{Java.Lang.String,``1},System.String,System.Nullable{System.Int32},Org.Apache.Kafka.Connect.Data.Schema,``2,Org.Apache.Kafka.Connect.Data.Schema,``3,System.DateTime,Org.Apache.Kafka.Connect.Header.Headers)">
+  CreateAndPushRecord&lt;TKeySource, TOffset, TKey, TValue&gt;(Map&lt;String, TKeySource&gt;, Map&lt;String, TOffset&gt;, string, int?, Schema, TKey, Schema, TValue, DateTime, Headers)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L701"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord-4.html">SourceRecord&lt;TKeySource, TOffset, TKey, TValue&gt;</a> and push it to JVM</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CreateAndPushRecord&lt;TKeySource, TOffset, TKey, TValue&gt;(Map&lt;String, TKeySource&gt; sourcePartition, Map&lt;String, TOffset&gt; sourceOffset, string topic, int? partition, Schema keySchema, TKey key, Schema valueSchema, TValue value, DateTime timestamp, Headers headers)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>sourcePartition</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a>, TKeySource&gt;</dt>
+    <dd><p>The parameter represents a single input sourcePartition that the record came from (e.g. a filename, table name, or topic-partition).</p>
+</dd>
+    <dt><code>sourceOffset</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a>, TOffset&gt;</dt>
+    <dd><p>The parameter represents a position in that <code class="paramref">sourcePartition</code> which can be used to resume consumption of data.</p>
+</dd>
+    <dt><code>topic</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The name of the topic; may be null</p>
+</dd>
+    <dt><code>partition</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</dt>
+    <dd><p>The partition number for the Kafka topic; may be null</p>
+</dd>
+    <dt><code>keySchema</code> <a class="xref" href="Org.Apache.Kafka.Connect.Data.Schema.html">Schema</a></dt>
+    <dd><p>The schema for the key; may be null</p>
+</dd>
+    <dt><code>key</code> <span class="xref">TKey</span></dt>
+    <dd><p>The key; may be null</p>
+</dd>
+    <dt><code>valueSchema</code> <a class="xref" href="Org.Apache.Kafka.Connect.Data.Schema.html">Schema</a></dt>
+    <dd><p>The schema for the value; may be null</p>
+</dd>
+    <dt><code>value</code> <span class="xref">TValue</span></dt>
+    <dd><p>The value; may be null</p>
+</dd>
+    <dt><code>timestamp</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a></dt>
+    <dd><p>The timestamp; may be null</p>
+</dd>
+    <dt><code>headers</code> <a class="xref" href="Org.Apache.Kafka.Connect.Header.Headers.html">Headers</a></dt>
+    <dd><p>The <a class="xref" href="Org.Apache.Kafka.Connect.Header.Headers.html">Headers</a>s; may be null or empty</p>
+</dd>
+  </dl>
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TKeySource</code></dt>
+    <dd><p>The type within <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map&lt;K, V&gt;</a> of <code class="paramref">sourcePartition</code></p>
+</dd>
+    <dt><code>TOffset</code></dt>
+    <dd><p>The type within <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map&lt;K, V&gt;</a> of <code class="paramref">sourceOffset</code></p>
+</dd>
+    <dt><code>TKey</code></dt>
+    <dd><p>The type within <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map&lt;K, V&gt;</a> of <code class="paramref">sourcePartition</code></p>
+</dd>
+    <dt><code>TValue</code></dt>
+    <dd><p>The type of value to be inserted in Kafka</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+  <h4 class="section" id="MASES_KNet_Connect_KNetSourceTask_1_CreateAndPushRecord__4_Java_Util_Map_Java_Lang_String___0__Java_Util_Map_Java_Lang_String___1__System_String_System_Nullable_System_Int32__Org_Apache_Kafka_Connect_Data_Schema___2_Org_Apache_Kafka_Connect_Data_Schema___3_System_DateTime_Org_Apache_Kafka_Connect_Header_Headers__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>These values can have arbitrary structure and should be represented using Org.Apache.Kafka.Connect.Data.* objects (or primitive values).
+For example, a database connector might specify the <code class="paramref">sourcePartition</code> as a record containing { &quot;db&quot;: &quot;database_name&quot;, &quot;table&quot;: &quot;table_name&quot;} and the <code class="paramref">sourceOffset</code> as a <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/integral-numeric-types">long</a> containing the timestamp of the row.</p>
+</div>
+
+
+
+
+  <a id="MASES_KNet_Connect_KNetSourceTask_1_CreateAndPushRecord_" data-uid="MASES.KNet.Connect.KNetSourceTask`1.CreateAndPushRecord*"></a>
+
+  <h3 id="MASES_KNet_Connect_KNetSourceTask_1_CreateAndPushRecord__4_Java_Util_Map_Java_Lang_String___0__Java_Util_Map_Java_Lang_String___1__System_String_System_Nullable_System_Int32__Org_Apache_Kafka_Connect_Data_Schema___3_" data-uid="MASES.KNet.Connect.KNetSourceTask`1.CreateAndPushRecord``4(Java.Util.Map{Java.Lang.String,``0},Java.Util.Map{Java.Lang.String,``1},System.String,System.Nullable{System.Int32},Org.Apache.Kafka.Connect.Data.Schema,``3)">
+  CreateAndPushRecord&lt;TKeySource, TOffset, TKey, TValue&gt;(Map&lt;String, TKeySource&gt;, Map&lt;String, TOffset&gt;, string, int?, Schema, TValue)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L386"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord-4.html">SourceRecord&lt;TKeySource, TOffset, TKey, TValue&gt;</a> and push it to JVM</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CreateAndPushRecord&lt;TKeySource, TOffset, TKey, TValue&gt;(Map&lt;String, TKeySource&gt; sourcePartition, Map&lt;String, TOffset&gt; sourceOffset, string topic, int? partition, Schema valueSchema, TValue value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>sourcePartition</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a>, TKeySource&gt;</dt>
+    <dd><p>The parameter represents a single input sourcePartition that the record came from (e.g. a filename, table name, or topic-partition).</p>
+</dd>
+    <dt><code>sourceOffset</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a>, TOffset&gt;</dt>
+    <dd><p>The parameter represents a position in that <code class="paramref">sourcePartition</code> which can be used to resume consumption of data.</p>
+</dd>
+    <dt><code>topic</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The name of the topic; may be null</p>
+</dd>
+    <dt><code>partition</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</dt>
+    <dd><p>The partition number for the Kafka topic; may be null</p>
+</dd>
+    <dt><code>valueSchema</code> <a class="xref" href="Org.Apache.Kafka.Connect.Data.Schema.html">Schema</a></dt>
+    <dd><p>The schema for the value; may be null</p>
+</dd>
+    <dt><code>value</code> <span class="xref">TValue</span></dt>
+    <dd><p>The value; may be null</p>
+</dd>
+  </dl>
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TKeySource</code></dt>
+    <dd><p>The type within <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map&lt;K, V&gt;</a> of <code class="paramref">sourcePartition</code></p>
+</dd>
+    <dt><code>TOffset</code></dt>
+    <dd><p>The type within <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map&lt;K, V&gt;</a> of <code class="paramref">sourceOffset</code></p>
+</dd>
+    <dt><code>TKey</code></dt>
+    <dd><p>The type of the key to be inserted in Kafka</p>
+</dd>
+    <dt><code>TValue</code></dt>
+    <dd><p>The type of value to be inserted in Kafka</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+  <h4 class="section" id="MASES_KNet_Connect_KNetSourceTask_1_CreateAndPushRecord__4_Java_Util_Map_Java_Lang_String___0__Java_Util_Map_Java_Lang_String___1__System_String_System_Nullable_System_Int32__Org_Apache_Kafka_Connect_Data_Schema___3__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>These values can have arbitrary structure and should be represented using Org.Apache.Kafka.Connect.Data.* objects (or primitive values).
+For example, a database connector might specify the <code class="paramref">sourcePartition</code> as a record containing { &quot;db&quot;: &quot;database_name&quot;, &quot;table&quot;: &quot;table_name&quot;} and the <code class="paramref">sourceOffset</code> as a <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/integral-numeric-types">long</a> containing the timestamp of the row.</p>
+</div>
+
+
+
+
   <a id="MASES_KNet_Connect_KNetSourceTask_1_CreateRecord_" data-uid="MASES.KNet.Connect.KNetSourceTask`1.CreateRecord*"></a>
 
   <h3 id="MASES_KNet_Connect_KNetSourceTask_1_CreateRecord__1_System_String_Org_Apache_Kafka_Connect_Data_Schema___0_System_DateTime_" data-uid="MASES.KNet.Connect.KNetSourceTask`1.CreateRecord``1(System.String,Org.Apache.Kafka.Connect.Data.Schema,``0,System.DateTime)">
   CreateRecord&lt;TValue&gt;(string, Schema, TValue, DateTime)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L148"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L225"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord-2.html">SourceRecord&lt;TKey, TValue&gt;</a></p>
@@ -394,7 +1410,7 @@ Class KNetSourceTask&lt;TTask&gt;  <a class="header-action link-secondary" title
 
   <h3 id="MASES_KNet_Connect_KNetSourceTask_1_CreateRecord__1_System_String_System_Nullable_System_Int32__Org_Apache_Kafka_Connect_Data_Schema___0_System_DateTime_" data-uid="MASES.KNet.Connect.KNetSourceTask`1.CreateRecord``1(System.String,System.Nullable{System.Int32},Org.Apache.Kafka.Connect.Data.Schema,``0,System.DateTime)">
   CreateRecord&lt;TValue&gt;(string, int?, Schema, TValue, DateTime)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L163"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L255"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord-2.html">SourceRecord&lt;TKey, TValue&gt;</a></p>
@@ -454,7 +1470,7 @@ Class KNetSourceTask&lt;TTask&gt;  <a class="header-action link-secondary" title
 
   <h3 id="MASES_KNet_Connect_KNetSourceTask_1_CreateRecord__2_System_String_Org_Apache_Kafka_Connect_Data_Schema___0_Org_Apache_Kafka_Connect_Data_Schema___1_" data-uid="MASES.KNet.Connect.KNetSourceTask`1.CreateRecord``2(System.String,Org.Apache.Kafka.Connect.Data.Schema,``0,Org.Apache.Kafka.Connect.Data.Schema,``1)">
   CreateRecord&lt;TKey, TValue&gt;(string, Schema, TKey, Schema, TValue)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L117"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L159"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord-2.html">SourceRecord&lt;TKey, TValue&gt;</a></p>
@@ -517,7 +1533,7 @@ Class KNetSourceTask&lt;TTask&gt;  <a class="header-action link-secondary" title
 
   <h3 id="MASES_KNet_Connect_KNetSourceTask_1_CreateRecord__2_System_String_Org_Apache_Kafka_Connect_Data_Schema___1_" data-uid="MASES.KNet.Connect.KNetSourceTask`1.CreateRecord``2(System.String,Org.Apache.Kafka.Connect.Data.Schema,``1)">
   CreateRecord&lt;TKey, TValue&gt;(string, Schema, TValue)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L101"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L128"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord-2.html">SourceRecord&lt;TKey, TValue&gt;</a></p>
@@ -574,7 +1590,7 @@ Class KNetSourceTask&lt;TTask&gt;  <a class="header-action link-secondary" title
 
   <h3 id="MASES_KNet_Connect_KNetSourceTask_1_CreateRecord__2_System_String_System_Nullable_System_Int32__Org_Apache_Kafka_Connect_Data_Schema___0_Org_Apache_Kafka_Connect_Data_Schema___1_" data-uid="MASES.KNet.Connect.KNetSourceTask`1.CreateRecord``2(System.String,System.Nullable{System.Int32},Org.Apache.Kafka.Connect.Data.Schema,``0,Org.Apache.Kafka.Connect.Data.Schema,``1)">
   CreateRecord&lt;TKey, TValue&gt;(string, int?, Schema, TKey, Schema, TValue)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L134"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L193"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord-2.html">SourceRecord&lt;TKey, TValue&gt;</a></p>
@@ -640,7 +1656,7 @@ Class KNetSourceTask&lt;TTask&gt;  <a class="header-action link-secondary" title
 
   <h3 id="MASES_KNet_Connect_KNetSourceTask_1_CreateRecord__2_System_String_System_Nullable_System_Int32__Org_Apache_Kafka_Connect_Data_Schema___0_Org_Apache_Kafka_Connect_Data_Schema___1_System_DateTime_" data-uid="MASES.KNet.Connect.KNetSourceTask`1.CreateRecord``2(System.String,System.Nullable{System.Int32},Org.Apache.Kafka.Connect.Data.Schema,``0,Org.Apache.Kafka.Connect.Data.Schema,``1,System.DateTime)">
   CreateRecord&lt;TKey, TValue&gt;(string, int?, Schema, TKey, Schema, TValue, DateTime)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L183"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L289"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord-2.html">SourceRecord&lt;TKey, TValue&gt;</a></p>
@@ -709,7 +1725,7 @@ Class KNetSourceTask&lt;TTask&gt;  <a class="header-action link-secondary" title
 
   <h3 id="MASES_KNet_Connect_KNetSourceTask_1_CreateRecord__2_System_String_System_Nullable_System_Int32__Org_Apache_Kafka_Connect_Data_Schema___0_Org_Apache_Kafka_Connect_Data_Schema___1_System_DateTime_Org_Apache_Kafka_Connect_Header_Headers_" data-uid="MASES.KNet.Connect.KNetSourceTask`1.CreateRecord``2(System.String,System.Nullable{System.Int32},Org.Apache.Kafka.Connect.Data.Schema,``0,Org.Apache.Kafka.Connect.Data.Schema,``1,System.DateTime,Org.Apache.Kafka.Connect.Header.Headers)">
   CreateRecord&lt;TKey, TValue&gt;(string, int?, Schema, TKey, Schema, TValue, DateTime, Headers)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L205"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L327"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord-2.html">SourceRecord&lt;TKey, TValue&gt;</a></p>
@@ -781,7 +1797,7 @@ Class KNetSourceTask&lt;TTask&gt;  <a class="header-action link-secondary" title
 
   <h3 id="MASES_KNet_Connect_KNetSourceTask_1_CreateRecord__2_System_String_System_Nullable_System_Int32__Org_Apache_Kafka_Connect_Data_Schema___1_" data-uid="MASES.KNet.Connect.KNetSourceTask`1.CreateRecord``2(System.String,System.Nullable{System.Int32},Org.Apache.Kafka.Connect.Data.Schema,``1)">
   CreateRecord&lt;TKey, TValue&gt;(string, int?, Schema, TValue)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L87"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L98"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord-2.html">SourceRecord&lt;TKey, TValue&gt;</a></p>
@@ -841,7 +1857,7 @@ Class KNetSourceTask&lt;TTask&gt;  <a class="header-action link-secondary" title
 
   <h3 id="MASES_KNet_Connect_KNetSourceTask_1_CreateRecord__3_Java_Util_Map_Java_Lang_String___0__Java_Util_Map_Java_Lang_String___1__System_String_Org_Apache_Kafka_Connect_Data_Schema___2_System_DateTime_" data-uid="MASES.KNet.Connect.KNetSourceTask`1.CreateRecord``3(Java.Util.Map{Java.Lang.String,``0},Java.Util.Map{Java.Lang.String,``1},System.String,Org.Apache.Kafka.Connect.Data.Schema,``2,System.DateTime)">
   CreateRecord&lt;TKeySource, TOffset, TValue&gt;(Map&lt;String, TKeySource&gt;, Map&lt;String, TOffset&gt;, string, Schema, TValue, DateTime)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L315"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L534"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord-4.html">SourceRecord&lt;TKeySource, TOffset, TKey, TValue&gt;</a></p>
@@ -911,7 +1927,7 @@ For example, a database connector might specify the <code class="paramref">sourc
 
   <h3 id="MASES_KNet_Connect_KNetSourceTask_1_CreateRecord__3_Java_Util_Map_Java_Lang_String___0__Java_Util_Map_Java_Lang_String___1__System_String_System_Nullable_System_Int32__Org_Apache_Kafka_Connect_Data_Schema___2_System_DateTime_" data-uid="MASES.KNet.Connect.KNetSourceTask`1.CreateRecord``3(Java.Util.Map{Java.Lang.String,``0},Java.Util.Map{Java.Lang.String,``1},System.String,System.Nullable{System.Int32},Org.Apache.Kafka.Connect.Data.Schema,``2,System.DateTime)">
   CreateRecord&lt;TKeySource, TOffset, TValue&gt;(Map&lt;String, TKeySource&gt;, Map&lt;String, TOffset&gt;, string, int?, Schema, TValue, DateTime)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L336"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L574"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord-4.html">SourceRecord&lt;TKeySource, TOffset, TKey, TValue&gt;</a></p>
@@ -984,7 +2000,7 @@ For example, a database connector might specify the <code class="paramref">sourc
 
   <h3 id="MASES_KNet_Connect_KNetSourceTask_1_CreateRecord__4_Java_Util_Map_Java_Lang_String___0__Java_Util_Map_Java_Lang_String___1__System_String_Org_Apache_Kafka_Connect_Data_Schema___2_Org_Apache_Kafka_Connect_Data_Schema___3_" data-uid="MASES.KNet.Connect.KNetSourceTask`1.CreateRecord``4(Java.Util.Map{Java.Lang.String,``0},Java.Util.Map{Java.Lang.String,``1},System.String,Org.Apache.Kafka.Connect.Data.Schema,``2,Org.Apache.Kafka.Connect.Data.Schema,``3)">
   CreateRecord&lt;TKeySource, TOffset, TKey, TValue&gt;(Map&lt;String, TKeySource&gt;, Map&lt;String, TOffset&gt;, string, Schema, TKey, Schema, TValue)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L271"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L448"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord-4.html">SourceRecord&lt;TKeySource, TOffset, TKey, TValue&gt;</a></p>
@@ -1060,7 +2076,7 @@ For example, a database connector might specify the <code class="paramref">sourc
 
   <h3 id="MASES_KNet_Connect_KNetSourceTask_1_CreateRecord__4_Java_Util_Map_Java_Lang_String___0__Java_Util_Map_Java_Lang_String___1__System_String_Org_Apache_Kafka_Connect_Data_Schema___3_" data-uid="MASES.KNet.Connect.KNetSourceTask`1.CreateRecord``4(Java.Util.Map{Java.Lang.String,``0},Java.Util.Map{Java.Lang.String,``1},System.String,Org.Apache.Kafka.Connect.Data.Schema,``3)">
   CreateRecord&lt;TKeySource, TOffset, TKey, TValue&gt;(Map&lt;String, TKeySource&gt;, Map&lt;String, TOffset&gt;, string, Schema, TValue)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L249"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L407"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord-4.html">SourceRecord&lt;TKeySource, TOffset, TKey, TValue&gt;</a></p>
@@ -1130,7 +2146,7 @@ For example, a database connector might specify the <code class="paramref">sourc
 
   <h3 id="MASES_KNet_Connect_KNetSourceTask_1_CreateRecord__4_Java_Util_Map_Java_Lang_String___0__Java_Util_Map_Java_Lang_String___1__System_String_System_Nullable_System_Int32__Org_Apache_Kafka_Connect_Data_Schema___2_Org_Apache_Kafka_Connect_Data_Schema___3_" data-uid="MASES.KNet.Connect.KNetSourceTask`1.CreateRecord``4(Java.Util.Map{Java.Lang.String,``0},Java.Util.Map{Java.Lang.String,``1},System.String,System.Nullable{System.Int32},Org.Apache.Kafka.Connect.Data.Schema,``2,Org.Apache.Kafka.Connect.Data.Schema,``3)">
   CreateRecord&lt;TKeySource, TOffset, TKey, TValue&gt;(Map&lt;String, TKeySource&gt;, Map&lt;String, TOffset&gt;, string, int?, Schema, TKey, Schema, TValue)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L295"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L492"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord-4.html">SourceRecord&lt;TKeySource, TOffset, TKey, TValue&gt;</a></p>
@@ -1209,7 +2225,7 @@ For example, a database connector might specify the <code class="paramref">sourc
 
   <h3 id="MASES_KNet_Connect_KNetSourceTask_1_CreateRecord__4_Java_Util_Map_Java_Lang_String___0__Java_Util_Map_Java_Lang_String___1__System_String_System_Nullable_System_Int32__Org_Apache_Kafka_Connect_Data_Schema___2_Org_Apache_Kafka_Connect_Data_Schema___3_System_DateTime_" data-uid="MASES.KNet.Connect.KNetSourceTask`1.CreateRecord``4(Java.Util.Map{Java.Lang.String,``0},Java.Util.Map{Java.Lang.String,``1},System.String,System.Nullable{System.Int32},Org.Apache.Kafka.Connect.Data.Schema,``2,Org.Apache.Kafka.Connect.Data.Schema,``3,System.DateTime)">
   CreateRecord&lt;TKeySource, TOffset, TKey, TValue&gt;(Map&lt;String, TKeySource&gt;, Map&lt;String, TOffset&gt;, string, int?, Schema, TKey, Schema, TValue, DateTime)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L362"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L618"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord-4.html">SourceRecord&lt;TKeySource, TOffset, TKey, TValue&gt;</a></p>
@@ -1291,7 +2307,7 @@ For example, a database connector might specify the <code class="paramref">sourc
 
   <h3 id="MASES_KNet_Connect_KNetSourceTask_1_CreateRecord__4_Java_Util_Map_Java_Lang_String___0__Java_Util_Map_Java_Lang_String___1__System_String_System_Nullable_System_Int32__Org_Apache_Kafka_Connect_Data_Schema___2_Org_Apache_Kafka_Connect_Data_Schema___3_System_DateTime_Org_Apache_Kafka_Connect_Header_Headers_" data-uid="MASES.KNet.Connect.KNetSourceTask`1.CreateRecord``4(Java.Util.Map{Java.Lang.String,``0},Java.Util.Map{Java.Lang.String,``1},System.String,System.Nullable{System.Int32},Org.Apache.Kafka.Connect.Data.Schema,``2,Org.Apache.Kafka.Connect.Data.Schema,``3,System.DateTime,Org.Apache.Kafka.Connect.Header.Headers)">
   CreateRecord&lt;TKeySource, TOffset, TKey, TValue&gt;(Map&lt;String, TKeySource&gt;, Map&lt;String, TOffset&gt;, string, int?, Schema, TKey, Schema, TValue, DateTime, Headers)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L390"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L674"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord-4.html">SourceRecord&lt;TKeySource, TOffset, TKey, TValue&gt;</a></p>
@@ -1376,7 +2392,7 @@ For example, a database connector might specify the <code class="paramref">sourc
 
   <h3 id="MASES_KNet_Connect_KNetSourceTask_1_CreateRecord__4_Java_Util_Map_Java_Lang_String___0__Java_Util_Map_Java_Lang_String___1__System_String_System_Nullable_System_Int32__Org_Apache_Kafka_Connect_Data_Schema___3_" data-uid="MASES.KNet.Connect.KNetSourceTask`1.CreateRecord``4(Java.Util.Map{Java.Lang.String,``0},Java.Util.Map{Java.Lang.String,``1},System.String,System.Nullable{System.Int32},Org.Apache.Kafka.Connect.Data.Schema,``3)">
   CreateRecord&lt;TKeySource, TOffset, TKey, TValue&gt;(Map&lt;String, TKeySource&gt;, Map&lt;String, TOffset&gt;, string, int?, Schema, TValue)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L229"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L367"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord-4.html">SourceRecord&lt;TKeySource, TOffset, TKey, TValue&gt;</a></p>
@@ -1548,7 +2564,7 @@ For example, a database connector might specify the <code class="paramref">sourc
 
   <h3 id="MASES_KNet_Connect_KNetSourceTask_1_Poll" data-uid="MASES.KNet.Connect.KNetSourceTask`1.Poll">
   Poll()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L75"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L85"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Implement the method to execute the Poll action</p>
@@ -1581,7 +2597,7 @@ For example, a database connector might specify the <code class="paramref">sourc
 
   <h3 id="MASES_KNet_Connect_KNetSourceTask_1_PollInternal" data-uid="MASES.KNet.Connect.KNetSourceTask`1.PollInternal">
   PollInternal()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L64"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L65"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Public method used from Java to trigger <a class="xref" href="MASES.KNet.Connect.KNetSourceTask-1.html#MASES_KNet_Connect_KNetSourceTask_1_Poll">Poll()</a></p>
