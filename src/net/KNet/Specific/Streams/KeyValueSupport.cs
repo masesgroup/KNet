@@ -80,6 +80,13 @@ namespace MASES.KNet.Streams
         /// </summary>
         public override bool IsBridgeStatic => false;
 
+        #region Class/Interface conversion operators
+        /// <summary>
+        /// Converter from <see cref="MASES.KNet.Streams.KeyValueSupport{K, V}"/> to <see cref="Org.Apache.Kafka.Streams.KeyValue{K, V}"/>
+        /// </summary>
+        public static implicit operator Org.Apache.Kafka.Streams.KeyValue<K, V>(KeyValueSupport<K, V> kvs) => kvs.ToKeyValue();
+        #endregion
+
         #region Static methods
         /// <summary>
         /// Convert the <paramref name="kvs"/> into an instance of <see cref="Org.Apache.Kafka.Streams.KeyValue{K, V}"/>
