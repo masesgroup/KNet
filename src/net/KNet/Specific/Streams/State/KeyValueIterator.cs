@@ -161,7 +161,7 @@ namespace MASES.KNet.Streams.State
             _keySerDes ??= factory?.BuildKeySerDes<K, TJVMK>();
             _valueSerDes ??= factory?.BuildValueSerDes<V, TJVMV>();
             var kv = _iterator.Next();
-            return new KeyValue<K, V, TJVMK, TJVMV>(factory, new KeyValueSupport<TJVMK, TJVMV>(kv.BridgeInstance), _keySerDes, _valueSerDes, false);
+            return new KeyValue<K, V, TJVMK, TJVMV>(factory, new KeyValueSupport<TJVMK, TJVMV>(kv), _keySerDes, _valueSerDes, false);
         }
         /// <summary>
         /// <see href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Iterator.html#remove()"/>

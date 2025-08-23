@@ -139,7 +139,7 @@ namespace MASES.KNet.Streams.State
         public TimestampedWindowedKeyValue<K, V, TJVMK, TJVMV> Next()
         {
             var kv = _iterator.Next();
-            var kvs = new KeyValueSupport<Org.Apache.Kafka.Streams.Kstream.Windowed<TJVMK>, Org.Apache.Kafka.Streams.State.ValueAndTimestamp<TJVMV>>(kv.BridgeInstance);
+            var kvs = new KeyValueSupport<Org.Apache.Kafka.Streams.Kstream.Windowed<TJVMK>, Org.Apache.Kafka.Streams.State.ValueAndTimestamp<TJVMV>>(kv);
             return new TimestampedWindowedKeyValue<K, V, TJVMK, TJVMV>(Factory, kvs);
         }
         /// <summary>

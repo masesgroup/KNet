@@ -150,7 +150,7 @@ namespace MASES.KNet.Streams.State
             IGenericSerDesFactory factory = Factory;
             _keySerDes ??= factory?.BuildKeySerDes<K, TJVMK>();
             var kv = _iterator.Next();
-            return new TimestampedKeyValue<K, V, TJVMK, TJVMV>(factory, new KeyValueSupport<TJVMK, Org.Apache.Kafka.Streams.State.ValueAndTimestamp<TJVMV>>(kv.BridgeInstance), _keySerDes, false);
+            return new TimestampedKeyValue<K, V, TJVMK, TJVMV>(factory, new KeyValueSupport<TJVMK, Org.Apache.Kafka.Streams.State.ValueAndTimestamp<TJVMV>>(kv), _keySerDes, false);
         }
         /// <summary>
         /// <see href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Iterator.html#remove()"/>
