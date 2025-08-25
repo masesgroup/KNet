@@ -77,6 +77,11 @@ public class KNetProducer<K, V> extends KafkaProducer<byte[], byte[]> {
         return send(record, _callback);
     }
 
+    public Future<RecordMetadata> send(String topic, Integer partition, byte[] key, java.nio.ByteBuffer value, Iterable<Header> headers) {
+        ProducerRecord<byte[], java.nio.ByteBuffer> record = new ProducerRecord<>(topic, partition, key, value, headers);
+        return ((KafkaProducer)this).send(record, _callback);
+    }
+
     public Future<RecordMetadata> send(String topic, Integer partition, java.nio.ByteBuffer key, java.nio.ByteBuffer value, Iterable<Header> headers) {
         ProducerRecord<java.nio.ByteBuffer, java.nio.ByteBuffer> record = new ProducerRecord<>(topic, partition, key, value, headers);
         return ((KafkaProducer)this).send(record, _callback);
