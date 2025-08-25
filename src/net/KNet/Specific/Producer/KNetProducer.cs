@@ -313,7 +313,7 @@ namespace MASES.KNet.Producer
         /// <inheritdoc cref="IProducer{K, V, TJVMK, TJVMV}.Send(ProducerRecord{K, V, TJVMK, TJVMV})"/>
         public Future<RecordMetadata> Send(ProducerRecord<K, V, TJVMK, TJVMV> record)
         {
-            Org.Apache.Kafka.Clients.Producer.ProducerRecord<TJVMK, TJVMV> kRecord = KNetProducer<K, V, TJVMK, TJVMV>.ToProducerRecord((Producer.ProducerRecord<K, V, TJVMK, TJVMV>)record, (ISerializer<K, TJVMK>)_keySerializer, (ISerializer<V, TJVMV>)_valueSerializer);
+            Org.Apache.Kafka.Clients.Producer.ProducerRecord<TJVMK, TJVMV> kRecord = KNetProducer<K, V, TJVMK, TJVMV>.ToProducerRecord(record, _keySerializer, _valueSerializer);
             try
             {
                 GC.SuppressFinalize(kRecord);
@@ -324,7 +324,7 @@ namespace MASES.KNet.Producer
         /// <inheritdoc cref="IProducer{K, V, TJVMK, TJVMV}.Send(ProducerRecord{K, V, TJVMK, TJVMV}, Callback)"/>
         public Future<RecordMetadata> Send(ProducerRecord<K, V, TJVMK, TJVMV> record, Callback callback)
         {
-            Org.Apache.Kafka.Clients.Producer.ProducerRecord<TJVMK, TJVMV> kRecord = KNetProducer<K, V, TJVMK, TJVMV>.ToProducerRecord((Producer.ProducerRecord<K, V, TJVMK, TJVMV>)record, (ISerializer<K, TJVMK>)_keySerializer, (ISerializer<V, TJVMV>)_valueSerializer);
+            Org.Apache.Kafka.Clients.Producer.ProducerRecord<TJVMK, TJVMV> kRecord = KNetProducer<K, V, TJVMK, TJVMV>.ToProducerRecord(record, _keySerializer, _valueSerializer);
             try
             {
                 GC.SuppressFinalize(kRecord);
