@@ -55,26 +55,32 @@ namespace MASES.KNet.Producer
         /// <summary>
         /// KNet version of <see cref="Producer{K, V}.Send(Org.Apache.Kafka.Clients.Producer.ProducerRecord{K, V})"/>
         /// </summary>
+        /// <remarks>Supports only <typeparamref name="TJVMK"/> and <typeparamref name="TJVMV"/> based on <see cref="byte"/> arrays or <see cref="Java.Nio.ByteBuffer"/></remarks>
         Future<RecordMetadata> Send(string topic, int partition, long timestamp, K key, V value, Headers headers);
         /// <summary>
         /// KNet version of <see cref="Producer{K, V}.Send(Org.Apache.Kafka.Clients.Producer.ProducerRecord{K, V})"/>
         /// </summary>
+        /// <remarks>Supports only <typeparamref name="TJVMK"/> and <typeparamref name="TJVMV"/> based on <see cref="byte"/> arrays or <see cref="Java.Nio.ByteBuffer"/></remarks>
         Future<RecordMetadata> Send(string topic, int partition, long timestamp, K key, V value);
         /// <summary>
         /// KNet version of <see cref="Producer{K, V}.Send(Org.Apache.Kafka.Clients.Producer.ProducerRecord{K, V})"/>
         /// </summary>
+        /// <remarks>Supports only <typeparamref name="TJVMK"/> and <typeparamref name="TJVMV"/> based on <see cref="byte"/> arrays or <see cref="Java.Nio.ByteBuffer"/></remarks>
         Future<RecordMetadata> Send(string topic, int partition, K key, V value, Headers headers);
         /// <summary>
         /// KNet version of <see cref="Producer{K, V}.Send(Org.Apache.Kafka.Clients.Producer.ProducerRecord{K, V})"/>
         /// </summary>
+        /// <remarks>Supports only <typeparamref name="TJVMK"/> and <typeparamref name="TJVMV"/> based on <see cref="byte"/> arrays or <see cref="Java.Nio.ByteBuffer"/></remarks>
         Future<RecordMetadata> Send(string topic, int partition, K key, V value);
         /// <summary>
         /// KNet version of <see cref="Producer{K, V}.Send(Org.Apache.Kafka.Clients.Producer.ProducerRecord{K, V})"/>
         /// </summary>
+        /// <remarks>Supports only <typeparamref name="TJVMK"/> and <typeparamref name="TJVMV"/> based on <see cref="byte"/> arrays or <see cref="Java.Nio.ByteBuffer"/></remarks>
         Future<RecordMetadata> Send(string topic, K key, V value);
         /// <summary>
         /// KNet version of <see cref="Producer{K, V}.Send(Org.Apache.Kafka.Clients.Producer.ProducerRecord{K, V})"/>
         /// </summary>
+        /// <remarks>Supports only <typeparamref name="TJVMK"/> and <typeparamref name="TJVMV"/> based on <see cref="byte"/> arrays or <see cref="Java.Nio.ByteBuffer"/></remarks>
         Future<RecordMetadata> Send(string topic, V value);
         /// <summary>
         /// KNet version of <see cref="Producer{K, V}.Send(Org.Apache.Kafka.Clients.Producer.ProducerRecord{K, V}, Callback)"/>
