@@ -62,7 +62,7 @@ namespace MASES.KNet.Streams
         /// <returns><see cref="Java.Util.Properties"/> used from underlying <see cref="Org.Apache.Kafka.Streams.KafkaStreams"/></returns>
         protected virtual Java.Util.Properties PrepareProperties(StreamsConfigBuilder builder)
         {
-            return OverrideProperties != null ? OverrideProperties(builder) : builder;
+            return OverrideProperties != null ? OverrideProperties(builder) : builder.ToProperties();
         }
 
         #region Instance methods

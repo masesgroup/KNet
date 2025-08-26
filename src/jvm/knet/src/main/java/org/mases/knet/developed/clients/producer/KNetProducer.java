@@ -1,5 +1,5 @@
 /*
- *  Copyright (c) 2021-2025 MASES s.r.l.
+ *  Copyright 2024 MASES s.r.l.
  *
  *  Licensed under the Apache License, Version 2.0 (the "License");
  *  you may not use this file except in compliance with the License.
@@ -57,6 +57,16 @@ public class KNetProducer<K, V> extends KafkaProducer<byte[], byte[]> {
         return send(record, _callback);
     }
 
+    public Future<RecordMetadata> send(String topic, Integer partition, Long timestamp, byte[] key, java.nio.ByteBuffer value, Iterable<Header> headers) {
+        ProducerRecord<byte[], java.nio.ByteBuffer> record = new ProducerRecord<>(topic, partition, timestamp, key, value, headers);
+        return ((KafkaProducer)this).send(record, _callback);
+    }
+
+    public Future<RecordMetadata> send(String topic, Integer partition, Long timestamp, java.nio.ByteBuffer key, byte[] value, Iterable<Header> headers) {
+        ProducerRecord<java.nio.ByteBuffer, byte[]> record = new ProducerRecord<>(topic, partition, timestamp, key, value, headers);
+        return ((KafkaProducer)this).send(record, _callback);
+    }
+
     public Future<RecordMetadata> send(String topic, Integer partition, Long timestamp, java.nio.ByteBuffer key, java.nio.ByteBuffer value, Iterable<Header> headers) {
         ProducerRecord<java.nio.ByteBuffer, java.nio.ByteBuffer> record = new ProducerRecord<>(topic, partition, timestamp, key, value, headers);
         return ((KafkaProducer)this).send(record, _callback);
@@ -65,6 +75,16 @@ public class KNetProducer<K, V> extends KafkaProducer<byte[], byte[]> {
     public Future<RecordMetadata> send(String topic, Integer partition, Long timestamp, byte[] key, byte[] value) {
         ProducerRecord record = new ProducerRecord(topic, partition, timestamp, key, value);
         return send(record, _callback);
+    }
+
+    public Future<RecordMetadata> send(String topic, Integer partition, Long timestamp, byte[] key, java.nio.ByteBuffer value) {
+        ProducerRecord<byte[], java.nio.ByteBuffer> record = new ProducerRecord<>(topic, partition, timestamp, key, value);
+        return ((KafkaProducer)this).send(record, _callback);
+    }
+
+    public Future<RecordMetadata> send(String topic, Integer partition, Long timestamp, java.nio.ByteBuffer key, byte[] value) {
+        ProducerRecord<java.nio.ByteBuffer, byte[]> record = new ProducerRecord<>(topic, partition, timestamp, key, value);
+        return ((KafkaProducer)this).send(record, _callback);
     }
 
     public Future<RecordMetadata> send(String topic, Integer partition, Long timestamp, java.nio.ByteBuffer key, java.nio.ByteBuffer value) {
@@ -82,6 +102,11 @@ public class KNetProducer<K, V> extends KafkaProducer<byte[], byte[]> {
         return ((KafkaProducer)this).send(record, _callback);
     }
 
+    public Future<RecordMetadata> send(String topic, Integer partition, java.nio.ByteBuffer key, byte[] value, Iterable<Header> headers) {
+        ProducerRecord<java.nio.ByteBuffer, byte[]> record = new ProducerRecord<>(topic, partition, key, value, headers);
+        return ((KafkaProducer)this).send(record, _callback);
+    }
+
     public Future<RecordMetadata> send(String topic, Integer partition, java.nio.ByteBuffer key, java.nio.ByteBuffer value, Iterable<Header> headers) {
         ProducerRecord<java.nio.ByteBuffer, java.nio.ByteBuffer> record = new ProducerRecord<>(topic, partition, key, value, headers);
         return ((KafkaProducer)this).send(record, _callback);
@@ -92,6 +117,16 @@ public class KNetProducer<K, V> extends KafkaProducer<byte[], byte[]> {
         return send(record, _callback);
     }
 
+    public Future<RecordMetadata> send(String topic, Integer partition, byte[] key, java.nio.ByteBuffer value) {
+        ProducerRecord<byte[], java.nio.ByteBuffer> record = new ProducerRecord<>(topic, partition, key, value);
+        return ((KafkaProducer)this).send(record, _callback);
+    }
+
+    public Future<RecordMetadata> send(String topic, Integer partition, java.nio.ByteBuffer key, byte[] value) {
+        ProducerRecord<java.nio.ByteBuffer, byte[]> record = new ProducerRecord<>(topic, partition, key, value);
+        return ((KafkaProducer)this).send(record, _callback);
+    }
+
     public Future<RecordMetadata> send(String topic, Integer partition, java.nio.ByteBuffer key, java.nio.ByteBuffer value) {
         ProducerRecord<java.nio.ByteBuffer, java.nio.ByteBuffer> record = new ProducerRecord<>(topic, partition, key, value);
         return ((KafkaProducer)this).send(record, _callback);
@@ -100,6 +135,16 @@ public class KNetProducer<K, V> extends KafkaProducer<byte[], byte[]> {
     public Future<RecordMetadata> send(String topic, byte[] key, byte[] value) {
         ProducerRecord record = new ProducerRecord(topic, key, value);
         return send(record, _callback);
+    }
+
+    public Future<RecordMetadata> send(String topic, byte[] key, java.nio.ByteBuffer value) {
+        ProducerRecord<byte[], java.nio.ByteBuffer> record = new ProducerRecord<>(topic, key, value);
+        return ((KafkaProducer)this).send(record, _callback);
+    }
+
+    public Future<RecordMetadata> send(String topic, java.nio.ByteBuffer key, byte[] value) {
+        ProducerRecord<java.nio.ByteBuffer, byte[]> record = new ProducerRecord<>(topic, key, value);
+        return ((KafkaProducer)this).send(record, _callback);
     }
 
     public Future<RecordMetadata> send(String topic, java.nio.ByteBuffer key, java.nio.ByteBuffer value) {
