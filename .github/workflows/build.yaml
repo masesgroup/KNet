@@ -143,7 +143,7 @@ jobs:
           GITHUB_SIMPLIFIED_GENERATION: true
 
       - name: Set up Apache Maven Central
-        uses: actions/setup-java@v4
+        uses: actions/setup-java@v5
         with: # running setup-java again overwrites the settings.xml
           distribution: temurin
           java-version: 17
@@ -291,7 +291,7 @@ jobs:
           GITHUB_SIMPLIFIED_GENERATION: true
           
       - name: Set up Apache Maven Central
-        uses: actions/setup-java@v4
+        uses: actions/setup-java@v5
         with: # running setup-java again overwrites the settings.xml
           distribution: temurin
           java-version: 17
@@ -398,7 +398,7 @@ jobs:
           key: KNet_${{ github.run_number }}_${{ github.run_attempt }}_${{ matrix.framework }}_bin_${{ github.sha }}
  
       - name: Set up JDK distribution
-        uses: actions/setup-java@v4
+        uses: actions/setup-java@v5
         with: # running setup-java again overwrites the settings.xml
           distribution: ${{ matrix.jdk_vendor }}
           java-version: ${{ matrix.jdk_version }}
@@ -476,7 +476,7 @@ jobs:
           key: KNet_${{ github.run_number }}_${{ github.run_attempt }}_Nuget_${{ github.sha }}
 
       - name: Set up JDK distribution
-        uses: actions/setup-java@v4
+        uses: actions/setup-java@v5
         with: # running setup-java again overwrites the settings.xml
           distribution: ${{ matrix.jdk_vendor }}
           java-version: ${{ matrix.jdk_version }}
@@ -587,7 +587,7 @@ jobs:
           key: KNet_${{ github.run_number }}_${{ github.run_attempt }}_Nuget_${{ github.sha }}
 
       - name: Set up JDK distribution
-        uses: actions/setup-java@v4
+        uses: actions/setup-java@v5
         with: # running setup-java again overwrites the settings.xml
           distribution: ${{ matrix.jdk_vendor }}
           java-version: ${{ matrix.jdk_version }}
