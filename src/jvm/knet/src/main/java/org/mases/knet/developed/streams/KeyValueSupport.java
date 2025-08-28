@@ -41,7 +41,7 @@ public class KeyValueSupport<K, V> {
 
     public String toString() {
         String var = String.valueOf(this._key);
-        return "KeyValue(" + var + ", " + String.valueOf(this._value) + ")";
+        return "KeyValueSupport(" + var + ", " + String.valueOf(this._value) + ")";
     }
 
     public boolean equals(Object obj) {
