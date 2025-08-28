@@ -19,21 +19,43 @@
 package org.mases.knet.developed.streams;
 
 public class KeyValueSupport<K, V> {
-    org.apache.kafka.streams.KeyValue<K, V> _innerKV;
+    final K _key;
+    final V _value;
 
     public static <K, V> org.apache.kafka.streams.KeyValue<K, V> toKeyValue(KeyValueSupport<K, V> kvs) {
-        return new org.apache.kafka.streams.KeyValue<K, V>(kvs.getKey(), kvs.getValue());
+        return org.apache.kafka.streams.KeyValue.pair(kvs.getKey(), kvs.getValue());
     }
 
     public KeyValueSupport(org.apache.kafka.streams.KeyValue<K, V> innerKV) {
-        _innerKV = innerKV;
+        _key = innerKV.key;
+        _value = innerKV.value;
     }
 
     public K getKey() {
-        return _innerKV.key;
+        return _key;
     }
 
     public V getValue() {
-        return _innerKV.value;
+        return _value;
+    }
+
+    public String toString() {
+        String var = String.valueOf(this._key);
+        return "KeyValue(" + var + ", " + String.valueOf(this._value) + ")";
+    }
+
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        } else if (!(obj instanceof KeyValueSupport)) {
+            return false;
+        } else {
+            KeyValueSupport<?, ?> other = (KeyValueSupport) obj;
+            return java.util.Objects.equals(this._key, other._key) && java.util.Objects.equals(this._value, other._value);
+        }
+    }
+
+    public int hashCode() {
+        return java.util.Objects.hash(new Object[]{this._key, this._value});
     }
 }
