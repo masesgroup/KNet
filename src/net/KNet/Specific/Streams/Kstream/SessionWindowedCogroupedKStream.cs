@@ -32,7 +32,7 @@ namespace MASES.KNet.Streams.Kstream
         Org.Apache.Kafka.Streams.Kstream.SessionWindowedCogroupedKStream<TJVMK, TJVMV> _inner;
 
         IGenericSerDesFactory _factory;
-        IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
+        IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set => _factory = value; }
 
         internal SessionWindowedCogroupedKStream(IGenericSerDesFactory factory, Org.Apache.Kafka.Streams.Kstream.SessionWindowedCogroupedKStream<TJVMK, TJVMV> inner)
         {

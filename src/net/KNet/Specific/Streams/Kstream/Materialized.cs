@@ -143,7 +143,7 @@ namespace MASES.KNet.Streams.Kstream
         internal Org.Apache.Kafka.Streams.Kstream.Materialized<TJVMK, TJVMV, Org.Apache.Kafka.Streams.State.WindowStore<Org.Apache.Kafka.Common.Utils.Bytes, byte[]>> _windowStore;
 
         IGenericSerDesFactory _factory;
-        IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
+        IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set => _factory = value; }
 
         void IKNetMaterialized<TJVMK, TJVMV>.SetStore(Org.Apache.Kafka.Streams.Kstream.Materialized<TJVMK, TJVMV, Org.Apache.Kafka.Streams.State.KeyValueStore<Org.Apache.Kafka.Common.Utils.Bytes, byte[]>> materialized)
         {

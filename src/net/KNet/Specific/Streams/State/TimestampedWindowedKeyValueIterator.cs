@@ -45,7 +45,7 @@ namespace MASES.KNet.Streams.State
               IAsyncEnumerator<TimestampedWindowedKeyValue<K, V, TJVMK, TJVMV>>
         {
             IGenericSerDesFactory _factory = factory;
-            IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
+            IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set => _factory = value; }
 
             protected override object ConvertObject(object input)
             {
@@ -79,7 +79,7 @@ namespace MASES.KNet.Streams.State
         sealed class StandardLocalEnumerator : JVMBridgeBaseEnumerator<TimestampedWindowedKeyValue<K, V, TJVMK, TJVMV>>, IGenericSerDesFactoryApplier, IAsyncEnumerator<TimestampedWindowedKeyValue<K, V, TJVMK, TJVMV>>
         {
             IGenericSerDesFactory _factory;
-            IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
+            IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set => _factory = value; }
 
             public StandardLocalEnumerator(IGenericSerDesFactory factory, IJavaObject obj) : base(obj)
             {

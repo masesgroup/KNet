@@ -46,7 +46,7 @@ namespace MASES.KNet.Streams.State
               IAsyncEnumerator<KeyValue<K, V, TJVMK, TJVMV>>
         {
             IGenericSerDesFactory _factory = factory;
-            IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
+            IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set => _factory = value; }
 
             protected override object ConvertObject(object input)
             {
@@ -83,7 +83,7 @@ namespace MASES.KNet.Streams.State
             readonly ISerDes<K, TJVMK> _keySerDes = null;
             readonly ISerDes<V, TJVMV> _valueSerDes = null;
             IGenericSerDesFactory _factory;
-            IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
+            IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set => _factory = value; }
 
             public StandardLocalEnumerator(IGenericSerDesFactory factory,
                                            IJavaObject obj,

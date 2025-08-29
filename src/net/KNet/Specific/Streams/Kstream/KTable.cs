@@ -33,7 +33,7 @@ namespace MASES.KNet.Streams.Kstream
         readonly Org.Apache.Kafka.Streams.Kstream.KTable<TJVMK, TJVMV> _inner;
 
         IGenericSerDesFactory _factory;
-        IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
+        IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set => _factory = value; }
 
         internal KTable(IGenericSerDesFactory factory, Org.Apache.Kafka.Streams.Kstream.KTable<TJVMK, TJVMV> inner)
         {

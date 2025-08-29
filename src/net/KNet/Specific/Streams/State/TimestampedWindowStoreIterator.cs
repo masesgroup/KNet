@@ -30,7 +30,7 @@ namespace MASES.KNet.Streams.State
     {
         readonly Org.Apache.Kafka.Streams.State.WindowStoreIterator<Org.Apache.Kafka.Streams.State.ValueAndTimestamp<TJVMV>> _iterator;
         IGenericSerDesFactory _factory;
-        IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
+        IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set => _factory = value; }
 
         internal TimestampedWindowStoreIterator(IGenericSerDesFactory factory, Org.Apache.Kafka.Streams.State.WindowStoreIterator<Org.Apache.Kafka.Streams.State.ValueAndTimestamp<TJVMV>> iterator)
         {
