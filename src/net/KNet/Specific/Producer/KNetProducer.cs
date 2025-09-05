@@ -47,35 +47,41 @@ namespace MASES.KNet.Producer
         /// <summary>
         /// KNet version of <see cref="Producer{K, V}.Send(Org.Apache.Kafka.Clients.Producer.ProducerRecord{K, V})"/>
         /// </summary>
-        public Future<RecordMetadata> Send(ProducerRecord<K, V, TJVMK, TJVMV> record);
+        Future<RecordMetadata> Send(ProducerRecord<K, V, TJVMK, TJVMV> record);
         /// <summary>
         /// KNet version of <see cref="Producer{K, V}.Send(Org.Apache.Kafka.Clients.Producer.ProducerRecord{K, V}, Callback)"/>
         /// </summary>
-        public Future<RecordMetadata> Send(ProducerRecord<K, V, TJVMK, TJVMV> record, Callback callback);
+        Future<RecordMetadata> Send(ProducerRecord<K, V, TJVMK, TJVMV> record, Callback callback);
         /// <summary>
         /// KNet version of <see cref="Producer{K, V}.Send(Org.Apache.Kafka.Clients.Producer.ProducerRecord{K, V})"/>
         /// </summary>
-        void Send(string topic, int partition, long timestamp, K key, V value, Headers headers);
+        /// <remarks>Supports only <typeparamref name="TJVMK"/> and <typeparamref name="TJVMV"/> based on <see cref="byte"/> arrays or <see cref="Java.Nio.ByteBuffer"/></remarks>
+        Future<RecordMetadata> Send(string topic, int partition, long timestamp, K key, V value, Headers headers);
         /// <summary>
         /// KNet version of <see cref="Producer{K, V}.Send(Org.Apache.Kafka.Clients.Producer.ProducerRecord{K, V})"/>
         /// </summary>
-        void Send(string topic, int partition, long timestamp, K key, V value);
+        /// <remarks>Supports only <typeparamref name="TJVMK"/> and <typeparamref name="TJVMV"/> based on <see cref="byte"/> arrays or <see cref="Java.Nio.ByteBuffer"/></remarks>
+        Future<RecordMetadata> Send(string topic, int partition, long timestamp, K key, V value);
         /// <summary>
         /// KNet version of <see cref="Producer{K, V}.Send(Org.Apache.Kafka.Clients.Producer.ProducerRecord{K, V})"/>
         /// </summary>
-        void Send(string topic, int partition, K key, V value, Headers headers);
+        /// <remarks>Supports only <typeparamref name="TJVMK"/> and <typeparamref name="TJVMV"/> based on <see cref="byte"/> arrays or <see cref="Java.Nio.ByteBuffer"/></remarks>
+        Future<RecordMetadata> Send(string topic, int partition, K key, V value, Headers headers);
         /// <summary>
         /// KNet version of <see cref="Producer{K, V}.Send(Org.Apache.Kafka.Clients.Producer.ProducerRecord{K, V})"/>
         /// </summary>
-        void Send(string topic, int partition, K key, V value);
+        /// <remarks>Supports only <typeparamref name="TJVMK"/> and <typeparamref name="TJVMV"/> based on <see cref="byte"/> arrays or <see cref="Java.Nio.ByteBuffer"/></remarks>
+        Future<RecordMetadata> Send(string topic, int partition, K key, V value);
         /// <summary>
         /// KNet version of <see cref="Producer{K, V}.Send(Org.Apache.Kafka.Clients.Producer.ProducerRecord{K, V})"/>
         /// </summary>
-        void Send(string topic, K key, V value);
+        /// <remarks>Supports only <typeparamref name="TJVMK"/> and <typeparamref name="TJVMV"/> based on <see cref="byte"/> arrays or <see cref="Java.Nio.ByteBuffer"/></remarks>
+        Future<RecordMetadata> Send(string topic, K key, V value);
         /// <summary>
         /// KNet version of <see cref="Producer{K, V}.Send(Org.Apache.Kafka.Clients.Producer.ProducerRecord{K, V})"/>
         /// </summary>
-        void Send(string topic, V value);
+        /// <remarks>Supports only <typeparamref name="TJVMK"/> and <typeparamref name="TJVMV"/> based on <see cref="byte"/> arrays or <see cref="Java.Nio.ByteBuffer"/></remarks>
+        Future<RecordMetadata> Send(string topic, V value);
         /// <summary>
         /// KNet version of <see cref="Producer{K, V}.Send(Org.Apache.Kafka.Clients.Producer.ProducerRecord{K, V}, Callback)"/>
         /// </summary>
@@ -313,54 +319,56 @@ namespace MASES.KNet.Producer
         /// <inheritdoc cref="IProducer{K, V, TJVMK, TJVMV}.Send(ProducerRecord{K, V, TJVMK, TJVMV})"/>
         public Future<RecordMetadata> Send(ProducerRecord<K, V, TJVMK, TJVMV> record)
         {
-            Org.Apache.Kafka.Clients.Producer.ProducerRecord<TJVMK, TJVMV> kRecord = KNetProducer<K, V, TJVMK, TJVMV>.ToProducerRecord((Producer.ProducerRecord<K, V, TJVMK, TJVMV>)record, (ISerializer<K, TJVMK>)_keySerializer, (ISerializer<V, TJVMV>)_valueSerializer);
+            Org.Apache.Kafka.Clients.Producer.ProducerRecord<TJVMK, TJVMV> kRecord = null;
             try
             {
+                kRecord = KNetProducer<K, V, TJVMK, TJVMV>.ToProducerRecord(record, _keySerializer, _valueSerializer);
                 GC.SuppressFinalize(kRecord);
                 return Send(kRecord);
             }
-            finally { GC.ReRegisterForFinalize(kRecord); }
+            finally { if (kRecord != null) GC.ReRegisterForFinalize(kRecord); }
         }
         /// <inheritdoc cref="IProducer{K, V, TJVMK, TJVMV}.Send(ProducerRecord{K, V, TJVMK, TJVMV}, Callback)"/>
         public Future<RecordMetadata> Send(ProducerRecord<K, V, TJVMK, TJVMV> record, Callback callback)
         {
-            Org.Apache.Kafka.Clients.Producer.ProducerRecord<TJVMK, TJVMV> kRecord = KNetProducer<K, V, TJVMK, TJVMV>.ToProducerRecord((Producer.ProducerRecord<K, V, TJVMK, TJVMV>)record, (ISerializer<K, TJVMK>)_keySerializer, (ISerializer<V, TJVMV>)_valueSerializer);
+            Org.Apache.Kafka.Clients.Producer.ProducerRecord<TJVMK, TJVMV> kRecord = null;
             try
             {
+                kRecord = KNetProducer<K, V, TJVMK, TJVMV>.ToProducerRecord(record, _keySerializer, _valueSerializer);
                 GC.SuppressFinalize(kRecord);
                 return Send(kRecord, callback);
             }
-            finally { GC.ReRegisterForFinalize(kRecord); }
+            finally { if (kRecord != null) GC.ReRegisterForFinalize(kRecord); }
         }
         /// <inheritdoc cref="IProducer{K, V, TJVMK, TJVMV}.Send(string, int, long, K, V, Headers)"/>
-        public void Send(string topic, int partition, long timestamp, K key, V value, Headers headers)
+        public Future<RecordMetadata> Send(string topic, int partition, long timestamp, K key, V value, Headers headers)
         {
-            IExecute("send", topic, partition, timestamp, _keySerializer.SerializeWithHeaders(topic, headers, key), _valueSerializer.SerializeWithHeaders(topic, headers, value), headers);
+            return IExecute<Future<RecordMetadata>>("send", topic, partition, timestamp, _keySerializer.SerializeWithHeaders(topic, headers, key), _valueSerializer.SerializeWithHeaders(topic, headers, value), headers);
         }
         /// <inheritdoc cref="IProducer{K, V, TJVMK, TJVMV}.Send(string, int, long, K, V)"/>
-        public void Send(string topic, int partition, long timestamp, K key, V value)
+        public Future<RecordMetadata> Send(string topic, int partition, long timestamp, K key, V value)
         {
-            IExecute("send", topic, partition, timestamp, _keySerializer.Serialize(topic, key), _valueSerializer.Serialize(topic, value));
+            return IExecute<Future<RecordMetadata>>("send", topic, partition, timestamp, _keySerializer.Serialize(topic, key), _valueSerializer.Serialize(topic, value));
         }
         /// <inheritdoc cref="IProducer{K, V, TJVMK, TJVMV}.Send(string, int, K, V, Headers)"/>
-        public void Send(string topic, int partition, K key, V value, Headers headers)
+        public Future<RecordMetadata> Send(string topic, int partition, K key, V value, Headers headers)
         {
-            IExecute("send", topic, partition, _keySerializer.SerializeWithHeaders(topic, headers, key), _valueSerializer.SerializeWithHeaders(topic, headers, value), headers);
+            return IExecute<Future<RecordMetadata>>("send", topic, partition, _keySerializer.SerializeWithHeaders(topic, headers, key), _valueSerializer.SerializeWithHeaders(topic, headers, value), headers);
         }
         /// <inheritdoc cref="IProducer{K, V, TJVMK, TJVMV}.Send(string, int, K, V, Headers)"/>
-        public void Send(string topic, int partition, K key, V value)
+        public Future<RecordMetadata> Send(string topic, int partition, K key, V value)
         {
-            IExecute("send", topic, partition, _keySerializer.Serialize(topic, key), _valueSerializer.Serialize(topic, value));
+            return IExecute<Future<RecordMetadata>>("send", topic, partition, _keySerializer.Serialize(topic, key), _valueSerializer.Serialize(topic, value));
         }
         /// <inheritdoc cref="IProducer{K, V, TJVMK, TJVMV}.Send(string, K, V)"/>
-        public void Send(string topic, K key, V value)
+        public Future<RecordMetadata> Send(string topic, K key, V value)
         {
-            IExecute("send", topic, _keySerializer.Serialize(topic, key), _valueSerializer.Serialize(topic, value));
+            return IExecute<Future<RecordMetadata>>("send", topic, _keySerializer.Serialize(topic, key), _valueSerializer.Serialize(topic, value));
         }
         /// <inheritdoc cref="IProducer{K, V, TJVMK, TJVMV}.Send(string, V)"/>
-        public void Send(string topic, V value)
+        public Future<RecordMetadata> Send(string topic, V value)
         {
-            IExecute("send", topic, _valueSerializer.Serialize(topic, value));
+            return IExecute<Future<RecordMetadata>>("send", topic, _valueSerializer.Serialize(topic, value));
         }
         /// <inheritdoc cref="IProducer{K, V, TJVMK, TJVMV}.Produce(string, K, V, Action{RecordMetadata, JVMBridgeException})"/>
         public void Produce(string topic, K key, V value, Action<RecordMetadata, JVMBridgeException> action = null)

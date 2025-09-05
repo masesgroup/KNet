@@ -28,6 +28,7 @@ namespace MASES.KNet.Streams
     /// </summary>
     public class KNetStreams : IGenericSerDesFactoryApplier
     {
+        readonly Java.Util.Properties _properties;
         readonly Org.Apache.Kafka.Streams.KafkaStreams _inner;
         readonly KNetClientSupplier _supplier = null; // used to avoid GC recall
         IGenericSerDesFactory _factory;
@@ -47,7 +48,8 @@ namespace MASES.KNet.Streams
         /// <param name="arg2"><see cref="Org.Apache.Kafka.Common.Utils.Time"/></param>
         public KNetStreams(Topology arg0, StreamsConfigBuilder arg1, Org.Apache.Kafka.Common.Utils.Time arg2)
         {
-            _inner = new Org.Apache.Kafka.Streams.KafkaStreams(arg0, PrepareProperties(arg1), arg2);
+            _properties = PrepareProperties(arg1);
+            _inner = new Org.Apache.Kafka.Streams.KafkaStreams(arg0, _properties, arg2);
             _factory = arg1;
         }
         /// <summary>
@@ -59,7 +61,8 @@ namespace MASES.KNet.Streams
         /// <param name="arg3"><see cref="Org.Apache.Kafka.Common.Utils.Time"/></param>
         public KNetStreams(Topology arg0, StreamsConfigBuilder arg1, KNetClientSupplier arg2, Org.Apache.Kafka.Common.Utils.Time arg3)
         {
-            _inner = new Org.Apache.Kafka.Streams.KafkaStreams(arg0, PrepareProperties(arg1), arg2, arg3);
+            _properties = PrepareProperties(arg1);
+            _inner = new Org.Apache.Kafka.Streams.KafkaStreams(arg0, _properties, arg2, arg3);
             _factory = arg1;
             _supplier = arg2;
         }
@@ -71,7 +74,8 @@ namespace MASES.KNet.Streams
         /// <param name="arg2"><see cref="KNetClientSupplier"/></param>
         public KNetStreams(Topology arg0, StreamsConfigBuilder arg1, KNetClientSupplier arg2)
         {
-            _inner = new Org.Apache.Kafka.Streams.KafkaStreams(arg0, PrepareProperties(arg1), arg2);
+            _properties = PrepareProperties(arg1);
+            _inner = new Org.Apache.Kafka.Streams.KafkaStreams(arg0, _properties, arg2);
             _factory = arg1;
             _supplier = arg2;
         }
@@ -82,7 +86,8 @@ namespace MASES.KNet.Streams
         /// <param name="arg1"><see cref="StreamsConfigBuilder"/></param>
         public KNetStreams(Topology arg0, StreamsConfigBuilder arg1)
         {
-            _inner = new Org.Apache.Kafka.Streams.KafkaStreams(arg0, PrepareProperties(arg1));
+            _properties = PrepareProperties(arg1);
+            _inner = new Org.Apache.Kafka.Streams.KafkaStreams(arg0, _properties);
             _factory = arg1;
         }
         #endregion
@@ -102,7 +107,7 @@ namespace MASES.KNet.Streams
         /// <returns><see cref="Java.Util.Properties"/> used from underlying <see cref="Org.Apache.Kafka.Streams.KafkaStreams"/></returns>
         protected virtual Java.Util.Properties PrepareProperties(StreamsConfigBuilder builder)
         {
-            return OverrideProperties != null ? OverrideProperties(builder) : builder;
+            return OverrideProperties != null ? OverrideProperties(builder) : builder.ToProperties();
         }
 
         #region Instance methods
