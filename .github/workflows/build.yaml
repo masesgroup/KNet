@@ -280,7 +280,7 @@ jobs:
         if: ${{ success() && inputs.UseLastRepositoryBuild == true }}
         run: dotnet nuget add source --name local "${{ github.workspace }}/JNetNuGet/"
 
-      - uses: actions/setup-dotnet@v4
+      - uses: actions/setup-dotnet@v5
         with:
           dotnet-version: |
             9.x
@@ -404,7 +404,7 @@ jobs:
           java-version: ${{ matrix.jdk_version }}
           check-latest: true
 
-      - uses: actions/setup-dotnet@v4
+      - uses: actions/setup-dotnet@v5
         if: ${{ matrix.framework == 'net9.0' }}
         with:
           dotnet-version: |
@@ -593,7 +593,7 @@ jobs:
           java-version: ${{ matrix.jdk_version }}
           check-latest: true
 
-      - uses: actions/setup-dotnet@v4
+      - uses: actions/setup-dotnet@v5
         if: ${{ matrix.os == 'macos-latest' && matrix.framework == 'net9.0' }}
         with:
           dotnet-version: |
