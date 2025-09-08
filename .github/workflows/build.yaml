@@ -373,7 +373,7 @@ jobs:
           java-version: ${{ matrix.jdk_version }}
           check-latest: true
 
-      - uses: actions/setup-dotnet@v4
+      - uses: actions/setup-dotnet@v5
         if: ${{ matrix.framework == 'net6.0' }}
         with:
           dotnet-version: |
@@ -451,7 +451,7 @@ jobs:
           java-version: ${{ matrix.jdk_version }}
           check-latest: true
 
-      - uses: actions/setup-dotnet@v4
+      - uses: actions/setup-dotnet@v5
         if: ${{ matrix.framework == 'net6.0' }}
         with:
           dotnet-version: |
