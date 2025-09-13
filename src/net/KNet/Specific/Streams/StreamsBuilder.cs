@@ -31,7 +31,7 @@ namespace MASES.KNet.Streams
     {
         Org.Apache.Kafka.Streams.StreamsBuilder _builder;
         IGenericSerDesFactory _factory;
-        IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
+        IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set => _factory = value; }
         #region Constructors
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/StreamsBuilder.html#%3Cinit%3E()"/>

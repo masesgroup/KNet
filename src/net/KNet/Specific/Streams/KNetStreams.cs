@@ -32,7 +32,7 @@ namespace MASES.KNet.Streams
         readonly Org.Apache.Kafka.Streams.KafkaStreams _inner;
         readonly KNetClientSupplier _supplier = null; // used to avoid GC recall
         IGenericSerDesFactory _factory;
-        IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
+        IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set => _factory = value; }
 
         Org.Apache.Kafka.Streams.Processor.StateRestoreListener _stateRestoreListener; // used to avoid GC recall
         Org.Apache.Kafka.Streams.Processor.StandbyUpdateListener _standbyUpdateListener; // used to avoid GC recall

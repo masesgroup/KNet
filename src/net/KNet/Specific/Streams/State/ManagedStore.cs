@@ -48,7 +48,7 @@ namespace MASES.KNet.Streams.State
         protected TStore Store => _store ?? throw new InvalidOperationException($"The {typeof(TStore).FullName} instance was not set.");
 
         IGenericSerDesFactory _factory;
-        IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
+        IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set => _factory = value; }
         /// <summary>
         /// Returns the current <see cref="IGenericSerDesFactory"/>
         /// </summary>

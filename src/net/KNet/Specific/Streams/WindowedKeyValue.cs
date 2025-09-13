@@ -36,7 +36,7 @@ namespace MASES.KNet.Streams
         bool _valueStored;
         ISerDes<V, TJVMV> _valueSerDes = null;
         IGenericSerDesFactory _factory;
-        IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
+        IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set => _factory = value; }
 
         internal WindowedKeyValue(IGenericSerDesFactory factory,
                                   KeyValueSupport<Org.Apache.Kafka.Streams.Kstream.Windowed<TJVMK>, TJVMV> value,

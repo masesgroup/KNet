@@ -37,7 +37,7 @@ namespace MASES.KNet.Streams
         ValueAndTimestamp<V, TJVMV> _value = null;
         ISerDes<K, TJVMK> _keySerDes = null;
         IGenericSerDesFactory _factory;
-        IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
+        IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set => _factory = value; }
 
         internal TimestampedKeyValue(IGenericSerDesFactory factory,
                                      KeyValueSupport<TJVMK, Org.Apache.Kafka.Streams.State.ValueAndTimestamp<TJVMV>> value,
