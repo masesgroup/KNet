@@ -32,7 +32,7 @@ namespace MASES.KNet.Streams.Kstream
     {
         readonly Org.Apache.Kafka.Streams.Kstream.TableJoined<TJVMK, TJVMKO> _inner;
         IGenericSerDesFactory _factory;
-        IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
+        IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set => _factory = value; }
 
         internal TableJoined(Org.Apache.Kafka.Streams.Kstream.TableJoined<TJVMK, TJVMKO> inner)
         {

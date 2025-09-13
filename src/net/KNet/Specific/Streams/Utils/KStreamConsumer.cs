@@ -32,7 +32,7 @@ namespace MASES.KNet.Streams.Utils
     public class KStreamConsumer<K, V, TJVMK, TJVMV> : Java.Util.Function.Consumer<Org.Apache.Kafka.Streams.Kstream.KStream<TJVMK, TJVMV>>, IGenericSerDesFactoryApplier
     {
         IGenericSerDesFactory _factory;
-        IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
+        IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set => _factory = value; }
 
         /// <summary>
         /// The <see cref="Func{V, KO}"/> to be executed
