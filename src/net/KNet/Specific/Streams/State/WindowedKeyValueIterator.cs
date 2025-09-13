@@ -46,7 +46,7 @@ namespace MASES.KNet.Streams.State
               IAsyncEnumerator<WindowedKeyValue<K, V, TJVMK, TJVMV>>
         {
             IGenericSerDesFactory _factory = factory;
-            IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
+            IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set => _factory = value; }
 
             protected override object ConvertObject(object input)
             {
@@ -82,7 +82,7 @@ namespace MASES.KNet.Streams.State
         {
             ISerDes<V, TJVMV> _valueSerDes = null;
             IGenericSerDesFactory _factory;
-            IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
+            IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set => _factory = value; }
 
             public StandardLocalEnumerator(IGenericSerDesFactory factory,
                                            IJavaObject obj,
@@ -152,7 +152,7 @@ namespace MASES.KNet.Streams.State
             IGenericSerDesFactory factory = Factory;
             _valueSerDes ??= factory?.BuildValueSerDes<V, TJVMV>();
             var kv = _iterator.Next();
-            return new WindowedKeyValue<K, V, TJVMK, TJVMV>(factory, new KeyValueSupport<Org.Apache.Kafka.Streams.Kstream.Windowed<TJVMK>, TJVMV>(kv.BridgeInstance), _valueSerDes, false);
+            return new WindowedKeyValue<K, V, TJVMK, TJVMV>(factory, new KeyValueSupport<Org.Apache.Kafka.Streams.Kstream.Windowed<TJVMK>, TJVMV>(kv), _valueSerDes, false);
         }
         /// <summary>
         /// <see href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Iterator.html#remove()"/>

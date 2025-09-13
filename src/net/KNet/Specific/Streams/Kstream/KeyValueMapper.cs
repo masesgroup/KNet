@@ -42,7 +42,7 @@ namespace MASES.KNet.Streams.Kstream
         /// <see cref="IGenericSerDesFactory"/> can be used from any class inherited from <see cref="KeyValueMapper{K, V, VR, TJVMK, TJVMV, TJVMVR}"/>
         /// </summary>
         IGenericSerDesFactory _factory;
-        IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
+        IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set => _factory = value; }
         /// <summary>
         /// Returns the current <see cref="IGenericSerDesFactory"/>
         /// </summary>

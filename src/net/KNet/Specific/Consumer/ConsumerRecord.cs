@@ -33,7 +33,7 @@ namespace MASES.KNet.Consumer
         IDeserializer<V, TJVMV> _valueDeserializer;
         readonly Org.Apache.Kafka.Clients.Consumer.ConsumerRecord<TJVMK, TJVMV> _record;
         IGenericSerDesFactory _factory;
-        IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
+        IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set => _factory = value; }
         /// <summary>
         /// Initialize a new <see cref="ConsumerRecord{K, V, TJVMK, TJVMV}"/>
         /// </summary>

@@ -30,7 +30,7 @@ namespace MASES.KNet.Streams.Kstream
         readonly Org.Apache.Kafka.Streams.Kstream.Windowed<TJVMK> _inner;
         ISerDes<K, TJVMK> _keySerDes = null;
         IGenericSerDesFactory _factory;
-        IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
+        IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set => _factory = value; }
 
         internal Windowed(IGenericSerDesFactory factory, Org.Apache.Kafka.Streams.Kstream.Windowed<TJVMK> windowed)
         {
