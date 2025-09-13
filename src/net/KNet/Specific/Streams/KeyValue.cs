@@ -37,7 +37,7 @@ namespace MASES.KNet.Streams
         ISerDes<K, TJVMK> _keySerDes = null;
         ISerDes<V, TJVMV> _valueSerDes = null;
         IGenericSerDesFactory _factory;
-        IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
+        IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set => _factory = value; }
 
         internal KeyValue(IGenericSerDesFactory factory,
                           KeyValueSupport<TJVMK, TJVMV> value,

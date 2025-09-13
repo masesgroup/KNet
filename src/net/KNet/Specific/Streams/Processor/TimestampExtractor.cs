@@ -37,7 +37,7 @@ namespace MASES.KNet.Streams.Processor
         ISerDes<K, TJVMK> _keySerializer = null;
         ISerDes<V, TJVMV> _valueSerializer = null;
         IGenericSerDesFactory _factory;
-        IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
+        IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set => _factory = value; }
         /// <summary>
         /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/TimestampExtractor.html#extract(org.apache.kafka.clients.consumer.ConsumerRecord,long)"/>
         /// </summary>

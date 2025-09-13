@@ -29,7 +29,7 @@ namespace MASES.KNet.Streams
     {
         readonly Org.Apache.Kafka.Streams.Topology _topology;
         IGenericSerDesFactory _factory;
-        IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
+        IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set => _factory = value; }
         #region Constructors
         /// <inheritdoc/>
         public Topology(IGenericSerDesFactory factory) : base() { _factory = factory; _topology = new Org.Apache.Kafka.Streams.Topology(); }

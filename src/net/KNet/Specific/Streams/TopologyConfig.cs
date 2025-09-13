@@ -28,7 +28,7 @@ namespace MASES.KNet.Streams
     {
         readonly Org.Apache.Kafka.Streams.TopologyConfig _inner;
         IGenericSerDesFactory _factory;
-        IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
+        IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set => _factory = value; }
         #region Constructors
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/TopologyConfig.html#%3Cinit%3E(java.lang.String,org.apache.kafka.streams.StreamsConfig,java.util.Properties)"/>

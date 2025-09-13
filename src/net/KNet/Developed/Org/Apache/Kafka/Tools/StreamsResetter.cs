@@ -70,7 +70,13 @@ namespace Org.Apache.Kafka.Tools
 
             string[] parameters = strings.ToArray();
 
-            return new StreamsResetter().Execute(parameters.ToJVMArray<Java.Lang.String, string>()) == 0;
+            StreamsResetter resetter = new();
+            Java.Lang.String[] args = parameters.ToJVMArray<Java.Lang.String, string>();
+            try
+            {
+                return resetter.Execute(args) == 0;
+            }
+            finally { resetter.Dispose(); }
         }
     }
     #endregion

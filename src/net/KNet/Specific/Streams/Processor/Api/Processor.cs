@@ -35,7 +35,7 @@ namespace MASES.KNet.Streams.Processor.Api
     public abstract class Processor<KIn, VIn, KOut, VOut, TJVMKIn, TJVMVIn, TJVMKOut, TJVMVOut> : Org.Apache.Kafka.Streams.Processor.Api.Processor<TJVMKIn, TJVMVIn, TJVMKOut, TJVMVOut>, IGenericSerDesFactoryApplier
     {
         IGenericSerDesFactory _factory;
-        IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
+        IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set => _factory = value; }
         /// <summary>
         /// Returns the current <see cref="IGenericSerDesFactory"/>
         /// </summary>
