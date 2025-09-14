@@ -258,6 +258,8 @@ The configuration is:
     "org.apache.kafka.connect.util.ConnectorTaskId",
     "org.apache.kafka.connect.util.SharedTopicAdmin",
     "org.apache.kafka.raft.LogAppendInfo",
+    "org.apache.kafka.raft.SegmentPosition",
+    "org.apache.kafka.snapshot.SnapshotPath",
     "org.apache.kafka.streams.kstream.NamedOperation",
     "org.apache.kafka.streams.kstream.TransformerSupplier",
     "org.apache.kafka.streams.kstream.ValueMapperWithKeySupplier",
@@ -269,16 +271,15 @@ The configuration is:
     "org.apache.kafka.tools.ThroughputThrottler",
     "org.apache.kafka.tools.VerifiableConsumer$RecordData",
     "org.apache.kafka.tools.VerifiableConsumer$RecordsConsumed",
-    "org.apache.kafka.tools.reassign.LogDirMoveState",
-    "org.apache.kafka.tools.reassign.PartitionReassignmentState",
-    "org.apache.zookeeper.ZooKeeperMainWithTlsSupportForKafka",
-    "org.apache.zookeeper.server.quorum.QuorumPeerMain",
     "org.apache.kafka.tools.consumer.CoordinatorRecordMessageFormatter",
     "org.apache.kafka.tools.consumer.GroupMetadataMessageFormatter",
     "org.apache.kafka.tools.consumer.OffsetsMessageFormatter",
     "org.apache.kafka.tools.consumer.ShareGroupMessageFormatter",
     "org.apache.kafka.tools.consumer.TransactionLogMessageFormatter",
-    "org.apache.kafka.tools.consumer.group.share.ShareGroupStateMessageFormatter"
+    "org.apache.kafka.tools.consumer.group.share.ShareGroupStateMessageFormatter",
+    "org.apache.kafka.tools.reassign.LogDirMoveState",
+    "org.apache.kafka.tools.reassign.PartitionReassignmentState",
+    "org.apache.kafka.tools.streams.StreamsGroupCommand$OffsetsInfo"
   ]
 }
 ```
