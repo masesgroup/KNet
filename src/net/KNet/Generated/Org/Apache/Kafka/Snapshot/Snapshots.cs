@@ -89,15 +89,6 @@ namespace Org.Apache.Kafka.Snapshot
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/snapshot/Snapshots.html#parse(java.nio.file.Path)"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="Java.Nio.File.Path"/></param>
-        /// <returns><see cref="Java.Util.Optional"/></returns>
-        public static Java.Util.Optional<Org.Apache.Kafka.Snapshot.SnapshotPath> Parse(Java.Nio.File.Path arg0)
-        {
-            return SExecuteWithSignature<Java.Util.Optional<Org.Apache.Kafka.Snapshot.SnapshotPath>>(LocalBridgeClazz, "parse", "(Ljava/nio/file/Path;)Ljava/util/Optional;", arg0);
-        }
-        /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/snapshot/Snapshots.html#lastContainedLogTimestamp(org.apache.kafka.snapshot.RawSnapshotReader,org.apache.kafka.common.utils.LogContext)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Snapshot.RawSnapshotReader"/></param>

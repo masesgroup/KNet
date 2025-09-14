@@ -56,42 +56,7 @@ namespace Org.Apache.Kafka.Tools.Streams
         public override bool IsBridgeStatic => false;
 
         // TODO: complete the class
-        #region OffsetsInfo declaration
-        /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/streams/StreamsGroupCommand.OffsetsInfo.html"/>
-        /// </summary>
-        public partial class OffsetsInfo : Java.Lang.Record
-        {
-            const string _bridgeClassName = "org.apache.kafka.tools.streams.StreamsGroupCommand$OffsetsInfo";
-            /// <summary>
-            /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
-            /// </summary>
-            public OffsetsInfo() { }
-            /// <summary>
-            /// Generic constructor: it is useful for JCOBridge when there is a derived class which needs to pass arguments to the highest JVMBridgeBase class
-            /// </summary>
-            public OffsetsInfo(params object[] args) : base(args) { }
 
-            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, false);
-            private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
-
-            /// <inheritdoc/>
-            public override string BridgeClassName => _bridgeClassName;
-            /// <inheritdoc/>
-            public override bool IsBridgeAbstract => false;
-            /// <inheritdoc/>
-            public override bool IsBridgeCloseable => false;
-            /// <inheritdoc/>
-            public override bool IsBridgeInterface => false;
-            /// <inheritdoc/>
-            public override bool IsBridgeStatic => true;
-
-            // TODO: complete the class
-
-        }
-        #endregion
-
-    
     }
     #endregion
 
@@ -144,81 +109,7 @@ namespace Org.Apache.Kafka.Tools.Streams
         #endregion
 
         #region Nested classes
-        #region OffsetsInfo implementation
-        public partial class OffsetsInfo
-        {
-            #region Constructors
-            /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/streams/StreamsGroupCommand.OffsetsInfo.html#%3Cinit%3E(java.util.Optional,java.util.Optional,java.lang.Long,java.lang.Long)"/>
-            /// </summary>
-            /// <param name="currentOffset"><see cref="Java.Util.Optional"/></param>
-            /// <param name="leaderEpoch"><see cref="Java.Util.Optional"/></param>
-            /// <param name="logEndOffset"><see cref="Java.Lang.Long"/></param>
-            /// <param name="lag"><see cref="Java.Lang.Long"/></param>
-            public OffsetsInfo(Java.Util.Optional<Java.Lang.Long> currentOffset, Java.Util.Optional<Java.Lang.Integer> leaderEpoch, Java.Lang.Long logEndOffset, Java.Lang.Long lag)
-                : base(currentOffset, leaderEpoch, logEndOffset, lag)
-            {
-            }
 
-            #endregion
-
-            #region Class/Interface conversion operators
-
-            #endregion
-
-            #region Fields
-
-            #endregion
-
-            #region Static methods
-
-            #endregion
-
-            #region Instance methods
-            /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/streams/StreamsGroupCommand.OffsetsInfo.html#lag()"/>
-            /// </summary>
-            /// <returns><see cref="Java.Lang.Long"/></returns>
-            public Java.Lang.Long Lag()
-            {
-                return IExecuteWithSignature<Java.Lang.Long>("lag", "()Ljava/lang/Long;");
-            }
-            /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/streams/StreamsGroupCommand.OffsetsInfo.html#logEndOffset()"/>
-            /// </summary>
-            /// <returns><see cref="Java.Lang.Long"/></returns>
-            public Java.Lang.Long LogEndOffset()
-            {
-                return IExecuteWithSignature<Java.Lang.Long>("logEndOffset", "()Ljava/lang/Long;");
-            }
-            /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/streams/StreamsGroupCommand.OffsetsInfo.html#leaderEpoch()"/>
-            /// </summary>
-            /// <returns><see cref="Java.Util.Optional"/></returns>
-            public Java.Util.Optional<Java.Lang.Integer> LeaderEpoch()
-            {
-                return IExecuteWithSignature<Java.Util.Optional<Java.Lang.Integer>>("leaderEpoch", "()Ljava/util/Optional;");
-            }
-            /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/streams/StreamsGroupCommand.OffsetsInfo.html#currentOffset()"/>
-            /// </summary>
-            /// <returns><see cref="Java.Util.Optional"/></returns>
-            public Java.Util.Optional<Java.Lang.Long> CurrentOffset()
-            {
-                return IExecuteWithSignature<Java.Util.Optional<Java.Lang.Long>>("currentOffset", "()Ljava/util/Optional;");
-            }
-
-            #endregion
-
-            #region Nested classes
-
-            #endregion
-
-            // TODO: complete the class
-        }
-        #endregion
-
-    
         #endregion
 
         // TODO: complete the class
