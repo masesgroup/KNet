@@ -81,14 +81,27 @@ public final class ProducerInterceptor implements org.mases.jcobridge.IJCListene
         raiseEvent("close", eventDataExchange); if (!eventDataExchange.getHasOverride()) throw new UnsupportedOperationException("The method shall be implemented in .NET side since does not have a default implementation within the JVM");
     }
     //@Override
-    public void onAcknowledgement(org.apache.kafka.clients.producer.RecordMetadata arg0, java.lang.Exception arg1) {
-        org.mases.jnet.developed.JNetEventResult eventDataExchange = new org.mases.jnet.developed.JNetEventResult();
-        raiseEvent("onAcknowledgement", eventDataExchange, arg0, arg1); if (!eventDataExchange.getHasOverride()) throw new UnsupportedOperationException("The method shall be implemented in .NET side since does not have a default implementation within the JVM");
-    }
-    //@Override
     public void configure(java.util.Map arg0) {
         org.mases.jnet.developed.JNetEventResult eventDataExchange = new org.mases.jnet.developed.JNetEventResult();
         raiseEvent("configure", eventDataExchange, arg0); if (!eventDataExchange.getHasOverride()) throw new UnsupportedOperationException("The method shall be implemented in .NET side since does not have a default implementation within the JVM");
+    }
+    //@Override
+    public void onAcknowledgement(org.apache.kafka.clients.producer.RecordMetadata arg0, java.lang.Exception arg1, org.apache.kafka.common.header.Headers arg2) {
+        org.mases.jnet.developed.JNetEventResult eventDataExchange = new org.mases.jnet.developed.JNetEventResult();
+        raiseEvent("onAcknowledgement", eventDataExchange, arg0, arg1, arg2); if (!eventDataExchange.getHasOverride()) org.apache.kafka.clients.producer.ProducerInterceptor.super.onAcknowledgement(arg0, arg1, arg2);
+    }
+    //@Override
+    public void onAcknowledgementDefault(org.apache.kafka.clients.producer.RecordMetadata arg0, java.lang.Exception arg1, org.apache.kafka.common.header.Headers arg2) {
+        org.apache.kafka.clients.producer.ProducerInterceptor.super.onAcknowledgement(arg0, arg1, arg2);
+    }
+    //@Override
+    public void onAcknowledgement(org.apache.kafka.clients.producer.RecordMetadata arg0, java.lang.Exception arg1) {
+        org.mases.jnet.developed.JNetEventResult eventDataExchange = new org.mases.jnet.developed.JNetEventResult();
+        raiseEvent("onAcknowledgement2", eventDataExchange, arg0, arg1); if (!eventDataExchange.getHasOverride()) org.apache.kafka.clients.producer.ProducerInterceptor.super.onAcknowledgement(arg0, arg1);
+    }
+    //@Override
+    public void onAcknowledgementDefault(org.apache.kafka.clients.producer.RecordMetadata arg0, java.lang.Exception arg1) {
+        org.apache.kafka.clients.producer.ProducerInterceptor.super.onAcknowledgement(arg0, arg1);
     }
 
 }

@@ -520,20 +520,6 @@ namespace MASES.KNet.Extensions
             return await Execute(admin.DescribeConsumerGroups, groupIds.ToJVMCollection<Java.Lang.String, string>());
         }
         /// <summary>
-        /// Async version of <see cref="IAdmin.ListConsumerGroups(ListConsumerGroupsOptions)"/>
-        /// </summary>
-        public static async Task<ListConsumerGroupsResult> ListConsumerGroupsAsync(this IAdmin admin, ListConsumerGroupsOptions options)
-        {
-            return await Execute(admin.ListConsumerGroups, options);
-        }
-        /// <summary>
-        /// Async version of <see cref="IAdmin.ListConsumerGroups()"/>
-        /// </summary>
-        public static async Task<ListConsumerGroupsResult> ListConsumerGroupsAsync(this IAdmin admin)
-        {
-            return await Execute(admin.ListConsumerGroups);
-        }
-        /// <summary>
         /// Async version of <see cref="IAdmin.ListConsumerGroupOffsets(Java.Lang.String, ListConsumerGroupOffsetsOptions)"/>
         /// </summary>
         public static async Task<ListConsumerGroupOffsetsResult> ListConsumerGroupOffsetsAsync(this IAdmin admin, string groupId, ListConsumerGroupOffsetsOptions options)
