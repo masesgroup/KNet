@@ -93,6 +93,19 @@ namespace MASES.KNet.Streams
             return clone;
         }
         /// <summary>
+        /// Manages <see cref="StreamsConfig.DEFAULT_GROUP_PROTOCOL"/>
+        /// </summary>
+        public string DefaultGroupProtocol { get { return GetProperty<string>(StreamsConfig.DEFAULT_GROUP_PROTOCOL); } set { SetProperty(StreamsConfig.DEFAULT_GROUP_PROTOCOL, value); } }
+        /// <summary>
+        /// Manages <see cref="StreamsConfig.DEFAULT_GROUP_PROTOCOL"/>
+        /// </summary>
+        public StreamsConfigBuilder WithDefaultGroupProtocol(string defaultGroupProtocol)
+        {
+            var clone = Clone();
+            clone.DefaultGroupProtocol = defaultGroupProtocol;
+            return clone;
+        }
+        /// <summary>
         /// Manages <see cref="StreamsConfig.DEFAULT_KEY_SERDE_CLASS_CONFIG"/>
         /// </summary>
         public Java.Lang.Class DefaultKeySerdeClass { get { return GetProperty<Java.Lang.Class>(StreamsConfig.DEFAULT_KEY_SERDE_CLASS_CONFIG); } set { SetProperty(StreamsConfig.DEFAULT_KEY_SERDE_CLASS_CONFIG, value); } }
@@ -171,6 +184,19 @@ namespace MASES.KNet.Streams
             return clone;
         }
         /// <summary>
+        /// Manages <see cref="StreamsConfig.ENSURE_EXPLICIT_INTERNAL_RESOURCE_NAMING_CONFIG"/>
+        /// </summary>
+        public bool EnsureExplicitInternalResourceNaming { get { return GetProperty<bool>(StreamsConfig.ENSURE_EXPLICIT_INTERNAL_RESOURCE_NAMING_CONFIG); } set { SetProperty(StreamsConfig.ENSURE_EXPLICIT_INTERNAL_RESOURCE_NAMING_CONFIG, value); } }
+        /// <summary>
+        /// Manages <see cref="StreamsConfig.ENSURE_EXPLICIT_INTERNAL_RESOURCE_NAMING_CONFIG"/>
+        /// </summary>
+        public StreamsConfigBuilder WithEnsureExplicitInternalResourceNaming(bool ensureExplicitInternalResourceNaming)
+        {
+            var clone = Clone();
+            clone.EnsureExplicitInternalResourceNaming = ensureExplicitInternalResourceNaming;
+            return clone;
+        }
+        /// <summary>
         /// Manages <see cref="StreamsConfig.PROCESSING_GUARANTEE_CONFIG"/>: use <see cref="StreamsConfig.AT_LEAST_ONCE"/> or <see cref="StreamsConfig.EXACTLY_ONCE_V2"/>
         /// </summary>
         public string ProcessingGuarantee { get { return GetProperty<string>(StreamsConfig.PROCESSING_GUARANTEE_CONFIG); } set { SetProperty(StreamsConfig.PROCESSING_GUARANTEE_CONFIG, value); } }
@@ -183,6 +209,20 @@ namespace MASES.KNet.Streams
             clone.ProcessingGuarantee = processingGuarantee;
             return clone;
         }
+        /// <summary>
+        /// Manages <see cref="StreamsConfig.GROUP_PROTOCOL_CONFIG"/>
+        /// </summary>
+        public string GroupProtocol { get { return GetProperty<string>(StreamsConfig.GROUP_PROTOCOL_CONFIG); } set { SetProperty(StreamsConfig.GROUP_PROTOCOL_CONFIG, value); } }
+        /// <summary>
+        /// Manages <see cref="StreamsConfig.GROUP_PROTOCOL_CONFIG"/>
+        /// </summary>
+        public StreamsConfigBuilder WithGroupProtocol(string groupProtocol)
+        {
+            var clone = Clone();
+            clone.GroupProtocol = groupProtocol;
+            return clone;
+        }
+
         /// <summary>
         /// Manages <see cref="StreamsConfig.RACK_AWARE_ASSIGNMENT_NON_OVERLAP_COST_CONFIG"/>
         /// </summary>
@@ -418,19 +458,6 @@ namespace MASES.KNet.Streams
             return clone;
         }
         /// <summary>
-        /// Manages <see cref="StreamsConfig.WINDOWED_INNER_CLASS_SERDE"/>
-        /// </summary>
-        public string WindowedInnerClassSerde { get { return GetProperty<string>(StreamsConfig.WINDOWED_INNER_CLASS_SERDE); } set { SetProperty(StreamsConfig.WINDOWED_INNER_CLASS_SERDE, value); } }
-        /// <summary>
-        /// Manages <see cref="StreamsConfig.WINDOWED_INNER_CLASS_SERDE"/>
-        /// </summary>
-        public StreamsConfigBuilder WithWindowedInnerClassSerde(string windowedInnerClassSerde)
-        {
-            var clone = Clone();
-            clone.WindowedInnerClassSerde = windowedInnerClassSerde;
-            return clone;
-        }
-        /// <summary>
         /// Manages <see cref="StreamsConfig.WINDOW_STORE_CHANGE_LOG_ADDITIONAL_RETENTION_MS_CONFIG"/>
         /// </summary>
         public long WindowStoreChangeLogAdditionalRetentionMs { get { return GetProperty<long>(StreamsConfig.WINDOW_STORE_CHANGE_LOG_ADDITIONAL_RETENTION_MS_CONFIG); } set { SetProperty(StreamsConfig.WINDOW_STORE_CHANGE_LOG_ADDITIONAL_RETENTION_MS_CONFIG, value); } }
@@ -441,19 +468,6 @@ namespace MASES.KNet.Streams
         {
             var clone = Clone();
             clone.WindowStoreChangeLogAdditionalRetentionMs = windowStoreChangeLogAdditionalRetentionMs;
-            return clone;
-        }
-        /// <summary>
-        /// Manages <see cref="StreamsConfig.WINDOW_SIZE_MS_CONFIG"/>
-        /// </summary>
-        public long WindowSizeMs { get { return GetProperty<long>(StreamsConfig.WINDOW_SIZE_MS_CONFIG); } set { SetProperty(StreamsConfig.WINDOW_SIZE_MS_CONFIG, value); } }
-        /// <summary>
-        /// Manages <see cref="StreamsConfig.WINDOW_SIZE_MS_CONFIG"/>
-        /// </summary>
-        public StreamsConfigBuilder WithWindowSizeMs(long windowSizeMs)
-        {
-            var clone = Clone();
-            clone.WindowSizeMs = windowSizeMs;
             return clone;
         }
     }
