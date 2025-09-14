@@ -191,7 +191,6 @@ The configuration is:
     "org.apache.kafka.common.serialization.Deserializer",
     "org.apache.kafka.common.serialization.Serde",
     "org.apache.kafka.common.serialization.Serializer",
-    "org.apache.kafka.raft.LogAppendInfo",
     "org.apache.kafka.streams.KafkaClientSupplier",
     "org.apache.kafka.streams.errors.StreamsUncaughtExceptionHandler",
     "org.apache.kafka.streams.kstream.Aggregator",
@@ -215,13 +214,7 @@ The configuration is:
     "org.apache.kafka.streams.processor.TopicNameExtractor",
     "org.apache.kafka.streams.processor.StreamPartitioner",
     "org.apache.kafka.streams.processor.api.FixedKeyProcessor",
-    "org.apache.kafka.streams.processor.api.Processor",
-    "org.apache.kafka.tools.consumer.CoordinatorRecordMessageFormatter",
-    "org.apache.kafka.tools.consumer.GroupMetadataMessageFormatter",
-    "org.apache.kafka.tools.consumer.OffsetsMessageFormatter",
-    "org.apache.kafka.tools.consumer.ShareGroupMessageFormatter",
-    "org.apache.kafka.tools.consumer.TransactionLogMessageFormatter",
-    "org.apache.kafka.tools.consumer.group.share.ShareGroupStateMessageFormatter"
+    "org.apache.kafka.streams.processor.api.Processor"
   ],
   "ClassesManuallyDeveloped": [
     "org.apache.kafka.streams.processor.api.FixedKeyProcessorSupplier",
@@ -264,6 +257,7 @@ The configuration is:
     "org.apache.kafka.connect.storage.SimpleHeaderConverter",
     "org.apache.kafka.connect.util.ConnectorTaskId",
     "org.apache.kafka.connect.util.SharedTopicAdmin",
+    "org.apache.kafka.raft.LogAppendInfo",
     "org.apache.kafka.streams.kstream.NamedOperation",
     "org.apache.kafka.streams.kstream.TransformerSupplier",
     "org.apache.kafka.streams.kstream.ValueMapperWithKeySupplier",
@@ -278,7 +272,13 @@ The configuration is:
     "org.apache.kafka.tools.reassign.LogDirMoveState",
     "org.apache.kafka.tools.reassign.PartitionReassignmentState",
     "org.apache.zookeeper.ZooKeeperMainWithTlsSupportForKafka",
-    "org.apache.zookeeper.server.quorum.QuorumPeerMain"
+    "org.apache.zookeeper.server.quorum.QuorumPeerMain",
+    "org.apache.kafka.tools.consumer.CoordinatorRecordMessageFormatter",
+    "org.apache.kafka.tools.consumer.GroupMetadataMessageFormatter",
+    "org.apache.kafka.tools.consumer.OffsetsMessageFormatter",
+    "org.apache.kafka.tools.consumer.ShareGroupMessageFormatter",
+    "org.apache.kafka.tools.consumer.TransactionLogMessageFormatter",
+    "org.apache.kafka.tools.consumer.group.share.ShareGroupStateMessageFormatter"
   ]
 }
 ```

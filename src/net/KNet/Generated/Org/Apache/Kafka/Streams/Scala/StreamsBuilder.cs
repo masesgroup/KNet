@@ -173,7 +173,7 @@ namespace Org.Apache.Kafka.Streams.Scala
         /// <typeparam name="K"></typeparam>
         /// <typeparam name="V"></typeparam>
         /// <returns><see cref="Org.Apache.Kafka.Streams.StreamsBuilder"/></returns>
-        public Org.Apache.Kafka.Streams.StreamsBuilder AddGlobalStore<StoreBuilderExtendsOrg_Apache_Kafka_Streams_Processor_StateStore, K, V>(Org.Apache.Kafka.Streams.State.StoreBuilder<StoreBuilderExtendsOrg_Apache_Kafka_Streams_Processor_StateStore> storeBuilder, Java.Lang.String topic, Org.Apache.Kafka.Streams.Kstream.Consumed<K, V> consumed, Org.Apache.Kafka.Streams.Processor.Api.ProcessorSupplier<K, V, Java.Lang.Void, Java.Lang.Void> stateUpdateSupplier) where StoreBuilderExtendsOrg_Apache_Kafka_Streams_Processor_StateStore : Org.Apache.Kafka.Streams.Processor.StateStore, new()
+        public Org.Apache.Kafka.Streams.StreamsBuilder AddGlobalStore<StoreBuilderExtendsOrg_Apache_Kafka_Streams_Processor_StateStore, K, V>(Org.Apache.Kafka.Streams.State.StoreBuilder<StoreBuilderExtendsOrg_Apache_Kafka_Streams_Processor_StateStore> storeBuilder, Java.Lang.String topic, Org.Apache.Kafka.Streams.Kstream.Consumed<K, V> consumed, Org.Apache.Kafka.Streams.Processor.Api.ProcessorSupplier<K, V, Java.Lang.Void, Java.Lang.Void> stateUpdateSupplier) where StoreBuilderExtendsOrg_Apache_Kafka_Streams_Processor_StateStore : Org.Apache.Kafka.Streams.Processor.StateStore
         {
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.StreamsBuilder>("addGlobalStore", "(Lorg/apache/kafka/streams/state/StoreBuilder;Ljava/lang/String;Lorg/apache/kafka/streams/kstream/Consumed;Lorg/apache/kafka/streams/processor/api/ProcessorSupplier;)Lorg/apache/kafka/streams/StreamsBuilder;", storeBuilder, topic, consumed, stateUpdateSupplier);
         }
@@ -183,7 +183,7 @@ namespace Org.Apache.Kafka.Streams.Scala
         /// <param name="builder"><see cref="Org.Apache.Kafka.Streams.State.StoreBuilder"/></param>
         /// <typeparam name="BuilderExtendsOrg_Apache_Kafka_Streams_Processor_StateStore"><see cref="Org.Apache.Kafka.Streams.Processor.StateStore"/></typeparam>
         /// <returns><see cref="Org.Apache.Kafka.Streams.StreamsBuilder"/></returns>
-        public Org.Apache.Kafka.Streams.StreamsBuilder AddStateStore<BuilderExtendsOrg_Apache_Kafka_Streams_Processor_StateStore>(Org.Apache.Kafka.Streams.State.StoreBuilder<BuilderExtendsOrg_Apache_Kafka_Streams_Processor_StateStore> builder) where BuilderExtendsOrg_Apache_Kafka_Streams_Processor_StateStore : Org.Apache.Kafka.Streams.Processor.StateStore, new()
+        public Org.Apache.Kafka.Streams.StreamsBuilder AddStateStore<BuilderExtendsOrg_Apache_Kafka_Streams_Processor_StateStore>(Org.Apache.Kafka.Streams.State.StoreBuilder<BuilderExtendsOrg_Apache_Kafka_Streams_Processor_StateStore> builder) where BuilderExtendsOrg_Apache_Kafka_Streams_Processor_StateStore : Org.Apache.Kafka.Streams.Processor.StateStore
         {
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.StreamsBuilder>("addStateStore", "(Lorg/apache/kafka/streams/state/StoreBuilder;)Lorg/apache/kafka/streams/StreamsBuilder;", builder);
         }
