@@ -79,6 +79,9 @@ namespace MASES.KNet.TestCommon
     {
         public static void Create()
         {
+            ApplicationHeapSize = "2G";
+            ApplicationInitialHeapSize = "1G";
+
             ApplicationJarRootPath = Const.DefaultJarsPath;
             CreateGlobalInstance();
             if (GlobalInstance == null)
