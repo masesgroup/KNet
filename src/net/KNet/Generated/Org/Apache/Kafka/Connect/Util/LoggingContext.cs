@@ -133,24 +133,6 @@ namespace Org.Apache.Kafka.Connect.Util
             return SExecuteWithSignature<Org.Apache.Kafka.Connect.Util.LoggingContext>(LocalBridgeClazz, "forConnector", "(Ljava/lang/String;)Lorg/apache/kafka/connect/util/LoggingContext;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.0.0/org/apache/kafka/connect/util/LoggingContext.html#forOffsets(org.apache.kafka.connect.util.ConnectorTaskId)"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="Org.Apache.Kafka.Connect.Util.ConnectorTaskId"/></param>
-        /// <returns><see cref="Org.Apache.Kafka.Connect.Util.LoggingContext"/></returns>
-        public static Org.Apache.Kafka.Connect.Util.LoggingContext ForOffsets(Org.Apache.Kafka.Connect.Util.ConnectorTaskId arg0)
-        {
-            return SExecuteWithSignature<Org.Apache.Kafka.Connect.Util.LoggingContext>(LocalBridgeClazz, "forOffsets", "(Lorg/apache/kafka/connect/util/ConnectorTaskId;)Lorg/apache/kafka/connect/util/LoggingContext;", arg0);
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.0.0/org/apache/kafka/connect/util/LoggingContext.html#forTask(org.apache.kafka.connect.util.ConnectorTaskId)"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="Org.Apache.Kafka.Connect.Util.ConnectorTaskId"/></param>
-        /// <returns><see cref="Org.Apache.Kafka.Connect.Util.LoggingContext"/></returns>
-        public static Org.Apache.Kafka.Connect.Util.LoggingContext ForTask(Org.Apache.Kafka.Connect.Util.ConnectorTaskId arg0)
-        {
-            return SExecuteWithSignature<Org.Apache.Kafka.Connect.Util.LoggingContext>(LocalBridgeClazz, "forTask", "(Lorg/apache/kafka/connect/util/ConnectorTaskId;)Lorg/apache/kafka/connect/util/LoggingContext;", arg0);
-        }
-        /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.0.0/org/apache/kafka/connect/util/LoggingContext.html#clear()"/>
         /// </summary>
         public static void Clear()

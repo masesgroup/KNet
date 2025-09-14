@@ -29,20 +29,42 @@ namespace Org.Apache.Kafka.Tools.Consumer
     /// <summary>
     /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/consumer/CoordinatorRecordMessageFormatter.html"/>
     /// </summary>
-    public partial class CoordinatorRecordMessageFormatter : Org.Apache.Kafka.Common.MessageFormatter
+    public partial class CoordinatorRecordMessageFormatter : MASES.JCOBridge.C2JBridge.JVMBridgeListener
     {
-        const string _bridgeClassName = "org.apache.kafka.tools.consumer.CoordinatorRecordMessageFormatter";
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
         /// </summary>
-        [global::System.Obsolete("CoordinatorRecordMessageFormatter class represents, in .NET, an instance of a JVM interface or abstract class. This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
-        public CoordinatorRecordMessageFormatter() { }
+        public CoordinatorRecordMessageFormatter() { InitializeHandlers(); }
         /// <summary>
         /// Generic constructor: it is useful for JCOBridge when there is a derived class which needs to pass arguments to the highest JVMBridgeBase class
         /// </summary>
-        [global::System.Obsolete("CoordinatorRecordMessageFormatter class represents, in .NET, an instance of a JVM interface or abstract class. This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
-        public CoordinatorRecordMessageFormatter(params object[] args) : base(args) { }
+        public CoordinatorRecordMessageFormatter(params object[] args) : base(args) { InitializeHandlers(); }
+        const string _bridgeClassName = "org.mases.knet.generated.org.apache.kafka.tools.consumer.CoordinatorRecordMessageFormatter";
+        private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = ClazzOf(_bridgeClassName, false);
+        private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
+        
+        /// <inheritdoc />
+        public override string BridgeClassName => _bridgeClassName;
 
+    
+        // TODO: complete the class
+
+    }
+    #endregion
+
+    #region CoordinatorRecordMessageFormatterDirect declaration
+    /// <summary>
+    /// Direct override of <see cref="CoordinatorRecordMessageFormatter"/> or its generic type if there is one
+    /// </summary>
+    public partial class CoordinatorRecordMessageFormatterDirect : CoordinatorRecordMessageFormatter
+    {
+        /// <inheritdoc/>
+        public override bool AutoInit => false;
+
+        /// <inheritdoc />
+        protected override void InitializeHandlers() { }
+
+        const string _bridgeClassName = "org.apache.kafka.tools.consumer.CoordinatorRecordMessageFormatter";
         private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, false);
         private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
 
@@ -56,9 +78,6 @@ namespace Org.Apache.Kafka.Tools.Consumer
         public override bool IsBridgeInterface => false;
         /// <inheritdoc/>
         public override bool IsBridgeStatic => false;
-
-        // TODO: complete the class
-
     }
     #endregion
 
@@ -66,14 +85,6 @@ namespace Org.Apache.Kafka.Tools.Consumer
     public partial class CoordinatorRecordMessageFormatter
     {
         #region Constructors
-        /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/consumer/CoordinatorRecordMessageFormatter.html#%3Cinit%3E(org.apache.kafka.coordinator.common.runtime.CoordinatorRecordSerde)"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="Org.Apache.Kafka.Coordinator.Common.Runtime.CoordinatorRecordSerde"/></param>
-        public CoordinatorRecordMessageFormatter(Org.Apache.Kafka.Coordinator.Common.Runtime.CoordinatorRecordSerde arg0)
-            : base(arg0)
-        {
-        }
 
         #endregion
 
@@ -91,11 +102,158 @@ namespace Org.Apache.Kafka.Tools.Consumer
 
         #region Instance methods
         /// <summary>
+        /// Handlers initializer for <see cref="CoordinatorRecordMessageFormatter"/>
+        /// </summary>
+        protected virtual void InitializeHandlers()
+        {
+            AddEventHandler("close", new global::System.EventHandler<CLRListenerEventArgs<CLREventData<MASES.JNet.Specific.JNetEventResult>>>(CloseEventHandler));
+            AddEventHandler("configure", new global::System.EventHandler<CLRListenerEventArgs<CLREventData<MASES.JNet.Specific.JNetEventResult>>>(ConfigureEventHandler));
+            AddEventHandler("writeTo", new global::System.EventHandler<CLRListenerEventArgs<CLREventData<MASES.JNet.Specific.JNetEventResult>>>(WriteToEventHandler));
+
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/common/MessageFormatter.html#close()"/>
+        /// </summary>
+        /// <remarks>The method invokes the default implementation in the JVM interface</remarks>
+        public void CloseDefault()
+        {
+            IExecuteWithSignature("closeDefault", "()V");
+        }
+
+        /// <summary>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/common/MessageFormatter.html#close()"/>
+        /// </summary>
+        /// <remarks>If <see cref="OnClose"/> has a value it takes precedence over corresponding class method</remarks>
+        public global::System.Action OnClose { get; set; } = null;
+
+        bool hasOverrideClose = true;
+        void CloseEventHandler(object sender, CLRListenerEventArgs<CLREventData<MASES.JNet.Specific.JNetEventResult>> data)
+        {
+            hasOverrideClose = true;
+            var methodToExecute = (OnClose != null) ? OnClose : Close;
+            methodToExecute.Invoke();
+            data.EventData.TypedEventData.HasOverride = hasOverrideClose;
+        }
+
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/common/MessageFormatter.html#close()"/>
+        /// </summary>
+        /// <remarks>The method invokes the default implementation in the JVM interface using <see cref="CloseDefault"/>; override the method to implement a different behavior</remarks>
+        public virtual void Close()
+        {
+            hasOverrideClose = false;
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/common/MessageFormatter.html#configure(java.util.Map)"/>
+        /// </summary>
+        /// <param name="arg0"><see cref="Java.Util.Map"/></param>
+        /// <remarks>The method invokes the default implementation in the JVM interface</remarks>
+        public void ConfigureDefault(Java.Util.Map<Java.Lang.String, object> arg0)
+        {
+            IExecuteWithSignature("configureDefault", "(Ljava/util/Map;)V", arg0);
+        }
+
+        /// <summary>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/common/MessageFormatter.html#configure(java.util.Map)"/>
+        /// </summary>
+        /// <remarks>If <see cref="OnConfigure"/> has a value it takes precedence over corresponding class method</remarks>
+        public global::System.Action<Java.Util.Map<Java.Lang.String, object>> OnConfigure { get; set; } = null;
+
+        bool hasOverrideConfigure = true;
+        void ConfigureEventHandler(object sender, CLRListenerEventArgs<CLREventData<MASES.JNet.Specific.JNetEventResult>> data)
+        {
+            hasOverrideConfigure = true;
+            var methodToExecute = (OnConfigure != null) ? OnConfigure : Configure;
+            methodToExecute.Invoke(data.EventData.GetAt<Java.Util.Map<Java.Lang.String, object>>(0));
+            data.EventData.TypedEventData.HasOverride = hasOverrideConfigure;
+        }
+
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/common/MessageFormatter.html#configure(java.util.Map)"/>
+        /// </summary>
+        /// <param name="arg0"><see cref="Java.Util.Map"/></param>
+        /// <remarks>The method invokes the default implementation in the JVM interface using <see cref="ConfigureDefault"/>; override the method to implement a different behavior</remarks>
+        public virtual void Configure(Java.Util.Map<Java.Lang.String, object> arg0)
+        {
+            hasOverrideConfigure = false;
+        }
+
+        /// <summary>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/consumer/CoordinatorRecordMessageFormatter.html#writeTo(org.apache.kafka.clients.consumer.ConsumerRecord,java.io.PrintStream)"/>
+        /// </summary>
+        /// <remarks>If <see cref="OnWriteTo"/> has a value it takes precedence over corresponding class method</remarks>
+        public global::System.Action<Org.Apache.Kafka.Clients.Consumer.ConsumerRecord<byte[], byte[]>, Java.Io.PrintStream> OnWriteTo { get; set; } = null;
+
+        bool hasOverrideWriteTo = true;
+        void WriteToEventHandler(object sender, CLRListenerEventArgs<CLREventData<MASES.JNet.Specific.JNetEventResult>> data)
+        {
+            hasOverrideWriteTo = true;
+            var methodToExecute = (OnWriteTo != null) ? OnWriteTo : WriteTo;
+            methodToExecute.Invoke(data.EventData.GetAt<Org.Apache.Kafka.Clients.Consumer.ConsumerRecord<byte[], byte[]>>(0), data.EventData.GetAt<Java.Io.PrintStream>(1));
+            data.EventData.TypedEventData.HasOverride = hasOverrideWriteTo;
+        }
+
+        /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/consumer/CoordinatorRecordMessageFormatter.html#writeTo(org.apache.kafka.clients.consumer.ConsumerRecord,java.io.PrintStream)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Clients.Consumer.ConsumerRecord"/></param>
         /// <param name="arg1"><see cref="Java.Io.PrintStream"/></param>
-        public void WriteTo(Org.Apache.Kafka.Clients.Consumer.ConsumerRecord<byte[], byte[]> arg0, Java.Io.PrintStream arg1)
+        public virtual void WriteTo(Org.Apache.Kafka.Clients.Consumer.ConsumerRecord<byte[], byte[]> arg0, Java.Io.PrintStream arg1)
+        {
+            hasOverrideWriteTo = false;
+        }
+
+        #endregion
+
+        #region Nested classes
+
+        #endregion
+
+        // TODO: complete the class
+    }
+    #endregion
+
+    #region CoordinatorRecordMessageFormatterDirect implementation
+    public partial class CoordinatorRecordMessageFormatterDirect
+    {
+        #region Constructors
+
+        #endregion
+
+        #region Class/Interface conversion operators
+
+        #endregion
+
+        #region Fields
+
+        #endregion
+
+        #region Static methods
+
+        #endregion
+
+        #region Instance methods
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/common/MessageFormatter.html#close()"/>
+        /// </summary>
+        public override void Close()
+        {
+            IExecuteWithSignature("close", "()V");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/common/MessageFormatter.html#configure(java.util.Map)"/>
+        /// </summary>
+        /// <param name="arg0"><see cref="Java.Util.Map"/></param>
+        public override void Configure(Java.Util.Map<Java.Lang.String, object> arg0)
+        {
+            IExecuteWithSignature("configure", "(Ljava/util/Map;)V", arg0);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/consumer/CoordinatorRecordMessageFormatter.html#writeTo(org.apache.kafka.clients.consumer.ConsumerRecord,java.io.PrintStream)"/>
+        /// </summary>
+        /// <param name="arg0"><see cref="Org.Apache.Kafka.Clients.Consumer.ConsumerRecord"/></param>
+        /// <param name="arg1"><see cref="Java.Io.PrintStream"/></param>
+        public override void WriteTo(Org.Apache.Kafka.Clients.Consumer.ConsumerRecord<byte[], byte[]> arg0, Java.Io.PrintStream arg1)
         {
             IExecuteWithSignature("writeTo", "(Lorg/apache/kafka/clients/consumer/ConsumerRecord;Ljava/io/PrintStream;)V", arg0, arg1);
         }
