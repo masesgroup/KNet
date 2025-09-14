@@ -113,7 +113,7 @@ namespace MASES.KNet.TestCommon
             }
             else
             {
-                Console.WriteLine($"Failed with {e}");
+                Console.WriteLine($"Failed with {e.ToString()}");
                 retCode = 1;
             }
             return retCode;
