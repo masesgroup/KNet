@@ -79,6 +79,7 @@ namespace MASES.KNet.TestCommon
     {
         public static void Create()
         {
+            ApplicationWriteEventOrExceptionOnCmdLine = true;
             ApplicationHeapSize = "2G";
             ApplicationInitialHeapSize = "1G";
 
