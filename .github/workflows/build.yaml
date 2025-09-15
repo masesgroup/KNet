@@ -395,7 +395,10 @@ jobs:
         framework: [ 'net8.0', 'net9.0' ]
         jdk_vendor: [ 'temurin', 'microsoft', 'corretto', 'zulu', 'oracle', 'graalvm' ]
         jdk_version: [ '17', '21' ] # only supported LTS versions
-        
+        exclude:
+          - jdk_vendor: oracle
+            jdk_version: 17
+
     runs-on: ${{ matrix.os }}
     env:
       DOTNET_DbgEnableMiniDump: ${{ inputs.EnableProcessDump }}
@@ -474,7 +477,10 @@ jobs:
         framework: [ 'net462', 'net8.0', 'net9.0' ]
         jdk_vendor: [ 'temurin', 'microsoft', 'corretto', 'zulu', 'oracle', 'graalvm' ]
         jdk_version: [ '17', '21' ] # only supported LTS versions
-        
+        exclude:
+          - jdk_vendor: oracle
+            jdk_version: 17
+
     runs-on: ${{ matrix.os }}
     env:
       DOTNET_DbgEnableMiniDump: ${{ inputs.EnableProcessDump }}
@@ -594,7 +600,10 @@ jobs:
         framework: [ 'net8.0', 'net9.0' ]
         jdk_vendor: [ 'temurin', 'microsoft', 'corretto', 'zulu', 'oracle', 'graalvm' ]
         jdk_version: [ '17', '21' ] # only supported LTS versions
-        
+        exclude:
+          - jdk_vendor: oracle
+            jdk_version: 17
+
     runs-on: ${{ matrix.os }}
     env:
       DOTNET_DbgEnableMiniDump: ${{ inputs.EnableProcessDump }}
