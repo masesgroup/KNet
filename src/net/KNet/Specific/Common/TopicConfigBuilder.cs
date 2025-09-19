@@ -382,6 +382,32 @@ namespace MASES.KNet.Common
             return clone;
         }
         /// <summary>
+        /// Manages <see cref="TopicConfig.COMPRESSION_GZIP_LEVEL_CONFIG"/>
+        /// </summary>
+        public int CompressionGzipLevel { get { return GetProperty<int>(TopicConfig.COMPRESSION_GZIP_LEVEL_CONFIG); } set { SetProperty(TopicConfig.COMPRESSION_GZIP_LEVEL_CONFIG, value); } }
+        /// <summary>
+        /// Manages <see cref="TopicConfig.COMPRESSION_GZIP_LEVEL_CONFIG"/>
+        /// </summary>
+        public TopicConfigBuilder WithCompressionGzipLevel(int compressionGzipLevel)
+        {
+            var clone = Clone();
+            clone.CompressionGzipLevel = compressionGzipLevel;
+            return clone;
+        }
+        /// <summary>
+        /// Manages <see cref="TopicConfig.COMPRESSION_LZ4_LEVEL_CONFIG"/>
+        /// </summary>
+        public int CompressionLz4Level { get { return GetProperty<int>(TopicConfig.COMPRESSION_LZ4_LEVEL_CONFIG); } set { SetProperty(TopicConfig.COMPRESSION_LZ4_LEVEL_CONFIG, value); } }
+        /// <summary>
+        /// Manages <see cref="TopicConfig.COMPRESSION_LZ4_LEVEL_CONFIG"/>
+        /// </summary>
+        public TopicConfigBuilder WithCompressionLz4Level(int compressionLz4Level)
+        {
+            var clone = Clone();
+            clone.CompressionLz4Level = compressionLz4Level;
+            return clone;
+        }
+        /// <summary>
         /// Manages <see cref="TopicConfig.COMPRESSION_TYPE_CONFIG"/>
         /// </summary>
         public CompressionTypes CompressionType
@@ -410,6 +436,19 @@ namespace MASES.KNet.Common
             return clone;
         }
         /// <summary>
+        /// Manages <see cref="TopicConfig.COMPRESSION_ZSTD_LEVEL_CONFIG"/>
+        /// </summary>
+        public int CompressionZstdLevel { get { return GetProperty<int>(TopicConfig.COMPRESSION_ZSTD_LEVEL_CONFIG); } set { SetProperty(TopicConfig.COMPRESSION_ZSTD_LEVEL_CONFIG, value); } }
+        /// <summary>
+        /// Manages <see cref="TopicConfig.COMPRESSION_ZSTD_LEVEL_CONFIG"/>
+        /// </summary>
+        public TopicConfigBuilder WithCompressionZstdLevel(int compressionZstdLevel)
+        {
+            var clone = Clone();
+            clone.CompressionZstdLevel = compressionZstdLevel;
+            return clone;
+        }
+        /// <summary>
         /// Manages <see cref="TopicConfig.PREALLOCATE_CONFIG"/>
         /// </summary>
         public bool Preallocate { get { return GetProperty<bool>(TopicConfig.PREALLOCATE_CONFIG); } set { SetProperty(TopicConfig.PREALLOCATE_CONFIG, value); } }
@@ -422,6 +461,33 @@ namespace MASES.KNet.Common
             clone.Preallocate = preallocate;
             return clone;
         }
+        /// <summary>
+        /// Manages <see cref="TopicConfig.REMOTE_LOG_COPY_DISABLE_CONFIG"/>
+        /// </summary>
+        public bool RemoteLogCopyDisable { get { return GetProperty<bool>(TopicConfig.REMOTE_LOG_COPY_DISABLE_CONFIG); } set { SetProperty(TopicConfig.REMOTE_LOG_COPY_DISABLE_CONFIG, value); } }
+        /// <summary>
+        /// Manages <see cref="TopicConfig.REMOTE_LOG_COPY_DISABLE_CONFIG"/>
+        /// </summary>
+        public TopicConfigBuilder WithRemoteLogCopyDisable(bool remoteLogCopyDisable)
+        {
+            var clone = Clone();
+            clone.RemoteLogCopyDisable = remoteLogCopyDisable;
+            return clone;
+        }
+        /// <summary>
+        /// Manages <see cref="TopicConfig.REMOTE_LOG_DELETE_ON_DISABLE_CONFIG"/>
+        /// </summary>
+        public bool RemoteLogDeleteOnDisable { get { return GetProperty<bool>(TopicConfig.REMOTE_LOG_DELETE_ON_DISABLE_CONFIG); } set { SetProperty(TopicConfig.REMOTE_LOG_DELETE_ON_DISABLE_CONFIG, value); } }
+        /// <summary>
+        /// Manages <see cref="TopicConfig.REMOTE_LOG_DELETE_ON_DISABLE_CONFIG"/>
+        /// </summary>
+        public TopicConfigBuilder WithRemoteLogDeleteOnDisable(bool remoteLogDeleteOnDisable)
+        {
+            var clone = Clone();
+            clone.RemoteLogDeleteOnDisable = remoteLogDeleteOnDisable;
+            return clone;
+        }
+
         /// <summary>
         /// Manages <see cref="TopicConfig.MESSAGE_TIMESTAMP_TYPE_CONFIG"/>
         /// </summary>

@@ -101,19 +101,7 @@ namespace MASES.KNet.Producer
             clone.BatchSize = batchSize;
             return clone;
         }
-        /// <summary>
-        /// Manages <see cref="ProducerConfig.PARTITIONER_AVAILABILITY_TIMEOUT_MS_CONFIG"/>
-        /// </summary>
-        public long PartitionerAvailabilityTimeoutMs { get { return GetProperty<long>(ProducerConfig.PARTITIONER_AVAILABILITY_TIMEOUT_MS_CONFIG); } set { SetProperty(ProducerConfig.PARTITIONER_AVAILABILITY_TIMEOUT_MS_CONFIG, value); } }
-        /// <summary>
-        /// Manages <see cref="ProducerConfig.PARTITIONER_AVAILABILITY_TIMEOUT_MS_CONFIG"/>
-        /// </summary>
-        public ProducerConfigBuilder WithPartitionerAvailabilityTimeoutMs(long partitionerAvailabilityTimeoutMs)
-        {
-            var clone = Clone();
-            clone.PartitionerAvailabilityTimeoutMs = partitionerAvailabilityTimeoutMs;
-            return clone;
-        }
+
         /// <summary>
         /// Manages <see cref="ProducerConfig.PARTITIONER_IGNORE_KEYS_CONFIG"/>
         /// </summary>
@@ -231,6 +219,32 @@ namespace MASES.KNet.Producer
             return clone;
         }
         /// <summary>
+        /// Manages <see cref="ProducerConfig.COMPRESSION_GZIP_LEVEL_CONFIG"/>
+        /// </summary>
+        public int CompressionGzipLevel { get { return GetProperty<int>(ProducerConfig.COMPRESSION_GZIP_LEVEL_CONFIG); } set { SetProperty(ProducerConfig.COMPRESSION_GZIP_LEVEL_CONFIG, value); } }
+        /// <summary>
+        /// Manages <see cref="ProducerConfig.COMPRESSION_GZIP_LEVEL_CONFIG"/>
+        /// </summary>
+        public ProducerConfigBuilder WithCompressionGzipLevel(int compressionGzipLevel)
+        {
+            var clone = Clone();
+            clone.CompressionGzipLevel = compressionGzipLevel;
+            return clone;
+        }
+        /// <summary>
+        /// Manages <see cref="ProducerConfig.COMPRESSION_LZ4_LEVEL_CONFIG"/>
+        /// </summary>
+        public int CompressionLz4Level { get { return GetProperty<int>(ProducerConfig.COMPRESSION_LZ4_LEVEL_CONFIG); } set { SetProperty(ProducerConfig.COMPRESSION_LZ4_LEVEL_CONFIG, value); } }
+        /// <summary>
+        /// Manages <see cref="ProducerConfig.COMPRESSION_LZ4_LEVEL_CONFIG"/>
+        /// </summary>
+        public ProducerConfigBuilder WithCompressionLz4Level(int compressionLz4Level)
+        {
+            var clone = Clone();
+            clone.CompressionLz4Level = compressionLz4Level;
+            return clone;
+        }
+        /// <summary>
         /// Manages <see cref="ProducerConfig.COMPRESSION_TYPE_CONFIG"/>
         /// </summary>
         public ProducerConfigBuilder.CompressionTypes CompressionType
@@ -256,6 +270,19 @@ namespace MASES.KNet.Producer
         {
             var clone = Clone();
             clone.CompressionType = compressionType;
+            return clone;
+        }
+        /// <summary>
+        /// Manages <see cref="ProducerConfig.COMPRESSION_ZSTD_LEVEL_CONFIG"/>
+        /// </summary>
+        public int CompressionZstdLevel { get { return GetProperty<int>(ProducerConfig.COMPRESSION_ZSTD_LEVEL_CONFIG); } set { SetProperty(ProducerConfig.COMPRESSION_ZSTD_LEVEL_CONFIG, value); } }
+        /// <summary>
+        /// Manages <see cref="ProducerConfig.COMPRESSION_ZSTD_LEVEL_CONFIG"/>
+        /// </summary>
+        public ProducerConfigBuilder WithCompressionZstdLevel(int compressionZstdLevel)
+        {
+            var clone = Clone();
+            clone.CompressionZstdLevel = compressionZstdLevel;
             return clone;
         }
         /// <summary>
@@ -295,6 +322,32 @@ namespace MASES.KNet.Producer
         {
             var clone = Clone();
             clone.ValueSerializerClass = valueSerializerClass;
+            return clone;
+        }
+        /// <summary>
+        /// Manages <see cref="ProducerConfig.PARTITIONER_ADPATIVE_PARTITIONING_ENABLE_CONFIG"/>
+        /// </summary>
+        public bool PartitionerAdaptivePartitioningEnable { get { return GetProperty<bool>(ProducerConfig.PARTITIONER_ADPATIVE_PARTITIONING_ENABLE_CONFIG); } set { SetProperty(ProducerConfig.PARTITIONER_ADPATIVE_PARTITIONING_ENABLE_CONFIG, value); } }
+        /// <summary>
+        /// Manages <see cref="ProducerConfig.PARTITIONER_ADPATIVE_PARTITIONING_ENABLE_CONFIG"/>
+        /// </summary>
+        public ProducerConfigBuilder WithPartitionerAdaptivePartitioningEnable(bool partitionerAdaptivePartitioningEnable)
+        {
+            var clone = Clone();
+            clone.PartitionerAdaptivePartitioningEnable = partitionerAdaptivePartitioningEnable;
+            return clone;
+        }
+        /// <summary>
+        /// Manages <see cref="ProducerConfig.PARTITIONER_AVAILABILITY_TIMEOUT_MS_CONFIG"/>
+        /// </summary>
+        public long PartitionerAvailabilityTimeoutMs { get { return GetProperty<long>(ProducerConfig.PARTITIONER_AVAILABILITY_TIMEOUT_MS_CONFIG); } set { SetProperty(ProducerConfig.PARTITIONER_AVAILABILITY_TIMEOUT_MS_CONFIG, value); } }
+        /// <summary>
+        /// Manages <see cref="ProducerConfig.PARTITIONER_AVAILABILITY_TIMEOUT_MS_CONFIG"/>
+        /// </summary>
+        public ProducerConfigBuilder WithPartitionerAvailabilityTimeoutMs(long partitionerAvailabilityTimeoutMs)
+        {
+            var clone = Clone();
+            clone.PartitionerAvailabilityTimeoutMs = partitionerAvailabilityTimeoutMs;
             return clone;
         }
         /// <summary>
