@@ -26,6 +26,10 @@ namespace Kafka
     /// </summary>
     public class KafkaStart : JVMBridgeMainExtensible<KafkaStart>
     {
+        /// <inheritdoc/>
+        public KafkaStart() { }
+        /// <inheritdoc/>
+        public KafkaStart(IJVMBridgeBaseInitializer initializer) : base(initializer) { }
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
         /// </summary>
