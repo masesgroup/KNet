@@ -214,8 +214,8 @@ namespace MASES.KNet.Consumer
         object _disposedLock = new object();
         bool _disposed = false;
 
-        /// <inheritdoc cref="IDisposable.Dispose"/>
-        public override void Dispose()
+        /// <inheritdoc"/>
+        protected override void Dispose(bool disposing)
         {
             lock (_disposedLock)
             {

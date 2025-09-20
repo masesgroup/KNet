@@ -86,7 +86,7 @@ namespace MASES.KNet.Streams
             return consumer;
         }
         /// <inheritdoc/>
-        public override void Dispose()
+        protected override void Dispose(bool disposing)
         {
             foreach (var item in _admins)
             {
