@@ -31,6 +31,13 @@ namespace Org.Apache.Kafka.Streams.Errors
     /// </summary>
     public partial class MissingSourceTopicException : Org.Apache.Kafka.Streams.Errors.StreamsException
     {
+        /// <inheritdoc cref="global::System.Exception()"/>
+        public MissingSourceTopicException() { }
+        /// <inheritdoc cref="global::System.Exception(string)"/>
+        public MissingSourceTopicException(string message) : base(message) { }
+        /// <inheritdoc cref="global::System.Exception(string, global::System.Exception)"/>
+        public MissingSourceTopicException(string message, global::System.Exception innerException) : base(message, innerException) { }
+
         const string _bridgeClassName = "org.apache.kafka.streams.errors.MissingSourceTopicException";
         /// <inheritdoc/>
         public override string BridgeClassName => _bridgeClassName;

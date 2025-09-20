@@ -31,6 +31,13 @@ namespace Org.Apache.Kafka.Streams.Errors
     /// </summary>
     public partial class StateStoreNotAvailableException : Org.Apache.Kafka.Streams.Errors.InvalidStateStoreException
     {
+        /// <inheritdoc cref="global::System.Exception()"/>
+        public StateStoreNotAvailableException() { }
+        /// <inheritdoc cref="global::System.Exception(string)"/>
+        public StateStoreNotAvailableException(string message) : base(message) { }
+        /// <inheritdoc cref="global::System.Exception(string, global::System.Exception)"/>
+        public StateStoreNotAvailableException(string message, global::System.Exception innerException) : base(message, innerException) { }
+
         const string _bridgeClassName = "org.apache.kafka.streams.errors.StateStoreNotAvailableException";
         /// <inheritdoc/>
         public override string BridgeClassName => _bridgeClassName;

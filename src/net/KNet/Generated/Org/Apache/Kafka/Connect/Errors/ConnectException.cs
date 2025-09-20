@@ -31,6 +31,13 @@ namespace Org.Apache.Kafka.Connect.Errors
     /// </summary>
     public partial class ConnectException : Org.Apache.Kafka.Common.KafkaException
     {
+        /// <inheritdoc cref="global::System.Exception()"/>
+        public ConnectException() { }
+        /// <inheritdoc cref="global::System.Exception(string)"/>
+        public ConnectException(string message) : base(message) { }
+        /// <inheritdoc cref="global::System.Exception(string, global::System.Exception)"/>
+        public ConnectException(string message, global::System.Exception innerException) : base(message, innerException) { }
+
         const string _bridgeClassName = "org.apache.kafka.connect.errors.ConnectException";
         /// <inheritdoc/>
         public override string BridgeClassName => _bridgeClassName;

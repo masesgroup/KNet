@@ -31,6 +31,13 @@ namespace Org.Apache.Kafka.Streams.Errors
     /// </summary>
     public partial class InvalidStateStorePartitionException : Org.Apache.Kafka.Streams.Errors.InvalidStateStoreException
     {
+        /// <inheritdoc cref="global::System.Exception()"/>
+        public InvalidStateStorePartitionException() { }
+        /// <inheritdoc cref="global::System.Exception(string)"/>
+        public InvalidStateStorePartitionException(string message) : base(message) { }
+        /// <inheritdoc cref="global::System.Exception(string, global::System.Exception)"/>
+        public InvalidStateStorePartitionException(string message, global::System.Exception innerException) : base(message, innerException) { }
+
         const string _bridgeClassName = "org.apache.kafka.streams.errors.InvalidStateStorePartitionException";
         /// <inheritdoc/>
         public override string BridgeClassName => _bridgeClassName;

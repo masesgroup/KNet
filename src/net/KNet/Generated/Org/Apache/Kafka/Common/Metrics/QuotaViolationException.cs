@@ -31,6 +31,13 @@ namespace Org.Apache.Kafka.Common.Metrics
     /// </summary>
     public partial class QuotaViolationException : Org.Apache.Kafka.Common.KafkaException
     {
+        /// <inheritdoc cref="global::System.Exception()"/>
+        public QuotaViolationException() { }
+        /// <inheritdoc cref="global::System.Exception(string)"/>
+        public QuotaViolationException(string message) : base(message) { }
+        /// <inheritdoc cref="global::System.Exception(string, global::System.Exception)"/>
+        public QuotaViolationException(string message, global::System.Exception innerException) : base(message, innerException) { }
+
         const string _bridgeClassName = "org.apache.kafka.common.metrics.QuotaViolationException";
         /// <inheritdoc/>
         public override string BridgeClassName => _bridgeClassName;

@@ -31,6 +31,13 @@ namespace Org.Apache.Kafka.Common.Errors
     /// </summary>
     public partial class UnsupportedByAuthenticationException : Org.Apache.Kafka.Common.Errors.ApiException
     {
+        /// <inheritdoc cref="global::System.Exception()"/>
+        public UnsupportedByAuthenticationException() { }
+        /// <inheritdoc cref="global::System.Exception(string)"/>
+        public UnsupportedByAuthenticationException(string message) : base(message) { }
+        /// <inheritdoc cref="global::System.Exception(string, global::System.Exception)"/>
+        public UnsupportedByAuthenticationException(string message, global::System.Exception innerException) : base(message, innerException) { }
+
         const string _bridgeClassName = "org.apache.kafka.common.errors.UnsupportedByAuthenticationException";
         /// <inheritdoc/>
         public override string BridgeClassName => _bridgeClassName;

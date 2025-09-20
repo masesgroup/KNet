@@ -31,6 +31,13 @@ namespace Org.Apache.Kafka.Clients.Consumer
     /// </summary>
     public partial class LogTruncationException : Org.Apache.Kafka.Clients.Consumer.OffsetOutOfRangeException
     {
+        /// <inheritdoc cref="global::System.Exception()"/>
+        public LogTruncationException() { }
+        /// <inheritdoc cref="global::System.Exception(string)"/>
+        public LogTruncationException(string message) : base(message) { }
+        /// <inheritdoc cref="global::System.Exception(string, global::System.Exception)"/>
+        public LogTruncationException(string message, global::System.Exception innerException) : base(message, innerException) { }
+
         const string _bridgeClassName = "org.apache.kafka.clients.consumer.LogTruncationException";
         /// <inheritdoc/>
         public override string BridgeClassName => _bridgeClassName;

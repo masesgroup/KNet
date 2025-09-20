@@ -37,12 +37,18 @@ namespace Org.Apache.Kafka.Streams.Scala
         /// </summary>
         public StreamsBuilder() { }
         /// <summary>
+        /// Internal constructor: used internally from JCOBridge
+        /// </summary>
+        [global::System.Obsolete("This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
+        public StreamsBuilder(IJVMBridgeBaseInitializer initializer) : base(initializer) { }
+        /// <summary>
         /// Generic constructor: it is useful for JCOBridge when there is a derived class which needs to pass arguments to the highest JVMBridgeBase class
         /// </summary>
         public StreamsBuilder(params object[] args) : base(args) { }
 
-        private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, false);
-        private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
+        private static readonly global::System.Exception _LocalBridgeClazzException = null;
+        private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
+        private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw _LocalBridgeClazzException ?? new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
 
         /// <inheritdoc/>
         public override string BridgeClassName => _bridgeClassName;
@@ -173,7 +179,7 @@ namespace Org.Apache.Kafka.Streams.Scala
         /// <typeparam name="K"></typeparam>
         /// <typeparam name="V"></typeparam>
         /// <returns><see cref="Org.Apache.Kafka.Streams.StreamsBuilder"/></returns>
-        public Org.Apache.Kafka.Streams.StreamsBuilder AddGlobalStore<StoreBuilderExtendsOrg_Apache_Kafka_Streams_Processor_StateStore, K, V>(Org.Apache.Kafka.Streams.State.StoreBuilder<StoreBuilderExtendsOrg_Apache_Kafka_Streams_Processor_StateStore> storeBuilder, Java.Lang.String topic, Org.Apache.Kafka.Streams.Kstream.Consumed<K, V> consumed, Org.Apache.Kafka.Streams.Processor.Api.ProcessorSupplier<K, V, Java.Lang.Void, Java.Lang.Void> stateUpdateSupplier) where StoreBuilderExtendsOrg_Apache_Kafka_Streams_Processor_StateStore : Org.Apache.Kafka.Streams.Processor.StateStore, new()
+        public Org.Apache.Kafka.Streams.StreamsBuilder AddGlobalStore<StoreBuilderExtendsOrg_Apache_Kafka_Streams_Processor_StateStore, K, V>(Org.Apache.Kafka.Streams.State.StoreBuilder<StoreBuilderExtendsOrg_Apache_Kafka_Streams_Processor_StateStore> storeBuilder, Java.Lang.String topic, Org.Apache.Kafka.Streams.Kstream.Consumed<K, V> consumed, Org.Apache.Kafka.Streams.Processor.Api.ProcessorSupplier<K, V, Java.Lang.Void, Java.Lang.Void> stateUpdateSupplier) where StoreBuilderExtendsOrg_Apache_Kafka_Streams_Processor_StateStore : Org.Apache.Kafka.Streams.Processor.StateStore
         {
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.StreamsBuilder>("addGlobalStore", "(Lorg/apache/kafka/streams/state/StoreBuilder;Ljava/lang/String;Lorg/apache/kafka/streams/kstream/Consumed;Lorg/apache/kafka/streams/processor/api/ProcessorSupplier;)Lorg/apache/kafka/streams/StreamsBuilder;", storeBuilder, topic, consumed, stateUpdateSupplier);
         }
@@ -183,7 +189,7 @@ namespace Org.Apache.Kafka.Streams.Scala
         /// <param name="builder"><see cref="Org.Apache.Kafka.Streams.State.StoreBuilder"/></param>
         /// <typeparam name="BuilderExtendsOrg_Apache_Kafka_Streams_Processor_StateStore"><see cref="Org.Apache.Kafka.Streams.Processor.StateStore"/></typeparam>
         /// <returns><see cref="Org.Apache.Kafka.Streams.StreamsBuilder"/></returns>
-        public Org.Apache.Kafka.Streams.StreamsBuilder AddStateStore<BuilderExtendsOrg_Apache_Kafka_Streams_Processor_StateStore>(Org.Apache.Kafka.Streams.State.StoreBuilder<BuilderExtendsOrg_Apache_Kafka_Streams_Processor_StateStore> builder) where BuilderExtendsOrg_Apache_Kafka_Streams_Processor_StateStore : Org.Apache.Kafka.Streams.Processor.StateStore, new()
+        public Org.Apache.Kafka.Streams.StreamsBuilder AddStateStore<BuilderExtendsOrg_Apache_Kafka_Streams_Processor_StateStore>(Org.Apache.Kafka.Streams.State.StoreBuilder<BuilderExtendsOrg_Apache_Kafka_Streams_Processor_StateStore> builder) where BuilderExtendsOrg_Apache_Kafka_Streams_Processor_StateStore : Org.Apache.Kafka.Streams.Processor.StateStore
         {
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.StreamsBuilder>("addStateStore", "(Lorg/apache/kafka/streams/state/StoreBuilder;)Lorg/apache/kafka/streams/StreamsBuilder;", builder);
         }

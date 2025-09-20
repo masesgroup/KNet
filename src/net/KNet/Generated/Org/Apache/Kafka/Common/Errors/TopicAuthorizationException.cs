@@ -31,6 +31,13 @@ namespace Org.Apache.Kafka.Common.Errors
     /// </summary>
     public partial class TopicAuthorizationException : Org.Apache.Kafka.Common.Errors.AuthorizationException
     {
+        /// <inheritdoc cref="global::System.Exception()"/>
+        public TopicAuthorizationException() { }
+        /// <inheritdoc cref="global::System.Exception(string)"/>
+        public TopicAuthorizationException(string message) : base(message) { }
+        /// <inheritdoc cref="global::System.Exception(string, global::System.Exception)"/>
+        public TopicAuthorizationException(string message, global::System.Exception innerException) : base(message, innerException) { }
+
         const string _bridgeClassName = "org.apache.kafka.common.errors.TopicAuthorizationException";
         /// <inheritdoc/>
         public override string BridgeClassName => _bridgeClassName;

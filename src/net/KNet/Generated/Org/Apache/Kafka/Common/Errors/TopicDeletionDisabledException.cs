@@ -31,6 +31,13 @@ namespace Org.Apache.Kafka.Common.Errors
     /// </summary>
     public partial class TopicDeletionDisabledException : Org.Apache.Kafka.Common.Errors.ApiException
     {
+        /// <inheritdoc cref="global::System.Exception()"/>
+        public TopicDeletionDisabledException() { }
+        /// <inheritdoc cref="global::System.Exception(string)"/>
+        public TopicDeletionDisabledException(string message) : base(message) { }
+        /// <inheritdoc cref="global::System.Exception(string, global::System.Exception)"/>
+        public TopicDeletionDisabledException(string message, global::System.Exception innerException) : base(message, innerException) { }
+
         const string _bridgeClassName = "org.apache.kafka.common.errors.TopicDeletionDisabledException";
         /// <inheritdoc/>
         public override string BridgeClassName => _bridgeClassName;

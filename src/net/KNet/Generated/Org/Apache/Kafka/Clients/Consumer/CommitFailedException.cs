@@ -31,6 +31,13 @@ namespace Org.Apache.Kafka.Clients.Consumer
     /// </summary>
     public partial class CommitFailedException : Org.Apache.Kafka.Common.KafkaException
     {
+        /// <inheritdoc cref="global::System.Exception()"/>
+        public CommitFailedException() { }
+        /// <inheritdoc cref="global::System.Exception(string)"/>
+        public CommitFailedException(string message) : base(message) { }
+        /// <inheritdoc cref="global::System.Exception(string, global::System.Exception)"/>
+        public CommitFailedException(string message, global::System.Exception innerException) : base(message, innerException) { }
+
         const string _bridgeClassName = "org.apache.kafka.clients.consumer.CommitFailedException";
         /// <inheritdoc/>
         public override string BridgeClassName => _bridgeClassName;

@@ -31,6 +31,13 @@ namespace Org.Apache.Kafka.Connect.Errors
     /// </summary>
     public partial class SchemaBuilderException : Org.Apache.Kafka.Connect.Errors.DataException
     {
+        /// <inheritdoc cref="global::System.Exception()"/>
+        public SchemaBuilderException() { }
+        /// <inheritdoc cref="global::System.Exception(string)"/>
+        public SchemaBuilderException(string message) : base(message) { }
+        /// <inheritdoc cref="global::System.Exception(string, global::System.Exception)"/>
+        public SchemaBuilderException(string message, global::System.Exception innerException) : base(message, innerException) { }
+
         const string _bridgeClassName = "org.apache.kafka.connect.errors.SchemaBuilderException";
         /// <inheritdoc/>
         public override string BridgeClassName => _bridgeClassName;

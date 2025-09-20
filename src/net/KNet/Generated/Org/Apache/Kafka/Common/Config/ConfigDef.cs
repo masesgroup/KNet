@@ -37,12 +37,18 @@ namespace Org.Apache.Kafka.Common.Config
         /// </summary>
         public ConfigDef() { }
         /// <summary>
+        /// Internal constructor: used internally from JCOBridge
+        /// </summary>
+        [global::System.Obsolete("This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
+        public ConfigDef(IJVMBridgeBaseInitializer initializer) : base(initializer) { }
+        /// <summary>
         /// Generic constructor: it is useful for JCOBridge when there is a derived class which needs to pass arguments to the highest JVMBridgeBase class
         /// </summary>
         public ConfigDef(params object[] args) : base(args) { }
 
-        private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, false);
-        private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
+        private static readonly global::System.Exception _LocalBridgeClazzException = null;
+        private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
+        private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw _LocalBridgeClazzException ?? new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
 
         /// <inheritdoc/>
         public override string BridgeClassName => _bridgeClassName;
@@ -68,12 +74,18 @@ namespace Org.Apache.Kafka.Common.Config
             /// </summary>
             public CaseInsensitiveValidString() { }
             /// <summary>
+            /// Internal constructor: used internally from JCOBridge
+            /// </summary>
+            [global::System.Obsolete("This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
+            public CaseInsensitiveValidString(IJVMBridgeBaseInitializer initializer) : base(initializer) { }
+            /// <summary>
             /// Generic constructor: it is useful for JCOBridge when there is a derived class which needs to pass arguments to the highest JVMBridgeBase class
             /// </summary>
             public CaseInsensitiveValidString(params object[] args) : base(args) { }
 
-            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, false);
-            private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
+            private static readonly global::System.Exception _LocalBridgeClazzException = null;
+            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
+            private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw _LocalBridgeClazzException ?? new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
 
             /// <inheritdoc/>
             public override string BridgeClassName => _bridgeClassName;
@@ -103,12 +115,18 @@ namespace Org.Apache.Kafka.Common.Config
             /// </summary>
             public CompositeValidator() { }
             /// <summary>
+            /// Internal constructor: used internally from JCOBridge
+            /// </summary>
+            [global::System.Obsolete("This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
+            public CompositeValidator(IJVMBridgeBaseInitializer initializer) : base(initializer) { }
+            /// <summary>
             /// Generic constructor: it is useful for JCOBridge when there is a derived class which needs to pass arguments to the highest JVMBridgeBase class
             /// </summary>
             public CompositeValidator(params object[] args) : base(args) { }
 
-            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, false);
-            private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
+            private static readonly global::System.Exception _LocalBridgeClazzException = null;
+            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
+            private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw _LocalBridgeClazzException ?? new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
 
             /// <inheritdoc/>
             public override string BridgeClassName => _bridgeClassName;
@@ -138,12 +156,18 @@ namespace Org.Apache.Kafka.Common.Config
             /// </summary>
             public ConfigKey() { }
             /// <summary>
+            /// Internal constructor: used internally from JCOBridge
+            /// </summary>
+            [global::System.Obsolete("This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
+            public ConfigKey(IJVMBridgeBaseInitializer initializer) : base(initializer) { }
+            /// <summary>
             /// Generic constructor: it is useful for JCOBridge when there is a derived class which needs to pass arguments to the highest JVMBridgeBase class
             /// </summary>
             public ConfigKey(params object[] args) : base(args) { }
 
-            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, false);
-            private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
+            private static readonly global::System.Exception _LocalBridgeClazzException = null;
+            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
+            private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw _LocalBridgeClazzException ?? new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
 
             /// <inheritdoc/>
             public override string BridgeClassName => _bridgeClassName;
@@ -173,12 +197,18 @@ namespace Org.Apache.Kafka.Common.Config
             /// </summary>
             public Importance() { }
             /// <summary>
+            /// Internal constructor: used internally from JCOBridge
+            /// </summary>
+            [global::System.Obsolete("This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
+            public Importance(IJVMBridgeBaseInitializer initializer) : base(initializer) { }
+            /// <summary>
             /// Generic constructor: it is useful for JCOBridge when there is a derived class which needs to pass arguments to the highest JVMBridgeBase class
             /// </summary>
             public Importance(params object[] args) : base(args) { }
 
-            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, false);
-            private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
+            private static readonly global::System.Exception _LocalBridgeClazzException = null;
+            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
+            private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw _LocalBridgeClazzException ?? new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
 
             /// <inheritdoc/>
             public override string BridgeClassName => _bridgeClassName;
@@ -208,12 +238,18 @@ namespace Org.Apache.Kafka.Common.Config
             /// </summary>
             public LambdaValidator() { }
             /// <summary>
+            /// Internal constructor: used internally from JCOBridge
+            /// </summary>
+            [global::System.Obsolete("This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
+            public LambdaValidator(IJVMBridgeBaseInitializer initializer) : base(initializer) { }
+            /// <summary>
             /// Generic constructor: it is useful for JCOBridge when there is a derived class which needs to pass arguments to the highest JVMBridgeBase class
             /// </summary>
             public LambdaValidator(params object[] args) : base(args) { }
 
-            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, false);
-            private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
+            private static readonly global::System.Exception _LocalBridgeClazzException = null;
+            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
+            private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw _LocalBridgeClazzException ?? new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
 
             /// <inheritdoc/>
             public override string BridgeClassName => _bridgeClassName;
@@ -243,12 +279,18 @@ namespace Org.Apache.Kafka.Common.Config
             /// </summary>
             public ListSize() { }
             /// <summary>
+            /// Internal constructor: used internally from JCOBridge
+            /// </summary>
+            [global::System.Obsolete("This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
+            public ListSize(IJVMBridgeBaseInitializer initializer) : base(initializer) { }
+            /// <summary>
             /// Generic constructor: it is useful for JCOBridge when there is a derived class which needs to pass arguments to the highest JVMBridgeBase class
             /// </summary>
             public ListSize(params object[] args) : base(args) { }
 
-            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, false);
-            private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
+            private static readonly global::System.Exception _LocalBridgeClazzException = null;
+            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
+            private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw _LocalBridgeClazzException ?? new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
 
             /// <inheritdoc/>
             public override string BridgeClassName => _bridgeClassName;
@@ -278,12 +320,18 @@ namespace Org.Apache.Kafka.Common.Config
             /// </summary>
             public NonEmptyString() { }
             /// <summary>
+            /// Internal constructor: used internally from JCOBridge
+            /// </summary>
+            [global::System.Obsolete("This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
+            public NonEmptyString(IJVMBridgeBaseInitializer initializer) : base(initializer) { }
+            /// <summary>
             /// Generic constructor: it is useful for JCOBridge when there is a derived class which needs to pass arguments to the highest JVMBridgeBase class
             /// </summary>
             public NonEmptyString(params object[] args) : base(args) { }
 
-            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, false);
-            private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
+            private static readonly global::System.Exception _LocalBridgeClazzException = null;
+            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
+            private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw _LocalBridgeClazzException ?? new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
 
             /// <inheritdoc/>
             public override string BridgeClassName => _bridgeClassName;
@@ -313,12 +361,18 @@ namespace Org.Apache.Kafka.Common.Config
             /// </summary>
             public NonEmptyStringWithoutControlChars() { }
             /// <summary>
+            /// Internal constructor: used internally from JCOBridge
+            /// </summary>
+            [global::System.Obsolete("This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
+            public NonEmptyStringWithoutControlChars(IJVMBridgeBaseInitializer initializer) : base(initializer) { }
+            /// <summary>
             /// Generic constructor: it is useful for JCOBridge when there is a derived class which needs to pass arguments to the highest JVMBridgeBase class
             /// </summary>
             public NonEmptyStringWithoutControlChars(params object[] args) : base(args) { }
 
-            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, false);
-            private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
+            private static readonly global::System.Exception _LocalBridgeClazzException = null;
+            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
+            private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw _LocalBridgeClazzException ?? new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
 
             /// <inheritdoc/>
             public override string BridgeClassName => _bridgeClassName;
@@ -348,12 +402,18 @@ namespace Org.Apache.Kafka.Common.Config
             /// </summary>
             public NonNullValidator() { }
             /// <summary>
+            /// Internal constructor: used internally from JCOBridge
+            /// </summary>
+            [global::System.Obsolete("This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
+            public NonNullValidator(IJVMBridgeBaseInitializer initializer) : base(initializer) { }
+            /// <summary>
             /// Generic constructor: it is useful for JCOBridge when there is a derived class which needs to pass arguments to the highest JVMBridgeBase class
             /// </summary>
             public NonNullValidator(params object[] args) : base(args) { }
 
-            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, false);
-            private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
+            private static readonly global::System.Exception _LocalBridgeClazzException = null;
+            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
+            private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw _LocalBridgeClazzException ?? new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
 
             /// <inheritdoc/>
             public override string BridgeClassName => _bridgeClassName;
@@ -383,12 +443,18 @@ namespace Org.Apache.Kafka.Common.Config
             /// </summary>
             public Range() { }
             /// <summary>
+            /// Internal constructor: used internally from JCOBridge
+            /// </summary>
+            [global::System.Obsolete("This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
+            public Range(IJVMBridgeBaseInitializer initializer) : base(initializer) { }
+            /// <summary>
             /// Generic constructor: it is useful for JCOBridge when there is a derived class which needs to pass arguments to the highest JVMBridgeBase class
             /// </summary>
             public Range(params object[] args) : base(args) { }
 
-            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, false);
-            private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
+            private static readonly global::System.Exception _LocalBridgeClazzException = null;
+            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
+            private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw _LocalBridgeClazzException ?? new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
 
             /// <inheritdoc/>
             public override string BridgeClassName => _bridgeClassName;
@@ -419,13 +485,19 @@ namespace Org.Apache.Kafka.Common.Config
             [global::System.Obsolete("Recommender class represents, in .NET, an instance of a JVM interface or abstract class. This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
             public Recommender() { }
             /// <summary>
+            /// Internal constructor: used internally from JCOBridge
+            /// </summary>
+            [global::System.Obsolete("This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
+            public Recommender(IJVMBridgeBaseInitializer initializer) : base(initializer) { }
+            /// <summary>
             /// Generic constructor: it is useful for JCOBridge when there is a derived class which needs to pass arguments to the highest JVMBridgeBase class
             /// </summary>
             [global::System.Obsolete("Recommender class represents, in .NET, an instance of a JVM interface or abstract class. This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
             public Recommender(params object[] args) : base(args) { }
 
-            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, false);
-            private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
+            private static readonly global::System.Exception _LocalBridgeClazzException = null;
+            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
+            private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw _LocalBridgeClazzException ?? new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
 
             /// <inheritdoc/>
             public override string BridgeClassName => _bridgeClassName;
@@ -455,12 +527,18 @@ namespace Org.Apache.Kafka.Common.Config
             /// </summary>
             public Type() { }
             /// <summary>
+            /// Internal constructor: used internally from JCOBridge
+            /// </summary>
+            [global::System.Obsolete("This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
+            public Type(IJVMBridgeBaseInitializer initializer) : base(initializer) { }
+            /// <summary>
             /// Generic constructor: it is useful for JCOBridge when there is a derived class which needs to pass arguments to the highest JVMBridgeBase class
             /// </summary>
             public Type(params object[] args) : base(args) { }
 
-            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, false);
-            private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
+            private static readonly global::System.Exception _LocalBridgeClazzException = null;
+            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
+            private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw _LocalBridgeClazzException ?? new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
 
             /// <inheritdoc/>
             public override string BridgeClassName => _bridgeClassName;
@@ -491,13 +569,19 @@ namespace Org.Apache.Kafka.Common.Config
             [global::System.Obsolete("Validator class represents, in .NET, an instance of a JVM interface or abstract class. This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
             public Validator() { }
             /// <summary>
+            /// Internal constructor: used internally from JCOBridge
+            /// </summary>
+            [global::System.Obsolete("This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
+            public Validator(IJVMBridgeBaseInitializer initializer) : base(initializer) { }
+            /// <summary>
             /// Generic constructor: it is useful for JCOBridge when there is a derived class which needs to pass arguments to the highest JVMBridgeBase class
             /// </summary>
             [global::System.Obsolete("Validator class represents, in .NET, an instance of a JVM interface or abstract class. This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
             public Validator(params object[] args) : base(args) { }
 
-            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, false);
-            private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
+            private static readonly global::System.Exception _LocalBridgeClazzException = null;
+            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
+            private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw _LocalBridgeClazzException ?? new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
 
             /// <inheritdoc/>
             public override string BridgeClassName => _bridgeClassName;
@@ -527,12 +611,18 @@ namespace Org.Apache.Kafka.Common.Config
             /// </summary>
             public ValidList() { }
             /// <summary>
+            /// Internal constructor: used internally from JCOBridge
+            /// </summary>
+            [global::System.Obsolete("This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
+            public ValidList(IJVMBridgeBaseInitializer initializer) : base(initializer) { }
+            /// <summary>
             /// Generic constructor: it is useful for JCOBridge when there is a derived class which needs to pass arguments to the highest JVMBridgeBase class
             /// </summary>
             public ValidList(params object[] args) : base(args) { }
 
-            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, false);
-            private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
+            private static readonly global::System.Exception _LocalBridgeClazzException = null;
+            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
+            private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw _LocalBridgeClazzException ?? new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
 
             /// <inheritdoc/>
             public override string BridgeClassName => _bridgeClassName;
@@ -562,12 +652,18 @@ namespace Org.Apache.Kafka.Common.Config
             /// </summary>
             public ValidString() { }
             /// <summary>
+            /// Internal constructor: used internally from JCOBridge
+            /// </summary>
+            [global::System.Obsolete("This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
+            public ValidString(IJVMBridgeBaseInitializer initializer) : base(initializer) { }
+            /// <summary>
             /// Generic constructor: it is useful for JCOBridge when there is a derived class which needs to pass arguments to the highest JVMBridgeBase class
             /// </summary>
             public ValidString(params object[] args) : base(args) { }
 
-            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, false);
-            private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
+            private static readonly global::System.Exception _LocalBridgeClazzException = null;
+            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
+            private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw _LocalBridgeClazzException ?? new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
 
             /// <inheritdoc/>
             public override string BridgeClassName => _bridgeClassName;
@@ -597,12 +693,18 @@ namespace Org.Apache.Kafka.Common.Config
             /// </summary>
             public Width() { }
             /// <summary>
+            /// Internal constructor: used internally from JCOBridge
+            /// </summary>
+            [global::System.Obsolete("This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
+            public Width(IJVMBridgeBaseInitializer initializer) : base(initializer) { }
+            /// <summary>
             /// Generic constructor: it is useful for JCOBridge when there is a derived class which needs to pass arguments to the highest JVMBridgeBase class
             /// </summary>
             public Width(params object[] args) : base(args) { }
 
-            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, false);
-            private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
+            private static readonly global::System.Exception _LocalBridgeClazzException = null;
+            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
+            private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw _LocalBridgeClazzException ?? new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
 
             /// <inheritdoc/>
             public override string BridgeClassName => _bridgeClassName;
