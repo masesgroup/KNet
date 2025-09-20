@@ -125,9 +125,7 @@ jobs:
       # Support longpaths
       - name: Support long paths
         run: git config --system core.longpaths true
-
-      - run: Get-PSDrive
-        
+ 
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v5
         with:
@@ -154,6 +152,9 @@ jobs:
       - name: Add local repo
         if: ${{ success() && inputs.UseLastRepositoryBuild == true }}
         run: dotnet nuget add source --name local "${{ github.workspace }}\JNetNuGet\"
+
+      - name: Add local NuGet source
+        run: dotnet nuget add source ${{ github.workspace }}\JCOBridge\
 
       - name: Pre compile
         run: dotnet build --no-incremental --configuration Release /p:Platform="Any CPU" /p:NoWarn="0108%3B1030%3B0618" src\net\KNet\KNet.csproj
