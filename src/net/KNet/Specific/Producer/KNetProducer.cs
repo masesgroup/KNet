@@ -273,7 +273,7 @@ namespace MASES.KNet.Producer
         bool _disposed = false;
 
         /// <inheritdoc cref="IDisposable.Dispose"/>
-        public override void Dispose()
+        protected override void Dispose(bool disposing)
         {
             lock (_disposedLock)
             {
