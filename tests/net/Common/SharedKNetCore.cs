@@ -79,6 +79,7 @@ namespace MASES.KNet.TestCommon
     {
         public static void Create()
         {
+            ApplicationWriteEventOrExceptionOnCmdLine = true;
             ApplicationJarRootPath = Const.DefaultJarsPath;
             CreateGlobalInstance();
             if (GlobalInstance == null)
