@@ -68,7 +68,7 @@ namespace Org.Apache.Kafka.Streams.Processor
         /// Internal constructor: used internally from JCOBridge
         /// </summary>
         [global::System.Obsolete("This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
-        public TimestampExtractor(IJVMBridgeBaseInitializer initializer) : base(initializer) { }
+        public TimestampExtractorDirect(IJVMBridgeBaseInitializer initializer) : base(initializer) { }
 
         /// <inheritdoc/>
         public override bool AutoInit => false;

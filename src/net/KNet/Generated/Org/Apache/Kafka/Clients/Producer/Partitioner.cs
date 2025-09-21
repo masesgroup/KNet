@@ -68,7 +68,7 @@ namespace Org.Apache.Kafka.Clients.Producer
         /// Internal constructor: used internally from JCOBridge
         /// </summary>
         [global::System.Obsolete("This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
-        public Partitioner(IJVMBridgeBaseInitializer initializer) : base(initializer) { }
+        public PartitionerDirect(IJVMBridgeBaseInitializer initializer) : base(initializer) { }
 
         /// <inheritdoc/>
         public override bool AutoInit => false;

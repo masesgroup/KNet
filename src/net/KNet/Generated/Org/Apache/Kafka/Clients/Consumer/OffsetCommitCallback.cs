@@ -68,7 +68,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
         /// Internal constructor: used internally from JCOBridge
         /// </summary>
         [global::System.Obsolete("This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
-        public OffsetCommitCallback(IJVMBridgeBaseInitializer initializer) : base(initializer) { }
+        public OffsetCommitCallbackDirect(IJVMBridgeBaseInitializer initializer) : base(initializer) { }
 
         /// <inheritdoc/>
         public override bool AutoInit => false;

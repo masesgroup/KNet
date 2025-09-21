@@ -68,7 +68,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// Internal constructor: used internally from JCOBridge
         /// </summary>
         [global::System.Obsolete("This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
-        public Merger(IJVMBridgeBaseInitializer initializer) : base(initializer) { }
+        public MergerDirect(IJVMBridgeBaseInitializer initializer) : base(initializer) { }
 
         /// <inheritdoc/>
         public override bool AutoInit => false;
@@ -139,7 +139,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// Internal constructor: used internally from JCOBridge
         /// </summary>
         [global::System.Obsolete("This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
-        public Merger(IJVMBridgeBaseInitializer initializer) : base(initializer) { }
+        public MergerDirect(IJVMBridgeBaseInitializer initializer) : base(initializer) { }
 
         /// <inheritdoc/>
         public override bool AutoInit => false;
