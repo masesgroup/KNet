@@ -237,7 +237,6 @@ namespace MASES.KNet.Consumer
                                 System.Threading.Monitor.Pulse(_consumedRecords);
                             }
                             if (IsCompleting) { _consumeThread?.Join(); }
-                            ;
                             actionCallback = null;
                         }
 

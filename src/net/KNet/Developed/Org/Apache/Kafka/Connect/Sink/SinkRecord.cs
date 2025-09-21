@@ -49,9 +49,12 @@ namespace Org.Apache.Kafka.Connect.Sink
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
         /// </summary>
-        public SinkRecord()
-        {
-        }
+        public SinkRecord() { }
+        /// <summary>
+        /// Internal constructor: used internally from JCOBridge
+        /// </summary>
+        [global::System.Obsolete("This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
+        public SinkRecord(IJVMBridgeBaseInitializer initializer) : base(initializer) { }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.0.0/org/apache/kafka/connect/connector/ConnectRecord.html#org.apache.kafka.connect.connector.ConnectRecord(java.lang.String,java.lang.Integer,org.apache.kafka.connect.data.Schema,java.lang.Object,org.apache.kafka.connect.data.Schema,java.lang.Object,java.lang.Long)"/>
         /// </summary>
