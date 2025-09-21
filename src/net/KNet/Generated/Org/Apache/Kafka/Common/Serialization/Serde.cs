@@ -135,6 +135,10 @@ namespace Org.Apache.Kafka.Common.Serialization
     public partial class SerdeDirect<T> : Serde<T>
     {
         /// <summary>
+        /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
+        /// </summary>
+        public SerdeDirect() { }
+        /// <summary>
         /// Internal constructor: used internally from JCOBridge
         /// </summary>
         [global::System.Obsolete("This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
