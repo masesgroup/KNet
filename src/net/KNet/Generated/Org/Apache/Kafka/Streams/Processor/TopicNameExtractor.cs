@@ -64,6 +64,12 @@ namespace Org.Apache.Kafka.Streams.Processor
     /// </summary>
     public partial class TopicNameExtractorDirect : TopicNameExtractor
     {
+        /// <summary>
+        /// Internal constructor: used internally from JCOBridge
+        /// </summary>
+        [global::System.Obsolete("This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
+        public TopicNameExtractor(IJVMBridgeBaseInitializer initializer) : base(initializer) { }
+
         /// <inheritdoc/>
         public override bool AutoInit => false;
 
@@ -129,6 +135,12 @@ namespace Org.Apache.Kafka.Streams.Processor
     /// </summary>
     public partial class TopicNameExtractorDirect<K, V> : TopicNameExtractor<K, V>
     {
+        /// <summary>
+        /// Internal constructor: used internally from JCOBridge
+        /// </summary>
+        [global::System.Obsolete("This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
+        public TopicNameExtractor(IJVMBridgeBaseInitializer initializer) : base(initializer) { }
+
         /// <inheritdoc/>
         public override bool AutoInit => false;
 

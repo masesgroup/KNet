@@ -103,6 +103,12 @@ namespace Org.Apache.Kafka.Raft
         /// </summary>
         public partial class ListenerDirect : Listener
         {
+            /// <summary>
+            /// Internal constructor: used internally from JCOBridge
+            /// </summary>
+            [global::System.Obsolete("This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
+            public Listener(IJVMBridgeBaseInitializer initializer) : base(initializer) { }
+
             /// <inheritdoc/>
             public override bool AutoInit => false;
 
@@ -167,6 +173,12 @@ namespace Org.Apache.Kafka.Raft
         /// </summary>
         public partial class ListenerDirect<T> : Listener<T>
         {
+            /// <summary>
+            /// Internal constructor: used internally from JCOBridge
+            /// </summary>
+            [global::System.Obsolete("This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
+            public Listener(IJVMBridgeBaseInitializer initializer) : base(initializer) { }
+
             /// <inheritdoc/>
             public override bool AutoInit => false;
 

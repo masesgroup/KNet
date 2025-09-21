@@ -64,6 +64,12 @@ namespace Org.Apache.Kafka.Streams.Kstream
     /// </summary>
     public partial class ReducerDirect : Reducer
     {
+        /// <summary>
+        /// Internal constructor: used internally from JCOBridge
+        /// </summary>
+        [global::System.Obsolete("This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
+        public Reducer(IJVMBridgeBaseInitializer initializer) : base(initializer) { }
+
         /// <inheritdoc/>
         public override bool AutoInit => false;
 
@@ -128,6 +134,12 @@ namespace Org.Apache.Kafka.Streams.Kstream
     /// </summary>
     public partial class ReducerDirect<V> : Reducer<V>
     {
+        /// <summary>
+        /// Internal constructor: used internally from JCOBridge
+        /// </summary>
+        [global::System.Obsolete("This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
+        public Reducer(IJVMBridgeBaseInitializer initializer) : base(initializer) { }
+
         /// <inheritdoc/>
         public override bool AutoInit => false;
 

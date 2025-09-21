@@ -64,6 +64,12 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
     /// </summary>
     public partial class ProcessorDirect : Processor
     {
+        /// <summary>
+        /// Internal constructor: used internally from JCOBridge
+        /// </summary>
+        [global::System.Obsolete("This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
+        public Processor(IJVMBridgeBaseInitializer initializer) : base(initializer) { }
+
         /// <inheritdoc/>
         public override bool AutoInit => false;
 
@@ -131,6 +137,12 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
     /// </summary>
     public partial class ProcessorDirect<KIn, VIn, KOut, VOut> : Processor<KIn, VIn, KOut, VOut>
     {
+        /// <summary>
+        /// Internal constructor: used internally from JCOBridge
+        /// </summary>
+        [global::System.Obsolete("This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
+        public Processor(IJVMBridgeBaseInitializer initializer) : base(initializer) { }
+
         /// <inheritdoc/>
         public override bool AutoInit => false;
 

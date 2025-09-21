@@ -183,6 +183,12 @@ namespace Org.Apache.Kafka.Streams
         /// </summary>
         public partial class StateListenerDirect : StateListener
         {
+            /// <summary>
+            /// Internal constructor: used internally from JCOBridge
+            /// </summary>
+            [global::System.Obsolete("This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
+            public StateListener(IJVMBridgeBaseInitializer initializer) : base(initializer) { }
+
             /// <inheritdoc/>
             public override bool AutoInit => false;
 

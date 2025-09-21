@@ -64,6 +64,12 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
     /// </summary>
     public partial class FixedKeyProcessorDirect : FixedKeyProcessor
     {
+        /// <summary>
+        /// Internal constructor: used internally from JCOBridge
+        /// </summary>
+        [global::System.Obsolete("This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
+        public FixedKeyProcessor(IJVMBridgeBaseInitializer initializer) : base(initializer) { }
+
         /// <inheritdoc/>
         public override bool AutoInit => false;
 
@@ -130,6 +136,12 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
     /// </summary>
     public partial class FixedKeyProcessorDirect<KIn, VIn, VOut> : FixedKeyProcessor<KIn, VIn, VOut>
     {
+        /// <summary>
+        /// Internal constructor: used internally from JCOBridge
+        /// </summary>
+        [global::System.Obsolete("This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
+        public FixedKeyProcessor(IJVMBridgeBaseInitializer initializer) : base(initializer) { }
+
         /// <inheritdoc/>
         public override bool AutoInit => false;
 

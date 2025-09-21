@@ -64,6 +64,12 @@ namespace Org.Apache.Kafka.Streams.Kstream
     /// </summary>
     public partial class ValueJoinerDirect : ValueJoiner
     {
+        /// <summary>
+        /// Internal constructor: used internally from JCOBridge
+        /// </summary>
+        [global::System.Obsolete("This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
+        public ValueJoiner(IJVMBridgeBaseInitializer initializer) : base(initializer) { }
+
         /// <inheritdoc/>
         public override bool AutoInit => false;
 
@@ -130,6 +136,12 @@ namespace Org.Apache.Kafka.Streams.Kstream
     /// </summary>
     public partial class ValueJoinerDirect<V1, V2, VR> : ValueJoiner<V1, V2, VR>
     {
+        /// <summary>
+        /// Internal constructor: used internally from JCOBridge
+        /// </summary>
+        [global::System.Obsolete("This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
+        public ValueJoiner(IJVMBridgeBaseInitializer initializer) : base(initializer) { }
+
         /// <inheritdoc/>
         public override bool AutoInit => false;
 

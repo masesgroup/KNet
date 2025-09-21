@@ -64,6 +64,12 @@ namespace Org.Apache.Kafka.Clients.Consumer
     /// </summary>
     public partial class ConsumerInterceptorDirect : ConsumerInterceptor
     {
+        /// <summary>
+        /// Internal constructor: used internally from JCOBridge
+        /// </summary>
+        [global::System.Obsolete("This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
+        public ConsumerInterceptor(IJVMBridgeBaseInitializer initializer) : base(initializer) { }
+
         /// <inheritdoc/>
         public override bool AutoInit => false;
 
@@ -129,6 +135,12 @@ namespace Org.Apache.Kafka.Clients.Consumer
     /// </summary>
     public partial class ConsumerInterceptorDirect<K, V> : ConsumerInterceptor<K, V>
     {
+        /// <summary>
+        /// Internal constructor: used internally from JCOBridge
+        /// </summary>
+        [global::System.Obsolete("This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
+        public ConsumerInterceptor(IJVMBridgeBaseInitializer initializer) : base(initializer) { }
+
         /// <inheritdoc/>
         public override bool AutoInit => false;
 

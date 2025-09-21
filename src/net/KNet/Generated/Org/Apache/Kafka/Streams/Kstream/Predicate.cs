@@ -64,6 +64,12 @@ namespace Org.Apache.Kafka.Streams.Kstream
     /// </summary>
     public partial class PredicateDirect : Predicate
     {
+        /// <summary>
+        /// Internal constructor: used internally from JCOBridge
+        /// </summary>
+        [global::System.Obsolete("This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
+        public Predicate(IJVMBridgeBaseInitializer initializer) : base(initializer) { }
+
         /// <inheritdoc/>
         public override bool AutoInit => false;
 
@@ -129,6 +135,12 @@ namespace Org.Apache.Kafka.Streams.Kstream
     /// </summary>
     public partial class PredicateDirect<K, V> : Predicate<K, V>
     {
+        /// <summary>
+        /// Internal constructor: used internally from JCOBridge
+        /// </summary>
+        [global::System.Obsolete("This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
+        public Predicate(IJVMBridgeBaseInitializer initializer) : base(initializer) { }
+
         /// <inheritdoc/>
         public override bool AutoInit => false;
 

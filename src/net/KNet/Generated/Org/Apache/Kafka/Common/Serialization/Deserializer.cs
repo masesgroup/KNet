@@ -64,6 +64,12 @@ namespace Org.Apache.Kafka.Common.Serialization
     /// </summary>
     public partial class DeserializerDirect : Deserializer
     {
+        /// <summary>
+        /// Internal constructor: used internally from JCOBridge
+        /// </summary>
+        [global::System.Obsolete("This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
+        public Deserializer(IJVMBridgeBaseInitializer initializer) : base(initializer) { }
+
         /// <inheritdoc/>
         public override bool AutoInit => false;
 
@@ -128,6 +134,12 @@ namespace Org.Apache.Kafka.Common.Serialization
     /// </summary>
     public partial class DeserializerDirect<T> : Deserializer<T>
     {
+        /// <summary>
+        /// Internal constructor: used internally from JCOBridge
+        /// </summary>
+        [global::System.Obsolete("This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
+        public Deserializer(IJVMBridgeBaseInitializer initializer) : base(initializer) { }
+
         /// <inheritdoc/>
         public override bool AutoInit => false;
 

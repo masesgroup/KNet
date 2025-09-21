@@ -64,6 +64,12 @@ namespace Org.Apache.Kafka.Streams.Kstream
     /// </summary>
     public partial class ValueTransformerWithKeyDirect : ValueTransformerWithKey
     {
+        /// <summary>
+        /// Internal constructor: used internally from JCOBridge
+        /// </summary>
+        [global::System.Obsolete("This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
+        public ValueTransformerWithKey(IJVMBridgeBaseInitializer initializer) : base(initializer) { }
+
         /// <inheritdoc/>
         public override bool AutoInit => false;
 
@@ -130,6 +136,12 @@ namespace Org.Apache.Kafka.Streams.Kstream
     /// </summary>
     public partial class ValueTransformerWithKeyDirect<K, V, VR> : ValueTransformerWithKey<K, V, VR>
     {
+        /// <summary>
+        /// Internal constructor: used internally from JCOBridge
+        /// </summary>
+        [global::System.Obsolete("This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
+        public ValueTransformerWithKey(IJVMBridgeBaseInitializer initializer) : base(initializer) { }
+
         /// <inheritdoc/>
         public override bool AutoInit => false;
 

@@ -64,6 +64,12 @@ namespace Org.Apache.Kafka.Common.Config
     /// </summary>
     public partial class ConfigChangeCallbackDirect : ConfigChangeCallback
     {
+        /// <summary>
+        /// Internal constructor: used internally from JCOBridge
+        /// </summary>
+        [global::System.Obsolete("This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
+        public ConfigChangeCallback(IJVMBridgeBaseInitializer initializer) : base(initializer) { }
+
         /// <inheritdoc/>
         public override bool AutoInit => false;
 
