@@ -31,6 +31,13 @@ namespace Org.Apache.Kafka.Common.Errors
     /// </summary>
     public partial class DuplicateBrokerRegistrationException : Org.Apache.Kafka.Common.Errors.ApiException
     {
+        /// <inheritdoc cref="global::System.Exception()"/>
+        public DuplicateBrokerRegistrationException() { }
+        /// <inheritdoc cref="global::System.Exception(string)"/>
+        public DuplicateBrokerRegistrationException(string message) : base(message) { }
+        /// <inheritdoc cref="global::System.Exception(string, global::System.Exception)"/>
+        public DuplicateBrokerRegistrationException(string message, global::System.Exception innerException) : base(message, innerException) { }
+
         const string _bridgeClassName = "org.apache.kafka.common.errors.DuplicateBrokerRegistrationException";
         /// <inheritdoc/>
         public override string BridgeClassName => _bridgeClassName;

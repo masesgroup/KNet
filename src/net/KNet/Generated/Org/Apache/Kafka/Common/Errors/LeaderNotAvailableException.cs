@@ -31,6 +31,13 @@ namespace Org.Apache.Kafka.Common.Errors
     /// </summary>
     public partial class LeaderNotAvailableException : Org.Apache.Kafka.Common.Errors.InvalidMetadataException
     {
+        /// <inheritdoc cref="global::System.Exception()"/>
+        public LeaderNotAvailableException() { }
+        /// <inheritdoc cref="global::System.Exception(string)"/>
+        public LeaderNotAvailableException(string message) : base(message) { }
+        /// <inheritdoc cref="global::System.Exception(string, global::System.Exception)"/>
+        public LeaderNotAvailableException(string message, global::System.Exception innerException) : base(message, innerException) { }
+
         const string _bridgeClassName = "org.apache.kafka.common.errors.LeaderNotAvailableException";
         /// <inheritdoc/>
         public override string BridgeClassName => _bridgeClassName;

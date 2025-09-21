@@ -31,6 +31,13 @@ namespace Org.Apache.Kafka.Common.Errors
     /// </summary>
     public partial class UnknownServerException : Org.Apache.Kafka.Common.Errors.ApiException
     {
+        /// <inheritdoc cref="global::System.Exception()"/>
+        public UnknownServerException() { }
+        /// <inheritdoc cref="global::System.Exception(string)"/>
+        public UnknownServerException(string message) : base(message) { }
+        /// <inheritdoc cref="global::System.Exception(string, global::System.Exception)"/>
+        public UnknownServerException(string message, global::System.Exception innerException) : base(message, innerException) { }
+
         const string _bridgeClassName = "org.apache.kafka.common.errors.UnknownServerException";
         /// <inheritdoc/>
         public override string BridgeClassName => _bridgeClassName;

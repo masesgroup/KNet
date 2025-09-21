@@ -31,6 +31,13 @@ namespace Org.Apache.Kafka.Common.Errors
     /// </summary>
     public partial class TimeoutException : Org.Apache.Kafka.Common.Errors.RetriableException
     {
+        /// <inheritdoc cref="global::System.Exception()"/>
+        public TimeoutException() { }
+        /// <inheritdoc cref="global::System.Exception(string)"/>
+        public TimeoutException(string message) : base(message) { }
+        /// <inheritdoc cref="global::System.Exception(string, global::System.Exception)"/>
+        public TimeoutException(string message, global::System.Exception innerException) : base(message, innerException) { }
+
         const string _bridgeClassName = "org.apache.kafka.common.errors.TimeoutException";
         /// <inheritdoc/>
         public override string BridgeClassName => _bridgeClassName;

@@ -31,6 +31,13 @@ namespace Org.Apache.Kafka.Common.Errors
     /// </summary>
     public partial class TelemetryTooLargeException : Org.Apache.Kafka.Common.Errors.ApiException
     {
+        /// <inheritdoc cref="global::System.Exception()"/>
+        public TelemetryTooLargeException() { }
+        /// <inheritdoc cref="global::System.Exception(string)"/>
+        public TelemetryTooLargeException(string message) : base(message) { }
+        /// <inheritdoc cref="global::System.Exception(string, global::System.Exception)"/>
+        public TelemetryTooLargeException(string message, global::System.Exception innerException) : base(message, innerException) { }
+
         const string _bridgeClassName = "org.apache.kafka.common.errors.TelemetryTooLargeException";
         /// <inheritdoc/>
         public override string BridgeClassName => _bridgeClassName;

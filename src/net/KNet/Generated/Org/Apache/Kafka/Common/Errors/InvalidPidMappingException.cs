@@ -31,6 +31,13 @@ namespace Org.Apache.Kafka.Common.Errors
     /// </summary>
     public partial class InvalidPidMappingException : Org.Apache.Kafka.Common.Errors.ApiException
     {
+        /// <inheritdoc cref="global::System.Exception()"/>
+        public InvalidPidMappingException() { }
+        /// <inheritdoc cref="global::System.Exception(string)"/>
+        public InvalidPidMappingException(string message) : base(message) { }
+        /// <inheritdoc cref="global::System.Exception(string, global::System.Exception)"/>
+        public InvalidPidMappingException(string message, global::System.Exception innerException) : base(message, innerException) { }
+
         const string _bridgeClassName = "org.apache.kafka.common.errors.InvalidPidMappingException";
         /// <inheritdoc/>
         public override string BridgeClassName => _bridgeClassName;

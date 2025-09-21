@@ -31,6 +31,13 @@ namespace Org.Apache.Kafka.Common.Errors
     /// </summary>
     public partial class InconsistentClusterIdException : Org.Apache.Kafka.Common.Errors.ApiException
     {
+        /// <inheritdoc cref="global::System.Exception()"/>
+        public InconsistentClusterIdException() { }
+        /// <inheritdoc cref="global::System.Exception(string)"/>
+        public InconsistentClusterIdException(string message) : base(message) { }
+        /// <inheritdoc cref="global::System.Exception(string, global::System.Exception)"/>
+        public InconsistentClusterIdException(string message, global::System.Exception innerException) : base(message, innerException) { }
+
         const string _bridgeClassName = "org.apache.kafka.common.errors.InconsistentClusterIdException";
         /// <inheritdoc/>
         public override string BridgeClassName => _bridgeClassName;

@@ -31,6 +31,13 @@ namespace Org.Apache.Kafka.Common
     /// </summary>
     public partial class KafkaException : Java.Lang.RuntimeException
     {
+        /// <inheritdoc cref="global::System.Exception()"/>
+        public KafkaException() { }
+        /// <inheritdoc cref="global::System.Exception(string)"/>
+        public KafkaException(string message) : base(message) { }
+        /// <inheritdoc cref="global::System.Exception(string, global::System.Exception)"/>
+        public KafkaException(string message, global::System.Exception innerException) : base(message, innerException) { }
+
         const string _bridgeClassName = "org.apache.kafka.common.KafkaException";
         /// <inheritdoc/>
         public override string BridgeClassName => _bridgeClassName;

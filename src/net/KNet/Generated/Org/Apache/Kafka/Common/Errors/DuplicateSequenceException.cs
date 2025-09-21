@@ -31,6 +31,13 @@ namespace Org.Apache.Kafka.Common.Errors
     /// </summary>
     public partial class DuplicateSequenceException : Org.Apache.Kafka.Common.Errors.ApiException
     {
+        /// <inheritdoc cref="global::System.Exception()"/>
+        public DuplicateSequenceException() { }
+        /// <inheritdoc cref="global::System.Exception(string)"/>
+        public DuplicateSequenceException(string message) : base(message) { }
+        /// <inheritdoc cref="global::System.Exception(string, global::System.Exception)"/>
+        public DuplicateSequenceException(string message, global::System.Exception innerException) : base(message, innerException) { }
+
         const string _bridgeClassName = "org.apache.kafka.common.errors.DuplicateSequenceException";
         /// <inheritdoc/>
         public override string BridgeClassName => _bridgeClassName;
