@@ -31,6 +31,13 @@ namespace Org.Apache.Kafka.Common.Errors
     /// </summary>
     public partial class ConcurrentTransactionsException : Org.Apache.Kafka.Common.Errors.RetriableException
     {
+        /// <inheritdoc cref="global::System.Exception()"/>
+        public ConcurrentTransactionsException() { }
+        /// <inheritdoc cref="global::System.Exception(string)"/>
+        public ConcurrentTransactionsException(string message) : base(message) { }
+        /// <inheritdoc cref="global::System.Exception(string, global::System.Exception)"/>
+        public ConcurrentTransactionsException(string message, global::System.Exception innerException) : base(message, innerException) { }
+
         const string _bridgeClassName = "org.apache.kafka.common.errors.ConcurrentTransactionsException";
         /// <inheritdoc/>
         public override string BridgeClassName => _bridgeClassName;

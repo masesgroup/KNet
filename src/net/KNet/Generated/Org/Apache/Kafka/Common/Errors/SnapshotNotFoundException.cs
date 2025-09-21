@@ -31,6 +31,13 @@ namespace Org.Apache.Kafka.Common.Errors
     /// </summary>
     public partial class SnapshotNotFoundException : Org.Apache.Kafka.Common.Errors.ApiException
     {
+        /// <inheritdoc cref="global::System.Exception()"/>
+        public SnapshotNotFoundException() { }
+        /// <inheritdoc cref="global::System.Exception(string)"/>
+        public SnapshotNotFoundException(string message) : base(message) { }
+        /// <inheritdoc cref="global::System.Exception(string, global::System.Exception)"/>
+        public SnapshotNotFoundException(string message, global::System.Exception innerException) : base(message, innerException) { }
+
         const string _bridgeClassName = "org.apache.kafka.common.errors.SnapshotNotFoundException";
         /// <inheritdoc/>
         public override string BridgeClassName => _bridgeClassName;

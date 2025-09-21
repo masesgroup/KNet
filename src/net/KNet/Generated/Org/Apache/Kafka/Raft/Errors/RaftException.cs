@@ -31,6 +31,13 @@ namespace Org.Apache.Kafka.Raft.Errors
     /// </summary>
     public partial class RaftException : Org.Apache.Kafka.Common.KafkaException
     {
+        /// <inheritdoc cref="global::System.Exception()"/>
+        public RaftException() { }
+        /// <inheritdoc cref="global::System.Exception(string)"/>
+        public RaftException(string message) : base(message) { }
+        /// <inheritdoc cref="global::System.Exception(string, global::System.Exception)"/>
+        public RaftException(string message, global::System.Exception innerException) : base(message, innerException) { }
+
         const string _bridgeClassName = "org.apache.kafka.raft.errors.RaftException";
         /// <inheritdoc/>
         public override string BridgeClassName => _bridgeClassName;

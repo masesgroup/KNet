@@ -31,6 +31,13 @@ namespace Org.Apache.Kafka.Clients.Consumer
     /// </summary>
     public partial class NoOffsetForPartitionException : Org.Apache.Kafka.Clients.Consumer.InvalidOffsetException
     {
+        /// <inheritdoc cref="global::System.Exception()"/>
+        public NoOffsetForPartitionException() { }
+        /// <inheritdoc cref="global::System.Exception(string)"/>
+        public NoOffsetForPartitionException(string message) : base(message) { }
+        /// <inheritdoc cref="global::System.Exception(string, global::System.Exception)"/>
+        public NoOffsetForPartitionException(string message, global::System.Exception innerException) : base(message, innerException) { }
+
         const string _bridgeClassName = "org.apache.kafka.clients.consumer.NoOffsetForPartitionException";
         /// <inheritdoc/>
         public override string BridgeClassName => _bridgeClassName;

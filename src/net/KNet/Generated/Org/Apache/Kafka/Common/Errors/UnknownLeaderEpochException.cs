@@ -31,6 +31,13 @@ namespace Org.Apache.Kafka.Common.Errors
     /// </summary>
     public partial class UnknownLeaderEpochException : Org.Apache.Kafka.Common.Errors.RetriableException
     {
+        /// <inheritdoc cref="global::System.Exception()"/>
+        public UnknownLeaderEpochException() { }
+        /// <inheritdoc cref="global::System.Exception(string)"/>
+        public UnknownLeaderEpochException(string message) : base(message) { }
+        /// <inheritdoc cref="global::System.Exception(string, global::System.Exception)"/>
+        public UnknownLeaderEpochException(string message, global::System.Exception innerException) : base(message, innerException) { }
+
         const string _bridgeClassName = "org.apache.kafka.common.errors.UnknownLeaderEpochException";
         /// <inheritdoc/>
         public override string BridgeClassName => _bridgeClassName;

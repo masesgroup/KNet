@@ -31,6 +31,13 @@ namespace Org.Apache.Kafka.Streams.Errors
     /// </summary>
     public partial class TaskMigratedException : Org.Apache.Kafka.Streams.Errors.StreamsException
     {
+        /// <inheritdoc cref="global::System.Exception()"/>
+        public TaskMigratedException() { }
+        /// <inheritdoc cref="global::System.Exception(string)"/>
+        public TaskMigratedException(string message) : base(message) { }
+        /// <inheritdoc cref="global::System.Exception(string, global::System.Exception)"/>
+        public TaskMigratedException(string message, global::System.Exception innerException) : base(message, innerException) { }
+
         const string _bridgeClassName = "org.apache.kafka.streams.errors.TaskMigratedException";
         /// <inheritdoc/>
         public override string BridgeClassName => _bridgeClassName;

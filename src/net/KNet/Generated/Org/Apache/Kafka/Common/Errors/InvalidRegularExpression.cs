@@ -31,6 +31,13 @@ namespace Org.Apache.Kafka.Common.Errors
     /// </summary>
     public partial class InvalidRegularExpression : Org.Apache.Kafka.Common.Errors.ApiException
     {
+        /// <inheritdoc cref="global::System.Exception()"/>
+        public InvalidRegularExpression() { }
+        /// <inheritdoc cref="global::System.Exception(string)"/>
+        public InvalidRegularExpression(string message) : base(message) { }
+        /// <inheritdoc cref="global::System.Exception(string, global::System.Exception)"/>
+        public InvalidRegularExpression(string message, global::System.Exception innerException) : base(message, innerException) { }
+
         const string _bridgeClassName = "org.apache.kafka.common.errors.InvalidRegularExpression";
         /// <inheritdoc/>
         public override string BridgeClassName => _bridgeClassName;

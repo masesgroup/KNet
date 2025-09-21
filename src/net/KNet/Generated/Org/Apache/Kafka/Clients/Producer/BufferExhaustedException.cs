@@ -31,6 +31,13 @@ namespace Org.Apache.Kafka.Clients.Producer
     /// </summary>
     public partial class BufferExhaustedException : Org.Apache.Kafka.Common.Errors.TimeoutException
     {
+        /// <inheritdoc cref="global::System.Exception()"/>
+        public BufferExhaustedException() { }
+        /// <inheritdoc cref="global::System.Exception(string)"/>
+        public BufferExhaustedException(string message) : base(message) { }
+        /// <inheritdoc cref="global::System.Exception(string, global::System.Exception)"/>
+        public BufferExhaustedException(string message, global::System.Exception innerException) : base(message, innerException) { }
+
         const string _bridgeClassName = "org.apache.kafka.clients.producer.BufferExhaustedException";
         /// <inheritdoc/>
         public override string BridgeClassName => _bridgeClassName;

@@ -31,6 +31,13 @@ namespace Org.Apache.Kafka.Streams.Errors
     /// </summary>
     public partial class StreamsException : Org.Apache.Kafka.Common.KafkaException
     {
+        /// <inheritdoc cref="global::System.Exception()"/>
+        public StreamsException() { }
+        /// <inheritdoc cref="global::System.Exception(string)"/>
+        public StreamsException(string message) : base(message) { }
+        /// <inheritdoc cref="global::System.Exception(string, global::System.Exception)"/>
+        public StreamsException(string message, global::System.Exception innerException) : base(message, innerException) { }
+
         const string _bridgeClassName = "org.apache.kafka.streams.errors.StreamsException";
         /// <inheritdoc/>
         public override string BridgeClassName => _bridgeClassName;

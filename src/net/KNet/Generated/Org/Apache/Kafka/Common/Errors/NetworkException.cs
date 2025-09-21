@@ -31,6 +31,13 @@ namespace Org.Apache.Kafka.Common.Errors
     /// </summary>
     public partial class NetworkException : Org.Apache.Kafka.Common.Errors.InvalidMetadataException
     {
+        /// <inheritdoc cref="global::System.Exception()"/>
+        public NetworkException() { }
+        /// <inheritdoc cref="global::System.Exception(string)"/>
+        public NetworkException(string message) : base(message) { }
+        /// <inheritdoc cref="global::System.Exception(string, global::System.Exception)"/>
+        public NetworkException(string message, global::System.Exception innerException) : base(message, innerException) { }
+
         const string _bridgeClassName = "org.apache.kafka.common.errors.NetworkException";
         /// <inheritdoc/>
         public override string BridgeClassName => _bridgeClassName;

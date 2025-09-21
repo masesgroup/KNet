@@ -31,6 +31,13 @@ namespace Org.Apache.Kafka.Common.Errors
     /// </summary>
     public partial class AuthorizerNotReadyException : Org.Apache.Kafka.Common.Errors.RetriableException
     {
+        /// <inheritdoc cref="global::System.Exception()"/>
+        public AuthorizerNotReadyException() { }
+        /// <inheritdoc cref="global::System.Exception(string)"/>
+        public AuthorizerNotReadyException(string message) : base(message) { }
+        /// <inheritdoc cref="global::System.Exception(string, global::System.Exception)"/>
+        public AuthorizerNotReadyException(string message, global::System.Exception innerException) : base(message, innerException) { }
+
         const string _bridgeClassName = "org.apache.kafka.common.errors.AuthorizerNotReadyException";
         /// <inheritdoc/>
         public override string BridgeClassName => _bridgeClassName;

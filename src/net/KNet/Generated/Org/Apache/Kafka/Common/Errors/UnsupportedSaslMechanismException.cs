@@ -31,6 +31,13 @@ namespace Org.Apache.Kafka.Common.Errors
     /// </summary>
     public partial class UnsupportedSaslMechanismException : Org.Apache.Kafka.Common.Errors.AuthenticationException
     {
+        /// <inheritdoc cref="global::System.Exception()"/>
+        public UnsupportedSaslMechanismException() { }
+        /// <inheritdoc cref="global::System.Exception(string)"/>
+        public UnsupportedSaslMechanismException(string message) : base(message) { }
+        /// <inheritdoc cref="global::System.Exception(string, global::System.Exception)"/>
+        public UnsupportedSaslMechanismException(string message, global::System.Exception innerException) : base(message, innerException) { }
+
         const string _bridgeClassName = "org.apache.kafka.common.errors.UnsupportedSaslMechanismException";
         /// <inheritdoc/>
         public override string BridgeClassName => _bridgeClassName;

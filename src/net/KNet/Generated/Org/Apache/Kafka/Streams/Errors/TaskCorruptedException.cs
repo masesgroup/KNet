@@ -31,6 +31,13 @@ namespace Org.Apache.Kafka.Streams.Errors
     /// </summary>
     public partial class TaskCorruptedException : Org.Apache.Kafka.Streams.Errors.StreamsException
     {
+        /// <inheritdoc cref="global::System.Exception()"/>
+        public TaskCorruptedException() { }
+        /// <inheritdoc cref="global::System.Exception(string)"/>
+        public TaskCorruptedException(string message) : base(message) { }
+        /// <inheritdoc cref="global::System.Exception(string, global::System.Exception)"/>
+        public TaskCorruptedException(string message, global::System.Exception innerException) : base(message, innerException) { }
+
         const string _bridgeClassName = "org.apache.kafka.streams.errors.TaskCorruptedException";
         /// <inheritdoc/>
         public override string BridgeClassName => _bridgeClassName;

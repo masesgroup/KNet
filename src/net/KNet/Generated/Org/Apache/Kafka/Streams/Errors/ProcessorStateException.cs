@@ -31,6 +31,13 @@ namespace Org.Apache.Kafka.Streams.Errors
     /// </summary>
     public partial class ProcessorStateException : Org.Apache.Kafka.Streams.Errors.StreamsException
     {
+        /// <inheritdoc cref="global::System.Exception()"/>
+        public ProcessorStateException() { }
+        /// <inheritdoc cref="global::System.Exception(string)"/>
+        public ProcessorStateException(string message) : base(message) { }
+        /// <inheritdoc cref="global::System.Exception(string, global::System.Exception)"/>
+        public ProcessorStateException(string message, global::System.Exception innerException) : base(message, innerException) { }
+
         const string _bridgeClassName = "org.apache.kafka.streams.errors.ProcessorStateException";
         /// <inheritdoc/>
         public override string BridgeClassName => _bridgeClassName;

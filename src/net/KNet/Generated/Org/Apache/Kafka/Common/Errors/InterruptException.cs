@@ -31,6 +31,13 @@ namespace Org.Apache.Kafka.Common.Errors
     /// </summary>
     public partial class InterruptException : Org.Apache.Kafka.Common.KafkaException
     {
+        /// <inheritdoc cref="global::System.Exception()"/>
+        public InterruptException() { }
+        /// <inheritdoc cref="global::System.Exception(string)"/>
+        public InterruptException(string message) : base(message) { }
+        /// <inheritdoc cref="global::System.Exception(string, global::System.Exception)"/>
+        public InterruptException(string message, global::System.Exception innerException) : base(message, innerException) { }
+
         const string _bridgeClassName = "org.apache.kafka.common.errors.InterruptException";
         /// <inheritdoc/>
         public override string BridgeClassName => _bridgeClassName;
