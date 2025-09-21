@@ -16,6 +16,8 @@
 *  Refer to LICENSE for more information.
 */
 
+using MASES.JCOBridge.C2JBridge;
+
 namespace Kafka.Tools
 {
     /// <summary>
@@ -30,5 +32,8 @@ namespace Kafka.Tools
             : base("kafka.tools.StorageTool")
         {
         }
+        /// <inheritdoc/>
+        [global::System.Obsolete("This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
+        public StorageTool(IJVMBridgeBaseInitializer initializer) : base(initializer) { }
     }
 }

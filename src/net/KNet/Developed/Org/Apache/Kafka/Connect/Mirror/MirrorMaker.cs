@@ -16,6 +16,8 @@
 *  Refer to LICENSE for more information.
 */
 
+using MASES.JCOBridge.C2JBridge;
+
 namespace Org.Apache.Kafka.Connect.Mirror
 {
     /// <summary>
@@ -30,5 +32,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
             : base("org.apache.kafka.connect.mirror.MirrorMaker")
         {
         }
+        /// <inheritdoc/>
+        public MirrorMaker2(IJVMBridgeBaseInitializer initializer) : base(initializer) { }
     }
 }

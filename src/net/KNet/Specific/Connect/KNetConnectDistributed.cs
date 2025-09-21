@@ -16,6 +16,7 @@
 *  Refer to LICENSE for more information.
 */
 
+using MASES.JCOBridge.C2JBridge;
 using MASES.KNet.Connect;
 
 namespace MASES.KNet.Connect
@@ -33,5 +34,8 @@ namespace MASES.KNet.Connect
         {
             KNetConnectProxy.Register();
         }
+        /// <inheritdoc/>
+        [global::System.Obsolete("This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")] 
+        public KNetConnectDistributed(IJVMBridgeBaseInitializer initializer) : base(initializer) { }
     }
 }
