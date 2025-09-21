@@ -31,6 +31,13 @@ namespace Org.Apache.Kafka.Connect.Util
     /// </summary>
     public partial class StagedTimeoutException : Java.Util.Concurrent.TimeoutException
     {
+        /// <inheritdoc cref="global::System.Exception()"/>
+        public StagedTimeoutException() { }
+        /// <inheritdoc cref="global::System.Exception(string)"/>
+        public StagedTimeoutException(string message) : base(message) { }
+        /// <inheritdoc cref="global::System.Exception(string, global::System.Exception)"/>
+        public StagedTimeoutException(string message, global::System.Exception innerException) : base(message, innerException) { }
+
         const string _bridgeClassName = "org.apache.kafka.connect.util.StagedTimeoutException";
         /// <inheritdoc/>
         public override string BridgeClassName => _bridgeClassName;

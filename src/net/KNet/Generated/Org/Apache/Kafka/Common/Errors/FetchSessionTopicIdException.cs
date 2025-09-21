@@ -31,6 +31,13 @@ namespace Org.Apache.Kafka.Common.Errors
     /// </summary>
     public partial class FetchSessionTopicIdException : Org.Apache.Kafka.Common.Errors.RetriableException
     {
+        /// <inheritdoc cref="global::System.Exception()"/>
+        public FetchSessionTopicIdException() { }
+        /// <inheritdoc cref="global::System.Exception(string)"/>
+        public FetchSessionTopicIdException(string message) : base(message) { }
+        /// <inheritdoc cref="global::System.Exception(string, global::System.Exception)"/>
+        public FetchSessionTopicIdException(string message, global::System.Exception innerException) : base(message, innerException) { }
+
         const string _bridgeClassName = "org.apache.kafka.common.errors.FetchSessionTopicIdException";
         /// <inheritdoc/>
         public override string BridgeClassName => _bridgeClassName;

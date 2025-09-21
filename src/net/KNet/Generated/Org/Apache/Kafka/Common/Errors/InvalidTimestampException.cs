@@ -31,6 +31,13 @@ namespace Org.Apache.Kafka.Common.Errors
     /// </summary>
     public partial class InvalidTimestampException : Org.Apache.Kafka.Common.Errors.ApiException
     {
+        /// <inheritdoc cref="global::System.Exception()"/>
+        public InvalidTimestampException() { }
+        /// <inheritdoc cref="global::System.Exception(string)"/>
+        public InvalidTimestampException(string message) : base(message) { }
+        /// <inheritdoc cref="global::System.Exception(string, global::System.Exception)"/>
+        public InvalidTimestampException(string message, global::System.Exception innerException) : base(message, innerException) { }
+
         const string _bridgeClassName = "org.apache.kafka.common.errors.InvalidTimestampException";
         /// <inheritdoc/>
         public override string BridgeClassName => _bridgeClassName;

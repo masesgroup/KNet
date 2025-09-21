@@ -31,6 +31,13 @@ namespace Org.Apache.Kafka.Common.Errors
     /// </summary>
     public partial class InvalidRecordStateException : Org.Apache.Kafka.Common.Errors.ApiException
     {
+        /// <inheritdoc cref="global::System.Exception()"/>
+        public InvalidRecordStateException() { }
+        /// <inheritdoc cref="global::System.Exception(string)"/>
+        public InvalidRecordStateException(string message) : base(message) { }
+        /// <inheritdoc cref="global::System.Exception(string, global::System.Exception)"/>
+        public InvalidRecordStateException(string message, global::System.Exception innerException) : base(message, innerException) { }
+
         const string _bridgeClassName = "org.apache.kafka.common.errors.InvalidRecordStateException";
         /// <inheritdoc/>
         public override string BridgeClassName => _bridgeClassName;

@@ -31,6 +31,13 @@ namespace Org.Apache.Kafka.Clients.Consumer
     /// </summary>
     public partial class RetriableCommitFailedException : Org.Apache.Kafka.Common.Errors.RetriableException
     {
+        /// <inheritdoc cref="global::System.Exception()"/>
+        public RetriableCommitFailedException() { }
+        /// <inheritdoc cref="global::System.Exception(string)"/>
+        public RetriableCommitFailedException(string message) : base(message) { }
+        /// <inheritdoc cref="global::System.Exception(string, global::System.Exception)"/>
+        public RetriableCommitFailedException(string message, global::System.Exception innerException) : base(message, innerException) { }
+
         const string _bridgeClassName = "org.apache.kafka.clients.consumer.RetriableCommitFailedException";
         /// <inheritdoc/>
         public override string BridgeClassName => _bridgeClassName;

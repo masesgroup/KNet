@@ -31,6 +31,13 @@ namespace Org.Apache.Kafka.Clients.Consumer
     /// </summary>
     public partial class InvalidOffsetException : Org.Apache.Kafka.Common.KafkaException
     {
+        /// <inheritdoc cref="global::System.Exception()"/>
+        public InvalidOffsetException() { }
+        /// <inheritdoc cref="global::System.Exception(string)"/>
+        public InvalidOffsetException(string message) : base(message) { }
+        /// <inheritdoc cref="global::System.Exception(string, global::System.Exception)"/>
+        public InvalidOffsetException(string message, global::System.Exception innerException) : base(message, innerException) { }
+
         const string _bridgeClassName = "org.apache.kafka.clients.consumer.InvalidOffsetException";
         /// <inheritdoc/>
         public override string BridgeClassName => _bridgeClassName;

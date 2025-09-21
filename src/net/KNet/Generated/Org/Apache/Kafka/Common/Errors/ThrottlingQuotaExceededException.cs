@@ -31,6 +31,13 @@ namespace Org.Apache.Kafka.Common.Errors
     /// </summary>
     public partial class ThrottlingQuotaExceededException : Org.Apache.Kafka.Common.Errors.RetriableException
     {
+        /// <inheritdoc cref="global::System.Exception()"/>
+        public ThrottlingQuotaExceededException() { }
+        /// <inheritdoc cref="global::System.Exception(string)"/>
+        public ThrottlingQuotaExceededException(string message) : base(message) { }
+        /// <inheritdoc cref="global::System.Exception(string, global::System.Exception)"/>
+        public ThrottlingQuotaExceededException(string message, global::System.Exception innerException) : base(message, innerException) { }
+
         const string _bridgeClassName = "org.apache.kafka.common.errors.ThrottlingQuotaExceededException";
         /// <inheritdoc/>
         public override string BridgeClassName => _bridgeClassName;

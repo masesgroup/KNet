@@ -31,6 +31,13 @@ namespace Org.Apache.Kafka.Common.Errors
     /// </summary>
     public partial class ListenerNotFoundException : Org.Apache.Kafka.Common.Errors.InvalidMetadataException
     {
+        /// <inheritdoc cref="global::System.Exception()"/>
+        public ListenerNotFoundException() { }
+        /// <inheritdoc cref="global::System.Exception(string)"/>
+        public ListenerNotFoundException(string message) : base(message) { }
+        /// <inheritdoc cref="global::System.Exception(string, global::System.Exception)"/>
+        public ListenerNotFoundException(string message, global::System.Exception innerException) : base(message, innerException) { }
+
         const string _bridgeClassName = "org.apache.kafka.common.errors.ListenerNotFoundException";
         /// <inheritdoc/>
         public override string BridgeClassName => _bridgeClassName;

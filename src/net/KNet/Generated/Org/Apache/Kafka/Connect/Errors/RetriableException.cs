@@ -31,6 +31,13 @@ namespace Org.Apache.Kafka.Connect.Errors
     /// </summary>
     public partial class RetriableException : Org.Apache.Kafka.Connect.Errors.ConnectException
     {
+        /// <inheritdoc cref="global::System.Exception()"/>
+        public RetriableException() { }
+        /// <inheritdoc cref="global::System.Exception(string)"/>
+        public RetriableException(string message) : base(message) { }
+        /// <inheritdoc cref="global::System.Exception(string, global::System.Exception)"/>
+        public RetriableException(string message, global::System.Exception innerException) : base(message, innerException) { }
+
         const string _bridgeClassName = "org.apache.kafka.connect.errors.RetriableException";
         /// <inheritdoc/>
         public override string BridgeClassName => _bridgeClassName;

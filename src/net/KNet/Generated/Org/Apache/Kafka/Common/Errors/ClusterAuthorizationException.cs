@@ -31,6 +31,13 @@ namespace Org.Apache.Kafka.Common.Errors
     /// </summary>
     public partial class ClusterAuthorizationException : Org.Apache.Kafka.Common.Errors.AuthorizationException
     {
+        /// <inheritdoc cref="global::System.Exception()"/>
+        public ClusterAuthorizationException() { }
+        /// <inheritdoc cref="global::System.Exception(string)"/>
+        public ClusterAuthorizationException(string message) : base(message) { }
+        /// <inheritdoc cref="global::System.Exception(string, global::System.Exception)"/>
+        public ClusterAuthorizationException(string message, global::System.Exception innerException) : base(message, innerException) { }
+
         const string _bridgeClassName = "org.apache.kafka.common.errors.ClusterAuthorizationException";
         /// <inheritdoc/>
         public override string BridgeClassName => _bridgeClassName;

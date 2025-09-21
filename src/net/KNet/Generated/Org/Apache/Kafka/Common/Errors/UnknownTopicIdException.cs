@@ -31,6 +31,13 @@ namespace Org.Apache.Kafka.Common.Errors
     /// </summary>
     public partial class UnknownTopicIdException : Org.Apache.Kafka.Common.Errors.InvalidMetadataException
     {
+        /// <inheritdoc cref="global::System.Exception()"/>
+        public UnknownTopicIdException() { }
+        /// <inheritdoc cref="global::System.Exception(string)"/>
+        public UnknownTopicIdException(string message) : base(message) { }
+        /// <inheritdoc cref="global::System.Exception(string, global::System.Exception)"/>
+        public UnknownTopicIdException(string message, global::System.Exception innerException) : base(message, innerException) { }
+
         const string _bridgeClassName = "org.apache.kafka.common.errors.UnknownTopicIdException";
         /// <inheritdoc/>
         public override string BridgeClassName => _bridgeClassName;

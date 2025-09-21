@@ -31,6 +31,13 @@ namespace Org.Apache.Kafka.Common.Errors
     /// </summary>
     public partial class InvalidFetchSizeException : Org.Apache.Kafka.Common.Errors.ApiException
     {
+        /// <inheritdoc cref="global::System.Exception()"/>
+        public InvalidFetchSizeException() { }
+        /// <inheritdoc cref="global::System.Exception(string)"/>
+        public InvalidFetchSizeException(string message) : base(message) { }
+        /// <inheritdoc cref="global::System.Exception(string, global::System.Exception)"/>
+        public InvalidFetchSizeException(string message, global::System.Exception innerException) : base(message, innerException) { }
+
         const string _bridgeClassName = "org.apache.kafka.common.errors.InvalidFetchSizeException";
         /// <inheritdoc/>
         public override string BridgeClassName => _bridgeClassName;

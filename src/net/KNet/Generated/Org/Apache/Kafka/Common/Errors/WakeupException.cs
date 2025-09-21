@@ -31,6 +31,13 @@ namespace Org.Apache.Kafka.Common.Errors
     /// </summary>
     public partial class WakeupException : Org.Apache.Kafka.Common.KafkaException
     {
+        /// <inheritdoc cref="global::System.Exception()"/>
+        public WakeupException() { }
+        /// <inheritdoc cref="global::System.Exception(string)"/>
+        public WakeupException(string message) : base(message) { }
+        /// <inheritdoc cref="global::System.Exception(string, global::System.Exception)"/>
+        public WakeupException(string message, global::System.Exception innerException) : base(message, innerException) { }
+
         const string _bridgeClassName = "org.apache.kafka.common.errors.WakeupException";
         /// <inheritdoc/>
         public override string BridgeClassName => _bridgeClassName;

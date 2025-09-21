@@ -31,6 +31,13 @@ namespace Org.Apache.Kafka.Common.Errors
     /// </summary>
     public partial class UnacceptableCredentialException : Org.Apache.Kafka.Common.Errors.ApiException
     {
+        /// <inheritdoc cref="global::System.Exception()"/>
+        public UnacceptableCredentialException() { }
+        /// <inheritdoc cref="global::System.Exception(string)"/>
+        public UnacceptableCredentialException(string message) : base(message) { }
+        /// <inheritdoc cref="global::System.Exception(string, global::System.Exception)"/>
+        public UnacceptableCredentialException(string message, global::System.Exception innerException) : base(message, innerException) { }
+
         const string _bridgeClassName = "org.apache.kafka.common.errors.UnacceptableCredentialException";
         /// <inheritdoc/>
         public override string BridgeClassName => _bridgeClassName;

@@ -31,6 +31,13 @@ namespace Org.Apache.Kafka.Common.Errors
     /// </summary>
     public partial class UnknownProducerIdException : Org.Apache.Kafka.Common.Errors.OutOfOrderSequenceException
     {
+        /// <inheritdoc cref="global::System.Exception()"/>
+        public UnknownProducerIdException() { }
+        /// <inheritdoc cref="global::System.Exception(string)"/>
+        public UnknownProducerIdException(string message) : base(message) { }
+        /// <inheritdoc cref="global::System.Exception(string, global::System.Exception)"/>
+        public UnknownProducerIdException(string message, global::System.Exception innerException) : base(message, innerException) { }
+
         const string _bridgeClassName = "org.apache.kafka.common.errors.UnknownProducerIdException";
         /// <inheritdoc/>
         public override string BridgeClassName => _bridgeClassName;
