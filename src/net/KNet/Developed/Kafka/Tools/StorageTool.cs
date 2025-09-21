@@ -23,17 +23,16 @@ namespace Kafka.Tools
     /// <summary>
     /// Class managing StorageTool
     /// </summary>
-    public class StorageTool : MASES.JCOBridge.C2JBridge.JVMBridgeMain<StorageTool>
+    public class StorageTool : JVMBridgeMainExtensible<StorageTool>
     {
         /// <summary>
         /// Initialize a new <see cref="StorageTool"/>
         /// </summary>
-        public StorageTool()
-            : base("kafka.tools.StorageTool")
-        {
-        }
+        public StorageTool() { }
         /// <inheritdoc/>
         [global::System.Obsolete("This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
         public StorageTool(IJVMBridgeBaseInitializer initializer) : base(initializer) { }
+        /// <inheritdoc/>
+        public override string BridgeClassName => "kafka.tools.StorageTool";
     }
 }
