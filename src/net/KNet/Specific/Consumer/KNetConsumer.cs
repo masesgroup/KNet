@@ -214,40 +214,43 @@ namespace MASES.KNet.Consumer
         object _disposedLock = new object();
         bool _disposed = false;
 
-        /// <inheritdoc"/>
+        /// <inheritdoc/>
         protected override void Dispose(bool disposing)
         {
             lock (_disposedLock)
             {
-                if (_disposed) return;
-                try
+                if (!_disposed)
                 {
-                    if (_consumerCallback != null)
+                    try
                     {
-                        IExecute("setCallback", null);
-                        _consumerCallback?.Dispose();
-                    }
-                    _threadRunning = false;
-                    if (_consumedRecords != null)
-                    {
-                        lock (_consumedRecords)
+                        if (_consumerCallback != null)
                         {
-                            System.Threading.Monitor.Pulse(_consumedRecords);
+                            IExecute("setCallback", null);
+                            _consumerCallback?.Dispose();
                         }
-                        if (IsCompleting) { _consumeThread?.Join(); };
-                        actionCallback = null;
-                    }
 
-                    base.Dispose();
+                        _threadRunning = false;
+                        if (_consumedRecords != null)
+                        {
+                            lock (_consumedRecords)
+                            {
+                                System.Threading.Monitor.Pulse(_consumedRecords);
+                            }
+                            if (IsCompleting) { _consumeThread?.Join(); }
+                            ;
+                            actionCallback = null;
+                        }
 
-                    if (_autoCreateSerDes)
-                    {
-                        _keyDeserializer?.Dispose();
-                        _valueDeserializer?.Dispose();
+                        if (_autoCreateSerDes)
+                        {
+                            _keyDeserializer?.Dispose();
+                            _valueDeserializer?.Dispose();
+                        }
                     }
+                    finally { _disposed = true; }
                 }
-                finally { _disposed = true; }
             }
+            base.Dispose(disposing);
         }
 #if NET7_0_OR_GREATER
         /// <inheritdoc cref="IConsumer{K, V, TJVMK, TJVMV}.ApplyPrefetch(bool, int)"/>

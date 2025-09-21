@@ -272,23 +272,25 @@ namespace MASES.KNet.Producer
         object _disposedLock = new object();
         bool _disposed = false;
 
-        /// <inheritdoc cref="IDisposable.Dispose"/>
+        /// <inheritdoc/>
         protected override void Dispose(bool disposing)
         {
             lock (_disposedLock)
             {
-                if (_disposed) return;
-                try
+                if (!_disposed)
                 {
-                    base.Dispose();
-                    if (_autoCreateSerDes)
+                    try
                     {
-                        _keySerializer?.Dispose();
-                        _valueSerializer?.Dispose();
+                        if (_autoCreateSerDes)
+                        {
+                            _keySerializer?.Dispose();
+                            _valueSerializer?.Dispose();
+                        }
                     }
+                    finally { _disposed = true; }
                 }
-                finally { _disposed = true; }
             }
+            base.Dispose(disposing);
         }
 
         static Org.Apache.Kafka.Clients.Producer.ProducerRecord<TJVMK, TJVMV> ToProducerRecord(ProducerRecord<K, V, TJVMK, TJVMV> record, ISerializer<K, TJVMK> keySerializer, ISerializer<V, TJVMV> valueSerializer)
