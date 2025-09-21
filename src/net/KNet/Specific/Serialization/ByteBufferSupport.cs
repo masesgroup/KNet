@@ -26,6 +26,15 @@ namespace MASES.KNet.Serialization
     /// </summary>
     public class ByteBufferDeserializer : JVMBridgeBase<ByteBufferDeserializer>
     {
+        /// <summary>
+        /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
+        /// </summary>
+        public ByteBufferDeserializer() { }
+        /// <summary>
+        /// Internal constructor: used internally from JCOBridge
+        /// </summary>
+        [global::System.Obsolete("This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
+        public ByteBufferDeserializer(IJVMBridgeBaseInitializer initializer) : base(initializer) { }
         /// <inheritdoc/>
         public override string BridgeClassName => "org.mases.knet.developed.common.serialization.ByteBufferDeserializer";
     }
@@ -35,6 +44,15 @@ namespace MASES.KNet.Serialization
     /// </summary>
     public class ByteBufferSerializer : JVMBridgeBase<ByteBufferSerializer>
     {
+        /// <summary>
+        /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
+        /// </summary>
+        public ByteBufferSerializer() { }
+        /// <summary>
+        /// Internal constructor: used internally from JCOBridge
+        /// </summary>
+        [global::System.Obsolete("This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
+        public ByteBufferSerializer(IJVMBridgeBaseInitializer initializer) : base(initializer) { }
         /// <inheritdoc/>
         public override string BridgeClassName => "org.mases.knet.developed.common.serialization.ByteBufferSerializer";
     }
@@ -44,6 +62,15 @@ namespace MASES.KNet.Serialization
     /// </summary>
     public class Serdes : JVMBridgeBase<Serdes>
     {
+        /// <summary>
+        /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
+        /// </summary>
+        public Serdes() { }
+        /// <summary>
+        /// Internal constructor: used internally from JCOBridge
+        /// </summary>
+        [global::System.Obsolete("This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
+        public Serdes(IJVMBridgeBaseInitializer initializer) : base(initializer) { }
         /// <inheritdoc/>
         public override string BridgeClassName => "org.mases.knet.developed.common.serialization.Serdes";
         /// <summary>
