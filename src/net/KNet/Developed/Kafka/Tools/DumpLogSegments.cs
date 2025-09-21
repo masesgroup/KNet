@@ -23,17 +23,16 @@ namespace Kafka.Tools
     /// <summary>
     /// Class managing DumpLogSegments
     /// </summary>
-    public class DumpLogSegments : MASES.JCOBridge.C2JBridge.JVMBridgeMain<DumpLogSegments>
+    public class DumpLogSegments : JVMBridgeMainExtensible<DumpLogSegments>
     {
         /// <summary>
         /// Initialize a new <see cref="DumpLogSegments"/>
         /// </summary>
-        public DumpLogSegments()
-            : base("kafka.tools.DumpLogSegments")
-        {
-        }
+        public DumpLogSegments() { }
         /// <inheritdoc/>
         [global::System.Obsolete("This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
         public DumpLogSegments(IJVMBridgeBaseInitializer initializer) : base(initializer) { }
+        /// <inheritdoc/>
+        public override string BridgeClassName => "kafka.tools.DumpLogSegments";
     }
 }

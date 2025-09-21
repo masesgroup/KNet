@@ -24,18 +24,19 @@ namespace MASES.KNet.Connect
     /// <summary>
     /// Class managing KNetConnectDistributed
     /// </summary>
-    public class KNetConnectDistributed : MASES.JCOBridge.C2JBridge.JVMBridgeMain<KNetConnectDistributed>
+    public class KNetConnectDistributed : JVMBridgeMainExtensible<KNetConnectDistributed>
     {
         /// <summary>
         /// Initialize a new <see cref="KNetConnectDistributed"/>
         /// </summary>
         public KNetConnectDistributed()
-            : base("org.mases.knet.developed.connect.cli.ConnectDistributed")
         {
             KNetConnectProxy.Register();
         }
         /// <inheritdoc/>
         [global::System.Obsolete("This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")] 
-        public KNetConnectDistributed(IJVMBridgeBaseInitializer initializer) : base(initializer) { }
+        public KNetConnectDistributed(IJVMBridgeBaseInitializer initializer) : base(initializer) { KNetConnectProxy.Register(); }
+        /// <inheritdoc/>
+        public override string BridgeClassName => "org.mases.knet.developed.connect.cli.ConnectDistributed";
     }
 }

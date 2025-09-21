@@ -23,17 +23,16 @@ namespace Kafka.Tools
     /// <summary>
     /// Class managing TestRaftServer
     /// </summary>
-    public class TestRaftServer : MASES.JCOBridge.C2JBridge.JVMBridgeMain<TestRaftServer>
+    public class TestRaftServer : JVMBridgeMainExtensible<TestRaftServer>
     {
         /// <summary>
         /// Initialize a new <see cref="TestRaftServer"/>
         /// </summary>
-        public TestRaftServer()
-            : base("kafka.tools.TestRaftServer")
-        {
-        }
+        public TestRaftServer() { }
         /// <inheritdoc/>
-        [global::System.Obsolete("This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")] 
+        [global::System.Obsolete("This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
         public TestRaftServer(IJVMBridgeBaseInitializer initializer) : base(initializer) { }
+        /// <inheritdoc/>
+        public override string BridgeClassName => "kafka.tools.TestRaftServer";
     }
 }

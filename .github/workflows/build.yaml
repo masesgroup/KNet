@@ -531,7 +531,7 @@ jobs:
 
       - run: Get-PSDrive
 
-      - name: Download latest published version of KNetCLI
+      - name: Use latest version of KNetCLI
         run: dotnet tool update -g MASES.KNetCLI --source ${{ github.workspace }}\bin
 
       - name: Disable CET for dotnet process
@@ -644,7 +644,7 @@ jobs:
           dotnet-version: |
             9.x
 
-      - name: Download latest published version of KNetCLI
+      - name: Use latest version of KNetCLI
         run: dotnet tool update -g MASES.KNetCLI --source ${{ github.workspace }}/bin
 
       - name: Prepare Kafka on ${{ matrix.os }} with ${{ matrix.jdk_vendor }} ${{ matrix.jdk_version }}
