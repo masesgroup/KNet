@@ -38,6 +38,7 @@
 	</developers>
 	<properties>
 		<java.version>17</java.version>
+		<maven.compiler.release>17</maven.compiler.release>
 		<maven.compiler.source>17</maven.compiler.source>
 		<maven.compiler.target>17</maven.compiler.target>
 		<classpathfile>${basedir}/classpathfile.classpath</classpathfile>
@@ -154,6 +155,9 @@ project.properties.originalClassPath = file.getText()
 						<arg>${originalClassPath}${path.separator}${jcobridgepath}${path.separator}${jnetpath}</arg>
 					</compilerArgs>
 					<skipMain>${mavenSkipMain}</skipMain>
+					<release>${maven.compiler.release}</release>
+					<source>${maven.compiler.source}</source>
+					<target>${maven.compiler.target}</target>
 				</configuration>
 			</plugin>
 			<plugin>
