@@ -43,7 +43,7 @@
 		<maven.compiler.target>17</maven.compiler.target>
 		<classpathfile>${basedir}/classpathfile.classpath</classpathfile>
 		<mavenSkipMain>false</mavenSkipMain> <!-- set mavenSkipMain to true to avoid source compilation: use directive in command-line -->
-		<jnetVersion>2.6.3.0</jnetVersion>
+		<jnetVersion>2.6.4.0</jnetVersion>
 		<kafkaVersion>4.0.0</kafkaVersion>
 		<knetVersion>3.0.3.0</knetVersion>
 		<rootDir>${basedir}/../../../</rootDir>
