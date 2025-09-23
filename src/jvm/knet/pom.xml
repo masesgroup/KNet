@@ -38,11 +38,12 @@
 	</developers>
 	<properties>
 		<java.version>17</java.version>
+		<maven.compiler.release>17</maven.compiler.release>
 		<maven.compiler.source>17</maven.compiler.source>
 		<maven.compiler.target>17</maven.compiler.target>
 		<classpathfile>${basedir}/classpathfile.classpath</classpathfile>
 		<mavenSkipMain>false</mavenSkipMain> <!-- set mavenSkipMain to true to avoid source compilation: use directive in command-line -->
-		<jnetVersion>2.6.2.0</jnetVersion>
+		<jnetVersion>2.6.4.0</jnetVersion>
 		<kafkaVersion>4.0.0</kafkaVersion>
 		<knetVersion>3.1.0.0</knetVersion>
 		<rootDir>${basedir}/../../../</rootDir>
@@ -154,6 +155,9 @@ project.properties.originalClassPath = file.getText()
 						<arg>${originalClassPath}${path.separator}${jcobridgepath}${path.separator}${jnetpath}</arg>
 					</compilerArgs>
 					<skipMain>${mavenSkipMain}</skipMain>
+					<release>${maven.compiler.release}</release>
+					<source>${maven.compiler.source}</source>
+					<target>${maven.compiler.target}</target>
 				</configuration>
 			</plugin>
 			<plugin>
@@ -214,7 +218,7 @@ project.properties.originalClassPath = file.getText()
 			<scope>compile</scope>
 			<groupId>org.apache.groovy</groupId>
 			<artifactId>groovy</artifactId>
-			<version>5.0.0</version>
+			<version>5.0.1</version>
 		</dependency>
 		<!--dependency> 
 			<groupId>junit</groupId>

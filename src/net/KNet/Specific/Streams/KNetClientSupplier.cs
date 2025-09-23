@@ -85,28 +85,40 @@ namespace MASES.KNet.Streams
             _consumers.Add(consumer);
             return consumer;
         }
+
+        object _disposedLock = new object();
+        bool _disposed = false;
         /// <inheritdoc/>
-        public override void Dispose()
+        protected override void Dispose(bool disposing)
         {
-            foreach (var item in _admins)
+            lock (_disposedLock)
             {
-                item?.Dispose();
-            }
-            _admins.Clear();
+                if (!_disposed)
+                {
+                    try
+                    {
+                        foreach (var item in _admins)
+                        {
+                            item?.Dispose();
+                        }
+                        _admins.Clear();
 
-            foreach (var item in _consumers)
-            {
-                item?.Dispose();
-            }
-            _consumers.Clear();
+                        foreach (var item in _consumers)
+                        {
+                            item?.Dispose();
+                        }
+                        _consumers.Clear();
 
-            foreach (var item in _producers)
-            {
-                item?.Dispose();
+                        foreach (var item in _producers)
+                        {
+                            item?.Dispose();
+                        }
+                        _producers.Clear();
+                    }
+                    finally { _disposed = true; }
+                }
             }
-            _producers.Clear();
-
-            base.Dispose();
+            base.Dispose(disposing);
         }
     }
 }

@@ -199,6 +199,15 @@ namespace Org.Apache.Kafka.Connect.Source
     public class SourceRecord<TKey, TValue> : SourceRecord<object, object, TKey, TValue>
     {
         /// <summary>
+        /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
+        /// </summary>
+        public SourceRecord() { }
+        /// <summary>
+        /// Internal constructor: used internally from JCOBridge
+        /// </summary>
+        [global::System.Obsolete("This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
+        public SourceRecord(IJVMBridgeBaseInitializer initializer) : base(initializer) { }
+        /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeAbstract.htm"/>
         /// </summary>
         public override bool IsBridgeAbstract => false;
@@ -325,6 +334,15 @@ namespace Org.Apache.Kafka.Connect.Source
     /// <typeparam name="TValue">The type of value to be inserted in Kafka</typeparam>
     public class SourceRecord<TKeySource, TOffset, TKey, TValue> : ConnectRecord<SourceRecord<TKey?, TValue?>, TKey?, TValue?>
     {
+        /// <summary>
+        /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
+        /// </summary>
+        public SourceRecord() { }
+        /// <summary>
+        /// Internal constructor: used internally from JCOBridge
+        /// </summary>
+        [global::System.Obsolete("This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
+        public SourceRecord(IJVMBridgeBaseInitializer initializer) : base(initializer) { }
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeAbstract.htm"/>
         /// </summary>

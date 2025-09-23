@@ -89,7 +89,7 @@
 
 
   <h1 id="Org_Apache_Kafka_Connect_Source_SourceRecord_4" data-uid="Org.Apache.Kafka.Connect.Source.SourceRecord`4" class="text-break">
-Class SourceRecord&lt;TKeySource, TOffset, TKey, TValue&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Developed/Org/Apache/Kafka/Connect/Source/SourceRecord.cs/#L326"><i class="bi bi-code-slash"></i></a>
+Class SourceRecord&lt;TKeySource, TOffset, TKey, TValue&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Developed/Org/Apache/Kafka/Connect/Source/SourceRecord.cs/#L335"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -103,7 +103,7 @@ In addition to the standard fields in <a class="xref" href="Org.Apache.Kafka.Con
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class SourceRecord&lt;TKeySource, TOffset, TKey, TValue&gt; : ConnectRecord&lt;SourceRecord&lt;TKey?, TValue?&gt;, TKey?, TValue?&gt;, IDynamicMetaObjectProvider, IJVMBridgeCore, IDisposable, IJVMBridgeBaseStatic, IJVMBridgeBase, IJVMBridgeDefinition</code></pre>
+    <pre><code class="lang-csharp hljs">public class SourceRecord&lt;TKeySource, TOffset, TKey, TValue&gt; : ConnectRecord&lt;SourceRecord&lt;TKey?, TValue?&gt;, TKey?, TValue?&gt;, IDynamicMetaObjectProvider, IJVMBridgeCore, IEquatable&lt;IJVMBridgeBase&gt;, IDisposable, IJVMBridgeBaseStatic, IJVMBridgeBase, IJVMBridgeDefinition</code></pre>
   </div>
 
 
@@ -141,6 +141,7 @@ In addition to the standard fields in <a class="xref" href="Org.Apache.Kafka.Con
     <dd>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.idynamicmetaobjectprovider">IDynamicMetaObjectProvider</a></div>
       <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeCore.html">IJVMBridgeCore</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeBase.html">IJVMBridgeBase</a>&gt;</div>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
       <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeBaseStatic.html">IJVMBridgeBaseStatic</a></div>
       <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeBase.html">IJVMBridgeBase</a></div>
@@ -279,16 +280,16 @@ In addition to the standard fields in <a class="xref" href="Org.Apache.Kafka.Con
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;ConnectRecord&lt;SourceRecord&lt;TKey, TValue&gt;, TKey, TValue&gt;&gt;.SExecuteWithSignature&lt;TReturn, TConverter&gt;(Type, string, string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;ConnectRecord&lt;SourceRecord&lt;TKey, TValue&gt;, TKey, TValue&gt;&gt;.SExecuteArray&lt;T&gt;(IJavaType, string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;ConnectRecord&lt;SourceRecord&lt;TKey, TValue&gt;, TKey, TValue&gt;&gt;.SExecuteArray&lt;TArrayType&gt;(IJavaType, string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;ConnectRecord&lt;SourceRecord&lt;TKey, TValue&gt;, TKey, TValue&gt;&gt;.SExecuteWithSignatureArray&lt;T&gt;(IJavaType, string, string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;ConnectRecord&lt;SourceRecord&lt;TKey, TValue&gt;, TKey, TValue&gt;&gt;.SExecuteWithSignatureArray&lt;TArrayType&gt;(IJavaType, string, string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;ConnectRecord&lt;SourceRecord&lt;TKey, TValue&gt;, TKey, TValue&gt;&gt;.SExecuteArray&lt;T&gt;(string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;ConnectRecord&lt;SourceRecord&lt;TKey, TValue&gt;, TKey, TValue&gt;&gt;.SExecuteArray&lt;TArrayType&gt;(string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;ConnectRecord&lt;SourceRecord&lt;TKey, TValue&gt;, TKey, TValue&gt;&gt;.SExecuteWithSignatureArray&lt;T&gt;(string, string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;ConnectRecord&lt;SourceRecord&lt;TKey, TValue&gt;, TKey, TValue&gt;&gt;.SExecuteWithSignatureArray&lt;TArrayType&gt;(string, string, params object[])</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;ConnectRecord&lt;SourceRecord&lt;TKey, TValue&gt;, TKey, TValue&gt;&gt;.SGetField(IJavaType, string)</a>
@@ -336,6 +337,12 @@ In addition to the standard fields in <a class="xref" href="Org.Apache.Kafka.Con
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;ConnectRecord&lt;SourceRecord&lt;TKey, TValue&gt;, TKey, TValue&gt;&gt;.NewWithSignature(string, params object[])</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;ConnectRecord&lt;SourceRecord&lt;TKey, TValue&gt;, TKey, TValue&gt;&gt;.NewAndWrapsDirect&lt;TNewClass&gt;(string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;ConnectRecord&lt;SourceRecord&lt;TKey, TValue&gt;, TKey, TValue&gt;&gt;.NewWithSignatureAndWrapsDirect&lt;TNewClass&gt;(string, string, params object[])</a>
+    </div>
+    <div>
       <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase-1.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_1_Execute__1___0___">JVMBridgeBase&lt;ConnectRecord&lt;SourceRecord&lt;TKey, TValue&gt;, TKey, TValue&gt;&gt;.Execute&lt;T&gt;(params T[])</a>
     </div>
     <div>
@@ -345,13 +352,25 @@ In addition to the standard fields in <a class="xref" href="Org.Apache.Kafka.Con
       <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase-1.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_1_BridgeClazz">JVMBridgeBase&lt;ConnectRecord&lt;SourceRecord&lt;TKey, TValue&gt;, TKey, TValue&gt;&gt;.BridgeClazz</a>
     </div>
     <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_ReferenceEqualsJVM_MASES_JCOBridge_C2JBridge_JVMBridgeBase_MASES_JCOBridge_C2JBridge_JVMBridgeBase_">JVMBridgeBase.ReferenceEqualsJVM(JVMBridgeBase, JVMBridgeBase)</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">JVMBridgeBase.ClazzOf&lt;TClass&gt;(bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">JVMBridgeBase.ClazzOf&lt;TClass&gt;(out Exception, bool)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.ClazzOf(string, bool)</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.ClazzOf(string, out Exception, bool)</a>
+    </div>
+    <div>
       <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_RuntimeClassNameOf__1">JVMBridgeBase.RuntimeClassNameOf&lt;T&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase.RuntimeClassNameOf(Type)</a>
     </div>
     <div>
       <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_ClassNameOf__1">JVMBridgeBase.ClassNameOf&lt;T&gt;()</a>
@@ -405,13 +424,19 @@ In addition to the standard fields in <a class="xref" href="Org.Apache.Kafka.Con
       <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_CastDirect__1">JVMBridgeBase.CastDirect&lt;TNewClass&gt;()</a>
     </div>
     <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_Execute__1___0___">JVMBridgeBase.Execute&lt;T&gt;(params T[])</a>
-    </div>
-    <div>
       <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_Dispose">JVMBridgeBase.Dispose()</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">JVMBridgeBase.Dispose(bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_Execute__1___0___">JVMBridgeBase.Execute&lt;T&gt;(params T[])</a>
+    </div>
+    <div>
       <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_ToString">JVMBridgeBase.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_Equals_MASES_JCOBridge_C2JBridge_IJVMBridgeBase_">JVMBridgeBase.Equals(IJVMBridgeBase)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">JVMBridgeBase.Equals(object)</a>
@@ -459,10 +484,10 @@ In addition to the standard fields in <a class="xref" href="Org.Apache.Kafka.Con
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteWithSignature&lt;TNewClass, TReturn, TConverter&gt;(string, string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteArray&lt;T&gt;(string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteArray&lt;TArrayType&gt;(string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteWithSignatureArray&lt;T&gt;(string, string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteWithSignatureArray&lt;TArrayType&gt;(string, string, params object[])</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IGetField(string)</a>
@@ -571,9 +596,36 @@ In addition to the standard fields in <a class="xref" href="Org.Apache.Kafka.Con
 
   <a id="Org_Apache_Kafka_Connect_Source_SourceRecord_4__ctor_" data-uid="Org.Apache.Kafka.Connect.Source.SourceRecord`4.#ctor*"></a>
 
+  <h3 id="Org_Apache_Kafka_Connect_Source_SourceRecord_4__ctor" data-uid="Org.Apache.Kafka.Connect.Source.SourceRecord`4.#ctor">
+  SourceRecord()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Developed/Org/Apache/Kafka/Connect/Source/SourceRecord.cs/#L340"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SourceRecord()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Apache_Kafka_Connect_Source_SourceRecord_4__ctor_" data-uid="Org.Apache.Kafka.Connect.Source.SourceRecord`4.#ctor*"></a>
+
   <h3 id="Org_Apache_Kafka_Connect_Source_SourceRecord_4__ctor_Java_Util_Map_Java_Lang_String__0__Java_Util_Map_Java_Lang_String__1__System_String_Org_Apache_Kafka_Connect_Data_Schema__2_Org_Apache_Kafka_Connect_Data_Schema__3_" data-uid="Org.Apache.Kafka.Connect.Source.SourceRecord`4.#ctor(Java.Util.Map{Java.Lang.String,`0},Java.Util.Map{Java.Lang.String,`1},System.String,Org.Apache.Kafka.Connect.Data.Schema,`2,Org.Apache.Kafka.Connect.Data.Schema,`3)">
   SourceRecord(Map&lt;String, TKeySource&gt;, Map&lt;String, TOffset&gt;, string, Schema, TKey?, Schema, TValue?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Developed/Org/Apache/Kafka/Connect/Source/SourceRecord.cs/#L380"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Developed/Org/Apache/Kafka/Connect/Source/SourceRecord.cs/#L398"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord-2.html">SourceRecord&lt;TKey, TValue&gt;</a></p>
@@ -624,7 +676,7 @@ In addition to the standard fields in <a class="xref" href="Org.Apache.Kafka.Con
 
   <h3 id="Org_Apache_Kafka_Connect_Source_SourceRecord_4__ctor_Java_Util_Map_Java_Lang_String__0__Java_Util_Map_Java_Lang_String__1__System_String_Org_Apache_Kafka_Connect_Data_Schema__3_" data-uid="Org.Apache.Kafka.Connect.Source.SourceRecord`4.#ctor(Java.Util.Map{Java.Lang.String,`0},Java.Util.Map{Java.Lang.String,`1},System.String,Org.Apache.Kafka.Connect.Data.Schema,`3)">
   SourceRecord(Map&lt;String, TKeySource&gt;, Map&lt;String, TOffset&gt;, string, Schema, TValue?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Developed/Org/Apache/Kafka/Connect/Source/SourceRecord.cs/#L365"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Developed/Org/Apache/Kafka/Connect/Source/SourceRecord.cs/#L383"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord-2.html">SourceRecord&lt;TKey, TValue&gt;</a></p>
@@ -669,7 +721,7 @@ In addition to the standard fields in <a class="xref" href="Org.Apache.Kafka.Con
 
   <h3 id="Org_Apache_Kafka_Connect_Source_SourceRecord_4__ctor_Java_Util_Map_Java_Lang_String__0__Java_Util_Map_Java_Lang_String__1__System_String_System_Nullable_System_Int32__Org_Apache_Kafka_Connect_Data_Schema__2_Org_Apache_Kafka_Connect_Data_Schema__3_" data-uid="Org.Apache.Kafka.Connect.Source.SourceRecord`4.#ctor(Java.Util.Map{Java.Lang.String,`0},Java.Util.Map{Java.Lang.String,`1},System.String,System.Nullable{System.Int32},Org.Apache.Kafka.Connect.Data.Schema,`2,Org.Apache.Kafka.Connect.Data.Schema,`3)">
   SourceRecord(Map&lt;String, TKeySource&gt;, Map&lt;String, TOffset&gt;, string, int?, Schema, TKey?, Schema, TValue?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Developed/Org/Apache/Kafka/Connect/Source/SourceRecord.cs/#L396"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Developed/Org/Apache/Kafka/Connect/Source/SourceRecord.cs/#L414"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord-2.html">SourceRecord&lt;TKey, TValue&gt;</a></p>
@@ -723,7 +775,7 @@ In addition to the standard fields in <a class="xref" href="Org.Apache.Kafka.Con
 
   <h3 id="Org_Apache_Kafka_Connect_Source_SourceRecord_4__ctor_Java_Util_Map_Java_Lang_String__0__Java_Util_Map_Java_Lang_String__1__System_String_System_Nullable_System_Int32__Org_Apache_Kafka_Connect_Data_Schema__2_Org_Apache_Kafka_Connect_Data_Schema__3_System_DateTime_" data-uid="Org.Apache.Kafka.Connect.Source.SourceRecord`4.#ctor(Java.Util.Map{Java.Lang.String,`0},Java.Util.Map{Java.Lang.String,`1},System.String,System.Nullable{System.Int32},Org.Apache.Kafka.Connect.Data.Schema,`2,Org.Apache.Kafka.Connect.Data.Schema,`3,System.DateTime)">
   SourceRecord(Map&lt;String, TKeySource&gt;, Map&lt;String, TOffset&gt;, string, int?, Schema, TKey?, Schema, TValue?, DateTime)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Developed/Org/Apache/Kafka/Connect/Source/SourceRecord.cs/#L414"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Developed/Org/Apache/Kafka/Connect/Source/SourceRecord.cs/#L432"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord-2.html">SourceRecord&lt;TKey, TValue&gt;</a></p>
@@ -780,7 +832,7 @@ In addition to the standard fields in <a class="xref" href="Org.Apache.Kafka.Con
 
   <h3 id="Org_Apache_Kafka_Connect_Source_SourceRecord_4__ctor_Java_Util_Map_Java_Lang_String__0__Java_Util_Map_Java_Lang_String__1__System_String_System_Nullable_System_Int32__Org_Apache_Kafka_Connect_Data_Schema__2_Org_Apache_Kafka_Connect_Data_Schema__3_System_DateTime_Org_Apache_Kafka_Connect_Header_Headers_" data-uid="Org.Apache.Kafka.Connect.Source.SourceRecord`4.#ctor(Java.Util.Map{Java.Lang.String,`0},Java.Util.Map{Java.Lang.String,`1},System.String,System.Nullable{System.Int32},Org.Apache.Kafka.Connect.Data.Schema,`2,Org.Apache.Kafka.Connect.Data.Schema,`3,System.DateTime,Org.Apache.Kafka.Connect.Header.Headers)">
   SourceRecord(Map&lt;String, TKeySource&gt;, Map&lt;String, TOffset&gt;, string, int?, Schema, TKey?, Schema, TValue?, DateTime, Headers)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Developed/Org/Apache/Kafka/Connect/Source/SourceRecord.cs/#L435"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Developed/Org/Apache/Kafka/Connect/Source/SourceRecord.cs/#L453"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord-2.html">SourceRecord&lt;TKey, TValue&gt;</a></p>
@@ -840,7 +892,7 @@ In addition to the standard fields in <a class="xref" href="Org.Apache.Kafka.Con
 
   <h3 id="Org_Apache_Kafka_Connect_Source_SourceRecord_4__ctor_Java_Util_Map_Java_Lang_String__0__Java_Util_Map_Java_Lang_String__1__System_String_System_Nullable_System_Int32__Org_Apache_Kafka_Connect_Data_Schema__3_" data-uid="Org.Apache.Kafka.Connect.Source.SourceRecord`4.#ctor(Java.Util.Map{Java.Lang.String,`0},Java.Util.Map{Java.Lang.String,`1},System.String,System.Nullable{System.Int32},Org.Apache.Kafka.Connect.Data.Schema,`3)">
   SourceRecord(Map&lt;String, TKeySource&gt;, Map&lt;String, TOffset&gt;, string, int?, Schema, TValue?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Developed/Org/Apache/Kafka/Connect/Source/SourceRecord.cs/#L352"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Developed/Org/Apache/Kafka/Connect/Source/SourceRecord.cs/#L370"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord-2.html">SourceRecord&lt;TKey, TValue&gt;</a></p>
@@ -884,6 +936,39 @@ In addition to the standard fields in <a class="xref" href="Org.Apache.Kafka.Con
 
 
 
+  <a id="Org_Apache_Kafka_Connect_Source_SourceRecord_4__ctor_" data-uid="Org.Apache.Kafka.Connect.Source.SourceRecord`4.#ctor*"></a>
+
+  <h3 id="Org_Apache_Kafka_Connect_Source_SourceRecord_4__ctor_MASES_JCOBridge_C2JBridge_IJVMBridgeBaseInitializer_" data-uid="Org.Apache.Kafka.Connect.Source.SourceRecord`4.#ctor(MASES.JCOBridge.C2JBridge.IJVMBridgeBaseInitializer)">
+  SourceRecord(IJVMBridgeBaseInitializer)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Developed/Org/Apache/Kafka/Connect/Source/SourceRecord.cs/#L344"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Internal constructor: used internally from JCOBridge</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.&quot;)]
+public SourceRecord(IJVMBridgeBaseInitializer initializer)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>initializer</code> <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeBaseInitializer.html">IJVMBridgeBaseInitializer</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
   <h2 class="section" id="properties">Properties
 </h2>
 
@@ -892,7 +977,7 @@ In addition to the standard fields in <a class="xref" href="Org.Apache.Kafka.Con
 
   <h3 id="Org_Apache_Kafka_Connect_Source_SourceRecord_4_BridgeClassName" data-uid="Org.Apache.Kafka.Connect.Source.SourceRecord`4.BridgeClassName">
   BridgeClassName
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Developed/Org/Apache/Kafka/Connect/Source/SourceRecord.cs/#L335"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Developed/Org/Apache/Kafka/Connect/Source/SourceRecord.cs/#L353"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm</a></p>
@@ -924,7 +1009,7 @@ In addition to the standard fields in <a class="xref" href="Org.Apache.Kafka.Con
 
   <h3 id="Org_Apache_Kafka_Connect_Source_SourceRecord_4_IsBridgeAbstract" data-uid="Org.Apache.Kafka.Connect.Source.SourceRecord`4.IsBridgeAbstract">
   IsBridgeAbstract
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Developed/Org/Apache/Kafka/Connect/Source/SourceRecord.cs/#L331"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Developed/Org/Apache/Kafka/Connect/Source/SourceRecord.cs/#L349"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeAbstract.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeAbstract.htm</a></p>
@@ -956,7 +1041,7 @@ In addition to the standard fields in <a class="xref" href="Org.Apache.Kafka.Con
 
   <h3 id="Org_Apache_Kafka_Connect_Source_SourceRecord_4_SourceOffset" data-uid="Org.Apache.Kafka.Connect.Source.SourceRecord`4.SourceOffset">
   SourceOffset
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Developed/Org/Apache/Kafka/Connect/Source/SourceRecord.cs/#L450"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Developed/Org/Apache/Kafka/Connect/Source/SourceRecord.cs/#L468"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>The source offset</p>
@@ -988,7 +1073,7 @@ In addition to the standard fields in <a class="xref" href="Org.Apache.Kafka.Con
 
   <h3 id="Org_Apache_Kafka_Connect_Source_SourceRecord_4_SourcePartition" data-uid="Org.Apache.Kafka.Connect.Source.SourceRecord`4.SourcePartition">
   SourcePartition
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Developed/Org/Apache/Kafka/Connect/Source/SourceRecord.cs/#L446"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Developed/Org/Apache/Kafka/Connect/Source/SourceRecord.cs/#L464"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>The source partition</p>
@@ -1024,7 +1109,7 @@ In addition to the standard fields in <a class="xref" href="Org.Apache.Kafka.Con
 
   <h3 id="Org_Apache_Kafka_Connect_Source_SourceRecord_4_op_Implicit_Org_Apache_Kafka_Connect_Source_SourceRecord__0__1__2__3___Org_Apache_Kafka_Connect_Source_SourceRecord" data-uid="Org.Apache.Kafka.Connect.Source.SourceRecord`4.op_Implicit(Org.Apache.Kafka.Connect.Source.SourceRecord{`0,`1,`2,`3})~Org.Apache.Kafka.Connect.Source.SourceRecord">
   implicit operator SourceRecord(SourceRecord&lt;TKeySource, TOffset, TKey?, TValue?&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Developed/Org/Apache/Kafka/Connect/Source/SourceRecord.cs/#L341"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Developed/Org/Apache/Kafka/Connect/Source/SourceRecord.cs/#L359"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Converts an <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord-4.html">SourceRecord&lt;TKeySource, TOffset, TKey, TValue&gt;</a> in <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord.html">SourceRecord</a></p>
@@ -1062,7 +1147,7 @@ In addition to the standard fields in <a class="xref" href="Org.Apache.Kafka.Con
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Developed/Org/Apache/Kafka/Connect/Source/SourceRecord.cs/#L326" class="edit-link">Edit this page</a>
+          <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Developed/Org/Apache/Kafka/Connect/Source/SourceRecord.cs/#L335" class="edit-link">Edit this page</a>
         </div>
 
 

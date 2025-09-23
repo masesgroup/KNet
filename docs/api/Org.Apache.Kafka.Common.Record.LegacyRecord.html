@@ -89,7 +89,7 @@
 
 
   <h1 id="Org_Apache_Kafka_Common_Record_LegacyRecord" data-uid="Org.Apache.Kafka.Common.Record.LegacyRecord" class="text-break">
-Class LegacyRecord  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/LegacyRecord.cs/#L64"><i class="bi bi-code-slash"></i></a>
+Class LegacyRecord  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/LegacyRecord.cs/#L70"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -102,7 +102,7 @@ Class LegacyRecord  <a class="header-action link-secondary" title="View source" 
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class LegacyRecord : JVMBridgeBase&lt;LegacyRecord&gt;, IDynamicMetaObjectProvider, IJVMBridgeCore, IDisposable, IJVMBridgeBaseStatic, IJVMBridgeBase, IJVMBridgeDefinition</code></pre>
+    <pre><code class="lang-csharp hljs">public class LegacyRecord : JVMBridgeBase&lt;LegacyRecord&gt;, IDynamicMetaObjectProvider, IJVMBridgeCore, IEquatable&lt;IJVMBridgeBase&gt;, IDisposable, IJVMBridgeBaseStatic, IJVMBridgeBase, IJVMBridgeDefinition</code></pre>
   </div>
 
 
@@ -124,6 +124,7 @@ Class LegacyRecord  <a class="header-action link-secondary" title="View source" 
     <dd>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.idynamicmetaobjectprovider">IDynamicMetaObjectProvider</a></div>
       <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeCore.html">IJVMBridgeCore</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeBase.html">IJVMBridgeBase</a>&gt;</div>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
       <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeBaseStatic.html">IJVMBridgeBaseStatic</a></div>
       <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeBase.html">IJVMBridgeBase</a></div>
@@ -220,16 +221,16 @@ Class LegacyRecord  <a class="header-action link-secondary" title="View source" 
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;LegacyRecord&gt;.SExecuteWithSignature&lt;TReturn, TConverter&gt;(Type, string, string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;LegacyRecord&gt;.SExecuteArray&lt;T&gt;(IJavaType, string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;LegacyRecord&gt;.SExecuteArray&lt;TArrayType&gt;(IJavaType, string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;LegacyRecord&gt;.SExecuteWithSignatureArray&lt;T&gt;(IJavaType, string, string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;LegacyRecord&gt;.SExecuteWithSignatureArray&lt;TArrayType&gt;(IJavaType, string, string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;LegacyRecord&gt;.SExecuteArray&lt;T&gt;(string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;LegacyRecord&gt;.SExecuteArray&lt;TArrayType&gt;(string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;LegacyRecord&gt;.SExecuteWithSignatureArray&lt;T&gt;(string, string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;LegacyRecord&gt;.SExecuteWithSignatureArray&lt;TArrayType&gt;(string, string, params object[])</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;LegacyRecord&gt;.SGetField(IJavaType, string)</a>
@@ -277,6 +278,12 @@ Class LegacyRecord  <a class="header-action link-secondary" title="View source" 
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;LegacyRecord&gt;.NewWithSignature(string, params object[])</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;LegacyRecord&gt;.NewAndWrapsDirect&lt;TNewClass&gt;(string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;LegacyRecord&gt;.NewWithSignatureAndWrapsDirect&lt;TNewClass&gt;(string, string, params object[])</a>
+    </div>
+    <div>
       <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase-1.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_1_Execute__1___0___">JVMBridgeBase&lt;LegacyRecord&gt;.Execute&lt;T&gt;(params T[])</a>
     </div>
     <div>
@@ -286,13 +293,25 @@ Class LegacyRecord  <a class="header-action link-secondary" title="View source" 
       <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase-1.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_1_BridgeClazz">JVMBridgeBase&lt;LegacyRecord&gt;.BridgeClazz</a>
     </div>
     <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_ReferenceEqualsJVM_MASES_JCOBridge_C2JBridge_JVMBridgeBase_MASES_JCOBridge_C2JBridge_JVMBridgeBase_">JVMBridgeBase.ReferenceEqualsJVM(JVMBridgeBase, JVMBridgeBase)</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">JVMBridgeBase.ClazzOf&lt;TClass&gt;(bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">JVMBridgeBase.ClazzOf&lt;TClass&gt;(out Exception, bool)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.ClazzOf(string, bool)</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.ClazzOf(string, out Exception, bool)</a>
+    </div>
+    <div>
       <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_RuntimeClassNameOf__1">JVMBridgeBase.RuntimeClassNameOf&lt;T&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase.RuntimeClassNameOf(Type)</a>
     </div>
     <div>
       <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_ClassNameOf__1">JVMBridgeBase.ClassNameOf&lt;T&gt;()</a>
@@ -349,7 +368,13 @@ Class LegacyRecord  <a class="header-action link-secondary" title="View source" 
       <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_Dispose">JVMBridgeBase.Dispose()</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">JVMBridgeBase.Dispose(bool)</a>
+    </div>
+    <div>
       <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_ToString">JVMBridgeBase.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_Equals_MASES_JCOBridge_C2JBridge_IJVMBridgeBase_">JVMBridgeBase.Equals(IJVMBridgeBase)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">JVMBridgeBase.Equals(object)</a>
@@ -397,10 +422,10 @@ Class LegacyRecord  <a class="header-action link-secondary" title="View source" 
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteWithSignature&lt;TNewClass, TReturn, TConverter&gt;(string, string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteArray&lt;T&gt;(string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteArray&lt;TArrayType&gt;(string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteWithSignatureArray&lt;T&gt;(string, string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteWithSignatureArray&lt;TArrayType&gt;(string, string, params object[])</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IGetField(string)</a>
@@ -522,7 +547,7 @@ Class LegacyRecord  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Common_Record_LegacyRecord__ctor_Java_Nio_ByteBuffer_" data-uid="Org.Apache.Kafka.Common.Record.LegacyRecord.#ctor(Java.Nio.ByteBuffer)">
   LegacyRecord(ByteBuffer)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/LegacyRecord.cs/#L81"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/LegacyRecord.cs/#L87"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/LegacyRecord.html#%3Cinit%3E(java.nio.ByteBuffer)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/LegacyRecord.html#%3Cinit%3E(java.nio.ByteBuffer)</a></p>
@@ -555,7 +580,7 @@ Class LegacyRecord  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Common_Record_LegacyRecord__ctor_Java_Nio_ByteBuffer_Java_Lang_Long_Org_Apache_Kafka_Common_Record_TimestampType_" data-uid="Org.Apache.Kafka.Common.Record.LegacyRecord.#ctor(Java.Nio.ByteBuffer,Java.Lang.Long,Org.Apache.Kafka.Common.Record.TimestampType)">
   LegacyRecord(ByteBuffer, Long, TimestampType)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/LegacyRecord.cs/#L73"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/LegacyRecord.cs/#L79"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/LegacyRecord.html#%3Cinit%3E(java.nio.ByteBuffer,java.lang.Long,org.apache.kafka.common.record.TimestampType)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/LegacyRecord.html#%3Cinit%3E(java.nio.ByteBuffer,java.lang.Long,org.apache.kafka.common.record.TimestampType)</a></p>
@@ -592,9 +617,42 @@ Class LegacyRecord  <a class="header-action link-secondary" title="View source" 
 
   <a id="Org_Apache_Kafka_Common_Record_LegacyRecord__ctor_" data-uid="Org.Apache.Kafka.Common.Record.LegacyRecord.#ctor*"></a>
 
+  <h3 id="Org_Apache_Kafka_Common_Record_LegacyRecord__ctor_MASES_JCOBridge_C2JBridge_IJVMBridgeBaseInitializer_" data-uid="Org.Apache.Kafka.Common.Record.LegacyRecord.#ctor(MASES.JCOBridge.C2JBridge.IJVMBridgeBaseInitializer)">
+  LegacyRecord(IJVMBridgeBaseInitializer)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/LegacyRecord.cs/#L42"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Internal constructor: used internally from JCOBridge</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.&quot;)]
+public LegacyRecord(IJVMBridgeBaseInitializer initializer)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>initializer</code> <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeBaseInitializer.html">IJVMBridgeBaseInitializer</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Apache_Kafka_Common_Record_LegacyRecord__ctor_" data-uid="Org.Apache.Kafka.Common.Record.LegacyRecord.#ctor*"></a>
+
   <h3 id="Org_Apache_Kafka_Common_Record_LegacyRecord__ctor_System_Object___" data-uid="Org.Apache.Kafka.Common.Record.LegacyRecord.#ctor(System.Object[])">
   LegacyRecord(params object[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/LegacyRecord.cs/#L42"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/LegacyRecord.cs/#L47"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Generic constructor: it is useful for JCOBridge when there is a derived class which needs to pass arguments to the highest JVMBridgeBase class</p>
@@ -630,7 +688,7 @@ Class LegacyRecord  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Common_Record_LegacyRecord_ATTRIBUTES_LENGTH" data-uid="Org.Apache.Kafka.Common.Record.LegacyRecord.ATTRIBUTES_LENGTH">
   ATTRIBUTES_LENGTH
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/LegacyRecord.cs/#L96"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/LegacyRecord.cs/#L102"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/LegacyRecord.html#ATTRIBUTES_LENGTH">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/LegacyRecord.html#ATTRIBUTES_LENGTH</a></p>
@@ -662,7 +720,7 @@ Class LegacyRecord  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Common_Record_LegacyRecord_ATTRIBUTES_OFFSET" data-uid="Org.Apache.Kafka.Common.Record.LegacyRecord.ATTRIBUTES_OFFSET">
   ATTRIBUTES_OFFSET
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/LegacyRecord.cs/#L102"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/LegacyRecord.cs/#L108"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/LegacyRecord.html#ATTRIBUTES_OFFSET">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/LegacyRecord.html#ATTRIBUTES_OFFSET</a></p>
@@ -694,7 +752,7 @@ Class LegacyRecord  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Common_Record_LegacyRecord_BridgeClassName" data-uid="Org.Apache.Kafka.Common.Record.LegacyRecord.BridgeClassName">
   BridgeClassName
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/LegacyRecord.cs/#L48"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/LegacyRecord.cs/#L54"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Java class name to be instantiated</p>
@@ -726,7 +784,7 @@ Class LegacyRecord  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Common_Record_LegacyRecord_CRC_LENGTH" data-uid="Org.Apache.Kafka.Common.Record.LegacyRecord.CRC_LENGTH">
   CRC_LENGTH
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/LegacyRecord.cs/#L108"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/LegacyRecord.cs/#L114"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/LegacyRecord.html#CRC_LENGTH">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/LegacyRecord.html#CRC_LENGTH</a></p>
@@ -758,7 +816,7 @@ Class LegacyRecord  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Common_Record_LegacyRecord_CRC_OFFSET" data-uid="Org.Apache.Kafka.Common.Record.LegacyRecord.CRC_OFFSET">
   CRC_OFFSET
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/LegacyRecord.cs/#L114"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/LegacyRecord.cs/#L120"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/LegacyRecord.html#CRC_OFFSET">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/LegacyRecord.html#CRC_OFFSET</a></p>
@@ -790,7 +848,7 @@ Class LegacyRecord  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Common_Record_LegacyRecord_HEADER_SIZE_V0" data-uid="Org.Apache.Kafka.Common.Record.LegacyRecord.HEADER_SIZE_V0">
   HEADER_SIZE_V0
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/LegacyRecord.cs/#L120"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/LegacyRecord.cs/#L126"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/LegacyRecord.html#HEADER_SIZE_V0">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/LegacyRecord.html#HEADER_SIZE_V0</a></p>
@@ -822,7 +880,7 @@ Class LegacyRecord  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Common_Record_LegacyRecord_HEADER_SIZE_V1" data-uid="Org.Apache.Kafka.Common.Record.LegacyRecord.HEADER_SIZE_V1">
   HEADER_SIZE_V1
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/LegacyRecord.cs/#L126"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/LegacyRecord.cs/#L132"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/LegacyRecord.html#HEADER_SIZE_V1">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/LegacyRecord.html#HEADER_SIZE_V1</a></p>
@@ -854,7 +912,7 @@ Class LegacyRecord  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Common_Record_LegacyRecord_IsBridgeAbstract" data-uid="Org.Apache.Kafka.Common.Record.LegacyRecord.IsBridgeAbstract">
   IsBridgeAbstract
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/LegacyRecord.cs/#L50"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/LegacyRecord.cs/#L56"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.html#MASES_JCOBridge_C2JBridge_IJVMBridgeDefinition_BridgeClassName">BridgeClassName</a> is an abstract class, i.e. cannot be created an instance</p>
@@ -886,7 +944,7 @@ Class LegacyRecord  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Common_Record_LegacyRecord_IsBridgeCloseable" data-uid="Org.Apache.Kafka.Common.Record.LegacyRecord.IsBridgeCloseable">
   IsBridgeCloseable
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/LegacyRecord.cs/#L52"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/LegacyRecord.cs/#L58"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.html#MASES_JCOBridge_C2JBridge_IJVMBridgeDefinition_BridgeClassName">BridgeClassName</a> implements Closeable</p>
@@ -918,7 +976,7 @@ Class LegacyRecord  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Common_Record_LegacyRecord_IsBridgeInterface" data-uid="Org.Apache.Kafka.Common.Record.LegacyRecord.IsBridgeInterface">
   IsBridgeInterface
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/LegacyRecord.cs/#L54"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/LegacyRecord.cs/#L60"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.html#MASES_JCOBridge_C2JBridge_IJVMBridgeDefinition_BridgeClassName">BridgeClassName</a> is an interface, i.e. does not have any public constructor</p>
@@ -950,7 +1008,7 @@ Class LegacyRecord  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Common_Record_LegacyRecord_IsBridgeStatic" data-uid="Org.Apache.Kafka.Common.Record.LegacyRecord.IsBridgeStatic">
   IsBridgeStatic
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/LegacyRecord.cs/#L56"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/LegacyRecord.cs/#L62"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.html#MASES_JCOBridge_C2JBridge_IJVMBridgeDefinition_BridgeClassName">BridgeClassName</a> is a static class, i.e. does not have any public constructor</p>
@@ -982,7 +1040,7 @@ Class LegacyRecord  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Common_Record_LegacyRecord_KEY_OFFSET_V0" data-uid="Org.Apache.Kafka.Common.Record.LegacyRecord.KEY_OFFSET_V0">
   KEY_OFFSET_V0
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/LegacyRecord.cs/#L132"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/LegacyRecord.cs/#L138"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/LegacyRecord.html#KEY_OFFSET_V0">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/LegacyRecord.html#KEY_OFFSET_V0</a></p>
@@ -1014,7 +1072,7 @@ Class LegacyRecord  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Common_Record_LegacyRecord_KEY_OFFSET_V1" data-uid="Org.Apache.Kafka.Common.Record.LegacyRecord.KEY_OFFSET_V1">
   KEY_OFFSET_V1
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/LegacyRecord.cs/#L138"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/LegacyRecord.cs/#L144"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/LegacyRecord.html#KEY_OFFSET_V1">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/LegacyRecord.html#KEY_OFFSET_V1</a></p>
@@ -1046,7 +1104,7 @@ Class LegacyRecord  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Common_Record_LegacyRecord_KEY_SIZE_LENGTH" data-uid="Org.Apache.Kafka.Common.Record.LegacyRecord.KEY_SIZE_LENGTH">
   KEY_SIZE_LENGTH
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/LegacyRecord.cs/#L144"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/LegacyRecord.cs/#L150"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/LegacyRecord.html#KEY_SIZE_LENGTH">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/LegacyRecord.html#KEY_SIZE_LENGTH</a></p>
@@ -1078,7 +1136,7 @@ Class LegacyRecord  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Common_Record_LegacyRecord_KEY_SIZE_OFFSET_V0" data-uid="Org.Apache.Kafka.Common.Record.LegacyRecord.KEY_SIZE_OFFSET_V0">
   KEY_SIZE_OFFSET_V0
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/LegacyRecord.cs/#L150"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/LegacyRecord.cs/#L156"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/LegacyRecord.html#KEY_SIZE_OFFSET_V0">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/LegacyRecord.html#KEY_SIZE_OFFSET_V0</a></p>
@@ -1110,7 +1168,7 @@ Class LegacyRecord  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Common_Record_LegacyRecord_KEY_SIZE_OFFSET_V1" data-uid="Org.Apache.Kafka.Common.Record.LegacyRecord.KEY_SIZE_OFFSET_V1">
   KEY_SIZE_OFFSET_V1
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/LegacyRecord.cs/#L156"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/LegacyRecord.cs/#L162"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/LegacyRecord.html#KEY_SIZE_OFFSET_V1">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/LegacyRecord.html#KEY_SIZE_OFFSET_V1</a></p>
@@ -1142,7 +1200,7 @@ Class LegacyRecord  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Common_Record_LegacyRecord_MAGIC_LENGTH" data-uid="Org.Apache.Kafka.Common.Record.LegacyRecord.MAGIC_LENGTH">
   MAGIC_LENGTH
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/LegacyRecord.cs/#L162"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/LegacyRecord.cs/#L168"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/LegacyRecord.html#MAGIC_LENGTH">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/LegacyRecord.html#MAGIC_LENGTH</a></p>
@@ -1174,7 +1232,7 @@ Class LegacyRecord  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Common_Record_LegacyRecord_MAGIC_OFFSET" data-uid="Org.Apache.Kafka.Common.Record.LegacyRecord.MAGIC_OFFSET">
   MAGIC_OFFSET
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/LegacyRecord.cs/#L168"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/LegacyRecord.cs/#L174"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/LegacyRecord.html#MAGIC_OFFSET">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/LegacyRecord.html#MAGIC_OFFSET</a></p>
@@ -1206,7 +1264,7 @@ Class LegacyRecord  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Common_Record_LegacyRecord_NO_TIMESTAMP" data-uid="Org.Apache.Kafka.Common.Record.LegacyRecord.NO_TIMESTAMP">
   NO_TIMESTAMP
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/LegacyRecord.cs/#L204"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/LegacyRecord.cs/#L210"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/LegacyRecord.html#NO_TIMESTAMP">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/LegacyRecord.html#NO_TIMESTAMP</a></p>
@@ -1238,7 +1296,7 @@ Class LegacyRecord  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Common_Record_LegacyRecord_RECORD_OVERHEAD_V0" data-uid="Org.Apache.Kafka.Common.Record.LegacyRecord.RECORD_OVERHEAD_V0">
   RECORD_OVERHEAD_V0
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/LegacyRecord.cs/#L174"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/LegacyRecord.cs/#L180"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/LegacyRecord.html#RECORD_OVERHEAD_V0">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/LegacyRecord.html#RECORD_OVERHEAD_V0</a></p>
@@ -1270,7 +1328,7 @@ Class LegacyRecord  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Common_Record_LegacyRecord_RECORD_OVERHEAD_V1" data-uid="Org.Apache.Kafka.Common.Record.LegacyRecord.RECORD_OVERHEAD_V1">
   RECORD_OVERHEAD_V1
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/LegacyRecord.cs/#L180"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/LegacyRecord.cs/#L186"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/LegacyRecord.html#RECORD_OVERHEAD_V1">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/LegacyRecord.html#RECORD_OVERHEAD_V1</a></p>
@@ -1302,7 +1360,7 @@ Class LegacyRecord  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Common_Record_LegacyRecord_TIMESTAMP_LENGTH" data-uid="Org.Apache.Kafka.Common.Record.LegacyRecord.TIMESTAMP_LENGTH">
   TIMESTAMP_LENGTH
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/LegacyRecord.cs/#L186"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/LegacyRecord.cs/#L192"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/LegacyRecord.html#TIMESTAMP_LENGTH">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/LegacyRecord.html#TIMESTAMP_LENGTH</a></p>
@@ -1334,7 +1392,7 @@ Class LegacyRecord  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Common_Record_LegacyRecord_TIMESTAMP_OFFSET" data-uid="Org.Apache.Kafka.Common.Record.LegacyRecord.TIMESTAMP_OFFSET">
   TIMESTAMP_OFFSET
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/LegacyRecord.cs/#L192"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/LegacyRecord.cs/#L198"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/LegacyRecord.html#TIMESTAMP_OFFSET">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/LegacyRecord.html#TIMESTAMP_OFFSET</a></p>
@@ -1366,7 +1424,7 @@ Class LegacyRecord  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Common_Record_LegacyRecord_VALUE_SIZE_LENGTH" data-uid="Org.Apache.Kafka.Common.Record.LegacyRecord.VALUE_SIZE_LENGTH">
   VALUE_SIZE_LENGTH
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/LegacyRecord.cs/#L198"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/LegacyRecord.cs/#L204"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/LegacyRecord.html#VALUE_SIZE_LENGTH">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/LegacyRecord.html#VALUE_SIZE_LENGTH</a></p>
@@ -1402,7 +1460,7 @@ Class LegacyRecord  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Common_Record_LegacyRecord_Attributes" data-uid="Org.Apache.Kafka.Common.Record.LegacyRecord.Attributes">
   Attributes()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/LegacyRecord.cs/#L375"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/LegacyRecord.cs/#L381"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/LegacyRecord.html#attributes()">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/LegacyRecord.html#attributes()</a></p>
@@ -1435,7 +1493,7 @@ Class LegacyRecord  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Common_Record_LegacyRecord_Buffer" data-uid="Org.Apache.Kafka.Common.Record.LegacyRecord.Buffer">
   Buffer()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/LegacyRecord.cs/#L415"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/LegacyRecord.cs/#L421"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/LegacyRecord.html#buffer()">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/LegacyRecord.html#buffer()</a></p>
@@ -1468,7 +1526,7 @@ Class LegacyRecord  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Common_Record_LegacyRecord_Checksum" data-uid="Org.Apache.Kafka.Common.Record.LegacyRecord.Checksum">
   Checksum()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/LegacyRecord.cs/#L439"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/LegacyRecord.cs/#L445"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/LegacyRecord.html#checksum()">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/LegacyRecord.html#checksum()</a></p>
@@ -1501,7 +1559,7 @@ Class LegacyRecord  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Common_Record_LegacyRecord_CompressionType" data-uid="Org.Apache.Kafka.Common.Record.LegacyRecord.CompressionType">
   CompressionType()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/LegacyRecord.cs/#L463"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/LegacyRecord.cs/#L469"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/LegacyRecord.html#compressionType()">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/LegacyRecord.html#compressionType()</a></p>
@@ -1534,7 +1592,7 @@ Class LegacyRecord  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Common_Record_LegacyRecord_ComputeAttributes_System_Byte_Org_Apache_Kafka_Common_Record_CompressionType_Org_Apache_Kafka_Common_Record_TimestampType_" data-uid="Org.Apache.Kafka.Common.Record.LegacyRecord.ComputeAttributes(System.Byte,Org.Apache.Kafka.Common.Record.CompressionType,Org.Apache.Kafka.Common.Record.TimestampType)">
   ComputeAttributes(byte, CompressionType, TimestampType)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/LegacyRecord.cs/#L218"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/LegacyRecord.cs/#L224"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/LegacyRecord.html#computeAttributes(byte,org.apache.kafka.common.record.CompressionType,org.apache.kafka.common.record.TimestampType)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/LegacyRecord.html#computeAttributes(byte,org.apache.kafka.common.record.CompressionType,org.apache.kafka.common.record.TimestampType)</a></p>
@@ -1579,7 +1637,7 @@ Class LegacyRecord  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Common_Record_LegacyRecord_ComputeChecksum" data-uid="Org.Apache.Kafka.Common.Record.LegacyRecord.ComputeChecksum">
   ComputeChecksum()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/LegacyRecord.cs/#L447"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/LegacyRecord.cs/#L453"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/LegacyRecord.html#computeChecksum()">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/LegacyRecord.html#computeChecksum()</a></p>
@@ -1612,7 +1670,7 @@ Class LegacyRecord  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Common_Record_LegacyRecord_ComputeChecksum_System_Byte_System_Byte_System_Int64_System_Byte___System_Byte___" data-uid="Org.Apache.Kafka.Common.Record.LegacyRecord.ComputeChecksum(System.Byte,System.Byte,System.Int64,System.Byte[],System.Byte[])">
   ComputeChecksum(byte, byte, long, byte[], byte[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/LegacyRecord.cs/#L242"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/LegacyRecord.cs/#L248"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/LegacyRecord.html#computeChecksum(byte,byte,long,byte[],byte[])">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/LegacyRecord.html#computeChecksum(byte,byte,long,byte[],byte[])</a></p>
@@ -1663,7 +1721,7 @@ Class LegacyRecord  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Common_Record_LegacyRecord_Create_System_Byte_System_Int64_System_Byte___System_Byte___" data-uid="Org.Apache.Kafka.Common.Record.LegacyRecord.Create(System.Byte,System.Int64,System.Byte[],System.Byte[])">
   Create(byte, long, byte[], byte[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/LegacyRecord.cs/#L300"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/LegacyRecord.cs/#L306"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/LegacyRecord.html#create(byte,long,byte[],byte[])">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/LegacyRecord.html#create(byte,long,byte[],byte[])</a></p>
@@ -1711,7 +1769,7 @@ Class LegacyRecord  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Common_Record_LegacyRecord_Create_System_Byte_System_Int64_System_Byte___System_Byte___Org_Apache_Kafka_Common_Record_CompressionType_Org_Apache_Kafka_Common_Record_TimestampType_" data-uid="Org.Apache.Kafka.Common.Record.LegacyRecord.Create(System.Byte,System.Int64,System.Byte[],System.Byte[],Org.Apache.Kafka.Common.Record.CompressionType,Org.Apache.Kafka.Common.Record.TimestampType)">
   Create(byte, long, byte[], byte[], CompressionType, TimestampType)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/LegacyRecord.cs/#L288"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/LegacyRecord.cs/#L294"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/LegacyRecord.html#create(byte,long,byte[],byte[],org.apache.kafka.common.record.CompressionType,org.apache.kafka.common.record.TimestampType)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/LegacyRecord.html#create(byte,long,byte[],byte[],org.apache.kafka.common.record.CompressionType,org.apache.kafka.common.record.TimestampType)</a></p>
@@ -1765,7 +1823,7 @@ Class LegacyRecord  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Common_Record_LegacyRecord_EnsureValid" data-uid="Org.Apache.Kafka.Common.Record.LegacyRecord.EnsureValid">
   EnsureValid()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/LegacyRecord.cs/#L478"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/LegacyRecord.cs/#L484"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/LegacyRecord.html#ensureValid()">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/LegacyRecord.html#ensureValid()</a></p>
@@ -1792,7 +1850,7 @@ Class LegacyRecord  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Common_Record_LegacyRecord_HasKey" data-uid="Org.Apache.Kafka.Common.Record.LegacyRecord.HasKey">
   HasKey()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/LegacyRecord.cs/#L351"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/LegacyRecord.cs/#L357"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/LegacyRecord.html#hasKey()">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/LegacyRecord.html#hasKey()</a></p>
@@ -1825,7 +1883,7 @@ Class LegacyRecord  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Common_Record_LegacyRecord_HasNullValue" data-uid="Org.Apache.Kafka.Common.Record.LegacyRecord.HasNullValue">
   HasNullValue()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/LegacyRecord.cs/#L359"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/LegacyRecord.cs/#L365"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/LegacyRecord.html#hasNullValue()">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/LegacyRecord.html#hasNullValue()</a></p>
@@ -1858,7 +1916,7 @@ Class LegacyRecord  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Common_Record_LegacyRecord_IsValid" data-uid="Org.Apache.Kafka.Common.Record.LegacyRecord.IsValid">
   IsValid()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/LegacyRecord.cs/#L367"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/LegacyRecord.cs/#L373"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/LegacyRecord.html#isValid()">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/LegacyRecord.html#isValid()</a></p>
@@ -1891,7 +1949,7 @@ Class LegacyRecord  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Common_Record_LegacyRecord_Key" data-uid="Org.Apache.Kafka.Common.Record.LegacyRecord.Key">
   Key()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/LegacyRecord.cs/#L423"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/LegacyRecord.cs/#L429"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/LegacyRecord.html#key()">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/LegacyRecord.html#key()</a></p>
@@ -1924,7 +1982,7 @@ Class LegacyRecord  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Common_Record_LegacyRecord_KeySize" data-uid="Org.Apache.Kafka.Common.Record.LegacyRecord.KeySize">
   KeySize()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/LegacyRecord.cs/#L391"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/LegacyRecord.cs/#L397"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/LegacyRecord.html#keySize()">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/LegacyRecord.html#keySize()</a></p>
@@ -1957,7 +2015,7 @@ Class LegacyRecord  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Common_Record_LegacyRecord_Magic" data-uid="Org.Apache.Kafka.Common.Record.LegacyRecord.Magic">
   Magic()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/LegacyRecord.cs/#L383"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/LegacyRecord.cs/#L389"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/LegacyRecord.html#magic()">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/LegacyRecord.html#magic()</a></p>
@@ -1990,7 +2048,7 @@ Class LegacyRecord  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Common_Record_LegacyRecord_RecordSize_System_Byte_System_Int32_System_Int32_" data-uid="Org.Apache.Kafka.Common.Record.LegacyRecord.RecordSize(System.Byte,System.Int32,System.Int32)">
   RecordSize(byte, int, int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/LegacyRecord.cs/#L229"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/LegacyRecord.cs/#L235"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/LegacyRecord.html#recordSize(byte,int,int)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/LegacyRecord.html#recordSize(byte,int,int)</a></p>
@@ -2035,7 +2093,7 @@ Class LegacyRecord  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Common_Record_LegacyRecord_SizeInBytes" data-uid="Org.Apache.Kafka.Common.Record.LegacyRecord.SizeInBytes">
   SizeInBytes()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/LegacyRecord.cs/#L399"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/LegacyRecord.cs/#L405"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/LegacyRecord.html#sizeInBytes()">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/LegacyRecord.html#sizeInBytes()</a></p>
@@ -2068,7 +2126,7 @@ Class LegacyRecord  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Common_Record_LegacyRecord_Timestamp" data-uid="Org.Apache.Kafka.Common.Record.LegacyRecord.Timestamp">
   Timestamp()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/LegacyRecord.cs/#L455"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/LegacyRecord.cs/#L461"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/LegacyRecord.html#timestamp()">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/LegacyRecord.html#timestamp()</a></p>
@@ -2101,7 +2159,7 @@ Class LegacyRecord  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Common_Record_LegacyRecord_TimestampType" data-uid="Org.Apache.Kafka.Common.Record.LegacyRecord.TimestampType">
   TimestampType()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/LegacyRecord.cs/#L471"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/LegacyRecord.cs/#L477"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/LegacyRecord.html#timestampType()">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/LegacyRecord.html#timestampType()</a></p>
@@ -2134,7 +2192,7 @@ Class LegacyRecord  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Common_Record_LegacyRecord_TimestampType_System_Byte_Org_Apache_Kafka_Common_Record_TimestampType_System_Byte_" data-uid="Org.Apache.Kafka.Common.Record.LegacyRecord.TimestampType(System.Byte,Org.Apache.Kafka.Common.Record.TimestampType,System.Byte)">
   TimestampType(byte, TimestampType, byte)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/LegacyRecord.cs/#L311"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/LegacyRecord.cs/#L317"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/LegacyRecord.html#timestampType(byte,org.apache.kafka.common.record.TimestampType,byte)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/LegacyRecord.html#timestampType(byte,org.apache.kafka.common.record.TimestampType,byte)</a></p>
@@ -2179,7 +2237,7 @@ Class LegacyRecord  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Common_Record_LegacyRecord_Value" data-uid="Org.Apache.Kafka.Common.Record.LegacyRecord.Value">
   Value()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/LegacyRecord.cs/#L431"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/LegacyRecord.cs/#L437"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/LegacyRecord.html#value()">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/LegacyRecord.html#value()</a></p>
@@ -2212,7 +2270,7 @@ Class LegacyRecord  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Common_Record_LegacyRecord_ValueSize" data-uid="Org.Apache.Kafka.Common.Record.LegacyRecord.ValueSize">
   ValueSize()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/LegacyRecord.cs/#L407"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/LegacyRecord.cs/#L413"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/LegacyRecord.html#valueSize()">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/LegacyRecord.html#valueSize()</a></p>
@@ -2245,7 +2303,7 @@ Class LegacyRecord  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Common_Record_LegacyRecord_Write_Java_Io_DataOutputStream_System_Byte_System_Int64_Java_Nio_ByteBuffer_Java_Nio_ByteBuffer_Org_Apache_Kafka_Common_Record_CompressionType_Org_Apache_Kafka_Common_Record_TimestampType_" data-uid="Org.Apache.Kafka.Common.Record.LegacyRecord.Write(Java.Io.DataOutputStream,System.Byte,System.Int64,Java.Nio.ByteBuffer,Java.Nio.ByteBuffer,Org.Apache.Kafka.Common.Record.CompressionType,Org.Apache.Kafka.Common.Record.TimestampType)">
   Write(DataOutputStream, byte, long, ByteBuffer, ByteBuffer, CompressionType, TimestampType)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/LegacyRecord.cs/#L274"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/LegacyRecord.cs/#L280"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/LegacyRecord.html#write(java.io.DataOutputStream,byte,long,java.nio.ByteBuffer,java.nio.ByteBuffer,org.apache.kafka.common.record.CompressionType,org.apache.kafka.common.record.TimestampType)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/LegacyRecord.html#write(java.io.DataOutputStream,byte,long,java.nio.ByteBuffer,java.nio.ByteBuffer,org.apache.kafka.common.record.CompressionType,org.apache.kafka.common.record.TimestampType)</a></p>
@@ -2307,7 +2365,7 @@ Class LegacyRecord  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Common_Record_LegacyRecord_Write_Java_Io_DataOutputStream_System_Byte_System_Int64_System_Byte_System_Int64_System_Byte___System_Byte___" data-uid="Org.Apache.Kafka.Common.Record.LegacyRecord.Write(Java.Io.DataOutputStream,System.Byte,System.Int64,System.Byte,System.Int64,System.Byte[],System.Byte[])">
   Write(DataOutputStream, byte, long, byte, long, byte[], byte[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/LegacyRecord.cs/#L326"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/LegacyRecord.cs/#L332"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/LegacyRecord.html#write(java.io.DataOutputStream,byte,long,byte,long,byte[],byte[])">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/LegacyRecord.html#write(java.io.DataOutputStream,byte,long,byte,long,byte[],byte[])</a></p>
@@ -2363,7 +2421,7 @@ Class LegacyRecord  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Common_Record_LegacyRecord_Write_Java_Io_DataOutputStream_System_Byte_System_Int64_System_Byte___System_Byte___Org_Apache_Kafka_Common_Record_CompressionType_Org_Apache_Kafka_Common_Record_TimestampType_" data-uid="Org.Apache.Kafka.Common.Record.LegacyRecord.Write(Java.Io.DataOutputStream,System.Byte,System.Int64,System.Byte[],System.Byte[],Org.Apache.Kafka.Common.Record.CompressionType,Org.Apache.Kafka.Common.Record.TimestampType)">
   Write(DataOutputStream, byte, long, byte[], byte[], CompressionType, TimestampType)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/LegacyRecord.cs/#L258"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/LegacyRecord.cs/#L264"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/LegacyRecord.html#write(java.io.DataOutputStream,byte,long,byte[],byte[],org.apache.kafka.common.record.CompressionType,org.apache.kafka.common.record.TimestampType)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/LegacyRecord.html#write(java.io.DataOutputStream,byte,long,byte[],byte[],org.apache.kafka.common.record.CompressionType,org.apache.kafka.common.record.TimestampType)</a></p>
@@ -2425,7 +2483,7 @@ Class LegacyRecord  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Common_Record_LegacyRecord_WriteCompressedRecordHeader_Java_Nio_ByteBuffer_System_Byte_System_Int32_System_Int64_Org_Apache_Kafka_Common_Record_CompressionType_Org_Apache_Kafka_Common_Record_TimestampType_" data-uid="Org.Apache.Kafka.Common.Record.LegacyRecord.WriteCompressedRecordHeader(Java.Nio.ByteBuffer,System.Byte,System.Int32,System.Int64,Org.Apache.Kafka.Common.Record.CompressionType,Org.Apache.Kafka.Common.Record.TimestampType)">
   WriteCompressedRecordHeader(ByteBuffer, byte, int, long, CompressionType, TimestampType)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/LegacyRecord.cs/#L339"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/LegacyRecord.cs/#L345"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/LegacyRecord.html#writeCompressedRecordHeader(java.nio.ByteBuffer,byte,int,long,org.apache.kafka.common.record.CompressionType,org.apache.kafka.common.record.TimestampType)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/LegacyRecord.html#writeCompressedRecordHeader(java.nio.ByteBuffer,byte,int,long,org.apache.kafka.common.record.CompressionType,org.apache.kafka.common.record.TimestampType)</a></p>
@@ -2473,7 +2531,7 @@ Class LegacyRecord  <a class="header-action link-secondary" title="View source" 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/LegacyRecord.cs/#L64" class="edit-link">Edit this page</a>
+          <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/LegacyRecord.cs/#L70" class="edit-link">Edit this page</a>
         </div>
 
 

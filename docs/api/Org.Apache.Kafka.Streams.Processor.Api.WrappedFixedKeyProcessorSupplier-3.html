@@ -89,7 +89,7 @@
 
 
   <h1 id="Org_Apache_Kafka_Streams_Processor_Api_WrappedFixedKeyProcessorSupplier_3" data-uid="Org.Apache.Kafka.Streams.Processor.Api.WrappedFixedKeyProcessorSupplier`3" class="text-break">
-Class WrappedFixedKeyProcessorSupplier&lt;KIn, VIn, VOut&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Processor/Api/WrappedFixedKeyProcessorSupplier.cs/#L155"><i class="bi bi-code-slash"></i></a>
+Class WrappedFixedKeyProcessorSupplier&lt;KIn, VIn, VOut&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Processor/Api/WrappedFixedKeyProcessorSupplier.cs/#L167"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -102,7 +102,7 @@ Class WrappedFixedKeyProcessorSupplier&lt;KIn, VIn, VOut&gt;  <a class="header-a
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class WrappedFixedKeyProcessorSupplier&lt;KIn, VIn, VOut&gt; : FixedKeyProcessorSupplier&lt;KIn, VIn, VOut&gt;, IDynamicMetaObjectProvider, IJVMBridgeCore, IDisposable, IJVMBridgeBaseStatic, IConnectedStoreProvider, ISupplier&lt;FixedKeyProcessor&lt;KIn, VIn, VOut&gt;&gt;, IJVMBridgeBase, IJVMBridgeDefinition, IWrappedFixedKeyProcessorSupplier&lt;KIn, VIn, VOut&gt;, IFixedKeyProcessorSupplier&lt;KIn, VIn, VOut&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public class WrappedFixedKeyProcessorSupplier&lt;KIn, VIn, VOut&gt; : FixedKeyProcessorSupplier&lt;KIn, VIn, VOut&gt;, IDynamicMetaObjectProvider, IJVMBridgeCore, IEquatable&lt;IJVMBridgeBase&gt;, IDisposable, IJVMBridgeBaseStatic, IConnectedStoreProvider, ISupplier&lt;FixedKeyProcessor&lt;KIn, VIn, VOut&gt;&gt;, IJVMBridgeBase, IJVMBridgeDefinition, IWrappedFixedKeyProcessorSupplier&lt;KIn, VIn, VOut&gt;, IFixedKeyProcessorSupplier&lt;KIn, VIn, VOut&gt;</code></pre>
   </div>
 
 
@@ -136,6 +136,7 @@ Class WrappedFixedKeyProcessorSupplier&lt;KIn, VIn, VOut&gt;  <a class="header-a
     <dd>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.idynamicmetaobjectprovider">IDynamicMetaObjectProvider</a></div>
       <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeCore.html">IJVMBridgeCore</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeBase.html">IJVMBridgeBase</a>&gt;</div>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
       <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeBaseStatic.html">IJVMBridgeBaseStatic</a></div>
       <div><a class="xref" href="Org.Apache.Kafka.Streams.Processor.IConnectedStoreProvider.html">IConnectedStoreProvider</a></div>
@@ -182,7 +183,7 @@ Class WrappedFixedKeyProcessorSupplier&lt;KIn, VIn, VOut&gt;  <a class="header-a
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeListener.AddEventHandler&lt;TDataClass&gt;(string, EventHandler&lt;CLRListenerEventArgs&lt;TDataClass&gt;&gt;)</a>
     </div>
     <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeListener.html#MASES_JCOBridge_C2JBridge_JVMBridgeListener_Dispose">JVMBridgeListener.Dispose()</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">JVMBridgeListener.Dispose(bool)</a>
     </div>
     <div>
       <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeListener.html#MASES_JCOBridge_C2JBridge_JVMBridgeListener_AutoInit">JVMBridgeListener.AutoInit</a>
@@ -275,16 +276,16 @@ Class WrappedFixedKeyProcessorSupplier&lt;KIn, VIn, VOut&gt;  <a class="header-a
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;JVMBridgeListener&gt;.SExecuteWithSignature&lt;TReturn, TConverter&gt;(Type, string, string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;JVMBridgeListener&gt;.SExecuteArray&lt;T&gt;(IJavaType, string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;JVMBridgeListener&gt;.SExecuteArray&lt;TArrayType&gt;(IJavaType, string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;JVMBridgeListener&gt;.SExecuteWithSignatureArray&lt;T&gt;(IJavaType, string, string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;JVMBridgeListener&gt;.SExecuteWithSignatureArray&lt;TArrayType&gt;(IJavaType, string, string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;JVMBridgeListener&gt;.SExecuteArray&lt;T&gt;(string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;JVMBridgeListener&gt;.SExecuteArray&lt;TArrayType&gt;(string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;JVMBridgeListener&gt;.SExecuteWithSignatureArray&lt;T&gt;(string, string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;JVMBridgeListener&gt;.SExecuteWithSignatureArray&lt;TArrayType&gt;(string, string, params object[])</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;JVMBridgeListener&gt;.SGetField(IJavaType, string)</a>
@@ -332,6 +333,12 @@ Class WrappedFixedKeyProcessorSupplier&lt;KIn, VIn, VOut&gt;  <a class="header-a
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;JVMBridgeListener&gt;.NewWithSignature(string, params object[])</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;JVMBridgeListener&gt;.NewAndWrapsDirect&lt;TNewClass&gt;(string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;JVMBridgeListener&gt;.NewWithSignatureAndWrapsDirect&lt;TNewClass&gt;(string, string, params object[])</a>
+    </div>
+    <div>
       <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase-1.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_1_Execute__1___0___">JVMBridgeBase&lt;JVMBridgeListener&gt;.Execute&lt;T&gt;(params T[])</a>
     </div>
     <div>
@@ -341,13 +348,25 @@ Class WrappedFixedKeyProcessorSupplier&lt;KIn, VIn, VOut&gt;  <a class="header-a
       <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase-1.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_1_BridgeClazz">JVMBridgeBase&lt;JVMBridgeListener&gt;.BridgeClazz</a>
     </div>
     <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_ReferenceEqualsJVM_MASES_JCOBridge_C2JBridge_JVMBridgeBase_MASES_JCOBridge_C2JBridge_JVMBridgeBase_">JVMBridgeBase.ReferenceEqualsJVM(JVMBridgeBase, JVMBridgeBase)</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">JVMBridgeBase.ClazzOf&lt;TClass&gt;(bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">JVMBridgeBase.ClazzOf&lt;TClass&gt;(out Exception, bool)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.ClazzOf(string, bool)</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.ClazzOf(string, out Exception, bool)</a>
+    </div>
+    <div>
       <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_RuntimeClassNameOf__1">JVMBridgeBase.RuntimeClassNameOf&lt;T&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase.RuntimeClassNameOf(Type)</a>
     </div>
     <div>
       <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_ClassNameOf__1">JVMBridgeBase.ClassNameOf&lt;T&gt;()</a>
@@ -401,7 +420,13 @@ Class WrappedFixedKeyProcessorSupplier&lt;KIn, VIn, VOut&gt;  <a class="header-a
       <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_CastDirect__1">JVMBridgeBase.CastDirect&lt;TNewClass&gt;()</a>
     </div>
     <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_Dispose">JVMBridgeBase.Dispose()</a>
+    </div>
+    <div>
       <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_ToString">JVMBridgeBase.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_Equals_MASES_JCOBridge_C2JBridge_IJVMBridgeBase_">JVMBridgeBase.Equals(IJVMBridgeBase)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">JVMBridgeBase.Equals(object)</a>
@@ -449,10 +474,10 @@ Class WrappedFixedKeyProcessorSupplier&lt;KIn, VIn, VOut&gt;  <a class="header-a
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteWithSignature&lt;TNewClass, TReturn, TConverter&gt;(string, string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteArray&lt;T&gt;(string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteArray&lt;TArrayType&gt;(string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteWithSignatureArray&lt;T&gt;(string, string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteWithSignatureArray&lt;TArrayType&gt;(string, string, params object[])</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IGetField(string)</a>
@@ -544,7 +569,7 @@ Class WrappedFixedKeyProcessorSupplier&lt;KIn, VIn, VOut&gt;  <a class="header-a
 
   <h3 id="Org_Apache_Kafka_Streams_Processor_Api_WrappedFixedKeyProcessorSupplier_3__ctor" data-uid="Org.Apache.Kafka.Streams.Processor.Api.WrappedFixedKeyProcessorSupplier`3.#ctor">
   WrappedFixedKeyProcessorSupplier()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Processor/Api/WrappedFixedKeyProcessorSupplier.cs/#L78"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Processor/Api/WrappedFixedKeyProcessorSupplier.cs/#L84"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge</p>
@@ -570,9 +595,42 @@ public WrappedFixedKeyProcessorSupplier()</code></pre>
 
   <a id="Org_Apache_Kafka_Streams_Processor_Api_WrappedFixedKeyProcessorSupplier_3__ctor_" data-uid="Org.Apache.Kafka.Streams.Processor.Api.WrappedFixedKeyProcessorSupplier`3.#ctor*"></a>
 
+  <h3 id="Org_Apache_Kafka_Streams_Processor_Api_WrappedFixedKeyProcessorSupplier_3__ctor_MASES_JCOBridge_C2JBridge_IJVMBridgeBaseInitializer_" data-uid="Org.Apache.Kafka.Streams.Processor.Api.WrappedFixedKeyProcessorSupplier`3.#ctor(MASES.JCOBridge.C2JBridge.IJVMBridgeBaseInitializer)">
+  WrappedFixedKeyProcessorSupplier(IJVMBridgeBaseInitializer)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Processor/Api/WrappedFixedKeyProcessorSupplier.cs/#L89"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Internal constructor: used internally from JCOBridge</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.&quot;)]
+public WrappedFixedKeyProcessorSupplier(IJVMBridgeBaseInitializer initializer)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>initializer</code> <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeBaseInitializer.html">IJVMBridgeBaseInitializer</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Apache_Kafka_Streams_Processor_Api_WrappedFixedKeyProcessorSupplier_3__ctor_" data-uid="Org.Apache.Kafka.Streams.Processor.Api.WrappedFixedKeyProcessorSupplier`3.#ctor*"></a>
+
   <h3 id="Org_Apache_Kafka_Streams_Processor_Api_WrappedFixedKeyProcessorSupplier_3__ctor_System_Object___" data-uid="Org.Apache.Kafka.Streams.Processor.Api.WrappedFixedKeyProcessorSupplier`3.#ctor(System.Object[])">
   WrappedFixedKeyProcessorSupplier(params object[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Processor/Api/WrappedFixedKeyProcessorSupplier.cs/#L83"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Processor/Api/WrappedFixedKeyProcessorSupplier.cs/#L94"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Generic constructor: it is useful for JCOBridge when there is a derived class which needs to pass arguments to the highest JVMBridgeBase class</p>
@@ -609,7 +667,7 @@ public WrappedFixedKeyProcessorSupplier(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Streams_Processor_Api_WrappedFixedKeyProcessorSupplier_3_BridgeClassName" data-uid="Org.Apache.Kafka.Streams.Processor.Api.WrappedFixedKeyProcessorSupplier`3.BridgeClassName">
   BridgeClassName
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Processor/Api/WrappedFixedKeyProcessorSupplier.cs/#L90"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Processor/Api/WrappedFixedKeyProcessorSupplier.cs/#L102"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeListener_BridgeClassName.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeListener_BridgeClassName.htm</a></p>
@@ -641,7 +699,7 @@ public WrappedFixedKeyProcessorSupplier(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Streams_Processor_Api_WrappedFixedKeyProcessorSupplier_3_IsBridgeAbstract" data-uid="Org.Apache.Kafka.Streams.Processor.Api.WrappedFixedKeyProcessorSupplier`3.IsBridgeAbstract">
   IsBridgeAbstract
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Processor/Api/WrappedFixedKeyProcessorSupplier.cs/#L92"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Processor/Api/WrappedFixedKeyProcessorSupplier.cs/#L104"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.html#MASES_JCOBridge_C2JBridge_IJVMBridgeDefinition_BridgeClassName">BridgeClassName</a> is an abstract class, i.e. cannot be created an instance</p>
@@ -673,7 +731,7 @@ public WrappedFixedKeyProcessorSupplier(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Streams_Processor_Api_WrappedFixedKeyProcessorSupplier_3_IsBridgeCloseable" data-uid="Org.Apache.Kafka.Streams.Processor.Api.WrappedFixedKeyProcessorSupplier`3.IsBridgeCloseable">
   IsBridgeCloseable
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Processor/Api/WrappedFixedKeyProcessorSupplier.cs/#L94"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Processor/Api/WrappedFixedKeyProcessorSupplier.cs/#L106"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.html#MASES_JCOBridge_C2JBridge_IJVMBridgeDefinition_BridgeClassName">BridgeClassName</a> implements Closeable</p>
@@ -705,7 +763,7 @@ public WrappedFixedKeyProcessorSupplier(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Streams_Processor_Api_WrappedFixedKeyProcessorSupplier_3_IsBridgeInterface" data-uid="Org.Apache.Kafka.Streams.Processor.Api.WrappedFixedKeyProcessorSupplier`3.IsBridgeInterface">
   IsBridgeInterface
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Processor/Api/WrappedFixedKeyProcessorSupplier.cs/#L96"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Processor/Api/WrappedFixedKeyProcessorSupplier.cs/#L108"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.html#MASES_JCOBridge_C2JBridge_IJVMBridgeDefinition_BridgeClassName">BridgeClassName</a> is an interface, i.e. does not have any public constructor</p>
@@ -737,7 +795,7 @@ public WrappedFixedKeyProcessorSupplier(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Streams_Processor_Api_WrappedFixedKeyProcessorSupplier_3_IsBridgeStatic" data-uid="Org.Apache.Kafka.Streams.Processor.Api.WrappedFixedKeyProcessorSupplier`3.IsBridgeStatic">
   IsBridgeStatic
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Processor/Api/WrappedFixedKeyProcessorSupplier.cs/#L98"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Processor/Api/WrappedFixedKeyProcessorSupplier.cs/#L110"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.html#MASES_JCOBridge_C2JBridge_IJVMBridgeDefinition_BridgeClassName">BridgeClassName</a> is a static class, i.e. does not have any public constructor</p>
@@ -773,7 +831,7 @@ public WrappedFixedKeyProcessorSupplier(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Streams_Processor_Api_WrappedFixedKeyProcessorSupplier_3_op_Implicit_Org_Apache_Kafka_Streams_Processor_Api_WrappedFixedKeyProcessorSupplier__0__1__2___Org_Apache_Kafka_Streams_Processor_Api_WrappedFixedKeyProcessorSupplier" data-uid="Org.Apache.Kafka.Streams.Processor.Api.WrappedFixedKeyProcessorSupplier`3.op_Implicit(Org.Apache.Kafka.Streams.Processor.Api.WrappedFixedKeyProcessorSupplier{`0,`1,`2})~Org.Apache.Kafka.Streams.Processor.Api.WrappedFixedKeyProcessorSupplier">
   implicit operator WrappedFixedKeyProcessorSupplier(WrappedFixedKeyProcessorSupplier&lt;KIn, VIn, VOut&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Processor/Api/WrappedFixedKeyProcessorSupplier.cs/#L165"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Processor/Api/WrappedFixedKeyProcessorSupplier.cs/#L177"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Converter from <a class="xref" href="Org.Apache.Kafka.Streams.Processor.Api.WrappedFixedKeyProcessorSupplier-3.html">WrappedFixedKeyProcessorSupplier&lt;KIn, VIn, VOut&gt;</a> to <a class="xref" href="Org.Apache.Kafka.Streams.Processor.Api.WrappedFixedKeyProcessorSupplier.html">WrappedFixedKeyProcessorSupplier</a></p>
@@ -810,7 +868,7 @@ public WrappedFixedKeyProcessorSupplier(params object[] args)</code></pre>
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Processor/Api/WrappedFixedKeyProcessorSupplier.cs/#L155" class="edit-link">Edit this page</a>
+          <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Processor/Api/WrappedFixedKeyProcessorSupplier.cs/#L167" class="edit-link">Edit this page</a>
         </div>
 
 

@@ -10512,20 +10512,6 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Org.Apache.Kafka.Common.Errors.NotLeaderForPartitionException.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Org.Apache.Kafka.Common.Errors.NotLeaderForPartitionException.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Org.Apache.Kafka.Common.Errors.NotLeaderForPartitionException",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Common.Errors.NotLeaderForPartitionException.yml\" sourcestartlinenumber=\"1\">Obsolote exception</p>\n"
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/Org.Apache.Kafka.Common.Errors.NotLeaderOrFollowerException.yml",
       "output": {
         ".html": {

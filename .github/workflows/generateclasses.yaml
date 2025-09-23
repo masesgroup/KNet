@@ -40,8 +40,8 @@ jobs:
       DOTNET_CreateDumpDiagnostics: 1
       DOTNET_CreateDumpVerboseDiagnostics: 1
       DOTNET_EnableCrashReport: 1
-      JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ENCODED_2_6_2 }}
-      JNet_Version: 2.6.2
+      JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ENCODED_2_6_4 }}
+      JNet_Version: 2.6.4
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -81,7 +81,7 @@ jobs:
 
       - name: Create Jars of JNetReflector
         if: ${{ inputs.UseLatestJNetReflectorSource == true }}
-        run: mvn "-Djcobridgepath=../../../binReflector/net8.0/JCOBridge.jar" --file ./JNet/src/jvm/jnet/pom.xml --no-transfer-progress package
+        run: mvn "-DbinFolderName=binReflector" --file ./JNet/src/jvm/jnet/pom.xml --no-transfer-progress package
         env:
           MAVEN_USERNAME: ${{ secrets.MAVEN_USERNAME }}
           MAVEN_CENTRAL_TOKEN: ${{ secrets.MAVEN_CENTRAL_TOKEN }}
