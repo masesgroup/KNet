@@ -89,7 +89,7 @@
 
 
   <h1 id="Org_Apache_Kafka_Raft_QuorumConfig" data-uid="Org.Apache.Kafka.Raft.QuorumConfig" class="text-break">
-Class QuorumConfig  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumConfig.cs/#L134"><i class="bi bi-code-slash"></i></a>
+Class QuorumConfig  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumConfig.cs/#L152"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -102,7 +102,7 @@ Class QuorumConfig  <a class="header-action link-secondary" title="View source" 
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class QuorumConfig : JVMBridgeBase&lt;QuorumConfig&gt;, IDynamicMetaObjectProvider, IJVMBridgeCore, IDisposable, IJVMBridgeBaseStatic, IJVMBridgeBase, IJVMBridgeDefinition</code></pre>
+    <pre><code class="lang-csharp hljs">public class QuorumConfig : JVMBridgeBase&lt;QuorumConfig&gt;, IDynamicMetaObjectProvider, IJVMBridgeCore, IEquatable&lt;IJVMBridgeBase&gt;, IDisposable, IJVMBridgeBaseStatic, IJVMBridgeBase, IJVMBridgeDefinition</code></pre>
   </div>
 
 
@@ -124,6 +124,7 @@ Class QuorumConfig  <a class="header-action link-secondary" title="View source" 
     <dd>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.idynamicmetaobjectprovider">IDynamicMetaObjectProvider</a></div>
       <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeCore.html">IJVMBridgeCore</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeBase.html">IJVMBridgeBase</a>&gt;</div>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
       <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeBaseStatic.html">IJVMBridgeBaseStatic</a></div>
       <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeBase.html">IJVMBridgeBase</a></div>
@@ -220,16 +221,16 @@ Class QuorumConfig  <a class="header-action link-secondary" title="View source" 
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;QuorumConfig&gt;.SExecuteWithSignature&lt;TReturn, TConverter&gt;(Type, string, string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;QuorumConfig&gt;.SExecuteArray&lt;T&gt;(IJavaType, string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;QuorumConfig&gt;.SExecuteArray&lt;TArrayType&gt;(IJavaType, string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;QuorumConfig&gt;.SExecuteWithSignatureArray&lt;T&gt;(IJavaType, string, string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;QuorumConfig&gt;.SExecuteWithSignatureArray&lt;TArrayType&gt;(IJavaType, string, string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;QuorumConfig&gt;.SExecuteArray&lt;T&gt;(string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;QuorumConfig&gt;.SExecuteArray&lt;TArrayType&gt;(string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;QuorumConfig&gt;.SExecuteWithSignatureArray&lt;T&gt;(string, string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;QuorumConfig&gt;.SExecuteWithSignatureArray&lt;TArrayType&gt;(string, string, params object[])</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;QuorumConfig&gt;.SGetField(IJavaType, string)</a>
@@ -277,6 +278,12 @@ Class QuorumConfig  <a class="header-action link-secondary" title="View source" 
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;QuorumConfig&gt;.NewWithSignature(string, params object[])</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;QuorumConfig&gt;.NewAndWrapsDirect&lt;TNewClass&gt;(string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;QuorumConfig&gt;.NewWithSignatureAndWrapsDirect&lt;TNewClass&gt;(string, string, params object[])</a>
+    </div>
+    <div>
       <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase-1.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_1_Execute__1___0___">JVMBridgeBase&lt;QuorumConfig&gt;.Execute&lt;T&gt;(params T[])</a>
     </div>
     <div>
@@ -286,13 +293,25 @@ Class QuorumConfig  <a class="header-action link-secondary" title="View source" 
       <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase-1.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_1_BridgeClazz">JVMBridgeBase&lt;QuorumConfig&gt;.BridgeClazz</a>
     </div>
     <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_ReferenceEqualsJVM_MASES_JCOBridge_C2JBridge_JVMBridgeBase_MASES_JCOBridge_C2JBridge_JVMBridgeBase_">JVMBridgeBase.ReferenceEqualsJVM(JVMBridgeBase, JVMBridgeBase)</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">JVMBridgeBase.ClazzOf&lt;TClass&gt;(bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">JVMBridgeBase.ClazzOf&lt;TClass&gt;(out Exception, bool)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.ClazzOf(string, bool)</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.ClazzOf(string, out Exception, bool)</a>
+    </div>
+    <div>
       <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_RuntimeClassNameOf__1">JVMBridgeBase.RuntimeClassNameOf&lt;T&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase.RuntimeClassNameOf(Type)</a>
     </div>
     <div>
       <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_ClassNameOf__1">JVMBridgeBase.ClassNameOf&lt;T&gt;()</a>
@@ -349,7 +368,13 @@ Class QuorumConfig  <a class="header-action link-secondary" title="View source" 
       <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_Dispose">JVMBridgeBase.Dispose()</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">JVMBridgeBase.Dispose(bool)</a>
+    </div>
+    <div>
       <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_ToString">JVMBridgeBase.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_Equals_MASES_JCOBridge_C2JBridge_IJVMBridgeBase_">JVMBridgeBase.Equals(IJVMBridgeBase)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">JVMBridgeBase.Equals(object)</a>
@@ -397,10 +422,10 @@ Class QuorumConfig  <a class="header-action link-secondary" title="View source" 
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteWithSignature&lt;TNewClass, TReturn, TConverter&gt;(string, string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteArray&lt;T&gt;(string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteArray&lt;TArrayType&gt;(string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteWithSignatureArray&lt;T&gt;(string, string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteWithSignatureArray&lt;TArrayType&gt;(string, string, params object[])</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IGetField(string)</a>
@@ -520,9 +545,42 @@ Class QuorumConfig  <a class="header-action link-secondary" title="View source" 
 
   <a id="Org_Apache_Kafka_Raft_QuorumConfig__ctor_" data-uid="Org.Apache.Kafka.Raft.QuorumConfig.#ctor*"></a>
 
+  <h3 id="Org_Apache_Kafka_Raft_QuorumConfig__ctor_MASES_JCOBridge_C2JBridge_IJVMBridgeBaseInitializer_" data-uid="Org.Apache.Kafka.Raft.QuorumConfig.#ctor(MASES.JCOBridge.C2JBridge.IJVMBridgeBaseInitializer)">
+  QuorumConfig(IJVMBridgeBaseInitializer)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumConfig.cs/#L42"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Internal constructor: used internally from JCOBridge</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.&quot;)]
+public QuorumConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>initializer</code> <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeBaseInitializer.html">IJVMBridgeBaseInitializer</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Apache_Kafka_Raft_QuorumConfig__ctor_" data-uid="Org.Apache.Kafka.Raft.QuorumConfig.#ctor*"></a>
+
   <h3 id="Org_Apache_Kafka_Raft_QuorumConfig__ctor_Org_Apache_Kafka_Common_Config_AbstractConfig_" data-uid="Org.Apache.Kafka.Raft.QuorumConfig.#ctor(Org.Apache.Kafka.Common.Config.AbstractConfig)">
   QuorumConfig(AbstractConfig)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumConfig.cs/#L141"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumConfig.cs/#L159"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumConfig.html#%3Cinit%3E(org.apache.kafka.common.config.AbstractConfig)">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumConfig.html#%3Cinit%3E(org.apache.kafka.common.config.AbstractConfig)</a></p>
@@ -555,7 +613,7 @@ Class QuorumConfig  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Raft_QuorumConfig__ctor_System_Object___" data-uid="Org.Apache.Kafka.Raft.QuorumConfig.#ctor(System.Object[])">
   QuorumConfig(params object[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumConfig.cs/#L42"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumConfig.cs/#L47"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Generic constructor: it is useful for JCOBridge when there is a derived class which needs to pass arguments to the highest JVMBridgeBase class</p>
@@ -591,7 +649,7 @@ Class QuorumConfig  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Raft_QuorumConfig_BridgeClassName" data-uid="Org.Apache.Kafka.Raft.QuorumConfig.BridgeClassName">
   BridgeClassName
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumConfig.cs/#L48"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumConfig.cs/#L54"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Java class name to be instantiated</p>
@@ -623,7 +681,7 @@ Class QuorumConfig  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Raft_QuorumConfig_CONFIG_DEF" data-uid="Org.Apache.Kafka.Raft.QuorumConfig.CONFIG_DEF">
   CONFIG_DEF
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumConfig.cs/#L306"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumConfig.cs/#L324"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumConfig.html#CONFIG_DEF">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumConfig.html#CONFIG_DEF</a></p>
@@ -655,7 +713,7 @@ Class QuorumConfig  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Raft_QuorumConfig_DEFAULT_QUORUM_BOOTSTRAP_SERVERS" data-uid="Org.Apache.Kafka.Raft.QuorumConfig.DEFAULT_QUORUM_BOOTSTRAP_SERVERS">
   DEFAULT_QUORUM_BOOTSTRAP_SERVERS
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumConfig.cs/#L294"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumConfig.cs/#L312"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumConfig.html#DEFAULT_QUORUM_BOOTSTRAP_SERVERS">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumConfig.html#DEFAULT_QUORUM_BOOTSTRAP_SERVERS</a></p>
@@ -687,7 +745,7 @@ Class QuorumConfig  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Raft_QuorumConfig_DEFAULT_QUORUM_ELECTION_BACKOFF_MAX_MS" data-uid="Org.Apache.Kafka.Raft.QuorumConfig.DEFAULT_QUORUM_ELECTION_BACKOFF_MAX_MS">
   DEFAULT_QUORUM_ELECTION_BACKOFF_MAX_MS
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumConfig.cs/#L156"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumConfig.cs/#L174"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumConfig.html#DEFAULT_QUORUM_ELECTION_BACKOFF_MAX_MS">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumConfig.html#DEFAULT_QUORUM_ELECTION_BACKOFF_MAX_MS</a></p>
@@ -719,7 +777,7 @@ Class QuorumConfig  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Raft_QuorumConfig_DEFAULT_QUORUM_ELECTION_TIMEOUT_MS" data-uid="Org.Apache.Kafka.Raft.QuorumConfig.DEFAULT_QUORUM_ELECTION_TIMEOUT_MS">
   DEFAULT_QUORUM_ELECTION_TIMEOUT_MS
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumConfig.cs/#L162"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumConfig.cs/#L180"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumConfig.html#DEFAULT_QUORUM_ELECTION_TIMEOUT_MS">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumConfig.html#DEFAULT_QUORUM_ELECTION_TIMEOUT_MS</a></p>
@@ -751,7 +809,7 @@ Class QuorumConfig  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Raft_QuorumConfig_DEFAULT_QUORUM_FETCH_TIMEOUT_MS" data-uid="Org.Apache.Kafka.Raft.QuorumConfig.DEFAULT_QUORUM_FETCH_TIMEOUT_MS">
   DEFAULT_QUORUM_FETCH_TIMEOUT_MS
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumConfig.cs/#L168"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumConfig.cs/#L186"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumConfig.html#DEFAULT_QUORUM_FETCH_TIMEOUT_MS">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumConfig.html#DEFAULT_QUORUM_FETCH_TIMEOUT_MS</a></p>
@@ -783,7 +841,7 @@ Class QuorumConfig  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Raft_QuorumConfig_DEFAULT_QUORUM_LINGER_MS" data-uid="Org.Apache.Kafka.Raft.QuorumConfig.DEFAULT_QUORUM_LINGER_MS">
   DEFAULT_QUORUM_LINGER_MS
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumConfig.cs/#L174"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumConfig.cs/#L192"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumConfig.html#DEFAULT_QUORUM_LINGER_MS">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumConfig.html#DEFAULT_QUORUM_LINGER_MS</a></p>
@@ -815,7 +873,7 @@ Class QuorumConfig  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Raft_QuorumConfig_DEFAULT_QUORUM_REQUEST_TIMEOUT_MS" data-uid="Org.Apache.Kafka.Raft.QuorumConfig.DEFAULT_QUORUM_REQUEST_TIMEOUT_MS">
   DEFAULT_QUORUM_REQUEST_TIMEOUT_MS
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumConfig.cs/#L180"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumConfig.cs/#L198"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumConfig.html#DEFAULT_QUORUM_REQUEST_TIMEOUT_MS">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumConfig.html#DEFAULT_QUORUM_REQUEST_TIMEOUT_MS</a></p>
@@ -847,7 +905,7 @@ Class QuorumConfig  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Raft_QuorumConfig_DEFAULT_QUORUM_RETRY_BACKOFF_MS" data-uid="Org.Apache.Kafka.Raft.QuorumConfig.DEFAULT_QUORUM_RETRY_BACKOFF_MS">
   DEFAULT_QUORUM_RETRY_BACKOFF_MS
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumConfig.cs/#L186"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumConfig.cs/#L204"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumConfig.html#DEFAULT_QUORUM_RETRY_BACKOFF_MS">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumConfig.html#DEFAULT_QUORUM_RETRY_BACKOFF_MS</a></p>
@@ -879,7 +937,7 @@ Class QuorumConfig  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Raft_QuorumConfig_DEFAULT_QUORUM_VOTERS" data-uid="Org.Apache.Kafka.Raft.QuorumConfig.DEFAULT_QUORUM_VOTERS">
   DEFAULT_QUORUM_VOTERS
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumConfig.cs/#L300"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumConfig.cs/#L318"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumConfig.html#DEFAULT_QUORUM_VOTERS">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumConfig.html#DEFAULT_QUORUM_VOTERS</a></p>
@@ -911,7 +969,7 @@ Class QuorumConfig  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Raft_QuorumConfig_IsBridgeAbstract" data-uid="Org.Apache.Kafka.Raft.QuorumConfig.IsBridgeAbstract">
   IsBridgeAbstract
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumConfig.cs/#L50"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumConfig.cs/#L56"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.html#MASES_JCOBridge_C2JBridge_IJVMBridgeDefinition_BridgeClassName">BridgeClassName</a> is an abstract class, i.e. cannot be created an instance</p>
@@ -943,7 +1001,7 @@ Class QuorumConfig  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Raft_QuorumConfig_IsBridgeCloseable" data-uid="Org.Apache.Kafka.Raft.QuorumConfig.IsBridgeCloseable">
   IsBridgeCloseable
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumConfig.cs/#L52"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumConfig.cs/#L58"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.html#MASES_JCOBridge_C2JBridge_IJVMBridgeDefinition_BridgeClassName">BridgeClassName</a> implements Closeable</p>
@@ -975,7 +1033,7 @@ Class QuorumConfig  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Raft_QuorumConfig_IsBridgeInterface" data-uid="Org.Apache.Kafka.Raft.QuorumConfig.IsBridgeInterface">
   IsBridgeInterface
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumConfig.cs/#L54"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumConfig.cs/#L60"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.html#MASES_JCOBridge_C2JBridge_IJVMBridgeDefinition_BridgeClassName">BridgeClassName</a> is an interface, i.e. does not have any public constructor</p>
@@ -1007,7 +1065,7 @@ Class QuorumConfig  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Raft_QuorumConfig_IsBridgeStatic" data-uid="Org.Apache.Kafka.Raft.QuorumConfig.IsBridgeStatic">
   IsBridgeStatic
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumConfig.cs/#L56"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumConfig.cs/#L62"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.html#MASES_JCOBridge_C2JBridge_IJVMBridgeDefinition_BridgeClassName">BridgeClassName</a> is a static class, i.e. does not have any public constructor</p>
@@ -1039,7 +1097,7 @@ Class QuorumConfig  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Raft_QuorumConfig_NON_ROUTABLE_HOST" data-uid="Org.Apache.Kafka.Raft.QuorumConfig.NON_ROUTABLE_HOST">
   NON_ROUTABLE_HOST
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumConfig.cs/#L192"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumConfig.cs/#L210"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumConfig.html#NON_ROUTABLE_HOST">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumConfig.html#NON_ROUTABLE_HOST</a></p>
@@ -1071,7 +1129,7 @@ Class QuorumConfig  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Raft_QuorumConfig_QUORUM_BOOTSTRAP_SERVERS_CONFIG" data-uid="Org.Apache.Kafka.Raft.QuorumConfig.QUORUM_BOOTSTRAP_SERVERS_CONFIG">
   QUORUM_BOOTSTRAP_SERVERS_CONFIG
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumConfig.cs/#L198"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumConfig.cs/#L216"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumConfig.html#QUORUM_BOOTSTRAP_SERVERS_CONFIG">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumConfig.html#QUORUM_BOOTSTRAP_SERVERS_CONFIG</a></p>
@@ -1103,7 +1161,7 @@ Class QuorumConfig  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Raft_QuorumConfig_QUORUM_BOOTSTRAP_SERVERS_DOC" data-uid="Org.Apache.Kafka.Raft.QuorumConfig.QUORUM_BOOTSTRAP_SERVERS_DOC">
   QUORUM_BOOTSTRAP_SERVERS_DOC
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumConfig.cs/#L204"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumConfig.cs/#L222"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumConfig.html#QUORUM_BOOTSTRAP_SERVERS_DOC">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumConfig.html#QUORUM_BOOTSTRAP_SERVERS_DOC</a></p>
@@ -1135,7 +1193,7 @@ Class QuorumConfig  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Raft_QuorumConfig_QUORUM_ELECTION_BACKOFF_MAX_MS_CONFIG" data-uid="Org.Apache.Kafka.Raft.QuorumConfig.QUORUM_ELECTION_BACKOFF_MAX_MS_CONFIG">
   QUORUM_ELECTION_BACKOFF_MAX_MS_CONFIG
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumConfig.cs/#L210"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumConfig.cs/#L228"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumConfig.html#QUORUM_ELECTION_BACKOFF_MAX_MS_CONFIG">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumConfig.html#QUORUM_ELECTION_BACKOFF_MAX_MS_CONFIG</a></p>
@@ -1167,7 +1225,7 @@ Class QuorumConfig  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Raft_QuorumConfig_QUORUM_ELECTION_BACKOFF_MAX_MS_DOC" data-uid="Org.Apache.Kafka.Raft.QuorumConfig.QUORUM_ELECTION_BACKOFF_MAX_MS_DOC">
   QUORUM_ELECTION_BACKOFF_MAX_MS_DOC
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumConfig.cs/#L216"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumConfig.cs/#L234"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumConfig.html#QUORUM_ELECTION_BACKOFF_MAX_MS_DOC">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumConfig.html#QUORUM_ELECTION_BACKOFF_MAX_MS_DOC</a></p>
@@ -1199,7 +1257,7 @@ Class QuorumConfig  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Raft_QuorumConfig_QUORUM_ELECTION_TIMEOUT_MS_CONFIG" data-uid="Org.Apache.Kafka.Raft.QuorumConfig.QUORUM_ELECTION_TIMEOUT_MS_CONFIG">
   QUORUM_ELECTION_TIMEOUT_MS_CONFIG
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumConfig.cs/#L222"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumConfig.cs/#L240"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumConfig.html#QUORUM_ELECTION_TIMEOUT_MS_CONFIG">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumConfig.html#QUORUM_ELECTION_TIMEOUT_MS_CONFIG</a></p>
@@ -1231,7 +1289,7 @@ Class QuorumConfig  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Raft_QuorumConfig_QUORUM_ELECTION_TIMEOUT_MS_DOC" data-uid="Org.Apache.Kafka.Raft.QuorumConfig.QUORUM_ELECTION_TIMEOUT_MS_DOC">
   QUORUM_ELECTION_TIMEOUT_MS_DOC
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumConfig.cs/#L228"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumConfig.cs/#L246"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumConfig.html#QUORUM_ELECTION_TIMEOUT_MS_DOC">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumConfig.html#QUORUM_ELECTION_TIMEOUT_MS_DOC</a></p>
@@ -1263,7 +1321,7 @@ Class QuorumConfig  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Raft_QuorumConfig_QUORUM_FETCH_TIMEOUT_MS_CONFIG" data-uid="Org.Apache.Kafka.Raft.QuorumConfig.QUORUM_FETCH_TIMEOUT_MS_CONFIG">
   QUORUM_FETCH_TIMEOUT_MS_CONFIG
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumConfig.cs/#L234"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumConfig.cs/#L252"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumConfig.html#QUORUM_FETCH_TIMEOUT_MS_CONFIG">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumConfig.html#QUORUM_FETCH_TIMEOUT_MS_CONFIG</a></p>
@@ -1295,7 +1353,7 @@ Class QuorumConfig  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Raft_QuorumConfig_QUORUM_FETCH_TIMEOUT_MS_DOC" data-uid="Org.Apache.Kafka.Raft.QuorumConfig.QUORUM_FETCH_TIMEOUT_MS_DOC">
   QUORUM_FETCH_TIMEOUT_MS_DOC
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumConfig.cs/#L240"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumConfig.cs/#L258"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumConfig.html#QUORUM_FETCH_TIMEOUT_MS_DOC">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumConfig.html#QUORUM_FETCH_TIMEOUT_MS_DOC</a></p>
@@ -1327,7 +1385,7 @@ Class QuorumConfig  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Raft_QuorumConfig_QUORUM_LINGER_MS_CONFIG" data-uid="Org.Apache.Kafka.Raft.QuorumConfig.QUORUM_LINGER_MS_CONFIG">
   QUORUM_LINGER_MS_CONFIG
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumConfig.cs/#L246"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumConfig.cs/#L264"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumConfig.html#QUORUM_LINGER_MS_CONFIG">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumConfig.html#QUORUM_LINGER_MS_CONFIG</a></p>
@@ -1359,7 +1417,7 @@ Class QuorumConfig  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Raft_QuorumConfig_QUORUM_LINGER_MS_DOC" data-uid="Org.Apache.Kafka.Raft.QuorumConfig.QUORUM_LINGER_MS_DOC">
   QUORUM_LINGER_MS_DOC
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumConfig.cs/#L252"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumConfig.cs/#L270"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumConfig.html#QUORUM_LINGER_MS_DOC">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumConfig.html#QUORUM_LINGER_MS_DOC</a></p>
@@ -1391,7 +1449,7 @@ Class QuorumConfig  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Raft_QuorumConfig_QUORUM_REQUEST_TIMEOUT_MS_CONFIG" data-uid="Org.Apache.Kafka.Raft.QuorumConfig.QUORUM_REQUEST_TIMEOUT_MS_CONFIG">
   QUORUM_REQUEST_TIMEOUT_MS_CONFIG
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumConfig.cs/#L258"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumConfig.cs/#L276"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumConfig.html#QUORUM_REQUEST_TIMEOUT_MS_CONFIG">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumConfig.html#QUORUM_REQUEST_TIMEOUT_MS_CONFIG</a></p>
@@ -1423,7 +1481,7 @@ Class QuorumConfig  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Raft_QuorumConfig_QUORUM_REQUEST_TIMEOUT_MS_DOC" data-uid="Org.Apache.Kafka.Raft.QuorumConfig.QUORUM_REQUEST_TIMEOUT_MS_DOC">
   QUORUM_REQUEST_TIMEOUT_MS_DOC
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumConfig.cs/#L264"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumConfig.cs/#L282"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumConfig.html#QUORUM_REQUEST_TIMEOUT_MS_DOC">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumConfig.html#QUORUM_REQUEST_TIMEOUT_MS_DOC</a></p>
@@ -1455,7 +1513,7 @@ Class QuorumConfig  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Raft_QuorumConfig_QUORUM_RETRY_BACKOFF_MS_CONFIG" data-uid="Org.Apache.Kafka.Raft.QuorumConfig.QUORUM_RETRY_BACKOFF_MS_CONFIG">
   QUORUM_RETRY_BACKOFF_MS_CONFIG
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumConfig.cs/#L270"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumConfig.cs/#L288"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumConfig.html#QUORUM_RETRY_BACKOFF_MS_CONFIG">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumConfig.html#QUORUM_RETRY_BACKOFF_MS_CONFIG</a></p>
@@ -1487,7 +1545,7 @@ Class QuorumConfig  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Raft_QuorumConfig_QUORUM_RETRY_BACKOFF_MS_DOC" data-uid="Org.Apache.Kafka.Raft.QuorumConfig.QUORUM_RETRY_BACKOFF_MS_DOC">
   QUORUM_RETRY_BACKOFF_MS_DOC
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumConfig.cs/#L276"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumConfig.cs/#L294"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumConfig.html#QUORUM_RETRY_BACKOFF_MS_DOC">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumConfig.html#QUORUM_RETRY_BACKOFF_MS_DOC</a></p>
@@ -1519,7 +1577,7 @@ Class QuorumConfig  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Raft_QuorumConfig_QUORUM_VOTERS_CONFIG" data-uid="Org.Apache.Kafka.Raft.QuorumConfig.QUORUM_VOTERS_CONFIG">
   QUORUM_VOTERS_CONFIG
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumConfig.cs/#L282"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumConfig.cs/#L300"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumConfig.html#QUORUM_VOTERS_CONFIG">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumConfig.html#QUORUM_VOTERS_CONFIG</a></p>
@@ -1551,7 +1609,7 @@ Class QuorumConfig  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Raft_QuorumConfig_QUORUM_VOTERS_DOC" data-uid="Org.Apache.Kafka.Raft.QuorumConfig.QUORUM_VOTERS_DOC">
   QUORUM_VOTERS_DOC
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumConfig.cs/#L288"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumConfig.cs/#L306"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumConfig.html#QUORUM_VOTERS_DOC">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumConfig.html#QUORUM_VOTERS_DOC</a></p>
@@ -1587,7 +1645,7 @@ Class QuorumConfig  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Raft_QuorumConfig_AppendLingerMs" data-uid="Org.Apache.Kafka.Raft.QuorumConfig.AppendLingerMs">
   AppendLingerMs()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumConfig.cs/#L366"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumConfig.cs/#L384"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumConfig.html#appendLingerMs()">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumConfig.html#appendLingerMs()</a></p>
@@ -1620,7 +1678,7 @@ Class QuorumConfig  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Raft_QuorumConfig_BootstrapServers" data-uid="Org.Apache.Kafka.Raft.QuorumConfig.BootstrapServers">
   BootstrapServers()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumConfig.cs/#L414"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumConfig.cs/#L432"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumConfig.html#bootstrapServers()">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumConfig.html#bootstrapServers()</a></p>
@@ -1653,7 +1711,7 @@ Class QuorumConfig  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Raft_QuorumConfig_ElectionBackoffMaxMs" data-uid="Org.Apache.Kafka.Raft.QuorumConfig.ElectionBackoffMaxMs">
   ElectionBackoffMaxMs()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumConfig.cs/#L374"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumConfig.cs/#L392"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumConfig.html#electionBackoffMaxMs()">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumConfig.html#electionBackoffMaxMs()</a></p>
@@ -1686,7 +1744,7 @@ Class QuorumConfig  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Raft_QuorumConfig_ElectionTimeoutMs" data-uid="Org.Apache.Kafka.Raft.QuorumConfig.ElectionTimeoutMs">
   ElectionTimeoutMs()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumConfig.cs/#L382"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumConfig.cs/#L400"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumConfig.html#electionTimeoutMs()">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumConfig.html#electionTimeoutMs()</a></p>
@@ -1719,7 +1777,7 @@ Class QuorumConfig  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Raft_QuorumConfig_FetchTimeoutMs" data-uid="Org.Apache.Kafka.Raft.QuorumConfig.FetchTimeoutMs">
   FetchTimeoutMs()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumConfig.cs/#L390"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumConfig.cs/#L408"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumConfig.html#fetchTimeoutMs()">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumConfig.html#fetchTimeoutMs()</a></p>
@@ -1752,7 +1810,7 @@ Class QuorumConfig  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Raft_QuorumConfig_ParseBootstrapServers_Java_Util_List_Java_Lang_String__" data-uid="Org.Apache.Kafka.Raft.QuorumConfig.ParseBootstrapServers(Java.Util.List{Java.Lang.String})">
   ParseBootstrapServers(List&lt;String&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumConfig.cs/#L318"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumConfig.cs/#L336"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumConfig.html#parseBootstrapServers(java.util.List)">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumConfig.html#parseBootstrapServers(java.util.List)</a></p>
@@ -1791,7 +1849,7 @@ Class QuorumConfig  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Raft_QuorumConfig_ParseVoterConnections_Java_Util_List_Java_Lang_String__" data-uid="Org.Apache.Kafka.Raft.QuorumConfig.ParseVoterConnections(Java.Util.List{Java.Lang.String})">
   ParseVoterConnections(List&lt;String&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumConfig.cs/#L345"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumConfig.cs/#L363"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumConfig.html#parseVoterConnections(java.util.List)">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumConfig.html#parseVoterConnections(java.util.List)</a></p>
@@ -1830,7 +1888,7 @@ Class QuorumConfig  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Raft_QuorumConfig_ParseVoterIds_Java_Util_List_Java_Lang_String__" data-uid="Org.Apache.Kafka.Raft.QuorumConfig.ParseVoterIds(Java.Util.List{Java.Lang.String})">
   ParseVoterIds(List&lt;String&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumConfig.cs/#L354"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumConfig.cs/#L372"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumConfig.html#parseVoterIds(java.util.List)">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumConfig.html#parseVoterIds(java.util.List)</a></p>
@@ -1869,7 +1927,7 @@ Class QuorumConfig  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Raft_QuorumConfig_QuorumVoterStringsToNodes_Java_Util_List_Java_Lang_String__" data-uid="Org.Apache.Kafka.Raft.QuorumConfig.QuorumVoterStringsToNodes(Java.Util.List{Java.Lang.String})">
   QuorumVoterStringsToNodes(List&lt;String&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumConfig.cs/#L327"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumConfig.cs/#L345"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumConfig.html#quorumVoterStringsToNodes(java.util.List)">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumConfig.html#quorumVoterStringsToNodes(java.util.List)</a></p>
@@ -1908,7 +1966,7 @@ Class QuorumConfig  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Raft_QuorumConfig_RequestTimeoutMs" data-uid="Org.Apache.Kafka.Raft.QuorumConfig.RequestTimeoutMs">
   RequestTimeoutMs()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumConfig.cs/#L398"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumConfig.cs/#L416"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumConfig.html#requestTimeoutMs()">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumConfig.html#requestTimeoutMs()</a></p>
@@ -1941,7 +1999,7 @@ Class QuorumConfig  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Raft_QuorumConfig_RetryBackoffMs" data-uid="Org.Apache.Kafka.Raft.QuorumConfig.RetryBackoffMs">
   RetryBackoffMs()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumConfig.cs/#L406"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumConfig.cs/#L424"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumConfig.html#retryBackoffMs()">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumConfig.html#retryBackoffMs()</a></p>
@@ -1974,7 +2032,7 @@ Class QuorumConfig  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Raft_QuorumConfig_VoterConnectionsToNodes_Java_Util_Map_Java_Lang_Integer_Java_Net_InetSocketAddress__" data-uid="Org.Apache.Kafka.Raft.QuorumConfig.VoterConnectionsToNodes(Java.Util.Map{Java.Lang.Integer,Java.Net.InetSocketAddress})">
   VoterConnectionsToNodes(Map&lt;Integer, InetSocketAddress&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumConfig.cs/#L336"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumConfig.cs/#L354"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumConfig.html#voterConnectionsToNodes(java.util.Map)">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumConfig.html#voterConnectionsToNodes(java.util.Map)</a></p>
@@ -2013,7 +2071,7 @@ Class QuorumConfig  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Raft_QuorumConfig_Voters" data-uid="Org.Apache.Kafka.Raft.QuorumConfig.Voters">
   Voters()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumConfig.cs/#L422"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumConfig.cs/#L440"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumConfig.html#voters()">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumConfig.html#voters()</a></p>
@@ -2046,7 +2104,7 @@ Class QuorumConfig  <a class="header-action link-secondary" title="View source" 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumConfig.cs/#L134" class="edit-link">Edit this page</a>
+          <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumConfig.cs/#L152" class="edit-link">Edit this page</a>
         </div>
 
 

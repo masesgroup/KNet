@@ -89,7 +89,7 @@
 
 
   <h1 id="Org_Apache_Kafka_Common_Config_ConfigDef" data-uid="Org.Apache.Kafka.Common.Config.ConfigDef" class="text-break">
-Class ConfigDef  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/ConfigDef.cs/#L628"><i class="bi bi-code-slash"></i></a>
+Class ConfigDef  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/ConfigDef.cs/#L730"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -102,7 +102,7 @@ Class ConfigDef  <a class="header-action link-secondary" title="View source" hre
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class ConfigDef : JVMBridgeBase&lt;ConfigDef&gt;, IDynamicMetaObjectProvider, IJVMBridgeCore, IDisposable, IJVMBridgeBaseStatic, IJVMBridgeBase, IJVMBridgeDefinition</code></pre>
+    <pre><code class="lang-csharp hljs">public class ConfigDef : JVMBridgeBase&lt;ConfigDef&gt;, IDynamicMetaObjectProvider, IJVMBridgeCore, IEquatable&lt;IJVMBridgeBase&gt;, IDisposable, IJVMBridgeBaseStatic, IJVMBridgeBase, IJVMBridgeDefinition</code></pre>
   </div>
 
 
@@ -124,6 +124,7 @@ Class ConfigDef  <a class="header-action link-secondary" title="View source" hre
     <dd>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.idynamicmetaobjectprovider">IDynamicMetaObjectProvider</a></div>
       <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeCore.html">IJVMBridgeCore</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeBase.html">IJVMBridgeBase</a>&gt;</div>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
       <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeBaseStatic.html">IJVMBridgeBaseStatic</a></div>
       <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeBase.html">IJVMBridgeBase</a></div>
@@ -220,16 +221,16 @@ Class ConfigDef  <a class="header-action link-secondary" title="View source" hre
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;ConfigDef&gt;.SExecuteWithSignature&lt;TReturn, TConverter&gt;(Type, string, string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;ConfigDef&gt;.SExecuteArray&lt;T&gt;(IJavaType, string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;ConfigDef&gt;.SExecuteArray&lt;TArrayType&gt;(IJavaType, string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;ConfigDef&gt;.SExecuteWithSignatureArray&lt;T&gt;(IJavaType, string, string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;ConfigDef&gt;.SExecuteWithSignatureArray&lt;TArrayType&gt;(IJavaType, string, string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;ConfigDef&gt;.SExecuteArray&lt;T&gt;(string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;ConfigDef&gt;.SExecuteArray&lt;TArrayType&gt;(string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;ConfigDef&gt;.SExecuteWithSignatureArray&lt;T&gt;(string, string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;ConfigDef&gt;.SExecuteWithSignatureArray&lt;TArrayType&gt;(string, string, params object[])</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;ConfigDef&gt;.SGetField(IJavaType, string)</a>
@@ -277,6 +278,12 @@ Class ConfigDef  <a class="header-action link-secondary" title="View source" hre
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;ConfigDef&gt;.NewWithSignature(string, params object[])</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;ConfigDef&gt;.NewAndWrapsDirect&lt;TNewClass&gt;(string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;ConfigDef&gt;.NewWithSignatureAndWrapsDirect&lt;TNewClass&gt;(string, string, params object[])</a>
+    </div>
+    <div>
       <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase-1.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_1_Execute__1___0___">JVMBridgeBase&lt;ConfigDef&gt;.Execute&lt;T&gt;(params T[])</a>
     </div>
     <div>
@@ -286,13 +293,25 @@ Class ConfigDef  <a class="header-action link-secondary" title="View source" hre
       <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase-1.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_1_BridgeClazz">JVMBridgeBase&lt;ConfigDef&gt;.BridgeClazz</a>
     </div>
     <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_ReferenceEqualsJVM_MASES_JCOBridge_C2JBridge_JVMBridgeBase_MASES_JCOBridge_C2JBridge_JVMBridgeBase_">JVMBridgeBase.ReferenceEqualsJVM(JVMBridgeBase, JVMBridgeBase)</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">JVMBridgeBase.ClazzOf&lt;TClass&gt;(bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">JVMBridgeBase.ClazzOf&lt;TClass&gt;(out Exception, bool)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.ClazzOf(string, bool)</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.ClazzOf(string, out Exception, bool)</a>
+    </div>
+    <div>
       <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_RuntimeClassNameOf__1">JVMBridgeBase.RuntimeClassNameOf&lt;T&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase.RuntimeClassNameOf(Type)</a>
     </div>
     <div>
       <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_ClassNameOf__1">JVMBridgeBase.ClassNameOf&lt;T&gt;()</a>
@@ -349,7 +368,13 @@ Class ConfigDef  <a class="header-action link-secondary" title="View source" hre
       <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_Dispose">JVMBridgeBase.Dispose()</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">JVMBridgeBase.Dispose(bool)</a>
+    </div>
+    <div>
       <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_ToString">JVMBridgeBase.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_Equals_MASES_JCOBridge_C2JBridge_IJVMBridgeBase_">JVMBridgeBase.Equals(IJVMBridgeBase)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">JVMBridgeBase.Equals(object)</a>
@@ -397,10 +422,10 @@ Class ConfigDef  <a class="header-action link-secondary" title="View source" hre
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteWithSignature&lt;TNewClass, TReturn, TConverter&gt;(string, string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteArray&lt;T&gt;(string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteArray&lt;TArrayType&gt;(string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteWithSignatureArray&lt;T&gt;(string, string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteWithSignatureArray&lt;TArrayType&gt;(string, string, params object[])</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IGetField(string)</a>
@@ -520,9 +545,42 @@ Class ConfigDef  <a class="header-action link-secondary" title="View source" hre
 
   <a id="Org_Apache_Kafka_Common_Config_ConfigDef__ctor_" data-uid="Org.Apache.Kafka.Common.Config.ConfigDef.#ctor*"></a>
 
+  <h3 id="Org_Apache_Kafka_Common_Config_ConfigDef__ctor_MASES_JCOBridge_C2JBridge_IJVMBridgeBaseInitializer_" data-uid="Org.Apache.Kafka.Common.Config.ConfigDef.#ctor(MASES.JCOBridge.C2JBridge.IJVMBridgeBaseInitializer)">
+  ConfigDef(IJVMBridgeBaseInitializer)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/ConfigDef.cs/#L42"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Internal constructor: used internally from JCOBridge</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.&quot;)]
+public ConfigDef(IJVMBridgeBaseInitializer initializer)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>initializer</code> <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeBaseInitializer.html">IJVMBridgeBaseInitializer</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Apache_Kafka_Common_Config_ConfigDef__ctor_" data-uid="Org.Apache.Kafka.Common.Config.ConfigDef.#ctor*"></a>
+
   <h3 id="Org_Apache_Kafka_Common_Config_ConfigDef__ctor_Org_Apache_Kafka_Common_Config_ConfigDef_" data-uid="Org.Apache.Kafka.Common.Config.ConfigDef.#ctor(Org.Apache.Kafka.Common.Config.ConfigDef)">
   ConfigDef(ConfigDef)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/ConfigDef.cs/#L635"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/ConfigDef.cs/#L737"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/ConfigDef.html#%3Cinit%3E(org.apache.kafka.common.config.ConfigDef)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/ConfigDef.html#%3Cinit%3E(org.apache.kafka.common.config.ConfigDef)</a></p>
@@ -555,7 +613,7 @@ Class ConfigDef  <a class="header-action link-secondary" title="View source" hre
 
   <h3 id="Org_Apache_Kafka_Common_Config_ConfigDef__ctor_System_Object___" data-uid="Org.Apache.Kafka.Common.Config.ConfigDef.#ctor(System.Object[])">
   ConfigDef(params object[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/ConfigDef.cs/#L42"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/ConfigDef.cs/#L47"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Generic constructor: it is useful for JCOBridge when there is a derived class which needs to pass arguments to the highest JVMBridgeBase class</p>
@@ -591,7 +649,7 @@ Class ConfigDef  <a class="header-action link-secondary" title="View source" hre
 
   <h3 id="Org_Apache_Kafka_Common_Config_ConfigDef_BridgeClassName" data-uid="Org.Apache.Kafka.Common.Config.ConfigDef.BridgeClassName">
   BridgeClassName
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/ConfigDef.cs/#L48"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/ConfigDef.cs/#L54"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Java class name to be instantiated</p>
@@ -623,7 +681,7 @@ Class ConfigDef  <a class="header-action link-secondary" title="View source" hre
 
   <h3 id="Org_Apache_Kafka_Common_Config_ConfigDef_IsBridgeAbstract" data-uid="Org.Apache.Kafka.Common.Config.ConfigDef.IsBridgeAbstract">
   IsBridgeAbstract
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/ConfigDef.cs/#L50"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/ConfigDef.cs/#L56"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.html#MASES_JCOBridge_C2JBridge_IJVMBridgeDefinition_BridgeClassName">BridgeClassName</a> is an abstract class, i.e. cannot be created an instance</p>
@@ -655,7 +713,7 @@ Class ConfigDef  <a class="header-action link-secondary" title="View source" hre
 
   <h3 id="Org_Apache_Kafka_Common_Config_ConfigDef_IsBridgeCloseable" data-uid="Org.Apache.Kafka.Common.Config.ConfigDef.IsBridgeCloseable">
   IsBridgeCloseable
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/ConfigDef.cs/#L52"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/ConfigDef.cs/#L58"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.html#MASES_JCOBridge_C2JBridge_IJVMBridgeDefinition_BridgeClassName">BridgeClassName</a> implements Closeable</p>
@@ -687,7 +745,7 @@ Class ConfigDef  <a class="header-action link-secondary" title="View source" hre
 
   <h3 id="Org_Apache_Kafka_Common_Config_ConfigDef_IsBridgeInterface" data-uid="Org.Apache.Kafka.Common.Config.ConfigDef.IsBridgeInterface">
   IsBridgeInterface
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/ConfigDef.cs/#L54"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/ConfigDef.cs/#L60"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.html#MASES_JCOBridge_C2JBridge_IJVMBridgeDefinition_BridgeClassName">BridgeClassName</a> is an interface, i.e. does not have any public constructor</p>
@@ -719,7 +777,7 @@ Class ConfigDef  <a class="header-action link-secondary" title="View source" hre
 
   <h3 id="Org_Apache_Kafka_Common_Config_ConfigDef_IsBridgeStatic" data-uid="Org.Apache.Kafka.Common.Config.ConfigDef.IsBridgeStatic">
   IsBridgeStatic
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/ConfigDef.cs/#L56"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/ConfigDef.cs/#L62"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.html#MASES_JCOBridge_C2JBridge_IJVMBridgeDefinition_BridgeClassName">BridgeClassName</a> is a static class, i.e. does not have any public constructor</p>
@@ -751,7 +809,7 @@ Class ConfigDef  <a class="header-action link-secondary" title="View source" hre
 
   <h3 id="Org_Apache_Kafka_Common_Config_ConfigDef_NO_DEFAULT_VALUE" data-uid="Org.Apache.Kafka.Common.Config.ConfigDef.NO_DEFAULT_VALUE">
   NO_DEFAULT_VALUE
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/ConfigDef.cs/#L650"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/ConfigDef.cs/#L752"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/ConfigDef.html#NO_DEFAULT_VALUE">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/ConfigDef.html#NO_DEFAULT_VALUE</a></p>
@@ -787,7 +845,7 @@ Class ConfigDef  <a class="header-action link-secondary" title="View source" hre
 
   <h3 id="Org_Apache_Kafka_Common_Config_ConfigDef_ConfigKeys" data-uid="Org.Apache.Kafka.Common.Config.ConfigDef.ConfigKeys">
   ConfigKeys()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/ConfigDef.cs/#L800"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/ConfigDef.cs/#L902"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/ConfigDef.html#configKeys()">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/ConfigDef.html#configKeys()</a></p>
@@ -820,7 +878,7 @@ Class ConfigDef  <a class="header-action link-secondary" title="View source" hre
 
   <h3 id="Org_Apache_Kafka_Common_Config_ConfigDef_ConvertToString_System_Object_Org_Apache_Kafka_Common_Config_ConfigDef_Type_" data-uid="Org.Apache.Kafka.Common.Config.ConfigDef.ConvertToString(System.Object,Org.Apache.Kafka.Common.Config.ConfigDef.Type)">
   ConvertToString(object, Type)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/ConfigDef.cs/#L674"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/ConfigDef.cs/#L776"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/ConfigDef.html#convertToString(java.lang.Object,org.apache.kafka.common.config.ConfigDef.Type)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/ConfigDef.html#convertToString(java.lang.Object,org.apache.kafka.common.config.ConfigDef.Type)</a></p>
@@ -862,7 +920,7 @@ Class ConfigDef  <a class="header-action link-secondary" title="View source" hre
 
   <h3 id="Org_Apache_Kafka_Common_Config_ConfigDef_ConvertToStringMapWithPasswordValues_Java_Util_Map_Java_Lang_String_System_Object__" data-uid="Org.Apache.Kafka.Common.Config.ConfigDef.ConvertToStringMapWithPasswordValues(Java.Util.Map{Java.Lang.String,System.Object})">
   ConvertToStringMapWithPasswordValues(Map&lt;String, object&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/ConfigDef.cs/#L683"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/ConfigDef.cs/#L785"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/ConfigDef.html#convertToStringMapWithPasswordValues(java.util.Map)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/ConfigDef.html#convertToStringMapWithPasswordValues(java.util.Map)</a></p>
@@ -901,7 +959,7 @@ Class ConfigDef  <a class="header-action link-secondary" title="View source" hre
 
   <h3 id="Org_Apache_Kafka_Common_Config_ConfigDef_DefaultValues" data-uid="Org.Apache.Kafka.Common.Config.ConfigDef.DefaultValues">
   DefaultValues()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/ConfigDef.cs/#L783"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/ConfigDef.cs/#L885"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/ConfigDef.html#defaultValues()">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/ConfigDef.html#defaultValues()</a></p>
@@ -934,7 +992,7 @@ Class ConfigDef  <a class="header-action link-secondary" title="View source" hre
 
   <h3 id="Org_Apache_Kafka_Common_Config_ConfigDef_Define_Java_Lang_String_Org_Apache_Kafka_Common_Config_ConfigDef_Type_Org_Apache_Kafka_Common_Config_ConfigDef_Importance_Java_Lang_String_" data-uid="Org.Apache.Kafka.Common.Config.ConfigDef.Define(Java.Lang.String,Org.Apache.Kafka.Common.Config.ConfigDef.Type,Org.Apache.Kafka.Common.Config.ConfigDef.Importance,Java.Lang.String)">
   Define(String, Type, Importance, String)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/ConfigDef.cs/#L1107"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/ConfigDef.cs/#L1209"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/ConfigDef.html#define(java.lang.String,org.apache.kafka.common.config.ConfigDef.Type,org.apache.kafka.common.config.ConfigDef.Importance,java.lang.String)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/ConfigDef.html#define(java.lang.String,org.apache.kafka.common.config.ConfigDef.Type,org.apache.kafka.common.config.ConfigDef.Importance,java.lang.String)</a></p>
@@ -982,7 +1040,7 @@ Class ConfigDef  <a class="header-action link-secondary" title="View source" hre
 
   <h3 id="Org_Apache_Kafka_Common_Config_ConfigDef_Define_Java_Lang_String_Org_Apache_Kafka_Common_Config_ConfigDef_Type_Org_Apache_Kafka_Common_Config_ConfigDef_Importance_Java_Lang_String_Java_Lang_String_System_Int32_Org_Apache_Kafka_Common_Config_ConfigDef_Width_Java_Lang_String_" data-uid="Org.Apache.Kafka.Common.Config.ConfigDef.Define(Java.Lang.String,Org.Apache.Kafka.Common.Config.ConfigDef.Type,Org.Apache.Kafka.Common.Config.ConfigDef.Importance,Java.Lang.String,Java.Lang.String,System.Int32,Org.Apache.Kafka.Common.Config.ConfigDef.Width,Java.Lang.String)">
   Define(String, Type, Importance, String, String, int, Width, String)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/ConfigDef.cs/#L1095"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/ConfigDef.cs/#L1197"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/ConfigDef.html#define(java.lang.String,org.apache.kafka.common.config.ConfigDef.Type,org.apache.kafka.common.config.ConfigDef.Importance,java.lang.String,java.lang.String,int,org.apache.kafka.common.config.ConfigDef.Width,java.lang.String)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/ConfigDef.html#define(java.lang.String,org.apache.kafka.common.config.ConfigDef.Type,org.apache.kafka.common.config.ConfigDef.Importance,java.lang.String,java.lang.String,int,org.apache.kafka.common.config.ConfigDef.Width,java.lang.String)</a></p>
@@ -1042,7 +1100,7 @@ Class ConfigDef  <a class="header-action link-secondary" title="View source" hre
 
   <h3 id="Org_Apache_Kafka_Common_Config_ConfigDef_Define_Java_Lang_String_Org_Apache_Kafka_Common_Config_ConfigDef_Type_Org_Apache_Kafka_Common_Config_ConfigDef_Importance_Java_Lang_String_Java_Lang_String_System_Int32_Org_Apache_Kafka_Common_Config_ConfigDef_Width_Java_Lang_String_Java_Util_List_Java_Lang_String__" data-uid="Org.Apache.Kafka.Common.Config.ConfigDef.Define(Java.Lang.String,Org.Apache.Kafka.Common.Config.ConfigDef.Type,Org.Apache.Kafka.Common.Config.ConfigDef.Importance,Java.Lang.String,Java.Lang.String,System.Int32,Org.Apache.Kafka.Common.Config.ConfigDef.Width,Java.Lang.String,Java.Util.List{Java.Lang.String})">
   Define(String, Type, Importance, String, String, int, Width, String, List&lt;String&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/ConfigDef.cs/#L1062"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/ConfigDef.cs/#L1164"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/ConfigDef.html#define(java.lang.String,org.apache.kafka.common.config.ConfigDef.Type,org.apache.kafka.common.config.ConfigDef.Importance,java.lang.String,java.lang.String,int,org.apache.kafka.common.config.ConfigDef.Width,java.lang.String,java.util.List)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/ConfigDef.html#define(java.lang.String,org.apache.kafka.common.config.ConfigDef.Type,org.apache.kafka.common.config.ConfigDef.Importance,java.lang.String,java.lang.String,int,org.apache.kafka.common.config.ConfigDef.Width,java.lang.String,java.util.List)</a></p>
@@ -1105,7 +1163,7 @@ Class ConfigDef  <a class="header-action link-secondary" title="View source" hre
 
   <h3 id="Org_Apache_Kafka_Common_Config_ConfigDef_Define_Java_Lang_String_Org_Apache_Kafka_Common_Config_ConfigDef_Type_Org_Apache_Kafka_Common_Config_ConfigDef_Importance_Java_Lang_String_Java_Lang_String_System_Int32_Org_Apache_Kafka_Common_Config_ConfigDef_Width_Java_Lang_String_Java_Util_List_Java_Lang_String__Org_Apache_Kafka_Common_Config_ConfigDef_Recommender_" data-uid="Org.Apache.Kafka.Common.Config.ConfigDef.Define(Java.Lang.String,Org.Apache.Kafka.Common.Config.ConfigDef.Type,Org.Apache.Kafka.Common.Config.ConfigDef.Importance,Java.Lang.String,Java.Lang.String,System.Int32,Org.Apache.Kafka.Common.Config.ConfigDef.Width,Java.Lang.String,Java.Util.List{Java.Lang.String},Org.Apache.Kafka.Common.Config.ConfigDef.Recommender)">
   Define(String, Type, Importance, String, String, int, Width, String, List&lt;String&gt;, Recommender)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/ConfigDef.cs/#L1045"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/ConfigDef.cs/#L1147"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/ConfigDef.html#define(java.lang.String,org.apache.kafka.common.config.ConfigDef.Type,org.apache.kafka.common.config.ConfigDef.Importance,java.lang.String,java.lang.String,int,org.apache.kafka.common.config.ConfigDef.Width,java.lang.String,java.util.List,org.apache.kafka.common.config.ConfigDef.Recommender)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/ConfigDef.html#define(java.lang.String,org.apache.kafka.common.config.ConfigDef.Type,org.apache.kafka.common.config.ConfigDef.Importance,java.lang.String,java.lang.String,int,org.apache.kafka.common.config.ConfigDef.Width,java.lang.String,java.util.List,org.apache.kafka.common.config.ConfigDef.Recommender)</a></p>
@@ -1171,7 +1229,7 @@ Class ConfigDef  <a class="header-action link-secondary" title="View source" hre
 
   <h3 id="Org_Apache_Kafka_Common_Config_ConfigDef_Define_Java_Lang_String_Org_Apache_Kafka_Common_Config_ConfigDef_Type_Org_Apache_Kafka_Common_Config_ConfigDef_Importance_Java_Lang_String_Java_Lang_String_System_Int32_Org_Apache_Kafka_Common_Config_ConfigDef_Width_Java_Lang_String_Org_Apache_Kafka_Common_Config_ConfigDef_Recommender_" data-uid="Org.Apache.Kafka.Common.Config.ConfigDef.Define(Java.Lang.String,Org.Apache.Kafka.Common.Config.ConfigDef.Type,Org.Apache.Kafka.Common.Config.ConfigDef.Importance,Java.Lang.String,Java.Lang.String,System.Int32,Org.Apache.Kafka.Common.Config.ConfigDef.Width,Java.Lang.String,Org.Apache.Kafka.Common.Config.ConfigDef.Recommender)">
   Define(String, Type, Importance, String, String, int, Width, String, Recommender)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/ConfigDef.cs/#L1079"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/ConfigDef.cs/#L1181"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/ConfigDef.html#define(java.lang.String,org.apache.kafka.common.config.ConfigDef.Type,org.apache.kafka.common.config.ConfigDef.Importance,java.lang.String,java.lang.String,int,org.apache.kafka.common.config.ConfigDef.Width,java.lang.String,org.apache.kafka.common.config.ConfigDef.Recommender)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/ConfigDef.html#define(java.lang.String,org.apache.kafka.common.config.ConfigDef.Type,org.apache.kafka.common.config.ConfigDef.Importance,java.lang.String,java.lang.String,int,org.apache.kafka.common.config.ConfigDef.Width,java.lang.String,org.apache.kafka.common.config.ConfigDef.Recommender)</a></p>
@@ -1234,7 +1292,7 @@ Class ConfigDef  <a class="header-action link-secondary" title="View source" hre
 
   <h3 id="Org_Apache_Kafka_Common_Config_ConfigDef_Define_Java_Lang_String_Org_Apache_Kafka_Common_Config_ConfigDef_Type_System_Object_Org_Apache_Kafka_Common_Config_ConfigDef_Importance_Java_Lang_String_" data-uid="Org.Apache.Kafka.Common.Config.ConfigDef.Define(Java.Lang.String,Org.Apache.Kafka.Common.Config.ConfigDef.Type,System.Object,Org.Apache.Kafka.Common.Config.ConfigDef.Importance,Java.Lang.String)">
   Define(String, Type, object, Importance, String)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/ConfigDef.cs/#L916"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/ConfigDef.cs/#L1018"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/ConfigDef.html#define(java.lang.String,org.apache.kafka.common.config.ConfigDef.Type,java.lang.Object,org.apache.kafka.common.config.ConfigDef.Importance,java.lang.String)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/ConfigDef.html#define(java.lang.String,org.apache.kafka.common.config.ConfigDef.Type,java.lang.Object,org.apache.kafka.common.config.ConfigDef.Importance,java.lang.String)</a></p>
@@ -1285,7 +1343,7 @@ Class ConfigDef  <a class="header-action link-secondary" title="View source" hre
 
   <h3 id="Org_Apache_Kafka_Common_Config_ConfigDef_Define_Java_Lang_String_Org_Apache_Kafka_Common_Config_ConfigDef_Type_System_Object_Org_Apache_Kafka_Common_Config_ConfigDef_Importance_Java_Lang_String_Java_Lang_String_" data-uid="Org.Apache.Kafka.Common.Config.ConfigDef.Define(Java.Lang.String,Org.Apache.Kafka.Common.Config.ConfigDef.Type,System.Object,Org.Apache.Kafka.Common.Config.ConfigDef.Importance,Java.Lang.String,Java.Lang.String)">
   Define(String, Type, object, Importance, String, String)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/ConfigDef.cs/#L903"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/ConfigDef.cs/#L1005"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/ConfigDef.html#define(java.lang.String,org.apache.kafka.common.config.ConfigDef.Type,java.lang.Object,org.apache.kafka.common.config.ConfigDef.Importance,java.lang.String,java.lang.String)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/ConfigDef.html#define(java.lang.String,org.apache.kafka.common.config.ConfigDef.Type,java.lang.Object,org.apache.kafka.common.config.ConfigDef.Importance,java.lang.String,java.lang.String)</a></p>
@@ -1339,7 +1397,7 @@ Class ConfigDef  <a class="header-action link-secondary" title="View source" hre
 
   <h3 id="Org_Apache_Kafka_Common_Config_ConfigDef_Define_Java_Lang_String_Org_Apache_Kafka_Common_Config_ConfigDef_Type_System_Object_Org_Apache_Kafka_Common_Config_ConfigDef_Importance_Java_Lang_String_Java_Lang_String_System_Int32_Org_Apache_Kafka_Common_Config_ConfigDef_Width_Java_Lang_String_" data-uid="Org.Apache.Kafka.Common.Config.ConfigDef.Define(Java.Lang.String,Org.Apache.Kafka.Common.Config.ConfigDef.Type,System.Object,Org.Apache.Kafka.Common.Config.ConfigDef.Importance,Java.Lang.String,Java.Lang.String,System.Int32,Org.Apache.Kafka.Common.Config.ConfigDef.Width,Java.Lang.String)">
   Define(String, Type, object, Importance, String, String, int, Width, String)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/ConfigDef.cs/#L889"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/ConfigDef.cs/#L991"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/ConfigDef.html#define(java.lang.String,org.apache.kafka.common.config.ConfigDef.Type,java.lang.Object,org.apache.kafka.common.config.ConfigDef.Importance,java.lang.String,java.lang.String,int,org.apache.kafka.common.config.ConfigDef.Width,java.lang.String)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/ConfigDef.html#define(java.lang.String,org.apache.kafka.common.config.ConfigDef.Type,java.lang.Object,org.apache.kafka.common.config.ConfigDef.Importance,java.lang.String,java.lang.String,int,org.apache.kafka.common.config.ConfigDef.Width,java.lang.String)</a></p>
@@ -1402,7 +1460,7 @@ Class ConfigDef  <a class="header-action link-secondary" title="View source" hre
 
   <h3 id="Org_Apache_Kafka_Common_Config_ConfigDef_Define_Java_Lang_String_Org_Apache_Kafka_Common_Config_ConfigDef_Type_System_Object_Org_Apache_Kafka_Common_Config_ConfigDef_Importance_Java_Lang_String_Java_Lang_String_System_Int32_Org_Apache_Kafka_Common_Config_ConfigDef_Width_Java_Lang_String_Java_Util_List_Java_Lang_String__" data-uid="Org.Apache.Kafka.Common.Config.ConfigDef.Define(Java.Lang.String,Org.Apache.Kafka.Common.Config.ConfigDef.Type,System.Object,Org.Apache.Kafka.Common.Config.ConfigDef.Importance,Java.Lang.String,Java.Lang.String,System.Int32,Org.Apache.Kafka.Common.Config.ConfigDef.Width,Java.Lang.String,Java.Util.List{Java.Lang.String})">
   Define(String, Type, object, Importance, String, String, int, Width, String, List&lt;String&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/ConfigDef.cs/#L854"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/ConfigDef.cs/#L956"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/ConfigDef.html#define(java.lang.String,org.apache.kafka.common.config.ConfigDef.Type,java.lang.Object,org.apache.kafka.common.config.ConfigDef.Importance,java.lang.String,java.lang.String,int,org.apache.kafka.common.config.ConfigDef.Width,java.lang.String,java.util.List)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/ConfigDef.html#define(java.lang.String,org.apache.kafka.common.config.ConfigDef.Type,java.lang.Object,org.apache.kafka.common.config.ConfigDef.Importance,java.lang.String,java.lang.String,int,org.apache.kafka.common.config.ConfigDef.Width,java.lang.String,java.util.List)</a></p>
@@ -1468,7 +1526,7 @@ Class ConfigDef  <a class="header-action link-secondary" title="View source" hre
 
   <h3 id="Org_Apache_Kafka_Common_Config_ConfigDef_Define_Java_Lang_String_Org_Apache_Kafka_Common_Config_ConfigDef_Type_System_Object_Org_Apache_Kafka_Common_Config_ConfigDef_Importance_Java_Lang_String_Java_Lang_String_System_Int32_Org_Apache_Kafka_Common_Config_ConfigDef_Width_Java_Lang_String_Java_Util_List_Java_Lang_String__Org_Apache_Kafka_Common_Config_ConfigDef_Recommender_" data-uid="Org.Apache.Kafka.Common.Config.ConfigDef.Define(Java.Lang.String,Org.Apache.Kafka.Common.Config.ConfigDef.Type,System.Object,Org.Apache.Kafka.Common.Config.ConfigDef.Importance,Java.Lang.String,Java.Lang.String,System.Int32,Org.Apache.Kafka.Common.Config.ConfigDef.Width,Java.Lang.String,Java.Util.List{Java.Lang.String},Org.Apache.Kafka.Common.Config.ConfigDef.Recommender)">
   Define(String, Type, object, Importance, String, String, int, Width, String, List&lt;String&gt;, Recommender)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/ConfigDef.cs/#L836"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/ConfigDef.cs/#L938"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/ConfigDef.html#define(java.lang.String,org.apache.kafka.common.config.ConfigDef.Type,java.lang.Object,org.apache.kafka.common.config.ConfigDef.Importance,java.lang.String,java.lang.String,int,org.apache.kafka.common.config.ConfigDef.Width,java.lang.String,java.util.List,org.apache.kafka.common.config.ConfigDef.Recommender)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/ConfigDef.html#define(java.lang.String,org.apache.kafka.common.config.ConfigDef.Type,java.lang.Object,org.apache.kafka.common.config.ConfigDef.Importance,java.lang.String,java.lang.String,int,org.apache.kafka.common.config.ConfigDef.Width,java.lang.String,java.util.List,org.apache.kafka.common.config.ConfigDef.Recommender)</a></p>
@@ -1537,7 +1595,7 @@ Class ConfigDef  <a class="header-action link-secondary" title="View source" hre
 
   <h3 id="Org_Apache_Kafka_Common_Config_ConfigDef_Define_Java_Lang_String_Org_Apache_Kafka_Common_Config_ConfigDef_Type_System_Object_Org_Apache_Kafka_Common_Config_ConfigDef_Importance_Java_Lang_String_Java_Lang_String_System_Int32_Org_Apache_Kafka_Common_Config_ConfigDef_Width_Java_Lang_String_Org_Apache_Kafka_Common_Config_ConfigDef_Recommender_" data-uid="Org.Apache.Kafka.Common.Config.ConfigDef.Define(Java.Lang.String,Org.Apache.Kafka.Common.Config.ConfigDef.Type,System.Object,Org.Apache.Kafka.Common.Config.ConfigDef.Importance,Java.Lang.String,Java.Lang.String,System.Int32,Org.Apache.Kafka.Common.Config.ConfigDef.Width,Java.Lang.String,Org.Apache.Kafka.Common.Config.ConfigDef.Recommender)">
   Define(String, Type, object, Importance, String, String, int, Width, String, Recommender)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/ConfigDef.cs/#L872"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/ConfigDef.cs/#L974"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/ConfigDef.html#define(java.lang.String,org.apache.kafka.common.config.ConfigDef.Type,java.lang.Object,org.apache.kafka.common.config.ConfigDef.Importance,java.lang.String,java.lang.String,int,org.apache.kafka.common.config.ConfigDef.Width,java.lang.String,org.apache.kafka.common.config.ConfigDef.Recommender)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/ConfigDef.html#define(java.lang.String,org.apache.kafka.common.config.ConfigDef.Type,java.lang.Object,org.apache.kafka.common.config.ConfigDef.Importance,java.lang.String,java.lang.String,int,org.apache.kafka.common.config.ConfigDef.Width,java.lang.String,org.apache.kafka.common.config.ConfigDef.Recommender)</a></p>
@@ -1603,7 +1661,7 @@ Class ConfigDef  <a class="header-action link-secondary" title="View source" hre
 
   <h3 id="Org_Apache_Kafka_Common_Config_ConfigDef_Define_Java_Lang_String_Org_Apache_Kafka_Common_Config_ConfigDef_Type_System_Object_Org_Apache_Kafka_Common_Config_ConfigDef_Validator_Org_Apache_Kafka_Common_Config_ConfigDef_Importance_Java_Lang_String_" data-uid="Org.Apache.Kafka.Common.Config.ConfigDef.Define(Java.Lang.String,Org.Apache.Kafka.Common.Config.ConfigDef.Type,System.Object,Org.Apache.Kafka.Common.Config.ConfigDef.Validator,Org.Apache.Kafka.Common.Config.ConfigDef.Importance,Java.Lang.String)">
   Define(String, Type, object, Validator, Importance, String)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/ConfigDef.cs/#L1027"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/ConfigDef.cs/#L1129"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/ConfigDef.html#define(java.lang.String,org.apache.kafka.common.config.ConfigDef.Type,java.lang.Object,org.apache.kafka.common.config.ConfigDef.Validator,org.apache.kafka.common.config.ConfigDef.Importance,java.lang.String)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/ConfigDef.html#define(java.lang.String,org.apache.kafka.common.config.ConfigDef.Type,java.lang.Object,org.apache.kafka.common.config.ConfigDef.Validator,org.apache.kafka.common.config.ConfigDef.Importance,java.lang.String)</a></p>
@@ -1657,7 +1715,7 @@ Class ConfigDef  <a class="header-action link-secondary" title="View source" hre
 
   <h3 id="Org_Apache_Kafka_Common_Config_ConfigDef_Define_Java_Lang_String_Org_Apache_Kafka_Common_Config_ConfigDef_Type_System_Object_Org_Apache_Kafka_Common_Config_ConfigDef_Validator_Org_Apache_Kafka_Common_Config_ConfigDef_Importance_Java_Lang_String_Java_Lang_String_System_Int32_Org_Apache_Kafka_Common_Config_ConfigDef_Width_Java_Lang_String_" data-uid="Org.Apache.Kafka.Common.Config.ConfigDef.Define(Java.Lang.String,Org.Apache.Kafka.Common.Config.ConfigDef.Type,System.Object,Org.Apache.Kafka.Common.Config.ConfigDef.Validator,Org.Apache.Kafka.Common.Config.ConfigDef.Importance,Java.Lang.String,Java.Lang.String,System.Int32,Org.Apache.Kafka.Common.Config.ConfigDef.Width,Java.Lang.String)">
   Define(String, Type, object, Validator, Importance, String, String, int, Width, String)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/ConfigDef.cs/#L1013"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/ConfigDef.cs/#L1115"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/ConfigDef.html#define(java.lang.String,org.apache.kafka.common.config.ConfigDef.Type,java.lang.Object,org.apache.kafka.common.config.ConfigDef.Validator,org.apache.kafka.common.config.ConfigDef.Importance,java.lang.String,java.lang.String,int,org.apache.kafka.common.config.ConfigDef.Width,java.lang.String)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/ConfigDef.html#define(java.lang.String,org.apache.kafka.common.config.ConfigDef.Type,java.lang.Object,org.apache.kafka.common.config.ConfigDef.Validator,org.apache.kafka.common.config.ConfigDef.Importance,java.lang.String,java.lang.String,int,org.apache.kafka.common.config.ConfigDef.Width,java.lang.String)</a></p>
@@ -1723,7 +1781,7 @@ Class ConfigDef  <a class="header-action link-secondary" title="View source" hre
 
   <h3 id="Org_Apache_Kafka_Common_Config_ConfigDef_Define_Java_Lang_String_Org_Apache_Kafka_Common_Config_ConfigDef_Type_System_Object_Org_Apache_Kafka_Common_Config_ConfigDef_Validator_Org_Apache_Kafka_Common_Config_ConfigDef_Importance_Java_Lang_String_Java_Lang_String_System_Int32_Org_Apache_Kafka_Common_Config_ConfigDef_Width_Java_Lang_String_Java_Util_List_Java_Lang_String__" data-uid="Org.Apache.Kafka.Common.Config.ConfigDef.Define(Java.Lang.String,Org.Apache.Kafka.Common.Config.ConfigDef.Type,System.Object,Org.Apache.Kafka.Common.Config.ConfigDef.Validator,Org.Apache.Kafka.Common.Config.ConfigDef.Importance,Java.Lang.String,Java.Lang.String,System.Int32,Org.Apache.Kafka.Common.Config.ConfigDef.Width,Java.Lang.String,Java.Util.List{Java.Lang.String})">
   Define(String, Type, object, Validator, Importance, String, String, int, Width, String, List&lt;String&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/ConfigDef.cs/#L976"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/ConfigDef.cs/#L1078"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/ConfigDef.html#define(java.lang.String,org.apache.kafka.common.config.ConfigDef.Type,java.lang.Object,org.apache.kafka.common.config.ConfigDef.Validator,org.apache.kafka.common.config.ConfigDef.Importance,java.lang.String,java.lang.String,int,org.apache.kafka.common.config.ConfigDef.Width,java.lang.String,java.util.List)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/ConfigDef.html#define(java.lang.String,org.apache.kafka.common.config.ConfigDef.Type,java.lang.Object,org.apache.kafka.common.config.ConfigDef.Validator,org.apache.kafka.common.config.ConfigDef.Importance,java.lang.String,java.lang.String,int,org.apache.kafka.common.config.ConfigDef.Width,java.lang.String,java.util.List)</a></p>
@@ -1792,7 +1850,7 @@ Class ConfigDef  <a class="header-action link-secondary" title="View source" hre
 
   <h3 id="Org_Apache_Kafka_Common_Config_ConfigDef_Define_Java_Lang_String_Org_Apache_Kafka_Common_Config_ConfigDef_Type_System_Object_Org_Apache_Kafka_Common_Config_ConfigDef_Validator_Org_Apache_Kafka_Common_Config_ConfigDef_Importance_Java_Lang_String_Java_Lang_String_System_Int32_Org_Apache_Kafka_Common_Config_ConfigDef_Width_Java_Lang_String_Java_Util_List_Java_Lang_String__Org_Apache_Kafka_Common_Config_ConfigDef_Recommender_" data-uid="Org.Apache.Kafka.Common.Config.ConfigDef.Define(Java.Lang.String,Org.Apache.Kafka.Common.Config.ConfigDef.Type,System.Object,Org.Apache.Kafka.Common.Config.ConfigDef.Validator,Org.Apache.Kafka.Common.Config.ConfigDef.Importance,Java.Lang.String,Java.Lang.String,System.Int32,Org.Apache.Kafka.Common.Config.ConfigDef.Width,Java.Lang.String,Java.Util.List{Java.Lang.String},Org.Apache.Kafka.Common.Config.ConfigDef.Recommender)">
   Define(String, Type, object, Validator, Importance, String, String, int, Width, String, List&lt;String&gt;, Recommender)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/ConfigDef.cs/#L957"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/ConfigDef.cs/#L1059"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/ConfigDef.html#define(java.lang.String,org.apache.kafka.common.config.ConfigDef.Type,java.lang.Object,org.apache.kafka.common.config.ConfigDef.Validator,org.apache.kafka.common.config.ConfigDef.Importance,java.lang.String,java.lang.String,int,org.apache.kafka.common.config.ConfigDef.Width,java.lang.String,java.util.List,org.apache.kafka.common.config.ConfigDef.Recommender)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/ConfigDef.html#define(java.lang.String,org.apache.kafka.common.config.ConfigDef.Type,java.lang.Object,org.apache.kafka.common.config.ConfigDef.Validator,org.apache.kafka.common.config.ConfigDef.Importance,java.lang.String,java.lang.String,int,org.apache.kafka.common.config.ConfigDef.Width,java.lang.String,java.util.List,org.apache.kafka.common.config.ConfigDef.Recommender)</a></p>
@@ -1864,7 +1922,7 @@ Class ConfigDef  <a class="header-action link-secondary" title="View source" hre
 
   <h3 id="Org_Apache_Kafka_Common_Config_ConfigDef_Define_Java_Lang_String_Org_Apache_Kafka_Common_Config_ConfigDef_Type_System_Object_Org_Apache_Kafka_Common_Config_ConfigDef_Validator_Org_Apache_Kafka_Common_Config_ConfigDef_Importance_Java_Lang_String_Java_Lang_String_System_Int32_Org_Apache_Kafka_Common_Config_ConfigDef_Width_Java_Lang_String_Java_Util_List_Java_Lang_String__Org_Apache_Kafka_Common_Config_ConfigDef_Recommender_Java_Lang_String_" data-uid="Org.Apache.Kafka.Common.Config.ConfigDef.Define(Java.Lang.String,Org.Apache.Kafka.Common.Config.ConfigDef.Type,System.Object,Org.Apache.Kafka.Common.Config.ConfigDef.Validator,Org.Apache.Kafka.Common.Config.ConfigDef.Importance,Java.Lang.String,Java.Lang.String,System.Int32,Org.Apache.Kafka.Common.Config.ConfigDef.Width,Java.Lang.String,Java.Util.List{Java.Lang.String},Org.Apache.Kafka.Common.Config.ConfigDef.Recommender,Java.Lang.String)">
   Define(String, Type, object, Validator, Importance, String, String, int, Width, String, List&lt;String&gt;, Recommender, String)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/ConfigDef.cs/#L937"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/ConfigDef.cs/#L1039"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/ConfigDef.html#define(java.lang.String,org.apache.kafka.common.config.ConfigDef.Type,java.lang.Object,org.apache.kafka.common.config.ConfigDef.Validator,org.apache.kafka.common.config.ConfigDef.Importance,java.lang.String,java.lang.String,int,org.apache.kafka.common.config.ConfigDef.Width,java.lang.String,java.util.List,org.apache.kafka.common.config.ConfigDef.Recommender,java.lang.String)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/ConfigDef.html#define(java.lang.String,org.apache.kafka.common.config.ConfigDef.Type,java.lang.Object,org.apache.kafka.common.config.ConfigDef.Validator,org.apache.kafka.common.config.ConfigDef.Importance,java.lang.String,java.lang.String,int,org.apache.kafka.common.config.ConfigDef.Width,java.lang.String,java.util.List,org.apache.kafka.common.config.ConfigDef.Recommender,java.lang.String)</a></p>
@@ -1939,7 +1997,7 @@ Class ConfigDef  <a class="header-action link-secondary" title="View source" hre
 
   <h3 id="Org_Apache_Kafka_Common_Config_ConfigDef_Define_Java_Lang_String_Org_Apache_Kafka_Common_Config_ConfigDef_Type_System_Object_Org_Apache_Kafka_Common_Config_ConfigDef_Validator_Org_Apache_Kafka_Common_Config_ConfigDef_Importance_Java_Lang_String_Java_Lang_String_System_Int32_Org_Apache_Kafka_Common_Config_ConfigDef_Width_Java_Lang_String_Org_Apache_Kafka_Common_Config_ConfigDef_Recommender_" data-uid="Org.Apache.Kafka.Common.Config.ConfigDef.Define(Java.Lang.String,Org.Apache.Kafka.Common.Config.ConfigDef.Type,System.Object,Org.Apache.Kafka.Common.Config.ConfigDef.Validator,Org.Apache.Kafka.Common.Config.ConfigDef.Importance,Java.Lang.String,Java.Lang.String,System.Int32,Org.Apache.Kafka.Common.Config.ConfigDef.Width,Java.Lang.String,Org.Apache.Kafka.Common.Config.ConfigDef.Recommender)">
   Define(String, Type, object, Validator, Importance, String, String, int, Width, String, Recommender)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/ConfigDef.cs/#L995"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/ConfigDef.cs/#L1097"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/ConfigDef.html#define(java.lang.String,org.apache.kafka.common.config.ConfigDef.Type,java.lang.Object,org.apache.kafka.common.config.ConfigDef.Validator,org.apache.kafka.common.config.ConfigDef.Importance,java.lang.String,java.lang.String,int,org.apache.kafka.common.config.ConfigDef.Width,java.lang.String,org.apache.kafka.common.config.ConfigDef.Recommender)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/ConfigDef.html#define(java.lang.String,org.apache.kafka.common.config.ConfigDef.Type,java.lang.Object,org.apache.kafka.common.config.ConfigDef.Validator,org.apache.kafka.common.config.ConfigDef.Importance,java.lang.String,java.lang.String,int,org.apache.kafka.common.config.ConfigDef.Width,java.lang.String,org.apache.kafka.common.config.ConfigDef.Recommender)</a></p>
@@ -2008,7 +2066,7 @@ Class ConfigDef  <a class="header-action link-secondary" title="View source" hre
 
   <h3 id="Org_Apache_Kafka_Common_Config_ConfigDef_Define_Org_Apache_Kafka_Common_Config_ConfigDef_ConfigKey_" data-uid="Org.Apache.Kafka.Common.Config.ConfigDef.Define(Org.Apache.Kafka.Common.Config.ConfigDef.ConfigKey)">
   Define(ConfigKey)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/ConfigDef.cs/#L1116"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/ConfigDef.cs/#L1218"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/ConfigDef.html#define(org.apache.kafka.common.config.ConfigDef.ConfigKey)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/ConfigDef.html#define(org.apache.kafka.common.config.ConfigDef.ConfigKey)</a></p>
@@ -2047,7 +2105,7 @@ Class ConfigDef  <a class="header-action link-secondary" title="View source" hre
 
   <h3 id="Org_Apache_Kafka_Common_Config_ConfigDef_DefineInternal_Java_Lang_String_Org_Apache_Kafka_Common_Config_ConfigDef_Type_System_Object_Org_Apache_Kafka_Common_Config_ConfigDef_Importance_" data-uid="Org.Apache.Kafka.Common.Config.ConfigDef.DefineInternal(Java.Lang.String,Org.Apache.Kafka.Common.Config.ConfigDef.Type,System.Object,Org.Apache.Kafka.Common.Config.ConfigDef.Importance)">
   DefineInternal(String, Type, object, Importance)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/ConfigDef.cs/#L1128"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/ConfigDef.cs/#L1230"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/ConfigDef.html#defineInternal(java.lang.String,org.apache.kafka.common.config.ConfigDef.Type,java.lang.Object,org.apache.kafka.common.config.ConfigDef.Importance)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/ConfigDef.html#defineInternal(java.lang.String,org.apache.kafka.common.config.ConfigDef.Type,java.lang.Object,org.apache.kafka.common.config.ConfigDef.Importance)</a></p>
@@ -2095,7 +2153,7 @@ Class ConfigDef  <a class="header-action link-secondary" title="View source" hre
 
   <h3 id="Org_Apache_Kafka_Common_Config_ConfigDef_DefineInternal_Java_Lang_String_Org_Apache_Kafka_Common_Config_ConfigDef_Type_System_Object_Org_Apache_Kafka_Common_Config_ConfigDef_Validator_Org_Apache_Kafka_Common_Config_ConfigDef_Importance_Java_Lang_String_" data-uid="Org.Apache.Kafka.Common.Config.ConfigDef.DefineInternal(Java.Lang.String,Org.Apache.Kafka.Common.Config.ConfigDef.Type,System.Object,Org.Apache.Kafka.Common.Config.ConfigDef.Validator,Org.Apache.Kafka.Common.Config.ConfigDef.Importance,Java.Lang.String)">
   DefineInternal(String, Type, object, Validator, Importance, String)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/ConfigDef.cs/#L1142"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/ConfigDef.cs/#L1244"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/ConfigDef.html#defineInternal(java.lang.String,org.apache.kafka.common.config.ConfigDef.Type,java.lang.Object,org.apache.kafka.common.config.ConfigDef.Validator,org.apache.kafka.common.config.ConfigDef.Importance,java.lang.String)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/ConfigDef.html#defineInternal(java.lang.String,org.apache.kafka.common.config.ConfigDef.Type,java.lang.Object,org.apache.kafka.common.config.ConfigDef.Validator,org.apache.kafka.common.config.ConfigDef.Importance,java.lang.String)</a></p>
@@ -2149,7 +2207,7 @@ Class ConfigDef  <a class="header-action link-secondary" title="View source" hre
 
   <h3 id="Org_Apache_Kafka_Common_Config_ConfigDef_Embed_Java_Lang_String_Java_Lang_String_System_Int32_Org_Apache_Kafka_Common_Config_ConfigDef_" data-uid="Org.Apache.Kafka.Common.Config.ConfigDef.Embed(Java.Lang.String,Java.Lang.String,System.Int32,Org.Apache.Kafka.Common.Config.ConfigDef)">
   Embed(String, String, int, ConfigDef)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/ConfigDef.cs/#L1169"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/ConfigDef.cs/#L1271"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/ConfigDef.html#embed(java.lang.String,java.lang.String,int,org.apache.kafka.common.config.ConfigDef)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/ConfigDef.html#embed(java.lang.String,java.lang.String,int,org.apache.kafka.common.config.ConfigDef)</a></p>
@@ -2191,7 +2249,7 @@ Class ConfigDef  <a class="header-action link-secondary" title="View source" hre
 
   <h3 id="Org_Apache_Kafka_Common_Config_ConfigDef_Groups" data-uid="Org.Apache.Kafka.Common.Config.ConfigDef.Groups">
   Groups()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/ConfigDef.cs/#L766"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/ConfigDef.cs/#L868"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/ConfigDef.html#groups()">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/ConfigDef.html#groups()</a></p>
@@ -2224,7 +2282,7 @@ Class ConfigDef  <a class="header-action link-secondary" title="View source" hre
 
   <h3 id="Org_Apache_Kafka_Common_Config_ConfigDef_Names" data-uid="Org.Apache.Kafka.Common.Config.ConfigDef.Names">
   Names()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/ConfigDef.cs/#L817"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/ConfigDef.cs/#L919"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/ConfigDef.html#names()">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/ConfigDef.html#names()</a></p>
@@ -2257,7 +2315,7 @@ Class ConfigDef  <a class="header-action link-secondary" title="View source" hre
 
   <h3 id="Org_Apache_Kafka_Common_Config_ConfigDef_Parse_Java_Util_Map_System_Object_System_Object__" data-uid="Org.Apache.Kafka.Common.Config.ConfigDef.Parse(Java.Util.Map{System.Object,System.Object})">
   Parse(Map&lt;object, object&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/ConfigDef.cs/#L792"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/ConfigDef.cs/#L894"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/ConfigDef.html#parse(java.util.Map)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/ConfigDef.html#parse(java.util.Map)</a></p>
@@ -2296,7 +2354,7 @@ Class ConfigDef  <a class="header-action link-secondary" title="View source" hre
 
   <h3 id="Org_Apache_Kafka_Common_Config_ConfigDef_ParseType_Java_Lang_String_System_Object_Org_Apache_Kafka_Common_Config_ConfigDef_Type_" data-uid="Org.Apache.Kafka.Common.Config.ConfigDef.ParseType(Java.Lang.String,System.Object,Org.Apache.Kafka.Common.Config.ConfigDef.Type)">
   ParseType(String, object, Type)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/ConfigDef.cs/#L664"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/ConfigDef.cs/#L766"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/ConfigDef.html#parseType(java.lang.String,java.lang.Object,org.apache.kafka.common.config.ConfigDef.Type)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/ConfigDef.html#parseType(java.lang.String,java.lang.Object,org.apache.kafka.common.config.ConfigDef.Type)</a></p>
@@ -2341,7 +2399,7 @@ Class ConfigDef  <a class="header-action link-secondary" title="View source" hre
 
   <h3 id="Org_Apache_Kafka_Common_Config_ConfigDef_ToEnrichedRst" data-uid="Org.Apache.Kafka.Common.Config.ConfigDef.ToEnrichedRst">
   ToEnrichedRst()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/ConfigDef.cs/#L695"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/ConfigDef.cs/#L797"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/ConfigDef.html#toEnrichedRst()">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/ConfigDef.html#toEnrichedRst()</a></p>
@@ -2374,7 +2432,7 @@ Class ConfigDef  <a class="header-action link-secondary" title="View source" hre
 
   <h3 id="Org_Apache_Kafka_Common_Config_ConfigDef_ToHtml" data-uid="Org.Apache.Kafka.Common.Config.ConfigDef.ToHtml">
   ToHtml()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/ConfigDef.cs/#L703"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/ConfigDef.cs/#L805"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/ConfigDef.html#toHtml()">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/ConfigDef.html#toHtml()</a></p>
@@ -2407,7 +2465,7 @@ Class ConfigDef  <a class="header-action link-secondary" title="View source" hre
 
   <h3 id="Org_Apache_Kafka_Common_Config_ConfigDef_ToHtml_Java_Util_Map_Java_Lang_String_Java_Lang_String__" data-uid="Org.Apache.Kafka.Common.Config.ConfigDef.ToHtml(Java.Util.Map{Java.Lang.String,Java.Lang.String})">
   ToHtml(Map&lt;String, String&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/ConfigDef.cs/#L733"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/ConfigDef.cs/#L835"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/ConfigDef.html#toHtml(java.util.Map)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/ConfigDef.html#toHtml(java.util.Map)</a></p>
@@ -2446,7 +2504,7 @@ Class ConfigDef  <a class="header-action link-secondary" title="View source" hre
 
   <h3 id="Org_Apache_Kafka_Common_Config_ConfigDef_ToHtml_System_Int32_Java_Util_Function_Function_Java_Lang_String_Java_Lang_String__" data-uid="Org.Apache.Kafka.Common.Config.ConfigDef.ToHtml(System.Int32,Java.Util.Function.Function{Java.Lang.String,Java.Lang.String})">
   ToHtml(int, Function&lt;String, String&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/ConfigDef.cs/#L724"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/ConfigDef.cs/#L826"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/ConfigDef.html#toHtml(int,java.util.function.Function)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/ConfigDef.html#toHtml(int,java.util.function.Function)</a></p>
@@ -2488,7 +2546,7 @@ Class ConfigDef  <a class="header-action link-secondary" title="View source" hre
 
   <h3 id="Org_Apache_Kafka_Common_Config_ConfigDef_ToHtml_System_Int32_Java_Util_Function_Function_Java_Lang_String_Java_Lang_String__Java_Util_Map_Java_Lang_String_Java_Lang_String__" data-uid="Org.Apache.Kafka.Common.Config.ConfigDef.ToHtml(System.Int32,Java.Util.Function.Function{Java.Lang.String,Java.Lang.String},Java.Util.Map{Java.Lang.String,Java.Lang.String})">
   ToHtml(int, Function&lt;String, String&gt;, Map&lt;String, String&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/ConfigDef.cs/#L714"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/ConfigDef.cs/#L816"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/ConfigDef.html#toHtml(int,java.util.function.Function,java.util.Map)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/ConfigDef.html#toHtml(int,java.util.function.Function,java.util.Map)</a></p>
@@ -2533,7 +2591,7 @@ Class ConfigDef  <a class="header-action link-secondary" title="View source" hre
 
   <h3 id="Org_Apache_Kafka_Common_Config_ConfigDef_ToHtmlTable" data-uid="Org.Apache.Kafka.Common.Config.ConfigDef.ToHtmlTable">
   ToHtmlTable()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/ConfigDef.cs/#L741"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/ConfigDef.cs/#L843"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/ConfigDef.html#toHtmlTable()">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/ConfigDef.html#toHtmlTable()</a></p>
@@ -2566,7 +2624,7 @@ Class ConfigDef  <a class="header-action link-secondary" title="View source" hre
 
   <h3 id="Org_Apache_Kafka_Common_Config_ConfigDef_ToHtmlTable_Java_Util_Map_Java_Lang_String_Java_Lang_String__" data-uid="Org.Apache.Kafka.Common.Config.ConfigDef.ToHtmlTable(Java.Util.Map{Java.Lang.String,Java.Lang.String})">
   ToHtmlTable(Map&lt;String, String&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/ConfigDef.cs/#L750"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/ConfigDef.cs/#L852"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/ConfigDef.html#toHtmlTable(java.util.Map)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/ConfigDef.html#toHtmlTable(java.util.Map)</a></p>
@@ -2605,7 +2663,7 @@ Class ConfigDef  <a class="header-action link-secondary" title="View source" hre
 
   <h3 id="Org_Apache_Kafka_Common_Config_ConfigDef_ToRst" data-uid="Org.Apache.Kafka.Common.Config.ConfigDef.ToRst">
   ToRst()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/ConfigDef.cs/#L758"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/ConfigDef.cs/#L860"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/ConfigDef.html#toRst()">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/ConfigDef.html#toRst()</a></p>
@@ -2638,7 +2696,7 @@ Class ConfigDef  <a class="header-action link-secondary" title="View source" hre
 
   <h3 id="Org_Apache_Kafka_Common_Config_ConfigDef_Validate_Java_Util_Map_Java_Lang_String_Java_Lang_String__" data-uid="Org.Apache.Kafka.Common.Config.ConfigDef.Validate(Java.Util.Map{Java.Lang.String,Java.Lang.String})">
   Validate(Map&lt;String, String&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/ConfigDef.cs/#L775"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/ConfigDef.cs/#L877"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/ConfigDef.html#validate(java.util.Map)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/ConfigDef.html#validate(java.util.Map)</a></p>
@@ -2677,7 +2735,7 @@ Class ConfigDef  <a class="header-action link-secondary" title="View source" hre
 
   <h3 id="Org_Apache_Kafka_Common_Config_ConfigDef_ValidateAll_Java_Util_Map_Java_Lang_String_Java_Lang_String__" data-uid="Org.Apache.Kafka.Common.Config.ConfigDef.ValidateAll(Java.Util.Map{Java.Lang.String,Java.Lang.String})">
   ValidateAll(Map&lt;String, String&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/ConfigDef.cs/#L809"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/ConfigDef.cs/#L911"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/ConfigDef.html#validateAll(java.util.Map)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/ConfigDef.html#validateAll(java.util.Map)</a></p>
@@ -2716,7 +2774,7 @@ Class ConfigDef  <a class="header-action link-secondary" title="View source" hre
 
   <h3 id="Org_Apache_Kafka_Common_Config_ConfigDef_WithClientSaslSupport" data-uid="Org.Apache.Kafka.Common.Config.ConfigDef.WithClientSaslSupport">
   WithClientSaslSupport()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/ConfigDef.cs/#L1150"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/ConfigDef.cs/#L1252"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/ConfigDef.html#withClientSaslSupport()">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/ConfigDef.html#withClientSaslSupport()</a></p>
@@ -2749,7 +2807,7 @@ Class ConfigDef  <a class="header-action link-secondary" title="View source" hre
 
   <h3 id="Org_Apache_Kafka_Common_Config_ConfigDef_WithClientSslSupport" data-uid="Org.Apache.Kafka.Common.Config.ConfigDef.WithClientSslSupport">
   WithClientSslSupport()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/ConfigDef.cs/#L1158"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/ConfigDef.cs/#L1260"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/ConfigDef.html#withClientSslSupport()">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/ConfigDef.html#withClientSslSupport()</a></p>
@@ -2782,7 +2840,7 @@ Class ConfigDef  <a class="header-action link-secondary" title="View source" hre
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/ConfigDef.cs/#L628" class="edit-link">Edit this page</a>
+          <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/ConfigDef.cs/#L730" class="edit-link">Edit this page</a>
         </div>
 
 
