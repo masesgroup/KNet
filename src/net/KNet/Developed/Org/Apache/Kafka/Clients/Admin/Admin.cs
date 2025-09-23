@@ -119,10 +119,6 @@ namespace Org.Apache.Kafka.Clients.Admin
         DescribeConsumerGroupsResult DescribeConsumerGroups(Collection<Java.Lang.String> groupIds, DescribeConsumerGroupsOptions options);
         /// <inheritdoc cref="Admin.DescribeConsumerGroups(Collection{Java.Lang.String})"/>
         DescribeConsumerGroupsResult DescribeConsumerGroups(Collection<Java.Lang.String> groupIds);
-        /// <inheritdoc cref="Admin.ListConsumerGroups(ListConsumerGroupsOptions)"/>
-        ListConsumerGroupsResult ListConsumerGroups(ListConsumerGroupsOptions options);
-        /// <inheritdoc cref="Admin.ListConsumerGroups()"/>
-        ListConsumerGroupsResult ListConsumerGroups();
         /// <inheritdoc cref="Admin.ListConsumerGroupOffsets(Java.Lang.String, ListConsumerGroupOffsetsOptions)"/>
         ListConsumerGroupOffsetsResult ListConsumerGroupOffsets(Java.Lang.String groupId, ListConsumerGroupOffsetsOptions options);
         /// <inheritdoc cref="Admin.ListConsumerGroupOffsets(Java.Lang.String)"/>
