@@ -27,67 +27,67 @@
   "OriginJavadocJARVersionAndUrls": [
     {
       "Version": 11,
-      "Url": "https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/4.0.0/"
+      "Url": "https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/4.1.0/"
     },
     {
       "Version": 11,
-      "Url": "https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/"
+      "Url": "https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/"
     },
     {
       "Version": 11,
-      "Url": "https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/"
+      "Url": "https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/"
     },
     {
       "Version": 11,
-      "Url": "https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/"
+      "Url": "https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.1.0/"
     },
     {
       "Version": 11,
-      "Url": "https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/"
+      "Url": "https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.0/"
     },
     {
       "Version": 11,
-      "Url": "https://www.javadoc.io/doc/org.apache.kafka/kafka-tools-api/4.0.0/"
+      "Url": "https://www.javadoc.io/doc/org.apache.kafka/kafka-tools-api/4.1.0/"
     },
     {
       "Version": 11,
-      "Url": "https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/"
+      "Url": "https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/"
     },
     {
       "Version": 11,
-      "Url": "https://www.javadoc.io/doc/org.apache.kafka/kafka-shell/4.0.0/"
+      "Url": "https://www.javadoc.io/doc/org.apache.kafka/kafka-shell/4.1.0/"
     },
     {
       "Version": 11,
-      "Url": "https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.0.0/"
+      "Url": "https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.1.0/"
     },
     {
       "Version": 11,
-      "Url": "https://www.javadoc.io/doc/org.apache.kafka/connect-basic-auth-extension/4.0.0/"
+      "Url": "https://www.javadoc.io/doc/org.apache.kafka/connect-basic-auth-extension/4.1.0/"
     },
     {
       "Version": 11,
-      "Url": "https://www.javadoc.io/doc/org.apache.kafka/connect-json/4.0.0/"
+      "Url": "https://www.javadoc.io/doc/org.apache.kafka/connect-json/4.1.0/"
     },
     {
       "Version": 11,
-      "Url": "https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.0.0/"
+      "Url": "https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.1.0/"
     },
     {
       "Version": 11,
-      "Url": "https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/4.0.0/"
+      "Url": "https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/4.1.0/"
     },
     {
       "Version": 11,
-      "Url": "https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.0.0/"
+      "Url": "https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.1.0/"
     },
     {
       "Version": 11,
-      "Url": "https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.0.0/"
+      "Url": "https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.1.0/"
     },
     {
       "Version": 11,
-      "Url": "https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.0.0/"
+      "Url": "https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.1.0/"
     }
   ],
   "NamespacesToAvoid": [
