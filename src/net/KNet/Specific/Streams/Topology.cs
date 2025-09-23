@@ -19,6 +19,7 @@
 using MASES.JNet.Specific.Extensions;
 using MASES.KNet.Serialization;
 using MASES.KNet.Streams.Processor;
+using System;
 
 namespace MASES.KNet.Streams
 {
@@ -126,7 +127,7 @@ namespace MASES.KNet.Streams
         public Topology AddSink<K, V>(string arg0, TopicNameExtractor<K, V> arg1, params string[] arg2)
         {
             if (arg1 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
-            var top = _topology.AddSink(arg0, arg1, arg2.ToJVMArray<Java.Lang.String, string>());
+            var top = _topology.AddSink<byte[], byte[], byte[], byte[]>(arg0, arg1, arg2.ToJVMArray<Java.Lang.String, string>());
             return new Topology(top, _factory);
         }
         /// <summary>
@@ -182,7 +183,7 @@ namespace MASES.KNet.Streams
         {
             if (arg1 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
             if (arg2 is IGenericSerDesFactoryApplier applier1) applier1.Factory = _factory;
-            var top = _topology.AddSink(arg0, arg1, arg2, arg3.ToJVMArray<Java.Lang.String, string>());
+            var top = _topology.AddSink<byte[], byte[], byte[], byte[], byte[], byte[]>(arg0, arg1, arg2, arg3.ToJVMArray<Java.Lang.String, string>());
             return new Topology(top, _factory);
         }
         /// <summary>
@@ -390,9 +391,9 @@ namespace MASES.KNet.Streams
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.State.StoreBuilder"/></param>
         /// <param name="arg1"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Topology"/></returns>
-        public Topology AddStateStore(Org.Apache.Kafka.Streams.State.StoreBuilder arg0, params Java.Lang.String[] arg1)
+        public Topology AddStateStore<S>(Org.Apache.Kafka.Streams.State.StoreBuilder<S> arg0, params Java.Lang.String[] arg1) where S : Org.Apache.Kafka.Streams.Processor.IStateStore, new()
         {
-            var top = _topology.AddStateStore(arg0, arg1);
+            var top = _topology.AddStateStore<S>(arg0, arg1);
             return new Topology(top, _factory);
         }
         /// <summary>
