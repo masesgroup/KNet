@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common.Security.Oauthbearer
 {
     #region JwtRetriever declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/security/oauthbearer/JwtRetriever.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/security/oauthbearer/JwtRetriever.html"/>
     /// </summary>
     public partial class JwtRetriever : MASES.JCOBridge.C2JBridge.JVMBridgeBase<JwtRetriever>
     {
@@ -70,7 +70,7 @@ namespace Org.Apache.Kafka.Common.Security.Oauthbearer
 
     #region IJwtRetriever
     /// <summary>
-    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/security/oauthbearer/JwtRetriever.html"/>
+    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/security/oauthbearer/JwtRetriever.html"/>
     /// </summary>
     public partial interface IJwtRetriever
     {
@@ -107,7 +107,7 @@ namespace Org.Apache.Kafka.Common.Security.Oauthbearer
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/security/oauthbearer/JwtRetriever.html#retrieve()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/security/oauthbearer/JwtRetriever.html#retrieve()"/>
         /// </summary>
         /// <returns><see cref="Java.Lang.String"/></returns>
         /// <exception cref="Org.Apache.Kafka.Common.Security.Oauthbearer.JwtRetrieverException"/>

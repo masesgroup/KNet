@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Raft
 {
     #region RaftClient declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/RaftClient.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/RaftClient.html"/>
     /// </summary>
     public partial class RaftClient : Java.Lang.AutoCloseable
     {
@@ -66,7 +66,7 @@ namespace Org.Apache.Kafka.Raft
         // TODO: complete the class
         #region Listener declaration
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/RaftClient.Listener.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/RaftClient.Listener.html"/>
         /// </summary>
         public partial class Listener : MASES.JCOBridge.C2JBridge.JVMBridgeListener
         {
@@ -139,7 +139,7 @@ namespace Org.Apache.Kafka.Raft
 
         #region Listener<T> declaration
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/RaftClient.Listener.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/RaftClient.Listener.html"/>
         /// </summary>
         /// <typeparam name="T"></typeparam>
         public partial class Listener<T> : MASES.JCOBridge.C2JBridge.JVMBridgeListener
@@ -217,7 +217,7 @@ namespace Org.Apache.Kafka.Raft
 
     #region RaftClient<T> declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/RaftClient.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/RaftClient.html"/>
     /// </summary>
     /// <typeparam name="T"></typeparam>
     public partial class RaftClient<T> : Java.Lang.AutoCloseable
@@ -280,7 +280,7 @@ namespace Org.Apache.Kafka.Raft
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/RaftClient.html#shutdown(int)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/RaftClient.html#shutdown(int)"/>
         /// </summary>
         /// <param name="arg0"><see cref="int"/></param>
         /// <returns><see cref="Java.Util.Concurrent.CompletableFuture"/></returns>
@@ -289,7 +289,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<Java.Util.Concurrent.CompletableFuture>("shutdown", "(I)Ljava/util/concurrent/CompletableFuture;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/RaftClient.html#nodeId()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/RaftClient.html#nodeId()"/>
         /// </summary>
         /// <returns><see cref="Java.Util.OptionalInt"/></returns>
         public Java.Util.OptionalInt NodeId()
@@ -297,7 +297,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<Java.Util.OptionalInt>("nodeId", "()Ljava/util/OptionalInt;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/RaftClient.html#highWatermark()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/RaftClient.html#highWatermark()"/>
         /// </summary>
         /// <returns><see cref="Java.Util.OptionalLong"/></returns>
         public Java.Util.OptionalLong HighWatermark()
@@ -305,7 +305,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<Java.Util.OptionalLong>("highWatermark", "()Ljava/util/OptionalLong;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/RaftClient.html#logEndOffset()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/RaftClient.html#logEndOffset()"/>
         /// </summary>
         /// <returns><see cref="long"/></returns>
         public long LogEndOffset()
@@ -313,7 +313,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<long>("logEndOffset", "()J");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/RaftClient.html#prepareAppend(int,java.util.List)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/RaftClient.html#prepareAppend(int,java.util.List)"/>
         /// </summary>
         /// <param name="arg0"><see cref="int"/></param>
         /// <param name="arg1"><see cref="Java.Util.List"/></param>
@@ -323,7 +323,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<long>("prepareAppend", "(ILjava/util/List;)J", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/RaftClient.html#leaderAndEpoch()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/RaftClient.html#leaderAndEpoch()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Raft.LeaderAndEpoch"/></returns>
         public Org.Apache.Kafka.Raft.LeaderAndEpoch LeaderAndEpoch()
@@ -331,7 +331,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<Org.Apache.Kafka.Raft.LeaderAndEpoch>("leaderAndEpoch", "()Lorg/apache/kafka/raft/LeaderAndEpoch;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/RaftClient.html#register(org.apache.kafka.raft.RaftClient.Listener)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/RaftClient.html#register(org.apache.kafka.raft.RaftClient.Listener)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Raft.RaftClient.Listener"/></param>
         public void Register(Org.Apache.Kafka.Raft.RaftClient.Listener arg0)
@@ -339,7 +339,7 @@ namespace Org.Apache.Kafka.Raft
             IExecuteWithSignature("register", "(Lorg/apache/kafka/raft/RaftClient$Listener;)V", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/RaftClient.html#resign(int)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/RaftClient.html#resign(int)"/>
         /// </summary>
         /// <param name="arg0"><see cref="int"/></param>
         public void Resign(int arg0)
@@ -347,14 +347,14 @@ namespace Org.Apache.Kafka.Raft
             IExecuteWithSignature("resign", "(I)V", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/RaftClient.html#schedulePreparedAppend()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/RaftClient.html#schedulePreparedAppend()"/>
         /// </summary>
         public void SchedulePreparedAppend()
         {
             IExecuteWithSignature("schedulePreparedAppend", "()V");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/RaftClient.html#unregister(org.apache.kafka.raft.RaftClient.Listener)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/RaftClient.html#unregister(org.apache.kafka.raft.RaftClient.Listener)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Raft.RaftClient.Listener"/></param>
         public void Unregister(Org.Apache.Kafka.Raft.RaftClient.Listener arg0)
@@ -398,7 +398,7 @@ namespace Org.Apache.Kafka.Raft
             }
 
             /// <summary>
-            /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/RaftClient.Listener.html#handleCommit(org.apache.kafka.raft.BatchReader)"/>
+            /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/RaftClient.Listener.html#handleCommit(org.apache.kafka.raft.BatchReader)"/>
             /// </summary>
             /// <remarks>If <see cref="OnHandleCommit"/> has a value it takes precedence over corresponding class method</remarks>
             public global::System.Action<Org.Apache.Kafka.Raft.BatchReader> OnHandleCommit { get; set; } = null;
@@ -413,7 +413,7 @@ namespace Org.Apache.Kafka.Raft
             }
 
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/RaftClient.Listener.html#handleCommit(org.apache.kafka.raft.BatchReader)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/RaftClient.Listener.html#handleCommit(org.apache.kafka.raft.BatchReader)"/>
             /// </summary>
             /// <param name="arg0"><see cref="Org.Apache.Kafka.Raft.BatchReader"/></param>
             public virtual void HandleCommit(Org.Apache.Kafka.Raft.BatchReader arg0)
@@ -422,7 +422,7 @@ namespace Org.Apache.Kafka.Raft
             }
 
             /// <summary>
-            /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/RaftClient.Listener.html#handleLoadSnapshot(org.apache.kafka.snapshot.SnapshotReader)"/>
+            /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/RaftClient.Listener.html#handleLoadSnapshot(org.apache.kafka.snapshot.SnapshotReader)"/>
             /// </summary>
             /// <remarks>If <see cref="OnHandleLoadSnapshot"/> has a value it takes precedence over corresponding class method</remarks>
             public global::System.Action<Org.Apache.Kafka.Snapshot.SnapshotReader> OnHandleLoadSnapshot { get; set; } = null;
@@ -437,7 +437,7 @@ namespace Org.Apache.Kafka.Raft
             }
 
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/RaftClient.Listener.html#handleLoadSnapshot(org.apache.kafka.snapshot.SnapshotReader)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/RaftClient.Listener.html#handleLoadSnapshot(org.apache.kafka.snapshot.SnapshotReader)"/>
             /// </summary>
             /// <param name="arg0"><see cref="Org.Apache.Kafka.Snapshot.SnapshotReader"/></param>
             public virtual void HandleLoadSnapshot(Org.Apache.Kafka.Snapshot.SnapshotReader arg0)
@@ -445,7 +445,7 @@ namespace Org.Apache.Kafka.Raft
                 hasOverrideHandleLoadSnapshot = false;
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/RaftClient.Listener.html#beginShutdown()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/RaftClient.Listener.html#beginShutdown()"/>
             /// </summary>
             /// <remarks>The method invokes the default implementation in the JVM interface</remarks>
             public void BeginShutdownDefault()
@@ -454,7 +454,7 @@ namespace Org.Apache.Kafka.Raft
             }
 
             /// <summary>
-            /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/RaftClient.Listener.html#beginShutdown()"/>
+            /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/RaftClient.Listener.html#beginShutdown()"/>
             /// </summary>
             /// <remarks>If <see cref="OnBeginShutdown"/> has a value it takes precedence over corresponding class method</remarks>
             public global::System.Action OnBeginShutdown { get; set; } = null;
@@ -469,7 +469,7 @@ namespace Org.Apache.Kafka.Raft
             }
 
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/RaftClient.Listener.html#beginShutdown()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/RaftClient.Listener.html#beginShutdown()"/>
             /// </summary>
             /// <remarks>The method invokes the default implementation in the JVM interface using <see cref="BeginShutdownDefault"/>; override the method to implement a different behavior</remarks>
             public virtual void BeginShutdown()
@@ -477,7 +477,7 @@ namespace Org.Apache.Kafka.Raft
                 hasOverrideBeginShutdown = false;
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/RaftClient.Listener.html#handleLeaderChange(org.apache.kafka.raft.LeaderAndEpoch)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/RaftClient.Listener.html#handleLeaderChange(org.apache.kafka.raft.LeaderAndEpoch)"/>
             /// </summary>
             /// <param name="arg0"><see cref="Org.Apache.Kafka.Raft.LeaderAndEpoch"/></param>
             /// <remarks>The method invokes the default implementation in the JVM interface</remarks>
@@ -487,7 +487,7 @@ namespace Org.Apache.Kafka.Raft
             }
 
             /// <summary>
-            /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/RaftClient.Listener.html#handleLeaderChange(org.apache.kafka.raft.LeaderAndEpoch)"/>
+            /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/RaftClient.Listener.html#handleLeaderChange(org.apache.kafka.raft.LeaderAndEpoch)"/>
             /// </summary>
             /// <remarks>If <see cref="OnHandleLeaderChange"/> has a value it takes precedence over corresponding class method</remarks>
             public global::System.Action<Org.Apache.Kafka.Raft.LeaderAndEpoch> OnHandleLeaderChange { get; set; } = null;
@@ -502,7 +502,7 @@ namespace Org.Apache.Kafka.Raft
             }
 
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/RaftClient.Listener.html#handleLeaderChange(org.apache.kafka.raft.LeaderAndEpoch)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/RaftClient.Listener.html#handleLeaderChange(org.apache.kafka.raft.LeaderAndEpoch)"/>
             /// </summary>
             /// <param name="arg0"><see cref="Org.Apache.Kafka.Raft.LeaderAndEpoch"/></param>
             /// <remarks>The method invokes the default implementation in the JVM interface using <see cref="HandleLeaderChangeDefault"/>; override the method to implement a different behavior</remarks>
@@ -542,7 +542,7 @@ namespace Org.Apache.Kafka.Raft
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/RaftClient.Listener.html#handleCommit(org.apache.kafka.raft.BatchReader)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/RaftClient.Listener.html#handleCommit(org.apache.kafka.raft.BatchReader)"/>
             /// </summary>
             /// <param name="arg0"><see cref="Org.Apache.Kafka.Raft.BatchReader"/></param>
             public override void HandleCommit(Org.Apache.Kafka.Raft.BatchReader arg0)
@@ -550,7 +550,7 @@ namespace Org.Apache.Kafka.Raft
                 IExecuteWithSignature("handleCommit", "(Lorg/apache/kafka/raft/BatchReader;)V", arg0);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/RaftClient.Listener.html#handleLoadSnapshot(org.apache.kafka.snapshot.SnapshotReader)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/RaftClient.Listener.html#handleLoadSnapshot(org.apache.kafka.snapshot.SnapshotReader)"/>
             /// </summary>
             /// <param name="arg0"><see cref="Org.Apache.Kafka.Snapshot.SnapshotReader"/></param>
             public override void HandleLoadSnapshot(Org.Apache.Kafka.Snapshot.SnapshotReader arg0)
@@ -558,14 +558,14 @@ namespace Org.Apache.Kafka.Raft
                 IExecuteWithSignature("handleLoadSnapshot", "(Lorg/apache/kafka/snapshot/SnapshotReader;)V", arg0);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/RaftClient.Listener.html#beginShutdown()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/RaftClient.Listener.html#beginShutdown()"/>
             /// </summary>
             public override void BeginShutdown()
             {
                 IExecuteWithSignature("beginShutdown", "()V");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/RaftClient.Listener.html#handleLeaderChange(org.apache.kafka.raft.LeaderAndEpoch)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/RaftClient.Listener.html#handleLeaderChange(org.apache.kafka.raft.LeaderAndEpoch)"/>
             /// </summary>
             /// <param name="arg0"><see cref="Org.Apache.Kafka.Raft.LeaderAndEpoch"/></param>
             public override void HandleLeaderChange(Org.Apache.Kafka.Raft.LeaderAndEpoch arg0)
@@ -616,7 +616,7 @@ namespace Org.Apache.Kafka.Raft
             }
 
             /// <summary>
-            /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/RaftClient.Listener.html#handleCommit(org.apache.kafka.raft.BatchReader)"/>
+            /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/RaftClient.Listener.html#handleCommit(org.apache.kafka.raft.BatchReader)"/>
             /// </summary>
             /// <remarks>If <see cref="OnHandleCommit"/> has a value it takes precedence over corresponding class method</remarks>
             public global::System.Action<Org.Apache.Kafka.Raft.BatchReader<T>> OnHandleCommit { get; set; } = null;
@@ -631,7 +631,7 @@ namespace Org.Apache.Kafka.Raft
             }
 
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/RaftClient.Listener.html#handleCommit(org.apache.kafka.raft.BatchReader)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/RaftClient.Listener.html#handleCommit(org.apache.kafka.raft.BatchReader)"/>
             /// </summary>
             /// <param name="arg0"><see cref="Org.Apache.Kafka.Raft.BatchReader"/></param>
             public virtual void HandleCommit(Org.Apache.Kafka.Raft.BatchReader<T> arg0)
@@ -640,7 +640,7 @@ namespace Org.Apache.Kafka.Raft
             }
 
             /// <summary>
-            /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/RaftClient.Listener.html#handleLoadSnapshot(org.apache.kafka.snapshot.SnapshotReader)"/>
+            /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/RaftClient.Listener.html#handleLoadSnapshot(org.apache.kafka.snapshot.SnapshotReader)"/>
             /// </summary>
             /// <remarks>If <see cref="OnHandleLoadSnapshot"/> has a value it takes precedence over corresponding class method</remarks>
             public global::System.Action<Org.Apache.Kafka.Snapshot.SnapshotReader<T>> OnHandleLoadSnapshot { get; set; } = null;
@@ -655,7 +655,7 @@ namespace Org.Apache.Kafka.Raft
             }
 
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/RaftClient.Listener.html#handleLoadSnapshot(org.apache.kafka.snapshot.SnapshotReader)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/RaftClient.Listener.html#handleLoadSnapshot(org.apache.kafka.snapshot.SnapshotReader)"/>
             /// </summary>
             /// <param name="arg0"><see cref="Org.Apache.Kafka.Snapshot.SnapshotReader"/></param>
             public virtual void HandleLoadSnapshot(Org.Apache.Kafka.Snapshot.SnapshotReader<T> arg0)
@@ -663,7 +663,7 @@ namespace Org.Apache.Kafka.Raft
                 hasOverrideHandleLoadSnapshot = false;
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/RaftClient.Listener.html#beginShutdown()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/RaftClient.Listener.html#beginShutdown()"/>
             /// </summary>
             /// <remarks>The method invokes the default implementation in the JVM interface</remarks>
             public void BeginShutdownDefault()
@@ -672,7 +672,7 @@ namespace Org.Apache.Kafka.Raft
             }
 
             /// <summary>
-            /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/RaftClient.Listener.html#beginShutdown()"/>
+            /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/RaftClient.Listener.html#beginShutdown()"/>
             /// </summary>
             /// <remarks>If <see cref="OnBeginShutdown"/> has a value it takes precedence over corresponding class method</remarks>
             public global::System.Action OnBeginShutdown { get; set; } = null;
@@ -687,7 +687,7 @@ namespace Org.Apache.Kafka.Raft
             }
 
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/RaftClient.Listener.html#beginShutdown()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/RaftClient.Listener.html#beginShutdown()"/>
             /// </summary>
             /// <remarks>The method invokes the default implementation in the JVM interface using <see cref="BeginShutdownDefault"/>; override the method to implement a different behavior</remarks>
             public virtual void BeginShutdown()
@@ -695,7 +695,7 @@ namespace Org.Apache.Kafka.Raft
                 hasOverrideBeginShutdown = false;
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/RaftClient.Listener.html#handleLeaderChange(org.apache.kafka.raft.LeaderAndEpoch)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/RaftClient.Listener.html#handleLeaderChange(org.apache.kafka.raft.LeaderAndEpoch)"/>
             /// </summary>
             /// <param name="arg0"><see cref="Org.Apache.Kafka.Raft.LeaderAndEpoch"/></param>
             /// <remarks>The method invokes the default implementation in the JVM interface</remarks>
@@ -705,7 +705,7 @@ namespace Org.Apache.Kafka.Raft
             }
 
             /// <summary>
-            /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/RaftClient.Listener.html#handleLeaderChange(org.apache.kafka.raft.LeaderAndEpoch)"/>
+            /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/RaftClient.Listener.html#handleLeaderChange(org.apache.kafka.raft.LeaderAndEpoch)"/>
             /// </summary>
             /// <remarks>If <see cref="OnHandleLeaderChange"/> has a value it takes precedence over corresponding class method</remarks>
             public global::System.Action<Org.Apache.Kafka.Raft.LeaderAndEpoch> OnHandleLeaderChange { get; set; } = null;
@@ -720,7 +720,7 @@ namespace Org.Apache.Kafka.Raft
             }
 
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/RaftClient.Listener.html#handleLeaderChange(org.apache.kafka.raft.LeaderAndEpoch)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/RaftClient.Listener.html#handleLeaderChange(org.apache.kafka.raft.LeaderAndEpoch)"/>
             /// </summary>
             /// <param name="arg0"><see cref="Org.Apache.Kafka.Raft.LeaderAndEpoch"/></param>
             /// <remarks>The method invokes the default implementation in the JVM interface using <see cref="HandleLeaderChangeDefault"/>; override the method to implement a different behavior</remarks>
@@ -760,7 +760,7 @@ namespace Org.Apache.Kafka.Raft
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/RaftClient.Listener.html#handleCommit(org.apache.kafka.raft.BatchReader)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/RaftClient.Listener.html#handleCommit(org.apache.kafka.raft.BatchReader)"/>
             /// </summary>
             /// <param name="arg0"><see cref="Org.Apache.Kafka.Raft.BatchReader"/></param>
             public override void HandleCommit(Org.Apache.Kafka.Raft.BatchReader<T> arg0)
@@ -768,7 +768,7 @@ namespace Org.Apache.Kafka.Raft
                 IExecuteWithSignature("handleCommit", "(Lorg/apache/kafka/raft/BatchReader;)V", arg0);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/RaftClient.Listener.html#handleLoadSnapshot(org.apache.kafka.snapshot.SnapshotReader)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/RaftClient.Listener.html#handleLoadSnapshot(org.apache.kafka.snapshot.SnapshotReader)"/>
             /// </summary>
             /// <param name="arg0"><see cref="Org.Apache.Kafka.Snapshot.SnapshotReader"/></param>
             public override void HandleLoadSnapshot(Org.Apache.Kafka.Snapshot.SnapshotReader<T> arg0)
@@ -776,14 +776,14 @@ namespace Org.Apache.Kafka.Raft
                 IExecuteWithSignature("handleLoadSnapshot", "(Lorg/apache/kafka/snapshot/SnapshotReader;)V", arg0);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/RaftClient.Listener.html#beginShutdown()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/RaftClient.Listener.html#beginShutdown()"/>
             /// </summary>
             public override void BeginShutdown()
             {
                 IExecuteWithSignature("beginShutdown", "()V");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/RaftClient.Listener.html#handleLeaderChange(org.apache.kafka.raft.LeaderAndEpoch)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/RaftClient.Listener.html#handleLeaderChange(org.apache.kafka.raft.LeaderAndEpoch)"/>
             /// </summary>
             /// <param name="arg0"><see cref="Org.Apache.Kafka.Raft.LeaderAndEpoch"/></param>
             public override void HandleLeaderChange(Org.Apache.Kafka.Raft.LeaderAndEpoch arg0)
@@ -810,7 +810,7 @@ namespace Org.Apache.Kafka.Raft
 
     #region IRaftClient<T>
     /// <summary>
-    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/RaftClient.html"/>
+    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/RaftClient.html"/>
     /// </summary>
     public partial interface IRaftClient<T> : Java.Lang.IAutoCloseable
     {
@@ -851,7 +851,7 @@ namespace Org.Apache.Kafka.Raft
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/RaftClient.html#shutdown(int)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/RaftClient.html#shutdown(int)"/>
         /// </summary>
         /// <param name="arg0"><see cref="int"/></param>
         /// <returns><see cref="Java.Util.Concurrent.CompletableFuture"/></returns>
@@ -860,7 +860,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<Java.Util.Concurrent.CompletableFuture<Java.Lang.Void>>("shutdown", "(I)Ljava/util/concurrent/CompletableFuture;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/RaftClient.html#nodeId()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/RaftClient.html#nodeId()"/>
         /// </summary>
         /// <returns><see cref="Java.Util.OptionalInt"/></returns>
         public Java.Util.OptionalInt NodeId()
@@ -868,7 +868,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<Java.Util.OptionalInt>("nodeId", "()Ljava/util/OptionalInt;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/RaftClient.html#highWatermark()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/RaftClient.html#highWatermark()"/>
         /// </summary>
         /// <returns><see cref="Java.Util.OptionalLong"/></returns>
         public Java.Util.OptionalLong HighWatermark()
@@ -876,7 +876,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<Java.Util.OptionalLong>("highWatermark", "()Ljava/util/OptionalLong;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/RaftClient.html#logEndOffset()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/RaftClient.html#logEndOffset()"/>
         /// </summary>
         /// <returns><see cref="long"/></returns>
         public long LogEndOffset()
@@ -884,7 +884,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<long>("logEndOffset", "()J");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/RaftClient.html#prepareAppend(int,java.util.List)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/RaftClient.html#prepareAppend(int,java.util.List)"/>
         /// </summary>
         /// <param name="arg0"><see cref="int"/></param>
         /// <param name="arg1"><see cref="Java.Util.List"/></param>
@@ -894,7 +894,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<long>("prepareAppend", "(ILjava/util/List;)J", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/RaftClient.html#leaderAndEpoch()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/RaftClient.html#leaderAndEpoch()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Raft.LeaderAndEpoch"/></returns>
         public Org.Apache.Kafka.Raft.LeaderAndEpoch LeaderAndEpoch()
@@ -902,7 +902,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<Org.Apache.Kafka.Raft.LeaderAndEpoch>("leaderAndEpoch", "()Lorg/apache/kafka/raft/LeaderAndEpoch;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/RaftClient.html#register(org.apache.kafka.raft.RaftClient.Listener)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/RaftClient.html#register(org.apache.kafka.raft.RaftClient.Listener)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Raft.RaftClient.Listener"/></param>
         public void Register(Org.Apache.Kafka.Raft.RaftClient.Listener<T> arg0)
@@ -910,7 +910,7 @@ namespace Org.Apache.Kafka.Raft
             IExecuteWithSignature("register", "(Lorg/apache/kafka/raft/RaftClient$Listener;)V", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/RaftClient.html#resign(int)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/RaftClient.html#resign(int)"/>
         /// </summary>
         /// <param name="arg0"><see cref="int"/></param>
         public void Resign(int arg0)
@@ -918,14 +918,14 @@ namespace Org.Apache.Kafka.Raft
             IExecuteWithSignature("resign", "(I)V", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/RaftClient.html#schedulePreparedAppend()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/RaftClient.html#schedulePreparedAppend()"/>
         /// </summary>
         public void SchedulePreparedAppend()
         {
             IExecuteWithSignature("schedulePreparedAppend", "()V");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/RaftClient.html#unregister(org.apache.kafka.raft.RaftClient.Listener)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/RaftClient.html#unregister(org.apache.kafka.raft.RaftClient.Listener)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Raft.RaftClient.Listener"/></param>
         public void Unregister(Org.Apache.Kafka.Raft.RaftClient.Listener<T> arg0)

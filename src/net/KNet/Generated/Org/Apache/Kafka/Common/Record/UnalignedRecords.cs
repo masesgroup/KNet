@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common.Record
 {
     #region UnalignedRecords declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/UnalignedRecords.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/record/UnalignedRecords.html"/>
     /// </summary>
     public partial class UnalignedRecords : Org.Apache.Kafka.Common.Record.TransferableRecords
     {
@@ -70,7 +70,7 @@ namespace Org.Apache.Kafka.Common.Record
 
     #region IUnalignedRecords
     /// <summary>
-    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/UnalignedRecords.html"/>
+    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/record/UnalignedRecords.html"/>
     /// </summary>
     public partial interface IUnalignedRecords : Org.Apache.Kafka.Common.Record.ITransferableRecords
     {

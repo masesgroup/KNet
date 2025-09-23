@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common.Config
 {
     #region ConfigChangeCallback declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/ConfigChangeCallback.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/config/ConfigChangeCallback.html"/>
     /// </summary>
     public partial class ConfigChangeCallback : MASES.JCOBridge.C2JBridge.JVMBridgeListener
     {
@@ -100,7 +100,7 @@ namespace Org.Apache.Kafka.Common.Config
 
     #region IConfigChangeCallback
     /// <summary>
-    /// .NET interface for org.mases.knet.generated.org.apache.kafka.common.config.ConfigChangeCallback implementing <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/ConfigChangeCallback.html"/>
+    /// .NET interface for org.mases.knet.generated.org.apache.kafka.common.config.ConfigChangeCallback implementing <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/config/ConfigChangeCallback.html"/>
     /// </summary>
     public partial interface IConfigChangeCallback
     {
@@ -146,7 +146,7 @@ namespace Org.Apache.Kafka.Common.Config
         }
 
         /// <summary>
-        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/ConfigChangeCallback.html#onChange(java.lang.String,org.apache.kafka.common.config.ConfigData)"/>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/config/ConfigChangeCallback.html#onChange(java.lang.String,org.apache.kafka.common.config.ConfigData)"/>
         /// </summary>
         /// <remarks>If <see cref="OnOnChange"/> has a value it takes precedence over corresponding class method</remarks>
         public global::System.Action<Java.Lang.String, Org.Apache.Kafka.Common.Config.ConfigData> OnOnChange { get; set; } = null;
@@ -161,7 +161,7 @@ namespace Org.Apache.Kafka.Common.Config
         }
 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/ConfigChangeCallback.html#onChange(java.lang.String,org.apache.kafka.common.config.ConfigData)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/config/ConfigChangeCallback.html#onChange(java.lang.String,org.apache.kafka.common.config.ConfigData)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Config.ConfigData"/></param>
@@ -201,7 +201,7 @@ namespace Org.Apache.Kafka.Common.Config
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/ConfigChangeCallback.html#onChange(java.lang.String,org.apache.kafka.common.config.ConfigData)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/config/ConfigChangeCallback.html#onChange(java.lang.String,org.apache.kafka.common.config.ConfigData)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Config.ConfigData"/></param>

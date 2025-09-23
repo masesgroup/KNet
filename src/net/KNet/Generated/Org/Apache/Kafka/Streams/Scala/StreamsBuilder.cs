@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Streams.Scala
 {
     #region StreamsBuilder declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/StreamsBuilder.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.1.0/org/apache/kafka/streams/scala/StreamsBuilder.html"/>
     /// </summary>
     public partial class StreamsBuilder : MASES.JCOBridge.C2JBridge.JVMBridgeBase<StreamsBuilder>
     {
@@ -71,7 +71,7 @@ namespace Org.Apache.Kafka.Streams.Scala
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/StreamsBuilder.html#%3Cinit%3E(org.apache.kafka.streams.StreamsBuilder)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.1.0/org/apache/kafka/streams/scala/StreamsBuilder.html#%3Cinit%3E(org.apache.kafka.streams.StreamsBuilder)"/>
         /// </summary>
         /// <param name="inner"><see cref="Org.Apache.Kafka.Streams.StreamsBuilder"/></param>
         public StreamsBuilder(Org.Apache.Kafka.Streams.StreamsBuilder inner)
@@ -95,7 +95,7 @@ namespace Org.Apache.Kafka.Streams.Scala
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/StreamsBuilder.html#globalTable(java.lang.String,org.apache.kafka.streams.kstream.Consumed)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.1.0/org/apache/kafka/streams/scala/StreamsBuilder.html#globalTable(java.lang.String,org.apache.kafka.streams.kstream.Consumed)"/>
         /// </summary>
         /// <param name="topic"><see cref="Java.Lang.String"/></param>
         /// <param name="consumed"><see cref="Org.Apache.Kafka.Streams.Kstream.Consumed"/></param>
@@ -107,7 +107,7 @@ namespace Org.Apache.Kafka.Streams.Scala
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.GlobalKTable<K, V>>("globalTable", "(Ljava/lang/String;Lorg/apache/kafka/streams/kstream/Consumed;)Lorg/apache/kafka/streams/kstream/GlobalKTable;", topic, consumed);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/StreamsBuilder.html#globalTable(java.lang.String,org.apache.kafka.streams.kstream.Materialized,org.apache.kafka.streams.kstream.Consumed)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.1.0/org/apache/kafka/streams/scala/StreamsBuilder.html#globalTable(java.lang.String,org.apache.kafka.streams.kstream.Materialized,org.apache.kafka.streams.kstream.Consumed)"/>
         /// </summary>
         /// <param name="topic"><see cref="Java.Lang.String"/></param>
         /// <param name="materialized"><see cref="Org.Apache.Kafka.Streams.Kstream.Materialized"/></param>
@@ -120,7 +120,7 @@ namespace Org.Apache.Kafka.Streams.Scala
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.GlobalKTable<K, V>>("globalTable", "(Ljava/lang/String;Lorg/apache/kafka/streams/kstream/Materialized;Lorg/apache/kafka/streams/kstream/Consumed;)Lorg/apache/kafka/streams/kstream/GlobalKTable;", topic, materialized, consumed);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/StreamsBuilder.html#stream(java.lang.String,org.apache.kafka.streams.kstream.Consumed)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.1.0/org/apache/kafka/streams/scala/StreamsBuilder.html#stream(java.lang.String,org.apache.kafka.streams.kstream.Consumed)"/>
         /// </summary>
         /// <param name="topic"><see cref="Java.Lang.String"/></param>
         /// <param name="consumed"><see cref="Org.Apache.Kafka.Streams.Kstream.Consumed"/></param>
@@ -132,7 +132,7 @@ namespace Org.Apache.Kafka.Streams.Scala
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.Scala.Kstream.KStream<K, V>>("stream", "(Ljava/lang/String;Lorg/apache/kafka/streams/kstream/Consumed;)Lorg/apache/kafka/streams/scala/kstream/KStream;", topic, consumed);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/StreamsBuilder.html#stream(java.util.regex.Pattern,org.apache.kafka.streams.kstream.Consumed)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.1.0/org/apache/kafka/streams/scala/StreamsBuilder.html#stream(java.util.regex.Pattern,org.apache.kafka.streams.kstream.Consumed)"/>
         /// </summary>
         /// <param name="topicPattern"><see cref="Java.Util.Regex.Pattern"/></param>
         /// <param name="consumed"><see cref="Org.Apache.Kafka.Streams.Kstream.Consumed"/></param>
@@ -144,7 +144,7 @@ namespace Org.Apache.Kafka.Streams.Scala
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.Scala.Kstream.KStream<K, V>>("stream", "(Ljava/util/regex/Pattern;Lorg/apache/kafka/streams/kstream/Consumed;)Lorg/apache/kafka/streams/scala/kstream/KStream;", topicPattern, consumed);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/StreamsBuilder.html#table(java.lang.String,org.apache.kafka.streams.kstream.Consumed)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.1.0/org/apache/kafka/streams/scala/StreamsBuilder.html#table(java.lang.String,org.apache.kafka.streams.kstream.Consumed)"/>
         /// </summary>
         /// <param name="topic"><see cref="Java.Lang.String"/></param>
         /// <param name="consumed"><see cref="Org.Apache.Kafka.Streams.Kstream.Consumed"/></param>
@@ -156,7 +156,7 @@ namespace Org.Apache.Kafka.Streams.Scala
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.Scala.Kstream.KTable<K, V>>("table", "(Ljava/lang/String;Lorg/apache/kafka/streams/kstream/Consumed;)Lorg/apache/kafka/streams/scala/kstream/KTable;", topic, consumed);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/StreamsBuilder.html#table(java.lang.String,org.apache.kafka.streams.kstream.Materialized,org.apache.kafka.streams.kstream.Consumed)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.1.0/org/apache/kafka/streams/scala/StreamsBuilder.html#table(java.lang.String,org.apache.kafka.streams.kstream.Materialized,org.apache.kafka.streams.kstream.Consumed)"/>
         /// </summary>
         /// <param name="topic"><see cref="Java.Lang.String"/></param>
         /// <param name="materialized"><see cref="Org.Apache.Kafka.Streams.Kstream.Materialized"/></param>
@@ -169,7 +169,7 @@ namespace Org.Apache.Kafka.Streams.Scala
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.Scala.Kstream.KTable<K, V>>("table", "(Ljava/lang/String;Lorg/apache/kafka/streams/kstream/Materialized;Lorg/apache/kafka/streams/kstream/Consumed;)Lorg/apache/kafka/streams/scala/kstream/KTable;", topic, materialized, consumed);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/StreamsBuilder.html#addGlobalStore(org.apache.kafka.streams.state.StoreBuilder,java.lang.String,org.apache.kafka.streams.kstream.Consumed,org.apache.kafka.streams.processor.api.ProcessorSupplier)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.1.0/org/apache/kafka/streams/scala/StreamsBuilder.html#addGlobalStore(org.apache.kafka.streams.state.StoreBuilder,java.lang.String,org.apache.kafka.streams.kstream.Consumed,org.apache.kafka.streams.processor.api.ProcessorSupplier)"/>
         /// </summary>
         /// <param name="storeBuilder"><see cref="Org.Apache.Kafka.Streams.State.StoreBuilder"/></param>
         /// <param name="topic"><see cref="Java.Lang.String"/></param>
@@ -179,22 +179,22 @@ namespace Org.Apache.Kafka.Streams.Scala
         /// <typeparam name="K"></typeparam>
         /// <typeparam name="V"></typeparam>
         /// <returns><see cref="Org.Apache.Kafka.Streams.StreamsBuilder"/></returns>
-        public Org.Apache.Kafka.Streams.StreamsBuilder AddGlobalStore<StoreBuilderExtendsOrg_Apache_Kafka_Streams_Processor_StateStore, K, V>(Org.Apache.Kafka.Streams.State.StoreBuilder<StoreBuilderExtendsOrg_Apache_Kafka_Streams_Processor_StateStore> storeBuilder, Java.Lang.String topic, Org.Apache.Kafka.Streams.Kstream.Consumed<K, V> consumed, Org.Apache.Kafka.Streams.Processor.Api.ProcessorSupplier<K, V, Java.Lang.Void, Java.Lang.Void> stateUpdateSupplier) where StoreBuilderExtendsOrg_Apache_Kafka_Streams_Processor_StateStore : Org.Apache.Kafka.Streams.Processor.StateStore, new()
+        public Org.Apache.Kafka.Streams.StreamsBuilder AddGlobalStore<StoreBuilderExtendsOrg_Apache_Kafka_Streams_Processor_StateStore, K, V>(Org.Apache.Kafka.Streams.State.StoreBuilder<StoreBuilderExtendsOrg_Apache_Kafka_Streams_Processor_StateStore> storeBuilder, Java.Lang.String topic, Org.Apache.Kafka.Streams.Kstream.Consumed<K, V> consumed, Org.Apache.Kafka.Streams.Processor.Api.ProcessorSupplier<K, V, Java.Lang.Void, Java.Lang.Void> stateUpdateSupplier) where StoreBuilderExtendsOrg_Apache_Kafka_Streams_Processor_StateStore : Org.Apache.Kafka.Streams.Processor.StateStore
         {
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.StreamsBuilder>("addGlobalStore", "(Lorg/apache/kafka/streams/state/StoreBuilder;Ljava/lang/String;Lorg/apache/kafka/streams/kstream/Consumed;Lorg/apache/kafka/streams/processor/api/ProcessorSupplier;)Lorg/apache/kafka/streams/StreamsBuilder;", storeBuilder, topic, consumed, stateUpdateSupplier);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/StreamsBuilder.html#addStateStore(org.apache.kafka.streams.state.StoreBuilder)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.1.0/org/apache/kafka/streams/scala/StreamsBuilder.html#addStateStore(org.apache.kafka.streams.state.StoreBuilder)"/>
         /// </summary>
         /// <param name="builder"><see cref="Org.Apache.Kafka.Streams.State.StoreBuilder"/></param>
         /// <typeparam name="BuilderExtendsOrg_Apache_Kafka_Streams_Processor_StateStore"><see cref="Org.Apache.Kafka.Streams.Processor.StateStore"/></typeparam>
         /// <returns><see cref="Org.Apache.Kafka.Streams.StreamsBuilder"/></returns>
-        public Org.Apache.Kafka.Streams.StreamsBuilder AddStateStore<BuilderExtendsOrg_Apache_Kafka_Streams_Processor_StateStore>(Org.Apache.Kafka.Streams.State.StoreBuilder<BuilderExtendsOrg_Apache_Kafka_Streams_Processor_StateStore> builder) where BuilderExtendsOrg_Apache_Kafka_Streams_Processor_StateStore : Org.Apache.Kafka.Streams.Processor.StateStore, new()
+        public Org.Apache.Kafka.Streams.StreamsBuilder AddStateStore<BuilderExtendsOrg_Apache_Kafka_Streams_Processor_StateStore>(Org.Apache.Kafka.Streams.State.StoreBuilder<BuilderExtendsOrg_Apache_Kafka_Streams_Processor_StateStore> builder) where BuilderExtendsOrg_Apache_Kafka_Streams_Processor_StateStore : Org.Apache.Kafka.Streams.Processor.StateStore
         {
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.StreamsBuilder>("addStateStore", "(Lorg/apache/kafka/streams/state/StoreBuilder;)Lorg/apache/kafka/streams/StreamsBuilder;", builder);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/StreamsBuilder.html#build()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.1.0/org/apache/kafka/streams/scala/StreamsBuilder.html#build()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Topology"/></returns>
         public Org.Apache.Kafka.Streams.Topology Build()
@@ -202,7 +202,7 @@ namespace Org.Apache.Kafka.Streams.Scala
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.Topology>("build", "()Lorg/apache/kafka/streams/Topology;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/StreamsBuilder.html#build(java.util.Properties)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.1.0/org/apache/kafka/streams/scala/StreamsBuilder.html#build(java.util.Properties)"/>
         /// </summary>
         /// <param name="props"><see cref="Java.Util.Properties"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Topology"/></returns>

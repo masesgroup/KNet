@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common.Config.Provider
 {
     #region ConfigProvider declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/provider/ConfigProvider.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/config/provider/ConfigProvider.html"/>
     /// </summary>
     public partial class ConfigProvider : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ConfigProvider>
     {
@@ -70,7 +70,7 @@ namespace Org.Apache.Kafka.Common.Config.Provider
 
     #region IConfigProvider
     /// <summary>
-    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/provider/ConfigProvider.html"/>
+    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/config/provider/ConfigProvider.html"/>
     /// </summary>
     public partial interface IConfigProvider
     {
@@ -115,7 +115,7 @@ namespace Org.Apache.Kafka.Common.Config.Provider
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/provider/ConfigProvider.html#get(java.lang.String,java.util.Set)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/config/provider/ConfigProvider.html#get(java.lang.String,java.util.Set)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Java.Util.Set"/></param>
@@ -125,7 +125,7 @@ namespace Org.Apache.Kafka.Common.Config.Provider
             return IExecuteWithSignature<Org.Apache.Kafka.Common.Config.ConfigData>("get", "(Ljava/lang/String;Ljava/util/Set;)Lorg/apache/kafka/common/config/ConfigData;", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/provider/ConfigProvider.html#get(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/config/provider/ConfigProvider.html#get(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.Config.ConfigData"/></returns>
@@ -134,7 +134,7 @@ namespace Org.Apache.Kafka.Common.Config.Provider
             return IExecuteWithSignature<Org.Apache.Kafka.Common.Config.ConfigData>("get", "(Ljava/lang/String;)Lorg/apache/kafka/common/config/ConfigData;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/provider/ConfigProvider.html#subscribe(java.lang.String,java.util.Set,org.apache.kafka.common.config.ConfigChangeCallback)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/config/provider/ConfigProvider.html#subscribe(java.lang.String,java.util.Set,org.apache.kafka.common.config.ConfigChangeCallback)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Java.Util.Set"/></param>
@@ -144,7 +144,7 @@ namespace Org.Apache.Kafka.Common.Config.Provider
             IExecuteWithSignature("subscribe", "(Ljava/lang/String;Ljava/util/Set;Lorg/apache/kafka/common/config/ConfigChangeCallback;)V", arg0, arg1, arg2);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/provider/ConfigProvider.html#unsubscribe(java.lang.String,java.util.Set,org.apache.kafka.common.config.ConfigChangeCallback)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/config/provider/ConfigProvider.html#unsubscribe(java.lang.String,java.util.Set,org.apache.kafka.common.config.ConfigChangeCallback)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Java.Util.Set"/></param>
@@ -154,7 +154,7 @@ namespace Org.Apache.Kafka.Common.Config.Provider
             IExecuteWithSignature("unsubscribe", "(Ljava/lang/String;Ljava/util/Set;Lorg/apache/kafka/common/config/ConfigChangeCallback;)V", arg0, arg1, arg2);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/provider/ConfigProvider.html#unsubscribeAll()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/config/provider/ConfigProvider.html#unsubscribeAll()"/>
         /// </summary>
         public void UnsubscribeAll()
         {

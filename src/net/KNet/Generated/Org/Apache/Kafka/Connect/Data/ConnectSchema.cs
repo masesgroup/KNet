@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Connect.Data
 {
     #region ConnectSchema declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.0.0/org/apache/kafka/connect/data/ConnectSchema.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.1.0/org/apache/kafka/connect/data/ConnectSchema.html"/>
     /// </summary>
     public partial class ConnectSchema : Org.Apache.Kafka.Connect.Data.Schema
     {
@@ -71,7 +71,7 @@ namespace Org.Apache.Kafka.Connect.Data
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.0.0/org/apache/kafka/connect/data/ConnectSchema.html#%3Cinit%3E(org.apache.kafka.connect.data.Schema.Type,boolean,java.lang.Object,java.lang.String,java.lang.Integer,java.lang.String,java.util.Map,java.util.List,org.apache.kafka.connect.data.Schema,org.apache.kafka.connect.data.Schema)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.1.0/org/apache/kafka/connect/data/ConnectSchema.html#%3Cinit%3E(org.apache.kafka.connect.data.Schema.Type,boolean,java.lang.Object,java.lang.String,java.lang.Integer,java.lang.String,java.util.Map,java.util.List,org.apache.kafka.connect.data.Schema,org.apache.kafka.connect.data.Schema)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Connect.Data.Schema.Type"/></param>
         /// <param name="arg1"><see cref="bool"/></param>
@@ -88,7 +88,7 @@ namespace Org.Apache.Kafka.Connect.Data
         {
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.0.0/org/apache/kafka/connect/data/ConnectSchema.html#%3Cinit%3E(org.apache.kafka.connect.data.Schema.Type,boolean,java.lang.Object,java.lang.String,java.lang.Integer,java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.1.0/org/apache/kafka/connect/data/ConnectSchema.html#%3Cinit%3E(org.apache.kafka.connect.data.Schema.Type,boolean,java.lang.Object,java.lang.String,java.lang.Integer,java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Connect.Data.Schema.Type"/></param>
         /// <param name="arg1"><see cref="bool"/></param>
@@ -101,7 +101,7 @@ namespace Org.Apache.Kafka.Connect.Data
         {
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.0.0/org/apache/kafka/connect/data/ConnectSchema.html#%3Cinit%3E(org.apache.kafka.connect.data.Schema.Type)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.1.0/org/apache/kafka/connect/data/ConnectSchema.html#%3Cinit%3E(org.apache.kafka.connect.data.Schema.Type)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Connect.Data.Schema.Type"/></param>
         public ConnectSchema(Org.Apache.Kafka.Connect.Data.Schema.Type arg0)
@@ -121,7 +121,7 @@ namespace Org.Apache.Kafka.Connect.Data
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.0.0/org/apache/kafka/connect/data/ConnectSchema.html#schemaType(java.lang.Class)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.1.0/org/apache/kafka/connect/data/ConnectSchema.html#schemaType(java.lang.Class)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.Class"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Connect.Data.Schema.Type"/></returns>
@@ -130,7 +130,7 @@ namespace Org.Apache.Kafka.Connect.Data
             return SExecuteWithSignature<Org.Apache.Kafka.Connect.Data.Schema.Type>(LocalBridgeClazz, "schemaType", "(Ljava/lang/Class;)Lorg/apache/kafka/connect/data/Schema$Type;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.0.0/org/apache/kafka/connect/data/ConnectSchema.html#validateValue(java.lang.String,org.apache.kafka.connect.data.Schema,java.lang.Object)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.1.0/org/apache/kafka/connect/data/ConnectSchema.html#validateValue(java.lang.String,org.apache.kafka.connect.data.Schema,java.lang.Object)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Connect.Data.Schema"/></param>
@@ -140,7 +140,7 @@ namespace Org.Apache.Kafka.Connect.Data
             SExecuteWithSignature(LocalBridgeClazz, "validateValue", "(Ljava/lang/String;Lorg/apache/kafka/connect/data/Schema;Ljava/lang/Object;)V", arg0, arg1, arg2);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.0.0/org/apache/kafka/connect/data/ConnectSchema.html#validateValue(org.apache.kafka.connect.data.Schema,java.lang.Object)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.1.0/org/apache/kafka/connect/data/ConnectSchema.html#validateValue(org.apache.kafka.connect.data.Schema,java.lang.Object)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Connect.Data.Schema"/></param>
         /// <param name="arg1"><see cref="object"/></param>
@@ -153,7 +153,7 @@ namespace Org.Apache.Kafka.Connect.Data
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.0.0/org/apache/kafka/connect/data/ConnectSchema.html#isOptional()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.1.0/org/apache/kafka/connect/data/ConnectSchema.html#isOptional()"/>
         /// </summary>
         /// <returns><see cref="bool"/></returns>
         public bool IsOptional()
@@ -161,7 +161,7 @@ namespace Org.Apache.Kafka.Connect.Data
             return IExecuteWithSignature<bool>("isOptional", "()Z");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.0.0/org/apache/kafka/connect/data/ConnectSchema.html#version()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.1.0/org/apache/kafka/connect/data/ConnectSchema.html#version()"/>
         /// </summary>
         /// <returns><see cref="Java.Lang.Integer"/></returns>
         public Java.Lang.Integer Version()
@@ -169,7 +169,7 @@ namespace Org.Apache.Kafka.Connect.Data
             return IExecuteWithSignature<Java.Lang.Integer>("version", "()Ljava/lang/Integer;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.0.0/org/apache/kafka/connect/data/ConnectSchema.html#defaultValue()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.1.0/org/apache/kafka/connect/data/ConnectSchema.html#defaultValue()"/>
         /// </summary>
         /// <returns><see cref="object"/></returns>
         public object DefaultValue()
@@ -177,7 +177,7 @@ namespace Org.Apache.Kafka.Connect.Data
             return IExecuteWithSignature("defaultValue", "()Ljava/lang/Object;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.0.0/org/apache/kafka/connect/data/ConnectSchema.html#doc()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.1.0/org/apache/kafka/connect/data/ConnectSchema.html#doc()"/>
         /// </summary>
         /// <returns><see cref="Java.Lang.String"/></returns>
         public Java.Lang.String Doc()
@@ -185,7 +185,7 @@ namespace Org.Apache.Kafka.Connect.Data
             return IExecuteWithSignature<Java.Lang.String>("doc", "()Ljava/lang/String;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.0.0/org/apache/kafka/connect/data/ConnectSchema.html#name()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.1.0/org/apache/kafka/connect/data/ConnectSchema.html#name()"/>
         /// </summary>
         /// <returns><see cref="Java.Lang.String"/></returns>
         public Java.Lang.String Name()
@@ -193,7 +193,7 @@ namespace Org.Apache.Kafka.Connect.Data
             return IExecuteWithSignature<Java.Lang.String>("name", "()Ljava/lang/String;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.0.0/org/apache/kafka/connect/data/ConnectSchema.html#fields()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.1.0/org/apache/kafka/connect/data/ConnectSchema.html#fields()"/>
         /// </summary>
         /// <returns><see cref="Java.Util.List"/></returns>
         public Java.Util.List<Org.Apache.Kafka.Connect.Data.Field> Fields()
@@ -201,7 +201,7 @@ namespace Org.Apache.Kafka.Connect.Data
             return IExecuteWithSignature<Java.Util.List<Org.Apache.Kafka.Connect.Data.Field>>("fields", "()Ljava/util/List;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.0.0/org/apache/kafka/connect/data/ConnectSchema.html#parameters()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.1.0/org/apache/kafka/connect/data/ConnectSchema.html#parameters()"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Map"/></returns>
         public Java.Util.Map<Java.Lang.String, Java.Lang.String> Parameters()
@@ -209,7 +209,7 @@ namespace Org.Apache.Kafka.Connect.Data
             return IExecuteWithSignature<Java.Util.Map<Java.Lang.String, Java.Lang.String>>("parameters", "()Ljava/util/Map;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.0.0/org/apache/kafka/connect/data/ConnectSchema.html#field(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.1.0/org/apache/kafka/connect/data/ConnectSchema.html#field(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Connect.Data.Field"/></returns>
@@ -218,7 +218,7 @@ namespace Org.Apache.Kafka.Connect.Data
             return IExecuteWithSignature<Org.Apache.Kafka.Connect.Data.Field>("field", "(Ljava/lang/String;)Lorg/apache/kafka/connect/data/Field;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.0.0/org/apache/kafka/connect/data/ConnectSchema.html#keySchema()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.1.0/org/apache/kafka/connect/data/ConnectSchema.html#keySchema()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Connect.Data.Schema"/></returns>
         public Org.Apache.Kafka.Connect.Data.Schema KeySchema()
@@ -226,7 +226,7 @@ namespace Org.Apache.Kafka.Connect.Data
             return IExecuteWithSignature<Org.Apache.Kafka.Connect.Data.Schema>("keySchema", "()Lorg/apache/kafka/connect/data/Schema;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.0.0/org/apache/kafka/connect/data/ConnectSchema.html#schema()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.1.0/org/apache/kafka/connect/data/ConnectSchema.html#schema()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Connect.Data.Schema"/></returns>
         public Org.Apache.Kafka.Connect.Data.Schema Schema()
@@ -234,7 +234,7 @@ namespace Org.Apache.Kafka.Connect.Data
             return IExecuteWithSignature<Org.Apache.Kafka.Connect.Data.Schema>("schema", "()Lorg/apache/kafka/connect/data/Schema;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.0.0/org/apache/kafka/connect/data/ConnectSchema.html#valueSchema()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.1.0/org/apache/kafka/connect/data/ConnectSchema.html#valueSchema()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Connect.Data.Schema"/></returns>
         public Org.Apache.Kafka.Connect.Data.Schema ValueSchema()
@@ -242,7 +242,7 @@ namespace Org.Apache.Kafka.Connect.Data
             return IExecuteWithSignature<Org.Apache.Kafka.Connect.Data.Schema>("valueSchema", "()Lorg/apache/kafka/connect/data/Schema;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.0.0/org/apache/kafka/connect/data/ConnectSchema.html#type()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.1.0/org/apache/kafka/connect/data/ConnectSchema.html#type()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Connect.Data.Schema.Type"/></returns>
         public Org.Apache.Kafka.Connect.Data.Schema.Type Type()
@@ -250,7 +250,7 @@ namespace Org.Apache.Kafka.Connect.Data
             return IExecuteWithSignature<Org.Apache.Kafka.Connect.Data.Schema.Type>("type", "()Lorg/apache/kafka/connect/data/Schema$Type;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.0.0/org/apache/kafka/connect/data/ConnectSchema.html#validateValue(java.lang.Object)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.1.0/org/apache/kafka/connect/data/ConnectSchema.html#validateValue(java.lang.Object)"/>
         /// </summary>
         /// <param name="arg0"><see cref="object"/></param>
         public void ValidateValue(object arg0)

@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common.Errors
 {
     #region OperationNotAttemptedException declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/errors/OperationNotAttemptedException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/errors/OperationNotAttemptedException.html"/>
     /// </summary>
     public partial class OperationNotAttemptedException : Org.Apache.Kafka.Common.Errors.ApiException
     {

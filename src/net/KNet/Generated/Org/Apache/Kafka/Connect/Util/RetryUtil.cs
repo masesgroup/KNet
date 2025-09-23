@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Connect.Util
 {
     #region RetryUtil declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.0.0/org/apache/kafka/connect/util/RetryUtil.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.1.0/org/apache/kafka/connect/util/RetryUtil.html"/>
     /// </summary>
     public partial class RetryUtil : MASES.JCOBridge.C2JBridge.JVMBridgeBase<RetryUtil>
     {
@@ -83,7 +83,7 @@ namespace Org.Apache.Kafka.Connect.Util
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.0.0/org/apache/kafka/connect/util/RetryUtil.html#retryUntilTimeout(java.util.concurrent.Callable,java.util.function.Supplier,java.time.Duration,long)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.1.0/org/apache/kafka/connect/util/RetryUtil.html#retryUntilTimeout(java.util.concurrent.Callable,java.util.function.Supplier,java.time.Duration,long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Concurrent.Callable"/></param>
         /// <param name="arg1"><see cref="Java.Util.Function.Supplier"/></param>

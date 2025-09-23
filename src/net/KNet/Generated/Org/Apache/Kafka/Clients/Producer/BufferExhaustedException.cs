@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Clients.Producer
 {
     #region BufferExhaustedException declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/producer/BufferExhaustedException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/producer/BufferExhaustedException.html"/>
     /// </summary>
     public partial class BufferExhaustedException : Org.Apache.Kafka.Common.Errors.TimeoutException
     {

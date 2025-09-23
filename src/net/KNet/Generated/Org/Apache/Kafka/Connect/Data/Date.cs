@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Connect.Data
 {
     #region Date declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.0.0/org/apache/kafka/connect/data/Date.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.1.0/org/apache/kafka/connect/data/Date.html"/>
     /// </summary>
     public partial class Date : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Date>
     {
@@ -79,13 +79,13 @@ namespace Org.Apache.Kafka.Connect.Data
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.0.0/org/apache/kafka/connect/data/Date.html#LOGICAL_NAME"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.1.0/org/apache/kafka/connect/data/Date.html#LOGICAL_NAME"/>
         /// </summary>
         public static Java.Lang.String LOGICAL_NAME { get { if (!_LOGICAL_NAMEReady) { _LOGICAL_NAMEContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "LOGICAL_NAME"); _LOGICAL_NAMEReady = true; } return _LOGICAL_NAMEContent; } }
         private static Java.Lang.String _LOGICAL_NAMEContent = default;
         private static bool _LOGICAL_NAMEReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.0.0/org/apache/kafka/connect/data/Date.html#SCHEMA"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.1.0/org/apache/kafka/connect/data/Date.html#SCHEMA"/>
         /// </summary>
         public static Org.Apache.Kafka.Connect.Data.Schema SCHEMA { get { if (!_SCHEMAReady) { _SCHEMAContent = SGetField<Org.Apache.Kafka.Connect.Data.Schema>(LocalBridgeClazz, "SCHEMA"); _SCHEMAReady = true; } return _SCHEMAContent; } }
         private static Org.Apache.Kafka.Connect.Data.Schema _SCHEMAContent = default;
@@ -95,7 +95,7 @@ namespace Org.Apache.Kafka.Connect.Data
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.0.0/org/apache/kafka/connect/data/Date.html#fromLogical(org.apache.kafka.connect.data.Schema,java.util.Date)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.1.0/org/apache/kafka/connect/data/Date.html#fromLogical(org.apache.kafka.connect.data.Schema,java.util.Date)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Connect.Data.Schema"/></param>
         /// <param name="arg1"><see cref="Java.Util.Date"/></param>
@@ -105,7 +105,7 @@ namespace Org.Apache.Kafka.Connect.Data
             return SExecuteWithSignature<int>(LocalBridgeClazz, "fromLogical", "(Lorg/apache/kafka/connect/data/Schema;Ljava/util/Date;)I", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.0.0/org/apache/kafka/connect/data/Date.html#toLogical(org.apache.kafka.connect.data.Schema,int)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.1.0/org/apache/kafka/connect/data/Date.html#toLogical(org.apache.kafka.connect.data.Schema,int)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Connect.Data.Schema"/></param>
         /// <param name="arg1"><see cref="int"/></param>
@@ -115,7 +115,7 @@ namespace Org.Apache.Kafka.Connect.Data
             return SExecuteWithSignature<Java.Util.Date>(LocalBridgeClazz, "toLogical", "(Lorg/apache/kafka/connect/data/Schema;I)Ljava/util/Date;", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.0.0/org/apache/kafka/connect/data/Date.html#builder()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.1.0/org/apache/kafka/connect/data/Date.html#builder()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Connect.Data.SchemaBuilder"/></returns>
         public static Org.Apache.Kafka.Connect.Data.SchemaBuilder Builder()

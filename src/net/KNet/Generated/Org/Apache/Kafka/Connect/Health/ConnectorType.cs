@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Connect.Health
 {
     #region ConnectorType declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.0.0/org/apache/kafka/connect/health/ConnectorType.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.1.0/org/apache/kafka/connect/health/ConnectorType.html"/>
     /// </summary>
     public partial class ConnectorType : Java.Lang.Enum<Org.Apache.Kafka.Connect.Health.ConnectorType>
     {
@@ -79,19 +79,19 @@ namespace Org.Apache.Kafka.Connect.Health
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.0.0/org/apache/kafka/connect/health/ConnectorType.html#SINK"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.1.0/org/apache/kafka/connect/health/ConnectorType.html#SINK"/>
         /// </summary>
         public static Org.Apache.Kafka.Connect.Health.ConnectorType SINK { get { if (!_SINKReady) { _SINKContent = SGetField<Org.Apache.Kafka.Connect.Health.ConnectorType>(LocalBridgeClazz, "SINK"); _SINKReady = true; } return _SINKContent; } }
         private static Org.Apache.Kafka.Connect.Health.ConnectorType _SINKContent = default;
         private static bool _SINKReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.0.0/org/apache/kafka/connect/health/ConnectorType.html#SOURCE"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.1.0/org/apache/kafka/connect/health/ConnectorType.html#SOURCE"/>
         /// </summary>
         public static Org.Apache.Kafka.Connect.Health.ConnectorType SOURCE { get { if (!_SOURCEReady) { _SOURCEContent = SGetField<Org.Apache.Kafka.Connect.Health.ConnectorType>(LocalBridgeClazz, "SOURCE"); _SOURCEReady = true; } return _SOURCEContent; } }
         private static Org.Apache.Kafka.Connect.Health.ConnectorType _SOURCEContent = default;
         private static bool _SOURCEReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.0.0/org/apache/kafka/connect/health/ConnectorType.html#UNKNOWN"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.1.0/org/apache/kafka/connect/health/ConnectorType.html#UNKNOWN"/>
         /// </summary>
         public static Org.Apache.Kafka.Connect.Health.ConnectorType UNKNOWN { get { if (!_UNKNOWNReady) { _UNKNOWNContent = SGetField<Org.Apache.Kafka.Connect.Health.ConnectorType>(LocalBridgeClazz, "UNKNOWN"); _UNKNOWNReady = true; } return _UNKNOWNContent; } }
         private static Org.Apache.Kafka.Connect.Health.ConnectorType _UNKNOWNContent = default;
@@ -101,7 +101,7 @@ namespace Org.Apache.Kafka.Connect.Health
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.0.0/org/apache/kafka/connect/health/ConnectorType.html#valueOf(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.1.0/org/apache/kafka/connect/health/ConnectorType.html#valueOf(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Connect.Health.ConnectorType"/></returns>
@@ -110,7 +110,7 @@ namespace Org.Apache.Kafka.Connect.Health
             return SExecuteWithSignature<Org.Apache.Kafka.Connect.Health.ConnectorType>(LocalBridgeClazz, "valueOf", "(Ljava/lang/String;)Lorg/apache/kafka/connect/health/ConnectorType;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.0.0/org/apache/kafka/connect/health/ConnectorType.html#values()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.1.0/org/apache/kafka/connect/health/ConnectorType.html#values()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Connect.Health.ConnectorType"/></returns>
         public static Org.Apache.Kafka.Connect.Health.ConnectorType[] Values()

@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Raft
 {
     #region KafkaRaftClientDriver declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/KafkaRaftClientDriver.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/KafkaRaftClientDriver.html"/>
     /// </summary>
     public partial class KafkaRaftClientDriver : MASES.JCOBridge.C2JBridge.JVMBridgeBase<KafkaRaftClientDriver>
     {
@@ -68,7 +68,7 @@ namespace Org.Apache.Kafka.Raft
 
     #region KafkaRaftClientDriver<T> declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/KafkaRaftClientDriver.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/KafkaRaftClientDriver.html"/>
     /// </summary>
     /// <typeparam name="T"></typeparam>
     public partial class KafkaRaftClientDriver<T> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<KafkaRaftClientDriver<T>>
@@ -129,7 +129,7 @@ namespace Org.Apache.Kafka.Raft
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/KafkaRaftClientDriver.html#client()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/KafkaRaftClientDriver.html#client()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Raft.KafkaRaftClient"/></returns>
         public Org.Apache.Kafka.Raft.KafkaRaftClient Client()
@@ -172,7 +172,7 @@ namespace Org.Apache.Kafka.Raft
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/KafkaRaftClientDriver.html#client()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/KafkaRaftClientDriver.html#client()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Raft.KafkaRaftClient"/></returns>
         public Org.Apache.Kafka.Raft.KafkaRaftClient<T> Client()

@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Streams.Processor
 {
     #region TopicNameExtractor declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/TopicNameExtractor.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/processor/TopicNameExtractor.html"/>
     /// </summary>
     public partial class TopicNameExtractor : MASES.JCOBridge.C2JBridge.JVMBridgeListener
     {
@@ -100,7 +100,7 @@ namespace Org.Apache.Kafka.Streams.Processor
 
     #region TopicNameExtractor<K, V> declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/TopicNameExtractor.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/processor/TopicNameExtractor.html"/>
     /// </summary>
     /// <typeparam name="K"></typeparam>
     /// <typeparam name="V"></typeparam>
@@ -203,7 +203,7 @@ namespace Org.Apache.Kafka.Streams.Processor
         }
 
         /// <summary>
-        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/TopicNameExtractor.html#extract(java.lang.Object,java.lang.Object,org.apache.kafka.streams.processor.RecordContext)"/>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/processor/TopicNameExtractor.html#extract(java.lang.Object,java.lang.Object,org.apache.kafka.streams.processor.RecordContext)"/>
         /// </summary>
         /// <remarks>If <see cref="OnExtract"/> has a value it takes precedence over corresponding class method</remarks>
         public global::System.Func<object, object, Org.Apache.Kafka.Streams.Processor.RecordContext, Java.Lang.String> OnExtract { get; set; } = null;
@@ -218,7 +218,7 @@ namespace Org.Apache.Kafka.Streams.Processor
         }
 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/TopicNameExtractor.html#extract(java.lang.Object,java.lang.Object,org.apache.kafka.streams.processor.RecordContext)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/processor/TopicNameExtractor.html#extract(java.lang.Object,java.lang.Object,org.apache.kafka.streams.processor.RecordContext)"/>
         /// </summary>
         /// <param name="arg0"><see cref="object"/></param>
         /// <param name="arg1"><see cref="object"/></param>
@@ -260,7 +260,7 @@ namespace Org.Apache.Kafka.Streams.Processor
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/TopicNameExtractor.html#extract(java.lang.Object,java.lang.Object,org.apache.kafka.streams.processor.RecordContext)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/processor/TopicNameExtractor.html#extract(java.lang.Object,java.lang.Object,org.apache.kafka.streams.processor.RecordContext)"/>
         /// </summary>
         /// <param name="arg0"><see cref="object"/></param>
         /// <param name="arg1"><see cref="object"/></param>
@@ -283,7 +283,7 @@ namespace Org.Apache.Kafka.Streams.Processor
 
     #region ITopicNameExtractor<K, V>
     /// <summary>
-    /// .NET interface for org.mases.knet.generated.org.apache.kafka.streams.processor.TopicNameExtractor implementing <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/TopicNameExtractor.html"/>
+    /// .NET interface for org.mases.knet.generated.org.apache.kafka.streams.processor.TopicNameExtractor implementing <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/processor/TopicNameExtractor.html"/>
     /// </summary>
     public partial interface ITopicNameExtractor<K, V>
     {
@@ -329,7 +329,7 @@ namespace Org.Apache.Kafka.Streams.Processor
         }
 
         /// <summary>
-        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/TopicNameExtractor.html#extract(java.lang.Object,java.lang.Object,org.apache.kafka.streams.processor.RecordContext)"/>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/processor/TopicNameExtractor.html#extract(java.lang.Object,java.lang.Object,org.apache.kafka.streams.processor.RecordContext)"/>
         /// </summary>
         /// <remarks>If <see cref="OnExtract"/> has a value it takes precedence over corresponding class method</remarks>
         public global::System.Func<K, V, Org.Apache.Kafka.Streams.Processor.RecordContext, Java.Lang.String> OnExtract { get; set; } = null;
@@ -344,7 +344,7 @@ namespace Org.Apache.Kafka.Streams.Processor
         }
 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/TopicNameExtractor.html#extract(java.lang.Object,java.lang.Object,org.apache.kafka.streams.processor.RecordContext)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/processor/TopicNameExtractor.html#extract(java.lang.Object,java.lang.Object,org.apache.kafka.streams.processor.RecordContext)"/>
         /// </summary>
         /// <param name="arg0"><typeparamref name="K"/></param>
         /// <param name="arg1"><typeparamref name="V"/></param>
@@ -386,7 +386,7 @@ namespace Org.Apache.Kafka.Streams.Processor
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/TopicNameExtractor.html#extract(java.lang.Object,java.lang.Object,org.apache.kafka.streams.processor.RecordContext)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/processor/TopicNameExtractor.html#extract(java.lang.Object,java.lang.Object,org.apache.kafka.streams.processor.RecordContext)"/>
         /// </summary>
         /// <param name="arg0"><typeparamref name="K"/></param>
         /// <param name="arg1"><typeparamref name="V"/></param>

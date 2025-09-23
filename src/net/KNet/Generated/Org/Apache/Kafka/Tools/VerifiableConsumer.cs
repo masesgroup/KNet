@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Tools
 {
     #region VerifiableConsumer declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/VerifiableConsumer.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.0/org/apache/kafka/tools/VerifiableConsumer.html"/>
     /// </summary>
     public partial class VerifiableConsumer : MASES.JCOBridge.C2JBridge.JVMBridgeBase<VerifiableConsumer>, MASES.JCOBridge.C2JBridge.IJVMBridgeMain
     {
@@ -71,7 +71,7 @@ namespace Org.Apache.Kafka.Tools
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/VerifiableConsumer.html#%3Cinit%3E(org.apache.kafka.clients.consumer.KafkaConsumer,java.io.PrintStream,java.lang.String,int,boolean,boolean,boolean)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.0/org/apache/kafka/tools/VerifiableConsumer.html#%3Cinit%3E(org.apache.kafka.clients.consumer.KafkaConsumer,java.io.PrintStream,java.lang.String,int,boolean,boolean,boolean)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Clients.Consumer.KafkaConsumer"/></param>
         /// <param name="arg1"><see cref="Java.Io.PrintStream"/></param>
@@ -109,7 +109,7 @@ namespace Org.Apache.Kafka.Tools
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/VerifiableConsumer.html#main(java.lang.String[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.0/org/apache/kafka/tools/VerifiableConsumer.html#main(java.lang.String[])"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         public static void Main(Java.Lang.String[] arg0)
@@ -121,14 +121,14 @@ namespace Org.Apache.Kafka.Tools
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/VerifiableConsumer.html#close()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.0/org/apache/kafka/tools/VerifiableConsumer.html#close()"/>
         /// </summary>
         public void Close()
         {
             IExecuteWithSignature("close", "()V");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/VerifiableConsumer.html#commitSync(java.util.Map)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.0/org/apache/kafka/tools/VerifiableConsumer.html#commitSync(java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         public void CommitSync(Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Org.Apache.Kafka.Clients.Consumer.OffsetAndMetadata> arg0)
@@ -136,7 +136,7 @@ namespace Org.Apache.Kafka.Tools
             IExecuteWithSignature("commitSync", "(Ljava/util/Map;)V", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/VerifiableConsumer.html#onComplete(java.util.Map,java.lang.Exception)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.0/org/apache/kafka/tools/VerifiableConsumer.html#onComplete(java.util.Map,java.lang.Exception)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <param name="arg1"><see cref="Java.Lang.Exception"/></param>
@@ -145,7 +145,7 @@ namespace Org.Apache.Kafka.Tools
             IExecuteWithSignature("onComplete", "(Ljava/util/Map;Ljava/lang/Exception;)V", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/VerifiableConsumer.html#onPartitionsAssigned(java.util.Collection)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.0/org/apache/kafka/tools/VerifiableConsumer.html#onPartitionsAssigned(java.util.Collection)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Collection"/></param>
         public void OnPartitionsAssigned(Java.Util.Collection<Org.Apache.Kafka.Common.TopicPartition> arg0)
@@ -153,7 +153,7 @@ namespace Org.Apache.Kafka.Tools
             IExecuteWithSignature("onPartitionsAssigned", "(Ljava/util/Collection;)V", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/VerifiableConsumer.html#onPartitionsRevoked(java.util.Collection)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.0/org/apache/kafka/tools/VerifiableConsumer.html#onPartitionsRevoked(java.util.Collection)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Collection"/></param>
         public void OnPartitionsRevoked(Java.Util.Collection<Org.Apache.Kafka.Common.TopicPartition> arg0)
@@ -161,7 +161,7 @@ namespace Org.Apache.Kafka.Tools
             IExecuteWithSignature("onPartitionsRevoked", "(Ljava/util/Collection;)V", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/VerifiableConsumer.html#run()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.0/org/apache/kafka/tools/VerifiableConsumer.html#run()"/>
         /// </summary>
         public void Run()
         {

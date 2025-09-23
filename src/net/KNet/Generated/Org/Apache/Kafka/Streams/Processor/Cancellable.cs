@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Streams.Processor
 {
     #region Cancellable declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/Cancellable.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/processor/Cancellable.html"/>
     /// </summary>
     public partial class Cancellable : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Cancellable>
     {
@@ -70,7 +70,7 @@ namespace Org.Apache.Kafka.Streams.Processor
 
     #region ICancellable
     /// <summary>
-    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/Cancellable.html"/>
+    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/processor/Cancellable.html"/>
     /// </summary>
     public partial interface ICancellable
     {
@@ -107,7 +107,7 @@ namespace Org.Apache.Kafka.Streams.Processor
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/Cancellable.html#cancel()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/processor/Cancellable.html#cancel()"/>
         /// </summary>
         public void Cancel()
         {

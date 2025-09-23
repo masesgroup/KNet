@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 {
     #region StreamsGroupSubtopologyDescription declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/StreamsGroupSubtopologyDescription.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/admin/StreamsGroupSubtopologyDescription.html"/>
     /// </summary>
     public partial class StreamsGroupSubtopologyDescription : MASES.JCOBridge.C2JBridge.JVMBridgeBase<StreamsGroupSubtopologyDescription>
     {
@@ -64,7 +64,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         // TODO: complete the class
         #region TopicInfo declaration
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/StreamsGroupSubtopologyDescription.TopicInfo.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/admin/StreamsGroupSubtopologyDescription.TopicInfo.html"/>
         /// </summary>
         public partial class TopicInfo : MASES.JCOBridge.C2JBridge.JVMBridgeBase<TopicInfo>
         {
@@ -112,7 +112,7 @@ namespace Org.Apache.Kafka.Clients.Admin
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/StreamsGroupSubtopologyDescription.html#%3Cinit%3E(java.lang.String,java.util.List,java.util.List,java.util.Map,java.util.Map)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/admin/StreamsGroupSubtopologyDescription.html#%3Cinit%3E(java.lang.String,java.util.List,java.util.List,java.util.Map,java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Java.Util.List"/></param>
@@ -140,7 +140,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/StreamsGroupSubtopologyDescription.html#subtopologyId()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/admin/StreamsGroupSubtopologyDescription.html#subtopologyId()"/>
         /// </summary>
         /// <returns><see cref="Java.Lang.String"/></returns>
         public Java.Lang.String SubtopologyId()
@@ -148,7 +148,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<Java.Lang.String>("subtopologyId", "()Ljava/lang/String;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/StreamsGroupSubtopologyDescription.html#repartitionSinkTopics()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/admin/StreamsGroupSubtopologyDescription.html#repartitionSinkTopics()"/>
         /// </summary>
         /// <returns><see cref="Java.Util.List"/></returns>
         public Java.Util.List<Java.Lang.String> RepartitionSinkTopics()
@@ -156,7 +156,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<Java.Util.List<Java.Lang.String>>("repartitionSinkTopics", "()Ljava/util/List;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/StreamsGroupSubtopologyDescription.html#sourceTopics()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/admin/StreamsGroupSubtopologyDescription.html#sourceTopics()"/>
         /// </summary>
         /// <returns><see cref="Java.Util.List"/></returns>
         public Java.Util.List<Java.Lang.String> SourceTopics()
@@ -164,7 +164,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<Java.Util.List<Java.Lang.String>>("sourceTopics", "()Ljava/util/List;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/StreamsGroupSubtopologyDescription.html#repartitionSourceTopics()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/admin/StreamsGroupSubtopologyDescription.html#repartitionSourceTopics()"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Map"/></returns>
         public Java.Util.Map<Java.Lang.String, Org.Apache.Kafka.Clients.Admin.StreamsGroupSubtopologyDescription.TopicInfo> RepartitionSourceTopics()
@@ -172,7 +172,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<Java.Util.Map<Java.Lang.String, Org.Apache.Kafka.Clients.Admin.StreamsGroupSubtopologyDescription.TopicInfo>>("repartitionSourceTopics", "()Ljava/util/Map;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/StreamsGroupSubtopologyDescription.html#stateChangelogTopics()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/admin/StreamsGroupSubtopologyDescription.html#stateChangelogTopics()"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Map"/></returns>
         public Java.Util.Map<Java.Lang.String, Org.Apache.Kafka.Clients.Admin.StreamsGroupSubtopologyDescription.TopicInfo> StateChangelogTopics()
@@ -188,7 +188,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         {
             #region Constructors
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/StreamsGroupSubtopologyDescription.TopicInfo.html#%3Cinit%3E(int,int,java.util.Map)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/admin/StreamsGroupSubtopologyDescription.TopicInfo.html#%3Cinit%3E(int,int,java.util.Map)"/>
             /// </summary>
             /// <param name="arg0"><see cref="int"/></param>
             /// <param name="arg1"><see cref="int"/></param>
@@ -214,7 +214,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/StreamsGroupSubtopologyDescription.TopicInfo.html#partitions()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/admin/StreamsGroupSubtopologyDescription.TopicInfo.html#partitions()"/>
             /// </summary>
             /// <returns><see cref="int"/></returns>
             public int Partitions()
@@ -222,7 +222,7 @@ namespace Org.Apache.Kafka.Clients.Admin
                 return IExecuteWithSignature<int>("partitions", "()I");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/StreamsGroupSubtopologyDescription.TopicInfo.html#replicationFactor()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/admin/StreamsGroupSubtopologyDescription.TopicInfo.html#replicationFactor()"/>
             /// </summary>
             /// <returns><see cref="int"/></returns>
             public int ReplicationFactor()
@@ -230,7 +230,7 @@ namespace Org.Apache.Kafka.Clients.Admin
                 return IExecuteWithSignature<int>("replicationFactor", "()I");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/StreamsGroupSubtopologyDescription.TopicInfo.html#topicConfigs()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/admin/StreamsGroupSubtopologyDescription.TopicInfo.html#topicConfigs()"/>
             /// </summary>
             /// <returns><see cref="Java.Util.Map"/></returns>
             public Java.Util.Map<Java.Lang.String, Java.Lang.String> TopicConfigs()

@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common.Security.Oauthbearer
 {
     #region ClientJwtValidator declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/security/oauthbearer/ClientJwtValidator.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/security/oauthbearer/ClientJwtValidator.html"/>
     /// </summary>
     public partial class ClientJwtValidator : Org.Apache.Kafka.Common.Security.Oauthbearer.JwtValidator
     {
@@ -79,13 +79,13 @@ namespace Org.Apache.Kafka.Common.Security.Oauthbearer
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/security/oauthbearer/ClientJwtValidator.html#EXPIRATION_CLAIM_NAME"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/security/oauthbearer/ClientJwtValidator.html#EXPIRATION_CLAIM_NAME"/>
         /// </summary>
         public static Java.Lang.String EXPIRATION_CLAIM_NAME { get { if (!_EXPIRATION_CLAIM_NAMEReady) { _EXPIRATION_CLAIM_NAMEContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "EXPIRATION_CLAIM_NAME"); _EXPIRATION_CLAIM_NAMEReady = true; } return _EXPIRATION_CLAIM_NAMEContent; } }
         private static Java.Lang.String _EXPIRATION_CLAIM_NAMEContent = default;
         private static bool _EXPIRATION_CLAIM_NAMEReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/security/oauthbearer/ClientJwtValidator.html#ISSUED_AT_CLAIM_NAME"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/security/oauthbearer/ClientJwtValidator.html#ISSUED_AT_CLAIM_NAME"/>
         /// </summary>
         public static Java.Lang.String ISSUED_AT_CLAIM_NAME { get { if (!_ISSUED_AT_CLAIM_NAMEReady) { _ISSUED_AT_CLAIM_NAMEContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "ISSUED_AT_CLAIM_NAME"); _ISSUED_AT_CLAIM_NAMEReady = true; } return _ISSUED_AT_CLAIM_NAMEContent; } }
         private static Java.Lang.String _ISSUED_AT_CLAIM_NAMEContent = default;
@@ -99,7 +99,7 @@ namespace Org.Apache.Kafka.Common.Security.Oauthbearer
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/security/oauthbearer/ClientJwtValidator.html#validate(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/security/oauthbearer/ClientJwtValidator.html#validate(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.Security.Oauthbearer.OAuthBearerToken"/></returns>
@@ -109,7 +109,7 @@ namespace Org.Apache.Kafka.Common.Security.Oauthbearer
             return IExecuteWithSignature<Org.Apache.Kafka.Common.Security.Oauthbearer.OAuthBearerToken>("validate", "(Ljava/lang/String;)Lorg/apache/kafka/common/security/oauthbearer/OAuthBearerToken;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/security/oauthbearer/ClientJwtValidator.html#configure(java.util.Map,java.lang.String,java.util.List)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/security/oauthbearer/ClientJwtValidator.html#configure(java.util.Map,java.lang.String,java.util.List)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <param name="arg1"><see cref="Java.Lang.String"/></param>

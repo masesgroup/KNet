@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common.Utils
 {
     #region Time declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/utils/Time.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/utils/Time.html"/>
     /// </summary>
     public partial class Time : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Time>
     {
@@ -70,7 +70,7 @@ namespace Org.Apache.Kafka.Common.Utils
 
     #region ITime
     /// <summary>
-    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/utils/Time.html"/>
+    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/utils/Time.html"/>
     /// </summary>
     public partial interface ITime
     {
@@ -99,7 +99,7 @@ namespace Org.Apache.Kafka.Common.Utils
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/utils/Time.html#SYSTEM"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/utils/Time.html#SYSTEM"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Utils.Time SYSTEM { get { if (!_SYSTEMReady) { _SYSTEMContent = SGetField<Org.Apache.Kafka.Common.Utils.Time>(LocalBridgeClazz, "SYSTEM"); _SYSTEMReady = true; } return _SYSTEMContent; } }
         private static Org.Apache.Kafka.Common.Utils.Time _SYSTEMContent = default;
@@ -113,7 +113,7 @@ namespace Org.Apache.Kafka.Common.Utils
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/utils/Time.html#milliseconds()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/utils/Time.html#milliseconds()"/>
         /// </summary>
         /// <returns><see cref="long"/></returns>
         public long Milliseconds()
@@ -121,7 +121,7 @@ namespace Org.Apache.Kafka.Common.Utils
             return IExecuteWithSignature<long>("milliseconds", "()J");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/utils/Time.html#nanoseconds()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/utils/Time.html#nanoseconds()"/>
         /// </summary>
         /// <returns><see cref="long"/></returns>
         public long Nanoseconds()
@@ -129,7 +129,7 @@ namespace Org.Apache.Kafka.Common.Utils
             return IExecuteWithSignature<long>("nanoseconds", "()J");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/utils/Time.html#sleep(long)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/utils/Time.html#sleep(long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="long"/></param>
         public void Sleep(long arg0)
@@ -137,7 +137,7 @@ namespace Org.Apache.Kafka.Common.Utils
             IExecuteWithSignature("sleep", "(J)V", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/utils/Time.html#waitObject(java.lang.Object,java.util.function.Supplier,long)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/utils/Time.html#waitObject(java.lang.Object,java.util.function.Supplier,long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="object"/></param>
         /// <param name="arg1"><see cref="Java.Util.Function.Supplier"/></param>
@@ -148,7 +148,7 @@ namespace Org.Apache.Kafka.Common.Utils
             IExecuteWithSignature("waitObject", "(Ljava/lang/Object;Ljava/util/function/Supplier;J)V", arg0, arg1, arg2);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/utils/Time.html#waitForFuture(java.util.concurrent.Future,long)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/utils/Time.html#waitForFuture(java.util.concurrent.Future,long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Concurrent.Future"/></param>
         /// <param name="arg1"><see cref="long"/></param>
@@ -162,7 +162,7 @@ namespace Org.Apache.Kafka.Common.Utils
             return IExecuteWithSignature<T>("waitForFuture", "(Ljava/util/concurrent/Future;J)Ljava/lang/Object;", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/utils/Time.html#hiResClockMs()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/utils/Time.html#hiResClockMs()"/>
         /// </summary>
         /// <returns><see cref="long"/></returns>
         public long HiResClockMs()
@@ -170,7 +170,7 @@ namespace Org.Apache.Kafka.Common.Utils
             return IExecuteWithSignature<long>("hiResClockMs", "()J");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/utils/Time.html#timer(java.time.Duration)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/utils/Time.html#timer(java.time.Duration)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Time.Duration"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.Utils.Timer"/></returns>
@@ -179,7 +179,7 @@ namespace Org.Apache.Kafka.Common.Utils
             return IExecuteWithSignature<Org.Apache.Kafka.Common.Utils.Timer>("timer", "(Ljava/time/Duration;)Lorg/apache/kafka/common/utils/Timer;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/utils/Time.html#timer(long)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/utils/Time.html#timer(long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="long"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.Utils.Timer"/></returns>

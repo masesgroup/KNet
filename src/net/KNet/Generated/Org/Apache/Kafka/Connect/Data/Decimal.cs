@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Connect.Data
 {
     #region Decimal declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.0.0/org/apache/kafka/connect/data/Decimal.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.1.0/org/apache/kafka/connect/data/Decimal.html"/>
     /// </summary>
     public partial class Decimal : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Decimal>
     {
@@ -79,13 +79,13 @@ namespace Org.Apache.Kafka.Connect.Data
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.0.0/org/apache/kafka/connect/data/Decimal.html#LOGICAL_NAME"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.1.0/org/apache/kafka/connect/data/Decimal.html#LOGICAL_NAME"/>
         /// </summary>
         public static Java.Lang.String LOGICAL_NAME { get { if (!_LOGICAL_NAMEReady) { _LOGICAL_NAMEContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "LOGICAL_NAME"); _LOGICAL_NAMEReady = true; } return _LOGICAL_NAMEContent; } }
         private static Java.Lang.String _LOGICAL_NAMEContent = default;
         private static bool _LOGICAL_NAMEReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.0.0/org/apache/kafka/connect/data/Decimal.html#SCALE_FIELD"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.1.0/org/apache/kafka/connect/data/Decimal.html#SCALE_FIELD"/>
         /// </summary>
         public static Java.Lang.String SCALE_FIELD { get { if (!_SCALE_FIELDReady) { _SCALE_FIELDContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "SCALE_FIELD"); _SCALE_FIELDReady = true; } return _SCALE_FIELDContent; } }
         private static Java.Lang.String _SCALE_FIELDContent = default;
@@ -95,7 +95,7 @@ namespace Org.Apache.Kafka.Connect.Data
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.0.0/org/apache/kafka/connect/data/Decimal.html#fromLogical(org.apache.kafka.connect.data.Schema,java.math.BigDecimal)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.1.0/org/apache/kafka/connect/data/Decimal.html#fromLogical(org.apache.kafka.connect.data.Schema,java.math.BigDecimal)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Connect.Data.Schema"/></param>
         /// <param name="arg1"><see cref="Java.Math.BigDecimal"/></param>
@@ -105,7 +105,7 @@ namespace Org.Apache.Kafka.Connect.Data
             return SExecuteWithSignatureArray<byte>(LocalBridgeClazz, "fromLogical", "(Lorg/apache/kafka/connect/data/Schema;Ljava/math/BigDecimal;)[B", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.0.0/org/apache/kafka/connect/data/Decimal.html#toLogical(org.apache.kafka.connect.data.Schema,byte[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.1.0/org/apache/kafka/connect/data/Decimal.html#toLogical(org.apache.kafka.connect.data.Schema,byte[])"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Connect.Data.Schema"/></param>
         /// <param name="arg1"><see cref="byte"/></param>
@@ -115,7 +115,7 @@ namespace Org.Apache.Kafka.Connect.Data
             return SExecuteWithSignature<Java.Math.BigDecimal>(LocalBridgeClazz, "toLogical", "(Lorg/apache/kafka/connect/data/Schema;[B)Ljava/math/BigDecimal;", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.0.0/org/apache/kafka/connect/data/Decimal.html#schema(int)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.1.0/org/apache/kafka/connect/data/Decimal.html#schema(int)"/>
         /// </summary>
         /// <param name="arg0"><see cref="int"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Connect.Data.Schema"/></returns>
@@ -124,7 +124,7 @@ namespace Org.Apache.Kafka.Connect.Data
             return SExecuteWithSignature<Org.Apache.Kafka.Connect.Data.Schema>(LocalBridgeClazz, "schema", "(I)Lorg/apache/kafka/connect/data/Schema;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.0.0/org/apache/kafka/connect/data/Decimal.html#builder(int)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.1.0/org/apache/kafka/connect/data/Decimal.html#builder(int)"/>
         /// </summary>
         /// <param name="arg0"><see cref="int"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Connect.Data.SchemaBuilder"/></returns>

@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common.Errors
 {
     #region SslAuthenticationException declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/errors/SslAuthenticationException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/errors/SslAuthenticationException.html"/>
     /// </summary>
     public partial class SslAuthenticationException : Org.Apache.Kafka.Common.Errors.AuthenticationException
     {

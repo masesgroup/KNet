@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common.Metrics
 {
     #region MetricValueProvider declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/metrics/MetricValueProvider.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/metrics/MetricValueProvider.html"/>
     /// </summary>
     public partial class MetricValueProvider : MASES.JCOBridge.C2JBridge.JVMBridgeBase<MetricValueProvider>
     {
@@ -70,7 +70,7 @@ namespace Org.Apache.Kafka.Common.Metrics
 
     #region MetricValueProvider<T> declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/metrics/MetricValueProvider.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/metrics/MetricValueProvider.html"/>
     /// </summary>
     /// <typeparam name="T"></typeparam>
     public partial class MetricValueProvider<T> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<MetricValueProvider<T>>
@@ -145,7 +145,7 @@ namespace Org.Apache.Kafka.Common.Metrics
 
     #region IMetricValueProvider<T>
     /// <summary>
-    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/metrics/MetricValueProvider.html"/>
+    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/metrics/MetricValueProvider.html"/>
     /// </summary>
     public partial interface IMetricValueProvider<T>
     {

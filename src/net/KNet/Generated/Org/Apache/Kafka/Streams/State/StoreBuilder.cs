@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Streams.State
 {
     #region StoreBuilder declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/state/StoreBuilder.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/state/StoreBuilder.html"/>
     /// </summary>
     public partial class StoreBuilder : MASES.JCOBridge.C2JBridge.JVMBridgeBase<StoreBuilder>
     {
@@ -70,7 +70,7 @@ namespace Org.Apache.Kafka.Streams.State
 
     #region StoreBuilder<T> declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/state/StoreBuilder.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/state/StoreBuilder.html"/>
     /// </summary>
     /// <typeparam name="T"><see cref="Org.Apache.Kafka.Streams.Processor.IStateStore"/></typeparam>
     public partial class StoreBuilder<T> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<StoreBuilder<T>> where T : Org.Apache.Kafka.Streams.Processor.IStateStore, new()
@@ -133,7 +133,7 @@ namespace Org.Apache.Kafka.Streams.State
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/state/StoreBuilder.html#loggingEnabled()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/state/StoreBuilder.html#loggingEnabled()"/>
         /// </summary>
         /// <returns><see cref="bool"/></returns>
         public bool LoggingEnabled()
@@ -141,7 +141,7 @@ namespace Org.Apache.Kafka.Streams.State
             return IExecuteWithSignature<bool>("loggingEnabled", "()Z");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/state/StoreBuilder.html#name()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/state/StoreBuilder.html#name()"/>
         /// </summary>
         /// <returns><see cref="Java.Lang.String"/></returns>
         public Java.Lang.String Name()
@@ -149,7 +149,7 @@ namespace Org.Apache.Kafka.Streams.State
             return IExecuteWithSignature<Java.Lang.String>("name", "()Ljava/lang/String;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/state/StoreBuilder.html#logConfig()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/state/StoreBuilder.html#logConfig()"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Map"/></returns>
         public Java.Util.Map LogConfig()
@@ -157,7 +157,7 @@ namespace Org.Apache.Kafka.Streams.State
             return IExecuteWithSignature<Java.Util.Map>("logConfig", "()Ljava/util/Map;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/state/StoreBuilder.html#withCachingDisabled()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/state/StoreBuilder.html#withCachingDisabled()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Streams.State.StoreBuilder"/></returns>
         public Org.Apache.Kafka.Streams.State.StoreBuilder WithCachingDisabled()
@@ -165,7 +165,7 @@ namespace Org.Apache.Kafka.Streams.State
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.State.StoreBuilder>("withCachingDisabled", "()Lorg/apache/kafka/streams/state/StoreBuilder;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/state/StoreBuilder.html#withCachingEnabled()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/state/StoreBuilder.html#withCachingEnabled()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Streams.State.StoreBuilder"/></returns>
         public Org.Apache.Kafka.Streams.State.StoreBuilder WithCachingEnabled()
@@ -173,7 +173,7 @@ namespace Org.Apache.Kafka.Streams.State
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.State.StoreBuilder>("withCachingEnabled", "()Lorg/apache/kafka/streams/state/StoreBuilder;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/state/StoreBuilder.html#withLoggingDisabled()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/state/StoreBuilder.html#withLoggingDisabled()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Streams.State.StoreBuilder"/></returns>
         public Org.Apache.Kafka.Streams.State.StoreBuilder WithLoggingDisabled()
@@ -181,7 +181,7 @@ namespace Org.Apache.Kafka.Streams.State
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.State.StoreBuilder>("withLoggingDisabled", "()Lorg/apache/kafka/streams/state/StoreBuilder;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/state/StoreBuilder.html#withLoggingEnabled(java.util.Map)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/state/StoreBuilder.html#withLoggingEnabled(java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.State.StoreBuilder"/></returns>
@@ -190,7 +190,7 @@ namespace Org.Apache.Kafka.Streams.State
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.State.StoreBuilder>("withLoggingEnabled", "(Ljava/util/Map;)Lorg/apache/kafka/streams/state/StoreBuilder;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/state/StoreBuilder.html#build()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/state/StoreBuilder.html#build()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Processor.StateStore"/></returns>
         public Org.Apache.Kafka.Streams.Processor.StateStore Build()
@@ -210,7 +210,7 @@ namespace Org.Apache.Kafka.Streams.State
 
     #region IStoreBuilder<T>
     /// <summary>
-    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/state/StoreBuilder.html"/>
+    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/state/StoreBuilder.html"/>
     /// </summary>
     public partial interface IStoreBuilder<T>
     {
@@ -251,7 +251,7 @@ namespace Org.Apache.Kafka.Streams.State
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/state/StoreBuilder.html#loggingEnabled()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/state/StoreBuilder.html#loggingEnabled()"/>
         /// </summary>
         /// <returns><see cref="bool"/></returns>
         public bool LoggingEnabled()
@@ -259,7 +259,7 @@ namespace Org.Apache.Kafka.Streams.State
             return IExecuteWithSignature<bool>("loggingEnabled", "()Z");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/state/StoreBuilder.html#name()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/state/StoreBuilder.html#name()"/>
         /// </summary>
         /// <returns><see cref="Java.Lang.String"/></returns>
         public Java.Lang.String Name()
@@ -267,7 +267,7 @@ namespace Org.Apache.Kafka.Streams.State
             return IExecuteWithSignature<Java.Lang.String>("name", "()Ljava/lang/String;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/state/StoreBuilder.html#logConfig()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/state/StoreBuilder.html#logConfig()"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Map"/></returns>
         public Java.Util.Map<Java.Lang.String, Java.Lang.String> LogConfig()
@@ -275,7 +275,7 @@ namespace Org.Apache.Kafka.Streams.State
             return IExecuteWithSignature<Java.Util.Map<Java.Lang.String, Java.Lang.String>>("logConfig", "()Ljava/util/Map;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/state/StoreBuilder.html#withCachingDisabled()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/state/StoreBuilder.html#withCachingDisabled()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Streams.State.StoreBuilder"/></returns>
         public Org.Apache.Kafka.Streams.State.StoreBuilder<T> WithCachingDisabled()
@@ -283,7 +283,7 @@ namespace Org.Apache.Kafka.Streams.State
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.State.StoreBuilder<T>>("withCachingDisabled", "()Lorg/apache/kafka/streams/state/StoreBuilder;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/state/StoreBuilder.html#withCachingEnabled()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/state/StoreBuilder.html#withCachingEnabled()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Streams.State.StoreBuilder"/></returns>
         public Org.Apache.Kafka.Streams.State.StoreBuilder<T> WithCachingEnabled()
@@ -291,7 +291,7 @@ namespace Org.Apache.Kafka.Streams.State
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.State.StoreBuilder<T>>("withCachingEnabled", "()Lorg/apache/kafka/streams/state/StoreBuilder;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/state/StoreBuilder.html#withLoggingDisabled()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/state/StoreBuilder.html#withLoggingDisabled()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Streams.State.StoreBuilder"/></returns>
         public Org.Apache.Kafka.Streams.State.StoreBuilder<T> WithLoggingDisabled()
@@ -299,7 +299,7 @@ namespace Org.Apache.Kafka.Streams.State
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.State.StoreBuilder<T>>("withLoggingDisabled", "()Lorg/apache/kafka/streams/state/StoreBuilder;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/state/StoreBuilder.html#withLoggingEnabled(java.util.Map)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/state/StoreBuilder.html#withLoggingEnabled(java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.State.StoreBuilder"/></returns>
@@ -308,7 +308,7 @@ namespace Org.Apache.Kafka.Streams.State
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.State.StoreBuilder<T>>("withLoggingEnabled", "(Ljava/util/Map;)Lorg/apache/kafka/streams/state/StoreBuilder;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/state/StoreBuilder.html#build()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/state/StoreBuilder.html#build()"/>
         /// </summary>
         /// <returns><typeparamref name="T"/></returns>
         public T Build()

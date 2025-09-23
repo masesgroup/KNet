@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
 {
     #region FixedKeyProcessor declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/api/FixedKeyProcessor.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/processor/api/FixedKeyProcessor.html"/>
     /// </summary>
     public partial class FixedKeyProcessor : MASES.JCOBridge.C2JBridge.JVMBridgeListener
     {
@@ -100,7 +100,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
 
     #region FixedKeyProcessor<KIn, VIn, VOut> declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/api/FixedKeyProcessor.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/processor/api/FixedKeyProcessor.html"/>
     /// </summary>
     /// <typeparam name="KIn"></typeparam>
     /// <typeparam name="VIn"></typeparam>
@@ -206,7 +206,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
         }
 
         /// <summary>
-        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/api/FixedKeyProcessor.html#process(org.apache.kafka.streams.processor.api.FixedKeyRecord)"/>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/processor/api/FixedKeyProcessor.html#process(org.apache.kafka.streams.processor.api.FixedKeyRecord)"/>
         /// </summary>
         /// <remarks>If <see cref="OnProcess"/> has a value it takes precedence over corresponding class method</remarks>
         public global::System.Action<Org.Apache.Kafka.Streams.Processor.Api.FixedKeyRecord> OnProcess { get; set; } = null;
@@ -221,7 +221,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
         }
 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/api/FixedKeyProcessor.html#process(org.apache.kafka.streams.processor.api.FixedKeyRecord)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/processor/api/FixedKeyProcessor.html#process(org.apache.kafka.streams.processor.api.FixedKeyRecord)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Processor.Api.FixedKeyRecord"/></param>
         public virtual void Process(Org.Apache.Kafka.Streams.Processor.Api.FixedKeyRecord arg0)
@@ -229,7 +229,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
             hasOverrideProcess = false;
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/api/FixedKeyProcessor.html#close()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/processor/api/FixedKeyProcessor.html#close()"/>
         /// </summary>
         /// <remarks>The method invokes the default implementation in the JVM interface</remarks>
         public void CloseDefault()
@@ -238,7 +238,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
         }
 
         /// <summary>
-        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/api/FixedKeyProcessor.html#close()"/>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/processor/api/FixedKeyProcessor.html#close()"/>
         /// </summary>
         /// <remarks>If <see cref="OnClose"/> has a value it takes precedence over corresponding class method</remarks>
         public global::System.Action OnClose { get; set; } = null;
@@ -253,7 +253,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
         }
 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/api/FixedKeyProcessor.html#close()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/processor/api/FixedKeyProcessor.html#close()"/>
         /// </summary>
         /// <remarks>The method invokes the default implementation in the JVM interface using <see cref="CloseDefault"/>; override the method to implement a different behavior</remarks>
         public virtual void Close()
@@ -261,7 +261,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
             hasOverrideClose = false;
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/api/FixedKeyProcessor.html#init(org.apache.kafka.streams.processor.api.FixedKeyProcessorContext)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/processor/api/FixedKeyProcessor.html#init(org.apache.kafka.streams.processor.api.FixedKeyProcessorContext)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Processor.Api.FixedKeyProcessorContext"/></param>
         /// <remarks>The method invokes the default implementation in the JVM interface</remarks>
@@ -271,7 +271,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
         }
 
         /// <summary>
-        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/api/FixedKeyProcessor.html#init(org.apache.kafka.streams.processor.api.FixedKeyProcessorContext)"/>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/processor/api/FixedKeyProcessor.html#init(org.apache.kafka.streams.processor.api.FixedKeyProcessorContext)"/>
         /// </summary>
         /// <remarks>If <see cref="OnInit"/> has a value it takes precedence over corresponding class method</remarks>
         public global::System.Action<Org.Apache.Kafka.Streams.Processor.Api.FixedKeyProcessorContext> OnInit { get; set; } = null;
@@ -286,7 +286,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
         }
 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/api/FixedKeyProcessor.html#init(org.apache.kafka.streams.processor.api.FixedKeyProcessorContext)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/processor/api/FixedKeyProcessor.html#init(org.apache.kafka.streams.processor.api.FixedKeyProcessorContext)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Processor.Api.FixedKeyProcessorContext"/></param>
         /// <remarks>The method invokes the default implementation in the JVM interface using <see cref="InitDefault"/>; override the method to implement a different behavior</remarks>
@@ -326,7 +326,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/api/FixedKeyProcessor.html#process(org.apache.kafka.streams.processor.api.FixedKeyRecord)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/processor/api/FixedKeyProcessor.html#process(org.apache.kafka.streams.processor.api.FixedKeyRecord)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Processor.Api.FixedKeyRecord"/></param>
         public override void Process(Org.Apache.Kafka.Streams.Processor.Api.FixedKeyRecord arg0)
@@ -334,14 +334,14 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
             IExecuteWithSignature("process", "(Lorg/apache/kafka/streams/processor/api/FixedKeyRecord;)V", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/api/FixedKeyProcessor.html#close()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/processor/api/FixedKeyProcessor.html#close()"/>
         /// </summary>
         public override void Close()
         {
             IExecuteWithSignature("close", "()V");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/api/FixedKeyProcessor.html#init(org.apache.kafka.streams.processor.api.FixedKeyProcessorContext)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/processor/api/FixedKeyProcessor.html#init(org.apache.kafka.streams.processor.api.FixedKeyProcessorContext)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Processor.Api.FixedKeyProcessorContext"/></param>
         public override void Init(Org.Apache.Kafka.Streams.Processor.Api.FixedKeyProcessorContext arg0)
@@ -361,7 +361,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
 
     #region IFixedKeyProcessor<KIn, VIn, VOut>
     /// <summary>
-    /// .NET interface for org.mases.knet.generated.org.apache.kafka.streams.processor.api.FixedKeyProcessor implementing <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/api/FixedKeyProcessor.html"/>
+    /// .NET interface for org.mases.knet.generated.org.apache.kafka.streams.processor.api.FixedKeyProcessor implementing <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/processor/api/FixedKeyProcessor.html"/>
     /// </summary>
     public partial interface IFixedKeyProcessor<KIn, VIn, VOut>
     {
@@ -409,7 +409,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
         }
 
         /// <summary>
-        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/api/FixedKeyProcessor.html#process(org.apache.kafka.streams.processor.api.FixedKeyRecord)"/>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/processor/api/FixedKeyProcessor.html#process(org.apache.kafka.streams.processor.api.FixedKeyRecord)"/>
         /// </summary>
         /// <remarks>If <see cref="OnProcess"/> has a value it takes precedence over corresponding class method</remarks>
         public global::System.Action<Org.Apache.Kafka.Streams.Processor.Api.FixedKeyRecord<KIn, VIn>> OnProcess { get; set; } = null;
@@ -424,7 +424,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
         }
 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/api/FixedKeyProcessor.html#process(org.apache.kafka.streams.processor.api.FixedKeyRecord)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/processor/api/FixedKeyProcessor.html#process(org.apache.kafka.streams.processor.api.FixedKeyRecord)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Processor.Api.FixedKeyRecord"/></param>
         public virtual void Process(Org.Apache.Kafka.Streams.Processor.Api.FixedKeyRecord<KIn, VIn> arg0)
@@ -432,7 +432,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
             hasOverrideProcess = false;
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/api/FixedKeyProcessor.html#close()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/processor/api/FixedKeyProcessor.html#close()"/>
         /// </summary>
         /// <remarks>The method invokes the default implementation in the JVM interface</remarks>
         public void CloseDefault()
@@ -441,7 +441,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
         }
 
         /// <summary>
-        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/api/FixedKeyProcessor.html#close()"/>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/processor/api/FixedKeyProcessor.html#close()"/>
         /// </summary>
         /// <remarks>If <see cref="OnClose"/> has a value it takes precedence over corresponding class method</remarks>
         public global::System.Action OnClose { get; set; } = null;
@@ -456,7 +456,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
         }
 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/api/FixedKeyProcessor.html#close()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/processor/api/FixedKeyProcessor.html#close()"/>
         /// </summary>
         /// <remarks>The method invokes the default implementation in the JVM interface using <see cref="CloseDefault"/>; override the method to implement a different behavior</remarks>
         public virtual void Close()
@@ -464,7 +464,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
             hasOverrideClose = false;
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/api/FixedKeyProcessor.html#init(org.apache.kafka.streams.processor.api.FixedKeyProcessorContext)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/processor/api/FixedKeyProcessor.html#init(org.apache.kafka.streams.processor.api.FixedKeyProcessorContext)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Processor.Api.FixedKeyProcessorContext"/></param>
         /// <remarks>The method invokes the default implementation in the JVM interface</remarks>
@@ -474,7 +474,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
         }
 
         /// <summary>
-        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/api/FixedKeyProcessor.html#init(org.apache.kafka.streams.processor.api.FixedKeyProcessorContext)"/>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/processor/api/FixedKeyProcessor.html#init(org.apache.kafka.streams.processor.api.FixedKeyProcessorContext)"/>
         /// </summary>
         /// <remarks>If <see cref="OnInit"/> has a value it takes precedence over corresponding class method</remarks>
         public global::System.Action<Org.Apache.Kafka.Streams.Processor.Api.FixedKeyProcessorContext<KIn, VOut>> OnInit { get; set; } = null;
@@ -489,7 +489,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
         }
 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/api/FixedKeyProcessor.html#init(org.apache.kafka.streams.processor.api.FixedKeyProcessorContext)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/processor/api/FixedKeyProcessor.html#init(org.apache.kafka.streams.processor.api.FixedKeyProcessorContext)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Processor.Api.FixedKeyProcessorContext"/></param>
         /// <remarks>The method invokes the default implementation in the JVM interface using <see cref="InitDefault"/>; override the method to implement a different behavior</remarks>
@@ -529,7 +529,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/api/FixedKeyProcessor.html#process(org.apache.kafka.streams.processor.api.FixedKeyRecord)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/processor/api/FixedKeyProcessor.html#process(org.apache.kafka.streams.processor.api.FixedKeyRecord)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Processor.Api.FixedKeyRecord"/></param>
         public override void Process(Org.Apache.Kafka.Streams.Processor.Api.FixedKeyRecord<KIn, VIn> arg0)
@@ -537,14 +537,14 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
             IExecuteWithSignature("process", "(Lorg/apache/kafka/streams/processor/api/FixedKeyRecord;)V", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/api/FixedKeyProcessor.html#close()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/processor/api/FixedKeyProcessor.html#close()"/>
         /// </summary>
         public override void Close()
         {
             IExecuteWithSignature("close", "()V");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/api/FixedKeyProcessor.html#init(org.apache.kafka.streams.processor.api.FixedKeyProcessorContext)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/processor/api/FixedKeyProcessor.html#init(org.apache.kafka.streams.processor.api.FixedKeyProcessorContext)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Processor.Api.FixedKeyProcessorContext"/></param>
         public override void Init(Org.Apache.Kafka.Streams.Processor.Api.FixedKeyProcessorContext<KIn, VOut> arg0)

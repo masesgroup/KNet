@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common.Metrics.Stats
 {
     #region Meter declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/metrics/stats/Meter.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/metrics/stats/Meter.html"/>
     /// </summary>
     public partial class Meter : Org.Apache.Kafka.Common.Metrics.CompoundStat
     {
@@ -71,7 +71,7 @@ namespace Org.Apache.Kafka.Common.Metrics.Stats
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/metrics/stats/Meter.html#%3Cinit%3E(java.util.concurrent.TimeUnit,org.apache.kafka.common.MetricName,org.apache.kafka.common.MetricName)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/metrics/stats/Meter.html#%3Cinit%3E(java.util.concurrent.TimeUnit,org.apache.kafka.common.MetricName,org.apache.kafka.common.MetricName)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Concurrent.TimeUnit"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.MetricName"/></param>
@@ -81,7 +81,7 @@ namespace Org.Apache.Kafka.Common.Metrics.Stats
         {
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/metrics/stats/Meter.html#%3Cinit%3E(java.util.concurrent.TimeUnit,org.apache.kafka.common.metrics.stats.SampledStat,org.apache.kafka.common.MetricName,org.apache.kafka.common.MetricName)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/metrics/stats/Meter.html#%3Cinit%3E(java.util.concurrent.TimeUnit,org.apache.kafka.common.metrics.stats.SampledStat,org.apache.kafka.common.MetricName,org.apache.kafka.common.MetricName)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Concurrent.TimeUnit"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Metrics.Stats.SampledStat"/></param>
@@ -92,7 +92,7 @@ namespace Org.Apache.Kafka.Common.Metrics.Stats
         {
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/metrics/stats/Meter.html#%3Cinit%3E(org.apache.kafka.common.MetricName,org.apache.kafka.common.MetricName)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/metrics/stats/Meter.html#%3Cinit%3E(org.apache.kafka.common.MetricName,org.apache.kafka.common.MetricName)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.MetricName"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.MetricName"/></param>
@@ -101,7 +101,7 @@ namespace Org.Apache.Kafka.Common.Metrics.Stats
         {
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/metrics/stats/Meter.html#%3Cinit%3E(org.apache.kafka.common.metrics.stats.SampledStat,org.apache.kafka.common.MetricName,org.apache.kafka.common.MetricName)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/metrics/stats/Meter.html#%3Cinit%3E(org.apache.kafka.common.metrics.stats.SampledStat,org.apache.kafka.common.MetricName,org.apache.kafka.common.MetricName)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Metrics.Stats.SampledStat"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.MetricName"/></param>
@@ -127,7 +127,7 @@ namespace Org.Apache.Kafka.Common.Metrics.Stats
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/metrics/stats/Meter.html#stats()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/metrics/stats/Meter.html#stats()"/>
         /// </summary>
         /// <returns><see cref="Java.Util.List"/></returns>
         public Java.Util.List<Org.Apache.Kafka.Common.Metrics.CompoundStat.NamedMeasurable> Stats()
@@ -135,7 +135,7 @@ namespace Org.Apache.Kafka.Common.Metrics.Stats
             return IExecuteWithSignature<Java.Util.List<Org.Apache.Kafka.Common.Metrics.CompoundStat.NamedMeasurable>>("stats", "()Ljava/util/List;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/metrics/stats/Meter.html#record(org.apache.kafka.common.metrics.MetricConfig,double,long)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/metrics/stats/Meter.html#record(org.apache.kafka.common.metrics.MetricConfig,double,long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Metrics.MetricConfig"/></param>
         /// <param name="arg1"><see cref="double"/></param>

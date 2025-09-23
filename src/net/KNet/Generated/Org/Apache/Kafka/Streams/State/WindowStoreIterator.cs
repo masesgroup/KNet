@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Streams.State
 {
     #region WindowStoreIterator declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/state/WindowStoreIterator.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/state/WindowStoreIterator.html"/>
     /// </summary>
     public partial class WindowStoreIterator : MASES.JCOBridge.C2JBridge.JVMBridgeBase<WindowStoreIterator>
     {
@@ -70,7 +70,7 @@ namespace Org.Apache.Kafka.Streams.State
 
     #region WindowStoreIterator<V> declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/state/WindowStoreIterator.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/state/WindowStoreIterator.html"/>
     /// </summary>
     /// <typeparam name="V"></typeparam>
     public partial class WindowStoreIterator<V> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<WindowStoreIterator<V>>
@@ -141,7 +141,7 @@ namespace Org.Apache.Kafka.Streams.State
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/state/WindowStoreIterator.html#close()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/state/WindowStoreIterator.html#close()"/>
         /// </summary>
         public void Close()
         {
@@ -160,7 +160,7 @@ namespace Org.Apache.Kafka.Streams.State
 
     #region IWindowStoreIterator<V>
     /// <summary>
-    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/state/WindowStoreIterator.html"/>
+    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/state/WindowStoreIterator.html"/>
     /// </summary>
     public partial interface IWindowStoreIterator<V>
     {
@@ -209,7 +209,7 @@ namespace Org.Apache.Kafka.Streams.State
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/state/WindowStoreIterator.html#close()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/state/WindowStoreIterator.html#close()"/>
         /// </summary>
         public void Close()
         {

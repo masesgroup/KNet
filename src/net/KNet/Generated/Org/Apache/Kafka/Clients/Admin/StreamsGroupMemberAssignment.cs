@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 {
     #region StreamsGroupMemberAssignment declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/StreamsGroupMemberAssignment.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/admin/StreamsGroupMemberAssignment.html"/>
     /// </summary>
     public partial class StreamsGroupMemberAssignment : MASES.JCOBridge.C2JBridge.JVMBridgeBase<StreamsGroupMemberAssignment>
     {
@@ -64,7 +64,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         // TODO: complete the class
         #region TaskIds declaration
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/StreamsGroupMemberAssignment.TaskIds.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/admin/StreamsGroupMemberAssignment.TaskIds.html"/>
         /// </summary>
         public partial class TaskIds : MASES.JCOBridge.C2JBridge.JVMBridgeBase<TaskIds>
         {
@@ -112,7 +112,7 @@ namespace Org.Apache.Kafka.Clients.Admin
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/StreamsGroupMemberAssignment.html#%3Cinit%3E(java.util.List,java.util.List,java.util.List)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/admin/StreamsGroupMemberAssignment.html#%3Cinit%3E(java.util.List,java.util.List,java.util.List)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.List"/></param>
         /// <param name="arg1"><see cref="Java.Util.List"/></param>
@@ -138,7 +138,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/StreamsGroupMemberAssignment.html#activeTasks()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/admin/StreamsGroupMemberAssignment.html#activeTasks()"/>
         /// </summary>
         /// <returns><see cref="Java.Util.List"/></returns>
         public Java.Util.List<Org.Apache.Kafka.Clients.Admin.StreamsGroupMemberAssignment.TaskIds> ActiveTasks()
@@ -146,7 +146,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<Java.Util.List<Org.Apache.Kafka.Clients.Admin.StreamsGroupMemberAssignment.TaskIds>>("activeTasks", "()Ljava/util/List;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/StreamsGroupMemberAssignment.html#standbyTasks()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/admin/StreamsGroupMemberAssignment.html#standbyTasks()"/>
         /// </summary>
         /// <returns><see cref="Java.Util.List"/></returns>
         public Java.Util.List<Org.Apache.Kafka.Clients.Admin.StreamsGroupMemberAssignment.TaskIds> StandbyTasks()
@@ -154,7 +154,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<Java.Util.List<Org.Apache.Kafka.Clients.Admin.StreamsGroupMemberAssignment.TaskIds>>("standbyTasks", "()Ljava/util/List;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/StreamsGroupMemberAssignment.html#warmupTasks()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/admin/StreamsGroupMemberAssignment.html#warmupTasks()"/>
         /// </summary>
         /// <returns><see cref="Java.Util.List"/></returns>
         public Java.Util.List<Org.Apache.Kafka.Clients.Admin.StreamsGroupMemberAssignment.TaskIds> WarmupTasks()
@@ -170,7 +170,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         {
             #region Constructors
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/StreamsGroupMemberAssignment.TaskIds.html#%3Cinit%3E(java.lang.String,java.util.List)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/admin/StreamsGroupMemberAssignment.TaskIds.html#%3Cinit%3E(java.lang.String,java.util.List)"/>
             /// </summary>
             /// <param name="arg0"><see cref="Java.Lang.String"/></param>
             /// <param name="arg1"><see cref="Java.Util.List"/></param>
@@ -195,7 +195,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/StreamsGroupMemberAssignment.TaskIds.html#subtopologyId()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/admin/StreamsGroupMemberAssignment.TaskIds.html#subtopologyId()"/>
             /// </summary>
             /// <returns><see cref="Java.Lang.String"/></returns>
             public Java.Lang.String SubtopologyId()
@@ -203,7 +203,7 @@ namespace Org.Apache.Kafka.Clients.Admin
                 return IExecuteWithSignature<Java.Lang.String>("subtopologyId", "()Ljava/lang/String;");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/StreamsGroupMemberAssignment.TaskIds.html#partitions()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/admin/StreamsGroupMemberAssignment.TaskIds.html#partitions()"/>
             /// </summary>
             /// <returns><see cref="Java.Util.List"/></returns>
             public Java.Util.List<Java.Lang.Integer> Partitions()

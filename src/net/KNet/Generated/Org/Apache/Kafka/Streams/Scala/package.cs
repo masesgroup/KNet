@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Streams.Scala
 {
     #region package declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/package.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.1.0/org/apache/kafka/streams/scala/package.html"/>
     /// </summary>
     public partial class package : MASES.JCOBridge.C2JBridge.JVMBridgeBase<package>
     {

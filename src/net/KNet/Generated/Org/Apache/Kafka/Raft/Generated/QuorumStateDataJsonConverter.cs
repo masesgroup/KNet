@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Raft.Generated
 {
     #region QuorumStateDataJsonConverter declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/generated/QuorumStateDataJsonConverter.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/generated/QuorumStateDataJsonConverter.html"/>
     /// </summary>
     public partial class QuorumStateDataJsonConverter : MASES.JCOBridge.C2JBridge.JVMBridgeBase<QuorumStateDataJsonConverter>
     {
@@ -64,7 +64,7 @@ namespace Org.Apache.Kafka.Raft.Generated
         // TODO: complete the class
         #region VoterJsonConverter declaration
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/generated/QuorumStateDataJsonConverter.VoterJsonConverter.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/generated/QuorumStateDataJsonConverter.VoterJsonConverter.html"/>
         /// </summary>
         public partial class VoterJsonConverter : MASES.JCOBridge.C2JBridge.JVMBridgeBase<VoterJsonConverter>
         {

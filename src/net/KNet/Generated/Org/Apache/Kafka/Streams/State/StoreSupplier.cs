@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Streams.State
 {
     #region StoreSupplier declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/state/StoreSupplier.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/state/StoreSupplier.html"/>
     /// </summary>
     public partial class StoreSupplier : MASES.JCOBridge.C2JBridge.JVMBridgeBase<StoreSupplier>
     {
@@ -70,7 +70,7 @@ namespace Org.Apache.Kafka.Streams.State
 
     #region StoreSupplier<T> declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/state/StoreSupplier.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/state/StoreSupplier.html"/>
     /// </summary>
     /// <typeparam name="T"><see cref="Org.Apache.Kafka.Streams.Processor.IStateStore"/></typeparam>
     public partial class StoreSupplier<T> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<StoreSupplier<T>> where T : Org.Apache.Kafka.Streams.Processor.IStateStore, new()
@@ -133,7 +133,7 @@ namespace Org.Apache.Kafka.Streams.State
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/state/StoreSupplier.html#metricsScope()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/state/StoreSupplier.html#metricsScope()"/>
         /// </summary>
         /// <returns><see cref="Java.Lang.String"/></returns>
         public Java.Lang.String MetricsScope()
@@ -141,7 +141,7 @@ namespace Org.Apache.Kafka.Streams.State
             return IExecuteWithSignature<Java.Lang.String>("metricsScope", "()Ljava/lang/String;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/state/StoreSupplier.html#name()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/state/StoreSupplier.html#name()"/>
         /// </summary>
         /// <returns><see cref="Java.Lang.String"/></returns>
         public Java.Lang.String Name()
@@ -149,7 +149,7 @@ namespace Org.Apache.Kafka.Streams.State
             return IExecuteWithSignature<Java.Lang.String>("name", "()Ljava/lang/String;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/state/StoreSupplier.html#get()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/state/StoreSupplier.html#get()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Processor.StateStore"/></returns>
         public Org.Apache.Kafka.Streams.Processor.StateStore Get()
@@ -169,7 +169,7 @@ namespace Org.Apache.Kafka.Streams.State
 
     #region IStoreSupplier<T>
     /// <summary>
-    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/state/StoreSupplier.html"/>
+    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/state/StoreSupplier.html"/>
     /// </summary>
     public partial interface IStoreSupplier<T>
     {
@@ -210,7 +210,7 @@ namespace Org.Apache.Kafka.Streams.State
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/state/StoreSupplier.html#metricsScope()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/state/StoreSupplier.html#metricsScope()"/>
         /// </summary>
         /// <returns><see cref="Java.Lang.String"/></returns>
         public Java.Lang.String MetricsScope()
@@ -218,7 +218,7 @@ namespace Org.Apache.Kafka.Streams.State
             return IExecuteWithSignature<Java.Lang.String>("metricsScope", "()Ljava/lang/String;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/state/StoreSupplier.html#name()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/state/StoreSupplier.html#name()"/>
         /// </summary>
         /// <returns><see cref="Java.Lang.String"/></returns>
         public Java.Lang.String Name()
@@ -226,7 +226,7 @@ namespace Org.Apache.Kafka.Streams.State
             return IExecuteWithSignature<Java.Lang.String>("name", "()Ljava/lang/String;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/state/StoreSupplier.html#get()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/state/StoreSupplier.html#get()"/>
         /// </summary>
         /// <returns><typeparamref name="T"/></returns>
         public T Get()

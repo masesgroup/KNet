@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Connect.Components
 {
     #region Versioned declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.0.0/org/apache/kafka/connect/components/Versioned.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.1.0/org/apache/kafka/connect/components/Versioned.html"/>
     /// </summary>
     public partial class Versioned : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Versioned>
     {
@@ -70,7 +70,7 @@ namespace Org.Apache.Kafka.Connect.Components
 
     #region IVersioned
     /// <summary>
-    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.0.0/org/apache/kafka/connect/components/Versioned.html"/>
+    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.1.0/org/apache/kafka/connect/components/Versioned.html"/>
     /// </summary>
     public partial interface IVersioned
     {
@@ -107,7 +107,7 @@ namespace Org.Apache.Kafka.Connect.Components
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.0.0/org/apache/kafka/connect/components/Versioned.html#version()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.1.0/org/apache/kafka/connect/components/Versioned.html#version()"/>
         /// </summary>
         /// <returns><see cref="Java.Lang.String"/></returns>
         public Java.Lang.String Version()

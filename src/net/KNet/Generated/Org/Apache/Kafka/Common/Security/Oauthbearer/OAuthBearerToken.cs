@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common.Security.Oauthbearer
 {
     #region OAuthBearerToken declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/security/oauthbearer/OAuthBearerToken.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/security/oauthbearer/OAuthBearerToken.html"/>
     /// </summary>
     public partial class OAuthBearerToken : MASES.JCOBridge.C2JBridge.JVMBridgeBase<OAuthBearerToken>
     {
@@ -70,7 +70,7 @@ namespace Org.Apache.Kafka.Common.Security.Oauthbearer
 
     #region IOAuthBearerToken
     /// <summary>
-    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/security/oauthbearer/OAuthBearerToken.html"/>
+    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/security/oauthbearer/OAuthBearerToken.html"/>
     /// </summary>
     public partial interface IOAuthBearerToken
     {
@@ -107,7 +107,7 @@ namespace Org.Apache.Kafka.Common.Security.Oauthbearer
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/security/oauthbearer/OAuthBearerToken.html#startTimeMs()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/security/oauthbearer/OAuthBearerToken.html#startTimeMs()"/>
         /// </summary>
         /// <returns><see cref="Java.Lang.Long"/></returns>
         public Java.Lang.Long StartTimeMs()
@@ -115,7 +115,7 @@ namespace Org.Apache.Kafka.Common.Security.Oauthbearer
             return IExecuteWithSignature<Java.Lang.Long>("startTimeMs", "()Ljava/lang/Long;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/security/oauthbearer/OAuthBearerToken.html#principalName()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/security/oauthbearer/OAuthBearerToken.html#principalName()"/>
         /// </summary>
         /// <returns><see cref="Java.Lang.String"/></returns>
         public Java.Lang.String PrincipalName()
@@ -123,7 +123,7 @@ namespace Org.Apache.Kafka.Common.Security.Oauthbearer
             return IExecuteWithSignature<Java.Lang.String>("principalName", "()Ljava/lang/String;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/security/oauthbearer/OAuthBearerToken.html#value()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/security/oauthbearer/OAuthBearerToken.html#value()"/>
         /// </summary>
         /// <returns><see cref="Java.Lang.String"/></returns>
         public Java.Lang.String Value()
@@ -131,7 +131,7 @@ namespace Org.Apache.Kafka.Common.Security.Oauthbearer
             return IExecuteWithSignature<Java.Lang.String>("value", "()Ljava/lang/String;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/security/oauthbearer/OAuthBearerToken.html#scope()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/security/oauthbearer/OAuthBearerToken.html#scope()"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Set"/></returns>
         public Java.Util.Set<Java.Lang.String> Scope()
@@ -139,7 +139,7 @@ namespace Org.Apache.Kafka.Common.Security.Oauthbearer
             return IExecuteWithSignature<Java.Util.Set<Java.Lang.String>>("scope", "()Ljava/util/Set;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/security/oauthbearer/OAuthBearerToken.html#lifetimeMs()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/security/oauthbearer/OAuthBearerToken.html#lifetimeMs()"/>
         /// </summary>
         /// <returns><see cref="long"/></returns>
         public long LifetimeMs()

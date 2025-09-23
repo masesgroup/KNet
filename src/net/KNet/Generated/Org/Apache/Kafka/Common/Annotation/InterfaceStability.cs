@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common.Annotation
 {
     #region InterfaceStability declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/annotation/InterfaceStability.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/annotation/InterfaceStability.html"/>
     /// </summary>
     public partial class InterfaceStability : MASES.JCOBridge.C2JBridge.JVMBridgeBase<InterfaceStability>
     {
@@ -64,7 +64,7 @@ namespace Org.Apache.Kafka.Common.Annotation
         // TODO: complete the class
         #region Evolving declaration
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/annotation/InterfaceStability.Evolving.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/annotation/InterfaceStability.Evolving.html"/>
         /// </summary>
         public partial class Evolving : Java.Lang.Annotation.Annotation
         {
@@ -107,7 +107,7 @@ namespace Org.Apache.Kafka.Common.Annotation
 
         #region Stable declaration
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/annotation/InterfaceStability.Stable.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/annotation/InterfaceStability.Stable.html"/>
         /// </summary>
         public partial class Stable : Java.Lang.Annotation.Annotation
         {
@@ -150,7 +150,7 @@ namespace Org.Apache.Kafka.Common.Annotation
 
         #region Unstable declaration
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/annotation/InterfaceStability.Unstable.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/annotation/InterfaceStability.Unstable.html"/>
         /// </summary>
         public partial class Unstable : Java.Lang.Annotation.Annotation
         {

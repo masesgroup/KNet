@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 {
     #region WindowedSerdes declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/WindowedSerdes.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/kstream/WindowedSerdes.html"/>
     /// </summary>
     public partial class WindowedSerdes : MASES.JCOBridge.C2JBridge.JVMBridgeBase<WindowedSerdes>
     {
@@ -64,7 +64,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         // TODO: complete the class
         #region SessionWindowedSerde declaration
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/WindowedSerdes.SessionWindowedSerde.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/kstream/WindowedSerdes.SessionWindowedSerde.html"/>
         /// </summary>
         public partial class SessionWindowedSerde : Org.Apache.Kafka.Common.Serialization.Serdes.WrapperSerde
         {
@@ -105,7 +105,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
         #region SessionWindowedSerde<T> declaration
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/WindowedSerdes.SessionWindowedSerde.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/kstream/WindowedSerdes.SessionWindowedSerde.html"/>
         /// </summary>
         /// <typeparam name="T"></typeparam>
         public partial class SessionWindowedSerde<T> : Org.Apache.Kafka.Common.Serialization.Serdes.WrapperSerde<Org.Apache.Kafka.Streams.Kstream.Windowed<T>>
@@ -147,7 +147,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
         #region TimeWindowedSerde declaration
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/WindowedSerdes.TimeWindowedSerde.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/kstream/WindowedSerdes.TimeWindowedSerde.html"/>
         /// </summary>
         public partial class TimeWindowedSerde : Org.Apache.Kafka.Common.Serialization.Serdes.WrapperSerde
         {
@@ -188,7 +188,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
         #region TimeWindowedSerde<T> declaration
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/WindowedSerdes.TimeWindowedSerde.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/kstream/WindowedSerdes.TimeWindowedSerde.html"/>
         /// </summary>
         /// <typeparam name="T"></typeparam>
         public partial class TimeWindowedSerde<T> : Org.Apache.Kafka.Common.Serialization.Serdes.WrapperSerde<Org.Apache.Kafka.Streams.Kstream.Windowed<T>>
@@ -249,7 +249,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/WindowedSerdes.html#sessionWindowedSerdeFrom(java.lang.Class)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/kstream/WindowedSerdes.html#sessionWindowedSerdeFrom(java.lang.Class)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.Class"/></param>
         /// <typeparam name="T"></typeparam>
@@ -259,7 +259,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
             return SExecuteWithSignature<Org.Apache.Kafka.Common.Serialization.Serde<Org.Apache.Kafka.Streams.Kstream.Windowed<T>>>(LocalBridgeClazz, "sessionWindowedSerdeFrom", "(Ljava/lang/Class;)Lorg/apache/kafka/common/serialization/Serde;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/WindowedSerdes.html#sessionWindowedSerdeFrom(java.lang.Class)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/kstream/WindowedSerdes.html#sessionWindowedSerdeFrom(java.lang.Class)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.Class"/></param>
         /// <typeparam name="T"></typeparam>
@@ -269,7 +269,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
             return SExecuteWithSignature<Org.Apache.Kafka.Common.Serialization.SerdeDirect<Org.Apache.Kafka.Streams.Kstream.Windowed<T>>, Org.Apache.Kafka.Common.Serialization.Serde<Org.Apache.Kafka.Streams.Kstream.Windowed<T>>>(LocalBridgeClazz, "sessionWindowedSerdeFrom", "(Ljava/lang/Class;)Lorg/apache/kafka/common/serialization/Serde;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/WindowedSerdes.html#timeWindowedSerdeFrom(java.lang.Class,long)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/kstream/WindowedSerdes.html#timeWindowedSerdeFrom(java.lang.Class,long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.Class"/></param>
         /// <param name="arg1"><see cref="long"/></param>
@@ -280,7 +280,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
             return SExecuteWithSignature<Org.Apache.Kafka.Common.Serialization.Serde<Org.Apache.Kafka.Streams.Kstream.Windowed<T>>>(LocalBridgeClazz, "timeWindowedSerdeFrom", "(Ljava/lang/Class;J)Lorg/apache/kafka/common/serialization/Serde;", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/WindowedSerdes.html#timeWindowedSerdeFrom(java.lang.Class,long)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/kstream/WindowedSerdes.html#timeWindowedSerdeFrom(java.lang.Class,long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.Class"/></param>
         /// <param name="arg1"><see cref="long"/></param>
@@ -303,7 +303,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         {
             #region Constructors
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/WindowedSerdes.SessionWindowedSerde.html#%3Cinit%3E(org.apache.kafka.common.serialization.Serde)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/kstream/WindowedSerdes.SessionWindowedSerde.html#%3Cinit%3E(org.apache.kafka.common.serialization.Serde)"/>
             /// </summary>
             /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></param>
             public SessionWindowedSerde(Org.Apache.Kafka.Common.Serialization.Serde arg0)
@@ -342,7 +342,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         {
             #region Constructors
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/WindowedSerdes.SessionWindowedSerde.html#%3Cinit%3E(org.apache.kafka.common.serialization.Serde)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/kstream/WindowedSerdes.SessionWindowedSerde.html#%3Cinit%3E(org.apache.kafka.common.serialization.Serde)"/>
             /// </summary>
             /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></param>
             public SessionWindowedSerde(Org.Apache.Kafka.Common.Serialization.Serde<T> arg0)
@@ -385,7 +385,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         {
             #region Constructors
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/WindowedSerdes.TimeWindowedSerde.html#%3Cinit%3E(org.apache.kafka.common.serialization.Serde,long)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/kstream/WindowedSerdes.TimeWindowedSerde.html#%3Cinit%3E(org.apache.kafka.common.serialization.Serde,long)"/>
             /// </summary>
             /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></param>
             /// <param name="arg1"><see cref="long"/></param>
@@ -410,7 +410,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/WindowedSerdes.TimeWindowedSerde.html#forChangelog(boolean)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/kstream/WindowedSerdes.TimeWindowedSerde.html#forChangelog(boolean)"/>
             /// </summary>
             /// <param name="arg0"><see cref="bool"/></param>
             /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.WindowedSerdes.TimeWindowedSerde"/></returns>
@@ -434,7 +434,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         {
             #region Constructors
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/WindowedSerdes.TimeWindowedSerde.html#%3Cinit%3E(org.apache.kafka.common.serialization.Serde,long)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/kstream/WindowedSerdes.TimeWindowedSerde.html#%3Cinit%3E(org.apache.kafka.common.serialization.Serde,long)"/>
             /// </summary>
             /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></param>
             /// <param name="arg1"><see cref="long"/></param>
@@ -463,7 +463,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/WindowedSerdes.TimeWindowedSerde.html#forChangelog(boolean)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/kstream/WindowedSerdes.TimeWindowedSerde.html#forChangelog(boolean)"/>
             /// </summary>
             /// <param name="arg0"><see cref="bool"/></param>
             /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.WindowedSerdes.TimeWindowedSerde"/></returns>

@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
 {
     #region MirrorHeartbeatConnector declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.0.0/org/apache/kafka/connect/mirror/MirrorHeartbeatConnector.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.1.0/org/apache/kafka/connect/mirror/MirrorHeartbeatConnector.html"/>
     /// </summary>
     public partial class MirrorHeartbeatConnector : Org.Apache.Kafka.Connect.Source.SourceConnector
     {

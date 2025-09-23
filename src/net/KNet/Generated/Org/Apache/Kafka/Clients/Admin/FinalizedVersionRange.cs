@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 {
     #region FinalizedVersionRange declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/FinalizedVersionRange.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/admin/FinalizedVersionRange.html"/>
     /// </summary>
     public partial class FinalizedVersionRange : MASES.JCOBridge.C2JBridge.JVMBridgeBase<FinalizedVersionRange>
     {
@@ -71,7 +71,7 @@ namespace Org.Apache.Kafka.Clients.Admin
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/FinalizedVersionRange.html#%3Cinit%3E(short,short)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/admin/FinalizedVersionRange.html#%3Cinit%3E(short,short)"/>
         /// </summary>
         /// <param name="arg0"><see cref="short"/></param>
         /// <param name="arg1"><see cref="short"/></param>
@@ -96,7 +96,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/FinalizedVersionRange.html#maxVersionLevel()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/admin/FinalizedVersionRange.html#maxVersionLevel()"/>
         /// </summary>
         /// <returns><see cref="short"/></returns>
         public short MaxVersionLevel()
@@ -104,7 +104,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<short>("maxVersionLevel", "()S");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/FinalizedVersionRange.html#minVersionLevel()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/admin/FinalizedVersionRange.html#minVersionLevel()"/>
         /// </summary>
         /// <returns><see cref="short"/></returns>
         public short MinVersionLevel()

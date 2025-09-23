@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Streams.State
 {
     #region TimestampedBytesStore declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/state/TimestampedBytesStore.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/state/TimestampedBytesStore.html"/>
     /// </summary>
     public partial class TimestampedBytesStore : MASES.JCOBridge.C2JBridge.JVMBridgeBase<TimestampedBytesStore>
     {
@@ -70,7 +70,7 @@ namespace Org.Apache.Kafka.Streams.State
 
     #region ITimestampedBytesStore
     /// <summary>
-    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/state/TimestampedBytesStore.html"/>
+    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/state/TimestampedBytesStore.html"/>
     /// </summary>
     public partial interface ITimestampedBytesStore
     {
@@ -103,7 +103,7 @@ namespace Org.Apache.Kafka.Streams.State
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/state/TimestampedBytesStore.html#convertToTimestampedFormat(byte[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/state/TimestampedBytesStore.html#convertToTimestampedFormat(byte[])"/>
         /// </summary>
         /// <param name="arg0"><see cref="byte"/></param>
         /// <returns><see cref="byte"/></returns>

@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 {
     #region QuorumInfo declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/QuorumInfo.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/admin/QuorumInfo.html"/>
     /// </summary>
     public partial class QuorumInfo : MASES.JCOBridge.C2JBridge.JVMBridgeBase<QuorumInfo>
     {
@@ -64,7 +64,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         // TODO: complete the class
         #region Node declaration
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/QuorumInfo.Node.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/admin/QuorumInfo.Node.html"/>
         /// </summary>
         public partial class Node : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Node>
         {
@@ -105,7 +105,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
         #region ReplicaState declaration
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/QuorumInfo.ReplicaState.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/admin/QuorumInfo.ReplicaState.html"/>
         /// </summary>
         public partial class ReplicaState : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ReplicaState>
         {
@@ -169,7 +169,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/QuorumInfo.html#leaderId()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/admin/QuorumInfo.html#leaderId()"/>
         /// </summary>
         /// <returns><see cref="int"/></returns>
         public int LeaderId()
@@ -177,7 +177,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<int>("leaderId", "()I");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/QuorumInfo.html#observers()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/admin/QuorumInfo.html#observers()"/>
         /// </summary>
         /// <returns><see cref="Java.Util.List"/></returns>
         public Java.Util.List<Org.Apache.Kafka.Clients.Admin.QuorumInfo.ReplicaState> Observers()
@@ -185,7 +185,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<Java.Util.List<Org.Apache.Kafka.Clients.Admin.QuorumInfo.ReplicaState>>("observers", "()Ljava/util/List;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/QuorumInfo.html#voters()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/admin/QuorumInfo.html#voters()"/>
         /// </summary>
         /// <returns><see cref="Java.Util.List"/></returns>
         public Java.Util.List<Org.Apache.Kafka.Clients.Admin.QuorumInfo.ReplicaState> Voters()
@@ -193,7 +193,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<Java.Util.List<Org.Apache.Kafka.Clients.Admin.QuorumInfo.ReplicaState>>("voters", "()Ljava/util/List;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/QuorumInfo.html#nodes()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/admin/QuorumInfo.html#nodes()"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Map"/></returns>
         public Java.Util.Map<Java.Lang.Integer, Org.Apache.Kafka.Clients.Admin.QuorumInfo.Node> Nodes()
@@ -201,7 +201,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<Java.Util.Map<Java.Lang.Integer, Org.Apache.Kafka.Clients.Admin.QuorumInfo.Node>>("nodes", "()Ljava/util/Map;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/QuorumInfo.html#highWatermark()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/admin/QuorumInfo.html#highWatermark()"/>
         /// </summary>
         /// <returns><see cref="long"/></returns>
         public long HighWatermark()
@@ -209,7 +209,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<long>("highWatermark", "()J");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/QuorumInfo.html#leaderEpoch()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/admin/QuorumInfo.html#leaderEpoch()"/>
         /// </summary>
         /// <returns><see cref="long"/></returns>
         public long LeaderEpoch()
@@ -241,7 +241,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/QuorumInfo.Node.html#nodeId()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/admin/QuorumInfo.Node.html#nodeId()"/>
             /// </summary>
             /// <returns><see cref="int"/></returns>
             public int NodeId()
@@ -249,7 +249,7 @@ namespace Org.Apache.Kafka.Clients.Admin
                 return IExecuteWithSignature<int>("nodeId", "()I");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/QuorumInfo.Node.html#endpoints()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/admin/QuorumInfo.Node.html#endpoints()"/>
             /// </summary>
             /// <returns><see cref="Java.Util.List"/></returns>
             public Java.Util.List<Org.Apache.Kafka.Clients.Admin.RaftVoterEndpoint> Endpoints()
@@ -288,7 +288,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/QuorumInfo.ReplicaState.html#replicaId()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/admin/QuorumInfo.ReplicaState.html#replicaId()"/>
             /// </summary>
             /// <returns><see cref="int"/></returns>
             public int ReplicaId()
@@ -296,7 +296,7 @@ namespace Org.Apache.Kafka.Clients.Admin
                 return IExecuteWithSignature<int>("replicaId", "()I");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/QuorumInfo.ReplicaState.html#lastCaughtUpTimestamp()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/admin/QuorumInfo.ReplicaState.html#lastCaughtUpTimestamp()"/>
             /// </summary>
             /// <returns><see cref="Java.Util.OptionalLong"/></returns>
             public Java.Util.OptionalLong LastCaughtUpTimestamp()
@@ -304,7 +304,7 @@ namespace Org.Apache.Kafka.Clients.Admin
                 return IExecuteWithSignature<Java.Util.OptionalLong>("lastCaughtUpTimestamp", "()Ljava/util/OptionalLong;");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/QuorumInfo.ReplicaState.html#lastFetchTimestamp()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/admin/QuorumInfo.ReplicaState.html#lastFetchTimestamp()"/>
             /// </summary>
             /// <returns><see cref="Java.Util.OptionalLong"/></returns>
             public Java.Util.OptionalLong LastFetchTimestamp()
@@ -312,7 +312,7 @@ namespace Org.Apache.Kafka.Clients.Admin
                 return IExecuteWithSignature<Java.Util.OptionalLong>("lastFetchTimestamp", "()Ljava/util/OptionalLong;");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/QuorumInfo.ReplicaState.html#logEndOffset()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/admin/QuorumInfo.ReplicaState.html#logEndOffset()"/>
             /// </summary>
             /// <returns><see cref="long"/></returns>
             public long LogEndOffset()
@@ -320,7 +320,7 @@ namespace Org.Apache.Kafka.Clients.Admin
                 return IExecuteWithSignature<long>("logEndOffset", "()J");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/QuorumInfo.ReplicaState.html#replicaDirectoryId()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/admin/QuorumInfo.ReplicaState.html#replicaDirectoryId()"/>
             /// </summary>
             /// <returns><see cref="Org.Apache.Kafka.Common.Uuid"/></returns>
             public Org.Apache.Kafka.Common.Uuid ReplicaDirectoryId()

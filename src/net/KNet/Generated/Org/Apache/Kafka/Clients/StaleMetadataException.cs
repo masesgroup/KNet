@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Clients
 {
     #region StaleMetadataException declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/StaleMetadataException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/StaleMetadataException.html"/>
     /// </summary>
     public partial class StaleMetadataException : Org.Apache.Kafka.Common.Errors.InvalidMetadataException
     {

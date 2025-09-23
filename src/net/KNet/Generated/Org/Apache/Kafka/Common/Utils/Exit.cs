@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common.Utils
 {
     #region Exit declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/utils/Exit.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/utils/Exit.html"/>
     /// </summary>
     public partial class Exit : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Exit>
     {
@@ -64,7 +64,7 @@ namespace Org.Apache.Kafka.Common.Utils
         // TODO: complete the class
         #region Procedure declaration
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/utils/Exit.Procedure.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/utils/Exit.Procedure.html"/>
         /// </summary>
         public partial class Procedure : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Procedure>
         {
@@ -107,7 +107,7 @@ namespace Org.Apache.Kafka.Common.Utils
 
         #region ShutdownHookAdder declaration
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/utils/Exit.ShutdownHookAdder.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/utils/Exit.ShutdownHookAdder.html"/>
         /// </summary>
         public partial class ShutdownHookAdder : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ShutdownHookAdder>
         {
@@ -169,7 +169,7 @@ namespace Org.Apache.Kafka.Common.Utils
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/utils/Exit.html#addShutdownHook(java.lang.String,java.lang.Runnable)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/utils/Exit.html#addShutdownHook(java.lang.String,java.lang.Runnable)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Java.Lang.Runnable"/></param>
@@ -178,7 +178,7 @@ namespace Org.Apache.Kafka.Common.Utils
             SExecuteWithSignature(LocalBridgeClazz, "addShutdownHook", "(Ljava/lang/String;Ljava/lang/Runnable;)V", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/utils/Exit.html#exit(int,java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/utils/Exit.html#exit(int,java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="int"/></param>
         /// <param name="arg1"><see cref="Java.Lang.String"/></param>
@@ -187,7 +187,7 @@ namespace Org.Apache.Kafka.Common.Utils
             SExecuteWithSignature(LocalBridgeClazz, "exit", "(ILjava/lang/String;)V", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/utils/Exit.html#exit(int)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/utils/Exit.html#exit(int)"/>
         /// </summary>
         /// <param name="arg0"><see cref="int"/></param>
         public static void ExitMethod(int arg0)
@@ -195,7 +195,7 @@ namespace Org.Apache.Kafka.Common.Utils
             SExecuteWithSignature(LocalBridgeClazz, "exit", "(I)V", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/utils/Exit.html#halt(int,java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/utils/Exit.html#halt(int,java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="int"/></param>
         /// <param name="arg1"><see cref="Java.Lang.String"/></param>
@@ -204,7 +204,7 @@ namespace Org.Apache.Kafka.Common.Utils
             SExecuteWithSignature(LocalBridgeClazz, "halt", "(ILjava/lang/String;)V", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/utils/Exit.html#halt(int)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/utils/Exit.html#halt(int)"/>
         /// </summary>
         /// <param name="arg0"><see cref="int"/></param>
         public static void Halt(int arg0)
@@ -212,28 +212,28 @@ namespace Org.Apache.Kafka.Common.Utils
             SExecuteWithSignature(LocalBridgeClazz, "halt", "(I)V", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/utils/Exit.html#resetExitProcedure()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/utils/Exit.html#resetExitProcedure()"/>
         /// </summary>
         public static void ResetExitProcedure()
         {
             SExecuteWithSignature(LocalBridgeClazz, "resetExitProcedure", "()V");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/utils/Exit.html#resetHaltProcedure()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/utils/Exit.html#resetHaltProcedure()"/>
         /// </summary>
         public static void ResetHaltProcedure()
         {
             SExecuteWithSignature(LocalBridgeClazz, "resetHaltProcedure", "()V");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/utils/Exit.html#resetShutdownHookAdder()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/utils/Exit.html#resetShutdownHookAdder()"/>
         /// </summary>
         public static void ResetShutdownHookAdder()
         {
             SExecuteWithSignature(LocalBridgeClazz, "resetShutdownHookAdder", "()V");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/utils/Exit.html#setExitProcedure(org.apache.kafka.common.utils.Exit.Procedure)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/utils/Exit.html#setExitProcedure(org.apache.kafka.common.utils.Exit.Procedure)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Utils.Exit.Procedure"/></param>
         public static void SetExitProcedure(Org.Apache.Kafka.Common.Utils.Exit.Procedure arg0)
@@ -241,7 +241,7 @@ namespace Org.Apache.Kafka.Common.Utils
             SExecuteWithSignature(LocalBridgeClazz, "setExitProcedure", "(Lorg/apache/kafka/common/utils/Exit$Procedure;)V", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/utils/Exit.html#setHaltProcedure(org.apache.kafka.common.utils.Exit.Procedure)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/utils/Exit.html#setHaltProcedure(org.apache.kafka.common.utils.Exit.Procedure)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Utils.Exit.Procedure"/></param>
         public static void SetHaltProcedure(Org.Apache.Kafka.Common.Utils.Exit.Procedure arg0)
@@ -249,7 +249,7 @@ namespace Org.Apache.Kafka.Common.Utils
             SExecuteWithSignature(LocalBridgeClazz, "setHaltProcedure", "(Lorg/apache/kafka/common/utils/Exit$Procedure;)V", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/utils/Exit.html#setShutdownHookAdder(org.apache.kafka.common.utils.Exit.ShutdownHookAdder)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/utils/Exit.html#setShutdownHookAdder(org.apache.kafka.common.utils.Exit.ShutdownHookAdder)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Utils.Exit.ShutdownHookAdder"/></param>
         public static void SetShutdownHookAdder(Org.Apache.Kafka.Common.Utils.Exit.ShutdownHookAdder arg0)
@@ -285,7 +285,7 @@ namespace Org.Apache.Kafka.Common.Utils
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/utils/Exit.Procedure.html#execute(int,java.lang.String)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/utils/Exit.Procedure.html#execute(int,java.lang.String)"/>
             /// </summary>
             /// <param name="arg0"><see cref="int"/></param>
             /// <param name="arg1"><see cref="Java.Lang.String"/></param>
@@ -325,7 +325,7 @@ namespace Org.Apache.Kafka.Common.Utils
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/utils/Exit.ShutdownHookAdder.html#addShutdownHook(java.lang.String,java.lang.Runnable)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/utils/Exit.ShutdownHookAdder.html#addShutdownHook(java.lang.String,java.lang.Runnable)"/>
             /// </summary>
             /// <param name="arg0"><see cref="Java.Lang.String"/></param>
             /// <param name="arg1"><see cref="Java.Lang.Runnable"/></param>

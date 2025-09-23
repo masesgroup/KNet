@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common
 {
     #region PartitionInfo declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/PartitionInfo.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/PartitionInfo.html"/>
     /// </summary>
     public partial class PartitionInfo : MASES.JCOBridge.C2JBridge.JVMBridgeBase<PartitionInfo>
     {
@@ -71,7 +71,7 @@ namespace Org.Apache.Kafka.Common
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/PartitionInfo.html#%3Cinit%3E(java.lang.String,int,org.apache.kafka.common.Node,org.apache.kafka.common.Node[],org.apache.kafka.common.Node[],org.apache.kafka.common.Node[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/PartitionInfo.html#%3Cinit%3E(java.lang.String,int,org.apache.kafka.common.Node,org.apache.kafka.common.Node[],org.apache.kafka.common.Node[],org.apache.kafka.common.Node[])"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="int"/></param>
@@ -84,7 +84,7 @@ namespace Org.Apache.Kafka.Common
         {
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/PartitionInfo.html#%3Cinit%3E(java.lang.String,int,org.apache.kafka.common.Node,org.apache.kafka.common.Node[],org.apache.kafka.common.Node[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/PartitionInfo.html#%3Cinit%3E(java.lang.String,int,org.apache.kafka.common.Node,org.apache.kafka.common.Node[],org.apache.kafka.common.Node[])"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="int"/></param>
@@ -112,7 +112,7 @@ namespace Org.Apache.Kafka.Common
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/PartitionInfo.html#partition()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/PartitionInfo.html#partition()"/>
         /// </summary>
         /// <returns><see cref="int"/></returns>
         public int Partition()
@@ -120,7 +120,7 @@ namespace Org.Apache.Kafka.Common
             return IExecuteWithSignature<int>("partition", "()I");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/PartitionInfo.html#topic()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/PartitionInfo.html#topic()"/>
         /// </summary>
         /// <returns><see cref="Java.Lang.String"/></returns>
         public Java.Lang.String Topic()
@@ -128,7 +128,7 @@ namespace Org.Apache.Kafka.Common
             return IExecuteWithSignature<Java.Lang.String>("topic", "()Ljava/lang/String;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/PartitionInfo.html#leader()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/PartitionInfo.html#leader()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.Node"/></returns>
         public Org.Apache.Kafka.Common.Node Leader()
@@ -136,7 +136,7 @@ namespace Org.Apache.Kafka.Common
             return IExecuteWithSignature<Org.Apache.Kafka.Common.Node>("leader", "()Lorg/apache/kafka/common/Node;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/PartitionInfo.html#inSyncReplicas()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/PartitionInfo.html#inSyncReplicas()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.Node"/></returns>
         public Org.Apache.Kafka.Common.Node[] InSyncReplicas()
@@ -144,7 +144,7 @@ namespace Org.Apache.Kafka.Common
             return IExecuteWithSignatureArray<Org.Apache.Kafka.Common.Node>("inSyncReplicas", "()[Lorg/apache/kafka/common/Node;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/PartitionInfo.html#offlineReplicas()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/PartitionInfo.html#offlineReplicas()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.Node"/></returns>
         public Org.Apache.Kafka.Common.Node[] OfflineReplicas()
@@ -152,7 +152,7 @@ namespace Org.Apache.Kafka.Common
             return IExecuteWithSignatureArray<Org.Apache.Kafka.Common.Node>("offlineReplicas", "()[Lorg/apache/kafka/common/Node;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/PartitionInfo.html#replicas()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/PartitionInfo.html#replicas()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.Node"/></returns>
         public Org.Apache.Kafka.Common.Node[] Replicas()

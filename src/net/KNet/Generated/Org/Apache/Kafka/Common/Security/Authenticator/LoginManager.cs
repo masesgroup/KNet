@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common.Security.Authenticator
 {
     #region LoginManager declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/security/authenticator/LoginManager.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/security/authenticator/LoginManager.html"/>
     /// </summary>
     public partial class LoginManager : MASES.JCOBridge.C2JBridge.JVMBridgeBase<LoginManager>
     {
@@ -83,7 +83,7 @@ namespace Org.Apache.Kafka.Common.Security.Authenticator
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/security/authenticator/LoginManager.html#acquireLoginManager(org.apache.kafka.common.security.JaasContext,java.lang.String,java.lang.Class,java.util.Map)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/security/authenticator/LoginManager.html#acquireLoginManager(org.apache.kafka.common.security.JaasContext,java.lang.String,java.lang.Class,java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Security.JaasContext"/></param>
         /// <param name="arg1"><see cref="Java.Lang.String"/></param>
@@ -96,7 +96,7 @@ namespace Org.Apache.Kafka.Common.Security.Authenticator
             return SExecuteWithSignature<Org.Apache.Kafka.Common.Security.Authenticator.LoginManager>(LocalBridgeClazz, "acquireLoginManager", "(Lorg/apache/kafka/common/security/JaasContext;Ljava/lang/String;Ljava/lang/Class;Ljava/util/Map;)Lorg/apache/kafka/common/security/authenticator/LoginManager;", arg0, arg1, arg2, arg3);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/security/authenticator/LoginManager.html#closeAll()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/security/authenticator/LoginManager.html#closeAll()"/>
         /// </summary>
         public static void CloseAll()
         {
@@ -107,7 +107,7 @@ namespace Org.Apache.Kafka.Common.Security.Authenticator
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/security/authenticator/LoginManager.html#serviceName()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/security/authenticator/LoginManager.html#serviceName()"/>
         /// </summary>
         /// <returns><see cref="Java.Lang.String"/></returns>
         public Java.Lang.String ServiceName()
@@ -115,7 +115,7 @@ namespace Org.Apache.Kafka.Common.Security.Authenticator
             return IExecuteWithSignature<Java.Lang.String>("serviceName", "()Ljava/lang/String;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/security/authenticator/LoginManager.html#subject()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/security/authenticator/LoginManager.html#subject()"/>
         /// </summary>
         /// <returns><see cref="Javax.Security.Auth.Subject"/></returns>
         public Javax.Security.Auth.Subject Subject()
@@ -123,7 +123,7 @@ namespace Org.Apache.Kafka.Common.Security.Authenticator
             return IExecuteWithSignature<Javax.Security.Auth.Subject>("subject", "()Ljavax/security/auth/Subject;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/security/authenticator/LoginManager.html#release()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/security/authenticator/LoginManager.html#release()"/>
         /// </summary>
         public void Release()
         {

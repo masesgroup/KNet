@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common.Metrics
 {
     #region Monitorable declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/metrics/Monitorable.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/metrics/Monitorable.html"/>
     /// </summary>
     public partial class Monitorable : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Monitorable>
     {
@@ -70,7 +70,7 @@ namespace Org.Apache.Kafka.Common.Metrics
 
     #region IMonitorable
     /// <summary>
-    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/metrics/Monitorable.html"/>
+    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/metrics/Monitorable.html"/>
     /// </summary>
     public partial interface IMonitorable
     {
@@ -107,7 +107,7 @@ namespace Org.Apache.Kafka.Common.Metrics
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/metrics/Monitorable.html#withPluginMetrics(org.apache.kafka.common.metrics.PluginMetrics)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/metrics/Monitorable.html#withPluginMetrics(org.apache.kafka.common.metrics.PluginMetrics)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Metrics.PluginMetrics"/></param>
         public void WithPluginMetrics(Org.Apache.Kafka.Common.Metrics.PluginMetrics arg0)

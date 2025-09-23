@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common.Errors
 {
     #region RefreshRetriableException declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/errors/RefreshRetriableException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/errors/RefreshRetriableException.html"/>
     /// </summary>
     public partial class RefreshRetriableException : Org.Apache.Kafka.Common.Errors.RetriableException
     {

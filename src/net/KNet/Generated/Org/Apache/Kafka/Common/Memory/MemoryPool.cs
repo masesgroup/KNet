@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common.Memory
 {
     #region MemoryPool declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/memory/MemoryPool.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/memory/MemoryPool.html"/>
     /// </summary>
     public partial class MemoryPool : MASES.JCOBridge.C2JBridge.JVMBridgeBase<MemoryPool>
     {
@@ -70,7 +70,7 @@ namespace Org.Apache.Kafka.Common.Memory
 
     #region IMemoryPool
     /// <summary>
-    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/memory/MemoryPool.html"/>
+    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/memory/MemoryPool.html"/>
     /// </summary>
     public partial interface IMemoryPool
     {
@@ -99,7 +99,7 @@ namespace Org.Apache.Kafka.Common.Memory
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/memory/MemoryPool.html#NONE"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/memory/MemoryPool.html#NONE"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Memory.MemoryPool NONE { get { if (!_NONEReady) { _NONEContent = SGetField<Org.Apache.Kafka.Common.Memory.MemoryPool>(LocalBridgeClazz, "NONE"); _NONEReady = true; } return _NONEContent; } }
         private static Org.Apache.Kafka.Common.Memory.MemoryPool _NONEContent = default;
@@ -113,7 +113,7 @@ namespace Org.Apache.Kafka.Common.Memory
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/memory/MemoryPool.html#isOutOfMemory()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/memory/MemoryPool.html#isOutOfMemory()"/>
         /// </summary>
         /// <returns><see cref="bool"/></returns>
         public bool IsOutOfMemory()
@@ -121,7 +121,7 @@ namespace Org.Apache.Kafka.Common.Memory
             return IExecuteWithSignature<bool>("isOutOfMemory", "()Z");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/memory/MemoryPool.html#tryAllocate(int)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/memory/MemoryPool.html#tryAllocate(int)"/>
         /// </summary>
         /// <param name="arg0"><see cref="int"/></param>
         /// <returns><see cref="Java.Nio.ByteBuffer"/></returns>
@@ -130,7 +130,7 @@ namespace Org.Apache.Kafka.Common.Memory
             return IExecuteWithSignature<Java.Nio.ByteBuffer>("tryAllocate", "(I)Ljava/nio/ByteBuffer;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/memory/MemoryPool.html#availableMemory()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/memory/MemoryPool.html#availableMemory()"/>
         /// </summary>
         /// <returns><see cref="long"/></returns>
         public long AvailableMemory()
@@ -138,7 +138,7 @@ namespace Org.Apache.Kafka.Common.Memory
             return IExecuteWithSignature<long>("availableMemory", "()J");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/memory/MemoryPool.html#size()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/memory/MemoryPool.html#size()"/>
         /// </summary>
         /// <returns><see cref="long"/></returns>
         public long Size()
@@ -146,7 +146,7 @@ namespace Org.Apache.Kafka.Common.Memory
             return IExecuteWithSignature<long>("size", "()J");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/memory/MemoryPool.html#release(java.nio.ByteBuffer)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/memory/MemoryPool.html#release(java.nio.ByteBuffer)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Nio.ByteBuffer"/></param>
         public void Release(Java.Nio.ByteBuffer arg0)

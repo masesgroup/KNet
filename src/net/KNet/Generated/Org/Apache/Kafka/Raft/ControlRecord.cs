@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Raft
 {
     #region ControlRecord declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/ControlRecord.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/ControlRecord.html"/>
     /// </summary>
     public partial class ControlRecord : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ControlRecord>
     {
@@ -83,7 +83,7 @@ namespace Org.Apache.Kafka.Raft
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/ControlRecord.html#of(java.nio.ByteBuffer,java.nio.ByteBuffer)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/ControlRecord.html#of(java.nio.ByteBuffer,java.nio.ByteBuffer)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Nio.ByteBuffer"/></param>
         /// <param name="arg1"><see cref="Java.Nio.ByteBuffer"/></param>
@@ -97,7 +97,7 @@ namespace Org.Apache.Kafka.Raft
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/ControlRecord.html#type()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/ControlRecord.html#type()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.Record.ControlRecordType"/></returns>
         public Org.Apache.Kafka.Common.Record.ControlRecordType Type()

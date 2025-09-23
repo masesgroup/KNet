@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common.Acl
 {
     #region AccessControlEntryFilter declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/acl/AccessControlEntryFilter.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/acl/AccessControlEntryFilter.html"/>
     /// </summary>
     public partial class AccessControlEntryFilter : MASES.JCOBridge.C2JBridge.JVMBridgeBase<AccessControlEntryFilter>
     {
@@ -71,7 +71,7 @@ namespace Org.Apache.Kafka.Common.Acl
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/acl/AccessControlEntryFilter.html#%3Cinit%3E(java.lang.String,java.lang.String,org.apache.kafka.common.acl.AclOperation,org.apache.kafka.common.acl.AclPermissionType)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/acl/AccessControlEntryFilter.html#%3Cinit%3E(java.lang.String,java.lang.String,org.apache.kafka.common.acl.AclOperation,org.apache.kafka.common.acl.AclPermissionType)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Java.Lang.String"/></param>
@@ -90,7 +90,7 @@ namespace Org.Apache.Kafka.Common.Acl
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/acl/AccessControlEntryFilter.html#ANY"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/acl/AccessControlEntryFilter.html#ANY"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Acl.AccessControlEntryFilter ANY { get { if (!_ANYReady) { _ANYContent = SGetField<Org.Apache.Kafka.Common.Acl.AccessControlEntryFilter>(LocalBridgeClazz, "ANY"); _ANYReady = true; } return _ANYContent; } }
         private static Org.Apache.Kafka.Common.Acl.AccessControlEntryFilter _ANYContent = default;
@@ -104,7 +104,7 @@ namespace Org.Apache.Kafka.Common.Acl
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/acl/AccessControlEntryFilter.html#isUnknown()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/acl/AccessControlEntryFilter.html#isUnknown()"/>
         /// </summary>
         /// <returns><see cref="bool"/></returns>
         public bool IsUnknown()
@@ -112,7 +112,7 @@ namespace Org.Apache.Kafka.Common.Acl
             return IExecuteWithSignature<bool>("isUnknown", "()Z");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/acl/AccessControlEntryFilter.html#matches(org.apache.kafka.common.acl.AccessControlEntry)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/acl/AccessControlEntryFilter.html#matches(org.apache.kafka.common.acl.AccessControlEntry)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Acl.AccessControlEntry"/></param>
         /// <returns><see cref="bool"/></returns>
@@ -121,7 +121,7 @@ namespace Org.Apache.Kafka.Common.Acl
             return IExecuteWithSignature<bool>("matches", "(Lorg/apache/kafka/common/acl/AccessControlEntry;)Z", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/acl/AccessControlEntryFilter.html#matchesAtMostOne()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/acl/AccessControlEntryFilter.html#matchesAtMostOne()"/>
         /// </summary>
         /// <returns><see cref="bool"/></returns>
         public bool MatchesAtMostOne()
@@ -129,7 +129,7 @@ namespace Org.Apache.Kafka.Common.Acl
             return IExecuteWithSignature<bool>("matchesAtMostOne", "()Z");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/acl/AccessControlEntryFilter.html#findIndefiniteField()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/acl/AccessControlEntryFilter.html#findIndefiniteField()"/>
         /// </summary>
         /// <returns><see cref="Java.Lang.String"/></returns>
         public Java.Lang.String FindIndefiniteField()
@@ -137,7 +137,7 @@ namespace Org.Apache.Kafka.Common.Acl
             return IExecuteWithSignature<Java.Lang.String>("findIndefiniteField", "()Ljava/lang/String;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/acl/AccessControlEntryFilter.html#host()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/acl/AccessControlEntryFilter.html#host()"/>
         /// </summary>
         /// <returns><see cref="Java.Lang.String"/></returns>
         public Java.Lang.String Host()
@@ -145,7 +145,7 @@ namespace Org.Apache.Kafka.Common.Acl
             return IExecuteWithSignature<Java.Lang.String>("host", "()Ljava/lang/String;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/acl/AccessControlEntryFilter.html#principal()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/acl/AccessControlEntryFilter.html#principal()"/>
         /// </summary>
         /// <returns><see cref="Java.Lang.String"/></returns>
         public Java.Lang.String Principal()
@@ -153,7 +153,7 @@ namespace Org.Apache.Kafka.Common.Acl
             return IExecuteWithSignature<Java.Lang.String>("principal", "()Ljava/lang/String;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/acl/AccessControlEntryFilter.html#operation()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/acl/AccessControlEntryFilter.html#operation()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.Acl.AclOperation"/></returns>
         public Org.Apache.Kafka.Common.Acl.AclOperation Operation()
@@ -161,7 +161,7 @@ namespace Org.Apache.Kafka.Common.Acl
             return IExecuteWithSignature<Org.Apache.Kafka.Common.Acl.AclOperation>("operation", "()Lorg/apache/kafka/common/acl/AclOperation;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/acl/AccessControlEntryFilter.html#permissionType()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/acl/AccessControlEntryFilter.html#permissionType()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.Acl.AclPermissionType"/></returns>
         public Org.Apache.Kafka.Common.Acl.AclPermissionType PermissionType()

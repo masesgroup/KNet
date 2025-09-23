@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common.Errors
 {
     #region InvalidGroupIdException declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/errors/InvalidGroupIdException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/errors/InvalidGroupIdException.html"/>
     /// </summary>
     public partial class InvalidGroupIdException : Org.Apache.Kafka.Common.Errors.ApiException
     {

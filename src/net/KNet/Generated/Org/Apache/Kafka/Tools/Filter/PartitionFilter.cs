@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Tools.Filter
 {
     #region PartitionFilter declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/filter/PartitionFilter.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.0/org/apache/kafka/tools/filter/PartitionFilter.html"/>
     /// </summary>
     public partial class PartitionFilter : MASES.JCOBridge.C2JBridge.JVMBridgeBase<PartitionFilter>
     {
@@ -66,7 +66,7 @@ namespace Org.Apache.Kafka.Tools.Filter
         // TODO: complete the class
         #region PartitionRangeFilter declaration
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/filter/PartitionFilter.PartitionRangeFilter.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.0/org/apache/kafka/tools/filter/PartitionFilter.PartitionRangeFilter.html"/>
         /// </summary>
         public partial class PartitionRangeFilter : Org.Apache.Kafka.Tools.Filter.PartitionFilter
         {
@@ -107,7 +107,7 @@ namespace Org.Apache.Kafka.Tools.Filter
 
         #region PartitionsSetFilter declaration
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/filter/PartitionFilter.PartitionsSetFilter.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.0/org/apache/kafka/tools/filter/PartitionFilter.PartitionsSetFilter.html"/>
         /// </summary>
         public partial class PartitionsSetFilter : Org.Apache.Kafka.Tools.Filter.PartitionFilter
         {
@@ -148,7 +148,7 @@ namespace Org.Apache.Kafka.Tools.Filter
 
         #region UniquePartitionFilter declaration
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/filter/PartitionFilter.UniquePartitionFilter.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.0/org/apache/kafka/tools/filter/PartitionFilter.UniquePartitionFilter.html"/>
         /// </summary>
         public partial class UniquePartitionFilter : Org.Apache.Kafka.Tools.Filter.PartitionFilter
         {
@@ -193,7 +193,7 @@ namespace Org.Apache.Kafka.Tools.Filter
 
     #region IPartitionFilter
     /// <summary>
-    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/filter/PartitionFilter.html"/>
+    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.0/org/apache/kafka/tools/filter/PartitionFilter.html"/>
     /// </summary>
     public partial interface IPartitionFilter
     {
@@ -230,7 +230,7 @@ namespace Org.Apache.Kafka.Tools.Filter
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/filter/PartitionFilter.html#isPartitionAllowed(int)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.0/org/apache/kafka/tools/filter/PartitionFilter.html#isPartitionAllowed(int)"/>
         /// </summary>
         /// <param name="arg0"><see cref="int"/></param>
         /// <returns><see cref="bool"/></returns>
@@ -247,7 +247,7 @@ namespace Org.Apache.Kafka.Tools.Filter
         {
             #region Constructors
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/filter/PartitionFilter.PartitionRangeFilter.html#%3Cinit%3E(int,int)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.0/org/apache/kafka/tools/filter/PartitionFilter.PartitionRangeFilter.html#%3Cinit%3E(int,int)"/>
             /// </summary>
             /// <param name="arg0"><see cref="int"/></param>
             /// <param name="arg1"><see cref="int"/></param>
@@ -272,7 +272,7 @@ namespace Org.Apache.Kafka.Tools.Filter
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/filter/PartitionFilter.PartitionRangeFilter.html#isPartitionAllowed(int)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.0/org/apache/kafka/tools/filter/PartitionFilter.PartitionRangeFilter.html#isPartitionAllowed(int)"/>
             /// </summary>
             /// <param name="arg0"><see cref="int"/></param>
             /// <returns><see cref="bool"/></returns>
@@ -296,7 +296,7 @@ namespace Org.Apache.Kafka.Tools.Filter
         {
             #region Constructors
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/filter/PartitionFilter.PartitionsSetFilter.html#%3Cinit%3E(java.util.Set)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.0/org/apache/kafka/tools/filter/PartitionFilter.PartitionsSetFilter.html#%3Cinit%3E(java.util.Set)"/>
             /// </summary>
             /// <param name="arg0"><see cref="Java.Util.Set"/></param>
             public PartitionsSetFilter(Java.Util.Set<Java.Lang.Integer> arg0)
@@ -320,7 +320,7 @@ namespace Org.Apache.Kafka.Tools.Filter
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/filter/PartitionFilter.PartitionsSetFilter.html#isPartitionAllowed(int)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.0/org/apache/kafka/tools/filter/PartitionFilter.PartitionsSetFilter.html#isPartitionAllowed(int)"/>
             /// </summary>
             /// <param name="arg0"><see cref="int"/></param>
             /// <returns><see cref="bool"/></returns>
@@ -344,7 +344,7 @@ namespace Org.Apache.Kafka.Tools.Filter
         {
             #region Constructors
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/filter/PartitionFilter.UniquePartitionFilter.html#%3Cinit%3E(int)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.0/org/apache/kafka/tools/filter/PartitionFilter.UniquePartitionFilter.html#%3Cinit%3E(int)"/>
             /// </summary>
             /// <param name="arg0"><see cref="int"/></param>
             public UniquePartitionFilter(int arg0)
@@ -368,7 +368,7 @@ namespace Org.Apache.Kafka.Tools.Filter
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/filter/PartitionFilter.UniquePartitionFilter.html#isPartitionAllowed(int)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.0/org/apache/kafka/tools/filter/PartitionFilter.UniquePartitionFilter.html#isPartitionAllowed(int)"/>
             /// </summary>
             /// <param name="arg0"><see cref="int"/></param>
             /// <returns><see cref="bool"/></returns>

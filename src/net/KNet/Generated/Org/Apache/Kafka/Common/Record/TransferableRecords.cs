@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common.Record
 {
     #region TransferableRecords declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/TransferableRecords.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/record/TransferableRecords.html"/>
     /// </summary>
     public partial class TransferableRecords : MASES.JCOBridge.C2JBridge.JVMBridgeBase<TransferableRecords>
     {
@@ -70,7 +70,7 @@ namespace Org.Apache.Kafka.Common.Record
 
     #region ITransferableRecords
     /// <summary>
-    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/TransferableRecords.html"/>
+    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/record/TransferableRecords.html"/>
     /// </summary>
     public partial interface ITransferableRecords
     {

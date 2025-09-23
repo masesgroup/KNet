@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Tools.Reassign
 {
     #region ReassignPartitionsCommand declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/reassign/ReassignPartitionsCommand.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.0/org/apache/kafka/tools/reassign/ReassignPartitionsCommand.html"/>
     /// </summary>
     public partial class ReassignPartitionsCommand : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ReassignPartitionsCommand>, MASES.JCOBridge.C2JBridge.IJVMBridgeMain
     {
@@ -83,7 +83,7 @@ namespace Org.Apache.Kafka.Tools.Reassign
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/reassign/ReassignPartitionsCommand.html#formatAsReassignmentJson(java.util.Map,java.util.Map)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.0/org/apache/kafka/tools/reassign/ReassignPartitionsCommand.html#formatAsReassignmentJson(java.util.Map,java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <param name="arg1"><see cref="Java.Util.Map"/></param>
@@ -94,7 +94,7 @@ namespace Org.Apache.Kafka.Tools.Reassign
             return SExecuteWithSignature<Java.Lang.String>(LocalBridgeClazz, "formatAsReassignmentJson", "(Ljava/util/Map;Ljava/util/Map;)Ljava/lang/String;", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/reassign/ReassignPartitionsCommand.html#generateAssignment(org.apache.kafka.clients.admin.Admin,java.lang.String,java.lang.String,java.lang.Boolean)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.0/org/apache/kafka/tools/reassign/ReassignPartitionsCommand.html#generateAssignment(org.apache.kafka.clients.admin.Admin,java.lang.String,java.lang.String,java.lang.Boolean)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Clients.Admin.Admin"/></param>
         /// <param name="arg1"><see cref="Java.Lang.String"/></param>
@@ -109,7 +109,7 @@ namespace Org.Apache.Kafka.Tools.Reassign
             return SExecuteWithSignature<Java.Util.Map.Entry<Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Java.Util.List<Java.Lang.Integer>>, Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Java.Util.List<Java.Lang.Integer>>>>(LocalBridgeClazz, "generateAssignment", "(Lorg/apache/kafka/clients/admin/Admin;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Boolean;)Ljava/util/Map$Entry;", arg0, arg1, arg2, arg3);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/reassign/ReassignPartitionsCommand.html#executeAssignment(org.apache.kafka.clients.admin.Admin,java.lang.Boolean,java.lang.String,java.lang.Long,java.lang.Long,java.lang.Long,org.apache.kafka.common.utils.Time,boolean)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.0/org/apache/kafka/tools/reassign/ReassignPartitionsCommand.html#executeAssignment(org.apache.kafka.clients.admin.Admin,java.lang.Boolean,java.lang.String,java.lang.Long,java.lang.Long,java.lang.Long,org.apache.kafka.common.utils.Time,boolean)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Clients.Admin.Admin"/></param>
         /// <param name="arg1"><see cref="Java.Lang.Boolean"/></param>
@@ -128,7 +128,7 @@ namespace Org.Apache.Kafka.Tools.Reassign
             SExecuteWithSignature(LocalBridgeClazz, "executeAssignment", "(Lorg/apache/kafka/clients/admin/Admin;Ljava/lang/Boolean;Ljava/lang/String;Ljava/lang/Long;Ljava/lang/Long;Ljava/lang/Long;Lorg/apache/kafka/common/utils/Time;Z)V", arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/reassign/ReassignPartitionsCommand.html#main(java.lang.String[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.0/org/apache/kafka/tools/reassign/ReassignPartitionsCommand.html#main(java.lang.String[])"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         public static void Main(Java.Lang.String[] arg0)

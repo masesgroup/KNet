@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common.Security.Ssl
 {
     #region SslPrincipalMapper declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/security/ssl/SslPrincipalMapper.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/security/ssl/SslPrincipalMapper.html"/>
     /// </summary>
     public partial class SslPrincipalMapper : MASES.JCOBridge.C2JBridge.JVMBridgeBase<SslPrincipalMapper>
     {
@@ -64,7 +64,7 @@ namespace Org.Apache.Kafka.Common.Security.Ssl
         // TODO: complete the class
         #region NoMatchingRule declaration
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/security/ssl/SslPrincipalMapper.NoMatchingRule.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/security/ssl/SslPrincipalMapper.NoMatchingRule.html"/>
         /// </summary>
         public partial class NoMatchingRule : Java.Io.IOException
         {
@@ -93,7 +93,7 @@ namespace Org.Apache.Kafka.Common.Security.Ssl
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/security/ssl/SslPrincipalMapper.html#%3Cinit%3E(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/security/ssl/SslPrincipalMapper.html#%3Cinit%3E(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         public SslPrincipalMapper(Java.Lang.String arg0)
@@ -113,7 +113,7 @@ namespace Org.Apache.Kafka.Common.Security.Ssl
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/security/ssl/SslPrincipalMapper.html#fromRules(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/security/ssl/SslPrincipalMapper.html#fromRules(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.Security.Ssl.SslPrincipalMapper"/></returns>
@@ -126,7 +126,7 @@ namespace Org.Apache.Kafka.Common.Security.Ssl
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/security/ssl/SslPrincipalMapper.html#getName(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/security/ssl/SslPrincipalMapper.html#getName(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Java.Lang.String"/></returns>

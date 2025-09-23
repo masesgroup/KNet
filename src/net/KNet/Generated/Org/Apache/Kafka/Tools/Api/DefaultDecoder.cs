@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Tools.Api
 {
     #region DefaultDecoder declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools-api/4.0.0/org/apache/kafka/tools/api/DefaultDecoder.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools-api/4.1.0/org/apache/kafka/tools/api/DefaultDecoder.html"/>
     /// </summary>
     public partial class DefaultDecoder : Org.Apache.Kafka.Tools.Api.Decoder<byte[]>
     {
@@ -87,7 +87,7 @@ namespace Org.Apache.Kafka.Tools.Api
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools-api/4.0.0/org/apache/kafka/tools/api/DefaultDecoder.html#fromBytes(byte[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools-api/4.1.0/org/apache/kafka/tools/api/DefaultDecoder.html#fromBytes(byte[])"/>
         /// </summary>
         /// <param name="arg0"><see cref="byte"/></param>
         /// <returns><see cref="object"/></returns>

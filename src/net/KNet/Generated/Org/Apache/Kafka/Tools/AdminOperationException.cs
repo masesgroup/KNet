@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Tools
 {
     #region AdminOperationException declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/AdminOperationException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.0/org/apache/kafka/tools/AdminOperationException.html"/>
     /// </summary>
     public partial class AdminOperationException : Java.Lang.RuntimeException
     {

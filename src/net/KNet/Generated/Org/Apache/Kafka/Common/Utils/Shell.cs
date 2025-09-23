@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common.Utils
 {
     #region Shell declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/utils/Shell.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/utils/Shell.html"/>
     /// </summary>
     public partial class Shell : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Shell>
     {
@@ -66,7 +66,7 @@ namespace Org.Apache.Kafka.Common.Utils
         // TODO: complete the class
         #region ExitCodeException declaration
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/utils/Shell.ExitCodeException.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/utils/Shell.ExitCodeException.html"/>
         /// </summary>
         public partial class ExitCodeException : Java.Io.IOException
         {
@@ -88,7 +88,7 @@ namespace Org.Apache.Kafka.Common.Utils
 
         #region ShellCommandExecutor declaration
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/utils/Shell.ShellCommandExecutor.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/utils/Shell.ShellCommandExecutor.html"/>
         /// </summary>
         public partial class ShellCommandExecutor : Org.Apache.Kafka.Common.Utils.Shell
         {
@@ -136,7 +136,7 @@ namespace Org.Apache.Kafka.Common.Utils
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/utils/Shell.html#%3Cinit%3E(long)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/utils/Shell.html#%3Cinit%3E(long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="long"/></param>
         public Shell(long arg0)
@@ -156,7 +156,7 @@ namespace Org.Apache.Kafka.Common.Utils
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/utils/Shell.html#execCommand(java.lang.String...)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/utils/Shell.html#execCommand(java.lang.String...)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Java.Lang.String"/></returns>
@@ -166,7 +166,7 @@ namespace Org.Apache.Kafka.Common.Utils
             if (arg0.Length == 0) return SExecuteWithSignature<Java.Lang.String>(LocalBridgeClazz, "execCommand", "([Ljava/lang/String;)Ljava/lang/String;"); else return SExecuteWithSignature<Java.Lang.String>(LocalBridgeClazz, "execCommand", "([Ljava/lang/String;)Ljava/lang/String;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/utils/Shell.html#execCommand(java.lang.String[],long)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/utils/Shell.html#execCommand(java.lang.String[],long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="long"/></param>
@@ -181,7 +181,7 @@ namespace Org.Apache.Kafka.Common.Utils
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/utils/Shell.html#exitCode()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/utils/Shell.html#exitCode()"/>
         /// </summary>
         /// <returns><see cref="int"/></returns>
         public int ExitCode()
@@ -189,7 +189,7 @@ namespace Org.Apache.Kafka.Common.Utils
             return IExecuteWithSignature<int>("exitCode", "()I");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/utils/Shell.html#process()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/utils/Shell.html#process()"/>
         /// </summary>
         /// <returns><see cref="Java.Lang.Process"/></returns>
         public Java.Lang.Process Process()
@@ -236,7 +236,7 @@ namespace Org.Apache.Kafka.Common.Utils
         {
             #region Constructors
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/utils/Shell.ShellCommandExecutor.html#%3Cinit%3E(java.lang.String[],long)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/utils/Shell.ShellCommandExecutor.html#%3Cinit%3E(java.lang.String[],long)"/>
             /// </summary>
             /// <param name="arg0"><see cref="Java.Lang.String"/></param>
             /// <param name="arg1"><see cref="long"/></param>
@@ -261,7 +261,7 @@ namespace Org.Apache.Kafka.Common.Utils
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/utils/Shell.ShellCommandExecutor.html#output()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/utils/Shell.ShellCommandExecutor.html#output()"/>
             /// </summary>
             /// <returns><see cref="Java.Lang.String"/></returns>
             public Java.Lang.String Output()
@@ -269,7 +269,7 @@ namespace Org.Apache.Kafka.Common.Utils
                 return IExecuteWithSignature<Java.Lang.String>("output", "()Ljava/lang/String;");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/utils/Shell.ShellCommandExecutor.html#execute()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/utils/Shell.ShellCommandExecutor.html#execute()"/>
             /// </summary>
             /// <exception cref="Java.Io.IOException"/>
             public void Execute()

@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
 {
     #region MirrorHeartbeatTask declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.0.0/org/apache/kafka/connect/mirror/MirrorHeartbeatTask.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.1.0/org/apache/kafka/connect/mirror/MirrorHeartbeatTask.html"/>
     /// </summary>
     public partial class MirrorHeartbeatTask : Org.Apache.Kafka.Connect.Source.SourceTask
     {

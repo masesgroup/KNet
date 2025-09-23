@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common
 {
     #region GroupState declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/GroupState.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/GroupState.html"/>
     /// </summary>
     public partial class GroupState : Java.Lang.Enum<Org.Apache.Kafka.Common.GroupState>
     {
@@ -79,55 +79,55 @@ namespace Org.Apache.Kafka.Common
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/GroupState.html#ASSIGNING"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/GroupState.html#ASSIGNING"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.GroupState ASSIGNING { get { if (!_ASSIGNINGReady) { _ASSIGNINGContent = SGetField<Org.Apache.Kafka.Common.GroupState>(LocalBridgeClazz, "ASSIGNING"); _ASSIGNINGReady = true; } return _ASSIGNINGContent; } }
         private static Org.Apache.Kafka.Common.GroupState _ASSIGNINGContent = default;
         private static bool _ASSIGNINGReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/GroupState.html#COMPLETING_REBALANCE"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/GroupState.html#COMPLETING_REBALANCE"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.GroupState COMPLETING_REBALANCE { get { if (!_COMPLETING_REBALANCEReady) { _COMPLETING_REBALANCEContent = SGetField<Org.Apache.Kafka.Common.GroupState>(LocalBridgeClazz, "COMPLETING_REBALANCE"); _COMPLETING_REBALANCEReady = true; } return _COMPLETING_REBALANCEContent; } }
         private static Org.Apache.Kafka.Common.GroupState _COMPLETING_REBALANCEContent = default;
         private static bool _COMPLETING_REBALANCEReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/GroupState.html#DEAD"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/GroupState.html#DEAD"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.GroupState DEAD { get { if (!_DEADReady) { _DEADContent = SGetField<Org.Apache.Kafka.Common.GroupState>(LocalBridgeClazz, "DEAD"); _DEADReady = true; } return _DEADContent; } }
         private static Org.Apache.Kafka.Common.GroupState _DEADContent = default;
         private static bool _DEADReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/GroupState.html#EMPTY"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/GroupState.html#EMPTY"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.GroupState EMPTY { get { if (!_EMPTYReady) { _EMPTYContent = SGetField<Org.Apache.Kafka.Common.GroupState>(LocalBridgeClazz, "EMPTY"); _EMPTYReady = true; } return _EMPTYContent; } }
         private static Org.Apache.Kafka.Common.GroupState _EMPTYContent = default;
         private static bool _EMPTYReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/GroupState.html#NOT_READY"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/GroupState.html#NOT_READY"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.GroupState NOT_READY { get { if (!_NOT_READYReady) { _NOT_READYContent = SGetField<Org.Apache.Kafka.Common.GroupState>(LocalBridgeClazz, "NOT_READY"); _NOT_READYReady = true; } return _NOT_READYContent; } }
         private static Org.Apache.Kafka.Common.GroupState _NOT_READYContent = default;
         private static bool _NOT_READYReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/GroupState.html#PREPARING_REBALANCE"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/GroupState.html#PREPARING_REBALANCE"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.GroupState PREPARING_REBALANCE { get { if (!_PREPARING_REBALANCEReady) { _PREPARING_REBALANCEContent = SGetField<Org.Apache.Kafka.Common.GroupState>(LocalBridgeClazz, "PREPARING_REBALANCE"); _PREPARING_REBALANCEReady = true; } return _PREPARING_REBALANCEContent; } }
         private static Org.Apache.Kafka.Common.GroupState _PREPARING_REBALANCEContent = default;
         private static bool _PREPARING_REBALANCEReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/GroupState.html#RECONCILING"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/GroupState.html#RECONCILING"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.GroupState RECONCILING { get { if (!_RECONCILINGReady) { _RECONCILINGContent = SGetField<Org.Apache.Kafka.Common.GroupState>(LocalBridgeClazz, "RECONCILING"); _RECONCILINGReady = true; } return _RECONCILINGContent; } }
         private static Org.Apache.Kafka.Common.GroupState _RECONCILINGContent = default;
         private static bool _RECONCILINGReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/GroupState.html#STABLE"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/GroupState.html#STABLE"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.GroupState STABLE { get { if (!_STABLEReady) { _STABLEContent = SGetField<Org.Apache.Kafka.Common.GroupState>(LocalBridgeClazz, "STABLE"); _STABLEReady = true; } return _STABLEContent; } }
         private static Org.Apache.Kafka.Common.GroupState _STABLEContent = default;
         private static bool _STABLEReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/GroupState.html#UNKNOWN"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/GroupState.html#UNKNOWN"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.GroupState UNKNOWN { get { if (!_UNKNOWNReady) { _UNKNOWNContent = SGetField<Org.Apache.Kafka.Common.GroupState>(LocalBridgeClazz, "UNKNOWN"); _UNKNOWNReady = true; } return _UNKNOWNContent; } }
         private static Org.Apache.Kafka.Common.GroupState _UNKNOWNContent = default;
@@ -137,7 +137,7 @@ namespace Org.Apache.Kafka.Common
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/GroupState.html#groupStatesForType(org.apache.kafka.common.GroupType)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/GroupState.html#groupStatesForType(org.apache.kafka.common.GroupType)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.GroupType"/></param>
         /// <returns><see cref="Java.Util.Set"/></returns>
@@ -146,7 +146,7 @@ namespace Org.Apache.Kafka.Common
             return SExecuteWithSignature<Java.Util.Set<Org.Apache.Kafka.Common.GroupState>>(LocalBridgeClazz, "groupStatesForType", "(Lorg/apache/kafka/common/GroupType;)Ljava/util/Set;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/GroupState.html#parse(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/GroupState.html#parse(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.GroupState"/></returns>
@@ -155,7 +155,7 @@ namespace Org.Apache.Kafka.Common
             return SExecuteWithSignature<Org.Apache.Kafka.Common.GroupState>(LocalBridgeClazz, "parse", "(Ljava/lang/String;)Lorg/apache/kafka/common/GroupState;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/GroupState.html#valueOf(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/GroupState.html#valueOf(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.GroupState"/></returns>
@@ -164,7 +164,7 @@ namespace Org.Apache.Kafka.Common
             return SExecuteWithSignature<Org.Apache.Kafka.Common.GroupState>(LocalBridgeClazz, "valueOf", "(Ljava/lang/String;)Lorg/apache/kafka/common/GroupState;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/GroupState.html#values()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/GroupState.html#values()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.GroupState"/></returns>
         public static Org.Apache.Kafka.Common.GroupState[] Values()

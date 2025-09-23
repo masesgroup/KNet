@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Connect.Source
 {
     #region TransactionContext declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.0.0/org/apache/kafka/connect/source/TransactionContext.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.1.0/org/apache/kafka/connect/source/TransactionContext.html"/>
     /// </summary>
     public partial class TransactionContext : MASES.JCOBridge.C2JBridge.JVMBridgeBase<TransactionContext>
     {
@@ -70,7 +70,7 @@ namespace Org.Apache.Kafka.Connect.Source
 
     #region ITransactionContext
     /// <summary>
-    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.0.0/org/apache/kafka/connect/source/TransactionContext.html"/>
+    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.1.0/org/apache/kafka/connect/source/TransactionContext.html"/>
     /// </summary>
     public partial interface ITransactionContext
     {
@@ -107,14 +107,14 @@ namespace Org.Apache.Kafka.Connect.Source
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.0.0/org/apache/kafka/connect/source/TransactionContext.html#abortTransaction()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.1.0/org/apache/kafka/connect/source/TransactionContext.html#abortTransaction()"/>
         /// </summary>
         public void AbortTransaction()
         {
             IExecuteWithSignature("abortTransaction", "()V");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.0.0/org/apache/kafka/connect/source/TransactionContext.html#abortTransaction(org.apache.kafka.connect.source.SourceRecord)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.1.0/org/apache/kafka/connect/source/TransactionContext.html#abortTransaction(org.apache.kafka.connect.source.SourceRecord)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Connect.Source.SourceRecord"/></param>
         public void AbortTransaction(Org.Apache.Kafka.Connect.Source.SourceRecord arg0)
@@ -122,14 +122,14 @@ namespace Org.Apache.Kafka.Connect.Source
             IExecuteWithSignature("abortTransaction", "(Lorg/apache/kafka/connect/source/SourceRecord;)V", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.0.0/org/apache/kafka/connect/source/TransactionContext.html#commitTransaction()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.1.0/org/apache/kafka/connect/source/TransactionContext.html#commitTransaction()"/>
         /// </summary>
         public void CommitTransaction()
         {
             IExecuteWithSignature("commitTransaction", "()V");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.0.0/org/apache/kafka/connect/source/TransactionContext.html#commitTransaction(org.apache.kafka.connect.source.SourceRecord)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.1.0/org/apache/kafka/connect/source/TransactionContext.html#commitTransaction(org.apache.kafka.connect.source.SourceRecord)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Connect.Source.SourceRecord"/></param>
         public void CommitTransaction(Org.Apache.Kafka.Connect.Source.SourceRecord arg0)

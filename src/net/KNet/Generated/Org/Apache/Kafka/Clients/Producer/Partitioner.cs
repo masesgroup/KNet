@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Clients.Producer
 {
     #region Partitioner declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/producer/Partitioner.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/producer/Partitioner.html"/>
     /// </summary>
     public partial class Partitioner : MASES.JCOBridge.C2JBridge.JVMBridgeListener
     {
@@ -100,7 +100,7 @@ namespace Org.Apache.Kafka.Clients.Producer
 
     #region IPartitioner
     /// <summary>
-    /// .NET interface for org.mases.knet.generated.org.apache.kafka.clients.producer.Partitioner implementing <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/producer/Partitioner.html"/>
+    /// .NET interface for org.mases.knet.generated.org.apache.kafka.clients.producer.Partitioner implementing <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/producer/Partitioner.html"/>
     /// </summary>
     public partial interface IPartitioner
     {
@@ -148,7 +148,7 @@ namespace Org.Apache.Kafka.Clients.Producer
         }
 
         /// <summary>
-        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/producer/Partitioner.html#partition(java.lang.String,java.lang.Object,byte[],java.lang.Object,byte[],org.apache.kafka.common.Cluster)"/>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/producer/Partitioner.html#partition(java.lang.String,java.lang.Object,byte[],java.lang.Object,byte[],org.apache.kafka.common.Cluster)"/>
         /// </summary>
         /// <remarks>If <see cref="OnPartition"/> has a value it takes precedence over corresponding class method</remarks>
         public global::System.Func<Java.Lang.String, object, byte[], object, byte[], Org.Apache.Kafka.Common.Cluster, int> OnPartition { get; set; } = null;
@@ -163,7 +163,7 @@ namespace Org.Apache.Kafka.Clients.Producer
         }
 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/producer/Partitioner.html#partition(java.lang.String,java.lang.Object,byte[],java.lang.Object,byte[],org.apache.kafka.common.Cluster)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/producer/Partitioner.html#partition(java.lang.String,java.lang.Object,byte[],java.lang.Object,byte[],org.apache.kafka.common.Cluster)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="object"/></param>
@@ -178,7 +178,7 @@ namespace Org.Apache.Kafka.Clients.Producer
         }
 
         /// <summary>
-        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/producer/Partitioner.html#close()"/>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/producer/Partitioner.html#close()"/>
         /// </summary>
         /// <remarks>If <see cref="OnClose"/> has a value it takes precedence over corresponding class method</remarks>
         public global::System.Action OnClose { get; set; } = null;
@@ -193,7 +193,7 @@ namespace Org.Apache.Kafka.Clients.Producer
         }
 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/producer/Partitioner.html#close()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/producer/Partitioner.html#close()"/>
         /// </summary>
         public virtual void Close()
         {
@@ -201,7 +201,7 @@ namespace Org.Apache.Kafka.Clients.Producer
         }
 
         /// <summary>
-        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/Configurable.html#configure(java.util.Map)"/>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/Configurable.html#configure(java.util.Map)"/>
         /// </summary>
         /// <remarks>If <see cref="OnConfigure"/> has a value it takes precedence over corresponding class method</remarks>
         public global::System.Action<Java.Util.Map<Java.Lang.String, object>> OnConfigure { get; set; } = null;
@@ -216,7 +216,7 @@ namespace Org.Apache.Kafka.Clients.Producer
         }
 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/Configurable.html#configure(java.util.Map)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/Configurable.html#configure(java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         public virtual void Configure(Java.Util.Map<Java.Lang.String, object> arg0)
@@ -255,7 +255,7 @@ namespace Org.Apache.Kafka.Clients.Producer
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/producer/Partitioner.html#partition(java.lang.String,java.lang.Object,byte[],java.lang.Object,byte[],org.apache.kafka.common.Cluster)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/producer/Partitioner.html#partition(java.lang.String,java.lang.Object,byte[],java.lang.Object,byte[],org.apache.kafka.common.Cluster)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="object"/></param>
@@ -269,14 +269,14 @@ namespace Org.Apache.Kafka.Clients.Producer
             return IExecuteWithSignature<int>("partition", "(Ljava/lang/String;Ljava/lang/Object;[BLjava/lang/Object;[BLorg/apache/kafka/common/Cluster;)I", arg0, arg1, arg2, arg3, arg4, arg5);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/producer/Partitioner.html#close()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/producer/Partitioner.html#close()"/>
         /// </summary>
         public override void Close()
         {
             IExecuteWithSignature("close", "()V");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/Configurable.html#configure(java.util.Map)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/Configurable.html#configure(java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         public override void Configure(Java.Util.Map<Java.Lang.String, object> arg0)

@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 {
     #region Suppressed declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/Suppressed.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/kstream/Suppressed.html"/>
     /// </summary>
     public partial class Suppressed : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Suppressed>
     {
@@ -66,7 +66,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         // TODO: complete the class
         #region BufferConfig declaration
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/Suppressed.BufferConfig.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/kstream/Suppressed.BufferConfig.html"/>
         /// </summary>
         public partial class BufferConfig : MASES.JCOBridge.C2JBridge.JVMBridgeBase<BufferConfig>
         {
@@ -109,7 +109,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
         #region BufferConfig<BC> declaration
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/Suppressed.BufferConfig.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/kstream/Suppressed.BufferConfig.html"/>
         /// </summary>
         /// <typeparam name="BC"><see cref="Org.Apache.Kafka.Streams.Kstream.Suppressed.BufferConfig{BC}"/></typeparam>
         public partial class BufferConfig<BC> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<BufferConfig<BC>> where BC : Org.Apache.Kafka.Streams.Kstream.Suppressed.BufferConfig<BC>
@@ -153,7 +153,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
         #region EagerBufferConfig declaration
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/Suppressed.EagerBufferConfig.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/kstream/Suppressed.EagerBufferConfig.html"/>
         /// </summary>
         public partial class EagerBufferConfig : Org.Apache.Kafka.Streams.Kstream.Suppressed.BufferConfig<Org.Apache.Kafka.Streams.Kstream.Suppressed.EagerBufferConfig>
         {
@@ -196,7 +196,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
         #region StrictBufferConfig declaration
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/Suppressed.StrictBufferConfig.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/kstream/Suppressed.StrictBufferConfig.html"/>
         /// </summary>
         public partial class StrictBufferConfig : Org.Apache.Kafka.Streams.Kstream.Suppressed.BufferConfig<Org.Apache.Kafka.Streams.Kstream.Suppressed.StrictBufferConfig>
         {
@@ -243,7 +243,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
     #region Suppressed<K> declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/Suppressed.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/kstream/Suppressed.html"/>
     /// </summary>
     /// <typeparam name="K"></typeparam>
     public partial class Suppressed<K> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Suppressed<K>>
@@ -302,7 +302,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/Suppressed.html#untilTimeLimit(java.time.Duration,org.apache.kafka.streams.kstream.Suppressed.BufferConfig)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/kstream/Suppressed.html#untilTimeLimit(java.time.Duration,org.apache.kafka.streams.kstream.Suppressed.BufferConfig)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Time.Duration"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Streams.Kstream.Suppressed.BufferConfig"/></param>
@@ -312,7 +312,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
             return SExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.Suppressed>(LocalBridgeClazz, "untilTimeLimit", "(Ljava/time/Duration;Lorg/apache/kafka/streams/kstream/Suppressed$BufferConfig;)Lorg/apache/kafka/streams/kstream/Suppressed;", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/Suppressed.html#untilWindowCloses(org.apache.kafka.streams.kstream.Suppressed.StrictBufferConfig)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/kstream/Suppressed.html#untilWindowCloses(org.apache.kafka.streams.kstream.Suppressed.StrictBufferConfig)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Kstream.Suppressed.StrictBufferConfig"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.Suppressed"/></returns>
@@ -345,7 +345,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
             #region Static methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/Suppressed.BufferConfig.html#maxBytes(long)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/kstream/Suppressed.BufferConfig.html#maxBytes(long)"/>
             /// </summary>
             /// <param name="arg0"><see cref="long"/></param>
             /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.Suppressed.EagerBufferConfig"/></returns>
@@ -354,7 +354,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
                 return SExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.Suppressed.EagerBufferConfig>(LocalBridgeClazz, "maxBytes", "(J)Lorg/apache/kafka/streams/kstream/Suppressed$EagerBufferConfig;", arg0);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/Suppressed.BufferConfig.html#maxRecords(long)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/kstream/Suppressed.BufferConfig.html#maxRecords(long)"/>
             /// </summary>
             /// <param name="arg0"><see cref="long"/></param>
             /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.Suppressed.EagerBufferConfig"/></returns>
@@ -363,7 +363,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
                 return SExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.Suppressed.EagerBufferConfig>(LocalBridgeClazz, "maxRecords", "(J)Lorg/apache/kafka/streams/kstream/Suppressed$EagerBufferConfig;", arg0);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/Suppressed.BufferConfig.html#unbounded()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/kstream/Suppressed.BufferConfig.html#unbounded()"/>
             /// </summary>
             /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.Suppressed.StrictBufferConfig"/></returns>
             public static Org.Apache.Kafka.Streams.Kstream.Suppressed.StrictBufferConfig Unbounded()
@@ -375,7 +375,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/Suppressed.BufferConfig.html#withLoggingDisabled()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/kstream/Suppressed.BufferConfig.html#withLoggingDisabled()"/>
             /// </summary>
             /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.Suppressed.BufferConfig"/></returns>
             public Org.Apache.Kafka.Streams.Kstream.Suppressed.BufferConfig WithLoggingDisabled()
@@ -383,7 +383,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
                 return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.Suppressed.BufferConfig>("withLoggingDisabled", "()Lorg/apache/kafka/streams/kstream/Suppressed$BufferConfig;");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/Suppressed.BufferConfig.html#withLoggingEnabled(java.util.Map)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/kstream/Suppressed.BufferConfig.html#withLoggingEnabled(java.util.Map)"/>
             /// </summary>
             /// <param name="arg0"><see cref="Java.Util.Map"/></param>
             /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.Suppressed.BufferConfig"/></returns>
@@ -392,7 +392,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
                 return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.Suppressed.BufferConfig>("withLoggingEnabled", "(Ljava/util/Map;)Lorg/apache/kafka/streams/kstream/Suppressed$BufferConfig;", arg0);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/Suppressed.BufferConfig.html#withMaxBytes(long)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/kstream/Suppressed.BufferConfig.html#withMaxBytes(long)"/>
             /// </summary>
             /// <param name="arg0"><see cref="long"/></param>
             /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.Suppressed.BufferConfig"/></returns>
@@ -401,7 +401,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
                 return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.Suppressed.BufferConfig>("withMaxBytes", "(J)Lorg/apache/kafka/streams/kstream/Suppressed$BufferConfig;", arg0);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/Suppressed.BufferConfig.html#withMaxRecords(long)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/kstream/Suppressed.BufferConfig.html#withMaxRecords(long)"/>
             /// </summary>
             /// <param name="arg0"><see cref="long"/></param>
             /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.Suppressed.BufferConfig"/></returns>
@@ -410,7 +410,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
                 return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.Suppressed.BufferConfig>("withMaxRecords", "(J)Lorg/apache/kafka/streams/kstream/Suppressed$BufferConfig;", arg0);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/Suppressed.BufferConfig.html#emitEarlyWhenFull()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/kstream/Suppressed.BufferConfig.html#emitEarlyWhenFull()"/>
             /// </summary>
             /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.Suppressed.EagerBufferConfig"/></returns>
             public Org.Apache.Kafka.Streams.Kstream.Suppressed.EagerBufferConfig EmitEarlyWhenFull()
@@ -418,7 +418,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
                 return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.Suppressed.EagerBufferConfig>("emitEarlyWhenFull", "()Lorg/apache/kafka/streams/kstream/Suppressed$EagerBufferConfig;");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/Suppressed.BufferConfig.html#shutDownWhenFull()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/kstream/Suppressed.BufferConfig.html#shutDownWhenFull()"/>
             /// </summary>
             /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.Suppressed.StrictBufferConfig"/></returns>
             public Org.Apache.Kafka.Streams.Kstream.Suppressed.StrictBufferConfig ShutDownWhenFull()
@@ -426,7 +426,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
                 return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.Suppressed.StrictBufferConfig>("shutDownWhenFull", "()Lorg/apache/kafka/streams/kstream/Suppressed$StrictBufferConfig;");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/Suppressed.BufferConfig.html#withNoBound()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/kstream/Suppressed.BufferConfig.html#withNoBound()"/>
             /// </summary>
             /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.Suppressed.StrictBufferConfig"/></returns>
             public Org.Apache.Kafka.Streams.Kstream.Suppressed.StrictBufferConfig WithNoBound()
@@ -465,7 +465,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
             #region Static methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/Suppressed.BufferConfig.html#maxBytes(long)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/kstream/Suppressed.BufferConfig.html#maxBytes(long)"/>
             /// </summary>
             /// <param name="arg0"><see cref="long"/></param>
             /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.Suppressed.EagerBufferConfig"/></returns>
@@ -474,7 +474,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
                 return SExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.Suppressed.EagerBufferConfig>(LocalBridgeClazz, "maxBytes", "(J)Lorg/apache/kafka/streams/kstream/Suppressed$EagerBufferConfig;", arg0);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/Suppressed.BufferConfig.html#maxRecords(long)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/kstream/Suppressed.BufferConfig.html#maxRecords(long)"/>
             /// </summary>
             /// <param name="arg0"><see cref="long"/></param>
             /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.Suppressed.EagerBufferConfig"/></returns>
@@ -483,7 +483,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
                 return SExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.Suppressed.EagerBufferConfig>(LocalBridgeClazz, "maxRecords", "(J)Lorg/apache/kafka/streams/kstream/Suppressed$EagerBufferConfig;", arg0);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/Suppressed.BufferConfig.html#unbounded()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/kstream/Suppressed.BufferConfig.html#unbounded()"/>
             /// </summary>
             /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.Suppressed.StrictBufferConfig"/></returns>
             public static Org.Apache.Kafka.Streams.Kstream.Suppressed.StrictBufferConfig Unbounded()
@@ -495,7 +495,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/Suppressed.BufferConfig.html#withLoggingDisabled()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/kstream/Suppressed.BufferConfig.html#withLoggingDisabled()"/>
             /// </summary>
             /// <returns><typeparamref name="BC"/></returns>
             public BC WithLoggingDisabled()
@@ -503,7 +503,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
                 return IExecuteWithSignature<BC>("withLoggingDisabled", "()Lorg/apache/kafka/streams/kstream/Suppressed$BufferConfig;");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/Suppressed.BufferConfig.html#withLoggingEnabled(java.util.Map)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/kstream/Suppressed.BufferConfig.html#withLoggingEnabled(java.util.Map)"/>
             /// </summary>
             /// <param name="arg0"><see cref="Java.Util.Map"/></param>
             /// <returns><typeparamref name="BC"/></returns>
@@ -512,7 +512,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
                 return IExecuteWithSignature<BC>("withLoggingEnabled", "(Ljava/util/Map;)Lorg/apache/kafka/streams/kstream/Suppressed$BufferConfig;", arg0);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/Suppressed.BufferConfig.html#withMaxBytes(long)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/kstream/Suppressed.BufferConfig.html#withMaxBytes(long)"/>
             /// </summary>
             /// <param name="arg0"><see cref="long"/></param>
             /// <returns><typeparamref name="BC"/></returns>
@@ -521,7 +521,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
                 return IExecuteWithSignature<BC>("withMaxBytes", "(J)Lorg/apache/kafka/streams/kstream/Suppressed$BufferConfig;", arg0);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/Suppressed.BufferConfig.html#withMaxRecords(long)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/kstream/Suppressed.BufferConfig.html#withMaxRecords(long)"/>
             /// </summary>
             /// <param name="arg0"><see cref="long"/></param>
             /// <returns><typeparamref name="BC"/></returns>
@@ -530,7 +530,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
                 return IExecuteWithSignature<BC>("withMaxRecords", "(J)Lorg/apache/kafka/streams/kstream/Suppressed$BufferConfig;", arg0);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/Suppressed.BufferConfig.html#emitEarlyWhenFull()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/kstream/Suppressed.BufferConfig.html#emitEarlyWhenFull()"/>
             /// </summary>
             /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.Suppressed.EagerBufferConfig"/></returns>
             public Org.Apache.Kafka.Streams.Kstream.Suppressed.EagerBufferConfig EmitEarlyWhenFull()
@@ -538,7 +538,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
                 return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.Suppressed.EagerBufferConfig>("emitEarlyWhenFull", "()Lorg/apache/kafka/streams/kstream/Suppressed$EagerBufferConfig;");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/Suppressed.BufferConfig.html#shutDownWhenFull()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/kstream/Suppressed.BufferConfig.html#shutDownWhenFull()"/>
             /// </summary>
             /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.Suppressed.StrictBufferConfig"/></returns>
             public Org.Apache.Kafka.Streams.Kstream.Suppressed.StrictBufferConfig ShutDownWhenFull()
@@ -546,7 +546,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
                 return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.Suppressed.StrictBufferConfig>("shutDownWhenFull", "()Lorg/apache/kafka/streams/kstream/Suppressed$StrictBufferConfig;");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/Suppressed.BufferConfig.html#withNoBound()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/kstream/Suppressed.BufferConfig.html#withNoBound()"/>
             /// </summary>
             /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.Suppressed.StrictBufferConfig"/></returns>
             public Org.Apache.Kafka.Streams.Kstream.Suppressed.StrictBufferConfig WithNoBound()
@@ -635,7 +635,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
     #region ISuppressed<K>
     /// <summary>
-    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/Suppressed.html"/>
+    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/kstream/Suppressed.html"/>
     /// </summary>
     public partial interface ISuppressed<K>
     {
@@ -672,7 +672,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/Suppressed.html#untilTimeLimit(java.time.Duration,org.apache.kafka.streams.kstream.Suppressed.BufferConfig)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/kstream/Suppressed.html#untilTimeLimit(java.time.Duration,org.apache.kafka.streams.kstream.Suppressed.BufferConfig)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Time.Duration"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Streams.Kstream.Suppressed.BufferConfig"/></param>
@@ -682,7 +682,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
             return SExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.Suppressed<K>>(LocalBridgeClazz, "untilTimeLimit", "(Ljava/time/Duration;Lorg/apache/kafka/streams/kstream/Suppressed$BufferConfig;)Lorg/apache/kafka/streams/kstream/Suppressed;", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/Suppressed.html#untilWindowCloses(org.apache.kafka.streams.kstream.Suppressed.StrictBufferConfig)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/kstream/Suppressed.html#untilWindowCloses(org.apache.kafka.streams.kstream.Suppressed.StrictBufferConfig)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Kstream.Suppressed.StrictBufferConfig"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.Suppressed"/></returns>

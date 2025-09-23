@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common.Memory
 {
     #region SimpleMemoryPool declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/memory/SimpleMemoryPool.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/memory/SimpleMemoryPool.html"/>
     /// </summary>
     public partial class SimpleMemoryPool : Org.Apache.Kafka.Common.Memory.MemoryPool
     {
@@ -71,7 +71,7 @@ namespace Org.Apache.Kafka.Common.Memory
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/memory/SimpleMemoryPool.html#%3Cinit%3E(long,int,boolean,org.apache.kafka.common.metrics.Sensor)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/memory/SimpleMemoryPool.html#%3Cinit%3E(long,int,boolean,org.apache.kafka.common.metrics.Sensor)"/>
         /// </summary>
         /// <param name="arg0"><see cref="long"/></param>
         /// <param name="arg1"><see cref="int"/></param>
@@ -98,7 +98,7 @@ namespace Org.Apache.Kafka.Common.Memory
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/memory/SimpleMemoryPool.html#isOutOfMemory()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/memory/SimpleMemoryPool.html#isOutOfMemory()"/>
         /// </summary>
         /// <returns><see cref="bool"/></returns>
         public bool IsOutOfMemory()
@@ -106,7 +106,7 @@ namespace Org.Apache.Kafka.Common.Memory
             return IExecuteWithSignature<bool>("isOutOfMemory", "()Z");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/memory/SimpleMemoryPool.html#tryAllocate(int)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/memory/SimpleMemoryPool.html#tryAllocate(int)"/>
         /// </summary>
         /// <param name="arg0"><see cref="int"/></param>
         /// <returns><see cref="Java.Nio.ByteBuffer"/></returns>
@@ -115,7 +115,7 @@ namespace Org.Apache.Kafka.Common.Memory
             return IExecuteWithSignature<Java.Nio.ByteBuffer>("tryAllocate", "(I)Ljava/nio/ByteBuffer;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/memory/SimpleMemoryPool.html#availableMemory()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/memory/SimpleMemoryPool.html#availableMemory()"/>
         /// </summary>
         /// <returns><see cref="long"/></returns>
         public long AvailableMemory()
@@ -123,7 +123,7 @@ namespace Org.Apache.Kafka.Common.Memory
             return IExecuteWithSignature<long>("availableMemory", "()J");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/memory/SimpleMemoryPool.html#size()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/memory/SimpleMemoryPool.html#size()"/>
         /// </summary>
         /// <returns><see cref="long"/></returns>
         public long Size()
@@ -131,7 +131,7 @@ namespace Org.Apache.Kafka.Common.Memory
             return IExecuteWithSignature<long>("size", "()J");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/memory/SimpleMemoryPool.html#release(java.nio.ByteBuffer)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/memory/SimpleMemoryPool.html#release(java.nio.ByteBuffer)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Nio.ByteBuffer"/></param>
         public void Release(Java.Nio.ByteBuffer arg0)

@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Connect.Util
 {
     #region Callback declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.0.0/org/apache/kafka/connect/util/Callback.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.1.0/org/apache/kafka/connect/util/Callback.html"/>
     /// </summary>
     public partial class Callback : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Callback>
     {
@@ -70,7 +70,7 @@ namespace Org.Apache.Kafka.Connect.Util
 
     #region Callback<V> declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.0.0/org/apache/kafka/connect/util/Callback.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.1.0/org/apache/kafka/connect/util/Callback.html"/>
     /// </summary>
     /// <typeparam name="V"></typeparam>
     public partial class Callback<V> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Callback<V>>
@@ -133,7 +133,7 @@ namespace Org.Apache.Kafka.Connect.Util
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.0.0/org/apache/kafka/connect/util/Callback.html#onCompletion(java.lang.Throwable,java.lang.Object)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.1.0/org/apache/kafka/connect/util/Callback.html#onCompletion(java.lang.Throwable,java.lang.Object)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.Throwable"/></param>
         /// <param name="arg1"><see cref="object"/></param>
@@ -142,7 +142,7 @@ namespace Org.Apache.Kafka.Connect.Util
             IExecuteWithSignature("onCompletion", "(Ljava/lang/Throwable;Ljava/lang/Object;)V", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.0.0/org/apache/kafka/connect/util/Callback.html#chainStaging(org.apache.kafka.connect.util.Callback)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.1.0/org/apache/kafka/connect/util/Callback.html#chainStaging(org.apache.kafka.connect.util.Callback)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Connect.Util.Callback"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Connect.Util.Callback"/></returns>
@@ -151,7 +151,7 @@ namespace Org.Apache.Kafka.Connect.Util
             return IExecuteWithSignature<Org.Apache.Kafka.Connect.Util.Callback>("chainStaging", "(Lorg/apache/kafka/connect/util/Callback;)Lorg/apache/kafka/connect/util/Callback;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.0.0/org/apache/kafka/connect/util/Callback.html#recordStage(org.apache.kafka.connect.util.Stage)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.1.0/org/apache/kafka/connect/util/Callback.html#recordStage(org.apache.kafka.connect.util.Stage)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Connect.Util.Stage"/></param>
         public void RecordStage(Org.Apache.Kafka.Connect.Util.Stage arg0)
@@ -171,7 +171,7 @@ namespace Org.Apache.Kafka.Connect.Util
 
     #region ICallback<V>
     /// <summary>
-    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.0.0/org/apache/kafka/connect/util/Callback.html"/>
+    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.1.0/org/apache/kafka/connect/util/Callback.html"/>
     /// </summary>
     public partial interface ICallback<V>
     {
@@ -212,7 +212,7 @@ namespace Org.Apache.Kafka.Connect.Util
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.0.0/org/apache/kafka/connect/util/Callback.html#onCompletion(java.lang.Throwable,java.lang.Object)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.1.0/org/apache/kafka/connect/util/Callback.html#onCompletion(java.lang.Throwable,java.lang.Object)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.Throwable"/></param>
         /// <param name="arg1"><typeparamref name="V"/></param>
@@ -221,7 +221,7 @@ namespace Org.Apache.Kafka.Connect.Util
             IExecuteWithSignature("onCompletion", "(Ljava/lang/Throwable;Ljava/lang/Object;)V", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.0.0/org/apache/kafka/connect/util/Callback.html#chainStaging(org.apache.kafka.connect.util.Callback)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.1.0/org/apache/kafka/connect/util/Callback.html#chainStaging(org.apache.kafka.connect.util.Callback)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Connect.Util.Callback"/></param>
         /// <typeparam name="V2"></typeparam>
@@ -231,7 +231,7 @@ namespace Org.Apache.Kafka.Connect.Util
             return IExecuteWithSignature<Org.Apache.Kafka.Connect.Util.Callback<V2>>("chainStaging", "(Lorg/apache/kafka/connect/util/Callback;)Lorg/apache/kafka/connect/util/Callback;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.0.0/org/apache/kafka/connect/util/Callback.html#recordStage(org.apache.kafka.connect.util.Stage)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.1.0/org/apache/kafka/connect/util/Callback.html#recordStage(org.apache.kafka.connect.util.Stage)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Connect.Util.Stage"/></param>
         public void RecordStage(Org.Apache.Kafka.Connect.Util.Stage arg0)

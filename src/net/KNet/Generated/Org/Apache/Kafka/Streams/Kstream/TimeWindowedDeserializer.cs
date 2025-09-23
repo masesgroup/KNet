@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 {
     #region TimeWindowedDeserializer declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/TimeWindowedDeserializer.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/kstream/TimeWindowedDeserializer.html"/>
     /// </summary>
     public partial class TimeWindowedDeserializer : MASES.JCOBridge.C2JBridge.JVMBridgeBase<TimeWindowedDeserializer>
     {
@@ -68,7 +68,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
     #region TimeWindowedDeserializer<T> declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/TimeWindowedDeserializer.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/kstream/TimeWindowedDeserializer.html"/>
     /// </summary>
     /// <typeparam name="T"></typeparam>
     public partial class TimeWindowedDeserializer<T> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<TimeWindowedDeserializer<T>>
@@ -113,7 +113,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/TimeWindowedDeserializer.html#%3Cinit%3E(org.apache.kafka.common.serialization.Deserializer,java.lang.Long)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/kstream/TimeWindowedDeserializer.html#%3Cinit%3E(org.apache.kafka.common.serialization.Deserializer,java.lang.Long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Serialization.Deserializer"/></param>
         /// <param name="arg1"><see cref="Java.Lang.Long"/></param>
@@ -134,13 +134,13 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/TimeWindowedDeserializer.html#WINDOW_SIZE_MS_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/kstream/TimeWindowedDeserializer.html#WINDOW_SIZE_MS_CONFIG"/>
         /// </summary>
         public static Java.Lang.String WINDOW_SIZE_MS_CONFIG { get { if (!_WINDOW_SIZE_MS_CONFIGReady) { _WINDOW_SIZE_MS_CONFIGContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "WINDOW_SIZE_MS_CONFIG"); _WINDOW_SIZE_MS_CONFIGReady = true; } return _WINDOW_SIZE_MS_CONFIGContent; } }
         private static Java.Lang.String _WINDOW_SIZE_MS_CONFIGContent = default;
         private static bool _WINDOW_SIZE_MS_CONFIGReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/TimeWindowedDeserializer.html#WINDOWED_INNER_DESERIALIZER_CLASS"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/kstream/TimeWindowedDeserializer.html#WINDOWED_INNER_DESERIALIZER_CLASS"/>
         /// </summary>
         public static Java.Lang.String WINDOWED_INNER_DESERIALIZER_CLASS { get { if (!_WINDOWED_INNER_DESERIALIZER_CLASSReady) { _WINDOWED_INNER_DESERIALIZER_CLASSContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "WINDOWED_INNER_DESERIALIZER_CLASS"); _WINDOWED_INNER_DESERIALIZER_CLASSReady = true; } return _WINDOWED_INNER_DESERIALIZER_CLASSContent; } }
         private static Java.Lang.String _WINDOWED_INNER_DESERIALIZER_CLASSContent = default;
@@ -154,14 +154,14 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/TimeWindowedDeserializer.html#getWindowSize()"/> 
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/kstream/TimeWindowedDeserializer.html#getWindowSize()"/> 
         /// </summary>
         public Java.Lang.Long WindowSize
         {
             get { return IExecuteWithSignature<Java.Lang.Long>("getWindowSize", "()Ljava/lang/Long;"); }
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/TimeWindowedDeserializer.html#deserialize(java.lang.String,byte[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/kstream/TimeWindowedDeserializer.html#deserialize(java.lang.String,byte[])"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="byte"/></param>
@@ -171,14 +171,14 @@ namespace Org.Apache.Kafka.Streams.Kstream
             return IExecuteWithSignature("deserialize", "(Ljava/lang/String;[B)Ljava/lang/Object;", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/TimeWindowedDeserializer.html#close()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/kstream/TimeWindowedDeserializer.html#close()"/>
         /// </summary>
         public void Close()
         {
             IExecuteWithSignature("close", "()V");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/TimeWindowedDeserializer.html#configure(java.util.Map,boolean)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/kstream/TimeWindowedDeserializer.html#configure(java.util.Map,boolean)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <param name="arg1"><see cref="bool"/></param>
@@ -187,7 +187,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
             IExecuteWithSignature("configure", "(Ljava/util/Map;Z)V", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/TimeWindowedDeserializer.html#setIsChangelogTopic(boolean)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/kstream/TimeWindowedDeserializer.html#setIsChangelogTopic(boolean)"/>
         /// </summary>
         /// <param name="arg0"><see cref="bool"/></param>
         public void SetIsChangelogTopic(bool arg0)
@@ -210,7 +210,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/TimeWindowedDeserializer.html#%3Cinit%3E(org.apache.kafka.common.serialization.Deserializer,java.lang.Long)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/kstream/TimeWindowedDeserializer.html#%3Cinit%3E(org.apache.kafka.common.serialization.Deserializer,java.lang.Long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Serialization.Deserializer"/></param>
         /// <param name="arg1"><see cref="Java.Lang.Long"/></param>
@@ -235,13 +235,13 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/TimeWindowedDeserializer.html#WINDOW_SIZE_MS_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/kstream/TimeWindowedDeserializer.html#WINDOW_SIZE_MS_CONFIG"/>
         /// </summary>
         public static Java.Lang.String WINDOW_SIZE_MS_CONFIG { get { if (!_WINDOW_SIZE_MS_CONFIGReady) { _WINDOW_SIZE_MS_CONFIGContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "WINDOW_SIZE_MS_CONFIG"); _WINDOW_SIZE_MS_CONFIGReady = true; } return _WINDOW_SIZE_MS_CONFIGContent; } }
         private static Java.Lang.String _WINDOW_SIZE_MS_CONFIGContent = default;
         private static bool _WINDOW_SIZE_MS_CONFIGReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/TimeWindowedDeserializer.html#WINDOWED_INNER_DESERIALIZER_CLASS"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/kstream/TimeWindowedDeserializer.html#WINDOWED_INNER_DESERIALIZER_CLASS"/>
         /// </summary>
         public static Java.Lang.String WINDOWED_INNER_DESERIALIZER_CLASS { get { if (!_WINDOWED_INNER_DESERIALIZER_CLASSReady) { _WINDOWED_INNER_DESERIALIZER_CLASSContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "WINDOWED_INNER_DESERIALIZER_CLASS"); _WINDOWED_INNER_DESERIALIZER_CLASSReady = true; } return _WINDOWED_INNER_DESERIALIZER_CLASSContent; } }
         private static Java.Lang.String _WINDOWED_INNER_DESERIALIZER_CLASSContent = default;
@@ -255,14 +255,14 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/TimeWindowedDeserializer.html#getWindowSize()"/> 
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/kstream/TimeWindowedDeserializer.html#getWindowSize()"/> 
         /// </summary>
         public Java.Lang.Long WindowSize
         {
             get { return IExecuteWithSignature<Java.Lang.Long>("getWindowSize", "()Ljava/lang/Long;"); }
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/TimeWindowedDeserializer.html#deserialize(java.lang.String,byte[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/kstream/TimeWindowedDeserializer.html#deserialize(java.lang.String,byte[])"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="byte"/></param>
@@ -272,14 +272,14 @@ namespace Org.Apache.Kafka.Streams.Kstream
             return IExecuteWithSignature("deserialize", "(Ljava/lang/String;[B)Ljava/lang/Object;", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/TimeWindowedDeserializer.html#close()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/kstream/TimeWindowedDeserializer.html#close()"/>
         /// </summary>
         public void Close()
         {
             IExecuteWithSignature("close", "()V");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/TimeWindowedDeserializer.html#configure(java.util.Map,boolean)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/kstream/TimeWindowedDeserializer.html#configure(java.util.Map,boolean)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <param name="arg1"><see cref="bool"/></param>
@@ -288,7 +288,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
             IExecuteWithSignature("configure", "(Ljava/util/Map;Z)V", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/TimeWindowedDeserializer.html#setIsChangelogTopic(boolean)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/kstream/TimeWindowedDeserializer.html#setIsChangelogTopic(boolean)"/>
         /// </summary>
         /// <param name="arg0"><see cref="bool"/></param>
         public void SetIsChangelogTopic(bool arg0)

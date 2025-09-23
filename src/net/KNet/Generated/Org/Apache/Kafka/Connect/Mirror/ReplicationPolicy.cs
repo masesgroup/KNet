@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
 {
     #region ReplicationPolicy declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/4.0.0/org/apache/kafka/connect/mirror/ReplicationPolicy.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/4.1.0/org/apache/kafka/connect/mirror/ReplicationPolicy.html"/>
     /// </summary>
     public partial class ReplicationPolicy : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ReplicationPolicy>
     {
@@ -70,7 +70,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
 
     #region IReplicationPolicy
     /// <summary>
-    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/4.0.0/org/apache/kafka/connect/mirror/ReplicationPolicy.html"/>
+    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/4.1.0/org/apache/kafka/connect/mirror/ReplicationPolicy.html"/>
     /// </summary>
     public partial interface IReplicationPolicy
     {
@@ -107,7 +107,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/4.0.0/org/apache/kafka/connect/mirror/ReplicationPolicy.html#formatRemoteTopic(java.lang.String,java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/4.1.0/org/apache/kafka/connect/mirror/ReplicationPolicy.html#formatRemoteTopic(java.lang.String,java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Java.Lang.String"/></param>
@@ -117,7 +117,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
             return IExecuteWithSignature<Java.Lang.String>("formatRemoteTopic", "(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/4.0.0/org/apache/kafka/connect/mirror/ReplicationPolicy.html#topicSource(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/4.1.0/org/apache/kafka/connect/mirror/ReplicationPolicy.html#topicSource(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Java.Lang.String"/></returns>
@@ -126,7 +126,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
             return IExecuteWithSignature<Java.Lang.String>("topicSource", "(Ljava/lang/String;)Ljava/lang/String;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/4.0.0/org/apache/kafka/connect/mirror/ReplicationPolicy.html#upstreamTopic(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/4.1.0/org/apache/kafka/connect/mirror/ReplicationPolicy.html#upstreamTopic(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Java.Lang.String"/></returns>
@@ -135,7 +135,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
             return IExecuteWithSignature<Java.Lang.String>("upstreamTopic", "(Ljava/lang/String;)Ljava/lang/String;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/4.0.0/org/apache/kafka/connect/mirror/ReplicationPolicy.html#isCheckpointsTopic(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/4.1.0/org/apache/kafka/connect/mirror/ReplicationPolicy.html#isCheckpointsTopic(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="bool"/></returns>
@@ -144,7 +144,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
             return IExecuteWithSignature<bool>("isCheckpointsTopic", "(Ljava/lang/String;)Z", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/4.0.0/org/apache/kafka/connect/mirror/ReplicationPolicy.html#isHeartbeatsTopic(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/4.1.0/org/apache/kafka/connect/mirror/ReplicationPolicy.html#isHeartbeatsTopic(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="bool"/></returns>
@@ -153,7 +153,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
             return IExecuteWithSignature<bool>("isHeartbeatsTopic", "(Ljava/lang/String;)Z", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/4.0.0/org/apache/kafka/connect/mirror/ReplicationPolicy.html#isInternalTopic(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/4.1.0/org/apache/kafka/connect/mirror/ReplicationPolicy.html#isInternalTopic(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="bool"/></returns>
@@ -162,7 +162,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
             return IExecuteWithSignature<bool>("isInternalTopic", "(Ljava/lang/String;)Z", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/4.0.0/org/apache/kafka/connect/mirror/ReplicationPolicy.html#isMM2InternalTopic(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/4.1.0/org/apache/kafka/connect/mirror/ReplicationPolicy.html#isMM2InternalTopic(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="bool"/></returns>
@@ -171,7 +171,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
             return IExecuteWithSignature<bool>("isMM2InternalTopic", "(Ljava/lang/String;)Z", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/4.0.0/org/apache/kafka/connect/mirror/ReplicationPolicy.html#checkpointsTopic(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/4.1.0/org/apache/kafka/connect/mirror/ReplicationPolicy.html#checkpointsTopic(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Java.Lang.String"/></returns>
@@ -180,7 +180,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
             return IExecuteWithSignature<Java.Lang.String>("checkpointsTopic", "(Ljava/lang/String;)Ljava/lang/String;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/4.0.0/org/apache/kafka/connect/mirror/ReplicationPolicy.html#heartbeatsTopic()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/4.1.0/org/apache/kafka/connect/mirror/ReplicationPolicy.html#heartbeatsTopic()"/>
         /// </summary>
         /// <returns><see cref="Java.Lang.String"/></returns>
         public Java.Lang.String HeartbeatsTopic()
@@ -188,7 +188,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
             return IExecuteWithSignature<Java.Lang.String>("heartbeatsTopic", "()Ljava/lang/String;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/4.0.0/org/apache/kafka/connect/mirror/ReplicationPolicy.html#offsetSyncsTopic(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/4.1.0/org/apache/kafka/connect/mirror/ReplicationPolicy.html#offsetSyncsTopic(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Java.Lang.String"/></returns>
@@ -197,7 +197,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
             return IExecuteWithSignature<Java.Lang.String>("offsetSyncsTopic", "(Ljava/lang/String;)Ljava/lang/String;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/4.0.0/org/apache/kafka/connect/mirror/ReplicationPolicy.html#originalTopic(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/4.1.0/org/apache/kafka/connect/mirror/ReplicationPolicy.html#originalTopic(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Java.Lang.String"/></returns>

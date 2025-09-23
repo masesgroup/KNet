@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Tools.Streams
 {
     #region StreamsGroupCommand declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/streams/StreamsGroupCommand.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.0/org/apache/kafka/tools/streams/StreamsGroupCommand.html"/>
     /// </summary>
     public partial class StreamsGroupCommand : MASES.JCOBridge.C2JBridge.JVMBridgeBase<StreamsGroupCommand>, MASES.JCOBridge.C2JBridge.IJVMBridgeMain
     {
@@ -83,7 +83,7 @@ namespace Org.Apache.Kafka.Tools.Streams
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/streams/StreamsGroupCommand.html#main(java.lang.String[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.0/org/apache/kafka/tools/streams/StreamsGroupCommand.html#main(java.lang.String[])"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         public static void Main(Java.Lang.String[] arg0)
@@ -91,7 +91,7 @@ namespace Org.Apache.Kafka.Tools.Streams
             SExecuteWithSignature(LocalBridgeClazz, "main", "([Ljava/lang/String;)V", new object[] { arg0 });
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/streams/StreamsGroupCommand.html#printError(java.lang.String,java.util.Optional)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.0/org/apache/kafka/tools/streams/StreamsGroupCommand.html#printError(java.lang.String,java.util.Optional)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Java.Util.Optional"/></param>
@@ -100,7 +100,7 @@ namespace Org.Apache.Kafka.Tools.Streams
             SExecuteWithSignature(LocalBridgeClazz, "printError", "(Ljava/lang/String;Ljava/util/Optional;)V", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/streams/StreamsGroupCommand.html#run(org.apache.kafka.tools.streams.StreamsGroupCommandOptions)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.0/org/apache/kafka/tools/streams/StreamsGroupCommand.html#run(org.apache.kafka.tools.streams.StreamsGroupCommandOptions)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Tools.Streams.StreamsGroupCommandOptions"/></param>
         public static void Run(Org.Apache.Kafka.Tools.Streams.StreamsGroupCommandOptions arg0)

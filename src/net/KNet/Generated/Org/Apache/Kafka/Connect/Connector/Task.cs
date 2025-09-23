@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Connect.Connector
 {
     #region Task declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.0.0/org/apache/kafka/connect/connector/Task.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.1.0/org/apache/kafka/connect/connector/Task.html"/>
     /// </summary>
     public partial class Task : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Task>
     {
@@ -70,7 +70,7 @@ namespace Org.Apache.Kafka.Connect.Connector
 
     #region ITask
     /// <summary>
-    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.0.0/org/apache/kafka/connect/connector/Task.html"/>
+    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.1.0/org/apache/kafka/connect/connector/Task.html"/>
     /// </summary>
     public partial interface ITask
     {
@@ -107,7 +107,7 @@ namespace Org.Apache.Kafka.Connect.Connector
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.0.0/org/apache/kafka/connect/connector/Task.html#version()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.1.0/org/apache/kafka/connect/connector/Task.html#version()"/>
         /// </summary>
         /// <returns><see cref="Java.Lang.String"/></returns>
         public Java.Lang.String Version()
@@ -115,7 +115,7 @@ namespace Org.Apache.Kafka.Connect.Connector
             return IExecuteWithSignature<Java.Lang.String>("version", "()Ljava/lang/String;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.0.0/org/apache/kafka/connect/connector/Task.html#start(java.util.Map)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.1.0/org/apache/kafka/connect/connector/Task.html#start(java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         public void Start(Java.Util.Map<Java.Lang.String, Java.Lang.String> arg0)
@@ -123,7 +123,7 @@ namespace Org.Apache.Kafka.Connect.Connector
             IExecuteWithSignature("start", "(Ljava/util/Map;)V", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.0.0/org/apache/kafka/connect/connector/Task.html#stop()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.1.0/org/apache/kafka/connect/connector/Task.html#stop()"/>
         /// </summary>
         public void Stop()
         {

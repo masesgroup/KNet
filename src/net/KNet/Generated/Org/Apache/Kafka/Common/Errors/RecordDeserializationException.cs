@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common.Errors
 {
     #region RecordDeserializationException declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/errors/RecordDeserializationException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/errors/RecordDeserializationException.html"/>
     /// </summary>
     public partial class RecordDeserializationException : Org.Apache.Kafka.Common.Errors.SerializationException
     {
@@ -45,7 +45,7 @@ namespace Org.Apache.Kafka.Common.Errors
         // TODO: complete the class
         #region DeserializationExceptionOrigin declaration
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/errors/RecordDeserializationException.DeserializationExceptionOrigin.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/errors/RecordDeserializationException.DeserializationExceptionOrigin.html"/>
         /// </summary>
         public partial class DeserializationExceptionOrigin : Java.Lang.Enum<Org.Apache.Kafka.Common.Errors.RecordDeserializationException.DeserializationExceptionOrigin>
         {
@@ -125,13 +125,13 @@ namespace Org.Apache.Kafka.Common.Errors
 
             #region Fields
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/errors/RecordDeserializationException.DeserializationExceptionOrigin.html#KEY"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/errors/RecordDeserializationException.DeserializationExceptionOrigin.html#KEY"/>
             /// </summary>
             public static Org.Apache.Kafka.Common.Errors.RecordDeserializationException.DeserializationExceptionOrigin KEY { get { if (!_KEYReady) { _KEYContent = SGetField<Org.Apache.Kafka.Common.Errors.RecordDeserializationException.DeserializationExceptionOrigin>(LocalBridgeClazz, "KEY"); _KEYReady = true; } return _KEYContent; } }
             private static Org.Apache.Kafka.Common.Errors.RecordDeserializationException.DeserializationExceptionOrigin _KEYContent = default;
             private static bool _KEYReady = false; // this is used because in case of generics 
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/errors/RecordDeserializationException.DeserializationExceptionOrigin.html#VALUE"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/errors/RecordDeserializationException.DeserializationExceptionOrigin.html#VALUE"/>
             /// </summary>
             public static Org.Apache.Kafka.Common.Errors.RecordDeserializationException.DeserializationExceptionOrigin VALUE { get { if (!_VALUEReady) { _VALUEContent = SGetField<Org.Apache.Kafka.Common.Errors.RecordDeserializationException.DeserializationExceptionOrigin>(LocalBridgeClazz, "VALUE"); _VALUEReady = true; } return _VALUEContent; } }
             private static Org.Apache.Kafka.Common.Errors.RecordDeserializationException.DeserializationExceptionOrigin _VALUEContent = default;
@@ -141,7 +141,7 @@ namespace Org.Apache.Kafka.Common.Errors
 
             #region Static methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/errors/RecordDeserializationException.DeserializationExceptionOrigin.html#valueOf(java.lang.String)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/errors/RecordDeserializationException.DeserializationExceptionOrigin.html#valueOf(java.lang.String)"/>
             /// </summary>
             /// <param name="arg0"><see cref="Java.Lang.String"/></param>
             /// <returns><see cref="Org.Apache.Kafka.Common.Errors.RecordDeserializationException.DeserializationExceptionOrigin"/></returns>
@@ -150,7 +150,7 @@ namespace Org.Apache.Kafka.Common.Errors
                 return SExecuteWithSignature<Org.Apache.Kafka.Common.Errors.RecordDeserializationException.DeserializationExceptionOrigin>(LocalBridgeClazz, "valueOf", "(Ljava/lang/String;)Lorg/apache/kafka/common/errors/RecordDeserializationException$DeserializationExceptionOrigin;", arg0);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/errors/RecordDeserializationException.DeserializationExceptionOrigin.html#values()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/errors/RecordDeserializationException.DeserializationExceptionOrigin.html#values()"/>
             /// </summary>
             /// <returns><see cref="Org.Apache.Kafka.Common.Errors.RecordDeserializationException.DeserializationExceptionOrigin"/></returns>
             public static Org.Apache.Kafka.Common.Errors.RecordDeserializationException.DeserializationExceptionOrigin[] Values()

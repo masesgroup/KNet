@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 {
     #region ListStreamsGroupOffsetsSpec declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/ListStreamsGroupOffsetsSpec.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/admin/ListStreamsGroupOffsetsSpec.html"/>
     /// </summary>
     public partial class ListStreamsGroupOffsetsSpec : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ListStreamsGroupOffsetsSpec>
     {

@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common.Record
 {
     #region SimpleRecord declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/SimpleRecord.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/record/SimpleRecord.html"/>
     /// </summary>
     public partial class SimpleRecord : MASES.JCOBridge.C2JBridge.JVMBridgeBase<SimpleRecord>
     {
@@ -71,7 +71,7 @@ namespace Org.Apache.Kafka.Common.Record
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/SimpleRecord.html#%3Cinit%3E(byte[],byte[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/record/SimpleRecord.html#%3Cinit%3E(byte[],byte[])"/>
         /// </summary>
         /// <param name="arg0"><see cref="byte"/></param>
         /// <param name="arg1"><see cref="byte"/></param>
@@ -80,7 +80,7 @@ namespace Org.Apache.Kafka.Common.Record
         {
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/SimpleRecord.html#%3Cinit%3E(byte[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/record/SimpleRecord.html#%3Cinit%3E(byte[])"/>
         /// </summary>
         /// <param name="arg0"><see cref="byte"/></param>
         public SimpleRecord(byte[] arg0)
@@ -88,7 +88,7 @@ namespace Org.Apache.Kafka.Common.Record
         {
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/SimpleRecord.html#%3Cinit%3E(java.nio.ByteBuffer)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/record/SimpleRecord.html#%3Cinit%3E(java.nio.ByteBuffer)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Nio.ByteBuffer"/></param>
         public SimpleRecord(Java.Nio.ByteBuffer arg0)
@@ -96,7 +96,7 @@ namespace Org.Apache.Kafka.Common.Record
         {
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/SimpleRecord.html#%3Cinit%3E(long,byte[],byte[],org.apache.kafka.common.header.Header[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/record/SimpleRecord.html#%3Cinit%3E(long,byte[],byte[],org.apache.kafka.common.header.Header[])"/>
         /// </summary>
         /// <param name="arg0"><see cref="long"/></param>
         /// <param name="arg1"><see cref="byte"/></param>
@@ -107,7 +107,7 @@ namespace Org.Apache.Kafka.Common.Record
         {
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/SimpleRecord.html#%3Cinit%3E(long,byte[],byte[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/record/SimpleRecord.html#%3Cinit%3E(long,byte[],byte[])"/>
         /// </summary>
         /// <param name="arg0"><see cref="long"/></param>
         /// <param name="arg1"><see cref="byte"/></param>
@@ -117,7 +117,7 @@ namespace Org.Apache.Kafka.Common.Record
         {
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/SimpleRecord.html#%3Cinit%3E(long,byte[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/record/SimpleRecord.html#%3Cinit%3E(long,byte[])"/>
         /// </summary>
         /// <param name="arg0"><see cref="long"/></param>
         /// <param name="arg1"><see cref="byte"/></param>
@@ -126,7 +126,7 @@ namespace Org.Apache.Kafka.Common.Record
         {
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/SimpleRecord.html#%3Cinit%3E(long,java.nio.ByteBuffer,java.nio.ByteBuffer,org.apache.kafka.common.header.Header[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/record/SimpleRecord.html#%3Cinit%3E(long,java.nio.ByteBuffer,java.nio.ByteBuffer,org.apache.kafka.common.header.Header[])"/>
         /// </summary>
         /// <param name="arg0"><see cref="long"/></param>
         /// <param name="arg1"><see cref="Java.Nio.ByteBuffer"/></param>
@@ -137,7 +137,7 @@ namespace Org.Apache.Kafka.Common.Record
         {
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/SimpleRecord.html#%3Cinit%3E(long,java.nio.ByteBuffer,java.nio.ByteBuffer)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/record/SimpleRecord.html#%3Cinit%3E(long,java.nio.ByteBuffer,java.nio.ByteBuffer)"/>
         /// </summary>
         /// <param name="arg0"><see cref="long"/></param>
         /// <param name="arg1"><see cref="Java.Nio.ByteBuffer"/></param>
@@ -147,7 +147,7 @@ namespace Org.Apache.Kafka.Common.Record
         {
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/SimpleRecord.html#%3Cinit%3E(org.apache.kafka.common.record.Record)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/record/SimpleRecord.html#%3Cinit%3E(org.apache.kafka.common.record.Record)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Record.Record"/></param>
         public SimpleRecord(Org.Apache.Kafka.Common.Record.Record arg0)
@@ -171,7 +171,7 @@ namespace Org.Apache.Kafka.Common.Record
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/SimpleRecord.html#key()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/record/SimpleRecord.html#key()"/>
         /// </summary>
         /// <returns><see cref="Java.Nio.ByteBuffer"/></returns>
         public Java.Nio.ByteBuffer Key()
@@ -179,7 +179,7 @@ namespace Org.Apache.Kafka.Common.Record
             return IExecuteWithSignature<Java.Nio.ByteBuffer>("key", "()Ljava/nio/ByteBuffer;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/SimpleRecord.html#value()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/record/SimpleRecord.html#value()"/>
         /// </summary>
         /// <returns><see cref="Java.Nio.ByteBuffer"/></returns>
         public Java.Nio.ByteBuffer Value()
@@ -187,7 +187,7 @@ namespace Org.Apache.Kafka.Common.Record
             return IExecuteWithSignature<Java.Nio.ByteBuffer>("value", "()Ljava/nio/ByteBuffer;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/SimpleRecord.html#timestamp()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/record/SimpleRecord.html#timestamp()"/>
         /// </summary>
         /// <returns><see cref="long"/></returns>
         public long Timestamp()
@@ -195,7 +195,7 @@ namespace Org.Apache.Kafka.Common.Record
             return IExecuteWithSignature<long>("timestamp", "()J");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/SimpleRecord.html#headers()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/record/SimpleRecord.html#headers()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.Header.Header"/></returns>
         public Org.Apache.Kafka.Common.Header.Header[] Headers()

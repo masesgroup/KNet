@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Raft
 {
     #region ReplicatedLog declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/ReplicatedLog.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/ReplicatedLog.html"/>
     /// </summary>
     public partial class ReplicatedLog : Java.Lang.AutoCloseable
     {
@@ -70,7 +70,7 @@ namespace Org.Apache.Kafka.Raft
 
     #region IReplicatedLog
     /// <summary>
-    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/ReplicatedLog.html"/>
+    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/ReplicatedLog.html"/>
     /// </summary>
     public partial interface IReplicatedLog : Java.Lang.IAutoCloseable
     {
@@ -107,7 +107,7 @@ namespace Org.Apache.Kafka.Raft
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/ReplicatedLog.html#maybeClean()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/ReplicatedLog.html#maybeClean()"/>
         /// </summary>
         /// <returns><see cref="bool"/></returns>
         public bool MaybeClean()
@@ -115,7 +115,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<bool>("maybeClean", "()Z");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/ReplicatedLog.html#truncateToLatestSnapshot()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/ReplicatedLog.html#truncateToLatestSnapshot()"/>
         /// </summary>
         /// <returns><see cref="bool"/></returns>
         public bool TruncateToLatestSnapshot()
@@ -123,7 +123,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<bool>("truncateToLatestSnapshot", "()Z");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/ReplicatedLog.html#lastFetchedEpoch()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/ReplicatedLog.html#lastFetchedEpoch()"/>
         /// </summary>
         /// <returns><see cref="int"/></returns>
         public int LastFetchedEpoch()
@@ -131,7 +131,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<int>("lastFetchedEpoch", "()I");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/ReplicatedLog.html#latestSnapshot()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/ReplicatedLog.html#latestSnapshot()"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Optional"/></returns>
         public Java.Util.Optional<Org.Apache.Kafka.Snapshot.RawSnapshotReader> LatestSnapshot()
@@ -139,7 +139,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<Java.Util.Optional<Org.Apache.Kafka.Snapshot.RawSnapshotReader>>("latestSnapshot", "()Ljava/util/Optional;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/ReplicatedLog.html#startOffset()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/ReplicatedLog.html#startOffset()"/>
         /// </summary>
         /// <returns><see cref="long"/></returns>
         public long StartOffset()
@@ -147,7 +147,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<long>("startOffset", "()J");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/ReplicatedLog.html#topicPartition()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/ReplicatedLog.html#topicPartition()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.TopicPartition"/></returns>
         public Org.Apache.Kafka.Common.TopicPartition TopicPartition()
@@ -155,7 +155,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<Org.Apache.Kafka.Common.TopicPartition>("topicPartition", "()Lorg/apache/kafka/common/TopicPartition;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/ReplicatedLog.html#topicId()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/ReplicatedLog.html#topicId()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.Uuid"/></returns>
         public Org.Apache.Kafka.Common.Uuid TopicId()
@@ -163,7 +163,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<Org.Apache.Kafka.Common.Uuid>("topicId", "()Lorg/apache/kafka/common/Uuid;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/ReplicatedLog.html#read(long,org.apache.kafka.raft.Isolation)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/ReplicatedLog.html#read(long,org.apache.kafka.raft.Isolation)"/>
         /// </summary>
         /// <param name="arg0"><see cref="long"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Raft.Isolation"/></param>
@@ -173,7 +173,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<Org.Apache.Kafka.Raft.LogFetchInfo>("read", "(JLorg/apache/kafka/raft/Isolation;)Lorg/apache/kafka/raft/LogFetchInfo;", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/ReplicatedLog.html#endOffset()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/ReplicatedLog.html#endOffset()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Raft.LogOffsetMetadata"/></returns>
         public Org.Apache.Kafka.Raft.LogOffsetMetadata EndOffset()
@@ -181,7 +181,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<Org.Apache.Kafka.Raft.LogOffsetMetadata>("endOffset", "()Lorg/apache/kafka/raft/LogOffsetMetadata;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/ReplicatedLog.html#highWatermark()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/ReplicatedLog.html#highWatermark()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Raft.LogOffsetMetadata"/></returns>
         public Org.Apache.Kafka.Raft.LogOffsetMetadata HighWatermark()
@@ -189,7 +189,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<Org.Apache.Kafka.Raft.LogOffsetMetadata>("highWatermark", "()Lorg/apache/kafka/raft/LogOffsetMetadata;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/ReplicatedLog.html#flush(boolean)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/ReplicatedLog.html#flush(boolean)"/>
         /// </summary>
         /// <param name="arg0"><see cref="bool"/></param>
         public void Flush(bool arg0)
@@ -197,7 +197,7 @@ namespace Org.Apache.Kafka.Raft
             IExecuteWithSignature("flush", "(Z)V", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/ReplicatedLog.html#initializeLeaderEpoch(int)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/ReplicatedLog.html#initializeLeaderEpoch(int)"/>
         /// </summary>
         /// <param name="arg0"><see cref="int"/></param>
         public void InitializeLeaderEpoch(int arg0)
@@ -205,7 +205,7 @@ namespace Org.Apache.Kafka.Raft
             IExecuteWithSignature("initializeLeaderEpoch", "(I)V", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/ReplicatedLog.html#truncateTo(long)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/ReplicatedLog.html#truncateTo(long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="long"/></param>
         public void TruncateTo(long arg0)
@@ -213,7 +213,7 @@ namespace Org.Apache.Kafka.Raft
             IExecuteWithSignature("truncateTo", "(J)V", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/ReplicatedLog.html#updateHighWatermark(org.apache.kafka.raft.LogOffsetMetadata)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/ReplicatedLog.html#updateHighWatermark(org.apache.kafka.raft.LogOffsetMetadata)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Raft.LogOffsetMetadata"/></param>
         public void UpdateHighWatermark(Org.Apache.Kafka.Raft.LogOffsetMetadata arg0)
@@ -221,7 +221,7 @@ namespace Org.Apache.Kafka.Raft
             IExecuteWithSignature("updateHighWatermark", "(Lorg/apache/kafka/raft/LogOffsetMetadata;)V", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/ReplicatedLog.html#validateOffsetAndEpoch(long,int)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/ReplicatedLog.html#validateOffsetAndEpoch(long,int)"/>
         /// </summary>
         /// <param name="arg0"><see cref="long"/></param>
         /// <param name="arg1"><see cref="int"/></param>
@@ -231,7 +231,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<Org.Apache.Kafka.Raft.ValidOffsetAndEpoch>("validateOffsetAndEpoch", "(JI)Lorg/apache/kafka/raft/ValidOffsetAndEpoch;", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/ReplicatedLog.html#close()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/ReplicatedLog.html#close()"/>
         /// </summary>
         public void Close()
         {

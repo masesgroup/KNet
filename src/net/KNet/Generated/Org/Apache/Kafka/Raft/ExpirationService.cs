@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Raft
 {
     #region ExpirationService declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/ExpirationService.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/ExpirationService.html"/>
     /// </summary>
     public partial class ExpirationService : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ExpirationService>
     {
@@ -70,7 +70,7 @@ namespace Org.Apache.Kafka.Raft
 
     #region IExpirationService
     /// <summary>
-    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/ExpirationService.html"/>
+    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/ExpirationService.html"/>
     /// </summary>
     public partial interface IExpirationService
     {
@@ -107,7 +107,7 @@ namespace Org.Apache.Kafka.Raft
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/ExpirationService.html#failAfter(long)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/ExpirationService.html#failAfter(long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="long"/></param>
         /// <typeparam name="T"></typeparam>

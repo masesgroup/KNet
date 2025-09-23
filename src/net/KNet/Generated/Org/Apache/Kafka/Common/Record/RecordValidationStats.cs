@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common.Record
 {
     #region RecordValidationStats declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/RecordValidationStats.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/record/RecordValidationStats.html"/>
     /// </summary>
     public partial class RecordValidationStats : MASES.JCOBridge.C2JBridge.JVMBridgeBase<RecordValidationStats>
     {
@@ -71,7 +71,7 @@ namespace Org.Apache.Kafka.Common.Record
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/RecordValidationStats.html#%3Cinit%3E(long,int,long)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/record/RecordValidationStats.html#%3Cinit%3E(long,int,long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="long"/></param>
         /// <param name="arg1"><see cref="int"/></param>
@@ -89,7 +89,7 @@ namespace Org.Apache.Kafka.Common.Record
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/RecordValidationStats.html#EMPTY"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/record/RecordValidationStats.html#EMPTY"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Record.RecordValidationStats EMPTY { get { if (!_EMPTYReady) { _EMPTYContent = SGetField<Org.Apache.Kafka.Common.Record.RecordValidationStats>(LocalBridgeClazz, "EMPTY"); _EMPTYReady = true; } return _EMPTYContent; } }
         private static Org.Apache.Kafka.Common.Record.RecordValidationStats _EMPTYContent = default;
@@ -103,7 +103,7 @@ namespace Org.Apache.Kafka.Common.Record
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/RecordValidationStats.html#numRecordsConverted()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/record/RecordValidationStats.html#numRecordsConverted()"/>
         /// </summary>
         /// <returns><see cref="int"/></returns>
         public int NumRecordsConverted()
@@ -111,7 +111,7 @@ namespace Org.Apache.Kafka.Common.Record
             return IExecuteWithSignature<int>("numRecordsConverted", "()I");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/RecordValidationStats.html#conversionTimeNanos()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/record/RecordValidationStats.html#conversionTimeNanos()"/>
         /// </summary>
         /// <returns><see cref="long"/></returns>
         public long ConversionTimeNanos()
@@ -119,7 +119,7 @@ namespace Org.Apache.Kafka.Common.Record
             return IExecuteWithSignature<long>("conversionTimeNanos", "()J");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/RecordValidationStats.html#temporaryMemoryBytes()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/record/RecordValidationStats.html#temporaryMemoryBytes()"/>
         /// </summary>
         /// <returns><see cref="long"/></returns>
         public long TemporaryMemoryBytes()
@@ -127,7 +127,7 @@ namespace Org.Apache.Kafka.Common.Record
             return IExecuteWithSignature<long>("temporaryMemoryBytes", "()J");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/RecordValidationStats.html#add(org.apache.kafka.common.record.RecordValidationStats)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/record/RecordValidationStats.html#add(org.apache.kafka.common.record.RecordValidationStats)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Record.RecordValidationStats"/></param>
         public void Add(Org.Apache.Kafka.Common.Record.RecordValidationStats arg0)

@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 {
     #region Windows declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/Windows.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/kstream/Windows.html"/>
     /// </summary>
     public partial class Windows : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Windows>
     {
@@ -70,7 +70,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
     #region Windows<W> declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/Windows.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/kstream/Windows.html"/>
     /// </summary>
     /// <typeparam name="W"><see cref="Org.Apache.Kafka.Streams.Kstream.Window"/></typeparam>
     public partial class Windows<W> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Windows<W>> where W : Org.Apache.Kafka.Streams.Kstream.Window
@@ -133,7 +133,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/Windows.html#windowsFor(long)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/kstream/Windows.html#windowsFor(long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="long"/></param>
         /// <returns><see cref="Java.Util.Map"/></returns>
@@ -142,7 +142,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
             return IExecuteWithSignature<Java.Util.Map>("windowsFor", "(J)Ljava/util/Map;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/Windows.html#gracePeriodMs()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/kstream/Windows.html#gracePeriodMs()"/>
         /// </summary>
         /// <returns><see cref="long"/></returns>
         public long GracePeriodMs()
@@ -150,7 +150,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
             return IExecuteWithSignature<long>("gracePeriodMs", "()J");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/Windows.html#size()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/kstream/Windows.html#size()"/>
         /// </summary>
         /// <returns><see cref="long"/></returns>
         public long Size()
@@ -193,7 +193,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/Windows.html#windowsFor(long)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/kstream/Windows.html#windowsFor(long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="long"/></param>
         /// <returns><see cref="Java.Util.Map"/></returns>
@@ -202,7 +202,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
             return IExecuteWithSignature<Java.Util.Map<Java.Lang.Long, W>>("windowsFor", "(J)Ljava/util/Map;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/Windows.html#gracePeriodMs()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/kstream/Windows.html#gracePeriodMs()"/>
         /// </summary>
         /// <returns><see cref="long"/></returns>
         public long GracePeriodMs()
@@ -210,7 +210,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
             return IExecuteWithSignature<long>("gracePeriodMs", "()J");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/Windows.html#size()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/kstream/Windows.html#size()"/>
         /// </summary>
         /// <returns><see cref="long"/></returns>
         public long Size()

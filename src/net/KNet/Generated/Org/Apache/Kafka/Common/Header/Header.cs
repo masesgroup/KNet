@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common.Header
 {
     #region Header declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/header/Header.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/header/Header.html"/>
     /// </summary>
     public partial class Header : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Header>
     {
@@ -70,7 +70,7 @@ namespace Org.Apache.Kafka.Common.Header
 
     #region IHeader
     /// <summary>
-    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/header/Header.html"/>
+    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/header/Header.html"/>
     /// </summary>
     public partial interface IHeader
     {
@@ -107,7 +107,7 @@ namespace Org.Apache.Kafka.Common.Header
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/header/Header.html#value()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/header/Header.html#value()"/>
         /// </summary>
         /// <returns><see cref="byte"/></returns>
         public byte[] Value()
@@ -115,7 +115,7 @@ namespace Org.Apache.Kafka.Common.Header
             return IExecuteWithSignatureArray<byte>("value", "()[B");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/header/Header.html#key()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/header/Header.html#key()"/>
         /// </summary>
         /// <returns><see cref="Java.Lang.String"/></returns>
         public Java.Lang.String Key()

@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Tools
 {
     #region ManifestWorkspace declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/ManifestWorkspace.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.0/org/apache/kafka/tools/ManifestWorkspace.html"/>
     /// </summary>
     public partial class ManifestWorkspace : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ManifestWorkspace>
     {
@@ -64,7 +64,7 @@ namespace Org.Apache.Kafka.Tools
         // TODO: complete the class
         #region SourceWorkspace declaration
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/ManifestWorkspace.SourceWorkspace.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.0/org/apache/kafka/tools/ManifestWorkspace.SourceWorkspace.html"/>
         /// </summary>
         public partial class SourceWorkspace : MASES.JCOBridge.C2JBridge.JVMBridgeBase<SourceWorkspace>
         {
@@ -107,7 +107,7 @@ namespace Org.Apache.Kafka.Tools
 
         #region SourceWorkspace<T> declaration
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/ManifestWorkspace.SourceWorkspace.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.0/org/apache/kafka/tools/ManifestWorkspace.SourceWorkspace.html"/>
         /// </summary>
         /// <typeparam name="T"></typeparam>
         public partial class SourceWorkspace<T> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<SourceWorkspace<T>>
@@ -158,7 +158,7 @@ namespace Org.Apache.Kafka.Tools
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/ManifestWorkspace.html#%3Cinit%3E(java.io.PrintStream)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.0/org/apache/kafka/tools/ManifestWorkspace.html#%3Cinit%3E(java.io.PrintStream)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Io.PrintStream"/></param>
         public ManifestWorkspace(Java.Io.PrintStream arg0)
@@ -182,7 +182,7 @@ namespace Org.Apache.Kafka.Tools
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/ManifestWorkspace.html#commit(boolean)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.0/org/apache/kafka/tools/ManifestWorkspace.html#commit(boolean)"/>
         /// </summary>
         /// <param name="arg0"><see cref="bool"/></param>
         /// <returns><see cref="bool"/></returns>
@@ -217,7 +217,7 @@ namespace Org.Apache.Kafka.Tools
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/ManifestWorkspace.SourceWorkspace.html#location()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.0/org/apache/kafka/tools/ManifestWorkspace.SourceWorkspace.html#location()"/>
             /// </summary>
             /// <returns><see cref="Java.Nio.File.Path"/></returns>
             public Java.Nio.File.Path Location()
@@ -260,7 +260,7 @@ namespace Org.Apache.Kafka.Tools
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/ManifestWorkspace.SourceWorkspace.html#location()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.0/org/apache/kafka/tools/ManifestWorkspace.SourceWorkspace.html#location()"/>
             /// </summary>
             /// <returns><see cref="Java.Nio.File.Path"/></returns>
             public Java.Nio.File.Path Location()

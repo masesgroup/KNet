@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common
 {
     #region Metric declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/Metric.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/Metric.html"/>
     /// </summary>
     public partial class Metric : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Metric>
     {
@@ -70,7 +70,7 @@ namespace Org.Apache.Kafka.Common
 
     #region IMetric
     /// <summary>
-    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/Metric.html"/>
+    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/Metric.html"/>
     /// </summary>
     public partial interface IMetric
     {
@@ -107,7 +107,7 @@ namespace Org.Apache.Kafka.Common
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/Metric.html#metricValue()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/Metric.html#metricValue()"/>
         /// </summary>
         /// <returns><see cref="object"/></returns>
         public object MetricValue()
@@ -115,7 +115,7 @@ namespace Org.Apache.Kafka.Common
             return IExecuteWithSignature("metricValue", "()Ljava/lang/Object;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/Metric.html#metricName()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/Metric.html#metricName()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.MetricName"/></returns>
         public Org.Apache.Kafka.Common.MetricName MetricName()

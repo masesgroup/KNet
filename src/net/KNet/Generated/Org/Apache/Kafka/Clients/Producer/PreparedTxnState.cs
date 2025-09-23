@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Clients.Producer
 {
     #region PreparedTxnState declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/producer/PreparedTxnState.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/producer/PreparedTxnState.html"/>
     /// </summary>
     public partial class PreparedTxnState : MASES.JCOBridge.C2JBridge.JVMBridgeBase<PreparedTxnState>
     {
@@ -71,7 +71,7 @@ namespace Org.Apache.Kafka.Clients.Producer
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/producer/PreparedTxnState.html#%3Cinit%3E(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/producer/PreparedTxnState.html#%3Cinit%3E(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         public PreparedTxnState(Java.Lang.String arg0)
@@ -95,7 +95,7 @@ namespace Org.Apache.Kafka.Clients.Producer
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/producer/PreparedTxnState.html#hasTransaction()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/producer/PreparedTxnState.html#hasTransaction()"/>
         /// </summary>
         /// <returns><see cref="bool"/></returns>
         public bool HasTransaction()
@@ -103,7 +103,7 @@ namespace Org.Apache.Kafka.Clients.Producer
             return IExecuteWithSignature<bool>("hasTransaction", "()Z");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/producer/PreparedTxnState.html#producerId()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/producer/PreparedTxnState.html#producerId()"/>
         /// </summary>
         /// <returns><see cref="long"/></returns>
         public long ProducerId()
@@ -111,7 +111,7 @@ namespace Org.Apache.Kafka.Clients.Producer
             return IExecuteWithSignature<long>("producerId", "()J");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/producer/PreparedTxnState.html#epoch()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/producer/PreparedTxnState.html#epoch()"/>
         /// </summary>
         /// <returns><see cref="short"/></returns>
         public short Epoch()

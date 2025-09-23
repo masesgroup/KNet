@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common.Record
 {
     #region RemoteLogInputStream declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/RemoteLogInputStream.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/record/RemoteLogInputStream.html"/>
     /// </summary>
     public partial class RemoteLogInputStream : MASES.JCOBridge.C2JBridge.JVMBridgeBase<RemoteLogInputStream>
     {
@@ -71,7 +71,7 @@ namespace Org.Apache.Kafka.Common.Record
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/RemoteLogInputStream.html#%3Cinit%3E(java.io.InputStream)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/record/RemoteLogInputStream.html#%3Cinit%3E(java.io.InputStream)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Io.InputStream"/></param>
         public RemoteLogInputStream(Java.Io.InputStream arg0)
@@ -95,7 +95,7 @@ namespace Org.Apache.Kafka.Common.Record
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/RemoteLogInputStream.html#nextBatch()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/record/RemoteLogInputStream.html#nextBatch()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.Record.RecordBatch"/></returns>
         /// <exception cref="Java.Io.IOException"/>

@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Tools
 {
     #region ProducerPerformance declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/ProducerPerformance.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.0/org/apache/kafka/tools/ProducerPerformance.html"/>
     /// </summary>
     public partial class ProducerPerformance : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ProducerPerformance>, MASES.JCOBridge.C2JBridge.IJVMBridgeMain
     {
@@ -79,13 +79,13 @@ namespace Org.Apache.Kafka.Tools
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/ProducerPerformance.html#DEFAULT_TRANSACTION_ID_PREFIX"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.0/org/apache/kafka/tools/ProducerPerformance.html#DEFAULT_TRANSACTION_ID_PREFIX"/>
         /// </summary>
         public static Java.Lang.String DEFAULT_TRANSACTION_ID_PREFIX { get { if (!_DEFAULT_TRANSACTION_ID_PREFIXReady) { _DEFAULT_TRANSACTION_ID_PREFIXContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "DEFAULT_TRANSACTION_ID_PREFIX"); _DEFAULT_TRANSACTION_ID_PREFIXReady = true; } return _DEFAULT_TRANSACTION_ID_PREFIXContent; } }
         private static Java.Lang.String _DEFAULT_TRANSACTION_ID_PREFIXContent = default;
         private static bool _DEFAULT_TRANSACTION_ID_PREFIXReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/ProducerPerformance.html#DEFAULT_TRANSACTION_DURATION_MS"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.0/org/apache/kafka/tools/ProducerPerformance.html#DEFAULT_TRANSACTION_DURATION_MS"/>
         /// </summary>
         public static long DEFAULT_TRANSACTION_DURATION_MS { get { if (!_DEFAULT_TRANSACTION_DURATION_MSReady) { _DEFAULT_TRANSACTION_DURATION_MSContent = SGetField<long>(LocalBridgeClazz, "DEFAULT_TRANSACTION_DURATION_MS"); _DEFAULT_TRANSACTION_DURATION_MSReady = true; } return _DEFAULT_TRANSACTION_DURATION_MSContent; } }
         private static long _DEFAULT_TRANSACTION_DURATION_MSContent = default;
@@ -95,7 +95,7 @@ namespace Org.Apache.Kafka.Tools
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/ProducerPerformance.html#main(java.lang.String[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.0/org/apache/kafka/tools/ProducerPerformance.html#main(java.lang.String[])"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <exception cref="Java.Lang.Exception"/>

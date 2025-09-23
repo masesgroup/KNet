@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common.Record
 {
     #region FileLogInputStream declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/FileLogInputStream.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/record/FileLogInputStream.html"/>
     /// </summary>
     public partial class FileLogInputStream : MASES.JCOBridge.C2JBridge.JVMBridgeBase<FileLogInputStream>
     {
@@ -64,7 +64,7 @@ namespace Org.Apache.Kafka.Common.Record
         // TODO: complete the class
         #region FileChannelRecordBatch declaration
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/FileLogInputStream.FileChannelRecordBatch.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/record/FileLogInputStream.FileChannelRecordBatch.html"/>
         /// </summary>
         public partial class FileChannelRecordBatch : MASES.JCOBridge.C2JBridge.JVMBridgeBase<FileChannelRecordBatch>
         {
@@ -130,7 +130,7 @@ namespace Org.Apache.Kafka.Common.Record
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/FileLogInputStream.html#nextBatch()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/record/FileLogInputStream.html#nextBatch()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.Record.RecordBatch"/></returns>
         /// <exception cref="Java.Io.IOException"/>
@@ -163,7 +163,7 @@ namespace Org.Apache.Kafka.Common.Record
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/FileLogInputStream.FileChannelRecordBatch.html#position()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/record/FileLogInputStream.FileChannelRecordBatch.html#position()"/>
             /// </summary>
             /// <returns><see cref="int"/></returns>
             public int Position()

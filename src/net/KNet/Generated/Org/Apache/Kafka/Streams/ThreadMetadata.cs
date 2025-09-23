@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Streams
 {
     #region ThreadMetadata declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/ThreadMetadata.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/ThreadMetadata.html"/>
     /// </summary>
     public partial class ThreadMetadata : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ThreadMetadata>
     {
@@ -70,7 +70,7 @@ namespace Org.Apache.Kafka.Streams
 
     #region IThreadMetadata
     /// <summary>
-    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/ThreadMetadata.html"/>
+    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/ThreadMetadata.html"/>
     /// </summary>
     public partial interface IThreadMetadata
     {
@@ -107,7 +107,7 @@ namespace Org.Apache.Kafka.Streams
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/ThreadMetadata.html#adminClientId()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/ThreadMetadata.html#adminClientId()"/>
         /// </summary>
         /// <returns><see cref="Java.Lang.String"/></returns>
         public Java.Lang.String AdminClientId()
@@ -115,7 +115,7 @@ namespace Org.Apache.Kafka.Streams
             return IExecuteWithSignature<Java.Lang.String>("adminClientId", "()Ljava/lang/String;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/ThreadMetadata.html#consumerClientId()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/ThreadMetadata.html#consumerClientId()"/>
         /// </summary>
         /// <returns><see cref="Java.Lang.String"/></returns>
         public Java.Lang.String ConsumerClientId()
@@ -123,7 +123,7 @@ namespace Org.Apache.Kafka.Streams
             return IExecuteWithSignature<Java.Lang.String>("consumerClientId", "()Ljava/lang/String;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/ThreadMetadata.html#restoreConsumerClientId()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/ThreadMetadata.html#restoreConsumerClientId()"/>
         /// </summary>
         /// <returns><see cref="Java.Lang.String"/></returns>
         public Java.Lang.String RestoreConsumerClientId()
@@ -131,7 +131,7 @@ namespace Org.Apache.Kafka.Streams
             return IExecuteWithSignature<Java.Lang.String>("restoreConsumerClientId", "()Ljava/lang/String;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/ThreadMetadata.html#threadName()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/ThreadMetadata.html#threadName()"/>
         /// </summary>
         /// <returns><see cref="Java.Lang.String"/></returns>
         public Java.Lang.String ThreadName()
@@ -139,7 +139,7 @@ namespace Org.Apache.Kafka.Streams
             return IExecuteWithSignature<Java.Lang.String>("threadName", "()Ljava/lang/String;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/ThreadMetadata.html#threadState()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/ThreadMetadata.html#threadState()"/>
         /// </summary>
         /// <returns><see cref="Java.Lang.String"/></returns>
         public Java.Lang.String ThreadState()
@@ -147,7 +147,7 @@ namespace Org.Apache.Kafka.Streams
             return IExecuteWithSignature<Java.Lang.String>("threadState", "()Ljava/lang/String;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/ThreadMetadata.html#producerClientIds()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/ThreadMetadata.html#producerClientIds()"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Set"/></returns>
         public Java.Util.Set<Java.Lang.String> ProducerClientIds()
@@ -155,7 +155,7 @@ namespace Org.Apache.Kafka.Streams
             return IExecuteWithSignature<Java.Util.Set<Java.Lang.String>>("producerClientIds", "()Ljava/util/Set;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/ThreadMetadata.html#activeTasks()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/ThreadMetadata.html#activeTasks()"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Set"/></returns>
         public Java.Util.Set<Org.Apache.Kafka.Streams.TaskMetadata> ActiveTasks()
@@ -163,7 +163,7 @@ namespace Org.Apache.Kafka.Streams
             return IExecuteWithSignature<Java.Util.Set<Org.Apache.Kafka.Streams.TaskMetadata>>("activeTasks", "()Ljava/util/Set;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/ThreadMetadata.html#standbyTasks()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/ThreadMetadata.html#standbyTasks()"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Set"/></returns>
         public Java.Util.Set<Org.Apache.Kafka.Streams.TaskMetadata> StandbyTasks()

@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Raft
 {
     #region Batch declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/Batch.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/Batch.html"/>
     /// </summary>
     public partial class Batch : Java.Lang.Iterable
     {
@@ -68,7 +68,7 @@ namespace Org.Apache.Kafka.Raft
 
     #region Batch<T> declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/Batch.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/Batch.html"/>
     /// </summary>
     /// <typeparam name="T"></typeparam>
     public partial class Batch<T> : Java.Lang.Iterable<T>
@@ -125,7 +125,7 @@ namespace Org.Apache.Kafka.Raft
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/Batch.html#control(long,int,long,int,java.util.List)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/Batch.html#control(long,int,long,int,java.util.List)"/>
         /// </summary>
         /// <param name="arg0"><see cref="long"/></param>
         /// <param name="arg1"><see cref="int"/></param>
@@ -138,7 +138,7 @@ namespace Org.Apache.Kafka.Raft
             return SExecuteWithSignature<Org.Apache.Kafka.Raft.Batch>(LocalBridgeClazz, "control", "(JIJILjava/util/List;)Lorg/apache/kafka/raft/Batch;", arg0, arg1, arg2, arg3, arg4);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/Batch.html#data(long,int,long,int,java.util.List)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/Batch.html#data(long,int,long,int,java.util.List)"/>
         /// </summary>
         /// <param name="arg0"><see cref="long"/></param>
         /// <param name="arg1"><see cref="int"/></param>
@@ -155,7 +155,7 @@ namespace Org.Apache.Kafka.Raft
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/Batch.html#epoch()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/Batch.html#epoch()"/>
         /// </summary>
         /// <returns><see cref="int"/></returns>
         public int Epoch()
@@ -163,7 +163,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<int>("epoch", "()I");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/Batch.html#sizeInBytes()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/Batch.html#sizeInBytes()"/>
         /// </summary>
         /// <returns><see cref="int"/></returns>
         public int SizeInBytes()
@@ -171,7 +171,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<int>("sizeInBytes", "()I");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/Batch.html#iterator()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/Batch.html#iterator()"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Iterator"/></returns>
         public Java.Util.Iterator Iterator()
@@ -179,7 +179,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<Java.Util.Iterator>("iterator", "()Ljava/util/Iterator;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/Batch.html#controlRecords()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/Batch.html#controlRecords()"/>
         /// </summary>
         /// <returns><see cref="Java.Util.List"/></returns>
         public Java.Util.List ControlRecords()
@@ -187,7 +187,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<Java.Util.List>("controlRecords", "()Ljava/util/List;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/Batch.html#records()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/Batch.html#records()"/>
         /// </summary>
         /// <returns><see cref="Java.Util.List"/></returns>
         public Java.Util.List Records()
@@ -195,7 +195,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<Java.Util.List>("records", "()Ljava/util/List;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/Batch.html#appendTimestamp()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/Batch.html#appendTimestamp()"/>
         /// </summary>
         /// <returns><see cref="long"/></returns>
         public long AppendTimestamp()
@@ -203,7 +203,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<long>("appendTimestamp", "()J");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/Batch.html#baseOffset()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/Batch.html#baseOffset()"/>
         /// </summary>
         /// <returns><see cref="long"/></returns>
         public long BaseOffset()
@@ -211,7 +211,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<long>("baseOffset", "()J");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/Batch.html#lastOffset()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/Batch.html#lastOffset()"/>
         /// </summary>
         /// <returns><see cref="long"/></returns>
         public long LastOffset()
@@ -250,7 +250,7 @@ namespace Org.Apache.Kafka.Raft
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/Batch.html#control(long,int,long,int,java.util.List)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/Batch.html#control(long,int,long,int,java.util.List)"/>
         /// </summary>
         /// <param name="arg0"><see cref="long"/></param>
         /// <param name="arg1"><see cref="int"/></param>
@@ -263,7 +263,7 @@ namespace Org.Apache.Kafka.Raft
             return SExecuteWithSignature<Org.Apache.Kafka.Raft.Batch<T>>(LocalBridgeClazz, "control", "(JIJILjava/util/List;)Lorg/apache/kafka/raft/Batch;", arg0, arg1, arg2, arg3, arg4);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/Batch.html#data(long,int,long,int,java.util.List)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/Batch.html#data(long,int,long,int,java.util.List)"/>
         /// </summary>
         /// <param name="arg0"><see cref="long"/></param>
         /// <param name="arg1"><see cref="int"/></param>
@@ -280,7 +280,7 @@ namespace Org.Apache.Kafka.Raft
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/Batch.html#epoch()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/Batch.html#epoch()"/>
         /// </summary>
         /// <returns><see cref="int"/></returns>
         public int Epoch()
@@ -288,7 +288,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<int>("epoch", "()I");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/Batch.html#sizeInBytes()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/Batch.html#sizeInBytes()"/>
         /// </summary>
         /// <returns><see cref="int"/></returns>
         public int SizeInBytes()
@@ -296,7 +296,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<int>("sizeInBytes", "()I");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/Batch.html#iterator()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/Batch.html#iterator()"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Iterator"/></returns>
         public Java.Util.Iterator<T> Iterator()
@@ -304,7 +304,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<Java.Util.Iterator<T>>("iterator", "()Ljava/util/Iterator;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/Batch.html#controlRecords()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/Batch.html#controlRecords()"/>
         /// </summary>
         /// <returns><see cref="Java.Util.List"/></returns>
         public Java.Util.List<Org.Apache.Kafka.Raft.ControlRecord> ControlRecords()
@@ -312,7 +312,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<Java.Util.List<Org.Apache.Kafka.Raft.ControlRecord>>("controlRecords", "()Ljava/util/List;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/Batch.html#records()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/Batch.html#records()"/>
         /// </summary>
         /// <returns><see cref="Java.Util.List"/></returns>
         public Java.Util.List<T> Records()
@@ -320,7 +320,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<Java.Util.List<T>>("records", "()Ljava/util/List;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/Batch.html#appendTimestamp()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/Batch.html#appendTimestamp()"/>
         /// </summary>
         /// <returns><see cref="long"/></returns>
         public long AppendTimestamp()
@@ -328,7 +328,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<long>("appendTimestamp", "()J");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/Batch.html#baseOffset()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/Batch.html#baseOffset()"/>
         /// </summary>
         /// <returns><see cref="long"/></returns>
         public long BaseOffset()
@@ -336,7 +336,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<long>("baseOffset", "()J");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/Batch.html#lastOffset()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/Batch.html#lastOffset()"/>
         /// </summary>
         /// <returns><see cref="long"/></returns>
         public long LastOffset()

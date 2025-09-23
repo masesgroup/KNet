@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Streams.Processor
 {
     #region StateRestoreListener declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/StateRestoreListener.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/processor/StateRestoreListener.html"/>
     /// </summary>
     public partial class StateRestoreListener : MASES.JCOBridge.C2JBridge.JVMBridgeListener
     {
@@ -100,7 +100,7 @@ namespace Org.Apache.Kafka.Streams.Processor
 
     #region IStateRestoreListener
     /// <summary>
-    /// .NET interface for org.mases.knet.generated.org.apache.kafka.streams.processor.StateRestoreListener implementing <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/StateRestoreListener.html"/>
+    /// .NET interface for org.mases.knet.generated.org.apache.kafka.streams.processor.StateRestoreListener implementing <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/processor/StateRestoreListener.html"/>
     /// </summary>
     public partial interface IStateRestoreListener
     {
@@ -149,7 +149,7 @@ namespace Org.Apache.Kafka.Streams.Processor
         }
 
         /// <summary>
-        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/StateRestoreListener.html#onBatchRestored(org.apache.kafka.common.TopicPartition,java.lang.String,long,long)"/>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/processor/StateRestoreListener.html#onBatchRestored(org.apache.kafka.common.TopicPartition,java.lang.String,long,long)"/>
         /// </summary>
         /// <remarks>If <see cref="OnOnBatchRestored"/> has a value it takes precedence over corresponding class method</remarks>
         public global::System.Action<Org.Apache.Kafka.Common.TopicPartition, Java.Lang.String, long, long> OnOnBatchRestored { get; set; } = null;
@@ -164,7 +164,7 @@ namespace Org.Apache.Kafka.Streams.Processor
         }
 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/StateRestoreListener.html#onBatchRestored(org.apache.kafka.common.TopicPartition,java.lang.String,long,long)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/processor/StateRestoreListener.html#onBatchRestored(org.apache.kafka.common.TopicPartition,java.lang.String,long,long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.TopicPartition"/></param>
         /// <param name="arg1"><see cref="Java.Lang.String"/></param>
@@ -176,7 +176,7 @@ namespace Org.Apache.Kafka.Streams.Processor
         }
 
         /// <summary>
-        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/StateRestoreListener.html#onRestoreEnd(org.apache.kafka.common.TopicPartition,java.lang.String,long)"/>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/processor/StateRestoreListener.html#onRestoreEnd(org.apache.kafka.common.TopicPartition,java.lang.String,long)"/>
         /// </summary>
         /// <remarks>If <see cref="OnOnRestoreEnd"/> has a value it takes precedence over corresponding class method</remarks>
         public global::System.Action<Org.Apache.Kafka.Common.TopicPartition, Java.Lang.String, long> OnOnRestoreEnd { get; set; } = null;
@@ -191,7 +191,7 @@ namespace Org.Apache.Kafka.Streams.Processor
         }
 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/StateRestoreListener.html#onRestoreEnd(org.apache.kafka.common.TopicPartition,java.lang.String,long)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/processor/StateRestoreListener.html#onRestoreEnd(org.apache.kafka.common.TopicPartition,java.lang.String,long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.TopicPartition"/></param>
         /// <param name="arg1"><see cref="Java.Lang.String"/></param>
@@ -202,7 +202,7 @@ namespace Org.Apache.Kafka.Streams.Processor
         }
 
         /// <summary>
-        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/StateRestoreListener.html#onRestoreStart(org.apache.kafka.common.TopicPartition,java.lang.String,long,long)"/>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/processor/StateRestoreListener.html#onRestoreStart(org.apache.kafka.common.TopicPartition,java.lang.String,long,long)"/>
         /// </summary>
         /// <remarks>If <see cref="OnOnRestoreStart"/> has a value it takes precedence over corresponding class method</remarks>
         public global::System.Action<Org.Apache.Kafka.Common.TopicPartition, Java.Lang.String, long, long> OnOnRestoreStart { get; set; } = null;
@@ -217,7 +217,7 @@ namespace Org.Apache.Kafka.Streams.Processor
         }
 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/StateRestoreListener.html#onRestoreStart(org.apache.kafka.common.TopicPartition,java.lang.String,long,long)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/processor/StateRestoreListener.html#onRestoreStart(org.apache.kafka.common.TopicPartition,java.lang.String,long,long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.TopicPartition"/></param>
         /// <param name="arg1"><see cref="Java.Lang.String"/></param>
@@ -228,7 +228,7 @@ namespace Org.Apache.Kafka.Streams.Processor
             hasOverrideOnRestoreStart = false;
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/StateRestoreListener.html#onRestoreSuspended(org.apache.kafka.common.TopicPartition,java.lang.String,long)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/processor/StateRestoreListener.html#onRestoreSuspended(org.apache.kafka.common.TopicPartition,java.lang.String,long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.TopicPartition"/></param>
         /// <param name="arg1"><see cref="Java.Lang.String"/></param>
@@ -240,7 +240,7 @@ namespace Org.Apache.Kafka.Streams.Processor
         }
 
         /// <summary>
-        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/StateRestoreListener.html#onRestoreSuspended(org.apache.kafka.common.TopicPartition,java.lang.String,long)"/>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/processor/StateRestoreListener.html#onRestoreSuspended(org.apache.kafka.common.TopicPartition,java.lang.String,long)"/>
         /// </summary>
         /// <remarks>If <see cref="OnOnRestoreSuspended"/> has a value it takes precedence over corresponding class method</remarks>
         public global::System.Action<Org.Apache.Kafka.Common.TopicPartition, Java.Lang.String, long> OnOnRestoreSuspended { get; set; } = null;
@@ -255,7 +255,7 @@ namespace Org.Apache.Kafka.Streams.Processor
         }
 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/StateRestoreListener.html#onRestoreSuspended(org.apache.kafka.common.TopicPartition,java.lang.String,long)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/processor/StateRestoreListener.html#onRestoreSuspended(org.apache.kafka.common.TopicPartition,java.lang.String,long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.TopicPartition"/></param>
         /// <param name="arg1"><see cref="Java.Lang.String"/></param>
@@ -297,7 +297,7 @@ namespace Org.Apache.Kafka.Streams.Processor
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/StateRestoreListener.html#onBatchRestored(org.apache.kafka.common.TopicPartition,java.lang.String,long,long)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/processor/StateRestoreListener.html#onBatchRestored(org.apache.kafka.common.TopicPartition,java.lang.String,long,long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.TopicPartition"/></param>
         /// <param name="arg1"><see cref="Java.Lang.String"/></param>
@@ -308,7 +308,7 @@ namespace Org.Apache.Kafka.Streams.Processor
             IExecuteWithSignature("onBatchRestored", "(Lorg/apache/kafka/common/TopicPartition;Ljava/lang/String;JJ)V", arg0, arg1, arg2, arg3);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/StateRestoreListener.html#onRestoreEnd(org.apache.kafka.common.TopicPartition,java.lang.String,long)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/processor/StateRestoreListener.html#onRestoreEnd(org.apache.kafka.common.TopicPartition,java.lang.String,long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.TopicPartition"/></param>
         /// <param name="arg1"><see cref="Java.Lang.String"/></param>
@@ -318,7 +318,7 @@ namespace Org.Apache.Kafka.Streams.Processor
             IExecuteWithSignature("onRestoreEnd", "(Lorg/apache/kafka/common/TopicPartition;Ljava/lang/String;J)V", arg0, arg1, arg2);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/StateRestoreListener.html#onRestoreStart(org.apache.kafka.common.TopicPartition,java.lang.String,long,long)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/processor/StateRestoreListener.html#onRestoreStart(org.apache.kafka.common.TopicPartition,java.lang.String,long,long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.TopicPartition"/></param>
         /// <param name="arg1"><see cref="Java.Lang.String"/></param>
@@ -329,7 +329,7 @@ namespace Org.Apache.Kafka.Streams.Processor
             IExecuteWithSignature("onRestoreStart", "(Lorg/apache/kafka/common/TopicPartition;Ljava/lang/String;JJ)V", arg0, arg1, arg2, arg3);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/StateRestoreListener.html#onRestoreSuspended(org.apache.kafka.common.TopicPartition,java.lang.String,long)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/processor/StateRestoreListener.html#onRestoreSuspended(org.apache.kafka.common.TopicPartition,java.lang.String,long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.TopicPartition"/></param>
         /// <param name="arg1"><see cref="Java.Lang.String"/></param>

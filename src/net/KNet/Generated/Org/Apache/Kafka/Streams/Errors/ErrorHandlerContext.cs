@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Streams.Errors
 {
     #region ErrorHandlerContext declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/errors/ErrorHandlerContext.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/errors/ErrorHandlerContext.html"/>
     /// </summary>
     public partial class ErrorHandlerContext : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ErrorHandlerContext>
     {
@@ -70,7 +70,7 @@ namespace Org.Apache.Kafka.Streams.Errors
 
     #region IErrorHandlerContext
     /// <summary>
-    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/errors/ErrorHandlerContext.html"/>
+    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/errors/ErrorHandlerContext.html"/>
     /// </summary>
     public partial interface IErrorHandlerContext
     {
@@ -107,7 +107,7 @@ namespace Org.Apache.Kafka.Streams.Errors
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/errors/ErrorHandlerContext.html#sourceRawKey()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/errors/ErrorHandlerContext.html#sourceRawKey()"/>
         /// </summary>
         /// <returns><see cref="byte"/></returns>
         public byte[] SourceRawKey()
@@ -115,7 +115,7 @@ namespace Org.Apache.Kafka.Streams.Errors
             return IExecuteWithSignatureArray<byte>("sourceRawKey", "()[B");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/errors/ErrorHandlerContext.html#sourceRawValue()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/errors/ErrorHandlerContext.html#sourceRawValue()"/>
         /// </summary>
         /// <returns><see cref="byte"/></returns>
         public byte[] SourceRawValue()
@@ -123,7 +123,7 @@ namespace Org.Apache.Kafka.Streams.Errors
             return IExecuteWithSignatureArray<byte>("sourceRawValue", "()[B");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/errors/ErrorHandlerContext.html#partition()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/errors/ErrorHandlerContext.html#partition()"/>
         /// </summary>
         /// <returns><see cref="int"/></returns>
         public int Partition()
@@ -131,7 +131,7 @@ namespace Org.Apache.Kafka.Streams.Errors
             return IExecuteWithSignature<int>("partition", "()I");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/errors/ErrorHandlerContext.html#processorNodeId()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/errors/ErrorHandlerContext.html#processorNodeId()"/>
         /// </summary>
         /// <returns><see cref="Java.Lang.String"/></returns>
         public Java.Lang.String ProcessorNodeId()
@@ -139,7 +139,7 @@ namespace Org.Apache.Kafka.Streams.Errors
             return IExecuteWithSignature<Java.Lang.String>("processorNodeId", "()Ljava/lang/String;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/errors/ErrorHandlerContext.html#topic()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/errors/ErrorHandlerContext.html#topic()"/>
         /// </summary>
         /// <returns><see cref="Java.Lang.String"/></returns>
         public Java.Lang.String Topic()
@@ -147,7 +147,7 @@ namespace Org.Apache.Kafka.Streams.Errors
             return IExecuteWithSignature<Java.Lang.String>("topic", "()Ljava/lang/String;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/errors/ErrorHandlerContext.html#offset()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/errors/ErrorHandlerContext.html#offset()"/>
         /// </summary>
         /// <returns><see cref="long"/></returns>
         public long Offset()
@@ -155,7 +155,7 @@ namespace Org.Apache.Kafka.Streams.Errors
             return IExecuteWithSignature<long>("offset", "()J");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/errors/ErrorHandlerContext.html#timestamp()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/errors/ErrorHandlerContext.html#timestamp()"/>
         /// </summary>
         /// <returns><see cref="long"/></returns>
         public long Timestamp()
@@ -163,7 +163,7 @@ namespace Org.Apache.Kafka.Streams.Errors
             return IExecuteWithSignature<long>("timestamp", "()J");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/errors/ErrorHandlerContext.html#headers()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/errors/ErrorHandlerContext.html#headers()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.Header.Headers"/></returns>
         public Org.Apache.Kafka.Common.Header.Headers Headers()
@@ -171,7 +171,7 @@ namespace Org.Apache.Kafka.Streams.Errors
             return IExecuteWithSignature<Org.Apache.Kafka.Common.Header.Headers>("headers", "()Lorg/apache/kafka/common/header/Headers;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/errors/ErrorHandlerContext.html#taskId()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/errors/ErrorHandlerContext.html#taskId()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Processor.TaskId"/></returns>
         public Org.Apache.Kafka.Streams.Processor.TaskId TaskId()

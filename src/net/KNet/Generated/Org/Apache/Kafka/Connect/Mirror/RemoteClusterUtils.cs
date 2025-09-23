@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
 {
     #region RemoteClusterUtils declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/4.0.0/org/apache/kafka/connect/mirror/RemoteClusterUtils.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/4.1.0/org/apache/kafka/connect/mirror/RemoteClusterUtils.html"/>
     /// </summary>
     public partial class RemoteClusterUtils : MASES.JCOBridge.C2JBridge.JVMBridgeBase<RemoteClusterUtils>
     {
@@ -83,7 +83,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/4.0.0/org/apache/kafka/connect/mirror/RemoteClusterUtils.html#replicationHops(java.util.Map,java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/4.1.0/org/apache/kafka/connect/mirror/RemoteClusterUtils.html#replicationHops(java.util.Map,java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <param name="arg1"><see cref="Java.Lang.String"/></param>
@@ -95,7 +95,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
             return SExecuteWithSignature<int>(LocalBridgeClazz, "replicationHops", "(Ljava/util/Map;Ljava/lang/String;)I", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/4.0.0/org/apache/kafka/connect/mirror/RemoteClusterUtils.html#translateOffsets(java.util.Map,java.lang.String,java.lang.String,java.time.Duration)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/4.1.0/org/apache/kafka/connect/mirror/RemoteClusterUtils.html#translateOffsets(java.util.Map,java.lang.String,java.lang.String,java.time.Duration)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <param name="arg1"><see cref="Java.Lang.String"/></param>
@@ -109,7 +109,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
             return SExecuteWithSignature<Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Org.Apache.Kafka.Clients.Consumer.OffsetAndMetadata>>(LocalBridgeClazz, "translateOffsets", "(Ljava/util/Map;Ljava/lang/String;Ljava/lang/String;Ljava/time/Duration;)Ljava/util/Map;", arg0, arg1, arg2, arg3);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/4.0.0/org/apache/kafka/connect/mirror/RemoteClusterUtils.html#checkpointTopics(java.util.Map)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/4.1.0/org/apache/kafka/connect/mirror/RemoteClusterUtils.html#checkpointTopics(java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <returns><see cref="Java.Util.Set"/></returns>
@@ -120,7 +120,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
             return SExecuteWithSignature<Java.Util.Set<Java.Lang.String>>(LocalBridgeClazz, "checkpointTopics", "(Ljava/util/Map;)Ljava/util/Set;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/4.0.0/org/apache/kafka/connect/mirror/RemoteClusterUtils.html#heartbeatTopics(java.util.Map)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/4.1.0/org/apache/kafka/connect/mirror/RemoteClusterUtils.html#heartbeatTopics(java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <returns><see cref="Java.Util.Set"/></returns>
@@ -131,7 +131,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
             return SExecuteWithSignature<Java.Util.Set<Java.Lang.String>>(LocalBridgeClazz, "heartbeatTopics", "(Ljava/util/Map;)Ljava/util/Set;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/4.0.0/org/apache/kafka/connect/mirror/RemoteClusterUtils.html#upstreamClusters(java.util.Map)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/4.1.0/org/apache/kafka/connect/mirror/RemoteClusterUtils.html#upstreamClusters(java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <returns><see cref="Java.Util.Set"/></returns>

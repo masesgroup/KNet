@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common.Metrics.Stats
 {
     #region CumulativeCount declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/metrics/stats/CumulativeCount.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/metrics/stats/CumulativeCount.html"/>
     /// </summary>
     public partial class CumulativeCount : Org.Apache.Kafka.Common.Metrics.Stats.CumulativeSum
     {

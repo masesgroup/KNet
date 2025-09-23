@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common.Errors
 {
     #region FencedLeaderEpochException declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/errors/FencedLeaderEpochException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/errors/FencedLeaderEpochException.html"/>
     /// </summary>
     public partial class FencedLeaderEpochException : Org.Apache.Kafka.Common.Errors.InvalidMetadataException
     {

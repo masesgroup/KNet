@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common.Utils
 {
     #region Timer declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/utils/Timer.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/utils/Timer.html"/>
     /// </summary>
     public partial class Timer : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Timer>
     {
@@ -87,7 +87,7 @@ namespace Org.Apache.Kafka.Common.Utils
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/utils/Timer.html#isExpired()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/utils/Timer.html#isExpired()"/>
         /// </summary>
         /// <returns><see cref="bool"/></returns>
         public bool IsExpired()
@@ -95,7 +95,7 @@ namespace Org.Apache.Kafka.Common.Utils
             return IExecuteWithSignature<bool>("isExpired", "()Z");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/utils/Timer.html#notExpired()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/utils/Timer.html#notExpired()"/>
         /// </summary>
         /// <returns><see cref="bool"/></returns>
         public bool NotExpired()
@@ -103,7 +103,7 @@ namespace Org.Apache.Kafka.Common.Utils
             return IExecuteWithSignature<bool>("notExpired", "()Z");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/utils/Timer.html#currentTimeMs()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/utils/Timer.html#currentTimeMs()"/>
         /// </summary>
         /// <returns><see cref="long"/></returns>
         public long CurrentTimeMs()
@@ -111,7 +111,7 @@ namespace Org.Apache.Kafka.Common.Utils
             return IExecuteWithSignature<long>("currentTimeMs", "()J");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/utils/Timer.html#elapsedMs()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/utils/Timer.html#elapsedMs()"/>
         /// </summary>
         /// <returns><see cref="long"/></returns>
         public long ElapsedMs()
@@ -119,7 +119,7 @@ namespace Org.Apache.Kafka.Common.Utils
             return IExecuteWithSignature<long>("elapsedMs", "()J");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/utils/Timer.html#isExpiredBy()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/utils/Timer.html#isExpiredBy()"/>
         /// </summary>
         /// <returns><see cref="long"/></returns>
         public long IsExpiredBy()
@@ -127,7 +127,7 @@ namespace Org.Apache.Kafka.Common.Utils
             return IExecuteWithSignature<long>("isExpiredBy", "()J");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/utils/Timer.html#remainingMs()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/utils/Timer.html#remainingMs()"/>
         /// </summary>
         /// <returns><see cref="long"/></returns>
         public long RemainingMs()
@@ -135,7 +135,7 @@ namespace Org.Apache.Kafka.Common.Utils
             return IExecuteWithSignature<long>("remainingMs", "()J");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/utils/Timer.html#timeoutMs()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/utils/Timer.html#timeoutMs()"/>
         /// </summary>
         /// <returns><see cref="long"/></returns>
         public long TimeoutMs()
@@ -143,7 +143,7 @@ namespace Org.Apache.Kafka.Common.Utils
             return IExecuteWithSignature<long>("timeoutMs", "()J");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/utils/Timer.html#reset(long)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/utils/Timer.html#reset(long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="long"/></param>
         public void Reset(long arg0)
@@ -151,7 +151,7 @@ namespace Org.Apache.Kafka.Common.Utils
             IExecuteWithSignature("reset", "(J)V", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/utils/Timer.html#resetDeadline(long)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/utils/Timer.html#resetDeadline(long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="long"/></param>
         public void ResetDeadline(long arg0)
@@ -159,7 +159,7 @@ namespace Org.Apache.Kafka.Common.Utils
             IExecuteWithSignature("resetDeadline", "(J)V", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/utils/Timer.html#sleep(long)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/utils/Timer.html#sleep(long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="long"/></param>
         public void Sleep(long arg0)
@@ -167,14 +167,14 @@ namespace Org.Apache.Kafka.Common.Utils
             IExecuteWithSignature("sleep", "(J)V", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/utils/Timer.html#update()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/utils/Timer.html#update()"/>
         /// </summary>
         public void Update()
         {
             IExecuteWithSignature("update", "()V");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/utils/Timer.html#update(long)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/utils/Timer.html#update(long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="long"/></param>
         public void Update(long arg0)
@@ -182,7 +182,7 @@ namespace Org.Apache.Kafka.Common.Utils
             IExecuteWithSignature("update", "(J)V", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/utils/Timer.html#updateAndReset(long)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/utils/Timer.html#updateAndReset(long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="long"/></param>
         public void UpdateAndReset(long arg0)

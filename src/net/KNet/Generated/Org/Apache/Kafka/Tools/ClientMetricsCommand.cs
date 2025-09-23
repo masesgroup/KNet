@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Tools
 {
     #region ClientMetricsCommand declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/ClientMetricsCommand.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.0/org/apache/kafka/tools/ClientMetricsCommand.html"/>
     /// </summary>
     public partial class ClientMetricsCommand : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ClientMetricsCommand>, MASES.JCOBridge.C2JBridge.IJVMBridgeMain
     {
@@ -64,7 +64,7 @@ namespace Org.Apache.Kafka.Tools
         // TODO: complete the class
         #region ClientMetricsCommandOptions declaration
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/ClientMetricsCommand.ClientMetricsCommandOptions.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.0/org/apache/kafka/tools/ClientMetricsCommand.ClientMetricsCommandOptions.html"/>
         /// </summary>
         public partial class ClientMetricsCommandOptions : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ClientMetricsCommandOptions>
         {
@@ -105,7 +105,7 @@ namespace Org.Apache.Kafka.Tools
 
         #region ClientMetricsService declaration
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/ClientMetricsCommand.ClientMetricsService.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.0/org/apache/kafka/tools/ClientMetricsCommand.ClientMetricsService.html"/>
         /// </summary>
         public partial class ClientMetricsService : Java.Lang.AutoCloseable
         {
@@ -165,7 +165,7 @@ namespace Org.Apache.Kafka.Tools
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/ClientMetricsCommand.html#main(java.lang.String...)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.0/org/apache/kafka/tools/ClientMetricsCommand.html#main(java.lang.String...)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         public static void Main(Java.Lang.String[] arg0)
@@ -185,7 +185,7 @@ namespace Org.Apache.Kafka.Tools
         {
             #region Constructors
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/ClientMetricsCommand.ClientMetricsCommandOptions.html#%3Cinit%3E(java.lang.String[])"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.0/org/apache/kafka/tools/ClientMetricsCommand.ClientMetricsCommandOptions.html#%3Cinit%3E(java.lang.String[])"/>
             /// </summary>
             /// <param name="arg0"><see cref="Java.Lang.String"/></param>
             public ClientMetricsCommandOptions(Java.Lang.String[] arg0)
@@ -209,7 +209,7 @@ namespace Org.Apache.Kafka.Tools
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/ClientMetricsCommand.ClientMetricsCommandOptions.html#hasAlterOption()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.0/org/apache/kafka/tools/ClientMetricsCommand.ClientMetricsCommandOptions.html#hasAlterOption()"/>
             /// </summary>
             /// <returns><see cref="bool"/></returns>
             public bool HasAlterOption()
@@ -217,7 +217,7 @@ namespace Org.Apache.Kafka.Tools
                 return IExecuteWithSignature<bool>("hasAlterOption", "()Z");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/ClientMetricsCommand.ClientMetricsCommandOptions.html#hasDeleteOption()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.0/org/apache/kafka/tools/ClientMetricsCommand.ClientMetricsCommandOptions.html#hasDeleteOption()"/>
             /// </summary>
             /// <returns><see cref="bool"/></returns>
             public bool HasDeleteOption()
@@ -225,7 +225,7 @@ namespace Org.Apache.Kafka.Tools
                 return IExecuteWithSignature<bool>("hasDeleteOption", "()Z");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/ClientMetricsCommand.ClientMetricsCommandOptions.html#hasDescribeOption()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.0/org/apache/kafka/tools/ClientMetricsCommand.ClientMetricsCommandOptions.html#hasDescribeOption()"/>
             /// </summary>
             /// <returns><see cref="bool"/></returns>
             public bool HasDescribeOption()
@@ -233,7 +233,7 @@ namespace Org.Apache.Kafka.Tools
                 return IExecuteWithSignature<bool>("hasDescribeOption", "()Z");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/ClientMetricsCommand.ClientMetricsCommandOptions.html#hasGenerateNameOption()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.0/org/apache/kafka/tools/ClientMetricsCommand.ClientMetricsCommandOptions.html#hasGenerateNameOption()"/>
             /// </summary>
             /// <returns><see cref="bool"/></returns>
             public bool HasGenerateNameOption()
@@ -241,7 +241,7 @@ namespace Org.Apache.Kafka.Tools
                 return IExecuteWithSignature<bool>("hasGenerateNameOption", "()Z");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/ClientMetricsCommand.ClientMetricsCommandOptions.html#hasListOption()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.0/org/apache/kafka/tools/ClientMetricsCommand.ClientMetricsCommandOptions.html#hasListOption()"/>
             /// </summary>
             /// <returns><see cref="bool"/></returns>
             public bool HasListOption()
@@ -249,7 +249,7 @@ namespace Org.Apache.Kafka.Tools
                 return IExecuteWithSignature<bool>("hasListOption", "()Z");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/ClientMetricsCommand.ClientMetricsCommandOptions.html#bootstrapServer()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.0/org/apache/kafka/tools/ClientMetricsCommand.ClientMetricsCommandOptions.html#bootstrapServer()"/>
             /// </summary>
             /// <returns><see cref="Java.Lang.String"/></returns>
             public Java.Lang.String BootstrapServer()
@@ -257,7 +257,7 @@ namespace Org.Apache.Kafka.Tools
                 return IExecuteWithSignature<Java.Lang.String>("bootstrapServer", "()Ljava/lang/String;");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/ClientMetricsCommand.ClientMetricsCommandOptions.html#interval()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.0/org/apache/kafka/tools/ClientMetricsCommand.ClientMetricsCommandOptions.html#interval()"/>
             /// </summary>
             /// <returns><see cref="Java.Util.Optional"/></returns>
             public Java.Util.Optional<Java.Lang.String> Interval()
@@ -265,7 +265,7 @@ namespace Org.Apache.Kafka.Tools
                 return IExecuteWithSignature<Java.Util.Optional<Java.Lang.String>>("interval", "()Ljava/util/Optional;");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/ClientMetricsCommand.ClientMetricsCommandOptions.html#name()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.0/org/apache/kafka/tools/ClientMetricsCommand.ClientMetricsCommandOptions.html#name()"/>
             /// </summary>
             /// <returns><see cref="Java.Util.Optional"/></returns>
             public Java.Util.Optional<Java.Lang.String> Name()
@@ -273,7 +273,7 @@ namespace Org.Apache.Kafka.Tools
                 return IExecuteWithSignature<Java.Util.Optional<Java.Lang.String>>("name", "()Ljava/util/Optional;");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/ClientMetricsCommand.ClientMetricsCommandOptions.html#match()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.0/org/apache/kafka/tools/ClientMetricsCommand.ClientMetricsCommandOptions.html#match()"/>
             /// </summary>
             /// <returns><see cref="Java.Util.Optional"/></returns>
             public Java.Util.Optional<Java.Util.List<Java.Lang.String>> Match()
@@ -281,7 +281,7 @@ namespace Org.Apache.Kafka.Tools
                 return IExecuteWithSignature<Java.Util.Optional<Java.Util.List<Java.Lang.String>>>("match", "()Ljava/util/Optional;");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/ClientMetricsCommand.ClientMetricsCommandOptions.html#metrics()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.0/org/apache/kafka/tools/ClientMetricsCommand.ClientMetricsCommandOptions.html#metrics()"/>
             /// </summary>
             /// <returns><see cref="Java.Util.Optional"/></returns>
             public Java.Util.Optional<Java.Util.List<Java.Lang.String>> Metrics()
@@ -289,7 +289,7 @@ namespace Org.Apache.Kafka.Tools
                 return IExecuteWithSignature<Java.Util.Optional<Java.Util.List<Java.Lang.String>>>("metrics", "()Ljava/util/Optional;");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/ClientMetricsCommand.ClientMetricsCommandOptions.html#commandConfig()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.0/org/apache/kafka/tools/ClientMetricsCommand.ClientMetricsCommandOptions.html#commandConfig()"/>
             /// </summary>
             /// <returns><see cref="Java.Util.Properties"/></returns>
             /// <exception cref="Java.Io.IOException"/>
@@ -298,7 +298,7 @@ namespace Org.Apache.Kafka.Tools
                 return IExecuteWithSignature<Java.Util.Properties>("commandConfig", "()Ljava/util/Properties;");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/ClientMetricsCommand.ClientMetricsCommandOptions.html#checkArgs()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.0/org/apache/kafka/tools/ClientMetricsCommand.ClientMetricsCommandOptions.html#checkArgs()"/>
             /// </summary>
             public void CheckArgs()
             {
@@ -320,7 +320,7 @@ namespace Org.Apache.Kafka.Tools
         {
             #region Constructors
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/ClientMetricsCommand.ClientMetricsService.html#%3Cinit%3E(java.util.Properties)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.0/org/apache/kafka/tools/ClientMetricsCommand.ClientMetricsService.html#%3Cinit%3E(java.util.Properties)"/>
             /// </summary>
             /// <param name="arg0"><see cref="Java.Util.Properties"/></param>
             public ClientMetricsService(Java.Util.Properties arg0)
@@ -344,7 +344,7 @@ namespace Org.Apache.Kafka.Tools
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/ClientMetricsCommand.ClientMetricsService.html#alterClientMetrics(org.apache.kafka.tools.ClientMetricsCommand.ClientMetricsCommandOptions)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.0/org/apache/kafka/tools/ClientMetricsCommand.ClientMetricsService.html#alterClientMetrics(org.apache.kafka.tools.ClientMetricsCommand.ClientMetricsCommandOptions)"/>
             /// </summary>
             /// <param name="arg0"><see cref="Org.Apache.Kafka.Tools.ClientMetricsCommand.ClientMetricsCommandOptions"/></param>
             /// <exception cref="Java.Lang.Exception"/>
@@ -353,7 +353,7 @@ namespace Org.Apache.Kafka.Tools
                 IExecuteWithSignature("alterClientMetrics", "(Lorg/apache/kafka/tools/ClientMetricsCommand$ClientMetricsCommandOptions;)V", arg0);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/ClientMetricsCommand.ClientMetricsService.html#close()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.0/org/apache/kafka/tools/ClientMetricsCommand.ClientMetricsService.html#close()"/>
             /// </summary>
             /// <exception cref="Java.Lang.Exception"/>
             public void Close()
@@ -361,7 +361,7 @@ namespace Org.Apache.Kafka.Tools
                 IExecuteWithSignature("close", "()V");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/ClientMetricsCommand.ClientMetricsService.html#deleteClientMetrics(org.apache.kafka.tools.ClientMetricsCommand.ClientMetricsCommandOptions)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.0/org/apache/kafka/tools/ClientMetricsCommand.ClientMetricsService.html#deleteClientMetrics(org.apache.kafka.tools.ClientMetricsCommand.ClientMetricsCommandOptions)"/>
             /// </summary>
             /// <param name="arg0"><see cref="Org.Apache.Kafka.Tools.ClientMetricsCommand.ClientMetricsCommandOptions"/></param>
             /// <exception cref="Java.Lang.Exception"/>
@@ -370,7 +370,7 @@ namespace Org.Apache.Kafka.Tools
                 IExecuteWithSignature("deleteClientMetrics", "(Lorg/apache/kafka/tools/ClientMetricsCommand$ClientMetricsCommandOptions;)V", arg0);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/ClientMetricsCommand.ClientMetricsService.html#describeClientMetrics(org.apache.kafka.tools.ClientMetricsCommand.ClientMetricsCommandOptions)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.0/org/apache/kafka/tools/ClientMetricsCommand.ClientMetricsService.html#describeClientMetrics(org.apache.kafka.tools.ClientMetricsCommand.ClientMetricsCommandOptions)"/>
             /// </summary>
             /// <param name="arg0"><see cref="Org.Apache.Kafka.Tools.ClientMetricsCommand.ClientMetricsCommandOptions"/></param>
             /// <exception cref="Java.Lang.Exception"/>
@@ -379,7 +379,7 @@ namespace Org.Apache.Kafka.Tools
                 IExecuteWithSignature("describeClientMetrics", "(Lorg/apache/kafka/tools/ClientMetricsCommand$ClientMetricsCommandOptions;)V", arg0);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/ClientMetricsCommand.ClientMetricsService.html#listClientMetrics()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.0/org/apache/kafka/tools/ClientMetricsCommand.ClientMetricsService.html#listClientMetrics()"/>
             /// </summary>
             /// <exception cref="Java.Lang.Exception"/>
             public void ListClientMetrics()

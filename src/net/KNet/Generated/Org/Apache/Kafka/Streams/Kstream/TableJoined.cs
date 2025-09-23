@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 {
     #region TableJoined declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/TableJoined.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/kstream/TableJoined.html"/>
     /// </summary>
     public partial class TableJoined : MASES.JCOBridge.C2JBridge.JVMBridgeBase<TableJoined>
     {
@@ -68,7 +68,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
     #region TableJoined<K, KO> declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/TableJoined.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/kstream/TableJoined.html"/>
     /// </summary>
     /// <typeparam name="K"></typeparam>
     /// <typeparam name="KO"></typeparam>
@@ -126,7 +126,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/TableJoined.html#as(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/kstream/TableJoined.html#as(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.TableJoined"/></returns>
@@ -135,7 +135,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
             return SExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.TableJoined>(LocalBridgeClazz, "as", "(Ljava/lang/String;)Lorg/apache/kafka/streams/kstream/TableJoined;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/TableJoined.html#with(org.apache.kafka.streams.processor.StreamPartitioner,org.apache.kafka.streams.processor.StreamPartitioner)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/kstream/TableJoined.html#with(org.apache.kafka.streams.processor.StreamPartitioner,org.apache.kafka.streams.processor.StreamPartitioner)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Processor.StreamPartitioner"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Streams.Processor.StreamPartitioner"/></param>
@@ -149,7 +149,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/TableJoined.html#withOtherPartitioner(org.apache.kafka.streams.processor.StreamPartitioner)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/kstream/TableJoined.html#withOtherPartitioner(org.apache.kafka.streams.processor.StreamPartitioner)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Processor.StreamPartitioner"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.TableJoined"/></returns>
@@ -158,7 +158,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.TableJoined>("withOtherPartitioner", "(Lorg/apache/kafka/streams/processor/StreamPartitioner;)Lorg/apache/kafka/streams/kstream/TableJoined;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/TableJoined.html#withPartitioner(org.apache.kafka.streams.processor.StreamPartitioner)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/kstream/TableJoined.html#withPartitioner(org.apache.kafka.streams.processor.StreamPartitioner)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Processor.StreamPartitioner"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.TableJoined"/></returns>
@@ -198,7 +198,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/TableJoined.html#as(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/kstream/TableJoined.html#as(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.TableJoined"/></returns>
@@ -207,7 +207,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
             return SExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.TableJoined<K, KO>>(LocalBridgeClazz, "as", "(Ljava/lang/String;)Lorg/apache/kafka/streams/kstream/TableJoined;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/TableJoined.html#with(org.apache.kafka.streams.processor.StreamPartitioner,org.apache.kafka.streams.processor.StreamPartitioner)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/kstream/TableJoined.html#with(org.apache.kafka.streams.processor.StreamPartitioner,org.apache.kafka.streams.processor.StreamPartitioner)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Processor.StreamPartitioner"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Streams.Processor.StreamPartitioner"/></param>
@@ -221,7 +221,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/TableJoined.html#withOtherPartitioner(org.apache.kafka.streams.processor.StreamPartitioner)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/kstream/TableJoined.html#withOtherPartitioner(org.apache.kafka.streams.processor.StreamPartitioner)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Processor.StreamPartitioner"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.TableJoined"/></returns>
@@ -230,7 +230,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.TableJoined<K, KO>>("withOtherPartitioner", "(Lorg/apache/kafka/streams/processor/StreamPartitioner;)Lorg/apache/kafka/streams/kstream/TableJoined;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/TableJoined.html#withPartitioner(org.apache.kafka.streams.processor.StreamPartitioner)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/kstream/TableJoined.html#withPartitioner(org.apache.kafka.streams.processor.StreamPartitioner)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Processor.StreamPartitioner"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.TableJoined"/></returns>

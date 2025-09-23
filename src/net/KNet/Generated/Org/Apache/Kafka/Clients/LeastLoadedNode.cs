@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Clients
 {
     #region LeastLoadedNode declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/LeastLoadedNode.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/LeastLoadedNode.html"/>
     /// </summary>
     public partial class LeastLoadedNode : MASES.JCOBridge.C2JBridge.JVMBridgeBase<LeastLoadedNode>
     {
@@ -71,7 +71,7 @@ namespace Org.Apache.Kafka.Clients
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/LeastLoadedNode.html#%3Cinit%3E(org.apache.kafka.common.Node,boolean)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/LeastLoadedNode.html#%3Cinit%3E(org.apache.kafka.common.Node,boolean)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Node"/></param>
         /// <param name="arg1"><see cref="bool"/></param>
@@ -96,7 +96,7 @@ namespace Org.Apache.Kafka.Clients
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/LeastLoadedNode.html#hasNodeAvailableOrConnectionReady()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/LeastLoadedNode.html#hasNodeAvailableOrConnectionReady()"/>
         /// </summary>
         /// <returns><see cref="bool"/></returns>
         public bool HasNodeAvailableOrConnectionReady()
@@ -104,7 +104,7 @@ namespace Org.Apache.Kafka.Clients
             return IExecuteWithSignature<bool>("hasNodeAvailableOrConnectionReady", "()Z");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/LeastLoadedNode.html#node()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/LeastLoadedNode.html#node()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.Node"/></returns>
         public Org.Apache.Kafka.Common.Node Node()

@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common.Serialization
 {
     #region Serde declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/serialization/Serde.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/serialization/Serde.html"/>
     /// </summary>
     public partial class Serde : MASES.JCOBridge.C2JBridge.JVMBridgeListener
     {
@@ -100,7 +100,7 @@ namespace Org.Apache.Kafka.Common.Serialization
 
     #region Serde<T> declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/serialization/Serde.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/serialization/Serde.html"/>
     /// </summary>
     /// <typeparam name="T"></typeparam>
     public partial class Serde<T> : MASES.JCOBridge.C2JBridge.JVMBridgeListener
@@ -205,7 +205,7 @@ namespace Org.Apache.Kafka.Common.Serialization
         }
 
         /// <summary>
-        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/serialization/Serde.html#deserializer()"/>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/serialization/Serde.html#deserializer()"/>
         /// </summary>
         /// <remarks>If <see cref="OnDeserializer"/> has a value it takes precedence over corresponding class method</remarks>
         public global::System.Func<Org.Apache.Kafka.Common.Serialization.Deserializer> OnDeserializer { get; set; } = null;
@@ -220,7 +220,7 @@ namespace Org.Apache.Kafka.Common.Serialization
         }
 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/serialization/Serde.html#deserializer()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/serialization/Serde.html#deserializer()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.Serialization.Deserializer"/></returns>
         public virtual Org.Apache.Kafka.Common.Serialization.Deserializer Deserializer()
@@ -229,7 +229,7 @@ namespace Org.Apache.Kafka.Common.Serialization
         }
 
         /// <summary>
-        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/serialization/Serde.html#serializer()"/>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/serialization/Serde.html#serializer()"/>
         /// </summary>
         /// <remarks>If <see cref="OnSerializer"/> has a value it takes precedence over corresponding class method</remarks>
         public global::System.Func<Org.Apache.Kafka.Common.Serialization.Serializer> OnSerializer { get; set; } = null;
@@ -244,7 +244,7 @@ namespace Org.Apache.Kafka.Common.Serialization
         }
 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/serialization/Serde.html#serializer()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/serialization/Serde.html#serializer()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.Serialization.Serializer"/></returns>
         public virtual Org.Apache.Kafka.Common.Serialization.Serializer Serializer()
@@ -252,7 +252,7 @@ namespace Org.Apache.Kafka.Common.Serialization
             hasOverrideSerializer = false; return default;
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/serialization/Serde.html#close()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/serialization/Serde.html#close()"/>
         /// </summary>
         /// <remarks>The method invokes the default implementation in the JVM interface</remarks>
         public void CloseDefault()
@@ -261,7 +261,7 @@ namespace Org.Apache.Kafka.Common.Serialization
         }
 
         /// <summary>
-        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/serialization/Serde.html#close()"/>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/serialization/Serde.html#close()"/>
         /// </summary>
         /// <remarks>If <see cref="OnClose"/> has a value it takes precedence over corresponding class method</remarks>
         public global::System.Action OnClose { get; set; } = null;
@@ -276,7 +276,7 @@ namespace Org.Apache.Kafka.Common.Serialization
         }
 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/serialization/Serde.html#close()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/serialization/Serde.html#close()"/>
         /// </summary>
         /// <remarks>The method invokes the default implementation in the JVM interface using <see cref="CloseDefault"/>; override the method to implement a different behavior</remarks>
         public virtual void Close()
@@ -284,7 +284,7 @@ namespace Org.Apache.Kafka.Common.Serialization
             hasOverrideClose = false;
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/serialization/Serde.html#configure(java.util.Map,boolean)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/serialization/Serde.html#configure(java.util.Map,boolean)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <param name="arg1"><see cref="bool"/></param>
@@ -295,7 +295,7 @@ namespace Org.Apache.Kafka.Common.Serialization
         }
 
         /// <summary>
-        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/serialization/Serde.html#configure(java.util.Map,boolean)"/>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/serialization/Serde.html#configure(java.util.Map,boolean)"/>
         /// </summary>
         /// <remarks>If <see cref="OnConfigure"/> has a value it takes precedence over corresponding class method</remarks>
         public global::System.Action<Java.Util.Map, bool> OnConfigure { get; set; } = null;
@@ -310,7 +310,7 @@ namespace Org.Apache.Kafka.Common.Serialization
         }
 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/serialization/Serde.html#configure(java.util.Map,boolean)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/serialization/Serde.html#configure(java.util.Map,boolean)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <param name="arg1"><see cref="bool"/></param>
@@ -351,7 +351,7 @@ namespace Org.Apache.Kafka.Common.Serialization
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/serialization/Serde.html#deserializer()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/serialization/Serde.html#deserializer()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.Serialization.Deserializer"/></returns>
         public override Org.Apache.Kafka.Common.Serialization.Deserializer Deserializer()
@@ -359,7 +359,7 @@ namespace Org.Apache.Kafka.Common.Serialization
             return IExecuteWithSignature<Org.Apache.Kafka.Common.Serialization.DeserializerDirect, Org.Apache.Kafka.Common.Serialization.Deserializer>("deserializer", "()Lorg/apache/kafka/common/serialization/Deserializer;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/serialization/Serde.html#serializer()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/serialization/Serde.html#serializer()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.Serialization.Serializer"/></returns>
         public override Org.Apache.Kafka.Common.Serialization.Serializer Serializer()
@@ -367,14 +367,14 @@ namespace Org.Apache.Kafka.Common.Serialization
             return IExecuteWithSignature<Org.Apache.Kafka.Common.Serialization.SerializerDirect, Org.Apache.Kafka.Common.Serialization.Serializer>("serializer", "()Lorg/apache/kafka/common/serialization/Serializer;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/serialization/Serde.html#close()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/serialization/Serde.html#close()"/>
         /// </summary>
         public override void Close()
         {
             IExecuteWithSignature("close", "()V");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/serialization/Serde.html#configure(java.util.Map,boolean)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/serialization/Serde.html#configure(java.util.Map,boolean)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <param name="arg1"><see cref="bool"/></param>
@@ -395,7 +395,7 @@ namespace Org.Apache.Kafka.Common.Serialization
 
     #region ISerde<T>
     /// <summary>
-    /// .NET interface for org.mases.knet.generated.org.apache.kafka.common.serialization.Serde implementing <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/serialization/Serde.html"/>
+    /// .NET interface for org.mases.knet.generated.org.apache.kafka.common.serialization.Serde implementing <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/serialization/Serde.html"/>
     /// </summary>
     public partial interface ISerde<T>
     {
@@ -444,7 +444,7 @@ namespace Org.Apache.Kafka.Common.Serialization
         }
 
         /// <summary>
-        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/serialization/Serde.html#deserializer()"/>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/serialization/Serde.html#deserializer()"/>
         /// </summary>
         /// <remarks>If <see cref="OnDeserializer"/> has a value it takes precedence over corresponding class method</remarks>
         public global::System.Func<Org.Apache.Kafka.Common.Serialization.Deserializer<T>> OnDeserializer { get; set; } = null;
@@ -459,7 +459,7 @@ namespace Org.Apache.Kafka.Common.Serialization
         }
 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/serialization/Serde.html#deserializer()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/serialization/Serde.html#deserializer()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.Serialization.Deserializer"/></returns>
         public virtual Org.Apache.Kafka.Common.Serialization.Deserializer<T> Deserializer()
@@ -468,7 +468,7 @@ namespace Org.Apache.Kafka.Common.Serialization
         }
 
         /// <summary>
-        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/serialization/Serde.html#serializer()"/>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/serialization/Serde.html#serializer()"/>
         /// </summary>
         /// <remarks>If <see cref="OnSerializer"/> has a value it takes precedence over corresponding class method</remarks>
         public global::System.Func<Org.Apache.Kafka.Common.Serialization.Serializer<T>> OnSerializer { get; set; } = null;
@@ -483,7 +483,7 @@ namespace Org.Apache.Kafka.Common.Serialization
         }
 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/serialization/Serde.html#serializer()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/serialization/Serde.html#serializer()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.Serialization.Serializer"/></returns>
         public virtual Org.Apache.Kafka.Common.Serialization.Serializer<T> Serializer()
@@ -491,7 +491,7 @@ namespace Org.Apache.Kafka.Common.Serialization
             hasOverrideSerializer = false; return default;
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/serialization/Serde.html#close()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/serialization/Serde.html#close()"/>
         /// </summary>
         /// <remarks>The method invokes the default implementation in the JVM interface</remarks>
         public void CloseDefault()
@@ -500,7 +500,7 @@ namespace Org.Apache.Kafka.Common.Serialization
         }
 
         /// <summary>
-        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/serialization/Serde.html#close()"/>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/serialization/Serde.html#close()"/>
         /// </summary>
         /// <remarks>If <see cref="OnClose"/> has a value it takes precedence over corresponding class method</remarks>
         public global::System.Action OnClose { get; set; } = null;
@@ -515,7 +515,7 @@ namespace Org.Apache.Kafka.Common.Serialization
         }
 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/serialization/Serde.html#close()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/serialization/Serde.html#close()"/>
         /// </summary>
         /// <remarks>The method invokes the default implementation in the JVM interface using <see cref="CloseDefault"/>; override the method to implement a different behavior</remarks>
         public virtual void Close()
@@ -523,7 +523,7 @@ namespace Org.Apache.Kafka.Common.Serialization
             hasOverrideClose = false;
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/serialization/Serde.html#configure(java.util.Map,boolean)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/serialization/Serde.html#configure(java.util.Map,boolean)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <param name="arg1"><see cref="bool"/></param>
@@ -534,7 +534,7 @@ namespace Org.Apache.Kafka.Common.Serialization
         }
 
         /// <summary>
-        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/serialization/Serde.html#configure(java.util.Map,boolean)"/>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/serialization/Serde.html#configure(java.util.Map,boolean)"/>
         /// </summary>
         /// <remarks>If <see cref="OnConfigure"/> has a value it takes precedence over corresponding class method</remarks>
         public global::System.Action<Java.Util.Map<Java.Lang.String, object>, bool> OnConfigure { get; set; } = null;
@@ -549,7 +549,7 @@ namespace Org.Apache.Kafka.Common.Serialization
         }
 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/serialization/Serde.html#configure(java.util.Map,boolean)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/serialization/Serde.html#configure(java.util.Map,boolean)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <param name="arg1"><see cref="bool"/></param>
@@ -590,7 +590,7 @@ namespace Org.Apache.Kafka.Common.Serialization
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/serialization/Serde.html#deserializer()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/serialization/Serde.html#deserializer()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.Serialization.Deserializer"/></returns>
         public override Org.Apache.Kafka.Common.Serialization.Deserializer<T> Deserializer()
@@ -598,7 +598,7 @@ namespace Org.Apache.Kafka.Common.Serialization
             return IExecuteWithSignature<Org.Apache.Kafka.Common.Serialization.DeserializerDirect<T>, Org.Apache.Kafka.Common.Serialization.Deserializer<T>>("deserializer", "()Lorg/apache/kafka/common/serialization/Deserializer;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/serialization/Serde.html#serializer()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/serialization/Serde.html#serializer()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.Serialization.Serializer"/></returns>
         public override Org.Apache.Kafka.Common.Serialization.Serializer<T> Serializer()
@@ -606,14 +606,14 @@ namespace Org.Apache.Kafka.Common.Serialization
             return IExecuteWithSignature<Org.Apache.Kafka.Common.Serialization.SerializerDirect<T>, Org.Apache.Kafka.Common.Serialization.Serializer<T>>("serializer", "()Lorg/apache/kafka/common/serialization/Serializer;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/serialization/Serde.html#close()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/serialization/Serde.html#close()"/>
         /// </summary>
         public override void Close()
         {
             IExecuteWithSignature("close", "()V");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/serialization/Serde.html#configure(java.util.Map,boolean)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/serialization/Serde.html#configure(java.util.Map,boolean)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <param name="arg1"><see cref="bool"/></param>

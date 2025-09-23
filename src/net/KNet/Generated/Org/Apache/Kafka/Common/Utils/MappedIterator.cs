@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common.Utils
 {
     #region MappedIterator declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/utils/MappedIterator.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/utils/MappedIterator.html"/>
     /// </summary>
     public partial class MappedIterator : Java.Util.Iterator
     {
@@ -68,7 +68,7 @@ namespace Org.Apache.Kafka.Common.Utils
 
     #region MappedIterator<F, T> declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/utils/MappedIterator.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/utils/MappedIterator.html"/>
     /// </summary>
     /// <typeparam name="F"></typeparam>
     /// <typeparam name="T"></typeparam>
@@ -114,7 +114,7 @@ namespace Org.Apache.Kafka.Common.Utils
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/utils/MappedIterator.html#%3Cinit%3E(java.util.Iterator,java.util.function.Function)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/utils/MappedIterator.html#%3Cinit%3E(java.util.Iterator,java.util.function.Function)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Iterator"/></param>
         /// <param name="arg1"><see cref="Java.Util.Function.Function"/></param>
@@ -139,7 +139,7 @@ namespace Org.Apache.Kafka.Common.Utils
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/utils/MappedIterator.html#hasNext()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/utils/MappedIterator.html#hasNext()"/>
         /// </summary>
         /// <returns><see cref="bool"/></returns>
         public bool HasNext()
@@ -147,7 +147,7 @@ namespace Org.Apache.Kafka.Common.Utils
             return IExecuteWithSignature<bool>("hasNext", "()Z");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/utils/MappedIterator.html#next()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/utils/MappedIterator.html#next()"/>
         /// </summary>
         /// <returns><see cref="object"/></returns>
         public object Next()
@@ -170,7 +170,7 @@ namespace Org.Apache.Kafka.Common.Utils
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/utils/MappedIterator.html#%3Cinit%3E(java.util.Iterator,java.util.function.Function)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/utils/MappedIterator.html#%3Cinit%3E(java.util.Iterator,java.util.function.Function)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Iterator"/></param>
         /// <param name="arg1"><see cref="Java.Util.Function.Function"/></param>
@@ -199,7 +199,7 @@ namespace Org.Apache.Kafka.Common.Utils
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/utils/MappedIterator.html#hasNext()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/utils/MappedIterator.html#hasNext()"/>
         /// </summary>
         /// <returns><see cref="bool"/></returns>
         public bool HasNext()
@@ -207,7 +207,7 @@ namespace Org.Apache.Kafka.Common.Utils
             return IExecuteWithSignature<bool>("hasNext", "()Z");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/utils/MappedIterator.html#next()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/utils/MappedIterator.html#next()"/>
         /// </summary>
         /// <returns><typeparamref name="T"/></returns>
         public T Next()

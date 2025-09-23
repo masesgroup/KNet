@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Streams.Query
 {
     #region MultiVersionedKeyQuery declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/query/MultiVersionedKeyQuery.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/query/MultiVersionedKeyQuery.html"/>
     /// </summary>
     public partial class MultiVersionedKeyQuery : Org.Apache.Kafka.Streams.Query.Query
     {
@@ -68,7 +68,7 @@ namespace Org.Apache.Kafka.Streams.Query
 
     #region MultiVersionedKeyQuery<K, V> declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/query/MultiVersionedKeyQuery.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/query/MultiVersionedKeyQuery.html"/>
     /// </summary>
     /// <typeparam name="K"></typeparam>
     /// <typeparam name="V"></typeparam>
@@ -126,7 +126,7 @@ namespace Org.Apache.Kafka.Streams.Query
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/query/MultiVersionedKeyQuery.html#withKey(java.lang.Object)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/query/MultiVersionedKeyQuery.html#withKey(java.lang.Object)"/>
         /// </summary>
         /// <param name="arg0"><see cref="object"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Query.MultiVersionedKeyQuery"/></returns>
@@ -139,7 +139,7 @@ namespace Org.Apache.Kafka.Streams.Query
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/query/MultiVersionedKeyQuery.html#fromTime()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/query/MultiVersionedKeyQuery.html#fromTime()"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Optional"/></returns>
         public Java.Util.Optional FromTime()
@@ -147,7 +147,7 @@ namespace Org.Apache.Kafka.Streams.Query
             return IExecuteWithSignature<Java.Util.Optional>("fromTime", "()Ljava/util/Optional;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/query/MultiVersionedKeyQuery.html#toTime()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/query/MultiVersionedKeyQuery.html#toTime()"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Optional"/></returns>
         public Java.Util.Optional ToTime()
@@ -155,7 +155,7 @@ namespace Org.Apache.Kafka.Streams.Query
             return IExecuteWithSignature<Java.Util.Optional>("toTime", "()Ljava/util/Optional;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/query/MultiVersionedKeyQuery.html#key()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/query/MultiVersionedKeyQuery.html#key()"/>
         /// </summary>
         /// <returns><see cref="object"/></returns>
         public object Key()
@@ -163,7 +163,7 @@ namespace Org.Apache.Kafka.Streams.Query
             return IExecuteWithSignature("key", "()Ljava/lang/Object;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/query/MultiVersionedKeyQuery.html#fromTime(java.time.Instant)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/query/MultiVersionedKeyQuery.html#fromTime(java.time.Instant)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Time.Instant"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Query.MultiVersionedKeyQuery"/></returns>
@@ -172,7 +172,7 @@ namespace Org.Apache.Kafka.Streams.Query
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.Query.MultiVersionedKeyQuery>("fromTime", "(Ljava/time/Instant;)Lorg/apache/kafka/streams/query/MultiVersionedKeyQuery;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/query/MultiVersionedKeyQuery.html#toTime(java.time.Instant)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/query/MultiVersionedKeyQuery.html#toTime(java.time.Instant)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Time.Instant"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Query.MultiVersionedKeyQuery"/></returns>
@@ -181,7 +181,7 @@ namespace Org.Apache.Kafka.Streams.Query
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.Query.MultiVersionedKeyQuery>("toTime", "(Ljava/time/Instant;)Lorg/apache/kafka/streams/query/MultiVersionedKeyQuery;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/query/MultiVersionedKeyQuery.html#withAscendingTimestamps()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/query/MultiVersionedKeyQuery.html#withAscendingTimestamps()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Query.MultiVersionedKeyQuery"/></returns>
         public Org.Apache.Kafka.Streams.Query.MultiVersionedKeyQuery WithAscendingTimestamps()
@@ -189,7 +189,7 @@ namespace Org.Apache.Kafka.Streams.Query
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.Query.MultiVersionedKeyQuery>("withAscendingTimestamps", "()Lorg/apache/kafka/streams/query/MultiVersionedKeyQuery;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/query/MultiVersionedKeyQuery.html#withDescendingTimestamps()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/query/MultiVersionedKeyQuery.html#withDescendingTimestamps()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Query.MultiVersionedKeyQuery"/></returns>
         public Org.Apache.Kafka.Streams.Query.MultiVersionedKeyQuery WithDescendingTimestamps()
@@ -197,7 +197,7 @@ namespace Org.Apache.Kafka.Streams.Query
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.Query.MultiVersionedKeyQuery>("withDescendingTimestamps", "()Lorg/apache/kafka/streams/query/MultiVersionedKeyQuery;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/query/MultiVersionedKeyQuery.html#resultOrder()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/query/MultiVersionedKeyQuery.html#resultOrder()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Query.ResultOrder"/></returns>
         public Org.Apache.Kafka.Streams.Query.ResultOrder ResultOrder()
@@ -236,7 +236,7 @@ namespace Org.Apache.Kafka.Streams.Query
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/query/MultiVersionedKeyQuery.html#withKey(java.lang.Object)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/query/MultiVersionedKeyQuery.html#withKey(java.lang.Object)"/>
         /// </summary>
         /// <param name="arg0"><typeparamref name="K"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Query.MultiVersionedKeyQuery"/></returns>
@@ -249,7 +249,7 @@ namespace Org.Apache.Kafka.Streams.Query
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/query/MultiVersionedKeyQuery.html#fromTime()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/query/MultiVersionedKeyQuery.html#fromTime()"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Optional"/></returns>
         public Java.Util.Optional<Java.Time.Instant> FromTime()
@@ -257,7 +257,7 @@ namespace Org.Apache.Kafka.Streams.Query
             return IExecuteWithSignature<Java.Util.Optional<Java.Time.Instant>>("fromTime", "()Ljava/util/Optional;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/query/MultiVersionedKeyQuery.html#toTime()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/query/MultiVersionedKeyQuery.html#toTime()"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Optional"/></returns>
         public Java.Util.Optional<Java.Time.Instant> ToTime()
@@ -265,7 +265,7 @@ namespace Org.Apache.Kafka.Streams.Query
             return IExecuteWithSignature<Java.Util.Optional<Java.Time.Instant>>("toTime", "()Ljava/util/Optional;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/query/MultiVersionedKeyQuery.html#key()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/query/MultiVersionedKeyQuery.html#key()"/>
         /// </summary>
         /// <returns><typeparamref name="K"/></returns>
         public K Key()
@@ -273,7 +273,7 @@ namespace Org.Apache.Kafka.Streams.Query
             return IExecuteWithSignature<K>("key", "()Ljava/lang/Object;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/query/MultiVersionedKeyQuery.html#fromTime(java.time.Instant)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/query/MultiVersionedKeyQuery.html#fromTime(java.time.Instant)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Time.Instant"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Query.MultiVersionedKeyQuery"/></returns>
@@ -282,7 +282,7 @@ namespace Org.Apache.Kafka.Streams.Query
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.Query.MultiVersionedKeyQuery<K, V>>("fromTime", "(Ljava/time/Instant;)Lorg/apache/kafka/streams/query/MultiVersionedKeyQuery;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/query/MultiVersionedKeyQuery.html#toTime(java.time.Instant)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/query/MultiVersionedKeyQuery.html#toTime(java.time.Instant)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Time.Instant"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Query.MultiVersionedKeyQuery"/></returns>
@@ -291,7 +291,7 @@ namespace Org.Apache.Kafka.Streams.Query
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.Query.MultiVersionedKeyQuery<K, V>>("toTime", "(Ljava/time/Instant;)Lorg/apache/kafka/streams/query/MultiVersionedKeyQuery;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/query/MultiVersionedKeyQuery.html#withAscendingTimestamps()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/query/MultiVersionedKeyQuery.html#withAscendingTimestamps()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Query.MultiVersionedKeyQuery"/></returns>
         public Org.Apache.Kafka.Streams.Query.MultiVersionedKeyQuery<K, V> WithAscendingTimestamps()
@@ -299,7 +299,7 @@ namespace Org.Apache.Kafka.Streams.Query
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.Query.MultiVersionedKeyQuery<K, V>>("withAscendingTimestamps", "()Lorg/apache/kafka/streams/query/MultiVersionedKeyQuery;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/query/MultiVersionedKeyQuery.html#withDescendingTimestamps()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/query/MultiVersionedKeyQuery.html#withDescendingTimestamps()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Query.MultiVersionedKeyQuery"/></returns>
         public Org.Apache.Kafka.Streams.Query.MultiVersionedKeyQuery<K, V> WithDescendingTimestamps()
@@ -307,7 +307,7 @@ namespace Org.Apache.Kafka.Streams.Query
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.Query.MultiVersionedKeyQuery<K, V>>("withDescendingTimestamps", "()Lorg/apache/kafka/streams/query/MultiVersionedKeyQuery;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/query/MultiVersionedKeyQuery.html#resultOrder()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/query/MultiVersionedKeyQuery.html#resultOrder()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Query.ResultOrder"/></returns>
         public Org.Apache.Kafka.Streams.Query.ResultOrder ResultOrder()

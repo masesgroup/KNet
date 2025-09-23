@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Streams.Query
 {
     #region TimestampedRangeQuery declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/query/TimestampedRangeQuery.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/query/TimestampedRangeQuery.html"/>
     /// </summary>
     public partial class TimestampedRangeQuery : Org.Apache.Kafka.Streams.Query.Query
     {
@@ -68,7 +68,7 @@ namespace Org.Apache.Kafka.Streams.Query
 
     #region TimestampedRangeQuery<K, V> declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/query/TimestampedRangeQuery.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/query/TimestampedRangeQuery.html"/>
     /// </summary>
     /// <typeparam name="K"></typeparam>
     /// <typeparam name="V"></typeparam>
@@ -126,7 +126,7 @@ namespace Org.Apache.Kafka.Streams.Query
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/query/TimestampedRangeQuery.html#withLowerBound(java.lang.Object)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/query/TimestampedRangeQuery.html#withLowerBound(java.lang.Object)"/>
         /// </summary>
         /// <param name="arg0"><see cref="object"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Query.TimestampedRangeQuery"/></returns>
@@ -135,7 +135,7 @@ namespace Org.Apache.Kafka.Streams.Query
             return SExecuteWithSignature<Org.Apache.Kafka.Streams.Query.TimestampedRangeQuery>(LocalBridgeClazz, "withLowerBound", "(Ljava/lang/Object;)Lorg/apache/kafka/streams/query/TimestampedRangeQuery;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/query/TimestampedRangeQuery.html#withNoBounds()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/query/TimestampedRangeQuery.html#withNoBounds()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Query.TimestampedRangeQuery"/></returns>
         public static Org.Apache.Kafka.Streams.Query.TimestampedRangeQuery WithNoBounds()
@@ -143,7 +143,7 @@ namespace Org.Apache.Kafka.Streams.Query
             return SExecuteWithSignature<Org.Apache.Kafka.Streams.Query.TimestampedRangeQuery>(LocalBridgeClazz, "withNoBounds", "()Lorg/apache/kafka/streams/query/TimestampedRangeQuery;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/query/TimestampedRangeQuery.html#withRange(java.lang.Object,java.lang.Object)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/query/TimestampedRangeQuery.html#withRange(java.lang.Object,java.lang.Object)"/>
         /// </summary>
         /// <param name="arg0"><see cref="object"/></param>
         /// <param name="arg1"><see cref="object"/></param>
@@ -153,7 +153,7 @@ namespace Org.Apache.Kafka.Streams.Query
             return SExecuteWithSignature<Org.Apache.Kafka.Streams.Query.TimestampedRangeQuery>(LocalBridgeClazz, "withRange", "(Ljava/lang/Object;Ljava/lang/Object;)Lorg/apache/kafka/streams/query/TimestampedRangeQuery;", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/query/TimestampedRangeQuery.html#withUpperBound(java.lang.Object)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/query/TimestampedRangeQuery.html#withUpperBound(java.lang.Object)"/>
         /// </summary>
         /// <param name="arg0"><see cref="object"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Query.TimestampedRangeQuery"/></returns>
@@ -166,7 +166,7 @@ namespace Org.Apache.Kafka.Streams.Query
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/query/TimestampedRangeQuery.html#lowerBound()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/query/TimestampedRangeQuery.html#lowerBound()"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Optional"/></returns>
         public Java.Util.Optional LowerBound()
@@ -174,7 +174,7 @@ namespace Org.Apache.Kafka.Streams.Query
             return IExecuteWithSignature<Java.Util.Optional>("lowerBound", "()Ljava/util/Optional;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/query/TimestampedRangeQuery.html#upperBound()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/query/TimestampedRangeQuery.html#upperBound()"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Optional"/></returns>
         public Java.Util.Optional UpperBound()
@@ -182,7 +182,7 @@ namespace Org.Apache.Kafka.Streams.Query
             return IExecuteWithSignature<Java.Util.Optional>("upperBound", "()Ljava/util/Optional;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/query/TimestampedRangeQuery.html#resultOrder()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/query/TimestampedRangeQuery.html#resultOrder()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Query.ResultOrder"/></returns>
         public Org.Apache.Kafka.Streams.Query.ResultOrder ResultOrder()
@@ -190,7 +190,7 @@ namespace Org.Apache.Kafka.Streams.Query
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.Query.ResultOrder>("resultOrder", "()Lorg/apache/kafka/streams/query/ResultOrder;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/query/TimestampedRangeQuery.html#withAscendingKeys()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/query/TimestampedRangeQuery.html#withAscendingKeys()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Query.TimestampedRangeQuery"/></returns>
         public Org.Apache.Kafka.Streams.Query.TimestampedRangeQuery WithAscendingKeys()
@@ -198,7 +198,7 @@ namespace Org.Apache.Kafka.Streams.Query
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.Query.TimestampedRangeQuery>("withAscendingKeys", "()Lorg/apache/kafka/streams/query/TimestampedRangeQuery;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/query/TimestampedRangeQuery.html#withDescendingKeys()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/query/TimestampedRangeQuery.html#withDescendingKeys()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Query.TimestampedRangeQuery"/></returns>
         public Org.Apache.Kafka.Streams.Query.TimestampedRangeQuery WithDescendingKeys()
@@ -237,7 +237,7 @@ namespace Org.Apache.Kafka.Streams.Query
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/query/TimestampedRangeQuery.html#withLowerBound(java.lang.Object)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/query/TimestampedRangeQuery.html#withLowerBound(java.lang.Object)"/>
         /// </summary>
         /// <param name="arg0"><typeparamref name="K"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Query.TimestampedRangeQuery"/></returns>
@@ -246,7 +246,7 @@ namespace Org.Apache.Kafka.Streams.Query
             return SExecuteWithSignature<Org.Apache.Kafka.Streams.Query.TimestampedRangeQuery<K, V>>(LocalBridgeClazz, "withLowerBound", "(Ljava/lang/Object;)Lorg/apache/kafka/streams/query/TimestampedRangeQuery;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/query/TimestampedRangeQuery.html#withNoBounds()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/query/TimestampedRangeQuery.html#withNoBounds()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Query.TimestampedRangeQuery"/></returns>
         public static Org.Apache.Kafka.Streams.Query.TimestampedRangeQuery<K, V> WithNoBounds()
@@ -254,7 +254,7 @@ namespace Org.Apache.Kafka.Streams.Query
             return SExecuteWithSignature<Org.Apache.Kafka.Streams.Query.TimestampedRangeQuery<K, V>>(LocalBridgeClazz, "withNoBounds", "()Lorg/apache/kafka/streams/query/TimestampedRangeQuery;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/query/TimestampedRangeQuery.html#withRange(java.lang.Object,java.lang.Object)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/query/TimestampedRangeQuery.html#withRange(java.lang.Object,java.lang.Object)"/>
         /// </summary>
         /// <param name="arg0"><typeparamref name="K"/></param>
         /// <param name="arg1"><typeparamref name="K"/></param>
@@ -264,7 +264,7 @@ namespace Org.Apache.Kafka.Streams.Query
             return SExecuteWithSignature<Org.Apache.Kafka.Streams.Query.TimestampedRangeQuery<K, V>>(LocalBridgeClazz, "withRange", "(Ljava/lang/Object;Ljava/lang/Object;)Lorg/apache/kafka/streams/query/TimestampedRangeQuery;", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/query/TimestampedRangeQuery.html#withUpperBound(java.lang.Object)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/query/TimestampedRangeQuery.html#withUpperBound(java.lang.Object)"/>
         /// </summary>
         /// <param name="arg0"><typeparamref name="K"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Query.TimestampedRangeQuery"/></returns>
@@ -277,7 +277,7 @@ namespace Org.Apache.Kafka.Streams.Query
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/query/TimestampedRangeQuery.html#lowerBound()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/query/TimestampedRangeQuery.html#lowerBound()"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Optional"/></returns>
         public Java.Util.Optional<K> LowerBound()
@@ -285,7 +285,7 @@ namespace Org.Apache.Kafka.Streams.Query
             return IExecuteWithSignature<Java.Util.Optional<K>>("lowerBound", "()Ljava/util/Optional;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/query/TimestampedRangeQuery.html#upperBound()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/query/TimestampedRangeQuery.html#upperBound()"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Optional"/></returns>
         public Java.Util.Optional<K> UpperBound()
@@ -293,7 +293,7 @@ namespace Org.Apache.Kafka.Streams.Query
             return IExecuteWithSignature<Java.Util.Optional<K>>("upperBound", "()Ljava/util/Optional;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/query/TimestampedRangeQuery.html#resultOrder()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/query/TimestampedRangeQuery.html#resultOrder()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Query.ResultOrder"/></returns>
         public Org.Apache.Kafka.Streams.Query.ResultOrder ResultOrder()
@@ -301,7 +301,7 @@ namespace Org.Apache.Kafka.Streams.Query
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.Query.ResultOrder>("resultOrder", "()Lorg/apache/kafka/streams/query/ResultOrder;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/query/TimestampedRangeQuery.html#withAscendingKeys()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/query/TimestampedRangeQuery.html#withAscendingKeys()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Query.TimestampedRangeQuery"/></returns>
         public Org.Apache.Kafka.Streams.Query.TimestampedRangeQuery<K, V> WithAscendingKeys()
@@ -309,7 +309,7 @@ namespace Org.Apache.Kafka.Streams.Query
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.Query.TimestampedRangeQuery<K, V>>("withAscendingKeys", "()Lorg/apache/kafka/streams/query/TimestampedRangeQuery;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/query/TimestampedRangeQuery.html#withDescendingKeys()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/query/TimestampedRangeQuery.html#withDescendingKeys()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Query.TimestampedRangeQuery"/></returns>
         public Org.Apache.Kafka.Streams.Query.TimestampedRangeQuery<K, V> WithDescendingKeys()
