@@ -124,13 +124,11 @@ namespace MASES.KNet.Streams
         /// <typeparam name="K"></typeparam>
         /// <typeparam name="V"></typeparam>
         /// <returns><see cref="Topology"/></returns>
-        [Obsolete("Shall be updated", true)]
         public Topology AddSink<K, V>(string arg0, TopicNameExtractor<K, V> arg1, params string[] arg2)
         {
-            throw new NotImplementedException();
-            //if (arg1 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
-            //var top = _topology.AddSink(arg0, arg1, arg2.ToJVMArray<Java.Lang.String, string>());
-            //return new Topology(top, _factory);
+            if (arg1 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
+            var top = _topology.AddSink<byte[], byte[], byte[], byte[]>(arg0, arg1, arg2.ToJVMArray<Java.Lang.String, string>());
+            return new Topology(top, _factory);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/Topology.html#addSink(java.lang.String,org.apache.kafka.streams.processor.TopicNameExtractor,org.apache.kafka.common.serialization.Serializer,org.apache.kafka.common.serialization.Serializer,java.lang.String...)"/>
@@ -181,14 +179,12 @@ namespace MASES.KNet.Streams
         /// <typeparam name="Arg2objectSuperK"><typeparamref name="K"/></typeparam>
         /// <typeparam name="Arg2objectSuperV"><typeparamref name="V"/></typeparam>
         /// <returns><see cref="Topology"/></returns>
-        [Obsolete("Shall be updated", true)]
         public Topology AddSink<K, V, Arg2objectSuperK, Arg2objectSuperV>(string arg0, TopicNameExtractor<K, V> arg1, StreamPartitioner<Arg2objectSuperK, Arg2objectSuperV> arg2, params string[] arg3) where Arg2objectSuperK : K where Arg2objectSuperV : V
         {
-            throw new NotImplementedException();
-            //if (arg1 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
-            //if (arg2 is IGenericSerDesFactoryApplier applier1) applier1.Factory = _factory;
-            //var top = _topology.AddSink(arg0, arg1, arg2, arg3.ToJVMArray<Java.Lang.String, string>());
-            //return new Topology(top, _factory);
+            if (arg1 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
+            if (arg2 is IGenericSerDesFactoryApplier applier1) applier1.Factory = _factory;
+            var top = _topology.AddSink<byte[], byte[], byte[], byte[], byte[], byte[]>(arg0, arg1, arg2, arg3.ToJVMArray<Java.Lang.String, string>());
+            return new Topology(top, _factory);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/Topology.html#addSink(java.lang.String,java.lang.String,java.lang.String...)"/>
