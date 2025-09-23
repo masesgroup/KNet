@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 {
     #region JoinWindows declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/JoinWindows.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/kstream/JoinWindows.html"/>
     /// </summary>
     public partial class JoinWindows : Org.Apache.Kafka.Streams.Kstream.Windows<Org.Apache.Kafka.Streams.Kstream.Window>
     {
@@ -79,13 +79,13 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/JoinWindows.html#afterMs"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/kstream/JoinWindows.html#afterMs"/>
         /// </summary>
         public long afterMs { get { if (!_afterMsReady) { _afterMsContent = IGetField<long>("afterMs"); _afterMsReady = true; } return _afterMsContent; } }
         private long _afterMsContent = default;
         private bool _afterMsReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/JoinWindows.html#beforeMs"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/kstream/JoinWindows.html#beforeMs"/>
         /// </summary>
         public long beforeMs { get { if (!_beforeMsReady) { _beforeMsContent = IGetField<long>("beforeMs"); _beforeMsReady = true; } return _beforeMsContent; } }
         private long _beforeMsContent = default;
@@ -95,7 +95,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/JoinWindows.html#ofTimeDifferenceAndGrace(java.time.Duration,java.time.Duration)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/kstream/JoinWindows.html#ofTimeDifferenceAndGrace(java.time.Duration,java.time.Duration)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Time.Duration"/></param>
         /// <param name="arg1"><see cref="Java.Time.Duration"/></param>
@@ -105,7 +105,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
             return SExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.JoinWindows>(LocalBridgeClazz, "ofTimeDifferenceAndGrace", "(Ljava/time/Duration;Ljava/time/Duration;)Lorg/apache/kafka/streams/kstream/JoinWindows;", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/JoinWindows.html#ofTimeDifferenceWithNoGrace(java.time.Duration)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/kstream/JoinWindows.html#ofTimeDifferenceWithNoGrace(java.time.Duration)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Time.Duration"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.JoinWindows"/></returns>
@@ -118,7 +118,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/JoinWindows.html#after(java.time.Duration)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/kstream/JoinWindows.html#after(java.time.Duration)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Time.Duration"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.JoinWindows"/></returns>
@@ -128,7 +128,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.JoinWindows>("after", "(Ljava/time/Duration;)Lorg/apache/kafka/streams/kstream/JoinWindows;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/JoinWindows.html#before(java.time.Duration)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/kstream/JoinWindows.html#before(java.time.Duration)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Time.Duration"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.JoinWindows"/></returns>

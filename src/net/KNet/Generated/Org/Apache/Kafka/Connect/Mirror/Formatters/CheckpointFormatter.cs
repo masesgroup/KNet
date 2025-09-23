@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Connect.Mirror.Formatters
 {
     #region CheckpointFormatter declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.0.0/org/apache/kafka/connect/mirror/formatters/CheckpointFormatter.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.1.0/org/apache/kafka/connect/mirror/formatters/CheckpointFormatter.html"/>
     /// </summary>
     public partial class CheckpointFormatter : Org.Apache.Kafka.Common.MessageFormatter
     {
@@ -87,7 +87,7 @@ namespace Org.Apache.Kafka.Connect.Mirror.Formatters
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.0.0/org/apache/kafka/connect/mirror/formatters/CheckpointFormatter.html#writeTo(org.apache.kafka.clients.consumer.ConsumerRecord,java.io.PrintStream)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.1.0/org/apache/kafka/connect/mirror/formatters/CheckpointFormatter.html#writeTo(org.apache.kafka.clients.consumer.ConsumerRecord,java.io.PrintStream)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Clients.Consumer.ConsumerRecord"/></param>
         /// <param name="arg1"><see cref="Java.Io.PrintStream"/></param>

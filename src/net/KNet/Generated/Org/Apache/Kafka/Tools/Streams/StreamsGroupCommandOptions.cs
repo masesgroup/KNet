@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Tools.Streams
 {
     #region StreamsGroupCommandOptions declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/streams/StreamsGroupCommandOptions.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.0/org/apache/kafka/tools/streams/StreamsGroupCommandOptions.html"/>
     /// </summary>
     public partial class StreamsGroupCommandOptions : MASES.JCOBridge.C2JBridge.JVMBridgeBase<StreamsGroupCommandOptions>
     {
@@ -71,7 +71,7 @@ namespace Org.Apache.Kafka.Tools.Streams
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/streams/StreamsGroupCommandOptions.html#%3Cinit%3E(java.lang.String[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.0/org/apache/kafka/tools/streams/StreamsGroupCommandOptions.html#%3Cinit%3E(java.lang.String[])"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         public StreamsGroupCommandOptions(Java.Lang.String[] arg0)
@@ -87,61 +87,61 @@ namespace Org.Apache.Kafka.Tools.Streams
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/streams/StreamsGroupCommandOptions.html#BOOTSTRAP_SERVER_DOC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.0/org/apache/kafka/tools/streams/StreamsGroupCommandOptions.html#BOOTSTRAP_SERVER_DOC"/>
         /// </summary>
         public static Java.Lang.String BOOTSTRAP_SERVER_DOC { get { if (!_BOOTSTRAP_SERVER_DOCReady) { _BOOTSTRAP_SERVER_DOCContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "BOOTSTRAP_SERVER_DOC"); _BOOTSTRAP_SERVER_DOCReady = true; } return _BOOTSTRAP_SERVER_DOCContent; } }
         private static Java.Lang.String _BOOTSTRAP_SERVER_DOCContent = default;
         private static bool _BOOTSTRAP_SERVER_DOCReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/streams/StreamsGroupCommandOptions.html#COMMAND_CONFIG_DOC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.0/org/apache/kafka/tools/streams/StreamsGroupCommandOptions.html#COMMAND_CONFIG_DOC"/>
         /// </summary>
         public static Java.Lang.String COMMAND_CONFIG_DOC { get { if (!_COMMAND_CONFIG_DOCReady) { _COMMAND_CONFIG_DOCContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "COMMAND_CONFIG_DOC"); _COMMAND_CONFIG_DOCReady = true; } return _COMMAND_CONFIG_DOCContent; } }
         private static Java.Lang.String _COMMAND_CONFIG_DOCContent = default;
         private static bool _COMMAND_CONFIG_DOCReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/streams/StreamsGroupCommandOptions.html#DESCRIBE_DOC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.0/org/apache/kafka/tools/streams/StreamsGroupCommandOptions.html#DESCRIBE_DOC"/>
         /// </summary>
         public static Java.Lang.String DESCRIBE_DOC { get { if (!_DESCRIBE_DOCReady) { _DESCRIBE_DOCContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "DESCRIBE_DOC"); _DESCRIBE_DOCReady = true; } return _DESCRIBE_DOCContent; } }
         private static Java.Lang.String _DESCRIBE_DOCContent = default;
         private static bool _DESCRIBE_DOCReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/streams/StreamsGroupCommandOptions.html#GROUP_DOC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.0/org/apache/kafka/tools/streams/StreamsGroupCommandOptions.html#GROUP_DOC"/>
         /// </summary>
         public static Java.Lang.String GROUP_DOC { get { if (!_GROUP_DOCReady) { _GROUP_DOCContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "GROUP_DOC"); _GROUP_DOCReady = true; } return _GROUP_DOCContent; } }
         private static Java.Lang.String _GROUP_DOCContent = default;
         private static bool _GROUP_DOCReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/streams/StreamsGroupCommandOptions.html#LIST_DOC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.0/org/apache/kafka/tools/streams/StreamsGroupCommandOptions.html#LIST_DOC"/>
         /// </summary>
         public static Java.Lang.String LIST_DOC { get { if (!_LIST_DOCReady) { _LIST_DOCContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "LIST_DOC"); _LIST_DOCReady = true; } return _LIST_DOCContent; } }
         private static Java.Lang.String _LIST_DOCContent = default;
         private static bool _LIST_DOCReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/streams/StreamsGroupCommandOptions.html#MEMBERS_DOC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.0/org/apache/kafka/tools/streams/StreamsGroupCommandOptions.html#MEMBERS_DOC"/>
         /// </summary>
         public static Java.Lang.String MEMBERS_DOC { get { if (!_MEMBERS_DOCReady) { _MEMBERS_DOCContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "MEMBERS_DOC"); _MEMBERS_DOCReady = true; } return _MEMBERS_DOCContent; } }
         private static Java.Lang.String _MEMBERS_DOCContent = default;
         private static bool _MEMBERS_DOCReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/streams/StreamsGroupCommandOptions.html#OFFSETS_DOC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.0/org/apache/kafka/tools/streams/StreamsGroupCommandOptions.html#OFFSETS_DOC"/>
         /// </summary>
         public static Java.Lang.String OFFSETS_DOC { get { if (!_OFFSETS_DOCReady) { _OFFSETS_DOCContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "OFFSETS_DOC"); _OFFSETS_DOCReady = true; } return _OFFSETS_DOCContent; } }
         private static Java.Lang.String _OFFSETS_DOCContent = default;
         private static bool _OFFSETS_DOCReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/streams/StreamsGroupCommandOptions.html#STATE_DOC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.0/org/apache/kafka/tools/streams/StreamsGroupCommandOptions.html#STATE_DOC"/>
         /// </summary>
         public static Java.Lang.String STATE_DOC { get { if (!_STATE_DOCReady) { _STATE_DOCContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "STATE_DOC"); _STATE_DOCReady = true; } return _STATE_DOCContent; } }
         private static Java.Lang.String _STATE_DOCContent = default;
         private static bool _STATE_DOCReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/streams/StreamsGroupCommandOptions.html#TIMEOUT_MS_DOC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.0/org/apache/kafka/tools/streams/StreamsGroupCommandOptions.html#TIMEOUT_MS_DOC"/>
         /// </summary>
         public static Java.Lang.String TIMEOUT_MS_DOC { get { if (!_TIMEOUT_MS_DOCReady) { _TIMEOUT_MS_DOCContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "TIMEOUT_MS_DOC"); _TIMEOUT_MS_DOCReady = true; } return _TIMEOUT_MS_DOCContent; } }
         private static Java.Lang.String _TIMEOUT_MS_DOCContent = default;
         private static bool _TIMEOUT_MS_DOCReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/streams/StreamsGroupCommandOptions.html#VERBOSE_DOC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.0/org/apache/kafka/tools/streams/StreamsGroupCommandOptions.html#VERBOSE_DOC"/>
         /// </summary>
         public static Java.Lang.String VERBOSE_DOC { get { if (!_VERBOSE_DOCReady) { _VERBOSE_DOCContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "VERBOSE_DOC"); _VERBOSE_DOCReady = true; } return _VERBOSE_DOCContent; } }
         private static Java.Lang.String _VERBOSE_DOCContent = default;
@@ -151,7 +151,7 @@ namespace Org.Apache.Kafka.Tools.Streams
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/streams/StreamsGroupCommandOptions.html#fromArgs(java.lang.String[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.0/org/apache/kafka/tools/streams/StreamsGroupCommandOptions.html#fromArgs(java.lang.String[])"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Tools.Streams.StreamsGroupCommandOptions"/></returns>
@@ -164,7 +164,7 @@ namespace Org.Apache.Kafka.Tools.Streams
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/streams/StreamsGroupCommandOptions.html#checkArgs()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.0/org/apache/kafka/tools/streams/StreamsGroupCommandOptions.html#checkArgs()"/>
         /// </summary>
         public void CheckArgs()
         {

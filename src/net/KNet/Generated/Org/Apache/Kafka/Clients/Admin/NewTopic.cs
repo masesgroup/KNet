@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 {
     #region NewTopic declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/NewTopic.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/admin/NewTopic.html"/>
     /// </summary>
     public partial class NewTopic : MASES.JCOBridge.C2JBridge.JVMBridgeBase<NewTopic>
     {
@@ -71,7 +71,7 @@ namespace Org.Apache.Kafka.Clients.Admin
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/NewTopic.html#%3Cinit%3E(java.lang.String,int,short)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/admin/NewTopic.html#%3Cinit%3E(java.lang.String,int,short)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="int"/></param>
@@ -81,7 +81,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         {
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/NewTopic.html#%3Cinit%3E(java.lang.String,java.util.Map)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/admin/NewTopic.html#%3Cinit%3E(java.lang.String,java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Java.Util.Map"/></param>
@@ -90,7 +90,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         {
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/NewTopic.html#%3Cinit%3E(java.lang.String,java.util.Optional,java.util.Optional)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/admin/NewTopic.html#%3Cinit%3E(java.lang.String,java.util.Optional,java.util.Optional)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Java.Util.Optional"/></param>
@@ -116,7 +116,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/NewTopic.html#numPartitions()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/admin/NewTopic.html#numPartitions()"/>
         /// </summary>
         /// <returns><see cref="int"/></returns>
         public int NumPartitions()
@@ -124,7 +124,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<int>("numPartitions", "()I");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/NewTopic.html#name()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/admin/NewTopic.html#name()"/>
         /// </summary>
         /// <returns><see cref="Java.Lang.String"/></returns>
         public Java.Lang.String Name()
@@ -132,7 +132,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<Java.Lang.String>("name", "()Ljava/lang/String;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/NewTopic.html#replicasAssignments()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/admin/NewTopic.html#replicasAssignments()"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Map"/></returns>
         public Java.Util.Map<Java.Lang.Integer, Java.Util.List<Java.Lang.Integer>> ReplicasAssignments()
@@ -140,7 +140,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<Java.Util.Map<Java.Lang.Integer, Java.Util.List<Java.Lang.Integer>>>("replicasAssignments", "()Ljava/util/Map;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/NewTopic.html#configs()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/admin/NewTopic.html#configs()"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Map"/></returns>
         public Java.Util.Map<Java.Lang.String, Java.Lang.String> Configs()
@@ -148,7 +148,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<Java.Util.Map<Java.Lang.String, Java.Lang.String>>("configs", "()Ljava/util/Map;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/NewTopic.html#configs(java.util.Map)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/admin/NewTopic.html#configs(java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.NewTopic"/></returns>
@@ -157,7 +157,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<Org.Apache.Kafka.Clients.Admin.NewTopic>("configs", "(Ljava/util/Map;)Lorg/apache/kafka/clients/admin/NewTopic;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/NewTopic.html#replicationFactor()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/admin/NewTopic.html#replicationFactor()"/>
         /// </summary>
         /// <returns><see cref="short"/></returns>
         public short ReplicationFactor()

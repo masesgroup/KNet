@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Streams.Processor
 {
     #region Punctuator declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/Punctuator.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/processor/Punctuator.html"/>
     /// </summary>
     public partial class Punctuator : MASES.JCOBridge.C2JBridge.JVMBridgeListener
     {
@@ -100,7 +100,7 @@ namespace Org.Apache.Kafka.Streams.Processor
 
     #region IPunctuator
     /// <summary>
-    /// .NET interface for org.mases.knet.generated.org.apache.kafka.streams.processor.Punctuator implementing <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/Punctuator.html"/>
+    /// .NET interface for org.mases.knet.generated.org.apache.kafka.streams.processor.Punctuator implementing <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/processor/Punctuator.html"/>
     /// </summary>
     public partial interface IPunctuator
     {
@@ -146,7 +146,7 @@ namespace Org.Apache.Kafka.Streams.Processor
         }
 
         /// <summary>
-        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/Punctuator.html#punctuate(long)"/>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/processor/Punctuator.html#punctuate(long)"/>
         /// </summary>
         /// <remarks>If <see cref="OnPunctuate"/> has a value it takes precedence over corresponding class method</remarks>
         public global::System.Action<long> OnPunctuate { get; set; } = null;
@@ -161,7 +161,7 @@ namespace Org.Apache.Kafka.Streams.Processor
         }
 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/Punctuator.html#punctuate(long)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/processor/Punctuator.html#punctuate(long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="long"/></param>
         public virtual void Punctuate(long arg0)
@@ -200,7 +200,7 @@ namespace Org.Apache.Kafka.Streams.Processor
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/Punctuator.html#punctuate(long)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/processor/Punctuator.html#punctuate(long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="long"/></param>
         public override void Punctuate(long arg0)

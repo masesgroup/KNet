@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common.Metrics
 {
     #region KafkaMetricsContext declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/metrics/KafkaMetricsContext.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/metrics/KafkaMetricsContext.html"/>
     /// </summary>
     public partial class KafkaMetricsContext : Org.Apache.Kafka.Common.Metrics.MetricsContext
     {
@@ -71,7 +71,7 @@ namespace Org.Apache.Kafka.Common.Metrics
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/metrics/KafkaMetricsContext.html#%3Cinit%3E(java.lang.String,java.util.Map)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/metrics/KafkaMetricsContext.html#%3Cinit%3E(java.lang.String,java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Java.Util.Map"/></param>
@@ -80,7 +80,7 @@ namespace Org.Apache.Kafka.Common.Metrics
         {
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/metrics/KafkaMetricsContext.html#%3Cinit%3E(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/metrics/KafkaMetricsContext.html#%3Cinit%3E(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         public KafkaMetricsContext(Java.Lang.String arg0)
@@ -104,7 +104,7 @@ namespace Org.Apache.Kafka.Common.Metrics
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/metrics/KafkaMetricsContext.html#contextLabels()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/metrics/KafkaMetricsContext.html#contextLabels()"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Map"/></returns>
         public Java.Util.Map<Java.Lang.String, Java.Lang.String> ContextLabels()

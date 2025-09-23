@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 {
     #region ShareGroupDescription declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/ShareGroupDescription.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/admin/ShareGroupDescription.html"/>
     /// </summary>
     public partial class ShareGroupDescription : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ShareGroupDescription>
     {
@@ -71,7 +71,7 @@ namespace Org.Apache.Kafka.Clients.Admin
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/ShareGroupDescription.html#%3Cinit%3E(java.lang.String,java.util.Collection,org.apache.kafka.common.GroupState,org.apache.kafka.common.Node,int,int,java.util.Set)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/admin/ShareGroupDescription.html#%3Cinit%3E(java.lang.String,java.util.Collection,org.apache.kafka.common.GroupState,org.apache.kafka.common.Node,int,int,java.util.Set)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Java.Util.Collection"/></param>
@@ -85,7 +85,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         {
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/ShareGroupDescription.html#%3Cinit%3E(java.lang.String,java.util.Collection,org.apache.kafka.common.GroupState,org.apache.kafka.common.Node,int,int)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/admin/ShareGroupDescription.html#%3Cinit%3E(java.lang.String,java.util.Collection,org.apache.kafka.common.GroupState,org.apache.kafka.common.Node,int,int)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Java.Util.Collection"/></param>
@@ -114,7 +114,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/ShareGroupDescription.html#groupEpoch()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/admin/ShareGroupDescription.html#groupEpoch()"/>
         /// </summary>
         /// <returns><see cref="int"/></returns>
         public int GroupEpoch()
@@ -122,7 +122,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<int>("groupEpoch", "()I");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/ShareGroupDescription.html#targetAssignmentEpoch()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/admin/ShareGroupDescription.html#targetAssignmentEpoch()"/>
         /// </summary>
         /// <returns><see cref="int"/></returns>
         public int TargetAssignmentEpoch()
@@ -130,7 +130,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<int>("targetAssignmentEpoch", "()I");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/ShareGroupDescription.html#groupId()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/admin/ShareGroupDescription.html#groupId()"/>
         /// </summary>
         /// <returns><see cref="Java.Lang.String"/></returns>
         public Java.Lang.String GroupId()
@@ -138,7 +138,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<Java.Lang.String>("groupId", "()Ljava/lang/String;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/ShareGroupDescription.html#members()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/admin/ShareGroupDescription.html#members()"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Collection"/></returns>
         public Java.Util.Collection<Org.Apache.Kafka.Clients.Admin.ShareMemberDescription> Members()
@@ -146,7 +146,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<Java.Util.Collection<Org.Apache.Kafka.Clients.Admin.ShareMemberDescription>>("members", "()Ljava/util/Collection;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/ShareGroupDescription.html#authorizedOperations()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/admin/ShareGroupDescription.html#authorizedOperations()"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Set"/></returns>
         public Java.Util.Set<Org.Apache.Kafka.Common.Acl.AclOperation> AuthorizedOperations()
@@ -154,7 +154,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<Java.Util.Set<Org.Apache.Kafka.Common.Acl.AclOperation>>("authorizedOperations", "()Ljava/util/Set;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/ShareGroupDescription.html#groupState()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/admin/ShareGroupDescription.html#groupState()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.GroupState"/></returns>
         public Org.Apache.Kafka.Common.GroupState GroupState()
@@ -162,7 +162,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<Org.Apache.Kafka.Common.GroupState>("groupState", "()Lorg/apache/kafka/common/GroupState;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/ShareGroupDescription.html#coordinator()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/admin/ShareGroupDescription.html#coordinator()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.Node"/></returns>
         public Org.Apache.Kafka.Common.Node Coordinator()

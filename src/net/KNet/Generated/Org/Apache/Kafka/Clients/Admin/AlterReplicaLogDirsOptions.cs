@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 {
     #region AlterReplicaLogDirsOptions declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/AlterReplicaLogDirsOptions.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/admin/AlterReplicaLogDirsOptions.html"/>
     /// </summary>
     public partial class AlterReplicaLogDirsOptions : Org.Apache.Kafka.Clients.Admin.AbstractOptions<Org.Apache.Kafka.Clients.Admin.AlterReplicaLogDirsOptions>
     {

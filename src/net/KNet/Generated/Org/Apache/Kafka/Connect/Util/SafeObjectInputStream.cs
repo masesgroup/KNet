@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Connect.Util
 {
     #region SafeObjectInputStream declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.0.0/org/apache/kafka/connect/util/SafeObjectInputStream.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.1.0/org/apache/kafka/connect/util/SafeObjectInputStream.html"/>
     /// </summary>
     public partial class SafeObjectInputStream : Java.Io.ObjectInputStream
     {
@@ -71,7 +71,7 @@ namespace Org.Apache.Kafka.Connect.Util
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.0.0/org/apache/kafka/connect/util/SafeObjectInputStream.html#%3Cinit%3E(java.io.InputStream)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.1.0/org/apache/kafka/connect/util/SafeObjectInputStream.html#%3Cinit%3E(java.io.InputStream)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Io.InputStream"/></param>
         /// <exception cref="Java.Io.IOException"/>

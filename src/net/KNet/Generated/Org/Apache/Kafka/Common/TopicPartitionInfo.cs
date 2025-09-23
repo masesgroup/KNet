@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common
 {
     #region TopicPartitionInfo declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/TopicPartitionInfo.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/TopicPartitionInfo.html"/>
     /// </summary>
     public partial class TopicPartitionInfo : MASES.JCOBridge.C2JBridge.JVMBridgeBase<TopicPartitionInfo>
     {
@@ -71,7 +71,7 @@ namespace Org.Apache.Kafka.Common
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/TopicPartitionInfo.html#%3Cinit%3E(int,org.apache.kafka.common.Node,java.util.List,java.util.List,java.util.List,java.util.List)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/TopicPartitionInfo.html#%3Cinit%3E(int,org.apache.kafka.common.Node,java.util.List,java.util.List,java.util.List,java.util.List)"/>
         /// </summary>
         /// <param name="arg0"><see cref="int"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Node"/></param>
@@ -84,7 +84,7 @@ namespace Org.Apache.Kafka.Common
         {
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/TopicPartitionInfo.html#%3Cinit%3E(int,org.apache.kafka.common.Node,java.util.List,java.util.List)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/TopicPartitionInfo.html#%3Cinit%3E(int,org.apache.kafka.common.Node,java.util.List,java.util.List)"/>
         /// </summary>
         /// <param name="arg0"><see cref="int"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Node"/></param>
@@ -111,7 +111,7 @@ namespace Org.Apache.Kafka.Common
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/TopicPartitionInfo.html#partition()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/TopicPartitionInfo.html#partition()"/>
         /// </summary>
         /// <returns><see cref="int"/></returns>
         public int Partition()
@@ -119,7 +119,7 @@ namespace Org.Apache.Kafka.Common
             return IExecuteWithSignature<int>("partition", "()I");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/TopicPartitionInfo.html#elr()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/TopicPartitionInfo.html#elr()"/>
         /// </summary>
         /// <returns><see cref="Java.Util.List"/></returns>
         public Java.Util.List<Org.Apache.Kafka.Common.Node> Elr()
@@ -127,7 +127,7 @@ namespace Org.Apache.Kafka.Common
             return IExecuteWithSignature<Java.Util.List<Org.Apache.Kafka.Common.Node>>("elr", "()Ljava/util/List;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/TopicPartitionInfo.html#isr()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/TopicPartitionInfo.html#isr()"/>
         /// </summary>
         /// <returns><see cref="Java.Util.List"/></returns>
         public Java.Util.List<Org.Apache.Kafka.Common.Node> Isr()
@@ -135,7 +135,7 @@ namespace Org.Apache.Kafka.Common
             return IExecuteWithSignature<Java.Util.List<Org.Apache.Kafka.Common.Node>>("isr", "()Ljava/util/List;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/TopicPartitionInfo.html#lastKnownElr()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/TopicPartitionInfo.html#lastKnownElr()"/>
         /// </summary>
         /// <returns><see cref="Java.Util.List"/></returns>
         public Java.Util.List<Org.Apache.Kafka.Common.Node> LastKnownElr()
@@ -143,7 +143,7 @@ namespace Org.Apache.Kafka.Common
             return IExecuteWithSignature<Java.Util.List<Org.Apache.Kafka.Common.Node>>("lastKnownElr", "()Ljava/util/List;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/TopicPartitionInfo.html#replicas()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/TopicPartitionInfo.html#replicas()"/>
         /// </summary>
         /// <returns><see cref="Java.Util.List"/></returns>
         public Java.Util.List<Org.Apache.Kafka.Common.Node> Replicas()
@@ -151,7 +151,7 @@ namespace Org.Apache.Kafka.Common
             return IExecuteWithSignature<Java.Util.List<Org.Apache.Kafka.Common.Node>>("replicas", "()Ljava/util/List;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/TopicPartitionInfo.html#leader()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/TopicPartitionInfo.html#leader()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.Node"/></returns>
         public Org.Apache.Kafka.Common.Node Leader()

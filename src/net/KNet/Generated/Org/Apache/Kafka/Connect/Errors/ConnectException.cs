@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Connect.Errors
 {
     #region ConnectException declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.0.0/org/apache/kafka/connect/errors/ConnectException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.1.0/org/apache/kafka/connect/errors/ConnectException.html"/>
     /// </summary>
     public partial class ConnectException : Org.Apache.Kafka.Common.KafkaException
     {

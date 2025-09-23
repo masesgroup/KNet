@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Streams.Errors
 {
     #region TaskCorruptedException declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/errors/TaskCorruptedException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/errors/TaskCorruptedException.html"/>
     /// </summary>
     public partial class TaskCorruptedException : Org.Apache.Kafka.Streams.Errors.StreamsException
     {

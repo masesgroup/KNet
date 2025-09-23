@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common.Metrics
 {
     #region QuotaViolationException declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/metrics/QuotaViolationException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/metrics/QuotaViolationException.html"/>
     /// </summary>
     public partial class QuotaViolationException : Org.Apache.Kafka.Common.KafkaException
     {

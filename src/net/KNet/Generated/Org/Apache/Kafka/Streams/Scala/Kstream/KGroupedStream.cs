@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Streams.Scala.Kstream
 {
     #region KGroupedStream declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/kstream/KGroupedStream.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.1.0/org/apache/kafka/streams/scala/kstream/KGroupedStream.html"/>
     /// </summary>
     public partial class KGroupedStream : MASES.JCOBridge.C2JBridge.JVMBridgeBase<KGroupedStream>
     {
@@ -68,7 +68,7 @@ namespace Org.Apache.Kafka.Streams.Scala.Kstream
 
     #region KGroupedStream<K, V> declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/kstream/KGroupedStream.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.1.0/org/apache/kafka/streams/scala/kstream/KGroupedStream.html"/>
     /// </summary>
     /// <typeparam name="K"></typeparam>
     /// <typeparam name="V"></typeparam>
@@ -114,7 +114,7 @@ namespace Org.Apache.Kafka.Streams.Scala.Kstream
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/kstream/KGroupedStream.html#%3Cinit%3E(org.apache.kafka.streams.kstream.KGroupedStream)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.1.0/org/apache/kafka/streams/scala/kstream/KGroupedStream.html#%3Cinit%3E(org.apache.kafka.streams.kstream.KGroupedStream)"/>
         /// </summary>
         /// <param name="inner"><see cref="Org.Apache.Kafka.Streams.Kstream.KGroupedStream"/></param>
         public KGroupedStream(Org.Apache.Kafka.Streams.Kstream.KGroupedStream inner)
@@ -138,7 +138,7 @@ namespace Org.Apache.Kafka.Streams.Scala.Kstream
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/kstream/KGroupedStream.html#windowedBy(org.apache.kafka.streams.kstream.Windows)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.1.0/org/apache/kafka/streams/scala/kstream/KGroupedStream.html#windowedBy(org.apache.kafka.streams.kstream.Windows)"/>
         /// </summary>
         /// <param name="windows"><see cref="Org.Apache.Kafka.Streams.Kstream.Windows"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Scala.Kstream.TimeWindowedKStream"/></returns>
@@ -147,7 +147,7 @@ namespace Org.Apache.Kafka.Streams.Scala.Kstream
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.Scala.Kstream.TimeWindowedKStream>("windowedBy", "(Lorg/apache/kafka/streams/kstream/Windows;)Lorg/apache/kafka/streams/scala/kstream/TimeWindowedKStream;", windows);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/kstream/KGroupedStream.html#inner()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.1.0/org/apache/kafka/streams/scala/kstream/KGroupedStream.html#inner()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KGroupedStream"/></returns>
         public Org.Apache.Kafka.Streams.Kstream.KGroupedStream Inner()
@@ -155,7 +155,7 @@ namespace Org.Apache.Kafka.Streams.Scala.Kstream
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.KGroupedStream>("inner", "()Lorg/apache/kafka/streams/kstream/KGroupedStream;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/kstream/KGroupedStream.html#count(org.apache.kafka.streams.kstream.Materialized)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.1.0/org/apache/kafka/streams/scala/kstream/KGroupedStream.html#count(org.apache.kafka.streams.kstream.Materialized)"/>
         /// </summary>
         /// <param name="materialized"><see cref="Org.Apache.Kafka.Streams.Kstream.Materialized"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Scala.Kstream.KTable"/></returns>
@@ -164,7 +164,7 @@ namespace Org.Apache.Kafka.Streams.Scala.Kstream
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.Scala.Kstream.KTable>("count", "(Lorg/apache/kafka/streams/kstream/Materialized;)Lorg/apache/kafka/streams/scala/kstream/KTable;", materialized);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/kstream/KGroupedStream.html#count(org.apache.kafka.streams.kstream.Named,org.apache.kafka.streams.kstream.Materialized)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.1.0/org/apache/kafka/streams/scala/kstream/KGroupedStream.html#count(org.apache.kafka.streams.kstream.Named,org.apache.kafka.streams.kstream.Materialized)"/>
         /// </summary>
         /// <param name="named"><see cref="Org.Apache.Kafka.Streams.Kstream.Named"/></param>
         /// <param name="materialized"><see cref="Org.Apache.Kafka.Streams.Kstream.Materialized"/></param>
@@ -174,7 +174,7 @@ namespace Org.Apache.Kafka.Streams.Scala.Kstream
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.Scala.Kstream.KTable>("count", "(Lorg/apache/kafka/streams/kstream/Named;Lorg/apache/kafka/streams/kstream/Materialized;)Lorg/apache/kafka/streams/scala/kstream/KTable;", named, materialized);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/kstream/KGroupedStream.html#windowedBy(org.apache.kafka.streams.kstream.SessionWindows)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.1.0/org/apache/kafka/streams/scala/kstream/KGroupedStream.html#windowedBy(org.apache.kafka.streams.kstream.SessionWindows)"/>
         /// </summary>
         /// <param name="windows"><see cref="Org.Apache.Kafka.Streams.Kstream.SessionWindows"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Scala.Kstream.SessionWindowedKStream"/></returns>
@@ -183,7 +183,7 @@ namespace Org.Apache.Kafka.Streams.Scala.Kstream
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.Scala.Kstream.SessionWindowedKStream>("windowedBy", "(Lorg/apache/kafka/streams/kstream/SessionWindows;)Lorg/apache/kafka/streams/scala/kstream/SessionWindowedKStream;", windows);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/kstream/KGroupedStream.html#windowedBy(org.apache.kafka.streams.kstream.SlidingWindows)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.1.0/org/apache/kafka/streams/scala/kstream/KGroupedStream.html#windowedBy(org.apache.kafka.streams.kstream.SlidingWindows)"/>
         /// </summary>
         /// <param name="windows"><see cref="Org.Apache.Kafka.Streams.Kstream.SlidingWindows"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Scala.Kstream.TimeWindowedKStream"/></returns>
@@ -207,7 +207,7 @@ namespace Org.Apache.Kafka.Streams.Scala.Kstream
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/kstream/KGroupedStream.html#%3Cinit%3E(org.apache.kafka.streams.kstream.KGroupedStream)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.1.0/org/apache/kafka/streams/scala/kstream/KGroupedStream.html#%3Cinit%3E(org.apache.kafka.streams.kstream.KGroupedStream)"/>
         /// </summary>
         /// <param name="inner"><see cref="Org.Apache.Kafka.Streams.Kstream.KGroupedStream"/></param>
         public KGroupedStream(Org.Apache.Kafka.Streams.Kstream.KGroupedStream<K, V> inner)
@@ -235,7 +235,7 @@ namespace Org.Apache.Kafka.Streams.Scala.Kstream
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/kstream/KGroupedStream.html#windowedBy(org.apache.kafka.streams.kstream.Windows)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.1.0/org/apache/kafka/streams/scala/kstream/KGroupedStream.html#windowedBy(org.apache.kafka.streams.kstream.Windows)"/>
         /// </summary>
         /// <param name="windows"><see cref="Org.Apache.Kafka.Streams.Kstream.Windows"/></param>
         /// <typeparam name="W"><see cref="Org.Apache.Kafka.Streams.Kstream.Window"/></typeparam>
@@ -245,7 +245,7 @@ namespace Org.Apache.Kafka.Streams.Scala.Kstream
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.Scala.Kstream.TimeWindowedKStream<K, V>>("windowedBy", "(Lorg/apache/kafka/streams/kstream/Windows;)Lorg/apache/kafka/streams/scala/kstream/TimeWindowedKStream;", windows);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/kstream/KGroupedStream.html#inner()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.1.0/org/apache/kafka/streams/scala/kstream/KGroupedStream.html#inner()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KGroupedStream"/></returns>
         public Org.Apache.Kafka.Streams.Kstream.KGroupedStream<K, V> Inner()
@@ -253,7 +253,7 @@ namespace Org.Apache.Kafka.Streams.Scala.Kstream
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.KGroupedStream<K, V>>("inner", "()Lorg/apache/kafka/streams/kstream/KGroupedStream;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/kstream/KGroupedStream.html#count(org.apache.kafka.streams.kstream.Materialized)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.1.0/org/apache/kafka/streams/scala/kstream/KGroupedStream.html#count(org.apache.kafka.streams.kstream.Materialized)"/>
         /// </summary>
         /// <param name="materialized"><see cref="Org.Apache.Kafka.Streams.Kstream.Materialized"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Scala.Kstream.KTable"/></returns>
@@ -262,7 +262,7 @@ namespace Org.Apache.Kafka.Streams.Scala.Kstream
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.Scala.Kstream.KTable<K, object>>("count", "(Lorg/apache/kafka/streams/kstream/Materialized;)Lorg/apache/kafka/streams/scala/kstream/KTable;", materialized);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/kstream/KGroupedStream.html#count(org.apache.kafka.streams.kstream.Named,org.apache.kafka.streams.kstream.Materialized)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.1.0/org/apache/kafka/streams/scala/kstream/KGroupedStream.html#count(org.apache.kafka.streams.kstream.Named,org.apache.kafka.streams.kstream.Materialized)"/>
         /// </summary>
         /// <param name="named"><see cref="Org.Apache.Kafka.Streams.Kstream.Named"/></param>
         /// <param name="materialized"><see cref="Org.Apache.Kafka.Streams.Kstream.Materialized"/></param>
@@ -272,7 +272,7 @@ namespace Org.Apache.Kafka.Streams.Scala.Kstream
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.Scala.Kstream.KTable<K, object>>("count", "(Lorg/apache/kafka/streams/kstream/Named;Lorg/apache/kafka/streams/kstream/Materialized;)Lorg/apache/kafka/streams/scala/kstream/KTable;", named, materialized);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/kstream/KGroupedStream.html#windowedBy(org.apache.kafka.streams.kstream.SessionWindows)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.1.0/org/apache/kafka/streams/scala/kstream/KGroupedStream.html#windowedBy(org.apache.kafka.streams.kstream.SessionWindows)"/>
         /// </summary>
         /// <param name="windows"><see cref="Org.Apache.Kafka.Streams.Kstream.SessionWindows"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Scala.Kstream.SessionWindowedKStream"/></returns>
@@ -281,7 +281,7 @@ namespace Org.Apache.Kafka.Streams.Scala.Kstream
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.Scala.Kstream.SessionWindowedKStream<K, V>>("windowedBy", "(Lorg/apache/kafka/streams/kstream/SessionWindows;)Lorg/apache/kafka/streams/scala/kstream/SessionWindowedKStream;", windows);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/kstream/KGroupedStream.html#windowedBy(org.apache.kafka.streams.kstream.SlidingWindows)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.1.0/org/apache/kafka/streams/scala/kstream/KGroupedStream.html#windowedBy(org.apache.kafka.streams.kstream.SlidingWindows)"/>
         /// </summary>
         /// <param name="windows"><see cref="Org.Apache.Kafka.Streams.Kstream.SlidingWindows"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Scala.Kstream.TimeWindowedKStream"/></returns>

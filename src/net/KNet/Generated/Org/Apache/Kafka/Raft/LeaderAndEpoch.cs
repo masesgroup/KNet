@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Raft
 {
     #region LeaderAndEpoch declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/LeaderAndEpoch.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/LeaderAndEpoch.html"/>
     /// </summary>
     public partial class LeaderAndEpoch : MASES.JCOBridge.C2JBridge.JVMBridgeBase<LeaderAndEpoch>
     {
@@ -71,7 +71,7 @@ namespace Org.Apache.Kafka.Raft
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/LeaderAndEpoch.html#%3Cinit%3E(java.util.OptionalInt,int)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/LeaderAndEpoch.html#%3Cinit%3E(java.util.OptionalInt,int)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.OptionalInt"/></param>
         /// <param name="arg1"><see cref="int"/></param>
@@ -88,7 +88,7 @@ namespace Org.Apache.Kafka.Raft
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/LeaderAndEpoch.html#UNKNOWN"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/LeaderAndEpoch.html#UNKNOWN"/>
         /// </summary>
         public static Org.Apache.Kafka.Raft.LeaderAndEpoch UNKNOWN { get { if (!_UNKNOWNReady) { _UNKNOWNContent = SGetField<Org.Apache.Kafka.Raft.LeaderAndEpoch>(LocalBridgeClazz, "UNKNOWN"); _UNKNOWNReady = true; } return _UNKNOWNContent; } }
         private static Org.Apache.Kafka.Raft.LeaderAndEpoch _UNKNOWNContent = default;
@@ -102,7 +102,7 @@ namespace Org.Apache.Kafka.Raft
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/LeaderAndEpoch.html#isLeader(int)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/LeaderAndEpoch.html#isLeader(int)"/>
         /// </summary>
         /// <param name="arg0"><see cref="int"/></param>
         /// <returns><see cref="bool"/></returns>
@@ -111,7 +111,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<bool>("isLeader", "(I)Z", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/LeaderAndEpoch.html#epoch()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/LeaderAndEpoch.html#epoch()"/>
         /// </summary>
         /// <returns><see cref="int"/></returns>
         public int Epoch()
@@ -119,7 +119,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<int>("epoch", "()I");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/LeaderAndEpoch.html#leaderId()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/LeaderAndEpoch.html#leaderId()"/>
         /// </summary>
         /// <returns><see cref="Java.Util.OptionalInt"/></returns>
         public Java.Util.OptionalInt LeaderId()

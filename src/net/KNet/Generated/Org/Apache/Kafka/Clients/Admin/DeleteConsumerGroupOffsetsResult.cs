@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 {
     #region DeleteConsumerGroupOffsetsResult declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/DeleteConsumerGroupOffsetsResult.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/admin/DeleteConsumerGroupOffsetsResult.html"/>
     /// </summary>
     public partial class DeleteConsumerGroupOffsetsResult : MASES.JCOBridge.C2JBridge.JVMBridgeBase<DeleteConsumerGroupOffsetsResult>
     {
@@ -87,7 +87,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/DeleteConsumerGroupOffsetsResult.html#all()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/admin/DeleteConsumerGroupOffsetsResult.html#all()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.KafkaFuture"/></returns>
         public Org.Apache.Kafka.Common.KafkaFuture<Java.Lang.Void> All()
@@ -95,7 +95,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<Org.Apache.Kafka.Common.KafkaFuture<Java.Lang.Void>>("all", "()Lorg/apache/kafka/common/KafkaFuture;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/DeleteConsumerGroupOffsetsResult.html#partitionResult(org.apache.kafka.common.TopicPartition)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/admin/DeleteConsumerGroupOffsetsResult.html#partitionResult(org.apache.kafka.common.TopicPartition)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.TopicPartition"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.KafkaFuture"/></returns>

@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common.Serialization
 {
     #region ListSerializer declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/serialization/ListSerializer.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/serialization/ListSerializer.html"/>
     /// </summary>
     public partial class ListSerializer : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ListSerializer>
     {
@@ -68,7 +68,7 @@ namespace Org.Apache.Kafka.Common.Serialization
 
     #region ListSerializer<Inner> declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/serialization/ListSerializer.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/serialization/ListSerializer.html"/>
     /// </summary>
     /// <typeparam name="Inner"></typeparam>
     public partial class ListSerializer<Inner> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ListSerializer<Inner>>
@@ -113,7 +113,7 @@ namespace Org.Apache.Kafka.Common.Serialization
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/serialization/ListSerializer.html#%3Cinit%3E(org.apache.kafka.common.serialization.Serializer)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/serialization/ListSerializer.html#%3Cinit%3E(org.apache.kafka.common.serialization.Serializer)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Serialization.Serializer"/></param>
         public ListSerializer(Org.Apache.Kafka.Common.Serialization.Serializer arg0)
@@ -141,14 +141,14 @@ namespace Org.Apache.Kafka.Common.Serialization
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/serialization/ListSerializer.html#getInnerSerializer()"/> 
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/serialization/ListSerializer.html#getInnerSerializer()"/> 
         /// </summary>
         public Org.Apache.Kafka.Common.Serialization.Serializer InnerSerializer
         {
             get { return IExecuteWithSignature<Org.Apache.Kafka.Common.Serialization.Serializer>("getInnerSerializer", "()Lorg/apache/kafka/common/serialization/Serializer;"); }
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/serialization/ListSerializer.html#serialize(java.lang.String,java.lang.Object)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/serialization/ListSerializer.html#serialize(java.lang.String,java.lang.Object)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="object"/></param>
@@ -158,7 +158,7 @@ namespace Org.Apache.Kafka.Common.Serialization
             return IExecuteWithSignatureArray<byte>("serialize", "(Ljava/lang/String;Ljava/lang/Object;)[B", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/serialization/ListSerializer.html#serialize(java.lang.String,java.util.List)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/serialization/ListSerializer.html#serialize(java.lang.String,java.util.List)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Java.Util.List"/></param>
@@ -168,14 +168,14 @@ namespace Org.Apache.Kafka.Common.Serialization
             return IExecuteWithSignatureArray<byte>("serialize", "(Ljava/lang/String;Ljava/util/List;)[B", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/serialization/ListSerializer.html#close()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/serialization/ListSerializer.html#close()"/>
         /// </summary>
         public void Close()
         {
             IExecuteWithSignature("close", "()V");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/serialization/ListSerializer.html#configure(java.util.Map,boolean)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/serialization/ListSerializer.html#configure(java.util.Map,boolean)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <param name="arg1"><see cref="bool"/></param>
@@ -199,7 +199,7 @@ namespace Org.Apache.Kafka.Common.Serialization
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/serialization/ListSerializer.html#%3Cinit%3E(org.apache.kafka.common.serialization.Serializer)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/serialization/ListSerializer.html#%3Cinit%3E(org.apache.kafka.common.serialization.Serializer)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Serialization.Serializer"/></param>
         public ListSerializer(Org.Apache.Kafka.Common.Serialization.Serializer<Inner> arg0)
@@ -231,14 +231,14 @@ namespace Org.Apache.Kafka.Common.Serialization
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/serialization/ListSerializer.html#getInnerSerializer()"/> 
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/serialization/ListSerializer.html#getInnerSerializer()"/> 
         /// </summary>
         public Org.Apache.Kafka.Common.Serialization.Serializer<Inner> InnerSerializer
         {
             get { return IExecuteWithSignature<Org.Apache.Kafka.Common.Serialization.Serializer<Inner>>("getInnerSerializer", "()Lorg/apache/kafka/common/serialization/Serializer;"); }
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/serialization/ListSerializer.html#serialize(java.lang.String,java.lang.Object)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/serialization/ListSerializer.html#serialize(java.lang.String,java.lang.Object)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="object"/></param>
@@ -248,7 +248,7 @@ namespace Org.Apache.Kafka.Common.Serialization
             return IExecuteWithSignatureArray<byte>("serialize", "(Ljava/lang/String;Ljava/lang/Object;)[B", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/serialization/ListSerializer.html#serialize(java.lang.String,java.util.List)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/serialization/ListSerializer.html#serialize(java.lang.String,java.util.List)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Java.Util.List"/></param>
@@ -258,14 +258,14 @@ namespace Org.Apache.Kafka.Common.Serialization
             return IExecuteWithSignatureArray<byte>("serialize", "(Ljava/lang/String;Ljava/util/List;)[B", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/serialization/ListSerializer.html#close()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/serialization/ListSerializer.html#close()"/>
         /// </summary>
         public void Close()
         {
             IExecuteWithSignature("close", "()V");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/serialization/ListSerializer.html#configure(java.util.Map,boolean)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/serialization/ListSerializer.html#configure(java.util.Map,boolean)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <param name="arg1"><see cref="bool"/></param>

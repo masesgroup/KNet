@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Streams.Processor
 {
     #region StateStore declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/StateStore.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/processor/StateStore.html"/>
     /// </summary>
     public partial class StateStore : MASES.JCOBridge.C2JBridge.JVMBridgeBase<StateStore>
     {
@@ -70,7 +70,7 @@ namespace Org.Apache.Kafka.Streams.Processor
 
     #region IStateStore
     /// <summary>
-    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/StateStore.html"/>
+    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/processor/StateStore.html"/>
     /// </summary>
     public partial interface IStateStore
     {
@@ -107,14 +107,14 @@ namespace Org.Apache.Kafka.Streams.Processor
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/StateStore.html#getPosition()"/> 
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/processor/StateStore.html#getPosition()"/> 
         /// </summary>
         public Org.Apache.Kafka.Streams.Query.Position Position
         {
             get { return IExecuteWithSignature<Org.Apache.Kafka.Streams.Query.Position>("getPosition", "()Lorg/apache/kafka/streams/query/Position;"); }
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/StateStore.html#isOpen()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/processor/StateStore.html#isOpen()"/>
         /// </summary>
         /// <returns><see cref="bool"/></returns>
         public bool IsOpen()
@@ -122,7 +122,7 @@ namespace Org.Apache.Kafka.Streams.Processor
             return IExecuteWithSignature<bool>("isOpen", "()Z");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/StateStore.html#persistent()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/processor/StateStore.html#persistent()"/>
         /// </summary>
         /// <returns><see cref="bool"/></returns>
         public bool Persistent()
@@ -130,7 +130,7 @@ namespace Org.Apache.Kafka.Streams.Processor
             return IExecuteWithSignature<bool>("persistent", "()Z");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/StateStore.html#name()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/processor/StateStore.html#name()"/>
         /// </summary>
         /// <returns><see cref="Java.Lang.String"/></returns>
         public Java.Lang.String Name()
@@ -138,21 +138,21 @@ namespace Org.Apache.Kafka.Streams.Processor
             return IExecuteWithSignature<Java.Lang.String>("name", "()Ljava/lang/String;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/StateStore.html#close()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/processor/StateStore.html#close()"/>
         /// </summary>
         public void Close()
         {
             IExecuteWithSignature("close", "()V");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/StateStore.html#flush()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/processor/StateStore.html#flush()"/>
         /// </summary>
         public void Flush()
         {
             IExecuteWithSignature("flush", "()V");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/StateStore.html#init(org.apache.kafka.streams.processor.StateStoreContext,org.apache.kafka.streams.processor.StateStore)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/processor/StateStore.html#init(org.apache.kafka.streams.processor.StateStoreContext,org.apache.kafka.streams.processor.StateStore)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Processor.StateStoreContext"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Streams.Processor.StateStore"/></param>
@@ -161,7 +161,7 @@ namespace Org.Apache.Kafka.Streams.Processor
             IExecuteWithSignature("init", "(Lorg/apache/kafka/streams/processor/StateStoreContext;Lorg/apache/kafka/streams/processor/StateStore;)V", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/StateStore.html#query(org.apache.kafka.streams.query.Query,org.apache.kafka.streams.query.PositionBound,org.apache.kafka.streams.query.QueryConfig)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/processor/StateStore.html#query(org.apache.kafka.streams.query.Query,org.apache.kafka.streams.query.PositionBound,org.apache.kafka.streams.query.QueryConfig)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Query.Query"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Streams.Query.PositionBound"/></param>

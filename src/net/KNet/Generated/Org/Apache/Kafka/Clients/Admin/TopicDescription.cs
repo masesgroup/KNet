@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 {
     #region TopicDescription declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/TopicDescription.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/admin/TopicDescription.html"/>
     /// </summary>
     public partial class TopicDescription : MASES.JCOBridge.C2JBridge.JVMBridgeBase<TopicDescription>
     {
@@ -71,7 +71,7 @@ namespace Org.Apache.Kafka.Clients.Admin
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/TopicDescription.html#%3Cinit%3E(java.lang.String,boolean,java.util.List,java.util.Set,org.apache.kafka.common.Uuid)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/admin/TopicDescription.html#%3Cinit%3E(java.lang.String,boolean,java.util.List,java.util.Set,org.apache.kafka.common.Uuid)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="bool"/></param>
@@ -83,7 +83,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         {
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/TopicDescription.html#%3Cinit%3E(java.lang.String,boolean,java.util.List,java.util.Set)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/admin/TopicDescription.html#%3Cinit%3E(java.lang.String,boolean,java.util.List,java.util.Set)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="bool"/></param>
@@ -94,7 +94,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         {
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/TopicDescription.html#%3Cinit%3E(java.lang.String,boolean,java.util.List)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/admin/TopicDescription.html#%3Cinit%3E(java.lang.String,boolean,java.util.List)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="bool"/></param>
@@ -120,7 +120,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/TopicDescription.html#isInternal()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/admin/TopicDescription.html#isInternal()"/>
         /// </summary>
         /// <returns><see cref="bool"/></returns>
         public bool IsInternal()
@@ -128,7 +128,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<bool>("isInternal", "()Z");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/TopicDescription.html#name()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/admin/TopicDescription.html#name()"/>
         /// </summary>
         /// <returns><see cref="Java.Lang.String"/></returns>
         public Java.Lang.String Name()
@@ -136,7 +136,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<Java.Lang.String>("name", "()Ljava/lang/String;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/TopicDescription.html#partitions()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/admin/TopicDescription.html#partitions()"/>
         /// </summary>
         /// <returns><see cref="Java.Util.List"/></returns>
         public Java.Util.List<Org.Apache.Kafka.Common.TopicPartitionInfo> Partitions()
@@ -144,7 +144,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<Java.Util.List<Org.Apache.Kafka.Common.TopicPartitionInfo>>("partitions", "()Ljava/util/List;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/TopicDescription.html#authorizedOperations()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/admin/TopicDescription.html#authorizedOperations()"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Set"/></returns>
         public Java.Util.Set<Org.Apache.Kafka.Common.Acl.AclOperation> AuthorizedOperations()
@@ -152,7 +152,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<Java.Util.Set<Org.Apache.Kafka.Common.Acl.AclOperation>>("authorizedOperations", "()Ljava/util/Set;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/TopicDescription.html#topicId()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/admin/TopicDescription.html#topicId()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.Uuid"/></returns>
         public Org.Apache.Kafka.Common.Uuid TopicId()

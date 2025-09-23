@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 {
     #region StreamJoined declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/StreamJoined.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/kstream/StreamJoined.html"/>
     /// </summary>
     public partial class StreamJoined : MASES.JCOBridge.C2JBridge.JVMBridgeBase<StreamJoined>
     {
@@ -68,7 +68,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
     #region StreamJoined<K, V1, V2> declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/StreamJoined.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/kstream/StreamJoined.html"/>
     /// </summary>
     /// <typeparam name="K"></typeparam>
     /// <typeparam name="V1"></typeparam>
@@ -127,7 +127,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/StreamJoined.html#as(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/kstream/StreamJoined.html#as(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.StreamJoined"/></returns>
@@ -136,7 +136,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
             return SExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.StreamJoined>(LocalBridgeClazz, "as", "(Ljava/lang/String;)Lorg/apache/kafka/streams/kstream/StreamJoined;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/StreamJoined.html#with(org.apache.kafka.common.serialization.Serde,org.apache.kafka.common.serialization.Serde,org.apache.kafka.common.serialization.Serde)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/kstream/StreamJoined.html#with(org.apache.kafka.common.serialization.Serde,org.apache.kafka.common.serialization.Serde,org.apache.kafka.common.serialization.Serde)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></param>
@@ -147,7 +147,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
             return SExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.StreamJoined>(LocalBridgeClazz, "with", "(Lorg/apache/kafka/common/serialization/Serde;Lorg/apache/kafka/common/serialization/Serde;Lorg/apache/kafka/common/serialization/Serde;)Lorg/apache/kafka/streams/kstream/StreamJoined;", arg0, arg1, arg2);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/StreamJoined.html#with(org.apache.kafka.streams.state.DslStoreSuppliers)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/kstream/StreamJoined.html#with(org.apache.kafka.streams.state.DslStoreSuppliers)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.State.DslStoreSuppliers"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.StreamJoined"/></returns>
@@ -156,7 +156,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
             return SExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.StreamJoined>(LocalBridgeClazz, "with", "(Lorg/apache/kafka/streams/state/DslStoreSuppliers;)Lorg/apache/kafka/streams/kstream/StreamJoined;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/StreamJoined.html#with(org.apache.kafka.streams.state.WindowBytesStoreSupplier,org.apache.kafka.streams.state.WindowBytesStoreSupplier)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/kstream/StreamJoined.html#with(org.apache.kafka.streams.state.WindowBytesStoreSupplier,org.apache.kafka.streams.state.WindowBytesStoreSupplier)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.State.WindowBytesStoreSupplier"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Streams.State.WindowBytesStoreSupplier"/></param>
@@ -170,7 +170,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/StreamJoined.html#withDslStoreSuppliers(org.apache.kafka.streams.state.DslStoreSuppliers)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/kstream/StreamJoined.html#withDslStoreSuppliers(org.apache.kafka.streams.state.DslStoreSuppliers)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.State.DslStoreSuppliers"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.StreamJoined"/></returns>
@@ -179,7 +179,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.StreamJoined>("withDslStoreSuppliers", "(Lorg/apache/kafka/streams/state/DslStoreSuppliers;)Lorg/apache/kafka/streams/kstream/StreamJoined;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/StreamJoined.html#withKeySerde(org.apache.kafka.common.serialization.Serde)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/kstream/StreamJoined.html#withKeySerde(org.apache.kafka.common.serialization.Serde)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.StreamJoined"/></returns>
@@ -188,7 +188,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.StreamJoined>("withKeySerde", "(Lorg/apache/kafka/common/serialization/Serde;)Lorg/apache/kafka/streams/kstream/StreamJoined;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/StreamJoined.html#withLoggingDisabled()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/kstream/StreamJoined.html#withLoggingDisabled()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.StreamJoined"/></returns>
         public Org.Apache.Kafka.Streams.Kstream.StreamJoined WithLoggingDisabled()
@@ -196,7 +196,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.StreamJoined>("withLoggingDisabled", "()Lorg/apache/kafka/streams/kstream/StreamJoined;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/StreamJoined.html#withLoggingEnabled(java.util.Map)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/kstream/StreamJoined.html#withLoggingEnabled(java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.StreamJoined"/></returns>
@@ -205,7 +205,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.StreamJoined>("withLoggingEnabled", "(Ljava/util/Map;)Lorg/apache/kafka/streams/kstream/StreamJoined;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/StreamJoined.html#withOtherStoreSupplier(org.apache.kafka.streams.state.WindowBytesStoreSupplier)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/kstream/StreamJoined.html#withOtherStoreSupplier(org.apache.kafka.streams.state.WindowBytesStoreSupplier)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.State.WindowBytesStoreSupplier"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.StreamJoined"/></returns>
@@ -214,7 +214,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.StreamJoined>("withOtherStoreSupplier", "(Lorg/apache/kafka/streams/state/WindowBytesStoreSupplier;)Lorg/apache/kafka/streams/kstream/StreamJoined;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/StreamJoined.html#withOtherValueSerde(org.apache.kafka.common.serialization.Serde)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/kstream/StreamJoined.html#withOtherValueSerde(org.apache.kafka.common.serialization.Serde)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.StreamJoined"/></returns>
@@ -223,7 +223,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.StreamJoined>("withOtherValueSerde", "(Lorg/apache/kafka/common/serialization/Serde;)Lorg/apache/kafka/streams/kstream/StreamJoined;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/StreamJoined.html#withStoreName(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/kstream/StreamJoined.html#withStoreName(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.StreamJoined"/></returns>
@@ -232,7 +232,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.StreamJoined>("withStoreName", "(Ljava/lang/String;)Lorg/apache/kafka/streams/kstream/StreamJoined;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/StreamJoined.html#withThisStoreSupplier(org.apache.kafka.streams.state.WindowBytesStoreSupplier)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/kstream/StreamJoined.html#withThisStoreSupplier(org.apache.kafka.streams.state.WindowBytesStoreSupplier)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.State.WindowBytesStoreSupplier"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.StreamJoined"/></returns>
@@ -241,7 +241,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.StreamJoined>("withThisStoreSupplier", "(Lorg/apache/kafka/streams/state/WindowBytesStoreSupplier;)Lorg/apache/kafka/streams/kstream/StreamJoined;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/StreamJoined.html#withValueSerde(org.apache.kafka.common.serialization.Serde)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/kstream/StreamJoined.html#withValueSerde(org.apache.kafka.common.serialization.Serde)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.StreamJoined"/></returns>
@@ -281,7 +281,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/StreamJoined.html#as(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/kstream/StreamJoined.html#as(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.StreamJoined"/></returns>
@@ -290,7 +290,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
             return SExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.StreamJoined<K, V1, V2>>(LocalBridgeClazz, "as", "(Ljava/lang/String;)Lorg/apache/kafka/streams/kstream/StreamJoined;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/StreamJoined.html#with(org.apache.kafka.common.serialization.Serde,org.apache.kafka.common.serialization.Serde,org.apache.kafka.common.serialization.Serde)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/kstream/StreamJoined.html#with(org.apache.kafka.common.serialization.Serde,org.apache.kafka.common.serialization.Serde,org.apache.kafka.common.serialization.Serde)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></param>
@@ -301,7 +301,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
             return SExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.StreamJoined<K, V1, V2>>(LocalBridgeClazz, "with", "(Lorg/apache/kafka/common/serialization/Serde;Lorg/apache/kafka/common/serialization/Serde;Lorg/apache/kafka/common/serialization/Serde;)Lorg/apache/kafka/streams/kstream/StreamJoined;", arg0, arg1, arg2);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/StreamJoined.html#with(org.apache.kafka.streams.state.DslStoreSuppliers)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/kstream/StreamJoined.html#with(org.apache.kafka.streams.state.DslStoreSuppliers)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.State.DslStoreSuppliers"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.StreamJoined"/></returns>
@@ -310,7 +310,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
             return SExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.StreamJoined<K, V1, V2>>(LocalBridgeClazz, "with", "(Lorg/apache/kafka/streams/state/DslStoreSuppliers;)Lorg/apache/kafka/streams/kstream/StreamJoined;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/StreamJoined.html#with(org.apache.kafka.streams.state.WindowBytesStoreSupplier,org.apache.kafka.streams.state.WindowBytesStoreSupplier)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/kstream/StreamJoined.html#with(org.apache.kafka.streams.state.WindowBytesStoreSupplier,org.apache.kafka.streams.state.WindowBytesStoreSupplier)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.State.WindowBytesStoreSupplier"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Streams.State.WindowBytesStoreSupplier"/></param>
@@ -324,7 +324,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/StreamJoined.html#withDslStoreSuppliers(org.apache.kafka.streams.state.DslStoreSuppliers)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/kstream/StreamJoined.html#withDslStoreSuppliers(org.apache.kafka.streams.state.DslStoreSuppliers)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.State.DslStoreSuppliers"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.StreamJoined"/></returns>
@@ -333,7 +333,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.StreamJoined<K, V1, V2>>("withDslStoreSuppliers", "(Lorg/apache/kafka/streams/state/DslStoreSuppliers;)Lorg/apache/kafka/streams/kstream/StreamJoined;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/StreamJoined.html#withKeySerde(org.apache.kafka.common.serialization.Serde)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/kstream/StreamJoined.html#withKeySerde(org.apache.kafka.common.serialization.Serde)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.StreamJoined"/></returns>
@@ -342,7 +342,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.StreamJoined<K, V1, V2>>("withKeySerde", "(Lorg/apache/kafka/common/serialization/Serde;)Lorg/apache/kafka/streams/kstream/StreamJoined;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/StreamJoined.html#withLoggingDisabled()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/kstream/StreamJoined.html#withLoggingDisabled()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.StreamJoined"/></returns>
         public Org.Apache.Kafka.Streams.Kstream.StreamJoined<K, V1, V2> WithLoggingDisabled()
@@ -350,7 +350,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.StreamJoined<K, V1, V2>>("withLoggingDisabled", "()Lorg/apache/kafka/streams/kstream/StreamJoined;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/StreamJoined.html#withLoggingEnabled(java.util.Map)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/kstream/StreamJoined.html#withLoggingEnabled(java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.StreamJoined"/></returns>
@@ -359,7 +359,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.StreamJoined<K, V1, V2>>("withLoggingEnabled", "(Ljava/util/Map;)Lorg/apache/kafka/streams/kstream/StreamJoined;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/StreamJoined.html#withOtherStoreSupplier(org.apache.kafka.streams.state.WindowBytesStoreSupplier)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/kstream/StreamJoined.html#withOtherStoreSupplier(org.apache.kafka.streams.state.WindowBytesStoreSupplier)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.State.WindowBytesStoreSupplier"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.StreamJoined"/></returns>
@@ -368,7 +368,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.StreamJoined<K, V1, V2>>("withOtherStoreSupplier", "(Lorg/apache/kafka/streams/state/WindowBytesStoreSupplier;)Lorg/apache/kafka/streams/kstream/StreamJoined;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/StreamJoined.html#withOtherValueSerde(org.apache.kafka.common.serialization.Serde)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/kstream/StreamJoined.html#withOtherValueSerde(org.apache.kafka.common.serialization.Serde)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.StreamJoined"/></returns>
@@ -377,7 +377,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.StreamJoined<K, V1, V2>>("withOtherValueSerde", "(Lorg/apache/kafka/common/serialization/Serde;)Lorg/apache/kafka/streams/kstream/StreamJoined;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/StreamJoined.html#withStoreName(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/kstream/StreamJoined.html#withStoreName(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.StreamJoined"/></returns>
@@ -386,7 +386,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.StreamJoined<K, V1, V2>>("withStoreName", "(Ljava/lang/String;)Lorg/apache/kafka/streams/kstream/StreamJoined;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/StreamJoined.html#withThisStoreSupplier(org.apache.kafka.streams.state.WindowBytesStoreSupplier)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/kstream/StreamJoined.html#withThisStoreSupplier(org.apache.kafka.streams.state.WindowBytesStoreSupplier)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.State.WindowBytesStoreSupplier"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.StreamJoined"/></returns>
@@ -395,7 +395,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.StreamJoined<K, V1, V2>>("withThisStoreSupplier", "(Lorg/apache/kafka/streams/state/WindowBytesStoreSupplier;)Lorg/apache/kafka/streams/kstream/StreamJoined;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/StreamJoined.html#withValueSerde(org.apache.kafka.common.serialization.Serde)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/kstream/StreamJoined.html#withValueSerde(org.apache.kafka.common.serialization.Serde)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.StreamJoined"/></returns>

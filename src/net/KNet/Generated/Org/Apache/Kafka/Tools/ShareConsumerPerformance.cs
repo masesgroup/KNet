@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Tools
 {
     #region ShareConsumerPerformance declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/ShareConsumerPerformance.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.0/org/apache/kafka/tools/ShareConsumerPerformance.html"/>
     /// </summary>
     public partial class ShareConsumerPerformance : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ShareConsumerPerformance>, MASES.JCOBridge.C2JBridge.IJVMBridgeMain
     {
@@ -83,7 +83,7 @@ namespace Org.Apache.Kafka.Tools
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/ShareConsumerPerformance.html#main(java.lang.String[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.0/org/apache/kafka/tools/ShareConsumerPerformance.html#main(java.lang.String[])"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         public static void Main(Java.Lang.String[] arg0)

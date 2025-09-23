@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 {
     #region TimeWindows declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/TimeWindows.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/kstream/TimeWindows.html"/>
     /// </summary>
     public partial class TimeWindows : Org.Apache.Kafka.Streams.Kstream.Windows<Org.Apache.Kafka.Streams.Kstream.Internals.TimeWindow>
     {
@@ -79,13 +79,13 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/TimeWindows.html#advanceMs"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/kstream/TimeWindows.html#advanceMs"/>
         /// </summary>
         public long advanceMs { get { if (!_advanceMsReady) { _advanceMsContent = IGetField<long>("advanceMs"); _advanceMsReady = true; } return _advanceMsContent; } }
         private long _advanceMsContent = default;
         private bool _advanceMsReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/TimeWindows.html#sizeMs"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/kstream/TimeWindows.html#sizeMs"/>
         /// </summary>
         public long sizeMs { get { if (!_sizeMsReady) { _sizeMsContent = IGetField<long>("sizeMs"); _sizeMsReady = true; } return _sizeMsContent; } }
         private long _sizeMsContent = default;
@@ -95,7 +95,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/TimeWindows.html#ofSizeAndGrace(java.time.Duration,java.time.Duration)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/kstream/TimeWindows.html#ofSizeAndGrace(java.time.Duration,java.time.Duration)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Time.Duration"/></param>
         /// <param name="arg1"><see cref="Java.Time.Duration"/></param>
@@ -106,7 +106,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
             return SExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.TimeWindows>(LocalBridgeClazz, "ofSizeAndGrace", "(Ljava/time/Duration;Ljava/time/Duration;)Lorg/apache/kafka/streams/kstream/TimeWindows;", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/TimeWindows.html#ofSizeWithNoGrace(java.time.Duration)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/kstream/TimeWindows.html#ofSizeWithNoGrace(java.time.Duration)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Time.Duration"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.TimeWindows"/></returns>
@@ -120,7 +120,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/TimeWindows.html#advanceBy(java.time.Duration)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/kstream/TimeWindows.html#advanceBy(java.time.Duration)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Time.Duration"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.TimeWindows"/></returns>

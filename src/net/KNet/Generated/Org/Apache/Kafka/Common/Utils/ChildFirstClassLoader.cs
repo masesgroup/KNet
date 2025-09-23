@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common.Utils
 {
     #region ChildFirstClassLoader declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/utils/ChildFirstClassLoader.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/utils/ChildFirstClassLoader.html"/>
     /// </summary>
     public partial class ChildFirstClassLoader : Java.Net.URLClassLoader
     {
@@ -71,7 +71,7 @@ namespace Org.Apache.Kafka.Common.Utils
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/utils/ChildFirstClassLoader.html#%3Cinit%3E(java.lang.String,java.lang.ClassLoader)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/utils/ChildFirstClassLoader.html#%3Cinit%3E(java.lang.String,java.lang.ClassLoader)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Java.Lang.ClassLoader"/></param>

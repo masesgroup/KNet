@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Streams.Query
 {
     #region Query declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/query/Query.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/query/Query.html"/>
     /// </summary>
     public partial class Query : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Query>
     {
@@ -70,7 +70,7 @@ namespace Org.Apache.Kafka.Streams.Query
 
     #region Query<R> declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/query/Query.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/query/Query.html"/>
     /// </summary>
     /// <typeparam name="R"></typeparam>
     public partial class Query<R> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Query<R>>
@@ -145,7 +145,7 @@ namespace Org.Apache.Kafka.Streams.Query
 
     #region IQuery<R>
     /// <summary>
-    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/query/Query.html"/>
+    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/query/Query.html"/>
     /// </summary>
     public partial interface IQuery<R>
     {

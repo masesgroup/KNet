@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Tools.Consumer.Group
 {
     #region ShareGroupCommandOptions declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/consumer/group/ShareGroupCommandOptions.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.0/org/apache/kafka/tools/consumer/group/ShareGroupCommandOptions.html"/>
     /// </summary>
     public partial class ShareGroupCommandOptions : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ShareGroupCommandOptions>
     {
@@ -71,7 +71,7 @@ namespace Org.Apache.Kafka.Tools.Consumer.Group
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/consumer/group/ShareGroupCommandOptions.html#%3Cinit%3E(java.lang.String[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.0/org/apache/kafka/tools/consumer/group/ShareGroupCommandOptions.html#%3Cinit%3E(java.lang.String[])"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         public ShareGroupCommandOptions(Java.Lang.String[] arg0)
@@ -95,7 +95,7 @@ namespace Org.Apache.Kafka.Tools.Consumer.Group
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/consumer/group/ShareGroupCommandOptions.html#checkArgs()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.0/org/apache/kafka/tools/consumer/group/ShareGroupCommandOptions.html#checkArgs()"/>
         /// </summary>
         public void CheckArgs()
         {

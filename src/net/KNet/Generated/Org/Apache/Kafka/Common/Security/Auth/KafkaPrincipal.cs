@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common.Security.Auth
 {
     #region KafkaPrincipal declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/security/auth/KafkaPrincipal.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/security/auth/KafkaPrincipal.html"/>
     /// </summary>
     public partial class KafkaPrincipal : Java.Security.Principal
     {
@@ -71,7 +71,7 @@ namespace Org.Apache.Kafka.Common.Security.Auth
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/security/auth/KafkaPrincipal.html#%3Cinit%3E(java.lang.String,java.lang.String,boolean)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/security/auth/KafkaPrincipal.html#%3Cinit%3E(java.lang.String,java.lang.String,boolean)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Java.Lang.String"/></param>
@@ -81,7 +81,7 @@ namespace Org.Apache.Kafka.Common.Security.Auth
         {
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/security/auth/KafkaPrincipal.html#%3Cinit%3E(java.lang.String,java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/security/auth/KafkaPrincipal.html#%3Cinit%3E(java.lang.String,java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Java.Lang.String"/></param>
@@ -98,13 +98,13 @@ namespace Org.Apache.Kafka.Common.Security.Auth
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/security/auth/KafkaPrincipal.html#USER_TYPE"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/security/auth/KafkaPrincipal.html#USER_TYPE"/>
         /// </summary>
         public static Java.Lang.String USER_TYPE { get { if (!_USER_TYPEReady) { _USER_TYPEContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "USER_TYPE"); _USER_TYPEReady = true; } return _USER_TYPEContent; } }
         private static Java.Lang.String _USER_TYPEContent = default;
         private static bool _USER_TYPEReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/security/auth/KafkaPrincipal.html#ANONYMOUS"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/security/auth/KafkaPrincipal.html#ANONYMOUS"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Security.Auth.KafkaPrincipal ANONYMOUS { get { if (!_ANONYMOUSReady) { _ANONYMOUSContent = SGetField<Org.Apache.Kafka.Common.Security.Auth.KafkaPrincipal>(LocalBridgeClazz, "ANONYMOUS"); _ANONYMOUSReady = true; } return _ANONYMOUSContent; } }
         private static Org.Apache.Kafka.Common.Security.Auth.KafkaPrincipal _ANONYMOUSContent = default;
@@ -118,21 +118,21 @@ namespace Org.Apache.Kafka.Common.Security.Auth
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/security/auth/KafkaPrincipal.html#getName()"/> 
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/security/auth/KafkaPrincipal.html#getName()"/> 
         /// </summary>
         public Java.Lang.String Name
         {
             get { return IExecuteWithSignature<Java.Lang.String>("getName", "()Ljava/lang/String;"); }
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/security/auth/KafkaPrincipal.html#getPrincipalType()"/> 
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/security/auth/KafkaPrincipal.html#getPrincipalType()"/> 
         /// </summary>
         public Java.Lang.String PrincipalType
         {
             get { return IExecuteWithSignature<Java.Lang.String>("getPrincipalType", "()Ljava/lang/String;"); }
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/security/auth/KafkaPrincipal.html#tokenAuthenticated()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/security/auth/KafkaPrincipal.html#tokenAuthenticated()"/>
         /// </summary>
         /// <returns><see cref="bool"/></returns>
         public bool TokenAuthenticated()
@@ -140,7 +140,7 @@ namespace Org.Apache.Kafka.Common.Security.Auth
             return IExecuteWithSignature<bool>("tokenAuthenticated", "()Z");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/security/auth/KafkaPrincipal.html#tokenAuthenticated(boolean)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/security/auth/KafkaPrincipal.html#tokenAuthenticated(boolean)"/>
         /// </summary>
         /// <param name="arg0"><see cref="bool"/></param>
         public void TokenAuthenticated(bool arg0)

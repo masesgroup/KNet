@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Streams.Processor
 {
     #region ConnectedStoreProvider declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/ConnectedStoreProvider.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/processor/ConnectedStoreProvider.html"/>
     /// </summary>
     public partial class ConnectedStoreProvider : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ConnectedStoreProvider>
     {
@@ -70,7 +70,7 @@ namespace Org.Apache.Kafka.Streams.Processor
 
     #region IConnectedStoreProvider
     /// <summary>
-    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/ConnectedStoreProvider.html"/>
+    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/processor/ConnectedStoreProvider.html"/>
     /// </summary>
     public partial interface IConnectedStoreProvider
     {
@@ -107,7 +107,7 @@ namespace Org.Apache.Kafka.Streams.Processor
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/ConnectedStoreProvider.html#stores()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/processor/ConnectedStoreProvider.html#stores()"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Set"/></returns>
         public Java.Util.Set<Org.Apache.Kafka.Streams.State.StoreBuilder> Stores()

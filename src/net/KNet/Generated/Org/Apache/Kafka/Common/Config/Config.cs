@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common.Config
 {
     #region Config declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/Config.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/config/Config.html"/>
     /// </summary>
     public partial class Config : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Config>
     {
@@ -71,7 +71,7 @@ namespace Org.Apache.Kafka.Common.Config
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/Config.html#%3Cinit%3E(java.util.List)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/config/Config.html#%3Cinit%3E(java.util.List)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.List"/></param>
         public Config(Java.Util.List<Org.Apache.Kafka.Common.Config.ConfigValue> arg0)
@@ -95,7 +95,7 @@ namespace Org.Apache.Kafka.Common.Config
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/Config.html#configValues()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/config/Config.html#configValues()"/>
         /// </summary>
         /// <returns><see cref="Java.Util.List"/></returns>
         public Java.Util.List<Org.Apache.Kafka.Common.Config.ConfigValue> ConfigValues()

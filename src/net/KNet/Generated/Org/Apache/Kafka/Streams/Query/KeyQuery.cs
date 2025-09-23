@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Streams.Query
 {
     #region KeyQuery declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/query/KeyQuery.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/query/KeyQuery.html"/>
     /// </summary>
     public partial class KeyQuery : Org.Apache.Kafka.Streams.Query.Query
     {
@@ -68,7 +68,7 @@ namespace Org.Apache.Kafka.Streams.Query
 
     #region KeyQuery<K, V> declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/query/KeyQuery.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/query/KeyQuery.html"/>
     /// </summary>
     /// <typeparam name="K"></typeparam>
     /// <typeparam name="V"></typeparam>
@@ -126,7 +126,7 @@ namespace Org.Apache.Kafka.Streams.Query
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/query/KeyQuery.html#withKey(java.lang.Object)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/query/KeyQuery.html#withKey(java.lang.Object)"/>
         /// </summary>
         /// <param name="arg0"><see cref="object"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Query.KeyQuery"/></returns>
@@ -139,14 +139,14 @@ namespace Org.Apache.Kafka.Streams.Query
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/query/KeyQuery.html#getKey()"/> 
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/query/KeyQuery.html#getKey()"/> 
         /// </summary>
         public object Key
         {
             get { return IExecuteWithSignature("getKey", "()Ljava/lang/Object;"); }
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/query/KeyQuery.html#isSkipCache()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/query/KeyQuery.html#isSkipCache()"/>
         /// </summary>
         /// <returns><see cref="bool"/></returns>
         public bool IsSkipCache()
@@ -154,7 +154,7 @@ namespace Org.Apache.Kafka.Streams.Query
             return IExecuteWithSignature<bool>("isSkipCache", "()Z");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/query/KeyQuery.html#skipCache()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/query/KeyQuery.html#skipCache()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Query.KeyQuery"/></returns>
         public Org.Apache.Kafka.Streams.Query.KeyQuery SkipCache()
@@ -193,7 +193,7 @@ namespace Org.Apache.Kafka.Streams.Query
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/query/KeyQuery.html#withKey(java.lang.Object)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/query/KeyQuery.html#withKey(java.lang.Object)"/>
         /// </summary>
         /// <param name="arg0"><typeparamref name="K"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Query.KeyQuery"/></returns>
@@ -206,14 +206,14 @@ namespace Org.Apache.Kafka.Streams.Query
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/query/KeyQuery.html#getKey()"/> 
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/query/KeyQuery.html#getKey()"/> 
         /// </summary>
         public K Key
         {
             get { return IExecuteWithSignature<K>("getKey", "()Ljava/lang/Object;"); }
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/query/KeyQuery.html#isSkipCache()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/query/KeyQuery.html#isSkipCache()"/>
         /// </summary>
         /// <returns><see cref="bool"/></returns>
         public bool IsSkipCache()
@@ -221,7 +221,7 @@ namespace Org.Apache.Kafka.Streams.Query
             return IExecuteWithSignature<bool>("isSkipCache", "()Z");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/query/KeyQuery.html#skipCache()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/query/KeyQuery.html#skipCache()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Query.KeyQuery"/></returns>
         public Org.Apache.Kafka.Streams.Query.KeyQuery<K, V> SkipCache()

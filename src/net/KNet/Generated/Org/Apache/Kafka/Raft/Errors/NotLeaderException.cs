@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Raft.Errors
 {
     #region NotLeaderException declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/errors/NotLeaderException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/errors/NotLeaderException.html"/>
     /// </summary>
     public partial class NotLeaderException : Org.Apache.Kafka.Raft.Errors.RaftException
     {

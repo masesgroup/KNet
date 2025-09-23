@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 {
     #region AlterReplicaLogDirsResult declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/AlterReplicaLogDirsResult.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/admin/AlterReplicaLogDirsResult.html"/>
     /// </summary>
     public partial class AlterReplicaLogDirsResult : MASES.JCOBridge.C2JBridge.JVMBridgeBase<AlterReplicaLogDirsResult>
     {
@@ -87,7 +87,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/AlterReplicaLogDirsResult.html#values()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/admin/AlterReplicaLogDirsResult.html#values()"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Map"/></returns>
         public Java.Util.Map<Org.Apache.Kafka.Common.TopicPartitionReplica, Org.Apache.Kafka.Common.KafkaFuture<Java.Lang.Void>> Values()
@@ -95,7 +95,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<Java.Util.Map<Org.Apache.Kafka.Common.TopicPartitionReplica, Org.Apache.Kafka.Common.KafkaFuture<Java.Lang.Void>>>("values", "()Ljava/util/Map;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/AlterReplicaLogDirsResult.html#all()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/admin/AlterReplicaLogDirsResult.html#all()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.KafkaFuture"/></returns>
         public Org.Apache.Kafka.Common.KafkaFuture<Java.Lang.Void> All()

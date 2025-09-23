@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common.Utils
 {
     #region FlattenedIterator declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/utils/FlattenedIterator.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/utils/FlattenedIterator.html"/>
     /// </summary>
     public partial class FlattenedIterator : Org.Apache.Kafka.Common.Utils.AbstractIterator
     {
@@ -68,7 +68,7 @@ namespace Org.Apache.Kafka.Common.Utils
 
     #region FlattenedIterator<O, I> declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/utils/FlattenedIterator.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/utils/FlattenedIterator.html"/>
     /// </summary>
     /// <typeparam name="O"></typeparam>
     /// <typeparam name="I"></typeparam>
@@ -114,7 +114,7 @@ namespace Org.Apache.Kafka.Common.Utils
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/utils/FlattenedIterator.html#%3Cinit%3E(java.util.Iterator,java.util.function.Function)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/utils/FlattenedIterator.html#%3Cinit%3E(java.util.Iterator,java.util.function.Function)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Iterator"/></param>
         /// <param name="arg1"><see cref="Java.Util.Function.Function"/></param>
@@ -154,7 +154,7 @@ namespace Org.Apache.Kafka.Common.Utils
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/utils/FlattenedIterator.html#%3Cinit%3E(java.util.Iterator,java.util.function.Function)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/utils/FlattenedIterator.html#%3Cinit%3E(java.util.Iterator,java.util.function.Function)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Iterator"/></param>
         /// <param name="arg1"><see cref="Java.Util.Function.Function"/></param>

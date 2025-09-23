@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Tools
 {
     #region ClientCompatibilityTest declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/ClientCompatibilityTest.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.0/org/apache/kafka/tools/ClientCompatibilityTest.html"/>
     /// </summary>
     public partial class ClientCompatibilityTest : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ClientCompatibilityTest>, MASES.JCOBridge.C2JBridge.IJVMBridgeMain
     {
@@ -83,7 +83,7 @@ namespace Org.Apache.Kafka.Tools
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/ClientCompatibilityTest.html#main(java.lang.String[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.0/org/apache/kafka/tools/ClientCompatibilityTest.html#main(java.lang.String[])"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <exception cref="Java.Lang.Exception"/>
@@ -96,7 +96,7 @@ namespace Org.Apache.Kafka.Tools
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/ClientCompatibilityTest.html#testConsume(long)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.0/org/apache/kafka/tools/ClientCompatibilityTest.html#testConsume(long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="long"/></param>
         /// <exception cref="Java.Lang.Throwable"/>
@@ -105,7 +105,7 @@ namespace Org.Apache.Kafka.Tools
             IExecuteWithSignature("testConsume", "(J)V", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/ClientCompatibilityTest.html#testProduce()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.0/org/apache/kafka/tools/ClientCompatibilityTest.html#testProduce()"/>
         /// </summary>
         /// <exception cref="Java.Lang.Exception"/>
         public void TestProduce()

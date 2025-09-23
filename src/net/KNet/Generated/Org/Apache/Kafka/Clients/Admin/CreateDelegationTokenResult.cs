@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 {
     #region CreateDelegationTokenResult declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/CreateDelegationTokenResult.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/admin/CreateDelegationTokenResult.html"/>
     /// </summary>
     public partial class CreateDelegationTokenResult : MASES.JCOBridge.C2JBridge.JVMBridgeBase<CreateDelegationTokenResult>
     {
@@ -87,7 +87,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/CreateDelegationTokenResult.html#delegationToken()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/admin/CreateDelegationTokenResult.html#delegationToken()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.KafkaFuture"/></returns>
         public Org.Apache.Kafka.Common.KafkaFuture<Org.Apache.Kafka.Common.Security.Token.Delegation.DelegationToken> DelegationToken()

@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Assignment
 {
     #region KafkaStreamsState declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/assignment/KafkaStreamsState.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/processor/assignment/KafkaStreamsState.html"/>
     /// </summary>
     public partial class KafkaStreamsState : MASES.JCOBridge.C2JBridge.JVMBridgeBase<KafkaStreamsState>
     {
@@ -70,7 +70,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Assignment
 
     #region IKafkaStreamsState
     /// <summary>
-    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/assignment/KafkaStreamsState.html"/>
+    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/processor/assignment/KafkaStreamsState.html"/>
     /// </summary>
     public partial interface IKafkaStreamsState
     {
@@ -107,7 +107,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Assignment
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/assignment/KafkaStreamsState.html#numProcessingThreads()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/processor/assignment/KafkaStreamsState.html#numProcessingThreads()"/>
         /// </summary>
         /// <returns><see cref="int"/></returns>
         public int NumProcessingThreads()
@@ -115,7 +115,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Assignment
             return IExecuteWithSignature<int>("numProcessingThreads", "()I");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/assignment/KafkaStreamsState.html#clientTags()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/processor/assignment/KafkaStreamsState.html#clientTags()"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Map"/></returns>
         public Java.Util.Map<Java.Lang.String, Java.Lang.String> ClientTags()
@@ -123,7 +123,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Assignment
             return IExecuteWithSignature<Java.Util.Map<Java.Lang.String, Java.Lang.String>>("clientTags", "()Ljava/util/Map;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/assignment/KafkaStreamsState.html#statefulTasksToLagSums()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/processor/assignment/KafkaStreamsState.html#statefulTasksToLagSums()"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Map"/></returns>
         public Java.Util.Map<Org.Apache.Kafka.Streams.Processor.TaskId, Java.Lang.Long> StatefulTasksToLagSums()
@@ -131,7 +131,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Assignment
             return IExecuteWithSignature<Java.Util.Map<Org.Apache.Kafka.Streams.Processor.TaskId, Java.Lang.Long>>("statefulTasksToLagSums", "()Ljava/util/Map;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/assignment/KafkaStreamsState.html#rackId()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/processor/assignment/KafkaStreamsState.html#rackId()"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Optional"/></returns>
         public Java.Util.Optional<Java.Lang.String> RackId()
@@ -139,7 +139,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Assignment
             return IExecuteWithSignature<Java.Util.Optional<Java.Lang.String>>("rackId", "()Ljava/util/Optional;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/assignment/KafkaStreamsState.html#hostInfo()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/processor/assignment/KafkaStreamsState.html#hostInfo()"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Optional"/></returns>
         public Java.Util.Optional<Org.Apache.Kafka.Streams.State.HostInfo> HostInfo()
@@ -147,7 +147,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Assignment
             return IExecuteWithSignature<Java.Util.Optional<Org.Apache.Kafka.Streams.State.HostInfo>>("hostInfo", "()Ljava/util/Optional;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/assignment/KafkaStreamsState.html#consumerClientIds()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/processor/assignment/KafkaStreamsState.html#consumerClientIds()"/>
         /// </summary>
         /// <returns><see cref="Java.Util.SortedSet"/></returns>
         public Java.Util.SortedSet<Java.Lang.String> ConsumerClientIds()
@@ -155,7 +155,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Assignment
             return IExecuteWithSignature<Java.Util.SortedSet<Java.Lang.String>>("consumerClientIds", "()Ljava/util/SortedSet;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/assignment/KafkaStreamsState.html#previousActiveTasks()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/processor/assignment/KafkaStreamsState.html#previousActiveTasks()"/>
         /// </summary>
         /// <returns><see cref="Java.Util.SortedSet"/></returns>
         public Java.Util.SortedSet<Org.Apache.Kafka.Streams.Processor.TaskId> PreviousActiveTasks()
@@ -163,7 +163,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Assignment
             return IExecuteWithSignature<Java.Util.SortedSet<Org.Apache.Kafka.Streams.Processor.TaskId>>("previousActiveTasks", "()Ljava/util/SortedSet;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/assignment/KafkaStreamsState.html#previousStandbyTasks()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/processor/assignment/KafkaStreamsState.html#previousStandbyTasks()"/>
         /// </summary>
         /// <returns><see cref="Java.Util.SortedSet"/></returns>
         public Java.Util.SortedSet<Org.Apache.Kafka.Streams.Processor.TaskId> PreviousStandbyTasks()
@@ -171,7 +171,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Assignment
             return IExecuteWithSignature<Java.Util.SortedSet<Org.Apache.Kafka.Streams.Processor.TaskId>>("previousStandbyTasks", "()Ljava/util/SortedSet;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/assignment/KafkaStreamsState.html#prevTasksByLag(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/processor/assignment/KafkaStreamsState.html#prevTasksByLag(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Java.Util.SortedSet"/></returns>
@@ -180,7 +180,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Assignment
             return IExecuteWithSignature<Java.Util.SortedSet<Org.Apache.Kafka.Streams.Processor.TaskId>>("prevTasksByLag", "(Ljava/lang/String;)Ljava/util/SortedSet;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/assignment/KafkaStreamsState.html#lagFor(org.apache.kafka.streams.processor.TaskId)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/processor/assignment/KafkaStreamsState.html#lagFor(org.apache.kafka.streams.processor.TaskId)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Processor.TaskId"/></param>
         /// <returns><see cref="long"/></returns>
@@ -189,7 +189,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Assignment
             return IExecuteWithSignature<long>("lagFor", "(Lorg/apache/kafka/streams/processor/TaskId;)J", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/assignment/KafkaStreamsState.html#processId()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/processor/assignment/KafkaStreamsState.html#processId()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Processor.Assignment.ProcessId"/></returns>
         public Org.Apache.Kafka.Streams.Processor.Assignment.ProcessId ProcessId()

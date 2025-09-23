@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common.Security.Auth
 {
     #region KafkaPrincipalBuilder declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/security/auth/KafkaPrincipalBuilder.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/security/auth/KafkaPrincipalBuilder.html"/>
     /// </summary>
     public partial class KafkaPrincipalBuilder : MASES.JCOBridge.C2JBridge.JVMBridgeBase<KafkaPrincipalBuilder>
     {
@@ -70,7 +70,7 @@ namespace Org.Apache.Kafka.Common.Security.Auth
 
     #region IKafkaPrincipalBuilder
     /// <summary>
-    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/security/auth/KafkaPrincipalBuilder.html"/>
+    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/security/auth/KafkaPrincipalBuilder.html"/>
     /// </summary>
     public partial interface IKafkaPrincipalBuilder
     {
@@ -107,7 +107,7 @@ namespace Org.Apache.Kafka.Common.Security.Auth
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/security/auth/KafkaPrincipalBuilder.html#build(org.apache.kafka.common.security.auth.AuthenticationContext)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/security/auth/KafkaPrincipalBuilder.html#build(org.apache.kafka.common.security.auth.AuthenticationContext)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Security.Auth.AuthenticationContext"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.Security.Auth.KafkaPrincipal"/></returns>

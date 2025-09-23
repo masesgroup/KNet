@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Config
 {
     #region BrokerReconfigurable declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.0.0/org/apache/kafka/config/BrokerReconfigurable.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.1.0/org/apache/kafka/config/BrokerReconfigurable.html"/>
     /// </summary>
     public partial class BrokerReconfigurable : MASES.JCOBridge.C2JBridge.JVMBridgeBase<BrokerReconfigurable>
     {
@@ -70,7 +70,7 @@ namespace Org.Apache.Kafka.Config
 
     #region IBrokerReconfigurable
     /// <summary>
-    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.0.0/org/apache/kafka/config/BrokerReconfigurable.html"/>
+    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.1.0/org/apache/kafka/config/BrokerReconfigurable.html"/>
     /// </summary>
     public partial interface IBrokerReconfigurable
     {
@@ -107,7 +107,7 @@ namespace Org.Apache.Kafka.Config
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.0.0/org/apache/kafka/config/BrokerReconfigurable.html#reconfigurableConfigs()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.1.0/org/apache/kafka/config/BrokerReconfigurable.html#reconfigurableConfigs()"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Set"/></returns>
         public Java.Util.Set<Java.Lang.String> ReconfigurableConfigs()
@@ -115,7 +115,7 @@ namespace Org.Apache.Kafka.Config
             return IExecuteWithSignature<Java.Util.Set<Java.Lang.String>>("reconfigurableConfigs", "()Ljava/util/Set;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.0.0/org/apache/kafka/config/BrokerReconfigurable.html#reconfigure(org.apache.kafka.common.config.AbstractConfig,org.apache.kafka.common.config.AbstractConfig)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.1.0/org/apache/kafka/config/BrokerReconfigurable.html#reconfigure(org.apache.kafka.common.config.AbstractConfig,org.apache.kafka.common.config.AbstractConfig)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Config.AbstractConfig"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Config.AbstractConfig"/></param>
@@ -124,7 +124,7 @@ namespace Org.Apache.Kafka.Config
             IExecuteWithSignature("reconfigure", "(Lorg/apache/kafka/common/config/AbstractConfig;Lorg/apache/kafka/common/config/AbstractConfig;)V", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.0.0/org/apache/kafka/config/BrokerReconfigurable.html#validateReconfiguration(org.apache.kafka.common.config.AbstractConfig)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.1.0/org/apache/kafka/config/BrokerReconfigurable.html#validateReconfiguration(org.apache.kafka.common.config.AbstractConfig)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Config.AbstractConfig"/></param>
         public void ValidateReconfiguration(Org.Apache.Kafka.Common.Config.AbstractConfig arg0)

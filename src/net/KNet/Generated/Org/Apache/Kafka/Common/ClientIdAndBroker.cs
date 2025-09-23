@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common
 {
     #region ClientIdAndBroker declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.0.0/org/apache/kafka/common/ClientIdAndBroker.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.1.0/org/apache/kafka/common/ClientIdAndBroker.html"/>
     /// </summary>
     public partial class ClientIdAndBroker : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ClientIdAndBroker>
     {
@@ -71,7 +71,7 @@ namespace Org.Apache.Kafka.Common
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.0.0/org/apache/kafka/common/ClientIdAndBroker.html#%3Cinit%3E(java.lang.String,java.lang.String,int)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.1.0/org/apache/kafka/common/ClientIdAndBroker.html#%3Cinit%3E(java.lang.String,java.lang.String,int)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Java.Lang.String"/></param>
@@ -89,19 +89,19 @@ namespace Org.Apache.Kafka.Common
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.0.0/org/apache/kafka/common/ClientIdAndBroker.html#brokerPort"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.1.0/org/apache/kafka/common/ClientIdAndBroker.html#brokerPort"/>
         /// </summary>
         public int brokerPort { get { if (!_brokerPortReady) { _brokerPortContent = IGetField<int>("brokerPort"); _brokerPortReady = true; } return _brokerPortContent; } }
         private int _brokerPortContent = default;
         private bool _brokerPortReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.0.0/org/apache/kafka/common/ClientIdAndBroker.html#brokerHost"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.1.0/org/apache/kafka/common/ClientIdAndBroker.html#brokerHost"/>
         /// </summary>
         public Java.Lang.String brokerHost { get { if (!_brokerHostReady) { _brokerHostContent = IGetField<Java.Lang.String>("brokerHost"); _brokerHostReady = true; } return _brokerHostContent; } }
         private Java.Lang.String _brokerHostContent = default;
         private bool _brokerHostReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.0.0/org/apache/kafka/common/ClientIdAndBroker.html#clientId"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.1.0/org/apache/kafka/common/ClientIdAndBroker.html#clientId"/>
         /// </summary>
         public Java.Lang.String clientId { get { if (!_clientIdReady) { _clientIdContent = IGetField<Java.Lang.String>("clientId"); _clientIdReady = true; } return _clientIdContent; } }
         private Java.Lang.String _clientIdContent = default;

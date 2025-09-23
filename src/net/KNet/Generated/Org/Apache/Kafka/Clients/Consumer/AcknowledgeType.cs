@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
 {
     #region AcknowledgeType declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/AcknowledgeType.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/consumer/AcknowledgeType.html"/>
     /// </summary>
     public partial class AcknowledgeType : Java.Lang.Enum<Org.Apache.Kafka.Clients.Consumer.AcknowledgeType>
     {
@@ -79,25 +79,25 @@ namespace Org.Apache.Kafka.Clients.Consumer
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/AcknowledgeType.html#id"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/consumer/AcknowledgeType.html#id"/>
         /// </summary>
         public byte id { get { if (!_idReady) { _idContent = IGetField<byte>("id"); _idReady = true; } return _idContent; } }
         private byte _idContent = default;
         private bool _idReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/AcknowledgeType.html#ACCEPT"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/consumer/AcknowledgeType.html#ACCEPT"/>
         /// </summary>
         public static Org.Apache.Kafka.Clients.Consumer.AcknowledgeType ACCEPT { get { if (!_ACCEPTReady) { _ACCEPTContent = SGetField<Org.Apache.Kafka.Clients.Consumer.AcknowledgeType>(LocalBridgeClazz, "ACCEPT"); _ACCEPTReady = true; } return _ACCEPTContent; } }
         private static Org.Apache.Kafka.Clients.Consumer.AcknowledgeType _ACCEPTContent = default;
         private static bool _ACCEPTReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/AcknowledgeType.html#REJECT"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/consumer/AcknowledgeType.html#REJECT"/>
         /// </summary>
         public static Org.Apache.Kafka.Clients.Consumer.AcknowledgeType REJECT { get { if (!_REJECTReady) { _REJECTContent = SGetField<Org.Apache.Kafka.Clients.Consumer.AcknowledgeType>(LocalBridgeClazz, "REJECT"); _REJECTReady = true; } return _REJECTContent; } }
         private static Org.Apache.Kafka.Clients.Consumer.AcknowledgeType _REJECTContent = default;
         private static bool _REJECTReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/AcknowledgeType.html#RELEASE"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/consumer/AcknowledgeType.html#RELEASE"/>
         /// </summary>
         public static Org.Apache.Kafka.Clients.Consumer.AcknowledgeType RELEASE { get { if (!_RELEASEReady) { _RELEASEContent = SGetField<Org.Apache.Kafka.Clients.Consumer.AcknowledgeType>(LocalBridgeClazz, "RELEASE"); _RELEASEReady = true; } return _RELEASEContent; } }
         private static Org.Apache.Kafka.Clients.Consumer.AcknowledgeType _RELEASEContent = default;
@@ -107,7 +107,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/AcknowledgeType.html#forId(byte)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/consumer/AcknowledgeType.html#forId(byte)"/>
         /// </summary>
         /// <param name="arg0"><see cref="byte"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Consumer.AcknowledgeType"/></returns>
@@ -116,7 +116,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
             return SExecuteWithSignature<Org.Apache.Kafka.Clients.Consumer.AcknowledgeType>(LocalBridgeClazz, "forId", "(B)Lorg/apache/kafka/clients/consumer/AcknowledgeType;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/AcknowledgeType.html#valueOf(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/consumer/AcknowledgeType.html#valueOf(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Consumer.AcknowledgeType"/></returns>
@@ -125,7 +125,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
             return SExecuteWithSignature<Org.Apache.Kafka.Clients.Consumer.AcknowledgeType>(LocalBridgeClazz, "valueOf", "(Ljava/lang/String;)Lorg/apache/kafka/clients/consumer/AcknowledgeType;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/AcknowledgeType.html#values()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/consumer/AcknowledgeType.html#values()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Consumer.AcknowledgeType"/></returns>
         public static Org.Apache.Kafka.Clients.Consumer.AcknowledgeType[] Values()

@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common.Quota
 {
     #region ClientQuotaFilterComponent declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/quota/ClientQuotaFilterComponent.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/quota/ClientQuotaFilterComponent.html"/>
     /// </summary>
     public partial class ClientQuotaFilterComponent : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ClientQuotaFilterComponent>
     {
@@ -83,7 +83,7 @@ namespace Org.Apache.Kafka.Common.Quota
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/quota/ClientQuotaFilterComponent.html#ofDefaultEntity(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/quota/ClientQuotaFilterComponent.html#ofDefaultEntity(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.Quota.ClientQuotaFilterComponent"/></returns>
@@ -92,7 +92,7 @@ namespace Org.Apache.Kafka.Common.Quota
             return SExecuteWithSignature<Org.Apache.Kafka.Common.Quota.ClientQuotaFilterComponent>(LocalBridgeClazz, "ofDefaultEntity", "(Ljava/lang/String;)Lorg/apache/kafka/common/quota/ClientQuotaFilterComponent;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/quota/ClientQuotaFilterComponent.html#ofEntity(java.lang.String,java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/quota/ClientQuotaFilterComponent.html#ofEntity(java.lang.String,java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Java.Lang.String"/></param>
@@ -102,7 +102,7 @@ namespace Org.Apache.Kafka.Common.Quota
             return SExecuteWithSignature<Org.Apache.Kafka.Common.Quota.ClientQuotaFilterComponent>(LocalBridgeClazz, "ofEntity", "(Ljava/lang/String;Ljava/lang/String;)Lorg/apache/kafka/common/quota/ClientQuotaFilterComponent;", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/quota/ClientQuotaFilterComponent.html#ofEntityType(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/quota/ClientQuotaFilterComponent.html#ofEntityType(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.Quota.ClientQuotaFilterComponent"/></returns>
@@ -115,7 +115,7 @@ namespace Org.Apache.Kafka.Common.Quota
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/quota/ClientQuotaFilterComponent.html#entityType()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/quota/ClientQuotaFilterComponent.html#entityType()"/>
         /// </summary>
         /// <returns><see cref="Java.Lang.String"/></returns>
         public Java.Lang.String EntityType()
@@ -123,7 +123,7 @@ namespace Org.Apache.Kafka.Common.Quota
             return IExecuteWithSignature<Java.Lang.String>("entityType", "()Ljava/lang/String;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/quota/ClientQuotaFilterComponent.html#match()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/quota/ClientQuotaFilterComponent.html#match()"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Optional"/></returns>
         public Java.Util.Optional<Java.Lang.String> Match()

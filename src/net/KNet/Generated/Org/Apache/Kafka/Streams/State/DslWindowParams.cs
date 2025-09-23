@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Streams.State
 {
     #region DslWindowParams declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/state/DslWindowParams.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/state/DslWindowParams.html"/>
     /// </summary>
     public partial class DslWindowParams : MASES.JCOBridge.C2JBridge.JVMBridgeBase<DslWindowParams>
     {
@@ -71,7 +71,7 @@ namespace Org.Apache.Kafka.Streams.State
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/state/DslWindowParams.html#%3Cinit%3E(java.lang.String,java.time.Duration,java.time.Duration,boolean,org.apache.kafka.streams.kstream.EmitStrategy,boolean,boolean)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/state/DslWindowParams.html#%3Cinit%3E(java.lang.String,java.time.Duration,java.time.Duration,boolean,org.apache.kafka.streams.kstream.EmitStrategy,boolean,boolean)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Java.Time.Duration"/></param>
@@ -101,7 +101,7 @@ namespace Org.Apache.Kafka.Streams.State
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/state/DslWindowParams.html#isSlidingWindow()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/state/DslWindowParams.html#isSlidingWindow()"/>
         /// </summary>
         /// <returns><see cref="bool"/></returns>
         public bool IsSlidingWindow()
@@ -109,7 +109,7 @@ namespace Org.Apache.Kafka.Streams.State
             return IExecuteWithSignature<bool>("isSlidingWindow", "()Z");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/state/DslWindowParams.html#isTimestamped()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/state/DslWindowParams.html#isTimestamped()"/>
         /// </summary>
         /// <returns><see cref="bool"/></returns>
         public bool IsTimestamped()
@@ -117,7 +117,7 @@ namespace Org.Apache.Kafka.Streams.State
             return IExecuteWithSignature<bool>("isTimestamped", "()Z");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/state/DslWindowParams.html#retainDuplicates()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/state/DslWindowParams.html#retainDuplicates()"/>
         /// </summary>
         /// <returns><see cref="bool"/></returns>
         public bool RetainDuplicates()
@@ -125,7 +125,7 @@ namespace Org.Apache.Kafka.Streams.State
             return IExecuteWithSignature<bool>("retainDuplicates", "()Z");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/state/DslWindowParams.html#name()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/state/DslWindowParams.html#name()"/>
         /// </summary>
         /// <returns><see cref="Java.Lang.String"/></returns>
         public Java.Lang.String Name()
@@ -133,7 +133,7 @@ namespace Org.Apache.Kafka.Streams.State
             return IExecuteWithSignature<Java.Lang.String>("name", "()Ljava/lang/String;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/state/DslWindowParams.html#retentionPeriod()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/state/DslWindowParams.html#retentionPeriod()"/>
         /// </summary>
         /// <returns><see cref="Java.Time.Duration"/></returns>
         public Java.Time.Duration RetentionPeriod()
@@ -141,7 +141,7 @@ namespace Org.Apache.Kafka.Streams.State
             return IExecuteWithSignature<Java.Time.Duration>("retentionPeriod", "()Ljava/time/Duration;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/state/DslWindowParams.html#windowSize()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/state/DslWindowParams.html#windowSize()"/>
         /// </summary>
         /// <returns><see cref="Java.Time.Duration"/></returns>
         public Java.Time.Duration WindowSize()
@@ -149,7 +149,7 @@ namespace Org.Apache.Kafka.Streams.State
             return IExecuteWithSignature<Java.Time.Duration>("windowSize", "()Ljava/time/Duration;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/state/DslWindowParams.html#emitStrategy()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/state/DslWindowParams.html#emitStrategy()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.EmitStrategy"/></returns>
         public Org.Apache.Kafka.Streams.Kstream.EmitStrategy EmitStrategy()

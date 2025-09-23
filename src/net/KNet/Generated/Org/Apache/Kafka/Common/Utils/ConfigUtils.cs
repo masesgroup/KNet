@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common.Utils
 {
     #region ConfigUtils declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/utils/ConfigUtils.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/utils/ConfigUtils.html"/>
     /// </summary>
     public partial class ConfigUtils : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ConfigUtils>
     {
@@ -83,7 +83,7 @@ namespace Org.Apache.Kafka.Common.Utils
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/utils/ConfigUtils.html#getBoolean(java.util.Map,java.lang.String,boolean)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/utils/ConfigUtils.html#getBoolean(java.util.Map,java.lang.String,boolean)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <param name="arg1"><see cref="Java.Lang.String"/></param>
@@ -94,7 +94,7 @@ namespace Org.Apache.Kafka.Common.Utils
             return SExecuteWithSignature<bool>(LocalBridgeClazz, "getBoolean", "(Ljava/util/Map;Ljava/lang/String;Z)Z", arg0, arg1, arg2);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/utils/ConfigUtils.html#configMapToRedactedString(java.util.Map,org.apache.kafka.common.config.ConfigDef)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/utils/ConfigUtils.html#configMapToRedactedString(java.util.Map,org.apache.kafka.common.config.ConfigDef)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Config.ConfigDef"/></param>

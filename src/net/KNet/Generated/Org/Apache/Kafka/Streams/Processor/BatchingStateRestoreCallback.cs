@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Streams.Processor
 {
     #region BatchingStateRestoreCallback declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/BatchingStateRestoreCallback.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/processor/BatchingStateRestoreCallback.html"/>
     /// </summary>
     public partial class BatchingStateRestoreCallback : MASES.JCOBridge.C2JBridge.JVMBridgeListener
     {
@@ -100,7 +100,7 @@ namespace Org.Apache.Kafka.Streams.Processor
 
     #region IBatchingStateRestoreCallback
     /// <summary>
-    /// .NET interface for org.mases.knet.generated.org.apache.kafka.streams.processor.BatchingStateRestoreCallback implementing <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/BatchingStateRestoreCallback.html"/>
+    /// .NET interface for org.mases.knet.generated.org.apache.kafka.streams.processor.BatchingStateRestoreCallback implementing <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/processor/BatchingStateRestoreCallback.html"/>
     /// </summary>
     public partial interface IBatchingStateRestoreCallback
     {
@@ -147,7 +147,7 @@ namespace Org.Apache.Kafka.Streams.Processor
         }
 
         /// <summary>
-        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/BatchingStateRestoreCallback.html#restoreAll(java.util.Collection)"/>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/processor/BatchingStateRestoreCallback.html#restoreAll(java.util.Collection)"/>
         /// </summary>
         /// <remarks>If <see cref="OnRestoreAll"/> has a value it takes precedence over corresponding class method</remarks>
         public global::System.Action<Java.Util.Collection<Org.Apache.Kafka.Streams.KeyValue<byte[], byte[]>>> OnRestoreAll { get; set; } = null;
@@ -162,7 +162,7 @@ namespace Org.Apache.Kafka.Streams.Processor
         }
 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/BatchingStateRestoreCallback.html#restoreAll(java.util.Collection)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/processor/BatchingStateRestoreCallback.html#restoreAll(java.util.Collection)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Collection"/></param>
         public virtual void RestoreAll(Java.Util.Collection<Org.Apache.Kafka.Streams.KeyValue<byte[], byte[]>> arg0)
@@ -170,7 +170,7 @@ namespace Org.Apache.Kafka.Streams.Processor
             hasOverrideRestoreAll = false;
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/BatchingStateRestoreCallback.html#restore(byte[],byte[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/processor/BatchingStateRestoreCallback.html#restore(byte[],byte[])"/>
         /// </summary>
         /// <param name="arg0"><see cref="byte"/></param>
         /// <param name="arg1"><see cref="byte"/></param>
@@ -181,7 +181,7 @@ namespace Org.Apache.Kafka.Streams.Processor
         }
 
         /// <summary>
-        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/BatchingStateRestoreCallback.html#restore(byte[],byte[])"/>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/processor/BatchingStateRestoreCallback.html#restore(byte[],byte[])"/>
         /// </summary>
         /// <remarks>If <see cref="OnRestore"/> has a value it takes precedence over corresponding class method</remarks>
         public global::System.Action<byte[], byte[]> OnRestore { get; set; } = null;
@@ -196,7 +196,7 @@ namespace Org.Apache.Kafka.Streams.Processor
         }
 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/BatchingStateRestoreCallback.html#restore(byte[],byte[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/processor/BatchingStateRestoreCallback.html#restore(byte[],byte[])"/>
         /// </summary>
         /// <param name="arg0"><see cref="byte"/></param>
         /// <param name="arg1"><see cref="byte"/></param>
@@ -237,7 +237,7 @@ namespace Org.Apache.Kafka.Streams.Processor
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/BatchingStateRestoreCallback.html#restoreAll(java.util.Collection)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/processor/BatchingStateRestoreCallback.html#restoreAll(java.util.Collection)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Collection"/></param>
         public override void RestoreAll(Java.Util.Collection<Org.Apache.Kafka.Streams.KeyValue<byte[], byte[]>> arg0)
@@ -245,7 +245,7 @@ namespace Org.Apache.Kafka.Streams.Processor
             IExecuteWithSignature("restoreAll", "(Ljava/util/Collection;)V", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/BatchingStateRestoreCallback.html#restore(byte[],byte[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/processor/BatchingStateRestoreCallback.html#restore(byte[],byte[])"/>
         /// </summary>
         /// <param name="arg0"><see cref="byte"/></param>
         /// <param name="arg1"><see cref="byte"/></param>

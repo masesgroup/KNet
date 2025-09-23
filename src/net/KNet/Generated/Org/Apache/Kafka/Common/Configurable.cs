@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common
 {
     #region Configurable declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/Configurable.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/Configurable.html"/>
     /// </summary>
     public partial class Configurable : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Configurable>
     {
@@ -70,7 +70,7 @@ namespace Org.Apache.Kafka.Common
 
     #region IConfigurable
     /// <summary>
-    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/Configurable.html"/>
+    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/Configurable.html"/>
     /// </summary>
     public partial interface IConfigurable
     {
@@ -107,7 +107,7 @@ namespace Org.Apache.Kafka.Common
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/Configurable.html#configure(java.util.Map)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/Configurable.html#configure(java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         public void Configure(Java.Util.Map<Java.Lang.String, object> arg0)

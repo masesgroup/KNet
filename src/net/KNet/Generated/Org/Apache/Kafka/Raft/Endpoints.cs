@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Raft
 {
     #region Endpoints declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/Endpoints.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/Endpoints.html"/>
     /// </summary>
     public partial class Endpoints : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Endpoints>
     {
@@ -83,7 +83,7 @@ namespace Org.Apache.Kafka.Raft
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/Endpoints.html#empty()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/Endpoints.html#empty()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Raft.Endpoints"/></returns>
         public static Org.Apache.Kafka.Raft.Endpoints Empty()
@@ -95,7 +95,7 @@ namespace Org.Apache.Kafka.Raft
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/Endpoints.html#isEmpty()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/Endpoints.html#isEmpty()"/>
         /// </summary>
         /// <returns><see cref="bool"/></returns>
         public bool IsEmpty()
@@ -103,7 +103,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<bool>("isEmpty", "()Z");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/Endpoints.html#size()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/Endpoints.html#size()"/>
         /// </summary>
         /// <returns><see cref="int"/></returns>
         public int Size()

@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Raft
 {
     #region MetadataLogConfig declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/MetadataLogConfig.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/MetadataLogConfig.html"/>
     /// </summary>
     public partial class MetadataLogConfig : MASES.JCOBridge.C2JBridge.JVMBridgeBase<MetadataLogConfig>
     {
@@ -71,7 +71,7 @@ namespace Org.Apache.Kafka.Raft
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/MetadataLogConfig.html#%3Cinit%3E(org.apache.kafka.common.config.AbstractConfig)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/MetadataLogConfig.html#%3Cinit%3E(org.apache.kafka.common.config.AbstractConfig)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Config.AbstractConfig"/></param>
         public MetadataLogConfig(Org.Apache.Kafka.Common.Config.AbstractConfig arg0)
@@ -87,193 +87,193 @@ namespace Org.Apache.Kafka.Raft
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/MetadataLogConfig.html#METADATA_LOG_SEGMENT_BYTES_DEFAULT"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/MetadataLogConfig.html#METADATA_LOG_SEGMENT_BYTES_DEFAULT"/>
         /// </summary>
         public static int METADATA_LOG_SEGMENT_BYTES_DEFAULT { get { if (!_METADATA_LOG_SEGMENT_BYTES_DEFAULTReady) { _METADATA_LOG_SEGMENT_BYTES_DEFAULTContent = SGetField<int>(LocalBridgeClazz, "METADATA_LOG_SEGMENT_BYTES_DEFAULT"); _METADATA_LOG_SEGMENT_BYTES_DEFAULTReady = true; } return _METADATA_LOG_SEGMENT_BYTES_DEFAULTContent; } }
         private static int _METADATA_LOG_SEGMENT_BYTES_DEFAULTContent = default;
         private static bool _METADATA_LOG_SEGMENT_BYTES_DEFAULTReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/MetadataLogConfig.html#METADATA_MAX_IDLE_INTERVAL_MS_DEFAULT"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/MetadataLogConfig.html#METADATA_MAX_IDLE_INTERVAL_MS_DEFAULT"/>
         /// </summary>
         public static int METADATA_MAX_IDLE_INTERVAL_MS_DEFAULT { get { if (!_METADATA_MAX_IDLE_INTERVAL_MS_DEFAULTReady) { _METADATA_MAX_IDLE_INTERVAL_MS_DEFAULTContent = SGetField<int>(LocalBridgeClazz, "METADATA_MAX_IDLE_INTERVAL_MS_DEFAULT"); _METADATA_MAX_IDLE_INTERVAL_MS_DEFAULTReady = true; } return _METADATA_MAX_IDLE_INTERVAL_MS_DEFAULTContent; } }
         private static int _METADATA_MAX_IDLE_INTERVAL_MS_DEFAULTContent = default;
         private static bool _METADATA_MAX_IDLE_INTERVAL_MS_DEFAULTReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/MetadataLogConfig.html#METADATA_MAX_RETENTION_BYTES_DEFAULT"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/MetadataLogConfig.html#METADATA_MAX_RETENTION_BYTES_DEFAULT"/>
         /// </summary>
         public static int METADATA_MAX_RETENTION_BYTES_DEFAULT { get { if (!_METADATA_MAX_RETENTION_BYTES_DEFAULTReady) { _METADATA_MAX_RETENTION_BYTES_DEFAULTContent = SGetField<int>(LocalBridgeClazz, "METADATA_MAX_RETENTION_BYTES_DEFAULT"); _METADATA_MAX_RETENTION_BYTES_DEFAULTReady = true; } return _METADATA_MAX_RETENTION_BYTES_DEFAULTContent; } }
         private static int _METADATA_MAX_RETENTION_BYTES_DEFAULTContent = default;
         private static bool _METADATA_MAX_RETENTION_BYTES_DEFAULTReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/MetadataLogConfig.html#METADATA_SNAPSHOT_MAX_NEW_RECORD_BYTES"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/MetadataLogConfig.html#METADATA_SNAPSHOT_MAX_NEW_RECORD_BYTES"/>
         /// </summary>
         public static int METADATA_SNAPSHOT_MAX_NEW_RECORD_BYTES { get { if (!_METADATA_SNAPSHOT_MAX_NEW_RECORD_BYTESReady) { _METADATA_SNAPSHOT_MAX_NEW_RECORD_BYTESContent = SGetField<int>(LocalBridgeClazz, "METADATA_SNAPSHOT_MAX_NEW_RECORD_BYTES"); _METADATA_SNAPSHOT_MAX_NEW_RECORD_BYTESReady = true; } return _METADATA_SNAPSHOT_MAX_NEW_RECORD_BYTESContent; } }
         private static int _METADATA_SNAPSHOT_MAX_NEW_RECORD_BYTESContent = default;
         private static bool _METADATA_SNAPSHOT_MAX_NEW_RECORD_BYTESReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/MetadataLogConfig.html#INTERNAL_METADATA_DELETE_DELAY_MILLIS_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/MetadataLogConfig.html#INTERNAL_METADATA_DELETE_DELAY_MILLIS_CONFIG"/>
         /// </summary>
         public static Java.Lang.String INTERNAL_METADATA_DELETE_DELAY_MILLIS_CONFIG { get { if (!_INTERNAL_METADATA_DELETE_DELAY_MILLIS_CONFIGReady) { _INTERNAL_METADATA_DELETE_DELAY_MILLIS_CONFIGContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "INTERNAL_METADATA_DELETE_DELAY_MILLIS_CONFIG"); _INTERNAL_METADATA_DELETE_DELAY_MILLIS_CONFIGReady = true; } return _INTERNAL_METADATA_DELETE_DELAY_MILLIS_CONFIGContent; } }
         private static Java.Lang.String _INTERNAL_METADATA_DELETE_DELAY_MILLIS_CONFIGContent = default;
         private static bool _INTERNAL_METADATA_DELETE_DELAY_MILLIS_CONFIGReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/MetadataLogConfig.html#INTERNAL_METADATA_DELETE_DELAY_MILLIS_DOC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/MetadataLogConfig.html#INTERNAL_METADATA_DELETE_DELAY_MILLIS_DOC"/>
         /// </summary>
         public static Java.Lang.String INTERNAL_METADATA_DELETE_DELAY_MILLIS_DOC { get { if (!_INTERNAL_METADATA_DELETE_DELAY_MILLIS_DOCReady) { _INTERNAL_METADATA_DELETE_DELAY_MILLIS_DOCContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "INTERNAL_METADATA_DELETE_DELAY_MILLIS_DOC"); _INTERNAL_METADATA_DELETE_DELAY_MILLIS_DOCReady = true; } return _INTERNAL_METADATA_DELETE_DELAY_MILLIS_DOCContent; } }
         private static Java.Lang.String _INTERNAL_METADATA_DELETE_DELAY_MILLIS_DOCContent = default;
         private static bool _INTERNAL_METADATA_DELETE_DELAY_MILLIS_DOCReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/MetadataLogConfig.html#INTERNAL_METADATA_LOG_SEGMENT_BYTES_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/MetadataLogConfig.html#INTERNAL_METADATA_LOG_SEGMENT_BYTES_CONFIG"/>
         /// </summary>
         public static Java.Lang.String INTERNAL_METADATA_LOG_SEGMENT_BYTES_CONFIG { get { if (!_INTERNAL_METADATA_LOG_SEGMENT_BYTES_CONFIGReady) { _INTERNAL_METADATA_LOG_SEGMENT_BYTES_CONFIGContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "INTERNAL_METADATA_LOG_SEGMENT_BYTES_CONFIG"); _INTERNAL_METADATA_LOG_SEGMENT_BYTES_CONFIGReady = true; } return _INTERNAL_METADATA_LOG_SEGMENT_BYTES_CONFIGContent; } }
         private static Java.Lang.String _INTERNAL_METADATA_LOG_SEGMENT_BYTES_CONFIGContent = default;
         private static bool _INTERNAL_METADATA_LOG_SEGMENT_BYTES_CONFIGReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/MetadataLogConfig.html#INTERNAL_METADATA_LOG_SEGMENT_BYTES_DOC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/MetadataLogConfig.html#INTERNAL_METADATA_LOG_SEGMENT_BYTES_DOC"/>
         /// </summary>
         public static Java.Lang.String INTERNAL_METADATA_LOG_SEGMENT_BYTES_DOC { get { if (!_INTERNAL_METADATA_LOG_SEGMENT_BYTES_DOCReady) { _INTERNAL_METADATA_LOG_SEGMENT_BYTES_DOCContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "INTERNAL_METADATA_LOG_SEGMENT_BYTES_DOC"); _INTERNAL_METADATA_LOG_SEGMENT_BYTES_DOCReady = true; } return _INTERNAL_METADATA_LOG_SEGMENT_BYTES_DOCContent; } }
         private static Java.Lang.String _INTERNAL_METADATA_LOG_SEGMENT_BYTES_DOCContent = default;
         private static bool _INTERNAL_METADATA_LOG_SEGMENT_BYTES_DOCReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/MetadataLogConfig.html#INTERNAL_METADATA_MAX_BATCH_SIZE_IN_BYTES_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/MetadataLogConfig.html#INTERNAL_METADATA_MAX_BATCH_SIZE_IN_BYTES_CONFIG"/>
         /// </summary>
         public static Java.Lang.String INTERNAL_METADATA_MAX_BATCH_SIZE_IN_BYTES_CONFIG { get { if (!_INTERNAL_METADATA_MAX_BATCH_SIZE_IN_BYTES_CONFIGReady) { _INTERNAL_METADATA_MAX_BATCH_SIZE_IN_BYTES_CONFIGContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "INTERNAL_METADATA_MAX_BATCH_SIZE_IN_BYTES_CONFIG"); _INTERNAL_METADATA_MAX_BATCH_SIZE_IN_BYTES_CONFIGReady = true; } return _INTERNAL_METADATA_MAX_BATCH_SIZE_IN_BYTES_CONFIGContent; } }
         private static Java.Lang.String _INTERNAL_METADATA_MAX_BATCH_SIZE_IN_BYTES_CONFIGContent = default;
         private static bool _INTERNAL_METADATA_MAX_BATCH_SIZE_IN_BYTES_CONFIGReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/MetadataLogConfig.html#INTERNAL_METADATA_MAX_BATCH_SIZE_IN_BYTES_DOC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/MetadataLogConfig.html#INTERNAL_METADATA_MAX_BATCH_SIZE_IN_BYTES_DOC"/>
         /// </summary>
         public static Java.Lang.String INTERNAL_METADATA_MAX_BATCH_SIZE_IN_BYTES_DOC { get { if (!_INTERNAL_METADATA_MAX_BATCH_SIZE_IN_BYTES_DOCReady) { _INTERNAL_METADATA_MAX_BATCH_SIZE_IN_BYTES_DOCContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "INTERNAL_METADATA_MAX_BATCH_SIZE_IN_BYTES_DOC"); _INTERNAL_METADATA_MAX_BATCH_SIZE_IN_BYTES_DOCReady = true; } return _INTERNAL_METADATA_MAX_BATCH_SIZE_IN_BYTES_DOCContent; } }
         private static Java.Lang.String _INTERNAL_METADATA_MAX_BATCH_SIZE_IN_BYTES_DOCContent = default;
         private static bool _INTERNAL_METADATA_MAX_BATCH_SIZE_IN_BYTES_DOCReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/MetadataLogConfig.html#INTERNAL_METADATA_MAX_FETCH_SIZE_IN_BYTES_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/MetadataLogConfig.html#INTERNAL_METADATA_MAX_FETCH_SIZE_IN_BYTES_CONFIG"/>
         /// </summary>
         public static Java.Lang.String INTERNAL_METADATA_MAX_FETCH_SIZE_IN_BYTES_CONFIG { get { if (!_INTERNAL_METADATA_MAX_FETCH_SIZE_IN_BYTES_CONFIGReady) { _INTERNAL_METADATA_MAX_FETCH_SIZE_IN_BYTES_CONFIGContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "INTERNAL_METADATA_MAX_FETCH_SIZE_IN_BYTES_CONFIG"); _INTERNAL_METADATA_MAX_FETCH_SIZE_IN_BYTES_CONFIGReady = true; } return _INTERNAL_METADATA_MAX_FETCH_SIZE_IN_BYTES_CONFIGContent; } }
         private static Java.Lang.String _INTERNAL_METADATA_MAX_FETCH_SIZE_IN_BYTES_CONFIGContent = default;
         private static bool _INTERNAL_METADATA_MAX_FETCH_SIZE_IN_BYTES_CONFIGReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/MetadataLogConfig.html#INTERNAL_METADATA_MAX_FETCH_SIZE_IN_BYTES_DOC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/MetadataLogConfig.html#INTERNAL_METADATA_MAX_FETCH_SIZE_IN_BYTES_DOC"/>
         /// </summary>
         public static Java.Lang.String INTERNAL_METADATA_MAX_FETCH_SIZE_IN_BYTES_DOC { get { if (!_INTERNAL_METADATA_MAX_FETCH_SIZE_IN_BYTES_DOCReady) { _INTERNAL_METADATA_MAX_FETCH_SIZE_IN_BYTES_DOCContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "INTERNAL_METADATA_MAX_FETCH_SIZE_IN_BYTES_DOC"); _INTERNAL_METADATA_MAX_FETCH_SIZE_IN_BYTES_DOCReady = true; } return _INTERNAL_METADATA_MAX_FETCH_SIZE_IN_BYTES_DOCContent; } }
         private static Java.Lang.String _INTERNAL_METADATA_MAX_FETCH_SIZE_IN_BYTES_DOCContent = default;
         private static bool _INTERNAL_METADATA_MAX_FETCH_SIZE_IN_BYTES_DOCReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/MetadataLogConfig.html#METADATA_LOG_DIR_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/MetadataLogConfig.html#METADATA_LOG_DIR_CONFIG"/>
         /// </summary>
         public static Java.Lang.String METADATA_LOG_DIR_CONFIG { get { if (!_METADATA_LOG_DIR_CONFIGReady) { _METADATA_LOG_DIR_CONFIGContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "METADATA_LOG_DIR_CONFIG"); _METADATA_LOG_DIR_CONFIGReady = true; } return _METADATA_LOG_DIR_CONFIGContent; } }
         private static Java.Lang.String _METADATA_LOG_DIR_CONFIGContent = default;
         private static bool _METADATA_LOG_DIR_CONFIGReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/MetadataLogConfig.html#METADATA_LOG_DIR_DOC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/MetadataLogConfig.html#METADATA_LOG_DIR_DOC"/>
         /// </summary>
         public static Java.Lang.String METADATA_LOG_DIR_DOC { get { if (!_METADATA_LOG_DIR_DOCReady) { _METADATA_LOG_DIR_DOCContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "METADATA_LOG_DIR_DOC"); _METADATA_LOG_DIR_DOCReady = true; } return _METADATA_LOG_DIR_DOCContent; } }
         private static Java.Lang.String _METADATA_LOG_DIR_DOCContent = default;
         private static bool _METADATA_LOG_DIR_DOCReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/MetadataLogConfig.html#METADATA_LOG_SEGMENT_BYTES_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/MetadataLogConfig.html#METADATA_LOG_SEGMENT_BYTES_CONFIG"/>
         /// </summary>
         public static Java.Lang.String METADATA_LOG_SEGMENT_BYTES_CONFIG { get { if (!_METADATA_LOG_SEGMENT_BYTES_CONFIGReady) { _METADATA_LOG_SEGMENT_BYTES_CONFIGContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "METADATA_LOG_SEGMENT_BYTES_CONFIG"); _METADATA_LOG_SEGMENT_BYTES_CONFIGReady = true; } return _METADATA_LOG_SEGMENT_BYTES_CONFIGContent; } }
         private static Java.Lang.String _METADATA_LOG_SEGMENT_BYTES_CONFIGContent = default;
         private static bool _METADATA_LOG_SEGMENT_BYTES_CONFIGReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/MetadataLogConfig.html#METADATA_LOG_SEGMENT_BYTES_DOC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/MetadataLogConfig.html#METADATA_LOG_SEGMENT_BYTES_DOC"/>
         /// </summary>
         public static Java.Lang.String METADATA_LOG_SEGMENT_BYTES_DOC { get { if (!_METADATA_LOG_SEGMENT_BYTES_DOCReady) { _METADATA_LOG_SEGMENT_BYTES_DOCContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "METADATA_LOG_SEGMENT_BYTES_DOC"); _METADATA_LOG_SEGMENT_BYTES_DOCReady = true; } return _METADATA_LOG_SEGMENT_BYTES_DOCContent; } }
         private static Java.Lang.String _METADATA_LOG_SEGMENT_BYTES_DOCContent = default;
         private static bool _METADATA_LOG_SEGMENT_BYTES_DOCReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/MetadataLogConfig.html#METADATA_LOG_SEGMENT_MILLIS_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/MetadataLogConfig.html#METADATA_LOG_SEGMENT_MILLIS_CONFIG"/>
         /// </summary>
         public static Java.Lang.String METADATA_LOG_SEGMENT_MILLIS_CONFIG { get { if (!_METADATA_LOG_SEGMENT_MILLIS_CONFIGReady) { _METADATA_LOG_SEGMENT_MILLIS_CONFIGContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "METADATA_LOG_SEGMENT_MILLIS_CONFIG"); _METADATA_LOG_SEGMENT_MILLIS_CONFIGReady = true; } return _METADATA_LOG_SEGMENT_MILLIS_CONFIGContent; } }
         private static Java.Lang.String _METADATA_LOG_SEGMENT_MILLIS_CONFIGContent = default;
         private static bool _METADATA_LOG_SEGMENT_MILLIS_CONFIGReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/MetadataLogConfig.html#METADATA_LOG_SEGMENT_MILLIS_DOC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/MetadataLogConfig.html#METADATA_LOG_SEGMENT_MILLIS_DOC"/>
         /// </summary>
         public static Java.Lang.String METADATA_LOG_SEGMENT_MILLIS_DOC { get { if (!_METADATA_LOG_SEGMENT_MILLIS_DOCReady) { _METADATA_LOG_SEGMENT_MILLIS_DOCContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "METADATA_LOG_SEGMENT_MILLIS_DOC"); _METADATA_LOG_SEGMENT_MILLIS_DOCReady = true; } return _METADATA_LOG_SEGMENT_MILLIS_DOCContent; } }
         private static Java.Lang.String _METADATA_LOG_SEGMENT_MILLIS_DOCContent = default;
         private static bool _METADATA_LOG_SEGMENT_MILLIS_DOCReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/MetadataLogConfig.html#METADATA_MAX_IDLE_INTERVAL_MS_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/MetadataLogConfig.html#METADATA_MAX_IDLE_INTERVAL_MS_CONFIG"/>
         /// </summary>
         public static Java.Lang.String METADATA_MAX_IDLE_INTERVAL_MS_CONFIG { get { if (!_METADATA_MAX_IDLE_INTERVAL_MS_CONFIGReady) { _METADATA_MAX_IDLE_INTERVAL_MS_CONFIGContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "METADATA_MAX_IDLE_INTERVAL_MS_CONFIG"); _METADATA_MAX_IDLE_INTERVAL_MS_CONFIGReady = true; } return _METADATA_MAX_IDLE_INTERVAL_MS_CONFIGContent; } }
         private static Java.Lang.String _METADATA_MAX_IDLE_INTERVAL_MS_CONFIGContent = default;
         private static bool _METADATA_MAX_IDLE_INTERVAL_MS_CONFIGReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/MetadataLogConfig.html#METADATA_MAX_IDLE_INTERVAL_MS_DOC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/MetadataLogConfig.html#METADATA_MAX_IDLE_INTERVAL_MS_DOC"/>
         /// </summary>
         public static Java.Lang.String METADATA_MAX_IDLE_INTERVAL_MS_DOC { get { if (!_METADATA_MAX_IDLE_INTERVAL_MS_DOCReady) { _METADATA_MAX_IDLE_INTERVAL_MS_DOCContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "METADATA_MAX_IDLE_INTERVAL_MS_DOC"); _METADATA_MAX_IDLE_INTERVAL_MS_DOCReady = true; } return _METADATA_MAX_IDLE_INTERVAL_MS_DOCContent; } }
         private static Java.Lang.String _METADATA_MAX_IDLE_INTERVAL_MS_DOCContent = default;
         private static bool _METADATA_MAX_IDLE_INTERVAL_MS_DOCReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/MetadataLogConfig.html#METADATA_MAX_RETENTION_BYTES_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/MetadataLogConfig.html#METADATA_MAX_RETENTION_BYTES_CONFIG"/>
         /// </summary>
         public static Java.Lang.String METADATA_MAX_RETENTION_BYTES_CONFIG { get { if (!_METADATA_MAX_RETENTION_BYTES_CONFIGReady) { _METADATA_MAX_RETENTION_BYTES_CONFIGContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "METADATA_MAX_RETENTION_BYTES_CONFIG"); _METADATA_MAX_RETENTION_BYTES_CONFIGReady = true; } return _METADATA_MAX_RETENTION_BYTES_CONFIGContent; } }
         private static Java.Lang.String _METADATA_MAX_RETENTION_BYTES_CONFIGContent = default;
         private static bool _METADATA_MAX_RETENTION_BYTES_CONFIGReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/MetadataLogConfig.html#METADATA_MAX_RETENTION_BYTES_DOC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/MetadataLogConfig.html#METADATA_MAX_RETENTION_BYTES_DOC"/>
         /// </summary>
         public static Java.Lang.String METADATA_MAX_RETENTION_BYTES_DOC { get { if (!_METADATA_MAX_RETENTION_BYTES_DOCReady) { _METADATA_MAX_RETENTION_BYTES_DOCContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "METADATA_MAX_RETENTION_BYTES_DOC"); _METADATA_MAX_RETENTION_BYTES_DOCReady = true; } return _METADATA_MAX_RETENTION_BYTES_DOCContent; } }
         private static Java.Lang.String _METADATA_MAX_RETENTION_BYTES_DOCContent = default;
         private static bool _METADATA_MAX_RETENTION_BYTES_DOCReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/MetadataLogConfig.html#METADATA_MAX_RETENTION_MILLIS_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/MetadataLogConfig.html#METADATA_MAX_RETENTION_MILLIS_CONFIG"/>
         /// </summary>
         public static Java.Lang.String METADATA_MAX_RETENTION_MILLIS_CONFIG { get { if (!_METADATA_MAX_RETENTION_MILLIS_CONFIGReady) { _METADATA_MAX_RETENTION_MILLIS_CONFIGContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "METADATA_MAX_RETENTION_MILLIS_CONFIG"); _METADATA_MAX_RETENTION_MILLIS_CONFIGReady = true; } return _METADATA_MAX_RETENTION_MILLIS_CONFIGContent; } }
         private static Java.Lang.String _METADATA_MAX_RETENTION_MILLIS_CONFIGContent = default;
         private static bool _METADATA_MAX_RETENTION_MILLIS_CONFIGReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/MetadataLogConfig.html#METADATA_MAX_RETENTION_MILLIS_DOC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/MetadataLogConfig.html#METADATA_MAX_RETENTION_MILLIS_DOC"/>
         /// </summary>
         public static Java.Lang.String METADATA_MAX_RETENTION_MILLIS_DOC { get { if (!_METADATA_MAX_RETENTION_MILLIS_DOCReady) { _METADATA_MAX_RETENTION_MILLIS_DOCContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "METADATA_MAX_RETENTION_MILLIS_DOC"); _METADATA_MAX_RETENTION_MILLIS_DOCReady = true; } return _METADATA_MAX_RETENTION_MILLIS_DOCContent; } }
         private static Java.Lang.String _METADATA_MAX_RETENTION_MILLIS_DOCContent = default;
         private static bool _METADATA_MAX_RETENTION_MILLIS_DOCReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/MetadataLogConfig.html#METADATA_SNAPSHOT_MAX_INTERVAL_MS_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/MetadataLogConfig.html#METADATA_SNAPSHOT_MAX_INTERVAL_MS_CONFIG"/>
         /// </summary>
         public static Java.Lang.String METADATA_SNAPSHOT_MAX_INTERVAL_MS_CONFIG { get { if (!_METADATA_SNAPSHOT_MAX_INTERVAL_MS_CONFIGReady) { _METADATA_SNAPSHOT_MAX_INTERVAL_MS_CONFIGContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "METADATA_SNAPSHOT_MAX_INTERVAL_MS_CONFIG"); _METADATA_SNAPSHOT_MAX_INTERVAL_MS_CONFIGReady = true; } return _METADATA_SNAPSHOT_MAX_INTERVAL_MS_CONFIGContent; } }
         private static Java.Lang.String _METADATA_SNAPSHOT_MAX_INTERVAL_MS_CONFIGContent = default;
         private static bool _METADATA_SNAPSHOT_MAX_INTERVAL_MS_CONFIGReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/MetadataLogConfig.html#METADATA_SNAPSHOT_MAX_INTERVAL_MS_DOC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/MetadataLogConfig.html#METADATA_SNAPSHOT_MAX_INTERVAL_MS_DOC"/>
         /// </summary>
         public static Java.Lang.String METADATA_SNAPSHOT_MAX_INTERVAL_MS_DOC { get { if (!_METADATA_SNAPSHOT_MAX_INTERVAL_MS_DOCReady) { _METADATA_SNAPSHOT_MAX_INTERVAL_MS_DOCContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "METADATA_SNAPSHOT_MAX_INTERVAL_MS_DOC"); _METADATA_SNAPSHOT_MAX_INTERVAL_MS_DOCReady = true; } return _METADATA_SNAPSHOT_MAX_INTERVAL_MS_DOCContent; } }
         private static Java.Lang.String _METADATA_SNAPSHOT_MAX_INTERVAL_MS_DOCContent = default;
         private static bool _METADATA_SNAPSHOT_MAX_INTERVAL_MS_DOCReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/MetadataLogConfig.html#METADATA_SNAPSHOT_MAX_NEW_RECORD_BYTES_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/MetadataLogConfig.html#METADATA_SNAPSHOT_MAX_NEW_RECORD_BYTES_CONFIG"/>
         /// </summary>
         public static Java.Lang.String METADATA_SNAPSHOT_MAX_NEW_RECORD_BYTES_CONFIG { get { if (!_METADATA_SNAPSHOT_MAX_NEW_RECORD_BYTES_CONFIGReady) { _METADATA_SNAPSHOT_MAX_NEW_RECORD_BYTES_CONFIGContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "METADATA_SNAPSHOT_MAX_NEW_RECORD_BYTES_CONFIG"); _METADATA_SNAPSHOT_MAX_NEW_RECORD_BYTES_CONFIGReady = true; } return _METADATA_SNAPSHOT_MAX_NEW_RECORD_BYTES_CONFIGContent; } }
         private static Java.Lang.String _METADATA_SNAPSHOT_MAX_NEW_RECORD_BYTES_CONFIGContent = default;
         private static bool _METADATA_SNAPSHOT_MAX_NEW_RECORD_BYTES_CONFIGReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/MetadataLogConfig.html#METADATA_SNAPSHOT_MAX_NEW_RECORD_BYTES_DOC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/MetadataLogConfig.html#METADATA_SNAPSHOT_MAX_NEW_RECORD_BYTES_DOC"/>
         /// </summary>
         public static Java.Lang.String METADATA_SNAPSHOT_MAX_NEW_RECORD_BYTES_DOC { get { if (!_METADATA_SNAPSHOT_MAX_NEW_RECORD_BYTES_DOCReady) { _METADATA_SNAPSHOT_MAX_NEW_RECORD_BYTES_DOCContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "METADATA_SNAPSHOT_MAX_NEW_RECORD_BYTES_DOC"); _METADATA_SNAPSHOT_MAX_NEW_RECORD_BYTES_DOCReady = true; } return _METADATA_SNAPSHOT_MAX_NEW_RECORD_BYTES_DOCContent; } }
         private static Java.Lang.String _METADATA_SNAPSHOT_MAX_NEW_RECORD_BYTES_DOCContent = default;
         private static bool _METADATA_SNAPSHOT_MAX_NEW_RECORD_BYTES_DOCReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/MetadataLogConfig.html#METADATA_LOG_SEGMENT_MILLIS_DEFAULT"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/MetadataLogConfig.html#METADATA_LOG_SEGMENT_MILLIS_DEFAULT"/>
         /// </summary>
         public static long METADATA_LOG_SEGMENT_MILLIS_DEFAULT { get { if (!_METADATA_LOG_SEGMENT_MILLIS_DEFAULTReady) { _METADATA_LOG_SEGMENT_MILLIS_DEFAULTContent = SGetField<long>(LocalBridgeClazz, "METADATA_LOG_SEGMENT_MILLIS_DEFAULT"); _METADATA_LOG_SEGMENT_MILLIS_DEFAULTReady = true; } return _METADATA_LOG_SEGMENT_MILLIS_DEFAULTContent; } }
         private static long _METADATA_LOG_SEGMENT_MILLIS_DEFAULTContent = default;
         private static bool _METADATA_LOG_SEGMENT_MILLIS_DEFAULTReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/MetadataLogConfig.html#METADATA_MAX_RETENTION_MILLIS_DEFAULT"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/MetadataLogConfig.html#METADATA_MAX_RETENTION_MILLIS_DEFAULT"/>
         /// </summary>
         public static long METADATA_MAX_RETENTION_MILLIS_DEFAULT { get { if (!_METADATA_MAX_RETENTION_MILLIS_DEFAULTReady) { _METADATA_MAX_RETENTION_MILLIS_DEFAULTContent = SGetField<long>(LocalBridgeClazz, "METADATA_MAX_RETENTION_MILLIS_DEFAULT"); _METADATA_MAX_RETENTION_MILLIS_DEFAULTReady = true; } return _METADATA_MAX_RETENTION_MILLIS_DEFAULTContent; } }
         private static long _METADATA_MAX_RETENTION_MILLIS_DEFAULTContent = default;
         private static bool _METADATA_MAX_RETENTION_MILLIS_DEFAULTReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/MetadataLogConfig.html#METADATA_SNAPSHOT_MAX_INTERVAL_MS_DEFAULT"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/MetadataLogConfig.html#METADATA_SNAPSHOT_MAX_INTERVAL_MS_DEFAULT"/>
         /// </summary>
         public static long METADATA_SNAPSHOT_MAX_INTERVAL_MS_DEFAULT { get { if (!_METADATA_SNAPSHOT_MAX_INTERVAL_MS_DEFAULTReady) { _METADATA_SNAPSHOT_MAX_INTERVAL_MS_DEFAULTContent = SGetField<long>(LocalBridgeClazz, "METADATA_SNAPSHOT_MAX_INTERVAL_MS_DEFAULT"); _METADATA_SNAPSHOT_MAX_INTERVAL_MS_DEFAULTReady = true; } return _METADATA_SNAPSHOT_MAX_INTERVAL_MS_DEFAULTContent; } }
         private static long _METADATA_SNAPSHOT_MAX_INTERVAL_MS_DEFAULTContent = default;
         private static bool _METADATA_SNAPSHOT_MAX_INTERVAL_MS_DEFAULTReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/MetadataLogConfig.html#CONFIG_DEF"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/MetadataLogConfig.html#CONFIG_DEF"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Config.ConfigDef CONFIG_DEF { get { if (!_CONFIG_DEFReady) { _CONFIG_DEFContent = SGetField<Org.Apache.Kafka.Common.Config.ConfigDef>(LocalBridgeClazz, "CONFIG_DEF"); _CONFIG_DEFReady = true; } return _CONFIG_DEFContent; } }
         private static Org.Apache.Kafka.Common.Config.ConfigDef _CONFIG_DEFContent = default;
@@ -287,7 +287,7 @@ namespace Org.Apache.Kafka.Raft
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/MetadataLogConfig.html#internalMaxBatchSizeInBytes()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/MetadataLogConfig.html#internalMaxBatchSizeInBytes()"/>
         /// </summary>
         /// <returns><see cref="int"/></returns>
         public int InternalMaxBatchSizeInBytes()
@@ -295,7 +295,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<int>("internalMaxBatchSizeInBytes", "()I");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/MetadataLogConfig.html#internalMaxFetchSizeInBytes()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/MetadataLogConfig.html#internalMaxFetchSizeInBytes()"/>
         /// </summary>
         /// <returns><see cref="int"/></returns>
         public int InternalMaxFetchSizeInBytes()
@@ -303,7 +303,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<int>("internalMaxFetchSizeInBytes", "()I");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/MetadataLogConfig.html#logSegmentBytes()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/MetadataLogConfig.html#logSegmentBytes()"/>
         /// </summary>
         /// <returns><see cref="int"/></returns>
         public int LogSegmentBytes()
@@ -311,7 +311,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<int>("logSegmentBytes", "()I");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/MetadataLogConfig.html#internalSegmentBytes()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/MetadataLogConfig.html#internalSegmentBytes()"/>
         /// </summary>
         /// <returns><see cref="Java.Lang.Integer"/></returns>
         public Java.Lang.Integer InternalSegmentBytes()
@@ -319,7 +319,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<Java.Lang.Integer>("internalSegmentBytes", "()Ljava/lang/Integer;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/MetadataLogConfig.html#internalDeleteDelayMillis()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/MetadataLogConfig.html#internalDeleteDelayMillis()"/>
         /// </summary>
         /// <returns><see cref="long"/></returns>
         public long InternalDeleteDelayMillis()
@@ -327,7 +327,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<long>("internalDeleteDelayMillis", "()J");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/MetadataLogConfig.html#logSegmentMillis()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/MetadataLogConfig.html#logSegmentMillis()"/>
         /// </summary>
         /// <returns><see cref="long"/></returns>
         public long LogSegmentMillis()
@@ -335,7 +335,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<long>("logSegmentMillis", "()J");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/MetadataLogConfig.html#retentionMaxBytes()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/MetadataLogConfig.html#retentionMaxBytes()"/>
         /// </summary>
         /// <returns><see cref="long"/></returns>
         public long RetentionMaxBytes()
@@ -343,7 +343,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<long>("retentionMaxBytes", "()J");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/MetadataLogConfig.html#retentionMillis()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/MetadataLogConfig.html#retentionMillis()"/>
         /// </summary>
         /// <returns><see cref="long"/></returns>
         public long RetentionMillis()

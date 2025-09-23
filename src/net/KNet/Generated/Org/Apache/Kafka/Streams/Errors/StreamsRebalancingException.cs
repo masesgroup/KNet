@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Streams.Errors
 {
     #region StreamsRebalancingException declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/errors/StreamsRebalancingException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/errors/StreamsRebalancingException.html"/>
     /// </summary>
     public partial class StreamsRebalancingException : Org.Apache.Kafka.Streams.Errors.InvalidStateStoreException
     {

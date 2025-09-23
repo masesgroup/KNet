@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Streams.Query
 {
     #region WindowKeyQuery declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/query/WindowKeyQuery.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/query/WindowKeyQuery.html"/>
     /// </summary>
     public partial class WindowKeyQuery : Org.Apache.Kafka.Streams.Query.Query
     {
@@ -68,7 +68,7 @@ namespace Org.Apache.Kafka.Streams.Query
 
     #region WindowKeyQuery<K, V> declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/query/WindowKeyQuery.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/query/WindowKeyQuery.html"/>
     /// </summary>
     /// <typeparam name="K"></typeparam>
     /// <typeparam name="V"></typeparam>
@@ -126,7 +126,7 @@ namespace Org.Apache.Kafka.Streams.Query
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/query/WindowKeyQuery.html#withKeyAndWindowStartRange(java.lang.Object,java.time.Instant,java.time.Instant)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/query/WindowKeyQuery.html#withKeyAndWindowStartRange(java.lang.Object,java.time.Instant,java.time.Instant)"/>
         /// </summary>
         /// <param name="arg0"><see cref="object"/></param>
         /// <param name="arg1"><see cref="Java.Time.Instant"/></param>
@@ -141,21 +141,21 @@ namespace Org.Apache.Kafka.Streams.Query
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/query/WindowKeyQuery.html#getKey()"/> 
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/query/WindowKeyQuery.html#getKey()"/> 
         /// </summary>
         public object Key
         {
             get { return IExecuteWithSignature("getKey", "()Ljava/lang/Object;"); }
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/query/WindowKeyQuery.html#getTimeFrom()"/> 
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/query/WindowKeyQuery.html#getTimeFrom()"/> 
         /// </summary>
         public Java.Util.Optional TimeFrom
         {
             get { return IExecuteWithSignature<Java.Util.Optional>("getTimeFrom", "()Ljava/util/Optional;"); }
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/query/WindowKeyQuery.html#getTimeTo()"/> 
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/query/WindowKeyQuery.html#getTimeTo()"/> 
         /// </summary>
         public Java.Util.Optional TimeTo
         {
@@ -193,7 +193,7 @@ namespace Org.Apache.Kafka.Streams.Query
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/query/WindowKeyQuery.html#withKeyAndWindowStartRange(java.lang.Object,java.time.Instant,java.time.Instant)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/query/WindowKeyQuery.html#withKeyAndWindowStartRange(java.lang.Object,java.time.Instant,java.time.Instant)"/>
         /// </summary>
         /// <param name="arg0"><typeparamref name="K"/></param>
         /// <param name="arg1"><see cref="Java.Time.Instant"/></param>
@@ -208,21 +208,21 @@ namespace Org.Apache.Kafka.Streams.Query
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/query/WindowKeyQuery.html#getKey()"/> 
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/query/WindowKeyQuery.html#getKey()"/> 
         /// </summary>
         public K Key
         {
             get { return IExecuteWithSignature<K>("getKey", "()Ljava/lang/Object;"); }
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/query/WindowKeyQuery.html#getTimeFrom()"/> 
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/query/WindowKeyQuery.html#getTimeFrom()"/> 
         /// </summary>
         public Java.Util.Optional<Java.Time.Instant> TimeFrom
         {
             get { return IExecuteWithSignature<Java.Util.Optional<Java.Time.Instant>>("getTimeFrom", "()Ljava/util/Optional;"); }
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/query/WindowKeyQuery.html#getTimeTo()"/> 
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/query/WindowKeyQuery.html#getTimeTo()"/> 
         /// </summary>
         public Java.Util.Optional<Java.Time.Instant> TimeTo
         {

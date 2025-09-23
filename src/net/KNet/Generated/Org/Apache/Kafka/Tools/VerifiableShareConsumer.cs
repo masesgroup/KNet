@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Tools
 {
     #region VerifiableShareConsumer declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/VerifiableShareConsumer.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.0/org/apache/kafka/tools/VerifiableShareConsumer.html"/>
     /// </summary>
     public partial class VerifiableShareConsumer : MASES.JCOBridge.C2JBridge.JVMBridgeBase<VerifiableShareConsumer>, MASES.JCOBridge.C2JBridge.IJVMBridgeMain
     {
@@ -64,7 +64,7 @@ namespace Org.Apache.Kafka.Tools
         // TODO: complete the class
         #region AcknowledgementMode declaration
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/VerifiableShareConsumer.AcknowledgementMode.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.0/org/apache/kafka/tools/VerifiableShareConsumer.AcknowledgementMode.html"/>
         /// </summary>
         public partial class AcknowledgementMode : Java.Lang.Enum<Org.Apache.Kafka.Tools.VerifiableShareConsumer.AcknowledgementMode>
         {
@@ -105,7 +105,7 @@ namespace Org.Apache.Kafka.Tools
 
         #region PartitionData declaration
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/VerifiableShareConsumer.PartitionData.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.0/org/apache/kafka/tools/VerifiableShareConsumer.PartitionData.html"/>
         /// </summary>
         public partial class PartitionData : MASES.JCOBridge.C2JBridge.JVMBridgeBase<PartitionData>
         {
@@ -146,7 +146,7 @@ namespace Org.Apache.Kafka.Tools
 
         #region RecordData declaration
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/VerifiableShareConsumer.RecordData.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.0/org/apache/kafka/tools/VerifiableShareConsumer.RecordData.html"/>
         /// </summary>
         public partial class RecordData : MASES.JCOBridge.C2JBridge.JVMBridgeBase<RecordData>
         {
@@ -187,7 +187,7 @@ namespace Org.Apache.Kafka.Tools
 
         #region RecordsConsumed declaration
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/VerifiableShareConsumer.RecordsConsumed.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.0/org/apache/kafka/tools/VerifiableShareConsumer.RecordsConsumed.html"/>
         /// </summary>
         public partial class RecordsConsumed : MASES.JCOBridge.C2JBridge.JVMBridgeBase<RecordsConsumed>
         {
@@ -228,7 +228,7 @@ namespace Org.Apache.Kafka.Tools
 
         #region RecordSetSummary declaration
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/VerifiableShareConsumer.RecordSetSummary.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.0/org/apache/kafka/tools/VerifiableShareConsumer.RecordSetSummary.html"/>
         /// </summary>
         public partial class RecordSetSummary : Org.Apache.Kafka.Tools.VerifiableShareConsumer.PartitionData
         {
@@ -276,7 +276,7 @@ namespace Org.Apache.Kafka.Tools
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/VerifiableShareConsumer.html#%3Cinit%3E(org.apache.kafka.clients.consumer.KafkaShareConsumer,org.apache.kafka.clients.admin.Admin,java.io.PrintStream,java.lang.Integer,java.lang.String,org.apache.kafka.tools.VerifiableShareConsumer.AcknowledgementMode,java.lang.String,java.lang.String,java.lang.Boolean)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.0/org/apache/kafka/tools/VerifiableShareConsumer.html#%3Cinit%3E(org.apache.kafka.clients.consumer.KafkaShareConsumer,org.apache.kafka.clients.admin.Admin,java.io.PrintStream,java.lang.Integer,java.lang.String,org.apache.kafka.tools.VerifiableShareConsumer.AcknowledgementMode,java.lang.String,java.lang.String,java.lang.Boolean)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Clients.Consumer.KafkaShareConsumer"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Clients.Admin.Admin"/></param>
@@ -312,7 +312,7 @@ namespace Org.Apache.Kafka.Tools
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/VerifiableShareConsumer.html#main(java.lang.String[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.0/org/apache/kafka/tools/VerifiableShareConsumer.html#main(java.lang.String[])"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         public static void Main(Java.Lang.String[] arg0)
@@ -324,14 +324,14 @@ namespace Org.Apache.Kafka.Tools
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/VerifiableShareConsumer.html#close()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.0/org/apache/kafka/tools/VerifiableShareConsumer.html#close()"/>
         /// </summary>
         public void Close()
         {
             IExecuteWithSignature("close", "()V");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/VerifiableShareConsumer.html#onComplete(java.util.Map,java.lang.Exception)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.0/org/apache/kafka/tools/VerifiableShareConsumer.html#onComplete(java.util.Map,java.lang.Exception)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <param name="arg1"><see cref="Java.Lang.Exception"/></param>
@@ -340,7 +340,7 @@ namespace Org.Apache.Kafka.Tools
             IExecuteWithSignature("onComplete", "(Ljava/util/Map;Ljava/lang/Exception;)V", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/VerifiableShareConsumer.html#run()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.0/org/apache/kafka/tools/VerifiableShareConsumer.html#run()"/>
         /// </summary>
         public void Run()
         {
@@ -363,19 +363,19 @@ namespace Org.Apache.Kafka.Tools
 
             #region Fields
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/VerifiableShareConsumer.AcknowledgementMode.html#ASYNC"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.0/org/apache/kafka/tools/VerifiableShareConsumer.AcknowledgementMode.html#ASYNC"/>
             /// </summary>
             public static Org.Apache.Kafka.Tools.VerifiableShareConsumer.AcknowledgementMode ASYNC { get { if (!_ASYNCReady) { _ASYNCContent = SGetField<Org.Apache.Kafka.Tools.VerifiableShareConsumer.AcknowledgementMode>(LocalBridgeClazz, "ASYNC"); _ASYNCReady = true; } return _ASYNCContent; } }
             private static Org.Apache.Kafka.Tools.VerifiableShareConsumer.AcknowledgementMode _ASYNCContent = default;
             private static bool _ASYNCReady = false; // this is used because in case of generics 
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/VerifiableShareConsumer.AcknowledgementMode.html#AUTO"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.0/org/apache/kafka/tools/VerifiableShareConsumer.AcknowledgementMode.html#AUTO"/>
             /// </summary>
             public static Org.Apache.Kafka.Tools.VerifiableShareConsumer.AcknowledgementMode AUTO { get { if (!_AUTOReady) { _AUTOContent = SGetField<Org.Apache.Kafka.Tools.VerifiableShareConsumer.AcknowledgementMode>(LocalBridgeClazz, "AUTO"); _AUTOReady = true; } return _AUTOContent; } }
             private static Org.Apache.Kafka.Tools.VerifiableShareConsumer.AcknowledgementMode _AUTOContent = default;
             private static bool _AUTOReady = false; // this is used because in case of generics 
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/VerifiableShareConsumer.AcknowledgementMode.html#SYNC"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.0/org/apache/kafka/tools/VerifiableShareConsumer.AcknowledgementMode.html#SYNC"/>
             /// </summary>
             public static Org.Apache.Kafka.Tools.VerifiableShareConsumer.AcknowledgementMode SYNC { get { if (!_SYNCReady) { _SYNCContent = SGetField<Org.Apache.Kafka.Tools.VerifiableShareConsumer.AcknowledgementMode>(LocalBridgeClazz, "SYNC"); _SYNCReady = true; } return _SYNCContent; } }
             private static Org.Apache.Kafka.Tools.VerifiableShareConsumer.AcknowledgementMode _SYNCContent = default;
@@ -385,7 +385,7 @@ namespace Org.Apache.Kafka.Tools
 
             #region Static methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/VerifiableShareConsumer.AcknowledgementMode.html#valueOf(java.lang.String)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.0/org/apache/kafka/tools/VerifiableShareConsumer.AcknowledgementMode.html#valueOf(java.lang.String)"/>
             /// </summary>
             /// <param name="arg0"><see cref="Java.Lang.String"/></param>
             /// <returns><see cref="Org.Apache.Kafka.Tools.VerifiableShareConsumer.AcknowledgementMode"/></returns>
@@ -394,7 +394,7 @@ namespace Org.Apache.Kafka.Tools
                 return SExecuteWithSignature<Org.Apache.Kafka.Tools.VerifiableShareConsumer.AcknowledgementMode>(LocalBridgeClazz, "valueOf", "(Ljava/lang/String;)Lorg/apache/kafka/tools/VerifiableShareConsumer$AcknowledgementMode;", arg0);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/VerifiableShareConsumer.AcknowledgementMode.html#values()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.0/org/apache/kafka/tools/VerifiableShareConsumer.AcknowledgementMode.html#values()"/>
             /// </summary>
             /// <returns><see cref="Org.Apache.Kafka.Tools.VerifiableShareConsumer.AcknowledgementMode"/></returns>
             public static Org.Apache.Kafka.Tools.VerifiableShareConsumer.AcknowledgementMode[] Values()
@@ -421,7 +421,7 @@ namespace Org.Apache.Kafka.Tools
         {
             #region Constructors
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/VerifiableShareConsumer.PartitionData.html#%3Cinit%3E(java.lang.String,int)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.0/org/apache/kafka/tools/VerifiableShareConsumer.PartitionData.html#%3Cinit%3E(java.lang.String,int)"/>
             /// </summary>
             /// <param name="arg0"><see cref="Java.Lang.String"/></param>
             /// <param name="arg1"><see cref="int"/></param>
@@ -446,7 +446,7 @@ namespace Org.Apache.Kafka.Tools
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/VerifiableShareConsumer.PartitionData.html#partition()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.0/org/apache/kafka/tools/VerifiableShareConsumer.PartitionData.html#partition()"/>
             /// </summary>
             /// <returns><see cref="int"/></returns>
             public int Partition()
@@ -454,7 +454,7 @@ namespace Org.Apache.Kafka.Tools
                 return IExecuteWithSignature<int>("partition", "()I");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/VerifiableShareConsumer.PartitionData.html#topic()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.0/org/apache/kafka/tools/VerifiableShareConsumer.PartitionData.html#topic()"/>
             /// </summary>
             /// <returns><see cref="Java.Lang.String"/></returns>
             public Java.Lang.String Topic()
@@ -477,7 +477,7 @@ namespace Org.Apache.Kafka.Tools
         {
             #region Constructors
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/VerifiableShareConsumer.RecordData.html#%3Cinit%3E(org.apache.kafka.clients.consumer.ConsumerRecord)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.0/org/apache/kafka/tools/VerifiableShareConsumer.RecordData.html#%3Cinit%3E(org.apache.kafka.clients.consumer.ConsumerRecord)"/>
             /// </summary>
             /// <param name="arg0"><see cref="Org.Apache.Kafka.Clients.Consumer.ConsumerRecord"/></param>
             public RecordData(Org.Apache.Kafka.Clients.Consumer.ConsumerRecord<Java.Lang.String, Java.Lang.String> arg0)
@@ -501,7 +501,7 @@ namespace Org.Apache.Kafka.Tools
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/VerifiableShareConsumer.RecordData.html#partition()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.0/org/apache/kafka/tools/VerifiableShareConsumer.RecordData.html#partition()"/>
             /// </summary>
             /// <returns><see cref="int"/></returns>
             public int Partition()
@@ -509,7 +509,7 @@ namespace Org.Apache.Kafka.Tools
                 return IExecuteWithSignature<int>("partition", "()I");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/VerifiableShareConsumer.RecordData.html#key()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.0/org/apache/kafka/tools/VerifiableShareConsumer.RecordData.html#key()"/>
             /// </summary>
             /// <returns><see cref="Java.Lang.String"/></returns>
             public Java.Lang.String Key()
@@ -517,7 +517,7 @@ namespace Org.Apache.Kafka.Tools
                 return IExecuteWithSignature<Java.Lang.String>("key", "()Ljava/lang/String;");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/VerifiableShareConsumer.RecordData.html#topic()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.0/org/apache/kafka/tools/VerifiableShareConsumer.RecordData.html#topic()"/>
             /// </summary>
             /// <returns><see cref="Java.Lang.String"/></returns>
             public Java.Lang.String Topic()
@@ -525,7 +525,7 @@ namespace Org.Apache.Kafka.Tools
                 return IExecuteWithSignature<Java.Lang.String>("topic", "()Ljava/lang/String;");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/VerifiableShareConsumer.RecordData.html#value()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.0/org/apache/kafka/tools/VerifiableShareConsumer.RecordData.html#value()"/>
             /// </summary>
             /// <returns><see cref="Java.Lang.String"/></returns>
             public Java.Lang.String Value()
@@ -533,7 +533,7 @@ namespace Org.Apache.Kafka.Tools
                 return IExecuteWithSignature<Java.Lang.String>("value", "()Ljava/lang/String;");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/VerifiableShareConsumer.RecordData.html#offset()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.0/org/apache/kafka/tools/VerifiableShareConsumer.RecordData.html#offset()"/>
             /// </summary>
             /// <returns><see cref="long"/></returns>
             public long Offset()
@@ -556,7 +556,7 @@ namespace Org.Apache.Kafka.Tools
         {
             #region Constructors
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/VerifiableShareConsumer.RecordsConsumed.html#%3Cinit%3E(long,java.util.List)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.0/org/apache/kafka/tools/VerifiableShareConsumer.RecordsConsumed.html#%3Cinit%3E(long,java.util.List)"/>
             /// </summary>
             /// <param name="arg0"><see cref="long"/></param>
             /// <param name="arg1"><see cref="Java.Util.List"/></param>
@@ -581,7 +581,7 @@ namespace Org.Apache.Kafka.Tools
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/VerifiableShareConsumer.RecordsConsumed.html#partitions()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.0/org/apache/kafka/tools/VerifiableShareConsumer.RecordsConsumed.html#partitions()"/>
             /// </summary>
             /// <returns><see cref="Java.Util.List"/></returns>
             public Java.Util.List<Org.Apache.Kafka.Tools.VerifiableShareConsumer.RecordSetSummary> Partitions()
@@ -589,7 +589,7 @@ namespace Org.Apache.Kafka.Tools
                 return IExecuteWithSignature<Java.Util.List<Org.Apache.Kafka.Tools.VerifiableShareConsumer.RecordSetSummary>>("partitions", "()Ljava/util/List;");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/VerifiableShareConsumer.RecordsConsumed.html#count()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.0/org/apache/kafka/tools/VerifiableShareConsumer.RecordsConsumed.html#count()"/>
             /// </summary>
             /// <returns><see cref="long"/></returns>
             public long Count()
@@ -612,7 +612,7 @@ namespace Org.Apache.Kafka.Tools
         {
             #region Constructors
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/VerifiableShareConsumer.RecordSetSummary.html#%3Cinit%3E(java.lang.String,int,java.util.Set)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.0/org/apache/kafka/tools/VerifiableShareConsumer.RecordSetSummary.html#%3Cinit%3E(java.lang.String,int,java.util.Set)"/>
             /// </summary>
             /// <param name="arg0"><see cref="Java.Lang.String"/></param>
             /// <param name="arg1"><see cref="int"/></param>
@@ -638,7 +638,7 @@ namespace Org.Apache.Kafka.Tools
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/VerifiableShareConsumer.RecordSetSummary.html#offsets()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.0/org/apache/kafka/tools/VerifiableShareConsumer.RecordSetSummary.html#offsets()"/>
             /// </summary>
             /// <returns><see cref="Java.Util.Set"/></returns>
             public Java.Util.Set<Java.Lang.Long> Offsets()
@@ -646,7 +646,7 @@ namespace Org.Apache.Kafka.Tools
                 return IExecuteWithSignature<Java.Util.Set<Java.Lang.Long>>("offsets", "()Ljava/util/Set;");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/VerifiableShareConsumer.RecordSetSummary.html#count()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.0/org/apache/kafka/tools/VerifiableShareConsumer.RecordSetSummary.html#count()"/>
             /// </summary>
             /// <returns><see cref="long"/></returns>
             public long Count()

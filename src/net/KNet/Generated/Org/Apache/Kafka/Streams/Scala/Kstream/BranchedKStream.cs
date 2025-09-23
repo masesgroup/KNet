@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Streams.Scala.Kstream
 {
     #region BranchedKStream declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/kstream/BranchedKStream.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.1.0/org/apache/kafka/streams/scala/kstream/BranchedKStream.html"/>
     /// </summary>
     public partial class BranchedKStream : MASES.JCOBridge.C2JBridge.JVMBridgeBase<BranchedKStream>
     {
@@ -68,7 +68,7 @@ namespace Org.Apache.Kafka.Streams.Scala.Kstream
 
     #region BranchedKStream<K, V> declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/kstream/BranchedKStream.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.1.0/org/apache/kafka/streams/scala/kstream/BranchedKStream.html"/>
     /// </summary>
     /// <typeparam name="K"></typeparam>
     /// <typeparam name="V"></typeparam>
@@ -114,7 +114,7 @@ namespace Org.Apache.Kafka.Streams.Scala.Kstream
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/kstream/BranchedKStream.html#%3Cinit%3E(org.apache.kafka.streams.kstream.BranchedKStream)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.1.0/org/apache/kafka/streams/scala/kstream/BranchedKStream.html#%3Cinit%3E(org.apache.kafka.streams.kstream.BranchedKStream)"/>
         /// </summary>
         /// <param name="inner"><see cref="Org.Apache.Kafka.Streams.Kstream.BranchedKStream"/></param>
         public BranchedKStream(Org.Apache.Kafka.Streams.Kstream.BranchedKStream inner)
@@ -138,7 +138,7 @@ namespace Org.Apache.Kafka.Streams.Scala.Kstream
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/kstream/BranchedKStream.html#inner()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.1.0/org/apache/kafka/streams/scala/kstream/BranchedKStream.html#inner()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.BranchedKStream"/></returns>
         public Org.Apache.Kafka.Streams.Kstream.BranchedKStream Inner()
@@ -161,7 +161,7 @@ namespace Org.Apache.Kafka.Streams.Scala.Kstream
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/kstream/BranchedKStream.html#%3Cinit%3E(org.apache.kafka.streams.kstream.BranchedKStream)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.1.0/org/apache/kafka/streams/scala/kstream/BranchedKStream.html#%3Cinit%3E(org.apache.kafka.streams.kstream.BranchedKStream)"/>
         /// </summary>
         /// <param name="inner"><see cref="Org.Apache.Kafka.Streams.Kstream.BranchedKStream"/></param>
         public BranchedKStream(Org.Apache.Kafka.Streams.Kstream.BranchedKStream<K, V> inner)
@@ -189,7 +189,7 @@ namespace Org.Apache.Kafka.Streams.Scala.Kstream
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/kstream/BranchedKStream.html#inner()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.1.0/org/apache/kafka/streams/scala/kstream/BranchedKStream.html#inner()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.BranchedKStream"/></returns>
         public Org.Apache.Kafka.Streams.Kstream.BranchedKStream<K, V> Inner()

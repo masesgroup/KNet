@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Streams.Scala.Serialization
 {
     #region Serdes declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/serialization/Serdes.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.1.0/org/apache/kafka/streams/scala/serialization/Serdes.html"/>
     /// </summary>
     public partial class Serdes : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Serdes>
     {
@@ -83,7 +83,7 @@ namespace Org.Apache.Kafka.Streams.Scala.Serialization
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/serialization/Serdes.html#sessionWindowedSerde(org.apache.kafka.common.serialization.Serde)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.1.0/org/apache/kafka/streams/scala/serialization/Serdes.html#sessionWindowedSerde(org.apache.kafka.common.serialization.Serde)"/>
         /// </summary>
         /// <param name="tSerde"><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></param>
         /// <typeparam name="T"></typeparam>
@@ -93,7 +93,7 @@ namespace Org.Apache.Kafka.Streams.Scala.Serialization
             return SExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.WindowedSerdes.SessionWindowedSerde<T>>(LocalBridgeClazz, "sessionWindowedSerde", "(Lorg/apache/kafka/common/serialization/Serde;)Lorg/apache/kafka/streams/kstream/WindowedSerdes$SessionWindowedSerde;", tSerde);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/serialization/Serdes.html#byteArraySerde()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.1.0/org/apache/kafka/streams/scala/serialization/Serdes.html#byteArraySerde()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></returns>
         public static Org.Apache.Kafka.Common.Serialization.Serde<byte[]> ByteArraySerde()
@@ -101,7 +101,7 @@ namespace Org.Apache.Kafka.Streams.Scala.Serialization
             return SExecuteWithSignature<Org.Apache.Kafka.Common.Serialization.Serde<byte[]>>(LocalBridgeClazz, "byteArraySerde", "()Lorg/apache/kafka/common/serialization/Serde;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/serialization/Serdes.html#byteArraySerde()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.1.0/org/apache/kafka/streams/scala/serialization/Serdes.html#byteArraySerde()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></returns>
         public static Org.Apache.Kafka.Common.Serialization.Serde<byte[]> ByteArraySerdeDirect()
@@ -109,7 +109,7 @@ namespace Org.Apache.Kafka.Streams.Scala.Serialization
             return SExecuteWithSignature<Org.Apache.Kafka.Common.Serialization.SerdeDirect<byte[]>, Org.Apache.Kafka.Common.Serialization.Serde<byte[]>>(LocalBridgeClazz, "byteArraySerde", "()Lorg/apache/kafka/common/serialization/Serde;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/serialization/Serdes.html#javaDoubleSerde()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.1.0/org/apache/kafka/streams/scala/serialization/Serdes.html#javaDoubleSerde()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></returns>
         public static Org.Apache.Kafka.Common.Serialization.Serde<Java.Lang.Double> JavaDoubleSerde()
@@ -117,7 +117,7 @@ namespace Org.Apache.Kafka.Streams.Scala.Serialization
             return SExecuteWithSignature<Org.Apache.Kafka.Common.Serialization.Serde<Java.Lang.Double>>(LocalBridgeClazz, "javaDoubleSerde", "()Lorg/apache/kafka/common/serialization/Serde;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/serialization/Serdes.html#javaDoubleSerde()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.1.0/org/apache/kafka/streams/scala/serialization/Serdes.html#javaDoubleSerde()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></returns>
         public static Org.Apache.Kafka.Common.Serialization.Serde<Java.Lang.Double> JavaDoubleSerdeDirect()
@@ -125,7 +125,7 @@ namespace Org.Apache.Kafka.Streams.Scala.Serialization
             return SExecuteWithSignature<Org.Apache.Kafka.Common.Serialization.SerdeDirect<Java.Lang.Double>, Org.Apache.Kafka.Common.Serialization.Serde<Java.Lang.Double>>(LocalBridgeClazz, "javaDoubleSerde", "()Lorg/apache/kafka/common/serialization/Serde;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/serialization/Serdes.html#javaFloatSerde()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.1.0/org/apache/kafka/streams/scala/serialization/Serdes.html#javaFloatSerde()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></returns>
         public static Org.Apache.Kafka.Common.Serialization.Serde<Java.Lang.Float> JavaFloatSerde()
@@ -133,7 +133,7 @@ namespace Org.Apache.Kafka.Streams.Scala.Serialization
             return SExecuteWithSignature<Org.Apache.Kafka.Common.Serialization.Serde<Java.Lang.Float>>(LocalBridgeClazz, "javaFloatSerde", "()Lorg/apache/kafka/common/serialization/Serde;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/serialization/Serdes.html#javaFloatSerde()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.1.0/org/apache/kafka/streams/scala/serialization/Serdes.html#javaFloatSerde()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></returns>
         public static Org.Apache.Kafka.Common.Serialization.Serde<Java.Lang.Float> JavaFloatSerdeDirect()
@@ -141,7 +141,7 @@ namespace Org.Apache.Kafka.Streams.Scala.Serialization
             return SExecuteWithSignature<Org.Apache.Kafka.Common.Serialization.SerdeDirect<Java.Lang.Float>, Org.Apache.Kafka.Common.Serialization.Serde<Java.Lang.Float>>(LocalBridgeClazz, "javaFloatSerde", "()Lorg/apache/kafka/common/serialization/Serde;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/serialization/Serdes.html#javaIntegerSerde()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.1.0/org/apache/kafka/streams/scala/serialization/Serdes.html#javaIntegerSerde()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></returns>
         public static Org.Apache.Kafka.Common.Serialization.Serde<Java.Lang.Integer> JavaIntegerSerde()
@@ -149,7 +149,7 @@ namespace Org.Apache.Kafka.Streams.Scala.Serialization
             return SExecuteWithSignature<Org.Apache.Kafka.Common.Serialization.Serde<Java.Lang.Integer>>(LocalBridgeClazz, "javaIntegerSerde", "()Lorg/apache/kafka/common/serialization/Serde;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/serialization/Serdes.html#javaIntegerSerde()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.1.0/org/apache/kafka/streams/scala/serialization/Serdes.html#javaIntegerSerde()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></returns>
         public static Org.Apache.Kafka.Common.Serialization.Serde<Java.Lang.Integer> JavaIntegerSerdeDirect()
@@ -157,7 +157,7 @@ namespace Org.Apache.Kafka.Streams.Scala.Serialization
             return SExecuteWithSignature<Org.Apache.Kafka.Common.Serialization.SerdeDirect<Java.Lang.Integer>, Org.Apache.Kafka.Common.Serialization.Serde<Java.Lang.Integer>>(LocalBridgeClazz, "javaIntegerSerde", "()Lorg/apache/kafka/common/serialization/Serde;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/serialization/Serdes.html#javaLongSerde()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.1.0/org/apache/kafka/streams/scala/serialization/Serdes.html#javaLongSerde()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></returns>
         public static Org.Apache.Kafka.Common.Serialization.Serde<Java.Lang.Long> JavaLongSerde()
@@ -165,7 +165,7 @@ namespace Org.Apache.Kafka.Streams.Scala.Serialization
             return SExecuteWithSignature<Org.Apache.Kafka.Common.Serialization.Serde<Java.Lang.Long>>(LocalBridgeClazz, "javaLongSerde", "()Lorg/apache/kafka/common/serialization/Serde;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/serialization/Serdes.html#javaLongSerde()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.1.0/org/apache/kafka/streams/scala/serialization/Serdes.html#javaLongSerde()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></returns>
         public static Org.Apache.Kafka.Common.Serialization.Serde<Java.Lang.Long> JavaLongSerdeDirect()
@@ -173,7 +173,7 @@ namespace Org.Apache.Kafka.Streams.Scala.Serialization
             return SExecuteWithSignature<Org.Apache.Kafka.Common.Serialization.SerdeDirect<Java.Lang.Long>, Org.Apache.Kafka.Common.Serialization.Serde<Java.Lang.Long>>(LocalBridgeClazz, "javaLongSerde", "()Lorg/apache/kafka/common/serialization/Serde;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/serialization/Serdes.html#doubleSerde()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.1.0/org/apache/kafka/streams/scala/serialization/Serdes.html#doubleSerde()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></returns>
         public static Org.Apache.Kafka.Common.Serialization.Serde<object> DoubleSerde()
@@ -181,7 +181,7 @@ namespace Org.Apache.Kafka.Streams.Scala.Serialization
             return SExecuteWithSignature<Org.Apache.Kafka.Common.Serialization.Serde<object>>(LocalBridgeClazz, "doubleSerde", "()Lorg/apache/kafka/common/serialization/Serde;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/serialization/Serdes.html#doubleSerde()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.1.0/org/apache/kafka/streams/scala/serialization/Serdes.html#doubleSerde()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></returns>
         public static Org.Apache.Kafka.Common.Serialization.Serde<object> DoubleSerdeDirect()
@@ -189,7 +189,7 @@ namespace Org.Apache.Kafka.Streams.Scala.Serialization
             return SExecuteWithSignature<Org.Apache.Kafka.Common.Serialization.SerdeDirect<object>, Org.Apache.Kafka.Common.Serialization.Serde<object>>(LocalBridgeClazz, "doubleSerde", "()Lorg/apache/kafka/common/serialization/Serde;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/serialization/Serdes.html#floatSerde()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.1.0/org/apache/kafka/streams/scala/serialization/Serdes.html#floatSerde()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></returns>
         public static Org.Apache.Kafka.Common.Serialization.Serde<object> FloatSerde()
@@ -197,7 +197,7 @@ namespace Org.Apache.Kafka.Streams.Scala.Serialization
             return SExecuteWithSignature<Org.Apache.Kafka.Common.Serialization.Serde<object>>(LocalBridgeClazz, "floatSerde", "()Lorg/apache/kafka/common/serialization/Serde;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/serialization/Serdes.html#floatSerde()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.1.0/org/apache/kafka/streams/scala/serialization/Serdes.html#floatSerde()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></returns>
         public static Org.Apache.Kafka.Common.Serialization.Serde<object> FloatSerdeDirect()
@@ -205,7 +205,7 @@ namespace Org.Apache.Kafka.Streams.Scala.Serialization
             return SExecuteWithSignature<Org.Apache.Kafka.Common.Serialization.SerdeDirect<object>, Org.Apache.Kafka.Common.Serialization.Serde<object>>(LocalBridgeClazz, "floatSerde", "()Lorg/apache/kafka/common/serialization/Serde;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/serialization/Serdes.html#intSerde()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.1.0/org/apache/kafka/streams/scala/serialization/Serdes.html#intSerde()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></returns>
         public static Org.Apache.Kafka.Common.Serialization.Serde<object> IntSerde()
@@ -213,7 +213,7 @@ namespace Org.Apache.Kafka.Streams.Scala.Serialization
             return SExecuteWithSignature<Org.Apache.Kafka.Common.Serialization.Serde<object>>(LocalBridgeClazz, "intSerde", "()Lorg/apache/kafka/common/serialization/Serde;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/serialization/Serdes.html#intSerde()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.1.0/org/apache/kafka/streams/scala/serialization/Serdes.html#intSerde()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></returns>
         public static Org.Apache.Kafka.Common.Serialization.Serde<object> IntSerdeDirect()
@@ -221,7 +221,7 @@ namespace Org.Apache.Kafka.Streams.Scala.Serialization
             return SExecuteWithSignature<Org.Apache.Kafka.Common.Serialization.SerdeDirect<object>, Org.Apache.Kafka.Common.Serialization.Serde<object>>(LocalBridgeClazz, "intSerde", "()Lorg/apache/kafka/common/serialization/Serde;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/serialization/Serdes.html#longSerde()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.1.0/org/apache/kafka/streams/scala/serialization/Serdes.html#longSerde()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></returns>
         public static Org.Apache.Kafka.Common.Serialization.Serde<object> LongSerde()
@@ -229,7 +229,7 @@ namespace Org.Apache.Kafka.Streams.Scala.Serialization
             return SExecuteWithSignature<Org.Apache.Kafka.Common.Serialization.Serde<object>>(LocalBridgeClazz, "longSerde", "()Lorg/apache/kafka/common/serialization/Serde;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/serialization/Serdes.html#longSerde()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.1.0/org/apache/kafka/streams/scala/serialization/Serdes.html#longSerde()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></returns>
         public static Org.Apache.Kafka.Common.Serialization.Serde<object> LongSerdeDirect()
@@ -237,7 +237,7 @@ namespace Org.Apache.Kafka.Streams.Scala.Serialization
             return SExecuteWithSignature<Org.Apache.Kafka.Common.Serialization.SerdeDirect<object>, Org.Apache.Kafka.Common.Serialization.Serde<object>>(LocalBridgeClazz, "longSerde", "()Lorg/apache/kafka/common/serialization/Serde;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/serialization/Serdes.html#shortSerde()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.1.0/org/apache/kafka/streams/scala/serialization/Serdes.html#shortSerde()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></returns>
         public static Org.Apache.Kafka.Common.Serialization.Serde<object> ShortSerde()
@@ -245,7 +245,7 @@ namespace Org.Apache.Kafka.Streams.Scala.Serialization
             return SExecuteWithSignature<Org.Apache.Kafka.Common.Serialization.Serde<object>>(LocalBridgeClazz, "shortSerde", "()Lorg/apache/kafka/common/serialization/Serde;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/serialization/Serdes.html#shortSerde()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.1.0/org/apache/kafka/streams/scala/serialization/Serdes.html#shortSerde()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></returns>
         public static Org.Apache.Kafka.Common.Serialization.Serde<object> ShortSerdeDirect()
@@ -253,7 +253,7 @@ namespace Org.Apache.Kafka.Streams.Scala.Serialization
             return SExecuteWithSignature<Org.Apache.Kafka.Common.Serialization.SerdeDirect<object>, Org.Apache.Kafka.Common.Serialization.Serde<object>>(LocalBridgeClazz, "shortSerde", "()Lorg/apache/kafka/common/serialization/Serde;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/serialization/Serdes.html#javaShortSerde()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.1.0/org/apache/kafka/streams/scala/serialization/Serdes.html#javaShortSerde()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></returns>
         public static Org.Apache.Kafka.Common.Serialization.Serde<Java.Lang.Short> JavaShortSerde()
@@ -261,7 +261,7 @@ namespace Org.Apache.Kafka.Streams.Scala.Serialization
             return SExecuteWithSignature<Org.Apache.Kafka.Common.Serialization.Serde<Java.Lang.Short>>(LocalBridgeClazz, "javaShortSerde", "()Lorg/apache/kafka/common/serialization/Serde;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/serialization/Serdes.html#javaShortSerde()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.1.0/org/apache/kafka/streams/scala/serialization/Serdes.html#javaShortSerde()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></returns>
         public static Org.Apache.Kafka.Common.Serialization.Serde<Java.Lang.Short> JavaShortSerdeDirect()
@@ -269,7 +269,7 @@ namespace Org.Apache.Kafka.Streams.Scala.Serialization
             return SExecuteWithSignature<Org.Apache.Kafka.Common.Serialization.SerdeDirect<Java.Lang.Short>, Org.Apache.Kafka.Common.Serialization.Serde<Java.Lang.Short>>(LocalBridgeClazz, "javaShortSerde", "()Lorg/apache/kafka/common/serialization/Serde;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/serialization/Serdes.html#stringSerde()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.1.0/org/apache/kafka/streams/scala/serialization/Serdes.html#stringSerde()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></returns>
         public static Org.Apache.Kafka.Common.Serialization.Serde<Java.Lang.String> StringSerde()
@@ -277,7 +277,7 @@ namespace Org.Apache.Kafka.Streams.Scala.Serialization
             return SExecuteWithSignature<Org.Apache.Kafka.Common.Serialization.Serde<Java.Lang.String>>(LocalBridgeClazz, "stringSerde", "()Lorg/apache/kafka/common/serialization/Serde;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/serialization/Serdes.html#stringSerde()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.1.0/org/apache/kafka/streams/scala/serialization/Serdes.html#stringSerde()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></returns>
         public static Org.Apache.Kafka.Common.Serialization.Serde<Java.Lang.String> StringSerdeDirect()
@@ -285,7 +285,7 @@ namespace Org.Apache.Kafka.Streams.Scala.Serialization
             return SExecuteWithSignature<Org.Apache.Kafka.Common.Serialization.SerdeDirect<Java.Lang.String>, Org.Apache.Kafka.Common.Serialization.Serde<Java.Lang.String>>(LocalBridgeClazz, "stringSerde", "()Lorg/apache/kafka/common/serialization/Serde;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/serialization/Serdes.html#byteBufferSerde()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.1.0/org/apache/kafka/streams/scala/serialization/Serdes.html#byteBufferSerde()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></returns>
         public static Org.Apache.Kafka.Common.Serialization.Serde<Java.Nio.ByteBuffer> ByteBufferSerde()
@@ -293,7 +293,7 @@ namespace Org.Apache.Kafka.Streams.Scala.Serialization
             return SExecuteWithSignature<Org.Apache.Kafka.Common.Serialization.Serde<Java.Nio.ByteBuffer>>(LocalBridgeClazz, "byteBufferSerde", "()Lorg/apache/kafka/common/serialization/Serde;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/serialization/Serdes.html#byteBufferSerde()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.1.0/org/apache/kafka/streams/scala/serialization/Serdes.html#byteBufferSerde()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></returns>
         public static Org.Apache.Kafka.Common.Serialization.Serde<Java.Nio.ByteBuffer> ByteBufferSerdeDirect()
@@ -301,7 +301,7 @@ namespace Org.Apache.Kafka.Streams.Scala.Serialization
             return SExecuteWithSignature<Org.Apache.Kafka.Common.Serialization.SerdeDirect<Java.Nio.ByteBuffer>, Org.Apache.Kafka.Common.Serialization.Serde<Java.Nio.ByteBuffer>>(LocalBridgeClazz, "byteBufferSerde", "()Lorg/apache/kafka/common/serialization/Serde;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/serialization/Serdes.html#uuidSerde()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.1.0/org/apache/kafka/streams/scala/serialization/Serdes.html#uuidSerde()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></returns>
         public static Org.Apache.Kafka.Common.Serialization.Serde<Java.Util.UUID> UuidSerde()
@@ -309,7 +309,7 @@ namespace Org.Apache.Kafka.Streams.Scala.Serialization
             return SExecuteWithSignature<Org.Apache.Kafka.Common.Serialization.Serde<Java.Util.UUID>>(LocalBridgeClazz, "uuidSerde", "()Lorg/apache/kafka/common/serialization/Serde;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/serialization/Serdes.html#uuidSerde()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.1.0/org/apache/kafka/streams/scala/serialization/Serdes.html#uuidSerde()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></returns>
         public static Org.Apache.Kafka.Common.Serialization.Serde<Java.Util.UUID> UuidSerdeDirect()
@@ -317,7 +317,7 @@ namespace Org.Apache.Kafka.Streams.Scala.Serialization
             return SExecuteWithSignature<Org.Apache.Kafka.Common.Serialization.SerdeDirect<Java.Util.UUID>, Org.Apache.Kafka.Common.Serialization.Serde<Java.Util.UUID>>(LocalBridgeClazz, "uuidSerde", "()Lorg/apache/kafka/common/serialization/Serde;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/serialization/Serdes.html#bytesSerde()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.1.0/org/apache/kafka/streams/scala/serialization/Serdes.html#bytesSerde()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></returns>
         public static Org.Apache.Kafka.Common.Serialization.Serde<Org.Apache.Kafka.Common.Utils.Bytes> BytesSerde()
@@ -325,7 +325,7 @@ namespace Org.Apache.Kafka.Streams.Scala.Serialization
             return SExecuteWithSignature<Org.Apache.Kafka.Common.Serialization.Serde<Org.Apache.Kafka.Common.Utils.Bytes>>(LocalBridgeClazz, "bytesSerde", "()Lorg/apache/kafka/common/serialization/Serde;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/serialization/Serdes.html#bytesSerde()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.1.0/org/apache/kafka/streams/scala/serialization/Serdes.html#bytesSerde()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></returns>
         public static Org.Apache.Kafka.Common.Serialization.Serde<Org.Apache.Kafka.Common.Utils.Bytes> BytesSerdeDirect()

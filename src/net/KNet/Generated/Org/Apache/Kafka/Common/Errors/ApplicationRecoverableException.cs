@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common.Errors
 {
     #region ApplicationRecoverableException declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/errors/ApplicationRecoverableException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/errors/ApplicationRecoverableException.html"/>
     /// </summary>
     public partial class ApplicationRecoverableException : Org.Apache.Kafka.Common.Errors.ApiException
     {

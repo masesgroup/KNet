@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Raft
 {
     #region DynamicVoters declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/DynamicVoters.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/DynamicVoters.html"/>
     /// </summary>
     public partial class DynamicVoters : MASES.JCOBridge.C2JBridge.JVMBridgeBase<DynamicVoters>
     {
@@ -71,7 +71,7 @@ namespace Org.Apache.Kafka.Raft
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/DynamicVoters.html#%3Cinit%3E(java.util.Collection)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/DynamicVoters.html#%3Cinit%3E(java.util.Collection)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Collection"/></param>
         public DynamicVoters(Java.Util.Collection<Org.Apache.Kafka.Raft.DynamicVoter> arg0)
@@ -91,7 +91,7 @@ namespace Org.Apache.Kafka.Raft
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/DynamicVoters.html#parse(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/DynamicVoters.html#parse(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Raft.DynamicVoters"/></returns>
@@ -104,7 +104,7 @@ namespace Org.Apache.Kafka.Raft
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/DynamicVoters.html#voters()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/DynamicVoters.html#voters()"/>
         /// </summary>
         /// <returns><see cref="Java.Util.NavigableMap"/></returns>
         public Java.Util.NavigableMap<Java.Lang.Integer, Org.Apache.Kafka.Raft.DynamicVoter> Voters()
@@ -112,7 +112,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<Java.Util.NavigableMap<Java.Lang.Integer, Org.Apache.Kafka.Raft.DynamicVoter>>("voters", "()Ljava/util/NavigableMap;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/DynamicVoters.html#toVoterSet(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/DynamicVoters.html#toVoterSet(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Raft.VoterSet"/></returns>

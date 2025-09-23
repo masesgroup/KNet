@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common
 {
     #region Endpoint declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/Endpoint.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/Endpoint.html"/>
     /// </summary>
     public partial class Endpoint : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Endpoint>
     {
@@ -71,7 +71,7 @@ namespace Org.Apache.Kafka.Common
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/Endpoint.html#%3Cinit%3E(java.lang.String,org.apache.kafka.common.security.auth.SecurityProtocol,java.lang.String,int)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/Endpoint.html#%3Cinit%3E(java.lang.String,org.apache.kafka.common.security.auth.SecurityProtocol,java.lang.String,int)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Security.Auth.SecurityProtocol"/></param>
@@ -98,7 +98,7 @@ namespace Org.Apache.Kafka.Common
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/Endpoint.html#port()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/Endpoint.html#port()"/>
         /// </summary>
         /// <returns><see cref="int"/></returns>
         public int Port()
@@ -106,7 +106,7 @@ namespace Org.Apache.Kafka.Common
             return IExecuteWithSignature<int>("port", "()I");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/Endpoint.html#host()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/Endpoint.html#host()"/>
         /// </summary>
         /// <returns><see cref="Java.Lang.String"/></returns>
         public Java.Lang.String Host()
@@ -114,7 +114,7 @@ namespace Org.Apache.Kafka.Common
             return IExecuteWithSignature<Java.Lang.String>("host", "()Ljava/lang/String;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/Endpoint.html#listener()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/Endpoint.html#listener()"/>
         /// </summary>
         /// <returns><see cref="Java.Lang.String"/></returns>
         public Java.Lang.String Listener()
@@ -122,7 +122,7 @@ namespace Org.Apache.Kafka.Common
             return IExecuteWithSignature<Java.Lang.String>("listener", "()Ljava/lang/String;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/Endpoint.html#securityProtocol()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/Endpoint.html#securityProtocol()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.Security.Auth.SecurityProtocol"/></returns>
         public Org.Apache.Kafka.Common.Security.Auth.SecurityProtocol SecurityProtocol()

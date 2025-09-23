@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Connect.Converters
 {
     #region NumberConverterConfig declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.0.0/org/apache/kafka/connect/converters/NumberConverterConfig.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.1.0/org/apache/kafka/connect/converters/NumberConverterConfig.html"/>
     /// </summary>
     public partial class NumberConverterConfig : MASES.JCOBridge.C2JBridge.JVMBridgeBase<NumberConverterConfig>
     {
@@ -71,7 +71,7 @@ namespace Org.Apache.Kafka.Connect.Converters
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.0.0/org/apache/kafka/connect/converters/NumberConverterConfig.html#%3Cinit%3E(java.util.Map)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.1.0/org/apache/kafka/connect/converters/NumberConverterConfig.html#%3Cinit%3E(java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         public NumberConverterConfig(Java.Util.Map<Java.Lang.String, object> arg0)
@@ -91,7 +91,7 @@ namespace Org.Apache.Kafka.Connect.Converters
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.0.0/org/apache/kafka/connect/converters/NumberConverterConfig.html#configDef()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.1.0/org/apache/kafka/connect/converters/NumberConverterConfig.html#configDef()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.Config.ConfigDef"/></returns>
         public static Org.Apache.Kafka.Common.Config.ConfigDef ConfigDef()

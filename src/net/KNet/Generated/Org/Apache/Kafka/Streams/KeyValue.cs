@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Streams
 {
     #region KeyValue declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/KeyValue.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/KeyValue.html"/>
     /// </summary>
     public partial class KeyValue : MASES.JCOBridge.C2JBridge.JVMBridgeBase<KeyValue>
     {
@@ -68,7 +68,7 @@ namespace Org.Apache.Kafka.Streams
 
     #region KeyValue<K, V> declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/KeyValue.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/KeyValue.html"/>
     /// </summary>
     /// <typeparam name="K"></typeparam>
     /// <typeparam name="V"></typeparam>
@@ -114,7 +114,7 @@ namespace Org.Apache.Kafka.Streams
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/KeyValue.html#%3Cinit%3E(java.lang.Object,java.lang.Object)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/KeyValue.html#%3Cinit%3E(java.lang.Object,java.lang.Object)"/>
         /// </summary>
         /// <param name="arg0"><see cref="object"/></param>
         /// <param name="arg1"><see cref="object"/></param>
@@ -131,13 +131,13 @@ namespace Org.Apache.Kafka.Streams
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/KeyValue.html#key"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/KeyValue.html#key"/>
         /// </summary>
         public object key { get { if (!_keyReady) { _keyContent = IGetField<object>("key"); _keyReady = true; } return _keyContent; } }
         private object _keyContent = default;
         private bool _keyReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/KeyValue.html#value"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/KeyValue.html#value"/>
         /// </summary>
         public object value { get { if (!_valueReady) { _valueContent = IGetField<object>("value"); _valueReady = true; } return _valueContent; } }
         private object _valueContent = default;
@@ -147,7 +147,7 @@ namespace Org.Apache.Kafka.Streams
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/KeyValue.html#pair(java.lang.Object,java.lang.Object)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/KeyValue.html#pair(java.lang.Object,java.lang.Object)"/>
         /// </summary>
         /// <param name="arg0"><see cref="object"/></param>
         /// <param name="arg1"><see cref="object"/></param>
@@ -176,7 +176,7 @@ namespace Org.Apache.Kafka.Streams
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/KeyValue.html#%3Cinit%3E(java.lang.Object,java.lang.Object)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/KeyValue.html#%3Cinit%3E(java.lang.Object,java.lang.Object)"/>
         /// </summary>
         /// <param name="arg0"><typeparamref name="K"/></param>
         /// <param name="arg1"><typeparamref name="V"/></param>
@@ -197,13 +197,13 @@ namespace Org.Apache.Kafka.Streams
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/KeyValue.html#key"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/KeyValue.html#key"/>
         /// </summary>
         public K key { get { if (!_keyReady) { _keyContent = IGetField<K>("key"); _keyReady = true; } return _keyContent; } }
         private K _keyContent = default;
         private bool _keyReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/KeyValue.html#value"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/KeyValue.html#value"/>
         /// </summary>
         public V value { get { if (!_valueReady) { _valueContent = IGetField<V>("value"); _valueReady = true; } return _valueContent; } }
         private V _valueContent = default;
@@ -213,7 +213,7 @@ namespace Org.Apache.Kafka.Streams
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/KeyValue.html#pair(java.lang.Object,java.lang.Object)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/KeyValue.html#pair(java.lang.Object,java.lang.Object)"/>
         /// </summary>
         /// <param name="arg0"><typeparamref name="K"/></param>
         /// <param name="arg1"><typeparamref name="V"/></param>

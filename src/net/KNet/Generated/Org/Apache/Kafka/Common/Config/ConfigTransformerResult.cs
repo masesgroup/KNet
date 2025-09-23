@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common.Config
 {
     #region ConfigTransformerResult declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/ConfigTransformerResult.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/config/ConfigTransformerResult.html"/>
     /// </summary>
     public partial class ConfigTransformerResult : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ConfigTransformerResult>
     {
@@ -71,7 +71,7 @@ namespace Org.Apache.Kafka.Common.Config
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/ConfigTransformerResult.html#%3Cinit%3E(java.util.Map,java.util.Map)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/config/ConfigTransformerResult.html#%3Cinit%3E(java.util.Map,java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <param name="arg1"><see cref="Java.Util.Map"/></param>
@@ -96,7 +96,7 @@ namespace Org.Apache.Kafka.Common.Config
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/ConfigTransformerResult.html#ttls()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/config/ConfigTransformerResult.html#ttls()"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Map"/></returns>
         public Java.Util.Map<Java.Lang.String, Java.Lang.Long> Ttls()
@@ -104,7 +104,7 @@ namespace Org.Apache.Kafka.Common.Config
             return IExecuteWithSignature<Java.Util.Map<Java.Lang.String, Java.Lang.Long>>("ttls", "()Ljava/util/Map;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/ConfigTransformerResult.html#data()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/config/ConfigTransformerResult.html#data()"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Map"/></returns>
         public Java.Util.Map<Java.Lang.String, Java.Lang.String> Data()

@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common.Errors
 {
     #region CoordinatorLoadInProgressException declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/errors/CoordinatorLoadInProgressException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/errors/CoordinatorLoadInProgressException.html"/>
     /// </summary>
     public partial class CoordinatorLoadInProgressException : Org.Apache.Kafka.Common.Errors.RetriableException
     {

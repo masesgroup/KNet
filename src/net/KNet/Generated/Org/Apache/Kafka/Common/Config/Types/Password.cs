@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common.Config.Types
 {
     #region Password declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/types/Password.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/config/types/Password.html"/>
     /// </summary>
     public partial class Password : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Password>
     {
@@ -71,7 +71,7 @@ namespace Org.Apache.Kafka.Common.Config.Types
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/types/Password.html#%3Cinit%3E(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/config/types/Password.html#%3Cinit%3E(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         public Password(Java.Lang.String arg0)
@@ -87,7 +87,7 @@ namespace Org.Apache.Kafka.Common.Config.Types
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/types/Password.html#HIDDEN"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/config/types/Password.html#HIDDEN"/>
         /// </summary>
         public static Java.Lang.String HIDDEN { get { if (!_HIDDENReady) { _HIDDENContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "HIDDEN"); _HIDDENReady = true; } return _HIDDENContent; } }
         private static Java.Lang.String _HIDDENContent = default;
@@ -101,7 +101,7 @@ namespace Org.Apache.Kafka.Common.Config.Types
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/types/Password.html#value()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/config/types/Password.html#value()"/>
         /// </summary>
         /// <returns><see cref="Java.Lang.String"/></returns>
         public Java.Lang.String Value()

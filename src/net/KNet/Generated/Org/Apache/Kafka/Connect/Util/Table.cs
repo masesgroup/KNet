@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Connect.Util
 {
     #region Table declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.0.0/org/apache/kafka/connect/util/Table.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.1.0/org/apache/kafka/connect/util/Table.html"/>
     /// </summary>
     public partial class Table : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Table>
     {
@@ -68,7 +68,7 @@ namespace Org.Apache.Kafka.Connect.Util
 
     #region Table<R, C, V> declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.0.0/org/apache/kafka/connect/util/Table.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.1.0/org/apache/kafka/connect/util/Table.html"/>
     /// </summary>
     /// <typeparam name="R"></typeparam>
     /// <typeparam name="C"></typeparam>
@@ -131,7 +131,7 @@ namespace Org.Apache.Kafka.Connect.Util
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.0.0/org/apache/kafka/connect/util/Table.html#isEmpty()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.1.0/org/apache/kafka/connect/util/Table.html#isEmpty()"/>
         /// </summary>
         /// <returns><see cref="bool"/></returns>
         public bool IsEmpty()
@@ -139,7 +139,7 @@ namespace Org.Apache.Kafka.Connect.Util
             return IExecuteWithSignature<bool>("isEmpty", "()Z");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.0.0/org/apache/kafka/connect/util/Table.html#remove(java.lang.Object)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.1.0/org/apache/kafka/connect/util/Table.html#remove(java.lang.Object)"/>
         /// </summary>
         /// <param name="arg0"><see cref="object"/></param>
         /// <returns><see cref="Java.Util.Map"/></returns>
@@ -148,7 +148,7 @@ namespace Org.Apache.Kafka.Connect.Util
             return IExecuteWithSignature<Java.Util.Map>("remove", "(Ljava/lang/Object;)Ljava/util/Map;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.0.0/org/apache/kafka/connect/util/Table.html#row(java.lang.Object)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.1.0/org/apache/kafka/connect/util/Table.html#row(java.lang.Object)"/>
         /// </summary>
         /// <param name="arg0"><see cref="object"/></param>
         /// <returns><see cref="Java.Util.Map"/></returns>
@@ -157,7 +157,7 @@ namespace Org.Apache.Kafka.Connect.Util
             return IExecuteWithSignature<Java.Util.Map>("row", "(Ljava/lang/Object;)Ljava/util/Map;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.0.0/org/apache/kafka/connect/util/Table.html#get(java.lang.Object,java.lang.Object)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.1.0/org/apache/kafka/connect/util/Table.html#get(java.lang.Object,java.lang.Object)"/>
         /// </summary>
         /// <param name="arg0"><see cref="object"/></param>
         /// <param name="arg1"><see cref="object"/></param>
@@ -167,7 +167,7 @@ namespace Org.Apache.Kafka.Connect.Util
             return IExecuteWithSignature("get", "(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.0.0/org/apache/kafka/connect/util/Table.html#put(java.lang.Object,java.lang.Object,java.lang.Object)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.1.0/org/apache/kafka/connect/util/Table.html#put(java.lang.Object,java.lang.Object,java.lang.Object)"/>
         /// </summary>
         /// <param name="arg0"><see cref="object"/></param>
         /// <param name="arg1"><see cref="object"/></param>
@@ -178,7 +178,7 @@ namespace Org.Apache.Kafka.Connect.Util
             return IExecuteWithSignature("put", "(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;", arg0, arg1, arg2);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.0.0/org/apache/kafka/connect/util/Table.html#remove(java.lang.Object,java.lang.Object)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.1.0/org/apache/kafka/connect/util/Table.html#remove(java.lang.Object,java.lang.Object)"/>
         /// </summary>
         /// <param name="arg0"><see cref="object"/></param>
         /// <param name="arg1"><see cref="object"/></param>
@@ -223,7 +223,7 @@ namespace Org.Apache.Kafka.Connect.Util
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.0.0/org/apache/kafka/connect/util/Table.html#isEmpty()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.1.0/org/apache/kafka/connect/util/Table.html#isEmpty()"/>
         /// </summary>
         /// <returns><see cref="bool"/></returns>
         public bool IsEmpty()
@@ -231,7 +231,7 @@ namespace Org.Apache.Kafka.Connect.Util
             return IExecuteWithSignature<bool>("isEmpty", "()Z");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.0.0/org/apache/kafka/connect/util/Table.html#remove(java.lang.Object)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.1.0/org/apache/kafka/connect/util/Table.html#remove(java.lang.Object)"/>
         /// </summary>
         /// <param name="arg0"><typeparamref name="R"/></param>
         /// <returns><see cref="Java.Util.Map"/></returns>
@@ -240,7 +240,7 @@ namespace Org.Apache.Kafka.Connect.Util
             return IExecuteWithSignature<Java.Util.Map<C, V>>("remove", "(Ljava/lang/Object;)Ljava/util/Map;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.0.0/org/apache/kafka/connect/util/Table.html#row(java.lang.Object)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.1.0/org/apache/kafka/connect/util/Table.html#row(java.lang.Object)"/>
         /// </summary>
         /// <param name="arg0"><typeparamref name="R"/></param>
         /// <returns><see cref="Java.Util.Map"/></returns>
@@ -249,7 +249,7 @@ namespace Org.Apache.Kafka.Connect.Util
             return IExecuteWithSignature<Java.Util.Map<C, V>>("row", "(Ljava/lang/Object;)Ljava/util/Map;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.0.0/org/apache/kafka/connect/util/Table.html#get(java.lang.Object,java.lang.Object)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.1.0/org/apache/kafka/connect/util/Table.html#get(java.lang.Object,java.lang.Object)"/>
         /// </summary>
         /// <param name="arg0"><typeparamref name="R"/></param>
         /// <param name="arg1"><typeparamref name="C"/></param>
@@ -259,7 +259,7 @@ namespace Org.Apache.Kafka.Connect.Util
             return IExecuteWithSignature<V>("get", "(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.0.0/org/apache/kafka/connect/util/Table.html#put(java.lang.Object,java.lang.Object,java.lang.Object)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.1.0/org/apache/kafka/connect/util/Table.html#put(java.lang.Object,java.lang.Object,java.lang.Object)"/>
         /// </summary>
         /// <param name="arg0"><typeparamref name="R"/></param>
         /// <param name="arg1"><typeparamref name="C"/></param>
@@ -270,7 +270,7 @@ namespace Org.Apache.Kafka.Connect.Util
             return IExecuteWithSignature<V>("put", "(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;", arg0, arg1, arg2);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.0.0/org/apache/kafka/connect/util/Table.html#remove(java.lang.Object,java.lang.Object)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.1.0/org/apache/kafka/connect/util/Table.html#remove(java.lang.Object,java.lang.Object)"/>
         /// </summary>
         /// <param name="arg0"><typeparamref name="R"/></param>
         /// <param name="arg1"><typeparamref name="C"/></param>

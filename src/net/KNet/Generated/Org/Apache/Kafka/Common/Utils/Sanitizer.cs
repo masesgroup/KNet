@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common.Utils
 {
     #region Sanitizer declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/utils/Sanitizer.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/utils/Sanitizer.html"/>
     /// </summary>
     public partial class Sanitizer : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Sanitizer>
     {
@@ -83,7 +83,7 @@ namespace Org.Apache.Kafka.Common.Utils
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/utils/Sanitizer.html#desanitize(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/utils/Sanitizer.html#desanitize(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Java.Lang.String"/></returns>
@@ -92,7 +92,7 @@ namespace Org.Apache.Kafka.Common.Utils
             return SExecuteWithSignature<Java.Lang.String>(LocalBridgeClazz, "desanitize", "(Ljava/lang/String;)Ljava/lang/String;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/utils/Sanitizer.html#jmxSanitize(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/utils/Sanitizer.html#jmxSanitize(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Java.Lang.String"/></returns>
@@ -101,7 +101,7 @@ namespace Org.Apache.Kafka.Common.Utils
             return SExecuteWithSignature<Java.Lang.String>(LocalBridgeClazz, "jmxSanitize", "(Ljava/lang/String;)Ljava/lang/String;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/utils/Sanitizer.html#sanitize(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/utils/Sanitizer.html#sanitize(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Java.Lang.String"/></returns>

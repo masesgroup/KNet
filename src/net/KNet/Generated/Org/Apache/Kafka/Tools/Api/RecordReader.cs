@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Tools.Api
 {
     #region RecordReader declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools-api/4.0.0/org/apache/kafka/tools/api/RecordReader.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools-api/4.1.0/org/apache/kafka/tools/api/RecordReader.html"/>
     /// </summary>
     public partial class RecordReader : MASES.JCOBridge.C2JBridge.JVMBridgeBase<RecordReader>
     {
@@ -70,7 +70,7 @@ namespace Org.Apache.Kafka.Tools.Api
 
     #region IRecordReader
     /// <summary>
-    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools-api/4.0.0/org/apache/kafka/tools/api/RecordReader.html"/>
+    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools-api/4.1.0/org/apache/kafka/tools/api/RecordReader.html"/>
     /// </summary>
     public partial interface IRecordReader
     {
@@ -115,7 +115,7 @@ namespace Org.Apache.Kafka.Tools.Api
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools-api/4.0.0/org/apache/kafka/tools/api/RecordReader.html#readRecords(java.io.InputStream)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools-api/4.1.0/org/apache/kafka/tools/api/RecordReader.html#readRecords(java.io.InputStream)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Io.InputStream"/></param>
         /// <returns><see cref="Java.Util.Iterator"/></returns>
@@ -124,14 +124,14 @@ namespace Org.Apache.Kafka.Tools.Api
             return IExecuteWithSignature<Java.Util.Iterator<Org.Apache.Kafka.Clients.Producer.ProducerRecord<byte[], byte[]>>>("readRecords", "(Ljava/io/InputStream;)Ljava/util/Iterator;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools-api/4.0.0/org/apache/kafka/tools/api/RecordReader.html#close()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools-api/4.1.0/org/apache/kafka/tools/api/RecordReader.html#close()"/>
         /// </summary>
         public void Close()
         {
             IExecuteWithSignature("close", "()V");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools-api/4.0.0/org/apache/kafka/tools/api/RecordReader.html#configure(java.util.Map)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools-api/4.1.0/org/apache/kafka/tools/api/RecordReader.html#configure(java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         public void Configure(Java.Util.Map<Java.Lang.String, object> arg0)

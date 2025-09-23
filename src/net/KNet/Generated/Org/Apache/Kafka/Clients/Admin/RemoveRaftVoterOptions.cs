@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 {
     #region RemoveRaftVoterOptions declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/RemoveRaftVoterOptions.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/admin/RemoveRaftVoterOptions.html"/>
     /// </summary>
     public partial class RemoveRaftVoterOptions : Org.Apache.Kafka.Clients.Admin.AbstractOptions<Org.Apache.Kafka.Clients.Admin.RemoveRaftVoterOptions>
     {
@@ -87,7 +87,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/RemoveRaftVoterOptions.html#clusterId()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/admin/RemoveRaftVoterOptions.html#clusterId()"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Optional"/></returns>
         public Java.Util.Optional<Java.Lang.String> ClusterId()
@@ -95,7 +95,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<Java.Util.Optional<Java.Lang.String>>("clusterId", "()Ljava/util/Optional;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/RemoveRaftVoterOptions.html#setClusterId(java.util.Optional)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/admin/RemoveRaftVoterOptions.html#setClusterId(java.util.Optional)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Optional"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.RemoveRaftVoterOptions"/></returns>

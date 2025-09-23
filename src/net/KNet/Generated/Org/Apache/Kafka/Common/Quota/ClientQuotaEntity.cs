@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common.Quota
 {
     #region ClientQuotaEntity declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/quota/ClientQuotaEntity.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/quota/ClientQuotaEntity.html"/>
     /// </summary>
     public partial class ClientQuotaEntity : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ClientQuotaEntity>
     {
@@ -71,7 +71,7 @@ namespace Org.Apache.Kafka.Common.Quota
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/quota/ClientQuotaEntity.html#%3Cinit%3E(java.util.Map)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/quota/ClientQuotaEntity.html#%3Cinit%3E(java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         public ClientQuotaEntity(Java.Util.Map<Java.Lang.String, Java.Lang.String> arg0)
@@ -87,19 +87,19 @@ namespace Org.Apache.Kafka.Common.Quota
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/quota/ClientQuotaEntity.html#CLIENT_ID"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/quota/ClientQuotaEntity.html#CLIENT_ID"/>
         /// </summary>
         public static Java.Lang.String CLIENT_ID { get { if (!_CLIENT_IDReady) { _CLIENT_IDContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "CLIENT_ID"); _CLIENT_IDReady = true; } return _CLIENT_IDContent; } }
         private static Java.Lang.String _CLIENT_IDContent = default;
         private static bool _CLIENT_IDReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/quota/ClientQuotaEntity.html#IP"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/quota/ClientQuotaEntity.html#IP"/>
         /// </summary>
         public static Java.Lang.String IP { get { if (!_IPReady) { _IPContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "IP"); _IPReady = true; } return _IPContent; } }
         private static Java.Lang.String _IPContent = default;
         private static bool _IPReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/quota/ClientQuotaEntity.html#USER"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/quota/ClientQuotaEntity.html#USER"/>
         /// </summary>
         public static Java.Lang.String USER { get { if (!_USERReady) { _USERContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "USER"); _USERReady = true; } return _USERContent; } }
         private static Java.Lang.String _USERContent = default;
@@ -109,7 +109,7 @@ namespace Org.Apache.Kafka.Common.Quota
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/quota/ClientQuotaEntity.html#isValidEntityType(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/quota/ClientQuotaEntity.html#isValidEntityType(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="bool"/></returns>
@@ -122,7 +122,7 @@ namespace Org.Apache.Kafka.Common.Quota
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/quota/ClientQuotaEntity.html#entries()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/quota/ClientQuotaEntity.html#entries()"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Map"/></returns>
         public Java.Util.Map<Java.Lang.String, Java.Lang.String> Entries()

@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Connect.Sink
 {
     #region SinkRecord declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.0.0/org/apache/kafka/connect/sink/SinkRecord.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.1.0/org/apache/kafka/connect/sink/SinkRecord.html"/>
     /// </summary>
     public partial class SinkRecord : Org.Apache.Kafka.Connect.Connector.ConnectRecord<Org.Apache.Kafka.Connect.Sink.SinkRecord>
     {
@@ -71,7 +71,7 @@ namespace Org.Apache.Kafka.Connect.Sink
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.0.0/org/apache/kafka/connect/sink/SinkRecord.html#%3Cinit%3E(java.lang.String,int,org.apache.kafka.connect.data.Schema,java.lang.Object,org.apache.kafka.connect.data.Schema,java.lang.Object,long,java.lang.Long,org.apache.kafka.common.record.TimestampType,java.lang.Iterable,java.lang.String,java.lang.Integer,long)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.1.0/org/apache/kafka/connect/sink/SinkRecord.html#%3Cinit%3E(java.lang.String,int,org.apache.kafka.connect.data.Schema,java.lang.Object,org.apache.kafka.connect.data.Schema,java.lang.Object,long,java.lang.Long,org.apache.kafka.common.record.TimestampType,java.lang.Iterable,java.lang.String,java.lang.Integer,long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="int"/></param>
@@ -91,7 +91,7 @@ namespace Org.Apache.Kafka.Connect.Sink
         {
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.0.0/org/apache/kafka/connect/sink/SinkRecord.html#%3Cinit%3E(java.lang.String,int,org.apache.kafka.connect.data.Schema,java.lang.Object,org.apache.kafka.connect.data.Schema,java.lang.Object,long,java.lang.Long,org.apache.kafka.common.record.TimestampType,java.lang.Iterable)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.1.0/org/apache/kafka/connect/sink/SinkRecord.html#%3Cinit%3E(java.lang.String,int,org.apache.kafka.connect.data.Schema,java.lang.Object,org.apache.kafka.connect.data.Schema,java.lang.Object,long,java.lang.Long,org.apache.kafka.common.record.TimestampType,java.lang.Iterable)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="int"/></param>
@@ -108,7 +108,7 @@ namespace Org.Apache.Kafka.Connect.Sink
         {
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.0.0/org/apache/kafka/connect/sink/SinkRecord.html#%3Cinit%3E(java.lang.String,int,org.apache.kafka.connect.data.Schema,java.lang.Object,org.apache.kafka.connect.data.Schema,java.lang.Object,long,java.lang.Long,org.apache.kafka.common.record.TimestampType)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.1.0/org/apache/kafka/connect/sink/SinkRecord.html#%3Cinit%3E(java.lang.String,int,org.apache.kafka.connect.data.Schema,java.lang.Object,org.apache.kafka.connect.data.Schema,java.lang.Object,long,java.lang.Long,org.apache.kafka.common.record.TimestampType)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="int"/></param>
@@ -124,7 +124,7 @@ namespace Org.Apache.Kafka.Connect.Sink
         {
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.0.0/org/apache/kafka/connect/sink/SinkRecord.html#%3Cinit%3E(java.lang.String,int,org.apache.kafka.connect.data.Schema,java.lang.Object,org.apache.kafka.connect.data.Schema,java.lang.Object,long)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.1.0/org/apache/kafka/connect/sink/SinkRecord.html#%3Cinit%3E(java.lang.String,int,org.apache.kafka.connect.data.Schema,java.lang.Object,org.apache.kafka.connect.data.Schema,java.lang.Object,long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="int"/></param>
@@ -154,7 +154,7 @@ namespace Org.Apache.Kafka.Connect.Sink
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.0.0/org/apache/kafka/connect/sink/SinkRecord.html#originalKafkaPartition()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.1.0/org/apache/kafka/connect/sink/SinkRecord.html#originalKafkaPartition()"/>
         /// </summary>
         /// <returns><see cref="Java.Lang.Integer"/></returns>
         public Java.Lang.Integer OriginalKafkaPartition()
@@ -162,7 +162,7 @@ namespace Org.Apache.Kafka.Connect.Sink
             return IExecuteWithSignature<Java.Lang.Integer>("originalKafkaPartition", "()Ljava/lang/Integer;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.0.0/org/apache/kafka/connect/sink/SinkRecord.html#originalTopic()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.1.0/org/apache/kafka/connect/sink/SinkRecord.html#originalTopic()"/>
         /// </summary>
         /// <returns><see cref="Java.Lang.String"/></returns>
         public Java.Lang.String OriginalTopic()
@@ -170,7 +170,7 @@ namespace Org.Apache.Kafka.Connect.Sink
             return IExecuteWithSignature<Java.Lang.String>("originalTopic", "()Ljava/lang/String;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.0.0/org/apache/kafka/connect/sink/SinkRecord.html#kafkaOffset()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.1.0/org/apache/kafka/connect/sink/SinkRecord.html#kafkaOffset()"/>
         /// </summary>
         /// <returns><see cref="long"/></returns>
         public long KafkaOffset()
@@ -178,7 +178,7 @@ namespace Org.Apache.Kafka.Connect.Sink
             return IExecuteWithSignature<long>("kafkaOffset", "()J");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.0.0/org/apache/kafka/connect/sink/SinkRecord.html#originalKafkaOffset()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.1.0/org/apache/kafka/connect/sink/SinkRecord.html#originalKafkaOffset()"/>
         /// </summary>
         /// <returns><see cref="long"/></returns>
         public long OriginalKafkaOffset()
@@ -186,7 +186,7 @@ namespace Org.Apache.Kafka.Connect.Sink
             return IExecuteWithSignature<long>("originalKafkaOffset", "()J");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.0.0/org/apache/kafka/connect/sink/SinkRecord.html#timestampType()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.1.0/org/apache/kafka/connect/sink/SinkRecord.html#timestampType()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.Record.TimestampType"/></returns>
         public Org.Apache.Kafka.Common.Record.TimestampType TimestampType()

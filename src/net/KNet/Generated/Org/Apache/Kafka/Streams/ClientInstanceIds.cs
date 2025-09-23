@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Streams
 {
     #region ClientInstanceIds declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/ClientInstanceIds.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/ClientInstanceIds.html"/>
     /// </summary>
     public partial class ClientInstanceIds : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ClientInstanceIds>
     {
@@ -70,7 +70,7 @@ namespace Org.Apache.Kafka.Streams
 
     #region IClientInstanceIds
     /// <summary>
-    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/ClientInstanceIds.html"/>
+    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/ClientInstanceIds.html"/>
     /// </summary>
     public partial interface IClientInstanceIds
     {
@@ -107,7 +107,7 @@ namespace Org.Apache.Kafka.Streams
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/ClientInstanceIds.html#consumerInstanceIds()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/ClientInstanceIds.html#consumerInstanceIds()"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Map"/></returns>
         public Java.Util.Map<Java.Lang.String, Org.Apache.Kafka.Common.Uuid> ConsumerInstanceIds()
@@ -115,7 +115,7 @@ namespace Org.Apache.Kafka.Streams
             return IExecuteWithSignature<Java.Util.Map<Java.Lang.String, Org.Apache.Kafka.Common.Uuid>>("consumerInstanceIds", "()Ljava/util/Map;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/ClientInstanceIds.html#producerInstanceIds()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/ClientInstanceIds.html#producerInstanceIds()"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Map"/></returns>
         public Java.Util.Map<Java.Lang.String, Org.Apache.Kafka.Common.Uuid> ProducerInstanceIds()
@@ -123,7 +123,7 @@ namespace Org.Apache.Kafka.Streams
             return IExecuteWithSignature<Java.Util.Map<Java.Lang.String, Org.Apache.Kafka.Common.Uuid>>("producerInstanceIds", "()Ljava/util/Map;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/ClientInstanceIds.html#adminInstanceId()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/ClientInstanceIds.html#adminInstanceId()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.Uuid"/></returns>
         public Org.Apache.Kafka.Common.Uuid AdminInstanceId()

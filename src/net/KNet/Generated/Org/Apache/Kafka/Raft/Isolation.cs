@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Raft
 {
     #region Isolation declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/Isolation.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/Isolation.html"/>
     /// </summary>
     public partial class Isolation : Java.Lang.Enum<Org.Apache.Kafka.Raft.Isolation>
     {
@@ -79,13 +79,13 @@ namespace Org.Apache.Kafka.Raft
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/Isolation.html#COMMITTED"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/Isolation.html#COMMITTED"/>
         /// </summary>
         public static Org.Apache.Kafka.Raft.Isolation COMMITTED { get { if (!_COMMITTEDReady) { _COMMITTEDContent = SGetField<Org.Apache.Kafka.Raft.Isolation>(LocalBridgeClazz, "COMMITTED"); _COMMITTEDReady = true; } return _COMMITTEDContent; } }
         private static Org.Apache.Kafka.Raft.Isolation _COMMITTEDContent = default;
         private static bool _COMMITTEDReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/Isolation.html#UNCOMMITTED"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/Isolation.html#UNCOMMITTED"/>
         /// </summary>
         public static Org.Apache.Kafka.Raft.Isolation UNCOMMITTED { get { if (!_UNCOMMITTEDReady) { _UNCOMMITTEDContent = SGetField<Org.Apache.Kafka.Raft.Isolation>(LocalBridgeClazz, "UNCOMMITTED"); _UNCOMMITTEDReady = true; } return _UNCOMMITTEDContent; } }
         private static Org.Apache.Kafka.Raft.Isolation _UNCOMMITTEDContent = default;
@@ -95,7 +95,7 @@ namespace Org.Apache.Kafka.Raft
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/Isolation.html#valueOf(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/Isolation.html#valueOf(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Raft.Isolation"/></returns>
@@ -104,7 +104,7 @@ namespace Org.Apache.Kafka.Raft
             return SExecuteWithSignature<Org.Apache.Kafka.Raft.Isolation>(LocalBridgeClazz, "valueOf", "(Ljava/lang/String;)Lorg/apache/kafka/raft/Isolation;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/Isolation.html#values()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/Isolation.html#values()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Raft.Isolation"/></returns>
         public static Org.Apache.Kafka.Raft.Isolation[] Values()

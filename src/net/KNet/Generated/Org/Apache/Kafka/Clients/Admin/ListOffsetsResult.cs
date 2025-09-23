@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 {
     #region ListOffsetsResult declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/ListOffsetsResult.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/admin/ListOffsetsResult.html"/>
     /// </summary>
     public partial class ListOffsetsResult : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ListOffsetsResult>
     {
@@ -64,7 +64,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         // TODO: complete the class
         #region ListOffsetsResultInfo declaration
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/ListOffsetsResult.ListOffsetsResultInfo.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/admin/ListOffsetsResult.ListOffsetsResultInfo.html"/>
         /// </summary>
         public partial class ListOffsetsResultInfo : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ListOffsetsResultInfo>
         {
@@ -112,7 +112,7 @@ namespace Org.Apache.Kafka.Clients.Admin
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/ListOffsetsResult.html#%3Cinit%3E(java.util.Map)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/admin/ListOffsetsResult.html#%3Cinit%3E(java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         public ListOffsetsResult(Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Org.Apache.Kafka.Common.KafkaFuture<Org.Apache.Kafka.Clients.Admin.ListOffsetsResult.ListOffsetsResultInfo>> arg0)
@@ -136,7 +136,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/ListOffsetsResult.html#all()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/admin/ListOffsetsResult.html#all()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.KafkaFuture"/></returns>
         public Org.Apache.Kafka.Common.KafkaFuture<Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Org.Apache.Kafka.Clients.Admin.ListOffsetsResult.ListOffsetsResultInfo>> All()
@@ -144,7 +144,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<Org.Apache.Kafka.Common.KafkaFuture<Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Org.Apache.Kafka.Clients.Admin.ListOffsetsResult.ListOffsetsResultInfo>>>("all", "()Lorg/apache/kafka/common/KafkaFuture;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/ListOffsetsResult.html#partitionResult(org.apache.kafka.common.TopicPartition)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/admin/ListOffsetsResult.html#partitionResult(org.apache.kafka.common.TopicPartition)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.TopicPartition"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.KafkaFuture"/></returns>
@@ -161,7 +161,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         {
             #region Constructors
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/ListOffsetsResult.ListOffsetsResultInfo.html#%3Cinit%3E(long,long,java.util.Optional)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/admin/ListOffsetsResult.ListOffsetsResultInfo.html#%3Cinit%3E(long,long,java.util.Optional)"/>
             /// </summary>
             /// <param name="arg0"><see cref="long"/></param>
             /// <param name="arg1"><see cref="long"/></param>
@@ -187,7 +187,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/ListOffsetsResult.ListOffsetsResultInfo.html#leaderEpoch()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/admin/ListOffsetsResult.ListOffsetsResultInfo.html#leaderEpoch()"/>
             /// </summary>
             /// <returns><see cref="Java.Util.Optional"/></returns>
             public Java.Util.Optional<Java.Lang.Integer> LeaderEpoch()
@@ -195,7 +195,7 @@ namespace Org.Apache.Kafka.Clients.Admin
                 return IExecuteWithSignature<Java.Util.Optional<Java.Lang.Integer>>("leaderEpoch", "()Ljava/util/Optional;");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/ListOffsetsResult.ListOffsetsResultInfo.html#offset()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/admin/ListOffsetsResult.ListOffsetsResultInfo.html#offset()"/>
             /// </summary>
             /// <returns><see cref="long"/></returns>
             public long Offset()
@@ -203,7 +203,7 @@ namespace Org.Apache.Kafka.Clients.Admin
                 return IExecuteWithSignature<long>("offset", "()J");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/ListOffsetsResult.ListOffsetsResultInfo.html#timestamp()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/admin/ListOffsetsResult.ListOffsetsResultInfo.html#timestamp()"/>
             /// </summary>
             /// <returns><see cref="long"/></returns>
             public long Timestamp()

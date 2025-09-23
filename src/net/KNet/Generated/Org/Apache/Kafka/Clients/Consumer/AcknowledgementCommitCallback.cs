@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
 {
     #region AcknowledgementCommitCallback declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/AcknowledgementCommitCallback.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/consumer/AcknowledgementCommitCallback.html"/>
     /// </summary>
     public partial class AcknowledgementCommitCallback : MASES.JCOBridge.C2JBridge.JVMBridgeBase<AcknowledgementCommitCallback>
     {
@@ -70,7 +70,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
 
     #region IAcknowledgementCommitCallback
     /// <summary>
-    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/AcknowledgementCommitCallback.html"/>
+    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/consumer/AcknowledgementCommitCallback.html"/>
     /// </summary>
     public partial interface IAcknowledgementCommitCallback
     {
@@ -107,7 +107,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/AcknowledgementCommitCallback.html#onComplete(java.util.Map,java.lang.Exception)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/consumer/AcknowledgementCommitCallback.html#onComplete(java.util.Map,java.lang.Exception)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <param name="arg1"><see cref="Java.Lang.Exception"/></param>

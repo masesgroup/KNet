@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
 {
     #region StickyAssignor declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/StickyAssignor.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/consumer/StickyAssignor.html"/>
     /// </summary>
     public partial class StickyAssignor : MASES.JCOBridge.C2JBridge.JVMBridgeBase<StickyAssignor>
     {
@@ -79,7 +79,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/StickyAssignor.html#STICKY_ASSIGNOR_NAME"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/consumer/StickyAssignor.html#STICKY_ASSIGNOR_NAME"/>
         /// </summary>
         public static Java.Lang.String STICKY_ASSIGNOR_NAME { get { if (!_STICKY_ASSIGNOR_NAMEReady) { _STICKY_ASSIGNOR_NAMEContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "STICKY_ASSIGNOR_NAME"); _STICKY_ASSIGNOR_NAMEReady = true; } return _STICKY_ASSIGNOR_NAMEContent; } }
         private static Java.Lang.String _STICKY_ASSIGNOR_NAMEContent = default;

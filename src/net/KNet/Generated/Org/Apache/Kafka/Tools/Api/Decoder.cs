@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Tools.Api
 {
     #region Decoder declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools-api/4.0.0/org/apache/kafka/tools/api/Decoder.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools-api/4.1.0/org/apache/kafka/tools/api/Decoder.html"/>
     /// </summary>
     public partial class Decoder : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Decoder>
     {
@@ -70,7 +70,7 @@ namespace Org.Apache.Kafka.Tools.Api
 
     #region Decoder<T> declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools-api/4.0.0/org/apache/kafka/tools/api/Decoder.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools-api/4.1.0/org/apache/kafka/tools/api/Decoder.html"/>
     /// </summary>
     /// <typeparam name="T"></typeparam>
     public partial class Decoder<T> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Decoder<T>>
@@ -133,7 +133,7 @@ namespace Org.Apache.Kafka.Tools.Api
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools-api/4.0.0/org/apache/kafka/tools/api/Decoder.html#fromBytes(byte[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools-api/4.1.0/org/apache/kafka/tools/api/Decoder.html#fromBytes(byte[])"/>
         /// </summary>
         /// <param name="arg0"><see cref="byte"/></param>
         /// <returns><see cref="object"/></returns>
@@ -154,7 +154,7 @@ namespace Org.Apache.Kafka.Tools.Api
 
     #region IDecoder<T>
     /// <summary>
-    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools-api/4.0.0/org/apache/kafka/tools/api/Decoder.html"/>
+    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools-api/4.1.0/org/apache/kafka/tools/api/Decoder.html"/>
     /// </summary>
     public partial interface IDecoder<T>
     {
@@ -195,7 +195,7 @@ namespace Org.Apache.Kafka.Tools.Api
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools-api/4.0.0/org/apache/kafka/tools/api/Decoder.html#fromBytes(byte[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools-api/4.1.0/org/apache/kafka/tools/api/Decoder.html#fromBytes(byte[])"/>
         /// </summary>
         /// <param name="arg0"><see cref="byte"/></param>
         /// <returns><typeparamref name="T"/></returns>

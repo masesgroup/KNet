@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Snapshot
 {
     #region RecordsSnapshotWriter declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/snapshot/RecordsSnapshotWriter.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/snapshot/RecordsSnapshotWriter.html"/>
     /// </summary>
     public partial class RecordsSnapshotWriter : Org.Apache.Kafka.Snapshot.SnapshotWriter
     {
@@ -64,7 +64,7 @@ namespace Org.Apache.Kafka.Snapshot
         // TODO: complete the class
         #region Builder declaration
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/snapshot/RecordsSnapshotWriter.Builder.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/snapshot/RecordsSnapshotWriter.Builder.html"/>
         /// </summary>
         public partial class Builder : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Builder>
         {
@@ -109,7 +109,7 @@ namespace Org.Apache.Kafka.Snapshot
 
     #region RecordsSnapshotWriter<T> declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/snapshot/RecordsSnapshotWriter.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/snapshot/RecordsSnapshotWriter.html"/>
     /// </summary>
     /// <typeparam name="T"></typeparam>
     public partial class RecordsSnapshotWriter<T> : Org.Apache.Kafka.Snapshot.SnapshotWriter<T>
@@ -170,7 +170,7 @@ namespace Org.Apache.Kafka.Snapshot
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/snapshot/RecordsSnapshotWriter.html#isFrozen()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/snapshot/RecordsSnapshotWriter.html#isFrozen()"/>
         /// </summary>
         /// <returns><see cref="bool"/></returns>
         public bool IsFrozen()
@@ -178,7 +178,7 @@ namespace Org.Apache.Kafka.Snapshot
             return IExecuteWithSignature<bool>("isFrozen", "()Z");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/snapshot/RecordsSnapshotWriter.html#lastContainedLogEpoch()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/snapshot/RecordsSnapshotWriter.html#lastContainedLogEpoch()"/>
         /// </summary>
         /// <returns><see cref="int"/></returns>
         public int LastContainedLogEpoch()
@@ -186,7 +186,7 @@ namespace Org.Apache.Kafka.Snapshot
             return IExecuteWithSignature<int>("lastContainedLogEpoch", "()I");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/snapshot/RecordsSnapshotWriter.html#freeze()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/snapshot/RecordsSnapshotWriter.html#freeze()"/>
         /// </summary>
         /// <returns><see cref="long"/></returns>
         public long Freeze()
@@ -194,7 +194,7 @@ namespace Org.Apache.Kafka.Snapshot
             return IExecuteWithSignature<long>("freeze", "()J");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/snapshot/RecordsSnapshotWriter.html#lastContainedLogOffset()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/snapshot/RecordsSnapshotWriter.html#lastContainedLogOffset()"/>
         /// </summary>
         /// <returns><see cref="long"/></returns>
         public long LastContainedLogOffset()
@@ -202,7 +202,7 @@ namespace Org.Apache.Kafka.Snapshot
             return IExecuteWithSignature<long>("lastContainedLogOffset", "()J");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/snapshot/RecordsSnapshotWriter.html#append(java.util.List)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/snapshot/RecordsSnapshotWriter.html#append(java.util.List)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.List"/></param>
         public void Append(Java.Util.List arg0)
@@ -210,7 +210,7 @@ namespace Org.Apache.Kafka.Snapshot
             IExecuteWithSignature("append", "(Ljava/util/List;)V", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/snapshot/RecordsSnapshotWriter.html#close()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/snapshot/RecordsSnapshotWriter.html#close()"/>
         /// </summary>
         public void Close()
         {
@@ -241,7 +241,7 @@ namespace Org.Apache.Kafka.Snapshot
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/snapshot/RecordsSnapshotWriter.Builder.html#setLastContainedLogTimestamp(long)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/snapshot/RecordsSnapshotWriter.Builder.html#setLastContainedLogTimestamp(long)"/>
             /// </summary>
             /// <param name="arg0"><see cref="long"/></param>
             /// <returns><see cref="Org.Apache.Kafka.Snapshot.RecordsSnapshotWriter.Builder"/></returns>
@@ -250,7 +250,7 @@ namespace Org.Apache.Kafka.Snapshot
                 return IExecuteWithSignature<Org.Apache.Kafka.Snapshot.RecordsSnapshotWriter.Builder>("setLastContainedLogTimestamp", "(J)Lorg/apache/kafka/snapshot/RecordsSnapshotWriter$Builder;", arg0);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/snapshot/RecordsSnapshotWriter.Builder.html#setMaxBatchSize(int)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/snapshot/RecordsSnapshotWriter.Builder.html#setMaxBatchSize(int)"/>
             /// </summary>
             /// <param name="arg0"><see cref="int"/></param>
             /// <returns><see cref="Org.Apache.Kafka.Snapshot.RecordsSnapshotWriter.Builder"/></returns>
@@ -259,7 +259,7 @@ namespace Org.Apache.Kafka.Snapshot
                 return IExecuteWithSignature<Org.Apache.Kafka.Snapshot.RecordsSnapshotWriter.Builder>("setMaxBatchSize", "(I)Lorg/apache/kafka/snapshot/RecordsSnapshotWriter$Builder;", arg0);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/snapshot/RecordsSnapshotWriter.Builder.html#setMemoryPool(org.apache.kafka.common.memory.MemoryPool)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/snapshot/RecordsSnapshotWriter.Builder.html#setMemoryPool(org.apache.kafka.common.memory.MemoryPool)"/>
             /// </summary>
             /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Memory.MemoryPool"/></param>
             /// <returns><see cref="Org.Apache.Kafka.Snapshot.RecordsSnapshotWriter.Builder"/></returns>
@@ -268,7 +268,7 @@ namespace Org.Apache.Kafka.Snapshot
                 return IExecuteWithSignature<Org.Apache.Kafka.Snapshot.RecordsSnapshotWriter.Builder>("setMemoryPool", "(Lorg/apache/kafka/common/memory/MemoryPool;)Lorg/apache/kafka/snapshot/RecordsSnapshotWriter$Builder;", arg0);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/snapshot/RecordsSnapshotWriter.Builder.html#setRawSnapshotWriter(org.apache.kafka.snapshot.RawSnapshotWriter)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/snapshot/RecordsSnapshotWriter.Builder.html#setRawSnapshotWriter(org.apache.kafka.snapshot.RawSnapshotWriter)"/>
             /// </summary>
             /// <param name="arg0"><see cref="Org.Apache.Kafka.Snapshot.RawSnapshotWriter"/></param>
             /// <returns><see cref="Org.Apache.Kafka.Snapshot.RecordsSnapshotWriter.Builder"/></returns>
@@ -277,7 +277,7 @@ namespace Org.Apache.Kafka.Snapshot
                 return IExecuteWithSignature<Org.Apache.Kafka.Snapshot.RecordsSnapshotWriter.Builder>("setRawSnapshotWriter", "(Lorg/apache/kafka/snapshot/RawSnapshotWriter;)Lorg/apache/kafka/snapshot/RecordsSnapshotWriter$Builder;", arg0);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/snapshot/RecordsSnapshotWriter.Builder.html#setTime(org.apache.kafka.common.utils.Time)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/snapshot/RecordsSnapshotWriter.Builder.html#setTime(org.apache.kafka.common.utils.Time)"/>
             /// </summary>
             /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Utils.Time"/></param>
             /// <returns><see cref="Org.Apache.Kafka.Snapshot.RecordsSnapshotWriter.Builder"/></returns>
@@ -286,7 +286,7 @@ namespace Org.Apache.Kafka.Snapshot
                 return IExecuteWithSignature<Org.Apache.Kafka.Snapshot.RecordsSnapshotWriter.Builder>("setTime", "(Lorg/apache/kafka/common/utils/Time;)Lorg/apache/kafka/snapshot/RecordsSnapshotWriter$Builder;", arg0);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/snapshot/RecordsSnapshotWriter.Builder.html#setVoterSet(java.util.Optional)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/snapshot/RecordsSnapshotWriter.Builder.html#setVoterSet(java.util.Optional)"/>
             /// </summary>
             /// <param name="arg0"><see cref="Java.Util.Optional"/></param>
             /// <returns><see cref="Org.Apache.Kafka.Snapshot.RecordsSnapshotWriter.Builder"/></returns>
@@ -337,7 +337,7 @@ namespace Org.Apache.Kafka.Snapshot
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/snapshot/RecordsSnapshotWriter.html#isFrozen()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/snapshot/RecordsSnapshotWriter.html#isFrozen()"/>
         /// </summary>
         /// <returns><see cref="bool"/></returns>
         public bool IsFrozen()
@@ -345,7 +345,7 @@ namespace Org.Apache.Kafka.Snapshot
             return IExecuteWithSignature<bool>("isFrozen", "()Z");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/snapshot/RecordsSnapshotWriter.html#lastContainedLogEpoch()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/snapshot/RecordsSnapshotWriter.html#lastContainedLogEpoch()"/>
         /// </summary>
         /// <returns><see cref="int"/></returns>
         public int LastContainedLogEpoch()
@@ -353,7 +353,7 @@ namespace Org.Apache.Kafka.Snapshot
             return IExecuteWithSignature<int>("lastContainedLogEpoch", "()I");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/snapshot/RecordsSnapshotWriter.html#freeze()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/snapshot/RecordsSnapshotWriter.html#freeze()"/>
         /// </summary>
         /// <returns><see cref="long"/></returns>
         public long Freeze()
@@ -361,7 +361,7 @@ namespace Org.Apache.Kafka.Snapshot
             return IExecuteWithSignature<long>("freeze", "()J");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/snapshot/RecordsSnapshotWriter.html#lastContainedLogOffset()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/snapshot/RecordsSnapshotWriter.html#lastContainedLogOffset()"/>
         /// </summary>
         /// <returns><see cref="long"/></returns>
         public long LastContainedLogOffset()
@@ -369,7 +369,7 @@ namespace Org.Apache.Kafka.Snapshot
             return IExecuteWithSignature<long>("lastContainedLogOffset", "()J");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/snapshot/RecordsSnapshotWriter.html#append(java.util.List)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/snapshot/RecordsSnapshotWriter.html#append(java.util.List)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.List"/></param>
         public void Append(Java.Util.List<T> arg0)
@@ -377,7 +377,7 @@ namespace Org.Apache.Kafka.Snapshot
             IExecuteWithSignature("append", "(Ljava/util/List;)V", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/snapshot/RecordsSnapshotWriter.html#close()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/snapshot/RecordsSnapshotWriter.html#close()"/>
         /// </summary>
         public void Close()
         {

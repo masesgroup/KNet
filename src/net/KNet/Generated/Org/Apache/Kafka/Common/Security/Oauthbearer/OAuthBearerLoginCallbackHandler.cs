@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common.Security.Oauthbearer
 {
     #region OAuthBearerLoginCallbackHandler declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/security/oauthbearer/OAuthBearerLoginCallbackHandler.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/security/oauthbearer/OAuthBearerLoginCallbackHandler.html"/>
     /// </summary>
     public partial class OAuthBearerLoginCallbackHandler : Org.Apache.Kafka.Common.Security.Auth.AuthenticateCallbackHandler
     {
@@ -79,37 +79,37 @@ namespace Org.Apache.Kafka.Common.Security.Oauthbearer
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/security/oauthbearer/OAuthBearerLoginCallbackHandler.html#CLIENT_ID_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/security/oauthbearer/OAuthBearerLoginCallbackHandler.html#CLIENT_ID_CONFIG"/>
         /// </summary>
         public static Java.Lang.String CLIENT_ID_CONFIG { get { if (!_CLIENT_ID_CONFIGReady) { _CLIENT_ID_CONFIGContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "CLIENT_ID_CONFIG"); _CLIENT_ID_CONFIGReady = true; } return _CLIENT_ID_CONFIGContent; } }
         private static Java.Lang.String _CLIENT_ID_CONFIGContent = default;
         private static bool _CLIENT_ID_CONFIGReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/security/oauthbearer/OAuthBearerLoginCallbackHandler.html#CLIENT_ID_DOC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/security/oauthbearer/OAuthBearerLoginCallbackHandler.html#CLIENT_ID_DOC"/>
         /// </summary>
         public static Java.Lang.String CLIENT_ID_DOC { get { if (!_CLIENT_ID_DOCReady) { _CLIENT_ID_DOCContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "CLIENT_ID_DOC"); _CLIENT_ID_DOCReady = true; } return _CLIENT_ID_DOCContent; } }
         private static Java.Lang.String _CLIENT_ID_DOCContent = default;
         private static bool _CLIENT_ID_DOCReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/security/oauthbearer/OAuthBearerLoginCallbackHandler.html#CLIENT_SECRET_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/security/oauthbearer/OAuthBearerLoginCallbackHandler.html#CLIENT_SECRET_CONFIG"/>
         /// </summary>
         public static Java.Lang.String CLIENT_SECRET_CONFIG { get { if (!_CLIENT_SECRET_CONFIGReady) { _CLIENT_SECRET_CONFIGContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "CLIENT_SECRET_CONFIG"); _CLIENT_SECRET_CONFIGReady = true; } return _CLIENT_SECRET_CONFIGContent; } }
         private static Java.Lang.String _CLIENT_SECRET_CONFIGContent = default;
         private static bool _CLIENT_SECRET_CONFIGReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/security/oauthbearer/OAuthBearerLoginCallbackHandler.html#CLIENT_SECRET_DOC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/security/oauthbearer/OAuthBearerLoginCallbackHandler.html#CLIENT_SECRET_DOC"/>
         /// </summary>
         public static Java.Lang.String CLIENT_SECRET_DOC { get { if (!_CLIENT_SECRET_DOCReady) { _CLIENT_SECRET_DOCContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "CLIENT_SECRET_DOC"); _CLIENT_SECRET_DOCReady = true; } return _CLIENT_SECRET_DOCContent; } }
         private static Java.Lang.String _CLIENT_SECRET_DOCContent = default;
         private static bool _CLIENT_SECRET_DOCReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/security/oauthbearer/OAuthBearerLoginCallbackHandler.html#SCOPE_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/security/oauthbearer/OAuthBearerLoginCallbackHandler.html#SCOPE_CONFIG"/>
         /// </summary>
         public static Java.Lang.String SCOPE_CONFIG { get { if (!_SCOPE_CONFIGReady) { _SCOPE_CONFIGContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "SCOPE_CONFIG"); _SCOPE_CONFIGReady = true; } return _SCOPE_CONFIGContent; } }
         private static Java.Lang.String _SCOPE_CONFIGContent = default;
         private static bool _SCOPE_CONFIGReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/security/oauthbearer/OAuthBearerLoginCallbackHandler.html#SCOPE_DOC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/security/oauthbearer/OAuthBearerLoginCallbackHandler.html#SCOPE_DOC"/>
         /// </summary>
         public static Java.Lang.String SCOPE_DOC { get { if (!_SCOPE_DOCReady) { _SCOPE_DOCContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "SCOPE_DOC"); _SCOPE_DOCReady = true; } return _SCOPE_DOCContent; } }
         private static Java.Lang.String _SCOPE_DOCContent = default;
@@ -123,14 +123,14 @@ namespace Org.Apache.Kafka.Common.Security.Oauthbearer
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/security/oauthbearer/OAuthBearerLoginCallbackHandler.html#close()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/security/oauthbearer/OAuthBearerLoginCallbackHandler.html#close()"/>
         /// </summary>
         public void Close()
         {
             IExecuteWithSignature("close", "()V");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/security/oauthbearer/OAuthBearerLoginCallbackHandler.html#configure(java.util.Map,java.lang.String,java.util.List)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/security/oauthbearer/OAuthBearerLoginCallbackHandler.html#configure(java.util.Map,java.lang.String,java.util.List)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <param name="arg1"><see cref="Java.Lang.String"/></param>
@@ -140,7 +140,7 @@ namespace Org.Apache.Kafka.Common.Security.Oauthbearer
             IExecuteWithSignature("configure", "(Ljava/util/Map;Ljava/lang/String;Ljava/util/List;)V", arg0, arg1, arg2);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/security/oauthbearer/OAuthBearerLoginCallbackHandler.html#handle(javax.security.auth.callback.Callback[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/security/oauthbearer/OAuthBearerLoginCallbackHandler.html#handle(javax.security.auth.callback.Callback[])"/>
         /// </summary>
         /// <param name="arg0"><see cref="Javax.Security.Auth.Callback.Callback"/></param>
         /// <exception cref="Java.Io.IOException"/>

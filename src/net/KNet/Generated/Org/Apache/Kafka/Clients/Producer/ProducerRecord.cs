@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Clients.Producer
 {
     #region ProducerRecord declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/producer/ProducerRecord.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/producer/ProducerRecord.html"/>
     /// </summary>
     public partial class ProducerRecord : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ProducerRecord>
     {
@@ -68,7 +68,7 @@ namespace Org.Apache.Kafka.Clients.Producer
 
     #region ProducerRecord<K, V> declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/producer/ProducerRecord.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/producer/ProducerRecord.html"/>
     /// </summary>
     /// <typeparam name="K"></typeparam>
     /// <typeparam name="V"></typeparam>
@@ -114,7 +114,7 @@ namespace Org.Apache.Kafka.Clients.Producer
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/producer/ProducerRecord.html#%3Cinit%3E(java.lang.String,java.lang.Integer,java.lang.Long,java.lang.Object,java.lang.Object,java.lang.Iterable)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/producer/ProducerRecord.html#%3Cinit%3E(java.lang.String,java.lang.Integer,java.lang.Long,java.lang.Object,java.lang.Object,java.lang.Iterable)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Java.Lang.Integer"/></param>
@@ -127,7 +127,7 @@ namespace Org.Apache.Kafka.Clients.Producer
         {
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/producer/ProducerRecord.html#%3Cinit%3E(java.lang.String,java.lang.Integer,java.lang.Long,java.lang.Object,java.lang.Object)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/producer/ProducerRecord.html#%3Cinit%3E(java.lang.String,java.lang.Integer,java.lang.Long,java.lang.Object,java.lang.Object)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Java.Lang.Integer"/></param>
@@ -139,7 +139,7 @@ namespace Org.Apache.Kafka.Clients.Producer
         {
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/producer/ProducerRecord.html#%3Cinit%3E(java.lang.String,java.lang.Integer,java.lang.Object,java.lang.Object,java.lang.Iterable)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/producer/ProducerRecord.html#%3Cinit%3E(java.lang.String,java.lang.Integer,java.lang.Object,java.lang.Object,java.lang.Iterable)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Java.Lang.Integer"/></param>
@@ -151,7 +151,7 @@ namespace Org.Apache.Kafka.Clients.Producer
         {
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/producer/ProducerRecord.html#%3Cinit%3E(java.lang.String,java.lang.Integer,java.lang.Object,java.lang.Object)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/producer/ProducerRecord.html#%3Cinit%3E(java.lang.String,java.lang.Integer,java.lang.Object,java.lang.Object)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Java.Lang.Integer"/></param>
@@ -162,7 +162,7 @@ namespace Org.Apache.Kafka.Clients.Producer
         {
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/producer/ProducerRecord.html#%3Cinit%3E(java.lang.String,java.lang.Object,java.lang.Object)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/producer/ProducerRecord.html#%3Cinit%3E(java.lang.String,java.lang.Object,java.lang.Object)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="object"/></param>
@@ -172,7 +172,7 @@ namespace Org.Apache.Kafka.Clients.Producer
         {
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/producer/ProducerRecord.html#%3Cinit%3E(java.lang.String,java.lang.Object)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/producer/ProducerRecord.html#%3Cinit%3E(java.lang.String,java.lang.Object)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="object"/></param>
@@ -197,7 +197,7 @@ namespace Org.Apache.Kafka.Clients.Producer
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/producer/ProducerRecord.html#partition()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/producer/ProducerRecord.html#partition()"/>
         /// </summary>
         /// <returns><see cref="Java.Lang.Integer"/></returns>
         public Java.Lang.Integer Partition()
@@ -205,7 +205,7 @@ namespace Org.Apache.Kafka.Clients.Producer
             return IExecuteWithSignature<Java.Lang.Integer>("partition", "()Ljava/lang/Integer;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/producer/ProducerRecord.html#timestamp()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/producer/ProducerRecord.html#timestamp()"/>
         /// </summary>
         /// <returns><see cref="Java.Lang.Long"/></returns>
         public Java.Lang.Long Timestamp()
@@ -213,7 +213,7 @@ namespace Org.Apache.Kafka.Clients.Producer
             return IExecuteWithSignature<Java.Lang.Long>("timestamp", "()Ljava/lang/Long;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/producer/ProducerRecord.html#topic()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/producer/ProducerRecord.html#topic()"/>
         /// </summary>
         /// <returns><see cref="Java.Lang.String"/></returns>
         public Java.Lang.String Topic()
@@ -221,7 +221,7 @@ namespace Org.Apache.Kafka.Clients.Producer
             return IExecuteWithSignature<Java.Lang.String>("topic", "()Ljava/lang/String;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/producer/ProducerRecord.html#key()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/producer/ProducerRecord.html#key()"/>
         /// </summary>
         /// <returns><see cref="object"/></returns>
         public object Key()
@@ -229,7 +229,7 @@ namespace Org.Apache.Kafka.Clients.Producer
             return IExecuteWithSignature("key", "()Ljava/lang/Object;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/producer/ProducerRecord.html#headers()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/producer/ProducerRecord.html#headers()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.Header.Headers"/></returns>
         public Org.Apache.Kafka.Common.Header.Headers Headers()
@@ -237,7 +237,7 @@ namespace Org.Apache.Kafka.Clients.Producer
             return IExecuteWithSignature<Org.Apache.Kafka.Common.Header.Headers>("headers", "()Lorg/apache/kafka/common/header/Headers;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/producer/ProducerRecord.html#value()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/producer/ProducerRecord.html#value()"/>
         /// </summary>
         /// <returns><see cref="object"/></returns>
         public object Value()
@@ -260,7 +260,7 @@ namespace Org.Apache.Kafka.Clients.Producer
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/producer/ProducerRecord.html#%3Cinit%3E(java.lang.String,java.lang.Integer,java.lang.Long,java.lang.Object,java.lang.Object,java.lang.Iterable)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/producer/ProducerRecord.html#%3Cinit%3E(java.lang.String,java.lang.Integer,java.lang.Long,java.lang.Object,java.lang.Object,java.lang.Iterable)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Java.Lang.Integer"/></param>
@@ -273,7 +273,7 @@ namespace Org.Apache.Kafka.Clients.Producer
         {
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/producer/ProducerRecord.html#%3Cinit%3E(java.lang.String,java.lang.Integer,java.lang.Long,java.lang.Object,java.lang.Object)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/producer/ProducerRecord.html#%3Cinit%3E(java.lang.String,java.lang.Integer,java.lang.Long,java.lang.Object,java.lang.Object)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Java.Lang.Integer"/></param>
@@ -285,7 +285,7 @@ namespace Org.Apache.Kafka.Clients.Producer
         {
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/producer/ProducerRecord.html#%3Cinit%3E(java.lang.String,java.lang.Integer,java.lang.Object,java.lang.Object,java.lang.Iterable)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/producer/ProducerRecord.html#%3Cinit%3E(java.lang.String,java.lang.Integer,java.lang.Object,java.lang.Object,java.lang.Iterable)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Java.Lang.Integer"/></param>
@@ -297,7 +297,7 @@ namespace Org.Apache.Kafka.Clients.Producer
         {
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/producer/ProducerRecord.html#%3Cinit%3E(java.lang.String,java.lang.Integer,java.lang.Object,java.lang.Object)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/producer/ProducerRecord.html#%3Cinit%3E(java.lang.String,java.lang.Integer,java.lang.Object,java.lang.Object)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Java.Lang.Integer"/></param>
@@ -308,7 +308,7 @@ namespace Org.Apache.Kafka.Clients.Producer
         {
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/producer/ProducerRecord.html#%3Cinit%3E(java.lang.String,java.lang.Object,java.lang.Object)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/producer/ProducerRecord.html#%3Cinit%3E(java.lang.String,java.lang.Object,java.lang.Object)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><typeparamref name="K"/></param>
@@ -318,7 +318,7 @@ namespace Org.Apache.Kafka.Clients.Producer
         {
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/producer/ProducerRecord.html#%3Cinit%3E(java.lang.String,java.lang.Object)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/producer/ProducerRecord.html#%3Cinit%3E(java.lang.String,java.lang.Object)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><typeparamref name="V"/></param>
@@ -347,7 +347,7 @@ namespace Org.Apache.Kafka.Clients.Producer
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/producer/ProducerRecord.html#partition()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/producer/ProducerRecord.html#partition()"/>
         /// </summary>
         /// <returns><see cref="Java.Lang.Integer"/></returns>
         public Java.Lang.Integer Partition()
@@ -355,7 +355,7 @@ namespace Org.Apache.Kafka.Clients.Producer
             return IExecuteWithSignature<Java.Lang.Integer>("partition", "()Ljava/lang/Integer;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/producer/ProducerRecord.html#timestamp()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/producer/ProducerRecord.html#timestamp()"/>
         /// </summary>
         /// <returns><see cref="Java.Lang.Long"/></returns>
         public Java.Lang.Long Timestamp()
@@ -363,7 +363,7 @@ namespace Org.Apache.Kafka.Clients.Producer
             return IExecuteWithSignature<Java.Lang.Long>("timestamp", "()Ljava/lang/Long;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/producer/ProducerRecord.html#topic()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/producer/ProducerRecord.html#topic()"/>
         /// </summary>
         /// <returns><see cref="Java.Lang.String"/></returns>
         public Java.Lang.String Topic()
@@ -371,7 +371,7 @@ namespace Org.Apache.Kafka.Clients.Producer
             return IExecuteWithSignature<Java.Lang.String>("topic", "()Ljava/lang/String;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/producer/ProducerRecord.html#key()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/producer/ProducerRecord.html#key()"/>
         /// </summary>
         /// <returns><typeparamref name="K"/></returns>
         public K Key()
@@ -379,7 +379,7 @@ namespace Org.Apache.Kafka.Clients.Producer
             return IExecuteWithSignature<K>("key", "()Ljava/lang/Object;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/producer/ProducerRecord.html#headers()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/producer/ProducerRecord.html#headers()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.Header.Headers"/></returns>
         public Org.Apache.Kafka.Common.Header.Headers Headers()
@@ -387,7 +387,7 @@ namespace Org.Apache.Kafka.Clients.Producer
             return IExecuteWithSignature<Org.Apache.Kafka.Common.Header.Headers>("headers", "()Lorg/apache/kafka/common/header/Headers;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/producer/ProducerRecord.html#value()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/producer/ProducerRecord.html#value()"/>
         /// </summary>
         /// <returns><typeparamref name="V"/></returns>
         public V Value()

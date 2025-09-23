@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common.Errors
 {
     #region IllegalSaslStateException declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/errors/IllegalSaslStateException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/errors/IllegalSaslStateException.html"/>
     /// </summary>
     public partial class IllegalSaslStateException : Org.Apache.Kafka.Common.Errors.AuthenticationException
     {

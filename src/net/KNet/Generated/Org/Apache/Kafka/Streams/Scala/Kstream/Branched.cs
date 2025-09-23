@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Streams.Scala.Kstream
 {
     #region Branched declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/kstream/Branched.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.1.0/org/apache/kafka/streams/scala/kstream/Branched.html"/>
     /// </summary>
     public partial class Branched : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Branched>
     {
@@ -83,7 +83,7 @@ namespace Org.Apache.Kafka.Streams.Scala.Kstream
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/kstream/Branched.html#as(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.1.0/org/apache/kafka/streams/scala/kstream/Branched.html#as(java.lang.String)"/>
         /// </summary>
         /// <param name="name"><see cref="Java.Lang.String"/></param>
         /// <typeparam name="K"></typeparam>

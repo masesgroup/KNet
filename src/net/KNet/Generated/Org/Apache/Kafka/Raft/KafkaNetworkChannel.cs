@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Raft
 {
     #region KafkaNetworkChannel declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/KafkaNetworkChannel.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/KafkaNetworkChannel.html"/>
     /// </summary>
     public partial class KafkaNetworkChannel : Org.Apache.Kafka.Raft.NetworkChannel
     {
@@ -87,7 +87,7 @@ namespace Org.Apache.Kafka.Raft
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/KafkaNetworkChannel.html#newCorrelationId()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/KafkaNetworkChannel.html#newCorrelationId()"/>
         /// </summary>
         /// <returns><see cref="int"/></returns>
         public int NewCorrelationId()
@@ -95,7 +95,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<int>("newCorrelationId", "()I");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/KafkaNetworkChannel.html#close()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/KafkaNetworkChannel.html#close()"/>
         /// </summary>
         /// <exception cref="Java.Lang.InterruptedException"/>
         public void Close()
@@ -103,14 +103,14 @@ namespace Org.Apache.Kafka.Raft
             IExecuteWithSignature("close", "()V");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/KafkaNetworkChannel.html#pollOnce()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/KafkaNetworkChannel.html#pollOnce()"/>
         /// </summary>
         public void PollOnce()
         {
             IExecuteWithSignature("pollOnce", "()V");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/KafkaNetworkChannel.html#send(org.apache.kafka.raft.RaftRequest.Outbound)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/KafkaNetworkChannel.html#send(org.apache.kafka.raft.RaftRequest.Outbound)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Raft.RaftRequest.Outbound"/></param>
         public void Send(Org.Apache.Kafka.Raft.RaftRequest.Outbound arg0)
@@ -118,7 +118,7 @@ namespace Org.Apache.Kafka.Raft
             IExecuteWithSignature("send", "(Lorg/apache/kafka/raft/RaftRequest$Outbound;)V", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/KafkaNetworkChannel.html#start()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/KafkaNetworkChannel.html#start()"/>
         /// </summary>
         public void Start()
         {

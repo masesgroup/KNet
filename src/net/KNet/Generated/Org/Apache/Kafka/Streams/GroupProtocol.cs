@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Streams
 {
     #region GroupProtocol declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/GroupProtocol.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/GroupProtocol.html"/>
     /// </summary>
     public partial class GroupProtocol : Java.Lang.Enum<Org.Apache.Kafka.Streams.GroupProtocol>
     {
@@ -79,19 +79,19 @@ namespace Org.Apache.Kafka.Streams
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/GroupProtocol.html#name"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/GroupProtocol.html#name"/>
         /// </summary>
         public Java.Lang.String name { get { if (!_nameReady) { _nameContent = IGetField<Java.Lang.String>("name"); _nameReady = true; } return _nameContent; } }
         private Java.Lang.String _nameContent = default;
         private bool _nameReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/GroupProtocol.html#CLASSIC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/GroupProtocol.html#CLASSIC"/>
         /// </summary>
         public static Org.Apache.Kafka.Streams.GroupProtocol CLASSIC { get { if (!_CLASSICReady) { _CLASSICContent = SGetField<Org.Apache.Kafka.Streams.GroupProtocol>(LocalBridgeClazz, "CLASSIC"); _CLASSICReady = true; } return _CLASSICContent; } }
         private static Org.Apache.Kafka.Streams.GroupProtocol _CLASSICContent = default;
         private static bool _CLASSICReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/GroupProtocol.html#STREAMS"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/GroupProtocol.html#STREAMS"/>
         /// </summary>
         public static Org.Apache.Kafka.Streams.GroupProtocol STREAMS { get { if (!_STREAMSReady) { _STREAMSContent = SGetField<Org.Apache.Kafka.Streams.GroupProtocol>(LocalBridgeClazz, "STREAMS"); _STREAMSReady = true; } return _STREAMSContent; } }
         private static Org.Apache.Kafka.Streams.GroupProtocol _STREAMSContent = default;
@@ -101,7 +101,7 @@ namespace Org.Apache.Kafka.Streams
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/GroupProtocol.html#of(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/GroupProtocol.html#of(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.GroupProtocol"/></returns>
@@ -110,7 +110,7 @@ namespace Org.Apache.Kafka.Streams
             return SExecuteWithSignature<Org.Apache.Kafka.Streams.GroupProtocol>(LocalBridgeClazz, "of", "(Ljava/lang/String;)Lorg/apache/kafka/streams/GroupProtocol;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/GroupProtocol.html#valueOf(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/GroupProtocol.html#valueOf(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.GroupProtocol"/></returns>
@@ -119,7 +119,7 @@ namespace Org.Apache.Kafka.Streams
             return SExecuteWithSignature<Org.Apache.Kafka.Streams.GroupProtocol>(LocalBridgeClazz, "valueOf", "(Ljava/lang/String;)Lorg/apache/kafka/streams/GroupProtocol;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/GroupProtocol.html#values()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/GroupProtocol.html#values()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Streams.GroupProtocol"/></returns>
         public static Org.Apache.Kafka.Streams.GroupProtocol[] Values()

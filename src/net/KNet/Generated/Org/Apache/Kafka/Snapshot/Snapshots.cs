@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Snapshot
 {
     #region Snapshots declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/snapshot/Snapshots.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/snapshot/Snapshots.html"/>
     /// </summary>
     public partial class Snapshots : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Snapshots>
     {
@@ -79,13 +79,13 @@ namespace Org.Apache.Kafka.Snapshot
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/snapshot/Snapshots.html#DELETE_SUFFIX"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/snapshot/Snapshots.html#DELETE_SUFFIX"/>
         /// </summary>
         public static Java.Lang.String DELETE_SUFFIX { get { if (!_DELETE_SUFFIXReady) { _DELETE_SUFFIXContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "DELETE_SUFFIX"); _DELETE_SUFFIXReady = true; } return _DELETE_SUFFIXContent; } }
         private static Java.Lang.String _DELETE_SUFFIXContent = default;
         private static bool _DELETE_SUFFIXReady = false; // this is used because in case of generics 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/snapshot/Snapshots.html#SUFFIX"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/snapshot/Snapshots.html#SUFFIX"/>
         /// </summary>
         public static Java.Lang.String SUFFIX { get { if (!_SUFFIXReady) { _SUFFIXContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "SUFFIX"); _SUFFIXReady = true; } return _SUFFIXContent; } }
         private static Java.Lang.String _SUFFIXContent = default;
@@ -95,7 +95,7 @@ namespace Org.Apache.Kafka.Snapshot
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/snapshot/Snapshots.html#lastContainedLogTimestamp(org.apache.kafka.snapshot.RawSnapshotReader,org.apache.kafka.common.utils.LogContext)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/snapshot/Snapshots.html#lastContainedLogTimestamp(org.apache.kafka.snapshot.RawSnapshotReader,org.apache.kafka.common.utils.LogContext)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Snapshot.RawSnapshotReader"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Utils.LogContext"/></param>

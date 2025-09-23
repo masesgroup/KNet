@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
 {
     #region MirrorSourceConnector declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.0.0/org/apache/kafka/connect/mirror/MirrorSourceConnector.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.1.0/org/apache/kafka/connect/mirror/MirrorSourceConnector.html"/>
     /// </summary>
     public partial class MirrorSourceConnector : Org.Apache.Kafka.Connect.Source.SourceConnector
     {

@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
 {
     #region ProcessorWrapper declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/api/ProcessorWrapper.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/processor/api/ProcessorWrapper.html"/>
     /// </summary>
     public partial class ProcessorWrapper : Org.Apache.Kafka.Common.Configurable
     {
@@ -70,7 +70,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
 
     #region IProcessorWrapper
     /// <summary>
-    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/api/ProcessorWrapper.html"/>
+    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/processor/api/ProcessorWrapper.html"/>
     /// </summary>
     public partial interface IProcessorWrapper : Org.Apache.Kafka.Common.IConfigurable
     {
@@ -103,7 +103,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/api/ProcessorWrapper.html#asWrapped(org.apache.kafka.streams.processor.api.ProcessorSupplier)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/processor/api/ProcessorWrapper.html#asWrapped(org.apache.kafka.streams.processor.api.ProcessorSupplier)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Processor.Api.ProcessorSupplier"/></param>
         /// <typeparam name="KIn"></typeparam>
@@ -116,7 +116,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
             return SExecuteWithSignature<Org.Apache.Kafka.Streams.Processor.Api.WrappedProcessorSupplier<KIn, VIn, KOut, VOut>>(LocalBridgeClazz, "asWrapped", "(Lorg/apache/kafka/streams/processor/api/ProcessorSupplier;)Lorg/apache/kafka/streams/processor/api/WrappedProcessorSupplier;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/api/ProcessorWrapper.html#asWrappedFixedKey(org.apache.kafka.streams.processor.api.FixedKeyProcessorSupplier)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/processor/api/ProcessorWrapper.html#asWrappedFixedKey(org.apache.kafka.streams.processor.api.FixedKeyProcessorSupplier)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Processor.Api.FixedKeyProcessorSupplier"/></param>
         /// <typeparam name="KIn"></typeparam>
@@ -132,7 +132,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/api/ProcessorWrapper.html#wrapProcessorSupplier(java.lang.String,org.apache.kafka.streams.processor.api.ProcessorSupplier)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/processor/api/ProcessorWrapper.html#wrapProcessorSupplier(java.lang.String,org.apache.kafka.streams.processor.api.ProcessorSupplier)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Streams.Processor.Api.ProcessorSupplier"/></param>
@@ -146,7 +146,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.Processor.Api.WrappedProcessorSupplier<KIn, VIn, KOut, VOut>>("wrapProcessorSupplier", "(Ljava/lang/String;Lorg/apache/kafka/streams/processor/api/ProcessorSupplier;)Lorg/apache/kafka/streams/processor/api/WrappedProcessorSupplier;", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/api/ProcessorWrapper.html#wrapFixedKeyProcessorSupplier(java.lang.String,org.apache.kafka.streams.processor.api.FixedKeyProcessorSupplier)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/processor/api/ProcessorWrapper.html#wrapFixedKeyProcessorSupplier(java.lang.String,org.apache.kafka.streams.processor.api.FixedKeyProcessorSupplier)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Streams.Processor.Api.FixedKeyProcessorSupplier"/></param>
@@ -159,7 +159,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.Processor.Api.WrappedFixedKeyProcessorSupplier<KIn, VIn, VOut>>("wrapFixedKeyProcessorSupplier", "(Ljava/lang/String;Lorg/apache/kafka/streams/processor/api/FixedKeyProcessorSupplier;)Lorg/apache/kafka/streams/processor/api/WrappedFixedKeyProcessorSupplier;", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/api/ProcessorWrapper.html#configure(java.util.Map)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/processor/api/ProcessorWrapper.html#configure(java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         public void Configure(Java.Util.Map<Java.Lang.String, object> arg0)

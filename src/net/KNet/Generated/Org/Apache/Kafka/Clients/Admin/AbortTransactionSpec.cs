@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 {
     #region AbortTransactionSpec declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/AbortTransactionSpec.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/admin/AbortTransactionSpec.html"/>
     /// </summary>
     public partial class AbortTransactionSpec : MASES.JCOBridge.C2JBridge.JVMBridgeBase<AbortTransactionSpec>
     {
@@ -71,7 +71,7 @@ namespace Org.Apache.Kafka.Clients.Admin
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/AbortTransactionSpec.html#%3Cinit%3E(org.apache.kafka.common.TopicPartition,long,short,int)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/admin/AbortTransactionSpec.html#%3Cinit%3E(org.apache.kafka.common.TopicPartition,long,short,int)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.TopicPartition"/></param>
         /// <param name="arg1"><see cref="long"/></param>
@@ -98,7 +98,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/AbortTransactionSpec.html#coordinatorEpoch()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/admin/AbortTransactionSpec.html#coordinatorEpoch()"/>
         /// </summary>
         /// <returns><see cref="int"/></returns>
         public int CoordinatorEpoch()
@@ -106,7 +106,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<int>("coordinatorEpoch", "()I");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/AbortTransactionSpec.html#producerId()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/admin/AbortTransactionSpec.html#producerId()"/>
         /// </summary>
         /// <returns><see cref="long"/></returns>
         public long ProducerId()
@@ -114,7 +114,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<long>("producerId", "()J");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/AbortTransactionSpec.html#topicPartition()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/admin/AbortTransactionSpec.html#topicPartition()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.TopicPartition"/></returns>
         public Org.Apache.Kafka.Common.TopicPartition TopicPartition()
@@ -122,7 +122,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<Org.Apache.Kafka.Common.TopicPartition>("topicPartition", "()Lorg/apache/kafka/common/TopicPartition;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/AbortTransactionSpec.html#producerEpoch()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/admin/AbortTransactionSpec.html#producerEpoch()"/>
         /// </summary>
         /// <returns><see cref="short"/></returns>
         public short ProducerEpoch()

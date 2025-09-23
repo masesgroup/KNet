@@ -27,7 +27,7 @@ namespace Kafka.Admin
 {
     #region ConfigCommand declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/4.0.0/kafka/admin/ConfigCommand.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/4.1.0/kafka/admin/ConfigCommand.html"/>
     /// </summary>
     public partial class ConfigCommand : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ConfigCommand>, MASES.JCOBridge.C2JBridge.IJVMBridgeMain
     {
@@ -64,7 +64,7 @@ namespace Kafka.Admin
         // TODO: complete the class
         #region ConfigCommandOptions declaration
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/4.0.0/kafka/admin/ConfigCommand.ConfigCommandOptions.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/4.1.0/kafka/admin/ConfigCommand.ConfigCommandOptions.html"/>
         /// </summary>
         public partial class ConfigCommandOptions : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ConfigCommandOptions>
         {
@@ -124,7 +124,7 @@ namespace Kafka.Admin
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/4.0.0/kafka/admin/ConfigCommand.html#isDebugEnabled()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/4.1.0/kafka/admin/ConfigCommand.html#isDebugEnabled()"/>
         /// </summary>
         /// <returns><see cref="bool"/></returns>
         public static bool IsDebugEnabled()
@@ -132,7 +132,7 @@ namespace Kafka.Admin
             return SExecuteWithSignature<bool>(LocalBridgeClazz, "isDebugEnabled", "()Z");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/4.0.0/kafka/admin/ConfigCommand.html#isTraceEnabled()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/4.1.0/kafka/admin/ConfigCommand.html#isTraceEnabled()"/>
         /// </summary>
         /// <returns><see cref="bool"/></returns>
         public static bool IsTraceEnabled()
@@ -140,7 +140,7 @@ namespace Kafka.Admin
             return SExecuteWithSignature<bool>(LocalBridgeClazz, "isTraceEnabled", "()Z");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/4.0.0/kafka/admin/ConfigCommand.html#isValidIpEntity(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/4.1.0/kafka/admin/ConfigCommand.html#isValidIpEntity(java.lang.String)"/>
         /// </summary>
         /// <param name="ip"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="bool"/></returns>
@@ -149,7 +149,7 @@ namespace Kafka.Admin
             return SExecuteWithSignature<bool>(LocalBridgeClazz, "isValidIpEntity", "(Ljava/lang/String;)Z", ip);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/4.0.0/kafka/admin/ConfigCommand.html#BrokerLoggerConfigType()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/4.1.0/kafka/admin/ConfigCommand.html#BrokerLoggerConfigType()"/>
         /// </summary>
         /// <returns><see cref="Java.Lang.String"/></returns>
         public static Java.Lang.String BrokerLoggerConfigType()
@@ -157,7 +157,7 @@ namespace Kafka.Admin
             return SExecuteWithSignature<Java.Lang.String>(LocalBridgeClazz, "BrokerLoggerConfigType", "()Ljava/lang/String;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/4.0.0/kafka/admin/ConfigCommand.html#parseConfigsToBeAdded(kafka.admin.ConfigCommand.ConfigCommandOptions)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/4.1.0/kafka/admin/ConfigCommand.html#parseConfigsToBeAdded(kafka.admin.ConfigCommand.ConfigCommandOptions)"/>
         /// </summary>
         /// <param name="opts"><see cref="Kafka.Admin.ConfigCommand.ConfigCommandOptions"/></param>
         /// <returns><see cref="Java.Util.Properties"/></returns>
@@ -166,7 +166,7 @@ namespace Kafka.Admin
             return SExecuteWithSignature<Java.Util.Properties>(LocalBridgeClazz, "parseConfigsToBeAdded", "(Lkafka/admin/ConfigCommand$ConfigCommandOptions;)Ljava/util/Properties;", opts);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/4.0.0/kafka/admin/ConfigCommand.html#alterConfig(org.apache.kafka.clients.admin.Admin,kafka.admin.ConfigCommand.ConfigCommandOptions)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/4.1.0/kafka/admin/ConfigCommand.html#alterConfig(org.apache.kafka.clients.admin.Admin,kafka.admin.ConfigCommand.ConfigCommandOptions)"/>
         /// </summary>
         /// <param name="adminClient"><see cref="Org.Apache.Kafka.Clients.Admin.Admin"/></param>
         /// <param name="opts"><see cref="Kafka.Admin.ConfigCommand.ConfigCommandOptions"/></param>
@@ -175,7 +175,7 @@ namespace Kafka.Admin
             SExecuteWithSignature(LocalBridgeClazz, "alterConfig", "(Lorg/apache/kafka/clients/admin/Admin;Lkafka/admin/ConfigCommand$ConfigCommandOptions;)V", adminClient, opts);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/4.0.0/kafka/admin/ConfigCommand.html#describeConfig(org.apache.kafka.clients.admin.Admin,kafka.admin.ConfigCommand.ConfigCommandOptions)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/4.1.0/kafka/admin/ConfigCommand.html#describeConfig(org.apache.kafka.clients.admin.Admin,kafka.admin.ConfigCommand.ConfigCommandOptions)"/>
         /// </summary>
         /// <param name="adminClient"><see cref="Org.Apache.Kafka.Clients.Admin.Admin"/></param>
         /// <param name="opts"><see cref="Kafka.Admin.ConfigCommand.ConfigCommandOptions"/></param>
@@ -184,7 +184,7 @@ namespace Kafka.Admin
             SExecuteWithSignature(LocalBridgeClazz, "describeConfig", "(Lorg/apache/kafka/clients/admin/Admin;Lkafka/admin/ConfigCommand$ConfigCommandOptions;)V", adminClient, opts);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/4.0.0/kafka/admin/ConfigCommand.html#main(java.lang.String[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/4.1.0/kafka/admin/ConfigCommand.html#main(java.lang.String[])"/>
         /// </summary>
         /// <param name="args"><see cref="Java.Lang.String"/></param>
         public static void Main(Java.Lang.String[] args)
@@ -204,7 +204,7 @@ namespace Kafka.Admin
         {
             #region Constructors
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/4.0.0/kafka/admin/ConfigCommand.ConfigCommandOptions.html#%3Cinit%3E(java.lang.String[])"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/4.1.0/kafka/admin/ConfigCommand.ConfigCommandOptions.html#%3Cinit%3E(java.lang.String[])"/>
             /// </summary>
             /// <param name="args"><see cref="Java.Lang.String"/></param>
             public ConfigCommandOptions(Java.Lang.String[] args)
@@ -228,7 +228,7 @@ namespace Kafka.Admin
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/4.0.0/kafka/admin/ConfigCommand.ConfigCommandOptions.html#checkArgs()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/4.1.0/kafka/admin/ConfigCommand.ConfigCommandOptions.html#checkArgs()"/>
             /// </summary>
             public void CheckArgs()
             {

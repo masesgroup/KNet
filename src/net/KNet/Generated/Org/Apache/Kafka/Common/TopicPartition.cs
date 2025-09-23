@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common
 {
     #region TopicPartition declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/TopicPartition.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/TopicPartition.html"/>
     /// </summary>
     public partial class TopicPartition : Java.Io.Serializable
     {
@@ -71,7 +71,7 @@ namespace Org.Apache.Kafka.Common
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/TopicPartition.html#%3Cinit%3E(java.lang.String,int)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/TopicPartition.html#%3Cinit%3E(java.lang.String,int)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="int"/></param>
@@ -96,7 +96,7 @@ namespace Org.Apache.Kafka.Common
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/TopicPartition.html#partition()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/TopicPartition.html#partition()"/>
         /// </summary>
         /// <returns><see cref="int"/></returns>
         public int Partition()
@@ -104,7 +104,7 @@ namespace Org.Apache.Kafka.Common
             return IExecuteWithSignature<int>("partition", "()I");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/TopicPartition.html#topic()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/TopicPartition.html#topic()"/>
         /// </summary>
         /// <returns><see cref="Java.Lang.String"/></returns>
         public Java.Lang.String Topic()

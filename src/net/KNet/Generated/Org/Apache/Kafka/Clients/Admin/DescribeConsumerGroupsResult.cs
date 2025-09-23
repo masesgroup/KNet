@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 {
     #region DescribeConsumerGroupsResult declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/DescribeConsumerGroupsResult.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/admin/DescribeConsumerGroupsResult.html"/>
     /// </summary>
     public partial class DescribeConsumerGroupsResult : MASES.JCOBridge.C2JBridge.JVMBridgeBase<DescribeConsumerGroupsResult>
     {
@@ -71,7 +71,7 @@ namespace Org.Apache.Kafka.Clients.Admin
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/DescribeConsumerGroupsResult.html#%3Cinit%3E(java.util.Map)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/admin/DescribeConsumerGroupsResult.html#%3Cinit%3E(java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         public DescribeConsumerGroupsResult(Java.Util.Map<Java.Lang.String, Org.Apache.Kafka.Common.KafkaFuture<Org.Apache.Kafka.Clients.Admin.ConsumerGroupDescription>> arg0)
@@ -95,7 +95,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/DescribeConsumerGroupsResult.html#describedGroups()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/admin/DescribeConsumerGroupsResult.html#describedGroups()"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Map"/></returns>
         public Java.Util.Map<Java.Lang.String, Org.Apache.Kafka.Common.KafkaFuture<Org.Apache.Kafka.Clients.Admin.ConsumerGroupDescription>> DescribedGroups()
@@ -103,7 +103,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<Java.Util.Map<Java.Lang.String, Org.Apache.Kafka.Common.KafkaFuture<Org.Apache.Kafka.Clients.Admin.ConsumerGroupDescription>>>("describedGroups", "()Ljava/util/Map;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/DescribeConsumerGroupsResult.html#all()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/admin/DescribeConsumerGroupsResult.html#all()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.KafkaFuture"/></returns>
         public Org.Apache.Kafka.Common.KafkaFuture<Java.Util.Map<Java.Lang.String, Org.Apache.Kafka.Clients.Admin.ConsumerGroupDescription>> All()

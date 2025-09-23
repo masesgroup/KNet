@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common.Config
 {
     #region ConfigData declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/ConfigData.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/config/ConfigData.html"/>
     /// </summary>
     public partial class ConfigData : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ConfigData>
     {
@@ -71,7 +71,7 @@ namespace Org.Apache.Kafka.Common.Config
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/ConfigData.html#%3Cinit%3E(java.util.Map,java.lang.Long)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/config/ConfigData.html#%3Cinit%3E(java.util.Map,java.lang.Long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <param name="arg1"><see cref="Java.Lang.Long"/></param>
@@ -80,7 +80,7 @@ namespace Org.Apache.Kafka.Common.Config
         {
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/ConfigData.html#%3Cinit%3E(java.util.Map)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/config/ConfigData.html#%3Cinit%3E(java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         public ConfigData(Java.Util.Map<Java.Lang.String, Java.Lang.String> arg0)
@@ -104,7 +104,7 @@ namespace Org.Apache.Kafka.Common.Config
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/ConfigData.html#ttl()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/config/ConfigData.html#ttl()"/>
         /// </summary>
         /// <returns><see cref="Java.Lang.Long"/></returns>
         public Java.Lang.Long Ttl()
@@ -112,7 +112,7 @@ namespace Org.Apache.Kafka.Common.Config
             return IExecuteWithSignature<Java.Lang.Long>("ttl", "()Ljava/lang/Long;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/ConfigData.html#data()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/config/ConfigData.html#data()"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Map"/></returns>
         public Java.Util.Map<Java.Lang.String, Java.Lang.String> Data()

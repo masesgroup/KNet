@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Streams.State
 {
     #region KeyValueStore declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/state/KeyValueStore.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/state/KeyValueStore.html"/>
     /// </summary>
     public partial class KeyValueStore : MASES.JCOBridge.C2JBridge.JVMBridgeBase<KeyValueStore>
     {
@@ -70,7 +70,7 @@ namespace Org.Apache.Kafka.Streams.State
 
     #region KeyValueStore<K, V> declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/state/KeyValueStore.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/state/KeyValueStore.html"/>
     /// </summary>
     /// <typeparam name="K"></typeparam>
     /// <typeparam name="V"></typeparam>
@@ -142,7 +142,7 @@ namespace Org.Apache.Kafka.Streams.State
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/state/KeyValueStore.html#delete(java.lang.Object)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/state/KeyValueStore.html#delete(java.lang.Object)"/>
         /// </summary>
         /// <param name="arg0"><see cref="object"/></param>
         /// <returns><see cref="object"/></returns>
@@ -151,7 +151,7 @@ namespace Org.Apache.Kafka.Streams.State
             return IExecuteWithSignature("delete", "(Ljava/lang/Object;)Ljava/lang/Object;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/state/KeyValueStore.html#putIfAbsent(java.lang.Object,java.lang.Object)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/state/KeyValueStore.html#putIfAbsent(java.lang.Object,java.lang.Object)"/>
         /// </summary>
         /// <param name="arg0"><see cref="object"/></param>
         /// <param name="arg1"><see cref="object"/></param>
@@ -161,7 +161,7 @@ namespace Org.Apache.Kafka.Streams.State
             return IExecuteWithSignature("putIfAbsent", "(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/state/KeyValueStore.html#put(java.lang.Object,java.lang.Object)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/state/KeyValueStore.html#put(java.lang.Object,java.lang.Object)"/>
         /// </summary>
         /// <param name="arg0"><see cref="object"/></param>
         /// <param name="arg1"><see cref="object"/></param>
@@ -170,7 +170,7 @@ namespace Org.Apache.Kafka.Streams.State
             IExecuteWithSignature("put", "(Ljava/lang/Object;Ljava/lang/Object;)V", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/state/KeyValueStore.html#putAll(java.util.List)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/state/KeyValueStore.html#putAll(java.util.List)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.List"/></param>
         public void PutAll(Java.Util.List arg0)
@@ -190,7 +190,7 @@ namespace Org.Apache.Kafka.Streams.State
 
     #region IKeyValueStore<K, V>
     /// <summary>
-    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/state/KeyValueStore.html"/>
+    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/state/KeyValueStore.html"/>
     /// </summary>
     public partial interface IKeyValueStore<K, V>
     {
@@ -239,7 +239,7 @@ namespace Org.Apache.Kafka.Streams.State
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/state/KeyValueStore.html#delete(java.lang.Object)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/state/KeyValueStore.html#delete(java.lang.Object)"/>
         /// </summary>
         /// <param name="arg0"><typeparamref name="K"/></param>
         /// <returns><typeparamref name="V"/></returns>
@@ -248,7 +248,7 @@ namespace Org.Apache.Kafka.Streams.State
             return IExecuteWithSignature<V>("delete", "(Ljava/lang/Object;)Ljava/lang/Object;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/state/KeyValueStore.html#putIfAbsent(java.lang.Object,java.lang.Object)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/state/KeyValueStore.html#putIfAbsent(java.lang.Object,java.lang.Object)"/>
         /// </summary>
         /// <param name="arg0"><typeparamref name="K"/></param>
         /// <param name="arg1"><typeparamref name="V"/></param>
@@ -258,7 +258,7 @@ namespace Org.Apache.Kafka.Streams.State
             return IExecuteWithSignature<V>("putIfAbsent", "(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/state/KeyValueStore.html#put(java.lang.Object,java.lang.Object)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/state/KeyValueStore.html#put(java.lang.Object,java.lang.Object)"/>
         /// </summary>
         /// <param name="arg0"><typeparamref name="K"/></param>
         /// <param name="arg1"><typeparamref name="V"/></param>
@@ -267,7 +267,7 @@ namespace Org.Apache.Kafka.Streams.State
             IExecuteWithSignature("put", "(Ljava/lang/Object;Ljava/lang/Object;)V", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/state/KeyValueStore.html#putAll(java.util.List)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/state/KeyValueStore.html#putAll(java.util.List)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.List"/></param>
         public void PutAll(Java.Util.List<Org.Apache.Kafka.Streams.KeyValue<K, V>> arg0)

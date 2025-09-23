@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common.Errors
 {
     #region PositionOutOfRangeException declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/errors/PositionOutOfRangeException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/errors/PositionOutOfRangeException.html"/>
     /// </summary>
     public partial class PositionOutOfRangeException : Org.Apache.Kafka.Common.Errors.ApiException
     {

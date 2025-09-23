@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common.Metrics.Stats
 {
     #region Percentiles declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/metrics/stats/Percentiles.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/metrics/stats/Percentiles.html"/>
     /// </summary>
     public partial class Percentiles : Org.Apache.Kafka.Common.Metrics.Stats.SampledStat
     {
@@ -64,7 +64,7 @@ namespace Org.Apache.Kafka.Common.Metrics.Stats
         // TODO: complete the class
         #region BucketSizing declaration
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/metrics/stats/Percentiles.BucketSizing.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/metrics/stats/Percentiles.BucketSizing.html"/>
         /// </summary>
         public partial class BucketSizing : Java.Lang.Enum<Org.Apache.Kafka.Common.Metrics.Stats.Percentiles.BucketSizing>
         {
@@ -112,7 +112,7 @@ namespace Org.Apache.Kafka.Common.Metrics.Stats
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/metrics/stats/Percentiles.html#%3Cinit%3E(int,double,double,org.apache.kafka.common.metrics.stats.Percentiles.BucketSizing,org.apache.kafka.common.metrics.stats.Percentile...)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/metrics/stats/Percentiles.html#%3Cinit%3E(int,double,double,org.apache.kafka.common.metrics.stats.Percentiles.BucketSizing,org.apache.kafka.common.metrics.stats.Percentile...)"/>
         /// </summary>
         /// <param name="arg0"><see cref="int"/></param>
         /// <param name="arg1"><see cref="double"/></param>
@@ -124,7 +124,7 @@ namespace Org.Apache.Kafka.Common.Metrics.Stats
         {
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/metrics/stats/Percentiles.html#%3Cinit%3E(int,double,org.apache.kafka.common.metrics.stats.Percentiles.BucketSizing,org.apache.kafka.common.metrics.stats.Percentile...)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/metrics/stats/Percentiles.html#%3Cinit%3E(int,double,org.apache.kafka.common.metrics.stats.Percentiles.BucketSizing,org.apache.kafka.common.metrics.stats.Percentile...)"/>
         /// </summary>
         /// <param name="arg0"><see cref="int"/></param>
         /// <param name="arg1"><see cref="double"/></param>
@@ -155,7 +155,7 @@ namespace Org.Apache.Kafka.Common.Metrics.Stats
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/metrics/stats/Percentiles.html#value(org.apache.kafka.common.metrics.MetricConfig,long,double)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/metrics/stats/Percentiles.html#value(org.apache.kafka.common.metrics.MetricConfig,long,double)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Metrics.MetricConfig"/></param>
         /// <param name="arg1"><see cref="long"/></param>
@@ -166,7 +166,7 @@ namespace Org.Apache.Kafka.Common.Metrics.Stats
             return IExecuteWithSignature<double>("value", "(Lorg/apache/kafka/common/metrics/MetricConfig;JD)D", arg0, arg1, arg2);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/metrics/stats/Percentiles.html#stats()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/metrics/stats/Percentiles.html#stats()"/>
         /// </summary>
         /// <returns><see cref="Java.Util.List"/></returns>
         public Java.Util.List<Org.Apache.Kafka.Common.Metrics.CompoundStat.NamedMeasurable> Stats()
@@ -190,13 +190,13 @@ namespace Org.Apache.Kafka.Common.Metrics.Stats
 
             #region Fields
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/metrics/stats/Percentiles.BucketSizing.html#CONSTANT"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/metrics/stats/Percentiles.BucketSizing.html#CONSTANT"/>
             /// </summary>
             public static Org.Apache.Kafka.Common.Metrics.Stats.Percentiles.BucketSizing CONSTANT { get { if (!_CONSTANTReady) { _CONSTANTContent = SGetField<Org.Apache.Kafka.Common.Metrics.Stats.Percentiles.BucketSizing>(LocalBridgeClazz, "CONSTANT"); _CONSTANTReady = true; } return _CONSTANTContent; } }
             private static Org.Apache.Kafka.Common.Metrics.Stats.Percentiles.BucketSizing _CONSTANTContent = default;
             private static bool _CONSTANTReady = false; // this is used because in case of generics 
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/metrics/stats/Percentiles.BucketSizing.html#LINEAR"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/metrics/stats/Percentiles.BucketSizing.html#LINEAR"/>
             /// </summary>
             public static Org.Apache.Kafka.Common.Metrics.Stats.Percentiles.BucketSizing LINEAR { get { if (!_LINEARReady) { _LINEARContent = SGetField<Org.Apache.Kafka.Common.Metrics.Stats.Percentiles.BucketSizing>(LocalBridgeClazz, "LINEAR"); _LINEARReady = true; } return _LINEARContent; } }
             private static Org.Apache.Kafka.Common.Metrics.Stats.Percentiles.BucketSizing _LINEARContent = default;
@@ -206,7 +206,7 @@ namespace Org.Apache.Kafka.Common.Metrics.Stats
 
             #region Static methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/metrics/stats/Percentiles.BucketSizing.html#valueOf(java.lang.String)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/metrics/stats/Percentiles.BucketSizing.html#valueOf(java.lang.String)"/>
             /// </summary>
             /// <param name="arg0"><see cref="Java.Lang.String"/></param>
             /// <returns><see cref="Org.Apache.Kafka.Common.Metrics.Stats.Percentiles.BucketSizing"/></returns>
@@ -215,7 +215,7 @@ namespace Org.Apache.Kafka.Common.Metrics.Stats
                 return SExecuteWithSignature<Org.Apache.Kafka.Common.Metrics.Stats.Percentiles.BucketSizing>(LocalBridgeClazz, "valueOf", "(Ljava/lang/String;)Lorg/apache/kafka/common/metrics/stats/Percentiles$BucketSizing;", arg0);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/metrics/stats/Percentiles.BucketSizing.html#values()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/metrics/stats/Percentiles.BucketSizing.html#values()"/>
             /// </summary>
             /// <returns><see cref="Org.Apache.Kafka.Common.Metrics.Stats.Percentiles.BucketSizing"/></returns>
             public static Org.Apache.Kafka.Common.Metrics.Stats.Percentiles.BucketSizing[] Values()

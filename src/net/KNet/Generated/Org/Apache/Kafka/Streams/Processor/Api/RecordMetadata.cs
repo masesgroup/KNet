@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
 {
     #region RecordMetadata declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/api/RecordMetadata.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/processor/api/RecordMetadata.html"/>
     /// </summary>
     public partial class RecordMetadata : MASES.JCOBridge.C2JBridge.JVMBridgeBase<RecordMetadata>
     {
@@ -70,7 +70,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
 
     #region IRecordMetadata
     /// <summary>
-    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/api/RecordMetadata.html"/>
+    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/processor/api/RecordMetadata.html"/>
     /// </summary>
     public partial interface IRecordMetadata
     {
@@ -107,7 +107,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/api/RecordMetadata.html#partition()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/processor/api/RecordMetadata.html#partition()"/>
         /// </summary>
         /// <returns><see cref="int"/></returns>
         public int Partition()
@@ -115,7 +115,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
             return IExecuteWithSignature<int>("partition", "()I");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/api/RecordMetadata.html#topic()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/processor/api/RecordMetadata.html#topic()"/>
         /// </summary>
         /// <returns><see cref="Java.Lang.String"/></returns>
         public Java.Lang.String Topic()
@@ -123,7 +123,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
             return IExecuteWithSignature<Java.Lang.String>("topic", "()Ljava/lang/String;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/api/RecordMetadata.html#offset()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/processor/api/RecordMetadata.html#offset()"/>
         /// </summary>
         /// <returns><see cref="long"/></returns>
         public long Offset()

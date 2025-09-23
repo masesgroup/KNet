@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Tools
 {
     #region AclCommand declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/AclCommand.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.0/org/apache/kafka/tools/AclCommand.html"/>
     /// </summary>
     public partial class AclCommand : MASES.JCOBridge.C2JBridge.JVMBridgeBase<AclCommand>, MASES.JCOBridge.C2JBridge.IJVMBridgeMain
     {
@@ -64,7 +64,7 @@ namespace Org.Apache.Kafka.Tools
         // TODO: complete the class
         #region AclCommandOptions declaration
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/AclCommand.AclCommandOptions.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.0/org/apache/kafka/tools/AclCommand.AclCommandOptions.html"/>
         /// </summary>
         public partial class AclCommandOptions : MASES.JCOBridge.C2JBridge.JVMBridgeBase<AclCommandOptions>
         {
@@ -124,7 +124,7 @@ namespace Org.Apache.Kafka.Tools
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/AclCommand.html#main(java.lang.String[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.0/org/apache/kafka/tools/AclCommand.html#main(java.lang.String[])"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         public static void Main(Java.Lang.String[] arg0)
@@ -144,7 +144,7 @@ namespace Org.Apache.Kafka.Tools
         {
             #region Constructors
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/AclCommand.AclCommandOptions.html#%3Cinit%3E(java.lang.String[])"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.0/org/apache/kafka/tools/AclCommand.AclCommandOptions.html#%3Cinit%3E(java.lang.String[])"/>
             /// </summary>
             /// <param name="arg0"><see cref="Java.Lang.String"/></param>
             public AclCommandOptions(Java.Lang.String[] arg0)

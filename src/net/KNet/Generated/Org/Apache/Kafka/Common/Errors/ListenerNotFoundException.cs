@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common.Errors
 {
     #region ListenerNotFoundException declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/errors/ListenerNotFoundException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/errors/ListenerNotFoundException.html"/>
     /// </summary>
     public partial class ListenerNotFoundException : Org.Apache.Kafka.Common.Errors.InvalidMetadataException
     {

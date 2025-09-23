@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Streams.Processor
 {
     #region WallclockTimestampExtractor declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/WallclockTimestampExtractor.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/processor/WallclockTimestampExtractor.html"/>
     /// </summary>
     public partial class WallclockTimestampExtractor : MASES.JCOBridge.C2JBridge.JVMBridgeBase<WallclockTimestampExtractor>
     {
@@ -91,7 +91,7 @@ namespace Org.Apache.Kafka.Streams.Processor
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/WallclockTimestampExtractor.html#extract(org.apache.kafka.clients.consumer.ConsumerRecord,long)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/processor/WallclockTimestampExtractor.html#extract(org.apache.kafka.clients.consumer.ConsumerRecord,long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Clients.Consumer.ConsumerRecord"/></param>
         /// <param name="arg1"><see cref="long"/></param>

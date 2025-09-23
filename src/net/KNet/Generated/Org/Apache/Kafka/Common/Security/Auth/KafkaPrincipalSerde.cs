@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common.Security.Auth
 {
     #region KafkaPrincipalSerde declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/security/auth/KafkaPrincipalSerde.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/security/auth/KafkaPrincipalSerde.html"/>
     /// </summary>
     public partial class KafkaPrincipalSerde : MASES.JCOBridge.C2JBridge.JVMBridgeBase<KafkaPrincipalSerde>
     {
@@ -70,7 +70,7 @@ namespace Org.Apache.Kafka.Common.Security.Auth
 
     #region IKafkaPrincipalSerde
     /// <summary>
-    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/security/auth/KafkaPrincipalSerde.html"/>
+    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/security/auth/KafkaPrincipalSerde.html"/>
     /// </summary>
     public partial interface IKafkaPrincipalSerde
     {
@@ -107,7 +107,7 @@ namespace Org.Apache.Kafka.Common.Security.Auth
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/security/auth/KafkaPrincipalSerde.html#serialize(org.apache.kafka.common.security.auth.KafkaPrincipal)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/security/auth/KafkaPrincipalSerde.html#serialize(org.apache.kafka.common.security.auth.KafkaPrincipal)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Security.Auth.KafkaPrincipal"/></param>
         /// <returns><see cref="byte"/></returns>
@@ -117,7 +117,7 @@ namespace Org.Apache.Kafka.Common.Security.Auth
             return IExecuteWithSignatureArray<byte>("serialize", "(Lorg/apache/kafka/common/security/auth/KafkaPrincipal;)[B", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/security/auth/KafkaPrincipalSerde.html#deserialize(byte[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/security/auth/KafkaPrincipalSerde.html#deserialize(byte[])"/>
         /// </summary>
         /// <param name="arg0"><see cref="byte"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.Security.Auth.KafkaPrincipal"/></returns>

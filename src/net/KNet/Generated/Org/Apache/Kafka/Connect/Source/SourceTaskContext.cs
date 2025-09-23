@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Connect.Source
 {
     #region SourceTaskContext declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.0.0/org/apache/kafka/connect/source/SourceTaskContext.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.1.0/org/apache/kafka/connect/source/SourceTaskContext.html"/>
     /// </summary>
     public partial class SourceTaskContext : MASES.JCOBridge.C2JBridge.JVMBridgeBase<SourceTaskContext>
     {
@@ -70,7 +70,7 @@ namespace Org.Apache.Kafka.Connect.Source
 
     #region ISourceTaskContext
     /// <summary>
-    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.0.0/org/apache/kafka/connect/source/SourceTaskContext.html"/>
+    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.1.0/org/apache/kafka/connect/source/SourceTaskContext.html"/>
     /// </summary>
     public partial interface ISourceTaskContext
     {
@@ -107,7 +107,7 @@ namespace Org.Apache.Kafka.Connect.Source
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.0.0/org/apache/kafka/connect/source/SourceTaskContext.html#configs()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.1.0/org/apache/kafka/connect/source/SourceTaskContext.html#configs()"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Map"/></returns>
         public Java.Util.Map<Java.Lang.String, Java.Lang.String> Configs()
@@ -115,7 +115,7 @@ namespace Org.Apache.Kafka.Connect.Source
             return IExecuteWithSignature<Java.Util.Map<Java.Lang.String, Java.Lang.String>>("configs", "()Ljava/util/Map;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.0.0/org/apache/kafka/connect/source/SourceTaskContext.html#pluginMetrics()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.1.0/org/apache/kafka/connect/source/SourceTaskContext.html#pluginMetrics()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.Metrics.PluginMetrics"/></returns>
         public Org.Apache.Kafka.Common.Metrics.PluginMetrics PluginMetrics()
@@ -123,7 +123,7 @@ namespace Org.Apache.Kafka.Connect.Source
             return IExecuteWithSignature<Org.Apache.Kafka.Common.Metrics.PluginMetrics>("pluginMetrics", "()Lorg/apache/kafka/common/metrics/PluginMetrics;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.0.0/org/apache/kafka/connect/source/SourceTaskContext.html#transactionContext()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.1.0/org/apache/kafka/connect/source/SourceTaskContext.html#transactionContext()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Connect.Source.TransactionContext"/></returns>
         public Org.Apache.Kafka.Connect.Source.TransactionContext TransactionContext()

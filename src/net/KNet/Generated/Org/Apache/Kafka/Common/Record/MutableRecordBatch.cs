@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common.Record
 {
     #region MutableRecordBatch declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/MutableRecordBatch.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/record/MutableRecordBatch.html"/>
     /// </summary>
     public partial class MutableRecordBatch : Org.Apache.Kafka.Common.Record.RecordBatch
     {
@@ -70,7 +70,7 @@ namespace Org.Apache.Kafka.Common.Record
 
     #region IMutableRecordBatch
     /// <summary>
-    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/MutableRecordBatch.html"/>
+    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/record/MutableRecordBatch.html"/>
     /// </summary>
     public partial interface IMutableRecordBatch : Org.Apache.Kafka.Common.Record.IRecordBatch
     {
@@ -107,7 +107,7 @@ namespace Org.Apache.Kafka.Common.Record
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/MutableRecordBatch.html#skipKeyValueIterator(org.apache.kafka.common.utils.BufferSupplier)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/record/MutableRecordBatch.html#skipKeyValueIterator(org.apache.kafka.common.utils.BufferSupplier)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Utils.BufferSupplier"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.Utils.CloseableIterator"/></returns>
@@ -116,7 +116,7 @@ namespace Org.Apache.Kafka.Common.Record
             return IExecuteWithSignature<Org.Apache.Kafka.Common.Utils.CloseableIterator<Org.Apache.Kafka.Common.Record.Record>>("skipKeyValueIterator", "(Lorg/apache/kafka/common/utils/BufferSupplier;)Lorg/apache/kafka/common/utils/CloseableIterator;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/MutableRecordBatch.html#setLastOffset(long)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/record/MutableRecordBatch.html#setLastOffset(long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="long"/></param>
         public void SetLastOffset(long arg0)
@@ -124,7 +124,7 @@ namespace Org.Apache.Kafka.Common.Record
             IExecuteWithSignature("setLastOffset", "(J)V", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/MutableRecordBatch.html#setMaxTimestamp(org.apache.kafka.common.record.TimestampType,long)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/record/MutableRecordBatch.html#setMaxTimestamp(org.apache.kafka.common.record.TimestampType,long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Record.TimestampType"/></param>
         /// <param name="arg1"><see cref="long"/></param>
@@ -133,7 +133,7 @@ namespace Org.Apache.Kafka.Common.Record
             IExecuteWithSignature("setMaxTimestamp", "(Lorg/apache/kafka/common/record/TimestampType;J)V", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/MutableRecordBatch.html#setPartitionLeaderEpoch(int)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/record/MutableRecordBatch.html#setPartitionLeaderEpoch(int)"/>
         /// </summary>
         /// <param name="arg0"><see cref="int"/></param>
         public void SetPartitionLeaderEpoch(int arg0)
@@ -141,7 +141,7 @@ namespace Org.Apache.Kafka.Common.Record
             IExecuteWithSignature("setPartitionLeaderEpoch", "(I)V", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/record/MutableRecordBatch.html#writeTo(org.apache.kafka.common.utils.ByteBufferOutputStream)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/record/MutableRecordBatch.html#writeTo(org.apache.kafka.common.utils.ByteBufferOutputStream)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Utils.ByteBufferOutputStream"/></param>
         public void WriteTo(Org.Apache.Kafka.Common.Utils.ByteBufferOutputStream arg0)

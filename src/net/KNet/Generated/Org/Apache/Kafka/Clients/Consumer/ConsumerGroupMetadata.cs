@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
 {
     #region ConsumerGroupMetadata declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/ConsumerGroupMetadata.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/consumer/ConsumerGroupMetadata.html"/>
     /// </summary>
     public partial class ConsumerGroupMetadata : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ConsumerGroupMetadata>
     {
@@ -71,7 +71,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/ConsumerGroupMetadata.html#%3Cinit%3E(java.lang.String,int,java.lang.String,java.util.Optional)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/consumer/ConsumerGroupMetadata.html#%3Cinit%3E(java.lang.String,int,java.lang.String,java.util.Optional)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="int"/></param>
@@ -82,7 +82,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
         {
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/ConsumerGroupMetadata.html#%3Cinit%3E(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/consumer/ConsumerGroupMetadata.html#%3Cinit%3E(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         public ConsumerGroupMetadata(Java.Lang.String arg0)
@@ -106,7 +106,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/ConsumerGroupMetadata.html#generationId()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/consumer/ConsumerGroupMetadata.html#generationId()"/>
         /// </summary>
         /// <returns><see cref="int"/></returns>
         public int GenerationId()
@@ -114,7 +114,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
             return IExecuteWithSignature<int>("generationId", "()I");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/ConsumerGroupMetadata.html#groupId()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/consumer/ConsumerGroupMetadata.html#groupId()"/>
         /// </summary>
         /// <returns><see cref="Java.Lang.String"/></returns>
         public Java.Lang.String GroupId()
@@ -122,7 +122,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
             return IExecuteWithSignature<Java.Lang.String>("groupId", "()Ljava/lang/String;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/ConsumerGroupMetadata.html#memberId()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/consumer/ConsumerGroupMetadata.html#memberId()"/>
         /// </summary>
         /// <returns><see cref="Java.Lang.String"/></returns>
         public Java.Lang.String MemberId()
@@ -130,7 +130,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
             return IExecuteWithSignature<Java.Lang.String>("memberId", "()Ljava/lang/String;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/ConsumerGroupMetadata.html#groupInstanceId()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/consumer/ConsumerGroupMetadata.html#groupInstanceId()"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Optional"/></returns>
         public Java.Util.Optional<Java.Lang.String> GroupInstanceId()

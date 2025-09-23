@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 {
     #region DeleteConsumerGroupOffsetsOptions declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/DeleteConsumerGroupOffsetsOptions.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/admin/DeleteConsumerGroupOffsetsOptions.html"/>
     /// </summary>
     public partial class DeleteConsumerGroupOffsetsOptions : Org.Apache.Kafka.Clients.Admin.AbstractOptions<Org.Apache.Kafka.Clients.Admin.DeleteConsumerGroupOffsetsOptions>
     {

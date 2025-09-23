@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Connect.Util
 {
     #region TopicCreationGroup declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.0.0/org/apache/kafka/connect/util/TopicCreationGroup.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.1.0/org/apache/kafka/connect/util/TopicCreationGroup.html"/>
     /// </summary>
     public partial class TopicCreationGroup : MASES.JCOBridge.C2JBridge.JVMBridgeBase<TopicCreationGroup>
     {
@@ -87,7 +87,7 @@ namespace Org.Apache.Kafka.Connect.Util
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.0.0/org/apache/kafka/connect/util/TopicCreationGroup.html#matches(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.1.0/org/apache/kafka/connect/util/TopicCreationGroup.html#matches(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="bool"/></returns>
@@ -96,7 +96,7 @@ namespace Org.Apache.Kafka.Connect.Util
             return IExecuteWithSignature<bool>("matches", "(Ljava/lang/String;)Z", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.0.0/org/apache/kafka/connect/util/TopicCreationGroup.html#name()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.1.0/org/apache/kafka/connect/util/TopicCreationGroup.html#name()"/>
         /// </summary>
         /// <returns><see cref="Java.Lang.String"/></returns>
         public Java.Lang.String Name()
@@ -104,7 +104,7 @@ namespace Org.Apache.Kafka.Connect.Util
             return IExecuteWithSignature<Java.Lang.String>("name", "()Ljava/lang/String;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.0.0/org/apache/kafka/connect/util/TopicCreationGroup.html#newTopic(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.1.0/org/apache/kafka/connect/util/TopicCreationGroup.html#newTopic(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.NewTopic"/></returns>

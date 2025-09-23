@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Streams.Scala
 {
     #region ImplicitConversions declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/ImplicitConversions.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.1.0/org/apache/kafka/streams/scala/ImplicitConversions.html"/>
     /// </summary>
     public partial class ImplicitConversions : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ImplicitConversions>
     {
@@ -83,7 +83,7 @@ namespace Org.Apache.Kafka.Streams.Scala
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/ImplicitConversions.html#materializedFromSerde(org.apache.kafka.common.serialization.Serde,org.apache.kafka.common.serialization.Serde)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.1.0/org/apache/kafka/streams/scala/ImplicitConversions.html#materializedFromSerde(org.apache.kafka.common.serialization.Serde,org.apache.kafka.common.serialization.Serde)"/>
         /// </summary>
         /// <param name="keySerde"><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></param>
         /// <param name="valueSerde"><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></param>
@@ -95,7 +95,7 @@ namespace Org.Apache.Kafka.Streams.Scala
             return SExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.Materialized>(LocalBridgeClazz, "materializedFromSerde", "(Lorg/apache/kafka/common/serialization/Serde;Lorg/apache/kafka/common/serialization/Serde;)Lorg/apache/kafka/streams/kstream/Materialized;", keySerde, valueSerde);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/ImplicitConversions.html#joinedFromKeyValueOtherSerde(org.apache.kafka.common.serialization.Serde,org.apache.kafka.common.serialization.Serde,org.apache.kafka.common.serialization.Serde)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.1.0/org/apache/kafka/streams/scala/ImplicitConversions.html#joinedFromKeyValueOtherSerde(org.apache.kafka.common.serialization.Serde,org.apache.kafka.common.serialization.Serde,org.apache.kafka.common.serialization.Serde)"/>
         /// </summary>
         /// <param name="keySerde"><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></param>
         /// <param name="valueSerde"><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></param>
@@ -109,7 +109,7 @@ namespace Org.Apache.Kafka.Streams.Scala
             return SExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.Joined<K, V, VO>>(LocalBridgeClazz, "joinedFromKeyValueOtherSerde", "(Lorg/apache/kafka/common/serialization/Serde;Lorg/apache/kafka/common/serialization/Serde;Lorg/apache/kafka/common/serialization/Serde;)Lorg/apache/kafka/streams/kstream/Joined;", keySerde, valueSerde, otherValueSerde);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/ImplicitConversions.html#streamJoinFromKeyValueOtherSerde(org.apache.kafka.common.serialization.Serde,org.apache.kafka.common.serialization.Serde,org.apache.kafka.common.serialization.Serde)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.1.0/org/apache/kafka/streams/scala/ImplicitConversions.html#streamJoinFromKeyValueOtherSerde(org.apache.kafka.common.serialization.Serde,org.apache.kafka.common.serialization.Serde,org.apache.kafka.common.serialization.Serde)"/>
         /// </summary>
         /// <param name="keySerde"><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></param>
         /// <param name="valueSerde"><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></param>
@@ -123,7 +123,7 @@ namespace Org.Apache.Kafka.Streams.Scala
             return SExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.StreamJoined<K, V, VO>>(LocalBridgeClazz, "streamJoinFromKeyValueOtherSerde", "(Lorg/apache/kafka/common/serialization/Serde;Lorg/apache/kafka/common/serialization/Serde;Lorg/apache/kafka/common/serialization/Serde;)Lorg/apache/kafka/streams/kstream/StreamJoined;", keySerde, valueSerde, otherValueSerde);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/ImplicitConversions.html#consumedFromSerde(org.apache.kafka.common.serialization.Serde,org.apache.kafka.common.serialization.Serde)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.1.0/org/apache/kafka/streams/scala/ImplicitConversions.html#consumedFromSerde(org.apache.kafka.common.serialization.Serde,org.apache.kafka.common.serialization.Serde)"/>
         /// </summary>
         /// <param name="keySerde"><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></param>
         /// <param name="valueSerde"><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></param>
@@ -135,7 +135,7 @@ namespace Org.Apache.Kafka.Streams.Scala
             return SExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.Consumed<K, V>>(LocalBridgeClazz, "consumedFromSerde", "(Lorg/apache/kafka/common/serialization/Serde;Lorg/apache/kafka/common/serialization/Serde;)Lorg/apache/kafka/streams/kstream/Consumed;", keySerde, valueSerde);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/ImplicitConversions.html#groupedFromSerde(org.apache.kafka.common.serialization.Serde,org.apache.kafka.common.serialization.Serde)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.1.0/org/apache/kafka/streams/scala/ImplicitConversions.html#groupedFromSerde(org.apache.kafka.common.serialization.Serde,org.apache.kafka.common.serialization.Serde)"/>
         /// </summary>
         /// <param name="keySerde"><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></param>
         /// <param name="valueSerde"><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></param>
@@ -147,7 +147,7 @@ namespace Org.Apache.Kafka.Streams.Scala
             return SExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.Grouped<K, V>>(LocalBridgeClazz, "groupedFromSerde", "(Lorg/apache/kafka/common/serialization/Serde;Lorg/apache/kafka/common/serialization/Serde;)Lorg/apache/kafka/streams/kstream/Grouped;", keySerde, valueSerde);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/ImplicitConversions.html#producedFromSerde(org.apache.kafka.common.serialization.Serde,org.apache.kafka.common.serialization.Serde)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.1.0/org/apache/kafka/streams/scala/ImplicitConversions.html#producedFromSerde(org.apache.kafka.common.serialization.Serde,org.apache.kafka.common.serialization.Serde)"/>
         /// </summary>
         /// <param name="keySerde"><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></param>
         /// <param name="valueSerde"><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></param>
@@ -159,7 +159,7 @@ namespace Org.Apache.Kafka.Streams.Scala
             return SExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.Produced<K, V>>(LocalBridgeClazz, "producedFromSerde", "(Lorg/apache/kafka/common/serialization/Serde;Lorg/apache/kafka/common/serialization/Serde;)Lorg/apache/kafka/streams/kstream/Produced;", keySerde, valueSerde);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/ImplicitConversions.html#repartitionedFromSerde(org.apache.kafka.common.serialization.Serde,org.apache.kafka.common.serialization.Serde)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.1.0/org/apache/kafka/streams/scala/ImplicitConversions.html#repartitionedFromSerde(org.apache.kafka.common.serialization.Serde,org.apache.kafka.common.serialization.Serde)"/>
         /// </summary>
         /// <param name="keySerde"><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></param>
         /// <param name="valueSerde"><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></param>
@@ -171,7 +171,7 @@ namespace Org.Apache.Kafka.Streams.Scala
             return SExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.Repartitioned<K, V>>(LocalBridgeClazz, "repartitionedFromSerde", "(Lorg/apache/kafka/common/serialization/Serde;Lorg/apache/kafka/common/serialization/Serde;)Lorg/apache/kafka/streams/kstream/Repartitioned;", keySerde, valueSerde);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/ImplicitConversions.html#wrapCogroupedKStream(org.apache.kafka.streams.kstream.CogroupedKStream)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.1.0/org/apache/kafka/streams/scala/ImplicitConversions.html#wrapCogroupedKStream(org.apache.kafka.streams.kstream.CogroupedKStream)"/>
         /// </summary>
         /// <param name="inner"><see cref="Org.Apache.Kafka.Streams.Kstream.CogroupedKStream"/></param>
         /// <typeparam name="K"></typeparam>
@@ -182,7 +182,7 @@ namespace Org.Apache.Kafka.Streams.Scala
             return SExecuteWithSignature<Org.Apache.Kafka.Streams.Scala.Kstream.CogroupedKStream<K, V>>(LocalBridgeClazz, "wrapCogroupedKStream", "(Lorg/apache/kafka/streams/kstream/CogroupedKStream;)Lorg/apache/kafka/streams/scala/kstream/CogroupedKStream;", inner);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/ImplicitConversions.html#wrapKGroupedStream(org.apache.kafka.streams.kstream.KGroupedStream)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.1.0/org/apache/kafka/streams/scala/ImplicitConversions.html#wrapKGroupedStream(org.apache.kafka.streams.kstream.KGroupedStream)"/>
         /// </summary>
         /// <param name="inner"><see cref="Org.Apache.Kafka.Streams.Kstream.KGroupedStream"/></param>
         /// <typeparam name="K"></typeparam>
@@ -193,7 +193,7 @@ namespace Org.Apache.Kafka.Streams.Scala
             return SExecuteWithSignature<Org.Apache.Kafka.Streams.Scala.Kstream.KGroupedStream<K, V>>(LocalBridgeClazz, "wrapKGroupedStream", "(Lorg/apache/kafka/streams/kstream/KGroupedStream;)Lorg/apache/kafka/streams/scala/kstream/KGroupedStream;", inner);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/ImplicitConversions.html#wrapKGroupedTable(org.apache.kafka.streams.kstream.KGroupedTable)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.1.0/org/apache/kafka/streams/scala/ImplicitConversions.html#wrapKGroupedTable(org.apache.kafka.streams.kstream.KGroupedTable)"/>
         /// </summary>
         /// <param name="inner"><see cref="Org.Apache.Kafka.Streams.Kstream.KGroupedTable"/></param>
         /// <typeparam name="K"></typeparam>
@@ -204,7 +204,7 @@ namespace Org.Apache.Kafka.Streams.Scala
             return SExecuteWithSignature<Org.Apache.Kafka.Streams.Scala.Kstream.KGroupedTable<K, V>>(LocalBridgeClazz, "wrapKGroupedTable", "(Lorg/apache/kafka/streams/kstream/KGroupedTable;)Lorg/apache/kafka/streams/scala/kstream/KGroupedTable;", inner);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/ImplicitConversions.html#wrapKStream(org.apache.kafka.streams.kstream.KStream)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.1.0/org/apache/kafka/streams/scala/ImplicitConversions.html#wrapKStream(org.apache.kafka.streams.kstream.KStream)"/>
         /// </summary>
         /// <param name="inner"><see cref="Org.Apache.Kafka.Streams.Kstream.KStream"/></param>
         /// <typeparam name="K"></typeparam>
@@ -215,7 +215,7 @@ namespace Org.Apache.Kafka.Streams.Scala
             return SExecuteWithSignature<Org.Apache.Kafka.Streams.Scala.Kstream.KStream<K, V>>(LocalBridgeClazz, "wrapKStream", "(Lorg/apache/kafka/streams/kstream/KStream;)Lorg/apache/kafka/streams/scala/kstream/KStream;", inner);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/ImplicitConversions.html#wrapKTable(org.apache.kafka.streams.kstream.KTable)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.1.0/org/apache/kafka/streams/scala/ImplicitConversions.html#wrapKTable(org.apache.kafka.streams.kstream.KTable)"/>
         /// </summary>
         /// <param name="inner"><see cref="Org.Apache.Kafka.Streams.Kstream.KTable"/></param>
         /// <typeparam name="K"></typeparam>
@@ -226,7 +226,7 @@ namespace Org.Apache.Kafka.Streams.Scala
             return SExecuteWithSignature<Org.Apache.Kafka.Streams.Scala.Kstream.KTable<K, V>>(LocalBridgeClazz, "wrapKTable", "(Lorg/apache/kafka/streams/kstream/KTable;)Lorg/apache/kafka/streams/scala/kstream/KTable;", inner);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/ImplicitConversions.html#wrapSessionWindowedCogroupedKStream(org.apache.kafka.streams.kstream.SessionWindowedCogroupedKStream)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.1.0/org/apache/kafka/streams/scala/ImplicitConversions.html#wrapSessionWindowedCogroupedKStream(org.apache.kafka.streams.kstream.SessionWindowedCogroupedKStream)"/>
         /// </summary>
         /// <param name="inner"><see cref="Org.Apache.Kafka.Streams.Kstream.SessionWindowedCogroupedKStream"/></param>
         /// <typeparam name="K"></typeparam>
@@ -237,7 +237,7 @@ namespace Org.Apache.Kafka.Streams.Scala
             return SExecuteWithSignature<Org.Apache.Kafka.Streams.Scala.Kstream.SessionWindowedCogroupedKStream<K, V>>(LocalBridgeClazz, "wrapSessionWindowedCogroupedKStream", "(Lorg/apache/kafka/streams/kstream/SessionWindowedCogroupedKStream;)Lorg/apache/kafka/streams/scala/kstream/SessionWindowedCogroupedKStream;", inner);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/ImplicitConversions.html#wrapSessionWindowedKStream(org.apache.kafka.streams.kstream.SessionWindowedKStream)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.1.0/org/apache/kafka/streams/scala/ImplicitConversions.html#wrapSessionWindowedKStream(org.apache.kafka.streams.kstream.SessionWindowedKStream)"/>
         /// </summary>
         /// <param name="inner"><see cref="Org.Apache.Kafka.Streams.Kstream.SessionWindowedKStream"/></param>
         /// <typeparam name="K"></typeparam>
@@ -248,7 +248,7 @@ namespace Org.Apache.Kafka.Streams.Scala
             return SExecuteWithSignature<Org.Apache.Kafka.Streams.Scala.Kstream.SessionWindowedKStream<K, V>>(LocalBridgeClazz, "wrapSessionWindowedKStream", "(Lorg/apache/kafka/streams/kstream/SessionWindowedKStream;)Lorg/apache/kafka/streams/scala/kstream/SessionWindowedKStream;", inner);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/ImplicitConversions.html#wrapTimeWindowedCogroupedKStream(org.apache.kafka.streams.kstream.TimeWindowedCogroupedKStream)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.1.0/org/apache/kafka/streams/scala/ImplicitConversions.html#wrapTimeWindowedCogroupedKStream(org.apache.kafka.streams.kstream.TimeWindowedCogroupedKStream)"/>
         /// </summary>
         /// <param name="inner"><see cref="Org.Apache.Kafka.Streams.Kstream.TimeWindowedCogroupedKStream"/></param>
         /// <typeparam name="K"></typeparam>
@@ -259,7 +259,7 @@ namespace Org.Apache.Kafka.Streams.Scala
             return SExecuteWithSignature<Org.Apache.Kafka.Streams.Scala.Kstream.TimeWindowedCogroupedKStream<K, V>>(LocalBridgeClazz, "wrapTimeWindowedCogroupedKStream", "(Lorg/apache/kafka/streams/kstream/TimeWindowedCogroupedKStream;)Lorg/apache/kafka/streams/scala/kstream/TimeWindowedCogroupedKStream;", inner);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/ImplicitConversions.html#wrapTimeWindowedKStream(org.apache.kafka.streams.kstream.TimeWindowedKStream)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.1.0/org/apache/kafka/streams/scala/ImplicitConversions.html#wrapTimeWindowedKStream(org.apache.kafka.streams.kstream.TimeWindowedKStream)"/>
         /// </summary>
         /// <param name="inner"><see cref="Org.Apache.Kafka.Streams.Kstream.TimeWindowedKStream"/></param>
         /// <typeparam name="K"></typeparam>

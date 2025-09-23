@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Streams.Scala.Kstream
 {
     #region KStream declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/kstream/KStream.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.1.0/org/apache/kafka/streams/scala/kstream/KStream.html"/>
     /// </summary>
     public partial class KStream : MASES.JCOBridge.C2JBridge.JVMBridgeBase<KStream>
     {
@@ -68,7 +68,7 @@ namespace Org.Apache.Kafka.Streams.Scala.Kstream
 
     #region KStream<K, V> declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/kstream/KStream.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.1.0/org/apache/kafka/streams/scala/kstream/KStream.html"/>
     /// </summary>
     /// <typeparam name="K"></typeparam>
     /// <typeparam name="V"></typeparam>
@@ -114,7 +114,7 @@ namespace Org.Apache.Kafka.Streams.Scala.Kstream
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/kstream/KStream.html#%3Cinit%3E(org.apache.kafka.streams.kstream.KStream)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.1.0/org/apache/kafka/streams/scala/kstream/KStream.html#%3Cinit%3E(org.apache.kafka.streams.kstream.KStream)"/>
         /// </summary>
         /// <param name="inner"><see cref="Org.Apache.Kafka.Streams.Kstream.KStream"/></param>
         public KStream(Org.Apache.Kafka.Streams.Kstream.KStream inner)
@@ -138,7 +138,7 @@ namespace Org.Apache.Kafka.Streams.Scala.Kstream
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/kstream/KStream.html#inner()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.1.0/org/apache/kafka/streams/scala/kstream/KStream.html#inner()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KStream"/></returns>
         public Org.Apache.Kafka.Streams.Kstream.KStream Inner()
@@ -146,7 +146,7 @@ namespace Org.Apache.Kafka.Streams.Scala.Kstream
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.KStream>("inner", "()Lorg/apache/kafka/streams/kstream/KStream;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/kstream/KStream.html#split()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.1.0/org/apache/kafka/streams/scala/kstream/KStream.html#split()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Scala.Kstream.BranchedKStream"/></returns>
         public Org.Apache.Kafka.Streams.Scala.Kstream.BranchedKStream Split()
@@ -154,7 +154,7 @@ namespace Org.Apache.Kafka.Streams.Scala.Kstream
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.Scala.Kstream.BranchedKStream>("split", "()Lorg/apache/kafka/streams/scala/kstream/BranchedKStream;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/kstream/KStream.html#split(org.apache.kafka.streams.kstream.Named)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.1.0/org/apache/kafka/streams/scala/kstream/KStream.html#split(org.apache.kafka.streams.kstream.Named)"/>
         /// </summary>
         /// <param name="named"><see cref="Org.Apache.Kafka.Streams.Kstream.Named"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Scala.Kstream.BranchedKStream"/></returns>
@@ -163,7 +163,7 @@ namespace Org.Apache.Kafka.Streams.Scala.Kstream
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.Scala.Kstream.BranchedKStream>("split", "(Lorg/apache/kafka/streams/kstream/Named;)Lorg/apache/kafka/streams/scala/kstream/BranchedKStream;", named);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/kstream/KStream.html#groupByKey(org.apache.kafka.streams.kstream.Grouped)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.1.0/org/apache/kafka/streams/scala/kstream/KStream.html#groupByKey(org.apache.kafka.streams.kstream.Grouped)"/>
         /// </summary>
         /// <param name="grouped"><see cref="Org.Apache.Kafka.Streams.Kstream.Grouped"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Scala.Kstream.KGroupedStream"/></returns>
@@ -172,7 +172,7 @@ namespace Org.Apache.Kafka.Streams.Scala.Kstream
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.Scala.Kstream.KGroupedStream>("groupByKey", "(Lorg/apache/kafka/streams/kstream/Grouped;)Lorg/apache/kafka/streams/scala/kstream/KGroupedStream;", grouped);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/kstream/KStream.html#merge(org.apache.kafka.streams.scala.kstream.KStream,org.apache.kafka.streams.kstream.Named)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.1.0/org/apache/kafka/streams/scala/kstream/KStream.html#merge(org.apache.kafka.streams.scala.kstream.KStream,org.apache.kafka.streams.kstream.Named)"/>
         /// </summary>
         /// <param name="stream"><see cref="Org.Apache.Kafka.Streams.Scala.Kstream.KStream"/></param>
         /// <param name="named"><see cref="Org.Apache.Kafka.Streams.Kstream.Named"/></param>
@@ -182,7 +182,7 @@ namespace Org.Apache.Kafka.Streams.Scala.Kstream
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.Scala.Kstream.KStream>("merge", "(Lorg/apache/kafka/streams/scala/kstream/KStream;Lorg/apache/kafka/streams/kstream/Named;)Lorg/apache/kafka/streams/scala/kstream/KStream;", stream, named);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/kstream/KStream.html#merge(org.apache.kafka.streams.scala.kstream.KStream)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.1.0/org/apache/kafka/streams/scala/kstream/KStream.html#merge(org.apache.kafka.streams.scala.kstream.KStream)"/>
         /// </summary>
         /// <param name="stream"><see cref="Org.Apache.Kafka.Streams.Scala.Kstream.KStream"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Scala.Kstream.KStream"/></returns>
@@ -191,7 +191,7 @@ namespace Org.Apache.Kafka.Streams.Scala.Kstream
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.Scala.Kstream.KStream>("merge", "(Lorg/apache/kafka/streams/scala/kstream/KStream;)Lorg/apache/kafka/streams/scala/kstream/KStream;", stream);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/kstream/KStream.html#repartition(org.apache.kafka.streams.kstream.Repartitioned)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.1.0/org/apache/kafka/streams/scala/kstream/KStream.html#repartition(org.apache.kafka.streams.kstream.Repartitioned)"/>
         /// </summary>
         /// <param name="repartitioned"><see cref="Org.Apache.Kafka.Streams.Kstream.Repartitioned"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Scala.Kstream.KStream"/></returns>
@@ -200,7 +200,7 @@ namespace Org.Apache.Kafka.Streams.Scala.Kstream
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.Scala.Kstream.KStream>("repartition", "(Lorg/apache/kafka/streams/kstream/Repartitioned;)Lorg/apache/kafka/streams/scala/kstream/KStream;", repartitioned);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/kstream/KStream.html#toTable()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.1.0/org/apache/kafka/streams/scala/kstream/KStream.html#toTable()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Scala.Kstream.KTable"/></returns>
         public Org.Apache.Kafka.Streams.Scala.Kstream.KTable ToTable()
@@ -208,7 +208,7 @@ namespace Org.Apache.Kafka.Streams.Scala.Kstream
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.Scala.Kstream.KTable>("toTable", "()Lorg/apache/kafka/streams/scala/kstream/KTable;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/kstream/KStream.html#toTable(org.apache.kafka.streams.kstream.Materialized)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.1.0/org/apache/kafka/streams/scala/kstream/KStream.html#toTable(org.apache.kafka.streams.kstream.Materialized)"/>
         /// </summary>
         /// <param name="materialized"><see cref="Org.Apache.Kafka.Streams.Kstream.Materialized"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Scala.Kstream.KTable"/></returns>
@@ -217,7 +217,7 @@ namespace Org.Apache.Kafka.Streams.Scala.Kstream
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.Scala.Kstream.KTable>("toTable", "(Lorg/apache/kafka/streams/kstream/Materialized;)Lorg/apache/kafka/streams/scala/kstream/KTable;", materialized);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/kstream/KStream.html#toTable(org.apache.kafka.streams.kstream.Named,org.apache.kafka.streams.kstream.Materialized)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.1.0/org/apache/kafka/streams/scala/kstream/KStream.html#toTable(org.apache.kafka.streams.kstream.Named,org.apache.kafka.streams.kstream.Materialized)"/>
         /// </summary>
         /// <param name="named"><see cref="Org.Apache.Kafka.Streams.Kstream.Named"/></param>
         /// <param name="materialized"><see cref="Org.Apache.Kafka.Streams.Kstream.Materialized"/></param>
@@ -227,7 +227,7 @@ namespace Org.Apache.Kafka.Streams.Scala.Kstream
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.Scala.Kstream.KTable>("toTable", "(Lorg/apache/kafka/streams/kstream/Named;Lorg/apache/kafka/streams/kstream/Materialized;)Lorg/apache/kafka/streams/scala/kstream/KTable;", named, materialized);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/kstream/KStream.html#toTable(org.apache.kafka.streams.kstream.Named)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.1.0/org/apache/kafka/streams/scala/kstream/KStream.html#toTable(org.apache.kafka.streams.kstream.Named)"/>
         /// </summary>
         /// <param name="named"><see cref="Org.Apache.Kafka.Streams.Kstream.Named"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Scala.Kstream.KTable"/></returns>
@@ -236,7 +236,7 @@ namespace Org.Apache.Kafka.Streams.Scala.Kstream
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.Scala.Kstream.KTable>("toTable", "(Lorg/apache/kafka/streams/kstream/Named;)Lorg/apache/kafka/streams/scala/kstream/KTable;", named);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/kstream/KStream.html#print(org.apache.kafka.streams.kstream.Printed)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.1.0/org/apache/kafka/streams/scala/kstream/KStream.html#print(org.apache.kafka.streams.kstream.Printed)"/>
         /// </summary>
         /// <param name="printed"><see cref="Org.Apache.Kafka.Streams.Kstream.Printed"/></param>
         public void Print(Org.Apache.Kafka.Streams.Kstream.Printed printed)
@@ -244,7 +244,7 @@ namespace Org.Apache.Kafka.Streams.Scala.Kstream
             IExecuteWithSignature("print", "(Lorg/apache/kafka/streams/kstream/Printed;)V", printed);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/kstream/KStream.html#to(java.lang.String,org.apache.kafka.streams.kstream.Produced)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.1.0/org/apache/kafka/streams/scala/kstream/KStream.html#to(java.lang.String,org.apache.kafka.streams.kstream.Produced)"/>
         /// </summary>
         /// <param name="topic"><see cref="Java.Lang.String"/></param>
         /// <param name="produced"><see cref="Org.Apache.Kafka.Streams.Kstream.Produced"/></param>
@@ -253,7 +253,7 @@ namespace Org.Apache.Kafka.Streams.Scala.Kstream
             IExecuteWithSignature("to", "(Ljava/lang/String;Lorg/apache/kafka/streams/kstream/Produced;)V", topic, produced);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/kstream/KStream.html#to(org.apache.kafka.streams.processor.TopicNameExtractor,org.apache.kafka.streams.kstream.Produced)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.1.0/org/apache/kafka/streams/scala/kstream/KStream.html#to(org.apache.kafka.streams.processor.TopicNameExtractor,org.apache.kafka.streams.kstream.Produced)"/>
         /// </summary>
         /// <param name="extractor"><see cref="Org.Apache.Kafka.Streams.Processor.TopicNameExtractor"/></param>
         /// <param name="produced"><see cref="Org.Apache.Kafka.Streams.Kstream.Produced"/></param>
@@ -277,7 +277,7 @@ namespace Org.Apache.Kafka.Streams.Scala.Kstream
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/kstream/KStream.html#%3Cinit%3E(org.apache.kafka.streams.kstream.KStream)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.1.0/org/apache/kafka/streams/scala/kstream/KStream.html#%3Cinit%3E(org.apache.kafka.streams.kstream.KStream)"/>
         /// </summary>
         /// <param name="inner"><see cref="Org.Apache.Kafka.Streams.Kstream.KStream"/></param>
         public KStream(Org.Apache.Kafka.Streams.Kstream.KStream<K, V> inner)
@@ -305,7 +305,7 @@ namespace Org.Apache.Kafka.Streams.Scala.Kstream
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/kstream/KStream.html#inner()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.1.0/org/apache/kafka/streams/scala/kstream/KStream.html#inner()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KStream"/></returns>
         public Org.Apache.Kafka.Streams.Kstream.KStream<K, V> Inner()
@@ -313,7 +313,7 @@ namespace Org.Apache.Kafka.Streams.Scala.Kstream
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.KStream<K, V>>("inner", "()Lorg/apache/kafka/streams/kstream/KStream;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/kstream/KStream.html#split()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.1.0/org/apache/kafka/streams/scala/kstream/KStream.html#split()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Scala.Kstream.BranchedKStream"/></returns>
         public Org.Apache.Kafka.Streams.Scala.Kstream.BranchedKStream<K, V> Split()
@@ -321,7 +321,7 @@ namespace Org.Apache.Kafka.Streams.Scala.Kstream
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.Scala.Kstream.BranchedKStream<K, V>>("split", "()Lorg/apache/kafka/streams/scala/kstream/BranchedKStream;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/kstream/KStream.html#split(org.apache.kafka.streams.kstream.Named)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.1.0/org/apache/kafka/streams/scala/kstream/KStream.html#split(org.apache.kafka.streams.kstream.Named)"/>
         /// </summary>
         /// <param name="named"><see cref="Org.Apache.Kafka.Streams.Kstream.Named"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Scala.Kstream.BranchedKStream"/></returns>
@@ -330,7 +330,7 @@ namespace Org.Apache.Kafka.Streams.Scala.Kstream
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.Scala.Kstream.BranchedKStream<K, V>>("split", "(Lorg/apache/kafka/streams/kstream/Named;)Lorg/apache/kafka/streams/scala/kstream/BranchedKStream;", named);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/kstream/KStream.html#groupByKey(org.apache.kafka.streams.kstream.Grouped)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.1.0/org/apache/kafka/streams/scala/kstream/KStream.html#groupByKey(org.apache.kafka.streams.kstream.Grouped)"/>
         /// </summary>
         /// <param name="grouped"><see cref="Org.Apache.Kafka.Streams.Kstream.Grouped"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Scala.Kstream.KGroupedStream"/></returns>
@@ -339,7 +339,7 @@ namespace Org.Apache.Kafka.Streams.Scala.Kstream
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.Scala.Kstream.KGroupedStream<K, V>>("groupByKey", "(Lorg/apache/kafka/streams/kstream/Grouped;)Lorg/apache/kafka/streams/scala/kstream/KGroupedStream;", grouped);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/kstream/KStream.html#merge(org.apache.kafka.streams.scala.kstream.KStream,org.apache.kafka.streams.kstream.Named)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.1.0/org/apache/kafka/streams/scala/kstream/KStream.html#merge(org.apache.kafka.streams.scala.kstream.KStream,org.apache.kafka.streams.kstream.Named)"/>
         /// </summary>
         /// <param name="stream"><see cref="Org.Apache.Kafka.Streams.Scala.Kstream.KStream"/></param>
         /// <param name="named"><see cref="Org.Apache.Kafka.Streams.Kstream.Named"/></param>
@@ -349,7 +349,7 @@ namespace Org.Apache.Kafka.Streams.Scala.Kstream
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.Scala.Kstream.KStream<K, V>>("merge", "(Lorg/apache/kafka/streams/scala/kstream/KStream;Lorg/apache/kafka/streams/kstream/Named;)Lorg/apache/kafka/streams/scala/kstream/KStream;", stream, named);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/kstream/KStream.html#merge(org.apache.kafka.streams.scala.kstream.KStream)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.1.0/org/apache/kafka/streams/scala/kstream/KStream.html#merge(org.apache.kafka.streams.scala.kstream.KStream)"/>
         /// </summary>
         /// <param name="stream"><see cref="Org.Apache.Kafka.Streams.Scala.Kstream.KStream"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Scala.Kstream.KStream"/></returns>
@@ -358,7 +358,7 @@ namespace Org.Apache.Kafka.Streams.Scala.Kstream
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.Scala.Kstream.KStream<K, V>>("merge", "(Lorg/apache/kafka/streams/scala/kstream/KStream;)Lorg/apache/kafka/streams/scala/kstream/KStream;", stream);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/kstream/KStream.html#repartition(org.apache.kafka.streams.kstream.Repartitioned)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.1.0/org/apache/kafka/streams/scala/kstream/KStream.html#repartition(org.apache.kafka.streams.kstream.Repartitioned)"/>
         /// </summary>
         /// <param name="repartitioned"><see cref="Org.Apache.Kafka.Streams.Kstream.Repartitioned"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Scala.Kstream.KStream"/></returns>
@@ -367,7 +367,7 @@ namespace Org.Apache.Kafka.Streams.Scala.Kstream
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.Scala.Kstream.KStream<K, V>>("repartition", "(Lorg/apache/kafka/streams/kstream/Repartitioned;)Lorg/apache/kafka/streams/scala/kstream/KStream;", repartitioned);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/kstream/KStream.html#toTable()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.1.0/org/apache/kafka/streams/scala/kstream/KStream.html#toTable()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Scala.Kstream.KTable"/></returns>
         public Org.Apache.Kafka.Streams.Scala.Kstream.KTable<K, V> ToTable()
@@ -375,7 +375,7 @@ namespace Org.Apache.Kafka.Streams.Scala.Kstream
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.Scala.Kstream.KTable<K, V>>("toTable", "()Lorg/apache/kafka/streams/scala/kstream/KTable;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/kstream/KStream.html#toTable(org.apache.kafka.streams.kstream.Materialized)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.1.0/org/apache/kafka/streams/scala/kstream/KStream.html#toTable(org.apache.kafka.streams.kstream.Materialized)"/>
         /// </summary>
         /// <param name="materialized"><see cref="Org.Apache.Kafka.Streams.Kstream.Materialized"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Scala.Kstream.KTable"/></returns>
@@ -384,7 +384,7 @@ namespace Org.Apache.Kafka.Streams.Scala.Kstream
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.Scala.Kstream.KTable<K, V>>("toTable", "(Lorg/apache/kafka/streams/kstream/Materialized;)Lorg/apache/kafka/streams/scala/kstream/KTable;", materialized);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/kstream/KStream.html#toTable(org.apache.kafka.streams.kstream.Named,org.apache.kafka.streams.kstream.Materialized)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.1.0/org/apache/kafka/streams/scala/kstream/KStream.html#toTable(org.apache.kafka.streams.kstream.Named,org.apache.kafka.streams.kstream.Materialized)"/>
         /// </summary>
         /// <param name="named"><see cref="Org.Apache.Kafka.Streams.Kstream.Named"/></param>
         /// <param name="materialized"><see cref="Org.Apache.Kafka.Streams.Kstream.Materialized"/></param>
@@ -394,7 +394,7 @@ namespace Org.Apache.Kafka.Streams.Scala.Kstream
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.Scala.Kstream.KTable<K, V>>("toTable", "(Lorg/apache/kafka/streams/kstream/Named;Lorg/apache/kafka/streams/kstream/Materialized;)Lorg/apache/kafka/streams/scala/kstream/KTable;", named, materialized);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/kstream/KStream.html#toTable(org.apache.kafka.streams.kstream.Named)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.1.0/org/apache/kafka/streams/scala/kstream/KStream.html#toTable(org.apache.kafka.streams.kstream.Named)"/>
         /// </summary>
         /// <param name="named"><see cref="Org.Apache.Kafka.Streams.Kstream.Named"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Scala.Kstream.KTable"/></returns>
@@ -403,7 +403,7 @@ namespace Org.Apache.Kafka.Streams.Scala.Kstream
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.Scala.Kstream.KTable<K, V>>("toTable", "(Lorg/apache/kafka/streams/kstream/Named;)Lorg/apache/kafka/streams/scala/kstream/KTable;", named);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/kstream/KStream.html#print(org.apache.kafka.streams.kstream.Printed)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.1.0/org/apache/kafka/streams/scala/kstream/KStream.html#print(org.apache.kafka.streams.kstream.Printed)"/>
         /// </summary>
         /// <param name="printed"><see cref="Org.Apache.Kafka.Streams.Kstream.Printed"/></param>
         public void Print(Org.Apache.Kafka.Streams.Kstream.Printed<K, V> printed)
@@ -411,7 +411,7 @@ namespace Org.Apache.Kafka.Streams.Scala.Kstream
             IExecuteWithSignature("print", "(Lorg/apache/kafka/streams/kstream/Printed;)V", printed);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/kstream/KStream.html#to(java.lang.String,org.apache.kafka.streams.kstream.Produced)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.1.0/org/apache/kafka/streams/scala/kstream/KStream.html#to(java.lang.String,org.apache.kafka.streams.kstream.Produced)"/>
         /// </summary>
         /// <param name="topic"><see cref="Java.Lang.String"/></param>
         /// <param name="produced"><see cref="Org.Apache.Kafka.Streams.Kstream.Produced"/></param>
@@ -420,7 +420,7 @@ namespace Org.Apache.Kafka.Streams.Scala.Kstream
             IExecuteWithSignature("to", "(Ljava/lang/String;Lorg/apache/kafka/streams/kstream/Produced;)V", topic, produced);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/kstream/KStream.html#to(org.apache.kafka.streams.processor.TopicNameExtractor,org.apache.kafka.streams.kstream.Produced)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.1.0/org/apache/kafka/streams/scala/kstream/KStream.html#to(org.apache.kafka.streams.processor.TopicNameExtractor,org.apache.kafka.streams.kstream.Produced)"/>
         /// </summary>
         /// <param name="extractor"><see cref="Org.Apache.Kafka.Streams.Processor.TopicNameExtractor"/></param>
         /// <param name="produced"><see cref="Org.Apache.Kafka.Streams.Kstream.Produced"/></param>

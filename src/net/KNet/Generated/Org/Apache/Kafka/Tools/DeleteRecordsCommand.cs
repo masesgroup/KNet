@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Tools
 {
     #region DeleteRecordsCommand declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/DeleteRecordsCommand.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.0/org/apache/kafka/tools/DeleteRecordsCommand.html"/>
     /// </summary>
     public partial class DeleteRecordsCommand : MASES.JCOBridge.C2JBridge.JVMBridgeBase<DeleteRecordsCommand>, MASES.JCOBridge.C2JBridge.IJVMBridgeMain
     {
@@ -83,7 +83,7 @@ namespace Org.Apache.Kafka.Tools
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/DeleteRecordsCommand.html#execute(java.lang.String[],java.io.PrintStream)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.0/org/apache/kafka/tools/DeleteRecordsCommand.html#execute(java.lang.String[],java.io.PrintStream)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Java.Io.PrintStream"/></param>
@@ -93,7 +93,7 @@ namespace Org.Apache.Kafka.Tools
             SExecuteWithSignature(LocalBridgeClazz, "execute", "([Ljava/lang/String;Ljava/io/PrintStream;)V", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/DeleteRecordsCommand.html#main(java.lang.String[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.0/org/apache/kafka/tools/DeleteRecordsCommand.html#main(java.lang.String[])"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <exception cref="Java.Lang.Exception"/>

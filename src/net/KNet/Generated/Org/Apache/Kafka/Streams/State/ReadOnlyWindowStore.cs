@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Streams.State
 {
     #region ReadOnlyWindowStore declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/state/ReadOnlyWindowStore.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/state/ReadOnlyWindowStore.html"/>
     /// </summary>
     public partial class ReadOnlyWindowStore : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ReadOnlyWindowStore>
     {
@@ -70,7 +70,7 @@ namespace Org.Apache.Kafka.Streams.State
 
     #region ReadOnlyWindowStore<K, V> declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/state/ReadOnlyWindowStore.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/state/ReadOnlyWindowStore.html"/>
     /// </summary>
     /// <typeparam name="K"></typeparam>
     /// <typeparam name="V"></typeparam>
@@ -134,7 +134,7 @@ namespace Org.Apache.Kafka.Streams.State
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/state/ReadOnlyWindowStore.html#all()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/state/ReadOnlyWindowStore.html#all()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Streams.State.KeyValueIterator"/></returns>
         public Org.Apache.Kafka.Streams.State.KeyValueIterator All()
@@ -142,7 +142,7 @@ namespace Org.Apache.Kafka.Streams.State
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.State.KeyValueIterator>("all", "()Lorg/apache/kafka/streams/state/KeyValueIterator;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/state/ReadOnlyWindowStore.html#fetch(java.lang.Object,java.lang.Object,java.time.Instant,java.time.Instant)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/state/ReadOnlyWindowStore.html#fetch(java.lang.Object,java.lang.Object,java.time.Instant,java.time.Instant)"/>
         /// </summary>
         /// <param name="arg0"><see cref="object"/></param>
         /// <param name="arg1"><see cref="object"/></param>
@@ -155,7 +155,7 @@ namespace Org.Apache.Kafka.Streams.State
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.State.KeyValueIterator>("fetch", "(Ljava/lang/Object;Ljava/lang/Object;Ljava/time/Instant;Ljava/time/Instant;)Lorg/apache/kafka/streams/state/KeyValueIterator;", arg0, arg1, arg2, arg3);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/state/ReadOnlyWindowStore.html#fetchAll(java.time.Instant,java.time.Instant)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/state/ReadOnlyWindowStore.html#fetchAll(java.time.Instant,java.time.Instant)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Time.Instant"/></param>
         /// <param name="arg1"><see cref="Java.Time.Instant"/></param>
@@ -166,7 +166,7 @@ namespace Org.Apache.Kafka.Streams.State
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.State.KeyValueIterator>("fetchAll", "(Ljava/time/Instant;Ljava/time/Instant;)Lorg/apache/kafka/streams/state/KeyValueIterator;", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/state/ReadOnlyWindowStore.html#fetch(java.lang.Object,java.time.Instant,java.time.Instant)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/state/ReadOnlyWindowStore.html#fetch(java.lang.Object,java.time.Instant,java.time.Instant)"/>
         /// </summary>
         /// <param name="arg0"><see cref="object"/></param>
         /// <param name="arg1"><see cref="Java.Time.Instant"/></param>
@@ -178,7 +178,7 @@ namespace Org.Apache.Kafka.Streams.State
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.State.WindowStoreIterator>("fetch", "(Ljava/lang/Object;Ljava/time/Instant;Ljava/time/Instant;)Lorg/apache/kafka/streams/state/WindowStoreIterator;", arg0, arg1, arg2);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/state/ReadOnlyWindowStore.html#fetch(java.lang.Object,long)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/state/ReadOnlyWindowStore.html#fetch(java.lang.Object,long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="object"/></param>
         /// <param name="arg1"><see cref="long"/></param>
@@ -188,7 +188,7 @@ namespace Org.Apache.Kafka.Streams.State
             return IExecuteWithSignature("fetch", "(Ljava/lang/Object;J)Ljava/lang/Object;", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/state/ReadOnlyWindowStore.html#backwardAll()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/state/ReadOnlyWindowStore.html#backwardAll()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Streams.State.KeyValueIterator"/></returns>
         public Org.Apache.Kafka.Streams.State.KeyValueIterator BackwardAll()
@@ -196,7 +196,7 @@ namespace Org.Apache.Kafka.Streams.State
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.State.KeyValueIterator>("backwardAll", "()Lorg/apache/kafka/streams/state/KeyValueIterator;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/state/ReadOnlyWindowStore.html#backwardFetch(java.lang.Object,java.lang.Object,java.time.Instant,java.time.Instant)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/state/ReadOnlyWindowStore.html#backwardFetch(java.lang.Object,java.lang.Object,java.time.Instant,java.time.Instant)"/>
         /// </summary>
         /// <param name="arg0"><see cref="object"/></param>
         /// <param name="arg1"><see cref="object"/></param>
@@ -209,7 +209,7 @@ namespace Org.Apache.Kafka.Streams.State
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.State.KeyValueIterator>("backwardFetch", "(Ljava/lang/Object;Ljava/lang/Object;Ljava/time/Instant;Ljava/time/Instant;)Lorg/apache/kafka/streams/state/KeyValueIterator;", arg0, arg1, arg2, arg3);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/state/ReadOnlyWindowStore.html#backwardFetchAll(java.time.Instant,java.time.Instant)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/state/ReadOnlyWindowStore.html#backwardFetchAll(java.time.Instant,java.time.Instant)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Time.Instant"/></param>
         /// <param name="arg1"><see cref="Java.Time.Instant"/></param>
@@ -220,7 +220,7 @@ namespace Org.Apache.Kafka.Streams.State
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.State.KeyValueIterator>("backwardFetchAll", "(Ljava/time/Instant;Ljava/time/Instant;)Lorg/apache/kafka/streams/state/KeyValueIterator;", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/state/ReadOnlyWindowStore.html#backwardFetch(java.lang.Object,java.time.Instant,java.time.Instant)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/state/ReadOnlyWindowStore.html#backwardFetch(java.lang.Object,java.time.Instant,java.time.Instant)"/>
         /// </summary>
         /// <param name="arg0"><see cref="object"/></param>
         /// <param name="arg1"><see cref="Java.Time.Instant"/></param>
@@ -244,7 +244,7 @@ namespace Org.Apache.Kafka.Streams.State
 
     #region IReadOnlyWindowStore<K, V>
     /// <summary>
-    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/state/ReadOnlyWindowStore.html"/>
+    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/state/ReadOnlyWindowStore.html"/>
     /// </summary>
     public partial interface IReadOnlyWindowStore<K, V>
     {
@@ -285,7 +285,7 @@ namespace Org.Apache.Kafka.Streams.State
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/state/ReadOnlyWindowStore.html#all()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/state/ReadOnlyWindowStore.html#all()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Streams.State.KeyValueIterator"/></returns>
         public Org.Apache.Kafka.Streams.State.KeyValueIterator<Org.Apache.Kafka.Streams.Kstream.Windowed<K>, V> All()
@@ -293,7 +293,7 @@ namespace Org.Apache.Kafka.Streams.State
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.State.KeyValueIterator<Org.Apache.Kafka.Streams.Kstream.Windowed<K>, V>>("all", "()Lorg/apache/kafka/streams/state/KeyValueIterator;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/state/ReadOnlyWindowStore.html#fetch(java.lang.Object,java.lang.Object,java.time.Instant,java.time.Instant)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/state/ReadOnlyWindowStore.html#fetch(java.lang.Object,java.lang.Object,java.time.Instant,java.time.Instant)"/>
         /// </summary>
         /// <param name="arg0"><typeparamref name="K"/></param>
         /// <param name="arg1"><typeparamref name="K"/></param>
@@ -306,7 +306,7 @@ namespace Org.Apache.Kafka.Streams.State
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.State.KeyValueIterator<Org.Apache.Kafka.Streams.Kstream.Windowed<K>, V>>("fetch", "(Ljava/lang/Object;Ljava/lang/Object;Ljava/time/Instant;Ljava/time/Instant;)Lorg/apache/kafka/streams/state/KeyValueIterator;", arg0, arg1, arg2, arg3);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/state/ReadOnlyWindowStore.html#fetchAll(java.time.Instant,java.time.Instant)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/state/ReadOnlyWindowStore.html#fetchAll(java.time.Instant,java.time.Instant)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Time.Instant"/></param>
         /// <param name="arg1"><see cref="Java.Time.Instant"/></param>
@@ -317,7 +317,7 @@ namespace Org.Apache.Kafka.Streams.State
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.State.KeyValueIterator<Org.Apache.Kafka.Streams.Kstream.Windowed<K>, V>>("fetchAll", "(Ljava/time/Instant;Ljava/time/Instant;)Lorg/apache/kafka/streams/state/KeyValueIterator;", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/state/ReadOnlyWindowStore.html#fetch(java.lang.Object,java.time.Instant,java.time.Instant)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/state/ReadOnlyWindowStore.html#fetch(java.lang.Object,java.time.Instant,java.time.Instant)"/>
         /// </summary>
         /// <param name="arg0"><typeparamref name="K"/></param>
         /// <param name="arg1"><see cref="Java.Time.Instant"/></param>
@@ -329,7 +329,7 @@ namespace Org.Apache.Kafka.Streams.State
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.State.WindowStoreIterator<V>>("fetch", "(Ljava/lang/Object;Ljava/time/Instant;Ljava/time/Instant;)Lorg/apache/kafka/streams/state/WindowStoreIterator;", arg0, arg1, arg2);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/state/ReadOnlyWindowStore.html#fetch(java.lang.Object,long)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/state/ReadOnlyWindowStore.html#fetch(java.lang.Object,long)"/>
         /// </summary>
         /// <param name="arg0"><typeparamref name="K"/></param>
         /// <param name="arg1"><see cref="long"/></param>
@@ -339,7 +339,7 @@ namespace Org.Apache.Kafka.Streams.State
             return IExecuteWithSignature<V>("fetch", "(Ljava/lang/Object;J)Ljava/lang/Object;", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/state/ReadOnlyWindowStore.html#backwardAll()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/state/ReadOnlyWindowStore.html#backwardAll()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Streams.State.KeyValueIterator"/></returns>
         public Org.Apache.Kafka.Streams.State.KeyValueIterator<Org.Apache.Kafka.Streams.Kstream.Windowed<K>, V> BackwardAll()
@@ -347,7 +347,7 @@ namespace Org.Apache.Kafka.Streams.State
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.State.KeyValueIterator<Org.Apache.Kafka.Streams.Kstream.Windowed<K>, V>>("backwardAll", "()Lorg/apache/kafka/streams/state/KeyValueIterator;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/state/ReadOnlyWindowStore.html#backwardFetch(java.lang.Object,java.lang.Object,java.time.Instant,java.time.Instant)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/state/ReadOnlyWindowStore.html#backwardFetch(java.lang.Object,java.lang.Object,java.time.Instant,java.time.Instant)"/>
         /// </summary>
         /// <param name="arg0"><typeparamref name="K"/></param>
         /// <param name="arg1"><typeparamref name="K"/></param>
@@ -360,7 +360,7 @@ namespace Org.Apache.Kafka.Streams.State
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.State.KeyValueIterator<Org.Apache.Kafka.Streams.Kstream.Windowed<K>, V>>("backwardFetch", "(Ljava/lang/Object;Ljava/lang/Object;Ljava/time/Instant;Ljava/time/Instant;)Lorg/apache/kafka/streams/state/KeyValueIterator;", arg0, arg1, arg2, arg3);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/state/ReadOnlyWindowStore.html#backwardFetchAll(java.time.Instant,java.time.Instant)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/state/ReadOnlyWindowStore.html#backwardFetchAll(java.time.Instant,java.time.Instant)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Time.Instant"/></param>
         /// <param name="arg1"><see cref="Java.Time.Instant"/></param>
@@ -371,7 +371,7 @@ namespace Org.Apache.Kafka.Streams.State
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.State.KeyValueIterator<Org.Apache.Kafka.Streams.Kstream.Windowed<K>, V>>("backwardFetchAll", "(Ljava/time/Instant;Ljava/time/Instant;)Lorg/apache/kafka/streams/state/KeyValueIterator;", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/state/ReadOnlyWindowStore.html#backwardFetch(java.lang.Object,java.time.Instant,java.time.Instant)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/state/ReadOnlyWindowStore.html#backwardFetch(java.lang.Object,java.time.Instant,java.time.Instant)"/>
         /// </summary>
         /// <param name="arg0"><typeparamref name="K"/></param>
         /// <param name="arg1"><see cref="Java.Time.Instant"/></param>

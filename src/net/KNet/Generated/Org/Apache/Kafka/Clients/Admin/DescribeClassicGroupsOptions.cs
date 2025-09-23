@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 {
     #region DescribeClassicGroupsOptions declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/DescribeClassicGroupsOptions.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/admin/DescribeClassicGroupsOptions.html"/>
     /// </summary>
     public partial class DescribeClassicGroupsOptions : Org.Apache.Kafka.Clients.Admin.AbstractOptions<Org.Apache.Kafka.Clients.Admin.DescribeClassicGroupsOptions>
     {
@@ -87,7 +87,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/DescribeClassicGroupsOptions.html#includeAuthorizedOperations()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/admin/DescribeClassicGroupsOptions.html#includeAuthorizedOperations()"/>
         /// </summary>
         /// <returns><see cref="bool"/></returns>
         public bool IncludeAuthorizedOperations()
@@ -95,7 +95,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<bool>("includeAuthorizedOperations", "()Z");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/DescribeClassicGroupsOptions.html#includeAuthorizedOperations(boolean)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/admin/DescribeClassicGroupsOptions.html#includeAuthorizedOperations(boolean)"/>
         /// </summary>
         /// <param name="arg0"><see cref="bool"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.DescribeClassicGroupsOptions"/></returns>

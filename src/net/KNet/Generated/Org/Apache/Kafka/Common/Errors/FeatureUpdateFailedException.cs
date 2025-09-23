@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common.Errors
 {
     #region FeatureUpdateFailedException declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/errors/FeatureUpdateFailedException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/errors/FeatureUpdateFailedException.html"/>
     /// </summary>
     public partial class FeatureUpdateFailedException : Org.Apache.Kafka.Common.Errors.ApiException
     {

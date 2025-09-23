@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Raft
 {
     #region EpochState declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/EpochState.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/EpochState.html"/>
     /// </summary>
     public partial class EpochState : Java.Io.Closeable
     {
@@ -70,7 +70,7 @@ namespace Org.Apache.Kafka.Raft
 
     #region IEpochState
     /// <summary>
-    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/EpochState.html"/>
+    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/EpochState.html"/>
     /// </summary>
     public partial interface IEpochState : Java.Io.ICloseable
     {
@@ -107,7 +107,7 @@ namespace Org.Apache.Kafka.Raft
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/EpochState.html#canGrantVote(org.apache.kafka.raft.ReplicaKey,boolean,boolean)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/EpochState.html#canGrantVote(org.apache.kafka.raft.ReplicaKey,boolean,boolean)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Raft.ReplicaKey"/></param>
         /// <param name="arg1"><see cref="bool"/></param>
@@ -118,7 +118,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<bool>("canGrantVote", "(Lorg/apache/kafka/raft/ReplicaKey;ZZ)Z", arg0, arg1, arg2);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/EpochState.html#epoch()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/EpochState.html#epoch()"/>
         /// </summary>
         /// <returns><see cref="int"/></returns>
         public int Epoch()
@@ -126,7 +126,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<int>("epoch", "()I");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/EpochState.html#name()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/EpochState.html#name()"/>
         /// </summary>
         /// <returns><see cref="Java.Lang.String"/></returns>
         public Java.Lang.String Name()
@@ -134,7 +134,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<Java.Lang.String>("name", "()Ljava/lang/String;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/EpochState.html#election()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/EpochState.html#election()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Raft.ElectionState"/></returns>
         public Org.Apache.Kafka.Raft.ElectionState Election()
@@ -142,7 +142,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<Org.Apache.Kafka.Raft.ElectionState>("election", "()Lorg/apache/kafka/raft/ElectionState;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/EpochState.html#leaderEndpoints()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/EpochState.html#leaderEndpoints()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Raft.Endpoints"/></returns>
         public Org.Apache.Kafka.Raft.Endpoints LeaderEndpoints()
@@ -150,7 +150,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<Org.Apache.Kafka.Raft.Endpoints>("leaderEndpoints", "()Lorg/apache/kafka/raft/Endpoints;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/EpochState.html#highWatermark()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.0/org/apache/kafka/raft/EpochState.html#highWatermark()"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Optional"/></returns>
         public Java.Util.Optional<Org.Apache.Kafka.Raft.LogOffsetMetadata> HighWatermark()

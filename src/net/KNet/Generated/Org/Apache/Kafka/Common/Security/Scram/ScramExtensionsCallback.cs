@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common.Security.Scram
 {
     #region ScramExtensionsCallback declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/security/scram/ScramExtensionsCallback.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/security/scram/ScramExtensionsCallback.html"/>
     /// </summary>
     public partial class ScramExtensionsCallback : Javax.Security.Auth.Callback.Callback
     {
@@ -87,7 +87,7 @@ namespace Org.Apache.Kafka.Common.Security.Scram
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/security/scram/ScramExtensionsCallback.html#extensions()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/security/scram/ScramExtensionsCallback.html#extensions()"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Map"/></returns>
         public Java.Util.Map<Java.Lang.String, Java.Lang.String> Extensions()
@@ -95,7 +95,7 @@ namespace Org.Apache.Kafka.Common.Security.Scram
             return IExecuteWithSignature<Java.Util.Map<Java.Lang.String, Java.Lang.String>>("extensions", "()Ljava/util/Map;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/security/scram/ScramExtensionsCallback.html#extensions(java.util.Map)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/security/scram/ScramExtensionsCallback.html#extensions(java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         public void Extensions(Java.Util.Map<Java.Lang.String, Java.Lang.String> arg0)

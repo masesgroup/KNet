@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Tools
 {
     #region TerseException declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/TerseException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.0/org/apache/kafka/tools/TerseException.html"/>
     /// </summary>
     public partial class TerseException : Java.Lang.Exception
     {
