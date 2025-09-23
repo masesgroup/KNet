@@ -81,7 +81,7 @@ jobs:
 
       - name: Create Jars of JNetReflector
         if: ${{ inputs.UseLatestJNetReflectorSource == true }}
-        run: mvn "-Djcobridgepath=../../../binReflector/net8.0/JCOBridge.jar" --file ./JNet/src/jvm/jnet/pom.xml --no-transfer-progress package
+        run: mvn "-DbinFolderName=binReflector" --file ./JNet/src/jvm/jnet/pom.xml --no-transfer-progress package
         env:
           MAVEN_USERNAME: ${{ secrets.MAVEN_USERNAME }}
           MAVEN_CENTRAL_TOKEN: ${{ secrets.MAVEN_CENTRAL_TOKEN }}

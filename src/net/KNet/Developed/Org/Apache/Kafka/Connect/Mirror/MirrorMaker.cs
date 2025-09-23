@@ -16,19 +16,22 @@
 *  Refer to LICENSE for more information.
 */
 
+using MASES.JCOBridge.C2JBridge;
+
 namespace Org.Apache.Kafka.Connect.Mirror
 {
     /// <summary>
     /// Class managing MirrorMaker2
     /// </summary>
-    public class MirrorMaker2 : MASES.JCOBridge.C2JBridge.JVMBridgeMain<MirrorMaker2>
+    public class MirrorMaker2 : JVMBridgeMainExtensible<MirrorMaker2>
     {
         /// <summary>
         /// Initialize a new <see cref="MirrorMaker2"/>
         /// </summary>
-        public MirrorMaker2()
-            : base("org.apache.kafka.connect.mirror.MirrorMaker")
-        {
-        }
+        public MirrorMaker2() { }
+        /// <inheritdoc/>
+        public MirrorMaker2(IJVMBridgeBaseInitializer initializer) : base(initializer) { }
+        /// <inheritdoc/>
+        public override string BridgeClassName => "org.apache.kafka.connect.mirror.MirrorMaker";
     }
 }
