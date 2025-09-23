@@ -89,7 +89,7 @@
 
 
   <h1 id="Org_Apache_Kafka_Streams_Scala_Serialization_Serdes" data-uid="Org.Apache.Kafka.Streams.Scala.Serialization.Serdes" class="text-break">
-Class Serdes  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Scala/Serialization/Serdes.cs/#L64"><i class="bi bi-code-slash"></i></a>
+Class Serdes  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Scala/Serialization/Serdes.cs/#L70"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -102,7 +102,7 @@ Class Serdes  <a class="header-action link-secondary" title="View source" href="
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class Serdes : JVMBridgeBase&lt;Serdes&gt;, IDynamicMetaObjectProvider, IJVMBridgeCore, IDisposable, IJVMBridgeBaseStatic, IJVMBridgeBase, IJVMBridgeDefinition</code></pre>
+    <pre><code class="lang-csharp hljs">public class Serdes : JVMBridgeBase&lt;Serdes&gt;, IDynamicMetaObjectProvider, IJVMBridgeCore, IEquatable&lt;IJVMBridgeBase&gt;, IDisposable, IJVMBridgeBaseStatic, IJVMBridgeBase, IJVMBridgeDefinition</code></pre>
   </div>
 
 
@@ -124,6 +124,7 @@ Class Serdes  <a class="header-action link-secondary" title="View source" href="
     <dd>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.idynamicmetaobjectprovider">IDynamicMetaObjectProvider</a></div>
       <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeCore.html">IJVMBridgeCore</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeBase.html">IJVMBridgeBase</a>&gt;</div>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
       <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeBaseStatic.html">IJVMBridgeBaseStatic</a></div>
       <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeBase.html">IJVMBridgeBase</a></div>
@@ -220,16 +221,16 @@ Class Serdes  <a class="header-action link-secondary" title="View source" href="
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;Serdes&gt;.SExecuteWithSignature&lt;TReturn, TConverter&gt;(Type, string, string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Serdes&gt;.SExecuteArray&lt;T&gt;(IJavaType, string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Serdes&gt;.SExecuteArray&lt;TArrayType&gt;(IJavaType, string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Serdes&gt;.SExecuteWithSignatureArray&lt;T&gt;(IJavaType, string, string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Serdes&gt;.SExecuteWithSignatureArray&lt;TArrayType&gt;(IJavaType, string, string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Serdes&gt;.SExecuteArray&lt;T&gt;(string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Serdes&gt;.SExecuteArray&lt;TArrayType&gt;(string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Serdes&gt;.SExecuteWithSignatureArray&lt;T&gt;(string, string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Serdes&gt;.SExecuteWithSignatureArray&lt;TArrayType&gt;(string, string, params object[])</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Serdes&gt;.SGetField(IJavaType, string)</a>
@@ -277,6 +278,12 @@ Class Serdes  <a class="header-action link-secondary" title="View source" href="
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Serdes&gt;.NewWithSignature(string, params object[])</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Serdes&gt;.NewAndWrapsDirect&lt;TNewClass&gt;(string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Serdes&gt;.NewWithSignatureAndWrapsDirect&lt;TNewClass&gt;(string, string, params object[])</a>
+    </div>
+    <div>
       <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase-1.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_1_Execute__1___0___">JVMBridgeBase&lt;Serdes&gt;.Execute&lt;T&gt;(params T[])</a>
     </div>
     <div>
@@ -286,13 +293,25 @@ Class Serdes  <a class="header-action link-secondary" title="View source" href="
       <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase-1.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_1_BridgeClazz">JVMBridgeBase&lt;Serdes&gt;.BridgeClazz</a>
     </div>
     <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_ReferenceEqualsJVM_MASES_JCOBridge_C2JBridge_JVMBridgeBase_MASES_JCOBridge_C2JBridge_JVMBridgeBase_">JVMBridgeBase.ReferenceEqualsJVM(JVMBridgeBase, JVMBridgeBase)</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">JVMBridgeBase.ClazzOf&lt;TClass&gt;(bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">JVMBridgeBase.ClazzOf&lt;TClass&gt;(out Exception, bool)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.ClazzOf(string, bool)</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.ClazzOf(string, out Exception, bool)</a>
+    </div>
+    <div>
       <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_RuntimeClassNameOf__1">JVMBridgeBase.RuntimeClassNameOf&lt;T&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase.RuntimeClassNameOf(Type)</a>
     </div>
     <div>
       <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_ClassNameOf__1">JVMBridgeBase.ClassNameOf&lt;T&gt;()</a>
@@ -349,7 +368,13 @@ Class Serdes  <a class="header-action link-secondary" title="View source" href="
       <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_Dispose">JVMBridgeBase.Dispose()</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">JVMBridgeBase.Dispose(bool)</a>
+    </div>
+    <div>
       <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_ToString">JVMBridgeBase.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_Equals_MASES_JCOBridge_C2JBridge_IJVMBridgeBase_">JVMBridgeBase.Equals(IJVMBridgeBase)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">JVMBridgeBase.Equals(object)</a>
@@ -397,10 +422,10 @@ Class Serdes  <a class="header-action link-secondary" title="View source" href="
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteWithSignature&lt;TNewClass, TReturn, TConverter&gt;(string, string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteArray&lt;T&gt;(string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteArray&lt;TArrayType&gt;(string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteWithSignatureArray&lt;T&gt;(string, string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteWithSignatureArray&lt;TArrayType&gt;(string, string, params object[])</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IGetField(string)</a>
@@ -520,9 +545,42 @@ Class Serdes  <a class="header-action link-secondary" title="View source" href="
 
   <a id="Org_Apache_Kafka_Streams_Scala_Serialization_Serdes__ctor_" data-uid="Org.Apache.Kafka.Streams.Scala.Serialization.Serdes.#ctor*"></a>
 
+  <h3 id="Org_Apache_Kafka_Streams_Scala_Serialization_Serdes__ctor_MASES_JCOBridge_C2JBridge_IJVMBridgeBaseInitializer_" data-uid="Org.Apache.Kafka.Streams.Scala.Serialization.Serdes.#ctor(MASES.JCOBridge.C2JBridge.IJVMBridgeBaseInitializer)">
+  Serdes(IJVMBridgeBaseInitializer)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Scala/Serialization/Serdes.cs/#L42"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Internal constructor: used internally from JCOBridge</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.&quot;)]
+public Serdes(IJVMBridgeBaseInitializer initializer)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>initializer</code> <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeBaseInitializer.html">IJVMBridgeBaseInitializer</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Apache_Kafka_Streams_Scala_Serialization_Serdes__ctor_" data-uid="Org.Apache.Kafka.Streams.Scala.Serialization.Serdes.#ctor*"></a>
+
   <h3 id="Org_Apache_Kafka_Streams_Scala_Serialization_Serdes__ctor_System_Object___" data-uid="Org.Apache.Kafka.Streams.Scala.Serialization.Serdes.#ctor(System.Object[])">
   Serdes(params object[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Scala/Serialization/Serdes.cs/#L42"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Scala/Serialization/Serdes.cs/#L47"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Generic constructor: it is useful for JCOBridge when there is a derived class which needs to pass arguments to the highest JVMBridgeBase class</p>
@@ -558,7 +616,7 @@ Class Serdes  <a class="header-action link-secondary" title="View source" href="
 
   <h3 id="Org_Apache_Kafka_Streams_Scala_Serialization_Serdes_BridgeClassName" data-uid="Org.Apache.Kafka.Streams.Scala.Serialization.Serdes.BridgeClassName">
   BridgeClassName
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Scala/Serialization/Serdes.cs/#L48"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Scala/Serialization/Serdes.cs/#L54"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Java class name to be instantiated</p>
@@ -590,7 +648,7 @@ Class Serdes  <a class="header-action link-secondary" title="View source" href="
 
   <h3 id="Org_Apache_Kafka_Streams_Scala_Serialization_Serdes_IsBridgeAbstract" data-uid="Org.Apache.Kafka.Streams.Scala.Serialization.Serdes.IsBridgeAbstract">
   IsBridgeAbstract
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Scala/Serialization/Serdes.cs/#L50"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Scala/Serialization/Serdes.cs/#L56"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.html#MASES_JCOBridge_C2JBridge_IJVMBridgeDefinition_BridgeClassName">BridgeClassName</a> is an abstract class, i.e. cannot be created an instance</p>
@@ -622,7 +680,7 @@ Class Serdes  <a class="header-action link-secondary" title="View source" href="
 
   <h3 id="Org_Apache_Kafka_Streams_Scala_Serialization_Serdes_IsBridgeCloseable" data-uid="Org.Apache.Kafka.Streams.Scala.Serialization.Serdes.IsBridgeCloseable">
   IsBridgeCloseable
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Scala/Serialization/Serdes.cs/#L52"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Scala/Serialization/Serdes.cs/#L58"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.html#MASES_JCOBridge_C2JBridge_IJVMBridgeDefinition_BridgeClassName">BridgeClassName</a> implements Closeable</p>
@@ -654,7 +712,7 @@ Class Serdes  <a class="header-action link-secondary" title="View source" href="
 
   <h3 id="Org_Apache_Kafka_Streams_Scala_Serialization_Serdes_IsBridgeInterface" data-uid="Org.Apache.Kafka.Streams.Scala.Serialization.Serdes.IsBridgeInterface">
   IsBridgeInterface
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Scala/Serialization/Serdes.cs/#L54"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Scala/Serialization/Serdes.cs/#L60"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.html#MASES_JCOBridge_C2JBridge_IJVMBridgeDefinition_BridgeClassName">BridgeClassName</a> is an interface, i.e. does not have any public constructor</p>
@@ -686,7 +744,7 @@ Class Serdes  <a class="header-action link-secondary" title="View source" href="
 
   <h3 id="Org_Apache_Kafka_Streams_Scala_Serialization_Serdes_IsBridgeStatic" data-uid="Org.Apache.Kafka.Streams.Scala.Serialization.Serdes.IsBridgeStatic">
   IsBridgeStatic
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Scala/Serialization/Serdes.cs/#L56"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Scala/Serialization/Serdes.cs/#L62"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.html#MASES_JCOBridge_C2JBridge_IJVMBridgeDefinition_BridgeClassName">BridgeClassName</a> is a static class, i.e. does not have any public constructor</p>
@@ -722,7 +780,7 @@ Class Serdes  <a class="header-action link-secondary" title="View source" href="
 
   <h3 id="Org_Apache_Kafka_Streams_Scala_Serialization_Serdes_ByteArraySerde" data-uid="Org.Apache.Kafka.Streams.Scala.Serialization.Serdes.ByteArraySerde">
   ByteArraySerde()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Scala/Serialization/Serdes.cs/#L93"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Scala/Serialization/Serdes.cs/#L99"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/serialization/Serdes.html#byteArraySerde()">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/serialization/Serdes.html#byteArraySerde()</a></p>
@@ -755,7 +813,7 @@ Class Serdes  <a class="header-action link-secondary" title="View source" href="
 
   <h3 id="Org_Apache_Kafka_Streams_Scala_Serialization_Serdes_ByteArraySerdeDirect" data-uid="Org.Apache.Kafka.Streams.Scala.Serialization.Serdes.ByteArraySerdeDirect">
   ByteArraySerdeDirect()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Scala/Serialization/Serdes.cs/#L101"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Scala/Serialization/Serdes.cs/#L107"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/serialization/Serdes.html#byteArraySerde()">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/serialization/Serdes.html#byteArraySerde()</a></p>
@@ -788,7 +846,7 @@ Class Serdes  <a class="header-action link-secondary" title="View source" href="
 
   <h3 id="Org_Apache_Kafka_Streams_Scala_Serialization_Serdes_ByteBufferSerde" data-uid="Org.Apache.Kafka.Streams.Scala.Serialization.Serdes.ByteBufferSerde">
   ByteBufferSerde()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Scala/Serialization/Serdes.cs/#L285"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Scala/Serialization/Serdes.cs/#L291"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/serialization/Serdes.html#byteBufferSerde()">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/serialization/Serdes.html#byteBufferSerde()</a></p>
@@ -821,7 +879,7 @@ Class Serdes  <a class="header-action link-secondary" title="View source" href="
 
   <h3 id="Org_Apache_Kafka_Streams_Scala_Serialization_Serdes_ByteBufferSerdeDirect" data-uid="Org.Apache.Kafka.Streams.Scala.Serialization.Serdes.ByteBufferSerdeDirect">
   ByteBufferSerdeDirect()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Scala/Serialization/Serdes.cs/#L293"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Scala/Serialization/Serdes.cs/#L299"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/serialization/Serdes.html#byteBufferSerde()">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/serialization/Serdes.html#byteBufferSerde()</a></p>
@@ -854,7 +912,7 @@ Class Serdes  <a class="header-action link-secondary" title="View source" href="
 
   <h3 id="Org_Apache_Kafka_Streams_Scala_Serialization_Serdes_BytesSerde" data-uid="Org.Apache.Kafka.Streams.Scala.Serialization.Serdes.BytesSerde">
   BytesSerde()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Scala/Serialization/Serdes.cs/#L317"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Scala/Serialization/Serdes.cs/#L323"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/serialization/Serdes.html#bytesSerde()">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/serialization/Serdes.html#bytesSerde()</a></p>
@@ -887,7 +945,7 @@ Class Serdes  <a class="header-action link-secondary" title="View source" href="
 
   <h3 id="Org_Apache_Kafka_Streams_Scala_Serialization_Serdes_BytesSerdeDirect" data-uid="Org.Apache.Kafka.Streams.Scala.Serialization.Serdes.BytesSerdeDirect">
   BytesSerdeDirect()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Scala/Serialization/Serdes.cs/#L325"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Scala/Serialization/Serdes.cs/#L331"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/serialization/Serdes.html#bytesSerde()">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/serialization/Serdes.html#bytesSerde()</a></p>
@@ -920,7 +978,7 @@ Class Serdes  <a class="header-action link-secondary" title="View source" href="
 
   <h3 id="Org_Apache_Kafka_Streams_Scala_Serialization_Serdes_DoubleSerde" data-uid="Org.Apache.Kafka.Streams.Scala.Serialization.Serdes.DoubleSerde">
   DoubleSerde()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Scala/Serialization/Serdes.cs/#L173"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Scala/Serialization/Serdes.cs/#L179"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/serialization/Serdes.html#doubleSerde()">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/serialization/Serdes.html#doubleSerde()</a></p>
@@ -953,7 +1011,7 @@ Class Serdes  <a class="header-action link-secondary" title="View source" href="
 
   <h3 id="Org_Apache_Kafka_Streams_Scala_Serialization_Serdes_DoubleSerdeDirect" data-uid="Org.Apache.Kafka.Streams.Scala.Serialization.Serdes.DoubleSerdeDirect">
   DoubleSerdeDirect()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Scala/Serialization/Serdes.cs/#L181"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Scala/Serialization/Serdes.cs/#L187"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/serialization/Serdes.html#doubleSerde()">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/serialization/Serdes.html#doubleSerde()</a></p>
@@ -986,7 +1044,7 @@ Class Serdes  <a class="header-action link-secondary" title="View source" href="
 
   <h3 id="Org_Apache_Kafka_Streams_Scala_Serialization_Serdes_FloatSerde" data-uid="Org.Apache.Kafka.Streams.Scala.Serialization.Serdes.FloatSerde">
   FloatSerde()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Scala/Serialization/Serdes.cs/#L189"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Scala/Serialization/Serdes.cs/#L195"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/serialization/Serdes.html#floatSerde()">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/serialization/Serdes.html#floatSerde()</a></p>
@@ -1019,7 +1077,7 @@ Class Serdes  <a class="header-action link-secondary" title="View source" href="
 
   <h3 id="Org_Apache_Kafka_Streams_Scala_Serialization_Serdes_FloatSerdeDirect" data-uid="Org.Apache.Kafka.Streams.Scala.Serialization.Serdes.FloatSerdeDirect">
   FloatSerdeDirect()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Scala/Serialization/Serdes.cs/#L197"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Scala/Serialization/Serdes.cs/#L203"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/serialization/Serdes.html#floatSerde()">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/serialization/Serdes.html#floatSerde()</a></p>
@@ -1052,7 +1110,7 @@ Class Serdes  <a class="header-action link-secondary" title="View source" href="
 
   <h3 id="Org_Apache_Kafka_Streams_Scala_Serialization_Serdes_IntSerde" data-uid="Org.Apache.Kafka.Streams.Scala.Serialization.Serdes.IntSerde">
   IntSerde()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Scala/Serialization/Serdes.cs/#L205"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Scala/Serialization/Serdes.cs/#L211"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/serialization/Serdes.html#intSerde()">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/serialization/Serdes.html#intSerde()</a></p>
@@ -1085,7 +1143,7 @@ Class Serdes  <a class="header-action link-secondary" title="View source" href="
 
   <h3 id="Org_Apache_Kafka_Streams_Scala_Serialization_Serdes_IntSerdeDirect" data-uid="Org.Apache.Kafka.Streams.Scala.Serialization.Serdes.IntSerdeDirect">
   IntSerdeDirect()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Scala/Serialization/Serdes.cs/#L213"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Scala/Serialization/Serdes.cs/#L219"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/serialization/Serdes.html#intSerde()">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/serialization/Serdes.html#intSerde()</a></p>
@@ -1118,7 +1176,7 @@ Class Serdes  <a class="header-action link-secondary" title="View source" href="
 
   <h3 id="Org_Apache_Kafka_Streams_Scala_Serialization_Serdes_JavaDoubleSerde" data-uid="Org.Apache.Kafka.Streams.Scala.Serialization.Serdes.JavaDoubleSerde">
   JavaDoubleSerde()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Scala/Serialization/Serdes.cs/#L109"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Scala/Serialization/Serdes.cs/#L115"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/serialization/Serdes.html#javaDoubleSerde()">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/serialization/Serdes.html#javaDoubleSerde()</a></p>
@@ -1151,7 +1209,7 @@ Class Serdes  <a class="header-action link-secondary" title="View source" href="
 
   <h3 id="Org_Apache_Kafka_Streams_Scala_Serialization_Serdes_JavaDoubleSerdeDirect" data-uid="Org.Apache.Kafka.Streams.Scala.Serialization.Serdes.JavaDoubleSerdeDirect">
   JavaDoubleSerdeDirect()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Scala/Serialization/Serdes.cs/#L117"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Scala/Serialization/Serdes.cs/#L123"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/serialization/Serdes.html#javaDoubleSerde()">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/serialization/Serdes.html#javaDoubleSerde()</a></p>
@@ -1184,7 +1242,7 @@ Class Serdes  <a class="header-action link-secondary" title="View source" href="
 
   <h3 id="Org_Apache_Kafka_Streams_Scala_Serialization_Serdes_JavaFloatSerde" data-uid="Org.Apache.Kafka.Streams.Scala.Serialization.Serdes.JavaFloatSerde">
   JavaFloatSerde()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Scala/Serialization/Serdes.cs/#L125"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Scala/Serialization/Serdes.cs/#L131"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/serialization/Serdes.html#javaFloatSerde()">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/serialization/Serdes.html#javaFloatSerde()</a></p>
@@ -1217,7 +1275,7 @@ Class Serdes  <a class="header-action link-secondary" title="View source" href="
 
   <h3 id="Org_Apache_Kafka_Streams_Scala_Serialization_Serdes_JavaFloatSerdeDirect" data-uid="Org.Apache.Kafka.Streams.Scala.Serialization.Serdes.JavaFloatSerdeDirect">
   JavaFloatSerdeDirect()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Scala/Serialization/Serdes.cs/#L133"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Scala/Serialization/Serdes.cs/#L139"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/serialization/Serdes.html#javaFloatSerde()">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/serialization/Serdes.html#javaFloatSerde()</a></p>
@@ -1250,7 +1308,7 @@ Class Serdes  <a class="header-action link-secondary" title="View source" href="
 
   <h3 id="Org_Apache_Kafka_Streams_Scala_Serialization_Serdes_JavaIntegerSerde" data-uid="Org.Apache.Kafka.Streams.Scala.Serialization.Serdes.JavaIntegerSerde">
   JavaIntegerSerde()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Scala/Serialization/Serdes.cs/#L141"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Scala/Serialization/Serdes.cs/#L147"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/serialization/Serdes.html#javaIntegerSerde()">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/serialization/Serdes.html#javaIntegerSerde()</a></p>
@@ -1283,7 +1341,7 @@ Class Serdes  <a class="header-action link-secondary" title="View source" href="
 
   <h3 id="Org_Apache_Kafka_Streams_Scala_Serialization_Serdes_JavaIntegerSerdeDirect" data-uid="Org.Apache.Kafka.Streams.Scala.Serialization.Serdes.JavaIntegerSerdeDirect">
   JavaIntegerSerdeDirect()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Scala/Serialization/Serdes.cs/#L149"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Scala/Serialization/Serdes.cs/#L155"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/serialization/Serdes.html#javaIntegerSerde()">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/serialization/Serdes.html#javaIntegerSerde()</a></p>
@@ -1316,7 +1374,7 @@ Class Serdes  <a class="header-action link-secondary" title="View source" href="
 
   <h3 id="Org_Apache_Kafka_Streams_Scala_Serialization_Serdes_JavaLongSerde" data-uid="Org.Apache.Kafka.Streams.Scala.Serialization.Serdes.JavaLongSerde">
   JavaLongSerde()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Scala/Serialization/Serdes.cs/#L157"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Scala/Serialization/Serdes.cs/#L163"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/serialization/Serdes.html#javaLongSerde()">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/serialization/Serdes.html#javaLongSerde()</a></p>
@@ -1349,7 +1407,7 @@ Class Serdes  <a class="header-action link-secondary" title="View source" href="
 
   <h3 id="Org_Apache_Kafka_Streams_Scala_Serialization_Serdes_JavaLongSerdeDirect" data-uid="Org.Apache.Kafka.Streams.Scala.Serialization.Serdes.JavaLongSerdeDirect">
   JavaLongSerdeDirect()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Scala/Serialization/Serdes.cs/#L165"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Scala/Serialization/Serdes.cs/#L171"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/serialization/Serdes.html#javaLongSerde()">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/serialization/Serdes.html#javaLongSerde()</a></p>
@@ -1382,7 +1440,7 @@ Class Serdes  <a class="header-action link-secondary" title="View source" href="
 
   <h3 id="Org_Apache_Kafka_Streams_Scala_Serialization_Serdes_JavaShortSerde" data-uid="Org.Apache.Kafka.Streams.Scala.Serialization.Serdes.JavaShortSerde">
   JavaShortSerde()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Scala/Serialization/Serdes.cs/#L253"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Scala/Serialization/Serdes.cs/#L259"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/serialization/Serdes.html#javaShortSerde()">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/serialization/Serdes.html#javaShortSerde()</a></p>
@@ -1415,7 +1473,7 @@ Class Serdes  <a class="header-action link-secondary" title="View source" href="
 
   <h3 id="Org_Apache_Kafka_Streams_Scala_Serialization_Serdes_JavaShortSerdeDirect" data-uid="Org.Apache.Kafka.Streams.Scala.Serialization.Serdes.JavaShortSerdeDirect">
   JavaShortSerdeDirect()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Scala/Serialization/Serdes.cs/#L261"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Scala/Serialization/Serdes.cs/#L267"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/serialization/Serdes.html#javaShortSerde()">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/serialization/Serdes.html#javaShortSerde()</a></p>
@@ -1448,7 +1506,7 @@ Class Serdes  <a class="header-action link-secondary" title="View source" href="
 
   <h3 id="Org_Apache_Kafka_Streams_Scala_Serialization_Serdes_LongSerde" data-uid="Org.Apache.Kafka.Streams.Scala.Serialization.Serdes.LongSerde">
   LongSerde()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Scala/Serialization/Serdes.cs/#L221"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Scala/Serialization/Serdes.cs/#L227"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/serialization/Serdes.html#longSerde()">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/serialization/Serdes.html#longSerde()</a></p>
@@ -1481,7 +1539,7 @@ Class Serdes  <a class="header-action link-secondary" title="View source" href="
 
   <h3 id="Org_Apache_Kafka_Streams_Scala_Serialization_Serdes_LongSerdeDirect" data-uid="Org.Apache.Kafka.Streams.Scala.Serialization.Serdes.LongSerdeDirect">
   LongSerdeDirect()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Scala/Serialization/Serdes.cs/#L229"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Scala/Serialization/Serdes.cs/#L235"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/serialization/Serdes.html#longSerde()">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/serialization/Serdes.html#longSerde()</a></p>
@@ -1514,7 +1572,7 @@ Class Serdes  <a class="header-action link-secondary" title="View source" href="
 
   <h3 id="Org_Apache_Kafka_Streams_Scala_Serialization_Serdes_SessionWindowedSerde__1_Org_Apache_Kafka_Common_Serialization_Serde___0__" data-uid="Org.Apache.Kafka.Streams.Scala.Serialization.Serdes.SessionWindowedSerde``1(Org.Apache.Kafka.Common.Serialization.Serde{``0})">
   SessionWindowedSerde&lt;T&gt;(Serde&lt;T&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Scala/Serialization/Serdes.cs/#L85"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Scala/Serialization/Serdes.cs/#L91"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/serialization/Serdes.html#sessionWindowedSerde(org.apache.kafka.common.serialization.Serde)">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/serialization/Serdes.html#sessionWindowedSerde(org.apache.kafka.common.serialization.Serde)</a></p>
@@ -1558,7 +1616,7 @@ Class Serdes  <a class="header-action link-secondary" title="View source" href="
 
   <h3 id="Org_Apache_Kafka_Streams_Scala_Serialization_Serdes_ShortSerde" data-uid="Org.Apache.Kafka.Streams.Scala.Serialization.Serdes.ShortSerde">
   ShortSerde()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Scala/Serialization/Serdes.cs/#L237"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Scala/Serialization/Serdes.cs/#L243"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/serialization/Serdes.html#shortSerde()">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/serialization/Serdes.html#shortSerde()</a></p>
@@ -1591,7 +1649,7 @@ Class Serdes  <a class="header-action link-secondary" title="View source" href="
 
   <h3 id="Org_Apache_Kafka_Streams_Scala_Serialization_Serdes_ShortSerdeDirect" data-uid="Org.Apache.Kafka.Streams.Scala.Serialization.Serdes.ShortSerdeDirect">
   ShortSerdeDirect()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Scala/Serialization/Serdes.cs/#L245"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Scala/Serialization/Serdes.cs/#L251"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/serialization/Serdes.html#shortSerde()">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/serialization/Serdes.html#shortSerde()</a></p>
@@ -1624,7 +1682,7 @@ Class Serdes  <a class="header-action link-secondary" title="View source" href="
 
   <h3 id="Org_Apache_Kafka_Streams_Scala_Serialization_Serdes_StringSerde" data-uid="Org.Apache.Kafka.Streams.Scala.Serialization.Serdes.StringSerde">
   StringSerde()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Scala/Serialization/Serdes.cs/#L269"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Scala/Serialization/Serdes.cs/#L275"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/serialization/Serdes.html#stringSerde()">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/serialization/Serdes.html#stringSerde()</a></p>
@@ -1657,7 +1715,7 @@ Class Serdes  <a class="header-action link-secondary" title="View source" href="
 
   <h3 id="Org_Apache_Kafka_Streams_Scala_Serialization_Serdes_StringSerdeDirect" data-uid="Org.Apache.Kafka.Streams.Scala.Serialization.Serdes.StringSerdeDirect">
   StringSerdeDirect()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Scala/Serialization/Serdes.cs/#L277"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Scala/Serialization/Serdes.cs/#L283"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/serialization/Serdes.html#stringSerde()">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/serialization/Serdes.html#stringSerde()</a></p>
@@ -1690,7 +1748,7 @@ Class Serdes  <a class="header-action link-secondary" title="View source" href="
 
   <h3 id="Org_Apache_Kafka_Streams_Scala_Serialization_Serdes_UuidSerde" data-uid="Org.Apache.Kafka.Streams.Scala.Serialization.Serdes.UuidSerde">
   UuidSerde()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Scala/Serialization/Serdes.cs/#L301"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Scala/Serialization/Serdes.cs/#L307"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/serialization/Serdes.html#uuidSerde()">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/serialization/Serdes.html#uuidSerde()</a></p>
@@ -1723,7 +1781,7 @@ Class Serdes  <a class="header-action link-secondary" title="View source" href="
 
   <h3 id="Org_Apache_Kafka_Streams_Scala_Serialization_Serdes_UuidSerdeDirect" data-uid="Org.Apache.Kafka.Streams.Scala.Serialization.Serdes.UuidSerdeDirect">
   UuidSerdeDirect()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Scala/Serialization/Serdes.cs/#L309"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Scala/Serialization/Serdes.cs/#L315"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/serialization/Serdes.html#uuidSerde()">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.0.0/org/apache/kafka/streams/scala/serialization/Serdes.html#uuidSerde()</a></p>
@@ -1756,7 +1814,7 @@ Class Serdes  <a class="header-action link-secondary" title="View source" href="
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Scala/Serialization/Serdes.cs/#L64" class="edit-link">Edit this page</a>
+          <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Scala/Serialization/Serdes.cs/#L70" class="edit-link">Edit this page</a>
         </div>
 
 

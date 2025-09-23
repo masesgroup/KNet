@@ -89,7 +89,7 @@
 
 
   <h1 id="MASES_KNet_Producer_KNetProducerKeyBuffered_2" data-uid="MASES.KNet.Producer.KNetProducerKeyBuffered`2" class="text-break">
-Class KNetProducerKeyBuffered&lt;K, V&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/KNetProducer.cs/#L623"><i class="bi bi-code-slash"></i></a>
+Class KNetProducerKeyBuffered&lt;K, V&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/KNetProducer.cs/#L633"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -102,7 +102,7 @@ Class KNetProducerKeyBuffered&lt;K, V&gt;  <a class="header-action link-secondar
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class KNetProducerKeyBuffered&lt;K, V&gt; : KNetProducer&lt;K, V, ByteBuffer, byte[]&gt;, IDynamicMetaObjectProvider, IJVMBridgeCore, IJVMBridgeBaseStatic, IProducer&lt;K, V, ByteBuffer, byte[]&gt;, IProducer&lt;ByteBuffer, byte[]&gt;, IProducer, IJVMBridgeBase, IJVMBridgeDefinition, IDisposable, ICloseable, IAutoCloseable</code></pre>
+    <pre><code class="lang-csharp hljs">public class KNetProducerKeyBuffered&lt;K, V&gt; : KNetProducer&lt;K, V, ByteBuffer, byte[]&gt;, IDynamicMetaObjectProvider, IJVMBridgeCore, IEquatable&lt;IJVMBridgeBase&gt;, IJVMBridgeBaseStatic, IProducer&lt;K, V, ByteBuffer, byte[]&gt;, IProducer&lt;ByteBuffer, byte[]&gt;, IProducer, IJVMBridgeBase, IJVMBridgeDefinition, IDisposable, ICloseable, IAutoCloseable</code></pre>
   </div>
 
 
@@ -138,6 +138,7 @@ Class KNetProducerKeyBuffered&lt;K, V&gt;  <a class="header-action link-secondar
     <dd>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.idynamicmetaobjectprovider">IDynamicMetaObjectProvider</a></div>
       <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeCore.html">IJVMBridgeCore</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeBase.html">IJVMBridgeBase</a>&gt;</div>
       <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeBaseStatic.html">IJVMBridgeBaseStatic</a></div>
       <div><a class="xref" href="MASES.KNet.Producer.IProducer-4.html">IProducer</a>&lt;K, V, <a class="xref" href="https://jnet.masesgroup.com/api/Java.Nio.ByteBuffer.html">ByteBuffer</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]&gt;</div>
       <div><a class="xref" href="Org.Apache.Kafka.Clients.Producer.IProducer-2.html">IProducer</a>&lt;<a class="xref" href="https://jnet.masesgroup.com/api/Java.Nio.ByteBuffer.html">ByteBuffer</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]&gt;</div>
@@ -158,7 +159,7 @@ Class KNetProducerKeyBuffered&lt;K, V&gt;  <a class="header-action link-secondar
       <a class="xref" href="MASES.KNet.Producer.KNetProducer-4.html#MASES_KNet_Producer_KNetProducer_4_BridgeClassName">KNetProducer&lt;K, V, ByteBuffer, byte[]&gt;.BridgeClassName</a>
     </div>
     <div>
-      <a class="xref" href="MASES.KNet.Producer.KNetProducer-4.html#MASES_KNet_Producer_KNetProducer_4_Dispose">KNetProducer&lt;K, V, ByteBuffer, byte[]&gt;.Dispose()</a>
+      <a class="xref" href="MASES.KNet.Producer.KNetProducer-4.html#MASES_KNet_Producer_KNetProducer_4_Dispose_System_Boolean_">KNetProducer&lt;K, V, ByteBuffer, byte[]&gt;.Dispose(bool)</a>
     </div>
     <div>
       <a class="xref" href="MASES.KNet.Producer.KNetProducer-4.html#MASES_KNet_Producer_KNetProducer_4_SetCallback_Org_Apache_Kafka_Clients_Producer_Callback_">KNetProducer&lt;K, V, ByteBuffer, byte[]&gt;.SetCallback(Callback)</a>
@@ -443,16 +444,16 @@ Class KNetProducerKeyBuffered&lt;K, V&gt;  <a class="header-action link-secondar
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;AutoCloseable&gt;.SExecuteWithSignature&lt;TReturn, TConverter&gt;(Type, string, string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SExecuteArray&lt;T&gt;(IJavaType, string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SExecuteArray&lt;TArrayType&gt;(IJavaType, string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SExecuteWithSignatureArray&lt;T&gt;(IJavaType, string, string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SExecuteWithSignatureArray&lt;TArrayType&gt;(IJavaType, string, string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SExecuteArray&lt;T&gt;(string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SExecuteArray&lt;TArrayType&gt;(string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SExecuteWithSignatureArray&lt;T&gt;(string, string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SExecuteWithSignatureArray&lt;TArrayType&gt;(string, string, params object[])</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SGetField(IJavaType, string)</a>
@@ -500,6 +501,12 @@ Class KNetProducerKeyBuffered&lt;K, V&gt;  <a class="header-action link-secondar
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.NewWithSignature(string, params object[])</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.NewAndWrapsDirect&lt;TNewClass&gt;(string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.NewWithSignatureAndWrapsDirect&lt;TNewClass&gt;(string, string, params object[])</a>
+    </div>
+    <div>
       <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase-1.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_1_Execute__1___0___">JVMBridgeBase&lt;AutoCloseable&gt;.Execute&lt;T&gt;(params T[])</a>
     </div>
     <div>
@@ -509,13 +516,25 @@ Class KNetProducerKeyBuffered&lt;K, V&gt;  <a class="header-action link-secondar
       <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase-1.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_1_BridgeClazz">JVMBridgeBase&lt;AutoCloseable&gt;.BridgeClazz</a>
     </div>
     <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_ReferenceEqualsJVM_MASES_JCOBridge_C2JBridge_JVMBridgeBase_MASES_JCOBridge_C2JBridge_JVMBridgeBase_">JVMBridgeBase.ReferenceEqualsJVM(JVMBridgeBase, JVMBridgeBase)</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">JVMBridgeBase.ClazzOf&lt;TClass&gt;(bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">JVMBridgeBase.ClazzOf&lt;TClass&gt;(out Exception, bool)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.ClazzOf(string, bool)</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.ClazzOf(string, out Exception, bool)</a>
+    </div>
+    <div>
       <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_RuntimeClassNameOf__1">JVMBridgeBase.RuntimeClassNameOf&lt;T&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase.RuntimeClassNameOf(Type)</a>
     </div>
     <div>
       <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_ClassNameOf__1">JVMBridgeBase.ClassNameOf&lt;T&gt;()</a>
@@ -572,7 +591,13 @@ Class KNetProducerKeyBuffered&lt;K, V&gt;  <a class="header-action link-secondar
       <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_Dispose">JVMBridgeBase.Dispose()</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">JVMBridgeBase.Dispose(bool)</a>
+    </div>
+    <div>
       <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_ToString">JVMBridgeBase.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_Equals_MASES_JCOBridge_C2JBridge_IJVMBridgeBase_">JVMBridgeBase.Equals(IJVMBridgeBase)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">JVMBridgeBase.Equals(object)</a>
@@ -620,10 +645,10 @@ Class KNetProducerKeyBuffered&lt;K, V&gt;  <a class="header-action link-secondar
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteWithSignature&lt;TNewClass, TReturn, TConverter&gt;(string, string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteArray&lt;T&gt;(string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteArray&lt;TArrayType&gt;(string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteWithSignatureArray&lt;T&gt;(string, string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteWithSignatureArray&lt;TArrayType&gt;(string, string, params object[])</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IGetField(string)</a>
@@ -767,7 +792,7 @@ Class KNetProducerKeyBuffered&lt;K, V&gt;  <a class="header-action link-secondar
 
   <h3 id="MASES_KNet_Producer_KNetProducerKeyBuffered_2__ctor_MASES_KNet_Producer_ProducerConfigBuilder_" data-uid="MASES.KNet.Producer.KNetProducerKeyBuffered`2.#ctor(MASES.KNet.Producer.ProducerConfigBuilder)">
   KNetProducerKeyBuffered(ProducerConfigBuilder)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/KNetProducer.cs/#L629"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/KNetProducer.cs/#L639"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Initialize a new instance of <a class="xref" href="MASES.KNet.Producer.KNetProducer-4.html">KNetProducer&lt;K, V, TJVMK, TJVMV&gt;</a></p>
@@ -800,7 +825,7 @@ Class KNetProducerKeyBuffered&lt;K, V&gt;  <a class="header-action link-secondar
 
   <h3 id="MASES_KNet_Producer_KNetProducerKeyBuffered_2__ctor_MASES_KNet_Producer_ProducerConfigBuilder_MASES_KNet_Serialization_ISerDes__0_Java_Nio_ByteBuffer__MASES_KNet_Serialization_ISerDes__1_System_Byte____" data-uid="MASES.KNet.Producer.KNetProducerKeyBuffered`2.#ctor(MASES.KNet.Producer.ProducerConfigBuilder,MASES.KNet.Serialization.ISerDes{`0,Java.Nio.ByteBuffer},MASES.KNet.Serialization.ISerDes{`1,System.Byte[]})">
   KNetProducerKeyBuffered(ProducerConfigBuilder, ISerDes&lt;K, ByteBuffer&gt;, ISerDes&lt;V, byte[]&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/KNetProducer.cs/#L639"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/KNetProducer.cs/#L649"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Initialize a new instance of <a class="xref" href="MASES.KNet.Producer.KNetProducer-4.html">KNetProducer&lt;K, V, TJVMK, TJVMV&gt;</a></p>
@@ -839,7 +864,7 @@ Class KNetProducerKeyBuffered&lt;K, V&gt;  <a class="header-action link-secondar
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/KNetProducer.cs/#L623" class="edit-link">Edit this page</a>
+          <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/KNetProducer.cs/#L633" class="edit-link">Edit this page</a>
         </div>
 
 

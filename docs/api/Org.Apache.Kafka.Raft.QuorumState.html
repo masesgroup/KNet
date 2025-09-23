@@ -89,7 +89,7 @@
 
 
   <h1 id="Org_Apache_Kafka_Raft_QuorumState" data-uid="Org.Apache.Kafka.Raft.QuorumState" class="text-break">
-Class QuorumState  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumState.cs/#L64"><i class="bi bi-code-slash"></i></a>
+Class QuorumState  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumState.cs/#L70"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -102,7 +102,7 @@ Class QuorumState  <a class="header-action link-secondary" title="View source" h
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class QuorumState : JVMBridgeBase&lt;QuorumState&gt;, IDynamicMetaObjectProvider, IJVMBridgeCore, IDisposable, IJVMBridgeBaseStatic, IJVMBridgeBase, IJVMBridgeDefinition</code></pre>
+    <pre><code class="lang-csharp hljs">public class QuorumState : JVMBridgeBase&lt;QuorumState&gt;, IDynamicMetaObjectProvider, IJVMBridgeCore, IEquatable&lt;IJVMBridgeBase&gt;, IDisposable, IJVMBridgeBaseStatic, IJVMBridgeBase, IJVMBridgeDefinition</code></pre>
   </div>
 
 
@@ -124,6 +124,7 @@ Class QuorumState  <a class="header-action link-secondary" title="View source" h
     <dd>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.idynamicmetaobjectprovider">IDynamicMetaObjectProvider</a></div>
       <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeCore.html">IJVMBridgeCore</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeBase.html">IJVMBridgeBase</a>&gt;</div>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
       <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeBaseStatic.html">IJVMBridgeBaseStatic</a></div>
       <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeBase.html">IJVMBridgeBase</a></div>
@@ -220,16 +221,16 @@ Class QuorumState  <a class="header-action link-secondary" title="View source" h
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;QuorumState&gt;.SExecuteWithSignature&lt;TReturn, TConverter&gt;(Type, string, string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;QuorumState&gt;.SExecuteArray&lt;T&gt;(IJavaType, string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;QuorumState&gt;.SExecuteArray&lt;TArrayType&gt;(IJavaType, string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;QuorumState&gt;.SExecuteWithSignatureArray&lt;T&gt;(IJavaType, string, string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;QuorumState&gt;.SExecuteWithSignatureArray&lt;TArrayType&gt;(IJavaType, string, string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;QuorumState&gt;.SExecuteArray&lt;T&gt;(string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;QuorumState&gt;.SExecuteArray&lt;TArrayType&gt;(string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;QuorumState&gt;.SExecuteWithSignatureArray&lt;T&gt;(string, string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;QuorumState&gt;.SExecuteWithSignatureArray&lt;TArrayType&gt;(string, string, params object[])</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;QuorumState&gt;.SGetField(IJavaType, string)</a>
@@ -277,6 +278,12 @@ Class QuorumState  <a class="header-action link-secondary" title="View source" h
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;QuorumState&gt;.NewWithSignature(string, params object[])</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;QuorumState&gt;.NewAndWrapsDirect&lt;TNewClass&gt;(string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;QuorumState&gt;.NewWithSignatureAndWrapsDirect&lt;TNewClass&gt;(string, string, params object[])</a>
+    </div>
+    <div>
       <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase-1.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_1_Execute__1___0___">JVMBridgeBase&lt;QuorumState&gt;.Execute&lt;T&gt;(params T[])</a>
     </div>
     <div>
@@ -286,13 +293,25 @@ Class QuorumState  <a class="header-action link-secondary" title="View source" h
       <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase-1.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_1_BridgeClazz">JVMBridgeBase&lt;QuorumState&gt;.BridgeClazz</a>
     </div>
     <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_ReferenceEqualsJVM_MASES_JCOBridge_C2JBridge_JVMBridgeBase_MASES_JCOBridge_C2JBridge_JVMBridgeBase_">JVMBridgeBase.ReferenceEqualsJVM(JVMBridgeBase, JVMBridgeBase)</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">JVMBridgeBase.ClazzOf&lt;TClass&gt;(bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">JVMBridgeBase.ClazzOf&lt;TClass&gt;(out Exception, bool)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.ClazzOf(string, bool)</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.ClazzOf(string, out Exception, bool)</a>
+    </div>
+    <div>
       <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_RuntimeClassNameOf__1">JVMBridgeBase.RuntimeClassNameOf&lt;T&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase.RuntimeClassNameOf(Type)</a>
     </div>
     <div>
       <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_ClassNameOf__1">JVMBridgeBase.ClassNameOf&lt;T&gt;()</a>
@@ -349,7 +368,13 @@ Class QuorumState  <a class="header-action link-secondary" title="View source" h
       <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_Dispose">JVMBridgeBase.Dispose()</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">JVMBridgeBase.Dispose(bool)</a>
+    </div>
+    <div>
       <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_ToString">JVMBridgeBase.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_Equals_MASES_JCOBridge_C2JBridge_IJVMBridgeBase_">JVMBridgeBase.Equals(IJVMBridgeBase)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">JVMBridgeBase.Equals(object)</a>
@@ -397,10 +422,10 @@ Class QuorumState  <a class="header-action link-secondary" title="View source" h
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteWithSignature&lt;TNewClass, TReturn, TConverter&gt;(string, string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteArray&lt;T&gt;(string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteArray&lt;TArrayType&gt;(string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteWithSignatureArray&lt;T&gt;(string, string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteWithSignatureArray&lt;TArrayType&gt;(string, string, params object[])</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IGetField(string)</a>
@@ -520,9 +545,42 @@ Class QuorumState  <a class="header-action link-secondary" title="View source" h
 
   <a id="Org_Apache_Kafka_Raft_QuorumState__ctor_" data-uid="Org.Apache.Kafka.Raft.QuorumState.#ctor*"></a>
 
+  <h3 id="Org_Apache_Kafka_Raft_QuorumState__ctor_MASES_JCOBridge_C2JBridge_IJVMBridgeBaseInitializer_" data-uid="Org.Apache.Kafka.Raft.QuorumState.#ctor(MASES.JCOBridge.C2JBridge.IJVMBridgeBaseInitializer)">
+  QuorumState(IJVMBridgeBaseInitializer)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumState.cs/#L42"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Internal constructor: used internally from JCOBridge</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.&quot;)]
+public QuorumState(IJVMBridgeBaseInitializer initializer)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>initializer</code> <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeBaseInitializer.html">IJVMBridgeBaseInitializer</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Apache_Kafka_Raft_QuorumState__ctor_" data-uid="Org.Apache.Kafka.Raft.QuorumState.#ctor*"></a>
+
   <h3 id="Org_Apache_Kafka_Raft_QuorumState__ctor_System_Object___" data-uid="Org.Apache.Kafka.Raft.QuorumState.#ctor(System.Object[])">
   QuorumState(params object[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumState.cs/#L42"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumState.cs/#L47"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Generic constructor: it is useful for JCOBridge when there is a derived class which needs to pass arguments to the highest JVMBridgeBase class</p>
@@ -558,7 +616,7 @@ Class QuorumState  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Org_Apache_Kafka_Raft_QuorumState_BridgeClassName" data-uid="Org.Apache.Kafka.Raft.QuorumState.BridgeClassName">
   BridgeClassName
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumState.cs/#L48"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumState.cs/#L54"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Java class name to be instantiated</p>
@@ -590,7 +648,7 @@ Class QuorumState  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Org_Apache_Kafka_Raft_QuorumState_IsBridgeAbstract" data-uid="Org.Apache.Kafka.Raft.QuorumState.IsBridgeAbstract">
   IsBridgeAbstract
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumState.cs/#L50"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumState.cs/#L56"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.html#MASES_JCOBridge_C2JBridge_IJVMBridgeDefinition_BridgeClassName">BridgeClassName</a> is an abstract class, i.e. cannot be created an instance</p>
@@ -622,7 +680,7 @@ Class QuorumState  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Org_Apache_Kafka_Raft_QuorumState_IsBridgeCloseable" data-uid="Org.Apache.Kafka.Raft.QuorumState.IsBridgeCloseable">
   IsBridgeCloseable
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumState.cs/#L52"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumState.cs/#L58"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.html#MASES_JCOBridge_C2JBridge_IJVMBridgeDefinition_BridgeClassName">BridgeClassName</a> implements Closeable</p>
@@ -654,7 +712,7 @@ Class QuorumState  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Org_Apache_Kafka_Raft_QuorumState_IsBridgeInterface" data-uid="Org.Apache.Kafka.Raft.QuorumState.IsBridgeInterface">
   IsBridgeInterface
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumState.cs/#L54"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumState.cs/#L60"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.html#MASES_JCOBridge_C2JBridge_IJVMBridgeDefinition_BridgeClassName">BridgeClassName</a> is an interface, i.e. does not have any public constructor</p>
@@ -686,7 +744,7 @@ Class QuorumState  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Org_Apache_Kafka_Raft_QuorumState_IsBridgeStatic" data-uid="Org.Apache.Kafka.Raft.QuorumState.IsBridgeStatic">
   IsBridgeStatic
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumState.cs/#L56"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumState.cs/#L62"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.html#MASES_JCOBridge_C2JBridge_IJVMBridgeDefinition_BridgeClassName">BridgeClassName</a> is a static class, i.e. does not have any public constructor</p>
@@ -722,7 +780,7 @@ Class QuorumState  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Org_Apache_Kafka_Raft_QuorumState_CanGrantVote_Org_Apache_Kafka_Raft_ReplicaKey_System_Boolean_System_Boolean_" data-uid="Org.Apache.Kafka.Raft.QuorumState.CanGrantVote(Org.Apache.Kafka.Raft.ReplicaKey,System.Boolean,System.Boolean)">
   CanGrantVote(ReplicaKey, bool, bool)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumState.cs/#L108"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumState.cs/#L114"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumState.html#canGrantVote(org.apache.kafka.raft.ReplicaKey,boolean,boolean)">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumState.html#canGrantVote(org.apache.kafka.raft.ReplicaKey,boolean,boolean)</a></p>
@@ -767,7 +825,7 @@ Class QuorumState  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Org_Apache_Kafka_Raft_QuorumState_CandidateStateOrThrow" data-uid="Org.Apache.Kafka.Raft.QuorumState.CandidateStateOrThrow">
   CandidateStateOrThrow()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumState.cs/#L341"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumState.cs/#L347"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumState.html#candidateStateOrThrow()">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumState.html#candidateStateOrThrow()</a></p>
@@ -800,7 +858,7 @@ Class QuorumState  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Org_Apache_Kafka_Raft_QuorumState_Epoch" data-uid="Org.Apache.Kafka.Raft.QuorumState.Epoch">
   Epoch()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumState.cs/#L253"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumState.cs/#L259"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumState.html#epoch()">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumState.html#epoch()</a></p>
@@ -833,7 +891,7 @@ Class QuorumState  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Org_Apache_Kafka_Raft_QuorumState_FollowerStateOrThrow" data-uid="Org.Apache.Kafka.Raft.QuorumState.FollowerStateOrThrow">
   FollowerStateOrThrow()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumState.cs/#L357"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumState.cs/#L363"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumState.html#followerStateOrThrow()">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumState.html#followerStateOrThrow()</a></p>
@@ -866,7 +924,7 @@ Class QuorumState  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Org_Apache_Kafka_Raft_QuorumState_HasLeader" data-uid="Org.Apache.Kafka.Raft.QuorumState.HasLeader">
   HasLeader()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumState.cs/#L116"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumState.cs/#L122"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumState.html#hasLeader()">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumState.html#hasLeader()</a></p>
@@ -899,7 +957,7 @@ Class QuorumState  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Org_Apache_Kafka_Raft_QuorumState_HasRemoteLeader" data-uid="Org.Apache.Kafka.Raft.QuorumState.HasRemoteLeader">
   HasRemoteLeader()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumState.cs/#L124"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumState.cs/#L130"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumState.html#hasRemoteLeader()">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumState.html#hasRemoteLeader()</a></p>
@@ -932,7 +990,7 @@ Class QuorumState  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Org_Apache_Kafka_Raft_QuorumState_HighWatermark" data-uid="Org.Apache.Kafka.Raft.QuorumState.HighWatermark">
   HighWatermark()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumState.cs/#L285"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumState.cs/#L291"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumState.html#highWatermark()">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumState.html#highWatermark()</a></p>
@@ -965,7 +1023,7 @@ Class QuorumState  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Org_Apache_Kafka_Raft_QuorumState_Initialize_Org_Apache_Kafka_Raft_OffsetAndEpoch_" data-uid="Org.Apache.Kafka.Raft.QuorumState.Initialize(Org.Apache.Kafka.Raft.OffsetAndEpoch)">
   Initialize(OffsetAndEpoch)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumState.cs/#L414"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumState.cs/#L420"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumState.html#initialize(org.apache.kafka.raft.OffsetAndEpoch)">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumState.html#initialize(org.apache.kafka.raft.OffsetAndEpoch)</a></p>
@@ -1003,7 +1061,7 @@ Class QuorumState  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Org_Apache_Kafka_Raft_QuorumState_IsCandidate" data-uid="Org.Apache.Kafka.Raft.QuorumState.IsCandidate">
   IsCandidate()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumState.cs/#L132"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumState.cs/#L138"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumState.html#isCandidate()">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumState.html#isCandidate()</a></p>
@@ -1036,7 +1094,7 @@ Class QuorumState  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Org_Apache_Kafka_Raft_QuorumState_IsFollower" data-uid="Org.Apache.Kafka.Raft.QuorumState.IsFollower">
   IsFollower()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumState.cs/#L140"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumState.cs/#L146"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumState.html#isFollower()">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumState.html#isFollower()</a></p>
@@ -1069,7 +1127,7 @@ Class QuorumState  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Org_Apache_Kafka_Raft_QuorumState_IsLeader" data-uid="Org.Apache.Kafka.Raft.QuorumState.IsLeader">
   IsLeader()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumState.cs/#L148"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumState.cs/#L154"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumState.html#isLeader()">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumState.html#isLeader()</a></p>
@@ -1102,7 +1160,7 @@ Class QuorumState  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Org_Apache_Kafka_Raft_QuorumState_IsNomineeState" data-uid="Org.Apache.Kafka.Raft.QuorumState.IsNomineeState">
   IsNomineeState()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumState.cs/#L156"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumState.cs/#L162"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumState.html#isNomineeState()">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumState.html#isNomineeState()</a></p>
@@ -1135,7 +1193,7 @@ Class QuorumState  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Org_Apache_Kafka_Raft_QuorumState_IsObserver" data-uid="Org.Apache.Kafka.Raft.QuorumState.IsObserver">
   IsObserver()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumState.cs/#L164"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumState.cs/#L170"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumState.html#isObserver()">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumState.html#isObserver()</a></p>
@@ -1168,7 +1226,7 @@ Class QuorumState  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Org_Apache_Kafka_Raft_QuorumState_IsOnlyVoter" data-uid="Org.Apache.Kafka.Raft.QuorumState.IsOnlyVoter">
   IsOnlyVoter()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumState.cs/#L172"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumState.cs/#L178"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumState.html#isOnlyVoter()">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumState.html#isOnlyVoter()</a></p>
@@ -1201,7 +1259,7 @@ Class QuorumState  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Org_Apache_Kafka_Raft_QuorumState_IsProspective" data-uid="Org.Apache.Kafka.Raft.QuorumState.IsProspective">
   IsProspective()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumState.cs/#L180"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumState.cs/#L186"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumState.html#isProspective()">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumState.html#isProspective()</a></p>
@@ -1234,7 +1292,7 @@ Class QuorumState  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Org_Apache_Kafka_Raft_QuorumState_IsProspectiveAndVoted" data-uid="Org.Apache.Kafka.Raft.QuorumState.IsProspectiveAndVoted">
   IsProspectiveAndVoted()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumState.cs/#L188"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumState.cs/#L194"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumState.html#isProspectiveAndVoted()">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumState.html#isProspectiveAndVoted()</a></p>
@@ -1267,7 +1325,7 @@ Class QuorumState  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Org_Apache_Kafka_Raft_QuorumState_IsProspectiveNotVoted" data-uid="Org.Apache.Kafka.Raft.QuorumState.IsProspectiveNotVoted">
   IsProspectiveNotVoted()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumState.cs/#L196"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumState.cs/#L202"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumState.html#isProspectiveNotVoted()">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumState.html#isProspectiveNotVoted()</a></p>
@@ -1300,7 +1358,7 @@ Class QuorumState  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Org_Apache_Kafka_Raft_QuorumState_IsResigned" data-uid="Org.Apache.Kafka.Raft.QuorumState.IsResigned">
   IsResigned()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumState.cs/#L204"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumState.cs/#L210"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumState.html#isResigned()">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumState.html#isResigned()</a></p>
@@ -1333,7 +1391,7 @@ Class QuorumState  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Org_Apache_Kafka_Raft_QuorumState_IsUnattached" data-uid="Org.Apache.Kafka.Raft.QuorumState.IsUnattached">
   IsUnattached()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumState.cs/#L212"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumState.cs/#L218"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumState.html#isUnattached()">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumState.html#isUnattached()</a></p>
@@ -1366,7 +1424,7 @@ Class QuorumState  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Org_Apache_Kafka_Raft_QuorumState_IsUnattachedAndVoted" data-uid="Org.Apache.Kafka.Raft.QuorumState.IsUnattachedAndVoted">
   IsUnattachedAndVoted()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumState.cs/#L220"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumState.cs/#L226"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumState.html#isUnattachedAndVoted()">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumState.html#isUnattachedAndVoted()</a></p>
@@ -1399,7 +1457,7 @@ Class QuorumState  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Org_Apache_Kafka_Raft_QuorumState_IsUnattachedNotVoted" data-uid="Org.Apache.Kafka.Raft.QuorumState.IsUnattachedNotVoted">
   IsUnattachedNotVoted()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumState.cs/#L228"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumState.cs/#L234"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumState.html#isUnattachedNotVoted()">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumState.html#isUnattachedNotVoted()</a></p>
@@ -1432,7 +1490,7 @@ Class QuorumState  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Org_Apache_Kafka_Raft_QuorumState_IsVoter" data-uid="Org.Apache.Kafka.Raft.QuorumState.IsVoter">
   IsVoter()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumState.cs/#L236"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumState.cs/#L242"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumState.html#isVoter()">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumState.html#isVoter()</a></p>
@@ -1465,7 +1523,7 @@ Class QuorumState  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Org_Apache_Kafka_Raft_QuorumState_IsVoter_Org_Apache_Kafka_Raft_ReplicaKey_" data-uid="Org.Apache.Kafka.Raft.QuorumState.IsVoter(Org.Apache.Kafka.Raft.ReplicaKey)">
   IsVoter(ReplicaKey)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumState.cs/#L245"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumState.cs/#L251"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumState.html#isVoter(org.apache.kafka.raft.ReplicaKey)">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumState.html#isVoter(org.apache.kafka.raft.ReplicaKey)</a></p>
@@ -1504,7 +1562,7 @@ Class QuorumState  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Org_Apache_Kafka_Raft_QuorumState_LeaderAndEpoch" data-uid="Org.Apache.Kafka.Raft.QuorumState.LeaderAndEpoch">
   LeaderAndEpoch()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumState.cs/#L365"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumState.cs/#L371"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumState.html#leaderAndEpoch()">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumState.html#leaderAndEpoch()</a></p>
@@ -1537,7 +1595,7 @@ Class QuorumState  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Org_Apache_Kafka_Raft_QuorumState_LeaderEndpoints" data-uid="Org.Apache.Kafka.Raft.QuorumState.LeaderEndpoints">
   LeaderEndpoints()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumState.cs/#L349"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumState.cs/#L355"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumState.html#leaderEndpoints()">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumState.html#leaderEndpoints()</a></p>
@@ -1570,7 +1628,7 @@ Class QuorumState  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Org_Apache_Kafka_Raft_QuorumState_LeaderId" data-uid="Org.Apache.Kafka.Raft.QuorumState.LeaderId">
   LeaderId()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumState.cs/#L317"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumState.cs/#L323"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumState.html#leaderId()">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumState.html#leaderId()</a></p>
@@ -1603,7 +1661,7 @@ Class QuorumState  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Org_Apache_Kafka_Raft_QuorumState_LeaderIdOrSentinel" data-uid="Org.Apache.Kafka.Raft.QuorumState.LeaderIdOrSentinel">
   LeaderIdOrSentinel()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumState.cs/#L261"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumState.cs/#L267"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumState.html#leaderIdOrSentinel()">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumState.html#leaderIdOrSentinel()</a></p>
@@ -1636,7 +1694,7 @@ Class QuorumState  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Org_Apache_Kafka_Raft_QuorumState_LeaderStateOrThrow__1" data-uid="Org.Apache.Kafka.Raft.QuorumState.LeaderStateOrThrow``1">
   LeaderStateOrThrow&lt;T&gt;()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumState.cs/#L97"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumState.cs/#L103"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumState.html#leaderStateOrThrow()">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumState.html#leaderStateOrThrow()</a></p>
@@ -1674,7 +1732,7 @@ Class QuorumState  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Org_Apache_Kafka_Raft_QuorumState_LocalDirectoryId" data-uid="Org.Apache.Kafka.Raft.QuorumState.LocalDirectoryId">
   LocalDirectoryId()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumState.cs/#L333"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumState.cs/#L339"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumState.html#localDirectoryId()">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumState.html#localDirectoryId()</a></p>
@@ -1707,7 +1765,7 @@ Class QuorumState  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Org_Apache_Kafka_Raft_QuorumState_LocalId" data-uid="Org.Apache.Kafka.Raft.QuorumState.LocalId">
   LocalId()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumState.cs/#L325"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumState.cs/#L331"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumState.html#localId()">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumState.html#localId()</a></p>
@@ -1740,7 +1798,7 @@ Class QuorumState  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Org_Apache_Kafka_Raft_QuorumState_LocalIdOrSentinel" data-uid="Org.Apache.Kafka.Raft.QuorumState.LocalIdOrSentinel">
   LocalIdOrSentinel()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumState.cs/#L269"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumState.cs/#L275"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumState.html#localIdOrSentinel()">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumState.html#localIdOrSentinel()</a></p>
@@ -1773,7 +1831,7 @@ Class QuorumState  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Org_Apache_Kafka_Raft_QuorumState_LocalIdOrThrow" data-uid="Org.Apache.Kafka.Raft.QuorumState.LocalIdOrThrow">
   LocalIdOrThrow()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumState.cs/#L277"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumState.cs/#L283"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumState.html#localIdOrThrow()">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumState.html#localIdOrThrow()</a></p>
@@ -1806,7 +1864,7 @@ Class QuorumState  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Org_Apache_Kafka_Raft_QuorumState_LocalReplicaKeyOrThrow" data-uid="Org.Apache.Kafka.Raft.QuorumState.LocalReplicaKeyOrThrow">
   LocalReplicaKeyOrThrow()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumState.cs/#L381"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumState.cs/#L387"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumState.html#localReplicaKeyOrThrow()">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumState.html#localReplicaKeyOrThrow()</a></p>
@@ -1839,7 +1897,7 @@ Class QuorumState  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Org_Apache_Kafka_Raft_QuorumState_LocalVoterNodeOrThrow" data-uid="Org.Apache.Kafka.Raft.QuorumState.LocalVoterNodeOrThrow">
   LocalVoterNodeOrThrow()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumState.cs/#L405"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumState.cs/#L411"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumState.html#localVoterNodeOrThrow()">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumState.html#localVoterNodeOrThrow()</a></p>
@@ -1872,7 +1930,7 @@ Class QuorumState  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Org_Apache_Kafka_Raft_QuorumState_MaybeLeaderState__1" data-uid="Org.Apache.Kafka.Raft.QuorumState.MaybeLeaderState``1">
   MaybeLeaderState&lt;T&gt;()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumState.cs/#L88"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumState.cs/#L94"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumState.html#maybeLeaderState()">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumState.html#maybeLeaderState()</a></p>
@@ -1910,7 +1968,7 @@ Class QuorumState  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Org_Apache_Kafka_Raft_QuorumState_MaybeProspectiveState" data-uid="Org.Apache.Kafka.Raft.QuorumState.MaybeProspectiveState">
   MaybeProspectiveState()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumState.cs/#L293"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumState.cs/#L299"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumState.html#maybeProspectiveState()">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumState.html#maybeProspectiveState()</a></p>
@@ -1943,7 +2001,7 @@ Class QuorumState  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Org_Apache_Kafka_Raft_QuorumState_MaybeUnattachedState" data-uid="Org.Apache.Kafka.Raft.QuorumState.MaybeUnattachedState">
   MaybeUnattachedState()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumState.cs/#L309"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumState.cs/#L315"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumState.html#maybeUnattachedState()">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumState.html#maybeUnattachedState()</a></p>
@@ -1976,7 +2034,7 @@ Class QuorumState  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Org_Apache_Kafka_Raft_QuorumState_ProspectiveAddVotedState_System_Int32_Org_Apache_Kafka_Raft_ReplicaKey_" data-uid="Org.Apache.Kafka.Raft.QuorumState.ProspectiveAddVotedState(System.Int32,Org.Apache.Kafka.Raft.ReplicaKey)">
   ProspectiveAddVotedState(int, ReplicaKey)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumState.cs/#L423"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumState.cs/#L429"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumState.html#prospectiveAddVotedState(int,org.apache.kafka.raft.ReplicaKey)">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumState.html#prospectiveAddVotedState(int,org.apache.kafka.raft.ReplicaKey)</a></p>
@@ -2012,7 +2070,7 @@ Class QuorumState  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Org_Apache_Kafka_Raft_QuorumState_ProspectiveStateOrThrow" data-uid="Org.Apache.Kafka.Raft.QuorumState.ProspectiveStateOrThrow">
   ProspectiveStateOrThrow()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumState.cs/#L373"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumState.cs/#L379"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumState.html#prospectiveStateOrThrow()">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumState.html#prospectiveStateOrThrow()</a></p>
@@ -2045,7 +2103,7 @@ Class QuorumState  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Org_Apache_Kafka_Raft_QuorumState_ResignedStateOrThrow" data-uid="Org.Apache.Kafka.Raft.QuorumState.ResignedStateOrThrow">
   ResignedStateOrThrow()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumState.cs/#L389"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumState.cs/#L395"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumState.html#resignedStateOrThrow()">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumState.html#resignedStateOrThrow()</a></p>
@@ -2078,7 +2136,7 @@ Class QuorumState  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Org_Apache_Kafka_Raft_QuorumState_TransitionToCandidate" data-uid="Org.Apache.Kafka.Raft.QuorumState.TransitionToCandidate">
   TransitionToCandidate()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumState.cs/#L430"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumState.cs/#L436"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumState.html#transitionToCandidate()">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumState.html#transitionToCandidate()</a></p>
@@ -2105,7 +2163,7 @@ Class QuorumState  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Org_Apache_Kafka_Raft_QuorumState_TransitionToFollower_System_Int32_System_Int32_Org_Apache_Kafka_Raft_Endpoints_" data-uid="Org.Apache.Kafka.Raft.QuorumState.TransitionToFollower(System.Int32,System.Int32,Org.Apache.Kafka.Raft.Endpoints)">
   TransitionToFollower(int, int, Endpoints)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumState.cs/#L440"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumState.cs/#L446"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumState.html#transitionToFollower(int,int,org.apache.kafka.raft.Endpoints)">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumState.html#transitionToFollower(int,int,org.apache.kafka.raft.Endpoints)</a></p>
@@ -2144,7 +2202,7 @@ Class QuorumState  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Org_Apache_Kafka_Raft_QuorumState_TransitionToProspective" data-uid="Org.Apache.Kafka.Raft.QuorumState.TransitionToProspective">
   TransitionToProspective()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumState.cs/#L447"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumState.cs/#L453"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumState.html#transitionToProspective()">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumState.html#transitionToProspective()</a></p>
@@ -2171,7 +2229,7 @@ Class QuorumState  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Org_Apache_Kafka_Raft_QuorumState_TransitionToResigned_Java_Util_List_Org_Apache_Kafka_Raft_ReplicaKey__" data-uid="Org.Apache.Kafka.Raft.QuorumState.TransitionToResigned(Java.Util.List{Org.Apache.Kafka.Raft.ReplicaKey})">
   TransitionToResigned(List&lt;ReplicaKey&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumState.cs/#L455"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumState.cs/#L461"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumState.html#transitionToResigned(java.util.List)">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumState.html#transitionToResigned(java.util.List)</a></p>
@@ -2204,7 +2262,7 @@ Class QuorumState  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Org_Apache_Kafka_Raft_QuorumState_TransitionToUnattached_System_Int32_Java_Util_OptionalInt_" data-uid="Org.Apache.Kafka.Raft.QuorumState.TransitionToUnattached(System.Int32,Java.Util.OptionalInt)">
   TransitionToUnattached(int, OptionalInt)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumState.cs/#L464"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumState.cs/#L470"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumState.html#transitionToUnattached(int,java.util.OptionalInt)">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumState.html#transitionToUnattached(int,java.util.OptionalInt)</a></p>
@@ -2240,7 +2298,7 @@ Class QuorumState  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Org_Apache_Kafka_Raft_QuorumState_UnattachedAddVotedState_System_Int32_Org_Apache_Kafka_Raft_ReplicaKey_" data-uid="Org.Apache.Kafka.Raft.QuorumState.UnattachedAddVotedState(System.Int32,Org.Apache.Kafka.Raft.ReplicaKey)">
   UnattachedAddVotedState(int, ReplicaKey)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumState.cs/#L473"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumState.cs/#L479"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumState.html#unattachedAddVotedState(int,org.apache.kafka.raft.ReplicaKey)">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumState.html#unattachedAddVotedState(int,org.apache.kafka.raft.ReplicaKey)</a></p>
@@ -2276,7 +2334,7 @@ Class QuorumState  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Org_Apache_Kafka_Raft_QuorumState_UnattachedStateOrThrow" data-uid="Org.Apache.Kafka.Raft.QuorumState.UnattachedStateOrThrow">
   UnattachedStateOrThrow()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumState.cs/#L397"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumState.cs/#L403"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumState.html#unattachedStateOrThrow()">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumState.html#unattachedStateOrThrow()</a></p>
@@ -2309,7 +2367,7 @@ Class QuorumState  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Org_Apache_Kafka_Raft_QuorumState_VotedKey" data-uid="Org.Apache.Kafka.Raft.QuorumState.VotedKey">
   VotedKey()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumState.cs/#L301"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumState.cs/#L307"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumState.html#votedKey()">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/QuorumState.html#votedKey()</a></p>
@@ -2342,7 +2400,7 @@ Class QuorumState  <a class="header-action link-secondary" title="View source" h
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumState.cs/#L64" class="edit-link">Edit this page</a>
+          <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/QuorumState.cs/#L70" class="edit-link">Edit this page</a>
         </div>
 
 
