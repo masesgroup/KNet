@@ -391,7 +391,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [ 'ubuntu-latest' ] #, 'macos-14', 'macos-13' , 'windows-latest' ] # not available services in this runners, checks done in execute_tests_other
+        os: [ 'ubuntu-latest' ] #, 'macos-14', 'macos-13' , 'windows-2022' ] # not available services in this runners, checks done in execute_tests_other
         framework: [ 'net8.0', 'net9.0' ]
         jdk_vendor: [ 'temurin', 'microsoft', 'corretto', 'zulu', 'oracle', 'graalvm' ]
         jdk_version: [ '17', '21' ] # only supported LTS versions
@@ -470,7 +470,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [ 'windows-latest' ] # 'macos-13' removed waiting https://github.com/masesgroup/JNet/issues/518
+        os: [ 'windows-2022' ] # 'macos-13' removed waiting https://github.com/masesgroup/JNet/issues/518
         framework: [ 'net462', 'net8.0', 'net9.0' ]
         jdk_vendor: [ 'temurin', 'microsoft', 'corretto', 'zulu', 'oracle', 'graalvm' ]
         jdk_version: [ '17', '21' ] # only supported LTS versions
@@ -552,7 +552,7 @@ jobs:
           ${{ github.workspace }}\bin\${{ matrix.framework }}\KNetTest.exe -Log4JConfiguration '${{ github.workspace }}\bin\${{ matrix.framework }}\log4j2.yaml' localhost:9092 useConsumeCallback randomizeTopicName runBuffered withExtraValue
 
       #- name: Start Kafka and execute KNetTest on ${{ matrix.os }} with ${{ matrix.jdk_vendor }} ${{ matrix.jdk_version }}
-      #  if: ${{ matrix.os == 'windows-latest' }}
+      #  if: ${{ matrix.os == 'windows-2022' }}
       #  shell: pwsh
       #  run: |
       #    ${{ github.workspace }}/binCLI/${{ matrix.framework }}/MASES.KNetCLI.exe storagetool format --standalone --ignore-formatted -t 6oTi4odMSVSmroqyy5rubw -c ${{ github.workspace }}/bin/${{ matrix.framework }}/windows_server.properties
