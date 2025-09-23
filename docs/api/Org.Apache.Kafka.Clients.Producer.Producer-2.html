@@ -89,7 +89,7 @@
 
 
   <h1 id="Org_Apache_Kafka_Clients_Producer_Producer_2" data-uid="Org.Apache.Kafka.Clients.Producer.Producer`2" class="text-break">
-Class Producer&lt;K, V&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/Producer.cs/#L278"><i class="bi bi-code-slash"></i></a>
+Class Producer&lt;K, V&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/Producer.cs/#L290"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -102,7 +102,7 @@ Class Producer&lt;K, V&gt;  <a class="header-action link-secondary" title="View 
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class Producer&lt;K, V&gt; : Closeable, IDynamicMetaObjectProvider, IJVMBridgeCore, IJVMBridgeBaseStatic, IProducer&lt;K, V&gt;, IProducer, IJVMBridgeBase, IJVMBridgeDefinition, IDisposable, ICloseable, IAutoCloseable</code></pre>
+    <pre><code class="lang-csharp hljs">public class Producer&lt;K, V&gt; : Closeable, IDynamicMetaObjectProvider, IJVMBridgeCore, IEquatable&lt;IJVMBridgeBase&gt;, IJVMBridgeBaseStatic, IProducer&lt;K, V&gt;, IProducer, IJVMBridgeBase, IJVMBridgeDefinition, IDisposable, ICloseable, IAutoCloseable</code></pre>
   </div>
 
 
@@ -133,6 +133,7 @@ Class Producer&lt;K, V&gt;  <a class="header-action link-secondary" title="View 
     <dd>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.idynamicmetaobjectprovider">IDynamicMetaObjectProvider</a></div>
       <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeCore.html">IJVMBridgeCore</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeBase.html">IJVMBridgeBase</a>&gt;</div>
       <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeBaseStatic.html">IJVMBridgeBaseStatic</a></div>
       <div><a class="xref" href="Org.Apache.Kafka.Clients.Producer.IProducer-2.html">IProducer</a>&lt;K, V&gt;</div>
       <div><a class="xref" href="Org.Apache.Kafka.Clients.Producer.IProducer.html">IProducer</a></div>
@@ -240,16 +241,16 @@ Class Producer&lt;K, V&gt;  <a class="header-action link-secondary" title="View 
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;AutoCloseable&gt;.SExecuteWithSignature&lt;TReturn, TConverter&gt;(Type, string, string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SExecuteArray&lt;T&gt;(IJavaType, string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SExecuteArray&lt;TArrayType&gt;(IJavaType, string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SExecuteWithSignatureArray&lt;T&gt;(IJavaType, string, string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SExecuteWithSignatureArray&lt;TArrayType&gt;(IJavaType, string, string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SExecuteArray&lt;T&gt;(string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SExecuteArray&lt;TArrayType&gt;(string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SExecuteWithSignatureArray&lt;T&gt;(string, string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SExecuteWithSignatureArray&lt;TArrayType&gt;(string, string, params object[])</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SGetField(IJavaType, string)</a>
@@ -297,6 +298,12 @@ Class Producer&lt;K, V&gt;  <a class="header-action link-secondary" title="View 
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.NewWithSignature(string, params object[])</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.NewAndWrapsDirect&lt;TNewClass&gt;(string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.NewWithSignatureAndWrapsDirect&lt;TNewClass&gt;(string, string, params object[])</a>
+    </div>
+    <div>
       <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase-1.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_1_Execute__1___0___">JVMBridgeBase&lt;AutoCloseable&gt;.Execute&lt;T&gt;(params T[])</a>
     </div>
     <div>
@@ -306,13 +313,25 @@ Class Producer&lt;K, V&gt;  <a class="header-action link-secondary" title="View 
       <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase-1.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_1_BridgeClazz">JVMBridgeBase&lt;AutoCloseable&gt;.BridgeClazz</a>
     </div>
     <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_ReferenceEqualsJVM_MASES_JCOBridge_C2JBridge_JVMBridgeBase_MASES_JCOBridge_C2JBridge_JVMBridgeBase_">JVMBridgeBase.ReferenceEqualsJVM(JVMBridgeBase, JVMBridgeBase)</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">JVMBridgeBase.ClazzOf&lt;TClass&gt;(bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">JVMBridgeBase.ClazzOf&lt;TClass&gt;(out Exception, bool)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.ClazzOf(string, bool)</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.ClazzOf(string, out Exception, bool)</a>
+    </div>
+    <div>
       <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_RuntimeClassNameOf__1">JVMBridgeBase.RuntimeClassNameOf&lt;T&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase.RuntimeClassNameOf(Type)</a>
     </div>
     <div>
       <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_ClassNameOf__1">JVMBridgeBase.ClassNameOf&lt;T&gt;()</a>
@@ -369,7 +388,13 @@ Class Producer&lt;K, V&gt;  <a class="header-action link-secondary" title="View 
       <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_Dispose">JVMBridgeBase.Dispose()</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">JVMBridgeBase.Dispose(bool)</a>
+    </div>
+    <div>
       <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_ToString">JVMBridgeBase.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_Equals_MASES_JCOBridge_C2JBridge_IJVMBridgeBase_">JVMBridgeBase.Equals(IJVMBridgeBase)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">JVMBridgeBase.Equals(object)</a>
@@ -417,10 +442,10 @@ Class Producer&lt;K, V&gt;  <a class="header-action link-secondary" title="View 
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteWithSignature&lt;TNewClass, TReturn, TConverter&gt;(string, string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteArray&lt;T&gt;(string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteArray&lt;TArrayType&gt;(string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteWithSignatureArray&lt;T&gt;(string, string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteWithSignatureArray&lt;TArrayType&gt;(string, string, params object[])</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IGetField(string)</a>
@@ -564,7 +589,7 @@ Class Producer&lt;K, V&gt;  <a class="header-action link-secondary" title="View 
 
   <h3 id="Org_Apache_Kafka_Clients_Producer_Producer_2__ctor" data-uid="Org.Apache.Kafka.Clients.Producer.Producer`2.#ctor">
   Producer()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/Producer.cs/#L77"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/Producer.cs/#L83"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge</p>
@@ -590,9 +615,42 @@ public Producer()</code></pre>
 
   <a id="Org_Apache_Kafka_Clients_Producer_Producer_2__ctor_" data-uid="Org.Apache.Kafka.Clients.Producer.Producer`2.#ctor*"></a>
 
+  <h3 id="Org_Apache_Kafka_Clients_Producer_Producer_2__ctor_MASES_JCOBridge_C2JBridge_IJVMBridgeBaseInitializer_" data-uid="Org.Apache.Kafka.Clients.Producer.Producer`2.#ctor(MASES.JCOBridge.C2JBridge.IJVMBridgeBaseInitializer)">
+  Producer(IJVMBridgeBaseInitializer)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/Producer.cs/#L88"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Internal constructor: used internally from JCOBridge</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.&quot;)]
+public Producer(IJVMBridgeBaseInitializer initializer)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>initializer</code> <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeBaseInitializer.html">IJVMBridgeBaseInitializer</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Apache_Kafka_Clients_Producer_Producer_2__ctor_" data-uid="Org.Apache.Kafka.Clients.Producer.Producer`2.#ctor*"></a>
+
   <h3 id="Org_Apache_Kafka_Clients_Producer_Producer_2__ctor_System_Object___" data-uid="Org.Apache.Kafka.Clients.Producer.Producer`2.#ctor(System.Object[])">
   Producer(params object[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/Producer.cs/#L82"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/Producer.cs/#L93"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Generic constructor: it is useful for JCOBridge when there is a derived class which needs to pass arguments to the highest JVMBridgeBase class</p>
@@ -629,7 +687,7 @@ public Producer(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Producer_Producer_2_BridgeClassName" data-uid="Org.Apache.Kafka.Clients.Producer.Producer`2.BridgeClassName">
   BridgeClassName
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/Producer.cs/#L89"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/Producer.cs/#L101"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Java class name to be instantiated</p>
@@ -661,7 +719,7 @@ public Producer(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Producer_Producer_2_IsBridgeAbstract" data-uid="Org.Apache.Kafka.Clients.Producer.Producer`2.IsBridgeAbstract">
   IsBridgeAbstract
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/Producer.cs/#L91"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/Producer.cs/#L103"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.html#MASES_JCOBridge_C2JBridge_IJVMBridgeDefinition_BridgeClassName">BridgeClassName</a> is an abstract class, i.e. cannot be created an instance</p>
@@ -693,7 +751,7 @@ public Producer(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Producer_Producer_2_IsBridgeCloseable" data-uid="Org.Apache.Kafka.Clients.Producer.Producer`2.IsBridgeCloseable">
   IsBridgeCloseable
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/Producer.cs/#L93"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/Producer.cs/#L105"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.html#MASES_JCOBridge_C2JBridge_IJVMBridgeDefinition_BridgeClassName">BridgeClassName</a> implements Closeable</p>
@@ -725,7 +783,7 @@ public Producer(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Producer_Producer_2_IsBridgeInterface" data-uid="Org.Apache.Kafka.Clients.Producer.Producer`2.IsBridgeInterface">
   IsBridgeInterface
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/Producer.cs/#L95"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/Producer.cs/#L107"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.html#MASES_JCOBridge_C2JBridge_IJVMBridgeDefinition_BridgeClassName">BridgeClassName</a> is an interface, i.e. does not have any public constructor</p>
@@ -757,7 +815,7 @@ public Producer(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Producer_Producer_2_IsBridgeStatic" data-uid="Org.Apache.Kafka.Clients.Producer.Producer`2.IsBridgeStatic">
   IsBridgeStatic
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/Producer.cs/#L97"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/Producer.cs/#L109"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.html#MASES_JCOBridge_C2JBridge_IJVMBridgeDefinition_BridgeClassName">BridgeClassName</a> is a static class, i.e. does not have any public constructor</p>
@@ -793,7 +851,7 @@ public Producer(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Producer_Producer_2_AbortTransaction" data-uid="Org.Apache.Kafka.Clients.Producer.Producer`2.AbortTransaction">
   AbortTransaction()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/Producer.cs/#L351"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/Producer.cs/#L363"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/producer/Producer.html#abortTransaction()">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/producer/Producer.html#abortTransaction()</a></p>
@@ -825,7 +883,7 @@ public Producer(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Producer_Producer_2_BeginTransaction" data-uid="Org.Apache.Kafka.Clients.Producer.Producer`2.BeginTransaction">
   BeginTransaction()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/Producer.cs/#L359"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/Producer.cs/#L371"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/producer/Producer.html#beginTransaction()">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/producer/Producer.html#beginTransaction()</a></p>
@@ -857,7 +915,7 @@ public Producer(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Producer_Producer_2_ClientInstanceId_Java_Time_Duration_" data-uid="Org.Apache.Kafka.Clients.Producer.Producer`2.ClientInstanceId(Java.Time.Duration)">
   ClientInstanceId(Duration)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/Producer.cs/#L343"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/Producer.cs/#L355"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/producer/Producer.html#clientInstanceId(java.time.Duration)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/producer/Producer.html#clientInstanceId(java.time.Duration)</a></p>
@@ -896,7 +954,7 @@ public Producer(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Producer_Producer_2_Close" data-uid="Org.Apache.Kafka.Clients.Producer.Producer`2.Close">
   Close()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/Producer.cs/#L366"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/Producer.cs/#L378"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/producer/Producer.html#close()">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/producer/Producer.html#close()</a></p>
@@ -923,7 +981,7 @@ public Producer(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Producer_Producer_2_Close_Java_Time_Duration_" data-uid="Org.Apache.Kafka.Clients.Producer.Producer`2.Close(Java.Time.Duration)">
   Close(Duration)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/Producer.cs/#L374"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/Producer.cs/#L386"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/producer/Producer.html#close(java.time.Duration)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/producer/Producer.html#close(java.time.Duration)</a></p>
@@ -956,7 +1014,7 @@ public Producer(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Producer_Producer_2_CommitTransaction" data-uid="Org.Apache.Kafka.Clients.Producer.Producer`2.CommitTransaction">
   CommitTransaction()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/Producer.cs/#L382"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/Producer.cs/#L394"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/producer/Producer.html#commitTransaction()">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/producer/Producer.html#commitTransaction()</a></p>
@@ -988,7 +1046,7 @@ public Producer(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Producer_Producer_2_Flush" data-uid="Org.Apache.Kafka.Clients.Producer.Producer`2.Flush">
   Flush()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/Producer.cs/#L389"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/Producer.cs/#L401"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/producer/Producer.html#flush()">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/producer/Producer.html#flush()</a></p>
@@ -1015,7 +1073,7 @@ public Producer(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Producer_Producer_2_InitTransactions" data-uid="Org.Apache.Kafka.Clients.Producer.Producer`2.InitTransactions">
   InitTransactions()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/Producer.cs/#L396"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/Producer.cs/#L408"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/producer/Producer.html#initTransactions()">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/producer/Producer.html#initTransactions()</a></p>
@@ -1042,7 +1100,7 @@ public Producer(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Producer_Producer_2_Metrics__1" data-uid="Org.Apache.Kafka.Clients.Producer.Producer`2.Metrics``1">
   Metrics&lt;ReturnExtendsOrg_Apache_Kafka_Common_Metric&gt;()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/Producer.cs/#L334"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/Producer.cs/#L346"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/producer/Producer.html#metrics()">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/producer/Producer.html#metrics()</a></p>
@@ -1081,7 +1139,7 @@ public Producer(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Producer_Producer_2_PartitionsFor_Java_Lang_String_" data-uid="Org.Apache.Kafka.Clients.Producer.Producer`2.PartitionsFor(Java.Lang.String)">
   PartitionsFor(String)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/Producer.cs/#L325"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/Producer.cs/#L337"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/producer/Producer.html#partitionsFor(java.lang.String)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/producer/Producer.html#partitionsFor(java.lang.String)</a></p>
@@ -1120,7 +1178,7 @@ public Producer(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Producer_Producer_2_RegisterMetricForSubscription_Org_Apache_Kafka_Common_Metrics_KafkaMetric_" data-uid="Org.Apache.Kafka.Clients.Producer.Producer`2.RegisterMetricForSubscription(Org.Apache.Kafka.Common.Metrics.KafkaMetric)">
   RegisterMetricForSubscription(KafkaMetric)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/Producer.cs/#L404"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/Producer.cs/#L416"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/producer/Producer.html#registerMetricForSubscription(org.apache.kafka.common.metrics.KafkaMetric)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/producer/Producer.html#registerMetricForSubscription(org.apache.kafka.common.metrics.KafkaMetric)</a></p>
@@ -1153,7 +1211,7 @@ public Producer(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Producer_Producer_2_Send_Org_Apache_Kafka_Clients_Producer_ProducerRecord__0__1__" data-uid="Org.Apache.Kafka.Clients.Producer.Producer`2.Send(Org.Apache.Kafka.Clients.Producer.ProducerRecord{`0,`1})">
   Send(ProducerRecord&lt;K, V&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/Producer.cs/#L316"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/Producer.cs/#L328"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/producer/Producer.html#send(org.apache.kafka.clients.producer.ProducerRecord)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/producer/Producer.html#send(org.apache.kafka.clients.producer.ProducerRecord)</a></p>
@@ -1192,7 +1250,7 @@ public Producer(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Producer_Producer_2_Send_Org_Apache_Kafka_Clients_Producer_ProducerRecord__0__1__Org_Apache_Kafka_Clients_Producer_Callback_" data-uid="Org.Apache.Kafka.Clients.Producer.Producer`2.Send(Org.Apache.Kafka.Clients.Producer.ProducerRecord{`0,`1},Org.Apache.Kafka.Clients.Producer.Callback)">
   Send(ProducerRecord&lt;K, V&gt;, Callback)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/Producer.cs/#L307"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/Producer.cs/#L319"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/producer/Producer.html#send(org.apache.kafka.clients.producer.ProducerRecord,org.apache.kafka.clients.producer.Callback)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/producer/Producer.html#send(org.apache.kafka.clients.producer.ProducerRecord,org.apache.kafka.clients.producer.Callback)</a></p>
@@ -1234,7 +1292,7 @@ public Producer(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Producer_Producer_2_SendOffsetsToTransaction_Java_Util_Map_Org_Apache_Kafka_Common_TopicPartition_Org_Apache_Kafka_Clients_Consumer_OffsetAndMetadata__Org_Apache_Kafka_Clients_Consumer_ConsumerGroupMetadata_" data-uid="Org.Apache.Kafka.Clients.Producer.Producer`2.SendOffsetsToTransaction(Java.Util.Map{Org.Apache.Kafka.Common.TopicPartition,Org.Apache.Kafka.Clients.Consumer.OffsetAndMetadata},Org.Apache.Kafka.Clients.Consumer.ConsumerGroupMetadata)">
   SendOffsetsToTransaction(Map&lt;TopicPartition, OffsetAndMetadata&gt;, ConsumerGroupMetadata)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/Producer.cs/#L414"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/Producer.cs/#L426"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/producer/Producer.html#sendOffsetsToTransaction(java.util.Map,org.apache.kafka.clients.consumer.ConsumerGroupMetadata)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/producer/Producer.html#sendOffsetsToTransaction(java.util.Map,org.apache.kafka.clients.consumer.ConsumerGroupMetadata)</a></p>
@@ -1275,7 +1333,7 @@ public Producer(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Producer_Producer_2_UnregisterMetricFromSubscription_Org_Apache_Kafka_Common_Metrics_KafkaMetric_" data-uid="Org.Apache.Kafka.Clients.Producer.Producer`2.UnregisterMetricFromSubscription(Org.Apache.Kafka.Common.Metrics.KafkaMetric)">
   UnregisterMetricFromSubscription(KafkaMetric)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/Producer.cs/#L422"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/Producer.cs/#L434"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/producer/Producer.html#unregisterMetricFromSubscription(org.apache.kafka.common.metrics.KafkaMetric)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/producer/Producer.html#unregisterMetricFromSubscription(org.apache.kafka.common.metrics.KafkaMetric)</a></p>
@@ -1312,7 +1370,7 @@ public Producer(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Producer_Producer_2_op_Implicit_Org_Apache_Kafka_Clients_Producer_Producer__0__1___Org_Apache_Kafka_Clients_Producer_Producer" data-uid="Org.Apache.Kafka.Clients.Producer.Producer`2.op_Implicit(Org.Apache.Kafka.Clients.Producer.Producer{`0,`1})~Org.Apache.Kafka.Clients.Producer.Producer">
   implicit operator Producer(Producer&lt;K, V&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/Producer.cs/#L288"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/Producer.cs/#L300"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Converter from <a class="xref" href="Org.Apache.Kafka.Clients.Producer.Producer-2.html">Producer&lt;K, V&gt;</a> to <a class="xref" href="Org.Apache.Kafka.Clients.Producer.Producer.html">Producer</a></p>
@@ -1349,7 +1407,7 @@ public Producer(params object[] args)</code></pre>
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/Producer.cs/#L278" class="edit-link">Edit this page</a>
+          <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/Producer.cs/#L290" class="edit-link">Edit this page</a>
         </div>
 
 

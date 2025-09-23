@@ -89,7 +89,7 @@
 
 
   <h1 id="Org_Apache_Kafka_Common_Config_SaslConfigs" data-uid="Org.Apache.Kafka.Common.Config.SaslConfigs" class="text-break">
-Class SaslConfigs  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L64"><i class="bi bi-code-slash"></i></a>
+Class SaslConfigs  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L70"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -102,7 +102,7 @@ Class SaslConfigs  <a class="header-action link-secondary" title="View source" h
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class SaslConfigs : JVMBridgeBase&lt;SaslConfigs&gt;, IDynamicMetaObjectProvider, IJVMBridgeCore, IDisposable, IJVMBridgeBaseStatic, IJVMBridgeBase, IJVMBridgeDefinition</code></pre>
+    <pre><code class="lang-csharp hljs">public class SaslConfigs : JVMBridgeBase&lt;SaslConfigs&gt;, IDynamicMetaObjectProvider, IJVMBridgeCore, IEquatable&lt;IJVMBridgeBase&gt;, IDisposable, IJVMBridgeBaseStatic, IJVMBridgeBase, IJVMBridgeDefinition</code></pre>
   </div>
 
 
@@ -124,6 +124,7 @@ Class SaslConfigs  <a class="header-action link-secondary" title="View source" h
     <dd>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.idynamicmetaobjectprovider">IDynamicMetaObjectProvider</a></div>
       <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeCore.html">IJVMBridgeCore</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeBase.html">IJVMBridgeBase</a>&gt;</div>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
       <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeBaseStatic.html">IJVMBridgeBaseStatic</a></div>
       <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeBase.html">IJVMBridgeBase</a></div>
@@ -220,16 +221,16 @@ Class SaslConfigs  <a class="header-action link-secondary" title="View source" h
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;SaslConfigs&gt;.SExecuteWithSignature&lt;TReturn, TConverter&gt;(Type, string, string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;SaslConfigs&gt;.SExecuteArray&lt;T&gt;(IJavaType, string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;SaslConfigs&gt;.SExecuteArray&lt;TArrayType&gt;(IJavaType, string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;SaslConfigs&gt;.SExecuteWithSignatureArray&lt;T&gt;(IJavaType, string, string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;SaslConfigs&gt;.SExecuteWithSignatureArray&lt;TArrayType&gt;(IJavaType, string, string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;SaslConfigs&gt;.SExecuteArray&lt;T&gt;(string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;SaslConfigs&gt;.SExecuteArray&lt;TArrayType&gt;(string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;SaslConfigs&gt;.SExecuteWithSignatureArray&lt;T&gt;(string, string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;SaslConfigs&gt;.SExecuteWithSignatureArray&lt;TArrayType&gt;(string, string, params object[])</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;SaslConfigs&gt;.SGetField(IJavaType, string)</a>
@@ -277,6 +278,12 @@ Class SaslConfigs  <a class="header-action link-secondary" title="View source" h
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;SaslConfigs&gt;.NewWithSignature(string, params object[])</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;SaslConfigs&gt;.NewAndWrapsDirect&lt;TNewClass&gt;(string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;SaslConfigs&gt;.NewWithSignatureAndWrapsDirect&lt;TNewClass&gt;(string, string, params object[])</a>
+    </div>
+    <div>
       <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase-1.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_1_Execute__1___0___">JVMBridgeBase&lt;SaslConfigs&gt;.Execute&lt;T&gt;(params T[])</a>
     </div>
     <div>
@@ -286,13 +293,25 @@ Class SaslConfigs  <a class="header-action link-secondary" title="View source" h
       <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase-1.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_1_BridgeClazz">JVMBridgeBase&lt;SaslConfigs&gt;.BridgeClazz</a>
     </div>
     <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_ReferenceEqualsJVM_MASES_JCOBridge_C2JBridge_JVMBridgeBase_MASES_JCOBridge_C2JBridge_JVMBridgeBase_">JVMBridgeBase.ReferenceEqualsJVM(JVMBridgeBase, JVMBridgeBase)</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">JVMBridgeBase.ClazzOf&lt;TClass&gt;(bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">JVMBridgeBase.ClazzOf&lt;TClass&gt;(out Exception, bool)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.ClazzOf(string, bool)</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.ClazzOf(string, out Exception, bool)</a>
+    </div>
+    <div>
       <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_RuntimeClassNameOf__1">JVMBridgeBase.RuntimeClassNameOf&lt;T&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase.RuntimeClassNameOf(Type)</a>
     </div>
     <div>
       <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_ClassNameOf__1">JVMBridgeBase.ClassNameOf&lt;T&gt;()</a>
@@ -349,7 +368,13 @@ Class SaslConfigs  <a class="header-action link-secondary" title="View source" h
       <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_Dispose">JVMBridgeBase.Dispose()</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">JVMBridgeBase.Dispose(bool)</a>
+    </div>
+    <div>
       <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_ToString">JVMBridgeBase.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_Equals_MASES_JCOBridge_C2JBridge_IJVMBridgeBase_">JVMBridgeBase.Equals(IJVMBridgeBase)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">JVMBridgeBase.Equals(object)</a>
@@ -397,10 +422,10 @@ Class SaslConfigs  <a class="header-action link-secondary" title="View source" h
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteWithSignature&lt;TNewClass, TReturn, TConverter&gt;(string, string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteArray&lt;T&gt;(string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteArray&lt;TArrayType&gt;(string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteWithSignatureArray&lt;T&gt;(string, string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteWithSignatureArray&lt;TArrayType&gt;(string, string, params object[])</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IGetField(string)</a>
@@ -520,9 +545,42 @@ Class SaslConfigs  <a class="header-action link-secondary" title="View source" h
 
   <a id="Org_Apache_Kafka_Common_Config_SaslConfigs__ctor_" data-uid="Org.Apache.Kafka.Common.Config.SaslConfigs.#ctor*"></a>
 
+  <h3 id="Org_Apache_Kafka_Common_Config_SaslConfigs__ctor_MASES_JCOBridge_C2JBridge_IJVMBridgeBaseInitializer_" data-uid="Org.Apache.Kafka.Common.Config.SaslConfigs.#ctor(MASES.JCOBridge.C2JBridge.IJVMBridgeBaseInitializer)">
+  SaslConfigs(IJVMBridgeBaseInitializer)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L42"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Internal constructor: used internally from JCOBridge</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.&quot;)]
+public SaslConfigs(IJVMBridgeBaseInitializer initializer)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>initializer</code> <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeBaseInitializer.html">IJVMBridgeBaseInitializer</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Apache_Kafka_Common_Config_SaslConfigs__ctor_" data-uid="Org.Apache.Kafka.Common.Config.SaslConfigs.#ctor*"></a>
+
   <h3 id="Org_Apache_Kafka_Common_Config_SaslConfigs__ctor_System_Object___" data-uid="Org.Apache.Kafka.Common.Config.SaslConfigs.#ctor(System.Object[])">
   SaslConfigs(params object[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L42"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L47"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Generic constructor: it is useful for JCOBridge when there is a derived class which needs to pass arguments to the highest JVMBridgeBase class</p>
@@ -558,7 +616,7 @@ Class SaslConfigs  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Org_Apache_Kafka_Common_Config_SaslConfigs_BridgeClassName" data-uid="Org.Apache.Kafka.Common.Config.SaslConfigs.BridgeClassName">
   BridgeClassName
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L48"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L54"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Java class name to be instantiated</p>
@@ -590,7 +648,7 @@ Class SaslConfigs  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Org_Apache_Kafka_Common_Config_SaslConfigs_DEFAULT_KERBEROS_KINIT_CMD" data-uid="Org.Apache.Kafka.Common.Config.SaslConfigs.DEFAULT_KERBEROS_KINIT_CMD">
   DEFAULT_KERBEROS_KINIT_CMD
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L114"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L120"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/SaslConfigs.html#DEFAULT_KERBEROS_KINIT_CMD">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/SaslConfigs.html#DEFAULT_KERBEROS_KINIT_CMD</a></p>
@@ -622,7 +680,7 @@ Class SaslConfigs  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Org_Apache_Kafka_Common_Config_SaslConfigs_DEFAULT_KERBEROS_MIN_TIME_BEFORE_RELOGIN" data-uid="Org.Apache.Kafka.Common.Config.SaslConfigs.DEFAULT_KERBEROS_MIN_TIME_BEFORE_RELOGIN">
   DEFAULT_KERBEROS_MIN_TIME_BEFORE_RELOGIN
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L492"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L498"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/SaslConfigs.html#DEFAULT_KERBEROS_MIN_TIME_BEFORE_RELOGIN">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/SaslConfigs.html#DEFAULT_KERBEROS_MIN_TIME_BEFORE_RELOGIN</a></p>
@@ -654,7 +712,7 @@ Class SaslConfigs  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Org_Apache_Kafka_Common_Config_SaslConfigs_DEFAULT_KERBEROS_TICKET_RENEW_JITTER" data-uid="Org.Apache.Kafka.Common.Config.SaslConfigs.DEFAULT_KERBEROS_TICKET_RENEW_JITTER">
   DEFAULT_KERBEROS_TICKET_RENEW_JITTER
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L84"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L90"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/SaslConfigs.html#DEFAULT_KERBEROS_TICKET_RENEW_JITTER">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/SaslConfigs.html#DEFAULT_KERBEROS_TICKET_RENEW_JITTER</a></p>
@@ -686,7 +744,7 @@ Class SaslConfigs  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Org_Apache_Kafka_Common_Config_SaslConfigs_DEFAULT_KERBEROS_TICKET_RENEW_WINDOW_FACTOR" data-uid="Org.Apache.Kafka.Common.Config.SaslConfigs.DEFAULT_KERBEROS_TICKET_RENEW_WINDOW_FACTOR">
   DEFAULT_KERBEROS_TICKET_RENEW_WINDOW_FACTOR
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L90"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L96"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/SaslConfigs.html#DEFAULT_KERBEROS_TICKET_RENEW_WINDOW_FACTOR">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/SaslConfigs.html#DEFAULT_KERBEROS_TICKET_RENEW_WINDOW_FACTOR</a></p>
@@ -718,7 +776,7 @@ Class SaslConfigs  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Org_Apache_Kafka_Common_Config_SaslConfigs_DEFAULT_LOGIN_REFRESH_BUFFER_SECONDS" data-uid="Org.Apache.Kafka.Common.Config.SaslConfigs.DEFAULT_LOGIN_REFRESH_BUFFER_SECONDS">
   DEFAULT_LOGIN_REFRESH_BUFFER_SECONDS
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L528"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L534"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/SaslConfigs.html#DEFAULT_LOGIN_REFRESH_BUFFER_SECONDS">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/SaslConfigs.html#DEFAULT_LOGIN_REFRESH_BUFFER_SECONDS</a></p>
@@ -750,7 +808,7 @@ Class SaslConfigs  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Org_Apache_Kafka_Common_Config_SaslConfigs_DEFAULT_LOGIN_REFRESH_MIN_PERIOD_SECONDS" data-uid="Org.Apache.Kafka.Common.Config.SaslConfigs.DEFAULT_LOGIN_REFRESH_MIN_PERIOD_SECONDS">
   DEFAULT_LOGIN_REFRESH_MIN_PERIOD_SECONDS
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L534"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L540"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/SaslConfigs.html#DEFAULT_LOGIN_REFRESH_MIN_PERIOD_SECONDS">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/SaslConfigs.html#DEFAULT_LOGIN_REFRESH_MIN_PERIOD_SECONDS</a></p>
@@ -782,7 +840,7 @@ Class SaslConfigs  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Org_Apache_Kafka_Common_Config_SaslConfigs_DEFAULT_LOGIN_REFRESH_WINDOW_FACTOR" data-uid="Org.Apache.Kafka.Common.Config.SaslConfigs.DEFAULT_LOGIN_REFRESH_WINDOW_FACTOR">
   DEFAULT_LOGIN_REFRESH_WINDOW_FACTOR
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L96"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L102"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/SaslConfigs.html#DEFAULT_LOGIN_REFRESH_WINDOW_FACTOR">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/SaslConfigs.html#DEFAULT_LOGIN_REFRESH_WINDOW_FACTOR</a></p>
@@ -814,7 +872,7 @@ Class SaslConfigs  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Org_Apache_Kafka_Common_Config_SaslConfigs_DEFAULT_LOGIN_REFRESH_WINDOW_JITTER" data-uid="Org.Apache.Kafka.Common.Config.SaslConfigs.DEFAULT_LOGIN_REFRESH_WINDOW_JITTER">
   DEFAULT_LOGIN_REFRESH_WINDOW_JITTER
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L102"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L108"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/SaslConfigs.html#DEFAULT_LOGIN_REFRESH_WINDOW_JITTER">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/SaslConfigs.html#DEFAULT_LOGIN_REFRESH_WINDOW_JITTER</a></p>
@@ -846,7 +904,7 @@ Class SaslConfigs  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Org_Apache_Kafka_Common_Config_SaslConfigs_DEFAULT_SASL_LOGIN_RETRY_BACKOFF_MAX_MS" data-uid="Org.Apache.Kafka.Common.Config.SaslConfigs.DEFAULT_SASL_LOGIN_RETRY_BACKOFF_MAX_MS">
   DEFAULT_SASL_LOGIN_RETRY_BACKOFF_MAX_MS
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L498"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L504"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/SaslConfigs.html#DEFAULT_SASL_LOGIN_RETRY_BACKOFF_MAX_MS">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/SaslConfigs.html#DEFAULT_SASL_LOGIN_RETRY_BACKOFF_MAX_MS</a></p>
@@ -878,7 +936,7 @@ Class SaslConfigs  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Org_Apache_Kafka_Common_Config_SaslConfigs_DEFAULT_SASL_LOGIN_RETRY_BACKOFF_MS" data-uid="Org.Apache.Kafka.Common.Config.SaslConfigs.DEFAULT_SASL_LOGIN_RETRY_BACKOFF_MS">
   DEFAULT_SASL_LOGIN_RETRY_BACKOFF_MS
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L504"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L510"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/SaslConfigs.html#DEFAULT_SASL_LOGIN_RETRY_BACKOFF_MS">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/SaslConfigs.html#DEFAULT_SASL_LOGIN_RETRY_BACKOFF_MS</a></p>
@@ -910,7 +968,7 @@ Class SaslConfigs  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Org_Apache_Kafka_Common_Config_SaslConfigs_DEFAULT_SASL_MECHANISM" data-uid="Org.Apache.Kafka.Common.Config.SaslConfigs.DEFAULT_SASL_MECHANISM">
   DEFAULT_SASL_MECHANISM
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L120"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L126"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/SaslConfigs.html#DEFAULT_SASL_MECHANISM">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/SaslConfigs.html#DEFAULT_SASL_MECHANISM</a></p>
@@ -942,7 +1000,7 @@ Class SaslConfigs  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Org_Apache_Kafka_Common_Config_SaslConfigs_DEFAULT_SASL_OAUTHBEARER_CLOCK_SKEW_SECONDS" data-uid="Org.Apache.Kafka.Common.Config.SaslConfigs.DEFAULT_SASL_OAUTHBEARER_CLOCK_SKEW_SECONDS">
   DEFAULT_SASL_OAUTHBEARER_CLOCK_SKEW_SECONDS
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L108"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L114"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/SaslConfigs.html#DEFAULT_SASL_OAUTHBEARER_CLOCK_SKEW_SECONDS">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/SaslConfigs.html#DEFAULT_SASL_OAUTHBEARER_CLOCK_SKEW_SECONDS</a></p>
@@ -974,7 +1032,7 @@ Class SaslConfigs  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Org_Apache_Kafka_Common_Config_SaslConfigs_DEFAULT_SASL_OAUTHBEARER_HEADER_URLENCODE" data-uid="Org.Apache.Kafka.Common.Config.SaslConfigs.DEFAULT_SASL_OAUTHBEARER_HEADER_URLENCODE">
   DEFAULT_SASL_OAUTHBEARER_HEADER_URLENCODE
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L78"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L84"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/SaslConfigs.html#DEFAULT_SASL_OAUTHBEARER_HEADER_URLENCODE">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/SaslConfigs.html#DEFAULT_SASL_OAUTHBEARER_HEADER_URLENCODE</a></p>
@@ -1006,7 +1064,7 @@ Class SaslConfigs  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Org_Apache_Kafka_Common_Config_SaslConfigs_DEFAULT_SASL_OAUTHBEARER_JWKS_ENDPOINT_REFRESH_MS" data-uid="Org.Apache.Kafka.Common.Config.SaslConfigs.DEFAULT_SASL_OAUTHBEARER_JWKS_ENDPOINT_REFRESH_MS">
   DEFAULT_SASL_OAUTHBEARER_JWKS_ENDPOINT_REFRESH_MS
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L510"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L516"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/SaslConfigs.html#DEFAULT_SASL_OAUTHBEARER_JWKS_ENDPOINT_REFRESH_MS">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/SaslConfigs.html#DEFAULT_SASL_OAUTHBEARER_JWKS_ENDPOINT_REFRESH_MS</a></p>
@@ -1038,7 +1096,7 @@ Class SaslConfigs  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Org_Apache_Kafka_Common_Config_SaslConfigs_DEFAULT_SASL_OAUTHBEARER_JWKS_ENDPOINT_RETRY_BACKOFF_MAX_MS" data-uid="Org.Apache.Kafka.Common.Config.SaslConfigs.DEFAULT_SASL_OAUTHBEARER_JWKS_ENDPOINT_RETRY_BACKOFF_MAX_MS">
   DEFAULT_SASL_OAUTHBEARER_JWKS_ENDPOINT_RETRY_BACKOFF_MAX_MS
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L516"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L522"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/SaslConfigs.html#DEFAULT_SASL_OAUTHBEARER_JWKS_ENDPOINT_RETRY_BACKOFF_MAX_MS">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/SaslConfigs.html#DEFAULT_SASL_OAUTHBEARER_JWKS_ENDPOINT_RETRY_BACKOFF_MAX_MS</a></p>
@@ -1070,7 +1128,7 @@ Class SaslConfigs  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Org_Apache_Kafka_Common_Config_SaslConfigs_DEFAULT_SASL_OAUTHBEARER_JWKS_ENDPOINT_RETRY_BACKOFF_MS" data-uid="Org.Apache.Kafka.Common.Config.SaslConfigs.DEFAULT_SASL_OAUTHBEARER_JWKS_ENDPOINT_RETRY_BACKOFF_MS">
   DEFAULT_SASL_OAUTHBEARER_JWKS_ENDPOINT_RETRY_BACKOFF_MS
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L522"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L528"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/SaslConfigs.html#DEFAULT_SASL_OAUTHBEARER_JWKS_ENDPOINT_RETRY_BACKOFF_MS">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/SaslConfigs.html#DEFAULT_SASL_OAUTHBEARER_JWKS_ENDPOINT_RETRY_BACKOFF_MS</a></p>
@@ -1102,7 +1160,7 @@ Class SaslConfigs  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Org_Apache_Kafka_Common_Config_SaslConfigs_DEFAULT_SASL_OAUTHBEARER_SCOPE_CLAIM_NAME" data-uid="Org.Apache.Kafka.Common.Config.SaslConfigs.DEFAULT_SASL_OAUTHBEARER_SCOPE_CLAIM_NAME">
   DEFAULT_SASL_OAUTHBEARER_SCOPE_CLAIM_NAME
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L126"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L132"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/SaslConfigs.html#DEFAULT_SASL_OAUTHBEARER_SCOPE_CLAIM_NAME">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/SaslConfigs.html#DEFAULT_SASL_OAUTHBEARER_SCOPE_CLAIM_NAME</a></p>
@@ -1134,7 +1192,7 @@ Class SaslConfigs  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Org_Apache_Kafka_Common_Config_SaslConfigs_DEFAULT_SASL_OAUTHBEARER_SUB_CLAIM_NAME" data-uid="Org.Apache.Kafka.Common.Config.SaslConfigs.DEFAULT_SASL_OAUTHBEARER_SUB_CLAIM_NAME">
   DEFAULT_SASL_OAUTHBEARER_SUB_CLAIM_NAME
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L132"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L138"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/SaslConfigs.html#DEFAULT_SASL_OAUTHBEARER_SUB_CLAIM_NAME">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/SaslConfigs.html#DEFAULT_SASL_OAUTHBEARER_SUB_CLAIM_NAME</a></p>
@@ -1166,7 +1224,7 @@ Class SaslConfigs  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Org_Apache_Kafka_Common_Config_SaslConfigs_GSSAPI_MECHANISM" data-uid="Org.Apache.Kafka.Common.Config.SaslConfigs.GSSAPI_MECHANISM">
   GSSAPI_MECHANISM
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L138"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L144"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/SaslConfigs.html#GSSAPI_MECHANISM">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/SaslConfigs.html#GSSAPI_MECHANISM</a></p>
@@ -1198,7 +1256,7 @@ Class SaslConfigs  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Org_Apache_Kafka_Common_Config_SaslConfigs_IsBridgeAbstract" data-uid="Org.Apache.Kafka.Common.Config.SaslConfigs.IsBridgeAbstract">
   IsBridgeAbstract
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L50"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L56"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.html#MASES_JCOBridge_C2JBridge_IJVMBridgeDefinition_BridgeClassName">BridgeClassName</a> is an abstract class, i.e. cannot be created an instance</p>
@@ -1230,7 +1288,7 @@ Class SaslConfigs  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Org_Apache_Kafka_Common_Config_SaslConfigs_IsBridgeCloseable" data-uid="Org.Apache.Kafka.Common.Config.SaslConfigs.IsBridgeCloseable">
   IsBridgeCloseable
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L52"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L58"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.html#MASES_JCOBridge_C2JBridge_IJVMBridgeDefinition_BridgeClassName">BridgeClassName</a> implements Closeable</p>
@@ -1262,7 +1320,7 @@ Class SaslConfigs  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Org_Apache_Kafka_Common_Config_SaslConfigs_IsBridgeInterface" data-uid="Org.Apache.Kafka.Common.Config.SaslConfigs.IsBridgeInterface">
   IsBridgeInterface
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L54"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L60"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.html#MASES_JCOBridge_C2JBridge_IJVMBridgeDefinition_BridgeClassName">BridgeClassName</a> is an interface, i.e. does not have any public constructor</p>
@@ -1294,7 +1352,7 @@ Class SaslConfigs  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Org_Apache_Kafka_Common_Config_SaslConfigs_IsBridgeStatic" data-uid="Org.Apache.Kafka.Common.Config.SaslConfigs.IsBridgeStatic">
   IsBridgeStatic
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L56"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L62"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.html#MASES_JCOBridge_C2JBridge_IJVMBridgeDefinition_BridgeClassName">BridgeClassName</a> is a static class, i.e. does not have any public constructor</p>
@@ -1326,7 +1384,7 @@ Class SaslConfigs  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Org_Apache_Kafka_Common_Config_SaslConfigs_SASL_CLIENT_CALLBACK_HANDLER_CLASS" data-uid="Org.Apache.Kafka.Common.Config.SaslConfigs.SASL_CLIENT_CALLBACK_HANDLER_CLASS">
   SASL_CLIENT_CALLBACK_HANDLER_CLASS
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L144"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L150"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_CLIENT_CALLBACK_HANDLER_CLASS">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_CLIENT_CALLBACK_HANDLER_CLASS</a></p>
@@ -1358,7 +1416,7 @@ Class SaslConfigs  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Org_Apache_Kafka_Common_Config_SaslConfigs_SASL_CLIENT_CALLBACK_HANDLER_CLASS_DOC" data-uid="Org.Apache.Kafka.Common.Config.SaslConfigs.SASL_CLIENT_CALLBACK_HANDLER_CLASS_DOC">
   SASL_CLIENT_CALLBACK_HANDLER_CLASS_DOC
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L150"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L156"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_CLIENT_CALLBACK_HANDLER_CLASS_DOC">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_CLIENT_CALLBACK_HANDLER_CLASS_DOC</a></p>
@@ -1390,7 +1448,7 @@ Class SaslConfigs  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Org_Apache_Kafka_Common_Config_SaslConfigs_SASL_JAAS_CONFIG" data-uid="Org.Apache.Kafka.Common.Config.SaslConfigs.SASL_JAAS_CONFIG">
   SASL_JAAS_CONFIG
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L156"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L162"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_JAAS_CONFIG">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_JAAS_CONFIG</a></p>
@@ -1422,7 +1480,7 @@ Class SaslConfigs  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Org_Apache_Kafka_Common_Config_SaslConfigs_SASL_JAAS_CONFIG_DOC" data-uid="Org.Apache.Kafka.Common.Config.SaslConfigs.SASL_JAAS_CONFIG_DOC">
   SASL_JAAS_CONFIG_DOC
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L162"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L168"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_JAAS_CONFIG_DOC">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_JAAS_CONFIG_DOC</a></p>
@@ -1454,7 +1512,7 @@ Class SaslConfigs  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Org_Apache_Kafka_Common_Config_SaslConfigs_SASL_KERBEROS_KINIT_CMD" data-uid="Org.Apache.Kafka.Common.Config.SaslConfigs.SASL_KERBEROS_KINIT_CMD">
   SASL_KERBEROS_KINIT_CMD
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L168"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L174"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_KERBEROS_KINIT_CMD">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_KERBEROS_KINIT_CMD</a></p>
@@ -1486,7 +1544,7 @@ Class SaslConfigs  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Org_Apache_Kafka_Common_Config_SaslConfigs_SASL_KERBEROS_KINIT_CMD_DOC" data-uid="Org.Apache.Kafka.Common.Config.SaslConfigs.SASL_KERBEROS_KINIT_CMD_DOC">
   SASL_KERBEROS_KINIT_CMD_DOC
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L174"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L180"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_KERBEROS_KINIT_CMD_DOC">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_KERBEROS_KINIT_CMD_DOC</a></p>
@@ -1518,7 +1576,7 @@ Class SaslConfigs  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Org_Apache_Kafka_Common_Config_SaslConfigs_SASL_KERBEROS_MIN_TIME_BEFORE_RELOGIN" data-uid="Org.Apache.Kafka.Common.Config.SaslConfigs.SASL_KERBEROS_MIN_TIME_BEFORE_RELOGIN">
   SASL_KERBEROS_MIN_TIME_BEFORE_RELOGIN
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L180"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L186"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_KERBEROS_MIN_TIME_BEFORE_RELOGIN">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_KERBEROS_MIN_TIME_BEFORE_RELOGIN</a></p>
@@ -1550,7 +1608,7 @@ Class SaslConfigs  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Org_Apache_Kafka_Common_Config_SaslConfigs_SASL_KERBEROS_MIN_TIME_BEFORE_RELOGIN_DOC" data-uid="Org.Apache.Kafka.Common.Config.SaslConfigs.SASL_KERBEROS_MIN_TIME_BEFORE_RELOGIN_DOC">
   SASL_KERBEROS_MIN_TIME_BEFORE_RELOGIN_DOC
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L186"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L192"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_KERBEROS_MIN_TIME_BEFORE_RELOGIN_DOC">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_KERBEROS_MIN_TIME_BEFORE_RELOGIN_DOC</a></p>
@@ -1582,7 +1640,7 @@ Class SaslConfigs  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Org_Apache_Kafka_Common_Config_SaslConfigs_SASL_KERBEROS_SERVICE_NAME" data-uid="Org.Apache.Kafka.Common.Config.SaslConfigs.SASL_KERBEROS_SERVICE_NAME">
   SASL_KERBEROS_SERVICE_NAME
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L192"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L198"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_KERBEROS_SERVICE_NAME">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_KERBEROS_SERVICE_NAME</a></p>
@@ -1614,7 +1672,7 @@ Class SaslConfigs  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Org_Apache_Kafka_Common_Config_SaslConfigs_SASL_KERBEROS_SERVICE_NAME_DOC" data-uid="Org.Apache.Kafka.Common.Config.SaslConfigs.SASL_KERBEROS_SERVICE_NAME_DOC">
   SASL_KERBEROS_SERVICE_NAME_DOC
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L198"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L204"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_KERBEROS_SERVICE_NAME_DOC">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_KERBEROS_SERVICE_NAME_DOC</a></p>
@@ -1646,7 +1704,7 @@ Class SaslConfigs  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Org_Apache_Kafka_Common_Config_SaslConfigs_SASL_KERBEROS_TICKET_RENEW_JITTER" data-uid="Org.Apache.Kafka.Common.Config.SaslConfigs.SASL_KERBEROS_TICKET_RENEW_JITTER">
   SASL_KERBEROS_TICKET_RENEW_JITTER
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L204"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L210"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_KERBEROS_TICKET_RENEW_JITTER">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_KERBEROS_TICKET_RENEW_JITTER</a></p>
@@ -1678,7 +1736,7 @@ Class SaslConfigs  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Org_Apache_Kafka_Common_Config_SaslConfigs_SASL_KERBEROS_TICKET_RENEW_JITTER_DOC" data-uid="Org.Apache.Kafka.Common.Config.SaslConfigs.SASL_KERBEROS_TICKET_RENEW_JITTER_DOC">
   SASL_KERBEROS_TICKET_RENEW_JITTER_DOC
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L210"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L216"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_KERBEROS_TICKET_RENEW_JITTER_DOC">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_KERBEROS_TICKET_RENEW_JITTER_DOC</a></p>
@@ -1710,7 +1768,7 @@ Class SaslConfigs  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Org_Apache_Kafka_Common_Config_SaslConfigs_SASL_KERBEROS_TICKET_RENEW_WINDOW_FACTOR" data-uid="Org.Apache.Kafka.Common.Config.SaslConfigs.SASL_KERBEROS_TICKET_RENEW_WINDOW_FACTOR">
   SASL_KERBEROS_TICKET_RENEW_WINDOW_FACTOR
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L216"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L222"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_KERBEROS_TICKET_RENEW_WINDOW_FACTOR">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_KERBEROS_TICKET_RENEW_WINDOW_FACTOR</a></p>
@@ -1742,7 +1800,7 @@ Class SaslConfigs  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Org_Apache_Kafka_Common_Config_SaslConfigs_SASL_KERBEROS_TICKET_RENEW_WINDOW_FACTOR_DOC" data-uid="Org.Apache.Kafka.Common.Config.SaslConfigs.SASL_KERBEROS_TICKET_RENEW_WINDOW_FACTOR_DOC">
   SASL_KERBEROS_TICKET_RENEW_WINDOW_FACTOR_DOC
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L222"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L228"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_KERBEROS_TICKET_RENEW_WINDOW_FACTOR_DOC">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_KERBEROS_TICKET_RENEW_WINDOW_FACTOR_DOC</a></p>
@@ -1774,7 +1832,7 @@ Class SaslConfigs  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Org_Apache_Kafka_Common_Config_SaslConfigs_SASL_LOGIN_CALLBACK_HANDLER_CLASS" data-uid="Org.Apache.Kafka.Common.Config.SaslConfigs.SASL_LOGIN_CALLBACK_HANDLER_CLASS">
   SASL_LOGIN_CALLBACK_HANDLER_CLASS
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L228"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L234"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_LOGIN_CALLBACK_HANDLER_CLASS">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_LOGIN_CALLBACK_HANDLER_CLASS</a></p>
@@ -1806,7 +1864,7 @@ Class SaslConfigs  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Org_Apache_Kafka_Common_Config_SaslConfigs_SASL_LOGIN_CALLBACK_HANDLER_CLASS_DOC" data-uid="Org.Apache.Kafka.Common.Config.SaslConfigs.SASL_LOGIN_CALLBACK_HANDLER_CLASS_DOC">
   SASL_LOGIN_CALLBACK_HANDLER_CLASS_DOC
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L234"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L240"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_LOGIN_CALLBACK_HANDLER_CLASS_DOC">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_LOGIN_CALLBACK_HANDLER_CLASS_DOC</a></p>
@@ -1838,7 +1896,7 @@ Class SaslConfigs  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Org_Apache_Kafka_Common_Config_SaslConfigs_SASL_LOGIN_CLASS" data-uid="Org.Apache.Kafka.Common.Config.SaslConfigs.SASL_LOGIN_CLASS">
   SASL_LOGIN_CLASS
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L240"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L246"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_LOGIN_CLASS">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_LOGIN_CLASS</a></p>
@@ -1870,7 +1928,7 @@ Class SaslConfigs  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Org_Apache_Kafka_Common_Config_SaslConfigs_SASL_LOGIN_CLASS_DOC" data-uid="Org.Apache.Kafka.Common.Config.SaslConfigs.SASL_LOGIN_CLASS_DOC">
   SASL_LOGIN_CLASS_DOC
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L246"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L252"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_LOGIN_CLASS_DOC">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_LOGIN_CLASS_DOC</a></p>
@@ -1902,7 +1960,7 @@ Class SaslConfigs  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Org_Apache_Kafka_Common_Config_SaslConfigs_SASL_LOGIN_CONNECT_TIMEOUT_MS" data-uid="Org.Apache.Kafka.Common.Config.SaslConfigs.SASL_LOGIN_CONNECT_TIMEOUT_MS">
   SASL_LOGIN_CONNECT_TIMEOUT_MS
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L252"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L258"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_LOGIN_CONNECT_TIMEOUT_MS">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_LOGIN_CONNECT_TIMEOUT_MS</a></p>
@@ -1934,7 +1992,7 @@ Class SaslConfigs  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Org_Apache_Kafka_Common_Config_SaslConfigs_SASL_LOGIN_CONNECT_TIMEOUT_MS_DOC" data-uid="Org.Apache.Kafka.Common.Config.SaslConfigs.SASL_LOGIN_CONNECT_TIMEOUT_MS_DOC">
   SASL_LOGIN_CONNECT_TIMEOUT_MS_DOC
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L258"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L264"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_LOGIN_CONNECT_TIMEOUT_MS_DOC">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_LOGIN_CONNECT_TIMEOUT_MS_DOC</a></p>
@@ -1966,7 +2024,7 @@ Class SaslConfigs  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Org_Apache_Kafka_Common_Config_SaslConfigs_SASL_LOGIN_READ_TIMEOUT_MS" data-uid="Org.Apache.Kafka.Common.Config.SaslConfigs.SASL_LOGIN_READ_TIMEOUT_MS">
   SASL_LOGIN_READ_TIMEOUT_MS
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L264"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L270"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_LOGIN_READ_TIMEOUT_MS">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_LOGIN_READ_TIMEOUT_MS</a></p>
@@ -1998,7 +2056,7 @@ Class SaslConfigs  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Org_Apache_Kafka_Common_Config_SaslConfigs_SASL_LOGIN_READ_TIMEOUT_MS_DOC" data-uid="Org.Apache.Kafka.Common.Config.SaslConfigs.SASL_LOGIN_READ_TIMEOUT_MS_DOC">
   SASL_LOGIN_READ_TIMEOUT_MS_DOC
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L270"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L276"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_LOGIN_READ_TIMEOUT_MS_DOC">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_LOGIN_READ_TIMEOUT_MS_DOC</a></p>
@@ -2030,7 +2088,7 @@ Class SaslConfigs  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Org_Apache_Kafka_Common_Config_SaslConfigs_SASL_LOGIN_REFRESH_BUFFER_SECONDS" data-uid="Org.Apache.Kafka.Common.Config.SaslConfigs.SASL_LOGIN_REFRESH_BUFFER_SECONDS">
   SASL_LOGIN_REFRESH_BUFFER_SECONDS
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L276"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L282"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_LOGIN_REFRESH_BUFFER_SECONDS">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_LOGIN_REFRESH_BUFFER_SECONDS</a></p>
@@ -2062,7 +2120,7 @@ Class SaslConfigs  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Org_Apache_Kafka_Common_Config_SaslConfigs_SASL_LOGIN_REFRESH_BUFFER_SECONDS_DOC" data-uid="Org.Apache.Kafka.Common.Config.SaslConfigs.SASL_LOGIN_REFRESH_BUFFER_SECONDS_DOC">
   SASL_LOGIN_REFRESH_BUFFER_SECONDS_DOC
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L282"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L288"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_LOGIN_REFRESH_BUFFER_SECONDS_DOC">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_LOGIN_REFRESH_BUFFER_SECONDS_DOC</a></p>
@@ -2094,7 +2152,7 @@ Class SaslConfigs  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Org_Apache_Kafka_Common_Config_SaslConfigs_SASL_LOGIN_REFRESH_MIN_PERIOD_SECONDS" data-uid="Org.Apache.Kafka.Common.Config.SaslConfigs.SASL_LOGIN_REFRESH_MIN_PERIOD_SECONDS">
   SASL_LOGIN_REFRESH_MIN_PERIOD_SECONDS
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L288"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L294"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_LOGIN_REFRESH_MIN_PERIOD_SECONDS">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_LOGIN_REFRESH_MIN_PERIOD_SECONDS</a></p>
@@ -2126,7 +2184,7 @@ Class SaslConfigs  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Org_Apache_Kafka_Common_Config_SaslConfigs_SASL_LOGIN_REFRESH_MIN_PERIOD_SECONDS_DOC" data-uid="Org.Apache.Kafka.Common.Config.SaslConfigs.SASL_LOGIN_REFRESH_MIN_PERIOD_SECONDS_DOC">
   SASL_LOGIN_REFRESH_MIN_PERIOD_SECONDS_DOC
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L294"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L300"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_LOGIN_REFRESH_MIN_PERIOD_SECONDS_DOC">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_LOGIN_REFRESH_MIN_PERIOD_SECONDS_DOC</a></p>
@@ -2158,7 +2216,7 @@ Class SaslConfigs  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Org_Apache_Kafka_Common_Config_SaslConfigs_SASL_LOGIN_REFRESH_WINDOW_FACTOR" data-uid="Org.Apache.Kafka.Common.Config.SaslConfigs.SASL_LOGIN_REFRESH_WINDOW_FACTOR">
   SASL_LOGIN_REFRESH_WINDOW_FACTOR
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L300"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L306"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_LOGIN_REFRESH_WINDOW_FACTOR">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_LOGIN_REFRESH_WINDOW_FACTOR</a></p>
@@ -2190,7 +2248,7 @@ Class SaslConfigs  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Org_Apache_Kafka_Common_Config_SaslConfigs_SASL_LOGIN_REFRESH_WINDOW_FACTOR_DOC" data-uid="Org.Apache.Kafka.Common.Config.SaslConfigs.SASL_LOGIN_REFRESH_WINDOW_FACTOR_DOC">
   SASL_LOGIN_REFRESH_WINDOW_FACTOR_DOC
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L306"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L312"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_LOGIN_REFRESH_WINDOW_FACTOR_DOC">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_LOGIN_REFRESH_WINDOW_FACTOR_DOC</a></p>
@@ -2222,7 +2280,7 @@ Class SaslConfigs  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Org_Apache_Kafka_Common_Config_SaslConfigs_SASL_LOGIN_REFRESH_WINDOW_JITTER" data-uid="Org.Apache.Kafka.Common.Config.SaslConfigs.SASL_LOGIN_REFRESH_WINDOW_JITTER">
   SASL_LOGIN_REFRESH_WINDOW_JITTER
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L312"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L318"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_LOGIN_REFRESH_WINDOW_JITTER">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_LOGIN_REFRESH_WINDOW_JITTER</a></p>
@@ -2254,7 +2312,7 @@ Class SaslConfigs  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Org_Apache_Kafka_Common_Config_SaslConfigs_SASL_LOGIN_REFRESH_WINDOW_JITTER_DOC" data-uid="Org.Apache.Kafka.Common.Config.SaslConfigs.SASL_LOGIN_REFRESH_WINDOW_JITTER_DOC">
   SASL_LOGIN_REFRESH_WINDOW_JITTER_DOC
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L318"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L324"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_LOGIN_REFRESH_WINDOW_JITTER_DOC">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_LOGIN_REFRESH_WINDOW_JITTER_DOC</a></p>
@@ -2286,7 +2344,7 @@ Class SaslConfigs  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Org_Apache_Kafka_Common_Config_SaslConfigs_SASL_LOGIN_RETRY_BACKOFF_MAX_MS" data-uid="Org.Apache.Kafka.Common.Config.SaslConfigs.SASL_LOGIN_RETRY_BACKOFF_MAX_MS">
   SASL_LOGIN_RETRY_BACKOFF_MAX_MS
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L324"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L330"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_LOGIN_RETRY_BACKOFF_MAX_MS">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_LOGIN_RETRY_BACKOFF_MAX_MS</a></p>
@@ -2318,7 +2376,7 @@ Class SaslConfigs  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Org_Apache_Kafka_Common_Config_SaslConfigs_SASL_LOGIN_RETRY_BACKOFF_MAX_MS_DOC" data-uid="Org.Apache.Kafka.Common.Config.SaslConfigs.SASL_LOGIN_RETRY_BACKOFF_MAX_MS_DOC">
   SASL_LOGIN_RETRY_BACKOFF_MAX_MS_DOC
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L330"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L336"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_LOGIN_RETRY_BACKOFF_MAX_MS_DOC">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_LOGIN_RETRY_BACKOFF_MAX_MS_DOC</a></p>
@@ -2350,7 +2408,7 @@ Class SaslConfigs  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Org_Apache_Kafka_Common_Config_SaslConfigs_SASL_LOGIN_RETRY_BACKOFF_MS" data-uid="Org.Apache.Kafka.Common.Config.SaslConfigs.SASL_LOGIN_RETRY_BACKOFF_MS">
   SASL_LOGIN_RETRY_BACKOFF_MS
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L336"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L342"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_LOGIN_RETRY_BACKOFF_MS">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_LOGIN_RETRY_BACKOFF_MS</a></p>
@@ -2382,7 +2440,7 @@ Class SaslConfigs  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Org_Apache_Kafka_Common_Config_SaslConfigs_SASL_LOGIN_RETRY_BACKOFF_MS_DOC" data-uid="Org.Apache.Kafka.Common.Config.SaslConfigs.SASL_LOGIN_RETRY_BACKOFF_MS_DOC">
   SASL_LOGIN_RETRY_BACKOFF_MS_DOC
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L342"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L348"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_LOGIN_RETRY_BACKOFF_MS_DOC">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_LOGIN_RETRY_BACKOFF_MS_DOC</a></p>
@@ -2414,7 +2472,7 @@ Class SaslConfigs  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Org_Apache_Kafka_Common_Config_SaslConfigs_SASL_MECHANISM" data-uid="Org.Apache.Kafka.Common.Config.SaslConfigs.SASL_MECHANISM">
   SASL_MECHANISM
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L348"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L354"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_MECHANISM">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_MECHANISM</a></p>
@@ -2446,7 +2504,7 @@ Class SaslConfigs  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Org_Apache_Kafka_Common_Config_SaslConfigs_SASL_MECHANISM_DOC" data-uid="Org.Apache.Kafka.Common.Config.SaslConfigs.SASL_MECHANISM_DOC">
   SASL_MECHANISM_DOC
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L354"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L360"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_MECHANISM_DOC">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_MECHANISM_DOC</a></p>
@@ -2478,7 +2536,7 @@ Class SaslConfigs  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Org_Apache_Kafka_Common_Config_SaslConfigs_SASL_OAUTHBEARER_CLOCK_SKEW_SECONDS" data-uid="Org.Apache.Kafka.Common.Config.SaslConfigs.SASL_OAUTHBEARER_CLOCK_SKEW_SECONDS">
   SASL_OAUTHBEARER_CLOCK_SKEW_SECONDS
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L360"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L366"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_OAUTHBEARER_CLOCK_SKEW_SECONDS">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_OAUTHBEARER_CLOCK_SKEW_SECONDS</a></p>
@@ -2510,7 +2568,7 @@ Class SaslConfigs  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Org_Apache_Kafka_Common_Config_SaslConfigs_SASL_OAUTHBEARER_CLOCK_SKEW_SECONDS_DOC" data-uid="Org.Apache.Kafka.Common.Config.SaslConfigs.SASL_OAUTHBEARER_CLOCK_SKEW_SECONDS_DOC">
   SASL_OAUTHBEARER_CLOCK_SKEW_SECONDS_DOC
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L366"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L372"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_OAUTHBEARER_CLOCK_SKEW_SECONDS_DOC">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_OAUTHBEARER_CLOCK_SKEW_SECONDS_DOC</a></p>
@@ -2542,7 +2600,7 @@ Class SaslConfigs  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Org_Apache_Kafka_Common_Config_SaslConfigs_SASL_OAUTHBEARER_EXPECTED_AUDIENCE" data-uid="Org.Apache.Kafka.Common.Config.SaslConfigs.SASL_OAUTHBEARER_EXPECTED_AUDIENCE">
   SASL_OAUTHBEARER_EXPECTED_AUDIENCE
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L372"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L378"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_OAUTHBEARER_EXPECTED_AUDIENCE">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_OAUTHBEARER_EXPECTED_AUDIENCE</a></p>
@@ -2574,7 +2632,7 @@ Class SaslConfigs  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Org_Apache_Kafka_Common_Config_SaslConfigs_SASL_OAUTHBEARER_EXPECTED_AUDIENCE_DOC" data-uid="Org.Apache.Kafka.Common.Config.SaslConfigs.SASL_OAUTHBEARER_EXPECTED_AUDIENCE_DOC">
   SASL_OAUTHBEARER_EXPECTED_AUDIENCE_DOC
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L378"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L384"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_OAUTHBEARER_EXPECTED_AUDIENCE_DOC">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_OAUTHBEARER_EXPECTED_AUDIENCE_DOC</a></p>
@@ -2606,7 +2664,7 @@ Class SaslConfigs  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Org_Apache_Kafka_Common_Config_SaslConfigs_SASL_OAUTHBEARER_EXPECTED_ISSUER" data-uid="Org.Apache.Kafka.Common.Config.SaslConfigs.SASL_OAUTHBEARER_EXPECTED_ISSUER">
   SASL_OAUTHBEARER_EXPECTED_ISSUER
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L384"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L390"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_OAUTHBEARER_EXPECTED_ISSUER">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_OAUTHBEARER_EXPECTED_ISSUER</a></p>
@@ -2638,7 +2696,7 @@ Class SaslConfigs  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Org_Apache_Kafka_Common_Config_SaslConfigs_SASL_OAUTHBEARER_EXPECTED_ISSUER_DOC" data-uid="Org.Apache.Kafka.Common.Config.SaslConfigs.SASL_OAUTHBEARER_EXPECTED_ISSUER_DOC">
   SASL_OAUTHBEARER_EXPECTED_ISSUER_DOC
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L390"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L396"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_OAUTHBEARER_EXPECTED_ISSUER_DOC">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_OAUTHBEARER_EXPECTED_ISSUER_DOC</a></p>
@@ -2670,7 +2728,7 @@ Class SaslConfigs  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Org_Apache_Kafka_Common_Config_SaslConfigs_SASL_OAUTHBEARER_HEADER_URLENCODE" data-uid="Org.Apache.Kafka.Common.Config.SaslConfigs.SASL_OAUTHBEARER_HEADER_URLENCODE">
   SASL_OAUTHBEARER_HEADER_URLENCODE
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L396"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L402"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_OAUTHBEARER_HEADER_URLENCODE">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_OAUTHBEARER_HEADER_URLENCODE</a></p>
@@ -2702,7 +2760,7 @@ Class SaslConfigs  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Org_Apache_Kafka_Common_Config_SaslConfigs_SASL_OAUTHBEARER_HEADER_URLENCODE_DOC" data-uid="Org.Apache.Kafka.Common.Config.SaslConfigs.SASL_OAUTHBEARER_HEADER_URLENCODE_DOC">
   SASL_OAUTHBEARER_HEADER_URLENCODE_DOC
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L402"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L408"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_OAUTHBEARER_HEADER_URLENCODE_DOC">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_OAUTHBEARER_HEADER_URLENCODE_DOC</a></p>
@@ -2734,7 +2792,7 @@ Class SaslConfigs  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Org_Apache_Kafka_Common_Config_SaslConfigs_SASL_OAUTHBEARER_JWKS_ENDPOINT_REFRESH_MS" data-uid="Org.Apache.Kafka.Common.Config.SaslConfigs.SASL_OAUTHBEARER_JWKS_ENDPOINT_REFRESH_MS">
   SASL_OAUTHBEARER_JWKS_ENDPOINT_REFRESH_MS
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L408"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L414"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_OAUTHBEARER_JWKS_ENDPOINT_REFRESH_MS">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_OAUTHBEARER_JWKS_ENDPOINT_REFRESH_MS</a></p>
@@ -2766,7 +2824,7 @@ Class SaslConfigs  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Org_Apache_Kafka_Common_Config_SaslConfigs_SASL_OAUTHBEARER_JWKS_ENDPOINT_REFRESH_MS_DOC" data-uid="Org.Apache.Kafka.Common.Config.SaslConfigs.SASL_OAUTHBEARER_JWKS_ENDPOINT_REFRESH_MS_DOC">
   SASL_OAUTHBEARER_JWKS_ENDPOINT_REFRESH_MS_DOC
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L414"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L420"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_OAUTHBEARER_JWKS_ENDPOINT_REFRESH_MS_DOC">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_OAUTHBEARER_JWKS_ENDPOINT_REFRESH_MS_DOC</a></p>
@@ -2798,7 +2856,7 @@ Class SaslConfigs  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Org_Apache_Kafka_Common_Config_SaslConfigs_SASL_OAUTHBEARER_JWKS_ENDPOINT_RETRY_BACKOFF_MAX_MS" data-uid="Org.Apache.Kafka.Common.Config.SaslConfigs.SASL_OAUTHBEARER_JWKS_ENDPOINT_RETRY_BACKOFF_MAX_MS">
   SASL_OAUTHBEARER_JWKS_ENDPOINT_RETRY_BACKOFF_MAX_MS
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L420"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L426"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_OAUTHBEARER_JWKS_ENDPOINT_RETRY_BACKOFF_MAX_MS">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_OAUTHBEARER_JWKS_ENDPOINT_RETRY_BACKOFF_MAX_MS</a></p>
@@ -2830,7 +2888,7 @@ Class SaslConfigs  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Org_Apache_Kafka_Common_Config_SaslConfigs_SASL_OAUTHBEARER_JWKS_ENDPOINT_RETRY_BACKOFF_MAX_MS_DOC" data-uid="Org.Apache.Kafka.Common.Config.SaslConfigs.SASL_OAUTHBEARER_JWKS_ENDPOINT_RETRY_BACKOFF_MAX_MS_DOC">
   SASL_OAUTHBEARER_JWKS_ENDPOINT_RETRY_BACKOFF_MAX_MS_DOC
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L426"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L432"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_OAUTHBEARER_JWKS_ENDPOINT_RETRY_BACKOFF_MAX_MS_DOC">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_OAUTHBEARER_JWKS_ENDPOINT_RETRY_BACKOFF_MAX_MS_DOC</a></p>
@@ -2862,7 +2920,7 @@ Class SaslConfigs  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Org_Apache_Kafka_Common_Config_SaslConfigs_SASL_OAUTHBEARER_JWKS_ENDPOINT_RETRY_BACKOFF_MS" data-uid="Org.Apache.Kafka.Common.Config.SaslConfigs.SASL_OAUTHBEARER_JWKS_ENDPOINT_RETRY_BACKOFF_MS">
   SASL_OAUTHBEARER_JWKS_ENDPOINT_RETRY_BACKOFF_MS
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L432"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L438"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_OAUTHBEARER_JWKS_ENDPOINT_RETRY_BACKOFF_MS">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_OAUTHBEARER_JWKS_ENDPOINT_RETRY_BACKOFF_MS</a></p>
@@ -2894,7 +2952,7 @@ Class SaslConfigs  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Org_Apache_Kafka_Common_Config_SaslConfigs_SASL_OAUTHBEARER_JWKS_ENDPOINT_RETRY_BACKOFF_MS_DOC" data-uid="Org.Apache.Kafka.Common.Config.SaslConfigs.SASL_OAUTHBEARER_JWKS_ENDPOINT_RETRY_BACKOFF_MS_DOC">
   SASL_OAUTHBEARER_JWKS_ENDPOINT_RETRY_BACKOFF_MS_DOC
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L438"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L444"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_OAUTHBEARER_JWKS_ENDPOINT_RETRY_BACKOFF_MS_DOC">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_OAUTHBEARER_JWKS_ENDPOINT_RETRY_BACKOFF_MS_DOC</a></p>
@@ -2926,7 +2984,7 @@ Class SaslConfigs  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Org_Apache_Kafka_Common_Config_SaslConfigs_SASL_OAUTHBEARER_JWKS_ENDPOINT_URL" data-uid="Org.Apache.Kafka.Common.Config.SaslConfigs.SASL_OAUTHBEARER_JWKS_ENDPOINT_URL">
   SASL_OAUTHBEARER_JWKS_ENDPOINT_URL
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L444"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L450"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_OAUTHBEARER_JWKS_ENDPOINT_URL">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_OAUTHBEARER_JWKS_ENDPOINT_URL</a></p>
@@ -2958,7 +3016,7 @@ Class SaslConfigs  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Org_Apache_Kafka_Common_Config_SaslConfigs_SASL_OAUTHBEARER_JWKS_ENDPOINT_URL_DOC" data-uid="Org.Apache.Kafka.Common.Config.SaslConfigs.SASL_OAUTHBEARER_JWKS_ENDPOINT_URL_DOC">
   SASL_OAUTHBEARER_JWKS_ENDPOINT_URL_DOC
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L450"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L456"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_OAUTHBEARER_JWKS_ENDPOINT_URL_DOC">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_OAUTHBEARER_JWKS_ENDPOINT_URL_DOC</a></p>
@@ -2990,7 +3048,7 @@ Class SaslConfigs  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Org_Apache_Kafka_Common_Config_SaslConfigs_SASL_OAUTHBEARER_SCOPE_CLAIM_NAME" data-uid="Org.Apache.Kafka.Common.Config.SaslConfigs.SASL_OAUTHBEARER_SCOPE_CLAIM_NAME">
   SASL_OAUTHBEARER_SCOPE_CLAIM_NAME
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L456"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L462"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_OAUTHBEARER_SCOPE_CLAIM_NAME">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_OAUTHBEARER_SCOPE_CLAIM_NAME</a></p>
@@ -3022,7 +3080,7 @@ Class SaslConfigs  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Org_Apache_Kafka_Common_Config_SaslConfigs_SASL_OAUTHBEARER_SCOPE_CLAIM_NAME_DOC" data-uid="Org.Apache.Kafka.Common.Config.SaslConfigs.SASL_OAUTHBEARER_SCOPE_CLAIM_NAME_DOC">
   SASL_OAUTHBEARER_SCOPE_CLAIM_NAME_DOC
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L462"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L468"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_OAUTHBEARER_SCOPE_CLAIM_NAME_DOC">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_OAUTHBEARER_SCOPE_CLAIM_NAME_DOC</a></p>
@@ -3054,7 +3112,7 @@ Class SaslConfigs  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Org_Apache_Kafka_Common_Config_SaslConfigs_SASL_OAUTHBEARER_SUB_CLAIM_NAME" data-uid="Org.Apache.Kafka.Common.Config.SaslConfigs.SASL_OAUTHBEARER_SUB_CLAIM_NAME">
   SASL_OAUTHBEARER_SUB_CLAIM_NAME
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L468"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L474"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_OAUTHBEARER_SUB_CLAIM_NAME">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_OAUTHBEARER_SUB_CLAIM_NAME</a></p>
@@ -3086,7 +3144,7 @@ Class SaslConfigs  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Org_Apache_Kafka_Common_Config_SaslConfigs_SASL_OAUTHBEARER_SUB_CLAIM_NAME_DOC" data-uid="Org.Apache.Kafka.Common.Config.SaslConfigs.SASL_OAUTHBEARER_SUB_CLAIM_NAME_DOC">
   SASL_OAUTHBEARER_SUB_CLAIM_NAME_DOC
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L474"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L480"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_OAUTHBEARER_SUB_CLAIM_NAME_DOC">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_OAUTHBEARER_SUB_CLAIM_NAME_DOC</a></p>
@@ -3118,7 +3176,7 @@ Class SaslConfigs  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Org_Apache_Kafka_Common_Config_SaslConfigs_SASL_OAUTHBEARER_TOKEN_ENDPOINT_URL" data-uid="Org.Apache.Kafka.Common.Config.SaslConfigs.SASL_OAUTHBEARER_TOKEN_ENDPOINT_URL">
   SASL_OAUTHBEARER_TOKEN_ENDPOINT_URL
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L480"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L486"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_OAUTHBEARER_TOKEN_ENDPOINT_URL">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_OAUTHBEARER_TOKEN_ENDPOINT_URL</a></p>
@@ -3150,7 +3208,7 @@ Class SaslConfigs  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Org_Apache_Kafka_Common_Config_SaslConfigs_SASL_OAUTHBEARER_TOKEN_ENDPOINT_URL_DOC" data-uid="Org.Apache.Kafka.Common.Config.SaslConfigs.SASL_OAUTHBEARER_TOKEN_ENDPOINT_URL_DOC">
   SASL_OAUTHBEARER_TOKEN_ENDPOINT_URL_DOC
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L486"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L492"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_OAUTHBEARER_TOKEN_ENDPOINT_URL_DOC">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/SaslConfigs.html#SASL_OAUTHBEARER_TOKEN_ENDPOINT_URL_DOC</a></p>
@@ -3186,7 +3244,7 @@ Class SaslConfigs  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Org_Apache_Kafka_Common_Config_SaslConfigs_AddClientSaslSupport_Org_Apache_Kafka_Common_Config_ConfigDef_" data-uid="Org.Apache.Kafka.Common.Config.SaslConfigs.AddClientSaslSupport(Org.Apache.Kafka.Common.Config.ConfigDef)">
   AddClientSaslSupport(ConfigDef)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L545"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L551"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/SaslConfigs.html#addClientSaslSupport(org.apache.kafka.common.config.ConfigDef)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/config/SaslConfigs.html#addClientSaslSupport(org.apache.kafka.common.config.ConfigDef)</a></p>
@@ -3219,7 +3277,7 @@ Class SaslConfigs  <a class="header-action link-secondary" title="View source" h
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L64" class="edit-link">Edit this page</a>
+          <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Config/SaslConfigs.cs/#L70" class="edit-link">Edit this page</a>
         </div>
 
 

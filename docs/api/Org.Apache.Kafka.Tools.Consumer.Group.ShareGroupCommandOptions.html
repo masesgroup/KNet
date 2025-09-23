@@ -89,7 +89,7 @@
 
 
   <h1 id="Org_Apache_Kafka_Tools_Consumer_Group_ShareGroupCommandOptions" data-uid="Org.Apache.Kafka.Tools.Consumer.Group.ShareGroupCommandOptions" class="text-break">
-Class ShareGroupCommandOptions  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Tools/Consumer/Group/ShareGroupCommandOptions.cs/#L64"><i class="bi bi-code-slash"></i></a>
+Class ShareGroupCommandOptions  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Tools/Consumer/Group/ShareGroupCommandOptions.cs/#L70"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -102,7 +102,7 @@ Class ShareGroupCommandOptions  <a class="header-action link-secondary" title="V
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class ShareGroupCommandOptions : JVMBridgeBase&lt;ShareGroupCommandOptions&gt;, IDynamicMetaObjectProvider, IJVMBridgeCore, IDisposable, IJVMBridgeBaseStatic, IJVMBridgeBase, IJVMBridgeDefinition</code></pre>
+    <pre><code class="lang-csharp hljs">public class ShareGroupCommandOptions : JVMBridgeBase&lt;ShareGroupCommandOptions&gt;, IDynamicMetaObjectProvider, IJVMBridgeCore, IEquatable&lt;IJVMBridgeBase&gt;, IDisposable, IJVMBridgeBaseStatic, IJVMBridgeBase, IJVMBridgeDefinition</code></pre>
   </div>
 
 
@@ -124,6 +124,7 @@ Class ShareGroupCommandOptions  <a class="header-action link-secondary" title="V
     <dd>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.idynamicmetaobjectprovider">IDynamicMetaObjectProvider</a></div>
       <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeCore.html">IJVMBridgeCore</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeBase.html">IJVMBridgeBase</a>&gt;</div>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
       <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeBaseStatic.html">IJVMBridgeBaseStatic</a></div>
       <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeBase.html">IJVMBridgeBase</a></div>
@@ -220,16 +221,16 @@ Class ShareGroupCommandOptions  <a class="header-action link-secondary" title="V
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;ShareGroupCommandOptions&gt;.SExecuteWithSignature&lt;TReturn, TConverter&gt;(Type, string, string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;ShareGroupCommandOptions&gt;.SExecuteArray&lt;T&gt;(IJavaType, string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;ShareGroupCommandOptions&gt;.SExecuteArray&lt;TArrayType&gt;(IJavaType, string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;ShareGroupCommandOptions&gt;.SExecuteWithSignatureArray&lt;T&gt;(IJavaType, string, string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;ShareGroupCommandOptions&gt;.SExecuteWithSignatureArray&lt;TArrayType&gt;(IJavaType, string, string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;ShareGroupCommandOptions&gt;.SExecuteArray&lt;T&gt;(string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;ShareGroupCommandOptions&gt;.SExecuteArray&lt;TArrayType&gt;(string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;ShareGroupCommandOptions&gt;.SExecuteWithSignatureArray&lt;T&gt;(string, string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;ShareGroupCommandOptions&gt;.SExecuteWithSignatureArray&lt;TArrayType&gt;(string, string, params object[])</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;ShareGroupCommandOptions&gt;.SGetField(IJavaType, string)</a>
@@ -277,6 +278,12 @@ Class ShareGroupCommandOptions  <a class="header-action link-secondary" title="V
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;ShareGroupCommandOptions&gt;.NewWithSignature(string, params object[])</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;ShareGroupCommandOptions&gt;.NewAndWrapsDirect&lt;TNewClass&gt;(string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;ShareGroupCommandOptions&gt;.NewWithSignatureAndWrapsDirect&lt;TNewClass&gt;(string, string, params object[])</a>
+    </div>
+    <div>
       <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase-1.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_1_Execute__1___0___">JVMBridgeBase&lt;ShareGroupCommandOptions&gt;.Execute&lt;T&gt;(params T[])</a>
     </div>
     <div>
@@ -286,13 +293,25 @@ Class ShareGroupCommandOptions  <a class="header-action link-secondary" title="V
       <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase-1.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_1_BridgeClazz">JVMBridgeBase&lt;ShareGroupCommandOptions&gt;.BridgeClazz</a>
     </div>
     <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_ReferenceEqualsJVM_MASES_JCOBridge_C2JBridge_JVMBridgeBase_MASES_JCOBridge_C2JBridge_JVMBridgeBase_">JVMBridgeBase.ReferenceEqualsJVM(JVMBridgeBase, JVMBridgeBase)</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">JVMBridgeBase.ClazzOf&lt;TClass&gt;(bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">JVMBridgeBase.ClazzOf&lt;TClass&gt;(out Exception, bool)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.ClazzOf(string, bool)</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.ClazzOf(string, out Exception, bool)</a>
+    </div>
+    <div>
       <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_RuntimeClassNameOf__1">JVMBridgeBase.RuntimeClassNameOf&lt;T&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase.RuntimeClassNameOf(Type)</a>
     </div>
     <div>
       <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_ClassNameOf__1">JVMBridgeBase.ClassNameOf&lt;T&gt;()</a>
@@ -349,7 +368,13 @@ Class ShareGroupCommandOptions  <a class="header-action link-secondary" title="V
       <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_Dispose">JVMBridgeBase.Dispose()</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">JVMBridgeBase.Dispose(bool)</a>
+    </div>
+    <div>
       <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_ToString">JVMBridgeBase.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_Equals_MASES_JCOBridge_C2JBridge_IJVMBridgeBase_">JVMBridgeBase.Equals(IJVMBridgeBase)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">JVMBridgeBase.Equals(object)</a>
@@ -397,10 +422,10 @@ Class ShareGroupCommandOptions  <a class="header-action link-secondary" title="V
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteWithSignature&lt;TNewClass, TReturn, TConverter&gt;(string, string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteArray&lt;T&gt;(string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteArray&lt;TArrayType&gt;(string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteWithSignatureArray&lt;T&gt;(string, string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteWithSignatureArray&lt;TArrayType&gt;(string, string, params object[])</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IGetField(string)</a>
@@ -522,7 +547,7 @@ Class ShareGroupCommandOptions  <a class="header-action link-secondary" title="V
 
   <h3 id="Org_Apache_Kafka_Tools_Consumer_Group_ShareGroupCommandOptions__ctor_Java_Lang_String___" data-uid="Org.Apache.Kafka.Tools.Consumer.Group.ShareGroupCommandOptions.#ctor(Java.Lang.String[])">
   ShareGroupCommandOptions(String[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Tools/Consumer/Group/ShareGroupCommandOptions.cs/#L71"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Tools/Consumer/Group/ShareGroupCommandOptions.cs/#L77"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/consumer/group/ShareGroupCommandOptions.html#%3Cinit%3E(java.lang.String[])">https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/consumer/group/ShareGroupCommandOptions.html#%3Cinit%3E(java.lang.String[])</a></p>
@@ -553,9 +578,42 @@ Class ShareGroupCommandOptions  <a class="header-action link-secondary" title="V
 
   <a id="Org_Apache_Kafka_Tools_Consumer_Group_ShareGroupCommandOptions__ctor_" data-uid="Org.Apache.Kafka.Tools.Consumer.Group.ShareGroupCommandOptions.#ctor*"></a>
 
+  <h3 id="Org_Apache_Kafka_Tools_Consumer_Group_ShareGroupCommandOptions__ctor_MASES_JCOBridge_C2JBridge_IJVMBridgeBaseInitializer_" data-uid="Org.Apache.Kafka.Tools.Consumer.Group.ShareGroupCommandOptions.#ctor(MASES.JCOBridge.C2JBridge.IJVMBridgeBaseInitializer)">
+  ShareGroupCommandOptions(IJVMBridgeBaseInitializer)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Tools/Consumer/Group/ShareGroupCommandOptions.cs/#L42"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Internal constructor: used internally from JCOBridge</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.&quot;)]
+public ShareGroupCommandOptions(IJVMBridgeBaseInitializer initializer)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>initializer</code> <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeBaseInitializer.html">IJVMBridgeBaseInitializer</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Apache_Kafka_Tools_Consumer_Group_ShareGroupCommandOptions__ctor_" data-uid="Org.Apache.Kafka.Tools.Consumer.Group.ShareGroupCommandOptions.#ctor*"></a>
+
   <h3 id="Org_Apache_Kafka_Tools_Consumer_Group_ShareGroupCommandOptions__ctor_System_Object___" data-uid="Org.Apache.Kafka.Tools.Consumer.Group.ShareGroupCommandOptions.#ctor(System.Object[])">
   ShareGroupCommandOptions(params object[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Tools/Consumer/Group/ShareGroupCommandOptions.cs/#L42"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Tools/Consumer/Group/ShareGroupCommandOptions.cs/#L47"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Generic constructor: it is useful for JCOBridge when there is a derived class which needs to pass arguments to the highest JVMBridgeBase class</p>
@@ -591,7 +649,7 @@ Class ShareGroupCommandOptions  <a class="header-action link-secondary" title="V
 
   <h3 id="Org_Apache_Kafka_Tools_Consumer_Group_ShareGroupCommandOptions_ALL_TOPICS_DOC" data-uid="Org.Apache.Kafka.Tools.Consumer.Group.ShareGroupCommandOptions.ALL_TOPICS_DOC">
   ALL_TOPICS_DOC
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Tools/Consumer/Group/ShareGroupCommandOptions.cs/#L104"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Tools/Consumer/Group/ShareGroupCommandOptions.cs/#L110"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/consumer/group/ShareGroupCommandOptions.html#ALL_TOPICS_DOC">https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/consumer/group/ShareGroupCommandOptions.html#ALL_TOPICS_DOC</a></p>
@@ -623,7 +681,7 @@ Class ShareGroupCommandOptions  <a class="header-action link-secondary" title="V
 
   <h3 id="Org_Apache_Kafka_Tools_Consumer_Group_ShareGroupCommandOptions_BOOTSTRAP_SERVER_DOC" data-uid="Org.Apache.Kafka.Tools.Consumer.Group.ShareGroupCommandOptions.BOOTSTRAP_SERVER_DOC">
   BOOTSTRAP_SERVER_DOC
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Tools/Consumer/Group/ShareGroupCommandOptions.cs/#L110"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Tools/Consumer/Group/ShareGroupCommandOptions.cs/#L116"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/consumer/group/ShareGroupCommandOptions.html#BOOTSTRAP_SERVER_DOC">https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/consumer/group/ShareGroupCommandOptions.html#BOOTSTRAP_SERVER_DOC</a></p>
@@ -655,7 +713,7 @@ Class ShareGroupCommandOptions  <a class="header-action link-secondary" title="V
 
   <h3 id="Org_Apache_Kafka_Tools_Consumer_Group_ShareGroupCommandOptions_BridgeClassName" data-uid="Org.Apache.Kafka.Tools.Consumer.Group.ShareGroupCommandOptions.BridgeClassName">
   BridgeClassName
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Tools/Consumer/Group/ShareGroupCommandOptions.cs/#L48"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Tools/Consumer/Group/ShareGroupCommandOptions.cs/#L54"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Java class name to be instantiated</p>
@@ -687,7 +745,7 @@ Class ShareGroupCommandOptions  <a class="header-action link-secondary" title="V
 
   <h3 id="Org_Apache_Kafka_Tools_Consumer_Group_ShareGroupCommandOptions_COMMAND_CONFIG_DOC" data-uid="Org.Apache.Kafka.Tools.Consumer.Group.ShareGroupCommandOptions.COMMAND_CONFIG_DOC">
   COMMAND_CONFIG_DOC
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Tools/Consumer/Group/ShareGroupCommandOptions.cs/#L116"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Tools/Consumer/Group/ShareGroupCommandOptions.cs/#L122"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/consumer/group/ShareGroupCommandOptions.html#COMMAND_CONFIG_DOC">https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/consumer/group/ShareGroupCommandOptions.html#COMMAND_CONFIG_DOC</a></p>
@@ -719,7 +777,7 @@ Class ShareGroupCommandOptions  <a class="header-action link-secondary" title="V
 
   <h3 id="Org_Apache_Kafka_Tools_Consumer_Group_ShareGroupCommandOptions_DELETE_DOC" data-uid="Org.Apache.Kafka.Tools.Consumer.Group.ShareGroupCommandOptions.DELETE_DOC">
   DELETE_DOC
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Tools/Consumer/Group/ShareGroupCommandOptions.cs/#L122"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Tools/Consumer/Group/ShareGroupCommandOptions.cs/#L128"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/consumer/group/ShareGroupCommandOptions.html#DELETE_DOC">https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/consumer/group/ShareGroupCommandOptions.html#DELETE_DOC</a></p>
@@ -751,7 +809,7 @@ Class ShareGroupCommandOptions  <a class="header-action link-secondary" title="V
 
   <h3 id="Org_Apache_Kafka_Tools_Consumer_Group_ShareGroupCommandOptions_DELETE_OFFSETS_DOC" data-uid="Org.Apache.Kafka.Tools.Consumer.Group.ShareGroupCommandOptions.DELETE_OFFSETS_DOC">
   DELETE_OFFSETS_DOC
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Tools/Consumer/Group/ShareGroupCommandOptions.cs/#L128"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Tools/Consumer/Group/ShareGroupCommandOptions.cs/#L134"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/consumer/group/ShareGroupCommandOptions.html#DELETE_OFFSETS_DOC">https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/consumer/group/ShareGroupCommandOptions.html#DELETE_OFFSETS_DOC</a></p>
@@ -783,7 +841,7 @@ Class ShareGroupCommandOptions  <a class="header-action link-secondary" title="V
 
   <h3 id="Org_Apache_Kafka_Tools_Consumer_Group_ShareGroupCommandOptions_DESCRIBE_DOC" data-uid="Org.Apache.Kafka.Tools.Consumer.Group.ShareGroupCommandOptions.DESCRIBE_DOC">
   DESCRIBE_DOC
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Tools/Consumer/Group/ShareGroupCommandOptions.cs/#L134"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Tools/Consumer/Group/ShareGroupCommandOptions.cs/#L140"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/consumer/group/ShareGroupCommandOptions.html#DESCRIBE_DOC">https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/consumer/group/ShareGroupCommandOptions.html#DESCRIBE_DOC</a></p>
@@ -815,7 +873,7 @@ Class ShareGroupCommandOptions  <a class="header-action link-secondary" title="V
 
   <h3 id="Org_Apache_Kafka_Tools_Consumer_Group_ShareGroupCommandOptions_DRY_RUN_DOC" data-uid="Org.Apache.Kafka.Tools.Consumer.Group.ShareGroupCommandOptions.DRY_RUN_DOC">
   DRY_RUN_DOC
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Tools/Consumer/Group/ShareGroupCommandOptions.cs/#L140"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Tools/Consumer/Group/ShareGroupCommandOptions.cs/#L146"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/consumer/group/ShareGroupCommandOptions.html#DRY_RUN_DOC">https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/consumer/group/ShareGroupCommandOptions.html#DRY_RUN_DOC</a></p>
@@ -847,7 +905,7 @@ Class ShareGroupCommandOptions  <a class="header-action link-secondary" title="V
 
   <h3 id="Org_Apache_Kafka_Tools_Consumer_Group_ShareGroupCommandOptions_EXECUTE_DOC" data-uid="Org.Apache.Kafka.Tools.Consumer.Group.ShareGroupCommandOptions.EXECUTE_DOC">
   EXECUTE_DOC
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Tools/Consumer/Group/ShareGroupCommandOptions.cs/#L146"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Tools/Consumer/Group/ShareGroupCommandOptions.cs/#L152"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/consumer/group/ShareGroupCommandOptions.html#EXECUTE_DOC">https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/consumer/group/ShareGroupCommandOptions.html#EXECUTE_DOC</a></p>
@@ -879,7 +937,7 @@ Class ShareGroupCommandOptions  <a class="header-action link-secondary" title="V
 
   <h3 id="Org_Apache_Kafka_Tools_Consumer_Group_ShareGroupCommandOptions_GROUP_DOC" data-uid="Org.Apache.Kafka.Tools.Consumer.Group.ShareGroupCommandOptions.GROUP_DOC">
   GROUP_DOC
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Tools/Consumer/Group/ShareGroupCommandOptions.cs/#L152"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Tools/Consumer/Group/ShareGroupCommandOptions.cs/#L158"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/consumer/group/ShareGroupCommandOptions.html#GROUP_DOC">https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/consumer/group/ShareGroupCommandOptions.html#GROUP_DOC</a></p>
@@ -911,7 +969,7 @@ Class ShareGroupCommandOptions  <a class="header-action link-secondary" title="V
 
   <h3 id="Org_Apache_Kafka_Tools_Consumer_Group_ShareGroupCommandOptions_IsBridgeAbstract" data-uid="Org.Apache.Kafka.Tools.Consumer.Group.ShareGroupCommandOptions.IsBridgeAbstract">
   IsBridgeAbstract
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Tools/Consumer/Group/ShareGroupCommandOptions.cs/#L50"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Tools/Consumer/Group/ShareGroupCommandOptions.cs/#L56"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.html#MASES_JCOBridge_C2JBridge_IJVMBridgeDefinition_BridgeClassName">BridgeClassName</a> is an abstract class, i.e. cannot be created an instance</p>
@@ -943,7 +1001,7 @@ Class ShareGroupCommandOptions  <a class="header-action link-secondary" title="V
 
   <h3 id="Org_Apache_Kafka_Tools_Consumer_Group_ShareGroupCommandOptions_IsBridgeCloseable" data-uid="Org.Apache.Kafka.Tools.Consumer.Group.ShareGroupCommandOptions.IsBridgeCloseable">
   IsBridgeCloseable
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Tools/Consumer/Group/ShareGroupCommandOptions.cs/#L52"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Tools/Consumer/Group/ShareGroupCommandOptions.cs/#L58"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.html#MASES_JCOBridge_C2JBridge_IJVMBridgeDefinition_BridgeClassName">BridgeClassName</a> implements Closeable</p>
@@ -975,7 +1033,7 @@ Class ShareGroupCommandOptions  <a class="header-action link-secondary" title="V
 
   <h3 id="Org_Apache_Kafka_Tools_Consumer_Group_ShareGroupCommandOptions_IsBridgeInterface" data-uid="Org.Apache.Kafka.Tools.Consumer.Group.ShareGroupCommandOptions.IsBridgeInterface">
   IsBridgeInterface
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Tools/Consumer/Group/ShareGroupCommandOptions.cs/#L54"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Tools/Consumer/Group/ShareGroupCommandOptions.cs/#L60"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.html#MASES_JCOBridge_C2JBridge_IJVMBridgeDefinition_BridgeClassName">BridgeClassName</a> is an interface, i.e. does not have any public constructor</p>
@@ -1007,7 +1065,7 @@ Class ShareGroupCommandOptions  <a class="header-action link-secondary" title="V
 
   <h3 id="Org_Apache_Kafka_Tools_Consumer_Group_ShareGroupCommandOptions_IsBridgeStatic" data-uid="Org.Apache.Kafka.Tools.Consumer.Group.ShareGroupCommandOptions.IsBridgeStatic">
   IsBridgeStatic
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Tools/Consumer/Group/ShareGroupCommandOptions.cs/#L56"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Tools/Consumer/Group/ShareGroupCommandOptions.cs/#L62"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.html#MASES_JCOBridge_C2JBridge_IJVMBridgeDefinition_BridgeClassName">BridgeClassName</a> is a static class, i.e. does not have any public constructor</p>
@@ -1039,7 +1097,7 @@ Class ShareGroupCommandOptions  <a class="header-action link-secondary" title="V
 
   <h3 id="Org_Apache_Kafka_Tools_Consumer_Group_ShareGroupCommandOptions_LIST_DOC" data-uid="Org.Apache.Kafka.Tools.Consumer.Group.ShareGroupCommandOptions.LIST_DOC">
   LIST_DOC
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Tools/Consumer/Group/ShareGroupCommandOptions.cs/#L158"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Tools/Consumer/Group/ShareGroupCommandOptions.cs/#L164"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/consumer/group/ShareGroupCommandOptions.html#LIST_DOC">https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/consumer/group/ShareGroupCommandOptions.html#LIST_DOC</a></p>
@@ -1071,7 +1129,7 @@ Class ShareGroupCommandOptions  <a class="header-action link-secondary" title="V
 
   <h3 id="Org_Apache_Kafka_Tools_Consumer_Group_ShareGroupCommandOptions_MEMBERS_DOC" data-uid="Org.Apache.Kafka.Tools.Consumer.Group.ShareGroupCommandOptions.MEMBERS_DOC">
   MEMBERS_DOC
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Tools/Consumer/Group/ShareGroupCommandOptions.cs/#L164"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Tools/Consumer/Group/ShareGroupCommandOptions.cs/#L170"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/consumer/group/ShareGroupCommandOptions.html#MEMBERS_DOC">https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/consumer/group/ShareGroupCommandOptions.html#MEMBERS_DOC</a></p>
@@ -1103,7 +1161,7 @@ Class ShareGroupCommandOptions  <a class="header-action link-secondary" title="V
 
   <h3 id="Org_Apache_Kafka_Tools_Consumer_Group_ShareGroupCommandOptions_NL" data-uid="Org.Apache.Kafka.Tools.Consumer.Group.ShareGroupCommandOptions.NL">
   NL
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Tools/Consumer/Group/ShareGroupCommandOptions.cs/#L170"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Tools/Consumer/Group/ShareGroupCommandOptions.cs/#L176"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/consumer/group/ShareGroupCommandOptions.html#NL">https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/consumer/group/ShareGroupCommandOptions.html#NL</a></p>
@@ -1135,7 +1193,7 @@ Class ShareGroupCommandOptions  <a class="header-action link-secondary" title="V
 
   <h3 id="Org_Apache_Kafka_Tools_Consumer_Group_ShareGroupCommandOptions_OFFSETS_DOC" data-uid="Org.Apache.Kafka.Tools.Consumer.Group.ShareGroupCommandOptions.OFFSETS_DOC">
   OFFSETS_DOC
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Tools/Consumer/Group/ShareGroupCommandOptions.cs/#L176"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Tools/Consumer/Group/ShareGroupCommandOptions.cs/#L182"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/consumer/group/ShareGroupCommandOptions.html#OFFSETS_DOC">https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/consumer/group/ShareGroupCommandOptions.html#OFFSETS_DOC</a></p>
@@ -1167,7 +1225,7 @@ Class ShareGroupCommandOptions  <a class="header-action link-secondary" title="V
 
   <h3 id="Org_Apache_Kafka_Tools_Consumer_Group_ShareGroupCommandOptions_RESET_OFFSETS_DOC" data-uid="Org.Apache.Kafka.Tools.Consumer.Group.ShareGroupCommandOptions.RESET_OFFSETS_DOC">
   RESET_OFFSETS_DOC
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Tools/Consumer/Group/ShareGroupCommandOptions.cs/#L182"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Tools/Consumer/Group/ShareGroupCommandOptions.cs/#L188"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/consumer/group/ShareGroupCommandOptions.html#RESET_OFFSETS_DOC">https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/consumer/group/ShareGroupCommandOptions.html#RESET_OFFSETS_DOC</a></p>
@@ -1199,7 +1257,7 @@ Class ShareGroupCommandOptions  <a class="header-action link-secondary" title="V
 
   <h3 id="Org_Apache_Kafka_Tools_Consumer_Group_ShareGroupCommandOptions_RESET_TO_DATETIME_DOC" data-uid="Org.Apache.Kafka.Tools.Consumer.Group.ShareGroupCommandOptions.RESET_TO_DATETIME_DOC">
   RESET_TO_DATETIME_DOC
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Tools/Consumer/Group/ShareGroupCommandOptions.cs/#L188"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Tools/Consumer/Group/ShareGroupCommandOptions.cs/#L194"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/consumer/group/ShareGroupCommandOptions.html#RESET_TO_DATETIME_DOC">https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/consumer/group/ShareGroupCommandOptions.html#RESET_TO_DATETIME_DOC</a></p>
@@ -1231,7 +1289,7 @@ Class ShareGroupCommandOptions  <a class="header-action link-secondary" title="V
 
   <h3 id="Org_Apache_Kafka_Tools_Consumer_Group_ShareGroupCommandOptions_RESET_TO_EARLIEST_DOC" data-uid="Org.Apache.Kafka.Tools.Consumer.Group.ShareGroupCommandOptions.RESET_TO_EARLIEST_DOC">
   RESET_TO_EARLIEST_DOC
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Tools/Consumer/Group/ShareGroupCommandOptions.cs/#L194"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Tools/Consumer/Group/ShareGroupCommandOptions.cs/#L200"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/consumer/group/ShareGroupCommandOptions.html#RESET_TO_EARLIEST_DOC">https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/consumer/group/ShareGroupCommandOptions.html#RESET_TO_EARLIEST_DOC</a></p>
@@ -1263,7 +1321,7 @@ Class ShareGroupCommandOptions  <a class="header-action link-secondary" title="V
 
   <h3 id="Org_Apache_Kafka_Tools_Consumer_Group_ShareGroupCommandOptions_RESET_TO_LATEST_DOC" data-uid="Org.Apache.Kafka.Tools.Consumer.Group.ShareGroupCommandOptions.RESET_TO_LATEST_DOC">
   RESET_TO_LATEST_DOC
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Tools/Consumer/Group/ShareGroupCommandOptions.cs/#L200"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Tools/Consumer/Group/ShareGroupCommandOptions.cs/#L206"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/consumer/group/ShareGroupCommandOptions.html#RESET_TO_LATEST_DOC">https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/consumer/group/ShareGroupCommandOptions.html#RESET_TO_LATEST_DOC</a></p>
@@ -1295,7 +1353,7 @@ Class ShareGroupCommandOptions  <a class="header-action link-secondary" title="V
 
   <h3 id="Org_Apache_Kafka_Tools_Consumer_Group_ShareGroupCommandOptions_STATE_DOC" data-uid="Org.Apache.Kafka.Tools.Consumer.Group.ShareGroupCommandOptions.STATE_DOC">
   STATE_DOC
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Tools/Consumer/Group/ShareGroupCommandOptions.cs/#L206"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Tools/Consumer/Group/ShareGroupCommandOptions.cs/#L212"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/consumer/group/ShareGroupCommandOptions.html#STATE_DOC">https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/consumer/group/ShareGroupCommandOptions.html#STATE_DOC</a></p>
@@ -1327,7 +1385,7 @@ Class ShareGroupCommandOptions  <a class="header-action link-secondary" title="V
 
   <h3 id="Org_Apache_Kafka_Tools_Consumer_Group_ShareGroupCommandOptions_TIMEOUT_MS_DOC" data-uid="Org.Apache.Kafka.Tools.Consumer.Group.ShareGroupCommandOptions.TIMEOUT_MS_DOC">
   TIMEOUT_MS_DOC
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Tools/Consumer/Group/ShareGroupCommandOptions.cs/#L212"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Tools/Consumer/Group/ShareGroupCommandOptions.cs/#L218"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/consumer/group/ShareGroupCommandOptions.html#TIMEOUT_MS_DOC">https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/consumer/group/ShareGroupCommandOptions.html#TIMEOUT_MS_DOC</a></p>
@@ -1359,7 +1417,7 @@ Class ShareGroupCommandOptions  <a class="header-action link-secondary" title="V
 
   <h3 id="Org_Apache_Kafka_Tools_Consumer_Group_ShareGroupCommandOptions_TOPIC_DOC" data-uid="Org.Apache.Kafka.Tools.Consumer.Group.ShareGroupCommandOptions.TOPIC_DOC">
   TOPIC_DOC
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Tools/Consumer/Group/ShareGroupCommandOptions.cs/#L218"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Tools/Consumer/Group/ShareGroupCommandOptions.cs/#L224"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/consumer/group/ShareGroupCommandOptions.html#TOPIC_DOC">https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/consumer/group/ShareGroupCommandOptions.html#TOPIC_DOC</a></p>
@@ -1391,7 +1449,7 @@ Class ShareGroupCommandOptions  <a class="header-action link-secondary" title="V
 
   <h3 id="Org_Apache_Kafka_Tools_Consumer_Group_ShareGroupCommandOptions_allDeleteOffsetsOpts" data-uid="Org.Apache.Kafka.Tools.Consumer.Group.ShareGroupCommandOptions.allDeleteOffsetsOpts">
   allDeleteOffsetsOpts
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Tools/Consumer/Group/ShareGroupCommandOptions.cs/#L86"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Tools/Consumer/Group/ShareGroupCommandOptions.cs/#L92"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/consumer/group/ShareGroupCommandOptions.html#allDeleteOffsetsOpts">https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/consumer/group/ShareGroupCommandOptions.html#allDeleteOffsetsOpts</a></p>
@@ -1423,7 +1481,7 @@ Class ShareGroupCommandOptions  <a class="header-action link-secondary" title="V
 
   <h3 id="Org_Apache_Kafka_Tools_Consumer_Group_ShareGroupCommandOptions_allResetOffsetScenarioOpts" data-uid="Org.Apache.Kafka.Tools.Consumer.Group.ShareGroupCommandOptions.allResetOffsetScenarioOpts">
   allResetOffsetScenarioOpts
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Tools/Consumer/Group/ShareGroupCommandOptions.cs/#L92"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Tools/Consumer/Group/ShareGroupCommandOptions.cs/#L98"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/consumer/group/ShareGroupCommandOptions.html#allResetOffsetScenarioOpts">https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/consumer/group/ShareGroupCommandOptions.html#allResetOffsetScenarioOpts</a></p>
@@ -1455,7 +1513,7 @@ Class ShareGroupCommandOptions  <a class="header-action link-secondary" title="V
 
   <h3 id="Org_Apache_Kafka_Tools_Consumer_Group_ShareGroupCommandOptions_allShareGroupLevelOpts" data-uid="Org.Apache.Kafka.Tools.Consumer.Group.ShareGroupCommandOptions.allShareGroupLevelOpts">
   allShareGroupLevelOpts
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Tools/Consumer/Group/ShareGroupCommandOptions.cs/#L98"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Tools/Consumer/Group/ShareGroupCommandOptions.cs/#L104"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/consumer/group/ShareGroupCommandOptions.html#allShareGroupLevelOpts">https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/consumer/group/ShareGroupCommandOptions.html#allShareGroupLevelOpts</a></p>
@@ -1491,7 +1549,7 @@ Class ShareGroupCommandOptions  <a class="header-action link-secondary" title="V
 
   <h3 id="Org_Apache_Kafka_Tools_Consumer_Group_ShareGroupCommandOptions_CheckArgs" data-uid="Org.Apache.Kafka.Tools.Consumer.Group.ShareGroupCommandOptions.CheckArgs">
   CheckArgs()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Tools/Consumer/Group/ShareGroupCommandOptions.cs/#L232"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Tools/Consumer/Group/ShareGroupCommandOptions.cs/#L238"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/consumer/group/ShareGroupCommandOptions.html#checkArgs()">https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.0.0/org/apache/kafka/tools/consumer/group/ShareGroupCommandOptions.html#checkArgs()</a></p>
@@ -1518,7 +1576,7 @@ Class ShareGroupCommandOptions  <a class="header-action link-secondary" title="V
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Tools/Consumer/Group/ShareGroupCommandOptions.cs/#L64" class="edit-link">Edit this page</a>
+          <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Tools/Consumer/Group/ShareGroupCommandOptions.cs/#L70" class="edit-link">Edit this page</a>
         </div>
 
 

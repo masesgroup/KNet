@@ -89,7 +89,7 @@
 
 
   <h1 id="Org_Apache_Kafka_Streams_Query_QueryResult_1" data-uid="Org.Apache.Kafka.Streams.Query.QueryResult`1" class="text-break">
-Class QueryResult&lt;R&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Query/QueryResult.cs/#L252"><i class="bi bi-code-slash"></i></a>
+Class QueryResult&lt;R&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Query/QueryResult.cs/#L264"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -102,7 +102,7 @@ Class QueryResult&lt;R&gt;  <a class="header-action link-secondary" title="View 
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class QueryResult&lt;R&gt; : JVMBridgeBase&lt;QueryResult&lt;R&gt;&gt;, IDynamicMetaObjectProvider, IJVMBridgeCore, IDisposable, IJVMBridgeBaseStatic, IJVMBridgeBase, IJVMBridgeDefinition, IQueryResult&lt;R&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public class QueryResult&lt;R&gt; : JVMBridgeBase&lt;QueryResult&lt;R&gt;&gt;, IDynamicMetaObjectProvider, IJVMBridgeCore, IEquatable&lt;IJVMBridgeBase&gt;, IDisposable, IJVMBridgeBaseStatic, IJVMBridgeBase, IJVMBridgeDefinition, IQueryResult&lt;R&gt;</code></pre>
   </div>
 
 
@@ -129,6 +129,7 @@ Class QueryResult&lt;R&gt;  <a class="header-action link-secondary" title="View 
     <dd>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.idynamicmetaobjectprovider">IDynamicMetaObjectProvider</a></div>
       <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeCore.html">IJVMBridgeCore</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeBase.html">IJVMBridgeBase</a>&gt;</div>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
       <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeBaseStatic.html">IJVMBridgeBaseStatic</a></div>
       <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeBase.html">IJVMBridgeBase</a></div>
@@ -226,16 +227,16 @@ Class QueryResult&lt;R&gt;  <a class="header-action link-secondary" title="View 
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;QueryResult&lt;R&gt;&gt;.SExecuteWithSignature&lt;TReturn, TConverter&gt;(Type, string, string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;QueryResult&lt;R&gt;&gt;.SExecuteArray&lt;T&gt;(IJavaType, string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;QueryResult&lt;R&gt;&gt;.SExecuteArray&lt;TArrayType&gt;(IJavaType, string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;QueryResult&lt;R&gt;&gt;.SExecuteWithSignatureArray&lt;T&gt;(IJavaType, string, string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;QueryResult&lt;R&gt;&gt;.SExecuteWithSignatureArray&lt;TArrayType&gt;(IJavaType, string, string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;QueryResult&lt;R&gt;&gt;.SExecuteArray&lt;T&gt;(string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;QueryResult&lt;R&gt;&gt;.SExecuteArray&lt;TArrayType&gt;(string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;QueryResult&lt;R&gt;&gt;.SExecuteWithSignatureArray&lt;T&gt;(string, string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;QueryResult&lt;R&gt;&gt;.SExecuteWithSignatureArray&lt;TArrayType&gt;(string, string, params object[])</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;QueryResult&lt;R&gt;&gt;.SGetField(IJavaType, string)</a>
@@ -283,6 +284,12 @@ Class QueryResult&lt;R&gt;  <a class="header-action link-secondary" title="View 
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;QueryResult&lt;R&gt;&gt;.NewWithSignature(string, params object[])</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;QueryResult&lt;R&gt;&gt;.NewAndWrapsDirect&lt;TNewClass&gt;(string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;QueryResult&lt;R&gt;&gt;.NewWithSignatureAndWrapsDirect&lt;TNewClass&gt;(string, string, params object[])</a>
+    </div>
+    <div>
       <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase-1.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_1_Execute__1___0___">JVMBridgeBase&lt;QueryResult&lt;R&gt;&gt;.Execute&lt;T&gt;(params T[])</a>
     </div>
     <div>
@@ -292,13 +299,25 @@ Class QueryResult&lt;R&gt;  <a class="header-action link-secondary" title="View 
       <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase-1.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_1_BridgeClazz">JVMBridgeBase&lt;QueryResult&lt;R&gt;&gt;.BridgeClazz</a>
     </div>
     <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_ReferenceEqualsJVM_MASES_JCOBridge_C2JBridge_JVMBridgeBase_MASES_JCOBridge_C2JBridge_JVMBridgeBase_">JVMBridgeBase.ReferenceEqualsJVM(JVMBridgeBase, JVMBridgeBase)</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">JVMBridgeBase.ClazzOf&lt;TClass&gt;(bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">JVMBridgeBase.ClazzOf&lt;TClass&gt;(out Exception, bool)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.ClazzOf(string, bool)</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.ClazzOf(string, out Exception, bool)</a>
+    </div>
+    <div>
       <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_RuntimeClassNameOf__1">JVMBridgeBase.RuntimeClassNameOf&lt;T&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase.RuntimeClassNameOf(Type)</a>
     </div>
     <div>
       <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_ClassNameOf__1">JVMBridgeBase.ClassNameOf&lt;T&gt;()</a>
@@ -355,7 +374,13 @@ Class QueryResult&lt;R&gt;  <a class="header-action link-secondary" title="View 
       <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_Dispose">JVMBridgeBase.Dispose()</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">JVMBridgeBase.Dispose(bool)</a>
+    </div>
+    <div>
       <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_ToString">JVMBridgeBase.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_Equals_MASES_JCOBridge_C2JBridge_IJVMBridgeBase_">JVMBridgeBase.Equals(IJVMBridgeBase)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">JVMBridgeBase.Equals(object)</a>
@@ -403,10 +428,10 @@ Class QueryResult&lt;R&gt;  <a class="header-action link-secondary" title="View 
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteWithSignature&lt;TNewClass, TReturn, TConverter&gt;(string, string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteArray&lt;T&gt;(string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteArray&lt;TArrayType&gt;(string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteWithSignatureArray&lt;T&gt;(string, string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteWithSignatureArray&lt;TArrayType&gt;(string, string, params object[])</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IGetField(string)</a>
@@ -501,7 +526,7 @@ Class QueryResult&lt;R&gt;  <a class="header-action link-secondary" title="View 
 
   <h3 id="Org_Apache_Kafka_Streams_Query_QueryResult_1__ctor" data-uid="Org.Apache.Kafka.Streams.Query.QueryResult`1.#ctor">
   QueryResult()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Query/QueryResult.cs/#L76"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Query/QueryResult.cs/#L82"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge</p>
@@ -527,9 +552,42 @@ public QueryResult()</code></pre>
 
   <a id="Org_Apache_Kafka_Streams_Query_QueryResult_1__ctor_" data-uid="Org.Apache.Kafka.Streams.Query.QueryResult`1.#ctor*"></a>
 
+  <h3 id="Org_Apache_Kafka_Streams_Query_QueryResult_1__ctor_MASES_JCOBridge_C2JBridge_IJVMBridgeBaseInitializer_" data-uid="Org.Apache.Kafka.Streams.Query.QueryResult`1.#ctor(MASES.JCOBridge.C2JBridge.IJVMBridgeBaseInitializer)">
+  QueryResult(IJVMBridgeBaseInitializer)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Query/QueryResult.cs/#L87"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Internal constructor: used internally from JCOBridge</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.&quot;)]
+public QueryResult(IJVMBridgeBaseInitializer initializer)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>initializer</code> <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeBaseInitializer.html">IJVMBridgeBaseInitializer</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Apache_Kafka_Streams_Query_QueryResult_1__ctor_" data-uid="Org.Apache.Kafka.Streams.Query.QueryResult`1.#ctor*"></a>
+
   <h3 id="Org_Apache_Kafka_Streams_Query_QueryResult_1__ctor_System_Object___" data-uid="Org.Apache.Kafka.Streams.Query.QueryResult`1.#ctor(System.Object[])">
   QueryResult(params object[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Query/QueryResult.cs/#L81"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Query/QueryResult.cs/#L92"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Generic constructor: it is useful for JCOBridge when there is a derived class which needs to pass arguments to the highest JVMBridgeBase class</p>
@@ -566,7 +624,7 @@ public QueryResult(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Streams_Query_QueryResult_1_BridgeClassName" data-uid="Org.Apache.Kafka.Streams.Query.QueryResult`1.BridgeClassName">
   BridgeClassName
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Query/QueryResult.cs/#L88"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Query/QueryResult.cs/#L100"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Java class name to be instantiated</p>
@@ -598,7 +656,7 @@ public QueryResult(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Streams_Query_QueryResult_1_ExecutionInfo" data-uid="Org.Apache.Kafka.Streams.Query.QueryResult`1.ExecutionInfo">
   ExecutionInfo
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Query/QueryResult.cs/#L318"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Query/QueryResult.cs/#L330"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/query/QueryResult.html#getExecutionInfo()">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/query/QueryResult.html#getExecutionInfo()</a></p>
@@ -630,7 +688,7 @@ public QueryResult(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Streams_Query_QueryResult_1_FailureMessage" data-uid="Org.Apache.Kafka.Streams.Query.QueryResult`1.FailureMessage">
   FailureMessage
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Query/QueryResult.cs/#L325"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Query/QueryResult.cs/#L337"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/query/QueryResult.html#getFailureMessage()">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/query/QueryResult.html#getFailureMessage()</a></p>
@@ -662,7 +720,7 @@ public QueryResult(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Streams_Query_QueryResult_1_FailureReason" data-uid="Org.Apache.Kafka.Streams.Query.QueryResult`1.FailureReason">
   FailureReason
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Query/QueryResult.cs/#L332"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Query/QueryResult.cs/#L344"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/query/QueryResult.html#getFailureReason()">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/query/QueryResult.html#getFailureReason()</a></p>
@@ -694,7 +752,7 @@ public QueryResult(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Streams_Query_QueryResult_1_IsBridgeAbstract" data-uid="Org.Apache.Kafka.Streams.Query.QueryResult`1.IsBridgeAbstract">
   IsBridgeAbstract
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Query/QueryResult.cs/#L90"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Query/QueryResult.cs/#L102"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.html#MASES_JCOBridge_C2JBridge_IJVMBridgeDefinition_BridgeClassName">BridgeClassName</a> is an abstract class, i.e. cannot be created an instance</p>
@@ -726,7 +784,7 @@ public QueryResult(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Streams_Query_QueryResult_1_IsBridgeCloseable" data-uid="Org.Apache.Kafka.Streams.Query.QueryResult`1.IsBridgeCloseable">
   IsBridgeCloseable
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Query/QueryResult.cs/#L92"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Query/QueryResult.cs/#L104"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.html#MASES_JCOBridge_C2JBridge_IJVMBridgeDefinition_BridgeClassName">BridgeClassName</a> implements Closeable</p>
@@ -758,7 +816,7 @@ public QueryResult(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Streams_Query_QueryResult_1_IsBridgeInterface" data-uid="Org.Apache.Kafka.Streams.Query.QueryResult`1.IsBridgeInterface">
   IsBridgeInterface
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Query/QueryResult.cs/#L94"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Query/QueryResult.cs/#L106"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.html#MASES_JCOBridge_C2JBridge_IJVMBridgeDefinition_BridgeClassName">BridgeClassName</a> is an interface, i.e. does not have any public constructor</p>
@@ -790,7 +848,7 @@ public QueryResult(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Streams_Query_QueryResult_1_IsBridgeStatic" data-uid="Org.Apache.Kafka.Streams.Query.QueryResult`1.IsBridgeStatic">
   IsBridgeStatic
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Query/QueryResult.cs/#L96"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Query/QueryResult.cs/#L108"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.html#MASES_JCOBridge_C2JBridge_IJVMBridgeDefinition_BridgeClassName">BridgeClassName</a> is a static class, i.e. does not have any public constructor</p>
@@ -822,7 +880,7 @@ public QueryResult(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Streams_Query_QueryResult_1_Position" data-uid="Org.Apache.Kafka.Streams.Query.QueryResult`1.Position">
   Position
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Query/QueryResult.cs/#L339"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Query/QueryResult.cs/#L351"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/query/QueryResult.html#getPosition()">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/query/QueryResult.html#getPosition()</a> <a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/query/QueryResult.html#setPosition(org.apache.kafka.streams.query.Position)">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/query/QueryResult.html#setPosition(org.apache.kafka.streams.query.Position)</a></p>
@@ -854,7 +912,7 @@ public QueryResult(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Streams_Query_QueryResult_1_Result" data-uid="Org.Apache.Kafka.Streams.Query.QueryResult`1.Result">
   Result
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Query/QueryResult.cs/#L346"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Query/QueryResult.cs/#L358"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/query/QueryResult.html#getResult()">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/query/QueryResult.html#getResult()</a></p>
@@ -890,7 +948,7 @@ public QueryResult(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Streams_Query_QueryResult_1_AddExecutionInfo_Java_Lang_String_" data-uid="Org.Apache.Kafka.Streams.Query.QueryResult`1.AddExecutionInfo(Java.Lang.String)">
   AddExecutionInfo(String)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Query/QueryResult.cs/#L370"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Query/QueryResult.cs/#L382"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/query/QueryResult.html#addExecutionInfo(java.lang.String)">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/query/QueryResult.html#addExecutionInfo(java.lang.String)</a></p>
@@ -923,7 +981,7 @@ public QueryResult(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Streams_Query_QueryResult_1_ForFailure_Org_Apache_Kafka_Streams_Query_FailureReason_Java_Lang_String_" data-uid="Org.Apache.Kafka.Streams.Query.QueryResult`1.ForFailure(Org.Apache.Kafka.Streams.Query.FailureReason,Java.Lang.String)">
   ForFailure(FailureReason, String)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Query/QueryResult.cs/#L277"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Query/QueryResult.cs/#L289"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/query/QueryResult.html#forFailure(org.apache.kafka.streams.query.FailureReason,java.lang.String)">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/query/QueryResult.html#forFailure(org.apache.kafka.streams.query.FailureReason,java.lang.String)</a></p>
@@ -965,7 +1023,7 @@ public QueryResult(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Streams_Query_QueryResult_1_ForResult__0_" data-uid="Org.Apache.Kafka.Streams.Query.QueryResult`1.ForResult(`0)">
   ForResult(R)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Query/QueryResult.cs/#L286"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Query/QueryResult.cs/#L298"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/query/QueryResult.html#forResult(java.lang.Object)">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/query/QueryResult.html#forResult(java.lang.Object)</a></p>
@@ -1004,7 +1062,7 @@ public QueryResult(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Streams_Query_QueryResult_1_ForUnknownQueryType_Org_Apache_Kafka_Streams_Query_Query__0__Org_Apache_Kafka_Streams_Processor_StateStore_" data-uid="Org.Apache.Kafka.Streams.Query.QueryResult`1.ForUnknownQueryType(Org.Apache.Kafka.Streams.Query.Query{`0},Org.Apache.Kafka.Streams.Processor.StateStore)">
   ForUnknownQueryType(Query&lt;R&gt;, StateStore)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Query/QueryResult.cs/#L296"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Query/QueryResult.cs/#L308"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/query/QueryResult.html#forUnknownQueryType(org.apache.kafka.streams.query.Query,org.apache.kafka.streams.processor.StateStore)">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/query/QueryResult.html#forUnknownQueryType(org.apache.kafka.streams.query.Query,org.apache.kafka.streams.processor.StateStore)</a></p>
@@ -1046,7 +1104,7 @@ public QueryResult(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Streams_Query_QueryResult_1_IsFailure" data-uid="Org.Apache.Kafka.Streams.Query.QueryResult`1.IsFailure">
   IsFailure()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Query/QueryResult.cs/#L354"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Query/QueryResult.cs/#L366"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/query/QueryResult.html#isFailure()">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/query/QueryResult.html#isFailure()</a></p>
@@ -1079,7 +1137,7 @@ public QueryResult(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Streams_Query_QueryResult_1_IsSuccess" data-uid="Org.Apache.Kafka.Streams.Query.QueryResult`1.IsSuccess">
   IsSuccess()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Query/QueryResult.cs/#L362"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Query/QueryResult.cs/#L374"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/query/QueryResult.html#isSuccess()">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/query/QueryResult.html#isSuccess()</a></p>
@@ -1112,7 +1170,7 @@ public QueryResult(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Streams_Query_QueryResult_1_NotUpToBound_Org_Apache_Kafka_Streams_Query_Position_Org_Apache_Kafka_Streams_Query_PositionBound_Java_Lang_Integer_" data-uid="Org.Apache.Kafka.Streams.Query.QueryResult`1.NotUpToBound(Org.Apache.Kafka.Streams.Query.Position,Org.Apache.Kafka.Streams.Query.PositionBound,Java.Lang.Integer)">
   NotUpToBound(Position, PositionBound, Integer)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Query/QueryResult.cs/#L307"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Query/QueryResult.cs/#L319"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/query/QueryResult.html#notUpToBound(org.apache.kafka.streams.query.Position,org.apache.kafka.streams.query.PositionBound,java.lang.Integer)">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/query/QueryResult.html#notUpToBound(org.apache.kafka.streams.query.Position,org.apache.kafka.streams.query.PositionBound,java.lang.Integer)</a></p>
@@ -1161,7 +1219,7 @@ public QueryResult(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Streams_Query_QueryResult_1_op_Implicit_Org_Apache_Kafka_Streams_Query_QueryResult__0___Org_Apache_Kafka_Streams_Query_QueryResult" data-uid="Org.Apache.Kafka.Streams.Query.QueryResult`1.op_Implicit(Org.Apache.Kafka.Streams.Query.QueryResult{`0})~Org.Apache.Kafka.Streams.Query.QueryResult">
   implicit operator QueryResult(QueryResult&lt;R&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Query/QueryResult.cs/#L262"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Query/QueryResult.cs/#L274"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Converter from <a class="xref" href="Org.Apache.Kafka.Streams.Query.QueryResult-1.html">QueryResult&lt;R&gt;</a> to <a class="xref" href="Org.Apache.Kafka.Streams.Query.QueryResult.html">QueryResult</a></p>
@@ -1198,7 +1256,7 @@ public QueryResult(params object[] args)</code></pre>
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Query/QueryResult.cs/#L252" class="edit-link">Edit this page</a>
+          <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Query/QueryResult.cs/#L264" class="edit-link">Edit this page</a>
         </div>
 
 

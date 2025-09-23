@@ -89,7 +89,7 @@
 
 
   <h1 id="Org_Apache_Kafka_Clients_Admin_Admin" data-uid="Org.Apache.Kafka.Clients.Admin.Admin" class="text-break">
-Class Admin  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L84"><i class="bi bi-code-slash"></i></a>
+Class Admin  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L90"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -102,7 +102,7 @@ Class Admin  <a class="header-action link-secondary" title="View source" href="h
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class Admin : AutoCloseable, IDynamicMetaObjectProvider, IJVMBridgeCore, IJVMBridgeBaseStatic, IAdmin, IJVMBridgeBase, IJVMBridgeDefinition, IDisposable, IAutoCloseable</code></pre>
+    <pre><code class="lang-csharp hljs">public class Admin : AutoCloseable, IDynamicMetaObjectProvider, IJVMBridgeCore, IEquatable&lt;IJVMBridgeBase&gt;, IJVMBridgeBaseStatic, IAdmin, IJVMBridgeBase, IJVMBridgeDefinition, IDisposable, IAutoCloseable</code></pre>
   </div>
 
 
@@ -125,6 +125,7 @@ Class Admin  <a class="header-action link-secondary" title="View source" href="h
     <dd>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.idynamicmetaobjectprovider">IDynamicMetaObjectProvider</a></div>
       <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeCore.html">IJVMBridgeCore</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeBase.html">IJVMBridgeBase</a>&gt;</div>
       <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeBaseStatic.html">IJVMBridgeBaseStatic</a></div>
       <div><a class="xref" href="Org.Apache.Kafka.Clients.Admin.IAdmin.html">IAdmin</a></div>
       <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeBase.html">IJVMBridgeBase</a></div>
@@ -230,16 +231,16 @@ Class Admin  <a class="header-action link-secondary" title="View source" href="h
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;AutoCloseable&gt;.SExecuteWithSignature&lt;TReturn, TConverter&gt;(Type, string, string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SExecuteArray&lt;T&gt;(IJavaType, string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SExecuteArray&lt;TArrayType&gt;(IJavaType, string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SExecuteWithSignatureArray&lt;T&gt;(IJavaType, string, string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SExecuteWithSignatureArray&lt;TArrayType&gt;(IJavaType, string, string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SExecuteArray&lt;T&gt;(string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SExecuteArray&lt;TArrayType&gt;(string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SExecuteWithSignatureArray&lt;T&gt;(string, string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SExecuteWithSignatureArray&lt;TArrayType&gt;(string, string, params object[])</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SGetField(IJavaType, string)</a>
@@ -287,6 +288,12 @@ Class Admin  <a class="header-action link-secondary" title="View source" href="h
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.NewWithSignature(string, params object[])</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.NewAndWrapsDirect&lt;TNewClass&gt;(string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.NewWithSignatureAndWrapsDirect&lt;TNewClass&gt;(string, string, params object[])</a>
+    </div>
+    <div>
       <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase-1.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_1_Execute__1___0___">JVMBridgeBase&lt;AutoCloseable&gt;.Execute&lt;T&gt;(params T[])</a>
     </div>
     <div>
@@ -296,13 +303,25 @@ Class Admin  <a class="header-action link-secondary" title="View source" href="h
       <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase-1.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_1_BridgeClazz">JVMBridgeBase&lt;AutoCloseable&gt;.BridgeClazz</a>
     </div>
     <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_ReferenceEqualsJVM_MASES_JCOBridge_C2JBridge_JVMBridgeBase_MASES_JCOBridge_C2JBridge_JVMBridgeBase_">JVMBridgeBase.ReferenceEqualsJVM(JVMBridgeBase, JVMBridgeBase)</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">JVMBridgeBase.ClazzOf&lt;TClass&gt;(bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">JVMBridgeBase.ClazzOf&lt;TClass&gt;(out Exception, bool)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.ClazzOf(string, bool)</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.ClazzOf(string, out Exception, bool)</a>
+    </div>
+    <div>
       <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_RuntimeClassNameOf__1">JVMBridgeBase.RuntimeClassNameOf&lt;T&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase.RuntimeClassNameOf(Type)</a>
     </div>
     <div>
       <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_ClassNameOf__1">JVMBridgeBase.ClassNameOf&lt;T&gt;()</a>
@@ -359,7 +378,13 @@ Class Admin  <a class="header-action link-secondary" title="View source" href="h
       <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_Dispose">JVMBridgeBase.Dispose()</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">JVMBridgeBase.Dispose(bool)</a>
+    </div>
+    <div>
       <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_ToString">JVMBridgeBase.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_Equals_MASES_JCOBridge_C2JBridge_IJVMBridgeBase_">JVMBridgeBase.Equals(IJVMBridgeBase)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">JVMBridgeBase.Equals(object)</a>
@@ -407,10 +432,10 @@ Class Admin  <a class="header-action link-secondary" title="View source" href="h
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteWithSignature&lt;TNewClass, TReturn, TConverter&gt;(string, string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteArray&lt;T&gt;(string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteArray&lt;TArrayType&gt;(string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteWithSignatureArray&lt;T&gt;(string, string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteWithSignatureArray&lt;TArrayType&gt;(string, string, params object[])</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IGetField(string)</a>
@@ -811,9 +836,42 @@ public Admin()</code></pre>
 
   <a id="Org_Apache_Kafka_Clients_Admin_Admin__ctor_" data-uid="Org.Apache.Kafka.Clients.Admin.Admin.#ctor*"></a>
 
+  <h3 id="Org_Apache_Kafka_Clients_Admin_Admin__ctor_MASES_JCOBridge_C2JBridge_IJVMBridgeBaseInitializer_" data-uid="Org.Apache.Kafka.Clients.Admin.Admin.#ctor(MASES.JCOBridge.C2JBridge.IJVMBridgeBaseInitializer)">
+  Admin(IJVMBridgeBaseInitializer)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L43"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Internal constructor: used internally from JCOBridge</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.&quot;)]
+public Admin(IJVMBridgeBaseInitializer initializer)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>initializer</code> <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeBaseInitializer.html">IJVMBridgeBaseInitializer</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Apache_Kafka_Clients_Admin_Admin__ctor_" data-uid="Org.Apache.Kafka.Clients.Admin.Admin.#ctor*"></a>
+
   <h3 id="Org_Apache_Kafka_Clients_Admin_Admin__ctor_System_Object___" data-uid="Org.Apache.Kafka.Clients.Admin.Admin.#ctor(System.Object[])">
   Admin(params object[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L43"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L48"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Generic constructor: it is useful for JCOBridge when there is a derived class which needs to pass arguments to the highest JVMBridgeBase class</p>
@@ -850,7 +908,7 @@ public Admin(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_Admin_BridgeClassName" data-uid="Org.Apache.Kafka.Clients.Admin.Admin.BridgeClassName">
   BridgeClassName
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L50"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L56"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Java class name to be instantiated</p>
@@ -882,7 +940,7 @@ public Admin(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_Admin_IsBridgeAbstract" data-uid="Org.Apache.Kafka.Clients.Admin.Admin.IsBridgeAbstract">
   IsBridgeAbstract
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L52"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L58"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.html#MASES_JCOBridge_C2JBridge_IJVMBridgeDefinition_BridgeClassName">BridgeClassName</a> is an abstract class, i.e. cannot be created an instance</p>
@@ -914,7 +972,7 @@ public Admin(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_Admin_IsBridgeCloseable" data-uid="Org.Apache.Kafka.Clients.Admin.Admin.IsBridgeCloseable">
   IsBridgeCloseable
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L54"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L60"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.html#MASES_JCOBridge_C2JBridge_IJVMBridgeDefinition_BridgeClassName">BridgeClassName</a> implements Closeable</p>
@@ -946,7 +1004,7 @@ public Admin(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_Admin_IsBridgeInterface" data-uid="Org.Apache.Kafka.Clients.Admin.Admin.IsBridgeInterface">
   IsBridgeInterface
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L56"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L62"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.html#MASES_JCOBridge_C2JBridge_IJVMBridgeDefinition_BridgeClassName">BridgeClassName</a> is an interface, i.e. does not have any public constructor</p>
@@ -978,7 +1036,7 @@ public Admin(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_Admin_IsBridgeStatic" data-uid="Org.Apache.Kafka.Clients.Admin.Admin.IsBridgeStatic">
   IsBridgeStatic
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L58"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L64"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.html#MASES_JCOBridge_C2JBridge_IJVMBridgeDefinition_BridgeClassName">BridgeClassName</a> is a static class, i.e. does not have any public constructor</p>
@@ -1014,7 +1072,7 @@ public Admin(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_Admin_AbortTransaction_Org_Apache_Kafka_Clients_Admin_AbortTransactionSpec_" data-uid="Org.Apache.Kafka.Clients.Admin.Admin.AbortTransaction(Org.Apache.Kafka.Clients.Admin.AbortTransactionSpec)">
   AbortTransaction(AbortTransactionSpec)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L654"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L660"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#abortTransaction(org.apache.kafka.clients.admin.AbortTransactionSpec)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#abortTransaction(org.apache.kafka.clients.admin.AbortTransactionSpec)</a></p>
@@ -1053,7 +1111,7 @@ public Admin(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_Admin_AbortTransaction_Org_Apache_Kafka_Clients_Admin_AbortTransactionSpec_Org_Apache_Kafka_Clients_Admin_AbortTransactionOptions_" data-uid="Org.Apache.Kafka.Clients.Admin.Admin.AbortTransaction(Org.Apache.Kafka.Clients.Admin.AbortTransactionSpec,Org.Apache.Kafka.Clients.Admin.AbortTransactionOptions)">
   AbortTransaction(AbortTransactionSpec, AbortTransactionOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L136"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L142"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#abortTransaction(org.apache.kafka.clients.admin.AbortTransactionSpec,org.apache.kafka.clients.admin.AbortTransactionOptions)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#abortTransaction(org.apache.kafka.clients.admin.AbortTransactionSpec,org.apache.kafka.clients.admin.AbortTransactionOptions)</a></p>
@@ -1095,7 +1153,7 @@ public Admin(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_Admin_AddRaftVoter_System_Int32_Org_Apache_Kafka_Common_Uuid_Java_Util_Set_Org_Apache_Kafka_Clients_Admin_RaftVoterEndpoint__" data-uid="Org.Apache.Kafka.Clients.Admin.Admin.AddRaftVoter(System.Int32,Org.Apache.Kafka.Common.Uuid,Java.Util.Set{Org.Apache.Kafka.Clients.Admin.RaftVoterEndpoint})">
   AddRaftVoter(int, Uuid, Set&lt;RaftVoterEndpoint&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L665"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L671"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#addRaftVoter(int,org.apache.kafka.common.Uuid,java.util.Set)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#addRaftVoter(int,org.apache.kafka.common.Uuid,java.util.Set)</a></p>
@@ -1140,7 +1198,7 @@ public Admin(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_Admin_AddRaftVoter_System_Int32_Org_Apache_Kafka_Common_Uuid_Java_Util_Set_Org_Apache_Kafka_Clients_Admin_RaftVoterEndpoint__Org_Apache_Kafka_Clients_Admin_AddRaftVoterOptions_" data-uid="Org.Apache.Kafka.Clients.Admin.Admin.AddRaftVoter(System.Int32,Org.Apache.Kafka.Common.Uuid,Java.Util.Set{Org.Apache.Kafka.Clients.Admin.RaftVoterEndpoint},Org.Apache.Kafka.Clients.Admin.AddRaftVoterOptions)">
   AddRaftVoter(int, Uuid, Set&lt;RaftVoterEndpoint&gt;, AddRaftVoterOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L148"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L154"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#addRaftVoter(int,org.apache.kafka.common.Uuid,java.util.Set,org.apache.kafka.clients.admin.AddRaftVoterOptions)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#addRaftVoter(int,org.apache.kafka.common.Uuid,java.util.Set,org.apache.kafka.clients.admin.AddRaftVoterOptions)</a></p>
@@ -1188,7 +1246,7 @@ public Admin(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_Admin_AlterClientQuotas_Java_Util_Collection_Org_Apache_Kafka_Common_Quota_ClientQuotaAlteration__" data-uid="Org.Apache.Kafka.Clients.Admin.Admin.AlterClientQuotas(Java.Util.Collection{Org.Apache.Kafka.Common.Quota.ClientQuotaAlteration})">
   AlterClientQuotas(Collection&lt;ClientQuotaAlteration&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L674"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L680"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#alterClientQuotas(java.util.Collection)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#alterClientQuotas(java.util.Collection)</a></p>
@@ -1227,7 +1285,7 @@ public Admin(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_Admin_AlterClientQuotas_Java_Util_Collection_Org_Apache_Kafka_Common_Quota_ClientQuotaAlteration__Org_Apache_Kafka_Clients_Admin_AlterClientQuotasOptions_" data-uid="Org.Apache.Kafka.Clients.Admin.Admin.AlterClientQuotas(Java.Util.Collection{Org.Apache.Kafka.Common.Quota.ClientQuotaAlteration},Org.Apache.Kafka.Clients.Admin.AlterClientQuotasOptions)">
   AlterClientQuotas(Collection&lt;ClientQuotaAlteration&gt;, AlterClientQuotasOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L158"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L164"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#alterClientQuotas(java.util.Collection,org.apache.kafka.clients.admin.AlterClientQuotasOptions)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#alterClientQuotas(java.util.Collection,org.apache.kafka.clients.admin.AlterClientQuotasOptions)</a></p>
@@ -1269,7 +1327,7 @@ public Admin(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_Admin_AlterConsumerGroupOffsets_Java_Lang_String_Java_Util_Map_Org_Apache_Kafka_Common_TopicPartition_Org_Apache_Kafka_Clients_Consumer_OffsetAndMetadata__" data-uid="Org.Apache.Kafka.Clients.Admin.Admin.AlterConsumerGroupOffsets(Java.Lang.String,Java.Util.Map{Org.Apache.Kafka.Common.TopicPartition,Org.Apache.Kafka.Clients.Consumer.OffsetAndMetadata})">
   AlterConsumerGroupOffsets(String, Map&lt;TopicPartition, OffsetAndMetadata&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L693"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L699"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#alterConsumerGroupOffsets(java.lang.String,java.util.Map)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#alterConsumerGroupOffsets(java.lang.String,java.util.Map)</a></p>
@@ -1311,7 +1369,7 @@ public Admin(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_Admin_AlterConsumerGroupOffsets_Java_Lang_String_Java_Util_Map_Org_Apache_Kafka_Common_TopicPartition_Org_Apache_Kafka_Clients_Consumer_OffsetAndMetadata__Org_Apache_Kafka_Clients_Admin_AlterConsumerGroupOffsetsOptions_" data-uid="Org.Apache.Kafka.Clients.Admin.Admin.AlterConsumerGroupOffsets(Java.Lang.String,Java.Util.Map{Org.Apache.Kafka.Common.TopicPartition,Org.Apache.Kafka.Clients.Consumer.OffsetAndMetadata},Org.Apache.Kafka.Clients.Admin.AlterConsumerGroupOffsetsOptions)">
   AlterConsumerGroupOffsets(String, Map&lt;TopicPartition, OffsetAndMetadata&gt;, AlterConsumerGroupOffsetsOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L179"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L185"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#alterConsumerGroupOffsets(java.lang.String,java.util.Map,org.apache.kafka.clients.admin.AlterConsumerGroupOffsetsOptions)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#alterConsumerGroupOffsets(java.lang.String,java.util.Map,org.apache.kafka.clients.admin.AlterConsumerGroupOffsetsOptions)</a></p>
@@ -1356,7 +1414,7 @@ public Admin(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_Admin_AlterPartitionReassignments_Java_Util_Map_Org_Apache_Kafka_Common_TopicPartition_Java_Util_Optional_Org_Apache_Kafka_Clients_Admin_NewPartitionReassignment___" data-uid="Org.Apache.Kafka.Clients.Admin.Admin.AlterPartitionReassignments(Java.Util.Map{Org.Apache.Kafka.Common.TopicPartition,Java.Util.Optional{Org.Apache.Kafka.Clients.Admin.NewPartitionReassignment}})">
   AlterPartitionReassignments(Map&lt;TopicPartition, Optional&lt;NewPartitionReassignment&gt;&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L702"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L708"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#alterPartitionReassignments(java.util.Map)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#alterPartitionReassignments(java.util.Map)</a></p>
@@ -1395,7 +1453,7 @@ public Admin(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_Admin_AlterPartitionReassignments_Java_Util_Map_Org_Apache_Kafka_Common_TopicPartition_Java_Util_Optional_Org_Apache_Kafka_Clients_Admin_NewPartitionReassignment___Org_Apache_Kafka_Clients_Admin_AlterPartitionReassignmentsOptions_" data-uid="Org.Apache.Kafka.Clients.Admin.Admin.AlterPartitionReassignments(Java.Util.Map{Org.Apache.Kafka.Common.TopicPartition,Java.Util.Optional{Org.Apache.Kafka.Clients.Admin.NewPartitionReassignment}},Org.Apache.Kafka.Clients.Admin.AlterPartitionReassignmentsOptions)">
   AlterPartitionReassignments(Map&lt;TopicPartition, Optional&lt;NewPartitionReassignment&gt;&gt;, AlterPartitionReassignmentsOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L189"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L195"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#alterPartitionReassignments(java.util.Map,org.apache.kafka.clients.admin.AlterPartitionReassignmentsOptions)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#alterPartitionReassignments(java.util.Map,org.apache.kafka.clients.admin.AlterPartitionReassignmentsOptions)</a></p>
@@ -1437,7 +1495,7 @@ public Admin(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_Admin_AlterReplicaLogDirs_Java_Util_Map_Org_Apache_Kafka_Common_TopicPartitionReplica_Java_Lang_String__" data-uid="Org.Apache.Kafka.Clients.Admin.Admin.AlterReplicaLogDirs(Java.Util.Map{Org.Apache.Kafka.Common.TopicPartitionReplica,Java.Lang.String})">
   AlterReplicaLogDirs(Map&lt;TopicPartitionReplica, String&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L711"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L717"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#alterReplicaLogDirs(java.util.Map)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#alterReplicaLogDirs(java.util.Map)</a></p>
@@ -1476,7 +1534,7 @@ public Admin(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_Admin_AlterReplicaLogDirs_Java_Util_Map_Org_Apache_Kafka_Common_TopicPartitionReplica_Java_Lang_String__Org_Apache_Kafka_Clients_Admin_AlterReplicaLogDirsOptions_" data-uid="Org.Apache.Kafka.Clients.Admin.Admin.AlterReplicaLogDirs(Java.Util.Map{Org.Apache.Kafka.Common.TopicPartitionReplica,Java.Lang.String},Org.Apache.Kafka.Clients.Admin.AlterReplicaLogDirsOptions)">
   AlterReplicaLogDirs(Map&lt;TopicPartitionReplica, String&gt;, AlterReplicaLogDirsOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L199"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L205"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#alterReplicaLogDirs(java.util.Map,org.apache.kafka.clients.admin.AlterReplicaLogDirsOptions)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#alterReplicaLogDirs(java.util.Map,org.apache.kafka.clients.admin.AlterReplicaLogDirsOptions)</a></p>
@@ -1518,7 +1576,7 @@ public Admin(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_Admin_AlterUserScramCredentials_Java_Util_List_Org_Apache_Kafka_Clients_Admin_UserScramCredentialAlteration__" data-uid="Org.Apache.Kafka.Clients.Admin.Admin.AlterUserScramCredentials(Java.Util.List{Org.Apache.Kafka.Clients.Admin.UserScramCredentialAlteration})">
   AlterUserScramCredentials(List&lt;UserScramCredentialAlteration&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L720"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L726"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#alterUserScramCredentials(java.util.List)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#alterUserScramCredentials(java.util.List)</a></p>
@@ -1557,7 +1615,7 @@ public Admin(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_Admin_AlterUserScramCredentials_Java_Util_List_Org_Apache_Kafka_Clients_Admin_UserScramCredentialAlteration__Org_Apache_Kafka_Clients_Admin_AlterUserScramCredentialsOptions_" data-uid="Org.Apache.Kafka.Clients.Admin.Admin.AlterUserScramCredentials(Java.Util.List{Org.Apache.Kafka.Clients.Admin.UserScramCredentialAlteration},Org.Apache.Kafka.Clients.Admin.AlterUserScramCredentialsOptions)">
   AlterUserScramCredentials(List&lt;UserScramCredentialAlteration&gt;, AlterUserScramCredentialsOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L209"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L215"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#alterUserScramCredentials(java.util.List,org.apache.kafka.clients.admin.AlterUserScramCredentialsOptions)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#alterUserScramCredentials(java.util.List,org.apache.kafka.clients.admin.AlterUserScramCredentialsOptions)</a></p>
@@ -1599,7 +1657,7 @@ public Admin(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_Admin_ClientInstanceId_Java_Time_Duration_" data-uid="Org.Apache.Kafka.Clients.Admin.Admin.ClientInstanceId(Java.Time.Duration)">
   ClientInstanceId(Duration)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L621"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L627"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#clientInstanceId(java.time.Duration)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#clientInstanceId(java.time.Duration)</a></p>
@@ -1638,7 +1696,7 @@ public Admin(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_Admin_Close" data-uid="Org.Apache.Kafka.Clients.Admin.Admin.Close">
   Close()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L1163"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L1169"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#close()">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#close()</a></p>
@@ -1665,7 +1723,7 @@ public Admin(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_Admin_Close_Java_Time_Duration_" data-uid="Org.Apache.Kafka.Clients.Admin.Admin.Close(Java.Time.Duration)">
   Close(Duration)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L629"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L635"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#close(java.time.Duration)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#close(java.time.Duration)</a></p>
@@ -1698,7 +1756,7 @@ public Admin(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_Admin_Create_Java_Util_Map_Java_Lang_String_System_Object__" data-uid="Org.Apache.Kafka.Clients.Admin.Admin.Create(Java.Util.Map{Java.Lang.String,System.Object})">
   Create(Map&lt;String, object&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L104"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L110"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#create(java.util.Map)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#create(java.util.Map)</a></p>
@@ -1737,7 +1795,7 @@ public Admin(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_Admin_Create_Java_Util_Properties_" data-uid="Org.Apache.Kafka.Clients.Admin.Admin.Create(Java.Util.Properties)">
   Create(Properties)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L113"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L119"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#create(java.util.Properties)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#create(java.util.Properties)</a></p>
@@ -1776,7 +1834,7 @@ public Admin(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_Admin_CreateAcls_Java_Util_Collection_Org_Apache_Kafka_Common_Acl_AclBinding__" data-uid="Org.Apache.Kafka.Clients.Admin.Admin.CreateAcls(Java.Util.Collection{Org.Apache.Kafka.Common.Acl.AclBinding})">
   CreateAcls(Collection&lt;AclBinding&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L729"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L735"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#createAcls(java.util.Collection)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#createAcls(java.util.Collection)</a></p>
@@ -1815,7 +1873,7 @@ public Admin(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_Admin_CreateAcls_Java_Util_Collection_Org_Apache_Kafka_Common_Acl_AclBinding__Org_Apache_Kafka_Clients_Admin_CreateAclsOptions_" data-uid="Org.Apache.Kafka.Clients.Admin.Admin.CreateAcls(Java.Util.Collection{Org.Apache.Kafka.Common.Acl.AclBinding},Org.Apache.Kafka.Clients.Admin.CreateAclsOptions)">
   CreateAcls(Collection&lt;AclBinding&gt;, CreateAclsOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L219"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L225"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#createAcls(java.util.Collection,org.apache.kafka.clients.admin.CreateAclsOptions)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#createAcls(java.util.Collection,org.apache.kafka.clients.admin.CreateAclsOptions)</a></p>
@@ -1857,7 +1915,7 @@ public Admin(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_Admin_CreateDelegationToken" data-uid="Org.Apache.Kafka.Clients.Admin.Admin.CreateDelegationToken">
   CreateDelegationToken()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L737"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L743"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#createDelegationToken()">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#createDelegationToken()</a></p>
@@ -1890,7 +1948,7 @@ public Admin(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_Admin_CreateDelegationToken_Org_Apache_Kafka_Clients_Admin_CreateDelegationTokenOptions_" data-uid="Org.Apache.Kafka.Clients.Admin.Admin.CreateDelegationToken(Org.Apache.Kafka.Clients.Admin.CreateDelegationTokenOptions)">
   CreateDelegationToken(CreateDelegationTokenOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L228"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L234"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#createDelegationToken(org.apache.kafka.clients.admin.CreateDelegationTokenOptions)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#createDelegationToken(org.apache.kafka.clients.admin.CreateDelegationTokenOptions)</a></p>
@@ -1929,7 +1987,7 @@ public Admin(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_Admin_CreatePartitions_Java_Util_Map_Java_Lang_String_Org_Apache_Kafka_Clients_Admin_NewPartitions__" data-uid="Org.Apache.Kafka.Clients.Admin.Admin.CreatePartitions(Java.Util.Map{Java.Lang.String,Org.Apache.Kafka.Clients.Admin.NewPartitions})">
   CreatePartitions(Map&lt;String, NewPartitions&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L746"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L752"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#createPartitions(java.util.Map)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#createPartitions(java.util.Map)</a></p>
@@ -1968,7 +2026,7 @@ public Admin(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_Admin_CreatePartitions_Java_Util_Map_Java_Lang_String_Org_Apache_Kafka_Clients_Admin_NewPartitions__Org_Apache_Kafka_Clients_Admin_CreatePartitionsOptions_" data-uid="Org.Apache.Kafka.Clients.Admin.Admin.CreatePartitions(Java.Util.Map{Java.Lang.String,Org.Apache.Kafka.Clients.Admin.NewPartitions},Org.Apache.Kafka.Clients.Admin.CreatePartitionsOptions)">
   CreatePartitions(Map&lt;String, NewPartitions&gt;, CreatePartitionsOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L238"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L244"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#createPartitions(java.util.Map,org.apache.kafka.clients.admin.CreatePartitionsOptions)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#createPartitions(java.util.Map,org.apache.kafka.clients.admin.CreatePartitionsOptions)</a></p>
@@ -2010,7 +2068,7 @@ public Admin(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_Admin_CreateTopics_Java_Util_Collection_Org_Apache_Kafka_Clients_Admin_NewTopic__" data-uid="Org.Apache.Kafka.Clients.Admin.Admin.CreateTopics(Java.Util.Collection{Org.Apache.Kafka.Clients.Admin.NewTopic})">
   CreateTopics(Collection&lt;NewTopic&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L755"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L761"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#createTopics(java.util.Collection)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#createTopics(java.util.Collection)</a></p>
@@ -2049,7 +2107,7 @@ public Admin(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_Admin_CreateTopics_Java_Util_Collection_Org_Apache_Kafka_Clients_Admin_NewTopic__Org_Apache_Kafka_Clients_Admin_CreateTopicsOptions_" data-uid="Org.Apache.Kafka.Clients.Admin.Admin.CreateTopics(Java.Util.Collection{Org.Apache.Kafka.Clients.Admin.NewTopic},Org.Apache.Kafka.Clients.Admin.CreateTopicsOptions)">
   CreateTopics(Collection&lt;NewTopic&gt;, CreateTopicsOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L248"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L254"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#createTopics(java.util.Collection,org.apache.kafka.clients.admin.CreateTopicsOptions)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#createTopics(java.util.Collection,org.apache.kafka.clients.admin.CreateTopicsOptions)</a></p>
@@ -2091,7 +2149,7 @@ public Admin(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_Admin_DeleteAcls_Java_Util_Collection_Org_Apache_Kafka_Common_Acl_AclBindingFilter__" data-uid="Org.Apache.Kafka.Clients.Admin.Admin.DeleteAcls(Java.Util.Collection{Org.Apache.Kafka.Common.Acl.AclBindingFilter})">
   DeleteAcls(Collection&lt;AclBindingFilter&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L764"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L770"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#deleteAcls(java.util.Collection)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#deleteAcls(java.util.Collection)</a></p>
@@ -2130,7 +2188,7 @@ public Admin(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_Admin_DeleteAcls_Java_Util_Collection_Org_Apache_Kafka_Common_Acl_AclBindingFilter__Org_Apache_Kafka_Clients_Admin_DeleteAclsOptions_" data-uid="Org.Apache.Kafka.Clients.Admin.Admin.DeleteAcls(Java.Util.Collection{Org.Apache.Kafka.Common.Acl.AclBindingFilter},Org.Apache.Kafka.Clients.Admin.DeleteAclsOptions)">
   DeleteAcls(Collection&lt;AclBindingFilter&gt;, DeleteAclsOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L258"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L264"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#deleteAcls(java.util.Collection,org.apache.kafka.clients.admin.DeleteAclsOptions)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#deleteAcls(java.util.Collection,org.apache.kafka.clients.admin.DeleteAclsOptions)</a></p>
@@ -2172,7 +2230,7 @@ public Admin(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_Admin_DeleteConsumerGroupOffsets_Java_Lang_String_Java_Util_Set_Org_Apache_Kafka_Common_TopicPartition__" data-uid="Org.Apache.Kafka.Clients.Admin.Admin.DeleteConsumerGroupOffsets(Java.Lang.String,Java.Util.Set{Org.Apache.Kafka.Common.TopicPartition})">
   DeleteConsumerGroupOffsets(String, Set&lt;TopicPartition&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L774"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L780"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#deleteConsumerGroupOffsets(java.lang.String,java.util.Set)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#deleteConsumerGroupOffsets(java.lang.String,java.util.Set)</a></p>
@@ -2214,7 +2272,7 @@ public Admin(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_Admin_DeleteConsumerGroupOffsets_Java_Lang_String_Java_Util_Set_Org_Apache_Kafka_Common_TopicPartition__Org_Apache_Kafka_Clients_Admin_DeleteConsumerGroupOffsetsOptions_" data-uid="Org.Apache.Kafka.Clients.Admin.Admin.DeleteConsumerGroupOffsets(Java.Lang.String,Java.Util.Set{Org.Apache.Kafka.Common.TopicPartition},Org.Apache.Kafka.Clients.Admin.DeleteConsumerGroupOffsetsOptions)">
   DeleteConsumerGroupOffsets(String, Set&lt;TopicPartition&gt;, DeleteConsumerGroupOffsetsOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L269"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L275"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#deleteConsumerGroupOffsets(java.lang.String,java.util.Set,org.apache.kafka.clients.admin.DeleteConsumerGroupOffsetsOptions)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#deleteConsumerGroupOffsets(java.lang.String,java.util.Set,org.apache.kafka.clients.admin.DeleteConsumerGroupOffsetsOptions)</a></p>
@@ -2259,7 +2317,7 @@ public Admin(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_Admin_DeleteConsumerGroups_Java_Util_Collection_Java_Lang_String__" data-uid="Org.Apache.Kafka.Clients.Admin.Admin.DeleteConsumerGroups(Java.Util.Collection{Java.Lang.String})">
   DeleteConsumerGroups(Collection&lt;String&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L783"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L789"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#deleteConsumerGroups(java.util.Collection)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#deleteConsumerGroups(java.util.Collection)</a></p>
@@ -2298,7 +2356,7 @@ public Admin(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_Admin_DeleteConsumerGroups_Java_Util_Collection_Java_Lang_String__Org_Apache_Kafka_Clients_Admin_DeleteConsumerGroupsOptions_" data-uid="Org.Apache.Kafka.Clients.Admin.Admin.DeleteConsumerGroups(Java.Util.Collection{Java.Lang.String},Org.Apache.Kafka.Clients.Admin.DeleteConsumerGroupsOptions)">
   DeleteConsumerGroups(Collection&lt;String&gt;, DeleteConsumerGroupsOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L279"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L285"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#deleteConsumerGroups(java.util.Collection,org.apache.kafka.clients.admin.DeleteConsumerGroupsOptions)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#deleteConsumerGroups(java.util.Collection,org.apache.kafka.clients.admin.DeleteConsumerGroupsOptions)</a></p>
@@ -2340,7 +2398,7 @@ public Admin(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_Admin_DeleteRecords_Java_Util_Map_Org_Apache_Kafka_Common_TopicPartition_Org_Apache_Kafka_Clients_Admin_RecordsToDelete__" data-uid="Org.Apache.Kafka.Clients.Admin.Admin.DeleteRecords(Java.Util.Map{Org.Apache.Kafka.Common.TopicPartition,Org.Apache.Kafka.Clients.Admin.RecordsToDelete})">
   DeleteRecords(Map&lt;TopicPartition, RecordsToDelete&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L792"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L798"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#deleteRecords(java.util.Map)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#deleteRecords(java.util.Map)</a></p>
@@ -2379,7 +2437,7 @@ public Admin(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_Admin_DeleteRecords_Java_Util_Map_Org_Apache_Kafka_Common_TopicPartition_Org_Apache_Kafka_Clients_Admin_RecordsToDelete__Org_Apache_Kafka_Clients_Admin_DeleteRecordsOptions_" data-uid="Org.Apache.Kafka.Clients.Admin.Admin.DeleteRecords(Java.Util.Map{Org.Apache.Kafka.Common.TopicPartition,Org.Apache.Kafka.Clients.Admin.RecordsToDelete},Org.Apache.Kafka.Clients.Admin.DeleteRecordsOptions)">
   DeleteRecords(Map&lt;TopicPartition, RecordsToDelete&gt;, DeleteRecordsOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L289"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L295"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#deleteRecords(java.util.Map,org.apache.kafka.clients.admin.DeleteRecordsOptions)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#deleteRecords(java.util.Map,org.apache.kafka.clients.admin.DeleteRecordsOptions)</a></p>
@@ -2421,7 +2479,7 @@ public Admin(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_Admin_DeleteTopics_Java_Util_Collection_Java_Lang_String__" data-uid="Org.Apache.Kafka.Clients.Admin.Admin.DeleteTopics(Java.Util.Collection{Java.Lang.String})">
   DeleteTopics(Collection&lt;String&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L811"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L817"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#deleteTopics(java.util.Collection)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#deleteTopics(java.util.Collection)</a></p>
@@ -2460,7 +2518,7 @@ public Admin(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_Admin_DeleteTopics_Java_Util_Collection_Java_Lang_String__Org_Apache_Kafka_Clients_Admin_DeleteTopicsOptions_" data-uid="Org.Apache.Kafka.Clients.Admin.Admin.DeleteTopics(Java.Util.Collection{Java.Lang.String},Org.Apache.Kafka.Clients.Admin.DeleteTopicsOptions)">
   DeleteTopics(Collection&lt;String&gt;, DeleteTopicsOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L802"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L808"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#deleteTopics(java.util.Collection,org.apache.kafka.clients.admin.DeleteTopicsOptions)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#deleteTopics(java.util.Collection,org.apache.kafka.clients.admin.DeleteTopicsOptions)</a></p>
@@ -2502,7 +2560,7 @@ public Admin(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_Admin_DeleteTopics_Org_Apache_Kafka_Common_TopicCollection_" data-uid="Org.Apache.Kafka.Clients.Admin.Admin.DeleteTopics(Org.Apache.Kafka.Common.TopicCollection)">
   DeleteTopics(TopicCollection)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L820"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L826"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#deleteTopics(org.apache.kafka.common.TopicCollection)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#deleteTopics(org.apache.kafka.common.TopicCollection)</a></p>
@@ -2541,7 +2599,7 @@ public Admin(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_Admin_DeleteTopics_Org_Apache_Kafka_Common_TopicCollection_Org_Apache_Kafka_Clients_Admin_DeleteTopicsOptions_" data-uid="Org.Apache.Kafka.Clients.Admin.Admin.DeleteTopics(Org.Apache.Kafka.Common.TopicCollection,Org.Apache.Kafka.Clients.Admin.DeleteTopicsOptions)">
   DeleteTopics(TopicCollection, DeleteTopicsOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L299"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L305"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#deleteTopics(org.apache.kafka.common.TopicCollection,org.apache.kafka.clients.admin.DeleteTopicsOptions)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#deleteTopics(org.apache.kafka.common.TopicCollection,org.apache.kafka.clients.admin.DeleteTopicsOptions)</a></p>
@@ -2583,7 +2641,7 @@ public Admin(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_Admin_DescribeAcls_Org_Apache_Kafka_Common_Acl_AclBindingFilter_" data-uid="Org.Apache.Kafka.Clients.Admin.Admin.DescribeAcls(Org.Apache.Kafka.Common.Acl.AclBindingFilter)">
   DescribeAcls(AclBindingFilter)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L829"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L835"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#describeAcls(org.apache.kafka.common.acl.AclBindingFilter)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#describeAcls(org.apache.kafka.common.acl.AclBindingFilter)</a></p>
@@ -2622,7 +2680,7 @@ public Admin(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_Admin_DescribeAcls_Org_Apache_Kafka_Common_Acl_AclBindingFilter_Org_Apache_Kafka_Clients_Admin_DescribeAclsOptions_" data-uid="Org.Apache.Kafka.Clients.Admin.Admin.DescribeAcls(Org.Apache.Kafka.Common.Acl.AclBindingFilter,Org.Apache.Kafka.Clients.Admin.DescribeAclsOptions)">
   DescribeAcls(AclBindingFilter, DescribeAclsOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L309"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L315"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#describeAcls(org.apache.kafka.common.acl.AclBindingFilter,org.apache.kafka.clients.admin.DescribeAclsOptions)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#describeAcls(org.apache.kafka.common.acl.AclBindingFilter,org.apache.kafka.clients.admin.DescribeAclsOptions)</a></p>
@@ -2664,7 +2722,7 @@ public Admin(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_Admin_DescribeClassicGroups_Java_Util_Collection_Java_Lang_String__" data-uid="Org.Apache.Kafka.Clients.Admin.Admin.DescribeClassicGroups(Java.Util.Collection{Java.Lang.String})">
   DescribeClassicGroups(Collection&lt;String&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L838"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L844"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#describeClassicGroups(java.util.Collection)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#describeClassicGroups(java.util.Collection)</a></p>
@@ -2703,7 +2761,7 @@ public Admin(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_Admin_DescribeClassicGroups_Java_Util_Collection_Java_Lang_String__Org_Apache_Kafka_Clients_Admin_DescribeClassicGroupsOptions_" data-uid="Org.Apache.Kafka.Clients.Admin.Admin.DescribeClassicGroups(Java.Util.Collection{Java.Lang.String},Org.Apache.Kafka.Clients.Admin.DescribeClassicGroupsOptions)">
   DescribeClassicGroups(Collection&lt;String&gt;, DescribeClassicGroupsOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L319"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L325"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#describeClassicGroups(java.util.Collection,org.apache.kafka.clients.admin.DescribeClassicGroupsOptions)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#describeClassicGroups(java.util.Collection,org.apache.kafka.clients.admin.DescribeClassicGroupsOptions)</a></p>
@@ -2745,7 +2803,7 @@ public Admin(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_Admin_DescribeClientQuotas_Org_Apache_Kafka_Common_Quota_ClientQuotaFilter_" data-uid="Org.Apache.Kafka.Clients.Admin.Admin.DescribeClientQuotas(Org.Apache.Kafka.Common.Quota.ClientQuotaFilter)">
   DescribeClientQuotas(ClientQuotaFilter)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L847"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L853"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#describeClientQuotas(org.apache.kafka.common.quota.ClientQuotaFilter)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#describeClientQuotas(org.apache.kafka.common.quota.ClientQuotaFilter)</a></p>
@@ -2784,7 +2842,7 @@ public Admin(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_Admin_DescribeClientQuotas_Org_Apache_Kafka_Common_Quota_ClientQuotaFilter_Org_Apache_Kafka_Clients_Admin_DescribeClientQuotasOptions_" data-uid="Org.Apache.Kafka.Clients.Admin.Admin.DescribeClientQuotas(Org.Apache.Kafka.Common.Quota.ClientQuotaFilter,Org.Apache.Kafka.Clients.Admin.DescribeClientQuotasOptions)">
   DescribeClientQuotas(ClientQuotaFilter, DescribeClientQuotasOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L329"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L335"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#describeClientQuotas(org.apache.kafka.common.quota.ClientQuotaFilter,org.apache.kafka.clients.admin.DescribeClientQuotasOptions)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#describeClientQuotas(org.apache.kafka.common.quota.ClientQuotaFilter,org.apache.kafka.clients.admin.DescribeClientQuotasOptions)</a></p>
@@ -2826,7 +2884,7 @@ public Admin(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_Admin_DescribeCluster" data-uid="Org.Apache.Kafka.Clients.Admin.Admin.DescribeCluster">
   DescribeCluster()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L855"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L861"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#describeCluster()">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#describeCluster()</a></p>
@@ -2859,7 +2917,7 @@ public Admin(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_Admin_DescribeCluster_Org_Apache_Kafka_Clients_Admin_DescribeClusterOptions_" data-uid="Org.Apache.Kafka.Clients.Admin.Admin.DescribeCluster(Org.Apache.Kafka.Clients.Admin.DescribeClusterOptions)">
   DescribeCluster(DescribeClusterOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L338"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L344"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#describeCluster(org.apache.kafka.clients.admin.DescribeClusterOptions)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#describeCluster(org.apache.kafka.clients.admin.DescribeClusterOptions)</a></p>
@@ -2898,7 +2956,7 @@ public Admin(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_Admin_DescribeConfigs_Java_Util_Collection_Org_Apache_Kafka_Common_Config_ConfigResource__" data-uid="Org.Apache.Kafka.Clients.Admin.Admin.DescribeConfigs(Java.Util.Collection{Org.Apache.Kafka.Common.Config.ConfigResource})">
   DescribeConfigs(Collection&lt;ConfigResource&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L864"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L870"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#describeConfigs(java.util.Collection)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#describeConfigs(java.util.Collection)</a></p>
@@ -2937,7 +2995,7 @@ public Admin(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_Admin_DescribeConfigs_Java_Util_Collection_Org_Apache_Kafka_Common_Config_ConfigResource__Org_Apache_Kafka_Clients_Admin_DescribeConfigsOptions_" data-uid="Org.Apache.Kafka.Clients.Admin.Admin.DescribeConfigs(Java.Util.Collection{Org.Apache.Kafka.Common.Config.ConfigResource},Org.Apache.Kafka.Clients.Admin.DescribeConfigsOptions)">
   DescribeConfigs(Collection&lt;ConfigResource&gt;, DescribeConfigsOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L348"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L354"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#describeConfigs(java.util.Collection,org.apache.kafka.clients.admin.DescribeConfigsOptions)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#describeConfigs(java.util.Collection,org.apache.kafka.clients.admin.DescribeConfigsOptions)</a></p>
@@ -2979,7 +3037,7 @@ public Admin(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_Admin_DescribeConsumerGroups_Java_Util_Collection_Java_Lang_String__" data-uid="Org.Apache.Kafka.Clients.Admin.Admin.DescribeConsumerGroups(Java.Util.Collection{Java.Lang.String})">
   DescribeConsumerGroups(Collection&lt;String&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L873"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L879"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#describeConsumerGroups(java.util.Collection)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#describeConsumerGroups(java.util.Collection)</a></p>
@@ -3018,7 +3076,7 @@ public Admin(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_Admin_DescribeConsumerGroups_Java_Util_Collection_Java_Lang_String__Org_Apache_Kafka_Clients_Admin_DescribeConsumerGroupsOptions_" data-uid="Org.Apache.Kafka.Clients.Admin.Admin.DescribeConsumerGroups(Java.Util.Collection{Java.Lang.String},Org.Apache.Kafka.Clients.Admin.DescribeConsumerGroupsOptions)">
   DescribeConsumerGroups(Collection&lt;String&gt;, DescribeConsumerGroupsOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L358"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L364"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#describeConsumerGroups(java.util.Collection,org.apache.kafka.clients.admin.DescribeConsumerGroupsOptions)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#describeConsumerGroups(java.util.Collection,org.apache.kafka.clients.admin.DescribeConsumerGroupsOptions)</a></p>
@@ -3060,7 +3118,7 @@ public Admin(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_Admin_DescribeDelegationToken" data-uid="Org.Apache.Kafka.Clients.Admin.Admin.DescribeDelegationToken">
   DescribeDelegationToken()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L881"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L887"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#describeDelegationToken()">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#describeDelegationToken()</a></p>
@@ -3093,7 +3151,7 @@ public Admin(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_Admin_DescribeDelegationToken_Org_Apache_Kafka_Clients_Admin_DescribeDelegationTokenOptions_" data-uid="Org.Apache.Kafka.Clients.Admin.Admin.DescribeDelegationToken(Org.Apache.Kafka.Clients.Admin.DescribeDelegationTokenOptions)">
   DescribeDelegationToken(DescribeDelegationTokenOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L367"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L373"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#describeDelegationToken(org.apache.kafka.clients.admin.DescribeDelegationTokenOptions)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#describeDelegationToken(org.apache.kafka.clients.admin.DescribeDelegationTokenOptions)</a></p>
@@ -3132,7 +3190,7 @@ public Admin(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_Admin_DescribeFeatures" data-uid="Org.Apache.Kafka.Clients.Admin.Admin.DescribeFeatures">
   DescribeFeatures()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L889"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L895"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#describeFeatures()">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#describeFeatures()</a></p>
@@ -3165,7 +3223,7 @@ public Admin(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_Admin_DescribeFeatures_Org_Apache_Kafka_Clients_Admin_DescribeFeaturesOptions_" data-uid="Org.Apache.Kafka.Clients.Admin.Admin.DescribeFeatures(Org.Apache.Kafka.Clients.Admin.DescribeFeaturesOptions)">
   DescribeFeatures(DescribeFeaturesOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L376"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L382"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#describeFeatures(org.apache.kafka.clients.admin.DescribeFeaturesOptions)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#describeFeatures(org.apache.kafka.clients.admin.DescribeFeaturesOptions)</a></p>
@@ -3204,7 +3262,7 @@ public Admin(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_Admin_DescribeLogDirs_Java_Util_Collection_Java_Lang_Integer__" data-uid="Org.Apache.Kafka.Clients.Admin.Admin.DescribeLogDirs(Java.Util.Collection{Java.Lang.Integer})">
   DescribeLogDirs(Collection&lt;Integer&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L898"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L904"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#describeLogDirs(java.util.Collection)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#describeLogDirs(java.util.Collection)</a></p>
@@ -3243,7 +3301,7 @@ public Admin(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_Admin_DescribeLogDirs_Java_Util_Collection_Java_Lang_Integer__Org_Apache_Kafka_Clients_Admin_DescribeLogDirsOptions_" data-uid="Org.Apache.Kafka.Clients.Admin.Admin.DescribeLogDirs(Java.Util.Collection{Java.Lang.Integer},Org.Apache.Kafka.Clients.Admin.DescribeLogDirsOptions)">
   DescribeLogDirs(Collection&lt;Integer&gt;, DescribeLogDirsOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L386"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L392"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#describeLogDirs(java.util.Collection,org.apache.kafka.clients.admin.DescribeLogDirsOptions)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#describeLogDirs(java.util.Collection,org.apache.kafka.clients.admin.DescribeLogDirsOptions)</a></p>
@@ -3285,7 +3343,7 @@ public Admin(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_Admin_DescribeMetadataQuorum" data-uid="Org.Apache.Kafka.Clients.Admin.Admin.DescribeMetadataQuorum">
   DescribeMetadataQuorum()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L906"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L912"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#describeMetadataQuorum()">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#describeMetadataQuorum()</a></p>
@@ -3318,7 +3376,7 @@ public Admin(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_Admin_DescribeMetadataQuorum_Org_Apache_Kafka_Clients_Admin_DescribeMetadataQuorumOptions_" data-uid="Org.Apache.Kafka.Clients.Admin.Admin.DescribeMetadataQuorum(Org.Apache.Kafka.Clients.Admin.DescribeMetadataQuorumOptions)">
   DescribeMetadataQuorum(DescribeMetadataQuorumOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L395"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L401"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#describeMetadataQuorum(org.apache.kafka.clients.admin.DescribeMetadataQuorumOptions)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#describeMetadataQuorum(org.apache.kafka.clients.admin.DescribeMetadataQuorumOptions)</a></p>
@@ -3357,7 +3415,7 @@ public Admin(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_Admin_DescribeProducers_Java_Util_Collection_Org_Apache_Kafka_Common_TopicPartition__" data-uid="Org.Apache.Kafka.Clients.Admin.Admin.DescribeProducers(Java.Util.Collection{Org.Apache.Kafka.Common.TopicPartition})">
   DescribeProducers(Collection&lt;TopicPartition&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L915"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L921"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#describeProducers(java.util.Collection)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#describeProducers(java.util.Collection)</a></p>
@@ -3396,7 +3454,7 @@ public Admin(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_Admin_DescribeProducers_Java_Util_Collection_Org_Apache_Kafka_Common_TopicPartition__Org_Apache_Kafka_Clients_Admin_DescribeProducersOptions_" data-uid="Org.Apache.Kafka.Clients.Admin.Admin.DescribeProducers(Java.Util.Collection{Org.Apache.Kafka.Common.TopicPartition},Org.Apache.Kafka.Clients.Admin.DescribeProducersOptions)">
   DescribeProducers(Collection&lt;TopicPartition&gt;, DescribeProducersOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L405"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L411"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#describeProducers(java.util.Collection,org.apache.kafka.clients.admin.DescribeProducersOptions)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#describeProducers(java.util.Collection,org.apache.kafka.clients.admin.DescribeProducersOptions)</a></p>
@@ -3438,7 +3496,7 @@ public Admin(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_Admin_DescribeReplicaLogDirs_Java_Util_Collection_Org_Apache_Kafka_Common_TopicPartitionReplica__" data-uid="Org.Apache.Kafka.Clients.Admin.Admin.DescribeReplicaLogDirs(Java.Util.Collection{Org.Apache.Kafka.Common.TopicPartitionReplica})">
   DescribeReplicaLogDirs(Collection&lt;TopicPartitionReplica&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L924"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L930"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#describeReplicaLogDirs(java.util.Collection)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#describeReplicaLogDirs(java.util.Collection)</a></p>
@@ -3477,7 +3535,7 @@ public Admin(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_Admin_DescribeReplicaLogDirs_Java_Util_Collection_Org_Apache_Kafka_Common_TopicPartitionReplica__Org_Apache_Kafka_Clients_Admin_DescribeReplicaLogDirsOptions_" data-uid="Org.Apache.Kafka.Clients.Admin.Admin.DescribeReplicaLogDirs(Java.Util.Collection{Org.Apache.Kafka.Common.TopicPartitionReplica},Org.Apache.Kafka.Clients.Admin.DescribeReplicaLogDirsOptions)">
   DescribeReplicaLogDirs(Collection&lt;TopicPartitionReplica&gt;, DescribeReplicaLogDirsOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L415"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L421"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#describeReplicaLogDirs(java.util.Collection,org.apache.kafka.clients.admin.DescribeReplicaLogDirsOptions)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#describeReplicaLogDirs(java.util.Collection,org.apache.kafka.clients.admin.DescribeReplicaLogDirsOptions)</a></p>
@@ -3519,7 +3577,7 @@ public Admin(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_Admin_DescribeShareGroups_Java_Util_Collection_Java_Lang_String__" data-uid="Org.Apache.Kafka.Clients.Admin.Admin.DescribeShareGroups(Java.Util.Collection{Java.Lang.String})">
   DescribeShareGroups(Collection&lt;String&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L933"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L939"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#describeShareGroups(java.util.Collection)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#describeShareGroups(java.util.Collection)</a></p>
@@ -3558,7 +3616,7 @@ public Admin(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_Admin_DescribeShareGroups_Java_Util_Collection_Java_Lang_String__Org_Apache_Kafka_Clients_Admin_DescribeShareGroupsOptions_" data-uid="Org.Apache.Kafka.Clients.Admin.Admin.DescribeShareGroups(Java.Util.Collection{Java.Lang.String},Org.Apache.Kafka.Clients.Admin.DescribeShareGroupsOptions)">
   DescribeShareGroups(Collection&lt;String&gt;, DescribeShareGroupsOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L425"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L431"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#describeShareGroups(java.util.Collection,org.apache.kafka.clients.admin.DescribeShareGroupsOptions)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#describeShareGroups(java.util.Collection,org.apache.kafka.clients.admin.DescribeShareGroupsOptions)</a></p>
@@ -3600,7 +3658,7 @@ public Admin(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_Admin_DescribeTopics_Java_Util_Collection_Java_Lang_String__" data-uid="Org.Apache.Kafka.Clients.Admin.Admin.DescribeTopics(Java.Util.Collection{Java.Lang.String})">
   DescribeTopics(Collection&lt;String&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L952"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L958"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#describeTopics(java.util.Collection)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#describeTopics(java.util.Collection)</a></p>
@@ -3639,7 +3697,7 @@ public Admin(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_Admin_DescribeTopics_Java_Util_Collection_Java_Lang_String__Org_Apache_Kafka_Clients_Admin_DescribeTopicsOptions_" data-uid="Org.Apache.Kafka.Clients.Admin.Admin.DescribeTopics(Java.Util.Collection{Java.Lang.String},Org.Apache.Kafka.Clients.Admin.DescribeTopicsOptions)">
   DescribeTopics(Collection&lt;String&gt;, DescribeTopicsOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L943"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L949"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#describeTopics(java.util.Collection,org.apache.kafka.clients.admin.DescribeTopicsOptions)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#describeTopics(java.util.Collection,org.apache.kafka.clients.admin.DescribeTopicsOptions)</a></p>
@@ -3681,7 +3739,7 @@ public Admin(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_Admin_DescribeTopics_Org_Apache_Kafka_Common_TopicCollection_" data-uid="Org.Apache.Kafka.Clients.Admin.Admin.DescribeTopics(Org.Apache.Kafka.Common.TopicCollection)">
   DescribeTopics(TopicCollection)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L961"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L967"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#describeTopics(org.apache.kafka.common.TopicCollection)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#describeTopics(org.apache.kafka.common.TopicCollection)</a></p>
@@ -3720,7 +3778,7 @@ public Admin(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_Admin_DescribeTopics_Org_Apache_Kafka_Common_TopicCollection_Org_Apache_Kafka_Clients_Admin_DescribeTopicsOptions_" data-uid="Org.Apache.Kafka.Clients.Admin.Admin.DescribeTopics(Org.Apache.Kafka.Common.TopicCollection,Org.Apache.Kafka.Clients.Admin.DescribeTopicsOptions)">
   DescribeTopics(TopicCollection, DescribeTopicsOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L435"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L441"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#describeTopics(org.apache.kafka.common.TopicCollection,org.apache.kafka.clients.admin.DescribeTopicsOptions)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#describeTopics(org.apache.kafka.common.TopicCollection,org.apache.kafka.clients.admin.DescribeTopicsOptions)</a></p>
@@ -3762,7 +3820,7 @@ public Admin(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_Admin_DescribeTransactions_Java_Util_Collection_Java_Lang_String__" data-uid="Org.Apache.Kafka.Clients.Admin.Admin.DescribeTransactions(Java.Util.Collection{Java.Lang.String})">
   DescribeTransactions(Collection&lt;String&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L970"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L976"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#describeTransactions(java.util.Collection)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#describeTransactions(java.util.Collection)</a></p>
@@ -3801,7 +3859,7 @@ public Admin(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_Admin_DescribeTransactions_Java_Util_Collection_Java_Lang_String__Org_Apache_Kafka_Clients_Admin_DescribeTransactionsOptions_" data-uid="Org.Apache.Kafka.Clients.Admin.Admin.DescribeTransactions(Java.Util.Collection{Java.Lang.String},Org.Apache.Kafka.Clients.Admin.DescribeTransactionsOptions)">
   DescribeTransactions(Collection&lt;String&gt;, DescribeTransactionsOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L445"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L451"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#describeTransactions(java.util.Collection,org.apache.kafka.clients.admin.DescribeTransactionsOptions)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#describeTransactions(java.util.Collection,org.apache.kafka.clients.admin.DescribeTransactionsOptions)</a></p>
@@ -3843,7 +3901,7 @@ public Admin(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_Admin_DescribeUserScramCredentials" data-uid="Org.Apache.Kafka.Clients.Admin.Admin.DescribeUserScramCredentials">
   DescribeUserScramCredentials()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L978"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L984"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#describeUserScramCredentials()">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#describeUserScramCredentials()</a></p>
@@ -3876,7 +3934,7 @@ public Admin(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_Admin_DescribeUserScramCredentials_Java_Util_List_Java_Lang_String__" data-uid="Org.Apache.Kafka.Clients.Admin.Admin.DescribeUserScramCredentials(Java.Util.List{Java.Lang.String})">
   DescribeUserScramCredentials(List&lt;String&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L987"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L993"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#describeUserScramCredentials(java.util.List)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#describeUserScramCredentials(java.util.List)</a></p>
@@ -3915,7 +3973,7 @@ public Admin(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_Admin_DescribeUserScramCredentials_Java_Util_List_Java_Lang_String__Org_Apache_Kafka_Clients_Admin_DescribeUserScramCredentialsOptions_" data-uid="Org.Apache.Kafka.Clients.Admin.Admin.DescribeUserScramCredentials(Java.Util.List{Java.Lang.String},Org.Apache.Kafka.Clients.Admin.DescribeUserScramCredentialsOptions)">
   DescribeUserScramCredentials(List&lt;String&gt;, DescribeUserScramCredentialsOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L455"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L461"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#describeUserScramCredentials(java.util.List,org.apache.kafka.clients.admin.DescribeUserScramCredentialsOptions)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#describeUserScramCredentials(java.util.List,org.apache.kafka.clients.admin.DescribeUserScramCredentialsOptions)</a></p>
@@ -3957,7 +4015,7 @@ public Admin(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_Admin_ElectLeaders_Org_Apache_Kafka_Common_ElectionType_Java_Util_Set_Org_Apache_Kafka_Common_TopicPartition__" data-uid="Org.Apache.Kafka.Clients.Admin.Admin.ElectLeaders(Org.Apache.Kafka.Common.ElectionType,Java.Util.Set{Org.Apache.Kafka.Common.TopicPartition})">
   ElectLeaders(ElectionType, Set&lt;TopicPartition&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L997"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L1003"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#electLeaders(org.apache.kafka.common.ElectionType,java.util.Set)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#electLeaders(org.apache.kafka.common.ElectionType,java.util.Set)</a></p>
@@ -3999,7 +4057,7 @@ public Admin(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_Admin_ElectLeaders_Org_Apache_Kafka_Common_ElectionType_Java_Util_Set_Org_Apache_Kafka_Common_TopicPartition__Org_Apache_Kafka_Clients_Admin_ElectLeadersOptions_" data-uid="Org.Apache.Kafka.Clients.Admin.Admin.ElectLeaders(Org.Apache.Kafka.Common.ElectionType,Java.Util.Set{Org.Apache.Kafka.Common.TopicPartition},Org.Apache.Kafka.Clients.Admin.ElectLeadersOptions)">
   ElectLeaders(ElectionType, Set&lt;TopicPartition&gt;, ElectLeadersOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L466"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L472"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#electLeaders(org.apache.kafka.common.ElectionType,java.util.Set,org.apache.kafka.clients.admin.ElectLeadersOptions)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#electLeaders(org.apache.kafka.common.ElectionType,java.util.Set,org.apache.kafka.clients.admin.ElectLeadersOptions)</a></p>
@@ -4044,7 +4102,7 @@ public Admin(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_Admin_ExpireDelegationToken_System_Byte___" data-uid="Org.Apache.Kafka.Clients.Admin.Admin.ExpireDelegationToken(System.Byte[])">
   ExpireDelegationToken(byte[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L1006"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L1012"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#expireDelegationToken(byte[])">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#expireDelegationToken(byte[])</a></p>
@@ -4083,7 +4141,7 @@ public Admin(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_Admin_ExpireDelegationToken_System_Byte___Org_Apache_Kafka_Clients_Admin_ExpireDelegationTokenOptions_" data-uid="Org.Apache.Kafka.Clients.Admin.Admin.ExpireDelegationToken(System.Byte[],Org.Apache.Kafka.Clients.Admin.ExpireDelegationTokenOptions)">
   ExpireDelegationToken(byte[], ExpireDelegationTokenOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L476"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L482"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#expireDelegationToken(byte[],org.apache.kafka.clients.admin.ExpireDelegationTokenOptions)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#expireDelegationToken(byte[],org.apache.kafka.clients.admin.ExpireDelegationTokenOptions)</a></p>
@@ -4125,7 +4183,7 @@ public Admin(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_Admin_FenceProducers_Java_Util_Collection_Java_Lang_String__" data-uid="Org.Apache.Kafka.Clients.Admin.Admin.FenceProducers(Java.Util.Collection{Java.Lang.String})">
   FenceProducers(Collection&lt;String&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L1015"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L1021"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#fenceProducers(java.util.Collection)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#fenceProducers(java.util.Collection)</a></p>
@@ -4164,7 +4222,7 @@ public Admin(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_Admin_FenceProducers_Java_Util_Collection_Java_Lang_String__Org_Apache_Kafka_Clients_Admin_FenceProducersOptions_" data-uid="Org.Apache.Kafka.Clients.Admin.Admin.FenceProducers(Java.Util.Collection{Java.Lang.String},Org.Apache.Kafka.Clients.Admin.FenceProducersOptions)">
   FenceProducers(Collection&lt;String&gt;, FenceProducersOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L486"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L492"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#fenceProducers(java.util.Collection,org.apache.kafka.clients.admin.FenceProducersOptions)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#fenceProducers(java.util.Collection,org.apache.kafka.clients.admin.FenceProducersOptions)</a></p>
@@ -4206,7 +4264,7 @@ public Admin(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_Admin_IncrementalAlterConfigs_Java_Util_Map_Org_Apache_Kafka_Common_Config_ConfigResource_Java_Util_Collection_Org_Apache_Kafka_Clients_Admin_AlterConfigOp___" data-uid="Org.Apache.Kafka.Clients.Admin.Admin.IncrementalAlterConfigs(Java.Util.Map{Org.Apache.Kafka.Common.Config.ConfigResource,Java.Util.Collection{Org.Apache.Kafka.Clients.Admin.AlterConfigOp}})">
   IncrementalAlterConfigs(Map&lt;ConfigResource, Collection&lt;AlterConfigOp&gt;&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L683"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L689"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#incrementalAlterConfigs(java.util.Map)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#incrementalAlterConfigs(java.util.Map)</a></p>
@@ -4245,7 +4303,7 @@ public Admin(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_Admin_IncrementalAlterConfigs_Java_Util_Map_Org_Apache_Kafka_Common_Config_ConfigResource_Java_Util_Collection_Org_Apache_Kafka_Clients_Admin_AlterConfigOp___Org_Apache_Kafka_Clients_Admin_AlterConfigsOptions_" data-uid="Org.Apache.Kafka.Clients.Admin.Admin.IncrementalAlterConfigs(Java.Util.Map{Org.Apache.Kafka.Common.Config.ConfigResource,Java.Util.Collection{Org.Apache.Kafka.Clients.Admin.AlterConfigOp}},Org.Apache.Kafka.Clients.Admin.AlterConfigsOptions)">
   IncrementalAlterConfigs(Map&lt;ConfigResource, Collection&lt;AlterConfigOp&gt;&gt;, AlterConfigsOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L168"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L174"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#incrementalAlterConfigs(java.util.Map,org.apache.kafka.clients.admin.AlterConfigsOptions)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#incrementalAlterConfigs(java.util.Map,org.apache.kafka.clients.admin.AlterConfigsOptions)</a></p>
@@ -4287,7 +4345,7 @@ public Admin(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_Admin_ListClientMetricsResources" data-uid="Org.Apache.Kafka.Clients.Admin.Admin.ListClientMetricsResources">
   ListClientMetricsResources()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L1023"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L1029"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#listClientMetricsResources()">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#listClientMetricsResources()</a></p>
@@ -4320,7 +4378,7 @@ public Admin(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_Admin_ListClientMetricsResources_Org_Apache_Kafka_Clients_Admin_ListClientMetricsResourcesOptions_" data-uid="Org.Apache.Kafka.Clients.Admin.Admin.ListClientMetricsResources(Org.Apache.Kafka.Clients.Admin.ListClientMetricsResourcesOptions)">
   ListClientMetricsResources(ListClientMetricsResourcesOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L495"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L501"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#listClientMetricsResources(org.apache.kafka.clients.admin.ListClientMetricsResourcesOptions)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#listClientMetricsResources(org.apache.kafka.clients.admin.ListClientMetricsResourcesOptions)</a></p>
@@ -4359,7 +4417,7 @@ public Admin(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_Admin_ListConsumerGroupOffsets_Java_Lang_String_" data-uid="Org.Apache.Kafka.Clients.Admin.Admin.ListConsumerGroupOffsets(Java.Lang.String)">
   ListConsumerGroupOffsets(String)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L1042"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L1048"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#listConsumerGroupOffsets(java.lang.String)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#listConsumerGroupOffsets(java.lang.String)</a></p>
@@ -4398,7 +4456,7 @@ public Admin(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_Admin_ListConsumerGroupOffsets_Java_Lang_String_Org_Apache_Kafka_Clients_Admin_ListConsumerGroupOffsetsOptions_" data-uid="Org.Apache.Kafka.Clients.Admin.Admin.ListConsumerGroupOffsets(Java.Lang.String,Org.Apache.Kafka.Clients.Admin.ListConsumerGroupOffsetsOptions)">
   ListConsumerGroupOffsets(String, ListConsumerGroupOffsetsOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L1033"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L1039"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#listConsumerGroupOffsets(java.lang.String,org.apache.kafka.clients.admin.ListConsumerGroupOffsetsOptions)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#listConsumerGroupOffsets(java.lang.String,org.apache.kafka.clients.admin.ListConsumerGroupOffsetsOptions)</a></p>
@@ -4440,7 +4498,7 @@ public Admin(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_Admin_ListConsumerGroupOffsets_Java_Util_Map_Java_Lang_String_Org_Apache_Kafka_Clients_Admin_ListConsumerGroupOffsetsSpec__" data-uid="Org.Apache.Kafka.Clients.Admin.Admin.ListConsumerGroupOffsets(Java.Util.Map{Java.Lang.String,Org.Apache.Kafka.Clients.Admin.ListConsumerGroupOffsetsSpec})">
   ListConsumerGroupOffsets(Map&lt;String, ListConsumerGroupOffsetsSpec&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L1051"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L1057"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#listConsumerGroupOffsets(java.util.Map)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#listConsumerGroupOffsets(java.util.Map)</a></p>
@@ -4479,7 +4537,7 @@ public Admin(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_Admin_ListConsumerGroupOffsets_Java_Util_Map_Java_Lang_String_Org_Apache_Kafka_Clients_Admin_ListConsumerGroupOffsetsSpec__Org_Apache_Kafka_Clients_Admin_ListConsumerGroupOffsetsOptions_" data-uid="Org.Apache.Kafka.Clients.Admin.Admin.ListConsumerGroupOffsets(Java.Util.Map{Java.Lang.String,Org.Apache.Kafka.Clients.Admin.ListConsumerGroupOffsetsSpec},Org.Apache.Kafka.Clients.Admin.ListConsumerGroupOffsetsOptions)">
   ListConsumerGroupOffsets(Map&lt;String, ListConsumerGroupOffsetsSpec&gt;, ListConsumerGroupOffsetsOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L505"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L511"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#listConsumerGroupOffsets(java.util.Map,org.apache.kafka.clients.admin.ListConsumerGroupOffsetsOptions)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#listConsumerGroupOffsets(java.util.Map,org.apache.kafka.clients.admin.ListConsumerGroupOffsetsOptions)</a></p>
@@ -4521,7 +4579,7 @@ public Admin(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_Admin_ListConsumerGroups" data-uid="Org.Apache.Kafka.Clients.Admin.Admin.ListConsumerGroups">
   ListConsumerGroups()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L1059"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L1065"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#listConsumerGroups()">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#listConsumerGroups()</a></p>
@@ -4554,7 +4612,7 @@ public Admin(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_Admin_ListConsumerGroups_Org_Apache_Kafka_Clients_Admin_ListConsumerGroupsOptions_" data-uid="Org.Apache.Kafka.Clients.Admin.Admin.ListConsumerGroups(Org.Apache.Kafka.Clients.Admin.ListConsumerGroupsOptions)">
   ListConsumerGroups(ListConsumerGroupsOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L514"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L520"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#listConsumerGroups(org.apache.kafka.clients.admin.ListConsumerGroupsOptions)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#listConsumerGroups(org.apache.kafka.clients.admin.ListConsumerGroupsOptions)</a></p>
@@ -4593,7 +4651,7 @@ public Admin(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_Admin_ListGroups" data-uid="Org.Apache.Kafka.Clients.Admin.Admin.ListGroups">
   ListGroups()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L1067"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L1073"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#listGroups()">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#listGroups()</a></p>
@@ -4626,7 +4684,7 @@ public Admin(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_Admin_ListGroups_Org_Apache_Kafka_Clients_Admin_ListGroupsOptions_" data-uid="Org.Apache.Kafka.Clients.Admin.Admin.ListGroups(Org.Apache.Kafka.Clients.Admin.ListGroupsOptions)">
   ListGroups(ListGroupsOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L523"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L529"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#listGroups(org.apache.kafka.clients.admin.ListGroupsOptions)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#listGroups(org.apache.kafka.clients.admin.ListGroupsOptions)</a></p>
@@ -4665,7 +4723,7 @@ public Admin(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_Admin_ListOffsets_Java_Util_Map_Org_Apache_Kafka_Common_TopicPartition_Org_Apache_Kafka_Clients_Admin_OffsetSpec__" data-uid="Org.Apache.Kafka.Clients.Admin.Admin.ListOffsets(Java.Util.Map{Org.Apache.Kafka.Common.TopicPartition,Org.Apache.Kafka.Clients.Admin.OffsetSpec})">
   ListOffsets(Map&lt;TopicPartition, OffsetSpec&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L1076"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L1082"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#listOffsets(java.util.Map)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#listOffsets(java.util.Map)</a></p>
@@ -4704,7 +4762,7 @@ public Admin(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_Admin_ListOffsets_Java_Util_Map_Org_Apache_Kafka_Common_TopicPartition_Org_Apache_Kafka_Clients_Admin_OffsetSpec__Org_Apache_Kafka_Clients_Admin_ListOffsetsOptions_" data-uid="Org.Apache.Kafka.Clients.Admin.Admin.ListOffsets(Java.Util.Map{Org.Apache.Kafka.Common.TopicPartition,Org.Apache.Kafka.Clients.Admin.OffsetSpec},Org.Apache.Kafka.Clients.Admin.ListOffsetsOptions)">
   ListOffsets(Map&lt;TopicPartition, OffsetSpec&gt;, ListOffsetsOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L533"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L539"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#listOffsets(java.util.Map,org.apache.kafka.clients.admin.ListOffsetsOptions)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#listOffsets(java.util.Map,org.apache.kafka.clients.admin.ListOffsetsOptions)</a></p>
@@ -4746,7 +4804,7 @@ public Admin(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_Admin_ListPartitionReassignments" data-uid="Org.Apache.Kafka.Clients.Admin.Admin.ListPartitionReassignments">
   ListPartitionReassignments()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L1084"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L1090"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#listPartitionReassignments()">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#listPartitionReassignments()</a></p>
@@ -4779,7 +4837,7 @@ public Admin(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_Admin_ListPartitionReassignments_Java_Util_Optional_Java_Util_Set_Org_Apache_Kafka_Common_TopicPartition___Org_Apache_Kafka_Clients_Admin_ListPartitionReassignmentsOptions_" data-uid="Org.Apache.Kafka.Clients.Admin.Admin.ListPartitionReassignments(Java.Util.Optional{Java.Util.Set{Org.Apache.Kafka.Common.TopicPartition}},Org.Apache.Kafka.Clients.Admin.ListPartitionReassignmentsOptions)">
   ListPartitionReassignments(Optional&lt;Set&lt;TopicPartition&gt;&gt;, ListPartitionReassignmentsOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L543"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L549"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#listPartitionReassignments(java.util.Optional,org.apache.kafka.clients.admin.ListPartitionReassignmentsOptions)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#listPartitionReassignments(java.util.Optional,org.apache.kafka.clients.admin.ListPartitionReassignmentsOptions)</a></p>
@@ -4821,7 +4879,7 @@ public Admin(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_Admin_ListPartitionReassignments_Java_Util_Set_Org_Apache_Kafka_Common_TopicPartition__" data-uid="Org.Apache.Kafka.Clients.Admin.Admin.ListPartitionReassignments(Java.Util.Set{Org.Apache.Kafka.Common.TopicPartition})">
   ListPartitionReassignments(Set&lt;TopicPartition&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L1103"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L1109"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#listPartitionReassignments(java.util.Set)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#listPartitionReassignments(java.util.Set)</a></p>
@@ -4860,7 +4918,7 @@ public Admin(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_Admin_ListPartitionReassignments_Java_Util_Set_Org_Apache_Kafka_Common_TopicPartition__Org_Apache_Kafka_Clients_Admin_ListPartitionReassignmentsOptions_" data-uid="Org.Apache.Kafka.Clients.Admin.Admin.ListPartitionReassignments(Java.Util.Set{Org.Apache.Kafka.Common.TopicPartition},Org.Apache.Kafka.Clients.Admin.ListPartitionReassignmentsOptions)">
   ListPartitionReassignments(Set&lt;TopicPartition&gt;, ListPartitionReassignmentsOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L1094"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L1100"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#listPartitionReassignments(java.util.Set,org.apache.kafka.clients.admin.ListPartitionReassignmentsOptions)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#listPartitionReassignments(java.util.Set,org.apache.kafka.clients.admin.ListPartitionReassignmentsOptions)</a></p>
@@ -4902,7 +4960,7 @@ public Admin(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_Admin_ListPartitionReassignments_Org_Apache_Kafka_Clients_Admin_ListPartitionReassignmentsOptions_" data-uid="Org.Apache.Kafka.Clients.Admin.Admin.ListPartitionReassignments(Org.Apache.Kafka.Clients.Admin.ListPartitionReassignmentsOptions)">
   ListPartitionReassignments(ListPartitionReassignmentsOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L1112"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L1118"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#listPartitionReassignments(org.apache.kafka.clients.admin.ListPartitionReassignmentsOptions)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#listPartitionReassignments(org.apache.kafka.clients.admin.ListPartitionReassignmentsOptions)</a></p>
@@ -4941,7 +4999,7 @@ public Admin(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_Admin_ListTopics" data-uid="Org.Apache.Kafka.Clients.Admin.Admin.ListTopics">
   ListTopics()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L1120"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L1126"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#listTopics()">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#listTopics()</a></p>
@@ -4974,7 +5032,7 @@ public Admin(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_Admin_ListTopics_Org_Apache_Kafka_Clients_Admin_ListTopicsOptions_" data-uid="Org.Apache.Kafka.Clients.Admin.Admin.ListTopics(Org.Apache.Kafka.Clients.Admin.ListTopicsOptions)">
   ListTopics(ListTopicsOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L552"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L558"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#listTopics(org.apache.kafka.clients.admin.ListTopicsOptions)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#listTopics(org.apache.kafka.clients.admin.ListTopicsOptions)</a></p>
@@ -5013,7 +5071,7 @@ public Admin(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_Admin_ListTransactions" data-uid="Org.Apache.Kafka.Clients.Admin.Admin.ListTransactions">
   ListTransactions()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L1128"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L1134"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#listTransactions()">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#listTransactions()</a></p>
@@ -5046,7 +5104,7 @@ public Admin(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_Admin_ListTransactions_Org_Apache_Kafka_Clients_Admin_ListTransactionsOptions_" data-uid="Org.Apache.Kafka.Clients.Admin.Admin.ListTransactions(Org.Apache.Kafka.Clients.Admin.ListTransactionsOptions)">
   ListTransactions(ListTransactionsOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L561"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L567"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#listTransactions(org.apache.kafka.clients.admin.ListTransactionsOptions)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#listTransactions(org.apache.kafka.clients.admin.ListTransactionsOptions)</a></p>
@@ -5085,7 +5143,7 @@ public Admin(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_Admin_Metrics__1" data-uid="Org.Apache.Kafka.Clients.Admin.Admin.Metrics``1">
   Metrics&lt;ReturnExtendsOrg_Apache_Kafka_Common_Metric&gt;()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L126"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L132"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#metrics()">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#metrics()</a></p>
@@ -5124,7 +5182,7 @@ public Admin(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_Admin_RegisterMetricForSubscription_Org_Apache_Kafka_Common_Metrics_KafkaMetric_" data-uid="Org.Apache.Kafka.Clients.Admin.Admin.RegisterMetricForSubscription(Org.Apache.Kafka.Common.Metrics.KafkaMetric)">
   RegisterMetricForSubscription(KafkaMetric)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L637"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L643"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#registerMetricForSubscription(org.apache.kafka.common.metrics.KafkaMetric)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#registerMetricForSubscription(org.apache.kafka.common.metrics.KafkaMetric)</a></p>
@@ -5157,7 +5215,7 @@ public Admin(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_Admin_RemoveMembersFromConsumerGroup_Java_Lang_String_Org_Apache_Kafka_Clients_Admin_RemoveMembersFromConsumerGroupOptions_" data-uid="Org.Apache.Kafka.Clients.Admin.Admin.RemoveMembersFromConsumerGroup(Java.Lang.String,Org.Apache.Kafka.Clients.Admin.RemoveMembersFromConsumerGroupOptions)">
   RemoveMembersFromConsumerGroup(String, RemoveMembersFromConsumerGroupOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L571"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L577"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#removeMembersFromConsumerGroup(java.lang.String,org.apache.kafka.clients.admin.RemoveMembersFromConsumerGroupOptions)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#removeMembersFromConsumerGroup(java.lang.String,org.apache.kafka.clients.admin.RemoveMembersFromConsumerGroupOptions)</a></p>
@@ -5199,7 +5257,7 @@ public Admin(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_Admin_RemoveRaftVoter_System_Int32_Org_Apache_Kafka_Common_Uuid_" data-uid="Org.Apache.Kafka.Clients.Admin.Admin.RemoveRaftVoter(System.Int32,Org.Apache.Kafka.Common.Uuid)">
   RemoveRaftVoter(int, Uuid)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L1138"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L1144"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#removeRaftVoter(int,org.apache.kafka.common.Uuid)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#removeRaftVoter(int,org.apache.kafka.common.Uuid)</a></p>
@@ -5241,7 +5299,7 @@ public Admin(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_Admin_RemoveRaftVoter_System_Int32_Org_Apache_Kafka_Common_Uuid_Org_Apache_Kafka_Clients_Admin_RemoveRaftVoterOptions_" data-uid="Org.Apache.Kafka.Clients.Admin.Admin.RemoveRaftVoter(System.Int32,Org.Apache.Kafka.Common.Uuid,Org.Apache.Kafka.Clients.Admin.RemoveRaftVoterOptions)">
   RemoveRaftVoter(int, Uuid, RemoveRaftVoterOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L582"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L588"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#removeRaftVoter(int,org.apache.kafka.common.Uuid,org.apache.kafka.clients.admin.RemoveRaftVoterOptions)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#removeRaftVoter(int,org.apache.kafka.common.Uuid,org.apache.kafka.clients.admin.RemoveRaftVoterOptions)</a></p>
@@ -5286,7 +5344,7 @@ public Admin(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_Admin_RenewDelegationToken_System_Byte___" data-uid="Org.Apache.Kafka.Clients.Admin.Admin.RenewDelegationToken(System.Byte[])">
   RenewDelegationToken(byte[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L1147"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L1153"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#renewDelegationToken(byte[])">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#renewDelegationToken(byte[])</a></p>
@@ -5325,7 +5383,7 @@ public Admin(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_Admin_RenewDelegationToken_System_Byte___Org_Apache_Kafka_Clients_Admin_RenewDelegationTokenOptions_" data-uid="Org.Apache.Kafka.Clients.Admin.Admin.RenewDelegationToken(System.Byte[],Org.Apache.Kafka.Clients.Admin.RenewDelegationTokenOptions)">
   RenewDelegationToken(byte[], RenewDelegationTokenOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L592"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L598"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#renewDelegationToken(byte[],org.apache.kafka.clients.admin.RenewDelegationTokenOptions)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#renewDelegationToken(byte[],org.apache.kafka.clients.admin.RenewDelegationTokenOptions)</a></p>
@@ -5367,7 +5425,7 @@ public Admin(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_Admin_UnregisterBroker_System_Int32_" data-uid="Org.Apache.Kafka.Clients.Admin.Admin.UnregisterBroker(System.Int32)">
   UnregisterBroker(int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L1156"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L1162"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#unregisterBroker(int)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#unregisterBroker(int)</a></p>
@@ -5406,7 +5464,7 @@ public Admin(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_Admin_UnregisterBroker_System_Int32_Org_Apache_Kafka_Clients_Admin_UnregisterBrokerOptions_" data-uid="Org.Apache.Kafka.Clients.Admin.Admin.UnregisterBroker(System.Int32,Org.Apache.Kafka.Clients.Admin.UnregisterBrokerOptions)">
   UnregisterBroker(int, UnregisterBrokerOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L602"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L608"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#unregisterBroker(int,org.apache.kafka.clients.admin.UnregisterBrokerOptions)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#unregisterBroker(int,org.apache.kafka.clients.admin.UnregisterBrokerOptions)</a></p>
@@ -5448,7 +5506,7 @@ public Admin(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_Admin_UnregisterMetricFromSubscription_Org_Apache_Kafka_Common_Metrics_KafkaMetric_" data-uid="Org.Apache.Kafka.Clients.Admin.Admin.UnregisterMetricFromSubscription(Org.Apache.Kafka.Common.Metrics.KafkaMetric)">
   UnregisterMetricFromSubscription(KafkaMetric)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L645"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L651"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#unregisterMetricFromSubscription(org.apache.kafka.common.metrics.KafkaMetric)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#unregisterMetricFromSubscription(org.apache.kafka.common.metrics.KafkaMetric)</a></p>
@@ -5481,7 +5539,7 @@ public Admin(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_Admin_UpdateFeatures_Java_Util_Map_Java_Lang_String_Org_Apache_Kafka_Clients_Admin_FeatureUpdate__Org_Apache_Kafka_Clients_Admin_UpdateFeaturesOptions_" data-uid="Org.Apache.Kafka.Clients.Admin.Admin.UpdateFeatures(Java.Util.Map{Java.Lang.String,Org.Apache.Kafka.Clients.Admin.FeatureUpdate},Org.Apache.Kafka.Clients.Admin.UpdateFeaturesOptions)">
   UpdateFeatures(Map&lt;String, FeatureUpdate&gt;, UpdateFeaturesOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L612"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L618"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#updateFeatures(java.util.Map,org.apache.kafka.clients.admin.UpdateFeaturesOptions)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/admin/Admin.html#updateFeatures(java.util.Map,org.apache.kafka.clients.admin.UpdateFeaturesOptions)</a></p>
@@ -5523,7 +5581,7 @@ public Admin(params object[] args)</code></pre>
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L84" class="edit-link">Edit this page</a>
+          <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L90" class="edit-link">Edit this page</a>
         </div>
 
 

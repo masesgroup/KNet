@@ -89,7 +89,7 @@
 
 
   <h1 id="Org_Apache_Kafka_Snapshot_FileRawSnapshotReader" data-uid="Org.Apache.Kafka.Snapshot.FileRawSnapshotReader" class="text-break">
-Class FileRawSnapshotReader  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Snapshot/FileRawSnapshotReader.cs/#L64"><i class="bi bi-code-slash"></i></a>
+Class FileRawSnapshotReader  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Snapshot/FileRawSnapshotReader.cs/#L70"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -102,7 +102,7 @@ Class FileRawSnapshotReader  <a class="header-action link-secondary" title="View
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class FileRawSnapshotReader : JVMBridgeBase&lt;FileRawSnapshotReader&gt;, IDynamicMetaObjectProvider, IJVMBridgeCore, IDisposable, IJVMBridgeBaseStatic, IJVMBridgeBase, IJVMBridgeDefinition, IRawSnapshotReader, IAutoCloseable</code></pre>
+    <pre><code class="lang-csharp hljs">public class FileRawSnapshotReader : JVMBridgeBase&lt;FileRawSnapshotReader&gt;, IDynamicMetaObjectProvider, IJVMBridgeCore, IEquatable&lt;IJVMBridgeBase&gt;, IDisposable, IJVMBridgeBaseStatic, IJVMBridgeBase, IJVMBridgeDefinition, IRawSnapshotReader, IAutoCloseable</code></pre>
   </div>
 
 
@@ -124,6 +124,7 @@ Class FileRawSnapshotReader  <a class="header-action link-secondary" title="View
     <dd>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.idynamicmetaobjectprovider">IDynamicMetaObjectProvider</a></div>
       <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeCore.html">IJVMBridgeCore</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeBase.html">IJVMBridgeBase</a>&gt;</div>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
       <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeBaseStatic.html">IJVMBridgeBaseStatic</a></div>
       <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeBase.html">IJVMBridgeBase</a></div>
@@ -222,16 +223,16 @@ Class FileRawSnapshotReader  <a class="header-action link-secondary" title="View
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;FileRawSnapshotReader&gt;.SExecuteWithSignature&lt;TReturn, TConverter&gt;(Type, string, string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;FileRawSnapshotReader&gt;.SExecuteArray&lt;T&gt;(IJavaType, string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;FileRawSnapshotReader&gt;.SExecuteArray&lt;TArrayType&gt;(IJavaType, string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;FileRawSnapshotReader&gt;.SExecuteWithSignatureArray&lt;T&gt;(IJavaType, string, string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;FileRawSnapshotReader&gt;.SExecuteWithSignatureArray&lt;TArrayType&gt;(IJavaType, string, string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;FileRawSnapshotReader&gt;.SExecuteArray&lt;T&gt;(string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;FileRawSnapshotReader&gt;.SExecuteArray&lt;TArrayType&gt;(string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;FileRawSnapshotReader&gt;.SExecuteWithSignatureArray&lt;T&gt;(string, string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;FileRawSnapshotReader&gt;.SExecuteWithSignatureArray&lt;TArrayType&gt;(string, string, params object[])</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;FileRawSnapshotReader&gt;.SGetField(IJavaType, string)</a>
@@ -279,6 +280,12 @@ Class FileRawSnapshotReader  <a class="header-action link-secondary" title="View
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;FileRawSnapshotReader&gt;.NewWithSignature(string, params object[])</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;FileRawSnapshotReader&gt;.NewAndWrapsDirect&lt;TNewClass&gt;(string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;FileRawSnapshotReader&gt;.NewWithSignatureAndWrapsDirect&lt;TNewClass&gt;(string, string, params object[])</a>
+    </div>
+    <div>
       <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase-1.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_1_Execute__1___0___">JVMBridgeBase&lt;FileRawSnapshotReader&gt;.Execute&lt;T&gt;(params T[])</a>
     </div>
     <div>
@@ -288,13 +295,25 @@ Class FileRawSnapshotReader  <a class="header-action link-secondary" title="View
       <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase-1.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_1_BridgeClazz">JVMBridgeBase&lt;FileRawSnapshotReader&gt;.BridgeClazz</a>
     </div>
     <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_ReferenceEqualsJVM_MASES_JCOBridge_C2JBridge_JVMBridgeBase_MASES_JCOBridge_C2JBridge_JVMBridgeBase_">JVMBridgeBase.ReferenceEqualsJVM(JVMBridgeBase, JVMBridgeBase)</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">JVMBridgeBase.ClazzOf&lt;TClass&gt;(bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">JVMBridgeBase.ClazzOf&lt;TClass&gt;(out Exception, bool)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.ClazzOf(string, bool)</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.ClazzOf(string, out Exception, bool)</a>
+    </div>
+    <div>
       <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_RuntimeClassNameOf__1">JVMBridgeBase.RuntimeClassNameOf&lt;T&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase.RuntimeClassNameOf(Type)</a>
     </div>
     <div>
       <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_ClassNameOf__1">JVMBridgeBase.ClassNameOf&lt;T&gt;()</a>
@@ -351,7 +370,13 @@ Class FileRawSnapshotReader  <a class="header-action link-secondary" title="View
       <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_Dispose">JVMBridgeBase.Dispose()</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">JVMBridgeBase.Dispose(bool)</a>
+    </div>
+    <div>
       <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_ToString">JVMBridgeBase.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_Equals_MASES_JCOBridge_C2JBridge_IJVMBridgeBase_">JVMBridgeBase.Equals(IJVMBridgeBase)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">JVMBridgeBase.Equals(object)</a>
@@ -399,10 +424,10 @@ Class FileRawSnapshotReader  <a class="header-action link-secondary" title="View
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteWithSignature&lt;TNewClass, TReturn, TConverter&gt;(string, string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteArray&lt;T&gt;(string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteArray&lt;TArrayType&gt;(string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteWithSignatureArray&lt;T&gt;(string, string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteWithSignatureArray&lt;TArrayType&gt;(string, string, params object[])</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IGetField(string)</a>
@@ -522,9 +547,42 @@ Class FileRawSnapshotReader  <a class="header-action link-secondary" title="View
 
   <a id="Org_Apache_Kafka_Snapshot_FileRawSnapshotReader__ctor_" data-uid="Org.Apache.Kafka.Snapshot.FileRawSnapshotReader.#ctor*"></a>
 
+  <h3 id="Org_Apache_Kafka_Snapshot_FileRawSnapshotReader__ctor_MASES_JCOBridge_C2JBridge_IJVMBridgeBaseInitializer_" data-uid="Org.Apache.Kafka.Snapshot.FileRawSnapshotReader.#ctor(MASES.JCOBridge.C2JBridge.IJVMBridgeBaseInitializer)">
+  FileRawSnapshotReader(IJVMBridgeBaseInitializer)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Snapshot/FileRawSnapshotReader.cs/#L42"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Internal constructor: used internally from JCOBridge</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.&quot;)]
+public FileRawSnapshotReader(IJVMBridgeBaseInitializer initializer)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>initializer</code> <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeBaseInitializer.html">IJVMBridgeBaseInitializer</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Apache_Kafka_Snapshot_FileRawSnapshotReader__ctor_" data-uid="Org.Apache.Kafka.Snapshot.FileRawSnapshotReader.#ctor*"></a>
+
   <h3 id="Org_Apache_Kafka_Snapshot_FileRawSnapshotReader__ctor_System_Object___" data-uid="Org.Apache.Kafka.Snapshot.FileRawSnapshotReader.#ctor(System.Object[])">
   FileRawSnapshotReader(params object[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Snapshot/FileRawSnapshotReader.cs/#L42"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Snapshot/FileRawSnapshotReader.cs/#L47"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Generic constructor: it is useful for JCOBridge when there is a derived class which needs to pass arguments to the highest JVMBridgeBase class</p>
@@ -560,7 +618,7 @@ Class FileRawSnapshotReader  <a class="header-action link-secondary" title="View
 
   <h3 id="Org_Apache_Kafka_Snapshot_FileRawSnapshotReader_BridgeClassName" data-uid="Org.Apache.Kafka.Snapshot.FileRawSnapshotReader.BridgeClassName">
   BridgeClassName
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Snapshot/FileRawSnapshotReader.cs/#L48"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Snapshot/FileRawSnapshotReader.cs/#L54"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Java class name to be instantiated</p>
@@ -592,7 +650,7 @@ Class FileRawSnapshotReader  <a class="header-action link-secondary" title="View
 
   <h3 id="Org_Apache_Kafka_Snapshot_FileRawSnapshotReader_IsBridgeAbstract" data-uid="Org.Apache.Kafka.Snapshot.FileRawSnapshotReader.IsBridgeAbstract">
   IsBridgeAbstract
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Snapshot/FileRawSnapshotReader.cs/#L50"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Snapshot/FileRawSnapshotReader.cs/#L56"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.html#MASES_JCOBridge_C2JBridge_IJVMBridgeDefinition_BridgeClassName">BridgeClassName</a> is an abstract class, i.e. cannot be created an instance</p>
@@ -624,7 +682,7 @@ Class FileRawSnapshotReader  <a class="header-action link-secondary" title="View
 
   <h3 id="Org_Apache_Kafka_Snapshot_FileRawSnapshotReader_IsBridgeCloseable" data-uid="Org.Apache.Kafka.Snapshot.FileRawSnapshotReader.IsBridgeCloseable">
   IsBridgeCloseable
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Snapshot/FileRawSnapshotReader.cs/#L52"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Snapshot/FileRawSnapshotReader.cs/#L58"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.html#MASES_JCOBridge_C2JBridge_IJVMBridgeDefinition_BridgeClassName">BridgeClassName</a> implements Closeable</p>
@@ -656,7 +714,7 @@ Class FileRawSnapshotReader  <a class="header-action link-secondary" title="View
 
   <h3 id="Org_Apache_Kafka_Snapshot_FileRawSnapshotReader_IsBridgeInterface" data-uid="Org.Apache.Kafka.Snapshot.FileRawSnapshotReader.IsBridgeInterface">
   IsBridgeInterface
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Snapshot/FileRawSnapshotReader.cs/#L54"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Snapshot/FileRawSnapshotReader.cs/#L60"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.html#MASES_JCOBridge_C2JBridge_IJVMBridgeDefinition_BridgeClassName">BridgeClassName</a> is an interface, i.e. does not have any public constructor</p>
@@ -688,7 +746,7 @@ Class FileRawSnapshotReader  <a class="header-action link-secondary" title="View
 
   <h3 id="Org_Apache_Kafka_Snapshot_FileRawSnapshotReader_IsBridgeStatic" data-uid="Org.Apache.Kafka.Snapshot.FileRawSnapshotReader.IsBridgeStatic">
   IsBridgeStatic
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Snapshot/FileRawSnapshotReader.cs/#L56"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Snapshot/FileRawSnapshotReader.cs/#L62"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.html#MASES_JCOBridge_C2JBridge_IJVMBridgeDefinition_BridgeClassName">BridgeClassName</a> is a static class, i.e. does not have any public constructor</p>
@@ -724,7 +782,7 @@ Class FileRawSnapshotReader  <a class="header-action link-secondary" title="View
 
   <h3 id="Org_Apache_Kafka_Snapshot_FileRawSnapshotReader_Close" data-uid="Org.Apache.Kafka.Snapshot.FileRawSnapshotReader.Close">
   Close()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Snapshot/FileRawSnapshotReader.cs/#L130"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Snapshot/FileRawSnapshotReader.cs/#L136"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/snapshot/FileRawSnapshotReader.html#close()">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/snapshot/FileRawSnapshotReader.html#close()</a></p>
@@ -751,7 +809,7 @@ Class FileRawSnapshotReader  <a class="header-action link-secondary" title="View
 
   <h3 id="Org_Apache_Kafka_Snapshot_FileRawSnapshotReader_Open_Java_Nio_File_Path_Org_Apache_Kafka_Raft_OffsetAndEpoch_" data-uid="Org.Apache.Kafka.Snapshot.FileRawSnapshotReader.Open(Java.Nio.File.Path,Org.Apache.Kafka.Raft.OffsetAndEpoch)">
   Open(Path, OffsetAndEpoch)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Snapshot/FileRawSnapshotReader.cs/#L93"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Snapshot/FileRawSnapshotReader.cs/#L99"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/snapshot/FileRawSnapshotReader.html#open(java.nio.file.Path,org.apache.kafka.raft.OffsetAndEpoch)">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/snapshot/FileRawSnapshotReader.html#open(java.nio.file.Path,org.apache.kafka.raft.OffsetAndEpoch)</a></p>
@@ -793,7 +851,7 @@ Class FileRawSnapshotReader  <a class="header-action link-secondary" title="View
 
   <h3 id="Org_Apache_Kafka_Snapshot_FileRawSnapshotReader_SizeInBytes" data-uid="Org.Apache.Kafka.Snapshot.FileRawSnapshotReader.SizeInBytes">
   SizeInBytes()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Snapshot/FileRawSnapshotReader.cs/#L105"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Snapshot/FileRawSnapshotReader.cs/#L111"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/snapshot/FileRawSnapshotReader.html#sizeInBytes()">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/snapshot/FileRawSnapshotReader.html#sizeInBytes()</a></p>
@@ -826,7 +884,7 @@ Class FileRawSnapshotReader  <a class="header-action link-secondary" title="View
 
   <h3 id="Org_Apache_Kafka_Snapshot_FileRawSnapshotReader_Slice_System_Int64_System_Int32_" data-uid="Org.Apache.Kafka.Snapshot.FileRawSnapshotReader.Slice(System.Int64,System.Int32)">
   Slice(long, int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Snapshot/FileRawSnapshotReader.cs/#L115"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Snapshot/FileRawSnapshotReader.cs/#L121"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/snapshot/FileRawSnapshotReader.html#slice(long,int)">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/snapshot/FileRawSnapshotReader.html#slice(long,int)</a></p>
@@ -868,7 +926,7 @@ Class FileRawSnapshotReader  <a class="header-action link-secondary" title="View
 
   <h3 id="Org_Apache_Kafka_Snapshot_FileRawSnapshotReader_SnapshotId" data-uid="Org.Apache.Kafka.Snapshot.FileRawSnapshotReader.SnapshotId">
   SnapshotId()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Snapshot/FileRawSnapshotReader.cs/#L123"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Snapshot/FileRawSnapshotReader.cs/#L129"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/snapshot/FileRawSnapshotReader.html#snapshotId()">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/snapshot/FileRawSnapshotReader.html#snapshotId()</a></p>
@@ -905,7 +963,7 @@ Class FileRawSnapshotReader  <a class="header-action link-secondary" title="View
 
   <h3 id="Org_Apache_Kafka_Snapshot_FileRawSnapshotReader_op_Implicit_Org_Apache_Kafka_Snapshot_FileRawSnapshotReader__Java_Lang_AutoCloseable" data-uid="Org.Apache.Kafka.Snapshot.FileRawSnapshotReader.op_Implicit(Org.Apache.Kafka.Snapshot.FileRawSnapshotReader)~Java.Lang.AutoCloseable">
   implicit operator AutoCloseable(FileRawSnapshotReader)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Snapshot/FileRawSnapshotReader.cs/#L78"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Snapshot/FileRawSnapshotReader.cs/#L84"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Converter from <a class="xref" href="Org.Apache.Kafka.Snapshot.FileRawSnapshotReader.html">FileRawSnapshotReader</a> to <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.AutoCloseable.html">AutoCloseable</a></p>
@@ -942,7 +1000,7 @@ Class FileRawSnapshotReader  <a class="header-action link-secondary" title="View
 
   <h3 id="Org_Apache_Kafka_Snapshot_FileRawSnapshotReader_op_Implicit_Org_Apache_Kafka_Snapshot_FileRawSnapshotReader__Org_Apache_Kafka_Snapshot_RawSnapshotReader" data-uid="Org.Apache.Kafka.Snapshot.FileRawSnapshotReader.op_Implicit(Org.Apache.Kafka.Snapshot.FileRawSnapshotReader)~Org.Apache.Kafka.Snapshot.RawSnapshotReader">
   implicit operator RawSnapshotReader(FileRawSnapshotReader)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Snapshot/FileRawSnapshotReader.cs/#L74"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Snapshot/FileRawSnapshotReader.cs/#L80"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Converter from <a class="xref" href="Org.Apache.Kafka.Snapshot.FileRawSnapshotReader.html">FileRawSnapshotReader</a> to <a class="xref" href="Org.Apache.Kafka.Snapshot.RawSnapshotReader.html">RawSnapshotReader</a></p>
@@ -979,7 +1037,7 @@ Class FileRawSnapshotReader  <a class="header-action link-secondary" title="View
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Snapshot/FileRawSnapshotReader.cs/#L64" class="edit-link">Edit this page</a>
+          <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Snapshot/FileRawSnapshotReader.cs/#L70" class="edit-link">Edit this page</a>
         </div>
 
 

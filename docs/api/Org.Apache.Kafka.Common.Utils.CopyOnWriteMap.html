@@ -89,7 +89,7 @@
 
 
   <h1 id="Org_Apache_Kafka_Common_Utils_CopyOnWriteMap" data-uid="Org.Apache.Kafka.Common.Utils.CopyOnWriteMap" class="text-break">
-Class CopyOnWriteMap  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Utils/CopyOnWriteMap.cs/#L101"><i class="bi bi-code-slash"></i></a>
+Class CopyOnWriteMap  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Utils/CopyOnWriteMap.cs/#L113"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -102,7 +102,7 @@ Class CopyOnWriteMap  <a class="header-action link-secondary" title="View source
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class CopyOnWriteMap : ConcurrentMap, IDynamicMetaObjectProvider, IJVMBridgeCore, IDisposable, IJVMBridgeBaseStatic, IJVMBridgeBase, IJVMBridgeDefinition</code></pre>
+    <pre><code class="lang-csharp hljs">public class CopyOnWriteMap : ConcurrentMap, IDynamicMetaObjectProvider, IJVMBridgeCore, IEquatable&lt;IJVMBridgeBase&gt;, IDisposable, IJVMBridgeBaseStatic, IJVMBridgeBase, IJVMBridgeDefinition</code></pre>
   </div>
 
 
@@ -126,6 +126,7 @@ Class CopyOnWriteMap  <a class="header-action link-secondary" title="View source
     <dd>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.idynamicmetaobjectprovider">IDynamicMetaObjectProvider</a></div>
       <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeCore.html">IJVMBridgeCore</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeBase.html">IJVMBridgeBase</a>&gt;</div>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
       <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeBaseStatic.html">IJVMBridgeBaseStatic</a></div>
       <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeBase.html">IJVMBridgeBase</a></div>
@@ -285,16 +286,16 @@ Class CopyOnWriteMap  <a class="header-action link-secondary" title="View source
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;Map&gt;.SExecuteWithSignature&lt;TReturn, TConverter&gt;(Type, string, string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Map&gt;.SExecuteArray&lt;T&gt;(IJavaType, string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Map&gt;.SExecuteArray&lt;TArrayType&gt;(IJavaType, string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Map&gt;.SExecuteWithSignatureArray&lt;T&gt;(IJavaType, string, string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Map&gt;.SExecuteWithSignatureArray&lt;TArrayType&gt;(IJavaType, string, string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Map&gt;.SExecuteArray&lt;T&gt;(string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Map&gt;.SExecuteArray&lt;TArrayType&gt;(string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Map&gt;.SExecuteWithSignatureArray&lt;T&gt;(string, string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Map&gt;.SExecuteWithSignatureArray&lt;TArrayType&gt;(string, string, params object[])</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Map&gt;.SGetField(IJavaType, string)</a>
@@ -342,6 +343,12 @@ Class CopyOnWriteMap  <a class="header-action link-secondary" title="View source
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Map&gt;.NewWithSignature(string, params object[])</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Map&gt;.NewAndWrapsDirect&lt;TNewClass&gt;(string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Map&gt;.NewWithSignatureAndWrapsDirect&lt;TNewClass&gt;(string, string, params object[])</a>
+    </div>
+    <div>
       <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase-1.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_1_Execute__1___0___">JVMBridgeBase&lt;Map&gt;.Execute&lt;T&gt;(params T[])</a>
     </div>
     <div>
@@ -351,13 +358,25 @@ Class CopyOnWriteMap  <a class="header-action link-secondary" title="View source
       <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase-1.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_1_BridgeClazz">JVMBridgeBase&lt;Map&gt;.BridgeClazz</a>
     </div>
     <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_ReferenceEqualsJVM_MASES_JCOBridge_C2JBridge_JVMBridgeBase_MASES_JCOBridge_C2JBridge_JVMBridgeBase_">JVMBridgeBase.ReferenceEqualsJVM(JVMBridgeBase, JVMBridgeBase)</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">JVMBridgeBase.ClazzOf&lt;TClass&gt;(bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">JVMBridgeBase.ClazzOf&lt;TClass&gt;(out Exception, bool)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.ClazzOf(string, bool)</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.ClazzOf(string, out Exception, bool)</a>
+    </div>
+    <div>
       <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_RuntimeClassNameOf__1">JVMBridgeBase.RuntimeClassNameOf&lt;T&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase.RuntimeClassNameOf(Type)</a>
     </div>
     <div>
       <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_ClassNameOf__1">JVMBridgeBase.ClassNameOf&lt;T&gt;()</a>
@@ -414,7 +433,13 @@ Class CopyOnWriteMap  <a class="header-action link-secondary" title="View source
       <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_Dispose">JVMBridgeBase.Dispose()</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">JVMBridgeBase.Dispose(bool)</a>
+    </div>
+    <div>
       <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_ToString">JVMBridgeBase.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_Equals_MASES_JCOBridge_C2JBridge_IJVMBridgeBase_">JVMBridgeBase.Equals(IJVMBridgeBase)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">JVMBridgeBase.Equals(object)</a>
@@ -462,10 +487,10 @@ Class CopyOnWriteMap  <a class="header-action link-secondary" title="View source
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteWithSignature&lt;TNewClass, TReturn, TConverter&gt;(string, string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteArray&lt;T&gt;(string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteArray&lt;TArrayType&gt;(string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteWithSignatureArray&lt;T&gt;(string, string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteWithSignatureArray&lt;TArrayType&gt;(string, string, params object[])</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IGetField(string)</a>
@@ -587,7 +612,7 @@ Class CopyOnWriteMap  <a class="header-action link-secondary" title="View source
 
   <h3 id="Org_Apache_Kafka_Common_Utils_CopyOnWriteMap__ctor_Java_Util_Map_" data-uid="Org.Apache.Kafka.Common.Utils.CopyOnWriteMap.#ctor(Java.Util.Map)">
   CopyOnWriteMap(Map)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Utils/CopyOnWriteMap.cs/#L108"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Utils/CopyOnWriteMap.cs/#L120"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/utils/CopyOnWriteMap.html#%3Cinit%3E(java.util.Map)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/utils/CopyOnWriteMap.html#%3Cinit%3E(java.util.Map)</a></p>
@@ -618,9 +643,42 @@ Class CopyOnWriteMap  <a class="header-action link-secondary" title="View source
 
   <a id="Org_Apache_Kafka_Common_Utils_CopyOnWriteMap__ctor_" data-uid="Org.Apache.Kafka.Common.Utils.CopyOnWriteMap.#ctor*"></a>
 
+  <h3 id="Org_Apache_Kafka_Common_Utils_CopyOnWriteMap__ctor_MASES_JCOBridge_C2JBridge_IJVMBridgeBaseInitializer_" data-uid="Org.Apache.Kafka.Common.Utils.CopyOnWriteMap.#ctor(MASES.JCOBridge.C2JBridge.IJVMBridgeBaseInitializer)">
+  CopyOnWriteMap(IJVMBridgeBaseInitializer)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Utils/CopyOnWriteMap.cs/#L42"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Internal constructor: used internally from JCOBridge</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.&quot;)]
+public CopyOnWriteMap(IJVMBridgeBaseInitializer initializer)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>initializer</code> <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeBaseInitializer.html">IJVMBridgeBaseInitializer</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Apache_Kafka_Common_Utils_CopyOnWriteMap__ctor_" data-uid="Org.Apache.Kafka.Common.Utils.CopyOnWriteMap.#ctor*"></a>
+
   <h3 id="Org_Apache_Kafka_Common_Utils_CopyOnWriteMap__ctor_System_Object___" data-uid="Org.Apache.Kafka.Common.Utils.CopyOnWriteMap.#ctor(System.Object[])">
   CopyOnWriteMap(params object[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Utils/CopyOnWriteMap.cs/#L42"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Utils/CopyOnWriteMap.cs/#L47"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Generic constructor: it is useful for JCOBridge when there is a derived class which needs to pass arguments to the highest JVMBridgeBase class</p>
@@ -656,7 +714,7 @@ Class CopyOnWriteMap  <a class="header-action link-secondary" title="View source
 
   <h3 id="Org_Apache_Kafka_Common_Utils_CopyOnWriteMap_BridgeClassName" data-uid="Org.Apache.Kafka.Common.Utils.CopyOnWriteMap.BridgeClassName">
   BridgeClassName
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Utils/CopyOnWriteMap.cs/#L48"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Utils/CopyOnWriteMap.cs/#L54"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Java class name to be instantiated</p>
@@ -688,7 +746,7 @@ Class CopyOnWriteMap  <a class="header-action link-secondary" title="View source
 
   <h3 id="Org_Apache_Kafka_Common_Utils_CopyOnWriteMap_IsBridgeAbstract" data-uid="Org.Apache.Kafka.Common.Utils.CopyOnWriteMap.IsBridgeAbstract">
   IsBridgeAbstract
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Utils/CopyOnWriteMap.cs/#L50"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Utils/CopyOnWriteMap.cs/#L56"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.html#MASES_JCOBridge_C2JBridge_IJVMBridgeDefinition_BridgeClassName">BridgeClassName</a> is an abstract class, i.e. cannot be created an instance</p>
@@ -720,7 +778,7 @@ Class CopyOnWriteMap  <a class="header-action link-secondary" title="View source
 
   <h3 id="Org_Apache_Kafka_Common_Utils_CopyOnWriteMap_IsBridgeCloseable" data-uid="Org.Apache.Kafka.Common.Utils.CopyOnWriteMap.IsBridgeCloseable">
   IsBridgeCloseable
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Utils/CopyOnWriteMap.cs/#L52"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Utils/CopyOnWriteMap.cs/#L58"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.html#MASES_JCOBridge_C2JBridge_IJVMBridgeDefinition_BridgeClassName">BridgeClassName</a> implements Closeable</p>
@@ -752,7 +810,7 @@ Class CopyOnWriteMap  <a class="header-action link-secondary" title="View source
 
   <h3 id="Org_Apache_Kafka_Common_Utils_CopyOnWriteMap_IsBridgeInterface" data-uid="Org.Apache.Kafka.Common.Utils.CopyOnWriteMap.IsBridgeInterface">
   IsBridgeInterface
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Utils/CopyOnWriteMap.cs/#L54"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Utils/CopyOnWriteMap.cs/#L60"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.html#MASES_JCOBridge_C2JBridge_IJVMBridgeDefinition_BridgeClassName">BridgeClassName</a> is an interface, i.e. does not have any public constructor</p>
@@ -784,7 +842,7 @@ Class CopyOnWriteMap  <a class="header-action link-secondary" title="View source
 
   <h3 id="Org_Apache_Kafka_Common_Utils_CopyOnWriteMap_IsBridgeStatic" data-uid="Org.Apache.Kafka.Common.Utils.CopyOnWriteMap.IsBridgeStatic">
   IsBridgeStatic
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Utils/CopyOnWriteMap.cs/#L56"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Utils/CopyOnWriteMap.cs/#L62"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.html#MASES_JCOBridge_C2JBridge_IJVMBridgeDefinition_BridgeClassName">BridgeClassName</a> is a static class, i.e. does not have any public constructor</p>
@@ -820,7 +878,7 @@ Class CopyOnWriteMap  <a class="header-action link-secondary" title="View source
 
   <h3 id="Org_Apache_Kafka_Common_Utils_CopyOnWriteMap_Clear" data-uid="Org.Apache.Kafka.Common.Utils.CopyOnWriteMap.Clear">
   Clear()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Utils/CopyOnWriteMap.cs/#L249"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Utils/CopyOnWriteMap.cs/#L261"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/utils/CopyOnWriteMap.html#clear()">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/utils/CopyOnWriteMap.html#clear()</a></p>
@@ -847,7 +905,7 @@ Class CopyOnWriteMap  <a class="header-action link-secondary" title="View source
 
   <h3 id="Org_Apache_Kafka_Common_Utils_CopyOnWriteMap_ContainsKey_System_Object_" data-uid="Org.Apache.Kafka.Common.Utils.CopyOnWriteMap.ContainsKey(System.Object)">
   ContainsKey(object)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Utils/CopyOnWriteMap.cs/#L133"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Utils/CopyOnWriteMap.cs/#L145"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/utils/CopyOnWriteMap.html#containsKey(java.lang.Object)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/utils/CopyOnWriteMap.html#containsKey(java.lang.Object)</a></p>
@@ -886,7 +944,7 @@ Class CopyOnWriteMap  <a class="header-action link-secondary" title="View source
 
   <h3 id="Org_Apache_Kafka_Common_Utils_CopyOnWriteMap_ContainsValue_System_Object_" data-uid="Org.Apache.Kafka.Common.Utils.CopyOnWriteMap.ContainsValue(System.Object)">
   ContainsValue(object)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Utils/CopyOnWriteMap.cs/#L142"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Utils/CopyOnWriteMap.cs/#L154"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/utils/CopyOnWriteMap.html#containsValue(java.lang.Object)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/utils/CopyOnWriteMap.html#containsValue(java.lang.Object)</a></p>
@@ -925,7 +983,7 @@ Class CopyOnWriteMap  <a class="header-action link-secondary" title="View source
 
   <h3 id="Org_Apache_Kafka_Common_Utils_CopyOnWriteMap_EntrySet" data-uid="Org.Apache.Kafka.Common.Utils.CopyOnWriteMap.EntrySet">
   EntrySet()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Utils/CopyOnWriteMap.cs/#L174"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Utils/CopyOnWriteMap.cs/#L186"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/utils/CopyOnWriteMap.html#entrySet()">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/utils/CopyOnWriteMap.html#entrySet()</a></p>
@@ -958,7 +1016,7 @@ Class CopyOnWriteMap  <a class="header-action link-secondary" title="View source
 
   <h3 id="Org_Apache_Kafka_Common_Utils_CopyOnWriteMap_Get_System_Object_" data-uid="Org.Apache.Kafka.Common.Utils.CopyOnWriteMap.Get(System.Object)">
   Get(object)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Utils/CopyOnWriteMap.cs/#L266"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Utils/CopyOnWriteMap.cs/#L278"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/utils/CopyOnWriteMap.html#get(java.lang.Object)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/utils/CopyOnWriteMap.html#get(java.lang.Object)</a></p>
@@ -997,7 +1055,7 @@ Class CopyOnWriteMap  <a class="header-action link-secondary" title="View source
 
   <h3 id="Org_Apache_Kafka_Common_Utils_CopyOnWriteMap_IsEmpty" data-uid="Org.Apache.Kafka.Common.Utils.CopyOnWriteMap.IsEmpty">
   IsEmpty()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Utils/CopyOnWriteMap.cs/#L150"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Utils/CopyOnWriteMap.cs/#L162"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/utils/CopyOnWriteMap.html#isEmpty()">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/utils/CopyOnWriteMap.html#isEmpty()</a></p>
@@ -1030,7 +1088,7 @@ Class CopyOnWriteMap  <a class="header-action link-secondary" title="View source
 
   <h3 id="Org_Apache_Kafka_Common_Utils_CopyOnWriteMap_KeySet" data-uid="Org.Apache.Kafka.Common.Utils.CopyOnWriteMap.KeySet">
   KeySet()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Utils/CopyOnWriteMap.cs/#L182"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Utils/CopyOnWriteMap.cs/#L194"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/utils/CopyOnWriteMap.html#keySet()">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/utils/CopyOnWriteMap.html#keySet()</a></p>
@@ -1063,7 +1121,7 @@ Class CopyOnWriteMap  <a class="header-action link-secondary" title="View source
 
   <h3 id="Org_Apache_Kafka_Common_Utils_CopyOnWriteMap_Put_System_Object_System_Object_" data-uid="Org.Apache.Kafka.Common.Utils.CopyOnWriteMap.Put(System.Object,System.Object)">
   Put(object, object)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Utils/CopyOnWriteMap.cs/#L213"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Utils/CopyOnWriteMap.cs/#L225"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/utils/CopyOnWriteMap.html#put(java.lang.Object,java.lang.Object)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/utils/CopyOnWriteMap.html#put(java.lang.Object,java.lang.Object)</a></p>
@@ -1105,7 +1163,7 @@ Class CopyOnWriteMap  <a class="header-action link-secondary" title="View source
 
   <h3 id="Org_Apache_Kafka_Common_Utils_CopyOnWriteMap_PutAll_Java_Util_Map_" data-uid="Org.Apache.Kafka.Common.Utils.CopyOnWriteMap.PutAll(Java.Util.Map)">
   PutAll(Map)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Utils/CopyOnWriteMap.cs/#L257"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Utils/CopyOnWriteMap.cs/#L269"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/utils/CopyOnWriteMap.html#putAll(java.util.Map)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/utils/CopyOnWriteMap.html#putAll(java.util.Map)</a></p>
@@ -1138,7 +1196,7 @@ Class CopyOnWriteMap  <a class="header-action link-secondary" title="View source
 
   <h3 id="Org_Apache_Kafka_Common_Utils_CopyOnWriteMap_PutIfAbsent_System_Object_System_Object_" data-uid="Org.Apache.Kafka.Common.Utils.CopyOnWriteMap.PutIfAbsent(System.Object,System.Object)">
   PutIfAbsent(object, object)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Utils/CopyOnWriteMap.cs/#L223"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Utils/CopyOnWriteMap.cs/#L235"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/utils/CopyOnWriteMap.html#putIfAbsent(java.lang.Object,java.lang.Object)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/utils/CopyOnWriteMap.html#putIfAbsent(java.lang.Object,java.lang.Object)</a></p>
@@ -1180,7 +1238,7 @@ Class CopyOnWriteMap  <a class="header-action link-secondary" title="View source
 
   <h3 id="Org_Apache_Kafka_Common_Utils_CopyOnWriteMap_Remove_System_Object_" data-uid="Org.Apache.Kafka.Common.Utils.CopyOnWriteMap.Remove(System.Object)">
   Remove(object)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Utils/CopyOnWriteMap.cs/#L232"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Utils/CopyOnWriteMap.cs/#L244"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/utils/CopyOnWriteMap.html#remove(java.lang.Object)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/utils/CopyOnWriteMap.html#remove(java.lang.Object)</a></p>
@@ -1219,7 +1277,7 @@ Class CopyOnWriteMap  <a class="header-action link-secondary" title="View source
 
   <h3 id="Org_Apache_Kafka_Common_Utils_CopyOnWriteMap_Remove_System_Object_System_Object_" data-uid="Org.Apache.Kafka.Common.Utils.CopyOnWriteMap.Remove(System.Object,System.Object)">
   Remove(object, object)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Utils/CopyOnWriteMap.cs/#L192"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Utils/CopyOnWriteMap.cs/#L204"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/utils/CopyOnWriteMap.html#remove(java.lang.Object,java.lang.Object)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/utils/CopyOnWriteMap.html#remove(java.lang.Object,java.lang.Object)</a></p>
@@ -1261,7 +1319,7 @@ Class CopyOnWriteMap  <a class="header-action link-secondary" title="View source
 
   <h3 id="Org_Apache_Kafka_Common_Utils_CopyOnWriteMap_Replace_System_Object_System_Object_" data-uid="Org.Apache.Kafka.Common.Utils.CopyOnWriteMap.Replace(System.Object,System.Object)">
   Replace(object, object)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Utils/CopyOnWriteMap.cs/#L242"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Utils/CopyOnWriteMap.cs/#L254"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/utils/CopyOnWriteMap.html#replace(java.lang.Object,java.lang.Object)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/utils/CopyOnWriteMap.html#replace(java.lang.Object,java.lang.Object)</a></p>
@@ -1303,7 +1361,7 @@ Class CopyOnWriteMap  <a class="header-action link-secondary" title="View source
 
   <h3 id="Org_Apache_Kafka_Common_Utils_CopyOnWriteMap_Replace_System_Object_System_Object_System_Object_" data-uid="Org.Apache.Kafka.Common.Utils.CopyOnWriteMap.Replace(System.Object,System.Object,System.Object)">
   Replace(object, object, object)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Utils/CopyOnWriteMap.cs/#L203"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Utils/CopyOnWriteMap.cs/#L215"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/utils/CopyOnWriteMap.html#replace(java.lang.Object,java.lang.Object,java.lang.Object)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/utils/CopyOnWriteMap.html#replace(java.lang.Object,java.lang.Object,java.lang.Object)</a></p>
@@ -1348,7 +1406,7 @@ Class CopyOnWriteMap  <a class="header-action link-secondary" title="View source
 
   <h3 id="Org_Apache_Kafka_Common_Utils_CopyOnWriteMap_Size" data-uid="Org.Apache.Kafka.Common.Utils.CopyOnWriteMap.Size">
   Size()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Utils/CopyOnWriteMap.cs/#L158"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Utils/CopyOnWriteMap.cs/#L170"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/utils/CopyOnWriteMap.html#size()">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/utils/CopyOnWriteMap.html#size()</a></p>
@@ -1381,7 +1439,7 @@ Class CopyOnWriteMap  <a class="header-action link-secondary" title="View source
 
   <h3 id="Org_Apache_Kafka_Common_Utils_CopyOnWriteMap_Values" data-uid="Org.Apache.Kafka.Common.Utils.CopyOnWriteMap.Values">
   Values()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Utils/CopyOnWriteMap.cs/#L166"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Utils/CopyOnWriteMap.cs/#L178"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/utils/CopyOnWriteMap.html#values()">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/utils/CopyOnWriteMap.html#values()</a></p>
@@ -1414,7 +1472,7 @@ Class CopyOnWriteMap  <a class="header-action link-secondary" title="View source
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Utils/CopyOnWriteMap.cs/#L101" class="edit-link">Edit this page</a>
+          <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Common/Utils/CopyOnWriteMap.cs/#L113" class="edit-link">Edit this page</a>
         </div>
 
 

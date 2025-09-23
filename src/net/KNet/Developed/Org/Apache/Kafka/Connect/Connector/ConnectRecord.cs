@@ -51,9 +51,12 @@ namespace Org.Apache.Kafka.Connect.Connector
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
         /// </summary>
-        public ConnectRecord()
-        {
-        }
+        public ConnectRecord() { }
+        /// <summary>
+        /// Internal constructor: used internally from JCOBridge
+        /// </summary>
+        [global::System.Obsolete("This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
+        public ConnectRecord(IJVMBridgeBaseInitializer initializer) : base(initializer) { }
         /// <summary>
         /// https://www.javadoc.io/doc/org.apache.kafka/connect-api/latest/org/apache/kafka/connect/connector/ConnectRecord.html#%3Cinit%3E(java.lang.String,java.lang.Integer,org.apache.kafka.connect.data.Schema,java.lang.Object,org.apache.kafka.connect.data.Schema,java.lang.Object,java.lang.Long)
         /// </summary>
@@ -99,7 +102,7 @@ namespace Org.Apache.Kafka.Connect.Connector
         /// <summary>
         /// Value
         /// </summary>
-        public TValue Value => IExecute< TValue>("value");
+        public TValue Value => IExecute<TValue>("value");
         /// <summary>
         /// ValueSchema
         /// </summary>

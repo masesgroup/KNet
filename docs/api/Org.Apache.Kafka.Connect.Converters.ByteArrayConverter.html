@@ -89,7 +89,7 @@
 
 
   <h1 id="Org_Apache_Kafka_Connect_Converters_ByteArrayConverter" data-uid="Org.Apache.Kafka.Connect.Converters.ByteArrayConverter" class="text-break">
-Class ByteArrayConverter  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Converters/ByteArrayConverter.cs/#L64"><i class="bi bi-code-slash"></i></a>
+Class ByteArrayConverter  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Converters/ByteArrayConverter.cs/#L70"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -102,7 +102,7 @@ Class ByteArrayConverter  <a class="header-action link-secondary" title="View so
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class ByteArrayConverter : JVMBridgeBase&lt;ByteArrayConverter&gt;, IDynamicMetaObjectProvider, IJVMBridgeCore, IDisposable, IJVMBridgeBaseStatic, IJVMBridgeBase, IJVMBridgeDefinition, IVersioned</code></pre>
+    <pre><code class="lang-csharp hljs">public class ByteArrayConverter : JVMBridgeBase&lt;ByteArrayConverter&gt;, IDynamicMetaObjectProvider, IJVMBridgeCore, IEquatable&lt;IJVMBridgeBase&gt;, IDisposable, IJVMBridgeBaseStatic, IJVMBridgeBase, IJVMBridgeDefinition, IVersioned</code></pre>
   </div>
 
 
@@ -124,6 +124,7 @@ Class ByteArrayConverter  <a class="header-action link-secondary" title="View so
     <dd>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.idynamicmetaobjectprovider">IDynamicMetaObjectProvider</a></div>
       <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeCore.html">IJVMBridgeCore</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeBase.html">IJVMBridgeBase</a>&gt;</div>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
       <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeBaseStatic.html">IJVMBridgeBaseStatic</a></div>
       <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeBase.html">IJVMBridgeBase</a></div>
@@ -221,16 +222,16 @@ Class ByteArrayConverter  <a class="header-action link-secondary" title="View so
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;ByteArrayConverter&gt;.SExecuteWithSignature&lt;TReturn, TConverter&gt;(Type, string, string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;ByteArrayConverter&gt;.SExecuteArray&lt;T&gt;(IJavaType, string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;ByteArrayConverter&gt;.SExecuteArray&lt;TArrayType&gt;(IJavaType, string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;ByteArrayConverter&gt;.SExecuteWithSignatureArray&lt;T&gt;(IJavaType, string, string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;ByteArrayConverter&gt;.SExecuteWithSignatureArray&lt;TArrayType&gt;(IJavaType, string, string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;ByteArrayConverter&gt;.SExecuteArray&lt;T&gt;(string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;ByteArrayConverter&gt;.SExecuteArray&lt;TArrayType&gt;(string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;ByteArrayConverter&gt;.SExecuteWithSignatureArray&lt;T&gt;(string, string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;ByteArrayConverter&gt;.SExecuteWithSignatureArray&lt;TArrayType&gt;(string, string, params object[])</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;ByteArrayConverter&gt;.SGetField(IJavaType, string)</a>
@@ -278,6 +279,12 @@ Class ByteArrayConverter  <a class="header-action link-secondary" title="View so
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;ByteArrayConverter&gt;.NewWithSignature(string, params object[])</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;ByteArrayConverter&gt;.NewAndWrapsDirect&lt;TNewClass&gt;(string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;ByteArrayConverter&gt;.NewWithSignatureAndWrapsDirect&lt;TNewClass&gt;(string, string, params object[])</a>
+    </div>
+    <div>
       <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase-1.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_1_Execute__1___0___">JVMBridgeBase&lt;ByteArrayConverter&gt;.Execute&lt;T&gt;(params T[])</a>
     </div>
     <div>
@@ -287,13 +294,25 @@ Class ByteArrayConverter  <a class="header-action link-secondary" title="View so
       <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase-1.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_1_BridgeClazz">JVMBridgeBase&lt;ByteArrayConverter&gt;.BridgeClazz</a>
     </div>
     <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_ReferenceEqualsJVM_MASES_JCOBridge_C2JBridge_JVMBridgeBase_MASES_JCOBridge_C2JBridge_JVMBridgeBase_">JVMBridgeBase.ReferenceEqualsJVM(JVMBridgeBase, JVMBridgeBase)</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">JVMBridgeBase.ClazzOf&lt;TClass&gt;(bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">JVMBridgeBase.ClazzOf&lt;TClass&gt;(out Exception, bool)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.ClazzOf(string, bool)</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.ClazzOf(string, out Exception, bool)</a>
+    </div>
+    <div>
       <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_RuntimeClassNameOf__1">JVMBridgeBase.RuntimeClassNameOf&lt;T&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase.RuntimeClassNameOf(Type)</a>
     </div>
     <div>
       <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_ClassNameOf__1">JVMBridgeBase.ClassNameOf&lt;T&gt;()</a>
@@ -350,7 +369,13 @@ Class ByteArrayConverter  <a class="header-action link-secondary" title="View so
       <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_Dispose">JVMBridgeBase.Dispose()</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">JVMBridgeBase.Dispose(bool)</a>
+    </div>
+    <div>
       <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_ToString">JVMBridgeBase.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_Equals_MASES_JCOBridge_C2JBridge_IJVMBridgeBase_">JVMBridgeBase.Equals(IJVMBridgeBase)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">JVMBridgeBase.Equals(object)</a>
@@ -398,10 +423,10 @@ Class ByteArrayConverter  <a class="header-action link-secondary" title="View so
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteWithSignature&lt;TNewClass, TReturn, TConverter&gt;(string, string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteArray&lt;T&gt;(string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteArray&lt;TArrayType&gt;(string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteWithSignatureArray&lt;T&gt;(string, string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteWithSignatureArray&lt;TArrayType&gt;(string, string, params object[])</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IGetField(string)</a>
@@ -521,9 +546,42 @@ Class ByteArrayConverter  <a class="header-action link-secondary" title="View so
 
   <a id="Org_Apache_Kafka_Connect_Converters_ByteArrayConverter__ctor_" data-uid="Org.Apache.Kafka.Connect.Converters.ByteArrayConverter.#ctor*"></a>
 
+  <h3 id="Org_Apache_Kafka_Connect_Converters_ByteArrayConverter__ctor_MASES_JCOBridge_C2JBridge_IJVMBridgeBaseInitializer_" data-uid="Org.Apache.Kafka.Connect.Converters.ByteArrayConverter.#ctor(MASES.JCOBridge.C2JBridge.IJVMBridgeBaseInitializer)">
+  ByteArrayConverter(IJVMBridgeBaseInitializer)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Converters/ByteArrayConverter.cs/#L42"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Internal constructor: used internally from JCOBridge</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.&quot;)]
+public ByteArrayConverter(IJVMBridgeBaseInitializer initializer)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>initializer</code> <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeBaseInitializer.html">IJVMBridgeBaseInitializer</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Apache_Kafka_Connect_Converters_ByteArrayConverter__ctor_" data-uid="Org.Apache.Kafka.Connect.Converters.ByteArrayConverter.#ctor*"></a>
+
   <h3 id="Org_Apache_Kafka_Connect_Converters_ByteArrayConverter__ctor_System_Object___" data-uid="Org.Apache.Kafka.Connect.Converters.ByteArrayConverter.#ctor(System.Object[])">
   ByteArrayConverter(params object[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Converters/ByteArrayConverter.cs/#L42"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Converters/ByteArrayConverter.cs/#L47"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Generic constructor: it is useful for JCOBridge when there is a derived class which needs to pass arguments to the highest JVMBridgeBase class</p>
@@ -559,7 +617,7 @@ Class ByteArrayConverter  <a class="header-action link-secondary" title="View so
 
   <h3 id="Org_Apache_Kafka_Connect_Converters_ByteArrayConverter_BridgeClassName" data-uid="Org.Apache.Kafka.Connect.Converters.ByteArrayConverter.BridgeClassName">
   BridgeClassName
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Converters/ByteArrayConverter.cs/#L48"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Converters/ByteArrayConverter.cs/#L54"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Java class name to be instantiated</p>
@@ -591,7 +649,7 @@ Class ByteArrayConverter  <a class="header-action link-secondary" title="View so
 
   <h3 id="Org_Apache_Kafka_Connect_Converters_ByteArrayConverter_IsBridgeAbstract" data-uid="Org.Apache.Kafka.Connect.Converters.ByteArrayConverter.IsBridgeAbstract">
   IsBridgeAbstract
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Converters/ByteArrayConverter.cs/#L50"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Converters/ByteArrayConverter.cs/#L56"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.html#MASES_JCOBridge_C2JBridge_IJVMBridgeDefinition_BridgeClassName">BridgeClassName</a> is an abstract class, i.e. cannot be created an instance</p>
@@ -623,7 +681,7 @@ Class ByteArrayConverter  <a class="header-action link-secondary" title="View so
 
   <h3 id="Org_Apache_Kafka_Connect_Converters_ByteArrayConverter_IsBridgeCloseable" data-uid="Org.Apache.Kafka.Connect.Converters.ByteArrayConverter.IsBridgeCloseable">
   IsBridgeCloseable
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Converters/ByteArrayConverter.cs/#L52"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Converters/ByteArrayConverter.cs/#L58"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.html#MASES_JCOBridge_C2JBridge_IJVMBridgeDefinition_BridgeClassName">BridgeClassName</a> implements Closeable</p>
@@ -655,7 +713,7 @@ Class ByteArrayConverter  <a class="header-action link-secondary" title="View so
 
   <h3 id="Org_Apache_Kafka_Connect_Converters_ByteArrayConverter_IsBridgeInterface" data-uid="Org.Apache.Kafka.Connect.Converters.ByteArrayConverter.IsBridgeInterface">
   IsBridgeInterface
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Converters/ByteArrayConverter.cs/#L54"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Converters/ByteArrayConverter.cs/#L60"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.html#MASES_JCOBridge_C2JBridge_IJVMBridgeDefinition_BridgeClassName">BridgeClassName</a> is an interface, i.e. does not have any public constructor</p>
@@ -687,7 +745,7 @@ Class ByteArrayConverter  <a class="header-action link-secondary" title="View so
 
   <h3 id="Org_Apache_Kafka_Connect_Converters_ByteArrayConverter_IsBridgeStatic" data-uid="Org.Apache.Kafka.Connect.Converters.ByteArrayConverter.IsBridgeStatic">
   IsBridgeStatic
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Converters/ByteArrayConverter.cs/#L56"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Converters/ByteArrayConverter.cs/#L62"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.html#MASES_JCOBridge_C2JBridge_IJVMBridgeDefinition_BridgeClassName">BridgeClassName</a> is a static class, i.e. does not have any public constructor</p>
@@ -723,7 +781,7 @@ Class ByteArrayConverter  <a class="header-action link-secondary" title="View so
 
   <h3 id="Org_Apache_Kafka_Connect_Converters_ByteArrayConverter_Close" data-uid="Org.Apache.Kafka.Connect.Converters.ByteArrayConverter.Close">
   Close()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Converters/ByteArrayConverter.cs/#L150"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Converters/ByteArrayConverter.cs/#L156"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.0.0/org/apache/kafka/connect/converters/ByteArrayConverter.html#close()">https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.0.0/org/apache/kafka/connect/converters/ByteArrayConverter.html#close()</a></p>
@@ -750,7 +808,7 @@ Class ByteArrayConverter  <a class="header-action link-secondary" title="View so
 
   <h3 id="Org_Apache_Kafka_Connect_Converters_ByteArrayConverter_Config" data-uid="Org.Apache.Kafka.Connect.Converters.ByteArrayConverter.Config">
   Config()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Converters/ByteArrayConverter.cs/#L122"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Converters/ByteArrayConverter.cs/#L128"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.0.0/org/apache/kafka/connect/converters/ByteArrayConverter.html#config()">https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.0.0/org/apache/kafka/connect/converters/ByteArrayConverter.html#config()</a></p>
@@ -783,7 +841,7 @@ Class ByteArrayConverter  <a class="header-action link-secondary" title="View so
 
   <h3 id="Org_Apache_Kafka_Connect_Converters_ByteArrayConverter_Configure_Java_Util_Map_Java_Lang_String_System_Object__" data-uid="Org.Apache.Kafka.Connect.Converters.ByteArrayConverter.Configure(Java.Util.Map{Java.Lang.String,System.Object})">
   Configure(Map&lt;String, object&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Converters/ByteArrayConverter.cs/#L167"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Converters/ByteArrayConverter.cs/#L173"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.0.0/org/apache/kafka/connect/converters/ByteArrayConverter.html#configure(java.util.Map)">https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.0.0/org/apache/kafka/connect/converters/ByteArrayConverter.html#configure(java.util.Map)</a></p>
@@ -816,7 +874,7 @@ Class ByteArrayConverter  <a class="header-action link-secondary" title="View so
 
   <h3 id="Org_Apache_Kafka_Connect_Converters_ByteArrayConverter_Configure_Java_Util_Map_Java_Lang_String_System_Object__System_Boolean_" data-uid="Org.Apache.Kafka.Connect.Converters.ByteArrayConverter.Configure(Java.Util.Map{Java.Lang.String,System.Object},System.Boolean)">
   Configure(Map&lt;String, object&gt;, bool)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Converters/ByteArrayConverter.cs/#L159"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Converters/ByteArrayConverter.cs/#L165"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.0.0/org/apache/kafka/connect/converters/ByteArrayConverter.html#configure(java.util.Map,boolean)">https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.0.0/org/apache/kafka/connect/converters/ByteArrayConverter.html#configure(java.util.Map,boolean)</a></p>
@@ -852,7 +910,7 @@ Class ByteArrayConverter  <a class="header-action link-secondary" title="View so
 
   <h3 id="Org_Apache_Kafka_Connect_Converters_ByteArrayConverter_FromConnectData_Java_Lang_String_Org_Apache_Kafka_Connect_Data_Schema_System_Object_" data-uid="Org.Apache.Kafka.Connect.Converters.ByteArrayConverter.FromConnectData(Java.Lang.String,Org.Apache.Kafka.Connect.Data.Schema,System.Object)">
   FromConnectData(String, Schema, object)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Converters/ByteArrayConverter.cs/#L94"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Converters/ByteArrayConverter.cs/#L100"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.0.0/org/apache/kafka/connect/converters/ByteArrayConverter.html#fromConnectData(java.lang.String,org.apache.kafka.connect.data.Schema,java.lang.Object)">https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.0.0/org/apache/kafka/connect/converters/ByteArrayConverter.html#fromConnectData(java.lang.String,org.apache.kafka.connect.data.Schema,java.lang.Object)</a></p>
@@ -897,7 +955,7 @@ Class ByteArrayConverter  <a class="header-action link-secondary" title="View so
 
   <h3 id="Org_Apache_Kafka_Connect_Converters_ByteArrayConverter_FromConnectHeader_Java_Lang_String_Java_Lang_String_Org_Apache_Kafka_Connect_Data_Schema_System_Object_" data-uid="Org.Apache.Kafka.Connect.Converters.ByteArrayConverter.FromConnectHeader(Java.Lang.String,Java.Lang.String,Org.Apache.Kafka.Connect.Data.Schema,System.Object)">
   FromConnectHeader(String, String, Schema, object)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Converters/ByteArrayConverter.cs/#L106"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Converters/ByteArrayConverter.cs/#L112"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.0.0/org/apache/kafka/connect/converters/ByteArrayConverter.html#fromConnectHeader(java.lang.String,java.lang.String,org.apache.kafka.connect.data.Schema,java.lang.Object)">https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.0.0/org/apache/kafka/connect/converters/ByteArrayConverter.html#fromConnectHeader(java.lang.String,java.lang.String,org.apache.kafka.connect.data.Schema,java.lang.Object)</a></p>
@@ -945,7 +1003,7 @@ Class ByteArrayConverter  <a class="header-action link-secondary" title="View so
 
   <h3 id="Org_Apache_Kafka_Connect_Converters_ByteArrayConverter_ToConnectData_Java_Lang_String_System_Byte___" data-uid="Org.Apache.Kafka.Connect.Converters.ByteArrayConverter.ToConnectData(Java.Lang.String,System.Byte[])">
   ToConnectData(String, byte[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Converters/ByteArrayConverter.cs/#L132"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Converters/ByteArrayConverter.cs/#L138"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.0.0/org/apache/kafka/connect/converters/ByteArrayConverter.html#toConnectData(java.lang.String,byte[])">https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.0.0/org/apache/kafka/connect/converters/ByteArrayConverter.html#toConnectData(java.lang.String,byte[])</a></p>
@@ -987,7 +1045,7 @@ Class ByteArrayConverter  <a class="header-action link-secondary" title="View so
 
   <h3 id="Org_Apache_Kafka_Connect_Converters_ByteArrayConverter_ToConnectHeader_Java_Lang_String_Java_Lang_String_System_Byte___" data-uid="Org.Apache.Kafka.Connect.Converters.ByteArrayConverter.ToConnectHeader(Java.Lang.String,Java.Lang.String,System.Byte[])">
   ToConnectHeader(String, String, byte[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Converters/ByteArrayConverter.cs/#L143"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Converters/ByteArrayConverter.cs/#L149"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.0.0/org/apache/kafka/connect/converters/ByteArrayConverter.html#toConnectHeader(java.lang.String,java.lang.String,byte[])">https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.0.0/org/apache/kafka/connect/converters/ByteArrayConverter.html#toConnectHeader(java.lang.String,java.lang.String,byte[])</a></p>
@@ -1032,7 +1090,7 @@ Class ByteArrayConverter  <a class="header-action link-secondary" title="View so
 
   <h3 id="Org_Apache_Kafka_Connect_Converters_ByteArrayConverter_Version" data-uid="Org.Apache.Kafka.Connect.Converters.ByteArrayConverter.Version">
   Version()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Converters/ByteArrayConverter.cs/#L114"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Converters/ByteArrayConverter.cs/#L120"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.0.0/org/apache/kafka/connect/converters/ByteArrayConverter.html#version()">https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.0.0/org/apache/kafka/connect/converters/ByteArrayConverter.html#version()</a></p>
@@ -1069,7 +1127,7 @@ Class ByteArrayConverter  <a class="header-action link-secondary" title="View so
 
   <h3 id="Org_Apache_Kafka_Connect_Converters_ByteArrayConverter_op_Implicit_Org_Apache_Kafka_Connect_Converters_ByteArrayConverter__Org_Apache_Kafka_Connect_Components_Versioned" data-uid="Org.Apache.Kafka.Connect.Converters.ByteArrayConverter.op_Implicit(Org.Apache.Kafka.Connect.Converters.ByteArrayConverter)~Org.Apache.Kafka.Connect.Components.Versioned">
   implicit operator Versioned(ByteArrayConverter)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Converters/ByteArrayConverter.cs/#L74"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Converters/ByteArrayConverter.cs/#L80"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Converter from <a class="xref" href="Org.Apache.Kafka.Connect.Converters.ByteArrayConverter.html">ByteArrayConverter</a> to <a class="xref" href="Org.Apache.Kafka.Connect.Components.Versioned.html">Versioned</a></p>
@@ -1106,7 +1164,7 @@ Class ByteArrayConverter  <a class="header-action link-secondary" title="View so
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Converters/ByteArrayConverter.cs/#L64" class="edit-link">Edit this page</a>
+          <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Converters/ByteArrayConverter.cs/#L70" class="edit-link">Edit this page</a>
         </div>
 
 

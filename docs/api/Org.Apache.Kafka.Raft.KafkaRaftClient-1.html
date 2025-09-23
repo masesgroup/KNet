@@ -89,7 +89,7 @@
 
 
   <h1 id="Org_Apache_Kafka_Raft_KafkaRaftClient_1" data-uid="Org.Apache.Kafka.Raft.KafkaRaftClient`1" class="text-break">
-Class KafkaRaftClient&lt;T&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/KafkaRaftClient.cs/#L298"><i class="bi bi-code-slash"></i></a>
+Class KafkaRaftClient&lt;T&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/KafkaRaftClient.cs/#L310"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -102,7 +102,7 @@ Class KafkaRaftClient&lt;T&gt;  <a class="header-action link-secondary" title="V
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class KafkaRaftClient&lt;T&gt; : RaftClient&lt;T&gt;, IDynamicMetaObjectProvider, IJVMBridgeCore, IDisposable, IJVMBridgeBaseStatic, IJVMBridgeBase, IJVMBridgeDefinition, IRaftClient&lt;T&gt;, IAutoCloseable</code></pre>
+    <pre><code class="lang-csharp hljs">public class KafkaRaftClient&lt;T&gt; : RaftClient&lt;T&gt;, IDynamicMetaObjectProvider, IJVMBridgeCore, IEquatable&lt;IJVMBridgeBase&gt;, IDisposable, IJVMBridgeBaseStatic, IJVMBridgeBase, IJVMBridgeDefinition, IRaftClient&lt;T&gt;, IAutoCloseable</code></pre>
   </div>
 
 
@@ -131,6 +131,7 @@ Class KafkaRaftClient&lt;T&gt;  <a class="header-action link-secondary" title="V
     <dd>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.idynamicmetaobjectprovider">IDynamicMetaObjectProvider</a></div>
       <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeCore.html">IJVMBridgeCore</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeBase.html">IJVMBridgeBase</a>&gt;</div>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
       <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeBaseStatic.html">IJVMBridgeBaseStatic</a></div>
       <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeBase.html">IJVMBridgeBase</a></div>
@@ -229,16 +230,16 @@ Class KafkaRaftClient&lt;T&gt;  <a class="header-action link-secondary" title="V
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;AutoCloseable&gt;.SExecuteWithSignature&lt;TReturn, TConverter&gt;(Type, string, string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SExecuteArray&lt;T&gt;(IJavaType, string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SExecuteArray&lt;TArrayType&gt;(IJavaType, string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SExecuteWithSignatureArray&lt;T&gt;(IJavaType, string, string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SExecuteWithSignatureArray&lt;TArrayType&gt;(IJavaType, string, string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SExecuteArray&lt;T&gt;(string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SExecuteArray&lt;TArrayType&gt;(string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SExecuteWithSignatureArray&lt;T&gt;(string, string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SExecuteWithSignatureArray&lt;TArrayType&gt;(string, string, params object[])</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SGetField(IJavaType, string)</a>
@@ -286,6 +287,12 @@ Class KafkaRaftClient&lt;T&gt;  <a class="header-action link-secondary" title="V
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.NewWithSignature(string, params object[])</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.NewAndWrapsDirect&lt;TNewClass&gt;(string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.NewWithSignatureAndWrapsDirect&lt;TNewClass&gt;(string, string, params object[])</a>
+    </div>
+    <div>
       <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase-1.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_1_Execute__1___0___">JVMBridgeBase&lt;AutoCloseable&gt;.Execute&lt;T&gt;(params T[])</a>
     </div>
     <div>
@@ -295,13 +302,25 @@ Class KafkaRaftClient&lt;T&gt;  <a class="header-action link-secondary" title="V
       <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase-1.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_1_BridgeClazz">JVMBridgeBase&lt;AutoCloseable&gt;.BridgeClazz</a>
     </div>
     <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_ReferenceEqualsJVM_MASES_JCOBridge_C2JBridge_JVMBridgeBase_MASES_JCOBridge_C2JBridge_JVMBridgeBase_">JVMBridgeBase.ReferenceEqualsJVM(JVMBridgeBase, JVMBridgeBase)</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">JVMBridgeBase.ClazzOf&lt;TClass&gt;(bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">JVMBridgeBase.ClazzOf&lt;TClass&gt;(out Exception, bool)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.ClazzOf(string, bool)</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.ClazzOf(string, out Exception, bool)</a>
+    </div>
+    <div>
       <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_RuntimeClassNameOf__1">JVMBridgeBase.RuntimeClassNameOf&lt;T&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase.RuntimeClassNameOf(Type)</a>
     </div>
     <div>
       <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_ClassNameOf__1">JVMBridgeBase.ClassNameOf&lt;T&gt;()</a>
@@ -358,7 +377,13 @@ Class KafkaRaftClient&lt;T&gt;  <a class="header-action link-secondary" title="V
       <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_Dispose">JVMBridgeBase.Dispose()</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">JVMBridgeBase.Dispose(bool)</a>
+    </div>
+    <div>
       <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_ToString">JVMBridgeBase.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_Equals_MASES_JCOBridge_C2JBridge_IJVMBridgeBase_">JVMBridgeBase.Equals(IJVMBridgeBase)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">JVMBridgeBase.Equals(object)</a>
@@ -406,10 +431,10 @@ Class KafkaRaftClient&lt;T&gt;  <a class="header-action link-secondary" title="V
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteWithSignature&lt;TNewClass, TReturn, TConverter&gt;(string, string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteArray&lt;T&gt;(string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteArray&lt;TArrayType&gt;(string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteWithSignatureArray&lt;T&gt;(string, string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteWithSignatureArray&lt;TArrayType&gt;(string, string, params object[])</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IGetField(string)</a>
@@ -504,7 +529,7 @@ Class KafkaRaftClient&lt;T&gt;  <a class="header-action link-secondary" title="V
 
   <h3 id="Org_Apache_Kafka_Raft_KafkaRaftClient_1__ctor" data-uid="Org.Apache.Kafka.Raft.KafkaRaftClient`1.#ctor">
   KafkaRaftClient()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/KafkaRaftClient.cs/#L74"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/KafkaRaftClient.cs/#L80"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge</p>
@@ -529,9 +554,42 @@ Class KafkaRaftClient&lt;T&gt;  <a class="header-action link-secondary" title="V
 
   <a id="Org_Apache_Kafka_Raft_KafkaRaftClient_1__ctor_" data-uid="Org.Apache.Kafka.Raft.KafkaRaftClient`1.#ctor*"></a>
 
+  <h3 id="Org_Apache_Kafka_Raft_KafkaRaftClient_1__ctor_MASES_JCOBridge_C2JBridge_IJVMBridgeBaseInitializer_" data-uid="Org.Apache.Kafka.Raft.KafkaRaftClient`1.#ctor(MASES.JCOBridge.C2JBridge.IJVMBridgeBaseInitializer)">
+  KafkaRaftClient(IJVMBridgeBaseInitializer)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/KafkaRaftClient.cs/#L84"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Internal constructor: used internally from JCOBridge</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.&quot;)]
+public KafkaRaftClient(IJVMBridgeBaseInitializer initializer)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>initializer</code> <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeBaseInitializer.html">IJVMBridgeBaseInitializer</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Apache_Kafka_Raft_KafkaRaftClient_1__ctor_" data-uid="Org.Apache.Kafka.Raft.KafkaRaftClient`1.#ctor*"></a>
+
   <h3 id="Org_Apache_Kafka_Raft_KafkaRaftClient_1__ctor_System_Object___" data-uid="Org.Apache.Kafka.Raft.KafkaRaftClient`1.#ctor(System.Object[])">
   KafkaRaftClient(params object[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/KafkaRaftClient.cs/#L78"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/KafkaRaftClient.cs/#L89"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Generic constructor: it is useful for JCOBridge when there is a derived class which needs to pass arguments to the highest JVMBridgeBase class</p>
@@ -567,7 +625,7 @@ Class KafkaRaftClient&lt;T&gt;  <a class="header-action link-secondary" title="V
 
   <h3 id="Org_Apache_Kafka_Raft_KafkaRaftClient_1_BridgeClassName" data-uid="Org.Apache.Kafka.Raft.KafkaRaftClient`1.BridgeClassName">
   BridgeClassName
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/KafkaRaftClient.cs/#L84"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/KafkaRaftClient.cs/#L96"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Java class name to be instantiated</p>
@@ -599,7 +657,7 @@ Class KafkaRaftClient&lt;T&gt;  <a class="header-action link-secondary" title="V
 
   <h3 id="Org_Apache_Kafka_Raft_KafkaRaftClient_1_IsBridgeAbstract" data-uid="Org.Apache.Kafka.Raft.KafkaRaftClient`1.IsBridgeAbstract">
   IsBridgeAbstract
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/KafkaRaftClient.cs/#L86"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/KafkaRaftClient.cs/#L98"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.html#MASES_JCOBridge_C2JBridge_IJVMBridgeDefinition_BridgeClassName">BridgeClassName</a> is an abstract class, i.e. cannot be created an instance</p>
@@ -631,7 +689,7 @@ Class KafkaRaftClient&lt;T&gt;  <a class="header-action link-secondary" title="V
 
   <h3 id="Org_Apache_Kafka_Raft_KafkaRaftClient_1_IsBridgeCloseable" data-uid="Org.Apache.Kafka.Raft.KafkaRaftClient`1.IsBridgeCloseable">
   IsBridgeCloseable
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/KafkaRaftClient.cs/#L88"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/KafkaRaftClient.cs/#L100"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.html#MASES_JCOBridge_C2JBridge_IJVMBridgeDefinition_BridgeClassName">BridgeClassName</a> implements Closeable</p>
@@ -663,7 +721,7 @@ Class KafkaRaftClient&lt;T&gt;  <a class="header-action link-secondary" title="V
 
   <h3 id="Org_Apache_Kafka_Raft_KafkaRaftClient_1_IsBridgeInterface" data-uid="Org.Apache.Kafka.Raft.KafkaRaftClient`1.IsBridgeInterface">
   IsBridgeInterface
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/KafkaRaftClient.cs/#L90"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/KafkaRaftClient.cs/#L102"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.html#MASES_JCOBridge_C2JBridge_IJVMBridgeDefinition_BridgeClassName">BridgeClassName</a> is an interface, i.e. does not have any public constructor</p>
@@ -695,7 +753,7 @@ Class KafkaRaftClient&lt;T&gt;  <a class="header-action link-secondary" title="V
 
   <h3 id="Org_Apache_Kafka_Raft_KafkaRaftClient_1_IsBridgeStatic" data-uid="Org.Apache.Kafka.Raft.KafkaRaftClient`1.IsBridgeStatic">
   IsBridgeStatic
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/KafkaRaftClient.cs/#L92"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/KafkaRaftClient.cs/#L104"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.html#MASES_JCOBridge_C2JBridge_IJVMBridgeDefinition_BridgeClassName">BridgeClassName</a> is a static class, i.e. does not have any public constructor</p>
@@ -727,7 +785,7 @@ Class KafkaRaftClient&lt;T&gt;  <a class="header-action link-secondary" title="V
 
   <h3 id="Org_Apache_Kafka_Raft_KafkaRaftClient_1_MAX_BATCH_SIZE_BYTES" data-uid="Org.Apache.Kafka.Raft.KafkaRaftClient`1.MAX_BATCH_SIZE_BYTES">
   MAX_BATCH_SIZE_BYTES
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/KafkaRaftClient.cs/#L316"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/KafkaRaftClient.cs/#L328"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/KafkaRaftClient.html#MAX_BATCH_SIZE_BYTES">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/KafkaRaftClient.html#MAX_BATCH_SIZE_BYTES</a></p>
@@ -759,7 +817,7 @@ Class KafkaRaftClient&lt;T&gt;  <a class="header-action link-secondary" title="V
 
   <h3 id="Org_Apache_Kafka_Raft_KafkaRaftClient_1_MAX_FETCH_SIZE_BYTES" data-uid="Org.Apache.Kafka.Raft.KafkaRaftClient`1.MAX_FETCH_SIZE_BYTES">
   MAX_FETCH_SIZE_BYTES
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/KafkaRaftClient.cs/#L322"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/KafkaRaftClient.cs/#L334"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/KafkaRaftClient.html#MAX_FETCH_SIZE_BYTES">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/KafkaRaftClient.html#MAX_FETCH_SIZE_BYTES</a></p>
@@ -791,7 +849,7 @@ Class KafkaRaftClient&lt;T&gt;  <a class="header-action link-secondary" title="V
 
   <h3 id="Org_Apache_Kafka_Raft_KafkaRaftClient_1_MAX_FETCH_WAIT_MS" data-uid="Org.Apache.Kafka.Raft.KafkaRaftClient`1.MAX_FETCH_WAIT_MS">
   MAX_FETCH_WAIT_MS
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/KafkaRaftClient.cs/#L328"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/KafkaRaftClient.cs/#L340"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/KafkaRaftClient.html#MAX_FETCH_WAIT_MS">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/KafkaRaftClient.html#MAX_FETCH_WAIT_MS</a></p>
@@ -827,7 +885,7 @@ Class KafkaRaftClient&lt;T&gt;  <a class="header-action link-secondary" title="V
 
   <h3 id="Org_Apache_Kafka_Raft_KafkaRaftClient_1_Close" data-uid="Org.Apache.Kafka.Raft.KafkaRaftClient`1.Close">
   Close()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/KafkaRaftClient.cs/#L427"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/KafkaRaftClient.cs/#L439"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/KafkaRaftClient.html#close()">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/KafkaRaftClient.html#close()</a></p>
@@ -854,7 +912,7 @@ Class KafkaRaftClient&lt;T&gt;  <a class="header-action link-secondary" title="V
 
   <h3 id="Org_Apache_Kafka_Raft_KafkaRaftClient_1_CreateSnapshot_Org_Apache_Kafka_Raft_OffsetAndEpoch_System_Int64_" data-uid="Org.Apache.Kafka.Raft.KafkaRaftClient`1.CreateSnapshot(Org.Apache.Kafka.Raft.OffsetAndEpoch,System.Int64)">
   CreateSnapshot(OffsetAndEpoch, long)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/KafkaRaftClient.cs/#L378"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/KafkaRaftClient.cs/#L390"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/KafkaRaftClient.html#createSnapshot(org.apache.kafka.raft.OffsetAndEpoch,long)">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/KafkaRaftClient.html#createSnapshot(org.apache.kafka.raft.OffsetAndEpoch,long)</a></p>
@@ -896,7 +954,7 @@ Class KafkaRaftClient&lt;T&gt;  <a class="header-action link-secondary" title="V
 
   <h3 id="Org_Apache_Kafka_Raft_KafkaRaftClient_1_Handle_Org_Apache_Kafka_Raft_RaftRequest_Inbound_" data-uid="Org.Apache.Kafka.Raft.KafkaRaftClient`1.Handle(Org.Apache.Kafka.Raft.RaftRequest.Inbound)">
   Handle(Inbound)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/KafkaRaftClient.cs/#L435"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/KafkaRaftClient.cs/#L447"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/KafkaRaftClient.html#handle(org.apache.kafka.raft.RaftRequest.Inbound)">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/KafkaRaftClient.html#handle(org.apache.kafka.raft.RaftRequest.Inbound)</a></p>
@@ -929,7 +987,7 @@ Class KafkaRaftClient&lt;T&gt;  <a class="header-action link-secondary" title="V
 
   <h3 id="Org_Apache_Kafka_Raft_KafkaRaftClient_1_HighWatermark" data-uid="Org.Apache.Kafka.Raft.KafkaRaftClient`1.HighWatermark">
   HighWatermark()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/KafkaRaftClient.cs/#L394"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/KafkaRaftClient.cs/#L406"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/KafkaRaftClient.html#highWatermark()">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/KafkaRaftClient.html#highWatermark()</a></p>
@@ -962,7 +1020,7 @@ Class KafkaRaftClient&lt;T&gt;  <a class="header-action link-secondary" title="V
 
   <h3 id="Org_Apache_Kafka_Raft_KafkaRaftClient_1_Initialize_Java_Util_Map_Java_Lang_Integer_Java_Net_InetSocketAddress__Org_Apache_Kafka_Raft_QuorumStateStore_Org_Apache_Kafka_Common_Metrics_Metrics_Org_Apache_Kafka_Raft_ExternalKRaftMetrics_" data-uid="Org.Apache.Kafka.Raft.KafkaRaftClient`1.Initialize(Java.Util.Map{Java.Lang.Integer,Java.Net.InetSocketAddress},Org.Apache.Kafka.Raft.QuorumStateStore,Org.Apache.Kafka.Common.Metrics.Metrics,Org.Apache.Kafka.Raft.ExternalKRaftMetrics)">
   Initialize(Map&lt;Integer, InetSocketAddress&gt;, QuorumStateStore, Metrics, ExternalKRaftMetrics)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/KafkaRaftClient.cs/#L446"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/KafkaRaftClient.cs/#L458"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/KafkaRaftClient.html#initialize(java.util.Map,org.apache.kafka.raft.QuorumStateStore,org.apache.kafka.common.metrics.Metrics,org.apache.kafka.raft.ExternalKRaftMetrics)">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/KafkaRaftClient.html#initialize(java.util.Map,org.apache.kafka.raft.QuorumStateStore,org.apache.kafka.common.metrics.Metrics,org.apache.kafka.raft.ExternalKRaftMetrics)</a></p>
@@ -1004,7 +1062,7 @@ Class KafkaRaftClient&lt;T&gt;  <a class="header-action link-secondary" title="V
 
   <h3 id="Org_Apache_Kafka_Raft_KafkaRaftClient_1_IsRunning" data-uid="Org.Apache.Kafka.Raft.KafkaRaftClient`1.IsRunning">
   IsRunning()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/KafkaRaftClient.cs/#L343"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/KafkaRaftClient.cs/#L355"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/KafkaRaftClient.html#isRunning()">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/KafkaRaftClient.html#isRunning()</a></p>
@@ -1037,7 +1095,7 @@ Class KafkaRaftClient&lt;T&gt;  <a class="header-action link-secondary" title="V
 
   <h3 id="Org_Apache_Kafka_Raft_KafkaRaftClient_1_IsShuttingDown" data-uid="Org.Apache.Kafka.Raft.KafkaRaftClient`1.IsShuttingDown">
   IsShuttingDown()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/KafkaRaftClient.cs/#L351"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/KafkaRaftClient.cs/#L363"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/KafkaRaftClient.html#isShuttingDown()">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/KafkaRaftClient.html#isShuttingDown()</a></p>
@@ -1070,7 +1128,7 @@ Class KafkaRaftClient&lt;T&gt;  <a class="header-action link-secondary" title="V
 
   <h3 id="Org_Apache_Kafka_Raft_KafkaRaftClient_1_LatestSnapshotId" data-uid="Org.Apache.Kafka.Raft.KafkaRaftClient`1.LatestSnapshotId">
   LatestSnapshotId()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/KafkaRaftClient.cs/#L368"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/KafkaRaftClient.cs/#L380"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/KafkaRaftClient.html#latestSnapshotId()">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/KafkaRaftClient.html#latestSnapshotId()</a></p>
@@ -1103,7 +1161,7 @@ Class KafkaRaftClient&lt;T&gt;  <a class="header-action link-secondary" title="V
 
   <h3 id="Org_Apache_Kafka_Raft_KafkaRaftClient_1_LeaderAndEpoch" data-uid="Org.Apache.Kafka.Raft.KafkaRaftClient`1.LeaderAndEpoch">
   LeaderAndEpoch()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/KafkaRaftClient.cs/#L420"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/KafkaRaftClient.cs/#L432"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/KafkaRaftClient.html#leaderAndEpoch()">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/KafkaRaftClient.html#leaderAndEpoch()</a></p>
@@ -1136,7 +1194,7 @@ Class KafkaRaftClient&lt;T&gt;  <a class="header-action link-secondary" title="V
 
   <h3 id="Org_Apache_Kafka_Raft_KafkaRaftClient_1_LogEndOffset" data-uid="Org.Apache.Kafka.Raft.KafkaRaftClient`1.LogEndOffset">
   LogEndOffset()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/KafkaRaftClient.cs/#L402"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/KafkaRaftClient.cs/#L414"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/KafkaRaftClient.html#logEndOffset()">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/KafkaRaftClient.html#logEndOffset()</a></p>
@@ -1169,7 +1227,7 @@ Class KafkaRaftClient&lt;T&gt;  <a class="header-action link-secondary" title="V
 
   <h3 id="Org_Apache_Kafka_Raft_KafkaRaftClient_1_NodeId" data-uid="Org.Apache.Kafka.Raft.KafkaRaftClient`1.NodeId">
   NodeId()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/KafkaRaftClient.cs/#L386"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/KafkaRaftClient.cs/#L398"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/KafkaRaftClient.html#nodeId()">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/KafkaRaftClient.html#nodeId()</a></p>
@@ -1202,7 +1260,7 @@ Class KafkaRaftClient&lt;T&gt;  <a class="header-action link-secondary" title="V
 
   <h3 id="Org_Apache_Kafka_Raft_KafkaRaftClient_1_Poll" data-uid="Org.Apache.Kafka.Raft.KafkaRaftClient`1.Poll">
   Poll()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/KafkaRaftClient.cs/#L453"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/KafkaRaftClient.cs/#L465"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/KafkaRaftClient.html#poll()">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/KafkaRaftClient.html#poll()</a></p>
@@ -1229,7 +1287,7 @@ Class KafkaRaftClient&lt;T&gt;  <a class="header-action link-secondary" title="V
 
   <h3 id="Org_Apache_Kafka_Raft_KafkaRaftClient_1_PrepareAppend_System_Int32_Java_Util_List__0__" data-uid="Org.Apache.Kafka.Raft.KafkaRaftClient`1.PrepareAppend(System.Int32,Java.Util.List{`0})">
   PrepareAppend(int, List&lt;T&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/KafkaRaftClient.cs/#L412"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/KafkaRaftClient.cs/#L424"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/KafkaRaftClient.html#prepareAppend(int,java.util.List)">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/KafkaRaftClient.html#prepareAppend(int,java.util.List)</a></p>
@@ -1271,7 +1329,7 @@ Class KafkaRaftClient&lt;T&gt;  <a class="header-action link-secondary" title="V
 
   <h3 id="Org_Apache_Kafka_Raft_KafkaRaftClient_1_Register_Org_Apache_Kafka_Raft_RaftClient_Listener__0__" data-uid="Org.Apache.Kafka.Raft.KafkaRaftClient`1.Register(Org.Apache.Kafka.Raft.RaftClient.Listener{`0})">
   Register(Listener&lt;T&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/KafkaRaftClient.cs/#L461"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/KafkaRaftClient.cs/#L473"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/KafkaRaftClient.html#register(org.apache.kafka.raft.RaftClient.Listener)">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/KafkaRaftClient.html#register(org.apache.kafka.raft.RaftClient.Listener)</a></p>
@@ -1304,7 +1362,7 @@ Class KafkaRaftClient&lt;T&gt;  <a class="header-action link-secondary" title="V
 
   <h3 id="Org_Apache_Kafka_Raft_KafkaRaftClient_1_Resign_System_Int32_" data-uid="Org.Apache.Kafka.Raft.KafkaRaftClient`1.Resign(System.Int32)">
   Resign(int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/KafkaRaftClient.cs/#L469"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/KafkaRaftClient.cs/#L481"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/KafkaRaftClient.html#resign(int)">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/KafkaRaftClient.html#resign(int)</a></p>
@@ -1337,7 +1395,7 @@ Class KafkaRaftClient&lt;T&gt;  <a class="header-action link-secondary" title="V
 
   <h3 id="Org_Apache_Kafka_Raft_KafkaRaftClient_1_SchedulePreparedAppend" data-uid="Org.Apache.Kafka.Raft.KafkaRaftClient`1.SchedulePreparedAppend">
   SchedulePreparedAppend()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/KafkaRaftClient.cs/#L476"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/KafkaRaftClient.cs/#L488"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/KafkaRaftClient.html#schedulePreparedAppend()">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/KafkaRaftClient.html#schedulePreparedAppend()</a></p>
@@ -1364,7 +1422,7 @@ Class KafkaRaftClient&lt;T&gt;  <a class="header-action link-secondary" title="V
 
   <h3 id="Org_Apache_Kafka_Raft_KafkaRaftClient_1_Shutdown_System_Int32_" data-uid="Org.Apache.Kafka.Raft.KafkaRaftClient`1.Shutdown(System.Int32)">
   Shutdown(int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/KafkaRaftClient.cs/#L360"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/KafkaRaftClient.cs/#L372"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/KafkaRaftClient.html#shutdown(int)">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/KafkaRaftClient.html#shutdown(int)</a></p>
@@ -1403,7 +1461,7 @@ Class KafkaRaftClient&lt;T&gt;  <a class="header-action link-secondary" title="V
 
   <h3 id="Org_Apache_Kafka_Raft_KafkaRaftClient_1_Unregister_Org_Apache_Kafka_Raft_RaftClient_Listener__0__" data-uid="Org.Apache.Kafka.Raft.KafkaRaftClient`1.Unregister(Org.Apache.Kafka.Raft.RaftClient.Listener{`0})">
   Unregister(Listener&lt;T&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/KafkaRaftClient.cs/#L484"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/KafkaRaftClient.cs/#L496"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/KafkaRaftClient.html#unregister(org.apache.kafka.raft.RaftClient.Listener)">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.0.0/org/apache/kafka/raft/KafkaRaftClient.html#unregister(org.apache.kafka.raft.RaftClient.Listener)</a></p>
@@ -1440,7 +1498,7 @@ Class KafkaRaftClient&lt;T&gt;  <a class="header-action link-secondary" title="V
 
   <h3 id="Org_Apache_Kafka_Raft_KafkaRaftClient_1_op_Implicit_Org_Apache_Kafka_Raft_KafkaRaftClient__0___Org_Apache_Kafka_Raft_KafkaRaftClient" data-uid="Org.Apache.Kafka.Raft.KafkaRaftClient`1.op_Implicit(Org.Apache.Kafka.Raft.KafkaRaftClient{`0})~Org.Apache.Kafka.Raft.KafkaRaftClient">
   implicit operator KafkaRaftClient(KafkaRaftClient&lt;T&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/KafkaRaftClient.cs/#L308"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/KafkaRaftClient.cs/#L320"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Converter from <a class="xref" href="Org.Apache.Kafka.Raft.KafkaRaftClient-1.html">KafkaRaftClient&lt;T&gt;</a> to <a class="xref" href="Org.Apache.Kafka.Raft.KafkaRaftClient.html">KafkaRaftClient</a></p>
@@ -1477,7 +1535,7 @@ Class KafkaRaftClient&lt;T&gt;  <a class="header-action link-secondary" title="V
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/KafkaRaftClient.cs/#L298" class="edit-link">Edit this page</a>
+          <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Raft/KafkaRaftClient.cs/#L310" class="edit-link">Edit this page</a>
         </div>
 
 

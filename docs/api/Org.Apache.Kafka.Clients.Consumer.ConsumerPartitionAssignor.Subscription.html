@@ -89,7 +89,7 @@
 
 
   <h1 id="Org_Apache_Kafka_Clients_Consumer_ConsumerPartitionAssignor_Subscription" data-uid="Org.Apache.Kafka.Clients.Consumer.ConsumerPartitionAssignor.Subscription" class="text-break">
-Class ConsumerPartitionAssignor.Subscription  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerPartitionAssignor.cs/#L751"><i class="bi bi-code-slash"></i></a>
+Class ConsumerPartitionAssignor.Subscription  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerPartitionAssignor.cs/#L798"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -102,7 +102,7 @@ Class ConsumerPartitionAssignor.Subscription  <a class="header-action link-secon
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class ConsumerPartitionAssignor.Subscription : JVMBridgeBase&lt;ConsumerPartitionAssignor.Subscription&gt;, IDynamicMetaObjectProvider, IJVMBridgeCore, IDisposable, IJVMBridgeBaseStatic, IJVMBridgeBase, IJVMBridgeDefinition</code></pre>
+    <pre><code class="lang-csharp hljs">public class ConsumerPartitionAssignor.Subscription : JVMBridgeBase&lt;ConsumerPartitionAssignor.Subscription&gt;, IDynamicMetaObjectProvider, IJVMBridgeCore, IEquatable&lt;IJVMBridgeBase&gt;, IDisposable, IJVMBridgeBaseStatic, IJVMBridgeBase, IJVMBridgeDefinition</code></pre>
   </div>
 
 
@@ -124,6 +124,7 @@ Class ConsumerPartitionAssignor.Subscription  <a class="header-action link-secon
     <dd>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.idynamicmetaobjectprovider">IDynamicMetaObjectProvider</a></div>
       <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeCore.html">IJVMBridgeCore</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeBase.html">IJVMBridgeBase</a>&gt;</div>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
       <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeBaseStatic.html">IJVMBridgeBaseStatic</a></div>
       <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeBase.html">IJVMBridgeBase</a></div>
@@ -220,16 +221,16 @@ Class ConsumerPartitionAssignor.Subscription  <a class="header-action link-secon
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;ConsumerPartitionAssignor.Subscription&gt;.SExecuteWithSignature&lt;TReturn, TConverter&gt;(Type, string, string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;ConsumerPartitionAssignor.Subscription&gt;.SExecuteArray&lt;T&gt;(IJavaType, string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;ConsumerPartitionAssignor.Subscription&gt;.SExecuteArray&lt;TArrayType&gt;(IJavaType, string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;ConsumerPartitionAssignor.Subscription&gt;.SExecuteWithSignatureArray&lt;T&gt;(IJavaType, string, string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;ConsumerPartitionAssignor.Subscription&gt;.SExecuteWithSignatureArray&lt;TArrayType&gt;(IJavaType, string, string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;ConsumerPartitionAssignor.Subscription&gt;.SExecuteArray&lt;T&gt;(string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;ConsumerPartitionAssignor.Subscription&gt;.SExecuteArray&lt;TArrayType&gt;(string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;ConsumerPartitionAssignor.Subscription&gt;.SExecuteWithSignatureArray&lt;T&gt;(string, string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;ConsumerPartitionAssignor.Subscription&gt;.SExecuteWithSignatureArray&lt;TArrayType&gt;(string, string, params object[])</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;ConsumerPartitionAssignor.Subscription&gt;.SGetField(IJavaType, string)</a>
@@ -277,6 +278,12 @@ Class ConsumerPartitionAssignor.Subscription  <a class="header-action link-secon
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;ConsumerPartitionAssignor.Subscription&gt;.NewWithSignature(string, params object[])</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;ConsumerPartitionAssignor.Subscription&gt;.NewAndWrapsDirect&lt;TNewClass&gt;(string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;ConsumerPartitionAssignor.Subscription&gt;.NewWithSignatureAndWrapsDirect&lt;TNewClass&gt;(string, string, params object[])</a>
+    </div>
+    <div>
       <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase-1.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_1_Execute__1___0___">JVMBridgeBase&lt;ConsumerPartitionAssignor.Subscription&gt;.Execute&lt;T&gt;(params T[])</a>
     </div>
     <div>
@@ -286,13 +293,25 @@ Class ConsumerPartitionAssignor.Subscription  <a class="header-action link-secon
       <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase-1.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_1_BridgeClazz">JVMBridgeBase&lt;ConsumerPartitionAssignor.Subscription&gt;.BridgeClazz</a>
     </div>
     <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_ReferenceEqualsJVM_MASES_JCOBridge_C2JBridge_JVMBridgeBase_MASES_JCOBridge_C2JBridge_JVMBridgeBase_">JVMBridgeBase.ReferenceEqualsJVM(JVMBridgeBase, JVMBridgeBase)</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">JVMBridgeBase.ClazzOf&lt;TClass&gt;(bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">JVMBridgeBase.ClazzOf&lt;TClass&gt;(out Exception, bool)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.ClazzOf(string, bool)</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.ClazzOf(string, out Exception, bool)</a>
+    </div>
+    <div>
       <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_RuntimeClassNameOf__1">JVMBridgeBase.RuntimeClassNameOf&lt;T&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase.RuntimeClassNameOf(Type)</a>
     </div>
     <div>
       <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_ClassNameOf__1">JVMBridgeBase.ClassNameOf&lt;T&gt;()</a>
@@ -349,7 +368,13 @@ Class ConsumerPartitionAssignor.Subscription  <a class="header-action link-secon
       <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_Dispose">JVMBridgeBase.Dispose()</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">JVMBridgeBase.Dispose(bool)</a>
+    </div>
+    <div>
       <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_ToString">JVMBridgeBase.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_Equals_MASES_JCOBridge_C2JBridge_IJVMBridgeBase_">JVMBridgeBase.Equals(IJVMBridgeBase)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">JVMBridgeBase.Equals(object)</a>
@@ -397,10 +422,10 @@ Class ConsumerPartitionAssignor.Subscription  <a class="header-action link-secon
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteWithSignature&lt;TNewClass, TReturn, TConverter&gt;(string, string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteArray&lt;T&gt;(string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteArray&lt;TArrayType&gt;(string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteWithSignatureArray&lt;T&gt;(string, string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteWithSignatureArray&lt;TArrayType&gt;(string, string, params object[])</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IGetField(string)</a>
@@ -495,7 +520,7 @@ Class ConsumerPartitionAssignor.Subscription  <a class="header-action link-secon
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_ConsumerPartitionAssignor_Subscription__ctor" data-uid="Org.Apache.Kafka.Clients.Consumer.ConsumerPartitionAssignor.Subscription.#ctor">
   Subscription()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerPartitionAssignor.cs/#L201"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerPartitionAssignor.cs/#L231"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge</p>
@@ -522,7 +547,7 @@ Class ConsumerPartitionAssignor.Subscription  <a class="header-action link-secon
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_ConsumerPartitionAssignor_Subscription__ctor_Java_Util_List_Java_Lang_String__" data-uid="Org.Apache.Kafka.Clients.Consumer.ConsumerPartitionAssignor.Subscription.#ctor(Java.Util.List{Java.Lang.String})">
   Subscription(List&lt;String&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerPartitionAssignor.cs/#L789"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerPartitionAssignor.cs/#L836"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/ConsumerPartitionAssignor.Subscription.html#%3Cinit%3E(java.util.List)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/ConsumerPartitionAssignor.Subscription.html#%3Cinit%3E(java.util.List)</a></p>
@@ -555,7 +580,7 @@ Class ConsumerPartitionAssignor.Subscription  <a class="header-action link-secon
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_ConsumerPartitionAssignor_Subscription__ctor_Java_Util_List_Java_Lang_String__Java_Nio_ByteBuffer_" data-uid="Org.Apache.Kafka.Clients.Consumer.ConsumerPartitionAssignor.Subscription.#ctor(Java.Util.List{Java.Lang.String},Java.Nio.ByteBuffer)">
   Subscription(List&lt;String&gt;, ByteBuffer)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerPartitionAssignor.cs/#L781"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerPartitionAssignor.cs/#L828"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/ConsumerPartitionAssignor.Subscription.html#%3Cinit%3E(java.util.List,java.nio.ByteBuffer)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/ConsumerPartitionAssignor.Subscription.html#%3Cinit%3E(java.util.List,java.nio.ByteBuffer)</a></p>
@@ -591,7 +616,7 @@ Class ConsumerPartitionAssignor.Subscription  <a class="header-action link-secon
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_ConsumerPartitionAssignor_Subscription__ctor_Java_Util_List_Java_Lang_String__Java_Nio_ByteBuffer_Java_Util_List_Org_Apache_Kafka_Common_TopicPartition__" data-uid="Org.Apache.Kafka.Clients.Consumer.ConsumerPartitionAssignor.Subscription.#ctor(Java.Util.List{Java.Lang.String},Java.Nio.ByteBuffer,Java.Util.List{Org.Apache.Kafka.Common.TopicPartition})">
   Subscription(List&lt;String&gt;, ByteBuffer, List&lt;TopicPartition&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerPartitionAssignor.cs/#L772"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerPartitionAssignor.cs/#L819"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/ConsumerPartitionAssignor.Subscription.html#%3Cinit%3E(java.util.List,java.nio.ByteBuffer,java.util.List)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/ConsumerPartitionAssignor.Subscription.html#%3Cinit%3E(java.util.List,java.nio.ByteBuffer,java.util.List)</a></p>
@@ -630,7 +655,7 @@ Class ConsumerPartitionAssignor.Subscription  <a class="header-action link-secon
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_ConsumerPartitionAssignor_Subscription__ctor_Java_Util_List_Java_Lang_String__Java_Nio_ByteBuffer_Java_Util_List_Org_Apache_Kafka_Common_TopicPartition__System_Int32_Java_Util_Optional_Java_Lang_String__" data-uid="Org.Apache.Kafka.Clients.Consumer.ConsumerPartitionAssignor.Subscription.#ctor(Java.Util.List{Java.Lang.String},Java.Nio.ByteBuffer,Java.Util.List{Org.Apache.Kafka.Common.TopicPartition},System.Int32,Java.Util.Optional{Java.Lang.String})">
   Subscription(List&lt;String&gt;, ByteBuffer, List&lt;TopicPartition&gt;, int, Optional&lt;String&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerPartitionAssignor.cs/#L762"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerPartitionAssignor.cs/#L809"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/ConsumerPartitionAssignor.Subscription.html#%3Cinit%3E(java.util.List,java.nio.ByteBuffer,java.util.List,int,java.util.Optional)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/ConsumerPartitionAssignor.Subscription.html#%3Cinit%3E(java.util.List,java.nio.ByteBuffer,java.util.List,int,java.util.Optional)</a></p>
@@ -673,9 +698,42 @@ Class ConsumerPartitionAssignor.Subscription  <a class="header-action link-secon
 
   <a id="Org_Apache_Kafka_Clients_Consumer_ConsumerPartitionAssignor_Subscription__ctor_" data-uid="Org.Apache.Kafka.Clients.Consumer.ConsumerPartitionAssignor.Subscription.#ctor*"></a>
 
+  <h3 id="Org_Apache_Kafka_Clients_Consumer_ConsumerPartitionAssignor_Subscription__ctor_MASES_JCOBridge_C2JBridge_IJVMBridgeBaseInitializer_" data-uid="Org.Apache.Kafka.Clients.Consumer.ConsumerPartitionAssignor.Subscription.#ctor(MASES.JCOBridge.C2JBridge.IJVMBridgeBaseInitializer)">
+  Subscription(IJVMBridgeBaseInitializer)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerPartitionAssignor.cs/#L235"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Internal constructor: used internally from JCOBridge</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.&quot;)]
+public Subscription(IJVMBridgeBaseInitializer initializer)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>initializer</code> <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeBaseInitializer.html">IJVMBridgeBaseInitializer</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Apache_Kafka_Clients_Consumer_ConsumerPartitionAssignor_Subscription__ctor_" data-uid="Org.Apache.Kafka.Clients.Consumer.ConsumerPartitionAssignor.Subscription.#ctor*"></a>
+
   <h3 id="Org_Apache_Kafka_Clients_Consumer_ConsumerPartitionAssignor_Subscription__ctor_System_Object___" data-uid="Org.Apache.Kafka.Clients.Consumer.ConsumerPartitionAssignor.Subscription.#ctor(System.Object[])">
   Subscription(params object[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerPartitionAssignor.cs/#L205"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerPartitionAssignor.cs/#L240"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Generic constructor: it is useful for JCOBridge when there is a derived class which needs to pass arguments to the highest JVMBridgeBase class</p>
@@ -711,7 +769,7 @@ Class ConsumerPartitionAssignor.Subscription  <a class="header-action link-secon
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_ConsumerPartitionAssignor_Subscription_BridgeClassName" data-uid="Org.Apache.Kafka.Clients.Consumer.ConsumerPartitionAssignor.Subscription.BridgeClassName">
   BridgeClassName
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerPartitionAssignor.cs/#L211"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerPartitionAssignor.cs/#L247"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Java class name to be instantiated</p>
@@ -743,7 +801,7 @@ Class ConsumerPartitionAssignor.Subscription  <a class="header-action link-secon
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_ConsumerPartitionAssignor_Subscription_IsBridgeAbstract" data-uid="Org.Apache.Kafka.Clients.Consumer.ConsumerPartitionAssignor.Subscription.IsBridgeAbstract">
   IsBridgeAbstract
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerPartitionAssignor.cs/#L213"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerPartitionAssignor.cs/#L249"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.html#MASES_JCOBridge_C2JBridge_IJVMBridgeDefinition_BridgeClassName">BridgeClassName</a> is an abstract class, i.e. cannot be created an instance</p>
@@ -775,7 +833,7 @@ Class ConsumerPartitionAssignor.Subscription  <a class="header-action link-secon
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_ConsumerPartitionAssignor_Subscription_IsBridgeCloseable" data-uid="Org.Apache.Kafka.Clients.Consumer.ConsumerPartitionAssignor.Subscription.IsBridgeCloseable">
   IsBridgeCloseable
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerPartitionAssignor.cs/#L215"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerPartitionAssignor.cs/#L251"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.html#MASES_JCOBridge_C2JBridge_IJVMBridgeDefinition_BridgeClassName">BridgeClassName</a> implements Closeable</p>
@@ -807,7 +865,7 @@ Class ConsumerPartitionAssignor.Subscription  <a class="header-action link-secon
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_ConsumerPartitionAssignor_Subscription_IsBridgeInterface" data-uid="Org.Apache.Kafka.Clients.Consumer.ConsumerPartitionAssignor.Subscription.IsBridgeInterface">
   IsBridgeInterface
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerPartitionAssignor.cs/#L217"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerPartitionAssignor.cs/#L253"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.html#MASES_JCOBridge_C2JBridge_IJVMBridgeDefinition_BridgeClassName">BridgeClassName</a> is an interface, i.e. does not have any public constructor</p>
@@ -839,7 +897,7 @@ Class ConsumerPartitionAssignor.Subscription  <a class="header-action link-secon
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_ConsumerPartitionAssignor_Subscription_IsBridgeStatic" data-uid="Org.Apache.Kafka.Clients.Consumer.ConsumerPartitionAssignor.Subscription.IsBridgeStatic">
   IsBridgeStatic
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerPartitionAssignor.cs/#L219"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerPartitionAssignor.cs/#L255"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.html#MASES_JCOBridge_C2JBridge_IJVMBridgeDefinition_BridgeClassName">BridgeClassName</a> is a static class, i.e. does not have any public constructor</p>
@@ -875,7 +933,7 @@ Class ConsumerPartitionAssignor.Subscription  <a class="header-action link-secon
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_ConsumerPartitionAssignor_Subscription_GenerationId" data-uid="Org.Apache.Kafka.Clients.Consumer.ConsumerPartitionAssignor.Subscription.GenerationId">
   GenerationId()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerPartitionAssignor.cs/#L837"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerPartitionAssignor.cs/#L884"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/ConsumerPartitionAssignor.Subscription.html#generationId()">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/ConsumerPartitionAssignor.Subscription.html#generationId()</a></p>
@@ -908,7 +966,7 @@ Class ConsumerPartitionAssignor.Subscription  <a class="header-action link-secon
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_ConsumerPartitionAssignor_Subscription_GroupInstanceId" data-uid="Org.Apache.Kafka.Clients.Consumer.ConsumerPartitionAssignor.Subscription.GroupInstanceId">
   GroupInstanceId()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerPartitionAssignor.cs/#L845"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerPartitionAssignor.cs/#L892"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/ConsumerPartitionAssignor.Subscription.html#groupInstanceId()">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/ConsumerPartitionAssignor.Subscription.html#groupInstanceId()</a></p>
@@ -941,7 +999,7 @@ Class ConsumerPartitionAssignor.Subscription  <a class="header-action link-secon
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_ConsumerPartitionAssignor_Subscription_OwnedPartitions" data-uid="Org.Apache.Kafka.Clients.Consumer.ConsumerPartitionAssignor.Subscription.OwnedPartitions">
   OwnedPartitions()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerPartitionAssignor.cs/#L829"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerPartitionAssignor.cs/#L876"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/ConsumerPartitionAssignor.Subscription.html#ownedPartitions()">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/ConsumerPartitionAssignor.Subscription.html#ownedPartitions()</a></p>
@@ -974,7 +1032,7 @@ Class ConsumerPartitionAssignor.Subscription  <a class="header-action link-secon
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_ConsumerPartitionAssignor_Subscription_RackId" data-uid="Org.Apache.Kafka.Clients.Consumer.ConsumerPartitionAssignor.Subscription.RackId">
   RackId()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerPartitionAssignor.cs/#L853"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerPartitionAssignor.cs/#L900"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/ConsumerPartitionAssignor.Subscription.html#rackId()">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/ConsumerPartitionAssignor.Subscription.html#rackId()</a></p>
@@ -1007,7 +1065,7 @@ Class ConsumerPartitionAssignor.Subscription  <a class="header-action link-secon
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_ConsumerPartitionAssignor_Subscription_SetGroupInstanceId_Java_Util_Optional_Java_Lang_String__" data-uid="Org.Apache.Kafka.Clients.Consumer.ConsumerPartitionAssignor.Subscription.SetGroupInstanceId(Java.Util.Optional{Java.Lang.String})">
   SetGroupInstanceId(Optional&lt;String&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerPartitionAssignor.cs/#L861"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerPartitionAssignor.cs/#L908"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/ConsumerPartitionAssignor.Subscription.html#setGroupInstanceId(java.util.Optional)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/ConsumerPartitionAssignor.Subscription.html#setGroupInstanceId(java.util.Optional)</a></p>
@@ -1040,7 +1098,7 @@ Class ConsumerPartitionAssignor.Subscription  <a class="header-action link-secon
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_ConsumerPartitionAssignor_Subscription_Topics" data-uid="Org.Apache.Kafka.Clients.Consumer.ConsumerPartitionAssignor.Subscription.Topics">
   Topics()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerPartitionAssignor.cs/#L821"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerPartitionAssignor.cs/#L868"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/ConsumerPartitionAssignor.Subscription.html#topics()">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/ConsumerPartitionAssignor.Subscription.html#topics()</a></p>
@@ -1073,7 +1131,7 @@ Class ConsumerPartitionAssignor.Subscription  <a class="header-action link-secon
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_ConsumerPartitionAssignor_Subscription_UserData" data-uid="Org.Apache.Kafka.Clients.Consumer.ConsumerPartitionAssignor.Subscription.UserData">
   UserData()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerPartitionAssignor.cs/#L813"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerPartitionAssignor.cs/#L860"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/ConsumerPartitionAssignor.Subscription.html#userData()">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/ConsumerPartitionAssignor.Subscription.html#userData()</a></p>
@@ -1106,7 +1164,7 @@ Class ConsumerPartitionAssignor.Subscription  <a class="header-action link-secon
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerPartitionAssignor.cs/#L751" class="edit-link">Edit this page</a>
+          <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerPartitionAssignor.cs/#L798" class="edit-link">Edit this page</a>
         </div>
 
 

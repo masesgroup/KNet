@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 	<Import Project="..\..\Common\Common.props" />
 	<PropertyGroup>
 		<AssemblyName>KNetTest</AssemblyName>
@@ -11,7 +11,7 @@
 	  <Compile Include="..\..\Common\SharedKNetCore.cs" Link="SharedKNetCore.cs" />
 	</ItemGroup>
 	<ItemGroup>
-	  <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+	  <PackageReference Include="Newtonsoft.Json" Version="13.0.4" />
 	</ItemGroup>
 	<ItemGroup>
 	  <ProjectReference Include="..\..\..\..\src\net\KNet.Serialization.Json\KNet.Serialization.Json.csproj" />
