@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class MockShareConsumer&lt;K, V&gt; | MASES Group - KNet ">
       <meta name="description" content="This is a descriptive page of KNet, the .NET suite for Apache Kafka">
-      <meta name="description" content="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockShareConsumer.html">
+      <meta name="description" content="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/consumer/MockShareConsumer.html">
       <link rel="icon" href="../images/favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -89,7 +89,7 @@
 
 
   <h1 id="Org_Apache_Kafka_Clients_Consumer_MockShareConsumer_2" data-uid="Org.Apache.Kafka.Clients.Consumer.MockShareConsumer`2" class="text-break">
-Class MockShareConsumer&lt;K, V&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockShareConsumer.cs/#L280"><i class="bi bi-code-slash"></i></a>
+Class MockShareConsumer&lt;K, V&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockShareConsumer.cs/#L296"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -97,7 +97,7 @@ Class MockShareConsumer&lt;K, V&gt;  <a class="header-action link-secondary" tit
   <dl><dt>Assembly</dt><dd>MASES.KNet.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockShareConsumer.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockShareConsumer.html</a></p>
+  <div class="markdown summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/consumer/MockShareConsumer.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/consumer/MockShareConsumer.html</a></p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -198,10 +198,16 @@ Class MockShareConsumer&lt;K, V&gt;  <a class="header-action link-secondary" tit
       <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.ShareConsumer-2.html#Org_Apache_Kafka_Clients_Consumer_ShareConsumer_2_CommitAsync">ShareConsumer&lt;K, V&gt;.CommitAsync()</a>
     </div>
     <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.ShareConsumer-2.html#Org_Apache_Kafka_Clients_Consumer_ShareConsumer_2_RegisterMetricForSubscription_Org_Apache_Kafka_Common_Metrics_KafkaMetric_">ShareConsumer&lt;K, V&gt;.RegisterMetricForSubscription(KafkaMetric)</a>
+    </div>
+    <div>
       <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.ShareConsumer-2.html#Org_Apache_Kafka_Clients_Consumer_ShareConsumer_2_SetAcknowledgementCommitCallback_Org_Apache_Kafka_Clients_Consumer_AcknowledgementCommitCallback_">ShareConsumer&lt;K, V&gt;.SetAcknowledgementCommitCallback(AcknowledgementCommitCallback)</a>
     </div>
     <div>
       <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.ShareConsumer-2.html#Org_Apache_Kafka_Clients_Consumer_ShareConsumer_2_Subscribe_Java_Util_Collection_Java_Lang_String__">ShareConsumer&lt;K, V&gt;.Subscribe(Collection&lt;String&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.ShareConsumer-2.html#Org_Apache_Kafka_Clients_Consumer_ShareConsumer_2_UnregisterMetricFromSubscription_Org_Apache_Kafka_Common_Metrics_KafkaMetric_">ShareConsumer&lt;K, V&gt;.UnregisterMetricFromSubscription(KafkaMetric)</a>
     </div>
     <div>
       <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.ShareConsumer-2.html#Org_Apache_Kafka_Clients_Consumer_ShareConsumer_2_Unsubscribe">ShareConsumer&lt;K, V&gt;.Unsubscribe()</a>
@@ -853,10 +859,10 @@ public MockShareConsumer(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_MockShareConsumer_2_Acknowledge_Org_Apache_Kafka_Clients_Consumer_ConsumerRecord__0__1__" data-uid="Org.Apache.Kafka.Clients.Consumer.MockShareConsumer`2.Acknowledge(Org.Apache.Kafka.Clients.Consumer.ConsumerRecord{`0,`1})">
   Acknowledge(ConsumerRecord&lt;K, V&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockShareConsumer.cs/#L368"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockShareConsumer.cs/#L384"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockShareConsumer.html#acknowledge(org.apache.kafka.clients.consumer.ConsumerRecord)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockShareConsumer.html#acknowledge(org.apache.kafka.clients.consumer.ConsumerRecord)</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/consumer/MockShareConsumer.html#acknowledge(org.apache.kafka.clients.consumer.ConsumerRecord)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/consumer/MockShareConsumer.html#acknowledge(org.apache.kafka.clients.consumer.ConsumerRecord)</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -886,10 +892,10 @@ public MockShareConsumer(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_MockShareConsumer_2_Acknowledge_Org_Apache_Kafka_Clients_Consumer_ConsumerRecord__0__1__Org_Apache_Kafka_Clients_Consumer_AcknowledgeType_" data-uid="Org.Apache.Kafka.Clients.Consumer.MockShareConsumer`2.Acknowledge(Org.Apache.Kafka.Clients.Consumer.ConsumerRecord{`0,`1},Org.Apache.Kafka.Clients.Consumer.AcknowledgeType)">
   Acknowledge(ConsumerRecord&lt;K, V&gt;, AcknowledgeType)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockShareConsumer.cs/#L360"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockShareConsumer.cs/#L376"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockShareConsumer.html#acknowledge(org.apache.kafka.clients.consumer.ConsumerRecord,org.apache.kafka.clients.consumer.AcknowledgeType)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockShareConsumer.html#acknowledge(org.apache.kafka.clients.consumer.ConsumerRecord,org.apache.kafka.clients.consumer.AcknowledgeType)</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/consumer/MockShareConsumer.html#acknowledge(org.apache.kafka.clients.consumer.ConsumerRecord,org.apache.kafka.clients.consumer.AcknowledgeType)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/consumer/MockShareConsumer.html#acknowledge(org.apache.kafka.clients.consumer.ConsumerRecord,org.apache.kafka.clients.consumer.AcknowledgeType)</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -922,10 +928,10 @@ public MockShareConsumer(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_MockShareConsumer_2_AddRecord_Org_Apache_Kafka_Clients_Consumer_ConsumerRecord__0__1__" data-uid="Org.Apache.Kafka.Clients.Consumer.MockShareConsumer`2.AddRecord(Org.Apache.Kafka.Clients.Consumer.ConsumerRecord{`0,`1})">
   AddRecord(ConsumerRecord&lt;K, V&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockShareConsumer.cs/#L376"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockShareConsumer.cs/#L392"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockShareConsumer.html#addRecord(org.apache.kafka.clients.consumer.ConsumerRecord)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockShareConsumer.html#addRecord(org.apache.kafka.clients.consumer.ConsumerRecord)</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/consumer/MockShareConsumer.html#addRecord(org.apache.kafka.clients.consumer.ConsumerRecord)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/consumer/MockShareConsumer.html#addRecord(org.apache.kafka.clients.consumer.ConsumerRecord)</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -955,10 +961,10 @@ public MockShareConsumer(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_MockShareConsumer_2_ClientInstanceId_Java_Time_Duration_" data-uid="Org.Apache.Kafka.Clients.Consumer.MockShareConsumer`2.ClientInstanceId(Java.Time.Duration)">
   ClientInstanceId(Duration)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockShareConsumer.cs/#L351"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockShareConsumer.cs/#L367"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockShareConsumer.html#clientInstanceId(java.time.Duration)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockShareConsumer.html#clientInstanceId(java.time.Duration)</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/consumer/MockShareConsumer.html#clientInstanceId(java.time.Duration)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/consumer/MockShareConsumer.html#clientInstanceId(java.time.Duration)</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -994,10 +1000,10 @@ public MockShareConsumer(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_MockShareConsumer_2_Close" data-uid="Org.Apache.Kafka.Clients.Consumer.MockShareConsumer`2.Close">
   Close()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockShareConsumer.cs/#L383"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockShareConsumer.cs/#L399"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockShareConsumer.html#close()">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockShareConsumer.html#close()</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/consumer/MockShareConsumer.html#close()">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/consumer/MockShareConsumer.html#close()</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1021,10 +1027,10 @@ public MockShareConsumer(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_MockShareConsumer_2_Close_Java_Time_Duration_" data-uid="Org.Apache.Kafka.Clients.Consumer.MockShareConsumer`2.Close(Java.Time.Duration)">
   Close(Duration)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockShareConsumer.cs/#L391"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockShareConsumer.cs/#L407"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockShareConsumer.html#close(java.time.Duration)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockShareConsumer.html#close(java.time.Duration)</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/consumer/MockShareConsumer.html#close(java.time.Duration)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/consumer/MockShareConsumer.html#close(java.time.Duration)</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1054,10 +1060,10 @@ public MockShareConsumer(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_MockShareConsumer_2_CommitAsync" data-uid="Org.Apache.Kafka.Clients.Consumer.MockShareConsumer`2.CommitAsync">
   CommitAsync()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockShareConsumer.cs/#L398"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockShareConsumer.cs/#L414"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockShareConsumer.html#commitAsync()">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockShareConsumer.html#commitAsync()</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/consumer/MockShareConsumer.html#commitAsync()">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/consumer/MockShareConsumer.html#commitAsync()</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1081,10 +1087,10 @@ public MockShareConsumer(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_MockShareConsumer_2_CommitSync" data-uid="Org.Apache.Kafka.Clients.Consumer.MockShareConsumer`2.CommitSync">
   CommitSync()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockShareConsumer.cs/#L316"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockShareConsumer.cs/#L332"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockShareConsumer.html#commitSync()">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockShareConsumer.html#commitSync()</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/consumer/MockShareConsumer.html#commitSync()">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/consumer/MockShareConsumer.html#commitSync()</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1114,10 +1120,10 @@ public MockShareConsumer(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_MockShareConsumer_2_CommitSync_Java_Time_Duration_" data-uid="Org.Apache.Kafka.Clients.Consumer.MockShareConsumer`2.CommitSync(Java.Time.Duration)">
   CommitSync(Duration)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockShareConsumer.cs/#L325"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockShareConsumer.cs/#L341"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockShareConsumer.html#commitSync(java.time.Duration)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockShareConsumer.html#commitSync(java.time.Duration)</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/consumer/MockShareConsumer.html#commitSync(java.time.Duration)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/consumer/MockShareConsumer.html#commitSync(java.time.Duration)</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1153,10 +1159,10 @@ public MockShareConsumer(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_MockShareConsumer_2_Metrics__1" data-uid="Org.Apache.Kafka.Clients.Consumer.MockShareConsumer`2.Metrics``1">
   Metrics&lt;ReturnExtendsOrg_Apache_Kafka_Common_Metric&gt;()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockShareConsumer.cs/#L308"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockShareConsumer.cs/#L324"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockShareConsumer.html#metrics()">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockShareConsumer.html#metrics()</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/consumer/MockShareConsumer.html#metrics()">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/consumer/MockShareConsumer.html#metrics()</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1192,10 +1198,10 @@ public MockShareConsumer(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_MockShareConsumer_2_Poll_Java_Time_Duration_" data-uid="Org.Apache.Kafka.Clients.Consumer.MockShareConsumer`2.Poll(Java.Time.Duration)">
   Poll(Duration)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockShareConsumer.cs/#L342"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockShareConsumer.cs/#L358"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockShareConsumer.html#poll(java.time.Duration)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockShareConsumer.html#poll(java.time.Duration)</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/consumer/MockShareConsumer.html#poll(java.time.Duration)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/consumer/MockShareConsumer.html#poll(java.time.Duration)</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1227,14 +1233,47 @@ public MockShareConsumer(IJVMBridgeBaseInitializer initializer)</code></pre>
 
 
 
+  <a id="Org_Apache_Kafka_Clients_Consumer_MockShareConsumer_2_RegisterMetricForSubscription_" data-uid="Org.Apache.Kafka.Clients.Consumer.MockShareConsumer`2.RegisterMetricForSubscription*"></a>
+
+  <h3 id="Org_Apache_Kafka_Clients_Consumer_MockShareConsumer_2_RegisterMetricForSubscription_Org_Apache_Kafka_Common_Metrics_KafkaMetric_" data-uid="Org.Apache.Kafka.Clients.Consumer.MockShareConsumer`2.RegisterMetricForSubscription(Org.Apache.Kafka.Common.Metrics.KafkaMetric)">
+  RegisterMetricForSubscription(KafkaMetric)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockShareConsumer.cs/#L452"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/consumer/MockShareConsumer.html#registerMetricForSubscription(org.apache.kafka.common.metrics.KafkaMetric)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/consumer/MockShareConsumer.html#registerMetricForSubscription(org.apache.kafka.common.metrics.KafkaMetric)</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RegisterMetricForSubscription(KafkaMetric arg0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="Org.Apache.Kafka.Common.Metrics.KafkaMetric.html">KafkaMetric</a></dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Common.Metrics.KafkaMetric.html">KafkaMetric</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
   <a id="Org_Apache_Kafka_Clients_Consumer_MockShareConsumer_2_SetAcknowledgementCommitCallback_" data-uid="Org.Apache.Kafka.Clients.Consumer.MockShareConsumer`2.SetAcknowledgementCommitCallback*"></a>
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_MockShareConsumer_2_SetAcknowledgementCommitCallback_Org_Apache_Kafka_Clients_Consumer_AcknowledgementCommitCallback_" data-uid="Org.Apache.Kafka.Clients.Consumer.MockShareConsumer`2.SetAcknowledgementCommitCallback(Org.Apache.Kafka.Clients.Consumer.AcknowledgementCommitCallback)">
   SetAcknowledgementCommitCallback(AcknowledgementCommitCallback)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockShareConsumer.cs/#L436"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockShareConsumer.cs/#L460"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockShareConsumer.html#setAcknowledgementCommitCallback(org.apache.kafka.clients.consumer.AcknowledgementCommitCallback)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockShareConsumer.html#setAcknowledgementCommitCallback(org.apache.kafka.clients.consumer.AcknowledgementCommitCallback)</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/consumer/MockShareConsumer.html#setAcknowledgementCommitCallback(org.apache.kafka.clients.consumer.AcknowledgementCommitCallback)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/consumer/MockShareConsumer.html#setAcknowledgementCommitCallback(org.apache.kafka.clients.consumer.AcknowledgementCommitCallback)</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1264,10 +1303,10 @@ public MockShareConsumer(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_MockShareConsumer_2_SetClientInstanceId_Org_Apache_Kafka_Common_Uuid_" data-uid="Org.Apache.Kafka.Clients.Consumer.MockShareConsumer`2.SetClientInstanceId(Org.Apache.Kafka.Common.Uuid)">
   SetClientInstanceId(Uuid)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockShareConsumer.cs/#L406"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockShareConsumer.cs/#L422"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockShareConsumer.html#setClientInstanceId(org.apache.kafka.common.Uuid)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockShareConsumer.html#setClientInstanceId(org.apache.kafka.common.Uuid)</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/consumer/MockShareConsumer.html#setClientInstanceId(org.apache.kafka.common.Uuid)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/consumer/MockShareConsumer.html#setClientInstanceId(org.apache.kafka.common.Uuid)</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1297,10 +1336,10 @@ public MockShareConsumer(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_MockShareConsumer_2_Subscribe_Java_Util_Collection_Java_Lang_String__" data-uid="Org.Apache.Kafka.Clients.Consumer.MockShareConsumer`2.Subscribe(Java.Util.Collection{Java.Lang.String})">
   Subscribe(Collection&lt;String&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockShareConsumer.cs/#L414"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockShareConsumer.cs/#L430"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockShareConsumer.html#subscribe(java.util.Collection)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockShareConsumer.html#subscribe(java.util.Collection)</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/consumer/MockShareConsumer.html#subscribe(java.util.Collection)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/consumer/MockShareConsumer.html#subscribe(java.util.Collection)</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1330,10 +1369,10 @@ public MockShareConsumer(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_MockShareConsumer_2_Subscription" data-uid="Org.Apache.Kafka.Clients.Consumer.MockShareConsumer`2.Subscription">
   Subscription()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockShareConsumer.cs/#L333"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockShareConsumer.cs/#L349"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockShareConsumer.html#subscription()">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockShareConsumer.html#subscription()</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/consumer/MockShareConsumer.html#subscription()">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/consumer/MockShareConsumer.html#subscription()</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1359,14 +1398,47 @@ public MockShareConsumer(IJVMBridgeBaseInitializer initializer)</code></pre>
 
 
 
+  <a id="Org_Apache_Kafka_Clients_Consumer_MockShareConsumer_2_UnregisterMetricFromSubscription_" data-uid="Org.Apache.Kafka.Clients.Consumer.MockShareConsumer`2.UnregisterMetricFromSubscription*"></a>
+
+  <h3 id="Org_Apache_Kafka_Clients_Consumer_MockShareConsumer_2_UnregisterMetricFromSubscription_Org_Apache_Kafka_Common_Metrics_KafkaMetric_" data-uid="Org.Apache.Kafka.Clients.Consumer.MockShareConsumer`2.UnregisterMetricFromSubscription(Org.Apache.Kafka.Common.Metrics.KafkaMetric)">
+  UnregisterMetricFromSubscription(KafkaMetric)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockShareConsumer.cs/#L468"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/consumer/MockShareConsumer.html#unregisterMetricFromSubscription(org.apache.kafka.common.metrics.KafkaMetric)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/consumer/MockShareConsumer.html#unregisterMetricFromSubscription(org.apache.kafka.common.metrics.KafkaMetric)</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void UnregisterMetricFromSubscription(KafkaMetric arg0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="Org.Apache.Kafka.Common.Metrics.KafkaMetric.html">KafkaMetric</a></dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Common.Metrics.KafkaMetric.html">KafkaMetric</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
   <a id="Org_Apache_Kafka_Clients_Consumer_MockShareConsumer_2_Unsubscribe_" data-uid="Org.Apache.Kafka.Clients.Consumer.MockShareConsumer`2.Unsubscribe*"></a>
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_MockShareConsumer_2_Unsubscribe" data-uid="Org.Apache.Kafka.Clients.Consumer.MockShareConsumer`2.Unsubscribe">
   Unsubscribe()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockShareConsumer.cs/#L421"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockShareConsumer.cs/#L437"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockShareConsumer.html#unsubscribe()">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockShareConsumer.html#unsubscribe()</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/consumer/MockShareConsumer.html#unsubscribe()">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/consumer/MockShareConsumer.html#unsubscribe()</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1390,10 +1462,10 @@ public MockShareConsumer(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_MockShareConsumer_2_Wakeup" data-uid="Org.Apache.Kafka.Clients.Consumer.MockShareConsumer`2.Wakeup">
   Wakeup()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockShareConsumer.cs/#L428"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockShareConsumer.cs/#L444"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockShareConsumer.html#wakeup()">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/clients/consumer/MockShareConsumer.html#wakeup()</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/consumer/MockShareConsumer.html#wakeup()">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/clients/consumer/MockShareConsumer.html#wakeup()</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1421,7 +1493,7 @@ public MockShareConsumer(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_MockShareConsumer_2_op_Implicit_Org_Apache_Kafka_Clients_Consumer_MockShareConsumer__0__1___Org_Apache_Kafka_Clients_Consumer_MockShareConsumer" data-uid="Org.Apache.Kafka.Clients.Consumer.MockShareConsumer`2.op_Implicit(Org.Apache.Kafka.Clients.Consumer.MockShareConsumer{`0,`1})~Org.Apache.Kafka.Clients.Consumer.MockShareConsumer">
   implicit operator MockShareConsumer(MockShareConsumer&lt;K, V&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockShareConsumer.cs/#L290"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockShareConsumer.cs/#L306"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Converter from <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.MockShareConsumer-2.html">MockShareConsumer&lt;K, V&gt;</a> to <a class="xref" href="Org.Apache.Kafka.Clients.Consumer.MockShareConsumer.html">MockShareConsumer</a></p>
@@ -1458,7 +1530,7 @@ public MockShareConsumer(IJVMBridgeBaseInitializer initializer)</code></pre>
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockShareConsumer.cs/#L280" class="edit-link">Edit this page</a>
+          <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/MockShareConsumer.cs/#L296" class="edit-link">Edit this page</a>
         </div>
 
 
