@@ -16,19 +16,24 @@
 *  Refer to LICENSE for more information.
 */
 
+using MASES.JCOBridge.C2JBridge;
+
 namespace Kafka.Tools
 {
     /// <summary>
     /// Class managing DumpLogSegments
     /// </summary>
-    public class DumpLogSegments : MASES.JCOBridge.C2JBridge.JVMBridgeMain<DumpLogSegments>
+    public class DumpLogSegments : MASES.JCOBridge.C2JBridge.JVMBridgeMainExtensible<DumpLogSegments>
     {
-        /// <summary>
-        /// Initialize a new <see cref="DumpLogSegments"/>
-        /// </summary>
+        /// <inheritdoc/>
         public DumpLogSegments()
-            : base("kafka.tools.DumpLogSegments")
         {
         }
+        /// <inheritdoc/>
+        public DumpLogSegments(IJVMBridgeBaseInitializer initializer) : base(initializer)
+        {
+        }
+        /// <inheritdoc/>
+        public override string BridgeClassName => "kafka.tools.DumpLogSegments";
     }
 }

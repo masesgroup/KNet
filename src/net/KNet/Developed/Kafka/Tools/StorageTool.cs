@@ -16,19 +16,24 @@
 *  Refer to LICENSE for more information.
 */
 
+using MASES.JCOBridge.C2JBridge;
+
 namespace Kafka.Tools
 {
     /// <summary>
     /// Class managing StorageTool
     /// </summary>
-    public class StorageTool : MASES.JCOBridge.C2JBridge.JVMBridgeMain<StorageTool>
+    public class StorageTool : MASES.JCOBridge.C2JBridge.JVMBridgeMainExtensible<StorageTool>
     {
-        /// <summary>
-        /// Initialize a new <see cref="StorageTool"/>
-        /// </summary>
+        /// <inheritdoc/>
         public StorageTool()
-            : base("kafka.tools.StorageTool")
         {
         }
+        /// <inheritdoc/>
+        public StorageTool(IJVMBridgeBaseInitializer initializer) : base(initializer)
+        {
+        }
+        /// <inheritdoc/>
+        public override string BridgeClassName => "kafka.tools.StorageTool";
     }
 }

@@ -16,6 +16,7 @@
 *  Refer to LICENSE for more information.
 */
 
+using MASES.JCOBridge.C2JBridge;
 using MASES.KNet.Connect;
 
 namespace MASES.KNet.Connect
@@ -23,15 +24,19 @@ namespace MASES.KNet.Connect
     /// <summary>
     /// Class managing KNetConnectStandalone
     /// </summary>
-    public class KNetConnectStandalone : MASES.JCOBridge.C2JBridge.JVMBridgeMain<KNetConnectStandalone>
+    public class KNetConnectStandalone : MASES.JCOBridge.C2JBridge.JVMBridgeMainExtensible<KNetConnectStandalone>
     {
-        /// <summary>
-        /// Initialize a new <see cref="KNetConnectStandalone"/>
-        /// </summary>
+        /// <inheritdoc/>
         public KNetConnectStandalone()
-            : base("org.mases.knet.developed.connect.cli.ConnectStandalone")
         {
             KNetConnectProxy.Register();
         }
+        /// <inheritdoc/>
+        public KNetConnectStandalone(IJVMBridgeBaseInitializer initializer) : base(initializer)
+        {
+            KNetConnectProxy.Register();
+        }
+        /// <inheritdoc/>
+        public override string BridgeClassName => "org.mases.knet.developed.connect.cli.ConnectStandalone";
     }
 }

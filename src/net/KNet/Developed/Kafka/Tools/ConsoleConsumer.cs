@@ -16,19 +16,24 @@
 *  Refer to LICENSE for more information.
 */
 
+using MASES.JCOBridge.C2JBridge;
+
 namespace Kafka.Tools
 {
     /// <summary>
     /// Class managing ConsoleConsumer
     /// </summary>
-    public class ConsoleConsumer : MASES.JCOBridge.C2JBridge.JVMBridgeMain<ConsoleConsumer>
+    public class ConsoleConsumer : MASES.JCOBridge.C2JBridge.JVMBridgeMainExtensible<ConsoleConsumer>
     {
-        /// <summary>
-        /// Initialize a new <see cref="ConsoleConsumer"/>
-        /// </summary>
+        /// <inheritdoc/>
         public ConsoleConsumer()
-            : base("kafka.tools.ConsoleConsumer")
         {
         }
+        /// <inheritdoc/>
+        public ConsoleConsumer(IJVMBridgeBaseInitializer initializer) : base(initializer)
+        {
+        }
+        /// <inheritdoc/>
+        public override string BridgeClassName => "kafka.tools.ConsoleConsumer";
     }
 }

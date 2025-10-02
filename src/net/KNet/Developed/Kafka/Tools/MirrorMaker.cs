@@ -16,19 +16,24 @@
 *  Refer to LICENSE for more information.
 */
 
+using MASES.JCOBridge.C2JBridge;
+
 namespace Kafka.Tools
 {
     /// <summary>
     /// Class managing MirrorMaker
     /// </summary>
-    public class MirrorMaker : MASES.JCOBridge.C2JBridge.JVMBridgeMain<MirrorMaker>
+    public class MirrorMaker : MASES.JCOBridge.C2JBridge.JVMBridgeMainExtensible<MirrorMaker>
     {
-        /// <summary>
-        /// Initialize a new <see cref="MirrorMaker"/>
-        /// </summary>
+        /// <inheritdoc/>
         public MirrorMaker()
-            : base("kafka.tools.MirrorMaker")
         {
         }
+        /// <inheritdoc/>
+        public MirrorMaker(IJVMBridgeBaseInitializer initializer) : base(initializer)
+        {
+        }
+        /// <inheritdoc/>
+        public override string BridgeClassName => "kafka.tools.MirrorMaker";
     }
 }
