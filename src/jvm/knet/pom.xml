@@ -37,11 +37,13 @@
 		</developer>
 	</developers>
 	<properties>
-		<maven.compiler.source>11</maven.compiler.source>
-		<maven.compiler.target>11</maven.compiler.target>
+		<java.version>17</java.version>
+		<maven.compiler.release>${java.version}</maven.compiler.release>
+		<maven.compiler.source>${java.version}</maven.compiler.source>
+		<maven.compiler.target>${java.version}</maven.compiler.target>
 		<classpathfile>${basedir}/classpathfile.classpath</classpathfile>
 		<mavenSkipMain>false</mavenSkipMain> <!-- set mavenSkipMain to true to avoid source compilation: use directive in command-line -->
-		<jnetVersion>2.5.12.0</jnetVersion>
+		<jnetVersion>2.6.4.0</jnetVersion>
 		<kafkaVersion>3.9.1</kafkaVersion>
 		<knetVersion>2.9.3.0</knetVersion>
 		<rootDir>${basedir}/../../../</rootDir>
@@ -142,6 +144,9 @@
 						<arg>${originalClassPath}${path.separator}${jcobridgepath}${path.separator}${jnetpath}</arg>
 					</compilerArgs>
 					<skipMain>${mavenSkipMain}</skipMain>
+					<release>${maven.compiler.release}</release>
+					<source>${maven.compiler.source}</source>
+					<target>${maven.compiler.target}</target>
 				</configuration>
 			</plugin>
 			<plugin>
