@@ -1,5 +1,5 @@
 ﻿/*
-*  Copyright 2025 MASES s.r.l.
+*  Copyright (c) 2021-2025 MASES s.r.l.
 *
 *  Licensed under the Apache License, Version 2.0 (the "License");
 *  you may not use this file except in compliance with the License.
@@ -41,7 +41,7 @@ namespace MASES.KNet.Streams.Processor
         ISerDes<V, TJVMV> _vSerializer = null;
 
         IGenericSerDesFactory _factory;
-        IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
+        IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set => _factory = value; }
         /// <summary>
         /// Returns the current <see cref="IGenericSerDesFactory"/>
         /// </summary>
@@ -58,7 +58,7 @@ namespace MASES.KNet.Streams.Processor
             }
         }
         /// <summary>
-        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/processor/TopicNameExtractor.html#extract-java.lang.Object-java.lang.Object-org.apache.kafka.streams.processor.RecordContext-"/>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/processor/TopicNameExtractor.html#extract(java.lang.Object,java.lang.Object,org.apache.kafka.streams.processor.RecordContext)"/>
         /// </summary>
         /// <remarks>If <see cref="OnExtract"/> has a value it takes precedence over corresponding <see cref="Extract()"/> class method</remarks>
         public new System.Func<TopicNameExtractor<K, V, TJVMK, TJVMV>, string> OnExtract { get; set; } = null;
@@ -85,7 +85,7 @@ namespace MASES.KNet.Streams.Processor
             return (OnExtract != null) ? OnExtract(this) : Extract();
         }
         /// <summary>
-        /// KNet override of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/processor/TopicNameExtractor.html#extract-java.lang.Object-java.lang.Object-org.apache.kafka.streams.processor.RecordContext-"/>
+        /// KNet override of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/processor/TopicNameExtractor.html#extract(java.lang.Object,java.lang.Object,org.apache.kafka.streams.processor.RecordContext)"/>
         /// </summary>
         /// <returns><see cref="string"/></returns>
         public virtual string Extract()

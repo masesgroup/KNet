@@ -1,5 +1,5 @@
 ﻿/*
-*  Copyright 2025 MASES s.r.l.
+*  Copyright (c) 2021-2025 MASES s.r.l.
 *
 *  Licensed under the Apache License, Version 2.0 (the "License");
 *  you may not use this file except in compliance with the License.
@@ -17,11 +17,10 @@
 */
 
 using Org.Apache.Kafka.Clients.Consumer;
-using MASES.KNetPS.Cmdlet;
 using System.Management.Automation;
 using System.Reflection;
 
-namespace MASES.KNetPS.ClientCmdlet
+namespace MASES.KNet.PowerShell.Cmdlet.Client
 {
     [Cmdlet(VerbsLifecycle.Invoke, "Poll")]
     [OutputType(typeof(ConsumerRecords<,>))]

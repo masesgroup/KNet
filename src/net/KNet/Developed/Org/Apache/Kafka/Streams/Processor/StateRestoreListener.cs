@@ -1,5 +1,5 @@
 ﻿/*
-*  Copyright 2025 MASES s.r.l.
+*  Copyright (c) 2021-2025 MASES s.r.l.
 *
 *  Licensed under the Apache License, Version 2.0 (the "License");
 *  you may not use this file except in compliance with the License.
@@ -28,7 +28,7 @@ namespace Org.Apache.Kafka.Streams.Processor
     public partial interface IStateRestoreListener : IJVMBridgeBase
     {
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.5.0/org/apache/kafka/streams/processor/StateRestoreListener.html#onRestoreStart-org.apache.kafka.common.TopicPartition-java.lang.String-long-long-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/processor/StateRestoreListener.html#onRestoreStart(org.apache.kafka.common.TopicPartition,java.lang.String,long,long)"/>
         /// </summary>
         void OnRestoreStart(TopicPartition topicPartition,
                                Java.Lang.String storeName,
@@ -36,14 +36,14 @@ namespace Org.Apache.Kafka.Streams.Processor
                                long endingOffset);
 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.5.0/org/apache/kafka/streams/processor/StateRestoreListener.html#onBatchRestored-org.apache.kafka.common.TopicPartition-java.lang.String-long-long-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/processor/StateRestoreListener.html#onBatchRestored(org.apache.kafka.common.TopicPartition,java.lang.String,long,long)"/>
         /// </summary>
         void OnBatchRestored(TopicPartition topicPartition,
                               Java.Lang.String storeName,
                               long batchEndOffset,
                               long numRestored);
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.5.0/org/apache/kafka/streams/processor/StateRestoreListener.html#onRestoreEnd-org.apache.kafka.common.TopicPartition-java.lang.String-long-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/processor/StateRestoreListener.html#onRestoreEnd(org.apache.kafka.common.TopicPartition,java.lang.String,long)"/>
         /// </summary>
         void OnRestoreEnd(TopicPartition topicPartition,
                            Java.Lang.String storeName,

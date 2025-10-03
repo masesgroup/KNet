@@ -1,5 +1,5 @@
 ﻿/*
-*  Copyright 2025 MASES s.r.l.
+*  Copyright (c) 2021-2025 MASES s.r.l.
 *
 *  Licensed under the Apache License, Version 2.0 (the "License");
 *  you may not use this file except in compliance with the License.
@@ -35,7 +35,7 @@ namespace MASES.KNet.Streams
         Windowed<K, TJVMK> _key = null;
         ValueAndTimestamp<V, TJVMV> _value = null;
         IGenericSerDesFactory _factory;
-        IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
+        IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set => _factory = value; }
 
         internal TimestampedWindowedKeyValue(IGenericSerDesFactory factory,
                                              KeyValueSupport<Org.Apache.Kafka.Streams.Kstream.Windowed<TJVMK>, Org.Apache.Kafka.Streams.State.ValueAndTimestamp<TJVMV>> value)
@@ -45,7 +45,7 @@ namespace MASES.KNet.Streams
         }
 
         /// <summary>
-        /// KNet implementation of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/KeyValue.html#key"/>
+        /// KNet implementation of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/KeyValue.html#key"/>
         /// </summary>
         public Windowed<K, TJVMK> Key
         {
@@ -56,7 +56,7 @@ namespace MASES.KNet.Streams
             }
         }
         /// <summary>
-        /// KNet implementation of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/KeyValue.html#value"/>
+        /// KNet implementation of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/KeyValue.html#value"/>
         /// </summary>
         public ValueAndTimestamp<V, TJVMV> Value
         {

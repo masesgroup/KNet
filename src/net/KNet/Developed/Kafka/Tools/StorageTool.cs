@@ -1,5 +1,5 @@
 ﻿/*
-*  Copyright 2025 MASES s.r.l.
+*  Copyright (c) 2021-2025 MASES s.r.l.
 *
 *  Licensed under the Apache License, Version 2.0 (the "License");
 *  you may not use this file except in compliance with the License.
@@ -23,16 +23,15 @@ namespace Kafka.Tools
     /// <summary>
     /// Class managing StorageTool
     /// </summary>
-    public class StorageTool : MASES.JCOBridge.C2JBridge.JVMBridgeMainExtensible<StorageTool>
+    public class StorageTool : JVMBridgeMainExtensible<StorageTool>
     {
+        /// <summary>
+        /// Initialize a new <see cref="StorageTool"/>
+        /// </summary>
+        public StorageTool() { }
         /// <inheritdoc/>
-        public StorageTool()
-        {
-        }
-        /// <inheritdoc/>
-        public StorageTool(IJVMBridgeBaseInitializer initializer) : base(initializer)
-        {
-        }
+        [global::System.Obsolete("This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
+        public StorageTool(IJVMBridgeBaseInitializer initializer) : base(initializer) { }
         /// <inheritdoc/>
         public override string BridgeClassName => "kafka.tools.StorageTool";
     }

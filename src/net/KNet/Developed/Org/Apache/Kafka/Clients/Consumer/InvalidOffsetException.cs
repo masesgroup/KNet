@@ -1,5 +1,5 @@
 ﻿/*
-*  Copyright 2025 MASES s.r.l.
+*  Copyright (c) 2021-2025 MASES s.r.l.
 *
 *  Licensed under the Apache License, Version 2.0 (the "License");
 *  you may not use this file except in compliance with the License.
@@ -26,7 +26,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
     public partial class InvalidOffsetException
     {
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/latest/org/apache/kafka/clients/consumer/InvalidOffsetException.html#partitions--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/consumer/InvalidOffsetException.html#partitions--"/>
         /// </summary>
         public Set<TopicPartition> Partitions => JVMBridgeBase.WrapsDirect<Set<TopicPartition>>(BridgeInstance.Invoke("partitions") as IJavaObject);
     }

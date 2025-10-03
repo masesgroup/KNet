@@ -22,7 +22,7 @@ Author = 'MASES s.r.l.'
 CompanyName = 'MASES s.r.l.'
 
 # Copyright statement for this module
-Copyright = 'Copyright ©  MASES s.r.l. 2025'
+Copyright = 'Copyright (c) 2021-2025 MASES s.r.l.'
 
 # Description of the functionality provided by this module
 Description = 'PowerShell command line interface of .NET suite for Apache Kafka. KNet is a comprehensive .NET suite for Apache Kafka providing all features: Producer, Consumer, Admin, Streams, Connect, backends (ZooKeeper and Kafka).'

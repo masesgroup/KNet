@@ -1,5 +1,5 @@
 ﻿/*
-*  Copyright 2025 MASES s.r.l.
+*  Copyright (c) 2021-2025 MASES s.r.l.
 *
 *  Licensed under the Apache License, Version 2.0 (the "License");
 *  you may not use this file except in compliance with the License.
@@ -32,7 +32,7 @@ namespace MASES.KNet.Streams.Kstream
     {
         readonly Org.Apache.Kafka.Streams.Kstream.Branched<TJVMK, TJVMV> _inner;
         IGenericSerDesFactory _factory;
-        IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
+        IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set => _factory = value; }
 
         Branched(Org.Apache.Kafka.Streams.Kstream.Branched<TJVMK, TJVMV> inner)
         {
@@ -46,7 +46,7 @@ namespace MASES.KNet.Streams.Kstream
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/kstream/Branched.html#as-java.lang.String-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/kstream/Branched.html#as(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <returns><see cref="Branched{K, V, TJVMK, TJVMV}"/></returns>
@@ -56,7 +56,7 @@ namespace MASES.KNet.Streams.Kstream
             return new Branched<K, V, TJVMK, TJVMV>(cons);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/kstream/Branched.html#withConsumer-java.util.function.Consumer-java.lang.String-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/kstream/Branched.html#withConsumer(java.util.function.Consumer,java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="KStreamConsumer{K, V, TJVMK, TJVMV}"/></param>
         /// <param name="arg1"><see cref="string"/></param>
@@ -67,7 +67,7 @@ namespace MASES.KNet.Streams.Kstream
             return new Branched<K, V, TJVMK, TJVMV>(cons);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/kstream/Branched.html#withConsumer-java.util.function.Consumer-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/kstream/Branched.html#withConsumer(java.util.function.Consumer)"/>
         /// </summary>
         /// <param name="arg0"><see cref="KStreamConsumer{K, V}"/></param>
         /// <returns><see cref="Branched{K, V, TJVMK, TJVMV}"/></returns>
@@ -77,7 +77,7 @@ namespace MASES.KNet.Streams.Kstream
             return new Branched<K, V, TJVMK, TJVMV>(cons);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/kstream/Branched.html#withFunction-java.util.function.Function-java.lang.String-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/kstream/Branched.html#withFunction(java.util.function.Function,java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="KStreamFunction{K, V}"/></param>
         /// <param name="arg1"><see cref="string"/></param>
@@ -88,7 +88,7 @@ namespace MASES.KNet.Streams.Kstream
             return new Branched<K, V, TJVMK, TJVMV>(cons);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/kstream/Branched.html#withFunction-java.util.function.Function-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/kstream/Branched.html#withFunction(java.util.function.Function)"/>
         /// </summary>
         /// <param name="arg0"><see cref="KStreamFunction{K, V, TJVMK, TJVMV}"/></param>
         /// <returns><see cref="Branched{K, V, TJVMK, TJVMV}"/></returns>

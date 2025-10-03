@@ -1,5 +1,5 @@
 ﻿/*
-*  Copyright 2025 MASES s.r.l.
+*  Copyright (c) 2021-2025 MASES s.r.l.
 *
 *  Licensed under the Apache License, Version 2.0 (the "License");
 *  you may not use this file except in compliance with the License.
@@ -31,15 +31,15 @@ namespace MASES.KNet.Streams
     {
         Org.Apache.Kafka.Streams.StreamsBuilder _builder;
         IGenericSerDesFactory _factory;
-        IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
+        IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set => _factory = value; }
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/StreamsBuilder.html#org.apache.kafka.streams.StreamsBuilder(org.apache.kafka.streams.TopologyConfig)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/StreamsBuilder.html#%3Cinit%3E()"/>
         /// </summary>
         /// <param name="factory"><see cref="StreamsConfigBuilder"/> used as reference of <see cref="IGenericSerDesFactory"/></param>
         public StreamsBuilder(StreamsConfigBuilder factory) : base() { _factory = factory; _builder = new Org.Apache.Kafka.Streams.StreamsBuilder(); }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/StreamsBuilder.html#org.apache.kafka.streams.StreamsBuilder(org.apache.kafka.streams.TopologyConfig)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/StreamsBuilder.html#%3Cinit%3E(org.apache.kafka.streams.TopologyConfig)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.TopologyConfig"/></param>
         public StreamsBuilder(TopologyConfig arg0)
@@ -62,12 +62,12 @@ namespace MASES.KNet.Streams
         /// <returns><see cref="Java.Util.Properties"/> used from underlying <see cref="Org.Apache.Kafka.Streams.KafkaStreams"/></returns>
         protected virtual Java.Util.Properties PrepareProperties(StreamsConfigBuilder builder)
         {
-            return OverrideProperties != null ? OverrideProperties(builder) : builder;
+            return OverrideProperties != null ? OverrideProperties(builder) : builder.ToProperties();
         }
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/StreamsBuilder.html#globalTable-java.lang.String-KNetConsumed{K, V}-KNetMaterialized{K, V}-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/StreamsBuilder.html#globalTable(java.lang.String,org.apache.kafka.streams.kstream.Consumed,org.apache.kafka.streams.kstream.Materialized)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <param name="arg1"><see cref="Consumed{K, V, TJVMK, TJVMV}"/></param>
@@ -84,7 +84,7 @@ namespace MASES.KNet.Streams
             return new GlobalKTable<K, V, TJVMK, TJVMV>(_factory, _builder.GlobalTable<TJVMK, TJVMV>(arg0, arg1, arg2));
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/StreamsBuilder.html#globalTable-java.lang.String-KNetConsumed{K, V}-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/StreamsBuilder.html#globalTable(java.lang.String,org.apache.kafka.streams.kstream.Consumed)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <param name="arg1"><see cref="Consumed{K, V, TJVMK, TJVMV}"/></param>
@@ -99,7 +99,7 @@ namespace MASES.KNet.Streams
             return new GlobalKTable<K, V, TJVMK, TJVMV>(_factory, _builder.GlobalTable<TJVMK, TJVMV>(arg0, arg1));
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/StreamsBuilder.html#globalTable-java.lang.String-KNetMaterialized{K, V}-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/StreamsBuilder.html#globalTable(java.lang.String,org.apache.kafka.streams.kstream.Materialized)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <param name="arg1"><see cref="Materialized{K, V, TJVMK, TJVMV}"/></param>
@@ -114,7 +114,7 @@ namespace MASES.KNet.Streams
             return new GlobalKTable<K, V, TJVMK, TJVMV>(_factory, _builder.GlobalTable<TJVMK, TJVMV>(arg0, arg1));
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/StreamsBuilder.html#globalTable-java.lang.String-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/StreamsBuilder.html#globalTable(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <typeparam name="K">The key type</typeparam>
@@ -127,7 +127,7 @@ namespace MASES.KNet.Streams
             return new GlobalKTable<K, V, TJVMK, TJVMV>(_factory, _builder.GlobalTable<TJVMK, TJVMV>(arg0));
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/StreamsBuilder.html#stream-java.lang.String-KNetConsumed{K, V}-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/StreamsBuilder.html#stream(java.lang.String,org.apache.kafka.streams.kstream.Consumed)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <param name="arg1"><see cref="Consumed{K, V, TJVMK, TJVMV}"/></param>
@@ -142,7 +142,7 @@ namespace MASES.KNet.Streams
             return new KStream<K, V, TJVMK, TJVMV>(_factory, _builder.Stream<TJVMK, TJVMV>(arg0));
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/StreamsBuilder.html#stream-java.lang.String-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/StreamsBuilder.html#stream(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <typeparam name="K">The key type</typeparam>
@@ -155,7 +155,7 @@ namespace MASES.KNet.Streams
             return new KStream<K, V, TJVMK, TJVMV>(_factory, _builder.Stream<TJVMK, TJVMV>(arg0));
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/StreamsBuilder.html#stream-java.util.Collection-KNetConsumed{K, V}-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/StreamsBuilder.html#stream(java.util.Collection,org.apache.kafka.streams.kstream.Consumed)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Collection"/></param>
         /// <param name="arg1"><see cref="Consumed{K, V, TJVMK, TJVMV}"/></param>
@@ -170,7 +170,7 @@ namespace MASES.KNet.Streams
             return new KStream<K, V, TJVMK, TJVMV>(_factory, _builder.Stream<TJVMK, TJVMV>(arg0.ToJVMCollection<Java.Lang.String, string>(), arg1));
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/StreamsBuilder.html#stream-java.util.Collection-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/StreamsBuilder.html#stream(java.util.Collection)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Collection"/></param>
         /// <typeparam name="K">The key type</typeparam>
@@ -183,7 +183,7 @@ namespace MASES.KNet.Streams
             return new KStream<K, V, TJVMK, TJVMV>(_factory, _builder.Stream<TJVMK, TJVMV>(arg0.ToJVMCollection<Java.Lang.String, string>()));
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/StreamsBuilder.html#stream-java.util.regex.Pattern-KNetConsumed{K, V}-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/StreamsBuilder.html#stream(java.util.regex.Pattern,org.apache.kafka.streams.kstream.Consumed)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Regex.Pattern"/></param>
         /// <param name="arg1"><see cref="Consumed{K, V, TJVMK, TJVMV}"/></param>
@@ -198,7 +198,7 @@ namespace MASES.KNet.Streams
             return new KStream<K, V, TJVMK, TJVMV>(_factory, _builder.Stream<TJVMK, TJVMV>(arg0));
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/StreamsBuilder.html#stream-java.util.regex.Pattern-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/StreamsBuilder.html#stream(java.util.regex.Pattern)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Regex.Pattern"/></param>
         /// <typeparam name="K">The key type</typeparam>
@@ -211,7 +211,7 @@ namespace MASES.KNet.Streams
             return new KStream<K, V, TJVMK, TJVMV>(_factory, _builder.Stream<TJVMK, TJVMV>(arg0));
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/StreamsBuilder.html#table-java.lang.String-KNetConsumed{K, V}-KNetMaterialized{K, V}-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/StreamsBuilder.html#table(java.lang.String,org.apache.kafka.streams.kstream.Consumed,org.apache.kafka.streams.kstream.Materialized)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <param name="arg1"><see cref="Consumed{K, V, TJVMK, TJVMV}"/></param>
@@ -228,7 +228,7 @@ namespace MASES.KNet.Streams
             return new KTable<K, V, TJVMK, TJVMV>(_factory, _builder.Table<TJVMK, TJVMV>(arg0, arg1, arg2));
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/StreamsBuilder.html#table-java.lang.String-KNetConsumed{K, V}-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/StreamsBuilder.html#table(java.lang.String,org.apache.kafka.streams.kstream.Consumed)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <param name="arg1"><see cref="Consumed{K, V, TJVMK, TJVMV}"/></param>
@@ -243,7 +243,7 @@ namespace MASES.KNet.Streams
             return new KTable<K, V, TJVMK, TJVMV>(_factory, _builder.Table<TJVMK, TJVMV>(arg0, arg1));
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/StreamsBuilder.html#table-java.lang.String-KNetMaterialized{K, V}-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/StreamsBuilder.html#table(java.lang.String,org.apache.kafka.streams.kstream.Materialized)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <param name="arg1"><see cref="Materialized{K, V, TJVMK, TJVMV}"/></param>
@@ -258,7 +258,7 @@ namespace MASES.KNet.Streams
             return new KTable<K, V, TJVMK, TJVMV>(_factory, _builder.Table<TJVMK, TJVMV>(arg0, arg1));
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/StreamsBuilder.html#table-java.lang.String-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/StreamsBuilder.html#table(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <typeparam name="K">The key type</typeparam>
@@ -271,7 +271,7 @@ namespace MASES.KNet.Streams
             return new KTable<K, V, TJVMK, TJVMV>(_factory, _builder.Table<TJVMK, TJVMV>(arg0));
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/StreamsBuilder.html#addStateStore-org.apache.kafka.streams.state.StoreBuilder-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/StreamsBuilder.html#addStateStore(org.apache.kafka.streams.state.StoreBuilder)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.State.StoreBuilder"/></param>
         /// <returns><see cref="StreamsBuilder"/></returns>
@@ -280,7 +280,7 @@ namespace MASES.KNet.Streams
             return new StreamsBuilder(_factory, _builder.AddStateStore(arg0));
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/StreamsBuilder.html#build--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/StreamsBuilder.html#build()"/>
         /// </summary>
         /// <returns><see cref="Topology"/></returns>
         public Topology Build()
@@ -288,7 +288,7 @@ namespace MASES.KNet.Streams
             return new Topology(_builder.Build(), _factory);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/StreamsBuilder.html#build-java.util.Properties-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/StreamsBuilder.html#build(java.util.Properties)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Properties"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Topology"/></returns>

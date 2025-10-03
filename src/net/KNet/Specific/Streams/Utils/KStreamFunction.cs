@@ -1,5 +1,5 @@
 ﻿/*
-*  Copyright 2025 MASES s.r.l.
+*  Copyright (c) 2021-2025 MASES s.r.l.
 *
 *  Licensed under the Apache License, Version 2.0 (the "License");
 *  you may not use this file except in compliance with the License.
@@ -32,7 +32,7 @@ namespace MASES.KNet.Streams.Utils
     public class KStreamFunction<K, V, TJVMK, TJVMV> : Java.Util.Function.Function<Org.Apache.Kafka.Streams.Kstream.KStream<TJVMK, TJVMV>, Org.Apache.Kafka.Streams.Kstream.KStream<TJVMK, TJVMV>>, IGenericSerDesFactoryApplier
     {
         IGenericSerDesFactory _factory;
-        IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
+        IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set => _factory = value; }
 
         /// <summary>
         /// The <see cref="Func{T, TResult}"/> to be executed over <see cref="KStream{K, V, TJVMK, TJVMV}"/>

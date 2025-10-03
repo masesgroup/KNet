@@ -1,5 +1,5 @@
 ﻿/*
-*  Copyright 2025 MASES s.r.l.
+*  Copyright (c) 2021-2025 MASES s.r.l.
 *
 *  Licensed under the Apache License, Version 2.0 (the "License");
 *  you may not use this file except in compliance with the License.
@@ -32,7 +32,7 @@ namespace MASES.KNet.Streams.Kstream
         Org.Apache.Kafka.Streams.Kstream.GlobalKTable<TJVMK, TJVMV> _inner;
 
         IGenericSerDesFactory _factory;
-        IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
+        IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set => _factory = value; }
 
         internal GlobalKTable(IGenericSerDesFactory factory, Org.Apache.Kafka.Streams.Kstream.GlobalKTable<TJVMK, TJVMV> table)
         {
@@ -45,10 +45,7 @@ namespace MASES.KNet.Streams.Kstream
         /// </summary>
         public static implicit operator Org.Apache.Kafka.Streams.Kstream.GlobalKTable<TJVMK, TJVMV>(GlobalKTable<K, V, TJVMK, TJVMV> t) => t._inner;
 
-        /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/kstream/GlobalKTable.html#queryableStoreName--"/>
-        /// </summary>
-        /// <returns><see cref="string"/></returns>
+        /// <inheritdoc cref="Org.Apache.Kafka.Streams.Kstream.GlobalKTable{K, V}.QueryableStoreName"/>
         public string QueryableStoreName => _inner.QueryableStoreName();
     }
 }

@@ -1,5 +1,5 @@
 ﻿/*
-*  Copyright 2025 MASES s.r.l.
+*  Copyright (c) 2021-2025 MASES s.r.l.
 *
 *  Licensed under the Apache License, Version 2.0 (the "License");
 *  you may not use this file except in compliance with the License.
@@ -18,10 +18,9 @@
 
 using Java.Util.Concurrent;
 using Org.Apache.Kafka.Clients.Producer;
-using MASES.KNetPS.Cmdlet;
 using System.Management.Automation;
 
-namespace MASES.KNetPS.ClientCmdlet
+namespace MASES.KNet.PowerShell.Cmdlet.Client
 {
     [Cmdlet(VerbsLifecycle.Invoke, "Send")]
     [OutputType(typeof(Future<RecordMetadata>))]

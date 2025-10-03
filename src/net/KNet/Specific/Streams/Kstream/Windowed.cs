@@ -1,5 +1,5 @@
 ﻿/*
-*  Copyright 2025 MASES s.r.l.
+*  Copyright (c) 2021-2025 MASES s.r.l.
 *
 *  Licensed under the Apache License, Version 2.0 (the "License");
 *  you may not use this file except in compliance with the License.
@@ -30,7 +30,7 @@ namespace MASES.KNet.Streams.Kstream
         readonly Org.Apache.Kafka.Streams.Kstream.Windowed<TJVMK> _inner;
         ISerDes<K, TJVMK> _keySerDes = null;
         IGenericSerDesFactory _factory;
-        IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
+        IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set => _factory = value; }
 
         internal Windowed(IGenericSerDesFactory factory, Org.Apache.Kafka.Streams.Kstream.Windowed<TJVMK> windowed)
         {
@@ -44,12 +44,12 @@ namespace MASES.KNet.Streams.Kstream
         public static implicit operator Org.Apache.Kafka.Streams.Kstream.Windowed<TJVMK>(Windowed<K, TJVMK> t) => t._inner;
 
         /// <summary>
-        /// KNet implementation of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/kstream/Windowed.html#key--"/>
+        /// KNet implementation of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/kstream/Windowed.html#key()"/>
         /// </summary>
         /// <returns><typeparamref name="K"/></returns>
         public K Key { get { _keySerDes ??= _factory?.BuildKeySerDes<K, TJVMK>(); return _keySerDes.Deserialize(null, _inner.Key()); } }
         /// <summary>
-        /// KNet implementation of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/kstream/Windowed.html#window--"/>
+        /// KNet implementation of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/kstream/Windowed.html#window()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.Window"/></returns>
         public Org.Apache.Kafka.Streams.Kstream.Window Window => _inner.Window();

@@ -1,5 +1,5 @@
 ﻿/*
-*  Copyright 2025 MASES s.r.l.
+*  Copyright (c) 2021-2025 MASES s.r.l.
 *
 *  Licensed under the Apache License, Version 2.0 (the "License");
 *  you may not use this file except in compliance with the License.
@@ -23,7 +23,7 @@ namespace Org.Apache.Kafka.Common.Errors
     public partial class DuplicateResourceException
     {
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/latest/org/apache/kafka/common/errors/DuplicateResourceException.html#resource--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/errors/DuplicateResourceException.html#resource()"/>
         /// </summary>
         public string Resource => DynBridgeInstance.resource();
     }

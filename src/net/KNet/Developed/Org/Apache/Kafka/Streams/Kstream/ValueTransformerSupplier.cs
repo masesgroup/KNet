@@ -23,7 +23,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 {
     #region IValueTransformerSupplier<V, VR>
     /// <summary>
-    /// .NET interface for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/kstream/ValueTransformerSupplier.html"/>
+    /// .NET interface for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/kstream/ValueTransformerSupplier.html"/>
     /// </summary>
     public partial interface IValueTransformerSupplier<V, VR>
     {
@@ -41,7 +41,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
     #region ValueTransformerSupplier<V, VR>
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/kstream/ValueTransformerSupplier.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/kstream/ValueTransformerSupplier.html"/>
     /// </summary>
     public partial class ValueTransformerSupplier<V, VR> : JVMBridgeListener, Org.Apache.Kafka.Streams.Kstream.IValueTransformerSupplier<V, VR>
     {
@@ -73,17 +73,17 @@ namespace Org.Apache.Kafka.Streams.Kstream
         }
 
         /// <summary>
-        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/kstream/ValueTransformer.html#init(org.apache.kafka.streams.processor.ProcessorContext)"/>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/kstream/ValueTransformer.html#init(org.apache.kafka.streams.processor.ProcessorContext)"/>
         /// </summary>
         public System.Action<Org.Apache.Kafka.Streams.Processor.ProcessorContext> OnInit { get; set; } = null;
 
         /// <summary>
-        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/kstream/ValueTransformer.html#transform(java.lang.Object)"/>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/kstream/ValueTransformer.html#transform(java.lang.Object)"/>
         /// </summary>
         public System.Func<V, VR> OnTransform { get; set; } = null;
 
         /// <summary>
-        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/kstream/ValueTransformerSupplier.html#get()"/>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/kstream/ValueTransformerSupplier.html#get()"/>
         /// </summary>
         public System.Func<Org.Apache.Kafka.Streams.Kstream.ValueTransformer<V, VR>> OnGet { get; set; } = null;
 
@@ -110,7 +110,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         }
 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/kstream/ValueTransformerSupplier.html#get()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/kstream/ValueTransformerSupplier.html#get()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.ValueTransformer"/></returns>
         public virtual Org.Apache.Kafka.Streams.Kstream.ValueTransformer<V, VR> Get()
@@ -123,7 +123,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         }
 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/processor/ConnectedStoreProvider.html#stores--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/processor/ConnectedStoreProvider.html#stores--"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Set"/> of <see cref="Org.Apache.Kafka.Streams.State.StoreBuilder"/></returns>
         /// <remarks>The method invokes the default implementation in the JVM interface</remarks>
@@ -133,7 +133,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         }
 
         /// <summary>
-        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/processor/ConnectedStoreProvider.html#stores--"/>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/processor/ConnectedStoreProvider.html#stores--"/>
         /// </summary>
         /// <remarks>If <see cref="OnStores"/> has a value it takes precedence over corresponding class method</remarks>
         public System.Func<Java.Util.Set<Org.Apache.Kafka.Streams.State.StoreBuilder>> OnStores { get; set; } = null;
@@ -146,7 +146,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         }
 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/processor/ConnectedStoreProvider.html#stores--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/processor/ConnectedStoreProvider.html#stores--"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Set"/> of <see cref="Org.Apache.Kafka.Streams.State.StoreBuilder"/></returns>
         /// <remarks>The method invokes the default implementation in the JVM interface using <see cref="StoresDefault"/>; override the method to implement a different behavior</remarks>

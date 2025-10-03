@@ -1,5 +1,5 @@
 ﻿/*
-*  Copyright 2025 MASES s.r.l.
+*  Copyright (c) 2021-2025 MASES s.r.l.
 *
 *  Licensed under the Apache License, Version 2.0 (the "License");
 *  you may not use this file except in compliance with the License.
@@ -36,7 +36,7 @@ namespace MASES.KNet.Streams.Kstream
         ISerDes<VR, TJVMVR> _vrSerializer = null;
 
         IGenericSerDesFactory _factory;
-        IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
+        IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set => _factory = value; }
         /// <summary>
         /// Returns the current <see cref="IGenericSerDesFactory"/>
         /// </summary>
@@ -53,7 +53,7 @@ namespace MASES.KNet.Streams.Kstream
             }
         }
         /// <summary>
-        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/kstream/ValueMapperWithKey.html#apply-java.lang.Object-java.lang.Object-"/>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/kstream/ValueMapperWithKey.html#apply(java.lang.Object,java.lang.Object)"/>
         /// </summary>
         /// <remarks>If <see cref="OnApply"/> has a value it takes precedence over corresponding class method</remarks>
         public new System.Func<V, VR> OnApply { get; set; } = null;
@@ -68,11 +68,7 @@ namespace MASES.KNet.Streams.Kstream
             var res = methodToExecute(_vSerializer.Deserialize(null, arg0));
             return _vrSerializer.Serialize(null, res);
         }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/kstream/ValueMapperWithKey.html#apply-java.lang.Object-java.lang.Object-"/>
-        /// </summary>
-        /// <param name="arg0"><typeparamref name="V"/></param>
-        /// <returns><typeparamref name="VR"/></returns>
+        /// <inheritdoc cref="Org.Apache.Kafka.Streams.Kstream.ValueMapper{V, VR}.Apply(V)"/>
         public virtual VR Apply(V arg0)
         {
             return default;
@@ -102,7 +98,7 @@ namespace MASES.KNet.Streams.Kstream
         ISerDes<VR, TJVMVR> _vrSerializer = null;
 
         /// <summary>
-        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/kstream/ValueMapperWithKey.html#apply-java.lang.Object-java.lang.Object-"/>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/kstream/ValueMapperWithKey.html#apply(java.lang.Object,java.lang.Object)"/>
         /// </summary>
         /// <remarks>If <see cref="OnApply"/> has a value it takes precedence over corresponding class method</remarks>
         public new System.Func<V, IEnumerable<VR>> OnApply { get; set; } = null;
@@ -121,11 +117,7 @@ namespace MASES.KNet.Streams.Kstream
             }
             return result;
         }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/kstream/ValueMapperWithKey.html#apply-java.lang.Object-java.lang.Object-"/>
-        /// </summary>
-        /// <param name="arg0"><typeparamref name="V"/></param>
-        /// <returns><typeparamref name="VR"/></returns>
+        /// <inheritdoc cref="Org.Apache.Kafka.Streams.Kstream.ValueMapper{V, VR}.Apply(V)"/>
         public new virtual IEnumerable<VR> Apply(V arg0)
         {
             return default;

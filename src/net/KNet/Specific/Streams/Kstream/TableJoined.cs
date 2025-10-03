@@ -1,5 +1,5 @@
 ﻿/*
-*  Copyright 2025 MASES s.r.l.
+*  Copyright (c) 2021-2025 MASES s.r.l.
 *
 *  Licensed under the Apache License, Version 2.0 (the "License");
 *  you may not use this file except in compliance with the License.
@@ -32,7 +32,7 @@ namespace MASES.KNet.Streams.Kstream
     {
         readonly Org.Apache.Kafka.Streams.Kstream.TableJoined<TJVMK, TJVMKO> _inner;
         IGenericSerDesFactory _factory;
-        IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
+        IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set => _factory = value; }
 
         internal TableJoined(Org.Apache.Kafka.Streams.Kstream.TableJoined<TJVMK, TJVMKO> inner)
         {
@@ -46,7 +46,7 @@ namespace MASES.KNet.Streams.Kstream
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/kstream/TableJoined.html#as-java.lang.String-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/kstream/TableJoined.html#as(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <returns><see cref="TableJoined{K, KO, TJVMK, TJVMKO}"/></returns>
@@ -56,7 +56,7 @@ namespace MASES.KNet.Streams.Kstream
             return new TableJoined<K, KO, TJVMK, TJVMKO>(cons);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/kstream/TableJoined.html#with-org.apache.kafka.streams.processor.StreamPartitioner-org.apache.kafka.streams.processor.StreamPartitioner-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/kstream/TableJoined.html#with(org.apache.kafka.streams.processor.StreamPartitioner,org.apache.kafka.streams.processor.StreamPartitioner)"/>
         /// </summary>
         /// <param name="arg0"><see cref="StreamPartitionerNoValue{K}"/></param>
         /// <param name="arg1"><see cref="StreamPartitionerNoValue{KO}"/></param>
@@ -71,7 +71,7 @@ namespace MASES.KNet.Streams.Kstream
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/kstream/TableJoined.html#withOtherPartitioner-org.apache.kafka.streams.processor.StreamPartitioner-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/kstream/TableJoined.html#withOtherPartitioner(org.apache.kafka.streams.processor.StreamPartitioner)"/>
         /// </summary>
         /// <param name="arg0"><see cref="StreamPartitionerNoValue{KO, TJVMKO}"/></param>
         /// <returns><see cref="TableJoined{K, KO, TJVMK, TJVMKO}"/></returns>
@@ -81,7 +81,7 @@ namespace MASES.KNet.Streams.Kstream
             return this;
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/kstream/TableJoined.html#withPartitioner-org.apache.kafka.streams.processor.StreamPartitioner-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/kstream/TableJoined.html#withPartitioner(org.apache.kafka.streams.processor.StreamPartitioner)"/>
         /// </summary>
         /// <param name="arg0"><see cref="StreamPartitionerNoValue{K, TJVMK}"/></param>
         /// <returns><see cref="TableJoined{K, KO, TJVMK, TJVMKO}"/></returns>

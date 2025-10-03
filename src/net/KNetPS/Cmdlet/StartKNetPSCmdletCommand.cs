@@ -1,5 +1,5 @@
 ﻿/*
-*  Copyright 2025 MASES s.r.l.
+*  Copyright (c) 2021-2025 MASES s.r.l.
 *
 *  Licensed under the Apache License, Version 2.0 (the "License");
 *  you may not use this file except in compliance with the License.
@@ -18,7 +18,7 @@
 
 using System.Management.Automation;
 
-namespace MASES.KNetPS.Cmdlet
+namespace MASES.KNet.PowerShell.Cmdlet
 {
     [Cmdlet(VerbsLifecycle.Start, "KNetPS")]
     public class StartKNetPSCmdletCommand : StartKNetPSCmdletCommandBase<StartKNetPSCmdletCommand>

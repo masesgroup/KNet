@@ -1,5 +1,5 @@
 ﻿/*
-*  Copyright 2025 MASES s.r.l.
+*  Copyright (c) 2021-2025 MASES s.r.l.
 *
 *  Licensed under the Apache License, Version 2.0 (the "License");
 *  you may not use this file except in compliance with the License.
@@ -274,13 +274,13 @@ namespace MASES.KNet.Replicator
         /// </summary>
         void Flush();
         /// <summary>
-        /// Reports the <see cref="KNetProducer{K, V, TJVMK, TJVMV}"/> metrics. <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/producer/KafkaProducer.html#metrics--"/>
+        /// Reports the <see cref="KNetProducer{K, V, TJVMK, TJVMV}"/> metrics. <see cref="Org.Apache.Kafka.Clients.Producer.KafkaProducer.Metrics"/>
         /// </summary>
         /// <typeparam name="TMetric">Extends <see cref="Org.Apache.Kafka.Common.Metric"/></typeparam>
         /// <returns>A <see cref="Java.Util.Map"/> of <see cref="Org.Apache.Kafka.Common.MetricName"/> and <typeparamref name="TMetric"/></returns>
         Java.Util.Map<Org.Apache.Kafka.Common.MetricName, TMetric> ProducerMetrics<TMetric>() where TMetric : Org.Apache.Kafka.Common.Metric;
         /// <summary>
-        /// Reports the <see cref="KNetConsumer{K, V, TJVMK, TJVMV}"/> metrics. <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.6.0/org/apache/kafka/clients/producer/KafkaProducer.html#metrics--"/>
+        /// Reports the <see cref="KNetConsumer{K, V, TJVMK, TJVMV}"/> metrics. <see cref="Org.Apache.Kafka.Clients.Consumer.KafkaConsumer.Metrics"/>
         /// </summary>
         /// <typeparam name="TMetric">Extends <see cref="Org.Apache.Kafka.Common.Metric"/></typeparam>
         /// <returns>An <see cref="IReadOnlyDictionary{T, V}"/> where the key is the current allocated <see cref="KNetConsumer{K, V, TJVMK, TJVMV}"/> and value is a <see cref="Java.Util.Map"/> of <see cref="Org.Apache.Kafka.Common.MetricName"/> and <typeparamref name="TMetric"/></returns>
