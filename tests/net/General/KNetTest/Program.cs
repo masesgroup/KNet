@@ -1,5 +1,5 @@
 ﻿/*
-*  Copyright 2025 MASES s.r.l.
+*  Copyright (c) 2021-2025 MASES s.r.l.
 *
 *  Licensed under the Apache License, Version 2.0 (the "License");
 *  you may not use this file except in compliance with the License.
@@ -32,14 +32,17 @@ using MASES.KNet.Consumer;
 using MASES.KNet.Common;
 using System.Diagnostics;
 using Org.Apache.Kafka.Common.Errors;
+using System.Runtime.InteropServices;
 
 namespace MASES.KNetTest
 {
     class Program
     {
+        static bool deleteTopic = false;
+        static bool withExtraValue = false;
         static bool withBigExtraValue = false;
         static bool withBigBigExtraValue = false;
-        static bool consoleOutput = System.Diagnostics.Debugger.IsAttached ? true : false;
+        static bool consoleOutput = Debugger.IsAttached;
         static bool runBuffered = false;
         static bool useProduceCallback = false;
         static bool useConsumeCallback = false;
@@ -53,9 +56,9 @@ namespace MASES.KNetTest
         const string theServer = "localhost:9092";
         const string theTopic = "myTopic";
 
-        static int NonParallelLimit = 100000;
+        static int NonParallelLimit = RuntimeInformation.IsOSPlatform(OSPlatform.Windows) ? 10000 : 100000;
         static long _firstOffset = -1;
-        static int waitMultiplier = 1;
+        static readonly int waitMultiplier = 1;
 
         static string serverToUse = theServer;
         static string topicToUse = theTopic;
@@ -68,24 +71,28 @@ namespace MASES.KNetTest
 
             if (appArgs.Length != 0)
             {
-                serverToUse = args[0];
-                if (args.Length > 1)
+                serverToUse = appArgs[0];
+                if (appArgs.Length > 1)
                 {
-                    for (int i = 1; i < args.Length; i++)
+                    for (int i = 1; i < appArgs.Length; i++)
                     {
-                        if (args[i] == "runBuffered") { runBuffered = true; continue; }
-                        if (args[i] == "consoleOutput") { consoleOutput = true; continue; }
-                        if (args[i] == "useProduceCallback") { useProduceCallback = true; continue; }
-                        if (args[i] == "useConsumeCallback") { useConsumeCallback = true; continue; }
-                        if (args[i] == "withBigExtraValue") { withBigExtraValue = true; NonParallelLimit /= 10; continue; }
-                        if (args[i] == "withBigBigExtraValue") { withBigBigExtraValue = true; NonParallelLimit /= 100; continue; }
-                        if (args[i] == "onlyProduce") { onlyProduce = true; continue; }
-                        if (args[i] == "flushWhileSend") { flushWhileSend = true; continue; }
-                        if (args[i] == "withAck") { withAck = true; continue; }
-                        if (args[i] == "runInParallel") { runInParallel = true; continue; }
-                        if (args[i] == "avoidThrows") { avoidThrows = true; continue; }
-                        if (args[i] == "randomizeTopicName") { randomizeTopicName = true; continue; }
-                        Console.WriteLine($"Unknown {args[i]}");
+                        var arg = appArgs[i].ToLowerInvariant();
+
+                        if (arg == "deleteTopic".ToLowerInvariant()) { deleteTopic = true; continue; }
+                        if (arg == "runBuffered".ToLowerInvariant()) { runBuffered = true; continue; }
+                        if (arg == "consoleOutput".ToLowerInvariant()) { consoleOutput = true; continue; }
+                        if (arg == "useProduceCallback".ToLowerInvariant()) { useProduceCallback = true; continue; }
+                        if (arg == "useConsumeCallback".ToLowerInvariant()) { useConsumeCallback = true; continue; }
+                        if (arg == "withExtraValue".ToLowerInvariant()) { withExtraValue = true; NonParallelLimit /= 10; continue; }
+                        if (arg == "withBigExtraValue".ToLowerInvariant()) { withBigExtraValue = true; NonParallelLimit /= 10; continue; }
+                        if (arg == "withBigBigExtraValue".ToLowerInvariant()) { withBigBigExtraValue = true; NonParallelLimit /= 100; continue; }
+                        if (arg == "onlyProduce".ToLowerInvariant()) { onlyProduce = true; continue; }
+                        if (arg == "flushWhileSend".ToLowerInvariant()) { flushWhileSend = true; continue; }
+                        if (arg == "withAck".ToLowerInvariant()) { withAck = true; continue; }
+                        if (arg == "runInParallel".ToLowerInvariant()) { runInParallel = true; continue; }
+                        if (arg == "avoidThrows".ToLowerInvariant()) { avoidThrows = true; continue; }
+                        if (arg == "randomizeTopicName".ToLowerInvariant()) { randomizeTopicName = true; continue; }
+                        Console.WriteLine($"Unknown {arg}");
                     }
                 }
             }
@@ -98,7 +105,7 @@ namespace MASES.KNetTest
 
             try
             {
-                CreateTopic();
+                CreateTopic(topicToUse);
                 Console.CancelKeyPress += Console_CancelKeyPress;
                 Console.WriteLine("Press Ctrl-C to exit");
                 if (runInParallel)
@@ -155,6 +162,10 @@ namespace MASES.KNetTest
             {
                 Environment.ExitCode = SharedKNetCore.ManageException(e);
             }
+            finally
+            {
+                DeleteTopic(topicToUse);
+            }
         }
 
         private static void Console_CancelKeyPress(object sender, ConsoleCancelEventArgs e)
@@ -162,11 +173,10 @@ namespace MASES.KNetTest
             if (e.Cancel) resetEvent.Set();
         }
 
-        static void CreateTopic()
+        static void CreateTopic(string topicName)
         {
             try
             {
-                string topicName = topicToUse;
                 int partitions = 1;
                 short replicationFactor = 1;
 
@@ -207,6 +217,34 @@ namespace MASES.KNetTest
                     future.Get();
                     ********/
                     admin.CreateTopic(topic);
+                }
+            }
+            catch (Java.Util.Concurrent.ExecutionException ex)
+            {
+                if (!avoidThrows) throw;
+                Console.WriteLine(ex.InnerException.Message);
+            }
+            catch (TopicExistsException) { }
+            catch (Exception e)
+            {
+                if (!avoidThrows) throw;
+                Console.WriteLine(e.Message);
+            }
+        }
+
+        static void DeleteTopic(string topicName)
+        {
+            if (!deleteTopic) return;
+
+            try
+            {
+                Properties props = AdminClientConfigBuilder.Create().WithBootstrapServers(serverToUse).ToProperties();
+
+                Console.WriteLine($"Deleting {topicName} using an AdminClient based on {props}");
+
+                using (IAdmin admin = KafkaAdminClient.Create(props))
+                {
+                    admin.DeleteTopic(topicName);
                 }
             }
             catch (Java.Util.Concurrent.ExecutionException ex)
@@ -268,7 +306,7 @@ namespace MASES.KNetTest
                             while (runInParallel ? !resetEvent.WaitOne(0) : i < NonParallelLimit)
                             {
                                 watcher.Start();
-                                var record = producer.NewRecord(topicToUse, i.ToString(), new TestType(i, withBigExtraValue, withBigBigExtraValue));
+                                var record = producer.NewRecord(topicToUse, i.ToString(), new TestType(i, withExtraValue, withBigExtraValue, withBigBigExtraValue));
                                 var result = useProduceCallback ? producer.Send(record, callback) : producer.Send(record);
                                 if (!runInParallel && _firstOffset == -1)
                                 {
@@ -496,7 +534,7 @@ namespace MASES.KNetTest
                             while (runInParallel ? !resetEvent.WaitOne(0) : i < NonParallelLimit)
                             {
                                 watcher.Start();
-                                var record = producer.NewRecord(topicToUse, i.ToString(), new TestType(i, withBigExtraValue, withBigBigExtraValue));
+                                var record = producer.NewRecord(topicToUse, i.ToString(), new TestType(i, withExtraValue, withBigExtraValue, withBigBigExtraValue));
                                 var result = useProduceCallback ? producer.Send(record, callback) : producer.Send(record);
                                 if (!runInParallel && _firstOffset == -1)
                                 {

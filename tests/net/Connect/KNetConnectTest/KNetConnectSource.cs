@@ -1,5 +1,5 @@
 ﻿/*
-*  Copyright 2025 MASES s.r.l.
+*  Copyright (c) 2021-2025 MASES s.r.l.
 *
 *  Licensed under the Apache License, Version 2.0 (the "License");
 *  you may not use this file except in compliance with the License.
@@ -17,15 +17,13 @@
 */
 
 using Java.Util;
-using MASES.KNet.Connect;
-using Org.Apache.Kafka.Connect;
 using Org.Apache.Kafka.Connect.Data;
 using Org.Apache.Kafka.Connect.Source;
 using System;
 using System.Collections.Generic;
 using System.IO;
 
-namespace MASES.KNetConnectTest
+namespace MASES.KNet.Connect.Test
 {
     public class KNetSourceTestConnector : KNetSourceConnector<KNetSourceTestConnector, KNetSourceTestTask>
     {
