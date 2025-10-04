@@ -225,15 +225,9 @@ jobs:
 
       - name: Prepare configuration files
         run: |
-          Copy-Item src\container\config_container\zookeeper.properties -Destination bin\net462\zookeeper.properties -Force
-          Copy-Item src\container\config_container\server.properties -Destination bin\net462\server.properties -Force
-          Copy-Item src\config\log4j.properties -Destination bin\net462\log4j.properties -Force
-          Copy-Item src\container\config_container\zookeeper.properties -Destination bin\net8.0\zookeeper.properties -Force
-          Copy-Item src\container\config_container\server.properties -Destination bin\net8.0\server.properties -Force
-          Copy-Item src\config\log4j.properties -Destination bin\net8.0\log4j.properties -Force
-          Copy-Item src\container\config_container\zookeeper.properties -Destination bin\net9.0\zookeeper.properties -Force
-          Copy-Item src\container\config_container\server.properties -Destination bin\net9.0\server.properties -Force
-          Copy-Item src\config\log4j.properties -Destination bin\net9.0\log4j.properties -Force
+          Copy-Item .github\workflows\support\* -Destination bin\net462\ -Force
+          Copy-Item .github\workflows\support\* -Destination bin\net8.0\ -Force
+          Copy-Item .github\workflows\support\* -Destination bin\net9.0\ -Force
 
       - name: Save KNet net462 bin in cache
         uses: actions/cache/save@v4
