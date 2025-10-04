@@ -26,16 +26,17 @@ namespace MASES.KNet.Connect
     /// </summary>
     public class KNetConnectStandalone : JVMBridgeMainExtensible<KNetConnectStandalone>
     {
-        /// <summary>
-        /// Initialize a new <see cref="KNetConnectStandalone"/>
-        /// </summary>
+        /// <inheritdoc/>
         public KNetConnectStandalone()
         {
             KNetConnectProxy.Register();
         }
         /// <inheritdoc/>
         [global::System.Obsolete("This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")] 
-        public KNetConnectStandalone(IJVMBridgeBaseInitializer initializer) : base(initializer) { }
+        public KNetConnectStandalone(IJVMBridgeBaseInitializer initializer) : base(initializer)
+        {
+            KNetConnectProxy.Register();
+        }
         /// <inheritdoc/>
         public override string BridgeClassName => "org.mases.knet.developed.connect.cli.ConnectStandalone";
     }
