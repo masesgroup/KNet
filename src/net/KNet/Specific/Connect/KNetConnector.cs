@@ -1,5 +1,5 @@
 ﻿/*
-*  Copyright 2025 MASES s.r.l.
+*  Copyright (c) 2021-2025 MASES s.r.l.
 *
 *  Licensed under the Apache License, Version 2.0 (the "License");
 *  you may not use this file except in compliance with the License.
@@ -104,19 +104,29 @@ namespace MASES.KNet.Connect
     /// </summary>
     public abstract class KNetConnector : IKNetConnector, IKNetConnectLogging
     {
+        string _uniqueId = null;
+
         /// <summary>
         /// The set of allocated <see cref="KNetTask"/> with their associated identifiers
         /// </summary>
         protected ConcurrentDictionary<long, KNetTask> taskDictionary = new();
 
         IJavaObject reflectedConnector = null;
+
         /// <summary>
-        /// Initializer
+        /// Initialize the <paramref name="uniqueId"/> and register itself
         /// </summary>
-        public KNetConnector()
+        /// <param name="uniqueId"></param>
+        public void Register(string uniqueId = null)
         {
-            KNetConnectProxy.RegisterCLRGlobal(ReflectedConnectorClassName, this);
+            _uniqueId = uniqueId;
+            KNetConnectProxy.RegisterCLRGlobal(UniqueId, this);
         }
+
+        /// <summary>
+        /// Returns the unique id of this instance
+        /// </summary>
+        protected string UniqueId => _uniqueId != null ? _uniqueId : ReflectedConnectorClassName;
 
         /// <summary>
         /// An helper function to read the data from Java side
@@ -126,9 +136,9 @@ namespace MASES.KNet.Connect
         /// <exception cref="InvalidOperationException"> </exception>
         protected void ExecuteOnConnector(string method, params object[] args)
         {
-            reflectedConnector ??= KNetConnectProxy.GetJVMGlobal(ReflectedConnectorClassName);
+            reflectedConnector ??= KNetConnectProxy.GetJVMGlobal(UniqueId);
             if (reflectedConnector != null) reflectedConnector.Invoke(method, args);
-            else throw new InvalidOperationException($"{ReflectedConnectorClassName} was not registered in global JVM");
+            else throw new InvalidOperationException($"{UniqueId} was not registered in global JVM");
         }
 
         /// <summary>
@@ -141,8 +151,8 @@ namespace MASES.KNet.Connect
         /// <exception cref="InvalidOperationException"> </exception>
         protected T ExecuteOnConnector<T>(string method, params object[] args)
         {
-            reflectedConnector ??= KNetConnectProxy.GetJVMGlobal(ReflectedConnectorClassName);
-            return (reflectedConnector != null) ? reflectedConnector.Invoke<T>(method, args) : throw new InvalidOperationException($"{ReflectedConnectorClassName} was not registered in global JVM");
+            reflectedConnector ??= KNetConnectProxy.GetJVMGlobal(UniqueId);
+            return (reflectedConnector != null) ? reflectedConnector.Invoke<T>(method, args) : throw new InvalidOperationException($"{UniqueId} was not registered in global JVM");
         }
 
         /// <summary>
@@ -161,7 +171,7 @@ namespace MASES.KNet.Connect
         /// <exception cref="InvalidOperationException"> </exception>
         protected void DataToExchange(object data)
         {
-            reflectedConnector ??= KNetConnectProxy.GetJVMGlobal(ReflectedConnectorClassName);
+            reflectedConnector ??= KNetConnectProxy.GetJVMGlobal(UniqueId);
             if (reflectedConnector != null)
             {
                 IJVMBridgeBase jvmBBD = data as IJVMBridgeBase;
@@ -169,7 +179,7 @@ namespace MASES.KNet.Connect
             }
             else
             {
-                throw new InvalidOperationException($"{ReflectedConnectorClassName} was not registered in global JVM");
+                throw new InvalidOperationException($"{UniqueId} was not registered in global JVM");
             }
         }
 

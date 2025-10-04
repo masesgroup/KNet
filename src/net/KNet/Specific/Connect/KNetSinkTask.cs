@@ -1,5 +1,5 @@
 ﻿/*
-*  Copyright 2025 MASES s.r.l.
+*  Copyright (c) 2021-2025 MASES s.r.l.
 *
 *  Licensed under the Apache License, Version 2.0 (the "License");
 *  you may not use this file except in compliance with the License.
@@ -16,7 +16,9 @@
 *  Refer to LICENSE for more information.
 */
 
+using Java.Lang;
 using Java.Util;
+using MASES.JCOBridge.C2JBridge;
 using MASES.JNet.Specific.Extensions;
 using Org.Apache.Kafka.Connect.Sink;
 using System.Collections.Generic;
@@ -31,6 +33,18 @@ namespace MASES.KNet.Connect
         where TTask : KNetSinkTask<TTask>
     {
         /// <summary>
+        /// The <see cref="Put(IEnumerable{SinkRecord})"/> uses the <see cref="JCOBridgeExtensions.WithPrefetch{TEnumerable}(TEnumerable, bool)"/>
+        /// </summary>
+        public virtual bool UsePrefetch { get; set; } = false;
+        /// <summary>
+        /// The <see cref="Put(IEnumerable{SinkRecord})"/> uses the <see cref="JCOBridgeExtensions.WithThread{TEnumerable}(TEnumerable, bool, System.Threading.ThreadPriority)"/>
+        /// </summary>
+        public virtual bool UseThread { get; set; } = false;
+        /// <summary>
+        /// The <see cref="System.Threading.ThreadPriority"/> to be used when <see cref="UseThread"/> is <see langword="true"/>
+        /// </summary>
+        public virtual System.Threading.ThreadPriority ThreadPriority { get; set; } = System.Threading.ThreadPriority.AboveNormal;
+        /// <summary>
         /// The <see cref="SinkTaskContext"/>
         /// </summary>
         public SinkTaskContext Context => Context<SinkTaskContext>();
@@ -43,10 +57,20 @@ namespace MASES.KNet.Connect
         /// </summary>
         public void PutInternal()
         {
+            IEnumerable<SinkRecord> ienum;
             Collection<SinkRecord> collection = DataToExchange<Collection<SinkRecord>>();
-            System.Collections.Generic.List<SinkRecord> coll = new System.Collections.Generic.List<SinkRecord>();
-            foreach (var record in collection) { coll.Add(record); }
-            Put(coll);
+            if (UsePrefetch || UseThread)
+            {
+                ienum = UsePrefetch ? collection.WithPrefetch() : collection;
+                ienum = UseThread ? collection.WithThread(threadPriority: ThreadPriority) : collection;
+            }
+            else
+            {
+                System.Collections.Generic.List<SinkRecord> coll = new System.Collections.Generic.List<SinkRecord>();
+                foreach (var record in collection) { coll.Add(record); }
+                ienum = coll;
+            }
+            Put(ienum);
         }
         /// <summary>
         /// Implement the method to execute the Put action
