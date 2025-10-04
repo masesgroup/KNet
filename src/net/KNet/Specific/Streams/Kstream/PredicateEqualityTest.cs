@@ -33,9 +33,7 @@ namespace MASES.KNet.Streams.Kstream
         IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; updateRemote(); } }
         /// <inheritdoc/>
         public override bool AutoInit => false; // avoid to register callback listener
-        /// <summary>
-        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
-        /// </summary>
+        /// <inheritdoc/>
         public override string BridgeClassName => "org.mases.knet.developed.streams.kstream.KNetPredicateEqualityTest";
 
         void updateRemote()

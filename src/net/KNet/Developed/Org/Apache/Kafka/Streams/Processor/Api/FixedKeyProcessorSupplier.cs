@@ -62,9 +62,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
         [global::System.Obsolete("This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
         public FixedKeyProcessorSupplier(params object[] args) { }
 
-        /// <summary>
-        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeListener_BridgeClassName.htm"/>
-        /// </summary>
+        /// <inheritdoc/>
         public override string BridgeClassName => "org.mases.knet.developed.streams.processor.api.FixedKeyProcessorSupplier";
 
         #endregion

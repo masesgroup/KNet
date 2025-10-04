@@ -55,9 +55,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// </summary>
         public ValueTransformerSupplier() { InitializeHandlers(); }
 
-        /// <summary>
-        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeListener_BridgeClassName.htm"/>
-        /// </summary>
+        /// <inheritdoc/>
         public override string BridgeClassName => "org.mases.knet.developed.streams.kstream.ValueTransformerSupplier";
         #endregion
 

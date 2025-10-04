@@ -31,9 +31,7 @@ namespace Kafka
         /// <inheritdoc/>
         [global::System.Obsolete("This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")] 
         public KafkaStart(IJVMBridgeBaseInitializer initializer) : base(initializer) { }
-        /// <summary>
-        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
-        /// </summary>
+        /// <inheritdoc/>
         public override string BridgeClassName => "kafka.Kafka";
     }
 }

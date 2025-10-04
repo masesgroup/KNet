@@ -1,6 +1,6 @@
 # KNet: .NET suite for [Apache Kafka™](https://kafka.apache.org/)
 
-KNet is a comprehensive .NET suite for [Apache Kafka™](https://kafka.apache.org/) providing access to all [APIs](https://kafka.apache.org/documentation/#api) and features: Producer, Consumer, Admin, Streams, Connect, backends (ZooKeeper and Kafka).
+KNet is a comprehensive .NET suite for [Apache Kafka™](https://kafka.apache.org/) providing access to all [APIs](https://kafka.apache.org/documentation/#api) and features: Producer, Consumer, Admin, Streams, Connect, backends (KRaft).
 
 ### Libraries and Tools
 
@@ -30,25 +30,21 @@ Looking for the help of Apache Kafka™ experts? MASES Group can help you design
 
 This project aims to create a set of libraries and tools to direct access, from .NET, all the features available in the [Apache Kafka™ binary distribution](https://kafka.apache.org/downloads). 
 
-There are many client libraries written to manage communication with Apache Kafka™. Conversely, this project use directly the Java packages released from The Apache Foundation giving more than one benefit:
+There are many client libraries written to manage communication with Apache Kafka™. Conversely, this project use directly the Java™ packages released from The Apache Foundation giving more than one benefit:
 * all implemented features are availables at no extra implementation costs, see [KNet usage](src/documentation/articles/usage.md);
 * avoids any third party communication protocol implementation;
 * access all features made available from Apache Kafka™: the most important are Apache Kafka™ Streams and Apache Kafka™ Connect which does not have any C# implementation;
 * measured high [performance](src/documentation/articles/performance.md) in many operating conditions.
 
 Currently the project tries to support, at our best, the [supported Apache Kafka™ binary distribution](https://kafka.apache.org/downloads):
-- Apache Kafka™ version 3.9.*:
-  - branch [master](https://github.com/masesgroup/KNet)
-  - KNet version 2.9.*
-- Apache Kafka™ version 3.8.*:
-  - branch [release/2.8.X](https://github.com/masesgroup/KNet/tree/release/2.8.X)
-  - KNet version 2.8.*
-- Apache Kafka™ version 3.7.*:
-  - branch [release/2.7.X](https://github.com/masesgroup/KNet/tree/release/2.7.X)
-  - KNet version 2.7.*
-- Apache Kafka™ version 3.6.*:
-  - branch [release/2.6.X](https://github.com/masesgroup/KNet/tree/release/2.6.X)
-  - KNet version 2.6.*
+
+| KNet | State | Apache Kafka™ | Branch | .NET Framework | .NET | JVM™ |
+|:---:	|:---:	|:---:	|:---:	|:---:	|:---:	|:---:	|
+| 3.0.* | Active | 4.0.* | [master](https://github.com/masesgroup/KNet) | 462+ | 8+ | 17+ |
+| 2.9.* | Active | 3.9.* | [release/2.9.X](https://github.com/masesgroup/KNet/tree/release/2.9.X) | 462+ | 8+ | 11+ |
+| 2.8.* | Deprecated | 3.8.* | [release/2.8.X](https://github.com/masesgroup/KNet/tree/release/2.8.X) | 462+ | 6+ | 11+ |
+| 2.7.* | Deprecated | 3.7.* | [release/2.7.X](https://github.com/masesgroup/KNet/tree/release/2.7.X) | 462+ | 6+ | 11+ |
+| 2.6.* | Deprecated | 3.6.* | [release/2.6.X](https://github.com/masesgroup/KNet/tree/release/2.6.X) | 462+ | 6+ | 11+ |
 
 The Apache Kafka™ packages are downloaded from:
 
@@ -98,13 +94,16 @@ This project adheres to the Contributor [Covenant code of conduct](CODE_OF_CONDU
 * V1.5.4+: From version 1.5.4 there are new packages dedicated to [KNet Serializer/Deserializer](src/documentation/articles/usageSerDes.md)
 * V2.0.0+: From version 2.0.0 the code base is fully reflected from the JARs of the Apache Kafka™ distribution downloaded from Maven; some developed classes still remains beside the specific KNet implementations
 * V2.4.0+: From version 2.4.0 it is available the new KNet Streams SDK
-* V2.5.0+: From version 2.5.0 there are two breaking changes: uses `Java.Lang.String` instead of `string` (`System.String`) in generated classes and KNet Streams SDK manages the counter-part JVM types
+* V2.5.0+: From version 2.5.0 there are two breaking changes: uses `Java.Lang.String` instead of `string` (`System.String`) in generated classes and KNet Streams SDK manages the counter-part JVM™ types
 * V2.7.0+: From version 2.7.0:
-  * all classes KNetProducer, KNetConsumer and KNet Streams SDK manage the counter-part JVM types
+  * all classes KNetProducer, KNetConsumer and KNet Streams SDK manage the counter-part JVM™ types
   * serializers supports data exchange based on `byte` array and `ByteBuffer`
   * version 2.7.2 introduces `ISerDesSelector` to optimize serialization selection based on `byte` array or `ByteBuffer`
 * V2.8.0+: From version 2.8.0: supports Apache Kafka™ version 3.8.*
 * V2.9.0+: From version 2.9.0: supports Apache Kafka™ version 3.9.*
+* V3.0.0+: From version 3.0.0: supports Apache Kafka™ version 4.0.*
+* V3.0.3+: From version 3.0.3: KNet Connect SDK supports JVM hosted runtime
+* V3.1.0+: From version 3.1.0: supports Apache Kafka™ version 4.1.*
 
 ---
 
@@ -112,23 +111,30 @@ This project adheres to the Contributor [Covenant code of conduct](CODE_OF_CONDU
 
 KNet uses [JNet](https://github.com/masesgroup/JNet), and indeed [JCOBridge](https://www.jcobridge.com/) with its [features](https://www.jcobridge.com/features/), to obtain many benefits:
 * **Cyber-security**: 
-  * [JVM](https://en.wikipedia.org/wiki/Java_virtual_machine) and [CLR, or CoreCLR,](https://en.wikipedia.org/wiki/Common_Language_Runtime) runs in the same process, but are insulated from each other;
-  * JCOBridge does not make any code injection into JVM;
+  * [JVM™](https://en.wikipedia.org/wiki/Java_virtual_machine) and [CLR, or CoreCLR,](https://en.wikipedia.org/wiki/Common_Language_Runtime) runs in the same process, but are insulated from each other;
+  * JCOBridge does not make any code injection into JVM™;
   * JCOBridge does not use any other communication mechanism than JNI;
-  * .NET (CLR) inherently inherits the cyber-security levels of running JVM and Apache Kafka™; 
-* **Direct access the JVM from any .NET application**: 
+  * .NET (CLR) inherently inherits the cyber-security levels of running JVM™ and Apache Kafka™; 
+* **Direct access the JVM™ from any .NET application**: 
   * Any Java/Scala class behind Apache Kafka™ can be directly managed: Consumer, Producer, Administration, Streams, Server-side, and so on;
   * No need to learn new APIs: we try to expose the same APIs in C# style;
   * No extra validation cycle on protocol and functionality: bug fix, improvements, new features are immediately available;
   * Documentation is shared;
 * **Dynamic code**: it helps to write a Java/Scala/Kotlin/etc seamless language code directly inside a standard .NET application written in C#/VB.NET: look at this [simple example](https://www.jcobridge.com/net-examples/dotnet-examples/) and [KNet APIs extensibility](src/documentation/articles/API_extensibility.md).
 
+[JCOBridge 2.6.*](https://www.jcobridge.com) can be used for free without any obligations; you need to purchase a commercial license, or uninstall the software, if you have direct or indirect incomes from the product usage.
+
 ### JCOBridge resources
 
 Have a look at the following JCOBridge resources:
-- [Release notes](https://www.jcobridge.com/release-notes/)
-- [Community Edition](https://www.jcobridge.com/pricing-25/)
-- [Commercial Edition](https://www.jcobridge.com/pricing-25/)
-- Latest release: [![JCOBridge nuget](https://img.shields.io/nuget/v/MASES.JCOBridge)](https://www.nuget.org/packages/MASES.JCOBridge)
+
+|JCOBridge | 2.5.* series | 2.6.* series |
+|:---:	|:---:	|:---:	|
+|KNet | > 1.5.* series | > 3.0.* series and latest 2.9.* series |
+|Release notes|[Link](https://www.jcobridge.com/release-notes/)| [Link](https://www.jcobridge.com/release-notes/)|
+|Community Edition|[Conditions](https://www.jcobridge.com/pricing-25/)|[Conditions](https://www.jcobridge.com/pricing-25/)|
+|Commercial Edition|[Information](https://www.jcobridge.com/pricing-26/)|[Information](https://www.jcobridge.com/pricing-26/)|
+
+Latest release: [![JCOBridge nuget](https://img.shields.io/nuget/v/MASES.JCOBridge)](https://www.nuget.org/packages/MASES.JCOBridge)
 
 KAFKA is a registered trademark of The Apache Software Foundation. KNet has no affiliation with and is not endorsed by The Apache Software Foundation.

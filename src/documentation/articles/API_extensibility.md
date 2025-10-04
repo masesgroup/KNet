@@ -8,8 +8,8 @@ _description: Describes how to extend available APIs of .NET suite for Apache Ka
 What to do if an API was not yet implemented? The simplest answer is: help us to make this product reacher :-)
 Anyway there is another answer which is not available with other products: Dynamic code and programmatically API access.
 
-With **JCOBridge** a developer can use some properties to manage objects in the JVM. 
-Each KNet class implemented contains some methods and two properties: a direct and a dynamic accessor able to analyze the JVM class and executes the code.
+With **JCOBridge** a developer can use some properties to manage objects in the JVM™. 
+Each KNet class implemented contains some methods and two properties: a direct and a dynamic accessor able to analyze the JVM™ class and executes the code.
 So it is not necessary at all to have the methods be ready to be used.
 
 ## When a method is not available
@@ -43,7 +43,7 @@ public Future<RecordMetadata> Send(ProducerRecord record)
 }
 ```
 
-in this case the method accept in input a ready made class `ProducerRecord` and returns a ready made `Future<RecordMetadata>`. From a user point of view the C# and Java method behave the same.
+in this case the method accept in input a ready made class `ProducerRecord` and returns a ready made `Future<RecordMetadata>`. From a user point of view the C# and Java™ method behave the same.
 
 ### Return class is not available
 
@@ -60,7 +60,7 @@ bool hasOffset = dynRecordMetadata.hasOffset();
 
 ```
 
-The example above consider the classes `Future` and `RecordMetadata` not implemented yet. Anyway them exists in JVM.
+The example above consider the classes `Future` and `RecordMetadata` not implemented yet. Anyway them exists in JVM™.
 
 ### Input and Return class are not available
 
@@ -78,12 +78,12 @@ bool hasOffset = dynRecordMetadata.hasOffset();
 
 ```
 
-The example above consider that even the class `ProducerRecord` is not implemented yet. Anyway it exists in JVM.
+The example above consider that even the class `ProducerRecord` is not implemented yet. Anyway it exists in JVM™.
 Each object, like `KafkaProducer` instance, exposes (hidden in the editor) two properties:
-* **JVM** which access the JVM using methods;
-* **DynJVM** which access the JVM using the Dynamic engine.
+* **JVM** which access the JVM™ using methods;
+* **DynJVM** which access the JVM™ using the Dynamic engine.
 
-Using the properties it is possible to instruct the JVM about the action to be done.
+Using the properties it is possible to instruct the JVM™ about the action to be done.
 
 ### Anything is not available
 
@@ -101,12 +101,12 @@ bool hasOffset = dynRecordMetadata.hasOffset();
 
 ```
 
-The example above consider that even the class `KafkaProducer` is not implemented yet. Anyway it exists in JVM.
+The example above consider that even the class `KafkaProducer` is not implemented yet. Anyway it exists in JVM™.
 In previous chapter the tutorial reports about two hidden properties in each object; the properties on each class are just an useful reference to the real one available in `JCOBridge.Global`:
-* **JVM** which access the JVM using methods;
-* **DynJVM** which access the JVM using the Dynamic engine.
+* **JVM** which access the JVM™ using methods;
+* **DynJVM** which access the JVM™ using the Dynamic engine.
 
-Using the properties it is possible to instruct the JVM about the action to be done.
+Using the properties it is possible to instruct the JVM™ about the action to be done.
 
 ### Call a method dynamically
 
@@ -119,17 +119,17 @@ var topPart = consumer.JVM.New("TopicPartition", "myTopic", 0); // the returned 
 var result = consumer.DynInstance.committed(topPart); // this line invokes dynamically the committed on the instance of the KafkaConsumer
 ```
 
-The example above consider the class `TopicPartition` not implemented yet. Anyway it exists in JVM.
+The example above consider the class `TopicPartition` not implemented yet. Anyway it exists in JVM™.
 As exposed before, each object, like `KafkaConsumer` instance, exposes (hidden in the editor) two properties.
 
 Explaining the code:
-* The first line creates a JVM object in C# style: `KafkaConsumer` lives in the CLR and has its counterpart in the JVM.
-* The second line requests to the JVM to allocate a `TopicPartition` object with two parameters.
+* The first line creates a JVM™ object in C# style: `KafkaConsumer` lives in the CLR and has its counterpart in the JVM™.
+* The second line requests to the JVM™ to allocate a `TopicPartition` object with two parameters.
 * This resulting object (`topPart`) is used in the third line as parameter of the `committed` method invocation.
 * The `result` is a **dynamic** object that can be used to extract data or invokes other methods.
 
 ## API exendibility limitation
 
-Starting from the assumption that JCOBridge does not make any code injection, or compilation, within JVM side, the actual limitation is related to something missing within the JVM.
+Starting from the assumption that JCOBridge does not make any code injection, or compilation, within JVM™ side, the actual limitation is related to something missing within the JVM™.
 In the [JVM callbacks](jvm_callbacks.md) article there is an explanation of how works callbacks.
-**The callback feature needs a concrete class in the JVM and if it does not exist there is no way to use it from KNet.**
+**The callback feature needs a concrete class in the JVM™ and if it does not exist there is no way to use it from KNet.**

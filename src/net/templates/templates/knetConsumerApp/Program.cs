@@ -1,5 +1,4 @@
-﻿using MASES.KNet;
-using Org.Apache.Kafka.Clients.Consumer;
+﻿using Org.Apache.Kafka.Clients.Consumer;
 using Org.Apache.Kafka.Common.Serialization;
 using Java.Util;
 using System;
@@ -7,7 +6,7 @@ using System.Text;
 using System.Threading;
 using MASES.KNet.Consumer;
 
-namespace MASES.KNetTemplate.KNetConsumer
+namespace MASES.KNet.Template.KNetConsumer
 {
     class LocalKNetCore : KNetCore<LocalKNetCore> { }
 

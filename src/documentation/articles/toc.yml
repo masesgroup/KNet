@@ -10,7 +10,7 @@
   href: API_extensibility.md
 - name: KNet Serializer/Deserializer
   href: usageSerDes.md
-- name: KNet JVM callbacks
+- name: KNet JVM™ callbacks
   href: jvm_callbacks.md
 - name: KNet Connect SDK
   href: connectSDK.md
