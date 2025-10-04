@@ -5,9 +5,9 @@
 		<PackageType>DotnetTool</PackageType>
 		<OutputType>Exe</OutputType>
 		<AssemblyName>MASES.KNetConnect</AssemblyName>
-		<RootNamespace>MASES.KNetConnect</RootNamespace>
+		<RootNamespace>MASES.KNet.Connect</RootNamespace>
 		<Title>KNet Connect SDK command line interface - .NET suite for Apache Kafka</Title>
-		<Description>Connect SDK command line interface of .NET suite for Apache Kafka. KNet is a comprehensive .NET suite for Apache Kafka providing all features: Producer, Consumer, Admin, Streams, Connect, backends (ZooKeeper and Kafka).</Description>
+		<Description>Connect SDK command line interface of .NET suite for Apache Kafka. KNet is a comprehensive .NET suite for Apache Kafka providing all features: Producer, Consumer, Admin, Streams, Connect, backends (KRaft).</Description>
 		<Product>KNetConnect</Product>
 		<GeneratePackageOnBuild>false</GeneratePackageOnBuild>
 		<PackageTags>knet cli kafka apache-kafka dotnet clr netcore net6 kafka connect streams producer consumer providers streamprovider gateway</PackageTags>
@@ -17,27 +17,20 @@
 		<RunAnalyzersDuringBuild>False</RunAnalyzersDuringBuild>
 	</PropertyGroup>
 
-	<ItemGroup Condition="True">
-		<knetconnect_jars Include="$(ProjectDir)\..\..\..\jars\*.*" />
-		<knetconnect_config Include="$(ProjectDir)\..\..\config\*.*" />
-		<knetconnect_kraft Include="$(ProjectDir)\..\..\config\kraft\*.*" />
-	</ItemGroup>
-
 	<Target Name="CopyCustomContent" AfterTargets="AfterBuild">
-		<Copy SourceFiles="@(knetconnect_jars)" DestinationFolder="$(OutDir)\jars" />
-		<Copy SourceFiles="@(knetconnect_config)" DestinationFolder="$(OutDir)\config" />
-		<Copy SourceFiles="@(knetconnect_kraft)" DestinationFolder="$(OutDir)\config\kraft" />
+		<Copy SourceFiles="@(knetfiles_jars)" DestinationFolder="$(OutDir)\jars\%(RecursiveDir)" />
+		<Copy SourceFiles="@(knetfiles_config)" DestinationFolder="$(OutDir)\config\%(RecursiveDir)" />
 	</Target>
 	<Target Name="CopyCustomContentOnPublish" AfterTargets="Publish">
-		<Copy SourceFiles="@(knetconnect_jars)" DestinationFolder="$(OutDir)\jars" />
-		<Copy SourceFiles="@(knetconnect_config)" DestinationFolder="$(OutDir)\config" />
-		<Copy SourceFiles="@(knetconnect_kraft)" DestinationFolder="$(OutDir)\config\kraft" />
+		<Copy SourceFiles="@(knetfiles_jars)" DestinationFolder="$(OutDir)\jars\%(RecursiveDir)" />
+		<Copy SourceFiles="@(knetfiles_config)" DestinationFolder="$(OutDir)\config\%(RecursiveDir)" />
 	</Target>
 	
 	<ItemGroup>
 		<None Include="..\..\documentation\articles\usageConnect.md" Pack="true" PackagePath="\" />
 	</ItemGroup>
 	<ItemGroup>
+		<PackageReference Include="MASES.JNetCLICore" Version="2.6.4" />
 		<PackageReference Include="Microsoft.SourceLink.GitHub" Version="8.0.0" PrivateAssets="All" />
 	</ItemGroup>
 	<ItemGroup>

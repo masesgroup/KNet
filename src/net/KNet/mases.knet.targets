@@ -1,19 +1,16 @@
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <knet_jars Include="$(MSBuildThisFileDirectory)\jars\*.*" />
-    <knet_config Include="$(MSBuildThisFileDirectory)\config\*.*" />
-    <knet_configKraft Include="$(MSBuildThisFileDirectory)\config\kraft\*.*" />
+    <knet_jars Include="$(MSBuildThisFileDirectory)\jars\**\*.*" />
+    <knet_config Include="$(MSBuildThisFileDirectory)\config\**\*.*" />
   </ItemGroup>
 
   <Target Name="KNet_CopyFilesNative" BeforeTargets="Build">
-    <Copy SourceFiles="@(knet_jars)" DestinationFolder="$(TargetDir)/jars" />
-    <Copy SourceFiles="@(knet_config)" DestinationFolder="$(TargetDir)/config" />
-    <Copy SourceFiles="@(knet_configKraft)" DestinationFolder="$(TargetDir)/config/kraft" />
+    <Copy SourceFiles="@(knet_jars)" DestinationFolder="$(TargetDir)/jars/%(RecursiveDir)" />
+    <Copy SourceFiles="@(knet_config)" DestinationFolder="$(TargetDir)/config/%(RecursiveDir)" />
   </Target>
   
   <Target Name="KNet_CopyFilesNativePublish" BeforeTargets="Publish">
-    <Copy SourceFiles="@(knet_jars)" DestinationFolder="$(PublishDir)/jars" />
-    <Copy SourceFiles="@(knet_config)" DestinationFolder="$(PublishDir)/config" />
-    <Copy SourceFiles="@(knet_configKraft)" DestinationFolder="$(PublishDir)/config/kraft" />
+    <Copy SourceFiles="@(knet_jars)" DestinationFolder="$(PublishDir)/jars/%(RecursiveDir)" />
+    <Copy SourceFiles="@(knet_config)" DestinationFolder="$(PublishDir)/config/%(RecursiveDir)" />
   </Target>
 </Project>

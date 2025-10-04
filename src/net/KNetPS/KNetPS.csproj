@@ -3,9 +3,9 @@
 	<PropertyGroup>
 		<GeneratePackageOnBuild>false</GeneratePackageOnBuild>
 		<AssemblyName>MASES.KNetPS</AssemblyName>
-		<RootNamespace>MASES.KNetPS</RootNamespace>
+		<RootNamespace>MASES.KNet.PowerShell</RootNamespace>
 		<Title>KNet PowerShell command line interface - .NET suite for Apache Kafka</Title>
-		<Description>PowerShell command line interface of .NET suite for Apache Kafka. KNet is a comprehensive .NET suite for Apache Kafka providing all features: Producer, Consumer, Admin, Streams, Connect, backends (ZooKeeper and Kafka).</Description>
+		<Description>PowerShell command line interface of .NET suite for Apache Kafka. KNet is a comprehensive .NET suite for Apache Kafka providing all features: Producer, Consumer, Admin, Streams, Connect, backends (KRaft).</Description>
 		<Product>KNetPS</Product>
 		<OutputPath>..\..\..\MASES.KNetPS\</OutputPath>
 		<TargetFrameworks>net462;net8.0</TargetFrameworks>
@@ -18,25 +18,24 @@
 	</PropertyGroup>
 
 	<ItemGroup Condition="True">
-		<knets_jars_specific Include="$(ProjectDir)\..\..\..\jars\knet-*.*" />
-		<knetps_jars Include="$(ProjectDir)\..\..\..\jars\**\*.*" />
-		<knetps_config Include="$(ProjectDir)\..\..\config\**\*.*" />
+		<knetfiles_jars_specific Include="$(ProjectDir)\..\..\..\jars\knet-*.*" />
 	</ItemGroup>
 
 	<Target Name="CopyCustomContent" AfterTargets="AfterBuild">
 		<Copy SourceFiles="@(knetfiles_jars_specific)" DestinationFolder="$(OutDir)\jars\%(RecursiveDir)" />
-		<Copy SourceFiles="@(knetps_jars)" DestinationFolder="$(OutDir)\..\jars\%(RecursiveDir)" />
-		<Copy SourceFiles="@(knetps_config)" DestinationFolder="$(OutDir)\config\%(RecursiveDir)" />
+		<Copy SourceFiles="@(knetfiles_jars)" DestinationFolder="$(OutDir)\..\jars\%(RecursiveDir)" />
+		<Copy SourceFiles="@(knetfiles_config)" DestinationFolder="$(OutDir)\config\%(RecursiveDir)" />
 	</Target>
 	<Target Name="CopyCustomContentOnPublish" AfterTargets="Publish">
 		<Copy SourceFiles="@(knetfiles_jars_specific)" DestinationFolder="$(OutDir)\jars\%(RecursiveDir)" />
-		<Copy SourceFiles="@(knetps_jars)" DestinationFolder="$(OutDir)\jars\%(RecursiveDir)" />
-		<Copy SourceFiles="@(knetps_config)" DestinationFolder="$(OutDir)\config\%(RecursiveDir)" />
+		<Copy SourceFiles="@(knetfiles_jars)" DestinationFolder="$(OutDir)\..\jars\%(RecursiveDir)" />
+		<Copy SourceFiles="@(knetfiles_config)" DestinationFolder="$(OutDir)\config\%(RecursiveDir)" />
 	</Target>
+
 	<ItemGroup>
-	  <Compile Include="..\KNetCLI\KNetCLICore.cs" Link="KNetCLICore.cs" />
+		<Compile Include="..\KNetCLI\KNetCLICore.cs" Link="KNetCLICore.cs" />
 	</ItemGroup>
-	
+
 	<ItemGroup>
 		<ProjectReference Include="..\KNet\KNet.csproj">
 			<!--<IncludeAssets>All</IncludeAssets>-->
@@ -44,8 +43,8 @@
 		</ProjectReference>
 		<PackageReference Include="MASES.JNetPSCore" Version="2.6.4" />
 		<PackageReference Include="Microsoft.SourceLink.GitHub" Version="8.0.0">
-		  <PrivateAssets>all</PrivateAssets>
-		  <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 		</PackageReference>
 		<PackageReference Include="PowerShellStandard.Library" Version="5.1.1">
 			<PrivateAssets>All</PrivateAssets>
@@ -53,11 +52,11 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <None Update="MASES.KNetPSFramework.psd1" Condition="'$(TargetFramework)' == 'net462'">
-	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-	  </None>
-	  <None Update="MASES.KNetPSCore.psd1" Condition="'$(TargetFramework)' == 'net8.0'">
-	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-	  </None>
+		<None Update="MASES.KNetPSFramework.psd1" Condition="'$(TargetFramework)' == 'net462'">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+		<None Update="MASES.KNetPSCore.psd1" Condition="'$(TargetFramework)' == 'net8.0'">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
 	</ItemGroup>
 </Project>

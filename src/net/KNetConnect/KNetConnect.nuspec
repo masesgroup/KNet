@@ -9,9 +9,9 @@
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <projectUrl>https://github.com/masesgroup/KNet/</projectUrl>
     <repository type="git" url="https://github.com/masesgroup/KNet/" />
-    <description>Connect SDK command line interface of .NET suite for Apache Kafka. KNet is a comprehensive .NET suite for Apache Kafka providing all features: Producer, Consumer, Admin, Streams, Connect, backends (ZooKeeper and Kafka).</description>
+    <description>Connect SDK command line interface of .NET suite for Apache Kafka. KNet is a comprehensive .NET suite for Apache Kafka providing all features: Producer, Consumer, Admin, Streams, Connect, backends (KRaft).</description>
     <releaseNotes>https://github.com/masesgroup/KNet/releases</releaseNotes>
-    <copyright>Copyright ©  MASES s.r.l. 2025</copyright>
+    <copyright>Copyright (c) 2021-2025 MASES s.r.l.</copyright>
     <license type="file">LICENSE</license>
     <icon>JCOB128x128.png</icon>
     <tags>knet cli kafka apache-kafka dotnet clr netcore net8 kafka connect streams producer consumer providers streamprovider gateway</tags>

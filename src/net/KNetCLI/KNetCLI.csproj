@@ -1,13 +1,13 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 	<Import Project="..\Common\Common.props" />
 	<PropertyGroup>
 		<OutputPath>..\..\..\binCLI\</OutputPath>
 		<PackageType>DotnetTool</PackageType>
 		<OutputType>Exe</OutputType>
 		<AssemblyName>MASES.KNetCLI</AssemblyName>
-		<RootNamespace>MASES.KNetCLI</RootNamespace>
+		<RootNamespace>MASES.KNet.CLI</RootNamespace>
 		<Title>KNet command line interface - .NET suite for Apache Kafka</Title>
-		<Description>Command line interface of .NET suite for Apache Kafka. KNet is a comprehensive .NET suite for Apache Kafka providing all features: Producer, Consumer, Admin, Streams, Connect, backends (ZooKeeper and Kafka).</Description>
+		<Description>Command line interface of .NET suite for Apache Kafka. KNet is a comprehensive .NET suite for Apache Kafka providing all features: Producer, Consumer, Admin, Streams, Connect, backends (KRaft).</Description>
 		<Product>KNetCLI</Product>
 		<GeneratePackageOnBuild>false</GeneratePackageOnBuild>
 		<PackageTags>knet cli kafka apache-kafka dotnet clr netcore net6 kafka connect streams producer consumer providers streamprovider gateway</PackageTags>
@@ -17,28 +17,20 @@
 		<RunAnalyzersDuringBuild>False</RunAnalyzersDuringBuild>
 	</PropertyGroup>
 
-	<ItemGroup Condition="True">
-		<knetcli_jars Include="$(ProjectDir)\..\..\..\jars\*.*" />
-		<knetcli_config Include="$(ProjectDir)\..\..\config\*.*" />
-		<knetcli_kraft Include="$(ProjectDir)\..\..\config\kraft\*.*" />
-	</ItemGroup>
-
 	<Target Name="CopyCustomContent" AfterTargets="AfterBuild">
-		<Copy SourceFiles="@(knetcli_jars)" DestinationFolder="$(OutDir)\jars" />
-		<Copy SourceFiles="@(knetcli_config)" DestinationFolder="$(OutDir)\config" />
-		<Copy SourceFiles="@(knetcli_kraft)" DestinationFolder="$(OutDir)\config\kraft" />
+		<Copy SourceFiles="@(knetfiles_jars)" DestinationFolder="$(OutDir)\jars\%(RecursiveDir)" />
+		<Copy SourceFiles="@(knetfiles_config)" DestinationFolder="$(OutDir)\config\%(RecursiveDir)" />
 	</Target>
 	<Target Name="CopyCustomContentOnPublish" AfterTargets="Publish">
-		<Copy SourceFiles="@(knetcli_jars)" DestinationFolder="$(OutDir)\jars" />
-		<Copy SourceFiles="@(knetcli_config)" DestinationFolder="$(OutDir)\config" />
-		<Copy SourceFiles="@(knetcli_kraft)" DestinationFolder="$(OutDir)\config\kraft" />
+		<Copy SourceFiles="@(knetfiles_jars)" DestinationFolder="$(OutDir)\jars\%(RecursiveDir)" />
+		<Copy SourceFiles="@(knetfiles_config)" DestinationFolder="$(OutDir)\config\%(RecursiveDir)" />
 	</Target>
 	
 	<ItemGroup>
 		<None Include="..\..\documentation\articles\usageCLI.md" Pack="true" PackagePath="\" />
 	</ItemGroup>
 	<ItemGroup>
-		<PackageReference Include="Microsoft.CodeAnalysis.CSharp.Scripting" Version="4.14.0" />
+		<PackageReference Include="MASES.JNetCLICore" Version="2.6.4" />
 		<PackageReference Include="Microsoft.SourceLink.GitHub" Version="8.0.0" PrivateAssets="All" />
 	</ItemGroup>
 	<ItemGroup>

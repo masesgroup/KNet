@@ -1,5 +1,5 @@
 ﻿/*
-*  Copyright 2025 MASES s.r.l.
+*  Copyright (c) 2021-2025 MASES s.r.l.
 *
 *  Licensed under the Apache License, Version 2.0 (the "License");
 *  you may not use this file except in compliance with the License.
@@ -16,18 +16,16 @@
 *  Refer to LICENSE for more information.
 */
 
-using MASES.JNetPSCore;
+using MASES.JNet.PowerShell;
 using MASES.KNet;
 
-namespace MASES.KNetPS
+namespace MASES.KNet.PowerShell
 {
     /// <summary>
     /// Public Helper class
     /// </summary>
     public static class KNetPSHelper<TClass> where TClass : KNetCore<TClass>
     {
-        public static void SetClassToRun(string classToRun) { JNetPSHelper<TClass>.Set(typeof(KNetCore<>), nameof(KNetPSCore.ApplicationClassToRun), classToRun); }
-
         public static void SetJarRootPath(string jarRootPath) { JNetPSHelper<TClass>.Set(typeof(KNetCore<>), nameof(KNetPSCore.ApplicationJarRootPath), jarRootPath); }
 
         public static void SetLog4JPath(string log4JPath) { JNetPSHelper<TClass>.Set(typeof(KNetCore<>), nameof(KNetPSCore.ApplicationLog4JPath), log4JPath); }

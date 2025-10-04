@@ -1,10 +1,10 @@
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
 	<PropertyGroup>
-		<Copyright>Copyright ©  MASES s.r.l. 2024</Copyright>
+		<Copyright>Copyright (c) 2021-2025 MASES s.r.l.</Copyright>
 		<Owners>MASES s.r.l.</Owners>
 		<Authors>MASES s.r.l.</Authors>
 		<Company>MASES s.r.l.</Company>
-		<Version>2.9.3.0</Version>
+		<Version>3.1.0.0</Version>
 		<LangVersion>latest</LangVersion>
 		<GenerateAssemblyInfo>true</GenerateAssemblyInfo>
 		<PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
@@ -19,7 +19,14 @@
 		<SignAssembly>true</SignAssembly>
 		<AssemblyOriginatorKeyFile>..\Common\KNet.snk</AssemblyOriginatorKeyFile>
 		<NoWarn>$(NoWarn);0618</NoWarn>
+		<!--see https://learn.microsoft.com/en-us/dotnet/core/compatibility/interop/9.0/cet-support-->
+		<CETCompat>false</CETCompat>
 	</PropertyGroup>
+	<ItemGroup Condition="True">
+		<knetfiles_jars Include="$(ProjectDir)\..\..\..\jars\*.*" />
+		<knetfiles_config Include="$(ProjectDir)\..\..\config\**\*.*" />
+	</ItemGroup>
+	
 	<PropertyGroup Condition="'$(KNET_DOCKER_BUILD_ACTIONS)' != 'true'">
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 		<TargetFrameworks>net462;net8.0;net9.0</TargetFrameworks>
@@ -27,10 +34,6 @@
 	<PropertyGroup Condition="'$(KNET_DOCKER_BUILD_ACTIONS)' == 'true'">
 		<GeneratePackageOnBuild>false</GeneratePackageOnBuild>
 		<TargetFramework>net8.0</TargetFramework>
-	</PropertyGroup>
-	<PropertyGroup Condition="'$(TargetFramework)' == 'net9.0'">
-		<!--see https://learn.microsoft.com/en-us/dotnet/core/compatibility/interop/9.0/cet-support-->
-		<CETCompat>false</CETCompat>
 	</PropertyGroup>
 	<ItemGroup Condition="'$(KNET_DOCKER_BUILD_ACTIONS)' != 'true'">
 		<None Include="..\..\..\LICENSE" Pack="true" PackagePath="" />
