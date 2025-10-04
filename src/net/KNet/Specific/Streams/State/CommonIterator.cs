@@ -1,5 +1,5 @@
 ﻿/*
-*  Copyright 2025 MASES s.r.l.
+*  Copyright (c) 2021-2025 MASES s.r.l.
 *
 *  Licensed under the Apache License, Version 2.0 (the "License");
 *  you may not use this file except in compliance with the License.
@@ -40,7 +40,7 @@ namespace MASES.KNet.Streams.State
             _factory = factory;
         }
         IGenericSerDesFactory _factory;
-        IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
+        IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set => _factory = value; }
         /// <summary>
         /// Returns the current <see cref="IGenericSerDesFactory"/>
         /// </summary>

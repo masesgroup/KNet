@@ -18,7 +18,7 @@ Author = 'MASES s.r.l.'
 
 CompanyName = 'MASES s.r.l.'
 
-Copyright = 'Copyright ©  MASES s.r.l. 2025'
+Copyright = 'Copyright (c) 2021-2025 MASES s.r.l.'
 Description = 'KNet PowerShell command line interface is a PowerShell Module to use Apache Kafka and PowerShell side-by-side. With KNet PowerShell it is possible to:
 - execute all tools of Apache Kafka within a PowerShell shell: Administration tools, Console Consumer, Console Producer, manage Apache Kafka Streams, activate Apache Kafka Connect, server side (start Kafka and ZooKeeper), etc
 - create consumers and producers objects to interact with an Apache Kafka cluster

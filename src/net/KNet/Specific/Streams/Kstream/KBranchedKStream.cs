@@ -1,5 +1,5 @@
 ﻿/*
-*  Copyright 2025 MASES s.r.l.
+*  Copyright (c) 2021-2025 MASES s.r.l.
 *
 *  Licensed under the Apache License, Version 2.0 (the "License");
 *  you may not use this file except in compliance with the License.
@@ -32,7 +32,7 @@ namespace MASES.KNet.Streams.Kstream
         Org.Apache.Kafka.Streams.Kstream.BranchedKStream<TJVMK, TJVMV> _inner;
 
         IGenericSerDesFactory _factory;
-        IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
+        IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set => _factory = value; }
 
         internal BranchedKStream(IGenericSerDesFactory factory, Org.Apache.Kafka.Streams.Kstream.BranchedKStream<TJVMK, TJVMV> inner)
         {
@@ -46,7 +46,7 @@ namespace MASES.KNet.Streams.Kstream
         public static implicit operator Org.Apache.Kafka.Streams.Kstream.BranchedKStream<TJVMK, TJVMV>(BranchedKStream<K, V, TJVMK, TJVMV> t) => t._inner;
 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/kstream/BranchedKStream.html#defaultBranch--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/kstream/BranchedKStream.html#defaultBranch()"/>
         /// </summary>
         /// <returns><see cref="System.Collections.Generic.IReadOnlyDictionary{TKey, TValue}"/></returns>
         public System.Collections.Generic.IReadOnlyDictionary<string, KStream<K, V, TJVMK, TJVMV>> DefaultBranch()
@@ -62,7 +62,7 @@ namespace MASES.KNet.Streams.Kstream
             return dict;
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/kstream/BranchedKStream.html#defaultBranch-org.apache.kafka.streams.kstream.Branched-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/kstream/BranchedKStream.html#defaultBranch(org.apache.kafka.streams.kstream.Branched)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Branched{K, V, TJVMK, TJVMV}"/></param>
         /// <returns><see cref="Java.Util.Map"/></returns>
@@ -80,7 +80,7 @@ namespace MASES.KNet.Streams.Kstream
             return dict;
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/kstream/BranchedKStream.html#noDefaultBranch--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/kstream/BranchedKStream.html#noDefaultBranch()"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Map"/></returns>
         public System.Collections.Generic.IReadOnlyDictionary<string, KStream<K, V, TJVMK, TJVMV>> NoDefaultBranch()
@@ -96,7 +96,7 @@ namespace MASES.KNet.Streams.Kstream
             return dict;
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/kstream/BranchedKStream.html#branch-org.apache.kafka.streams.kstream.Predicate-org.apache.kafka.streams.kstream.Branched-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/kstream/BranchedKStream.html#branch(org.apache.kafka.streams.kstream.Predicate,org.apache.kafka.streams.kstream.Branched)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Predicate{K, V, TJVMK, TJVMV}"/></param>
         /// <param name="arg1"><see cref="Branched{K, V, TJVMK, TJVMV}"/></param>
@@ -110,7 +110,7 @@ namespace MASES.KNet.Streams.Kstream
             return new BranchedKStream<K, V, TJVMK, TJVMV>(_factory, _inner.Branch<TJVMK, TJVMV>(arg0, arg1));
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/kstream/BranchedKStream.html#branch-org.apache.kafka.streams.kstream.Predicate-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/kstream/BranchedKStream.html#branch(org.apache.kafka.streams.kstream.Predicate)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Predicate{K, V, TJVMK, TJVMV}"/></param>
         /// <typeparam name="Arg0objectSuperK"><typeparamref name="K"/></typeparam>

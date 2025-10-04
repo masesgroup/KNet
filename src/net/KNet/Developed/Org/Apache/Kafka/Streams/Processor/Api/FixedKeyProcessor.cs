@@ -1,5 +1,5 @@
 ﻿/*
-*  Copyright 2025 MASES s.r.l.
+*  Copyright (c) 2021-2025 MASES s.r.l.
 *
 *  Licensed under the Apache License, Version 2.0 (the "License");
 *  you may not use this file except in compliance with the License.
@@ -24,15 +24,15 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
     public partial interface IFixedKeyProcessor<KIn, VIn, VOut> : IJVMBridgeBase
     {
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.5.0/org/apache/kafka/streams/processor/api/FixedKeyProcessor.html#init-org.apache.kafka.streams.processor.api.FixedKeyProcessorContext-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/processor/api/FixedKeyProcessor.html#init(org.apache.kafka.streams.processor.api.FixedKeyProcessorContext)"/>
         /// </summary>
         void Init(FixedKeyProcessorContext<KIn, VOut> context);
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.5.0/org/apache/kafka/streams/processor/api/FixedKeyProcessor.html#process-org.apache.kafka.streams.processor.api.FixedKeyRecord-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/processor/api/FixedKeyProcessor.html#process(org.apache.kafka.streams.processor.api.FixedKeyRecord)"/>
         /// </summary>
         void Process(FixedKeyRecord<KIn, VIn> record);
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.5.0/org/apache/kafka/streams/processor/api/FixedKeyProcessor.html#close--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/processor/api/FixedKeyProcessor.html#close()"/>
         /// </summary>
         void Close();
     }

@@ -1,5 +1,5 @@
 ﻿/*
-*  Copyright 2025 MASES s.r.l.
+*  Copyright (c) 2021-2025 MASES s.r.l.
 *
 *  Licensed under the Apache License, Version 2.0 (the "License");
 *  you may not use this file except in compliance with the License.
@@ -16,11 +16,11 @@
 *  Refer to LICENSE for more information.
 */
 
-using MASES.JNetPSCore.Cmdlet;
+using MASES.JNet.PowerShell.Cmdlet;
 using MASES.KNet;
 using System.Management.Automation;
 
-namespace MASES.KNetPS.Cmdlet
+namespace MASES.KNet.PowerShell.Cmdlet
 {
     public class StartKNetPSCmdletCommandBase<TCmdlet> : StartJNetPSCmdletCommandBase<TCmdlet, KNetPSCore>
         where TCmdlet : StartKNetPSCmdletCommandBase<TCmdlet>

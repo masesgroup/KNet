@@ -1,5 +1,5 @@
 /*
-*  Copyright 2025 MASES s.r.l.
+*  Copyright (c) 2021-2025 MASES s.r.l.
 *
 *  Licensed under the Apache License, Version 2.0 (the "License");
 *  you may not use this file except in compliance with the License.
@@ -70,7 +70,13 @@ namespace Org.Apache.Kafka.Tools
 
             string[] parameters = strings.ToArray();
 
-            return new StreamsResetter().Execute(parameters.ToJVMArray<Java.Lang.String, string>()) == 0;
+            StreamsResetter resetter = new();
+            Java.Lang.String[] args = parameters.ToJVMArray<Java.Lang.String, string>();
+            try
+            {
+                return resetter.Execute(args) == 0;
+            }
+            finally { resetter.Dispose(); }
         }
     }
     #endregion

@@ -1,5 +1,5 @@
 ﻿/*
-*  Copyright 2025 MASES s.r.l.
+*  Copyright (c) 2021-2025 MASES s.r.l.
 *
 *  Licensed under the Apache License, Version 2.0 (the "License");
 *  you may not use this file except in compliance with the License.
@@ -51,11 +51,14 @@ namespace Org.Apache.Kafka.Connect.Connector
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
         /// </summary>
-        public ConnectRecord()
-        {
-        }
+        public ConnectRecord() { }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.5.0/org/apache/kafka/connect/connector/ConnectRecord.html#org.apache.kafka.connect.connector.ConnectRecord(java.lang.String,java.lang.Integer,org.apache.kafka.connect.data.Schema,java.lang.Object,org.apache.kafka.connect.data.Schema,java.lang.Object,java.lang.Long)"/>
+        /// Internal constructor: used internally from JCOBridge
+        /// </summary>
+        [global::System.Obsolete("This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
+        public ConnectRecord(IJVMBridgeBaseInitializer initializer) : base(initializer) { }
+        /// <summary>
+        /// https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.1/org/apache/kafka/connect/connector/ConnectRecord.html#%3Cinit%3E(java.lang.String,java.lang.Integer,org.apache.kafka.connect.data.Schema,java.lang.Object,org.apache.kafka.connect.data.Schema,java.lang.Object,java.lang.Long)
         /// </summary>
         public ConnectRecord(string topic, int kafkaPartition,
                               Schema keySchema, TKey key,
@@ -65,7 +68,7 @@ namespace Org.Apache.Kafka.Connect.Connector
         {
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.5.0/org/apache/kafka/connect/connector/ConnectRecord.html#org.apache.kafka.connect.connector.ConnectRecord(java.lang.String,java.lang.Integer,org.apache.kafka.connect.data.Schema,java.lang.Object,org.apache.kafka.connect.data.Schema,java.lang.Object,java.lang.Long,java.lang.Iterable)"/>
+        /// https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.1/org/apache/kafka/connect/connector/ConnectRecord.html#%3Cinit%3E(java.lang.String,java.lang.Integer,org.apache.kafka.connect.data.Schema,java.lang.Object,org.apache.kafka.connect.data.Schema,java.lang.Object,java.lang.Long,java.lang.Iterable)
         /// </summary>
         public ConnectRecord(string topic, int kafkaPartition,
                              Schema keySchema, TKey key,
@@ -99,7 +102,7 @@ namespace Org.Apache.Kafka.Connect.Connector
         /// <summary>
         /// Value
         /// </summary>
-        public TValue Value => IExecute< TValue>("value");
+        public TValue Value => IExecute<TValue>("value");
         /// <summary>
         /// ValueSchema
         /// </summary>
@@ -113,11 +116,11 @@ namespace Org.Apache.Kafka.Connect.Connector
         /// </summary>
         public Headers Headers => IExecute<Headers>("headers");
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.5.0/org/apache/kafka/connect/connector/ConnectRecord.html#newRecord-java.lang.String-java.lang.Integer-org.apache.kafka.connect.data.Schema-java.lang.Object-org.apache.kafka.connect.data.Schema-java.lang.Object-java.lang.Long-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.1/org/apache/kafka/connect/connector/ConnectRecord.html#newRecord(java.lang.String,java.lang.Integer,org.apache.kafka.connect.data.Schema,java.lang.Object,org.apache.kafka.connect.data.Schema,java.lang.Object,java.lang.Long)"/>
         /// </summary>
         public R NewRecord(string topic, int kafkaPartition, Schema keySchema, TKey key, Schema valueSchema, TValue value, DateTime timestamp) => IExecute<R>("newRecord", topic, kafkaPartition, keySchema, key, valueSchema, value, new DateTimeOffset(timestamp).ToUnixTimeMilliseconds());
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.5.0/org/apache/kafka/connect/connector/ConnectRecord.html#newRecord-java.lang.String-java.lang.Integer-org.apache.kafka.connect.data.Schema-java.lang.Object-org.apache.kafka.connect.data.Schema-java.lang.Object-java.lang.Long-java.lang.Iterable-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.1/org/apache/kafka/connect/connector/ConnectRecord.html#newRecord(java.lang.String,java.lang.Integer,org.apache.kafka.connect.data.Schema,java.lang.Object,org.apache.kafka.connect.data.Schema,java.lang.Object,java.lang.Long,java.lang.Iterable)"/>
         /// </summary>
         public R NewRecord(string topic, int kafkaPartition, Schema keySchema, TKey key, Schema valueSchema, TValue value, DateTime timestamp, Headers headers) => IExecute<R>("newRecord", topic, kafkaPartition, keySchema, key, valueSchema, value, new DateTimeOffset(timestamp).ToUnixTimeMilliseconds(), headers);
     }

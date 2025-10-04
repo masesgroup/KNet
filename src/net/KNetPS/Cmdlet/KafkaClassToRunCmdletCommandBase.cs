@@ -1,5 +1,5 @@
 ﻿/*
-*  Copyright 2025 MASES s.r.l.
+*  Copyright (c) 2021-2025 MASES s.r.l.
 *
 *  Licensed under the Apache License, Version 2.0 (the "License");
 *  you may not use this file except in compliance with the License.
@@ -17,12 +17,14 @@
 */
 
 using MASES.JCOBridge.C2JBridge;
-using MASES.JNetPSCore;
+using MASES.JNet.PowerShell;
+using MASES.JNet.Specific.CLI;
 using System;
+using System.Linq;
 using System.Management.Automation;
 using System.Reflection;
 
-namespace MASES.KNetPS.Cmdlet
+namespace MASES.KNet.PowerShell.Cmdlet
 {
     public class KafkaClassToRunCmdletCommandBase<TCmdlet> : StartKNetPSCmdletCommandBase<TCmdlet>
         where TCmdlet : KafkaClassToRunCmdletCommandBase<TCmdlet>
@@ -37,20 +39,15 @@ namespace MASES.KNetPS.Cmdlet
         {
             base.OnBeforeCreateGlobalInstance();
             var nounName = JNetPSHelper.NounName<TCmdlet>();
-            KNetPSHelper<KNetPSCore>.SetClassToRun(nounName);
+            JNetCLICoreHelper.ApplicationClassToRun = nounName;
         }
 
         protected override void OnAfterCreateGlobalInstance()
         {
-            string[] arguments = Array.Empty<string>();
-            if (Arguments != null)
-            {
-                arguments = Arguments.Split(' ');
-            }
-
+            string[] arguments = JNetPSHelper.ExtractArguments(Arguments).ToArray();
             try
             {
-                JNetPSHelper<KNetPSCore>.Launch(KNetPSCore.MainClassToRun, arguments);
+                JNetPSHelper<KNetPSCore>.Launch(JNetCLICoreHelper.MainClassToRun, arguments);
             }
             catch (TargetInvocationException tie)
             {

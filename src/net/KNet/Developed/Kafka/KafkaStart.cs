@@ -1,5 +1,5 @@
 ﻿/*
-*  Copyright 2025 MASES s.r.l.
+*  Copyright (c) 2021-2025 MASES s.r.l.
 *
 *  Licensed under the Apache License, Version 2.0 (the "License");
 *  you may not use this file except in compliance with the License.
@@ -26,6 +26,11 @@ namespace Kafka
     /// </summary>
     public class KafkaStart : JVMBridgeMainExtensible<KafkaStart>
     {
+        /// <inheritdoc/>
+        public KafkaStart() { }
+        /// <inheritdoc/>
+        [global::System.Obsolete("This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")] 
+        public KafkaStart(IJVMBridgeBaseInitializer initializer) : base(initializer) { }
         /// <summary>
         /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
         /// </summary>

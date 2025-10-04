@@ -1,5 +1,5 @@
 ﻿/*
-*  Copyright 2025 MASES s.r.l.
+*  Copyright (c) 2021-2025 MASES s.r.l.
 *
 *  Licensed under the Apache License, Version 2.0 (the "License");
 *  you may not use this file except in compliance with the License.
@@ -46,7 +46,7 @@ namespace MASES.KNet.Streams.State
               IAsyncEnumerator<KeyValue<K, V, TJVMK, TJVMV>>
         {
             IGenericSerDesFactory _factory = factory;
-            IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
+            IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set => _factory = value; }
 
             protected override object ConvertObject(object input)
             {
@@ -83,7 +83,7 @@ namespace MASES.KNet.Streams.State
             readonly ISerDes<K, TJVMK> _keySerDes = null;
             readonly ISerDes<V, TJVMV> _valueSerDes = null;
             IGenericSerDesFactory _factory;
-            IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
+            IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set => _factory = value; }
 
             public StandardLocalEnumerator(IGenericSerDesFactory factory,
                                            IJavaObject obj,
@@ -161,7 +161,7 @@ namespace MASES.KNet.Streams.State
             _keySerDes ??= factory?.BuildKeySerDes<K, TJVMK>();
             _valueSerDes ??= factory?.BuildValueSerDes<V, TJVMV>();
             var kv = _iterator.Next();
-            return new KeyValue<K, V, TJVMK, TJVMV>(factory, new KeyValueSupport<TJVMK, TJVMV>(kv.BridgeInstance), _keySerDes, _valueSerDes, false);
+            return new KeyValue<K, V, TJVMK, TJVMV>(factory, new KeyValueSupport<TJVMK, TJVMV>(kv), _keySerDes, _valueSerDes, false);
         }
         /// <summary>
         /// <see href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Iterator.html#remove()"/>
@@ -171,7 +171,7 @@ namespace MASES.KNet.Streams.State
             _iterator.Remove();
         }
         /// <summary>
-        /// KNet implementation of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/state/KeyValueIterator.html#peekNextKey--"/>
+        /// KNet implementation of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/state/KeyValueIterator.html#peekNextKey()"/>
         /// </summary>
         /// <returns><typeparamref name="K"/></returns>
         public K PeekNextKey()
@@ -181,7 +181,7 @@ namespace MASES.KNet.Streams.State
             return _keySerDes.Deserialize(null, kk);
         }
         /// <summary>
-        /// KNet implementation of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/state/KeyValueIterator.html#close--"/>
+        /// KNet implementation of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/state/KeyValueIterator.html#close()"/>
         /// </summary>
         public void Close()
         {

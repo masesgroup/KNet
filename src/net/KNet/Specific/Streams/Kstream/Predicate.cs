@@ -1,5 +1,5 @@
 ﻿/*
-*  Copyright 2025 MASES s.r.l.
+*  Copyright (c) 2021-2025 MASES s.r.l.
 *
 *  Licensed under the Apache License, Version 2.0 (the "License");
 *  you may not use this file except in compliance with the License.
@@ -40,7 +40,7 @@ namespace MASES.KNet.Streams.Kstream
         ISerDes<V, TJVMV> _vSerializer = null;
 
         IGenericSerDesFactory _factory;
-        IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
+        IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set => _factory = value; }
         /// <summary>
         /// Returns the current <see cref="IGenericSerDesFactory"/>
         /// </summary>
@@ -57,7 +57,7 @@ namespace MASES.KNet.Streams.Kstream
             }
         }
         /// <summary>
-        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/kstream/Predicate.html#test-java.lang.Object-java.lang.Object-"/>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/kstream/Predicate.html#test(java.lang.Object,java.lang.Object)"/>
         /// </summary>
         /// <remarks>If <see cref="OnTest"/> has a value it takes precedence over corresponding <see cref="Test()"/> class method</remarks>
         public new System.Func<Predicate<K, V, TJVMK, TJVMV>, bool> OnTest { get; set; } = null;
@@ -78,10 +78,7 @@ namespace MASES.KNet.Streams.Kstream
 
             return (OnTest != null) ? OnTest(this) : Test();
         }
-        /// <summary>
-        /// KNet override of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/kstream/Predicate.html#test-java.lang.Object-java.lang.Object-"/>
-        /// </summary>
-        /// <returns><see cref="bool"/></returns>
+        /// <inheritdoc cref="Org.Apache.Kafka.Streams.Kstream.Predicate{K, V}.Test(K, V)"/>
         public virtual bool Test()
         {
             return default;

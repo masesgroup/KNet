@@ -16,19 +16,24 @@
 *  Refer to LICENSE for more information.
 */
 
+using MASES.JCOBridge.C2JBridge;
+
 namespace Kafka.Tools
 {
     /// <summary>
     /// Class managing ReplicaVerificationTool
     /// </summary>
-    public class ReplicaVerificationTool : MASES.JCOBridge.C2JBridge.JVMBridgeMain<ReplicaVerificationTool>
+    public class ReplicaVerificationTool : MASES.JCOBridge.C2JBridge.JVMBridgeMainExtensible<ReplicaVerificationTool>
     {
-        /// <summary>
-        /// Initialize a new <see cref="ReplicaVerificationTool"/>
-        /// </summary>
+        /// <inheritdoc/>
         public ReplicaVerificationTool()
-            : base("kafka.tools.ReplicaVerificationTool")
         {
         }
+        /// <inheritdoc/>
+        public ReplicaVerificationTool(IJVMBridgeBaseInitializer initializer) : base(initializer)
+        {
+        }
+        /// <inheritdoc/>
+        public override string BridgeClassName => "kafka.tools.ReplicaVerificationTool";
     }
 }

@@ -1,5 +1,5 @@
 ﻿/*
-*  Copyright 2025 MASES s.r.l.
+*  Copyright (c) 2021-2025 MASES s.r.l.
 *
 *  Licensed under the Apache License, Version 2.0 (the "License");
 *  you may not use this file except in compliance with the License.
@@ -30,7 +30,7 @@ namespace MASES.KNet.Streams.Kstream
     {
         readonly Org.Apache.Kafka.Streams.Kstream.Suppressed<TJVMK> _inner;
         IGenericSerDesFactory _factory;
-        IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set { _factory = value; } }
+        IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set => _factory = value; }
 
         internal Suppressed(Org.Apache.Kafka.Streams.Kstream.Suppressed<TJVMK> inner)
         {
@@ -44,7 +44,7 @@ namespace MASES.KNet.Streams.Kstream
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/kstream/Suppressed.html#untilTimeLimit-java.time.Duration-org.apache.kafka.streams.kstream.Suppressed.BufferConfig-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/kstream/Suppressed.html#untilTimeLimit(java.time.Duration,org.apache.kafka.streams.kstream.Suppressed.BufferConfig)"/>
         /// </summary>
         /// <param name="arg0"><see cref="TimeSpan"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Streams.Kstream.Suppressed.BufferConfig"/></param>
@@ -55,14 +55,14 @@ namespace MASES.KNet.Streams.Kstream
             return new Suppressed<K, TJVMK>(cons);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/kstream/Suppressed.html#untilWindowCloses-org.apache.kafka.streams.kstream.Suppressed.StrictBufferConfig-"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/kstream/Suppressed.html#untilWindowCloses(org.apache.kafka.streams.kstream.Suppressed.StrictBufferConfig)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Kstream.Suppressed.StrictBufferConfig"/></param>
         /// <returns><see cref="Suppressed{K, TJVMK}"/> with <see cref="Org.Apache.Kafka.Streams.Kstream.Windowed"/></returns>
-        public static Suppressed<Org.Apache.Kafka.Streams.Kstream.Windowed, Org.Apache.Kafka.Streams.Kstream.Windowed> UntilWindowCloses(Org.Apache.Kafka.Streams.Kstream.Suppressed.StrictBufferConfig arg0)
+        public static Suppressed<Org.Apache.Kafka.Streams.Kstream.Windowed<object>, Org.Apache.Kafka.Streams.Kstream.Windowed<object>> UntilWindowCloses(Org.Apache.Kafka.Streams.Kstream.Suppressed.StrictBufferConfig arg0)
         {
             var cons = Org.Apache.Kafka.Streams.Kstream.Suppressed<Org.Apache.Kafka.Streams.Kstream.Windowed>.UntilWindowCloses(arg0);
-            return new Suppressed<Org.Apache.Kafka.Streams.Kstream.Windowed, Org.Apache.Kafka.Streams.Kstream.Windowed>(cons);
+            return new Suppressed<Org.Apache.Kafka.Streams.Kstream.Windowed<object>, Org.Apache.Kafka.Streams.Kstream.Windowed<object>>(cons);
         }
 
         #endregion

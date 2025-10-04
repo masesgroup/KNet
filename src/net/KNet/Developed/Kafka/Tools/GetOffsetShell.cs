@@ -16,19 +16,24 @@
 *  Refer to LICENSE for more information.
 */
 
+using MASES.JCOBridge.C2JBridge;
+
 namespace Kafka.Tools
 {
     /// <summary>
     /// Class managing GetOffsetShell
     /// </summary>
-    public class GetOffsetShell : MASES.JCOBridge.C2JBridge.JVMBridgeMain<GetOffsetShell>
+    public class GetOffsetShell : MASES.JCOBridge.C2JBridge.JVMBridgeMainExtensible<GetOffsetShell>
     {
-        /// <summary>
-        /// Initialize a new <see cref="GetOffsetShell"/>
-        /// </summary>
+        /// <inheritdoc/>
         public GetOffsetShell()
-            : base("kafka.tools.GetOffsetShell")
         {
         }
+        /// <inheritdoc/>
+        public GetOffsetShell(IJVMBridgeBaseInitializer initializer) : base(initializer)
+        {
+        }
+        /// <inheritdoc/>
+        public override string BridgeClassName => "kafka.tools.GetOffsetShell";
     }
 }

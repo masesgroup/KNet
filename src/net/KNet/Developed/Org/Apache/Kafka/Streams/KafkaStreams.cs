@@ -1,5 +1,5 @@
 ﻿/*
-*  Copyright 2025 MASES s.r.l.
+*  Copyright (c) 2021-2025 MASES s.r.l.
 *
 *  Licensed under the Apache License, Version 2.0 (the "License");
 *  you may not use this file except in compliance with the License.
@@ -39,7 +39,7 @@ namespace Org.Apache.Kafka.Streams
         public interface IStateListener : IJVMBridgeBase
         {
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.5.0/org/apache/kafka/streams/KafkaStreams.StateListener.html#onChange-org.apache.kafka.streams.KafkaStreams.State-org.apache.kafka.streams.KafkaStreams.State-"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/KafkaStreams.StateListener.html#onChange(org.apache.kafka.streams.KafkaStreams.State,org.apache.kafka.streams.KafkaStreams.State)"/>
             /// </summary>
             void OnChange(Org.Apache.Kafka.Streams.KafkaStreams.State newState, Org.Apache.Kafka.Streams.KafkaStreams.State oldState);
         }
