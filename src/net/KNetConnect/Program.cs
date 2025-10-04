@@ -1,5 +1,5 @@
 ﻿/*
-*  Copyright 2025 MASES s.r.l.
+*  Copyright (c) 2021-2025 MASES s.r.l.
 *
 *  Licensed under the Apache License, Version 2.0 (the "License");
 *  you may not use this file except in compliance with the License.
@@ -16,88 +16,38 @@
 *  Refer to LICENSE for more information.
 */
 
-using MASES.JCOBridge.C2JBridge;
-using MASES.KNet;
+using MASES.JNet.CLI;
 using System;
-using System.Collections.Generic;
-using System.Reflection;
-using System.Text;
+using System.Threading.Tasks;
 
-namespace MASES.KNetCLI
+namespace MASES.KNet.Connect
 {
-    class Program
+    class Program : ProgramBase<KNetConnectCore, Program>
     {
-        static void Main(string[] args)
+        /// <inheritdoc/>
+        public override string ProjectName => "KNetConnect";
+        /// <inheritdoc/>
+        public override string EntryLine => $"{ProgramName} -[d|s] [-k] connect-standalone.properties [-KafkaLocation kafkaFolder] <JCOBridgeArguments> <ClassArguments>";
+        /// <inheritdoc/>
+        public override string SpecificArguments => "s: start Connect in standalone mode." + Environment.NewLine +
+                                                    "d: start Connect in distributed mode." + Environment.NewLine +
+                                                    "k: start Connect in distributed/standalone mode using KNet version." + Environment.NewLine +
+                                                    "KafkaLocation: The folder where Kafka package is available. Default consider this application uses the package jars folder." + Environment.NewLine +
+                                                    "ScalaVersion: the scala version to be used. The default version (2.13.6) is binded to the deafult Apache Kafka version available in the package." + Environment.NewLine +
+                                                    "Log4JConfiguration: the log4j configuration file; the default uses the file within the package.";
+        /// <inheritdoc/>
+        public override string ExampleLines => $"{ProgramName} -s connect-standalone.properties specific-connector.properties" + Environment.NewLine +
+                                               $"{ProgramName} -d connect-distributed.properties";
+        /// <inheritdoc/>
+        public override bool EnableInteractive => false;
+        /// <inheritdoc/>
+        public override bool EnableScript => false;
+        /// <inheritdoc/>
+        public override bool EnableRunCommand => false;
+
+        static async Task Main(string[] args)
         {
-            try
-            {
-                KNetConnectCore.CreateGlobalInstance();
-
-                if (KNetConnectCore.MainClassToRun == null) { ShowHelp(); return; }
-
-                try
-                {
-                    KNetConnectCore.Launch(KNetConnectCore.MainClassToRun, KNetConnectCore.FilteredArgs);
-                }
-                catch (TargetInvocationException tie)
-                {
-                    throw tie.InnerException;
-                }
-                catch (JCOBridge.C2JBridge.JVMInterop.JavaException je)
-                {
-                    throw je.Convert();
-                }
-            }
-            catch (JVMBridgeException e)
-            {
-                StringBuilder sb = new StringBuilder();
-                sb.AppendLine(e.Message);
-                Exception innerException = e.InnerException;
-                while (innerException != null)
-                {
-                    sb.AppendLine(innerException.Message);
-                    innerException = innerException.InnerException;
-                }
-                ShowHelp(sb.ToString());
-            }
-            catch (Exception e)
-            {
-                StringBuilder sb = new StringBuilder();
-                sb.AppendLine(e.Message);
-                Exception innerException = e.InnerException;
-                while (innerException != null)
-                {
-                    sb.AppendLine(innerException.Message);
-                    innerException = innerException.InnerException;
-                }
-                ShowHelp(sb.ToString());
-            }
-        }
-
-        static void ShowHelp(string errorString = null)
-        {
-            var assembly = typeof(Program).Assembly;
-
-            Console.WriteLine("KNetConnect - KNet Connect command line interface - Version " + assembly.GetName().Version.ToString());
-            Console.WriteLine(assembly.GetName().Name + " -[d|s] [-k] connect-standalone.properties [-KafkaLocation kafkaFolder] <JCOBridgeArguments> <ClassArguments>");
-            Console.WriteLine();
-            if (!string.IsNullOrEmpty(errorString))
-            {
-                Console.WriteLine("Error: {0}", errorString);
-            }
-
-            Console.WriteLine("s: start Connect in standalone mode. ");
-            Console.WriteLine("d: start Connect in distributed mode. ");
-            Console.WriteLine("k: start Connect in distributed/standalone mode using KNet version. ");
-            Console.WriteLine("KafkaLocation: The folder where Kafka package is available. Default consider this application uses the package jars folder.");
-            Console.WriteLine("ScalaVersion: the scala version to be used. The default version (2.13.6) is binded to the deafult Apache Kafka version available in the package.");
-            Console.WriteLine("Log4JConfiguration: the log4j configuration file; the default uses the file within the package.");
-            Console.WriteLine("JCOBridgeArguments: the arguments of JCOBridge (see online at https://www.jcobridge.com/net-examples/command-line-options/ for the possible values). ");
-            Console.WriteLine("ClassArguments: the arguments of the class. Depends on the ClassToRun value, to obtain them runs the application or look at Apache Kafka documentation.");
-            Console.WriteLine();
-            Console.WriteLine("Examples:");
-            Console.WriteLine(assembly.GetName().Name + " -s connect-standalone.properties specific-connector.properties");
-            Console.WriteLine(assembly.GetName().Name + " -d connect-distributed.properties");
+            await InternalMain(args);
         }
     }
 }

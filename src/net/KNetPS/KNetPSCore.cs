@@ -1,5 +1,5 @@
 ﻿/*
-*  Copyright 2025 MASES s.r.l.
+*  Copyright (c) 2021-2025 MASES s.r.l.
 *
 *  Licensed under the Apache License, Version 2.0 (the "License");
 *  you may not use this file except in compliance with the License.
@@ -16,12 +16,12 @@
 *  Refer to LICENSE for more information.
 */
 
-using MASES.KNetCLI;
+using MASES.KNet.CLI;
 using System.Collections.Generic;
 using System.IO;
 using System.Reflection;
 
-namespace MASES.KNetPS
+namespace MASES.KNet.PowerShell
 {
     /// <summary>
     /// Directly usable implementation of <see cref="KNetCLICore{T}"/>
