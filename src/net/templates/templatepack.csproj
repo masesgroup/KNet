@@ -6,7 +6,7 @@
 		<PackageId>MASES.KNet.Templates</PackageId>
 		<Title>KNet Templates - Templates to use with KNet</Title>
 		<Summary>Ready made templates to create applications based on KNet</Summary>
-		<Description>Ready made templates to create applications based on KNet. The templates are ready made starting points, all information and APIs are available in the official website https://masesgroup.github.io/KNet</Description>
+		<Description>Ready made templates to create applications based on KNet. The templates are ready made starting points, all information and APIs are available in the official website https://knet.masesgroup.com</Description>
 		<PackageTags>knet kafka apache-kafka dotnet clr netcore net6 template kafka connect streams producer consumer providers streamprovider confluent</PackageTags>
 		<Product>KNet Templates</Product>
 		<IncludeSymbols>false</IncludeSymbols>

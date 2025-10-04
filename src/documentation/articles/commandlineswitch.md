@@ -62,7 +62,7 @@ Plus it accepts from:
 * **JCOBridge**:
   * All command-line switches of JCOBridge available at https://www.jcobridge.com/net-examples/command-line-options/
 
-## JVM identification
+## JVM™ identification
 
 One of the most important command-line switch is **JVMPath**: see [KNet usage](usage.md) to find more information.
 

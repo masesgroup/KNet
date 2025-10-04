@@ -26,9 +26,7 @@ namespace Org.Apache.Zookeeper.Server.Quorum
     /// </summary>
     public class ZooKeeperStart : JVMBridgeMainExtensible<ZooKeeperStart>
     {
-        /// <summary>
-        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
-        /// </summary>
+        /// <inheritdoc/>
         public override string BridgeClassName => "org.apache.zookeeper.server.quorum.QuorumPeerMain";
     }
 }

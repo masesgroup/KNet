@@ -23,9 +23,7 @@ namespace Org.Apache.Kafka.Streams.Kstream.Internals
     /// </summary>
     public class TimeWindow : Window    
     {
-        /// <summary>
-        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
-        /// </summary>
+        /// <inheritdoc/>
         public override string BridgeClassName => "org.apache.kafka.streams.kstream.internals.TimeWindow";
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge

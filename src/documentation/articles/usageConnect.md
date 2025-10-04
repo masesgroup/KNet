@@ -5,9 +5,33 @@ _description: Describes how to use Kafka™ Connect SDK of .NET suite for Apache
 
 # KNet: KNet Connect SDK
 
-## Installation
+## Create a new connector based on KNet Connect SDK
 
-KNet Connect is available in two different formats:
+To start to use KNet Connect SDK and write a connector in C# the following steps can be used:
+1. Install the available templates following the [template usage article](usageTemplates.md)
+2. Execute one the following commands:
+  - Sink connector:
+    ```sh
+    dotnet new knetConnectSink
+    ```
+  - Source connector:
+    ```sh
+    dotnet new knetConnectSource
+    ```
+3. Update the code to define the needed behavior. 
+
+## Execution
+
+The connector can be used from a JVM hosted runtime and from a .NET hosted runtime.
+For an overview of configuration see [Connect SDK](connectSDK.md)
+
+### JVM hosted runtime
+
+To use the connector from a JVM hosted runtime follow the instructions available at https://kafka.apache.org/documentation/#connect and https://kafka.apache.org/quickstart#quickstart_kafkaconnect.
+
+### .NET hosted runtime
+
+KNet Connect .NET hosted runtime is available in two different formats:
 
 - **dotnet tool** hosted on [NuGet](https://www.nuget.org/packages/MASES.KNetConnect/): check https://www.nuget.org/packages/MASES.KNetConnect/ and https://docs.microsoft.com/en-us/dotnet/core/tools/global-tools for installation deep instructions.
 - **Docker image** hosted on [GitHub](https://github.com/masesgroup/KNet/pkgs/container/knetconnect) or [Docker Hub](https://hub.docker.com/repository/docker/masesgroup/knetconnect/general): follow instruction within the page and general instruction on https://docs.docker.com
@@ -15,9 +39,9 @@ KNet Connect is available in two different formats:
 > [!IMPORTANT]
 > The **dotnet tool** needs a JRE/JDK installed within the system
 
-## Usage
+#### Usage
 
-To use the Connect interface (KNetConnect) runs a command like the following:
+To use the .NET hosted runtime Connect interface (KNetConnect) runs a command like the following:
 
 - **dotnet tool**
 
@@ -53,7 +77,7 @@ docker run ghcr.io/masesgroup/knetconnect -d connect-distributed.properties
 docker run masesgroup/knetconnect -d connect-distributed.properties
 ```
 
-### Command line switch available
+#### Command line switch available
 
 _knetconnect_ accepts the following command-line switch to identify its behavior:
 - **d**: starts a distributed version of Connector defined in the file identified from the subsequent parameter
@@ -66,8 +90,3 @@ _knetconnect_ accepts the following command-line switch to identify its behavior
 	- key and value separated with **=**
 	- key-value pair separated with **||**
 	- an example is key1=value1||key2=value2||key3
-  
-### Connector properties
-
-For an overview of configuration see [Connect SDK](connectSDK.md)
-

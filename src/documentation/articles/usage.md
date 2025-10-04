@@ -12,9 +12,9 @@ If classes or methods are not available yet it is possible to use the approach s
 
 KNet accepts many command-line switches to customize its behavior. The full list is available at [Command line switch](commandlineswitch.md) page.
 
-### JVM identification
+### JVM™ identification
 
-One of the most important command-line switch is **JVMPath** and it is available in [JCOBridge switches](https://www.jcobridge.com/net-examples/command-line-options/): it can be used to set-up the location of the JVM library if JCOBridge is not able to identify a suitable JRE/JDK installation.
+One of the most important command-line switch is **JVMPath** and it is available in [JCOBridge switches](https://www.jcobridge.com/net-examples/command-line-options/): it can be used to set-up the location of the JVM™ library if JCOBridge is not able to identify a suitable JRE/JDK installation.
 If a developer is using KNet within its own product it is possible to override the **JVMPath** property with a snippet like the following one:
 
 ```c#
@@ -54,11 +54,11 @@ If the developer/user encounter this condition can do the following steps:
 
 ### Intel CET and KNet
 
-KNet uses an embedded JVM through JNet/JCOBridge, however JVM initialization is incompatible with [CET](https://www.intel.com/content/www/us/en/developer/articles/technical/technical-look-control-flow-enforcement-technology.html) because the code used to identify CPU try to modify the return address and this is considered from CET a violation: see [this comment](https://github.com/masesgroup/JNet/issues/573#issuecomment-2544249107).
+KNet uses an embedded JVM™ through JNet/JCOBridge, however JVM™ initialization is incompatible with [CET](https://www.intel.com/content/www/us/en/developer/articles/technical/technical-look-control-flow-enforcement-technology.html) because the code used to identify CPU try to modify the return address and this is considered from CET a violation: see [this comment](https://github.com/masesgroup/JNet/issues/573#issuecomment-2544249107).
 
 From .NET 9 preview 6, [CET is enabled by default on supported hardware](https://learn.microsoft.com/en-us/dotnet/core/compatibility/interop/9.0/cet-support) when the final stage produce an executable artifact, i.e. the csproj file contains `<OutputType>Exe</OutputType>`.
 
-If the application, upon startup, fails with the error 0xc0000409 (subcode 0x30) it was compiled with CET enabled and it fails during JVM initialization.
+If the application, upon startup, fails with the error 0xc0000409 (subcode 0x30) it was compiled with CET enabled and it fails during JVM™ initialization.
 
 To solve the issue there are four possible solutions:
 1. use a .NET version, e.g. 8, that does not enable CET by default
@@ -186,8 +186,8 @@ The example above can be found in the [templates package](https://www.nuget.org/
 
 ### Producer with Callback
 
-A producer with Callback can be like the following one. In this example the reader can highlight a slightly difference from the corresponding Java code.
-Surf [JVM callbacks]() to go into detail in the callback management from JVM.
+A producer with Callback can be like the following one. In this example the reader can highlight a slightly difference from the corresponding Java™ code.
+Surf [JVM callbacks]() to go into detail in the callback management from JVM™.
 
 ```C#
 using MASES.KNet;

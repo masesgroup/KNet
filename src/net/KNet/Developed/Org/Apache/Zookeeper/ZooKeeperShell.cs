@@ -26,9 +26,7 @@ namespace Org.Apache.Zookeeper
     /// </summary>
     public class ZooKeeperShell : JVMBridgeMainExtensible<ZooKeeperShell>
     {
-        /// <summary>
-        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
-        /// </summary>
+        /// <inheritdoc/>
         public override string BridgeClassName => "org.apache.zookeeper.ZooKeeperMainWithTlsSupportForKafka";
     }
 }

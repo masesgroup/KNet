@@ -9,17 +9,17 @@ This is only a quick introduction to KNet Streams SDK, many other information re
 
 ## Why KNet Streams SDK
 
-KNet Streams SDK adds the ability to manage complex .NET types in Apache Kafka™ Streams without manage them in the JVM. 
+KNet Streams SDK adds the ability to manage complex .NET types in Apache Kafka™ Streams without manage them in the JVM™. 
 **The Apache Kafka™ Streams APIs available in .NET suite for Apache Kafka™ works well if the types used are known within the JVM.**
-Starting from the previous sentence, it works well using native types (bool, string, long, int, and so on), however it does not work if the type in .NET does not have a JVM counterpart.
+Starting from the previous sentence, it works well using native types (bool, string, long, int, and so on), however it does not work if the type in .NET does not have a JVM™ counterpart.
 
 To solve this limitation there are two ways:
-1. if there is the need of a complex type in .NET, an equivalent class shall be avalable in the JVM; so the right steps are:
-   - create the JVM class (in Java or any other language supported)
-   - reflect the JVM class with JNetReflector, or manually create it, in .NET
+1. if there is the need of a complex type in .NET, an equivalent class shall be avalable in the JVM™; so the right steps are:
+   - create the JVM™ class (in Java™ or any other language supported)
+   - reflect the JVM™ class with JNetReflector, or manually create it, in .NET
    - use the generated .NET class as key, or value, type in Apache Kafka™ Streams API available in _.NET suite for Apache Kafka_
 2. otherwise use directly the .NET types in the KNet Streams API available in _.NET suite for Apache Kafka_; this implies:
-   - the developer does not need any knowledge of the JVM
+   - the developer does not need any knowledge of the JVM™
    - everything is mananged, behind the scene, from KNet Streams API
 
 ## General 
@@ -31,16 +31,16 @@ The KNet Streams SDK is a set of API which expose, in .NET, the one available in
 ## API set
 
 The available classes are under the following namespaces:
-- **MASES.KNet.Streams**: covers _org.apache.kafka.streams_ Java package
-- **MASES.KNet.Streams.Kstream**: covers _org.apache.kafka.streams.kstream_ Java package
-- **MASES.KNet.Streams.Processor**: covers _org.apache.kafka.streams.processor_ Java package
-- **MASES.KNet.Streams.Processor.Api**: covers _org.apache.kafka.streams.processor.api_ Java package
-- **MASES.KNet.Streams.State**: covers _org.apache.kafka.streams.state_ Java package
+- **MASES.KNet.Streams**: covers _org.apache.kafka.streams_ Java™ package
+- **MASES.KNet.Streams.Kstream**: covers _org.apache.kafka.streams.kstream_ Java™ package
+- **MASES.KNet.Streams.Processor**: covers _org.apache.kafka.streams.processor_ Java™ package
+- **MASES.KNet.Streams.Processor.Api**: covers _org.apache.kafka.streams.processor.api_ Java™ package
+- **MASES.KNet.Streams.State**: covers _org.apache.kafka.streams.state_ Java™ package
 - **MASES.KNet.Streams.Utils**: adds some useful functions
 
 All KNet Streams SDK APIs starts with the KNet prefix to avoid confusion during development; some examples are:
 - _org.apache.kafka.streams.KafkaStreams_ is managed from **MASES.KNet.Streams.Streams**
-- _org.apache.kafka.streams.state.KeyValueIterator<K, V>_ is managed from **MASES.KNet.Streams.State.KeyValueIterator<TKey, TValue>** applying byte[] on both K and V on _org.apache.kafka.streams.state.KeyValueIterator<K, V>_; there are special cases for this, and other classes, to manage different JVM types:
+- _org.apache.kafka.streams.state.KeyValueIterator<K, V>_ is managed from **MASES.KNet.Streams.State.KeyValueIterator<TKey, TValue>** applying byte[] on both K and V on _org.apache.kafka.streams.state.KeyValueIterator<K, V>_; there are special cases for this, and other classes, to manage different JVM™ types:
   - **MASES.KNet.Streams.State.TimestampedKeyValueIterator<TKey, TValue>** uses an _org.apache.kafka.streams.state.KeyValueIterator<K, V>_ applying byte[] on K and _org.apache.kafka.streams.state.ValueAndTimestamp<byte[]>_ on V;
   - **MASES.KNet.Streams.State.TimestampedWindowedKeyValueIterator<TKey, TValue>** uses an _org.apache.kafka.streams.state.KeyValueIterator<K, V>_ applying _org.apache.kafka.streams.kstream.Windowed<byte[]>_ on K and _org.apache.kafka.streams.state.ValueAndTimestamp<byte[]>_ on V;
 

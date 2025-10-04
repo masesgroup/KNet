@@ -39,13 +39,9 @@ namespace Org.Apache.Kafka.Connect.Connector
     /// <typeparam name="TValue">The type of value to be inserted in Kafka</typeparam>
     public class ConnectRecord<R, TKey, TValue> : JVMBridgeBase<ConnectRecord<R, TKey, TValue>> where R : ConnectRecord<R, TKey, TValue>
     {
-        /// <summary>
-        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeAbstract.htm"/>
-        /// </summary>
+        /// <inheritdoc/>
         public override bool IsBridgeAbstract => true;
-        /// <summary>
-        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
-        /// </summary>
+        /// <inheritdoc/>
         public override string BridgeClassName => "org.apache.kafka.connect.connector.ConnectRecord";
 
         /// <summary>
