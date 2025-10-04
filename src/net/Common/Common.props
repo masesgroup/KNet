@@ -4,7 +4,7 @@
 		<Owners>MASES s.r.l.</Owners>
 		<Authors>MASES s.r.l.</Authors>
 		<Company>MASES s.r.l.</Company>
-		<Version>3.1.0.0</Version>
+		<Version>2.9.3.0</Version>
 		<LangVersion>latest</LangVersion>
 		<GenerateAssemblyInfo>true</GenerateAssemblyInfo>
 		<PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
