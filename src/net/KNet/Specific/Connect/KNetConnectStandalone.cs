@@ -1,5 +1,5 @@
 ﻿/*
-*  Copyright 2025 MASES s.r.l.
+*  Copyright (c) 2021-2025 MASES s.r.l.
 *
 *  Licensed under the Apache License, Version 2.0 (the "License");
 *  you may not use this file except in compliance with the License.
@@ -24,7 +24,7 @@ namespace MASES.KNet.Connect
     /// <summary>
     /// Class managing KNetConnectStandalone
     /// </summary>
-    public class KNetConnectStandalone : MASES.JCOBridge.C2JBridge.JVMBridgeMainExtensible<KNetConnectStandalone>
+    public class KNetConnectStandalone : JVMBridgeMainExtensible<KNetConnectStandalone>
     {
         /// <inheritdoc/>
         public KNetConnectStandalone()
@@ -32,6 +32,7 @@ namespace MASES.KNet.Connect
             KNetConnectProxy.Register();
         }
         /// <inheritdoc/>
+        [global::System.Obsolete("This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")] 
         public KNetConnectStandalone(IJVMBridgeBaseInitializer initializer) : base(initializer)
         {
             KNetConnectProxy.Register();
