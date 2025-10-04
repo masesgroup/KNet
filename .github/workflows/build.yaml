@@ -482,11 +482,11 @@ jobs:
         os: [ 'windows-2022' ] # 'macos-13' removed waiting https://github.com/masesgroup/JNet/issues/518
         framework: [ 'net462', 'net8.0', 'net9.0' ]
         jdk_vendor: [ 'temurin', 'microsoft', 'corretto', 'zulu', 'oracle', 'graalvm' ]
-        jdk_version: [ '17', '21' ] # only supported LTS versions
         jdk_version: [ '11', '17', '21' ] # only LTS versions
         exclude:
           - jdk_vendor: graalvm
-            jdk_version: 11          - jdk_vendor: oracle
+            jdk_version: 11
+          - jdk_vendor: oracle
             jdk_version: 11
         
     runs-on: ${{ matrix.os }}
