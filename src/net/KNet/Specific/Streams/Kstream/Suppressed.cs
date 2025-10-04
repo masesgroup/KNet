@@ -59,10 +59,10 @@ namespace MASES.KNet.Streams.Kstream
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Kstream.Suppressed.StrictBufferConfig"/></param>
         /// <returns><see cref="Suppressed{K, TJVMK}"/> with <see cref="Org.Apache.Kafka.Streams.Kstream.Windowed"/></returns>
-        public static Suppressed<Org.Apache.Kafka.Streams.Kstream.Windowed<object>, Org.Apache.Kafka.Streams.Kstream.Windowed<object>> UntilWindowCloses(Org.Apache.Kafka.Streams.Kstream.Suppressed.StrictBufferConfig arg0)
+        public static Suppressed<Org.Apache.Kafka.Streams.Kstream.Windowed, Org.Apache.Kafka.Streams.Kstream.Windowed> UntilWindowCloses(Org.Apache.Kafka.Streams.Kstream.Suppressed.StrictBufferConfig arg0)
         {
             var cons = Org.Apache.Kafka.Streams.Kstream.Suppressed<Org.Apache.Kafka.Streams.Kstream.Windowed>.UntilWindowCloses(arg0);
-            return new Suppressed<Org.Apache.Kafka.Streams.Kstream.Windowed<object>, Org.Apache.Kafka.Streams.Kstream.Windowed<object>>(cons);
+            return new Suppressed<Org.Apache.Kafka.Streams.Kstream.Windowed, Org.Apache.Kafka.Streams.Kstream.Windowed>(cons);
         }
 
         #endregion
