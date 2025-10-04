@@ -121,9 +121,7 @@ namespace MASES.KNet.Consumer
         readonly KNetConsumerCallback<K, V, TJVMK, TJVMV> _consumerCallback = null;
         readonly ISerDes<K, TJVMK> _keyDeserializer;
         readonly ISerDes<V, TJVMV> _valueDeserializer;
-        /// <summary>
-        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
-        /// </summary>
+        /// <inheritdoc/>
         public override string BridgeClassName => "org.mases.knet.developed.clients.consumer.KNetConsumer";
 
         internal KNetConsumer(Properties props) : base(props) { }

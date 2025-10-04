@@ -45,7 +45,7 @@ namespace MASES.KNet.Streams.Kstream
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/Printed.html#toFile(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/kstream/Printed.html#toFile(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <returns><see cref="Printed{K, V, TJVMK, TJVMV}"/></returns>
@@ -55,7 +55,7 @@ namespace MASES.KNet.Streams.Kstream
             return new Printed<K, V, TJVMK, TJVMV>(cons);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/Printed.html#toSysOut()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/kstream/Printed.html#toSysOut()"/>
         /// </summary>
         /// <returns><see cref="Printed{K, V, TJVMK, TJVMV}"/></returns>
         public static Printed<K, V, TJVMK, TJVMV> ToSysOut()
@@ -68,7 +68,7 @@ namespace MASES.KNet.Streams.Kstream
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/Printed.html#withKeyValueMapper(org.apache.kafka.streams.kstream.KeyValueMapper)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/kstream/Printed.html#withKeyValueMapper(org.apache.kafka.streams.kstream.KeyValueMapper)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Kstream.KeyValueMapper"/></param>
         /// <typeparam name="Arg0objectSuperK"><typeparamref name="K"/></typeparam>
@@ -81,7 +81,7 @@ namespace MASES.KNet.Streams.Kstream
             return this;
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/Printed.html#withLabel(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/kstream/Printed.html#withLabel(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <returns><see cref="Printed{K, V, TJVMK, TJVMV}"/></returns>

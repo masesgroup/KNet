@@ -53,7 +53,7 @@ namespace MASES.KNet.Streams.Kstream
             }
         }
         /// <summary>
-        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/ValueMapperWithKey.html#apply(java.lang.Object,java.lang.Object)"/>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/kstream/ValueMapperWithKey.html#apply(java.lang.Object,java.lang.Object)"/>
         /// </summary>
         /// <remarks>If <see cref="OnApply"/> has a value it takes precedence over corresponding class method</remarks>
         public new System.Func<V, VR> OnApply { get; set; } = null;
@@ -98,7 +98,7 @@ namespace MASES.KNet.Streams.Kstream
         ISerDes<VR, TJVMVR> _vrSerializer = null;
 
         /// <summary>
-        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/ValueMapperWithKey.html#apply(java.lang.Object,java.lang.Object)"/>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/kstream/ValueMapperWithKey.html#apply(java.lang.Object,java.lang.Object)"/>
         /// </summary>
         /// <remarks>If <see cref="OnApply"/> has a value it takes precedence over corresponding class method</remarks>
         public new System.Func<V, IEnumerable<VR>> OnApply { get; set; } = null;

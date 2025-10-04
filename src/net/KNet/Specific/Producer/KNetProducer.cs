@@ -213,9 +213,7 @@ namespace MASES.KNet.Producer
     /// <typeparam name="TJVMV">The JVM type of <typeparamref name="V"/></typeparam>
     public class KNetProducer<K, V, TJVMK, TJVMV> : KafkaProducer<TJVMK, TJVMV>, IProducer<K, V, TJVMK, TJVMV>
     {
-        /// <summary>
-        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
-        /// </summary>
+        /// <inheritdoc/>
         public override string BridgeClassName => "org.mases.knet.developed.clients.producer.KNetProducer";
 
         readonly bool _autoCreateSerDes = false;

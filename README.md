@@ -103,6 +103,7 @@ This project adheres to the Contributor [Covenant code of conduct](CODE_OF_CONDU
 * V2.9.0+: From version 2.9.0: supports Apache Kafka™ version 3.9.*
 * V3.0.0+: From version 3.0.0: supports Apache Kafka™ version 4.0.*
 * V3.0.3+: From version 3.0.3: KNet Connect SDK supports JVM hosted runtime
+* V3.1.0+: From version 3.1.0: supports Apache Kafka™ version 4.1.*
 
 ---
 
@@ -129,7 +130,7 @@ Have a look at the following JCOBridge resources:
 
 |JCOBridge | 2.5.* series | 2.6.* series |
 |:---:	|:---:	|:---:	|
-|KNet | > 1.5.* series | > 3.0.* series |
+|KNet | > 1.5.* series | > 3.0.* series and latest 2.9.* series |
 |Release notes|[Link](https://www.jcobridge.com/release-notes/)| [Link](https://www.jcobridge.com/release-notes/)|
 |Community Edition|[Conditions](https://www.jcobridge.com/pricing-25/)|[Conditions](https://www.jcobridge.com/pricing-25/)|
 |Commercial Edition|[Information](https://www.jcobridge.com/pricing-26/)|[Information](https://www.jcobridge.com/pricing-26/)|

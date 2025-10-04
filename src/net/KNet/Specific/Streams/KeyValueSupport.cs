@@ -25,7 +25,7 @@ namespace MASES.KNet.Streams
 {
     #region KeyValueSupport<K, V>
     /// <summary>
-    /// Support class for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/KeyValue.html#org.apache.kafka.streams.KeyValue"/>
+    /// Support class for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/KeyValue.html#org.apache.kafka.streams.KeyValue"/>
     /// </summary>
     public partial class KeyValueSupport<K, V> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<KeyValueSupport<K, V>>
     {
@@ -37,14 +37,14 @@ namespace MASES.KNet.Streams
         /// </summary>
         public KeyValueSupport() { }
         /// <summary>
-        /// Initialize a new instance of <see cref="KeyValueSupport{K, V}"/> from an instance of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/KeyValue.html#org.apache.kafka.streams.KeyValue(java.lang.Object,java.lang.Object)"/>
+        /// Initialize a new instance of <see cref="KeyValueSupport{K, V}"/> from an instance of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/KeyValue.html#org.apache.kafka.streams.KeyValue(java.lang.Object,java.lang.Object)"/>
         /// </summary>
         /// <param name="obj">The <see cref="IJavaObject"/> referring <see cref="Org.Apache.Kafka.Streams.KeyValue{K, V}"/></param>
         public KeyValueSupport(Org.Apache.Kafka.Streams.KeyValue<K,V> obj) : this(obj.BridgeInstance)
         {
         }
         /// <summary>
-        /// Initialize a new instance of <see cref="KeyValueSupport{K, V}"/> from an instance of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/KeyValue.html#org.apache.kafka.streams.KeyValue(java.lang.Object,java.lang.Object)"/>
+        /// Initialize a new instance of <see cref="KeyValueSupport{K, V}"/> from an instance of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/KeyValue.html#org.apache.kafka.streams.KeyValue(java.lang.Object,java.lang.Object)"/>
         /// </summary>
         /// <param name="obj">The <see cref="IJavaObject"/> referring <see cref="Org.Apache.Kafka.Streams.KeyValue{K, V}"/></param>
         public KeyValueSupport(IJavaObject obj) : base(obj)
@@ -59,25 +59,15 @@ namespace MASES.KNet.Streams
         private static readonly IJavaType _LocalBridgeClazz = ClazzOf(_bridgeClassName);
         private static IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw new InvalidOperationException($"Class {_bridgeClassName} was not found.");
 
-        /// <summary>
-        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
-        /// </summary>
+        /// <inheritdoc/>
         public override string BridgeClassName => _bridgeClassName;
-        /// <summary>
-        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeAbstract.htm"/>
-        /// </summary>
+        /// <inheritdoc/>
         public override bool IsBridgeAbstract => false;
-        /// <summary>
-        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeCloseable.htm"/>
-        /// </summary>
+        /// <inheritdoc/>
         public override bool IsBridgeCloseable => false;
-        /// <summary>
-        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeInterface.htm"/>
-        /// </summary>
+        /// <inheritdoc/>
         public override bool IsBridgeInterface => false;
-        /// <summary>
-        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeStatic.htm"/>
-        /// </summary>
+        /// <inheritdoc/>
         public override bool IsBridgeStatic => false;
 
         #region Class/Interface conversion operators

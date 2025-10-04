@@ -162,7 +162,7 @@ namespace MASES.KNet.Streams.State
             _iterator.Remove();
         }
         /// <summary>
-        /// KNet implementation of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/state/KeyValueIterator.html#peekNextKey()"/>
+        /// KNet implementation of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/state/KeyValueIterator.html#peekNextKey()"/>
         /// </summary>
         /// <returns><typeparamref name="K"/></returns>
         public Windowed<K, TJVMK> PeekNextKey()
@@ -171,7 +171,7 @@ namespace MASES.KNet.Streams.State
             return new Windowed<K, TJVMK>(Factory, kk);
         }
         /// <summary>
-        /// KNet implementation of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/state/KeyValueIterator.html#close()"/>
+        /// KNet implementation of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/state/KeyValueIterator.html#close()"/>
         /// </summary>
         public void Close()
         {
