@@ -27,6 +27,11 @@ namespace Org.Apache.Zookeeper
     public class ZooKeeperShell : JVMBridgeMainExtensible<ZooKeeperShell>
     {
         /// <inheritdoc/>
+        public ZooKeeperShell() { }
+        /// <inheritdoc/>
+        [global::System.Obsolete("This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
+        public ZooKeeperShell(IJVMBridgeBaseInitializer initializer) : base(initializer) { }
+        /// <inheritdoc/>
         public override string BridgeClassName => "org.apache.zookeeper.ZooKeeperMainWithTlsSupportForKafka";
     }
 }
