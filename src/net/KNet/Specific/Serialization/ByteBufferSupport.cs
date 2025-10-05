@@ -84,7 +84,7 @@ namespace MASES.KNet.Serialization
 
         #region ByteBufferSerde
         /// <summary>
-        /// KNet implementaion of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/serialization/Serdes.ByteBufferSerde.html"/>
+        /// KNet implementaion of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/serialization/Serdes.ByteBufferSerde.html"/>
         /// </summary>
         public partial class ByteBufferSerde : Org.Apache.Kafka.Common.Serialization.Serdes.WrapperSerde<Java.Nio.ByteBuffer>
         {
@@ -105,25 +105,15 @@ namespace MASES.KNet.Serialization
 
             private static readonly IJavaType LocalBridgeClazz = ClazzOf(_bridgeClassName);
 
-            /// <summary>
-            /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
-            /// </summary>
+            /// <inheritdoc/>
             public override string BridgeClassName => _bridgeClassName;
-            /// <summary>
-            /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeAbstract.htm"/>
-            /// </summary>
+            /// <inheritdoc/>
             public override bool IsBridgeAbstract => false;
-            /// <summary>
-            /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeCloseable.htm"/>
-            /// </summary>
+            /// <inheritdoc/>
             public override bool IsBridgeCloseable => false;
-            /// <summary>
-            /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeInterface.htm"/>
-            /// </summary>
+            /// <inheritdoc/>
             public override bool IsBridgeInterface => false;
-            /// <summary>
-            /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeStatic.htm"/>
-            /// </summary>
+            /// <inheritdoc/>
             public override bool IsBridgeStatic => true;
 
             // TODO: complete the class

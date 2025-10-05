@@ -207,13 +207,9 @@ namespace Org.Apache.Kafka.Connect.Source
         /// </summary>
         [global::System.Obsolete("This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
         public SourceRecord(IJVMBridgeBaseInitializer initializer) : base(initializer) { }
-        /// <summary>
-        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeAbstract.htm"/>
-        /// </summary>
+        /// <inheritdoc/>
         public override bool IsBridgeAbstract => false;
-        /// <summary>
-        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
-        /// </summary>
+        /// <inheritdoc/>
         public override string BridgeClassName => "org.apache.kafka.connect.source.SourceRecord";
 
         /// <summary>
@@ -343,13 +339,9 @@ namespace Org.Apache.Kafka.Connect.Source
         /// </summary>
         [global::System.Obsolete("This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
         public SourceRecord(IJVMBridgeBaseInitializer initializer) : base(initializer) { }
-        /// <summary>
-        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeAbstract.htm"/>
-        /// </summary>
+        /// <inheritdoc/>
         public override bool IsBridgeAbstract => false;
-        /// <summary>
-        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
-        /// </summary>
+        /// <inheritdoc/>
         public override string BridgeClassName => "org.apache.kafka.connect.source.SourceRecord";
 
         /// <summary>

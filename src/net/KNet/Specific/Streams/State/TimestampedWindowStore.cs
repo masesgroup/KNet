@@ -30,12 +30,12 @@ namespace MASES.KNet.Streams.State
     public class TimestampedWindowStore<K, V, TJVMK, TJVMV> : ManagedStore<Org.Apache.Kafka.Streams.State.ReadOnlyWindowStore<TJVMK, Org.Apache.Kafka.Streams.State.ValueAndTimestamp<TJVMV>>>
     {
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/state/ReadOnlyWindowStore.html#all()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/state/ReadOnlyWindowStore.html#all()"/>
         /// </summary>
         /// <returns><see cref="TimestampedWindowedKeyValueIterator{K, V, TJVMK, TJVMV}"/></returns>
         public virtual TimestampedWindowedKeyValueIterator<K, V, TJVMK, TJVMV> All() => new TimestampedWindowedKeyValueIterator<K, V, TJVMK, TJVMV>(Factory, Store.All());
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/state/ReadOnlyWindowStore.html#fetch(java.lang.Object,java.lang.Object,java.time.Instant,java.time.Instant)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/state/ReadOnlyWindowStore.html#fetch(java.lang.Object,java.lang.Object,java.time.Instant,java.time.Instant)"/>
         /// </summary>
         /// <param name="arg0"><typeparamref name="K"/></param>
         /// <param name="arg1"><typeparamref name="K"/></param>
@@ -54,7 +54,7 @@ namespace MASES.KNet.Streams.State
             return new(factory, Store.Fetch(r0, r1, arg2, arg3));
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/state/ReadOnlyWindowStore.html#fetchAll(java.time.Instant,java.time.Instant)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/state/ReadOnlyWindowStore.html#fetchAll(java.time.Instant,java.time.Instant)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Time.Instant"/></param>
         /// <param name="arg1"><see cref="Java.Time.Instant"/></param>
@@ -65,7 +65,7 @@ namespace MASES.KNet.Streams.State
             return new(Factory, Store.FetchAll(arg0, arg1));
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/state/ReadOnlyWindowStore.html#fetch(java.lang.Object,java.time.Instant,java.time.Instant)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/state/ReadOnlyWindowStore.html#fetch(java.lang.Object,java.time.Instant,java.time.Instant)"/>
         /// </summary>
         /// <param name="arg0"><typeparamref name="K"/></param>
         /// <param name="arg1"><see cref="Java.Time.Instant"/></param>
@@ -81,7 +81,7 @@ namespace MASES.KNet.Streams.State
             return new(factory, Store.Fetch(r0, arg1, arg2));
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/state/ReadOnlyWindowStore.html#fetch(java.lang.Object,long)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/state/ReadOnlyWindowStore.html#fetch(java.lang.Object,long)"/>
         /// </summary>
         /// <param name="arg0"><typeparamref name="K"/></param>
         /// <param name="arg1"><see cref="long"/></param>
@@ -96,12 +96,12 @@ namespace MASES.KNet.Streams.State
             return new ValueAndTimestamp<V, TJVMV>(factory, agg);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/state/ReadOnlyWindowStore.html#backwardAll()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/state/ReadOnlyWindowStore.html#backwardAll()"/>
         /// </summary>
         /// <returns><see cref="TimestampedWindowedKeyValueIterator{K, V, TJVMK, TJVMV}"/></returns>
         public virtual TimestampedWindowedKeyValueIterator<K, V, TJVMK, TJVMV> BackwardAll => new(Factory, Store.BackwardAll());
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/state/ReadOnlyWindowStore.html#backwardFetch(java.lang.Object,java.lang.Object,java.time.Instant,java.time.Instant)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/state/ReadOnlyWindowStore.html#backwardFetch(java.lang.Object,java.lang.Object,java.time.Instant,java.time.Instant)"/>
         /// </summary>
         /// <param name="arg0"><typeparamref name="K"/></param>
         /// <param name="arg1"><typeparamref name="K"/></param>
@@ -120,7 +120,7 @@ namespace MASES.KNet.Streams.State
             return new(factory, Store.BackwardFetch(r0, r1, arg2, arg3));
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/state/ReadOnlyWindowStore.html#backwardFetchAll(java.time.Instant,java.time.Instant)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/state/ReadOnlyWindowStore.html#backwardFetchAll(java.time.Instant,java.time.Instant)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Time.Instant"/></param>
         /// <param name="arg1"><see cref="Java.Time.Instant"/></param>
@@ -131,7 +131,7 @@ namespace MASES.KNet.Streams.State
             return new(Factory, Store.BackwardFetchAll(arg0, arg1));
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/state/ReadOnlyWindowStore.html#backwardFetch(java.lang.Object,java.time.Instant,java.time.Instant)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/state/ReadOnlyWindowStore.html#backwardFetch(java.lang.Object,java.time.Instant,java.time.Instant)"/>
         /// </summary>
         /// <param name="arg0"><typeparamref name="K"/></param>
         /// <param name="arg1"><see cref="Java.Time.Instant"/></param>

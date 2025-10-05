@@ -57,7 +57,7 @@ namespace MASES.KNet.Streams.Processor.Api
         public abstract ProcessorContext<KOut, VOut, TJVMKOut, TJVMVOut> Context { get; }
 
         /// <summary>
-        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/api/Processor.html#process(org.apache.kafka.streams.processor.api.Record)"/>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/processor/api/Processor.html#process(org.apache.kafka.streams.processor.api.Record)"/>
         /// </summary>
         /// <remarks>If <see cref="OnProcess"/> has a value it takes precedence over corresponding class method</remarks>
         public new System.Action<Record<KIn, VIn, TJVMKIn, TJVMVIn>> OnProcess { get; set; } = null;
@@ -72,7 +72,7 @@ namespace MASES.KNet.Streams.Processor.Api
         }
 
         /// <summary>
-        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/api/Processor.html#init(org.apache.kafka.streams.processor.api.ProcessorContext)"/>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/processor/api/Processor.html#init(org.apache.kafka.streams.processor.api.ProcessorContext)"/>
         /// </summary>
         /// <remarks>If <see cref="OnInit"/> has a value it takes precedence over corresponding class method</remarks>
         public new System.Action<ProcessorContext<KOut, VOut, TJVMKOut, TJVMVOut>> OnInit { get; set; } = null;
@@ -100,7 +100,7 @@ namespace MASES.KNet.Streams.Processor.Api
         /// <inheritdoc/>
         public override ProcessorContext<KOut, VOut, byte[], byte[]> Context => _processorContext;
         /// <summary>
-        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/api/Processor.html#process(org.apache.kafka.streams.processor.api.Record)"/>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/processor/api/Processor.html#process(org.apache.kafka.streams.processor.api.Record)"/>
         /// </summary>
         /// <remarks>If <see cref="OnProcess"/> has a value it takes precedence over corresponding class method</remarks>
         public new System.Action<Record<KIn, VIn, byte[], byte[]>> OnProcess { get; set; } = null;
@@ -113,7 +113,7 @@ namespace MASES.KNet.Streams.Processor.Api
         }
 
         /// <summary>
-        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/api/Processor.html#init(org.apache.kafka.streams.processor.api.ProcessorContext)"/>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/processor/api/Processor.html#init(org.apache.kafka.streams.processor.api.ProcessorContext)"/>
         /// </summary>
         /// <remarks>If <see cref="OnInit"/> has a value it takes precedence over corresponding class method</remarks>
         public new System.Action<ProcessorContext<KOut, VOut, byte[], byte[]>> OnInit { get; set; } = null;

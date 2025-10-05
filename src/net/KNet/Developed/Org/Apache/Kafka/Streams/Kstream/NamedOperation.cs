@@ -31,9 +31,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
     /// </summary>
     public class NamedOperation : JVMBridgeBase<NamedOperation>
     {
-        /// <summary>
-        /// <see href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm"/>
-        /// </summary>
+        /// <inheritdoc/>
         public override string BridgeClassName => "org.apache.kafka.streams.kstream.NamedOperation";
 
         /// <summary>

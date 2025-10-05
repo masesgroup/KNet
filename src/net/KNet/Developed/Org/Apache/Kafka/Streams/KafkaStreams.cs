@@ -39,7 +39,7 @@ namespace Org.Apache.Kafka.Streams
         public interface IStateListener : IJVMBridgeBase
         {
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/KafkaStreams.StateListener.html#onChange(org.apache.kafka.streams.KafkaStreams.State,org.apache.kafka.streams.KafkaStreams.State)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/KafkaStreams.StateListener.html#onChange(org.apache.kafka.streams.KafkaStreams.State,org.apache.kafka.streams.KafkaStreams.State)"/>
             /// </summary>
             void OnChange(Org.Apache.Kafka.Streams.KafkaStreams.State newState, Org.Apache.Kafka.Streams.KafkaStreams.State oldState);
         }
