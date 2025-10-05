@@ -103,7 +103,7 @@
 <hr>
 <h2 id="scope-of-the-project">Scope of the project</h2>
 <p>This project aims to create a set of libraries and tools to direct access, from .NET, all the features available in the <a href="https://kafka.apache.org/downloads">Apache Kafka™ binary distribution</a>.</p>
-<p>There are many client libraries written to manage communication with Apache Kafka™. Conversely, this project use directly the Java packages released from The Apache Foundation giving more than one benefit:</p>
+<p>There are many client libraries written to manage communication with Apache Kafka™. Conversely, this project use directly the Java™ packages released from The Apache Foundation giving more than one benefit:</p>
 <ul>
 <li>all implemented features are availables at no extra implementation costs, see <a href="articles/usage.html">KNet usage</a>;</li>
 <li>avoids any third party communication protocol implementation;</li>
@@ -111,32 +111,66 @@
 <li>measured high <a href="articles/performance.html">performance</a> in many operating conditions.</li>
 </ul>
 <p>Currently the project tries to support, at our best, the <a href="https://kafka.apache.org/downloads">supported Apache Kafka™ binary distribution</a>:</p>
-<ul>
-<li>Apache Kafka™ version 3.9.*:
-<ul>
-<li>branch <a href="https://github.com/masesgroup/KNet">master</a></li>
-<li>KNet version 2.9.*</li>
-</ul>
-</li>
-<li>Apache Kafka™ version 3.8.*:
-<ul>
-<li>branch <a href="https://github.com/masesgroup/KNet/tree/release/2.8.X">release/2.8.X</a></li>
-<li>KNet version 2.8.*</li>
-</ul>
-</li>
-<li>Apache Kafka™ version 3.7.*:
-<ul>
-<li>branch <a href="https://github.com/masesgroup/KNet/tree/release/2.7.X">release/2.7.X</a></li>
-<li>KNet version 2.7.*</li>
-</ul>
-</li>
-<li>Apache Kafka™ version 3.6.*:
-<ul>
-<li>branch <a href="https://github.com/masesgroup/KNet/tree/release/2.6.X">release/2.6.X</a></li>
-<li>KNet version 2.6.*</li>
-</ul>
-</li>
-</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">KNet</th>
+<th style="text-align: center;">State</th>
+<th style="text-align: center;">Apache Kafka™</th>
+<th style="text-align: center;">Branch</th>
+<th style="text-align: center;">.NET Framework</th>
+<th style="text-align: center;">.NET</th>
+<th style="text-align: center;">JVM™</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">3.0.*</td>
+<td style="text-align: center;">Active</td>
+<td style="text-align: center;">4.0.*</td>
+<td style="text-align: center;"><a href="https://github.com/masesgroup/KNet">master</a></td>
+<td style="text-align: center;">462+</td>
+<td style="text-align: center;">8+</td>
+<td style="text-align: center;">17+</td>
+</tr>
+<tr>
+<td style="text-align: center;">2.9.*</td>
+<td style="text-align: center;">Active</td>
+<td style="text-align: center;">3.9.*</td>
+<td style="text-align: center;"><a href="https://github.com/masesgroup/KNet/tree/release/2.9.X">release/2.9.X</a></td>
+<td style="text-align: center;">462+</td>
+<td style="text-align: center;">8+</td>
+<td style="text-align: center;">11+</td>
+</tr>
+<tr>
+<td style="text-align: center;">2.8.*</td>
+<td style="text-align: center;">Deprecated</td>
+<td style="text-align: center;">3.8.*</td>
+<td style="text-align: center;"><a href="https://github.com/masesgroup/KNet/tree/release/2.8.X">release/2.8.X</a></td>
+<td style="text-align: center;">462+</td>
+<td style="text-align: center;">6+</td>
+<td style="text-align: center;">11+</td>
+</tr>
+<tr>
+<td style="text-align: center;">2.7.*</td>
+<td style="text-align: center;">Deprecated</td>
+<td style="text-align: center;">3.7.*</td>
+<td style="text-align: center;"><a href="https://github.com/masesgroup/KNet/tree/release/2.7.X">release/2.7.X</a></td>
+<td style="text-align: center;">462+</td>
+<td style="text-align: center;">6+</td>
+<td style="text-align: center;">11+</td>
+</tr>
+<tr>
+<td style="text-align: center;">2.6.*</td>
+<td style="text-align: center;">Deprecated</td>
+<td style="text-align: center;">3.6.*</td>
+<td style="text-align: center;"><a href="https://github.com/masesgroup/KNet/tree/release/2.6.X">release/2.6.X</a></td>
+<td style="text-align: center;">462+</td>
+<td style="text-align: center;">6+</td>
+<td style="text-align: center;">11+</td>
+</tr>
+</tbody>
+</table>
 <p>The Apache Kafka™ packages are downloaded from:</p>
 <table>
 <thead>
@@ -210,16 +244,19 @@
 <li>V1.5.4+: From version 1.5.4 there are new packages dedicated to <a href="articles/usageSerDes.html">KNet Serializer/Deserializer</a></li>
 <li>V2.0.0+: From version 2.0.0 the code base is fully reflected from the JARs of the Apache Kafka™ distribution downloaded from Maven; some developed classes still remains beside the specific KNet implementations</li>
 <li>V2.4.0+: From version 2.4.0 it is available the new KNet Streams SDK</li>
-<li>V2.5.0+: From version 2.5.0 there are two breaking changes: uses <code>Java.Lang.String</code> instead of <code>string</code> (<code>System.String</code>) in generated classes and KNet Streams SDK manages the counter-part JVM types</li>
+<li>V2.5.0+: From version 2.5.0 there are two breaking changes: uses <code>Java.Lang.String</code> instead of <code>string</code> (<code>System.String</code>) in generated classes and KNet Streams SDK manages the counter-part JVM™ types</li>
 <li>V2.7.0+: From version 2.7.0:
 <ul>
-<li>all classes KNetProducer, KNetConsumer and KNet Streams SDK manage the counter-part JVM types</li>
+<li>all classes KNetProducer, KNetConsumer and KNet Streams SDK manage the counter-part JVM™ types</li>
 <li>serializers supports data exchange based on <code>byte</code> array and <code>ByteBuffer</code></li>
 <li>version 2.7.2 introduces <code>ISerDesSelector</code> to optimize serialization selection based on <code>byte</code> array or <code>ByteBuffer</code></li>
 </ul>
 </li>
 <li>V2.8.0+: From version 2.8.0: supports Apache Kafka™ version 3.8.*</li>
 <li>V2.9.0+: From version 2.9.0: supports Apache Kafka™ version 3.9.*</li>
+<li>V3.0.0+: From version 3.0.0: supports Apache Kafka™ version 4.0.*</li>
+<li>V3.0.3+: From version 3.0.3: KNet Connect SDK supports JVM hosted runtime</li>
+<li>V3.1.0+: From version 3.1.0: supports Apache Kafka™ version 4.1.*</li>
 </ul>
 <hr>
 <h2 id="runtime-engine">Runtime engine</h2>
@@ -227,13 +264,13 @@
 <ul>
 <li><strong>Cyber-security</strong>:
 <ul>
-<li><a href="https://en.wikipedia.org/wiki/Java_virtual_machine">JVM</a> and <a href="https://en.wikipedia.org/wiki/Common_Language_Runtime">CLR, or CoreCLR,</a> runs in the same process, but are insulated from each other;</li>
-<li>JCOBridge does not make any code injection into JVM;</li>
+<li><a href="https://en.wikipedia.org/wiki/Java_virtual_machine">JVM™</a> and <a href="https://en.wikipedia.org/wiki/Common_Language_Runtime">CLR, or CoreCLR,</a> runs in the same process, but are insulated from each other;</li>
+<li>JCOBridge does not make any code injection into JVM™;</li>
 <li>JCOBridge does not use any other communication mechanism than JNI;</li>
-<li>.NET (CLR) inherently inherits the cyber-security levels of running JVM and Apache Kafka™;</li>
+<li>.NET (CLR) inherently inherits the cyber-security levels of running JVM™ and Apache Kafka™;</li>
 </ul>
 </li>
-<li><strong>Direct access the JVM from any .NET application</strong>:
+<li><strong>Direct access the JVM™ from any .NET application</strong>:
 <ul>
 <li>Any Java/Scala class behind Apache Kafka™ can be directly managed: Consumer, Producer, Administration, Streams, Server-side, and so on;</li>
 <li>No need to learn new APIs: we try to expose the same APIs in C# style;</li>
@@ -243,14 +280,41 @@
 </li>
 <li><strong>Dynamic code</strong>: it helps to write a Java/Scala/Kotlin/etc seamless language code directly inside a standard .NET application written in C#/VB.NET: look at this <a href="https://www.jcobridge.com/net-examples/dotnet-examples/">simple example</a> and <a href="articles/API_extensibility.html">KNet APIs extensibility</a>.</li>
 </ul>
+<p><a href="https://www.jcobridge.com">JCOBridge 2.6.*</a> can be used for free without any obligations; you need to purchase a commercial license, or uninstall the software, if you have direct or indirect incomes from the product usage.</p>
 <h3 id="jcobridge-resources">JCOBridge resources</h3>
 <p>Have a look at the following JCOBridge resources:</p>
-<ul>
-<li><a href="https://www.jcobridge.com/release-notes/">Release notes</a></li>
-<li><a href="https://www.jcobridge.com/pricing-25/">Community Edition</a></li>
-<li><a href="https://www.jcobridge.com/pricing-25/">Commercial Edition</a></li>
-<li>Latest release: <a href="https://www.nuget.org/packages/MASES.JCOBridge"><img src="https://img.shields.io/nuget/v/MASES.JCOBridge" alt="JCOBridge nuget"></a></li>
-</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">JCOBridge</th>
+<th style="text-align: center;">2.5.* series</th>
+<th style="text-align: center;">2.6.* series</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">KNet</td>
+<td style="text-align: center;">&gt; 1.5.* series</td>
+<td style="text-align: center;">&gt; 3.0.* series and latest 2.9.* series</td>
+</tr>
+<tr>
+<td style="text-align: center;">Release notes</td>
+<td style="text-align: center;"><a href="https://www.jcobridge.com/release-notes/">Link</a></td>
+<td style="text-align: center;"><a href="https://www.jcobridge.com/release-notes/">Link</a></td>
+</tr>
+<tr>
+<td style="text-align: center;">Community Edition</td>
+<td style="text-align: center;"><a href="https://www.jcobridge.com/pricing-25/">Conditions</a></td>
+<td style="text-align: center;"><a href="https://www.jcobridge.com/pricing-25/">Conditions</a></td>
+</tr>
+<tr>
+<td style="text-align: center;">Commercial Edition</td>
+<td style="text-align: center;"><a href="https://www.jcobridge.com/pricing-26/">Information</a></td>
+<td style="text-align: center;"><a href="https://www.jcobridge.com/pricing-26/">Information</a></td>
+</tr>
+</tbody>
+</table>
+<p>Latest release: <a href="https://www.nuget.org/packages/MASES.JCOBridge"><img src="https://img.shields.io/nuget/v/MASES.JCOBridge" alt="JCOBridge nuget"></a></p>
 <p>KAFKA is a registered trademark of The Apache Software Foundation. KNet has no affiliation with and is not endorsed by The Apache Software Foundation.</p>
 
 </article>

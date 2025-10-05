@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+      <title>Class KNetConnectSourceTask | MASES Group - KNet </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class KNetConnectSourceTask | MASES Group - KNet ">
+      <meta name="description" content="This is a descriptive page of KNet, the .NET suite for Apache Kafka">
+      
+      <link rel="icon" href="../images/favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/masesgroup/KNet/new/release/2.9.X/apiSpec/new?filename=MASES_KNet_Template_KNetConnect_KNetConnectSourceTask.md&amp;value=---%0Auid%3A%20MASES.KNet.Template.KNetConnect.KNetConnectSourceTask%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/logo.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="MASES.KNet.Template.KNetConnect.KNetConnectSourceTask">
+
+
+
+  <h1 id="MASES_KNet_Template_KNetConnect_KNetConnectSourceTask" data-uid="MASES.KNet.Template.KNetConnect.KNetConnectSourceTask" class="text-break">
+Class KNetConnectSourceTask  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/templates/templates/knetConnectSource/KNetConnectSource.cs/#L37"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="MASES.html">MASES</a>.<a class="xref" href="MASES.KNet.html">KNet</a>.<a class="xref" href="MASES.KNet.Template.html">Template</a>.<a class="xref" href="MASES.KNet.Template.KNetConnect.html">KNetConnect</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>knetConnectSource.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"></div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class KNetConnectSourceTask : KNetSourceTask&lt;KNetConnectSourceTask&gt;, IKNetTask, ITask, IKNetConnectLogging</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="MASES.KNet.Connect.KNetTask.html">KNetTask</a></div>
+      <div><a class="xref" href="MASES.KNet.Connect.KNetTask-1.html">KNetTask</a>&lt;<a class="xref" href="MASES.KNet.Template.KNetConnect.KNetConnectSourceTask.html">KNetConnectSourceTask</a>&gt;</div>
+      <div><a class="xref" href="MASES.KNet.Connect.KNetSourceTask-1.html">KNetSourceTask</a>&lt;<a class="xref" href="MASES.KNet.Template.KNetConnect.KNetConnectSourceTask.html">KNetConnectSourceTask</a>&gt;</div>
+      <div><span class="xref">KNetConnectSourceTask</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="MASES.KNet.Connect.IKNetTask.html">IKNetTask</a></div>
+      <div><a class="xref" href="MASES.KNet.Connect.ITask.html">ITask</a></div>
+      <div><a class="xref" href="MASES.KNet.Connect.IKNetConnectLogging.html">IKNetConnectLogging</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="MASES.KNet.Connect.KNetSourceTask-1.html#MASES_KNet_Connect_KNetSourceTask_1_OffsetForKey__1_Java_Lang_String___0_">KNetSourceTask&lt;KNetConnectSourceTask&gt;.OffsetForKey&lt;T&gt;(String, T)</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Connect.KNetSourceTask-1.html#MASES_KNet_Connect_KNetSourceTask_1_OffsetAt__2_Java_Lang_String___0_">KNetSourceTask&lt;KNetConnectSourceTask&gt;.OffsetAt&lt;TKeySource, TOffset&gt;(String, TKeySource)</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Connect.KNetSourceTask-1.html#MASES_KNet_Connect_KNetSourceTask_1_Context">KNetSourceTask&lt;KNetConnectSourceTask&gt;.Context</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Connect.KNetSourceTask-1.html#MASES_KNet_Connect_KNetSourceTask_1_ReflectedTaskClassName">KNetSourceTask&lt;KNetConnectSourceTask&gt;.ReflectedTaskClassName</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Connect.KNetSourceTask-1.html#MASES_KNet_Connect_KNetSourceTask_1_PollInternal">KNetSourceTask&lt;KNetConnectSourceTask&gt;.PollInternal()</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Connect.KNetSourceTask-1.html#MASES_KNet_Connect_KNetSourceTask_1_CreateRecord__2_System_String_System_Nullable_System_Int32__Org_Apache_Kafka_Connect_Data_Schema___1_">KNetSourceTask&lt;KNetConnectSourceTask&gt;.CreateRecord&lt;TKey, TValue&gt;(string, int?, Schema, TValue)</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Connect.KNetSourceTask-1.html#MASES_KNet_Connect_KNetSourceTask_1_CreateAndPushRecord__2_System_String_System_Nullable_System_Int32__Org_Apache_Kafka_Connect_Data_Schema___1_">KNetSourceTask&lt;KNetConnectSourceTask&gt;.CreateAndPushRecord&lt;TKey, TValue&gt;(string, int?, Schema, TValue)</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Connect.KNetSourceTask-1.html#MASES_KNet_Connect_KNetSourceTask_1_CreateRecord__2_System_String_Org_Apache_Kafka_Connect_Data_Schema___1_">KNetSourceTask&lt;KNetConnectSourceTask&gt;.CreateRecord&lt;TKey, TValue&gt;(string, Schema, TValue)</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Connect.KNetSourceTask-1.html#MASES_KNet_Connect_KNetSourceTask_1_CreateAndPushRecord__2_System_String_Org_Apache_Kafka_Connect_Data_Schema___1_">KNetSourceTask&lt;KNetConnectSourceTask&gt;.CreateAndPushRecord&lt;TKey, TValue&gt;(string, Schema, TValue)</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Connect.KNetSourceTask-1.html#MASES_KNet_Connect_KNetSourceTask_1_CreateRecord__2_System_String_Org_Apache_Kafka_Connect_Data_Schema___0_Org_Apache_Kafka_Connect_Data_Schema___1_">KNetSourceTask&lt;KNetConnectSourceTask&gt;.CreateRecord&lt;TKey, TValue&gt;(string, Schema, TKey, Schema, TValue)</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Connect.KNetSourceTask-1.html#MASES_KNet_Connect_KNetSourceTask_1_CreateAndPushRecord__2_System_String_Org_Apache_Kafka_Connect_Data_Schema___0_Org_Apache_Kafka_Connect_Data_Schema___1_">KNetSourceTask&lt;KNetConnectSourceTask&gt;.CreateAndPushRecord&lt;TKey, TValue&gt;(string, Schema, TKey, Schema, TValue)</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Connect.KNetSourceTask-1.html#MASES_KNet_Connect_KNetSourceTask_1_CreateRecord__2_System_String_System_Nullable_System_Int32__Org_Apache_Kafka_Connect_Data_Schema___0_Org_Apache_Kafka_Connect_Data_Schema___1_">KNetSourceTask&lt;KNetConnectSourceTask&gt;.CreateRecord&lt;TKey, TValue&gt;(string, int?, Schema, TKey, Schema, TValue)</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Connect.KNetSourceTask-1.html#MASES_KNet_Connect_KNetSourceTask_1_CreateAndPushRecord__2_System_String_System_Nullable_System_Int32__Org_Apache_Kafka_Connect_Data_Schema___0_Org_Apache_Kafka_Connect_Data_Schema___1_">KNetSourceTask&lt;KNetConnectSourceTask&gt;.CreateAndPushRecord&lt;TKey, TValue&gt;(string, int?, Schema, TKey, Schema, TValue)</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Connect.KNetSourceTask-1.html#MASES_KNet_Connect_KNetSourceTask_1_CreateRecord__1_System_String_Org_Apache_Kafka_Connect_Data_Schema___0_System_DateTime_">KNetSourceTask&lt;KNetConnectSourceTask&gt;.CreateRecord&lt;TValue&gt;(string, Schema, TValue, DateTime)</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Connect.KNetSourceTask-1.html#MASES_KNet_Connect_KNetSourceTask_1_CreateAndPushRecord__1_System_String_Org_Apache_Kafka_Connect_Data_Schema___0_System_DateTime_">KNetSourceTask&lt;KNetConnectSourceTask&gt;.CreateAndPushRecord&lt;TValue&gt;(string, Schema, TValue, DateTime)</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Connect.KNetSourceTask-1.html#MASES_KNet_Connect_KNetSourceTask_1_CreateRecord__1_System_String_System_Nullable_System_Int32__Org_Apache_Kafka_Connect_Data_Schema___0_System_DateTime_">KNetSourceTask&lt;KNetConnectSourceTask&gt;.CreateRecord&lt;TValue&gt;(string, int?, Schema, TValue, DateTime)</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Connect.KNetSourceTask-1.html#MASES_KNet_Connect_KNetSourceTask_1_CreateAndPushRecord__1_System_String_System_Nullable_System_Int32__Org_Apache_Kafka_Connect_Data_Schema___0_System_DateTime_">KNetSourceTask&lt;KNetConnectSourceTask&gt;.CreateAndPushRecord&lt;TValue&gt;(string, int?, Schema, TValue, DateTime)</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Connect.KNetSourceTask-1.html#MASES_KNet_Connect_KNetSourceTask_1_CreateRecord__2_System_String_System_Nullable_System_Int32__Org_Apache_Kafka_Connect_Data_Schema___0_Org_Apache_Kafka_Connect_Data_Schema___1_System_DateTime_">KNetSourceTask&lt;KNetConnectSourceTask&gt;.CreateRecord&lt;TKey, TValue&gt;(string, int?, Schema, TKey, Schema, TValue, DateTime)</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Connect.KNetSourceTask-1.html#MASES_KNet_Connect_KNetSourceTask_1_CreateAndPushRecord__2_System_String_System_Nullable_System_Int32__Org_Apache_Kafka_Connect_Data_Schema___0_Org_Apache_Kafka_Connect_Data_Schema___1_System_DateTime_">KNetSourceTask&lt;KNetConnectSourceTask&gt;.CreateAndPushRecord&lt;TKey, TValue&gt;(string, int?, Schema, TKey, Schema, TValue, DateTime)</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Connect.KNetSourceTask-1.html#MASES_KNet_Connect_KNetSourceTask_1_CreateRecord__2_System_String_System_Nullable_System_Int32__Org_Apache_Kafka_Connect_Data_Schema___0_Org_Apache_Kafka_Connect_Data_Schema___1_System_DateTime_Org_Apache_Kafka_Connect_Header_Headers_">KNetSourceTask&lt;KNetConnectSourceTask&gt;.CreateRecord&lt;TKey, TValue&gt;(string, int?, Schema, TKey, Schema, TValue, DateTime, Headers)</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Connect.KNetSourceTask-1.html#MASES_KNet_Connect_KNetSourceTask_1_CreateAndPushRecord__2_System_String_System_Nullable_System_Int32__Org_Apache_Kafka_Connect_Data_Schema___0_Org_Apache_Kafka_Connect_Data_Schema___1_System_DateTime_Org_Apache_Kafka_Connect_Header_Headers_">KNetSourceTask&lt;KNetConnectSourceTask&gt;.CreateAndPushRecord&lt;TKey, TValue&gt;(string, int?, Schema, TKey, Schema, TValue, DateTime, Headers)</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Connect.KNetSourceTask-1.html#MASES_KNet_Connect_KNetSourceTask_1_CreateRecord__4_Java_Util_Map_Java_Lang_String___0__Java_Util_Map_Java_Lang_String___1__System_String_System_Nullable_System_Int32__Org_Apache_Kafka_Connect_Data_Schema___3_">KNetSourceTask&lt;KNetConnectSourceTask&gt;.CreateRecord&lt;TKeySource, TOffset, TKey, TValue&gt;(Map&lt;String, TKeySource&gt;, Map&lt;String, TOffset&gt;, string, int?, Schema, TValue)</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Connect.KNetSourceTask-1.html#MASES_KNet_Connect_KNetSourceTask_1_CreateAndPushRecord__4_Java_Util_Map_Java_Lang_String___0__Java_Util_Map_Java_Lang_String___1__System_String_System_Nullable_System_Int32__Org_Apache_Kafka_Connect_Data_Schema___3_">KNetSourceTask&lt;KNetConnectSourceTask&gt;.CreateAndPushRecord&lt;TKeySource, TOffset, TKey, TValue&gt;(Map&lt;String, TKeySource&gt;, Map&lt;String, TOffset&gt;, string, int?, Schema, TValue)</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Connect.KNetSourceTask-1.html#MASES_KNet_Connect_KNetSourceTask_1_CreateRecord__4_Java_Util_Map_Java_Lang_String___0__Java_Util_Map_Java_Lang_String___1__System_String_Org_Apache_Kafka_Connect_Data_Schema___3_">KNetSourceTask&lt;KNetConnectSourceTask&gt;.CreateRecord&lt;TKeySource, TOffset, TKey, TValue&gt;(Map&lt;String, TKeySource&gt;, Map&lt;String, TOffset&gt;, string, Schema, TValue)</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Connect.KNetSourceTask-1.html#MASES_KNet_Connect_KNetSourceTask_1_CreateAndPushRecord__4_Java_Util_Map_Java_Lang_String___0__Java_Util_Map_Java_Lang_String___1__System_String_Org_Apache_Kafka_Connect_Data_Schema___3_">KNetSourceTask&lt;KNetConnectSourceTask&gt;.CreateAndPushRecord&lt;TKeySource, TOffset, TKey, TValue&gt;(Map&lt;String, TKeySource&gt;, Map&lt;String, TOffset&gt;, string, Schema, TValue)</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Connect.KNetSourceTask-1.html#MASES_KNet_Connect_KNetSourceTask_1_CreateRecord__4_Java_Util_Map_Java_Lang_String___0__Java_Util_Map_Java_Lang_String___1__System_String_Org_Apache_Kafka_Connect_Data_Schema___2_Org_Apache_Kafka_Connect_Data_Schema___3_">KNetSourceTask&lt;KNetConnectSourceTask&gt;.CreateRecord&lt;TKeySource, TOffset, TKey, TValue&gt;(Map&lt;String, TKeySource&gt;, Map&lt;String, TOffset&gt;, string, Schema, TKey, Schema, TValue)</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Connect.KNetSourceTask-1.html#MASES_KNet_Connect_KNetSourceTask_1_CreateAndPushRecord__4_Java_Util_Map_Java_Lang_String___0__Java_Util_Map_Java_Lang_String___1__System_String_Org_Apache_Kafka_Connect_Data_Schema___2_Org_Apache_Kafka_Connect_Data_Schema___3_">KNetSourceTask&lt;KNetConnectSourceTask&gt;.CreateAndPushRecord&lt;TKeySource, TOffset, TKey, TValue&gt;(Map&lt;String, TKeySource&gt;, Map&lt;String, TOffset&gt;, string, Schema, TKey, Schema, TValue)</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Connect.KNetSourceTask-1.html#MASES_KNet_Connect_KNetSourceTask_1_CreateRecord__4_Java_Util_Map_Java_Lang_String___0__Java_Util_Map_Java_Lang_String___1__System_String_System_Nullable_System_Int32__Org_Apache_Kafka_Connect_Data_Schema___2_Org_Apache_Kafka_Connect_Data_Schema___3_">KNetSourceTask&lt;KNetConnectSourceTask&gt;.CreateRecord&lt;TKeySource, TOffset, TKey, TValue&gt;(Map&lt;String, TKeySource&gt;, Map&lt;String, TOffset&gt;, string, int?, Schema, TKey, Schema, TValue)</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Connect.KNetSourceTask-1.html#MASES_KNet_Connect_KNetSourceTask_1_CreateAndPushRecord__4_Java_Util_Map_Java_Lang_String___0__Java_Util_Map_Java_Lang_String___1__System_String_System_Nullable_System_Int32__Org_Apache_Kafka_Connect_Data_Schema___2_Org_Apache_Kafka_Connect_Data_Schema___3_">KNetSourceTask&lt;KNetConnectSourceTask&gt;.CreateAndPushRecord&lt;TKeySource, TOffset, TKey, TValue&gt;(Map&lt;String, TKeySource&gt;, Map&lt;String, TOffset&gt;, string, int?, Schema, TKey, Schema, TValue)</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Connect.KNetSourceTask-1.html#MASES_KNet_Connect_KNetSourceTask_1_CreateRecord__3_Java_Util_Map_Java_Lang_String___0__Java_Util_Map_Java_Lang_String___1__System_String_Org_Apache_Kafka_Connect_Data_Schema___2_System_DateTime_">KNetSourceTask&lt;KNetConnectSourceTask&gt;.CreateRecord&lt;TKeySource, TOffset, TValue&gt;(Map&lt;String, TKeySource&gt;, Map&lt;String, TOffset&gt;, string, Schema, TValue, DateTime)</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Connect.KNetSourceTask-1.html#MASES_KNet_Connect_KNetSourceTask_1_CreateAndPushRecord__3_Java_Util_Map_Java_Lang_String___0__Java_Util_Map_Java_Lang_String___1__System_String_Org_Apache_Kafka_Connect_Data_Schema___2_System_DateTime_">KNetSourceTask&lt;KNetConnectSourceTask&gt;.CreateAndPushRecord&lt;TKeySource, TOffset, TValue&gt;(Map&lt;String, TKeySource&gt;, Map&lt;String, TOffset&gt;, string, Schema, TValue, DateTime)</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Connect.KNetSourceTask-1.html#MASES_KNet_Connect_KNetSourceTask_1_CreateRecord__3_Java_Util_Map_Java_Lang_String___0__Java_Util_Map_Java_Lang_String___1__System_String_System_Nullable_System_Int32__Org_Apache_Kafka_Connect_Data_Schema___2_System_DateTime_">KNetSourceTask&lt;KNetConnectSourceTask&gt;.CreateRecord&lt;TKeySource, TOffset, TValue&gt;(Map&lt;String, TKeySource&gt;, Map&lt;String, TOffset&gt;, string, int?, Schema, TValue, DateTime)</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Connect.KNetSourceTask-1.html#MASES_KNet_Connect_KNetSourceTask_1_CreateAndPushRecord__3_Java_Util_Map_Java_Lang_String___0__Java_Util_Map_Java_Lang_String___1__System_String_System_Nullable_System_Int32__Org_Apache_Kafka_Connect_Data_Schema___2_System_DateTime_">KNetSourceTask&lt;KNetConnectSourceTask&gt;.CreateAndPushRecord&lt;TKeySource, TOffset, TValue&gt;(Map&lt;String, TKeySource&gt;, Map&lt;String, TOffset&gt;, string, int?, Schema, TValue, DateTime)</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Connect.KNetSourceTask-1.html#MASES_KNet_Connect_KNetSourceTask_1_CreateRecord__4_Java_Util_Map_Java_Lang_String___0__Java_Util_Map_Java_Lang_String___1__System_String_System_Nullable_System_Int32__Org_Apache_Kafka_Connect_Data_Schema___2_Org_Apache_Kafka_Connect_Data_Schema___3_System_DateTime_">KNetSourceTask&lt;KNetConnectSourceTask&gt;.CreateRecord&lt;TKeySource, TOffset, TKey, TValue&gt;(Map&lt;String, TKeySource&gt;, Map&lt;String, TOffset&gt;, string, int?, Schema, TKey, Schema, TValue, DateTime)</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Connect.KNetSourceTask-1.html#MASES_KNet_Connect_KNetSourceTask_1_CreateAndPushRecord__4_Java_Util_Map_Java_Lang_String___0__Java_Util_Map_Java_Lang_String___1__System_String_System_Nullable_System_Int32__Org_Apache_Kafka_Connect_Data_Schema___2_Org_Apache_Kafka_Connect_Data_Schema___3_System_DateTime_">KNetSourceTask&lt;KNetConnectSourceTask&gt;.CreateAndPushRecord&lt;TKeySource, TOffset, TKey, TValue&gt;(Map&lt;String, TKeySource&gt;, Map&lt;String, TOffset&gt;, string, int?, Schema, TKey, Schema, TValue, DateTime)</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Connect.KNetSourceTask-1.html#MASES_KNet_Connect_KNetSourceTask_1_CreateRecord__4_Java_Util_Map_Java_Lang_String___0__Java_Util_Map_Java_Lang_String___1__System_String_System_Nullable_System_Int32__Org_Apache_Kafka_Connect_Data_Schema___2_Org_Apache_Kafka_Connect_Data_Schema___3_System_DateTime_Org_Apache_Kafka_Connect_Header_Headers_">KNetSourceTask&lt;KNetConnectSourceTask&gt;.CreateRecord&lt;TKeySource, TOffset, TKey, TValue&gt;(Map&lt;String, TKeySource&gt;, Map&lt;String, TOffset&gt;, string, int?, Schema, TKey, Schema, TValue, DateTime, Headers)</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Connect.KNetSourceTask-1.html#MASES_KNet_Connect_KNetSourceTask_1_CreateAndPushRecord__4_Java_Util_Map_Java_Lang_String___0__Java_Util_Map_Java_Lang_String___1__System_String_System_Nullable_System_Int32__Org_Apache_Kafka_Connect_Data_Schema___2_Org_Apache_Kafka_Connect_Data_Schema___3_System_DateTime_Org_Apache_Kafka_Connect_Header_Headers_">KNetSourceTask&lt;KNetConnectSourceTask&gt;.CreateAndPushRecord&lt;TKeySource, TOffset, TKey, TValue&gt;(Map&lt;String, TKeySource&gt;, Map&lt;String, TOffset&gt;, string, int?, Schema, TKey, Schema, TValue, DateTime, Headers)</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Connect.KNetTask-1.html#MASES_KNet_Connect_KNetTask_1_Version">KNetTask&lt;KNetConnectSourceTask&gt;.Version()</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Connect.KNetTask.html#MASES_KNet_Connect_KNetTask_ExecuteOnTask_System_String_System_Object___">KNetTask.ExecuteOnTask(string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Connect.KNetTask.html#MASES_KNet_Connect_KNetTask_ExecuteOnTask__1_System_String_System_Object___">KNetTask.ExecuteOnTask&lt;T&gt;(string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Connect.KNetTask.html#MASES_KNet_Connect_KNetTask_DataToExchange__1">KNetTask.DataToExchange&lt;T&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Connect.KNetTask.html#MASES_KNet_Connect_KNetTask_DataToExchange_System_Object_">KNetTask.DataToExchange(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Connect.KNetTask.html#MASES_KNet_Connect_KNetTask_Context__1">KNetTask.Context&lt;T&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Connect.KNetTask.html#MASES_KNet_Connect_KNetTask_Properties">KNetTask.Properties</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Connect.KNetTask.html#MASES_KNet_Connect_KNetTask_Connector">KNetTask.Connector</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Connect.KNetTask.html#MASES_KNet_Connect_KNetTask_TaskId">KNetTask.TaskId</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Connect.KNetTask.html#MASES_KNet_Connect_KNetTask_StartInternal">KNetTask.StartInternal()</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Connect.KNetTask.html#MASES_KNet_Connect_KNetTask_Start_Java_Util_Map_Java_Lang_String_Java_Lang_String__">KNetTask.Start(Map&lt;String, String&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Connect.KNetTask.html#MASES_KNet_Connect_KNetTask_StopInternal">KNetTask.StopInternal()</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Connect.KNetTask.html#MASES_KNet_Connect_KNetTask_VersionInternal">KNetTask.VersionInternal()</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Connect.KNetTask.html#MASES_KNet_Connect_KNetTask_IsTraceEnabled">KNetTask.IsTraceEnabled</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Connect.KNetTask.html#MASES_KNet_Connect_KNetTask_IsDebugEnabled">KNetTask.IsDebugEnabled</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Connect.KNetTask.html#MASES_KNet_Connect_KNetTask_IsInfoEnabled">KNetTask.IsInfoEnabled</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Connect.KNetTask.html#MASES_KNet_Connect_KNetTask_IsWarnEnabled">KNetTask.IsWarnEnabled</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Connect.KNetTask.html#MASES_KNet_Connect_KNetTask_IsErrorEnabled">KNetTask.IsErrorEnabled</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Connect.KNetTask.html#MASES_KNet_Connect_KNetTask_LogTrace_System_String_">KNetTask.LogTrace(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Connect.KNetTask.html#MASES_KNet_Connect_KNetTask_LogTrace_System_String_MASES_JCOBridge_C2JBridge_JVMBridgeException_">KNetTask.LogTrace(string, JVMBridgeException)</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Connect.KNetTask.html#MASES_KNet_Connect_KNetTask_LogDebug_System_String_">KNetTask.LogDebug(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Connect.KNetTask.html#MASES_KNet_Connect_KNetTask_LogDebug_System_String_MASES_JCOBridge_C2JBridge_JVMBridgeException_">KNetTask.LogDebug(string, JVMBridgeException)</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Connect.KNetTask.html#MASES_KNet_Connect_KNetTask_LogInfo_System_String_">KNetTask.LogInfo(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Connect.KNetTask.html#MASES_KNet_Connect_KNetTask_LogInfo_System_String_MASES_JCOBridge_C2JBridge_JVMBridgeException_">KNetTask.LogInfo(string, JVMBridgeException)</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Connect.KNetTask.html#MASES_KNet_Connect_KNetTask_LogWarn_System_String_">KNetTask.LogWarn(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Connect.KNetTask.html#MASES_KNet_Connect_KNetTask_LogWarn_System_String_MASES_JCOBridge_C2JBridge_JVMBridgeException_">KNetTask.LogWarn(string, JVMBridgeException)</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Connect.KNetTask.html#MASES_KNet_Connect_KNetTask_LogError_System_String_">KNetTask.LogError(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Connect.KNetTask.html#MASES_KNet_Connect_KNetTask_LogError_System_String_MASES_JCOBridge_C2JBridge_JVMBridgeException_">KNetTask.LogError(string, JVMBridgeException)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="MASES_KNet_Template_KNetConnect_KNetConnectSourceTask_Poll_" data-uid="MASES.KNet.Template.KNetConnect.KNetConnectSourceTask.Poll*"></a>
+
+  <h3 id="MASES_KNet_Template_KNetConnect_KNetConnectSourceTask_Poll" data-uid="MASES.KNet.Template.KNetConnect.KNetConnectSourceTask.Poll">
+  Poll()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/templates/templates/knetConnectSource/KNetConnectSource.cs/#L49"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Implement the method to execute the Poll action</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override IList&lt;SourceRecord&gt; Poll()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1">IList</a>&lt;<a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord.html">SourceRecord</a>&gt;</dt>
+    <dd><p>The list of <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord.html">SourceRecord</a> to return to Apache Kafka Connect framework</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Template_KNetConnect_KNetConnectSourceTask_Start_" data-uid="MASES.KNet.Template.KNetConnect.KNetConnectSourceTask.Start*"></a>
+
+  <h3 id="MASES_KNet_Template_KNetConnect_KNetConnectSourceTask_Start_System_Collections_Generic_IReadOnlyDictionary_System_String_System_String__" data-uid="MASES.KNet.Template.KNetConnect.KNetConnectSourceTask.Start(System.Collections.Generic.IReadOnlyDictionary{System.String,System.String})">
+  Start(IReadOnlyDictionary&lt;string, string&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/templates/templates/knetConnectSource/KNetConnectSource.cs/#L93"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Implement the method to execute the start action</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void Start(IReadOnlyDictionary&lt;string, string&gt; props)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>props</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlydictionary-2">IReadOnlyDictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd><p>The set of properties returned from Apache Kafka Connect framework: the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlydictionary-2">IReadOnlyDictionary&lt;TKey, TValue&gt;</a> contains the info from <a class="xref" href="MASES.KNet.Connect.KNetConnector.html#MASES_KNet_Connect_KNetConnector_TaskConfigs_System_Int32_System_Collections_Generic_IDictionary_System_String_System_String__">TaskConfigs(int, IDictionary&lt;string, string&gt;)</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Template_KNetConnect_KNetConnectSourceTask_Stop_" data-uid="MASES.KNet.Template.KNetConnect.KNetConnectSourceTask.Stop*"></a>
+
+  <h3 id="MASES_KNet_Template_KNetConnect_KNetConnectSourceTask_Stop" data-uid="MASES.KNet.Template.KNetConnect.KNetConnectSourceTask.Stop">
+  Stop()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/templates/templates/knetConnectSource/KNetConnectSource.cs/#L105"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Implement the method to execute the stop action</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void Stop()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/templates/templates/knetConnectSource/KNetConnectSource.cs/#L37" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <script type="text/javascript">document.write('<div style="text-align: center;">Copyright © 2021 - ' + new Date().getFullYear() + ' MASES s.r.l. | Via San Cesidio 16 - San Valentino in A.C. - PE | P.I. 01932310681</div>');</script>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

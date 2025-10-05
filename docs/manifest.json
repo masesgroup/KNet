@@ -162,7 +162,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Kafka.Admin.IRackAwareMode",
-      "Summary": "<p sourcefile=\"api/Kafka.Admin.IRackAwareMode.yml\" sourcestartlinenumber=\"1\">.NET interface for TO BE DEFINED FROM USER</p>\n"
+      "Summary": "<p sourcefile=\"api/Kafka.Admin.IRackAwareMode.yml\" sourcestartlinenumber=\"1\">.NET interface skeleton to be manually developed following <a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.9.1/kafka/admin/RackAwareMode.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.9.1/kafka/admin/RackAwareMode.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -372,6 +372,34 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "MASES.KNet.Admin",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.CLI.KNetCLICore-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.CLI.KNetCLICore-1.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MASES.KNet.CLI.KNetCLICore<T>",
+      "Summary": "<p sourcefile=\"api/MASES.KNet.CLI.KNetCLICore-1.yml\" sourcestartlinenumber=\"1\">Overridable implementation of <xref href=\"MASES.KNet.KNetCore%601\" data-throw-if-not-resolved=\"false\"></xref></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.CLI.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.CLI.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MASES.KNet.CLI",
       "Summary": null
     },
     {
@@ -1017,6 +1045,818 @@
       "IsMRef": true,
       "Title": "MASES.KNet.KNetCore<T>",
       "Summary": "<p sourcefile=\"api/MASES.KNet.KNetCore-1.yml\" sourcestartlinenumber=\"1\">Public entry point of <xref href=\"MASES.KNet.KNetCore%601\" data-throw-if-not-resolved=\"false\"></xref></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.PowerShell.Cmdlet.Client.GetConsumerGroupMetadataCmdletCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.PowerShell.Cmdlet.Client.GetConsumerGroupMetadataCmdletCommand.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MASES.KNet.PowerShell.Cmdlet.Client.GetConsumerGroupMetadataCmdletCommand",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.PowerShell.Cmdlet.Client.GetConsumerRecordCmdletCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.PowerShell.Cmdlet.Client.GetConsumerRecordCmdletCommand.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MASES.KNet.PowerShell.Cmdlet.Client.GetConsumerRecordCmdletCommand",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.PowerShell.Cmdlet.Client.InvokePollCmdletCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.PowerShell.Cmdlet.Client.InvokePollCmdletCommand.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MASES.KNet.PowerShell.Cmdlet.Client.InvokePollCmdletCommand",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.PowerShell.Cmdlet.Client.InvokeSendCmdletCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.PowerShell.Cmdlet.Client.InvokeSendCmdletCommand.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MASES.KNet.PowerShell.Cmdlet.Client.InvokeSendCmdletCommand",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.PowerShell.Cmdlet.Client.InvokeSubscribeCmdletCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.PowerShell.Cmdlet.Client.InvokeSubscribeCmdletCommand.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MASES.KNet.PowerShell.Cmdlet.Client.InvokeSubscribeCmdletCommand",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.PowerShell.Cmdlet.Client.InvokeUnsubscribeCmdletCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.PowerShell.Cmdlet.Client.InvokeUnsubscribeCmdletCommand.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MASES.KNet.PowerShell.Cmdlet.Client.InvokeUnsubscribeCmdletCommand",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.PowerShell.Cmdlet.Client.NewAdminClientConfigBuilderCmdletCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.PowerShell.Cmdlet.Client.NewAdminClientConfigBuilderCmdletCommand.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MASES.KNet.PowerShell.Cmdlet.Client.NewAdminClientConfigBuilderCmdletCommand",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.PowerShell.Cmdlet.Client.NewConsumerConfigBuilderCmdletCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.PowerShell.Cmdlet.Client.NewConsumerConfigBuilderCmdletCommand.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MASES.KNet.PowerShell.Cmdlet.Client.NewConsumerConfigBuilderCmdletCommand",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.PowerShell.Cmdlet.Client.NewKNetConsumerCmdletCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.PowerShell.Cmdlet.Client.NewKNetConsumerCmdletCommand.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MASES.KNet.PowerShell.Cmdlet.Client.NewKNetConsumerCmdletCommand",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.PowerShell.Cmdlet.Client.NewKNetProducerCmdletCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.PowerShell.Cmdlet.Client.NewKNetProducerCmdletCommand.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MASES.KNet.PowerShell.Cmdlet.Client.NewKNetProducerCmdletCommand",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.PowerShell.Cmdlet.Client.NewKafkaAdminClientCmdletCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.PowerShell.Cmdlet.Client.NewKafkaAdminClientCmdletCommand.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MASES.KNet.PowerShell.Cmdlet.Client.NewKafkaAdminClientCmdletCommand",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.PowerShell.Cmdlet.Client.NewKafkaConsumerCmdletCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.PowerShell.Cmdlet.Client.NewKafkaConsumerCmdletCommand.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MASES.KNet.PowerShell.Cmdlet.Client.NewKafkaConsumerCmdletCommand",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.PowerShell.Cmdlet.Client.NewKafkaProducerCmdletCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.PowerShell.Cmdlet.Client.NewKafkaProducerCmdletCommand.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MASES.KNet.PowerShell.Cmdlet.Client.NewKafkaProducerCmdletCommand",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.PowerShell.Cmdlet.Client.NewProducerConfigBuilderCmdletCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.PowerShell.Cmdlet.Client.NewProducerConfigBuilderCmdletCommand.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MASES.KNet.PowerShell.Cmdlet.Client.NewProducerConfigBuilderCmdletCommand",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.PowerShell.Cmdlet.Client.NewProducerRecordCmdletCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.PowerShell.Cmdlet.Client.NewProducerRecordCmdletCommand.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MASES.KNet.PowerShell.Cmdlet.Client.NewProducerRecordCmdletCommand",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.PowerShell.Cmdlet.Client.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.PowerShell.Cmdlet.Client.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MASES.KNet.PowerShell.Cmdlet.Client",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.PowerShell.Cmdlet.KNetPSCmdlet.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.PowerShell.Cmdlet.KNetPSCmdlet.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MASES.KNet.PowerShell.Cmdlet.KNetPSCmdlet",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.PowerShell.Cmdlet.KafkaClassToRunCmdletCommandBase-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.PowerShell.Cmdlet.KafkaClassToRunCmdletCommandBase-1.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MASES.KNet.PowerShell.Cmdlet.KafkaClassToRunCmdletCommandBase<TCmdlet>",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.PowerShell.Cmdlet.NewObjectCmdletCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.PowerShell.Cmdlet.NewObjectCmdletCommand.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MASES.KNet.PowerShell.Cmdlet.NewObjectCmdletCommand",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.PowerShell.Cmdlet.StartKNetPSCmdletCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.PowerShell.Cmdlet.StartKNetPSCmdletCommand.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MASES.KNet.PowerShell.Cmdlet.StartKNetPSCmdletCommand",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.PowerShell.Cmdlet.StartKNetPSCmdletCommandBase-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.PowerShell.Cmdlet.StartKNetPSCmdletCommandBase-1.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MASES.KNet.PowerShell.Cmdlet.StartKNetPSCmdletCommandBase<TCmdlet>",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.PowerShell.Cmdlet.Tools.AclCommandCmdletCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.PowerShell.Cmdlet.Tools.AclCommandCmdletCommand.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MASES.KNet.PowerShell.Cmdlet.Tools.AclCommandCmdletCommand",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.PowerShell.Cmdlet.Tools.BrokerApiVersionsCommandCmdletCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.PowerShell.Cmdlet.Tools.BrokerApiVersionsCommandCmdletCommand.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MASES.KNet.PowerShell.Cmdlet.Tools.BrokerApiVersionsCommandCmdletCommand",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.PowerShell.Cmdlet.Tools.ClusterToolCmdletCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.PowerShell.Cmdlet.Tools.ClusterToolCmdletCommand.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MASES.KNet.PowerShell.Cmdlet.Tools.ClusterToolCmdletCommand",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.PowerShell.Cmdlet.Tools.ConfigCommandCmdletCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.PowerShell.Cmdlet.Tools.ConfigCommandCmdletCommand.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MASES.KNet.PowerShell.Cmdlet.Tools.ConfigCommandCmdletCommand",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.PowerShell.Cmdlet.Tools.ConnectDistributedCmdletCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.PowerShell.Cmdlet.Tools.ConnectDistributedCmdletCommand.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MASES.KNet.PowerShell.Cmdlet.Tools.ConnectDistributedCmdletCommand",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.PowerShell.Cmdlet.Tools.ConnectStandaloneCmdletCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.PowerShell.Cmdlet.Tools.ConnectStandaloneCmdletCommand.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MASES.KNet.PowerShell.Cmdlet.Tools.ConnectStandaloneCmdletCommand",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.PowerShell.Cmdlet.Tools.ConsoleConsumerCmdletCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.PowerShell.Cmdlet.Tools.ConsoleConsumerCmdletCommand.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MASES.KNet.PowerShell.Cmdlet.Tools.ConsoleConsumerCmdletCommand",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.PowerShell.Cmdlet.Tools.ConsoleProducerCmdletCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.PowerShell.Cmdlet.Tools.ConsoleProducerCmdletCommand.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MASES.KNet.PowerShell.Cmdlet.Tools.ConsoleProducerCmdletCommand",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.PowerShell.Cmdlet.Tools.ConsumerGroupCommandCmdletCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.PowerShell.Cmdlet.Tools.ConsumerGroupCommandCmdletCommand.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MASES.KNet.PowerShell.Cmdlet.Tools.ConsumerGroupCommandCmdletCommand",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.PowerShell.Cmdlet.Tools.ConsumerPerformanceCmdletCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.PowerShell.Cmdlet.Tools.ConsumerPerformanceCmdletCommand.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MASES.KNet.PowerShell.Cmdlet.Tools.ConsumerPerformanceCmdletCommand",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.PowerShell.Cmdlet.Tools.DelegationTokenCommandCmdletCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.PowerShell.Cmdlet.Tools.DelegationTokenCommandCmdletCommand.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MASES.KNet.PowerShell.Cmdlet.Tools.DelegationTokenCommandCmdletCommand",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.PowerShell.Cmdlet.Tools.DeleteRecordsCommandCmdletCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.PowerShell.Cmdlet.Tools.DeleteRecordsCommandCmdletCommand.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MASES.KNet.PowerShell.Cmdlet.Tools.DeleteRecordsCommandCmdletCommand",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.PowerShell.Cmdlet.Tools.DumpLogSegmentsCmdletCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.PowerShell.Cmdlet.Tools.DumpLogSegmentsCmdletCommand.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MASES.KNet.PowerShell.Cmdlet.Tools.DumpLogSegmentsCmdletCommand",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.PowerShell.Cmdlet.Tools.FeatureCommandCmdletCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.PowerShell.Cmdlet.Tools.FeatureCommandCmdletCommand.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MASES.KNet.PowerShell.Cmdlet.Tools.FeatureCommandCmdletCommand",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.PowerShell.Cmdlet.Tools.GetOffsetShellCmdletCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.PowerShell.Cmdlet.Tools.GetOffsetShellCmdletCommand.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MASES.KNet.PowerShell.Cmdlet.Tools.GetOffsetShellCmdletCommand",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.PowerShell.Cmdlet.Tools.KafkaStartCmdletCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.PowerShell.Cmdlet.Tools.KafkaStartCmdletCommand.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MASES.KNet.PowerShell.Cmdlet.Tools.KafkaStartCmdletCommand",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.PowerShell.Cmdlet.Tools.LeaderElectionCommandCmdletCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.PowerShell.Cmdlet.Tools.LeaderElectionCommandCmdletCommand.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MASES.KNet.PowerShell.Cmdlet.Tools.LeaderElectionCommandCmdletCommand",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.PowerShell.Cmdlet.Tools.LogDirsCommandCmdletCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.PowerShell.Cmdlet.Tools.LogDirsCommandCmdletCommand.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MASES.KNet.PowerShell.Cmdlet.Tools.LogDirsCommandCmdletCommand",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.PowerShell.Cmdlet.Tools.MetadataQuorumCommandCmdletCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.PowerShell.Cmdlet.Tools.MetadataQuorumCommandCmdletCommand.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MASES.KNet.PowerShell.Cmdlet.Tools.MetadataQuorumCommandCmdletCommand",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.PowerShell.Cmdlet.Tools.MetadataShellCmdletCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.PowerShell.Cmdlet.Tools.MetadataShellCmdletCommand.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MASES.KNet.PowerShell.Cmdlet.Tools.MetadataShellCmdletCommand",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.PowerShell.Cmdlet.Tools.MirrorMaker2CmdletCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.PowerShell.Cmdlet.Tools.MirrorMaker2CmdletCommand.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MASES.KNet.PowerShell.Cmdlet.Tools.MirrorMaker2CmdletCommand",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.PowerShell.Cmdlet.Tools.MirrorMakerCmdletCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.PowerShell.Cmdlet.Tools.MirrorMakerCmdletCommand.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MASES.KNet.PowerShell.Cmdlet.Tools.MirrorMakerCmdletCommand",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.PowerShell.Cmdlet.Tools.ProducerPerformanceCmdletCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.PowerShell.Cmdlet.Tools.ProducerPerformanceCmdletCommand.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MASES.KNet.PowerShell.Cmdlet.Tools.ProducerPerformanceCmdletCommand",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.PowerShell.Cmdlet.Tools.ReassignPartitionsCommandCmdletCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.PowerShell.Cmdlet.Tools.ReassignPartitionsCommandCmdletCommand.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MASES.KNet.PowerShell.Cmdlet.Tools.ReassignPartitionsCommandCmdletCommand",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.PowerShell.Cmdlet.Tools.ReplicaVerificationToolCmdletCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.PowerShell.Cmdlet.Tools.ReplicaVerificationToolCmdletCommand.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MASES.KNet.PowerShell.Cmdlet.Tools.ReplicaVerificationToolCmdletCommand",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.PowerShell.Cmdlet.Tools.StorageToolCmdletCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.PowerShell.Cmdlet.Tools.StorageToolCmdletCommand.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MASES.KNet.PowerShell.Cmdlet.Tools.StorageToolCmdletCommand",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.PowerShell.Cmdlet.Tools.StreamsResetterCmdletCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.PowerShell.Cmdlet.Tools.StreamsResetterCmdletCommand.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MASES.KNet.PowerShell.Cmdlet.Tools.StreamsResetterCmdletCommand",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.PowerShell.Cmdlet.Tools.TopicCommandCmdletCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.PowerShell.Cmdlet.Tools.TopicCommandCmdletCommand.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MASES.KNet.PowerShell.Cmdlet.Tools.TopicCommandCmdletCommand",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.PowerShell.Cmdlet.Tools.TransactionsCommandCmdletCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.PowerShell.Cmdlet.Tools.TransactionsCommandCmdletCommand.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MASES.KNet.PowerShell.Cmdlet.Tools.TransactionsCommandCmdletCommand",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.PowerShell.Cmdlet.Tools.VerifiableConsumerCmdletCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.PowerShell.Cmdlet.Tools.VerifiableConsumerCmdletCommand.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MASES.KNet.PowerShell.Cmdlet.Tools.VerifiableConsumerCmdletCommand",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.PowerShell.Cmdlet.Tools.VerifiableProducerCmdletCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.PowerShell.Cmdlet.Tools.VerifiableProducerCmdletCommand.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MASES.KNet.PowerShell.Cmdlet.Tools.VerifiableProducerCmdletCommand",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.PowerShell.Cmdlet.Tools.ZkSecurityMigratorCmdletCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.PowerShell.Cmdlet.Tools.ZkSecurityMigratorCmdletCommand.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MASES.KNet.PowerShell.Cmdlet.Tools.ZkSecurityMigratorCmdletCommand",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.PowerShell.Cmdlet.Tools.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.PowerShell.Cmdlet.Tools.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MASES.KNet.PowerShell.Cmdlet.Tools",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.PowerShell.Cmdlet.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.PowerShell.Cmdlet.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MASES.KNet.PowerShell.Cmdlet",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.PowerShell.KNetPSCore.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.PowerShell.KNetPSCore.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MASES.KNet.PowerShell.KNetPSCore",
+      "Summary": "<p sourcefile=\"api/MASES.KNet.PowerShell.KNetPSCore.yml\" sourcestartlinenumber=\"1\">Directly usable implementation of <xref href=\"MASES.KNet.CLI.KNetCLICore%601\" data-throw-if-not-resolved=\"false\"></xref></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.PowerShell.KNetPSHelper-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.PowerShell.KNetPSHelper-1.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MASES.KNet.PowerShell.KNetPSHelper<TClass>",
+      "Summary": "<p sourcefile=\"api/MASES.KNet.PowerShell.KNetPSHelper-1.yml\" sourcestartlinenumber=\"1\">Public Helper class</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.PowerShell.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.PowerShell.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MASES.KNet.PowerShell",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -1870,7 +2710,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "MASES.KNet.Serialization.Serdes.ByteBufferSerde",
-      "Summary": "<p sourcefile=\"api/MASES.KNet.Serialization.Serdes.ByteBufferSerde.yml\" sourcestartlinenumber=\"1\">KNet implementaion of <a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/serialization/Serdes.ByteBufferSerde.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.7.1/org/apache/kafka/common/serialization/Serdes.ByteBufferSerde.html</a></p>\n"
+      "Summary": "<p sourcefile=\"api/MASES.KNet.Serialization.Serdes.ByteBufferSerde.yml\" sourcestartlinenumber=\"1\">KNet implementaion of <a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/serialization/Serdes.ByteBufferSerde.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/serialization/Serdes.ByteBufferSerde.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1954,7 +2794,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "MASES.KNet.Streams.KeyValueSupport<K, V>",
-      "Summary": "<p sourcefile=\"api/MASES.KNet.Streams.KeyValueSupport-2.yml\" sourcestartlinenumber=\"1\">Support class for <a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/KeyValue.html#org.apache.kafka.streams.KeyValue\">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/KeyValue.html#org.apache.kafka.streams.KeyValue</a></p>\n"
+      "Summary": "<p sourcefile=\"api/MASES.KNet.Streams.KeyValueSupport-2.yml\" sourcestartlinenumber=\"1\">Support class for <a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/KeyValue.html#org.apache.kafka.streams.KeyValue\">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/KeyValue.html#org.apache.kafka.streams.KeyValue</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -3610,6 +4450,76 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Template.KNetConnect.KNetConnectSink.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Template.KNetConnect.KNetConnectSink.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MASES.KNet.Template.KNetConnect.KNetConnectSink",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Template.KNetConnect.KNetConnectSinkTask.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Template.KNetConnect.KNetConnectSinkTask.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MASES.KNet.Template.KNetConnect.KNetConnectSinkTask",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Template.KNetConnect.KNetConnectSource.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Template.KNetConnect.KNetConnectSource.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MASES.KNet.Template.KNetConnect.KNetConnectSource",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Template.KNetConnect.KNetConnectSourceTask.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Template.KNetConnect.KNetConnectSourceTask.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MASES.KNet.Template.KNetConnect.KNetConnectSourceTask",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Template.KNetConnect.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Template.KNetConnect.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MASES.KNet.Template.KNetConnect",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/MASES.KNet.yml",
       "output": {
         ".html": {
@@ -3620,818 +4530,6 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "MASES.KNet",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/MASES.KNetCLI.KNetCLICore-1.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MASES.KNetCLI.KNetCLICore-1.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "MASES.KNetCLI.KNetCLICore<T>",
-      "Summary": "<p sourcefile=\"api/MASES.KNetCLI.KNetCLICore-1.yml\" sourcestartlinenumber=\"1\">Overridable implementation of <xref href=\"MASES.KNet.KNetCore%601\" data-throw-if-not-resolved=\"false\"></xref></p>\n"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/MASES.KNetCLI.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MASES.KNetCLI.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "MASES.KNetCLI",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/MASES.KNetPS.ClientCmdlet.GetConsumerGroupMetadataCmdletCommand.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MASES.KNetPS.ClientCmdlet.GetConsumerGroupMetadataCmdletCommand.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "MASES.KNetPS.ClientCmdlet.GetConsumerGroupMetadataCmdletCommand",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/MASES.KNetPS.ClientCmdlet.GetConsumerRecordCmdletCommand.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MASES.KNetPS.ClientCmdlet.GetConsumerRecordCmdletCommand.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "MASES.KNetPS.ClientCmdlet.GetConsumerRecordCmdletCommand",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/MASES.KNetPS.ClientCmdlet.InvokePollCmdletCommand.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MASES.KNetPS.ClientCmdlet.InvokePollCmdletCommand.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "MASES.KNetPS.ClientCmdlet.InvokePollCmdletCommand",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/MASES.KNetPS.ClientCmdlet.InvokeSendCmdletCommand.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MASES.KNetPS.ClientCmdlet.InvokeSendCmdletCommand.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "MASES.KNetPS.ClientCmdlet.InvokeSendCmdletCommand",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/MASES.KNetPS.ClientCmdlet.InvokeSubscribeCmdletCommand.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MASES.KNetPS.ClientCmdlet.InvokeSubscribeCmdletCommand.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "MASES.KNetPS.ClientCmdlet.InvokeSubscribeCmdletCommand",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/MASES.KNetPS.ClientCmdlet.InvokeUnsubscribeCmdletCommand.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MASES.KNetPS.ClientCmdlet.InvokeUnsubscribeCmdletCommand.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "MASES.KNetPS.ClientCmdlet.InvokeUnsubscribeCmdletCommand",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/MASES.KNetPS.ClientCmdlet.NewAdminClientConfigBuilderCmdletCommand.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MASES.KNetPS.ClientCmdlet.NewAdminClientConfigBuilderCmdletCommand.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "MASES.KNetPS.ClientCmdlet.NewAdminClientConfigBuilderCmdletCommand",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/MASES.KNetPS.ClientCmdlet.NewConsumerConfigBuilderCmdletCommand.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MASES.KNetPS.ClientCmdlet.NewConsumerConfigBuilderCmdletCommand.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "MASES.KNetPS.ClientCmdlet.NewConsumerConfigBuilderCmdletCommand",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/MASES.KNetPS.ClientCmdlet.NewKNetConsumerCmdletCommand.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MASES.KNetPS.ClientCmdlet.NewKNetConsumerCmdletCommand.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "MASES.KNetPS.ClientCmdlet.NewKNetConsumerCmdletCommand",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/MASES.KNetPS.ClientCmdlet.NewKNetProducerCmdletCommand.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MASES.KNetPS.ClientCmdlet.NewKNetProducerCmdletCommand.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "MASES.KNetPS.ClientCmdlet.NewKNetProducerCmdletCommand",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/MASES.KNetPS.ClientCmdlet.NewKafkaAdminClientCmdletCommand.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MASES.KNetPS.ClientCmdlet.NewKafkaAdminClientCmdletCommand.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "MASES.KNetPS.ClientCmdlet.NewKafkaAdminClientCmdletCommand",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/MASES.KNetPS.ClientCmdlet.NewKafkaConsumerCmdletCommand.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MASES.KNetPS.ClientCmdlet.NewKafkaConsumerCmdletCommand.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "MASES.KNetPS.ClientCmdlet.NewKafkaConsumerCmdletCommand",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/MASES.KNetPS.ClientCmdlet.NewKafkaProducerCmdletCommand.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MASES.KNetPS.ClientCmdlet.NewKafkaProducerCmdletCommand.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "MASES.KNetPS.ClientCmdlet.NewKafkaProducerCmdletCommand",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/MASES.KNetPS.ClientCmdlet.NewProducerConfigBuilderCmdletCommand.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MASES.KNetPS.ClientCmdlet.NewProducerConfigBuilderCmdletCommand.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "MASES.KNetPS.ClientCmdlet.NewProducerConfigBuilderCmdletCommand",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/MASES.KNetPS.ClientCmdlet.NewProducerRecordCmdletCommand.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MASES.KNetPS.ClientCmdlet.NewProducerRecordCmdletCommand.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "MASES.KNetPS.ClientCmdlet.NewProducerRecordCmdletCommand",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/MASES.KNetPS.ClientCmdlet.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MASES.KNetPS.ClientCmdlet.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "MASES.KNetPS.ClientCmdlet",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/MASES.KNetPS.Cmdlet.KNetPSCmdlet.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MASES.KNetPS.Cmdlet.KNetPSCmdlet.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "MASES.KNetPS.Cmdlet.KNetPSCmdlet",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/MASES.KNetPS.Cmdlet.KafkaClassToRunCmdletCommandBase-1.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MASES.KNetPS.Cmdlet.KafkaClassToRunCmdletCommandBase-1.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "MASES.KNetPS.Cmdlet.KafkaClassToRunCmdletCommandBase<TCmdlet>",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/MASES.KNetPS.Cmdlet.NewObjectCmdletCommand.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MASES.KNetPS.Cmdlet.NewObjectCmdletCommand.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "MASES.KNetPS.Cmdlet.NewObjectCmdletCommand",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/MASES.KNetPS.Cmdlet.StartKNetPSCmdletCommand.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MASES.KNetPS.Cmdlet.StartKNetPSCmdletCommand.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "MASES.KNetPS.Cmdlet.StartKNetPSCmdletCommand",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/MASES.KNetPS.Cmdlet.StartKNetPSCmdletCommandBase-1.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MASES.KNetPS.Cmdlet.StartKNetPSCmdletCommandBase-1.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "MASES.KNetPS.Cmdlet.StartKNetPSCmdletCommandBase<TCmdlet>",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/MASES.KNetPS.Cmdlet.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MASES.KNetPS.Cmdlet.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "MASES.KNetPS.Cmdlet",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/MASES.KNetPS.KNetPSCore.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MASES.KNetPS.KNetPSCore.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "MASES.KNetPS.KNetPSCore",
-      "Summary": "<p sourcefile=\"api/MASES.KNetPS.KNetPSCore.yml\" sourcestartlinenumber=\"1\">Directly usable implementation of <xref href=\"MASES.KNetCLI.KNetCLICore%601\" data-throw-if-not-resolved=\"false\"></xref></p>\n"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/MASES.KNetPS.KNetPSHelper-1.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MASES.KNetPS.KNetPSHelper-1.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "MASES.KNetPS.KNetPSHelper<TClass>",
-      "Summary": "<p sourcefile=\"api/MASES.KNetPS.KNetPSHelper-1.yml\" sourcestartlinenumber=\"1\">Public Helper class</p>\n"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/MASES.KNetPS.ToolsCmdlet.AclCommandCmdletCommand.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MASES.KNetPS.ToolsCmdlet.AclCommandCmdletCommand.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "MASES.KNetPS.ToolsCmdlet.AclCommandCmdletCommand",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/MASES.KNetPS.ToolsCmdlet.BrokerApiVersionsCommandCmdletCommand.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MASES.KNetPS.ToolsCmdlet.BrokerApiVersionsCommandCmdletCommand.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "MASES.KNetPS.ToolsCmdlet.BrokerApiVersionsCommandCmdletCommand",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/MASES.KNetPS.ToolsCmdlet.ClusterToolCmdletCommand.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MASES.KNetPS.ToolsCmdlet.ClusterToolCmdletCommand.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "MASES.KNetPS.ToolsCmdlet.ClusterToolCmdletCommand",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/MASES.KNetPS.ToolsCmdlet.ConfigCommandCmdletCommand.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MASES.KNetPS.ToolsCmdlet.ConfigCommandCmdletCommand.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "MASES.KNetPS.ToolsCmdlet.ConfigCommandCmdletCommand",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/MASES.KNetPS.ToolsCmdlet.ConnectDistributedCmdletCommand.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MASES.KNetPS.ToolsCmdlet.ConnectDistributedCmdletCommand.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "MASES.KNetPS.ToolsCmdlet.ConnectDistributedCmdletCommand",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/MASES.KNetPS.ToolsCmdlet.ConnectStandaloneCmdletCommand.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MASES.KNetPS.ToolsCmdlet.ConnectStandaloneCmdletCommand.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "MASES.KNetPS.ToolsCmdlet.ConnectStandaloneCmdletCommand",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/MASES.KNetPS.ToolsCmdlet.ConsoleConsumerCmdletCommand.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MASES.KNetPS.ToolsCmdlet.ConsoleConsumerCmdletCommand.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "MASES.KNetPS.ToolsCmdlet.ConsoleConsumerCmdletCommand",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/MASES.KNetPS.ToolsCmdlet.ConsoleProducerCmdletCommand.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MASES.KNetPS.ToolsCmdlet.ConsoleProducerCmdletCommand.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "MASES.KNetPS.ToolsCmdlet.ConsoleProducerCmdletCommand",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/MASES.KNetPS.ToolsCmdlet.ConsumerGroupCommandCmdletCommand.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MASES.KNetPS.ToolsCmdlet.ConsumerGroupCommandCmdletCommand.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "MASES.KNetPS.ToolsCmdlet.ConsumerGroupCommandCmdletCommand",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/MASES.KNetPS.ToolsCmdlet.ConsumerPerformanceCmdletCommand.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MASES.KNetPS.ToolsCmdlet.ConsumerPerformanceCmdletCommand.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "MASES.KNetPS.ToolsCmdlet.ConsumerPerformanceCmdletCommand",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/MASES.KNetPS.ToolsCmdlet.DelegationTokenCommandCmdletCommand.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MASES.KNetPS.ToolsCmdlet.DelegationTokenCommandCmdletCommand.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "MASES.KNetPS.ToolsCmdlet.DelegationTokenCommandCmdletCommand",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/MASES.KNetPS.ToolsCmdlet.DeleteRecordsCommandCmdletCommand.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MASES.KNetPS.ToolsCmdlet.DeleteRecordsCommandCmdletCommand.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "MASES.KNetPS.ToolsCmdlet.DeleteRecordsCommandCmdletCommand",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/MASES.KNetPS.ToolsCmdlet.DumpLogSegmentsCmdletCommand.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MASES.KNetPS.ToolsCmdlet.DumpLogSegmentsCmdletCommand.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "MASES.KNetPS.ToolsCmdlet.DumpLogSegmentsCmdletCommand",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/MASES.KNetPS.ToolsCmdlet.FeatureCommandCmdletCommand.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MASES.KNetPS.ToolsCmdlet.FeatureCommandCmdletCommand.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "MASES.KNetPS.ToolsCmdlet.FeatureCommandCmdletCommand",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/MASES.KNetPS.ToolsCmdlet.GetOffsetShellCmdletCommand.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MASES.KNetPS.ToolsCmdlet.GetOffsetShellCmdletCommand.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "MASES.KNetPS.ToolsCmdlet.GetOffsetShellCmdletCommand",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/MASES.KNetPS.ToolsCmdlet.KafkaStartCmdletCommand.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MASES.KNetPS.ToolsCmdlet.KafkaStartCmdletCommand.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "MASES.KNetPS.ToolsCmdlet.KafkaStartCmdletCommand",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/MASES.KNetPS.ToolsCmdlet.LeaderElectionCommandCmdletCommand.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MASES.KNetPS.ToolsCmdlet.LeaderElectionCommandCmdletCommand.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "MASES.KNetPS.ToolsCmdlet.LeaderElectionCommandCmdletCommand",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/MASES.KNetPS.ToolsCmdlet.LogDirsCommandCmdletCommand.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MASES.KNetPS.ToolsCmdlet.LogDirsCommandCmdletCommand.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "MASES.KNetPS.ToolsCmdlet.LogDirsCommandCmdletCommand",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/MASES.KNetPS.ToolsCmdlet.MetadataQuorumCommandCmdletCommand.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MASES.KNetPS.ToolsCmdlet.MetadataQuorumCommandCmdletCommand.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "MASES.KNetPS.ToolsCmdlet.MetadataQuorumCommandCmdletCommand",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/MASES.KNetPS.ToolsCmdlet.MetadataShellCmdletCommand.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MASES.KNetPS.ToolsCmdlet.MetadataShellCmdletCommand.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "MASES.KNetPS.ToolsCmdlet.MetadataShellCmdletCommand",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/MASES.KNetPS.ToolsCmdlet.MirrorMaker2CmdletCommand.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MASES.KNetPS.ToolsCmdlet.MirrorMaker2CmdletCommand.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "MASES.KNetPS.ToolsCmdlet.MirrorMaker2CmdletCommand",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/MASES.KNetPS.ToolsCmdlet.MirrorMakerCmdletCommand.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MASES.KNetPS.ToolsCmdlet.MirrorMakerCmdletCommand.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "MASES.KNetPS.ToolsCmdlet.MirrorMakerCmdletCommand",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/MASES.KNetPS.ToolsCmdlet.ProducerPerformanceCmdletCommand.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MASES.KNetPS.ToolsCmdlet.ProducerPerformanceCmdletCommand.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "MASES.KNetPS.ToolsCmdlet.ProducerPerformanceCmdletCommand",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/MASES.KNetPS.ToolsCmdlet.ReassignPartitionsCommandCmdletCommand.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MASES.KNetPS.ToolsCmdlet.ReassignPartitionsCommandCmdletCommand.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "MASES.KNetPS.ToolsCmdlet.ReassignPartitionsCommandCmdletCommand",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/MASES.KNetPS.ToolsCmdlet.ReplicaVerificationToolCmdletCommand.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MASES.KNetPS.ToolsCmdlet.ReplicaVerificationToolCmdletCommand.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "MASES.KNetPS.ToolsCmdlet.ReplicaVerificationToolCmdletCommand",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/MASES.KNetPS.ToolsCmdlet.StorageToolCmdletCommand.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MASES.KNetPS.ToolsCmdlet.StorageToolCmdletCommand.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "MASES.KNetPS.ToolsCmdlet.StorageToolCmdletCommand",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/MASES.KNetPS.ToolsCmdlet.StreamsResetterCmdletCommand.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MASES.KNetPS.ToolsCmdlet.StreamsResetterCmdletCommand.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "MASES.KNetPS.ToolsCmdlet.StreamsResetterCmdletCommand",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/MASES.KNetPS.ToolsCmdlet.TopicCommandCmdletCommand.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MASES.KNetPS.ToolsCmdlet.TopicCommandCmdletCommand.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "MASES.KNetPS.ToolsCmdlet.TopicCommandCmdletCommand",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/MASES.KNetPS.ToolsCmdlet.TransactionsCommandCmdletCommand.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MASES.KNetPS.ToolsCmdlet.TransactionsCommandCmdletCommand.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "MASES.KNetPS.ToolsCmdlet.TransactionsCommandCmdletCommand",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/MASES.KNetPS.ToolsCmdlet.VerifiableConsumerCmdletCommand.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MASES.KNetPS.ToolsCmdlet.VerifiableConsumerCmdletCommand.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "MASES.KNetPS.ToolsCmdlet.VerifiableConsumerCmdletCommand",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/MASES.KNetPS.ToolsCmdlet.VerifiableProducerCmdletCommand.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MASES.KNetPS.ToolsCmdlet.VerifiableProducerCmdletCommand.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "MASES.KNetPS.ToolsCmdlet.VerifiableProducerCmdletCommand",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/MASES.KNetPS.ToolsCmdlet.ZkSecurityMigratorCmdletCommand.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MASES.KNetPS.ToolsCmdlet.ZkSecurityMigratorCmdletCommand.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "MASES.KNetPS.ToolsCmdlet.ZkSecurityMigratorCmdletCommand",
       "Summary": null
     },
     {
@@ -4474,90 +4572,6 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "MASES.KNetPS.ToolsCmdlet",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/MASES.KNetPS.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MASES.KNetPS.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "MASES.KNetPS",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/MASES.KNetTemplate.KNetConnect.KNetConnectSink.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MASES.KNetTemplate.KNetConnect.KNetConnectSink.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "MASES.KNetTemplate.KNetConnect.KNetConnectSink",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/MASES.KNetTemplate.KNetConnect.KNetConnectSinkTask.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MASES.KNetTemplate.KNetConnect.KNetConnectSinkTask.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "MASES.KNetTemplate.KNetConnect.KNetConnectSinkTask",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/MASES.KNetTemplate.KNetConnect.KNetConnectSource.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MASES.KNetTemplate.KNetConnect.KNetConnectSource.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "MASES.KNetTemplate.KNetConnect.KNetConnectSource",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/MASES.KNetTemplate.KNetConnect.KNetConnectSourceTask.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MASES.KNetTemplate.KNetConnect.KNetConnectSourceTask.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "MASES.KNetTemplate.KNetConnect.KNetConnectSourceTask",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/MASES.KNetTemplate.KNetConnect.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MASES.KNetTemplate.KNetConnect.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "MASES.KNetTemplate.KNetConnect",
       "Summary": null
     },
     {
@@ -5958,7 +5972,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Clients.Admin.IAdmin",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Clients.Admin.IAdmin.yml\" sourcestartlinenumber=\"1\">.NET interface for TO BE DEFINED FROM USER</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Clients.Admin.IAdmin.yml\" sourcestartlinenumber=\"1\">.NET interface skeleton to be manually developed following <a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/admin/Admin.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/admin/Admin.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -7288,7 +7302,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Clients.Consumer.IAcknowledgementCommitCallback",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Clients.Consumer.IAcknowledgementCommitCallback.yml\" sourcestartlinenumber=\"1\">.NET interface for TO BE DEFINED FROM USER</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Clients.Consumer.IAcknowledgementCommitCallback.yml\" sourcestartlinenumber=\"1\">.NET interface skeleton to be manually developed following <a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/consumer/AcknowledgementCommitCallback.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/consumer/AcknowledgementCommitCallback.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -7302,7 +7316,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Clients.Consumer.IConsumer<K, V>",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Clients.Consumer.IConsumer-2.yml\" sourcestartlinenumber=\"1\">.NET interface for TO BE DEFINED FROM USER</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Clients.Consumer.IConsumer-2.yml\" sourcestartlinenumber=\"1\">.NET interface skeleton to be manually developed following <a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/consumer/Consumer.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/consumer/Consumer.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -7386,7 +7400,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Clients.Consumer.IShareConsumer<K, V>",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Clients.Consumer.IShareConsumer-2.yml\" sourcestartlinenumber=\"1\">.NET interface for TO BE DEFINED FROM USER</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Clients.Consumer.IShareConsumer-2.yml\" sourcestartlinenumber=\"1\">.NET interface skeleton to be manually developed following <a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/consumer/ShareConsumer.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/consumer/ShareConsumer.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -7792,7 +7806,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Clients.IHostResolver",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Clients.IHostResolver.yml\" sourcestartlinenumber=\"1\">.NET interface for TO BE DEFINED FROM USER</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Clients.IHostResolver.yml\" sourcestartlinenumber=\"1\">.NET interface skeleton to be manually developed following <a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/HostResolver.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/HostResolver.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -7806,7 +7820,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Clients.IMetadataUpdater",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Clients.IMetadataUpdater.yml\" sourcestartlinenumber=\"1\">.NET interface for TO BE DEFINED FROM USER</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Clients.IMetadataUpdater.yml\" sourcestartlinenumber=\"1\">.NET interface skeleton to be manually developed following <a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/MetadataUpdater.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/MetadataUpdater.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -7820,7 +7834,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Clients.IRequestCompletionHandler",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Clients.IRequestCompletionHandler.yml\" sourcestartlinenumber=\"1\">.NET interface for TO BE DEFINED FROM USER</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Clients.IRequestCompletionHandler.yml\" sourcestartlinenumber=\"1\">.NET interface skeleton to be manually developed following <a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/RequestCompletionHandler.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/RequestCompletionHandler.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -8058,7 +8072,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Clients.Producer.IProducer<K, V>",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Clients.Producer.IProducer-2.yml\" sourcestartlinenumber=\"1\">.NET interface for TO BE DEFINED FROM USER</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Clients.Producer.IProducer-2.yml\" sourcestartlinenumber=\"1\">.NET interface skeleton to be manually developed following <a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/producer/Producer.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/producer/Producer.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -8590,7 +8604,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Common.Cache.ICache<K, V>",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Common.Cache.ICache-2.yml\" sourcestartlinenumber=\"1\">.NET interface for TO BE DEFINED FROM USER</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Common.Cache.ICache-2.yml\" sourcestartlinenumber=\"1\">.NET interface skeleton to be manually developed following <a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/cache/Cache.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/cache/Cache.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -9206,7 +9220,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Common.Config.Provider.IConfigProvider",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Common.Config.Provider.IConfigProvider.yml\" sourcestartlinenumber=\"1\">.NET interface for TO BE DEFINED FROM USER</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Common.Config.Provider.IConfigProvider.yml\" sourcestartlinenumber=\"1\">.NET interface skeleton to be manually developed following <a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/config/provider/ConfigProvider.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/config/provider/ConfigProvider.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -11474,7 +11488,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Common.Header.IHeader",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Common.Header.IHeader.yml\" sourcestartlinenumber=\"1\">.NET interface for TO BE DEFINED FROM USER</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Common.Header.IHeader.yml\" sourcestartlinenumber=\"1\">.NET interface skeleton to be manually developed following <a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/header/Header.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/header/Header.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -11488,7 +11502,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Common.Header.IHeaders",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Common.Header.IHeaders.yml\" sourcestartlinenumber=\"1\">.NET interface for TO BE DEFINED FROM USER</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Common.Header.IHeaders.yml\" sourcestartlinenumber=\"1\">.NET interface skeleton to be manually developed following <a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/header/Headers.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/header/Headers.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -11530,7 +11544,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Common.IConfigurable",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Common.IConfigurable.yml\" sourcestartlinenumber=\"1\">.NET interface for TO BE DEFINED FROM USER</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Common.IConfigurable.yml\" sourcestartlinenumber=\"1\">.NET interface skeleton to be manually developed following <a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/Configurable.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/Configurable.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -11544,7 +11558,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Common.IMessageFormatter",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Common.IMessageFormatter.yml\" sourcestartlinenumber=\"1\">.NET interface for TO BE DEFINED FROM USER</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Common.IMessageFormatter.yml\" sourcestartlinenumber=\"1\">.NET interface skeleton to be manually developed following <a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/MessageFormatter.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/MessageFormatter.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -11558,7 +11572,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Common.IMetric",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Common.IMetric.yml\" sourcestartlinenumber=\"1\">.NET interface for TO BE DEFINED FROM USER</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Common.IMetric.yml\" sourcestartlinenumber=\"1\">.NET interface skeleton to be manually developed following <a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/Metric.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/Metric.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -11572,7 +11586,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Common.IReconfigurable",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Common.IReconfigurable.yml\" sourcestartlinenumber=\"1\">.NET interface for TO BE DEFINED FROM USER</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Common.IReconfigurable.yml\" sourcestartlinenumber=\"1\">.NET interface skeleton to be manually developed following <a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/Reconfigurable.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/Reconfigurable.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -11726,7 +11740,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Common.Memory.IMemoryPool",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Common.Memory.IMemoryPool.yml\" sourcestartlinenumber=\"1\">.NET interface for TO BE DEFINED FROM USER</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Common.Memory.IMemoryPool.yml\" sourcestartlinenumber=\"1\">.NET interface skeleton to be manually developed following <a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/memory/MemoryPool.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/memory/MemoryPool.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -11894,7 +11908,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Common.Metrics.ICompoundStat",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Common.Metrics.ICompoundStat.yml\" sourcestartlinenumber=\"1\">.NET interface for TO BE DEFINED FROM USER</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Common.Metrics.ICompoundStat.yml\" sourcestartlinenumber=\"1\">.NET interface skeleton to be manually developed following <a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/metrics/CompoundStat.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/metrics/CompoundStat.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -11908,7 +11922,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Common.Metrics.IGauge<T>",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Common.Metrics.IGauge-1.yml\" sourcestartlinenumber=\"1\">.NET interface for TO BE DEFINED FROM USER</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Common.Metrics.IGauge-1.yml\" sourcestartlinenumber=\"1\">.NET interface skeleton to be manually developed following <a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/metrics/Gauge.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/metrics/Gauge.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -11922,7 +11936,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Common.Metrics.IMeasurable",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Common.Metrics.IMeasurable.yml\" sourcestartlinenumber=\"1\">.NET interface for TO BE DEFINED FROM USER</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Common.Metrics.IMeasurable.yml\" sourcestartlinenumber=\"1\">.NET interface skeleton to be manually developed following <a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/metrics/Measurable.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/metrics/Measurable.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -11936,7 +11950,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Common.Metrics.IMeasurableStat",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Common.Metrics.IMeasurableStat.yml\" sourcestartlinenumber=\"1\">.NET interface for TO BE DEFINED FROM USER</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Common.Metrics.IMeasurableStat.yml\" sourcestartlinenumber=\"1\">.NET interface skeleton to be manually developed following <a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/metrics/MeasurableStat.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/metrics/MeasurableStat.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -11950,7 +11964,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Common.Metrics.IMetricValueProvider<T>",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Common.Metrics.IMetricValueProvider-1.yml\" sourcestartlinenumber=\"1\">.NET interface for TO BE DEFINED FROM USER</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Common.Metrics.IMetricValueProvider-1.yml\" sourcestartlinenumber=\"1\">.NET interface skeleton to be manually developed following <a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/metrics/MetricValueProvider.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/metrics/MetricValueProvider.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -11964,7 +11978,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Common.Metrics.IMetricsContext",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Common.Metrics.IMetricsContext.yml\" sourcestartlinenumber=\"1\">.NET interface for TO BE DEFINED FROM USER</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Common.Metrics.IMetricsContext.yml\" sourcestartlinenumber=\"1\">.NET interface skeleton to be manually developed following <a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/metrics/MetricsContext.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/metrics/MetricsContext.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -11992,7 +12006,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Common.Metrics.IStat",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Common.Metrics.IStat.yml\" sourcestartlinenumber=\"1\">.NET interface for TO BE DEFINED FROM USER</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Common.Metrics.IStat.yml\" sourcestartlinenumber=\"1\">.NET interface skeleton to be manually developed following <a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/metrics/Stat.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/metrics/Stat.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -12804,7 +12818,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Common.Record.IMutableRecordBatch",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Common.Record.IMutableRecordBatch.yml\" sourcestartlinenumber=\"1\">.NET interface for TO BE DEFINED FROM USER</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Common.Record.IMutableRecordBatch.yml\" sourcestartlinenumber=\"1\">.NET interface skeleton to be manually developed following <a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/record/MutableRecordBatch.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/record/MutableRecordBatch.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -12818,7 +12832,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Common.Record.IRecord",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Common.Record.IRecord.yml\" sourcestartlinenumber=\"1\">.NET interface for TO BE DEFINED FROM USER</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Common.Record.IRecord.yml\" sourcestartlinenumber=\"1\">.NET interface skeleton to be manually developed following <a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/record/Record.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/record/Record.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -12832,7 +12846,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Common.Record.IRecordBatch",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Common.Record.IRecordBatch.yml\" sourcestartlinenumber=\"1\">.NET interface for TO BE DEFINED FROM USER</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Common.Record.IRecordBatch.yml\" sourcestartlinenumber=\"1\">.NET interface skeleton to be manually developed following <a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/record/RecordBatch.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/record/RecordBatch.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -12846,7 +12860,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Common.Record.ITransferableRecords",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Common.Record.ITransferableRecords.yml\" sourcestartlinenumber=\"1\">.NET interface for TO BE DEFINED FROM USER</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Common.Record.ITransferableRecords.yml\" sourcestartlinenumber=\"1\">.NET interface skeleton to be manually developed following <a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/record/TransferableRecords.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/record/TransferableRecords.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -12860,7 +12874,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Common.Record.IUnalignedRecords",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Common.Record.IUnalignedRecords.yml\" sourcestartlinenumber=\"1\">.NET interface for TO BE DEFINED FROM USER</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Common.Record.IUnalignedRecords.yml\" sourcestartlinenumber=\"1\">.NET interface skeleton to be manually developed following <a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/record/UnalignedRecords.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/record/UnalignedRecords.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -13168,7 +13182,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Common.Replica.IClientMetadata",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Common.Replica.IClientMetadata.yml\" sourcestartlinenumber=\"1\">.NET interface for TO BE DEFINED FROM USER</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Common.Replica.IClientMetadata.yml\" sourcestartlinenumber=\"1\">.NET interface skeleton to be manually developed following <a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/replica/ClientMetadata.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/replica/ClientMetadata.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -13182,7 +13196,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Common.Replica.IPartitionView",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Common.Replica.IPartitionView.yml\" sourcestartlinenumber=\"1\">.NET interface for TO BE DEFINED FROM USER</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Common.Replica.IPartitionView.yml\" sourcestartlinenumber=\"1\">.NET interface skeleton to be manually developed following <a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/replica/PartitionView.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/replica/PartitionView.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -13196,7 +13210,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Common.Replica.IReplicaSelector",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Common.Replica.IReplicaSelector.yml\" sourcestartlinenumber=\"1\">.NET interface for TO BE DEFINED FROM USER</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Common.Replica.IReplicaSelector.yml\" sourcestartlinenumber=\"1\">.NET interface skeleton to be manually developed following <a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/replica/ReplicaSelector.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/replica/ReplicaSelector.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -13210,7 +13224,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Common.Replica.IReplicaView",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Common.Replica.IReplicaView.yml\" sourcestartlinenumber=\"1\">.NET interface for TO BE DEFINED FROM USER</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Common.Replica.IReplicaView.yml\" sourcestartlinenumber=\"1\">.NET interface skeleton to be manually developed following <a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/replica/ReplicaView.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/replica/ReplicaView.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -13434,7 +13448,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Common.Security.Auth.IAuthenticateCallbackHandler",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Common.Security.Auth.IAuthenticateCallbackHandler.yml\" sourcestartlinenumber=\"1\">.NET interface for TO BE DEFINED FROM USER</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Common.Security.Auth.IAuthenticateCallbackHandler.yml\" sourcestartlinenumber=\"1\">.NET interface skeleton to be manually developed following <a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/security/auth/AuthenticateCallbackHandler.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/security/auth/AuthenticateCallbackHandler.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -13448,7 +13462,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Common.Security.Auth.IAuthenticationContext",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Common.Security.Auth.IAuthenticationContext.yml\" sourcestartlinenumber=\"1\">.NET interface for TO BE DEFINED FROM USER</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Common.Security.Auth.IAuthenticationContext.yml\" sourcestartlinenumber=\"1\">.NET interface skeleton to be manually developed following <a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/security/auth/AuthenticationContext.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/security/auth/AuthenticationContext.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -13462,7 +13476,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Common.Security.Auth.IKafkaPrincipalBuilder",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Common.Security.Auth.IKafkaPrincipalBuilder.yml\" sourcestartlinenumber=\"1\">.NET interface for TO BE DEFINED FROM USER</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Common.Security.Auth.IKafkaPrincipalBuilder.yml\" sourcestartlinenumber=\"1\">.NET interface skeleton to be manually developed following <a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/security/auth/KafkaPrincipalBuilder.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/security/auth/KafkaPrincipalBuilder.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -13476,7 +13490,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Common.Security.Auth.IKafkaPrincipalSerde",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Common.Security.Auth.IKafkaPrincipalSerde.yml\" sourcestartlinenumber=\"1\">.NET interface for TO BE DEFINED FROM USER</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Common.Security.Auth.IKafkaPrincipalSerde.yml\" sourcestartlinenumber=\"1\">.NET interface skeleton to be manually developed following <a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/security/auth/KafkaPrincipalSerde.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/security/auth/KafkaPrincipalSerde.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -13490,7 +13504,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Common.Security.Auth.ILogin",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Common.Security.Auth.ILogin.yml\" sourcestartlinenumber=\"1\">.NET interface for TO BE DEFINED FROM USER</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Common.Security.Auth.ILogin.yml\" sourcestartlinenumber=\"1\">.NET interface skeleton to be manually developed following <a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/security/auth/Login.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/security/auth/Login.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -13504,7 +13518,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Common.Security.Auth.ISecurityProviderCreator",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Common.Security.Auth.ISecurityProviderCreator.yml\" sourcestartlinenumber=\"1\">.NET interface for TO BE DEFINED FROM USER</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Common.Security.Auth.ISecurityProviderCreator.yml\" sourcestartlinenumber=\"1\">.NET interface skeleton to be manually developed following <a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/security/auth/SecurityProviderCreator.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/security/auth/SecurityProviderCreator.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -13518,7 +13532,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Common.Security.Auth.ISslEngineFactory",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Common.Security.Auth.ISslEngineFactory.yml\" sourcestartlinenumber=\"1\">.NET interface for TO BE DEFINED FROM USER</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Common.Security.Auth.ISslEngineFactory.yml\" sourcestartlinenumber=\"1\">.NET interface skeleton to be manually developed following <a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/security/auth/SslEngineFactory.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/security/auth/SslEngineFactory.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -13966,7 +13980,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Common.Security.Oauthbearer.IOAuthBearerToken",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Common.Security.Oauthbearer.IOAuthBearerToken.yml\" sourcestartlinenumber=\"1\">.NET interface for TO BE DEFINED FROM USER</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Common.Security.Oauthbearer.IOAuthBearerToken.yml\" sourcestartlinenumber=\"1\">.NET interface skeleton to be manually developed following <a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/security/oauthbearer/OAuthBearerToken.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/security/oauthbearer/OAuthBearerToken.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -15268,7 +15282,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Common.Serialization.VoidSerializer",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Common.Serialization.VoidSerializer.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/common/serialization/VoidSerializer.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.5.0/org/apache/kafka/common/serialization/VoidSerializer.html</a></p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Common.Serialization.VoidSerializer.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/serialization/VoidSerializer.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/serialization/VoidSerializer.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -15884,7 +15898,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Common.Utils.ICloseableIterator<T>",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Common.Utils.ICloseableIterator-1.yml\" sourcestartlinenumber=\"1\">.NET interface for TO BE DEFINED FROM USER</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Common.Utils.ICloseableIterator-1.yml\" sourcestartlinenumber=\"1\">.NET interface skeleton to be manually developed following <a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/utils/CloseableIterator.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/utils/CloseableIterator.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -15898,7 +15912,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Common.Utils.IScheduler",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Common.Utils.IScheduler.yml\" sourcestartlinenumber=\"1\">.NET interface for TO BE DEFINED FROM USER</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Common.Utils.IScheduler.yml\" sourcestartlinenumber=\"1\">.NET interface skeleton to be manually developed following <a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/utils/Scheduler.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/utils/Scheduler.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -15912,7 +15926,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Common.Utils.ITime",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Common.Utils.ITime.yml\" sourcestartlinenumber=\"1\">.NET interface for TO BE DEFINED FROM USER</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Common.Utils.ITime.yml\" sourcestartlinenumber=\"1\">.NET interface skeleton to be manually developed following <a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/utils/Time.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/utils/Time.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -16360,7 +16374,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Connect.Components.IVersioned",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Connect.Components.IVersioned.yml\" sourcestartlinenumber=\"1\">.NET interface for TO BE DEFINED FROM USER</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Connect.Components.IVersioned.yml\" sourcestartlinenumber=\"1\">.NET interface skeleton to be manually developed following <a href=\"https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.1/org/apache/kafka/connect/components/Versioned.html\">https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.1/org/apache/kafka/connect/components/Versioned.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -16472,7 +16486,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Connect.Connector.IConnectorContext",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Connect.Connector.IConnectorContext.yml\" sourcestartlinenumber=\"1\">.NET interface for TO BE DEFINED FROM USER</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Connect.Connector.IConnectorContext.yml\" sourcestartlinenumber=\"1\">.NET interface skeleton to be manually developed following <a href=\"https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.1/org/apache/kafka/connect/connector/ConnectorContext.html\">https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.1/org/apache/kafka/connect/connector/ConnectorContext.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -16486,7 +16500,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Connect.Connector.ITask",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Connect.Connector.ITask.yml\" sourcestartlinenumber=\"1\">.NET interface for TO BE DEFINED FROM USER</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Connect.Connector.ITask.yml\" sourcestartlinenumber=\"1\">.NET interface skeleton to be manually developed following <a href=\"https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.1/org/apache/kafka/connect/connector/Task.html\">https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.1/org/apache/kafka/connect/connector/Task.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -16724,7 +16738,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Connect.Data.ISchema",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Connect.Data.ISchema.yml\" sourcestartlinenumber=\"1\">.NET interface for TO BE DEFINED FROM USER</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Connect.Data.ISchema.yml\" sourcestartlinenumber=\"1\">.NET interface skeleton to be manually developed following <a href=\"https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.1/org/apache/kafka/connect/data/Schema.html\">https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.1/org/apache/kafka/connect/data/Schema.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -17060,7 +17074,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Connect.Header.IHeader",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Connect.Header.IHeader.yml\" sourcestartlinenumber=\"1\">.NET interface for TO BE DEFINED FROM USER</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Connect.Header.IHeader.yml\" sourcestartlinenumber=\"1\">.NET interface skeleton to be manually developed following <a href=\"https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.1/org/apache/kafka/connect/header/Header.html\">https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.1/org/apache/kafka/connect/header/Header.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -17074,7 +17088,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Connect.Header.IHeaders",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Connect.Header.IHeaders.yml\" sourcestartlinenumber=\"1\">.NET interface for TO BE DEFINED FROM USER</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Connect.Header.IHeaders.yml\" sourcestartlinenumber=\"1\">.NET interface skeleton to be manually developed following <a href=\"https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.1/org/apache/kafka/connect/header/Headers.html\">https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.1/org/apache/kafka/connect/header/Headers.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -17186,7 +17200,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Connect.Health.IConnectClusterDetails",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Connect.Health.IConnectClusterDetails.yml\" sourcestartlinenumber=\"1\">.NET interface for TO BE DEFINED FROM USER</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Connect.Health.IConnectClusterDetails.yml\" sourcestartlinenumber=\"1\">.NET interface skeleton to be manually developed following <a href=\"https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.1/org/apache/kafka/connect/health/ConnectClusterDetails.html\">https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.1/org/apache/kafka/connect/health/ConnectClusterDetails.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -17200,7 +17214,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Connect.Health.IConnectClusterState",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Connect.Health.IConnectClusterState.yml\" sourcestartlinenumber=\"1\">.NET interface for TO BE DEFINED FROM USER</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Connect.Health.IConnectClusterState.yml\" sourcestartlinenumber=\"1\">.NET interface skeleton to be manually developed following <a href=\"https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.1/org/apache/kafka/connect/health/ConnectClusterState.html\">https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.1/org/apache/kafka/connect/health/ConnectClusterState.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -17522,7 +17536,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Connect.Mirror.IConfigPropertyFilter",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Connect.Mirror.IConfigPropertyFilter.yml\" sourcestartlinenumber=\"1\">.NET interface for TO BE DEFINED FROM USER</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Connect.Mirror.IConfigPropertyFilter.yml\" sourcestartlinenumber=\"1\">.NET interface skeleton to be manually developed following <a href=\"https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.9.1/org/apache/kafka/connect/mirror/ConfigPropertyFilter.html\">https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.9.1/org/apache/kafka/connect/mirror/ConfigPropertyFilter.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -17536,7 +17550,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Connect.Mirror.IGroupFilter",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Connect.Mirror.IGroupFilter.yml\" sourcestartlinenumber=\"1\">.NET interface for TO BE DEFINED FROM USER</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Connect.Mirror.IGroupFilter.yml\" sourcestartlinenumber=\"1\">.NET interface skeleton to be manually developed following <a href=\"https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.9.1/org/apache/kafka/connect/mirror/GroupFilter.html\">https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.9.1/org/apache/kafka/connect/mirror/GroupFilter.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -17550,7 +17564,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Connect.Mirror.IReplicationPolicy",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Connect.Mirror.IReplicationPolicy.yml\" sourcestartlinenumber=\"1\">.NET interface for TO BE DEFINED FROM USER</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Connect.Mirror.IReplicationPolicy.yml\" sourcestartlinenumber=\"1\">.NET interface skeleton to be manually developed following <a href=\"https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/3.9.1/org/apache/kafka/connect/mirror/ReplicationPolicy.html\">https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/3.9.1/org/apache/kafka/connect/mirror/ReplicationPolicy.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -17564,7 +17578,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Connect.Mirror.ITopicFilter",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Connect.Mirror.ITopicFilter.yml\" sourcestartlinenumber=\"1\">.NET interface for TO BE DEFINED FROM USER</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Connect.Mirror.ITopicFilter.yml\" sourcestartlinenumber=\"1\">.NET interface skeleton to be manually developed following <a href=\"https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.9.1/org/apache/kafka/connect/mirror/TopicFilter.html\">https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.9.1/org/apache/kafka/connect/mirror/TopicFilter.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -18040,7 +18054,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Connect.Sink.IErrantRecordReporter",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Connect.Sink.IErrantRecordReporter.yml\" sourcestartlinenumber=\"1\">.NET interface for TO BE DEFINED FROM USER</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Connect.Sink.IErrantRecordReporter.yml\" sourcestartlinenumber=\"1\">.NET interface skeleton to be manually developed following <a href=\"https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.1/org/apache/kafka/connect/sink/ErrantRecordReporter.html\">https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.1/org/apache/kafka/connect/sink/ErrantRecordReporter.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -18054,7 +18068,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Connect.Sink.ISinkConnectorContext",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Connect.Sink.ISinkConnectorContext.yml\" sourcestartlinenumber=\"1\">.NET interface for TO BE DEFINED FROM USER</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Connect.Sink.ISinkConnectorContext.yml\" sourcestartlinenumber=\"1\">.NET interface skeleton to be manually developed following <a href=\"https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.1/org/apache/kafka/connect/sink/SinkConnectorContext.html\">https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.1/org/apache/kafka/connect/sink/SinkConnectorContext.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -18068,7 +18082,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Connect.Sink.ISinkTaskContext",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Connect.Sink.ISinkTaskContext.yml\" sourcestartlinenumber=\"1\">.NET interface for TO BE DEFINED FROM USER</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Connect.Sink.ISinkTaskContext.yml\" sourcestartlinenumber=\"1\">.NET interface skeleton to be manually developed following <a href=\"https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.1/org/apache/kafka/connect/sink/SinkTaskContext.html\">https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.1/org/apache/kafka/connect/sink/SinkTaskContext.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -18208,7 +18222,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Connect.Source.ISourceConnectorContext",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Connect.Source.ISourceConnectorContext.yml\" sourcestartlinenumber=\"1\">.NET interface for TO BE DEFINED FROM USER</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Connect.Source.ISourceConnectorContext.yml\" sourcestartlinenumber=\"1\">.NET interface skeleton to be manually developed following <a href=\"https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.1/org/apache/kafka/connect/source/SourceConnectorContext.html\">https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.1/org/apache/kafka/connect/source/SourceConnectorContext.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -18222,7 +18236,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Connect.Source.ISourceTaskContext",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Connect.Source.ISourceTaskContext.yml\" sourcestartlinenumber=\"1\">.NET interface for TO BE DEFINED FROM USER</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Connect.Source.ISourceTaskContext.yml\" sourcestartlinenumber=\"1\">.NET interface skeleton to be manually developed following <a href=\"https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.1/org/apache/kafka/connect/source/SourceTaskContext.html\">https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.1/org/apache/kafka/connect/source/SourceTaskContext.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -18236,7 +18250,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Connect.Source.ITransactionContext",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Connect.Source.ITransactionContext.yml\" sourcestartlinenumber=\"1\">.NET interface for TO BE DEFINED FROM USER</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Connect.Source.ITransactionContext.yml\" sourcestartlinenumber=\"1\">.NET interface skeleton to be manually developed following <a href=\"https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.1/org/apache/kafka/connect/source/TransactionContext.html\">https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.1/org/apache/kafka/connect/source/TransactionContext.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -18908,7 +18922,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Connect.Transforms.ITransformation<R>",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Connect.Transforms.ITransformation-1.yml\" sourcestartlinenumber=\"1\">.NET interface for TO BE DEFINED FROM USER</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Connect.Transforms.ITransformation-1.yml\" sourcestartlinenumber=\"1\">.NET interface skeleton to be manually developed following <a href=\"https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.1/org/apache/kafka/connect/transforms/Transformation.html\">https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.1/org/apache/kafka/connect/transforms/Transformation.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -19146,7 +19160,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Connect.Transforms.Predicates.IPredicate<R>",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Connect.Transforms.Predicates.IPredicate-1.yml\" sourcestartlinenumber=\"1\">.NET interface for TO BE DEFINED FROM USER</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Connect.Transforms.Predicates.IPredicate-1.yml\" sourcestartlinenumber=\"1\">.NET interface skeleton to be manually developed following <a href=\"https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.1/org/apache/kafka/connect/transforms/predicates/Predicate.html\">https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.1/org/apache/kafka/connect/transforms/predicates/Predicate.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -19860,7 +19874,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Connect.Util.ICallback<V>",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Connect.Util.ICallback-1.yml\" sourcestartlinenumber=\"1\">.NET interface for TO BE DEFINED FROM USER</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Connect.Util.ICallback-1.yml\" sourcestartlinenumber=\"1\">.NET interface skeleton to be manually developed following <a href=\"https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.9.1/org/apache/kafka/connect/util/Callback.html\">https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.9.1/org/apache/kafka/connect/util/Callback.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -20168,7 +20182,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Deferred.IDeferredEvent",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Deferred.IDeferredEvent.yml\" sourcestartlinenumber=\"1\">.NET interface for TO BE DEFINED FROM USER</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Deferred.IDeferredEvent.yml\" sourcestartlinenumber=\"1\">.NET interface skeleton to be manually developed following <a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/3.9.1/org/apache/kafka/deferred/DeferredEvent.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/3.9.1/org/apache/kafka/deferred/DeferredEvent.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -20392,7 +20406,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Queue.IEventQueue",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Queue.IEventQueue.yml\" sourcestartlinenumber=\"1\">.NET interface for TO BE DEFINED FROM USER</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Queue.IEventQueue.yml\" sourcestartlinenumber=\"1\">.NET interface skeleton to be manually developed following <a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/3.9.1/org/apache/kafka/queue/EventQueue.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/3.9.1/org/apache/kafka/queue/EventQueue.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -20756,7 +20770,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Raft.IBatchReader<T>",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Raft.IBatchReader-1.yml\" sourcestartlinenumber=\"1\">.NET interface for TO BE DEFINED FROM USER</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Raft.IBatchReader-1.yml\" sourcestartlinenumber=\"1\">.NET interface skeleton to be manually developed following <a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.1/org/apache/kafka/raft/BatchReader.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.1/org/apache/kafka/raft/BatchReader.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -20770,7 +20784,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Raft.IEpochState",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Raft.IEpochState.yml\" sourcestartlinenumber=\"1\">.NET interface for TO BE DEFINED FROM USER</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Raft.IEpochState.yml\" sourcestartlinenumber=\"1\">.NET interface skeleton to be manually developed following <a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.1/org/apache/kafka/raft/EpochState.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.1/org/apache/kafka/raft/EpochState.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -20784,7 +20798,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Raft.IExpirationService",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Raft.IExpirationService.yml\" sourcestartlinenumber=\"1\">.NET interface for TO BE DEFINED FROM USER</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Raft.IExpirationService.yml\" sourcestartlinenumber=\"1\">.NET interface skeleton to be manually developed following <a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.1/org/apache/kafka/raft/ExpirationService.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.1/org/apache/kafka/raft/ExpirationService.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -20798,7 +20812,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Raft.INetworkChannel",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Raft.INetworkChannel.yml\" sourcestartlinenumber=\"1\">.NET interface for TO BE DEFINED FROM USER</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Raft.INetworkChannel.yml\" sourcestartlinenumber=\"1\">.NET interface skeleton to be manually developed following <a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.1/org/apache/kafka/raft/NetworkChannel.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.1/org/apache/kafka/raft/NetworkChannel.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -20812,7 +20826,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Raft.IOffsetMetadata",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Raft.IOffsetMetadata.yml\" sourcestartlinenumber=\"1\">.NET interface for TO BE DEFINED FROM USER</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Raft.IOffsetMetadata.yml\" sourcestartlinenumber=\"1\">.NET interface skeleton to be manually developed following <a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.1/org/apache/kafka/raft/OffsetMetadata.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.1/org/apache/kafka/raft/OffsetMetadata.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -20826,7 +20840,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Raft.IQuorumStateStore",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Raft.IQuorumStateStore.yml\" sourcestartlinenumber=\"1\">.NET interface for TO BE DEFINED FROM USER</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Raft.IQuorumStateStore.yml\" sourcestartlinenumber=\"1\">.NET interface skeleton to be manually developed following <a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.1/org/apache/kafka/raft/QuorumStateStore.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.1/org/apache/kafka/raft/QuorumStateStore.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -20840,7 +20854,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Raft.IRaftClient<T>",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Raft.IRaftClient-1.yml\" sourcestartlinenumber=\"1\">.NET interface for TO BE DEFINED FROM USER</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Raft.IRaftClient-1.yml\" sourcestartlinenumber=\"1\">.NET interface skeleton to be manually developed following <a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.1/org/apache/kafka/raft/RaftClient.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.1/org/apache/kafka/raft/RaftClient.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -20854,7 +20868,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Raft.IRaftMessage",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Raft.IRaftMessage.yml\" sourcestartlinenumber=\"1\">.NET interface for TO BE DEFINED FROM USER</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Raft.IRaftMessage.yml\" sourcestartlinenumber=\"1\">.NET interface skeleton to be manually developed following <a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.1/org/apache/kafka/raft/RaftMessage.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.1/org/apache/kafka/raft/RaftMessage.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -20868,7 +20882,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Raft.IRaftMessageQueue",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Raft.IRaftMessageQueue.yml\" sourcestartlinenumber=\"1\">.NET interface for TO BE DEFINED FROM USER</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Raft.IRaftMessageQueue.yml\" sourcestartlinenumber=\"1\">.NET interface skeleton to be manually developed following <a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.1/org/apache/kafka/raft/RaftMessageQueue.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.1/org/apache/kafka/raft/RaftMessageQueue.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -20882,7 +20896,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Raft.IReplicatedLog",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Raft.IReplicatedLog.yml\" sourcestartlinenumber=\"1\">.NET interface for TO BE DEFINED FROM USER</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Raft.IReplicatedLog.yml\" sourcestartlinenumber=\"1\">.NET interface skeleton to be manually developed following <a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.1/org/apache/kafka/raft/ReplicatedLog.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.1/org/apache/kafka/raft/ReplicatedLog.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -21596,7 +21610,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Security.ICipherParamsEncoder",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Security.ICipherParamsEncoder.yml\" sourcestartlinenumber=\"1\">.NET interface for TO BE DEFINED FROM USER</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Security.ICipherParamsEncoder.yml\" sourcestartlinenumber=\"1\">.NET interface skeleton to be manually developed following <a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/3.9.1/org/apache/kafka/security/CipherParamsEncoder.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/3.9.1/org/apache/kafka/security/CipherParamsEncoder.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -21610,7 +21624,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Security.IPasswordEncoder",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Security.IPasswordEncoder.yml\" sourcestartlinenumber=\"1\">.NET interface for TO BE DEFINED FROM USER</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Security.IPasswordEncoder.yml\" sourcestartlinenumber=\"1\">.NET interface skeleton to be manually developed following <a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/3.9.1/org/apache/kafka/security/PasswordEncoder.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/3.9.1/org/apache/kafka/security/PasswordEncoder.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -21778,7 +21792,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Snapshot.IRawSnapshotReader",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Snapshot.IRawSnapshotReader.yml\" sourcestartlinenumber=\"1\">.NET interface for TO BE DEFINED FROM USER</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Snapshot.IRawSnapshotReader.yml\" sourcestartlinenumber=\"1\">.NET interface skeleton to be manually developed following <a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.1/org/apache/kafka/snapshot/RawSnapshotReader.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.1/org/apache/kafka/snapshot/RawSnapshotReader.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -21792,7 +21806,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Snapshot.IRawSnapshotWriter",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Snapshot.IRawSnapshotWriter.yml\" sourcestartlinenumber=\"1\">.NET interface for TO BE DEFINED FROM USER</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Snapshot.IRawSnapshotWriter.yml\" sourcestartlinenumber=\"1\">.NET interface skeleton to be manually developed following <a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.1/org/apache/kafka/snapshot/RawSnapshotWriter.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.1/org/apache/kafka/snapshot/RawSnapshotWriter.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -21806,7 +21820,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Snapshot.ISnapshotReader<T>",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Snapshot.ISnapshotReader-1.yml\" sourcestartlinenumber=\"1\">.NET interface for TO BE DEFINED FROM USER</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Snapshot.ISnapshotReader-1.yml\" sourcestartlinenumber=\"1\">.NET interface skeleton to be manually developed following <a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.1/org/apache/kafka/snapshot/SnapshotReader.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.1/org/apache/kafka/snapshot/SnapshotReader.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -21820,7 +21834,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Snapshot.ISnapshotWriter<T>",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Snapshot.ISnapshotWriter-1.yml\" sourcestartlinenumber=\"1\">.NET interface for TO BE DEFINED FROM USER</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Snapshot.ISnapshotWriter-1.yml\" sourcestartlinenumber=\"1\">.NET interface skeleton to be manually developed following <a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.1/org/apache/kafka/snapshot/SnapshotWriter.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.1/org/apache/kafka/snapshot/SnapshotWriter.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -22128,7 +22142,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Streams.Errors.IDeserializationExceptionHandler",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Errors.IDeserializationExceptionHandler.yml\" sourcestartlinenumber=\"1\">.NET interface for TO BE DEFINED FROM USER</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Errors.IDeserializationExceptionHandler.yml\" sourcestartlinenumber=\"1\">.NET interface skeleton to be manually developed following <a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/errors/DeserializationExceptionHandler.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/errors/DeserializationExceptionHandler.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -22142,7 +22156,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Streams.Errors.IErrorHandlerContext",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Errors.IErrorHandlerContext.yml\" sourcestartlinenumber=\"1\">.NET interface for TO BE DEFINED FROM USER</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Errors.IErrorHandlerContext.yml\" sourcestartlinenumber=\"1\">.NET interface skeleton to be manually developed following <a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/errors/ErrorHandlerContext.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/errors/ErrorHandlerContext.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -22156,7 +22170,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Streams.Errors.IProcessingExceptionHandler",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Errors.IProcessingExceptionHandler.yml\" sourcestartlinenumber=\"1\">.NET interface for TO BE DEFINED FROM USER</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Errors.IProcessingExceptionHandler.yml\" sourcestartlinenumber=\"1\">.NET interface skeleton to be manually developed following <a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/errors/ProcessingExceptionHandler.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/errors/ProcessingExceptionHandler.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -22170,7 +22184,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Streams.Errors.IProductionExceptionHandler",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Errors.IProductionExceptionHandler.yml\" sourcestartlinenumber=\"1\">.NET interface for TO BE DEFINED FROM USER</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Errors.IProductionExceptionHandler.yml\" sourcestartlinenumber=\"1\">.NET interface skeleton to be manually developed following <a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/errors/ProductionExceptionHandler.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/errors/ProductionExceptionHandler.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -22674,7 +22688,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Streams.IClientInstanceIds",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.IClientInstanceIds.yml\" sourcestartlinenumber=\"1\">.NET interface for TO BE DEFINED FROM USER</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.IClientInstanceIds.yml\" sourcestartlinenumber=\"1\">.NET interface skeleton to be manually developed following <a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/ClientInstanceIds.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/ClientInstanceIds.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -22702,7 +22716,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Streams.IStreamsMetadata",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.IStreamsMetadata.yml\" sourcestartlinenumber=\"1\">.NET interface for TO BE DEFINED FROM USER</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.IStreamsMetadata.yml\" sourcestartlinenumber=\"1\">.NET interface skeleton to be manually developed following <a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/StreamsMetadata.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/StreamsMetadata.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -22716,7 +22730,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Streams.IStreamsMetrics",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.IStreamsMetrics.yml\" sourcestartlinenumber=\"1\">.NET interface for TO BE DEFINED FROM USER</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.IStreamsMetrics.yml\" sourcestartlinenumber=\"1\">.NET interface skeleton to be manually developed following <a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/StreamsMetrics.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/StreamsMetrics.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -22730,7 +22744,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Streams.ITaskMetadata",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.ITaskMetadata.yml\" sourcestartlinenumber=\"1\">.NET interface for TO BE DEFINED FROM USER</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.ITaskMetadata.yml\" sourcestartlinenumber=\"1\">.NET interface skeleton to be manually developed following <a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/TaskMetadata.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/TaskMetadata.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -22744,7 +22758,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Streams.IThreadMetadata",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.IThreadMetadata.yml\" sourcestartlinenumber=\"1\">.NET interface for TO BE DEFINED FROM USER</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.IThreadMetadata.yml\" sourcestartlinenumber=\"1\">.NET interface skeleton to be manually developed following <a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/ThreadMetadata.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/ThreadMetadata.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -22758,7 +22772,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Streams.ITopologyDescription",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.ITopologyDescription.yml\" sourcestartlinenumber=\"1\">.NET interface for TO BE DEFINED FROM USER</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.ITopologyDescription.yml\" sourcestartlinenumber=\"1\">.NET interface skeleton to be manually developed following <a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/TopologyDescription.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/TopologyDescription.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -23276,7 +23290,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Streams.Kstream.IBranchedKStream<K, V>",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Kstream.IBranchedKStream-2.yml\" sourcestartlinenumber=\"1\">.NET interface for TO BE DEFINED FROM USER</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Kstream.IBranchedKStream-2.yml\" sourcestartlinenumber=\"1\">.NET interface skeleton to be manually developed following <a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/kstream/BranchedKStream.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/kstream/BranchedKStream.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -23290,7 +23304,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Streams.Kstream.ICogroupedKStream<K, VAgg>",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Kstream.ICogroupedKStream-2.yml\" sourcestartlinenumber=\"1\">.NET interface for TO BE DEFINED FROM USER</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Kstream.ICogroupedKStream-2.yml\" sourcestartlinenumber=\"1\">.NET interface skeleton to be manually developed following <a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/kstream/CogroupedKStream.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/kstream/CogroupedKStream.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -23304,7 +23318,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Streams.Kstream.IEmitStrategy",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Kstream.IEmitStrategy.yml\" sourcestartlinenumber=\"1\">.NET interface for TO BE DEFINED FROM USER</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Kstream.IEmitStrategy.yml\" sourcestartlinenumber=\"1\">.NET interface skeleton to be manually developed following <a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/kstream/EmitStrategy.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/kstream/EmitStrategy.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -23332,7 +23346,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Streams.Kstream.IGlobalKTable<K, V>",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Kstream.IGlobalKTable-2.yml\" sourcestartlinenumber=\"1\">.NET interface for TO BE DEFINED FROM USER</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Kstream.IGlobalKTable-2.yml\" sourcestartlinenumber=\"1\">.NET interface skeleton to be manually developed following <a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/kstream/GlobalKTable.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/kstream/GlobalKTable.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -23360,7 +23374,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Streams.Kstream.IKGroupedStream<K, V>",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Kstream.IKGroupedStream-2.yml\" sourcestartlinenumber=\"1\">.NET interface for TO BE DEFINED FROM USER</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Kstream.IKGroupedStream-2.yml\" sourcestartlinenumber=\"1\">.NET interface skeleton to be manually developed following <a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/kstream/KGroupedStream.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/kstream/KGroupedStream.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -23374,7 +23388,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Streams.Kstream.IKGroupedTable<K, V>",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Kstream.IKGroupedTable-2.yml\" sourcestartlinenumber=\"1\">.NET interface for TO BE DEFINED FROM USER</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Kstream.IKGroupedTable-2.yml\" sourcestartlinenumber=\"1\">.NET interface skeleton to be manually developed following <a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/kstream/KGroupedTable.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/kstream/KGroupedTable.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -23388,7 +23402,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Streams.Kstream.IKStream<K, V>",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Kstream.IKStream-2.yml\" sourcestartlinenumber=\"1\">.NET interface for TO BE DEFINED FROM USER</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Kstream.IKStream-2.yml\" sourcestartlinenumber=\"1\">.NET interface skeleton to be manually developed following <a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/kstream/KStream.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/kstream/KStream.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -23402,7 +23416,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Streams.Kstream.IKTable<K, V>",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Kstream.IKTable-2.yml\" sourcestartlinenumber=\"1\">.NET interface for TO BE DEFINED FROM USER</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Kstream.IKTable-2.yml\" sourcestartlinenumber=\"1\">.NET interface skeleton to be manually developed following <a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/kstream/KTable.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/kstream/KTable.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -23486,7 +23500,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Streams.Kstream.ISessionWindowedCogroupedKStream<K, V>",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Kstream.ISessionWindowedCogroupedKStream-2.yml\" sourcestartlinenumber=\"1\">.NET interface for TO BE DEFINED FROM USER</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Kstream.ISessionWindowedCogroupedKStream-2.yml\" sourcestartlinenumber=\"1\">.NET interface skeleton to be manually developed following <a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/kstream/SessionWindowedCogroupedKStream.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/kstream/SessionWindowedCogroupedKStream.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -23500,7 +23514,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Streams.Kstream.ISessionWindowedKStream<K, V>",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Kstream.ISessionWindowedKStream-2.yml\" sourcestartlinenumber=\"1\">.NET interface for TO BE DEFINED FROM USER</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Kstream.ISessionWindowedKStream-2.yml\" sourcestartlinenumber=\"1\">.NET interface skeleton to be manually developed following <a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/kstream/SessionWindowedKStream.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/kstream/SessionWindowedKStream.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -23514,7 +23528,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Streams.Kstream.ISuppressed<K>",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Kstream.ISuppressed-1.yml\" sourcestartlinenumber=\"1\">.NET interface for TO BE DEFINED FROM USER</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Kstream.ISuppressed-1.yml\" sourcestartlinenumber=\"1\">.NET interface skeleton to be manually developed following <a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/kstream/Suppressed.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/kstream/Suppressed.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -23528,7 +23542,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Streams.Kstream.ITimeWindowedCogroupedKStream<K, V>",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Kstream.ITimeWindowedCogroupedKStream-2.yml\" sourcestartlinenumber=\"1\">.NET interface for TO BE DEFINED FROM USER</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Kstream.ITimeWindowedCogroupedKStream-2.yml\" sourcestartlinenumber=\"1\">.NET interface skeleton to be manually developed following <a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/kstream/TimeWindowedCogroupedKStream.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/kstream/TimeWindowedCogroupedKStream.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -23542,7 +23556,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Streams.Kstream.ITimeWindowedKStream<K, V>",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Kstream.ITimeWindowedKStream-2.yml\" sourcestartlinenumber=\"1\">.NET interface for TO BE DEFINED FROM USER</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Kstream.ITimeWindowedKStream-2.yml\" sourcestartlinenumber=\"1\">.NET interface skeleton to be manually developed following <a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/kstream/TimeWindowedKStream.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/kstream/TimeWindowedKStream.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -23570,7 +23584,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Streams.Kstream.ITransformerSupplier<K, V, R>",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Kstream.ITransformerSupplier-3.yml\" sourcestartlinenumber=\"1\">.NET interface for <a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/kstream/TransformerSupplier.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/kstream/TransformerSupplier.html</a></p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Kstream.ITransformerSupplier-3.yml\" sourcestartlinenumber=\"1\">.NET interface for <a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/kstream/TransformerSupplier.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/kstream/TransformerSupplier.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -23654,7 +23668,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Streams.Kstream.IValueTransformerSupplier<V, VR>",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Kstream.IValueTransformerSupplier-2.yml\" sourcestartlinenumber=\"1\">.NET interface for <a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/kstream/ValueTransformerSupplier.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/kstream/ValueTransformerSupplier.html</a></p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Kstream.IValueTransformerSupplier-2.yml\" sourcestartlinenumber=\"1\">.NET interface for <a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/kstream/ValueTransformerSupplier.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/kstream/ValueTransformerSupplier.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -23682,7 +23696,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Streams.Kstream.IValueTransformerWithKeySupplier<K, V, VR>",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Kstream.IValueTransformerWithKeySupplier-3.yml\" sourcestartlinenumber=\"1\">.NET interface for <a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/kstream/ValueTransformerWithKeySupplier.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/kstream/ValueTransformerWithKeySupplier.html</a></p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Kstream.IValueTransformerWithKeySupplier-3.yml\" sourcestartlinenumber=\"1\">.NET interface for <a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/kstream/ValueTransformerWithKeySupplier.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/kstream/ValueTransformerWithKeySupplier.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -24802,7 +24816,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Streams.Kstream.TransformerSupplier<K, V, R>",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Kstream.TransformerSupplier-3.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/kstream/TransformerSupplier.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/kstream/TransformerSupplier.html</a></p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Kstream.TransformerSupplier-3.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/kstream/TransformerSupplier.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/kstream/TransformerSupplier.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -25110,7 +25124,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Streams.Kstream.ValueTransformerSupplier<V, VR>",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Kstream.ValueTransformerSupplier-2.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/kstream/ValueTransformerSupplier.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/kstream/ValueTransformerSupplier.html</a></p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Kstream.ValueTransformerSupplier-2.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/kstream/ValueTransformerSupplier.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/kstream/ValueTransformerSupplier.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -25180,7 +25194,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Streams.Kstream.ValueTransformerWithKeySupplier<K, V, VR>",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Kstream.ValueTransformerWithKeySupplier-3.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/kstream/ValueTransformerWithKeySupplier.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/kstream/ValueTransformerWithKeySupplier.html</a></p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Kstream.ValueTransformerWithKeySupplier-3.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/kstream/ValueTransformerWithKeySupplier.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/kstream/ValueTransformerWithKeySupplier.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -25502,7 +25516,21 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Streams.Processor.Api.FixedKeyProcessorSupplier<KIn, VIn, VOut>",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Processor.Api.FixedKeyProcessorSupplier-3.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/processor/api/FixedKeyProcessorSupplier.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/processor/api/FixedKeyProcessorSupplier.html</a></p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Processor.Api.FixedKeyProcessorSupplier-3.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/processor/api/FixedKeyProcessorSupplier.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/processor/api/FixedKeyProcessorSupplier.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Streams.Processor.Api.FixedKeyProcessorSupplier.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Streams.Processor.Api.FixedKeyProcessorSupplier.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Apache.Kafka.Streams.Processor.Api.FixedKeyProcessorSupplier",
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Processor.Api.FixedKeyProcessorSupplier.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/processor/api/FixedKeyProcessorSupplier.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/processor/api/FixedKeyProcessorSupplier.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -25558,7 +25586,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Streams.Processor.Api.IFixedKeyProcessorContext<KForward, VForward>",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Processor.Api.IFixedKeyProcessorContext-2.yml\" sourcestartlinenumber=\"1\">.NET interface for TO BE DEFINED FROM USER</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Processor.Api.IFixedKeyProcessorContext-2.yml\" sourcestartlinenumber=\"1\">.NET interface skeleton to be manually developed following <a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/processor/api/FixedKeyProcessorContext.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/processor/api/FixedKeyProcessorContext.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -25572,7 +25600,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Streams.Processor.Api.IFixedKeyProcessorSupplier<KIn, VIn, VOut>",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Processor.Api.IFixedKeyProcessorSupplier-3.yml\" sourcestartlinenumber=\"1\">.NET interface for <a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/processor/api/FixedKeyProcessorSupplier.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/processor/api/FixedKeyProcessorSupplier.html</a></p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Processor.Api.IFixedKeyProcessorSupplier-3.yml\" sourcestartlinenumber=\"1\">.NET interface for <a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/processor/api/FixedKeyProcessorSupplier.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/processor/api/FixedKeyProcessorSupplier.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -25586,7 +25614,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Streams.Processor.Api.IProcessingContext",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Processor.Api.IProcessingContext.yml\" sourcestartlinenumber=\"1\">.NET interface for TO BE DEFINED FROM USER</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Processor.Api.IProcessingContext.yml\" sourcestartlinenumber=\"1\">.NET interface skeleton to be manually developed following <a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/processor/api/ProcessingContext.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/processor/api/ProcessingContext.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -25614,7 +25642,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Streams.Processor.Api.IProcessorContext<KForward, VForward>",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Processor.Api.IProcessorContext-2.yml\" sourcestartlinenumber=\"1\">.NET interface for TO BE DEFINED FROM USER</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Processor.Api.IProcessorContext-2.yml\" sourcestartlinenumber=\"1\">.NET interface skeleton to be manually developed following <a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/processor/api/ProcessorContext.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/processor/api/ProcessorContext.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -25628,7 +25656,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Streams.Processor.Api.IProcessorSupplier<KIn, VIn, KOut, VOut>",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Processor.Api.IProcessorSupplier-4.yml\" sourcestartlinenumber=\"1\">.NET interface for <a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/processor/api/ProcessorSupplier.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/processor/api/ProcessorSupplier.html</a></p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Processor.Api.IProcessorSupplier-4.yml\" sourcestartlinenumber=\"1\">.NET interface for <a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/processor/api/ProcessorSupplier.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/processor/api/ProcessorSupplier.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -25642,7 +25670,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Streams.Processor.Api.IRecordMetadata",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Processor.Api.IRecordMetadata.yml\" sourcestartlinenumber=\"1\">.NET interface for TO BE DEFINED FROM USER</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Processor.Api.IRecordMetadata.yml\" sourcestartlinenumber=\"1\">.NET interface skeleton to be manually developed following <a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/processor/api/RecordMetadata.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/processor/api/RecordMetadata.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -25768,7 +25796,21 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Streams.Processor.Api.ProcessorSupplier<KIn, VIn, KOut, VOut>",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Processor.Api.ProcessorSupplier-4.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/processor/api/ProcessorSupplier.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/processor/api/ProcessorSupplier.html</a></p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Processor.Api.ProcessorSupplier-4.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/processor/api/ProcessorSupplier.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/processor/api/ProcessorSupplier.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Streams.Processor.Api.ProcessorSupplier.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Streams.Processor.Api.ProcessorSupplier.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Apache.Kafka.Streams.Processor.Api.ProcessorSupplier",
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Processor.Api.ProcessorSupplier.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/processor/api/ProcessorSupplier.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/processor/api/ProcessorSupplier.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -25894,7 +25936,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Streams.Processor.Assignment.IApplicationState",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Processor.Assignment.IApplicationState.yml\" sourcestartlinenumber=\"1\">.NET interface for TO BE DEFINED FROM USER</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Processor.Assignment.IApplicationState.yml\" sourcestartlinenumber=\"1\">.NET interface skeleton to be manually developed following <a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/processor/assignment/ApplicationState.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/processor/assignment/ApplicationState.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -25908,7 +25950,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Streams.Processor.Assignment.IKafkaStreamsState",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Processor.Assignment.IKafkaStreamsState.yml\" sourcestartlinenumber=\"1\">.NET interface for TO BE DEFINED FROM USER</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Processor.Assignment.IKafkaStreamsState.yml\" sourcestartlinenumber=\"1\">.NET interface skeleton to be manually developed following <a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/processor/assignment/KafkaStreamsState.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/processor/assignment/KafkaStreamsState.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -25922,7 +25964,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Streams.Processor.Assignment.ITaskAssignor",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Processor.Assignment.ITaskAssignor.yml\" sourcestartlinenumber=\"1\">.NET interface for TO BE DEFINED FROM USER</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Processor.Assignment.ITaskAssignor.yml\" sourcestartlinenumber=\"1\">.NET interface skeleton to be manually developed following <a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/processor/assignment/TaskAssignor.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/processor/assignment/TaskAssignor.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -25936,7 +25978,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Streams.Processor.Assignment.ITaskInfo",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Processor.Assignment.ITaskInfo.yml\" sourcestartlinenumber=\"1\">.NET interface for TO BE DEFINED FROM USER</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Processor.Assignment.ITaskInfo.yml\" sourcestartlinenumber=\"1\">.NET interface skeleton to be manually developed following <a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/processor/assignment/TaskInfo.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/processor/assignment/TaskInfo.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -25950,7 +25992,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Streams.Processor.Assignment.ITaskTopicPartition",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Processor.Assignment.ITaskTopicPartition.yml\" sourcestartlinenumber=\"1\">.NET interface for TO BE DEFINED FROM USER</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Processor.Assignment.ITaskTopicPartition.yml\" sourcestartlinenumber=\"1\">.NET interface skeleton to be manually developed following <a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/processor/assignment/TaskTopicPartition.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/processor/assignment/TaskTopicPartition.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -26230,7 +26272,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Streams.Processor.ICancellable",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Processor.ICancellable.yml\" sourcestartlinenumber=\"1\">.NET interface for TO BE DEFINED FROM USER</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Processor.ICancellable.yml\" sourcestartlinenumber=\"1\">.NET interface skeleton to be manually developed following <a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/processor/Cancellable.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/processor/Cancellable.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -26244,7 +26286,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Streams.Processor.ICommitCallback",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Processor.ICommitCallback.yml\" sourcestartlinenumber=\"1\">.NET interface for TO BE DEFINED FROM USER</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Processor.ICommitCallback.yml\" sourcestartlinenumber=\"1\">.NET interface skeleton to be manually developed following <a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/processor/CommitCallback.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/processor/CommitCallback.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -26258,7 +26300,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Streams.Processor.IConnectedStoreProvider",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Processor.IConnectedStoreProvider.yml\" sourcestartlinenumber=\"1\">.NET interface for TO BE DEFINED FROM USER</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Processor.IConnectedStoreProvider.yml\" sourcestartlinenumber=\"1\">.NET interface skeleton to be manually developed following <a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/processor/ConnectedStoreProvider.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/processor/ConnectedStoreProvider.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -26272,7 +26314,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Streams.Processor.IProcessorContext",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Processor.IProcessorContext.yml\" sourcestartlinenumber=\"1\">.NET interface for TO BE DEFINED FROM USER</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Processor.IProcessorContext.yml\" sourcestartlinenumber=\"1\">.NET interface skeleton to be manually developed following <a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/processor/ProcessorContext.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/processor/ProcessorContext.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -26300,7 +26342,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Streams.Processor.IRecordContext",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Processor.IRecordContext.yml\" sourcestartlinenumber=\"1\">.NET interface for TO BE DEFINED FROM USER</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Processor.IRecordContext.yml\" sourcestartlinenumber=\"1\">.NET interface skeleton to be manually developed following <a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/processor/RecordContext.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/processor/RecordContext.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -26356,7 +26398,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Streams.Processor.IStateStore",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Processor.IStateStore.yml\" sourcestartlinenumber=\"1\">.NET interface for TO BE DEFINED FROM USER</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Processor.IStateStore.yml\" sourcestartlinenumber=\"1\">.NET interface skeleton to be manually developed following <a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/processor/StateStore.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/processor/StateStore.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -26370,7 +26412,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Streams.Processor.IStateStoreContext",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Processor.IStateStoreContext.yml\" sourcestartlinenumber=\"1\">.NET interface for TO BE DEFINED FROM USER</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Processor.IStateStoreContext.yml\" sourcestartlinenumber=\"1\">.NET interface skeleton to be manually developed following <a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/processor/StateStoreContext.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/processor/StateStoreContext.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -26874,7 +26916,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Streams.Query.IQuery<R>",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Query.IQuery-1.yml\" sourcestartlinenumber=\"1\">.NET interface for TO BE DEFINED FROM USER</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Query.IQuery-1.yml\" sourcestartlinenumber=\"1\">.NET interface skeleton to be manually developed following <a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/query/Query.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/query/Query.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -26888,7 +26930,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Streams.Query.IQueryResult<R>",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Query.IQueryResult-1.yml\" sourcestartlinenumber=\"1\">.NET interface for TO BE DEFINED FROM USER</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Query.IQueryResult-1.yml\" sourcestartlinenumber=\"1\">.NET interface skeleton to be manually developed following <a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/query/QueryResult.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/query/QueryResult.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -27434,7 +27476,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Streams.State.IDslStoreSuppliers",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.State.IDslStoreSuppliers.yml\" sourcestartlinenumber=\"1\">.NET interface for TO BE DEFINED FROM USER</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.State.IDslStoreSuppliers.yml\" sourcestartlinenumber=\"1\">.NET interface skeleton to be manually developed following <a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/state/DslStoreSuppliers.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/state/DslStoreSuppliers.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -27448,7 +27490,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Streams.State.IKeyValueBytesStoreSupplier",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.State.IKeyValueBytesStoreSupplier.yml\" sourcestartlinenumber=\"1\">.NET interface for TO BE DEFINED FROM USER</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.State.IKeyValueBytesStoreSupplier.yml\" sourcestartlinenumber=\"1\">.NET interface skeleton to be manually developed following <a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/state/KeyValueBytesStoreSupplier.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/state/KeyValueBytesStoreSupplier.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -27462,7 +27504,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Streams.State.IKeyValueIterator<K, V>",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.State.IKeyValueIterator-2.yml\" sourcestartlinenumber=\"1\">.NET interface for TO BE DEFINED FROM USER</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.State.IKeyValueIterator-2.yml\" sourcestartlinenumber=\"1\">.NET interface skeleton to be manually developed following <a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/state/KeyValueIterator.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/state/KeyValueIterator.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -27476,7 +27518,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Streams.State.IKeyValueStore<K, V>",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.State.IKeyValueStore-2.yml\" sourcestartlinenumber=\"1\">.NET interface for TO BE DEFINED FROM USER</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.State.IKeyValueStore-2.yml\" sourcestartlinenumber=\"1\">.NET interface skeleton to be manually developed following <a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/state/KeyValueStore.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/state/KeyValueStore.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -27490,7 +27532,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Streams.State.IQueryableStoreType<T>",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.State.IQueryableStoreType-1.yml\" sourcestartlinenumber=\"1\">.NET interface for TO BE DEFINED FROM USER</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.State.IQueryableStoreType-1.yml\" sourcestartlinenumber=\"1\">.NET interface skeleton to be manually developed following <a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/state/QueryableStoreType.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/state/QueryableStoreType.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -27504,7 +27546,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Streams.State.IReadOnlyKeyValueStore<K, V>",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.State.IReadOnlyKeyValueStore-2.yml\" sourcestartlinenumber=\"1\">.NET interface for TO BE DEFINED FROM USER</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.State.IReadOnlyKeyValueStore-2.yml\" sourcestartlinenumber=\"1\">.NET interface skeleton to be manually developed following <a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/state/ReadOnlyKeyValueStore.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/state/ReadOnlyKeyValueStore.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -27518,7 +27560,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Streams.State.IReadOnlySessionStore<K, AGG>",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.State.IReadOnlySessionStore-2.yml\" sourcestartlinenumber=\"1\">.NET interface for TO BE DEFINED FROM USER</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.State.IReadOnlySessionStore-2.yml\" sourcestartlinenumber=\"1\">.NET interface skeleton to be manually developed following <a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/state/ReadOnlySessionStore.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/state/ReadOnlySessionStore.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -27532,7 +27574,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Streams.State.IReadOnlyWindowStore<K, V>",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.State.IReadOnlyWindowStore-2.yml\" sourcestartlinenumber=\"1\">.NET interface for TO BE DEFINED FROM USER</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.State.IReadOnlyWindowStore-2.yml\" sourcestartlinenumber=\"1\">.NET interface skeleton to be manually developed following <a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/state/ReadOnlyWindowStore.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/state/ReadOnlyWindowStore.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -27546,7 +27588,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Streams.State.IRocksDBConfigSetter",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.State.IRocksDBConfigSetter.yml\" sourcestartlinenumber=\"1\">.NET interface for TO BE DEFINED FROM USER</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.State.IRocksDBConfigSetter.yml\" sourcestartlinenumber=\"1\">.NET interface skeleton to be manually developed following <a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/state/RocksDBConfigSetter.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/state/RocksDBConfigSetter.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -27560,7 +27602,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Streams.State.ISessionBytesStoreSupplier",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.State.ISessionBytesStoreSupplier.yml\" sourcestartlinenumber=\"1\">.NET interface for TO BE DEFINED FROM USER</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.State.ISessionBytesStoreSupplier.yml\" sourcestartlinenumber=\"1\">.NET interface skeleton to be manually developed following <a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/state/SessionBytesStoreSupplier.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/state/SessionBytesStoreSupplier.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -27574,7 +27616,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Streams.State.ISessionStore<K, AGG>",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.State.ISessionStore-2.yml\" sourcestartlinenumber=\"1\">.NET interface for TO BE DEFINED FROM USER</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.State.ISessionStore-2.yml\" sourcestartlinenumber=\"1\">.NET interface skeleton to be manually developed following <a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/state/SessionStore.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/state/SessionStore.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -27588,7 +27630,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Streams.State.IStoreBuilder<T>",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.State.IStoreBuilder-1.yml\" sourcestartlinenumber=\"1\">.NET interface for TO BE DEFINED FROM USER</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.State.IStoreBuilder-1.yml\" sourcestartlinenumber=\"1\">.NET interface skeleton to be manually developed following <a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/state/StoreBuilder.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/state/StoreBuilder.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -27602,7 +27644,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Streams.State.IStoreSupplier<T>",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.State.IStoreSupplier-1.yml\" sourcestartlinenumber=\"1\">.NET interface for TO BE DEFINED FROM USER</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.State.IStoreSupplier-1.yml\" sourcestartlinenumber=\"1\">.NET interface skeleton to be manually developed following <a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/state/StoreSupplier.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/state/StoreSupplier.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -27616,7 +27658,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Streams.State.IStoreSupplier",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.State.IStoreSupplier.yml\" sourcestartlinenumber=\"1\">.NET interface for <a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/state/StoreSupplier.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.7.1/org/apache/kafka/streams/state/StoreSupplier.html</a></p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.State.IStoreSupplier.yml\" sourcestartlinenumber=\"1\">.NET interface for <a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/state/StoreSupplier.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/state/StoreSupplier.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -27630,7 +27672,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Streams.State.ITimestampedBytesStore",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.State.ITimestampedBytesStore.yml\" sourcestartlinenumber=\"1\">.NET interface for TO BE DEFINED FROM USER</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.State.ITimestampedBytesStore.yml\" sourcestartlinenumber=\"1\">.NET interface skeleton to be manually developed following <a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/state/TimestampedBytesStore.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/state/TimestampedBytesStore.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -27644,7 +27686,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Streams.State.ITimestampedKeyValueStore<K, V>",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.State.ITimestampedKeyValueStore-2.yml\" sourcestartlinenumber=\"1\">.NET interface for TO BE DEFINED FROM USER</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.State.ITimestampedKeyValueStore-2.yml\" sourcestartlinenumber=\"1\">.NET interface skeleton to be manually developed following <a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/state/TimestampedKeyValueStore.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/state/TimestampedKeyValueStore.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -27658,7 +27700,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Streams.State.ITimestampedWindowStore<K, V>",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.State.ITimestampedWindowStore-2.yml\" sourcestartlinenumber=\"1\">.NET interface for TO BE DEFINED FROM USER</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.State.ITimestampedWindowStore-2.yml\" sourcestartlinenumber=\"1\">.NET interface skeleton to be manually developed following <a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/state/TimestampedWindowStore.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/state/TimestampedWindowStore.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -27672,7 +27714,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Streams.State.IVersionedBytesStore",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.State.IVersionedBytesStore.yml\" sourcestartlinenumber=\"1\">.NET interface for TO BE DEFINED FROM USER</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.State.IVersionedBytesStore.yml\" sourcestartlinenumber=\"1\">.NET interface skeleton to be manually developed following <a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/state/VersionedBytesStore.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/state/VersionedBytesStore.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -27686,7 +27728,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Streams.State.IVersionedBytesStoreSupplier",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.State.IVersionedBytesStoreSupplier.yml\" sourcestartlinenumber=\"1\">.NET interface for TO BE DEFINED FROM USER</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.State.IVersionedBytesStoreSupplier.yml\" sourcestartlinenumber=\"1\">.NET interface skeleton to be manually developed following <a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/state/VersionedBytesStoreSupplier.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/state/VersionedBytesStoreSupplier.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -27700,7 +27742,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Streams.State.IVersionedKeyValueStore<K, V>",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.State.IVersionedKeyValueStore-2.yml\" sourcestartlinenumber=\"1\">.NET interface for TO BE DEFINED FROM USER</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.State.IVersionedKeyValueStore-2.yml\" sourcestartlinenumber=\"1\">.NET interface skeleton to be manually developed following <a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/state/VersionedKeyValueStore.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/state/VersionedKeyValueStore.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -27714,7 +27756,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Streams.State.IVersionedRecordIterator<V>",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.State.IVersionedRecordIterator-1.yml\" sourcestartlinenumber=\"1\">.NET interface for TO BE DEFINED FROM USER</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.State.IVersionedRecordIterator-1.yml\" sourcestartlinenumber=\"1\">.NET interface skeleton to be manually developed following <a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/state/VersionedRecordIterator.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/state/VersionedRecordIterator.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -27728,7 +27770,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Streams.State.IWindowBytesStoreSupplier",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.State.IWindowBytesStoreSupplier.yml\" sourcestartlinenumber=\"1\">.NET interface for TO BE DEFINED FROM USER</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.State.IWindowBytesStoreSupplier.yml\" sourcestartlinenumber=\"1\">.NET interface skeleton to be manually developed following <a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/state/WindowBytesStoreSupplier.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/state/WindowBytesStoreSupplier.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -27742,7 +27784,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Streams.State.IWindowStore<K, V>",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.State.IWindowStore-2.yml\" sourcestartlinenumber=\"1\">.NET interface for TO BE DEFINED FROM USER</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.State.IWindowStore-2.yml\" sourcestartlinenumber=\"1\">.NET interface skeleton to be manually developed following <a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/state/WindowStore.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/state/WindowStore.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -27756,7 +27798,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Streams.State.IWindowStoreIterator<V>",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.State.IWindowStoreIterator-1.yml\" sourcestartlinenumber=\"1\">.NET interface for TO BE DEFINED FROM USER</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.State.IWindowStoreIterator-1.yml\" sourcestartlinenumber=\"1\">.NET interface skeleton to be manually developed following <a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/state/WindowStoreIterator.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/state/WindowStoreIterator.html</a></p>\n"
     },
     {
       "type": "ManagedReference",

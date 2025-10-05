@@ -89,7 +89,7 @@
 
 
   <h1 id="Org_Apache_Kafka_Clients_Producer_MockProducer" data-uid="Org.Apache.Kafka.Clients.Producer.MockProducer" class="text-break">
-Class MockProducer  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/MockProducer.cs/#L121"><i class="bi bi-code-slash"></i></a>
+Class MockProducer  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/MockProducer.cs/#L113"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -102,7 +102,7 @@ Class MockProducer  <a class="header-action link-secondary" title="View source" 
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class MockProducer : Producer, IDynamicMetaObjectProvider, IJVMBridgeCore, IDisposable, IJVMBridgeBaseStatic, IJVMBridgeBase, IJVMBridgeDefinition, ICloseable, IAutoCloseable</code></pre>
+    <pre><code class="lang-csharp hljs">public class MockProducer : Producer, IDynamicMetaObjectProvider, IJVMBridgeCore, IEquatable&lt;IJVMBridgeBase&gt;, IDisposable, IJVMBridgeBaseStatic, IJVMBridgeBase, IJVMBridgeDefinition, ICloseable, IAutoCloseable</code></pre>
   </div>
 
 
@@ -113,8 +113,8 @@ Class MockProducer  <a class="header-action link-secondary" title="View source" 
     <dd>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject">DynamicObject</a></div>
-      <div><span class="xref">JVMBridgeBase</span></div>
-      <div><span class="xref">JVMBridgeBase</span>&lt;<a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.AutoCloseable.html">AutoCloseable</a>&gt;</div>
+      <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html">JVMBridgeBase</a></div>
+      <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase-1.html">JVMBridgeBase</a>&lt;<a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.AutoCloseable.html">AutoCloseable</a>&gt;</div>
       <div><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.AutoCloseable.html">AutoCloseable</a></div>
       <div><a class="xref" href="https://jnet.masesgroup.com/api/Java.Io.Closeable.html">Closeable</a></div>
       <div><a class="xref" href="Org.Apache.Kafka.Clients.Producer.Producer.html">Producer</a></div>
@@ -126,11 +126,12 @@ Class MockProducer  <a class="header-action link-secondary" title="View source" 
     <dt>Implements</dt>
     <dd>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.idynamicmetaobjectprovider">IDynamicMetaObjectProvider</a></div>
-      <div><span class="xref">IJVMBridgeCore</span></div>
+      <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeCore.html">IJVMBridgeCore</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeBase.html">IJVMBridgeBase</a>&gt;</div>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
-      <div><span class="xref">IJVMBridgeBaseStatic</span></div>
-      <div><span class="xref">IJVMBridgeBase</span></div>
-      <div><span class="xref">IJVMBridgeDefinition</span></div>
+      <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeBaseStatic.html">IJVMBridgeBaseStatic</a></div>
+      <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeBase.html">IJVMBridgeBase</a></div>
+      <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.html">IJVMBridgeDefinition</a></div>
       <div><a class="xref" href="https://jnet.masesgroup.com/api/Java.Io.ICloseable.html">ICloseable</a></div>
       <div><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.IAutoCloseable.html">IAutoCloseable</a></div>
     </dd>
@@ -225,16 +226,16 @@ Class MockProducer  <a class="header-action link-secondary" title="View source" 
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;AutoCloseable&gt;.SExecuteWithSignature&lt;TReturn, TConverter&gt;(Type, string, string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SExecuteArray&lt;T&gt;(IJavaType, string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SExecuteArray&lt;TArrayType&gt;(IJavaType, string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SExecuteWithSignatureArray&lt;T&gt;(IJavaType, string, string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SExecuteWithSignatureArray&lt;TArrayType&gt;(IJavaType, string, string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SExecuteArray&lt;T&gt;(string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SExecuteArray&lt;TArrayType&gt;(string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SExecuteWithSignatureArray&lt;T&gt;(string, string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SExecuteWithSignatureArray&lt;TArrayType&gt;(string, string, params object[])</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SGetField(IJavaType, string)</a>
@@ -270,10 +271,10 @@ Class MockProducer  <a class="header-action link-secondary" title="View source" 
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.IsAssignableFrom(string)</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase&lt;AutoCloseable&gt;.IsAssignableFrom(IJavaType)</span>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase-1.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_1_IsAssignableFrom_MASES_JCOBridge_C2JBridge_JVMInterop_IJavaType_">JVMBridgeBase&lt;AutoCloseable&gt;.IsAssignableFrom(IJavaType)</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase&lt;AutoCloseable&gt;.IsAssignableFrom&lt;T&gt;()</span>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase-1.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_1_IsAssignableFrom__1">JVMBridgeBase&lt;AutoCloseable&gt;.IsAssignableFrom&lt;T&gt;()</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">JVMBridgeBase&lt;AutoCloseable&gt;.New(params object[])</a>
@@ -282,94 +283,118 @@ Class MockProducer  <a class="header-action link-secondary" title="View source" 
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.NewWithSignature(string, params object[])</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase&lt;AutoCloseable&gt;.Execute&lt;T&gt;(params T[])</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.NewAndWrapsDirect&lt;TNewClass&gt;(string, params object[])</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase&lt;AutoCloseable&gt;.DynBridgeClazz</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.NewWithSignatureAndWrapsDirect&lt;TNewClass&gt;(string, string, params object[])</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase&lt;AutoCloseable&gt;.BridgeClazz</span>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase-1.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_1_Execute__1___0___">JVMBridgeBase&lt;AutoCloseable&gt;.Execute&lt;T&gt;(params T[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase-1.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_1_DynBridgeClazz">JVMBridgeBase&lt;AutoCloseable&gt;.DynBridgeClazz</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase-1.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_1_BridgeClazz">JVMBridgeBase&lt;AutoCloseable&gt;.BridgeClazz</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_ReferenceEqualsJVM_MASES_JCOBridge_C2JBridge_JVMBridgeBase_MASES_JCOBridge_C2JBridge_JVMBridgeBase_">JVMBridgeBase.ReferenceEqualsJVM(JVMBridgeBase, JVMBridgeBase)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">JVMBridgeBase.ClazzOf&lt;TClass&gt;(bool)</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">JVMBridgeBase.ClazzOf&lt;TClass&gt;(out Exception, bool)</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.ClazzOf(string, bool)</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase.RuntimeClassNameOf&lt;T&gt;()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.ClazzOf(string, out Exception, bool)</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase.ClassNameOf&lt;T&gt;()</span>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_RuntimeClassNameOf__1">JVMBridgeBase.RuntimeClassNameOf&lt;T&gt;()</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase.ClassOf&lt;T&gt;()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase.RuntimeClassNameOf(Type)</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase.WrapsDirect&lt;TNewClass&gt;(IJavaObject)</span>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_ClassNameOf__1">JVMBridgeBase.ClassNameOf&lt;T&gt;()</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase.Wraps&lt;TNewClass&gt;(IJavaObject)</span>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_ClassOf__1">JVMBridgeBase.ClassOf&lt;T&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_WrapsDirect__1_MASES_JCOBridge_C2JBridge_JVMInterop_IJavaObject_">JVMBridgeBase.WrapsDirect&lt;TNewClass&gt;(IJavaObject)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_Wraps__1_MASES_JCOBridge_C2JBridge_JVMInterop_IJavaObject_">JVMBridgeBase.Wraps&lt;TNewClass&gt;(IJavaObject)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase.Wraps(Type, IJavaObject, string)</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase.Wraps&lt;TNewClass, TReturn&gt;(IJavaObject)</span>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_Wraps__2_MASES_JCOBridge_C2JBridge_JVMInterop_IJavaObject_">JVMBridgeBase.Wraps&lt;TNewClass, TReturn&gt;(IJavaObject)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase.Wraps&lt;TReturn&gt;(Type, IJavaObject, string)</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase.Wraps&lt;TNewClass, TReturn, TConverter&gt;(IJavaObject)</span>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_Wraps__3_MASES_JCOBridge_C2JBridge_JVMInterop_IJavaObject_">JVMBridgeBase.Wraps&lt;TNewClass, TReturn, TConverter&gt;(IJavaObject)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase.Wraps&lt;TReturn, TConverter&gt;(Type, IJavaObject)</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase.MonitorEnter()</span>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_MonitorEnter">JVMBridgeBase.MonitorEnter()</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase.MonitorExit()</span>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_MonitorExit">JVMBridgeBase.MonitorExit()</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IsInstanceOf(string)</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase.IsInstanceOf(IJavaType)</span>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsInstanceOf_MASES_JCOBridge_C2JBridge_JVMInterop_IJavaType_">JVMBridgeBase.IsInstanceOf(IJavaType)</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase.IsInstanceOf&lt;T&gt;()</span>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsInstanceOf__1">JVMBridgeBase.IsInstanceOf&lt;T&gt;()</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase.RuntimeIsInstanceOf&lt;T&gt;()</span>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_RuntimeIsInstanceOf__1">JVMBridgeBase.RuntimeIsInstanceOf&lt;T&gt;()</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase.CastTo&lt;TNewClass&gt;()</span>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_CastTo__1">JVMBridgeBase.CastTo&lt;TNewClass&gt;()</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase.CastDirect&lt;TNewClass&gt;()</span>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_CastDirect__1">JVMBridgeBase.CastDirect&lt;TNewClass&gt;()</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase.Dispose()</span>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_Dispose">JVMBridgeBase.Dispose()</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase.ToString()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">JVMBridgeBase.Dispose(bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_ToString">JVMBridgeBase.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_Equals_MASES_JCOBridge_C2JBridge_IJVMBridgeBase_">JVMBridgeBase.Equals(IJVMBridgeBase)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">JVMBridgeBase.Equals(object)</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase.GetHashCode()</span>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_GetHashCode">JVMBridgeBase.GetHashCode()</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase.Notify()</span>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_Notify">JVMBridgeBase.Notify()</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase.NotifyAll()</span>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_NotifyAll">JVMBridgeBase.NotifyAll()</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase.Wait()</span>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_Wait">JVMBridgeBase.Wait()</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">JVMBridgeBase.Wait(long)</a>
@@ -402,10 +427,10 @@ Class MockProducer  <a class="header-action link-secondary" title="View source" 
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteWithSignature&lt;TNewClass, TReturn, TConverter&gt;(string, string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteArray&lt;T&gt;(string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteArray&lt;TArrayType&gt;(string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteWithSignatureArray&lt;T&gt;(string, string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteWithSignatureArray&lt;TArrayType&gt;(string, string, params object[])</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IGetField(string)</a>
@@ -423,13 +448,13 @@ Class MockProducer  <a class="header-action link-secondary" title="View source" 
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.ISetField&lt;TValue&gt;(string, TValue)</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase.DynBridgeInstance</span>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_DynBridgeInstance">JVMBridgeBase.DynBridgeInstance</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase.BridgeInstance</span>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeInstance">JVMBridgeBase.BridgeInstance</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase.IsBridgeListener</span>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeListener">JVMBridgeBase.IsBridgeListener</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trygetmember">DynamicObject.TryGetMember(GetMemberBinder, out object)</a>
@@ -525,9 +550,42 @@ Class MockProducer  <a class="header-action link-secondary" title="View source" 
 
   <a id="Org_Apache_Kafka_Clients_Producer_MockProducer__ctor_" data-uid="Org.Apache.Kafka.Clients.Producer.MockProducer.#ctor*"></a>
 
+  <h3 id="Org_Apache_Kafka_Clients_Producer_MockProducer__ctor_MASES_JCOBridge_C2JBridge_IJVMBridgeBaseInitializer_" data-uid="Org.Apache.Kafka.Clients.Producer.MockProducer.#ctor(MASES.JCOBridge.C2JBridge.IJVMBridgeBaseInitializer)">
+  MockProducer(IJVMBridgeBaseInitializer)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/MockProducer.cs/#L42"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Internal constructor: used internally from JCOBridge</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.&quot;)]
+public MockProducer(IJVMBridgeBaseInitializer initializer)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>initializer</code> <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeBaseInitializer.html">IJVMBridgeBaseInitializer</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Apache_Kafka_Clients_Producer_MockProducer__ctor_" data-uid="Org.Apache.Kafka.Clients.Producer.MockProducer.#ctor*"></a>
+
   <h3 id="Org_Apache_Kafka_Clients_Producer_MockProducer__ctor_Org_Apache_Kafka_Common_Cluster_System_Boolean_Org_Apache_Kafka_Clients_Producer_Partitioner_Org_Apache_Kafka_Common_Serialization_Serializer_Org_Apache_Kafka_Common_Serialization_Serializer_" data-uid="Org.Apache.Kafka.Clients.Producer.MockProducer.#ctor(Org.Apache.Kafka.Common.Cluster,System.Boolean,Org.Apache.Kafka.Clients.Producer.Partitioner,Org.Apache.Kafka.Common.Serialization.Serializer,Org.Apache.Kafka.Common.Serialization.Serializer)">
   MockProducer(Cluster, bool, Partitioner, Serializer, Serializer)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/MockProducer.cs/#L153"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/MockProducer.cs/#L145"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/producer/MockProducer.html#org.apache.kafka.clients.producer.MockProducer(org.apache.kafka.common.Cluster,boolean,org.apache.kafka.clients.producer.Partitioner,org.apache.kafka.common.serialization.Serializer,org.apache.kafka.common.serialization.Serializer)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/producer/MockProducer.html#org.apache.kafka.clients.producer.MockProducer(org.apache.kafka.common.Cluster,boolean,org.apache.kafka.clients.producer.Partitioner,org.apache.kafka.common.serialization.Serializer,org.apache.kafka.common.serialization.Serializer)</a></p>
@@ -572,7 +630,7 @@ Class MockProducer  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Clients_Producer_MockProducer__ctor_Org_Apache_Kafka_Common_Cluster_System_Boolean_Org_Apache_Kafka_Common_Serialization_Serializer_Org_Apache_Kafka_Common_Serialization_Serializer_" data-uid="Org.Apache.Kafka.Clients.Producer.MockProducer.#ctor(Org.Apache.Kafka.Common.Cluster,System.Boolean,Org.Apache.Kafka.Common.Serialization.Serializer,Org.Apache.Kafka.Common.Serialization.Serializer)">
   MockProducer(Cluster, bool, Serializer, Serializer)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/MockProducer.cs/#L164"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/MockProducer.cs/#L156"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/producer/MockProducer.html#org.apache.kafka.clients.producer.MockProducer(org.apache.kafka.common.Cluster,boolean,org.apache.kafka.common.serialization.Serializer,org.apache.kafka.common.serialization.Serializer)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/producer/MockProducer.html#org.apache.kafka.clients.producer.MockProducer(org.apache.kafka.common.Cluster,boolean,org.apache.kafka.common.serialization.Serializer,org.apache.kafka.common.serialization.Serializer)</a></p>
@@ -614,7 +672,7 @@ Class MockProducer  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Clients_Producer_MockProducer__ctor_System_Boolean_Org_Apache_Kafka_Clients_Producer_Partitioner_Org_Apache_Kafka_Common_Serialization_Serializer_Org_Apache_Kafka_Common_Serialization_Serializer_" data-uid="Org.Apache.Kafka.Clients.Producer.MockProducer.#ctor(System.Boolean,Org.Apache.Kafka.Clients.Producer.Partitioner,Org.Apache.Kafka.Common.Serialization.Serializer,Org.Apache.Kafka.Common.Serialization.Serializer)">
   MockProducer(bool, Partitioner, Serializer, Serializer)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/MockProducer.cs/#L131"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/MockProducer.cs/#L123"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/producer/MockProducer.html#org.apache.kafka.clients.producer.MockProducer(boolean,org.apache.kafka.clients.producer.Partitioner,org.apache.kafka.common.serialization.Serializer,org.apache.kafka.common.serialization.Serializer)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/producer/MockProducer.html#org.apache.kafka.clients.producer.MockProducer(boolean,org.apache.kafka.clients.producer.Partitioner,org.apache.kafka.common.serialization.Serializer,org.apache.kafka.common.serialization.Serializer)</a></p>
@@ -656,7 +714,7 @@ Class MockProducer  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Clients_Producer_MockProducer__ctor_System_Boolean_Org_Apache_Kafka_Common_Serialization_Serializer_Org_Apache_Kafka_Common_Serialization_Serializer_" data-uid="Org.Apache.Kafka.Clients.Producer.MockProducer.#ctor(System.Boolean,Org.Apache.Kafka.Common.Serialization.Serializer,Org.Apache.Kafka.Common.Serialization.Serializer)">
   MockProducer(bool, Serializer, Serializer)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/MockProducer.cs/#L141"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/MockProducer.cs/#L133"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/producer/MockProducer.html#org.apache.kafka.clients.producer.MockProducer(boolean,org.apache.kafka.common.serialization.Serializer,org.apache.kafka.common.serialization.Serializer)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/producer/MockProducer.html#org.apache.kafka.clients.producer.MockProducer(boolean,org.apache.kafka.common.serialization.Serializer,org.apache.kafka.common.serialization.Serializer)</a></p>
@@ -695,7 +753,7 @@ Class MockProducer  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Clients_Producer_MockProducer__ctor_System_Object___" data-uid="Org.Apache.Kafka.Clients.Producer.MockProducer.#ctor(System.Object[])">
   MockProducer(params object[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/MockProducer.cs/#L42"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/MockProducer.cs/#L47"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Generic constructor: it is useful for JCOBridge when there is a derived class which needs to pass arguments to the highest JVMBridgeBase class</p>
@@ -731,10 +789,10 @@ Class MockProducer  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Clients_Producer_MockProducer_BridgeClassName" data-uid="Org.Apache.Kafka.Clients.Producer.MockProducer.BridgeClassName">
   BridgeClassName
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/MockProducer.cs/#L50"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/MockProducer.cs/#L54"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm</a></p>
+  <div class="markdown level1 summary"><p>Java class name to be instantiated</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -763,10 +821,10 @@ Class MockProducer  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Clients_Producer_MockProducer_IsBridgeAbstract" data-uid="Org.Apache.Kafka.Clients.Producer.MockProducer.IsBridgeAbstract">
   IsBridgeAbstract
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/MockProducer.cs/#L54"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/MockProducer.cs/#L56"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeAbstract.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeAbstract.htm</a></p>
+  <div class="markdown level1 summary"><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.html#MASES_JCOBridge_C2JBridge_IJVMBridgeDefinition_BridgeClassName">BridgeClassName</a> is an abstract class, i.e. cannot be created an instance</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -798,7 +856,7 @@ Class MockProducer  <a class="header-action link-secondary" title="View source" 
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/MockProducer.cs/#L58"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeCloseable.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeCloseable.htm</a></p>
+  <div class="markdown level1 summary"><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.html#MASES_JCOBridge_C2JBridge_IJVMBridgeDefinition_BridgeClassName">BridgeClassName</a> implements Closeable</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -827,10 +885,10 @@ Class MockProducer  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Clients_Producer_MockProducer_IsBridgeInterface" data-uid="Org.Apache.Kafka.Clients.Producer.MockProducer.IsBridgeInterface">
   IsBridgeInterface
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/MockProducer.cs/#L62"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/MockProducer.cs/#L60"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeInterface.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeInterface.htm</a></p>
+  <div class="markdown level1 summary"><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.html#MASES_JCOBridge_C2JBridge_IJVMBridgeDefinition_BridgeClassName">BridgeClassName</a> is an interface, i.e. does not have any public constructor</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -859,10 +917,10 @@ Class MockProducer  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Clients_Producer_MockProducer_IsBridgeStatic" data-uid="Org.Apache.Kafka.Clients.Producer.MockProducer.IsBridgeStatic">
   IsBridgeStatic
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/MockProducer.cs/#L66"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/MockProducer.cs/#L62"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeStatic.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeStatic.htm</a></p>
+  <div class="markdown level1 summary"><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.html#MASES_JCOBridge_C2JBridge_IJVMBridgeDefinition_BridgeClassName">BridgeClassName</a> is a static class, i.e. does not have any public constructor</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -891,7 +949,7 @@ Class MockProducer  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Clients_Producer_MockProducer_abortTransactionException" data-uid="Org.Apache.Kafka.Clients.Producer.MockProducer.abortTransactionException">
   abortTransactionException
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/MockProducer.cs/#L179"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/MockProducer.cs/#L171"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/producer/MockProducer.html#abortTransactionException">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/producer/MockProducer.html#abortTransactionException</a></p>
@@ -923,7 +981,7 @@ Class MockProducer  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Clients_Producer_MockProducer_beginTransactionException" data-uid="Org.Apache.Kafka.Clients.Producer.MockProducer.beginTransactionException">
   beginTransactionException
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/MockProducer.cs/#L183"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/MockProducer.cs/#L175"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/producer/MockProducer.html#beginTransactionException">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/producer/MockProducer.html#beginTransactionException</a></p>
@@ -955,7 +1013,7 @@ Class MockProducer  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Clients_Producer_MockProducer_closeException" data-uid="Org.Apache.Kafka.Clients.Producer.MockProducer.closeException">
   closeException
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/MockProducer.cs/#L187"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/MockProducer.cs/#L179"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/producer/MockProducer.html#closeException">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/producer/MockProducer.html#closeException</a></p>
@@ -987,7 +1045,7 @@ Class MockProducer  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Clients_Producer_MockProducer_commitTransactionException" data-uid="Org.Apache.Kafka.Clients.Producer.MockProducer.commitTransactionException">
   commitTransactionException
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/MockProducer.cs/#L191"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/MockProducer.cs/#L183"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/producer/MockProducer.html#commitTransactionException">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/producer/MockProducer.html#commitTransactionException</a></p>
@@ -1019,7 +1077,7 @@ Class MockProducer  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Clients_Producer_MockProducer_flushException" data-uid="Org.Apache.Kafka.Clients.Producer.MockProducer.flushException">
   flushException
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/MockProducer.cs/#L195"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/MockProducer.cs/#L187"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/producer/MockProducer.html#flushException">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/producer/MockProducer.html#flushException</a></p>
@@ -1051,7 +1109,7 @@ Class MockProducer  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Clients_Producer_MockProducer_initTransactionException" data-uid="Org.Apache.Kafka.Clients.Producer.MockProducer.initTransactionException">
   initTransactionException
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/MockProducer.cs/#L199"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/MockProducer.cs/#L191"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/producer/MockProducer.html#initTransactionException">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/producer/MockProducer.html#initTransactionException</a></p>
@@ -1083,7 +1141,7 @@ Class MockProducer  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Clients_Producer_MockProducer_partitionsForException" data-uid="Org.Apache.Kafka.Clients.Producer.MockProducer.partitionsForException">
   partitionsForException
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/MockProducer.cs/#L203"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/MockProducer.cs/#L195"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/producer/MockProducer.html#partitionsForException">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/producer/MockProducer.html#partitionsForException</a></p>
@@ -1115,7 +1173,7 @@ Class MockProducer  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Clients_Producer_MockProducer_sendException" data-uid="Org.Apache.Kafka.Clients.Producer.MockProducer.sendException">
   sendException
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/MockProducer.cs/#L207"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/MockProducer.cs/#L199"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/producer/MockProducer.html#sendException">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/producer/MockProducer.html#sendException</a></p>
@@ -1147,7 +1205,7 @@ Class MockProducer  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Clients_Producer_MockProducer_sendOffsetsToTransactionException" data-uid="Org.Apache.Kafka.Clients.Producer.MockProducer.sendOffsetsToTransactionException">
   sendOffsetsToTransactionException
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/MockProducer.cs/#L211"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/MockProducer.cs/#L203"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/producer/MockProducer.html#sendOffsetsToTransactionException">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/producer/MockProducer.html#sendOffsetsToTransactionException</a></p>
@@ -1183,7 +1241,7 @@ Class MockProducer  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Clients_Producer_MockProducer_AbortTransaction" data-uid="Org.Apache.Kafka.Clients.Producer.MockProducer.AbortTransaction">
   AbortTransaction()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/MockProducer.cs/#L403"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/MockProducer.cs/#L395"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/producer/MockProducer.html#abortTransaction--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/producer/MockProducer.html#abortTransaction--</a></p>
@@ -1215,7 +1273,7 @@ Class MockProducer  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Clients_Producer_MockProducer_BeginTransaction" data-uid="Org.Apache.Kafka.Clients.Producer.MockProducer.BeginTransaction">
   BeginTransaction()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/MockProducer.cs/#L411"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/MockProducer.cs/#L403"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/producer/MockProducer.html#beginTransaction--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/producer/MockProducer.html#beginTransaction--</a></p>
@@ -1247,7 +1305,7 @@ Class MockProducer  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Clients_Producer_MockProducer_Clear" data-uid="Org.Apache.Kafka.Clients.Producer.MockProducer.Clear">
   Clear()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/MockProducer.cs/#L381"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/MockProducer.cs/#L373"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/producer/MockProducer.html#clear--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/producer/MockProducer.html#clear--</a></p>
@@ -1274,7 +1332,7 @@ Class MockProducer  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Clients_Producer_MockProducer_ClientInstanceId_Java_Time_Duration_" data-uid="Org.Apache.Kafka.Clients.Producer.MockProducer.ClientInstanceId(Java.Time.Duration)">
   ClientInstanceId(Duration)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/MockProducer.cs/#L306"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/MockProducer.cs/#L298"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/producer/MockProducer.html#clientInstanceId-java.time.Duration-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/producer/MockProducer.html#clientInstanceId-java.time.Duration-</a></p>
@@ -1313,7 +1371,7 @@ Class MockProducer  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Clients_Producer_MockProducer_Close" data-uid="Org.Apache.Kafka.Clients.Producer.MockProducer.Close">
   Close()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/MockProducer.cs/#L418"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/MockProducer.cs/#L410"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/producer/MockProducer.html#close--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/producer/MockProducer.html#close--</a></p>
@@ -1340,7 +1398,7 @@ Class MockProducer  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Clients_Producer_MockProducer_Close_Java_Time_Duration_" data-uid="Org.Apache.Kafka.Clients.Producer.MockProducer.Close(Java.Time.Duration)">
   Close(Duration)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/MockProducer.cs/#L426"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/MockProducer.cs/#L418"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/producer/MockProducer.html#close-java.time.Duration-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/producer/MockProducer.html#close-java.time.Duration-</a></p>
@@ -1373,7 +1431,7 @@ Class MockProducer  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Clients_Producer_MockProducer_Closed" data-uid="Org.Apache.Kafka.Clients.Producer.MockProducer.Closed">
   Closed()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/MockProducer.cs/#L224"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/MockProducer.cs/#L216"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/producer/MockProducer.html#closed--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/producer/MockProducer.html#closed--</a></p>
@@ -1406,7 +1464,7 @@ Class MockProducer  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Clients_Producer_MockProducer_CommitCount" data-uid="Org.Apache.Kafka.Clients.Producer.MockProducer.CommitCount">
   CommitCount()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/MockProducer.cs/#L297"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/MockProducer.cs/#L289"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/producer/MockProducer.html#commitCount--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/producer/MockProducer.html#commitCount--</a></p>
@@ -1439,7 +1497,7 @@ Class MockProducer  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Clients_Producer_MockProducer_CommitTransaction" data-uid="Org.Apache.Kafka.Clients.Producer.MockProducer.CommitTransaction">
   CommitTransaction()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/MockProducer.cs/#L434"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/MockProducer.cs/#L426"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/producer/MockProducer.html#commitTransaction--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/producer/MockProducer.html#commitTransaction--</a></p>
@@ -1471,7 +1529,7 @@ Class MockProducer  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Clients_Producer_MockProducer_CompleteNext" data-uid="Org.Apache.Kafka.Clients.Producer.MockProducer.CompleteNext">
   CompleteNext()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/MockProducer.cs/#L314"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/MockProducer.cs/#L306"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/producer/MockProducer.html#completeNext--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/producer/MockProducer.html#completeNext--</a></p>
@@ -1504,7 +1562,7 @@ Class MockProducer  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Clients_Producer_MockProducer_ConsumerGroupOffsetsHistory" data-uid="Org.Apache.Kafka.Clients.Producer.MockProducer.ConsumerGroupOffsetsHistory">
   ConsumerGroupOffsetsHistory()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/MockProducer.cs/#L350"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/MockProducer.cs/#L342"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/producer/MockProducer.html#consumerGroupOffsetsHistory--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/producer/MockProducer.html#consumerGroupOffsetsHistory--</a></p>
@@ -1537,7 +1595,7 @@ Class MockProducer  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Clients_Producer_MockProducer_DisableTelemetry" data-uid="Org.Apache.Kafka.Clients.Producer.MockProducer.DisableTelemetry">
   DisableTelemetry()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/MockProducer.cs/#L441"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/MockProducer.cs/#L433"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/producer/MockProducer.html#disableTelemetry--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/producer/MockProducer.html#disableTelemetry--</a></p>
@@ -1564,7 +1622,7 @@ Class MockProducer  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Clients_Producer_MockProducer_ErrorNext_MASES_JCOBridge_C2JBridge_JVMBridgeException_" data-uid="Org.Apache.Kafka.Clients.Producer.MockProducer.ErrorNext(MASES.JCOBridge.C2JBridge.JVMBridgeException)">
   ErrorNext(JVMBridgeException)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/MockProducer.cs/#L323"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/MockProducer.cs/#L315"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/producer/MockProducer.html#errorNext-java.lang.RuntimeException-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/producer/MockProducer.html#errorNext-java.lang.RuntimeException-</a></p>
@@ -1577,7 +1635,7 @@ Class MockProducer  <a class="header-action link-secondary" title="View source" 
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>arg0</code> <span class="xref">JVMBridgeException</span></dt>
+    <dt><code>arg0</code> <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeException.html">JVMBridgeException</a></dt>
     <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.RuntimeException.html">RuntimeException</a></p>
 </dd>
   </dl>
@@ -1603,7 +1661,7 @@ Class MockProducer  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Clients_Producer_MockProducer_FenceProducer" data-uid="Org.Apache.Kafka.Clients.Producer.MockProducer.FenceProducer">
   FenceProducer()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/MockProducer.cs/#L388"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/MockProducer.cs/#L380"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/producer/MockProducer.html#fenceProducer--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/producer/MockProducer.html#fenceProducer--</a></p>
@@ -1630,7 +1688,7 @@ Class MockProducer  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Clients_Producer_MockProducer_Flush" data-uid="Org.Apache.Kafka.Clients.Producer.MockProducer.Flush">
   Flush()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/MockProducer.cs/#L395"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/MockProducer.cs/#L387"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/producer/MockProducer.html#flush--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/producer/MockProducer.html#flush--</a></p>
@@ -1657,7 +1715,7 @@ Class MockProducer  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Clients_Producer_MockProducer_Flushed" data-uid="Org.Apache.Kafka.Clients.Producer.MockProducer.Flushed">
   Flushed()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/MockProducer.cs/#L232"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/MockProducer.cs/#L224"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/producer/MockProducer.html#flushed--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/producer/MockProducer.html#flushed--</a></p>
@@ -1690,7 +1748,7 @@ Class MockProducer  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Clients_Producer_MockProducer_History" data-uid="Org.Apache.Kafka.Clients.Producer.MockProducer.History">
   History()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/MockProducer.cs/#L358"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/MockProducer.cs/#L350"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/producer/MockProducer.html#history--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/producer/MockProducer.html#history--</a></p>
@@ -1723,7 +1781,7 @@ Class MockProducer  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Clients_Producer_MockProducer_InitTransactions" data-uid="Org.Apache.Kafka.Clients.Producer.MockProducer.InitTransactions">
   InitTransactions()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/MockProducer.cs/#L448"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/MockProducer.cs/#L440"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/producer/MockProducer.html#initTransactions--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/producer/MockProducer.html#initTransactions--</a></p>
@@ -1750,7 +1808,7 @@ Class MockProducer  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Clients_Producer_MockProducer_InjectTimeoutException_System_Int32_" data-uid="Org.Apache.Kafka.Clients.Producer.MockProducer.InjectTimeoutException(System.Int32)">
   InjectTimeoutException(int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/MockProducer.cs/#L456"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/MockProducer.cs/#L448"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/producer/MockProducer.html#injectTimeoutException-int-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/producer/MockProducer.html#injectTimeoutException-int-</a></p>
@@ -1783,7 +1841,7 @@ Class MockProducer  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Clients_Producer_MockProducer_Metrics" data-uid="Org.Apache.Kafka.Clients.Producer.MockProducer.Metrics">
   Metrics()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/MockProducer.cs/#L289"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/MockProducer.cs/#L281"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/producer/MockProducer.html#metrics--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/producer/MockProducer.html#metrics--</a></p>
@@ -1816,7 +1874,7 @@ Class MockProducer  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Clients_Producer_MockProducer_PartitionsFor_Java_Lang_String_" data-uid="Org.Apache.Kafka.Clients.Producer.MockProducer.PartitionsFor(Java.Lang.String)">
   PartitionsFor(String)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/MockProducer.cs/#L281"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/MockProducer.cs/#L273"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/producer/MockProducer.html#partitionsFor-java.lang.String-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/producer/MockProducer.html#partitionsFor-java.lang.String-</a></p>
@@ -1855,7 +1913,7 @@ Class MockProducer  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Clients_Producer_MockProducer_Send_Org_Apache_Kafka_Clients_Producer_ProducerRecord_" data-uid="Org.Apache.Kafka.Clients.Producer.MockProducer.Send(Org.Apache.Kafka.Clients.Producer.ProducerRecord)">
   Send(ProducerRecord)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/MockProducer.cs/#L342"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/MockProducer.cs/#L334"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/producer/MockProducer.html#send-org.apache.kafka.clients.producer.ProducerRecord-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/producer/MockProducer.html#send-org.apache.kafka.clients.producer.ProducerRecord-</a></p>
@@ -1894,7 +1952,7 @@ Class MockProducer  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Clients_Producer_MockProducer_Send_Org_Apache_Kafka_Clients_Producer_ProducerRecord_Org_Apache_Kafka_Clients_Producer_Callback_" data-uid="Org.Apache.Kafka.Clients.Producer.MockProducer.Send(Org.Apache.Kafka.Clients.Producer.ProducerRecord,Org.Apache.Kafka.Clients.Producer.Callback)">
   Send(ProducerRecord, Callback)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/MockProducer.cs/#L333"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/MockProducer.cs/#L325"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/producer/MockProducer.html#send-org.apache.kafka.clients.producer.ProducerRecord-org.apache.kafka.clients.producer.Callback-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/producer/MockProducer.html#send-org.apache.kafka.clients.producer.ProducerRecord-org.apache.kafka.clients.producer.Callback-</a></p>
@@ -1936,7 +1994,7 @@ Class MockProducer  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Clients_Producer_MockProducer_SendOffsetsToTransaction_Java_Util_Map_Org_Apache_Kafka_Clients_Consumer_ConsumerGroupMetadata_" data-uid="Org.Apache.Kafka.Clients.Producer.MockProducer.SendOffsetsToTransaction(Java.Util.Map,Org.Apache.Kafka.Clients.Consumer.ConsumerGroupMetadata)">
   SendOffsetsToTransaction(Map, ConsumerGroupMetadata)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/MockProducer.cs/#L466"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/MockProducer.cs/#L458"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/producer/MockProducer.html#sendOffsetsToTransaction-java.util.Map-org.apache.kafka.clients.consumer.ConsumerGroupMetadata-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/producer/MockProducer.html#sendOffsetsToTransaction-java.util.Map-org.apache.kafka.clients.consumer.ConsumerGroupMetadata-</a></p>
@@ -1977,7 +2035,7 @@ Class MockProducer  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Clients_Producer_MockProducer_SentOffsets" data-uid="Org.Apache.Kafka.Clients.Producer.MockProducer.SentOffsets">
   SentOffsets()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/MockProducer.cs/#L240"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/MockProducer.cs/#L232"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/producer/MockProducer.html#sentOffsets--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/producer/MockProducer.html#sentOffsets--</a></p>
@@ -2010,7 +2068,7 @@ Class MockProducer  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Clients_Producer_MockProducer_SetClientInstanceId_Org_Apache_Kafka_Common_Uuid_" data-uid="Org.Apache.Kafka.Clients.Producer.MockProducer.SetClientInstanceId(Org.Apache.Kafka.Common.Uuid)">
   SetClientInstanceId(Uuid)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/MockProducer.cs/#L474"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/MockProducer.cs/#L466"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/producer/MockProducer.html#setClientInstanceId-org.apache.kafka.common.Uuid-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/producer/MockProducer.html#setClientInstanceId-org.apache.kafka.common.Uuid-</a></p>
@@ -2043,7 +2101,7 @@ Class MockProducer  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Clients_Producer_MockProducer_SetMockMetrics_Org_Apache_Kafka_Common_MetricName_Org_Apache_Kafka_Common_Metric_" data-uid="Org.Apache.Kafka.Clients.Producer.MockProducer.SetMockMetrics(Org.Apache.Kafka.Common.MetricName,Org.Apache.Kafka.Common.Metric)">
   SetMockMetrics(MetricName, Metric)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/MockProducer.cs/#L483"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/MockProducer.cs/#L475"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/producer/MockProducer.html#setMockMetrics-org.apache.kafka.common.MetricName-org.apache.kafka.common.Metric-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/producer/MockProducer.html#setMockMetrics-org.apache.kafka.common.MetricName-org.apache.kafka.common.Metric-</a></p>
@@ -2079,7 +2137,7 @@ Class MockProducer  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Clients_Producer_MockProducer_TransactionAborted" data-uid="Org.Apache.Kafka.Clients.Producer.MockProducer.TransactionAborted">
   TransactionAborted()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/MockProducer.cs/#L248"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/MockProducer.cs/#L240"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/producer/MockProducer.html#transactionAborted--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/producer/MockProducer.html#transactionAborted--</a></p>
@@ -2112,7 +2170,7 @@ Class MockProducer  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Clients_Producer_MockProducer_TransactionCommitted" data-uid="Org.Apache.Kafka.Clients.Producer.MockProducer.TransactionCommitted">
   TransactionCommitted()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/MockProducer.cs/#L256"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/MockProducer.cs/#L248"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/producer/MockProducer.html#transactionCommitted--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/producer/MockProducer.html#transactionCommitted--</a></p>
@@ -2145,7 +2203,7 @@ Class MockProducer  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Clients_Producer_MockProducer_TransactionInFlight" data-uid="Org.Apache.Kafka.Clients.Producer.MockProducer.TransactionInFlight">
   TransactionInFlight()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/MockProducer.cs/#L264"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/MockProducer.cs/#L256"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/producer/MockProducer.html#transactionInFlight--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/producer/MockProducer.html#transactionInFlight--</a></p>
@@ -2178,7 +2236,7 @@ Class MockProducer  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Clients_Producer_MockProducer_TransactionInitialized" data-uid="Org.Apache.Kafka.Clients.Producer.MockProducer.TransactionInitialized">
   TransactionInitialized()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/MockProducer.cs/#L272"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/MockProducer.cs/#L264"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/producer/MockProducer.html#transactionInitialized--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/producer/MockProducer.html#transactionInitialized--</a></p>
@@ -2211,7 +2269,7 @@ Class MockProducer  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Clients_Producer_MockProducer_UncommittedOffsets" data-uid="Org.Apache.Kafka.Clients.Producer.MockProducer.UncommittedOffsets">
   UncommittedOffsets()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/MockProducer.cs/#L374"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/MockProducer.cs/#L366"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/producer/MockProducer.html#uncommittedOffsets--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/producer/MockProducer.html#uncommittedOffsets--</a></p>
@@ -2244,7 +2302,7 @@ Class MockProducer  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Clients_Producer_MockProducer_UncommittedRecords" data-uid="Org.Apache.Kafka.Clients.Producer.MockProducer.UncommittedRecords">
   UncommittedRecords()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/MockProducer.cs/#L366"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/MockProducer.cs/#L358"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/producer/MockProducer.html#uncommittedRecords--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/producer/MockProducer.html#uncommittedRecords--</a></p>
@@ -2277,7 +2335,7 @@ Class MockProducer  <a class="header-action link-secondary" title="View source" 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/MockProducer.cs/#L121" class="edit-link">Edit this page</a>
+          <a href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Producer/MockProducer.cs/#L113" class="edit-link">Edit this page</a>
         </div>
 
 

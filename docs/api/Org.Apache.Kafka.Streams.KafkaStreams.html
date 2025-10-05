@@ -89,7 +89,7 @@
 
 
   <h1 id="Org_Apache_Kafka_Streams_KafkaStreams" data-uid="Org.Apache.Kafka.Streams.KafkaStreams" class="text-break">
-Class KafkaStreams  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/KafkaStreams.cs/#L231"><i class="bi bi-code-slash"></i></a>
+Class KafkaStreams  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/KafkaStreams.cs/#L225"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -102,7 +102,7 @@ Class KafkaStreams  <a class="header-action link-secondary" title="View source" 
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class KafkaStreams : AutoCloseable, IDynamicMetaObjectProvider, IJVMBridgeCore, IDisposable, IJVMBridgeBaseStatic, IJVMBridgeBase, IJVMBridgeDefinition, IAutoCloseable</code></pre>
+    <pre><code class="lang-csharp hljs">public class KafkaStreams : AutoCloseable, IDynamicMetaObjectProvider, IJVMBridgeCore, IEquatable&lt;IJVMBridgeBase&gt;, IDisposable, IJVMBridgeBaseStatic, IJVMBridgeBase, IJVMBridgeDefinition, IAutoCloseable</code></pre>
   </div>
 
 
@@ -113,8 +113,8 @@ Class KafkaStreams  <a class="header-action link-secondary" title="View source" 
     <dd>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject">DynamicObject</a></div>
-      <div><span class="xref">JVMBridgeBase</span></div>
-      <div><span class="xref">JVMBridgeBase</span>&lt;<a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.AutoCloseable.html">AutoCloseable</a>&gt;</div>
+      <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html">JVMBridgeBase</a></div>
+      <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase-1.html">JVMBridgeBase</a>&lt;<a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.AutoCloseable.html">AutoCloseable</a>&gt;</div>
       <div><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.AutoCloseable.html">AutoCloseable</a></div>
       <div><span class="xref">KafkaStreams</span></div>
     </dd>
@@ -124,11 +124,12 @@ Class KafkaStreams  <a class="header-action link-secondary" title="View source" 
     <dt>Implements</dt>
     <dd>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.idynamicmetaobjectprovider">IDynamicMetaObjectProvider</a></div>
-      <div><span class="xref">IJVMBridgeCore</span></div>
+      <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeCore.html">IJVMBridgeCore</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeBase.html">IJVMBridgeBase</a>&gt;</div>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
-      <div><span class="xref">IJVMBridgeBaseStatic</span></div>
-      <div><span class="xref">IJVMBridgeBase</span></div>
-      <div><span class="xref">IJVMBridgeDefinition</span></div>
+      <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeBaseStatic.html">IJVMBridgeBaseStatic</a></div>
+      <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeBase.html">IJVMBridgeBase</a></div>
+      <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.html">IJVMBridgeDefinition</a></div>
       <div><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.IAutoCloseable.html">IAutoCloseable</a></div>
     </dd>
   </dl>
@@ -222,16 +223,16 @@ Class KafkaStreams  <a class="header-action link-secondary" title="View source" 
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;AutoCloseable&gt;.SExecuteWithSignature&lt;TReturn, TConverter&gt;(Type, string, string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SExecuteArray&lt;T&gt;(IJavaType, string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SExecuteArray&lt;TArrayType&gt;(IJavaType, string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SExecuteWithSignatureArray&lt;T&gt;(IJavaType, string, string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SExecuteWithSignatureArray&lt;TArrayType&gt;(IJavaType, string, string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SExecuteArray&lt;T&gt;(string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SExecuteArray&lt;TArrayType&gt;(string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SExecuteWithSignatureArray&lt;T&gt;(string, string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SExecuteWithSignatureArray&lt;TArrayType&gt;(string, string, params object[])</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SGetField(IJavaType, string)</a>
@@ -267,10 +268,10 @@ Class KafkaStreams  <a class="header-action link-secondary" title="View source" 
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.IsAssignableFrom(string)</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase&lt;AutoCloseable&gt;.IsAssignableFrom(IJavaType)</span>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase-1.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_1_IsAssignableFrom_MASES_JCOBridge_C2JBridge_JVMInterop_IJavaType_">JVMBridgeBase&lt;AutoCloseable&gt;.IsAssignableFrom(IJavaType)</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase&lt;AutoCloseable&gt;.IsAssignableFrom&lt;T&gt;()</span>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase-1.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_1_IsAssignableFrom__1">JVMBridgeBase&lt;AutoCloseable&gt;.IsAssignableFrom&lt;T&gt;()</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">JVMBridgeBase&lt;AutoCloseable&gt;.New(params object[])</a>
@@ -279,94 +280,118 @@ Class KafkaStreams  <a class="header-action link-secondary" title="View source" 
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.NewWithSignature(string, params object[])</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase&lt;AutoCloseable&gt;.Execute&lt;T&gt;(params T[])</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.NewAndWrapsDirect&lt;TNewClass&gt;(string, params object[])</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase&lt;AutoCloseable&gt;.DynBridgeClazz</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.NewWithSignatureAndWrapsDirect&lt;TNewClass&gt;(string, string, params object[])</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase&lt;AutoCloseable&gt;.BridgeClazz</span>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase-1.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_1_Execute__1___0___">JVMBridgeBase&lt;AutoCloseable&gt;.Execute&lt;T&gt;(params T[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase-1.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_1_DynBridgeClazz">JVMBridgeBase&lt;AutoCloseable&gt;.DynBridgeClazz</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase-1.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_1_BridgeClazz">JVMBridgeBase&lt;AutoCloseable&gt;.BridgeClazz</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_ReferenceEqualsJVM_MASES_JCOBridge_C2JBridge_JVMBridgeBase_MASES_JCOBridge_C2JBridge_JVMBridgeBase_">JVMBridgeBase.ReferenceEqualsJVM(JVMBridgeBase, JVMBridgeBase)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">JVMBridgeBase.ClazzOf&lt;TClass&gt;(bool)</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">JVMBridgeBase.ClazzOf&lt;TClass&gt;(out Exception, bool)</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.ClazzOf(string, bool)</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase.RuntimeClassNameOf&lt;T&gt;()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.ClazzOf(string, out Exception, bool)</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase.ClassNameOf&lt;T&gt;()</span>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_RuntimeClassNameOf__1">JVMBridgeBase.RuntimeClassNameOf&lt;T&gt;()</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase.ClassOf&lt;T&gt;()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase.RuntimeClassNameOf(Type)</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase.WrapsDirect&lt;TNewClass&gt;(IJavaObject)</span>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_ClassNameOf__1">JVMBridgeBase.ClassNameOf&lt;T&gt;()</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase.Wraps&lt;TNewClass&gt;(IJavaObject)</span>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_ClassOf__1">JVMBridgeBase.ClassOf&lt;T&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_WrapsDirect__1_MASES_JCOBridge_C2JBridge_JVMInterop_IJavaObject_">JVMBridgeBase.WrapsDirect&lt;TNewClass&gt;(IJavaObject)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_Wraps__1_MASES_JCOBridge_C2JBridge_JVMInterop_IJavaObject_">JVMBridgeBase.Wraps&lt;TNewClass&gt;(IJavaObject)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase.Wraps(Type, IJavaObject, string)</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase.Wraps&lt;TNewClass, TReturn&gt;(IJavaObject)</span>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_Wraps__2_MASES_JCOBridge_C2JBridge_JVMInterop_IJavaObject_">JVMBridgeBase.Wraps&lt;TNewClass, TReturn&gt;(IJavaObject)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase.Wraps&lt;TReturn&gt;(Type, IJavaObject, string)</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase.Wraps&lt;TNewClass, TReturn, TConverter&gt;(IJavaObject)</span>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_Wraps__3_MASES_JCOBridge_C2JBridge_JVMInterop_IJavaObject_">JVMBridgeBase.Wraps&lt;TNewClass, TReturn, TConverter&gt;(IJavaObject)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase.Wraps&lt;TReturn, TConverter&gt;(Type, IJavaObject)</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase.MonitorEnter()</span>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_MonitorEnter">JVMBridgeBase.MonitorEnter()</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase.MonitorExit()</span>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_MonitorExit">JVMBridgeBase.MonitorExit()</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IsInstanceOf(string)</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase.IsInstanceOf(IJavaType)</span>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsInstanceOf_MASES_JCOBridge_C2JBridge_JVMInterop_IJavaType_">JVMBridgeBase.IsInstanceOf(IJavaType)</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase.IsInstanceOf&lt;T&gt;()</span>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsInstanceOf__1">JVMBridgeBase.IsInstanceOf&lt;T&gt;()</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase.RuntimeIsInstanceOf&lt;T&gt;()</span>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_RuntimeIsInstanceOf__1">JVMBridgeBase.RuntimeIsInstanceOf&lt;T&gt;()</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase.CastTo&lt;TNewClass&gt;()</span>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_CastTo__1">JVMBridgeBase.CastTo&lt;TNewClass&gt;()</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase.CastDirect&lt;TNewClass&gt;()</span>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_CastDirect__1">JVMBridgeBase.CastDirect&lt;TNewClass&gt;()</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase.Dispose()</span>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_Dispose">JVMBridgeBase.Dispose()</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase.ToString()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">JVMBridgeBase.Dispose(bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_ToString">JVMBridgeBase.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_Equals_MASES_JCOBridge_C2JBridge_IJVMBridgeBase_">JVMBridgeBase.Equals(IJVMBridgeBase)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">JVMBridgeBase.Equals(object)</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase.GetHashCode()</span>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_GetHashCode">JVMBridgeBase.GetHashCode()</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase.Notify()</span>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_Notify">JVMBridgeBase.Notify()</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase.NotifyAll()</span>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_NotifyAll">JVMBridgeBase.NotifyAll()</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase.Wait()</span>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_Wait">JVMBridgeBase.Wait()</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">JVMBridgeBase.Wait(long)</a>
@@ -399,10 +424,10 @@ Class KafkaStreams  <a class="header-action link-secondary" title="View source" 
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteWithSignature&lt;TNewClass, TReturn, TConverter&gt;(string, string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteArray&lt;T&gt;(string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteArray&lt;TArrayType&gt;(string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteWithSignatureArray&lt;T&gt;(string, string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteWithSignatureArray&lt;TArrayType&gt;(string, string, params object[])</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IGetField(string)</a>
@@ -420,13 +445,13 @@ Class KafkaStreams  <a class="header-action link-secondary" title="View source" 
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.ISetField&lt;TValue&gt;(string, TValue)</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase.DynBridgeInstance</span>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_DynBridgeInstance">JVMBridgeBase.DynBridgeInstance</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase.BridgeInstance</span>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeInstance">JVMBridgeBase.BridgeInstance</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase.IsBridgeListener</span>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeListener">JVMBridgeBase.IsBridgeListener</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trygetmember">DynamicObject.TryGetMember(GetMemberBinder, out object)</a>
@@ -522,9 +547,42 @@ Class KafkaStreams  <a class="header-action link-secondary" title="View source" 
 
   <a id="Org_Apache_Kafka_Streams_KafkaStreams__ctor_" data-uid="Org.Apache.Kafka.Streams.KafkaStreams.#ctor*"></a>
 
+  <h3 id="Org_Apache_Kafka_Streams_KafkaStreams__ctor_MASES_JCOBridge_C2JBridge_IJVMBridgeBaseInitializer_" data-uid="Org.Apache.Kafka.Streams.KafkaStreams.#ctor(MASES.JCOBridge.C2JBridge.IJVMBridgeBaseInitializer)">
+  KafkaStreams(IJVMBridgeBaseInitializer)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/KafkaStreams.cs/#L42"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Internal constructor: used internally from JCOBridge</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.&quot;)]
+public KafkaStreams(IJVMBridgeBaseInitializer initializer)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>initializer</code> <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeBaseInitializer.html">IJVMBridgeBaseInitializer</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Apache_Kafka_Streams_KafkaStreams__ctor_" data-uid="Org.Apache.Kafka.Streams.KafkaStreams.#ctor*"></a>
+
   <h3 id="Org_Apache_Kafka_Streams_KafkaStreams__ctor_Org_Apache_Kafka_Streams_Topology_Java_Util_Properties_" data-uid="Org.Apache.Kafka.Streams.KafkaStreams.#ctor(Org.Apache.Kafka.Streams.Topology,Java.Util.Properties)">
   KafkaStreams(Topology, Properties)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/KafkaStreams.cs/#L270"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/KafkaStreams.cs/#L264"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/KafkaStreams.html#org.apache.kafka.streams.KafkaStreams(org.apache.kafka.streams.Topology,java.util.Properties)">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/KafkaStreams.html#org.apache.kafka.streams.KafkaStreams(org.apache.kafka.streams.Topology,java.util.Properties)</a></p>
@@ -560,7 +618,7 @@ Class KafkaStreams  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Streams_KafkaStreams__ctor_Org_Apache_Kafka_Streams_Topology_Java_Util_Properties_Org_Apache_Kafka_Common_Utils_Time_" data-uid="Org.Apache.Kafka.Streams.KafkaStreams.#ctor(Org.Apache.Kafka.Streams.Topology,Java.Util.Properties,Org.Apache.Kafka.Common.Utils.Time)">
   KafkaStreams(Topology, Properties, Time)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/KafkaStreams.cs/#L240"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/KafkaStreams.cs/#L234"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/KafkaStreams.html#org.apache.kafka.streams.KafkaStreams(org.apache.kafka.streams.Topology,java.util.Properties,org.apache.kafka.common.utils.Time)">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/KafkaStreams.html#org.apache.kafka.streams.KafkaStreams(org.apache.kafka.streams.Topology,java.util.Properties,org.apache.kafka.common.utils.Time)</a></p>
@@ -599,7 +657,7 @@ Class KafkaStreams  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Streams_KafkaStreams__ctor_Org_Apache_Kafka_Streams_Topology_Java_Util_Properties_Org_Apache_Kafka_Streams_KafkaClientSupplier_" data-uid="Org.Apache.Kafka.Streams.KafkaStreams.#ctor(Org.Apache.Kafka.Streams.Topology,Java.Util.Properties,Org.Apache.Kafka.Streams.KafkaClientSupplier)">
   KafkaStreams(Topology, Properties, KafkaClientSupplier)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/KafkaStreams.cs/#L261"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/KafkaStreams.cs/#L255"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/KafkaStreams.html#org.apache.kafka.streams.KafkaStreams(org.apache.kafka.streams.Topology,java.util.Properties,org.apache.kafka.streams.KafkaClientSupplier)">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/KafkaStreams.html#org.apache.kafka.streams.KafkaStreams(org.apache.kafka.streams.Topology,java.util.Properties,org.apache.kafka.streams.KafkaClientSupplier)</a></p>
@@ -638,7 +696,7 @@ Class KafkaStreams  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Streams_KafkaStreams__ctor_Org_Apache_Kafka_Streams_Topology_Java_Util_Properties_Org_Apache_Kafka_Streams_KafkaClientSupplier_Org_Apache_Kafka_Common_Utils_Time_" data-uid="Org.Apache.Kafka.Streams.KafkaStreams.#ctor(Org.Apache.Kafka.Streams.Topology,Java.Util.Properties,Org.Apache.Kafka.Streams.KafkaClientSupplier,Org.Apache.Kafka.Common.Utils.Time)">
   KafkaStreams(Topology, Properties, KafkaClientSupplier, Time)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/KafkaStreams.cs/#L251"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/KafkaStreams.cs/#L245"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/KafkaStreams.html#org.apache.kafka.streams.KafkaStreams(org.apache.kafka.streams.Topology,java.util.Properties,org.apache.kafka.streams.KafkaClientSupplier,org.apache.kafka.common.utils.Time)">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/KafkaStreams.html#org.apache.kafka.streams.KafkaStreams(org.apache.kafka.streams.Topology,java.util.Properties,org.apache.kafka.streams.KafkaClientSupplier,org.apache.kafka.common.utils.Time)</a></p>
@@ -680,7 +738,7 @@ Class KafkaStreams  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Streams_KafkaStreams__ctor_Org_Apache_Kafka_Streams_Topology_Org_Apache_Kafka_Streams_StreamsConfig_" data-uid="Org.Apache.Kafka.Streams.KafkaStreams.#ctor(Org.Apache.Kafka.Streams.Topology,Org.Apache.Kafka.Streams.StreamsConfig)">
   KafkaStreams(Topology, StreamsConfig)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/KafkaStreams.cs/#L299"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/KafkaStreams.cs/#L293"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/KafkaStreams.html#org.apache.kafka.streams.KafkaStreams(org.apache.kafka.streams.Topology,org.apache.kafka.streams.StreamsConfig)">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/KafkaStreams.html#org.apache.kafka.streams.KafkaStreams(org.apache.kafka.streams.Topology,org.apache.kafka.streams.StreamsConfig)</a></p>
@@ -716,7 +774,7 @@ Class KafkaStreams  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Streams_KafkaStreams__ctor_Org_Apache_Kafka_Streams_Topology_Org_Apache_Kafka_Streams_StreamsConfig_Org_Apache_Kafka_Common_Utils_Time_" data-uid="Org.Apache.Kafka.Streams.KafkaStreams.#ctor(Org.Apache.Kafka.Streams.Topology,Org.Apache.Kafka.Streams.StreamsConfig,Org.Apache.Kafka.Common.Utils.Time)">
   KafkaStreams(Topology, StreamsConfig, Time)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/KafkaStreams.cs/#L280"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/KafkaStreams.cs/#L274"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/KafkaStreams.html#org.apache.kafka.streams.KafkaStreams(org.apache.kafka.streams.Topology,org.apache.kafka.streams.StreamsConfig,org.apache.kafka.common.utils.Time)">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/KafkaStreams.html#org.apache.kafka.streams.KafkaStreams(org.apache.kafka.streams.Topology,org.apache.kafka.streams.StreamsConfig,org.apache.kafka.common.utils.Time)</a></p>
@@ -755,7 +813,7 @@ Class KafkaStreams  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Streams_KafkaStreams__ctor_Org_Apache_Kafka_Streams_Topology_Org_Apache_Kafka_Streams_StreamsConfig_Org_Apache_Kafka_Streams_KafkaClientSupplier_" data-uid="Org.Apache.Kafka.Streams.KafkaStreams.#ctor(Org.Apache.Kafka.Streams.Topology,Org.Apache.Kafka.Streams.StreamsConfig,Org.Apache.Kafka.Streams.KafkaClientSupplier)">
   KafkaStreams(Topology, StreamsConfig, KafkaClientSupplier)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/KafkaStreams.cs/#L290"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/KafkaStreams.cs/#L284"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/KafkaStreams.html#org.apache.kafka.streams.KafkaStreams(org.apache.kafka.streams.Topology,org.apache.kafka.streams.StreamsConfig,org.apache.kafka.streams.KafkaClientSupplier)">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/KafkaStreams.html#org.apache.kafka.streams.KafkaStreams(org.apache.kafka.streams.Topology,org.apache.kafka.streams.StreamsConfig,org.apache.kafka.streams.KafkaClientSupplier)</a></p>
@@ -794,7 +852,7 @@ Class KafkaStreams  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Streams_KafkaStreams__ctor_System_Object___" data-uid="Org.Apache.Kafka.Streams.KafkaStreams.#ctor(System.Object[])">
   KafkaStreams(params object[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/KafkaStreams.cs/#L42"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/KafkaStreams.cs/#L47"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Generic constructor: it is useful for JCOBridge when there is a derived class which needs to pass arguments to the highest JVMBridgeBase class</p>
@@ -830,10 +888,10 @@ Class KafkaStreams  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Streams_KafkaStreams_BridgeClassName" data-uid="Org.Apache.Kafka.Streams.KafkaStreams.BridgeClassName">
   BridgeClassName
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/KafkaStreams.cs/#L50"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/KafkaStreams.cs/#L54"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm</a></p>
+  <div class="markdown level1 summary"><p>Java class name to be instantiated</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -862,10 +920,10 @@ Class KafkaStreams  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Streams_KafkaStreams_IsBridgeAbstract" data-uid="Org.Apache.Kafka.Streams.KafkaStreams.IsBridgeAbstract">
   IsBridgeAbstract
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/KafkaStreams.cs/#L54"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/KafkaStreams.cs/#L56"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeAbstract.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeAbstract.htm</a></p>
+  <div class="markdown level1 summary"><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.html#MASES_JCOBridge_C2JBridge_IJVMBridgeDefinition_BridgeClassName">BridgeClassName</a> is an abstract class, i.e. cannot be created an instance</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -897,7 +955,7 @@ Class KafkaStreams  <a class="header-action link-secondary" title="View source" 
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/KafkaStreams.cs/#L58"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeCloseable.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeCloseable.htm</a></p>
+  <div class="markdown level1 summary"><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.html#MASES_JCOBridge_C2JBridge_IJVMBridgeDefinition_BridgeClassName">BridgeClassName</a> implements Closeable</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -926,10 +984,10 @@ Class KafkaStreams  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Streams_KafkaStreams_IsBridgeInterface" data-uid="Org.Apache.Kafka.Streams.KafkaStreams.IsBridgeInterface">
   IsBridgeInterface
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/KafkaStreams.cs/#L62"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/KafkaStreams.cs/#L60"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeInterface.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeInterface.htm</a></p>
+  <div class="markdown level1 summary"><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.html#MASES_JCOBridge_C2JBridge_IJVMBridgeDefinition_BridgeClassName">BridgeClassName</a> is an interface, i.e. does not have any public constructor</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -958,10 +1016,10 @@ Class KafkaStreams  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Streams_KafkaStreams_IsBridgeStatic" data-uid="Org.Apache.Kafka.Streams.KafkaStreams.IsBridgeStatic">
   IsBridgeStatic
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/KafkaStreams.cs/#L66"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/KafkaStreams.cs/#L62"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeStatic.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeStatic.htm</a></p>
+  <div class="markdown level1 summary"><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.html#MASES_JCOBridge_C2JBridge_IJVMBridgeDefinition_BridgeClassName">BridgeClassName</a> is a static class, i.e. does not have any public constructor</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -994,7 +1052,7 @@ Class KafkaStreams  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Streams_KafkaStreams_AddStreamThread" data-uid="Org.Apache.Kafka.Streams.KafkaStreams.AddStreamThread">
   AddStreamThread()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/KafkaStreams.cs/#L410"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/KafkaStreams.cs/#L404"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/KafkaStreams.html#addStreamThread--">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/KafkaStreams.html#addStreamThread--</a></p>
@@ -1027,7 +1085,7 @@ Class KafkaStreams  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Streams_KafkaStreams_AllLocalStorePartitionLags" data-uid="Org.Apache.Kafka.Streams.KafkaStreams.AllLocalStorePartitionLags">
   AllLocalStorePartitionLags()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/KafkaStreams.cs/#L393"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/KafkaStreams.cs/#L387"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/KafkaStreams.html#allLocalStorePartitionLags--">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/KafkaStreams.html#allLocalStorePartitionLags--</a></p>
@@ -1060,7 +1118,7 @@ Class KafkaStreams  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Streams_KafkaStreams_CleanUp" data-uid="Org.Apache.Kafka.Streams.KafkaStreams.CleanUp">
   CleanUp()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/KafkaStreams.cs/#L488"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/KafkaStreams.cs/#L482"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/KafkaStreams.html#cleanUp--">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/KafkaStreams.html#cleanUp--</a></p>
@@ -1087,7 +1145,7 @@ Class KafkaStreams  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Streams_KafkaStreams_ClientInstanceIds_Java_Time_Duration_" data-uid="Org.Apache.Kafka.Streams.KafkaStreams.ClientInstanceIds(Java.Time.Duration)">
   ClientInstanceIds(Duration)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/KafkaStreams.cs/#L472"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/KafkaStreams.cs/#L466"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/KafkaStreams.html#clientInstanceIds-java.time.Duration-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/KafkaStreams.html#clientInstanceIds-java.time.Duration-</a></p>
@@ -1126,7 +1184,7 @@ Class KafkaStreams  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Streams_KafkaStreams_Close" data-uid="Org.Apache.Kafka.Streams.KafkaStreams.Close">
   Close()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/KafkaStreams.cs/#L495"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/KafkaStreams.cs/#L489"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/KafkaStreams.html#close--">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/KafkaStreams.html#close--</a></p>
@@ -1153,7 +1211,7 @@ Class KafkaStreams  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Streams_KafkaStreams_Close_Java_Time_Duration_" data-uid="Org.Apache.Kafka.Streams.KafkaStreams.Close(Java.Time.Duration)">
   Close(Duration)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/KafkaStreams.cs/#L453"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/KafkaStreams.cs/#L447"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/KafkaStreams.html#close-java.time.Duration-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/KafkaStreams.html#close-java.time.Duration-</a></p>
@@ -1197,7 +1255,7 @@ Class KafkaStreams  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Streams_KafkaStreams_Close_Org_Apache_Kafka_Streams_KafkaStreams_CloseOptions_" data-uid="Org.Apache.Kafka.Streams.KafkaStreams.Close(Org.Apache.Kafka.Streams.KafkaStreams.CloseOptions)">
   Close(CloseOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/KafkaStreams.cs/#L463"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/KafkaStreams.cs/#L457"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/KafkaStreams.html#close-org.apache.kafka.streams.KafkaStreams.CloseOptions-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/KafkaStreams.html#close-org.apache.kafka.streams.KafkaStreams.CloseOptions-</a></p>
@@ -1241,7 +1299,7 @@ Class KafkaStreams  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Streams_KafkaStreams_IsPaused" data-uid="Org.Apache.Kafka.Streams.KafkaStreams.IsPaused">
   IsPaused()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/KafkaStreams.cs/#L368"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/KafkaStreams.cs/#L362"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/KafkaStreams.html#isPaused--">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/KafkaStreams.html#isPaused--</a></p>
@@ -1274,7 +1332,7 @@ Class KafkaStreams  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Streams_KafkaStreams_MetadataForAllStreamsClients" data-uid="Org.Apache.Kafka.Streams.KafkaStreams.MetadataForAllStreamsClients">
   MetadataForAllStreamsClients()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/KafkaStreams.cs/#L376"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/KafkaStreams.cs/#L370"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/KafkaStreams.html#metadataForAllStreamsClients--">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/KafkaStreams.html#metadataForAllStreamsClients--</a></p>
@@ -1307,7 +1365,7 @@ Class KafkaStreams  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Streams_KafkaStreams_MetadataForLocalThreads" data-uid="Org.Apache.Kafka.Streams.KafkaStreams.MetadataForLocalThreads">
   MetadataForLocalThreads()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/KafkaStreams.cs/#L435"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/KafkaStreams.cs/#L429"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/KafkaStreams.html#metadataForLocalThreads--">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/KafkaStreams.html#metadataForLocalThreads--</a></p>
@@ -1340,7 +1398,7 @@ Class KafkaStreams  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Streams_KafkaStreams_Metrics__1" data-uid="Org.Apache.Kafka.Streams.KafkaStreams.Metrics``1">
   Metrics&lt;ReturnExtendsOrg_Apache_Kafka_Common_Metric&gt;()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/KafkaStreams.cs/#L402"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/KafkaStreams.cs/#L396"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/KafkaStreams.html#metrics--">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/KafkaStreams.html#metrics--</a></p>
@@ -1379,7 +1437,7 @@ Class KafkaStreams  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Streams_KafkaStreams_Pause" data-uid="Org.Apache.Kafka.Streams.KafkaStreams.Pause">
   Pause()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/KafkaStreams.cs/#L502"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/KafkaStreams.cs/#L496"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/KafkaStreams.html#pause--">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/KafkaStreams.html#pause--</a></p>
@@ -1406,7 +1464,7 @@ Class KafkaStreams  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Streams_KafkaStreams_QueryMetadataForKey__1_Java_Lang_String___0_Org_Apache_Kafka_Common_Serialization_Serializer___0__" data-uid="Org.Apache.Kafka.Streams.KafkaStreams.QueryMetadataForKey``1(Java.Lang.String,``0,Org.Apache.Kafka.Common.Serialization.Serializer{``0})">
   QueryMetadataForKey&lt;K&gt;(String, K, Serializer&lt;K&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/KafkaStreams.cs/#L327"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/KafkaStreams.cs/#L321"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/KafkaStreams.html#queryMetadataForKey-java.lang.String-java.lang.Object-org.apache.kafka.common.serialization.Serializer-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/KafkaStreams.html#queryMetadataForKey-java.lang.String-java.lang.Object-org.apache.kafka.common.serialization.Serializer-</a></p>
@@ -1456,7 +1514,7 @@ Class KafkaStreams  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Streams_KafkaStreams_QueryMetadataForKey__2_Java_Lang_String___0_Org_Apache_Kafka_Streams_Processor_StreamPartitioner___1_System_Object__" data-uid="Org.Apache.Kafka.Streams.KafkaStreams.QueryMetadataForKey``2(Java.Lang.String,``0,Org.Apache.Kafka.Streams.Processor.StreamPartitioner{``1,System.Object})">
   QueryMetadataForKey&lt;K, Arg2objectSuperK&gt;(String, K, StreamPartitioner&lt;Arg2objectSuperK, object&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/KafkaStreams.cs/#L340"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/KafkaStreams.cs/#L334"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/KafkaStreams.html#queryMetadataForKey-java.lang.String-java.lang.Object-org.apache.kafka.streams.processor.StreamPartitioner-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/KafkaStreams.html#queryMetadataForKey-java.lang.String-java.lang.Object-org.apache.kafka.streams.processor.StreamPartitioner-</a></p>
@@ -1509,7 +1567,7 @@ Class KafkaStreams  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Streams_KafkaStreams_Query__1_Org_Apache_Kafka_Streams_Query_StateQueryRequest___0__" data-uid="Org.Apache.Kafka.Streams.KafkaStreams.Query``1(Org.Apache.Kafka.Streams.Query.StateQueryRequest{``0})">
   Query&lt;R&gt;(StateQueryRequest&lt;R&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/KafkaStreams.cs/#L350"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/KafkaStreams.cs/#L344"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/KafkaStreams.html#query-org.apache.kafka.streams.query.StateQueryRequest-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/KafkaStreams.html#query-org.apache.kafka.streams.query.StateQueryRequest-</a></p>
@@ -1553,7 +1611,7 @@ Class KafkaStreams  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Streams_KafkaStreams_RemoveStreamThread" data-uid="Org.Apache.Kafka.Streams.KafkaStreams.RemoveStreamThread">
   RemoveStreamThread()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/KafkaStreams.cs/#L418"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/KafkaStreams.cs/#L412"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/KafkaStreams.html#removeStreamThread--">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/KafkaStreams.html#removeStreamThread--</a></p>
@@ -1586,7 +1644,7 @@ Class KafkaStreams  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Streams_KafkaStreams_RemoveStreamThread_Java_Time_Duration_" data-uid="Org.Apache.Kafka.Streams.KafkaStreams.RemoveStreamThread(Java.Time.Duration)">
   RemoveStreamThread(Duration)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/KafkaStreams.cs/#L427"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/KafkaStreams.cs/#L421"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/KafkaStreams.html#removeStreamThread-java.time.Duration-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/KafkaStreams.html#removeStreamThread-java.time.Duration-</a></p>
@@ -1625,7 +1683,7 @@ Class KafkaStreams  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Streams_KafkaStreams_Resume" data-uid="Org.Apache.Kafka.Streams.KafkaStreams.Resume">
   Resume()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/KafkaStreams.cs/#L509"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/KafkaStreams.cs/#L503"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/KafkaStreams.html#resume--">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/KafkaStreams.html#resume--</a></p>
@@ -1652,7 +1710,7 @@ Class KafkaStreams  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Streams_KafkaStreams_SetGlobalStateRestoreListener_Org_Apache_Kafka_Streams_Processor_StateRestoreListener_" data-uid="Org.Apache.Kafka.Streams.KafkaStreams.SetGlobalStateRestoreListener(Org.Apache.Kafka.Streams.Processor.StateRestoreListener)">
   SetGlobalStateRestoreListener(StateRestoreListener)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/KafkaStreams.cs/#L517"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/KafkaStreams.cs/#L511"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/KafkaStreams.html#setGlobalStateRestoreListener-org.apache.kafka.streams.processor.StateRestoreListener-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/KafkaStreams.html#setGlobalStateRestoreListener-org.apache.kafka.streams.processor.StateRestoreListener-</a></p>
@@ -1685,7 +1743,7 @@ Class KafkaStreams  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Streams_KafkaStreams_SetStandbyUpdateListener_Org_Apache_Kafka_Streams_Processor_StandbyUpdateListener_" data-uid="Org.Apache.Kafka.Streams.KafkaStreams.SetStandbyUpdateListener(Org.Apache.Kafka.Streams.Processor.StandbyUpdateListener)">
   SetStandbyUpdateListener(StandbyUpdateListener)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/KafkaStreams.cs/#L525"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/KafkaStreams.cs/#L519"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/KafkaStreams.html#setStandbyUpdateListener-org.apache.kafka.streams.processor.StandbyUpdateListener-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/KafkaStreams.html#setStandbyUpdateListener-org.apache.kafka.streams.processor.StandbyUpdateListener-</a></p>
@@ -1718,7 +1776,7 @@ Class KafkaStreams  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Streams_KafkaStreams_SetStateListener_Org_Apache_Kafka_Streams_KafkaStreams_StateListener_" data-uid="Org.Apache.Kafka.Streams.KafkaStreams.SetStateListener(Org.Apache.Kafka.Streams.KafkaStreams.StateListener)">
   SetStateListener(StateListener)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/KafkaStreams.cs/#L533"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/KafkaStreams.cs/#L527"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/KafkaStreams.html#setStateListener-org.apache.kafka.streams.KafkaStreams.StateListener-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/KafkaStreams.html#setStateListener-org.apache.kafka.streams.KafkaStreams.StateListener-</a></p>
@@ -1751,7 +1809,7 @@ Class KafkaStreams  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Streams_KafkaStreams_SetUncaughtExceptionHandler_Org_Apache_Kafka_Streams_Errors_StreamsUncaughtExceptionHandler_" data-uid="Org.Apache.Kafka.Streams.KafkaStreams.SetUncaughtExceptionHandler(Org.Apache.Kafka.Streams.Errors.StreamsUncaughtExceptionHandler)">
   SetUncaughtExceptionHandler(StreamsUncaughtExceptionHandler)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/KafkaStreams.cs/#L541"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/KafkaStreams.cs/#L535"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/KafkaStreams.html#setUncaughtExceptionHandler-org.apache.kafka.streams.errors.StreamsUncaughtExceptionHandler-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/KafkaStreams.html#setUncaughtExceptionHandler-org.apache.kafka.streams.errors.StreamsUncaughtExceptionHandler-</a></p>
@@ -1784,7 +1842,7 @@ Class KafkaStreams  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Streams_KafkaStreams_Start" data-uid="Org.Apache.Kafka.Streams.KafkaStreams.Start">
   Start()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/KafkaStreams.cs/#L481"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/KafkaStreams.cs/#L475"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/KafkaStreams.html#start--">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/KafkaStreams.html#start--</a></p>
@@ -1818,7 +1876,7 @@ Class KafkaStreams  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Streams_KafkaStreams_StateMethod" data-uid="Org.Apache.Kafka.Streams.KafkaStreams.StateMethod">
   StateMethod()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/KafkaStreams.cs/#L443"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/KafkaStreams.cs/#L437"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/KafkaStreams.html#state--">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/KafkaStreams.html#state--</a></p>
@@ -1851,7 +1909,7 @@ Class KafkaStreams  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Streams_KafkaStreams_Store__1_Org_Apache_Kafka_Streams_StoreQueryParameters___0__" data-uid="Org.Apache.Kafka.Streams.KafkaStreams.Store``1(Org.Apache.Kafka.Streams.StoreQueryParameters{``0})">
   Store&lt;T&gt;(StoreQueryParameters&lt;T&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/KafkaStreams.cs/#L360"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/KafkaStreams.cs/#L354"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/KafkaStreams.html#store-org.apache.kafka.streams.StoreQueryParameters-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/KafkaStreams.html#store-org.apache.kafka.streams.StoreQueryParameters-</a></p>
@@ -1895,7 +1953,7 @@ Class KafkaStreams  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="Org_Apache_Kafka_Streams_KafkaStreams_StreamsMetadataForStore_Java_Lang_String_" data-uid="Org.Apache.Kafka.Streams.KafkaStreams.StreamsMetadataForStore(Java.Lang.String)">
   StreamsMetadataForStore(String)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/KafkaStreams.cs/#L385"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/KafkaStreams.cs/#L379"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/KafkaStreams.html#streamsMetadataForStore-java.lang.String-">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/KafkaStreams.html#streamsMetadataForStore-java.lang.String-</a></p>
@@ -1934,7 +1992,7 @@ Class KafkaStreams  <a class="header-action link-secondary" title="View source" 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/KafkaStreams.cs/#L231" class="edit-link">Edit this page</a>
+          <a href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/KafkaStreams.cs/#L225" class="edit-link">Edit this page</a>
         </div>
 
 

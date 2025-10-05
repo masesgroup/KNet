@@ -87,7 +87,7 @@
         <article data-uid="">
 <h1 id="knet-net-suite-for-apache-kafka">KNet: .NET suite for <a href="https://kafka.apache.org/">Apache Kafka™</a></h1>
 
-<p>KNet is a comprehensive .NET suite for <a href="https://kafka.apache.org/">Apache Kafka™</a> providing access to all <a href="https://kafka.apache.org/documentation/#api">APIs</a> and features: Producer, Consumer, Admin, Streams, Connect, backends (ZooKeeper and Kafka™).</p>
+<p>KNet is a comprehensive .NET suite for <a href="https://kafka.apache.org/">Apache Kafka™</a> providing access to all <a href="https://kafka.apache.org/documentation/#api">APIs</a> and features: Producer, Consumer, Admin, Streams, Connect, backends (KRaft™).</p>
 <h3 id="libraries-and-tools">Libraries and Tools</h3>
 <table>
 <thead>
@@ -121,7 +121,7 @@
 <hr>
 <h2 id="scope-of-the-project">Scope of the project</h2>
 <p>This project aims to create a set of libraries and tools to direct access, from .NET, all the features available in the <a href="https://kafka.apache.org/downloads">Apache Kafka™ binary distribution</a>.</p>
-<p>There are many client libraries written to manage communication with Apache Kafka™. Conversely, this project use directly the Java packages released from The Apache Foundation giving more than one benefit:</p>
+<p>There are many client libraries written to manage communication with Apache Kafka™. Conversely, this project use directly the Java™ packages released from The Apache Foundation giving more than one benefit:</p>
 <ul>
 <li>all implemented features are availables at no extra implementation costs, see <a href="usage.html">KNet usage</a>;</li>
 <li>avoids any third party communication protocol implementation;</li>
@@ -129,32 +129,66 @@
 <li>measured high <a href="performance.html">performance</a> in many operating conditions.</li>
 </ul>
 <p>Currently the project tries to support, at our best, the <a href="https://kafka.apache.org/downloads">supported Apache Kafka™ binary distribution</a>:</p>
-<ul>
-<li>Apache Kafka™ version 3.9.*:
-<ul>
-<li>branch <a href="https://github.com/masesgroup/KNet">master</a></li>
-<li>KNet version 2.9.*</li>
-</ul>
-</li>
-<li>Apache Kafka™ version 3.8.*:
-<ul>
-<li>branch <a href="https://github.com/masesgroup/KNet/tree/release/2.8.X">release/2.8.X</a></li>
-<li>KNet version 2.8.*</li>
-</ul>
-</li>
-<li>Apache Kafka™ version 3.7.*:
-<ul>
-<li>branch <a href="https://github.com/masesgroup/KNet/tree/release/2.7.X">release/2.7.X</a></li>
-<li>KNet version 2.7.*</li>
-</ul>
-</li>
-<li>Apache Kafka™ version 3.6.*:
-<ul>
-<li>branch <a href="https://github.com/masesgroup/KNet/tree/release/2.6.X">release/2.6.X</a></li>
-<li>KNet version 2.6.*</li>
-</ul>
-</li>
-</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">KNet</th>
+<th style="text-align: center;">State</th>
+<th style="text-align: center;">Apache Kafka™</th>
+<th style="text-align: center;">Branch</th>
+<th style="text-align: center;">.NET Framework</th>
+<th style="text-align: center;">.NET</th>
+<th style="text-align: center;">JVM™</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">3.0.*</td>
+<td style="text-align: center;">Active</td>
+<td style="text-align: center;">4.0.*</td>
+<td style="text-align: center;"><a href="https://github.com/masesgroup/KNet">master</a></td>
+<td style="text-align: center;">462+</td>
+<td style="text-align: center;">8+</td>
+<td style="text-align: center;">17+</td>
+</tr>
+<tr>
+<td style="text-align: center;">2.9.*</td>
+<td style="text-align: center;">Active</td>
+<td style="text-align: center;">3.9.*</td>
+<td style="text-align: center;"><a href="https://github.com/masesgroup/KNet/tree/release/2.9.X">release/2.9.X</a></td>
+<td style="text-align: center;">462+</td>
+<td style="text-align: center;">8+</td>
+<td style="text-align: center;">11+</td>
+</tr>
+<tr>
+<td style="text-align: center;">2.8.*</td>
+<td style="text-align: center;">Active</td>
+<td style="text-align: center;">3.8.*</td>
+<td style="text-align: center;"><a href="https://github.com/masesgroup/KNet/tree/release/2.8.X">release/2.8.X</a></td>
+<td style="text-align: center;">462+</td>
+<td style="text-align: center;">6+</td>
+<td style="text-align: center;">11+</td>
+</tr>
+<tr>
+<td style="text-align: center;">2.7.*</td>
+<td style="text-align: center;">Deprecated</td>
+<td style="text-align: center;">3.7.*</td>
+<td style="text-align: center;"><a href="https://github.com/masesgroup/KNet/tree/release/2.7.X">release/2.7.X</a></td>
+<td style="text-align: center;">462+</td>
+<td style="text-align: center;">6+</td>
+<td style="text-align: center;">11+</td>
+</tr>
+<tr>
+<td style="text-align: center;">2.6.*</td>
+<td style="text-align: center;">Deprecated</td>
+<td style="text-align: center;">3.6.*</td>
+<td style="text-align: center;"><a href="https://github.com/masesgroup/KNet/tree/release/2.6.X">release/2.6.X</a></td>
+<td style="text-align: center;">462+</td>
+<td style="text-align: center;">6+</td>
+<td style="text-align: center;">11+</td>
+</tr>
+</tbody>
+</table>
 <p>The Apache Kafka™ packages are downloaded from:</p>
 <table>
 <thead>

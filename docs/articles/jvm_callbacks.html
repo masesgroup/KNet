@@ -2,10 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-      <title>JVM callbacks within .NET suite for Apache Kafka™ powered code | MASES Group - KNet </title>
+      <title>JVM™ callbacks within .NET suite for Apache Kafka™ powered code | MASES Group - KNet </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="JVM callbacks within .NET suite for Apache Kafka™ powered code | MASES Group - KNet ">
-      <meta name="description" content="Describes how to manage callbacks from JVM using the .NET suite for Apache Kafka™">
+      <meta name="title" content="JVM™ callbacks within .NET suite for Apache Kafka™ powered code | MASES Group - KNet ">
+      <meta name="description" content="Describes how to manage callbacks from JVM™ using the .NET suite for Apache Kafka™">
       
       <link rel="icon" href="../images/favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
@@ -85,15 +85,15 @@
         </div>
 
         <article data-uid="">
-<h1 id="knet-jvm-callbacks">KNet: JVM callbacks</h1>
+<h1 id="knet-jvm-callbacks">KNet: JVM™ callbacks</h1>
 
-<p>One of the features of <a href="https://www.jcobridge.com/">JCOBridge</a>, used in KNet, is the callback management from JVM.
+<p>One of the features of <a href="https://www.jcobridge.com/">JCOBridge</a>, used in KNet, is the callback management from JVM™.
 Many applications use the callback mechanism to be informed about events which happens during execution.
 Apache Kakfa exposes many API which have callbacks in the parameters.
-The Java code of a callback can be written with lambda expressions, but KNet cannot, it needs an object.</p>
+The Java™ code of a callback can be written with lambda expressions, but KNet cannot, it needs an object.</p>
 <h2 id="knet-callback-internals">KNet Callback internals</h2>
-<p>KNet is based on <a href="https://www.jcobridge.com/">JCOBridge</a>. JCOBridge as per its name is a bridge between the CLR (CoreCLR) and the JVM.
-Events, generally are expressed as interfaces in Java, and a lambda expression is translated into an object at compile time. Otherwise the developer can implement a Java class which <strong>implements</strong> the interface: with JCOBridge the developer needs to follow a seamless approach.
+<p>KNet is based on <a href="https://www.jcobridge.com/">JCOBridge</a>. JCOBridge as per its name is a bridge between the CLR (CoreCLR) and the JVM™.
+Events, generally are expressed as interfaces in Java™, and a lambda expression is translated into an object at compile time. Otherwise the developer can implement a Java™ class which <strong>implements</strong> the interface: with JCOBridge the developer needs to follow a seamless approach.
 In KNet some callbacks are ready made. In this tutorial the <strong>Callback</strong> interface (org.apache.kafka.clients.producer.Callback) will be taken as an example.
 The concrete class implementing the interface is the following one:</p>
 <pre><code class="lang-java">public final class CallbackImpl extends JCListener implements Callback {
@@ -118,7 +118,7 @@ The concrete class implementing the interface is the following one:</p>
 </ul>
 </li>
 </ul>
-<p>Now there is a concrete class within the JVM space.
+<p>Now there is a concrete class within the JVM™ space.
 Going on to the CLR side a possible concrete class in C# is as the following one:</p>
 <pre><code class="lang-c#">public class Callback : CLRListener
 {
@@ -144,16 +144,16 @@ Going on to the CLR side a possible concrete class in C# is as the following one
 </code></pre>
 <p>The structure follows the guidelines of JCOBridge:</p>
 <ul>
-<li>It <strong>must</strong> <code>extends</code> the base class <code>CLRListener</code> : this is a constraint of JCOBridge; <code>CLRListener</code> contains all the functionality to handle events from the JVM;</li>
-<li>The <code>JniClass</code> property informs the base class about the concrete class in JVM associated to this event handler;</li>
-<li>Within the constructor the method <code>AddEventHandler</code> registers a .NET <code>EventHandler</code> associated to the method in JVM; look at the key string: <strong>it is the same used from the JVM</strong>;
+<li>It <strong>must</strong> <code>extends</code> the base class <code>CLRListener</code> : this is a constraint of JCOBridge; <code>CLRListener</code> contains all the functionality to handle events from the JVM™;</li>
+<li>The <code>JniClass</code> property informs the base class about the concrete class in JVM™ associated to this event handler;</li>
+<li>Within the constructor the method <code>AddEventHandler</code> registers a .NET <code>EventHandler</code> associated to the method in JVM™; look at the key string: <strong>it is the same used from the JVM™</strong>;
 <ul>
 <li>The costructor of the code above accept in input an <code>Action</code> which permits to write lambda expression in C#;</li>
 <li>The code above associate a private handler with specific data type:
 <ul>
 <li><code>CLRListenerEventArgs</code> is mandatory and it is used from <code>CLRListener</code>;</li>
 <li><code>JVMBridgeEventData</code> informs the subsystem that the first parameter inherits from a <code>JVMBridgeBase</code> class and must be treated accordingly;</li>
-<li><code>RecordMetadata</code> represents the CLR version of the corresponding <code>RecordMetadata</code> within the JVM;</li>
+<li><code>RecordMetadata</code> represents the CLR version of the corresponding <code>RecordMetadata</code> within the JVM™;</li>
 </ul>
 </li>
 </ul>
@@ -163,12 +163,12 @@ Going on to the CLR side a possible concrete class in C# is as the following one
 <li>The first parameter is directly reported using the <code>TypedEventData</code> property;</li>
 <li>The second parameter shall be managed differently in this case because it is an <code>Exception</code>:
 <ul>
-<li>JCOBridge has its own mechanism to translate the exception from the JVM;</li>
-<li>Parameters raised from JVM, beyond the first, are available within <code>ExtraData</code> property;</li>
+<li>JCOBridge has its own mechanism to translate the exception from the JVM™;</li>
+<li>Parameters raised from JVM™, beyond the first, are available within <code>ExtraData</code> property;</li>
 <li>The code extracts the first object (the second of the event) and converts it into a generic <code>IJavaObject</code>;</li>
-<li>Invoking <code>JVMBridgeException.New(exception)</code> the subsystem reads the data from the real JVM exception and try to instantiate a valid exception, otherwise returns a generic <code>JVMBridgeException</code>;
+<li>Invoking <code>JVMBridgeException.New(exception)</code> the subsystem reads the data from the real JVM™ exception and try to instantiate a valid exception, otherwise returns a generic <code>JVMBridgeException</code>;
 <ul>
-<li><code>JVMBridgeException.New(exception)</code> can return null if the extracted data is not an <code>IJavaObject</code> or it is null within the JVM;</li>
+<li><code>JVMBridgeException.New(exception)</code> can return null if the extracted data is not an <code>IJavaObject</code> or it is null within the JVM™;</li>
 </ul>
 </li>
 </ul>
@@ -213,7 +213,7 @@ A correct approach is like the following:</p>
 <p>there are two main drawbacks:</p>
 <ul>
 <li>it creates a resource leak because the object cannot be programmatically disposed;</li>
-<li>on each cycle, the engine shall allocate the infrastructure to handle events from the JVM.</li>
+<li>on each cycle, the engine shall allocate the infrastructure to handle events from the JVM™.</li>
 </ul>
 
 </article>

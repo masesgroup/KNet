@@ -89,7 +89,7 @@
 
 
   <h1 id="Org_Apache_Kafka_Common_Memory_SimpleMemoryPool" data-uid="Org.Apache.Kafka.Common.Memory.SimpleMemoryPool" class="text-break">
-Class SimpleMemoryPool  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Memory/SimpleMemoryPool.cs/#L74"><i class="bi bi-code-slash"></i></a>
+Class SimpleMemoryPool  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Memory/SimpleMemoryPool.cs/#L70"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -102,7 +102,7 @@ Class SimpleMemoryPool  <a class="header-action link-secondary" title="View sour
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class SimpleMemoryPool : MemoryPool, IDynamicMetaObjectProvider, IJVMBridgeCore, IDisposable, IJVMBridgeBaseStatic, IJVMBridgeBase, IJVMBridgeDefinition, IMemoryPool</code></pre>
+    <pre><code class="lang-csharp hljs">public class SimpleMemoryPool : MemoryPool, IDynamicMetaObjectProvider, IJVMBridgeCore, IEquatable&lt;IJVMBridgeBase&gt;, IDisposable, IJVMBridgeBaseStatic, IJVMBridgeBase, IJVMBridgeDefinition, IMemoryPool</code></pre>
   </div>
 
 
@@ -113,8 +113,8 @@ Class SimpleMemoryPool  <a class="header-action link-secondary" title="View sour
     <dd>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject">DynamicObject</a></div>
-      <div><span class="xref">JVMBridgeBase</span></div>
-      <div><span class="xref">JVMBridgeBase</span>&lt;<a class="xref" href="Org.Apache.Kafka.Common.Memory.MemoryPool.html">MemoryPool</a>&gt;</div>
+      <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html">JVMBridgeBase</a></div>
+      <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase-1.html">JVMBridgeBase</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.Memory.MemoryPool.html">MemoryPool</a>&gt;</div>
       <div><a class="xref" href="Org.Apache.Kafka.Common.Memory.MemoryPool.html">MemoryPool</a></div>
       <div><span class="xref">SimpleMemoryPool</span></div>
     </dd>
@@ -124,11 +124,12 @@ Class SimpleMemoryPool  <a class="header-action link-secondary" title="View sour
     <dt>Implements</dt>
     <dd>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.idynamicmetaobjectprovider">IDynamicMetaObjectProvider</a></div>
-      <div><span class="xref">IJVMBridgeCore</span></div>
+      <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeCore.html">IJVMBridgeCore</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeBase.html">IJVMBridgeBase</a>&gt;</div>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
-      <div><span class="xref">IJVMBridgeBaseStatic</span></div>
-      <div><span class="xref">IJVMBridgeBase</span></div>
-      <div><span class="xref">IJVMBridgeDefinition</span></div>
+      <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeBaseStatic.html">IJVMBridgeBaseStatic</a></div>
+      <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeBase.html">IJVMBridgeBase</a></div>
+      <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.html">IJVMBridgeDefinition</a></div>
       <div><a class="xref" href="Org.Apache.Kafka.Common.Memory.IMemoryPool.html">IMemoryPool</a></div>
     </dd>
   </dl>
@@ -231,16 +232,16 @@ Class SimpleMemoryPool  <a class="header-action link-secondary" title="View sour
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;MemoryPool&gt;.SExecuteWithSignature&lt;TReturn, TConverter&gt;(Type, string, string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;MemoryPool&gt;.SExecuteArray&lt;T&gt;(IJavaType, string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;MemoryPool&gt;.SExecuteArray&lt;TArrayType&gt;(IJavaType, string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;MemoryPool&gt;.SExecuteWithSignatureArray&lt;T&gt;(IJavaType, string, string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;MemoryPool&gt;.SExecuteWithSignatureArray&lt;TArrayType&gt;(IJavaType, string, string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;MemoryPool&gt;.SExecuteArray&lt;T&gt;(string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;MemoryPool&gt;.SExecuteArray&lt;TArrayType&gt;(string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;MemoryPool&gt;.SExecuteWithSignatureArray&lt;T&gt;(string, string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;MemoryPool&gt;.SExecuteWithSignatureArray&lt;TArrayType&gt;(string, string, params object[])</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;MemoryPool&gt;.SGetField(IJavaType, string)</a>
@@ -276,10 +277,10 @@ Class SimpleMemoryPool  <a class="header-action link-secondary" title="View sour
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;MemoryPool&gt;.IsAssignableFrom(string)</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase&lt;MemoryPool&gt;.IsAssignableFrom(IJavaType)</span>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase-1.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_1_IsAssignableFrom_MASES_JCOBridge_C2JBridge_JVMInterop_IJavaType_">JVMBridgeBase&lt;MemoryPool&gt;.IsAssignableFrom(IJavaType)</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase&lt;MemoryPool&gt;.IsAssignableFrom&lt;T&gt;()</span>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase-1.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_1_IsAssignableFrom__1">JVMBridgeBase&lt;MemoryPool&gt;.IsAssignableFrom&lt;T&gt;()</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">JVMBridgeBase&lt;MemoryPool&gt;.New(params object[])</a>
@@ -288,94 +289,118 @@ Class SimpleMemoryPool  <a class="header-action link-secondary" title="View sour
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;MemoryPool&gt;.NewWithSignature(string, params object[])</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase&lt;MemoryPool&gt;.Execute&lt;T&gt;(params T[])</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;MemoryPool&gt;.NewAndWrapsDirect&lt;TNewClass&gt;(string, params object[])</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase&lt;MemoryPool&gt;.DynBridgeClazz</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;MemoryPool&gt;.NewWithSignatureAndWrapsDirect&lt;TNewClass&gt;(string, string, params object[])</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase&lt;MemoryPool&gt;.BridgeClazz</span>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase-1.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_1_Execute__1___0___">JVMBridgeBase&lt;MemoryPool&gt;.Execute&lt;T&gt;(params T[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase-1.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_1_DynBridgeClazz">JVMBridgeBase&lt;MemoryPool&gt;.DynBridgeClazz</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase-1.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_1_BridgeClazz">JVMBridgeBase&lt;MemoryPool&gt;.BridgeClazz</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_ReferenceEqualsJVM_MASES_JCOBridge_C2JBridge_JVMBridgeBase_MASES_JCOBridge_C2JBridge_JVMBridgeBase_">JVMBridgeBase.ReferenceEqualsJVM(JVMBridgeBase, JVMBridgeBase)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">JVMBridgeBase.ClazzOf&lt;TClass&gt;(bool)</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">JVMBridgeBase.ClazzOf&lt;TClass&gt;(out Exception, bool)</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.ClazzOf(string, bool)</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase.RuntimeClassNameOf&lt;T&gt;()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.ClazzOf(string, out Exception, bool)</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase.ClassNameOf&lt;T&gt;()</span>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_RuntimeClassNameOf__1">JVMBridgeBase.RuntimeClassNameOf&lt;T&gt;()</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase.ClassOf&lt;T&gt;()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase.RuntimeClassNameOf(Type)</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase.WrapsDirect&lt;TNewClass&gt;(IJavaObject)</span>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_ClassNameOf__1">JVMBridgeBase.ClassNameOf&lt;T&gt;()</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase.Wraps&lt;TNewClass&gt;(IJavaObject)</span>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_ClassOf__1">JVMBridgeBase.ClassOf&lt;T&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_WrapsDirect__1_MASES_JCOBridge_C2JBridge_JVMInterop_IJavaObject_">JVMBridgeBase.WrapsDirect&lt;TNewClass&gt;(IJavaObject)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_Wraps__1_MASES_JCOBridge_C2JBridge_JVMInterop_IJavaObject_">JVMBridgeBase.Wraps&lt;TNewClass&gt;(IJavaObject)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase.Wraps(Type, IJavaObject, string)</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase.Wraps&lt;TNewClass, TReturn&gt;(IJavaObject)</span>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_Wraps__2_MASES_JCOBridge_C2JBridge_JVMInterop_IJavaObject_">JVMBridgeBase.Wraps&lt;TNewClass, TReturn&gt;(IJavaObject)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase.Wraps&lt;TReturn&gt;(Type, IJavaObject, string)</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase.Wraps&lt;TNewClass, TReturn, TConverter&gt;(IJavaObject)</span>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_Wraps__3_MASES_JCOBridge_C2JBridge_JVMInterop_IJavaObject_">JVMBridgeBase.Wraps&lt;TNewClass, TReturn, TConverter&gt;(IJavaObject)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase.Wraps&lt;TReturn, TConverter&gt;(Type, IJavaObject)</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase.MonitorEnter()</span>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_MonitorEnter">JVMBridgeBase.MonitorEnter()</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase.MonitorExit()</span>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_MonitorExit">JVMBridgeBase.MonitorExit()</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IsInstanceOf(string)</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase.IsInstanceOf(IJavaType)</span>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsInstanceOf_MASES_JCOBridge_C2JBridge_JVMInterop_IJavaType_">JVMBridgeBase.IsInstanceOf(IJavaType)</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase.IsInstanceOf&lt;T&gt;()</span>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsInstanceOf__1">JVMBridgeBase.IsInstanceOf&lt;T&gt;()</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase.RuntimeIsInstanceOf&lt;T&gt;()</span>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_RuntimeIsInstanceOf__1">JVMBridgeBase.RuntimeIsInstanceOf&lt;T&gt;()</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase.CastTo&lt;TNewClass&gt;()</span>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_CastTo__1">JVMBridgeBase.CastTo&lt;TNewClass&gt;()</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase.CastDirect&lt;TNewClass&gt;()</span>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_CastDirect__1">JVMBridgeBase.CastDirect&lt;TNewClass&gt;()</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase.Dispose()</span>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_Dispose">JVMBridgeBase.Dispose()</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase.ToString()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">JVMBridgeBase.Dispose(bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_ToString">JVMBridgeBase.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_Equals_MASES_JCOBridge_C2JBridge_IJVMBridgeBase_">JVMBridgeBase.Equals(IJVMBridgeBase)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">JVMBridgeBase.Equals(object)</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase.GetHashCode()</span>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_GetHashCode">JVMBridgeBase.GetHashCode()</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase.Notify()</span>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_Notify">JVMBridgeBase.Notify()</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase.NotifyAll()</span>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_NotifyAll">JVMBridgeBase.NotifyAll()</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase.Wait()</span>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_Wait">JVMBridgeBase.Wait()</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">JVMBridgeBase.Wait(long)</a>
@@ -408,10 +433,10 @@ Class SimpleMemoryPool  <a class="header-action link-secondary" title="View sour
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteWithSignature&lt;TNewClass, TReturn, TConverter&gt;(string, string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteArray&lt;T&gt;(string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteArray&lt;TArrayType&gt;(string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteWithSignatureArray&lt;T&gt;(string, string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteWithSignatureArray&lt;TArrayType&gt;(string, string, params object[])</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IGetField(string)</a>
@@ -429,13 +454,13 @@ Class SimpleMemoryPool  <a class="header-action link-secondary" title="View sour
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.ISetField&lt;TValue&gt;(string, TValue)</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase.DynBridgeInstance</span>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_DynBridgeInstance">JVMBridgeBase.DynBridgeInstance</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase.BridgeInstance</span>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeInstance">JVMBridgeBase.BridgeInstance</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase.IsBridgeListener</span>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeListener">JVMBridgeBase.IsBridgeListener</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trygetmember">DynamicObject.TryGetMember(GetMemberBinder, out object)</a>
@@ -531,9 +556,42 @@ Class SimpleMemoryPool  <a class="header-action link-secondary" title="View sour
 
   <a id="Org_Apache_Kafka_Common_Memory_SimpleMemoryPool__ctor_" data-uid="Org.Apache.Kafka.Common.Memory.SimpleMemoryPool.#ctor*"></a>
 
+  <h3 id="Org_Apache_Kafka_Common_Memory_SimpleMemoryPool__ctor_MASES_JCOBridge_C2JBridge_IJVMBridgeBaseInitializer_" data-uid="Org.Apache.Kafka.Common.Memory.SimpleMemoryPool.#ctor(MASES.JCOBridge.C2JBridge.IJVMBridgeBaseInitializer)">
+  SimpleMemoryPool(IJVMBridgeBaseInitializer)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Memory/SimpleMemoryPool.cs/#L42"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Internal constructor: used internally from JCOBridge</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.&quot;)]
+public SimpleMemoryPool(IJVMBridgeBaseInitializer initializer)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>initializer</code> <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeBaseInitializer.html">IJVMBridgeBaseInitializer</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Apache_Kafka_Common_Memory_SimpleMemoryPool__ctor_" data-uid="Org.Apache.Kafka.Common.Memory.SimpleMemoryPool.#ctor*"></a>
+
   <h3 id="Org_Apache_Kafka_Common_Memory_SimpleMemoryPool__ctor_System_Int64_System_Int32_System_Boolean_Org_Apache_Kafka_Common_Metrics_Sensor_" data-uid="Org.Apache.Kafka.Common.Memory.SimpleMemoryPool.#ctor(System.Int64,System.Int32,System.Boolean,Org.Apache.Kafka.Common.Metrics.Sensor)">
   SimpleMemoryPool(long, int, bool, Sensor)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Memory/SimpleMemoryPool.cs/#L84"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Memory/SimpleMemoryPool.cs/#L80"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/memory/SimpleMemoryPool.html#org.apache.kafka.common.memory.SimpleMemoryPool(long,int,boolean,org.apache.kafka.common.metrics.Sensor)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/memory/SimpleMemoryPool.html#org.apache.kafka.common.memory.SimpleMemoryPool(long,int,boolean,org.apache.kafka.common.metrics.Sensor)</a></p>
@@ -575,7 +633,7 @@ Class SimpleMemoryPool  <a class="header-action link-secondary" title="View sour
 
   <h3 id="Org_Apache_Kafka_Common_Memory_SimpleMemoryPool__ctor_System_Object___" data-uid="Org.Apache.Kafka.Common.Memory.SimpleMemoryPool.#ctor(System.Object[])">
   SimpleMemoryPool(params object[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Memory/SimpleMemoryPool.cs/#L42"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Memory/SimpleMemoryPool.cs/#L47"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Generic constructor: it is useful for JCOBridge when there is a derived class which needs to pass arguments to the highest JVMBridgeBase class</p>
@@ -611,10 +669,10 @@ Class SimpleMemoryPool  <a class="header-action link-secondary" title="View sour
 
   <h3 id="Org_Apache_Kafka_Common_Memory_SimpleMemoryPool_BridgeClassName" data-uid="Org.Apache.Kafka.Common.Memory.SimpleMemoryPool.BridgeClassName">
   BridgeClassName
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Memory/SimpleMemoryPool.cs/#L50"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Memory/SimpleMemoryPool.cs/#L54"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm</a></p>
+  <div class="markdown level1 summary"><p>Java class name to be instantiated</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -643,10 +701,10 @@ Class SimpleMemoryPool  <a class="header-action link-secondary" title="View sour
 
   <h3 id="Org_Apache_Kafka_Common_Memory_SimpleMemoryPool_IsBridgeAbstract" data-uid="Org.Apache.Kafka.Common.Memory.SimpleMemoryPool.IsBridgeAbstract">
   IsBridgeAbstract
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Memory/SimpleMemoryPool.cs/#L54"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Memory/SimpleMemoryPool.cs/#L56"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeAbstract.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeAbstract.htm</a></p>
+  <div class="markdown level1 summary"><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.html#MASES_JCOBridge_C2JBridge_IJVMBridgeDefinition_BridgeClassName">BridgeClassName</a> is an abstract class, i.e. cannot be created an instance</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -678,7 +736,7 @@ Class SimpleMemoryPool  <a class="header-action link-secondary" title="View sour
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Memory/SimpleMemoryPool.cs/#L58"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeCloseable.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeCloseable.htm</a></p>
+  <div class="markdown level1 summary"><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.html#MASES_JCOBridge_C2JBridge_IJVMBridgeDefinition_BridgeClassName">BridgeClassName</a> implements Closeable</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -707,10 +765,10 @@ Class SimpleMemoryPool  <a class="header-action link-secondary" title="View sour
 
   <h3 id="Org_Apache_Kafka_Common_Memory_SimpleMemoryPool_IsBridgeInterface" data-uid="Org.Apache.Kafka.Common.Memory.SimpleMemoryPool.IsBridgeInterface">
   IsBridgeInterface
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Memory/SimpleMemoryPool.cs/#L62"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Memory/SimpleMemoryPool.cs/#L60"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeInterface.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeInterface.htm</a></p>
+  <div class="markdown level1 summary"><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.html#MASES_JCOBridge_C2JBridge_IJVMBridgeDefinition_BridgeClassName">BridgeClassName</a> is an interface, i.e. does not have any public constructor</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -739,10 +797,10 @@ Class SimpleMemoryPool  <a class="header-action link-secondary" title="View sour
 
   <h3 id="Org_Apache_Kafka_Common_Memory_SimpleMemoryPool_IsBridgeStatic" data-uid="Org.Apache.Kafka.Common.Memory.SimpleMemoryPool.IsBridgeStatic">
   IsBridgeStatic
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Memory/SimpleMemoryPool.cs/#L66"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Memory/SimpleMemoryPool.cs/#L62"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeStatic.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeStatic.htm</a></p>
+  <div class="markdown level1 summary"><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.html#MASES_JCOBridge_C2JBridge_IJVMBridgeDefinition_BridgeClassName">BridgeClassName</a> is a static class, i.e. does not have any public constructor</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -775,7 +833,7 @@ Class SimpleMemoryPool  <a class="header-action link-secondary" title="View sour
 
   <h3 id="Org_Apache_Kafka_Common_Memory_SimpleMemoryPool_AvailableMemory" data-uid="Org.Apache.Kafka.Common.Memory.SimpleMemoryPool.AvailableMemory">
   AvailableMemory()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Memory/SimpleMemoryPool.cs/#L125"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Memory/SimpleMemoryPool.cs/#L121"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/memory/SimpleMemoryPool.html#availableMemory--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/memory/SimpleMemoryPool.html#availableMemory--</a></p>
@@ -808,7 +866,7 @@ Class SimpleMemoryPool  <a class="header-action link-secondary" title="View sour
 
   <h3 id="Org_Apache_Kafka_Common_Memory_SimpleMemoryPool_IsOutOfMemory" data-uid="Org.Apache.Kafka.Common.Memory.SimpleMemoryPool.IsOutOfMemory">
   IsOutOfMemory()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Memory/SimpleMemoryPool.cs/#L108"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Memory/SimpleMemoryPool.cs/#L104"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/memory/SimpleMemoryPool.html#isOutOfMemory--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/memory/SimpleMemoryPool.html#isOutOfMemory--</a></p>
@@ -841,7 +899,7 @@ Class SimpleMemoryPool  <a class="header-action link-secondary" title="View sour
 
   <h3 id="Org_Apache_Kafka_Common_Memory_SimpleMemoryPool_Release_Java_Nio_ByteBuffer_" data-uid="Org.Apache.Kafka.Common.Memory.SimpleMemoryPool.Release(Java.Nio.ByteBuffer)">
   Release(ByteBuffer)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Memory/SimpleMemoryPool.cs/#L141"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Memory/SimpleMemoryPool.cs/#L137"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/memory/SimpleMemoryPool.html#release-java.nio.ByteBuffer-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/memory/SimpleMemoryPool.html#release-java.nio.ByteBuffer-</a></p>
@@ -874,7 +932,7 @@ Class SimpleMemoryPool  <a class="header-action link-secondary" title="View sour
 
   <h3 id="Org_Apache_Kafka_Common_Memory_SimpleMemoryPool_Size" data-uid="Org.Apache.Kafka.Common.Memory.SimpleMemoryPool.Size">
   Size()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Memory/SimpleMemoryPool.cs/#L133"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Memory/SimpleMemoryPool.cs/#L129"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/memory/SimpleMemoryPool.html#size--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/memory/SimpleMemoryPool.html#size--</a></p>
@@ -907,7 +965,7 @@ Class SimpleMemoryPool  <a class="header-action link-secondary" title="View sour
 
   <h3 id="Org_Apache_Kafka_Common_Memory_SimpleMemoryPool_TryAllocate_System_Int32_" data-uid="Org.Apache.Kafka.Common.Memory.SimpleMemoryPool.TryAllocate(System.Int32)">
   TryAllocate(int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Memory/SimpleMemoryPool.cs/#L117"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Memory/SimpleMemoryPool.cs/#L113"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/memory/SimpleMemoryPool.html#tryAllocate-int-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/memory/SimpleMemoryPool.html#tryAllocate-int-</a></p>
@@ -946,7 +1004,7 @@ Class SimpleMemoryPool  <a class="header-action link-secondary" title="View sour
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Memory/SimpleMemoryPool.cs/#L74" class="edit-link">Edit this page</a>
+          <a href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Memory/SimpleMemoryPool.cs/#L70" class="edit-link">Edit this page</a>
         </div>
 
 

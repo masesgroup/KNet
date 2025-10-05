@@ -89,7 +89,7 @@
 
 
   <h1 id="Org_Apache_Kafka_Common_Serialization_Serializer_1" data-uid="Org.Apache.Kafka.Common.Serialization.Serializer`1" class="text-break">
-Class Serializer&lt;T&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Serialization/Serializer.cs/#L426"><i class="bi bi-code-slash"></i></a>
+Class Serializer&lt;T&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Serialization/Serializer.cs/#L438"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -97,12 +97,12 @@ Class Serializer&lt;T&gt;  <a class="header-action link-secondary" title="View s
   <dl><dt>Assembly</dt><dd>MASES.KNet.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Listener for Kafka Serializer. Extends <span class="xref">MASES.JCOBridge.C2JBridge.JVMBridgeListener</span>. Implements <a class="xref" href="Org.Apache.Kafka.Common.Serialization.ISerializer-1.html">ISerializer&lt;T&gt;</a></p>
+  <div class="markdown summary"><p>Listener for Kafka Serializer. Extends <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeListener.html">JVMBridgeListener</a>. Implements <a class="xref" href="Org.Apache.Kafka.Common.Serialization.ISerializer-1.html">ISerializer&lt;T&gt;</a></p>
 </div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class Serializer&lt;T&gt; : JVMBridgeListener, IDynamicMetaObjectProvider, IJVMBridgeCore, IDisposable, IJVMBridgeBaseStatic, ISerializer&lt;T&gt;, ISerializer, IJVMBridgeBase, IJVMBridgeDefinition</code></pre>
+    <pre><code class="lang-csharp hljs">public class Serializer&lt;T&gt; : JVMBridgeListener, IDynamicMetaObjectProvider, IJVMBridgeCore, IEquatable&lt;IJVMBridgeBase&gt;, IDisposable, IJVMBridgeBaseStatic, ISerializer&lt;T&gt;, ISerializer, IJVMBridgeBase, IJVMBridgeDefinition</code></pre>
   </div>
 
 
@@ -118,9 +118,9 @@ Class Serializer&lt;T&gt;  <a class="header-action link-secondary" title="View s
     <dd>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject">DynamicObject</a></div>
-      <div><span class="xref">JVMBridgeBase</span></div>
-      <div><span class="xref">JVMBridgeBase</span>&lt;<span class="xref">JVMBridgeListener</span>&gt;</div>
-      <div><span class="xref">JVMBridgeListener</span></div>
+      <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html">JVMBridgeBase</a></div>
+      <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase-1.html">JVMBridgeBase</a>&lt;<a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeListener.html">JVMBridgeListener</a>&gt;</div>
+      <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeListener.html">JVMBridgeListener</a></div>
       <div><span class="xref">Serializer&lt;T&gt;</span></div>
     </dd>
   </dl>
@@ -129,13 +129,14 @@ Class Serializer&lt;T&gt;  <a class="header-action link-secondary" title="View s
     <dt>Implements</dt>
     <dd>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.idynamicmetaobjectprovider">IDynamicMetaObjectProvider</a></div>
-      <div><span class="xref">IJVMBridgeCore</span></div>
+      <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeCore.html">IJVMBridgeCore</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeBase.html">IJVMBridgeBase</a>&gt;</div>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
-      <div><span class="xref">IJVMBridgeBaseStatic</span></div>
+      <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeBaseStatic.html">IJVMBridgeBaseStatic</a></div>
       <div><a class="xref" href="Org.Apache.Kafka.Common.Serialization.ISerializer-1.html">ISerializer</a>&lt;T&gt;</div>
       <div><a class="xref" href="Org.Apache.Kafka.Common.Serialization.ISerializer.html">ISerializer</a></div>
-      <div><span class="xref">IJVMBridgeBase</span></div>
-      <div><span class="xref">IJVMBridgeDefinition</span></div>
+      <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeBase.html">IJVMBridgeBase</a></div>
+      <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.html">IJVMBridgeDefinition</a></div>
     </dd>
   </dl>
 
@@ -156,19 +157,19 @@ Class Serializer&lt;T&gt;  <a class="header-action link-secondary" title="View s
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeListener.AddEventHandler&lt;TDataClass&gt;(string, EventHandler&lt;CLRListenerEventArgs&lt;TDataClass&gt;&gt;)</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeListener.Dispose()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">JVMBridgeListener.Dispose(bool)</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeListener.AutoInit</span>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeListener.html#MASES_JCOBridge_C2JBridge_JVMBridgeListener_AutoInit">JVMBridgeListener.AutoInit</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeListener.IsBridgeStatic</span>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeListener.html#MASES_JCOBridge_C2JBridge_JVMBridgeListener_IsBridgeStatic">JVMBridgeListener.IsBridgeStatic</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeListener.IsBridgeCloseable</span>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeListener.html#MASES_JCOBridge_C2JBridge_JVMBridgeListener_IsBridgeCloseable">JVMBridgeListener.IsBridgeCloseable</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeListener.IsBridgeListener</span>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeListener.html#MASES_JCOBridge_C2JBridge_JVMBridgeListener_IsBridgeListener">JVMBridgeListener.IsBridgeListener</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;JVMBridgeListener&gt;.SExecute(IJavaType, string, params object[])</a>
@@ -255,16 +256,16 @@ Class Serializer&lt;T&gt;  <a class="header-action link-secondary" title="View s
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;JVMBridgeListener&gt;.SExecuteWithSignature&lt;TReturn, TConverter&gt;(Type, string, string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;JVMBridgeListener&gt;.SExecuteArray&lt;T&gt;(IJavaType, string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;JVMBridgeListener&gt;.SExecuteArray&lt;TArrayType&gt;(IJavaType, string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;JVMBridgeListener&gt;.SExecuteWithSignatureArray&lt;T&gt;(IJavaType, string, string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;JVMBridgeListener&gt;.SExecuteWithSignatureArray&lt;TArrayType&gt;(IJavaType, string, string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;JVMBridgeListener&gt;.SExecuteArray&lt;T&gt;(string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;JVMBridgeListener&gt;.SExecuteArray&lt;TArrayType&gt;(string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;JVMBridgeListener&gt;.SExecuteWithSignatureArray&lt;T&gt;(string, string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;JVMBridgeListener&gt;.SExecuteWithSignatureArray&lt;TArrayType&gt;(string, string, params object[])</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;JVMBridgeListener&gt;.SGetField(IJavaType, string)</a>
@@ -300,10 +301,10 @@ Class Serializer&lt;T&gt;  <a class="header-action link-secondary" title="View s
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;JVMBridgeListener&gt;.IsAssignableFrom(string)</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase&lt;JVMBridgeListener&gt;.IsAssignableFrom(IJavaType)</span>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase-1.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_1_IsAssignableFrom_MASES_JCOBridge_C2JBridge_JVMInterop_IJavaType_">JVMBridgeBase&lt;JVMBridgeListener&gt;.IsAssignableFrom(IJavaType)</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase&lt;JVMBridgeListener&gt;.IsAssignableFrom&lt;T&gt;()</span>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase-1.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_1_IsAssignableFrom__1">JVMBridgeBase&lt;JVMBridgeListener&gt;.IsAssignableFrom&lt;T&gt;()</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">JVMBridgeBase&lt;JVMBridgeListener&gt;.New(params object[])</a>
@@ -312,91 +313,115 @@ Class Serializer&lt;T&gt;  <a class="header-action link-secondary" title="View s
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;JVMBridgeListener&gt;.NewWithSignature(string, params object[])</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase&lt;JVMBridgeListener&gt;.Execute&lt;T&gt;(params T[])</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;JVMBridgeListener&gt;.NewAndWrapsDirect&lt;TNewClass&gt;(string, params object[])</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase&lt;JVMBridgeListener&gt;.DynBridgeClazz</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;JVMBridgeListener&gt;.NewWithSignatureAndWrapsDirect&lt;TNewClass&gt;(string, string, params object[])</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase&lt;JVMBridgeListener&gt;.BridgeClazz</span>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase-1.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_1_Execute__1___0___">JVMBridgeBase&lt;JVMBridgeListener&gt;.Execute&lt;T&gt;(params T[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase-1.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_1_DynBridgeClazz">JVMBridgeBase&lt;JVMBridgeListener&gt;.DynBridgeClazz</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase-1.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_1_BridgeClazz">JVMBridgeBase&lt;JVMBridgeListener&gt;.BridgeClazz</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_ReferenceEqualsJVM_MASES_JCOBridge_C2JBridge_JVMBridgeBase_MASES_JCOBridge_C2JBridge_JVMBridgeBase_">JVMBridgeBase.ReferenceEqualsJVM(JVMBridgeBase, JVMBridgeBase)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">JVMBridgeBase.ClazzOf&lt;TClass&gt;(bool)</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">JVMBridgeBase.ClazzOf&lt;TClass&gt;(out Exception, bool)</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.ClazzOf(string, bool)</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase.RuntimeClassNameOf&lt;T&gt;()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.ClazzOf(string, out Exception, bool)</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase.ClassNameOf&lt;T&gt;()</span>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_RuntimeClassNameOf__1">JVMBridgeBase.RuntimeClassNameOf&lt;T&gt;()</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase.ClassOf&lt;T&gt;()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase.RuntimeClassNameOf(Type)</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase.WrapsDirect&lt;TNewClass&gt;(IJavaObject)</span>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_ClassNameOf__1">JVMBridgeBase.ClassNameOf&lt;T&gt;()</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase.Wraps&lt;TNewClass&gt;(IJavaObject)</span>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_ClassOf__1">JVMBridgeBase.ClassOf&lt;T&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_WrapsDirect__1_MASES_JCOBridge_C2JBridge_JVMInterop_IJavaObject_">JVMBridgeBase.WrapsDirect&lt;TNewClass&gt;(IJavaObject)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_Wraps__1_MASES_JCOBridge_C2JBridge_JVMInterop_IJavaObject_">JVMBridgeBase.Wraps&lt;TNewClass&gt;(IJavaObject)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase.Wraps(Type, IJavaObject, string)</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase.Wraps&lt;TNewClass, TReturn&gt;(IJavaObject)</span>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_Wraps__2_MASES_JCOBridge_C2JBridge_JVMInterop_IJavaObject_">JVMBridgeBase.Wraps&lt;TNewClass, TReturn&gt;(IJavaObject)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase.Wraps&lt;TReturn&gt;(Type, IJavaObject, string)</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase.Wraps&lt;TNewClass, TReturn, TConverter&gt;(IJavaObject)</span>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_Wraps__3_MASES_JCOBridge_C2JBridge_JVMInterop_IJavaObject_">JVMBridgeBase.Wraps&lt;TNewClass, TReturn, TConverter&gt;(IJavaObject)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase.Wraps&lt;TReturn, TConverter&gt;(Type, IJavaObject)</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase.MonitorEnter()</span>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_MonitorEnter">JVMBridgeBase.MonitorEnter()</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase.MonitorExit()</span>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_MonitorExit">JVMBridgeBase.MonitorExit()</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IsInstanceOf(string)</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase.IsInstanceOf(IJavaType)</span>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsInstanceOf_MASES_JCOBridge_C2JBridge_JVMInterop_IJavaType_">JVMBridgeBase.IsInstanceOf(IJavaType)</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase.IsInstanceOf&lt;T&gt;()</span>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsInstanceOf__1">JVMBridgeBase.IsInstanceOf&lt;T&gt;()</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase.RuntimeIsInstanceOf&lt;T&gt;()</span>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_RuntimeIsInstanceOf__1">JVMBridgeBase.RuntimeIsInstanceOf&lt;T&gt;()</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase.CastTo&lt;TNewClass&gt;()</span>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_CastTo__1">JVMBridgeBase.CastTo&lt;TNewClass&gt;()</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase.CastDirect&lt;TNewClass&gt;()</span>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_CastDirect__1">JVMBridgeBase.CastDirect&lt;TNewClass&gt;()</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase.ToString()</span>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_Dispose">JVMBridgeBase.Dispose()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_ToString">JVMBridgeBase.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_Equals_MASES_JCOBridge_C2JBridge_IJVMBridgeBase_">JVMBridgeBase.Equals(IJVMBridgeBase)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">JVMBridgeBase.Equals(object)</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase.GetHashCode()</span>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_GetHashCode">JVMBridgeBase.GetHashCode()</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase.Notify()</span>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_Notify">JVMBridgeBase.Notify()</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase.NotifyAll()</span>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_NotifyAll">JVMBridgeBase.NotifyAll()</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase.Wait()</span>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_Wait">JVMBridgeBase.Wait()</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">JVMBridgeBase.Wait(long)</a>
@@ -429,10 +454,10 @@ Class Serializer&lt;T&gt;  <a class="header-action link-secondary" title="View s
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteWithSignature&lt;TNewClass, TReturn, TConverter&gt;(string, string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteArray&lt;T&gt;(string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteArray&lt;TArrayType&gt;(string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteWithSignatureArray&lt;T&gt;(string, string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteWithSignatureArray&lt;TArrayType&gt;(string, string, params object[])</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IGetField(string)</a>
@@ -450,16 +475,16 @@ Class Serializer&lt;T&gt;  <a class="header-action link-secondary" title="View s
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.ISetField&lt;TValue&gt;(string, TValue)</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase.DynBridgeInstance</span>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_DynBridgeInstance">JVMBridgeBase.DynBridgeInstance</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase.BridgeInstance</span>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeInstance">JVMBridgeBase.BridgeInstance</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase.IsBridgeInterface</span>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeInterface">JVMBridgeBase.IsBridgeInterface</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase.IsBridgeAbstract</span>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeAbstract">JVMBridgeBase.IsBridgeAbstract</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trygetmember">DynamicObject.TryGetMember(GetMemberBinder, out object)</a>
@@ -533,7 +558,7 @@ Class Serializer&lt;T&gt;  <a class="header-action link-secondary" title="View s
 
   <h3 id="Org_Apache_Kafka_Common_Serialization_Serializer_1__ctor" data-uid="Org.Apache.Kafka.Common.Serialization.Serializer`1.#ctor">
   Serializer()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Serialization/Serializer.cs/#L105"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Serialization/Serializer.cs/#L111"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge</p>
@@ -556,6 +581,71 @@ Class Serializer&lt;T&gt;  <a class="header-action link-secondary" title="View s
 
 
 
+  <a id="Org_Apache_Kafka_Common_Serialization_Serializer_1__ctor_" data-uid="Org.Apache.Kafka.Common.Serialization.Serializer`1.#ctor*"></a>
+
+  <h3 id="Org_Apache_Kafka_Common_Serialization_Serializer_1__ctor_MASES_JCOBridge_C2JBridge_IJVMBridgeBaseInitializer_" data-uid="Org.Apache.Kafka.Common.Serialization.Serializer`1.#ctor(MASES.JCOBridge.C2JBridge.IJVMBridgeBaseInitializer)">
+  Serializer(IJVMBridgeBaseInitializer)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Serialization/Serializer.cs/#L115"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Internal constructor: used internally from JCOBridge</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.&quot;)]
+public Serializer(IJVMBridgeBaseInitializer initializer)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>initializer</code> <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeBaseInitializer.html">IJVMBridgeBaseInitializer</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Apache_Kafka_Common_Serialization_Serializer_1__ctor_" data-uid="Org.Apache.Kafka.Common.Serialization.Serializer`1.#ctor*"></a>
+
+  <h3 id="Org_Apache_Kafka_Common_Serialization_Serializer_1__ctor_System_Object___" data-uid="Org.Apache.Kafka.Common.Serialization.Serializer`1.#ctor(System.Object[])">
+  Serializer(params object[])
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Serialization/Serializer.cs/#L120"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Generic constructor: it is useful for JCOBridge when there is a derived class which needs to pass arguments to the highest JVMBridgeBase class</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Serializer(params object[] args)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>args</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
   <h2 class="section" id="properties">Properties
 </h2>
 
@@ -564,10 +654,10 @@ Class Serializer&lt;T&gt;  <a class="header-action link-secondary" title="View s
 
   <h3 id="Org_Apache_Kafka_Common_Serialization_Serializer_1_BridgeClassName" data-uid="Org.Apache.Kafka.Common.Serialization.Serializer`1.BridgeClassName">
   BridgeClassName
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Serialization/Serializer.cs/#L114"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Serialization/Serializer.cs/#L127"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeListener_BridgeClassName.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeListener_BridgeClassName.htm</a></p>
+  <div class="markdown level1 summary"><p>Java class name to be instantiated</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -596,7 +686,7 @@ Class Serializer&lt;T&gt;  <a class="header-action link-secondary" title="View s
 
   <h3 id="Org_Apache_Kafka_Common_Serialization_Serializer_1_OnClose" data-uid="Org.Apache.Kafka.Common.Serialization.Serializer`1.OnClose">
   OnClose
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Serialization/Serializer.cs/#L535"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Serialization/Serializer.cs/#L547"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Handler for <a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/serialization/Serializer.html#close--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/serialization/Serializer.html#close--</a></p>
@@ -631,7 +721,7 @@ Class Serializer&lt;T&gt;  <a class="header-action link-secondary" title="View s
 
   <h3 id="Org_Apache_Kafka_Common_Serialization_Serializer_1_OnConfigure" data-uid="Org.Apache.Kafka.Common.Serialization.Serializer`1.OnConfigure">
   OnConfigure
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Serialization/Serializer.cs/#L569"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Serialization/Serializer.cs/#L581"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Handler for <a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/serialization/Serializer.html#configure-java.util.Map-boolean-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/serialization/Serializer.html#configure-java.util.Map-boolean-</a></p>
@@ -666,7 +756,7 @@ Class Serializer&lt;T&gt;  <a class="header-action link-secondary" title="View s
 
   <h3 id="Org_Apache_Kafka_Common_Serialization_Serializer_1_OnSerialize" data-uid="Org.Apache.Kafka.Common.Serialization.Serializer`1.OnSerialize">
   OnSerialize
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Serialization/Serializer.cs/#L461"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Serialization/Serializer.cs/#L473"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Handler for <a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/serialization/Serializer.html#serialize-java.lang.String-java.lang.Object-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/serialization/Serializer.html#serialize-java.lang.String-java.lang.Object-</a></p>
@@ -701,7 +791,7 @@ Class Serializer&lt;T&gt;  <a class="header-action link-secondary" title="View s
 
   <h3 id="Org_Apache_Kafka_Common_Serialization_Serializer_1_OnSerialize3" data-uid="Org.Apache.Kafka.Common.Serialization.Serializer`1.OnSerialize3">
   OnSerialize3
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Serialization/Serializer.cs/#L499"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Serialization/Serializer.cs/#L511"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Handler for <a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/serialization/Serializer.html#serialize-java.lang.String-org.apache.kafka.common.header.Headers-java.lang.Object-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/serialization/Serializer.html#serialize-java.lang.String-org.apache.kafka.common.header.Headers-java.lang.Object-</a></p>
@@ -740,7 +830,7 @@ Class Serializer&lt;T&gt;  <a class="header-action link-secondary" title="View s
 
   <h3 id="Org_Apache_Kafka_Common_Serialization_Serializer_1_Close" data-uid="Org.Apache.Kafka.Common.Serialization.Serializer`1.Close">
   Close()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Serialization/Serializer.cs/#L550"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Serialization/Serializer.cs/#L562"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/serialization/Serializer.html#close--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/serialization/Serializer.html#close--</a></p>
@@ -770,7 +860,7 @@ Class Serializer&lt;T&gt;  <a class="header-action link-secondary" title="View s
 
   <h3 id="Org_Apache_Kafka_Common_Serialization_Serializer_1_CloseDefault" data-uid="Org.Apache.Kafka.Common.Serialization.Serializer`1.CloseDefault">
   CloseDefault()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Serialization/Serializer.cs/#L526"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Serialization/Serializer.cs/#L538"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/serialization/Serializer.html#close--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/serialization/Serializer.html#close--</a></p>
@@ -800,7 +890,7 @@ Class Serializer&lt;T&gt;  <a class="header-action link-secondary" title="View s
 
   <h3 id="Org_Apache_Kafka_Common_Serialization_Serializer_1_Configure_Java_Util_Map_Java_Lang_String_System_Object__System_Boolean_" data-uid="Org.Apache.Kafka.Common.Serialization.Serializer`1.Configure(Java.Util.Map{Java.Lang.String,System.Object},System.Boolean)">
   Configure(Map&lt;String, object&gt;, bool)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Serialization/Serializer.cs/#L586"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Serialization/Serializer.cs/#L598"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/serialization/Serializer.html#configure-java.util.Map-boolean-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/serialization/Serializer.html#configure-java.util.Map-boolean-</a></p>
@@ -839,7 +929,7 @@ Class Serializer&lt;T&gt;  <a class="header-action link-secondary" title="View s
 
   <h3 id="Org_Apache_Kafka_Common_Serialization_Serializer_1_ConfigureDefault_Java_Util_Map_Java_Lang_String_System_Object__System_Boolean_" data-uid="Org.Apache.Kafka.Common.Serialization.Serializer`1.ConfigureDefault(Java.Util.Map{Java.Lang.String,System.Object},System.Boolean)">
   ConfigureDefault(Map&lt;String, object&gt;, bool)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Serialization/Serializer.cs/#L560"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Serialization/Serializer.cs/#L572"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/serialization/Serializer.html#configure-java.util.Map-boolean-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/serialization/Serializer.html#configure-java.util.Map-boolean-</a></p>
@@ -878,7 +968,7 @@ Class Serializer&lt;T&gt;  <a class="header-action link-secondary" title="View s
 
   <h3 id="Org_Apache_Kafka_Common_Serialization_Serializer_1_InitializeHandlers" data-uid="Org.Apache.Kafka.Common.Serialization.Serializer`1.InitializeHandlers">
   InitializeHandlers()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Serialization/Serializer.cs/#L448"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Serialization/Serializer.cs/#L460"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Handlers initializer for <a class="xref" href="Org.Apache.Kafka.Common.Serialization.Serializer.html">Serializer</a></p>
@@ -905,7 +995,7 @@ Class Serializer&lt;T&gt;  <a class="header-action link-secondary" title="View s
 
   <h3 id="Org_Apache_Kafka_Common_Serialization_Serializer_1_Serialize_Java_Lang_String_Org_Apache_Kafka_Common_Header_Headers__0_" data-uid="Org.Apache.Kafka.Common.Serialization.Serializer`1.Serialize(Java.Lang.String,Org.Apache.Kafka.Common.Header.Headers,`0)">
   Serialize(String, Headers, T)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Serialization/Serializer.cs/#L518"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Serialization/Serializer.cs/#L530"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/serialization/Serializer.html#serialize-java.lang.String-org.apache.kafka.common.header.Headers-java.lang.Object-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/serialization/Serializer.html#serialize-java.lang.String-org.apache.kafka.common.header.Headers-java.lang.Object-</a></p>
@@ -953,7 +1043,7 @@ Class Serializer&lt;T&gt;  <a class="header-action link-secondary" title="View s
 
   <h3 id="Org_Apache_Kafka_Common_Serialization_Serializer_1_Serialize_Java_Lang_String__0_" data-uid="Org.Apache.Kafka.Common.Serialization.Serializer`1.Serialize(Java.Lang.String,`0)">
   Serialize(String, T)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Serialization/Serializer.cs/#L478"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Serialization/Serializer.cs/#L490"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/serialization/Serializer.html#serialize-java.lang.String-java.lang.Object-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/serialization/Serializer.html#serialize-java.lang.String-java.lang.Object-</a></p>
@@ -995,7 +1085,7 @@ Class Serializer&lt;T&gt;  <a class="header-action link-secondary" title="View s
 
   <h3 id="Org_Apache_Kafka_Common_Serialization_Serializer_1_SerializeDefault_Java_Lang_String_Org_Apache_Kafka_Common_Header_Headers__0_" data-uid="Org.Apache.Kafka.Common.Serialization.Serializer`1.SerializeDefault(Java.Lang.String,Org.Apache.Kafka.Common.Header.Headers,`0)">
   SerializeDefault(String, Headers, T)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Serialization/Serializer.cs/#L490"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Serialization/Serializer.cs/#L502"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/serialization/Serializer.html#serialize-java.lang.String-org.apache.kafka.common.header.Headers-java.lang.Object-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/serialization/Serializer.html#serialize-java.lang.String-org.apache.kafka.common.header.Headers-java.lang.Object-</a></p>
@@ -1043,7 +1133,7 @@ Class Serializer&lt;T&gt;  <a class="header-action link-secondary" title="View s
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Serialization/Serializer.cs/#L426" class="edit-link">Edit this page</a>
+          <a href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Serialization/Serializer.cs/#L438" class="edit-link">Edit this page</a>
         </div>
 
 

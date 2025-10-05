@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+      <title>Class ConnectStandaloneCmdletCommand | MASES Group - KNet </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class ConnectStandaloneCmdletCommand | MASES Group - KNet ">
+      <meta name="description" content="This is a descriptive page of KNet, the .NET suite for Apache Kafka">
+      
+      <link rel="icon" href="../images/favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/masesgroup/KNet/new/release/2.9.X/apiSpec/new?filename=MASES_KNet_PowerShell_Cmdlet_Tools_ConnectStandaloneCmdletCommand.md&amp;value=---%0Auid%3A%20MASES.KNet.PowerShell.Cmdlet.Tools.ConnectStandaloneCmdletCommand%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/logo.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="MASES.KNet.PowerShell.Cmdlet.Tools.ConnectStandaloneCmdletCommand">
+
+
+
+  <h1 id="MASES_KNet_PowerShell_Cmdlet_Tools_ConnectStandaloneCmdletCommand" data-uid="MASES.KNet.PowerShell.Cmdlet.Tools.ConnectStandaloneCmdletCommand" class="text-break">
+Class ConnectStandaloneCmdletCommand  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNetPS/ToolsCmdlet/ConnectStandaloneCmdletCommand.cs/#L24"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="MASES.html">MASES</a>.<a class="xref" href="MASES.KNet.html">KNet</a>.<a class="xref" href="MASES.KNet.PowerShell.html">PowerShell</a>.<a class="xref" href="MASES.KNet.PowerShell.Cmdlet.html">Cmdlet</a>.<a class="xref" href="MASES.KNet.PowerShell.Cmdlet.Tools.html">Tools</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>MASES.KNetPS.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"></div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Cmdlet(&quot;Start&quot;, &quot;ConnectStandalone&quot;)]
+[JNetPSExternalize]
+public class ConnectStandaloneCmdletCommand : KafkaClassToRunCmdletCommandBase&lt;ConnectStandaloneCmdletCommand&gt;</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.management.automation.internal.internalcommand">InternalCommand</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.management.automation.cmdlet">Cmdlet</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.management.automation.pscmdlet">PSCmdlet</a></div>
+      <div><a class="xref" href="https://jnet.masesgroup.com/api/MASES.JNet.PowerShell.Cmdlet.JNetPSExternalizableCmdlet-1.html">JNetPSExternalizableCmdlet</a>&lt;<a class="xref" href="MASES.KNet.PowerShell.Cmdlet.Tools.ConnectStandaloneCmdletCommand.html">ConnectStandaloneCmdletCommand</a>&gt;</div>
+      <div><a class="xref" href="https://jnet.masesgroup.com/api/MASES.JNet.PowerShell.Cmdlet.StartJNetPSCmdletCommandBase-2.html">StartJNetPSCmdletCommandBase</a>&lt;<a class="xref" href="MASES.KNet.PowerShell.Cmdlet.Tools.ConnectStandaloneCmdletCommand.html">ConnectStandaloneCmdletCommand</a>, <a class="xref" href="MASES.KNet.PowerShell.KNetPSCore.html">KNetPSCore</a>&gt;</div>
+      <div><a class="xref" href="MASES.KNet.PowerShell.Cmdlet.StartKNetPSCmdletCommandBase-1.html">StartKNetPSCmdletCommandBase</a>&lt;<a class="xref" href="MASES.KNet.PowerShell.Cmdlet.Tools.ConnectStandaloneCmdletCommand.html">ConnectStandaloneCmdletCommand</a>&gt;</div>
+      <div><a class="xref" href="MASES.KNet.PowerShell.Cmdlet.KafkaClassToRunCmdletCommandBase-1.html">KafkaClassToRunCmdletCommandBase</a>&lt;<a class="xref" href="MASES.KNet.PowerShell.Cmdlet.Tools.ConnectStandaloneCmdletCommand.html">ConnectStandaloneCmdletCommand</a>&gt;</div>
+      <div><span class="xref">ConnectStandaloneCmdletCommand</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="MASES.KNet.PowerShell.Cmdlet.KafkaClassToRunCmdletCommandBase-1.html#MASES_KNet_PowerShell_Cmdlet_KafkaClassToRunCmdletCommandBase_1_Arguments">KafkaClassToRunCmdletCommandBase&lt;ConnectStandaloneCmdletCommand&gt;.Arguments</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.PowerShell.Cmdlet.KafkaClassToRunCmdletCommandBase-1.html#MASES_KNet_PowerShell_Cmdlet_KafkaClassToRunCmdletCommandBase_1_OnBeforeCreateGlobalInstance">KafkaClassToRunCmdletCommandBase&lt;ConnectStandaloneCmdletCommand&gt;.OnBeforeCreateGlobalInstance()</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.PowerShell.Cmdlet.KafkaClassToRunCmdletCommandBase-1.html#MASES_KNet_PowerShell_Cmdlet_KafkaClassToRunCmdletCommandBase_1_OnAfterCreateGlobalInstance">KafkaClassToRunCmdletCommandBase&lt;ConnectStandaloneCmdletCommand&gt;.OnAfterCreateGlobalInstance()</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.PowerShell.Cmdlet.StartKNetPSCmdletCommandBase-1.html#MASES_KNet_PowerShell_Cmdlet_StartKNetPSCmdletCommandBase_1_ScalaVersion">StartKNetPSCmdletCommandBase&lt;ConnectStandaloneCmdletCommand&gt;.ScalaVersion</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.PowerShell.Cmdlet.StartKNetPSCmdletCommandBase-1.html#MASES_KNet_PowerShell_Cmdlet_StartKNetPSCmdletCommandBase_1_KafkaJarLocation">StartKNetPSCmdletCommandBase&lt;ConnectStandaloneCmdletCommand&gt;.KafkaJarLocation</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.PowerShell.Cmdlet.StartKNetPSCmdletCommandBase-1.html#MASES_KNet_PowerShell_Cmdlet_StartKNetPSCmdletCommandBase_1_Log4JPath">StartKNetPSCmdletCommandBase&lt;ConnectStandaloneCmdletCommand&gt;.Log4JPath</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.PowerShell.Cmdlet.StartKNetPSCmdletCommandBase-1.html#MASES_KNet_PowerShell_Cmdlet_StartKNetPSCmdletCommandBase_1_LogPath">StartKNetPSCmdletCommandBase&lt;ConnectStandaloneCmdletCommand&gt;.LogPath</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.PowerShell.Cmdlet.StartKNetPSCmdletCommandBase-1.html#MASES_KNet_PowerShell_Cmdlet_StartKNetPSCmdletCommandBase_1_DisableJMX">StartKNetPSCmdletCommandBase&lt;ConnectStandaloneCmdletCommand&gt;.DisableJMX</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jnet.masesgroup.com/api/MASES.JNet.PowerShell.Cmdlet.StartJNetPSCmdletCommandBase-2.html#MASES_JNet_PowerShell_Cmdlet_StartJNetPSCmdletCommandBase_2_ProcessCommand">StartJNetPSCmdletCommandBase&lt;ConnectStandaloneCmdletCommand, KNetPSCore&gt;.ProcessCommand()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">StartJNetPSCmdletCommandBase&lt;ConnectStandaloneCmdletCommand, KNetPSCore&gt;.AddJVMOption(string, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jnet.masesgroup.com/api/MASES.JNet.PowerShell.Cmdlet.StartJNetPSCmdletCommandBase-2.html#MASES_JNet_PowerShell_Cmdlet_StartJNetPSCmdletCommandBase_2_OnBeforeCreateGlobalInstance">StartJNetPSCmdletCommandBase&lt;ConnectStandaloneCmdletCommand, KNetPSCore&gt;.OnBeforeCreateGlobalInstance()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jnet.masesgroup.com/api/MASES.JNet.PowerShell.Cmdlet.StartJNetPSCmdletCommandBase-2.html#MASES_JNet_PowerShell_Cmdlet_StartJNetPSCmdletCommandBase_2_CreateGlobalInstance">StartJNetPSCmdletCommandBase&lt;ConnectStandaloneCmdletCommand, KNetPSCore&gt;.CreateGlobalInstance()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jnet.masesgroup.com/api/MASES.JNet.PowerShell.Cmdlet.StartJNetPSCmdletCommandBase-2.html#MASES_JNet_PowerShell_Cmdlet_StartJNetPSCmdletCommandBase_2_OnAfterCreateGlobalInstance">StartJNetPSCmdletCommandBase&lt;ConnectStandaloneCmdletCommand, KNetPSCore&gt;.OnAfterCreateGlobalInstance()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jnet.masesgroup.com/api/MASES.JNet.PowerShell.Cmdlet.StartJNetPSCmdletCommandBase-2.html#MASES_JNet_PowerShell_Cmdlet_StartJNetPSCmdletCommandBase_2_LicensePath">StartJNetPSCmdletCommandBase&lt;ConnectStandaloneCmdletCommand, KNetPSCore&gt;.LicensePath</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jnet.masesgroup.com/api/MASES.JNet.PowerShell.Cmdlet.StartJNetPSCmdletCommandBase-2.html#MASES_JNet_PowerShell_Cmdlet_StartJNetPSCmdletCommandBase_2_JDKHome">StartJNetPSCmdletCommandBase&lt;ConnectStandaloneCmdletCommand, KNetPSCore&gt;.JDKHome</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jnet.masesgroup.com/api/MASES.JNet.PowerShell.Cmdlet.StartJNetPSCmdletCommandBase-2.html#MASES_JNet_PowerShell_Cmdlet_StartJNetPSCmdletCommandBase_2_JVMPath">StartJNetPSCmdletCommandBase&lt;ConnectStandaloneCmdletCommand, KNetPSCore&gt;.JVMPath</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jnet.masesgroup.com/api/MASES.JNet.PowerShell.Cmdlet.StartJNetPSCmdletCommandBase-2.html#MASES_JNet_PowerShell_Cmdlet_StartJNetPSCmdletCommandBase_2_JNIVerbosity">StartJNetPSCmdletCommandBase&lt;ConnectStandaloneCmdletCommand, KNetPSCore&gt;.JNIVerbosity</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jnet.masesgroup.com/api/MASES.JNet.PowerShell.Cmdlet.StartJNetPSCmdletCommandBase-2.html#MASES_JNet_PowerShell_Cmdlet_StartJNetPSCmdletCommandBase_2_JNIOutputFile">StartJNetPSCmdletCommandBase&lt;ConnectStandaloneCmdletCommand, KNetPSCore&gt;.JNIOutputFile</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jnet.masesgroup.com/api/MASES.JNet.PowerShell.Cmdlet.StartJNetPSCmdletCommandBase-2.html#MASES_JNet_PowerShell_Cmdlet_StartJNetPSCmdletCommandBase_2_JmxPort">StartJNetPSCmdletCommandBase&lt;ConnectStandaloneCmdletCommand, KNetPSCore&gt;.JmxPort</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jnet.masesgroup.com/api/MASES.JNet.PowerShell.Cmdlet.StartJNetPSCmdletCommandBase-2.html#MASES_JNet_PowerShell_Cmdlet_StartJNetPSCmdletCommandBase_2_EnableDebug">StartJNetPSCmdletCommandBase&lt;ConnectStandaloneCmdletCommand, KNetPSCore&gt;.EnableDebug</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jnet.masesgroup.com/api/MASES.JNet.PowerShell.Cmdlet.StartJNetPSCmdletCommandBase-2.html#MASES_JNet_PowerShell_Cmdlet_StartJNetPSCmdletCommandBase_2_JavaDebugPort">StartJNetPSCmdletCommandBase&lt;ConnectStandaloneCmdletCommand, KNetPSCore&gt;.JavaDebugPort</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jnet.masesgroup.com/api/MASES.JNet.PowerShell.Cmdlet.StartJNetPSCmdletCommandBase-2.html#MASES_JNet_PowerShell_Cmdlet_StartJNetPSCmdletCommandBase_2_DebugSuspendFlag">StartJNetPSCmdletCommandBase&lt;ConnectStandaloneCmdletCommand, KNetPSCore&gt;.DebugSuspendFlag</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jnet.masesgroup.com/api/MASES.JNet.PowerShell.Cmdlet.StartJNetPSCmdletCommandBase-2.html#MASES_JNet_PowerShell_Cmdlet_StartJNetPSCmdletCommandBase_2_JavaDebugOpts">StartJNetPSCmdletCommandBase&lt;ConnectStandaloneCmdletCommand, KNetPSCore&gt;.JavaDebugOpts</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jnet.masesgroup.com/api/MASES.JNet.PowerShell.Cmdlet.StartJNetPSCmdletCommandBase-2.html#MASES_JNet_PowerShell_Cmdlet_StartJNetPSCmdletCommandBase_2_HeapSize">StartJNetPSCmdletCommandBase&lt;ConnectStandaloneCmdletCommand, KNetPSCore&gt;.HeapSize</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jnet.masesgroup.com/api/MASES.JNet.PowerShell.Cmdlet.StartJNetPSCmdletCommandBase-2.html#MASES_JNet_PowerShell_Cmdlet_StartJNetPSCmdletCommandBase_2_InitialHeapSize">StartJNetPSCmdletCommandBase&lt;ConnectStandaloneCmdletCommand, KNetPSCore&gt;.InitialHeapSize</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jnet.masesgroup.com/api/MASES.JNet.PowerShell.Cmdlet.StartJNetPSCmdletCommandBase-2.html#MASES_JNet_PowerShell_Cmdlet_StartJNetPSCmdletCommandBase_2_LogClassPath">StartJNetPSCmdletCommandBase&lt;ConnectStandaloneCmdletCommand, KNetPSCore&gt;.LogClassPath</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jnet.masesgroup.com/api/MASES.JNet.PowerShell.Cmdlet.StartJNetPSCmdletCommandBase-2.html#MASES_JNet_PowerShell_Cmdlet_StartJNetPSCmdletCommandBase_2_WriteEventOrExceptionOnCmdLine">StartJNetPSCmdletCommandBase&lt;ConnectStandaloneCmdletCommand, KNetPSCore&gt;.WriteEventOrExceptionOnCmdLine</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jnet.masesgroup.com/api/MASES.JNet.PowerShell.Cmdlet.StartJNetPSCmdletCommandBase-2.html#MASES_JNet_PowerShell_Cmdlet_StartJNetPSCmdletCommandBase_2_ExtraJVMOptions">StartJNetPSCmdletCommandBase&lt;ConnectStandaloneCmdletCommand, KNetPSCore&gt;.ExtraJVMOptions</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jnet.masesgroup.com/api/MASES.JNet.PowerShell.Cmdlet.StartJNetPSCmdletCommandBase-2.html#MASES_JNet_PowerShell_Cmdlet_StartJNetPSCmdletCommandBase_2_ExtraJVMKVOptions">StartJNetPSCmdletCommandBase&lt;ConnectStandaloneCmdletCommand, KNetPSCore&gt;.ExtraJVMKVOptions</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jnet.masesgroup.com/api/MASES.JNet.PowerShell.Cmdlet.JNetPSExternalizableCmdlet-1.html#MASES_JNet_PowerShell_Cmdlet_JNetPSExternalizableCmdlet_1_BeginProcessing">JNetPSExternalizableCmdlet&lt;ConnectStandaloneCmdletCommand&gt;.BeginProcessing()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jnet.masesgroup.com/api/MASES.JNet.PowerShell.Cmdlet.JNetPSExternalizableCmdlet-1.html#MASES_JNet_PowerShell_Cmdlet_JNetPSExternalizableCmdlet_1_ProcessRecord">JNetPSExternalizableCmdlet&lt;ConnectStandaloneCmdletCommand&gt;.ProcessRecord()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jnet.masesgroup.com/api/MASES.JNet.PowerShell.Cmdlet.JNetPSExternalizableCmdlet-1.html#MASES_JNet_PowerShell_Cmdlet_JNetPSExternalizableCmdlet_1_ProcessCommand">JNetPSExternalizableCmdlet&lt;ConnectStandaloneCmdletCommand&gt;.ProcessCommand()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jnet.masesgroup.com/api/MASES.JNet.PowerShell.Cmdlet.JNetPSExternalizableCmdlet-1.html#MASES_JNet_PowerShell_Cmdlet_JNetPSExternalizableCmdlet_1_EndProcessing">JNetPSExternalizableCmdlet&lt;ConnectStandaloneCmdletCommand&gt;.EndProcessing()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jnet.masesgroup.com/api/MASES.JNet.PowerShell.Cmdlet.JNetPSExternalizableCmdlet-1.html#MASES_JNet_PowerShell_Cmdlet_JNetPSExternalizableCmdlet_1_JNetPSCmdletDetached">JNetPSExternalizableCmdlet&lt;ConnectStandaloneCmdletCommand&gt;.JNetPSCmdletDetached</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jnet.masesgroup.com/api/MASES.JNet.PowerShell.Cmdlet.JNetPSExternalizableCmdlet-1.html#MASES_JNet_PowerShell_Cmdlet_JNetPSExternalizableCmdlet_1_BypassJNetPSExternalize">JNetPSExternalizableCmdlet&lt;ConnectStandaloneCmdletCommand&gt;.BypassJNetPSExternalize</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jnet.masesgroup.com/api/MASES.JNet.PowerShell.Cmdlet.JNetPSExternalizableCmdlet-1.html#MASES_JNet_PowerShell_Cmdlet_JNetPSExternalizableCmdlet_1_ForceJNetPSExternalize">JNetPSExternalizableCmdlet&lt;ConnectStandaloneCmdletCommand&gt;.ForceJNetPSExternalize</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.management.automation.pscmdlet.currentproviderlocation">PSCmdlet.CurrentProviderLocation(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.management.automation.pscmdlet.getresolvedproviderpathfrompspath">PSCmdlet.GetResolvedProviderPathFromPSPath(string, out ProviderInfo)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.management.automation.pscmdlet.getunresolvedproviderpathfrompspath">PSCmdlet.GetUnresolvedProviderPathFromPSPath(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.management.automation.pscmdlet.getvariablevalue#system-management-automation-pscmdlet-getvariablevalue(system-string)">PSCmdlet.GetVariableValue(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.management.automation.pscmdlet.getvariablevalue#system-management-automation-pscmdlet-getvariablevalue(system-string-system-object)">PSCmdlet.GetVariableValue(string, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.management.automation.pscmdlet.events">PSCmdlet.Events</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.management.automation.pscmdlet.host">PSCmdlet.Host</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.management.automation.pscmdlet.invokecommand">PSCmdlet.InvokeCommand</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.management.automation.pscmdlet.invokeprovider">PSCmdlet.InvokeProvider</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.management.automation.pscmdlet.jobmanager">PSCmdlet.JobManager</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.management.automation.pscmdlet.jobrepository">PSCmdlet.JobRepository</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.management.automation.pscmdlet.myinvocation">PSCmdlet.MyInvocation</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.management.automation.pscmdlet.pagingparameters">PSCmdlet.PagingParameters</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.management.automation.pscmdlet.parametersetname">PSCmdlet.ParameterSetName</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.management.automation.pscmdlet.sessionstate">PSCmdlet.SessionState</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.management.automation.cmdlet.getresourcestring">Cmdlet.GetResourceString(string, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.management.automation.cmdlet.invoke#system-management-automation-cmdlet-invoke">Cmdlet.Invoke()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.management.automation.cmdlet.invoke#system-management-automation-cmdlet-invoke-1">Cmdlet.Invoke&lt;T&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.management.automation.cmdlet.shouldcontinue#system-management-automation-cmdlet-shouldcontinue(system-string-system-string-system-boolean-system-boolean@-system-boolean@)">Cmdlet.ShouldContinue(string, string, bool, ref bool, ref bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.management.automation.cmdlet.shouldcontinue#system-management-automation-cmdlet-shouldcontinue(system-string-system-string-system-boolean@-system-boolean@)">Cmdlet.ShouldContinue(string, string, ref bool, ref bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.management.automation.cmdlet.shouldcontinue#system-management-automation-cmdlet-shouldcontinue(system-string-system-string)">Cmdlet.ShouldContinue(string, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.management.automation.cmdlet.shouldprocess#system-management-automation-cmdlet-shouldprocess(system-string-system-string-system-string-system-management-automation-shouldprocessreason@)">Cmdlet.ShouldProcess(string, string, string, out ShouldProcessReason)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.management.automation.cmdlet.shouldprocess#system-management-automation-cmdlet-shouldprocess(system-string)">Cmdlet.ShouldProcess(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.management.automation.cmdlet.shouldprocess#system-management-automation-cmdlet-shouldprocess(system-string-system-string)">Cmdlet.ShouldProcess(string, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.management.automation.cmdlet.shouldprocess#system-management-automation-cmdlet-shouldprocess(system-string-system-string-system-string)">Cmdlet.ShouldProcess(string, string, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.management.automation.cmdlet.stopprocessing">Cmdlet.StopProcessing()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.management.automation.cmdlet.throwterminatingerror">Cmdlet.ThrowTerminatingError(ErrorRecord)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.management.automation.cmdlet.transactionavailable">Cmdlet.TransactionAvailable()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.management.automation.cmdlet.writecommanddetail">Cmdlet.WriteCommandDetail(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.management.automation.cmdlet.writedebug">Cmdlet.WriteDebug(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.management.automation.cmdlet.writeerror">Cmdlet.WriteError(ErrorRecord)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.management.automation.cmdlet.writeinformation#system-management-automation-cmdlet-writeinformation(system-object-system-string())">Cmdlet.WriteInformation(object, string[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.management.automation.cmdlet.writeinformation#system-management-automation-cmdlet-writeinformation(system-management-automation-informationrecord)">Cmdlet.WriteInformation(InformationRecord)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.management.automation.cmdlet.writeobject#system-management-automation-cmdlet-writeobject(system-object-system-boolean)">Cmdlet.WriteObject(object, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.management.automation.cmdlet.writeobject#system-management-automation-cmdlet-writeobject(system-object)">Cmdlet.WriteObject(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.management.automation.cmdlet.writeprogress">Cmdlet.WriteProgress(ProgressRecord)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.management.automation.cmdlet.writeverbose">Cmdlet.WriteVerbose(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.management.automation.cmdlet.writewarning">Cmdlet.WriteWarning(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.management.automation.cmdlet.commandruntime">Cmdlet.CommandRuntime</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.management.automation.cmdlet.commonparameters">Cmdlet.CommonParameters</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.management.automation.cmdlet.optionalcommonparameters">Cmdlet.OptionalCommonParameters</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.management.automation.cmdlet.stopping">Cmdlet.Stopping</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.management.automation.internal.internalcommand.commandorigin">InternalCommand.CommandOrigin</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNetPS/ToolsCmdlet/ConnectStandaloneCmdletCommand.cs/#L24" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <script type="text/javascript">document.write('<div style="text-align: center;">Copyright © 2021 - ' + new Date().getFullYear() + ' MASES s.r.l. | Via San Cesidio 16 - San Valentino in A.C. - PE | P.I. 01932310681</div>');</script>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

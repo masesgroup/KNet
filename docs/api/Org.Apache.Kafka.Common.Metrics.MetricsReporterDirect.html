@@ -89,7 +89,7 @@
 
 
   <h1 id="Org_Apache_Kafka_Common_Metrics_MetricsReporterDirect" data-uid="Org.Apache.Kafka.Common.Metrics.MetricsReporterDirect" class="text-break">
-Class MetricsReporterDirect  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Metrics/MetricsReporter.cs/#L418"><i class="bi bi-code-slash"></i></a>
+Class MetricsReporterDirect  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Metrics/MetricsReporter.cs/#L424"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -102,7 +102,7 @@ Class MetricsReporterDirect  <a class="header-action link-secondary" title="View
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class MetricsReporterDirect : MetricsReporter, IDynamicMetaObjectProvider, IJVMBridgeCore, IDisposable, IJVMBridgeBaseStatic, IMetricsReporter, IJVMBridgeBase, IJVMBridgeDefinition, IReconfigurable, IConfigurable, IAutoCloseable</code></pre>
+    <pre><code class="lang-csharp hljs">public class MetricsReporterDirect : MetricsReporter, IDynamicMetaObjectProvider, IJVMBridgeCore, IEquatable&lt;IJVMBridgeBase&gt;, IDisposable, IJVMBridgeBaseStatic, IMetricsReporter, IJVMBridgeBase, IJVMBridgeDefinition, IReconfigurable, IConfigurable, IAutoCloseable</code></pre>
   </div>
 
 
@@ -113,9 +113,9 @@ Class MetricsReporterDirect  <a class="header-action link-secondary" title="View
     <dd>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject">DynamicObject</a></div>
-      <div><span class="xref">JVMBridgeBase</span></div>
-      <div><span class="xref">JVMBridgeBase</span>&lt;<span class="xref">JVMBridgeListener</span>&gt;</div>
-      <div><span class="xref">JVMBridgeListener</span></div>
+      <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html">JVMBridgeBase</a></div>
+      <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase-1.html">JVMBridgeBase</a>&lt;<a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeListener.html">JVMBridgeListener</a>&gt;</div>
+      <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeListener.html">JVMBridgeListener</a></div>
       <div><a class="xref" href="Org.Apache.Kafka.Common.Metrics.MetricsReporter.html">MetricsReporter</a></div>
       <div><span class="xref">MetricsReporterDirect</span></div>
     </dd>
@@ -125,12 +125,13 @@ Class MetricsReporterDirect  <a class="header-action link-secondary" title="View
     <dt>Implements</dt>
     <dd>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.idynamicmetaobjectprovider">IDynamicMetaObjectProvider</a></div>
-      <div><span class="xref">IJVMBridgeCore</span></div>
+      <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeCore.html">IJVMBridgeCore</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeBase.html">IJVMBridgeBase</a>&gt;</div>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
-      <div><span class="xref">IJVMBridgeBaseStatic</span></div>
+      <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeBaseStatic.html">IJVMBridgeBaseStatic</a></div>
       <div><a class="xref" href="Org.Apache.Kafka.Common.Metrics.IMetricsReporter.html">IMetricsReporter</a></div>
-      <div><span class="xref">IJVMBridgeBase</span></div>
-      <div><span class="xref">IJVMBridgeDefinition</span></div>
+      <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeBase.html">IJVMBridgeBase</a></div>
+      <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.html">IJVMBridgeDefinition</a></div>
       <div><a class="xref" href="Org.Apache.Kafka.Common.IReconfigurable.html">IReconfigurable</a></div>
       <div><a class="xref" href="Org.Apache.Kafka.Common.IConfigurable.html">IConfigurable</a></div>
       <div><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.IAutoCloseable.html">IAutoCloseable</a></div>
@@ -187,10 +188,10 @@ Class MetricsReporterDirect  <a class="header-action link-secondary" title="View
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeListener.AddEventHandler&lt;TDataClass&gt;(string, EventHandler&lt;CLRListenerEventArgs&lt;TDataClass&gt;&gt;)</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeListener.Dispose()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">JVMBridgeListener.Dispose(bool)</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeListener.IsBridgeListener</span>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeListener.html#MASES_JCOBridge_C2JBridge_JVMBridgeListener_IsBridgeListener">JVMBridgeListener.IsBridgeListener</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;JVMBridgeListener&gt;.SExecute(IJavaType, string, params object[])</a>
@@ -277,16 +278,16 @@ Class MetricsReporterDirect  <a class="header-action link-secondary" title="View
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;JVMBridgeListener&gt;.SExecuteWithSignature&lt;TReturn, TConverter&gt;(Type, string, string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;JVMBridgeListener&gt;.SExecuteArray&lt;T&gt;(IJavaType, string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;JVMBridgeListener&gt;.SExecuteArray&lt;TArrayType&gt;(IJavaType, string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;JVMBridgeListener&gt;.SExecuteWithSignatureArray&lt;T&gt;(IJavaType, string, string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;JVMBridgeListener&gt;.SExecuteWithSignatureArray&lt;TArrayType&gt;(IJavaType, string, string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;JVMBridgeListener&gt;.SExecuteArray&lt;T&gt;(string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;JVMBridgeListener&gt;.SExecuteArray&lt;TArrayType&gt;(string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;JVMBridgeListener&gt;.SExecuteWithSignatureArray&lt;T&gt;(string, string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;JVMBridgeListener&gt;.SExecuteWithSignatureArray&lt;TArrayType&gt;(string, string, params object[])</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;JVMBridgeListener&gt;.SGetField(IJavaType, string)</a>
@@ -322,10 +323,10 @@ Class MetricsReporterDirect  <a class="header-action link-secondary" title="View
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;JVMBridgeListener&gt;.IsAssignableFrom(string)</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase&lt;JVMBridgeListener&gt;.IsAssignableFrom(IJavaType)</span>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase-1.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_1_IsAssignableFrom_MASES_JCOBridge_C2JBridge_JVMInterop_IJavaType_">JVMBridgeBase&lt;JVMBridgeListener&gt;.IsAssignableFrom(IJavaType)</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase&lt;JVMBridgeListener&gt;.IsAssignableFrom&lt;T&gt;()</span>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase-1.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_1_IsAssignableFrom__1">JVMBridgeBase&lt;JVMBridgeListener&gt;.IsAssignableFrom&lt;T&gt;()</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">JVMBridgeBase&lt;JVMBridgeListener&gt;.New(params object[])</a>
@@ -334,91 +335,115 @@ Class MetricsReporterDirect  <a class="header-action link-secondary" title="View
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;JVMBridgeListener&gt;.NewWithSignature(string, params object[])</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase&lt;JVMBridgeListener&gt;.Execute&lt;T&gt;(params T[])</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;JVMBridgeListener&gt;.NewAndWrapsDirect&lt;TNewClass&gt;(string, params object[])</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase&lt;JVMBridgeListener&gt;.DynBridgeClazz</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;JVMBridgeListener&gt;.NewWithSignatureAndWrapsDirect&lt;TNewClass&gt;(string, string, params object[])</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase&lt;JVMBridgeListener&gt;.BridgeClazz</span>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase-1.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_1_Execute__1___0___">JVMBridgeBase&lt;JVMBridgeListener&gt;.Execute&lt;T&gt;(params T[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase-1.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_1_DynBridgeClazz">JVMBridgeBase&lt;JVMBridgeListener&gt;.DynBridgeClazz</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase-1.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_1_BridgeClazz">JVMBridgeBase&lt;JVMBridgeListener&gt;.BridgeClazz</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_ReferenceEqualsJVM_MASES_JCOBridge_C2JBridge_JVMBridgeBase_MASES_JCOBridge_C2JBridge_JVMBridgeBase_">JVMBridgeBase.ReferenceEqualsJVM(JVMBridgeBase, JVMBridgeBase)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">JVMBridgeBase.ClazzOf&lt;TClass&gt;(bool)</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">JVMBridgeBase.ClazzOf&lt;TClass&gt;(out Exception, bool)</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.ClazzOf(string, bool)</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase.RuntimeClassNameOf&lt;T&gt;()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.ClazzOf(string, out Exception, bool)</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase.ClassNameOf&lt;T&gt;()</span>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_RuntimeClassNameOf__1">JVMBridgeBase.RuntimeClassNameOf&lt;T&gt;()</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase.ClassOf&lt;T&gt;()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase.RuntimeClassNameOf(Type)</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase.WrapsDirect&lt;TNewClass&gt;(IJavaObject)</span>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_ClassNameOf__1">JVMBridgeBase.ClassNameOf&lt;T&gt;()</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase.Wraps&lt;TNewClass&gt;(IJavaObject)</span>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_ClassOf__1">JVMBridgeBase.ClassOf&lt;T&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_WrapsDirect__1_MASES_JCOBridge_C2JBridge_JVMInterop_IJavaObject_">JVMBridgeBase.WrapsDirect&lt;TNewClass&gt;(IJavaObject)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_Wraps__1_MASES_JCOBridge_C2JBridge_JVMInterop_IJavaObject_">JVMBridgeBase.Wraps&lt;TNewClass&gt;(IJavaObject)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase.Wraps(Type, IJavaObject, string)</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase.Wraps&lt;TNewClass, TReturn&gt;(IJavaObject)</span>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_Wraps__2_MASES_JCOBridge_C2JBridge_JVMInterop_IJavaObject_">JVMBridgeBase.Wraps&lt;TNewClass, TReturn&gt;(IJavaObject)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase.Wraps&lt;TReturn&gt;(Type, IJavaObject, string)</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase.Wraps&lt;TNewClass, TReturn, TConverter&gt;(IJavaObject)</span>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_Wraps__3_MASES_JCOBridge_C2JBridge_JVMInterop_IJavaObject_">JVMBridgeBase.Wraps&lt;TNewClass, TReturn, TConverter&gt;(IJavaObject)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase.Wraps&lt;TReturn, TConverter&gt;(Type, IJavaObject)</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase.MonitorEnter()</span>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_MonitorEnter">JVMBridgeBase.MonitorEnter()</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase.MonitorExit()</span>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_MonitorExit">JVMBridgeBase.MonitorExit()</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IsInstanceOf(string)</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase.IsInstanceOf(IJavaType)</span>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsInstanceOf_MASES_JCOBridge_C2JBridge_JVMInterop_IJavaType_">JVMBridgeBase.IsInstanceOf(IJavaType)</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase.IsInstanceOf&lt;T&gt;()</span>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsInstanceOf__1">JVMBridgeBase.IsInstanceOf&lt;T&gt;()</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase.RuntimeIsInstanceOf&lt;T&gt;()</span>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_RuntimeIsInstanceOf__1">JVMBridgeBase.RuntimeIsInstanceOf&lt;T&gt;()</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase.CastTo&lt;TNewClass&gt;()</span>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_CastTo__1">JVMBridgeBase.CastTo&lt;TNewClass&gt;()</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase.CastDirect&lt;TNewClass&gt;()</span>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_CastDirect__1">JVMBridgeBase.CastDirect&lt;TNewClass&gt;()</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase.ToString()</span>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_Dispose">JVMBridgeBase.Dispose()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_ToString">JVMBridgeBase.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_Equals_MASES_JCOBridge_C2JBridge_IJVMBridgeBase_">JVMBridgeBase.Equals(IJVMBridgeBase)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">JVMBridgeBase.Equals(object)</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase.GetHashCode()</span>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_GetHashCode">JVMBridgeBase.GetHashCode()</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase.Notify()</span>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_Notify">JVMBridgeBase.Notify()</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase.NotifyAll()</span>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_NotifyAll">JVMBridgeBase.NotifyAll()</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase.Wait()</span>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_Wait">JVMBridgeBase.Wait()</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">JVMBridgeBase.Wait(long)</a>
@@ -451,10 +476,10 @@ Class MetricsReporterDirect  <a class="header-action link-secondary" title="View
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteWithSignature&lt;TNewClass, TReturn, TConverter&gt;(string, string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteArray&lt;T&gt;(string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteArray&lt;TArrayType&gt;(string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteWithSignatureArray&lt;T&gt;(string, string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteWithSignatureArray&lt;TArrayType&gt;(string, string, params object[])</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IGetField(string)</a>
@@ -472,10 +497,10 @@ Class MetricsReporterDirect  <a class="header-action link-secondary" title="View
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.ISetField&lt;TValue&gt;(string, TValue)</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase.DynBridgeInstance</span>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_DynBridgeInstance">JVMBridgeBase.DynBridgeInstance</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase.BridgeInstance</span>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeInstance">JVMBridgeBase.BridgeInstance</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trygetmember">DynamicObject.TryGetMember(GetMemberBinder, out object)</a>
@@ -538,6 +563,70 @@ Class MetricsReporterDirect  <a class="header-action link-secondary" title="View
 
 
 
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="Org_Apache_Kafka_Common_Metrics_MetricsReporterDirect__ctor_" data-uid="Org.Apache.Kafka.Common.Metrics.MetricsReporterDirect.#ctor*"></a>
+
+  <h3 id="Org_Apache_Kafka_Common_Metrics_MetricsReporterDirect__ctor" data-uid="Org.Apache.Kafka.Common.Metrics.MetricsReporterDirect.#ctor">
+  MetricsReporterDirect()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Metrics/MetricsReporter.cs/#L70"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MetricsReporterDirect()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Apache_Kafka_Common_Metrics_MetricsReporterDirect__ctor_" data-uid="Org.Apache.Kafka.Common.Metrics.MetricsReporterDirect.#ctor*"></a>
+
+  <h3 id="Org_Apache_Kafka_Common_Metrics_MetricsReporterDirect__ctor_MASES_JCOBridge_C2JBridge_IJVMBridgeBaseInitializer_" data-uid="Org.Apache.Kafka.Common.Metrics.MetricsReporterDirect.#ctor(MASES.JCOBridge.C2JBridge.IJVMBridgeBaseInitializer)">
+  MetricsReporterDirect(IJVMBridgeBaseInitializer)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Metrics/MetricsReporter.cs/#L74"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Internal constructor: used internally from JCOBridge</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.&quot;)]
+public MetricsReporterDirect(IJVMBridgeBaseInitializer initializer)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>initializer</code> <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeBaseInitializer.html">IJVMBridgeBaseInitializer</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
   <h2 class="section" id="properties">Properties
 </h2>
 
@@ -546,10 +635,10 @@ Class MetricsReporterDirect  <a class="header-action link-secondary" title="View
 
   <h3 id="Org_Apache_Kafka_Common_Metrics_MetricsReporterDirect_AutoInit" data-uid="Org.Apache.Kafka.Common.Metrics.MetricsReporterDirect.AutoInit">
   AutoInit
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Metrics/MetricsReporter.cs/#L63"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Metrics/MetricsReporter.cs/#L78"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeListener_AutoInit.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeListener_AutoInit.htm</a></p>
+  <div class="markdown level1 summary"><p>Set to <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a> to externally initialize this <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeListener.html">JVMBridgeListener</a> instance using <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMInterop.IJVMWrapperManagement.html#MASES_JCOBridge_C2JBridge_JVMInterop_IJVMWrapperManagement_InitializeListener_MASES_JCOBridge_C2JBridge_IJVMBridgeBase_">InitializeListener(IJVMBridgeBase)</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -578,10 +667,10 @@ Class MetricsReporterDirect  <a class="header-action link-secondary" title="View
 
   <h3 id="Org_Apache_Kafka_Common_Metrics_MetricsReporterDirect_BridgeClassName" data-uid="Org.Apache.Kafka.Common.Metrics.MetricsReporterDirect.BridgeClassName">
   BridgeClassName
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Metrics/MetricsReporter.cs/#L75"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Metrics/MetricsReporter.cs/#L89"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeListener_BridgeClassName.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeListener_BridgeClassName.htm</a></p>
+  <div class="markdown level1 summary"><p>Java class name to be instantiated</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -610,10 +699,10 @@ Class MetricsReporterDirect  <a class="header-action link-secondary" title="View
 
   <h3 id="Org_Apache_Kafka_Common_Metrics_MetricsReporterDirect_IsBridgeAbstract" data-uid="Org.Apache.Kafka.Common.Metrics.MetricsReporterDirect.IsBridgeAbstract">
   IsBridgeAbstract
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Metrics/MetricsReporter.cs/#L79"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Metrics/MetricsReporter.cs/#L91"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeAbstract.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeAbstract.htm</a></p>
+  <div class="markdown level1 summary"><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.html#MASES_JCOBridge_C2JBridge_IJVMBridgeDefinition_BridgeClassName">BridgeClassName</a> is an abstract class, i.e. cannot be created an instance</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -642,10 +731,10 @@ Class MetricsReporterDirect  <a class="header-action link-secondary" title="View
 
   <h3 id="Org_Apache_Kafka_Common_Metrics_MetricsReporterDirect_IsBridgeCloseable" data-uid="Org.Apache.Kafka.Common.Metrics.MetricsReporterDirect.IsBridgeCloseable">
   IsBridgeCloseable
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Metrics/MetricsReporter.cs/#L83"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Metrics/MetricsReporter.cs/#L93"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeCloseable.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeCloseable.htm</a></p>
+  <div class="markdown level1 summary"><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.html#MASES_JCOBridge_C2JBridge_IJVMBridgeDefinition_BridgeClassName">BridgeClassName</a> implements Closeable</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -674,10 +763,10 @@ Class MetricsReporterDirect  <a class="header-action link-secondary" title="View
 
   <h3 id="Org_Apache_Kafka_Common_Metrics_MetricsReporterDirect_IsBridgeInterface" data-uid="Org.Apache.Kafka.Common.Metrics.MetricsReporterDirect.IsBridgeInterface">
   IsBridgeInterface
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Metrics/MetricsReporter.cs/#L87"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Metrics/MetricsReporter.cs/#L95"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeInterface.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeInterface.htm</a></p>
+  <div class="markdown level1 summary"><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.html#MASES_JCOBridge_C2JBridge_IJVMBridgeDefinition_BridgeClassName">BridgeClassName</a> is an interface, i.e. does not have any public constructor</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -706,10 +795,10 @@ Class MetricsReporterDirect  <a class="header-action link-secondary" title="View
 
   <h3 id="Org_Apache_Kafka_Common_Metrics_MetricsReporterDirect_IsBridgeStatic" data-uid="Org.Apache.Kafka.Common.Metrics.MetricsReporterDirect.IsBridgeStatic">
   IsBridgeStatic
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Metrics/MetricsReporter.cs/#L91"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Metrics/MetricsReporter.cs/#L97"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeStatic.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeStatic.htm</a></p>
+  <div class="markdown level1 summary"><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.html#MASES_JCOBridge_C2JBridge_IJVMBridgeDefinition_BridgeClassName">BridgeClassName</a> is a static class, i.e. does not have any public constructor</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -742,7 +831,7 @@ Class MetricsReporterDirect  <a class="header-action link-secondary" title="View
 
   <h3 id="Org_Apache_Kafka_Common_Metrics_MetricsReporterDirect_Close" data-uid="Org.Apache.Kafka.Common.Metrics.MetricsReporterDirect.Close">
   Close()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Metrics/MetricsReporter.cs/#L448"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Metrics/MetricsReporter.cs/#L454"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/metrics/MetricsReporter.html#close--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/metrics/MetricsReporter.html#close--</a></p>
@@ -769,7 +858,7 @@ Class MetricsReporterDirect  <a class="header-action link-secondary" title="View
 
   <h3 id="Org_Apache_Kafka_Common_Metrics_MetricsReporterDirect_Configure_Java_Util_Map_Java_Lang_String_System_Object__" data-uid="Org.Apache.Kafka.Common.Metrics.MetricsReporterDirect.Configure(Java.Util.Map{Java.Lang.String,System.Object})">
   Configure(Map&lt;String, object&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Metrics/MetricsReporter.cs/#L441"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Metrics/MetricsReporter.cs/#L447"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/Configurable.html#configure-java.util.Map-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/Configurable.html#configure-java.util.Map-</a></p>
@@ -802,7 +891,7 @@ Class MetricsReporterDirect  <a class="header-action link-secondary" title="View
 
   <h3 id="Org_Apache_Kafka_Common_Metrics_MetricsReporterDirect_ContextChange_Org_Apache_Kafka_Common_Metrics_MetricsContext_" data-uid="Org.Apache.Kafka.Common.Metrics.MetricsReporterDirect.ContextChange(Org.Apache.Kafka.Common.Metrics.MetricsContext)">
   ContextChange(MetricsContext)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Metrics/MetricsReporter.cs/#L488"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Metrics/MetricsReporter.cs/#L494"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/metrics/MetricsReporter.html#contextChange-org.apache.kafka.common.metrics.MetricsContext-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/metrics/MetricsReporter.html#contextChange-org.apache.kafka.common.metrics.MetricsContext-</a></p>
@@ -835,7 +924,7 @@ Class MetricsReporterDirect  <a class="header-action link-secondary" title="View
 
   <h3 id="Org_Apache_Kafka_Common_Metrics_MetricsReporterDirect_Init_Java_Util_List_Org_Apache_Kafka_Common_Metrics_KafkaMetric__" data-uid="Org.Apache.Kafka.Common.Metrics.MetricsReporterDirect.Init(Java.Util.List{Org.Apache.Kafka.Common.Metrics.KafkaMetric})">
   Init(List&lt;KafkaMetric&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Metrics/MetricsReporter.cs/#L456"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Metrics/MetricsReporter.cs/#L462"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/metrics/MetricsReporter.html#init-java.util.List-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/metrics/MetricsReporter.html#init-java.util.List-</a></p>
@@ -868,7 +957,7 @@ Class MetricsReporterDirect  <a class="header-action link-secondary" title="View
 
   <h3 id="Org_Apache_Kafka_Common_Metrics_MetricsReporterDirect_InitializeHandlers" data-uid="Org.Apache.Kafka.Common.Metrics.MetricsReporterDirect.InitializeHandlers">
   InitializeHandlers()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Metrics/MetricsReporter.cs/#L66"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Metrics/MetricsReporter.cs/#L81"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Handlers initializer for <a class="xref" href="Org.Apache.Kafka.Common.Metrics.MetricsReporter.html">MetricsReporter</a></p>
@@ -895,7 +984,7 @@ Class MetricsReporterDirect  <a class="header-action link-secondary" title="View
 
   <h3 id="Org_Apache_Kafka_Common_Metrics_MetricsReporterDirect_MetricChange_Org_Apache_Kafka_Common_Metrics_KafkaMetric_" data-uid="Org.Apache.Kafka.Common.Metrics.MetricsReporterDirect.MetricChange(Org.Apache.Kafka.Common.Metrics.KafkaMetric)">
   MetricChange(KafkaMetric)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Metrics/MetricsReporter.cs/#L464"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Metrics/MetricsReporter.cs/#L470"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/metrics/MetricsReporter.html#metricChange-org.apache.kafka.common.metrics.KafkaMetric-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/metrics/MetricsReporter.html#metricChange-org.apache.kafka.common.metrics.KafkaMetric-</a></p>
@@ -928,7 +1017,7 @@ Class MetricsReporterDirect  <a class="header-action link-secondary" title="View
 
   <h3 id="Org_Apache_Kafka_Common_Metrics_MetricsReporterDirect_MetricRemoval_Org_Apache_Kafka_Common_Metrics_KafkaMetric_" data-uid="Org.Apache.Kafka.Common.Metrics.MetricsReporterDirect.MetricRemoval(Org.Apache.Kafka.Common.Metrics.KafkaMetric)">
   MetricRemoval(KafkaMetric)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Metrics/MetricsReporter.cs/#L472"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Metrics/MetricsReporter.cs/#L478"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/metrics/MetricsReporter.html#metricRemoval-org.apache.kafka.common.metrics.KafkaMetric-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/metrics/MetricsReporter.html#metricRemoval-org.apache.kafka.common.metrics.KafkaMetric-</a></p>
@@ -961,7 +1050,7 @@ Class MetricsReporterDirect  <a class="header-action link-secondary" title="View
 
   <h3 id="Org_Apache_Kafka_Common_Metrics_MetricsReporterDirect_ReconfigurableConfigs" data-uid="Org.Apache.Kafka.Common.Metrics.MetricsReporterDirect.ReconfigurableConfigs">
   ReconfigurableConfigs()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Metrics/MetricsReporter.cs/#L480"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Metrics/MetricsReporter.cs/#L486"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/metrics/MetricsReporter.html#reconfigurableConfigs--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/metrics/MetricsReporter.html#reconfigurableConfigs--</a></p>
@@ -994,7 +1083,7 @@ Class MetricsReporterDirect  <a class="header-action link-secondary" title="View
 
   <h3 id="Org_Apache_Kafka_Common_Metrics_MetricsReporterDirect_Reconfigure_Java_Util_Map_Java_Lang_String_System_Object__" data-uid="Org.Apache.Kafka.Common.Metrics.MetricsReporterDirect.Reconfigure(Java.Util.Map{Java.Lang.String,System.Object})">
   Reconfigure(Map&lt;String, object&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Metrics/MetricsReporter.cs/#L496"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Metrics/MetricsReporter.cs/#L502"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/metrics/MetricsReporter.html#reconfigure-java.util.Map-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/metrics/MetricsReporter.html#reconfigure-java.util.Map-</a></p>
@@ -1027,7 +1116,7 @@ Class MetricsReporterDirect  <a class="header-action link-secondary" title="View
 
   <h3 id="Org_Apache_Kafka_Common_Metrics_MetricsReporterDirect_ValidateReconfiguration_Java_Util_Map_Java_Lang_String_System_Object__" data-uid="Org.Apache.Kafka.Common.Metrics.MetricsReporterDirect.ValidateReconfiguration(Java.Util.Map{Java.Lang.String,System.Object})">
   ValidateReconfiguration(Map&lt;String, object&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Metrics/MetricsReporter.cs/#L505"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Metrics/MetricsReporter.cs/#L511"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/metrics/MetricsReporter.html#validateReconfiguration-java.util.Map-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/metrics/MetricsReporter.html#validateReconfiguration-java.util.Map-</a></p>
@@ -1065,7 +1154,7 @@ Class MetricsReporterDirect  <a class="header-action link-secondary" title="View
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Metrics/MetricsReporter.cs/#L418" class="edit-link">Edit this page</a>
+          <a href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Metrics/MetricsReporter.cs/#L424" class="edit-link">Edit this page</a>
         </div>
 
 
