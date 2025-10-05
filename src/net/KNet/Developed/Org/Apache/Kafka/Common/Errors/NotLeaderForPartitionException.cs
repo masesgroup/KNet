@@ -24,6 +24,13 @@ namespace Org.Apache.Kafka.Common.Errors
     [System.Obsolete]
     public class NotLeaderForPartitionException : InvalidMetadataException
     {
+        /// <inheritdoc cref="global::System.Exception()"/>
+        public NotLeaderForPartitionException() { }
+        /// <inheritdoc cref="global::System.Exception(string)"/>
+        public NotLeaderForPartitionException(string message) : base(message) { }
+        /// <inheritdoc cref="global::System.Exception(string, global::System.Exception)"/>
+        public NotLeaderForPartitionException(string message, global::System.Exception innerException) : base(message, innerException) { }
+
         /// <inheritdoc/>
         public override string BridgeClassName => "org.apache.kafka.common.errors.NotLeaderForPartitionException";
     }

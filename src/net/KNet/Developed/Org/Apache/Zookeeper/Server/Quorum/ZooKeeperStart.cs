@@ -27,6 +27,11 @@ namespace Org.Apache.Zookeeper.Server.Quorum
     public class ZooKeeperStart : JVMBridgeMainExtensible<ZooKeeperStart>
     {
         /// <inheritdoc/>
+        public ZooKeeperStart() { }
+        /// <inheritdoc/>
+        [global::System.Obsolete("This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
+        public ZooKeeperStart(IJVMBridgeBaseInitializer initializer) : base(initializer) { }
+        /// <inheritdoc/>
         public override string BridgeClassName => "org.apache.zookeeper.server.quorum.QuorumPeerMain";
     }
 }

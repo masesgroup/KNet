@@ -1,5 +1,5 @@
 ﻿/*
-*  Copyright 2025 MASES s.r.l.
+*  Copyright (c) 2021-2025 MASES s.r.l.
 *
 *  Licensed under the Apache License, Version 2.0 (the "License");
 *  you may not use this file except in compliance with the License.
@@ -16,13 +16,11 @@
 *  Refer to LICENSE for more information.
 */
 
-using MASES.KNet.Connect;
-using Org.Apache.Kafka.Connect;
 using Org.Apache.Kafka.Connect.Sink;
 using System;
 using System.Collections.Generic;
 
-namespace MASES.KNetConnectTest
+namespace MASES.KNet.Connect.Test
 {
     public class KNetSinkTestConnector : KNetSinkConnector<KNetSinkTestConnector, KNetSinkTestTask>
     {

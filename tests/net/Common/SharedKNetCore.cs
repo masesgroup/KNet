@@ -1,5 +1,5 @@
 ﻿/*
-*  Copyright 2025 MASES s.r.l.
+*  Copyright (c) 2021-2025 MASES s.r.l.
 *
 *  Licensed under the Apache License, Version 2.0 (the "License");
 *  you may not use this file except in compliance with the License.
@@ -23,10 +23,16 @@ namespace MASES.KNet.TestCommon
 {
     public class TestType
     {
-        static byte[] _bigExtraValue = null;
-        static byte[] _bigBigExtraValue = null;
+        static readonly byte[] _extraValue = null;
+        static readonly byte[] _bigExtraValue = null;
+        static readonly byte[] _bigBigExtraValue = null;
         static TestType()
         {
+            _extraValue = new byte[100];
+            for (int i = 0; i < _extraValue.LongLength; i++)
+            {
+                _extraValue[i] = (byte)(i % byte.MaxValue);
+            }
             _bigExtraValue = new byte[100000];
             for (int i = 0; i < _bigExtraValue.LongLength; i++)
             {
@@ -41,14 +47,18 @@ namespace MASES.KNet.TestCommon
 
         public TestType() { }
 
-        public TestType(int i, bool withBigExtraValue, bool bigBigExtraValue)
+        public TestType(int i, bool withExtraValue, bool withBigExtraValue, bool withBigBigExtraValue)
         {
             name = description = value = i.ToString();
-            if (withBigExtraValue)
+            if (withExtraValue)
+            {
+                extraValue = _extraValue;
+            }
+            else if (withBigExtraValue)
             {
                 extraValue = _bigExtraValue;
             }
-            else if (bigBigExtraValue)
+            else if (withBigBigExtraValue)
             {
                 extraValue = _bigBigExtraValue;
             }
@@ -69,6 +79,7 @@ namespace MASES.KNet.TestCommon
     {
         public static void Create()
         {
+            ApplicationWriteEventOrExceptionOnCmdLine = true;
             ApplicationJarRootPath = Const.DefaultJarsPath;
             CreateGlobalInstance();
             if (GlobalInstance == null)

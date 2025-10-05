@@ -44,7 +44,7 @@ namespace MASES.KNet.CLI
 
         protected override string DefaultLog4JConfiguration()
         {
-            return Path.Combine(Const.DefaultConfigurationPath, "tools-log4j2.yaml");
+            return Path.Combine(Const.DefaultConfigurationPath, "tools-log4j.properties");
         }
 
         protected override string[] ProcessCommandLine()
