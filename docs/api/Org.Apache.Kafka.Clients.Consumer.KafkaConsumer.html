@@ -89,7 +89,7 @@
 
 
   <h1 id="Org_Apache_Kafka_Clients_Consumer_KafkaConsumer" data-uid="Org.Apache.Kafka.Clients.Consumer.KafkaConsumer" class="text-break">
-Class KafkaConsumer  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/KafkaConsumer.cs/#L121"><i class="bi bi-code-slash"></i></a>
+Class KafkaConsumer  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/KafkaConsumer.cs/#L113"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -102,7 +102,7 @@ Class KafkaConsumer  <a class="header-action link-secondary" title="View source"
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class KafkaConsumer : Consumer, IDynamicMetaObjectProvider, IJVMBridgeCore, IDisposable, IJVMBridgeBaseStatic, IJVMBridgeBase, IJVMBridgeDefinition, ICloseable, IAutoCloseable</code></pre>
+    <pre><code class="lang-csharp hljs">public class KafkaConsumer : Consumer, IDynamicMetaObjectProvider, IJVMBridgeCore, IEquatable&lt;IJVMBridgeBase&gt;, IDisposable, IJVMBridgeBaseStatic, IJVMBridgeBase, IJVMBridgeDefinition, ICloseable, IAutoCloseable</code></pre>
   </div>
 
 
@@ -113,8 +113,8 @@ Class KafkaConsumer  <a class="header-action link-secondary" title="View source"
     <dd>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject">DynamicObject</a></div>
-      <div><span class="xref">JVMBridgeBase</span></div>
-      <div><span class="xref">JVMBridgeBase</span>&lt;<a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.AutoCloseable.html">AutoCloseable</a>&gt;</div>
+      <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html">JVMBridgeBase</a></div>
+      <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase-1.html">JVMBridgeBase</a>&lt;<a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.AutoCloseable.html">AutoCloseable</a>&gt;</div>
       <div><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.AutoCloseable.html">AutoCloseable</a></div>
       <div><a class="xref" href="https://jnet.masesgroup.com/api/Java.Io.Closeable.html">Closeable</a></div>
       <div><a class="xref" href="Org.Apache.Kafka.Clients.Consumer.Consumer.html">Consumer</a></div>
@@ -126,11 +126,12 @@ Class KafkaConsumer  <a class="header-action link-secondary" title="View source"
     <dt>Implements</dt>
     <dd>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.idynamicmetaobjectprovider">IDynamicMetaObjectProvider</a></div>
-      <div><span class="xref">IJVMBridgeCore</span></div>
+      <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeCore.html">IJVMBridgeCore</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeBase.html">IJVMBridgeBase</a>&gt;</div>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
-      <div><span class="xref">IJVMBridgeBaseStatic</span></div>
-      <div><span class="xref">IJVMBridgeBase</span></div>
-      <div><span class="xref">IJVMBridgeDefinition</span></div>
+      <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeBaseStatic.html">IJVMBridgeBaseStatic</a></div>
+      <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeBase.html">IJVMBridgeBase</a></div>
+      <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.html">IJVMBridgeDefinition</a></div>
       <div><a class="xref" href="https://jnet.masesgroup.com/api/Java.Io.ICloseable.html">ICloseable</a></div>
       <div><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.IAutoCloseable.html">IAutoCloseable</a></div>
     </dd>
@@ -225,16 +226,16 @@ Class KafkaConsumer  <a class="header-action link-secondary" title="View source"
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;AutoCloseable&gt;.SExecuteWithSignature&lt;TReturn, TConverter&gt;(Type, string, string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SExecuteArray&lt;T&gt;(IJavaType, string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SExecuteArray&lt;TArrayType&gt;(IJavaType, string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SExecuteWithSignatureArray&lt;T&gt;(IJavaType, string, string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SExecuteWithSignatureArray&lt;TArrayType&gt;(IJavaType, string, string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SExecuteArray&lt;T&gt;(string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SExecuteArray&lt;TArrayType&gt;(string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SExecuteWithSignatureArray&lt;T&gt;(string, string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SExecuteWithSignatureArray&lt;TArrayType&gt;(string, string, params object[])</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SGetField(IJavaType, string)</a>
@@ -270,10 +271,10 @@ Class KafkaConsumer  <a class="header-action link-secondary" title="View source"
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.IsAssignableFrom(string)</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase&lt;AutoCloseable&gt;.IsAssignableFrom(IJavaType)</span>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase-1.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_1_IsAssignableFrom_MASES_JCOBridge_C2JBridge_JVMInterop_IJavaType_">JVMBridgeBase&lt;AutoCloseable&gt;.IsAssignableFrom(IJavaType)</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase&lt;AutoCloseable&gt;.IsAssignableFrom&lt;T&gt;()</span>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase-1.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_1_IsAssignableFrom__1">JVMBridgeBase&lt;AutoCloseable&gt;.IsAssignableFrom&lt;T&gt;()</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">JVMBridgeBase&lt;AutoCloseable&gt;.New(params object[])</a>
@@ -282,94 +283,118 @@ Class KafkaConsumer  <a class="header-action link-secondary" title="View source"
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.NewWithSignature(string, params object[])</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase&lt;AutoCloseable&gt;.Execute&lt;T&gt;(params T[])</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.NewAndWrapsDirect&lt;TNewClass&gt;(string, params object[])</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase&lt;AutoCloseable&gt;.DynBridgeClazz</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.NewWithSignatureAndWrapsDirect&lt;TNewClass&gt;(string, string, params object[])</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase&lt;AutoCloseable&gt;.BridgeClazz</span>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase-1.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_1_Execute__1___0___">JVMBridgeBase&lt;AutoCloseable&gt;.Execute&lt;T&gt;(params T[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase-1.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_1_DynBridgeClazz">JVMBridgeBase&lt;AutoCloseable&gt;.DynBridgeClazz</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase-1.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_1_BridgeClazz">JVMBridgeBase&lt;AutoCloseable&gt;.BridgeClazz</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_ReferenceEqualsJVM_MASES_JCOBridge_C2JBridge_JVMBridgeBase_MASES_JCOBridge_C2JBridge_JVMBridgeBase_">JVMBridgeBase.ReferenceEqualsJVM(JVMBridgeBase, JVMBridgeBase)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">JVMBridgeBase.ClazzOf&lt;TClass&gt;(bool)</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">JVMBridgeBase.ClazzOf&lt;TClass&gt;(out Exception, bool)</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.ClazzOf(string, bool)</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase.RuntimeClassNameOf&lt;T&gt;()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.ClazzOf(string, out Exception, bool)</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase.ClassNameOf&lt;T&gt;()</span>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_RuntimeClassNameOf__1">JVMBridgeBase.RuntimeClassNameOf&lt;T&gt;()</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase.ClassOf&lt;T&gt;()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase.RuntimeClassNameOf(Type)</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase.WrapsDirect&lt;TNewClass&gt;(IJavaObject)</span>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_ClassNameOf__1">JVMBridgeBase.ClassNameOf&lt;T&gt;()</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase.Wraps&lt;TNewClass&gt;(IJavaObject)</span>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_ClassOf__1">JVMBridgeBase.ClassOf&lt;T&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_WrapsDirect__1_MASES_JCOBridge_C2JBridge_JVMInterop_IJavaObject_">JVMBridgeBase.WrapsDirect&lt;TNewClass&gt;(IJavaObject)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_Wraps__1_MASES_JCOBridge_C2JBridge_JVMInterop_IJavaObject_">JVMBridgeBase.Wraps&lt;TNewClass&gt;(IJavaObject)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase.Wraps(Type, IJavaObject, string)</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase.Wraps&lt;TNewClass, TReturn&gt;(IJavaObject)</span>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_Wraps__2_MASES_JCOBridge_C2JBridge_JVMInterop_IJavaObject_">JVMBridgeBase.Wraps&lt;TNewClass, TReturn&gt;(IJavaObject)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase.Wraps&lt;TReturn&gt;(Type, IJavaObject, string)</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase.Wraps&lt;TNewClass, TReturn, TConverter&gt;(IJavaObject)</span>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_Wraps__3_MASES_JCOBridge_C2JBridge_JVMInterop_IJavaObject_">JVMBridgeBase.Wraps&lt;TNewClass, TReturn, TConverter&gt;(IJavaObject)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase.Wraps&lt;TReturn, TConverter&gt;(Type, IJavaObject)</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase.MonitorEnter()</span>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_MonitorEnter">JVMBridgeBase.MonitorEnter()</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase.MonitorExit()</span>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_MonitorExit">JVMBridgeBase.MonitorExit()</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IsInstanceOf(string)</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase.IsInstanceOf(IJavaType)</span>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsInstanceOf_MASES_JCOBridge_C2JBridge_JVMInterop_IJavaType_">JVMBridgeBase.IsInstanceOf(IJavaType)</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase.IsInstanceOf&lt;T&gt;()</span>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsInstanceOf__1">JVMBridgeBase.IsInstanceOf&lt;T&gt;()</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase.RuntimeIsInstanceOf&lt;T&gt;()</span>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_RuntimeIsInstanceOf__1">JVMBridgeBase.RuntimeIsInstanceOf&lt;T&gt;()</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase.CastTo&lt;TNewClass&gt;()</span>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_CastTo__1">JVMBridgeBase.CastTo&lt;TNewClass&gt;()</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase.CastDirect&lt;TNewClass&gt;()</span>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_CastDirect__1">JVMBridgeBase.CastDirect&lt;TNewClass&gt;()</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase.Dispose()</span>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_Dispose">JVMBridgeBase.Dispose()</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase.ToString()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">JVMBridgeBase.Dispose(bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_ToString">JVMBridgeBase.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_Equals_MASES_JCOBridge_C2JBridge_IJVMBridgeBase_">JVMBridgeBase.Equals(IJVMBridgeBase)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">JVMBridgeBase.Equals(object)</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase.GetHashCode()</span>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_GetHashCode">JVMBridgeBase.GetHashCode()</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase.Notify()</span>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_Notify">JVMBridgeBase.Notify()</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase.NotifyAll()</span>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_NotifyAll">JVMBridgeBase.NotifyAll()</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase.Wait()</span>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_Wait">JVMBridgeBase.Wait()</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">JVMBridgeBase.Wait(long)</a>
@@ -402,10 +427,10 @@ Class KafkaConsumer  <a class="header-action link-secondary" title="View source"
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteWithSignature&lt;TNewClass, TReturn, TConverter&gt;(string, string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteArray&lt;T&gt;(string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteArray&lt;TArrayType&gt;(string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteWithSignatureArray&lt;T&gt;(string, string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteWithSignatureArray&lt;TArrayType&gt;(string, string, params object[])</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IGetField(string)</a>
@@ -423,13 +448,13 @@ Class KafkaConsumer  <a class="header-action link-secondary" title="View source"
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.ISetField&lt;TValue&gt;(string, TValue)</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase.DynBridgeInstance</span>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_DynBridgeInstance">JVMBridgeBase.DynBridgeInstance</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase.BridgeInstance</span>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeInstance">JVMBridgeBase.BridgeInstance</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase.IsBridgeListener</span>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeListener">JVMBridgeBase.IsBridgeListener</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trygetmember">DynamicObject.TryGetMember(GetMemberBinder, out object)</a>
@@ -527,7 +552,7 @@ Class KafkaConsumer  <a class="header-action link-secondary" title="View source"
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_KafkaConsumer__ctor_Java_Util_Map_" data-uid="Org.Apache.Kafka.Clients.Consumer.KafkaConsumer.#ctor(Java.Util.Map)">
   KafkaConsumer(Map)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/KafkaConsumer.cs/#L138"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/KafkaConsumer.cs/#L130"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/consumer/KafkaConsumer.html#org.apache.kafka.clients.consumer.KafkaConsumer(java.util.Map)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/consumer/KafkaConsumer.html#org.apache.kafka.clients.consumer.KafkaConsumer(java.util.Map)</a></p>
@@ -560,7 +585,7 @@ Class KafkaConsumer  <a class="header-action link-secondary" title="View source"
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_KafkaConsumer__ctor_Java_Util_Map_Org_Apache_Kafka_Common_Serialization_Deserializer_Org_Apache_Kafka_Common_Serialization_Deserializer_" data-uid="Org.Apache.Kafka.Clients.Consumer.KafkaConsumer.#ctor(Java.Util.Map,Org.Apache.Kafka.Common.Serialization.Deserializer,Org.Apache.Kafka.Common.Serialization.Deserializer)">
   KafkaConsumer(Map, Deserializer, Deserializer)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/KafkaConsumer.cs/#L130"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/KafkaConsumer.cs/#L122"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/consumer/KafkaConsumer.html#org.apache.kafka.clients.consumer.KafkaConsumer(java.util.Map,org.apache.kafka.common.serialization.Deserializer,org.apache.kafka.common.serialization.Deserializer)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/consumer/KafkaConsumer.html#org.apache.kafka.clients.consumer.KafkaConsumer(java.util.Map,org.apache.kafka.common.serialization.Deserializer,org.apache.kafka.common.serialization.Deserializer)</a></p>
@@ -599,7 +624,7 @@ Class KafkaConsumer  <a class="header-action link-secondary" title="View source"
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_KafkaConsumer__ctor_Java_Util_Properties_" data-uid="Org.Apache.Kafka.Clients.Consumer.KafkaConsumer.#ctor(Java.Util.Properties)">
   KafkaConsumer(Properties)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/KafkaConsumer.cs/#L156"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/KafkaConsumer.cs/#L148"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/consumer/KafkaConsumer.html#org.apache.kafka.clients.consumer.KafkaConsumer(java.util.Properties)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/consumer/KafkaConsumer.html#org.apache.kafka.clients.consumer.KafkaConsumer(java.util.Properties)</a></p>
@@ -632,7 +657,7 @@ Class KafkaConsumer  <a class="header-action link-secondary" title="View source"
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_KafkaConsumer__ctor_Java_Util_Properties_Org_Apache_Kafka_Common_Serialization_Deserializer_Org_Apache_Kafka_Common_Serialization_Deserializer_" data-uid="Org.Apache.Kafka.Clients.Consumer.KafkaConsumer.#ctor(Java.Util.Properties,Org.Apache.Kafka.Common.Serialization.Deserializer,Org.Apache.Kafka.Common.Serialization.Deserializer)">
   KafkaConsumer(Properties, Deserializer, Deserializer)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/KafkaConsumer.cs/#L148"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/KafkaConsumer.cs/#L140"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/consumer/KafkaConsumer.html#org.apache.kafka.clients.consumer.KafkaConsumer(java.util.Properties,org.apache.kafka.common.serialization.Deserializer,org.apache.kafka.common.serialization.Deserializer)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/consumer/KafkaConsumer.html#org.apache.kafka.clients.consumer.KafkaConsumer(java.util.Properties,org.apache.kafka.common.serialization.Deserializer,org.apache.kafka.common.serialization.Deserializer)</a></p>
@@ -669,9 +694,42 @@ Class KafkaConsumer  <a class="header-action link-secondary" title="View source"
 
   <a id="Org_Apache_Kafka_Clients_Consumer_KafkaConsumer__ctor_" data-uid="Org.Apache.Kafka.Clients.Consumer.KafkaConsumer.#ctor*"></a>
 
+  <h3 id="Org_Apache_Kafka_Clients_Consumer_KafkaConsumer__ctor_MASES_JCOBridge_C2JBridge_IJVMBridgeBaseInitializer_" data-uid="Org.Apache.Kafka.Clients.Consumer.KafkaConsumer.#ctor(MASES.JCOBridge.C2JBridge.IJVMBridgeBaseInitializer)">
+  KafkaConsumer(IJVMBridgeBaseInitializer)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/KafkaConsumer.cs/#L42"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Internal constructor: used internally from JCOBridge</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.&quot;)]
+public KafkaConsumer(IJVMBridgeBaseInitializer initializer)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>initializer</code> <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeBaseInitializer.html">IJVMBridgeBaseInitializer</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Apache_Kafka_Clients_Consumer_KafkaConsumer__ctor_" data-uid="Org.Apache.Kafka.Clients.Consumer.KafkaConsumer.#ctor*"></a>
+
   <h3 id="Org_Apache_Kafka_Clients_Consumer_KafkaConsumer__ctor_System_Object___" data-uid="Org.Apache.Kafka.Clients.Consumer.KafkaConsumer.#ctor(System.Object[])">
   KafkaConsumer(params object[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/KafkaConsumer.cs/#L42"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/KafkaConsumer.cs/#L47"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Generic constructor: it is useful for JCOBridge when there is a derived class which needs to pass arguments to the highest JVMBridgeBase class</p>
@@ -707,10 +765,10 @@ Class KafkaConsumer  <a class="header-action link-secondary" title="View source"
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_KafkaConsumer_BridgeClassName" data-uid="Org.Apache.Kafka.Clients.Consumer.KafkaConsumer.BridgeClassName">
   BridgeClassName
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/KafkaConsumer.cs/#L50"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/KafkaConsumer.cs/#L54"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm</a></p>
+  <div class="markdown level1 summary"><p>Java class name to be instantiated</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -739,10 +797,10 @@ Class KafkaConsumer  <a class="header-action link-secondary" title="View source"
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_KafkaConsumer_IsBridgeAbstract" data-uid="Org.Apache.Kafka.Clients.Consumer.KafkaConsumer.IsBridgeAbstract">
   IsBridgeAbstract
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/KafkaConsumer.cs/#L54"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/KafkaConsumer.cs/#L56"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeAbstract.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeAbstract.htm</a></p>
+  <div class="markdown level1 summary"><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.html#MASES_JCOBridge_C2JBridge_IJVMBridgeDefinition_BridgeClassName">BridgeClassName</a> is an abstract class, i.e. cannot be created an instance</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -774,7 +832,7 @@ Class KafkaConsumer  <a class="header-action link-secondary" title="View source"
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/KafkaConsumer.cs/#L58"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeCloseable.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeCloseable.htm</a></p>
+  <div class="markdown level1 summary"><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.html#MASES_JCOBridge_C2JBridge_IJVMBridgeDefinition_BridgeClassName">BridgeClassName</a> implements Closeable</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -803,10 +861,10 @@ Class KafkaConsumer  <a class="header-action link-secondary" title="View source"
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_KafkaConsumer_IsBridgeInterface" data-uid="Org.Apache.Kafka.Clients.Consumer.KafkaConsumer.IsBridgeInterface">
   IsBridgeInterface
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/KafkaConsumer.cs/#L62"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/KafkaConsumer.cs/#L60"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeInterface.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeInterface.htm</a></p>
+  <div class="markdown level1 summary"><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.html#MASES_JCOBridge_C2JBridge_IJVMBridgeDefinition_BridgeClassName">BridgeClassName</a> is an interface, i.e. does not have any public constructor</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -835,10 +893,10 @@ Class KafkaConsumer  <a class="header-action link-secondary" title="View source"
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_KafkaConsumer_IsBridgeStatic" data-uid="Org.Apache.Kafka.Clients.Consumer.KafkaConsumer.IsBridgeStatic">
   IsBridgeStatic
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/KafkaConsumer.cs/#L66"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/KafkaConsumer.cs/#L62"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeStatic.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeStatic.htm</a></p>
+  <div class="markdown level1 summary"><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.html#MASES_JCOBridge_C2JBridge_IJVMBridgeDefinition_BridgeClassName">BridgeClassName</a> is a static class, i.e. does not have any public constructor</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -871,7 +929,7 @@ Class KafkaConsumer  <a class="header-action link-secondary" title="View source"
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_KafkaConsumer_Assign_Java_Util_Collection_" data-uid="Org.Apache.Kafka.Clients.Consumer.KafkaConsumer.Assign(Java.Util.Collection)">
   Assign(Collection)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/KafkaConsumer.cs/#L378"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/KafkaConsumer.cs/#L370"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/consumer/KafkaConsumer.html#assign-java.util.Collection-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/consumer/KafkaConsumer.html#assign-java.util.Collection-</a></p>
@@ -904,7 +962,7 @@ Class KafkaConsumer  <a class="header-action link-secondary" title="View source"
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_KafkaConsumer_Assignment" data-uid="Org.Apache.Kafka.Clients.Consumer.KafkaConsumer.Assignment">
   Assignment()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/KafkaConsumer.cs/#L317"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/KafkaConsumer.cs/#L309"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/consumer/KafkaConsumer.html#assignment--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/consumer/KafkaConsumer.html#assignment--</a></p>
@@ -937,7 +995,7 @@ Class KafkaConsumer  <a class="header-action link-secondary" title="View source"
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_KafkaConsumer_BeginningOffsets_Java_Util_Collection_" data-uid="Org.Apache.Kafka.Clients.Consumer.KafkaConsumer.BeginningOffsets(Java.Util.Collection)">
   BeginningOffsets(Collection)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/KafkaConsumer.cs/#L235"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/KafkaConsumer.cs/#L227"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/consumer/KafkaConsumer.html#beginningOffsets-java.util.Collection-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/consumer/KafkaConsumer.html#beginningOffsets-java.util.Collection-</a></p>
@@ -976,7 +1034,7 @@ Class KafkaConsumer  <a class="header-action link-secondary" title="View source"
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_KafkaConsumer_BeginningOffsets_Java_Util_Collection_Java_Time_Duration_" data-uid="Org.Apache.Kafka.Clients.Consumer.KafkaConsumer.BeginningOffsets(Java.Util.Collection,Java.Time.Duration)">
   BeginningOffsets(Collection, Duration)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/KafkaConsumer.cs/#L226"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/KafkaConsumer.cs/#L218"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/consumer/KafkaConsumer.html#beginningOffsets-java.util.Collection-java.time.Duration-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/consumer/KafkaConsumer.html#beginningOffsets-java.util.Collection-java.time.Duration-</a></p>
@@ -1018,7 +1076,7 @@ Class KafkaConsumer  <a class="header-action link-secondary" title="View source"
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_KafkaConsumer_ClientInstanceId_Java_Time_Duration_" data-uid="Org.Apache.Kafka.Clients.Consumer.KafkaConsumer.ClientInstanceId(Java.Time.Duration)">
   ClientInstanceId(Duration)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/KafkaConsumer.cs/#L370"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/KafkaConsumer.cs/#L362"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/consumer/KafkaConsumer.html#clientInstanceId-java.time.Duration-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/consumer/KafkaConsumer.html#clientInstanceId-java.time.Duration-</a></p>
@@ -1057,7 +1115,7 @@ Class KafkaConsumer  <a class="header-action link-secondary" title="View source"
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_KafkaConsumer_Close" data-uid="Org.Apache.Kafka.Clients.Consumer.KafkaConsumer.Close">
   Close()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/KafkaConsumer.cs/#L385"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/KafkaConsumer.cs/#L377"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/consumer/KafkaConsumer.html#close--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/consumer/KafkaConsumer.html#close--</a></p>
@@ -1084,7 +1142,7 @@ Class KafkaConsumer  <a class="header-action link-secondary" title="View source"
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_KafkaConsumer_Close_Java_Time_Duration_" data-uid="Org.Apache.Kafka.Clients.Consumer.KafkaConsumer.Close(Java.Time.Duration)">
   Close(Duration)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/KafkaConsumer.cs/#L393"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/KafkaConsumer.cs/#L385"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/consumer/KafkaConsumer.html#close-java.time.Duration-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/consumer/KafkaConsumer.html#close-java.time.Duration-</a></p>
@@ -1117,7 +1175,7 @@ Class KafkaConsumer  <a class="header-action link-secondary" title="View source"
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_KafkaConsumer_CommitAsync" data-uid="Org.Apache.Kafka.Clients.Consumer.KafkaConsumer.CommitAsync">
   CommitAsync()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/KafkaConsumer.cs/#L400"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/KafkaConsumer.cs/#L392"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/consumer/KafkaConsumer.html#commitAsync--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/consumer/KafkaConsumer.html#commitAsync--</a></p>
@@ -1144,7 +1202,7 @@ Class KafkaConsumer  <a class="header-action link-secondary" title="View source"
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_KafkaConsumer_CommitAsync_Java_Util_Map_Org_Apache_Kafka_Clients_Consumer_OffsetCommitCallback_" data-uid="Org.Apache.Kafka.Clients.Consumer.KafkaConsumer.CommitAsync(Java.Util.Map,Org.Apache.Kafka.Clients.Consumer.OffsetCommitCallback)">
   CommitAsync(Map, OffsetCommitCallback)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/KafkaConsumer.cs/#L409"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/KafkaConsumer.cs/#L401"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/consumer/KafkaConsumer.html#commitAsync-java.util.Map-org.apache.kafka.clients.consumer.OffsetCommitCallback-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/consumer/KafkaConsumer.html#commitAsync-java.util.Map-org.apache.kafka.clients.consumer.OffsetCommitCallback-</a></p>
@@ -1180,7 +1238,7 @@ Class KafkaConsumer  <a class="header-action link-secondary" title="View source"
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_KafkaConsumer_CommitAsync_Org_Apache_Kafka_Clients_Consumer_OffsetCommitCallback_" data-uid="Org.Apache.Kafka.Clients.Consumer.KafkaConsumer.CommitAsync(Org.Apache.Kafka.Clients.Consumer.OffsetCommitCallback)">
   CommitAsync(OffsetCommitCallback)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/KafkaConsumer.cs/#L417"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/KafkaConsumer.cs/#L409"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/consumer/KafkaConsumer.html#commitAsync-org.apache.kafka.clients.consumer.OffsetCommitCallback-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/consumer/KafkaConsumer.html#commitAsync-org.apache.kafka.clients.consumer.OffsetCommitCallback-</a></p>
@@ -1213,7 +1271,7 @@ Class KafkaConsumer  <a class="header-action link-secondary" title="View source"
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_KafkaConsumer_CommitSync" data-uid="Org.Apache.Kafka.Clients.Consumer.KafkaConsumer.CommitSync">
   CommitSync()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/KafkaConsumer.cs/#L424"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/KafkaConsumer.cs/#L416"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/consumer/KafkaConsumer.html#commitSync--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/consumer/KafkaConsumer.html#commitSync--</a></p>
@@ -1240,7 +1298,7 @@ Class KafkaConsumer  <a class="header-action link-secondary" title="View source"
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_KafkaConsumer_CommitSync_Java_Time_Duration_" data-uid="Org.Apache.Kafka.Clients.Consumer.KafkaConsumer.CommitSync(Java.Time.Duration)">
   CommitSync(Duration)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/KafkaConsumer.cs/#L432"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/KafkaConsumer.cs/#L424"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/consumer/KafkaConsumer.html#commitSync-java.time.Duration-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/consumer/KafkaConsumer.html#commitSync-java.time.Duration-</a></p>
@@ -1273,7 +1331,7 @@ Class KafkaConsumer  <a class="header-action link-secondary" title="View source"
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_KafkaConsumer_CommitSync_Java_Util_Map_" data-uid="Org.Apache.Kafka.Clients.Consumer.KafkaConsumer.CommitSync(Java.Util.Map)">
   CommitSync(Map)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/KafkaConsumer.cs/#L449"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/KafkaConsumer.cs/#L441"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/consumer/KafkaConsumer.html#commitSync-java.util.Map-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/consumer/KafkaConsumer.html#commitSync-java.util.Map-</a></p>
@@ -1306,7 +1364,7 @@ Class KafkaConsumer  <a class="header-action link-secondary" title="View source"
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_KafkaConsumer_CommitSync_Java_Util_Map_Java_Time_Duration_" data-uid="Org.Apache.Kafka.Clients.Consumer.KafkaConsumer.CommitSync(Java.Util.Map,Java.Time.Duration)">
   CommitSync(Map, Duration)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/KafkaConsumer.cs/#L441"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/KafkaConsumer.cs/#L433"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/consumer/KafkaConsumer.html#commitSync-java.util.Map-java.time.Duration-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/consumer/KafkaConsumer.html#commitSync-java.util.Map-java.time.Duration-</a></p>
@@ -1342,7 +1400,7 @@ Class KafkaConsumer  <a class="header-action link-secondary" title="View source"
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_KafkaConsumer_Committed_Java_Util_Set_" data-uid="Org.Apache.Kafka.Clients.Consumer.KafkaConsumer.Committed(Java.Util.Set)">
   Committed(Set)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/KafkaConsumer.cs/#L273"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/KafkaConsumer.cs/#L265"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/consumer/KafkaConsumer.html#committed-java.util.Set-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/consumer/KafkaConsumer.html#committed-java.util.Set-</a></p>
@@ -1381,7 +1439,7 @@ Class KafkaConsumer  <a class="header-action link-secondary" title="View source"
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_KafkaConsumer_Committed_Java_Util_Set_Java_Time_Duration_" data-uid="Org.Apache.Kafka.Clients.Consumer.KafkaConsumer.Committed(Java.Util.Set,Java.Time.Duration)">
   Committed(Set, Duration)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/KafkaConsumer.cs/#L264"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/KafkaConsumer.cs/#L256"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/consumer/KafkaConsumer.html#committed-java.util.Set-java.time.Duration-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/consumer/KafkaConsumer.html#committed-java.util.Set-java.time.Duration-</a></p>
@@ -1423,7 +1481,7 @@ Class KafkaConsumer  <a class="header-action link-secondary" title="View source"
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_KafkaConsumer_CurrentLag_Org_Apache_Kafka_Common_TopicPartition_" data-uid="Org.Apache.Kafka.Clients.Consumer.KafkaConsumer.CurrentLag(Org.Apache.Kafka.Common.TopicPartition)">
   CurrentLag(TopicPartition)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/KafkaConsumer.cs/#L301"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/KafkaConsumer.cs/#L293"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/consumer/KafkaConsumer.html#currentLag-org.apache.kafka.common.TopicPartition-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/consumer/KafkaConsumer.html#currentLag-org.apache.kafka.common.TopicPartition-</a></p>
@@ -1462,7 +1520,7 @@ Class KafkaConsumer  <a class="header-action link-secondary" title="View source"
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_KafkaConsumer_EndOffsets_Java_Util_Collection_" data-uid="Org.Apache.Kafka.Clients.Consumer.KafkaConsumer.EndOffsets(Java.Util.Collection)">
   EndOffsets(Collection)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/KafkaConsumer.cs/#L254"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/KafkaConsumer.cs/#L246"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/consumer/KafkaConsumer.html#endOffsets-java.util.Collection-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/consumer/KafkaConsumer.html#endOffsets-java.util.Collection-</a></p>
@@ -1501,7 +1559,7 @@ Class KafkaConsumer  <a class="header-action link-secondary" title="View source"
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_KafkaConsumer_EndOffsets_Java_Util_Collection_Java_Time_Duration_" data-uid="Org.Apache.Kafka.Clients.Consumer.KafkaConsumer.EndOffsets(Java.Util.Collection,Java.Time.Duration)">
   EndOffsets(Collection, Duration)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/KafkaConsumer.cs/#L245"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/KafkaConsumer.cs/#L237"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/consumer/KafkaConsumer.html#endOffsets-java.util.Collection-java.time.Duration-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/consumer/KafkaConsumer.html#endOffsets-java.util.Collection-java.time.Duration-</a></p>
@@ -1543,7 +1601,7 @@ Class KafkaConsumer  <a class="header-action link-secondary" title="View source"
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_KafkaConsumer_EnforceRebalance" data-uid="Org.Apache.Kafka.Clients.Consumer.KafkaConsumer.EnforceRebalance">
   EnforceRebalance()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/KafkaConsumer.cs/#L456"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/KafkaConsumer.cs/#L448"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/consumer/KafkaConsumer.html#enforceRebalance--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/consumer/KafkaConsumer.html#enforceRebalance--</a></p>
@@ -1570,7 +1628,7 @@ Class KafkaConsumer  <a class="header-action link-secondary" title="View source"
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_KafkaConsumer_EnforceRebalance_Java_Lang_String_" data-uid="Org.Apache.Kafka.Clients.Consumer.KafkaConsumer.EnforceRebalance(Java.Lang.String)">
   EnforceRebalance(String)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/KafkaConsumer.cs/#L464"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/KafkaConsumer.cs/#L456"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/consumer/KafkaConsumer.html#enforceRebalance-java.lang.String-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/consumer/KafkaConsumer.html#enforceRebalance-java.lang.String-</a></p>
@@ -1603,7 +1661,7 @@ Class KafkaConsumer  <a class="header-action link-secondary" title="View source"
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_KafkaConsumer_GroupMetadata" data-uid="Org.Apache.Kafka.Clients.Consumer.KafkaConsumer.GroupMetadata">
   GroupMetadata()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/KafkaConsumer.cs/#L352"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/KafkaConsumer.cs/#L344"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/consumer/KafkaConsumer.html#groupMetadata--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/consumer/KafkaConsumer.html#groupMetadata--</a></p>
@@ -1636,7 +1694,7 @@ Class KafkaConsumer  <a class="header-action link-secondary" title="View source"
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_KafkaConsumer_ListTopics" data-uid="Org.Apache.Kafka.Clients.Consumer.KafkaConsumer.ListTopics">
   ListTopics()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/KafkaConsumer.cs/#L199"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/KafkaConsumer.cs/#L191"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/consumer/KafkaConsumer.html#listTopics--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/consumer/KafkaConsumer.html#listTopics--</a></p>
@@ -1669,7 +1727,7 @@ Class KafkaConsumer  <a class="header-action link-secondary" title="View source"
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_KafkaConsumer_ListTopics_Java_Time_Duration_" data-uid="Org.Apache.Kafka.Clients.Consumer.KafkaConsumer.ListTopics(Java.Time.Duration)">
   ListTopics(Duration)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/KafkaConsumer.cs/#L208"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/KafkaConsumer.cs/#L200"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/consumer/KafkaConsumer.html#listTopics-java.time.Duration-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/consumer/KafkaConsumer.html#listTopics-java.time.Duration-</a></p>
@@ -1708,7 +1766,7 @@ Class KafkaConsumer  <a class="header-action link-secondary" title="View source"
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_KafkaConsumer_Metrics" data-uid="Org.Apache.Kafka.Clients.Consumer.KafkaConsumer.Metrics">
   Metrics()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/KafkaConsumer.cs/#L216"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/KafkaConsumer.cs/#L208"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/consumer/KafkaConsumer.html#metrics--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/consumer/KafkaConsumer.html#metrics--</a></p>
@@ -1741,7 +1799,7 @@ Class KafkaConsumer  <a class="header-action link-secondary" title="View source"
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_KafkaConsumer_OffsetsForTimes_Java_Util_Map_" data-uid="Org.Apache.Kafka.Clients.Consumer.KafkaConsumer.OffsetsForTimes(Java.Util.Map)">
   OffsetsForTimes(Map)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/KafkaConsumer.cs/#L292"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/KafkaConsumer.cs/#L284"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/consumer/KafkaConsumer.html#offsetsForTimes-java.util.Map-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/consumer/KafkaConsumer.html#offsetsForTimes-java.util.Map-</a></p>
@@ -1780,7 +1838,7 @@ Class KafkaConsumer  <a class="header-action link-secondary" title="View source"
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_KafkaConsumer_OffsetsForTimes_Java_Util_Map_Java_Time_Duration_" data-uid="Org.Apache.Kafka.Clients.Consumer.KafkaConsumer.OffsetsForTimes(Java.Util.Map,Java.Time.Duration)">
   OffsetsForTimes(Map, Duration)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/KafkaConsumer.cs/#L283"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/KafkaConsumer.cs/#L275"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/consumer/KafkaConsumer.html#offsetsForTimes-java.util.Map-java.time.Duration-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/consumer/KafkaConsumer.html#offsetsForTimes-java.util.Map-java.time.Duration-</a></p>
@@ -1822,7 +1880,7 @@ Class KafkaConsumer  <a class="header-action link-secondary" title="View source"
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_KafkaConsumer_PartitionsFor_Java_Lang_String_" data-uid="Org.Apache.Kafka.Clients.Consumer.KafkaConsumer.PartitionsFor(Java.Lang.String)">
   PartitionsFor(String)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/KafkaConsumer.cs/#L191"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/KafkaConsumer.cs/#L183"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/consumer/KafkaConsumer.html#partitionsFor-java.lang.String-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/consumer/KafkaConsumer.html#partitionsFor-java.lang.String-</a></p>
@@ -1861,7 +1919,7 @@ Class KafkaConsumer  <a class="header-action link-secondary" title="View source"
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_KafkaConsumer_PartitionsFor_Java_Lang_String_Java_Time_Duration_" data-uid="Org.Apache.Kafka.Clients.Consumer.KafkaConsumer.PartitionsFor(Java.Lang.String,Java.Time.Duration)">
   PartitionsFor(String, Duration)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/KafkaConsumer.cs/#L182"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/KafkaConsumer.cs/#L174"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/consumer/KafkaConsumer.html#partitionsFor-java.lang.String-java.time.Duration-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/consumer/KafkaConsumer.html#partitionsFor-java.lang.String-java.time.Duration-</a></p>
@@ -1903,7 +1961,7 @@ Class KafkaConsumer  <a class="header-action link-secondary" title="View source"
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_KafkaConsumer_Pause_Java_Util_Collection_" data-uid="Org.Apache.Kafka.Clients.Consumer.KafkaConsumer.Pause(Java.Util.Collection)">
   Pause(Collection)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/KafkaConsumer.cs/#L472"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/KafkaConsumer.cs/#L464"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/consumer/KafkaConsumer.html#pause-java.util.Collection-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/consumer/KafkaConsumer.html#pause-java.util.Collection-</a></p>
@@ -1936,7 +1994,7 @@ Class KafkaConsumer  <a class="header-action link-secondary" title="View source"
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_KafkaConsumer_Paused" data-uid="Org.Apache.Kafka.Clients.Consumer.KafkaConsumer.Paused">
   Paused()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/KafkaConsumer.cs/#L325"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/KafkaConsumer.cs/#L317"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/consumer/KafkaConsumer.html#paused--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/consumer/KafkaConsumer.html#paused--</a></p>
@@ -1969,7 +2027,7 @@ Class KafkaConsumer  <a class="header-action link-secondary" title="View source"
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_KafkaConsumer_Poll_Java_Time_Duration_" data-uid="Org.Apache.Kafka.Clients.Consumer.KafkaConsumer.Poll(Java.Time.Duration)">
   Poll(Duration)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/KafkaConsumer.cs/#L361"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/KafkaConsumer.cs/#L353"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/consumer/KafkaConsumer.html#poll-java.time.Duration-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/consumer/KafkaConsumer.html#poll-java.time.Duration-</a></p>
@@ -2008,7 +2066,7 @@ Class KafkaConsumer  <a class="header-action link-secondary" title="View source"
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_KafkaConsumer_Position_Org_Apache_Kafka_Common_TopicPartition_" data-uid="Org.Apache.Kafka.Clients.Consumer.KafkaConsumer.Position(Org.Apache.Kafka.Common.TopicPartition)">
   Position(TopicPartition)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/KafkaConsumer.cs/#L344"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/KafkaConsumer.cs/#L336"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/consumer/KafkaConsumer.html#position-org.apache.kafka.common.TopicPartition-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/consumer/KafkaConsumer.html#position-org.apache.kafka.common.TopicPartition-</a></p>
@@ -2047,7 +2105,7 @@ Class KafkaConsumer  <a class="header-action link-secondary" title="View source"
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_KafkaConsumer_Position_Org_Apache_Kafka_Common_TopicPartition_Java_Time_Duration_" data-uid="Org.Apache.Kafka.Clients.Consumer.KafkaConsumer.Position(Org.Apache.Kafka.Common.TopicPartition,Java.Time.Duration)">
   Position(TopicPartition, Duration)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/KafkaConsumer.cs/#L335"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/KafkaConsumer.cs/#L327"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/consumer/KafkaConsumer.html#position-org.apache.kafka.common.TopicPartition-java.time.Duration-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/consumer/KafkaConsumer.html#position-org.apache.kafka.common.TopicPartition-java.time.Duration-</a></p>
@@ -2089,7 +2147,7 @@ Class KafkaConsumer  <a class="header-action link-secondary" title="View source"
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_KafkaConsumer_Resume_Java_Util_Collection_" data-uid="Org.Apache.Kafka.Clients.Consumer.KafkaConsumer.Resume(Java.Util.Collection)">
   Resume(Collection)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/KafkaConsumer.cs/#L480"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/KafkaConsumer.cs/#L472"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/consumer/KafkaConsumer.html#resume-java.util.Collection-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/consumer/KafkaConsumer.html#resume-java.util.Collection-</a></p>
@@ -2122,7 +2180,7 @@ Class KafkaConsumer  <a class="header-action link-secondary" title="View source"
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_KafkaConsumer_Seek_Org_Apache_Kafka_Common_TopicPartition_Org_Apache_Kafka_Clients_Consumer_OffsetAndMetadata_" data-uid="Org.Apache.Kafka.Clients.Consumer.KafkaConsumer.Seek(Org.Apache.Kafka.Common.TopicPartition,Org.Apache.Kafka.Clients.Consumer.OffsetAndMetadata)">
   Seek(TopicPartition, OffsetAndMetadata)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/KafkaConsumer.cs/#L498"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/KafkaConsumer.cs/#L490"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/consumer/KafkaConsumer.html#seek-org.apache.kafka.common.TopicPartition-org.apache.kafka.clients.consumer.OffsetAndMetadata-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/consumer/KafkaConsumer.html#seek-org.apache.kafka.common.TopicPartition-org.apache.kafka.clients.consumer.OffsetAndMetadata-</a></p>
@@ -2158,7 +2216,7 @@ Class KafkaConsumer  <a class="header-action link-secondary" title="View source"
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_KafkaConsumer_Seek_Org_Apache_Kafka_Common_TopicPartition_System_Int64_" data-uid="Org.Apache.Kafka.Clients.Consumer.KafkaConsumer.Seek(Org.Apache.Kafka.Common.TopicPartition,System.Int64)">
   Seek(TopicPartition, long)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/KafkaConsumer.cs/#L489"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/KafkaConsumer.cs/#L481"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/consumer/KafkaConsumer.html#seek-org.apache.kafka.common.TopicPartition-long-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/consumer/KafkaConsumer.html#seek-org.apache.kafka.common.TopicPartition-long-</a></p>
@@ -2194,7 +2252,7 @@ Class KafkaConsumer  <a class="header-action link-secondary" title="View source"
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_KafkaConsumer_SeekToBeginning_Java_Util_Collection_" data-uid="Org.Apache.Kafka.Clients.Consumer.KafkaConsumer.SeekToBeginning(Java.Util.Collection)">
   SeekToBeginning(Collection)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/KafkaConsumer.cs/#L506"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/KafkaConsumer.cs/#L498"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/consumer/KafkaConsumer.html#seekToBeginning-java.util.Collection-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/consumer/KafkaConsumer.html#seekToBeginning-java.util.Collection-</a></p>
@@ -2227,7 +2285,7 @@ Class KafkaConsumer  <a class="header-action link-secondary" title="View source"
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_KafkaConsumer_SeekToEnd_Java_Util_Collection_" data-uid="Org.Apache.Kafka.Clients.Consumer.KafkaConsumer.SeekToEnd(Java.Util.Collection)">
   SeekToEnd(Collection)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/KafkaConsumer.cs/#L514"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/KafkaConsumer.cs/#L506"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/consumer/KafkaConsumer.html#seekToEnd-java.util.Collection-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/consumer/KafkaConsumer.html#seekToEnd-java.util.Collection-</a></p>
@@ -2260,7 +2318,7 @@ Class KafkaConsumer  <a class="header-action link-secondary" title="View source"
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_KafkaConsumer_Subscribe_Java_Util_Collection_" data-uid="Org.Apache.Kafka.Clients.Consumer.KafkaConsumer.Subscribe(Java.Util.Collection)">
   Subscribe(Collection)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/KafkaConsumer.cs/#L531"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/KafkaConsumer.cs/#L523"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/consumer/KafkaConsumer.html#subscribe-java.util.Collection-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/consumer/KafkaConsumer.html#subscribe-java.util.Collection-</a></p>
@@ -2293,7 +2351,7 @@ Class KafkaConsumer  <a class="header-action link-secondary" title="View source"
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_KafkaConsumer_Subscribe_Java_Util_Collection_Org_Apache_Kafka_Clients_Consumer_ConsumerRebalanceListener_" data-uid="Org.Apache.Kafka.Clients.Consumer.KafkaConsumer.Subscribe(Java.Util.Collection,Org.Apache.Kafka.Clients.Consumer.ConsumerRebalanceListener)">
   Subscribe(Collection, ConsumerRebalanceListener)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/KafkaConsumer.cs/#L523"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/KafkaConsumer.cs/#L515"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/consumer/KafkaConsumer.html#subscribe-java.util.Collection-org.apache.kafka.clients.consumer.ConsumerRebalanceListener-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/consumer/KafkaConsumer.html#subscribe-java.util.Collection-org.apache.kafka.clients.consumer.ConsumerRebalanceListener-</a></p>
@@ -2329,7 +2387,7 @@ Class KafkaConsumer  <a class="header-action link-secondary" title="View source"
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_KafkaConsumer_Subscribe_Java_Util_Regex_Pattern_" data-uid="Org.Apache.Kafka.Clients.Consumer.KafkaConsumer.Subscribe(Java.Util.Regex.Pattern)">
   Subscribe(Pattern)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/KafkaConsumer.cs/#L548"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/KafkaConsumer.cs/#L540"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/consumer/KafkaConsumer.html#subscribe-java.util.regex.Pattern-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/consumer/KafkaConsumer.html#subscribe-java.util.regex.Pattern-</a></p>
@@ -2362,7 +2420,7 @@ Class KafkaConsumer  <a class="header-action link-secondary" title="View source"
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_KafkaConsumer_Subscribe_Java_Util_Regex_Pattern_Org_Apache_Kafka_Clients_Consumer_ConsumerRebalanceListener_" data-uid="Org.Apache.Kafka.Clients.Consumer.KafkaConsumer.Subscribe(Java.Util.Regex.Pattern,Org.Apache.Kafka.Clients.Consumer.ConsumerRebalanceListener)">
   Subscribe(Pattern, ConsumerRebalanceListener)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/KafkaConsumer.cs/#L540"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/KafkaConsumer.cs/#L532"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/consumer/KafkaConsumer.html#subscribe-java.util.regex.Pattern-org.apache.kafka.clients.consumer.ConsumerRebalanceListener-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/consumer/KafkaConsumer.html#subscribe-java.util.regex.Pattern-org.apache.kafka.clients.consumer.ConsumerRebalanceListener-</a></p>
@@ -2398,7 +2456,7 @@ Class KafkaConsumer  <a class="header-action link-secondary" title="View source"
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_KafkaConsumer_Subscription" data-uid="Org.Apache.Kafka.Clients.Consumer.KafkaConsumer.Subscription">
   Subscription()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/KafkaConsumer.cs/#L309"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/KafkaConsumer.cs/#L301"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/consumer/KafkaConsumer.html#subscription--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/consumer/KafkaConsumer.html#subscription--</a></p>
@@ -2431,7 +2489,7 @@ Class KafkaConsumer  <a class="header-action link-secondary" title="View source"
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_KafkaConsumer_Unsubscribe" data-uid="Org.Apache.Kafka.Clients.Consumer.KafkaConsumer.Unsubscribe">
   Unsubscribe()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/KafkaConsumer.cs/#L555"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/KafkaConsumer.cs/#L547"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/consumer/KafkaConsumer.html#unsubscribe--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/consumer/KafkaConsumer.html#unsubscribe--</a></p>
@@ -2458,7 +2516,7 @@ Class KafkaConsumer  <a class="header-action link-secondary" title="View source"
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_KafkaConsumer_Wakeup" data-uid="Org.Apache.Kafka.Clients.Consumer.KafkaConsumer.Wakeup">
   Wakeup()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/KafkaConsumer.cs/#L562"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/KafkaConsumer.cs/#L554"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/consumer/KafkaConsumer.html#wakeup--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/consumer/KafkaConsumer.html#wakeup--</a></p>
@@ -2485,7 +2543,7 @@ Class KafkaConsumer  <a class="header-action link-secondary" title="View source"
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/KafkaConsumer.cs/#L121" class="edit-link">Edit this page</a>
+          <a href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/KafkaConsumer.cs/#L113" class="edit-link">Edit this page</a>
         </div>
 
 

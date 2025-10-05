@@ -89,7 +89,7 @@
 
 
   <h1 id="Org_Apache_Kafka_Connect_Header_ConnectHeaders" data-uid="Org.Apache.Kafka.Connect.Header.ConnectHeaders" class="text-break">
-Class ConnectHeaders  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Header/ConnectHeaders.cs/#L74"><i class="bi bi-code-slash"></i></a>
+Class ConnectHeaders  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Header/ConnectHeaders.cs/#L70"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -102,7 +102,7 @@ Class ConnectHeaders  <a class="header-action link-secondary" title="View source
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class ConnectHeaders : Headers, IDynamicMetaObjectProvider, IJVMBridgeCore, IDisposable, IJVMBridgeBaseStatic, IJVMBridgeBase, IJVMBridgeDefinition, IEnumerableExtension, IEnumerable&lt;Header&gt;, IEnumerable, IAsyncEnumerable&lt;Header&gt;, IIterable&lt;Header&gt;, IHeaders</code></pre>
+    <pre><code class="lang-csharp hljs">public class ConnectHeaders : Headers, IDynamicMetaObjectProvider, IJVMBridgeCore, IEquatable&lt;IJVMBridgeBase&gt;, IDisposable, IJVMBridgeBaseStatic, IJVMBridgeBase, IJVMBridgeDefinition, IEnumerableExtension, IEnumerable&lt;Header&gt;, IEnumerable, IAsyncEnumerable&lt;Header&gt;, IIterable&lt;Header&gt;, IHeaders</code></pre>
   </div>
 
 
@@ -113,10 +113,10 @@ Class ConnectHeaders  <a class="header-action link-secondary" title="View source
     <dd>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject">DynamicObject</a></div>
-      <div><span class="xref">JVMBridgeBase</span></div>
-      <div><span class="xref">JVMBridgeBase</span>&lt;<a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.Iterable-1.html">Iterable</a>&lt;<a class="xref" href="Org.Apache.Kafka.Connect.Header.Header.html">Header</a>&gt;&gt;</div>
-      <div><span class="xref">JVMBridgeBaseEnumerable</span>&lt;<a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.Iterable-1.html">Iterable</a>&lt;<a class="xref" href="Org.Apache.Kafka.Connect.Header.Header.html">Header</a>&gt;&gt;</div>
-      <div><span class="xref">JVMBridgeBaseEnumerable</span>&lt;<a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.Iterable-1.html">Iterable</a>&lt;<a class="xref" href="Org.Apache.Kafka.Connect.Header.Header.html">Header</a>&gt;, <a class="xref" href="Org.Apache.Kafka.Connect.Header.Header.html">Header</a>&gt;</div>
+      <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html">JVMBridgeBase</a></div>
+      <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase-1.html">JVMBridgeBase</a>&lt;<a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.Iterable-1.html">Iterable</a>&lt;<a class="xref" href="Org.Apache.Kafka.Connect.Header.Header.html">Header</a>&gt;&gt;</div>
+      <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBaseEnumerable-1.html">JVMBridgeBaseEnumerable</a>&lt;<a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.Iterable-1.html">Iterable</a>&lt;<a class="xref" href="Org.Apache.Kafka.Connect.Header.Header.html">Header</a>&gt;&gt;</div>
+      <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBaseEnumerable-2.html">JVMBridgeBaseEnumerable</a>&lt;<a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.Iterable-1.html">Iterable</a>&lt;<a class="xref" href="Org.Apache.Kafka.Connect.Header.Header.html">Header</a>&gt;, <a class="xref" href="Org.Apache.Kafka.Connect.Header.Header.html">Header</a>&gt;</div>
       <div><a class="xref" href="https://jnet.masesgroup.com/api/MASES.JNet.Specific.JNetAsyncEnumerable-2.html">JNetAsyncEnumerable</a>&lt;<a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.Iterable-1.html">Iterable</a>&lt;<a class="xref" href="Org.Apache.Kafka.Connect.Header.Header.html">Header</a>&gt;, <a class="xref" href="Org.Apache.Kafka.Connect.Header.Header.html">Header</a>&gt;</div>
       <div><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.Iterable-1.html">Iterable</a>&lt;<a class="xref" href="Org.Apache.Kafka.Connect.Header.Header.html">Header</a>&gt;</div>
       <div><a class="xref" href="Org.Apache.Kafka.Connect.Header.Headers.html">Headers</a></div>
@@ -128,12 +128,13 @@ Class ConnectHeaders  <a class="header-action link-secondary" title="View source
     <dt>Implements</dt>
     <dd>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.idynamicmetaobjectprovider">IDynamicMetaObjectProvider</a></div>
-      <div><span class="xref">IJVMBridgeCore</span></div>
+      <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeCore.html">IJVMBridgeCore</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeBase.html">IJVMBridgeBase</a>&gt;</div>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
-      <div><span class="xref">IJVMBridgeBaseStatic</span></div>
-      <div><span class="xref">IJVMBridgeBase</span></div>
-      <div><span class="xref">IJVMBridgeDefinition</span></div>
-      <div><span class="xref">IEnumerableExtension</span></div>
+      <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeBaseStatic.html">IJVMBridgeBaseStatic</a></div>
+      <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeBase.html">IJVMBridgeBase</a></div>
+      <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.html">IJVMBridgeDefinition</a></div>
+      <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IEnumerableExtension.html">IEnumerableExtension</a></div>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="Org.Apache.Kafka.Connect.Header.Header.html">Header</a>&gt;</div>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.ienumerable">IEnumerable</a></div>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.iasyncenumerable-1">IAsyncEnumerable</a>&lt;<a class="xref" href="Org.Apache.Kafka.Connect.Header.Header.html">Header</a>&gt;</div>
@@ -150,10 +151,10 @@ Class ConnectHeaders  <a class="header-action link-secondary" title="View source
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">JNetAsyncEnumerable&lt;Iterable&lt;Header&gt;, Header&gt;.GetAsyncEnumerator(CancellationToken)</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBaseEnumerable&lt;Iterable&lt;Header&gt;, Header&gt;.GetEnumerator()</span>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBaseEnumerable-2.html#MASES_JCOBridge_C2JBridge_JVMBridgeBaseEnumerable_2_GetEnumerator">JVMBridgeBaseEnumerable&lt;Iterable&lt;Header&gt;, Header&gt;.GetEnumerator()</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBaseEnumerable&lt;Iterable&lt;Header&gt;&gt;.GetEnumerator()</span>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBaseEnumerable-1.html#MASES_JCOBridge_C2JBridge_JVMBridgeBaseEnumerable_1_GetEnumerator">JVMBridgeBaseEnumerable&lt;Iterable&lt;Header&gt;&gt;.GetEnumerator()</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Iterable&lt;Header&gt;&gt;.SExecute(IJavaType, string, params object[])</a>
@@ -240,16 +241,16 @@ Class ConnectHeaders  <a class="header-action link-secondary" title="View source
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;Iterable&lt;Header&gt;&gt;.SExecuteWithSignature&lt;TReturn, TConverter&gt;(Type, string, string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Iterable&lt;Header&gt;&gt;.SExecuteArray&lt;T&gt;(IJavaType, string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Iterable&lt;Header&gt;&gt;.SExecuteArray&lt;TArrayType&gt;(IJavaType, string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Iterable&lt;Header&gt;&gt;.SExecuteWithSignatureArray&lt;T&gt;(IJavaType, string, string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Iterable&lt;Header&gt;&gt;.SExecuteWithSignatureArray&lt;TArrayType&gt;(IJavaType, string, string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Iterable&lt;Header&gt;&gt;.SExecuteArray&lt;T&gt;(string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Iterable&lt;Header&gt;&gt;.SExecuteArray&lt;TArrayType&gt;(string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Iterable&lt;Header&gt;&gt;.SExecuteWithSignatureArray&lt;T&gt;(string, string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Iterable&lt;Header&gt;&gt;.SExecuteWithSignatureArray&lt;TArrayType&gt;(string, string, params object[])</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Iterable&lt;Header&gt;&gt;.SGetField(IJavaType, string)</a>
@@ -285,10 +286,10 @@ Class ConnectHeaders  <a class="header-action link-secondary" title="View source
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Iterable&lt;Header&gt;&gt;.IsAssignableFrom(string)</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase&lt;Iterable&lt;Header&gt;&gt;.IsAssignableFrom(IJavaType)</span>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase-1.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_1_IsAssignableFrom_MASES_JCOBridge_C2JBridge_JVMInterop_IJavaType_">JVMBridgeBase&lt;Iterable&lt;Header&gt;&gt;.IsAssignableFrom(IJavaType)</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase&lt;Iterable&lt;Header&gt;&gt;.IsAssignableFrom&lt;T&gt;()</span>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase-1.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_1_IsAssignableFrom__1">JVMBridgeBase&lt;Iterable&lt;Header&gt;&gt;.IsAssignableFrom&lt;T&gt;()</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">JVMBridgeBase&lt;Iterable&lt;Header&gt;&gt;.New(params object[])</a>
@@ -297,94 +298,118 @@ Class ConnectHeaders  <a class="header-action link-secondary" title="View source
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Iterable&lt;Header&gt;&gt;.NewWithSignature(string, params object[])</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase&lt;Iterable&lt;Header&gt;&gt;.Execute&lt;T&gt;(params T[])</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Iterable&lt;Header&gt;&gt;.NewAndWrapsDirect&lt;TNewClass&gt;(string, params object[])</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase&lt;Iterable&lt;Header&gt;&gt;.DynBridgeClazz</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Iterable&lt;Header&gt;&gt;.NewWithSignatureAndWrapsDirect&lt;TNewClass&gt;(string, string, params object[])</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase&lt;Iterable&lt;Header&gt;&gt;.BridgeClazz</span>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase-1.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_1_Execute__1___0___">JVMBridgeBase&lt;Iterable&lt;Header&gt;&gt;.Execute&lt;T&gt;(params T[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase-1.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_1_DynBridgeClazz">JVMBridgeBase&lt;Iterable&lt;Header&gt;&gt;.DynBridgeClazz</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase-1.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_1_BridgeClazz">JVMBridgeBase&lt;Iterable&lt;Header&gt;&gt;.BridgeClazz</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_ReferenceEqualsJVM_MASES_JCOBridge_C2JBridge_JVMBridgeBase_MASES_JCOBridge_C2JBridge_JVMBridgeBase_">JVMBridgeBase.ReferenceEqualsJVM(JVMBridgeBase, JVMBridgeBase)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">JVMBridgeBase.ClazzOf&lt;TClass&gt;(bool)</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">JVMBridgeBase.ClazzOf&lt;TClass&gt;(out Exception, bool)</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.ClazzOf(string, bool)</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase.RuntimeClassNameOf&lt;T&gt;()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.ClazzOf(string, out Exception, bool)</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase.ClassNameOf&lt;T&gt;()</span>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_RuntimeClassNameOf__1">JVMBridgeBase.RuntimeClassNameOf&lt;T&gt;()</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase.ClassOf&lt;T&gt;()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase.RuntimeClassNameOf(Type)</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase.WrapsDirect&lt;TNewClass&gt;(IJavaObject)</span>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_ClassNameOf__1">JVMBridgeBase.ClassNameOf&lt;T&gt;()</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase.Wraps&lt;TNewClass&gt;(IJavaObject)</span>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_ClassOf__1">JVMBridgeBase.ClassOf&lt;T&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_WrapsDirect__1_MASES_JCOBridge_C2JBridge_JVMInterop_IJavaObject_">JVMBridgeBase.WrapsDirect&lt;TNewClass&gt;(IJavaObject)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_Wraps__1_MASES_JCOBridge_C2JBridge_JVMInterop_IJavaObject_">JVMBridgeBase.Wraps&lt;TNewClass&gt;(IJavaObject)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase.Wraps(Type, IJavaObject, string)</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase.Wraps&lt;TNewClass, TReturn&gt;(IJavaObject)</span>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_Wraps__2_MASES_JCOBridge_C2JBridge_JVMInterop_IJavaObject_">JVMBridgeBase.Wraps&lt;TNewClass, TReturn&gt;(IJavaObject)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase.Wraps&lt;TReturn&gt;(Type, IJavaObject, string)</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase.Wraps&lt;TNewClass, TReturn, TConverter&gt;(IJavaObject)</span>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_Wraps__3_MASES_JCOBridge_C2JBridge_JVMInterop_IJavaObject_">JVMBridgeBase.Wraps&lt;TNewClass, TReturn, TConverter&gt;(IJavaObject)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase.Wraps&lt;TReturn, TConverter&gt;(Type, IJavaObject)</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase.MonitorEnter()</span>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_MonitorEnter">JVMBridgeBase.MonitorEnter()</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase.MonitorExit()</span>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_MonitorExit">JVMBridgeBase.MonitorExit()</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IsInstanceOf(string)</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase.IsInstanceOf(IJavaType)</span>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsInstanceOf_MASES_JCOBridge_C2JBridge_JVMInterop_IJavaType_">JVMBridgeBase.IsInstanceOf(IJavaType)</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase.IsInstanceOf&lt;T&gt;()</span>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsInstanceOf__1">JVMBridgeBase.IsInstanceOf&lt;T&gt;()</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase.RuntimeIsInstanceOf&lt;T&gt;()</span>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_RuntimeIsInstanceOf__1">JVMBridgeBase.RuntimeIsInstanceOf&lt;T&gt;()</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase.CastTo&lt;TNewClass&gt;()</span>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_CastTo__1">JVMBridgeBase.CastTo&lt;TNewClass&gt;()</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase.CastDirect&lt;TNewClass&gt;()</span>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_CastDirect__1">JVMBridgeBase.CastDirect&lt;TNewClass&gt;()</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase.Dispose()</span>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_Dispose">JVMBridgeBase.Dispose()</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase.ToString()</span>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">JVMBridgeBase.Dispose(bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_ToString">JVMBridgeBase.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_Equals_MASES_JCOBridge_C2JBridge_IJVMBridgeBase_">JVMBridgeBase.Equals(IJVMBridgeBase)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">JVMBridgeBase.Equals(object)</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase.GetHashCode()</span>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_GetHashCode">JVMBridgeBase.GetHashCode()</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase.Notify()</span>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_Notify">JVMBridgeBase.Notify()</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase.NotifyAll()</span>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_NotifyAll">JVMBridgeBase.NotifyAll()</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase.Wait()</span>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_Wait">JVMBridgeBase.Wait()</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">JVMBridgeBase.Wait(long)</a>
@@ -417,10 +442,10 @@ Class ConnectHeaders  <a class="header-action link-secondary" title="View source
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteWithSignature&lt;TNewClass, TReturn, TConverter&gt;(string, string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteArray&lt;T&gt;(string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteArray&lt;TArrayType&gt;(string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteWithSignatureArray&lt;T&gt;(string, string, params object[])</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteWithSignatureArray&lt;TArrayType&gt;(string, string, params object[])</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IGetField(string)</a>
@@ -438,13 +463,13 @@ Class ConnectHeaders  <a class="header-action link-secondary" title="View source
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.ISetField&lt;TValue&gt;(string, TValue)</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase.DynBridgeInstance</span>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_DynBridgeInstance">JVMBridgeBase.DynBridgeInstance</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase.BridgeInstance</span>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeInstance">JVMBridgeBase.BridgeInstance</a>
     </div>
     <div>
-      <span class="xref">JVMBridgeBase.IsBridgeListener</span>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeListener">JVMBridgeBase.IsBridgeListener</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trygetmember">DynamicObject.TryGetMember(GetMemberBinder, out object)</a>
@@ -542,7 +567,7 @@ Class ConnectHeaders  <a class="header-action link-secondary" title="View source
 
   <h3 id="Org_Apache_Kafka_Connect_Header_ConnectHeaders__ctor_Java_Lang_Iterable_Org_Apache_Kafka_Connect_Header_Header__" data-uid="Org.Apache.Kafka.Connect.Header.ConnectHeaders.#ctor(Java.Lang.Iterable{Org.Apache.Kafka.Connect.Header.Header})">
   ConnectHeaders(Iterable&lt;Header&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Header/ConnectHeaders.cs/#L81"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Header/ConnectHeaders.cs/#L77"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.1/org/apache/kafka/connect/header/ConnectHeaders.html#org.apache.kafka.connect.header.ConnectHeaders(java.lang.Iterable)">https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.1/org/apache/kafka/connect/header/ConnectHeaders.html#org.apache.kafka.connect.header.ConnectHeaders(java.lang.Iterable)</a></p>
@@ -573,9 +598,42 @@ Class ConnectHeaders  <a class="header-action link-secondary" title="View source
 
   <a id="Org_Apache_Kafka_Connect_Header_ConnectHeaders__ctor_" data-uid="Org.Apache.Kafka.Connect.Header.ConnectHeaders.#ctor*"></a>
 
+  <h3 id="Org_Apache_Kafka_Connect_Header_ConnectHeaders__ctor_MASES_JCOBridge_C2JBridge_IJVMBridgeBaseInitializer_" data-uid="Org.Apache.Kafka.Connect.Header.ConnectHeaders.#ctor(MASES.JCOBridge.C2JBridge.IJVMBridgeBaseInitializer)">
+  ConnectHeaders(IJVMBridgeBaseInitializer)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Header/ConnectHeaders.cs/#L42"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Internal constructor: used internally from JCOBridge</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.&quot;)]
+public ConnectHeaders(IJVMBridgeBaseInitializer initializer)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>initializer</code> <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeBaseInitializer.html">IJVMBridgeBaseInitializer</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Apache_Kafka_Connect_Header_ConnectHeaders__ctor_" data-uid="Org.Apache.Kafka.Connect.Header.ConnectHeaders.#ctor*"></a>
+
   <h3 id="Org_Apache_Kafka_Connect_Header_ConnectHeaders__ctor_System_Object___" data-uid="Org.Apache.Kafka.Connect.Header.ConnectHeaders.#ctor(System.Object[])">
   ConnectHeaders(params object[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Header/ConnectHeaders.cs/#L42"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Header/ConnectHeaders.cs/#L47"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Generic constructor: it is useful for JCOBridge when there is a derived class which needs to pass arguments to the highest JVMBridgeBase class</p>
@@ -611,10 +669,10 @@ Class ConnectHeaders  <a class="header-action link-secondary" title="View source
 
   <h3 id="Org_Apache_Kafka_Connect_Header_ConnectHeaders_BridgeClassName" data-uid="Org.Apache.Kafka.Connect.Header.ConnectHeaders.BridgeClassName">
   BridgeClassName
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Header/ConnectHeaders.cs/#L50"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Header/ConnectHeaders.cs/#L54"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeClassName.htm</a></p>
+  <div class="markdown level1 summary"><p>Java class name to be instantiated</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -643,10 +701,10 @@ Class ConnectHeaders  <a class="header-action link-secondary" title="View source
 
   <h3 id="Org_Apache_Kafka_Connect_Header_ConnectHeaders_IsBridgeAbstract" data-uid="Org.Apache.Kafka.Connect.Header.ConnectHeaders.IsBridgeAbstract">
   IsBridgeAbstract
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Header/ConnectHeaders.cs/#L54"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Header/ConnectHeaders.cs/#L56"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeAbstract.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeAbstract.htm</a></p>
+  <div class="markdown level1 summary"><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.html#MASES_JCOBridge_C2JBridge_IJVMBridgeDefinition_BridgeClassName">BridgeClassName</a> is an abstract class, i.e. cannot be created an instance</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -678,7 +736,7 @@ Class ConnectHeaders  <a class="header-action link-secondary" title="View source
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Header/ConnectHeaders.cs/#L58"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeCloseable.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeCloseable.htm</a></p>
+  <div class="markdown level1 summary"><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.html#MASES_JCOBridge_C2JBridge_IJVMBridgeDefinition_BridgeClassName">BridgeClassName</a> implements Closeable</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -707,10 +765,10 @@ Class ConnectHeaders  <a class="header-action link-secondary" title="View source
 
   <h3 id="Org_Apache_Kafka_Connect_Header_ConnectHeaders_IsBridgeInterface" data-uid="Org.Apache.Kafka.Connect.Header.ConnectHeaders.IsBridgeInterface">
   IsBridgeInterface
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Header/ConnectHeaders.cs/#L62"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Header/ConnectHeaders.cs/#L60"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeInterface.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeInterface.htm</a></p>
+  <div class="markdown level1 summary"><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.html#MASES_JCOBridge_C2JBridge_IJVMBridgeDefinition_BridgeClassName">BridgeClassName</a> is an interface, i.e. does not have any public constructor</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -739,10 +797,10 @@ Class ConnectHeaders  <a class="header-action link-secondary" title="View source
 
   <h3 id="Org_Apache_Kafka_Connect_Header_ConnectHeaders_IsBridgeStatic" data-uid="Org.Apache.Kafka.Connect.Header.ConnectHeaders.IsBridgeStatic">
   IsBridgeStatic
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Header/ConnectHeaders.cs/#L66"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Header/ConnectHeaders.cs/#L62"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeStatic.htm">https://www.jcobridge.com/api-clr/html/P_MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeStatic.htm</a></p>
+  <div class="markdown level1 summary"><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.html#MASES_JCOBridge_C2JBridge_IJVMBridgeDefinition_BridgeClassName">BridgeClassName</a> is a static class, i.e. does not have any public constructor</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -775,7 +833,7 @@ Class ConnectHeaders  <a class="header-action link-secondary" title="View source
 
   <h3 id="Org_Apache_Kafka_Connect_Header_ConnectHeaders_Add_Java_Lang_String_Org_Apache_Kafka_Connect_Data_SchemaAndValue_" data-uid="Org.Apache.Kafka.Connect.Header.ConnectHeaders.Add(Java.Lang.String,Org.Apache.Kafka.Connect.Data.SchemaAndValue)">
   Add(String, SchemaAndValue)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Header/ConnectHeaders.cs/#L160"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Header/ConnectHeaders.cs/#L156"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.1/org/apache/kafka/connect/header/ConnectHeaders.html#add-java.lang.String-org.apache.kafka.connect.data.SchemaAndValue-">https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.1/org/apache/kafka/connect/header/ConnectHeaders.html#add-java.lang.String-org.apache.kafka.connect.data.SchemaAndValue-</a></p>
@@ -817,7 +875,7 @@ Class ConnectHeaders  <a class="header-action link-secondary" title="View source
 
   <h3 id="Org_Apache_Kafka_Connect_Header_ConnectHeaders_Add_Java_Lang_String_System_Object_Org_Apache_Kafka_Connect_Data_Schema_" data-uid="Org.Apache.Kafka.Connect.Header.ConnectHeaders.Add(Java.Lang.String,System.Object,Org.Apache.Kafka.Connect.Data.Schema)">
   Add(String, object, Schema)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Header/ConnectHeaders.cs/#L150"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Header/ConnectHeaders.cs/#L146"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.1/org/apache/kafka/connect/header/ConnectHeaders.html#add-java.lang.String-java.lang.Object-org.apache.kafka.connect.data.Schema-">https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.1/org/apache/kafka/connect/header/ConnectHeaders.html#add-java.lang.String-java.lang.Object-org.apache.kafka.connect.data.Schema-</a></p>
@@ -862,7 +920,7 @@ Class ConnectHeaders  <a class="header-action link-secondary" title="View source
 
   <h3 id="Org_Apache_Kafka_Connect_Header_ConnectHeaders_Add_Org_Apache_Kafka_Connect_Header_Header_" data-uid="Org.Apache.Kafka.Connect.Header.ConnectHeaders.Add(Org.Apache.Kafka.Connect.Header.Header)">
   Add(Header)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Header/ConnectHeaders.cs/#L169"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Header/ConnectHeaders.cs/#L165"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.1/org/apache/kafka/connect/header/ConnectHeaders.html#add-org.apache.kafka.connect.header.Header-">https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.1/org/apache/kafka/connect/header/ConnectHeaders.html#add-org.apache.kafka.connect.header.Header-</a></p>
@@ -901,7 +959,7 @@ Class ConnectHeaders  <a class="header-action link-secondary" title="View source
 
   <h3 id="Org_Apache_Kafka_Connect_Header_ConnectHeaders_AddBoolean_Java_Lang_String_System_Boolean_" data-uid="Org.Apache.Kafka.Connect.Header.ConnectHeaders.AddBoolean(Java.Lang.String,System.Boolean)">
   AddBoolean(String, bool)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Header/ConnectHeaders.cs/#L179"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Header/ConnectHeaders.cs/#L175"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.1/org/apache/kafka/connect/header/ConnectHeaders.html#addBoolean-java.lang.String-boolean-">https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.1/org/apache/kafka/connect/header/ConnectHeaders.html#addBoolean-java.lang.String-boolean-</a></p>
@@ -943,7 +1001,7 @@ Class ConnectHeaders  <a class="header-action link-secondary" title="View source
 
   <h3 id="Org_Apache_Kafka_Connect_Header_ConnectHeaders_AddByte_Java_Lang_String_System_Byte_" data-uid="Org.Apache.Kafka.Connect.Header.ConnectHeaders.AddByte(Java.Lang.String,System.Byte)">
   AddByte(String, byte)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Header/ConnectHeaders.cs/#L189"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Header/ConnectHeaders.cs/#L185"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.1/org/apache/kafka/connect/header/ConnectHeaders.html#addByte-java.lang.String-byte-">https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.1/org/apache/kafka/connect/header/ConnectHeaders.html#addByte-java.lang.String-byte-</a></p>
@@ -985,7 +1043,7 @@ Class ConnectHeaders  <a class="header-action link-secondary" title="View source
 
   <h3 id="Org_Apache_Kafka_Connect_Header_ConnectHeaders_AddBytes_Java_Lang_String_System_Byte___" data-uid="Org.Apache.Kafka.Connect.Header.ConnectHeaders.AddBytes(Java.Lang.String,System.Byte[])">
   AddBytes(String, byte[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Header/ConnectHeaders.cs/#L199"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Header/ConnectHeaders.cs/#L195"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.1/org/apache/kafka/connect/header/ConnectHeaders.html#addBytes-java.lang.String-byte[]-">https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.1/org/apache/kafka/connect/header/ConnectHeaders.html#addBytes-java.lang.String-byte[]-</a></p>
@@ -1027,7 +1085,7 @@ Class ConnectHeaders  <a class="header-action link-secondary" title="View source
 
   <h3 id="Org_Apache_Kafka_Connect_Header_ConnectHeaders_AddDate_Java_Lang_String_Java_Util_Date_" data-uid="Org.Apache.Kafka.Connect.Header.ConnectHeaders.AddDate(Java.Lang.String,Java.Util.Date)">
   AddDate(String, Date)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Header/ConnectHeaders.cs/#L209"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Header/ConnectHeaders.cs/#L205"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.1/org/apache/kafka/connect/header/ConnectHeaders.html#addDate-java.lang.String-java.util.Date-">https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.1/org/apache/kafka/connect/header/ConnectHeaders.html#addDate-java.lang.String-java.util.Date-</a></p>
@@ -1069,7 +1127,7 @@ Class ConnectHeaders  <a class="header-action link-secondary" title="View source
 
   <h3 id="Org_Apache_Kafka_Connect_Header_ConnectHeaders_AddDecimal_Java_Lang_String_Java_Math_BigDecimal_" data-uid="Org.Apache.Kafka.Connect.Header.ConnectHeaders.AddDecimal(Java.Lang.String,Java.Math.BigDecimal)">
   AddDecimal(String, BigDecimal)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Header/ConnectHeaders.cs/#L219"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Header/ConnectHeaders.cs/#L215"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.1/org/apache/kafka/connect/header/ConnectHeaders.html#addDecimal-java.lang.String-java.math.BigDecimal-">https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.1/org/apache/kafka/connect/header/ConnectHeaders.html#addDecimal-java.lang.String-java.math.BigDecimal-</a></p>
@@ -1111,7 +1169,7 @@ Class ConnectHeaders  <a class="header-action link-secondary" title="View source
 
   <h3 id="Org_Apache_Kafka_Connect_Header_ConnectHeaders_AddDouble_Java_Lang_String_System_Double_" data-uid="Org.Apache.Kafka.Connect.Header.ConnectHeaders.AddDouble(Java.Lang.String,System.Double)">
   AddDouble(String, double)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Header/ConnectHeaders.cs/#L229"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Header/ConnectHeaders.cs/#L225"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.1/org/apache/kafka/connect/header/ConnectHeaders.html#addDouble-java.lang.String-double-">https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.1/org/apache/kafka/connect/header/ConnectHeaders.html#addDouble-java.lang.String-double-</a></p>
@@ -1153,7 +1211,7 @@ Class ConnectHeaders  <a class="header-action link-secondary" title="View source
 
   <h3 id="Org_Apache_Kafka_Connect_Header_ConnectHeaders_AddFloat_Java_Lang_String_System_Single_" data-uid="Org.Apache.Kafka.Connect.Header.ConnectHeaders.AddFloat(Java.Lang.String,System.Single)">
   AddFloat(String, float)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Header/ConnectHeaders.cs/#L239"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Header/ConnectHeaders.cs/#L235"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.1/org/apache/kafka/connect/header/ConnectHeaders.html#addFloat-java.lang.String-float-">https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.1/org/apache/kafka/connect/header/ConnectHeaders.html#addFloat-java.lang.String-float-</a></p>
@@ -1195,7 +1253,7 @@ Class ConnectHeaders  <a class="header-action link-secondary" title="View source
 
   <h3 id="Org_Apache_Kafka_Connect_Header_ConnectHeaders_AddInt_Java_Lang_String_System_Int32_" data-uid="Org.Apache.Kafka.Connect.Header.ConnectHeaders.AddInt(Java.Lang.String,System.Int32)">
   AddInt(String, int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Header/ConnectHeaders.cs/#L249"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Header/ConnectHeaders.cs/#L245"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.1/org/apache/kafka/connect/header/ConnectHeaders.html#addInt-java.lang.String-int-">https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.1/org/apache/kafka/connect/header/ConnectHeaders.html#addInt-java.lang.String-int-</a></p>
@@ -1237,7 +1295,7 @@ Class ConnectHeaders  <a class="header-action link-secondary" title="View source
 
   <h3 id="Org_Apache_Kafka_Connect_Header_ConnectHeaders_AddList_Java_Lang_String_Java_Util_List_System_Object__Org_Apache_Kafka_Connect_Data_Schema_" data-uid="Org.Apache.Kafka.Connect.Header.ConnectHeaders.AddList(Java.Lang.String,Java.Util.List{System.Object},Org.Apache.Kafka.Connect.Data.Schema)">
   AddList(String, List&lt;object&gt;, Schema)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Header/ConnectHeaders.cs/#L260"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Header/ConnectHeaders.cs/#L256"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.1/org/apache/kafka/connect/header/ConnectHeaders.html#addList-java.lang.String-java.util.List-org.apache.kafka.connect.data.Schema-">https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.1/org/apache/kafka/connect/header/ConnectHeaders.html#addList-java.lang.String-java.util.List-org.apache.kafka.connect.data.Schema-</a></p>
@@ -1282,7 +1340,7 @@ Class ConnectHeaders  <a class="header-action link-secondary" title="View source
 
   <h3 id="Org_Apache_Kafka_Connect_Header_ConnectHeaders_AddLong_Java_Lang_String_System_Int64_" data-uid="Org.Apache.Kafka.Connect.Header.ConnectHeaders.AddLong(Java.Lang.String,System.Int64)">
   AddLong(String, long)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Header/ConnectHeaders.cs/#L270"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Header/ConnectHeaders.cs/#L266"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.1/org/apache/kafka/connect/header/ConnectHeaders.html#addLong-java.lang.String-long-">https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.1/org/apache/kafka/connect/header/ConnectHeaders.html#addLong-java.lang.String-long-</a></p>
@@ -1324,7 +1382,7 @@ Class ConnectHeaders  <a class="header-action link-secondary" title="View source
 
   <h3 id="Org_Apache_Kafka_Connect_Header_ConnectHeaders_AddMap_Java_Lang_String_Java_Util_Map_System_Object_System_Object__Org_Apache_Kafka_Connect_Data_Schema_" data-uid="Org.Apache.Kafka.Connect.Header.ConnectHeaders.AddMap(Java.Lang.String,Java.Util.Map{System.Object,System.Object},Org.Apache.Kafka.Connect.Data.Schema)">
   AddMap(String, Map&lt;object, object&gt;, Schema)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Header/ConnectHeaders.cs/#L281"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Header/ConnectHeaders.cs/#L277"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.1/org/apache/kafka/connect/header/ConnectHeaders.html#addMap-java.lang.String-java.util.Map-org.apache.kafka.connect.data.Schema-">https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.1/org/apache/kafka/connect/header/ConnectHeaders.html#addMap-java.lang.String-java.util.Map-org.apache.kafka.connect.data.Schema-</a></p>
@@ -1369,7 +1427,7 @@ Class ConnectHeaders  <a class="header-action link-secondary" title="View source
 
   <h3 id="Org_Apache_Kafka_Connect_Header_ConnectHeaders_AddShort_Java_Lang_String_System_Int16_" data-uid="Org.Apache.Kafka.Connect.Header.ConnectHeaders.AddShort(Java.Lang.String,System.Int16)">
   AddShort(String, short)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Header/ConnectHeaders.cs/#L291"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Header/ConnectHeaders.cs/#L287"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.1/org/apache/kafka/connect/header/ConnectHeaders.html#addShort-java.lang.String-short-">https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.1/org/apache/kafka/connect/header/ConnectHeaders.html#addShort-java.lang.String-short-</a></p>
@@ -1411,7 +1469,7 @@ Class ConnectHeaders  <a class="header-action link-secondary" title="View source
 
   <h3 id="Org_Apache_Kafka_Connect_Header_ConnectHeaders_AddString_Java_Lang_String_Java_Lang_String_" data-uid="Org.Apache.Kafka.Connect.Header.ConnectHeaders.AddString(Java.Lang.String,Java.Lang.String)">
   AddString(String, String)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Header/ConnectHeaders.cs/#L301"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Header/ConnectHeaders.cs/#L297"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.1/org/apache/kafka/connect/header/ConnectHeaders.html#addString-java.lang.String-java.lang.String-">https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.1/org/apache/kafka/connect/header/ConnectHeaders.html#addString-java.lang.String-java.lang.String-</a></p>
@@ -1453,7 +1511,7 @@ Class ConnectHeaders  <a class="header-action link-secondary" title="View source
 
   <h3 id="Org_Apache_Kafka_Connect_Header_ConnectHeaders_AddStruct_Java_Lang_String_Org_Apache_Kafka_Connect_Data_Struct_" data-uid="Org.Apache.Kafka.Connect.Header.ConnectHeaders.AddStruct(Java.Lang.String,Org.Apache.Kafka.Connect.Data.Struct)">
   AddStruct(String, Struct)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Header/ConnectHeaders.cs/#L311"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Header/ConnectHeaders.cs/#L307"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.1/org/apache/kafka/connect/header/ConnectHeaders.html#addStruct-java.lang.String-org.apache.kafka.connect.data.Struct-">https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.1/org/apache/kafka/connect/header/ConnectHeaders.html#addStruct-java.lang.String-org.apache.kafka.connect.data.Struct-</a></p>
@@ -1495,7 +1553,7 @@ Class ConnectHeaders  <a class="header-action link-secondary" title="View source
 
   <h3 id="Org_Apache_Kafka_Connect_Header_ConnectHeaders_AddTime_Java_Lang_String_Java_Util_Date_" data-uid="Org.Apache.Kafka.Connect.Header.ConnectHeaders.AddTime(Java.Lang.String,Java.Util.Date)">
   AddTime(String, Date)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Header/ConnectHeaders.cs/#L321"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Header/ConnectHeaders.cs/#L317"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.1/org/apache/kafka/connect/header/ConnectHeaders.html#addTime-java.lang.String-java.util.Date-">https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.1/org/apache/kafka/connect/header/ConnectHeaders.html#addTime-java.lang.String-java.util.Date-</a></p>
@@ -1537,7 +1595,7 @@ Class ConnectHeaders  <a class="header-action link-secondary" title="View source
 
   <h3 id="Org_Apache_Kafka_Connect_Header_ConnectHeaders_AddTimestamp_Java_Lang_String_Java_Util_Date_" data-uid="Org.Apache.Kafka.Connect.Header.ConnectHeaders.AddTimestamp(Java.Lang.String,Java.Util.Date)">
   AddTimestamp(String, Date)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Header/ConnectHeaders.cs/#L331"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Header/ConnectHeaders.cs/#L327"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.1/org/apache/kafka/connect/header/ConnectHeaders.html#addTimestamp-java.lang.String-java.util.Date-">https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.1/org/apache/kafka/connect/header/ConnectHeaders.html#addTimestamp-java.lang.String-java.util.Date-</a></p>
@@ -1579,7 +1637,7 @@ Class ConnectHeaders  <a class="header-action link-secondary" title="View source
 
   <h3 id="Org_Apache_Kafka_Connect_Header_ConnectHeaders_AllWithName_Java_Lang_String_" data-uid="Org.Apache.Kafka.Connect.Header.ConnectHeaders.AllWithName(Java.Lang.String)">
   AllWithName(String)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Header/ConnectHeaders.cs/#L122"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Header/ConnectHeaders.cs/#L118"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.1/org/apache/kafka/connect/header/ConnectHeaders.html#allWithName-java.lang.String-">https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.1/org/apache/kafka/connect/header/ConnectHeaders.html#allWithName-java.lang.String-</a></p>
@@ -1618,7 +1676,7 @@ Class ConnectHeaders  <a class="header-action link-secondary" title="View source
 
   <h3 id="Org_Apache_Kafka_Connect_Header_ConnectHeaders_Apply_Java_Lang_String_Org_Apache_Kafka_Connect_Header_Headers_HeaderTransform_" data-uid="Org.Apache.Kafka.Connect.Header.ConnectHeaders.Apply(Java.Lang.String,Org.Apache.Kafka.Connect.Header.Headers.HeaderTransform)">
   Apply(String, HeaderTransform)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Header/ConnectHeaders.cs/#L341"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Header/ConnectHeaders.cs/#L337"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.1/org/apache/kafka/connect/header/ConnectHeaders.html#apply-java.lang.String-org.apache.kafka.connect.header.Headers.HeaderTransform-">https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.1/org/apache/kafka/connect/header/ConnectHeaders.html#apply-java.lang.String-org.apache.kafka.connect.header.Headers.HeaderTransform-</a></p>
@@ -1660,7 +1718,7 @@ Class ConnectHeaders  <a class="header-action link-secondary" title="View source
 
   <h3 id="Org_Apache_Kafka_Connect_Header_ConnectHeaders_Apply_Org_Apache_Kafka_Connect_Header_Headers_HeaderTransform_" data-uid="Org.Apache.Kafka.Connect.Header.ConnectHeaders.Apply(Org.Apache.Kafka.Connect.Header.Headers.HeaderTransform)">
   Apply(HeaderTransform)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Header/ConnectHeaders.cs/#L350"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Header/ConnectHeaders.cs/#L346"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.1/org/apache/kafka/connect/header/ConnectHeaders.html#apply-org.apache.kafka.connect.header.Headers.HeaderTransform-">https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.1/org/apache/kafka/connect/header/ConnectHeaders.html#apply-org.apache.kafka.connect.header.Headers.HeaderTransform-</a></p>
@@ -1699,7 +1757,7 @@ Class ConnectHeaders  <a class="header-action link-secondary" title="View source
 
   <h3 id="Org_Apache_Kafka_Connect_Header_ConnectHeaders_Clear" data-uid="Org.Apache.Kafka.Connect.Header.ConnectHeaders.Clear">
   Clear()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Header/ConnectHeaders.cs/#L358"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Header/ConnectHeaders.cs/#L354"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.1/org/apache/kafka/connect/header/ConnectHeaders.html#clear--">https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.1/org/apache/kafka/connect/header/ConnectHeaders.html#clear--</a></p>
@@ -1732,7 +1790,7 @@ Class ConnectHeaders  <a class="header-action link-secondary" title="View source
 
   <h3 id="Org_Apache_Kafka_Connect_Header_ConnectHeaders_Duplicate" data-uid="Org.Apache.Kafka.Connect.Header.ConnectHeaders.Duplicate">
   Duplicate()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Header/ConnectHeaders.cs/#L366"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Header/ConnectHeaders.cs/#L362"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.1/org/apache/kafka/connect/header/ConnectHeaders.html#duplicate--">https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.1/org/apache/kafka/connect/header/ConnectHeaders.html#duplicate--</a></p>
@@ -1765,7 +1823,7 @@ Class ConnectHeaders  <a class="header-action link-secondary" title="View source
 
   <h3 id="Org_Apache_Kafka_Connect_Header_ConnectHeaders_IsEmpty" data-uid="Org.Apache.Kafka.Connect.Header.ConnectHeaders.IsEmpty">
   IsEmpty()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Header/ConnectHeaders.cs/#L105"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Header/ConnectHeaders.cs/#L101"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.1/org/apache/kafka/connect/header/ConnectHeaders.html#isEmpty--">https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.1/org/apache/kafka/connect/header/ConnectHeaders.html#isEmpty--</a></p>
@@ -1798,7 +1856,7 @@ Class ConnectHeaders  <a class="header-action link-secondary" title="View source
 
   <h3 id="Org_Apache_Kafka_Connect_Header_ConnectHeaders_Iterator" data-uid="Org.Apache.Kafka.Connect.Header.ConnectHeaders.Iterator">
   Iterator()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Header/ConnectHeaders.cs/#L130"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Header/ConnectHeaders.cs/#L126"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.1/org/apache/kafka/connect/header/ConnectHeaders.html#iterator--">https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.1/org/apache/kafka/connect/header/ConnectHeaders.html#iterator--</a></p>
@@ -1831,7 +1889,7 @@ Class ConnectHeaders  <a class="header-action link-secondary" title="View source
 
   <h3 id="Org_Apache_Kafka_Connect_Header_ConnectHeaders_LastWithName_Java_Lang_String_" data-uid="Org.Apache.Kafka.Connect.Header.ConnectHeaders.LastWithName(Java.Lang.String)">
   LastWithName(String)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Header/ConnectHeaders.cs/#L139"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Header/ConnectHeaders.cs/#L135"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.1/org/apache/kafka/connect/header/ConnectHeaders.html#lastWithName-java.lang.String-">https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.1/org/apache/kafka/connect/header/ConnectHeaders.html#lastWithName-java.lang.String-</a></p>
@@ -1870,7 +1928,7 @@ Class ConnectHeaders  <a class="header-action link-secondary" title="View source
 
   <h3 id="Org_Apache_Kafka_Connect_Header_ConnectHeaders_Remove_Java_Lang_String_" data-uid="Org.Apache.Kafka.Connect.Header.ConnectHeaders.Remove(Java.Lang.String)">
   Remove(String)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Header/ConnectHeaders.cs/#L375"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Header/ConnectHeaders.cs/#L371"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.1/org/apache/kafka/connect/header/ConnectHeaders.html#remove-java.lang.String-">https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.1/org/apache/kafka/connect/header/ConnectHeaders.html#remove-java.lang.String-</a></p>
@@ -1909,7 +1967,7 @@ Class ConnectHeaders  <a class="header-action link-secondary" title="View source
 
   <h3 id="Org_Apache_Kafka_Connect_Header_ConnectHeaders_RetainLatest" data-uid="Org.Apache.Kafka.Connect.Header.ConnectHeaders.RetainLatest">
   RetainLatest()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Header/ConnectHeaders.cs/#L383"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Header/ConnectHeaders.cs/#L379"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.1/org/apache/kafka/connect/header/ConnectHeaders.html#retainLatest--">https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.1/org/apache/kafka/connect/header/ConnectHeaders.html#retainLatest--</a></p>
@@ -1942,7 +2000,7 @@ Class ConnectHeaders  <a class="header-action link-secondary" title="View source
 
   <h3 id="Org_Apache_Kafka_Connect_Header_ConnectHeaders_RetainLatest_Java_Lang_String_" data-uid="Org.Apache.Kafka.Connect.Header.ConnectHeaders.RetainLatest(Java.Lang.String)">
   RetainLatest(String)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Header/ConnectHeaders.cs/#L392"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Header/ConnectHeaders.cs/#L388"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.1/org/apache/kafka/connect/header/ConnectHeaders.html#retainLatest-java.lang.String-">https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.1/org/apache/kafka/connect/header/ConnectHeaders.html#retainLatest-java.lang.String-</a></p>
@@ -1981,7 +2039,7 @@ Class ConnectHeaders  <a class="header-action link-secondary" title="View source
 
   <h3 id="Org_Apache_Kafka_Connect_Header_ConnectHeaders_Size" data-uid="Org.Apache.Kafka.Connect.Header.ConnectHeaders.Size">
   Size()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Header/ConnectHeaders.cs/#L113"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Header/ConnectHeaders.cs/#L109"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.1/org/apache/kafka/connect/header/ConnectHeaders.html#size--">https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.1/org/apache/kafka/connect/header/ConnectHeaders.html#size--</a></p>
@@ -2014,7 +2072,7 @@ Class ConnectHeaders  <a class="header-action link-secondary" title="View source
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Header/ConnectHeaders.cs/#L74" class="edit-link">Edit this page</a>
+          <a href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Header/ConnectHeaders.cs/#L70" class="edit-link">Edit this page</a>
         </div>
 
 

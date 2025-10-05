@@ -87,8 +87,32 @@
         <article data-uid="">
 <h1 id="knet-knet-connect-sdk">KNet: KNet Connect SDK</h1>
 
-<h2 id="installation">Installation</h2>
-<p>KNet Connect is available in two different formats:</p>
+<h2 id="create-a-new-connector-based-on-knet-connect-sdk">Create a new connector based on KNet Connect SDK</h2>
+<p>To start to use KNet Connect SDK and write a connector in C# the following steps can be used:</p>
+<ol>
+<li>Install the available templates following the <a href="usageTemplates.html">template usage article</a></li>
+<li>Execute one the following commands:</li>
+</ol>
+<ul>
+<li>Sink connector:
+<pre><code class="lang-sh">dotnet new knetConnectSink
+</code></pre>
+</li>
+<li>Source connector:
+<pre><code class="lang-sh">dotnet new knetConnectSource
+</code></pre>
+</li>
+</ul>
+<ol start="3">
+<li>Update the code to define the needed behavior.</li>
+</ol>
+<h2 id="execution">Execution</h2>
+<p>The connector can be used from a JVM hosted runtime and from a .NET hosted runtime.
+For an overview of configuration see <a href="connectSDK.html">Connect SDK</a></p>
+<h3 id="jvm-hosted-runtime">JVM hosted runtime</h3>
+<p>To use the connector from a JVM hosted runtime follow the instructions available at <a href="https://kafka.apache.org/documentation/#connect">https://kafka.apache.org/documentation/#connect</a> and <a href="https://kafka.apache.org/quickstart#quickstart_kafkaconnect">https://kafka.apache.org/quickstart#quickstart_kafkaconnect</a>.</p>
+<h3 id="net-hosted-runtime">.NET hosted runtime</h3>
+<p>KNet Connect .NET hosted runtime is available in two different formats:</p>
 <ul>
 <li><strong>dotnet tool</strong> hosted on <a href="https://www.nuget.org/packages/MASES.KNetConnect/">NuGet</a>: check <a href="https://www.nuget.org/packages/MASES.KNetConnect/">https://www.nuget.org/packages/MASES.KNetConnect/</a> and <a href="https://docs.microsoft.com/en-us/dotnet/core/tools/global-tools">https://docs.microsoft.com/en-us/dotnet/core/tools/global-tools</a> for installation deep instructions.</li>
 <li><strong>Docker image</strong> hosted on <a href="https://github.com/masesgroup/KNet/pkgs/container/knetconnect">GitHub</a> or <a href="https://hub.docker.com/repository/docker/masesgroup/knetconnect/general">Docker Hub</a>: follow instruction within the page and general instruction on <a href="https://docs.docker.com">https://docs.docker.com</a></li>
@@ -97,8 +121,8 @@
 <h5>Important</h5>
 <p>The <strong>dotnet tool</strong> needs a JRE/JDK installed within the system</p>
 </div>
-<h2 id="usage">Usage</h2>
-<p>To use the Connect interface (KNetConnect) runs a command like the following:</p>
+<h4 id="usage">Usage</h4>
+<p>To use the .NET hosted runtime Connect interface (KNetConnect) runs a command like the following:</p>
 <ul>
 <li><strong>dotnet tool</strong></li>
 </ul>
@@ -123,7 +147,7 @@
 </code></pre>
 <pre><code class="lang-sh">docker run masesgroup/knetconnect -d connect-distributed.properties
 </code></pre>
-<h3 id="command-line-switch-available">Command line switch available</h3>
+<h4 id="command-line-switch-available">Command line switch available</h4>
 <p><em>knetconnect</em> accepts the following command-line switch to identify its behavior:</p>
 <ul>
 <li><strong>d</strong>: starts a distributed version of Connector defined in the file identified from the subsequent parameter</li>
@@ -143,8 +167,6 @@
 </ul>
 </li>
 </ul>
-<h3 id="connector-properties">Connector properties</h3>
-<p>For an overview of configuration see <a href="connectSDK.html">Connect SDK</a></p>
 
 </article>
 
