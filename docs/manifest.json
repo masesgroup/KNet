@@ -2500,7 +2500,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "MASES.KNet.Serialization.Serdes.ByteBufferSerde",
-      "Summary": "<p sourcefile=\"api/MASES.KNet.Serialization.Serdes.ByteBufferSerde.yml\" sourcestartlinenumber=\"1\">KNet implementaion of <a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/serialization/Serdes.ByteBufferSerde.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/serialization/Serdes.ByteBufferSerde.html</a></p>\n"
+      "Summary": "<p sourcefile=\"api/MASES.KNet.Serialization.Serdes.ByteBufferSerde.yml\" sourcestartlinenumber=\"1\">KNet implementaion of <a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/serialization/Serdes.ByteBufferSerde.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/serialization/Serdes.ByteBufferSerde.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -2584,7 +2584,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "MASES.KNet.Streams.KeyValueSupport<K, V>",
-      "Summary": "<p sourcefile=\"api/MASES.KNet.Streams.KeyValueSupport-2.yml\" sourcestartlinenumber=\"1\">Support class for <a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/KeyValue.html#org.apache.kafka.streams.KeyValue\">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/KeyValue.html#org.apache.kafka.streams.KeyValue</a></p>\n"
+      "Summary": "<p sourcefile=\"api/MASES.KNet.Streams.KeyValueSupport-2.yml\" sourcestartlinenumber=\"1\">Support class for <a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/KeyValue.html#org.apache.kafka.streams.KeyValue\">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/KeyValue.html#org.apache.kafka.streams.KeyValue</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -15954,7 +15954,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Common.Serialization.VoidSerializer",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Common.Serialization.VoidSerializer.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/serialization/VoidSerializer.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.0.0/org/apache/kafka/common/serialization/VoidSerializer.html</a></p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Common.Serialization.VoidSerializer.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/serialization/VoidSerializer.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/serialization/VoidSerializer.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -24102,7 +24102,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Streams.Kstream.IValueTransformerWithKeySupplier<K, V, VR>",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Kstream.IValueTransformerWithKeySupplier-3.yml\" sourcestartlinenumber=\"1\">.NET interface for <a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/ValueTransformerWithKeySupplier.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/ValueTransformerWithKeySupplier.html</a></p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Kstream.IValueTransformerWithKeySupplier-3.yml\" sourcestartlinenumber=\"1\">.NET interface for <a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/kstream/ValueTransformerWithKeySupplier.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/kstream/ValueTransformerWithKeySupplier.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -25460,7 +25460,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Streams.Kstream.ValueTransformerWithKeySupplier<K, V, VR>",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Kstream.ValueTransformerWithKeySupplier-3.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/ValueTransformerWithKeySupplier.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/kstream/ValueTransformerWithKeySupplier.html</a></p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Kstream.ValueTransformerWithKeySupplier-3.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/kstream/ValueTransformerWithKeySupplier.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/kstream/ValueTransformerWithKeySupplier.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -25782,7 +25782,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Streams.Processor.Api.FixedKeyProcessorSupplier<KIn, VIn, VOut>",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Processor.Api.FixedKeyProcessorSupplier-3.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/api/FixedKeyProcessorSupplier.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/api/FixedKeyProcessorSupplier.html</a></p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Processor.Api.FixedKeyProcessorSupplier-3.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/processor/api/FixedKeyProcessorSupplier.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/processor/api/FixedKeyProcessorSupplier.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -25796,7 +25796,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Streams.Processor.Api.FixedKeyProcessorSupplier",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Processor.Api.FixedKeyProcessorSupplier.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/api/FixedKeyProcessorSupplier.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/api/FixedKeyProcessorSupplier.html</a></p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Processor.Api.FixedKeyProcessorSupplier.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/processor/api/FixedKeyProcessorSupplier.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/processor/api/FixedKeyProcessorSupplier.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -25866,7 +25866,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Streams.Processor.Api.IFixedKeyProcessorSupplier<KIn, VIn, VOut>",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Processor.Api.IFixedKeyProcessorSupplier-3.yml\" sourcestartlinenumber=\"1\">.NET interface for <a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/api/FixedKeyProcessorSupplier.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/api/FixedKeyProcessorSupplier.html</a></p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Processor.Api.IFixedKeyProcessorSupplier-3.yml\" sourcestartlinenumber=\"1\">.NET interface for <a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/processor/api/FixedKeyProcessorSupplier.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/processor/api/FixedKeyProcessorSupplier.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -25922,7 +25922,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Streams.Processor.Api.IProcessorSupplier<KIn, VIn, KOut, VOut>",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Processor.Api.IProcessorSupplier-4.yml\" sourcestartlinenumber=\"1\">.NET interface for <a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/api/ProcessorSupplier.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/api/ProcessorSupplier.html</a></p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Processor.Api.IProcessorSupplier-4.yml\" sourcestartlinenumber=\"1\">.NET interface for <a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/processor/api/ProcessorSupplier.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/processor/api/ProcessorSupplier.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -26104,7 +26104,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Streams.Processor.Api.ProcessorSupplier<KIn, VIn, KOut, VOut>",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Processor.Api.ProcessorSupplier-4.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/api/ProcessorSupplier.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/api/ProcessorSupplier.html</a></p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Processor.Api.ProcessorSupplier-4.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/processor/api/ProcessorSupplier.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/processor/api/ProcessorSupplier.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -26118,7 +26118,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Streams.Processor.Api.ProcessorSupplier",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Processor.Api.ProcessorSupplier.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/api/ProcessorSupplier.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/processor/api/ProcessorSupplier.html</a></p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Processor.Api.ProcessorSupplier.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/processor/api/ProcessorSupplier.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/processor/api/ProcessorSupplier.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -29058,7 +29058,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Streams.State.IStoreSupplier",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.State.IStoreSupplier.yml\" sourcestartlinenumber=\"1\">.NET interface for <a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/state/StoreSupplier.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.0.0/org/apache/kafka/streams/state/StoreSupplier.html</a></p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.State.IStoreSupplier.yml\" sourcestartlinenumber=\"1\">.NET interface for <a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/state/StoreSupplier.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/state/StoreSupplier.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
