@@ -153,7 +153,7 @@ namespace Org.Apache.Kafka.Connect.Sink
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.TopicPartition"/></param>
         public void Pause(params Org.Apache.Kafka.Common.TopicPartition[] arg0)
         {
-            if (arg0.Length == 0) IExecuteWithSignature("pause", "([Lorg/apache/kafka/common/TopicPartition;)V"); else IExecuteWithSignature("pause", "([Lorg/apache/kafka/common/TopicPartition;)V", arg0);
+            IExecuteWithSignature("pause", "([Lorg/apache/kafka/common/TopicPartition;)V", arg0);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.1.0/org/apache/kafka/connect/sink/SinkTaskContext.html#requestCommit()"/>
@@ -168,7 +168,7 @@ namespace Org.Apache.Kafka.Connect.Sink
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.TopicPartition"/></param>
         public void Resume(params Org.Apache.Kafka.Common.TopicPartition[] arg0)
         {
-            if (arg0.Length == 0) IExecuteWithSignature("resume", "([Lorg/apache/kafka/common/TopicPartition;)V"); else IExecuteWithSignature("resume", "([Lorg/apache/kafka/common/TopicPartition;)V", arg0);
+            IExecuteWithSignature("resume", "([Lorg/apache/kafka/common/TopicPartition;)V", arg0);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.1.0/org/apache/kafka/connect/sink/SinkTaskContext.html#timeout(long)"/>

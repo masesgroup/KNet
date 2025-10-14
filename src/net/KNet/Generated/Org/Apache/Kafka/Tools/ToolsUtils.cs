@@ -101,7 +101,7 @@ namespace Org.Apache.Kafka.Tools
         /// <returns><see cref="Java.Util.Set"/></returns>
         public static Java.Util.Set<T> Minus<T>(Java.Util.Set<T> arg0, params T[] arg1)
         {
-            if (arg1.Length == 0) return SExecuteWithSignature<Java.Util.Set<T>>(LocalBridgeClazz, "minus", "(Ljava/util/Set;[Ljava/lang/Object;)Ljava/util/Set;", arg0); else return SExecuteWithSignature<Java.Util.Set<T>>(LocalBridgeClazz, "minus", "(Ljava/util/Set;[Ljava/lang/Object;)Ljava/util/Set;", arg0, arg1);
+            return SExecuteWithSignature<Java.Util.Set<T>>(LocalBridgeClazz, "minus", "(Ljava/util/Set;[Ljava/lang/Object;)Ljava/util/Set;", MASES.JNet.Specific.Extensions.JNetCoreExtensions.VarArgRebuild(arg1, arg0));
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.0/org/apache/kafka/tools/ToolsUtils.html#prettyPrintTable(java.util.List,java.util.List,java.io.PrintStream)"/>

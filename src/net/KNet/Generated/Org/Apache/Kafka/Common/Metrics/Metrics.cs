@@ -189,7 +189,7 @@ namespace Org.Apache.Kafka.Common.Metrics
         /// <returns><see cref="Org.Apache.Kafka.Common.MetricName"/></returns>
         public Org.Apache.Kafka.Common.MetricName MetricInstance(Org.Apache.Kafka.Common.MetricNameTemplate arg0, params Java.Lang.String[] arg1)
         {
-            if (arg1.Length == 0) return IExecuteWithSignature<Org.Apache.Kafka.Common.MetricName>("metricInstance", "(Lorg/apache/kafka/common/MetricNameTemplate;[Ljava/lang/String;)Lorg/apache/kafka/common/MetricName;", arg0); else return IExecuteWithSignature<Org.Apache.Kafka.Common.MetricName>("metricInstance", "(Lorg/apache/kafka/common/MetricNameTemplate;[Ljava/lang/String;)Lorg/apache/kafka/common/MetricName;", arg0, arg1);
+            return IExecuteWithSignature<Org.Apache.Kafka.Common.MetricName>("metricInstance", "(Lorg/apache/kafka/common/MetricNameTemplate;[Ljava/lang/String;)Lorg/apache/kafka/common/MetricName;", MASES.JNet.Specific.Extensions.JNetCoreExtensions.VarArgRebuild(arg1, arg0));
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/metrics/Metrics.html#metricInstance(org.apache.kafka.common.MetricNameTemplate,java.util.Map)"/>
@@ -211,7 +211,7 @@ namespace Org.Apache.Kafka.Common.Metrics
         /// <returns><see cref="Org.Apache.Kafka.Common.MetricName"/></returns>
         public Org.Apache.Kafka.Common.MetricName MetricName(Java.Lang.String arg0, Java.Lang.String arg1, Java.Lang.String arg2, params Java.Lang.String[] arg3)
         {
-            if (arg3.Length == 0) return IExecuteWithSignature<Org.Apache.Kafka.Common.MetricName>("metricName", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)Lorg/apache/kafka/common/MetricName;", arg0, arg1, arg2); else return IExecuteWithSignature<Org.Apache.Kafka.Common.MetricName>("metricName", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)Lorg/apache/kafka/common/MetricName;", arg0, arg1, arg2, arg3);
+            return IExecuteWithSignature<Org.Apache.Kafka.Common.MetricName>("metricName", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)Lorg/apache/kafka/common/MetricName;", MASES.JNet.Specific.Extensions.JNetCoreExtensions.VarArgRebuild(arg3, arg0, arg1, arg2));
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/metrics/Metrics.html#metricName(java.lang.String,java.lang.String,java.lang.String,java.util.Map)"/>
@@ -302,7 +302,7 @@ namespace Org.Apache.Kafka.Common.Metrics
         /// <returns><see cref="Org.Apache.Kafka.Common.Metrics.Sensor"/></returns>
         public Org.Apache.Kafka.Common.Metrics.Sensor Sensor(Java.Lang.String arg0, params Org.Apache.Kafka.Common.Metrics.Sensor[] arg1)
         {
-            if (arg1.Length == 0) return IExecuteWithSignature<Org.Apache.Kafka.Common.Metrics.Sensor>("sensor", "(Ljava/lang/String;[Lorg/apache/kafka/common/metrics/Sensor;)Lorg/apache/kafka/common/metrics/Sensor;", arg0); else return IExecuteWithSignature<Org.Apache.Kafka.Common.Metrics.Sensor>("sensor", "(Ljava/lang/String;[Lorg/apache/kafka/common/metrics/Sensor;)Lorg/apache/kafka/common/metrics/Sensor;", arg0, arg1);
+            return IExecuteWithSignature<Org.Apache.Kafka.Common.Metrics.Sensor>("sensor", "(Ljava/lang/String;[Lorg/apache/kafka/common/metrics/Sensor;)Lorg/apache/kafka/common/metrics/Sensor;", MASES.JNet.Specific.Extensions.JNetCoreExtensions.VarArgRebuild(arg1, arg0));
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/metrics/Metrics.html#sensor(java.lang.String,org.apache.kafka.common.metrics.Sensor.RecordingLevel,org.apache.kafka.common.metrics.Sensor...)"/>
@@ -313,7 +313,7 @@ namespace Org.Apache.Kafka.Common.Metrics
         /// <returns><see cref="Org.Apache.Kafka.Common.Metrics.Sensor"/></returns>
         public Org.Apache.Kafka.Common.Metrics.Sensor Sensor(Java.Lang.String arg0, Org.Apache.Kafka.Common.Metrics.Sensor.RecordingLevel arg1, params Org.Apache.Kafka.Common.Metrics.Sensor[] arg2)
         {
-            if (arg2.Length == 0) return IExecuteWithSignature<Org.Apache.Kafka.Common.Metrics.Sensor>("sensor", "(Ljava/lang/String;Lorg/apache/kafka/common/metrics/Sensor$RecordingLevel;[Lorg/apache/kafka/common/metrics/Sensor;)Lorg/apache/kafka/common/metrics/Sensor;", arg0, arg1); else return IExecuteWithSignature<Org.Apache.Kafka.Common.Metrics.Sensor>("sensor", "(Ljava/lang/String;Lorg/apache/kafka/common/metrics/Sensor$RecordingLevel;[Lorg/apache/kafka/common/metrics/Sensor;)Lorg/apache/kafka/common/metrics/Sensor;", arg0, arg1, arg2);
+            return IExecuteWithSignature<Org.Apache.Kafka.Common.Metrics.Sensor>("sensor", "(Ljava/lang/String;Lorg/apache/kafka/common/metrics/Sensor$RecordingLevel;[Lorg/apache/kafka/common/metrics/Sensor;)Lorg/apache/kafka/common/metrics/Sensor;", MASES.JNet.Specific.Extensions.JNetCoreExtensions.VarArgRebuild(arg2, arg0, arg1));
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/metrics/Metrics.html#sensor(java.lang.String,org.apache.kafka.common.metrics.Sensor.RecordingLevel)"/>
@@ -353,7 +353,7 @@ namespace Org.Apache.Kafka.Common.Metrics
         /// <returns><see cref="Org.Apache.Kafka.Common.Metrics.Sensor"/></returns>
         public Org.Apache.Kafka.Common.Metrics.Sensor Sensor(Java.Lang.String arg0, Org.Apache.Kafka.Common.Metrics.MetricConfig arg1, long arg2, params Org.Apache.Kafka.Common.Metrics.Sensor[] arg3)
         {
-            if (arg3.Length == 0) return IExecuteWithSignature<Org.Apache.Kafka.Common.Metrics.Sensor>("sensor", "(Ljava/lang/String;Lorg/apache/kafka/common/metrics/MetricConfig;J[Lorg/apache/kafka/common/metrics/Sensor;)Lorg/apache/kafka/common/metrics/Sensor;", arg0, arg1, arg2); else return IExecuteWithSignature<Org.Apache.Kafka.Common.Metrics.Sensor>("sensor", "(Ljava/lang/String;Lorg/apache/kafka/common/metrics/MetricConfig;J[Lorg/apache/kafka/common/metrics/Sensor;)Lorg/apache/kafka/common/metrics/Sensor;", arg0, arg1, arg2, arg3);
+            return IExecuteWithSignature<Org.Apache.Kafka.Common.Metrics.Sensor>("sensor", "(Ljava/lang/String;Lorg/apache/kafka/common/metrics/MetricConfig;J[Lorg/apache/kafka/common/metrics/Sensor;)Lorg/apache/kafka/common/metrics/Sensor;", MASES.JNet.Specific.Extensions.JNetCoreExtensions.VarArgRebuild(arg3, arg0, arg1, arg2));
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/metrics/Metrics.html#sensor(java.lang.String,org.apache.kafka.common.metrics.MetricConfig,long,org.apache.kafka.common.metrics.Sensor.RecordingLevel,org.apache.kafka.common.metrics.Sensor...)"/>
@@ -366,7 +366,7 @@ namespace Org.Apache.Kafka.Common.Metrics
         /// <returns><see cref="Org.Apache.Kafka.Common.Metrics.Sensor"/></returns>
         public Org.Apache.Kafka.Common.Metrics.Sensor Sensor(Java.Lang.String arg0, Org.Apache.Kafka.Common.Metrics.MetricConfig arg1, long arg2, Org.Apache.Kafka.Common.Metrics.Sensor.RecordingLevel arg3, params Org.Apache.Kafka.Common.Metrics.Sensor[] arg4)
         {
-            if (arg4.Length == 0) return IExecuteWithSignature<Org.Apache.Kafka.Common.Metrics.Sensor>("sensor", "(Ljava/lang/String;Lorg/apache/kafka/common/metrics/MetricConfig;JLorg/apache/kafka/common/metrics/Sensor$RecordingLevel;[Lorg/apache/kafka/common/metrics/Sensor;)Lorg/apache/kafka/common/metrics/Sensor;", arg0, arg1, arg2, arg3); else return IExecuteWithSignature<Org.Apache.Kafka.Common.Metrics.Sensor>("sensor", "(Ljava/lang/String;Lorg/apache/kafka/common/metrics/MetricConfig;JLorg/apache/kafka/common/metrics/Sensor$RecordingLevel;[Lorg/apache/kafka/common/metrics/Sensor;)Lorg/apache/kafka/common/metrics/Sensor;", arg0, arg1, arg2, arg3, arg4);
+            return IExecuteWithSignature<Org.Apache.Kafka.Common.Metrics.Sensor>("sensor", "(Ljava/lang/String;Lorg/apache/kafka/common/metrics/MetricConfig;JLorg/apache/kafka/common/metrics/Sensor$RecordingLevel;[Lorg/apache/kafka/common/metrics/Sensor;)Lorg/apache/kafka/common/metrics/Sensor;", MASES.JNet.Specific.Extensions.JNetCoreExtensions.VarArgRebuild(arg4, arg0, arg1, arg2, arg3));
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/metrics/Metrics.html#sensor(java.lang.String,org.apache.kafka.common.metrics.MetricConfig,org.apache.kafka.common.metrics.Sensor...)"/>
@@ -377,7 +377,7 @@ namespace Org.Apache.Kafka.Common.Metrics
         /// <returns><see cref="Org.Apache.Kafka.Common.Metrics.Sensor"/></returns>
         public Org.Apache.Kafka.Common.Metrics.Sensor Sensor(Java.Lang.String arg0, Org.Apache.Kafka.Common.Metrics.MetricConfig arg1, params Org.Apache.Kafka.Common.Metrics.Sensor[] arg2)
         {
-            if (arg2.Length == 0) return IExecuteWithSignature<Org.Apache.Kafka.Common.Metrics.Sensor>("sensor", "(Ljava/lang/String;Lorg/apache/kafka/common/metrics/MetricConfig;[Lorg/apache/kafka/common/metrics/Sensor;)Lorg/apache/kafka/common/metrics/Sensor;", arg0, arg1); else return IExecuteWithSignature<Org.Apache.Kafka.Common.Metrics.Sensor>("sensor", "(Ljava/lang/String;Lorg/apache/kafka/common/metrics/MetricConfig;[Lorg/apache/kafka/common/metrics/Sensor;)Lorg/apache/kafka/common/metrics/Sensor;", arg0, arg1, arg2);
+            return IExecuteWithSignature<Org.Apache.Kafka.Common.Metrics.Sensor>("sensor", "(Ljava/lang/String;Lorg/apache/kafka/common/metrics/MetricConfig;[Lorg/apache/kafka/common/metrics/Sensor;)Lorg/apache/kafka/common/metrics/Sensor;", MASES.JNet.Specific.Extensions.JNetCoreExtensions.VarArgRebuild(arg2, arg0, arg1));
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/metrics/Metrics.html#sensor(java.lang.String,org.apache.kafka.common.metrics.MetricConfig,org.apache.kafka.common.metrics.Sensor.RecordingLevel,org.apache.kafka.common.metrics.Sensor...)"/>
@@ -389,7 +389,7 @@ namespace Org.Apache.Kafka.Common.Metrics
         /// <returns><see cref="Org.Apache.Kafka.Common.Metrics.Sensor"/></returns>
         public Org.Apache.Kafka.Common.Metrics.Sensor Sensor(Java.Lang.String arg0, Org.Apache.Kafka.Common.Metrics.MetricConfig arg1, Org.Apache.Kafka.Common.Metrics.Sensor.RecordingLevel arg2, params Org.Apache.Kafka.Common.Metrics.Sensor[] arg3)
         {
-            if (arg3.Length == 0) return IExecuteWithSignature<Org.Apache.Kafka.Common.Metrics.Sensor>("sensor", "(Ljava/lang/String;Lorg/apache/kafka/common/metrics/MetricConfig;Lorg/apache/kafka/common/metrics/Sensor$RecordingLevel;[Lorg/apache/kafka/common/metrics/Sensor;)Lorg/apache/kafka/common/metrics/Sensor;", arg0, arg1, arg2); else return IExecuteWithSignature<Org.Apache.Kafka.Common.Metrics.Sensor>("sensor", "(Ljava/lang/String;Lorg/apache/kafka/common/metrics/MetricConfig;Lorg/apache/kafka/common/metrics/Sensor$RecordingLevel;[Lorg/apache/kafka/common/metrics/Sensor;)Lorg/apache/kafka/common/metrics/Sensor;", arg0, arg1, arg2, arg3);
+            return IExecuteWithSignature<Org.Apache.Kafka.Common.Metrics.Sensor>("sensor", "(Ljava/lang/String;Lorg/apache/kafka/common/metrics/MetricConfig;Lorg/apache/kafka/common/metrics/Sensor$RecordingLevel;[Lorg/apache/kafka/common/metrics/Sensor;)Lorg/apache/kafka/common/metrics/Sensor;", MASES.JNet.Specific.Extensions.JNetCoreExtensions.VarArgRebuild(arg3, arg0, arg1, arg2));
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/metrics/Metrics.html#addReporter(org.apache.kafka.common.metrics.MetricsReporter)"/>

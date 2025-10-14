@@ -261,7 +261,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KStream"/></returns>
         public Org.Apache.Kafka.Streams.Kstream.KStream Process(Org.Apache.Kafka.Streams.Processor.Api.ProcessorSupplier arg0, params Java.Lang.String[] arg1)
         {
-            if (arg1.Length == 0) return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.KStream>("process", "(Lorg/apache/kafka/streams/processor/api/ProcessorSupplier;[Ljava/lang/String;)Lorg/apache/kafka/streams/kstream/KStream;", arg0); else return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.KStream>("process", "(Lorg/apache/kafka/streams/processor/api/ProcessorSupplier;[Ljava/lang/String;)Lorg/apache/kafka/streams/kstream/KStream;", arg0, arg1);
+            return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.KStream>("process", "(Lorg/apache/kafka/streams/processor/api/ProcessorSupplier;[Ljava/lang/String;)Lorg/apache/kafka/streams/kstream/KStream;", MASES.JNet.Specific.Extensions.JNetCoreExtensions.VarArgRebuild(arg1, arg0));
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/kstream/KStream.html#process(org.apache.kafka.streams.processor.api.ProcessorSupplier,org.apache.kafka.streams.kstream.Named,java.lang.String...)"/>
@@ -272,7 +272,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KStream"/></returns>
         public Org.Apache.Kafka.Streams.Kstream.KStream Process(Org.Apache.Kafka.Streams.Processor.Api.ProcessorSupplier arg0, Org.Apache.Kafka.Streams.Kstream.Named arg1, params Java.Lang.String[] arg2)
         {
-            if (arg2.Length == 0) return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.KStream>("process", "(Lorg/apache/kafka/streams/processor/api/ProcessorSupplier;Lorg/apache/kafka/streams/kstream/Named;[Ljava/lang/String;)Lorg/apache/kafka/streams/kstream/KStream;", arg0, arg1); else return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.KStream>("process", "(Lorg/apache/kafka/streams/processor/api/ProcessorSupplier;Lorg/apache/kafka/streams/kstream/Named;[Ljava/lang/String;)Lorg/apache/kafka/streams/kstream/KStream;", arg0, arg1, arg2);
+            return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.KStream>("process", "(Lorg/apache/kafka/streams/processor/api/ProcessorSupplier;Lorg/apache/kafka/streams/kstream/Named;[Ljava/lang/String;)Lorg/apache/kafka/streams/kstream/KStream;", MASES.JNet.Specific.Extensions.JNetCoreExtensions.VarArgRebuild(arg2, arg0, arg1));
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/kstream/KStream.html#groupBy(org.apache.kafka.streams.kstream.KeyValueMapper,org.apache.kafka.streams.kstream.Grouped)"/>
@@ -448,7 +448,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KStream"/></returns>
         public Org.Apache.Kafka.Streams.Kstream.KStream ProcessValues(Org.Apache.Kafka.Streams.Processor.Api.FixedKeyProcessorSupplier arg0, params Java.Lang.String[] arg1)
         {
-            if (arg1.Length == 0) return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.KStream>("processValues", "(Lorg/apache/kafka/streams/processor/api/FixedKeyProcessorSupplier;[Ljava/lang/String;)Lorg/apache/kafka/streams/kstream/KStream;", arg0); else return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.KStream>("processValues", "(Lorg/apache/kafka/streams/processor/api/FixedKeyProcessorSupplier;[Ljava/lang/String;)Lorg/apache/kafka/streams/kstream/KStream;", arg0, arg1);
+            return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.KStream>("processValues", "(Lorg/apache/kafka/streams/processor/api/FixedKeyProcessorSupplier;[Ljava/lang/String;)Lorg/apache/kafka/streams/kstream/KStream;", MASES.JNet.Specific.Extensions.JNetCoreExtensions.VarArgRebuild(arg1, arg0));
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/kstream/KStream.html#processValues(org.apache.kafka.streams.processor.api.FixedKeyProcessorSupplier,org.apache.kafka.streams.kstream.Named,java.lang.String...)"/>
@@ -459,7 +459,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KStream"/></returns>
         public Org.Apache.Kafka.Streams.Kstream.KStream ProcessValues(Org.Apache.Kafka.Streams.Processor.Api.FixedKeyProcessorSupplier arg0, Org.Apache.Kafka.Streams.Kstream.Named arg1, params Java.Lang.String[] arg2)
         {
-            if (arg2.Length == 0) return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.KStream>("processValues", "(Lorg/apache/kafka/streams/processor/api/FixedKeyProcessorSupplier;Lorg/apache/kafka/streams/kstream/Named;[Ljava/lang/String;)Lorg/apache/kafka/streams/kstream/KStream;", arg0, arg1); else return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.KStream>("processValues", "(Lorg/apache/kafka/streams/processor/api/FixedKeyProcessorSupplier;Lorg/apache/kafka/streams/kstream/Named;[Ljava/lang/String;)Lorg/apache/kafka/streams/kstream/KStream;", arg0, arg1, arg2);
+            return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.KStream>("processValues", "(Lorg/apache/kafka/streams/processor/api/FixedKeyProcessorSupplier;Lorg/apache/kafka/streams/kstream/Named;[Ljava/lang/String;)Lorg/apache/kafka/streams/kstream/KStream;", MASES.JNet.Specific.Extensions.JNetCoreExtensions.VarArgRebuild(arg2, arg0, arg1));
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/kstream/KStream.html#join(org.apache.kafka.streams.kstream.KStream,org.apache.kafka.streams.kstream.ValueJoiner,org.apache.kafka.streams.kstream.JoinWindows,org.apache.kafka.streams.kstream.StreamJoined)"/>
@@ -1148,7 +1148,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KStream"/></returns>
         public Org.Apache.Kafka.Streams.Kstream.KStream<KOut, VOut> Process<KOut, VOut, Arg0objectSuperK, Arg0objectSuperV, Arg0ExtendsKOut, Arg0ExtendsVOut>(Org.Apache.Kafka.Streams.Processor.Api.ProcessorSupplier<Arg0objectSuperK, Arg0objectSuperV, Arg0ExtendsKOut, Arg0ExtendsVOut> arg0, params Java.Lang.String[] arg1) where Arg0objectSuperK : K where Arg0objectSuperV : V where Arg0ExtendsKOut : KOut where Arg0ExtendsVOut : VOut
         {
-            if (arg1.Length == 0) return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.KStream<KOut, VOut>>("process", "(Lorg/apache/kafka/streams/processor/api/ProcessorSupplier;[Ljava/lang/String;)Lorg/apache/kafka/streams/kstream/KStream;", arg0); else return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.KStream<KOut, VOut>>("process", "(Lorg/apache/kafka/streams/processor/api/ProcessorSupplier;[Ljava/lang/String;)Lorg/apache/kafka/streams/kstream/KStream;", arg0, arg1);
+            return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.KStream<KOut, VOut>>("process", "(Lorg/apache/kafka/streams/processor/api/ProcessorSupplier;[Ljava/lang/String;)Lorg/apache/kafka/streams/kstream/KStream;", MASES.JNet.Specific.Extensions.JNetCoreExtensions.VarArgRebuild(arg1, arg0));
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/kstream/KStream.html#process(org.apache.kafka.streams.processor.api.ProcessorSupplier,org.apache.kafka.streams.kstream.Named,java.lang.String...)"/>
@@ -1165,7 +1165,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KStream"/></returns>
         public Org.Apache.Kafka.Streams.Kstream.KStream<KOut, VOut> Process<KOut, VOut, Arg0objectSuperK, Arg0objectSuperV, Arg0ExtendsKOut, Arg0ExtendsVOut>(Org.Apache.Kafka.Streams.Processor.Api.ProcessorSupplier<Arg0objectSuperK, Arg0objectSuperV, Arg0ExtendsKOut, Arg0ExtendsVOut> arg0, Org.Apache.Kafka.Streams.Kstream.Named arg1, params Java.Lang.String[] arg2) where Arg0objectSuperK : K where Arg0objectSuperV : V where Arg0ExtendsKOut : KOut where Arg0ExtendsVOut : VOut
         {
-            if (arg2.Length == 0) return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.KStream<KOut, VOut>>("process", "(Lorg/apache/kafka/streams/processor/api/ProcessorSupplier;Lorg/apache/kafka/streams/kstream/Named;[Ljava/lang/String;)Lorg/apache/kafka/streams/kstream/KStream;", arg0, arg1); else return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.KStream<KOut, VOut>>("process", "(Lorg/apache/kafka/streams/processor/api/ProcessorSupplier;Lorg/apache/kafka/streams/kstream/Named;[Ljava/lang/String;)Lorg/apache/kafka/streams/kstream/KStream;", arg0, arg1, arg2);
+            return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.KStream<KOut, VOut>>("process", "(Lorg/apache/kafka/streams/processor/api/ProcessorSupplier;Lorg/apache/kafka/streams/kstream/Named;[Ljava/lang/String;)Lorg/apache/kafka/streams/kstream/KStream;", MASES.JNet.Specific.Extensions.JNetCoreExtensions.VarArgRebuild(arg2, arg0, arg1));
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/kstream/KStream.html#groupBy(org.apache.kafka.streams.kstream.KeyValueMapper,org.apache.kafka.streams.kstream.Grouped)"/>
@@ -1421,7 +1421,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KStream"/></returns>
         public Org.Apache.Kafka.Streams.Kstream.KStream<K, VOut> ProcessValues<VOut, Arg0objectSuperK, Arg0objectSuperV, Arg0ExtendsVOut>(Org.Apache.Kafka.Streams.Processor.Api.FixedKeyProcessorSupplier<Arg0objectSuperK, Arg0objectSuperV, Arg0ExtendsVOut> arg0, params Java.Lang.String[] arg1) where Arg0objectSuperK : K where Arg0objectSuperV : V where Arg0ExtendsVOut : VOut
         {
-            if (arg1.Length == 0) return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.KStream<K, VOut>>("processValues", "(Lorg/apache/kafka/streams/processor/api/FixedKeyProcessorSupplier;[Ljava/lang/String;)Lorg/apache/kafka/streams/kstream/KStream;", arg0); else return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.KStream<K, VOut>>("processValues", "(Lorg/apache/kafka/streams/processor/api/FixedKeyProcessorSupplier;[Ljava/lang/String;)Lorg/apache/kafka/streams/kstream/KStream;", arg0, arg1);
+            return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.KStream<K, VOut>>("processValues", "(Lorg/apache/kafka/streams/processor/api/FixedKeyProcessorSupplier;[Ljava/lang/String;)Lorg/apache/kafka/streams/kstream/KStream;", MASES.JNet.Specific.Extensions.JNetCoreExtensions.VarArgRebuild(arg1, arg0));
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/kstream/KStream.html#processValues(org.apache.kafka.streams.processor.api.FixedKeyProcessorSupplier,org.apache.kafka.streams.kstream.Named,java.lang.String...)"/>
@@ -1436,7 +1436,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KStream"/></returns>
         public Org.Apache.Kafka.Streams.Kstream.KStream<K, VOut> ProcessValues<VOut, Arg0objectSuperK, Arg0objectSuperV, Arg0ExtendsVOut>(Org.Apache.Kafka.Streams.Processor.Api.FixedKeyProcessorSupplier<Arg0objectSuperK, Arg0objectSuperV, Arg0ExtendsVOut> arg0, Org.Apache.Kafka.Streams.Kstream.Named arg1, params Java.Lang.String[] arg2) where Arg0objectSuperK : K where Arg0objectSuperV : V where Arg0ExtendsVOut : VOut
         {
-            if (arg2.Length == 0) return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.KStream<K, VOut>>("processValues", "(Lorg/apache/kafka/streams/processor/api/FixedKeyProcessorSupplier;Lorg/apache/kafka/streams/kstream/Named;[Ljava/lang/String;)Lorg/apache/kafka/streams/kstream/KStream;", arg0, arg1); else return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.KStream<K, VOut>>("processValues", "(Lorg/apache/kafka/streams/processor/api/FixedKeyProcessorSupplier;Lorg/apache/kafka/streams/kstream/Named;[Ljava/lang/String;)Lorg/apache/kafka/streams/kstream/KStream;", arg0, arg1, arg2);
+            return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.KStream<K, VOut>>("processValues", "(Lorg/apache/kafka/streams/processor/api/FixedKeyProcessorSupplier;Lorg/apache/kafka/streams/kstream/Named;[Ljava/lang/String;)Lorg/apache/kafka/streams/kstream/KStream;", MASES.JNet.Specific.Extensions.JNetCoreExtensions.VarArgRebuild(arg2, arg0, arg1));
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/kstream/KStream.html#join(org.apache.kafka.streams.kstream.KStream,org.apache.kafka.streams.kstream.ValueJoiner,org.apache.kafka.streams.kstream.JoinWindows,org.apache.kafka.streams.kstream.StreamJoined)"/>

@@ -1299,7 +1299,7 @@ namespace Org.Apache.Kafka.Common.Config
             /// <returns><see cref="Org.Apache.Kafka.Common.Config.ConfigDef.CaseInsensitiveValidString"/></returns>
             public static Org.Apache.Kafka.Common.Config.ConfigDef.CaseInsensitiveValidString In(params Java.Lang.String[] arg0)
             {
-                if (arg0.Length == 0) return SExecuteWithSignature<Org.Apache.Kafka.Common.Config.ConfigDef.CaseInsensitiveValidString>(LocalBridgeClazz, "in", "([Ljava/lang/String;)Lorg/apache/kafka/common/config/ConfigDef$CaseInsensitiveValidString;"); else return SExecuteWithSignature<Org.Apache.Kafka.Common.Config.ConfigDef.CaseInsensitiveValidString>(LocalBridgeClazz, "in", "([Ljava/lang/String;)Lorg/apache/kafka/common/config/ConfigDef$CaseInsensitiveValidString;", arg0);
+                return SExecuteWithSignature<Org.Apache.Kafka.Common.Config.ConfigDef.CaseInsensitiveValidString>(LocalBridgeClazz, "in", "([Ljava/lang/String;)Lorg/apache/kafka/common/config/ConfigDef$CaseInsensitiveValidString;", arg0);
             }
 
             #endregion
@@ -1348,7 +1348,7 @@ namespace Org.Apache.Kafka.Common.Config
             /// <returns><see cref="Org.Apache.Kafka.Common.Config.ConfigDef.CompositeValidator"/></returns>
             public static Org.Apache.Kafka.Common.Config.ConfigDef.CompositeValidator Of(params Org.Apache.Kafka.Common.Config.ConfigDef.Validator[] arg0)
             {
-                if (arg0.Length == 0) return SExecuteWithSignature<Org.Apache.Kafka.Common.Config.ConfigDef.CompositeValidator>(LocalBridgeClazz, "of", "([Lorg/apache/kafka/common/config/ConfigDef$Validator;)Lorg/apache/kafka/common/config/ConfigDef$CompositeValidator;"); else return SExecuteWithSignature<Org.Apache.Kafka.Common.Config.ConfigDef.CompositeValidator>(LocalBridgeClazz, "of", "([Lorg/apache/kafka/common/config/ConfigDef$Validator;)Lorg/apache/kafka/common/config/ConfigDef$CompositeValidator;", arg0);
+                return SExecuteWithSignature<Org.Apache.Kafka.Common.Config.ConfigDef.CompositeValidator>(LocalBridgeClazz, "of", "([Lorg/apache/kafka/common/config/ConfigDef$Validator;)Lorg/apache/kafka/common/config/ConfigDef$CompositeValidator;", arg0);
             }
 
             #endregion
@@ -2101,7 +2101,7 @@ namespace Org.Apache.Kafka.Common.Config
             /// <returns><see cref="Org.Apache.Kafka.Common.Config.ConfigDef.ValidList"/></returns>
             public static Org.Apache.Kafka.Common.Config.ConfigDef.ValidList In(params Java.Lang.String[] arg0)
             {
-                if (arg0.Length == 0) return SExecuteWithSignature<Org.Apache.Kafka.Common.Config.ConfigDef.ValidList>(LocalBridgeClazz, "in", "([Ljava/lang/String;)Lorg/apache/kafka/common/config/ConfigDef$ValidList;"); else return SExecuteWithSignature<Org.Apache.Kafka.Common.Config.ConfigDef.ValidList>(LocalBridgeClazz, "in", "([Ljava/lang/String;)Lorg/apache/kafka/common/config/ConfigDef$ValidList;", arg0);
+                return SExecuteWithSignature<Org.Apache.Kafka.Common.Config.ConfigDef.ValidList>(LocalBridgeClazz, "in", "([Ljava/lang/String;)Lorg/apache/kafka/common/config/ConfigDef$ValidList;", arg0);
             }
 
             #endregion
@@ -2150,7 +2150,7 @@ namespace Org.Apache.Kafka.Common.Config
             /// <returns><see cref="Org.Apache.Kafka.Common.Config.ConfigDef.ValidString"/></returns>
             public static Org.Apache.Kafka.Common.Config.ConfigDef.ValidString In(params Java.Lang.String[] arg0)
             {
-                if (arg0.Length == 0) return SExecuteWithSignature<Org.Apache.Kafka.Common.Config.ConfigDef.ValidString>(LocalBridgeClazz, "in", "([Ljava/lang/String;)Lorg/apache/kafka/common/config/ConfigDef$ValidString;"); else return SExecuteWithSignature<Org.Apache.Kafka.Common.Config.ConfigDef.ValidString>(LocalBridgeClazz, "in", "([Ljava/lang/String;)Lorg/apache/kafka/common/config/ConfigDef$ValidString;", arg0);
+                return SExecuteWithSignature<Org.Apache.Kafka.Common.Config.ConfigDef.ValidString>(LocalBridgeClazz, "in", "([Ljava/lang/String;)Lorg/apache/kafka/common/config/ConfigDef$ValidString;", arg0);
             }
 
             #endregion

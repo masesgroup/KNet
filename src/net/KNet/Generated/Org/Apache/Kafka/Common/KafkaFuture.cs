@@ -320,7 +320,7 @@ namespace Org.Apache.Kafka.Common
         /// <returns><see cref="Org.Apache.Kafka.Common.KafkaFuture"/></returns>
         public static Org.Apache.Kafka.Common.KafkaFuture AllOf(params Org.Apache.Kafka.Common.KafkaFuture[] arg0)
         {
-            if (arg0.Length == 0) return SExecuteWithSignature<Org.Apache.Kafka.Common.KafkaFuture>(LocalBridgeClazz, "allOf", "([Lorg/apache/kafka/common/KafkaFuture;)Lorg/apache/kafka/common/KafkaFuture;"); else return SExecuteWithSignature<Org.Apache.Kafka.Common.KafkaFuture>(LocalBridgeClazz, "allOf", "([Lorg/apache/kafka/common/KafkaFuture;)Lorg/apache/kafka/common/KafkaFuture;", arg0);
+            return SExecuteWithSignature<Org.Apache.Kafka.Common.KafkaFuture>(LocalBridgeClazz, "allOf", "([Lorg/apache/kafka/common/KafkaFuture;)Lorg/apache/kafka/common/KafkaFuture;", arg0);
         }
 
         #endregion
@@ -635,7 +635,7 @@ namespace Org.Apache.Kafka.Common
         /// <returns><see cref="Org.Apache.Kafka.Common.KafkaFuture"/></returns>
         public static Org.Apache.Kafka.Common.KafkaFuture<Java.Lang.Void> AllOf(params Org.Apache.Kafka.Common.KafkaFuture<object>[] arg0)
         {
-            if (arg0.Length == 0) return SExecuteWithSignature<Org.Apache.Kafka.Common.KafkaFuture<Java.Lang.Void>>(LocalBridgeClazz, "allOf", "([Lorg/apache/kafka/common/KafkaFuture;)Lorg/apache/kafka/common/KafkaFuture;"); else return SExecuteWithSignature<Org.Apache.Kafka.Common.KafkaFuture<Java.Lang.Void>>(LocalBridgeClazz, "allOf", "([Lorg/apache/kafka/common/KafkaFuture;)Lorg/apache/kafka/common/KafkaFuture;", arg0);
+            return SExecuteWithSignature<Org.Apache.Kafka.Common.KafkaFuture<Java.Lang.Void>>(LocalBridgeClazz, "allOf", "([Lorg/apache/kafka/common/KafkaFuture;)Lorg/apache/kafka/common/KafkaFuture;", arg0);
         }
 
         #endregion

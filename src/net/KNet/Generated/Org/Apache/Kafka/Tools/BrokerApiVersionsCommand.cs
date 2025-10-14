@@ -90,7 +90,7 @@ namespace Org.Apache.Kafka.Tools
         /// <exception cref="Java.Lang.InterruptedException"/>
         public static void Execute(params Java.Lang.String[] arg0)
         {
-            if (arg0.Length == 0) SExecuteWithSignature(LocalBridgeClazz, "execute", "([Ljava/lang/String;)V"); else SExecuteWithSignature(LocalBridgeClazz, "execute", "([Ljava/lang/String;)V", arg0);
+            SExecuteWithSignature(LocalBridgeClazz, "execute", "([Ljava/lang/String;)V", arg0);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.0/org/apache/kafka/tools/BrokerApiVersionsCommand.html#main(java.lang.String...)"/>

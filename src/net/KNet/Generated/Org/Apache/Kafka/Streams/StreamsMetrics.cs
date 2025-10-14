@@ -126,7 +126,7 @@ namespace Org.Apache.Kafka.Streams
         /// <returns><see cref="Org.Apache.Kafka.Common.Metrics.Sensor"/></returns>
         public Org.Apache.Kafka.Common.Metrics.Sensor AddLatencyRateTotalSensor(Java.Lang.String arg0, Java.Lang.String arg1, Java.Lang.String arg2, Org.Apache.Kafka.Common.Metrics.Sensor.RecordingLevel arg3, params Java.Lang.String[] arg4)
         {
-            if (arg4.Length == 0) return IExecuteWithSignature<Org.Apache.Kafka.Common.Metrics.Sensor>("addLatencyRateTotalSensor", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lorg/apache/kafka/common/metrics/Sensor$RecordingLevel;[Ljava/lang/String;)Lorg/apache/kafka/common/metrics/Sensor;", arg0, arg1, arg2, arg3); else return IExecuteWithSignature<Org.Apache.Kafka.Common.Metrics.Sensor>("addLatencyRateTotalSensor", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lorg/apache/kafka/common/metrics/Sensor$RecordingLevel;[Ljava/lang/String;)Lorg/apache/kafka/common/metrics/Sensor;", arg0, arg1, arg2, arg3, arg4);
+            return IExecuteWithSignature<Org.Apache.Kafka.Common.Metrics.Sensor>("addLatencyRateTotalSensor", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lorg/apache/kafka/common/metrics/Sensor$RecordingLevel;[Ljava/lang/String;)Lorg/apache/kafka/common/metrics/Sensor;", MASES.JNet.Specific.Extensions.JNetCoreExtensions.VarArgRebuild(arg4, arg0, arg1, arg2, arg3));
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/StreamsMetrics.html#addRateTotalSensor(java.lang.String,java.lang.String,java.lang.String,org.apache.kafka.common.metrics.Sensor.RecordingLevel,java.lang.String...)"/>
@@ -139,7 +139,7 @@ namespace Org.Apache.Kafka.Streams
         /// <returns><see cref="Org.Apache.Kafka.Common.Metrics.Sensor"/></returns>
         public Org.Apache.Kafka.Common.Metrics.Sensor AddRateTotalSensor(Java.Lang.String arg0, Java.Lang.String arg1, Java.Lang.String arg2, Org.Apache.Kafka.Common.Metrics.Sensor.RecordingLevel arg3, params Java.Lang.String[] arg4)
         {
-            if (arg4.Length == 0) return IExecuteWithSignature<Org.Apache.Kafka.Common.Metrics.Sensor>("addRateTotalSensor", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lorg/apache/kafka/common/metrics/Sensor$RecordingLevel;[Ljava/lang/String;)Lorg/apache/kafka/common/metrics/Sensor;", arg0, arg1, arg2, arg3); else return IExecuteWithSignature<Org.Apache.Kafka.Common.Metrics.Sensor>("addRateTotalSensor", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lorg/apache/kafka/common/metrics/Sensor$RecordingLevel;[Ljava/lang/String;)Lorg/apache/kafka/common/metrics/Sensor;", arg0, arg1, arg2, arg3, arg4);
+            return IExecuteWithSignature<Org.Apache.Kafka.Common.Metrics.Sensor>("addRateTotalSensor", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lorg/apache/kafka/common/metrics/Sensor$RecordingLevel;[Ljava/lang/String;)Lorg/apache/kafka/common/metrics/Sensor;", MASES.JNet.Specific.Extensions.JNetCoreExtensions.VarArgRebuild(arg4, arg0, arg1, arg2, arg3));
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/StreamsMetrics.html#addSensor(java.lang.String,org.apache.kafka.common.metrics.Sensor.RecordingLevel,org.apache.kafka.common.metrics.Sensor...)"/>
@@ -150,7 +150,7 @@ namespace Org.Apache.Kafka.Streams
         /// <returns><see cref="Org.Apache.Kafka.Common.Metrics.Sensor"/></returns>
         public Org.Apache.Kafka.Common.Metrics.Sensor AddSensor(Java.Lang.String arg0, Org.Apache.Kafka.Common.Metrics.Sensor.RecordingLevel arg1, params Org.Apache.Kafka.Common.Metrics.Sensor[] arg2)
         {
-            if (arg2.Length == 0) return IExecuteWithSignature<Org.Apache.Kafka.Common.Metrics.Sensor>("addSensor", "(Ljava/lang/String;Lorg/apache/kafka/common/metrics/Sensor$RecordingLevel;[Lorg/apache/kafka/common/metrics/Sensor;)Lorg/apache/kafka/common/metrics/Sensor;", arg0, arg1); else return IExecuteWithSignature<Org.Apache.Kafka.Common.Metrics.Sensor>("addSensor", "(Ljava/lang/String;Lorg/apache/kafka/common/metrics/Sensor$RecordingLevel;[Lorg/apache/kafka/common/metrics/Sensor;)Lorg/apache/kafka/common/metrics/Sensor;", arg0, arg1, arg2);
+            return IExecuteWithSignature<Org.Apache.Kafka.Common.Metrics.Sensor>("addSensor", "(Ljava/lang/String;Lorg/apache/kafka/common/metrics/Sensor$RecordingLevel;[Lorg/apache/kafka/common/metrics/Sensor;)Lorg/apache/kafka/common/metrics/Sensor;", MASES.JNet.Specific.Extensions.JNetCoreExtensions.VarArgRebuild(arg2, arg0, arg1));
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.0/org/apache/kafka/streams/StreamsMetrics.html#addSensor(java.lang.String,org.apache.kafka.common.metrics.Sensor.RecordingLevel)"/>

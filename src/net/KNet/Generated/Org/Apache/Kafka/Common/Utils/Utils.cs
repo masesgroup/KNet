@@ -253,7 +253,7 @@ namespace Org.Apache.Kafka.Common.Utils
         /// <returns><see cref="Java.Util.Set"/></returns>
         public static Java.Util.Set<E> Intersection<E>(Java.Util.Function.Supplier<Java.Util.Set<E>> arg0, Java.Util.Set<E> arg1, params Java.Util.Set<E>[] arg2)
         {
-            if (arg2.Length == 0) return SExecuteWithSignature<Java.Util.Set<E>>(LocalBridgeClazz, "intersection", "(Ljava/util/function/Supplier;Ljava/util/Set;[Ljava/util/Set;)Ljava/util/Set;", arg0, arg1); else return SExecuteWithSignature<Java.Util.Set<E>>(LocalBridgeClazz, "intersection", "(Ljava/util/function/Supplier;Ljava/util/Set;[Ljava/util/Set;)Ljava/util/Set;", arg0, arg1, arg2);
+            return SExecuteWithSignature<Java.Util.Set<E>>(LocalBridgeClazz, "intersection", "(Ljava/util/function/Supplier;Ljava/util/Set;[Ljava/util/Set;)Ljava/util/Set;", MASES.JNet.Specific.Extensions.JNetCoreExtensions.VarArgRebuild(arg2, arg0, arg1));
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/utils/Utils.html#union(java.util.function.Supplier,java.util.Set...)"/>
@@ -264,7 +264,7 @@ namespace Org.Apache.Kafka.Common.Utils
         /// <returns><see cref="Java.Util.Set"/></returns>
         public static Java.Util.Set<E> Union<E>(Java.Util.Function.Supplier<Java.Util.Set<E>> arg0, params Java.Util.Set<E>[] arg1)
         {
-            if (arg1.Length == 0) return SExecuteWithSignature<Java.Util.Set<E>>(LocalBridgeClazz, "union", "(Ljava/util/function/Supplier;[Ljava/util/Set;)Ljava/util/Set;", arg0); else return SExecuteWithSignature<Java.Util.Set<E>>(LocalBridgeClazz, "union", "(Ljava/util/function/Supplier;[Ljava/util/Set;)Ljava/util/Set;", arg0, arg1);
+            return SExecuteWithSignature<Java.Util.Set<E>>(LocalBridgeClazz, "union", "(Ljava/util/function/Supplier;[Ljava/util/Set;)Ljava/util/Set;", MASES.JNet.Specific.Extensions.JNetCoreExtensions.VarArgRebuild(arg1, arg0));
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/utils/Utils.html#entriesToMap(java.util.function.Supplier)"/>
@@ -314,7 +314,7 @@ namespace Org.Apache.Kafka.Common.Utils
         /// <returns><see cref="Java.Util.Map"/></returns>
         public static Java.Util.Map<K, V> MkMap<K, V>(params Java.Util.Map.Entry<K, V>[] arg0)
         {
-            if (arg0.Length == 0) return SExecuteWithSignature<Java.Util.Map<K, V>>(LocalBridgeClazz, "mkMap", "([Ljava/util/Map$Entry;)Ljava/util/Map;"); else return SExecuteWithSignature<Java.Util.Map<K, V>>(LocalBridgeClazz, "mkMap", "([Ljava/util/Map$Entry;)Ljava/util/Map;", arg0);
+            return SExecuteWithSignature<Java.Util.Map<K, V>>(LocalBridgeClazz, "mkMap", "([Ljava/util/Map$Entry;)Ljava/util/Map;", arg0);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/utils/Utils.html#mkEntry(java.lang.Object,java.lang.Object)"/>
@@ -346,7 +346,7 @@ namespace Org.Apache.Kafka.Common.Utils
         /// <returns><see cref="Java.Util.SortedSet"/></returns>
         public static Java.Util.SortedSet<T> MkSortedSet<T>(params T[] arg0) where T : Java.Lang.Comparable<T>
         {
-            if (arg0.Length == 0) return SExecuteWithSignature<Java.Util.SortedSet<T>>(LocalBridgeClazz, "mkSortedSet", "([Ljava/lang/Comparable;)Ljava/util/SortedSet;"); else return SExecuteWithSignature<Java.Util.SortedSet<T>>(LocalBridgeClazz, "mkSortedSet", "([Ljava/lang/Comparable;)Ljava/util/SortedSet;", arg0);
+            return SExecuteWithSignature<Java.Util.SortedSet<T>>(LocalBridgeClazz, "mkSortedSet", "([Ljava/lang/Comparable;)Ljava/util/SortedSet;", arg0);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/utils/Utils.html#loadClass(java.lang.String,java.lang.Class)"/>
@@ -445,7 +445,7 @@ namespace Org.Apache.Kafka.Common.Utils
         /// <exception cref="Java.Lang.ClassNotFoundException"/>
         public static T NewParameterizedInstance<T>(Java.Lang.String arg0, params object[] arg1)
         {
-            if (arg1.Length == 0) return SExecuteWithSignature<T>(LocalBridgeClazz, "newParameterizedInstance", "(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/Object;", arg0); else return SExecuteWithSignature<T>(LocalBridgeClazz, "newParameterizedInstance", "(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/Object;", arg0, arg1);
+            return SExecuteWithSignature<T>(LocalBridgeClazz, "newParameterizedInstance", "(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/Object;", MASES.JNet.Specific.Extensions.JNetCoreExtensions.VarArgRebuild(arg1, arg0));
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/utils/Utils.html#entriesWithPrefix(java.util.Map,java.lang.String,boolean,boolean)"/>
@@ -931,7 +931,7 @@ namespace Org.Apache.Kafka.Common.Utils
         /// <returns><see cref="long"/></returns>
         public static long Max(long arg0, params long[] arg1)
         {
-            if (arg1.Length == 0) return SExecuteWithSignature<long>(LocalBridgeClazz, "max", "(J[J)J", arg0); else return SExecuteWithSignature<long>(LocalBridgeClazz, "max", "(J[J)J", arg0, arg1);
+            return SExecuteWithSignature<long>(LocalBridgeClazz, "max", "(J[J)J", MASES.JNet.Specific.Extensions.JNetCoreExtensions.VarArgRebuild(arg1, arg0));
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/utils/Utils.html#min(long,long...)"/>
@@ -941,7 +941,7 @@ namespace Org.Apache.Kafka.Common.Utils
         /// <returns><see cref="long"/></returns>
         public static long Min(long arg0, params long[] arg1)
         {
-            if (arg1.Length == 0) return SExecuteWithSignature<long>(LocalBridgeClazz, "min", "(J[J)J", arg0); else return SExecuteWithSignature<long>(LocalBridgeClazz, "min", "(J[J)J", arg0, arg1);
+            return SExecuteWithSignature<long>(LocalBridgeClazz, "min", "(J[J)J", MASES.JNet.Specific.Extensions.JNetCoreExtensions.VarArgRebuild(arg1, arg0));
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/utils/Utils.html#mergeConfigs(java.util.List)"/>
@@ -990,7 +990,7 @@ namespace Org.Apache.Kafka.Common.Utils
         /// <exception cref="Java.Io.IOException"/>
         public static void CloseAll(params Java.Io.Closeable[] arg0)
         {
-            if (arg0.Length == 0) SExecuteWithSignature(LocalBridgeClazz, "closeAll", "([Ljava/io/Closeable;)V"); else SExecuteWithSignature(LocalBridgeClazz, "closeAll", "([Ljava/io/Closeable;)V", arg0);
+            SExecuteWithSignature(LocalBridgeClazz, "closeAll", "([Ljava/io/Closeable;)V", arg0);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/utils/Utils.html#closeAllQuietly(java.util.concurrent.atomic.AtomicReference,java.lang.String,java.lang.AutoCloseable...)"/>
@@ -1000,7 +1000,7 @@ namespace Org.Apache.Kafka.Common.Utils
         /// <param name="arg2"><see cref="Java.Lang.AutoCloseable"/></param>
         public static void CloseAllQuietly(Java.Util.Concurrent.Atomic.AtomicReference<Java.Lang.Throwable> arg0, Java.Lang.String arg1, params Java.Lang.AutoCloseable[] arg2)
         {
-            if (arg2.Length == 0) SExecuteWithSignature(LocalBridgeClazz, "closeAllQuietly", "(Ljava/util/concurrent/atomic/AtomicReference;Ljava/lang/String;[Ljava/lang/AutoCloseable;)V", arg0, arg1); else SExecuteWithSignature(LocalBridgeClazz, "closeAllQuietly", "(Ljava/util/concurrent/atomic/AtomicReference;Ljava/lang/String;[Ljava/lang/AutoCloseable;)V", arg0, arg1, arg2);
+            SExecuteWithSignature(LocalBridgeClazz, "closeAllQuietly", "(Ljava/util/concurrent/atomic/AtomicReference;Ljava/lang/String;[Ljava/lang/AutoCloseable;)V", MASES.JNet.Specific.Extensions.JNetCoreExtensions.VarArgRebuild(arg2, arg0, arg1));
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/utils/Utils.html#closeQuietly(java.lang.AutoCloseable,java.lang.String,java.util.concurrent.atomic.AtomicReference)"/>
