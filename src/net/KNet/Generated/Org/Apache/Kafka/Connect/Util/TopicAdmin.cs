@@ -248,7 +248,7 @@ namespace Org.Apache.Kafka.Connect.Util
         /// <returns><see cref="Java.Util.Map"/></returns>
         public Java.Util.Map<Java.Lang.String, Org.Apache.Kafka.Clients.Admin.Config> DescribeTopicConfigs(params Java.Lang.String[] arg0)
         {
-            if (arg0.Length == 0) return IExecuteWithSignature<Java.Util.Map<Java.Lang.String, Org.Apache.Kafka.Clients.Admin.Config>>("describeTopicConfigs", "([Ljava/lang/String;)Ljava/util/Map;"); else return IExecuteWithSignature<Java.Util.Map<Java.Lang.String, Org.Apache.Kafka.Clients.Admin.Config>>("describeTopicConfigs", "([Ljava/lang/String;)Ljava/util/Map;", arg0);
+            return IExecuteWithSignature<Java.Util.Map<Java.Lang.String, Org.Apache.Kafka.Clients.Admin.Config>>("describeTopicConfigs", "([Ljava/lang/String;)Ljava/util/Map;", arg0);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.1.0/org/apache/kafka/connect/util/TopicAdmin.html#describeTopics(java.lang.String...)"/>
@@ -257,7 +257,7 @@ namespace Org.Apache.Kafka.Connect.Util
         /// <returns><see cref="Java.Util.Map"/></returns>
         public Java.Util.Map<Java.Lang.String, Org.Apache.Kafka.Clients.Admin.TopicDescription> DescribeTopics(params Java.Lang.String[] arg0)
         {
-            if (arg0.Length == 0) return IExecuteWithSignature<Java.Util.Map<Java.Lang.String, Org.Apache.Kafka.Clients.Admin.TopicDescription>>("describeTopics", "([Ljava/lang/String;)Ljava/util/Map;"); else return IExecuteWithSignature<Java.Util.Map<Java.Lang.String, Org.Apache.Kafka.Clients.Admin.TopicDescription>>("describeTopics", "([Ljava/lang/String;)Ljava/util/Map;", arg0);
+            return IExecuteWithSignature<Java.Util.Map<Java.Lang.String, Org.Apache.Kafka.Clients.Admin.TopicDescription>>("describeTopics", "([Ljava/lang/String;)Ljava/util/Map;", arg0);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.1.0/org/apache/kafka/connect/util/TopicAdmin.html#endOffsets(java.util.Set)"/>
@@ -286,7 +286,7 @@ namespace Org.Apache.Kafka.Connect.Util
         /// <returns><see cref="Java.Util.Set"/></returns>
         public Java.Util.Set<Java.Lang.String> CreateTopics(params Org.Apache.Kafka.Clients.Admin.NewTopic[] arg0)
         {
-            if (arg0.Length == 0) return IExecuteWithSignature<Java.Util.Set<Java.Lang.String>>("createTopics", "([Lorg/apache/kafka/clients/admin/NewTopic;)Ljava/util/Set;"); else return IExecuteWithSignature<Java.Util.Set<Java.Lang.String>>("createTopics", "([Lorg/apache/kafka/clients/admin/NewTopic;)Ljava/util/Set;", arg0);
+            return IExecuteWithSignature<Java.Util.Set<Java.Lang.String>>("createTopics", "([Lorg/apache/kafka/clients/admin/NewTopic;)Ljava/util/Set;", arg0);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.1.0/org/apache/kafka/connect/util/TopicAdmin.html#createTopicsWithRetry(org.apache.kafka.clients.admin.NewTopic,long,long,org.apache.kafka.common.utils.Time)"/>
@@ -325,7 +325,7 @@ namespace Org.Apache.Kafka.Connect.Util
         /// <returns><see cref="Org.Apache.Kafka.Connect.Util.TopicAdmin.TopicCreationResponse"/></returns>
         public Org.Apache.Kafka.Connect.Util.TopicAdmin.TopicCreationResponse CreateOrFindTopics(params Org.Apache.Kafka.Clients.Admin.NewTopic[] arg0)
         {
-            if (arg0.Length == 0) return IExecuteWithSignature<Org.Apache.Kafka.Connect.Util.TopicAdmin.TopicCreationResponse>("createOrFindTopics", "([Lorg/apache/kafka/clients/admin/NewTopic;)Lorg/apache/kafka/connect/util/TopicAdmin$TopicCreationResponse;"); else return IExecuteWithSignature<Org.Apache.Kafka.Connect.Util.TopicAdmin.TopicCreationResponse>("createOrFindTopics", "([Lorg/apache/kafka/clients/admin/NewTopic;)Lorg/apache/kafka/connect/util/TopicAdmin$TopicCreationResponse;", arg0);
+            return IExecuteWithSignature<Org.Apache.Kafka.Connect.Util.TopicAdmin.TopicCreationResponse>("createOrFindTopics", "([Lorg/apache/kafka/clients/admin/NewTopic;)Lorg/apache/kafka/connect/util/TopicAdmin$TopicCreationResponse;", arg0);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.1.0/org/apache/kafka/connect/util/TopicAdmin.html#close()"/>

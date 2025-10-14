@@ -78,7 +78,7 @@ namespace Org.Apache.Kafka.Common
         /// <param name="arg2"><see cref="Java.Lang.String"/></param>
         /// <param name="arg3"><see cref="Java.Lang.String"/></param>
         public MetricNameTemplate(Java.Lang.String arg0, Java.Lang.String arg1, Java.Lang.String arg2, params Java.Lang.String[] arg3)
-            : base(arg0, arg1, arg2, arg3)
+            : base(MASES.JNet.Specific.Extensions.JNetCoreExtensions.VarArgRebuild(arg3, arg0, arg1, arg2))
         {
         }
         /// <summary>

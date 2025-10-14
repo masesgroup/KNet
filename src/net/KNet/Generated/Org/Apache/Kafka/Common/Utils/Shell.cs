@@ -163,7 +163,7 @@ namespace Org.Apache.Kafka.Common.Utils
         /// <exception cref="Java.Io.IOException"/>
         public static Java.Lang.String ExecCommand(params Java.Lang.String[] arg0)
         {
-            if (arg0.Length == 0) return SExecuteWithSignature<Java.Lang.String>(LocalBridgeClazz, "execCommand", "([Ljava/lang/String;)Ljava/lang/String;"); else return SExecuteWithSignature<Java.Lang.String>(LocalBridgeClazz, "execCommand", "([Ljava/lang/String;)Ljava/lang/String;", arg0);
+            return SExecuteWithSignature<Java.Lang.String>(LocalBridgeClazz, "execCommand", "([Ljava/lang/String;)Ljava/lang/String;", arg0);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.0/org/apache/kafka/common/utils/Shell.html#execCommand(java.lang.String[],long)"/>
