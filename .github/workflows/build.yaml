@@ -213,7 +213,7 @@ jobs:
         shell: cmd
         run: dir .\bin\*nupkg
 
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v5
         with:
           name: KNetNuGet
           path: .\bin\*nupkg
@@ -461,7 +461,7 @@ jobs:
         shell: pwsh
         run: dotnet ${{ github.workspace }}/bin/${{ matrix.framework }}/KNetTestSerDes.dll -Log4JConfiguration '${{ github.workspace }}/bin/${{ matrix.framework }}/log4j.properties'
 
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v5
         with:
           if-no-files-found: ignore
           name: Crash_tests_${{ matrix.os }}_${{ matrix.framework }}_${{ matrix.jdk_vendor }}_${{ matrix.jdk_version }}
@@ -561,14 +561,14 @@ jobs:
         shell: pwsh
         run: ${{ github.workspace }}\bin\${{ matrix.framework }}\KNetTestSerDes.exe -Log4JConfiguration '${{ github.workspace }}\bin\${{ matrix.framework }}\log4j.properties'
 
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v5
         with:
           if-no-files-found: ignore
           name: Crash_tests_${{ matrix.os }}_${{ matrix.framework }}_${{ matrix.jdk_vendor }}_${{ matrix.jdk_version }}
           path: .\CrashDumpsDir\*
           retention-days: 7
 
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v5
         if: ${{ inputs.UploadServerLogs == true }}
         with:
           if-no-files-found: ignore
@@ -675,14 +675,14 @@ jobs:
         shell: pwsh
         run: dotnet ${{ github.workspace }}/bin/${{ matrix.framework }}/KNetTestSerDes.dll -Log4JConfiguration '${{ github.workspace }}/bin/${{ matrix.framework }}/log4j.properties'
 
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v5
         with:
           if-no-files-found: ignore
           name: Crash_tests_${{ matrix.os }}_${{ matrix.framework }}_${{ matrix.jdk_vendor }}_${{ matrix.jdk_version }}
           path: ${{ github.workspace }}/coredump.*
           retention-days: 7
 
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v5
         if: ${{ inputs.UploadServerLogs == true }}
         with:
           if-no-files-found: ignore
