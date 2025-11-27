@@ -27,13 +27,13 @@ jobs:
         run: git config --system core.longpaths true
       
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
         with:
           fetch-depth: '1'
           submodules: 'true'
 
       - name: Common site
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
         with:
           repository: masesgroup/CommonTools
           path: CommonTools
