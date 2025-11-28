@@ -391,7 +391,7 @@ namespace MASES.KNet.Streams
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.State.StoreBuilder"/></param>
         /// <param name="arg1"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Topology"/></returns>
-        public Topology AddStateStore<S>(Org.Apache.Kafka.Streams.State.StoreBuilder<S> arg0, params Java.Lang.String[] arg1) where S : Org.Apache.Kafka.Streams.Processor.IStateStore, new()
+        public Topology AddStateStore<S>(Org.Apache.Kafka.Streams.State.StoreBuilder<S> arg0, params Java.Lang.String[] arg1) where S : Org.Apache.Kafka.Streams.Processor.IStateStore
         {
             var top = _topology.AddStateStore<S>(arg0, arg1);
             return new Topology(top, _factory);

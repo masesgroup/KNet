@@ -30,7 +30,7 @@ namespace MASES.KNet.Streams.State
         /// </summary>
         /// <typeparam name="TKNetManagedStore"></typeparam>
         /// <typeparam name="TStore"></typeparam>
-        public class StoreType<TKNetManagedStore, TStore> where TKNetManagedStore : ManagedStore<TStore>, IGenericSerDesFactoryApplier, new()
+        public class StoreType<TKNetManagedStore, TStore> where TKNetManagedStore : ManagedStore<TStore>, IGenericSerDesFactoryApplier
         {
             internal StoreType(Org.Apache.Kafka.Streams.State.QueryableStoreType<TStore> store) { Store = store; }
             internal Org.Apache.Kafka.Streams.State.QueryableStoreType<TStore> Store;
@@ -45,7 +45,7 @@ namespace MASES.KNet.Streams.State
         /// <typeparam name="TJVMV">The JVM type of <typeparamref name="V"/></typeparam>
         /// <typeparam name="TConcreteStore">A concrete type extending <see cref="ReadOnlyKeyValueStore{K, V, TJVMK, TJVMV}"/></typeparam>
         public static StoreType<TConcreteStore, Org.Apache.Kafka.Streams.State.ReadOnlyKeyValueStore<TJVMK, TJVMV>> KeyValueStore<K, V, TJVMK, TJVMV, TConcreteStore>()
-            where TConcreteStore : ReadOnlyKeyValueStore<K, V, TJVMK, TJVMV>, new()
+            where TConcreteStore : ReadOnlyKeyValueStore<K, V, TJVMK, TJVMV>
         {
             return new StoreType<TConcreteStore, Org.Apache.Kafka.Streams.State.ReadOnlyKeyValueStore<TJVMK, TJVMV>>(Org.Apache.Kafka.Streams.State.QueryableStoreTypes.KeyValueStore<TJVMK, TJVMV>());
         }
@@ -81,7 +81,7 @@ namespace MASES.KNet.Streams.State
         /// <typeparam name="TJVMV">The JVM type of <typeparamref name="V"/></typeparam>
         /// <typeparam name="TConcreteStore">A concrete type extending <see cref="ReadOnlySessionStore{K, V, TJVMK, TJVMV}"/></typeparam>
         public static StoreType<TConcreteStore, Org.Apache.Kafka.Streams.State.ReadOnlySessionStore<TJVMK, TJVMV>> SessionStore<K, V, TJVMK, TJVMV, TConcreteStore>()
-            where TConcreteStore : ReadOnlySessionStore<K, V, TJVMK, TJVMV>, new()
+            where TConcreteStore : ReadOnlySessionStore<K, V, TJVMK, TJVMV>
         {
             return new StoreType<TConcreteStore, Org.Apache.Kafka.Streams.State.ReadOnlySessionStore<TJVMK, TJVMV>>(Org.Apache.Kafka.Streams.State.QueryableStoreTypes.SessionStore<TJVMK, TJVMV>());
         }
@@ -117,7 +117,7 @@ namespace MASES.KNet.Streams.State
         /// <typeparam name="TJVMV">The JVM type of <typeparamref name="V"/></typeparam>
         /// <typeparam name="TConcreteStore">A concrete type extending <see cref="ReadOnlyWindowStore{K, V, TJVMK, TJVMV}"/></typeparam>
         public static StoreType<TConcreteStore, Org.Apache.Kafka.Streams.State.ReadOnlyWindowStore<TJVMK, TJVMV>> WindowStore<K, V, TJVMK, TJVMV, TConcreteStore>()
-            where TConcreteStore : ReadOnlyWindowStore<K, V, TJVMK, TJVMV>, new()
+            where TConcreteStore : ReadOnlyWindowStore<K, V, TJVMK, TJVMV>
         {
             return new StoreType<TConcreteStore, Org.Apache.Kafka.Streams.State.ReadOnlyWindowStore<TJVMK, TJVMV>>(Org.Apache.Kafka.Streams.State.QueryableStoreTypes.WindowStore<TJVMK, TJVMV>());
         }
@@ -153,7 +153,7 @@ namespace MASES.KNet.Streams.State
         /// <typeparam name="TJVMV">The JVM type of <typeparamref name="V"/></typeparam>
         /// <typeparam name="TConcreteStore">A concrete type extending <see cref="TimestampedKeyValueStore{K, V, TJVMK, TJVMV}"/></typeparam>
         public static StoreType<TConcreteStore, Org.Apache.Kafka.Streams.State.ReadOnlyKeyValueStore<TJVMK, Org.Apache.Kafka.Streams.State.ValueAndTimestamp<TJVMV>>> TimestampedKeyValueStore<K, V, TJVMK, TJVMV, TConcreteStore>()
-            where TConcreteStore : TimestampedKeyValueStore<K, V, TJVMK, TJVMV>, new()
+            where TConcreteStore : TimestampedKeyValueStore<K, V, TJVMK, TJVMV>
         {
             return new StoreType<TConcreteStore, Org.Apache.Kafka.Streams.State.ReadOnlyKeyValueStore<TJVMK, Org.Apache.Kafka.Streams.State.ValueAndTimestamp<TJVMV>>>(Org.Apache.Kafka.Streams.State.QueryableStoreTypes.TimestampedKeyValueStore<TJVMK, TJVMV>());
         }
@@ -189,7 +189,7 @@ namespace MASES.KNet.Streams.State
         /// <typeparam name="TJVMV">The JVM type of <typeparamref name="V"/></typeparam>
         /// <typeparam name="TConcreteStore">A concrete type extending <see cref="TimestampedWindowStore{K, V, TJVMK, TJVMV}"/></typeparam>
         public static StoreType<TConcreteStore, Org.Apache.Kafka.Streams.State.ReadOnlyWindowStore<TJVMK, Org.Apache.Kafka.Streams.State.ValueAndTimestamp<TJVMV>>> TimestampedWindowStore<K, V, TJVMK, TJVMV, TConcreteStore>()
-            where TConcreteStore : TimestampedWindowStore<K, V, TJVMK, TJVMV>, new()
+            where TConcreteStore : TimestampedWindowStore<K, V, TJVMK, TJVMV>
         {
             return new StoreType<TConcreteStore, Org.Apache.Kafka.Streams.State.ReadOnlyWindowStore<TJVMK, Org.Apache.Kafka.Streams.State.ValueAndTimestamp<TJVMV>>>(Org.Apache.Kafka.Streams.State.QueryableStoreTypes.TimestampedWindowStore<TJVMK, TJVMV>());
         }
