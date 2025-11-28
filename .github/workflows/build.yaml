@@ -134,6 +134,12 @@ jobs:
           fetch-depth: '1'
           submodules: 'true'
 
+      - uses: actions/setup-dotnet@v5
+        with:
+          dotnet-version: |
+            9.x
+            10.x
+
       - name: Get last workflow run of JNet
         if: ${{ inputs.UseLastRepositoryBuild == true }}
         shell: bash
@@ -302,6 +308,7 @@ jobs:
         with:
           dotnet-version: |
             9.x
+            10.x
 
       - name: Pre compile
         run: dotnet build --no-incremental --configuration Release /p:Platform="Any CPU" /p:NoWarn="0108%3B1030%3B0618" src/net/KNet/KNet.csproj
@@ -386,7 +393,7 @@ jobs:
           - 9092:9092
         env:
           KNET_DOCKER_RUNNING_MODE: server-standalone
-          JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ENCODED_2_6_4 }}
+          JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ENCODED_2_6_5 }}
           
     strategy:
       fail-fast: false
@@ -405,7 +412,7 @@ jobs:
       DOTNET_CreateDumpVerboseDiagnostics: ${{ inputs.EnableVerboseDiagnosticProcessDump }}
       DOTNET_EnableCrashReport: ${{ inputs.EnableProcessDump }}
       DOTNET_CreateDumpLogToFile: ${{ github.workspace }}/coredump.diagnostic
-      JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ENCODED_2_6_4 }}
+      JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ENCODED_2_6_5 }}
       
     steps:
       - name: Restore KNet ${{ matrix.framework }} bin from cache
@@ -436,6 +443,12 @@ jobs:
         with:
           dotnet-version: |
             9.x
+
+      - uses: actions/setup-dotnet@v5
+        if: ${{ matrix.framework == 'net10.0' }}
+        with:
+          dotnet-version: |
+            10.x
 
       - name: Execute KNetTest on ${{ matrix.os }} with ${{ matrix.jdk_vendor }} ${{ matrix.jdk_version }}
         continue-on-error: ${{ inputs.ForceContinueOnError == true }}
@@ -484,7 +497,7 @@ jobs:
       DOTNET_CreateDumpVerboseDiagnostics: ${{ inputs.EnableVerboseDiagnosticProcessDump }}
       DOTNET_EnableCrashReport: ${{ inputs.EnableProcessDump }}
       DOTNET_CreateDumpLogToFile: ${{ github.workspace }}/coredump.diagnostic
-      JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ENCODED_2_6_4 }}
+      JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ENCODED_2_6_5 }}
       
     steps:
       - name: Restore KNet ${{ matrix.framework }} bin from cache
@@ -518,6 +531,12 @@ jobs:
           distribution: 'graalvm' # See 'Supported distributions' for available options
           github-token: ${{ secrets.GITHUB_TOKEN }}
 
+      - uses: actions/setup-dotnet@v5
+        if: ${{ matrix.framework == 'net10.0' }}
+        with:
+          dotnet-version: |
+            10.x
+
       - name: Download Procdump and prepare # see https://gist.github.com/Sedeniono/e6d6504e3bf0645937852ee5681ef9ee and https://learn.microsoft.com/it-it/sysinternals/downloads/procdump
         if: ${{ inputs.EnableProcessDump == 1 }}
         continue-on-error: true
@@ -528,8 +547,6 @@ jobs:
           ${{ github.workspace }}\Procdump\procdump.exe -accepteula
           mkdir CrashDumpsDir
           ${{ github.workspace }}\Procdump\procdump.exe -ma -i ${{ github.workspace }}\CrashDumpsDir
-
-      - run: Get-PSDrive
 
       - name: Use latest version of KNetCLI
         run: dotnet tool update -g MASES.KNetCLI --source ${{ github.workspace }}\bin
@@ -604,7 +621,7 @@ jobs:
       DOTNET_CreateDumpVerboseDiagnostics: ${{ inputs.EnableVerboseDiagnosticProcessDump }}
       DOTNET_EnableCrashReport: ${{ inputs.EnableProcessDump }}
       DOTNET_CreateDumpLogToFile: ${{ github.workspace }}/coredump.diagnostic
-      JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ENCODED_2_6_4 }}
+      JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ENCODED_2_6_5 }}
       
     steps:
       - name: Restore KNet ${{ matrix.framework }} bin from cache
@@ -643,6 +660,12 @@ jobs:
         with:
           dotnet-version: |
             9.x
+
+      - uses: actions/setup-dotnet@v5
+        if: ${{ matrix.framework == 'net10.0' }}
+        with:
+          dotnet-version: |
+            10.x
 
       - name: Use latest version of KNetCLI
         run: dotnet tool update -g MASES.KNetCLI --source ${{ github.workspace }}/bin
