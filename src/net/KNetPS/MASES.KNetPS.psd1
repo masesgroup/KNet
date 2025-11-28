@@ -8,7 +8,7 @@
 
 RootModule = 'MASES.KNetPS.psm1'
 
-ModuleVersion = '3.1.0'
+ModuleVersion = '3.1.1'
 
 CompatiblePSEditions = 'Desktop', 'Core'
 

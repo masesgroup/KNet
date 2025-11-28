@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 	<PropertyGroup>
 		<LangVersion>latest</LangVersion>
-		<TargetFrameworks>net462;net8.0;net9.0</TargetFrameworks>
+		<TargetFrameworks>net462;net8.0;net9.0;net10.0</TargetFrameworks>
 	</PropertyGroup>
 	<PropertyGroup Condition="'$(TargetFramework)' == 'net9.0'">
 		<!--see https://learn.microsoft.com/en-us/dotnet/core/compatibility/interop/9.0/cet-support-->
@@ -16,7 +16,7 @@
 	</ItemGroup>
 	<ItemGroup Condition="!Exists('$(ProjectDir)..\..\..\KNet\KNet.csproj')">
 		<!--Outside GitHub repo-->
-		<PackageReference Include="MASES.KNet" Version="3.1.0" IncludeAssets="All" PrivateAssets="None" />
+		<PackageReference Include="MASES.KNet" Version="3.1.1" IncludeAssets="All" PrivateAssets="None" />
 	</ItemGroup>
 	<ItemGroup>
 		<None Update="connect-knet-sink.properties">
