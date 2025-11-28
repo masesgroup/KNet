@@ -31,6 +31,7 @@ jobs:
         with:
           dotnet-version: |
             9.x
+            10.x
 
       - name: Pre compile
         run: dotnet build --no-incremental --configuration Release /p:Platform="Any CPU" /p:NoWarn="0108%3B1030%3B0618" src/net/KNet/KNet.csproj
