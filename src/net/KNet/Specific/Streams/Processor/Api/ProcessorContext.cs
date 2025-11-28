@@ -79,7 +79,7 @@ namespace MASES.KNet.Streams.Processor.Api
         /// <param name="arg0"><see cref="string"/></param>
         /// <typeparam name="S"><see cref="Org.Apache.Kafka.Streams.Processor.IStateStore"/></typeparam>
         /// <returns><typeparamref name="S"/></returns>
-        public S GetStateStore<S>(string arg0) where S : Org.Apache.Kafka.Streams.Processor.IStateStore, new()
+        public S GetStateStore<S>(string arg0) where S : Org.Apache.Kafka.Streams.Processor.IStateStore
         {
             return _context.GetStateStore<S>(arg0);
         }
