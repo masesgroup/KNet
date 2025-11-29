@@ -38,9 +38,9 @@
 	</developers>
 	<properties>
 		<java.version>17</java.version>
-		<maven.compiler.release>17</maven.compiler.release>
-		<maven.compiler.source>17</maven.compiler.source>
-		<maven.compiler.target>17</maven.compiler.target>
+		<maven.compiler.release>${java.version}</maven.compiler.release>
+		<maven.compiler.source>${java.version}</maven.compiler.source>
+		<maven.compiler.target>${java.version}</maven.compiler.target>
 		<classpathfile>${basedir}/classpathfile.classpath</classpathfile>
 		<mavenSkipMain>false</mavenSkipMain> <!-- set mavenSkipMain to true to avoid source compilation: use directive in command-line -->
 		<jnetVersion>2.6.5.0</jnetVersion>
