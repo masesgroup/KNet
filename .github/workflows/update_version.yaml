@@ -35,7 +35,7 @@ jobs:
           fetch-depth: '1'
           submodules: 'true'
 
-      - run: (Get-Content ${{ github.workspace }}\src\jvm\knet\pom.xml).Replace('<knetversion>${{ inputs.CurrentVersion }}.0</knetversion>', '<knetversion>${{ inputs.NewVersion }}.0</knetversion>') | Set-Content ${{ github.workspace }}\src\jvm\knet\pom.xml
+      - run: (Get-Content ${{ github.workspace }}\src\jvm\knet\pom.xml).Replace('<knetVersion>${{ inputs.CurrentVersion }}.0</knetVersion>', '<knetVersion>${{ inputs.NewVersion }}.0</knetVersion>') | Set-Content ${{ github.workspace }}\src\jvm\knet\pom.xml
       
       - run: (Get-Content ${{ github.workspace }}\src\net\Common\Common.props).Replace('<Version>${{ inputs.CurrentVersion }}.0</Version>', '<Version>${{ inputs.NewVersion }}.0</Version>') | Set-Content ${{ github.workspace }}\src\net\Common\Common.props
 
