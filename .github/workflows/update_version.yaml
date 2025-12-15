@@ -53,7 +53,7 @@ jobs:
       - run: (Get-Content ${{ github.workspace }}\src\net\templates\templates\knetProducerApp\knetProducerApp.csproj).Replace('${{ inputs.CurrentVersion }}', '${{ inputs.NewVersion }}') | Set-Content ${{ github.workspace }}\src\net\templates\templates\knetProducerApp\knetProducerApp.csproj
       
       - name: Request a PR to commit changes
-        uses: peter-evans/create-pull-request@v7
+        uses: peter-evans/create-pull-request@v8
         with:
           branch-suffix: short-commit-hash
           add-paths: src/*.*

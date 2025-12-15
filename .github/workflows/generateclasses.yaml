@@ -197,7 +197,7 @@ jobs:
 
       - name: Request a PR to commit changes made with unpublished version of JNetReflector
         if: ${{ inputs.GeneratePR == true && (inputs.UseLatestJNetReflectorSource == true || inputs.UseLastRepositoryBuild == true) }}
-        uses: peter-evans/create-pull-request@v7
+        uses: peter-evans/create-pull-request@v8
         with:
           branch-suffix: short-commit-hash
           add-paths: src/*.*
@@ -211,7 +211,7 @@ jobs:
 
       - name: Request a PR to commit changes made with latest published version of JNetReflector
         if: ${{ inputs.GeneratePR == true && inputs.UseLatestJNetReflectorSource == false && inputs.UseLastRepositoryBuild == false }}
-        uses: peter-evans/create-pull-request@v7
+        uses: peter-evans/create-pull-request@v8
         with:
           branch-suffix: short-commit-hash
           add-paths: src/*.*
