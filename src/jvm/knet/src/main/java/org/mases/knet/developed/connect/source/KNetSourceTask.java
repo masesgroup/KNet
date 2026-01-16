@@ -29,10 +29,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class KNetSourceTask extends SourceTask implements KNetConnectLogging {
     private static final Logger log = LoggerFactory.getLogger(KNetSourceTask.class);
@@ -59,7 +56,7 @@ public class KNetSourceTask extends SourceTask implements KNetConnectLogging {
         super();
         log.debug("Invoking ctor of KNetSourceTask");
         taskId = KNetConnectProxy.getNewTaskId();
-        indexedRegistrationName = String.format("%s_%d",registrationName, taskId);
+        indexedRegistrationName = String.format("%s_%d", registrationName, taskId);
         if (JCOBridge.isCLRHostingProcess()) {
             JCOBridge.RegisterJVMGlobal(indexedRegistrationName, this);
             JCObject source = KNetConnectProxy.getSourceConnector();
@@ -125,11 +122,23 @@ public class KNetSourceTask extends SourceTask implements KNetConnectLogging {
         return null;
     }
 
-    public <V> Map<String, Object> offsetAt(String key, V value)
-    {
+    public <V> Map<String, Object> offsetAt(String key, V value) {
         log.debug("Invoking offsetAt");
         if (context == null || context.offsetStorageReader() == null) return null;
         return context.offsetStorageReader().offset(Collections.singletonMap(key, value));
+    }
+
+    public <V> Map<String, V> partitionOrOffsetForKeys(String[] keys, V[] values) {
+        log.debug("Invoking partitionOrOffsetForKeys");
+        if (keys.length != values.length)
+            throw new ArrayIndexOutOfBoundsException("keys and values has different lengths");
+
+        Map<String, V> data = new HashMap<>();
+        for (int i = 0; i < keys.length; i++) {
+            data.put(keys[i], values[i]);
+        }
+
+        return data;
     }
 
     @Override
@@ -139,8 +148,7 @@ public class KNetSourceTask extends SourceTask implements KNetConnectLogging {
             sourceTask.Invoke("StopInternal");
         } catch (JCNativeException jcne) {
             log.error("Failed Invoke of \"stop\"", jcne);
-        }
-        finally {
+        } finally {
             if (!JCOBridge.isCLRHostingProcess()) {
                 try {
                     JCOBridge.UnregisterJVMGlobal(indexedRegistrationName);
