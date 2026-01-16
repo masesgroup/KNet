@@ -39,14 +39,14 @@ namespace MASES.KNet.Connect
         /// <param name="identifier">The identifier to be associated in first, or second, parameter of a <see cref="SourceRecord"/></param>
         /// <param name="value">The value to be inserted and associated to the <paramref name="identifier"/></param>
         /// <returns>A <see cref="Map{String, K}"/></returns>
-        protected Map<Java.Lang.String, T> OffsetForKey<T>(Java.Lang.String identifier, T value) => Collections.SingletonMap(identifier, value);
+        protected Map<Java.Lang.String, T> PartitionOrOffsetForKey<T>(Java.Lang.String identifier, T value) => Collections.SingletonMap(identifier, value);
         /// <summary>
         /// Get the offset for the specified partition. If the data isn't already available locally, this gets it from the backing store, which may require some network round trips.
         /// </summary>
-        /// <typeparam name="TKeySource">The type of the key set when was called <see cref="OffsetForKey{T}(Java.Lang.String, T)"/> to generated first parameter of <see cref="SourceRecord"/></typeparam>
-        /// <typeparam name="TOffset">The type of the offset set when was called <see cref="OffsetForKey{T}(Java.Lang.String, T)"/> to generated second parameter of <see cref="SourceRecord"/></typeparam>
-        /// <param name="keyName">The identifier used when was called <see cref="OffsetForKey{T}(Java.Lang.String, T)"/></param>
-        /// <param name="keyValue">The value used when was called <see cref="OffsetForKey{T}(Java.Lang.String, T)"/></param>
+        /// <typeparam name="TKeySource">The type of the key set when was called <see cref="PartitionOrOffsetForKey{T}(Java.Lang.String, T)"/> to generated the first parameter of <see cref="SourceRecord"/></typeparam>
+        /// <typeparam name="TOffset">The type of the offset set when was called <see cref="PartitionOrOffsetForKey{T}(Java.Lang.String, T)"/> to generated the second parameter of <see cref="SourceRecord"/></typeparam>
+        /// <param name="keyName">The identifier used when was called <see cref="PartitionOrOffsetForKey{T}(Java.Lang.String, T)"/></param>
+        /// <param name="keyValue">The value used when was called <see cref="PartitionOrOffsetForKey{T}(Java.Lang.String, T)"/></param>
         /// <returns>Return the <see cref="Map{String, TOffset}"/> associated to the element identified from <paramref name="keyName"/> and <paramref name="keyValue"/> which is an object uniquely identifying the offset in the partition of data</returns>
         protected Map<Java.Lang.String, TOffset> OffsetAt<TKeySource, TOffset>(Java.Lang.String keyName, TKeySource keyValue) => ExecuteOnTask<Map<Java.Lang.String, TOffset>>("offsetAt", keyName, keyValue);
 
