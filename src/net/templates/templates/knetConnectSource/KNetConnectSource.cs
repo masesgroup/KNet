@@ -46,7 +46,7 @@ namespace MASES.KNet.Template.KNetConnect
 
         private long lineOffset = 0L;
 
-        public override IList<SourceRecord> Poll()
+        public override IEnumerable<SourceRecord> Poll()
         {
             // returns the records to Apache Kafka Connect to be used from connector
             var lines = File.ReadAllLines(_filename);
