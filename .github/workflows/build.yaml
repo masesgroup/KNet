@@ -399,7 +399,7 @@ jobs:
       fail-fast: false
       matrix:
         os: [ 'ubuntu-latest' ] #, 'macos-14', 'macos-13' , 'windows-2022' ] # not available services in this runners, checks done in execute_tests_other
-        framework: [ 'net8.0', 'net9.0' ]
+        framework: [ 'net8.0', 'net9.0', 'net10.0' ]
         jdk_vendor: [ 'temurin', 'microsoft', 'corretto', 'zulu', 'oracle', 'graalvm' ]
         jdk_version: [ '17', '21' ] # only supported LTS versions
         
@@ -484,7 +484,7 @@ jobs:
       fail-fast: false
       matrix:
         os: [ 'windows-2022' ] # 'macos-13' removed waiting https://github.com/masesgroup/JNet/issues/518
-        framework: [ 'net462', 'net8.0', 'net9.0' ]
+        framework: [ 'net462', 'net8.0', 'net9.0', 'net10.0' ]
         jdk_vendor: [ 'temurin', 'microsoft', 'corretto', 'zulu', 'oracle', 'graalvm' ]
         jdk_version: [ '17', '21' ] # only supported LTS versions
         
@@ -608,7 +608,7 @@ jobs:
       fail-fast: false
       matrix:
         os: [ 'macos-14' ] # 'macos-13' removed waiting https://github.com/masesgroup/JNet/issues/518
-        framework: [ 'net8.0', 'net9.0' ]
+        framework: [ 'net8.0', 'net9.0', 'net10.0' ]
         jdk_vendor: [ 'temurin', 'microsoft', 'corretto', 'zulu', 'oracle', 'graalvm' ]
         jdk_version: [ '17', '21' ] # only supported LTS versions
         
@@ -656,13 +656,13 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
 
       - uses: actions/setup-dotnet@v5
-        if: ${{ matrix.os == 'macos-14' && matrix.framework == 'net8.0' }}
+        if: ${{ matrix.framework == 'net8.0' }}
         with:
           dotnet-version: |
             8.x
 
       - uses: actions/setup-dotnet@v5
-        if: ${{ matrix.os == 'macos-14' && matrix.framework == 'net9.0' }}
+        if: ${{ matrix.framework == 'net9.0' }}
         with:
           dotnet-version: |
             9.x
