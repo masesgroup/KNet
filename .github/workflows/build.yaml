@@ -656,6 +656,12 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
 
       - uses: actions/setup-dotnet@v5
+        if: ${{ matrix.os == 'macos-14' && matrix.framework == 'net8.0' }}
+        with:
+          dotnet-version: |
+            8.x
+
+      - uses: actions/setup-dotnet@v5
         if: ${{ matrix.os == 'macos-14' && matrix.framework == 'net9.0' }}
         with:
           dotnet-version: |
