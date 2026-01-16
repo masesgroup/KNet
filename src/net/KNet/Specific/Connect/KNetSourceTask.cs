@@ -81,7 +81,7 @@ namespace MASES.KNet.Connect
         /// <summary>
         /// Implement the method to execute the Poll action
         /// </summary>
-        /// <returns>The list of <see cref="SourceRecord"/> to return to Apache Kafka Connect framework</returns>
+        /// <returns>The set of <see cref="SourceRecord"/> to return to Apache Kafka Connect framework or <see langword="null"/> if <see cref="SourceRecord"/> are accumulated using CreateAndPushRecord methods</returns>
         public abstract System.Collections.Generic.IEnumerable<SourceRecord> Poll();
 
         /// <summary>
