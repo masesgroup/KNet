@@ -74,7 +74,7 @@ namespace MASES.KNet.Template.KNetConnect
             {
                 if (useSourceOffset)
                 {
-                    var record = CreateRecord(OffsetForKey(FILENAME_FIELD, _filename), OffsetForKey(POSITION_FIELD, i), _topic, Schema.STRING_SCHEMA, lines[i], DateTime.Now);
+                    var record = CreateRecord(PartitionOrOffsetForKey(FILENAME_FIELD, _filename), PartitionOrOffsetForKey(POSITION_FIELD, i), _topic, Schema.STRING_SCHEMA, lines[i], DateTime.Now);
                     records.Add(record);
                 }
                 else

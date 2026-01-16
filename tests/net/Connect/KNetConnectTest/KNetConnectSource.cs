@@ -88,7 +88,7 @@ namespace MASES.KNet.Connect.Test
             {
                 if (useSourceOffset)
                 {
-                    var record = CreateRecord(OffsetForKey((Java.Lang.String)FILENAME_FIELD, _filename), OffsetForKey((Java.Lang.String)POSITION_FIELD, i), _topic, Schema.STRING_SCHEMA, lines[i], DateTime.Now);
+                    var record = CreateRecord(PartitionOrOffsetForKey(FILENAME_FIELD, _filename), PartitionOrOffsetForKey(POSITION_FIELD, i), _topic, Schema.STRING_SCHEMA, lines[i], DateTime.Now);
                     records.Add(record);
                 }
                 else
