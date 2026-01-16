@@ -57,20 +57,9 @@ namespace MASES.KNet.Connect
         /// </summary>
         public void PutInternal()
         {
-            IEnumerable<SinkRecord> ienum;
             Collection<SinkRecord> collection = DataToExchange<Collection<SinkRecord>>();
-            if (UsePrefetch || UseThread)
-            {
-                ienum = UsePrefetch ? collection.WithPrefetch() : collection;
-                ienum = UseThread ? collection.WithThread(threadPriority: ThreadPriority) : collection;
-            }
-            else
-            {
-                System.Collections.Generic.List<SinkRecord> coll = new System.Collections.Generic.List<SinkRecord>();
-                foreach (var record in collection) { coll.Add(record); }
-                ienum = coll;
-            }
-            Put(ienum);
+            collection = collection.WithPrefetch(UsePrefetch).WithThread(UseThread, ThreadPriority);
+            Put(collection);
         }
         /// <summary>
         /// Implement the method to execute the Put action

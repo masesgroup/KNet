@@ -234,6 +234,7 @@ jobs:
           Copy-Item .github\workflows\support\* -Destination bin\net462\ -Force
           Copy-Item .github\workflows\support\* -Destination bin\net8.0\ -Force
           Copy-Item .github\workflows\support\* -Destination bin\net9.0\ -Force
+          Copy-Item .github\workflows\support\* -Destination bin\net10.0\ -Force
 
       - name: Save KNet net462 bin in cache
         uses: actions/cache/save@v5
@@ -255,6 +256,13 @@ jobs:
           enableCrossOsArchive: true
           path: ./bin/net9.0/
           key: KNet_${{ github.run_number }}_${{ github.run_attempt }}_net9.0_bin_${{ github.sha }}
+
+      - name: Save KNet net10.0 bin in cache
+        uses: actions/cache/save@v5
+        with:
+          enableCrossOsArchive: true
+          path: ./bin/net10.0/
+          key: KNet_${{ github.run_number }}_${{ github.run_attempt }}_net10.0_bin_${{ github.sha }}
 
       - name: Save KNet NuGet in cache
         uses: actions/cache/save@v5
@@ -397,7 +405,7 @@ jobs:
       fail-fast: false
       matrix:
         os: [ 'ubuntu-latest' ] #, 'macos-latest', 'macos-13' , 'windows-latest' ] # not available services in this runners, checks done in execute_tests_other
-        framework: [ 'net8.0', 'net9.0' ]
+        framework: [ 'net8.0', 'net9.0', 'net10.0' ]
         jdk_vendor: [ 'temurin', 'microsoft', 'corretto', 'zulu', 'oracle', 'graalvm' ]
         jdk_version: [ '11', '17', '21' ] # only LTS versions
         exclude:
@@ -487,7 +495,7 @@ jobs:
       fail-fast: false
       matrix:
         os: [ 'windows-2022' ] # 'macos-13' removed waiting https://github.com/masesgroup/JNet/issues/518
-        framework: [ 'net462', 'net8.0', 'net9.0' ]
+        framework: [ 'net462', 'net8.0', 'net9.0', 'net10.0' ]
         jdk_vendor: [ 'temurin', 'microsoft', 'corretto', 'zulu', 'oracle', 'graalvm' ]
         jdk_version: [ '11', '17', '21' ] # only LTS versions
         exclude:
@@ -601,7 +609,7 @@ jobs:
       fail-fast: false
       matrix:
         os: [ 'macos-14' ] # 'macos-13' removed waiting https://github.com/masesgroup/JNet/issues/518
-        framework: [ 'net8.0', 'net9.0' ]
+        framework: [ 'net8.0', 'net9.0', 'net10.0' ]
         jdk_vendor: [ 'temurin', 'microsoft', 'corretto', 'zulu', 'oracle', 'graalvm' ]
         jdk_version: [ '11', '17', '21' ] # only supported LTS versions
         exclude:
@@ -652,6 +660,12 @@ jobs:
           java-version: '${{ matrix.jdk_version }}' # See 'Options' for more details
           distribution: 'graalvm' # See 'Supported distributions' for available options
           github-token: ${{ secrets.GITHUB_TOKEN }}
+
+      - uses: actions/setup-dotnet@v5
+        if: ${{ matrix.framework == 'net8.0' }}
+        with:
+          dotnet-version: |
+            8.x
 
       - uses: actions/setup-dotnet@v5
         if: ${{ matrix.framework == 'net9.0' }}
