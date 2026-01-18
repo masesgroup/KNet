@@ -137,7 +137,7 @@ public class KNetSourceConnector extends SourceConnector implements KNetConnectL
                 KNetConnectProxy.applyConnectorId(config, indexedRegistrationName);
                 dataToExchange = config;
                 shallStop = (boolean)source.Invoke("TaskConfigsInternal", i, maxTasks);
-            } catch (JCException | IOException jcne) {
+            } catch (JCException jcne) {
                 log.error("Failed Invoke of \"TaskConfigsInternal\"", jcne);
                 throw new ConnectException("Failed Invoke of \"TaskConfigsInternal\"", jcne);
             } finally {

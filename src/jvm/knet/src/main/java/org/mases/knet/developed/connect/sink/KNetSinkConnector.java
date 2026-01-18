@@ -133,7 +133,7 @@ public class KNetSinkConnector extends SinkConnector implements KNetConnectLoggi
                 KNetConnectProxy.applyConnectorId(config, indexedRegistrationName);
                 dataToExchange = config;
                 shallStop = (boolean)sink.Invoke("TaskConfigsInternal", i, maxTasks);
-            } catch (JCException | IOException jcne) {
+            } catch (JCException jcne) {
                 log.error("Failed Invoke of \"TaskConfigsInternal\"", jcne);
                 throw new ConnectException("Failed Invoke of \"TaskConfigsInternal\"", jcne);
             } finally {
