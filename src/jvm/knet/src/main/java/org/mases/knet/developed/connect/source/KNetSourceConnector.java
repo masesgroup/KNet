@@ -117,25 +117,34 @@ public class KNetSourceConnector extends SourceConnector implements KNetConnectL
     public List<Map<String, String>> taskConfigs(int maxTasks) {
         log.debug("Invoking taskConfigs for maxTasks %d", maxTasks);
         ArrayList<Map<String, String>> configs = new ArrayList<>();
+        JCObject source;
+        try {
+            if (JCOBridge.isCLRHostingProcess()) {
+                source = KNetConnectProxy.getSourceConnector();
+                if (source == null) throw new ConnectException("getSourceConnector returned null.");
+            } else {
+                source = sourceConnector;
+            }
+        } catch (JCException | IOException jcne) {
+            log.error("Failed retrieving source connector.", jcne);
+            throw new ConnectException("Failed retrieving source connector.", jcne);
+        }
+
         for (int i = 0; i < maxTasks; i++) {
             Map<String, String> config = new HashMap<>();
+            boolean shallStop = false;
             try {
-                JCObject source;
-                if (JCOBridge.isCLRHostingProcess()) {
-                    source = KNetConnectProxy.getSourceConnector();
-                    if (source == null) throw new ConnectException("getSourceConnector returned null.");
-                } else {
-                    source = sourceConnector;
-                    KNetConnectProxy.applyConnectorId(config, indexedRegistrationName);
-                }
+                KNetConnectProxy.applyConnectorId(config, indexedRegistrationName);
                 dataToExchange = config;
-                source.Invoke("TaskConfigsInternal", i);
+                shallStop = (boolean)source.Invoke("TaskConfigsInternal", i, maxTasks);
             } catch (JCException | IOException jcne) {
-                log.error("Failed Invoke of \"start\"", jcne);
+                log.error("Failed Invoke of \"TaskConfigsInternal\"", jcne);
+                throw new ConnectException("Failed Invoke of \"TaskConfigsInternal\"", jcne);
             } finally {
                 dataToExchange = null;
             }
             configs.add(config);
+            if (shallStop) break;
         }
         return configs;
     }
