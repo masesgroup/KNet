@@ -62,7 +62,7 @@ namespace MASES.KNet.Connect
         /// This map may be empty, but never null. An empty offsets map could indicate that the offsets were reset previously or that no offsets have been committed yet.</param>
         /// <returns>whether this method has been overridden by the connector; the default implementation returns <see langword="false"/>, and all other implementations (that do not unconditionally throw exceptions) should return <see langword="true"/></returns>
         /// <remarks>User requests to alter/reset offsets will be handled by the Connect runtime and will be reflected in the offsets for this connector's consumer group.
-        /// Note that altering / resetting offsets is expected to be an idempotent operation and this method should be able to handle being called more than once with the same arguments (which could occur if a user retries the request due to a failure in altering the consumer group offsets, for example).
+        /// Note that altering/resetting offsets is expected to be an idempotent operation and this method should be able to handle being called more than once with the same arguments (which could occur if a user retries the request due to a failure in altering the consumer group offsets, for example).
         /// Similar to validate, this method may be called by the runtime before the <see cref="KNetConnector.Start(System.Collections.Generic.IReadOnlyDictionary{string, string})"/> method is invoked.</remarks>
         public virtual bool AlterOffsets(Map<Java.Lang.String, Java.Lang.String> connectorConfig, Map<Org.Apache.Kafka.Common.TopicPartition, Long> offsets)
         {

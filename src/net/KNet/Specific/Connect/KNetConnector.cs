@@ -236,6 +236,7 @@ namespace MASES.KNet.Connect
         public void StartInternal()
         {
             Map<Java.Lang.String, Java.Lang.String> props = DataToExchange<Map<Java.Lang.String, Java.Lang.String>>();
+            Start(props);
             Properties = new System.Collections.Generic.Dictionary<string, string>(props.ToNetDictiony<string, string, Java.Lang.String, Java.Lang.String>());
             Start(Properties);
         }
@@ -243,7 +244,10 @@ namespace MASES.KNet.Connect
         /// Not implemented
         /// </summary>
         /// <exception cref="NotImplementedException">Local version with a different signature</exception>
-        public void Start(Map<Java.Lang.String, Java.Lang.String> props) => throw new NotImplementedException("Local version with a different signature");
+        public virtual void Start(Map<Java.Lang.String, Java.Lang.String> props)
+        {
+
+        }
 
         /// <inheritdoc cref="IKNetConnector.Start(IReadOnlyDictionary{string, string})"/>
         public abstract void Start(IReadOnlyDictionary<string, string> props);
@@ -263,6 +267,17 @@ namespace MASES.KNet.Connect
         public bool TaskConfigsInternal(int currentTask, int maxTasks)
         {
             Map<Java.Lang.String, Java.Lang.String> props = DataToExchange<Map<Java.Lang.String, Java.Lang.String>>();
+            return TaskConfigs(currentTask, maxTasks, props);
+        }
+        /// <summary>
+        /// Direct implementation can be used instead of <see cref="TaskConfigs(int, int, IDictionary{string, string})"/>
+        /// </summary>
+        /// <param name="currentTask"></param>
+        /// <param name="maxTasks"></param>
+        /// <param name="props"></param>
+        /// <returns></returns>
+        public virtual bool TaskConfigs(int currentTask, int maxTasks, Map<Java.Lang.String, Java.Lang.String> props)
+        {
             System.Collections.Generic.Dictionary<string, string> dict = new System.Collections.Generic.Dictionary<string, string>(props.ToNetDictiony<string, string, Java.Lang.String, Java.Lang.String>());
             bool retVal = TaskConfigs(currentTask, maxTasks, dict);
             props.Clear();
@@ -272,6 +287,7 @@ namespace MASES.KNet.Connect
             }
             return retVal;
         }
+
         /// <inheritdoc cref="IKNetConnector.TaskConfigs(int, int, IDictionary{string, string})"/>
         public abstract bool TaskConfigs(int currentTask, int maxTasks, IDictionary<string, string> config);
         /// <summary>
