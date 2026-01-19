@@ -258,7 +258,7 @@ namespace MASES.KNet.Connect
         /// <exception cref="NotImplementedException">Invoked in Java before any initialization</exception>
         public Class TaskClass() => throw new NotImplementedException("Invoked in Java before any initialization.");
         /// <summary>
-        /// Public method used from Java to trigger <see cref="TaskConfigs(int, IDictionary{string, string})"/>
+        /// Public method used from Java to trigger <see cref="TaskConfigs(int, int, IDictionary{string, string})"/>
         /// </summary>
         public bool TaskConfigsInternal(int currentTask, int maxTasks)
         {

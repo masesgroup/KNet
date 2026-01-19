@@ -18,6 +18,7 @@
 
 package org.mases.knet.developed.connect.sink;
 
+import org.apache.kafka.common.TopicPartition;
 import org.apache.kafka.common.config.ConfigDef;
 import org.apache.kafka.connect.connector.Task;
 import org.apache.kafka.connect.errors.ConnectException;
@@ -196,6 +197,23 @@ public class KNetSinkConnector extends SinkConnector implements KNetConnectLoggi
             log.error("Failed Invoke of \"version\"", jcne);
         }
         return "NOT AVAILABLE";
+    }
+
+    @Override
+    public boolean alterOffsets(Map<String, String> connectorConfig, Map<TopicPartition, Long> offsets) {
+        log.debug("Invoking alterOffsets");
+        try {
+            JCObject sink;
+            if (JCOBridge.isCLRHostingProcess()) {
+                sink = KNetConnectProxy.getSinkConnector();
+            } else {
+                sink = sinkConnector;
+            }
+            return (boolean) sink.Invoke("AlterOffsetsInternal", connectorConfig, offsets);
+        } catch (JCException | IOException jcne) {
+            log.error("Failed Invoke of \"alterOffsets\"", jcne);
+            return super.alterOffsets(connectorConfig, offsets);
+        }
     }
 
     @Override

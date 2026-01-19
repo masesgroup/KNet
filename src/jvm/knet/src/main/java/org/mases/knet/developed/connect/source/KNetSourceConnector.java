@@ -136,7 +136,7 @@ public class KNetSourceConnector extends SourceConnector implements KNetConnectL
             try {
                 KNetConnectProxy.applyConnectorId(config, indexedRegistrationName);
                 dataToExchange = config;
-                shallStop = (boolean)source.Invoke("TaskConfigsInternal", i, maxTasks);
+                shallStop = (boolean) source.Invoke("TaskConfigsInternal", i, maxTasks);
             } catch (JCException jcne) {
                 log.error("Failed Invoke of \"TaskConfigsInternal\"", jcne);
                 throw new ConnectException("Failed Invoke of \"TaskConfigsInternal\"", jcne);
@@ -251,6 +251,23 @@ public class KNetSourceConnector extends SourceConnector implements KNetConnectL
         Boolean canDefineTransactionBoundaries = parsedConfig.getBoolean(DOTNET_CANDEFINETRANSACTIONBOUNDARIES_CONFIG);
         if (canDefineTransactionBoundaries.booleanValue()) return ConnectorTransactionBoundaries.SUPPORTED;
         return ConnectorTransactionBoundaries.UNSUPPORTED;
+    }
+
+    @Override
+    public boolean alterOffsets(Map<String, String> connectorConfig, Map<Map<String, ?>, Map<String, ?>> offsets) {
+        log.debug("Invoking alterOffsets");
+        try {
+            JCObject source;
+            if (JCOBridge.isCLRHostingProcess()) {
+                source = KNetConnectProxy.getSourceConnector();
+            } else {
+                source = sourceConnector;
+            }
+            return (boolean) source.Invoke("AlterOffsetsInternal", connectorConfig, offsets);
+        } catch (JCException | IOException jcne) {
+            log.error("Failed Invoke of \"alterOffsets\"", jcne);
+            return super.alterOffsets(connectorConfig, offsets);
+        }
     }
 
     @Override

@@ -16,6 +16,8 @@
 *  Refer to LICENSE for more information.
 */
 
+using Java.Lang;
+using Java.Util;
 using Org.Apache.Kafka.Connect.Source;
 using System;
 
@@ -67,5 +69,30 @@ namespace MASES.KNet.Connect
         /// Set the <see cref="TaskClassType"/> of the connector to the value defined from <typeparamref name="TTask"/>
         /// </summary>
         public sealed override Type TaskClassType => typeof(TTask);
+        /// <summary>
+        /// Public method used from Java to trigger <see cref="AlterOffsets(Map{Java.Lang.String, Java.Lang.String}, Map{Map{Java.Lang.String, object}, Map{Java.Lang.String, object}})"/>
+        /// </summary>
+        public bool AlterOffsetsInternal(Map<Java.Lang.String, Java.Lang.String> connectorConfig, Map<Map<Java.Lang.String, object>, Map<Java.Lang.String, object>> offsets)
+        {
+            return AlterOffsets(connectorConfig, offsets);
+        }
+        /// <summary>
+        /// Invoked when users request to manually alter/reset the offsets for this connector via the Connect worker's REST API. Connectors that manage offsets externally can propagate offset changes to their external system in this method. 
+        /// Connectors may also validate these offsets to ensure that the source partitions and source offsets are in a format that is recognizable to them. 
+        /// Connectors that neither manage offsets externally nor require custom offset validation need not implement this method beyond simply returning <see langword="true"/>.
+        /// </summary>
+        /// <param name="connectorConfig">The configuration of the connector</param>
+        /// <param name="offsets">A <see cref="Map{K, V}"/>> from source partition to source offset, containing the offsets that the user has requested to alter/reset. 
+        /// For any source partitions whose offsets are being reset instead of altered, their corresponding source offset value in the map will be null. 
+        /// This map may be empty, but never <see langword="null"/>>.
+        /// An empty offsets <see cref="Map{K, V}"/>> could indicate that the offsets were reset previously or that no offsets have been committed yet.</param>
+        /// <returns>whether this method has been overridden by the connector; the default implementation returns <see langword="false"/>, and all other implementations (that do not unconditionally throw exceptions) should return <see langword="true"/></returns>
+        /// <remarks>User requests to alter/reset offsets will be handled by the Connect runtime and will be reflected in the offsets returned by any OffsetStorageReader instances provided to this connector and its tasks.
+        /// Note that altering / resetting offsets is expected to be an idempotent operation and this method should be able to handle being called more than once with the same arguments (which could occur if a user retries the request due to a failure in writing the new offsets to the offsets store, for example).
+        /// Similar to validate, this method may be called by the runtime before the <see cref="KNetConnector.Start(System.Collections.Generic.IReadOnlyDictionary{string, string})"/>> method is invoked.</remarks>
+        public virtual bool AlterOffsets(Map<Java.Lang.String, Java.Lang.String> connectorConfig, Map<Map<Java.Lang.String, object>, Map<Java.Lang.String, object>> offsets)
+        {
+            return false;
+        }
     }
 }
