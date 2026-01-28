@@ -100,7 +100,7 @@ public class KNetSinkConnector extends SinkConnector implements KNetConnectLoggi
             }
         } catch (JCException | IOException jcne) {
             log.error("Failed Invoke of \"start\"", jcne);
-            throw new ConnectException(jcne);
+            throw new ConnectException("Failed Invoke of \"start\"", jcne);
         }
     }
 
@@ -170,6 +170,7 @@ public class KNetSinkConnector extends SinkConnector implements KNetConnectLoggi
             }
         } catch (JCException | IOException jcne) {
             log.error("Failed Invoke of \"stop\"", jcne);
+            throw new ConnectException("Failed Invoke of \"stop\"", jcne);
         }
     }
 
@@ -211,7 +212,7 @@ public class KNetSinkConnector extends SinkConnector implements KNetConnectLoggi
             }
             return (boolean) sink.Invoke("AlterOffsetsInternal", connectorConfig, offsets);
         } catch (JCException | IOException jcne) {
-            log.error("Failed Invoke of \"alterOffsets\"", jcne);
+            log.error("Failed Invoke of \"alterOffsets\", try with base method", jcne);
             return super.alterOffsets(connectorConfig, offsets);
         }
     }

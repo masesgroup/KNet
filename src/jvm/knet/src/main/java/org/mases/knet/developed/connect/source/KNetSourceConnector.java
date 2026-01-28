@@ -104,6 +104,7 @@ public class KNetSourceConnector extends SourceConnector implements KNetConnectL
             }
         } catch (JCException | IOException jcne) {
             log.error("Failed Invoke of \"start\"", jcne);
+            throw new ConnectException("Failed Invoke of \"start\"", jcne);
         }
     }
 
@@ -171,6 +172,7 @@ public class KNetSourceConnector extends SourceConnector implements KNetConnectL
             }
         } catch (JCException | IOException jcne) {
             log.error("Failed Invoke of \"stop\"", jcne);
+            throw new ConnectException("Failed Invoke of \"stop\"", jcne);
         }
     }
 
@@ -265,7 +267,7 @@ public class KNetSourceConnector extends SourceConnector implements KNetConnectL
             }
             return (boolean) source.Invoke("AlterOffsetsInternal", connectorConfig, offsets);
         } catch (JCException | IOException jcne) {
-            log.error("Failed Invoke of \"alterOffsets\"", jcne);
+            log.error("Failed Invoke of \"alterOffsets\", try with base method", jcne);
             return super.alterOffsets(connectorConfig, offsets);
         }
     }
