@@ -68,6 +68,18 @@ public class KNetSourceConnector extends SourceConnector implements KNetConnectL
     }
 
     @Override
+    public Class<? extends Task> taskClass() {
+        log.debug("Invoking taskClass");
+        return KNetSourceTask.class;
+    }
+
+    @Override
+    public ConfigDef config() {
+        log.debug("Invoking config");
+        return CONFIG_DEF;
+    }
+
+    @Override
     public void start(Map<String, String> props) {
         log.debug("Invoking start");
         try {
@@ -104,38 +116,42 @@ public class KNetSourceConnector extends SourceConnector implements KNetConnectL
             }
         } catch (JCException | IOException jcne) {
             log.error("Failed Invoke of \"start\"", jcne);
+            throw new ConnectException("Failed Invoke of \"start\"", jcne);
         }
-    }
-
-    @Override
-    public Class<? extends Task> taskClass() {
-        log.debug("Invoking taskClass");
-        return KNetSourceTask.class;
     }
 
     @Override
     public List<Map<String, String>> taskConfigs(int maxTasks) {
         log.debug("Invoking taskConfigs for maxTasks %d", maxTasks);
         ArrayList<Map<String, String>> configs = new ArrayList<>();
+        JCObject source;
+        try {
+            if (JCOBridge.isCLRHostingProcess()) {
+                source = KNetConnectProxy.getSourceConnector();
+                if (source == null) throw new ConnectException("getSourceConnector returned null.");
+            } else {
+                source = sourceConnector;
+            }
+        } catch (JCException | IOException jcne) {
+            log.error("Failed retrieving source connector.", jcne);
+            throw new ConnectException("Failed retrieving source connector.", jcne);
+        }
+
         for (int i = 0; i < maxTasks; i++) {
             Map<String, String> config = new HashMap<>();
+            boolean shallStop = false;
             try {
-                JCObject source;
-                if (JCOBridge.isCLRHostingProcess()) {
-                    source = KNetConnectProxy.getSourceConnector();
-                    if (source == null) throw new ConnectException("getSourceConnector returned null.");
-                } else {
-                    source = sourceConnector;
-                    KNetConnectProxy.applyConnectorId(config, indexedRegistrationName);
-                }
+                KNetConnectProxy.applyConnectorId(config, indexedRegistrationName);
                 dataToExchange = config;
-                source.Invoke("TaskConfigsInternal", i);
-            } catch (JCException | IOException jcne) {
-                log.error("Failed Invoke of \"start\"", jcne);
+                shallStop = (boolean) source.Invoke("TaskConfigsInternal", i + 1, maxTasks);
+            } catch (JCException jcne) {
+                log.error("Failed Invoke of \"TaskConfigsInternal\"", jcne);
+                throw new ConnectException("Failed Invoke of \"TaskConfigsInternal\"", jcne);
             } finally {
                 dataToExchange = null;
             }
             configs.add(config);
+            if (shallStop) break;
         }
         return configs;
     }
@@ -162,13 +178,8 @@ public class KNetSourceConnector extends SourceConnector implements KNetConnectL
             }
         } catch (JCException | IOException jcne) {
             log.error("Failed Invoke of \"stop\"", jcne);
+            throw new ConnectException("Failed Invoke of \"stop\"", jcne);
         }
-    }
-
-    @Override
-    public ConfigDef config() {
-        log.debug("Invoking config");
-        return CONFIG_DEF;
     }
 
     @Override
@@ -242,6 +253,23 @@ public class KNetSourceConnector extends SourceConnector implements KNetConnectL
         Boolean canDefineTransactionBoundaries = parsedConfig.getBoolean(DOTNET_CANDEFINETRANSACTIONBOUNDARIES_CONFIG);
         if (canDefineTransactionBoundaries.booleanValue()) return ConnectorTransactionBoundaries.SUPPORTED;
         return ConnectorTransactionBoundaries.UNSUPPORTED;
+    }
+
+    @Override
+    public boolean alterOffsets(Map<String, String> connectorConfig, Map<Map<String, ?>, Map<String, ?>> offsets) {
+        log.debug("Invoking alterOffsets");
+        try {
+            JCObject source;
+            if (JCOBridge.isCLRHostingProcess()) {
+                source = KNetConnectProxy.getSourceConnector();
+            } else {
+                source = sourceConnector;
+            }
+            return (boolean) source.Invoke("AlterOffsetsInternal", connectorConfig, offsets);
+        } catch (JCException | IOException jcne) {
+            log.error("Failed Invoke of \"alterOffsets\", try with base method", jcne);
+            return super.alterOffsets(connectorConfig, offsets);
+        }
     }
 
     @Override

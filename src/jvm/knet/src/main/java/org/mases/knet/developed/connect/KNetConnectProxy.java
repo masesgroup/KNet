@@ -238,7 +238,7 @@ public class KNetConnectProxy implements KNetConnectLogging, IJCEventLog {
     }
 
     public void EventLog(String var1) {
-        info(var1);
+        debug(var1);
     }
 
     @Override

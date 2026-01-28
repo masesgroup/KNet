@@ -95,9 +95,14 @@ namespace MASES.KNet.Connect
         /// <summary>
         /// Invoked during allocation of tasks from Apache Kafka Connect
         /// </summary>
-        /// <param name="index">The actual index</param>
+        /// <param name="currentTask">The actual task index</param>
+        /// <param name="maxTasks">Max tasks as defined from Apache Kafka Connect framework</param>
         /// <param name="config">The <see cref="IDictionary{TKey, TValue}"/> to be filled in with properties for the task: the same will be received from <see cref="KNetTask.Start(IReadOnlyDictionary{string, string})"/></param>
-        void TaskConfigs(int index, IDictionary<string, string> config);
+        /// <returns><see langword="true"/> to avoid any further invocation of the method, otherwise <see langword="false"/>.</returns>
+        /// <remarks>If the connector needs a single task and <paramref name="maxTasks"/> is higher than 1, returning <see langword="true"/> immediately only one configuration is returned to Apache Kafka Connect framework. 
+        /// In other word it is possible to stop the configuration requests at any time; only the first one is reported in any case since at least one shall be available.
+        /// To configure all <paramref name="maxTasks"/> return always <see langword="false"/>.</remarks>
+        bool TaskConfigs(int currentTask, int maxTasks, IDictionary<string, string> config);
     }
     /// <summary>
     /// The generic class which is the base of both source or sink connectors
@@ -231,6 +236,7 @@ namespace MASES.KNet.Connect
         public void StartInternal()
         {
             Map<Java.Lang.String, Java.Lang.String> props = DataToExchange<Map<Java.Lang.String, Java.Lang.String>>();
+            Start(props);
             Properties = new System.Collections.Generic.Dictionary<string, string>(props.ToNetDictiony<string, string, Java.Lang.String, Java.Lang.String>());
             Start(Properties);
         }
@@ -238,7 +244,10 @@ namespace MASES.KNet.Connect
         /// Not implemented
         /// </summary>
         /// <exception cref="NotImplementedException">Local version with a different signature</exception>
-        public void Start(Map<Java.Lang.String, Java.Lang.String> props) => throw new NotImplementedException("Local version with a different signature");
+        public virtual void Start(Map<Java.Lang.String, Java.Lang.String> props)
+        {
+
+        }
 
         /// <inheritdoc cref="IKNetConnector.Start(IReadOnlyDictionary{string, string})"/>
         public abstract void Start(IReadOnlyDictionary<string, string> props);
@@ -253,21 +262,34 @@ namespace MASES.KNet.Connect
         /// <exception cref="NotImplementedException">Invoked in Java before any initialization</exception>
         public Class TaskClass() => throw new NotImplementedException("Invoked in Java before any initialization.");
         /// <summary>
-        /// Public method used from Java to trigger <see cref="TaskConfigs(int, IDictionary{string, string})"/>
+        /// Public method used from Java to trigger <see cref="TaskConfigs(int, int, IDictionary{string, string})"/>
         /// </summary>
-        public void TaskConfigsInternal(int index)
+        public bool TaskConfigsInternal(int currentTask, int maxTasks)
         {
             Map<Java.Lang.String, Java.Lang.String> props = DataToExchange<Map<Java.Lang.String, Java.Lang.String>>();
+            return TaskConfigs(currentTask, maxTasks, props);
+        }
+        /// <summary>
+        /// Direct implementation can be used instead of <see cref="TaskConfigs(int, int, IDictionary{string, string})"/>
+        /// </summary>
+        /// <param name="currentTask"></param>
+        /// <param name="maxTasks"></param>
+        /// <param name="props"></param>
+        /// <returns></returns>
+        public virtual bool TaskConfigs(int currentTask, int maxTasks, Map<Java.Lang.String, Java.Lang.String> props)
+        {
             System.Collections.Generic.Dictionary<string, string> dict = new System.Collections.Generic.Dictionary<string, string>(props.ToNetDictiony<string, string, Java.Lang.String, Java.Lang.String>());
-            TaskConfigs(index, dict);
+            bool retVal = TaskConfigs(currentTask, maxTasks, dict);
             props.Clear();
             foreach (var item in dict)
             {
                 props.Put(item.Key, item.Value);
             }
+            return retVal;
         }
-        /// <inheritdoc cref="IKNetConnector.TaskConfigs(int, IDictionary{string, string})"/>
-        public abstract void TaskConfigs(int index, IDictionary<string, string> config);
+
+        /// <inheritdoc cref="IKNetConnector.TaskConfigs(int, int, IDictionary{string, string})"/>
+        public abstract bool TaskConfigs(int currentTask, int maxTasks, IDictionary<string, string> config);
         /// <summary>
         /// Not implemented
         /// </summary>

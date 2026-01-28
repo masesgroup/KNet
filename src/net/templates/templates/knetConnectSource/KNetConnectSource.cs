@@ -21,7 +21,7 @@ namespace MASES.KNet.Template.KNetConnect
             // stops the connector
         }
 
-        public override void TaskConfigs(int index, IDictionary<string, string> config)
+        public override bool TaskConfigs(int index, int maxTasks, IDictionary<string, string> config)
         {
             // fill in the properties for task configuration
             LogInfo($"Fill properties of task {index}");
@@ -31,6 +31,8 @@ namespace MASES.KNet.Template.KNetConnect
                 LogInfo($"{item.Key}={item.Value}");
                 config.Add(item); // fill in all properties
             }
+
+            return false;
         }
     }
 
