@@ -18,6 +18,7 @@
 
 package org.mases.knet.developed.connect.sink;
 
+import org.apache.kafka.common.TopicPartition;
 import org.apache.kafka.common.config.ConfigDef;
 import org.apache.kafka.connect.connector.Task;
 import org.apache.kafka.connect.errors.ConnectException;
@@ -40,6 +41,8 @@ public class KNetSinkConnector extends SinkConnector implements KNetConnectLoggi
 
     private static final String registrationName = "KNetSinkConnector";
 
+    public static final ConfigDef CONFIG_DEF = new ConfigDef(KNetConnectProxy.CONFIG_DEF);
+
     long connectorId = 0;
 
     String indexedRegistrationName;
@@ -58,6 +61,18 @@ public class KNetSinkConnector extends SinkConnector implements KNetConnectLoggi
 
     public SinkConnectorContext getContext() {
         return context();
+    }
+
+    @Override
+    public Class<? extends Task> taskClass() {
+        log.debug("Invoking taskClass");
+        return KNetSinkTask.class;
+    }
+
+    @Override
+    public ConfigDef config() {
+        log.debug("Invoking config");
+        return CONFIG_DEF;
     }
 
     @Override
@@ -99,40 +114,42 @@ public class KNetSinkConnector extends SinkConnector implements KNetConnectLoggi
             }
         } catch (JCException | IOException jcne) {
             log.error("Failed Invoke of \"start\"", jcne);
-            throw new ConnectException(jcne);
+            throw new ConnectException("Failed Invoke of \"start\"", jcne);
         }
-    }
-
-    @Override
-    public Class<? extends Task> taskClass() {
-        log.debug("Invoking taskClass");
-        return KNetSinkTask.class;
     }
 
     @Override
     public List<Map<String, String>> taskConfigs(int maxTasks) {
         log.debug("Invoking taskConfigs for maxTasks %d", maxTasks);
         ArrayList<Map<String, String>> configs = new ArrayList<>();
+        JCObject sink;
+        try {
+            if (JCOBridge.isCLRHostingProcess()) {
+                sink = KNetConnectProxy.getSinkConnector();
+                if (sink == null) throw new ConnectException("getSinkConnector returned null.");
+            }
+            else {
+                sink = sinkConnector;
+            }
+        } catch (JCException | IOException jcne) {
+            log.error("Failed retrieving sink connector", jcne);
+            throw new ConnectException("Failed retrieving sink connector.", jcne);
+        }
         for (int i = 0; i < maxTasks; i++) {
             Map<String, String> config = new HashMap<>();
+            boolean shallStop = false;
             try {
-                JCObject sink;
-                if (JCOBridge.isCLRHostingProcess()) {
-                    sink = KNetConnectProxy.getSinkConnector();
-                    if (sink == null) throw new ConnectException("getSinkConnector returned null.");
-                }
-                else {
-                    sink = sinkConnector;
-                    KNetConnectProxy.applyConnectorId(config, indexedRegistrationName);
-                }
+                KNetConnectProxy.applyConnectorId(config, indexedRegistrationName);
                 dataToExchange = config;
-                sink.Invoke("TaskConfigsInternal", i);
-            } catch (JCException | IOException jcne) {
-                log.error("Failed Invoke of \"start\"", jcne);
+                shallStop = (boolean)sink.Invoke("TaskConfigsInternal", i + 1, maxTasks);
+            } catch (JCException jcne) {
+                log.error("Failed Invoke of \"TaskConfigsInternal\"", jcne);
+                throw new ConnectException("Failed Invoke of \"TaskConfigsInternal\"", jcne);
             } finally {
                 dataToExchange = null;
             }
             configs.add(config);
+            if (shallStop) break;
         }
         return configs;
     }
@@ -161,13 +178,8 @@ public class KNetSinkConnector extends SinkConnector implements KNetConnectLoggi
             }
         } catch (JCException | IOException jcne) {
             log.error("Failed Invoke of \"stop\"", jcne);
+            throw new ConnectException("Failed Invoke of \"stop\"", jcne);
         }
-    }
-
-    @Override
-    public ConfigDef config() {
-        log.debug("Invoking config");
-        return KNetConnectProxy.CONFIG_DEF;
     }
 
     @Override
@@ -188,6 +200,23 @@ public class KNetSinkConnector extends SinkConnector implements KNetConnectLoggi
             log.error("Failed Invoke of \"version\"", jcne);
         }
         return "NOT AVAILABLE";
+    }
+
+    @Override
+    public boolean alterOffsets(Map<String, String> connectorConfig, Map<TopicPartition, Long> offsets) {
+        log.debug("Invoking alterOffsets");
+        try {
+            JCObject sink;
+            if (JCOBridge.isCLRHostingProcess()) {
+                sink = KNetConnectProxy.getSinkConnector();
+            } else {
+                sink = sinkConnector;
+            }
+            return (boolean) sink.Invoke("AlterOffsetsInternal", connectorConfig, offsets);
+        } catch (JCException | IOException jcne) {
+            log.error("Failed Invoke of \"alterOffsets\", try with base method", jcne);
+            return super.alterOffsets(connectorConfig, offsets);
+        }
     }
 
     @Override
