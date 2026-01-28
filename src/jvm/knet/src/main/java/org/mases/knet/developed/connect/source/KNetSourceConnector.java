@@ -68,6 +68,18 @@ public class KNetSourceConnector extends SourceConnector implements KNetConnectL
     }
 
     @Override
+    public Class<? extends Task> taskClass() {
+        log.debug("Invoking taskClass");
+        return KNetSourceTask.class;
+    }
+
+    @Override
+    public ConfigDef config() {
+        log.debug("Invoking config");
+        return CONFIG_DEF;
+    }
+
+    @Override
     public void start(Map<String, String> props) {
         log.debug("Invoking start");
         try {
@@ -106,12 +118,6 @@ public class KNetSourceConnector extends SourceConnector implements KNetConnectL
             log.error("Failed Invoke of \"start\"", jcne);
             throw new ConnectException("Failed Invoke of \"start\"", jcne);
         }
-    }
-
-    @Override
-    public Class<? extends Task> taskClass() {
-        log.debug("Invoking taskClass");
-        return KNetSourceTask.class;
     }
 
     @Override
@@ -174,12 +180,6 @@ public class KNetSourceConnector extends SourceConnector implements KNetConnectL
             log.error("Failed Invoke of \"stop\"", jcne);
             throw new ConnectException("Failed Invoke of \"stop\"", jcne);
         }
-    }
-
-    @Override
-    public ConfigDef config() {
-        log.debug("Invoking config");
-        return CONFIG_DEF;
     }
 
     @Override

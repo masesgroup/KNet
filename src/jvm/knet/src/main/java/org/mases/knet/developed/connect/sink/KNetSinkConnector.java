@@ -41,6 +41,8 @@ public class KNetSinkConnector extends SinkConnector implements KNetConnectLoggi
 
     private static final String registrationName = "KNetSinkConnector";
 
+    public static final ConfigDef CONFIG_DEF = new ConfigDef(KNetConnectProxy.CONFIG_DEF);
+
     long connectorId = 0;
 
     String indexedRegistrationName;
@@ -59,6 +61,18 @@ public class KNetSinkConnector extends SinkConnector implements KNetConnectLoggi
 
     public SinkConnectorContext getContext() {
         return context();
+    }
+
+    @Override
+    public Class<? extends Task> taskClass() {
+        log.debug("Invoking taskClass");
+        return KNetSinkTask.class;
+    }
+
+    @Override
+    public ConfigDef config() {
+        log.debug("Invoking config");
+        return CONFIG_DEF;
     }
 
     @Override
@@ -102,12 +116,6 @@ public class KNetSinkConnector extends SinkConnector implements KNetConnectLoggi
             log.error("Failed Invoke of \"start\"", jcne);
             throw new ConnectException("Failed Invoke of \"start\"", jcne);
         }
-    }
-
-    @Override
-    public Class<? extends Task> taskClass() {
-        log.debug("Invoking taskClass");
-        return KNetSinkTask.class;
     }
 
     @Override
@@ -172,12 +180,6 @@ public class KNetSinkConnector extends SinkConnector implements KNetConnectLoggi
             log.error("Failed Invoke of \"stop\"", jcne);
             throw new ConnectException("Failed Invoke of \"stop\"", jcne);
         }
-    }
-
-    @Override
-    public ConfigDef config() {
-        log.debug("Invoking config");
-        return KNetConnectProxy.CONFIG_DEF;
     }
 
     @Override
