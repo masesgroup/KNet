@@ -64,6 +64,9 @@ public class KNetSinkTask extends SinkTask implements KNetConnectLogging {
             if (sink == null) throw new ConnectException("getSinkConnector returned null.");
             sinkTask = (JCObject) sink.Invoke("AllocateTask", taskId);
         }
+        else {
+            KNetConnectProxy.initAndGetConnectProxy();
+        }
     }
 
     public SinkTaskContext getContext() {
