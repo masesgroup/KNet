@@ -63,6 +63,9 @@ public class KNetSourceTask extends SourceTask implements KNetConnectLogging {
             if (source == null) throw new ConnectException("getSourceConnector returned null.");
             sourceTask = (JCObject) source.Invoke("AllocateTask", taskId);
         }
+        else {
+            KNetConnectProxy.initAndGetConnectProxy();
+        }
     }
 
     public SourceTaskContext getContext() {

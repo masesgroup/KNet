@@ -51,6 +51,13 @@ public class KNetSinkConnector extends SinkConnector implements KNetConnectLoggi
 
     Object dataToExchange = null;
 
+    public KNetSinkConnector() throws JCException, IOException {
+        super();
+        if (!JCOBridge.isCLRHostingProcess()) {
+            KNetConnectProxy.initAndGetConnectProxy();
+        }
+    }
+
     public Object getDataToExchange() {
         return dataToExchange;
     }
@@ -79,7 +86,6 @@ public class KNetSinkConnector extends SinkConnector implements KNetConnectLoggi
     public void start(Map<String, String> props) {
         log.debug("Invoking start");
         try {
-            KNetConnectProxy.initAndGetConnectProxy(props);
             connectorId = KNetConnectProxy.getNewConnectorId();
             JCObject sink;
             if (JCOBridge.isCLRHostingProcess()) {

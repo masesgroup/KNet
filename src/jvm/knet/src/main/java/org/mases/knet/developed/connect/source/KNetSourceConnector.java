@@ -55,6 +55,13 @@ public class KNetSourceConnector extends SourceConnector implements KNetConnectL
 
     Object dataToExchange = null;
 
+    public KNetSourceConnector() throws JCException, IOException {
+        super();
+        if (!JCOBridge.isCLRHostingProcess()) {
+            KNetConnectProxy.initAndGetConnectProxy();
+        }
+    }
+
     public Object getDataToExchange() {
         return dataToExchange;
     }
@@ -83,7 +90,6 @@ public class KNetSourceConnector extends SourceConnector implements KNetConnectL
     public void start(Map<String, String> props) {
         log.debug("Invoking start");
         try {
-            KNetConnectProxy.initAndGetConnectProxy(props);
             connectorId = KNetConnectProxy.getNewConnectorId();
             JCObject source;
             if (JCOBridge.isCLRHostingProcess()) {
