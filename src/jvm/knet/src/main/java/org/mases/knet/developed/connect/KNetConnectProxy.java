@@ -33,22 +33,13 @@ import java.util.concurrent.atomic.AtomicLong;
 
 public class KNetConnectProxy implements KNetConnectLogging, IJCEventLog {
     private static final Logger log = LoggerFactory.getLogger(KNetSourceTask.class);
-    public static final String JCOBRIDGE_LICENSE_PATH_CONFIG = "knet.jcobridge.license.path";
-    public static final String JCOBRIDGE_SCOPE_ON_CONFIG = "knet.jcobridge.scope.on";
-    public static final String JCOBRIDGE_SCOPE_ON_VERSION_CONFIG = "knet.jcobridge.scope.on.version";
-    public static final String JCOBRIDGE_CLR_VERSION_CONFIG = "knet.jcobridge.clr.version";
-    public static final String JCOBRIDGE_CLR_RID_CONFIG = "knet.jcobridge.clr.rid";
+
     public static final String DOTNET_ASSEMBLY_LOCATION_CONFIG = "knet.dotnet.assembly.location";
     public static final String DOTNET_CLASSNAME_CONFIG = "knet.dotnet.classname";
 
     public static final String CONNECTOR_ID_PROP_NAME = "connector.id.prop.name";
 
     public static final ConfigDef CONFIG_DEF = new ConfigDef()
-            .define(JCOBRIDGE_LICENSE_PATH_CONFIG, ConfigDef.Type.STRING, null, ConfigDef.Importance.LOW, "Set to the license to be used in case of Apache Kafka Connect JVM hosted runtime.")
-            .define(JCOBRIDGE_SCOPE_ON_CONFIG, ConfigDef.Type.STRING, null, ConfigDef.Importance.LOW, "Set to the Scope On to be used in case of Apache Kafka Connect JVM hosted runtime.")
-            .define(JCOBRIDGE_SCOPE_ON_VERSION_CONFIG, ConfigDef.Type.STRING, null, ConfigDef.Importance.LOW, "Set to the Scope On Version to be used in case of Apache Kafka Connect JVM hosted runtime.")
-            .define(JCOBRIDGE_CLR_VERSION_CONFIG, ConfigDef.Type.STRING, "8", ConfigDef.Importance.LOW, "Set to the version of the CLR to be used in case of Apache Kafka Connect JVM hosted runtime.")
-            .define(JCOBRIDGE_CLR_RID_CONFIG, ConfigDef.Type.STRING, null, ConfigDef.Importance.LOW, "Set to the RID to be used in case of Apache Kafka Connect JVM hosted runtime.")
             .define(DOTNET_ASSEMBLY_LOCATION_CONFIG, ConfigDef.Type.STRING, null, ConfigDef.Importance.LOW, "Location of the assembly containing the .NET class referred from \"knet.dotnet.classname\".")
             .define(DOTNET_CLASSNAME_CONFIG, ConfigDef.Type.STRING, null, ConfigDef.Importance.HIGH, ".NET class name in the form usable from .NET like \"classname, assembly name\".");
 
@@ -70,38 +61,11 @@ public class KNetConnectProxy implements KNetConnectLogging, IJCEventLog {
         return taskId.incrementAndGet();
     }
 
-    public static synchronized JCObject initAndGetConnectProxy(Map<String, String> props) throws JCException, IOException {
+    public static synchronized void initAndGetConnectProxy() throws JCException, IOException {
         if (knetConnectProxy == null) {
             log.info("Initialize KNetConnectProxy");
-            AbstractConfig parsedConfig = new AbstractConfig(CONFIG_DEF, props);
             if (!JCOBridge.isCLRHostingProcess()) {
-                log.info("Initialize of KNetConnectProxy starts from JVM");
-                // prepare environment variables for JCOBridge
-                String var = parsedConfig.getString(JCOBRIDGE_CLR_VERSION_CONFIG);
-                if (var == null) {
-                    throw new ConfigException(String.format("'%s' cannot be null", JCOBRIDGE_CLR_VERSION_CONFIG));
-                }
-                JCOBridge.setCoreCLRVersion(var);
-                var = parsedConfig.getString(JCOBRIDGE_CLR_RID_CONFIG);
-                if (var != null) {
-                    log.info("%s has value %s", JCOBRIDGE_CLR_RID_CONFIG, var);
-                    JCOBridge.setCLRRID(var);
-                }
-                var = parsedConfig.getString(JCOBRIDGE_LICENSE_PATH_CONFIG);
-                if (var != null) {
-                    log.info("%s has value %s", JCOBRIDGE_LICENSE_PATH_CONFIG, var);
-                    JCOBridge.setLicensePath(var);
-                }
-                var = parsedConfig.getString(JCOBRIDGE_SCOPE_ON_CONFIG);
-                if (var != null) {
-                    log.info("%s has value %s", JCOBRIDGE_SCOPE_ON_CONFIG, var);
-                    JCOBridge.setScopeOn(var);
-                }
-                var = parsedConfig.getString(JCOBRIDGE_SCOPE_ON_VERSION_CONFIG);
-                if (var != null) {
-                    log.info("%s has value %s", JCOBRIDGE_SCOPE_ON_VERSION_CONFIG, var);
-                    JCOBridge.setScopeOnVersion(var);
-                }
+                log.info("Initializing of KNetConnectProxy starting from JVM");
             }
 
             // initialize JCOBridge
@@ -122,7 +86,6 @@ public class KNetConnectProxy implements KNetConnectLogging, IJCEventLog {
             }
         }
         log.debug("Returning KNetConnectProxy instance");
-        return knetConnectProxy;
     }
 
     public static synchronized boolean initializeSinkConnector(Map<String, String> props) throws JCException, IOException {

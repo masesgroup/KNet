@@ -125,10 +125,6 @@
 							<goal>execute</goal>
 						</goals>
 						<configuration>
-							<source>
-								def file = new File(project.properties.classpathfile)
-								project.properties.originalClassPath = file.getText()
-							</source>
 						</configuration>
 					</execution>
 				</executions>
