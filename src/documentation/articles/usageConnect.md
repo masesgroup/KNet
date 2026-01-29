@@ -34,7 +34,7 @@ To use the connector from a JVM hosted runtime follow the instructions available
 KNet Connect .NET hosted runtime is available in two different formats:
 
 - **dotnet tool** hosted on [NuGet](https://www.nuget.org/packages/MASES.KNetConnect/): check https://www.nuget.org/packages/MASES.KNetConnect/ and https://docs.microsoft.com/en-us/dotnet/core/tools/global-tools for installation deep instructions.
-- **Docker image** hosted on [GitHub](https://github.com/masesgroup/KNet/pkgs/container/knetconnect) or [Docker Hub](https://hub.docker.com/repository/docker/masesgroup/knetconnect/general): follow instruction within the page and general instruction on https://docs.docker.com
+- **Docker image** hosted on [GitHub](https://github.com/masesgroup/KNet/pkgs/container/knet) or [Docker Hub](https://hub.docker.com/repository/docker/masesgroup/knet/general): follow instruction within the page and general instruction on https://docs.docker.com
 
 > [!IMPORTANT]
 > The **dotnet tool** needs a JRE/JDK installed within the system
@@ -62,19 +62,19 @@ knetconnect -d connect-distributed.properties
 - **Docker image**
 
 ```sh
-docker run ghcr.io/masesgroup/knetconnect -s connect-standalone.properties specific-connector.properties
+docker run ghcr.io/masesgroup/knet -s connect-standalone.properties specific-connector.properties
 ```
 
 ```sh
-docker run masesgroup/knetconnect -s connect-standalone.properties specific-connector.properties
+docker run masesgroup/knet -s connect-standalone.properties specific-connector.properties
 ```
 
 ```sh
-docker run ghcr.io/masesgroup/knetconnect -d connect-distributed.properties
+docker run ghcr.io/masesgroup/knet -d connect-distributed.properties
 ```
 
 ```sh
-docker run masesgroup/knetconnect -d connect-distributed.properties
+docker run masesgroup/knet -d connect-distributed.properties
 ```
 
 #### Command line switch available
