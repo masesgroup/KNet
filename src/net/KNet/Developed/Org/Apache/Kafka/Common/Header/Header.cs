@@ -28,16 +28,14 @@ namespace Org.Apache.Kafka.Common.Header
         /// </summary>
         public static Header Create(string key, byte[] value)
         {
-            var obj = MASES.JCOBridge.C2JBridge.JCOBridge.Global.JVM.New("org.apache.kafka.common.header.internals.RecordHeader", key, value) as IJavaObject;
-            return WrapsDirect<Header>(obj);
+            return NewAndWrapsDirect<Header>("org.apache.kafka.common.header.internals.RecordHeader", key, value);
         }
         /// <summary>
         /// Helper to create <see cref="Header"/>
         /// </summary>
         public static Header Create(ByteBuffer keyBuffer, ByteBuffer valueBuffer)
         {
-            var obj = MASES.JCOBridge.C2JBridge.JCOBridge.Global.JVM.New("org.apache.kafka.common.header.internals.RecordHeader", keyBuffer, valueBuffer) as IJavaObject;
-            return WrapsDirect<Header>(obj);
+            return NewAndWrapsDirect<Header>("org.apache.kafka.common.header.internals.RecordHeader", keyBuffer, valueBuffer);
         }
     }
 }
