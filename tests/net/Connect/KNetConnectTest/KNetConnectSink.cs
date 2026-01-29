@@ -34,7 +34,7 @@ namespace MASES.KNet.Connect.Test
             LogInfo($"KNetSinkTestConnector Stop");
         }
 
-        public override void TaskConfigs(int index, IDictionary<string, string> config)
+        public override bool TaskConfigs(int index, int maxTasks, IDictionary<string, string> config)
         {
             LogInfo($"Fill in task {index}");
 
@@ -43,6 +43,8 @@ namespace MASES.KNet.Connect.Test
                 LogInfo($"{item.Key}={item.Value}");
                 config.Add(item); // fill in all properties
             }
+
+            return false;
         }
     }
 

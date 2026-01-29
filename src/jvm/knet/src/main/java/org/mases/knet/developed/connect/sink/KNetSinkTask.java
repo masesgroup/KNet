@@ -103,6 +103,7 @@ public class KNetSinkTask extends SinkTask implements KNetConnectLogging {
             }
         } catch (JCException | IOException jcne) {
             log.error("Failed Invoke of \"start\"", jcne);
+            throw new ConnectException("Failed Invoke of \"start\"", jcne);
         }
     }
 
@@ -128,6 +129,7 @@ public class KNetSinkTask extends SinkTask implements KNetConnectLogging {
             sinkTask.Invoke("StopInternal");
         } catch (JCNativeException jcne) {
             log.error("Failed Invoke of \"stop\"", jcne);
+            throw new ConnectException("Failed Invoke of \"stop\"", jcne);
         }
         finally {
             if (!JCOBridge.isCLRHostingProcess()) {
