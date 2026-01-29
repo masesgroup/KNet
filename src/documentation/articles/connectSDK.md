@@ -130,17 +130,11 @@ The mandatory configuration property needed by KNet Connect SDK is:
 - __knet.dotnet.classname=**value**__ where the **value** is the .NET class name in the form of __**FullName**, **AssemblyName**__, e.g. MASES.KNet.Template.KNetConnect.KNetConnectSink, knetConnectSink
 
 When the connector is based on a JVM hosted runtime other optional properties are available:
-- __knet.jcobridge.license.path=**value**__ where the **value** represents the license to be used by JCOBridge
-- __knet.jcobridge.scope.on=**value**__ where the **value** represents the **scope on** to be used by JCOBridge
-- __knet.jcobridge.scope.on.version=**value**__ where the **value** represents the **scope on version** used by JCOBridge
-- __knet.jcobridge.clr.version=**value**__ where the **value** represents the .NET version to be used by JCOBridge, default is .NET 8
-- __knet.jcobridge.clr.rid=**value**__ where the **value** represents the RID to be used by JCOBridge
-- __knet.dotnet.assembly.location=**value**__ where the **value** represents the location where to find the connector assembly
+- __knet.dotnet.assembly.location=**value**__ where the **value** represents the location where to find the connector assembly containing the class in __knet.dotnet.classname=**value**__
 
 ### Source connector
 
-A source connector needs other configuration properties inherited from Apache Kafka™ Connect like:
-- __topic=**value**__ where the **value** represents the name of topic where the records will be sent
+A source connector needs other configuration properties inherited from Apache Kafka™ Connect like.
 
 #### Exactly Once and Transaction properties for Source Connector
 
@@ -152,5 +146,5 @@ Two new fallback options are available in case the infrastructure is not ready t
 
 ### Sink connector
 
-A source connector needs other configuration properties inherited from Apache Kafka™ Connect like:
+A sink connector needs other configuration properties inherited from Apache Kafka™ Connect like:
 - __topics=**value**__ where the **value** represents the CSV list of the topics will be the source of the records
