@@ -19,7 +19,14 @@
 package org.mases.knet.developed.connect;
 
 public interface KNetConnectInitializer {
+    /* Overrides in a derived class to define the Assembly location
+     *
+     * @returns the location where the assembly is available, return null to use the configuration property
+     */
     String getAssemblyLocation();
-
+    /* Overrides in a derived class to define the .NET class to be loaded
+     *
+     * @returns the location where the assembly is available, return null to use the configuration property
+     */
     String getClassName();
 }
