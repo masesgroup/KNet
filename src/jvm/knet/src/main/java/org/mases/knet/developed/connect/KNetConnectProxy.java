@@ -88,14 +88,20 @@ public class KNetConnectProxy implements KNetConnectLogging, IJCEventLog {
         log.debug("Returning KNetConnectProxy instance");
     }
 
-    public static synchronized boolean initializeSinkConnector(Map<String, String> props) throws JCException, IOException {
+    public static synchronized boolean initializeSinkConnector(KNetConnectInitializer sink, Map<String, String> props) throws JCException, IOException {
         log.info("Invoking initializeSinkConnector");
 
         if (knetConnectProxy == null)
             throw new ConnectException("Missing initialization of infrastructure using initAndGetConnectProxy");
 
-        AbstractConfig parsedConfig = new AbstractConfig(CONFIG_DEF, props);
-        String className = parsedConfig.getString(DOTNET_CLASSNAME_CONFIG);
+        String className = null;
+        if (sink != null) {
+            className = sink.getClassName();
+        }
+        if (className == null) {
+            AbstractConfig parsedConfig = new AbstractConfig(CONFIG_DEF, props);
+            className = parsedConfig.getString(DOTNET_CLASSNAME_CONFIG);
+        }
 
         if (className == null)
             throw new ConfigException(String.format("'%s' in KNetSinkConnector configuration requires a definition", DOTNET_CLASSNAME_CONFIG));
@@ -105,14 +111,21 @@ public class KNetConnectProxy implements KNetConnectLogging, IJCEventLog {
         return (boolean) knetConnectProxy.Invoke("AllocateSinkConnector", className);
     }
 
-    public static synchronized boolean initializeSourceConnector(Map<String, String> props) throws JCException, IOException {
+    public static synchronized boolean initializeSourceConnector(KNetConnectInitializer source, Map<String, String> props) throws JCException, IOException {
         log.info("Invoking initializeSourceConnector");
 
         if (knetConnectProxy == null)
             throw new ConnectException("Missing initialization of infrastructure using initAndGetConnectProxy");
 
-        AbstractConfig parsedConfig = new AbstractConfig(CONFIG_DEF, props);
-        String className = parsedConfig.getString(DOTNET_CLASSNAME_CONFIG);
+        String className = null;
+        if (source != null) {
+            className = source.getClassName();
+        }
+        if (className == null) {
+            AbstractConfig parsedConfig = new AbstractConfig(CONFIG_DEF, props);
+            className = parsedConfig.getString(DOTNET_CLASSNAME_CONFIG);
+        }
+
         if (className == null)
             throw new ConfigException(String.format("'%s' in KNetSourceConnector configuration requires a definition", DOTNET_CLASSNAME_CONFIG));
 
@@ -121,22 +134,32 @@ public class KNetConnectProxy implements KNetConnectLogging, IJCEventLog {
         return (boolean) knetConnectProxy.Invoke("AllocateSourceConnector", className);
     }
 
-    public static synchronized boolean initializeConnector(Map<String, String> props, String uniqueId) throws JCException, IOException {
+    public static synchronized boolean initializeConnector(KNetConnectInitializer connector, Map<String, String> props, String uniqueId) throws JCException, IOException {
         log.info("Invoking initializeConnector");
 
         if (knetConnectProxy == null)
             throw new ConnectException("Missing initialization of infrastructure using initAndGetConnectProxy");
 
         AbstractConfig parsedConfig = new AbstractConfig(CONFIG_DEF, props);
-
-        String location = parsedConfig.getString(DOTNET_ASSEMBLY_LOCATION_CONFIG);
+        String location;
+        if (connector != null) {
+            location = connector.getAssemblyLocation();
+        } else {
+            location = parsedConfig.getString(DOTNET_ASSEMBLY_LOCATION_CONFIG);
+        }
         if (location != null) {
             if (bridgeInstance == null)
                 throw new ConnectException("Missing initialization of infrastructure using initAndGetConnectProxy");
             bridgeInstance.AddPath(location);
         }
 
-        String className = parsedConfig.getString(DOTNET_CLASSNAME_CONFIG);
+        String className;
+        if (connector != null) {
+            className = connector.getClassName();
+        } else {
+            className = parsedConfig.getString(DOTNET_CLASSNAME_CONFIG);
+        }
+
         if (className == null)
             throw new ConfigException(String.format("'%s' in connector configuration requires a definition", DOTNET_CLASSNAME_CONFIG));
 

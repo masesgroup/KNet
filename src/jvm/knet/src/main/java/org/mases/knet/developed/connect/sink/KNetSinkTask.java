@@ -63,8 +63,7 @@ public class KNetSinkTask extends SinkTask implements KNetConnectLogging {
             JCObject sink = KNetConnectProxy.getSinkConnector();
             if (sink == null) throw new ConnectException("getSinkConnector returned null.");
             sinkTask = (JCObject) sink.Invoke("AllocateTask", taskId);
-        }
-        else {
+        } else {
             KNetConnectProxy.initAndGetConnectProxy();
         }
     }
@@ -133,8 +132,7 @@ public class KNetSinkTask extends SinkTask implements KNetConnectLogging {
         } catch (JCNativeException jcne) {
             log.error("Failed Invoke of \"stop\"", jcne);
             throw new ConnectException("Failed Invoke of \"stop\"", jcne);
-        }
-        finally {
+        } finally {
             if (!JCOBridge.isCLRHostingProcess()) {
                 try {
                     JCOBridge.UnregisterJVMGlobal(indexedRegistrationName);
