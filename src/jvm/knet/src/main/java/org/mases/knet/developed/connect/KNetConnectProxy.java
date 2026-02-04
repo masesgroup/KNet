@@ -141,10 +141,11 @@ public class KNetConnectProxy implements KNetConnectLogging, IJCEventLog {
             throw new ConnectException("Missing initialization of infrastructure using initAndGetConnectProxy");
 
         AbstractConfig parsedConfig = new AbstractConfig(CONFIG_DEF, props);
-        String location;
+        String location = null;
         if (connector != null) {
             location = connector.getAssemblyLocation();
-        } else {
+        }
+        if (location == null) {
             location = parsedConfig.getString(DOTNET_ASSEMBLY_LOCATION_CONFIG);
         }
         if (location != null) {
@@ -153,10 +154,11 @@ public class KNetConnectProxy implements KNetConnectLogging, IJCEventLog {
             bridgeInstance.AddPath(location);
         }
 
-        String className;
+        String className = null;
         if (connector != null) {
             className = connector.getClassName();
-        } else {
+        }
+        if (className == null) {
             className = parsedConfig.getString(DOTNET_CLASSNAME_CONFIG);
         }
 
