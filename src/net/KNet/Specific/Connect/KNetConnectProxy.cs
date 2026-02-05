@@ -21,6 +21,8 @@ using MASES.JCOBridge.C2JBridge.JVMInterop;
 using MASES.JNet;
 using MASES.JNet.Specific.Extensions;
 using MASES.KNet;
+using MASES.KNet.Connect.Transforms;
+using MASES.KNet.Connect.Transforms.Predicates;
 using System;
 using System.Reflection;
 
@@ -205,6 +207,78 @@ namespace MASES.KNet.Connect
             catch (Exception ex)
             {
                 Org.Apache.Kafka.Common.Config.ConfigException.ThrowNew($"Failed to create an instance of {connectorClassName}: {ex}");
+                return false;
+            }
+
+            return true;
+        }
+
+        /// <summary>
+        /// Allocates a transformation
+        /// </summary>
+        /// <param name="transformClassName">The class name read from Java within the configuration parameters</param>
+        /// <param name="uniqueId">Unique identifier of the connector instance</param>
+        /// <returns><see langword="true"/> if successfully</returns>
+        public bool AllocateTransformation(string transformClassName, string uniqueId)
+        {
+            Type type;
+            try
+            {
+                type = Type.GetType(transformClassName, true);
+            }
+            catch
+            {
+                Org.Apache.Kafka.Common.Config.ConfigException.ThrowNew($"Unable to find {transformClassName}");
+                return false;
+            }
+
+            KNetTransformation connector;
+
+            try
+            {
+                connector = Activator.CreateInstance(type) as KNetTransformation;
+                if (connector == null) throw new InvalidCastException($"{transformClassName} is not a class extending {nameof(KNetTransformation)}");
+                connector.Register(uniqueId);
+            }
+            catch (Exception ex)
+            {
+                Org.Apache.Kafka.Common.Config.ConfigException.ThrowNew($"Failed to create an instance of {transformClassName}: {ex}");
+                return false;
+            }
+
+            return true;
+        }
+
+        /// <summary>
+        /// Allocates a predicate
+        /// </summary>
+        /// <param name="predicateClassName">The class name read from Java within the configuration parameters</param>
+        /// <param name="uniqueId">Unique identifier of the connector instance</param>
+        /// <returns><see langword="true"/> if successfully</returns>
+        public bool AllocatePredicate(string predicateClassName, string uniqueId)
+        {
+            Type type;
+            try
+            {
+                type = Type.GetType(predicateClassName, true);
+            }
+            catch
+            {
+                Org.Apache.Kafka.Common.Config.ConfigException.ThrowNew($"Unable to find {predicateClassName}");
+                return false;
+            }
+
+            KNetPredicate connector;
+
+            try
+            {
+                connector = Activator.CreateInstance(type) as KNetPredicate;
+                if (connector == null) throw new InvalidCastException($"{predicateClassName} is not a class extending {nameof(KNetPredicate)}");
+                connector.Register(uniqueId);
+            }
+            catch (Exception ex)
+            {
+                Org.Apache.Kafka.Common.Config.ConfigException.ThrowNew($"Failed to create an instance of {predicateClassName}: {ex}");
                 return false;
             }
 
