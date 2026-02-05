@@ -71,9 +71,19 @@ namespace MASES.KNet.Connect.Transforms.Predicates
         /// The properties retrieved from <see cref="KNetPredicate.Configure(Map{Java.Lang.String, object})"/>
         /// </summary>
         IReadOnlyDictionary<string, object> Properties { get; }
-        /// <inheritdoc cref="Org.Apache.Kafka.Connect.Transforms.Predicates.Predicate.Test(ConnectRecord)"/>
+        /// <summary>
+        /// Implements the behavior of <see cref="IPredicate.Test(ConnectRecord)"/> for <paramref name="record"/>
+        /// </summary>
+        /// <param name="record">The <see cref="SourceRecord"/> to test</param>
+        /// <returns>Follow specifications of <see cref="Org.Apache.Kafka.Connect.Transforms.Predicates.Predicate.Test(ConnectRecord)"/></returns>
+        /// <remarks>If the method is overridden never invoke the base method othrwise an exception is raised within the JVM.</remarks>
         bool Test(SourceRecord record);
-        /// <inheritdoc cref="Org.Apache.Kafka.Connect.Transforms.Predicates.Predicate.Test(ConnectRecord)"/>
+        /// <summary>
+        /// Implements the behavior of <see cref="IPredicate.Test(ConnectRecord)"/> for <paramref name="record"/>
+        /// </summary>
+        /// <param name="record">The <see cref="SinkRecord"/> to test</param>
+        /// <returns>Follow specifications of <see cref="Org.Apache.Kafka.Connect.Transforms.Predicates.Predicate.Test(ConnectRecord)"/></returns>
+        /// <remarks>If the method is overridden never invoke the base method othrwise an exception is raised within the JVM.</remarks>
         bool Test(SinkRecord record);
         /// <summary>
         /// Implement the method to execute the start action
