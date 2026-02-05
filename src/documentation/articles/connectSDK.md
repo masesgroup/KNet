@@ -64,6 +64,83 @@ public abstract void Put(IEnumerable<SinkRecord> collection);
 ```
 which gives a set of `SinkRecord` to be used.
 
+## Programmatically properties overrides
+
+Starting from KNet 3.1.2, some mandatory configuration properties can be overridden at code level avoiding their declaration in configuration.
+To obtain the result it is possible to extend `org.mases.knet.developed.connect.sink.KNetSinkConnector` or `org.mases.knet.developed.connect.source.KNetSourceConnector`, and overrides some methods declared in `org.mases.knet.developed.connect.KNetConnectInitializer`.
+Here below an example based on a generic Source connector named `MySourceConnector`.
+
+In .NET, the connector is defined from:
+```c#
+
+namespace MyConnectorNamespace
+{
+    public class MySourceConnector : KNetSourceConnector<MySourceConnector, MySourceTask>
+    {
+    // other methods
+    }
+
+    public class MySourceTask : KNetSourceTask<MySourceTask>
+    {
+    // other methods
+    }
+}
+```
+
+Before KNet 3.1.2, the connector can be identified as described in [Configuration properties](#configuration-properties) with:
+
+```
+knet.dotnet.classname=MyConnectorNamespace.MySourceConnector, MySourceConnectorAssembly
+```
+
+From KNet 3.1.2, the JVM side exposes two new methods `getAssemblyLocation` and `getClassName`. 
+Overriding them in a child class of `org.mases.knet.developed.connect.sink.KNetSinkConnector` or `org.mases.knet.developed.connect.source.KNetSourceConnector`, the properties are defined at code level.
+Here an example of a Java class made explicitly to manage the .NET connector (the example is for a Source connector, but extends to a Sink connector too):
+
+```java
+
+package myconnectorpackage
+
+public class MySourceConnector extends KNetSourceConnector {
+    private static final Logger log = LoggerFactory.getLogger(MySourceConnector.class);
+
+    private static final String VERSION = "1.0.0";
+    private static final String DOTNET_CLASSNAME = "MyConnectorNamespace.MySourceConnector, MySourceConnectorAssembly";
+
+    public static final ConfigDef CONFIG_DEF = new ConfigDef(KNetSourceConnector.CONFIG_DEF); // add here specific configuration properties
+
+    public MySourceConnector() {
+        super();
+    }
+
+    @Override
+    public String version() {
+        return VERSION;
+    }
+
+    @Override
+    public Class<? extends Task> taskClass() {
+        return MySourceTask.class;
+    }
+
+    @Override
+    public ConfigDef config() {
+        return CONFIG_DEF;
+    }
+
+    public String getClassName() {
+        return DOTNET_CLASSNAME;
+    }
+}
+
+```
+
+This behavior helps to define a fixed value that depends on the implementation and avoid possible errors in the declaration of the configuration files.
+The connector shall defines only the Java class just for every other type of available connector:
+```
+connector.class=myconnectorpackage.MySourceConnector
+```
+
 ## General 
 
 To start a Connect session the user shall use the [KNet Connect](usageConnect.md) or the information available at https://kafka.apache.org/documentation/#connect and https://kafka.apache.org/quickstart#quickstart_kafkaconnect.
@@ -126,11 +203,16 @@ Some common configuration properties, inherited from Apache Kafka™ Connect, ar
   - __KNetSourceConnector__ for source connectors
 - __tasks.max=**value**__ where the **value** represents the maximum number of tasks the connector can allocate
 
+others can be found in https://kafka.apache.org/41/configuration/kafka-connect-configs.
+
 The mandatory configuration property needed by KNet Connect SDK is:
 - __knet.dotnet.classname=**value**__ where the **value** is the .NET class name in the form of __**FullName**, **AssemblyName**__, e.g. MASES.KNet.Template.KNetConnect.KNetConnectSink, knetConnectSink
 
 When the connector is based on a JVM hosted runtime other optional properties are available:
 - __knet.dotnet.assembly.location=**value**__ where the **value** represents the location where to find the connector assembly containing the class in __knet.dotnet.classname=**value**__
+
+> [!NOTE]
+> Starting from KNet 3.1.2, __knet.dotnet.classname=**value**__ is no more mandatory and can be set at code level like __knet.dotnet.assembly.location=**value**__: see [Programmatically properties overrides](#programmatically-properties-overrides)
 
 ### Source connector
 

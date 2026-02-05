@@ -24,6 +24,7 @@ import org.apache.kafka.connect.connector.Task;
 import org.apache.kafka.connect.errors.ConnectException;
 import org.apache.kafka.connect.source.*;
 import org.mases.jcobridge.*;
+import org.mases.knet.developed.connect.KNetConnectInitializer;
 import org.mases.knet.developed.connect.KNetConnectLogging;
 import org.mases.knet.developed.connect.KNetConnectProxy;
 import org.slf4j.Logger;
@@ -35,7 +36,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class KNetSourceConnector extends SourceConnector implements KNetConnectLogging {
+public class KNetSourceConnector extends SourceConnector implements KNetConnectLogging, KNetConnectInitializer {
     private static final Logger log = LoggerFactory.getLogger(KNetSourceConnector.class);
 
     private static final String registrationName = "KNetSourceConnector";
@@ -86,6 +87,14 @@ public class KNetSourceConnector extends SourceConnector implements KNetConnectL
         return CONFIG_DEF;
     }
 
+    public String getAssemblyLocation() {
+        return null;
+    }
+
+    public String getClassName() {
+        return null;
+    }
+
     @Override
     public void start(Map<String, String> props) {
         log.debug("Invoking start");
@@ -93,7 +102,7 @@ public class KNetSourceConnector extends SourceConnector implements KNetConnectL
             connectorId = KNetConnectProxy.getNewConnectorId();
             JCObject source;
             if (JCOBridge.isCLRHostingProcess()) {
-                if (!KNetConnectProxy.initializeSourceConnector(props)) {
+                if (!KNetConnectProxy.initializeSourceConnector(this, props)) {
                     log.error("Failed Invoke of \"initializeSourceConnector\"");
                     throw new ConnectException("Failed Invoke of \"initializeSourceConnector\"");
                 } else {
@@ -105,7 +114,7 @@ public class KNetSourceConnector extends SourceConnector implements KNetConnectL
             } else {
                 indexedRegistrationName = String.format("%s_%d", registrationName, connectorId);
                 log.info("Preparing KNetSourceConnector with name %s", indexedRegistrationName);
-                if (!KNetConnectProxy.initializeConnector(props, indexedRegistrationName)) {
+                if (!KNetConnectProxy.initializeConnector(this, props, indexedRegistrationName)) {
                     log.error("Failed Invoke of \"initializeConnector\"");
                     throw new ConnectException("Failed Invoke of \"initializeConnector\"");
                 }
