@@ -24,6 +24,7 @@ import org.apache.kafka.connect.components.Versioned;
 import org.apache.kafka.connect.connector.ConnectRecord;
 import org.apache.kafka.connect.transforms.Transformation;
 import org.mases.knet.developed.connect.KNetConnectInitializer;
+import org.mases.knet.developed.connect.KNetConnectLogging;
 import org.mases.knet.developed.connect.KNetConnectProxy;
 import org.mases.jcobridge.*;
 import org.slf4j.Logger;
@@ -32,7 +33,7 @@ import org.slf4j.LoggerFactory;
 import java.io.IOException;
 import java.util.Map;
 
-public class KNetTransformation<R extends ConnectRecord<R>> implements Transformation<R>, Versioned, KNetConnectInitializer {
+public class KNetTransformation<R extends ConnectRecord<R>> implements Transformation<R>, Versioned, KNetConnectLogging, KNetConnectInitializer {
     private static final Logger log = LoggerFactory.getLogger(KNetTransformation.class);
 
     private static final String registrationName = "KNetTransformation";
@@ -161,5 +162,81 @@ public class KNetTransformation<R extends ConnectRecord<R>> implements Transform
             log.error("Failed Invoke of \"configure\"", jcne);
             throw new ConnectException("Failed Invoke of \"configure\"", jcne);
         }
+    }
+
+
+    @Override
+    public boolean isTraceEnabled() {
+        return log.isTraceEnabled();
+    }
+
+    @Override
+    public void trace(String var1) {
+        log.trace(var1);
+    }
+
+    @Override
+    public void trace(String var1, Throwable var2) {
+        log.trace(var1, var2);
+    }
+
+    @Override
+    public boolean isDebugEnabled() {
+        return log.isDebugEnabled();
+    }
+
+    @Override
+    public void debug(String var1) {
+        log.debug(var1);
+    }
+
+    @Override
+    public void debug(String var1, Throwable var2) {
+        log.debug(var1, var2);
+    }
+
+    @Override
+    public boolean isInfoEnabled() {
+        return log.isInfoEnabled();
+    }
+
+    @Override
+    public void info(String var1) {
+        log.info(var1);
+    }
+
+    @Override
+    public void info(String var1, Throwable var2) {
+        log.info(var1, var2);
+    }
+
+    @Override
+    public boolean isWarnEnabled() {
+        return log.isWarnEnabled();
+    }
+
+    @Override
+    public void warn(String var1) {
+        log.warn(var1);
+    }
+
+    @Override
+    public void warn(String var1, Throwable var2) {
+        log.warn(var1, var2);
+    }
+
+    @Override
+    public boolean isErrorEnabled() {
+        return log.isErrorEnabled();
+    }
+
+    @Override
+    public void error(String var1) {
+        log.error(var1);
+    }
+
+    @Override
+    public void error(String var1, Throwable var2) {
+        log.error(var1, var2);
     }
 }

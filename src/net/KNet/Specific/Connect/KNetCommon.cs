@@ -50,6 +50,14 @@ namespace MASES.KNet.Connect
         }
 
         /// <summary>
+        /// Unregister itself
+        /// </summary>
+        public void Unregister()
+        {
+            KNetConnectProxy.UnregisterCLRGlobal(UniqueId);
+        }
+
+        /// <summary>
         /// Returns the unique id of this instance
         /// </summary>
         protected string UniqueId => _uniqueId != null ? _uniqueId : ReflectedRemoteObjectClassName;

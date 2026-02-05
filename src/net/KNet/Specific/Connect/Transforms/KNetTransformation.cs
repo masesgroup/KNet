@@ -78,11 +78,11 @@ namespace MASES.KNet.Connect.Transforms
         void Configure(IReadOnlyDictionary<string, object> props);
     }
     /// <summary>
-    /// The generic class which is the base of both source or sink connectors
+    /// The generic class which is the base of all transformations in .NET
     /// </summary>
     public abstract class KNetTransformation : KNetCommon, IKNetTransformation
     {
-        /// <inheritdoc cref="IKNetConnector.Properties"/>
+        /// <inheritdoc cref="IKNetTransformation.Properties"/>
         public IReadOnlyDictionary<string, object> Properties { get; private set; }
 
         /// <summary>
@@ -151,7 +151,7 @@ namespace MASES.KNet.Connect.Transforms
 
         }
 
-        /// <inheritdoc cref="IKNetConnector.Start(IReadOnlyDictionary{string, string})"/>
+        /// <inheritdoc cref="IKNetTransformation.Configure(IReadOnlyDictionary{string, object})"/>
         public abstract void Configure(IReadOnlyDictionary<string, object> props);
 
         /// <summary>
@@ -160,6 +160,11 @@ namespace MASES.KNet.Connect.Transforms
         public void CloseInternal()
         {
             Close();
+            try
+            {
+                Unregister();
+            }
+            catch { }
         }
         /// <summary>
         /// Implement the method to execute the stop action

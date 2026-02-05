@@ -23,11 +23,14 @@ using MASES.JCOBridge.C2JBridge.JVMInterop;
 using MASES.JNet.Specific.Extensions;
 using Org.Apache.Kafka.Common.Config;
 using Org.Apache.Kafka.Connect.Connector;
+using Org.Apache.Kafka.Connect.Errors;
+using Org.Apache.Kafka.Connect.Sink;
+using Org.Apache.Kafka.Connect.Source;
 using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
 
-namespace MASES.KNet.Connect.Transforms
+namespace MASES.KNet.Connect.Transforms.Predicates
 {
     /// <summary>
     /// .NET interface for <see cref="IVersion"/>
@@ -42,27 +45,36 @@ namespace MASES.KNet.Connect.Transforms
     /// <summary>
     /// .NET interface for <see cref="Connector"/>
     /// </summary>
-    public interface ITransformation : IVersion
+    public interface IPredicate : IVersion
     {
-        /// <inheritdoc cref="Org.Apache.Kafka.Connect.Transforms.Transformation.Apply(ConnectRecord)"/>
-        ConnectRecord Apply(ConnectRecord record);
+        /// <inheritdoc cref="Org.Apache.Kafka.Connect.Transforms.Predicates.Predicate.Test(ConnectRecord)"/>
+        bool Test(ConnectRecord record);
         /// <inheritdoc cref="Org.Apache.Kafka.Common.Configurable.Configure(Map{Java.Lang.String, object})"/>
         void Configure(Map<Java.Lang.String, object> props);
-        /// <inheritdoc cref="Org.Apache.Kafka.Connect.Transforms.Transforms.Transform.Close"/>
+        /// <inheritdoc cref="Org.Apache.Kafka.Connect.Transforms.Predicates.Predicate.Close"/>
         void Close();
-        /// <inheritdoc cref="Org.Apache.Kafka.Connect.Transforms.Transforms.Transform.Config"/>
+        /// <inheritdoc cref="Org.Apache.Kafka.Connect.Transforms.Predicates.Predicate.Config"/>
         ConfigDef Config();
+        /// <summary>
+        /// Returns a formatted string used from <see cref="Org.Apache.Kafka.Connect.Transforms.Predicates.Predicate"/>
+        /// </summary>
+        /// <returns>The formatted string</returns>
+        string ToStringPredicate();
     }
 
     /// <summary>
     /// Specific implementation of <see cref="IConnector"/> to support KNet Connect SDK
     /// </summary>
-    public interface IKNetTransform : ITransform
+    public interface IKNetPredicate : IPredicate
     {
         /// <summary>
-        /// The properties retrieved from <see cref="KNetTransform.Configure(Map{Java.Lang.String, object})"/>
+        /// The properties retrieved from <see cref="KNetPredicate.Configure(Map{Java.Lang.String, object})"/>
         /// </summary>
         IReadOnlyDictionary<string, object> Properties { get; }
+        /// <inheritdoc cref="Org.Apache.Kafka.Connect.Transforms.Predicates.Predicate.Test(ConnectRecord)"/>
+        bool Test(SourceRecord record);
+        /// <inheritdoc cref="Org.Apache.Kafka.Connect.Transforms.Predicates.Predicate.Test(ConnectRecord)"/>
+        bool Test(SinkRecord record);
         /// <summary>
         /// Implement the method to execute the start action
         /// </summary>
@@ -70,11 +82,11 @@ namespace MASES.KNet.Connect.Transforms
         void Configure(IReadOnlyDictionary<string, object> props);
     }
     /// <summary>
-    /// The generic class which is the base of both source or sink connectors
+    /// The generic class which is the base of all predicates in .NET
     /// </summary>
-    public abstract class KNetTransform : KNetCommon, IKNetTransform
+    public abstract class KNetPredicate : KNetCommon, IKNetPredicate
     {
-        /// <inheritdoc cref="IKNetConnector.Properties"/>
+        /// <inheritdoc cref="IKNetPredicate.Properties"/>
         public IReadOnlyDictionary<string, object> Properties { get; private set; }
 
         /// <summary>
@@ -86,8 +98,47 @@ namespace MASES.KNet.Connect.Transforms
             return Test(record);
         }
         
-        /// <inheritdoc cref="ITransform.Test(ConnectRecord)"/>
-        public abstract bool Test(ConnectRecord record);
+        /// <inheritdoc cref="IPredicate.Test(ConnectRecord)"/>
+        public virtual bool Test(ConnectRecord record)
+        {
+            if (record is null) return false;
+
+            if (record.IsInstanceOf<SourceRecord>())
+            {
+                return Test(record.CastTo<SourceRecord>());
+            }
+            else if (record.IsInstanceOf<SinkRecord>())
+            {
+                return Test(record.CastTo<SinkRecord>());
+            }
+            else ConnectException.ThrowNew($"Cannot manage directly the input, override the method {nameof(Test)} with generic {nameof(ConnectRecord)} parameter.");
+            return false;
+        }
+
+        /// <inheritdoc cref="IKNetPredicate.Test(SourceRecord)"/>
+        public virtual bool Test(SourceRecord record)
+        {
+            ConnectException.ThrowNew($"Not implemented for {nameof(SourceRecord)}");
+            return false;
+        }
+
+        /// <inheritdoc cref="IKNetPredicate.Test(SinkRecord)"/>
+        public virtual bool Test(SinkRecord record)
+        {
+            ConnectException.ThrowNew($"Not implemented for {nameof(SinkRecord)}");
+            return false;
+        }
+
+        /// <summary>
+        /// Public method used from Java to trigger <see cref="ToStringInternal"/>
+        /// </summary>
+        public string ToStringInternal()
+        {
+            return ToStringPredicate();
+        }
+
+        /// <inheritdoc cref="IPredicate.ToStringPredicate"/>
+        public virtual string ToStringPredicate() { return null; }
 
         /// <summary>
         /// Public method used from Java to trigger <see cref="Configure(Map{Java.Lang.String, object})"/>
@@ -113,7 +164,7 @@ namespace MASES.KNet.Connect.Transforms
 
         }
 
-        /// <inheritdoc cref="IKNetConnector.Start(IReadOnlyDictionary{string, string})"/>
+        /// <inheritdoc cref="IKNetPredicate.Configure(IReadOnlyDictionary{string, object})"/>
         public abstract void Configure(IReadOnlyDictionary<string, object> props);
 
         /// <summary>
@@ -122,9 +173,14 @@ namespace MASES.KNet.Connect.Transforms
         public void CloseInternal()
         {
             Close();
+            try
+            {
+                Unregister();
+            }
+            catch { }
         }
         /// <summary>
-        /// Implement the method to execute the stop action
+        /// Implement the method to execute the close action
         /// </summary>
         public virtual void Close() { }
         /// <summary>

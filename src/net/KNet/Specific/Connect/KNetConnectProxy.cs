@@ -58,11 +58,19 @@ namespace MASES.KNet.Connect
         }
 
         /// <summary>
-        /// Initialize the proxy
+        /// Register in global cache
         /// </summary>
         public static void RegisterCLRGlobal(string key, object value)
         {
             MASES.JCOBridge.C2JBridge.JCOBridge.Global.Management.RegisterCLRGlobal(key, value);
+        }
+
+        /// <summary>
+        /// Unregister from global cache
+        /// </summary>
+        public static void UnregisterCLRGlobal(string key)
+        {
+            MASES.JCOBridge.C2JBridge.JCOBridge.Global.Management.UnregisterCLRGlobal(key);
         }
 
         /// <summary>
@@ -178,7 +186,7 @@ namespace MASES.KNet.Connect
         }
 
         /// <summary>
-        /// Allocates a source connector
+        /// Allocates a connector
         /// </summary>
         /// <param name="connectorClassName">The class name read from Java within the configuration parameters</param>
         /// <param name="uniqueId">Unique identifier of the connector instance</param>
