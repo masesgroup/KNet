@@ -170,6 +170,78 @@ public class KNetConnectProxy implements KNetConnectLogging, IJCEventLog {
         return (boolean) knetConnectProxy.Invoke("AllocateConnector", className, uniqueId);
     }
 
+    public static synchronized boolean initializeTransformation(KNetConnectInitializer connector, Map<String, ?> props, String uniqueId) throws JCException, IOException {
+        log.info("Invoking initializeTransform");
+
+        if (knetConnectProxy == null)
+            throw new ConnectException("Missing initialization of infrastructure using initAndGetConnectProxy");
+
+        AbstractConfig parsedConfig = new AbstractConfig(CONFIG_DEF, props);
+        String location = null;
+        if (connector != null) {
+            location = connector.getAssemblyLocation();
+        }
+        if (location == null) {
+            location = parsedConfig.getString(DOTNET_ASSEMBLY_LOCATION_CONFIG);
+        }
+        if (location != null) {
+            if (bridgeInstance == null)
+                throw new ConnectException("Missing initialization of infrastructure using initAndGetConnectProxy");
+            bridgeInstance.AddPath(location);
+        }
+
+        String className = null;
+        if (connector != null) {
+            className = connector.getClassName();
+        }
+        if (className == null) {
+            className = parsedConfig.getString(DOTNET_CLASSNAME_CONFIG);
+        }
+
+        if (className == null)
+            throw new ConfigException(String.format("'%s' in transform configuration requires a definition", DOTNET_CLASSNAME_CONFIG));
+
+        log.info("Trying to allocate Transform with class name %s", className);
+
+        return (boolean) knetConnectProxy.Invoke("AllocateTransformation", className, uniqueId);
+    }
+
+    public static synchronized boolean initializePredicate(KNetConnectInitializer connector, Map<String, ?> props, String uniqueId) throws JCException, IOException {
+        log.info("Invoking initializePredicate");
+
+        if (knetConnectProxy == null)
+            throw new ConnectException("Missing initialization of infrastructure using initAndGetConnectProxy");
+
+        AbstractConfig parsedConfig = new AbstractConfig(CONFIG_DEF, props);
+        String location = null;
+        if (connector != null) {
+            location = connector.getAssemblyLocation();
+        }
+        if (location == null) {
+            location = parsedConfig.getString(DOTNET_ASSEMBLY_LOCATION_CONFIG);
+        }
+        if (location != null) {
+            if (bridgeInstance == null)
+                throw new ConnectException("Missing initialization of infrastructure using initAndGetConnectProxy");
+            bridgeInstance.AddPath(location);
+        }
+
+        String className = null;
+        if (connector != null) {
+            className = connector.getClassName();
+        }
+        if (className == null) {
+            className = parsedConfig.getString(DOTNET_CLASSNAME_CONFIG);
+        }
+
+        if (className == null)
+            throw new ConfigException(String.format("'%s' in predicate configuration requires a definition", DOTNET_CLASSNAME_CONFIG));
+
+        log.info("Trying to allocate Predicate with class name %s", className);
+
+        return (boolean) knetConnectProxy.Invoke("AllocatePredicate", className, uniqueId);
+    }
+
     public static synchronized JCObject getSinkConnector() throws JCException, IOException {
         log.info("Invoking getSinkConnector");
 
@@ -208,6 +280,16 @@ public class KNetConnectProxy implements KNetConnectLogging, IJCEventLog {
 
     public static synchronized JCObject getConnector(String uniqueId) throws JCException, IOException {
         log.info("Invoking getConnector with id %s", uniqueId);
+        return (JCObject) JCOBridge.GetCLRGlobal(uniqueId);
+    }
+
+    public static synchronized JCObject getTransform(String uniqueId) throws JCException, IOException {
+        log.info("Invoking getTransform with id %s", uniqueId);
+        return (JCObject) JCOBridge.GetCLRGlobal(uniqueId);
+    }
+
+    public static synchronized JCObject getPredicate(String uniqueId) throws JCException, IOException {
+        log.info("Invoking getPredicate with id %s", uniqueId);
         return (JCObject) JCOBridge.GetCLRGlobal(uniqueId);
     }
 
