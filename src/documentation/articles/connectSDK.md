@@ -275,7 +275,7 @@ When the connector is based on a JVM hosted runtime other optional properties ar
 
 ### Source connector
 
-A source connector needs other configuration properties inherited from Apache Kafka™ Connect like.
+A source connector needs other configuration properties inherited from Apache Kafka™ Connect like the following.
 
 #### Exactly Once and Transaction properties for Source Connector
 
