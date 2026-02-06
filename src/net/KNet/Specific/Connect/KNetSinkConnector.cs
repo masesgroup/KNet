@@ -37,9 +37,9 @@ namespace MASES.KNet.Connect
         /// </summary>
         public SinkConnectorContext Context => Context<SinkConnectorContext>();
         /// <summary>
-        /// Set the <see cref="KNetConnector.ReflectedConnectorClassName"/> of the connector to a fixed value
+        /// Set the <see cref="ReflectedRemoteObjectClassName"/> of the connector to a fixed value
         /// </summary>
-        public sealed override string ReflectedConnectorClassName => "KNetSinkConnector";
+        public sealed override string ReflectedRemoteObjectClassName => "KNetSinkConnector";
         /// <summary>
         /// Set the <see cref="IKNetConnector.TaskClassType"/> of the connector to the value defined from <typeparamref name="TTask"/>
         /// </summary>

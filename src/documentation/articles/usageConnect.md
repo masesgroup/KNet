@@ -27,7 +27,7 @@ For an overview of configuration see [Connect SDK](connectSDK.md)
 
 ### JVM hosted runtime
 
-To use the connector from a JVM hosted runtime follow the instructions available at https://kafka.apache.org/documentation/#connect and https://kafka.apache.org/quickstart#quickstart_kafkaconnect.
+To use the connector from a JVM hosted runtime follow the instructions available at https://kafka.apache.org/documentation/#connect, https://kafka.apache.org/quickstart#quickstart_kafkaconnect or https://docs.confluent.io/platform/current/connect/userguide.html
 
 ### .NET hosted runtime
 

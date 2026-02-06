@@ -107,86 +107,12 @@ namespace MASES.KNet.Connect
     /// <summary>
     /// The generic class which is the base of both source or sink connectors
     /// </summary>
-    public abstract class KNetConnector : IKNetConnector, IKNetConnectLogging
+    public abstract class KNetConnector : KNetCommon, IKNetConnector
     {
-        string _uniqueId = null;
-
         /// <summary>
         /// The set of allocated <see cref="KNetTask"/> with their associated identifiers
         /// </summary>
         protected ConcurrentDictionary<long, KNetTask> taskDictionary = new();
-
-        IJavaObject reflectedConnector = null;
-
-        /// <summary>
-        /// Initialize the <paramref name="uniqueId"/> and register itself
-        /// </summary>
-        /// <param name="uniqueId"></param>
-        public void Register(string uniqueId = null)
-        {
-            _uniqueId = uniqueId;
-            KNetConnectProxy.RegisterCLRGlobal(UniqueId, this);
-        }
-
-        /// <summary>
-        /// Returns the unique id of this instance
-        /// </summary>
-        protected string UniqueId => _uniqueId != null ? _uniqueId : ReflectedConnectorClassName;
-
-        /// <summary>
-        /// An helper function to read the data from Java side
-        /// </summary>
-        /// <param name="method">Method name to be invoked</param>
-        /// <param name="args">Arguments of the <paramref name="method"/> to be invoked</param>
-        /// <exception cref="InvalidOperationException"> </exception>
-        protected void ExecuteOnConnector(string method, params object[] args)
-        {
-            reflectedConnector ??= KNetConnectProxy.GetJVMGlobal(UniqueId);
-            if (reflectedConnector != null) reflectedConnector.Invoke(method, args);
-            else throw new InvalidOperationException($"{UniqueId} was not registered in global JVM");
-        }
-
-        /// <summary>
-        /// An helper function to read the data from Java side
-        /// </summary>
-        /// <typeparam name="T">The expected return <see cref="Type"/></typeparam>
-        /// <param name="method">Method name to be invoked</param>
-        /// <param name="args">Arguments of the <paramref name="method"/> to be invoked</param>
-        /// <returns>The <typeparamref name="T"/></returns>
-        /// <exception cref="InvalidOperationException"> </exception>
-        protected T ExecuteOnConnector<T>(string method, params object[] args)
-        {
-            reflectedConnector ??= KNetConnectProxy.GetJVMGlobal(UniqueId);
-            return (reflectedConnector != null) ? reflectedConnector.Invoke<T>(method, args) : throw new InvalidOperationException($"{UniqueId} was not registered in global JVM");
-        }
-
-        /// <summary>
-        /// An helper function to read the data from Java side
-        /// </summary>
-        /// <typeparam name="T">The expected return <see cref="Type"/></typeparam>
-        /// <returns>The <typeparamref name="T"/></returns>
-        /// <exception cref="InvalidOperationException"> </exception>
-        protected T DataToExchange<T>()
-        {
-            return ExecuteOnConnector<T>("getDataToExchange");
-        }
-        /// <summary>
-        /// An helper function to read the data from Java side
-        /// </summary>
-        /// <exception cref="InvalidOperationException"> </exception>
-        protected void DataToExchange(object data)
-        {
-            reflectedConnector ??= KNetConnectProxy.GetJVMGlobal(UniqueId);
-            if (reflectedConnector != null)
-            {
-                IJVMBridgeBase jvmBBD = data as IJVMBridgeBase;
-                reflectedConnector.Invoke("setDataToExchange", jvmBBD != null ? jvmBBD.BridgeInstance : data);
-            }
-            else
-            {
-                throw new InvalidOperationException($"{UniqueId} was not registered in global JVM");
-            }
-        }
 
         /// <summary>
         /// An helper function to read context data from Java side
@@ -196,7 +122,7 @@ namespace MASES.KNet.Connect
         /// <exception cref="InvalidOperationException"> </exception>
         protected T Context<T>()
         {
-            return ExecuteOnConnector<T>("getContext");
+            return ExecuteOnRemote<T>("getContext");
         }
 
         /// <inheritdoc cref="IKNetConnector.Properties"/>
@@ -212,10 +138,6 @@ namespace MASES.KNet.Connect
                 return knetTask;
             });
         }
-        /// <summary>
-        /// The unique name used to map objects between JVM and .NET
-        /// </summary>
-        public abstract string ReflectedConnectorClassName { get; }
         /// <inheritdoc cref="IKNetConnector.ConnectorName"/>
         public abstract string ConnectorName { get; }
         /// <inheritdoc cref="IKNetConnector.TaskClassType"/>
@@ -321,39 +243,6 @@ namespace MASES.KNet.Connect
         /// </summary>
         /// <exception cref="NotImplementedException">Invoked in Java before any initialization</exception>
         public string Version() => throw new NotImplementedException("Invoked in Java before any initialization.");
-
-        #region IKNetConnectLogging
-        /// <inheritdoc cref="IKNetConnectLogging.IsTraceEnabled"/>
-        public bool IsTraceEnabled => ExecuteOnConnector<bool>("isTraceEnabled");
-        /// <inheritdoc cref="IKNetConnectLogging.IsDebugEnabled"/>
-        public bool IsDebugEnabled => ExecuteOnConnector<bool>("isDebugEnabled");
-        /// <inheritdoc cref="IKNetConnectLogging.IsInfoEnabled"/>
-        public bool IsInfoEnabled => ExecuteOnConnector<bool>("isInfoEnabled");
-        /// <inheritdoc cref="IKNetConnectLogging.IsWarnEnabled"/>
-        public bool IsWarnEnabled => ExecuteOnConnector<bool>("isWarnEnabled");
-        /// <inheritdoc cref="IKNetConnectLogging.IsErrorEnabled"/>
-        public bool IsErrorEnabled => ExecuteOnConnector<bool>("isErrorEnabled");
-        /// <inheritdoc cref="IKNetConnectLogging.LogTrace(string)"/>
-        public void LogTrace(string var1) => ExecuteOnConnector("trace", var1);
-        /// <inheritdoc cref="IKNetConnectLogging.LogTrace(string, JVMBridgeException)"/>
-        public void LogTrace(string var1, JVMBridgeException var2) => ExecuteOnConnector("trace", var1, var2.BridgeInstance);
-        /// <inheritdoc cref="IKNetConnectLogging.LogDebug(string)"/>
-        public void LogDebug(string var1) => ExecuteOnConnector("debug", var1);
-        /// <inheritdoc cref="IKNetConnectLogging.LogDebug(string, JVMBridgeException)"/>
-        public void LogDebug(string var1, JVMBridgeException var2) => ExecuteOnConnector("debug", var1, var2.BridgeInstance);
-        /// <inheritdoc cref="IKNetConnectLogging.LogInfo(string)"/>
-        public void LogInfo(string var1) => ExecuteOnConnector("info", var1);
-        /// <inheritdoc cref="IKNetConnectLogging.LogInfo(string, JVMBridgeException)"/>
-        public void LogInfo(string var1, JVMBridgeException var2) => ExecuteOnConnector("info", var1, var2.BridgeInstance);
-        /// <inheritdoc cref="IKNetConnectLogging.LogWarn(string)"/>
-        public void LogWarn(string var1) => ExecuteOnConnector("warn", var1);
-        /// <inheritdoc cref="IKNetConnectLogging.LogWarn(string, JVMBridgeException)"/>
-        public void LogWarn(string var1, JVMBridgeException var2) => ExecuteOnConnector("warn", var1, var2.BridgeInstance);
-        /// <inheritdoc cref="IKNetConnectLogging.LogError(string)"/>
-        public void LogError(string var1) => ExecuteOnConnector("error", var1);
-        /// <inheritdoc cref="IKNetConnectLogging.LogError(string, JVMBridgeException)"/>
-        public void LogError(string var1, JVMBridgeException var2) => ExecuteOnConnector("error", var1, var2.BridgeInstance);
-        #endregion
     }
     /// <summary>
     /// The base connector class which is the base of both source or sink connectors and receives information about implementing class with <typeparamref name="TConnector"/> 

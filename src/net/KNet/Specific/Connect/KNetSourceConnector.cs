@@ -62,9 +62,9 @@ namespace MASES.KNet.Connect
         public virtual ConnectorTransactionBoundaries CanDefineTransactionBoundaries() => ConnectorTransactionBoundaries.UNSUPPORTED;
 
         /// <summary>
-        /// Set the <see cref="ReflectedConnectorClassName"/> of the connector to a fixed value
+        /// Set the <see cref="ReflectedRemoteObjectClassName"/> of the connector to a fixed value
         /// </summary>
-        public sealed override string ReflectedConnectorClassName => "KNetSourceConnector";
+        public sealed override string ReflectedRemoteObjectClassName => "KNetSourceConnector";
         /// <summary>
         /// Set the <see cref="TaskClassType"/> of the connector to the value defined from <typeparamref name="TTask"/>
         /// </summary>
