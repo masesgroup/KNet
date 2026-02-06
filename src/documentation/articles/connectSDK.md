@@ -64,10 +64,62 @@ public abstract void Put(IEnumerable<SinkRecord> collection);
 ```
 which gives a set of `SinkRecord` to be used.
 
+### Predicates
+
+A predicate shall be defined extending the following class:
+```c#
+public abstract class KNetPredicate : KNetCommon, IKNetPredicate
+```
+
+The methods can be implemented are:
+
+```c#
+public virtual bool Test(ConnectRecord record);
+```
+or in alternative:
+- Source predicate
+    ```c#
+    public virtual bool Test(SourceRecord record);
+    ```
+- Sink predicate
+    ```c#
+    public virtual bool Test(SinkRecord record);
+    ```
+
+### Transformation
+
+A transformation shall be defined extending the following class:
+```c#
+public abstract class KNetTransformation : KNetCommon, IKNetTransformation
+```
+
+The methods can be implemented are:
+
+```c#
+public virtual ConnectRecord Apply(ConnectRecord record);
+```
+or in alternative:
+
+- Source transformation
+    ```c#
+    public virtual SourceRecord Apply(SourceRecord record);
+    ```
+- Sink transformation
+    ```c#
+    public virtual SinkRecord Apply(SinkRecord record);
+    ```
+
 ## Programmatically properties overrides
 
 Starting from KNet 3.1.2, some mandatory configuration properties can be overridden at code level avoiding their declaration in configuration.
-To obtain the result it is possible to extend `org.mases.knet.developed.connect.sink.KNetSinkConnector` or `org.mases.knet.developed.connect.source.KNetSourceConnector`, and overrides some methods declared in `org.mases.knet.developed.connect.KNetConnectInitializer`.
+To obtain the result it is possible to extend 
+- `org.mases.knet.developed.connect.sink.KNetSinkConnector`
+- `org.mases.knet.developed.connect.source.KNetSourceConnector`
+- `org.mases.knet.developed.connect.transforms.KNetTransformation`
+- `org.mases.knet.developed.connect.transforms.predicates.KNetPredicate`
+
+and overrides some methods declared in `org.mases.knet.developed.connect.KNetConnectInitializer` interface.
+
 Here below an example based on a generic Source connector named `MySourceConnector`.
 
 In .NET, the connector is defined from:
@@ -94,8 +146,15 @@ knet.dotnet.classname=MyConnectorNamespace.MySourceConnector, MySourceConnectorA
 ```
 
 From KNet 3.1.2, the JVM side exposes two new methods `getAssemblyLocation` and `getClassName`. 
-Overriding them in a child class of `org.mases.knet.developed.connect.sink.KNetSinkConnector` or `org.mases.knet.developed.connect.source.KNetSourceConnector`, the properties are defined at code level.
-Here an example of a Java class made explicitly to manage the .NET connector (the example is for a Source connector, but extends to a Sink connector too):
+Overriding them in a child class of 
+- `org.mases.knet.developed.connect.sink.KNetSinkConnector`
+- `org.mases.knet.developed.connect.source.KNetSourceConnector`
+- `org.mases.knet.developed.connect.transforms.KNetTransformation`
+- `org.mases.knet.developed.connect.transforms.predicates.KNetPredicate`
+
+the properties are defined at code level.
+
+Here an example of a Java class made explicitly to manage the .NET connector (the example is available for a Source connector, but extends to a Sink connector, Predicate and Transformation):
 
 ```java
 
@@ -136,7 +195,7 @@ public class MySourceConnector extends KNetSourceConnector {
 ```
 
 This behavior helps to define a fixed value that depends on the implementation and avoid possible errors in the declaration of the configuration files.
-The connector shall defines only the Java class just for every other type of available connector:
+The connector shall defines only the Java class, like it is done for every other type of available connector:
 ```
 connector.class=myconnectorpackage.MySourceConnector
 ```
@@ -216,7 +275,7 @@ When the connector is based on a JVM hosted runtime other optional properties ar
 
 ### Source connector
 
-A source connector needs other configuration properties inherited from Apache Kafka™ Connect like.
+A source connector needs other configuration properties inherited from Apache Kafka™ Connect like the following.
 
 #### Exactly Once and Transaction properties for Source Connector
 
