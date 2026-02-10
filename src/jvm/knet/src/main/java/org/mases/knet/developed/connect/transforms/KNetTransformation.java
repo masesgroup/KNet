@@ -165,6 +165,8 @@ public class KNetTransformation<R extends ConnectRecord<R>> implements Transform
         }
     }
 
+    @Override
+    public String getName() { return log.getName(); }
 
     @Override
     public boolean isTraceEnabled() {
@@ -172,12 +174,15 @@ public class KNetTransformation<R extends ConnectRecord<R>> implements Transform
     }
 
     @Override
-    public void trace(String var1) {
-        log.trace(var1);
-    }
+    public void trace(String var1) { log.trace(var1); }
 
     @Override
     public void trace(String var1, Throwable var2) {
+        log.trace(var1, var2);
+    }
+
+    @Override
+    public void trace(String var1, Object... var2) {
         log.trace(var1, var2);
     }
 
@@ -197,6 +202,11 @@ public class KNetTransformation<R extends ConnectRecord<R>> implements Transform
     }
 
     @Override
+    public void debug(String var1, Object... var2) {
+        log.trace(var1, var2);
+    }
+
+    @Override
     public boolean isInfoEnabled() {
         return log.isInfoEnabled();
     }
@@ -209,6 +219,11 @@ public class KNetTransformation<R extends ConnectRecord<R>> implements Transform
     @Override
     public void info(String var1, Throwable var2) {
         log.info(var1, var2);
+    }
+
+    @Override
+    public void info(String var1, Object... var2) {
+        log.trace(var1, var2);
     }
 
     @Override
@@ -227,6 +242,9 @@ public class KNetTransformation<R extends ConnectRecord<R>> implements Transform
     }
 
     @Override
+    public void warn(String var1, Object... var2) { log.trace(var1, var2); }
+
+    @Override
     public boolean isErrorEnabled() {
         return log.isErrorEnabled();
     }
@@ -239,5 +257,10 @@ public class KNetTransformation<R extends ConnectRecord<R>> implements Transform
     @Override
     public void error(String var1, Throwable var2) {
         log.error(var1, var2);
+    }
+
+    @Override
+    public void error(String var1, Object... var2) {
+        log.trace(var1, var2);
     }
 }

@@ -20,11 +20,16 @@ package org.mases.knet.developed.connect;
 
 // imported from org.slf4j.Logger
 public interface KNetConnectLogging {
+
+    String getName();
+
     boolean isTraceEnabled();
 
     void trace(String var1);
 
     void trace(String var1, Throwable var2);
+
+    void trace(String var1, Object... var2);
 
     boolean isDebugEnabled();
 
@@ -32,11 +37,15 @@ public interface KNetConnectLogging {
 
     void debug(String var1, Throwable var2);
 
+    void debug(String var1, Object... var2);
+
     boolean isInfoEnabled();
 
     void info(String var1);
 
     void info(String var1, Throwable var2);
+
+    void info(String var1, Object... var2);
 
     boolean isWarnEnabled();
 
@@ -44,9 +53,13 @@ public interface KNetConnectLogging {
 
     void warn(String var1, Throwable var2);
 
+    void warn(String var1, Object... var2);
+
     boolean isErrorEnabled();
 
     void error(String var1);
 
     void error(String var1, Throwable var2);
+
+    void error(String var1, Object... var2);
 }
