@@ -104,19 +104,19 @@ public class KNetSinkConnector extends SinkConnector implements KNetConnectLoggi
                     throw new ConnectException("Failed Invoke of \"initializeSinkConnector\"");
                 } else {
                     JCOBridge.RegisterJVMGlobal(registrationName, this);
-                    log.debug("RegisterJVMGlobal done for %s", registrationName);
+                    log.debug("RegisterJVMGlobal done for {}", registrationName);
                     sink = KNetConnectProxy.getSinkConnector();
                     if (sink == null) throw new ConnectException("getSinkConnector returned null.");
                 }
             } else {
                 indexedRegistrationName = String.format("%s_%d", registrationName, connectorId);
-                log.debug("Preparing KNetSinkConnector with name %s", indexedRegistrationName);
+                log.debug("Preparing KNetSinkConnector with name {}", indexedRegistrationName);
                 if (!KNetConnectProxy.initializeConnector(this, props, indexedRegistrationName)) {
                     log.error("Failed Invoke of \"initializeConnector\"");
                     throw new ConnectException("Failed Invoke of \"initializeConnector\"");
                 }
                 JCOBridge.RegisterJVMGlobal(indexedRegistrationName, this);
-                log.debug("RegisterJVMGlobal done for %s", indexedRegistrationName);
+                log.debug("RegisterJVMGlobal done for {}", indexedRegistrationName);
                 sinkConnector = KNetConnectProxy.getConnector(indexedRegistrationName);
                 sink = sinkConnector;
             }
@@ -135,7 +135,7 @@ public class KNetSinkConnector extends SinkConnector implements KNetConnectLoggi
 
     @Override
     public List<Map<String, String>> taskConfigs(int maxTasks) {
-        log.debug("Invoking taskConfigs for maxTasks %d", maxTasks);
+        log.debug("Invoking taskConfigs for maxTasks {}", maxTasks);
         ArrayList<Map<String, String>> configs = new ArrayList<>();
         JCObject sink;
         try {
@@ -163,7 +163,10 @@ public class KNetSinkConnector extends SinkConnector implements KNetConnectLoggi
                 dataToExchange = null;
             }
             configs.add(config);
-            if (shallStop) break;
+            if (shallStop) {
+                log.info("Explicit request to stop taskConfigs at iteration {} of {}", i + 1, maxTasks);
+                break;
+            }
         }
         return configs;
     }
@@ -231,7 +234,9 @@ public class KNetSinkConnector extends SinkConnector implements KNetConnectLoggi
     }
 
     @Override
-    public String getName() { return log.getName(); }
+    public String getName() {
+        return log.getName();
+    }
 
     @Override
     public boolean isTraceEnabled() {
@@ -239,7 +244,9 @@ public class KNetSinkConnector extends SinkConnector implements KNetConnectLoggi
     }
 
     @Override
-    public void trace(String var1) { log.trace(var1); }
+    public void trace(String var1) {
+        log.trace(var1);
+    }
 
     @Override
     public void trace(String var1, Throwable var2) {
@@ -307,7 +314,9 @@ public class KNetSinkConnector extends SinkConnector implements KNetConnectLoggi
     }
 
     @Override
-    public void warn(String var1, Object... var2) { log.trace(var1, var2); }
+    public void warn(String var1, Object... var2) {
+        log.trace(var1, var2);
+    }
 
     @Override
     public boolean isErrorEnabled() {

@@ -142,13 +142,13 @@ public class KNetTransformation<R extends ConnectRecord<R>> implements Transform
                 throw new ConnectException("KNetTransformation is not supported from a CLR Hosting process.");
             } else {
                 indexedRegistrationName = String.format("%s_%d", registrationName, transformationId);
-                log.info("Preparing KNetTransformation with name %s", indexedRegistrationName);
+                log.info("Preparing KNetTransformation with name {}}", indexedRegistrationName);
                 if (!KNetConnectProxy.initializeTransformation(this, configs, indexedRegistrationName)) {
                     log.error("Failed Invoke of \"initializeTransformation\"");
                     throw new ConnectException("Failed Invoke of \"initializeTransformation\"");
                 }
                 JCOBridge.RegisterJVMGlobal(indexedRegistrationName, this);
-                log.info("RegisterJVMGlobal done for %s", indexedRegistrationName);
+                log.info("RegisterJVMGlobal done for {}", indexedRegistrationName);
                 transformationObject = KNetConnectProxy.getTransform(indexedRegistrationName);
             }
             if (transformationObject != null) {

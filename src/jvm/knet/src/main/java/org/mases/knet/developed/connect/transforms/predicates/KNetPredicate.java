@@ -139,13 +139,13 @@ public class KNetPredicate<R extends ConnectRecord<R>> implements Predicate<R>, 
                 throw new ConnectException("KNetPredicate is not supported from a CLR Hosting process.");
             } else {
                 indexedRegistrationName = String.format("%s_%d", registrationName, predicateId);
-                log.info("Preparing KNetTransform with name %s", indexedRegistrationName);
+                log.info("Preparing KNetTransform with name {}", indexedRegistrationName);
                 if (!KNetConnectProxy.initializePredicate(this, configs, indexedRegistrationName)) {
                     log.error("Failed Invoke of \"initializePredicate\"");
                     throw new ConnectException("Failed Invoke of \"initializePredicate\"");
                 }
                 JCOBridge.RegisterJVMGlobal(indexedRegistrationName, this);
-                log.info("RegisterJVMGlobal done for %s", indexedRegistrationName);
+                log.info("RegisterJVMGlobal done for {}", indexedRegistrationName);
                 predicateObject = KNetConnectProxy.getPredicate(indexedRegistrationName);
             }
             if (predicateObject != null) {
