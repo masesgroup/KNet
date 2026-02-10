@@ -23,6 +23,7 @@ import org.apache.kafka.connect.source.SourceRecord;
 import org.apache.kafka.connect.source.SourceTask;
 import org.apache.kafka.connect.source.SourceTaskContext;
 import org.mases.jcobridge.*;
+import org.mases.knet.developed.connect.KNetConnectDataExchange;
 import org.mases.knet.developed.connect.KNetConnectLogging;
 import org.mases.knet.developed.connect.KNetConnectProxy;
 import org.slf4j.Logger;
@@ -31,7 +32,7 @@ import org.slf4j.LoggerFactory;
 import java.io.IOException;
 import java.util.*;
 
-public class KNetSourceTask extends SourceTask implements KNetConnectLogging {
+public class KNetSourceTask extends SourceTask implements KNetConnectLogging, KNetConnectDataExchange {
     private static final Logger log = LoggerFactory.getLogger(KNetSourceTask.class);
 
     private static final String registrationName = "KNetSourceTask";
@@ -43,6 +44,9 @@ public class KNetSourceTask extends SourceTask implements KNetConnectLogging {
     JCObject sourceTask = null;
 
     Object dataToExchange = null;
+
+    boolean _useOnlyAsyncEnable = false;
+    List<SourceRecord> _sourceList;
 
     public Object getDataToExchange() {
         return dataToExchange;
@@ -57,6 +61,7 @@ public class KNetSourceTask extends SourceTask implements KNetConnectLogging {
         log.debug("Invoking ctor of KNetSourceTask");
         taskId = KNetConnectProxy.getNewTaskId();
         indexedRegistrationName = String.format("%s_%d", registrationName, taskId);
+        _sourceList = new ArrayList<>();
         if (JCOBridge.isCLRHostingProcess()) {
             JCOBridge.RegisterJVMGlobal(indexedRegistrationName, this);
             JCObject source = KNetConnectProxy.getSourceConnector();
@@ -102,27 +107,59 @@ public class KNetSourceTask extends SourceTask implements KNetConnectLogging {
             } finally {
                 dataToExchange = null;
             }
+            requestUseOnlyAsync();
         } catch (JCException | IOException jcne) {
             log.error("Failed Invoke of \"start\"", jcne);
             throw new ConnectException("Failed Invoke of \"start\"", jcne);
         }
     }
 
-    @Override
-    public List<SourceRecord> poll() throws InterruptedException {
-        log.debug("Invoking poll");
+    public void requestUseOnlyAsync() {
         try {
             try {
-                dataToExchange = new ArrayList<SourceRecord>();
-                sourceTask.Invoke("PollInternal");
-                return (List<SourceRecord>) dataToExchange;
+                dataToExchange = _useOnlyAsyncEnable;
+                sourceTask.Invoke("UseOnlyAsyncInternal");
+                _useOnlyAsyncEnable = (boolean) dataToExchange;
             } finally {
                 dataToExchange = null;
             }
         } catch (JCNativeException jcne) {
-            log.error("Failed Invoke of \"poll\"", jcne);
+            log.error("Failed Invoke of \"UseOnlyAsyncInternal\"", jcne);
         }
-        return null;
+    }
+
+    public void pushRecordAsync(SourceRecord record) {
+        synchronized (this) {
+            _sourceList.add(record);
+        }
+    }
+
+    @Override
+    public List<SourceRecord> poll() throws InterruptedException {
+        log.debug("Invoking poll");
+        synchronized (this) {
+            int size = 0;
+            try {
+                if (_useOnlyAsyncEnable) {
+                    if (_sourceList.isEmpty()) return null;
+                } else {
+                    try {
+                        dataToExchange = _sourceList;
+                        sourceTask.Invoke("PollInternal");
+                    } catch (JCNativeException jcne) {
+                        log.error("Failed Invoke of \"PollInternal\"", jcne);
+                    }
+                }
+                size = _sourceList.size();
+                return (size != 0) ? _sourceList : null;
+            } finally {
+                dataToExchange = null;
+                if (size != 0) {
+                    log.debug("Current size: {} - next list capacity will use this value.", size);
+                    _sourceList = new ArrayList<>(size);
+                }
+            }
+        }
     }
 
     public <V> Map<String, Object> offsetAt(String key, V value) {

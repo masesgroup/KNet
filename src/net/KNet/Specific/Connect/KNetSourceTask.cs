@@ -16,8 +16,8 @@
 *  Refer to LICENSE for more information.
 */
 
+using Java.Lang;
 using Java.Util;
-using Javax.Xml.Crypto.Dsig.Keyinfo;
 using MASES.JNet.Specific.Extensions;
 using Org.Apache.Kafka.Connect.Data;
 using Org.Apache.Kafka.Connect.Header;
@@ -26,11 +26,877 @@ using System;
 
 namespace MASES.KNet.Connect
 {
+    #region IKNetSourceTask
+    /// <summary>
+    /// Helper interface for <see cref="KNetSourceTask{TTask}"/>
+    /// </summary>
+    public interface IKNetSourceTask: IKNetTask
+    {
+        /// <summary>
+        /// If <see cref="UseOnlyAsync"/> is <see langword="true"/>, each <paramref name="record"/> is accumulated in a list outside the scope of <see cref="KNetSourceTask{TTask}.Poll"/> invocation.
+        /// The method can be useful in condition where records are generated in parallel, e.g. with async methods, so it becomes less useful to wait the <see cref="KNetSourceTask{TTask}.Poll"/> invocation to move the records within the JVM
+        /// </summary>
+        /// <param name="record">The <see cref="SourceRecord"/> to be pushed in async within the JVM queue</param>
+        /// <remarks>When the JVM will invoke its internal poll, the invocation of <see cref="PushRecordAsync(SourceRecord)"/> can be locked waiting for the JVM to return the accumulated <see cref="SourceRecord"/></remarks>
+        void PushRecordAsync(SourceRecord record);
+
+        /// <summary>
+        /// Implement the method to declare if out-of-sync feature will be used: it will be set once within <see cref="KNetSourceTask{TTask}"/> invocation of <see cref="KNetTask.Start(System.Collections.Generic.IReadOnlyDictionary{string, string})"/>
+        /// </summary>
+        /// <returns>Returning <see langword="true"/> will use the out-of-sync feature, otherwise returning <see langword="false"/> the feature is disabled which is the default behavior.</returns>
+        /// <remarks>Be aware that returning <see langword="true"/> from this method will be mutually exclusive between the usage of <see cref="PushRecordAsync(SourceRecord)"/> and invocation of <see cref="KNetSourceTask{TTask}.Poll"/></remarks>
+        bool UseOnlyAsync { get; }
+
+        /// <summary>
+        /// Creates a new <see cref="SourceRecord{TKey, TValue}"/>
+        /// </summary>
+        /// <typeparam name="TKey">The type of the key to be inserted in Kafka</typeparam>
+        /// <typeparam name="TValue">The type of value to be inserted in Kafka</typeparam>
+        /// <param name="topic">The name of the topic; may be null</param>
+        /// <param name="partition">The partition number for the Kafka topic; may be null</param>
+        /// <param name="valueSchema">The schema for the value; may be null</param>
+        /// <param name="value">The value; may be null</param>
+        /// <param name="sourcePartition">The parameter represents a single input sourcePartition that the record came from (e.g. a filename, table name, or topic-partition).</param>
+        /// <param name="sourceOffset">The parameter represents a position in that <paramref name="sourcePartition"/> which can be used to resume consumption of data.</param>
+        /// <returns>A newvly allocated <see cref="SourceRecord{TKey, TValue}"/></returns>
+        /// <remarks>These values can have arbitrary structure and should be represented using Org.Apache.Kafka.Connect.Data.* objects (or primitive values). </remarks>
+        SourceRecord<TKey, TValue> CreateRecord<TKey, TValue>(string topic, int? partition, Schema valueSchema, TValue value,
+                                                              Map<Java.Lang.String, object> sourcePartition = null, Map<Java.Lang.String, object> sourceOffset = null);
+        /// <summary>
+        /// Creates a new <see cref="SourceRecord{TKey, TValue}"/> and push it to JVM
+        /// </summary>
+        /// <typeparam name="TKey">The type of the key to be inserted in Kafka</typeparam>
+        /// <typeparam name="TValue">The type of value to be inserted in Kafka</typeparam>
+        /// <param name="topic">The name of the topic; may be null</param>
+        /// <param name="partition">The partition number for the Kafka topic; may be null</param>
+        /// <param name="valueSchema">The schema for the value; may be null</param>
+        /// <param name="value">The value; may be null</param>
+        /// <param name="sourcePartition">The parameter represents a single input sourcePartition that the record came from (e.g. a filename, table name, or topic-partition).</param>
+        /// <param name="sourceOffset">The parameter represents a position in that <paramref name="sourcePartition"/> which can be used to resume consumption of data.</param>
+        /// <remarks>These values can have arbitrary structure and should be represented using Org.Apache.Kafka.Connect.Data.* objects (or primitive values). </remarks>
+        void CreateAndPushRecord<TKey, TValue>(string topic, int? partition, Schema valueSchema, TValue value,
+                                               Map<Java.Lang.String, object> sourcePartition = null, Map<Java.Lang.String, object> sourceOffset = null);
+        /// <summary>
+        /// Creates a new <see cref="SourceRecord{TKey, TValue}"/> and push it to JVM in async mode using <see cref="PushRecordAsync(SourceRecord)"/>, i.e. without waiting the invocation of <see cref="Poll"/> to return back the list of <see cref="SourceRecord"/>
+        /// </summary>
+        /// <typeparam name="TKey">The type of the key to be inserted in Kafka</typeparam>
+        /// <typeparam name="TValue">The type of value to be inserted in Kafka</typeparam>
+        /// <param name="topic">The name of the topic; may be null</param>
+        /// <param name="partition">The partition number for the Kafka topic; may be null</param>
+        /// <param name="valueSchema">The schema for the value; may be null</param>
+        /// <param name="value">The value; may be null</param>
+        /// <param name="sourcePartition">The parameter represents a single input sourcePartition that the record came from (e.g. a filename, table name, or topic-partition).</param>
+        /// <param name="sourceOffset">The parameter represents a position in that <paramref name="sourcePartition"/> which can be used to resume consumption of data.</param>
+        /// <remarks>These values can have arbitrary structure and should be represented using Org.Apache.Kafka.Connect.Data.* objects (or primitive values). </remarks>
+        void CreateAndPushRecordAsync<TKey, TValue>(string topic, int? partition, Schema valueSchema, TValue value,
+                                                    Map<Java.Lang.String, object> sourcePartition = null, Map<Java.Lang.String, object> sourceOffset = null);
+
+        /// <summary>
+        /// Creates a new <see cref="SourceRecord{TKey, TValue}"/>
+        /// </summary>
+        /// <typeparam name="TKey">The type of the key to be inserted in Kafka</typeparam>
+        /// <typeparam name="TValue">The type of value to be inserted in Kafka</typeparam>
+        /// <param name="topic">The name of the topic; may be null</param>
+        /// <param name="valueSchema">The schema for the value; may be null</param>
+        /// <param name="value">The value; may be null</param>
+        /// <param name="sourcePartition">The parameter represents a single input sourcePartition that the record came from (e.g. a filename, table name, or topic-partition).</param>
+        /// <param name="sourceOffset">The parameter represents a position in that <paramref name="sourcePartition"/> which can be used to resume consumption of data.</param>
+        /// <returns>A newvly allocated <see cref="SourceRecord{TKey, TValue}"/></returns>
+        /// <remarks>These values can have arbitrary structure and should be represented using Org.Apache.Kafka.Connect.Data.* objects (or primitive values). </remarks>
+        SourceRecord<TKey, TValue> CreateRecord<TKey, TValue>(string topic, Schema valueSchema, TValue value,
+                                                              Map<Java.Lang.String, object> sourcePartition = null, Map<Java.Lang.String, object> sourceOffset = null);
+        /// <summary>
+        /// Creates a new <see cref="SourceRecord{TKey, TValue}"/> and push it to JVM
+        /// </summary>
+        /// <typeparam name="TKey">The type of the key to be inserted in Kafka</typeparam>
+        /// <typeparam name="TValue">The type of value to be inserted in Kafka</typeparam>
+        /// <param name="topic">The name of the topic; may be null</param>
+        /// <param name="valueSchema">The schema for the value; may be null</param>
+        /// <param name="value">The value; may be null</param>
+        /// <param name="sourcePartition">The parameter represents a single input sourcePartition that the record came from (e.g. a filename, table name, or topic-partition).</param>
+        /// <param name="sourceOffset">The parameter represents a position in that <paramref name="sourcePartition"/> which can be used to resume consumption of data.</param>
+        /// <remarks>These values can have arbitrary structure and should be represented using Org.Apache.Kafka.Connect.Data.* objects (or primitive values). </remarks>
+        void CreateAndPushRecord<TKey, TValue>(string topic, Schema valueSchema, TValue value,
+                                               Map<Java.Lang.String, object> sourcePartition = null, Map<Java.Lang.String, object> sourceOffset = null);
+
+        /// <summary>
+        /// Creates a new <see cref="SourceRecord{TKey, TValue}"/> and push it to JVM in async mode using <see cref="PushRecordAsync(SourceRecord)"/>, i.e. without waiting the invocation of <see cref="Poll"/> to return back the list of <see cref="SourceRecord"/>
+        /// </summary>
+        /// <typeparam name="TKey">The type of the key to be inserted in Kafka</typeparam>
+        /// <typeparam name="TValue">The type of value to be inserted in Kafka</typeparam>
+        /// <param name="topic">The name of the topic; may be null</param>
+        /// <param name="valueSchema">The schema for the value; may be null</param>
+        /// <param name="value">The value; may be null</param>
+        /// <param name="sourcePartition">The parameter represents a single input sourcePartition that the record came from (e.g. a filename, table name, or topic-partition).</param>
+        /// <param name="sourceOffset">The parameter represents a position in that <paramref name="sourcePartition"/> which can be used to resume consumption of data.</param>
+        /// <remarks>These values can have arbitrary structure and should be represented using Org.Apache.Kafka.Connect.Data.* objects (or primitive values). </remarks>
+        void CreateAndPushRecordAsync<TKey, TValue>(string topic, Schema valueSchema, TValue value,
+                                                    Map<Java.Lang.String, object> sourcePartition = null, Map<Java.Lang.String, object> sourceOffset = null);
+
+        /// <summary>
+        /// Creates a new <see cref="SourceRecord{TKey, TValue}"/>
+        /// </summary>
+        /// <typeparam name="TKey">The type of the key to be inserted in Kafka</typeparam>
+        /// <typeparam name="TValue">The type of value to be inserted in Kafka</typeparam>
+        /// <param name="topic">The name of the topic; may be null</param>
+        /// <param name="keySchema">The schema for the key; may be null</param>
+        /// <param name="key">The key; may be null</param>
+        /// <param name="valueSchema">The schema for the value; may be null</param>
+        /// <param name="value">The value; may be null</param>
+        /// <param name="sourcePartition">The parameter represents a single input sourcePartition that the record came from (e.g. a filename, table name, or topic-partition).</param>
+        /// <param name="sourceOffset">The parameter represents a position in that <paramref name="sourcePartition"/> which can be used to resume consumption of data.</param>
+        /// <returns>A newvly allocated <see cref="SourceRecord{TKey, TValue}"/></returns>
+        /// <remarks>These values can have arbitrary structure and should be represented using Org.Apache.Kafka.Connect.Data.* objects (or primitive values). </remarks>
+        SourceRecord<TKey, TValue> CreateRecord<TKey, TValue>(string topic, Schema keySchema, TKey key, Schema valueSchema, TValue value,
+                                                              Map<Java.Lang.String, object> sourcePartition = null, Map<Java.Lang.String, object> sourceOffset = null);
+        /// <summary>
+        /// Creates a new <see cref="SourceRecord{TKey, TValue}"/> and push it to JVM
+        /// </summary>
+        /// <typeparam name="TKey">The type of the key to be inserted in Kafka</typeparam>
+        /// <typeparam name="TValue">The type of value to be inserted in Kafka</typeparam>
+        /// <param name="topic">The name of the topic; may be null</param>
+        /// <param name="keySchema">The schema for the key; may be null</param>
+        /// <param name="key">The key; may be null</param>
+        /// <param name="valueSchema">The schema for the value; may be null</param>
+        /// <param name="value">The value; may be null</param>
+        /// <param name="sourcePartition">The parameter represents a single input sourcePartition that the record came from (e.g. a filename, table name, or topic-partition).</param>
+        /// <param name="sourceOffset">The parameter represents a position in that <paramref name="sourcePartition"/> which can be used to resume consumption of data.</param>
+        /// <remarks>These values can have arbitrary structure and should be represented using Org.Apache.Kafka.Connect.Data.* objects (or primitive values). </remarks>
+        void CreateAndPushRecord<TKey, TValue>(string topic, Schema keySchema, TKey key, Schema valueSchema, TValue value,
+                                               Map<Java.Lang.String, object> sourcePartition = null, Map<Java.Lang.String, object> sourceOffset = null);
+        /// <summary>
+        /// Creates a new <see cref="SourceRecord{TKey, TValue}"/> and push it to JVM in async mode using <see cref="PushRecordAsync(SourceRecord)"/>, i.e. without waiting the invocation of <see cref="Poll"/> to return back the list of <see cref="SourceRecord"/>
+        /// </summary>
+        /// <typeparam name="TKey">The type of the key to be inserted in Kafka</typeparam>
+        /// <typeparam name="TValue">The type of value to be inserted in Kafka</typeparam>
+        /// <param name="topic">The name of the topic; may be null</param>
+        /// <param name="keySchema">The schema for the key; may be null</param>
+        /// <param name="key">The key; may be null</param>
+        /// <param name="valueSchema">The schema for the value; may be null</param>
+        /// <param name="value">The value; may be null</param>
+        /// <param name="sourcePartition">The parameter represents a single input sourcePartition that the record came from (e.g. a filename, table name, or topic-partition).</param>
+        /// <param name="sourceOffset">The parameter represents a position in that <paramref name="sourcePartition"/> which can be used to resume consumption of data.</param>
+        /// <remarks>These values can have arbitrary structure and should be represented using Org.Apache.Kafka.Connect.Data.* objects (or primitive values). </remarks>
+        void CreateAndPushRecordAsync<TKey, TValue>(string topic, Schema keySchema, TKey key, Schema valueSchema, TValue value,
+                                                    Map<Java.Lang.String, object> sourcePartition = null, Map<Java.Lang.String, object> sourceOffset = null);
+        /// <summary>
+        /// Creates a new <see cref="SourceRecord{TKey, TValue}"/>
+        /// </summary>
+        /// <typeparam name="TKey">The type of the key to be inserted in Kafka</typeparam>
+        /// <typeparam name="TValue">The type of value to be inserted in Kafka</typeparam>
+        /// <param name="topic">The name of the topic; may be null</param>
+        /// <param name="partition">The partition number for the Kafka topic; may be null</param>
+        /// <param name="keySchema">The schema for the key; may be null</param>
+        /// <param name="key">The key; may be null</param>
+        /// <param name="valueSchema">The schema for the value; may be null</param>
+        /// <param name="value">The value; may be null</param>
+        /// <param name="sourcePartition">The parameter represents a single input sourcePartition that the record came from (e.g. a filename, table name, or topic-partition).</param>
+        /// <param name="sourceOffset">The parameter represents a position in that <paramref name="sourcePartition"/> which can be used to resume consumption of data.</param>
+        /// <returns>A newvly allocated <see cref="SourceRecord{TKey, TValue}"/></returns>
+        /// <remarks>These values can have arbitrary structure and should be represented using Org.Apache.Kafka.Connect.Data.* objects (or primitive values). </remarks>
+        SourceRecord<TKey, TValue> CreateRecord<TKey, TValue>(string topic, int? partition, Schema keySchema, TKey key, Schema valueSchema, TValue value,
+                                                              Map<Java.Lang.String, object> sourcePartition = null, Map<Java.Lang.String, object> sourceOffset = null);
+        /// <summary>
+        /// Creates a new <see cref="SourceRecord{TKey, TValue}"/> and push it to JVM
+        /// </summary>
+        /// <typeparam name="TKey">The type of the key to be inserted in Kafka</typeparam>
+        /// <typeparam name="TValue">The type of value to be inserted in Kafka</typeparam>
+        /// <param name="topic">The name of the topic; may be null</param>
+        /// <param name="partition">The partition number for the Kafka topic; may be null</param>
+        /// <param name="keySchema">The schema for the key; may be null</param>
+        /// <param name="key">The key; may be null</param>
+        /// <param name="valueSchema">The schema for the value; may be null</param>
+        /// <param name="value">The value; may be null</param>
+        /// <param name="sourcePartition">The parameter represents a single input sourcePartition that the record came from (e.g. a filename, table name, or topic-partition).</param>
+        /// <param name="sourceOffset">The parameter represents a position in that <paramref name="sourcePartition"/> which can be used to resume consumption of data.</param>
+        /// <remarks>These values can have arbitrary structure and should be represented using Org.Apache.Kafka.Connect.Data.* objects (or primitive values). </remarks>
+        void CreateAndPushRecord<TKey, TValue>(string topic, int? partition, Schema keySchema, TKey key, Schema valueSchema, TValue value,
+                                               Map<Java.Lang.String, object> sourcePartition = null, Map<Java.Lang.String, object> sourceOffset = null);
+        /// <summary>
+        /// Creates a new <see cref="SourceRecord{TKey, TValue}"/> and push it to JVM in async mode using <see cref="PushRecordAsync(SourceRecord)"/>, i.e. without waiting the invocation of <see cref="Poll"/> to return back the list of <see cref="SourceRecord"/>
+        /// </summary>
+        /// <typeparam name="TKey">The type of the key to be inserted in Kafka</typeparam>
+        /// <typeparam name="TValue">The type of value to be inserted in Kafka</typeparam>
+        /// <param name="topic">The name of the topic; may be null</param>
+        /// <param name="partition">The partition number for the Kafka topic; may be null</param>
+        /// <param name="keySchema">The schema for the key; may be null</param>
+        /// <param name="key">The key; may be null</param>
+        /// <param name="valueSchema">The schema for the value; may be null</param>
+        /// <param name="value">The value; may be null</param>
+        /// <param name="sourcePartition">The parameter represents a single input sourcePartition that the record came from (e.g. a filename, table name, or topic-partition).</param>
+        /// <param name="sourceOffset">The parameter represents a position in that <paramref name="sourcePartition"/> which can be used to resume consumption of data.</param>
+        /// <remarks>These values can have arbitrary structure and should be represented using Org.Apache.Kafka.Connect.Data.* objects (or primitive values). </remarks>
+        void CreateAndPushRecordAsync<TKey, TValue>(string topic, int? partition, Schema keySchema, TKey key, Schema valueSchema, TValue value,
+                                                    Map<Java.Lang.String, object> sourcePartition = null, Map<Java.Lang.String, object> sourceOffset = null);
+
+        /// <summary>
+        /// Creates a new <see cref="SourceRecord{TKey, TValue}"/>
+        /// </summary>
+        /// <typeparam name="TValue">The type of value to be inserted in Kafka</typeparam>
+        /// <param name="topic">The name of the topic; may be null</param>
+        /// <param name="valueSchema">The schema for the value; may be null</param>
+        /// <param name="value">The value; may be null</param>
+        /// <param name="timestamp">The timestamp; may be null</param>
+        /// <param name="sourcePartition">The parameter represents a single input sourcePartition that the record came from (e.g. a filename, table name, or topic-partition).</param>
+        /// <param name="sourceOffset">The parameter represents a position in that <paramref name="sourcePartition"/> which can be used to resume consumption of data.</param>
+        /// <returns>A newvly allocated <see cref="SourceRecord{TKey, TValue}"/></returns>
+        /// <remarks>These values can have arbitrary structure and should be represented using Org.Apache.Kafka.Connect.Data.* objects (or primitive values). </remarks>
+        SourceRecord<object, TValue> CreateRecord<TValue>(string topic, Schema valueSchema, TValue value, DateTime timestamp,
+                                                          Map<Java.Lang.String, object> sourcePartition = null, Map<Java.Lang.String, object> sourceOffset = null);
+        /// <summary>
+        /// Creates a new <see cref="SourceRecord{TKey, TValue}"/> and push it to JVM
+        /// </summary>
+        /// <typeparam name="TValue">The type of value to be inserted in Kafka</typeparam>
+        /// <param name="topic">The name of the topic; may be null</param>
+        /// <param name="valueSchema">The schema for the value; may be null</param>
+        /// <param name="value">The value; may be null</param>
+        /// <param name="timestamp">The timestamp; may be null</param>
+        /// <param name="sourcePartition">The parameter represents a single input sourcePartition that the record came from (e.g. a filename, table name, or topic-partition).</param>
+        /// <param name="sourceOffset">The parameter represents a position in that <paramref name="sourcePartition"/> which can be used to resume consumption of data.</param>
+        /// <remarks>These values can have arbitrary structure and should be represented using Org.Apache.Kafka.Connect.Data.* objects (or primitive values). </remarks>
+        void CreateAndPushRecord<TValue>(string topic, Schema valueSchema, TValue value, DateTime timestamp,
+                                         Map<Java.Lang.String, object> sourcePartition = null, Map<Java.Lang.String, object> sourceOffset = null);
+        /// <summary>
+        /// Creates a new <see cref="SourceRecord{TKey, TValue}"/> and push it to JVM in async mode using <see cref="PushRecordAsync(SourceRecord)"/>, i.e. without waiting the invocation of <see cref="Poll"/> to return back the list of <see cref="SourceRecord"/>
+        /// </summary>
+        /// <typeparam name="TValue">The type of value to be inserted in Kafka</typeparam>
+        /// <param name="topic">The name of the topic; may be null</param>
+        /// <param name="valueSchema">The schema for the value; may be null</param>
+        /// <param name="value">The value; may be null</param>
+        /// <param name="timestamp">The timestamp; may be null</param>
+        /// <param name="sourcePartition">The parameter represents a single input sourcePartition that the record came from (e.g. a filename, table name, or topic-partition).</param>
+        /// <param name="sourceOffset">The parameter represents a position in that <paramref name="sourcePartition"/> which can be used to resume consumption of data.</param>
+        /// <remarks>These values can have arbitrary structure and should be represented using Org.Apache.Kafka.Connect.Data.* objects (or primitive values). </remarks>
+        void CreateAndPushRecordAsync<TValue>(string topic, Schema valueSchema, TValue value, DateTime timestamp,
+                                              Map<Java.Lang.String, object> sourcePartition = null, Map<Java.Lang.String, object> sourceOffset = null);
+
+        /// <summary>
+        /// Creates a new <see cref="SourceRecord{TKey, TValue}"/>
+        /// </summary>
+        /// <typeparam name="TValue">The type of value to be inserted in Kafka</typeparam>
+        /// <param name="topic">The name of the topic; may be null</param>
+        /// <param name="partition">The partition number for the Kafka topic; may be null</param>
+        /// <param name="valueSchema">The schema for the value; may be null</param>
+        /// <param name="value">The value; may be null</param>
+        /// <param name="timestamp">The timestamp; may be null</param>
+        /// <param name="sourcePartition">The parameter represents a single input sourcePartition that the record came from (e.g. a filename, table name, or topic-partition).</param>
+        /// <param name="sourceOffset">The parameter represents a position in that <paramref name="sourcePartition"/> which can be used to resume consumption of data.</param>
+        /// <returns>A newvly allocated <see cref="SourceRecord{TKey, TValue}"/></returns>
+        /// <remarks>These values can have arbitrary structure and should be represented using Org.Apache.Kafka.Connect.Data.* objects (or primitive values). </remarks>
+        SourceRecord<object, TValue> CreateRecord<TValue>(string topic, int? partition, Schema valueSchema, TValue value, DateTime timestamp,
+                                                          Map<Java.Lang.String, object> sourcePartition = null, Map<Java.Lang.String, object> sourceOffset = null);
+        /// <summary>
+        /// Creates a new <see cref="SourceRecord{TKey, TValue}"/> and push it to JVM
+        /// </summary>
+        /// <typeparam name="TValue">The type of value to be inserted in Kafka</typeparam>
+        /// <param name="topic">The name of the topic; may be null</param>
+        /// <param name="partition">The partition number for the Kafka topic; may be null</param>
+        /// <param name="valueSchema">The schema for the value; may be null</param>
+        /// <param name="value">The value; may be null</param>
+        /// <param name="timestamp">The timestamp; may be null</param>
+        /// <param name="sourcePartition">The parameter represents a single input sourcePartition that the record came from (e.g. a filename, table name, or topic-partition).</param>
+        /// <param name="sourceOffset">The parameter represents a position in that <paramref name="sourcePartition"/> which can be used to resume consumption of data.</param>
+        /// <remarks>These values can have arbitrary structure and should be represented using Org.Apache.Kafka.Connect.Data.* objects (or primitive values). </remarks>
+        void CreateAndPushRecord<TValue>(string topic, int? partition, Schema valueSchema, TValue value, DateTime timestamp,
+                                         Map<Java.Lang.String, object> sourcePartition = null, Map<Java.Lang.String, object> sourceOffset = null);
+        /// <summary>
+        /// Creates a new <see cref="SourceRecord{TKey, TValue}"/> and push it to JVM in async mode using <see cref="PushRecordAsync(SourceRecord)"/>, i.e. without waiting the invocation of <see cref="Poll"/> to return back the list of <see cref="SourceRecord"/>
+        /// </summary>
+        /// <typeparam name="TValue">The type of value to be inserted in Kafka</typeparam>
+        /// <param name="topic">The name of the topic; may be null</param>
+        /// <param name="partition">The partition number for the Kafka topic; may be null</param>
+        /// <param name="valueSchema">The schema for the value; may be null</param>
+        /// <param name="value">The value; may be null</param>
+        /// <param name="timestamp">The timestamp; may be null</param>
+        /// <param name="sourcePartition">The parameter represents a single input sourcePartition that the record came from (e.g. a filename, table name, or topic-partition).</param>
+        /// <param name="sourceOffset">The parameter represents a position in that <paramref name="sourcePartition"/> which can be used to resume consumption of data.</param>
+        /// <remarks>These values can have arbitrary structure and should be represented using Org.Apache.Kafka.Connect.Data.* objects (or primitive values). </remarks>
+        void CreateAndPushRecordAsync<TValue>(string topic, int? partition, Schema valueSchema, TValue value, DateTime timestamp,
+                                              Map<Java.Lang.String, object> sourcePartition = null, Map<Java.Lang.String, object> sourceOffset = null);
+
+        /// <summary>
+        /// Creates a new <see cref="SourceRecord{TKey, TValue}"/>
+        /// </summary>
+        /// <typeparam name="TKey">The type of the key to be inserted in Kafka</typeparam>
+        /// <typeparam name="TValue">The type of value to be inserted in Kafka</typeparam>
+        /// <param name="topic">The name of the topic; may be null</param>
+        /// <param name="partition">The partition number for the Kafka topic; may be null</param>
+        /// <param name="keySchema">The schema for the key; may be null</param>
+        /// <param name="key">The key; may be null</param>
+        /// <param name="valueSchema">The schema for the value; may be null</param>
+        /// <param name="value">The value; may be null</param>
+        /// <param name="timestamp">The timestamp; may be null</param>
+        /// <param name="sourcePartition">The parameter represents a single input sourcePartition that the record came from (e.g. a filename, table name, or topic-partition).</param>
+        /// <param name="sourceOffset">The parameter represents a position in that <paramref name="sourcePartition"/> which can be used to resume consumption of data.</param>
+        /// <returns>A newvly allocated <see cref="SourceRecord{TKey, TValue}"/></returns>
+        /// <remarks>These values can have arbitrary structure and should be represented using Org.Apache.Kafka.Connect.Data.* objects (or primitive values). </remarks>
+        SourceRecord<TKey, TValue> CreateRecord<TKey, TValue>(string topic, int? partition, Schema keySchema, TKey key, Schema valueSchema, TValue value, DateTime timestamp,
+                                                              Map<Java.Lang.String, object> sourcePartition = null, Map<Java.Lang.String, object> sourceOffset = null);
+        /// <summary>
+        /// Creates a new <see cref="SourceRecord{TKey, TValue}"/> and push it to JVM
+        /// </summary>
+        /// <typeparam name="TKey">The type of the key to be inserted in Kafka</typeparam>
+        /// <typeparam name="TValue">The type of value to be inserted in Kafka</typeparam>
+        /// <param name="topic">The name of the topic; may be null</param>
+        /// <param name="partition">The partition number for the Kafka topic; may be null</param>
+        /// <param name="keySchema">The schema for the key; may be null</param>
+        /// <param name="key">The key; may be null</param>
+        /// <param name="valueSchema">The schema for the value; may be null</param>
+        /// <param name="value">The value; may be null</param>
+        /// <param name="timestamp">The timestamp; may be null</param>
+        /// <param name="sourcePartition">The parameter represents a single input sourcePartition that the record came from (e.g. a filename, table name, or topic-partition).</param>
+        /// <param name="sourceOffset">The parameter represents a position in that <paramref name="sourcePartition"/> which can be used to resume consumption of data.</param>
+        /// <remarks>These values can have arbitrary structure and should be represented using Org.Apache.Kafka.Connect.Data.* objects (or primitive values). </remarks>
+        void CreateAndPushRecord<TKey, TValue>(string topic, int? partition, Schema keySchema, TKey key, Schema valueSchema, TValue value, DateTime timestamp,
+                                               Map<Java.Lang.String, object> sourcePartition = null, Map<Java.Lang.String, object> sourceOffset = null);
+        /// <summary>
+        /// Creates a new <see cref="SourceRecord{TKey, TValue}"/> and push it to JVM in async mode using <see cref="PushRecordAsync(SourceRecord)"/>, i.e. without waiting the invocation of <see cref="Poll"/> to return back the list of <see cref="SourceRecord"/>
+        /// </summary>
+        /// <typeparam name="TKey">The type of the key to be inserted in Kafka</typeparam>
+        /// <typeparam name="TValue">The type of value to be inserted in Kafka</typeparam>
+        /// <param name="topic">The name of the topic; may be null</param>
+        /// <param name="partition">The partition number for the Kafka topic; may be null</param>
+        /// <param name="keySchema">The schema for the key; may be null</param>
+        /// <param name="key">The key; may be null</param>
+        /// <param name="valueSchema">The schema for the value; may be null</param>
+        /// <param name="value">The value; may be null</param>
+        /// <param name="timestamp">The timestamp; may be null</param>
+        /// <param name="sourcePartition">The parameter represents a single input sourcePartition that the record came from (e.g. a filename, table name, or topic-partition).</param>
+        /// <param name="sourceOffset">The parameter represents a position in that <paramref name="sourcePartition"/> which can be used to resume consumption of data.</param>
+        /// <remarks>These values can have arbitrary structure and should be represented using Org.Apache.Kafka.Connect.Data.* objects (or primitive values). </remarks>
+        void CreateAndPushRecordAsync<TKey, TValue>(string topic, int? partition, Schema keySchema, TKey key, Schema valueSchema, TValue value, DateTime timestamp,
+                                                    Map<Java.Lang.String, object> sourcePartition = null, Map<Java.Lang.String, object> sourceOffset = null);
+
+        /// <summary>
+        /// Creates a new <see cref="SourceRecord{TKey, TValue}"/>
+        /// </summary>
+        /// <typeparam name="TKey">The type of the key to be inserted in Kafka</typeparam>
+        /// <typeparam name="TValue">The type of value to be inserted in Kafka</typeparam>
+        /// <param name="topic">The name of the topic; may be null</param>
+        /// <param name="partition">The partition number for the Kafka topic; may be null</param>
+        /// <param name="keySchema">The schema for the key; may be null</param>
+        /// <param name="key">The key; may be null</param>
+        /// <param name="valueSchema">The schema for the value; may be null</param>
+        /// <param name="value">The value; may be null</param>
+        /// <param name="timestamp">The timestamp; may be null</param>
+        /// <param name="headers">The <see cref="Headers"/>s; may be null or empty</param>
+        /// <param name="sourcePartition">The parameter represents a single input sourcePartition that the record came from (e.g. a filename, table name, or topic-partition).</param>
+        /// <param name="sourceOffset">The parameter represents a position in that <paramref name="sourcePartition"/> which can be used to resume consumption of data.</param>
+        /// <returns>A newvly allocated <see cref="SourceRecord{TKey, TValue}"/></returns>
+        /// <remarks>These values can have arbitrary structure and should be represented using Org.Apache.Kafka.Connect.Data.* objects (or primitive values). </remarks>
+        SourceRecord<TKey, TValue> CreateRecord<TKey, TValue>(string topic, int? partition, Schema keySchema, TKey key, Schema valueSchema, TValue value, DateTime timestamp, Headers headers,
+                                                              Map<Java.Lang.String, object> sourcePartition = null, Map<Java.Lang.String, object> sourceOffset = null);
+        /// <summary>
+        /// Creates a new <see cref="SourceRecord{TKey, TValue}"/> and push it to JVM
+        /// </summary>
+        /// <typeparam name="TKey">The type of the key to be inserted in Kafka</typeparam>
+        /// <typeparam name="TValue">The type of value to be inserted in Kafka</typeparam>
+        /// <param name="topic">The name of the topic; may be null</param>
+        /// <param name="partition">The partition number for the Kafka topic; may be null</param>
+        /// <param name="keySchema">The schema for the key; may be null</param>
+        /// <param name="key">The key; may be null</param>
+        /// <param name="valueSchema">The schema for the value; may be null</param>
+        /// <param name="value">The value; may be null</param>
+        /// <param name="timestamp">The timestamp; may be null</param>
+        /// <param name="headers">The <see cref="Headers"/>s; may be null or empty</param>
+        /// <param name="sourcePartition">The parameter represents a single input sourcePartition that the record came from (e.g. a filename, table name, or topic-partition).</param>
+        /// <param name="sourceOffset">The parameter represents a position in that <paramref name="sourcePartition"/> which can be used to resume consumption of data.</param>
+        /// <remarks>These values can have arbitrary structure and should be represented using Org.Apache.Kafka.Connect.Data.* objects (or primitive values). </remarks>
+        void CreateAndPushRecord<TKey, TValue>(string topic, int? partition, Schema keySchema, TKey key, Schema valueSchema, TValue value, DateTime timestamp, Headers headers,
+                                               Map<Java.Lang.String, object> sourcePartition = null, Map<Java.Lang.String, object> sourceOffset = null);
+        /// <summary>
+        /// Creates a new <see cref="SourceRecord{TKey, TValue}"/> and push it to JVM in async mode using <see cref="PushRecordAsync(SourceRecord)"/>, i.e. without waiting the invocation of <see cref="Poll"/> to return back the list of <see cref="SourceRecord"/>
+        /// </summary>
+        /// <typeparam name="TKey">The type of the key to be inserted in Kafka</typeparam>
+        /// <typeparam name="TValue">The type of value to be inserted in Kafka</typeparam>
+        /// <param name="topic">The name of the topic; may be null</param>
+        /// <param name="partition">The partition number for the Kafka topic; may be null</param>
+        /// <param name="keySchema">The schema for the key; may be null</param>
+        /// <param name="key">The key; may be null</param>
+        /// <param name="valueSchema">The schema for the value; may be null</param>
+        /// <param name="value">The value; may be null</param>
+        /// <param name="timestamp">The timestamp; may be null</param>
+        /// <param name="headers">The <see cref="Headers"/>s; may be null or empty</param>
+        /// <param name="sourcePartition">The parameter represents a single input sourcePartition that the record came from (e.g. a filename, table name, or topic-partition).</param>
+        /// <param name="sourceOffset">The parameter represents a position in that <paramref name="sourcePartition"/> which can be used to resume consumption of data.</param>
+        /// <remarks>These values can have arbitrary structure and should be represented using Org.Apache.Kafka.Connect.Data.* objects (or primitive values). </remarks>
+        void CreateAndPushRecordAsync<TKey, TValue>(string topic, int? partition, Schema keySchema, TKey key, Schema valueSchema, TValue value, DateTime timestamp, Headers headers,
+                                                    Map<Java.Lang.String, object> sourcePartition = null, Map<Java.Lang.String, object> sourceOffset = null);
+
+        /// <summary>
+        /// Creates a new <see cref="SourceRecord{TKeySource, TOffset, TKey, TValue}"/>
+        /// </summary>
+        /// <typeparam name="TKey">The type of the key to be inserted in Kafka</typeparam>
+        /// <typeparam name="TValue">The type of value to be inserted in Kafka</typeparam>
+        /// <typeparam name="TKeySource">The type within <see cref="Map{String, TKeySource}"/> of <paramref name="sourcePartition"/></typeparam>
+        /// <typeparam name="TOffset">The type within <see cref="Map{String, TOffset}"/> of <paramref name="sourceOffset"/></typeparam>
+        /// <param name="sourcePartition">The parameter represents a single input sourcePartition that the record came from (e.g. a filename, table name, or topic-partition).</param>
+        /// <param name="sourceOffset">The parameter represents a position in that <paramref name="sourcePartition"/> which can be used to resume consumption of data.</param>
+        /// <param name="topic">The name of the topic; may be null</param>
+        /// <param name="partition">The partition number for the Kafka topic; may be null</param>
+        /// <param name="valueSchema">The schema for the value; may be null</param>
+        /// <param name="value">The value; may be null</param>
+        /// <returns>A newvly allocated <see cref="SourceRecord{TKeySource, TOffset, TKey, TValue}"/></returns>
+        /// <remarks>These values can have arbitrary structure and should be represented using Org.Apache.Kafka.Connect.Data.* objects (or primitive values). 
+        /// For example, a database connector might specify the <paramref name="sourcePartition"/> as a record containing { "db": "database_name", "table": "table_name"} and the <paramref name="sourceOffset"/> as a <see langword="long"/> containing the timestamp of the row.</remarks>
+        SourceRecord<TKeySource, TOffset, TKey, TValue> CreateRecord<TKeySource, TOffset, TKey, TValue>(Map<Java.Lang.String, TKeySource> sourcePartition, Map<Java.Lang.String, TOffset> sourceOffset,
+                                                                                                        string topic, int? partition, Schema valueSchema, TValue value);
+        /// <summary>
+        /// Creates a new <see cref="SourceRecord{TKeySource, TOffset, TKey, TValue}"/> and push it to JVM
+        /// </summary>
+        /// <typeparam name="TKey">The type of the key to be inserted in Kafka</typeparam>
+        /// <typeparam name="TValue">The type of value to be inserted in Kafka</typeparam>
+        /// <typeparam name="TKeySource">The type within <see cref="Map{String, TKeySource}"/> of <paramref name="sourcePartition"/></typeparam>
+        /// <typeparam name="TOffset">The type within <see cref="Map{String, TOffset}"/> of <paramref name="sourceOffset"/></typeparam>
+        /// <param name="sourcePartition">The parameter represents a single input sourcePartition that the record came from (e.g. a filename, table name, or topic-partition).</param>
+        /// <param name="sourceOffset">The parameter represents a position in that <paramref name="sourcePartition"/> which can be used to resume consumption of data.</param>
+        /// <param name="topic">The name of the topic; may be null</param>
+        /// <param name="partition">The partition number for the Kafka topic; may be null</param>
+        /// <param name="valueSchema">The schema for the value; may be null</param>
+        /// <param name="value">The value; may be null</param>
+        /// <remarks>These values can have arbitrary structure and should be represented using Org.Apache.Kafka.Connect.Data.* objects (or primitive values). 
+        /// For example, a database connector might specify the <paramref name="sourcePartition"/> as a record containing { "db": "database_name", "table": "table_name"} and the <paramref name="sourceOffset"/> as a <see langword="long"/> containing the timestamp of the row.</remarks>
+        void CreateAndPushRecord<TKeySource, TOffset, TKey, TValue>(Map<Java.Lang.String, TKeySource> sourcePartition, Map<Java.Lang.String, TOffset> sourceOffset,
+                                                                    string topic, int? partition, Schema valueSchema, TValue value);
+        /// <summary>
+        /// Creates a new <see cref="SourceRecord{TKeySource, TOffset, TKey, TValue}"/> and push it to JVM in async mode using <see cref="PushRecordAsync(SourceRecord)"/>, i.e. without waiting the invocation of <see cref="Poll"/> to return back the list of <see cref="SourceRecord"/>
+        /// </summary>
+        /// <typeparam name="TKey">The type of the key to be inserted in Kafka</typeparam>
+        /// <typeparam name="TValue">The type of value to be inserted in Kafka</typeparam>
+        /// <typeparam name="TKeySource">The type within <see cref="Map{String, TKeySource}"/> of <paramref name="sourcePartition"/></typeparam>
+        /// <typeparam name="TOffset">The type within <see cref="Map{String, TOffset}"/> of <paramref name="sourceOffset"/></typeparam>
+        /// <param name="sourcePartition">The parameter represents a single input sourcePartition that the record came from (e.g. a filename, table name, or topic-partition).</param>
+        /// <param name="sourceOffset">The parameter represents a position in that <paramref name="sourcePartition"/> which can be used to resume consumption of data.</param>
+        /// <param name="topic">The name of the topic; may be null</param>
+        /// <param name="partition">The partition number for the Kafka topic; may be null</param>
+        /// <param name="valueSchema">The schema for the value; may be null</param>
+        /// <param name="value">The value; may be null</param>
+        /// <remarks>These values can have arbitrary structure and should be represented using Org.Apache.Kafka.Connect.Data.* objects (or primitive values). 
+        /// For example, a database connector might specify the <paramref name="sourcePartition"/> as a record containing { "db": "database_name", "table": "table_name"} and the <paramref name="sourceOffset"/> as a <see langword="long"/> containing the timestamp of the row.</remarks>
+        void CreateAndPushRecordAsync<TKeySource, TOffset, TKey, TValue>(Map<Java.Lang.String, TKeySource> sourcePartition, Map<Java.Lang.String, TOffset> sourceOffset,
+                                                                         string topic, int? partition, Schema valueSchema, TValue value);
+
+        /// <summary>
+        /// Creates a new <see cref="SourceRecord{TKeySource, TOffset, TKey, TValue}"/>
+        /// </summary>
+        /// <typeparam name="TKey">The type within <see cref="Map{String, TKey}"/> of <paramref name="sourcePartition"/></typeparam>
+        /// <typeparam name="TValue">The type of value to be inserted in Kafka</typeparam>
+        /// <typeparam name="TKeySource">The type within <see cref="Map{String, TKeySource}"/> of <paramref name="sourcePartition"/></typeparam>
+        /// <typeparam name="TOffset">The type within <see cref="Map{String, TOffset}"/> of <paramref name="sourceOffset"/></typeparam>
+        /// <param name="sourcePartition">The parameter represents a single input sourcePartition that the record came from (e.g. a filename, table name, or topic-partition).</param>
+        /// <param name="sourceOffset">The parameter represents a position in that <paramref name="sourcePartition"/> which can be used to resume consumption of data.</param>
+        /// <param name="topic">The name of the topic; may be null</param>
+        /// <param name="valueSchema">The schema for the value; may be null</param>
+        /// <param name="value">The value; may be null</param>
+        /// <returns>A newvly allocated <see cref="SourceRecord{TKeySource, TOffset, TKey, TValue}"/></returns>
+        /// <remarks>These values can have arbitrary structure and should be represented using Org.Apache.Kafka.Connect.Data.* objects (or primitive values). 
+        /// For example, a database connector might specify the <paramref name="sourcePartition"/> as a record containing { "db": "database_name", "table": "table_name"} and the <paramref name="sourceOffset"/> as a <see langword="long"/> containing the timestamp of the row.</remarks>
+        SourceRecord<TKeySource, TOffset, TKey, TValue> CreateRecord<TKeySource, TOffset, TKey, TValue>(Map<Java.Lang.String, TKeySource> sourcePartition, Map<Java.Lang.String, TOffset> sourceOffset,
+                                                                                                        string topic, Schema valueSchema, TValue value);
+        /// <summary>
+        /// Creates a new <see cref="SourceRecord{TKeySource, TOffset, TKey, TValue}"/> and push it to JVM
+        /// </summary>
+        /// <typeparam name="TKey">The type within <see cref="Map{String, TKey}"/> of <paramref name="sourcePartition"/></typeparam>
+        /// <typeparam name="TValue">The type of value to be inserted in Kafka</typeparam>
+        /// <typeparam name="TKeySource">The type within <see cref="Map{String, TKeySource}"/> of <paramref name="sourcePartition"/></typeparam>
+        /// <typeparam name="TOffset">The type within <see cref="Map{String, TOffset}"/> of <paramref name="sourceOffset"/></typeparam>
+        /// <param name="sourcePartition">The parameter represents a single input sourcePartition that the record came from (e.g. a filename, table name, or topic-partition).</param>
+        /// <param name="sourceOffset">The parameter represents a position in that <paramref name="sourcePartition"/> which can be used to resume consumption of data.</param>
+        /// <param name="topic">The name of the topic; may be null</param>
+        /// <param name="valueSchema">The schema for the value; may be null</param>
+        /// <param name="value">The value; may be null</param>
+        /// <remarks>These values can have arbitrary structure and should be represented using Org.Apache.Kafka.Connect.Data.* objects (or primitive values). 
+        /// For example, a database connector might specify the <paramref name="sourcePartition"/> as a record containing { "db": "database_name", "table": "table_name"} and the <paramref name="sourceOffset"/> as a <see langword="long"/> containing the timestamp of the row.</remarks>
+        void CreateAndPushRecord<TKeySource, TOffset, TKey, TValue>(Map<Java.Lang.String, TKeySource> sourcePartition, Map<Java.Lang.String, TOffset> sourceOffset,
+                                                                    string topic, Schema valueSchema, TValue value);
+        /// <summary>
+        /// Creates a new <see cref="SourceRecord{TKeySource, TOffset, TKey, TValue}"/> and push it to JVM in async mode using <see cref="PushRecordAsync(SourceRecord)"/>, i.e. without waiting the invocation of <see cref="Poll"/> to return back the list of <see cref="SourceRecord"/>
+        /// </summary>
+        /// <typeparam name="TKey">The type within <see cref="Map{String, TKey}"/> of <paramref name="sourcePartition"/></typeparam>
+        /// <typeparam name="TValue">The type of value to be inserted in Kafka</typeparam>
+        /// <typeparam name="TKeySource">The type within <see cref="Map{String, TKeySource}"/> of <paramref name="sourcePartition"/></typeparam>
+        /// <typeparam name="TOffset">The type within <see cref="Map{String, TOffset}"/> of <paramref name="sourceOffset"/></typeparam>
+        /// <param name="sourcePartition">The parameter represents a single input sourcePartition that the record came from (e.g. a filename, table name, or topic-partition).</param>
+        /// <param name="sourceOffset">The parameter represents a position in that <paramref name="sourcePartition"/> which can be used to resume consumption of data.</param>
+        /// <param name="topic">The name of the topic; may be null</param>
+        /// <param name="valueSchema">The schema for the value; may be null</param>
+        /// <param name="value">The value; may be null</param>
+        /// <remarks>These values can have arbitrary structure and should be represented using Org.Apache.Kafka.Connect.Data.* objects (or primitive values). 
+        /// For example, a database connector might specify the <paramref name="sourcePartition"/> as a record containing { "db": "database_name", "table": "table_name"} and the <paramref name="sourceOffset"/> as a <see langword="long"/> containing the timestamp of the row.</remarks>
+        void CreateAndPushRecordAsync<TKeySource, TOffset, TKey, TValue>(Map<Java.Lang.String, TKeySource> sourcePartition, Map<Java.Lang.String, TOffset> sourceOffset,
+                                                                         string topic, Schema valueSchema, TValue value);
+
+        /// <summary>
+        /// Creates a new <see cref="SourceRecord{TKeySource, TOffset, TKey, TValue}"/>
+        /// </summary>
+        /// <typeparam name="TKey">The type within <see cref="Map{String, TKey}"/> of <paramref name="sourcePartition"/></typeparam>
+        /// <typeparam name="TValue">The type of value to be inserted in Kafka</typeparam>
+        /// <typeparam name="TKeySource">The type within <see cref="Map{String, TKeySource}"/> of <paramref name="sourcePartition"/></typeparam>
+        /// <typeparam name="TOffset">The type within <see cref="Map{String, TOffset}"/> of <paramref name="sourceOffset"/></typeparam>
+        /// <param name="sourcePartition">The parameter represents a single input sourcePartition that the record came from (e.g. a filename, table name, or topic-partition).</param>
+        /// <param name="sourceOffset">The parameter represents a position in that <paramref name="sourcePartition"/> which can be used to resume consumption of data.</param>
+        /// <param name="topic">The name of the topic; may be null</param>
+        /// <param name="keySchema">The schema for the key; may be null</param>
+        /// <param name="key">The key; may be null</param>
+        /// <param name="valueSchema">The schema for the value; may be null</param>
+        /// <param name="value">The value; may be null</param>
+        /// <returns>A newvly allocated <see cref="SourceRecord{TKeySource, TOffset, TKey, TValue}"/></returns>
+        /// <remarks>These values can have arbitrary structure and should be represented using Org.Apache.Kafka.Connect.Data.* objects (or primitive values). 
+        /// For example, a database connector might specify the <paramref name="sourcePartition"/> as a record containing { "db": "database_name", "table": "table_name"} and the <paramref name="sourceOffset"/> as a <see langword="long"/> containing the timestamp of the row.</remarks>
+        SourceRecord<TKeySource, TOffset, TKey, TValue> CreateRecord<TKeySource, TOffset, TKey, TValue>(Map<Java.Lang.String, TKeySource> sourcePartition, Map<Java.Lang.String, TOffset> sourceOffset,
+                                                                                                        string topic, Schema keySchema, TKey key, Schema valueSchema, TValue value);
+        /// <summary>
+        /// Creates a new <see cref="SourceRecord{TKeySource, TOffset, TKey, TValue}"/> and push it to JVM
+        /// </summary>
+        /// <typeparam name="TKey">The type within <see cref="Map{String, TKey}"/> of <paramref name="sourcePartition"/></typeparam>
+        /// <typeparam name="TValue">The type of value to be inserted in Kafka</typeparam>
+        /// <typeparam name="TKeySource">The type within <see cref="Map{String, TKeySource}"/> of <paramref name="sourcePartition"/></typeparam>
+        /// <typeparam name="TOffset">The type within <see cref="Map{String, TOffset}"/> of <paramref name="sourceOffset"/></typeparam>
+        /// <param name="sourcePartition">The parameter represents a single input sourcePartition that the record came from (e.g. a filename, table name, or topic-partition).</param>
+        /// <param name="sourceOffset">The parameter represents a position in that <paramref name="sourcePartition"/> which can be used to resume consumption of data.</param>
+        /// <param name="topic">The name of the topic; may be null</param>
+        /// <param name="keySchema">The schema for the key; may be null</param>
+        /// <param name="key">The key; may be null</param>
+        /// <param name="valueSchema">The schema for the value; may be null</param>
+        /// <param name="value">The value; may be null</param>
+        /// <remarks>These values can have arbitrary structure and should be represented using Org.Apache.Kafka.Connect.Data.* objects (or primitive values). 
+        /// For example, a database connector might specify the <paramref name="sourcePartition"/> as a record containing { "db": "database_name", "table": "table_name"} and the <paramref name="sourceOffset"/> as a <see langword="long"/> containing the timestamp of the row.</remarks>
+        void CreateAndPushRecord<TKeySource, TOffset, TKey, TValue>(Map<Java.Lang.String, TKeySource> sourcePartition, Map<Java.Lang.String, TOffset> sourceOffset,
+                                                                    string topic, Schema keySchema, TKey key, Schema valueSchema, TValue value);
+        /// <summary>
+        /// Creates a new <see cref="SourceRecord{TKeySource, TOffset, TKey, TValue}"/> and push it to JVM in async mode using <see cref="PushRecordAsync(SourceRecord)"/>, i.e. without waiting the invocation of <see cref="Poll"/> to return back the list of <see cref="SourceRecord"/>
+        /// </summary>
+        /// <typeparam name="TKey">The type within <see cref="Map{String, TKey}"/> of <paramref name="sourcePartition"/></typeparam>
+        /// <typeparam name="TValue">The type of value to be inserted in Kafka</typeparam>
+        /// <typeparam name="TKeySource">The type within <see cref="Map{String, TKeySource}"/> of <paramref name="sourcePartition"/></typeparam>
+        /// <typeparam name="TOffset">The type within <see cref="Map{String, TOffset}"/> of <paramref name="sourceOffset"/></typeparam>
+        /// <param name="sourcePartition">The parameter represents a single input sourcePartition that the record came from (e.g. a filename, table name, or topic-partition).</param>
+        /// <param name="sourceOffset">The parameter represents a position in that <paramref name="sourcePartition"/> which can be used to resume consumption of data.</param>
+        /// <param name="topic">The name of the topic; may be null</param>
+        /// <param name="keySchema">The schema for the key; may be null</param>
+        /// <param name="key">The key; may be null</param>
+        /// <param name="valueSchema">The schema for the value; may be null</param>
+        /// <param name="value">The value; may be null</param>
+        /// <remarks>These values can have arbitrary structure and should be represented using Org.Apache.Kafka.Connect.Data.* objects (or primitive values). 
+        /// For example, a database connector might specify the <paramref name="sourcePartition"/> as a record containing { "db": "database_name", "table": "table_name"} and the <paramref name="sourceOffset"/> as a <see langword="long"/> containing the timestamp of the row.</remarks>
+        void CreateAndPushRecordAsync<TKeySource, TOffset, TKey, TValue>(Map<Java.Lang.String, TKeySource> sourcePartition, Map<Java.Lang.String, TOffset> sourceOffset,
+                                                                         string topic, Schema keySchema, TKey key, Schema valueSchema, TValue value);
+
+        /// <summary>
+        /// Creates a new <see cref="SourceRecord{TKeySource, TOffset, TKey, TValue}"/>
+        /// </summary>
+        /// <typeparam name="TKey">The type within <see cref="Map{String, TKey}"/> of <paramref name="sourcePartition"/></typeparam>
+        /// <typeparam name="TValue">The type of value to be inserted in Kafka</typeparam>
+        /// <typeparam name="TKeySource">The type within <see cref="Map{String, TKeySource}"/> of <paramref name="sourcePartition"/></typeparam>
+        /// <typeparam name="TOffset">The type within <see cref="Map{String, TOffset}"/> of <paramref name="sourceOffset"/></typeparam>
+        /// <param name="sourcePartition">The parameter represents a single input sourcePartition that the record came from (e.g. a filename, table name, or topic-partition).</param>
+        /// <param name="sourceOffset">The parameter represents a position in that <paramref name="sourcePartition"/> which can be used to resume consumption of data.</param>
+        /// <param name="topic">The name of the topic; may be null</param>
+        /// <param name="partition">The partition number for the Kafka topic; may be null</param>
+        /// <param name="keySchema">The schema for the key; may be null</param>
+        /// <param name="key">The key; may be null</param>
+        /// <param name="valueSchema">The schema for the value; may be null</param>
+        /// <param name="value">The value; may be null</param>
+        /// <returns>A newvly allocated <see cref="SourceRecord{TKeySource, TOffset, TKey, TValue}"/></returns>
+        /// <remarks>These values can have arbitrary structure and should be represented using Org.Apache.Kafka.Connect.Data.* objects (or primitive values). 
+        /// For example, a database connector might specify the <paramref name="sourcePartition"/> as a record containing { "db": "database_name", "table": "table_name"} and the <paramref name="sourceOffset"/> as a <see langword="long"/> containing the timestamp of the row.</remarks>
+        SourceRecord<TKeySource, TOffset, TKey, TValue> CreateRecord<TKeySource, TOffset, TKey, TValue>(Map<Java.Lang.String, TKeySource> sourcePartition, Map<Java.Lang.String, TOffset> sourceOffset,
+                                                                                                        string topic, int? partition, Schema keySchema, TKey key, Schema valueSchema, TValue value);
+        /// <summary>
+        /// Creates a new <see cref="SourceRecord{TKeySource, TOffset, TKey, TValue}"/> and push it to JVM
+        /// </summary>
+        /// <typeparam name="TKey">The type within <see cref="Map{String, TKey}"/> of <paramref name="sourcePartition"/></typeparam>
+        /// <typeparam name="TValue">The type of value to be inserted in Kafka</typeparam>
+        /// <typeparam name="TKeySource">The type within <see cref="Map{String, TKeySource}"/> of <paramref name="sourcePartition"/></typeparam>
+        /// <typeparam name="TOffset">The type within <see cref="Map{String, TOffset}"/> of <paramref name="sourceOffset"/></typeparam>
+        /// <param name="sourcePartition">The parameter represents a single input sourcePartition that the record came from (e.g. a filename, table name, or topic-partition).</param>
+        /// <param name="sourceOffset">The parameter represents a position in that <paramref name="sourcePartition"/> which can be used to resume consumption of data.</param>
+        /// <param name="topic">The name of the topic; may be null</param>
+        /// <param name="partition">The partition number for the Kafka topic; may be null</param>
+        /// <param name="keySchema">The schema for the key; may be null</param>
+        /// <param name="key">The key; may be null</param>
+        /// <param name="valueSchema">The schema for the value; may be null</param>
+        /// <param name="value">The value; may be null</param>
+        /// <remarks>These values can have arbitrary structure and should be represented using Org.Apache.Kafka.Connect.Data.* objects (or primitive values). 
+        /// For example, a database connector might specify the <paramref name="sourcePartition"/> as a record containing { "db": "database_name", "table": "table_name"} and the <paramref name="sourceOffset"/> as a <see langword="long"/> containing the timestamp of the row.</remarks>
+        void CreateAndPushRecord<TKeySource, TOffset, TKey, TValue>(Map<Java.Lang.String, TKeySource> sourcePartition, Map<Java.Lang.String, TOffset> sourceOffset,
+                                                                    string topic, int? partition, Schema keySchema, TKey key, Schema valueSchema, TValue value);
+        /// <summary>
+        /// Creates a new <see cref="SourceRecord{TKeySource, TOffset, TKey, TValue}"/> and push it to JVM in async mode using <see cref="PushRecordAsync(SourceRecord)"/>, i.e. without waiting the invocation of <see cref="Poll"/> to return back the list of <see cref="SourceRecord"/>
+        /// </summary>
+        /// <typeparam name="TKey">The type within <see cref="Map{String, TKey}"/> of <paramref name="sourcePartition"/></typeparam>
+        /// <typeparam name="TValue">The type of value to be inserted in Kafka</typeparam>
+        /// <typeparam name="TKeySource">The type within <see cref="Map{String, TKeySource}"/> of <paramref name="sourcePartition"/></typeparam>
+        /// <typeparam name="TOffset">The type within <see cref="Map{String, TOffset}"/> of <paramref name="sourceOffset"/></typeparam>
+        /// <param name="sourcePartition">The parameter represents a single input sourcePartition that the record came from (e.g. a filename, table name, or topic-partition).</param>
+        /// <param name="sourceOffset">The parameter represents a position in that <paramref name="sourcePartition"/> which can be used to resume consumption of data.</param>
+        /// <param name="topic">The name of the topic; may be null</param>
+        /// <param name="partition">The partition number for the Kafka topic; may be null</param>
+        /// <param name="keySchema">The schema for the key; may be null</param>
+        /// <param name="key">The key; may be null</param>
+        /// <param name="valueSchema">The schema for the value; may be null</param>
+        /// <param name="value">The value; may be null</param>
+        /// <remarks>These values can have arbitrary structure and should be represented using Org.Apache.Kafka.Connect.Data.* objects (or primitive values). 
+        /// For example, a database connector might specify the <paramref name="sourcePartition"/> as a record containing { "db": "database_name", "table": "table_name"} and the <paramref name="sourceOffset"/> as a <see langword="long"/> containing the timestamp of the row.</remarks>
+        void CreateAndPushRecordAsync<TKeySource, TOffset, TKey, TValue>(Map<Java.Lang.String, TKeySource> sourcePartition, Map<Java.Lang.String, TOffset> sourceOffset,
+                                                                         string topic, int? partition, Schema keySchema, TKey key, Schema valueSchema, TValue value);
+
+        /// <summary>
+        /// Creates a new <see cref="SourceRecord{TKeySource, TOffset, TKey, TValue}"/>
+        /// </summary>
+        /// <typeparam name="TValue">The type of value to be inserted in Kafka</typeparam>
+        /// <typeparam name="TKeySource">The type within <see cref="Map{String, TKeySource}"/> of <paramref name="sourcePartition"/></typeparam>
+        /// <typeparam name="TOffset">The type within <see cref="Map{String, TOffset}"/> of <paramref name="sourceOffset"/></typeparam>
+        /// <param name="sourcePartition">The parameter represents a single input sourcePartition that the record came from (e.g. a filename, table name, or topic-partition).</param>
+        /// <param name="sourceOffset">The parameter represents a position in that <paramref name="sourcePartition"/> which can be used to resume consumption of data.</param>
+        /// <param name="topic">The name of the topic; may be null</param>
+        /// <param name="valueSchema">The schema for the value; may be null</param>
+        /// <param name="value">The value; may be null</param>
+        /// <param name="timestamp">The timestamp; may be null</param>
+        /// <returns>A newvly allocated <see cref="SourceRecord{TKeySource, TOffset, TKey, TValue}"/></returns>
+        /// <remarks>These values can have arbitrary structure and should be represented using Org.Apache.Kafka.Connect.Data.* objects (or primitive values). 
+        /// For example, a database connector might specify the <paramref name="sourcePartition"/> as a record containing { "db": "database_name", "table": "table_name"} and the <paramref name="sourceOffset"/> as a <see langword="long"/> containing the timestamp of the row.</remarks>
+        SourceRecord<TKeySource, TOffset, object, TValue> CreateRecord<TKeySource, TOffset, TValue>(Map<Java.Lang.String, TKeySource> sourcePartition, Map<Java.Lang.String, TOffset> sourceOffset,
+                                                                                                    string topic, Schema valueSchema, TValue value, DateTime timestamp);
+        /// <summary>
+        /// Creates a new <see cref="SourceRecord{TKeySource, TOffset, TKey, TValue}"/> and push it to JVM
+        /// </summary>
+        /// <typeparam name="TValue">The type of value to be inserted in Kafka</typeparam>
+        /// <typeparam name="TKeySource">The type within <see cref="Map{String, TKeySource}"/> of <paramref name="sourcePartition"/></typeparam>
+        /// <typeparam name="TOffset">The type within <see cref="Map{String, TOffset}"/> of <paramref name="sourceOffset"/></typeparam>
+        /// <param name="sourcePartition">The parameter represents a single input sourcePartition that the record came from (e.g. a filename, table name, or topic-partition).</param>
+        /// <param name="sourceOffset">The parameter represents a position in that <paramref name="sourcePartition"/> which can be used to resume consumption of data.</param>
+        /// <param name="topic">The name of the topic; may be null</param>
+        /// <param name="valueSchema">The schema for the value; may be null</param>
+        /// <param name="value">The value; may be null</param>
+        /// <param name="timestamp">The timestamp; may be null</param>
+        /// <remarks>These values can have arbitrary structure and should be represented using Org.Apache.Kafka.Connect.Data.* objects (or primitive values). 
+        /// For example, a database connector might specify the <paramref name="sourcePartition"/> as a record containing { "db": "database_name", "table": "table_name"} and the <paramref name="sourceOffset"/> as a <see langword="long"/> containing the timestamp of the row.</remarks>
+        void CreateAndPushRecord<TKeySource, TOffset, TValue>(Map<Java.Lang.String, TKeySource> sourcePartition, Map<Java.Lang.String, TOffset> sourceOffset,
+                                                              string topic, Schema valueSchema, TValue value, DateTime timestamp);
+        /// <summary>
+        /// Creates a new <see cref="SourceRecord{TKeySource, TOffset, TKey, TValue}"/> and push it to JVM in async mode using <see cref="PushRecordAsync(SourceRecord)"/>, i.e. without waiting the invocation of <see cref="Poll"/> to return back the list of <see cref="SourceRecord"/>
+        /// </summary>
+        /// <typeparam name="TValue">The type of value to be inserted in Kafka</typeparam>
+        /// <typeparam name="TKeySource">The type within <see cref="Map{String, TKeySource}"/> of <paramref name="sourcePartition"/></typeparam>
+        /// <typeparam name="TOffset">The type within <see cref="Map{String, TOffset}"/> of <paramref name="sourceOffset"/></typeparam>
+        /// <param name="sourcePartition">The parameter represents a single input sourcePartition that the record came from (e.g. a filename, table name, or topic-partition).</param>
+        /// <param name="sourceOffset">The parameter represents a position in that <paramref name="sourcePartition"/> which can be used to resume consumption of data.</param>
+        /// <param name="topic">The name of the topic; may be null</param>
+        /// <param name="valueSchema">The schema for the value; may be null</param>
+        /// <param name="value">The value; may be null</param>
+        /// <param name="timestamp">The timestamp; may be null</param>
+        /// <remarks>These values can have arbitrary structure and should be represented using Org.Apache.Kafka.Connect.Data.* objects (or primitive values). 
+        /// For example, a database connector might specify the <paramref name="sourcePartition"/> as a record containing { "db": "database_name", "table": "table_name"} and the <paramref name="sourceOffset"/> as a <see langword="long"/> containing the timestamp of the row.</remarks>
+        void CreateAndPushRecordAsync<TKeySource, TOffset, TValue>(Map<Java.Lang.String, TKeySource> sourcePartition, Map<Java.Lang.String, TOffset> sourceOffset,
+                                                                   string topic, Schema valueSchema, TValue value, DateTime timestamp);
+
+        /// <summary>
+        /// Creates a new <see cref="SourceRecord{TKeySource, TOffset, TKey, TValue}"/>
+        /// </summary>
+        /// <typeparam name="TValue">The type of value to be inserted in Kafka</typeparam>
+        /// <typeparam name="TKeySource">The type within <see cref="Map{String, TKeySource}"/> of <paramref name="sourcePartition"/></typeparam>
+        /// <typeparam name="TOffset">The type within <see cref="Map{String, TOffset}"/> of <paramref name="sourceOffset"/></typeparam>
+        /// <param name="sourcePartition">The parameter represents a single input sourcePartition that the record came from (e.g. a filename, table name, or topic-partition).</param>
+        /// <param name="sourceOffset">The parameter represents a position in that <paramref name="sourcePartition"/> which can be used to resume consumption of data.</param>
+        /// <param name="topic">The name of the topic; may be null</param>
+        /// <param name="partition">The partition number for the Kafka topic; may be null</param>
+        /// <param name="valueSchema">The schema for the value; may be null</param>
+        /// <param name="value">The value; may be null</param>
+        /// <param name="timestamp">The timestamp; may be null</param>
+        /// <returns>A newvly allocated <see cref="SourceRecord{TKeySource, TOffset, TKey, TValue}"/></returns>
+        /// <remarks>These values can have arbitrary structure and should be represented using Org.Apache.Kafka.Connect.Data.* objects (or primitive values). 
+        /// For example, a database connector might specify the <paramref name="sourcePartition"/> as a record containing { "db": "database_name", "table": "table_name"} and the <paramref name="sourceOffset"/> as a <see langword="long"/> containing the timestamp of the row.</remarks>
+        SourceRecord<TKeySource, TOffset, object, TValue> CreateRecord<TKeySource, TOffset, TValue>(Map<Java.Lang.String, TKeySource> sourcePartition, Map<Java.Lang.String, TOffset> sourceOffset,
+                                                                                                    string topic, int? partition, Schema valueSchema, TValue value, DateTime timestamp);
+        /// <summary>
+        /// Creates a new <see cref="SourceRecord{TKeySource, TOffset, TKey, TValue}"/> and push it to JVM
+        /// </summary>
+        /// <typeparam name="TValue">The type of value to be inserted in Kafka</typeparam>
+        /// <typeparam name="TKeySource">The type within <see cref="Map{String, TKeySource}"/> of <paramref name="sourcePartition"/></typeparam>
+        /// <typeparam name="TOffset">The type within <see cref="Map{String, TOffset}"/> of <paramref name="sourceOffset"/></typeparam>
+        /// <param name="sourcePartition">The parameter represents a single input sourcePartition that the record came from (e.g. a filename, table name, or topic-partition).</param>
+        /// <param name="sourceOffset">The parameter represents a position in that <paramref name="sourcePartition"/> which can be used to resume consumption of data.</param>
+        /// <param name="topic">The name of the topic; may be null</param>
+        /// <param name="partition">The partition number for the Kafka topic; may be null</param>
+        /// <param name="valueSchema">The schema for the value; may be null</param>
+        /// <param name="value">The value; may be null</param>
+        /// <param name="timestamp">The timestamp; may be null</param>
+        /// <remarks>These values can have arbitrary structure and should be represented using Org.Apache.Kafka.Connect.Data.* objects (or primitive values). 
+        /// For example, a database connector might specify the <paramref name="sourcePartition"/> as a record containing { "db": "database_name", "table": "table_name"} and the <paramref name="sourceOffset"/> as a <see langword="long"/> containing the timestamp of the row.</remarks>
+        void CreateAndPushRecord<TKeySource, TOffset, TValue>(Map<Java.Lang.String, TKeySource> sourcePartition, Map<Java.Lang.String, TOffset> sourceOffset,
+                                                              string topic, int? partition, Schema valueSchema, TValue value, DateTime timestamp);
+        /// <summary>
+        /// Creates a new <see cref="SourceRecord{TKeySource, TOffset, TKey, TValue}"/> and push it to JVM in async mode using <see cref="PushRecordAsync(SourceRecord)"/>, i.e. without waiting the invocation of <see cref="Poll"/> to return back the list of <see cref="SourceRecord"/>
+        /// </summary>
+        /// <typeparam name="TValue">The type of value to be inserted in Kafka</typeparam>
+        /// <typeparam name="TKeySource">The type within <see cref="Map{String, TKeySource}"/> of <paramref name="sourcePartition"/></typeparam>
+        /// <typeparam name="TOffset">The type within <see cref="Map{String, TOffset}"/> of <paramref name="sourceOffset"/></typeparam>
+        /// <param name="sourcePartition">The parameter represents a single input sourcePartition that the record came from (e.g. a filename, table name, or topic-partition).</param>
+        /// <param name="sourceOffset">The parameter represents a position in that <paramref name="sourcePartition"/> which can be used to resume consumption of data.</param>
+        /// <param name="topic">The name of the topic; may be null</param>
+        /// <param name="partition">The partition number for the Kafka topic; may be null</param>
+        /// <param name="valueSchema">The schema for the value; may be null</param>
+        /// <param name="value">The value; may be null</param>
+        /// <param name="timestamp">The timestamp; may be null</param>
+        /// <remarks>These values can have arbitrary structure and should be represented using Org.Apache.Kafka.Connect.Data.* objects (or primitive values). 
+        /// For example, a database connector might specify the <paramref name="sourcePartition"/> as a record containing { "db": "database_name", "table": "table_name"} and the <paramref name="sourceOffset"/> as a <see langword="long"/> containing the timestamp of the row.</remarks>
+        void CreateAndPushRecordAsync<TKeySource, TOffset, TValue>(Map<Java.Lang.String, TKeySource> sourcePartition, Map<Java.Lang.String, TOffset> sourceOffset, 
+                                                                   string topic, int? partition, Schema valueSchema, TValue value, DateTime timestamp);
+
+        /// <summary>
+        /// Creates a new <see cref="SourceRecord{TKeySource, TOffset, TKey, TValue}"/>
+        /// </summary>
+        /// <typeparam name="TKey">The type within <see cref="Map{String, TKey}"/> of <paramref name="sourcePartition"/></typeparam>
+        /// <typeparam name="TValue">The type of value to be inserted in Kafka</typeparam>
+        /// <typeparam name="TKeySource">The type within <see cref="Map{String, TKeySource}"/> of <paramref name="sourcePartition"/></typeparam>
+        /// <typeparam name="TOffset">The type within <see cref="Map{String, TOffset}"/> of <paramref name="sourceOffset"/></typeparam>
+        /// <param name="sourcePartition">The parameter represents a single input sourcePartition that the record came from (e.g. a filename, table name, or topic-partition).</param>
+        /// <param name="sourceOffset">The parameter represents a position in that <paramref name="sourcePartition"/> which can be used to resume consumption of data.</param>
+        /// <param name="topic">The name of the topic; may be null</param>
+        /// <param name="partition">The partition number for the Kafka topic; may be null</param>
+        /// <param name="keySchema">The schema for the key; may be null</param>
+        /// <param name="key">The key; may be null</param>
+        /// <param name="valueSchema">The schema for the value; may be null</param>
+        /// <param name="value">The value; may be null</param>
+        /// <param name="timestamp">The timestamp; may be null</param>
+        /// <returns>A newvly allocated <see cref="SourceRecord{TKeySource, TOffset, TKey, TValue}"/></returns>
+        /// <remarks>These values can have arbitrary structure and should be represented using Org.Apache.Kafka.Connect.Data.* objects (or primitive values). 
+        /// For example, a database connector might specify the <paramref name="sourcePartition"/> as a record containing { "db": "database_name", "table": "table_name"} and the <paramref name="sourceOffset"/> as a <see langword="long"/> containing the timestamp of the row.</remarks>
+        SourceRecord<TKeySource, TOffset, TKey, TValue> CreateRecord<TKeySource, TOffset, TKey, TValue>(Map<Java.Lang.String, TKeySource> sourcePartition, Map<Java.Lang.String, TOffset> sourceOffset,
+                                                                                                        string topic, int? partition,
+                                                                                                        Schema keySchema, TKey key,
+                                                                                                        Schema valueSchema, TValue value,
+                                                                                                        DateTime timestamp);
+        /// <summary>
+        /// Creates a new <see cref="SourceRecord{TKeySource, TOffset, TKey, TValue}"/> and push it to JVM
+        /// </summary>
+        /// <typeparam name="TKey">The type within <see cref="Map{String, TKey}"/> of <paramref name="sourcePartition"/></typeparam>
+        /// <typeparam name="TValue">The type of value to be inserted in Kafka</typeparam>
+        /// <typeparam name="TKeySource">The type within <see cref="Map{String, TKeySource}"/> of <paramref name="sourcePartition"/></typeparam>
+        /// <typeparam name="TOffset">The type within <see cref="Map{String, TOffset}"/> of <paramref name="sourceOffset"/></typeparam>
+        /// <param name="sourcePartition">The parameter represents a single input sourcePartition that the record came from (e.g. a filename, table name, or topic-partition).</param>
+        /// <param name="sourceOffset">The parameter represents a position in that <paramref name="sourcePartition"/> which can be used to resume consumption of data.</param>
+        /// <param name="topic">The name of the topic; may be null</param>
+        /// <param name="partition">The partition number for the Kafka topic; may be null</param>
+        /// <param name="keySchema">The schema for the key; may be null</param>
+        /// <param name="key">The key; may be null</param>
+        /// <param name="valueSchema">The schema for the value; may be null</param>
+        /// <param name="value">The value; may be null</param>
+        /// <param name="timestamp">The timestamp; may be null</param>
+        /// <remarks>These values can have arbitrary structure and should be represented using Org.Apache.Kafka.Connect.Data.* objects (or primitive values). 
+        /// For example, a database connector might specify the <paramref name="sourcePartition"/> as a record containing { "db": "database_name", "table": "table_name"} and the <paramref name="sourceOffset"/> as a <see langword="long"/> containing the timestamp of the row.</remarks>
+        void CreateAndPushRecord<TKeySource, TOffset, TKey, TValue>(Map<Java.Lang.String, TKeySource> sourcePartition, Map<Java.Lang.String, TOffset> sourceOffset,
+                                                                    string topic, int? partition,
+                                                                    Schema keySchema, TKey key,
+                                                                    Schema valueSchema, TValue value,
+                                                                    DateTime timestamp);
+        /// <summary>
+        /// Creates a new <see cref="SourceRecord{TKeySource, TOffset, TKey, TValue}"/> and push it to JVM in async mode using <see cref="PushRecordAsync(SourceRecord)"/>, i.e. without waiting the invocation of <see cref="Poll"/> to return back the list of <see cref="SourceRecord"/>
+        /// </summary>
+        /// <typeparam name="TKey">The type within <see cref="Map{String, TKey}"/> of <paramref name="sourcePartition"/></typeparam>
+        /// <typeparam name="TValue">The type of value to be inserted in Kafka</typeparam>
+        /// <typeparam name="TKeySource">The type within <see cref="Map{String, TKeySource}"/> of <paramref name="sourcePartition"/></typeparam>
+        /// <typeparam name="TOffset">The type within <see cref="Map{String, TOffset}"/> of <paramref name="sourceOffset"/></typeparam>
+        /// <param name="sourcePartition">The parameter represents a single input sourcePartition that the record came from (e.g. a filename, table name, or topic-partition).</param>
+        /// <param name="sourceOffset">The parameter represents a position in that <paramref name="sourcePartition"/> which can be used to resume consumption of data.</param>
+        /// <param name="topic">The name of the topic; may be null</param>
+        /// <param name="partition">The partition number for the Kafka topic; may be null</param>
+        /// <param name="keySchema">The schema for the key; may be null</param>
+        /// <param name="key">The key; may be null</param>
+        /// <param name="valueSchema">The schema for the value; may be null</param>
+        /// <param name="value">The value; may be null</param>
+        /// <param name="timestamp">The timestamp; may be null</param>
+        /// <remarks>These values can have arbitrary structure and should be represented using Org.Apache.Kafka.Connect.Data.* objects (or primitive values). 
+        /// For example, a database connector might specify the <paramref name="sourcePartition"/> as a record containing { "db": "database_name", "table": "table_name"} and the <paramref name="sourceOffset"/> as a <see langword="long"/> containing the timestamp of the row.</remarks>
+        void CreateAndPushRecordAsync<TKeySource, TOffset, TKey, TValue>(Map<Java.Lang.String, TKeySource> sourcePartition, Map<Java.Lang.String, TOffset> sourceOffset,
+                                                                         string topic, int? partition,
+                                                                         Schema keySchema, TKey key,
+                                                                         Schema valueSchema, TValue value,
+                                                                         DateTime timestamp);
+
+        /// <summary>
+        /// Creates a new <see cref="SourceRecord{TKeySource, TOffset, TKey, TValue}"/>
+        /// </summary>
+        /// <typeparam name="TKey">The type within <see cref="Map{String, TKey}"/> of <paramref name="sourcePartition"/></typeparam>
+        /// <typeparam name="TValue">The type of value to be inserted in Kafka</typeparam>
+        /// <typeparam name="TKeySource">The type within <see cref="Map{String, TKeySource}"/> of <paramref name="sourcePartition"/></typeparam>
+        /// <typeparam name="TOffset">The type within <see cref="Map{String, TOffset}"/> of <paramref name="sourceOffset"/></typeparam>
+        /// <param name="sourcePartition">The parameter represents a single input sourcePartition that the record came from (e.g. a filename, table name, or topic-partition).</param>
+        /// <param name="sourceOffset">The parameter represents a position in that <paramref name="sourcePartition"/> which can be used to resume consumption of data.</param>
+        /// <param name="topic">The name of the topic; may be null</param>
+        /// <param name="partition">The partition number for the Kafka topic; may be null</param>
+        /// <param name="keySchema">The schema for the key; may be null</param>
+        /// <param name="key">The key; may be null</param>
+        /// <param name="valueSchema">The schema for the value; may be null</param>
+        /// <param name="value">The value; may be null</param>
+        /// <param name="timestamp">The timestamp; may be null</param>
+        /// <param name="headers">The <see cref="Headers"/>s; may be null or empty</param>
+        /// <returns>A newvly allocated <see cref="SourceRecord{TKeySource, TOffset, TKey, TValue}"/></returns>
+        /// <remarks>These values can have arbitrary structure and should be represented using Org.Apache.Kafka.Connect.Data.* objects (or primitive values). 
+        /// For example, a database connector might specify the <paramref name="sourcePartition"/> as a record containing { "db": "database_name", "table": "table_name"} and the <paramref name="sourceOffset"/> as a <see langword="long"/> containing the timestamp of the row.</remarks>
+        SourceRecord<TKeySource, TOffset, TKey, TValue> CreateRecord<TKeySource, TOffset, TKey, TValue>(Map<Java.Lang.String, TKeySource> sourcePartition, Map<Java.Lang.String, TOffset> sourceOffset,
+                                                                                                        string topic, int? partition,
+                                                                                                        Schema keySchema, TKey key,
+                                                                                                        Schema valueSchema, TValue value,
+                                                                                                        DateTime timestamp, Headers headers);
+        /// <summary>
+        /// Creates a new <see cref="SourceRecord{TKeySource, TOffset, TKey, TValue}"/> and push it to JVM
+        /// </summary>
+        /// <typeparam name="TKey">The type within <see cref="Map{String, TKey}"/> of <paramref name="sourcePartition"/></typeparam>
+        /// <typeparam name="TValue">The type of value to be inserted in Kafka</typeparam>
+        /// <typeparam name="TKeySource">The type within <see cref="Map{String, TKeySource}"/> of <paramref name="sourcePartition"/></typeparam>
+        /// <typeparam name="TOffset">The type within <see cref="Map{String, TOffset}"/> of <paramref name="sourceOffset"/></typeparam>
+        /// <param name="sourcePartition">The parameter represents a single input sourcePartition that the record came from (e.g. a filename, table name, or topic-partition).</param>
+        /// <param name="sourceOffset">The parameter represents a position in that <paramref name="sourcePartition"/> which can be used to resume consumption of data.</param>
+        /// <param name="topic">The name of the topic; may be null</param>
+        /// <param name="partition">The partition number for the Kafka topic; may be null</param>
+        /// <param name="keySchema">The schema for the key; may be null</param>
+        /// <param name="key">The key; may be null</param>
+        /// <param name="valueSchema">The schema for the value; may be null</param>
+        /// <param name="value">The value; may be null</param>
+        /// <param name="timestamp">The timestamp; may be null</param>
+        /// <param name="headers">The <see cref="Headers"/>s; may be null or empty</param>
+        /// <remarks>These values can have arbitrary structure and should be represented using Org.Apache.Kafka.Connect.Data.* objects (or primitive values). 
+        /// For example, a database connector might specify the <paramref name="sourcePartition"/> as a record containing { "db": "database_name", "table": "table_name"} and the <paramref name="sourceOffset"/> as a <see langword="long"/> containing the timestamp of the row.</remarks>
+        void CreateAndPushRecord<TKeySource, TOffset, TKey, TValue>(Map<Java.Lang.String, TKeySource> sourcePartition, Map<Java.Lang.String, TOffset> sourceOffset,
+                                                                    string topic, int? partition,
+                                                                    Schema keySchema, TKey key,
+                                                                    Schema valueSchema, TValue value,
+                                                                    DateTime timestamp, Headers headers);
+        /// <summary>
+        /// Creates a new <see cref="SourceRecord{TKeySource, TOffset, TKey, TValue}"/> and push it to JVM in async mode using <see cref="PushRecordAsync(SourceRecord)"/>, i.e. without waiting the invocation of <see cref="Poll"/> to return back the list of <see cref="SourceRecord"/>
+        /// </summary>
+        /// <typeparam name="TKey">The type within <see cref="Map{String, TKey}"/> of <paramref name="sourcePartition"/></typeparam>
+        /// <typeparam name="TValue">The type of value to be inserted in Kafka</typeparam>
+        /// <typeparam name="TKeySource">The type within <see cref="Map{String, TKeySource}"/> of <paramref name="sourcePartition"/></typeparam>
+        /// <typeparam name="TOffset">The type within <see cref="Map{String, TOffset}"/> of <paramref name="sourceOffset"/></typeparam>
+        /// <param name="sourcePartition">The parameter represents a single input sourcePartition that the record came from (e.g. a filename, table name, or topic-partition).</param>
+        /// <param name="sourceOffset">The parameter represents a position in that <paramref name="sourcePartition"/> which can be used to resume consumption of data.</param>
+        /// <param name="topic">The name of the topic; may be null</param>
+        /// <param name="partition">The partition number for the Kafka topic; may be null</param>
+        /// <param name="keySchema">The schema for the key; may be null</param>
+        /// <param name="key">The key; may be null</param>
+        /// <param name="valueSchema">The schema for the value; may be null</param>
+        /// <param name="value">The value; may be null</param>
+        /// <param name="timestamp">The timestamp; may be null</param>
+        /// <param name="headers">The <see cref="Headers"/>s; may be null or empty</param>
+        /// <remarks>These values can have arbitrary structure and should be represented using Org.Apache.Kafka.Connect.Data.* objects (or primitive values). 
+        /// For example, a database connector might specify the <paramref name="sourcePartition"/> as a record containing { "db": "database_name", "table": "table_name"} and the <paramref name="sourceOffset"/> as a <see langword="long"/> containing the timestamp of the row.</remarks>
+        void CreateAndPushRecordAsync<TKeySource, TOffset, TKey, TValue>(Map<Java.Lang.String, TKeySource> sourcePartition, Map<Java.Lang.String, TOffset> sourceOffset,
+                                                                         string topic, int? partition,
+                                                                         Schema keySchema, TKey key,
+                                                                         Schema valueSchema, TValue value,
+                                                                         DateTime timestamp, Headers headers);
+    }
+    #endregion
+
+    #region KNetSourceTask<TTask>
     /// <summary>
     /// An implementation of <see cref="KNetTask{TTask}"/> for source task
     /// </summary>
     /// <typeparam name="TTask">The class which extends <see cref="KNetSourceTask{TTask}"/></typeparam>
-    public abstract class KNetSourceTask<TTask> : KNetTask<TTask>
+    public abstract class KNetSourceTask<TTask> : KNetTask<TTask>, IKNetSourceTask
         where TTask : KNetSourceTask<TTask>
     {
         /// <inheritdoc cref="PartitionOrOffsetForKey{T}(string, T)"/>
@@ -61,7 +927,7 @@ namespace MASES.KNet.Connect
                 values[i] = data[i].Item2;
             }
 
-            return ExecuteOnTask<Map<Java.Lang.String, T>>("partitionOrOffsetForKeys", strings, values);
+            return ExecuteOnRemote<Map<Java.Lang.String, T>>("partitionOrOffsetForKeys", strings, values);
         }
         /// <summary>
         /// Get the offset for the specified partition. If the data isn't already available locally, this gets it from the backing store, which may require some network round trips.
@@ -71,7 +937,7 @@ namespace MASES.KNet.Connect
         /// <param name="keyName">The identifier used when was called <see cref="PartitionOrOffsetForKey{T}(string, T)"/> or <see cref="PartitionOrOffsetForKeys{T}(Tuple{string, T}[])"/></param>
         /// <param name="keyValue">The value used when was called <see cref="PartitionOrOffsetForKey{T}(string, T)"/> or <see cref="PartitionOrOffsetForKeys{T}(Tuple{string, T}[])"/></param>
         /// <returns>Return the <see cref="Map{String, TOffset}"/> associated to the element identified from <paramref name="keyName"/> and <paramref name="keyValue"/> which is an object uniquely identifying the offset in the partition of data</returns>
-        protected Map<Java.Lang.String, TOffset> OffsetAt<TKeySource, TOffset>(string keyName, TKeySource keyValue) => ExecuteOnTask<Map<Java.Lang.String, TOffset>>("offsetAt", (Java.Lang.String)keyName, keyValue);
+        protected Map<Java.Lang.String, TOffset> OffsetAt<TKeySource, TOffset>(string keyName, TKeySource keyValue) => ExecuteOnRemote<Map<Java.Lang.String, TOffset>>("offsetAt", (Java.Lang.String)keyName, keyValue);
 
         /// <summary>
         /// The <see cref="SourceTaskContext"/>
@@ -80,11 +946,34 @@ namespace MASES.KNet.Connect
         /// <summary>
         /// Set the <see cref="ReflectedTaskClassName"/> of the connector to a fixed value
         /// </summary>
-        public override string ReflectedTaskClassName => "KNetSourceTask";
+        protected override string ReflectedTaskClassName => "KNetSourceTask";
+
+        /// <inheritdoc/>
+        public void PushRecordAsync(SourceRecord record)
+        {
+            ExecuteOnRemote("pushRecordAsync", record);
+        }
+
+        /// <summary>
+        /// Public method used from Java to trigger <see cref="UseOnlyAsyncInternal"/>
+        /// </summary>
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public void UseOnlyAsyncInternal()
+        {
+            try
+            {
+                DataToExchange(UseOnlyAsync);
+            }
+            catch { }
+        }
+        /// <inheritdoc/>
+        public virtual bool UseOnlyAsync { get; } = false;
+
         ArrayList<SourceRecord> _arrayList;
         /// <summary>
         /// Public method used from Java to trigger <see cref="Poll"/>
         /// </summary>
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
         public void PollInternal()
         {
             _arrayList = DataToExchange<ArrayList<SourceRecord>>();
@@ -105,571 +994,248 @@ namespace MASES.KNet.Connect
         /// Implement the method to execute the Poll action
         /// </summary>
         /// <returns>The set of <see cref="SourceRecord"/> to return to Apache Kafka Connect framework or <see langword="null"/> if <see cref="SourceRecord"/> are accumulated using CreateAndPushRecord methods</returns>
+        /// <remarks>The method shall be implemented, however if <see cref="UseOnlyAsync"/> is set to <see langword="true"/> the JVM side never invokes <see cref="Poll"/></remarks>
         public abstract System.Collections.Generic.IEnumerable<SourceRecord> Poll();
 
-        /// <summary>
-        /// Creates a new <see cref="SourceRecord{TKey, TValue}"/>
-        /// </summary>
-        /// <typeparam name="TKey">The type of the key to be inserted in Kafka</typeparam>
-        /// <typeparam name="TValue">The type of value to be inserted in Kafka</typeparam>
-        /// <param name="topic">The name of the topic; may be null</param>
-        /// <param name="partition">The partition number for the Kafka topic; may be null</param>
-        /// <param name="valueSchema">The schema for the value; may be null</param>
-        /// <param name="value">The value; may be null</param>
-        /// <param name="sourcePartition">The parameter represents a single input sourcePartition that the record came from (e.g. a filename, table name, or topic-partition).</param>
-        /// <param name="sourceOffset">The parameter represents a position in that <paramref name="sourcePartition"/> which can be used to resume consumption of data.</param>
-        /// <returns>A newvly allocated <see cref="SourceRecord{TKey, TValue}"/></returns>
-        /// <remarks>These values can have arbitrary structure and should be represented using Org.Apache.Kafka.Connect.Data.* objects (or primitive values). </remarks>
+        /// <inheritdoc/>
         public SourceRecord<TKey, TValue> CreateRecord<TKey, TValue>(string topic, int? partition, Schema valueSchema, TValue value, Map<Java.Lang.String, object> sourcePartition = null, Map<Java.Lang.String, object> sourceOffset = null)
         {
             return new SourceRecord<TKey, TValue>(sourcePartition, sourceOffset, topic, partition, valueSchema, value);
         }
-        /// <summary>
-        /// Creates a new <see cref="SourceRecord{TKey, TValue}"/> and push it to JVM
-        /// </summary>
-        /// <typeparam name="TKey">The type of the key to be inserted in Kafka</typeparam>
-        /// <typeparam name="TValue">The type of value to be inserted in Kafka</typeparam>
-        /// <param name="topic">The name of the topic; may be null</param>
-        /// <param name="partition">The partition number for the Kafka topic; may be null</param>
-        /// <param name="valueSchema">The schema for the value; may be null</param>
-        /// <param name="value">The value; may be null</param>
-        /// <param name="sourcePartition">The parameter represents a single input sourcePartition that the record came from (e.g. a filename, table name, or topic-partition).</param>
-        /// <param name="sourceOffset">The parameter represents a position in that <paramref name="sourcePartition"/> which can be used to resume consumption of data.</param>
-        /// <remarks>These values can have arbitrary structure and should be represented using Org.Apache.Kafka.Connect.Data.* objects (or primitive values). </remarks>
+        /// <inheritdoc/>
         public void CreateAndPushRecord<TKey, TValue>(string topic, int? partition, Schema valueSchema, TValue value, Map<Java.Lang.String, object> sourcePartition = null, Map<Java.Lang.String, object> sourceOffset = null)
         {
             if (_arrayList == null) throw new InvalidOperationException($"The method cannot be invoked outside the body of {nameof(Poll)} method.");
             _arrayList.Add(CreateRecord<TKey, TValue>(topic, partition, valueSchema, value, sourcePartition, sourceOffset));
         }
+        /// <inheritdoc/>
+        public void CreateAndPushRecordAsync<TKey, TValue>(string topic, int? partition, Schema valueSchema, TValue value, Map<Java.Lang.String, object> sourcePartition = null, Map<Java.Lang.String, object> sourceOffset = null)
+        {
+            PushRecordAsync(CreateRecord<TKey, TValue>(topic, partition, valueSchema, value, sourcePartition, sourceOffset));
+        }
 
-        /// <summary>
-        /// Creates a new <see cref="SourceRecord{TKey, TValue}"/>
-        /// </summary>
-        /// <typeparam name="TKey">The type of the key to be inserted in Kafka</typeparam>
-        /// <typeparam name="TValue">The type of value to be inserted in Kafka</typeparam>
-        /// <param name="topic">The name of the topic; may be null</param>
-        /// <param name="valueSchema">The schema for the value; may be null</param>
-        /// <param name="value">The value; may be null</param>
-        /// <param name="sourcePartition">The parameter represents a single input sourcePartition that the record came from (e.g. a filename, table name, or topic-partition).</param>
-        /// <param name="sourceOffset">The parameter represents a position in that <paramref name="sourcePartition"/> which can be used to resume consumption of data.</param>
-        /// <returns>A newvly allocated <see cref="SourceRecord{TKey, TValue}"/></returns>
-        /// <remarks>These values can have arbitrary structure and should be represented using Org.Apache.Kafka.Connect.Data.* objects (or primitive values). </remarks>
+        /// <inheritdoc/>
         public SourceRecord<TKey, TValue> CreateRecord<TKey, TValue>(string topic, Schema valueSchema, TValue value, Map<Java.Lang.String, object> sourcePartition = null, Map<Java.Lang.String, object> sourceOffset = null)
         {
             return new SourceRecord<TKey, TValue>(sourcePartition, sourceOffset, topic, valueSchema, value);
         }
-        /// <summary>
-        /// Creates a new <see cref="SourceRecord{TKey, TValue}"/> and push it to JVM
-        /// </summary>
-        /// <typeparam name="TKey">The type of the key to be inserted in Kafka</typeparam>
-        /// <typeparam name="TValue">The type of value to be inserted in Kafka</typeparam>
-        /// <param name="topic">The name of the topic; may be null</param>
-        /// <param name="valueSchema">The schema for the value; may be null</param>
-        /// <param name="value">The value; may be null</param>
-        /// <param name="sourcePartition">The parameter represents a single input sourcePartition that the record came from (e.g. a filename, table name, or topic-partition).</param>
-        /// <param name="sourceOffset">The parameter represents a position in that <paramref name="sourcePartition"/> which can be used to resume consumption of data.</param>
-        /// <remarks>These values can have arbitrary structure and should be represented using Org.Apache.Kafka.Connect.Data.* objects (or primitive values). </remarks>
+        /// <inheritdoc/>
         public void CreateAndPushRecord<TKey, TValue>(string topic, Schema valueSchema, TValue value, Map<Java.Lang.String, object> sourcePartition = null, Map<Java.Lang.String, object> sourceOffset = null)
         {
             if (_arrayList == null) throw new InvalidOperationException($"The method cannot be invoked outside the body of {nameof(Poll)} method.");
             _arrayList.Add(CreateRecord<TKey, TValue>(topic, valueSchema, value, sourcePartition, sourceOffset));
         }
+        /// <inheritdoc/>
+        public void CreateAndPushRecordAsync<TKey, TValue>(string topic, Schema valueSchema, TValue value, Map<Java.Lang.String, object> sourcePartition = null, Map<Java.Lang.String, object> sourceOffset = null)
+        {
+            PushRecordAsync(CreateRecord<TKey, TValue>(topic, valueSchema, value, sourcePartition, sourceOffset));
+        }
 
-        /// <summary>
-        /// Creates a new <see cref="SourceRecord{TKey, TValue}"/>
-        /// </summary>
-        /// <typeparam name="TKey">The type of the key to be inserted in Kafka</typeparam>
-        /// <typeparam name="TValue">The type of value to be inserted in Kafka</typeparam>
-        /// <param name="topic">The name of the topic; may be null</param>
-        /// <param name="keySchema">The schema for the key; may be null</param>
-        /// <param name="key">The key; may be null</param>
-        /// <param name="valueSchema">The schema for the value; may be null</param>
-        /// <param name="value">The value; may be null</param>
-        /// <param name="sourcePartition">The parameter represents a single input sourcePartition that the record came from (e.g. a filename, table name, or topic-partition).</param>
-        /// <param name="sourceOffset">The parameter represents a position in that <paramref name="sourcePartition"/> which can be used to resume consumption of data.</param>
-        /// <returns>A newvly allocated <see cref="SourceRecord{TKey, TValue}"/></returns>
-        /// <remarks>These values can have arbitrary structure and should be represented using Org.Apache.Kafka.Connect.Data.* objects (or primitive values). </remarks>
+        /// <inheritdoc/>
         public SourceRecord<TKey, TValue> CreateRecord<TKey, TValue>(string topic, Schema keySchema, TKey key, Schema valueSchema, TValue value, Map<Java.Lang.String, object> sourcePartition = null, Map<Java.Lang.String, object> sourceOffset = null)
         {
             return new SourceRecord<TKey, TValue>(sourcePartition, sourceOffset, topic, keySchema, key, valueSchema, value);
         }
-        /// <summary>
-        /// Creates a new <see cref="SourceRecord{TKey, TValue}"/> and push it to JVM
-        /// </summary>
-        /// <typeparam name="TKey">The type of the key to be inserted in Kafka</typeparam>
-        /// <typeparam name="TValue">The type of value to be inserted in Kafka</typeparam>
-        /// <param name="topic">The name of the topic; may be null</param>
-        /// <param name="keySchema">The schema for the key; may be null</param>
-        /// <param name="key">The key; may be null</param>
-        /// <param name="valueSchema">The schema for the value; may be null</param>
-        /// <param name="value">The value; may be null</param>
-        /// <param name="sourcePartition">The parameter represents a single input sourcePartition that the record came from (e.g. a filename, table name, or topic-partition).</param>
-        /// <param name="sourceOffset">The parameter represents a position in that <paramref name="sourcePartition"/> which can be used to resume consumption of data.</param>
-        /// <remarks>These values can have arbitrary structure and should be represented using Org.Apache.Kafka.Connect.Data.* objects (or primitive values). </remarks>
+        /// <inheritdoc/>
         public void CreateAndPushRecord<TKey, TValue>(string topic, Schema keySchema, TKey key, Schema valueSchema, TValue value, Map<Java.Lang.String, object> sourcePartition = null, Map<Java.Lang.String, object> sourceOffset = null)
         {
             if (_arrayList == null) throw new InvalidOperationException($"The method cannot be invoked outside the body of {nameof(Poll)} method.");
             _arrayList.Add(CreateRecord<TKey, TValue>(topic, keySchema, key, valueSchema, value, sourcePartition, sourceOffset));
         }
+        /// <inheritdoc/>
+        public void CreateAndPushRecordAsync<TKey, TValue>(string topic, Schema keySchema, TKey key, Schema valueSchema, TValue value, Map<Java.Lang.String, object> sourcePartition = null, Map<Java.Lang.String, object> sourceOffset = null)
+        {
+            PushRecordAsync(CreateRecord<TKey, TValue>(topic, keySchema, key, valueSchema, value, sourcePartition, sourceOffset));
+        }
 
-        /// <summary>
-        /// Creates a new <see cref="SourceRecord{TKey, TValue}"/>
-        /// </summary>
-        /// <typeparam name="TKey">The type of the key to be inserted in Kafka</typeparam>
-        /// <typeparam name="TValue">The type of value to be inserted in Kafka</typeparam>
-        /// <param name="topic">The name of the topic; may be null</param>
-        /// <param name="partition">The partition number for the Kafka topic; may be null</param>
-        /// <param name="keySchema">The schema for the key; may be null</param>
-        /// <param name="key">The key; may be null</param>
-        /// <param name="valueSchema">The schema for the value; may be null</param>
-        /// <param name="value">The value; may be null</param>
-        /// <param name="sourcePartition">The parameter represents a single input sourcePartition that the record came from (e.g. a filename, table name, or topic-partition).</param>
-        /// <param name="sourceOffset">The parameter represents a position in that <paramref name="sourcePartition"/> which can be used to resume consumption of data.</param>
-        /// <returns>A newvly allocated <see cref="SourceRecord{TKey, TValue}"/></returns>
-        /// <remarks>These values can have arbitrary structure and should be represented using Org.Apache.Kafka.Connect.Data.* objects (or primitive values). </remarks>
+        /// <inheritdoc/>
         public SourceRecord<TKey, TValue> CreateRecord<TKey, TValue>(string topic, int? partition, Schema keySchema, TKey key, Schema valueSchema, TValue value, Map<Java.Lang.String, object> sourcePartition = null, Map<Java.Lang.String, object> sourceOffset = null)
         {
             return new SourceRecord<TKey, TValue>(sourcePartition, sourceOffset, topic, partition, keySchema, key, valueSchema, value);
         }
-        /// <summary>
-        /// Creates a new <see cref="SourceRecord{TKey, TValue}"/> and push it to JVM
-        /// </summary>
-        /// <typeparam name="TKey">The type of the key to be inserted in Kafka</typeparam>
-        /// <typeparam name="TValue">The type of value to be inserted in Kafka</typeparam>
-        /// <param name="topic">The name of the topic; may be null</param>
-        /// <param name="partition">The partition number for the Kafka topic; may be null</param>
-        /// <param name="keySchema">The schema for the key; may be null</param>
-        /// <param name="key">The key; may be null</param>
-        /// <param name="valueSchema">The schema for the value; may be null</param>
-        /// <param name="value">The value; may be null</param>
-        /// <param name="sourcePartition">The parameter represents a single input sourcePartition that the record came from (e.g. a filename, table name, or topic-partition).</param>
-        /// <param name="sourceOffset">The parameter represents a position in that <paramref name="sourcePartition"/> which can be used to resume consumption of data.</param>
-        /// <remarks>These values can have arbitrary structure and should be represented using Org.Apache.Kafka.Connect.Data.* objects (or primitive values). </remarks>
+        /// <inheritdoc/>
         public void CreateAndPushRecord<TKey, TValue>(string topic, int? partition, Schema keySchema, TKey key, Schema valueSchema, TValue value, Map<Java.Lang.String, object> sourcePartition = null, Map<Java.Lang.String, object> sourceOffset = null)
         {
             if (_arrayList == null) throw new InvalidOperationException($"The method cannot be invoked outside the body of {nameof(Poll)} method.");
             _arrayList.Add(CreateRecord<TKey, TValue>(topic, partition, keySchema, key, valueSchema, value, sourcePartition, sourceOffset));
         }
+        /// <inheritdoc/>
+        public void CreateAndPushRecordAsync<TKey, TValue>(string topic, int? partition, Schema keySchema, TKey key, Schema valueSchema, TValue value, Map<Java.Lang.String, object> sourcePartition = null, Map<Java.Lang.String, object> sourceOffset = null)
+        {
+            PushRecordAsync(CreateRecord<TKey, TValue>(topic, partition, keySchema, key, valueSchema, value, sourcePartition, sourceOffset));
+        }
 
-        /// <summary>
-        /// Creates a new <see cref="SourceRecord{TKey, TValue}"/>
-        /// </summary>
-        /// <typeparam name="TValue">The type of value to be inserted in Kafka</typeparam>
-        /// <param name="topic">The name of the topic; may be null</param>
-        /// <param name="valueSchema">The schema for the value; may be null</param>
-        /// <param name="value">The value; may be null</param>
-        /// <param name="timestamp">The timestamp; may be null</param>
-        /// <param name="sourcePartition">The parameter represents a single input sourcePartition that the record came from (e.g. a filename, table name, or topic-partition).</param>
-        /// <param name="sourceOffset">The parameter represents a position in that <paramref name="sourcePartition"/> which can be used to resume consumption of data.</param>
-        /// <returns>A newvly allocated <see cref="SourceRecord{TKey, TValue}"/></returns>
-        /// <remarks>These values can have arbitrary structure and should be represented using Org.Apache.Kafka.Connect.Data.* objects (or primitive values). </remarks>
+        /// <inheritdoc/>
         public SourceRecord<object, TValue> CreateRecord<TValue>(string topic, Schema valueSchema, TValue value, DateTime timestamp, Map<Java.Lang.String, object> sourcePartition = null, Map<Java.Lang.String, object> sourceOffset = null)
         {
             return new SourceRecord<object, TValue>(sourcePartition, sourceOffset, topic, null, null, null, valueSchema, value, timestamp);
         }
-        /// <summary>
-        /// Creates a new <see cref="SourceRecord{TKey, TValue}"/> and push it to JVM
-        /// </summary>
-        /// <typeparam name="TValue">The type of value to be inserted in Kafka</typeparam>
-        /// <param name="topic">The name of the topic; may be null</param>
-        /// <param name="valueSchema">The schema for the value; may be null</param>
-        /// <param name="value">The value; may be null</param>
-        /// <param name="timestamp">The timestamp; may be null</param>
-        /// <param name="sourcePartition">The parameter represents a single input sourcePartition that the record came from (e.g. a filename, table name, or topic-partition).</param>
-        /// <param name="sourceOffset">The parameter represents a position in that <paramref name="sourcePartition"/> which can be used to resume consumption of data.</param>
-        /// <remarks>These values can have arbitrary structure and should be represented using Org.Apache.Kafka.Connect.Data.* objects (or primitive values). </remarks>
+        /// <inheritdoc/>
         public void CreateAndPushRecord<TValue>(string topic, Schema valueSchema, TValue value, DateTime timestamp, Map<Java.Lang.String, object> sourcePartition = null, Map<Java.Lang.String, object> sourceOffset = null)
         {
             if (_arrayList == null) throw new InvalidOperationException($"The method cannot be invoked outside the body of {nameof(Poll)} method.");
             _arrayList.Add(CreateRecord<TValue>(topic, valueSchema, value, timestamp, sourcePartition, sourceOffset));
         }
+        /// <inheritdoc/>
+        public void CreateAndPushRecordAsync<TValue>(string topic, Schema valueSchema, TValue value, DateTime timestamp, Map<Java.Lang.String, object> sourcePartition = null, Map<Java.Lang.String, object> sourceOffset = null)
+        {
+            PushRecordAsync(CreateRecord<TValue>(topic, valueSchema, value, timestamp, sourcePartition, sourceOffset));
+        }
 
-        /// <summary>
-        /// Creates a new <see cref="SourceRecord{TKey, TValue}"/>
-        /// </summary>
-        /// <typeparam name="TValue">The type of value to be inserted in Kafka</typeparam>
-        /// <param name="topic">The name of the topic; may be null</param>
-        /// <param name="partition">The partition number for the Kafka topic; may be null</param>
-        /// <param name="valueSchema">The schema for the value; may be null</param>
-        /// <param name="value">The value; may be null</param>
-        /// <param name="timestamp">The timestamp; may be null</param>
-        /// <param name="sourcePartition">The parameter represents a single input sourcePartition that the record came from (e.g. a filename, table name, or topic-partition).</param>
-        /// <param name="sourceOffset">The parameter represents a position in that <paramref name="sourcePartition"/> which can be used to resume consumption of data.</param>
-        /// <returns>A newvly allocated <see cref="SourceRecord{TKey, TValue}"/></returns>
-        /// <remarks>These values can have arbitrary structure and should be represented using Org.Apache.Kafka.Connect.Data.* objects (or primitive values). </remarks>
+        /// <inheritdoc/>
         public SourceRecord<object, TValue> CreateRecord<TValue>(string topic, int? partition, Schema valueSchema, TValue value, DateTime timestamp, Map<Java.Lang.String, object> sourcePartition = null, Map<Java.Lang.String, object> sourceOffset = null)
         {
             return new SourceRecord<object, TValue>(sourcePartition, sourceOffset, topic, partition, null, null, valueSchema, value, timestamp);
         }
-        /// <summary>
-        /// Creates a new <see cref="SourceRecord{TKey, TValue}"/> and push it to JVM
-        /// </summary>
-        /// <typeparam name="TValue">The type of value to be inserted in Kafka</typeparam>
-        /// <param name="topic">The name of the topic; may be null</param>
-        /// <param name="partition">The partition number for the Kafka topic; may be null</param>
-        /// <param name="valueSchema">The schema for the value; may be null</param>
-        /// <param name="value">The value; may be null</param>
-        /// <param name="timestamp">The timestamp; may be null</param>
-        /// <param name="sourcePartition">The parameter represents a single input sourcePartition that the record came from (e.g. a filename, table name, or topic-partition).</param>
-        /// <param name="sourceOffset">The parameter represents a position in that <paramref name="sourcePartition"/> which can be used to resume consumption of data.</param>
-        /// <remarks>These values can have arbitrary structure and should be represented using Org.Apache.Kafka.Connect.Data.* objects (or primitive values). </remarks>
+        /// <inheritdoc/>
         public void CreateAndPushRecord<TValue>(string topic, int? partition, Schema valueSchema, TValue value, DateTime timestamp, Map<Java.Lang.String, object> sourcePartition = null, Map<Java.Lang.String, object> sourceOffset = null)
         {
             if (_arrayList == null) throw new InvalidOperationException($"The method cannot be invoked outside the body of {nameof(Poll)} method.");
             _arrayList.Add(CreateRecord<TValue>(topic, partition, valueSchema, value, timestamp, sourcePartition, sourceOffset));
         }
+        /// <inheritdoc/>
+        public void CreateAndPushRecordAsync<TValue>(string topic, int? partition, Schema valueSchema, TValue value, DateTime timestamp, Map<Java.Lang.String, object> sourcePartition = null, Map<Java.Lang.String, object> sourceOffset = null)
+        {
+            PushRecordAsync(CreateRecord<TValue>(topic, partition, valueSchema, value, timestamp, sourcePartition, sourceOffset));
+        }
 
-        /// <summary>
-        /// Creates a new <see cref="SourceRecord{TKey, TValue}"/>
-        /// </summary>
-        /// <typeparam name="TKey">The type of the key to be inserted in Kafka</typeparam>
-        /// <typeparam name="TValue">The type of value to be inserted in Kafka</typeparam>
-        /// <param name="topic">The name of the topic; may be null</param>
-        /// <param name="partition">The partition number for the Kafka topic; may be null</param>
-        /// <param name="keySchema">The schema for the key; may be null</param>
-        /// <param name="key">The key; may be null</param>
-        /// <param name="valueSchema">The schema for the value; may be null</param>
-        /// <param name="value">The value; may be null</param>
-        /// <param name="timestamp">The timestamp; may be null</param>
-        /// <param name="sourcePartition">The parameter represents a single input sourcePartition that the record came from (e.g. a filename, table name, or topic-partition).</param>
-        /// <param name="sourceOffset">The parameter represents a position in that <paramref name="sourcePartition"/> which can be used to resume consumption of data.</param>
-        /// <returns>A newvly allocated <see cref="SourceRecord{TKey, TValue}"/></returns>
-        /// <remarks>These values can have arbitrary structure and should be represented using Org.Apache.Kafka.Connect.Data.* objects (or primitive values). </remarks>
+        /// <inheritdoc/>
         public SourceRecord<TKey, TValue> CreateRecord<TKey, TValue>(string topic, int? partition, Schema keySchema, TKey key, Schema valueSchema, TValue value, DateTime timestamp, Map<Java.Lang.String, object> sourcePartition = null, Map<Java.Lang.String, object> sourceOffset = null)
         {
             return new SourceRecord<TKey, TValue>(sourcePartition, sourceOffset, topic, partition, keySchema, key, valueSchema, value, timestamp);
         }
-        /// <summary>
-        /// Creates a new <see cref="SourceRecord{TKey, TValue}"/> and push it to JVM
-        /// </summary>
-        /// <typeparam name="TKey">The type of the key to be inserted in Kafka</typeparam>
-        /// <typeparam name="TValue">The type of value to be inserted in Kafka</typeparam>
-        /// <param name="topic">The name of the topic; may be null</param>
-        /// <param name="partition">The partition number for the Kafka topic; may be null</param>
-        /// <param name="keySchema">The schema for the key; may be null</param>
-        /// <param name="key">The key; may be null</param>
-        /// <param name="valueSchema">The schema for the value; may be null</param>
-        /// <param name="value">The value; may be null</param>
-        /// <param name="timestamp">The timestamp; may be null</param>
-        /// <param name="sourcePartition">The parameter represents a single input sourcePartition that the record came from (e.g. a filename, table name, or topic-partition).</param>
-        /// <param name="sourceOffset">The parameter represents a position in that <paramref name="sourcePartition"/> which can be used to resume consumption of data.</param>
-        /// <remarks>These values can have arbitrary structure and should be represented using Org.Apache.Kafka.Connect.Data.* objects (or primitive values). </remarks>
+        /// <inheritdoc/>
         public void CreateAndPushRecord<TKey, TValue>(string topic, int? partition, Schema keySchema, TKey key, Schema valueSchema, TValue value, DateTime timestamp, Map<Java.Lang.String, object> sourcePartition = null, Map<Java.Lang.String, object> sourceOffset = null)
         {
             if (_arrayList == null) throw new InvalidOperationException($"The method cannot be invoked outside the body of {nameof(Poll)} method.");
             _arrayList.Add(CreateRecord<TKey, TValue>(topic, partition, keySchema, key, valueSchema, value, timestamp, sourcePartition, sourceOffset));
         }
+        /// <inheritdoc/>
+        public void CreateAndPushRecordAsync<TKey, TValue>(string topic, int? partition, Schema keySchema, TKey key, Schema valueSchema, TValue value, DateTime timestamp, Map<Java.Lang.String, object> sourcePartition = null, Map<Java.Lang.String, object> sourceOffset = null)
+        {
+            PushRecordAsync(CreateRecord<TKey, TValue>(topic, partition, keySchema, key, valueSchema, value, timestamp, sourcePartition, sourceOffset));
+        }
 
-        /// <summary>
-        /// Creates a new <see cref="SourceRecord{TKey, TValue}"/>
-        /// </summary>
-        /// <typeparam name="TKey">The type of the key to be inserted in Kafka</typeparam>
-        /// <typeparam name="TValue">The type of value to be inserted in Kafka</typeparam>
-        /// <param name="topic">The name of the topic; may be null</param>
-        /// <param name="partition">The partition number for the Kafka topic; may be null</param>
-        /// <param name="keySchema">The schema for the key; may be null</param>
-        /// <param name="key">The key; may be null</param>
-        /// <param name="valueSchema">The schema for the value; may be null</param>
-        /// <param name="value">The value; may be null</param>
-        /// <param name="timestamp">The timestamp; may be null</param>
-        /// <param name="headers">The <see cref="Headers"/>s; may be null or empty</param>
-        /// <param name="sourcePartition">The parameter represents a single input sourcePartition that the record came from (e.g. a filename, table name, or topic-partition).</param>
-        /// <param name="sourceOffset">The parameter represents a position in that <paramref name="sourcePartition"/> which can be used to resume consumption of data.</param>
-        /// <returns>A newvly allocated <see cref="SourceRecord{TKey, TValue}"/></returns>
-        /// <remarks>These values can have arbitrary structure and should be represented using Org.Apache.Kafka.Connect.Data.* objects (or primitive values). </remarks>
+        /// <inheritdoc/>
         public SourceRecord<TKey, TValue> CreateRecord<TKey, TValue>(string topic, int? partition, Schema keySchema, TKey key, Schema valueSchema, TValue value, DateTime timestamp, Headers headers, Map<Java.Lang.String, object> sourcePartition = null, Map<Java.Lang.String, object> sourceOffset = null)
         {
             return new SourceRecord<TKey, TValue>(sourcePartition, sourceOffset, topic, partition, keySchema, key, valueSchema, value, timestamp, headers);
         }
-        /// <summary>
-        /// Creates a new <see cref="SourceRecord{TKey, TValue}"/> and push it to JVM
-        /// </summary>
-        /// <typeparam name="TKey">The type of the key to be inserted in Kafka</typeparam>
-        /// <typeparam name="TValue">The type of value to be inserted in Kafka</typeparam>
-        /// <param name="topic">The name of the topic; may be null</param>
-        /// <param name="partition">The partition number for the Kafka topic; may be null</param>
-        /// <param name="keySchema">The schema for the key; may be null</param>
-        /// <param name="key">The key; may be null</param>
-        /// <param name="valueSchema">The schema for the value; may be null</param>
-        /// <param name="value">The value; may be null</param>
-        /// <param name="timestamp">The timestamp; may be null</param>
-        /// <param name="headers">The <see cref="Headers"/>s; may be null or empty</param>
-        /// <param name="sourcePartition">The parameter represents a single input sourcePartition that the record came from (e.g. a filename, table name, or topic-partition).</param>
-        /// <param name="sourceOffset">The parameter represents a position in that <paramref name="sourcePartition"/> which can be used to resume consumption of data.</param>
-        /// <remarks>These values can have arbitrary structure and should be represented using Org.Apache.Kafka.Connect.Data.* objects (or primitive values). </remarks>
+        /// <inheritdoc/>
         public void CreateAndPushRecord<TKey, TValue>(string topic, int? partition, Schema keySchema, TKey key, Schema valueSchema, TValue value, DateTime timestamp, Headers headers, Map<Java.Lang.String, object> sourcePartition = null, Map<Java.Lang.String, object> sourceOffset = null)
         {
             if (_arrayList == null) throw new InvalidOperationException($"The method cannot be invoked outside the body of {nameof(Poll)} method.");
             _arrayList.Add(CreateRecord<TKey, TValue>(topic, partition, keySchema, key, valueSchema, value, timestamp, headers, sourcePartition, sourceOffset));
         }
+        /// <inheritdoc/>
+        public void CreateAndPushRecordAsync<TKey, TValue>(string topic, int? partition, Schema keySchema, TKey key, Schema valueSchema, TValue value, DateTime timestamp, Headers headers, Map<Java.Lang.String, object> sourcePartition = null, Map<Java.Lang.String, object> sourceOffset = null)
+        {
+            PushRecordAsync(CreateRecord<TKey, TValue>(topic, partition, keySchema, key, valueSchema, value, timestamp, headers, sourcePartition, sourceOffset));
+        }
 
-        /// <summary>
-        /// Creates a new <see cref="SourceRecord{TKeySource, TOffset, TKey, TValue}"/>
-        /// </summary>
-        /// <typeparam name="TKey">The type of the key to be inserted in Kafka</typeparam>
-        /// <typeparam name="TValue">The type of value to be inserted in Kafka</typeparam>
-        /// <typeparam name="TKeySource">The type within <see cref="Map{String, TKeySource}"/> of <paramref name="sourcePartition"/></typeparam>
-        /// <typeparam name="TOffset">The type within <see cref="Map{String, TOffset}"/> of <paramref name="sourceOffset"/></typeparam>
-        /// <param name="sourcePartition">The parameter represents a single input sourcePartition that the record came from (e.g. a filename, table name, or topic-partition).</param>
-        /// <param name="sourceOffset">The parameter represents a position in that <paramref name="sourcePartition"/> which can be used to resume consumption of data.</param>
-        /// <param name="topic">The name of the topic; may be null</param>
-        /// <param name="partition">The partition number for the Kafka topic; may be null</param>
-        /// <param name="valueSchema">The schema for the value; may be null</param>
-        /// <param name="value">The value; may be null</param>
-        /// <returns>A newvly allocated <see cref="SourceRecord{TKeySource, TOffset, TKey, TValue}"/></returns>
-        /// <remarks>These values can have arbitrary structure and should be represented using Org.Apache.Kafka.Connect.Data.* objects (or primitive values). 
-        /// For example, a database connector might specify the <paramref name="sourcePartition"/> as a record containing { "db": "database_name", "table": "table_name"} and the <paramref name="sourceOffset"/> as a <see langword="long"/> containing the timestamp of the row.</remarks>
+        /// <inheritdoc/>
         public SourceRecord<TKeySource, TOffset, TKey, TValue> CreateRecord<TKeySource, TOffset, TKey, TValue>(Map<Java.Lang.String, TKeySource> sourcePartition, Map<Java.Lang.String, TOffset> sourceOffset, string topic, int? partition, Schema valueSchema, TValue value)
         {
             return new SourceRecord<TKeySource, TOffset, TKey, TValue>(sourcePartition, sourceOffset, topic, partition, valueSchema, value);
         }
-        /// <summary>
-        /// Creates a new <see cref="SourceRecord{TKeySource, TOffset, TKey, TValue}"/> and push it to JVM
-        /// </summary>
-        /// <typeparam name="TKey">The type of the key to be inserted in Kafka</typeparam>
-        /// <typeparam name="TValue">The type of value to be inserted in Kafka</typeparam>
-        /// <typeparam name="TKeySource">The type within <see cref="Map{String, TKeySource}"/> of <paramref name="sourcePartition"/></typeparam>
-        /// <typeparam name="TOffset">The type within <see cref="Map{String, TOffset}"/> of <paramref name="sourceOffset"/></typeparam>
-        /// <param name="sourcePartition">The parameter represents a single input sourcePartition that the record came from (e.g. a filename, table name, or topic-partition).</param>
-        /// <param name="sourceOffset">The parameter represents a position in that <paramref name="sourcePartition"/> which can be used to resume consumption of data.</param>
-        /// <param name="topic">The name of the topic; may be null</param>
-        /// <param name="partition">The partition number for the Kafka topic; may be null</param>
-        /// <param name="valueSchema">The schema for the value; may be null</param>
-        /// <param name="value">The value; may be null</param>
-        /// <remarks>These values can have arbitrary structure and should be represented using Org.Apache.Kafka.Connect.Data.* objects (or primitive values). 
-        /// For example, a database connector might specify the <paramref name="sourcePartition"/> as a record containing { "db": "database_name", "table": "table_name"} and the <paramref name="sourceOffset"/> as a <see langword="long"/> containing the timestamp of the row.</remarks>
+        /// <inheritdoc/>
         public void CreateAndPushRecord<TKeySource, TOffset, TKey, TValue>(Map<Java.Lang.String, TKeySource> sourcePartition, Map<Java.Lang.String, TOffset> sourceOffset, string topic, int? partition, Schema valueSchema, TValue value)
         {
             if (_arrayList == null) throw new InvalidOperationException($"The method cannot be invoked outside the body of {nameof(Poll)} method.");
             _arrayList.Add(CreateRecord<TKeySource, TOffset, TKey, TValue>(sourcePartition, sourceOffset, topic, partition, valueSchema, value));
         }
+        /// <inheritdoc/>
+        public void CreateAndPushRecordAsync<TKeySource, TOffset, TKey, TValue>(Map<Java.Lang.String, TKeySource> sourcePartition, Map<Java.Lang.String, TOffset> sourceOffset, string topic, int? partition, Schema valueSchema, TValue value)
+        {
+            PushRecordAsync(CreateRecord<TKeySource, TOffset, TKey, TValue>(sourcePartition, sourceOffset, topic, partition, valueSchema, value));
+        }
 
-        /// <summary>
-        /// Creates a new <see cref="SourceRecord{TKeySource, TOffset, TKey, TValue}"/>
-        /// </summary>
-        /// <typeparam name="TKey">The type within <see cref="Map{String, TKey}"/> of <paramref name="sourcePartition"/></typeparam>
-        /// <typeparam name="TValue">The type of value to be inserted in Kafka</typeparam>
-        /// <typeparam name="TKeySource">The type within <see cref="Map{String, TKeySource}"/> of <paramref name="sourcePartition"/></typeparam>
-        /// <typeparam name="TOffset">The type within <see cref="Map{String, TOffset}"/> of <paramref name="sourceOffset"/></typeparam>
-        /// <param name="sourcePartition">The parameter represents a single input sourcePartition that the record came from (e.g. a filename, table name, or topic-partition).</param>
-        /// <param name="sourceOffset">The parameter represents a position in that <paramref name="sourcePartition"/> which can be used to resume consumption of data.</param>
-        /// <param name="topic">The name of the topic; may be null</param>
-        /// <param name="valueSchema">The schema for the value; may be null</param>
-        /// <param name="value">The value; may be null</param>
-        /// <returns>A newvly allocated <see cref="SourceRecord{TKeySource, TOffset, TKey, TValue}"/></returns>
-        /// <remarks>These values can have arbitrary structure and should be represented using Org.Apache.Kafka.Connect.Data.* objects (or primitive values). 
-        /// For example, a database connector might specify the <paramref name="sourcePartition"/> as a record containing { "db": "database_name", "table": "table_name"} and the <paramref name="sourceOffset"/> as a <see langword="long"/> containing the timestamp of the row.</remarks>
+        /// <inheritdoc/>
         public SourceRecord<TKeySource, TOffset, TKey, TValue> CreateRecord<TKeySource, TOffset, TKey, TValue>(Map<Java.Lang.String, TKeySource> sourcePartition, Map<Java.Lang.String, TOffset> sourceOffset, string topic, Schema valueSchema, TValue value)
         {
             return new SourceRecord<TKeySource, TOffset, TKey, TValue>(sourcePartition, sourceOffset, topic, valueSchema, value);
         }
-        /// <summary>
-        /// Creates a new <see cref="SourceRecord{TKeySource, TOffset, TKey, TValue}"/> and push it to JVM
-        /// </summary>
-        /// <typeparam name="TKey">The type within <see cref="Map{String, TKey}"/> of <paramref name="sourcePartition"/></typeparam>
-        /// <typeparam name="TValue">The type of value to be inserted in Kafka</typeparam>
-        /// <typeparam name="TKeySource">The type within <see cref="Map{String, TKeySource}"/> of <paramref name="sourcePartition"/></typeparam>
-        /// <typeparam name="TOffset">The type within <see cref="Map{String, TOffset}"/> of <paramref name="sourceOffset"/></typeparam>
-        /// <param name="sourcePartition">The parameter represents a single input sourcePartition that the record came from (e.g. a filename, table name, or topic-partition).</param>
-        /// <param name="sourceOffset">The parameter represents a position in that <paramref name="sourcePartition"/> which can be used to resume consumption of data.</param>
-        /// <param name="topic">The name of the topic; may be null</param>
-        /// <param name="valueSchema">The schema for the value; may be null</param>
-        /// <param name="value">The value; may be null</param>
-        /// <remarks>These values can have arbitrary structure and should be represented using Org.Apache.Kafka.Connect.Data.* objects (or primitive values). 
-        /// For example, a database connector might specify the <paramref name="sourcePartition"/> as a record containing { "db": "database_name", "table": "table_name"} and the <paramref name="sourceOffset"/> as a <see langword="long"/> containing the timestamp of the row.</remarks>
+        /// <inheritdoc/>
         public void CreateAndPushRecord<TKeySource, TOffset, TKey, TValue>(Map<Java.Lang.String, TKeySource> sourcePartition, Map<Java.Lang.String, TOffset> sourceOffset, string topic, Schema valueSchema, TValue value)
         {
             if (_arrayList == null) throw new InvalidOperationException($"The method cannot be invoked outside the body of {nameof(Poll)} method.");
             _arrayList.Add(CreateRecord<TKeySource, TOffset, TKey, TValue>(sourcePartition, sourceOffset, topic, valueSchema, value));
         }
+        /// <inheritdoc/>
+        public void CreateAndPushRecordAsync<TKeySource, TOffset, TKey, TValue>(Map<Java.Lang.String, TKeySource> sourcePartition, Map<Java.Lang.String, TOffset> sourceOffset, string topic, Schema valueSchema, TValue value)
+        {
+            PushRecordAsync(CreateRecord<TKeySource, TOffset, TKey, TValue>(sourcePartition, sourceOffset, topic, valueSchema, value));
+        }
 
-        /// <summary>
-        /// Creates a new <see cref="SourceRecord{TKeySource, TOffset, TKey, TValue}"/>
-        /// </summary>
-        /// <typeparam name="TKey">The type within <see cref="Map{String, TKey}"/> of <paramref name="sourcePartition"/></typeparam>
-        /// <typeparam name="TValue">The type of value to be inserted in Kafka</typeparam>
-        /// <typeparam name="TKeySource">The type within <see cref="Map{String, TKeySource}"/> of <paramref name="sourcePartition"/></typeparam>
-        /// <typeparam name="TOffset">The type within <see cref="Map{String, TOffset}"/> of <paramref name="sourceOffset"/></typeparam>
-        /// <param name="sourcePartition">The parameter represents a single input sourcePartition that the record came from (e.g. a filename, table name, or topic-partition).</param>
-        /// <param name="sourceOffset">The parameter represents a position in that <paramref name="sourcePartition"/> which can be used to resume consumption of data.</param>
-        /// <param name="topic">The name of the topic; may be null</param>
-        /// <param name="keySchema">The schema for the key; may be null</param>
-        /// <param name="key">The key; may be null</param>
-        /// <param name="valueSchema">The schema for the value; may be null</param>
-        /// <param name="value">The value; may be null</param>
-        /// <returns>A newvly allocated <see cref="SourceRecord{TKeySource, TOffset, TKey, TValue}"/></returns>
-        /// <remarks>These values can have arbitrary structure and should be represented using Org.Apache.Kafka.Connect.Data.* objects (or primitive values). 
-        /// For example, a database connector might specify the <paramref name="sourcePartition"/> as a record containing { "db": "database_name", "table": "table_name"} and the <paramref name="sourceOffset"/> as a <see langword="long"/> containing the timestamp of the row.</remarks>
+        /// <inheritdoc/>
         public SourceRecord<TKeySource, TOffset, TKey, TValue> CreateRecord<TKeySource, TOffset, TKey, TValue>(Map<Java.Lang.String, TKeySource> sourcePartition, Map<Java.Lang.String, TOffset> sourceOffset, string topic, Schema keySchema, TKey key, Schema valueSchema, TValue value)
         {
             return new SourceRecord<TKeySource, TOffset, TKey, TValue>(sourcePartition, sourceOffset, topic, keySchema, key, valueSchema, value);
         }
-        /// <summary>
-        /// Creates a new <see cref="SourceRecord{TKeySource, TOffset, TKey, TValue}"/> and push it to JVM
-        /// </summary>
-        /// <typeparam name="TKey">The type within <see cref="Map{String, TKey}"/> of <paramref name="sourcePartition"/></typeparam>
-        /// <typeparam name="TValue">The type of value to be inserted in Kafka</typeparam>
-        /// <typeparam name="TKeySource">The type within <see cref="Map{String, TKeySource}"/> of <paramref name="sourcePartition"/></typeparam>
-        /// <typeparam name="TOffset">The type within <see cref="Map{String, TOffset}"/> of <paramref name="sourceOffset"/></typeparam>
-        /// <param name="sourcePartition">The parameter represents a single input sourcePartition that the record came from (e.g. a filename, table name, or topic-partition).</param>
-        /// <param name="sourceOffset">The parameter represents a position in that <paramref name="sourcePartition"/> which can be used to resume consumption of data.</param>
-        /// <param name="topic">The name of the topic; may be null</param>
-        /// <param name="keySchema">The schema for the key; may be null</param>
-        /// <param name="key">The key; may be null</param>
-        /// <param name="valueSchema">The schema for the value; may be null</param>
-        /// <param name="value">The value; may be null</param>
-        /// <remarks>These values can have arbitrary structure and should be represented using Org.Apache.Kafka.Connect.Data.* objects (or primitive values). 
-        /// For example, a database connector might specify the <paramref name="sourcePartition"/> as a record containing { "db": "database_name", "table": "table_name"} and the <paramref name="sourceOffset"/> as a <see langword="long"/> containing the timestamp of the row.</remarks>
+        /// <inheritdoc/>
         public void CreateAndPushRecord<TKeySource, TOffset, TKey, TValue>(Map<Java.Lang.String, TKeySource> sourcePartition, Map<Java.Lang.String, TOffset> sourceOffset, string topic, Schema keySchema, TKey key, Schema valueSchema, TValue value)
         {
             if (_arrayList == null) throw new InvalidOperationException($"The method cannot be invoked outside the body of {nameof(Poll)} method.");
             _arrayList.Add(CreateRecord<TKeySource, TOffset, TKey, TValue>(sourcePartition, sourceOffset, topic, keySchema, key, valueSchema, value));
         }
+        /// <inheritdoc/>
+        public void CreateAndPushRecordAsync<TKeySource, TOffset, TKey, TValue>(Map<Java.Lang.String, TKeySource> sourcePartition, Map<Java.Lang.String, TOffset> sourceOffset, string topic, Schema keySchema, TKey key, Schema valueSchema, TValue value)
+        {
+            PushRecordAsync(CreateRecord<TKeySource, TOffset, TKey, TValue>(sourcePartition, sourceOffset, topic, keySchema, key, valueSchema, value));
+        }
 
-        /// <summary>
-        /// Creates a new <see cref="SourceRecord{TKeySource, TOffset, TKey, TValue}"/>
-        /// </summary>
-        /// <typeparam name="TKey">The type within <see cref="Map{String, TKey}"/> of <paramref name="sourcePartition"/></typeparam>
-        /// <typeparam name="TValue">The type of value to be inserted in Kafka</typeparam>
-        /// <typeparam name="TKeySource">The type within <see cref="Map{String, TKeySource}"/> of <paramref name="sourcePartition"/></typeparam>
-        /// <typeparam name="TOffset">The type within <see cref="Map{String, TOffset}"/> of <paramref name="sourceOffset"/></typeparam>
-        /// <param name="sourcePartition">The parameter represents a single input sourcePartition that the record came from (e.g. a filename, table name, or topic-partition).</param>
-        /// <param name="sourceOffset">The parameter represents a position in that <paramref name="sourcePartition"/> which can be used to resume consumption of data.</param>
-        /// <param name="topic">The name of the topic; may be null</param>
-        /// <param name="partition">The partition number for the Kafka topic; may be null</param>
-        /// <param name="keySchema">The schema for the key; may be null</param>
-        /// <param name="key">The key; may be null</param>
-        /// <param name="valueSchema">The schema for the value; may be null</param>
-        /// <param name="value">The value; may be null</param>
-        /// <returns>A newvly allocated <see cref="SourceRecord{TKeySource, TOffset, TKey, TValue}"/></returns>
-        /// <remarks>These values can have arbitrary structure and should be represented using Org.Apache.Kafka.Connect.Data.* objects (or primitive values). 
-        /// For example, a database connector might specify the <paramref name="sourcePartition"/> as a record containing { "db": "database_name", "table": "table_name"} and the <paramref name="sourceOffset"/> as a <see langword="long"/> containing the timestamp of the row.</remarks>
+        /// <inheritdoc/>
         public SourceRecord<TKeySource, TOffset, TKey, TValue> CreateRecord<TKeySource, TOffset, TKey, TValue>(Map<Java.Lang.String, TKeySource> sourcePartition, Map<Java.Lang.String, TOffset> sourceOffset, string topic, int? partition, Schema keySchema, TKey key, Schema valueSchema, TValue value)
         {
             return new SourceRecord<TKeySource, TOffset, TKey, TValue>(sourcePartition, sourceOffset, topic, partition, keySchema, key, valueSchema, value);
         }
-        /// <summary>
-        /// Creates a new <see cref="SourceRecord{TKeySource, TOffset, TKey, TValue}"/> and push it to JVM
-        /// </summary>
-        /// <typeparam name="TKey">The type within <see cref="Map{String, TKey}"/> of <paramref name="sourcePartition"/></typeparam>
-        /// <typeparam name="TValue">The type of value to be inserted in Kafka</typeparam>
-        /// <typeparam name="TKeySource">The type within <see cref="Map{String, TKeySource}"/> of <paramref name="sourcePartition"/></typeparam>
-        /// <typeparam name="TOffset">The type within <see cref="Map{String, TOffset}"/> of <paramref name="sourceOffset"/></typeparam>
-        /// <param name="sourcePartition">The parameter represents a single input sourcePartition that the record came from (e.g. a filename, table name, or topic-partition).</param>
-        /// <param name="sourceOffset">The parameter represents a position in that <paramref name="sourcePartition"/> which can be used to resume consumption of data.</param>
-        /// <param name="topic">The name of the topic; may be null</param>
-        /// <param name="partition">The partition number for the Kafka topic; may be null</param>
-        /// <param name="keySchema">The schema for the key; may be null</param>
-        /// <param name="key">The key; may be null</param>
-        /// <param name="valueSchema">The schema for the value; may be null</param>
-        /// <param name="value">The value; may be null</param>
-        /// <remarks>These values can have arbitrary structure and should be represented using Org.Apache.Kafka.Connect.Data.* objects (or primitive values). 
-        /// For example, a database connector might specify the <paramref name="sourcePartition"/> as a record containing { "db": "database_name", "table": "table_name"} and the <paramref name="sourceOffset"/> as a <see langword="long"/> containing the timestamp of the row.</remarks>
+        /// <inheritdoc/>
         public void CreateAndPushRecord<TKeySource, TOffset, TKey, TValue>(Map<Java.Lang.String, TKeySource> sourcePartition, Map<Java.Lang.String, TOffset> sourceOffset, string topic, int? partition, Schema keySchema, TKey key, Schema valueSchema, TValue value)
         {
             if (_arrayList == null) throw new InvalidOperationException($"The method cannot be invoked outside the body of {nameof(Poll)} method.");
             _arrayList.Add(CreateRecord<TKeySource, TOffset, TKey, TValue>(sourcePartition, sourceOffset, topic, partition, keySchema, key, valueSchema, value));
         }
+        /// <inheritdoc/>
+        public void CreateAndPushRecordAsync<TKeySource, TOffset, TKey, TValue>(Map<Java.Lang.String, TKeySource> sourcePartition, Map<Java.Lang.String, TOffset> sourceOffset, string topic, int? partition, Schema keySchema, TKey key, Schema valueSchema, TValue value)
+        {
+            PushRecordAsync(CreateRecord<TKeySource, TOffset, TKey, TValue>(sourcePartition, sourceOffset, topic, partition, keySchema, key, valueSchema, value));
+        }
 
-        /// <summary>
-        /// Creates a new <see cref="SourceRecord{TKeySource, TOffset, TKey, TValue}"/>
-        /// </summary>
-        /// <typeparam name="TValue">The type of value to be inserted in Kafka</typeparam>
-        /// <typeparam name="TKeySource">The type within <see cref="Map{String, TKeySource}"/> of <paramref name="sourcePartition"/></typeparam>
-        /// <typeparam name="TOffset">The type within <see cref="Map{String, TOffset}"/> of <paramref name="sourceOffset"/></typeparam>
-        /// <param name="sourcePartition">The parameter represents a single input sourcePartition that the record came from (e.g. a filename, table name, or topic-partition).</param>
-        /// <param name="sourceOffset">The parameter represents a position in that <paramref name="sourcePartition"/> which can be used to resume consumption of data.</param>
-        /// <param name="topic">The name of the topic; may be null</param>
-        /// <param name="valueSchema">The schema for the value; may be null</param>
-        /// <param name="value">The value; may be null</param>
-        /// <param name="timestamp">The timestamp; may be null</param>
-        /// <returns>A newvly allocated <see cref="SourceRecord{TKeySource, TOffset, TKey, TValue}"/></returns>
-        /// <remarks>These values can have arbitrary structure and should be represented using Org.Apache.Kafka.Connect.Data.* objects (or primitive values). 
-        /// For example, a database connector might specify the <paramref name="sourcePartition"/> as a record containing { "db": "database_name", "table": "table_name"} and the <paramref name="sourceOffset"/> as a <see langword="long"/> containing the timestamp of the row.</remarks>
+        /// <inheritdoc/>
         public SourceRecord<TKeySource, TOffset, object, TValue> CreateRecord<TKeySource, TOffset, TValue>(Map<Java.Lang.String, TKeySource> sourcePartition, Map<Java.Lang.String, TOffset> sourceOffset, string topic, Schema valueSchema, TValue value, DateTime timestamp)
         {
             return new SourceRecord<TKeySource, TOffset, object, TValue>(sourcePartition, sourceOffset, topic, null, null, null, valueSchema, value, timestamp);
         }
-        /// <summary>
-        /// Creates a new <see cref="SourceRecord{TKeySource, TOffset, TKey, TValue}"/> and push it to JVM
-        /// </summary>
-        /// <typeparam name="TValue">The type of value to be inserted in Kafka</typeparam>
-        /// <typeparam name="TKeySource">The type within <see cref="Map{String, TKeySource}"/> of <paramref name="sourcePartition"/></typeparam>
-        /// <typeparam name="TOffset">The type within <see cref="Map{String, TOffset}"/> of <paramref name="sourceOffset"/></typeparam>
-        /// <param name="sourcePartition">The parameter represents a single input sourcePartition that the record came from (e.g. a filename, table name, or topic-partition).</param>
-        /// <param name="sourceOffset">The parameter represents a position in that <paramref name="sourcePartition"/> which can be used to resume consumption of data.</param>
-        /// <param name="topic">The name of the topic; may be null</param>
-        /// <param name="valueSchema">The schema for the value; may be null</param>
-        /// <param name="value">The value; may be null</param>
-        /// <param name="timestamp">The timestamp; may be null</param>
-        /// <remarks>These values can have arbitrary structure and should be represented using Org.Apache.Kafka.Connect.Data.* objects (or primitive values). 
-        /// For example, a database connector might specify the <paramref name="sourcePartition"/> as a record containing { "db": "database_name", "table": "table_name"} and the <paramref name="sourceOffset"/> as a <see langword="long"/> containing the timestamp of the row.</remarks>
+        /// <inheritdoc/>
         public void CreateAndPushRecord<TKeySource, TOffset, TValue>(Map<Java.Lang.String, TKeySource> sourcePartition, Map<Java.Lang.String, TOffset> sourceOffset, string topic, Schema valueSchema, TValue value, DateTime timestamp)
         {
             if (_arrayList == null) throw new InvalidOperationException($"The method cannot be invoked outside the body of {nameof(Poll)} method.");
             _arrayList.Add(CreateRecord<TKeySource, TOffset, TValue>(sourcePartition, sourceOffset, topic, valueSchema, value, timestamp));
         }
+        /// <inheritdoc/>
+        public void CreateAndPushRecordAsync<TKeySource, TOffset, TValue>(Map<Java.Lang.String, TKeySource> sourcePartition, Map<Java.Lang.String, TOffset> sourceOffset, string topic, Schema valueSchema, TValue value, DateTime timestamp)
+        {
+            PushRecordAsync(CreateRecord<TKeySource, TOffset, TValue>(sourcePartition, sourceOffset, topic, valueSchema, value, timestamp));
+        }
 
-        /// <summary>
-        /// Creates a new <see cref="SourceRecord{TKeySource, TOffset, TKey, TValue}"/>
-        /// </summary>
-        /// <typeparam name="TValue">The type of value to be inserted in Kafka</typeparam>
-        /// <typeparam name="TKeySource">The type within <see cref="Map{String, TKeySource}"/> of <paramref name="sourcePartition"/></typeparam>
-        /// <typeparam name="TOffset">The type within <see cref="Map{String, TOffset}"/> of <paramref name="sourceOffset"/></typeparam>
-        /// <param name="sourcePartition">The parameter represents a single input sourcePartition that the record came from (e.g. a filename, table name, or topic-partition).</param>
-        /// <param name="sourceOffset">The parameter represents a position in that <paramref name="sourcePartition"/> which can be used to resume consumption of data.</param>
-        /// <param name="topic">The name of the topic; may be null</param>
-        /// <param name="partition">The partition number for the Kafka topic; may be null</param>
-        /// <param name="valueSchema">The schema for the value; may be null</param>
-        /// <param name="value">The value; may be null</param>
-        /// <param name="timestamp">The timestamp; may be null</param>
-        /// <returns>A newvly allocated <see cref="SourceRecord{TKeySource, TOffset, TKey, TValue}"/></returns>
-        /// <remarks>These values can have arbitrary structure and should be represented using Org.Apache.Kafka.Connect.Data.* objects (or primitive values). 
-        /// For example, a database connector might specify the <paramref name="sourcePartition"/> as a record containing { "db": "database_name", "table": "table_name"} and the <paramref name="sourceOffset"/> as a <see langword="long"/> containing the timestamp of the row.</remarks>
+        /// <inheritdoc/>
         public SourceRecord<TKeySource, TOffset, object, TValue> CreateRecord<TKeySource, TOffset, TValue>(Map<Java.Lang.String, TKeySource> sourcePartition, Map<Java.Lang.String, TOffset> sourceOffset, string topic, int? partition, Schema valueSchema, TValue value, DateTime timestamp)
         {
             return new SourceRecord<TKeySource, TOffset, object, TValue>(sourcePartition, sourceOffset, topic, partition, null, null, valueSchema, value, timestamp);
         }
-        /// <summary>
-        /// Creates a new <see cref="SourceRecord{TKeySource, TOffset, TKey, TValue}"/> and push it to JVM
-        /// </summary>
-        /// <typeparam name="TValue">The type of value to be inserted in Kafka</typeparam>
-        /// <typeparam name="TKeySource">The type within <see cref="Map{String, TKeySource}"/> of <paramref name="sourcePartition"/></typeparam>
-        /// <typeparam name="TOffset">The type within <see cref="Map{String, TOffset}"/> of <paramref name="sourceOffset"/></typeparam>
-        /// <param name="sourcePartition">The parameter represents a single input sourcePartition that the record came from (e.g. a filename, table name, or topic-partition).</param>
-        /// <param name="sourceOffset">The parameter represents a position in that <paramref name="sourcePartition"/> which can be used to resume consumption of data.</param>
-        /// <param name="topic">The name of the topic; may be null</param>
-        /// <param name="partition">The partition number for the Kafka topic; may be null</param>
-        /// <param name="valueSchema">The schema for the value; may be null</param>
-        /// <param name="value">The value; may be null</param>
-        /// <param name="timestamp">The timestamp; may be null</param>
-        /// <remarks>These values can have arbitrary structure and should be represented using Org.Apache.Kafka.Connect.Data.* objects (or primitive values). 
-        /// For example, a database connector might specify the <paramref name="sourcePartition"/> as a record containing { "db": "database_name", "table": "table_name"} and the <paramref name="sourceOffset"/> as a <see langword="long"/> containing the timestamp of the row.</remarks>
+        /// <inheritdoc/>
         public void CreateAndPushRecord<TKeySource, TOffset, TValue>(Map<Java.Lang.String, TKeySource> sourcePartition, Map<Java.Lang.String, TOffset> sourceOffset, string topic, int? partition, Schema valueSchema, TValue value, DateTime timestamp)
         {
             if (_arrayList == null) throw new InvalidOperationException($"The method cannot be invoked outside the body of {nameof(Poll)} method.");
             _arrayList.Add(CreateRecord<TKeySource, TOffset, TValue>(sourcePartition, sourceOffset, topic, partition, valueSchema, value, timestamp));
         }
+        /// <inheritdoc/>
+        public void CreateAndPushRecordAsync<TKeySource, TOffset, TValue>(Map<Java.Lang.String, TKeySource> sourcePartition, Map<Java.Lang.String, TOffset> sourceOffset, string topic, int? partition, Schema valueSchema, TValue value, DateTime timestamp)
+        {
+            PushRecordAsync(CreateRecord<TKeySource, TOffset, TValue>(sourcePartition, sourceOffset, topic, partition, valueSchema, value, timestamp));
+        }
 
-        /// <summary>
-        /// Creates a new <see cref="SourceRecord{TKeySource, TOffset, TKey, TValue}"/>
-        /// </summary>
-        /// <typeparam name="TKey">The type within <see cref="Map{String, TKey}"/> of <paramref name="sourcePartition"/></typeparam>
-        /// <typeparam name="TValue">The type of value to be inserted in Kafka</typeparam>
-        /// <typeparam name="TKeySource">The type within <see cref="Map{String, TKeySource}"/> of <paramref name="sourcePartition"/></typeparam>
-        /// <typeparam name="TOffset">The type within <see cref="Map{String, TOffset}"/> of <paramref name="sourceOffset"/></typeparam>
-        /// <param name="sourcePartition">The parameter represents a single input sourcePartition that the record came from (e.g. a filename, table name, or topic-partition).</param>
-        /// <param name="sourceOffset">The parameter represents a position in that <paramref name="sourcePartition"/> which can be used to resume consumption of data.</param>
-        /// <param name="topic">The name of the topic; may be null</param>
-        /// <param name="partition">The partition number for the Kafka topic; may be null</param>
-        /// <param name="keySchema">The schema for the key; may be null</param>
-        /// <param name="key">The key; may be null</param>
-        /// <param name="valueSchema">The schema for the value; may be null</param>
-        /// <param name="value">The value; may be null</param>
-        /// <param name="timestamp">The timestamp; may be null</param>
-        /// <returns>A newvly allocated <see cref="SourceRecord{TKeySource, TOffset, TKey, TValue}"/></returns>
-        /// <remarks>These values can have arbitrary structure and should be represented using Org.Apache.Kafka.Connect.Data.* objects (or primitive values). 
-        /// For example, a database connector might specify the <paramref name="sourcePartition"/> as a record containing { "db": "database_name", "table": "table_name"} and the <paramref name="sourceOffset"/> as a <see langword="long"/> containing the timestamp of the row.</remarks>
+        /// <inheritdoc/>
         public SourceRecord<TKeySource, TOffset, TKey, TValue> CreateRecord<TKeySource, TOffset, TKey, TValue>(Map<Java.Lang.String, TKeySource> sourcePartition, Map<Java.Lang.String, TOffset> sourceOffset,
                                                                                                                string topic, int? partition,
                                                                                                                Schema keySchema, TKey key,
@@ -678,24 +1244,7 @@ namespace MASES.KNet.Connect
         {
             return new SourceRecord<TKeySource, TOffset, TKey, TValue>(sourcePartition, sourceOffset, topic, partition, keySchema, key, valueSchema, value, timestamp);
         }
-        /// <summary>
-        /// Creates a new <see cref="SourceRecord{TKeySource, TOffset, TKey, TValue}"/> and push it to JVM
-        /// </summary>
-        /// <typeparam name="TKey">The type within <see cref="Map{String, TKey}"/> of <paramref name="sourcePartition"/></typeparam>
-        /// <typeparam name="TValue">The type of value to be inserted in Kafka</typeparam>
-        /// <typeparam name="TKeySource">The type within <see cref="Map{String, TKeySource}"/> of <paramref name="sourcePartition"/></typeparam>
-        /// <typeparam name="TOffset">The type within <see cref="Map{String, TOffset}"/> of <paramref name="sourceOffset"/></typeparam>
-        /// <param name="sourcePartition">The parameter represents a single input sourcePartition that the record came from (e.g. a filename, table name, or topic-partition).</param>
-        /// <param name="sourceOffset">The parameter represents a position in that <paramref name="sourcePartition"/> which can be used to resume consumption of data.</param>
-        /// <param name="topic">The name of the topic; may be null</param>
-        /// <param name="partition">The partition number for the Kafka topic; may be null</param>
-        /// <param name="keySchema">The schema for the key; may be null</param>
-        /// <param name="key">The key; may be null</param>
-        /// <param name="valueSchema">The schema for the value; may be null</param>
-        /// <param name="value">The value; may be null</param>
-        /// <param name="timestamp">The timestamp; may be null</param>
-        /// <remarks>These values can have arbitrary structure and should be represented using Org.Apache.Kafka.Connect.Data.* objects (or primitive values). 
-        /// For example, a database connector might specify the <paramref name="sourcePartition"/> as a record containing { "db": "database_name", "table": "table_name"} and the <paramref name="sourceOffset"/> as a <see langword="long"/> containing the timestamp of the row.</remarks>
+        /// <inheritdoc/>
         public void CreateAndPushRecord<TKeySource, TOffset, TKey, TValue>(Map<Java.Lang.String, TKeySource> sourcePartition, Map<Java.Lang.String, TOffset> sourceOffset,
                                                                                                                string topic, int? partition,
                                                                                                                Schema keySchema, TKey key,
@@ -705,27 +1254,17 @@ namespace MASES.KNet.Connect
             if (_arrayList == null) throw new InvalidOperationException($"The method cannot be invoked outside the body of {nameof(Poll)} method.");
             _arrayList.Add(CreateRecord<TKeySource, TOffset, TKey, TValue>(sourcePartition, sourceOffset, topic, partition, keySchema, key, valueSchema, value, timestamp));
         }
+        /// <inheritdoc/>
+        public void CreateAndPushRecordAsync<TKeySource, TOffset, TKey, TValue>(Map<Java.Lang.String, TKeySource> sourcePartition, Map<Java.Lang.String, TOffset> sourceOffset,
+                                                                                                               string topic, int? partition,
+                                                                                                               Schema keySchema, TKey key,
+                                                                                                               Schema valueSchema, TValue value,
+                                                                                                               DateTime timestamp)
+        {
+            PushRecordAsync(CreateRecord<TKeySource, TOffset, TKey, TValue>(sourcePartition, sourceOffset, topic, partition, keySchema, key, valueSchema, value, timestamp));
+        }
 
-        /// <summary>
-        /// Creates a new <see cref="SourceRecord{TKeySource, TOffset, TKey, TValue}"/>
-        /// </summary>
-        /// <typeparam name="TKey">The type within <see cref="Map{String, TKey}"/> of <paramref name="sourcePartition"/></typeparam>
-        /// <typeparam name="TValue">The type of value to be inserted in Kafka</typeparam>
-        /// <typeparam name="TKeySource">The type within <see cref="Map{String, TKeySource}"/> of <paramref name="sourcePartition"/></typeparam>
-        /// <typeparam name="TOffset">The type within <see cref="Map{String, TOffset}"/> of <paramref name="sourceOffset"/></typeparam>
-        /// <param name="sourcePartition">The parameter represents a single input sourcePartition that the record came from (e.g. a filename, table name, or topic-partition).</param>
-        /// <param name="sourceOffset">The parameter represents a position in that <paramref name="sourcePartition"/> which can be used to resume consumption of data.</param>
-        /// <param name="topic">The name of the topic; may be null</param>
-        /// <param name="partition">The partition number for the Kafka topic; may be null</param>
-        /// <param name="keySchema">The schema for the key; may be null</param>
-        /// <param name="key">The key; may be null</param>
-        /// <param name="valueSchema">The schema for the value; may be null</param>
-        /// <param name="value">The value; may be null</param>
-        /// <param name="timestamp">The timestamp; may be null</param>
-        /// <param name="headers">The <see cref="Headers"/>s; may be null or empty</param>
-        /// <returns>A newvly allocated <see cref="SourceRecord{TKeySource, TOffset, TKey, TValue}"/></returns>
-        /// <remarks>These values can have arbitrary structure and should be represented using Org.Apache.Kafka.Connect.Data.* objects (or primitive values). 
-        /// For example, a database connector might specify the <paramref name="sourcePartition"/> as a record containing { "db": "database_name", "table": "table_name"} and the <paramref name="sourceOffset"/> as a <see langword="long"/> containing the timestamp of the row.</remarks>
+        /// <inheritdoc/>
         public SourceRecord<TKeySource, TOffset, TKey, TValue> CreateRecord<TKeySource, TOffset, TKey, TValue>(Map<Java.Lang.String, TKeySource> sourcePartition, Map<Java.Lang.String, TOffset> sourceOffset,
                                                                                                                string topic, int? partition,
                                                                                                                Schema keySchema, TKey key,
@@ -734,25 +1273,7 @@ namespace MASES.KNet.Connect
         {
             return new SourceRecord<TKeySource, TOffset, TKey, TValue>(sourcePartition, sourceOffset, topic, partition, keySchema, key, valueSchema, value, timestamp, headers);
         }
-        /// <summary>
-        /// Creates a new <see cref="SourceRecord{TKeySource, TOffset, TKey, TValue}"/> and push it to JVM
-        /// </summary>
-        /// <typeparam name="TKey">The type within <see cref="Map{String, TKey}"/> of <paramref name="sourcePartition"/></typeparam>
-        /// <typeparam name="TValue">The type of value to be inserted in Kafka</typeparam>
-        /// <typeparam name="TKeySource">The type within <see cref="Map{String, TKeySource}"/> of <paramref name="sourcePartition"/></typeparam>
-        /// <typeparam name="TOffset">The type within <see cref="Map{String, TOffset}"/> of <paramref name="sourceOffset"/></typeparam>
-        /// <param name="sourcePartition">The parameter represents a single input sourcePartition that the record came from (e.g. a filename, table name, or topic-partition).</param>
-        /// <param name="sourceOffset">The parameter represents a position in that <paramref name="sourcePartition"/> which can be used to resume consumption of data.</param>
-        /// <param name="topic">The name of the topic; may be null</param>
-        /// <param name="partition">The partition number for the Kafka topic; may be null</param>
-        /// <param name="keySchema">The schema for the key; may be null</param>
-        /// <param name="key">The key; may be null</param>
-        /// <param name="valueSchema">The schema for the value; may be null</param>
-        /// <param name="value">The value; may be null</param>
-        /// <param name="timestamp">The timestamp; may be null</param>
-        /// <param name="headers">The <see cref="Headers"/>s; may be null or empty</param>
-        /// <remarks>These values can have arbitrary structure and should be represented using Org.Apache.Kafka.Connect.Data.* objects (or primitive values). 
-        /// For example, a database connector might specify the <paramref name="sourcePartition"/> as a record containing { "db": "database_name", "table": "table_name"} and the <paramref name="sourceOffset"/> as a <see langword="long"/> containing the timestamp of the row.</remarks>
+        /// <inheritdoc/>
         public void CreateAndPushRecord<TKeySource, TOffset, TKey, TValue>(Map<Java.Lang.String, TKeySource> sourcePartition, Map<Java.Lang.String, TOffset> sourceOffset,
                                                                                                                string topic, int? partition,
                                                                                                                Schema keySchema, TKey key,
@@ -762,5 +1283,16 @@ namespace MASES.KNet.Connect
             if (_arrayList == null) throw new InvalidOperationException($"The method cannot be invoked outside the body of {nameof(Poll)} method.");
             _arrayList.Add(CreateRecord<TKeySource, TOffset, TKey, TValue>(sourcePartition, sourceOffset, topic, partition, keySchema, key, valueSchema, value, timestamp, headers));
         }
+        /// <inheritdoc/>
+        public void CreateAndPushRecordAsync<TKeySource, TOffset, TKey, TValue>(Map<Java.Lang.String, TKeySource> sourcePartition, Map<Java.Lang.String, TOffset> sourceOffset,
+                                                                                                               string topic, int? partition,
+                                                                                                               Schema keySchema, TKey key,
+                                                                                                               Schema valueSchema, TValue value,
+                                                                                                               DateTime timestamp, Headers headers)
+        {
+            PushRecordAsync(CreateRecord<TKeySource, TOffset, TKey, TValue>(sourcePartition, sourceOffset, topic, partition, keySchema, key, valueSchema, value, timestamp, headers));
+        }
     }
+
+    #endregion
 }

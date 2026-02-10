@@ -23,23 +23,37 @@ using System;
 
 namespace MASES.KNet.Connect
 {
+    #region IKNetSinkConnector
+    /// <summary>
+    /// Helper interface for <see cref="KNetSinkConnector{TSinkConnector, TTask}"/>
+    /// </summary>
+    public interface IKNetSinkConnector : IKNetConnector
+    {
+        /// <summary>
+        /// The <see cref="SinkConnectorContext"/>
+        /// </summary>
+        SinkConnectorContext Context { get; }
+    }
+
+    #endregion
+
+    #region KNetSinkConnector<TSinkConnector, TTask>
+
     /// <summary>
     /// An implementation of <see cref="KNetConnector{TSinkConnector}"/> for sink connectors
     /// </summary>
     /// <typeparam name="TSinkConnector">The connector class inherited from <see cref="KNetSinkConnector{TSinkConnector, TTask}"/></typeparam>
     /// <typeparam name="TTask">The task class inherited from <see cref="KNetSinkTask{TTask}"/></typeparam>
-    public abstract class KNetSinkConnector<TSinkConnector, TTask> : KNetConnector<TSinkConnector>
+    public abstract class KNetSinkConnector<TSinkConnector, TTask> : KNetConnector<TSinkConnector>, IKNetSinkConnector
         where TSinkConnector : KNetSinkConnector<TSinkConnector, TTask>
         where TTask : KNetSinkTask<TTask>
     {
-        /// <summary>
-        /// The <see cref="SinkConnectorContext"/>
-        /// </summary>
+        /// <inheritdoc/>
         public SinkConnectorContext Context => Context<SinkConnectorContext>();
         /// <summary>
         /// Set the <see cref="ReflectedRemoteObjectClassName"/> of the connector to a fixed value
         /// </summary>
-        public sealed override string ReflectedRemoteObjectClassName => "KNetSinkConnector";
+        protected sealed override string ReflectedRemoteObjectClassName => "KNetSinkConnector";
         /// <summary>
         /// Set the <see cref="IKNetConnector.TaskClassType"/> of the connector to the value defined from <typeparamref name="TTask"/>
         /// </summary>
@@ -47,6 +61,7 @@ namespace MASES.KNet.Connect
         /// <summary>
         /// Public method used from Java to trigger <see cref="AlterOffsets(Map{Java.Lang.String, Java.Lang.String}, Map{Org.Apache.Kafka.Common.TopicPartition, Long})"/>
         /// </summary>
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
         public bool AlterOffsetsInternal(Map<Java.Lang.String, Java.Lang.String> connectorConfig, Map<Org.Apache.Kafka.Common.TopicPartition, Long> offsets)
         {
             return AlterOffsets(connectorConfig, offsets);
@@ -69,4 +84,5 @@ namespace MASES.KNet.Connect
             return false;
         }
     }
+    #endregion
 }
