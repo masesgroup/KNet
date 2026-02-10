@@ -151,7 +151,7 @@ public class KNetSourceTask extends SourceTask implements KNetConnectLogging, KN
                     }
                 }
                 size = _sourceList.size();
-                return _sourceList;
+                return (size != 0) ? _sourceList : null;
             } finally {
                 dataToExchange = null;
                 if (size != 0) {
