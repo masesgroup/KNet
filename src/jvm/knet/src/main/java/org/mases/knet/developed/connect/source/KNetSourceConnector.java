@@ -24,6 +24,7 @@ import org.apache.kafka.connect.connector.Task;
 import org.apache.kafka.connect.errors.ConnectException;
 import org.apache.kafka.connect.source.*;
 import org.mases.jcobridge.*;
+import org.mases.knet.developed.connect.KNetConnectDataExchange;
 import org.mases.knet.developed.connect.KNetConnectInitializer;
 import org.mases.knet.developed.connect.KNetConnectLogging;
 import org.mases.knet.developed.connect.KNetConnectProxy;
@@ -36,7 +37,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class KNetSourceConnector extends SourceConnector implements KNetConnectLogging, KNetConnectInitializer {
+public class KNetSourceConnector extends SourceConnector implements KNetConnectLogging, KNetConnectInitializer, KNetConnectDataExchange {
     private static final Logger log = LoggerFactory.getLogger(KNetSourceConnector.class);
 
     private static final String registrationName = "KNetSourceConnector";

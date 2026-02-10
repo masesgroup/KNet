@@ -18,17 +18,41 @@
 
 using Java.Lang;
 using Java.Util;
+using Org.Apache.Kafka.Connect.Sink;
 using Org.Apache.Kafka.Connect.Source;
 using System;
 
 namespace MASES.KNet.Connect
 {
+    #region IKNetSourceConnector
+    /// <summary>
+    /// Helper interface for <see cref="KNetSourceConnector{TSinkConnector, TTask}"/>
+    /// </summary>
+    public interface IKNetSourceConnector : IKNetConnector
+    {
+        /// <summary>
+        /// The <see cref="SourceConnectorContext"/>
+        /// </summary>
+        SourceConnectorContext Context { get; }
+        /// <summary>
+        /// Implement the method to return the <see cref="ExactlyOnceSupport"/> value
+        /// </summary>
+        ExactlyOnceSupport ExactlyOnceSupport { get; }
+        /// <summary>
+        /// Implement the method to return the <see cref="ConnectorTransactionBoundaries"/> value
+        /// </summary>
+        ConnectorTransactionBoundaries CanDefineTransactionBoundaries { get; }
+    }
+    #endregion
+
+    #region KNetSourceConnector<TSourceConnector, TTask>
+
     /// <summary>
     /// An implementation of <see cref="KNetConnector{TSourceConnector}"/> for source connectors
     /// </summary>
-    /// <typeparam name="TSourceConnector">The connector class inherited from <see cref="KNetSinkConnector{TSourceConnector, TTask}"/></typeparam>
+    /// <typeparam name="TSourceConnector">The connector class inherited from <see cref="KNetSourceConnector{TSourceConnector, TTask}"/></typeparam>
     /// <typeparam name="TTask">The task class inherited from <see cref="KNetSourceTask{TTask}"/></typeparam>
-    public abstract class KNetSourceConnector<TSourceConnector, TTask> : KNetConnector<TSourceConnector>
+    public abstract class KNetSourceConnector<TSourceConnector, TTask> : KNetConnector<TSourceConnector>, IKNetSourceConnector
         where TSourceConnector : KNetSourceConnector<TSourceConnector, TTask>
         where TTask : KNetSourceTask<TTask>
     {
@@ -40,31 +64,29 @@ namespace MASES.KNet.Connect
         /// <summary>
         /// Public method used from Java to trigger <see cref="ExactlyOnceSupport"/>
         /// </summary>
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
         public ExactlyOnceSupport ExactlyOnceSupportInternal()
         {
             return ExactlyOnceSupport;
         }
-        /// <summary>
-        /// Implement the method to return the <see cref="ExactlyOnceSupport"/> value
-        /// </summary>
+        /// <inheritdoc/>
         public virtual ExactlyOnceSupport ExactlyOnceSupport => ExactlyOnceSupport.UNSUPPORTED;
 
         /// <summary>
         /// Public method used from Java to trigger <see cref="CanDefineTransactionBoundaries"/>
         /// </summary>
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
         public ConnectorTransactionBoundaries CanDefineTransactionBoundariesInternal()
         {
-            return CanDefineTransactionBoundaries();
+            return CanDefineTransactionBoundaries;
         }
-        /// <summary>
-        /// Implement the method to return the <see cref="ConnectorTransactionBoundaries"/> value
-        /// </summary>
-        public virtual ConnectorTransactionBoundaries CanDefineTransactionBoundaries() => ConnectorTransactionBoundaries.UNSUPPORTED;
+        /// <inheritdoc/>
+        public virtual ConnectorTransactionBoundaries CanDefineTransactionBoundaries => ConnectorTransactionBoundaries.UNSUPPORTED;
 
         /// <summary>
         /// Set the <see cref="ReflectedRemoteObjectClassName"/> of the connector to a fixed value
         /// </summary>
-        public sealed override string ReflectedRemoteObjectClassName => "KNetSourceConnector";
+        protected sealed override string ReflectedRemoteObjectClassName => "KNetSourceConnector";
         /// <summary>
         /// Set the <see cref="TaskClassType"/> of the connector to the value defined from <typeparamref name="TTask"/>
         /// </summary>
@@ -72,6 +94,7 @@ namespace MASES.KNet.Connect
         /// <summary>
         /// Public method used from Java to trigger <see cref="AlterOffsets(Map{Java.Lang.String, Java.Lang.String}, Map{Map{Java.Lang.String, object}, Map{Java.Lang.String, object}})"/>
         /// </summary>
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
         public bool AlterOffsetsInternal(Map<Java.Lang.String, Java.Lang.String> connectorConfig, Map<Map<Java.Lang.String, object>, Map<Java.Lang.String, object>> offsets)
         {
             return AlterOffsets(connectorConfig, offsets);
@@ -95,4 +118,5 @@ namespace MASES.KNet.Connect
             return false;
         }
     }
+    #endregion
 }

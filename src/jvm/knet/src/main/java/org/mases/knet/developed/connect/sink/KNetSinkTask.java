@@ -23,6 +23,7 @@ import org.apache.kafka.connect.sink.SinkRecord;
 import org.apache.kafka.connect.sink.SinkTask;
 import org.apache.kafka.connect.sink.SinkTaskContext;
 import org.mases.jcobridge.*;
+import org.mases.knet.developed.connect.KNetConnectDataExchange;
 import org.mases.knet.developed.connect.KNetConnectLogging;
 import org.mases.knet.developed.connect.KNetConnectProxy;
 import org.slf4j.Logger;
@@ -32,7 +33,7 @@ import java.io.IOException;
 import java.util.Collection;
 import java.util.Map;
 
-public class KNetSinkTask extends SinkTask implements KNetConnectLogging {
+public class KNetSinkTask extends SinkTask implements KNetConnectLogging, KNetConnectDataExchange {
     private static final Logger log = LoggerFactory.getLogger(KNetSinkTask.class);
 
     private static final String registrationName = "KNetSinkTask";

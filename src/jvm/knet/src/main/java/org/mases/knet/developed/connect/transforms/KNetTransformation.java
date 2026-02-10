@@ -23,6 +23,7 @@ import org.apache.kafka.connect.errors.ConnectException;
 import org.apache.kafka.connect.components.Versioned;
 import org.apache.kafka.connect.connector.ConnectRecord;
 import org.apache.kafka.connect.transforms.Transformation;
+import org.mases.knet.developed.connect.KNetConnectDataExchange;
 import org.mases.knet.developed.connect.KNetConnectInitializer;
 import org.mases.knet.developed.connect.KNetConnectLogging;
 import org.mases.knet.developed.connect.KNetConnectProxy;
@@ -33,7 +34,7 @@ import org.slf4j.LoggerFactory;
 import java.io.IOException;
 import java.util.Map;
 
-public class KNetTransformation<R extends ConnectRecord<R>> implements Transformation<R>, Versioned, KNetConnectLogging, KNetConnectInitializer {
+public class KNetTransformation<R extends ConnectRecord<R>> implements Transformation<R>, Versioned, KNetConnectLogging, KNetConnectInitializer, KNetConnectDataExchange {
     private static final Logger log = LoggerFactory.getLogger(KNetTransformation.class);
 
     private static final String registrationName = "KNetTransformation";

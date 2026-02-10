@@ -26,10 +26,38 @@ using Org.Apache.Kafka.Connect.Connector;
 using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
+using System.Xml;
 
 namespace MASES.KNet.Connect
 {
-   
+    #region IKNetCommon
+    /// <summary>
+    /// Helper interface for <see cref="KNetCommon"/>
+    /// </summary>
+    public interface IKNetCommon : IKNetConnectLogging
+    {
+        /// <summary>
+        /// An helper function to execute operation in the Java side
+        /// </summary>
+        /// <param name="method">Method name to be invoked</param>
+        /// <param name="args">Arguments of the <paramref name="method"/> to be invoked</param>
+        /// <exception cref="InvalidOperationException"> </exception>
+        void ExecuteOnRemote(string method, params object[] args);
+
+        /// <summary>
+        /// An helper function to read the data from Java side
+        /// </summary>
+        /// <typeparam name="T">The expected return <see cref="Type"/></typeparam>
+        /// <param name="method">Method name to be invoked</param>
+        /// <param name="args">Arguments of the <paramref name="method"/> to be invoked</param>
+        /// <returns>The <typeparamref name="T"/></returns>
+        /// <exception cref="InvalidOperationException"> </exception>
+        T ExecuteOnRemote<T>(string method, params object[] args);
+    }
+    #endregion
+
+    #region KNetCommon
+
     /// <summary>
     /// The generic class which is the base of the KNet Connect SDK classes
     /// </summary>
@@ -37,13 +65,13 @@ namespace MASES.KNet.Connect
     {
         string _uniqueId = null;
 
-        IJavaObject reflectedConnector = null;
+        IJavaObject reflectedConnectorOrTask = null;
 
         /// <summary>
         /// Initialize the <paramref name="uniqueId"/> and register itself
         /// </summary>
         /// <param name="uniqueId"></param>
-        public void Register(string uniqueId = null)
+        internal void Register(string uniqueId = null)
         {
             _uniqueId = uniqueId;
             KNetConnectProxy.RegisterCLRGlobal(UniqueId, this);
@@ -52,7 +80,7 @@ namespace MASES.KNet.Connect
         /// <summary>
         /// Unregister itself
         /// </summary>
-        public void Unregister()
+        internal void Unregister()
         {
             KNetConnectProxy.UnregisterCLRGlobal(UniqueId);
         }
@@ -68,10 +96,10 @@ namespace MASES.KNet.Connect
         /// <param name="method">Method name to be invoked</param>
         /// <param name="args">Arguments of the <paramref name="method"/> to be invoked</param>
         /// <exception cref="InvalidOperationException"> </exception>
-        protected void ExecuteOnRemote(string method, params object[] args)
+        public void ExecuteOnRemote(string method, params object[] args)
         {
-            reflectedConnector ??= KNetConnectProxy.GetJVMGlobal(UniqueId);
-            if (reflectedConnector != null) reflectedConnector.Invoke(method, args);
+            reflectedConnectorOrTask ??= KNetConnectProxy.GetJVMGlobal(UniqueId);
+            if (reflectedConnectorOrTask != null) reflectedConnectorOrTask.Invoke(method, args);
             else throw new InvalidOperationException($"{UniqueId} was not registered in global JVM");
         }
 
@@ -83,10 +111,10 @@ namespace MASES.KNet.Connect
         /// <param name="args">Arguments of the <paramref name="method"/> to be invoked</param>
         /// <returns>The <typeparamref name="T"/></returns>
         /// <exception cref="InvalidOperationException"> </exception>
-        protected T ExecuteOnRemote<T>(string method, params object[] args)
+        public T ExecuteOnRemote<T>(string method, params object[] args)
         {
-            reflectedConnector ??= KNetConnectProxy.GetJVMGlobal(UniqueId);
-            return (reflectedConnector != null) ? reflectedConnector.Invoke<T>(method, args) : throw new InvalidOperationException($"{UniqueId} was not registered in global JVM");
+            reflectedConnectorOrTask ??= KNetConnectProxy.GetJVMGlobal(UniqueId);
+            return (reflectedConnectorOrTask != null) ? reflectedConnectorOrTask.Invoke<T>(method, args) : throw new InvalidOperationException($"{UniqueId} was not registered in global JVM");
         }
 
         /// <summary>
@@ -105,11 +133,11 @@ namespace MASES.KNet.Connect
         /// <exception cref="InvalidOperationException"> </exception>
         protected void DataToExchange(object data)
         {
-            reflectedConnector ??= KNetConnectProxy.GetJVMGlobal(UniqueId);
-            if (reflectedConnector != null)
+            reflectedConnectorOrTask ??= KNetConnectProxy.GetJVMGlobal(UniqueId);
+            if (reflectedConnectorOrTask != null)
             {
                 IJVMBridgeBase jvmBBD = data as IJVMBridgeBase;
-                reflectedConnector.Invoke("setDataToExchange", jvmBBD != null ? jvmBBD.BridgeInstance : data);
+                reflectedConnectorOrTask.Invoke("setDataToExchange", jvmBBD != null ? jvmBBD.BridgeInstance : data);
             }
             else
             {
@@ -120,7 +148,7 @@ namespace MASES.KNet.Connect
         /// <summary>
         /// The unique name used to map objects between JVM and .NET
         /// </summary>
-        public abstract string ReflectedRemoteObjectClassName { get; }
+        protected abstract string ReflectedRemoteObjectClassName { get; }
 
         #region IKNetConnectLogging
         /// <inheritdoc cref="IKNetConnectLogging.IsTraceEnabled"/>
@@ -155,4 +183,6 @@ namespace MASES.KNet.Connect
         public void LogError(string var1, JVMBridgeException var2) => ExecuteOnRemote("error", var1, var2.BridgeInstance);
         #endregion
     }
+
+    #endregion
 }
