@@ -29,6 +29,7 @@ using System.Collections.Generic;
 
 namespace MASES.KNet.Connect
 {
+    #region IVersion
     /// <summary>
     /// .NET interface for <see cref="IConnector"/>
     /// </summary>
@@ -39,6 +40,9 @@ namespace MASES.KNet.Connect
         /// </summary>
         string Version();
     }
+    #endregion
+
+    #region IConnector
     /// <summary>
     /// .NET interface for <see cref="Connector"/>
     /// </summary>
@@ -63,11 +67,13 @@ namespace MASES.KNet.Connect
         /// <inheritdoc cref="Connector.Config"/>
         ConfigDef Config();
     }
+    #endregion
 
+    #region IKNetConnector
     /// <summary>
     /// Specific implementation of <see cref="IConnector"/> to support KNet Connect SDK
     /// </summary>
-    public interface IKNetConnector : IConnector
+    public interface IKNetConnector : IKNetCommon, IConnector
     {
         /// <summary>
         /// The properties retrieved from <see cref="KNetConnector.StartInternal"/>
@@ -104,6 +110,9 @@ namespace MASES.KNet.Connect
         /// To configure all <paramref name="maxTasks"/> return always <see langword="false"/>.</remarks>
         bool TaskConfigs(int currentTask, int maxTasks, IDictionary<string, string> config);
     }
+    #endregion
+
+    #region KNetConnector
     /// <summary>
     /// The generic class which is the base of both source or sink connectors
     /// </summary>
@@ -138,6 +147,12 @@ namespace MASES.KNet.Connect
                 return knetTask;
             });
         }
+
+        internal void DeallocateTask(long taskId)
+        {
+            taskDictionary.TryRemove(taskId, out var knetTask);
+        }
+
         /// <inheritdoc cref="IKNetConnector.ConnectorName"/>
         public abstract string ConnectorName { get; }
         /// <inheritdoc cref="IKNetConnector.TaskClassType"/>
@@ -155,6 +170,7 @@ namespace MASES.KNet.Connect
         /// <summary>
         /// Public method used from Java to trigger <see cref="Start(Map{Java.Lang.String, Java.Lang.String})"/>
         /// </summary>
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
         public void StartInternal()
         {
             Map<Java.Lang.String, Java.Lang.String> props = DataToExchange<Map<Java.Lang.String, Java.Lang.String>>();
@@ -186,6 +202,7 @@ namespace MASES.KNet.Connect
         /// <summary>
         /// Public method used from Java to trigger <see cref="TaskConfigs(int, int, IDictionary{string, string})"/>
         /// </summary>
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
         public bool TaskConfigsInternal(int currentTask, int maxTasks)
         {
             Map<Java.Lang.String, Java.Lang.String> props = DataToExchange<Map<Java.Lang.String, Java.Lang.String>>();
@@ -220,6 +237,7 @@ namespace MASES.KNet.Connect
         /// <summary>
         /// Public method used from Java to trigger <see cref="Stop"/>
         /// </summary>
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
         public void StopInternal()
         {
             Stop();
@@ -244,6 +262,10 @@ namespace MASES.KNet.Connect
         /// <exception cref="NotImplementedException">Invoked in Java before any initialization</exception>
         public string Version() => throw new NotImplementedException("Invoked in Java before any initialization.");
     }
+    #endregion
+
+    #region KNetConnector<TConnector>
+
     /// <summary>
     /// The base connector class which is the base of both source or sink connectors and receives information about implementing class with <typeparamref name="TConnector"/> 
     /// </summary>
@@ -256,4 +278,5 @@ namespace MASES.KNet.Connect
         /// </summary>
         public override string ConnectorName => typeof(TConnector).FullName;
     }
+    #endregion
 }

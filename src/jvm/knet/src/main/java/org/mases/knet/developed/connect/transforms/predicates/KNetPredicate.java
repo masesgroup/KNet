@@ -23,9 +23,7 @@ import org.apache.kafka.connect.errors.ConnectException;
 import org.apache.kafka.connect.components.Versioned;
 import org.apache.kafka.connect.connector.ConnectRecord;
 import org.apache.kafka.connect.transforms.predicates.Predicate;
-import org.mases.knet.developed.connect.KNetConnectInitializer;
-import org.mases.knet.developed.connect.KNetConnectLogging;
-import org.mases.knet.developed.connect.KNetConnectProxy;
+import org.mases.knet.developed.connect.*;
 import org.mases.jcobridge.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -35,7 +33,7 @@ import java.util.Map;
 
 import org.mases.knet.developed.connect.KNetConnectInitializer;
 
-public class KNetPredicate<R extends ConnectRecord<R>> implements Predicate<R>, Versioned, KNetConnectLogging, KNetConnectInitializer {
+public class KNetPredicate<R extends ConnectRecord<R>> implements Predicate<R>, Versioned, KNetConnectLogging, KNetConnectInitializer, KNetConnectDataExchange {
     private static final Logger log = LoggerFactory.getLogger(KNetPredicate.class);
 
     private static final String registrationName = "KNetPredicate";
