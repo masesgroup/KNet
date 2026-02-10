@@ -14,6 +14,9 @@ This is only a quick start guide for KNet Connect SDK, other information related
 
 The code for a connector based on KNet Connect SDK follows the same rules for both .NET and the JVM hosted runtimes.
 
+> [!TIP]
+> Except for some specific method signature or additional properties, the rules used in a JVM developed connectors/transformer/predicate applies to KNet Connect SDK connectors/transformer/predicate.
+
 ### Source connector
 
 A source connector shall be defined extending the following class:
@@ -35,12 +38,17 @@ The mandatory method to be implemented is:
 ```c#
 public abstract System.Collections.Generic.IList<SourceRecord> Poll();
 ```
-which returns a set of `SourceRecord`, each `SourceRecord` can be created directly or by using the `CreateRecord` helper methods available.
+which returns a set of `SourceRecord`, each `SourceRecord` can be created directly or by using the available `CreateRecord` helper methods.
 
 > [!TIP]
 > Starting from KNet 3.0.3, beside the standard invocation where the `SourceRecord`s will be returned once at the end of the `Poll` invocation and then pushed to the JVM,
 by using the `CreateAndPushRecord` helper methods available each `SourceRecord` is created and directly pushed to the JVM: 
 this new way can be used to take advantage of the idle time if the `KNetSourceTask<TTask>` is waiting to receive data, e.g. socket, disk access, etc.
+
+> [!TIP]
+> KNet 3.1.2 introduces, beside the `CreateAndPushRecord` helper methods, some new `CreateAndPushRecordAsync` helper methods which can push records in the JVM outside the `Poll` invocation:
+these new helpers decouple `Poll` invocation from `SourceRecord` generation and can be useful if the .NET code is taking adavantage of async/await pattern or similar; if `UseOnlyAsync` is set to true 
+the `Poll` method is never invoked and everything happens in async from the .NET point-of-view (JVM side continues to invoke the `poll` method, but the returned list was filled in the meantime).
 
 ### Sink connector
 
@@ -146,7 +154,7 @@ knet.dotnet.classname=MyConnectorNamespace.MySourceConnector, MySourceConnectorA
 ```
 
 From KNet 3.1.2, the JVM side exposes two new methods `getAssemblyLocation` and `getClassName`. 
-Overriding them in a child class of 
+Overriding the methods in a child class of 
 - `org.mases.knet.developed.connect.sink.KNetSinkConnector`
 - `org.mases.knet.developed.connect.source.KNetSourceConnector`
 - `org.mases.knet.developed.connect.transforms.KNetTransformation`

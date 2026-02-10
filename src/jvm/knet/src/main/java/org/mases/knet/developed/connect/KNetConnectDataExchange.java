@@ -19,18 +19,16 @@
 package org.mases.knet.developed.connect;
 
 /*
- * All KNet Connect SDK main object implements this interface to define mandatory information used from infrastructure
+ * All KNet Connect SDK object implements this interface for data exchange between JVM and CLR
  */
-public interface KNetConnectInitializer {
-    /* Overrides in a derived class to define the Assembly location
-     *
-     * @returns the location where the assembly is available, return null to use the configuration property
+public interface KNetConnectDataExchange {
+    /* Invoked from CLR to retrieve the object stored from CLR before a method invocation
+     * @return the object stored from JVM can be used from CLR
      */
-    String getAssemblyLocation();
+    Object getDataToExchange();
 
-    /* Overrides in a derived class to define the .NET class to be loaded
-     *
-     * @returns the location where the assembly is available, return null to use the configuration property
+    /* Set the object from CLR to be used from the JVM
+     * @param dte the object set from CLR
      */
-    String getClassName();
+    void setDataToExchange(Object dte);
 }
