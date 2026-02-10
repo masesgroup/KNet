@@ -61,7 +61,7 @@ namespace MASES.KNet.Connect
     /// <summary>
     /// The generic class which is the base of the KNet Connect SDK classes
     /// </summary>
-    public abstract class KNetCommon : IKNetConnectLogging
+    public abstract class KNetCommon : IKNetCommon
     {
         string _uniqueId = null;
 
@@ -114,7 +114,8 @@ namespace MASES.KNet.Connect
         public T ExecuteOnRemote<T>(string method, params object[] args)
         {
             reflectedConnectorOrTask ??= KNetConnectProxy.GetJVMGlobal(UniqueId);
-            return (reflectedConnectorOrTask != null) ? reflectedConnectorOrTask.Invoke<T>(method, args) : throw new InvalidOperationException($"{UniqueId} was not registered in global JVM");
+            return (reflectedConnectorOrTask != null) ? reflectedConnectorOrTask.Invoke<T>(method, args) 
+                                                      : throw new InvalidOperationException($"{UniqueId} was not registered in global JVM");
         }
 
         /// <summary>
@@ -151,36 +152,53 @@ namespace MASES.KNet.Connect
         protected abstract string ReflectedRemoteObjectClassName { get; }
 
         #region IKNetConnectLogging
+        /// <inheritdoc cref="IKNetConnectLogging.Name"/>
+        public string Name => ExecuteOnRemote<string>("getName");
+
         /// <inheritdoc cref="IKNetConnectLogging.IsTraceEnabled"/>
         public bool IsTraceEnabled => ExecuteOnRemote<bool>("isTraceEnabled");
-        /// <inheritdoc cref="IKNetConnectLogging.IsDebugEnabled"/>
-        public bool IsDebugEnabled => ExecuteOnRemote<bool>("isDebugEnabled");
-        /// <inheritdoc cref="IKNetConnectLogging.IsInfoEnabled"/>
-        public bool IsInfoEnabled => ExecuteOnRemote<bool>("isInfoEnabled");
-        /// <inheritdoc cref="IKNetConnectLogging.IsWarnEnabled"/>
-        public bool IsWarnEnabled => ExecuteOnRemote<bool>("isWarnEnabled");
-        /// <inheritdoc cref="IKNetConnectLogging.IsErrorEnabled"/>
-        public bool IsErrorEnabled => ExecuteOnRemote<bool>("isErrorEnabled");
         /// <inheritdoc cref="IKNetConnectLogging.LogTrace(string)"/>
         public void LogTrace(string var1) => ExecuteOnRemote("trace", var1);
         /// <inheritdoc cref="IKNetConnectLogging.LogTrace(string, JVMBridgeException)"/>
         public void LogTrace(string var1, JVMBridgeException var2) => ExecuteOnRemote("trace", var1, var2.BridgeInstance);
+        /// <inheritdoc cref="IKNetConnectLogging.LogTrace(string, object[])"/>
+        public void LogTrace(string var1, params object[] var2) => ExecuteOnRemote("trace", var2.VarArgRebuild(var1));
+
+        /// <inheritdoc cref="IKNetConnectLogging.IsDebugEnabled"/>
+        public bool IsDebugEnabled => ExecuteOnRemote<bool>("isDebugEnabled");
         /// <inheritdoc cref="IKNetConnectLogging.LogDebug(string)"/>
         public void LogDebug(string var1) => ExecuteOnRemote("debug", var1);
         /// <inheritdoc cref="IKNetConnectLogging.LogDebug(string, JVMBridgeException)"/>
         public void LogDebug(string var1, JVMBridgeException var2) => ExecuteOnRemote("debug", var1, var2.BridgeInstance);
+        /// <inheritdoc cref="IKNetConnectLogging.LogDebug(string, object[])"/>
+        public void LogDebug(string var1, params object[] var2) => ExecuteOnRemote("debug", var1, var2.VarArgRebuild(var1));
+
+        /// <inheritdoc cref="IKNetConnectLogging.IsInfoEnabled"/>
+        public bool IsInfoEnabled => ExecuteOnRemote<bool>("isInfoEnabled");
         /// <inheritdoc cref="IKNetConnectLogging.LogInfo(string)"/>
         public void LogInfo(string var1) => ExecuteOnRemote("info", var1);
         /// <inheritdoc cref="IKNetConnectLogging.LogInfo(string, JVMBridgeException)"/>
         public void LogInfo(string var1, JVMBridgeException var2) => ExecuteOnRemote("info", var1, var2.BridgeInstance);
+        /// <inheritdoc cref="IKNetConnectLogging.LogInfo(string, object[])"/>
+        public void LogInfo(string var1, params object[] var2) => ExecuteOnRemote("info", var1, var2.VarArgRebuild(var1));
+
+        /// <inheritdoc cref="IKNetConnectLogging.IsWarnEnabled"/>
+        public bool IsWarnEnabled => ExecuteOnRemote<bool>("isWarnEnabled");
         /// <inheritdoc cref="IKNetConnectLogging.LogWarn(string)"/>
         public void LogWarn(string var1) => ExecuteOnRemote("warn", var1);
         /// <inheritdoc cref="IKNetConnectLogging.LogWarn(string, JVMBridgeException)"/>
         public void LogWarn(string var1, JVMBridgeException var2) => ExecuteOnRemote("warn", var1, var2.BridgeInstance);
+        /// <inheritdoc cref="IKNetConnectLogging.LogWarn(string, object[])"/>
+        public void LogWarn(string var1, params object[] var2) => ExecuteOnRemote("warn", var1, var2.VarArgRebuild(var1));
+
+        /// <inheritdoc cref="IKNetConnectLogging.IsErrorEnabled"/>
+        public bool IsErrorEnabled => ExecuteOnRemote<bool>("isErrorEnabled");
         /// <inheritdoc cref="IKNetConnectLogging.LogError(string)"/>
         public void LogError(string var1) => ExecuteOnRemote("error", var1);
         /// <inheritdoc cref="IKNetConnectLogging.LogError(string, JVMBridgeException)"/>
         public void LogError(string var1, JVMBridgeException var2) => ExecuteOnRemote("error", var1, var2.BridgeInstance);
+        /// <inheritdoc cref="IKNetConnectLogging.LogError(string, object[])"/>
+        public void LogError(string var1, params object[] var2) => ExecuteOnRemote("error", var1, var2.VarArgRebuild(var1));
         #endregion
     }
 
