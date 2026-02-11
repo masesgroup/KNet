@@ -139,13 +139,13 @@ public class KNetPredicate<R extends ConnectRecord<R>> implements Predicate<R>, 
                 throw new ConnectException("KNetPredicate is not supported from a CLR Hosting process.");
             } else {
                 indexedRegistrationName = String.format("%s_%d", registrationName, predicateId);
-                log.info("Preparing KNetTransform with name %s", indexedRegistrationName);
+                log.info("Preparing KNetTransform with name {}", indexedRegistrationName);
                 if (!KNetConnectProxy.initializePredicate(this, configs, indexedRegistrationName)) {
                     log.error("Failed Invoke of \"initializePredicate\"");
                     throw new ConnectException("Failed Invoke of \"initializePredicate\"");
                 }
                 JCOBridge.RegisterJVMGlobal(indexedRegistrationName, this);
-                log.info("RegisterJVMGlobal done for %s", indexedRegistrationName);
+                log.info("RegisterJVMGlobal done for {}", indexedRegistrationName);
                 predicateObject = KNetConnectProxy.getPredicate(indexedRegistrationName);
             }
             if (predicateObject != null) {
@@ -176,6 +176,8 @@ public class KNetPredicate<R extends ConnectRecord<R>> implements Predicate<R>, 
         return result != null ? result : super.toString();
     }
 
+    @Override
+    public String getName() { return log.getName(); }
 
     @Override
     public boolean isTraceEnabled() {
@@ -183,12 +185,15 @@ public class KNetPredicate<R extends ConnectRecord<R>> implements Predicate<R>, 
     }
 
     @Override
-    public void trace(String var1) {
-        log.trace(var1);
-    }
+    public void trace(String var1) { log.trace(var1); }
 
     @Override
     public void trace(String var1, Throwable var2) {
+        log.trace(var1, var2);
+    }
+
+    @Override
+    public void trace(String var1, Object... var2) {
         log.trace(var1, var2);
     }
 
@@ -208,6 +213,11 @@ public class KNetPredicate<R extends ConnectRecord<R>> implements Predicate<R>, 
     }
 
     @Override
+    public void debug(String var1, Object... var2) {
+        log.trace(var1, var2);
+    }
+
+    @Override
     public boolean isInfoEnabled() {
         return log.isInfoEnabled();
     }
@@ -220,6 +230,11 @@ public class KNetPredicate<R extends ConnectRecord<R>> implements Predicate<R>, 
     @Override
     public void info(String var1, Throwable var2) {
         log.info(var1, var2);
+    }
+
+    @Override
+    public void info(String var1, Object... var2) {
+        log.trace(var1, var2);
     }
 
     @Override
@@ -238,6 +253,9 @@ public class KNetPredicate<R extends ConnectRecord<R>> implements Predicate<R>, 
     }
 
     @Override
+    public void warn(String var1, Object... var2) { log.trace(var1, var2); }
+
+    @Override
     public boolean isErrorEnabled() {
         return log.isErrorEnabled();
     }
@@ -250,5 +268,10 @@ public class KNetPredicate<R extends ConnectRecord<R>> implements Predicate<R>, 
     @Override
     public void error(String var1, Throwable var2) {
         log.error(var1, var2);
+    }
+
+    @Override
+    public void error(String var1, Object... var2) {
+        log.trace(var1, var2);
     }
 }

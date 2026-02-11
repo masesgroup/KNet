@@ -297,3 +297,15 @@ Two new fallback options are available in case the infrastructure is not ready t
 
 A sink connector needs other configuration properties inherited from Apache Kafka™ Connect like:
 - __topics=**value**__ where the **value** represents the CSV list of the topics will be the source of the records
+
+
+## Enable advance logging
+
+KNet Connect SDK supports avdvance logging of JCOBridge low level information, however the interface [IJCEventLog](https://www.jcobridge.com/api-java/org/mases/jcobridge/IJCEventLog.html) was designed for advance logging in debug scenarios:
+- `void FusionLog(String msg)`: invoked when a fusion event occurs and the developer shall be informed
+- `void EventLog(String msg)`: invoked on each low level event occurs to understand the low level flow
+
+From KNet version 3.1.2 the registration for this kind of logs is disabled by default to avoid useless overload.
+The registration shall be enabled explicitly in some kind of scenarios with this procedure:
+- define an environment variable named `KNetConnectEnableJCOBridgeLogging`: when the connect runtime restart the proxy will register to receive log notifications
+- use the DEBUG level in trace configuration: the implementation of [IJCEventLog](https://www.jcobridge.com/api-java/org/mases/jcobridge/IJCEventLog.html) writes the log at debug level so the user can reduce their verbosity managing the logging configuration 

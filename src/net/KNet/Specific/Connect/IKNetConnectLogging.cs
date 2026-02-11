@@ -27,79 +27,118 @@ namespace MASES.KNet.Connect
     public interface IKNetConnectLogging
     {
         /// <summary>
+        /// Reports the name of the logger
+        /// </summary>
+        string Name { get; }
+        /// <summary>
         /// Reports if trace level is enabled
         /// </summary>
         bool IsTraceEnabled { get; }
         /// <summary>
-        /// Write a trace
+        /// Write a trace string into Apache Connect tracing subsystem
         /// </summary>
         /// <param name="var1">String to write</param>
         void LogTrace(string var1);
         /// <summary>
-        /// Write a trace
+        /// Write a trace string log into Apache Connect tracing subsystem
         /// </summary>
         /// <param name="var1">String to write</param>
         /// <param name="var2">Associated <see cref="JVMBridgeException"/></param>
         void LogTrace(string var1, JVMBridgeException var2);
         /// <summary>
+        /// Write a trace string into Apache Connect tracing subsystem
+        /// </summary>
+        /// <param name="var1">String to write</param>
+        /// <param name="var2">The array of <see cref="object"/> to format <paramref name="var1"/></param>
+        /// <remarks>Since the counter-part is based on log4j or slf4j the parameters in <paramref name="var2"/> will be applied on <paramref name="var1"/> using the rules defined from log4j or slf4j; see https://www.slf4j.org/api/org/slf4j/Logger.html</remarks>
+        void LogTrace(string var1, params object[] var2);
+        /// <summary>
         /// Reports if debug level is enabled
         /// </summary>
         bool IsDebugEnabled { get; }
         /// <summary>
-        /// Write a debug
+        /// Write a debug string into Apache Connect tracing subsystem
         /// </summary>
         /// <param name="var1">String to write</param>
         void LogDebug(string var1);
         /// <summary>
-        /// Write a debug
+        /// Write a debug string into Apache Connect tracing subsystem
         /// </summary>
         /// <param name="var1">String to write</param>
         /// <param name="var2">Associated <see cref="JVMBridgeException"/></param>
         void LogDebug(string var1, JVMBridgeException var2);
         /// <summary>
+        /// Write a debug string into Apache Connect tracing subsystem
+        /// </summary>
+        /// <param name="var1">String to write</param>
+        /// <param name="var2">The array of <see cref="object"/> to format <paramref name="var1"/></param>
+        /// <remarks>Since the counter-part is based on log4j or slf4j the parameters in <paramref name="var2"/> will be applied on <paramref name="var1"/> using the rules defined from log4j or slf4j; see https://www.slf4j.org/api/org/slf4j/Logger.html</remarks>
+        void LogDebug(string var1, params object[] var2);
+        /// <summary>
         /// Reports if info level is enabled
         /// </summary>
         bool IsInfoEnabled { get; }
         /// <summary>
-        /// Write a info
+        /// Write a info string into Apache Connect tracing subsystem
         /// </summary>
         /// <param name="var1">String to write</param>
         void LogInfo(string var1);
         /// <summary>
-        /// Write a info
+        /// Write a info string into Apache Connect tracing subsystem
         /// </summary>
         /// <param name="var1">String to write</param>
         /// <param name="var2">Associated <see cref="JVMBridgeException"/></param>
         void LogInfo(string var1, JVMBridgeException var2);
         /// <summary>
+        /// Write a info string into Apache Connect tracing subsystem
+        /// </summary>
+        /// <param name="var1">String to write</param>
+        /// <param name="var2">The array of <see cref="object"/> to format <paramref name="var1"/></param>
+        /// <remarks>Since the counter-part is based on log4j or slf4j the parameters in <paramref name="var2"/> will be applied on <paramref name="var1"/> using the rules defined from log4j or slf4j; see https://www.slf4j.org/api/org/slf4j/Logger.html</remarks>
+        void LogInfo(string var1, params object[] var2);
+        /// <summary>
         /// Reports if warning level is enabled
         /// </summary>
         bool IsWarnEnabled { get; }
         /// <summary>
-        /// Write a warning
+        /// Write a warning string into Apache Connect tracing subsystem
         /// </summary>
         /// <param name="var1">String to write</param>
         void LogWarn(string var1);
         /// <summary>
-        /// Write a warning
+        /// Write a warning string into Apache Connect tracing subsystem
         /// </summary>
         /// <param name="var1">String to write</param>
         /// <param name="var2">Associated <see cref="JVMBridgeException"/></param>
         void LogWarn(string var1, JVMBridgeException var2);
         /// <summary>
+        /// Write a warning string into Apache Connect tracing subsystem
+        /// </summary>
+        /// <param name="var1">String to write</param>
+        /// <param name="var2">The array of <see cref="object"/> to format <paramref name="var1"/></param>
+        /// <remarks>Since the counter-part is based on log4j or slf4j the parameters in <paramref name="var2"/> will be applied on <paramref name="var1"/> using the rules defined from log4j or slf4j; see https://www.slf4j.org/api/org/slf4j/Logger.html</remarks>
+        void LogWarn(string var1, params object[] var2);
+        /// <summary>
         /// Reports if error level is enabled
         /// </summary>
         bool IsErrorEnabled { get; }
         /// <summary>
-        /// Write a error
+        /// Write a error into Apache Connect tracing subsystem
         /// </summary>
         /// <param name="var1">String to write</param>
         void LogError(string var1);
         /// <summary>
-        /// Write a error
+        /// Write a error into Apache Connect tracing subsystem
         /// </summary>
         /// <param name="var1">String to write</param>
         /// <param name="var2">Associated <see cref="JVMBridgeException"/></param>
         void LogError(string var1, JVMBridgeException var2);
+        /// <summary>
+        /// Write a error string into Apache Connect tracing subsystem
+        /// </summary>
+        /// <param name="var1">String to write</param>
+        /// <param name="var2">The array of <see cref="object"/> to format <paramref name="var1"/></param>
+        /// <remarks>Since the counter-part is based on log4j or slf4j the parameters in <paramref name="var2"/> will be applied on <paramref name="var1"/> using the rules defined from log4j or slf4j; see https://www.slf4j.org/api/org/slf4j/Logger.html</remarks>
+        void LogError(string var1, params object[] var2);
     }
 }

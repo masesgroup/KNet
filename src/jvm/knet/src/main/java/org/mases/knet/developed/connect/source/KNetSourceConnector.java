@@ -108,19 +108,19 @@ public class KNetSourceConnector extends SourceConnector implements KNetConnectL
                     throw new ConnectException("Failed Invoke of \"initializeSourceConnector\"");
                 } else {
                     JCOBridge.RegisterJVMGlobal(registrationName, this);
-                    log.info("RegisterJVMGlobal done for %s", registrationName);
+                    log.info("RegisterJVMGlobal done for {}", registrationName);
                     source = KNetConnectProxy.getSourceConnector();
                     if (source == null) throw new ConnectException("getSourceConnector returned null.");
                 }
             } else {
                 indexedRegistrationName = String.format("%s_%d", registrationName, connectorId);
-                log.info("Preparing KNetSourceConnector with name %s", indexedRegistrationName);
+                log.info("Preparing KNetSourceConnector with name {}", indexedRegistrationName);
                 if (!KNetConnectProxy.initializeConnector(this, props, indexedRegistrationName)) {
                     log.error("Failed Invoke of \"initializeConnector\"");
                     throw new ConnectException("Failed Invoke of \"initializeConnector\"");
                 }
                 JCOBridge.RegisterJVMGlobal(indexedRegistrationName, this);
-                log.info("RegisterJVMGlobal done for %s", indexedRegistrationName);
+                log.info("RegisterJVMGlobal done for {}", indexedRegistrationName);
                 sourceConnector = KNetConnectProxy.getConnector(indexedRegistrationName);
                 source = sourceConnector;
             }
@@ -138,7 +138,7 @@ public class KNetSourceConnector extends SourceConnector implements KNetConnectL
 
     @Override
     public List<Map<String, String>> taskConfigs(int maxTasks) {
-        log.debug("Invoking taskConfigs for maxTasks %d", maxTasks);
+        log.debug("Invoking taskConfigs for maxTasks {}", maxTasks);
         ArrayList<Map<String, String>> configs = new ArrayList<>();
         JCObject source;
         try {
@@ -167,7 +167,10 @@ public class KNetSourceConnector extends SourceConnector implements KNetConnectL
                 dataToExchange = null;
             }
             configs.add(config);
-            if (shallStop) break;
+            if (shallStop) {
+                log.info("Explicit request to stop taskConfigs at iteration {} of {}", i + 1, maxTasks);
+                break;
+            }
         }
         return configs;
     }
@@ -240,7 +243,7 @@ public class KNetSourceConnector extends SourceConnector implements KNetConnectL
         log.info("Fallback Invoke of \"exactlyOnceSupport\" to configuration");
         AbstractConfig parsedConfig = new AbstractConfig(CONFIG_DEF, connectorConfig);
         Boolean exactlyOnceSupport = parsedConfig.getBoolean(DOTNET_EXACTLYONCESUPPORT_CONFIG);
-        if (exactlyOnceSupport.booleanValue()) return ExactlyOnceSupport.SUPPORTED;
+        if (exactlyOnceSupport) return ExactlyOnceSupport.SUPPORTED;
         return ExactlyOnceSupport.UNSUPPORTED;
     }
 
@@ -289,17 +292,23 @@ public class KNetSourceConnector extends SourceConnector implements KNetConnectL
     }
 
     @Override
+    public String getName() { return log.getName(); }
+
+    @Override
     public boolean isTraceEnabled() {
         return log.isTraceEnabled();
     }
 
     @Override
-    public void trace(String var1) {
-        log.trace(var1);
-    }
+    public void trace(String var1) { log.trace(var1); }
 
     @Override
     public void trace(String var1, Throwable var2) {
+        log.trace(var1, var2);
+    }
+
+    @Override
+    public void trace(String var1, Object... var2) {
         log.trace(var1, var2);
     }
 
@@ -319,6 +328,11 @@ public class KNetSourceConnector extends SourceConnector implements KNetConnectL
     }
 
     @Override
+    public void debug(String var1, Object... var2) {
+        log.trace(var1, var2);
+    }
+
+    @Override
     public boolean isInfoEnabled() {
         return log.isInfoEnabled();
     }
@@ -331,6 +345,11 @@ public class KNetSourceConnector extends SourceConnector implements KNetConnectL
     @Override
     public void info(String var1, Throwable var2) {
         log.info(var1, var2);
+    }
+
+    @Override
+    public void info(String var1, Object... var2) {
+        log.trace(var1, var2);
     }
 
     @Override
@@ -349,6 +368,9 @@ public class KNetSourceConnector extends SourceConnector implements KNetConnectL
     }
 
     @Override
+    public void warn(String var1, Object... var2) { log.trace(var1, var2); }
+
+    @Override
     public boolean isErrorEnabled() {
         return log.isErrorEnabled();
     }
@@ -361,5 +383,10 @@ public class KNetSourceConnector extends SourceConnector implements KNetConnectL
     @Override
     public void error(String var1, Throwable var2) {
         log.error(var1, var2);
+    }
+
+    @Override
+    public void error(String var1, Object... var2) {
+        log.trace(var1, var2);
     }
 }
