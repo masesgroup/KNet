@@ -101,7 +101,7 @@ Class KNetConnectSink  <a class="header-action link-secondary" title="View sourc
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class KNetConnectSink : KNetSinkConnector&lt;KNetConnectSink, KNetConnectSinkTask&gt;, IKNetConnector, IConnector, IVersion, IKNetConnectLogging</code></pre>
+    <pre><code class="lang-csharp hljs">public class KNetConnectSink : KNetSinkConnector&lt;KNetConnectSink, KNetConnectSinkTask&gt;, IKNetSinkConnector, IKNetConnector, IKNetCommon, IKNetConnectLogging, IConnector, IVersion</code></pre>
   </div>
 
 
@@ -111,6 +111,7 @@ Class KNetConnectSink  <a class="header-action link-secondary" title="View sourc
     <dt>Inheritance</dt>
     <dd>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="MASES.KNet.Connect.KNetCommon.html">KNetCommon</a></div>
       <div><a class="xref" href="MASES.KNet.Connect.KNetConnector.html">KNetConnector</a></div>
       <div><a class="xref" href="MASES.KNet.Connect.KNetConnector-1.html">KNetConnector</a>&lt;<a class="xref" href="MASES.KNet.Template.KNetConnect.KNetConnectSink.html">KNetConnectSink</a>&gt;</div>
       <div><a class="xref" href="MASES.KNet.Connect.KNetSinkConnector-2.html">KNetSinkConnector</a>&lt;<a class="xref" href="MASES.KNet.Template.KNetConnect.KNetConnectSink.html">KNetConnectSink</a>, <a class="xref" href="MASES.KNet.Template.KNetConnect.KNetConnectSinkTask.html">KNetConnectSinkTask</a>&gt;</div>
@@ -121,10 +122,12 @@ Class KNetConnectSink  <a class="header-action link-secondary" title="View sourc
   <dl class="typelist implements">
     <dt>Implements</dt>
     <dd>
+      <div><a class="xref" href="MASES.KNet.Connect.IKNetSinkConnector.html">IKNetSinkConnector</a></div>
       <div><a class="xref" href="MASES.KNet.Connect.IKNetConnector.html">IKNetConnector</a></div>
+      <div><a class="xref" href="MASES.KNet.Connect.IKNetCommon.html">IKNetCommon</a></div>
+      <div><a class="xref" href="MASES.KNet.Connect.IKNetConnectLogging.html">IKNetConnectLogging</a></div>
       <div><a class="xref" href="MASES.KNet.Connect.IConnector.html">IConnector</a></div>
       <div><a class="xref" href="MASES.KNet.Connect.IVersion.html">IVersion</a></div>
-      <div><a class="xref" href="MASES.KNet.Connect.IKNetConnectLogging.html">IKNetConnectLogging</a></div>
     </dd>
   </dl>
 
@@ -136,34 +139,19 @@ Class KNetConnectSink  <a class="header-action link-secondary" title="View sourc
       <a class="xref" href="MASES.KNet.Connect.KNetSinkConnector-2.html#MASES_KNet_Connect_KNetSinkConnector_2_Context">KNetSinkConnector&lt;KNetConnectSink, KNetConnectSinkTask&gt;.Context</a>
     </div>
     <div>
-      <a class="xref" href="MASES.KNet.Connect.KNetSinkConnector-2.html#MASES_KNet_Connect_KNetSinkConnector_2_ReflectedConnectorClassName">KNetSinkConnector&lt;KNetConnectSink, KNetConnectSinkTask&gt;.ReflectedConnectorClassName</a>
+      <a class="xref" href="MASES.KNet.Connect.KNetSinkConnector-2.html#MASES_KNet_Connect_KNetSinkConnector_2_ReflectedRemoteObjectClassName">KNetSinkConnector&lt;KNetConnectSink, KNetConnectSinkTask&gt;.ReflectedRemoteObjectClassName</a>
     </div>
     <div>
       <a class="xref" href="MASES.KNet.Connect.KNetSinkConnector-2.html#MASES_KNet_Connect_KNetSinkConnector_2_TaskClassType">KNetSinkConnector&lt;KNetConnectSink, KNetConnectSinkTask&gt;.TaskClassType</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Connect.KNetSinkConnector-2.html#MASES_KNet_Connect_KNetSinkConnector_2_AlterOffsets_Java_Util_Map_Java_Lang_String_Java_Lang_String__Java_Util_Map_Org_Apache_Kafka_Common_TopicPartition_Java_Lang_Long__">KNetSinkConnector&lt;KNetConnectSink, KNetConnectSinkTask&gt;.AlterOffsets(Map&lt;String, String&gt;, Map&lt;TopicPartition, Long&gt;)</a>
     </div>
     <div>
       <a class="xref" href="MASES.KNet.Connect.KNetConnector-1.html#MASES_KNet_Connect_KNetConnector_1_ConnectorName">KNetConnector&lt;KNetConnectSink&gt;.ConnectorName</a>
     </div>
     <div>
       <a class="xref" href="MASES.KNet.Connect.KNetConnector.html#MASES_KNet_Connect_KNetConnector_taskDictionary">KNetConnector.taskDictionary</a>
-    </div>
-    <div>
-      <a class="xref" href="MASES.KNet.Connect.KNetConnector.html#MASES_KNet_Connect_KNetConnector_Register_System_String_">KNetConnector.Register(string)</a>
-    </div>
-    <div>
-      <a class="xref" href="MASES.KNet.Connect.KNetConnector.html#MASES_KNet_Connect_KNetConnector_UniqueId">KNetConnector.UniqueId</a>
-    </div>
-    <div>
-      <a class="xref" href="MASES.KNet.Connect.KNetConnector.html#MASES_KNet_Connect_KNetConnector_ExecuteOnConnector_System_String_System_Object___">KNetConnector.ExecuteOnConnector(string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="MASES.KNet.Connect.KNetConnector.html#MASES_KNet_Connect_KNetConnector_ExecuteOnConnector__1_System_String_System_Object___">KNetConnector.ExecuteOnConnector&lt;T&gt;(string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="MASES.KNet.Connect.KNetConnector.html#MASES_KNet_Connect_KNetConnector_DataToExchange__1">KNetConnector.DataToExchange&lt;T&gt;()</a>
-    </div>
-    <div>
-      <a class="xref" href="MASES.KNet.Connect.KNetConnector.html#MASES_KNet_Connect_KNetConnector_DataToExchange_System_Object_">KNetConnector.DataToExchange(object)</a>
     </div>
     <div>
       <a class="xref" href="MASES.KNet.Connect.KNetConnector.html#MASES_KNet_Connect_KNetConnector_Context__1">KNetConnector.Context&lt;T&gt;()</a>
@@ -175,9 +163,6 @@ Class KNetConnectSink  <a class="header-action link-secondary" title="View sourc
       <a class="xref" href="MASES.KNet.Connect.KNetConnector.html#MASES_KNet_Connect_KNetConnector_AllocateTask_System_Int64_">KNetConnector.AllocateTask(long)</a>
     </div>
     <div>
-      <a class="xref" href="MASES.KNet.Connect.KNetConnector.html#MASES_KNet_Connect_KNetConnector_ReflectedConnectorClassName">KNetConnector.ReflectedConnectorClassName</a>
-    </div>
-    <div>
       <a class="xref" href="MASES.KNet.Connect.KNetConnector.html#MASES_KNet_Connect_KNetConnector_TaskClassType">KNetConnector.TaskClassType</a>
     </div>
     <div>
@@ -185,9 +170,6 @@ Class KNetConnectSink  <a class="header-action link-secondary" title="View sourc
     </div>
     <div>
       <a class="xref" href="MASES.KNet.Connect.KNetConnector.html#MASES_KNet_Connect_KNetConnector_Initialize_Org_Apache_Kafka_Connect_Connector_ConnectorContext_Java_Util_List_Java_Util_Map_Java_Lang_String_Java_Lang_String___">KNetConnector.Initialize(ConnectorContext, List&lt;Map&lt;String, String&gt;&gt;)</a>
-    </div>
-    <div>
-      <a class="xref" href="MASES.KNet.Connect.KNetConnector.html#MASES_KNet_Connect_KNetConnector_StartInternal">KNetConnector.StartInternal()</a>
     </div>
     <div>
       <a class="xref" href="MASES.KNet.Connect.KNetConnector.html#MASES_KNet_Connect_KNetConnector_Start_Java_Util_Map_Java_Lang_String_Java_Lang_String__">KNetConnector.Start(Map&lt;String, String&gt;)</a>
@@ -199,13 +181,10 @@ Class KNetConnectSink  <a class="header-action link-secondary" title="View sourc
       <a class="xref" href="MASES.KNet.Connect.KNetConnector.html#MASES_KNet_Connect_KNetConnector_TaskClass">KNetConnector.TaskClass()</a>
     </div>
     <div>
-      <a class="xref" href="MASES.KNet.Connect.KNetConnector.html#MASES_KNet_Connect_KNetConnector_TaskConfigsInternal_System_Int32_">KNetConnector.TaskConfigsInternal(int)</a>
+      <a class="xref" href="MASES.KNet.Connect.KNetConnector.html#MASES_KNet_Connect_KNetConnector_TaskConfigs_System_Int32_System_Int32_Java_Util_Map_Java_Lang_String_Java_Lang_String__">KNetConnector.TaskConfigs(int, int, Map&lt;String, String&gt;)</a>
     </div>
     <div>
       <a class="xref" href="MASES.KNet.Connect.KNetConnector.html#MASES_KNet_Connect_KNetConnector_TaskConfigs_System_Int32_">KNetConnector.TaskConfigs(int)</a>
-    </div>
-    <div>
-      <a class="xref" href="MASES.KNet.Connect.KNetConnector.html#MASES_KNet_Connect_KNetConnector_StopInternal">KNetConnector.StopInternal()</a>
     </div>
     <div>
       <a class="xref" href="MASES.KNet.Connect.KNetConnector.html#MASES_KNet_Connect_KNetConnector_Validate_Java_Util_Map_Java_Lang_String_Java_Lang_String__">KNetConnector.Validate(Map&lt;String, String&gt;)</a>
@@ -217,49 +196,85 @@ Class KNetConnectSink  <a class="header-action link-secondary" title="View sourc
       <a class="xref" href="MASES.KNet.Connect.KNetConnector.html#MASES_KNet_Connect_KNetConnector_Version">KNetConnector.Version()</a>
     </div>
     <div>
-      <a class="xref" href="MASES.KNet.Connect.KNetConnector.html#MASES_KNet_Connect_KNetConnector_IsTraceEnabled">KNetConnector.IsTraceEnabled</a>
+      <a class="xref" href="MASES.KNet.Connect.KNetCommon.html#MASES_KNet_Connect_KNetCommon_UniqueId">KNetCommon.UniqueId</a>
     </div>
     <div>
-      <a class="xref" href="MASES.KNet.Connect.KNetConnector.html#MASES_KNet_Connect_KNetConnector_IsDebugEnabled">KNetConnector.IsDebugEnabled</a>
+      <a class="xref" href="MASES.KNet.Connect.KNetCommon.html#MASES_KNet_Connect_KNetCommon_ExecuteOnRemote_System_String_System_Object___">KNetCommon.ExecuteOnRemote(string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="MASES.KNet.Connect.KNetConnector.html#MASES_KNet_Connect_KNetConnector_IsInfoEnabled">KNetConnector.IsInfoEnabled</a>
+      <a class="xref" href="MASES.KNet.Connect.KNetCommon.html#MASES_KNet_Connect_KNetCommon_ExecuteOnRemote__1_System_String_System_Object___">KNetCommon.ExecuteOnRemote&lt;T&gt;(string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="MASES.KNet.Connect.KNetConnector.html#MASES_KNet_Connect_KNetConnector_IsWarnEnabled">KNetConnector.IsWarnEnabled</a>
+      <a class="xref" href="MASES.KNet.Connect.KNetCommon.html#MASES_KNet_Connect_KNetCommon_DataToExchange__1">KNetCommon.DataToExchange&lt;T&gt;()</a>
     </div>
     <div>
-      <a class="xref" href="MASES.KNet.Connect.KNetConnector.html#MASES_KNet_Connect_KNetConnector_IsErrorEnabled">KNetConnector.IsErrorEnabled</a>
+      <a class="xref" href="MASES.KNet.Connect.KNetCommon.html#MASES_KNet_Connect_KNetCommon_DataToExchange_System_Object_">KNetCommon.DataToExchange(object)</a>
     </div>
     <div>
-      <a class="xref" href="MASES.KNet.Connect.KNetConnector.html#MASES_KNet_Connect_KNetConnector_LogTrace_System_String_">KNetConnector.LogTrace(string)</a>
+      <a class="xref" href="MASES.KNet.Connect.KNetCommon.html#MASES_KNet_Connect_KNetCommon_ReflectedRemoteObjectClassName">KNetCommon.ReflectedRemoteObjectClassName</a>
     </div>
     <div>
-      <a class="xref" href="MASES.KNet.Connect.KNetConnector.html#MASES_KNet_Connect_KNetConnector_LogTrace_System_String_MASES_JCOBridge_C2JBridge_JVMBridgeException_">KNetConnector.LogTrace(string, JVMBridgeException)</a>
+      <a class="xref" href="MASES.KNet.Connect.KNetCommon.html#MASES_KNet_Connect_KNetCommon_Name">KNetCommon.Name</a>
     </div>
     <div>
-      <a class="xref" href="MASES.KNet.Connect.KNetConnector.html#MASES_KNet_Connect_KNetConnector_LogDebug_System_String_">KNetConnector.LogDebug(string)</a>
+      <a class="xref" href="MASES.KNet.Connect.KNetCommon.html#MASES_KNet_Connect_KNetCommon_IsTraceEnabled">KNetCommon.IsTraceEnabled</a>
     </div>
     <div>
-      <a class="xref" href="MASES.KNet.Connect.KNetConnector.html#MASES_KNet_Connect_KNetConnector_LogDebug_System_String_MASES_JCOBridge_C2JBridge_JVMBridgeException_">KNetConnector.LogDebug(string, JVMBridgeException)</a>
+      <a class="xref" href="MASES.KNet.Connect.KNetCommon.html#MASES_KNet_Connect_KNetCommon_LogTrace_System_String_">KNetCommon.LogTrace(string)</a>
     </div>
     <div>
-      <a class="xref" href="MASES.KNet.Connect.KNetConnector.html#MASES_KNet_Connect_KNetConnector_LogInfo_System_String_">KNetConnector.LogInfo(string)</a>
+      <a class="xref" href="MASES.KNet.Connect.KNetCommon.html#MASES_KNet_Connect_KNetCommon_LogTrace_System_String_MASES_JCOBridge_C2JBridge_JVMBridgeException_">KNetCommon.LogTrace(string, JVMBridgeException)</a>
     </div>
     <div>
-      <a class="xref" href="MASES.KNet.Connect.KNetConnector.html#MASES_KNet_Connect_KNetConnector_LogInfo_System_String_MASES_JCOBridge_C2JBridge_JVMBridgeException_">KNetConnector.LogInfo(string, JVMBridgeException)</a>
+      <a class="xref" href="MASES.KNet.Connect.KNetCommon.html#MASES_KNet_Connect_KNetCommon_LogTrace_System_String_System_Object___">KNetCommon.LogTrace(string, params object[])</a>
     </div>
     <div>
-      <a class="xref" href="MASES.KNet.Connect.KNetConnector.html#MASES_KNet_Connect_KNetConnector_LogWarn_System_String_">KNetConnector.LogWarn(string)</a>
+      <a class="xref" href="MASES.KNet.Connect.KNetCommon.html#MASES_KNet_Connect_KNetCommon_IsDebugEnabled">KNetCommon.IsDebugEnabled</a>
     </div>
     <div>
-      <a class="xref" href="MASES.KNet.Connect.KNetConnector.html#MASES_KNet_Connect_KNetConnector_LogWarn_System_String_MASES_JCOBridge_C2JBridge_JVMBridgeException_">KNetConnector.LogWarn(string, JVMBridgeException)</a>
+      <a class="xref" href="MASES.KNet.Connect.KNetCommon.html#MASES_KNet_Connect_KNetCommon_LogDebug_System_String_">KNetCommon.LogDebug(string)</a>
     </div>
     <div>
-      <a class="xref" href="MASES.KNet.Connect.KNetConnector.html#MASES_KNet_Connect_KNetConnector_LogError_System_String_">KNetConnector.LogError(string)</a>
+      <a class="xref" href="MASES.KNet.Connect.KNetCommon.html#MASES_KNet_Connect_KNetCommon_LogDebug_System_String_MASES_JCOBridge_C2JBridge_JVMBridgeException_">KNetCommon.LogDebug(string, JVMBridgeException)</a>
     </div>
     <div>
-      <a class="xref" href="MASES.KNet.Connect.KNetConnector.html#MASES_KNet_Connect_KNetConnector_LogError_System_String_MASES_JCOBridge_C2JBridge_JVMBridgeException_">KNetConnector.LogError(string, JVMBridgeException)</a>
+      <a class="xref" href="MASES.KNet.Connect.KNetCommon.html#MASES_KNet_Connect_KNetCommon_LogDebug_System_String_System_Object___">KNetCommon.LogDebug(string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Connect.KNetCommon.html#MASES_KNet_Connect_KNetCommon_IsInfoEnabled">KNetCommon.IsInfoEnabled</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Connect.KNetCommon.html#MASES_KNet_Connect_KNetCommon_LogInfo_System_String_">KNetCommon.LogInfo(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Connect.KNetCommon.html#MASES_KNet_Connect_KNetCommon_LogInfo_System_String_MASES_JCOBridge_C2JBridge_JVMBridgeException_">KNetCommon.LogInfo(string, JVMBridgeException)</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Connect.KNetCommon.html#MASES_KNet_Connect_KNetCommon_LogInfo_System_String_System_Object___">KNetCommon.LogInfo(string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Connect.KNetCommon.html#MASES_KNet_Connect_KNetCommon_IsWarnEnabled">KNetCommon.IsWarnEnabled</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Connect.KNetCommon.html#MASES_KNet_Connect_KNetCommon_LogWarn_System_String_">KNetCommon.LogWarn(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Connect.KNetCommon.html#MASES_KNet_Connect_KNetCommon_LogWarn_System_String_MASES_JCOBridge_C2JBridge_JVMBridgeException_">KNetCommon.LogWarn(string, JVMBridgeException)</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Connect.KNetCommon.html#MASES_KNet_Connect_KNetCommon_LogWarn_System_String_System_Object___">KNetCommon.LogWarn(string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Connect.KNetCommon.html#MASES_KNet_Connect_KNetCommon_IsErrorEnabled">KNetCommon.IsErrorEnabled</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Connect.KNetCommon.html#MASES_KNet_Connect_KNetCommon_LogError_System_String_">KNetCommon.LogError(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Connect.KNetCommon.html#MASES_KNet_Connect_KNetCommon_LogError_System_String_MASES_JCOBridge_C2JBridge_JVMBridgeException_">KNetCommon.LogError(string, JVMBridgeException)</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Connect.KNetCommon.html#MASES_KNet_Connect_KNetCommon_LogError_System_String_System_Object___">KNetCommon.LogError(string, params object[])</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
@@ -355,8 +370,8 @@ Class KNetConnectSink  <a class="header-action link-secondary" title="View sourc
 
   <a id="MASES_KNet_Template_KNetConnect_KNetConnectSink_TaskConfigs_" data-uid="MASES.KNet.Template.KNetConnect.KNetConnectSink.TaskConfigs*"></a>
 
-  <h3 id="MASES_KNet_Template_KNetConnect_KNetConnectSink_TaskConfigs_System_Int32_System_Collections_Generic_IDictionary_System_String_System_String__" data-uid="MASES.KNet.Template.KNetConnect.KNetConnectSink.TaskConfigs(System.Int32,System.Collections.Generic.IDictionary{System.String,System.String})">
-  TaskConfigs(int, IDictionary&lt;string, string&gt;)
+  <h3 id="MASES_KNet_Template_KNetConnect_KNetConnectSink_TaskConfigs_System_Int32_System_Int32_System_Collections_Generic_IDictionary_System_String_System_String__" data-uid="MASES.KNet.Template.KNetConnect.KNetConnectSink.TaskConfigs(System.Int32,System.Int32,System.Collections.Generic.IDictionary{System.String,System.String})">
+  TaskConfigs(int, int, IDictionary&lt;string, string&gt;)
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/templates/templates/knetConnectSink/KNetConnectSink.cs/#L22"><i class="bi bi-code-slash"></i></a>
   </h3>
 
@@ -365,16 +380,25 @@ Class KNetConnectSink  <a class="header-action link-secondary" title="View sourc
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override void TaskConfigs(int index, IDictionary&lt;string, string&gt; config)</code></pre>
+    <pre><code class="lang-csharp hljs">public override bool TaskConfigs(int index, int maxTasks, IDictionary&lt;string, string&gt; config)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>index</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>The actual index</p>
+    <dd></dd>
+    <dt><code>maxTasks</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Max tasks as defined from Apache Kafka Connect framework</p>
 </dd>
     <dt><code>config</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2">IDictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
     <dd><p>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2">IDictionary&lt;TKey, TValue&gt;</a> to be filled in with properties for the task: the same will be received from <a class="xref" href="MASES.KNet.Connect.KNetTask.html#MASES_KNet_Connect_KNetTask_Start_System_Collections_Generic_IReadOnlyDictionary_System_String_System_String__">Start(IReadOnlyDictionary&lt;string, string&gt;)</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> to avoid any further invocation of the method, otherwise <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.</p>
 </dd>
   </dl>
 
@@ -384,7 +408,11 @@ Class KNetConnectSink  <a class="header-action link-secondary" title="View sourc
 
 
 
-
+  <h4 class="section" id="MASES_KNet_Template_KNetConnect_KNetConnectSink_TaskConfigs_System_Int32_System_Int32_System_Collections_Generic_IDictionary_System_String_System_String___remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>If the connector needs a single task and <code class="paramref">maxTasks</code> is higher than 1, returning <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> immediately only one configuration is returned to Apache Kafka Connect framework.
+In other word it is possible to stop the configuration requests at any time; only the first one is reported in any case since at least one shall be available.
+To configure all <code class="paramref">maxTasks</code> return always <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.</p>
+</div>
 
 
 

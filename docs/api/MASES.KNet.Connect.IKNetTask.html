@@ -89,7 +89,7 @@
 
 
   <h1 id="MASES_KNet_Connect_IKNetTask" data-uid="MASES.KNet.Connect.IKNetTask" class="text-break">
-Interface IKNetTask  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Connect/KNetTask.cs/#L53"><i class="bi bi-code-slash"></i></a>
+Interface IKNetTask  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Connect/KNetTask.cs/#L57"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -102,7 +102,7 @@ Interface IKNetTask  <a class="header-action link-secondary" title="View source"
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public interface IKNetTask : ITask</code></pre>
+    <pre><code class="lang-csharp hljs">public interface IKNetTask : ITask, IKNetCommon, IKNetConnectLogging</code></pre>
   </div>
 
 
@@ -123,6 +123,75 @@ Interface IKNetTask  <a class="header-action link-secondary" title="View source"
     <div>
       <a class="xref" href="MASES.KNet.Connect.ITask.html#MASES_KNet_Connect_ITask_Stop">ITask.Stop()</a>
     </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Connect.IKNetCommon.html#MASES_KNet_Connect_IKNetCommon_ExecuteOnRemote_System_String_System_Object___">IKNetCommon.ExecuteOnRemote(string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Connect.IKNetCommon.html#MASES_KNet_Connect_IKNetCommon_ExecuteOnRemote__1_System_String_System_Object___">IKNetCommon.ExecuteOnRemote&lt;T&gt;(string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Connect.IKNetConnectLogging.html#MASES_KNet_Connect_IKNetConnectLogging_Name">IKNetConnectLogging.Name</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Connect.IKNetConnectLogging.html#MASES_KNet_Connect_IKNetConnectLogging_IsTraceEnabled">IKNetConnectLogging.IsTraceEnabled</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Connect.IKNetConnectLogging.html#MASES_KNet_Connect_IKNetConnectLogging_LogTrace_System_String_">IKNetConnectLogging.LogTrace(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Connect.IKNetConnectLogging.html#MASES_KNet_Connect_IKNetConnectLogging_LogTrace_System_String_MASES_JCOBridge_C2JBridge_JVMBridgeException_">IKNetConnectLogging.LogTrace(string, JVMBridgeException)</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Connect.IKNetConnectLogging.html#MASES_KNet_Connect_IKNetConnectLogging_LogTrace_System_String_System_Object___">IKNetConnectLogging.LogTrace(string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Connect.IKNetConnectLogging.html#MASES_KNet_Connect_IKNetConnectLogging_IsDebugEnabled">IKNetConnectLogging.IsDebugEnabled</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Connect.IKNetConnectLogging.html#MASES_KNet_Connect_IKNetConnectLogging_LogDebug_System_String_">IKNetConnectLogging.LogDebug(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Connect.IKNetConnectLogging.html#MASES_KNet_Connect_IKNetConnectLogging_LogDebug_System_String_MASES_JCOBridge_C2JBridge_JVMBridgeException_">IKNetConnectLogging.LogDebug(string, JVMBridgeException)</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Connect.IKNetConnectLogging.html#MASES_KNet_Connect_IKNetConnectLogging_LogDebug_System_String_System_Object___">IKNetConnectLogging.LogDebug(string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Connect.IKNetConnectLogging.html#MASES_KNet_Connect_IKNetConnectLogging_IsInfoEnabled">IKNetConnectLogging.IsInfoEnabled</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Connect.IKNetConnectLogging.html#MASES_KNet_Connect_IKNetConnectLogging_LogInfo_System_String_">IKNetConnectLogging.LogInfo(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Connect.IKNetConnectLogging.html#MASES_KNet_Connect_IKNetConnectLogging_LogInfo_System_String_MASES_JCOBridge_C2JBridge_JVMBridgeException_">IKNetConnectLogging.LogInfo(string, JVMBridgeException)</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Connect.IKNetConnectLogging.html#MASES_KNet_Connect_IKNetConnectLogging_LogInfo_System_String_System_Object___">IKNetConnectLogging.LogInfo(string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Connect.IKNetConnectLogging.html#MASES_KNet_Connect_IKNetConnectLogging_IsWarnEnabled">IKNetConnectLogging.IsWarnEnabled</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Connect.IKNetConnectLogging.html#MASES_KNet_Connect_IKNetConnectLogging_LogWarn_System_String_">IKNetConnectLogging.LogWarn(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Connect.IKNetConnectLogging.html#MASES_KNet_Connect_IKNetConnectLogging_LogWarn_System_String_MASES_JCOBridge_C2JBridge_JVMBridgeException_">IKNetConnectLogging.LogWarn(string, JVMBridgeException)</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Connect.IKNetConnectLogging.html#MASES_KNet_Connect_IKNetConnectLogging_LogWarn_System_String_System_Object___">IKNetConnectLogging.LogWarn(string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Connect.IKNetConnectLogging.html#MASES_KNet_Connect_IKNetConnectLogging_IsErrorEnabled">IKNetConnectLogging.IsErrorEnabled</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Connect.IKNetConnectLogging.html#MASES_KNet_Connect_IKNetConnectLogging_LogError_System_String_">IKNetConnectLogging.LogError(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Connect.IKNetConnectLogging.html#MASES_KNet_Connect_IKNetConnectLogging_LogError_System_String_MASES_JCOBridge_C2JBridge_JVMBridgeException_">IKNetConnectLogging.LogError(string, JVMBridgeException)</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Connect.IKNetConnectLogging.html#MASES_KNet_Connect_IKNetConnectLogging_LogError_System_String_System_Object___">IKNetConnectLogging.LogError(string, params object[])</a>
+    </div>
   </dd></dl>
 
 
@@ -138,7 +207,7 @@ Interface IKNetTask  <a class="header-action link-secondary" title="View source"
 
   <h3 id="MASES_KNet_Connect_IKNetTask_Connector" data-uid="MASES.KNet.Connect.IKNetTask.Connector">
   Connector
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Connect/KNetTask.cs/#L62"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Connect/KNetTask.cs/#L66"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>The associated <a class="xref" href="MASES.KNet.Connect.IConnector.html">IConnector</a></p>
@@ -170,10 +239,10 @@ Interface IKNetTask  <a class="header-action link-secondary" title="View source"
 
   <h3 id="MASES_KNet_Connect_IKNetTask_Properties" data-uid="MASES.KNet.Connect.IKNetTask.Properties">
   Properties
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Connect/KNetTask.cs/#L58"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Connect/KNetTask.cs/#L62"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>The properties retrieved from <a class="xref" href="MASES.KNet.Connect.KNetTask.html#MASES_KNet_Connect_KNetTask_StartInternal">StartInternal()</a></p>
+  <div class="markdown level1 summary"><p>The properties retrieved from <span class="xref">MASES.KNet.Connect.KNetTask.StartInternal()</span></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -202,7 +271,7 @@ Interface IKNetTask  <a class="header-action link-secondary" title="View source"
 
   <h3 id="MASES_KNet_Connect_IKNetTask_TaskId" data-uid="MASES.KNet.Connect.IKNetTask.TaskId">
   TaskId
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Connect/KNetTask.cs/#L66"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Connect/KNetTask.cs/#L70"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>The id received during initialization</p>
@@ -238,7 +307,7 @@ Interface IKNetTask  <a class="header-action link-secondary" title="View source"
 
   <h3 id="MASES_KNet_Connect_IKNetTask_Start_System_Collections_Generic_IReadOnlyDictionary_System_String_System_String__" data-uid="MASES.KNet.Connect.IKNetTask.Start(System.Collections.Generic.IReadOnlyDictionary{System.String,System.String})">
   Start(IReadOnlyDictionary&lt;string, string&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Connect/KNetTask.cs/#L71"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Connect/KNetTask.cs/#L75"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Implement the method to execute the start action</p>
@@ -252,7 +321,7 @@ Interface IKNetTask  <a class="header-action link-secondary" title="View source"
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>props</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlydictionary-2">IReadOnlyDictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
-    <dd><p>The set of properties returned from Apache Kafka Connect framework: the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlydictionary-2">IReadOnlyDictionary&lt;TKey, TValue&gt;</a> contains the info from <a class="xref" href="MASES.KNet.Connect.KNetConnector.html#MASES_KNet_Connect_KNetConnector_TaskConfigs_System_Int32_System_Collections_Generic_IDictionary_System_String_System_String__">TaskConfigs(int, IDictionary&lt;string, string&gt;)</a>.</p>
+    <dd><p>The set of properties returned from Apache Kafka Connect framework: the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlydictionary-2">IReadOnlyDictionary&lt;TKey, TValue&gt;</a> contains the info from KNetConnector.TaskConfigs(int, IDictionary&lt;string, string&gt;).</p>
 </dd>
   </dl>
 
@@ -271,7 +340,7 @@ Interface IKNetTask  <a class="header-action link-secondary" title="View source"
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Connect/KNetTask.cs/#L53" class="edit-link">Edit this page</a>
+          <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Connect/KNetTask.cs/#L57" class="edit-link">Edit this page</a>
         </div>
 
 
