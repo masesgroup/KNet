@@ -68,7 +68,7 @@ namespace MASES.KNet.Consumer
         /// <inheritdoc cref="Org.Apache.Kafka.Clients.Consumer.ConsumerRecord{K, V}.Topic"/>
         public string Topic { get { _topic ??= _record.Topic(); return _topic; } }
         /// <inheritdoc cref="Org.Apache.Kafka.Clients.Consumer.ConsumerRecord{K, V}.LeaderEpoch"/>
-        public int? LeaderEpoch { get { var epoch = _record.LeaderEpoch(); return epoch.IsEmpty() ? null : epoch.Get(); } }
+        public int? LeaderEpoch { get { var epoch = _record.LeaderEpoch(); return epoch.IsPresent() ? epoch.Get() : null; } }
         int? _partition = null;
         /// <inheritdoc cref="Org.Apache.Kafka.Clients.Consumer.ConsumerRecord{K, V}.Partition"/>
         public int Partition => _partition ??= _record.Partition();
