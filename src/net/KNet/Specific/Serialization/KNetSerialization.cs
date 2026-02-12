@@ -250,7 +250,7 @@ namespace MASES.KNet.Serialization
         /// </summary>
         /// <typeparam name="TData">The type to check</typeparam>
         /// <returns><see cref="SerializationType"/></returns>
-        public static SerializationType InternalJVMSerDesType<TData>()=> InternalJVMSerDesType(typeof(TData));
+        public static SerializationType InternalJVMSerDesType<TData>() => InternalJVMSerDesType(typeof(TData));
 
         /// <summary>
         /// Returns the JVM serializer <see cref="SerializationType"/> for <paramref name="type"/>
@@ -500,7 +500,7 @@ namespace MASES.KNet.Serialization
             //}
             //else if (data.Length != 4)
             //{
-            //    JVMBridgeException<SerializationException>.ThrowNew("Size of data received by DeserializeInt is not 4");
+            //    JVMBridgeException.Throw<SerializationException>("Size of data received by DeserializeInt is not 4");
             //    throw new SerializationException();
             //}
             //else
@@ -544,7 +544,7 @@ namespace MASES.KNet.Serialization
             //}
             //else if (data.Length != 8)
             //{
-            //    JVMBridgeException<SerializationException>.ThrowNew("Size of data received by DeserializeLong is not 8");
+            //    JVMBridgeException.Throw<SerializationException>("Size of data received by DeserializeLong is not 8");
             //    throw new SerializationException();
             //}
             //else
@@ -588,7 +588,7 @@ namespace MASES.KNet.Serialization
             //}
             //else if (data.Length != 2)
             //{
-            //    JVMBridgeException<SerializationException>.ThrowNew("Size of data received by DeserializeShort is not 2");
+            //    JVMBridgeException.Throw<SerializationException>("Size of data received by DeserializeShort is not 2");
             //    throw new SerializationException();
             //}
             //else
@@ -630,7 +630,7 @@ namespace MASES.KNet.Serialization
         {
             if (data != null || data.Length != 0)
             {
-                JVMBridgeException<Java.Lang.IllegalArgumentException>.ThrowNew("Data should be null for a VoidDeserializer.");
+                JVMBridgeException.Throw<Java.Lang.IllegalArgumentException>("Data should be null for a VoidDeserializer.");
                 throw new Java.Lang.IllegalArgumentException();
             }
             else
