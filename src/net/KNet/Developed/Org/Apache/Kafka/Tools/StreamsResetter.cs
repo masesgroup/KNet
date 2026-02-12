@@ -38,20 +38,46 @@ namespace Org.Apache.Kafka.Tools
             return ResetApplication(false, bootstrapserver, applicationId, inputTopics);  
         }
 
-        /// <summary>
-        /// Resets an <paramref name="applicationId"/> of Apache Kafka Streams and forces deletion of active members from the group
-        /// </summary>
-        /// <param name="bootstrapserver">The bootstrap server of the Apache Kafka cluster</param>
-        /// <param name="applicationId">The application id to be resetted</param>
-        /// <param name="inputTopics">Input topics to be resetted</param>
-        /// <returns><see langword="true"/> if everything goes well, otherwise <see langword="false"/></returns>
-        /// <exception cref="ArgumentNullException">Either <paramref name="applicationId"/> or <paramref name="bootstrapserver"/> are <see langword="null"/></exception>
-        public static bool ResetApplicationForced(string bootstrapserver, string applicationId, params string[] inputTopics)
+		/// <summary>
+		/// Resets an <paramref name="applicationId"/> of Apache Kafka Streams
+		/// </summary>
+		/// <param name="bootstrapserver">The bootstrap server of the Apache Kafka cluster</param>
+		/// <param name="applicationId">The application id to be resetted</param>
+		/// <param name="inputTopics">Input topics to be resetted</param>
+		/// <returns><see langword="true"/> if everything goes well, otherwise <see langword="false"/></returns>
+		/// <exception cref="ArgumentNullException">Either <paramref name="applicationId"/> or <paramref name="bootstrapserver"/> are <see langword="null"/></exception>
+		public static bool ResetApplication(string bootstrapserver, string applicationId, IEnumerable<string> inputTopics)
+		{
+			return ResetApplication(false, bootstrapserver, applicationId, inputTopics);
+		}
+
+		/// <summary>
+		/// Resets an <paramref name="applicationId"/> of Apache Kafka Streams and forces deletion of active members from the group
+		/// </summary>
+		/// <param name="bootstrapserver">The bootstrap server of the Apache Kafka cluster</param>
+		/// <param name="applicationId">The application id to be resetted</param>
+		/// <param name="inputTopics">Input topics to be resetted</param>
+		/// <returns><see langword="true"/> if everything goes well, otherwise <see langword="false"/></returns>
+		/// <exception cref="ArgumentNullException">Either <paramref name="applicationId"/> or <paramref name="bootstrapserver"/> are <see langword="null"/></exception>
+		public static bool ResetApplicationForced(string bootstrapserver, string applicationId, params string[] inputTopics)
         {
             return ResetApplication(true, bootstrapserver, applicationId, inputTopics);
         }
 
-        static bool ResetApplication(bool force, string bootstrapserver, string applicationId, string[] inputTopics)
+		/// <summary>
+		/// Resets an <paramref name="applicationId"/> of Apache Kafka Streams and forces deletion of active members from the group
+		/// </summary>
+		/// <param name="bootstrapserver">The bootstrap server of the Apache Kafka cluster</param>
+		/// <param name="applicationId">The application id to be resetted</param>
+		/// <param name="inputTopics">Input topics to be resetted</param>
+		/// <returns><see langword="true"/> if everything goes well, otherwise <see langword="false"/></returns>
+		/// <exception cref="ArgumentNullException">Either <paramref name="applicationId"/> or <paramref name="bootstrapserver"/> are <see langword="null"/></exception>
+		public static bool ResetApplicationForced(string bootstrapserver, string applicationId, IEnumerable<string> inputTopics)
+		{
+			return ResetApplication(true, bootstrapserver, applicationId, inputTopics);
+		}
+
+		static bool ResetApplication(bool force, string bootstrapserver, string applicationId, IEnumerable<string> inputTopics)
         {
             if (bootstrapserver == null) throw new ArgumentNullException(nameof(bootstrapserver));
             if (applicationId == null) throw new ArgumentNullException(nameof(applicationId));
@@ -61,10 +87,11 @@ namespace Org.Apache.Kafka.Tools
             strings.Add(bootstrapserver);
             strings.Add("--application-id");
             strings.Add(applicationId);
-            if (inputTopics != null && inputTopics.Length != 0)
+            string topics = inputTopics != null ? string.Join(",", inputTopics) : string.Empty;
+            if (!string.IsNullOrEmpty(topics))
             {
                 strings.Add("--input-topics");
-                strings.Add(string.Join(",", inputTopics));
+                strings.Add(topics);
             }
             if (force) strings.Add("--force");
 
