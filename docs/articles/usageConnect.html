@@ -110,12 +110,12 @@
 <p>The connector can be used from a JVM hosted runtime and from a .NET hosted runtime.
 For an overview of configuration see <a href="connectSDK.html">Connect SDK</a></p>
 <h3 id="jvm-hosted-runtime">JVM hosted runtime</h3>
-<p>To use the connector from a JVM hosted runtime follow the instructions available at <a href="https://kafka.apache.org/documentation/#connect">https://kafka.apache.org/documentation/#connect</a> and <a href="https://kafka.apache.org/quickstart#quickstart_kafkaconnect">https://kafka.apache.org/quickstart#quickstart_kafkaconnect</a>.</p>
+<p>To use the connector from a JVM hosted runtime follow the instructions available at <a href="https://kafka.apache.org/documentation/#connect">https://kafka.apache.org/documentation/#connect</a>, <a href="https://kafka.apache.org/quickstart#quickstart_kafkaconnect">https://kafka.apache.org/quickstart#quickstart_kafkaconnect</a> or <a href="https://docs.confluent.io/platform/current/connect/userguide.html">https://docs.confluent.io/platform/current/connect/userguide.html</a></p>
 <h3 id="net-hosted-runtime">.NET hosted runtime</h3>
 <p>KNet Connect .NET hosted runtime is available in two different formats:</p>
 <ul>
 <li><strong>dotnet tool</strong> hosted on <a href="https://www.nuget.org/packages/MASES.KNetConnect/">NuGet</a>: check <a href="https://www.nuget.org/packages/MASES.KNetConnect/">https://www.nuget.org/packages/MASES.KNetConnect/</a> and <a href="https://docs.microsoft.com/en-us/dotnet/core/tools/global-tools">https://docs.microsoft.com/en-us/dotnet/core/tools/global-tools</a> for installation deep instructions.</li>
-<li><strong>Docker image</strong> hosted on <a href="https://github.com/masesgroup/KNet/pkgs/container/knetconnect">GitHub</a> or <a href="https://hub.docker.com/repository/docker/masesgroup/knetconnect/general">Docker Hub</a>: follow instruction within the page and general instruction on <a href="https://docs.docker.com">https://docs.docker.com</a></li>
+<li><strong>Docker image</strong> hosted on <a href="https://github.com/masesgroup/KNet/pkgs/container/knet">GitHub</a> or <a href="https://hub.docker.com/repository/docker/masesgroup/knet/general">Docker Hub</a>: follow instruction within the page and general instruction on <a href="https://docs.docker.com">https://docs.docker.com</a></li>
 </ul>
 <div class="IMPORTANT">
 <h5>Important</h5>
@@ -139,13 +139,13 @@ For an overview of configuration see <a href="connectSDK.html">Connect SDK</a></
 <ul>
 <li><strong>Docker image</strong></li>
 </ul>
-<pre><code class="lang-sh">docker run ghcr.io/masesgroup/knetconnect -s connect-standalone.properties specific-connector.properties
+<pre><code class="lang-sh">docker run ghcr.io/masesgroup/knet -s connect-standalone.properties specific-connector.properties
 </code></pre>
-<pre><code class="lang-sh">docker run masesgroup/knetconnect -s connect-standalone.properties specific-connector.properties
+<pre><code class="lang-sh">docker run masesgroup/knet -s connect-standalone.properties specific-connector.properties
 </code></pre>
-<pre><code class="lang-sh">docker run ghcr.io/masesgroup/knetconnect -d connect-distributed.properties
+<pre><code class="lang-sh">docker run ghcr.io/masesgroup/knet -d connect-distributed.properties
 </code></pre>
-<pre><code class="lang-sh">docker run masesgroup/knetconnect -d connect-distributed.properties
+<pre><code class="lang-sh">docker run masesgroup/knet -d connect-distributed.properties
 </code></pre>
 <h4 id="command-line-switch-available">Command line switch available</h4>
 <p><em>knetconnect</em> accepts the following command-line switch to identify its behavior:</p>

@@ -125,7 +125,7 @@ Interface IKNetConnectLogging  <a class="header-action link-secondary" title="Vi
 
   <h3 id="MASES_KNet_Connect_IKNetConnectLogging_IsDebugEnabled" data-uid="MASES.KNet.Connect.IKNetConnectLogging.IsDebugEnabled">
   IsDebugEnabled
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/IKNetConnectLogging.cs/#L47"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/IKNetConnectLogging.cs/#L58"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Reports if debug level is enabled</p>
@@ -157,7 +157,7 @@ Interface IKNetConnectLogging  <a class="header-action link-secondary" title="Vi
 
   <h3 id="MASES_KNet_Connect_IKNetConnectLogging_IsErrorEnabled" data-uid="MASES.KNet.Connect.IKNetConnectLogging.IsErrorEnabled">
   IsErrorEnabled
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/IKNetConnectLogging.cs/#L92"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/IKNetConnectLogging.cs/#L124"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Reports if error level is enabled</p>
@@ -189,7 +189,7 @@ Interface IKNetConnectLogging  <a class="header-action link-secondary" title="Vi
 
   <h3 id="MASES_KNet_Connect_IKNetConnectLogging_IsInfoEnabled" data-uid="MASES.KNet.Connect.IKNetConnectLogging.IsInfoEnabled">
   IsInfoEnabled
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/IKNetConnectLogging.cs/#L62"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/IKNetConnectLogging.cs/#L80"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Reports if info level is enabled</p>
@@ -221,7 +221,7 @@ Interface IKNetConnectLogging  <a class="header-action link-secondary" title="Vi
 
   <h3 id="MASES_KNet_Connect_IKNetConnectLogging_IsTraceEnabled" data-uid="MASES.KNet.Connect.IKNetConnectLogging.IsTraceEnabled">
   IsTraceEnabled
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/IKNetConnectLogging.cs/#L32"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/IKNetConnectLogging.cs/#L36"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Reports if trace level is enabled</p>
@@ -253,7 +253,7 @@ Interface IKNetConnectLogging  <a class="header-action link-secondary" title="Vi
 
   <h3 id="MASES_KNet_Connect_IKNetConnectLogging_IsWarnEnabled" data-uid="MASES.KNet.Connect.IKNetConnectLogging.IsWarnEnabled">
   IsWarnEnabled
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/IKNetConnectLogging.cs/#L77"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/IKNetConnectLogging.cs/#L102"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Reports if warning level is enabled</p>
@@ -281,6 +281,38 @@ Interface IKNetConnectLogging  <a class="header-action link-secondary" title="Vi
 
 
 
+  <a id="MASES_KNet_Connect_IKNetConnectLogging_Name_" data-uid="MASES.KNet.Connect.IKNetConnectLogging.Name*"></a>
+
+  <h3 id="MASES_KNet_Connect_IKNetConnectLogging_Name" data-uid="MASES.KNet.Connect.IKNetConnectLogging.Name">
+  Name
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/IKNetConnectLogging.cs/#L32"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Reports the name of the logger</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string Name { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <h2 class="section" id="methods">Methods
 </h2>
 
@@ -289,10 +321,10 @@ Interface IKNetConnectLogging  <a class="header-action link-secondary" title="Vi
 
   <h3 id="MASES_KNet_Connect_IKNetConnectLogging_LogDebug_System_String_" data-uid="MASES.KNet.Connect.IKNetConnectLogging.LogDebug(System.String)">
   LogDebug(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/IKNetConnectLogging.cs/#L52"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/IKNetConnectLogging.cs/#L63"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Write a debug</p>
+  <div class="markdown level1 summary"><p>Write a debug string into Apache Connect tracing subsystem</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -322,10 +354,10 @@ Interface IKNetConnectLogging  <a class="header-action link-secondary" title="Vi
 
   <h3 id="MASES_KNet_Connect_IKNetConnectLogging_LogDebug_System_String_MASES_JCOBridge_C2JBridge_JVMBridgeException_" data-uid="MASES.KNet.Connect.IKNetConnectLogging.LogDebug(System.String,MASES.JCOBridge.C2JBridge.JVMBridgeException)">
   LogDebug(string, JVMBridgeException)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/IKNetConnectLogging.cs/#L58"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/IKNetConnectLogging.cs/#L69"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Write a debug</p>
+  <div class="markdown level1 summary"><p>Write a debug string into Apache Connect tracing subsystem</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -354,14 +386,53 @@ Interface IKNetConnectLogging  <a class="header-action link-secondary" title="Vi
 
 
 
+  <a id="MASES_KNet_Connect_IKNetConnectLogging_LogDebug_" data-uid="MASES.KNet.Connect.IKNetConnectLogging.LogDebug*"></a>
+
+  <h3 id="MASES_KNet_Connect_IKNetConnectLogging_LogDebug_System_String_System_Object___" data-uid="MASES.KNet.Connect.IKNetConnectLogging.LogDebug(System.String,System.Object[])">
+  LogDebug(string, params object[])
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/IKNetConnectLogging.cs/#L76"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Write a debug string into Apache Connect tracing subsystem</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void LogDebug(string var1, params object[] var2)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>var1</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>String to write</p>
+</dd>
+    <dt><code>var2</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>[]</dt>
+    <dd><p>The array of <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a> to format <code class="paramref">var1</code></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="MASES_KNet_Connect_IKNetConnectLogging_LogDebug_System_String_System_Object____remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Since the counter-part is based on log4j or slf4j the parameters in <code class="paramref">var2</code> will be applied on <code class="paramref">var1</code> using the rules defined from log4j or slf4j; see <a href="https://www.slf4j.org/api/org/slf4j/Logger.html">https://www.slf4j.org/api/org/slf4j/Logger.html</a></p>
+</div>
+
+
+
+
   <a id="MASES_KNet_Connect_IKNetConnectLogging_LogError_" data-uid="MASES.KNet.Connect.IKNetConnectLogging.LogError*"></a>
 
   <h3 id="MASES_KNet_Connect_IKNetConnectLogging_LogError_System_String_" data-uid="MASES.KNet.Connect.IKNetConnectLogging.LogError(System.String)">
   LogError(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/IKNetConnectLogging.cs/#L97"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/IKNetConnectLogging.cs/#L129"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Write a error</p>
+  <div class="markdown level1 summary"><p>Write a error into Apache Connect tracing subsystem</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -391,10 +462,10 @@ Interface IKNetConnectLogging  <a class="header-action link-secondary" title="Vi
 
   <h3 id="MASES_KNet_Connect_IKNetConnectLogging_LogError_System_String_MASES_JCOBridge_C2JBridge_JVMBridgeException_" data-uid="MASES.KNet.Connect.IKNetConnectLogging.LogError(System.String,MASES.JCOBridge.C2JBridge.JVMBridgeException)">
   LogError(string, JVMBridgeException)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/IKNetConnectLogging.cs/#L103"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/IKNetConnectLogging.cs/#L135"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Write a error</p>
+  <div class="markdown level1 summary"><p>Write a error into Apache Connect tracing subsystem</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -423,14 +494,53 @@ Interface IKNetConnectLogging  <a class="header-action link-secondary" title="Vi
 
 
 
+  <a id="MASES_KNet_Connect_IKNetConnectLogging_LogError_" data-uid="MASES.KNet.Connect.IKNetConnectLogging.LogError*"></a>
+
+  <h3 id="MASES_KNet_Connect_IKNetConnectLogging_LogError_System_String_System_Object___" data-uid="MASES.KNet.Connect.IKNetConnectLogging.LogError(System.String,System.Object[])">
+  LogError(string, params object[])
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/IKNetConnectLogging.cs/#L142"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Write a error string into Apache Connect tracing subsystem</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void LogError(string var1, params object[] var2)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>var1</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>String to write</p>
+</dd>
+    <dt><code>var2</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>[]</dt>
+    <dd><p>The array of <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a> to format <code class="paramref">var1</code></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="MASES_KNet_Connect_IKNetConnectLogging_LogError_System_String_System_Object____remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Since the counter-part is based on log4j or slf4j the parameters in <code class="paramref">var2</code> will be applied on <code class="paramref">var1</code> using the rules defined from log4j or slf4j; see <a href="https://www.slf4j.org/api/org/slf4j/Logger.html">https://www.slf4j.org/api/org/slf4j/Logger.html</a></p>
+</div>
+
+
+
+
   <a id="MASES_KNet_Connect_IKNetConnectLogging_LogInfo_" data-uid="MASES.KNet.Connect.IKNetConnectLogging.LogInfo*"></a>
 
   <h3 id="MASES_KNet_Connect_IKNetConnectLogging_LogInfo_System_String_" data-uid="MASES.KNet.Connect.IKNetConnectLogging.LogInfo(System.String)">
   LogInfo(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/IKNetConnectLogging.cs/#L67"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/IKNetConnectLogging.cs/#L85"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Write a info</p>
+  <div class="markdown level1 summary"><p>Write a info string into Apache Connect tracing subsystem</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -460,10 +570,10 @@ Interface IKNetConnectLogging  <a class="header-action link-secondary" title="Vi
 
   <h3 id="MASES_KNet_Connect_IKNetConnectLogging_LogInfo_System_String_MASES_JCOBridge_C2JBridge_JVMBridgeException_" data-uid="MASES.KNet.Connect.IKNetConnectLogging.LogInfo(System.String,MASES.JCOBridge.C2JBridge.JVMBridgeException)">
   LogInfo(string, JVMBridgeException)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/IKNetConnectLogging.cs/#L73"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/IKNetConnectLogging.cs/#L91"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Write a info</p>
+  <div class="markdown level1 summary"><p>Write a info string into Apache Connect tracing subsystem</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -492,14 +602,53 @@ Interface IKNetConnectLogging  <a class="header-action link-secondary" title="Vi
 
 
 
+  <a id="MASES_KNet_Connect_IKNetConnectLogging_LogInfo_" data-uid="MASES.KNet.Connect.IKNetConnectLogging.LogInfo*"></a>
+
+  <h3 id="MASES_KNet_Connect_IKNetConnectLogging_LogInfo_System_String_System_Object___" data-uid="MASES.KNet.Connect.IKNetConnectLogging.LogInfo(System.String,System.Object[])">
+  LogInfo(string, params object[])
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/IKNetConnectLogging.cs/#L98"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Write a info string into Apache Connect tracing subsystem</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void LogInfo(string var1, params object[] var2)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>var1</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>String to write</p>
+</dd>
+    <dt><code>var2</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>[]</dt>
+    <dd><p>The array of <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a> to format <code class="paramref">var1</code></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="MASES_KNet_Connect_IKNetConnectLogging_LogInfo_System_String_System_Object____remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Since the counter-part is based on log4j or slf4j the parameters in <code class="paramref">var2</code> will be applied on <code class="paramref">var1</code> using the rules defined from log4j or slf4j; see <a href="https://www.slf4j.org/api/org/slf4j/Logger.html">https://www.slf4j.org/api/org/slf4j/Logger.html</a></p>
+</div>
+
+
+
+
   <a id="MASES_KNet_Connect_IKNetConnectLogging_LogTrace_" data-uid="MASES.KNet.Connect.IKNetConnectLogging.LogTrace*"></a>
 
   <h3 id="MASES_KNet_Connect_IKNetConnectLogging_LogTrace_System_String_" data-uid="MASES.KNet.Connect.IKNetConnectLogging.LogTrace(System.String)">
   LogTrace(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/IKNetConnectLogging.cs/#L37"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/IKNetConnectLogging.cs/#L41"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Write a trace</p>
+  <div class="markdown level1 summary"><p>Write a trace string into Apache Connect tracing subsystem</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -529,10 +678,10 @@ Interface IKNetConnectLogging  <a class="header-action link-secondary" title="Vi
 
   <h3 id="MASES_KNet_Connect_IKNetConnectLogging_LogTrace_System_String_MASES_JCOBridge_C2JBridge_JVMBridgeException_" data-uid="MASES.KNet.Connect.IKNetConnectLogging.LogTrace(System.String,MASES.JCOBridge.C2JBridge.JVMBridgeException)">
   LogTrace(string, JVMBridgeException)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/IKNetConnectLogging.cs/#L43"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/IKNetConnectLogging.cs/#L47"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Write a trace</p>
+  <div class="markdown level1 summary"><p>Write a trace string log into Apache Connect tracing subsystem</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -561,14 +710,53 @@ Interface IKNetConnectLogging  <a class="header-action link-secondary" title="Vi
 
 
 
+  <a id="MASES_KNet_Connect_IKNetConnectLogging_LogTrace_" data-uid="MASES.KNet.Connect.IKNetConnectLogging.LogTrace*"></a>
+
+  <h3 id="MASES_KNet_Connect_IKNetConnectLogging_LogTrace_System_String_System_Object___" data-uid="MASES.KNet.Connect.IKNetConnectLogging.LogTrace(System.String,System.Object[])">
+  LogTrace(string, params object[])
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/IKNetConnectLogging.cs/#L54"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Write a trace string into Apache Connect tracing subsystem</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void LogTrace(string var1, params object[] var2)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>var1</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>String to write</p>
+</dd>
+    <dt><code>var2</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>[]</dt>
+    <dd><p>The array of <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a> to format <code class="paramref">var1</code></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="MASES_KNet_Connect_IKNetConnectLogging_LogTrace_System_String_System_Object____remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Since the counter-part is based on log4j or slf4j the parameters in <code class="paramref">var2</code> will be applied on <code class="paramref">var1</code> using the rules defined from log4j or slf4j; see <a href="https://www.slf4j.org/api/org/slf4j/Logger.html">https://www.slf4j.org/api/org/slf4j/Logger.html</a></p>
+</div>
+
+
+
+
   <a id="MASES_KNet_Connect_IKNetConnectLogging_LogWarn_" data-uid="MASES.KNet.Connect.IKNetConnectLogging.LogWarn*"></a>
 
   <h3 id="MASES_KNet_Connect_IKNetConnectLogging_LogWarn_System_String_" data-uid="MASES.KNet.Connect.IKNetConnectLogging.LogWarn(System.String)">
   LogWarn(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/IKNetConnectLogging.cs/#L82"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/IKNetConnectLogging.cs/#L107"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Write a warning</p>
+  <div class="markdown level1 summary"><p>Write a warning string into Apache Connect tracing subsystem</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -598,10 +786,10 @@ Interface IKNetConnectLogging  <a class="header-action link-secondary" title="Vi
 
   <h3 id="MASES_KNet_Connect_IKNetConnectLogging_LogWarn_System_String_MASES_JCOBridge_C2JBridge_JVMBridgeException_" data-uid="MASES.KNet.Connect.IKNetConnectLogging.LogWarn(System.String,MASES.JCOBridge.C2JBridge.JVMBridgeException)">
   LogWarn(string, JVMBridgeException)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/IKNetConnectLogging.cs/#L88"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/IKNetConnectLogging.cs/#L113"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Write a warning</p>
+  <div class="markdown level1 summary"><p>Write a warning string into Apache Connect tracing subsystem</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -626,6 +814,45 @@ Interface IKNetConnectLogging  <a class="header-action link-secondary" title="Vi
 
 
 
+
+
+
+
+  <a id="MASES_KNet_Connect_IKNetConnectLogging_LogWarn_" data-uid="MASES.KNet.Connect.IKNetConnectLogging.LogWarn*"></a>
+
+  <h3 id="MASES_KNet_Connect_IKNetConnectLogging_LogWarn_System_String_System_Object___" data-uid="MASES.KNet.Connect.IKNetConnectLogging.LogWarn(System.String,System.Object[])">
+  LogWarn(string, params object[])
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/IKNetConnectLogging.cs/#L120"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Write a warning string into Apache Connect tracing subsystem</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void LogWarn(string var1, params object[] var2)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>var1</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>String to write</p>
+</dd>
+    <dt><code>var2</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>[]</dt>
+    <dd><p>The array of <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a> to format <code class="paramref">var1</code></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="MASES_KNet_Connect_IKNetConnectLogging_LogWarn_System_String_System_Object____remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Since the counter-part is based on log4j or slf4j the parameters in <code class="paramref">var2</code> will be applied on <code class="paramref">var1</code> using the rules defined from log4j or slf4j; see <a href="https://www.slf4j.org/api/org/slf4j/Logger.html">https://www.slf4j.org/api/org/slf4j/Logger.html</a></p>
+</div>
 
 
 
