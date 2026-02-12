@@ -121,21 +121,21 @@ namespace MASES.KNet.Connect.Transforms.Predicates
             {
                 return Test(record.CastTo<SinkRecord>());
             }
-            else ConnectException.ThrowNew($"Cannot manage directly the input, override the method {nameof(Test)} with generic {nameof(ConnectRecord)} parameter.");
+            else JVMBridgeException.Throw<ConnectException>($"Cannot manage directly the input, override the method {nameof(Test)} with generic {nameof(ConnectRecord)} parameter.");
             return false;
         }
 
         /// <inheritdoc cref="IKNetPredicate.Test(SourceRecord)"/>
         public virtual bool Test(SourceRecord record)
         {
-            ConnectException.ThrowNew($"Not implemented for {nameof(SourceRecord)}");
+            JVMBridgeException.Throw<ConnectException>($"Not implemented for {nameof(SourceRecord)}");
             return false;
         }
 
         /// <inheritdoc cref="IKNetPredicate.Test(SinkRecord)"/>
         public virtual bool Test(SinkRecord record)
         {
-            ConnectException.ThrowNew($"Not implemented for {nameof(SinkRecord)}");
+            JVMBridgeException.Throw<ConnectException>($"Not implemented for {nameof(SinkRecord)}");
             return false;
         }
 
