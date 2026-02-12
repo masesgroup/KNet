@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 	<PropertyGroup>
 		<LangVersion>latest</LangVersion>
 		<OutputType>Exe</OutputType>
@@ -17,6 +17,6 @@
 	</ItemGroup>
 	<ItemGroup Condition="!Exists('$(ProjectDir)..\..\..\KNet\KNet.csproj')">
 		<!--Outside GitHub repo-->
-		<PackageReference Include="MASES.KNet" Version="2.9.6" IncludeAssets="All" PrivateAssets="None" />
+		<PackageReference Include="MASES.KNet" Version="2.9.7" IncludeAssets="All" PrivateAssets="None" />
 	</ItemGroup>
 </Project>
