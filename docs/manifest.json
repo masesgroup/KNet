@@ -502,6 +502,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Connect.IKNetCommon.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Connect.IKNetCommon.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MASES.KNet.Connect.IKNetCommon",
+      "Summary": "<p sourcefile=\"api/MASES.KNet.Connect.IKNetCommon.yml\" sourcestartlinenumber=\"1\">Helper interface for <xref href=\"MASES.KNet.Connect.KNetCommon\" data-throw-if-not-resolved=\"false\"></xref></p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/MASES.KNet.Connect.IKNetConnectLogging.yml",
       "output": {
         ".html": {
@@ -527,6 +541,62 @@
       "IsMRef": true,
       "Title": "MASES.KNet.Connect.IKNetConnector",
       "Summary": "<p sourcefile=\"api/MASES.KNet.Connect.IKNetConnector.yml\" sourcestartlinenumber=\"1\">Specific implementation of <xref href=\"MASES.KNet.Connect.IConnector\" data-throw-if-not-resolved=\"false\"></xref> to support KNet Connect SDK</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Connect.IKNetSinkConnector.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Connect.IKNetSinkConnector.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MASES.KNet.Connect.IKNetSinkConnector",
+      "Summary": "<p sourcefile=\"api/MASES.KNet.Connect.IKNetSinkConnector.yml\" sourcestartlinenumber=\"1\">Helper interface for <xref href=\"MASES.KNet.Connect.KNetSinkConnector%602\" data-throw-if-not-resolved=\"false\"></xref></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Connect.IKNetSinkTask.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Connect.IKNetSinkTask.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MASES.KNet.Connect.IKNetSinkTask",
+      "Summary": "<p sourcefile=\"api/MASES.KNet.Connect.IKNetSinkTask.yml\" sourcestartlinenumber=\"1\">Helper interface for <xref href=\"MASES.KNet.Connect.KNetSinkTask%601\" data-throw-if-not-resolved=\"false\"></xref></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Connect.IKNetSourceConnector.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Connect.IKNetSourceConnector.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MASES.KNet.Connect.IKNetSourceConnector",
+      "Summary": "<p sourcefile=\"api/MASES.KNet.Connect.IKNetSourceConnector.yml\" sourcestartlinenumber=\"1\">Helper interface for <xref href=\"MASES.KNet.Connect.KNetSourceConnector%602\" data-throw-if-not-resolved=\"false\"></xref></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Connect.IKNetSourceTask.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Connect.IKNetSourceTask.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MASES.KNet.Connect.IKNetSourceTask",
+      "Summary": "<p sourcefile=\"api/MASES.KNet.Connect.IKNetSourceTask.yml\" sourcestartlinenumber=\"1\">Helper interface for <xref href=\"MASES.KNet.Connect.KNetSourceTask%601\" data-throw-if-not-resolved=\"false\"></xref></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -569,6 +639,20 @@
       "IsMRef": true,
       "Title": "MASES.KNet.Connect.IVersion",
       "Summary": "<p sourcefile=\"api/MASES.KNet.Connect.IVersion.yml\" sourcestartlinenumber=\"1\">.NET interface for <xref href=\"MASES.KNet.Connect.IConnector\" data-throw-if-not-resolved=\"false\"></xref></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Connect.KNetCommon.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Connect.KNetCommon.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MASES.KNet.Connect.KNetCommon",
+      "Summary": "<p sourcefile=\"api/MASES.KNet.Connect.KNetCommon.yml\" sourcestartlinenumber=\"1\">The generic class which is the base of the KNet Connect SDK classes</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -737,6 +821,146 @@
       "IsMRef": true,
       "Title": "MASES.KNet.Connect.KNetTask",
       "Summary": "<p sourcefile=\"api/MASES.KNet.Connect.KNetTask.yml\" sourcestartlinenumber=\"1\">The generic class which is the base of both source or sink task</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Connect.Transforms.IKNetTransformation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Connect.Transforms.IKNetTransformation.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MASES.KNet.Connect.Transforms.IKNetTransformation",
+      "Summary": "<p sourcefile=\"api/MASES.KNet.Connect.Transforms.IKNetTransformation.yml\" sourcestartlinenumber=\"1\">Specific implementation of <xref href=\"MASES.KNet.Connect.Transforms.ITransformation\" data-throw-if-not-resolved=\"false\"></xref> to support KNet Connect SDK</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Connect.Transforms.ITransformation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Connect.Transforms.ITransformation.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MASES.KNet.Connect.Transforms.ITransformation",
+      "Summary": "<p sourcefile=\"api/MASES.KNet.Connect.Transforms.ITransformation.yml\" sourcestartlinenumber=\"1\">.NET interface for <xref href=\"Org.Apache.Kafka.Connect.Transforms.Transformation\" data-throw-if-not-resolved=\"false\"></xref></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Connect.Transforms.IVersion.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Connect.Transforms.IVersion.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MASES.KNet.Connect.Transforms.IVersion",
+      "Summary": "<p sourcefile=\"api/MASES.KNet.Connect.Transforms.IVersion.yml\" sourcestartlinenumber=\"1\">.NET interface for <xref href=\"MASES.KNet.Connect.Transforms.IVersion\" data-throw-if-not-resolved=\"false\"></xref></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Connect.Transforms.KNetTransformation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Connect.Transforms.KNetTransformation.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MASES.KNet.Connect.Transforms.KNetTransformation",
+      "Summary": "<p sourcefile=\"api/MASES.KNet.Connect.Transforms.KNetTransformation.yml\" sourcestartlinenumber=\"1\">The generic class which is the base of all transformations in .NET</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Connect.Transforms.Predicates.IKNetPredicate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Connect.Transforms.Predicates.IKNetPredicate.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MASES.KNet.Connect.Transforms.Predicates.IKNetPredicate",
+      "Summary": "<p sourcefile=\"api/MASES.KNet.Connect.Transforms.Predicates.IKNetPredicate.yml\" sourcestartlinenumber=\"1\">Specific implementation of <xref href=\"MASES.KNet.Connect.IConnector\" data-throw-if-not-resolved=\"false\"></xref> to support KNet Connect SDK</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Connect.Transforms.Predicates.IPredicate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Connect.Transforms.Predicates.IPredicate.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MASES.KNet.Connect.Transforms.Predicates.IPredicate",
+      "Summary": "<p sourcefile=\"api/MASES.KNet.Connect.Transforms.Predicates.IPredicate.yml\" sourcestartlinenumber=\"1\">.NET interface for <xref href=\"Org.Apache.Kafka.Connect.Connector.Connector\" data-throw-if-not-resolved=\"false\"></xref></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Connect.Transforms.Predicates.IVersion.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Connect.Transforms.Predicates.IVersion.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MASES.KNet.Connect.Transforms.Predicates.IVersion",
+      "Summary": "<p sourcefile=\"api/MASES.KNet.Connect.Transforms.Predicates.IVersion.yml\" sourcestartlinenumber=\"1\">.NET interface for <xref href=\"MASES.KNet.Connect.Transforms.Predicates.IVersion\" data-throw-if-not-resolved=\"false\"></xref></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Connect.Transforms.Predicates.KNetPredicate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Connect.Transforms.Predicates.KNetPredicate.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MASES.KNet.Connect.Transforms.Predicates.KNetPredicate",
+      "Summary": "<p sourcefile=\"api/MASES.KNet.Connect.Transforms.Predicates.KNetPredicate.yml\" sourcestartlinenumber=\"1\">The generic class which is the base of all predicates in .NET</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Connect.Transforms.Predicates.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Connect.Transforms.Predicates.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MASES.KNet.Connect.Transforms.Predicates",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Connect.Transforms.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Connect.Transforms.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MASES.KNet.Connect.Transforms",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
