@@ -112,7 +112,7 @@ namespace MASES.KNet.Connect
                 }
                 catch
                 {
-                    Org.Apache.Kafka.Common.Config.ConfigException.ThrowNew($"Unable to find {connectorClassName}");
+                    JVMBridgeException.Throw<Org.Apache.Kafka.Common.Config.ConfigException>($"Unable to find {connectorClassName}");
                     return false;
                 }
 
@@ -124,7 +124,7 @@ namespace MASES.KNet.Connect
                 }
                 catch (Exception ex)
                 {
-                    Org.Apache.Kafka.Common.Config.ConfigException.ThrowNew($"Failed to create an instance of {connectorClassName}: {ex}");
+                    JVMBridgeException.Throw<Org.Apache.Kafka.Common.Config.ConfigException>($"Failed to create an instance of {connectorClassName}: {ex}");
                     return false;
                 }
 
@@ -135,7 +135,7 @@ namespace MASES.KNet.Connect
                 }
                 catch (Exception ex)
                 {
-                    Org.Apache.Kafka.Common.Config.ConfigException.ThrowNew($"Failed to register the instance of {connectorClassName}: {ex}");
+                    JVMBridgeException.Throw<Org.Apache.Kafka.Common.Config.ConfigException>($"Failed to register the instance of {connectorClassName}: {ex}");
                     return false;
                 }
             }
@@ -156,7 +156,7 @@ namespace MASES.KNet.Connect
                 }
                 catch
                 {
-                    Org.Apache.Kafka.Common.Config.ConfigException.ThrowNew($"Unable to find {connectorClassName}");
+                    JVMBridgeException.Throw<Org.Apache.Kafka.Common.Config.ConfigException>($"Unable to find {connectorClassName}");
                     return false;
                 }
 
@@ -168,7 +168,7 @@ namespace MASES.KNet.Connect
                 }
                 catch (Exception ex)
                 {
-                    Org.Apache.Kafka.Common.Config.ConfigException.ThrowNew($"Failed to create an instance of {connectorClassName}: {ex}");
+                    JVMBridgeException.Throw<Org.Apache.Kafka.Common.Config.ConfigException>($"Failed to create an instance of {connectorClassName}: {ex}");
                     return false;
                 }
 
@@ -179,7 +179,7 @@ namespace MASES.KNet.Connect
                 }
                 catch (Exception ex)
                 {
-                    Org.Apache.Kafka.Common.Config.ConfigException.ThrowNew($"Failed to register the instance of {connectorClassName}: {ex}");
+                    JVMBridgeException.Throw<Org.Apache.Kafka.Common.Config.ConfigException>($"Failed to register the instance of {connectorClassName}: {ex}");
                     return false;
                 }
             }
@@ -200,7 +200,7 @@ namespace MASES.KNet.Connect
             }
             catch
             {
-                Org.Apache.Kafka.Common.Config.ConfigException.ThrowNew($"Unable to find {connectorClassName}");
+                JVMBridgeException.Throw<Org.Apache.Kafka.Common.Config.ConfigException>($"Unable to find {connectorClassName}");
                 return false;
             }
 
@@ -214,7 +214,7 @@ namespace MASES.KNet.Connect
             }
             catch (Exception ex)
             {
-                Org.Apache.Kafka.Common.Config.ConfigException.ThrowNew($"Failed to create an instance of {connectorClassName}: {ex}");
+                JVMBridgeException.Throw<Org.Apache.Kafka.Common.Config.ConfigException>($"Failed to create an instance of {connectorClassName}: {ex}");
                 return false;
             }
 
@@ -236,7 +236,7 @@ namespace MASES.KNet.Connect
             }
             catch
             {
-                Org.Apache.Kafka.Common.Config.ConfigException.ThrowNew($"Unable to find {transformClassName}");
+                JVMBridgeException.Throw<Org.Apache.Kafka.Common.Config.ConfigException>($"Unable to find {transformClassName}");
                 return false;
             }
 
@@ -250,7 +250,7 @@ namespace MASES.KNet.Connect
             }
             catch (Exception ex)
             {
-                Org.Apache.Kafka.Common.Config.ConfigException.ThrowNew($"Failed to create an instance of {transformClassName}: {ex}");
+                JVMBridgeException.Throw<Org.Apache.Kafka.Common.Config.ConfigException>($"Failed to create an instance of {transformClassName}: {ex}");
                 return false;
             }
 
@@ -272,7 +272,7 @@ namespace MASES.KNet.Connect
             }
             catch
             {
-                Org.Apache.Kafka.Common.Config.ConfigException.ThrowNew($"Unable to find {predicateClassName}");
+                JVMBridgeException.Throw<Org.Apache.Kafka.Common.Config.ConfigException>($"Unable to find {predicateClassName}");
                 return false;
             }
 
@@ -286,7 +286,7 @@ namespace MASES.KNet.Connect
             }
             catch (Exception ex)
             {
-                Org.Apache.Kafka.Common.Config.ConfigException.ThrowNew($"Failed to create an instance of {predicateClassName}: {ex}");
+                JVMBridgeException.Throw<Org.Apache.Kafka.Common.Config.ConfigException>($"Failed to create an instance of {predicateClassName}: {ex}");
                 return false;
             }
 

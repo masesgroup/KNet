@@ -119,21 +119,21 @@ namespace MASES.KNet.Connect.Transforms
             {
                 return Apply(record.CastTo<SinkRecord>());
             }
-            else ConnectException.ThrowNew($"Cannot manage directly the input, override the method {nameof(Apply)} with generic {nameof(ConnectRecord)} parameter.");
+            else JVMBridgeException.Throw<ConnectException>($"Cannot manage directly the input, override the method {nameof(Apply)} with generic {nameof(ConnectRecord)} parameter.");
             return null;
         }
 
         /// <inheritdoc cref="IKNetTransformation.Apply(SourceRecord)"/>
         public virtual SourceRecord Apply(SourceRecord record)
         {
-            ConnectException.ThrowNew($"Not implemented for {nameof(SourceRecord)}");
+            JVMBridgeException.Throw<ConnectException>($"Not implemented for {nameof(SourceRecord)}");
             return null;
         }
 
         /// <inheritdoc cref="IKNetTransformation.Apply(SinkRecord)"/>
         public virtual SinkRecord Apply(SinkRecord record)
         {
-            ConnectException.ThrowNew($"Not implemented for {nameof(SinkRecord)}");
+            JVMBridgeException.Throw<ConnectException>($"Not implemented for {nameof(SinkRecord)}");
             return null;
         }
 
