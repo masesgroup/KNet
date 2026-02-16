@@ -101,6 +101,8 @@ namespace MASES.KNet.Serialization.Protobuf
                     headers?.Add(KNetSerialization.KeyTypeIdentifierJVM, keyTypeName);
                     headers?.Add(KNetSerialization.KeySerializerIdentifierJVM, keySerDesName);
 
+                    if (data == null) return null;
+
                     using (MemoryStream stream = new MemoryStream())
                     {
                         data.WriteTo(stream);
@@ -148,6 +150,8 @@ namespace MASES.KNet.Serialization.Protobuf
                 {
                     headers?.Add(KNetSerialization.KeyTypeIdentifierJVM, keyTypeName);
                     headers?.Add(KNetSerialization.KeySerializerIdentifierJVM, keySerDesName);
+
+                    if (data == null) return null;
 
                     MemoryStream stream = new MemoryStream();
                     {
@@ -239,6 +243,8 @@ namespace MASES.KNet.Serialization.Protobuf
                     headers?.Add(KNetSerialization.ValueSerializerIdentifierJVM, valueSerDesName);
                     headers?.Add(KNetSerialization.ValueTypeIdentifierJVM, valueTypeName);
 
+                    if (data == null) return null;
+
                     using (MemoryStream stream = new MemoryStream())
                     {
                         data.WriteTo(stream);
@@ -286,6 +292,8 @@ namespace MASES.KNet.Serialization.Protobuf
                 {
                     headers?.Add(KNetSerialization.ValueSerializerIdentifierJVM, valueSerDesName);
                     headers?.Add(KNetSerialization.ValueTypeIdentifierJVM, valueTypeName);
+
+                    if (data == null) return null;
 
                     MemoryStream stream = new MemoryStream();
                     {

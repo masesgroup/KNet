@@ -164,6 +164,8 @@ namespace MASES.KNet.Serialization.Avro
                         headers?.Add(KNetSerialization.KeyTypeIdentifierJVM, keyTypeName);
                         headers?.Add(KNetSerialization.KeySerializerIdentifierJVM, keySerDesName);
 
+                        if (data == null) return null;
+
                         using MemoryStream memStream = new();
                         BinaryEncoder encoder = new(memStream);
                         SpecificWriter.Write(data, encoder);
@@ -233,6 +235,8 @@ namespace MASES.KNet.Serialization.Avro
                     {
                         headers?.Add(KNetSerialization.KeyTypeIdentifierJVM, keyTypeName);
                         headers?.Add(KNetSerialization.KeySerializerIdentifierJVM, keySerDesName);
+
+                        if (data == null) return null;
 
                         MemoryStream memStream = new();
                         BinaryEncoder encoder = new(memStream);
@@ -345,6 +349,8 @@ namespace MASES.KNet.Serialization.Avro
                         headers?.Add(KNetSerialization.KeyTypeIdentifierJVM, keyTypeName);
                         headers?.Add(KNetSerialization.KeySerializerIdentifierJVM, keySerDesName);
 
+                        if (data == null) return null;
+
                         using MemoryStream memStream = new();
                         JsonEncoder encoder = new(Schema, memStream);
                         SpecificWriter.Write(data, encoder);
@@ -414,6 +420,8 @@ namespace MASES.KNet.Serialization.Avro
                     {
                         headers?.Add(KNetSerialization.KeyTypeIdentifierJVM, keyTypeName);
                         headers?.Add(KNetSerialization.KeySerializerIdentifierJVM, keySerDesName);
+
+                        if (data == null) return null;
 
                         MemoryStream memStream = new();
                         JsonEncoder encoder = new(Schema, memStream);
@@ -533,6 +541,8 @@ namespace MASES.KNet.Serialization.Avro
                         headers?.Add(KNetSerialization.ValueSerializerIdentifierJVM, valueSerDesName);
                         headers?.Add(KNetSerialization.ValueTypeIdentifierJVM, valueTypeName);
 
+                        if (data == null) return null;
+
                         MemoryStream memStream = new();
                         BinaryEncoder encoder = new(memStream);
                         SpecificWriter.Write(data, encoder);
@@ -602,6 +612,8 @@ namespace MASES.KNet.Serialization.Avro
                     {
                         headers?.Add(KNetSerialization.ValueSerializerIdentifierJVM, valueSerDesName);
                         headers?.Add(KNetSerialization.ValueTypeIdentifierJVM, valueTypeName);
+
+                        if (data == null) return null;
 
                         MemoryStream memStream = new();
                         BinaryEncoder encoder = new(memStream);
@@ -715,6 +727,8 @@ namespace MASES.KNet.Serialization.Avro
                         headers?.Add(KNetSerialization.ValueSerializerIdentifierJVM, valueSerDesName);
                         headers?.Add(KNetSerialization.ValueTypeIdentifierJVM, valueTypeName);
 
+                        if (data == null) return null;
+
                         using MemoryStream memStream = new();
                         JsonEncoder encoder = new(Schema, memStream);
                         SpecificWriter.Write(data, encoder);
@@ -784,6 +798,8 @@ namespace MASES.KNet.Serialization.Avro
                     {
                         headers?.Add(KNetSerialization.ValueSerializerIdentifierJVM, valueSerDesName);
                         headers?.Add(KNetSerialization.ValueTypeIdentifierJVM, valueTypeName);
+
+                        if (data == null) return null;
 
                         MemoryStream memStream = new();
                         JsonEncoder encoder = new(Schema, memStream);
