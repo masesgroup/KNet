@@ -11,7 +11,15 @@ on:
         description: 'The current version'
         required: true
         type: string
+      PreReleaseCurrentVersion:
+        description: 'The current version'
+        required: true
+        type: string
       NewVersion:
+        description: 'The new version'
+        required: true
+        type: string
+      PreReleaseNewVersion:
         description: 'The new version'
         required: true
         type: string
@@ -33,32 +41,31 @@ jobs:
       - uses: actions/checkout@v6
         with:
           fetch-depth: '1'
-          submodules: 'true'
 
       - run: (Get-Content ${{ github.workspace }}\src\jvm\knet\pom.xml).Replace('<knetVersion>${{ inputs.CurrentVersion }}.0</knetVersion>', '<knetVersion>${{ inputs.NewVersion }}.0</knetVersion>') | Set-Content ${{ github.workspace }}\src\jvm\knet\pom.xml
       
-      - run: (Get-Content ${{ github.workspace }}\src\net\Common\Common.props).Replace('<Version>${{ inputs.CurrentVersion }}.0</Version>', '<Version>${{ inputs.NewVersion }}.0</Version>') | Set-Content ${{ github.workspace }}\src\net\Common\Common.props
+      - run: (Get-Content ${{ github.workspace }}\src\net\Common\Common.props).Replace('<Version>${{ inputs.CurrentVersion }}.0${{ inputs.PreReleaseCurrentVersion }}</Version>', '<Version>${{ inputs.NewVersion }}.0${{ inputs.PreReleaseNewVersion }}</Version>') | Set-Content ${{ github.workspace }}\src\net\Common\Common.props
 
-      - run: (Get-Content ${{ github.workspace }}\src\net\KNetCLI\KNetCLI.nuspec).Replace('<version>${{ inputs.CurrentVersion }}</version>', '<version>${{ inputs.NewVersion }}</version>') | Set-Content ${{ github.workspace }}\src\net\KNetCLI\KNetCLI.nuspec
-      - run: (Get-Content ${{ github.workspace }}\src\net\KNetConnect\KNetConnect.nuspec).Replace('<version>${{ inputs.CurrentVersion }}</version>', '<version>${{ inputs.NewVersion }}</version>') | Set-Content ${{ github.workspace }}\src\net\KNetConnect\KNetConnect.nuspec
+      - run: (Get-Content ${{ github.workspace }}\src\net\KNetCLI\KNetCLI.nuspec).Replace('<version>${{ inputs.CurrentVersion }}${{ inputs.PreReleaseCurrentVersion }}</version>', '<version>${{ inputs.NewVersion }}${{ inputs.PreReleaseNewVersion }}</version>') | Set-Content ${{ github.workspace }}\src\net\KNetCLI\KNetCLI.nuspec
+      - run: (Get-Content ${{ github.workspace }}\src\net\KNetConnect\KNetConnect.nuspec).Replace('<version>${{ inputs.CurrentVersion }}${{ inputs.PreReleaseCurrentVersion }}</version>', '<version>${{ inputs.NewVersion }}${{ inputs.PreReleaseNewVersion }}</version>') | Set-Content ${{ github.workspace }}\src\net\KNetConnect\KNetConnect.nuspec
 
-      - run: (Get-Content ${{ github.workspace }}\src\net\KNetPS\MASES.KNetPS.psd1).Replace('${{ inputs.CurrentVersion }}', '${{ inputs.NewVersion }}') | Set-Content ${{ github.workspace }}\src\net\KNetPS\MASES.KNetPS.psd1
-      - run: (Get-Content ${{ github.workspace }}\src\net\KNetPS\MASES.KNetPSCore.psd1).Replace('${{ inputs.CurrentVersion }}', '${{ inputs.NewVersion }}') | Set-Content ${{ github.workspace }}\src\net\KNetPS\MASES.KNetPSCore.psd1
-      - run: (Get-Content ${{ github.workspace }}\src\net\KNetPS\MASES.KNetPSFramework.psd1).Replace('${{ inputs.CurrentVersion }}', '${{ inputs.NewVersion }}') | Set-Content ${{ github.workspace }}\src\net\KNetPS\MASES.KNetPSFramework.psd1
+      - run: (Get-Content ${{ github.workspace }}\src\net\KNetPS\MASES.KNetPS.psd1).Replace('${{ inputs.CurrentVersion }}${{ inputs.PreReleaseCurrentVersion }}', '${{ inputs.NewVersion }}${{ inputs.PreReleaseNewVersion }}') | Set-Content ${{ github.workspace }}\src\net\KNetPS\MASES.KNetPS.psd1
+      - run: (Get-Content ${{ github.workspace }}\src\net\KNetPS\MASES.KNetPSCore.psd1).Replace('${{ inputs.CurrentVersion }}${{ inputs.PreReleaseCurrentVersion }}', '${{ inputs.NewVersion }}${{ inputs.PreReleaseNewVersion }}') | Set-Content ${{ github.workspace }}\src\net\KNetPS\MASES.KNetPSCore.psd1
+      - run: (Get-Content ${{ github.workspace }}\src\net\KNetPS\MASES.KNetPSFramework.psd1).Replace('${{ inputs.CurrentVersion }}${{ inputs.PreReleaseCurrentVersion }}', '${{ inputs.NewVersion }}${{ inputs.PreReleaseNewVersion }}') | Set-Content ${{ github.workspace }}\src\net\KNetPS\MASES.KNetPSFramework.psd1
 
-      - run: (Get-Content ${{ github.workspace }}\src\net\templates\templates\knetConnectSink\knetConnectSink.csproj).Replace('${{ inputs.CurrentVersion }}', '${{ inputs.NewVersion }}') | Set-Content ${{ github.workspace }}\src\net\templates\templates\knetConnectSink\knetConnectSink.csproj
-      - run: (Get-Content ${{ github.workspace }}\src\net\templates\templates\knetConnectSource\knetConnectSource.csproj).Replace('${{ inputs.CurrentVersion }}', '${{ inputs.NewVersion }}') | Set-Content ${{ github.workspace }}\src\net\templates\templates\knetConnectSource\knetConnectSource.csproj
-      - run: (Get-Content ${{ github.workspace }}\src\net\templates\templates\knetConsumerApp\knetConsumerApp.csproj).Replace('${{ inputs.CurrentVersion }}', '${{ inputs.NewVersion }}') | Set-Content ${{ github.workspace }}\src\net\templates\templates\knetConsumerApp\knetConsumerApp.csproj
-      - run: (Get-Content ${{ github.workspace }}\src\net\templates\templates\knetPipeStreamApp\knetPipeStreamApp.csproj).Replace('${{ inputs.CurrentVersion }}', '${{ inputs.NewVersion }}') | Set-Content ${{ github.workspace }}\src\net\templates\templates\knetPipeStreamApp\knetPipeStreamApp.csproj
-      - run: (Get-Content ${{ github.workspace }}\src\net\templates\templates\knetProducerApp\knetProducerApp.csproj).Replace('${{ inputs.CurrentVersion }}', '${{ inputs.NewVersion }}') | Set-Content ${{ github.workspace }}\src\net\templates\templates\knetProducerApp\knetProducerApp.csproj
+      - run: (Get-Content ${{ github.workspace }}\src\net\templates\templates\knetConnectSink\knetConnectSink.csproj).Replace('${{ inputs.CurrentVersion }}${{ inputs.PreReleaseCurrentVersion }}', '${{ inputs.NewVersion }}${{ inputs.PreReleaseNewVersion }}') | Set-Content ${{ github.workspace }}\src\net\templates\templates\knetConnectSink\knetConnectSink.csproj
+      - run: (Get-Content ${{ github.workspace }}\src\net\templates\templates\knetConnectSource\knetConnectSource.csproj).Replace('${{ inputs.CurrentVersion }}${{ inputs.PreReleaseCurrentVersion }}', '${{ inputs.NewVersion }}${{ inputs.PreReleaseNewVersion }}') | Set-Content ${{ github.workspace }}\src\net\templates\templates\knetConnectSource\knetConnectSource.csproj
+      - run: (Get-Content ${{ github.workspace }}\src\net\templates\templates\knetConsumerApp\knetConsumerApp.csproj).Replace('${{ inputs.CurrentVersion }}${{ inputs.PreReleaseCurrentVersion }}', '${{ inputs.NewVersion }}${{ inputs.PreReleaseNewVersion }}') | Set-Content ${{ github.workspace }}\src\net\templates\templates\knetConsumerApp\knetConsumerApp.csproj
+      - run: (Get-Content ${{ github.workspace }}\src\net\templates\templates\knetPipeStreamApp\knetPipeStreamApp.csproj).Replace('${{ inputs.CurrentVersion }}${{ inputs.PreReleaseCurrentVersion }}', '${{ inputs.NewVersion }}${{ inputs.PreReleaseNewVersion }}') | Set-Content ${{ github.workspace }}\src\net\templates\templates\knetPipeStreamApp\knetPipeStreamApp.csproj
+      - run: (Get-Content ${{ github.workspace }}\src\net\templates\templates\knetProducerApp\knetProducerApp.csproj).Replace('${{ inputs.CurrentVersion }}${{ inputs.PreReleaseCurrentVersion }}', '${{ inputs.NewVersion }}${{ inputs.PreReleaseNewVersion }}') | Set-Content ${{ github.workspace }}\src\net\templates\templates\knetProducerApp\knetProducerApp.csproj
       
       - name: Request a PR to commit changes
         uses: peter-evans/create-pull-request@v8
         with:
           branch-suffix: short-commit-hash
           add-paths: src/*.*
-          commit-message: Update version from ${{ inputs.CurrentVersion }} to ${{ inputs.NewVersion }}
-          title: Update version from ${{ inputs.CurrentVersion }} to ${{ inputs.NewVersion }}
+          commit-message: Update version from ${{ inputs.CurrentVersion }}${{ inputs.PreReleaseCurrentVersion }} to ${{ inputs.NewVersion }}${{ inputs.PreReleaseNewVersion }}
+          title: Update version from ${{ inputs.CurrentVersion }}${{ inputs.PreReleaseCurrentVersion }} to ${{ inputs.NewVersion }}${{ inputs.PreReleaseNewVersion }}
           body: |
             Automated changes by GitHub action fix #121
           reviewers: masesdevelopers
