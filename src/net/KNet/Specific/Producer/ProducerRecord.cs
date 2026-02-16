@@ -35,7 +35,7 @@ namespace MASES.KNet.Producer
         /// <summary>
         /// Initialize a new <see cref="ProducerRecord{K, V, TJVMK, TJVMV}"/>
         /// </summary>
-        public ProducerRecord(string topic, int partition, long timestamp, K key, V value, Headers headers)
+        public ProducerRecord(string topic, int? partition, long? timestamp, K key, V value, Headers headers)
         {
             Topic = topic;
             Partition = partition;
@@ -47,11 +47,11 @@ namespace MASES.KNet.Producer
         /// <summary>
         /// Initialize a new <see cref="ProducerRecord{K, V, TJVMK, TJVMV}"/>
         /// </summary>
-        public ProducerRecord(string topic, int partition, System.DateTime timestamp, K key, V value, Headers headers)
+        public ProducerRecord(string topic, int? partition, System.DateTime? timestamp, K key, V value, Headers headers)
         {
             Topic = topic;
             Partition = partition;
-            Timestamp = new System.DateTimeOffset(timestamp).ToUnixTimeMilliseconds();
+            Timestamp = timestamp.HasValue ? new System.DateTimeOffset(timestamp.Value).ToUnixTimeMilliseconds() : null;
             Key = key;
             Value = value;
             Headers = headers;
@@ -59,7 +59,7 @@ namespace MASES.KNet.Producer
         /// <summary>
         /// Initialize a new <see cref="ProducerRecord{K, V, TJVMK, TJVMV}"/>
         /// </summary>
-        public ProducerRecord(string topic, int partition, long timestamp, K key, V value)
+        public ProducerRecord(string topic, int? partition, long? timestamp, K key, V value)
         {
             Topic = topic;
             Partition = partition;
@@ -70,18 +70,18 @@ namespace MASES.KNet.Producer
         /// <summary>
         /// Initialize a new <see cref="ProducerRecord{K, V, TJVMK, TJVMV}"/>
         /// </summary>
-        public ProducerRecord(string topic, int partition, System.DateTime timestamp, K key, V value)
+        public ProducerRecord(string topic, int? partition, System.DateTime? timestamp, K key, V value)
         {
             Topic = topic;
             Partition = partition;
-            Timestamp = new System.DateTimeOffset(timestamp).ToUnixTimeMilliseconds();
+            Timestamp = timestamp.HasValue ? new System.DateTimeOffset(timestamp.Value).ToUnixTimeMilliseconds() : null;
             Key = key;
             Value = value;
         }
         /// <summary>
         /// Initialize a new <see cref="ProducerRecord{K, V, TJVMK, TJVMV}"/>
         /// </summary>
-        public ProducerRecord(string topic, int partition, K key, V value, Headers headers)
+        public ProducerRecord(string topic, int? partition, K key, V value, Headers headers)
         {
             Topic = topic;
             Partition = partition;
@@ -92,7 +92,7 @@ namespace MASES.KNet.Producer
         /// <summary>
         /// Initialize a new <see cref="ProducerRecord{K, V, TJVMK, TJVMV}"/>
         /// </summary>
-        public ProducerRecord(string topic, int partition, K key, V value)
+        public ProducerRecord(string topic, int? partition, K key, V value)
         {
             Topic = topic;
             Partition = partition;
@@ -152,32 +152,32 @@ namespace MASES.KNet.Producer
         {
         }
         /// <inheritdoc/>
-        public ProducerRecord(string topic, int partition, long timestamp, K key, V value, Headers headers)
+        public ProducerRecord(string topic, int? partition, long? timestamp, K key, V value, Headers headers)
             : base(topic, partition, timestamp, key, value, headers)
         {
         }
         /// <inheritdoc/>
-        public ProducerRecord(string topic, int partition, System.DateTime timestamp, K key, V value, Headers headers)
+        public ProducerRecord(string topic, int? partition, System.DateTime? timestamp, K key, V value, Headers headers)
             : base(topic, partition, timestamp, key, value, headers)
         {
         }
         /// <inheritdoc/>
-        public ProducerRecord(string topic, int partition, long timestamp, K key, V value)
+        public ProducerRecord(string topic, int? partition, long? timestamp, K key, V value)
             : base(topic, partition, timestamp, key, value)
         {
         }
         /// <inheritdoc/>
-        public ProducerRecord(string topic, int partition, System.DateTime timestamp, K key, V value)
+        public ProducerRecord(string topic, int? partition, System.DateTime? timestamp, K key, V value)
             : base(topic, partition, timestamp, key, value)
         {
         }
         /// <inheritdoc/>
-        public ProducerRecord(string topic, int partition, K key, V value, Headers headers)
+        public ProducerRecord(string topic, int? partition, K key, V value, Headers headers)
             : base(topic, partition, key, value, headers)
         {
         }
         /// <inheritdoc/>
-        public ProducerRecord(string topic, int partition, K key, V value)
+        public ProducerRecord(string topic, int? partition, K key, V value)
             : base(topic, partition, key, value)
         {
         }
@@ -208,32 +208,32 @@ namespace MASES.KNet.Producer
         {
         }
         /// <inheritdoc/>
-        public ProducerRecordBuffered(string topic, int partition, long timestamp, K key, V value, Headers headers)
+        public ProducerRecordBuffered(string topic, int? partition, long? timestamp, K key, V value, Headers headers)
             : base(topic, partition, timestamp, key, value, headers)
         {
         }
         /// <inheritdoc/>
-        public ProducerRecordBuffered(string topic, int partition, System.DateTime timestamp, K key, V value, Headers headers)
+        public ProducerRecordBuffered(string topic, int? partition, System.DateTime? timestamp, K key, V value, Headers headers)
             : base(topic, partition, timestamp, key, value, headers)
         {
         }
         /// <inheritdoc/>
-        public ProducerRecordBuffered(string topic, int partition, long timestamp, K key, V value)
+        public ProducerRecordBuffered(string topic, int? partition, long? timestamp, K key, V value)
             : base(topic, partition, timestamp, key, value)
         {
         }
         /// <inheritdoc/>
-        public ProducerRecordBuffered(string topic, int partition, System.DateTime timestamp, K key, V value)
+        public ProducerRecordBuffered(string topic, int? partition, System.DateTime? timestamp, K key, V value)
             : base(topic, partition, timestamp, key, value)
         {
         }
         /// <inheritdoc/>
-        public ProducerRecordBuffered(string topic, int partition, K key, V value, Headers headers)
+        public ProducerRecordBuffered(string topic, int? partition, K key, V value, Headers headers)
             : base(topic, partition, key, value, headers)
         {
         }
         /// <inheritdoc/>
-        public ProducerRecordBuffered(string topic, int partition, K key, V value)
+        public ProducerRecordBuffered(string topic, int? partition, K key, V value)
             : base(topic, partition, key, value)
         {
         }
