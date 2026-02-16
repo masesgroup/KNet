@@ -56,22 +56,22 @@ namespace MASES.KNet.Producer
         /// KNet version of <see cref="Producer{K, V}.Send(Org.Apache.Kafka.Clients.Producer.ProducerRecord{K, V})"/>
         /// </summary>
         /// <remarks>Supports only <typeparamref name="TJVMK"/> and <typeparamref name="TJVMV"/> based on <see cref="byte"/> arrays or <see cref="Java.Nio.ByteBuffer"/></remarks>
-        Future<RecordMetadata> Send(string topic, int partition, long timestamp, K key, V value, Headers headers);
+        Future<RecordMetadata> Send(string topic, int? partition, long? timestamp, K key, V value, Headers headers);
         /// <summary>
         /// KNet version of <see cref="Producer{K, V}.Send(Org.Apache.Kafka.Clients.Producer.ProducerRecord{K, V})"/>
         /// </summary>
         /// <remarks>Supports only <typeparamref name="TJVMK"/> and <typeparamref name="TJVMV"/> based on <see cref="byte"/> arrays or <see cref="Java.Nio.ByteBuffer"/></remarks>
-        Future<RecordMetadata> Send(string topic, int partition, long timestamp, K key, V value);
+        Future<RecordMetadata> Send(string topic, int? partition, long? timestamp, K key, V value);
         /// <summary>
         /// KNet version of <see cref="Producer{K, V}.Send(Org.Apache.Kafka.Clients.Producer.ProducerRecord{K, V})"/>
         /// </summary>
         /// <remarks>Supports only <typeparamref name="TJVMK"/> and <typeparamref name="TJVMV"/> based on <see cref="byte"/> arrays or <see cref="Java.Nio.ByteBuffer"/></remarks>
-        Future<RecordMetadata> Send(string topic, int partition, K key, V value, Headers headers);
+        Future<RecordMetadata> Send(string topic, int? partition, K key, V value, Headers headers);
         /// <summary>
         /// KNet version of <see cref="Producer{K, V}.Send(Org.Apache.Kafka.Clients.Producer.ProducerRecord{K, V})"/>
         /// </summary>
         /// <remarks>Supports only <typeparamref name="TJVMK"/> and <typeparamref name="TJVMV"/> based on <see cref="byte"/> arrays or <see cref="Java.Nio.ByteBuffer"/></remarks>
-        Future<RecordMetadata> Send(string topic, int partition, K key, V value);
+        Future<RecordMetadata> Send(string topic, int? partition, K key, V value);
         /// <summary>
         /// KNet version of <see cref="Producer{K, V}.Send(Org.Apache.Kafka.Clients.Producer.ProducerRecord{K, V})"/>
         /// </summary>
@@ -89,15 +89,15 @@ namespace MASES.KNet.Producer
         /// <summary>
         /// KNet version of <see cref="Producer{K, V}.Send(Org.Apache.Kafka.Clients.Producer.ProducerRecord{K, V}, Callback)"/>
         /// </summary>
-        void Produce(string topic, int partition, K key, V value, Action<RecordMetadata, JVMBridgeException> action = null);
+        void Produce(string topic, int? partition, K key, V value, Action<RecordMetadata, JVMBridgeException> action = null);
         /// <summary>
         /// KNet version of <see cref="Producer{K, V}.Send(Org.Apache.Kafka.Clients.Producer.ProducerRecord{K, V}, Callback)"/>
         /// </summary>
-        void Produce(string topic, int partition, long timestamp, K key, V value, Action<RecordMetadata, JVMBridgeException> action = null);
+        void Produce(string topic, int? partition, long? timestamp, K key, V value, Action<RecordMetadata, JVMBridgeException> action = null);
         /// <summary>
         /// KNet version of <see cref="Producer{K, V}.Send(Org.Apache.Kafka.Clients.Producer.ProducerRecord{K, V}, Callback)"/>
         /// </summary>
-        void Produce(string topic, int partition, DateTime timestamp, K key, V value, Action<RecordMetadata, JVMBridgeException> action = null);
+        void Produce(string topic, int? partition, DateTime? timestamp, K key, V value, Action<RecordMetadata, JVMBridgeException> action = null);
         /// <summary>
         /// KNet version of <see cref="Producer{K, V}.Send(Org.Apache.Kafka.Clients.Producer.ProducerRecord{K, V}, Callback)"/>
         /// </summary>
@@ -113,27 +113,27 @@ namespace MASES.KNet.Producer
         /// <summary>
         /// KNet version of <see cref="Producer{K, V}.Send(Org.Apache.Kafka.Clients.Producer.ProducerRecord{K, V}, Callback)"/>
         /// </summary>
-        Future<RecordMetadata> Produce(string topic, int partition, K key, V value, Callback cb = null);
+        Future<RecordMetadata> Produce(string topic, int? partition, K key, V value, Callback cb = null);
         /// <summary>
         /// KNet version of <see cref="Producer{K, V}.Send(Org.Apache.Kafka.Clients.Producer.ProducerRecord{K, V}, Callback)"/>
         /// </summary>
-        void ProduceAndWait(string topic, int partition, K key, V value, Callback cb = null);
+        void ProduceAndWait(string topic, int? partition, K key, V value, Callback cb = null);
         /// <summary>
         /// KNet version of <see cref="Producer{K, V}.Send(Org.Apache.Kafka.Clients.Producer.ProducerRecord{K, V}, Callback)"/>
         /// </summary>
-        Future<RecordMetadata> Produce(string topic, int partition, long timestamp, K key, V value, Callback cb = null);
+        Future<RecordMetadata> Produce(string topic, int? partition, long? timestamp, K key, V value, Callback cb = null);
         /// <summary>
         /// KNet version of <see cref="Producer{K, V}.Send(Org.Apache.Kafka.Clients.Producer.ProducerRecord{K, V}, Callback)"/>
         /// </summary>
-        void ProduceAndWait(string topic, int partition, long timestamp, K key, V value, Callback cb = null);
+        void ProduceAndWait(string topic, int? partition, long? timestamp, K key, V value, Callback cb = null);
         /// <summary>
         /// KNet version of <see cref="Producer{K, V}.Send(Org.Apache.Kafka.Clients.Producer.ProducerRecord{K, V}, Callback)"/>
         /// </summary>
-        Future<RecordMetadata> Produce(string topic, int partition, DateTime timestamp, K key, V value, Callback cb = null);
+        Future<RecordMetadata> Produce(string topic, int? partition, DateTime? timestamp, K key, V value, Callback cb = null);
         /// <summary>
         /// KNet version of <see cref="Producer{K, V}.Send(Org.Apache.Kafka.Clients.Producer.ProducerRecord{K, V}, Callback)"/>
         /// </summary>
-        void ProduceAndWait(string topic, int partition, DateTime timestamp, K key, V value, Callback cb = null);
+        void ProduceAndWait(string topic, int? partition, DateTime? timestamp, K key, V value, Callback cb = null);
         /// <summary>
         /// KNet version of <see cref="Producer{K, V}.Send(Org.Apache.Kafka.Clients.Producer.ProducerRecord{K, V}, Callback)"/>
         /// </summary>
@@ -149,15 +149,15 @@ namespace MASES.KNet.Producer
         /// <summary>
         /// KNet async version of <see cref="Producer{K, V}.Send(Org.Apache.Kafka.Clients.Producer.ProducerRecord{K, V}, Callback)"/>
         /// </summary>
-        Task ProduceAsync(string topic, int partition, K key, V value, Action<RecordMetadata, JVMBridgeException> action = null);
+        Task ProduceAsync(string topic, int? partition, K key, V value, Action<RecordMetadata, JVMBridgeException> action = null);
         /// <summary>
         /// KNet async version of <see cref="Producer{K, V}.Send(Org.Apache.Kafka.Clients.Producer.ProducerRecord{K, V}, Callback)"/>
         /// </summary>
-        Task ProduceAsync(string topic, int partition, long timestamp, K key, V value, Action<RecordMetadata, JVMBridgeException> action = null);
+        Task ProduceAsync(string topic, int? partition, long? timestamp, K key, V value, Action<RecordMetadata, JVMBridgeException> action = null);
         /// <summary>
         /// KNet async version of <see cref="Producer{K, V}.Send(Org.Apache.Kafka.Clients.Producer.ProducerRecord{K, V}, Callback)"/>
         /// </summary>
-        Task ProduceAsync(string topic, int partition, DateTime timestamp, K key, V value, Action<RecordMetadata, JVMBridgeException> action = null);
+        Task ProduceAsync(string topic, int? partition, DateTime? timestamp, K key, V value, Action<RecordMetadata, JVMBridgeException> action = null);
         /// <summary>
         /// KNet async version of <see cref="Producer{K, V}.Send(Org.Apache.Kafka.Clients.Producer.ProducerRecord{K, V}, Callback)"/>
         /// </summary>
@@ -169,27 +169,27 @@ namespace MASES.KNet.Producer
         /// <summary>
         /// Initialize a new <see cref="ProducerRecord{K, V, TJVMK, TJVMV}"/>
         /// </summary>
-        public ProducerRecord<K, V, TJVMK, TJVMV> NewRecord(string topic, int partition, long timestamp, K key, V value, Headers headers);
+        public ProducerRecord<K, V, TJVMK, TJVMV> NewRecord(string topic, int? partition, long? timestamp, K key, V value, Headers headers);
         /// <summary>
         /// Initialize a new <see cref="ProducerRecord{K, V, TJVMK, TJVMV}"/>
         /// </summary>
-        public ProducerRecord<K, V, TJVMK, TJVMV> NewRecord(string topic, int partition, System.DateTime timestamp, K key, V value, Headers headers);
+        public ProducerRecord<K, V, TJVMK, TJVMV> NewRecord(string topic, int? partition, System.DateTime? timestamp, K key, V value, Headers headers);
         /// <summary>
         /// Initialize a new <see cref="ProducerRecord{K, V, TJVMK, TJVMV}"/>
         /// </summary>
-        public ProducerRecord<K, V, TJVMK, TJVMV> NewRecord(string topic, int partition, long timestamp, K key, V value);
+        public ProducerRecord<K, V, TJVMK, TJVMV> NewRecord(string topic, int? partition, long? timestamp, K key, V value);
         /// <summary>
         /// Initialize a new <see cref="ProducerRecord{K, V, TJVMK, TJVMV}"/>
         /// </summary>
-        public ProducerRecord<K, V, TJVMK, TJVMV> NewRecord(string topic, int partition, System.DateTime timestamp, K key, V value);
+        public ProducerRecord<K, V, TJVMK, TJVMV> NewRecord(string topic, int? partition, System.DateTime? timestamp, K key, V value);
         /// <summary>
         /// Initialize a new <see cref="ProducerRecord{K, V, TJVMK, TJVMV}"/>
         /// </summary>
-        public ProducerRecord<K, V, TJVMK, TJVMV> NewRecord(string topic, int partition, K key, V value, Headers headers);
+        public ProducerRecord<K, V, TJVMK, TJVMV> NewRecord(string topic, int? partition, K key, V value, Headers headers);
         /// <summary>
         /// Initialize a new <see cref="ProducerRecord{K, V, TJVMK, TJVMV}"/>
         /// </summary>
-        public ProducerRecord<K, V, TJVMK, TJVMV> NewRecord(string topic, int partition, K key, V value);
+        public ProducerRecord<K, V, TJVMK, TJVMV> NewRecord(string topic, int? partition, K key, V value);
         /// <summary>
         /// Initialize a new <see cref="ProducerRecord{K, V, TJVMK, TJVMV}"/>
         /// </summary>
@@ -340,23 +340,23 @@ namespace MASES.KNet.Producer
             }
             finally { if (kRecord != null) GC.ReRegisterForFinalize(kRecord); }
         }
-        /// <inheritdoc cref="IProducer{K, V, TJVMK, TJVMV}.Send(string, int, long, K, V, Headers)"/>
-        public Future<RecordMetadata> Send(string topic, int partition, long timestamp, K key, V value, Headers headers)
+        /// <inheritdoc cref="IProducer{K, V, TJVMK, TJVMV}.Send(string, int?, long?, K, V, Headers)"/>
+        public Future<RecordMetadata> Send(string topic, int? partition, long? timestamp, K key, V value, Headers headers)
         {
             return IExecute<Future<RecordMetadata>>("send", topic, partition, timestamp, _keySerializer.SerializeWithHeaders(topic, headers, key), _valueSerializer.SerializeWithHeaders(topic, headers, value), headers);
         }
-        /// <inheritdoc cref="IProducer{K, V, TJVMK, TJVMV}.Send(string, int, long, K, V)"/>
-        public Future<RecordMetadata> Send(string topic, int partition, long timestamp, K key, V value)
+        /// <inheritdoc cref="IProducer{K, V, TJVMK, TJVMV}.Send(string, int?, long?, K, V)"/>
+        public Future<RecordMetadata> Send(string topic, int? partition, long? timestamp, K key, V value)
         {
             return IExecute<Future<RecordMetadata>>("send", topic, partition, timestamp, _keySerializer.Serialize(topic, key), _valueSerializer.Serialize(topic, value));
         }
-        /// <inheritdoc cref="IProducer{K, V, TJVMK, TJVMV}.Send(string, int, K, V, Headers)"/>
-        public Future<RecordMetadata> Send(string topic, int partition, K key, V value, Headers headers)
+        /// <inheritdoc cref="IProducer{K, V, TJVMK, TJVMV}.Send(string, int?, K, V, Headers)"/>
+        public Future<RecordMetadata> Send(string topic, int? partition, K key, V value, Headers headers)
         {
             return IExecute<Future<RecordMetadata>>("send", topic, partition, _keySerializer.SerializeWithHeaders(topic, headers, key), _valueSerializer.SerializeWithHeaders(topic, headers, value), headers);
         }
-        /// <inheritdoc cref="IProducer{K, V, TJVMK, TJVMV}.Send(string, int, K, V, Headers)"/>
-        public Future<RecordMetadata> Send(string topic, int partition, K key, V value)
+        /// <inheritdoc cref="IProducer{K, V, TJVMK, TJVMV}.Send(string, int?, K, V, Headers)"/>
+        public Future<RecordMetadata> Send(string topic, int? partition, K key, V value)
         {
             return IExecute<Future<RecordMetadata>>("send", topic, partition, _keySerializer.Serialize(topic, key), _valueSerializer.Serialize(topic, value));
         }
@@ -375,18 +375,18 @@ namespace MASES.KNet.Producer
         {
             Produce(new ProducerRecord<K, V, TJVMK, TJVMV>(topic, key, value), action);
         }
-        /// <inheritdoc cref="IProducer{K, V, TJVMK, TJVMV}.Produce(string, int, K, V, Action{RecordMetadata, JVMBridgeException})"/>
-        public void Produce(string topic, int partition, K key, V value, Action<RecordMetadata, JVMBridgeException> action = null)
+        /// <inheritdoc cref="IProducer{K, V, TJVMK, TJVMV}.Produce(string, int?, K, V, Action{RecordMetadata, JVMBridgeException})"/>
+        public void Produce(string topic, int? partition, K key, V value, Action<RecordMetadata, JVMBridgeException> action = null)
         {
             Produce(new ProducerRecord<K, V, TJVMK, TJVMV>(topic, partition, key, value), action);
         }
-        /// <inheritdoc cref="IProducer{K, V, TJVMK, TJVMV}.Produce(string, int, long, K, V, Action{RecordMetadata, JVMBridgeException})"/>
-        public void Produce(string topic, int partition, long timestamp, K key, V value, Action<RecordMetadata, JVMBridgeException> action = null)
+        /// <inheritdoc cref="IProducer{K, V, TJVMK, TJVMV}.Produce(string, int?, long?, K, V, Action{RecordMetadata, JVMBridgeException})"/>
+        public void Produce(string topic, int? partition, long? timestamp, K key, V value, Action<RecordMetadata, JVMBridgeException> action = null)
         {
             Produce(new ProducerRecord<K, V, TJVMK, TJVMV>(topic, partition, timestamp, key, value), action);
         }
-        /// <inheritdoc cref="IProducer{K, V, TJVMK, TJVMV}.Produce(string, int, long, K, V, Action{RecordMetadata, JVMBridgeException})"/>
-        public void Produce(string topic, int partition, DateTime timestamp, K key, V value, Action<RecordMetadata, JVMBridgeException> action = null)
+        /// <inheritdoc cref="IProducer{K, V, TJVMK, TJVMV}.Produce(string, int?, long?, K, V, Action{RecordMetadata, JVMBridgeException})"/>
+        public void Produce(string topic, int? partition, DateTime? timestamp, K key, V value, Action<RecordMetadata, JVMBridgeException> action = null)
         {
             Produce(new ProducerRecord<K, V, TJVMK, TJVMV>(topic, partition, timestamp, key, value), action);
         }
@@ -422,33 +422,33 @@ namespace MASES.KNet.Producer
         {
             ProduceAndWait(new ProducerRecord<K, V, TJVMK, TJVMV>(topic, key, value), cb);
         }
-        /// <inheritdoc cref="IProducer{K, V, TJVMK, TJVMV}.Produce(string, int, K, V, Callback)"/>
-        public Future<RecordMetadata> Produce(string topic, int partition, K key, V value, Callback cb = null)
+        /// <inheritdoc cref="IProducer{K, V, TJVMK, TJVMV}.Produce(string, int?, K, V, Callback)"/>
+        public Future<RecordMetadata> Produce(string topic, int? partition, K key, V value, Callback cb = null)
         {
             return Produce(new ProducerRecord<K, V, TJVMK, TJVMV>(topic, partition, key, value), cb);
         }
-        /// <inheritdoc cref="IProducer{K, V, TJVMK, TJVMV}.ProduceAndWait(string, int, K, V, Callback)"/>
-        public void ProduceAndWait(string topic, int partition, K key, V value, Callback cb = null)
+        /// <inheritdoc cref="IProducer{K, V, TJVMK, TJVMV}.ProduceAndWait(string, int?, K, V, Callback)"/>
+        public void ProduceAndWait(string topic, int? partition, K key, V value, Callback cb = null)
         {
             ProduceAndWait(new ProducerRecord<K, V, TJVMK, TJVMV>(topic, partition, key, value), cb);
         }
-        /// <inheritdoc cref="IProducer{K, V, TJVMK, TJVMV}.Produce(string, int, long, K, V, Callback)"/>
-        public Future<RecordMetadata> Produce(string topic, int partition, long timestamp, K key, V value, Callback cb = null)
+        /// <inheritdoc cref="IProducer{K, V, TJVMK, TJVMV}.Produce(string, int?, long?, K, V, Callback)"/>
+        public Future<RecordMetadata> Produce(string topic, int? partition, long? timestamp, K key, V value, Callback cb = null)
         {
             return Produce(new ProducerRecord<K, V, TJVMK, TJVMV>(topic, partition, timestamp, key, value), cb);
         }
-        /// <inheritdoc cref="IProducer{K, V, TJVMK, TJVMV}.ProduceAndWait(string, int, long, K, V, Callback)"/>
-        public void ProduceAndWait(string topic, int partition, long timestamp, K key, V value, Callback cb = null)
+        /// <inheritdoc cref="IProducer{K, V, TJVMK, TJVMV}.ProduceAndWait(string, int?, long?, K, V, Callback)"/>
+        public void ProduceAndWait(string topic, int? partition, long? timestamp, K key, V value, Callback cb = null)
         {
             ProduceAndWait(new ProducerRecord<K, V, TJVMK, TJVMV>(topic, partition, timestamp, key, value), cb);
         }
-        /// <inheritdoc cref="IProducer{K, V, TJVMK, TJVMV}.Produce(string, int, DateTime, K, V, Callback)"/>
-        public Future<RecordMetadata> Produce(string topic, int partition, DateTime timestamp, K key, V value, Callback cb = null)
+        /// <inheritdoc cref="IProducer{K, V, TJVMK, TJVMV}.Produce(string, int?, DateTime?, K, V, Callback)"/>
+        public Future<RecordMetadata> Produce(string topic, int? partition, DateTime? timestamp, K key, V value, Callback cb = null)
         {
             return Produce(new ProducerRecord<K, V, TJVMK, TJVMV>(topic, partition, timestamp, key, value), cb);
         }
-        /// <inheritdoc cref="IProducer{K, V, TJVMK, TJVMV}.ProduceAndWait(string, int, DateTime, K, V, Callback)"/>
-        public void ProduceAndWait(string topic, int partition, DateTime timestamp, K key, V value, Callback cb = null)
+        /// <inheritdoc cref="IProducer{K, V, TJVMK, TJVMV}.ProduceAndWait(string, int?, DateTime?, K, V, Callback)"/>
+        public void ProduceAndWait(string topic, int? partition, DateTime? timestamp, K key, V value, Callback cb = null)
         {
             ProduceAndWait(new ProducerRecord<K, V, TJVMK, TJVMV>(topic, partition, timestamp, key, value), cb);
         }
@@ -482,18 +482,18 @@ namespace MASES.KNet.Producer
         {
             await ProduceAsync(new ProducerRecord<K, V, TJVMK, TJVMV>(topic, key, value), action);
         }
-        /// <inheritdoc cref="IProducer{K, V, TJVMK, TJVMV}.Produce(string, int, K, V, Action{RecordMetadata, JVMBridgeException})"/>
-        public async Task ProduceAsync(string topic, int partition, K key, V value, Action<RecordMetadata, JVMBridgeException> action = null)
+        /// <inheritdoc cref="IProducer{K, V, TJVMK, TJVMV}.Produce(string, int?, K, V, Action{RecordMetadata, JVMBridgeException})"/>
+        public async Task ProduceAsync(string topic, int? partition, K key, V value, Action<RecordMetadata, JVMBridgeException> action = null)
         {
             await ProduceAsync(new ProducerRecord<K, V, TJVMK, TJVMV>(topic, partition, key, value), action);
         }
-        /// <inheritdoc cref="IProducer{K, V, TJVMK, TJVMV}.Produce(string, int, long, K, V, Action{RecordMetadata, JVMBridgeException})"/>
-        public async Task ProduceAsync(string topic, int partition, long timestamp, K key, V value, Action<RecordMetadata, JVMBridgeException> action = null)
+        /// <inheritdoc cref="IProducer{K, V, TJVMK, TJVMV}.Produce(string, int?, long?, K, V, Action{RecordMetadata, JVMBridgeException})"/>
+        public async Task ProduceAsync(string topic, int? partition, long? timestamp, K key, V value, Action<RecordMetadata, JVMBridgeException> action = null)
         {
             await ProduceAsync(new ProducerRecord<K, V, TJVMK, TJVMV>(topic, partition, timestamp, key, value), action);
         }
-        /// <inheritdoc cref="IProducer{K, V, TJVMK, TJVMV}.Produce(string, int, DateTime, K, V, Action{RecordMetadata, JVMBridgeException})"/>
-        public async Task ProduceAsync(string topic, int partition, DateTime timestamp, K key, V value, Action<RecordMetadata, JVMBridgeException> action = null)
+        /// <inheritdoc cref="IProducer{K, V, TJVMK, TJVMV}.Produce(string, int?, DateTime?, K, V, Action{RecordMetadata, JVMBridgeException})"/>
+        public async Task ProduceAsync(string topic, int? partition, DateTime? timestamp, K key, V value, Action<RecordMetadata, JVMBridgeException> action = null)
         {
             await ProduceAsync(new ProducerRecord<K, V, TJVMK, TJVMV>(topic, partition, timestamp, key, value), action);
         }
@@ -518,33 +518,33 @@ namespace MASES.KNet.Producer
         {
             return new ProducerRecord<K, V, TJVMK, TJVMV>();
         }
-        /// <inheritdoc cref="IProducer{K, V, TJVMK, TJVMV}.NewRecord(string, int, long, K, V, Headers)"/>
-        public ProducerRecord<K, V, TJVMK, TJVMV> NewRecord(string topic, int partition, long timestamp, K key, V value, Headers headers)
+        /// <inheritdoc cref="IProducer{K, V, TJVMK, TJVMV}.NewRecord(string, int?, long?, K, V, Headers)"/>
+        public ProducerRecord<K, V, TJVMK, TJVMV> NewRecord(string topic, int? partition, long? timestamp, K key, V value, Headers headers)
         {
             return new ProducerRecord<K, V, TJVMK, TJVMV>(topic, partition, timestamp, key, value, headers);
         }
-        /// <inheritdoc cref="IProducer{K, V, TJVMK, TJVMV}.NewRecord(string, int, DateTime, K, V, Headers)"/>
-        public ProducerRecord<K, V, TJVMK, TJVMV> NewRecord(string topic, int partition, System.DateTime timestamp, K key, V value, Headers headers)
+        /// <inheritdoc cref="IProducer{K, V, TJVMK, TJVMV}.NewRecord(string, int?, DateTime?, K, V, Headers)"/>
+        public ProducerRecord<K, V, TJVMK, TJVMV> NewRecord(string topic, int? partition, System.DateTime? timestamp, K key, V value, Headers headers)
         {
             return new ProducerRecord<K, V, TJVMK, TJVMV>(topic, partition, timestamp, key, value, headers);
         }
-        /// <inheritdoc cref="IProducer{K, V, TJVMK, TJVMV}.NewRecord(string, int, long, K, V)"/>
-        public ProducerRecord<K, V, TJVMK, TJVMV> NewRecord(string topic, int partition, long timestamp, K key, V value)
+        /// <inheritdoc cref="IProducer{K, V, TJVMK, TJVMV}.NewRecord(string, int?, long?, K, V)"/>
+        public ProducerRecord<K, V, TJVMK, TJVMV> NewRecord(string topic, int? partition, long? timestamp, K key, V value)
         {
             return new ProducerRecord<K, V, TJVMK, TJVMV>(topic, partition, timestamp, key, value);
         }
-        /// <inheritdoc cref="IProducer{K, V, TJVMK, TJVMV}.NewRecord(string, int, DateTime, K, V)"/>
-        public ProducerRecord<K, V, TJVMK, TJVMV> NewRecord(string topic, int partition, System.DateTime timestamp, K key, V value)
+        /// <inheritdoc cref="IProducer{K, V, TJVMK, TJVMV}.NewRecord(string, int?, DateTime?, K, V)"/>
+        public ProducerRecord<K, V, TJVMK, TJVMV> NewRecord(string topic, int? partition, System.DateTime? timestamp, K key, V value)
         {
             return new ProducerRecord<K, V, TJVMK, TJVMV>(topic, partition, timestamp, key, value);
         }
-        /// <inheritdoc cref="IProducer{K, V, TJVMK, TJVMV}.NewRecord(string, int, K, V, Headers)"/>
-        public ProducerRecord<K, V, TJVMK, TJVMV> NewRecord(string topic, int partition, K key, V value, Headers headers)
+        /// <inheritdoc cref="IProducer{K, V, TJVMK, TJVMV}.NewRecord(string, int?, K, V, Headers)"/>
+        public ProducerRecord<K, V, TJVMK, TJVMV> NewRecord(string topic, int? partition, K key, V value, Headers headers)
         {
             return new ProducerRecord<K, V, TJVMK, TJVMV>(topic, partition, key, value, headers);
         }
-        /// <inheritdoc cref="IProducer{K, V, TJVMK, TJVMV}.NewRecord(string, int, K, V)"/>
-        public ProducerRecord<K, V, TJVMK, TJVMV> NewRecord(string topic, int partition, K key, V value)
+        /// <inheritdoc cref="IProducer{K, V, TJVMK, TJVMV}.NewRecord(string, int?, K, V)"/>
+        public ProducerRecord<K, V, TJVMK, TJVMV> NewRecord(string topic, int? partition, K key, V value)
         {
             return new ProducerRecord<K, V, TJVMK, TJVMV>(topic, partition, key, value);
         }
