@@ -107,6 +107,8 @@ namespace MASES.KNet.Serialization.MessagePack
                     headers?.Add(KNetSerialization.KeyTypeIdentifierJVM, keyTypeName);
                     headers?.Add(KNetSerialization.KeySerializerIdentifierJVM, keySerDesName);
 
+                    if (data == null) return null;
+
                     return MessagePackSerializer.Serialize(data, MessagePackSerializerOptions);
                 }
                 /// <inheritdoc cref="SerDes{TData, TJVMT}.Deserialize(string, TJVMT)"/>
@@ -160,6 +162,8 @@ namespace MASES.KNet.Serialization.MessagePack
                 {
                     headers?.Add(KNetSerialization.KeyTypeIdentifierJVM, keyTypeName);
                     headers?.Add(KNetSerialization.KeySerializerIdentifierJVM, keySerDesName);
+
+                    if (data == null) return null;
 
                     var ms = new MemoryStream();
                     MessagePackSerializer.Serialize(ms, data, MessagePackSerializerOptions);
@@ -256,6 +260,8 @@ namespace MASES.KNet.Serialization.MessagePack
                     headers?.Add(KNetSerialization.ValueSerializerIdentifierJVM, valueSerDesName);
                     headers?.Add(KNetSerialization.ValueTypeIdentifierJVM, valueTypeName);
 
+                    if (data == null) return null;
+
                     return MessagePackSerializer.Serialize(data, MessagePackSerializerOptions);
                 }
                 /// <inheritdoc cref="SerDes{TData, TJVMT}.Deserialize(string, TJVMT)"/>
@@ -309,6 +315,8 @@ namespace MASES.KNet.Serialization.MessagePack
                 {
                     headers?.Add(KNetSerialization.ValueSerializerIdentifierJVM, valueSerDesName);
                     headers?.Add(KNetSerialization.ValueTypeIdentifierJVM, valueTypeName);
+
+                    if (data == null) return null;
 
                     var ms = new MemoryStream();
                     MessagePackSerializer.Serialize(ms, data, MessagePackSerializerOptions);
