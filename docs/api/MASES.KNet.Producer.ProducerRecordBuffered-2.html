@@ -216,8 +216,8 @@ Class ProducerRecordBuffered&lt;K, V&gt;  <a class="header-action link-secondary
 
   <a id="MASES_KNet_Producer_ProducerRecordBuffered_2__ctor_" data-uid="MASES.KNet.Producer.ProducerRecordBuffered`2.#ctor*"></a>
 
-  <h3 id="MASES_KNet_Producer_ProducerRecordBuffered_2__ctor_System_String_System_Int32_System_DateTime__0__1_" data-uid="MASES.KNet.Producer.ProducerRecordBuffered`2.#ctor(System.String,System.Int32,System.DateTime,`0,`1)">
-  ProducerRecordBuffered(string, int, DateTime, K, V)
+  <h3 id="MASES_KNet_Producer_ProducerRecordBuffered_2__ctor_System_String_System_Nullable_System_Int32__System_Nullable_System_DateTime___0__1_" data-uid="MASES.KNet.Producer.ProducerRecordBuffered`2.#ctor(System.String,System.Nullable{System.Int32},System.Nullable{System.DateTime},`0,`1)">
+  ProducerRecordBuffered(string, int?, DateTime?, K, V)
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/ProducerRecord.cs/#L226"><i class="bi bi-code-slash"></i></a>
   </h3>
 
@@ -226,16 +226,16 @@ Class ProducerRecordBuffered&lt;K, V&gt;  <a class="header-action link-secondary
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ProducerRecordBuffered(string topic, int partition, DateTime timestamp, K key, V value)</code></pre>
+    <pre><code class="lang-csharp hljs">public ProducerRecordBuffered(string topic, int? partition, DateTime? timestamp, K key, V value)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>topic</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd></dd>
-    <dt><code>partition</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dt><code>partition</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</dt>
     <dd></dd>
-    <dt><code>timestamp</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a></dt>
+    <dt><code>timestamp</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a>?</dt>
     <dd></dd>
     <dt><code>key</code> <span class="xref">K</span></dt>
     <dd></dd>
@@ -256,8 +256,8 @@ Class ProducerRecordBuffered&lt;K, V&gt;  <a class="header-action link-secondary
 
   <a id="MASES_KNet_Producer_ProducerRecordBuffered_2__ctor_" data-uid="MASES.KNet.Producer.ProducerRecordBuffered`2.#ctor*"></a>
 
-  <h3 id="MASES_KNet_Producer_ProducerRecordBuffered_2__ctor_System_String_System_Int32_System_DateTime__0__1_Org_Apache_Kafka_Common_Header_Headers_" data-uid="MASES.KNet.Producer.ProducerRecordBuffered`2.#ctor(System.String,System.Int32,System.DateTime,`0,`1,Org.Apache.Kafka.Common.Header.Headers)">
-  ProducerRecordBuffered(string, int, DateTime, K, V, Headers)
+  <h3 id="MASES_KNet_Producer_ProducerRecordBuffered_2__ctor_System_String_System_Nullable_System_Int32__System_Nullable_System_DateTime___0__1_Org_Apache_Kafka_Common_Header_Headers_" data-uid="MASES.KNet.Producer.ProducerRecordBuffered`2.#ctor(System.String,System.Nullable{System.Int32},System.Nullable{System.DateTime},`0,`1,Org.Apache.Kafka.Common.Header.Headers)">
+  ProducerRecordBuffered(string, int?, DateTime?, K, V, Headers)
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/ProducerRecord.cs/#L216"><i class="bi bi-code-slash"></i></a>
   </h3>
 
@@ -266,16 +266,16 @@ Class ProducerRecordBuffered&lt;K, V&gt;  <a class="header-action link-secondary
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ProducerRecordBuffered(string topic, int partition, DateTime timestamp, K key, V value, Headers headers)</code></pre>
+    <pre><code class="lang-csharp hljs">public ProducerRecordBuffered(string topic, int? partition, DateTime? timestamp, K key, V value, Headers headers)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>topic</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd></dd>
-    <dt><code>partition</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dt><code>partition</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</dt>
     <dd></dd>
-    <dt><code>timestamp</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a></dt>
+    <dt><code>timestamp</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a>?</dt>
     <dd></dd>
     <dt><code>key</code> <span class="xref">K</span></dt>
     <dd></dd>
@@ -298,8 +298,8 @@ Class ProducerRecordBuffered&lt;K, V&gt;  <a class="header-action link-secondary
 
   <a id="MASES_KNet_Producer_ProducerRecordBuffered_2__ctor_" data-uid="MASES.KNet.Producer.ProducerRecordBuffered`2.#ctor*"></a>
 
-  <h3 id="MASES_KNet_Producer_ProducerRecordBuffered_2__ctor_System_String_System_Int32_System_Int64__0__1_" data-uid="MASES.KNet.Producer.ProducerRecordBuffered`2.#ctor(System.String,System.Int32,System.Int64,`0,`1)">
-  ProducerRecordBuffered(string, int, long, K, V)
+  <h3 id="MASES_KNet_Producer_ProducerRecordBuffered_2__ctor_System_String_System_Nullable_System_Int32__System_Nullable_System_Int64___0__1_" data-uid="MASES.KNet.Producer.ProducerRecordBuffered`2.#ctor(System.String,System.Nullable{System.Int32},System.Nullable{System.Int64},`0,`1)">
+  ProducerRecordBuffered(string, int?, long?, K, V)
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/ProducerRecord.cs/#L221"><i class="bi bi-code-slash"></i></a>
   </h3>
 
@@ -308,16 +308,16 @@ Class ProducerRecordBuffered&lt;K, V&gt;  <a class="header-action link-secondary
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ProducerRecordBuffered(string topic, int partition, long timestamp, K key, V value)</code></pre>
+    <pre><code class="lang-csharp hljs">public ProducerRecordBuffered(string topic, int? partition, long? timestamp, K key, V value)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>topic</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd></dd>
-    <dt><code>partition</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dt><code>partition</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</dt>
     <dd></dd>
-    <dt><code>timestamp</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dt><code>timestamp</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a>?</dt>
     <dd></dd>
     <dt><code>key</code> <span class="xref">K</span></dt>
     <dd></dd>
@@ -338,8 +338,8 @@ Class ProducerRecordBuffered&lt;K, V&gt;  <a class="header-action link-secondary
 
   <a id="MASES_KNet_Producer_ProducerRecordBuffered_2__ctor_" data-uid="MASES.KNet.Producer.ProducerRecordBuffered`2.#ctor*"></a>
 
-  <h3 id="MASES_KNet_Producer_ProducerRecordBuffered_2__ctor_System_String_System_Int32_System_Int64__0__1_Org_Apache_Kafka_Common_Header_Headers_" data-uid="MASES.KNet.Producer.ProducerRecordBuffered`2.#ctor(System.String,System.Int32,System.Int64,`0,`1,Org.Apache.Kafka.Common.Header.Headers)">
-  ProducerRecordBuffered(string, int, long, K, V, Headers)
+  <h3 id="MASES_KNet_Producer_ProducerRecordBuffered_2__ctor_System_String_System_Nullable_System_Int32__System_Nullable_System_Int64___0__1_Org_Apache_Kafka_Common_Header_Headers_" data-uid="MASES.KNet.Producer.ProducerRecordBuffered`2.#ctor(System.String,System.Nullable{System.Int32},System.Nullable{System.Int64},`0,`1,Org.Apache.Kafka.Common.Header.Headers)">
+  ProducerRecordBuffered(string, int?, long?, K, V, Headers)
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/ProducerRecord.cs/#L211"><i class="bi bi-code-slash"></i></a>
   </h3>
 
@@ -348,16 +348,16 @@ Class ProducerRecordBuffered&lt;K, V&gt;  <a class="header-action link-secondary
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ProducerRecordBuffered(string topic, int partition, long timestamp, K key, V value, Headers headers)</code></pre>
+    <pre><code class="lang-csharp hljs">public ProducerRecordBuffered(string topic, int? partition, long? timestamp, K key, V value, Headers headers)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>topic</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd></dd>
-    <dt><code>partition</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dt><code>partition</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</dt>
     <dd></dd>
-    <dt><code>timestamp</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dt><code>timestamp</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a>?</dt>
     <dd></dd>
     <dt><code>key</code> <span class="xref">K</span></dt>
     <dd></dd>
@@ -380,8 +380,8 @@ Class ProducerRecordBuffered&lt;K, V&gt;  <a class="header-action link-secondary
 
   <a id="MASES_KNet_Producer_ProducerRecordBuffered_2__ctor_" data-uid="MASES.KNet.Producer.ProducerRecordBuffered`2.#ctor*"></a>
 
-  <h3 id="MASES_KNet_Producer_ProducerRecordBuffered_2__ctor_System_String_System_Int32__0__1_" data-uid="MASES.KNet.Producer.ProducerRecordBuffered`2.#ctor(System.String,System.Int32,`0,`1)">
-  ProducerRecordBuffered(string, int, K, V)
+  <h3 id="MASES_KNet_Producer_ProducerRecordBuffered_2__ctor_System_String_System_Nullable_System_Int32___0__1_" data-uid="MASES.KNet.Producer.ProducerRecordBuffered`2.#ctor(System.String,System.Nullable{System.Int32},`0,`1)">
+  ProducerRecordBuffered(string, int?, K, V)
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/ProducerRecord.cs/#L236"><i class="bi bi-code-slash"></i></a>
   </h3>
 
@@ -390,14 +390,14 @@ Class ProducerRecordBuffered&lt;K, V&gt;  <a class="header-action link-secondary
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ProducerRecordBuffered(string topic, int partition, K key, V value)</code></pre>
+    <pre><code class="lang-csharp hljs">public ProducerRecordBuffered(string topic, int? partition, K key, V value)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>topic</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd></dd>
-    <dt><code>partition</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dt><code>partition</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</dt>
     <dd></dd>
     <dt><code>key</code> <span class="xref">K</span></dt>
     <dd></dd>
@@ -418,8 +418,8 @@ Class ProducerRecordBuffered&lt;K, V&gt;  <a class="header-action link-secondary
 
   <a id="MASES_KNet_Producer_ProducerRecordBuffered_2__ctor_" data-uid="MASES.KNet.Producer.ProducerRecordBuffered`2.#ctor*"></a>
 
-  <h3 id="MASES_KNet_Producer_ProducerRecordBuffered_2__ctor_System_String_System_Int32__0__1_Org_Apache_Kafka_Common_Header_Headers_" data-uid="MASES.KNet.Producer.ProducerRecordBuffered`2.#ctor(System.String,System.Int32,`0,`1,Org.Apache.Kafka.Common.Header.Headers)">
-  ProducerRecordBuffered(string, int, K, V, Headers)
+  <h3 id="MASES_KNet_Producer_ProducerRecordBuffered_2__ctor_System_String_System_Nullable_System_Int32___0__1_Org_Apache_Kafka_Common_Header_Headers_" data-uid="MASES.KNet.Producer.ProducerRecordBuffered`2.#ctor(System.String,System.Nullable{System.Int32},`0,`1,Org.Apache.Kafka.Common.Header.Headers)">
+  ProducerRecordBuffered(string, int?, K, V, Headers)
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/ProducerRecord.cs/#L231"><i class="bi bi-code-slash"></i></a>
   </h3>
 
@@ -428,14 +428,14 @@ Class ProducerRecordBuffered&lt;K, V&gt;  <a class="header-action link-secondary
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ProducerRecordBuffered(string topic, int partition, K key, V value, Headers headers)</code></pre>
+    <pre><code class="lang-csharp hljs">public ProducerRecordBuffered(string topic, int? partition, K key, V value, Headers headers)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>topic</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd></dd>
-    <dt><code>partition</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dt><code>partition</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</dt>
     <dd></dd>
     <dt><code>key</code> <span class="xref">K</span></dt>
     <dd></dd>
