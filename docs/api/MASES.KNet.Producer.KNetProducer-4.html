@@ -948,8 +948,8 @@ Class KNetProducer&lt;K, V, TJVMK, TJVMV&gt;  <a class="header-action link-secon
 
   <a id="MASES_KNet_Producer_KNetProducer_4_NewRecord_" data-uid="MASES.KNet.Producer.KNetProducer`4.NewRecord*"></a>
 
-  <h3 id="MASES_KNet_Producer_KNetProducer_4_NewRecord_System_String_System_Int32_System_DateTime__0__1_" data-uid="MASES.KNet.Producer.KNetProducer`4.NewRecord(System.String,System.Int32,System.DateTime,`0,`1)">
-  NewRecord(string, int, DateTime, K, V)
+  <h3 id="MASES_KNet_Producer_KNetProducer_4_NewRecord_System_String_System_Nullable_System_Int32__System_Nullable_System_DateTime___0__1_" data-uid="MASES.KNet.Producer.KNetProducer`4.NewRecord(System.String,System.Nullable{System.Int32},System.Nullable{System.DateTime},`0,`1)">
+  NewRecord(string, int?, DateTime?, K, V)
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/KNetProducer.cs/#L537"><i class="bi bi-code-slash"></i></a>
   </h3>
 
@@ -958,16 +958,16 @@ Class KNetProducer&lt;K, V, TJVMK, TJVMV&gt;  <a class="header-action link-secon
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ProducerRecord&lt;K, V, TJVMK, TJVMV&gt; NewRecord(string topic, int partition, DateTime timestamp, K key, V value)</code></pre>
+    <pre><code class="lang-csharp hljs">public ProducerRecord&lt;K, V, TJVMK, TJVMV&gt; NewRecord(string topic, int? partition, DateTime? timestamp, K key, V value)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>topic</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd></dd>
-    <dt><code>partition</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dt><code>partition</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</dt>
     <dd></dd>
-    <dt><code>timestamp</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a></dt>
+    <dt><code>timestamp</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a>?</dt>
     <dd></dd>
     <dt><code>key</code> <span class="xref">K</span></dt>
     <dd></dd>
@@ -993,8 +993,8 @@ Class KNetProducer&lt;K, V, TJVMK, TJVMV&gt;  <a class="header-action link-secon
 
   <a id="MASES_KNet_Producer_KNetProducer_4_NewRecord_" data-uid="MASES.KNet.Producer.KNetProducer`4.NewRecord*"></a>
 
-  <h3 id="MASES_KNet_Producer_KNetProducer_4_NewRecord_System_String_System_Int32_System_DateTime__0__1_Org_Apache_Kafka_Common_Header_Headers_" data-uid="MASES.KNet.Producer.KNetProducer`4.NewRecord(System.String,System.Int32,System.DateTime,`0,`1,Org.Apache.Kafka.Common.Header.Headers)">
-  NewRecord(string, int, DateTime, K, V, Headers)
+  <h3 id="MASES_KNet_Producer_KNetProducer_4_NewRecord_System_String_System_Nullable_System_Int32__System_Nullable_System_DateTime___0__1_Org_Apache_Kafka_Common_Header_Headers_" data-uid="MASES.KNet.Producer.KNetProducer`4.NewRecord(System.String,System.Nullable{System.Int32},System.Nullable{System.DateTime},`0,`1,Org.Apache.Kafka.Common.Header.Headers)">
+  NewRecord(string, int?, DateTime?, K, V, Headers)
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/KNetProducer.cs/#L527"><i class="bi bi-code-slash"></i></a>
   </h3>
 
@@ -1003,16 +1003,16 @@ Class KNetProducer&lt;K, V, TJVMK, TJVMV&gt;  <a class="header-action link-secon
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ProducerRecord&lt;K, V, TJVMK, TJVMV&gt; NewRecord(string topic, int partition, DateTime timestamp, K key, V value, Headers headers)</code></pre>
+    <pre><code class="lang-csharp hljs">public ProducerRecord&lt;K, V, TJVMK, TJVMV&gt; NewRecord(string topic, int? partition, DateTime? timestamp, K key, V value, Headers headers)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>topic</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd></dd>
-    <dt><code>partition</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dt><code>partition</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</dt>
     <dd></dd>
-    <dt><code>timestamp</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a></dt>
+    <dt><code>timestamp</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a>?</dt>
     <dd></dd>
     <dt><code>key</code> <span class="xref">K</span></dt>
     <dd></dd>
@@ -1040,8 +1040,8 @@ Class KNetProducer&lt;K, V, TJVMK, TJVMV&gt;  <a class="header-action link-secon
 
   <a id="MASES_KNet_Producer_KNetProducer_4_NewRecord_" data-uid="MASES.KNet.Producer.KNetProducer`4.NewRecord*"></a>
 
-  <h3 id="MASES_KNet_Producer_KNetProducer_4_NewRecord_System_String_System_Int32_System_Int64__0__1_" data-uid="MASES.KNet.Producer.KNetProducer`4.NewRecord(System.String,System.Int32,System.Int64,`0,`1)">
-  NewRecord(string, int, long, K, V)
+  <h3 id="MASES_KNet_Producer_KNetProducer_4_NewRecord_System_String_System_Nullable_System_Int32__System_Nullable_System_Int64___0__1_" data-uid="MASES.KNet.Producer.KNetProducer`4.NewRecord(System.String,System.Nullable{System.Int32},System.Nullable{System.Int64},`0,`1)">
+  NewRecord(string, int?, long?, K, V)
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/KNetProducer.cs/#L532"><i class="bi bi-code-slash"></i></a>
   </h3>
 
@@ -1050,16 +1050,16 @@ Class KNetProducer&lt;K, V, TJVMK, TJVMV&gt;  <a class="header-action link-secon
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ProducerRecord&lt;K, V, TJVMK, TJVMV&gt; NewRecord(string topic, int partition, long timestamp, K key, V value)</code></pre>
+    <pre><code class="lang-csharp hljs">public ProducerRecord&lt;K, V, TJVMK, TJVMV&gt; NewRecord(string topic, int? partition, long? timestamp, K key, V value)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>topic</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd></dd>
-    <dt><code>partition</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dt><code>partition</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</dt>
     <dd></dd>
-    <dt><code>timestamp</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dt><code>timestamp</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a>?</dt>
     <dd></dd>
     <dt><code>key</code> <span class="xref">K</span></dt>
     <dd></dd>
@@ -1085,8 +1085,8 @@ Class KNetProducer&lt;K, V, TJVMK, TJVMV&gt;  <a class="header-action link-secon
 
   <a id="MASES_KNet_Producer_KNetProducer_4_NewRecord_" data-uid="MASES.KNet.Producer.KNetProducer`4.NewRecord*"></a>
 
-  <h3 id="MASES_KNet_Producer_KNetProducer_4_NewRecord_System_String_System_Int32_System_Int64__0__1_Org_Apache_Kafka_Common_Header_Headers_" data-uid="MASES.KNet.Producer.KNetProducer`4.NewRecord(System.String,System.Int32,System.Int64,`0,`1,Org.Apache.Kafka.Common.Header.Headers)">
-  NewRecord(string, int, long, K, V, Headers)
+  <h3 id="MASES_KNet_Producer_KNetProducer_4_NewRecord_System_String_System_Nullable_System_Int32__System_Nullable_System_Int64___0__1_Org_Apache_Kafka_Common_Header_Headers_" data-uid="MASES.KNet.Producer.KNetProducer`4.NewRecord(System.String,System.Nullable{System.Int32},System.Nullable{System.Int64},`0,`1,Org.Apache.Kafka.Common.Header.Headers)">
+  NewRecord(string, int?, long?, K, V, Headers)
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/KNetProducer.cs/#L522"><i class="bi bi-code-slash"></i></a>
   </h3>
 
@@ -1095,16 +1095,16 @@ Class KNetProducer&lt;K, V, TJVMK, TJVMV&gt;  <a class="header-action link-secon
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ProducerRecord&lt;K, V, TJVMK, TJVMV&gt; NewRecord(string topic, int partition, long timestamp, K key, V value, Headers headers)</code></pre>
+    <pre><code class="lang-csharp hljs">public ProducerRecord&lt;K, V, TJVMK, TJVMV&gt; NewRecord(string topic, int? partition, long? timestamp, K key, V value, Headers headers)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>topic</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd></dd>
-    <dt><code>partition</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dt><code>partition</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</dt>
     <dd></dd>
-    <dt><code>timestamp</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dt><code>timestamp</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a>?</dt>
     <dd></dd>
     <dt><code>key</code> <span class="xref">K</span></dt>
     <dd></dd>
@@ -1132,8 +1132,8 @@ Class KNetProducer&lt;K, V, TJVMK, TJVMV&gt;  <a class="header-action link-secon
 
   <a id="MASES_KNet_Producer_KNetProducer_4_NewRecord_" data-uid="MASES.KNet.Producer.KNetProducer`4.NewRecord*"></a>
 
-  <h3 id="MASES_KNet_Producer_KNetProducer_4_NewRecord_System_String_System_Int32__0__1_" data-uid="MASES.KNet.Producer.KNetProducer`4.NewRecord(System.String,System.Int32,`0,`1)">
-  NewRecord(string, int, K, V)
+  <h3 id="MASES_KNet_Producer_KNetProducer_4_NewRecord_System_String_System_Nullable_System_Int32___0__1_" data-uid="MASES.KNet.Producer.KNetProducer`4.NewRecord(System.String,System.Nullable{System.Int32},`0,`1)">
+  NewRecord(string, int?, K, V)
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/KNetProducer.cs/#L547"><i class="bi bi-code-slash"></i></a>
   </h3>
 
@@ -1142,14 +1142,14 @@ Class KNetProducer&lt;K, V, TJVMK, TJVMV&gt;  <a class="header-action link-secon
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ProducerRecord&lt;K, V, TJVMK, TJVMV&gt; NewRecord(string topic, int partition, K key, V value)</code></pre>
+    <pre><code class="lang-csharp hljs">public ProducerRecord&lt;K, V, TJVMK, TJVMV&gt; NewRecord(string topic, int? partition, K key, V value)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>topic</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd></dd>
-    <dt><code>partition</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dt><code>partition</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</dt>
     <dd></dd>
     <dt><code>key</code> <span class="xref">K</span></dt>
     <dd></dd>
@@ -1175,8 +1175,8 @@ Class KNetProducer&lt;K, V, TJVMK, TJVMV&gt;  <a class="header-action link-secon
 
   <a id="MASES_KNet_Producer_KNetProducer_4_NewRecord_" data-uid="MASES.KNet.Producer.KNetProducer`4.NewRecord*"></a>
 
-  <h3 id="MASES_KNet_Producer_KNetProducer_4_NewRecord_System_String_System_Int32__0__1_Org_Apache_Kafka_Common_Header_Headers_" data-uid="MASES.KNet.Producer.KNetProducer`4.NewRecord(System.String,System.Int32,`0,`1,Org.Apache.Kafka.Common.Header.Headers)">
-  NewRecord(string, int, K, V, Headers)
+  <h3 id="MASES_KNet_Producer_KNetProducer_4_NewRecord_System_String_System_Nullable_System_Int32___0__1_Org_Apache_Kafka_Common_Header_Headers_" data-uid="MASES.KNet.Producer.KNetProducer`4.NewRecord(System.String,System.Nullable{System.Int32},`0,`1,Org.Apache.Kafka.Common.Header.Headers)">
+  NewRecord(string, int?, K, V, Headers)
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/KNetProducer.cs/#L542"><i class="bi bi-code-slash"></i></a>
   </h3>
 
@@ -1185,14 +1185,14 @@ Class KNetProducer&lt;K, V, TJVMK, TJVMV&gt;  <a class="header-action link-secon
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ProducerRecord&lt;K, V, TJVMK, TJVMV&gt; NewRecord(string topic, int partition, K key, V value, Headers headers)</code></pre>
+    <pre><code class="lang-csharp hljs">public ProducerRecord&lt;K, V, TJVMK, TJVMV&gt; NewRecord(string topic, int? partition, K key, V value, Headers headers)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>topic</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd></dd>
-    <dt><code>partition</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dt><code>partition</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</dt>
     <dd></dd>
     <dt><code>key</code> <span class="xref">K</span></dt>
     <dd></dd>
@@ -1373,8 +1373,8 @@ Class KNetProducer&lt;K, V, TJVMK, TJVMV&gt;  <a class="header-action link-secon
 
   <a id="MASES_KNet_Producer_KNetProducer_4_Produce_" data-uid="MASES.KNet.Producer.KNetProducer`4.Produce*"></a>
 
-  <h3 id="MASES_KNet_Producer_KNetProducer_4_Produce_System_String_System_Int32_System_DateTime__0__1_Org_Apache_Kafka_Clients_Producer_Callback_" data-uid="MASES.KNet.Producer.KNetProducer`4.Produce(System.String,System.Int32,System.DateTime,`0,`1,Org.Apache.Kafka.Clients.Producer.Callback)">
-  Produce(string, int, DateTime, K, V, Callback)
+  <h3 id="MASES_KNet_Producer_KNetProducer_4_Produce_System_String_System_Nullable_System_Int32__System_Nullable_System_DateTime___0__1_Org_Apache_Kafka_Clients_Producer_Callback_" data-uid="MASES.KNet.Producer.KNetProducer`4.Produce(System.String,System.Nullable{System.Int32},System.Nullable{System.DateTime},`0,`1,Org.Apache.Kafka.Clients.Producer.Callback)">
+  Produce(string, int?, DateTime?, K, V, Callback)
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/KNetProducer.cs/#L446"><i class="bi bi-code-slash"></i></a>
   </h3>
 
@@ -1383,16 +1383,16 @@ Class KNetProducer&lt;K, V, TJVMK, TJVMV&gt;  <a class="header-action link-secon
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Future&lt;RecordMetadata&gt; Produce(string topic, int partition, DateTime timestamp, K key, V value, Callback cb = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Future&lt;RecordMetadata&gt; Produce(string topic, int? partition, DateTime? timestamp, K key, V value, Callback cb = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>topic</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd></dd>
-    <dt><code>partition</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dt><code>partition</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</dt>
     <dd></dd>
-    <dt><code>timestamp</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a></dt>
+    <dt><code>timestamp</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a>?</dt>
     <dd></dd>
     <dt><code>key</code> <span class="xref">K</span></dt>
     <dd></dd>
@@ -1420,8 +1420,8 @@ Class KNetProducer&lt;K, V, TJVMK, TJVMV&gt;  <a class="header-action link-secon
 
   <a id="MASES_KNet_Producer_KNetProducer_4_Produce_" data-uid="MASES.KNet.Producer.KNetProducer`4.Produce*"></a>
 
-  <h3 id="MASES_KNet_Producer_KNetProducer_4_Produce_System_String_System_Int32_System_DateTime__0__1_System_Action_Org_Apache_Kafka_Clients_Producer_RecordMetadata_MASES_JCOBridge_C2JBridge_JVMBridgeException__" data-uid="MASES.KNet.Producer.KNetProducer`4.Produce(System.String,System.Int32,System.DateTime,`0,`1,System.Action{Org.Apache.Kafka.Clients.Producer.RecordMetadata,MASES.JCOBridge.C2JBridge.JVMBridgeException})">
-  Produce(string, int, DateTime, K, V, Action&lt;RecordMetadata, JVMBridgeException&gt;)
+  <h3 id="MASES_KNet_Producer_KNetProducer_4_Produce_System_String_System_Nullable_System_Int32__System_Nullable_System_DateTime___0__1_System_Action_Org_Apache_Kafka_Clients_Producer_RecordMetadata_MASES_JCOBridge_C2JBridge_JVMBridgeException__" data-uid="MASES.KNet.Producer.KNetProducer`4.Produce(System.String,System.Nullable{System.Int32},System.Nullable{System.DateTime},`0,`1,System.Action{Org.Apache.Kafka.Clients.Producer.RecordMetadata,MASES.JCOBridge.C2JBridge.JVMBridgeException})">
+  Produce(string, int?, DateTime?, K, V, Action&lt;RecordMetadata, JVMBridgeException&gt;)
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/KNetProducer.cs/#L389"><i class="bi bi-code-slash"></i></a>
   </h3>
 
@@ -1430,16 +1430,16 @@ Class KNetProducer&lt;K, V, TJVMK, TJVMV&gt;  <a class="header-action link-secon
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Produce(string topic, int partition, DateTime timestamp, K key, V value, Action&lt;RecordMetadata, JVMBridgeException&gt; action = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public void Produce(string topic, int? partition, DateTime? timestamp, K key, V value, Action&lt;RecordMetadata, JVMBridgeException&gt; action = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>topic</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd></dd>
-    <dt><code>partition</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dt><code>partition</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</dt>
     <dd></dd>
-    <dt><code>timestamp</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a></dt>
+    <dt><code>timestamp</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a>?</dt>
     <dd></dd>
     <dt><code>key</code> <span class="xref">K</span></dt>
     <dd></dd>
@@ -1462,8 +1462,8 @@ Class KNetProducer&lt;K, V, TJVMK, TJVMV&gt;  <a class="header-action link-secon
 
   <a id="MASES_KNet_Producer_KNetProducer_4_Produce_" data-uid="MASES.KNet.Producer.KNetProducer`4.Produce*"></a>
 
-  <h3 id="MASES_KNet_Producer_KNetProducer_4_Produce_System_String_System_Int32_System_Int64__0__1_Org_Apache_Kafka_Clients_Producer_Callback_" data-uid="MASES.KNet.Producer.KNetProducer`4.Produce(System.String,System.Int32,System.Int64,`0,`1,Org.Apache.Kafka.Clients.Producer.Callback)">
-  Produce(string, int, long, K, V, Callback)
+  <h3 id="MASES_KNet_Producer_KNetProducer_4_Produce_System_String_System_Nullable_System_Int32__System_Nullable_System_Int64___0__1_Org_Apache_Kafka_Clients_Producer_Callback_" data-uid="MASES.KNet.Producer.KNetProducer`4.Produce(System.String,System.Nullable{System.Int32},System.Nullable{System.Int64},`0,`1,Org.Apache.Kafka.Clients.Producer.Callback)">
+  Produce(string, int?, long?, K, V, Callback)
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/KNetProducer.cs/#L436"><i class="bi bi-code-slash"></i></a>
   </h3>
 
@@ -1472,16 +1472,16 @@ Class KNetProducer&lt;K, V, TJVMK, TJVMV&gt;  <a class="header-action link-secon
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Future&lt;RecordMetadata&gt; Produce(string topic, int partition, long timestamp, K key, V value, Callback cb = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Future&lt;RecordMetadata&gt; Produce(string topic, int? partition, long? timestamp, K key, V value, Callback cb = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>topic</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd></dd>
-    <dt><code>partition</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dt><code>partition</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</dt>
     <dd></dd>
-    <dt><code>timestamp</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dt><code>timestamp</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a>?</dt>
     <dd></dd>
     <dt><code>key</code> <span class="xref">K</span></dt>
     <dd></dd>
@@ -1509,8 +1509,8 @@ Class KNetProducer&lt;K, V, TJVMK, TJVMV&gt;  <a class="header-action link-secon
 
   <a id="MASES_KNet_Producer_KNetProducer_4_Produce_" data-uid="MASES.KNet.Producer.KNetProducer`4.Produce*"></a>
 
-  <h3 id="MASES_KNet_Producer_KNetProducer_4_Produce_System_String_System_Int32_System_Int64__0__1_System_Action_Org_Apache_Kafka_Clients_Producer_RecordMetadata_MASES_JCOBridge_C2JBridge_JVMBridgeException__" data-uid="MASES.KNet.Producer.KNetProducer`4.Produce(System.String,System.Int32,System.Int64,`0,`1,System.Action{Org.Apache.Kafka.Clients.Producer.RecordMetadata,MASES.JCOBridge.C2JBridge.JVMBridgeException})">
-  Produce(string, int, long, K, V, Action&lt;RecordMetadata, JVMBridgeException&gt;)
+  <h3 id="MASES_KNet_Producer_KNetProducer_4_Produce_System_String_System_Nullable_System_Int32__System_Nullable_System_Int64___0__1_System_Action_Org_Apache_Kafka_Clients_Producer_RecordMetadata_MASES_JCOBridge_C2JBridge_JVMBridgeException__" data-uid="MASES.KNet.Producer.KNetProducer`4.Produce(System.String,System.Nullable{System.Int32},System.Nullable{System.Int64},`0,`1,System.Action{Org.Apache.Kafka.Clients.Producer.RecordMetadata,MASES.JCOBridge.C2JBridge.JVMBridgeException})">
+  Produce(string, int?, long?, K, V, Action&lt;RecordMetadata, JVMBridgeException&gt;)
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/KNetProducer.cs/#L384"><i class="bi bi-code-slash"></i></a>
   </h3>
 
@@ -1519,16 +1519,16 @@ Class KNetProducer&lt;K, V, TJVMK, TJVMV&gt;  <a class="header-action link-secon
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Produce(string topic, int partition, long timestamp, K key, V value, Action&lt;RecordMetadata, JVMBridgeException&gt; action = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public void Produce(string topic, int? partition, long? timestamp, K key, V value, Action&lt;RecordMetadata, JVMBridgeException&gt; action = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>topic</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd></dd>
-    <dt><code>partition</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dt><code>partition</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</dt>
     <dd></dd>
-    <dt><code>timestamp</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dt><code>timestamp</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a>?</dt>
     <dd></dd>
     <dt><code>key</code> <span class="xref">K</span></dt>
     <dd></dd>
@@ -1551,8 +1551,8 @@ Class KNetProducer&lt;K, V, TJVMK, TJVMV&gt;  <a class="header-action link-secon
 
   <a id="MASES_KNet_Producer_KNetProducer_4_Produce_" data-uid="MASES.KNet.Producer.KNetProducer`4.Produce*"></a>
 
-  <h3 id="MASES_KNet_Producer_KNetProducer_4_Produce_System_String_System_Int32__0__1_Org_Apache_Kafka_Clients_Producer_Callback_" data-uid="MASES.KNet.Producer.KNetProducer`4.Produce(System.String,System.Int32,`0,`1,Org.Apache.Kafka.Clients.Producer.Callback)">
-  Produce(string, int, K, V, Callback)
+  <h3 id="MASES_KNet_Producer_KNetProducer_4_Produce_System_String_System_Nullable_System_Int32___0__1_Org_Apache_Kafka_Clients_Producer_Callback_" data-uid="MASES.KNet.Producer.KNetProducer`4.Produce(System.String,System.Nullable{System.Int32},`0,`1,Org.Apache.Kafka.Clients.Producer.Callback)">
+  Produce(string, int?, K, V, Callback)
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/KNetProducer.cs/#L426"><i class="bi bi-code-slash"></i></a>
   </h3>
 
@@ -1561,14 +1561,14 @@ Class KNetProducer&lt;K, V, TJVMK, TJVMV&gt;  <a class="header-action link-secon
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Future&lt;RecordMetadata&gt; Produce(string topic, int partition, K key, V value, Callback cb = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Future&lt;RecordMetadata&gt; Produce(string topic, int? partition, K key, V value, Callback cb = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>topic</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd></dd>
-    <dt><code>partition</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dt><code>partition</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</dt>
     <dd></dd>
     <dt><code>key</code> <span class="xref">K</span></dt>
     <dd></dd>
@@ -1596,8 +1596,8 @@ Class KNetProducer&lt;K, V, TJVMK, TJVMV&gt;  <a class="header-action link-secon
 
   <a id="MASES_KNet_Producer_KNetProducer_4_Produce_" data-uid="MASES.KNet.Producer.KNetProducer`4.Produce*"></a>
 
-  <h3 id="MASES_KNet_Producer_KNetProducer_4_Produce_System_String_System_Int32__0__1_System_Action_Org_Apache_Kafka_Clients_Producer_RecordMetadata_MASES_JCOBridge_C2JBridge_JVMBridgeException__" data-uid="MASES.KNet.Producer.KNetProducer`4.Produce(System.String,System.Int32,`0,`1,System.Action{Org.Apache.Kafka.Clients.Producer.RecordMetadata,MASES.JCOBridge.C2JBridge.JVMBridgeException})">
-  Produce(string, int, K, V, Action&lt;RecordMetadata, JVMBridgeException&gt;)
+  <h3 id="MASES_KNet_Producer_KNetProducer_4_Produce_System_String_System_Nullable_System_Int32___0__1_System_Action_Org_Apache_Kafka_Clients_Producer_RecordMetadata_MASES_JCOBridge_C2JBridge_JVMBridgeException__" data-uid="MASES.KNet.Producer.KNetProducer`4.Produce(System.String,System.Nullable{System.Int32},`0,`1,System.Action{Org.Apache.Kafka.Clients.Producer.RecordMetadata,MASES.JCOBridge.C2JBridge.JVMBridgeException})">
+  Produce(string, int?, K, V, Action&lt;RecordMetadata, JVMBridgeException&gt;)
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/KNetProducer.cs/#L379"><i class="bi bi-code-slash"></i></a>
   </h3>
 
@@ -1606,14 +1606,14 @@ Class KNetProducer&lt;K, V, TJVMK, TJVMV&gt;  <a class="header-action link-secon
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Produce(string topic, int partition, K key, V value, Action&lt;RecordMetadata, JVMBridgeException&gt; action = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public void Produce(string topic, int? partition, K key, V value, Action&lt;RecordMetadata, JVMBridgeException&gt; action = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>topic</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd></dd>
-    <dt><code>partition</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dt><code>partition</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</dt>
     <dd></dd>
     <dt><code>key</code> <span class="xref">K</span></dt>
     <dd></dd>
@@ -1751,8 +1751,8 @@ Class KNetProducer&lt;K, V, TJVMK, TJVMV&gt;  <a class="header-action link-secon
 
   <a id="MASES_KNet_Producer_KNetProducer_4_ProduceAndWait_" data-uid="MASES.KNet.Producer.KNetProducer`4.ProduceAndWait*"></a>
 
-  <h3 id="MASES_KNet_Producer_KNetProducer_4_ProduceAndWait_System_String_System_Int32_System_DateTime__0__1_Org_Apache_Kafka_Clients_Producer_Callback_" data-uid="MASES.KNet.Producer.KNetProducer`4.ProduceAndWait(System.String,System.Int32,System.DateTime,`0,`1,Org.Apache.Kafka.Clients.Producer.Callback)">
-  ProduceAndWait(string, int, DateTime, K, V, Callback)
+  <h3 id="MASES_KNet_Producer_KNetProducer_4_ProduceAndWait_System_String_System_Nullable_System_Int32__System_Nullable_System_DateTime___0__1_Org_Apache_Kafka_Clients_Producer_Callback_" data-uid="MASES.KNet.Producer.KNetProducer`4.ProduceAndWait(System.String,System.Nullable{System.Int32},System.Nullable{System.DateTime},`0,`1,Org.Apache.Kafka.Clients.Producer.Callback)">
+  ProduceAndWait(string, int?, DateTime?, K, V, Callback)
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/KNetProducer.cs/#L451"><i class="bi bi-code-slash"></i></a>
   </h3>
 
@@ -1761,16 +1761,16 @@ Class KNetProducer&lt;K, V, TJVMK, TJVMV&gt;  <a class="header-action link-secon
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void ProduceAndWait(string topic, int partition, DateTime timestamp, K key, V value, Callback cb = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public void ProduceAndWait(string topic, int? partition, DateTime? timestamp, K key, V value, Callback cb = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>topic</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd></dd>
-    <dt><code>partition</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dt><code>partition</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</dt>
     <dd></dd>
-    <dt><code>timestamp</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a></dt>
+    <dt><code>timestamp</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a>?</dt>
     <dd></dd>
     <dt><code>key</code> <span class="xref">K</span></dt>
     <dd></dd>
@@ -1793,8 +1793,8 @@ Class KNetProducer&lt;K, V, TJVMK, TJVMV&gt;  <a class="header-action link-secon
 
   <a id="MASES_KNet_Producer_KNetProducer_4_ProduceAndWait_" data-uid="MASES.KNet.Producer.KNetProducer`4.ProduceAndWait*"></a>
 
-  <h3 id="MASES_KNet_Producer_KNetProducer_4_ProduceAndWait_System_String_System_Int32_System_Int64__0__1_Org_Apache_Kafka_Clients_Producer_Callback_" data-uid="MASES.KNet.Producer.KNetProducer`4.ProduceAndWait(System.String,System.Int32,System.Int64,`0,`1,Org.Apache.Kafka.Clients.Producer.Callback)">
-  ProduceAndWait(string, int, long, K, V, Callback)
+  <h3 id="MASES_KNet_Producer_KNetProducer_4_ProduceAndWait_System_String_System_Nullable_System_Int32__System_Nullable_System_Int64___0__1_Org_Apache_Kafka_Clients_Producer_Callback_" data-uid="MASES.KNet.Producer.KNetProducer`4.ProduceAndWait(System.String,System.Nullable{System.Int32},System.Nullable{System.Int64},`0,`1,Org.Apache.Kafka.Clients.Producer.Callback)">
+  ProduceAndWait(string, int?, long?, K, V, Callback)
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/KNetProducer.cs/#L441"><i class="bi bi-code-slash"></i></a>
   </h3>
 
@@ -1803,16 +1803,16 @@ Class KNetProducer&lt;K, V, TJVMK, TJVMV&gt;  <a class="header-action link-secon
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void ProduceAndWait(string topic, int partition, long timestamp, K key, V value, Callback cb = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public void ProduceAndWait(string topic, int? partition, long? timestamp, K key, V value, Callback cb = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>topic</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd></dd>
-    <dt><code>partition</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dt><code>partition</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</dt>
     <dd></dd>
-    <dt><code>timestamp</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dt><code>timestamp</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a>?</dt>
     <dd></dd>
     <dt><code>key</code> <span class="xref">K</span></dt>
     <dd></dd>
@@ -1835,8 +1835,8 @@ Class KNetProducer&lt;K, V, TJVMK, TJVMV&gt;  <a class="header-action link-secon
 
   <a id="MASES_KNet_Producer_KNetProducer_4_ProduceAndWait_" data-uid="MASES.KNet.Producer.KNetProducer`4.ProduceAndWait*"></a>
 
-  <h3 id="MASES_KNet_Producer_KNetProducer_4_ProduceAndWait_System_String_System_Int32__0__1_Org_Apache_Kafka_Clients_Producer_Callback_" data-uid="MASES.KNet.Producer.KNetProducer`4.ProduceAndWait(System.String,System.Int32,`0,`1,Org.Apache.Kafka.Clients.Producer.Callback)">
-  ProduceAndWait(string, int, K, V, Callback)
+  <h3 id="MASES_KNet_Producer_KNetProducer_4_ProduceAndWait_System_String_System_Nullable_System_Int32___0__1_Org_Apache_Kafka_Clients_Producer_Callback_" data-uid="MASES.KNet.Producer.KNetProducer`4.ProduceAndWait(System.String,System.Nullable{System.Int32},`0,`1,Org.Apache.Kafka.Clients.Producer.Callback)">
+  ProduceAndWait(string, int?, K, V, Callback)
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/KNetProducer.cs/#L431"><i class="bi bi-code-slash"></i></a>
   </h3>
 
@@ -1845,14 +1845,14 @@ Class KNetProducer&lt;K, V, TJVMK, TJVMV&gt;  <a class="header-action link-secon
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void ProduceAndWait(string topic, int partition, K key, V value, Callback cb = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public void ProduceAndWait(string topic, int? partition, K key, V value, Callback cb = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>topic</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd></dd>
-    <dt><code>partition</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dt><code>partition</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</dt>
     <dd></dd>
     <dt><code>key</code> <span class="xref">K</span></dt>
     <dd></dd>
@@ -1952,8 +1952,8 @@ Class KNetProducer&lt;K, V, TJVMK, TJVMV&gt;  <a class="header-action link-secon
 
   <a id="MASES_KNet_Producer_KNetProducer_4_ProduceAsync_" data-uid="MASES.KNet.Producer.KNetProducer`4.ProduceAsync*"></a>
 
-  <h3 id="MASES_KNet_Producer_KNetProducer_4_ProduceAsync_System_String_System_Int32_System_DateTime__0__1_System_Action_Org_Apache_Kafka_Clients_Producer_RecordMetadata_MASES_JCOBridge_C2JBridge_JVMBridgeException__" data-uid="MASES.KNet.Producer.KNetProducer`4.ProduceAsync(System.String,System.Int32,System.DateTime,`0,`1,System.Action{Org.Apache.Kafka.Clients.Producer.RecordMetadata,MASES.JCOBridge.C2JBridge.JVMBridgeException})">
-  ProduceAsync(string, int, DateTime, K, V, Action&lt;RecordMetadata, JVMBridgeException&gt;)
+  <h3 id="MASES_KNet_Producer_KNetProducer_4_ProduceAsync_System_String_System_Nullable_System_Int32__System_Nullable_System_DateTime___0__1_System_Action_Org_Apache_Kafka_Clients_Producer_RecordMetadata_MASES_JCOBridge_C2JBridge_JVMBridgeException__" data-uid="MASES.KNet.Producer.KNetProducer`4.ProduceAsync(System.String,System.Nullable{System.Int32},System.Nullable{System.DateTime},`0,`1,System.Action{Org.Apache.Kafka.Clients.Producer.RecordMetadata,MASES.JCOBridge.C2JBridge.JVMBridgeException})">
+  ProduceAsync(string, int?, DateTime?, K, V, Action&lt;RecordMetadata, JVMBridgeException&gt;)
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/KNetProducer.cs/#L496"><i class="bi bi-code-slash"></i></a>
   </h3>
 
@@ -1962,16 +1962,16 @@ Class KNetProducer&lt;K, V, TJVMK, TJVMV&gt;  <a class="header-action link-secon
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task ProduceAsync(string topic, int partition, DateTime timestamp, K key, V value, Action&lt;RecordMetadata, JVMBridgeException&gt; action = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task ProduceAsync(string topic, int? partition, DateTime? timestamp, K key, V value, Action&lt;RecordMetadata, JVMBridgeException&gt; action = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>topic</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd></dd>
-    <dt><code>partition</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dt><code>partition</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</dt>
     <dd></dd>
-    <dt><code>timestamp</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a></dt>
+    <dt><code>timestamp</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a>?</dt>
     <dd></dd>
     <dt><code>key</code> <span class="xref">K</span></dt>
     <dd></dd>
@@ -1999,8 +1999,8 @@ Class KNetProducer&lt;K, V, TJVMK, TJVMV&gt;  <a class="header-action link-secon
 
   <a id="MASES_KNet_Producer_KNetProducer_4_ProduceAsync_" data-uid="MASES.KNet.Producer.KNetProducer`4.ProduceAsync*"></a>
 
-  <h3 id="MASES_KNet_Producer_KNetProducer_4_ProduceAsync_System_String_System_Int32_System_Int64__0__1_System_Action_Org_Apache_Kafka_Clients_Producer_RecordMetadata_MASES_JCOBridge_C2JBridge_JVMBridgeException__" data-uid="MASES.KNet.Producer.KNetProducer`4.ProduceAsync(System.String,System.Int32,System.Int64,`0,`1,System.Action{Org.Apache.Kafka.Clients.Producer.RecordMetadata,MASES.JCOBridge.C2JBridge.JVMBridgeException})">
-  ProduceAsync(string, int, long, K, V, Action&lt;RecordMetadata, JVMBridgeException&gt;)
+  <h3 id="MASES_KNet_Producer_KNetProducer_4_ProduceAsync_System_String_System_Nullable_System_Int32__System_Nullable_System_Int64___0__1_System_Action_Org_Apache_Kafka_Clients_Producer_RecordMetadata_MASES_JCOBridge_C2JBridge_JVMBridgeException__" data-uid="MASES.KNet.Producer.KNetProducer`4.ProduceAsync(System.String,System.Nullable{System.Int32},System.Nullable{System.Int64},`0,`1,System.Action{Org.Apache.Kafka.Clients.Producer.RecordMetadata,MASES.JCOBridge.C2JBridge.JVMBridgeException})">
+  ProduceAsync(string, int?, long?, K, V, Action&lt;RecordMetadata, JVMBridgeException&gt;)
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/KNetProducer.cs/#L491"><i class="bi bi-code-slash"></i></a>
   </h3>
 
@@ -2009,16 +2009,16 @@ Class KNetProducer&lt;K, V, TJVMK, TJVMV&gt;  <a class="header-action link-secon
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task ProduceAsync(string topic, int partition, long timestamp, K key, V value, Action&lt;RecordMetadata, JVMBridgeException&gt; action = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task ProduceAsync(string topic, int? partition, long? timestamp, K key, V value, Action&lt;RecordMetadata, JVMBridgeException&gt; action = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>topic</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd></dd>
-    <dt><code>partition</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dt><code>partition</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</dt>
     <dd></dd>
-    <dt><code>timestamp</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dt><code>timestamp</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a>?</dt>
     <dd></dd>
     <dt><code>key</code> <span class="xref">K</span></dt>
     <dd></dd>
@@ -2046,8 +2046,8 @@ Class KNetProducer&lt;K, V, TJVMK, TJVMV&gt;  <a class="header-action link-secon
 
   <a id="MASES_KNet_Producer_KNetProducer_4_ProduceAsync_" data-uid="MASES.KNet.Producer.KNetProducer`4.ProduceAsync*"></a>
 
-  <h3 id="MASES_KNet_Producer_KNetProducer_4_ProduceAsync_System_String_System_Int32__0__1_System_Action_Org_Apache_Kafka_Clients_Producer_RecordMetadata_MASES_JCOBridge_C2JBridge_JVMBridgeException__" data-uid="MASES.KNet.Producer.KNetProducer`4.ProduceAsync(System.String,System.Int32,`0,`1,System.Action{Org.Apache.Kafka.Clients.Producer.RecordMetadata,MASES.JCOBridge.C2JBridge.JVMBridgeException})">
-  ProduceAsync(string, int, K, V, Action&lt;RecordMetadata, JVMBridgeException&gt;)
+  <h3 id="MASES_KNet_Producer_KNetProducer_4_ProduceAsync_System_String_System_Nullable_System_Int32___0__1_System_Action_Org_Apache_Kafka_Clients_Producer_RecordMetadata_MASES_JCOBridge_C2JBridge_JVMBridgeException__" data-uid="MASES.KNet.Producer.KNetProducer`4.ProduceAsync(System.String,System.Nullable{System.Int32},`0,`1,System.Action{Org.Apache.Kafka.Clients.Producer.RecordMetadata,MASES.JCOBridge.C2JBridge.JVMBridgeException})">
+  ProduceAsync(string, int?, K, V, Action&lt;RecordMetadata, JVMBridgeException&gt;)
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/KNetProducer.cs/#L486"><i class="bi bi-code-slash"></i></a>
   </h3>
 
@@ -2056,14 +2056,14 @@ Class KNetProducer&lt;K, V, TJVMK, TJVMV&gt;  <a class="header-action link-secon
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task ProduceAsync(string topic, int partition, K key, V value, Action&lt;RecordMetadata, JVMBridgeException&gt; action = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task ProduceAsync(string topic, int? partition, K key, V value, Action&lt;RecordMetadata, JVMBridgeException&gt; action = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>topic</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd></dd>
-    <dt><code>partition</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dt><code>partition</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</dt>
     <dd></dd>
     <dt><code>key</code> <span class="xref">K</span></dt>
     <dd></dd>
@@ -2210,8 +2210,8 @@ Class KNetProducer&lt;K, V, TJVMK, TJVMV&gt;  <a class="header-action link-secon
 
   <a id="MASES_KNet_Producer_KNetProducer_4_Send_" data-uid="MASES.KNet.Producer.KNetProducer`4.Send*"></a>
 
-  <h3 id="MASES_KNet_Producer_KNetProducer_4_Send_System_String_System_Int32_System_Int64__0__1_" data-uid="MASES.KNet.Producer.KNetProducer`4.Send(System.String,System.Int32,System.Int64,`0,`1)">
-  Send(string, int, long, K, V)
+  <h3 id="MASES_KNet_Producer_KNetProducer_4_Send_System_String_System_Nullable_System_Int32__System_Nullable_System_Int64___0__1_" data-uid="MASES.KNet.Producer.KNetProducer`4.Send(System.String,System.Nullable{System.Int32},System.Nullable{System.Int64},`0,`1)">
+  Send(string, int?, long?, K, V)
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/KNetProducer.cs/#L349"><i class="bi bi-code-slash"></i></a>
   </h3>
 
@@ -2220,16 +2220,16 @@ Class KNetProducer&lt;K, V, TJVMK, TJVMV&gt;  <a class="header-action link-secon
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Future&lt;RecordMetadata&gt; Send(string topic, int partition, long timestamp, K key, V value)</code></pre>
+    <pre><code class="lang-csharp hljs">public Future&lt;RecordMetadata&gt; Send(string topic, int? partition, long? timestamp, K key, V value)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>topic</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd></dd>
-    <dt><code>partition</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dt><code>partition</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</dt>
     <dd></dd>
-    <dt><code>timestamp</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dt><code>timestamp</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a>?</dt>
     <dd></dd>
     <dt><code>key</code> <span class="xref">K</span></dt>
     <dd></dd>
@@ -2249,7 +2249,7 @@ Class KNetProducer&lt;K, V, TJVMK, TJVMV&gt;  <a class="header-action link-secon
 
 
 
-  <h4 class="section" id="MASES_KNet_Producer_KNetProducer_4_Send_System_String_System_Int32_System_Int64__0__1__remarks">Remarks</h4>
+  <h4 class="section" id="MASES_KNet_Producer_KNetProducer_4_Send_System_String_System_Nullable_System_Int32__System_Nullable_System_Int64___0__1__remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p>Supports only <code class="typeparamref">TJVMK</code> and <code class="typeparamref">TJVMV</code> based on <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a> arrays or <a class="xref" href="https://jnet.masesgroup.com/api/Java.Nio.ByteBuffer.html">ByteBuffer</a></p>
 </div>
 
@@ -2258,8 +2258,8 @@ Class KNetProducer&lt;K, V, TJVMK, TJVMV&gt;  <a class="header-action link-secon
 
   <a id="MASES_KNet_Producer_KNetProducer_4_Send_" data-uid="MASES.KNet.Producer.KNetProducer`4.Send*"></a>
 
-  <h3 id="MASES_KNet_Producer_KNetProducer_4_Send_System_String_System_Int32_System_Int64__0__1_Org_Apache_Kafka_Common_Header_Headers_" data-uid="MASES.KNet.Producer.KNetProducer`4.Send(System.String,System.Int32,System.Int64,`0,`1,Org.Apache.Kafka.Common.Header.Headers)">
-  Send(string, int, long, K, V, Headers)
+  <h3 id="MASES_KNet_Producer_KNetProducer_4_Send_System_String_System_Nullable_System_Int32__System_Nullable_System_Int64___0__1_Org_Apache_Kafka_Common_Header_Headers_" data-uid="MASES.KNet.Producer.KNetProducer`4.Send(System.String,System.Nullable{System.Int32},System.Nullable{System.Int64},`0,`1,Org.Apache.Kafka.Common.Header.Headers)">
+  Send(string, int?, long?, K, V, Headers)
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/KNetProducer.cs/#L344"><i class="bi bi-code-slash"></i></a>
   </h3>
 
@@ -2268,16 +2268,16 @@ Class KNetProducer&lt;K, V, TJVMK, TJVMV&gt;  <a class="header-action link-secon
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Future&lt;RecordMetadata&gt; Send(string topic, int partition, long timestamp, K key, V value, Headers headers)</code></pre>
+    <pre><code class="lang-csharp hljs">public Future&lt;RecordMetadata&gt; Send(string topic, int? partition, long? timestamp, K key, V value, Headers headers)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>topic</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd></dd>
-    <dt><code>partition</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dt><code>partition</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</dt>
     <dd></dd>
-    <dt><code>timestamp</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dt><code>timestamp</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a>?</dt>
     <dd></dd>
     <dt><code>key</code> <span class="xref">K</span></dt>
     <dd></dd>
@@ -2299,7 +2299,7 @@ Class KNetProducer&lt;K, V, TJVMK, TJVMV&gt;  <a class="header-action link-secon
 
 
 
-  <h4 class="section" id="MASES_KNet_Producer_KNetProducer_4_Send_System_String_System_Int32_System_Int64__0__1_Org_Apache_Kafka_Common_Header_Headers__remarks">Remarks</h4>
+  <h4 class="section" id="MASES_KNet_Producer_KNetProducer_4_Send_System_String_System_Nullable_System_Int32__System_Nullable_System_Int64___0__1_Org_Apache_Kafka_Common_Header_Headers__remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p>Supports only <code class="typeparamref">TJVMK</code> and <code class="typeparamref">TJVMV</code> based on <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a> arrays or <a class="xref" href="https://jnet.masesgroup.com/api/Java.Nio.ByteBuffer.html">ByteBuffer</a></p>
 </div>
 
@@ -2308,8 +2308,8 @@ Class KNetProducer&lt;K, V, TJVMK, TJVMV&gt;  <a class="header-action link-secon
 
   <a id="MASES_KNet_Producer_KNetProducer_4_Send_" data-uid="MASES.KNet.Producer.KNetProducer`4.Send*"></a>
 
-  <h3 id="MASES_KNet_Producer_KNetProducer_4_Send_System_String_System_Int32__0__1_" data-uid="MASES.KNet.Producer.KNetProducer`4.Send(System.String,System.Int32,`0,`1)">
-  Send(string, int, K, V)
+  <h3 id="MASES_KNet_Producer_KNetProducer_4_Send_System_String_System_Nullable_System_Int32___0__1_" data-uid="MASES.KNet.Producer.KNetProducer`4.Send(System.String,System.Nullable{System.Int32},`0,`1)">
+  Send(string, int?, K, V)
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/KNetProducer.cs/#L359"><i class="bi bi-code-slash"></i></a>
   </h3>
 
@@ -2318,14 +2318,14 @@ Class KNetProducer&lt;K, V, TJVMK, TJVMV&gt;  <a class="header-action link-secon
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Future&lt;RecordMetadata&gt; Send(string topic, int partition, K key, V value)</code></pre>
+    <pre><code class="lang-csharp hljs">public Future&lt;RecordMetadata&gt; Send(string topic, int? partition, K key, V value)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>topic</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd></dd>
-    <dt><code>partition</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dt><code>partition</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</dt>
     <dd></dd>
     <dt><code>key</code> <span class="xref">K</span></dt>
     <dd></dd>
@@ -2345,7 +2345,7 @@ Class KNetProducer&lt;K, V, TJVMK, TJVMV&gt;  <a class="header-action link-secon
 
 
 
-  <h4 class="section" id="MASES_KNet_Producer_KNetProducer_4_Send_System_String_System_Int32__0__1__remarks">Remarks</h4>
+  <h4 class="section" id="MASES_KNet_Producer_KNetProducer_4_Send_System_String_System_Nullable_System_Int32___0__1__remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p>Supports only <code class="typeparamref">TJVMK</code> and <code class="typeparamref">TJVMV</code> based on <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a> arrays or <a class="xref" href="https://jnet.masesgroup.com/api/Java.Nio.ByteBuffer.html">ByteBuffer</a></p>
 </div>
 
@@ -2354,8 +2354,8 @@ Class KNetProducer&lt;K, V, TJVMK, TJVMV&gt;  <a class="header-action link-secon
 
   <a id="MASES_KNet_Producer_KNetProducer_4_Send_" data-uid="MASES.KNet.Producer.KNetProducer`4.Send*"></a>
 
-  <h3 id="MASES_KNet_Producer_KNetProducer_4_Send_System_String_System_Int32__0__1_Org_Apache_Kafka_Common_Header_Headers_" data-uid="MASES.KNet.Producer.KNetProducer`4.Send(System.String,System.Int32,`0,`1,Org.Apache.Kafka.Common.Header.Headers)">
-  Send(string, int, K, V, Headers)
+  <h3 id="MASES_KNet_Producer_KNetProducer_4_Send_System_String_System_Nullable_System_Int32___0__1_Org_Apache_Kafka_Common_Header_Headers_" data-uid="MASES.KNet.Producer.KNetProducer`4.Send(System.String,System.Nullable{System.Int32},`0,`1,Org.Apache.Kafka.Common.Header.Headers)">
+  Send(string, int?, K, V, Headers)
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/KNetProducer.cs/#L354"><i class="bi bi-code-slash"></i></a>
   </h3>
 
@@ -2364,14 +2364,14 @@ Class KNetProducer&lt;K, V, TJVMK, TJVMV&gt;  <a class="header-action link-secon
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Future&lt;RecordMetadata&gt; Send(string topic, int partition, K key, V value, Headers headers)</code></pre>
+    <pre><code class="lang-csharp hljs">public Future&lt;RecordMetadata&gt; Send(string topic, int? partition, K key, V value, Headers headers)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>topic</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd></dd>
-    <dt><code>partition</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dt><code>partition</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</dt>
     <dd></dd>
     <dt><code>key</code> <span class="xref">K</span></dt>
     <dd></dd>
@@ -2393,7 +2393,7 @@ Class KNetProducer&lt;K, V, TJVMK, TJVMV&gt;  <a class="header-action link-secon
 
 
 
-  <h4 class="section" id="MASES_KNet_Producer_KNetProducer_4_Send_System_String_System_Int32__0__1_Org_Apache_Kafka_Common_Header_Headers__remarks">Remarks</h4>
+  <h4 class="section" id="MASES_KNet_Producer_KNetProducer_4_Send_System_String_System_Nullable_System_Int32___0__1_Org_Apache_Kafka_Common_Header_Headers__remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p>Supports only <code class="typeparamref">TJVMK</code> and <code class="typeparamref">TJVMV</code> based on <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a> arrays or <a class="xref" href="https://jnet.masesgroup.com/api/Java.Nio.ByteBuffer.html">ByteBuffer</a></p>
 </div>
 
