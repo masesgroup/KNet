@@ -13,7 +13,7 @@ on:
         type: string
       PreReleaseCurrentVersion:
         description: 'The current version pre-release tag'
-        required: true
+        required: false
         type: string
       NewVersion:
         description: 'The new version'
@@ -21,7 +21,7 @@ on:
         type: string
       PreReleaseNewVersion:
         description: 'The new version pre-release tag'
-        required: true
+        required: false
         type: string
         
 # This workflow contains one job called "build_documentation"
