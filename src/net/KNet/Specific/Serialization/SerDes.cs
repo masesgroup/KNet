@@ -23,6 +23,7 @@ using MASES.JCOBridge.C2JBridge;
 using Org.Apache.Kafka.Common.Header;
 using Org.Apache.Kafka.Common.Serialization;
 using System;
+using static Org.Apache.Kafka.Common.Serialization.Serdes;
 
 namespace MASES.KNet.Serialization
 {
@@ -377,21 +378,28 @@ namespace MASES.KNet.Serialization
             var newData = _SerializationType switch
             {
                 KNetSerialization.SerializationType.Boolean => KNetSerialization.SerializeBoolean(UseKafkaClassForSupportedTypes, topic, (bool)Convert.ChangeType(data, typeof(bool))),
+                KNetSerialization.SerializationType.NullableBoolean => KNetSerialization.SerializeBoolean(UseKafkaClassForSupportedTypes, topic, data == null ? null : (bool)Convert.ChangeType(data, typeof(bool))),
                 KNetSerialization.SerializationType.ByteArray => KNetSerialization.SerializeByteArray(UseKafkaClassForSupportedTypes, topic, data as byte[]),
                 KNetSerialization.SerializationType.ByteBuffer => KNetSerialization.SerializeByteBuffer(UseKafkaClassForSupportedTypes, topic, data as ByteBuffer),
                 KNetSerialization.SerializationType.Bytes => KNetSerialization.SerializeBytes(UseKafkaClassForSupportedTypes, topic, data as Org.Apache.Kafka.Common.Utils.Bytes),
                 KNetSerialization.SerializationType.Double => KNetSerialization.SerializeDouble(UseKafkaClassForSupportedTypes, topic, (double)Convert.ChangeType(data, typeof(double))),
+                KNetSerialization.SerializationType.NullableDouble => KNetSerialization.SerializeDouble(UseKafkaClassForSupportedTypes, topic, data == null ? null : (double)Convert.ChangeType(data, typeof(double))),
                 KNetSerialization.SerializationType.Float => KNetSerialization.SerializeFloat(UseKafkaClassForSupportedTypes, topic, (float)Convert.ChangeType(data, typeof(float))),
+                KNetSerialization.SerializationType.NullableFloat => KNetSerialization.SerializeFloat(UseKafkaClassForSupportedTypes, topic, data == null ? null : (float)Convert.ChangeType(data, typeof(float))),
                 KNetSerialization.SerializationType.Integer => KNetSerialization.SerializeInt(UseKafkaClassForSupportedTypes, topic, (int)Convert.ChangeType(data, typeof(int))),
+                KNetSerialization.SerializationType.NullableInteger => KNetSerialization.SerializeInt(UseKafkaClassForSupportedTypes, topic, data == null ? null : (int)Convert.ChangeType(data, typeof(int))),
                 KNetSerialization.SerializationType.Long => KNetSerialization.SerializeLong(UseKafkaClassForSupportedTypes, topic, (long)Convert.ChangeType(data, typeof(long))),
+                KNetSerialization.SerializationType.NullableLong => KNetSerialization.SerializeLong(UseKafkaClassForSupportedTypes, topic, data == null ? null : (long)Convert.ChangeType(data, typeof(long))),
                 KNetSerialization.SerializationType.Short => KNetSerialization.SerializeShort(UseKafkaClassForSupportedTypes, topic, (short)Convert.ChangeType(data, typeof(short))),
+                KNetSerialization.SerializationType.NullableShort => KNetSerialization.SerializeShort(UseKafkaClassForSupportedTypes, topic, data == null ? null : (short)Convert.ChangeType(data, typeof(short))),
                 KNetSerialization.SerializationType.String => KNetSerialization.SerializeString(UseKafkaClassForSupportedTypes, topic, data as string),
                 KNetSerialization.SerializationType.Guid => KNetSerialization.SerializeGuid(UseKafkaClassForSupportedTypes, topic, (Guid)Convert.ChangeType(data, typeof(Guid))),
+                KNetSerialization.SerializationType.NullableGuid => KNetSerialization.SerializeGuid(UseKafkaClassForSupportedTypes, topic, data == null ? null : (Guid)Convert.ChangeType(data, typeof(Guid))),
                 KNetSerialization.SerializationType.Void => KNetSerialization.SerializeVoid(UseKafkaClassForSupportedTypes, topic, data as Java.Lang.Void),
                 KNetSerialization.SerializationType.External => throw new InvalidOperationException($"{typeof(T)} needs an external serializer: set {nameof(OnSerialize)} or {nameof(OnSerializeWithHeaders)}."),
                 _ => default,
             };
-            return (IsDirectBuffered && _JVMSerializationType == KNetSerialization.SerializationType.ByteBuffer) ? (TJVMT)(object)Java.Nio.ByteBuffer.From(newData)
+            return (IsDirectBuffered && _JVMSerializationType == KNetSerialization.SerializationType.ByteBuffer) ? (TJVMT)(object)(newData == null ? null : Java.Nio.ByteBuffer.From(newData))
                                                                                                                  : (TJVMT)(object)newData;
         }
         /// <inheritdoc cref="ISerializer{T, TJVMT}.SerializeWithHeaders(string, Headers, T)"/>
@@ -419,15 +427,21 @@ namespace MASES.KNet.Serialization
             return _SerializationType switch
             {
                 KNetSerialization.SerializationType.Boolean => (T)(object)KNetSerialization.DeserializeBoolean(UseKafkaClassForSupportedTypes, topic, newData),
+                KNetSerialization.SerializationType.NullableBoolean => (T)(object)KNetSerialization.DeserializeNullableBoolean(UseKafkaClassForSupportedTypes, topic, newData),
                 KNetSerialization.SerializationType.ByteArray => (T)(object)KNetSerialization.DeserializeByteArray(UseKafkaClassForSupportedTypes, topic, newData),
                 KNetSerialization.SerializationType.ByteBuffer => (T)(object)KNetSerialization.DeserializeByteBuffer(UseKafkaClassForSupportedTypes, topic, newData),
                 KNetSerialization.SerializationType.Bytes => (T)(object)KNetSerialization.DeserializeBytes(UseKafkaClassForSupportedTypes, topic, newData),
                 KNetSerialization.SerializationType.Double => (T)(object)KNetSerialization.DeserializeDouble(UseKafkaClassForSupportedTypes, topic, newData),
+                KNetSerialization.SerializationType.NullableDouble => (T)(object)KNetSerialization.DeserializeNullableDouble(UseKafkaClassForSupportedTypes, topic, newData),
                 KNetSerialization.SerializationType.Float => (T)(object)KNetSerialization.DeserializeFloat(UseKafkaClassForSupportedTypes, topic, newData),
+                KNetSerialization.SerializationType.NullableFloat => (T)(object)KNetSerialization.DeserializeNullableFloat(UseKafkaClassForSupportedTypes, topic, newData),
                 KNetSerialization.SerializationType.Integer => (T)(object)KNetSerialization.DeserializeInt(UseKafkaClassForSupportedTypes, topic, newData),
+                KNetSerialization.SerializationType.NullableInteger => (T)(object)KNetSerialization.DeserializeNullableInt(UseKafkaClassForSupportedTypes, topic, newData),
                 KNetSerialization.SerializationType.Long => (T)(object)KNetSerialization.DeserializeLong(UseKafkaClassForSupportedTypes, topic, newData),
+                KNetSerialization.SerializationType.NullableLong => (T)(object)KNetSerialization.DeserializeNullableLong(UseKafkaClassForSupportedTypes, topic, newData),
                 KNetSerialization.SerializationType.String => (T)(object)KNetSerialization.DeserializeString(UseKafkaClassForSupportedTypes, topic, newData),
                 KNetSerialization.SerializationType.Guid => (T)(object)KNetSerialization.DeserializeGuid(UseKafkaClassForSupportedTypes, topic, newData),
+                KNetSerialization.SerializationType.NullableGuid => (T)(object)KNetSerialization.DeserializeNullableGuid(UseKafkaClassForSupportedTypes, topic, newData),
                 KNetSerialization.SerializationType.Void => (T)(object)KNetSerialization.DeserializeVoid(UseKafkaClassForSupportedTypes, topic, newData),
                 KNetSerialization.SerializationType.External => throw new InvalidOperationException($"{typeof(T)} needs an external deserializer: set {nameof(OnDeserialize)} or {nameof(OnDeserializeWithHeaders)}."),
                 _ => default,
@@ -530,54 +544,208 @@ namespace MASES.KNet.Serialization
         /// <summary>
         /// <see cref="SerDes{T, TJVMT}"/> between <see cref="bool"/> and <see cref="Java.Lang.Boolean"/>
         /// </summary>
-        public static SerDes<bool, Java.Lang.Boolean> Bool => _boolSerDes ?? new SerDes<bool, Java.Lang.Boolean>();
+        public static SerDes<bool, Java.Lang.Boolean> Bool
+        {
+            get
+            {
+                if (_boolSerDes == null) _boolSerDes = new SerDes<bool, Java.Lang.Boolean>();
+                return _boolSerDes;
+            }
+        }
+
+        static SerDes<bool?, Java.Lang.Boolean> _nullableBoolSerDes = null;
+        /// <summary>
+        /// <see cref="SerDes{T, TJVMT}"/> between <see cref="Nullable{T}"/> of <see cref="bool"/> and <see cref="Java.Lang.Boolean"/>
+        /// </summary>
+        public static SerDes<bool?, Java.Lang.Boolean> NullableBool
+        {
+            get
+            {
+                if (_nullableBoolSerDes == null) _nullableBoolSerDes = new SerDes<bool?, Java.Lang.Boolean>();
+                return _nullableBoolSerDes;
+            }
+        }
 
         static SerDes<short, Java.Lang.Short> _shortSerDes = null;
         /// <summary>
         /// <see cref="SerDes{T, TJVMT}"/> between <see cref="short"/> and <see cref="Java.Lang.Short"/>
         /// </summary>
-        public static SerDes<short, Java.Lang.Short> Short => _shortSerDes ?? new SerDes<short, Java.Lang.Short>();
+        public static SerDes<short, Java.Lang.Short> Short
+        {
+            get
+            {
+                if (_shortSerDes == null) _shortSerDes = new SerDes<short, Java.Lang.Short>();
+                return _shortSerDes;
+            }
+        }
+
+        static SerDes<short?, Java.Lang.Short> _nullableShortSerDes = null;
+        /// <summary>
+        /// <see cref="SerDes{T, TJVMT}"/> between <see cref="Nullable{T}"/> of <see cref="short"/> and <see cref="Java.Lang.Short"/>
+        /// </summary>
+        public static SerDes<short?, Java.Lang.Short> NullableShort
+        {
+            get
+            {
+                if (_nullableShortSerDes == null) _nullableShortSerDes = new SerDes<short?, Java.Lang.Short>();
+                return _nullableShortSerDes;
+            }
+        }
 
         static SerDes<int, Java.Lang.Integer> _intSerDes = null;
         /// <summary>
         /// <see cref="SerDes{T, TJVMT}"/> between <see cref="int"/> and <see cref="Java.Lang.Integer"/>
         /// </summary>
-        public static SerDes<int, Java.Lang.Integer> Integer => _intSerDes ?? new SerDes<int, Java.Lang.Integer>();
+        public static SerDes<int, Java.Lang.Integer> Integer
+        {
+            get
+            {
+                if (_intSerDes == null) _intSerDes = new SerDes<int, Java.Lang.Integer>();
+                return _intSerDes;
+            }
+        }
+
+        static SerDes<int?, Java.Lang.Integer> _nullableIntSerDes = null;
+        /// <summary>
+        /// <see cref="SerDes{T, TJVMT}"/> between <see cref="Nullable{T}"/> of <see cref="int"/> and <see cref="Java.Lang.Integer"/>
+        /// </summary>
+        public static SerDes<int?, Java.Lang.Integer> NullableInteger
+        {
+            get
+            {
+                if (_nullableIntSerDes == null) _nullableIntSerDes = new SerDes<int?, Java.Lang.Integer>();
+                return _nullableIntSerDes;
+            }
+        }
 
         static SerDes<long, Java.Lang.Long> _longSerDes = null;
         /// <summary>
         /// <see cref="SerDes{T, TJVMT}"/> between <see cref="long"/> and <see cref="Java.Lang.Long"/>
         /// </summary>
-        public static SerDes<long, Java.Lang.Long> Long => _longSerDes ?? new SerDes<long, Java.Lang.Long>();
+        public static SerDes<long, Java.Lang.Long> Long
+        {
+            get
+            {
+                if (_longSerDes == null) _longSerDes = new SerDes<long, Java.Lang.Long>();
+                return _longSerDes;
+            }
+        }
+
+        static SerDes<long?, Java.Lang.Long> _nullableLongSerDes = null;
+        /// <summary>
+        /// <see cref="SerDes{T, TJVMT}"/> between <see cref="Nullable{T}"/> of <see cref="long"/> and <see cref="Java.Lang.Long"/>
+        /// </summary>
+        public static SerDes<long?, Java.Lang.Long> NullableLong
+        {
+            get
+            {
+                if (_nullableLongSerDes == null) _nullableLongSerDes = new SerDes<long?, Java.Lang.Long>();
+                return _nullableLongSerDes;
+            }
+        }
 
         static SerDes<float, Java.Lang.Float> _floatSerDes = null;
         /// <summary>
         /// <see cref="SerDes{T, TJVMT}"/> between <see cref="float"/> and <see cref="Java.Lang.Float"/>
         /// </summary>
-        public static SerDes<float, Java.Lang.Float> Float => _floatSerDes ?? new SerDes<float, Java.Lang.Float>();
+        public static SerDes<float, Java.Lang.Float> Float
+        {
+            get
+            {
+                if (_floatSerDes == null) _floatSerDes = new SerDes<float, Java.Lang.Float>();
+                return _floatSerDes;
+            }
+        }
+
+        static SerDes<float?, Java.Lang.Float> _nullableFloatSerDes = null;
+        /// <summary>
+        /// <see cref="SerDes{T, TJVMT}"/> between <see cref="Nullable{T}"/> of <see cref="float"/> and <see cref="Java.Lang.Float"/>
+        /// </summary>
+        public static SerDes<float?, Java.Lang.Float> NullableFloat
+        {
+            get
+            {
+                if (_nullableFloatSerDes == null) _nullableFloatSerDes = new SerDes<float?, Java.Lang.Float>();
+                return _nullableFloatSerDes;
+            }
+        }
 
         static SerDes<double, Java.Lang.Double> _doubleSerDes = null;
         /// <summary>
         /// <see cref="SerDes{T, TJVMT}"/> between <see cref="double"/> and <see cref="Java.Lang.Double"/>
         /// </summary>
-        public static SerDes<double, Java.Lang.Double> Double => _doubleSerDes ?? new SerDes<double, Java.Lang.Double>();
+        public static SerDes<double, Java.Lang.Double> Double
+        {
+            get
+            {
+                if (_doubleSerDes == null) _doubleSerDes = new SerDes<double, Java.Lang.Double>();
+                return _doubleSerDes;
+            }
+        }
+
+        static SerDes<double?, Java.Lang.Double> _nullableDoubleSerDes = null;
+        /// <summary>
+        /// <see cref="SerDes{T, TJVMT}"/> between <see cref="Nullable{T}"/> of <see cref="double"/> and <see cref="Java.Lang.Double"/>
+        /// </summary>
+        public static SerDes<double?, Java.Lang.Double> NullableDouble
+        {
+            get
+            {
+                if (_nullableDoubleSerDes == null) _nullableDoubleSerDes = new SerDes<double?, Java.Lang.Double>();
+                return _nullableDoubleSerDes;
+            }
+        }
 
         static SerDes<string, byte[]> _stringSerDes = null;
         /// <summary>
         /// <see cref="SerDes{T, TJVMT}"/> between <see cref="string"/> and <see cref="byte"/> array
         /// </summary>
-        public static SerDes<string, byte[]> String => _stringSerDes ?? new SerDes<string, byte[]>();
+        public static SerDes<string, byte[]> String
+        {
+            get
+            {
+                if (_stringSerDes == null) _stringSerDes = new SerDes<string, byte[]>();
+                return _stringSerDes;
+            }
+        }
 
-        static SerDes<Guid, Java.Util.UUID> _GuidSerDes = null;
+        static SerDes<Guid, Java.Util.UUID> _guidSerDes = null;
         /// <summary>
-        /// <see cref="SerDes{T, TJVMT}"/> between <see cref="Guid"/> and <see cref="Java.Util.UUID"/>
+        /// <see cref="SerDes{T, TJVMT}"/> between <see cref="System.Guid"/> and <see cref="Java.Util.UUID"/>
         /// </summary>
-        public static SerDes<Guid, Java.Util.UUID> Guid => _GuidSerDes ?? new SerDes<Guid, Java.Util.UUID>();
+        public static SerDes<Guid, Java.Util.UUID> Guid
+        {
+            get
+            {
+                if (_guidSerDes == null) _guidSerDes = new SerDes<Guid, Java.Util.UUID>();
+                return _guidSerDes;
+            }
+        }
+
+        static SerDes<Guid?, Java.Util.UUID> _nullableGuidSerDes = null;
+        /// <summary>
+        /// <see cref="SerDes{T, TJVMT}"/> between <see cref="Nullable{T}"/> of <see cref="System.Guid"/> and <see cref="Java.Util.UUID"/>
+        /// </summary>
+        public static SerDes<Guid?, Java.Util.UUID> NullableGuid
+        {
+            get
+            {
+                if (_nullableGuidSerDes == null) _nullableGuidSerDes = new SerDes<Guid?, Java.Util.UUID>();
+                return _nullableGuidSerDes;
+            }
+        }
 
         static SerDes<object, Java.Lang.Void> _voidSerDes = null;
         /// <summary>
         /// <see cref="SerDes{T, TJVMT}"/> between <see cref="object"/> and <see cref="Java.Lang.Void"/>
         /// </summary>
-        public static SerDes<object, Java.Lang.Void> Void => _voidSerDes ?? new SerDes<object, Java.Lang.Void>();
+        public static SerDes<object, Java.Lang.Void> Void
+        {
+            get
+            {
+                if (_voidSerDes == null) _voidSerDes = new SerDes<object, Java.Lang.Void>();
+                return _voidSerDes;
+            }
+        }
     }
 }

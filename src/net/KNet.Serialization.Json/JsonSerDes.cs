@@ -126,7 +126,7 @@ namespace MASES.KNet.Serialization.Json
                     headers?.Add(KNetSerialization.KeySerializerIdentifierJVM, keySerDesName);
 
                     if (_defaultSerDes != null) return _defaultSerDes.SerializeWithHeaders(topic, headers, data);
-
+                    if (data == null) return null;
 #if NET462_OR_GREATER
                     var jsonStr = Newtonsoft.Json.JsonConvert.SerializeObject(data, Options);
                     return Encoding.UTF8.GetBytes(jsonStr);
@@ -216,23 +216,23 @@ namespace MASES.KNet.Serialization.Json
                     headers?.Add(KNetSerialization.KeySerializerIdentifierJVM, keySerDesName);
 
                     if (_defaultSerDes != null) return _defaultSerDes.SerializeWithHeaders(topic, headers, data);
-
+                    if (data == null) return null;
 #if NET462_OR_GREATER
-                if (UseStreamWithByteBuffer)
-                {
-                    var ms = new MemoryStream();
-                    using (StreamWriter sw = new StreamWriter(ms, new UTF8Encoding(false), 128, true))
-                    using (Newtonsoft.Json.JsonWriter writer = new Newtonsoft.Json.JsonTextWriter(sw))
+                    if (UseStreamWithByteBuffer)
                     {
-                        _serializer.Serialize(writer, data);
+                        var ms = new MemoryStream();
+                        using (StreamWriter sw = new StreamWriter(ms, new UTF8Encoding(false), 128, true))
+                        using (Newtonsoft.Json.JsonWriter writer = new Newtonsoft.Json.JsonTextWriter(sw))
+                        {
+                            _serializer.Serialize(writer, data);
+                        }
+                        return ByteBuffer.From(ms);
                     }
-                    return ByteBuffer.From(ms);
-                }
-                else
-                {
-                    var jsonStr = Newtonsoft.Json.JsonConvert.SerializeObject(data, Options);
-                    return ByteBuffer.From(Encoding.UTF8.GetBytes(jsonStr));
-                }
+                    else
+                    {
+                        var jsonStr = Newtonsoft.Json.JsonConvert.SerializeObject(data, Options);
+                        return ByteBuffer.From(Encoding.UTF8.GetBytes(jsonStr));
+                    }
 #else
                     var ms = new MemoryStream();
                     System.Text.Json.JsonSerializer.Serialize<TData>(ms, data, Options);
@@ -250,19 +250,19 @@ namespace MASES.KNet.Serialization.Json
                     if (_defaultSerDes != null) return _defaultSerDes.DeserializeWithHeaders(topic, headers, data);
                     if (data == null) return default;
 #if NET462_OR_GREATER
-                if (UseStreamWithByteBuffer)
-                {
-                    using (StreamReader sw = new StreamReader(data.ToStream()))
-                    using (Newtonsoft.Json.JsonReader reader = new Newtonsoft.Json.JsonTextReader(sw))
+                    if (UseStreamWithByteBuffer)
                     {
-                        return _serializer.Deserialize<TData>(reader);
+                        using (StreamReader sw = new StreamReader(data.ToStream()))
+                        using (Newtonsoft.Json.JsonReader reader = new Newtonsoft.Json.JsonTextReader(sw))
+                        {
+                            return _serializer.Deserialize<TData>(reader);
+                        }
                     }
-                }
-                else
-                {
-                    var jsonStr = Encoding.UTF8.GetString((byte[])data);
-                    return Newtonsoft.Json.JsonConvert.DeserializeObject<TData>(jsonStr, Options);
-                }
+                    else
+                    {
+                        var jsonStr = Encoding.UTF8.GetString((byte[])data);
+                        return Newtonsoft.Json.JsonConvert.DeserializeObject<TData>(jsonStr, Options);
+                    }
 #else
                     return System.Text.Json.JsonSerializer.Deserialize<TData>(data.ToStream(), Options)!;
 #endif
@@ -361,7 +361,7 @@ namespace MASES.KNet.Serialization.Json
                     headers?.Add(KNetSerialization.ValueTypeIdentifierJVM, valueTypeName);
 
                     if (_defaultSerDes != null) return _defaultSerDes.SerializeWithHeaders(topic, headers, data);
-
+                    if (data == null) return null;
 #if NET462_OR_GREATER
                     var jsonStr = Newtonsoft.Json.JsonConvert.SerializeObject(data, Options);
                     return Encoding.UTF8.GetBytes(jsonStr);
@@ -452,7 +452,7 @@ namespace MASES.KNet.Serialization.Json
                     headers?.Add(KNetSerialization.ValueTypeIdentifierJVM, valueTypeName);
 
                     if (_defaultSerDes != null) return _defaultSerDes.SerializeWithHeaders(topic, headers, data);
-
+                    if (data == null) return null;
 #if NET462_OR_GREATER
                     if (UseByteBufferWithStream)
                     {
