@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common.Metrics
 {
     #region MetricValueProvider declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.1/org/apache/kafka/common/metrics/MetricValueProvider.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.0/org/apache/kafka/common/metrics/MetricValueProvider.html"/>
     /// </summary>
     public partial class MetricValueProvider : MASES.JCOBridge.C2JBridge.JVMBridgeBase<MetricValueProvider>
     {
@@ -70,7 +70,7 @@ namespace Org.Apache.Kafka.Common.Metrics
 
     #region MetricValueProvider<T> declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.1/org/apache/kafka/common/metrics/MetricValueProvider.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.0/org/apache/kafka/common/metrics/MetricValueProvider.html"/>
     /// </summary>
     /// <typeparam name="T"></typeparam>
     public partial class MetricValueProvider<T> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<MetricValueProvider<T>>
@@ -133,7 +133,7 @@ namespace Org.Apache.Kafka.Common.Metrics
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.1/org/apache/kafka/common/metrics/MetricValueProvider.html#value(org.apache.kafka.common.metrics.MetricConfig,long)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.0/org/apache/kafka/common/metrics/MetricValueProvider.html#value(org.apache.kafka.common.metrics.MetricConfig,long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Metrics.MetricConfig"/></param>
         /// <param name="arg1"><see cref="long"/></param>
@@ -155,7 +155,7 @@ namespace Org.Apache.Kafka.Common.Metrics
 
     #region IMetricValueProvider<T>
     /// <summary>
-    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.1/org/apache/kafka/common/metrics/MetricValueProvider.html"/>
+    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.0/org/apache/kafka/common/metrics/MetricValueProvider.html"/>
     /// </summary>
     public partial interface IMetricValueProvider<T>
     {
@@ -196,7 +196,7 @@ namespace Org.Apache.Kafka.Common.Metrics
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.1/org/apache/kafka/common/metrics/MetricValueProvider.html#value(org.apache.kafka.common.metrics.MetricConfig,long)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.0/org/apache/kafka/common/metrics/MetricValueProvider.html#value(org.apache.kafka.common.metrics.MetricConfig,long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Metrics.MetricConfig"/></param>
         /// <param name="arg1"><see cref="long"/></param>

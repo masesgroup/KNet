@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Tools
 {
     #region OffsetsUtils declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.1/org/apache/kafka/tools/OffsetsUtils.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.2.0/org/apache/kafka/tools/OffsetsUtils.html"/>
     /// </summary>
     public partial class OffsetsUtils : MASES.JCOBridge.C2JBridge.JVMBridgeBase<OffsetsUtils>
     {
@@ -64,7 +64,7 @@ namespace Org.Apache.Kafka.Tools
         // TODO: complete the class
         #region Ignore declaration
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.1/org/apache/kafka/tools/OffsetsUtils.Ignore.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.2.0/org/apache/kafka/tools/OffsetsUtils.Ignore.html"/>
         /// </summary>
         public partial class Ignore : Org.Apache.Kafka.Tools.OffsetsUtils.LogOffsetResult
         {
@@ -105,7 +105,7 @@ namespace Org.Apache.Kafka.Tools
 
         #region LogOffset declaration
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.1/org/apache/kafka/tools/OffsetsUtils.LogOffset.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.2.0/org/apache/kafka/tools/OffsetsUtils.LogOffset.html"/>
         /// </summary>
         public partial class LogOffset : Org.Apache.Kafka.Tools.OffsetsUtils.LogOffsetResult
         {
@@ -146,7 +146,7 @@ namespace Org.Apache.Kafka.Tools
 
         #region LogOffsetResult declaration
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.1/org/apache/kafka/tools/OffsetsUtils.LogOffsetResult.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.2.0/org/apache/kafka/tools/OffsetsUtils.LogOffsetResult.html"/>
         /// </summary>
         public partial class LogOffsetResult : MASES.JCOBridge.C2JBridge.JVMBridgeBase<LogOffsetResult>
         {
@@ -189,7 +189,7 @@ namespace Org.Apache.Kafka.Tools
 
         #region OffsetsUtilsOptions declaration
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.1/org/apache/kafka/tools/OffsetsUtils.OffsetsUtilsOptions.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.2.0/org/apache/kafka/tools/OffsetsUtils.OffsetsUtilsOptions.html"/>
         /// </summary>
         public partial class OffsetsUtilsOptions : MASES.JCOBridge.C2JBridge.JVMBridgeBase<OffsetsUtilsOptions>
         {
@@ -230,7 +230,7 @@ namespace Org.Apache.Kafka.Tools
 
         #region Unknown declaration
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.1/org/apache/kafka/tools/OffsetsUtils.Unknown.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.2.0/org/apache/kafka/tools/OffsetsUtils.Unknown.html"/>
         /// </summary>
         public partial class Unknown : Org.Apache.Kafka.Tools.OffsetsUtils.LogOffsetResult
         {
@@ -290,7 +290,7 @@ namespace Org.Apache.Kafka.Tools
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.1/org/apache/kafka/tools/OffsetsUtils.html#printOffsetsToReset(java.util.Map)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.2.0/org/apache/kafka/tools/OffsetsUtils.html#printOffsetsToReset(java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         public static void PrintOffsetsToReset(Java.Util.Map<Java.Lang.String, Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Org.Apache.Kafka.Clients.Consumer.OffsetAndMetadata>> arg0)
@@ -302,7 +302,7 @@ namespace Org.Apache.Kafka.Tools
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.1/org/apache/kafka/tools/OffsetsUtils.html#filterNoneLeaderPartitions(java.util.Collection)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.2.0/org/apache/kafka/tools/OffsetsUtils.html#filterNoneLeaderPartitions(java.util.Collection)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Collection"/></param>
         /// <returns><see cref="Java.Util.List"/></returns>
@@ -311,7 +311,7 @@ namespace Org.Apache.Kafka.Tools
             return IExecuteWithSignature<Java.Util.List<Org.Apache.Kafka.Common.TopicPartition>>("filterNoneLeaderPartitions", "(Ljava/util/Collection;)Ljava/util/List;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.1/org/apache/kafka/tools/OffsetsUtils.html#filterNonExistentPartitions(java.util.Collection)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.2.0/org/apache/kafka/tools/OffsetsUtils.html#filterNonExistentPartitions(java.util.Collection)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Collection"/></param>
         /// <returns><see cref="Java.Util.List"/></returns>
@@ -320,7 +320,7 @@ namespace Org.Apache.Kafka.Tools
             return IExecuteWithSignature<Java.Util.List<Org.Apache.Kafka.Common.TopicPartition>>("filterNonExistentPartitions", "(Ljava/util/Collection;)Ljava/util/List;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.1/org/apache/kafka/tools/OffsetsUtils.html#parseTopicPartitionsToReset(java.util.List)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.2.0/org/apache/kafka/tools/OffsetsUtils.html#parseTopicPartitionsToReset(java.util.List)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.List"/></param>
         /// <returns><see cref="Java.Util.List"/></returns>
@@ -331,7 +331,7 @@ namespace Org.Apache.Kafka.Tools
             return IExecuteWithSignature<Java.Util.List<Org.Apache.Kafka.Common.TopicPartition>>("parseTopicPartitionsToReset", "(Ljava/util/List;)Ljava/util/List;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.1/org/apache/kafka/tools/OffsetsUtils.html#resetByDuration(java.util.Collection)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.2.0/org/apache/kafka/tools/OffsetsUtils.html#resetByDuration(java.util.Collection)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Collection"/></param>
         /// <returns><see cref="Java.Util.Map"/></returns>
@@ -340,7 +340,7 @@ namespace Org.Apache.Kafka.Tools
             return IExecuteWithSignature<Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Org.Apache.Kafka.Clients.Consumer.OffsetAndMetadata>>("resetByDuration", "(Ljava/util/Collection;)Ljava/util/Map;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.1/org/apache/kafka/tools/OffsetsUtils.html#resetByShiftBy(java.util.Collection,java.util.Map)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.2.0/org/apache/kafka/tools/OffsetsUtils.html#resetByShiftBy(java.util.Collection,java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Collection"/></param>
         /// <param name="arg1"><see cref="Java.Util.Map"/></param>
@@ -350,7 +350,7 @@ namespace Org.Apache.Kafka.Tools
             return IExecuteWithSignature<Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Org.Apache.Kafka.Clients.Consumer.OffsetAndMetadata>>("resetByShiftBy", "(Ljava/util/Collection;Ljava/util/Map;)Ljava/util/Map;", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.1/org/apache/kafka/tools/OffsetsUtils.html#resetFromFile(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.2.0/org/apache/kafka/tools/OffsetsUtils.html#resetFromFile(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Java.Util.Map"/></returns>
@@ -359,7 +359,7 @@ namespace Org.Apache.Kafka.Tools
             return IExecuteWithSignature<Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Org.Apache.Kafka.Clients.Consumer.OffsetAndMetadata>>("resetFromFile", "(Ljava/lang/String;)Ljava/util/Map;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.1/org/apache/kafka/tools/OffsetsUtils.html#resetToCurrent(java.util.Collection,java.util.Map)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.2.0/org/apache/kafka/tools/OffsetsUtils.html#resetToCurrent(java.util.Collection,java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Collection"/></param>
         /// <param name="arg1"><see cref="Java.Util.Map"/></param>
@@ -369,7 +369,7 @@ namespace Org.Apache.Kafka.Tools
             return IExecuteWithSignature<Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Org.Apache.Kafka.Clients.Consumer.OffsetAndMetadata>>("resetToCurrent", "(Ljava/util/Collection;Ljava/util/Map;)Ljava/util/Map;", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.1/org/apache/kafka/tools/OffsetsUtils.html#resetToDateTime(java.util.Collection)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.2.0/org/apache/kafka/tools/OffsetsUtils.html#resetToDateTime(java.util.Collection)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Collection"/></param>
         /// <returns><see cref="Java.Util.Map"/></returns>
@@ -378,7 +378,7 @@ namespace Org.Apache.Kafka.Tools
             return IExecuteWithSignature<Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Org.Apache.Kafka.Clients.Consumer.OffsetAndMetadata>>("resetToDateTime", "(Ljava/util/Collection;)Ljava/util/Map;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.1/org/apache/kafka/tools/OffsetsUtils.html#resetToEarliest(java.util.Collection)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.2.0/org/apache/kafka/tools/OffsetsUtils.html#resetToEarliest(java.util.Collection)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Collection"/></param>
         /// <returns><see cref="Java.Util.Map"/></returns>
@@ -387,7 +387,7 @@ namespace Org.Apache.Kafka.Tools
             return IExecuteWithSignature<Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Org.Apache.Kafka.Clients.Consumer.OffsetAndMetadata>>("resetToEarliest", "(Ljava/util/Collection;)Ljava/util/Map;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.1/org/apache/kafka/tools/OffsetsUtils.html#resetToLatest(java.util.Collection)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.2.0/org/apache/kafka/tools/OffsetsUtils.html#resetToLatest(java.util.Collection)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Collection"/></param>
         /// <returns><see cref="Java.Util.Map"/></returns>
@@ -396,7 +396,7 @@ namespace Org.Apache.Kafka.Tools
             return IExecuteWithSignature<Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Org.Apache.Kafka.Clients.Consumer.OffsetAndMetadata>>("resetToLatest", "(Ljava/util/Collection;)Ljava/util/Map;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.1/org/apache/kafka/tools/OffsetsUtils.html#resetToOffset(java.util.Collection)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.2.0/org/apache/kafka/tools/OffsetsUtils.html#resetToOffset(java.util.Collection)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Collection"/></param>
         /// <returns><see cref="Java.Util.Map"/></returns>
@@ -405,7 +405,7 @@ namespace Org.Apache.Kafka.Tools
             return IExecuteWithSignature<Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Org.Apache.Kafka.Clients.Consumer.OffsetAndMetadata>>("resetToOffset", "(Ljava/util/Collection;)Ljava/util/Map;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.1/org/apache/kafka/tools/OffsetsUtils.html#getLogEndOffsets(java.util.Collection)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.2.0/org/apache/kafka/tools/OffsetsUtils.html#getLogEndOffsets(java.util.Collection)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Collection"/></param>
         /// <returns><see cref="Java.Util.Map"/></returns>
@@ -414,7 +414,7 @@ namespace Org.Apache.Kafka.Tools
             return IExecuteWithSignature<Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Org.Apache.Kafka.Tools.OffsetsUtils.LogOffsetResult>>("getLogEndOffsets", "(Ljava/util/Collection;)Ljava/util/Map;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.1/org/apache/kafka/tools/OffsetsUtils.html#getLogOffsets(java.util.Collection,org.apache.kafka.clients.admin.OffsetSpec)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.2.0/org/apache/kafka/tools/OffsetsUtils.html#getLogOffsets(java.util.Collection,org.apache.kafka.clients.admin.OffsetSpec)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Collection"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Clients.Admin.OffsetSpec"/></param>
@@ -424,7 +424,7 @@ namespace Org.Apache.Kafka.Tools
             return IExecuteWithSignature<Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Org.Apache.Kafka.Tools.OffsetsUtils.LogOffsetResult>>("getLogOffsets", "(Ljava/util/Collection;Lorg/apache/kafka/clients/admin/OffsetSpec;)Ljava/util/Map;", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.1/org/apache/kafka/tools/OffsetsUtils.html#resetPlanFromFile()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.2.0/org/apache/kafka/tools/OffsetsUtils.html#resetPlanFromFile()"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Optional"/></returns>
         public Java.Util.Optional<Java.Util.Map<Java.Lang.String, Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Org.Apache.Kafka.Clients.Consumer.OffsetAndMetadata>>> ResetPlanFromFile()
@@ -432,7 +432,7 @@ namespace Org.Apache.Kafka.Tools
             return IExecuteWithSignature<Java.Util.Optional<Java.Util.Map<Java.Lang.String, Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Org.Apache.Kafka.Clients.Consumer.OffsetAndMetadata>>>>("resetPlanFromFile", "()Ljava/util/Optional;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.1/org/apache/kafka/tools/OffsetsUtils.html#parseTopicsWithPartitions(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.2.0/org/apache/kafka/tools/OffsetsUtils.html#parseTopicsWithPartitions(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Java.Util.Stream.Stream"/></returns>
@@ -441,7 +441,7 @@ namespace Org.Apache.Kafka.Tools
             return IExecuteWithSignature<Java.Util.Stream.Stream<Org.Apache.Kafka.Common.TopicPartition>>("parseTopicsWithPartitions", "(Ljava/lang/String;)Ljava/util/stream/Stream;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.1/org/apache/kafka/tools/OffsetsUtils.html#checkAllTopicPartitionsValid(java.util.Collection)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.2.0/org/apache/kafka/tools/OffsetsUtils.html#checkAllTopicPartitionsValid(java.util.Collection)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Collection"/></param>
         public void CheckAllTopicPartitionsValid(Java.Util.Collection<Org.Apache.Kafka.Common.TopicPartition> arg0)
@@ -488,7 +488,7 @@ namespace Org.Apache.Kafka.Tools
         {
             #region Constructors
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.1/org/apache/kafka/tools/OffsetsUtils.LogOffset.html#%3Cinit%3E(long)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.2.0/org/apache/kafka/tools/OffsetsUtils.LogOffset.html#%3Cinit%3E(long)"/>
             /// </summary>
             /// <param name="value"><see cref="long"/></param>
             public LogOffset(long value)
@@ -512,7 +512,7 @@ namespace Org.Apache.Kafka.Tools
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.1/org/apache/kafka/tools/OffsetsUtils.LogOffset.html#value()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.2.0/org/apache/kafka/tools/OffsetsUtils.LogOffset.html#value()"/>
             /// </summary>
             /// <returns><see cref="long"/></returns>
             public long Value()
@@ -566,7 +566,7 @@ namespace Org.Apache.Kafka.Tools
         {
             #region Constructors
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.1/org/apache/kafka/tools/OffsetsUtils.OffsetsUtilsOptions.html#%3Cinit%3E(java.util.List,java.util.List,java.util.List,java.util.List,java.lang.String,java.lang.Long,long)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.2.0/org/apache/kafka/tools/OffsetsUtils.OffsetsUtilsOptions.html#%3Cinit%3E(java.util.List,java.util.List,java.util.List,java.util.List,java.lang.String,java.lang.Long,long)"/>
             /// </summary>
             /// <param name="arg0"><see cref="Java.Util.List"/></param>
             /// <param name="arg1"><see cref="Java.Util.List"/></param>
@@ -580,7 +580,7 @@ namespace Org.Apache.Kafka.Tools
             {
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.1/org/apache/kafka/tools/OffsetsUtils.OffsetsUtilsOptions.html#%3Cinit%3E(java.util.List,java.util.List,long)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.2.0/org/apache/kafka/tools/OffsetsUtils.OffsetsUtilsOptions.html#%3Cinit%3E(java.util.List,java.util.List,long)"/>
             /// </summary>
             /// <param name="arg0"><see cref="Java.Util.List"/></param>
             /// <param name="arg1"><see cref="Java.Util.List"/></param>
