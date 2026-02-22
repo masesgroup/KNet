@@ -28,6 +28,19 @@ namespace MASES.KNet.Streams
     public class StreamsConfigBuilder : CommonClientConfigsBuilder<StreamsConfigBuilder>
     {
         /// <summary>
+        /// Manages <see cref="StreamsConfig.ALLOW_OS_GROUP_WRITE_ACCESS_CONFIG"/>
+        /// </summary>
+        public bool AllowOsGroupWriteAccess { get { return GetProperty<bool>(StreamsConfig.ALLOW_OS_GROUP_WRITE_ACCESS_CONFIG); } set { SetProperty(StreamsConfig.ALLOW_OS_GROUP_WRITE_ACCESS_CONFIG, value); } }
+        /// <summary>
+        /// Manages <see cref="StreamsConfig.ALLOW_OS_GROUP_WRITE_ACCESS_CONFIG"/>
+        /// </summary>
+        public StreamsConfigBuilder WithAllowOsGroupWriteAccess(bool allowOsGroupWriteAccess)
+        {
+            var clone = Clone();
+            clone.AllowOsGroupWriteAccess = allowOsGroupWriteAccess;
+            return clone;
+        }
+        /// <summary>
         /// Manages <see cref="StreamsConfig.APPLICATION_ID_CONFIG"/>
         /// </summary>
         public string ApplicationId { get { return GetProperty<string>(StreamsConfig.APPLICATION_ID_CONFIG); } set { SetProperty(StreamsConfig.APPLICATION_ID_CONFIG, value); } }
@@ -197,6 +210,19 @@ namespace MASES.KNet.Streams
             return clone;
         }
         /// <summary>
+        /// Manages <see cref="StreamsConfig.ERRORS_DEAD_LETTER_QUEUE_TOPIC_NAME_CONFIG"/>
+        /// </summary>
+        public string ErrorsDeadLetterQueueTopicName { get { return GetProperty<string>(StreamsConfig.ERRORS_DEAD_LETTER_QUEUE_TOPIC_NAME_CONFIG); } set { SetProperty(StreamsConfig.ERRORS_DEAD_LETTER_QUEUE_TOPIC_NAME_CONFIG, value); } }
+        /// <summary>
+        /// Manages <see cref="StreamsConfig.ERRORS_DEAD_LETTER_QUEUE_TOPIC_NAME_CONFIG"/>
+        /// </summary>
+        public StreamsConfigBuilder WithErrorsDeadLetterQueueTopicName(string errorsDeadLetterQueueTopicName)
+        {
+            var clone = Clone();
+            clone.ErrorsDeadLetterQueueTopicName = errorsDeadLetterQueueTopicName;
+            return clone;
+        }
+        /// <summary>
         /// Manages <see cref="StreamsConfig.PROCESSING_GUARANTEE_CONFIG"/>: use <see cref="StreamsConfig.AT_LEAST_ONCE"/> or <see cref="StreamsConfig.EXACTLY_ONCE_V2"/>
         /// </summary>
         public string ProcessingGuarantee { get { return GetProperty<string>(StreamsConfig.PROCESSING_GUARANTEE_CONFIG); } set { SetProperty(StreamsConfig.PROCESSING_GUARANTEE_CONFIG, value); } }
@@ -209,6 +235,8 @@ namespace MASES.KNet.Streams
             clone.ProcessingGuarantee = processingGuarantee;
             return clone;
         }
+
+
         /// <summary>
         /// Manages <see cref="StreamsConfig.GROUP_PROTOCOL_CONFIG"/>
         /// </summary>
