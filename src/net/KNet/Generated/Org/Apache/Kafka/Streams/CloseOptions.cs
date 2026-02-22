@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Streams
 {
     #region CloseOptions declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.1/org/apache/kafka/streams/CloseOptions.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/CloseOptions.html"/>
     /// </summary>
     public partial class CloseOptions : MASES.JCOBridge.C2JBridge.JVMBridgeBase<CloseOptions>
     {
@@ -64,7 +64,7 @@ namespace Org.Apache.Kafka.Streams
         // TODO: complete the class
         #region GroupMembershipOperation declaration
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.1/org/apache/kafka/streams/CloseOptions.GroupMembershipOperation.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/CloseOptions.GroupMembershipOperation.html"/>
         /// </summary>
         public partial class GroupMembershipOperation : Java.Lang.Enum<Org.Apache.Kafka.Streams.CloseOptions.GroupMembershipOperation>
         {
@@ -124,7 +124,7 @@ namespace Org.Apache.Kafka.Streams
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.1/org/apache/kafka/streams/CloseOptions.html#groupMembershipOperation(org.apache.kafka.streams.CloseOptions.GroupMembershipOperation)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/CloseOptions.html#groupMembershipOperation(org.apache.kafka.streams.CloseOptions.GroupMembershipOperation)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.CloseOptions.GroupMembershipOperation"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.CloseOptions"/></returns>
@@ -133,7 +133,7 @@ namespace Org.Apache.Kafka.Streams
             return SExecuteWithSignature<Org.Apache.Kafka.Streams.CloseOptions>(LocalBridgeClazz, "groupMembershipOperation", "(Lorg/apache/kafka/streams/CloseOptions$GroupMembershipOperation;)Lorg/apache/kafka/streams/CloseOptions;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.1/org/apache/kafka/streams/CloseOptions.html#timeout(java.time.Duration)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/CloseOptions.html#timeout(java.time.Duration)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Time.Duration"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.CloseOptions"/></returns>
@@ -146,7 +146,7 @@ namespace Org.Apache.Kafka.Streams
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.1/org/apache/kafka/streams/CloseOptions.html#withGroupMembershipOperation(org.apache.kafka.streams.CloseOptions.GroupMembershipOperation)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/CloseOptions.html#withGroupMembershipOperation(org.apache.kafka.streams.CloseOptions.GroupMembershipOperation)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.CloseOptions.GroupMembershipOperation"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.CloseOptions"/></returns>
@@ -155,7 +155,7 @@ namespace Org.Apache.Kafka.Streams
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.CloseOptions>("withGroupMembershipOperation", "(Lorg/apache/kafka/streams/CloseOptions$GroupMembershipOperation;)Lorg/apache/kafka/streams/CloseOptions;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.1/org/apache/kafka/streams/CloseOptions.html#withTimeout(java.time.Duration)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/CloseOptions.html#withTimeout(java.time.Duration)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Time.Duration"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.CloseOptions"/></returns>
@@ -180,13 +180,13 @@ namespace Org.Apache.Kafka.Streams
 
             #region Fields
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.1/org/apache/kafka/streams/CloseOptions.GroupMembershipOperation.html#LEAVE_GROUP"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/CloseOptions.GroupMembershipOperation.html#LEAVE_GROUP"/>
             /// </summary>
             public static Org.Apache.Kafka.Streams.CloseOptions.GroupMembershipOperation LEAVE_GROUP { get { if (!_LEAVE_GROUPReady) { _LEAVE_GROUPContent = SGetField<Org.Apache.Kafka.Streams.CloseOptions.GroupMembershipOperation>(LocalBridgeClazz, "LEAVE_GROUP"); _LEAVE_GROUPReady = true; } return _LEAVE_GROUPContent; } }
             private static Org.Apache.Kafka.Streams.CloseOptions.GroupMembershipOperation _LEAVE_GROUPContent = default;
             private static bool _LEAVE_GROUPReady = false; // this is used because in case of generics 
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.1/org/apache/kafka/streams/CloseOptions.GroupMembershipOperation.html#REMAIN_IN_GROUP"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/CloseOptions.GroupMembershipOperation.html#REMAIN_IN_GROUP"/>
             /// </summary>
             public static Org.Apache.Kafka.Streams.CloseOptions.GroupMembershipOperation REMAIN_IN_GROUP { get { if (!_REMAIN_IN_GROUPReady) { _REMAIN_IN_GROUPContent = SGetField<Org.Apache.Kafka.Streams.CloseOptions.GroupMembershipOperation>(LocalBridgeClazz, "REMAIN_IN_GROUP"); _REMAIN_IN_GROUPReady = true; } return _REMAIN_IN_GROUPContent; } }
             private static Org.Apache.Kafka.Streams.CloseOptions.GroupMembershipOperation _REMAIN_IN_GROUPContent = default;
@@ -196,7 +196,7 @@ namespace Org.Apache.Kafka.Streams
 
             #region Static methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.1/org/apache/kafka/streams/CloseOptions.GroupMembershipOperation.html#valueOf(java.lang.String)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/CloseOptions.GroupMembershipOperation.html#valueOf(java.lang.String)"/>
             /// </summary>
             /// <param name="arg0"><see cref="Java.Lang.String"/></param>
             /// <returns><see cref="Org.Apache.Kafka.Streams.CloseOptions.GroupMembershipOperation"/></returns>
@@ -205,7 +205,7 @@ namespace Org.Apache.Kafka.Streams
                 return SExecuteWithSignature<Org.Apache.Kafka.Streams.CloseOptions.GroupMembershipOperation>(LocalBridgeClazz, "valueOf", "(Ljava/lang/String;)Lorg/apache/kafka/streams/CloseOptions$GroupMembershipOperation;", arg0);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.1.1/org/apache/kafka/streams/CloseOptions.GroupMembershipOperation.html#values()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/CloseOptions.GroupMembershipOperation.html#values()"/>
             /// </summary>
             /// <returns><see cref="Org.Apache.Kafka.Streams.CloseOptions.GroupMembershipOperation"/></returns>
             public static Org.Apache.Kafka.Streams.CloseOptions.GroupMembershipOperation[] Values()

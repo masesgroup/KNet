@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Security
 {
     #region CredentialProvider declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.1.1/org/apache/kafka/security/CredentialProvider.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.2.0/org/apache/kafka/security/CredentialProvider.html"/>
     /// </summary>
     public partial class CredentialProvider : MASES.JCOBridge.C2JBridge.JVMBridgeBase<CredentialProvider>
     {
@@ -79,7 +79,7 @@ namespace Org.Apache.Kafka.Security
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.1.1/org/apache/kafka/security/CredentialProvider.html#credentialCache"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.2.0/org/apache/kafka/security/CredentialProvider.html#credentialCache"/>
         /// </summary>
         public Org.Apache.Kafka.Common.Security.Authenticator.CredentialCache credentialCache { get { if (!_credentialCacheReady) { _credentialCacheContent = IGetField<Org.Apache.Kafka.Common.Security.Authenticator.CredentialCache>("credentialCache"); _credentialCacheReady = true; } return _credentialCacheContent; } }
         private Org.Apache.Kafka.Common.Security.Authenticator.CredentialCache _credentialCacheContent = default;
@@ -93,7 +93,7 @@ namespace Org.Apache.Kafka.Security
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.1.1/org/apache/kafka/security/CredentialProvider.html#removeCredentials(org.apache.kafka.clients.admin.ScramMechanism,java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.2.0/org/apache/kafka/security/CredentialProvider.html#removeCredentials(org.apache.kafka.clients.admin.ScramMechanism,java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Clients.Admin.ScramMechanism"/></param>
         /// <param name="arg1"><see cref="Java.Lang.String"/></param>
@@ -102,7 +102,7 @@ namespace Org.Apache.Kafka.Security
             IExecuteWithSignature("removeCredentials", "(Lorg/apache/kafka/clients/admin/ScramMechanism;Ljava/lang/String;)V", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.1.1/org/apache/kafka/security/CredentialProvider.html#updateCredential(org.apache.kafka.clients.admin.ScramMechanism,java.lang.String,org.apache.kafka.common.security.scram.ScramCredential)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.2.0/org/apache/kafka/security/CredentialProvider.html#updateCredential(org.apache.kafka.clients.admin.ScramMechanism,java.lang.String,org.apache.kafka.common.security.scram.ScramCredential)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Clients.Admin.ScramMechanism"/></param>
         /// <param name="arg1"><see cref="Java.Lang.String"/></param>

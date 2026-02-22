@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Security
 {
     #region DelegationTokenManager declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.1.1/org/apache/kafka/security/DelegationTokenManager.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.2.0/org/apache/kafka/security/DelegationTokenManager.html"/>
     /// </summary>
     public partial class DelegationTokenManager : MASES.JCOBridge.C2JBridge.JVMBridgeBase<DelegationTokenManager>
     {
@@ -79,7 +79,7 @@ namespace Org.Apache.Kafka.Security
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.1.1/org/apache/kafka/security/DelegationTokenManager.html#ERROR_TIMESTAMP"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.2.0/org/apache/kafka/security/DelegationTokenManager.html#ERROR_TIMESTAMP"/>
         /// </summary>
         public static long ERROR_TIMESTAMP { get { if (!_ERROR_TIMESTAMPReady) { _ERROR_TIMESTAMPContent = SGetField<long>(LocalBridgeClazz, "ERROR_TIMESTAMP"); _ERROR_TIMESTAMPReady = true; } return _ERROR_TIMESTAMPContent; } }
         private static long _ERROR_TIMESTAMPContent = default;
@@ -89,7 +89,7 @@ namespace Org.Apache.Kafka.Security
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.1.1/org/apache/kafka/security/DelegationTokenManager.html#filterToken(org.apache.kafka.common.security.auth.KafkaPrincipal,java.util.Optional,org.apache.kafka.common.security.token.delegation.TokenInformation,java.util.function.Function,java.util.function.Function)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.2.0/org/apache/kafka/security/DelegationTokenManager.html#filterToken(org.apache.kafka.common.security.auth.KafkaPrincipal,java.util.Optional,org.apache.kafka.common.security.token.delegation.TokenInformation,java.util.function.Function,java.util.function.Function)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Security.Auth.KafkaPrincipal"/></param>
         /// <param name="arg1"><see cref="Java.Util.Optional"/></param>
@@ -106,7 +106,7 @@ namespace Org.Apache.Kafka.Security
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.1.1/org/apache/kafka/security/DelegationTokenManager.html#isEnabled()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.2.0/org/apache/kafka/security/DelegationTokenManager.html#isEnabled()"/>
         /// </summary>
         /// <returns><see cref="bool"/></returns>
         public bool IsEnabled()
@@ -114,7 +114,7 @@ namespace Org.Apache.Kafka.Security
             return IExecuteWithSignature<bool>("isEnabled", "()Z");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.1.1/org/apache/kafka/security/DelegationTokenManager.html#getTokens(java.util.function.Predicate)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.2.0/org/apache/kafka/security/DelegationTokenManager.html#getTokens(java.util.function.Predicate)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Function.Predicate"/></param>
         /// <returns><see cref="Java.Util.List"/></returns>
@@ -123,7 +123,7 @@ namespace Org.Apache.Kafka.Security
             return IExecuteWithSignature<Java.Util.List<Org.Apache.Kafka.Common.Security.Token.Delegation.DelegationToken>>("getTokens", "(Ljava/util/function/Predicate;)Ljava/util/List;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.1.1/org/apache/kafka/security/DelegationTokenManager.html#getDelegationToken(org.apache.kafka.common.security.token.delegation.TokenInformation)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.2.0/org/apache/kafka/security/DelegationTokenManager.html#getDelegationToken(org.apache.kafka.common.security.token.delegation.TokenInformation)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Security.Token.Delegation.TokenInformation"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.Security.Token.Delegation.DelegationToken"/></returns>
@@ -132,7 +132,7 @@ namespace Org.Apache.Kafka.Security
             return IExecuteWithSignature<Org.Apache.Kafka.Common.Security.Token.Delegation.DelegationToken>("getDelegationToken", "(Lorg/apache/kafka/common/security/token/delegation/TokenInformation;)Lorg/apache/kafka/common/security/token/delegation/DelegationToken;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.1.1/org/apache/kafka/security/DelegationTokenManager.html#removeToken(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.2.0/org/apache/kafka/security/DelegationTokenManager.html#removeToken(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         public void RemoveToken(Java.Lang.String arg0)
@@ -140,7 +140,7 @@ namespace Org.Apache.Kafka.Security
             IExecuteWithSignature("removeToken", "(Ljava/lang/String;)V", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.1.1/org/apache/kafka/security/DelegationTokenManager.html#updateToken(org.apache.kafka.common.security.token.delegation.DelegationToken)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.2.0/org/apache/kafka/security/DelegationTokenManager.html#updateToken(org.apache.kafka.common.security.token.delegation.DelegationToken)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Security.Token.Delegation.DelegationToken"/></param>
         /// <exception cref="Java.Security.NoSuchAlgorithmException"/>

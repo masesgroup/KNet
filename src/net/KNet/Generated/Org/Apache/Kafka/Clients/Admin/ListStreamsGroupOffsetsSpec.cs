@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 {
     #region ListStreamsGroupOffsetsSpec declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.1/org/apache/kafka/clients/admin/ListStreamsGroupOffsetsSpec.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.0/org/apache/kafka/clients/admin/ListStreamsGroupOffsetsSpec.html"/>
     /// </summary>
     public partial class ListStreamsGroupOffsetsSpec : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ListStreamsGroupOffsetsSpec>
     {
@@ -87,7 +87,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.1/org/apache/kafka/clients/admin/ListStreamsGroupOffsetsSpec.html#topicPartitions()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.0/org/apache/kafka/clients/admin/ListStreamsGroupOffsetsSpec.html#topicPartitions()"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Collection"/></returns>
         public Java.Util.Collection<Org.Apache.Kafka.Common.TopicPartition> TopicPartitions()
@@ -95,7 +95,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<Java.Util.Collection<Org.Apache.Kafka.Common.TopicPartition>>("topicPartitions", "()Ljava/util/Collection;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.1/org/apache/kafka/clients/admin/ListStreamsGroupOffsetsSpec.html#topicPartitions(java.util.Collection)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.0/org/apache/kafka/clients/admin/ListStreamsGroupOffsetsSpec.html#topicPartitions(java.util.Collection)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Collection"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.ListStreamsGroupOffsetsSpec"/></returns>

@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Tools
 {
     #region LogCompactionTester declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.1/org/apache/kafka/tools/LogCompactionTester.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.2.0/org/apache/kafka/tools/LogCompactionTester.html"/>
     /// </summary>
     public partial class LogCompactionTester : MASES.JCOBridge.C2JBridge.JVMBridgeBase<LogCompactionTester>, MASES.JCOBridge.C2JBridge.IJVMBridgeMain
     {
@@ -64,7 +64,7 @@ namespace Org.Apache.Kafka.Tools
         // TODO: complete the class
         #region Options declaration
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.1/org/apache/kafka/tools/LogCompactionTester.Options.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.2.0/org/apache/kafka/tools/LogCompactionTester.Options.html"/>
         /// </summary>
         public partial class Options : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Options>
         {
@@ -105,7 +105,7 @@ namespace Org.Apache.Kafka.Tools
 
         #region TestRecord declaration
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.1/org/apache/kafka/tools/LogCompactionTester.TestRecord.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.2.0/org/apache/kafka/tools/LogCompactionTester.TestRecord.html"/>
         /// </summary>
         public partial class TestRecord : MASES.JCOBridge.C2JBridge.JVMBridgeBase<TestRecord>
         {
@@ -146,7 +146,7 @@ namespace Org.Apache.Kafka.Tools
 
         #region TestRecordUtils declaration
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.1/org/apache/kafka/tools/LogCompactionTester.TestRecordUtils.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.2.0/org/apache/kafka/tools/LogCompactionTester.TestRecordUtils.html"/>
         /// </summary>
         public partial class TestRecordUtils : MASES.JCOBridge.C2JBridge.JVMBridgeBase<TestRecordUtils>
         {
@@ -206,7 +206,7 @@ namespace Org.Apache.Kafka.Tools
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.1/org/apache/kafka/tools/LogCompactionTester.html#main(java.lang.String[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.2.0/org/apache/kafka/tools/LogCompactionTester.html#main(java.lang.String[])"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <exception cref="Java.Lang.Exception"/>
@@ -258,7 +258,7 @@ namespace Org.Apache.Kafka.Tools
         {
             #region Constructors
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.1/org/apache/kafka/tools/LogCompactionTester.TestRecord.html#%3Cinit%3E(java.lang.String,int,long,boolean)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.2.0/org/apache/kafka/tools/LogCompactionTester.TestRecord.html#%3Cinit%3E(java.lang.String,int,long,boolean)"/>
             /// </summary>
             /// <param name="topic"><see cref="Java.Lang.String"/></param>
             /// <param name="key"><see cref="int"/></param>
@@ -281,7 +281,7 @@ namespace Org.Apache.Kafka.Tools
 
             #region Static methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.1/org/apache/kafka/tools/LogCompactionTester.TestRecord.html#parse(java.lang.String)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.2.0/org/apache/kafka/tools/LogCompactionTester.TestRecord.html#parse(java.lang.String)"/>
             /// </summary>
             /// <param name="arg0"><see cref="Java.Lang.String"/></param>
             /// <returns><see cref="Org.Apache.Kafka.Tools.LogCompactionTester.TestRecord"/></returns>
@@ -294,14 +294,14 @@ namespace Org.Apache.Kafka.Tools
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.1/org/apache/kafka/tools/LogCompactionTester.TestRecord.html#getTopicAndKey()"/> 
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.2.0/org/apache/kafka/tools/LogCompactionTester.TestRecord.html#getTopicAndKey()"/> 
             /// </summary>
             public Java.Lang.String TopicAndKey
             {
                 get { return IExecuteWithSignature<Java.Lang.String>("getTopicAndKey", "()Ljava/lang/String;"); }
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.1/org/apache/kafka/tools/LogCompactionTester.TestRecord.html#delete()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.2.0/org/apache/kafka/tools/LogCompactionTester.TestRecord.html#delete()"/>
             /// </summary>
             /// <returns><see cref="bool"/></returns>
             public bool Delete()
@@ -309,7 +309,7 @@ namespace Org.Apache.Kafka.Tools
                 return IExecuteWithSignature<bool>("delete", "()Z");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.1/org/apache/kafka/tools/LogCompactionTester.TestRecord.html#key()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.2.0/org/apache/kafka/tools/LogCompactionTester.TestRecord.html#key()"/>
             /// </summary>
             /// <returns><see cref="int"/></returns>
             public int Key()
@@ -317,7 +317,7 @@ namespace Org.Apache.Kafka.Tools
                 return IExecuteWithSignature<int>("key", "()I");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.1/org/apache/kafka/tools/LogCompactionTester.TestRecord.html#topic()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.2.0/org/apache/kafka/tools/LogCompactionTester.TestRecord.html#topic()"/>
             /// </summary>
             /// <returns><see cref="Java.Lang.String"/></returns>
             public Java.Lang.String Topic()
@@ -325,7 +325,7 @@ namespace Org.Apache.Kafka.Tools
                 return IExecuteWithSignature<Java.Lang.String>("topic", "()Ljava/lang/String;");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.1/org/apache/kafka/tools/LogCompactionTester.TestRecord.html#value()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.2.0/org/apache/kafka/tools/LogCompactionTester.TestRecord.html#value()"/>
             /// </summary>
             /// <returns><see cref="long"/></returns>
             public long Value()
@@ -360,7 +360,7 @@ namespace Org.Apache.Kafka.Tools
 
             #region Static methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.1/org/apache/kafka/tools/LogCompactionTester.TestRecordUtils.html#peekLine(java.io.BufferedReader)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.2.0/org/apache/kafka/tools/LogCompactionTester.TestRecordUtils.html#peekLine(java.io.BufferedReader)"/>
             /// </summary>
             /// <param name="arg0"><see cref="Java.Io.BufferedReader"/></param>
             /// <returns><see cref="Java.Lang.String"/></returns>
@@ -370,7 +370,7 @@ namespace Org.Apache.Kafka.Tools
                 return SExecuteWithSignature<Java.Lang.String>(LocalBridgeClazz, "peekLine", "(Ljava/io/BufferedReader;)Ljava/lang/String;", arg0);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.1/org/apache/kafka/tools/LogCompactionTester.TestRecordUtils.html#valuesIterator(java.io.BufferedReader)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.2.0/org/apache/kafka/tools/LogCompactionTester.TestRecordUtils.html#valuesIterator(java.io.BufferedReader)"/>
             /// </summary>
             /// <param name="arg0"><see cref="Java.Io.BufferedReader"/></param>
             /// <returns><see cref="Java.Util.Iterator"/></returns>
@@ -379,7 +379,7 @@ namespace Org.Apache.Kafka.Tools
                 return SExecuteWithSignature<Java.Util.Iterator<Org.Apache.Kafka.Tools.LogCompactionTester.TestRecord>>(LocalBridgeClazz, "valuesIterator", "(Ljava/io/BufferedReader;)Ljava/util/Iterator;", arg0);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.1/org/apache/kafka/tools/LogCompactionTester.TestRecordUtils.html#readNext(java.io.BufferedReader)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.2.0/org/apache/kafka/tools/LogCompactionTester.TestRecordUtils.html#readNext(java.io.BufferedReader)"/>
             /// </summary>
             /// <param name="arg0"><see cref="Java.Io.BufferedReader"/></param>
             /// <returns><see cref="Org.Apache.Kafka.Tools.LogCompactionTester.TestRecord"/></returns>

@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 {
     #region SharePartitionOffsetInfo declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.1/org/apache/kafka/clients/admin/SharePartitionOffsetInfo.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.0/org/apache/kafka/clients/admin/SharePartitionOffsetInfo.html"/>
     /// </summary>
     public partial class SharePartitionOffsetInfo : MASES.JCOBridge.C2JBridge.JVMBridgeBase<SharePartitionOffsetInfo>
     {
@@ -71,7 +71,7 @@ namespace Org.Apache.Kafka.Clients.Admin
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.1/org/apache/kafka/clients/admin/SharePartitionOffsetInfo.html#%3Cinit%3E(long,java.util.Optional,java.util.Optional)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.0/org/apache/kafka/clients/admin/SharePartitionOffsetInfo.html#%3Cinit%3E(long,java.util.Optional,java.util.Optional)"/>
         /// </summary>
         /// <param name="arg0"><see cref="long"/></param>
         /// <param name="arg1"><see cref="Java.Util.Optional"/></param>
@@ -97,7 +97,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.1/org/apache/kafka/clients/admin/SharePartitionOffsetInfo.html#leaderEpoch()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.0/org/apache/kafka/clients/admin/SharePartitionOffsetInfo.html#leaderEpoch()"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Optional"/></returns>
         public Java.Util.Optional<Java.Lang.Integer> LeaderEpoch()
@@ -105,7 +105,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<Java.Util.Optional<Java.Lang.Integer>>("leaderEpoch", "()Ljava/util/Optional;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.1/org/apache/kafka/clients/admin/SharePartitionOffsetInfo.html#lag()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.0/org/apache/kafka/clients/admin/SharePartitionOffsetInfo.html#lag()"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Optional"/></returns>
         public Java.Util.Optional<Java.Lang.Long> Lag()
@@ -113,7 +113,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<Java.Util.Optional<Java.Lang.Long>>("lag", "()Ljava/util/Optional;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.1/org/apache/kafka/clients/admin/SharePartitionOffsetInfo.html#startOffset()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.0/org/apache/kafka/clients/admin/SharePartitionOffsetInfo.html#startOffset()"/>
         /// </summary>
         /// <returns><see cref="long"/></returns>
         public long StartOffset()
