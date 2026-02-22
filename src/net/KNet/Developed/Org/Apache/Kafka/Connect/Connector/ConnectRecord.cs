@@ -54,7 +54,7 @@ namespace Org.Apache.Kafka.Connect.Connector
         [global::System.Obsolete("This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
         public ConnectRecord(IJVMBridgeBaseInitializer initializer) : base(initializer) { }
         /// <summary>
-        /// https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.1/org/apache/kafka/connect/connector/ConnectRecord.html#%3Cinit%3E(java.lang.String,java.lang.Integer,org.apache.kafka.connect.data.Schema,java.lang.Object,org.apache.kafka.connect.data.Schema,java.lang.Object,java.lang.Long)
+        /// https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.2/org/apache/kafka/connect/connector/ConnectRecord.html#%3Cinit%3E(java.lang.String,java.lang.Integer,org.apache.kafka.connect.data.Schema,java.lang.Object,org.apache.kafka.connect.data.Schema,java.lang.Object,java.lang.Long)
         /// </summary>
         public ConnectRecord(string topic, int kafkaPartition,
                               Schema keySchema, TKey key,
@@ -64,7 +64,7 @@ namespace Org.Apache.Kafka.Connect.Connector
         {
         }
         /// <summary>
-        /// https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.1/org/apache/kafka/connect/connector/ConnectRecord.html#%3Cinit%3E(java.lang.String,java.lang.Integer,org.apache.kafka.connect.data.Schema,java.lang.Object,org.apache.kafka.connect.data.Schema,java.lang.Object,java.lang.Long,java.lang.Iterable)
+        /// https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.2/org/apache/kafka/connect/connector/ConnectRecord.html#%3Cinit%3E(java.lang.String,java.lang.Integer,org.apache.kafka.connect.data.Schema,java.lang.Object,org.apache.kafka.connect.data.Schema,java.lang.Object,java.lang.Long,java.lang.Iterable)
         /// </summary>
         public ConnectRecord(string topic, int kafkaPartition,
                              Schema keySchema, TKey key,
@@ -112,11 +112,11 @@ namespace Org.Apache.Kafka.Connect.Connector
         /// </summary>
         public Headers Headers => IExecute<Headers>("headers");
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.1/org/apache/kafka/connect/connector/ConnectRecord.html#newRecord(java.lang.String,java.lang.Integer,org.apache.kafka.connect.data.Schema,java.lang.Object,org.apache.kafka.connect.data.Schema,java.lang.Object,java.lang.Long)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.2/org/apache/kafka/connect/connector/ConnectRecord.html#newRecord(java.lang.String,java.lang.Integer,org.apache.kafka.connect.data.Schema,java.lang.Object,org.apache.kafka.connect.data.Schema,java.lang.Object,java.lang.Long)"/>
         /// </summary>
         public R NewRecord(string topic, int kafkaPartition, Schema keySchema, TKey key, Schema valueSchema, TValue value, DateTime timestamp) => IExecute<R>("newRecord", topic, kafkaPartition, keySchema, key, valueSchema, value, new DateTimeOffset(timestamp).ToUnixTimeMilliseconds());
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.1/org/apache/kafka/connect/connector/ConnectRecord.html#newRecord(java.lang.String,java.lang.Integer,org.apache.kafka.connect.data.Schema,java.lang.Object,org.apache.kafka.connect.data.Schema,java.lang.Object,java.lang.Long,java.lang.Iterable)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.2/org/apache/kafka/connect/connector/ConnectRecord.html#newRecord(java.lang.String,java.lang.Integer,org.apache.kafka.connect.data.Schema,java.lang.Object,org.apache.kafka.connect.data.Schema,java.lang.Object,java.lang.Long,java.lang.Iterable)"/>
         /// </summary>
         public R NewRecord(string topic, int kafkaPartition, Schema keySchema, TKey key, Schema valueSchema, TValue value, DateTime timestamp, Headers headers) => IExecute<R>("newRecord", topic, kafkaPartition, keySchema, key, valueSchema, value, new DateTimeOffset(timestamp).ToUnixTimeMilliseconds(), headers);
     }

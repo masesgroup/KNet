@@ -26,72 +26,77 @@ The configuration is:
   "DisableInterfaceMethodGeneration": true,
   "CreateInterfaceInheritance": true,
   "JarList": [
-    "kafka_2.13-3.9.0.jar",
-    "kafka-clients-3.9.0.jar",
-    "kafka-streams-3.9.0.jar",
-    "kafka-tools-3.9.0.jar",
-    "kafka-raft-3.9.0.jar",
-    "kafka-shell-3.9.0.jar",
-    "connect-api-3.9.0.jar",
-    "connect-basic-auth-extension-3.9.0.jar",
-    "connect-json-3.9.0.jar",
-    "connect-mirror-3.9.0.jar",
-    "connect-mirror-client-3.9.0.jar",
-    "connect-runtime-3.9.0.jar",
-    "connect-transforms-3.9.0.jar"
+    "kafka_2.13-3.9.2.jar",
+    "kafka-clients-3.9.2.jar",
+    "kafka-streams-3.9.2.jar",
+    "kafka-tools-3.9.2.jar",
+    "kafka-raft-3.9.2.jar",
+    "kafka-shell-3.9.2.jar",
+    "connect-api-3.9.2.jar",
+    "connect-basic-auth-extension-3.9.2.jar",
+    "connect-json-3.9.2.jar",
+    "connect-mirror-3.9.2.jar",
+    "connect-mirror-client-3.9.2.jar",
+    "connect-runtime-3.9.2.jar",
+    "connect-transforms-3.9.2.jar",
+	"kafka-server-common-3.9.2.jar"
   ],
   "OriginJavadocJARVersionAndUrls": [
     {
       "Version": 8,
-      "Url": "https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.9.0/"
+      "Url": "https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.9.2/"
     },
     {
       "Version": 8,
-      "Url": "https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.0/"
+      "Url": "https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/"
     },
     {
       "Version": 8,
-      "Url": "https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.0/"
+      "Url": "https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/"
     },
     {
       "Version": 8,
-      "Url": "https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.9.0/"
+      "Url": "https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.9.2/"
     },
     {
       "Version": 8,
-      "Url": "https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.0/"
+      "Url": "https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.2/"
     },
     {
       "Version": 8,
-      "Url": "https://www.javadoc.io/doc/org.apache.kafka/kafka-shell/3.9.0/"
+      "Url": "https://www.javadoc.io/doc/org.apache.kafka/kafka-shell/3.9.2/"
     },
     {
       "Version": 8,
-      "Url": "https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.0/"
+      "Url": "https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.2/"
     },
     {
       "Version": 8,
-      "Url": "https://www.javadoc.io/doc/org.apache.kafka/connect-basic-auth-extension/3.9.0/"
+      "Url": "https://www.javadoc.io/doc/org.apache.kafka/connect-basic-auth-extension/3.9.2/"
     },
     {
       "Version": 8,
-      "Url": "https://www.javadoc.io/doc/org.apache.kafka/connect-json/3.9.0/"
+      "Url": "https://www.javadoc.io/doc/org.apache.kafka/connect-json/3.9.2/"
     },
     {
       "Version": 8,
-      "Url": "https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.9.0/"
+      "Url": "https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.9.2/"
     },
     {
       "Version": 8,
-      "Url": "https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/3.9.0/"
+      "Url": "https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/3.9.2/"
     },
     {
       "Version": 8,
-      "Url": "https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.9.0/"
+      "Url": "https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.9.2/"
     },
     {
       "Version": 8,
-      "Url": "https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.9.0/"
+      "Url": "https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/3.9.2/"
+    },
+    {
+      "Version": 8,
+      "Url": "https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/3.9.2/"
     }
   ],
   "NamespacesToAvoid": [
@@ -158,6 +163,7 @@ The configuration is:
     "org.apache.kafka.streams.state.internals",
     "org.apache.kafka.streams.kstream.internals",
     "org.apache.kafka.streams.query.internals",
+    "org.apache.kafka.timeline",
     "org.apache.zookeeper.client",
     "org.eclipse.jetty",
     "org.glassfish",

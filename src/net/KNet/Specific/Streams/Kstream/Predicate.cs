@@ -57,7 +57,7 @@ namespace MASES.KNet.Streams.Kstream
             }
         }
         /// <summary>
-        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/kstream/Predicate.html#test(java.lang.Object,java.lang.Object)"/>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/kstream/Predicate.html#test(java.lang.Object,java.lang.Object)"/>
         /// </summary>
         /// <remarks>If <see cref="OnTest"/> has a value it takes precedence over corresponding <see cref="Test()"/> class method</remarks>
         public new System.Func<Predicate<K, V, TJVMK, TJVMV>, bool> OnTest { get; set; } = null;
