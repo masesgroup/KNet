@@ -119,7 +119,7 @@ namespace MASES.KNet.Consumer
             {
                 if (!_localValueDes)
                 {
-                    _valueDeserializer ??= _factory?.BuildKeySerDes<V, TJVMV>();
+                    _valueDeserializer ??= _factory?.BuildValueSerDes<V, TJVMV>();
                     _localValue = _valueDeserializer.UseHeaders ? _valueDeserializer.DeserializeWithHeaders(Topic, Headers, _record.Value()) : _valueDeserializer.Deserialize(Topic, _record.Value());
                     _localValueDes = true;
                 }
