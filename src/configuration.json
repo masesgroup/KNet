@@ -96,6 +96,7 @@
     "org.rocksdb",
     "com.typesafe",
     "com.fasterxml",
+    "javax.crypto",
     "javax.ws.rs",
     "kafka.api",
     "kafka.cluster",
