@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common.Metrics
 {
     #region Gauge declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.1/org/apache/kafka/common/metrics/Gauge.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.0/org/apache/kafka/common/metrics/Gauge.html"/>
     /// </summary>
     public partial class Gauge : Org.Apache.Kafka.Common.Metrics.MetricValueProvider
     {
@@ -70,7 +70,7 @@ namespace Org.Apache.Kafka.Common.Metrics
 
     #region Gauge<T> declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.1/org/apache/kafka/common/metrics/Gauge.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.0/org/apache/kafka/common/metrics/Gauge.html"/>
     /// </summary>
     /// <typeparam name="T"></typeparam>
     public partial class Gauge<T> : Org.Apache.Kafka.Common.Metrics.MetricValueProvider<T>
@@ -145,7 +145,7 @@ namespace Org.Apache.Kafka.Common.Metrics
 
     #region IGauge<T>
     /// <summary>
-    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.1.1/org/apache/kafka/common/metrics/Gauge.html"/>
+    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.0/org/apache/kafka/common/metrics/Gauge.html"/>
     /// </summary>
     public partial interface IGauge<T> : Org.Apache.Kafka.Common.Metrics.IMetricValueProvider<T>
     {

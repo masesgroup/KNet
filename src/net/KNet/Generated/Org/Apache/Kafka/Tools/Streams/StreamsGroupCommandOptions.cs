@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Tools.Streams
 {
     #region StreamsGroupCommandOptions declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.1/org/apache/kafka/tools/streams/StreamsGroupCommandOptions.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.2.0/org/apache/kafka/tools/streams/StreamsGroupCommandOptions.html"/>
     /// </summary>
     public partial class StreamsGroupCommandOptions : MASES.JCOBridge.C2JBridge.JVMBridgeBase<StreamsGroupCommandOptions>
     {
@@ -71,7 +71,7 @@ namespace Org.Apache.Kafka.Tools.Streams
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.1/org/apache/kafka/tools/streams/StreamsGroupCommandOptions.html#%3Cinit%3E(java.lang.String[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.2.0/org/apache/kafka/tools/streams/StreamsGroupCommandOptions.html#%3Cinit%3E(java.lang.String[])"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         public StreamsGroupCommandOptions(Java.Lang.String[] arg0)
@@ -91,7 +91,7 @@ namespace Org.Apache.Kafka.Tools.Streams
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.1.1/org/apache/kafka/tools/streams/StreamsGroupCommandOptions.html#fromArgs(java.lang.String[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.2.0/org/apache/kafka/tools/streams/StreamsGroupCommandOptions.html#fromArgs(java.lang.String[])"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Tools.Streams.StreamsGroupCommandOptions"/></returns>

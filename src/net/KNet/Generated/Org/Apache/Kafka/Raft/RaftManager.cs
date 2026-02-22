@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Raft
 {
     #region RaftManager declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.1/org/apache/kafka/raft/RaftManager.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.0/org/apache/kafka/raft/RaftManager.html"/>
     /// </summary>
     public partial class RaftManager : MASES.JCOBridge.C2JBridge.JVMBridgeBase<RaftManager>
     {
@@ -70,7 +70,7 @@ namespace Org.Apache.Kafka.Raft
 
     #region RaftManager<T> declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.1/org/apache/kafka/raft/RaftManager.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.0/org/apache/kafka/raft/RaftManager.html"/>
     /// </summary>
     /// <typeparam name="T"></typeparam>
     public partial class RaftManager<T> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<RaftManager<T>>
@@ -133,7 +133,7 @@ namespace Org.Apache.Kafka.Raft
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.1/org/apache/kafka/raft/RaftManager.html#client()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.0/org/apache/kafka/raft/RaftManager.html#client()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Raft.RaftClient"/></returns>
         public Org.Apache.Kafka.Raft.RaftClient Client()
@@ -141,7 +141,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<Org.Apache.Kafka.Raft.RaftClient>("client", "()Lorg/apache/kafka/raft/RaftClient;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.1/org/apache/kafka/raft/RaftManager.html#replicatedLog()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.0/org/apache/kafka/raft/RaftManager.html#replicatedLog()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Raft.ReplicatedLog"/></returns>
         public Org.Apache.Kafka.Raft.ReplicatedLog ReplicatedLog()
@@ -161,7 +161,7 @@ namespace Org.Apache.Kafka.Raft
 
     #region IRaftManager<T>
     /// <summary>
-    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.1/org/apache/kafka/raft/RaftManager.html"/>
+    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.0/org/apache/kafka/raft/RaftManager.html"/>
     /// </summary>
     public partial interface IRaftManager<T>
     {
@@ -202,7 +202,7 @@ namespace Org.Apache.Kafka.Raft
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.1/org/apache/kafka/raft/RaftManager.html#client()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.0/org/apache/kafka/raft/RaftManager.html#client()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Raft.RaftClient"/></returns>
         public Org.Apache.Kafka.Raft.RaftClient<T> Client()
@@ -210,7 +210,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<Org.Apache.Kafka.Raft.RaftClient<T>>("client", "()Lorg/apache/kafka/raft/RaftClient;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.1.1/org/apache/kafka/raft/RaftManager.html#replicatedLog()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.0/org/apache/kafka/raft/RaftManager.html#replicatedLog()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Raft.ReplicatedLog"/></returns>
         public Org.Apache.Kafka.Raft.ReplicatedLog ReplicatedLog()
