@@ -26,7 +26,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
     public partial class InvalidOffsetException
     {
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/clients/consumer/InvalidOffsetException.html#partitions--"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/InvalidOffsetException.html#partitions--"/>
         /// </summary>
         public Set<TopicPartition> Partitions => JVMBridgeBase.WrapsDirect<Set<TopicPartition>>(BridgeInstance.Invoke("partitions") as IJavaObject);
     }

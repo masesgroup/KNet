@@ -26,7 +26,7 @@ namespace Org.Apache.Kafka.Common.Errors
     public partial class InvalidTopicException
     {
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.1/org/apache/kafka/common/errors/InvalidTopicException.html#invalidTopics()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/common/errors/InvalidTopicException.html#invalidTopics()"/>
         /// </summary>
         public Set<string> InvalidTopics()
         {

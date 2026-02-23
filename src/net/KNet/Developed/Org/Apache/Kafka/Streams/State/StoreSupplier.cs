@@ -22,7 +22,7 @@ namespace Org.Apache.Kafka.Streams.State
 {
     #region IStoreSupplier
     /// <summary>
-    /// .NET interface for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.1/org/apache/kafka/streams/state/StoreSupplier.html"/>
+    /// .NET interface for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/state/StoreSupplier.html"/>
     /// </summary>
     /// <remarks>This solves an inheritance problem</remarks>
     public partial interface IStoreSupplier
