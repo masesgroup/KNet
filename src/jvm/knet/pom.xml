@@ -260,7 +260,7 @@ project.properties.originalClassPath = file.getText()
 		<dependency>
 			<groupId>io.opentelemetry.proto</groupId>
 			<artifactId>opentelemetry-proto</artifactId>
-			<version>1.3.2-alpha</version>
+			<version>1.9.0-alpha</version>
 		</dependency>
 		<dependency>
 			<groupId>com.google.protobuf</groupId>
