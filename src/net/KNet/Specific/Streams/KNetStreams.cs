@@ -210,8 +210,8 @@ namespace MASES.KNet.Streams
         {
             return _inner.Close(arg0);
         }
-        /// <inheritdoc cref="Org.Apache.Kafka.Streams.KafkaStreams.Close(Org.Apache.Kafka.Streams.KafkaStreams.CloseOptions)"/>
-        public bool Close(Org.Apache.Kafka.Streams.KafkaStreams.CloseOptions arg0)
+        /// <inheritdoc cref="Org.Apache.Kafka.Streams.KafkaStreams.Close(Org.Apache.Kafka.Streams.CloseOptions)"/>
+        public bool Close(Org.Apache.Kafka.Streams.CloseOptions arg0)
         {
             return _inner.Close(arg0);
         }

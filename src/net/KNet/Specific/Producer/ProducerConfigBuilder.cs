@@ -325,19 +325,6 @@ namespace MASES.KNet.Producer
             return clone;
         }
         /// <summary>
-        /// Manages <see cref="ProducerConfig.PARTITIONER_ADPATIVE_PARTITIONING_ENABLE_CONFIG"/>
-        /// </summary>
-        public bool PartitionerAdaptivePartitioningEnable { get { return GetProperty<bool>(ProducerConfig.PARTITIONER_ADPATIVE_PARTITIONING_ENABLE_CONFIG); } set { SetProperty(ProducerConfig.PARTITIONER_ADPATIVE_PARTITIONING_ENABLE_CONFIG, value); } }
-        /// <summary>
-        /// Manages <see cref="ProducerConfig.PARTITIONER_ADPATIVE_PARTITIONING_ENABLE_CONFIG"/>
-        /// </summary>
-        public ProducerConfigBuilder WithPartitionerAdaptivePartitioningEnable(bool partitionerAdaptivePartitioningEnable)
-        {
-            var clone = Clone();
-            clone.PartitionerAdaptivePartitioningEnable = partitionerAdaptivePartitioningEnable;
-            return clone;
-        }
-        /// <summary>
         /// Manages <see cref="ProducerConfig.PARTITIONER_AVAILABILITY_TIMEOUT_MS_CONFIG"/>
         /// </summary>
         public long PartitionerAvailabilityTimeoutMs { get { return GetProperty<long>(ProducerConfig.PARTITIONER_AVAILABILITY_TIMEOUT_MS_CONFIG); } set { SetProperty(ProducerConfig.PARTITIONER_AVAILABILITY_TIMEOUT_MS_CONFIG, value); } }
