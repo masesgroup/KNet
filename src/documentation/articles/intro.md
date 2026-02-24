@@ -43,14 +43,13 @@ There are many client libraries written to manage communication with Apache Kafk
 
 Currently the project tries to support, at our best, the [supported Apache Kafka™ binary distribution](https://kafka.apache.org/downloads):
 
-
 | KNet | State | Apache Kafka™ | Branch | .NET Framework | .NET | JVM™ |
 |:---:	|:---:	|:---:	|:---:	|:---:	|:---:	|:---:	|
-| 3.x.x | Active | 4.x.x | [master](https://github.com/masesgroup/KNet) | [![.NET 4.6.2+](https://img.shields.io/badge/.NET-4.6.2%2B-purple)](https://dotnet.microsoft.com/) | [![.NET 8+](https://img.shields.io/badge/.NET-8%2B-purple)](https://dotnet.microsoft.com/) | [![Java 17+](https://img.shields.io/badge/Java-17%2B-blue)](https://www.oracle.com/java/) |
-| 2.9.* | Active | 3.9.x | [release/2.9.X](https://github.com/masesgroup/KNet/tree/release/2.9.X) | [![.NET 4.6.2+](https://img.shields.io/badge/.NET-4.6.2%2B-purple)](https://dotnet.microsoft.com/) | [![.NET 8+](https://img.shields.io/badge/.NET-8%2B-purple)](https://dotnet.microsoft.com/) | [![Java 11+](https://img.shields.io/badge/Java-11%2B-blue)](https://www.oracle.com/java/) |
-| 2.8.* | Deprecated | 3.8.* | [release/2.8.X](https://github.com/masesgroup/KNet/tree/release/2.8.X) | [![.NET 4.6.2+](https://img.shields.io/badge/.NET-4.6.2%2B-purple)](https://dotnet.microsoft.com/) | [![.NET 6+](https://img.shields.io/badge/.NET-8%2B-purple)](https://dotnet.microsoft.com/) | [![Java 11+](https://img.shields.io/badge/Java-11%2B-blue)](https://www.oracle.com/java/) |
-| 2.7.* | Deprecated | 3.7.* | [release/2.7.X](https://github.com/masesgroup/KNet/tree/release/2.7.X) | [![.NET 4.6.2+](https://img.shields.io/badge/.NET-4.6.2%2B-purple)](https://dotnet.microsoft.com/) | [![.NET 6+](https://img.shields.io/badge/.NET-8%2B-purple)](https://dotnet.microsoft.com/) | [![Java 11+](https://img.shields.io/badge/Java-11%2B-blue)](https://www.oracle.com/java/) |
-| 2.6.* | Deprecated | 3.6.* | [release/2.6.X](https://github.com/masesgroup/KNet/tree/release/2.6.X) | [![.NET 4.6.2+](https://img.shields.io/badge/.NET-4.6.2%2B-purple)](https://dotnet.microsoft.com/) | [![.NET 6+](https://img.shields.io/badge/.NET-8%2B-purple)](https://dotnet.microsoft.com/) | [![Java 11+](https://img.shields.io/badge/Java-11%2B-blue)](https://www.oracle.com/java/) |
+| 3.x.x | Active | 4.x.x | [master](https://github.com/masesgroup/KNet) | 462+ | 8+ | 17+ |
+| 2.9.* | Active | 3.9.x | [release/2.9.X](https://github.com/masesgroup/KNet/tree/release/2.9.X) | 462+ | 8+ | 11+ |
+| 2.8.* | Deprecated | 3.8.* | [release/2.8.X](https://github.com/masesgroup/KNet/tree/release/2.8.X) | 462+ | 6+ | 11+ |
+| 2.7.* | Deprecated | 3.7.* | [release/2.7.X](https://github.com/masesgroup/KNet/tree/release/2.7.X) | 462+ | 6+ | 11+ |
+| 2.6.* | Deprecated | 3.6.* | [release/2.6.X](https://github.com/masesgroup/KNet/tree/release/2.6.X) | 462+ | 6+ | 11+ |
 
 The Apache Kafka™ packages are downloaded from:
 
