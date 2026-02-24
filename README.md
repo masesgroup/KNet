@@ -42,9 +42,9 @@ Currently the project tries to support, at our best, the [supported Apache Kafka
 |:---:	|:---:	|:---:	|:---:	|:---:	|:---:	|:---:	|
 | 3.x.x | Active | 4.x.x | [master](https://github.com/masesgroup/KNet) | [![.NET 4.6.2+](https://img.shields.io/badge/.NET-4.6.2%2B-purple)](https://dotnet.microsoft.com/) | [![.NET 8+](https://img.shields.io/badge/.NET-8%2B-purple)](https://dotnet.microsoft.com/) | [![Java 17+](https://img.shields.io/badge/Java-17%2B-blue)](https://www.oracle.com/java/) |
 | 2.9.* | Active | 3.9.x | [release/2.9.X](https://github.com/masesgroup/KNet/tree/release/2.9.X) | [![.NET 4.6.2+](https://img.shields.io/badge/.NET-4.6.2%2B-purple)](https://dotnet.microsoft.com/) | [![.NET 8+](https://img.shields.io/badge/.NET-8%2B-purple)](https://dotnet.microsoft.com/) | [![Java 11+](https://img.shields.io/badge/Java-11%2B-blue)](https://www.oracle.com/java/) |
-| 2.8.* | Deprecated | 3.8.* | [release/2.8.X](https://github.com/masesgroup/KNet/tree/release/2.8.X) | [![.NET 4.6.2+](https://img.shields.io/badge/.NET-4.6.2%2B-purple)](https://dotnet.microsoft.com/) | [![.NET 6+](https://img.shields.io/badge/.NET-8%2B-purple)](https://dotnet.microsoft.com/) | [![Java 11+](https://img.shields.io/badge/Java-11%2B-blue)](https://www.oracle.com/java/) |
-| 2.7.* | Deprecated | 3.7.* | [release/2.7.X](https://github.com/masesgroup/KNet/tree/release/2.7.X) | [![.NET 4.6.2+](https://img.shields.io/badge/.NET-4.6.2%2B-purple)](https://dotnet.microsoft.com/) | [![.NET 6+](https://img.shields.io/badge/.NET-8%2B-purple)](https://dotnet.microsoft.com/) | [![Java 11+](https://img.shields.io/badge/Java-11%2B-blue)](https://www.oracle.com/java/) |
-| 2.6.* | Deprecated | 3.6.* | [release/2.6.X](https://github.com/masesgroup/KNet/tree/release/2.6.X) | [![.NET 4.6.2+](https://img.shields.io/badge/.NET-4.6.2%2B-purple)](https://dotnet.microsoft.com/) | [![.NET 6+](https://img.shields.io/badge/.NET-8%2B-purple)](https://dotnet.microsoft.com/) | [![Java 11+](https://img.shields.io/badge/Java-11%2B-blue)](https://www.oracle.com/java/) |
+| 2.8.* | Deprecated | 3.8.* | [release/2.8.X](https://github.com/masesgroup/KNet/tree/release/2.8.X) | [![.NET 4.6.2+](https://img.shields.io/badge/.NET-4.6.2%2B-purple)](https://dotnet.microsoft.com/) | [![.NET 6+](https://img.shields.io/badge/.NET-6%2B-purple)](https://dotnet.microsoft.com/) | [![Java 11+](https://img.shields.io/badge/Java-11%2B-blue)](https://www.oracle.com/java/) |
+| 2.7.* | Deprecated | 3.7.* | [release/2.7.X](https://github.com/masesgroup/KNet/tree/release/2.7.X) | [![.NET 4.6.2+](https://img.shields.io/badge/.NET-4.6.2%2B-purple)](https://dotnet.microsoft.com/) | [![.NET 6+](https://img.shields.io/badge/.NET-6%2B-purple)](https://dotnet.microsoft.com/) | [![Java 11+](https://img.shields.io/badge/Java-11%2B-blue)](https://www.oracle.com/java/) |
+| 2.6.* | Deprecated | 3.6.* | [release/2.6.X](https://github.com/masesgroup/KNet/tree/release/2.6.X) | [![.NET 4.6.2+](https://img.shields.io/badge/.NET-4.6.2%2B-purple)](https://dotnet.microsoft.com/) | [![.NET 6+](https://img.shields.io/badge/.NET-6%2B-purple)](https://dotnet.microsoft.com/) | [![Java 11+](https://img.shields.io/badge/Java-11%2B-blue)](https://www.oracle.com/java/) |
 
 The Apache Kafka™ packages are downloaded from:
 
@@ -98,7 +98,7 @@ This project adheres to the Contributor [Covenant code of conduct](CODE_OF_CONDU
   * all classes KNetProducer, KNetConsumer and KNet Streams SDK manage the counter-part JVM™ types
   * serializers supports data exchange based on `byte` array and `ByteBuffer`
   * version 2.7.2 introduces `ISerDesSelector` to optimize serialization selection based on `byte` array or `ByteBuffer`
-* V3.0.3+ and 2.9.4+: From version 3.0.3 and 2.9.4, KNet Connect SDK supports JVM hosted runtime i.e. KNEt Connect SDK connectors can be used like any other JVM based connector from any production ready Kafka Connect cluster
+* V3.0.3+ and 2.9.4+: From version 3.0.3 and 2.9.4, KNet Connect SDK supports JVM hosted runtime i.e. KNet Connect SDK connectors can be used like any other JVM based connector from any production ready Kafka Connect cluster
 
 ---
 
