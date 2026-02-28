@@ -423,6 +423,11 @@ namespace MASES.KNet.Benchmark
             BenchmarkKNetCore.ApplicationJarRootPath = Const.DefaultJarsPath;
             BenchmarkKNetCore.ApplicationHeapSize = "4G";
             BenchmarkKNetCore.ApplicationInitialHeapSize = "4G";
+            if (Environment.GetEnvironmentVariable("GITHUB_ACTIONS") != null)  // for GitHub problem with Linux container
+            {
+                BenchmarkKNetCore.ApplicationIgnoreUnrecognized = true; // add this condition if the JVM does not support the UseContainerSupport JVM switch
+                BenchmarkKNetCore.AddJVMOption("-XX:-UseContainerSupport"); // remove the check which generates error in CGroup
+            }
             BenchmarkKNetCore.CreateGlobalInstance();
 
             Console.WriteLine($"Unknown params: {string.Join(", ", BenchmarkKNetCore.FilteredArgs)}");
