@@ -21,8 +21,8 @@ namespace Org.Apache.Kafka.Clients.Producer
     public partial class RecordMetadata
     {
         /// <summary>
-        /// <see cref="System.DateTime"/> of <see cref="Timestamp"/>
+        /// <see cref="System.DateTime"/> of <see cref="Timestamp"/> or <see langword="null"/> if <see cref="HasTimestamp"/> return <see langword="false"/>
         /// </summary>
-        public System.DateTime DateTime => System.DateTimeOffset.FromUnixTimeMilliseconds((long)Timestamp()).DateTime;
+        public System.DateTime? DateTime => HasTimestamp() ? System.DateTimeOffset.FromUnixTimeMilliseconds(Timestamp()).DateTime : null;
     }
 }
