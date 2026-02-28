@@ -81,6 +81,11 @@ namespace MASES.KNet.TestCommon
         {
             ApplicationWriteEventOrExceptionOnCmdLine = true;
             ApplicationJarRootPath = Const.DefaultJarsPath;
+            if (Environment.GetEnvironmentVariable("GITHUB_ACTIONS") != null)  // for GitHub problem with Linux container
+            {
+                ApplicationIgnoreUnrecognized = true; // add this condition if the JVM does not support the UseContainerSupport JVM switch
+                AddJVMOption("-XX:-UseContainerSupport"); // remove the check which generates error in CGroup
+            }
             CreateGlobalInstance();
             if (GlobalInstance == null)
             {
