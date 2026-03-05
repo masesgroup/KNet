@@ -100,6 +100,11 @@ namespace MASES.KNet.Connect.Transforms.Predicates
         public IReadOnlyDictionary<string, object> Properties { get; private set; }
 
         /// <summary>
+        /// Set the <see cref="ReflectedRemoteObjectClassName"/> of the connector to a fixed value
+        /// </summary>
+        protected sealed override string ReflectedRemoteObjectClassName => "KNetPredicate";
+
+        /// <summary>
         /// Public method used from Java to trigger <see cref="Test(ConnectRecord)"/>
         /// </summary>
         public bool TestInternal()
