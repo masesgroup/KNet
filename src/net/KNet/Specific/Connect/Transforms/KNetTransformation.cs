@@ -96,6 +96,11 @@ namespace MASES.KNet.Connect.Transforms
         public IReadOnlyDictionary<string, object> Properties { get; private set; }
 
         /// <summary>
+        /// Set the <see cref="ReflectedRemoteObjectClassName"/> of the connector to a fixed value
+        /// </summary>
+        protected sealed override string ReflectedRemoteObjectClassName => "KNetTransformation";
+
+        /// <summary>
         /// Public method used from Java to trigger <see cref="Apply(ConnectRecord)"/>
         /// </summary>
         public void ApplyInternal()
