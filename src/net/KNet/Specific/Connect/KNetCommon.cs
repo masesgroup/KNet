@@ -149,6 +149,7 @@ namespace MASES.KNet.Connect
         /// <summary>
         /// The unique name used to map objects between JVM and .NET
         /// </summary>
+        /// <remarks>This value is used when KNet Connect SDK is hosted in the CLR. When KNet Connect SDK starts from the JVM it is ignored.</remarks>
         protected abstract string ReflectedRemoteObjectClassName { get; }
 
         #region IKNetConnectLogging
