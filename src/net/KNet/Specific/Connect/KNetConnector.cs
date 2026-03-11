@@ -210,7 +210,7 @@ namespace MASES.KNet.Connect
         /// <returns></returns>
         public virtual bool TaskConfigs(int currentTask, int maxTasks, Map<Java.Lang.String, Java.Lang.String> props)
         {
-            System.Collections.Generic.Dictionary<string, string> dict = new();
+            var dict = new System.Collections.Generic.Dictionary<string, string>(props.ToNetDictiony<string, string, Java.Lang.String, Java.Lang.String>());
             bool retVal = TaskConfigs(currentTask, maxTasks, new KNetTaskConfiguration(dict));
             props.Clear();
             foreach (var item in dict)
