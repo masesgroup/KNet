@@ -327,7 +327,7 @@ namespace MASES.KNet.Serialization
         }
 
         /// <summary>
-        /// Serialize a <see cref="SerializationType.BooleanNulable"/>
+        /// Serialize a <see cref="SerializationType.NullableBoolean"/>
         /// </summary>
         public static byte[] SerializeBoolean(bool fallbackToKafka, string topic, bool? data)
         {

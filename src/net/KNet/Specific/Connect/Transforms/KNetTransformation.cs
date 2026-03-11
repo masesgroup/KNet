@@ -64,10 +64,6 @@ namespace MASES.KNet.Connect.Transforms
     public interface IKNetTransformation : ITransformation
     {
         /// <summary>
-        /// The properties retrieved from <see cref="KNetTransformation.Configure(Map{Java.Lang.String, object})"/>
-        /// </summary>
-        IReadOnlyDictionary<string, object> Properties { get; }
-        /// <summary>
         /// Implements the behavior of <see cref="ITransformation.Apply(ConnectRecord)"/> for <paramref name="record"/>
         /// </summary>
         /// <param name="record">The <see cref="SourceRecord"/> to test</param>
@@ -84,17 +80,14 @@ namespace MASES.KNet.Connect.Transforms
         /// <summary>
         /// Implement the method to execute the start action
         /// </summary>
-        /// <param name="props">The set of properties returned from Apache Kafka Connect framework: the <see cref="IReadOnlyDictionary{TKey, TValue}"/> contains the same info from configuration file.</param>
-        void Configure(IReadOnlyDictionary<string, object> props);
+        /// <param name="configuration">The <see cref="IKNetCommonConfiguration"/> to access the properties returned from Apache Kafka Connect framework: the <see cref="Properties"/> contains the same info from configuration file.</param>
+        void Configure(IKNetCommonConfiguration configuration);
     }
     /// <summary>
     /// The generic class which is the base of all transformations in .NET
     /// </summary>
     public abstract class KNetTransformation : KNetCommon, IKNetTransformation
     {
-        /// <inheritdoc cref="IKNetTransformation.Properties"/>
-        public IReadOnlyDictionary<string, object> Properties { get; private set; }
-
         /// <summary>
         /// Set the <see cref="ReflectedRemoteObjectClassName"/> of the connector to a fixed value
         /// </summary>
@@ -109,7 +102,6 @@ namespace MASES.KNet.Connect.Transforms
             var record1 = Apply(record);
             DataToExchange(record1);
         }
-
 
         /// <inheritdoc cref="ITransformation.Apply(ConnectRecord)"/>
         public virtual ConnectRecord Apply(ConnectRecord record)
@@ -154,7 +146,7 @@ namespace MASES.KNet.Connect.Transforms
             {
                 dict.Add(item.Key, item.Value);
             }
-            Properties = dict;
+            Properties = new KNetCommonConfiguration(props);
             Configure(Properties);
         }
         /// <summary>
@@ -166,8 +158,8 @@ namespace MASES.KNet.Connect.Transforms
 
         }
 
-        /// <inheritdoc cref="IKNetTransformation.Configure(IReadOnlyDictionary{string, object})"/>
-        public abstract void Configure(IReadOnlyDictionary<string, object> props);
+        /// <inheritdoc cref="IKNetTransformation.Configure(IKNetCommonConfiguration)"/>
+        public abstract void Configure(IKNetCommonConfiguration configuration);
 
         /// <summary>
         /// Public method used from Java to trigger <see cref="Close"/>

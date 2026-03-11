@@ -53,7 +53,7 @@ namespace MASES.KNet.Connect
         /// <inheritdoc cref="Connector.Initialize(ConnectorContext, Java.Util.List{Map{Java.Lang.String, Java.Lang.String}})"/>
         void Initialize(ConnectorContext ctx, Java.Util.List<Map<Java.Lang.String, Java.Lang.String>> taskConfigs);
         /// <inheritdoc cref="Connector.Start(Map{Java.Lang.String, Java.Lang.String})"/>
-        void Start(Map<Java.Lang.String, Java.Lang.String> props);
+        void Start(Map<Java.Lang.String, object> props);
         /// <inheritdoc cref="Connector.Reconfigure(Map{Java.Lang.String, Java.Lang.String})"/>
         void Reconfigure(Map<Java.Lang.String, Java.Lang.String> props);
         /// <inheritdoc cref="Connector.TaskClass{ReturnExtendsOrg_Apache_Kafka_Connect_Connector_Task}"/>
@@ -76,10 +76,6 @@ namespace MASES.KNet.Connect
     public interface IKNetConnector : IKNetCommon, IConnector
     {
         /// <summary>
-        /// The properties retrieved from <see cref="KNetConnector.StartInternal"/>
-        /// </summary>
-        IReadOnlyDictionary<string, string> Properties { get; }
-        /// <summary>
         /// Allocates a task object based on <see cref="KNetTask"/>
         /// </summary>
         /// <param name="taskId">The unique id generated from JAva side</param>
@@ -96,8 +92,8 @@ namespace MASES.KNet.Connect
         /// <summary>
         /// Implement the method to execute the start action
         /// </summary>
-        /// <param name="props">The set of properties returned from Apache Kafka Connect framework: the <see cref="IReadOnlyDictionary{TKey, TValue}"/> contains the same info from configuration file.</param>
-        void Start(IReadOnlyDictionary<string, string> props);
+        /// <param name="configuration">The <see cref="IKNetCommonConfiguration"/> to access the properties returned from Apache Kafka Connect framework: the <see cref="Properties"/> contains the same info from configuration file.</param>
+        void Start(IKNetCommonConfiguration configuration);
         /// <summary>
         /// Invoked during allocation of tasks from Apache Kafka Connect
         /// </summary>
@@ -134,9 +130,6 @@ namespace MASES.KNet.Connect
             return ExecuteOnRemote<T>("getContext");
         }
 
-        /// <inheritdoc cref="IKNetConnector.Properties"/>
-        public IReadOnlyDictionary<string, string> Properties { get; private set; }
-
         /// <inheritdoc cref="IKNetConnector.AllocateTask(long)"/>
         public object AllocateTask(long taskId)
         {
@@ -168,27 +161,32 @@ namespace MASES.KNet.Connect
         /// <exception cref="NotImplementedException">Invoked in Java before any initialization</exception>
         public void Initialize(ConnectorContext ctx, Java.Util.List<Map<Java.Lang.String, Java.Lang.String>> taskConfigs) => throw new NotImplementedException("Invoked in Java before any initialization.");
         /// <summary>
-        /// Public method used from Java to trigger <see cref="Start(Map{Java.Lang.String, Java.Lang.String})"/>
+        /// Public method used from Java to trigger <see cref="Start(Map{Java.Lang.String, object})"/>
         /// </summary>
         [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
         public void StartInternal()
         {
-            Map<Java.Lang.String, Java.Lang.String> props = DataToExchange<Map<Java.Lang.String, Java.Lang.String>>();
+            Map<Java.Lang.String, object> props = DataToExchange<Map<Java.Lang.String, object>>();
             Start(props);
-            Properties = new System.Collections.Generic.Dictionary<string, string>(props.ToNetDictiony<string, string, Java.Lang.String, Java.Lang.String>());
+            var dict = new System.Collections.Generic.Dictionary<string, object>();
+            foreach (var item in props.EntrySet())
+            {
+                dict.Add(item.Key, item.Value);
+            }
+            Properties = new KNetCommonConfiguration(props);
             Start(Properties);
         }
         /// <summary>
         /// Not implemented
         /// </summary>
         /// <exception cref="NotImplementedException">Local version with a different signature</exception>
-        public virtual void Start(Map<Java.Lang.String, Java.Lang.String> props)
+        public virtual void Start(Map<Java.Lang.String, object> props)
         {
 
         }
 
-        /// <inheritdoc cref="IKNetConnector.Start(IReadOnlyDictionary{string, string})"/>
-        public abstract void Start(IReadOnlyDictionary<string, string> props);
+        /// <inheritdoc cref="IKNetConnector.Start(IKNetCommonConfiguration)"/>
+        public abstract void Start(IKNetCommonConfiguration configuration);
         /// <summary>
         /// Not implemented
         /// </summary>

@@ -71,7 +71,7 @@ namespace MASES.KNet.Connect
         /// <summary>
         /// Implement the method to execute the start action
         /// </summary>
-        /// <param name="props">The set of properties returned from Apache Kafka Connect framework: the <see cref="IReadOnlyDictionary{TKey, TValue}"/> contains the info from <see cref="KNetConnector.TaskConfigs(int, IDictionary{string, string})"/>.</param>
+        /// <param name="props">The set of properties returned from Apache Kafka Connect framework: the <see cref="IReadOnlyDictionary{TKey, TValue}"/> contains the info from <see cref="KNetConnector.TaskConfigs(int, int, IDictionary{string, string})"/>.</param>
         void Start(IReadOnlyDictionary<string, string> props);
     }
     #endregion

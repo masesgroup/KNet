@@ -77,7 +77,7 @@ namespace MASES.KNet.Connect
         void CreateAndPushRecord<TKey, TValue>(string topic, int? partition, Schema valueSchema, TValue value,
                                                Map<Java.Lang.String, object> sourcePartition = null, Map<Java.Lang.String, object> sourceOffset = null);
         /// <summary>
-        /// Creates a new <see cref="SourceRecord{TKey, TValue}"/> and push it to JVM in async mode using <see cref="PushRecordAsync(SourceRecord)"/>, i.e. without waiting the invocation of <see cref="Poll"/> to return back the list of <see cref="SourceRecord"/>
+        /// Creates a new <see cref="SourceRecord{TKey, TValue}"/> and push it to JVM in async mode using <see cref="PushRecordAsync(SourceRecord)"/>, i.e. without waiting the invocation of <see cref="KNetSourceTask{T}.Poll"/> to return back the list of <see cref="SourceRecord"/>
         /// </summary>
         /// <typeparam name="TKey">The type of the key to be inserted in Kafka</typeparam>
         /// <typeparam name="TValue">The type of value to be inserted in Kafka</typeparam>
@@ -120,7 +120,7 @@ namespace MASES.KNet.Connect
                                                Map<Java.Lang.String, object> sourcePartition = null, Map<Java.Lang.String, object> sourceOffset = null);
 
         /// <summary>
-        /// Creates a new <see cref="SourceRecord{TKey, TValue}"/> and push it to JVM in async mode using <see cref="PushRecordAsync(SourceRecord)"/>, i.e. without waiting the invocation of <see cref="Poll"/> to return back the list of <see cref="SourceRecord"/>
+        /// Creates a new <see cref="SourceRecord{TKey, TValue}"/> and push it to JVM in async mode using <see cref="PushRecordAsync(SourceRecord)"/>, i.e. without waiting the invocation of <see cref="KNetSourceTask{T}.Poll"/> to return back the list of <see cref="SourceRecord"/>
         /// </summary>
         /// <typeparam name="TKey">The type of the key to be inserted in Kafka</typeparam>
         /// <typeparam name="TValue">The type of value to be inserted in Kafka</typeparam>
@@ -165,7 +165,7 @@ namespace MASES.KNet.Connect
         void CreateAndPushRecord<TKey, TValue>(string topic, Schema keySchema, TKey key, Schema valueSchema, TValue value,
                                                Map<Java.Lang.String, object> sourcePartition = null, Map<Java.Lang.String, object> sourceOffset = null);
         /// <summary>
-        /// Creates a new <see cref="SourceRecord{TKey, TValue}"/> and push it to JVM in async mode using <see cref="PushRecordAsync(SourceRecord)"/>, i.e. without waiting the invocation of <see cref="Poll"/> to return back the list of <see cref="SourceRecord"/>
+        /// Creates a new <see cref="SourceRecord{TKey, TValue}"/> and push it to JVM in async mode using <see cref="PushRecordAsync(SourceRecord)"/>, i.e. without waiting the invocation of <see cref="KNetSourceTask{T}.Poll"/> to return back the list of <see cref="SourceRecord"/>
         /// </summary>
         /// <typeparam name="TKey">The type of the key to be inserted in Kafka</typeparam>
         /// <typeparam name="TValue">The type of value to be inserted in Kafka</typeparam>
@@ -213,7 +213,7 @@ namespace MASES.KNet.Connect
         void CreateAndPushRecord<TKey, TValue>(string topic, int? partition, Schema keySchema, TKey key, Schema valueSchema, TValue value,
                                                Map<Java.Lang.String, object> sourcePartition = null, Map<Java.Lang.String, object> sourceOffset = null);
         /// <summary>
-        /// Creates a new <see cref="SourceRecord{TKey, TValue}"/> and push it to JVM in async mode using <see cref="PushRecordAsync(SourceRecord)"/>, i.e. without waiting the invocation of <see cref="Poll"/> to return back the list of <see cref="SourceRecord"/>
+        /// Creates a new <see cref="SourceRecord{TKey, TValue}"/> and push it to JVM in async mode using <see cref="PushRecordAsync(SourceRecord)"/>, i.e. without waiting the invocation of <see cref="KNetSourceTask{T}.Poll"/> to return back the list of <see cref="SourceRecord"/>
         /// </summary>
         /// <typeparam name="TKey">The type of the key to be inserted in Kafka</typeparam>
         /// <typeparam name="TValue">The type of value to be inserted in Kafka</typeparam>
@@ -257,7 +257,7 @@ namespace MASES.KNet.Connect
         void CreateAndPushRecord<TValue>(string topic, Schema valueSchema, TValue value, DateTime timestamp,
                                          Map<Java.Lang.String, object> sourcePartition = null, Map<Java.Lang.String, object> sourceOffset = null);
         /// <summary>
-        /// Creates a new <see cref="SourceRecord{TKey, TValue}"/> and push it to JVM in async mode using <see cref="PushRecordAsync(SourceRecord)"/>, i.e. without waiting the invocation of <see cref="Poll"/> to return back the list of <see cref="SourceRecord"/>
+        /// Creates a new <see cref="SourceRecord{TKey, TValue}"/> and push it to JVM in async mode using <see cref="PushRecordAsync(SourceRecord)"/>, i.e. without waiting the invocation of <see cref="KNetSourceTask{T}.Poll"/> to return back the list of <see cref="SourceRecord"/>
         /// </summary>
         /// <typeparam name="TValue">The type of value to be inserted in Kafka</typeparam>
         /// <param name="topic">The name of the topic; may be null</param>
@@ -300,7 +300,7 @@ namespace MASES.KNet.Connect
         void CreateAndPushRecord<TValue>(string topic, int? partition, Schema valueSchema, TValue value, DateTime timestamp,
                                          Map<Java.Lang.String, object> sourcePartition = null, Map<Java.Lang.String, object> sourceOffset = null);
         /// <summary>
-        /// Creates a new <see cref="SourceRecord{TKey, TValue}"/> and push it to JVM in async mode using <see cref="PushRecordAsync(SourceRecord)"/>, i.e. without waiting the invocation of <see cref="Poll"/> to return back the list of <see cref="SourceRecord"/>
+        /// Creates a new <see cref="SourceRecord{TKey, TValue}"/> and push it to JVM in async mode using <see cref="PushRecordAsync(SourceRecord)"/>, i.e. without waiting the invocation of <see cref="KNetSourceTask{T}.Poll"/> to return back the list of <see cref="SourceRecord"/>
         /// </summary>
         /// <typeparam name="TValue">The type of value to be inserted in Kafka</typeparam>
         /// <param name="topic">The name of the topic; may be null</param>
@@ -350,7 +350,7 @@ namespace MASES.KNet.Connect
         void CreateAndPushRecord<TKey, TValue>(string topic, int? partition, Schema keySchema, TKey key, Schema valueSchema, TValue value, DateTime timestamp,
                                                Map<Java.Lang.String, object> sourcePartition = null, Map<Java.Lang.String, object> sourceOffset = null);
         /// <summary>
-        /// Creates a new <see cref="SourceRecord{TKey, TValue}"/> and push it to JVM in async mode using <see cref="PushRecordAsync(SourceRecord)"/>, i.e. without waiting the invocation of <see cref="Poll"/> to return back the list of <see cref="SourceRecord"/>
+        /// Creates a new <see cref="SourceRecord{TKey, TValue}"/> and push it to JVM in async mode using <see cref="PushRecordAsync(SourceRecord)"/>, i.e. without waiting the invocation of <see cref="KNetSourceTask{T}.Poll"/> to return back the list of <see cref="SourceRecord"/>
         /// </summary>
         /// <typeparam name="TKey">The type of the key to be inserted in Kafka</typeparam>
         /// <typeparam name="TValue">The type of value to be inserted in Kafka</typeparam>
@@ -405,7 +405,7 @@ namespace MASES.KNet.Connect
         void CreateAndPushRecord<TKey, TValue>(string topic, int? partition, Schema keySchema, TKey key, Schema valueSchema, TValue value, DateTime timestamp, Headers headers,
                                                Map<Java.Lang.String, object> sourcePartition = null, Map<Java.Lang.String, object> sourceOffset = null);
         /// <summary>
-        /// Creates a new <see cref="SourceRecord{TKey, TValue}"/> and push it to JVM in async mode using <see cref="PushRecordAsync(SourceRecord)"/>, i.e. without waiting the invocation of <see cref="Poll"/> to return back the list of <see cref="SourceRecord"/>
+        /// Creates a new <see cref="SourceRecord{TKey, TValue}"/> and push it to JVM in async mode using <see cref="PushRecordAsync(SourceRecord)"/>, i.e. without waiting the invocation of <see cref="KNetSourceTask{T}.Poll"/> to return back the list of <see cref="SourceRecord"/>
         /// </summary>
         /// <typeparam name="TKey">The type of the key to be inserted in Kafka</typeparam>
         /// <typeparam name="TValue">The type of value to be inserted in Kafka</typeparam>
@@ -459,7 +459,7 @@ namespace MASES.KNet.Connect
         void CreateAndPushRecord<TKeySource, TOffset, TKey, TValue>(Map<Java.Lang.String, TKeySource> sourcePartition, Map<Java.Lang.String, TOffset> sourceOffset,
                                                                     string topic, int? partition, Schema valueSchema, TValue value);
         /// <summary>
-        /// Creates a new <see cref="SourceRecord{TKeySource, TOffset, TKey, TValue}"/> and push it to JVM in async mode using <see cref="PushRecordAsync(SourceRecord)"/>, i.e. without waiting the invocation of <see cref="Poll"/> to return back the list of <see cref="SourceRecord"/>
+        /// Creates a new <see cref="SourceRecord{TKeySource, TOffset, TKey, TValue}"/> and push it to JVM in async mode using <see cref="PushRecordAsync(SourceRecord)"/>, i.e. without waiting the invocation of <see cref="KNetSourceTask{T}.Poll"/> to return back the list of <see cref="SourceRecord"/>
         /// </summary>
         /// <typeparam name="TKey">The type of the key to be inserted in Kafka</typeparam>
         /// <typeparam name="TValue">The type of value to be inserted in Kafka</typeparam>
@@ -510,7 +510,7 @@ namespace MASES.KNet.Connect
         void CreateAndPushRecord<TKeySource, TOffset, TKey, TValue>(Map<Java.Lang.String, TKeySource> sourcePartition, Map<Java.Lang.String, TOffset> sourceOffset,
                                                                     string topic, Schema valueSchema, TValue value);
         /// <summary>
-        /// Creates a new <see cref="SourceRecord{TKeySource, TOffset, TKey, TValue}"/> and push it to JVM in async mode using <see cref="PushRecordAsync(SourceRecord)"/>, i.e. without waiting the invocation of <see cref="Poll"/> to return back the list of <see cref="SourceRecord"/>
+        /// Creates a new <see cref="SourceRecord{TKeySource, TOffset, TKey, TValue}"/> and push it to JVM in async mode using <see cref="PushRecordAsync(SourceRecord)"/>, i.e. without waiting the invocation of <see cref="KNetSourceTask{T}.Poll"/> to return back the list of <see cref="SourceRecord"/>
         /// </summary>
         /// <typeparam name="TKey">The type within <see cref="Map{String, TKey}"/> of <paramref name="sourcePartition"/></typeparam>
         /// <typeparam name="TValue">The type of value to be inserted in Kafka</typeparam>
@@ -564,7 +564,7 @@ namespace MASES.KNet.Connect
         void CreateAndPushRecord<TKeySource, TOffset, TKey, TValue>(Map<Java.Lang.String, TKeySource> sourcePartition, Map<Java.Lang.String, TOffset> sourceOffset,
                                                                     string topic, Schema keySchema, TKey key, Schema valueSchema, TValue value);
         /// <summary>
-        /// Creates a new <see cref="SourceRecord{TKeySource, TOffset, TKey, TValue}"/> and push it to JVM in async mode using <see cref="PushRecordAsync(SourceRecord)"/>, i.e. without waiting the invocation of <see cref="Poll"/> to return back the list of <see cref="SourceRecord"/>
+        /// Creates a new <see cref="SourceRecord{TKeySource, TOffset, TKey, TValue}"/> and push it to JVM in async mode using <see cref="PushRecordAsync(SourceRecord)"/>, i.e. without waiting the invocation of <see cref="KNetSourceTask{T}.Poll"/> to return back the list of <see cref="SourceRecord"/>
         /// </summary>
         /// <typeparam name="TKey">The type within <see cref="Map{String, TKey}"/> of <paramref name="sourcePartition"/></typeparam>
         /// <typeparam name="TValue">The type of value to be inserted in Kafka</typeparam>
@@ -622,7 +622,7 @@ namespace MASES.KNet.Connect
         void CreateAndPushRecord<TKeySource, TOffset, TKey, TValue>(Map<Java.Lang.String, TKeySource> sourcePartition, Map<Java.Lang.String, TOffset> sourceOffset,
                                                                     string topic, int? partition, Schema keySchema, TKey key, Schema valueSchema, TValue value);
         /// <summary>
-        /// Creates a new <see cref="SourceRecord{TKeySource, TOffset, TKey, TValue}"/> and push it to JVM in async mode using <see cref="PushRecordAsync(SourceRecord)"/>, i.e. without waiting the invocation of <see cref="Poll"/> to return back the list of <see cref="SourceRecord"/>
+        /// Creates a new <see cref="SourceRecord{TKeySource, TOffset, TKey, TValue}"/> and push it to JVM in async mode using <see cref="PushRecordAsync(SourceRecord)"/>, i.e. without waiting the invocation of <see cref="KNetSourceTask{T}.Poll"/> to return back the list of <see cref="SourceRecord"/>
         /// </summary>
         /// <typeparam name="TKey">The type within <see cref="Map{String, TKey}"/> of <paramref name="sourcePartition"/></typeparam>
         /// <typeparam name="TValue">The type of value to be inserted in Kafka</typeparam>
@@ -675,7 +675,7 @@ namespace MASES.KNet.Connect
         void CreateAndPushRecord<TKeySource, TOffset, TValue>(Map<Java.Lang.String, TKeySource> sourcePartition, Map<Java.Lang.String, TOffset> sourceOffset,
                                                               string topic, Schema valueSchema, TValue value, DateTime timestamp);
         /// <summary>
-        /// Creates a new <see cref="SourceRecord{TKeySource, TOffset, TKey, TValue}"/> and push it to JVM in async mode using <see cref="PushRecordAsync(SourceRecord)"/>, i.e. without waiting the invocation of <see cref="Poll"/> to return back the list of <see cref="SourceRecord"/>
+        /// Creates a new <see cref="SourceRecord{TKeySource, TOffset, TKey, TValue}"/> and push it to JVM in async mode using <see cref="PushRecordAsync(SourceRecord)"/>, i.e. without waiting the invocation of <see cref="KNetSourceTask{T}.Poll"/> to return back the list of <see cref="SourceRecord"/>
         /// </summary>
         /// <typeparam name="TValue">The type of value to be inserted in Kafka</typeparam>
         /// <typeparam name="TKeySource">The type within <see cref="Map{String, TKeySource}"/> of <paramref name="sourcePartition"/></typeparam>
@@ -727,7 +727,7 @@ namespace MASES.KNet.Connect
         void CreateAndPushRecord<TKeySource, TOffset, TValue>(Map<Java.Lang.String, TKeySource> sourcePartition, Map<Java.Lang.String, TOffset> sourceOffset,
                                                               string topic, int? partition, Schema valueSchema, TValue value, DateTime timestamp);
         /// <summary>
-        /// Creates a new <see cref="SourceRecord{TKeySource, TOffset, TKey, TValue}"/> and push it to JVM in async mode using <see cref="PushRecordAsync(SourceRecord)"/>, i.e. without waiting the invocation of <see cref="Poll"/> to return back the list of <see cref="SourceRecord"/>
+        /// Creates a new <see cref="SourceRecord{TKeySource, TOffset, TKey, TValue}"/> and push it to JVM in async mode using <see cref="PushRecordAsync(SourceRecord)"/>, i.e. without waiting the invocation of <see cref="KNetSourceTask{T}.Poll"/> to return back the list of <see cref="SourceRecord"/>
         /// </summary>
         /// <typeparam name="TValue">The type of value to be inserted in Kafka</typeparam>
         /// <typeparam name="TKeySource">The type within <see cref="Map{String, TKeySource}"/> of <paramref name="sourcePartition"/></typeparam>
@@ -792,7 +792,7 @@ namespace MASES.KNet.Connect
                                                                     Schema valueSchema, TValue value,
                                                                     DateTime timestamp);
         /// <summary>
-        /// Creates a new <see cref="SourceRecord{TKeySource, TOffset, TKey, TValue}"/> and push it to JVM in async mode using <see cref="PushRecordAsync(SourceRecord)"/>, i.e. without waiting the invocation of <see cref="Poll"/> to return back the list of <see cref="SourceRecord"/>
+        /// Creates a new <see cref="SourceRecord{TKeySource, TOffset, TKey, TValue}"/> and push it to JVM in async mode using <see cref="PushRecordAsync(SourceRecord)"/>, i.e. without waiting the invocation of <see cref="KNetSourceTask{T}.Poll"/> to return back the list of <see cref="SourceRecord"/>
         /// </summary>
         /// <typeparam name="TKey">The type within <see cref="Map{String, TKey}"/> of <paramref name="sourcePartition"/></typeparam>
         /// <typeparam name="TValue">The type of value to be inserted in Kafka</typeparam>
@@ -865,7 +865,7 @@ namespace MASES.KNet.Connect
                                                                     Schema valueSchema, TValue value,
                                                                     DateTime timestamp, Headers headers);
         /// <summary>
-        /// Creates a new <see cref="SourceRecord{TKeySource, TOffset, TKey, TValue}"/> and push it to JVM in async mode using <see cref="PushRecordAsync(SourceRecord)"/>, i.e. without waiting the invocation of <see cref="Poll"/> to return back the list of <see cref="SourceRecord"/>
+        /// Creates a new <see cref="SourceRecord{TKeySource, TOffset, TKey, TValue}"/> and push it to JVM in async mode using <see cref="PushRecordAsync(SourceRecord)"/>, i.e. without waiting the invocation of <see cref="KNetSourceTask{T}.Poll"/> to return back the list of <see cref="SourceRecord"/>
         /// </summary>
         /// <typeparam name="TKey">The type within <see cref="Map{String, TKey}"/> of <paramref name="sourcePartition"/></typeparam>
         /// <typeparam name="TValue">The type of value to be inserted in Kafka</typeparam>

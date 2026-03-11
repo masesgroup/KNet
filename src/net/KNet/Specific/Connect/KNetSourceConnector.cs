@@ -112,7 +112,7 @@ namespace MASES.KNet.Connect
         /// <returns>whether this method has been overridden by the connector; the default implementation returns <see langword="false"/>, and all other implementations (that do not unconditionally throw exceptions) should return <see langword="true"/></returns>
         /// <remarks>User requests to alter/reset offsets will be handled by the Connect runtime and will be reflected in the offsets returned by any OffsetStorageReader instances provided to this connector and its tasks.
         /// Note that altering/resetting offsets is expected to be an idempotent operation and this method should be able to handle being called more than once with the same arguments (which could occur if a user retries the request due to a failure in writing the new offsets to the offsets store, for example).
-        /// Similar to validate, this method may be called by the runtime before the <see cref="KNetConnector.Start(System.Collections.Generic.IReadOnlyDictionary{string, string})"/>> method is invoked.</remarks>
+        /// Similar to validate, this method may be called by the runtime before the <see cref="KNetConnector.Start(IKNetCommonConfiguration)"/>> method is invoked.</remarks>
         public virtual bool AlterOffsets(Map<Java.Lang.String, Java.Lang.String> connectorConfig, Map<Map<Java.Lang.String, object>, Map<Java.Lang.String, object>> offsets)
         {
             return false;

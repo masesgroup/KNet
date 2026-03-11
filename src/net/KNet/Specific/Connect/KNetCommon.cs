@@ -18,18 +18,273 @@
 
 using Java.Lang;
 using Java.Util;
+using Javax.Swing;
 using MASES.JCOBridge.C2JBridge;
 using MASES.JCOBridge.C2JBridge.JVMInterop;
 using MASES.JNet.Specific.Extensions;
+using MASES.KNet.Connect.Transforms;
 using Org.Apache.Kafka.Common.Config;
+using Org.Apache.Kafka.Common.Config.Types;
 using Org.Apache.Kafka.Connect.Connector;
 using System;
+using System.Collections;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Xml;
 
 namespace MASES.KNet.Connect
 {
+    #region IKNetCommonConfiguration
+    /// <summary>
+    /// Interface to simplify access configuration information
+    /// </summary>
+    public interface IKNetCommonConfiguration : IEnumerable<KeyValuePair<string, object>>
+    {
+        /// <summary>
+        /// Returns <see langword="true"/> if the <paramref name="key"/> exist
+        /// </summary>
+        /// <param name="key">The key to check</param>
+        /// <returns><see langword="short"/> if the <paramref name="key"/> exist</returns>
+        bool Exist(string key);
+        /// <summary>
+        /// Returns <see langword="short"/> associated to <paramref name="key"/>
+        /// </summary>
+        /// <param name="key">The key to return</param>
+        /// <returns>The <see langword="short"/> associated to <paramref name="key"/></returns>
+        short GetShort(string key);
+        /// <summary>
+        /// Returns <see langword="int"/> associated to <paramref name="key"/>
+        /// </summary>
+        /// <param name="key">The key to return</param>
+        /// <returns>The <see langword="int"/> associated to <paramref name="key"/></returns>
+        int GetInt(string key);
+        /// <summary>
+        /// Returns <see langword="long"/> associated to <paramref name="key"/>
+        /// </summary>
+        /// <param name="key">The key to return</param>
+        /// <returns>The <see langword="long"/> associated to <paramref name="key"/></returns>
+        long GetLong(string key);
+        /// <summary>
+        /// Returns <see langword="double"/> associated to <paramref name="key"/>
+        /// </summary>
+        /// <param name="key">The key to return</param>
+        /// <returns>The <see langword="double"/> associated to <paramref name="key"/></returns>
+        double GetDouble(string key);
+        /// <summary>
+        /// Returns <see cref="System.Collections.Generic.List{T}"/> of <see langword="string"/> associated to <paramref name="key"/>
+        /// </summary>
+        /// <param name="key">The key to return</param>
+        /// <returns>The <see cref="System.Collections.Generic.List{T}"/> of <see langword="string"/> associated to <paramref name="key"/></returns>
+        System.Collections.Generic.List<string> GetList(string key);
+        /// <summary>
+        /// Returns <see langword="bool"/> associated to <paramref name="key"/>
+        /// </summary>
+        /// <param name="key">The key to return</param>
+        /// <returns>The <see langword="bool"/> associated to <paramref name="key"/></returns>
+        bool GetBoolean(string key);
+        /// <summary>
+        /// Returns <see langword="string"/> associated to <paramref name="key"/>
+        /// </summary>
+        /// <param name="key">The key to return</param>
+        /// <returns>The <see langword="string"/> associated to <paramref name="key"/></returns>
+        string GetString(string key);
+        /// <summary>
+        /// Returns <see cref="Password"/> associated to <paramref name="key"/>
+        /// </summary>
+        /// <param name="key">The key to return</param>
+        /// <returns>The <see cref="Password"/> associated to <paramref name="key"/></returns>
+        Password GetPassword(string key);
+        /// <summary>
+        /// Returns <see cref="Class"/> associated to <paramref name="key"/>
+        /// </summary>
+        /// <param name="key">The key to return</param>
+        /// <returns>The <see cref="Class"/> associated to <paramref name="key"/></returns>
+        Class GetClass(string key);
+    }
+
+    #endregion
+
+    #region KNetCommonConfiguration
+    /// <summary>
+    /// Interface to simplify access configuration information
+    /// </summary>
+    class KNetCommonConfiguration : IKNetCommonConfiguration
+    {
+        Map<Java.Lang.String, object> _configuration;
+        public KNetCommonConfiguration(Map<Java.Lang.String, object> configuration)
+        {
+            _configuration = configuration;
+        }
+
+        object GetValue(string key)
+        {
+            if (_configuration.ContainsKey(key))
+            {
+                return _configuration.Get(key);
+            }
+            throw new InvalidOperationException($"Configuration key \"{key}\" is not available.");
+        }
+
+        /// <inheritdoc/>
+        public bool Exist(string key)
+        {
+            return _configuration.ContainsKey(key);
+        }
+        /// <inheritdoc/>
+        public short GetShort(string key)
+        {
+            var result = GetValue(key);
+
+            if (result is short data)
+            {
+                return data;
+            }
+            else if (result is IJavaObject obj)
+            {
+                return obj.Convert<short>();
+            }
+            else throw new InvalidCastException($"Key \"{key}\" returns a value {(result ?? "null")} cannot be converted in short");
+        }
+        /// <inheritdoc/>
+        public int GetInt(string key)
+        {
+            var result = GetValue(key);
+
+            if (result is int data)
+            {
+                return data;
+            }
+            else if (result is IJavaObject obj)
+            {
+                return obj.Convert<int>();
+            }
+            else throw new InvalidCastException($"Key \"{key}\" returns a value {(result ?? "null")} cannot be converted in int");
+        }
+        /// <inheritdoc/>
+        public long GetLong(string key)
+        {
+            var result = GetValue(key);
+
+            if (result is long data)
+            {
+                return data;
+            }
+            else if (result is IJavaObject obj)
+            {
+                return obj.Convert<long>();
+            }
+            else throw new InvalidCastException($"Key \"{key}\" returns a value {(result ?? "null")} cannot be converted in long");
+        }
+        /// <inheritdoc/>
+        public double GetDouble(string key)
+        {
+            var result = GetValue(key);
+
+            if (result is double data)
+            {
+                return data;
+            }
+            else if (result is IJavaObject obj)
+            {
+                return obj.Convert<double>();
+            }
+            else throw new InvalidCastException($"Key \"{key}\" returns a value {(result ?? "null")} cannot be converted in double");
+        }
+        /// <inheritdoc/>
+        public System.Collections.Generic.List<string> GetList(string key)
+        {
+            var result = GetValue(key);
+
+            if (result is IJavaObject obj)
+            {
+                var lst = JVMBridgeBase.WrapsDirect<Java.Util.List<Java.Lang.String>>(obj);
+                System.Collections.Generic.List<string> newLst = new System.Collections.Generic.List<string>();
+                foreach (var item in lst)
+                {
+                    newLst.Add(item);
+                }
+                return newLst;
+            }
+            else throw new InvalidCastException($"Key \"{key}\" returns a value {(result ?? "null")} cannot be converted in short");
+        }
+        /// <inheritdoc/>
+        public bool GetBoolean(string key)
+        {
+            var result = GetValue(key);
+
+            if (result is bool data)
+            {
+                return data;
+            }
+            else if (result is IJavaObject obj)
+            {
+                return obj.Convert<bool>();
+            }
+            else throw new InvalidCastException($"Key \"{key}\" returns a value {(result ?? "null")} cannot be converted in bool");
+        }
+        /// <inheritdoc/>
+        public string GetString(string key)
+        {
+            var result = GetValue(key);
+
+            if (result is string data)
+            {
+                return data;
+            }
+            else if (result is IJavaObject obj)
+            {
+                return obj.Convert<string>();
+            }
+            else throw new InvalidCastException($"Key \"{key}\" returns a value {(result ?? "null")} cannot be converted in string");
+        }
+        /// <inheritdoc/>
+        public Password GetPassword(string key)
+        {
+            var result = GetValue(key);
+
+            if (result is Password data)
+            {
+                return data;
+            }
+            else if (result is IJavaObject obj)
+            {
+                return JVMBridgeBase.WrapsDirect<Password>(obj);
+            }
+            else throw new InvalidCastException($"Key \"{key}\" returns a value {(result ?? "null")} cannot be converted in Password");
+        }
+        /// <inheritdoc/>
+        public Class GetClass(string key)
+        {
+            var result = GetValue(key);
+
+            if (result is Class data)
+            {
+                return data;
+            }
+            else if (result is IJavaObject obj)
+            {
+                return JVMBridgeBase.WrapsDirect<Class>(obj);
+            }
+            else throw new InvalidCastException($"Key \"{key}\" returns a value {(result ?? "null")} cannot be converted in Class");
+        }
+        /// <inheritdoc/>
+        public IEnumerator<KeyValuePair<string, object>> GetEnumerator()
+        {
+            foreach (var item in _configuration.EntrySet())
+            {
+                yield return new KeyValuePair<string, object>(item.Key, item.Value);
+            }
+        }
+        /// <inheritdoc/>
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return GetEnumerator();
+        }
+    }
+
+    #endregion
+
+
     #region IKNetCommon
     /// <summary>
     /// Helper interface for <see cref="KNetCommon"/>
@@ -37,15 +292,18 @@ namespace MASES.KNet.Connect
     public interface IKNetCommon : IKNetConnectLogging
     {
         /// <summary>
+        /// The properties received during configuration step
+        /// </summary>
+        IKNetCommonConfiguration Properties { get; }
+        /// <summary>
         /// An helper function to execute operation in the Java side
         /// </summary>
         /// <param name="method">Method name to be invoked</param>
         /// <param name="args">Arguments of the <paramref name="method"/> to be invoked</param>
         /// <exception cref="InvalidOperationException"> </exception>
         void ExecuteOnRemote(string method, params object[] args);
-
         /// <summary>
-        /// An helper function to read the data from Java side
+        /// An helper function to operation in the Java side
         /// </summary>
         /// <typeparam name="T">The expected return <see cref="Type"/></typeparam>
         /// <param name="method">Method name to be invoked</param>
@@ -91,11 +349,11 @@ namespace MASES.KNet.Connect
         protected string UniqueId => _uniqueId != null ? _uniqueId : ReflectedRemoteObjectClassName;
 
         /// <summary>
-        /// An helper function to execute operation in the Java side
+        /// The properties received during configuration step
         /// </summary>
-        /// <param name="method">Method name to be invoked</param>
-        /// <param name="args">Arguments of the <paramref name="method"/> to be invoked</param>
-        /// <exception cref="InvalidOperationException"> </exception>
+        public IKNetCommonConfiguration Properties { get; protected set; }
+
+        /// <inheritdoc/>
         public void ExecuteOnRemote(string method, params object[] args)
         {
             reflectedConnectorOrTask ??= KNetConnectProxy.GetJVMGlobal(UniqueId);
@@ -103,18 +361,11 @@ namespace MASES.KNet.Connect
             else throw new InvalidOperationException($"{UniqueId} was not registered in global JVM");
         }
 
-        /// <summary>
-        /// An helper function to read the data from Java side
-        /// </summary>
-        /// <typeparam name="T">The expected return <see cref="Type"/></typeparam>
-        /// <param name="method">Method name to be invoked</param>
-        /// <param name="args">Arguments of the <paramref name="method"/> to be invoked</param>
-        /// <returns>The <typeparamref name="T"/></returns>
-        /// <exception cref="InvalidOperationException"> </exception>
+        /// <inheritdoc/>
         public T ExecuteOnRemote<T>(string method, params object[] args)
         {
             reflectedConnectorOrTask ??= KNetConnectProxy.GetJVMGlobal(UniqueId);
-            return (reflectedConnectorOrTask != null) ? reflectedConnectorOrTask.Invoke<T>(method, args) 
+            return (reflectedConnectorOrTask != null) ? reflectedConnectorOrTask.Invoke<T>(method, args)
                                                       : throw new InvalidOperationException($"{UniqueId} was not registered in global JVM");
         }
 
