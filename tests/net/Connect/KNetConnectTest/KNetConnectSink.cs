@@ -24,7 +24,7 @@ namespace MASES.KNet.Connect.Test
 {
     public class KNetSinkTestConnector : KNetSinkConnector<KNetSinkTestConnector, KNetSinkTestTask>
     {
-        public override void Start(IReadOnlyDictionary<string, string> props)
+        public override void Start(IKNetCommonConfiguration props)
         {
             LogInfo($"KNetSinkTestConnector Start");
         }
@@ -41,7 +41,7 @@ namespace MASES.KNet.Connect.Test
             foreach (var item in Properties)
             {
                 LogInfo($"{item.Key}={item.Value}");
-                config.Add(item); // fill in all properties
+                config.Add(item.Key, item.Value?.ToString()); // fill in all properties
             }
 
             return false;
@@ -60,7 +60,7 @@ namespace MASES.KNet.Connect.Test
             }
         }
 
-        public override void Start(IReadOnlyDictionary<string, string> props)
+        public override void Start(IKNetCommonConfiguration props)
         {
             LogInfo($"KNetSinkTestTask start");
             foreach (var item in props)

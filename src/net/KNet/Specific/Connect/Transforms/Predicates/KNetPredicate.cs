@@ -84,7 +84,7 @@ namespace MASES.KNet.Connect.Transforms.Predicates
         /// <summary>
         /// Implement the method to execute the start action
         /// </summary>
-        /// <param name="configuration">The <see cref="IKNetCommonConfiguration"/> to access the properties returned from Apache Kafka Connect framework: the <see cref="Properties"/> contains the same info from configuration file.</param>
+        /// <param name="configuration">The <see cref="IKNetCommonConfiguration"/> to access the properties returned from Apache Kafka Connect framework: the <see cref="IKNetCommon.Properties"/> contains the same info from configuration file.</param>
         void Configure(IKNetCommonConfiguration configuration);
     }
     /// <summary>
@@ -105,7 +105,7 @@ namespace MASES.KNet.Connect.Transforms.Predicates
             var record = DataToExchange<ConnectRecord>();
             return Test(record);
         }
-        
+
         /// <inheritdoc cref="IPredicate.Test(ConnectRecord)"/>
         public virtual bool Test(ConnectRecord record)
         {
@@ -155,11 +155,6 @@ namespace MASES.KNet.Connect.Transforms.Predicates
         {
             Map<Java.Lang.String, object> props = DataToExchange<Map<Java.Lang.String, object>>();
             Configure(props);
-            var dict = new System.Collections.Generic.Dictionary<string, object>();
-            foreach (var item in props.EntrySet())
-            {
-                dict.Add(item.Key, item.Value);
-            }
             Properties = new KNetCommonConfiguration(props);
             Configure(Properties);
         }

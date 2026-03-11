@@ -92,14 +92,14 @@ namespace MASES.KNet.Connect
         /// <summary>
         /// Implement the method to execute the start action
         /// </summary>
-        /// <param name="configuration">The <see cref="IKNetCommonConfiguration"/> to access the properties returned from Apache Kafka Connect framework: the <see cref="Properties"/> contains the same info from configuration file.</param>
+        /// <param name="configuration">The <see cref="IKNetCommonConfiguration"/> to access the properties returned from Apache Kafka Connect framework: the <see cref="IKNetCommon.Properties"/> contains the same info from configuration file.</param>
         void Start(IKNetCommonConfiguration configuration);
         /// <summary>
         /// Invoked during allocation of tasks from Apache Kafka Connect
         /// </summary>
         /// <param name="currentTask">The actual task index</param>
         /// <param name="maxTasks">Max tasks as defined from Apache Kafka Connect framework</param>
-        /// <param name="config">The <see cref="IDictionary{TKey, TValue}"/> to be filled in with properties for the task: the same will be received from <see cref="KNetTask.Start(IReadOnlyDictionary{string, string})"/></param>
+        /// <param name="config">The <see cref="IDictionary{TKey, TValue}"/> to be filled in with properties for the task: the same will be received from <see cref="KNetTask.Start(IKNetCommonConfiguration)"/></param>
         /// <returns><see langword="true"/> to avoid any further invocation of the method, otherwise <see langword="false"/>.</returns>
         /// <remarks>If the connector needs a single task and <paramref name="maxTasks"/> is higher than 1, returning <see langword="true"/> immediately only one configuration is returned to Apache Kafka Connect framework. 
         /// In other word it is possible to stop the configuration requests at any time; only the first one is reported in any case since at least one shall be available.
@@ -168,11 +168,6 @@ namespace MASES.KNet.Connect
         {
             Map<Java.Lang.String, object> props = DataToExchange<Map<Java.Lang.String, object>>();
             Start(props);
-            var dict = new System.Collections.Generic.Dictionary<string, object>();
-            foreach (var item in props.EntrySet())
-            {
-                dict.Add(item.Key, item.Value);
-            }
             Properties = new KNetCommonConfiguration(props);
             Start(Properties);
         }

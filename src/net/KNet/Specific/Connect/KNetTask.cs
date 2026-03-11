@@ -57,10 +57,6 @@ namespace MASES.KNet.Connect
     public interface IKNetTask : ITask, IKNetCommon
     {
         /// <summary>
-        /// The properties retrieved from <see cref="KNetTask.StartInternal"/>
-        /// </summary>
-        IReadOnlyDictionary<string, string> Properties { get; }
-        /// <summary>
         /// The associated <see cref="IConnector"/>
         /// </summary>
         IKNetConnector Connector { get; }
@@ -71,8 +67,8 @@ namespace MASES.KNet.Connect
         /// <summary>
         /// Implement the method to execute the start action
         /// </summary>
-        /// <param name="props">The set of properties returned from Apache Kafka Connect framework: the <see cref="IReadOnlyDictionary{TKey, TValue}"/> contains the info from <see cref="KNetConnector.TaskConfigs(int, int, IDictionary{string, string})"/>.</param>
-        void Start(IReadOnlyDictionary<string, string> props);
+        /// <param name="props">The <see cref="IKNetCommonConfiguration"/> to access the properties returned from Apache Kafka Connect framework: the <see cref="IKNetCommon.Properties"/> contains the info from <see cref="KNetConnector.TaskConfigs(int, int, IDictionary{string, string})"/>.</param>
+        void Start(IKNetCommonConfiguration props);
     }
     #endregion
 
@@ -107,8 +103,6 @@ namespace MASES.KNet.Connect
             return ExecuteOnRemote<T>("getContext");
         }
 
-        /// <inheritdoc cref="IKNetTask.Properties"/>
-        public IReadOnlyDictionary<string, string> Properties { get; private set; }
         /// <inheritdoc cref="IKNetTask.Connector"/>
         public IKNetConnector Connector => _connector;
         /// <inheritdoc cref="IKNetTask.TaskId"/>
@@ -124,7 +118,7 @@ namespace MASES.KNet.Connect
         public void StartInternal()
         {
             Map<Java.Lang.String, Java.Lang.String> props = DataToExchange<Map<Java.Lang.String, Java.Lang.String>>();
-            Properties = new System.Collections.Generic.Dictionary<string, string>(props.ToNetDictiony<string, string, Java.Lang.String, Java.Lang.String>());
+            Properties = new KNetCommonConfiguration(props);
             Start(Properties);
         }
         /// <summary>
@@ -133,8 +127,8 @@ namespace MASES.KNet.Connect
         /// <exception cref="NotImplementedException">Local version with a different signature</exception>
         public void Start(Map<Java.Lang.String, Java.Lang.String> props) => throw new NotImplementedException("Local version with a different signature");
 
-        /// <inheritdoc cref="IKNetTask.Start(IReadOnlyDictionary{string, string})"/>
-        public abstract void Start(IReadOnlyDictionary<string, string> props);
+        /// <inheritdoc cref="IKNetTask.Start(IKNetCommonConfiguration)"/>
+        public abstract void Start(IKNetCommonConfiguration props);
         /// <summary>
         /// Public method used from Java to trigger <see cref="Stop"/>
         /// </summary>

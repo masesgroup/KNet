@@ -7,7 +7,7 @@ namespace MASES.KNet.Template.KNetConnect
 {
     public class KNetConnectSink : KNetSinkConnector<KNetConnectSink, KNetConnectSinkTask>
     {
-        public override void Start(IReadOnlyDictionary<string, string> props)
+        public override void Start(IKNetCommonConfiguration props)
         {
             LogInfo($"KNetConnectSink Start");
             // starts the connector, the method receives the configuration properties
@@ -26,7 +26,7 @@ namespace MASES.KNet.Template.KNetConnect
             foreach (var item in Properties)
             {
                 LogInfo($"{item.Key}={item.Value}");
-                config.Add(item); // fill in all properties
+                config.Add(item.Key, item.Value?.ToString()); // fill in all properties
             }
             return false;
         }
@@ -45,7 +45,7 @@ namespace MASES.KNet.Template.KNetConnect
             }
         }
 
-        public override void Start(IReadOnlyDictionary<string, string> props)
+        public override void Start(IKNetCommonConfiguration props)
         {
             // starts the task with the configuration set from connector
             LogInfo($"KNetConnectSinkTask start");

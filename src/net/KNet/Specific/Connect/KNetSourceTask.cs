@@ -41,7 +41,7 @@ namespace MASES.KNet.Connect
         void PushRecordAsync(SourceRecord record);
 
         /// <summary>
-        /// Implement the method to declare if out-of-sync feature will be used: it will be set once within <see cref="KNetSourceTask{TTask}"/> invocation of <see cref="KNetTask.Start(System.Collections.Generic.IReadOnlyDictionary{string, string})"/>
+        /// Implement the method to declare if out-of-sync feature will be used: it will be set once within <see cref="KNetSourceTask{TTask}"/> invocation of <see cref="KNetTask.Start(IKNetCommonConfiguration)"/>
         /// </summary>
         /// <returns>Returning <see langword="true"/> will use the out-of-sync feature, otherwise returning <see langword="false"/> the feature is disabled which is the default behavior.</returns>
         /// <remarks>Be aware that returning <see langword="true"/> from this method will be mutually exclusive between the usage of <see cref="PushRecordAsync(SourceRecord)"/> and invocation of <see cref="KNetSourceTask{TTask}.Poll"/></remarks>

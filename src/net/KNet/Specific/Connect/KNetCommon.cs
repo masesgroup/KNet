@@ -110,17 +110,27 @@ namespace MASES.KNet.Connect
     /// </summary>
     class KNetCommonConfiguration : IKNetCommonConfiguration
     {
-        Map<Java.Lang.String, object> _configuration;
+        readonly Map<Java.Lang.String, object> _configuration;
+        readonly Map<Java.Lang.String, Java.Lang.String> _configuration1;
         public KNetCommonConfiguration(Map<Java.Lang.String, object> configuration)
         {
             _configuration = configuration;
         }
 
+        public KNetCommonConfiguration(Map<Java.Lang.String, Java.Lang.String> configuration)
+        {
+            _configuration1 = configuration;
+        }
+
         object GetValue(string key)
         {
-            if (_configuration.ContainsKey(key))
+            if (_configuration != null && _configuration.ContainsKey(key))
             {
                 return _configuration.Get(key);
+            }
+            else if (_configuration1 != null)
+            {
+                throw new InvalidOperationException($"Only string values can be read.");
             }
             throw new InvalidOperationException($"Configuration key \"{key}\" is not available.");
         }
@@ -128,7 +138,7 @@ namespace MASES.KNet.Connect
         /// <inheritdoc/>
         public bool Exist(string key)
         {
-            return _configuration.ContainsKey(key);
+            return _configuration.ContainsKey(key) || _configuration1.ContainsKey(key);
         }
         /// <inheritdoc/>
         public short GetShort(string key)
@@ -225,6 +235,15 @@ namespace MASES.KNet.Connect
         /// <inheritdoc/>
         public string GetString(string key)
         {
+            if (_configuration1 != null)
+            {
+                if (_configuration1.ContainsKey(key))
+                {
+                    return _configuration1.Get(key);
+                }
+                throw new InvalidOperationException($"Configuration key \"{key}\" is not available.");
+            }
+
             var result = GetValue(key);
 
             if (result is string data)
@@ -270,10 +289,21 @@ namespace MASES.KNet.Connect
         /// <inheritdoc/>
         public IEnumerator<KeyValuePair<string, object>> GetEnumerator()
         {
-            foreach (var item in _configuration.EntrySet())
+            if (_configuration != null)
             {
-                yield return new KeyValuePair<string, object>(item.Key, item.Value);
+                foreach (var item in _configuration.EntrySet())
+                {
+                    yield return new KeyValuePair<string, object>(item.Key, item.Value);
+                }
             }
+            else if (_configuration1 != null)
+            {
+                foreach (var item in _configuration1.EntrySet())
+                {
+                    yield return new KeyValuePair<string, object>(item.Key, item.Value);
+                }
+            }
+            else throw new InvalidOperationException("Unable to execute enumeration.");
         }
         /// <inheritdoc/>
         IEnumerator IEnumerable.GetEnumerator()
@@ -283,7 +313,6 @@ namespace MASES.KNet.Connect
     }
 
     #endregion
-
 
     #region IKNetCommon
     /// <summary>
