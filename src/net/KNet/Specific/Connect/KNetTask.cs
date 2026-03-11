@@ -85,7 +85,7 @@ namespace MASES.KNet.Connect
     /// </summary>
     class KNetTaskConfiguration : IKNetTaskConfiguration
     {
-        System.Collections.Generic.IDictionary<string, string> _dict;
+        readonly System.Collections.Generic.IDictionary<string, string> _dict;
 
         public KNetTaskConfiguration(System.Collections.Generic.IDictionary<string, string> dict)
         {
