@@ -34,11 +34,11 @@ using System.Xml;
 
 namespace MASES.KNet.Connect
 {
-    #region IKNetCommonConfiguration
+    #region IKNetConnectConfiguration
     /// <summary>
     /// Interface to simplify access configuration information
     /// </summary>
-    public interface IKNetCommonConfiguration : IEnumerable<KeyValuePair<string, object>>
+    public interface IKNetConnectConfiguration : IEnumerable<KeyValuePair<string, object>>
     {
         /// <summary>
         /// Returns <see langword="true"/> if the <paramref name="key"/> exist
@@ -104,20 +104,20 @@ namespace MASES.KNet.Connect
 
     #endregion
 
-    #region KNetCommonConfiguration
+    #region KNetConnectConfiguration
     /// <summary>
     /// Interface to simplify access configuration information
     /// </summary>
-    class KNetCommonConfiguration : IKNetCommonConfiguration
+    class KNetConnectConfiguration : IKNetConnectConfiguration
     {
         readonly Map<Java.Lang.String, object> _configuration;
         readonly Map<Java.Lang.String, Java.Lang.String> _configuration1;
-        public KNetCommonConfiguration(Map<Java.Lang.String, object> configuration)
+        public KNetConnectConfiguration(Map<Java.Lang.String, object> configuration)
         {
             _configuration = configuration;
         }
 
-        public KNetCommonConfiguration(Map<Java.Lang.String, Java.Lang.String> configuration)
+        public KNetConnectConfiguration(Map<Java.Lang.String, Java.Lang.String> configuration)
         {
             _configuration1 = configuration;
         }
@@ -143,6 +143,17 @@ namespace MASES.KNet.Connect
         /// <inheritdoc/>
         public short GetShort(string key)
         {
+            if (_configuration1 != null)
+            {
+                if (_configuration1.ContainsKey(key))
+                {
+                    var value = _configuration1.Get(key);
+                    return short.TryParse(value, out var converted) ? converted
+                                                                    : throw new InvalidCastException($"Key \"{key}\" returns a value {value} cannot be converted in short"); ;
+                }
+                throw new InvalidOperationException($"Configuration key \"{key}\" is not available.");
+            }
+
             var result = GetValue(key);
 
             if (result is short data)
@@ -158,6 +169,17 @@ namespace MASES.KNet.Connect
         /// <inheritdoc/>
         public int GetInt(string key)
         {
+            if (_configuration1 != null)
+            {
+                if (_configuration1.ContainsKey(key))
+                {
+                    var value = _configuration1.Get(key);
+                    return int.TryParse(value, out var converted) ? converted
+                                                                  : throw new InvalidCastException($"Key \"{key}\" returns a value {value} cannot be converted in int"); ;
+                }
+                throw new InvalidOperationException($"Configuration key \"{key}\" is not available.");
+            }
+
             var result = GetValue(key);
 
             if (result is int data)
@@ -173,6 +195,17 @@ namespace MASES.KNet.Connect
         /// <inheritdoc/>
         public long GetLong(string key)
         {
+            if (_configuration1 != null)
+            {
+                if (_configuration1.ContainsKey(key))
+                {
+                    var value = _configuration1.Get(key);
+                    return long.TryParse(value, out var converted) ? converted
+                                                                   : throw new InvalidCastException($"Key \"{key}\" returns a value {value} cannot be converted in long"); ;
+                }
+                throw new InvalidOperationException($"Configuration key \"{key}\" is not available.");
+            }
+
             var result = GetValue(key);
 
             if (result is long data)
@@ -188,6 +221,17 @@ namespace MASES.KNet.Connect
         /// <inheritdoc/>
         public double GetDouble(string key)
         {
+            if (_configuration1 != null)
+            {
+                if (_configuration1.ContainsKey(key))
+                {
+                    var value = _configuration1.Get(key);
+                    return double.TryParse(value, out var converted) ? converted
+                                                                     : throw new InvalidCastException($"Key \"{key}\" returns a value {value} cannot be converted in double"); ;
+                }
+                throw new InvalidOperationException($"Configuration key \"{key}\" is not available.");
+            }
+
             var result = GetValue(key);
 
             if (result is double data)
@@ -203,6 +247,11 @@ namespace MASES.KNet.Connect
         /// <inheritdoc/>
         public System.Collections.Generic.List<string> GetList(string key)
         {
+            if (_configuration1 != null)
+            {
+                throw new InvalidOperationException($"Cannot manage configuration key \"{key}\" as List.");
+            }
+
             var result = GetValue(key);
 
             if (result is IJavaObject obj)
@@ -220,6 +269,17 @@ namespace MASES.KNet.Connect
         /// <inheritdoc/>
         public bool GetBoolean(string key)
         {
+            if (_configuration1 != null)
+            {
+                if (_configuration1.ContainsKey(key))
+                {
+                    var value = _configuration1.Get(key);
+                    return bool.TryParse(value, out var converted) ? converted
+                                                                   : throw new InvalidCastException($"Key \"{key}\" returns a value {value} cannot be converted in bool"); ;
+                }
+                throw new InvalidOperationException($"Configuration key \"{key}\" is not available.");
+            }
+
             var result = GetValue(key);
 
             if (result is bool data)
@@ -259,6 +319,11 @@ namespace MASES.KNet.Connect
         /// <inheritdoc/>
         public Password GetPassword(string key)
         {
+            if (_configuration1 != null)
+            {
+                throw new InvalidOperationException($"Cannot manage configuration key \"{key}\" as Password.");
+            }
+
             var result = GetValue(key);
 
             if (result is Password data)
@@ -274,6 +339,11 @@ namespace MASES.KNet.Connect
         /// <inheritdoc/>
         public Class GetClass(string key)
         {
+            if (_configuration1 != null)
+            {
+                throw new InvalidOperationException($"Cannot manage configuration key \"{key}\" as Class.");
+            }
+
             var result = GetValue(key);
 
             if (result is Class data)
@@ -323,7 +393,7 @@ namespace MASES.KNet.Connect
         /// <summary>
         /// The properties received during configuration step
         /// </summary>
-        IKNetCommonConfiguration Properties { get; }
+        IKNetConnectConfiguration Properties { get; }
         /// <summary>
         /// An helper function to execute operation in the Java side
         /// </summary>
@@ -380,7 +450,7 @@ namespace MASES.KNet.Connect
         /// <summary>
         /// The properties received during configuration step
         /// </summary>
-        public IKNetCommonConfiguration Properties { get; protected set; }
+        public IKNetConnectConfiguration Properties { get; protected set; }
 
         /// <inheritdoc/>
         public void ExecuteOnRemote(string method, params object[] args)

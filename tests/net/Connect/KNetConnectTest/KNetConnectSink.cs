@@ -24,7 +24,7 @@ namespace MASES.KNet.Connect.Test
 {
     public class KNetSinkTestConnector : KNetSinkConnector<KNetSinkTestConnector, KNetSinkTestTask>
     {
-        public override void Start(IKNetCommonConfiguration props)
+        public override void Start(IKNetConnectConfiguration props)
         {
             LogInfo($"KNetSinkTestConnector Start");
         }
@@ -34,7 +34,7 @@ namespace MASES.KNet.Connect.Test
             LogInfo($"KNetSinkTestConnector Stop");
         }
 
-        public override bool TaskConfigs(int index, int maxTasks, IDictionary<string, string> config)
+        public override bool TaskConfigs(int index, int maxTasks, IKNetTaskConfiguration config)
         {
             LogInfo($"Fill in task {index}");
 
@@ -60,7 +60,7 @@ namespace MASES.KNet.Connect.Test
             }
         }
 
-        public override void Start(IKNetCommonConfiguration props)
+        public override void Start(IKNetConnectConfiguration props)
         {
             LogInfo($"KNetSinkTestTask start");
             foreach (var item in props)

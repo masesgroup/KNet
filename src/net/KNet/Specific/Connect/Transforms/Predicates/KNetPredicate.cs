@@ -84,8 +84,8 @@ namespace MASES.KNet.Connect.Transforms.Predicates
         /// <summary>
         /// Implement the method to execute the start action
         /// </summary>
-        /// <param name="configuration">The <see cref="IKNetCommonConfiguration"/> to access the properties returned from Apache Kafka Connect framework: the <see cref="IKNetCommon.Properties"/> contains the same info from configuration file.</param>
-        void Configure(IKNetCommonConfiguration configuration);
+        /// <param name="configuration">The <see cref="IKNetConnectConfiguration"/> to access the properties returned from Apache Kafka Connect framework: the <see cref="IKNetCommon.Properties"/> contains the same info from configuration file.</param>
+        void Configure(IKNetConnectConfiguration configuration);
     }
     /// <summary>
     /// The generic class which is the base of all predicates in .NET
@@ -155,7 +155,7 @@ namespace MASES.KNet.Connect.Transforms.Predicates
         {
             Map<Java.Lang.String, object> props = DataToExchange<Map<Java.Lang.String, object>>();
             Configure(props);
-            Properties = new KNetCommonConfiguration(props);
+            Properties = new KNetConnectConfiguration(props);
             Configure(Properties);
         }
         /// <summary>
@@ -167,8 +167,8 @@ namespace MASES.KNet.Connect.Transforms.Predicates
 
         }
 
-        /// <inheritdoc cref="IKNetPredicate.Configure(IKNetCommonConfiguration)"/>
-        public abstract void Configure(IKNetCommonConfiguration configuration);
+        /// <inheritdoc cref="IKNetPredicate.Configure(IKNetConnectConfiguration)"/>
+        public abstract void Configure(IKNetConnectConfiguration configuration);
 
         /// <summary>
         /// Public method used from Java to trigger <see cref="Close"/>

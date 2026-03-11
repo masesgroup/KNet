@@ -92,19 +92,19 @@ namespace MASES.KNet.Connect
         /// <summary>
         /// Implement the method to execute the start action
         /// </summary>
-        /// <param name="configuration">The <see cref="IKNetCommonConfiguration"/> to access the properties returned from Apache Kafka Connect framework: the <see cref="IKNetCommon.Properties"/> contains the same info from configuration file.</param>
-        void Start(IKNetCommonConfiguration configuration);
+        /// <param name="configuration">The <see cref="IKNetConnectConfiguration"/> to access the properties returned from Apache Kafka Connect framework: the <see cref="IKNetCommon.Properties"/> contains the same info from configuration file.</param>
+        void Start(IKNetConnectConfiguration configuration);
         /// <summary>
         /// Invoked during allocation of tasks from Apache Kafka Connect
         /// </summary>
         /// <param name="currentTask">The actual task index</param>
         /// <param name="maxTasks">Max tasks as defined from Apache Kafka Connect framework</param>
-        /// <param name="config">The <see cref="IDictionary{TKey, TValue}"/> to be filled in with properties for the task: the same will be received from <see cref="KNetTask.Start(IKNetCommonConfiguration)"/></param>
+        /// <param name="config">The <see cref="IKNetTaskConfiguration"/> to be filled in with properties for the task: the same will be received from <see cref="KNetTask.Start(IKNetConnectConfiguration)"/></param>
         /// <returns><see langword="true"/> to avoid any further invocation of the method, otherwise <see langword="false"/>.</returns>
         /// <remarks>If the connector needs a single task and <paramref name="maxTasks"/> is higher than 1, returning <see langword="true"/> immediately only one configuration is returned to Apache Kafka Connect framework. 
         /// In other word it is possible to stop the configuration requests at any time; only the first one is reported in any case since at least one shall be available.
         /// To configure all <paramref name="maxTasks"/> return always <see langword="false"/>.</remarks>
-        bool TaskConfigs(int currentTask, int maxTasks, IDictionary<string, string> config);
+        bool TaskConfigs(int currentTask, int maxTasks, IKNetTaskConfiguration config);
     }
     #endregion
 
@@ -168,7 +168,7 @@ namespace MASES.KNet.Connect
         {
             Map<Java.Lang.String, object> props = DataToExchange<Map<Java.Lang.String, object>>();
             Start(props);
-            Properties = new KNetCommonConfiguration(props);
+            Properties = new KNetConnectConfiguration(props);
             Start(Properties);
         }
         /// <summary>
@@ -180,8 +180,8 @@ namespace MASES.KNet.Connect
 
         }
 
-        /// <inheritdoc cref="IKNetConnector.Start(IKNetCommonConfiguration)"/>
-        public abstract void Start(IKNetCommonConfiguration configuration);
+        /// <inheritdoc cref="IKNetConnector.Start(IKNetConnectConfiguration)"/>
+        public abstract void Start(IKNetConnectConfiguration configuration);
         /// <summary>
         /// Not implemented
         /// </summary>
@@ -193,7 +193,7 @@ namespace MASES.KNet.Connect
         /// <exception cref="NotImplementedException">Invoked in Java before any initialization</exception>
         public Class TaskClass() => throw new NotImplementedException("Invoked in Java before any initialization.");
         /// <summary>
-        /// Public method used from Java to trigger <see cref="TaskConfigs(int, int, IDictionary{string, string})"/>
+        /// Public method used from Java to trigger <see cref="TaskConfigs(int, int, IKNetTaskConfiguration)"/>
         /// </summary>
         [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
         public bool TaskConfigsInternal(int currentTask, int maxTasks)
@@ -202,7 +202,7 @@ namespace MASES.KNet.Connect
             return TaskConfigs(currentTask, maxTasks, props);
         }
         /// <summary>
-        /// Direct implementation can be used instead of <see cref="TaskConfigs(int, int, IDictionary{string, string})"/>
+        /// Direct implementation can be used instead of <see cref="TaskConfigs(int, int, IKNetTaskConfiguration)"/>
         /// </summary>
         /// <param name="currentTask"></param>
         /// <param name="maxTasks"></param>
@@ -210,8 +210,8 @@ namespace MASES.KNet.Connect
         /// <returns></returns>
         public virtual bool TaskConfigs(int currentTask, int maxTasks, Map<Java.Lang.String, Java.Lang.String> props)
         {
-            System.Collections.Generic.Dictionary<string, string> dict = new System.Collections.Generic.Dictionary<string, string>(props.ToNetDictiony<string, string, Java.Lang.String, Java.Lang.String>());
-            bool retVal = TaskConfigs(currentTask, maxTasks, dict);
+            System.Collections.Generic.Dictionary<string, string> dict = new();
+            bool retVal = TaskConfigs(currentTask, maxTasks, new KNetTaskConfiguration(dict));
             props.Clear();
             foreach (var item in dict)
             {
@@ -220,8 +220,8 @@ namespace MASES.KNet.Connect
             return retVal;
         }
 
-        /// <inheritdoc cref="IKNetConnector.TaskConfigs(int, int, IDictionary{string, string})"/>
-        public abstract bool TaskConfigs(int currentTask, int maxTasks, IDictionary<string, string> config);
+        /// <inheritdoc cref="IKNetConnector.TaskConfigs(int, int, IKNetTaskConfiguration)"/>
+        public abstract bool TaskConfigs(int currentTask, int maxTasks, IKNetTaskConfiguration config);
         /// <summary>
         /// Not implemented
         /// </summary>
