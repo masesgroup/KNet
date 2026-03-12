@@ -16,16 +16,124 @@
 *  Refer to LICENSE for more information.
 */
 
+using Java.Lang;
 using Java.Util;
 using MASES.JCOBridge.C2JBridge;
 using MASES.JCOBridge.C2JBridge.JVMInterop;
 using MASES.JNet.Specific.Extensions;
+using Org.Apache.Kafka.Common.Config.Types;
 using Org.Apache.Kafka.Connect.Connector;
 using System;
 using System.Collections.Generic;
 
 namespace MASES.KNet.Connect
 {
+    #region IKNetConnectConfiguration
+    /// <summary>
+    /// Interface to simplify access configuration information
+    /// </summary>
+    public interface IKNetTaskConfiguration
+    {
+        /// <summary>
+        /// Adds <see langword="short"/> associated to <paramref name="key"/>
+        /// </summary>
+        /// <param name="key">The key to return</param>
+        /// <param name="value">The <see langword="short"/> value associated to <paramref name="key"/></param>
+        void Add(string key, short value);
+        /// <summary>
+        /// Adds <see langword="int"/> associated to <paramref name="key"/>
+        /// </summary>
+        /// <param name="key">The key to return</param>
+        /// <param name="value">The <see langword="int"/> value associated to <paramref name="key"/></param>
+        void Add(string key, int value);
+        /// <summary>
+        /// Adds <see langword="long"/> associated to <paramref name="key"/>
+        /// </summary>
+        /// <param name="key">The key to return</param>
+        /// <param name="value">The <see langword="long"/> value associated to <paramref name="key"/></param>
+        void Add(string key, long value);
+        /// <summary>
+        /// Adds <see langword="double"/> associated to <paramref name="key"/>
+        /// </summary>
+        /// <param name="key">The key to return</param>
+        /// <param name="value">The <see langword="double"/> value associated to <paramref name="key"/></param>
+        void Add(string key, double value);
+        /// <summary>
+        /// Adds <see langword="bool"/> associated to <paramref name="key"/>
+        /// </summary>
+        /// <param name="key">The key to return</param>
+        /// <param name="value">The <see langword="bool"/> value associated to <paramref name="key"/></param>
+        void Add(string key, bool value);
+        /// <summary>
+        /// Adds <see langword="string"/> associated to <paramref name="key"/>
+        /// </summary>
+        /// <param name="key">The key to return</param>
+        /// <param name="value">The <see langword="string"/> value associated to <paramref name="key"/></param>
+        void Add(string key, string value);
+        /// <summary>
+        /// Adds all values in <paramref name="values"/>
+        /// </summary>
+        /// <param name="values">The <see cref="IEnumerable{T}"/> containing key-value information</param>
+        void Add(IEnumerable<KeyValuePair<string, object>> values);
+    }
+
+    #endregion
+
+    #region KNetTaskConfiguration
+    /// <summary>
+    /// Interface to simplify access configuration information
+    /// </summary>
+    class KNetTaskConfiguration : IKNetTaskConfiguration
+    {
+        readonly System.Collections.Generic.IDictionary<string, string> _dict;
+
+        public KNetTaskConfiguration(System.Collections.Generic.IDictionary<string, string> dict)
+        {
+            _dict = dict;
+        }
+
+        /// <inheritdoc/>
+        public void Add(string key, short value)
+        {
+            _dict.Add(key, value.ToString());
+        }
+        /// <inheritdoc/>
+        public void Add(string key, int value)
+        {
+            _dict.Add(key, value.ToString());
+        }
+        /// <inheritdoc/>
+        public void Add(string key, long value)
+        {
+            _dict.Add(key, value.ToString());
+        }
+        /// <inheritdoc/>
+        public void Add(string key, double value)
+        {
+            _dict.Add(key, value.ToString());
+        }
+        /// <inheritdoc/>
+        public void Add(string key, bool value)
+        {
+            _dict.Add(key, value.ToString());
+        }
+        /// <inheritdoc/>
+        public void Add(string key, string value)
+        {
+            _dict.Add(key, value);
+        }
+        /// <inheritdoc/>
+        public void Add(IEnumerable<KeyValuePair<string, object>> values)
+        {
+            foreach (var item in values)
+            {
+                _dict.Add(item.Key, item.Value.ToString());
+            }
+        }
+    }
+
+    #endregion
+
     #region ITask
     /// <summary>
     /// Task interface for KNet Connect SDK
@@ -57,10 +165,6 @@ namespace MASES.KNet.Connect
     public interface IKNetTask : ITask, IKNetCommon
     {
         /// <summary>
-        /// The properties retrieved from <see cref="KNetTask.StartInternal"/>
-        /// </summary>
-        IReadOnlyDictionary<string, string> Properties { get; }
-        /// <summary>
         /// The associated <see cref="IConnector"/>
         /// </summary>
         IKNetConnector Connector { get; }
@@ -71,8 +175,8 @@ namespace MASES.KNet.Connect
         /// <summary>
         /// Implement the method to execute the start action
         /// </summary>
-        /// <param name="props">The set of properties returned from Apache Kafka Connect framework: the <see cref="IReadOnlyDictionary{TKey, TValue}"/> contains the info from <see cref="KNetConnector.TaskConfigs(int, IDictionary{string, string})"/>.</param>
-        void Start(IReadOnlyDictionary<string, string> props);
+        /// <param name="props">The <see cref="IKNetConnectConfiguration"/> to access the properties returned from Apache Kafka Connect framework: the <see cref="IKNetCommon.Properties"/> contains the info from <see cref="KNetConnector.TaskConfigs(int, int, IKNetTaskConfiguration)"/>.</param>
+        void Start(IKNetConnectConfiguration props);
     }
     #endregion
 
@@ -107,8 +211,6 @@ namespace MASES.KNet.Connect
             return ExecuteOnRemote<T>("getContext");
         }
 
-        /// <inheritdoc cref="IKNetTask.Properties"/>
-        public IReadOnlyDictionary<string, string> Properties { get; private set; }
         /// <inheritdoc cref="IKNetTask.Connector"/>
         public IKNetConnector Connector => _connector;
         /// <inheritdoc cref="IKNetTask.TaskId"/>
@@ -123,9 +225,17 @@ namespace MASES.KNet.Connect
         [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
         public void StartInternal()
         {
-            Map<Java.Lang.String, Java.Lang.String> props = DataToExchange<Map<Java.Lang.String, Java.Lang.String>>();
-            Properties = new System.Collections.Generic.Dictionary<string, string>(props.ToNetDictiony<string, string, Java.Lang.String, Java.Lang.String>());
-            Start(Properties);
+            try
+            {
+                Map<Java.Lang.String, Java.Lang.String> props = DataToExchange<Map<Java.Lang.String, Java.Lang.String>>();
+                Properties = new KNetConnectConfiguration(props);
+                Start(Properties);
+            }
+            catch (System.Exception e)
+            {
+                LogError($"StartInternal failed with {e}");
+                throw;
+            }
         }
         /// <summary>
         /// Not implemented
@@ -133,16 +243,24 @@ namespace MASES.KNet.Connect
         /// <exception cref="NotImplementedException">Local version with a different signature</exception>
         public void Start(Map<Java.Lang.String, Java.Lang.String> props) => throw new NotImplementedException("Local version with a different signature");
 
-        /// <inheritdoc cref="IKNetTask.Start(IReadOnlyDictionary{string, string})"/>
-        public abstract void Start(IReadOnlyDictionary<string, string> props);
+        /// <inheritdoc cref="IKNetTask.Start(IKNetConnectConfiguration)"/>
+        public abstract void Start(IKNetConnectConfiguration props);
         /// <summary>
         /// Public method used from Java to trigger <see cref="Stop"/>
         /// </summary>
         [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
         public void StopInternal()
         {
-            Stop();
-            _connector.DeallocateTask(_taskId);
+            try
+            {
+                Stop();
+                _connector.DeallocateTask(_taskId);
+            }
+            catch (System.Exception e)
+            {
+                LogError($"StopInternal failed with {e}");
+                throw;
+            }
         }
         /// <summary>
         /// Implement the method to execute the stop action
@@ -154,7 +272,15 @@ namespace MASES.KNet.Connect
         [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
         public object VersionInternal()
         {
-            return Version();
+            try
+            {
+                return Version();
+            }
+            catch (System.Exception e)
+            {
+                LogError($"VersionInternal failed with {e}");
+                throw;
+            }
         }
         /// <summary>
         /// Implement the method to execute the version action
