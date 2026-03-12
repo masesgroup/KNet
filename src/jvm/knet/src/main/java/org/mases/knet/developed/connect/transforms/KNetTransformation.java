@@ -18,6 +18,7 @@
 
 package org.mases.knet.developed.connect.transforms;
 
+import org.apache.kafka.common.config.AbstractConfig;
 import org.apache.kafka.common.config.ConfigDef;
 import org.apache.kafka.connect.errors.ConnectException;
 import org.apache.kafka.connect.components.Versioned;
@@ -153,7 +154,8 @@ public class KNetTransformation<R extends ConnectRecord<R>> implements Transform
             }
             if (transformationObject != null) {
                 try {
-                    dataToExchange = configs;
+                    AbstractConfig config = new AbstractConfig(config(), configs);
+                    dataToExchange = config.values();
                     transformationObject.Invoke("ConfigureInternal");
                 } finally {
                     dataToExchange = null;

@@ -19,6 +19,7 @@
 package org.mases.knet.developed.connect.sink;
 
 import org.apache.kafka.common.TopicPartition;
+import org.apache.kafka.common.config.AbstractConfig;
 import org.apache.kafka.common.config.ConfigDef;
 import org.apache.kafka.connect.connector.Task;
 import org.apache.kafka.connect.errors.ConnectException;
@@ -122,7 +123,8 @@ public class KNetSinkConnector extends SinkConnector implements KNetConnectLoggi
             }
             try {
                 log.debug("Executing StartInternal");
-                dataToExchange = props;
+                AbstractConfig config = new AbstractConfig(config(), props);
+                dataToExchange = config.values();
                 sink.Invoke("StartInternal");
             } finally {
                 dataToExchange = null;
