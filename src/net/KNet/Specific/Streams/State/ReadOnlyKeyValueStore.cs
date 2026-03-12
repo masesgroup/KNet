@@ -33,7 +33,7 @@ namespace MASES.KNet.Streams.State
         /// KNet implementation of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/state/ReadOnlyKeyValueStore.html#approximateNumEntries()"/>
         /// </summary>
         /// <returns><see cref="long"/></returns>
-        public virtual long ApproximateNumEntries => Store.ApproximateNumEntries();
+        public virtual long ApproximateNumEntries() => Store.ApproximateNumEntries();
         /// <summary>
         /// KNet implementation of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/state/ReadOnlyKeyValueStore.html#all()"/>
         /// </summary>
@@ -71,10 +71,18 @@ namespace MASES.KNet.Streams.State
             return _valueSerDes.Deserialize(null, res);
         }
         /// <summary>
+        /// KNet implementation of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/state/ReadOnlyKeyValueStore.html#prefixScan(java.lang.Object,org.apache.kafka.common.serialization.Serializer)"/>
+        /// </summary>
+        /// <returns><see cref="KeyValueIterator{K, V, TJVMK, TJVMV}"/></returns>
+        public KeyValueIterator<K, V, TJVMK, TJVMV> PrefixScan<P, TJVMP>(P arg0, ISerDes<P, TJVMP> arg1) 
+        {
+            return new(Factory, Store.PrefixScan(arg1.Serialize(null, arg0), arg1.KafkaSerializer));
+        }
+        /// <summary>
         /// KNet implementation of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/state/ReadOnlyKeyValueStore.html#reverseAll()"/>
         /// </summary>
         /// <returns><see cref="KeyValueIterator{K, V, TJVMK, TJVMV}"/></returns>
-        public virtual KeyValueIterator<K, V, TJVMK, TJVMV> ReverseAll => new(Factory, Store.ReverseAll());
+        public virtual KeyValueIterator<K, V, TJVMK, TJVMV> ReverseAll() => new(Factory, Store.ReverseAll());
         /// <summary>
         /// KNet implementation of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/state/ReadOnlyKeyValueStore.html#reverseRange(java.lang.Object,java.lang.Object)"/>
         /// </summary>

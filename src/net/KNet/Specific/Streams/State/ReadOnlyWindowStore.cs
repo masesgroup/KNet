@@ -99,7 +99,7 @@ namespace MASES.KNet.Streams.State
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/state/ReadOnlyWindowStore.html#backwardAll()"/>
         /// </summary>
         /// <returns><see cref="WindowedKeyValueIterator{K, V, TJVMK, TJVMV}"/></returns>
-        public virtual WindowedKeyValueIterator<K, V, TJVMK, TJVMV> BackwardAll => new WindowedKeyValueIterator<K, V, TJVMK, TJVMV>(Factory, Store.BackwardAll());
+        public virtual WindowedKeyValueIterator<K, V, TJVMK, TJVMV> BackwardAll() => new WindowedKeyValueIterator<K, V, TJVMK, TJVMV>(Factory, Store.BackwardAll());
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/state/ReadOnlyWindowStore.html#backwardFetch(java.lang.Object,java.lang.Object,java.time.Instant,java.time.Instant)"/>
         /// </summary>
