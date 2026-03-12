@@ -79,14 +79,6 @@ namespace MASES.KNet.Streams.State
             return new(Factory, Store.PrefixScan(arg1.Serialize(null, arg0), arg1.KafkaSerializer));
         }
         /// <summary>
-        /// KNet implementation of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/state/ReadOnlyKeyValueStore.html#prefixScan(java.lang.Object,org.apache.kafka.common.serialization.Serializer)"/>
-        /// </summary>
-        /// <returns><see cref="KeyValueIterator{K, V, TJVMK, TJVMV}"/></returns>
-        public KeyValueIterator<K, V, TJVMK, TJVMV> PrefixScan<P, TJVMP>(P arg0, ISerDes<P, TJVMP> arg1) 
-        {
-            return new(Factory, Store.PrefixScan(arg1.Serialize(null, arg0), arg1.KafkaSerializer));
-        }
-        /// <summary>
         /// KNet implementation of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/state/ReadOnlyKeyValueStore.html#reverseAll()"/>
         /// </summary>
         /// <returns><see cref="KeyValueIterator{K, V, TJVMK, TJVMV}"/></returns>
