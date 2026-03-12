@@ -97,7 +97,15 @@ namespace MASES.KNet.Connect
         [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
         public bool AlterOffsetsInternal(Map<Java.Lang.String, Java.Lang.String> connectorConfig, Map<Map<Java.Lang.String, object>, Map<Java.Lang.String, object>> offsets)
         {
-            return AlterOffsets(connectorConfig, offsets);
+            try
+            {
+                return AlterOffsets(connectorConfig, offsets);
+            }
+            catch (System.Exception e)
+            {
+                LogError($"AlterOffsetsInternal failed with {e}");
+                throw;
+            }
         }
         /// <summary>
         /// Invoked when users request to manually alter/reset the offsets for this connector via the Connect worker's REST API. Connectors that manage offsets externally can propagate offset changes to their external system in this method. 

@@ -96,11 +96,20 @@ namespace MASES.KNet.Connect.Transforms
         /// <summary>
         /// Public method used from Java to trigger <see cref="Apply(ConnectRecord)"/>
         /// </summary>
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
         public void ApplyInternal()
         {
-            var record = DataToExchange<ConnectRecord>();
-            var record1 = Apply(record);
-            DataToExchange(record1);
+            try
+            {
+                var record = DataToExchange<ConnectRecord>();
+                var record1 = Apply(record);
+                DataToExchange(record1);
+            }
+            catch (System.Exception e)
+            {
+                LogError($"ApplyInternal failed with {e}");
+                throw;
+            }
         }
 
         /// <inheritdoc cref="ITransformation.Apply(ConnectRecord)"/>
@@ -137,12 +146,21 @@ namespace MASES.KNet.Connect.Transforms
         /// <summary>
         /// Public method used from Java to trigger <see cref="Configure(Map{Java.Lang.String, object})"/>
         /// </summary>
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
         public void ConfigureInternal()
         {
-            Map<Java.Lang.String, object> props = DataToExchange<Map<Java.Lang.String, object>>();
-            Configure(props);
-            Properties = new KNetConnectConfiguration(props);
-            Configure(Properties);
+            try
+            {
+                Map<Java.Lang.String, object> props = DataToExchange<Map<Java.Lang.String, object>>();
+                Configure(props);
+                Properties = new KNetConnectConfiguration(props);
+                Configure(Properties);
+            }
+            catch (System.Exception e)
+            {
+                LogError($"ConfigureInternal failed with {e}");
+                throw;
+            }
         }
         /// <summary>
         /// Not implemented
@@ -159,9 +177,17 @@ namespace MASES.KNet.Connect.Transforms
         /// <summary>
         /// Public method used from Java to trigger <see cref="Close"/>
         /// </summary>
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
         public void CloseInternal()
         {
-            Close();
+            try
+            {
+                Close();
+            }
+            catch (System.Exception e)
+            {
+                LogError($"CloseInternal failed with {e}");
+            }
             try
             {
                 Unregister();
@@ -176,11 +202,13 @@ namespace MASES.KNet.Connect.Transforms
         /// Not implemented
         /// </summary>
         /// <exception cref="NotImplementedException">Invoked in Java before any initialization</exception>
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
         public ConfigDef Config() => throw new NotImplementedException("Invoked in Java before any initialization.");
         /// <summary>
         /// Not implemented
         /// </summary>
         /// <exception cref="NotImplementedException">Invoked in Java before any initialization</exception>
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
         public string Version() => throw new NotImplementedException("Invoked in Java before any initialization.");
     }
 }

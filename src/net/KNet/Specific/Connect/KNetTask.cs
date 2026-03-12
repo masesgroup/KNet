@@ -225,9 +225,17 @@ namespace MASES.KNet.Connect
         [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
         public void StartInternal()
         {
-            Map<Java.Lang.String, Java.Lang.String> props = DataToExchange<Map<Java.Lang.String, Java.Lang.String>>();
-            Properties = new KNetConnectConfiguration(props);
-            Start(Properties);
+            try
+            {
+                Map<Java.Lang.String, Java.Lang.String> props = DataToExchange<Map<Java.Lang.String, Java.Lang.String>>();
+                Properties = new KNetConnectConfiguration(props);
+                Start(Properties);
+            }
+            catch (System.Exception e)
+            {
+                LogError($"StartInternal failed with {e}");
+                throw;
+            }
         }
         /// <summary>
         /// Not implemented
@@ -243,8 +251,16 @@ namespace MASES.KNet.Connect
         [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
         public void StopInternal()
         {
-            Stop();
-            _connector.DeallocateTask(_taskId);
+            try
+            {
+                Stop();
+                _connector.DeallocateTask(_taskId);
+            }
+            catch (System.Exception e)
+            {
+                LogError($"StopInternal failed with {e}");
+                throw;
+            }
         }
         /// <summary>
         /// Implement the method to execute the stop action
@@ -256,7 +272,15 @@ namespace MASES.KNet.Connect
         [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
         public object VersionInternal()
         {
-            return Version();
+            try
+            {
+                return Version();
+            }
+            catch (System.Exception e)
+            {
+                LogError($"VersionInternal failed with {e}");
+                throw;
+            }
         }
         /// <summary>
         /// Implement the method to execute the version action

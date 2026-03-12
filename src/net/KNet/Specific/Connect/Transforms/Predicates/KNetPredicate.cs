@@ -100,10 +100,19 @@ namespace MASES.KNet.Connect.Transforms.Predicates
         /// <summary>
         /// Public method used from Java to trigger <see cref="Test(ConnectRecord)"/>
         /// </summary>
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
         public bool TestInternal()
         {
-            var record = DataToExchange<ConnectRecord>();
-            return Test(record);
+            try
+            {
+                var record = DataToExchange<ConnectRecord>();
+                return Test(record);
+            }
+            catch (System.Exception e)
+            {
+                LogError($"TestInternal failed with {e}");
+                throw;
+            }
         }
 
         /// <inheritdoc cref="IPredicate.Test(ConnectRecord)"/>
@@ -140,9 +149,18 @@ namespace MASES.KNet.Connect.Transforms.Predicates
         /// <summary>
         /// Public method used from Java to trigger <see cref="ToStringInternal"/>
         /// </summary>
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
         public string ToStringInternal()
         {
-            return ToStringPredicate();
+            try
+            {
+                return ToStringPredicate();
+            }
+            catch (System.Exception e)
+            {
+                LogError($"ToStringInternal failed with {e}");
+                throw;
+            }
         }
 
         /// <inheritdoc cref="IPredicate.ToStringPredicate"/>
@@ -151,12 +169,21 @@ namespace MASES.KNet.Connect.Transforms.Predicates
         /// <summary>
         /// Public method used from Java to trigger <see cref="Configure(Map{Java.Lang.String, object})"/>
         /// </summary>
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
         public void ConfigureInternal()
         {
-            Map<Java.Lang.String, object> props = DataToExchange<Map<Java.Lang.String, object>>();
-            Configure(props);
-            Properties = new KNetConnectConfiguration(props);
-            Configure(Properties);
+            try
+            {
+                Map<Java.Lang.String, object> props = DataToExchange<Map<Java.Lang.String, object>>();
+                Configure(props);
+                Properties = new KNetConnectConfiguration(props);
+                Configure(Properties);
+            }
+            catch (System.Exception e)
+            {
+                LogError($"ConfigureInternal failed with {e}");
+                throw;
+            }
         }
         /// <summary>
         /// Not implemented
@@ -173,9 +200,18 @@ namespace MASES.KNet.Connect.Transforms.Predicates
         /// <summary>
         /// Public method used from Java to trigger <see cref="Close"/>
         /// </summary>
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
         public void CloseInternal()
         {
-            Close();
+            try
+            {
+                Close();
+            }
+            catch (System.Exception e)
+            {
+                LogError($"CloseInternal failed with {e}");
+            }
+
             try
             {
                 Unregister();
@@ -190,11 +226,13 @@ namespace MASES.KNet.Connect.Transforms.Predicates
         /// Not implemented
         /// </summary>
         /// <exception cref="NotImplementedException">Invoked in Java before any initialization</exception>
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
         public ConfigDef Config() => throw new NotImplementedException("Invoked in Java before any initialization.");
         /// <summary>
         /// Not implemented
         /// </summary>
         /// <exception cref="NotImplementedException">Invoked in Java before any initialization</exception>
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
         public string Version() => throw new NotImplementedException("Invoked in Java before any initialization.");
     }
 }

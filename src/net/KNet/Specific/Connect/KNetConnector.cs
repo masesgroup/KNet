@@ -131,6 +131,7 @@ namespace MASES.KNet.Connect
         }
 
         /// <inheritdoc cref="IKNetConnector.AllocateTask(long)"/>
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
         public object AllocateTask(long taskId)
         {
             return taskDictionary.GetOrAdd(taskId, (id) =>
@@ -140,7 +141,7 @@ namespace MASES.KNet.Connect
                 return knetTask;
             });
         }
-
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
         internal void DeallocateTask(long taskId)
         {
             taskDictionary.TryRemove(taskId, out var knetTask);
@@ -154,11 +155,13 @@ namespace MASES.KNet.Connect
         /// Not implemented
         /// </summary>
         /// <exception cref="NotImplementedException">Invoked in Java before any initialization</exception>
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
         public void Initialize(ConnectorContext ctx) => throw new NotImplementedException("Invoked in Java before any initialization.");
         /// <summary>
         /// Not implemented
         /// </summary>
         /// <exception cref="NotImplementedException">Invoked in Java before any initialization</exception>
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
         public void Initialize(ConnectorContext ctx, Java.Util.List<Map<Java.Lang.String, Java.Lang.String>> taskConfigs) => throw new NotImplementedException("Invoked in Java before any initialization.");
         /// <summary>
         /// Public method used from Java to trigger <see cref="Start(Map{Java.Lang.String, object})"/>
@@ -166,10 +169,18 @@ namespace MASES.KNet.Connect
         [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
         public void StartInternal()
         {
-            Map<Java.Lang.String, object> props = DataToExchange<Map<Java.Lang.String, object>>();
-            Start(props);
-            Properties = new KNetConnectConfiguration(props);
-            Start(Properties);
+            try
+            {
+                Map<Java.Lang.String, object> props = DataToExchange<Map<Java.Lang.String, object>>();
+                Start(props);
+                Properties = new KNetConnectConfiguration(props);
+                Start(Properties);
+            }
+            catch (System.Exception e)
+            {
+                LogError($"StartInternal failed with {e}");
+                throw;
+            }
         }
         /// <summary>
         /// Not implemented
@@ -186,11 +197,13 @@ namespace MASES.KNet.Connect
         /// Not implemented
         /// </summary>
         /// <exception cref="NotImplementedException"></exception>
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
         public void Reconfigure(Map<Java.Lang.String, Java.Lang.String> props) => throw new NotImplementedException("Invoked in Java before any initialization.");
         /// <summary>
         /// Not implemented
         /// </summary>
         /// <exception cref="NotImplementedException">Invoked in Java before any initialization</exception>
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
         public Class TaskClass() => throw new NotImplementedException("Invoked in Java before any initialization.");
         /// <summary>
         /// Public method used from Java to trigger <see cref="TaskConfigs(int, int, IKNetTaskConfiguration)"/>
@@ -198,8 +211,16 @@ namespace MASES.KNet.Connect
         [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
         public bool TaskConfigsInternal(int currentTask, int maxTasks)
         {
-            Map<Java.Lang.String, Java.Lang.String> props = DataToExchange<Map<Java.Lang.String, Java.Lang.String>>();
-            return TaskConfigs(currentTask, maxTasks, props);
+            try
+            {
+                Map<Java.Lang.String, Java.Lang.String> props = DataToExchange<Map<Java.Lang.String, Java.Lang.String>>();
+                return TaskConfigs(currentTask, maxTasks, props);
+            }
+            catch (System.Exception e)
+            {
+                LogError($"TaskConfigsInternal failed with {e}");
+                throw;
+            }
         }
         /// <summary>
         /// Direct implementation can be used instead of <see cref="TaskConfigs(int, int, IKNetTaskConfiguration)"/>
@@ -226,6 +247,7 @@ namespace MASES.KNet.Connect
         /// Not implemented
         /// </summary>
         /// <exception cref="NotImplementedException">Invoked using the other signature</exception>
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
         public Java.Util.List<Map<Java.Lang.String, Java.Lang.String>> TaskConfigs(int maxTasks) => throw new NotImplementedException("Invoked using the other signature.");
         /// <summary>
         /// Public method used from Java to trigger <see cref="Stop"/>
@@ -233,7 +255,15 @@ namespace MASES.KNet.Connect
         [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
         public void StopInternal()
         {
-            Stop();
+            try
+            {
+                Stop();
+            }
+            catch (System.Exception e)
+            {
+                LogError($"StopInternal failed with {e}");
+                throw;
+            }
         }
         /// <summary>
         /// Implement the method to execute the stop action
@@ -243,16 +273,19 @@ namespace MASES.KNet.Connect
         /// Not implemented
         /// </summary>
         /// <exception cref="NotImplementedException">Invoked in Java before any initialization</exception>
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)] 
         public Config Validate(Map<Java.Lang.String, Java.Lang.String> connectorConfigs) => throw new NotImplementedException("Invoked in Java before any initialization.");
         /// <summary>
         /// Not implemented
         /// </summary>
         /// <exception cref="NotImplementedException">Invoked in Java before any initialization</exception>
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
         public ConfigDef Config() => throw new NotImplementedException("Invoked in Java before any initialization.");
         /// <summary>
         /// Not implemented
         /// </summary>
         /// <exception cref="NotImplementedException">Invoked in Java before any initialization</exception>
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)] 
         public string Version() => throw new NotImplementedException("Invoked in Java before any initialization.");
     }
     #endregion

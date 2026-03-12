@@ -138,7 +138,7 @@ namespace MASES.KNet.Connect
         /// <inheritdoc/>
         public bool Exist(string key)
         {
-            return _configuration.ContainsKey(key) || _configuration1.ContainsKey(key);
+            return (_configuration != null) ? _configuration.ContainsKey(key) : _configuration1.ContainsKey(key);
         }
         /// <inheritdoc/>
         public short GetShort(string key)

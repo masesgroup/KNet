@@ -30,7 +30,7 @@ namespace MASES.KNet.Connect
     /// <summary>
     /// Helper interface for <see cref="KNetSourceTask{TTask}"/>
     /// </summary>
-    public interface IKNetSourceTask: IKNetTask
+    public interface IKNetSourceTask : IKNetTask
     {
         /// <summary>
         /// If <see cref="UseOnlyAsync"/> is <see langword="true"/>, each <paramref name="record"/> is accumulated in a list outside the scope of <see cref="KNetSourceTask{TTask}.Poll"/> invocation.
@@ -741,7 +741,7 @@ namespace MASES.KNet.Connect
         /// <param name="timestamp">The timestamp; may be null</param>
         /// <remarks>These values can have arbitrary structure and should be represented using Org.Apache.Kafka.Connect.Data.* objects (or primitive values). 
         /// For example, a database connector might specify the <paramref name="sourcePartition"/> as a record containing { "db": "database_name", "table": "table_name"} and the <paramref name="sourceOffset"/> as a <see langword="long"/> containing the timestamp of the row.</remarks>
-        void CreateAndPushRecordAsync<TKeySource, TOffset, TValue>(Map<Java.Lang.String, TKeySource> sourcePartition, Map<Java.Lang.String, TOffset> sourceOffset, 
+        void CreateAndPushRecordAsync<TKeySource, TOffset, TValue>(Map<Java.Lang.String, TKeySource> sourcePartition, Map<Java.Lang.String, TOffset> sourceOffset,
                                                                    string topic, int? partition, Schema valueSchema, TValue value, DateTime timestamp);
 
         /// <summary>
@@ -976,19 +976,27 @@ namespace MASES.KNet.Connect
         [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
         public void PollInternal()
         {
-            _arrayList = DataToExchange<ArrayList<SourceRecord>>();
             try
             {
-                var result = Poll();
-                if (result != null)
+                _arrayList = DataToExchange<ArrayList<SourceRecord>>();
+                try
                 {
-                    foreach (var record in result)
+                    var result = Poll();
+                    if (result != null)
                     {
-                        _arrayList.Add(record);
+                        foreach (var record in result)
+                        {
+                            _arrayList.Add(record);
+                        }
                     }
                 }
+                finally { _arrayList = null; }
             }
-            finally { _arrayList = null; }
+            catch (System.Exception e)
+            {
+                LogError($"PollInternal failed with {e}");
+                throw;
+            }
         }
         /// <summary>
         /// Implement the method to execute the Poll action
