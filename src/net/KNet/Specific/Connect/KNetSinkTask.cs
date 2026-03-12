@@ -71,9 +71,17 @@ namespace MASES.KNet.Connect
         [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
         public void PutInternal()
         {
-            Collection<SinkRecord> collection = DataToExchange<Collection<SinkRecord>>();
-            collection = collection.WithPrefetch(UsePrefetch).WithThread(UseThread, ThreadPriority);
-            Put(collection);
+            try
+            {
+                Collection<SinkRecord> collection = DataToExchange<Collection<SinkRecord>>();
+                collection = collection.WithPrefetch(UsePrefetch).WithThread(UseThread, ThreadPriority);
+                Put(collection);
+            }
+            catch (System.Exception e)
+            {
+                LogError($"PutInternal failed with {e}");
+                throw;
+            }
         }
         /// <summary>
         /// Implement the method to execute the Put action

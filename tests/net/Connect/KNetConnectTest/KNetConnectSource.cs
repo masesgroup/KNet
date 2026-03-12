@@ -20,14 +20,13 @@ using Java.Util;
 using Org.Apache.Kafka.Connect.Data;
 using Org.Apache.Kafka.Connect.Source;
 using System;
-using System.Collections.Generic;
 using System.IO;
 
 namespace MASES.KNet.Connect.Test
 {
     public class KNetSourceTestConnector : KNetSourceConnector<KNetSourceTestConnector, KNetSourceTestTask>
     {
-        public override void Start(IReadOnlyDictionary<string, string> props)
+        public override void Start(IKNetConnectConfiguration props)
         {
             LogInfo($"KNetSourceTestConnector Start");
         }
@@ -37,14 +36,14 @@ namespace MASES.KNet.Connect.Test
             LogInfo($"KNetSourceTestConnector Stop");
         }
 
-        public override bool TaskConfigs(int index, int maxTasks, IDictionary<string, string> config)
+        public override bool TaskConfigs(int index, int maxTasks, IKNetTaskConfiguration config)
         {
             LogInfo($"Fill in task {index}");
 
             foreach (var item in Properties)
             {
                 LogInfo($"{item.Key}={item.Value}");
-                config.Add(item); // fill in all properties
+                config.Add(item.Key, item.Value?.ToString()); // fill in all properties
             }
 
             return false;
@@ -106,7 +105,7 @@ namespace MASES.KNet.Connect.Test
             return records;
         }
 
-        public override void Start(IReadOnlyDictionary<string, string> props)
+        public override void Start(IKNetConnectConfiguration props)
         {
             LogInfo($"KNetSourceTestTask start");
             foreach (var item in props)

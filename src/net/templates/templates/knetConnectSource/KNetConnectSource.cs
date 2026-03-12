@@ -9,7 +9,7 @@ namespace MASES.KNet.Template.KNetConnect
 {
     public class KNetConnectSource : KNetSourceConnector<KNetConnectSource, KNetConnectSourceTask>
     {
-        public override void Start(IReadOnlyDictionary<string, string> props)
+        public override void Start(IKNetConnectConfiguration props)
         {
             LogInfo($"KNetConnectSource Start");
             // starts the connector, the method receives the configuration properties
@@ -21,7 +21,7 @@ namespace MASES.KNet.Template.KNetConnect
             // stops the connector
         }
 
-        public override bool TaskConfigs(int index, int maxTasks, IDictionary<string, string> config)
+        public override bool TaskConfigs(int index, int maxTasks, IKNetTaskConfiguration config)
         {
             // fill in the properties for task configuration
             LogInfo($"Fill properties of task {index}");
@@ -29,7 +29,7 @@ namespace MASES.KNet.Template.KNetConnect
             foreach (var item in Properties)
             {
                 LogInfo($"{item.Key}={item.Value}");
-                config.Add(item); // fill in all properties
+                config.Add(item.Key, item.Value?.ToString()); // fill in all properties
             }
 
             return false;
@@ -92,7 +92,7 @@ namespace MASES.KNet.Template.KNetConnect
             return records;
         }
 
-        public override void Start(IReadOnlyDictionary<string, string> props)
+        public override void Start(IKNetConnectConfiguration props)
         {
             // starts the task with the configuration set from connector
             // in this template we set only _topic local variables from configuration
@@ -100,7 +100,7 @@ namespace MASES.KNet.Template.KNetConnect
             foreach (var item in props)
             {
                 LogInfo($"Task config {item.Key}={item.Value}");
-                if (item.Key == "topic") _topic = item.Value;
+                if (item.Key == "topic") _topic = item.Value.ToString();
             }
         }
 

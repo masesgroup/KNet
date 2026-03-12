@@ -40,8 +40,8 @@ public class KNetConnectProxy implements KNetConnectLogging, IJCEventLog {
     public static final String CONNECTOR_ID_PROP_NAME = "connector.id.prop.name";
 
     public static final ConfigDef CONFIG_DEF = new ConfigDef()
-            .define(DOTNET_ASSEMBLY_LOCATION_CONFIG, ConfigDef.Type.STRING, null, ConfigDef.Importance.LOW, "Location of the assembly containing the .NET class referred from \"knet.dotnet.classname\".")
-            .define(DOTNET_CLASSNAME_CONFIG, ConfigDef.Type.STRING, null, ConfigDef.Importance.HIGH, ".NET class name in the form usable from .NET like \"classname, assembly name\".");
+            .define(DOTNET_ASSEMBLY_LOCATION_CONFIG, ConfigDef.Type.STRING, "", ConfigDef.Importance.LOW, "Location of the assembly containing the .NET class referred from \"knet.dotnet.classname\".")
+            .define(DOTNET_CLASSNAME_CONFIG, ConfigDef.Type.STRING, "", ConfigDef.Importance.HIGH, ".NET class name in the form usable from .NET like \"classname, assembly name\".");
 
     static JCOBridge bridgeInstance = null;
     static JCObject knetConnectProxy = null;
@@ -76,7 +76,7 @@ public class KNetConnectProxy implements KNetConnectLogging, IJCEventLog {
                 knetConnectProxy = (JCObject) JCOBridge.GetCLRGlobal("KNetConnectProxy");
                 log.info("Recovered KNetConnectProxy from CLR");
             } else {
-                log.info("Creating JCOBRidge instance");
+                log.info("Creating JCOBridge instance");
                 bridgeInstance = JCOBridge.CreateNew();
                 log.info("Allocating KNetConnectProxy instance in CLR");
                 knetConnectProxy = (JCObject) bridgeInstance.NewObject("MASES.KNet.Connect.KNetConnectProxy, MASES.KNet");
@@ -100,12 +100,12 @@ public class KNetConnectProxy implements KNetConnectLogging, IJCEventLog {
         if (sink != null) {
             className = sink.getClassName();
         }
-        if (className == null) {
+        if (className == null || className.isEmpty()) {
             AbstractConfig parsedConfig = new AbstractConfig(CONFIG_DEF, props);
             className = parsedConfig.getString(DOTNET_CLASSNAME_CONFIG);
         }
 
-        if (className == null)
+        if (className == null || className.isEmpty())
             throw new ConfigException(String.format("'%s' in KNetSinkConnector configuration requires a definition", DOTNET_CLASSNAME_CONFIG));
 
         log.info("Trying to allocate Sink Connector with class name {}", className);
@@ -123,12 +123,12 @@ public class KNetConnectProxy implements KNetConnectLogging, IJCEventLog {
         if (source != null) {
             className = source.getClassName();
         }
-        if (className == null) {
+        if (className == null || className.isEmpty()) {
             AbstractConfig parsedConfig = new AbstractConfig(CONFIG_DEF, props);
             className = parsedConfig.getString(DOTNET_CLASSNAME_CONFIG);
         }
 
-        if (className == null)
+        if (className == null || className.isEmpty())
             throw new ConfigException(String.format("'%s' in KNetSourceConnector configuration requires a definition", DOTNET_CLASSNAME_CONFIG));
 
         log.info("Trying to allocate Source Connector with class name {}", className);
@@ -147,10 +147,10 @@ public class KNetConnectProxy implements KNetConnectLogging, IJCEventLog {
         if (connector != null) {
             location = connector.getAssemblyLocation();
         }
-        if (location == null) {
+        if (location == null || location.isEmpty()) {
             location = parsedConfig.getString(DOTNET_ASSEMBLY_LOCATION_CONFIG);
         }
-        if (location != null) {
+        if (location != null && !location.isEmpty()) {
             if (bridgeInstance == null)
                 throw new ConnectException("Missing initialization of infrastructure using initAndGetConnectProxy");
             bridgeInstance.AddPath(location);
@@ -160,11 +160,11 @@ public class KNetConnectProxy implements KNetConnectLogging, IJCEventLog {
         if (connector != null) {
             className = connector.getClassName();
         }
-        if (className == null) {
+        if (className == null || className.isEmpty()) {
             className = parsedConfig.getString(DOTNET_CLASSNAME_CONFIG);
         }
 
-        if (className == null)
+        if (className == null || className.isEmpty())
             throw new ConfigException(String.format("'%s' in connector configuration requires a definition", DOTNET_CLASSNAME_CONFIG));
 
         log.info("Trying to allocate Connector with class name {}", className);
@@ -183,10 +183,10 @@ public class KNetConnectProxy implements KNetConnectLogging, IJCEventLog {
         if (connector != null) {
             location = connector.getAssemblyLocation();
         }
-        if (location == null) {
+        if (location == null || location.isEmpty()) {
             location = parsedConfig.getString(DOTNET_ASSEMBLY_LOCATION_CONFIG);
         }
-        if (location != null) {
+        if (location != null && !location.isEmpty()) {
             if (bridgeInstance == null)
                 throw new ConnectException("Missing initialization of infrastructure using initAndGetConnectProxy");
             bridgeInstance.AddPath(location);
@@ -196,11 +196,11 @@ public class KNetConnectProxy implements KNetConnectLogging, IJCEventLog {
         if (connector != null) {
             className = connector.getClassName();
         }
-        if (className == null) {
+        if (className == null || className.isEmpty()) {
             className = parsedConfig.getString(DOTNET_CLASSNAME_CONFIG);
         }
 
-        if (className == null)
+        if (className == null || className.isEmpty())
             throw new ConfigException(String.format("'%s' in transform configuration requires a definition", DOTNET_CLASSNAME_CONFIG));
 
         log.info("Trying to allocate Transform with class name {}", className);
@@ -219,10 +219,10 @@ public class KNetConnectProxy implements KNetConnectLogging, IJCEventLog {
         if (connector != null) {
             location = connector.getAssemblyLocation();
         }
-        if (location == null) {
+        if (location == null || location.isEmpty()) {
             location = parsedConfig.getString(DOTNET_ASSEMBLY_LOCATION_CONFIG);
         }
-        if (location != null) {
+        if (location != null && !location.isEmpty()) {
             if (bridgeInstance == null)
                 throw new ConnectException("Missing initialization of infrastructure using initAndGetConnectProxy");
             bridgeInstance.AddPath(location);
@@ -232,11 +232,11 @@ public class KNetConnectProxy implements KNetConnectLogging, IJCEventLog {
         if (connector != null) {
             className = connector.getClassName();
         }
-        if (className == null) {
+        if (className == null || className.isEmpty()) {
             className = parsedConfig.getString(DOTNET_CLASSNAME_CONFIG);
         }
 
-        if (className == null)
+        if (className == null || className.isEmpty())
             throw new ConfigException(String.format("'%s' in predicate configuration requires a definition", DOTNET_CLASSNAME_CONFIG));
 
         log.info("Trying to allocate Predicate with class name {}", className);

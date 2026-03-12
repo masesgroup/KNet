@@ -125,7 +125,8 @@ public class KNetSourceConnector extends SourceConnector implements KNetConnectL
                 source = sourceConnector;
             }
             try {
-                dataToExchange = props;
+                AbstractConfig config = new AbstractConfig(config(), props);
+                dataToExchange = config.values();
                 source.Invoke("StartInternal");
             } finally {
                 dataToExchange = null;

@@ -68,10 +68,6 @@ namespace MASES.KNet.Connect.Transforms.Predicates
     public interface IKNetPredicate : IPredicate
     {
         /// <summary>
-        /// The properties retrieved from <see cref="KNetPredicate.Configure(Map{Java.Lang.String, object})"/>
-        /// </summary>
-        IReadOnlyDictionary<string, object> Properties { get; }
-        /// <summary>
         /// Implements the behavior of <see cref="IPredicate.Test(ConnectRecord)"/> for <paramref name="record"/>
         /// </summary>
         /// <param name="record">The <see cref="SourceRecord"/> to test</param>
@@ -88,17 +84,14 @@ namespace MASES.KNet.Connect.Transforms.Predicates
         /// <summary>
         /// Implement the method to execute the start action
         /// </summary>
-        /// <param name="props">The set of properties returned from Apache Kafka Connect framework: the <see cref="IReadOnlyDictionary{TKey, TValue}"/> contains the same info from configuration file.</param>
-        void Configure(IReadOnlyDictionary<string, object> props);
+        /// <param name="configuration">The <see cref="IKNetConnectConfiguration"/> to access the properties returned from Apache Kafka Connect framework: the <see cref="IKNetCommon.Properties"/> contains the same info from configuration file.</param>
+        void Configure(IKNetConnectConfiguration configuration);
     }
     /// <summary>
     /// The generic class which is the base of all predicates in .NET
     /// </summary>
     public abstract class KNetPredicate : KNetCommon, IKNetPredicate
     {
-        /// <inheritdoc cref="IKNetPredicate.Properties"/>
-        public IReadOnlyDictionary<string, object> Properties { get; private set; }
-
         /// <summary>
         /// Set the <see cref="ReflectedRemoteObjectClassName"/> of the connector to a fixed value
         /// </summary>
@@ -107,12 +100,21 @@ namespace MASES.KNet.Connect.Transforms.Predicates
         /// <summary>
         /// Public method used from Java to trigger <see cref="Test(ConnectRecord)"/>
         /// </summary>
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
         public bool TestInternal()
         {
-            var record = DataToExchange<ConnectRecord>();
-            return Test(record);
+            try
+            {
+                var record = DataToExchange<ConnectRecord>();
+                return Test(record);
+            }
+            catch (System.Exception e)
+            {
+                LogError($"TestInternal failed with {e}");
+                throw;
+            }
         }
-        
+
         /// <inheritdoc cref="IPredicate.Test(ConnectRecord)"/>
         public virtual bool Test(ConnectRecord record)
         {
@@ -147,9 +149,18 @@ namespace MASES.KNet.Connect.Transforms.Predicates
         /// <summary>
         /// Public method used from Java to trigger <see cref="ToStringInternal"/>
         /// </summary>
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
         public string ToStringInternal()
         {
-            return ToStringPredicate();
+            try
+            {
+                return ToStringPredicate();
+            }
+            catch (System.Exception e)
+            {
+                LogError($"ToStringInternal failed with {e}");
+                throw;
+            }
         }
 
         /// <inheritdoc cref="IPredicate.ToStringPredicate"/>
@@ -158,17 +169,21 @@ namespace MASES.KNet.Connect.Transforms.Predicates
         /// <summary>
         /// Public method used from Java to trigger <see cref="Configure(Map{Java.Lang.String, object})"/>
         /// </summary>
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
         public void ConfigureInternal()
         {
-            Map<Java.Lang.String, object> props = DataToExchange<Map<Java.Lang.String, object>>();
-            Configure(props);
-            var dict = new System.Collections.Generic.Dictionary<string, object>();
-            foreach (var item in props.EntrySet())
+            try
             {
-                dict.Add(item.Key, item.Value);
+                Map<Java.Lang.String, object> props = DataToExchange<Map<Java.Lang.String, object>>();
+                Configure(props);
+                Properties = new KNetConnectConfiguration(props);
+                Configure(Properties);
             }
-            Properties = dict;
-            Configure(Properties);
+            catch (System.Exception e)
+            {
+                LogError($"ConfigureInternal failed with {e}");
+                throw;
+            }
         }
         /// <summary>
         /// Not implemented
@@ -179,15 +194,24 @@ namespace MASES.KNet.Connect.Transforms.Predicates
 
         }
 
-        /// <inheritdoc cref="IKNetPredicate.Configure(IReadOnlyDictionary{string, object})"/>
-        public abstract void Configure(IReadOnlyDictionary<string, object> props);
+        /// <inheritdoc cref="IKNetPredicate.Configure(IKNetConnectConfiguration)"/>
+        public abstract void Configure(IKNetConnectConfiguration configuration);
 
         /// <summary>
         /// Public method used from Java to trigger <see cref="Close"/>
         /// </summary>
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
         public void CloseInternal()
         {
-            Close();
+            try
+            {
+                Close();
+            }
+            catch (System.Exception e)
+            {
+                LogError($"CloseInternal failed with {e}");
+            }
+
             try
             {
                 Unregister();
@@ -202,11 +226,13 @@ namespace MASES.KNet.Connect.Transforms.Predicates
         /// Not implemented
         /// </summary>
         /// <exception cref="NotImplementedException">Invoked in Java before any initialization</exception>
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
         public ConfigDef Config() => throw new NotImplementedException("Invoked in Java before any initialization.");
         /// <summary>
         /// Not implemented
         /// </summary>
         /// <exception cref="NotImplementedException">Invoked in Java before any initialization</exception>
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
         public string Version() => throw new NotImplementedException("Invoked in Java before any initialization.");
     }
 }

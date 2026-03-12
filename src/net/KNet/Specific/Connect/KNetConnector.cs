@@ -53,7 +53,7 @@ namespace MASES.KNet.Connect
         /// <inheritdoc cref="Connector.Initialize(ConnectorContext, Java.Util.List{Map{Java.Lang.String, Java.Lang.String}})"/>
         void Initialize(ConnectorContext ctx, Java.Util.List<Map<Java.Lang.String, Java.Lang.String>> taskConfigs);
         /// <inheritdoc cref="Connector.Start(Map{Java.Lang.String, Java.Lang.String})"/>
-        void Start(Map<Java.Lang.String, Java.Lang.String> props);
+        void Start(Map<Java.Lang.String, object> props);
         /// <inheritdoc cref="Connector.Reconfigure(Map{Java.Lang.String, Java.Lang.String})"/>
         void Reconfigure(Map<Java.Lang.String, Java.Lang.String> props);
         /// <inheritdoc cref="Connector.TaskClass{ReturnExtendsOrg_Apache_Kafka_Connect_Connector_Task}"/>
@@ -76,10 +76,6 @@ namespace MASES.KNet.Connect
     public interface IKNetConnector : IKNetCommon, IConnector
     {
         /// <summary>
-        /// The properties retrieved from <see cref="KNetConnector.StartInternal"/>
-        /// </summary>
-        IReadOnlyDictionary<string, string> Properties { get; }
-        /// <summary>
         /// Allocates a task object based on <see cref="KNetTask"/>
         /// </summary>
         /// <param name="taskId">The unique id generated from JAva side</param>
@@ -96,19 +92,19 @@ namespace MASES.KNet.Connect
         /// <summary>
         /// Implement the method to execute the start action
         /// </summary>
-        /// <param name="props">The set of properties returned from Apache Kafka Connect framework: the <see cref="IReadOnlyDictionary{TKey, TValue}"/> contains the same info from configuration file.</param>
-        void Start(IReadOnlyDictionary<string, string> props);
+        /// <param name="configuration">The <see cref="IKNetConnectConfiguration"/> to access the properties returned from Apache Kafka Connect framework: the <see cref="IKNetCommon.Properties"/> contains the same info from configuration file.</param>
+        void Start(IKNetConnectConfiguration configuration);
         /// <summary>
         /// Invoked during allocation of tasks from Apache Kafka Connect
         /// </summary>
         /// <param name="currentTask">The actual task index</param>
         /// <param name="maxTasks">Max tasks as defined from Apache Kafka Connect framework</param>
-        /// <param name="config">The <see cref="IDictionary{TKey, TValue}"/> to be filled in with properties for the task: the same will be received from <see cref="KNetTask.Start(IReadOnlyDictionary{string, string})"/></param>
+        /// <param name="config">The <see cref="IKNetTaskConfiguration"/> to be filled in with properties for the task: the same will be received from <see cref="KNetTask.Start(IKNetConnectConfiguration)"/></param>
         /// <returns><see langword="true"/> to avoid any further invocation of the method, otherwise <see langword="false"/>.</returns>
         /// <remarks>If the connector needs a single task and <paramref name="maxTasks"/> is higher than 1, returning <see langword="true"/> immediately only one configuration is returned to Apache Kafka Connect framework. 
         /// In other word it is possible to stop the configuration requests at any time; only the first one is reported in any case since at least one shall be available.
         /// To configure all <paramref name="maxTasks"/> return always <see langword="false"/>.</remarks>
-        bool TaskConfigs(int currentTask, int maxTasks, IDictionary<string, string> config);
+        bool TaskConfigs(int currentTask, int maxTasks, IKNetTaskConfiguration config);
     }
     #endregion
 
@@ -134,10 +130,8 @@ namespace MASES.KNet.Connect
             return ExecuteOnRemote<T>("getContext");
         }
 
-        /// <inheritdoc cref="IKNetConnector.Properties"/>
-        public IReadOnlyDictionary<string, string> Properties { get; private set; }
-
         /// <inheritdoc cref="IKNetConnector.AllocateTask(long)"/>
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
         public object AllocateTask(long taskId)
         {
             return taskDictionary.GetOrAdd(taskId, (id) =>
@@ -147,7 +141,7 @@ namespace MASES.KNet.Connect
                 return knetTask;
             });
         }
-
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
         internal void DeallocateTask(long taskId)
         {
             taskDictionary.TryRemove(taskId, out var knetTask);
@@ -161,55 +155,75 @@ namespace MASES.KNet.Connect
         /// Not implemented
         /// </summary>
         /// <exception cref="NotImplementedException">Invoked in Java before any initialization</exception>
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
         public void Initialize(ConnectorContext ctx) => throw new NotImplementedException("Invoked in Java before any initialization.");
         /// <summary>
         /// Not implemented
         /// </summary>
         /// <exception cref="NotImplementedException">Invoked in Java before any initialization</exception>
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
         public void Initialize(ConnectorContext ctx, Java.Util.List<Map<Java.Lang.String, Java.Lang.String>> taskConfigs) => throw new NotImplementedException("Invoked in Java before any initialization.");
         /// <summary>
-        /// Public method used from Java to trigger <see cref="Start(Map{Java.Lang.String, Java.Lang.String})"/>
+        /// Public method used from Java to trigger <see cref="Start(Map{Java.Lang.String, object})"/>
         /// </summary>
         [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
         public void StartInternal()
         {
-            Map<Java.Lang.String, Java.Lang.String> props = DataToExchange<Map<Java.Lang.String, Java.Lang.String>>();
-            Start(props);
-            Properties = new System.Collections.Generic.Dictionary<string, string>(props.ToNetDictiony<string, string, Java.Lang.String, Java.Lang.String>());
-            Start(Properties);
+            try
+            {
+                Map<Java.Lang.String, object> props = DataToExchange<Map<Java.Lang.String, object>>();
+                Start(props);
+                Properties = new KNetConnectConfiguration(props);
+                Start(Properties);
+            }
+            catch (System.Exception e)
+            {
+                LogError($"StartInternal failed with {e}");
+                throw;
+            }
         }
         /// <summary>
         /// Not implemented
         /// </summary>
         /// <exception cref="NotImplementedException">Local version with a different signature</exception>
-        public virtual void Start(Map<Java.Lang.String, Java.Lang.String> props)
+        public virtual void Start(Map<Java.Lang.String, object> props)
         {
 
         }
 
-        /// <inheritdoc cref="IKNetConnector.Start(IReadOnlyDictionary{string, string})"/>
-        public abstract void Start(IReadOnlyDictionary<string, string> props);
+        /// <inheritdoc cref="IKNetConnector.Start(IKNetConnectConfiguration)"/>
+        public abstract void Start(IKNetConnectConfiguration configuration);
         /// <summary>
         /// Not implemented
         /// </summary>
         /// <exception cref="NotImplementedException"></exception>
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
         public void Reconfigure(Map<Java.Lang.String, Java.Lang.String> props) => throw new NotImplementedException("Invoked in Java before any initialization.");
         /// <summary>
         /// Not implemented
         /// </summary>
         /// <exception cref="NotImplementedException">Invoked in Java before any initialization</exception>
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
         public Class TaskClass() => throw new NotImplementedException("Invoked in Java before any initialization.");
         /// <summary>
-        /// Public method used from Java to trigger <see cref="TaskConfigs(int, int, IDictionary{string, string})"/>
+        /// Public method used from Java to trigger <see cref="TaskConfigs(int, int, IKNetTaskConfiguration)"/>
         /// </summary>
         [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
         public bool TaskConfigsInternal(int currentTask, int maxTasks)
         {
-            Map<Java.Lang.String, Java.Lang.String> props = DataToExchange<Map<Java.Lang.String, Java.Lang.String>>();
-            return TaskConfigs(currentTask, maxTasks, props);
+            try
+            {
+                Map<Java.Lang.String, Java.Lang.String> props = DataToExchange<Map<Java.Lang.String, Java.Lang.String>>();
+                return TaskConfigs(currentTask, maxTasks, props);
+            }
+            catch (System.Exception e)
+            {
+                LogError($"TaskConfigsInternal failed with {e}");
+                throw;
+            }
         }
         /// <summary>
-        /// Direct implementation can be used instead of <see cref="TaskConfigs(int, int, IDictionary{string, string})"/>
+        /// Direct implementation can be used instead of <see cref="TaskConfigs(int, int, IKNetTaskConfiguration)"/>
         /// </summary>
         /// <param name="currentTask"></param>
         /// <param name="maxTasks"></param>
@@ -217,8 +231,8 @@ namespace MASES.KNet.Connect
         /// <returns></returns>
         public virtual bool TaskConfigs(int currentTask, int maxTasks, Map<Java.Lang.String, Java.Lang.String> props)
         {
-            System.Collections.Generic.Dictionary<string, string> dict = new System.Collections.Generic.Dictionary<string, string>(props.ToNetDictiony<string, string, Java.Lang.String, Java.Lang.String>());
-            bool retVal = TaskConfigs(currentTask, maxTasks, dict);
+            var dict = new System.Collections.Generic.Dictionary<string, string>(props.ToNetDictiony<string, string, Java.Lang.String, Java.Lang.String>());
+            bool retVal = TaskConfigs(currentTask, maxTasks, new KNetTaskConfiguration(dict));
             props.Clear();
             foreach (var item in dict)
             {
@@ -227,12 +241,13 @@ namespace MASES.KNet.Connect
             return retVal;
         }
 
-        /// <inheritdoc cref="IKNetConnector.TaskConfigs(int, int, IDictionary{string, string})"/>
-        public abstract bool TaskConfigs(int currentTask, int maxTasks, IDictionary<string, string> config);
+        /// <inheritdoc cref="IKNetConnector.TaskConfigs(int, int, IKNetTaskConfiguration)"/>
+        public abstract bool TaskConfigs(int currentTask, int maxTasks, IKNetTaskConfiguration config);
         /// <summary>
         /// Not implemented
         /// </summary>
         /// <exception cref="NotImplementedException">Invoked using the other signature</exception>
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
         public Java.Util.List<Map<Java.Lang.String, Java.Lang.String>> TaskConfigs(int maxTasks) => throw new NotImplementedException("Invoked using the other signature.");
         /// <summary>
         /// Public method used from Java to trigger <see cref="Stop"/>
@@ -240,7 +255,15 @@ namespace MASES.KNet.Connect
         [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
         public void StopInternal()
         {
-            Stop();
+            try
+            {
+                Stop();
+            }
+            catch (System.Exception e)
+            {
+                LogError($"StopInternal failed with {e}");
+                throw;
+            }
         }
         /// <summary>
         /// Implement the method to execute the stop action
@@ -250,16 +273,19 @@ namespace MASES.KNet.Connect
         /// Not implemented
         /// </summary>
         /// <exception cref="NotImplementedException">Invoked in Java before any initialization</exception>
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)] 
         public Config Validate(Map<Java.Lang.String, Java.Lang.String> connectorConfigs) => throw new NotImplementedException("Invoked in Java before any initialization.");
         /// <summary>
         /// Not implemented
         /// </summary>
         /// <exception cref="NotImplementedException">Invoked in Java before any initialization</exception>
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
         public ConfigDef Config() => throw new NotImplementedException("Invoked in Java before any initialization.");
         /// <summary>
         /// Not implemented
         /// </summary>
         /// <exception cref="NotImplementedException">Invoked in Java before any initialization</exception>
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)] 
         public string Version() => throw new NotImplementedException("Invoked in Java before any initialization.");
     }
     #endregion

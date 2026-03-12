@@ -18,6 +18,7 @@
 
 package org.mases.knet.developed.connect.transforms.predicates;
 
+import org.apache.kafka.common.config.AbstractConfig;
 import org.apache.kafka.common.config.ConfigDef;
 import org.apache.kafka.connect.errors.ConnectException;
 import org.apache.kafka.connect.components.Versioned;
@@ -150,7 +151,8 @@ public class KNetPredicate<R extends ConnectRecord<R>> implements Predicate<R>, 
             }
             if (predicateObject != null) {
                 try {
-                    dataToExchange = configs;
+                    AbstractConfig config = new AbstractConfig(config(), configs);
+                    dataToExchange = config.values();
                     predicateObject.Invoke("ConfigureInternal");
                 } finally {
                     dataToExchange = null;
