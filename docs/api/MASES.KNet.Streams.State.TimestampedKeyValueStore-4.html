@@ -184,76 +184,6 @@ Class TimestampedKeyValueStore&lt;K, V, TJVMK, TJVMV&gt;  <a class="header-actio
 
 
 
-  <h2 class="section" id="properties">Properties
-</h2>
-
-
-  <a id="MASES_KNet_Streams_State_TimestampedKeyValueStore_4_ApproximateNumEntries_" data-uid="MASES.KNet.Streams.State.TimestampedKeyValueStore`4.ApproximateNumEntries*"></a>
-
-  <h3 id="MASES_KNet_Streams_State_TimestampedKeyValueStore_4_ApproximateNumEntries" data-uid="MASES.KNet.Streams.State.TimestampedKeyValueStore`4.ApproximateNumEntries">
-  ApproximateNumEntries
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Streams/State/TimestampedKeyValueStore.cs/#L36"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>KNet implementation of <a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/state/ReadOnlyKeyValueStore.html#approximateNumEntries()">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/state/ReadOnlyKeyValueStore.html#approximateNumEntries()</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual long ApproximateNumEntries { get; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
-    <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <a id="MASES_KNet_Streams_State_TimestampedKeyValueStore_4_ReverseAll_" data-uid="MASES.KNet.Streams.State.TimestampedKeyValueStore`4.ReverseAll*"></a>
-
-  <h3 id="MASES_KNet_Streams_State_TimestampedKeyValueStore_4_ReverseAll" data-uid="MASES.KNet.Streams.State.TimestampedKeyValueStore`4.ReverseAll">
-  ReverseAll
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Streams/State/TimestampedKeyValueStore.cs/#L76"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>KNet implementation of <a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/state/ReadOnlyKeyValueStore.html#reverseAll()">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/state/ReadOnlyKeyValueStore.html#reverseAll()</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual TimestampedKeyValueIterator&lt;K, V, TJVMK, TJVMV&gt; ReverseAll { get; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="MASES.KNet.Streams.State.TimestampedKeyValueIterator-4.html">TimestampedKeyValueIterator</a>&lt;K, V, TJVMK, TJVMV&gt;</dt>
-    <dd><p><a class="xref" href="MASES.KNet.Streams.State.KeyValueIterator-4.html">KeyValueIterator&lt;K, V, TJVMK, TJVMV&gt;</a></p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-
   <h2 class="section" id="methods">Methods
 </h2>
 
@@ -278,6 +208,39 @@ Class TimestampedKeyValueStore&lt;K, V, TJVMK, TJVMV&gt;  <a class="header-actio
   <dl class="parameters">
     <dt><a class="xref" href="MASES.KNet.Streams.State.TimestampedKeyValueIterator-4.html">TimestampedKeyValueIterator</a>&lt;K, V, TJVMK, TJVMV&gt;</dt>
     <dd><p><a class="xref" href="MASES.KNet.Streams.State.KeyValueIterator-4.html">KeyValueIterator&lt;K, V, TJVMK, TJVMV&gt;</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Streams_State_TimestampedKeyValueStore_4_ApproximateNumEntries_" data-uid="MASES.KNet.Streams.State.TimestampedKeyValueStore`4.ApproximateNumEntries*"></a>
+
+  <h3 id="MASES_KNet_Streams_State_TimestampedKeyValueStore_4_ApproximateNumEntries" data-uid="MASES.KNet.Streams.State.TimestampedKeyValueStore`4.ApproximateNumEntries">
+  ApproximateNumEntries()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Streams/State/TimestampedKeyValueStore.cs/#L36"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>KNet implementation of <a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/state/ReadOnlyKeyValueStore.html#approximateNumEntries()">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/state/ReadOnlyKeyValueStore.html#approximateNumEntries()</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual long ApproximateNumEntries()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></p>
 </dd>
   </dl>
 
@@ -330,6 +293,53 @@ Class TimestampedKeyValueStore&lt;K, V, TJVMK, TJVMV&gt;  <a class="header-actio
 
 
 
+  <a id="MASES_KNet_Streams_State_TimestampedKeyValueStore_4_PrefixScan_" data-uid="MASES.KNet.Streams.State.TimestampedKeyValueStore`4.PrefixScan*"></a>
+
+  <h3 id="MASES_KNet_Streams_State_TimestampedKeyValueStore_4_PrefixScan__2___0_MASES_KNet_Serialization_ISerDes___0___1__" data-uid="MASES.KNet.Streams.State.TimestampedKeyValueStore`4.PrefixScan``2(``0,MASES.KNet.Serialization.ISerDes{``0,``1})">
+  PrefixScan&lt;P, TJVMP&gt;(P, ISerDes&lt;P, TJVMP&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Streams/State/TimestampedKeyValueStore.cs/#L76"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>KNet implementation of <a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/state/ReadOnlyKeyValueStore.html#prefixScan(java.lang.Object,org.apache.kafka.common.serialization.Serializer)">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/state/ReadOnlyKeyValueStore.html#prefixScan(java.lang.Object,org.apache.kafka.common.serialization.Serializer)</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TimestampedKeyValueIterator&lt;K, V, TJVMK, TJVMV&gt; PrefixScan&lt;P, TJVMP&gt;(P arg0, ISerDes&lt;P, TJVMP&gt; arg1)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <span class="xref">P</span></dt>
+    <dd></dd>
+    <dt><code>arg1</code> <a class="xref" href="MASES.KNet.Serialization.ISerDes-2.html">ISerDes</a>&lt;P, TJVMP&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MASES.KNet.Streams.State.TimestampedKeyValueIterator-4.html">TimestampedKeyValueIterator</a>&lt;K, V, TJVMK, TJVMV&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Streams.State.TimestampedKeyValueIterator-4.html">TimestampedKeyValueIterator&lt;K, V, TJVMK, TJVMV&gt;</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>P</code></dt>
+    <dd></dd>
+    <dt><code>TJVMP</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
   <a id="MASES_KNet_Streams_State_TimestampedKeyValueStore_4_Range_" data-uid="MASES.KNet.Streams.State.TimestampedKeyValueStore`4.Range*"></a>
 
   <h3 id="MASES_KNet_Streams_State_TimestampedKeyValueStore_4_Range__0__0_" data-uid="MASES.KNet.Streams.State.TimestampedKeyValueStore`4.Range(`0,`0)">
@@ -372,11 +382,44 @@ Class TimestampedKeyValueStore&lt;K, V, TJVMK, TJVMV&gt;  <a class="header-actio
 
 
 
+  <a id="MASES_KNet_Streams_State_TimestampedKeyValueStore_4_ReverseAll_" data-uid="MASES.KNet.Streams.State.TimestampedKeyValueStore`4.ReverseAll*"></a>
+
+  <h3 id="MASES_KNet_Streams_State_TimestampedKeyValueStore_4_ReverseAll" data-uid="MASES.KNet.Streams.State.TimestampedKeyValueStore`4.ReverseAll">
+  ReverseAll()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Streams/State/TimestampedKeyValueStore.cs/#L84"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>KNet implementation of <a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/state/ReadOnlyKeyValueStore.html#reverseAll()">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/state/ReadOnlyKeyValueStore.html#reverseAll()</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual TimestampedKeyValueIterator&lt;K, V, TJVMK, TJVMV&gt; ReverseAll()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MASES.KNet.Streams.State.TimestampedKeyValueIterator-4.html">TimestampedKeyValueIterator</a>&lt;K, V, TJVMK, TJVMV&gt;</dt>
+    <dd><p><a class="xref" href="MASES.KNet.Streams.State.KeyValueIterator-4.html">KeyValueIterator&lt;K, V, TJVMK, TJVMV&gt;</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="MASES_KNet_Streams_State_TimestampedKeyValueStore_4_ReverseRange_" data-uid="MASES.KNet.Streams.State.TimestampedKeyValueStore`4.ReverseRange*"></a>
 
   <h3 id="MASES_KNet_Streams_State_TimestampedKeyValueStore_4_ReverseRange__0__0_" data-uid="MASES.KNet.Streams.State.TimestampedKeyValueStore`4.ReverseRange(`0,`0)">
   ReverseRange(K, K)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Streams/State/TimestampedKeyValueStore.cs/#L83"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Streams/State/TimestampedKeyValueStore.cs/#L91"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>KNet implementation of <a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/state/ReadOnlyKeyValueStore.html#reverseRange(java.lang.Object,java.lang.Object)">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/state/ReadOnlyKeyValueStore.html#reverseRange(java.lang.Object,java.lang.Object)</a></p>
