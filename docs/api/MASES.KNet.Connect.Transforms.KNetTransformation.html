@@ -89,7 +89,7 @@
 
 
   <h1 id="MASES_KNet_Connect_Transforms_KNetTransformation" data-uid="MASES.KNet.Connect.Transforms.KNetTransformation" class="text-break">
-Class KNetTransformation  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/Transforms/KNetTransformation.cs/#L93"><i class="bi bi-code-slash"></i></a>
+Class KNetTransformation  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/Transforms/KNetTransformation.cs/#L89"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -136,6 +136,9 @@ Class KNetTransformation  <a class="header-action link-secondary" title="View so
       <a class="xref" href="MASES.KNet.Connect.KNetCommon.html#MASES_KNet_Connect_KNetCommon_UniqueId">KNetCommon.UniqueId</a>
     </div>
     <div>
+      <a class="xref" href="MASES.KNet.Connect.KNetCommon.html#MASES_KNet_Connect_KNetCommon_Properties">KNetCommon.Properties</a>
+    </div>
+    <div>
       <a class="xref" href="MASES.KNet.Connect.KNetCommon.html#MASES_KNet_Connect_KNetCommon_ExecuteOnRemote_System_String_System_Object___">KNetCommon.ExecuteOnRemote(string, params object[])</a>
     </div>
     <div>
@@ -146,9 +149,6 @@ Class KNetTransformation  <a class="header-action link-secondary" title="View so
     </div>
     <div>
       <a class="xref" href="MASES.KNet.Connect.KNetCommon.html#MASES_KNet_Connect_KNetCommon_DataToExchange_System_Object_">KNetCommon.DataToExchange(object)</a>
-    </div>
-    <div>
-      <a class="xref" href="MASES.KNet.Connect.KNetCommon.html#MASES_KNet_Connect_KNetCommon_ReflectedRemoteObjectClassName">KNetCommon.ReflectedRemoteObjectClassName</a>
     </div>
     <div>
       <a class="xref" href="MASES.KNet.Connect.KNetCommon.html#MASES_KNet_Connect_KNetCommon_Name">KNetCommon.Name</a>
@@ -245,19 +245,19 @@ Class KNetTransformation  <a class="header-action link-secondary" title="View so
 </h2>
 
 
-  <a id="MASES_KNet_Connect_Transforms_KNetTransformation_Properties_" data-uid="MASES.KNet.Connect.Transforms.KNetTransformation.Properties*"></a>
+  <a id="MASES_KNet_Connect_Transforms_KNetTransformation_ReflectedRemoteObjectClassName_" data-uid="MASES.KNet.Connect.Transforms.KNetTransformation.ReflectedRemoteObjectClassName*"></a>
 
-  <h3 id="MASES_KNet_Connect_Transforms_KNetTransformation_Properties" data-uid="MASES.KNet.Connect.Transforms.KNetTransformation.Properties">
-  Properties
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/Transforms/KNetTransformation.cs/#L96"><i class="bi bi-code-slash"></i></a>
+  <h3 id="MASES_KNet_Connect_Transforms_KNetTransformation_ReflectedRemoteObjectClassName" data-uid="MASES.KNet.Connect.Transforms.KNetTransformation.ReflectedRemoteObjectClassName">
+  ReflectedRemoteObjectClassName
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/Transforms/KNetTransformation.cs/#L94"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>The properties retrieved from <a class="xref" href="MASES.KNet.Connect.Transforms.KNetTransformation.html#MASES_KNet_Connect_Transforms_KNetTransformation_Configure_Java_Util_Map_Java_Lang_String_System_Object__">Configure(Map&lt;String, object&gt;)</a></p>
+  <div class="markdown level1 summary"><p>Set the <a class="xref" href="MASES.KNet.Connect.Transforms.KNetTransformation.html#MASES_KNet_Connect_Transforms_KNetTransformation_ReflectedRemoteObjectClassName">ReflectedRemoteObjectClassName</a> of the connector to a fixed value</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IReadOnlyDictionary&lt;string, object&gt; Properties { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">protected override sealed string ReflectedRemoteObjectClassName { get; }</code></pre>
   </div>
 
 
@@ -266,7 +266,7 @@ Class KNetTransformation  <a class="header-action link-secondary" title="View so
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlydictionary-2">IReadOnlyDictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd></dd>
   </dl>
 
@@ -285,7 +285,7 @@ Class KNetTransformation  <a class="header-action link-secondary" title="View so
 
   <h3 id="MASES_KNet_Connect_Transforms_KNetTransformation_Apply_Org_Apache_Kafka_Connect_Connector_ConnectRecord_" data-uid="MASES.KNet.Connect.Transforms.KNetTransformation.Apply(Org.Apache.Kafka.Connect.Connector.ConnectRecord)">
   Apply(ConnectRecord)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/Transforms/KNetTransformation.cs/#L110"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/Transforms/KNetTransformation.cs/#L116"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.2/org/apache/kafka/connect/transforms/Transformation.html#apply-org.apache.kafka.connect.connector.ConnectRecord-">https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.2/org/apache/kafka/connect/transforms/Transformation.html#apply-org.apache.kafka.connect.connector.ConnectRecord-</a></p>
@@ -323,7 +323,7 @@ Class KNetTransformation  <a class="header-action link-secondary" title="View so
 
   <h3 id="MASES_KNet_Connect_Transforms_KNetTransformation_Apply_Org_Apache_Kafka_Connect_Sink_SinkRecord_" data-uid="MASES.KNet.Connect.Transforms.KNetTransformation.Apply(Org.Apache.Kafka.Connect.Sink.SinkRecord)">
   Apply(SinkRecord)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/Transforms/KNetTransformation.cs/#L134"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/Transforms/KNetTransformation.cs/#L140"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Implements the behavior of <a class="xref" href="MASES.KNet.Connect.Transforms.ITransformation.html#MASES_KNet_Connect_Transforms_ITransformation_Apply_Org_Apache_Kafka_Connect_Connector_ConnectRecord_">Apply(ConnectRecord)</a> for <code class="paramref">record</code></p>
@@ -365,7 +365,7 @@ Class KNetTransformation  <a class="header-action link-secondary" title="View so
 
   <h3 id="MASES_KNet_Connect_Transforms_KNetTransformation_Apply_Org_Apache_Kafka_Connect_Source_SourceRecord_" data-uid="MASES.KNet.Connect.Transforms.KNetTransformation.Apply(Org.Apache.Kafka.Connect.Source.SourceRecord)">
   Apply(SourceRecord)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/Transforms/KNetTransformation.cs/#L127"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/Transforms/KNetTransformation.cs/#L133"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Implements the behavior of <a class="xref" href="MASES.KNet.Connect.Transforms.ITransformation.html#MASES_KNet_Connect_Transforms_ITransformation_Apply_Org_Apache_Kafka_Connect_Connector_ConnectRecord_">Apply(ConnectRecord)</a> for <code class="paramref">record</code></p>
@@ -403,38 +403,11 @@ Class KNetTransformation  <a class="header-action link-secondary" title="View so
 
 
 
-  <a id="MASES_KNet_Connect_Transforms_KNetTransformation_ApplyInternal_" data-uid="MASES.KNet.Connect.Transforms.KNetTransformation.ApplyInternal*"></a>
-
-  <h3 id="MASES_KNet_Connect_Transforms_KNetTransformation_ApplyInternal" data-uid="MASES.KNet.Connect.Transforms.KNetTransformation.ApplyInternal">
-  ApplyInternal()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/Transforms/KNetTransformation.cs/#L101"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>Public method used from Java to trigger <a class="xref" href="MASES.KNet.Connect.Transforms.KNetTransformation.html#MASES_KNet_Connect_Transforms_KNetTransformation_Apply_Org_Apache_Kafka_Connect_Connector_ConnectRecord_">Apply(ConnectRecord)</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void ApplyInternal()</code></pre>
-  </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
   <a id="MASES_KNet_Connect_Transforms_KNetTransformation_Close_" data-uid="MASES.KNet.Connect.Transforms.KNetTransformation.Close*"></a>
 
   <h3 id="MASES_KNet_Connect_Transforms_KNetTransformation_Close" data-uid="MASES.KNet.Connect.Transforms.KNetTransformation.Close">
   Close()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/Transforms/KNetTransformation.cs/#L182"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/Transforms/KNetTransformation.cs/#L200"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Implement the method to execute the stop action</p>
@@ -457,76 +430,11 @@ Class KNetTransformation  <a class="header-action link-secondary" title="View so
 
 
 
-  <a id="MASES_KNet_Connect_Transforms_KNetTransformation_CloseInternal_" data-uid="MASES.KNet.Connect.Transforms.KNetTransformation.CloseInternal*"></a>
-
-  <h3 id="MASES_KNet_Connect_Transforms_KNetTransformation_CloseInternal" data-uid="MASES.KNet.Connect.Transforms.KNetTransformation.CloseInternal">
-  CloseInternal()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/Transforms/KNetTransformation.cs/#L170"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>Public method used from Java to trigger <a class="xref" href="MASES.KNet.Connect.Transforms.KNetTransformation.html#MASES_KNet_Connect_Transforms_KNetTransformation_Close">Close()</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void CloseInternal()</code></pre>
-  </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <a id="MASES_KNet_Connect_Transforms_KNetTransformation_Config_" data-uid="MASES.KNet.Connect.Transforms.KNetTransformation.Config*"></a>
-
-  <h3 id="MASES_KNet_Connect_Transforms_KNetTransformation_Config" data-uid="MASES.KNet.Connect.Transforms.KNetTransformation.Config">
-  Config()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/Transforms/KNetTransformation.cs/#L187"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>Not implemented</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ConfigDef Config()</code></pre>
-  </div>
-
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="Org.Apache.Kafka.Common.Config.ConfigDef.html">ConfigDef</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <h4 class="section">Exceptions</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.notimplementedexception">NotImplementedException</a></dt>
-    <dd><p>Invoked in Java before any initialization</p>
-</dd>
-  </dl>
-
-
-
   <a id="MASES_KNet_Connect_Transforms_KNetTransformation_Configure_" data-uid="MASES.KNet.Connect.Transforms.KNetTransformation.Configure*"></a>
 
   <h3 id="MASES_KNet_Connect_Transforms_KNetTransformation_Configure_Java_Util_Map_Java_Lang_String_System_Object__" data-uid="MASES.KNet.Connect.Transforms.KNetTransformation.Configure(Java.Util.Map{Java.Lang.String,System.Object})">
   Configure(Map&lt;String, object&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/Transforms/KNetTransformation.cs/#L159"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/Transforms/KNetTransformation.cs/#L169"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Not implemented</p>
@@ -562,9 +470,9 @@ Class KNetTransformation  <a class="header-action link-secondary" title="View so
 
   <a id="MASES_KNet_Connect_Transforms_KNetTransformation_Configure_" data-uid="MASES.KNet.Connect.Transforms.KNetTransformation.Configure*"></a>
 
-  <h3 id="MASES_KNet_Connect_Transforms_KNetTransformation_Configure_System_Collections_Generic_IReadOnlyDictionary_System_String_System_Object__" data-uid="MASES.KNet.Connect.Transforms.KNetTransformation.Configure(System.Collections.Generic.IReadOnlyDictionary{System.String,System.Object})">
-  Configure(IReadOnlyDictionary&lt;string, object&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/Transforms/KNetTransformation.cs/#L165"><i class="bi bi-code-slash"></i></a>
+  <h3 id="MASES_KNet_Connect_Transforms_KNetTransformation_Configure_MASES_KNet_Connect_IKNetConnectConfiguration_" data-uid="MASES.KNet.Connect.Transforms.KNetTransformation.Configure(MASES.KNet.Connect.IKNetConnectConfiguration)">
+  Configure(IKNetConnectConfiguration)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/Transforms/KNetTransformation.cs/#L175"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Implement the method to execute the start action</p>
@@ -572,13 +480,13 @@ Class KNetTransformation  <a class="header-action link-secondary" title="View so
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract void Configure(IReadOnlyDictionary&lt;string, object&gt; props)</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract void Configure(IKNetConnectConfiguration configuration)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>props</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlydictionary-2">IReadOnlyDictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
-    <dd><p>The set of properties returned from Apache Kafka Connect framework: the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlydictionary-2">IReadOnlyDictionary&lt;TKey, TValue&gt;</a> contains the same info from configuration file.</p>
+    <dt><code>configuration</code> <a class="xref" href="MASES.KNet.Connect.IKNetConnectConfiguration.html">IKNetConnectConfiguration</a></dt>
+    <dd><p>The <a class="xref" href="MASES.KNet.Connect.IKNetConnectConfiguration.html">IKNetConnectConfiguration</a> to access the properties returned from Apache Kafka Connect framework: the <a class="xref" href="MASES.KNet.Connect.IKNetCommon.html#MASES_KNet_Connect_IKNetCommon_Properties">Properties</a> contains the same info from configuration file.</p>
 </dd>
   </dl>
 
@@ -590,71 +498,6 @@ Class KNetTransformation  <a class="header-action link-secondary" title="View so
 
 
 
-
-
-
-  <a id="MASES_KNet_Connect_Transforms_KNetTransformation_ConfigureInternal_" data-uid="MASES.KNet.Connect.Transforms.KNetTransformation.ConfigureInternal*"></a>
-
-  <h3 id="MASES_KNet_Connect_Transforms_KNetTransformation_ConfigureInternal" data-uid="MASES.KNet.Connect.Transforms.KNetTransformation.ConfigureInternal">
-  ConfigureInternal()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/Transforms/KNetTransformation.cs/#L143"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>Public method used from Java to trigger <a class="xref" href="MASES.KNet.Connect.Transforms.KNetTransformation.html#MASES_KNet_Connect_Transforms_KNetTransformation_Configure_Java_Util_Map_Java_Lang_String_System_Object__">Configure(Map&lt;String, object&gt;)</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void ConfigureInternal()</code></pre>
-  </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <a id="MASES_KNet_Connect_Transforms_KNetTransformation_Version_" data-uid="MASES.KNet.Connect.Transforms.KNetTransformation.Version*"></a>
-
-  <h3 id="MASES_KNet_Connect_Transforms_KNetTransformation_Version" data-uid="MASES.KNet.Connect.Transforms.KNetTransformation.Version">
-  Version()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/Transforms/KNetTransformation.cs/#L192"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>Not implemented</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string Version()</code></pre>
-  </div>
-
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <h4 class="section">Exceptions</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.notimplementedexception">NotImplementedException</a></dt>
-    <dd><p>Invoked in Java before any initialization</p>
-</dd>
-  </dl>
 
 
 
@@ -662,7 +505,7 @@ Class KNetTransformation  <a class="header-action link-secondary" title="View so
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/Transforms/KNetTransformation.cs/#L93" class="edit-link">Edit this page</a>
+          <a href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/Transforms/KNetTransformation.cs/#L89" class="edit-link">Edit this page</a>
         </div>
 
 

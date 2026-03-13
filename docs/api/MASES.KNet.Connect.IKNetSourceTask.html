@@ -115,16 +115,13 @@ Interface IKNetSourceTask  <a class="header-action link-secondary" title="View s
     <dt>Inherited Members</dt>
     <dd>
     <div>
-      <a class="xref" href="MASES.KNet.Connect.IKNetTask.html#MASES_KNet_Connect_IKNetTask_Properties">IKNetTask.Properties</a>
-    </div>
-    <div>
       <a class="xref" href="MASES.KNet.Connect.IKNetTask.html#MASES_KNet_Connect_IKNetTask_Connector">IKNetTask.Connector</a>
     </div>
     <div>
       <a class="xref" href="MASES.KNet.Connect.IKNetTask.html#MASES_KNet_Connect_IKNetTask_TaskId">IKNetTask.TaskId</a>
     </div>
     <div>
-      <a class="xref" href="MASES.KNet.Connect.IKNetTask.html#MASES_KNet_Connect_IKNetTask_Start_System_Collections_Generic_IReadOnlyDictionary_System_String_System_String__">IKNetTask.Start(IReadOnlyDictionary&lt;string, string&gt;)</a>
+      <a class="xref" href="MASES.KNet.Connect.IKNetTask.html#MASES_KNet_Connect_IKNetTask_Start_MASES_KNet_Connect_IKNetConnectConfiguration_">IKNetTask.Start(IKNetConnectConfiguration)</a>
     </div>
     <div>
       <a class="xref" href="MASES.KNet.Connect.ITask.html#MASES_KNet_Connect_ITask_Version">ITask.Version()</a>
@@ -134,6 +131,9 @@ Interface IKNetSourceTask  <a class="header-action link-secondary" title="View s
     </div>
     <div>
       <a class="xref" href="MASES.KNet.Connect.ITask.html#MASES_KNet_Connect_ITask_Stop">ITask.Stop()</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Connect.IKNetCommon.html#MASES_KNet_Connect_IKNetCommon_Properties">IKNetCommon.Properties</a>
     </div>
     <div>
       <a class="xref" href="MASES.KNet.Connect.IKNetCommon.html#MASES_KNet_Connect_IKNetCommon_ExecuteOnRemote_System_String_System_Object___">IKNetCommon.ExecuteOnRemote(string, params object[])</a>
@@ -222,7 +222,7 @@ Interface IKNetSourceTask  <a class="header-action link-secondary" title="View s
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L48"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Implement the method to declare if out-of-sync feature will be used: it will be set once within <a class="xref" href="MASES.KNet.Connect.KNetSourceTask-1.html">KNetSourceTask&lt;TTask&gt;</a> invocation of <a class="xref" href="MASES.KNet.Connect.KNetTask.html#MASES_KNet_Connect_KNetTask_Start_System_Collections_Generic_IReadOnlyDictionary_System_String_System_String__">Start(IReadOnlyDictionary&lt;string, string&gt;)</a></p>
+  <div class="markdown level1 summary"><p>Implement the method to declare if out-of-sync feature will be used: it will be set once within <a class="xref" href="MASES.KNet.Connect.KNetSourceTask-1.html">KNetSourceTask&lt;TTask&gt;</a> invocation of <a class="xref" href="MASES.KNet.Connect.KNetTask.html#MASES_KNet_Connect_KNetTask_Start_MASES_KNet_Connect_IKNetConnectConfiguration_">Start(IKNetConnectConfiguration)</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -262,7 +262,7 @@ Interface IKNetSourceTask  <a class="header-action link-secondary" title="View s
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L270"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord-2.html">SourceRecord&lt;TKey, TValue&gt;</a> and push it to JVM in async mode using <a class="xref" href="MASES.KNet.Connect.IKNetSourceTask.html#MASES_KNet_Connect_IKNetSourceTask_PushRecordAsync_Org_Apache_Kafka_Connect_Source_SourceRecord_">PushRecordAsync(SourceRecord)</a>, i.e. without waiting the invocation of Poll to return back the list of <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord.html">SourceRecord</a></p>
+  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord-2.html">SourceRecord&lt;TKey, TValue&gt;</a> and push it to JVM in async mode using <a class="xref" href="MASES.KNet.Connect.IKNetSourceTask.html#MASES_KNet_Connect_IKNetSourceTask_PushRecordAsync_Org_Apache_Kafka_Connect_Source_SourceRecord_">PushRecordAsync(SourceRecord)</a>, i.e. without waiting the invocation of <a class="xref" href="MASES.KNet.Connect.KNetSourceTask-1.html#MASES_KNet_Connect_KNetSourceTask_1_Poll">Poll()</a> to return back the list of <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord.html">SourceRecord</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -319,7 +319,7 @@ Interface IKNetSourceTask  <a class="header-action link-secondary" title="View s
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L314"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord-2.html">SourceRecord&lt;TKey, TValue&gt;</a> and push it to JVM in async mode using <a class="xref" href="MASES.KNet.Connect.IKNetSourceTask.html#MASES_KNet_Connect_IKNetSourceTask_PushRecordAsync_Org_Apache_Kafka_Connect_Source_SourceRecord_">PushRecordAsync(SourceRecord)</a>, i.e. without waiting the invocation of Poll to return back the list of <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord.html">SourceRecord</a></p>
+  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord-2.html">SourceRecord&lt;TKey, TValue&gt;</a> and push it to JVM in async mode using <a class="xref" href="MASES.KNet.Connect.IKNetSourceTask.html#MASES_KNet_Connect_IKNetSourceTask_PushRecordAsync_Org_Apache_Kafka_Connect_Source_SourceRecord_">PushRecordAsync(SourceRecord)</a>, i.e. without waiting the invocation of <a class="xref" href="MASES.KNet.Connect.KNetSourceTask-1.html#MASES_KNet_Connect_KNetSourceTask_1_Poll">Poll()</a> to return back the list of <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord.html">SourceRecord</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -379,7 +379,7 @@ Interface IKNetSourceTask  <a class="header-action link-secondary" title="View s
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L180"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord-2.html">SourceRecord&lt;TKey, TValue&gt;</a> and push it to JVM in async mode using <a class="xref" href="MASES.KNet.Connect.IKNetSourceTask.html#MASES_KNet_Connect_IKNetSourceTask_PushRecordAsync_Org_Apache_Kafka_Connect_Source_SourceRecord_">PushRecordAsync(SourceRecord)</a>, i.e. without waiting the invocation of Poll to return back the list of <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord.html">SourceRecord</a></p>
+  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord-2.html">SourceRecord&lt;TKey, TValue&gt;</a> and push it to JVM in async mode using <a class="xref" href="MASES.KNet.Connect.IKNetSourceTask.html#MASES_KNet_Connect_IKNetSourceTask_PushRecordAsync_Org_Apache_Kafka_Connect_Source_SourceRecord_">PushRecordAsync(SourceRecord)</a>, i.e. without waiting the invocation of <a class="xref" href="MASES.KNet.Connect.KNetSourceTask-1.html#MASES_KNet_Connect_KNetSourceTask_1_Poll">Poll()</a> to return back the list of <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord.html">SourceRecord</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -442,7 +442,7 @@ Interface IKNetSourceTask  <a class="header-action link-secondary" title="View s
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L133"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord-2.html">SourceRecord&lt;TKey, TValue&gt;</a> and push it to JVM in async mode using <a class="xref" href="MASES.KNet.Connect.IKNetSourceTask.html#MASES_KNet_Connect_IKNetSourceTask_PushRecordAsync_Org_Apache_Kafka_Connect_Source_SourceRecord_">PushRecordAsync(SourceRecord)</a>, i.e. without waiting the invocation of Poll to return back the list of <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord.html">SourceRecord</a></p>
+  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord-2.html">SourceRecord&lt;TKey, TValue&gt;</a> and push it to JVM in async mode using <a class="xref" href="MASES.KNet.Connect.IKNetSourceTask.html#MASES_KNet_Connect_IKNetSourceTask_PushRecordAsync_Org_Apache_Kafka_Connect_Source_SourceRecord_">PushRecordAsync(SourceRecord)</a>, i.e. without waiting the invocation of <a class="xref" href="MASES.KNet.Connect.KNetSourceTask-1.html#MASES_KNet_Connect_KNetSourceTask_1_Poll">Poll()</a> to return back the list of <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord.html">SourceRecord</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -499,7 +499,7 @@ Interface IKNetSourceTask  <a class="header-action link-secondary" title="View s
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L229"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord-2.html">SourceRecord&lt;TKey, TValue&gt;</a> and push it to JVM in async mode using <a class="xref" href="MASES.KNet.Connect.IKNetSourceTask.html#MASES_KNet_Connect_IKNetSourceTask_PushRecordAsync_Org_Apache_Kafka_Connect_Source_SourceRecord_">PushRecordAsync(SourceRecord)</a>, i.e. without waiting the invocation of Poll to return back the list of <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord.html">SourceRecord</a></p>
+  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord-2.html">SourceRecord&lt;TKey, TValue&gt;</a> and push it to JVM in async mode using <a class="xref" href="MASES.KNet.Connect.IKNetSourceTask.html#MASES_KNet_Connect_IKNetSourceTask_PushRecordAsync_Org_Apache_Kafka_Connect_Source_SourceRecord_">PushRecordAsync(SourceRecord)</a>, i.e. without waiting the invocation of <a class="xref" href="MASES.KNet.Connect.KNetSourceTask-1.html#MASES_KNet_Connect_KNetSourceTask_1_Poll">Poll()</a> to return back the list of <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord.html">SourceRecord</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -565,7 +565,7 @@ Interface IKNetSourceTask  <a class="header-action link-secondary" title="View s
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L367"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord-2.html">SourceRecord&lt;TKey, TValue&gt;</a> and push it to JVM in async mode using <a class="xref" href="MASES.KNet.Connect.IKNetSourceTask.html#MASES_KNet_Connect_IKNetSourceTask_PushRecordAsync_Org_Apache_Kafka_Connect_Source_SourceRecord_">PushRecordAsync(SourceRecord)</a>, i.e. without waiting the invocation of Poll to return back the list of <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord.html">SourceRecord</a></p>
+  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord-2.html">SourceRecord&lt;TKey, TValue&gt;</a> and push it to JVM in async mode using <a class="xref" href="MASES.KNet.Connect.IKNetSourceTask.html#MASES_KNet_Connect_IKNetSourceTask_PushRecordAsync_Org_Apache_Kafka_Connect_Source_SourceRecord_">PushRecordAsync(SourceRecord)</a>, i.e. without waiting the invocation of <a class="xref" href="MASES.KNet.Connect.KNetSourceTask-1.html#MASES_KNet_Connect_KNetSourceTask_1_Poll">Poll()</a> to return back the list of <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord.html">SourceRecord</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -634,7 +634,7 @@ Interface IKNetSourceTask  <a class="header-action link-secondary" title="View s
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L423"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord-2.html">SourceRecord&lt;TKey, TValue&gt;</a> and push it to JVM in async mode using <a class="xref" href="MASES.KNet.Connect.IKNetSourceTask.html#MASES_KNet_Connect_IKNetSourceTask_PushRecordAsync_Org_Apache_Kafka_Connect_Source_SourceRecord_">PushRecordAsync(SourceRecord)</a>, i.e. without waiting the invocation of Poll to return back the list of <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord.html">SourceRecord</a></p>
+  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord-2.html">SourceRecord&lt;TKey, TValue&gt;</a> and push it to JVM in async mode using <a class="xref" href="MASES.KNet.Connect.IKNetSourceTask.html#MASES_KNet_Connect_IKNetSourceTask_PushRecordAsync_Org_Apache_Kafka_Connect_Source_SourceRecord_">PushRecordAsync(SourceRecord)</a>, i.e. without waiting the invocation of <a class="xref" href="MASES.KNet.Connect.KNetSourceTask-1.html#MASES_KNet_Connect_KNetSourceTask_1_Poll">Poll()</a> to return back the list of <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord.html">SourceRecord</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -706,7 +706,7 @@ Interface IKNetSourceTask  <a class="header-action link-secondary" title="View s
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L91"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord-2.html">SourceRecord&lt;TKey, TValue&gt;</a> and push it to JVM in async mode using <a class="xref" href="MASES.KNet.Connect.IKNetSourceTask.html#MASES_KNet_Connect_IKNetSourceTask_PushRecordAsync_Org_Apache_Kafka_Connect_Source_SourceRecord_">PushRecordAsync(SourceRecord)</a>, i.e. without waiting the invocation of Poll to return back the list of <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord.html">SourceRecord</a></p>
+  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord-2.html">SourceRecord&lt;TKey, TValue&gt;</a> and push it to JVM in async mode using <a class="xref" href="MASES.KNet.Connect.IKNetSourceTask.html#MASES_KNet_Connect_IKNetSourceTask_PushRecordAsync_Org_Apache_Kafka_Connect_Source_SourceRecord_">PushRecordAsync(SourceRecord)</a>, i.e. without waiting the invocation of <a class="xref" href="MASES.KNet.Connect.KNetSourceTask-1.html#MASES_KNet_Connect_KNetSourceTask_1_Poll">Poll()</a> to return back the list of <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord.html">SourceRecord</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -766,7 +766,7 @@ Interface IKNetSourceTask  <a class="header-action link-secondary" title="View s
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L691"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord-4.html">SourceRecord&lt;TKeySource, TOffset, TKey, TValue&gt;</a> and push it to JVM in async mode using <a class="xref" href="MASES.KNet.Connect.IKNetSourceTask.html#MASES_KNet_Connect_IKNetSourceTask_PushRecordAsync_Org_Apache_Kafka_Connect_Source_SourceRecord_">PushRecordAsync(SourceRecord)</a>, i.e. without waiting the invocation of Poll to return back the list of <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord.html">SourceRecord</a></p>
+  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord-4.html">SourceRecord&lt;TKeySource, TOffset, TKey, TValue&gt;</a> and push it to JVM in async mode using <a class="xref" href="MASES.KNet.Connect.IKNetSourceTask.html#MASES_KNet_Connect_IKNetSourceTask_PushRecordAsync_Org_Apache_Kafka_Connect_Source_SourceRecord_">PushRecordAsync(SourceRecord)</a>, i.e. without waiting the invocation of <a class="xref" href="MASES.KNet.Connect.KNetSourceTask-1.html#MASES_KNet_Connect_KNetSourceTask_1_Poll">Poll()</a> to return back the list of <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord.html">SourceRecord</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -830,7 +830,7 @@ For example, a database connector might specify the <code class="paramref">sourc
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L744"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord-4.html">SourceRecord&lt;TKeySource, TOffset, TKey, TValue&gt;</a> and push it to JVM in async mode using <a class="xref" href="MASES.KNet.Connect.IKNetSourceTask.html#MASES_KNet_Connect_IKNetSourceTask_PushRecordAsync_Org_Apache_Kafka_Connect_Source_SourceRecord_">PushRecordAsync(SourceRecord)</a>, i.e. without waiting the invocation of Poll to return back the list of <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord.html">SourceRecord</a></p>
+  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord-4.html">SourceRecord&lt;TKeySource, TOffset, TKey, TValue&gt;</a> and push it to JVM in async mode using <a class="xref" href="MASES.KNet.Connect.IKNetSourceTask.html#MASES_KNet_Connect_IKNetSourceTask_PushRecordAsync_Org_Apache_Kafka_Connect_Source_SourceRecord_">PushRecordAsync(SourceRecord)</a>, i.e. without waiting the invocation of <a class="xref" href="MASES.KNet.Connect.KNetSourceTask-1.html#MASES_KNet_Connect_KNetSourceTask_1_Poll">Poll()</a> to return back the list of <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord.html">SourceRecord</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -897,7 +897,7 @@ For example, a database connector might specify the <code class="paramref">sourc
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L582"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord-4.html">SourceRecord&lt;TKeySource, TOffset, TKey, TValue&gt;</a> and push it to JVM in async mode using <a class="xref" href="MASES.KNet.Connect.IKNetSourceTask.html#MASES_KNet_Connect_IKNetSourceTask_PushRecordAsync_Org_Apache_Kafka_Connect_Source_SourceRecord_">PushRecordAsync(SourceRecord)</a>, i.e. without waiting the invocation of Poll to return back the list of <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord.html">SourceRecord</a></p>
+  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord-4.html">SourceRecord&lt;TKeySource, TOffset, TKey, TValue&gt;</a> and push it to JVM in async mode using <a class="xref" href="MASES.KNet.Connect.IKNetSourceTask.html#MASES_KNet_Connect_IKNetSourceTask_PushRecordAsync_Org_Apache_Kafka_Connect_Source_SourceRecord_">PushRecordAsync(SourceRecord)</a>, i.e. without waiting the invocation of <a class="xref" href="MASES.KNet.Connect.KNetSourceTask-1.html#MASES_KNet_Connect_KNetSourceTask_1_Poll">Poll()</a> to return back the list of <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord.html">SourceRecord</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -967,7 +967,7 @@ For example, a database connector might specify the <code class="paramref">sourc
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L526"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord-4.html">SourceRecord&lt;TKeySource, TOffset, TKey, TValue&gt;</a> and push it to JVM in async mode using <a class="xref" href="MASES.KNet.Connect.IKNetSourceTask.html#MASES_KNet_Connect_IKNetSourceTask_PushRecordAsync_Org_Apache_Kafka_Connect_Source_SourceRecord_">PushRecordAsync(SourceRecord)</a>, i.e. without waiting the invocation of Poll to return back the list of <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord.html">SourceRecord</a></p>
+  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord-4.html">SourceRecord&lt;TKeySource, TOffset, TKey, TValue&gt;</a> and push it to JVM in async mode using <a class="xref" href="MASES.KNet.Connect.IKNetSourceTask.html#MASES_KNet_Connect_IKNetSourceTask_PushRecordAsync_Org_Apache_Kafka_Connect_Source_SourceRecord_">PushRecordAsync(SourceRecord)</a>, i.e. without waiting the invocation of <a class="xref" href="MASES.KNet.Connect.KNetSourceTask-1.html#MASES_KNet_Connect_KNetSourceTask_1_Poll">Poll()</a> to return back the list of <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord.html">SourceRecord</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1031,7 +1031,7 @@ For example, a database connector might specify the <code class="paramref">sourc
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L641"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord-4.html">SourceRecord&lt;TKeySource, TOffset, TKey, TValue&gt;</a> and push it to JVM in async mode using <a class="xref" href="MASES.KNet.Connect.IKNetSourceTask.html#MASES_KNet_Connect_IKNetSourceTask_PushRecordAsync_Org_Apache_Kafka_Connect_Source_SourceRecord_">PushRecordAsync(SourceRecord)</a>, i.e. without waiting the invocation of Poll to return back the list of <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord.html">SourceRecord</a></p>
+  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord-4.html">SourceRecord&lt;TKeySource, TOffset, TKey, TValue&gt;</a> and push it to JVM in async mode using <a class="xref" href="MASES.KNet.Connect.IKNetSourceTask.html#MASES_KNet_Connect_IKNetSourceTask_PushRecordAsync_Org_Apache_Kafka_Connect_Source_SourceRecord_">PushRecordAsync(SourceRecord)</a>, i.e. without waiting the invocation of <a class="xref" href="MASES.KNet.Connect.KNetSourceTask-1.html#MASES_KNet_Connect_KNetSourceTask_1_Poll">Poll()</a> to return back the list of <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord.html">SourceRecord</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1104,7 +1104,7 @@ For example, a database connector might specify the <code class="paramref">sourc
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L812"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord-4.html">SourceRecord&lt;TKeySource, TOffset, TKey, TValue&gt;</a> and push it to JVM in async mode using <a class="xref" href="MASES.KNet.Connect.IKNetSourceTask.html#MASES_KNet_Connect_IKNetSourceTask_PushRecordAsync_Org_Apache_Kafka_Connect_Source_SourceRecord_">PushRecordAsync(SourceRecord)</a>, i.e. without waiting the invocation of Poll to return back the list of <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord.html">SourceRecord</a></p>
+  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord-4.html">SourceRecord&lt;TKeySource, TOffset, TKey, TValue&gt;</a> and push it to JVM in async mode using <a class="xref" href="MASES.KNet.Connect.IKNetSourceTask.html#MASES_KNet_Connect_IKNetSourceTask_PushRecordAsync_Org_Apache_Kafka_Connect_Source_SourceRecord_">PushRecordAsync(SourceRecord)</a>, i.e. without waiting the invocation of <a class="xref" href="MASES.KNet.Connect.KNetSourceTask-1.html#MASES_KNet_Connect_KNetSourceTask_1_Poll">Poll()</a> to return back the list of <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord.html">SourceRecord</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1180,7 +1180,7 @@ For example, a database connector might specify the <code class="paramref">sourc
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L886"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord-4.html">SourceRecord&lt;TKeySource, TOffset, TKey, TValue&gt;</a> and push it to JVM in async mode using <a class="xref" href="MASES.KNet.Connect.IKNetSourceTask.html#MASES_KNet_Connect_IKNetSourceTask_PushRecordAsync_Org_Apache_Kafka_Connect_Source_SourceRecord_">PushRecordAsync(SourceRecord)</a>, i.e. without waiting the invocation of Poll to return back the list of <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord.html">SourceRecord</a></p>
+  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord-4.html">SourceRecord&lt;TKeySource, TOffset, TKey, TValue&gt;</a> and push it to JVM in async mode using <a class="xref" href="MASES.KNet.Connect.IKNetSourceTask.html#MASES_KNet_Connect_IKNetSourceTask_PushRecordAsync_Org_Apache_Kafka_Connect_Source_SourceRecord_">PushRecordAsync(SourceRecord)</a>, i.e. without waiting the invocation of <a class="xref" href="MASES.KNet.Connect.KNetSourceTask-1.html#MASES_KNet_Connect_KNetSourceTask_1_Poll">Poll()</a> to return back the list of <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord.html">SourceRecord</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1259,7 +1259,7 @@ For example, a database connector might specify the <code class="paramref">sourc
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L476"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord-4.html">SourceRecord&lt;TKeySource, TOffset, TKey, TValue&gt;</a> and push it to JVM in async mode using <a class="xref" href="MASES.KNet.Connect.IKNetSourceTask.html#MASES_KNet_Connect_IKNetSourceTask_PushRecordAsync_Org_Apache_Kafka_Connect_Source_SourceRecord_">PushRecordAsync(SourceRecord)</a>, i.e. without waiting the invocation of Poll to return back the list of <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord.html">SourceRecord</a></p>
+  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord-4.html">SourceRecord&lt;TKeySource, TOffset, TKey, TValue&gt;</a> and push it to JVM in async mode using <a class="xref" href="MASES.KNet.Connect.IKNetSourceTask.html#MASES_KNet_Connect_IKNetSourceTask_PushRecordAsync_Org_Apache_Kafka_Connect_Source_SourceRecord_">PushRecordAsync(SourceRecord)</a>, i.e. without waiting the invocation of <a class="xref" href="MASES.KNet.Connect.KNetSourceTask-1.html#MASES_KNet_Connect_KNetSourceTask_1_Poll">Poll()</a> to return back the list of <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord.html">SourceRecord</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 

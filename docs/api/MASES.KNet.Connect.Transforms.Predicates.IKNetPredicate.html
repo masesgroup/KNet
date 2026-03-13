@@ -139,51 +139,15 @@ Interface IKNetPredicate  <a class="header-action link-secondary" title="View so
 
 
 
-  <h2 class="section" id="properties">Properties
-</h2>
-
-
-  <a id="MASES_KNet_Connect_Transforms_Predicates_IKNetPredicate_Properties_" data-uid="MASES.KNet.Connect.Transforms.Predicates.IKNetPredicate.Properties*"></a>
-
-  <h3 id="MASES_KNet_Connect_Transforms_Predicates_IKNetPredicate_Properties" data-uid="MASES.KNet.Connect.Transforms.Predicates.IKNetPredicate.Properties">
-  Properties
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/Transforms/Predicates/KNetPredicate.cs/#L73"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>The properties retrieved from <a class="xref" href="MASES.KNet.Connect.Transforms.Predicates.KNetPredicate.html#MASES_KNet_Connect_Transforms_Predicates_KNetPredicate_Configure_Java_Util_Map_Java_Lang_String_System_Object__">Configure(Map&lt;String, object&gt;)</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">IReadOnlyDictionary&lt;string, object&gt; Properties { get; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlydictionary-2">IReadOnlyDictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
   <h2 class="section" id="methods">Methods
 </h2>
 
 
   <a id="MASES_KNet_Connect_Transforms_Predicates_IKNetPredicate_Configure_" data-uid="MASES.KNet.Connect.Transforms.Predicates.IKNetPredicate.Configure*"></a>
 
-  <h3 id="MASES_KNet_Connect_Transforms_Predicates_IKNetPredicate_Configure_System_Collections_Generic_IReadOnlyDictionary_System_String_System_Object__" data-uid="MASES.KNet.Connect.Transforms.Predicates.IKNetPredicate.Configure(System.Collections.Generic.IReadOnlyDictionary{System.String,System.Object})">
-  Configure(IReadOnlyDictionary&lt;string, object&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/Transforms/Predicates/KNetPredicate.cs/#L92"><i class="bi bi-code-slash"></i></a>
+  <h3 id="MASES_KNet_Connect_Transforms_Predicates_IKNetPredicate_Configure_MASES_KNet_Connect_IKNetConnectConfiguration_" data-uid="MASES.KNet.Connect.Transforms.Predicates.IKNetPredicate.Configure(MASES.KNet.Connect.IKNetConnectConfiguration)">
+  Configure(IKNetConnectConfiguration)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/Transforms/Predicates/KNetPredicate.cs/#L88"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Implement the method to execute the start action</p>
@@ -191,13 +155,13 @@ Interface IKNetPredicate  <a class="header-action link-secondary" title="View so
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">void Configure(IReadOnlyDictionary&lt;string, object&gt; props)</code></pre>
+    <pre><code class="lang-csharp hljs">void Configure(IKNetConnectConfiguration configuration)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>props</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlydictionary-2">IReadOnlyDictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
-    <dd><p>The set of properties returned from Apache Kafka Connect framework: the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlydictionary-2">IReadOnlyDictionary&lt;TKey, TValue&gt;</a> contains the same info from configuration file.</p>
+    <dt><code>configuration</code> <a class="xref" href="MASES.KNet.Connect.IKNetConnectConfiguration.html">IKNetConnectConfiguration</a></dt>
+    <dd><p>The <a class="xref" href="MASES.KNet.Connect.IKNetConnectConfiguration.html">IKNetConnectConfiguration</a> to access the properties returned from Apache Kafka Connect framework: the <a class="xref" href="MASES.KNet.Connect.IKNetCommon.html#MASES_KNet_Connect_IKNetCommon_Properties">Properties</a> contains the same info from configuration file.</p>
 </dd>
   </dl>
 
@@ -216,7 +180,7 @@ Interface IKNetPredicate  <a class="header-action link-secondary" title="View so
 
   <h3 id="MASES_KNet_Connect_Transforms_Predicates_IKNetPredicate_Test_Org_Apache_Kafka_Connect_Sink_SinkRecord_" data-uid="MASES.KNet.Connect.Transforms.Predicates.IKNetPredicate.Test(Org.Apache.Kafka.Connect.Sink.SinkRecord)">
   Test(SinkRecord)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/Transforms/Predicates/KNetPredicate.cs/#L87"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/Transforms/Predicates/KNetPredicate.cs/#L83"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Implements the behavior of <a class="xref" href="MASES.KNet.Connect.Transforms.Predicates.IPredicate.html#MASES_KNet_Connect_Transforms_Predicates_IPredicate_Test_Org_Apache_Kafka_Connect_Connector_ConnectRecord_">Test(ConnectRecord)</a> for <code class="paramref">record</code></p>
@@ -258,7 +222,7 @@ Interface IKNetPredicate  <a class="header-action link-secondary" title="View so
 
   <h3 id="MASES_KNet_Connect_Transforms_Predicates_IKNetPredicate_Test_Org_Apache_Kafka_Connect_Source_SourceRecord_" data-uid="MASES.KNet.Connect.Transforms.Predicates.IKNetPredicate.Test(Org.Apache.Kafka.Connect.Source.SourceRecord)">
   Test(SourceRecord)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/Transforms/Predicates/KNetPredicate.cs/#L80"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/Transforms/Predicates/KNetPredicate.cs/#L76"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Implements the behavior of <a class="xref" href="MASES.KNet.Connect.Transforms.Predicates.IPredicate.html#MASES_KNet_Connect_Transforms_Predicates_IPredicate_Test_Org_Apache_Kafka_Connect_Connector_ConnectRecord_">Test(ConnectRecord)</a> for <code class="paramref">record</code></p>
