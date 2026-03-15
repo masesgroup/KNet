@@ -16,9 +16,6 @@
 *  Refer to LICENSE for more information.
 */
 
-using Java.Lang;
-using Java.Util;
-using Javax.Swing;
 using MASES.JCOBridge.C2JBridge;
 using MASES.JCOBridge.C2JBridge.JVMInterop;
 using MASES.JNet.Specific.Extensions;
@@ -96,11 +93,11 @@ namespace MASES.KNet.Connect
         /// <returns>The <see cref="Password"/> associated to <paramref name="key"/></returns>
         Password GetPassword(string key);
         /// <summary>
-        /// Returns <see cref="Class"/> associated to <paramref name="key"/>
+        /// Returns <see cref="Java.Lang.Class"/> associated to <paramref name="key"/>
         /// </summary>
         /// <param name="key">The key to return</param>
-        /// <returns>The <see cref="Class"/> associated to <paramref name="key"/></returns>
-        Class GetClass(string key);
+        /// <returns>The <see cref="Java.Lang.Class"/> associated to <paramref name="key"/></returns>
+        Java.Lang.Class GetClass(string key);
     }
 
     #endregion
@@ -111,14 +108,14 @@ namespace MASES.KNet.Connect
     /// </summary>
     class KNetConnectConfiguration : IKNetConnectConfiguration
     {
-        readonly Map<Java.Lang.String, object> _configuration;
-        readonly Map<Java.Lang.String, Java.Lang.String> _configuration1;
-        public KNetConnectConfiguration(Map<Java.Lang.String, object> configuration)
+        readonly Java.Util.Map<Java.Lang.String, object> _configuration;
+        readonly Java.Util.Map<Java.Lang.String, Java.Lang.String> _configuration1;
+        public KNetConnectConfiguration(Java.Util.Map<Java.Lang.String, object> configuration)
         {
             _configuration = configuration;
         }
 
-        public KNetConnectConfiguration(Map<Java.Lang.String, Java.Lang.String> configuration)
+        public KNetConnectConfiguration(Java.Util.Map<Java.Lang.String, Java.Lang.String> configuration)
         {
             _configuration1 = configuration;
         }
@@ -338,7 +335,7 @@ namespace MASES.KNet.Connect
             else throw new InvalidCastException($"Key \"{key}\" returns a value {(result ?? "null")} cannot be converted in Password");
         }
         /// <inheritdoc/>
-        public Class GetClass(string key)
+        public Java.Lang.Class GetClass(string key)
         {
             if (_configuration1 != null)
             {
@@ -347,13 +344,13 @@ namespace MASES.KNet.Connect
 
             var result = GetValue(key);
 
-            if (result is Class data)
+            if (result is Java.Lang.Class data)
             {
                 return data;
             }
             else if (result is IJavaObject obj)
             {
-                return JVMBridgeBase.WrapsDirect<Class>(obj);
+                return JVMBridgeBase.WrapsDirect<Java.Lang.Class>(obj);
             }
             else throw new InvalidCastException($"Key \"{key}\" returns a value {(result ?? "null")} cannot be converted in Class");
         }
@@ -476,7 +473,7 @@ namespace MASES.KNet.Connect
                     Interlocked.Exchange(ref _isWarnEnable, 0);
                     Interlocked.Exchange(ref _isErrorEnable, 0);
                 }
-                else if (Math.Abs(_logCheckInterval - value) > double.Epsilon)
+                else if (System.Math.Abs(_logCheckInterval - value) > double.Epsilon)
                 {
                     _checkLogTimer.Stop();
 
