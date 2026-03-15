@@ -385,7 +385,7 @@ jobs:
 
   execute_tests_linux:
     if: ${{ inputs.EnableLinuxTests == true }}
-    needs: prepare_matrix_data
+    needs: [prepare_matrix_data, build_container_knet]
     services:
       kafka:
         # Private registry image
