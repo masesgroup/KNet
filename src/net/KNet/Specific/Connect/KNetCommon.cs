@@ -564,7 +564,19 @@ namespace MASES.KNet.Connect
                 Interlocked.Exchange(ref _isWarnEnable, IsWarnEnabled ? 1 : 0);
                 Interlocked.Exchange(ref _isErrorEnable, IsErrorEnabled ? 1 : 0);
             }
-            catch (System.Exception ex) { LogError($"Failed to check log enabled status: {ex}"); }
+            catch (System.Exception ex)
+            {
+                // Intentionally catch all exceptions here to prevent the timer thread
+                // from being terminated; failures are logged for diagnosis.
+                try
+                {
+                    LogError($"Failed to check log enabled status: {ex}");
+                }
+                catch
+                {
+                    // Swallow any exception thrown while logging to avoid recursive failures.
+                }
+            }
             finally
             {
                 _checkLogTimer.Interval = _logCheckInterval;
