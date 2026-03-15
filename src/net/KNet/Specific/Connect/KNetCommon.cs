@@ -30,6 +30,7 @@ using System;
 using System.Collections;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
+using System.Threading;
 using System.Xml;
 
 namespace MASES.KNet.Connect
@@ -420,6 +421,19 @@ namespace MASES.KNet.Connect
     /// </summary>
     public abstract class KNetCommon : IKNetCommon
     {
+        /// <summary>
+        /// Initializer
+        /// </summary>
+        protected KNetCommon()
+        {
+            _checkLogTimer = new System.Timers.Timer();
+            _checkLogTimer.Elapsed += _checkLogTimer_Elapsed;
+            _checkLogTimer.AutoReset = false;
+            _checkLogTimer.Interval = LogCheckInterval;
+        }
+
+        System.Timers.Timer _checkLogTimer;
+
         string _uniqueId = null;
 
         IJavaObject reflectedConnectorOrTask = null;
@@ -441,6 +455,11 @@ namespace MASES.KNet.Connect
         {
             KNetConnectProxy.UnregisterCLRGlobal(UniqueId);
         }
+
+        /// <summary>
+        /// The interval, expressed in milliseconds, in which the enable status of the log is checked
+        /// </summary>
+        protected double LogCheckInterval { get; } = 1000;
 
         /// <summary>
         /// Returns the unique id of this instance
@@ -503,53 +522,79 @@ namespace MASES.KNet.Connect
         protected abstract string ReflectedRemoteObjectClassName { get; }
 
         #region IKNetConnectLogging
+
+        private void _checkLogTimer_Elapsed(object sender, System.Timers.ElapsedEventArgs e)
+        {
+            try
+            {
+                _checkLogTimer.Stop();
+                LogTrace($"Checking log enable status");
+                Interlocked.Exchange(ref _isTraceEnable, IsTraceEnabled ? 1 : 0);
+                Interlocked.Exchange(ref _isDebugEnable, IsDebugEnabled ? 1 : 0);
+                Interlocked.Exchange(ref _isInfoEnable, IsInfoEnabled ? 1 : 0);
+                Interlocked.Exchange(ref _isWarnEnable, IsWarnEnabled ? 1 : 0);
+                Interlocked.Exchange(ref _isErrorEnable, IsErrorEnabled ? 1 : 0);
+            }
+            catch (System.Exception ex) { LogError($"Failed to check log enabled status: {ex}"); }
+            finally
+            {
+                _checkLogTimer.Interval = LogCheckInterval;
+                _checkLogTimer.Start();
+            }
+        }
+
         /// <inheritdoc cref="IKNetConnectLogging.Name"/>
         public string Name => ExecuteOnRemote<string>("getName");
 
+        long _isTraceEnable = 0;
         /// <inheritdoc cref="IKNetConnectLogging.IsTraceEnabled"/>
         public bool IsTraceEnabled => ExecuteOnRemote<bool>("isTraceEnabled");
         /// <inheritdoc cref="IKNetConnectLogging.LogTrace(string)"/>
-        public void LogTrace(string var1) => ExecuteOnRemote("trace", var1);
+        public void LogTrace(string var1) { if (Interlocked.Read(ref _isTraceEnable) != 0) ExecuteOnRemote("trace", var1); }
         /// <inheritdoc cref="IKNetConnectLogging.LogTrace(string, JVMBridgeException)"/>
-        public void LogTrace(string var1, JVMBridgeException var2) => ExecuteOnRemote("trace", var1, var2.BridgeInstance);
+        public void LogTrace(string var1, JVMBridgeException var2) { if (Interlocked.Read(ref _isTraceEnable) != 0) ExecuteOnRemote("trace", var1, var2.BridgeInstance); }
         /// <inheritdoc cref="IKNetConnectLogging.LogTrace(string, object[])"/>
-        public void LogTrace(string var1, params object[] var2) => ExecuteOnRemote("trace", var2.VarArgRebuild(var1));
+        public void LogTrace(string var1, params object[] var2) { if (Interlocked.Read(ref _isTraceEnable) != 0) ExecuteOnRemote("trace", var2.VarArgRebuild(var1)); }
 
+        long _isDebugEnable = 0;
         /// <inheritdoc cref="IKNetConnectLogging.IsDebugEnabled"/>
         public bool IsDebugEnabled => ExecuteOnRemote<bool>("isDebugEnabled");
         /// <inheritdoc cref="IKNetConnectLogging.LogDebug(string)"/>
-        public void LogDebug(string var1) => ExecuteOnRemote("debug", var1);
+        public void LogDebug(string var1) { if (Interlocked.Read(ref _isDebugEnable) != 0) ExecuteOnRemote("debug", var1); }
         /// <inheritdoc cref="IKNetConnectLogging.LogDebug(string, JVMBridgeException)"/>
-        public void LogDebug(string var1, JVMBridgeException var2) => ExecuteOnRemote("debug", var1, var2.BridgeInstance);
+        public void LogDebug(string var1, JVMBridgeException var2) { if (Interlocked.Read(ref _isDebugEnable) != 0) ExecuteOnRemote("debug", var1, var2.BridgeInstance); }
         /// <inheritdoc cref="IKNetConnectLogging.LogDebug(string, object[])"/>
-        public void LogDebug(string var1, params object[] var2) => ExecuteOnRemote("debug", var1, var2.VarArgRebuild(var1));
+        public void LogDebug(string var1, params object[] var2) { if (Interlocked.Read(ref _isDebugEnable) != 0) ExecuteOnRemote("debug", var1, var2.VarArgRebuild(var1)); }
 
+        long _isInfoEnable = 0;
         /// <inheritdoc cref="IKNetConnectLogging.IsInfoEnabled"/>
         public bool IsInfoEnabled => ExecuteOnRemote<bool>("isInfoEnabled");
         /// <inheritdoc cref="IKNetConnectLogging.LogInfo(string)"/>
-        public void LogInfo(string var1) => ExecuteOnRemote("info", var1);
+        public void LogInfo(string var1) { if (Interlocked.Read(ref _isInfoEnable) != 0) ExecuteOnRemote("info", var1); }
         /// <inheritdoc cref="IKNetConnectLogging.LogInfo(string, JVMBridgeException)"/>
-        public void LogInfo(string var1, JVMBridgeException var2) => ExecuteOnRemote("info", var1, var2.BridgeInstance);
+        public void LogInfo(string var1, JVMBridgeException var2) { if (Interlocked.Read(ref _isInfoEnable) != 0) ExecuteOnRemote("info", var1, var2.BridgeInstance); }
         /// <inheritdoc cref="IKNetConnectLogging.LogInfo(string, object[])"/>
-        public void LogInfo(string var1, params object[] var2) => ExecuteOnRemote("info", var1, var2.VarArgRebuild(var1));
+        public void LogInfo(string var1, params object[] var2) { if (Interlocked.Read(ref _isInfoEnable) != 0) ExecuteOnRemote("info", var1, var2.VarArgRebuild(var1)); }
 
+        long _isWarnEnable = 0;
         /// <inheritdoc cref="IKNetConnectLogging.IsWarnEnabled"/>
         public bool IsWarnEnabled => ExecuteOnRemote<bool>("isWarnEnabled");
         /// <inheritdoc cref="IKNetConnectLogging.LogWarn(string)"/>
-        public void LogWarn(string var1) => ExecuteOnRemote("warn", var1);
+        public void LogWarn(string var1) { if (Interlocked.Read(ref _isWarnEnable) != 0) ExecuteOnRemote("warn", var1); }
         /// <inheritdoc cref="IKNetConnectLogging.LogWarn(string, JVMBridgeException)"/>
-        public void LogWarn(string var1, JVMBridgeException var2) => ExecuteOnRemote("warn", var1, var2.BridgeInstance);
+        public void LogWarn(string var1, JVMBridgeException var2) { if (Interlocked.Read(ref _isWarnEnable) != 0) ExecuteOnRemote("warn", var1, var2.BridgeInstance); }
         /// <inheritdoc cref="IKNetConnectLogging.LogWarn(string, object[])"/>
-        public void LogWarn(string var1, params object[] var2) => ExecuteOnRemote("warn", var1, var2.VarArgRebuild(var1));
+        public void LogWarn(string var1, params object[] var2) { if (Interlocked.Read(ref _isWarnEnable) != 0) ExecuteOnRemote("warn", var1, var2.VarArgRebuild(var1)); }
 
+        long _isErrorEnable = 0;
         /// <inheritdoc cref="IKNetConnectLogging.IsErrorEnabled"/>
         public bool IsErrorEnabled => ExecuteOnRemote<bool>("isErrorEnabled");
         /// <inheritdoc cref="IKNetConnectLogging.LogError(string)"/>
-        public void LogError(string var1) => ExecuteOnRemote("error", var1);
+        public void LogError(string var1) { if (Interlocked.Read(ref _isErrorEnable) != 0) ExecuteOnRemote("error", var1); }
         /// <inheritdoc cref="IKNetConnectLogging.LogError(string, JVMBridgeException)"/>
-        public void LogError(string var1, JVMBridgeException var2) => ExecuteOnRemote("error", var1, var2.BridgeInstance);
+        public void LogError(string var1, JVMBridgeException var2) { if (Interlocked.Read(ref _isErrorEnable) != 0) ExecuteOnRemote("error", var1, var2.BridgeInstance); }
         /// <inheritdoc cref="IKNetConnectLogging.LogError(string, object[])"/>
-        public void LogError(string var1, params object[] var2) => ExecuteOnRemote("error", var1, var2.VarArgRebuild(var1));
+        public void LogError(string var1, params object[] var2) { if (Interlocked.Read(ref _isErrorEnable) != 0) ExecuteOnRemote("error", var1, var2.VarArgRebuild(var1)); }
         #endregion
     }
 
