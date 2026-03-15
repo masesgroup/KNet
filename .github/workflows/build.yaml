@@ -5,35 +5,15 @@ name: CI_BUILD
 # Controls when the action will run. Triggers the workflow on push
 # events but only for the master branch
 on:
-  workflow_call:
+  push:
+    # only trigger on branches, not on tags
+    branches: '**'
+    paths-ignore:
+      - 'docs/**'
+  workflow_dispatch:
     inputs:
       UseLastRepositoryBuild:
         description: 'Use latest NuGet packages from JNet'
-        required: false
-        default: false
-        type: boolean
-      ExecuteOnMoreOSes:
-        description: 'Executes tests on more Oses'
-        required: false
-        default: false
-        type: boolean
-      ExecuteOnLargerJDKSet:
-        description: 'Executes tests on more JDK'
-        required: false
-        default: false
-        type: boolean
-      EnableLinuxTests:
-        description: 'Enable tests in Linux'
-        required: false
-        default: false
-        type: boolean
-      EnableWindowsTests:
-        description: 'Enable tests in Windows'
-        required: false
-        default: false
-        type: boolean
-      EnableMacOSTests:
-        description: 'Enable tests in MacOS'
         required: false
         default: false
         type: boolean
@@ -51,33 +31,91 @@ on:
         description: 'Enable .NET process dump'
         required: false
         default: '0'
-        type: string
+        type: choice
+        options:
+          - "0"
+          - "1"
       ProcessDumpType:
         description: '.NET process dump type'
         required: false
         default: '3'
-        type: string
+        type: choice
+        options:
+          - "1"
+          - "2"
+          - "3"
+          - "4"
       EnableVerboseDiagnosticProcessDump:
         description: 'Enables verbose diagnostic logging of the dump process'
         required: false
         default: '0'
-        type: string
-    secrets:
-      actor:
-        required: true
-      GITHUB_TOKEN_INHERITED:
-        required: true
-      JCOBRIDGE_ENCODED:
-        required: true
+        type: choice
+        options:
+          - "0"
+          - "1"
 
 concurrency:
-  group: '${{ github.workflow }}-child-${{ github.event.pull_request.number || github.ref }}'
+  group: '${{ github.workflow }} @ ${{ github.event.pull_request.head.label || github.head_ref || github.ref }}'
   cancel-in-progress: true
 
 # This workflow contains two jobs called "check_changes", "build_windows"
 jobs:
+  # Verify if a build is needed
+  check_changes:
+    name: Check changed files
+    outputs:
+      run_build_windows: ${{ steps.check_files.outputs.run_build_windows || steps.force_execute.outputs.run_build_windows }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Force check on true
+        id: force_execute
+        if: ${{ github.event_name != 'push' }}
+        run: echo "run_build_windows=true" >> $GITHUB_OUTPUT
+      - name: Create modified file list
+        if: ${{ github.event_name == 'push' }}
+        id: get_changed_files
+        uses: masesgroup/retrieve-changed-files@v3
+        with:
+          format: 'csv'
+      - name: Check modified file list
+        if: ${{ github.event_name == 'push' }}
+        id: check_files
+        run: |
+          mapfile -d ',' -t added_modified_files < <(printf '%s,' '${{ steps.get_changed_files.outputs.added_modified }}')
+          for added_modified_file in "${added_modified_files[@]}"; do
+              if [[ $added_modified_file == ".github/workflows/build.yaml"* ]]; then
+                echo "$added_modified_file is myself."
+                echo "run_build_windows=true" >> $GITHUB_OUTPUT
+                break
+              fi
+              if [[ $added_modified_file == "src/container/"* ]]; then
+                echo "$added_modified_file file is under the directory 'src/'."
+                echo "run_build_windows=true" >> $GITHUB_OUTPUT
+                break
+              fi
+              if [[ $added_modified_file == "src/jvm/"* ]]; then
+                echo "$added_modified_file file is under the directory 'src/'."
+                echo "run_build_windows=true" >> $GITHUB_OUTPUT
+                break
+              fi
+              if [[ $added_modified_file == "src/net/"* ]]; then
+                echo "$added_modified_file file is under the directory 'src/'."
+                echo "run_build_windows=true" >> $GITHUB_OUTPUT
+                break
+              fi
+              if [[ $added_modified_file == "tests/"* ]]; then
+                echo "$added_modified_file file is under the directory 'src/'."
+                echo "run_build_windows=true" >> $GITHUB_OUTPUT
+                break
+              fi
+          done
+      - name: Get run_build_windows
+        run: echo "The selected run_build_windows is ${{ steps.check_files.outputs.run_build_windows }}"
+
   # Now run "build_windows"
   build_windows:
+    needs: check_changes
+    if: "always() && needs.check_changes.outputs.run_build_windows == 'true'"
     # The type of runner that the job will run on
     runs-on: windows-2022
 
@@ -111,7 +149,7 @@ jobs:
         if: ${{ inputs.UseLastRepositoryBuild == true }}
         run: gh run download ${{ env.JNET_LAST_RUN }} --name JNetNuGet --repo masesgroup/JNet --dir JNetNuGet
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN_INHERITED }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: List NuGet packages downloaded
         if: ${{ inputs.UseLastRepositoryBuild == true }}
@@ -236,6 +274,8 @@ jobs:
           key: KNet_${{ github.run_number }}_${{ github.run_attempt }}_Nuget_${{ github.sha }}
 
   build_container_knet:
+    needs: check_changes
+    if: "always() && needs.check_changes.outputs.run_build_windows == 'true'"
     runs-on: ubuntu-latest
     outputs:
       GITHUB_REF_NAME_FOR_DOCKER: ${{ env.GITHUB_REF_NAME_FOR_DOCKER }}
@@ -261,7 +301,7 @@ jobs:
         if: ${{ inputs.UseLastRepositoryBuild == true }}
         run: gh run download ${{ env.JNET_LAST_RUN }} --name JNetNuGet --repo masesgroup/JNet --dir JNetNuGet
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN_INHERITED }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: List NuGet packages downloaded
         if: ${{ inputs.UseLastRepositoryBuild == true }}
@@ -312,8 +352,8 @@ jobs:
         uses: docker/login-action@v4
         with:
           registry: ghcr.io
-          username: ${{ secrets.actor }}
-          password: ${{ secrets.GITHUB_TOKEN_INHERITED }}
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Extract metadata (tags, labels) for Docker
         id: meta
@@ -348,63 +388,27 @@ jobs:
           echo "GITHUB_REF_NAME_FOR_DOCKER=$(echo ${{ github.ref_name }} | tr "/" -)" >> $GITHUB_ENV
         shell: bash
 
-  # prepare matrix info
-  prepare_matrix_data:
-    needs: [build_windows, build_container_knet]
-    runs-on: ubuntu-latest
-    outputs:
-      matrix_jdk_vendor: ${{ steps.set-jdk-version.outputs.matrix_jdk_vendor || steps.set-jdk-version-ext.outputs.matrix_jdk_vendor }}
-      matrix_win_os: ${{ steps.set-matrix-win-os.outputs.matrix_win || steps.set-matrix-win-os-ext.outputs.matrix_win }}
-      matrix_linux_os: ${{ steps.set-matrix-linux-os.outputs.matrix_linux || steps.set-matrix-linux-os-ext.outputs.matrix_linux }}
-      matrix_mac_os: ${{ steps.set-matrix-mac-os.outputs.matrix_mac || steps.set-matrix-mac-os-ext.outputs.matrix_mac }}
-    steps:
-      - id: set-jdk-version
-        if: ${{ inputs.ExecuteOnLargerJDKSet == false }}
-        run: echo "matrix_jdk_vendor=[ 'temurin' ]" >> $GITHUB_OUTPUT
-      - id: set-jdk-version-ext
-        if: ${{ inputs.ExecuteOnLargerJDKSet == true }}
-        run: echo "matrix_jdk_vendor=[ 'temurin', 'zulu', 'microsoft', 'corretto', 'oracle' ]" >> $GITHUB_OUTPUT
-      - id: set-matrix-win-os
-        if: ${{ inputs.ExecuteOnMoreOSes == false }}
-        run: echo "matrix_win=[ 'windows-2025' ]" >> $GITHUB_OUTPUT
-      - id: set-matrix-win-os-ext
-        if: ${{ inputs.ExecuteOnMoreOSes == true }}
-        run: echo "matrix_win=[ 'windows-2022', 'windows-2025', 'windows-11-arm' ]" >> $GITHUB_OUTPUT
-      - id: set-matrix-linux-os
-        if: ${{ inputs.ExecuteOnMoreOSes == false }}
-        run: echo "matrix_linux=['ubuntu-24.04']" >> $GITHUB_OUTPUT
-      - id: set-matrix-linux-os-ext
-        if: ${{ inputs.ExecuteOnMoreOSes == true }}
-        run: echo "matrix_linux=[ 'ubuntu-22.04', 'ubuntu-22.04-arm', 'ubuntu-24.04', 'ubuntu-24.04-arm' ]" >> $GITHUB_OUTPUT
-      - id: set-matrix-mac-os
-        if: ${{ inputs.ExecuteOnMoreOSes == false }}
-        run: echo "matrix_mac=[ 'macos-15' ]" >> $GITHUB_OUTPUT
-      - id: set-matrix-mac-os-ext
-        if: ${{ inputs.ExecuteOnMoreOSes == true }}
-        run: echo "matrix_mac=[ 'macos-14', 'macos-15', 'macos-26' ]" >> $GITHUB_OUTPUT
-
   execute_tests_linux:
-    if: ${{ inputs.EnableLinuxTests == true }}
-    needs: prepare_matrix_data
+    needs: [build_windows, build_container_knet]
     services:
       kafka:
         # Private registry image
         image: ghcr.io/${{ github.repository_owner }}/knet:${{ needs.build_container_knet.outputs.GITHUB_REF_NAME_FOR_DOCKER }}
         credentials:
-          username: ${{ secrets.actor }}
-          password: ${{ secrets.GITHUB_TOKEN_INHERITED }}
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
         ports:
           - 9092:9092
         env:
           KNET_DOCKER_RUNNING_MODE: server-standalone
-          JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ENCODED }}
+          JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ENCODED_2_6_6 }}
           
     strategy:
       fail-fast: false
       matrix:
-        os: ${{ fromJSON(needs.prepare_matrix_data.outputs.matrix_linux_os) }}
+        os: [ 'ubuntu-latest' ] #, 'macos-14', 'macos-13' , 'windows-2022' ] # not available services in this runners, checks done in execute_tests_other
         framework: [ 'net8.0', 'net9.0', 'net10.0' ]
-        jdk_vendor: ${{ fromJSON(needs.prepare_matrix_data.outputs.matrix_jdk_vendor) }}
+        jdk_vendor: [ 'temurin', 'microsoft', 'corretto', 'zulu', 'oracle', 'graalvm' ]
         jdk_version: [ '17', '21' ] # only supported LTS versions
         
     runs-on: ${{ matrix.os }}
@@ -416,7 +420,7 @@ jobs:
       DOTNET_CreateDumpVerboseDiagnostics: ${{ inputs.EnableVerboseDiagnosticProcessDump }}
       DOTNET_EnableCrashReport: ${{ inputs.EnableProcessDump }}
       DOTNET_CreateDumpLogToFile: ${{ github.workspace }}/coredump.diagnostic
-      JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ENCODED }}
+      JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ENCODED_2_6_6 }}
       
     steps:
       - name: Restore KNet ${{ matrix.framework }} bin from cache
@@ -440,7 +444,7 @@ jobs:
         with:
           java-version: '${{ matrix.jdk_version }}' # See 'Options' for more details
           distribution: 'graalvm' # See 'Supported distributions' for available options
-          github-token: ${{ secrets.GITHUB_TOKEN_INHERITED }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
 
       - uses: actions/setup-dotnet@v5
         if: ${{ matrix.framework == 'net9.0' }}
@@ -483,14 +487,13 @@ jobs:
           retention-days: 7
 
   execute_tests_windows:
-    if: ${{ inputs.EnableWindowsTests == true }}
-    needs: prepare_matrix_data
+    needs: [build_windows]
     strategy:
       fail-fast: false
       matrix:
-        os: ${{ fromJSON(needs.prepare_matrix_data.outputs.matrix_win_os) }}
+        os: [ 'windows-2022' ] # 'macos-13' removed waiting https://github.com/masesgroup/JNet/issues/518
         framework: [ 'net462', 'net8.0', 'net9.0', 'net10.0' ]
-        jdk_vendor: ${{ fromJSON(needs.prepare_matrix_data.outputs.matrix_jdk_vendor) }}
+        jdk_vendor: [ 'temurin', 'microsoft', 'corretto', 'zulu', 'oracle', 'graalvm' ]
         jdk_version: [ '17', '21' ] # only supported LTS versions
         
     runs-on: ${{ matrix.os }}
@@ -502,7 +505,7 @@ jobs:
       DOTNET_CreateDumpVerboseDiagnostics: ${{ inputs.EnableVerboseDiagnosticProcessDump }}
       DOTNET_EnableCrashReport: ${{ inputs.EnableProcessDump }}
       DOTNET_CreateDumpLogToFile: ${{ github.workspace }}/coredump.diagnostic
-      JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ENCODED }}
+      JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ENCODED_2_6_6 }}
       
     steps:
       - name: Restore KNet ${{ matrix.framework }} bin from cache
@@ -534,7 +537,7 @@ jobs:
         with:
           java-version: '${{ matrix.jdk_version }}' # See 'Options' for more details
           distribution: 'graalvm' # See 'Supported distributions' for available options
-          github-token: ${{ secrets.GITHUB_TOKEN_INHERITED }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
 
       - uses: actions/setup-dotnet@v5
         if: ${{ matrix.framework == 'net10.0' }}
@@ -608,14 +611,13 @@ jobs:
           retention-days: 7
 
   execute_tests_macos:
-    if: ${{ inputs.EnableMacOSTests == true }}
-    needs: prepare_matrix_data
+    needs: [build_windows]
     strategy:
       fail-fast: false
       matrix:
-        os: ${{ fromJSON(needs.prepare_matrix_data.outputs.matrix_mac_os) }}
+        os: [ 'macos-14' ] # 'macos-13' removed waiting https://github.com/masesgroup/JNet/issues/518
         framework: [ 'net8.0', 'net9.0', 'net10.0' ]
-        jdk_vendor: ${{ fromJSON(needs.prepare_matrix_data.outputs.matrix_jdk_vendor) }}
+        jdk_vendor: [ 'temurin', 'microsoft', 'corretto', 'zulu', 'oracle', 'graalvm' ]
         jdk_version: [ '17', '21' ] # only supported LTS versions
         
     runs-on: ${{ matrix.os }}
@@ -627,7 +629,7 @@ jobs:
       DOTNET_CreateDumpVerboseDiagnostics: ${{ inputs.EnableVerboseDiagnosticProcessDump }}
       DOTNET_EnableCrashReport: ${{ inputs.EnableProcessDump }}
       DOTNET_CreateDumpLogToFile: ${{ github.workspace }}/coredump.diagnostic
-      JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ENCODED }}
+      JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ENCODED_2_6_6 }}
       
     steps:
       - name: Restore KNet ${{ matrix.framework }} bin from cache
@@ -659,7 +661,7 @@ jobs:
         with:
           java-version: '${{ matrix.jdk_version }}' # See 'Options' for more details
           distribution: 'graalvm' # See 'Supported distributions' for available options
-          github-token: ${{ secrets.GITHUB_TOKEN_INHERITED }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
 
       - uses: actions/setup-dotnet@v5
         if: ${{ matrix.framework == 'net8.0' }}
@@ -756,4 +758,4 @@ jobs:
           done
           echo "Done"
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN_INHERITED }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
