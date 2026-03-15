@@ -159,7 +159,6 @@ jobs:
       ExecuteOnMoreOSes: ${{ github.event_name == 'schedule' }}
       ExecuteOnLargerJDKSet: ${{ github.ref_name == 'master' || github.event_name == 'schedule' }}
       EnableLinuxTests: true
-      UseSpecialSettings: ${{ inputs.UseSpecialSettings || false }}
       EnableWindowsTests: ${{ inputs.ExecuteOnWindows || github.ref_name == 'master' || github.event_name == 'schedule' }}
       EnableMacOSTests: ${{ inputs.ExecuteOnMacOS || github.event_name == 'schedule' }}
       UseLastRepositoryBuildJNet: ${{ inputs.UseLastRepositoryBuildJNet || false }}
