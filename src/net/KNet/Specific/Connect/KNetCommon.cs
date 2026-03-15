@@ -434,7 +434,7 @@ namespace MASES.KNet.Connect
         }
 
         double _logCheckInterval = 1000;
-        System.Timers.Timer _checkLogTimer;
+        readonly System.Timers.Timer _checkLogTimer;
 
         string _uniqueId = null;
 
@@ -476,7 +476,7 @@ namespace MASES.KNet.Connect
                     Interlocked.Exchange(ref _isWarnEnable, 0);
                     Interlocked.Exchange(ref _isErrorEnable, 0);
                 }
-                else if (_logCheckInterval != value)
+                else if (Math.Abs(_logCheckInterval - value) > double.Epsilon)
                 {
                     _checkLogTimer.Stop();
 
