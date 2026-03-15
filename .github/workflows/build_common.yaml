@@ -1,0 +1,760 @@
+# This is a basic workflow to help you get started with Actions
+
+name: Common build workflow
+
+# Controls when the action will run. Triggers the workflow on push
+# events but only for the master branch
+on:
+  workflow_call:
+    inputs:
+      UseLastRepositoryBuild:
+        description: 'Use latest NuGet packages from JNet'
+        required: false
+        default: false
+        type: boolean
+      ExecuteOnMoreOSes:
+        description: 'Executes tests on more Oses'
+        required: false
+        default: false
+        type: boolean
+      ExecuteOnLargerJDKSet:
+        description: 'Executes tests on more JDK'
+        required: false
+        default: false
+        type: boolean
+      EnableLinuxTests:
+        description: 'Enable tests in Linux'
+        required: false
+        default: false
+        type: boolean
+      EnableWindowsTests:
+        description: 'Enable tests in Windows'
+        required: false
+        default: false
+        type: boolean
+      EnableMacOSTests:
+        description: 'Enable tests in MacOS'
+        required: false
+        default: false
+        type: boolean
+      ForceContinueOnError:
+        description: 'Force continue-on-error'
+        required: false
+        default: false
+        type: boolean
+      UploadServerLogs:
+        description: 'Upload server logs'
+        required: false
+        default: false
+        type: boolean
+      EnableProcessDump:
+        description: 'Enable .NET process dump'
+        required: false
+        default: '0'
+        type: string
+      ProcessDumpType:
+        description: '.NET process dump type'
+        required: false
+        default: '3'
+        type: string
+      EnableVerboseDiagnosticProcessDump:
+        description: 'Enables verbose diagnostic logging of the dump process'
+        required: false
+        default: '0'
+        type: string
+    secrets:
+      actor:
+        required: true
+      GITHUB_TOKEN_INHERITED:
+        required: true
+      JCOBRIDGE_ENCODED:
+        required: true
+
+concurrency:
+  group: '${{ github.workflow }}-child-${{ github.event.pull_request.number || github.ref }}'
+  cancel-in-progress: true
+
+# This workflow contains two jobs called "check_changes", "build_windows"
+jobs:
+  # Now run "build_windows"
+  build_windows:
+    # The type of runner that the job will run on
+    runs-on: windows-2022
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:   
+      # Runs a set of commands using the runners shell
+      # Support longpaths
+      - name: Support long paths
+        run: git config --system core.longpaths true
+
+      - run: Get-PSDrive
+        
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: '1'
+          submodules: 'true'
+
+      - uses: actions/setup-dotnet@v5
+        with:
+          dotnet-version: |
+            9.x
+            10.x
+
+      - name: Get last workflow run of JNet
+        if: ${{ inputs.UseLastRepositoryBuild == true }}
+        shell: bash
+        run: echo "JNET_LAST_RUN=$(curl -sL https://api.github.com/repos/masesgroup/JNet/actions/workflows/build.yaml/runs | jq -r '.workflow_runs[0].id?')" >> $GITHUB_ENV
+
+      - name: Download artifact
+        if: ${{ inputs.UseLastRepositoryBuild == true }}
+        run: gh run download ${{ env.JNET_LAST_RUN }} --name JNetNuGet --repo masesgroup/JNet --dir JNetNuGet
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN_INHERITED }}
+
+      - name: List NuGet packages downloaded
+        if: ${{ inputs.UseLastRepositoryBuild == true }}
+        continue-on-error: ${{ inputs.ForceContinueOnError == true }}
+        shell: cmd
+        run: dir .\JNetNuGet\*nupkg
+
+      - name: Add local repo
+        if: ${{ success() && inputs.UseLastRepositoryBuild == true }}
+        run: dotnet nuget add source --name local "${{ github.workspace }}\JNetNuGet\"
+
+      - name: Pre compile
+        run: dotnet build --no-incremental --configuration Release /p:Platform="Any CPU" /p:NoWarn="0108%3B1030%3B0618" src\net\KNet\KNet.csproj
+        env:
+          GITHUB_SIMPLIFIED_GENERATION: true
+
+      - name: Set up Apache Maven Central
+        uses: actions/setup-java@v5
+        with: # running setup-java again overwrites the settings.xml
+          distribution: temurin
+          java-version: 17
+          cache: 'maven'
+          server-id: ossrh # Value of the distributionManagement/repository/id field of the pom.xml
+          server-username: MAVEN_USERNAME # env variable for username in deploy
+          server-password: MAVEN_CENTRAL_TOKEN # env variable for token in deploy
+          gpg-private-key: ${{ secrets.MAVEN_GPG_PRIVATE_KEY }} # Value of the GPG private key to import
+          gpg-passphrase: MAVEN_GPG_PASSPHRASE # env variable for GPG private key passphrase
+
+      - name: Create Jars
+        run: mvn --file ./src/jvm/knet/pom.xml --no-transfer-progress package
+        env:
+          MAVEN_USERNAME: ${{ secrets.MAVEN_USERNAME }}
+          MAVEN_CENTRAL_TOKEN: ${{ secrets.MAVEN_CENTRAL_TOKEN }}
+          MAVEN_GPG_PASSPHRASE: ${{ secrets.MAVEN_GPG_PASSPHRASE }}
+
+      - name: Compile command line
+        run: dotnet build --no-incremental --configuration Release /p:Platform="Any CPU" /p:NoWarn="0108%3B1030%3B0618" src\net\KNetCLI\KNetCLI.csproj
+
+      - name: Compile KNet Connect
+        run: dotnet build --no-incremental --configuration Release /p:Platform="Any CPU" /p:NoWarn="0108%3B1030%3B0618" src\net\KNetConnect\KNetConnect.csproj
+
+      - name: Compile KNetPS
+        run: dotnet build --no-incremental --configuration Release /p:Platform="Any CPU" /p:NoWarn="0108%3B1030%3B0618" src\net\KNetPS\KNetPS.csproj
+
+      - uses: nuget/setup-nuget@v2.0.1
+        with:
+          nuget-version: '5.x'
+          
+      - run: nuget pack src\net\KNetCLI\KNetCLI.nuspec -OutputDirectory .\bin
+      - run: nuget pack src\net\KNetConnect\KNetConnect.nuspec -OutputDirectory .\bin
+
+      - name: Recompile to create nuget packages
+        run: dotnet build --no-incremental --configuration Release /p:Platform="Any CPU" /p:NoWarn="0108%3B1030%3B0618" src\net\KNet.sln
+          
+      - name: Prepare PowerShell package
+        run: |
+          Copy-Item .\src\net\KNetPS\MASES.KNetPS.psd1 -Destination .\MASES.KNetPS\MASES.KNetPS.psd1 -Force
+          Copy-Item .\src\net\KNetPS\MASES.KNetPS.psm1 -Destination .\MASES.KNetPS\MASES.KNetPS.psm1 -Force
+        shell: pwsh
+    
+      - name: Create PowerShell package
+        run: |
+          $env:DOTNET_CLI_UI_LANGUAGE="en_US"
+          Register-PSRepository -Name Local_Nuget_Feed -SourceLocation $env:GITHUB_WORKSPACE\bin -PublishLocation $env:GITHUB_WORKSPACE\bin -InstallationPolicy Trusted
+          Publish-Module -Path .\MASES.KNetPS -Repository Local_Nuget_Feed -NuGetApiKey 'ABC123'
+        shell: pwsh
+
+      - name: List NuGet packages to avoid download of artifact
+        shell: cmd
+        run: dir .\bin\*nupkg
+
+      - uses: actions/upload-artifact@v7
+        with:
+          name: KNetNuGet
+          path: .\bin\*nupkg
+
+      - name: Compile tests
+        run: dotnet build --no-incremental --configuration Release /p:Platform="Any CPU" /p:NoWarn="0108%3B1030%3B0618" tests\net\KNetTest.sln
+        env:
+          GITHUB_TEST_PREPARATION: true
+
+      - name: Prepare configuration files
+        run: |
+          Copy-Item .github\workflows\support\* -Destination bin\net462\ -Force
+          Copy-Item .github\workflows\support\* -Destination bin\net8.0\ -Force
+          Copy-Item .github\workflows\support\* -Destination bin\net9.0\ -Force
+          Copy-Item .github\workflows\support\* -Destination bin\net10.0\ -Force
+
+      - name: Save KNet net462 bin in cache
+        uses: actions/cache/save@v5
+        with:
+          enableCrossOsArchive: true
+          path: ./bin/net462/
+          key: KNet_${{ github.run_number }}_${{ github.run_attempt }}_net462_bin_${{ github.sha }}
+          
+      - name: Save KNet net8.0 bin in cache
+        uses: actions/cache/save@v5
+        with:
+          enableCrossOsArchive: true
+          path: ./bin/net8.0/
+          key: KNet_${{ github.run_number }}_${{ github.run_attempt }}_net8.0_bin_${{ github.sha }}
+          
+      - name: Save KNet net9.0 bin in cache
+        uses: actions/cache/save@v5
+        with:
+          enableCrossOsArchive: true
+          path: ./bin/net9.0/
+          key: KNet_${{ github.run_number }}_${{ github.run_attempt }}_net9.0_bin_${{ github.sha }}
+
+      - name: Save KNet net10.0 bin in cache
+        uses: actions/cache/save@v5
+        with:
+          enableCrossOsArchive: true
+          path: ./bin/net10.0/
+          key: KNet_${{ github.run_number }}_${{ github.run_attempt }}_net10.0_bin_${{ github.sha }}
+
+      - name: Save KNet NuGet in cache
+        uses: actions/cache/save@v5
+        with:
+          enableCrossOsArchive: true
+          path: ./bin/MASES.KNetCLI.*.nupkg
+          key: KNet_${{ github.run_number }}_${{ github.run_attempt }}_Nuget_${{ github.sha }}
+
+  build_container_knet:
+    runs-on: ubuntu-latest
+    outputs:
+      GITHUB_REF_NAME_FOR_DOCKER: ${{ env.GITHUB_REF_NAME_FOR_DOCKER }}
+    permissions:
+      id-token: write
+      packages: write
+      contents: read
+      attestations: write
+      artifact-metadata: write
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:    
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: '1'
+          submodules: 'true'
+
+      - name: Get last workflow run of JNet
+        if: ${{ inputs.UseLastRepositoryBuild == true }}
+        shell: bash
+        run: echo "JNET_LAST_RUN=$(curl -sL https://api.github.com/repos/masesgroup/JNet/actions/workflows/build.yaml/runs | jq -r '.workflow_runs[0].id?')" >> $GITHUB_ENV
+
+      - name: Download artifact
+        if: ${{ inputs.UseLastRepositoryBuild == true }}
+        run: gh run download ${{ env.JNET_LAST_RUN }} --name JNetNuGet --repo masesgroup/JNet --dir JNetNuGet
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN_INHERITED }}
+
+      - name: List NuGet packages downloaded
+        if: ${{ inputs.UseLastRepositoryBuild == true }}
+        continue-on-error: ${{ inputs.ForceContinueOnError == true }}
+        run: ls -las ./JNetNuGet/*nupkg
+
+      - name: Add local repo
+        if: ${{ success() && inputs.UseLastRepositoryBuild == true }}
+        run: dotnet nuget add source --name local "${{ github.workspace }}/JNetNuGet/"
+
+      - uses: actions/setup-dotnet@v5
+        with:
+          dotnet-version: |
+            9.x
+            10.x
+
+      - name: Pre compile
+        run: dotnet build --no-incremental --configuration Release /p:Platform="Any CPU" /p:NoWarn="0108%3B1030%3B0618" src/net/KNet/KNet.csproj
+        env:
+          GITHUB_SIMPLIFIED_GENERATION: true
+          
+      - name: Set up Apache Maven Central
+        uses: actions/setup-java@v5
+        with: # running setup-java again overwrites the settings.xml
+          distribution: temurin
+          java-version: 17
+          cache: 'maven'
+          server-id: ossrh # Value of the distributionManagement/repository/id field of the pom.xml
+          server-username: MAVEN_USERNAME # env variable for username in deploy
+          server-password: MAVEN_CENTRAL_TOKEN # env variable for token in deploy
+          gpg-private-key: ${{ secrets.MAVEN_GPG_PRIVATE_KEY }} # Value of the GPG private key to import
+          gpg-passphrase: MAVEN_GPG_PASSPHRASE # env variable for GPG private key passphrase
+
+      - name: Create Jars
+        run: mvn --file ./src/jvm/knet/pom.xml --no-transfer-progress package
+        env:
+          MAVEN_USERNAME: ${{ secrets.MAVEN_USERNAME }}
+          MAVEN_CENTRAL_TOKEN: ${{ secrets.MAVEN_CENTRAL_TOKEN }}
+          MAVEN_GPG_PASSPHRASE: ${{ secrets.MAVEN_GPG_PASSPHRASE }}
+        
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v4
+        
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v4
+
+      - name: Login to GitHub Container Registry
+        uses: docker/login-action@v4
+        with:
+          registry: ghcr.io
+          username: ${{ secrets.actor }}
+          password: ${{ secrets.GITHUB_TOKEN_INHERITED }}
+
+      - name: Extract metadata (tags, labels) for Docker
+        id: meta
+        uses: docker/metadata-action@v6
+        with:
+          images: |
+            ghcr.io/${{ github.repository_owner }}/knet
+
+      - name: Build and push
+        id: push
+        uses: docker/build-push-action@v7
+        with:
+          file: ./src/container/DockerfileKNet.linux
+          context: .
+          platforms: linux/amd64,linux/arm64
+          push: true
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
+          provenance: true
+          sbom: true
+
+      - name: Attest GitHub
+        uses: actions/attest-build-provenance@v4
+        id: attest
+        with:
+          subject-name: ghcr.io/${{ github.repository_owner }}/knet
+          subject-digest: ${{ steps.push.outputs.digest }}
+          push-to-registry: true
+
+      - name: Extract branch name
+        run: |
+          echo "GITHUB_REF_NAME_FOR_DOCKER=$(echo ${{ github.ref_name }} | tr "/" -)" >> $GITHUB_ENV
+        shell: bash
+
+  # prepare matrix info
+  prepare_matrix_data:
+    needs: [build_windows, build_container_knet]
+    runs-on: ubuntu-latest
+    outputs:
+      matrix_jdk_vendor: ${{ steps.set-jdk-version.outputs.matrix_jdk_vendor || steps.set-jdk-version-ext.outputs.matrix_jdk_vendor }}
+      matrix_win_os: ${{ steps.set-matrix-win-os.outputs.matrix_win || steps.set-matrix-win-os-ext.outputs.matrix_win }}
+      matrix_linux_os: ${{ steps.set-matrix-linux-os.outputs.matrix_linux || steps.set-matrix-linux-os-ext.outputs.matrix_linux }}
+      matrix_mac_os: ${{ steps.set-matrix-mac-os.outputs.matrix_mac || steps.set-matrix-mac-os-ext.outputs.matrix_mac }}
+    steps:
+      - id: set-jdk-version
+        if: ${{ inputs.ExecuteOnLargerJDKSet == false }}
+        run: echo "matrix_jdk_vendor=[ 'temurin' ]" >> $GITHUB_OUTPUT
+      - id: set-jdk-version-ext
+        if: ${{ inputs.ExecuteOnLargerJDKSet == true }}
+        run: echo "matrix_jdk_vendor=[ 'temurin', 'zulu', 'microsoft', 'corretto', 'oracle' ]" >> $GITHUB_OUTPUT
+      - id: set-matrix-win-os
+        if: ${{ inputs.ExecuteOnMoreOSes == false }}
+        run: echo "matrix_win=[ 'windows-2025' ]" >> $GITHUB_OUTPUT
+      - id: set-matrix-win-os-ext
+        if: ${{ inputs.ExecuteOnMoreOSes == true }}
+        run: echo "matrix_win=[ 'windows-2022', 'windows-2025', 'windows-11-arm' ]" >> $GITHUB_OUTPUT
+      - id: set-matrix-linux-os
+        if: ${{ inputs.ExecuteOnMoreOSes == false }}
+        run: echo "matrix_linux=['ubuntu-24.04']" >> $GITHUB_OUTPUT
+      - id: set-matrix-linux-os-ext
+        if: ${{ inputs.ExecuteOnMoreOSes == true }}
+        run: echo "matrix_linux=[ 'ubuntu-22.04', 'ubuntu-22.04-arm', 'ubuntu-24.04', 'ubuntu-24.04-arm' ]" >> $GITHUB_OUTPUT
+      - id: set-matrix-mac-os
+        if: ${{ inputs.ExecuteOnMoreOSes == false }}
+        run: echo "matrix_mac=[ 'macos-15' ]" >> $GITHUB_OUTPUT
+      - id: set-matrix-mac-os-ext
+        if: ${{ inputs.ExecuteOnMoreOSes == true }}
+        run: echo "matrix_mac=[ 'macos-14', 'macos-15', 'macos-26' ]" >> $GITHUB_OUTPUT
+
+  execute_tests_linux:
+    if: ${{ inputs.EnableLinuxTests == true }}
+    needs: [prepare_matrix_data, build_container_knet]
+    services:
+      kafka:
+        # Private registry image
+        image: ghcr.io/${{ github.repository_owner }}/knet:${{ needs.build_container_knet.outputs.GITHUB_REF_NAME_FOR_DOCKER }}
+        credentials:
+          username: ${{ secrets.actor }}
+          password: ${{ secrets.GITHUB_TOKEN_INHERITED }}
+        ports:
+          - 9092:9092
+        env:
+          KNET_DOCKER_RUNNING_MODE: server-standalone
+          JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ENCODED }}
+          
+    strategy:
+      fail-fast: false
+      matrix:
+        os: ${{ fromJSON(needs.prepare_matrix_data.outputs.matrix_linux_os) }}
+        framework: [ 'net8.0', 'net9.0', 'net10.0' ]
+        jdk_vendor: ${{ fromJSON(needs.prepare_matrix_data.outputs.matrix_jdk_vendor) }}
+        jdk_version: [ '17', '21' ] # only supported LTS versions
+        
+    runs-on: ${{ matrix.os }}
+    env:
+      DOTNET_DbgEnableMiniDump: ${{ inputs.EnableProcessDump }}
+      DOTNET_DbgMiniDumpType: ${{ inputs.ProcessDumpType }}
+      DOTNET_DbgMiniDumpName: ${{ github.workspace }}/coredump.%p
+      DOTNET_CreateDumpDiagnostics: ${{ inputs.EnableProcessDump }}
+      DOTNET_CreateDumpVerboseDiagnostics: ${{ inputs.EnableVerboseDiagnosticProcessDump }}
+      DOTNET_EnableCrashReport: ${{ inputs.EnableProcessDump }}
+      DOTNET_CreateDumpLogToFile: ${{ github.workspace }}/coredump.diagnostic
+      JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ENCODED }}
+      
+    steps:
+      - name: Restore KNet ${{ matrix.framework }} bin from cache
+        uses: actions/cache/restore@v5
+        with:
+          fail-on-cache-miss: true
+          enableCrossOsArchive: true
+          path: ./bin/${{ matrix.framework }}/
+          key: KNet_${{ github.run_number }}_${{ github.run_attempt }}_${{ matrix.framework }}_bin_${{ github.sha }}
+ 
+      - name: Set up JDK distribution
+        if: ${{ matrix.jdk_vendor != 'graalvm' }}
+        uses: actions/setup-java@v5
+        with: # running setup-java again overwrites the settings.xml
+          distribution: ${{ matrix.jdk_vendor }}
+          java-version: ${{ matrix.jdk_version }}
+
+      - name: Set up GraalVM distribution
+        if: ${{ matrix.jdk_vendor == 'graalvm' }}
+        uses: graalvm/setup-graalvm@v1
+        with:
+          java-version: '${{ matrix.jdk_version }}' # See 'Options' for more details
+          distribution: 'graalvm' # See 'Supported distributions' for available options
+          github-token: ${{ secrets.GITHUB_TOKEN_INHERITED }}
+
+      - uses: actions/setup-dotnet@v5
+        if: ${{ matrix.framework == 'net9.0' }}
+        with:
+          dotnet-version: |
+            9.x
+
+      - uses: actions/setup-dotnet@v5
+        if: ${{ matrix.framework == 'net10.0' }}
+        with:
+          dotnet-version: |
+            10.x
+
+      - name: Execute KNetTest on ${{ matrix.os }} with ${{ matrix.jdk_vendor }} ${{ matrix.jdk_version }}
+        continue-on-error: ${{ inputs.ForceContinueOnError == true }}
+        run: dotnet ${{ github.workspace }}/bin/${{ matrix.framework }}/KNetTest.dll -Log4JConfiguration '${{ github.workspace }}/bin/${{ matrix.framework }}/log4j2.yaml' localhost:9092 useConsumeCallback randomizeTopicName
+
+      - name: Execute KNetTest withBigBigExtraValue on ${{ matrix.os }} with ${{ matrix.jdk_vendor }} ${{ matrix.jdk_version }}
+        continue-on-error: ${{ inputs.ForceContinueOnError == true }}
+        run: dotnet ${{ github.workspace }}/bin/${{ matrix.framework }}/KNetTest.dll -Log4JConfiguration '${{ github.workspace }}/bin/${{ matrix.framework }}/log4j2.yaml' localhost:9092 useConsumeCallback randomizeTopicName withBigBigExtraValue
+
+      - name: Execute KNetTest runBuffered on ${{ matrix.os }} with ${{ matrix.jdk_vendor }} ${{ matrix.jdk_version }}
+        continue-on-error: ${{ inputs.ForceContinueOnError == true }}
+        run: dotnet ${{ github.workspace }}/bin/${{ matrix.framework }}/KNetTest.dll -Log4JConfiguration '${{ github.workspace }}/bin/${{ matrix.framework }}/log4j2.yaml' localhost:9092 useConsumeCallback randomizeTopicName runBuffered
+
+      - name: Execute KNetTest runBuffered withBigBigExtraValue on ${{ matrix.os }} with ${{ matrix.jdk_vendor }} ${{ matrix.jdk_version }}
+        continue-on-error: ${{ inputs.ForceContinueOnError == true }}
+        run: dotnet ${{ github.workspace }}/bin/${{ matrix.framework }}/KNetTest.dll -Log4JConfiguration '${{ github.workspace }}/bin/${{ matrix.framework }}/log4j2.yaml' localhost:9092 useConsumeCallback randomizeTopicName runBuffered withBigBigExtraValue
+
+      - name: Execute KNetTestSerDes on ${{ matrix.os }} with ${{ matrix.jdk_vendor }} ${{ matrix.jdk_version }}
+        continue-on-error: ${{ inputs.ForceContinueOnError == true }}
+        shell: pwsh
+        run: dotnet ${{ github.workspace }}/bin/${{ matrix.framework }}/KNetTestSerDes.dll -Log4JConfiguration '${{ github.workspace }}/bin/${{ matrix.framework }}/log4j2.yaml'
+
+      - uses: actions/upload-artifact@v7
+        with:
+          if-no-files-found: ignore
+          name: Crash_tests_${{ matrix.os }}_${{ matrix.framework }}_${{ matrix.jdk_vendor }}_${{ matrix.jdk_version }}
+          path: ${{ github.workspace }}/coredump.*
+          retention-days: 7
+
+  execute_tests_windows:
+    if: ${{ inputs.EnableWindowsTests == true }}
+    needs: prepare_matrix_data
+    strategy:
+      fail-fast: false
+      matrix:
+        os: ${{ fromJSON(needs.prepare_matrix_data.outputs.matrix_win_os) }}
+        framework: [ 'net462', 'net8.0', 'net9.0', 'net10.0' ]
+        jdk_vendor: ${{ fromJSON(needs.prepare_matrix_data.outputs.matrix_jdk_vendor) }}
+        jdk_version: [ '17', '21' ] # only supported LTS versions
+        
+    runs-on: ${{ matrix.os }}
+    env:
+      DOTNET_DbgEnableMiniDump: ${{ inputs.EnableProcessDump }}
+      DOTNET_DbgMiniDumpType: ${{ inputs.ProcessDumpType }}
+      DOTNET_DbgMiniDumpName: ${{ github.workspace }}/coredump.%p
+      DOTNET_CreateDumpDiagnostics: ${{ inputs.EnableProcessDump }}
+      DOTNET_CreateDumpVerboseDiagnostics: ${{ inputs.EnableVerboseDiagnosticProcessDump }}
+      DOTNET_EnableCrashReport: ${{ inputs.EnableProcessDump }}
+      DOTNET_CreateDumpLogToFile: ${{ github.workspace }}/coredump.diagnostic
+      JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ENCODED }}
+      
+    steps:
+      - name: Restore KNet ${{ matrix.framework }} bin from cache
+        uses: actions/cache/restore@v5
+        with:
+          fail-on-cache-miss: true
+          enableCrossOsArchive: true
+          path: ./bin/${{ matrix.framework }}/
+          key: KNet_${{ github.run_number }}_${{ github.run_attempt }}_${{ matrix.framework }}_bin_${{ github.sha }}
+
+      - name: Restore Nuget from cache
+        uses: actions/cache/restore@v5
+        with:
+          fail-on-cache-miss: true
+          enableCrossOsArchive: true
+          path: ./bin/MASES.KNetCLI.*.nupkg
+          key: KNet_${{ github.run_number }}_${{ github.run_attempt }}_Nuget_${{ github.sha }}
+
+      - name: Set up JDK distribution
+        if: ${{ matrix.jdk_vendor != 'graalvm' }}
+        uses: actions/setup-java@v5
+        with: # running setup-java again overwrites the settings.xml
+          distribution: ${{ matrix.jdk_vendor }}
+          java-version: ${{ matrix.jdk_version }}
+
+      - name: Set up GraalVM distribution
+        if: ${{ matrix.jdk_vendor == 'graalvm' }}
+        uses: graalvm/setup-graalvm@v1
+        with:
+          java-version: '${{ matrix.jdk_version }}' # See 'Options' for more details
+          distribution: 'graalvm' # See 'Supported distributions' for available options
+          github-token: ${{ secrets.GITHUB_TOKEN_INHERITED }}
+
+      - uses: actions/setup-dotnet@v5
+        if: ${{ matrix.framework == 'net10.0' }}
+        with:
+          dotnet-version: |
+            10.x
+
+      - name: Download Procdump and prepare # see https://gist.github.com/Sedeniono/e6d6504e3bf0645937852ee5681ef9ee and https://learn.microsoft.com/it-it/sysinternals/downloads/procdump
+        if: ${{ inputs.EnableProcessDump == 1 }}
+        continue-on-error: true
+        run: |
+          C:\msys64\usr\bin\wget.exe https://download.sysinternals.com/files/Procdump.zip
+          Expand-Archive -LiteralPath '${{ github.workspace }}\Procdump.zip' -DestinationPath ${{ github.workspace }}\Procdump -Force
+          dir .\Procdump
+          ${{ github.workspace }}\Procdump\procdump.exe -accepteula
+          mkdir CrashDumpsDir
+          ${{ github.workspace }}\Procdump\procdump.exe -ma -i ${{ github.workspace }}\CrashDumpsDir
+
+      - name: Use latest version of KNetCLI
+        run: dotnet tool update -g MASES.KNetCLI --source ${{ github.workspace }}\bin
+
+      - name: Disable CET for dotnet process
+        run: |
+          reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\knet.exe" /v MitigationOptions /t REG_BINARY /d "0000000000000000000000000000002000" /f
+          Get-ProcessMitigation -Name "knet.exe"
+
+      - name: Start Kafka and execute KNetTest on ${{ matrix.os }} with ${{ matrix.jdk_vendor }} ${{ matrix.jdk_version }}
+        continue-on-error: ${{ inputs.ForceContinueOnError == true }}
+        shell: pwsh
+        run: |
+          knet storagetool format --standalone --ignore-formatted -t 6oTi4odMSVSmroqyy5rubw -c ${{ github.workspace }}/bin/${{ matrix.framework }}/windows_server.properties
+          New-Item -Path "${{ github.workspace }}" -Name "logfiles" -ItemType Directory
+          Start-Process -RSE ${{ github.workspace }}/logfiles/PWSH_kafka_err.log -RSO ${{ github.workspace }}\logfiles\PWSH_kafka_out.log -FilePath knet -ArgumentList ( 'kafkastart', '-LogPath', '${{ github.workspace }}\logfiles\', '-Log4JConfiguration', '${{ github.workspace }}\bin\${{ matrix.framework }}\log4j2.yaml', '${{ github.workspace }}\bin\${{ matrix.framework }}\windows_server.properties' )
+          ${{ github.workspace }}\bin\${{ matrix.framework }}\KNetTest.exe -Log4JConfiguration '${{ github.workspace }}\bin\${{ matrix.framework }}\log4j2.yaml' localhost:9092 useConsumeCallback randomizeTopicName
+          ${{ github.workspace }}\bin\${{ matrix.framework }}\KNetTest.exe -Log4JConfiguration '${{ github.workspace }}\bin\${{ matrix.framework }}\log4j2.yaml' localhost:9092 useConsumeCallback randomizeTopicName withExtraValue
+          ${{ github.workspace }}\bin\${{ matrix.framework }}\KNetTest.exe -Log4JConfiguration '${{ github.workspace }}\bin\${{ matrix.framework }}\log4j2.yaml' localhost:9092 useConsumeCallback randomizeTopicName runBuffered
+          ${{ github.workspace }}\bin\${{ matrix.framework }}\KNetTest.exe -Log4JConfiguration '${{ github.workspace }}\bin\${{ matrix.framework }}\log4j2.yaml' localhost:9092 useConsumeCallback randomizeTopicName runBuffered withExtraValue
+
+      #- name: Start Kafka and execute KNetTest on ${{ matrix.os }} with ${{ matrix.jdk_vendor }} ${{ matrix.jdk_version }}
+      #  if: ${{ matrix.os == 'windows-2022' }}
+      #  shell: pwsh
+      #  run: |
+      #    ${{ github.workspace }}/binCLI/${{ matrix.framework }}/MASES.KNetCLI.exe storagetool format --standalone --ignore-formatted -t 6oTi4odMSVSmroqyy5rubw -c ${{ github.workspace }}/bin/${{ matrix.framework }}/windows_server.properties
+      #    New-Item -Path "${{ github.workspace }}" -Name "logfiles" -ItemType Directory
+      #    Start-Process -RSE ${{ github.workspace }}/logfiles/PWSH_kafka_err.log -RSO ${{ github.workspace }}\logfiles\PWSH_kafka_out.log -FilePath ${{ github.workspace }}\binCLI\${{ matrix.framework }}\MASES.KNetCLI.exe -ArgumentList ( 'kafkastart', '-LogPath', '${{ github.workspace }}\logfiles\', '-Log4JConfiguration', '${{ github.workspace }}\bin\${{ matrix.framework }}\log4j2.yaml', '${{ github.workspace }}\bin\${{ matrix.framework }}\windows_server.properties' )
+      #    ${{ github.workspace }}\bin\${{ matrix.framework }}/KNetTest.exe localhost:9092 useConsumeCallback randomizeTopicName
+      #    ${{ github.workspace }}\bin\${{ matrix.framework }}/KNetTest.exe localhost:9092 useConsumeCallback randomizeTopicName withExtraValue
+      #    ${{ github.workspace }}\bin\${{ matrix.framework }}/KNetTest.exe localhost:9092 useConsumeCallback randomizeTopicName runBuffered
+      #    ${{ github.workspace }}\bin\${{ matrix.framework }}/KNetTest.exe localhost:9092 useConsumeCallback randomizeTopicName runBuffered withExtraValue
+
+      - if: ${{ failure() || cancelled() }}
+        run: Get-PSDrive
+
+      - name: Execute KNetTestSerDes on ${{ matrix.os }} with ${{ matrix.jdk_vendor }} ${{ matrix.jdk_version }}
+        shell: pwsh
+        run: ${{ github.workspace }}\bin\${{ matrix.framework }}\KNetTestSerDes.exe -Log4JConfiguration '${{ github.workspace }}\bin\${{ matrix.framework }}\log4j2.yaml'
+
+      - uses: actions/upload-artifact@v7
+        with:
+          if-no-files-found: ignore
+          name: Crash_tests_${{ matrix.os }}_${{ matrix.framework }}_${{ matrix.jdk_vendor }}_${{ matrix.jdk_version }}
+          path: .\CrashDumpsDir\*
+          retention-days: 7
+
+      - uses: actions/upload-artifact@v7
+        if: ${{ inputs.UploadServerLogs == true }}
+        with:
+          if-no-files-found: ignore
+          name: KNet_Server_${{ matrix.os }}_${{ matrix.framework }}_${{ matrix.jdk_vendor }}_${{ matrix.jdk_version }}_${{ matrix.buffered }}_${{ matrix.extraValue }}
+          path: ${{ github.workspace }}/logfiles/
+          retention-days: 7
+
+  execute_tests_macos:
+    if: ${{ inputs.EnableMacOSTests == true }}
+    needs: prepare_matrix_data
+    strategy:
+      fail-fast: false
+      matrix:
+        os: ${{ fromJSON(needs.prepare_matrix_data.outputs.matrix_mac_os) }}
+        framework: [ 'net8.0', 'net9.0', 'net10.0' ]
+        jdk_vendor: ${{ fromJSON(needs.prepare_matrix_data.outputs.matrix_jdk_vendor) }}
+        jdk_version: [ '17', '21' ] # only supported LTS versions
+        
+    runs-on: ${{ matrix.os }}
+    env:
+      DOTNET_DbgEnableMiniDump: ${{ inputs.EnableProcessDump }}
+      DOTNET_DbgMiniDumpType: ${{ inputs.ProcessDumpType }}
+      DOTNET_DbgMiniDumpName: ${{ github.workspace }}/coredump.%p
+      DOTNET_CreateDumpDiagnostics: ${{ inputs.EnableProcessDump }}
+      DOTNET_CreateDumpVerboseDiagnostics: ${{ inputs.EnableVerboseDiagnosticProcessDump }}
+      DOTNET_EnableCrashReport: ${{ inputs.EnableProcessDump }}
+      DOTNET_CreateDumpLogToFile: ${{ github.workspace }}/coredump.diagnostic
+      JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ENCODED }}
+      
+    steps:
+      - name: Restore KNet ${{ matrix.framework }} bin from cache
+        uses: actions/cache/restore@v5
+        with:
+          fail-on-cache-miss: true
+          enableCrossOsArchive: true
+          path: ./bin/${{ matrix.framework }}/
+          key: KNet_${{ github.run_number }}_${{ github.run_attempt }}_${{ matrix.framework }}_bin_${{ github.sha }}
+
+      - name: Restore Nuget from cache
+        uses: actions/cache/restore@v5
+        with:
+          fail-on-cache-miss: true
+          enableCrossOsArchive: true
+          path: ./bin/MASES.KNetCLI.*.nupkg
+          key: KNet_${{ github.run_number }}_${{ github.run_attempt }}_Nuget_${{ github.sha }}
+
+      - name: Set up JDK distribution
+        if: ${{ matrix.jdk_vendor != 'graalvm' }}
+        uses: actions/setup-java@v5
+        with: # running setup-java again overwrites the settings.xml
+          distribution: ${{ matrix.jdk_vendor }}
+          java-version: ${{ matrix.jdk_version }}
+
+      - name: Set up GraalVM distribution
+        if: ${{ matrix.jdk_vendor == 'graalvm' }}
+        uses: graalvm/setup-graalvm@v1
+        with:
+          java-version: '${{ matrix.jdk_version }}' # See 'Options' for more details
+          distribution: 'graalvm' # See 'Supported distributions' for available options
+          github-token: ${{ secrets.GITHUB_TOKEN_INHERITED }}
+
+      - uses: actions/setup-dotnet@v5
+        if: ${{ matrix.framework == 'net8.0' }}
+        with:
+          dotnet-version: |
+            8.x
+
+      - uses: actions/setup-dotnet@v5
+        if: ${{ matrix.framework == 'net9.0' }}
+        with:
+          dotnet-version: |
+            9.x
+
+      - uses: actions/setup-dotnet@v5
+        if: ${{ matrix.framework == 'net10.0' }}
+        with:
+          dotnet-version: |
+            10.x
+
+      - name: Use latest version of KNetCLI
+        run: dotnet tool update -g MASES.KNetCLI --source ${{ github.workspace }}/bin
+
+      - name: Prepare Kafka on ${{ matrix.os }} with ${{ matrix.jdk_vendor }} ${{ matrix.jdk_version }}
+        run: knet storagetool format --standalone --ignore-formatted -t 6oTi4odMSVSmroqyy5rubw -c ${{ github.workspace }}/bin/${{ matrix.framework }}/server.properties
+
+      - name: Start Kafka on ${{ matrix.os }} with ${{ matrix.jdk_vendor }} ${{ matrix.jdk_version }}
+        shell: pwsh
+        run: |
+          New-Item -Path "${{ github.workspace }}" -Name "logfiles" -ItemType Directory
+          Start-Process -RSE ${{ github.workspace }}/logfiles/PWSH_kafka_err.log -RSO ${{ github.workspace }}/logfiles/PWSH_kafka_out.log -FilePath knet -ArgumentList ( 'kafkastart', '-LogPath', '${{ github.workspace }}/logfiles/', '-Log4JConfiguration', '${{ github.workspace }}/bin/${{ matrix.framework }}/log4j2.yaml', '${{ github.workspace }}/bin/${{ matrix.framework }}/server.properties' )
+
+      - name: Execute KNetTest on ${{ matrix.os }} with ${{ matrix.jdk_vendor }} ${{ matrix.jdk_version }}
+        continue-on-error: ${{ inputs.ForceContinueOnError == true }}
+        shell: pwsh
+        run: dotnet ${{ github.workspace }}/bin/${{ matrix.framework }}/KNetTest.dll -Log4JConfiguration '${{ github.workspace }}/bin/${{ matrix.framework }}/log4j2.yaml' localhost:9092 useConsumeCallback randomizeTopicName
+
+      - name: Execute KNetTest withBigBigExtraValue on ${{ matrix.os }} with ${{ matrix.jdk_vendor }} ${{ matrix.jdk_version }}
+        continue-on-error: ${{ inputs.ForceContinueOnError == true }}
+        shell: pwsh
+        run: dotnet ${{ github.workspace }}/bin/${{ matrix.framework }}/KNetTest.dll -Log4JConfiguration '${{ github.workspace }}/bin/${{ matrix.framework }}/log4j2.yaml' localhost:9092 useConsumeCallback randomizeTopicName withBigBigExtraValue
+
+      - name: Execute KNetTest runBuffered on ${{ matrix.os }} with ${{ matrix.jdk_vendor }} ${{ matrix.jdk_version }}
+        continue-on-error: ${{ inputs.ForceContinueOnError == true }}
+        shell: pwsh
+        run: dotnet ${{ github.workspace }}/bin/${{ matrix.framework }}/KNetTest.dll -Log4JConfiguration '${{ github.workspace }}/bin/${{ matrix.framework }}/log4j2.yaml' localhost:9092 useConsumeCallback randomizeTopicName runBuffered
+
+      - name: Execute KNetTest runBuffered withBigBigExtraValue on ${{ matrix.os }} with ${{ matrix.jdk_vendor }} ${{ matrix.jdk_version }}
+        continue-on-error: ${{ inputs.ForceContinueOnError == true }}
+        shell: pwsh
+        run: dotnet ${{ github.workspace }}/bin/${{ matrix.framework }}/KNetTest.dll -Log4JConfiguration '${{ github.workspace }}/bin/${{ matrix.framework }}/log4j2.yaml' localhost:9092 useConsumeCallback randomizeTopicName runBuffered withBigBigExtraValue
+
+      - name: Execute KNetTestSerDes on ${{ matrix.os }} with ${{ matrix.jdk_vendor }} ${{ matrix.jdk_version }}
+        continue-on-error: ${{ inputs.ForceContinueOnError == true }}
+        shell: pwsh
+        run: dotnet ${{ github.workspace }}/bin/${{ matrix.framework }}/KNetTestSerDes.dll -Log4JConfiguration '${{ github.workspace }}/bin/${{ matrix.framework }}/log4j2.yaml'
+
+      - uses: actions/upload-artifact@v7
+        with:
+          if-no-files-found: ignore
+          name: Crash_tests_${{ matrix.os }}_${{ matrix.framework }}_${{ matrix.jdk_vendor }}_${{ matrix.jdk_version }}
+          path: ${{ github.workspace }}/coredump.*
+          retention-days: 7
+
+      - uses: actions/upload-artifact@v7
+        if: ${{ inputs.UploadServerLogs == true }}
+        with:
+          if-no-files-found: ignore
+          name: KNet_Server_${{ matrix.os }}_${{ matrix.framework }}_${{ matrix.jdk_vendor }}_${{ matrix.jdk_version }}_${{ matrix.buffered }}_${{ matrix.extraValue }}
+          path: ${{ github.workspace }}/logfiles/
+          retention-days: 7
+
+  final_cleanup:
+    needs: [ execute_tests_linux, execute_tests_windows, execute_tests_macos ]
+    if: "always()"
+    runs-on: ubuntu-latest
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: '1'
+
+      - name: Clear caches
+        run: |
+          gh extension install actions/gh-actions-cache
+          echo "Fetching list of cache key"
+          cacheKeysForPR=$(gh actions-cache list --key KNet_${{ github.run_number }}_${{ github.run_attempt }} | cut -f 1 )
+          ## Setting this to not fail the workflow while deleting cache keys.
+          set +e
+          echo "Deleting caches..."
+          for cacheKey in $cacheKeysForPR
+          do
+              gh actions-cache delete $cacheKey --confirm
+          done
+          echo "Done"
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN_INHERITED }}
