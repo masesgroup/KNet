@@ -92,17 +92,17 @@ jobs:
   check_changes:
     name: Check changed files
     outputs:
-      run_build_windows: ${{ steps.check_files.outputs.run_build_windows || steps.force_execute.outputs.run_build_windows }}
+      run_build: ${{ steps.check_files.outputs.run_build || steps.force_execute.outputs.run_build }}
     runs-on: ubuntu-latest
     steps:
       - name: Force check on true
         id: force_execute
         if: ${{ github.event_name != 'push' }}
-        run: echo "run_build_windows=true" >> $GITHUB_OUTPUT
+        run: echo "run_build=true" >> $GITHUB_OUTPUT
       - name: Create modified file list
         if: ${{ github.event_name == 'push' }}
         id: get_changed_files
-        uses: masesgroup/retrieve-changed-files@v3
+        uses: masesgroup/retrieve-changed-files@v4
         with:
           format: 'csv'
       - name: Check modified file list
@@ -113,37 +113,37 @@ jobs:
           for added_modified_file in "${added_modified_files[@]}"; do
               if [[ $added_modified_file == ".github/workflows/build.yaml"* ]]; then
                 echo "$added_modified_file is myself."
-                echo "run_build_windows=true" >> $GITHUB_OUTPUT
+                echo "run_build=true" >> $GITHUB_OUTPUT
                 break
               fi
               if [[ $added_modified_file == ".github/workflows/build_common.yaml"* ]]; then
                 echo "$added_modified_file is myself."
-                echo "run_build_windows=true" >> $GITHUB_OUTPUT
+                echo "run_build=true" >> $GITHUB_OUTPUT
                 break
               fi
               if [[ $added_modified_file == "src/container/"* ]]; then
                 echo "$added_modified_file file is under the directory 'src/'."
-                echo "run_build_windows=true" >> $GITHUB_OUTPUT
+                echo "run_build=true" >> $GITHUB_OUTPUT
                 break
               fi
               if [[ $added_modified_file == "src/jvm/"* ]]; then
                 echo "$added_modified_file file is under the directory 'src/'."
-                echo "run_build_windows=true" >> $GITHUB_OUTPUT
+                echo "run_build=true" >> $GITHUB_OUTPUT
                 break
               fi
               if [[ $added_modified_file == "src/net/"* ]]; then
                 echo "$added_modified_file file is under the directory 'src/'."
-                echo "run_build_windows=true" >> $GITHUB_OUTPUT
+                echo "run_build=true" >> $GITHUB_OUTPUT
                 break
               fi
               if [[ $added_modified_file == "tests/"* ]]; then
                 echo "$added_modified_file file is under the directory 'src/'."
-                echo "run_build_windows=true" >> $GITHUB_OUTPUT
+                echo "run_build=true" >> $GITHUB_OUTPUT
                 break
               fi
           done
-      - name: Get run_build_windows
-        run: echo "The selected run_build_windows is ${{ steps.check_files.outputs.run_build_windows }}"
+      - name: Get run_build
+        run: echo "The selected run_build is ${{ steps.check_files.outputs.run_build }}"
 
   build:
     needs: check_changes
