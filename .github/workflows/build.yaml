@@ -161,9 +161,7 @@ jobs:
       EnableLinuxTests: true
       EnableWindowsTests: ${{ inputs.ExecuteOnWindows || github.ref_name == 'master' || github.event_name == 'schedule' }}
       EnableMacOSTests: ${{ inputs.ExecuteOnMacOS || github.event_name == 'schedule' }}
-      UseLastRepositoryBuildJNet: ${{ inputs.UseLastRepositoryBuildJNet || false }}
-      UseLastRepositoryBuildKNet: ${{ inputs.UseLastRepositoryBuildKNet || false }}
-      UseKNetCompactedReplicator: ${{ inputs.UseKNetCompactedReplicator || false }}
+      UseLastRepositoryBuild: ${{ inputs.UseLastRepositoryBuild || false }}
       ForceContinueOnError: ${{ inputs.ForceContinueOnError || false }}
       UploadServerLogs: ${{ inputs.ForceContinueOnError || false }}
       EnableProcessDump: ${{ inputs.EnableProcessDump || '0' }}
