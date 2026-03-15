@@ -467,7 +467,7 @@ namespace MASES.KNet.Connect
             get => _logCheckInterval;
             set
             {
-                if (value == 0)
+                if (value <= 0)
                 {
                     _checkLogTimer.Stop();
                     Interlocked.Exchange(ref _isTraceEnable, 0);
@@ -584,7 +584,7 @@ namespace MASES.KNet.Connect
         /// <inheritdoc cref="IKNetConnectLogging.LogTrace(string)"/>
         public void LogTrace(string var1)
         {
-            if (_logCheckInterval == 0
+            if (_logCheckInterval <= 0
                 || Interlocked.Read(ref _isTraceEnable) != 0)
             {
                 ExecuteOnRemote("trace", var1);
@@ -593,7 +593,7 @@ namespace MASES.KNet.Connect
         /// <inheritdoc cref="IKNetConnectLogging.LogTrace(string, JVMBridgeException)"/>
         public void LogTrace(string var1, JVMBridgeException var2)
         {
-            if (_logCheckInterval == 0
+            if (_logCheckInterval <= 0
                 || Interlocked.Read(ref _isTraceEnable) != 0)
             {
                 ExecuteOnRemote("trace", var1, var2.BridgeInstance);
@@ -602,7 +602,7 @@ namespace MASES.KNet.Connect
         /// <inheritdoc cref="IKNetConnectLogging.LogTrace(string, object[])"/>
         public void LogTrace(string var1, params object[] var2)
         {
-            if (_logCheckInterval == 0
+            if (_logCheckInterval <= 0
                 || Interlocked.Read(ref _isTraceEnable) != 0)
             {
                 ExecuteOnRemote("trace", var2.VarArgRebuild(var1));
@@ -615,7 +615,7 @@ namespace MASES.KNet.Connect
         /// <inheritdoc cref="IKNetConnectLogging.LogDebug(string)"/>
         public void LogDebug(string var1)
         {
-            if (_logCheckInterval == 0
+            if (_logCheckInterval <= 0
                 || Interlocked.Read(ref _isDebugEnable) != 0)
             {
                 ExecuteOnRemote("debug", var1);
@@ -624,7 +624,7 @@ namespace MASES.KNet.Connect
         /// <inheritdoc cref="IKNetConnectLogging.LogDebug(string, JVMBridgeException)"/>
         public void LogDebug(string var1, JVMBridgeException var2)
         {
-            if (_logCheckInterval == 0
+            if (_logCheckInterval <= 0
                 || Interlocked.Read(ref _isDebugEnable) != 0)
             {
                 ExecuteOnRemote("debug", var1, var2.BridgeInstance);
@@ -633,7 +633,7 @@ namespace MASES.KNet.Connect
         /// <inheritdoc cref="IKNetConnectLogging.LogDebug(string, object[])"/>
         public void LogDebug(string var1, params object[] var2)
         {
-            if (_logCheckInterval == 0
+            if (_logCheckInterval <= 0
                 || Interlocked.Read(ref _isDebugEnable) != 0)
             {
                 ExecuteOnRemote("debug", var1, var2.VarArgRebuild(var1));
@@ -646,7 +646,7 @@ namespace MASES.KNet.Connect
         /// <inheritdoc cref="IKNetConnectLogging.LogInfo(string)"/>
         public void LogInfo(string var1)
         {
-            if (_logCheckInterval == 0
+            if (_logCheckInterval <= 0
                 || Interlocked.Read(ref _isInfoEnable) != 0)
             {
                 ExecuteOnRemote("info", var1);
@@ -655,7 +655,7 @@ namespace MASES.KNet.Connect
         /// <inheritdoc cref="IKNetConnectLogging.LogInfo(string, JVMBridgeException)"/>
         public void LogInfo(string var1, JVMBridgeException var2)
         {
-            if (_logCheckInterval == 0
+            if (_logCheckInterval <= 0
                 || Interlocked.Read(ref _isInfoEnable) != 0)
             {
                 ExecuteOnRemote("info", var1, var2.BridgeInstance);
@@ -664,7 +664,7 @@ namespace MASES.KNet.Connect
         /// <inheritdoc cref="IKNetConnectLogging.LogInfo(string, object[])"/>
         public void LogInfo(string var1, params object[] var2)
         {
-            if (_logCheckInterval == 0
+            if (_logCheckInterval <= 0
                 || Interlocked.Read(ref _isInfoEnable) != 0)
             {
                 ExecuteOnRemote("info", var1, var2.VarArgRebuild(var1));
@@ -677,7 +677,7 @@ namespace MASES.KNet.Connect
         /// <inheritdoc cref="IKNetConnectLogging.LogWarn(string)"/>
         public void LogWarn(string var1)
         {
-            if (_logCheckInterval == 0
+            if (_logCheckInterval <= 0
                 || Interlocked.Read(ref _isWarnEnable) != 0)
             {
                 ExecuteOnRemote("warn", var1);
@@ -686,7 +686,7 @@ namespace MASES.KNet.Connect
         /// <inheritdoc cref="IKNetConnectLogging.LogWarn(string, JVMBridgeException)"/>
         public void LogWarn(string var1, JVMBridgeException var2)
         {
-            if (_logCheckInterval == 0
+            if (_logCheckInterval <= 0
                 || Interlocked.Read(ref _isWarnEnable) != 0)
             {
                 ExecuteOnRemote("warn", var1, var2.BridgeInstance);
@@ -695,7 +695,7 @@ namespace MASES.KNet.Connect
         /// <inheritdoc cref="IKNetConnectLogging.LogWarn(string, object[])"/>
         public void LogWarn(string var1, params object[] var2)
         {
-            if (_logCheckInterval == 0
+            if (_logCheckInterval <= 0
                 || Interlocked.Read(ref _isWarnEnable) != 0)
             {
                 ExecuteOnRemote("warn", var1, var2.VarArgRebuild(var1));
@@ -708,7 +708,7 @@ namespace MASES.KNet.Connect
         /// <inheritdoc cref="IKNetConnectLogging.LogError(string)"/>
         public void LogError(string var1)
         {
-            if (_logCheckInterval == 0
+            if (_logCheckInterval <= 0
                 || Interlocked.Read(ref _isErrorEnable) != 0)
             {
                 ExecuteOnRemote("error", var1);
@@ -717,7 +717,7 @@ namespace MASES.KNet.Connect
         /// <inheritdoc cref="IKNetConnectLogging.LogError(string, JVMBridgeException)"/>
         public void LogError(string var1, JVMBridgeException var2)
         {
-            if (_logCheckInterval == 0
+            if (_logCheckInterval <= 0
                 || Interlocked.Read(ref _isErrorEnable) != 0)
             {
                 ExecuteOnRemote("error", var1, var2.BridgeInstance);
@@ -726,7 +726,7 @@ namespace MASES.KNet.Connect
         /// <inheritdoc cref="IKNetConnectLogging.LogError(string, object[])"/>
         public void LogError(string var1, params object[] var2)
         {
-            if (_logCheckInterval == 0
+            if (_logCheckInterval <= 0
                 || Interlocked.Read(ref _isErrorEnable) != 0)
             {
                 ExecuteOnRemote("error", var1, var2.VarArgRebuild(var1));
