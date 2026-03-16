@@ -36,7 +36,7 @@ jobs:
         uses: peter-evans/create-pull-request@v8
         with:
           branch-suffix: short-commit-hash
-          add-paths: *.*
+          add-paths: ./*.*
           commit-message: Update copyright from ${{ inputs.CurrentYear }} to ${{ inputs.NewYear }}
           title: Update copyright from ${{ inputs.CurrentYear }} to ${{ inputs.NewYear }}
           body: |
