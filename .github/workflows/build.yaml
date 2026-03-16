@@ -157,8 +157,8 @@ jobs:
       artifact-metadata: write
     uses: ./.github/workflows/build_common.yaml
     with:
-      ExecuteOnMoreOSes: ${{ github.event_name == 'schedule' }}
-      ExecuteOnLargerJDKSet: ${{ github.ref_name == 'master' || github.event_name == 'schedule' }}
+      ExecuteOnMoreOSes: ${{ inputs.ExecuteOnMoreOSes || github.event_name == 'schedule' }}
+      ExecuteOnLargerJDKSet: ${{ inputs.ExecuteOnLargerJDKSet || github.ref_name == 'master' || github.event_name == 'schedule' }}
       EnableLinuxTests: true
       EnableWindowsTests: ${{ inputs.ExecuteOnWindows || github.ref_name == 'master' || github.event_name == 'schedule' }}
       EnableMacOSTests: ${{ inputs.ExecuteOnMacOS || github.event_name == 'schedule' }}
