@@ -52,7 +52,7 @@ namespace MASES.KNet.Streams.State
             {
                 if (input is IJavaObject obj)
                 {
-                    return new KeyValue<K, V, TJVMK, TJVMV>(factory,
+                    return new KeyValue<K, V, TJVMK, TJVMV>(_factory,
                                                             new KeyValueSupport<TJVMK, TJVMV>(obj),
                                                             keySerDes, valueSerDes, true);
                 }
@@ -136,16 +136,16 @@ namespace MASES.KNet.Streams.State
         /// <inheritdoc/>
         protected sealed override object GetEnumerator(bool isAsync, bool usePrefetech, CancellationToken cancellationToken = default)
         {
-            IGenericSerDesFactory factory = Factory;
-            _keySerDes ??= factory?.BuildKeySerDes<K, TJVMK>();
-            _valueSerDes ??= factory?.BuildValueSerDes<V, TJVMV>();
+            IGenericSerDesFactory _factory = Factory;
+            _keySerDes ??= _factory?.BuildKeySerDes<K, TJVMK>();
+            _valueSerDes ??= _factory?.BuildValueSerDes<V, TJVMV>();
 #if NET7_0_OR_GREATER
             if (usePrefetech)
             {
-                return new PrefetchableLocalEnumerator(factory, _iterator.BridgeInstance, _keySerDes, _valueSerDes, isAsync, cancellationToken);
+                return new PrefetchableLocalEnumerator(_factory, _iterator.BridgeInstance, _keySerDes, _valueSerDes, isAsync, cancellationToken);
             }
 #endif
-            return new StandardLocalEnumerator(factory, _iterator.BridgeInstance, _keySerDes, _valueSerDes);
+            return new StandardLocalEnumerator(_factory, _iterator.BridgeInstance, _keySerDes, _valueSerDes);
         }
 
         /// <summary>
