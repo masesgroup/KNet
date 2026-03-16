@@ -44,7 +44,7 @@ namespace MASES.KNet.Template.KNetConnect
         const string FILENAME_FIELD = "filename";
         const string POSITION_FIELD = "position";
 
-        const bool useSourceOffset = false;
+        static bool useSourceOffset = false;
 
         private long lineOffset = 0L;
 

@@ -51,7 +51,7 @@ namespace MASES.KNet.Streams.State
             {
                 if (input is IJavaObject obj)
                 {
-                    return new TimestampedWindowedKeyValue<K, V, TJVMK, TJVMV>(factory, new KeyValueSupport<Org.Apache.Kafka.Streams.Kstream.Windowed<TJVMK>, Org.Apache.Kafka.Streams.State.ValueAndTimestamp<TJVMV>>(obj));
+                    return new TimestampedWindowedKeyValue<K, V, TJVMK, TJVMV>(_factory, new KeyValueSupport<Org.Apache.Kafka.Streams.Kstream.Windowed<TJVMK>, Org.Apache.Kafka.Streams.State.ValueAndTimestamp<TJVMV>>(obj));
                 }
                 throw new InvalidCastException($"input is not a valid IJavaObject");
             }
@@ -120,14 +120,14 @@ namespace MASES.KNet.Streams.State
         /// <inheritdoc/>
         protected sealed override object GetEnumerator(bool isAsync, bool usePrefetch, CancellationToken cancellationToken = default)
         {
-            IGenericSerDesFactory factory = Factory;
+            IGenericSerDesFactory _factory = Factory;
 #if NET7_0_OR_GREATER
             if (usePrefetch)
             {
-                return new PrefetchableLocalEnumerator(factory, _iterator.BridgeInstance, isAsync, cancellationToken);
+                return new PrefetchableLocalEnumerator(_factory, _iterator.BridgeInstance, isAsync, cancellationToken);
             }
 #endif
-            return new StandardLocalEnumerator(factory, _iterator.BridgeInstance);
+            return new StandardLocalEnumerator(_factory, _iterator.BridgeInstance);
         }
         /// <summary>
         /// KNet implementation of <see href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Iterator.html#hasNext()"/> 

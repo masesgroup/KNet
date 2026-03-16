@@ -51,7 +51,7 @@ namespace MASES.KNet.Streams.State
             {
                 if (input is IJavaObject obj)
                 {
-                    return new TimestampedKeyValue<K, V, TJVMK, TJVMV>(factory,
+                    return new TimestampedKeyValue<K, V, TJVMK, TJVMV>(_factory,
                                                                        new KeyValueSupport<TJVMK, Org.Apache.Kafka.Streams.State.ValueAndTimestamp<TJVMV>>(obj),
                                                                        keySerDes, true);
                 }
@@ -128,15 +128,15 @@ namespace MASES.KNet.Streams.State
         /// <inheritdoc/>
         protected sealed override object GetEnumerator(bool isAsync, bool usePrefetch, CancellationToken cancellationToken = default)
         {
-            IGenericSerDesFactory factory = Factory;
-            _keySerDes ??= factory?.BuildKeySerDes<K, TJVMK>();
+            IGenericSerDesFactory _factory = Factory;
+            _keySerDes ??= _factory?.BuildKeySerDes<K, TJVMK>();
 #if NET7_0_OR_GREATER
             if (usePrefetch)
             {
-                return new PrefetchableLocalEnumerator(factory, _iterator.BridgeInstance, _keySerDes, isAsync, cancellationToken);
+                return new PrefetchableLocalEnumerator(_factory, _iterator.BridgeInstance, _keySerDes, isAsync, cancellationToken);
             }
 #endif
-            return new StandardLocalEnumerator(factory, _iterator.BridgeInstance, _keySerDes);
+            return new StandardLocalEnumerator(_factory, _iterator.BridgeInstance, _keySerDes);
         }
         /// <summary>
         /// KNet implementation of <see href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Iterator.html#hasNext()"/> 

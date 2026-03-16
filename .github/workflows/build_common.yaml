@@ -354,15 +354,15 @@ jobs:
     needs: [build_windows, build_container_knet]
     runs-on: ubuntu-latest
     outputs:
-      matrix_jdk_vendor: ${{ steps.set-jdk-version.outputs.matrix_jdk_vendor || steps.set-jdk-version-ext.outputs.matrix_jdk_vendor }}
+      matrix_jdk_vendor: ${{ steps.set-jdk-vendor.outputs.matrix_jdk_vendor || steps.set-jdk-vendor-ext.outputs.matrix_jdk_vendor }}
       matrix_win_os: ${{ steps.set-matrix-win-os.outputs.matrix_win || steps.set-matrix-win-os-ext.outputs.matrix_win }}
       matrix_linux_os: ${{ steps.set-matrix-linux-os.outputs.matrix_linux || steps.set-matrix-linux-os-ext.outputs.matrix_linux }}
       matrix_mac_os: ${{ steps.set-matrix-mac-os.outputs.matrix_mac || steps.set-matrix-mac-os-ext.outputs.matrix_mac }}
     steps:
-      - id: set-jdk-version
+      - id: set-jdk-vendor
         if: ${{ inputs.ExecuteOnLargerJDKSet == false }}
         run: echo "matrix_jdk_vendor=[ 'temurin' ]" >> $GITHUB_OUTPUT
-      - id: set-jdk-version-ext
+      - id: set-jdk-vendor-ext
         if: ${{ inputs.ExecuteOnLargerJDKSet == true }}
         run: echo "matrix_jdk_vendor=[ 'temurin', 'zulu', 'microsoft', 'corretto', 'oracle' ]" >> $GITHUB_OUTPUT
       - id: set-matrix-win-os
