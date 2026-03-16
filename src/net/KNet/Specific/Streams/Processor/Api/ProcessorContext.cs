@@ -112,7 +112,7 @@ namespace MASES.KNet.Streams.Processor.Api
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/processor/api/ProcessingContext.html#recordMetadata()"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Optional"/></returns>
-        public Org.Apache.Kafka.Streams.Processor.Api.RecordMetadata? RecordMetadata
+        public Org.Apache.Kafka.Streams.Processor.Api.RecordMetadata RecordMetadata
         {
             get
             {
