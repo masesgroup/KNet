@@ -130,15 +130,15 @@ namespace MASES.KNet.Streams.State
         /// <inheritdoc/>
         protected sealed override object GetEnumerator(bool isAsync, bool usePrefetch, CancellationToken cancellationToken = default)
         {
-            IGenericSerDesFactory factory = Factory;
-            _valueSerDes ??= factory?.BuildValueSerDes<V, TJVMV>();
+            IGenericSerDesFactory _factory = Factory;
+            _valueSerDes ??= _factory?.BuildValueSerDes<V, TJVMV>();
 #if NET7_0_OR_GREATER
             if (usePrefetch)
             {
-                return new PrefetchableLocalEnumerator(factory, _iterator.BridgeInstance, _valueSerDes, isAsync, cancellationToken);
+                return new PrefetchableLocalEnumerator(_factory, _iterator.BridgeInstance, _valueSerDes, isAsync, cancellationToken);
             }
 #endif
-            return new StandardLocalEnumerator(factory, _iterator.BridgeInstance, _valueSerDes);
+            return new StandardLocalEnumerator(_factory, _iterator.BridgeInstance, _valueSerDes);
         }
         /// <summary>
         /// KNet implementation of <see href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Iterator.html#hasNext()"/> 
