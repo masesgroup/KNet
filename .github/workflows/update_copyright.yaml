@@ -29,8 +29,8 @@ jobs:
         with:
           fetch-depth: '1'
 
-      - run: find ./src -type f -exec sed -i 's/${{ inputs.CurrentYear }}/${{ inputs.NewYear }}/g' {}
-      - run: find ./tests -type f -exec sed -i 's/${{ inputs.CurrentYear }}/${{ inputs.NewYear }}/g' {}
+      - run: find ./src -type f -exec sed -i 's/${{ inputs.CurrentYear }}/${{ inputs.NewYear }}/g' {} +
+      - run: find ./tests -type f -exec sed -i 's/${{ inputs.CurrentYear }}/${{ inputs.NewYear }}/g' {} +
       
       - name: Request a PR to commit changes
         uses: peter-evans/create-pull-request@v8
