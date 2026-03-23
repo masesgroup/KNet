@@ -3,9 +3,11 @@ title: .NET suite for Apache Kafka™
 _description: Main page of .NET suite for Apache Kafka™
 ---
 
-# KNet: .NET suite for [Apache Kafka™](https://kafka.apache.org/)
+# KNet — .NET Suite for [Apache Kafka™](https://kafka.apache.org/)
 
-KNet is a comprehensive .NET suite for [Apache Kafka™](https://kafka.apache.org/) providing access to all [APIs](https://kafka.apache.org/documentation/#api) and features: Producer, Consumer, Admin, Streams, Connect, backends (KRaft).
+KNet is a comprehensive .NET suite for [Apache Kafka™](https://kafka.apache.org/) that provides direct access to all [Apache Kafka™ APIs](https://kafka.apache.org/documentation/#api) and features: Producer, Consumer, Admin, Streams, Connect, and KRaft backend support.
+
+KNet client-side features are also compatible with any broker that implements the Kafka wire protocol — see [Backend compatibility](#backend-compatibility) below.
 
 ### Libraries and Tools
 
@@ -15,24 +17,25 @@ KNet is a comprehensive .NET suite for [Apache Kafka™](https://kafka.apache.or
 
 ### Project disclaimer
 
-KNet is a suite for Apache Kafka™, curated by MASES Group, can be supported by the open-source community.
+KNet is a suite for Apache Kafka™, maintained by MASES Group and open to community contributions.
 
-Its primary scope is to support other, public or internal, MASES Group projects: open-source community and commercial entities can use it for their needs and support this project, moreover there are dedicated community and commercial subscription plans.
+Its primary scope is to support other MASES Group projects — both open-source and commercial — though it is freely available for any use. Dedicated community and commercial subscription plans are available.
 
-The repository code and releases may contain bugs, the release cycle depends from Apache Kafka™ release cycle, critical discovered issues and/or enhancement requested from this or other projects.
+The repository and releases may contain bugs. The release cycle follows the Apache Kafka™ release cycle, with additional releases driven by critical issues or enhancement requests from this or other dependent projects.
 
-Looking for the help of Apache Kafka™ experts? MASES Group can help you design, build, deploy, and manage Apache Kafka™ clusters and streaming applications.
+Looking for Apache Kafka™ expertise? MASES Group can help you design, build, deploy, and manage Apache Kafka™ clusters and streaming applications.
 
 ---
 
 ## Scope of the project
 
-This project aims to create a set of libraries and tools to direct access, from .NET, all the features available in the [Apache Kafka™ binary distribution](https://kafka.apache.org/downloads). 
+This project aims to create a set of libraries and tools to directly access, from .NET, all the features available in the [Apache Kafka™ binary distribution](https://kafka.apache.org/downloads).
 
-There are many client libraries written to manage communication with Apache Kafka™. Conversely, this project use directly the Java™ packages released from The Apache Foundation giving more than one benefit:
-* all implemented features are availables at no extra implementation costs, see [KNet usage](articles/usage.md);
-* avoids any third party communication protocol implementation;
-* access all features made available from Apache Kafka™: the most important are Apache Kafka™ Streams and Apache Kafka™ Connect which does not have any C# implementation;
+There are many client libraries written to manage communication with Apache Kafka™. Conversely, this project uses the Java™ packages released from The Apache Foundation directly, providing several benefits:
+
+* all implemented features are available at no extra implementation costs — see [KNet usage](articles/usage.md);
+* avoids any third-party communication protocol implementation;
+* access to all features made available from Apache Kafka™: the most important are Apache Kafka™ Streams and Apache Kafka™ Connect, which have no native C# implementation;
 * measured high [performance](articles/performance.md) in many operating conditions.
 
 Currently the project tries to support, at our best, the [supported Apache Kafka™ binary distribution](https://kafka.apache.org/downloads):
@@ -51,20 +54,34 @@ The Apache Kafka™ packages are downloaded from:
 |:---:	|:---:	|:---:	|
 |[![Maven Central](https://img.shields.io/maven-central/v/org.apache.kafka/kafka-streams-scala_2.13.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22org.apache.kafka%22%20AND%20a:%22kafka-streams-scala_2.13%22) | [![Maven Central](https://img.shields.io/maven-central/v/org.apache.kafka/kafka-tools.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22org.apache.kafka%22%20AND%20a:%22kafka-tools%22) | [![Maven Central](https://img.shields.io/maven-central/v/org.apache.kafka/kafka-shell.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22org.apache.kafka%22%20AND%20a:%22kafka-shell%22) |
 
-
 |connect-mirror | connect-file | connect-basic-auth-extension | trogdor |
 |:---:	|:---:	|:---:	|:---:	|
 | [![Maven Central](https://img.shields.io/maven-central/v/org.apache.kafka/connect-mirror.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22org.apache.kafka%22%20AND%20a:%22connect-mirror%22) | [![Maven Central](https://img.shields.io/maven-central/v/org.apache.kafka/connect-file.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22org.apache.kafka%22%20AND%20a:%22connect-file%22) | [![Maven Central](https://img.shields.io/maven-central/v/org.apache.kafka/connect-basic-auth-extension.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22org.apache.kafka%22%20AND%20a:%22connect-basic-auth-extension%22) | [![Maven Central](https://img.shields.io/maven-central/v/org.apache.kafka/trogdor.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22org.apache.kafka%22%20AND%20a:%22trogdor%22) |
 
-### Community and Contribution
+---
 
-Do you like the project? 
-- Request your free [community subscription](https://www.jcobridge.com/pricing-25/).
+## Backend compatibility
 
-Do you want to help us?
-- put a :star: on this project
-- open [issues](https://github.com/masesgroup/KNet/issues) to request features or report bugs :bug:
-- improves the project with Pull Requests
+KNet uses the official Apache Kafka™ Java client packages directly. This architecture has a direct impact on backend compatibility: **not all KNet features have the same compatibility scope**.
+
+**Client-side features** — Producer, Consumer, Admin Client, Kafka Streams, KNet Streams SDK, KNet Connect SDK, KNetPS scriptable cmdlets — communicate with the broker exclusively through the Kafka wire protocol and are therefore compatible with **any broker that implements it**, not only Apache Kafka™ itself.
+
+Examples of compatible brokers: [Redpanda](https://redpanda.com/), [Amazon MSK](https://aws.amazon.com/msk/), [Confluent Platform / Cloud](https://www.confluent.io/), [Aiven for Apache Kafka™](https://aiven.io/kafka), [IBM Event Streams](https://www.ibm.com/products/event-streams), [WarpStream](https://www.warpstream.com/), [AutoMQ](https://www.automq.com/), and others.
+
+> **Important**: KNet also includes **server-side features** to start and manage Apache Kafka™ broker nodes, ZooKeeper™ nodes, and KRaft controllers (via KNetCLI, KNetPS, and Docker images). These features are specific to Apache Kafka™ and are not applicable to alternative brokers.
+
+See [Supported Backends](articles/backends.md) for the full compatibility matrix covering all KNet feature areas.
+
+---
+
+### Community and contributions
+
+If you find KNet useful:
+
+* Request a free [community subscription](https://www.jcobridge.com/pricing-25/)
+* Leave a ⭐ on the repository
+* Open [issues](https://github.com/masesgroup/KNet/issues) to report bugs 🐛 or request features
+* Submit Pull Requests to improve the project
 
 This project adheres to the Contributor [Covenant code of conduct](https://github.com/masesgroup/KNet/blob/master/CODE_OF_CONDUCT.md). By participating, you are expected to uphold this code. Please report unacceptable behavior to coc_reporting@masesgroup.com.
 
@@ -72,6 +89,7 @@ This project adheres to the Contributor [Covenant code of conduct](https://githu
 
 * [Roadmap](articles/roadmap.md)
 * [Current state](articles/currentstate.md)
+* [Supported backends](articles/backends.md)
 * [Performance](articles/performance.md)
 * [Connect SDK](articles/connectSDK.md)
 * [Streams SDK](articles/streamsSDK.md)
@@ -85,49 +103,49 @@ This project adheres to the Contributor [Covenant code of conduct](https://githu
 * [KNet Template usage](articles/usageTemplates.md)
 * [How to build from scratch](articles/howtobuild.md)
 
-### Main news
+### Recent changes
 
-* V1.4.4+: From version 1.4.4 there is a new project, named KNetPS, which permits to write PowerShell client scripts for an Apache Kafka™ cluster and many other things, [here full usage](articles/usagePS.md).
-* V1.4.7+: From version 1.4.7 there is a new project, named KNetConnect, to execute Apache Kafka™ Connect related jobs, [here full usage](articles/usageConnect.md).
-* V1.5.4+: From version 1.5.4 there are new packages dedicated to [KNet Serializer/Deserializer](articles/usageSerDes.md)
-* V2.0.0+: From version 2.0.0 the code base is fully reflected from the JARs of the Apache Kafka™ distribution downloaded from Maven; some developed classes still remains beside the specific KNet implementations
-* V2.4.0+: From version 2.4.0 it is available the new KNet Streams SDK
-* V2.5.0+: From version 2.5.0 there are two breaking changes: uses `Java.Lang.String` instead of `string` (`System.String`) in generated classes and KNet Streams SDK manages the counter-part JVM™ types
-* V2.7.0+: From version 2.7.0:
-  * all classes KNetProducer, KNetConsumer and KNet Streams SDK manage the counter-part JVM™ types
-  * serializers supports data exchange based on `byte` array and `ByteBuffer`
-  * version 2.7.2 introduces `ISerDesSelector` to optimize serialization selection based on `byte` array or `ByteBuffer`
-* V3.0.3+ and 2.9.4+: From version 3.0.3 and 2.9.4, KNet Connect SDK supports JVM hosted runtime i.e. KNet Connect SDK connectors can be used like any other JVM based connector from any production ready Kafka Connect cluster
+* **V3.0.3+ / 2.9.4+**: KNet Connect SDK now supports JVM hosted runtime — KNet Connect SDK connectors can be deployed and used like any other JVM-based connector in a standard Kafka Connect cluster; [here full usage](articles/usageConnect.md).
+* **V2.7.0+**:
+  + KNetProducer, KNetConsumer, and KNet Streams SDK manage JVM™ counter-part types;
+  + serializers support data exchange based on `byte` array and `ByteBuffer`;
+  + version 2.7.2 introduces `ISerDesSelector` to optimize serialization selection based on `byte` array or `ByteBuffer`.
+* **V2.5.0+**: two breaking changes — uses `Java.Lang.String` instead of `string` (`System.String`) in generated classes; KNet Streams SDK manages JVM™ counter-part types.
+* **V2.4.0+**: new KNet Streams SDK available.
+* **V2.0.0+**: code base fully reflected from the Apache Kafka™ JARs downloaded from Maven; some developed classes remain alongside the specific KNet implementations.
+* **V1.5.4+**: new packages dedicated to [KNet Serializer/Deserializer](articles/usageSerDes.md).
+* **V1.4.7+**: new KNetConnect project to execute Apache Kafka™ Connect related jobs; [here full usage](articles/usageConnect.md).
+* **V1.4.4+**: new KNetPS project — write PowerShell client scripts for an Apache Kafka™ cluster and more; [here full usage](articles/usagePS.md).
 
 ---
 
 ## Runtime engine
 
-KNet uses [JNet](https://github.com/masesgroup/JNet), and indeed [JCOBridge](https://www.jcobridge.com/) with its [features](https://www.jcobridge.com/features/), to obtain many benefits:
-* **Cyber-security**: 
-  * [JVM™](https://en.wikipedia.org/wiki/Java_virtual_machine) and [CLR, or CoreCLR,](https://en.wikipedia.org/wiki/Common_Language_Runtime) runs in the same process, but are insulated from each other;
-  * JCOBridge does not make any code injection into JVM™;
-  * JCOBridge does not use any other communication mechanism than JNI;
-  * .NET (CLR) inherently inherits the cyber-security levels of running JVM™ and Apache Kafka™; 
-* **Direct access the JVM™ from any .NET application**: 
-  * Any Java/Scala class behind Apache Kafka™ can be directly managed: Consumer, Producer, Administration, Streams, Server-side, and so on;
-  * No need to learn new APIs: we try to expose the same APIs in C# style;
-  * No extra validation cycle on protocol and functionality: bug fix, improvements, new features are immediately available;
-  * Documentation is shared;
-* **Dynamic code**: it helps to write a Java/Scala/Kotlin/etc seamless language code directly inside a standard .NET application written in C#/VB.NET: look at this [simple example](https://www.jcobridge.com/net-examples/dotnet-examples/) and [KNet APIs extensibility](articles/API_extensibility.md).
+KNet uses [JNet](https://github.com/masesgroup/JNet), and indeed [JCOBridge](https://www.jcobridge.com/) with its [features](https://www.jcobridge.com/features/), as its runtime engine to bridge the JVM™ and the .NET CLR within the same process:
 
-[JCOBridge 2.6.*](https://www.jcobridge.com) can be used for free without any obligations; you need to purchase a commercial license, or uninstall the software, if you have direct or indirect incomes from the product usage.
+* **Cyber-security**:
+  + [JVM™](https://en.wikipedia.org/wiki/Java_virtual_machine) and [CLR, or CoreCLR,](https://en.wikipedia.org/wiki/Common_Language_Runtime) run in the same process, but are isolated from each other;
+  + JCOBridge does not make any code injection into JVM™;
+  + JCOBridge does not use any other communication mechanism than JNI;
+  + .NET (CLR) inherits the cyber-security levels of the running JVM™ and Apache Kafka™;
+* **Direct access to the JVM™ from any .NET application**:
+  + Any Java™/Scala class behind Apache Kafka™ can be directly managed: Consumer, Producer, Administration, Streams, Connect, and server-side classes;
+  + No need to learn new APIs: the same APIs are exposed in C# style;
+  + No extra validation cycle on protocol and functionality: bug fixes, improvements, and new features are immediately available;
+  + Documentation is shared between Java™ and .NET;
+* **Dynamic code**: enables writing Java™/Scala/Kotlin code seamlessly within a standard .NET application in C#/VB.NET — see this [simple example](https://www.jcobridge.com/net-examples/dotnet-examples/) and [KNet APIs extensibility](articles/API_extensibility.md).
+
+> [!NOTE]
+> [JCOBridge 2.6.\*](https://www.jcobridge.com) can be used free of charge without any obligations. A commercial license must be purchased — or the software uninstalled — if you derive direct or indirect revenue from the product.
 
 ### JCOBridge resources
 
-Have a look at the following JCOBridge resources:
-
-|JCOBridge | 2.5.* series | 2.6.* series |
-|:---:	|:---:	|:---:	|
-|KNet | > 1.5.* series | > 3.0.* series and latest 2.9.* series |
-|Release notes|[Link](https://www.jcobridge.com/release-notes/)| [Link](https://www.jcobridge.com/release-notes/)|
-|Community Edition|[Conditions](https://www.jcobridge.com/pricing-25/)|[Conditions](https://www.jcobridge.com/pricing-25/)|
-|Commercial Edition|[Information](https://www.jcobridge.com/pricing-26/)|[Information](https://www.jcobridge.com/pricing-26/)|
+| JCOBridge | 2.5.\* series | 2.6.\* series |
+| --- | --- | --- |
+| KNet | > 1.5.\* series | > 3.0.\* series and latest 2.9.\* series |
+| Release notes | [Link](https://www.jcobridge.com/release-notes/) | [Link](https://www.jcobridge.com/release-notes/) |
+| Community Edition | [Conditions](https://www.jcobridge.com/pricing-25/) | [Conditions](https://www.jcobridge.com/pricing-26/) |
+| Commercial Edition | [Information](https://www.jcobridge.com/pricing-25/) | [Information](https://www.jcobridge.com/pricing-26/) |
 
 Latest release: [![JCOBridge nuget](https://img.shields.io/nuget/v/MASES.JCOBridge)](https://www.nuget.org/packages/MASES.JCOBridge)
 

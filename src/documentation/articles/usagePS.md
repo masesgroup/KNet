@@ -9,15 +9,25 @@ _description: Describes how to use PowerShell module of .NET suite for Apache Ka
 
 To install the tool executes the following command within a PowerShell shell:
 
-```powershell
+```
 Install-Module -Name MASES.KNetPS
 ```
 
-If the above command fails, reporting errors related to _authenticode_, use the following command:
+If the above command fails, reporting errors related to *authenticode*, use the following command:
 
-```powershell
+```
 Install-Module -Name MASES.KNetPS -SkipPublisherCheck
 ```
+
+## Backend compatibility
+
+KNetPS cmdlets are divided into two categories with different backend compatibility scope:
+
+**Scriptable cmdlets and client-side admin tool cmdlets** use the standard Apache Kafka™ client APIs (Producer, Consumer, Admin Client) and are compatible with any broker that implements the Kafka wire protocol — including [Redpanda](https://redpanda.com/), [Amazon MSK](https://aws.amazon.com/msk/), [Confluent Platform / Cloud](https://www.confluent.io/), and others.
+
+**Server-side cmdlets** start, configure, or manage an Apache Kafka™ broker node, ZooKeeper™ node, or KRaft controller directly. These are specific to Apache Kafka™ and are not applicable to alternative brokers.
+
+See [Supported Backends](backends.md) for the full compatibility matrix.
 
 ## Usage
 
@@ -27,7 +37,7 @@ To use the PowerShell interface (KNetPS) runs the following commands within a **
 
 The following cmdlet must be called prior anything else to initialize the environment:
 
-```powershell
+```
 Start-KNetPS [arguments]
 ```
 
@@ -35,29 +45,26 @@ then the user can use objects created using **New-KObject** and other cmdlets, o
 
 Here below two simple examples of producer/consumer from PowerShell.
 The examples are very minimal, but demonstrate how send to and receive from an Apache Kafka™ cluster.
-The terms __MY_KAFKA_CLUSTER__ shall be replaced with the address of Apache Kafka™ cluster.
+The terms **MY\_KAFKA\_CLUSTER** shall be replaced with the address of Apache Kafka™ cluster.
 
 ### Producer
 
 The following snippet builds needed objects to send a record to an Apache Kafka™ cluster:
 
-```powershell
-
+```
 Start-KNetPS
 $prodConfig = New-ProducerConfigBuilder
 $prodConfig = $prodConfig.WithBootstrapServers("MY_KAFKA_CLUSTER:9092")
 $producer = New-KafkaProducer -KeyClass "System.String" -ValueClass "System.String" -Configuration $prodConfig
 $record = New-ProducerRecord -KeyClass "System.String" -Key "MyKey" -ValueClass "System.String" -Value "MyPayload" -Topic "testTopic"
 $sendResult = Invoke-Send -Producer $producer -ProducerRecord $record
-
 ```
 
-### Consumer 
+### Consumer
 
 The following snippet builds needed objects to subscribe to an Apache Kafka™ cluster and receives records from the specified topic:
 
-```powershell
-
+```
 Start-KNetPS
 $builder = New-ConsumerConfigBuilder
 $builder = $builder.WithBootstrapServers("MY_KAFKA_CLUSTER:9092")
@@ -67,7 +74,6 @@ $consumer = New-KafkaConsumer -KeyClass "System.String" -ValueClass "System.Stri
 Invoke-Subscribe -Consumer $consumer -Topic "testTopic"
 $results = Invoke-Poll -KeyClass "System.String" -ValueClass "System.String" -Consumer $consumer -PollTimeout 10000
 $record = Get-ConsumerRecord -KeyClass "System.String" -ValueClass "System.String" -ConsumerRecords $results
-
 ```
 
 ## Cmdlets available
@@ -75,6 +81,8 @@ $record = Get-ConsumerRecord -KeyClass "System.String" -ValueClass "System.Strin
 KNetPS accepts cmdlets divided by two main groups: Main-Class command cmdlets and Scriptable cmdlets.
 
 ### Scriptable cmdlets
+
+Compatible with any Kafka wire-protocol broker.
 
 Here a list of cmdlets usable within a script:
 
@@ -99,129 +107,136 @@ Here a list of cmdlets usable within a script:
 Here a list of cmdlets which executes well known tasks defined from Apache Kafka™ like you use the scripts available in the Apache Kafka™ release:
 
 * **Start-KNetPS**: Initialize the engine and can be the first command to be invoked. The arguments are:
-  * Inherited from JnetPS:
-	* LicensePath
-	* JDKHome
-	* JVMPath
-	* JNIVerbosity
-	* JNIOutputFile
-	* JmxPort
-	* EnableDebug
-	* JavaDebugPort
-	* DebugSuspendFlag
-	* JavaDebugOpts
-	* HeapSize
-	* InitialHeapSize
-	* LogClassPath
-  * Specific of KnetPS:
-    * ScalaVersion
-	* KafkaJarLocation
-	* Log4JPath
-	* LogPath
-	* DisableJMX
+  + Inherited from JnetPS:
+    - LicensePath
+    - JDKHome
+    - JVMPath
+    - JNIVerbosity
+    - JNIOutputFile
+    - JmxPort
+    - EnableDebug
+    - JavaDebugPort
+    - DebugSuspendFlag
+    - JavaDebugOpts
+    - HeapSize
+    - InitialHeapSize
+    - LogClassPath
+  + Specific of KnetPS:
+    - ScalaVersion
+    - KafkaJarLocation
+    - Log4JPath
+    - LogPath
+    - DisableJMX
 * **New-KObject**: Creates a new JVM™ object of the class specified in argument using the parameters within command line for constructor. The arguments are:
-  * Inherited from JnetPS:
-    * Class
-    * Arguments
-  * Specific of KnetPS:
-      * ScalaVersion
-	  * KafkaJarLocation
-	  * Log4JPath
-	  * LogPath	  
+  + Inherited from JnetPS:
+    - Class
+    - Arguments
+  + Specific of KnetPS:
+    - ScalaVersion
+    - KafkaJarLocation
+    - Log4JPath
+    - LogPath
 * **Start-AclCommand**: start AclCommand. The arguments are:
-  * All available arguments of Start-KNetPS;
-  * Arguments: a string containing the arguments accepted from the Java Main-Class
+  + All available arguments of Start-KNetPS;
+  + Arguments: a string containing the arguments accepted from the Java Main-Class
 * **Start-BrokerApiVersionsCommand**: start BrokerApiVersionsCommand. The arguments are:
-  * All available arguments of Start-KNetPS;
-  * Arguments: a string containing the arguments accepted from the Java Main-Class
+  + All available arguments of Start-KNetPS;
+  + Arguments: a string containing the arguments accepted from the Java Main-Class
 * **Start-ConfigCommand**: start ConfigCommand. The arguments are:
-  * All available arguments of Start-KNetPS;
-  * Arguments: a string containing the arguments accepted from the Java Main-Class
+  + All available arguments of Start-KNetPS;
+  + Arguments: a string containing the arguments accepted from the Java Main-Class
 * **Start-ConsumerGroupCommand**: start ConsumerGroupCommand. The arguments are:
-  * All available arguments of Start-KNetPS;
-  * Arguments: a string containing the arguments accepted from the Java Main-Class
+  + All available arguments of Start-KNetPS;
+  + Arguments: a string containing the arguments accepted from the Java Main-Class
 * **Start-DelegationTokenCommand**: start DelegationTokenCommand. The arguments are:
-  * All available arguments of Start-KNetPS;
-  * Arguments: a string containing the arguments accepted from the Java Main-Class
+  + All available arguments of Start-KNetPS;
+  + Arguments: a string containing the arguments accepted from the Java Main-Class
 * **Start-DeleteRecordsCommand**: start DeleteRecordsCommand. The arguments are:
-  * All available arguments of Start-KNetPS;
-  * Arguments: a string containing the arguments accepted from the Java Main-Class
+  + All available arguments of Start-KNetPS;
+  + Arguments: a string containing the arguments accepted from the Java Main-Class
 * **Start-FeatureCommand**: start FeatureCommand. The arguments are:
-  * All available arguments of Start-KNetPS;
-  * Arguments: a string containing the arguments accepted from the Java Main-Class
+  + All available arguments of Start-KNetPS;
+  + Arguments: a string containing the arguments accepted from the Java Main-Class
 * **Start-LeaderElectionCommand**: start LeaderElectionCommand. The arguments are:
-  * All available arguments of Start-KNetPS;
-  * Arguments: a string containing the arguments accepted from the Java Main-Class
+  + All available arguments of Start-KNetPS;
+  + Arguments: a string containing the arguments accepted from the Java Main-Class
 * **Start-LogDirsCommand**: start LogDirsCommand. The arguments are:
-  * All available arguments of Start-KNetPS;
-  * Arguments: a string containing the arguments accepted from the Java Main-Class
+  + All available arguments of Start-KNetPS;
+  + Arguments: a string containing the arguments accepted from the Java Main-Class
 * **Start-MetadataQuorumCommand**: start MetadataQuorumCommand. The arguments are:
-  * All available arguments of Start-KNetPS;
-  * Arguments: a string containing the arguments accepted from the Java Main-Class
+  + All available arguments of Start-KNetPS;
+  + Arguments: a string containing the arguments accepted from the Java Main-Class
 * **Start-ReassignPartitionsCommand**: start ReassignPartitionsCommand. The arguments are:
-  * All available arguments of Start-KNetPS;
-  * Arguments: a string containing the arguments accepted from the Java Main-Class
+  + All available arguments of Start-KNetPS;
+  + Arguments: a string containing the arguments accepted from the Java Main-Class
 * **Start-TopicCommand**: start TopicCommand. The arguments are:
-  * All available arguments of Start-KNetPS;
-  * Arguments: a string containing the arguments accepted from the Java Main-Class
+  + All available arguments of Start-KNetPS;
+  + Arguments: a string containing the arguments accepted from the Java Main-Class
 * **Start-ZkSecurityMigrator**: start ZkSecurityMigrator. The arguments are:
-  * All available arguments of Start-KNetPS;
-  * Arguments: a string containing the arguments accepted from the Java Main-Class
+  + All available arguments of Start-KNetPS;
+  + Arguments: a string containing the arguments accepted from the Java Main-Class
+
+#### Server-side cmdlets — Apache Kafka™ only
+
+The following cmdlets start or manage an Apache Kafka™ broker node, ZooKeeper™ node, or KRaft controller directly. They are specific to Apache Kafka™ and are not applicable to alternative brokers:
+
 * **Start-KafkaStart**: start KafkaStart. The arguments are:
-  * All available arguments of Start-KNetPS;
-  * Arguments: a string containing the arguments accepted from the Java Main-Class
+  + All available arguments of Start-KNetPS;
+  + Arguments: a string containing the arguments accepted from the Java Main-Class
 * **Start-ZooKeeperShell**: start ZooKeeperShell. The arguments are:
-  * All available arguments of Start-KNetPS;
-  * Arguments: a string containing the arguments accepted from the Java Main-Class
+  + All available arguments of Start-KNetPS;
+  + Arguments: a string containing the arguments accepted from the Java Main-Class
 * **Start-ZooKeeperStart**: start ZooKeeperStart. The arguments are:
-  * All available arguments of Start-KNetPS;
-  * Arguments: a string containing the arguments accepted from the Java Main-Class
+  + All available arguments of Start-KNetPS;
+  + Arguments: a string containing the arguments accepted from the Java Main-Class
 * **Start-MetadataShell**: start MetadataShell. The arguments are:
-  * All available arguments of Start-KNetPS;
-  * Arguments: a string containing the arguments accepted from the Java Main-Class
+  + All available arguments of Start-KNetPS;
+  + Arguments: a string containing the arguments accepted from the Java Main-Class
 * **Start-ClusterTool**: start ClusterTool. The arguments are:
-  * All available arguments of Start-KNetPS;
-  * Arguments: a string containing the arguments accepted from the Java Main-Class
-* **Start-ConsoleConsumer**: start ConsoleConsumer. The arguments are:
-  * All available arguments of Start-KNetPS;
-  * Arguments: a string containing the arguments accepted from the Java Main-Class
-* **Start-ConsoleProducer**: start ConsoleProducer. The arguments are:
-  * All available arguments of Start-KNetPS;
-  * Arguments: a string containing the arguments accepted from the Java Main-Class
-* **Start-ConsumerPerformance**: start ConsumerPerformance. The arguments are:
-  * All available arguments of Start-KNetPS;
-  * Arguments: a string containing the arguments accepted from the Java Main-Class
-* **Start-DumpLogSegments**: start DumpLogSegments. The arguments are:
-  * All available arguments of Start-KNetPS;
-  * Arguments: a string containing the arguments accepted from the Java Main-Class
-* **Start-GetOffsetShell**: start GetOffsetShell. The arguments are:
-  * All available arguments of Start-KNetPS;
-  * Arguments: a string containing the arguments accepted from the Java Main-Class
-* **Start-MirrorMaker**: start MirrorMaker. The arguments are:
-  * All available arguments of Start-KNetPS;
-  * Arguments: a string containing the arguments accepted from the Java Main-Class
-* **Start-ProducerPerformance**: start ProducerPerformance. The arguments are:
-  * All available arguments of Start-KNetPS;
-  * Arguments: a string containing the arguments accepted from the Java Main-Class
-* **Start-ReplicaVerificationTool**: start ReplicaVerificationTool. The arguments are:
-  * All available arguments of Start-KNetPS;
-  * Arguments: a string containing the arguments accepted from the Java Main-Class
+  + All available arguments of Start-KNetPS;
+  + Arguments: a string containing the arguments accepted from the Java Main-Class
 * **Start-StorageTool**: start StorageTool. The arguments are:
-  * All available arguments of Start-KNetPS;
-  * Arguments: a string containing the arguments accepted from the Java Main-Class
+  + All available arguments of Start-KNetPS;
+  + Arguments: a string containing the arguments accepted from the Java Main-Class
+
+#### Client-side cmdlets — compatible with any Kafka wire-protocol broker
+
+* **Start-ConsoleConsumer**: start ConsoleConsumer. The arguments are:
+  + All available arguments of Start-KNetPS;
+  + Arguments: a string containing the arguments accepted from the Java Main-Class
+* **Start-ConsoleProducer**: start ConsoleProducer. The arguments are:
+  + All available arguments of Start-KNetPS;
+  + Arguments: a string containing the arguments accepted from the Java Main-Class
+* **Start-ConsumerPerformance**: start ConsumerPerformance. The arguments are:
+  + All available arguments of Start-KNetPS;
+  + Arguments: a string containing the arguments accepted from the Java Main-Class
+* **Start-DumpLogSegments**: start DumpLogSegments. The arguments are:
+  + All available arguments of Start-KNetPS;
+  + Arguments: a string containing the arguments accepted from the Java Main-Class
+* **Start-GetOffsetShell**: start GetOffsetShell. The arguments are:
+  + All available arguments of Start-KNetPS;
+  + Arguments: a string containing the arguments accepted from the Java Main-Class
+* **Start-MirrorMaker**: start MirrorMaker. The arguments are:
+  + All available arguments of Start-KNetPS;
+  + Arguments: a string containing the arguments accepted from the Java Main-Class
+* **Start-ProducerPerformance**: start ProducerPerformance. The arguments are:
+  + All available arguments of Start-KNetPS;
+  + Arguments: a string containing the arguments accepted from the Java Main-Class
+* **Start-ReplicaVerificationTool**: start ReplicaVerificationTool. The arguments are:
+  + All available arguments of Start-KNetPS;
+  + Arguments: a string containing the arguments accepted from the Java Main-Class
 * **Start-StreamsResetter**: start StreamsResetter. The arguments are:
-  * All available arguments of Start-KNetPS;
-  * Arguments: a string containing the arguments accepted from the Java Main-Class
+  + All available arguments of Start-KNetPS;
+  + Arguments: a string containing the arguments accepted from the Java Main-Class
 * **Start-TransactionsCommand**: start TransactionsCommand. The arguments are:
-  * All available arguments of Start-KNetPS;
-  * Arguments: a string containing the arguments accepted from the Java Main-Class
+  + All available arguments of Start-KNetPS;
+  + Arguments: a string containing the arguments accepted from the Java Main-Class
 * **Start-VerifiableConsumer**: start VerifiableConsumer. The arguments are:
-  * All available arguments of Start-KNetPS;
-  * Arguments: a string containing the arguments accepted from the Java Main-Class
+  + All available arguments of Start-KNetPS;
+  + Arguments: a string containing the arguments accepted from the Java Main-Class
 * **Start-VerifiableProducer**: start VerifiableProducer. The arguments are:
-  * All available arguments of Start-KNetPS;
-  * Arguments: a string containing the arguments accepted from the Java Main-Class
+  + All available arguments of Start-KNetPS;
+  + Arguments: a string containing the arguments accepted from the Java Main-Class
 * **Start-MirrorMaker2**: start MirrorMaker2. The arguments are:
-  * All available arguments of Start-KNetPS;
-  * Arguments: a string containing the arguments accepted from the Java Main-Class
-	  
+  + All available arguments of Start-KNetPS;
+  + Arguments: a string containing the arguments accepted from the Java Main-Class
