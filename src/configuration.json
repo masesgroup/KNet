@@ -277,7 +277,7 @@
     "org.rocksdb.BackupEngine",
     "org.rocksdb.CassandraCompactionFilter",
     "org.rocksdb.MutableDBOptions",
-    "org.rocksdb.MutableDBOptions$MutableOptionsBuilder",
+    "org.rocksdb.MutableDBOptions$MutableDBOptionsBuilder",
     "org.rocksdb.OptionString",
     "org.rocksdb.RemoveEmptyValueCompactionFilter"
   ]
