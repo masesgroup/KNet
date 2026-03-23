@@ -19,7 +19,6 @@
 using Java.Lang;
 using Java.Util;
 using MASES.KNet.Common;
-using MASES.KNet.Specific;
 using Org.Apache.Kafka.Clients;
 using Org.Apache.Kafka.Common.Config;
 using Org.Apache.Kafka.Common.Metrics;
