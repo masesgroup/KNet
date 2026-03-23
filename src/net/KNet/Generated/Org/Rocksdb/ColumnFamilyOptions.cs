@@ -547,123 +547,6 @@ namespace Org.Rocksdb
             return IExecuteWithSignature<Org.Rocksdb.AbstractCompactionFilter<ReturnExtendsOrg_Rocksdb_AbstractSlice_object_>>("compactionFilter", "()Lorg/rocksdb/AbstractCompactionFilter;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/ColumnFamilyOptions.html#compactionFilterFactory()"/>
-        /// </summary>
-        /// <typeparam name="ReturnExtendsOrg_Rocksdb_AbstractCompactionFilter_object_"><see cref="Org.Rocksdb.AbstractCompactionFilter{object}"/></typeparam>
-        /// <returns><see cref="Org.Rocksdb.AbstractCompactionFilterFactory"/></returns>
-        public Org.Rocksdb.AbstractCompactionFilterFactory<ReturnExtendsOrg_Rocksdb_AbstractCompactionFilter_object_> CompactionFilterFactory<ReturnExtendsOrg_Rocksdb_AbstractCompactionFilter_object_>() where ReturnExtendsOrg_Rocksdb_AbstractCompactionFilter_object_ : Org.Rocksdb.AbstractCompactionFilter<object>
-        {
-            return IExecuteWithSignature<Org.Rocksdb.AbstractCompactionFilterFactory<ReturnExtendsOrg_Rocksdb_AbstractCompactionFilter_object_>>("compactionFilterFactory", "()Lorg/rocksdb/AbstractCompactionFilterFactory;");
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/ColumnFamilyOptions.html#setBloomLocality(int)"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="int"/></param>
-        /// <returns><see cref="Org.Rocksdb.AdvancedColumnFamilyOptionsInterface"/></returns>
-        public Org.Rocksdb.AdvancedColumnFamilyOptionsInterface SetBloomLocality(int arg0)
-        {
-            return IExecuteWithSignature<Org.Rocksdb.AdvancedColumnFamilyOptionsInterface>("setBloomLocality", "(I)Lorg/rocksdb/AdvancedColumnFamilyOptionsInterface;", arg0);
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/ColumnFamilyOptions.html#setCompactionOptionsFIFO(org.rocksdb.CompactionOptionsFIFO)"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="Org.Rocksdb.CompactionOptionsFIFO"/></param>
-        /// <returns><see cref="Org.Rocksdb.AdvancedColumnFamilyOptionsInterface"/></returns>
-        public Org.Rocksdb.AdvancedColumnFamilyOptionsInterface SetCompactionOptionsFIFO(Org.Rocksdb.CompactionOptionsFIFO arg0)
-        {
-            return IExecuteWithSignature<Org.Rocksdb.AdvancedColumnFamilyOptionsInterface>("setCompactionOptionsFIFO", "(Lorg/rocksdb/CompactionOptionsFIFO;)Lorg/rocksdb/AdvancedColumnFamilyOptionsInterface;", arg0);
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/ColumnFamilyOptions.html#setCompactionOptionsUniversal(org.rocksdb.CompactionOptionsUniversal)"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="Org.Rocksdb.CompactionOptionsUniversal"/></param>
-        /// <returns><see cref="Org.Rocksdb.AdvancedColumnFamilyOptionsInterface"/></returns>
-        public Org.Rocksdb.AdvancedColumnFamilyOptionsInterface SetCompactionOptionsUniversal(Org.Rocksdb.CompactionOptionsUniversal arg0)
-        {
-            return IExecuteWithSignature<Org.Rocksdb.AdvancedColumnFamilyOptionsInterface>("setCompactionOptionsUniversal", "(Lorg/rocksdb/CompactionOptionsUniversal;)Lorg/rocksdb/AdvancedColumnFamilyOptionsInterface;", arg0);
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/ColumnFamilyOptions.html#setCompactionPriority(org.rocksdb.CompactionPriority)"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="Org.Rocksdb.CompactionPriority"/></param>
-        /// <returns><see cref="Org.Rocksdb.AdvancedColumnFamilyOptionsInterface"/></returns>
-        public Org.Rocksdb.AdvancedColumnFamilyOptionsInterface SetCompactionPriority(Org.Rocksdb.CompactionPriority arg0)
-        {
-            return IExecuteWithSignature<Org.Rocksdb.AdvancedColumnFamilyOptionsInterface>("setCompactionPriority", "(Lorg/rocksdb/CompactionPriority;)Lorg/rocksdb/AdvancedColumnFamilyOptionsInterface;", arg0);
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/ColumnFamilyOptions.html#setCompressionPerLevel(java.util.List)"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="Java.Util.List"/></param>
-        /// <returns><see cref="Org.Rocksdb.AdvancedColumnFamilyOptionsInterface"/></returns>
-        public Org.Rocksdb.AdvancedColumnFamilyOptionsInterface SetCompressionPerLevel(Java.Util.List arg0)
-        {
-            return IExecuteWithSignature<Org.Rocksdb.AdvancedColumnFamilyOptionsInterface>("setCompressionPerLevel", "(Ljava/util/List;)Lorg/rocksdb/AdvancedColumnFamilyOptionsInterface;", arg0);
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/ColumnFamilyOptions.html#setForceConsistencyChecks(boolean)"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="bool"/></param>
-        /// <returns><see cref="Org.Rocksdb.AdvancedColumnFamilyOptionsInterface"/></returns>
-        public Org.Rocksdb.AdvancedColumnFamilyOptionsInterface SetForceConsistencyChecks(bool arg0)
-        {
-            return IExecuteWithSignature<Org.Rocksdb.AdvancedColumnFamilyOptionsInterface>("setForceConsistencyChecks", "(Z)Lorg/rocksdb/AdvancedColumnFamilyOptionsInterface;", arg0);
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/ColumnFamilyOptions.html#setInplaceUpdateSupport(boolean)"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="bool"/></param>
-        /// <returns><see cref="Org.Rocksdb.AdvancedColumnFamilyOptionsInterface"/></returns>
-        public Org.Rocksdb.AdvancedColumnFamilyOptionsInterface SetInplaceUpdateSupport(bool arg0)
-        {
-            return IExecuteWithSignature<Org.Rocksdb.AdvancedColumnFamilyOptionsInterface>("setInplaceUpdateSupport", "(Z)Lorg/rocksdb/AdvancedColumnFamilyOptionsInterface;", arg0);
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/ColumnFamilyOptions.html#setLevelCompactionDynamicLevelBytes(boolean)"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="bool"/></param>
-        /// <returns><see cref="Org.Rocksdb.AdvancedColumnFamilyOptionsInterface"/></returns>
-        public Org.Rocksdb.AdvancedColumnFamilyOptionsInterface SetLevelCompactionDynamicLevelBytes(bool arg0)
-        {
-            return IExecuteWithSignature<Org.Rocksdb.AdvancedColumnFamilyOptionsInterface>("setLevelCompactionDynamicLevelBytes", "(Z)Lorg/rocksdb/AdvancedColumnFamilyOptionsInterface;", arg0);
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/ColumnFamilyOptions.html#setMaxWriteBufferNumberToMaintain(int)"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="int"/></param>
-        /// <returns><see cref="Org.Rocksdb.AdvancedColumnFamilyOptionsInterface"/></returns>
-        public Org.Rocksdb.AdvancedColumnFamilyOptionsInterface SetMaxWriteBufferNumberToMaintain(int arg0)
-        {
-            return IExecuteWithSignature<Org.Rocksdb.AdvancedColumnFamilyOptionsInterface>("setMaxWriteBufferNumberToMaintain", "(I)Lorg/rocksdb/AdvancedColumnFamilyOptionsInterface;", arg0);
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/ColumnFamilyOptions.html#setMinWriteBufferNumberToMerge(int)"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="int"/></param>
-        /// <returns><see cref="Org.Rocksdb.AdvancedColumnFamilyOptionsInterface"/></returns>
-        public Org.Rocksdb.AdvancedColumnFamilyOptionsInterface SetMinWriteBufferNumberToMerge(int arg0)
-        {
-            return IExecuteWithSignature<Org.Rocksdb.AdvancedColumnFamilyOptionsInterface>("setMinWriteBufferNumberToMerge", "(I)Lorg/rocksdb/AdvancedColumnFamilyOptionsInterface;", arg0);
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/ColumnFamilyOptions.html#setNumLevels(int)"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="int"/></param>
-        /// <returns><see cref="Org.Rocksdb.AdvancedColumnFamilyOptionsInterface"/></returns>
-        public Org.Rocksdb.AdvancedColumnFamilyOptionsInterface SetNumLevels(int arg0)
-        {
-            return IExecuteWithSignature<Org.Rocksdb.AdvancedColumnFamilyOptionsInterface>("setNumLevels", "(I)Lorg/rocksdb/AdvancedColumnFamilyOptionsInterface;", arg0);
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/ColumnFamilyOptions.html#setOptimizeFiltersForHits(boolean)"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="bool"/></param>
-        /// <returns><see cref="Org.Rocksdb.AdvancedColumnFamilyOptionsInterface"/></returns>
-        public Org.Rocksdb.AdvancedColumnFamilyOptionsInterface SetOptimizeFiltersForHits(bool arg0)
-        {
-            return IExecuteWithSignature<Org.Rocksdb.AdvancedColumnFamilyOptionsInterface>("setOptimizeFiltersForHits", "(Z)Lorg/rocksdb/AdvancedColumnFamilyOptionsInterface;", arg0);
-        }
-        /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/ColumnFamilyOptions.html#setArenaBlockSize(long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="long"/></param>
@@ -1038,15 +921,6 @@ namespace Org.Rocksdb
         public Org.Rocksdb.ColumnFamilyOptionsInterface SetCompactionFilter(Org.Rocksdb.AbstractCompactionFilter arg0)
         {
             return IExecuteWithSignature<Org.Rocksdb.ColumnFamilyOptionsInterface>("setCompactionFilter", "(Lorg/rocksdb/AbstractCompactionFilter;)Lorg/rocksdb/ColumnFamilyOptionsInterface;", arg0);
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/ColumnFamilyOptions.html#setCompactionFilterFactory(org.rocksdb.AbstractCompactionFilterFactory)"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="Org.Rocksdb.AbstractCompactionFilterFactory"/></param>
-        /// <returns><see cref="Org.Rocksdb.ColumnFamilyOptionsInterface"/></returns>
-        public Org.Rocksdb.ColumnFamilyOptionsInterface SetCompactionFilterFactory(Org.Rocksdb.AbstractCompactionFilterFactory arg0)
-        {
-            return IExecuteWithSignature<Org.Rocksdb.ColumnFamilyOptionsInterface>("setCompactionFilterFactory", "(Lorg/rocksdb/AbstractCompactionFilterFactory;)Lorg/rocksdb/ColumnFamilyOptionsInterface;", arg0);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/ColumnFamilyOptions.html#setCompactionStyle(org.rocksdb.CompactionStyle)"/>

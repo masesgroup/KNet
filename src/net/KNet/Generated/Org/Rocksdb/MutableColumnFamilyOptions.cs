@@ -29,7 +29,7 @@ namespace Org.Rocksdb
     /// <summary>
     /// <see href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/MutableColumnFamilyOptions.html"/>
     /// </summary>
-    public partial class MutableColumnFamilyOptions : Org.Rocksdb.AbstractMutableOptions
+    public partial class MutableColumnFamilyOptions : MASES.JCOBridge.C2JBridge.JVMBridgeBase<MutableColumnFamilyOptions>
     {
         const string _bridgeClassName = "org.rocksdb.MutableColumnFamilyOptions";
         /// <summary>

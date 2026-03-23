@@ -29,7 +29,7 @@ namespace Org.Rocksdb
     /// <summary>
     /// <see href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/MutableDBOptions.html"/>
     /// </summary>
-    public partial class MutableDBOptions : Org.Rocksdb.AbstractMutableOptions
+    public partial class MutableDBOptions : MASES.JCOBridge.C2JBridge.JVMBridgeBase<MutableDBOptions>
     {
         const string _bridgeClassName = "org.rocksdb.MutableDBOptions";
         /// <summary>
