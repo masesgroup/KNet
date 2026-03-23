@@ -269,11 +269,15 @@
     "org.apache.kafka.tools.reassign.LogDirMoveState",
     "org.apache.kafka.tools.reassign.PartitionReassignmentState",
     "org.apache.kafka.tools.streams.StreamsGroupCommand$OffsetsInfo",
-	"org.rocksdb.AbstractCompactionFilterFactory",
-	"org.rocksdb.AbstractMutableOptions",
-	"org.rocksdb.AdvancedColumnFamilyOptionsInterface",
-	"org.rocksdb.CassandraCompactionFilter",
-	"org.rocksdb.OptionString",
-	"org.rocksdb.RemoveEmptyValueCompactionFilter"
+    "org.rocksdb.AbstractCompactionFilter",
+    "org.rocksdb.AbstractCompactionFilterFactory",
+    "org.rocksdb.AbstractMutableOptions",
+    "org.rocksdb.AbstractMutableOptions$AbstractMutableOptionsBuilder",
+    "org.rocksdb.AdvancedColumnFamilyOptionsInterface",
+    "org.rocksdb.BackupEngine",
+    "org.rocksdb.CassandraCompactionFilter",
+    "org.rocksdb.MutableDBOptions",
+    "org.rocksdb.OptionString",
+    "org.rocksdb.RemoveEmptyValueCompactionFilter"
   ]
 }
