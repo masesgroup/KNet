@@ -98,7 +98,6 @@
   "NamespacesToAvoid": [
     "scala",
     "joptsimple",
-    "org.rocksdb",
     "com.typesafe",
     "com.fasterxml",
     "javax.crypto",
