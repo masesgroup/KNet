@@ -23,6 +23,8 @@ using MASES.KNet.Serialization;
 using System.Linq;
 using System.Collections.Concurrent;
 using MASES.JCOBridge.C2JBridge;
+using System.Collections.Generic;
+using System.Collections;
 
 namespace MASES.KNet
 {
@@ -30,7 +32,7 @@ namespace MASES.KNet
     /// Generic base configuration class
     /// </summary>
     /// <typeparam name="T"></typeparam>
-    public class GenericConfigBuilder<T> : System.ComponentModel.INotifyPropertyChanged, IGenericSerDesFactory, IDisposable
+    public class GenericConfigBuilder<T> : System.ComponentModel.INotifyPropertyChanged, IGenericSerDesFactory, IDisposable, IEnumerable<KeyValuePair<string, object>>
         where T : GenericConfigBuilder<T>, new()
     {
         /// <summary>
@@ -305,6 +307,16 @@ namespace MASES.KNet
         {
             GC.SuppressFinalize(this);
             Clear();
+        }
+        /// <inheritdoc/>
+        public IEnumerator<KeyValuePair<string, object>> GetEnumerator()
+        {
+            return _options.GetEnumerator();
+        }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return GetEnumerator();
         }
     }
 }

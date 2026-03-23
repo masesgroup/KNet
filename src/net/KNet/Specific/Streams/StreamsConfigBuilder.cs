@@ -158,6 +158,19 @@ namespace MASES.KNet.Streams
             return clone;
         }
         /// <summary>
+        /// Manages <see cref="StreamsConfig.DESERIALIZATION_EXCEPTION_HANDLER_CLASS_CONFIG"/>
+        /// </summary>
+        public Java.Lang.Class DeserializationExceptionHandlerClass { get { return GetProperty<Java.Lang.Class>(StreamsConfig.DESERIALIZATION_EXCEPTION_HANDLER_CLASS_CONFIG); } set { SetProperty(StreamsConfig.DESERIALIZATION_EXCEPTION_HANDLER_CLASS_CONFIG, value); } }
+        /// <summary>
+        /// Manages <see cref="StreamsConfig.DESERIALIZATION_EXCEPTION_HANDLER_CLASS_CONFIG"/>
+        /// </summary>
+        public StreamsConfigBuilder WithDeserializationExceptionHandlerClass(Java.Lang.Class deserializationExceptionHandlerClass)
+        {
+            var clone = Clone();
+            clone.DeserializationExceptionHandlerClass = deserializationExceptionHandlerClass;
+            return clone;
+        }
+        /// <summary>
         /// Manages <see cref="StreamsConfig.MAX_TASK_IDLE_MS_CONFIG"/>
         /// </summary>
         public long MaxTaskIdleMs { get { return GetProperty<int>(StreamsConfig.MAX_TASK_IDLE_MS_CONFIG); } set { SetProperty(StreamsConfig.MAX_TASK_IDLE_MS_CONFIG, value); } }
@@ -194,6 +207,45 @@ namespace MASES.KNet.Streams
         {
             var clone = Clone();
             clone.NumStreamThreads = numStreamThreads;
+            return clone;
+        }
+        /// <summary>
+        /// Manages <see cref="StreamsConfig.PROCESSING_EXCEPTION_HANDLER_CLASS_CONFIG"/>
+        /// </summary>
+        public Java.Lang.Class ProcessingExceptionHandlerClass { get { return GetProperty<Java.Lang.Class>(StreamsConfig.PROCESSING_EXCEPTION_HANDLER_CLASS_CONFIG); } set { SetProperty(StreamsConfig.PROCESSING_EXCEPTION_HANDLER_CLASS_CONFIG, value); } }
+        /// <summary>
+        /// Manages <see cref="StreamsConfig.PROCESSING_EXCEPTION_HANDLER_CLASS_CONFIG"/>
+        /// </summary>
+        public StreamsConfigBuilder WithProcessingExceptionHandlerClass(Java.Lang.Class processingExceptionHandlerClass)
+        {
+            var clone = Clone();
+            clone.ProcessingExceptionHandlerClass = processingExceptionHandlerClass;
+            return clone;
+        }
+        /// <summary>
+        /// Manages <see cref="StreamsConfig.PRODUCTION_EXCEPTION_HANDLER_CLASS_CONFIG"/>
+        /// </summary>
+        public Java.Lang.Class ProductionExceptionHandlerClass { get { return GetProperty<Java.Lang.Class>(StreamsConfig.PRODUCTION_EXCEPTION_HANDLER_CLASS_CONFIG); } set { SetProperty(StreamsConfig.PRODUCTION_EXCEPTION_HANDLER_CLASS_CONFIG, value); } }
+        /// <summary>
+        /// Manages <see cref="StreamsConfig.PRODUCTION_EXCEPTION_HANDLER_CLASS_CONFIG"/>
+        /// </summary>
+        public StreamsConfigBuilder WithProductionExceptionHandlerClass(Java.Lang.Class productionExceptionHandlerClass)
+        {
+            var clone = Clone();
+            clone.ProductionExceptionHandlerClass = productionExceptionHandlerClass;
+            return clone;
+        }
+        /// <summary>
+        /// Manages <see cref="StreamsConfig.TASK_ASSIGNOR_CLASS_CONFIG"/>
+        /// </summary>
+        public Java.Lang.Class TaskAssignorClass { get { return GetProperty<Java.Lang.Class>(StreamsConfig.TASK_ASSIGNOR_CLASS_CONFIG); } set { SetProperty(StreamsConfig.TASK_ASSIGNOR_CLASS_CONFIG, value); } }
+        /// <summary>
+        /// Manages <see cref="StreamsConfig.TASK_ASSIGNOR_CLASS_CONFIG"/>
+        /// </summary>
+        public StreamsConfigBuilder WithTaskAssignorClass(Java.Lang.Class taskAssignorClass)
+        {
+            var clone = Clone();
+            clone.TaskAssignorClass = taskAssignorClass;
             return clone;
         }
         /// <summary>
@@ -421,6 +473,32 @@ namespace MASES.KNet.Streams
             return clone;
         }
         /// <summary>
+        /// Manages <see cref="StreamsConfig.DEFAULT_CLIENT_SUPPLIER_CONFIG"/>
+        /// </summary>
+        public Class DefaultClientSupplier { get { return GetProperty<Class>(StreamsConfig.DEFAULT_CLIENT_SUPPLIER_CONFIG); } set { SetProperty(StreamsConfig.DEFAULT_CLIENT_SUPPLIER_CONFIG, value); } }
+        /// <summary>
+        /// Manages <see cref="StreamsConfig.DEFAULT_CLIENT_SUPPLIER_CONFIG"/>
+        /// </summary>
+        public StreamsConfigBuilder WithDefaultClientSupplier(Class defaultClientSupplier)
+        {
+            var clone = Clone();
+            clone.DefaultClientSupplier = defaultClientSupplier;
+            return clone;
+        }
+        /// <summary>
+        /// Manages <see cref="StreamsConfig.LOG_SUMMARY_INTERVAL_MS_CONFIG"/>
+        /// </summary>
+        public long LogSummaryIntervalMs { get { return GetProperty<long>(StreamsConfig.LOG_SUMMARY_INTERVAL_MS_CONFIG); } set { SetProperty(StreamsConfig.LOG_SUMMARY_INTERVAL_MS_CONFIG, value); } }
+        /// <summary>
+        /// Manages <see cref="StreamsConfig.LOG_SUMMARY_INTERVAL_MS_CONFIG"/>
+        /// </summary>
+        public StreamsConfigBuilder WithLogSummaryIntervalMs(long logSummaryIntervalMs)
+        {
+            var clone = Clone();
+            clone.LogSummaryIntervalMs = logSummaryIntervalMs;
+            return clone;
+        }
+        /// <summary>
         /// Manages <see cref="StreamsConfig.POLL_MS_CONFIG"/>
         /// </summary>
         public long PollMs { get { return GetProperty<long>(StreamsConfig.POLL_MS_CONFIG); } set { SetProperty(StreamsConfig.POLL_MS_CONFIG, value); } }
@@ -444,6 +522,19 @@ namespace MASES.KNet.Streams
         {
             var clone = Clone();
             clone.ProbingRebalanceIntervalMs = probingRebalanceIntervalMs;
+            return clone;
+        }
+        /// <summary>
+        /// Manages <see cref="StreamsConfig.PROCESSOR_WRAPPER_CLASS_CONFIG"/>
+        /// </summary>
+        public Class ProcessorWrapperClass { get { return GetProperty<Class>(StreamsConfig.PROCESSOR_WRAPPER_CLASS_CONFIG); } set { SetProperty(StreamsConfig.PROCESSOR_WRAPPER_CLASS_CONFIG, value); } }
+        /// <summary>
+        /// Manages <see cref="StreamsConfig.PROCESSOR_WRAPPER_CLASS_CONFIG"/>
+        /// </summary>
+        public StreamsConfigBuilder WithProcessorWrapperClass(Class processorWrapperClass)
+        {
+            var clone = Clone();
+            clone.ProcessorWrapperClass = processorWrapperClass;
             return clone;
         }
         /// <summary>

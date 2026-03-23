@@ -60,19 +60,6 @@ namespace MASES.KNet.Consumer
             return clone;
         }
         /// <summary>
-        /// Manages <see cref="ConsumerConfig.SHARE_ACQUIRE_MODE_CONFIG"/>
-        /// </summary>
-        public string ShareAcquireMode { get { return GetProperty<string>(ConsumerConfig.SHARE_ACQUIRE_MODE_CONFIG); } set { SetProperty(ConsumerConfig.SHARE_ACQUIRE_MODE_CONFIG, value); } }
-        /// <summary>
-        /// Manages <see cref="ConsumerConfig.SHARE_ACQUIRE_MODE_CONFIG"/>
-        /// </summary>
-        public ConsumerConfigBuilder WithShareAcquireMode(string shareAcquireMode)
-        {
-            var clone = Clone();
-            clone.ShareAcquireMode = shareAcquireMode;
-            return clone;
-        }
-        /// <summary>
         /// Manages <see cref="ConsumerConfig.ENABLE_AUTO_COMMIT_CONFIG"/>
         /// </summary>
         public bool EnableAutoCommit { get { return GetProperty<bool>(ConsumerConfig.ENABLE_AUTO_COMMIT_CONFIG); } set { SetProperty(ConsumerConfig.ENABLE_AUTO_COMMIT_CONFIG, value); } }
@@ -326,6 +313,34 @@ namespace MASES.KNet.Consumer
         {
             var clone = Clone();
             clone.SecurityProviders = securityProviders;
+            return clone;
+        }
+
+        /// <summary>
+        /// Manages <see cref="ConsumerConfig.SHARE_ACKNOWLEDGEMENT_MODE_CONFIG"/>
+        /// </summary>
+        public string ShareAcknowledgementMode { get { return GetProperty<string>(ConsumerConfig.SHARE_ACKNOWLEDGEMENT_MODE_CONFIG); } set { SetProperty(ConsumerConfig.SHARE_ACKNOWLEDGEMENT_MODE_CONFIG, value); } }
+        /// <summary>
+        /// Manages <see cref="ConsumerConfig.SHARE_ACKNOWLEDGEMENT_MODE_CONFIG"/>
+        /// </summary>
+        public ConsumerConfigBuilder WithShareAcknowledgementMode(string shareAcknowledgementMode)
+        {
+            var clone = Clone();
+            clone.ShareAcknowledgementMode = shareAcknowledgementMode;
+            return clone;
+        }
+
+        /// <summary>
+        /// Manages <see cref="ConsumerConfig.SHARE_ACQUIRE_MODE_CONFIG"/>
+        /// </summary>
+        public string ShareAcquireMode { get { return GetProperty<string>(ConsumerConfig.SHARE_ACQUIRE_MODE_CONFIG); } set { SetProperty(ConsumerConfig.SHARE_ACQUIRE_MODE_CONFIG, value); } }
+        /// <summary>
+        /// Manages <see cref="ConsumerConfig.SHARE_ACQUIRE_MODE_CONFIG"/>
+        /// </summary>
+        public ConsumerConfigBuilder WithShareAcquireMode(string shareAcquireMode)
+        {
+            var clone = Clone();
+            clone.ShareAcquireMode = shareAcquireMode;
             return clone;
         }
     }
