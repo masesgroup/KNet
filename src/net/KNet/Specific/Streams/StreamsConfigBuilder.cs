@@ -93,19 +93,6 @@ namespace MASES.KNet.Streams
             return clone;
         }
         /// <summary>
-        /// Manages <see cref="StreamsConfig.DEFAULT_DESERIALIZATION_EXCEPTION_HANDLER_CLASS_CONFIG"/>
-        /// </summary>
-        public Java.Lang.Class DefaultDeserializationExceptionHandlerClass { get { return GetProperty<Java.Lang.Class>(StreamsConfig.DEFAULT_DESERIALIZATION_EXCEPTION_HANDLER_CLASS_CONFIG); } set { SetProperty(StreamsConfig.DEFAULT_DESERIALIZATION_EXCEPTION_HANDLER_CLASS_CONFIG, value); } }
-        /// <summary>
-        /// Manages <see cref="StreamsConfig.DEFAULT_DESERIALIZATION_EXCEPTION_HANDLER_CLASS_CONFIG"/>
-        /// </summary>
-        public StreamsConfigBuilder WithDefaultDeserializationExceptionHandlerClass(Java.Lang.Class defaultDeserializationExceptionHandlerClass)
-        {
-            var clone = Clone();
-            clone.DefaultDeserializationExceptionHandlerClass = defaultDeserializationExceptionHandlerClass;
-            return clone;
-        }
-        /// <summary>
         /// Manages <see cref="StreamsConfig.DEFAULT_KEY_SERDE_CLASS_CONFIG"/>
         /// </summary>
         public Java.Lang.Class DefaultKeySerdeClass { get { return GetProperty<Java.Lang.Class>(StreamsConfig.DEFAULT_KEY_SERDE_CLASS_CONFIG); } set { SetProperty(StreamsConfig.DEFAULT_KEY_SERDE_CLASS_CONFIG, value); } }
@@ -116,19 +103,6 @@ namespace MASES.KNet.Streams
         {
             var clone = Clone();
             clone.DefaultKeySerdeClass = defaultKeySerdeClass;
-            return clone;
-        }
-        /// <summary>
-        /// Manages <see cref="StreamsConfig.DEFAULT_PRODUCTION_EXCEPTION_HANDLER_CLASS_CONFIG"/>
-        /// </summary>
-        public Java.Lang.Class DefaultProductionExceptionHandlerClass { get { return GetProperty<Java.Lang.Class>(StreamsConfig.DEFAULT_PRODUCTION_EXCEPTION_HANDLER_CLASS_CONFIG); } set { SetProperty(StreamsConfig.DEFAULT_PRODUCTION_EXCEPTION_HANDLER_CLASS_CONFIG, value); } }
-        /// <summary>
-        /// Manages <see cref="StreamsConfig.DEFAULT_PRODUCTION_EXCEPTION_HANDLER_CLASS_CONFIG"/>
-        /// </summary>
-        public StreamsConfigBuilder WithDefaultProductionExceptionHandlerClass(Java.Lang.Class defaultProductionExceptionHandlerClass)
-        {
-            var clone = Clone();
-            clone.DefaultProductionExceptionHandlerClass = defaultProductionExceptionHandlerClass;
             return clone;
         }
         /// <summary>
@@ -194,6 +168,32 @@ namespace MASES.KNet.Streams
         {
             var clone = Clone();
             clone.NumStreamThreads = numStreamThreads;
+            return clone;
+        }
+        /// <summary>
+        /// Manages <see cref="StreamsConfig.PROCESSING_EXCEPTION_HANDLER_CLASS_CONFIG"/>
+        /// </summary>
+        public Java.Lang.Class ProcessingExceptionHandlerClass { get { return GetProperty<Java.Lang.Class>(StreamsConfig.PROCESSING_EXCEPTION_HANDLER_CLASS_CONFIG); } set { SetProperty(StreamsConfig.PROCESSING_EXCEPTION_HANDLER_CLASS_CONFIG, value); } }
+        /// <summary>
+        /// Manages <see cref="StreamsConfig.PROCESSING_EXCEPTION_HANDLER_CLASS_CONFIG"/>
+        /// </summary>
+        public StreamsConfigBuilder WithProcessingExceptionHandlerClass(Java.Lang.Class processingExceptionHandlerClass)
+        {
+            var clone = Clone();
+            clone.ProcessingExceptionHandlerClass = processingExceptionHandlerClass;
+            return clone;
+        }
+        /// <summary>
+        /// Manages <see cref="StreamsConfig.TASK_ASSIGNOR_CLASS_CONFIG"/>
+        /// </summary>
+        public Java.Lang.Class TaskAssignorClass { get { return GetProperty<Java.Lang.Class>(StreamsConfig.TASK_ASSIGNOR_CLASS_CONFIG); } set { SetProperty(StreamsConfig.TASK_ASSIGNOR_CLASS_CONFIG, value); } }
+        /// <summary>
+        /// Manages <see cref="StreamsConfig.TASK_ASSIGNOR_CLASS_CONFIG"/>
+        /// </summary>
+        public StreamsConfigBuilder WithTaskAssignorClass(Java.Lang.Class taskAssignorClass)
+        {
+            var clone = Clone();
+            clone.TaskAssignorClass = taskAssignorClass;
             return clone;
         }
         /// <summary>
@@ -376,6 +376,32 @@ namespace MASES.KNet.Streams
         {
             var clone = Clone();
             clone.DSLStoreSuppliersClass = dSLStoreSuppliersClass;
+            return clone;
+        }
+        /// <summary>
+        /// Manages <see cref="StreamsConfig.DEFAULT_CLIENT_SUPPLIER_CONFIG"/>
+        /// </summary>
+        public Class DefaultClientSupplier { get { return GetProperty<Class>(StreamsConfig.DEFAULT_CLIENT_SUPPLIER_CONFIG); } set { SetProperty(StreamsConfig.DEFAULT_CLIENT_SUPPLIER_CONFIG, value); } }
+        /// <summary>
+        /// Manages <see cref="StreamsConfig.DEFAULT_CLIENT_SUPPLIER_CONFIG"/>
+        /// </summary>
+        public StreamsConfigBuilder WithDefaultClientSupplier(Class defaultClientSupplier)
+        {
+            var clone = Clone();
+            clone.DefaultClientSupplier = defaultClientSupplier;
+            return clone;
+        }
+        /// <summary>
+        /// Manages <see cref="StreamsConfig.LOG_SUMMARY_INTERVAL_MS_CONFIG"/>
+        /// </summary>
+        public long LogSummaryIntervalMs { get { return GetProperty<long>(StreamsConfig.LOG_SUMMARY_INTERVAL_MS_CONFIG); } set { SetProperty(StreamsConfig.LOG_SUMMARY_INTERVAL_MS_CONFIG, value); } }
+        /// <summary>
+        /// Manages <see cref="StreamsConfig.LOG_SUMMARY_INTERVAL_MS_CONFIG"/>
+        /// </summary>
+        public StreamsConfigBuilder WithLogSummaryIntervalMs(long logSummaryIntervalMs)
+        {
+            var clone = Clone();
+            clone.LogSummaryIntervalMs = logSummaryIntervalMs;
             return clone;
         }
         /// <summary>

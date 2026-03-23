@@ -261,14 +261,14 @@ namespace MASES.KNet.Producer
         /// <summary>
         /// Manages <see cref="ProducerConfig.MAX_IN_FLIGHT_REQUESTS_PER_CONNECTION"/>
         /// </summary>
-        public int MaxInFlightRequestPerConnection { get { return GetProperty<int>(ProducerConfig.MAX_IN_FLIGHT_REQUESTS_PER_CONNECTION); } set { SetProperty(ProducerConfig.MAX_IN_FLIGHT_REQUESTS_PER_CONNECTION, value); } }
+        public int MaxInFlightRequestsPerConnection { get { return GetProperty<int>(ProducerConfig.MAX_IN_FLIGHT_REQUESTS_PER_CONNECTION); } set { SetProperty(ProducerConfig.MAX_IN_FLIGHT_REQUESTS_PER_CONNECTION, value); } }
         /// <summary>
         /// Manages <see cref="ProducerConfig.MAX_IN_FLIGHT_REQUESTS_PER_CONNECTION"/>
         /// </summary>
-        public ProducerConfigBuilder WithMaxInFlightRequestPerConnection(int maxInFlightRequestPerConnection)
+        public ProducerConfigBuilder WithMaxInFlightRequestsPerConnection(int maxInFlightRequestsPerConnection)
         {
             var clone = Clone();
-            clone.MaxInFlightRequestPerConnection = maxInFlightRequestPerConnection;
+            clone.MaxInFlightRequestsPerConnection = maxInFlightRequestsPerConnection;
             return clone;
         }
         /// <summary>
@@ -375,5 +375,6 @@ namespace MASES.KNet.Producer
             clone.SecurityProviders = securityProviders;
             return clone;
         }
+
     }
 }
