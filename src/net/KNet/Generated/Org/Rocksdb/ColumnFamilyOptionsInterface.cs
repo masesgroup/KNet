@@ -29,7 +29,7 @@ namespace Org.Rocksdb
     /// <summary>
     /// <see href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/ColumnFamilyOptionsInterface.html"/>
     /// </summary>
-    public partial class ColumnFamilyOptionsInterface : Org.Rocksdb.AdvancedColumnFamilyOptionsInterface
+    public partial class ColumnFamilyOptionsInterface : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ColumnFamilyOptionsInterface>
     {
         const string _bridgeClassName = "org.rocksdb.ColumnFamilyOptionsInterface";
         /// <summary>
@@ -73,7 +73,7 @@ namespace Org.Rocksdb
     /// <see href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/ColumnFamilyOptionsInterface.html"/>
     /// </summary>
     /// <typeparam name="T"><see cref="Org.Rocksdb.ColumnFamilyOptionsInterface{T}"/></typeparam>
-    public partial class ColumnFamilyOptionsInterface<T> : Org.Rocksdb.AdvancedColumnFamilyOptionsInterface<T> where T : Org.Rocksdb.ColumnFamilyOptionsInterface<T>
+    public partial class ColumnFamilyOptionsInterface<T> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ColumnFamilyOptionsInterface<T>> where T : Org.Rocksdb.ColumnFamilyOptionsInterface<T>
     {
         const string _bridgeClassName = "org.rocksdb.ColumnFamilyOptionsInterface";
         /// <summary>
@@ -217,14 +217,6 @@ namespace Org.Rocksdb
         public Org.Rocksdb.AbstractCompactionFilter CompactionFilter()
         {
             return IExecuteWithSignature<Org.Rocksdb.AbstractCompactionFilter>("compactionFilter", "()Lorg/rocksdb/AbstractCompactionFilter;");
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/ColumnFamilyOptionsInterface.html#compactionFilterFactory()"/>
-        /// </summary>
-        /// <returns><see cref="Org.Rocksdb.AbstractCompactionFilterFactory"/></returns>
-        public Org.Rocksdb.AbstractCompactionFilterFactory CompactionFilterFactory()
-        {
-            return IExecuteWithSignature<Org.Rocksdb.AbstractCompactionFilterFactory>("compactionFilterFactory", "()Lorg/rocksdb/AbstractCompactionFilterFactory;");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/ColumnFamilyOptionsInterface.html#bottommostCompressionOptions()"/>
@@ -387,15 +379,6 @@ namespace Org.Rocksdb
         public Org.Rocksdb.ColumnFamilyOptionsInterface SetCompactionFilter(Org.Rocksdb.AbstractCompactionFilter arg0)
         {
             return IExecuteWithSignature<Org.Rocksdb.ColumnFamilyOptionsInterface>("setCompactionFilter", "(Lorg/rocksdb/AbstractCompactionFilter;)Lorg/rocksdb/ColumnFamilyOptionsInterface;", arg0);
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/ColumnFamilyOptionsInterface.html#setCompactionFilterFactory(org.rocksdb.AbstractCompactionFilterFactory)"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="Org.Rocksdb.AbstractCompactionFilterFactory"/></param>
-        /// <returns><see cref="Org.Rocksdb.ColumnFamilyOptionsInterface"/></returns>
-        public Org.Rocksdb.ColumnFamilyOptionsInterface SetCompactionFilterFactory(Org.Rocksdb.AbstractCompactionFilterFactory arg0)
-        {
-            return IExecuteWithSignature<Org.Rocksdb.ColumnFamilyOptionsInterface>("setCompactionFilterFactory", "(Lorg/rocksdb/AbstractCompactionFilterFactory;)Lorg/rocksdb/ColumnFamilyOptionsInterface;", arg0);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/ColumnFamilyOptionsInterface.html#setCompactionThreadLimiter(org.rocksdb.ConcurrentTaskLimiter)"/>
@@ -565,7 +548,7 @@ namespace Org.Rocksdb
     /// <summary>
     /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/ColumnFamilyOptionsInterface.html"/>
     /// </summary>
-    public partial interface IColumnFamilyOptionsInterface<T> : Org.Rocksdb.IAdvancedColumnFamilyOptionsInterface<T>
+    public partial interface IColumnFamilyOptionsInterface<T>
     {
         #region Instance methods
 
@@ -689,15 +672,6 @@ namespace Org.Rocksdb
         public Org.Rocksdb.AbstractCompactionFilter<ReturnExtendsOrg_Rocksdb_AbstractSlice_object_> CompactionFilter<ReturnExtendsOrg_Rocksdb_AbstractSlice_object_>() where ReturnExtendsOrg_Rocksdb_AbstractSlice_object_ : Org.Rocksdb.AbstractSlice<object>
         {
             return IExecuteWithSignature<Org.Rocksdb.AbstractCompactionFilter<ReturnExtendsOrg_Rocksdb_AbstractSlice_object_>>("compactionFilter", "()Lorg/rocksdb/AbstractCompactionFilter;");
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/ColumnFamilyOptionsInterface.html#compactionFilterFactory()"/>
-        /// </summary>
-        /// <typeparam name="ReturnExtendsOrg_Rocksdb_AbstractCompactionFilter_object_"><see cref="Org.Rocksdb.AbstractCompactionFilter{object}"/></typeparam>
-        /// <returns><see cref="Org.Rocksdb.AbstractCompactionFilterFactory"/></returns>
-        public Org.Rocksdb.AbstractCompactionFilterFactory<ReturnExtendsOrg_Rocksdb_AbstractCompactionFilter_object_> CompactionFilterFactory<ReturnExtendsOrg_Rocksdb_AbstractCompactionFilter_object_>() where ReturnExtendsOrg_Rocksdb_AbstractCompactionFilter_object_ : Org.Rocksdb.AbstractCompactionFilter<object>
-        {
-            return IExecuteWithSignature<Org.Rocksdb.AbstractCompactionFilterFactory<ReturnExtendsOrg_Rocksdb_AbstractCompactionFilter_object_>>("compactionFilterFactory", "()Lorg/rocksdb/AbstractCompactionFilterFactory;");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/ColumnFamilyOptionsInterface.html#bottommostCompressionOptions()"/>
@@ -861,16 +835,6 @@ namespace Org.Rocksdb
         public T SetCompactionFilter<Arg0ExtendsOrg_Rocksdb_AbstractSlice_object_>(Org.Rocksdb.AbstractCompactionFilter<Arg0ExtendsOrg_Rocksdb_AbstractSlice_object_> arg0) where Arg0ExtendsOrg_Rocksdb_AbstractSlice_object_ : Org.Rocksdb.AbstractSlice<object>
         {
             return IExecuteWithSignature<T>("setCompactionFilter", "(Lorg/rocksdb/AbstractCompactionFilter;)Lorg/rocksdb/ColumnFamilyOptionsInterface;", arg0);
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/ColumnFamilyOptionsInterface.html#setCompactionFilterFactory(org.rocksdb.AbstractCompactionFilterFactory)"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="Org.Rocksdb.AbstractCompactionFilterFactory"/></param>
-        /// <typeparam name="Arg0ExtendsOrg_Rocksdb_AbstractCompactionFilter_object_"><see cref="Org.Rocksdb.AbstractCompactionFilter{object}"/></typeparam>
-        /// <returns><typeparamref name="T"/></returns>
-        public T SetCompactionFilterFactory<Arg0ExtendsOrg_Rocksdb_AbstractCompactionFilter_object_>(Org.Rocksdb.AbstractCompactionFilterFactory<Arg0ExtendsOrg_Rocksdb_AbstractCompactionFilter_object_> arg0) where Arg0ExtendsOrg_Rocksdb_AbstractCompactionFilter_object_ : Org.Rocksdb.AbstractCompactionFilter<object>
-        {
-            return IExecuteWithSignature<T>("setCompactionFilterFactory", "(Lorg/rocksdb/AbstractCompactionFilterFactory;)Lorg/rocksdb/ColumnFamilyOptionsInterface;", arg0);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/ColumnFamilyOptionsInterface.html#setCompactionThreadLimiter(org.rocksdb.ConcurrentTaskLimiter)"/>
