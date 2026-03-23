@@ -417,13 +417,6 @@ namespace Org.Rocksdb
             get { return IExecuteWithSignature<Org.Rocksdb.ColumnFamilyMetaData>("getColumnFamilyMetaData", "()Lorg/rocksdb/ColumnFamilyMetaData;"); }
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/RocksDB.html#getDBOptions()"/> <see href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/RocksDB.html#setDBOptions(org.rocksdb.MutableDBOptions)"/>
-        /// </summary>
-        public Org.Rocksdb.MutableDBOptions.MutableDBOptionsBuilder DBOptions
-        {
-            get { return IExecuteWithSignature<Org.Rocksdb.MutableDBOptions.MutableDBOptionsBuilder>("getDBOptions", "()Lorg/rocksdb/MutableDBOptions$MutableDBOptionsBuilder;"); } set { IExecuteWithSignature("setDBOptions", "(Lorg/rocksdb/MutableDBOptions;)V", value); }
-        }
-        /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/RocksDB.html#getDefaultColumnFamily()"/> 
         /// </summary>
         public Org.Rocksdb.ColumnFamilyHandle DefaultColumnFamily
