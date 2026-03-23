@@ -5,7 +5,7 @@ _description: Describes how to use Streams SDK of .NET suite for Apache Kafka™
 
 # KNet: Streams SDK
 
-This is only a quick introduction to KNet Streams SDK; more information related to Apache Kafka™ Streams can be found at the following links: <https://kafka.apache.org/documentation/#streams> and <https://kafka.apache.org/documentation/streams/>
+This is only a quick introduction to KNet Streams SDK, many other information related to Apache Kafka™ Streams can be found at the following links: <https://kafka.apache.org/documentation/#streams> and <https://kafka.apache.org/documentation/streams/>
 
 ## Backend compatibility
 
@@ -17,8 +17,8 @@ See [Supported Backends](backends.md) for the full compatibility matrix covering
 
 ## Why KNet Streams SDK
 
-KNet Streams SDK adds the ability to manage complex .NET types in Apache Kafka™ Streams without managing them in the JVM™.
-**The Apache Kafka™ Streams APIs available in the .NET suite for Apache Kafka™ work well if the types used are known within the JVM.**
+KNet Streams SDK adds the ability to manage complex .NET types in Apache Kafka™ Streams without manage them in the JVM™.
+**The Apache Kafka™ Streams APIs available in .NET suite for Apache Kafka™ works well if the types used are known within the JVM.**
 Starting from the previous sentence, it works well using native types (bool, string, long, int, and so on), however it does not work if the type in .NET does not have a JVM™ counterpart.
 
 To solve this limitation there are two ways:
@@ -33,10 +33,10 @@ To solve this limitation there are two ways:
 
 ## General
 
-The KNet Streams SDK is a set of APIs which expose, in .NET, the ones available in Apache Kafka™ Streams and adds the feature to directly manage serializable types of .NET:
+The KNet Streams SDK is a set of API which expose, in .NET, the ones available in Apache Kafka™ Streams and adds the feature to directly manage serializable types of .NET:
 
-* The implementation is backed by a standard Apache Kafka™ Streams instance which is instructed to work with raw data (i.e. array of bytes);
-* The data are exposed, in .NET, using the types assigned; most of the translation work is handled by [KNet serializers](usageSerDes.md).
+* The implementation is backed by a standard Apache Kafka™ Streams which is instructed to work with raw data (i.e. array of bytes);
+* The data are exposed, in .NET, using the types assigned, most translation work is handled by [KNet serializers](usageSerDes.md).
 
 ## API set
 
@@ -73,7 +73,7 @@ string storageId = "myStorage";
 StreamsConfigBuilder streamsConfig = StreamsConfigBuilder.Create();
 StreamsBuilder builder = new StreamsBuilder(streamsConfig);
 
-Org.Apache.Kafka.Streams.State.KeyValueBytesStoreSupplier storeSupplier = Org.Apache.Kafka.Streams.State.Stores.InMemoryKeyValueStore(storageId);
+Org.Apache.Kafka™.Streams.State.KeyValueBytesStoreSupplier storeSupplier = Org.Apache.Kafka™.Streams.State.Stores.InMemoryKeyValueStore(storageId);
 Materialized<string, string> materialized = Materialized<string, string>.As(storeSupplier);
 GlobalKTable<string, string> globalTable = builder.GlobalTable(topicName, materialized);
 Topology topology = builder.Build();
@@ -87,10 +87,11 @@ KeyValueIterator<string, string> keyValueIterator = keyValueStore.All;
 while (keyValueIterator.HasNext)
 {
     KeyValue<string, string> kv = keyValueIterator.Next;
+
 }
 ```
 
-The above example uses simple types, i.e. `string`, as data stored within the topic.
+The above example uses simple type, i.e. `string`, as data stored within the topic.
 
 ### Complex types example
 
@@ -124,7 +125,7 @@ streamsConfig.KNetValueSerDes = typeof(JsonSerDes.Value<>);
 
 StreamsBuilder builder = new StreamsBuilder(streamsConfig);
 
-Org.Apache.Kafka.Streams.State.KeyValueBytesStoreSupplier storeSupplier = Org.Apache.Kafka.Streams.State.Stores.InMemoryKeyValueStore(storageId);
+Org.Apache.Kafka™.Streams.State.KeyValueBytesStoreSupplier storeSupplier = Org.Apache.Kafka™.Streams.State.Stores.InMemoryKeyValueStore(storageId);
 Materialized<int, TestType> materialized = Materialized<int, TestType>.As(storeSupplier);
 GlobalKTable<int, TestType> globalTable = builder.GlobalTable(topicName, materialized);
 Topology topology = builder.Build();
@@ -138,12 +139,13 @@ KeyValueIterator<int, TestType> keyValueIterator = keyValueStore.All;
 while (keyValueIterator.HasNext)
 {
     KNetKeyValue<int, TestType> kv = keyValueIterator.Next;
+
 }
 ```
 
 The above example uses a complex type for value, i.e. `TestType`, as data stored within the topic. The selected serializer is the JSON serializer (`JsonSerDes.Value<V>`) applied over `StreamsConfigBuilder` instance.
 If even the key needs a complex type just uncomment the line with `streamsConfig.KNetKeySerDes = typeof(JsonSerDes.Key<>);` and replace the key type with your custom key type.
-Other ready-made serializers can be found on [KNet serializers](usageSerDes.md).
+Other ready made serializers can be found on [KNet serializers](usageSerDes.md).
 
 ## Performance consideration
 
@@ -162,7 +164,7 @@ while (keyValueIterator.HasNext)
 ```
 
 The approach reduces the serialization impact when not needed.
-However there are conditions which need to avoid the deserialization being made synchronously. Consider a condition where there is a lot of work done on key and/or value returned — serialization can impact the whole cycle:
+However there are conditions which need to avoid deserialization being made synchronously. Consider a condition where there is a lot of work done on key and/or value, serialization can impact the whole cycle:
 
 ```
 while (keyValueIterator.HasNext)
@@ -177,10 +179,10 @@ void longFunction(int key, TestType value)
 }
 ```
 
-To solve this problem KNet Streams SDK comes with a feature to deserialize in parallel while `longFunction` does its work; `KeyValueIterator<TKey, TValue>` can return a special `IEnumerator<TKeyValue>` which deserializes in parallel:
+To solve this problem KNet Streams SDK comes with a feature to deserializes in parallel while `longFunction` do its work; `KeyValueIterator<TKey, TValue>` can return a special `IEnumerator<TKeyValue>` which deserializes in parallel:
 
 ```
-IEnumerator<KeyValue<int, TestType>> enumerator = keyValueIterator.ToIEnumerator(); // uses the default, i.e. with prefetch feature
+IEnumerator<KeyValue<int, TestType>> enumerator = keyValueIterator.ToIEnumerator(); // it was used the default, i.e. with prefetch feature
 // key and value deserialization happens behind the scene
 while (enumerator.MoveNext())
 {
@@ -196,7 +198,7 @@ void longFunction(int key, TestType value)
 
 ##### Warning
 
-This feature uses an external thread and cannot be stopped; upon executing the `ToIEnumerator` function, the thread starts and continues until the end of the available data.
+This feature uses an external thread and cannot be stopped; upon executing `ToIEnumerator` function, the thread starts and continues until the end of the available data.
 
 The previous point can be mitigated using the `foreach` statement since iterators implement both `IEnumerable<T>` and `IAsyncEnumerable<T>`:
 

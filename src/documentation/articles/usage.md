@@ -6,7 +6,7 @@ _description: Describes how to use .NET suite for Apache Kafka™
 # KNet: library usage
 
 To use KNet classes the developer can write code in .NET using the same classes available in the official Apache Kafka™ package.
-If classes or methods are not available yet it is possible to use the approach synthetized in [What to do if an API was not yet implemented](API_extensibility.md).
+If classes or methods are not available yet it is possible to use the approach synthetized in [What to do if an API was not yet implemented](API_extensibility.md)
 
 ## Backend compatibility
 
@@ -51,7 +51,7 @@ If a developer is using KNet within its own product it is possible to override t
 [JCOBridge](https://www.jcobridge.com/) tries to identify a suitable JRE/JDK installation within the system using some standard mechanism of JRE/JDK: `JAVA_HOME` environment variable or Windows registry if available.
 However it is possible, on Windows operating systems, that the library raises an **InvalidOperationException: Missing Java Key in registry: Couldn't find Java installed on the machine**.
 This means that neither `JAVA_HOME` nor Windows registry contains information about a default installed JRE/JDK: some vendors may not set them up.
-If the developer/user encounters this condition they can follow these steps:
+If the developer/user encounters this condition, they can follow the following steps:
 
 1. On a command prompt execute `set | findstr JAVA_HOME` and verify the result;
 2. If something was reported maybe the `JAVA_HOME` environment variable is not set at system level, but at a different level like user level which is not visible from the KNet process that raised the exception;
@@ -66,7 +66,7 @@ If the developer/user encounters this condition they can follow these steps:
 
 ### Intel CET and KNet
 
-KNet uses an embedded JVM™ through JNet/JCOBridge, however JVM™ initialization is incompatible with [CET](https://www.intel.com/content/www/us/en/developer/articles/technical/technical-look-control-flow-enforcement-technology.html) because the code used to identify CPU tries to modify the return address and this is considered by CET a violation: see [this comment](https://github.com/masesgroup/JNet/issues/573#issuecomment-2544249107).
+KNet uses an embedded JVM™ through JNet/JCOBridge, however JVM™ initialization is incompatible with [CET](https://www.intel.com/content/www/us/en/developer/articles/technical/technical-look-control-flow-enforcement-technology.html) because the code used to identify the CPU tries to modify the return address and this is considered by CET a violation: see [this comment](https://github.com/masesgroup/JNet/issues/573#issuecomment-2544249107).
 
 From .NET 9 preview 6, [CET is enabled by default on supported hardware](https://learn.microsoft.com/en-us/dotnet/core/compatibility/interop/9.0/cet-support) when the final stage produces an executable artifact, i.e. the csproj file contains `<OutputType>Exe</OutputType>`.
 
@@ -124,7 +124,7 @@ A basic producer can be like the following one:
 
 ```
 using MASES.KNet;
-using Org.Apache.Kafka.Clients.Producer;
+using Org.Apache.Kafka™.Clients.Producer;
 using Java.Util;
 using System;
 using System.Threading;
@@ -150,6 +150,16 @@ namespace MASES.KNetTemplate.KNetProducer
             {
                 serverToUse = args[0];
             }
+
+            /**** Direct mode ******
+            Properties props = new Properties();
+            props.Put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, serverToUse);
+            props.Put(ProducerConfig.ACKS_CONFIG, "all");
+            props.Put(ProducerConfig.RETRIES_CONFIG, 0);
+            props.Put(ProducerConfig.LINGER_MS_CONFIG, 1);
+            props.Put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, "org.apache.kafka.common.serialization.StringSerializer");
+            props.Put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, "org.apache.kafka.common.serialization.StringSerializer");
+            ******/
 
             Properties props = ProducerConfigBuilder.Create()
                                                     .WithBootstrapServers(serverToUse)
@@ -188,18 +198,18 @@ namespace MASES.KNetTemplate.KNetProducer
 The example above can be found in the [templates package](https://www.nuget.org/packages/MASES.KNet.Templates/). Its behavior is:
 
 * during initialization prepares the properties,
-* creates a producer using the properties
-* creates a ProducerRecord and sends it
-* prints out the produced data and the resulting RecordMetadata
+* create a producer using the properties
+* create ProducerRecord and send it
+* print out the produced data and the resulting RecordMetadata
 
 ### Producer with Callback
 
 A producer with Callback can be like the following one. In this example the reader can highlight a slight difference from the corresponding Java™ code.
-See [JVM callbacks](jvm_callbacks.md) for details on callback management from JVM™.
+See [JVM callbacks](jvm_callbacks.md) to go into detail in the callback management from JVM™.
 
 ```
 using MASES.KNet;
-using Org.Apache.Kafka.Clients.Producer;
+using Org.Apache.Kafka™.Clients.Producer;
 using Java.Util;
 using System;
 using System.Threading;
@@ -225,6 +235,16 @@ namespace MASES.KNetTemplate.KNetProducer
             {
                 serverToUse = args[0];
             }
+
+            /**** Direct mode ******
+            Properties props = new Properties();
+            props.Put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, serverToUse);
+            props.Put(ProducerConfig.ACKS_CONFIG, "all");
+            props.Put(ProducerConfig.RETRIES_CONFIG, 0);
+            props.Put(ProducerConfig.LINGER_MS_CONFIG, 1);
+            props.Put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, "org.apache.kafka.common.serialization.StringSerializer");
+            props.Put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, "org.apache.kafka.common.serialization.StringSerializer");
+            ******/
 
             Properties props = ProducerConfigBuilder.Create()
                                                     .WithBootstrapServers(serverToUse)
@@ -270,12 +290,12 @@ namespace MASES.KNetTemplate.KNetProducer
 The example above can be found in the [templates package](https://www.nuget.org/packages/MASES.KNet.Templates/). Its behavior is:
 
 * during initialization prepares the properties
-* creates a producer using the properties
-* creates a ProducerRecord and sends it using the Send API with the attached Callback
+* create a producer using the properties
+* create ProducerRecord and send it using the API Send with the attached Callback
 * when the operation completes the Callback is called:
   + if an Exception was raised it will be printed out
   + otherwise the RecordMetadata is printed out
-* prints out the produced data and the resulting RecordMetadata
+* print out the produced data and the resulting RecordMetadata
 
 ## Consumer example
 
@@ -283,7 +303,7 @@ A basic consumer can be like the following one:
 
 ```
 using MASES.KNet;
-using Org.Apache.Kafka.Clients.Consumer;
+using Org.Apache.Kafka™.Clients.Consumer;
 using Java.Util;
 using System;
 
@@ -308,6 +328,16 @@ namespace MASES.KNetTemplate.KNetConsumer
             {
                 serverToUse = args[0];
             }
+
+            /**** Direct mode ******
+            Properties props = new Properties();
+            props.Put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, serverToUse);
+            props.Put(ConsumerConfig.GROUP_ID_CONFIG, "test");
+            props.Put(ConsumerConfig.ENABLE_AUTO_COMMIT_CONFIG, "true");
+            props.Put(ConsumerConfig.AUTO_COMMIT_INTERVAL_MS_CONFIG, "1000");
+            props.Put(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, "org.apache.kafka.common.serialization.StringDeserializer");
+            props.Put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, "org.apache.kafka.common.serialization.StringDeserializer");
+            *******/
 
             Properties props = ConsumerConfigBuilder.Create()
                                                     .WithBootstrapServers(serverToUse)
@@ -348,6 +378,6 @@ namespace MASES.KNetTemplate.KNetConsumer
 The example above can be found in the [templates package](https://www.nuget.org/packages/MASES.KNet.Templates/). Its behavior is:
 
 * during initialization prepares the properties,
-* creates a consumer using the properties
+* create a consumer using the properties
 * subscribes and starts consuming
-* when data are received it logs to the console the information.
+* when data are received, it logs to the console the information.
