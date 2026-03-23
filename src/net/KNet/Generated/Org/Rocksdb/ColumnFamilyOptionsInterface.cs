@@ -211,14 +211,6 @@ namespace Org.Rocksdb
             return IExecuteWithSignature<long>("maxTableFilesSizeFIFO", "()J");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/ColumnFamilyOptionsInterface.html#compactionFilter()"/>
-        /// </summary>
-        /// <returns><see cref="Org.Rocksdb.AbstractCompactionFilter"/></returns>
-        public Org.Rocksdb.AbstractCompactionFilter CompactionFilter()
-        {
-            return IExecuteWithSignature<Org.Rocksdb.AbstractCompactionFilter>("compactionFilter", "()Lorg/rocksdb/AbstractCompactionFilter;");
-        }
-        /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/ColumnFamilyOptionsInterface.html#bottommostCompressionOptions()"/>
         /// </summary>
         /// <returns><see cref="Org.Rocksdb.CompressionOptions"/></returns>
@@ -370,15 +362,6 @@ namespace Org.Rocksdb
         public Org.Rocksdb.ColumnFamilyOptionsInterface SetCfPaths(Java.Util.Collection arg0)
         {
             return IExecuteWithSignature<Org.Rocksdb.ColumnFamilyOptionsInterface>("setCfPaths", "(Ljava/util/Collection;)Lorg/rocksdb/ColumnFamilyOptionsInterface;", arg0);
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/ColumnFamilyOptionsInterface.html#setCompactionFilter(org.rocksdb.AbstractCompactionFilter)"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="Org.Rocksdb.AbstractCompactionFilter"/></param>
-        /// <returns><see cref="Org.Rocksdb.ColumnFamilyOptionsInterface"/></returns>
-        public Org.Rocksdb.ColumnFamilyOptionsInterface SetCompactionFilter(Org.Rocksdb.AbstractCompactionFilter arg0)
-        {
-            return IExecuteWithSignature<Org.Rocksdb.ColumnFamilyOptionsInterface>("setCompactionFilter", "(Lorg/rocksdb/AbstractCompactionFilter;)Lorg/rocksdb/ColumnFamilyOptionsInterface;", arg0);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/ColumnFamilyOptionsInterface.html#setCompactionThreadLimiter(org.rocksdb.ConcurrentTaskLimiter)"/>
@@ -665,15 +648,6 @@ namespace Org.Rocksdb
             return IExecuteWithSignature<long>("maxTableFilesSizeFIFO", "()J");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/ColumnFamilyOptionsInterface.html#compactionFilter()"/>
-        /// </summary>
-        /// <typeparam name="ReturnExtendsOrg_Rocksdb_AbstractSlice_object_"><see cref="Org.Rocksdb.AbstractSlice{object}"/></typeparam>
-        /// <returns><see cref="Org.Rocksdb.AbstractCompactionFilter"/></returns>
-        public Org.Rocksdb.AbstractCompactionFilter<ReturnExtendsOrg_Rocksdb_AbstractSlice_object_> CompactionFilter<ReturnExtendsOrg_Rocksdb_AbstractSlice_object_>() where ReturnExtendsOrg_Rocksdb_AbstractSlice_object_ : Org.Rocksdb.AbstractSlice<object>
-        {
-            return IExecuteWithSignature<Org.Rocksdb.AbstractCompactionFilter<ReturnExtendsOrg_Rocksdb_AbstractSlice_object_>>("compactionFilter", "()Lorg/rocksdb/AbstractCompactionFilter;");
-        }
-        /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/ColumnFamilyOptionsInterface.html#bottommostCompressionOptions()"/>
         /// </summary>
         /// <returns><see cref="Org.Rocksdb.CompressionOptions"/></returns>
@@ -825,16 +799,6 @@ namespace Org.Rocksdb
         public T SetCfPaths(Java.Util.Collection<Org.Rocksdb.DbPath> arg0)
         {
             return IExecuteWithSignature<T>("setCfPaths", "(Ljava/util/Collection;)Lorg/rocksdb/ColumnFamilyOptionsInterface;", arg0);
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/ColumnFamilyOptionsInterface.html#setCompactionFilter(org.rocksdb.AbstractCompactionFilter)"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="Org.Rocksdb.AbstractCompactionFilter"/></param>
-        /// <typeparam name="Arg0ExtendsOrg_Rocksdb_AbstractSlice_object_"><see cref="Org.Rocksdb.AbstractSlice{object}"/></typeparam>
-        /// <returns><typeparamref name="T"/></returns>
-        public T SetCompactionFilter<Arg0ExtendsOrg_Rocksdb_AbstractSlice_object_>(Org.Rocksdb.AbstractCompactionFilter<Arg0ExtendsOrg_Rocksdb_AbstractSlice_object_> arg0) where Arg0ExtendsOrg_Rocksdb_AbstractSlice_object_ : Org.Rocksdb.AbstractSlice<object>
-        {
-            return IExecuteWithSignature<T>("setCompactionFilter", "(Lorg/rocksdb/AbstractCompactionFilter;)Lorg/rocksdb/ColumnFamilyOptionsInterface;", arg0);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/ColumnFamilyOptionsInterface.html#setCompactionThreadLimiter(org.rocksdb.ConcurrentTaskLimiter)"/>

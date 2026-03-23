@@ -1104,15 +1104,6 @@ namespace Org.Rocksdb
             return IExecuteWithSignature<long>("writeThreadSlowYieldUsec", "()J");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/Options.html#compactionFilter()"/>
-        /// </summary>
-        /// <typeparam name="ReturnExtendsOrg_Rocksdb_AbstractSlice_object_"><see cref="Org.Rocksdb.AbstractSlice{object}"/></typeparam>
-        /// <returns><see cref="Org.Rocksdb.AbstractCompactionFilter"/></returns>
-        public Org.Rocksdb.AbstractCompactionFilter<ReturnExtendsOrg_Rocksdb_AbstractSlice_object_> CompactionFilter<ReturnExtendsOrg_Rocksdb_AbstractSlice_object_>() where ReturnExtendsOrg_Rocksdb_AbstractSlice_object_ : Org.Rocksdb.AbstractSlice<object>
-        {
-            return IExecuteWithSignature<Org.Rocksdb.AbstractCompactionFilter<ReturnExtendsOrg_Rocksdb_AbstractSlice_object_>>("compactionFilter", "()Lorg/rocksdb/AbstractCompactionFilter;");
-        }
-        /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/Options.html#setArenaBlockSize(long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="long"/></param>
@@ -1478,15 +1469,6 @@ namespace Org.Rocksdb
         public Org.Rocksdb.ColumnFamilyOptionsInterface SetCfPaths(Java.Util.Collection arg0)
         {
             return IExecuteWithSignature<Org.Rocksdb.ColumnFamilyOptionsInterface>("setCfPaths", "(Ljava/util/Collection;)Lorg/rocksdb/ColumnFamilyOptionsInterface;", arg0);
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/Options.html#setCompactionFilter(org.rocksdb.AbstractCompactionFilter)"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="Org.Rocksdb.AbstractCompactionFilter"/></param>
-        /// <returns><see cref="Org.Rocksdb.ColumnFamilyOptionsInterface"/></returns>
-        public Org.Rocksdb.ColumnFamilyOptionsInterface SetCompactionFilter(Org.Rocksdb.AbstractCompactionFilter arg0)
-        {
-            return IExecuteWithSignature<Org.Rocksdb.ColumnFamilyOptionsInterface>("setCompactionFilter", "(Lorg/rocksdb/AbstractCompactionFilter;)Lorg/rocksdb/ColumnFamilyOptionsInterface;", arg0);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/Options.html#setCompactionStyle(org.rocksdb.CompactionStyle)"/>
