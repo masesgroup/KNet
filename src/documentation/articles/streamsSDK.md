@@ -1,3 +1,8 @@
+---
+title: Streams SDK of .NET suite for Apache Kafka™
+_description: Describes how to use Streams SDK of .NET suite for Apache Kafka™
+---
+
 # KNet: Streams SDK
 
 This is only a quick introduction to KNet Streams SDK; more information related to Apache Kafka™ Streams can be found at the following links: <https://kafka.apache.org/documentation/#streams> and <https://kafka.apache.org/documentation/streams/>

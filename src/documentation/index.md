@@ -1,3 +1,8 @@
+---
+title: .NET suite for Apache Kafka™
+_description: Main page of .NET suite for Apache Kafka™
+---
+
 # KNet — .NET Suite for [Apache Kafka™](https://kafka.apache.org/)
 
 KNet is a comprehensive .NET suite for [Apache Kafka™](https://kafka.apache.org/) that provides direct access to all [Apache Kafka™ APIs](https://kafka.apache.org/documentation/#api) and features: Producer, Consumer, Admin, Streams, Connect, and KRaft backend support.
@@ -8,7 +13,7 @@ KNet client-side features are also compatible with any broker that implements th
 
 | KNet | KNetCLI | KNet.Templates | KNetPS | KNetConnect |
 | --- | --- | --- | --- | --- |
-| [KNet nuget](https://www.nuget.org/packages/MASES.KNet) [downloads](https://www.nuget.org/packages/MASES.KNet) | [KNetCLI nuget](https://www.nuget.org/packages/MASES.KNetCLI) [downloads](https://www.nuget.org/packages/MASES.KNetCLI) | [KNet.Templates nuget](https://www.nuget.org/packages/MASES.KNet.Templates) [downloads](https://www.nuget.org/packages/MASES.KNet.Templates) | [KNetPS](https://www.powershellgallery.com/packages/MASES.KNetPS/) | [KNetConnect nuget](https://www.nuget.org/packages/MASES.KNetConnect) [downloads](https://www.nuget.org/packages/MASES.KNetConnect) |
+|[![KNet nuget](https://img.shields.io/nuget/v/MASES.KNet)](https://www.nuget.org/packages/MASES.KNet) [![downloads](https://img.shields.io/nuget/dt/MASES.KNet)](https://www.nuget.org/packages/MASES.KNet) | [![KNetCLI nuget](https://img.shields.io/nuget/v/MASES.KNetCLI)](https://www.nuget.org/packages/MASES.KNetCLI) [![downloads](https://img.shields.io/nuget/dt/MASES.KNetCLI)](https://www.nuget.org/packages/MASES.KNetCLI) | [![KNet.Templates nuget](https://img.shields.io/nuget/v/MASES.KNet.Templates)](https://www.nuget.org/packages/MASES.KNet.Templates) [![downloads](https://img.shields.io/nuget/dt/MASES.KNet.Templates)](https://www.nuget.org/packages/MASES.KNet.Templates)| [![KNetPS](https://img.shields.io/powershellgallery/v/MASES.KNetPS.svg?style=flat-square&label=MASES.KNetPS)](https://www.powershellgallery.com/packages/MASES.KNetPS/)| [![KNetConnect nuget](https://img.shields.io/nuget/v/MASES.KNetConnect)](https://www.nuget.org/packages/MASES.KNetConnect) [![downloads](https://img.shields.io/nuget/dt/MASES.KNetConnect)](https://www.nuget.org/packages/MASES.KNetConnect) |
 
 ### Project disclaimer
 
@@ -37,21 +42,20 @@ Currently the project tries to support, at our best, the [supported Apache Kafka
 
 | KNet | State | Apache Kafka™ | Branch | .NET Framework | .NET | JVM™ |
 | --- | --- | --- | --- | --- | --- | --- |
-| 3.x.x | Active | 4.x.x | [master](https://github.com/masesgroup/KNet) | [.NET 4.6.2+](https://dotnet.microsoft.com/) | [.NET 8+](https://dotnet.microsoft.com/) | [Java 17+](https://www.oracle.com/java/) |
-| 2.9.\* | Active | 3.9.x | [release/2.9.X](https://github.com/masesgroup/KNet/tree/release/2.9.X) | [.NET 4.6.2+](https://dotnet.microsoft.com/) | [.NET 8+](https://dotnet.microsoft.com/) | [Java 11+](https://www.oracle.com/java/) |
-| 2.8.\* | Deprecated | 3.8.\* | [release/2.8.X](https://github.com/masesgroup/KNet/tree/release/2.8.X) | [.NET 4.6.2+](https://dotnet.microsoft.com/) | [.NET 6+](https://dotnet.microsoft.com/) | [Java 11+](https://www.oracle.com/java/) |
-| 2.7.\* | Deprecated | 3.7.\* | [release/2.7.X](https://github.com/masesgroup/KNet/tree/release/2.7.X) | [.NET 4.6.2+](https://dotnet.microsoft.com/) | [.NET 6+](https://dotnet.microsoft.com/) | [Java 11+](https://www.oracle.com/java/) |
-| 2.6.\* | Deprecated | 3.6.\* | [release/2.6.X](https://github.com/masesgroup/KNet/tree/release/2.6.X) | [.NET 4.6.2+](https://dotnet.microsoft.com/) | [.NET 6+](https://dotnet.microsoft.com/) | [Java 11+](https://www.oracle.com/java/) |
+| 3.x.x | Active | 4.x.x | [master](https://github.com/masesgroup/KNet) | [![.NET 4.6.2+](https://img.shields.io/badge/.NET-4.6.2%2B-purple)](https://dotnet.microsoft.com/) | [![.NET 8+](https://img.shields.io/badge/.NET-8%2B-purple)](https://dotnet.microsoft.com/) | [![Java 17+](https://img.shields.io/badge/Java-17%2B-blue)](https://www.oracle.com/java/) |
+| 2.9.* | Active | 3.9.x | [release/2.9.X](https://github.com/masesgroup/KNet/tree/release/2.9.X) | [![.NET 4.6.2+](https://img.shields.io/badge/.NET-4.6.2%2B-purple)](https://dotnet.microsoft.com/) | [![.NET 8+](https://img.shields.io/badge/.NET-8%2B-purple)](https://dotnet.microsoft.com/) | [![Java 11+](https://img.shields.io/badge/Java-11%2B-blue)](https://www.oracle.com/java/) |
+| 2.8.* | Deprecated | 3.8.* | [release/2.8.X](https://github.com/masesgroup/KNet/tree/release/2.8.X) | [![.NET 4.6.2+](https://img.shields.io/badge/.NET-4.6.2%2B-purple)](https://dotnet.microsoft.com/) | [![.NET 6+](https://img.shields.io/badge/.NET-6%2B-purple)](https://dotnet.microsoft.com/) | [![Java 11+](https://img.shields.io/badge/Java-11%2B-blue)](https://www.oracle.com/java/) |
+| 2.7.* | Deprecated | 3.7.* | [release/2.7.X](https://github.com/masesgroup/KNet/tree/release/2.7.X) | [![.NET 4.6.2+](https://img.shields.io/badge/.NET-4.6.2%2B-purple)](https://dotnet.microsoft.com/) | [![.NET 6+](https://img.shields.io/badge/.NET-6%2B-purple)](https://dotnet.microsoft.com/) | [![Java 11+](https://img.shields.io/badge/Java-11%2B-blue)](https://www.oracle.com/java/) |
+| 2.6.* | Deprecated | 3.6.* | [release/2.6.X](https://github.com/masesgroup/KNet/tree/release/2.6.X) | [![.NET 4.6.2+](https://img.shields.io/badge/.NET-4.6.2%2B-purple)](https://dotnet.microsoft.com/) | [![.NET 6+](https://img.shields.io/badge/.NET-6%2B-purple)](https://dotnet.microsoft.com/) | [![Java 11+](https://img.shields.io/badge/Java-11%2B-blue)](https://www.oracle.com/java/) |
 
 The Apache Kafka™ packages are downloaded from:
 
 | kafka-streams-scala\_2.13 | kafka-tools | kafka-shell |
 | --- | --- | --- |
-| [Maven Central](https://search.maven.org/search?q=g:%22org.apache.kafka%22%20AND%20a:%22kafka-streams-scala_2.13%22) | [Maven Central](https://search.maven.org/search?q=g:%22org.apache.kafka%22%20AND%20a:%22kafka-tools%22) | [Maven Central](https://search.maven.org/search?q=g:%22org.apache.kafka%22%20AND%20a:%22kafka-shell%22) |
-
+|[![Maven Central](https://img.shields.io/maven-central/v/org.apache.kafka/kafka-streams-scala_2.13.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22org.apache.kafka%22%20AND%20a:%22kafka-streams-scala_2.13%22) | [![Maven Central](https://img.shields.io/maven-central/v/org.apache.kafka/kafka-tools.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22org.apache.kafka%22%20AND%20a:%22kafka-tools%22) | [![Maven Central](https://img.shields.io/maven-central/v/org.apache.kafka/kafka-shell.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22org.apache.kafka%22%20AND%20a:%22kafka-shell%22) |
 | connect-mirror | connect-file | connect-basic-auth-extension | trogdor |
 | --- | --- | --- | --- |
-| [Maven Central](https://search.maven.org/search?q=g:%22org.apache.kafka%22%20AND%20a:%22connect-mirror%22) | [Maven Central](https://search.maven.org/search?q=g:%22org.apache.kafka%22%20AND%20a:%22connect-file%22) | [Maven Central](https://search.maven.org/search?q=g:%22org.apache.kafka%22%20AND%20a:%22connect-basic-auth-extension%22) | [Maven Central](https://search.maven.org/search?q=g:%22org.apache.kafka%22%20AND%20a:%22trogdor%22) |
+| [![Maven Central](https://img.shields.io/maven-central/v/org.apache.kafka/connect-mirror.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22org.apache.kafka%22%20AND%20a:%22connect-mirror%22) | [![Maven Central](https://img.shields.io/maven-central/v/org.apache.kafka/connect-file.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22org.apache.kafka%22%20AND%20a:%22connect-file%22) | [![Maven Central](https://img.shields.io/maven-central/v/org.apache.kafka/connect-basic-auth-extension.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22org.apache.kafka%22%20AND%20a:%22connect-basic-auth-extension%22) | [![Maven Central](https://img.shields.io/maven-central/v/org.apache.kafka/trogdor.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22org.apache.kafka%22%20AND%20a:%22trogdor%22) |
 
 ---
 

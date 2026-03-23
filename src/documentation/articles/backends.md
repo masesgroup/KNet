@@ -1,3 +1,8 @@
+---
+title: Supported backends for .NET suite for Apache Kafka™
+_description: Supported backends for .NET suite for Apache Kafka™
+---
+
 # KNet: Supported Backends
 
 KNet is a comprehensive .NET suite built directly on top of the official Apache Kafka™ Java packages via [JNet](https://github.com/masesgroup/JNet) and [JCOBridge](https://www.jcobridge.com/).
