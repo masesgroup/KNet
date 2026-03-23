@@ -104,11 +104,11 @@ namespace MASES.KNet.Common
         /// <summary>
         /// Manages <see cref="TopicConfig.SEGMENT_MS_CONFIG"/>
         /// </summary>
-        public int SegmentMs { get { return GetProperty<int>(TopicConfig.SEGMENT_MS_CONFIG); } set { SetProperty(TopicConfig.SEGMENT_MS_CONFIG, value); } }
+        public long SegmentMs { get { return GetProperty<long>(TopicConfig.SEGMENT_MS_CONFIG); } set { SetProperty(TopicConfig.SEGMENT_MS_CONFIG, value); } }
         /// <summary>
         /// Manages <see cref="TopicConfig.SEGMENT_MS_CONFIG"/>
         /// </summary>
-        public TopicConfigBuilder WithSegmentMs(int segmentMs)
+        public TopicConfigBuilder WithSegmentMs(long segmentMs)
         {
             var clone = Clone();
             clone.SegmentMs = segmentMs;
@@ -117,11 +117,11 @@ namespace MASES.KNet.Common
         /// <summary>
         /// Manages <see cref="TopicConfig.SEGMENT_JITTER_MS_CONFIG"/>
         /// </summary>
-        public int SegmentJitterMs { get { return GetProperty<int>(TopicConfig.SEGMENT_JITTER_MS_CONFIG); } set { SetProperty(TopicConfig.SEGMENT_JITTER_MS_CONFIG, value); } }
+        public long SegmentJitterMs { get { return GetProperty<long>(TopicConfig.SEGMENT_JITTER_MS_CONFIG); } set { SetProperty(TopicConfig.SEGMENT_JITTER_MS_CONFIG, value); } }
         /// <summary>
         /// Manages <see cref="TopicConfig.SEGMENT_JITTER_MS_CONFIG"/>
         /// </summary>
-        public TopicConfigBuilder WithSegmentJitterMs(int segmentJitterMs)
+        public TopicConfigBuilder WithSegmentJitterMs(long segmentJitterMs)
         {
             var clone = Clone();
             clone.SegmentJitterMs = segmentJitterMs;
@@ -143,11 +143,11 @@ namespace MASES.KNet.Common
         /// <summary>
         /// Manages <see cref="TopicConfig.FLUSH_MESSAGES_INTERVAL_CONFIG"/>
         /// </summary>
-        public int FlushMessageInterval { get { return GetProperty<int>(TopicConfig.FLUSH_MESSAGES_INTERVAL_CONFIG); } set { SetProperty(TopicConfig.FLUSH_MESSAGES_INTERVAL_CONFIG, value); } }
+        public long FlushMessageInterval { get { return GetProperty<long>(TopicConfig.FLUSH_MESSAGES_INTERVAL_CONFIG); } set { SetProperty(TopicConfig.FLUSH_MESSAGES_INTERVAL_CONFIG, value); } }
         /// <summary>
         /// Manages <see cref="TopicConfig.FLUSH_MESSAGES_INTERVAL_CONFIG"/>
         /// </summary>
-        public TopicConfigBuilder WithFlushMessageInterval(int flushMessageInterval)
+        public TopicConfigBuilder WithFlushMessageInterval(long flushMessageInterval)
         {
             var clone = Clone();
             clone.FlushMessageInterval = flushMessageInterval;
@@ -156,11 +156,11 @@ namespace MASES.KNet.Common
         /// <summary>
         /// Manages <see cref="TopicConfig.FLUSH_MS_CONFIG"/>
         /// </summary>
-        public int FlushMs { get { return GetProperty<int>(TopicConfig.FLUSH_MS_CONFIG); } set { SetProperty(TopicConfig.FLUSH_MS_CONFIG, value); } }
+        public long FlushMs { get { return GetProperty<long>(TopicConfig.FLUSH_MS_CONFIG); } set { SetProperty(TopicConfig.FLUSH_MS_CONFIG, value); } }
         /// <summary>
         /// Manages <see cref="TopicConfig.FLUSH_MS_CONFIG"/>
         /// </summary>
-        public TopicConfigBuilder WithFlushMs(int flushMs)
+        public TopicConfigBuilder WithFlushMs(long flushMs)
         {
             var clone = Clone();
             clone.FlushMs = flushMs;
@@ -169,11 +169,11 @@ namespace MASES.KNet.Common
         /// <summary>
         /// Manages <see cref="TopicConfig.RETENTION_BYTES_CONFIG"/>
         /// </summary>
-        public int RetentionBytes { get { return GetProperty<int>(TopicConfig.RETENTION_BYTES_CONFIG); } set { SetProperty(TopicConfig.RETENTION_BYTES_CONFIG, value); } }
+        public long RetentionBytes { get { return GetProperty<long>(TopicConfig.RETENTION_BYTES_CONFIG); } set { SetProperty(TopicConfig.RETENTION_BYTES_CONFIG, value); } }
         /// <summary>
         /// Manages <see cref="TopicConfig.RETENTION_BYTES_CONFIG"/>
         /// </summary>
-        public TopicConfigBuilder WithRetentionBytes(int retentionBytes)
+        public TopicConfigBuilder WithRetentionBytes(long retentionBytes)
         {
             var clone = Clone();
             clone.RetentionBytes = retentionBytes;
@@ -182,11 +182,11 @@ namespace MASES.KNet.Common
         /// <summary>
         /// Manages <see cref="TopicConfig.RETENTION_MS_CONFIG"/>
         /// </summary>
-        public int RetentionMs { get { return GetProperty<int>(TopicConfig.RETENTION_MS_CONFIG); } set { SetProperty(TopicConfig.RETENTION_MS_CONFIG, value); } }
+        public long RetentionMs { get { return GetProperty<long>(TopicConfig.RETENTION_MS_CONFIG); } set { SetProperty(TopicConfig.RETENTION_MS_CONFIG, value); } }
         /// <summary>
         /// Manages <see cref="TopicConfig.RETENTION_MS_CONFIG"/>
         /// </summary>
-        public TopicConfigBuilder WithRetentionMs(int retentionMs)
+        public TopicConfigBuilder WithRetentionMs(long retentionMs)
         {
             var clone = Clone();
             clone.RetentionMs = retentionMs;
@@ -208,11 +208,11 @@ namespace MASES.KNet.Common
         /// <summary>
         /// Manages <see cref="TopicConfig.LOCAL_LOG_RETENTION_MS_CONFIG"/>
         /// </summary>
-        public int LocalLogRetentionMs { get { return GetProperty<int>(TopicConfig.LOCAL_LOG_RETENTION_MS_CONFIG); } set { SetProperty(TopicConfig.LOCAL_LOG_RETENTION_MS_CONFIG, value); } }
+        public long LocalLogRetentionMs { get { return GetProperty<long>(TopicConfig.LOCAL_LOG_RETENTION_MS_CONFIG); } set { SetProperty(TopicConfig.LOCAL_LOG_RETENTION_MS_CONFIG, value); } }
         /// <summary>
         /// Manages <see cref="TopicConfig.LOCAL_LOG_RETENTION_MS_CONFIG"/>
         /// </summary>
-        public TopicConfigBuilder WithLocalLogRetentionMs(int localLogRetentionMs)
+        public TopicConfigBuilder WithLocalLogRetentionMs(long localLogRetentionMs)
         {
             var clone = Clone();
             clone.LocalLogRetentionMs = localLogRetentionMs;
@@ -221,11 +221,11 @@ namespace MASES.KNet.Common
         /// <summary>
         /// Manages <see cref="TopicConfig.LOCAL_LOG_RETENTION_BYTES_CONFIG"/>
         /// </summary>
-        public int LocalLogRetentionBytes { get { return GetProperty<int>(TopicConfig.LOCAL_LOG_RETENTION_BYTES_CONFIG); } set { SetProperty(TopicConfig.LOCAL_LOG_RETENTION_BYTES_CONFIG, value); } }
+        public long LocalLogRetentionBytes { get { return GetProperty<long>(TopicConfig.LOCAL_LOG_RETENTION_BYTES_CONFIG); } set { SetProperty(TopicConfig.LOCAL_LOG_RETENTION_BYTES_CONFIG, value); } }
         /// <summary>
         /// Manages <see cref="TopicConfig.LOCAL_LOG_RETENTION_BYTES_CONFIG"/>
         /// </summary>
-        public TopicConfigBuilder WithLocalLogRetentionBytes(int localLogRetentionBytes)
+        public TopicConfigBuilder WithLocalLogRetentionBytes(long localLogRetentionBytes)
         {
             var clone = Clone();
             clone.LocalLogRetentionBytes = localLogRetentionBytes;
@@ -260,11 +260,11 @@ namespace MASES.KNet.Common
         /// <summary>
         /// Manages <see cref="TopicConfig.FILE_DELETE_DELAY_MS_CONFIG"/>
         /// </summary>
-        public int FileDeleteDelayMs { get { return GetProperty<int>(TopicConfig.FILE_DELETE_DELAY_MS_CONFIG); } set { SetProperty(TopicConfig.FILE_DELETE_DELAY_MS_CONFIG, value); } }
+        public long FileDeleteDelayMs { get { return GetProperty<long>(TopicConfig.FILE_DELETE_DELAY_MS_CONFIG); } set { SetProperty(TopicConfig.FILE_DELETE_DELAY_MS_CONFIG, value); } }
         /// <summary>
         /// Manages <see cref="TopicConfig.FILE_DELETE_DELAY_MS_CONFIG"/>
         /// </summary>
-        public TopicConfigBuilder WithFileDeleteDelayMs(int fileDeleteDelayMs)
+        public TopicConfigBuilder WithFileDeleteDelayMs(long fileDeleteDelayMs)
         {
             var clone = Clone();
             clone.FileDeleteDelayMs = fileDeleteDelayMs;
@@ -273,11 +273,11 @@ namespace MASES.KNet.Common
         /// <summary>
         /// Manages <see cref="TopicConfig.DELETE_RETENTION_MS_CONFIG"/>
         /// </summary>
-        public int DeleteRetentionMs { get { return GetProperty<int>(TopicConfig.DELETE_RETENTION_MS_CONFIG); } set { SetProperty(TopicConfig.DELETE_RETENTION_MS_CONFIG, value); } }
+        public long DeleteRetentionMs { get { return GetProperty<long>(TopicConfig.DELETE_RETENTION_MS_CONFIG); } set { SetProperty(TopicConfig.DELETE_RETENTION_MS_CONFIG, value); } }
         /// <summary>
         /// Manages <see cref="TopicConfig.DELETE_RETENTION_MS_CONFIG"/>
         /// </summary>
-        public TopicConfigBuilder WithDeleteRetentionMs(int deleteRetentionMs)
+        public TopicConfigBuilder WithDeleteRetentionMs(long deleteRetentionMs)
         {
             var clone = Clone();
             clone.DeleteRetentionMs = deleteRetentionMs;
@@ -286,11 +286,11 @@ namespace MASES.KNet.Common
         /// <summary>
         /// Manages <see cref="TopicConfig.MIN_COMPACTION_LAG_MS_CONFIG"/>
         /// </summary>
-        public int MinCompactationLagMs { get { return GetProperty<int>(TopicConfig.MIN_COMPACTION_LAG_MS_CONFIG); } set { SetProperty(TopicConfig.MIN_COMPACTION_LAG_MS_CONFIG, value); } }
+        public long MinCompactationLagMs { get { return GetProperty<long>(TopicConfig.MIN_COMPACTION_LAG_MS_CONFIG); } set { SetProperty(TopicConfig.MIN_COMPACTION_LAG_MS_CONFIG, value); } }
         /// <summary>
         /// Manages <see cref="TopicConfig.MIN_COMPACTION_LAG_MS_CONFIG"/>
         /// </summary>
-        public TopicConfigBuilder WithMinCompactationLagMs(int minCompactationLagMs)
+        public TopicConfigBuilder WithMinCompactationLagMs(long minCompactationLagMs)
         {
             var clone = Clone();
             clone.MinCompactationLagMs = minCompactationLagMs;
@@ -299,11 +299,11 @@ namespace MASES.KNet.Common
         /// <summary>
         /// Manages <see cref="TopicConfig.MAX_COMPACTION_LAG_MS_CONFIG"/>
         /// </summary>
-        public int MaxCompactationLagMs { get { return GetProperty<int>(TopicConfig.MAX_COMPACTION_LAG_MS_CONFIG); } set { SetProperty(TopicConfig.MAX_COMPACTION_LAG_MS_CONFIG, value); } }
+        public long MaxCompactationLagMs { get { return GetProperty<long>(TopicConfig.MAX_COMPACTION_LAG_MS_CONFIG); } set { SetProperty(TopicConfig.MAX_COMPACTION_LAG_MS_CONFIG, value); } }
         /// <summary>
         /// Manages <see cref="TopicConfig.MAX_COMPACTION_LAG_MS_CONFIG"/>
         /// </summary>
-        public TopicConfigBuilder WithMaxCompactationLagMs(int maxCompactationLagMs)
+        public TopicConfigBuilder WithMaxCompactationLagMs(long maxCompactationLagMs)
         {
             var clone = Clone();
             clone.MaxCompactationLagMs = maxCompactationLagMs;

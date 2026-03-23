@@ -115,6 +115,20 @@ namespace MASES.KNet.Producer
             return clone;
         }
         /// <summary>
+        /// Manages <see cref="ProducerConfig.PARTITIONER_ADAPTIVE_PARTITIONING_ENABLE_CONFIG"/>
+        /// </summary>
+        public bool PartitionerAdaptivePartitioningEnable { get { return GetProperty<bool>(ProducerConfig.PARTITIONER_ADAPTIVE_PARTITIONING_ENABLE_CONFIG); } set { SetProperty(ProducerConfig.PARTITIONER_ADAPTIVE_PARTITIONING_ENABLE_CONFIG, value); } }
+        /// <summary>
+        /// Manages <see cref="ProducerConfig.PARTITIONER_ADAPTIVE_PARTITIONING_ENABLE_CONFIG"/>
+        /// </summary>
+        public ProducerConfigBuilder WithPartitionerAdaptivePartitioningEnable(bool partitionerAdaptivePartitioningEnable)
+        {
+            var clone = Clone();
+            clone.PartitionerAdaptivePartitioningEnable = partitionerAdaptivePartitioningEnable;
+            return clone;
+        }
+
+        /// <summary>
         /// Manages <see cref="ProducerConfig.PARTITIONER_IGNORE_KEYS_CONFIG"/>
         /// </summary>
         public bool PartitionerIgnoreKeys { get { return GetProperty<bool>(ProducerConfig.PARTITIONER_IGNORE_KEYS_CONFIG); } set { SetProperty(ProducerConfig.PARTITIONER_IGNORE_KEYS_CONFIG, value); } }
@@ -261,14 +275,14 @@ namespace MASES.KNet.Producer
         /// <summary>
         /// Manages <see cref="ProducerConfig.MAX_IN_FLIGHT_REQUESTS_PER_CONNECTION"/>
         /// </summary>
-        public int MaxInFlightRequestPerConnection { get { return GetProperty<int>(ProducerConfig.MAX_IN_FLIGHT_REQUESTS_PER_CONNECTION); } set { SetProperty(ProducerConfig.MAX_IN_FLIGHT_REQUESTS_PER_CONNECTION, value); } }
+        public int MaxInFlightRequestsPerConnection { get { return GetProperty<int>(ProducerConfig.MAX_IN_FLIGHT_REQUESTS_PER_CONNECTION); } set { SetProperty(ProducerConfig.MAX_IN_FLIGHT_REQUESTS_PER_CONNECTION, value); } }
         /// <summary>
         /// Manages <see cref="ProducerConfig.MAX_IN_FLIGHT_REQUESTS_PER_CONNECTION"/>
         /// </summary>
-        public ProducerConfigBuilder WithMaxInFlightRequestPerConnection(int maxInFlightRequestPerConnection)
+        public ProducerConfigBuilder WithMaxInFlightRequestsPerConnection(int maxInFlightRequestsPerConnection)
         {
             var clone = Clone();
-            clone.MaxInFlightRequestPerConnection = maxInFlightRequestPerConnection;
+            clone.MaxInFlightRequestsPerConnection = maxInFlightRequestsPerConnection;
             return clone;
         }
         /// <summary>
@@ -363,6 +377,20 @@ namespace MASES.KNet.Producer
             return clone;
         }
         /// <summary>
+        /// Manages <see cref="ProducerConfig.TRANSACTION_TWO_PHASE_COMMIT_ENABLE_CONFIG"/>
+        /// </summary>
+        public bool TransactionTwoPhaseCommitEnable { get { return GetProperty<bool>(ProducerConfig.TRANSACTION_TWO_PHASE_COMMIT_ENABLE_CONFIG); } set { SetProperty(ProducerConfig.TRANSACTION_TWO_PHASE_COMMIT_ENABLE_CONFIG, value); } }
+        /// <summary>
+        /// Manages <see cref="ProducerConfig.TRANSACTION_TWO_PHASE_COMMIT_ENABLE_CONFIG"/>
+        /// </summary>
+        public ProducerConfigBuilder WithTransactionTwoPhaseCommitEnable(bool transactionTwoPhaseCommitEnable)
+        {
+            var clone = Clone();
+            clone.TransactionTwoPhaseCommitEnable = transactionTwoPhaseCommitEnable;
+            return clone;
+        }
+
+        /// <summary>
         /// Manages <see cref="ProducerConfig.SECURITY_PROVIDERS_CONFIG"/>
         /// </summary>
         public string SecurityProviders { get { return GetProperty<string>(ProducerConfig.SECURITY_PROVIDERS_CONFIG); } set { SetProperty(ProducerConfig.SECURITY_PROVIDERS_CONFIG, value); } }
@@ -375,5 +403,6 @@ namespace MASES.KNet.Producer
             clone.SecurityProviders = securityProviders;
             return clone;
         }
+
     }
 }

@@ -16,10 +16,12 @@
 *  Refer to LICENSE for more information.
 */
 
-using Org.Apache.Kafka.Common.Metrics;
-using Java.Util;
-using Org.Apache.Kafka.Clients;
 using Java.Lang;
+using Java.Util;
+using MASES.KNet.Common;
+using Org.Apache.Kafka.Clients;
+using Org.Apache.Kafka.Common.Config;
+using Org.Apache.Kafka.Common.Metrics;
 
 namespace MASES.KNet
 {
@@ -30,6 +32,45 @@ namespace MASES.KNet
     public abstract class CommonClientConfigsBuilder<T> : GenericConfigBuilder<T>
         where T : CommonClientConfigsBuilder<T>, new()
     {
+        /// <summary>
+        /// Associated all properties in <see cref="SslConfigsBuilder"/> to this <typeparamref name="T"/> instance
+        /// </summary>
+        public T WithSslConfigs(SslConfigsBuilder sslConfigsBuilder)
+        {
+            var clone = Clone();
+            foreach (var item in sslConfigsBuilder)
+            {
+                clone.SetProperty(item.Key, item.Value);
+            }
+            return clone;
+        }
+        /// <summary>
+        /// Associated all properties in <see cref="SaslConfigsBuilder"/> to this <typeparamref name="T"/> instance
+        /// </summary>
+        public T WithSaslConfigs(SaslConfigsBuilder saslConfigsBuilder)
+        {
+            var clone = Clone();
+            foreach (var item in saslConfigsBuilder)
+            {
+                clone.SetProperty(item.Key, item.Value);
+            }
+            return clone;
+        }
+
+        /// <summary>
+        /// Manages <see cref="AbstractConfig.CONFIG_PROVIDERS_CONFIG"/>
+        /// </summary>
+        public string ConfigProviders { get { return GetProperty<string>(AbstractConfig.CONFIG_PROVIDERS_CONFIG); } set { SetProperty(AbstractConfig.CONFIG_PROVIDERS_CONFIG, value); } }
+        /// <summary>
+        /// Manages <see cref="CommonClientConfigs.METADATA_RECOVERY_STRATEGY_CONFIG"/>
+        /// </summary>
+        public T WithConfigProviders(string configProviders)
+        {
+            var clone = Clone();
+            clone.ConfigProviders = configProviders;
+            return clone;
+        }
+
         /// <summary>
         /// Manages <see cref="CommonClientConfigs.BOOTSTRAP_SERVERS_CONFIG"/>
         /// </summary>
@@ -452,14 +493,40 @@ namespace MASES.KNet
         /// <summary>
         /// Manages <see cref="CommonClientConfigs.DEFAULT_API_TIMEOUT_MS_CONFIG"/>
         /// </summary>
-        public long DefaultApiTimeoutMs { get { return GetProperty<long>(CommonClientConfigs.DEFAULT_API_TIMEOUT_MS_CONFIG); } set { SetProperty(CommonClientConfigs.DEFAULT_API_TIMEOUT_MS_CONFIG, value); } }
+        public int DefaultApiTimeoutMs { get { return GetProperty<int>(CommonClientConfigs.DEFAULT_API_TIMEOUT_MS_CONFIG); } set { SetProperty(CommonClientConfigs.DEFAULT_API_TIMEOUT_MS_CONFIG, value); } }
         /// <summary>
         /// Manages <see cref="CommonClientConfigs.DEFAULT_API_TIMEOUT_MS_CONFIG"/>
         /// </summary>
-        public T WithDefaultApiTimeoutMs(long defaultApiTimeoutMs)
+        public T WithDefaultApiTimeoutMs(int defaultApiTimeoutMs)
         {
             var clone = Clone();
             clone.DefaultApiTimeoutMs = defaultApiTimeoutMs;
+            return clone;
+        }
+        /// <summary>
+        /// Manages <see cref="CommonClientConfigs.METADATA_RECOVERY_STRATEGY_CONFIG"/>
+        /// </summary>
+        public string MetadataRecoveryStrategy { get { return GetProperty<string>(CommonClientConfigs.METADATA_RECOVERY_STRATEGY_CONFIG); } set { SetProperty(CommonClientConfigs.METADATA_RECOVERY_STRATEGY_CONFIG, value); } }
+        /// <summary>
+        /// Manages <see cref="CommonClientConfigs.METADATA_RECOVERY_STRATEGY_CONFIG"/>
+        /// </summary>
+        public T WithMetadataRecoveryStrategy(string metadataRecoveryStrategy)
+        {
+            var clone = Clone();
+            clone.MetadataRecoveryStrategy = metadataRecoveryStrategy;
+            return clone;
+        }
+        /// <summary>
+        /// Manages <see cref="CommonClientConfigs.METADATA_RECOVERY_REBOOTSTRAP_TRIGGER_MS_CONFIG"/>
+        /// </summary>
+        public long MetadataRecoveryRebootstrapTriggerMs { get { return GetProperty<long>(CommonClientConfigs.METADATA_RECOVERY_REBOOTSTRAP_TRIGGER_MS_CONFIG); } set { SetProperty(CommonClientConfigs.METADATA_RECOVERY_REBOOTSTRAP_TRIGGER_MS_CONFIG, value); } }
+        /// <summary>
+        /// Manages <see cref="CommonClientConfigs.METADATA_RECOVERY_REBOOTSTRAP_TRIGGER_MS_CONFIG"/>
+        /// </summary>
+        public T WithMetadataRecoveryRebootstrapTriggerMs(long metadataRecoveryRebootstrapTriggerMs)
+        {
+            var clone = Clone();
+            clone.MetadataRecoveryRebootstrapTriggerMs = metadataRecoveryRebootstrapTriggerMs;
             return clone;
         }
     }

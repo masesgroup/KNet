@@ -46,7 +46,7 @@ namespace MASES.KNet.Benchmark
                                                                    .WithRetries(MessageSendMaxRetries)
                                                                    .WithLingerMs(LingerMs)
                                                                    .WithBatchSize(BatchSize)
-                                                                   .WithMaxInFlightRequestPerConnection(MaxInFlight)
+                                                                   .WithMaxInFlightRequestsPerConnection(MaxInFlight)
                                                                    .WithEnableIdempotence(false)
                                                                    .WithSendBuffer(SocketSendBufferBytes)
                                                                    .WithReceiveBuffer(SocketReceiveBufferBytes)
