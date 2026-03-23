@@ -230,7 +230,7 @@ namespace Org.Rocksdb
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/MutableColumnFamilyOptions.MutableColumnFamilyOptionsBuilder.html"/>
         /// </summary>
-        public partial class MutableColumnFamilyOptionsBuilder : Org.Rocksdb.AbstractMutableOptions.AbstractMutableOptionsBuilder<Org.Rocksdb.MutableColumnFamilyOptions, Org.Rocksdb.MutableColumnFamilyOptions.MutableColumnFamilyOptionsBuilder, Org.Rocksdb.MutableColumnFamilyOptions.MutableColumnFamilyOptionKey>
+        public partial class MutableColumnFamilyOptionsBuilder : Org.Rocksdb.MutableColumnFamilyOptionsInterface<Org.Rocksdb.MutableColumnFamilyOptions.MutableColumnFamilyOptionsBuilder>
         {
             const string _bridgeClassName = "org.rocksdb.MutableColumnFamilyOptions$MutableColumnFamilyOptionsBuilder";
             /// <summary>
@@ -772,10 +772,6 @@ namespace Org.Rocksdb
             #endregion
 
             #region Class/Interface conversion operators
-            /// <summary>
-            /// Converter from <see cref="Org.Rocksdb.MutableColumnFamilyOptions.MutableColumnFamilyOptionsBuilder"/> to <see cref="Org.Rocksdb.MutableColumnFamilyOptionsInterface"/>
-            /// </summary>
-            public static implicit operator Org.Rocksdb.MutableColumnFamilyOptionsInterface(Org.Rocksdb.MutableColumnFamilyOptions.MutableColumnFamilyOptionsBuilder t) => t.Cast<Org.Rocksdb.MutableColumnFamilyOptionsInterface>();
 
             #endregion
 
