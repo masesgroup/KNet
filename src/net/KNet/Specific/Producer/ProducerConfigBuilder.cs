@@ -115,20 +115,6 @@ namespace MASES.KNet.Producer
             return clone;
         }
         /// <summary>
-        /// Manages <see cref="ProducerConfig.PARTITIONER_ADAPTIVE_PARTITIONING_ENABLE_CONFIG"/>
-        /// </summary>
-        public bool PartitionerAdaptivePartitioningEnable { get { return GetProperty<bool>(ProducerConfig.PARTITIONER_ADAPTIVE_PARTITIONING_ENABLE_CONFIG); } set { SetProperty(ProducerConfig.PARTITIONER_ADAPTIVE_PARTITIONING_ENABLE_CONFIG, value); } }
-        /// <summary>
-        /// Manages <see cref="ProducerConfig.PARTITIONER_ADAPTIVE_PARTITIONING_ENABLE_CONFIG"/>
-        /// </summary>
-        public ProducerConfigBuilder WithPartitionerAdaptivePartitioningEnable(bool partitionerAdaptivePartitioningEnable)
-        {
-            var clone = Clone();
-            clone.PartitionerAdaptivePartitioningEnable = partitionerAdaptivePartitioningEnable;
-            return clone;
-        }
-
-        /// <summary>
         /// Manages <see cref="ProducerConfig.PARTITIONER_IGNORE_KEYS_CONFIG"/>
         /// </summary>
         public bool PartitionerIgnoreKeys { get { return GetProperty<bool>(ProducerConfig.PARTITIONER_IGNORE_KEYS_CONFIG); } set { SetProperty(ProducerConfig.PARTITIONER_IGNORE_KEYS_CONFIG, value); } }
@@ -376,20 +362,6 @@ namespace MASES.KNet.Producer
             clone.TransactionalId = transactionalId;
             return clone;
         }
-        /// <summary>
-        /// Manages <see cref="ProducerConfig.TRANSACTION_TWO_PHASE_COMMIT_ENABLE_CONFIG"/>
-        /// </summary>
-        public bool TransactionTwoPhaseCommitEnable { get { return GetProperty<bool>(ProducerConfig.TRANSACTION_TWO_PHASE_COMMIT_ENABLE_CONFIG); } set { SetProperty(ProducerConfig.TRANSACTION_TWO_PHASE_COMMIT_ENABLE_CONFIG, value); } }
-        /// <summary>
-        /// Manages <see cref="ProducerConfig.TRANSACTION_TWO_PHASE_COMMIT_ENABLE_CONFIG"/>
-        /// </summary>
-        public ProducerConfigBuilder WithTransactionTwoPhaseCommitEnable(bool transactionTwoPhaseCommitEnable)
-        {
-            var clone = Clone();
-            clone.TransactionTwoPhaseCommitEnable = transactionTwoPhaseCommitEnable;
-            return clone;
-        }
-
         /// <summary>
         /// Manages <see cref="ProducerConfig.SECURITY_PROVIDERS_CONFIG"/>
         /// </summary>

@@ -516,18 +516,5 @@ namespace MASES.KNet
             clone.MetadataRecoveryStrategy = metadataRecoveryStrategy;
             return clone;
         }
-        /// <summary>
-        /// Manages <see cref="CommonClientConfigs.METADATA_RECOVERY_REBOOTSTRAP_TRIGGER_MS_CONFIG"/>
-        /// </summary>
-        public long MetadataRecoveryRebootstrapTriggerMs { get { return GetProperty<long>(CommonClientConfigs.METADATA_RECOVERY_REBOOTSTRAP_TRIGGER_MS_CONFIG); } set { SetProperty(CommonClientConfigs.METADATA_RECOVERY_REBOOTSTRAP_TRIGGER_MS_CONFIG, value); } }
-        /// <summary>
-        /// Manages <see cref="CommonClientConfigs.METADATA_RECOVERY_REBOOTSTRAP_TRIGGER_MS_CONFIG"/>
-        /// </summary>
-        public T WithMetadataRecoveryRebootstrapTriggerMs(long metadataRecoveryRebootstrapTriggerMs)
-        {
-            var clone = Clone();
-            clone.MetadataRecoveryRebootstrapTriggerMs = metadataRecoveryRebootstrapTriggerMs;
-            return clone;
-        }
     }
 }

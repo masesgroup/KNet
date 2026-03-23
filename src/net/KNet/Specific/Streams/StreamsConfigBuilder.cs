@@ -93,19 +93,6 @@ namespace MASES.KNet.Streams
             return clone;
         }
         /// <summary>
-        /// Manages <see cref="StreamsConfig.DEFAULT_DESERIALIZATION_EXCEPTION_HANDLER_CLASS_CONFIG"/>
-        /// </summary>
-        public Java.Lang.Class DefaultDeserializationExceptionHandlerClass { get { return GetProperty<Java.Lang.Class>(StreamsConfig.DEFAULT_DESERIALIZATION_EXCEPTION_HANDLER_CLASS_CONFIG); } set { SetProperty(StreamsConfig.DEFAULT_DESERIALIZATION_EXCEPTION_HANDLER_CLASS_CONFIG, value); } }
-        /// <summary>
-        /// Manages <see cref="StreamsConfig.DEFAULT_DESERIALIZATION_EXCEPTION_HANDLER_CLASS_CONFIG"/>
-        /// </summary>
-        public StreamsConfigBuilder WithDefaultDeserializationExceptionHandlerClass(Java.Lang.Class defaultDeserializationExceptionHandlerClass)
-        {
-            var clone = Clone();
-            clone.DefaultDeserializationExceptionHandlerClass = defaultDeserializationExceptionHandlerClass;
-            return clone;
-        }
-        /// <summary>
         /// Manages <see cref="StreamsConfig.DEFAULT_KEY_SERDE_CLASS_CONFIG"/>
         /// </summary>
         public Java.Lang.Class DefaultKeySerdeClass { get { return GetProperty<Java.Lang.Class>(StreamsConfig.DEFAULT_KEY_SERDE_CLASS_CONFIG); } set { SetProperty(StreamsConfig.DEFAULT_KEY_SERDE_CLASS_CONFIG, value); } }
@@ -116,19 +103,6 @@ namespace MASES.KNet.Streams
         {
             var clone = Clone();
             clone.DefaultKeySerdeClass = defaultKeySerdeClass;
-            return clone;
-        }
-        /// <summary>
-        /// Manages <see cref="StreamsConfig.DEFAULT_PRODUCTION_EXCEPTION_HANDLER_CLASS_CONFIG"/>
-        /// </summary>
-        public Java.Lang.Class DefaultProductionExceptionHandlerClass { get { return GetProperty<Java.Lang.Class>(StreamsConfig.DEFAULT_PRODUCTION_EXCEPTION_HANDLER_CLASS_CONFIG); } set { SetProperty(StreamsConfig.DEFAULT_PRODUCTION_EXCEPTION_HANDLER_CLASS_CONFIG, value); } }
-        /// <summary>
-        /// Manages <see cref="StreamsConfig.DEFAULT_PRODUCTION_EXCEPTION_HANDLER_CLASS_CONFIG"/>
-        /// </summary>
-        public StreamsConfigBuilder WithDefaultProductionExceptionHandlerClass(Java.Lang.Class defaultProductionExceptionHandlerClass)
-        {
-            var clone = Clone();
-            clone.DefaultProductionExceptionHandlerClass = defaultProductionExceptionHandlerClass;
             return clone;
         }
         /// <summary>
@@ -155,19 +129,6 @@ namespace MASES.KNet.Streams
         {
             var clone = Clone();
             clone.DefaultValueSerdeClass = defaultValueSerdeClass;
-            return clone;
-        }
-        /// <summary>
-        /// Manages <see cref="StreamsConfig.DESERIALIZATION_EXCEPTION_HANDLER_CLASS_CONFIG"/>
-        /// </summary>
-        public Java.Lang.Class DeserializationExceptionHandlerClass { get { return GetProperty<Java.Lang.Class>(StreamsConfig.DESERIALIZATION_EXCEPTION_HANDLER_CLASS_CONFIG); } set { SetProperty(StreamsConfig.DESERIALIZATION_EXCEPTION_HANDLER_CLASS_CONFIG, value); } }
-        /// <summary>
-        /// Manages <see cref="StreamsConfig.DESERIALIZATION_EXCEPTION_HANDLER_CLASS_CONFIG"/>
-        /// </summary>
-        public StreamsConfigBuilder WithDeserializationExceptionHandlerClass(Java.Lang.Class deserializationExceptionHandlerClass)
-        {
-            var clone = Clone();
-            clone.DeserializationExceptionHandlerClass = deserializationExceptionHandlerClass;
             return clone;
         }
         /// <summary>
@@ -223,19 +184,6 @@ namespace MASES.KNet.Streams
             return clone;
         }
         /// <summary>
-        /// Manages <see cref="StreamsConfig.PRODUCTION_EXCEPTION_HANDLER_CLASS_CONFIG"/>
-        /// </summary>
-        public Java.Lang.Class ProductionExceptionHandlerClass { get { return GetProperty<Java.Lang.Class>(StreamsConfig.PRODUCTION_EXCEPTION_HANDLER_CLASS_CONFIG); } set { SetProperty(StreamsConfig.PRODUCTION_EXCEPTION_HANDLER_CLASS_CONFIG, value); } }
-        /// <summary>
-        /// Manages <see cref="StreamsConfig.PRODUCTION_EXCEPTION_HANDLER_CLASS_CONFIG"/>
-        /// </summary>
-        public StreamsConfigBuilder WithProductionExceptionHandlerClass(Java.Lang.Class productionExceptionHandlerClass)
-        {
-            var clone = Clone();
-            clone.ProductionExceptionHandlerClass = productionExceptionHandlerClass;
-            return clone;
-        }
-        /// <summary>
         /// Manages <see cref="StreamsConfig.TASK_ASSIGNOR_CLASS_CONFIG"/>
         /// </summary>
         public Java.Lang.Class TaskAssignorClass { get { return GetProperty<Java.Lang.Class>(StreamsConfig.TASK_ASSIGNOR_CLASS_CONFIG); } set { SetProperty(StreamsConfig.TASK_ASSIGNOR_CLASS_CONFIG, value); } }
@@ -246,32 +194,6 @@ namespace MASES.KNet.Streams
         {
             var clone = Clone();
             clone.TaskAssignorClass = taskAssignorClass;
-            return clone;
-        }
-        /// <summary>
-        /// Manages <see cref="StreamsConfig.ENSURE_EXPLICIT_INTERNAL_RESOURCE_NAMING_CONFIG"/>
-        /// </summary>
-        public bool EnsureExplicitInternalResourceNaming { get { return GetProperty<bool>(StreamsConfig.ENSURE_EXPLICIT_INTERNAL_RESOURCE_NAMING_CONFIG); } set { SetProperty(StreamsConfig.ENSURE_EXPLICIT_INTERNAL_RESOURCE_NAMING_CONFIG, value); } }
-        /// <summary>
-        /// Manages <see cref="StreamsConfig.ENSURE_EXPLICIT_INTERNAL_RESOURCE_NAMING_CONFIG"/>
-        /// </summary>
-        public StreamsConfigBuilder WithEnsureExplicitInternalResourceNaming(bool ensureExplicitInternalResourceNaming)
-        {
-            var clone = Clone();
-            clone.EnsureExplicitInternalResourceNaming = ensureExplicitInternalResourceNaming;
-            return clone;
-        }
-        /// <summary>
-        /// Manages <see cref="StreamsConfig.ERRORS_DEAD_LETTER_QUEUE_TOPIC_NAME_CONFIG"/>
-        /// </summary>
-        public string ErrorsDeadLetterQueueTopicName { get { return GetProperty<string>(StreamsConfig.ERRORS_DEAD_LETTER_QUEUE_TOPIC_NAME_CONFIG); } set { SetProperty(StreamsConfig.ERRORS_DEAD_LETTER_QUEUE_TOPIC_NAME_CONFIG, value); } }
-        /// <summary>
-        /// Manages <see cref="StreamsConfig.ERRORS_DEAD_LETTER_QUEUE_TOPIC_NAME_CONFIG"/>
-        /// </summary>
-        public StreamsConfigBuilder WithErrorsDeadLetterQueueTopicName(string errorsDeadLetterQueueTopicName)
-        {
-            var clone = Clone();
-            clone.ErrorsDeadLetterQueueTopicName = errorsDeadLetterQueueTopicName;
             return clone;
         }
         /// <summary>
@@ -506,19 +428,6 @@ namespace MASES.KNet.Streams
         {
             var clone = Clone();
             clone.ProbingRebalanceIntervalMs = probingRebalanceIntervalMs;
-            return clone;
-        }
-        /// <summary>
-        /// Manages <see cref="StreamsConfig.PROCESSOR_WRAPPER_CLASS_CONFIG"/>
-        /// </summary>
-        public Class ProcessorWrapperClass { get { return GetProperty<Class>(StreamsConfig.PROCESSOR_WRAPPER_CLASS_CONFIG); } set { SetProperty(StreamsConfig.PROCESSOR_WRAPPER_CLASS_CONFIG, value); } }
-        /// <summary>
-        /// Manages <see cref="StreamsConfig.PROCESSOR_WRAPPER_CLASS_CONFIG"/>
-        /// </summary>
-        public StreamsConfigBuilder WithProcessorWrapperClass(Class processorWrapperClass)
-        {
-            var clone = Clone();
-            clone.ProcessorWrapperClass = processorWrapperClass;
             return clone;
         }
         /// <summary>
