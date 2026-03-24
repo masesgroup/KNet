@@ -17,8 +17,15 @@
 */
 
 using Java.Lang;
+using Java.Util;
+using MASES.JCOBridge.C2JBridge;
+using MASES.KNet.Specific.Streams;
 using Org.Apache.Kafka.Streams;
 using Org.Apache.Kafka.Streams.State;
+using Org.Rocksdb;
+using System;
+using System.Collections.Concurrent;
+using System.Collections.Generic;
 
 namespace MASES.KNet.Streams
 {
@@ -27,6 +34,107 @@ namespace MASES.KNet.Streams
     /// </summary>
     public class StreamsConfigBuilder : CommonClientConfigsBuilder<StreamsConfigBuilder>
     {
+        class StreamsConfigBuilderKNetRocksDBConfigSetter(Action<string, Org.Rocksdb.Options, IKNetConfigurationFromMap, IDictionary<string, object>> onSetConfig,
+                                                          Action<string, Org.Rocksdb.Options, IDictionary<string, object>> onClose) : KNetRocksDBConfigSetterCallback
+        {
+            ConcurrentDictionary<IntPtr, IDictionary<string, object>> _localStorage = new();
+
+            public override void OnSetConfig(KNetRocksDBConfigSetter setter, string store, Org.Rocksdb.Options options, Map<Java.Lang.String, object> map)
+            {
+                if (_localStorage.ContainsKey(setter.BridgeInstance.Pointer)) throw new InvalidOperationException($"{nameof(OnSetConfig)} invoked twice from the same object.");
+                IDictionary<string, object> keyValuePairs = new System.Collections.Generic.Dictionary<string, object>();
+                onSetConfig?.Invoke(store, options, new KNetConfigurationFromMap(map), keyValuePairs);
+                if (!_localStorage.TryAdd(setter.BridgeInstance.Pointer, keyValuePairs))
+                {
+                    throw new InvalidOperationException($"{nameof(OnSetConfig)} is unable to add configured information in local dictionary. A double invocation to {nameof(OnSetConfig)} was made by subsystem?");
+                }
+            }
+
+            public override void OnClose(KNetRocksDBConfigSetter setter, string store, Org.Rocksdb.Options options)
+            {
+                if (_localStorage.TryRemove(setter.BridgeInstance.Pointer, out IDictionary<string, object> keyValuePairs))
+                {
+                    onClose?.Invoke(store, options, keyValuePairs);
+                }
+            }
+        }
+
+        static readonly object _callbackLock = new();
+        static StreamsConfigBuilderKNetRocksDBConfigSetter _callback = null;
+        /// <summary>
+        /// <see langword="true"/> if a previous invocation of <see cref="SetRocksDBConfigSetterCallback"/> succeded
+        /// </summary>
+        public static bool RocksDBConfigSetterCallbackSet => _callback != null;
+
+        /// <summary>
+        /// Sets the global <see cref="KNetRocksDBConfigSetterCallback"/> will be shared across all requests of <see cref="KNetRocksDBConfigSetter"/>
+        /// </summary>
+        /// <param name="onSetConfig">Invoked when a new <see cref="KNetRocksDBConfigSetter"/> is requested and needs to be configured: the parameters are the same of <see cref="RocksDBConfigSetter.SetConfig(Java.Lang.String, Options, Map{Java.Lang.String, object})"/> with an extra parameter can be filled in with used specific information will be received back on <paramref name="onClose"/> invocation</param>
+        /// <param name="onClose">Invoked when a previously configured instance of <see cref="KNetRocksDBConfigSetter"/> shall be closed: the parameters are the same of <see cref="RocksDBConfigSetter.Close(Java.Lang.String, Options)"/> with an extra parameter filled in when <paramref name="onSetConfig"/> was invoked</param>
+        /// <remarks>The callbacks will be in effect only registering <see cref="KNetRocksDBConfigSetter"/> as <see cref="Java.Lang.Class"/> used from <see cref="RocksDbConfigSetterClass"/>:
+        /// <code>
+        /// StreamsConfigBuilder builder = StreamsConfigBuilder.Create();
+        /// builder.RocksDbConfigSetterClass = KNetRocksDBConfigSetter.KNetRocksDBConfigSetterClass;
+        /// ...
+        /// builder.Build();
+        /// </code>
+        /// In general the fourth parameter of <paramref name="onSetConfig"/> can be used to store the reference to objects needs to be closed when <paramref name="onClose"/> is invoked.
+        /// The example in <see href="https://docs.confluent.io/platform/current/streams/developer-guide/config-streams.html#rocksdb-config-setter"/> translates into:
+        /// <code>
+        /// void OnSetConfig(string store, Org.Rocksdb.Options options, IKNetConfigurationFromMap configs, IDictionary&lt;string, object&gt; data)
+        /// {
+        ///     Org.Rocksdb.Cache cache = new Org.Rocksdb.LRUCache(16 * 1024L * 1024L);
+        ///     data.Add("cache", cache);
+        ///     // See #1 in https://docs.confluent.io/platform/current/streams/developer-guide/config-streams.html#rocksdb-config-setter.
+        ///     BlockBasedTableConfig tableConfig = options.TableFormatConfig().Cast&lt;BlockBasedTableConfig&gt;();
+        ///     tableConfig.SetBlockCache(cache);
+        ///     // See #2 in https://docs.confluent.io/platform/current/streams/developer-guide/config-streams.html#rocksdb-config-setter.
+        ///     tableConfig.SetBlockSize(16 * 1024L);
+        ///     // See #3 in https://docs.confluent.io/platform/current/streams/developer-guide/config-streams.html#rocksdb-config-setter.
+        ///     tableConfig.SetCacheIndexAndFilterBlocks(true);
+        ///     options.SetTableFormatConfig(tableConfig);
+        ///     // See #4 in https://docs.confluent.io/platform/current/streams/developer-guide/config-streams.html#rocksdb-config-setter.
+        ///     options.SetMaxWriteBufferNumber(2);
+        /// }
+        /// 
+        /// void OnClose(string store, Org.Rocksdb.Options options, IDictionary&lt;string, object&gt; data)
+        /// {
+        ///     if (data.TryGetValue("cache", out var obj) &amp;&amp; obj is Org.Rocksdb.Cache cache)
+        ///     {
+        ///         // See #5 in https://docs.confluent.io/platform/current/streams/developer-guide/config-streams.html#rocksdb-config-setter.
+        ///         cache.Close();
+        ///     }
+        /// }
+        /// </code>
+        /// </remarks>
+        /// <exception cref="InvalidOperationException">If <see cref="SetRocksDBConfigSetterCallback"/> is invoked twice without an invocation to <see cref="ResetRocksDBConfigSetterCallback"/></exception>
+        public static void SetRocksDBConfigSetterCallback(Action<string, Org.Rocksdb.Options, IKNetConfigurationFromMap, IDictionary<string, object>> onSetConfig,
+                                                          Action<string, Org.Rocksdb.Options, IDictionary<string, object>> onClose)
+        {
+            lock (_callbackLock)
+            {
+                if (_callback != null) 
+                {
+                        throw new InvalidOperationException("The callbacks can be set only once per application.");
+                }
+                _callback = new StreamsConfigBuilderKNetRocksDBConfigSetter(onSetConfig, onClose);
+                KNetRocksDBConfigSetter.SetCallback(_callback);
+            }
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="InvalidOperationException"></exception>
+        public static void ResetRocksDBConfigSetterCallback()
+        {
+            lock (_callbackLock)
+            {
+                KNetRocksDBConfigSetter.SetCallback(null);
+                _callback?.Dispose();
+                _callback = null;
+            }
+        }
+
         /// <summary>
         /// Manages <see cref="StreamsConfig.ALLOW_OS_GROUP_WRITE_ACCESS_CONFIG"/>
         /// </summary>

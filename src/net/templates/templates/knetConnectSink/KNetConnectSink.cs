@@ -7,7 +7,7 @@ namespace MASES.KNet.Template.KNetConnect
 {
     public class KNetConnectSink : KNetSinkConnector<KNetConnectSink, KNetConnectSinkTask>
     {
-        public override void Start(IKNetConnectConfiguration props)
+        public override void Start(IKNetConfigurationFromMap props)
         {
             LogInfo($"KNetConnectSink Start");
             // starts the connector, the method receives the configuration properties
@@ -45,7 +45,7 @@ namespace MASES.KNet.Template.KNetConnect
             }
         }
 
-        public override void Start(IKNetConnectConfiguration props)
+        public override void Start(IKNetConfigurationFromMap props)
         {
             // starts the task with the configuration set from connector
             LogInfo($"KNetConnectSinkTask start");

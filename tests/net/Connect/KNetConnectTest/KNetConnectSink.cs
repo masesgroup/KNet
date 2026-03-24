@@ -24,7 +24,7 @@ namespace MASES.KNet.Connect.Test
 {
     public class KNetSinkTestConnector : KNetSinkConnector<KNetSinkTestConnector, KNetSinkTestTask>
     {
-        public override void Start(IKNetConnectConfiguration props)
+        public override void Start(IKNetConfigurationFromMap props)
         {
             LogInfo($"KNetSinkTestConnector Start");
         }
@@ -60,7 +60,7 @@ namespace MASES.KNet.Connect.Test
             }
         }
 
-        public override void Start(IKNetConnectConfiguration props)
+        public override void Start(IKNetConfigurationFromMap props)
         {
             LogInfo($"KNetSinkTestTask start");
             foreach (var item in props)
