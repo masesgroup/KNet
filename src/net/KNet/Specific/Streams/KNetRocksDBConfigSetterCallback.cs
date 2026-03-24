@@ -16,8 +16,10 @@
 *  Refer to LICENSE for more information.
 */
 
+using Java.Util;
 using MASES.JCOBridge.C2JBridge;
 using Org.Apache.Kafka.Streams.State;
+using Org.Rocksdb;
 
 namespace MASES.KNet.Specific.Streams
 {
@@ -54,7 +56,7 @@ namespace MASES.KNet.Specific.Streams
     }
     #endregion
 
-    #region ClusterResourceListener implementation
+    #region KNetRocksDBConfigSetterCallback implementation
     public partial class KNetRocksDBConfigSetterCallback
     {
         #region Constructors
@@ -84,49 +86,50 @@ namespace MASES.KNet.Specific.Streams
         }
 
         /// <summary>
-        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.0/org/apache/kafka/common/ClusterResourceListener.html#onUpdate(org.apache.kafka.common.ClusterResource)"/>
+        /// Handler for <see cref="RocksDBConfigSetter.SetConfig(Java.Lang.String, Org.Rocksdb.Options, Map{Java.Lang.String, object})"/>
         /// </summary>
         /// <remarks>If <see cref="OnOnSetConfig"/> has a value it takes precedence over corresponding class method</remarks>
-        public global::System.Action<Org.Apache.Kafka.Common.ClusterResource> OnOnSetConfig { get; set; } = null;
+        public global::System.Action<KNetRocksDBConfigSetter, string, Org.Rocksdb.Options, Map<Java.Lang.String, object>> OnOnSetConfig { get; set; } = null;
 
         bool hasOverrideOnSetConfig = true;
         void OnSetConfigEventHandler(object sender, CLRListenerEventArgs<CLREventData<MASES.JNet.Specific.JNetEventResult>> data)
         {
             hasOverrideOnSetConfig = true;
             var methodToExecute = (OnOnSetConfig != null) ? OnOnSetConfig : OnSetConfig;
-            methodToExecute.Invoke(data.EventData.GetAt<Org.Apache.Kafka.Common.ClusterResource>(0));
+            methodToExecute.Invoke(data.EventData.GetAt<KNetRocksDBConfigSetter>(0), 
+                                   data.EventData.GetAt<Java.Lang.String>(1), 
+                                   data.EventData.GetAt<Org.Rocksdb.Options>(2),
+                                   data.EventData.GetAt<Map<Java.Lang.String, object>>(3));
             data.EventData.TypedEventData.HasOverride = hasOverrideOnSetConfig;
         }
 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.0/org/apache/kafka/common/ClusterResourceListener.html#onUpdate(org.apache.kafka.common.ClusterResource)"/>
+        /// Extension of <see cref="RocksDBConfigSetter.SetConfig(Java.Lang.String, Org.Rocksdb.Options, Map{Java.Lang.String, object})"/>
         /// </summary>
-        /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.ClusterResource"/></param>
-        public virtual void OnSetConfig(Org.Apache.Kafka.Common.ClusterResource arg0)
+        public virtual void OnSetConfig(KNetRocksDBConfigSetter setter, string store, Org.Rocksdb.Options options, Map<Java.Lang.String, object> map)
         {
             hasOverrideOnSetConfig = false;
         }
 
         /// <summary>
-        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.0/org/apache/kafka/common/ClusterResourceListener.html#onUpdate(org.apache.kafka.common.ClusterResource)"/>
+        /// Handler for <see cref="RocksDBConfigSetter.Close(Java.Lang.String, Org.Rocksdb.Options)"/>
         /// </summary>
-        /// <remarks>If <see cref="OnOnSetConfig"/> has a value it takes precedence over corresponding class method</remarks>
-        public global::System.Action<Org.Apache.Kafka.Common.ClusterResource> OnOnClose { get; set; } = null;
+        /// <remarks>If <see cref="OnOnClose"/> has a value it takes precedence over corresponding class method</remarks>
+        public global::System.Action<KNetRocksDBConfigSetter, string, Org.Rocksdb.Options> OnOnClose { get; set; } = null;
 
         bool hasOverrideOnClose = true;
         void OnCloseEventHandler(object sender, CLRListenerEventArgs<CLREventData<MASES.JNet.Specific.JNetEventResult>> data)
         {
             hasOverrideOnClose = true;
-            var methodToExecute = (OnOnSetConfig != null) ? OnOnClose : OnClose;
-            methodToExecute.Invoke(data.EventData.GetAt<Org.Apache.Kafka.Common.ClusterResource>(0));
+            var methodToExecute = (OnOnClose != null) ? OnOnClose : OnClose;
+            methodToExecute.Invoke(data.EventData.GetAt<KNetRocksDBConfigSetter>(0), data.EventData.GetAt<Java.Lang.String>(1), data.EventData.GetAt<Org.Rocksdb.Options>(2));
             data.EventData.TypedEventData.HasOverride = hasOverrideOnClose;
         }
 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.0/org/apache/kafka/common/ClusterResourceListener.html#onUpdate(org.apache.kafka.common.ClusterResource)"/>
+        /// Extension of <see cref="RocksDBConfigSetter.Close(Java.Lang.String, Org.Rocksdb.Options)"/>
         /// </summary>
-        /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.ClusterResource"/></param>
-        public virtual void OnClose(Org.Apache.Kafka.Common.ClusterResource arg0)
+        public virtual void OnClose(KNetRocksDBConfigSetter setter, string store, Org.Rocksdb.Options options)
         {
             hasOverrideOnClose = false;
         }

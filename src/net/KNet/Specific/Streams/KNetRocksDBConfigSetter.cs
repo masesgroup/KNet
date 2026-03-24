@@ -16,6 +16,9 @@
 *  Refer to LICENSE for more information.
 */
 
+using Java.Lang;
+using MASES.KNet.Streams;
+using Org.Apache.Kafka.Streams;
 using Org.Apache.Kafka.Streams.State;
 
 namespace MASES.KNet.Specific.Streams
@@ -25,8 +28,13 @@ namespace MASES.KNet.Specific.Streams
     /// </summary>
     public class KNetRocksDBConfigSetter : RocksDBConfigSetter
     {
+        const string _bridgeClassName = "org.mases.knet.developed.streams.KNetRocksDBConfigSetter";
         /// <inheritdoc/>
-        public override string BridgeClassName => "org.mases.knet.developed.streams.KNetRocksDBConfigSetter";
+        public override string BridgeClassName => _bridgeClassName;
+        /// <inheritdoc/>
+        public override bool IsBridgeAbstract => false;
+        /// <inheritdoc/>
+        public override bool IsBridgeInterface => false;
         /// <summary>
         /// Set the <see cref="KNetRocksDBConfigSetterCallback"/> used from the instances of <see cref="KNetRocksDBConfigSetter"/>
         /// </summary>
@@ -35,5 +43,9 @@ namespace MASES.KNet.Specific.Streams
         {
             SExecute("setCallback", callback);
         }
+        /// <summary>
+        /// The <see cref="Java.Lang.Class"/> to be used to set the value of <see cref="StreamsConfigBuilder.RocksDbConfigSetterClass"/> or <see cref="StreamsConfig.ROCKSDB_CONFIG_SETTER_CLASS_CONFIG"/>
+        /// </summary>
+        public static Java.Lang.Class KNetRocksDBConfigSetterClass => Class.ForName(_bridgeClassName, true, Class.SystemClassLoader);
     }
 }

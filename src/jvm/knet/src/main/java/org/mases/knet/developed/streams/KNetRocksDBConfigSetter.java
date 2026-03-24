@@ -31,16 +31,22 @@ public class KNetRocksDBConfigSetter implements RocksDBConfigSetter {
     }
 
     @Override
-    public void setConfig(String s, Options options, Map<String, Object> map) {
+    public synchronized void setConfig(String s, Options options, Map<String, Object> map) {
         if (_callback != null) {
             _callback.onSetConfig(this, s, options, map);
+        }
+        else {
+            throw new IllegalStateException("The callback has not been set; use static method \"setCallback\" to set the callback every instance will use.");
         }
     }
 
     @Override
-    public void close(String s, Options options) {
+    public synchronized void close(String s, Options options) {
         if (_callback != null) {
             _callback.onClose(this, s, options);
+        }
+        else {
+            throw new IllegalStateException("The callback has not been set; use static method \"setCallback\" to set the callback every instance will use.");
         }
     }
 }

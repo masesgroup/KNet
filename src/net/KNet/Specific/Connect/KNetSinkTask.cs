@@ -16,10 +16,8 @@
 *  Refer to LICENSE for more information.
 */
 
-using Java.Lang;
 using Java.Util;
 using MASES.JCOBridge.C2JBridge;
-using MASES.JNet.Specific.Extensions;
 using Org.Apache.Kafka.Connect.Sink;
 using System.Collections.Generic;
 

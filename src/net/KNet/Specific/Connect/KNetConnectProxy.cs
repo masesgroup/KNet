@@ -18,13 +18,9 @@
 
 using MASES.JCOBridge.C2JBridge;
 using MASES.JCOBridge.C2JBridge.JVMInterop;
-using MASES.JNet;
-using MASES.JNet.Specific.Extensions;
-using MASES.KNet;
 using MASES.KNet.Connect.Transforms;
 using MASES.KNet.Connect.Transforms.Predicates;
 using System;
-using System.Reflection;
 
 namespace MASES.KNet.Connect
 {
