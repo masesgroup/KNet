@@ -72,7 +72,7 @@ namespace MASES.KNet.Streams
         /// <param name="onClose">Invoked when a previously configured instance of <see cref="KNetRocksDBConfigSetter"/> shall be closed: the parameters are the same of <see cref="RocksDBConfigSetter.Close(Java.Lang.String, Options)"/> with an extra parameter filled in when <paramref name="onSetConfig"/> was invoked</param>
         /// <remarks>The callbacks will be in effect only registering <see cref="KNetRocksDBConfigSetter"/> as <see cref="Java.Lang.Class"/> used from <see cref="RocksDbConfigSetterClass"/>:
         /// <code>
-        /// StreamsConfigBuilder builder = new StreamsConfigBuilder();
+        /// StreamsConfigBuilder builder = StreamsConfigBuilder.Create();
         /// builder.RocksDbConfigSetterClass = KNetRocksDBConfigSetter.KNetRocksDBConfigSetterClass;
         /// ...
         /// builder.Build();

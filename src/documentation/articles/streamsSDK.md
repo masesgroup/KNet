@@ -1,8 +1,3 @@
----
-title: Streams SDK of .NET suite for Apache Kafka™
-_description: Describes how to use Streams SDK of .NET suite for Apache Kafka™
----
-
 # KNet: Streams SDK
 
 This is only a quick introduction to KNet Streams SDK, many other information related to Apache Kafka™ Streams can be found at the following links: <https://kafka.apache.org/documentation/#streams> and <https://kafka.apache.org/documentation/streams/>
@@ -14,6 +9,87 @@ KNet Streams SDK runs **entirely embedded within the .NET application process** 
 This means KNet Streams SDK is compatible with **any broker that implements the Kafka wire protocol** — not only Apache Kafka™ itself. Examples of compatible brokers: [Redpanda](https://redpanda.com/), [Amazon MSK](https://aws.amazon.com/msk/), [Confluent Platform / Cloud](https://www.confluent.io/), [Aiven for Apache Kafka™](https://aiven.io/kafka), [IBM Event Streams](https://www.ibm.com/products/event-streams), [WarpStream](https://www.warpstream.com/), [AutoMQ](https://www.automq.com/), and others.
 
 See [Supported Backends](backends.md) for the full compatibility matrix covering all KNet feature areas.
+
+## RocksDB configuration
+
+Apache Kafka™ Streams uses [RocksDB](https://rocksdb.org/) as its default storage engine for persistent state stores. KNet Streams SDK exposes the ability to configure RocksDB from .NET via `StreamsConfigBuilder.SetRocksDBConfigSetterCallback`.
+
+### How it works
+
+The callback mechanism is built on two methods of `StreamsConfigBuilder`:
+
+* **`SetRocksDBConfigSetterCallback(onSetConfig, onClose)`** — registers a process-wide callback pair. The callback is unique per process: calling this method a second time without a prior `ResetRocksDBConfigSetterCallback` throws an `InvalidOperationException`.
+* **`ResetRocksDBConfigSetterCallback()`** — deregisters the callbacks and disposes the internal state.
+* **`RocksDBConfigSetterCallbackSet`** — returns `true` if a callback is currently registered.
+
+When a Kafka Streams instance initializes a RocksDB state store it invokes `onSetConfig`; when the store is closed it invokes `onClose`.
+
+### Object lifetime and the data dictionary
+
+RocksDB objects created during configuration (e.g. `LRUCache`, `BlockBasedTableConfig`) must remain alive for the entire lifetime of the state store — they are referenced natively by RocksDB. If the .NET GC collects them, RocksDB will crash in a non-deterministic way.
+
+To manage this, the framework provides each `onSetConfig` invocation with a dedicated `IDictionary<string, object>` parameter. Objects stored in this dictionary are held alive by the framework until the corresponding `onClose` is invoked, at which point the same dictionary is passed back to `onClose` so the user can dispose resources explicitly.
+
+The dictionary is keyed internally by the JVM reference pointer of the `KNetRocksDBConfigSetter` instance — not by store name — so each state store instance gets its own independent dictionary. The store name can however be used as a key *within* the user dictionary if `setConfig` is called only once per instance before `close`.
+
+### Activation
+
+The callbacks are invoked only when `KNetRocksDBConfigSetter` is registered as the RocksDB config setter class:
+
+```csharp
+StreamsConfigBuilder builder = StreamsConfigBuilder.Create();
+builder.RocksDbConfigSetterClass = KNetRocksDBConfigSetter.KNetRocksDBConfigSetterClass;
+```
+
+### Example
+
+The following example corresponds to the [Confluent RocksDB config setter guide](https://docs.confluent.io/platform/current/streams/developer-guide/config-streams.html#rocksdb-config-setter):
+
+```csharp
+void OnSetConfig(string store, Org.Rocksdb.Options options, IKNetConfigurationFromMap configs, IDictionary<string, object> data)
+{
+    // Create a cache and store a reference in data to keep it alive
+    Org.Rocksdb.Cache cache = new Org.Rocksdb.LRUCache(16 * 1024L * 1024L);
+    data.Add("cache", cache);
+
+    // Configure the block-based table format
+    BlockBasedTableConfig tableConfig = (BlockBasedTableConfig)options.TableFormatConfig();
+    tableConfig.SetBlockCache(cache);
+    tableConfig.SetBlockSize(16 * 1024L);
+    tableConfig.SetCacheIndexAndFilterBlocks(true);
+    options.SetTableFormatConfig(tableConfig);
+    options.SetMaxWriteBufferNumber(2);
+}
+
+void OnClose(string store, Org.Rocksdb.Options options, IDictionary<string, object> data)
+{
+    // Retrieve and dispose the cache that was stored during OnSetConfig
+    if (data.TryGetValue("cache", out var obj) && obj is Org.Rocksdb.Cache cache)
+    {
+        cache.Close();
+    }
+}
+
+// Register callbacks — process-wide, call only once
+StreamsConfigBuilder.SetRocksDBConfigSetterCallback(OnSetConfig, OnClose);
+
+StreamsConfigBuilder builder = StreamsConfigBuilder.Create();
+builder.RocksDbConfigSetterClass = KNetRocksDBConfigSetter.KNetRocksDBConfigSetterClass;
+// ... rest of topology setup ...
+Streams streams = new Streams(topology, builder);
+streams.Start();
+
+// When done, deregister
+StreamsConfigBuilder.ResetRocksDBConfigSetterCallback();
+```
+
+##### Warning
+
+Any RocksDB object created in `onSetConfig` that is **not** stored in the `IDictionary<string, object>` parameter may be collected by the .NET GC while RocksDB is still referencing it, causing unpredictable crashes. Always store all native-referenced objects in the provided dictionary.
+
+##### Important
+
+`SetRocksDBConfigSetterCallback` registers a single callback shared across all state stores in all `Streams` instances in the process. If multiple topologies with different RocksDB configurations are needed in the same process, use the `store` name parameter to dispatch the configuration logic within a single `onSetConfig` implementation.
 
 ## Why KNet Streams SDK
 
