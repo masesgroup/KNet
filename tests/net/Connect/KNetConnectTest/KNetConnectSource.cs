@@ -26,7 +26,7 @@ namespace MASES.KNet.Connect.Test
 {
     public class KNetSourceTestConnector : KNetSourceConnector<KNetSourceTestConnector, KNetSourceTestTask>
     {
-        public override void Start(IKNetConnectConfiguration props)
+        public override void Start(IKNetConfigurationFromMap props)
         {
             LogInfo($"KNetSourceTestConnector Start");
         }
@@ -105,7 +105,7 @@ namespace MASES.KNet.Connect.Test
             return records;
         }
 
-        public override void Start(IKNetConnectConfiguration props)
+        public override void Start(IKNetConfigurationFromMap props)
         {
             LogInfo($"KNetSourceTestTask start");
             foreach (var item in props)
