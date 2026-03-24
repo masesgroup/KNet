@@ -18,6 +18,7 @@
 
 using Java.Lang;
 using Java.Util;
+using MASES.JCOBridge.C2JBridge;
 using MASES.KNet.Specific.Streams;
 using Org.Apache.Kafka.Streams;
 using Org.Apache.Kafka.Streams.State;
@@ -85,15 +86,15 @@ namespace MASES.KNet.Streams
         ///     Org.Rocksdb.Cache cache = new Org.Rocksdb.LRUCache(16 * 1024L * 1024L);
         ///     data.Add("cache", cache);
         ///     // See #1 in https://docs.confluent.io/platform/current/streams/developer-guide/config-streams.html#rocksdb-config-setter.
-        ///     BlockBasedTableConfig tableConfig = (BlockBasedTableConfig)options.tableFormatConfig();
-        ///     tableConfig.setBlockCache(cache);
+        ///     BlockBasedTableConfig tableConfig = options.TableFormatConfig().Cast&lt;BlockBasedTableConfig&gt;();
+        ///     tableConfig.SetBlockCache(cache);
         ///     // See #2 in https://docs.confluent.io/platform/current/streams/developer-guide/config-streams.html#rocksdb-config-setter.
-        ///     tableConfig.setBlockSize(16 * 1024L);
+        ///     tableConfig.SetBlockSize(16 * 1024L);
         ///     // See #3 in https://docs.confluent.io/platform/current/streams/developer-guide/config-streams.html#rocksdb-config-setter.
-        ///     tableConfig.setCacheIndexAndFilterBlocks(true);
-        ///     options.setTableFormatConfig(tableConfig);
+        ///     tableConfig.SetCacheIndexAndFilterBlocks(true);
+        ///     options.SetTableFormatConfig(tableConfig);
         ///     // See #4 in https://docs.confluent.io/platform/current/streams/developer-guide/config-streams.html#rocksdb-config-setter.
-        ///     options.setMaxWriteBufferNumber(2);
+        ///     options.SetMaxWriteBufferNumber(2);
         /// }
         /// 
         /// void OnClose(string store, Org.Rocksdb.Options options, IDictionary&lt;string, object&gt; data)
