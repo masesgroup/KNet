@@ -16,9 +16,7 @@
 *  Refer to LICENSE for more information.
 */
 
-using Java.Lang;
 using Java.Util;
-using Org.Apache.Kafka.Connect.Sink;
 using Org.Apache.Kafka.Connect.Source;
 using System;
 

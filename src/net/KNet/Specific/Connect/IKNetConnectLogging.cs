@@ -16,7 +16,6 @@
 *  Refer to LICENSE for more information.
 */
 
-using Java.Lang;
 using MASES.JCOBridge.C2JBridge;
 
 namespace MASES.KNet.Connect

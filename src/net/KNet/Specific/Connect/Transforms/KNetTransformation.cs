@@ -80,8 +80,8 @@ namespace MASES.KNet.Connect.Transforms
         /// <summary>
         /// Implement the method to execute the start action
         /// </summary>
-        /// <param name="configuration">The <see cref="IKNetConnectConfiguration"/> to access the properties returned from Apache Kafka Connect framework: the <see cref="IKNetCommon.Properties"/> contains the same info from configuration file.</param>
-        void Configure(IKNetConnectConfiguration configuration);
+        /// <param name="configuration">The <see cref="IKNetConfigurationFromMap"/> to access the properties returned from Apache Kafka Connect framework: the <see cref="IKNetCommon.Properties"/> contains the same info from configuration file.</param>
+        void Configure(IKNetConfigurationFromMap configuration);
     }
     /// <summary>
     /// The generic class which is the base of all transformations in .NET
@@ -153,7 +153,7 @@ namespace MASES.KNet.Connect.Transforms
             {
                 Map<Java.Lang.String, object> props = DataToExchange<Map<Java.Lang.String, object>>();
                 Configure(props);
-                Properties = new KNetConnectConfiguration(props);
+                Properties = new KNetConfigurationFromMap(props);
                 Configure(Properties);
             }
             catch (System.Exception e)
@@ -171,8 +171,8 @@ namespace MASES.KNet.Connect.Transforms
 
         }
 
-        /// <inheritdoc cref="IKNetTransformation.Configure(IKNetConnectConfiguration)"/>
-        public abstract void Configure(IKNetConnectConfiguration configuration);
+        /// <inheritdoc cref="IKNetTransformation.Configure(IKNetConfigurationFromMap)"/>
+        public abstract void Configure(IKNetConfigurationFromMap configuration);
 
         /// <summary>
         /// Public method used from Java to trigger <see cref="Close"/>

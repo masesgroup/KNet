@@ -16,19 +16,13 @@
 *  Refer to LICENSE for more information.
 */
 
-using Java.Lang;
 using Java.Util;
-using MASES.JCOBridge.C2JBridge;
-using MASES.JCOBridge.C2JBridge.JVMInterop;
-using MASES.JNet.Specific.Extensions;
-using Org.Apache.Kafka.Common.Config.Types;
-using Org.Apache.Kafka.Connect.Connector;
 using System;
 using System.Collections.Generic;
 
 namespace MASES.KNet.Connect
 {
-    #region IKNetConnectConfiguration
+    #region IKNetTaskConfiguration
     /// <summary>
     /// Interface to simplify access configuration information
     /// </summary>
@@ -175,8 +169,8 @@ namespace MASES.KNet.Connect
         /// <summary>
         /// Implement the method to execute the start action
         /// </summary>
-        /// <param name="props">The <see cref="IKNetConnectConfiguration"/> to access the properties returned from Apache Kafka Connect framework: the <see cref="IKNetCommon.Properties"/> contains the info from <see cref="KNetConnector.TaskConfigs(int, int, IKNetTaskConfiguration)"/>.</param>
-        void Start(IKNetConnectConfiguration props);
+        /// <param name="props">The <see cref="IKNetConfigurationFromMap"/> to access the properties returned from Apache Kafka Connect framework: the <see cref="IKNetCommon.Properties"/> contains the info from <see cref="KNetConnector.TaskConfigs(int, int, IKNetTaskConfiguration)"/>.</param>
+        void Start(IKNetConfigurationFromMap props);
     }
     #endregion
 
@@ -228,7 +222,7 @@ namespace MASES.KNet.Connect
             try
             {
                 Map<Java.Lang.String, Java.Lang.String> props = DataToExchange<Map<Java.Lang.String, Java.Lang.String>>();
-                Properties = new KNetConnectConfiguration(props);
+                Properties = new KNetConfigurationFromMap(props);
                 Start(Properties);
             }
             catch (System.Exception e)
@@ -243,8 +237,8 @@ namespace MASES.KNet.Connect
         /// <exception cref="NotImplementedException">Local version with a different signature</exception>
         public void Start(Map<Java.Lang.String, Java.Lang.String> props) => throw new NotImplementedException("Local version with a different signature");
 
-        /// <inheritdoc cref="IKNetTask.Start(IKNetConnectConfiguration)"/>
-        public abstract void Start(IKNetConnectConfiguration props);
+        /// <inheritdoc cref="IKNetTask.Start(IKNetConfigurationFromMap)"/>
+        public abstract void Start(IKNetConfigurationFromMap props);
         /// <summary>
         /// Public method used from Java to trigger <see cref="Stop"/>
         /// </summary>

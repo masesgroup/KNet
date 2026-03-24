@@ -18,14 +18,11 @@
 
 using Java.Lang;
 using Java.Util;
-using MASES.JCOBridge.C2JBridge;
-using MASES.JCOBridge.C2JBridge.JVMInterop;
 using MASES.JNet.Specific.Extensions;
 using Org.Apache.Kafka.Common.Config;
 using Org.Apache.Kafka.Connect.Connector;
 using System;
 using System.Collections.Concurrent;
-using System.Collections.Generic;
 
 namespace MASES.KNet.Connect
 {
@@ -92,8 +89,8 @@ namespace MASES.KNet.Connect
         /// <summary>
         /// Implement the method to execute the start action
         /// </summary>
-        /// <param name="configuration">The <see cref="IKNetConnectConfiguration"/> to access the properties returned from Apache Kafka Connect framework: the <see cref="IKNetCommon.Properties"/> contains the same info from configuration file.</param>
-        void Start(IKNetConnectConfiguration configuration);
+        /// <param name="configuration">The <see cref="IKNetConfigurationFromMap"/> to access the properties returned from Apache Kafka Connect framework: the <see cref="IKNetCommon.Properties"/> contains the same info from configuration file.</param>
+        void Start(IKNetConfigurationFromMap configuration);
         /// <summary>
         /// Invoked during allocation of tasks from Apache Kafka Connect
         /// </summary>
@@ -173,7 +170,7 @@ namespace MASES.KNet.Connect
             {
                 Map<Java.Lang.String, object> props = DataToExchange<Map<Java.Lang.String, object>>();
                 Start(props);
-                Properties = new KNetConnectConfiguration(props);
+                Properties = new KNetConfigurationFromMap(props);
                 Start(Properties);
             }
             catch (System.Exception e)
@@ -191,8 +188,8 @@ namespace MASES.KNet.Connect
 
         }
 
-        /// <inheritdoc cref="IKNetConnector.Start(IKNetConnectConfiguration)"/>
-        public abstract void Start(IKNetConnectConfiguration configuration);
+        /// <inheritdoc cref="IKNetConnector.Start(IKNetConfigurationFromMap)"/>
+        public abstract void Start(IKNetConfigurationFromMap configuration);
         /// <summary>
         /// Not implemented
         /// </summary>
