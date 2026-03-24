@@ -81,7 +81,7 @@
       "Url": "https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/3.9.2/"
     },
     {
-      "Version": 11,
+      "Version": 8,
       "Url": "https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/"
     }
   ],
