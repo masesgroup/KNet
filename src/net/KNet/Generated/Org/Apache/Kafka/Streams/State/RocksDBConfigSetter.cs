@@ -107,7 +107,7 @@ namespace Org.Apache.Kafka.Streams.State
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/state/RocksDBConfigSetter.html#close(java.lang.String,org.rocksdb.Options)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/state/RocksDBConfigSetter.html#close-java.lang.String-org.rocksdb.Options-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Org.Rocksdb.Options"/></param>
@@ -116,7 +116,7 @@ namespace Org.Apache.Kafka.Streams.State
             IExecuteWithSignature("close", "(Ljava/lang/String;Lorg/rocksdb/Options;)V", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/state/RocksDBConfigSetter.html#setConfig(java.lang.String,org.rocksdb.Options,java.util.Map)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/state/RocksDBConfigSetter.html#setConfig-java.lang.String-org.rocksdb.Options-java.util.Map-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Org.Rocksdb.Options"/></param>
