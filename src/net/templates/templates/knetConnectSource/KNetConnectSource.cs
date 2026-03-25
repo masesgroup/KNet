@@ -9,7 +9,7 @@ namespace MASES.KNet.Template.KNetConnect
 {
     public class KNetConnectSource : KNetSourceConnector<KNetConnectSource, KNetConnectSourceTask>
     {
-        public override void Start(IKNetConnectConfiguration props)
+        public override void Start(IKNetConfigurationFromMap props)
         {
             LogInfo($"KNetConnectSource Start");
             // starts the connector, the method receives the configuration properties
@@ -92,7 +92,7 @@ namespace MASES.KNet.Template.KNetConnect
             return records;
         }
 
-        public override void Start(IKNetConnectConfiguration props)
+        public override void Start(IKNetConfigurationFromMap props)
         {
             // starts the task with the configuration set from connector
             // in this template we set only _topic local variables from configuration

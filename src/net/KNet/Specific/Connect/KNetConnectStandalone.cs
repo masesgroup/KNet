@@ -17,7 +17,6 @@
 */
 
 using MASES.JCOBridge.C2JBridge;
-using MASES.KNet.Connect;
 
 namespace MASES.KNet.Connect
 {

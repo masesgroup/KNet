@@ -20,7 +20,8 @@
     "connect-mirror-client-3.9.2.jar",
     "connect-runtime-3.9.2.jar",
     "connect-transforms-3.9.2.jar",
-	"kafka-server-common-3.9.2.jar"
+    "kafka-server-common-3.9.2.jar",
+    "rocksdbjni-7.9.2.jar"
   ],
   "OriginJavadocJARVersionAndUrls": [
     {
@@ -78,12 +79,15 @@
     {
       "Version": 8,
       "Url": "https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/3.9.2/"
+    },
+    {
+      "Version": 8,
+      "Url": "https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/"
     }
   ],
   "NamespacesToAvoid": [
     "scala",
     "joptsimple",
-    "org.rocksdb",
     "com.typesafe",
     "com.fasterxml",
     "javax.ws.rs",
@@ -238,6 +242,18 @@
     "org.apache.kafka.tools.reassign.LogDirMoveState",
     "org.apache.kafka.tools.reassign.PartitionReassignmentState",
     "org.apache.zookeeper.ZooKeeperMainWithTlsSupportForKafka",
-    "org.apache.zookeeper.server.quorum.QuorumPeerMain"
+    "org.apache.zookeeper.server.quorum.QuorumPeerMain",
+    "org.apache.kafka.tools.streams.StreamsGroupCommand$OffsetsInfo",
+    "org.rocksdb.AbstractCompactionFilter",
+    "org.rocksdb.AbstractCompactionFilterFactory",
+    "org.rocksdb.AbstractMutableOptions",
+    "org.rocksdb.AbstractMutableOptions$AbstractMutableOptionsBuilder",
+    "org.rocksdb.AdvancedColumnFamilyOptionsInterface",
+    "org.rocksdb.BackupEngine",
+    "org.rocksdb.CassandraCompactionFilter",
+    "org.rocksdb.MutableDBOptions",
+    "org.rocksdb.MutableDBOptions$MutableDBOptionsBuilder",
+    "org.rocksdb.OptionString",
+    "org.rocksdb.RemoveEmptyValueCompactionFilter"
   ]
 }
