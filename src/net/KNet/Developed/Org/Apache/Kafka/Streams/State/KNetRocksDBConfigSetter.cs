@@ -315,11 +315,12 @@ namespace Org.Apache.Kafka.Streams.State
         /// Unregister the <see cref="IRocksDbLifecycleHandler"/> associated to <paramref name="storageId"/>
         /// </summary>
         /// <param name="storageId">The id used when the RocksDb storage was requested</param>
+        /// <param name="silent"><see langword="true"/> to silently bypass the condition of missing registration of <paramref name="storageId"/></param>
         /// <exception cref="InvalidOperationException">If <paramref name="storageId"/> is not available</exception>
         /// <remarks>This method works only in conjunction with <see cref="SetRocksDBConfigSetterCallbackDefault"/>, which is the default one.</remarks>
-        public static void Unregister(string storageId)
+        public static void Unregister(string storageId, bool silent = false)
         {
-            if (!_entityByStorageId.TryRemove(storageId, out _))
+            if (!_entityByStorageId.TryRemove(storageId, out _) && !silent)
             {
                 throw new InvalidOperationException($"StorageId {storageId} is not available in global storage, have you forget to invoke {nameof(Register)}?");
             }
