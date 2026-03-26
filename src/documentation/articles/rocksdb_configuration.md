@@ -64,7 +64,7 @@ To remove a handler:
 KNetRocksDBConfigSetter.Unregister("myStore");
 ```
 
-This unified mechanism replaces the previous implementation and is the default way to customize RocksDB behavior in KNet Streams SDK: `KNetRocksDBConfigSetter.SetRocksDBConfigSetterCallbackDefault` is invoked in the static constructor of `KNetRocksDBConfigSetter` to ensure the infrastructure is ready.
+This unified mechanism replaces the implementation seen in [Global configuration example](#global-configuration-example) and is the default way to customize RocksDB behavior in KNet Streams SDK: `KNetRocksDBConfigSetter.SetRocksDBConfigSetterCallbackDefault` is invoked in the static constructor of `KNetRocksDBConfigSetter` to ensure the infrastructure is ready.
 
 ## Object lifetime and the data dictionary
 
@@ -78,9 +78,18 @@ The dictionary is keyed internally by the JVM reference pointer of the `KNetRock
 
 The callbacks are invoked only when `KNetRocksDBConfigSetter` is registered as the RocksDB config setter class:
 
+- using `StreamsConfigBuilder`:
+
 ```csharp
 StreamsConfigBuilder builder = StreamsConfigBuilder.Create();
 builder.RocksDbConfigSetterClass = KNetRocksDBConfigSetter.KNetRocksDBConfigSetterClass;
+```
+
+- using `Properties`:
+
+```csharp
+var properties = new Java.Util.Properties();
+properties.Put(StreamsConfig.ROCKSDB_CONFIG_SETTER_CLASS_CONFIG, KNetRocksDBConfigSetter.KNetRocksDBConfigSetterClass);
 ```
 
 ## Examples
