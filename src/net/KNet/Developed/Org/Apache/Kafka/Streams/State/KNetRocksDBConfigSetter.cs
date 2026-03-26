@@ -291,7 +291,7 @@ namespace Org.Apache.Kafka.Streams.State
             SetRocksDBConfigSetterCallbackDefault();
         }
         /// <summary>
-        /// Current registered storage id, i.e. the list of storages where it was invoked <see cref="Register(string, IRocksDbLifecycleHandler)"/>
+        /// Current registered storage id, i.e. the list of storages where it was invoked <see cref="Register(string, IRocksDbLifecycleHandler, bool)"/>
         /// </summary>
         public static IReadOnlyList<string> RegisteredStorageId => new System.Collections.Generic.List<string>(_entityByStorageId.Keys);
 
