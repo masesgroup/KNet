@@ -300,30 +300,39 @@ namespace Org.Apache.Kafka.Streams.State
         /// </summary>
         /// <param name="storageId">The id used when the RocksDb storage was requested</param>
         /// <param name="handler">The <see cref="IRocksDbLifecycleHandler"/> will be invoked or <see langword="null"/> to use defaults</param>
+        /// <param name="silent"><see langword="true"/> to silently bypass the condition of previous registration of <paramref name="storageId"/></param>
+        /// <returns><see langword="true"/> if the operation succeded, <see langword="false"/> otherwise if <paramref name="silent"/> is <see langword="true"/></returns>
         /// <exception cref="InvalidOperationException">If <paramref name="storageId"/> is already registered</exception>
         /// <remarks>This method works only in conjunction with <see cref="SetRocksDBConfigSetterCallbackDefault"/>, which is the default one.</remarks>
-        public static void Register(string storageId, IRocksDbLifecycleHandler handler = null)
+        public static bool Register(string storageId, IRocksDbLifecycleHandler handler = null, bool silent = false)
         {
             if (string.IsNullOrWhiteSpace(storageId)) throw new ArgumentException($"Parameter cannot be null or contain only with spaces", nameof(storageId));
 
-            if (!_entityByStorageId.TryAdd(storageId, handler == null ? handler : NullRocksDbLifecycleHandler.Instance))
+            var result = _entityByStorageId.TryAdd(storageId, handler == null ? handler : NullRocksDbLifecycleHandler.Instance);
+            if (silent) return result;
+            if (!result)
             {
                 throw new InvalidOperationException($"StorageId {storageId} was registered in global storage, cannot add it again. Try with {nameof(Unregister)} before call this method again.");
             }
+            return result;
         }
         /// <summary>
         /// Unregister the <see cref="IRocksDbLifecycleHandler"/> associated to <paramref name="storageId"/>
         /// </summary>
         /// <param name="storageId">The id used when the RocksDb storage was requested</param>
         /// <param name="silent"><see langword="true"/> to silently bypass the condition of missing registration of <paramref name="storageId"/></param>
+        /// <returns><see langword="true"/> if the operation succeded, <see langword="false"/> otherwise if <paramref name="silent"/> is <see langword="true"/></returns>
         /// <exception cref="InvalidOperationException">If <paramref name="storageId"/> is not available</exception>
         /// <remarks>This method works only in conjunction with <see cref="SetRocksDBConfigSetterCallbackDefault"/>, which is the default one.</remarks>
-        public static void Unregister(string storageId, bool silent = false)
+        public static bool Unregister(string storageId, bool silent = false)
         {
-            if (!_entityByStorageId.TryRemove(storageId, out _) && !silent)
+            var result = _entityByStorageId.TryRemove(storageId, out _);
+            if (silent) return result;
+            if (!result)
             {
                 throw new InvalidOperationException($"StorageId {storageId} is not available in global storage, have you forget to invoke {nameof(Register)}?");
             }
+            return result;
         }
 
         const string _bridgeClassName = "org.mases.knet.developed.streams.state.KNetRocksDBConfigSetter";
