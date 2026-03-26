@@ -306,7 +306,7 @@ namespace Org.Apache.Kafka.Streams.State
         /// <remarks>This method works only in conjunction with <see cref="SetRocksDBConfigSetterCallbackDefault"/>, which is the default one.</remarks>
         public static bool Register(string storageId, IRocksDbLifecycleHandler handler = null, bool silent = false)
         {
-            if (string.IsNullOrWhiteSpace(storageId)) throw new ArgumentException($"Parameter cannot be null or contain only with spaces", nameof(storageId));
+            if (string.IsNullOrWhiteSpace(storageId)) throw new ArgumentException($"Parameter cannot be null, empty or contain only white spaces", nameof(storageId));
 
             var result = _entityByStorageId.TryAdd(storageId, handler == null ? handler : NullRocksDbLifecycleHandler.Instance);
             if (silent) return result;
