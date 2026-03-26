@@ -1,4 +1,4 @@
-# KNet — .NET Suite for [Apache Kafka™](https://kafka.apache.org/)
+# KNet: .NET suite for [Apache Kafka™](https://kafka.apache.org/)
 
 KNet is a comprehensive .NET suite for [Apache Kafka™](https://kafka.apache.org/) that provides direct access to all [Apache Kafka™ APIs](https://kafka.apache.org/documentation/#api) and features: Producer, Consumer, Admin, Streams, Connect, and KRaft backend support.
 
@@ -94,6 +94,7 @@ This project adheres to the Contributor [Covenant code of conduct](https://githu
 * [Performance](src/documentation/articles/performance.md)
 * [Connect SDK](src/documentation/articles/connectSDK.md)
 * [Streams SDK](src/documentation/articles/streamsSDK.md)
+* [RocksDB configuration](src/documentation/articles/rocksdb_configuration.md)
 * [KNet usage](src/documentation/articles/usage.md)
 * [KNet APIs extensibility](src/documentation/articles/API_extensibility.md)
 * [KNet Serializer/Deserializer](src/documentation/articles/usageSerDes.md)
