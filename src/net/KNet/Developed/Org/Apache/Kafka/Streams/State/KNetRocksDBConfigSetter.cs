@@ -163,7 +163,7 @@ namespace Org.Apache.Kafka.Streams.State
         class KNetRocksDBConfigSetterCallbackImpl(Action<string, Org.Rocksdb.Options, IKNetConfigurationFromMap, IDictionary<string, object>> onSetConfig,
                                                           Action<string, Org.Rocksdb.Options, IDictionary<string, object>> onClose) : KNetRocksDBConfigSetterCallback
         {
-            ConcurrentDictionary<IntPtr, IDictionary<string, object>> _localStorage = new();
+            readonly ConcurrentDictionary<IntPtr, IDictionary<string, object>> _localStorage = new();
 
             public override void OnSetConfig(KNetRocksDBConfigSetter setter, string store, Org.Rocksdb.Options options, Map<Java.Lang.String, object> map)
             {
