@@ -79,7 +79,6 @@ See [Supported Backends](src/documentation/articles/backends.md) for the full co
 
 If you find KNet useful:
 
-* Request a free [community subscription](https://www.jcobridge.com/pricing-25/)
 * Leave a ⭐ on the repository
 * Open [issues](https://github.com/masesgroup/KNet/issues) to report bugs 🐛 or request features
 * Submit Pull Requests to improve the project
