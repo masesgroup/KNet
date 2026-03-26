@@ -18,10 +18,8 @@
 
 using Java.Util;
 using MASES.JCOBridge.C2JBridge;
-using Org.Apache.Kafka.Streams.State;
-using Org.Rocksdb;
 
-namespace MASES.KNet.Specific.Streams
+namespace Org.Apache.Kafka.Streams.State
 {
     #region KNetRocksDBConfigSetterCallback declaration
     /// <summary>
@@ -42,7 +40,7 @@ namespace MASES.KNet.Specific.Streams
         /// Generic constructor: it is useful for JCOBridge when there is a derived class which needs to pass arguments to the highest JVMBridgeBase class
         /// </summary>
         public KNetRocksDBConfigSetterCallback(params object[] args) : base(args) { InitializeHandlers(); }
-        const string _bridgeClassName = "org.mases.knet.developed.streams.KNetRocksDBConfigSetterCallback";
+        const string _bridgeClassName = "org.mases.knet.developed.streams.state.KNetRocksDBConfigSetterCallback";
         private static readonly global::System.Exception _LocalBridgeClazzException = null;
         private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
         private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw _LocalBridgeClazzException ?? new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");

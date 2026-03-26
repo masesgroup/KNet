@@ -16,7 +16,7 @@
  *  Refer to LICENSE for more information.
  */
 
-package org.mases.knet.developed.streams;
+package org.mases.knet.developed.streams.state;
 
 import org.apache.kafka.streams.state.RocksDBConfigSetter;
 import org.rocksdb.Options;
