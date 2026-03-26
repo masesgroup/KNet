@@ -1,4 +1,4 @@
-package org.mases.knet.developed.streams;
+package org.mases.knet.developed.streams.state;
 
 import org.rocksdb.Options;
 

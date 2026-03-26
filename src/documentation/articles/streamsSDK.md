@@ -16,7 +16,7 @@ Apache Kafka™ Streams uses [RocksDB](https://rocksdb.org/) as its default stor
 
 ### How it works
 
-The callback mechanism is built on two methods of `StreamsConfigBuilder`:
+The callback mechanism is built on two methods of `KNetRocksDBConfigSetter`:
 
 * **`SetRocksDBConfigSetterCallback(onSetConfig, onClose)`** — registers a process-wide callback pair. The callback is unique per process: calling this method a second time without a prior `ResetRocksDBConfigSetterCallback` throws an `InvalidOperationException`.
 * **`ResetRocksDBConfigSetterCallback()`** — deregisters the callbacks and disposes the internal state.

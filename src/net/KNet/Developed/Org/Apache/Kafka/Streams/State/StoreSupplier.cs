@@ -16,8 +16,6 @@
 *  Refer to LICENSE for more information.
 */
 
-using MASES.JCOBridge.C2JBridge;
-
 namespace Org.Apache.Kafka.Streams.State
 {
     #region IStoreSupplier
