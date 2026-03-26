@@ -18,6 +18,8 @@
   href: connectSDK.md
 - name: KNet Streams SDK
   href: streamsSDK.md
+- name: RocksDb configuration
+  href: rocksdb_configuration.md
 - name: KNet usage
   href: usage.md
 - name: KNet CLI usage
