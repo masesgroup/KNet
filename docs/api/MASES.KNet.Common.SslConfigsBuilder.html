@@ -1,0 +1,1558 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+      <title>Class SslConfigsBuilder | MASES Group - KNet </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class SslConfigsBuilder | MASES Group - KNet ">
+      <meta name="description" content="This is a descriptive page of KNet, the .NET suite for Apache Kafka">
+      <meta name="description" content="Common builder for">
+      <link rel="icon" href="../images/favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/masesgroup/KNet/new/release/2.9.X/apiSpec/new?filename=MASES_KNet_Common_SslConfigsBuilder.md&amp;value=---%0Auid%3A%20MASES.KNet.Common.SslConfigsBuilder%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/logo.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="MASES.KNet.Common.SslConfigsBuilder">
+
+
+
+  <h1 id="MASES_KNet_Common_SslConfigsBuilder" data-uid="MASES.KNet.Common.SslConfigsBuilder" class="text-break">
+Class SslConfigsBuilder  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Common/SslConfigsBuilder.cs/#L29"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="MASES.html">MASES</a>.<a class="xref" href="MASES.KNet.html">KNet</a>.<a class="xref" href="MASES.KNet.Common.html">Common</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>MASES.KNet.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Common builder for <a class="xref" href="MASES.KNet.Common.SslConfigsBuilder.html">SslConfigsBuilder</a></p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class SslConfigsBuilder : GenericConfigBuilder&lt;SslConfigsBuilder&gt;, INotifyPropertyChanged, IGenericSerDesFactory, IDisposable, IEnumerable&lt;KeyValuePair&lt;string, object&gt;&gt;, IEnumerable</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="MASES.KNet.GenericConfigBuilder-1.html">GenericConfigBuilder</a>&lt;<a class="xref" href="MASES.KNet.Common.SslConfigsBuilder.html">SslConfigsBuilder</a>&gt;</div>
+      <div><span class="xref">SslConfigsBuilder</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.inotifypropertychanged">INotifyPropertyChanged</a></div>
+      <div><a class="xref" href="MASES.KNet.Serialization.IGenericSerDesFactory.html">IGenericSerDesFactory</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.keyvaluepair-2">KeyValuePair</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;&gt;</div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.ienumerable">IEnumerable</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="MASES.KNet.GenericConfigBuilder-1.html#MASES_KNet_GenericConfigBuilder_1_Create">GenericConfigBuilder&lt;SslConfigsBuilder&gt;.Create()</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.GenericConfigBuilder-1.html#MASES_KNet_GenericConfigBuilder_1_CreateFrom__0_">GenericConfigBuilder&lt;SslConfigsBuilder&gt;.CreateFrom(SslConfigsBuilder)</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.GenericConfigBuilder-1.html#MASES_KNet_GenericConfigBuilder_1_PropertyChanged">GenericConfigBuilder&lt;SslConfigsBuilder&gt;.PropertyChanged</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.GenericConfigBuilder-1.html#MASES_KNet_GenericConfigBuilder_1_ExistProperty_System_String_">GenericConfigBuilder&lt;SslConfigsBuilder&gt;.ExistProperty(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.GenericConfigBuilder-1.html#MASES_KNet_GenericConfigBuilder_1_GetProperty__1_System_String_">GenericConfigBuilder&lt;SslConfigsBuilder&gt;.GetProperty&lt;TData&gt;(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.GenericConfigBuilder-1.html#MASES_KNet_GenericConfigBuilder_1_SetProperty_System_String_System_Object_">GenericConfigBuilder&lt;SslConfigsBuilder&gt;.SetProperty(string, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.GenericConfigBuilder-1.html#MASES_KNet_GenericConfigBuilder_1_Clone">GenericConfigBuilder&lt;SslConfigsBuilder&gt;.Clone()</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.GenericConfigBuilder-1.html#MASES_KNet_GenericConfigBuilder_1_ToProperties">GenericConfigBuilder&lt;SslConfigsBuilder&gt;.ToProperties()</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.GenericConfigBuilder-1.html#MASES_KNet_GenericConfigBuilder_1_ToMap">GenericConfigBuilder&lt;SslConfigsBuilder&gt;.ToMap()</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.GenericConfigBuilder-1.html#MASES_KNet_GenericConfigBuilder_1_AutoSelectBuffered">GenericConfigBuilder&lt;SslConfigsBuilder&gt;.AutoSelectBuffered</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.GenericConfigBuilder-1.html#MASES_KNet_GenericConfigBuilder_1_KeySerDesSelector">GenericConfigBuilder&lt;SslConfigsBuilder&gt;.KeySerDesSelector</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.GenericConfigBuilder-1.html#MASES_KNet_GenericConfigBuilder_1_ValueSerDesSelector">GenericConfigBuilder&lt;SslConfigsBuilder&gt;.ValueSerDesSelector</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.GenericConfigBuilder-1.html#MASES_KNet_GenericConfigBuilder_1_BuildKeySerDes__2">GenericConfigBuilder&lt;SslConfigsBuilder&gt;.BuildKeySerDes&lt;TKey, TJVMTKey&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.GenericConfigBuilder-1.html#MASES_KNet_GenericConfigBuilder_1_BuildValueSerDes__2">GenericConfigBuilder&lt;SslConfigsBuilder&gt;.BuildValueSerDes&lt;TValue, TJVMTValue&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.GenericConfigBuilder-1.html#MASES_KNet_GenericConfigBuilder_1_Clear">GenericConfigBuilder&lt;SslConfigsBuilder&gt;.Clear()</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.GenericConfigBuilder-1.html#MASES_KNet_GenericConfigBuilder_1_Dispose">GenericConfigBuilder&lt;SslConfigsBuilder&gt;.Dispose()</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.GenericConfigBuilder-1.html#MASES_KNet_GenericConfigBuilder_1_GetEnumerator">GenericConfigBuilder&lt;SslConfigsBuilder&gt;.GetEnumerator()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="MASES_KNet_Common_SslConfigsBuilder_SslCipherSuites_" data-uid="MASES.KNet.Common.SslConfigsBuilder.SslCipherSuites*"></a>
+
+  <h3 id="MASES_KNet_Common_SslConfigsBuilder_SslCipherSuites" data-uid="MASES.KNet.Common.SslConfigsBuilder.SslCipherSuites">
+  SslCipherSuites
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Common/SslConfigsBuilder.cs/#L60"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Common.Config.SslConfigs.html#Org_Apache_Kafka_Common_Config_SslConfigs_SSL_CIPHER_SUITES_CONFIG">SSL_CIPHER_SUITES_CONFIG</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string SslCipherSuites { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Common_SslConfigsBuilder_SslEnabledProtocols_" data-uid="MASES.KNet.Common.SslConfigsBuilder.SslEnabledProtocols*"></a>
+
+  <h3 id="MASES_KNet_Common_SslConfigsBuilder_SslEnabledProtocols" data-uid="MASES.KNet.Common.SslConfigsBuilder.SslEnabledProtocols">
+  SslEnabledProtocols
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Common/SslConfigsBuilder.cs/#L73"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Common.Config.SslConfigs.html#Org_Apache_Kafka_Common_Config_SslConfigs_SSL_ENABLED_PROTOCOLS_CONFIG">SSL_ENABLED_PROTOCOLS_CONFIG</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string SslEnabledProtocols { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Common_SslConfigsBuilder_SslEndpointIdentificationAlgorithm_" data-uid="MASES.KNet.Common.SslConfigsBuilder.SslEndpointIdentificationAlgorithm*"></a>
+
+  <h3 id="MASES_KNet_Common_SslConfigsBuilder_SslEndpointIdentificationAlgorithm" data-uid="MASES.KNet.Common.SslConfigsBuilder.SslEndpointIdentificationAlgorithm">
+  SslEndpointIdentificationAlgorithm
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Common/SslConfigsBuilder.cs/#L242"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Common.Config.SslConfigs.html#Org_Apache_Kafka_Common_Config_SslConfigs_SSL_ENDPOINT_IDENTIFICATION_ALGORITHM_CONFIG">SSL_ENDPOINT_IDENTIFICATION_ALGORITHM_CONFIG</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string SslEndpointIdentificationAlgorithm { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Common_SslConfigsBuilder_SslEngineFactoryClass_" data-uid="MASES.KNet.Common.SslConfigsBuilder.SslEngineFactoryClass*"></a>
+
+  <h3 id="MASES_KNet_Common_SslConfigsBuilder_SslEngineFactoryClass" data-uid="MASES.KNet.Common.SslConfigsBuilder.SslEngineFactoryClass">
+  SslEngineFactoryClass
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Common/SslConfigsBuilder.cs/#L268"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Common.Config.SslConfigs.html#Org_Apache_Kafka_Common_Config_SslConfigs_SSL_ENGINE_FACTORY_CLASS_CONFIG">SSL_ENGINE_FACTORY_CLASS_CONFIG</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Class SslEngineFactoryClass { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.Class.html">Class</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Common_SslConfigsBuilder_SslKeyManagerAlgorithm_" data-uid="MASES.KNet.Common.SslConfigsBuilder.SslKeyManagerAlgorithm*"></a>
+
+  <h3 id="MASES_KNet_Common_SslConfigsBuilder_SslKeyManagerAlgorithm" data-uid="MASES.KNet.Common.SslConfigsBuilder.SslKeyManagerAlgorithm">
+  SslKeyManagerAlgorithm
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Common/SslConfigsBuilder.cs/#L216"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Common.Config.SslConfigs.html#Org_Apache_Kafka_Common_Config_SslConfigs_SSL_KEYMANAGER_ALGORITHM_CONFIG">SSL_KEYMANAGER_ALGORITHM_CONFIG</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string SslKeyManagerAlgorithm { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Common_SslConfigsBuilder_SslKeyPassword_" data-uid="MASES.KNet.Common.SslConfigsBuilder.SslKeyPassword*"></a>
+
+  <h3 id="MASES_KNet_Common_SslConfigsBuilder_SslKeyPassword" data-uid="MASES.KNet.Common.SslConfigsBuilder.SslKeyPassword">
+  SslKeyPassword
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Common/SslConfigsBuilder.cs/#L125"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Common.Config.SslConfigs.html#Org_Apache_Kafka_Common_Config_SslConfigs_SSL_KEY_PASSWORD_CONFIG">SSL_KEY_PASSWORD_CONFIG</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Password SslKeyPassword { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Apache.Kafka.Common.Config.Types.Password.html">Password</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Common_SslConfigsBuilder_SslKeystoreCertificateChain_" data-uid="MASES.KNet.Common.SslConfigsBuilder.SslKeystoreCertificateChain*"></a>
+
+  <h3 id="MASES_KNet_Common_SslConfigsBuilder_SslKeystoreCertificateChain" data-uid="MASES.KNet.Common.SslConfigsBuilder.SslKeystoreCertificateChain">
+  SslKeystoreCertificateChain
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Common/SslConfigsBuilder.cs/#L151"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Common.Config.SslConfigs.html#Org_Apache_Kafka_Common_Config_SslConfigs_SSL_KEYSTORE_CERTIFICATE_CHAIN_CONFIG">SSL_KEYSTORE_CERTIFICATE_CHAIN_CONFIG</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Password SslKeystoreCertificateChain { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Apache.Kafka.Common.Config.Types.Password.html">Password</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Common_SslConfigsBuilder_SslKeystoreKey_" data-uid="MASES.KNet.Common.SslConfigsBuilder.SslKeystoreKey*"></a>
+
+  <h3 id="MASES_KNet_Common_SslConfigsBuilder_SslKeystoreKey" data-uid="MASES.KNet.Common.SslConfigsBuilder.SslKeystoreKey">
+  SslKeystoreKey
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Common/SslConfigsBuilder.cs/#L138"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Common.Config.SslConfigs.html#Org_Apache_Kafka_Common_Config_SslConfigs_SSL_KEYSTORE_KEY_CONFIG">SSL_KEYSTORE_KEY_CONFIG</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Password SslKeystoreKey { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Apache.Kafka.Common.Config.Types.Password.html">Password</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Common_SslConfigsBuilder_SslKeystoreLocation_" data-uid="MASES.KNet.Common.SslConfigsBuilder.SslKeystoreLocation*"></a>
+
+  <h3 id="MASES_KNet_Common_SslConfigsBuilder_SslKeystoreLocation" data-uid="MASES.KNet.Common.SslConfigsBuilder.SslKeystoreLocation">
+  SslKeystoreLocation
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Common/SslConfigsBuilder.cs/#L99"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Common.Config.SslConfigs.html#Org_Apache_Kafka_Common_Config_SslConfigs_SSL_KEYSTORE_LOCATION_CONFIG">SSL_KEYSTORE_LOCATION_CONFIG</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string SslKeystoreLocation { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Common_SslConfigsBuilder_SslKeystorePassword_" data-uid="MASES.KNet.Common.SslConfigsBuilder.SslKeystorePassword*"></a>
+
+  <h3 id="MASES_KNet_Common_SslConfigsBuilder_SslKeystorePassword" data-uid="MASES.KNet.Common.SslConfigsBuilder.SslKeystorePassword">
+  SslKeystorePassword
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Common/SslConfigsBuilder.cs/#L112"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Common.Config.SslConfigs.html#Org_Apache_Kafka_Common_Config_SslConfigs_SSL_KEYSTORE_PASSWORD_CONFIG">SSL_KEYSTORE_PASSWORD_CONFIG</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Password SslKeystorePassword { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Apache.Kafka.Common.Config.Types.Password.html">Password</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Common_SslConfigsBuilder_SslKeystoreType_" data-uid="MASES.KNet.Common.SslConfigsBuilder.SslKeystoreType*"></a>
+
+  <h3 id="MASES_KNet_Common_SslConfigsBuilder_SslKeystoreType" data-uid="MASES.KNet.Common.SslConfigsBuilder.SslKeystoreType">
+  SslKeystoreType
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Common/SslConfigsBuilder.cs/#L86"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Common.Config.SslConfigs.html#Org_Apache_Kafka_Common_Config_SslConfigs_SSL_KEYSTORE_TYPE_CONFIG">SSL_KEYSTORE_TYPE_CONFIG</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string SslKeystoreType { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Common_SslConfigsBuilder_SslProtocol_" data-uid="MASES.KNet.Common.SslConfigsBuilder.SslProtocol*"></a>
+
+  <h3 id="MASES_KNet_Common_SslConfigsBuilder_SslProtocol" data-uid="MASES.KNet.Common.SslConfigsBuilder.SslProtocol">
+  SslProtocol
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Common/SslConfigsBuilder.cs/#L34"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Common.Config.SslConfigs.html#Org_Apache_Kafka_Common_Config_SslConfigs_SSL_PROTOCOL_CONFIG">SSL_PROTOCOL_CONFIG</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string SslProtocol { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Common_SslConfigsBuilder_SslProvider_" data-uid="MASES.KNet.Common.SslConfigsBuilder.SslProvider*"></a>
+
+  <h3 id="MASES_KNet_Common_SslConfigsBuilder_SslProvider" data-uid="MASES.KNet.Common.SslConfigsBuilder.SslProvider">
+  SslProvider
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Common/SslConfigsBuilder.cs/#L47"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Common.Config.SslConfigs.html#Org_Apache_Kafka_Common_Config_SslConfigs_SSL_PROVIDER_CONFIG">SSL_PROVIDER_CONFIG</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string SslProvider { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Common_SslConfigsBuilder_SslSecureRandomImplementation_" data-uid="MASES.KNet.Common.SslConfigsBuilder.SslSecureRandomImplementation*"></a>
+
+  <h3 id="MASES_KNet_Common_SslConfigsBuilder_SslSecureRandomImplementation" data-uid="MASES.KNet.Common.SslConfigsBuilder.SslSecureRandomImplementation">
+  SslSecureRandomImplementation
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Common/SslConfigsBuilder.cs/#L255"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Common.Config.SslConfigs.html#Org_Apache_Kafka_Common_Config_SslConfigs_SSL_SECURE_RANDOM_IMPLEMENTATION_CONFIG">SSL_SECURE_RANDOM_IMPLEMENTATION_CONFIG</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string SslSecureRandomImplementation { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Common_SslConfigsBuilder_SslTrustManagerAlgorithm_" data-uid="MASES.KNet.Common.SslConfigsBuilder.SslTrustManagerAlgorithm*"></a>
+
+  <h3 id="MASES_KNet_Common_SslConfigsBuilder_SslTrustManagerAlgorithm" data-uid="MASES.KNet.Common.SslConfigsBuilder.SslTrustManagerAlgorithm">
+  SslTrustManagerAlgorithm
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Common/SslConfigsBuilder.cs/#L229"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Common.Config.SslConfigs.html#Org_Apache_Kafka_Common_Config_SslConfigs_SSL_TRUSTMANAGER_ALGORITHM_CONFIG">SSL_TRUSTMANAGER_ALGORITHM_CONFIG</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string SslTrustManagerAlgorithm { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Common_SslConfigsBuilder_SslTruststoreCertificates_" data-uid="MASES.KNet.Common.SslConfigsBuilder.SslTruststoreCertificates*"></a>
+
+  <h3 id="MASES_KNet_Common_SslConfigsBuilder_SslTruststoreCertificates" data-uid="MASES.KNet.Common.SslConfigsBuilder.SslTruststoreCertificates">
+  SslTruststoreCertificates
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Common/SslConfigsBuilder.cs/#L164"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Common.Config.SslConfigs.html#Org_Apache_Kafka_Common_Config_SslConfigs_SSL_TRUSTSTORE_CERTIFICATES_CONFIG">SSL_TRUSTSTORE_CERTIFICATES_CONFIG</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Password SslTruststoreCertificates { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Apache.Kafka.Common.Config.Types.Password.html">Password</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Common_SslConfigsBuilder_SslTruststoreLocation_" data-uid="MASES.KNet.Common.SslConfigsBuilder.SslTruststoreLocation*"></a>
+
+  <h3 id="MASES_KNet_Common_SslConfigsBuilder_SslTruststoreLocation" data-uid="MASES.KNet.Common.SslConfigsBuilder.SslTruststoreLocation">
+  SslTruststoreLocation
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Common/SslConfigsBuilder.cs/#L190"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Common.Config.SslConfigs.html#Org_Apache_Kafka_Common_Config_SslConfigs_SSL_TRUSTSTORE_LOCATION_CONFIG">SSL_TRUSTSTORE_LOCATION_CONFIG</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string SslTruststoreLocation { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Common_SslConfigsBuilder_SslTruststorePassword_" data-uid="MASES.KNet.Common.SslConfigsBuilder.SslTruststorePassword*"></a>
+
+  <h3 id="MASES_KNet_Common_SslConfigsBuilder_SslTruststorePassword" data-uid="MASES.KNet.Common.SslConfigsBuilder.SslTruststorePassword">
+  SslTruststorePassword
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Common/SslConfigsBuilder.cs/#L203"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Common.Config.SslConfigs.html#Org_Apache_Kafka_Common_Config_SslConfigs_SSL_TRUSTSTORE_PASSWORD_CONFIG">SSL_TRUSTSTORE_PASSWORD_CONFIG</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Password SslTruststorePassword { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Apache.Kafka.Common.Config.Types.Password.html">Password</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Common_SslConfigsBuilder_SslTruststoreType_" data-uid="MASES.KNet.Common.SslConfigsBuilder.SslTruststoreType*"></a>
+
+  <h3 id="MASES_KNet_Common_SslConfigsBuilder_SslTruststoreType" data-uid="MASES.KNet.Common.SslConfigsBuilder.SslTruststoreType">
+  SslTruststoreType
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Common/SslConfigsBuilder.cs/#L177"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Common.Config.SslConfigs.html#Org_Apache_Kafka_Common_Config_SslConfigs_SSL_TRUSTSTORE_TYPE_CONFIG">SSL_TRUSTSTORE_TYPE_CONFIG</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string SslTruststoreType { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="MASES_KNet_Common_SslConfigsBuilder_WithSslCipherSuites_" data-uid="MASES.KNet.Common.SslConfigsBuilder.WithSslCipherSuites*"></a>
+
+  <h3 id="MASES_KNet_Common_SslConfigsBuilder_WithSslCipherSuites_System_String_" data-uid="MASES.KNet.Common.SslConfigsBuilder.WithSslCipherSuites(System.String)">
+  WithSslCipherSuites(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Common/SslConfigsBuilder.cs/#L64"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Common.Config.SslConfigs.html#Org_Apache_Kafka_Common_Config_SslConfigs_SSL_CIPHER_SUITES_CONFIG">SSL_CIPHER_SUITES_CONFIG</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SslConfigsBuilder WithSslCipherSuites(string sslCipherSuites)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>sslCipherSuites</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MASES.KNet.Common.SslConfigsBuilder.html">SslConfigsBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Common_SslConfigsBuilder_WithSslEnabledProtocols_" data-uid="MASES.KNet.Common.SslConfigsBuilder.WithSslEnabledProtocols*"></a>
+
+  <h3 id="MASES_KNet_Common_SslConfigsBuilder_WithSslEnabledProtocols_System_String_" data-uid="MASES.KNet.Common.SslConfigsBuilder.WithSslEnabledProtocols(System.String)">
+  WithSslEnabledProtocols(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Common/SslConfigsBuilder.cs/#L77"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Common.Config.SslConfigs.html#Org_Apache_Kafka_Common_Config_SslConfigs_SSL_ENABLED_PROTOCOLS_CONFIG">SSL_ENABLED_PROTOCOLS_CONFIG</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SslConfigsBuilder WithSslEnabledProtocols(string sslEnabledProtocols)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>sslEnabledProtocols</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MASES.KNet.Common.SslConfigsBuilder.html">SslConfigsBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Common_SslConfigsBuilder_WithSslEndpointIdentificationAlgorithm_" data-uid="MASES.KNet.Common.SslConfigsBuilder.WithSslEndpointIdentificationAlgorithm*"></a>
+
+  <h3 id="MASES_KNet_Common_SslConfigsBuilder_WithSslEndpointIdentificationAlgorithm_System_String_" data-uid="MASES.KNet.Common.SslConfigsBuilder.WithSslEndpointIdentificationAlgorithm(System.String)">
+  WithSslEndpointIdentificationAlgorithm(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Common/SslConfigsBuilder.cs/#L246"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Common.Config.SslConfigs.html#Org_Apache_Kafka_Common_Config_SslConfigs_SSL_ENDPOINT_IDENTIFICATION_ALGORITHM_CONFIG">SSL_ENDPOINT_IDENTIFICATION_ALGORITHM_CONFIG</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SslConfigsBuilder WithSslEndpointIdentificationAlgorithm(string sslEndpointIdentificationAlgorithm)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>sslEndpointIdentificationAlgorithm</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MASES.KNet.Common.SslConfigsBuilder.html">SslConfigsBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Common_SslConfigsBuilder_WithSslEngineFactoryClass_" data-uid="MASES.KNet.Common.SslConfigsBuilder.WithSslEngineFactoryClass*"></a>
+
+  <h3 id="MASES_KNet_Common_SslConfigsBuilder_WithSslEngineFactoryClass_Java_Lang_Class_" data-uid="MASES.KNet.Common.SslConfigsBuilder.WithSslEngineFactoryClass(Java.Lang.Class)">
+  WithSslEngineFactoryClass(Class)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Common/SslConfigsBuilder.cs/#L272"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Common.Config.SslConfigs.html#Org_Apache_Kafka_Common_Config_SslConfigs_SSL_ENGINE_FACTORY_CLASS_CONFIG">SSL_ENGINE_FACTORY_CLASS_CONFIG</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SslConfigsBuilder WithSslEngineFactoryClass(Class sslEngineFactoryClass)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>sslEngineFactoryClass</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.Class.html">Class</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MASES.KNet.Common.SslConfigsBuilder.html">SslConfigsBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Common_SslConfigsBuilder_WithSslKeyLocation_" data-uid="MASES.KNet.Common.SslConfigsBuilder.WithSslKeyLocation*"></a>
+
+  <h3 id="MASES_KNet_Common_SslConfigsBuilder_WithSslKeyLocation_Org_Apache_Kafka_Common_Config_Types_Password_" data-uid="MASES.KNet.Common.SslConfigsBuilder.WithSslKeyLocation(Org.Apache.Kafka.Common.Config.Types.Password)">
+  WithSslKeyLocation(Password)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Common/SslConfigsBuilder.cs/#L129"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Common.Config.SslConfigs.html#Org_Apache_Kafka_Common_Config_SslConfigs_SSL_KEY_PASSWORD_CONFIG">SSL_KEY_PASSWORD_CONFIG</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SslConfigsBuilder WithSslKeyLocation(Password sslKeyPassword)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>sslKeyPassword</code> <a class="xref" href="Org.Apache.Kafka.Common.Config.Types.Password.html">Password</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MASES.KNet.Common.SslConfigsBuilder.html">SslConfigsBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Common_SslConfigsBuilder_WithSslKeyManagerAlgorithm_" data-uid="MASES.KNet.Common.SslConfigsBuilder.WithSslKeyManagerAlgorithm*"></a>
+
+  <h3 id="MASES_KNet_Common_SslConfigsBuilder_WithSslKeyManagerAlgorithm_System_String_" data-uid="MASES.KNet.Common.SslConfigsBuilder.WithSslKeyManagerAlgorithm(System.String)">
+  WithSslKeyManagerAlgorithm(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Common/SslConfigsBuilder.cs/#L220"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Common.Config.SslConfigs.html#Org_Apache_Kafka_Common_Config_SslConfigs_SSL_KEYMANAGER_ALGORITHM_CONFIG">SSL_KEYMANAGER_ALGORITHM_CONFIG</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SslConfigsBuilder WithSslKeyManagerAlgorithm(string sslKeyManagerAlgorithm)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>sslKeyManagerAlgorithm</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MASES.KNet.Common.SslConfigsBuilder.html">SslConfigsBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Common_SslConfigsBuilder_WithSslKeystoreCertificateChain_" data-uid="MASES.KNet.Common.SslConfigsBuilder.WithSslKeystoreCertificateChain*"></a>
+
+  <h3 id="MASES_KNet_Common_SslConfigsBuilder_WithSslKeystoreCertificateChain_Org_Apache_Kafka_Common_Config_Types_Password_" data-uid="MASES.KNet.Common.SslConfigsBuilder.WithSslKeystoreCertificateChain(Org.Apache.Kafka.Common.Config.Types.Password)">
+  WithSslKeystoreCertificateChain(Password)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Common/SslConfigsBuilder.cs/#L155"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Common.Config.SslConfigs.html#Org_Apache_Kafka_Common_Config_SslConfigs_SSL_KEYSTORE_CERTIFICATE_CHAIN_CONFIG">SSL_KEYSTORE_CERTIFICATE_CHAIN_CONFIG</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SslConfigsBuilder WithSslKeystoreCertificateChain(Password sslKeystoreCertificateChain)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>sslKeystoreCertificateChain</code> <a class="xref" href="Org.Apache.Kafka.Common.Config.Types.Password.html">Password</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MASES.KNet.Common.SslConfigsBuilder.html">SslConfigsBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Common_SslConfigsBuilder_WithSslKeystoreKeyLocation_" data-uid="MASES.KNet.Common.SslConfigsBuilder.WithSslKeystoreKeyLocation*"></a>
+
+  <h3 id="MASES_KNet_Common_SslConfigsBuilder_WithSslKeystoreKeyLocation_Org_Apache_Kafka_Common_Config_Types_Password_" data-uid="MASES.KNet.Common.SslConfigsBuilder.WithSslKeystoreKeyLocation(Org.Apache.Kafka.Common.Config.Types.Password)">
+  WithSslKeystoreKeyLocation(Password)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Common/SslConfigsBuilder.cs/#L142"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Common.Config.SslConfigs.html#Org_Apache_Kafka_Common_Config_SslConfigs_SSL_KEYSTORE_KEY_CONFIG">SSL_KEYSTORE_KEY_CONFIG</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SslConfigsBuilder WithSslKeystoreKeyLocation(Password sslKeystoreKey)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>sslKeystoreKey</code> <a class="xref" href="Org.Apache.Kafka.Common.Config.Types.Password.html">Password</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MASES.KNet.Common.SslConfigsBuilder.html">SslConfigsBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Common_SslConfigsBuilder_WithSslKeystoreLocation_" data-uid="MASES.KNet.Common.SslConfigsBuilder.WithSslKeystoreLocation*"></a>
+
+  <h3 id="MASES_KNet_Common_SslConfigsBuilder_WithSslKeystoreLocation_Org_Apache_Kafka_Common_Config_Types_Password_" data-uid="MASES.KNet.Common.SslConfigsBuilder.WithSslKeystoreLocation(Org.Apache.Kafka.Common.Config.Types.Password)">
+  WithSslKeystoreLocation(Password)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Common/SslConfigsBuilder.cs/#L116"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Common.Config.SslConfigs.html#Org_Apache_Kafka_Common_Config_SslConfigs_SSL_KEYSTORE_PASSWORD_CONFIG">SSL_KEYSTORE_PASSWORD_CONFIG</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SslConfigsBuilder WithSslKeystoreLocation(Password sslKeystorePassword)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>sslKeystorePassword</code> <a class="xref" href="Org.Apache.Kafka.Common.Config.Types.Password.html">Password</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MASES.KNet.Common.SslConfigsBuilder.html">SslConfigsBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Common_SslConfigsBuilder_WithSslKeystoreLocation_" data-uid="MASES.KNet.Common.SslConfigsBuilder.WithSslKeystoreLocation*"></a>
+
+  <h3 id="MASES_KNet_Common_SslConfigsBuilder_WithSslKeystoreLocation_System_String_" data-uid="MASES.KNet.Common.SslConfigsBuilder.WithSslKeystoreLocation(System.String)">
+  WithSslKeystoreLocation(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Common/SslConfigsBuilder.cs/#L103"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Common.Config.SslConfigs.html#Org_Apache_Kafka_Common_Config_SslConfigs_SSL_KEYSTORE_LOCATION_CONFIG">SSL_KEYSTORE_LOCATION_CONFIG</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SslConfigsBuilder WithSslKeystoreLocation(string sslKeystoreLocation)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>sslKeystoreLocation</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MASES.KNet.Common.SslConfigsBuilder.html">SslConfigsBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Common_SslConfigsBuilder_WithSslKeystoreType_" data-uid="MASES.KNet.Common.SslConfigsBuilder.WithSslKeystoreType*"></a>
+
+  <h3 id="MASES_KNet_Common_SslConfigsBuilder_WithSslKeystoreType_System_String_" data-uid="MASES.KNet.Common.SslConfigsBuilder.WithSslKeystoreType(System.String)">
+  WithSslKeystoreType(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Common/SslConfigsBuilder.cs/#L90"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Common.Config.SslConfigs.html#Org_Apache_Kafka_Common_Config_SslConfigs_SSL_KEYSTORE_TYPE_CONFIG">SSL_KEYSTORE_TYPE_CONFIG</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SslConfigsBuilder WithSslKeystoreType(string sslKeystoreType)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>sslKeystoreType</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MASES.KNet.Common.SslConfigsBuilder.html">SslConfigsBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Common_SslConfigsBuilder_WithSslProtocol_" data-uid="MASES.KNet.Common.SslConfigsBuilder.WithSslProtocol*"></a>
+
+  <h3 id="MASES_KNet_Common_SslConfigsBuilder_WithSslProtocol_System_String_" data-uid="MASES.KNet.Common.SslConfigsBuilder.WithSslProtocol(System.String)">
+  WithSslProtocol(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Common/SslConfigsBuilder.cs/#L38"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Common.Config.SslConfigs.html#Org_Apache_Kafka_Common_Config_SslConfigs_SSL_PROTOCOL_CONFIG">SSL_PROTOCOL_CONFIG</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SslConfigsBuilder WithSslProtocol(string sslProtocol)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>sslProtocol</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MASES.KNet.Common.SslConfigsBuilder.html">SslConfigsBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Common_SslConfigsBuilder_WithSslProvider_" data-uid="MASES.KNet.Common.SslConfigsBuilder.WithSslProvider*"></a>
+
+  <h3 id="MASES_KNet_Common_SslConfigsBuilder_WithSslProvider_System_String_" data-uid="MASES.KNet.Common.SslConfigsBuilder.WithSslProvider(System.String)">
+  WithSslProvider(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Common/SslConfigsBuilder.cs/#L51"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Common.Config.SslConfigs.html#Org_Apache_Kafka_Common_Config_SslConfigs_SSL_PROVIDER_CONFIG">SSL_PROVIDER_CONFIG</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SslConfigsBuilder WithSslProvider(string sslProvider)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>sslProvider</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MASES.KNet.Common.SslConfigsBuilder.html">SslConfigsBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Common_SslConfigsBuilder_WithSslSecureRandomImplementation_" data-uid="MASES.KNet.Common.SslConfigsBuilder.WithSslSecureRandomImplementation*"></a>
+
+  <h3 id="MASES_KNet_Common_SslConfigsBuilder_WithSslSecureRandomImplementation_System_String_" data-uid="MASES.KNet.Common.SslConfigsBuilder.WithSslSecureRandomImplementation(System.String)">
+  WithSslSecureRandomImplementation(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Common/SslConfigsBuilder.cs/#L259"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Common.Config.SslConfigs.html#Org_Apache_Kafka_Common_Config_SslConfigs_SSL_SECURE_RANDOM_IMPLEMENTATION_CONFIG">SSL_SECURE_RANDOM_IMPLEMENTATION_CONFIG</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SslConfigsBuilder WithSslSecureRandomImplementation(string sslSecureRandomImplementation)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>sslSecureRandomImplementation</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MASES.KNet.Common.SslConfigsBuilder.html">SslConfigsBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Common_SslConfigsBuilder_WithSslTrustManagerAlgorithm_" data-uid="MASES.KNet.Common.SslConfigsBuilder.WithSslTrustManagerAlgorithm*"></a>
+
+  <h3 id="MASES_KNet_Common_SslConfigsBuilder_WithSslTrustManagerAlgorithm_System_String_" data-uid="MASES.KNet.Common.SslConfigsBuilder.WithSslTrustManagerAlgorithm(System.String)">
+  WithSslTrustManagerAlgorithm(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Common/SslConfigsBuilder.cs/#L233"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Common.Config.SslConfigs.html#Org_Apache_Kafka_Common_Config_SslConfigs_SSL_TRUSTMANAGER_ALGORITHM_CONFIG">SSL_TRUSTMANAGER_ALGORITHM_CONFIG</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SslConfigsBuilder WithSslTrustManagerAlgorithm(string sslTrustManagerAlgorithm)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>sslTrustManagerAlgorithm</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MASES.KNet.Common.SslConfigsBuilder.html">SslConfigsBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Common_SslConfigsBuilder_WithSslTruststoreCertificates_" data-uid="MASES.KNet.Common.SslConfigsBuilder.WithSslTruststoreCertificates*"></a>
+
+  <h3 id="MASES_KNet_Common_SslConfigsBuilder_WithSslTruststoreCertificates_Org_Apache_Kafka_Common_Config_Types_Password_" data-uid="MASES.KNet.Common.SslConfigsBuilder.WithSslTruststoreCertificates(Org.Apache.Kafka.Common.Config.Types.Password)">
+  WithSslTruststoreCertificates(Password)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Common/SslConfigsBuilder.cs/#L168"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Common.Config.SslConfigs.html#Org_Apache_Kafka_Common_Config_SslConfigs_SSL_TRUSTSTORE_CERTIFICATES_CONFIG">SSL_TRUSTSTORE_CERTIFICATES_CONFIG</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SslConfigsBuilder WithSslTruststoreCertificates(Password sslTruststoreCertificates)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>sslTruststoreCertificates</code> <a class="xref" href="Org.Apache.Kafka.Common.Config.Types.Password.html">Password</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MASES.KNet.Common.SslConfigsBuilder.html">SslConfigsBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Common_SslConfigsBuilder_WithSslTruststoreLocation_" data-uid="MASES.KNet.Common.SslConfigsBuilder.WithSslTruststoreLocation*"></a>
+
+  <h3 id="MASES_KNet_Common_SslConfigsBuilder_WithSslTruststoreLocation_System_String_" data-uid="MASES.KNet.Common.SslConfigsBuilder.WithSslTruststoreLocation(System.String)">
+  WithSslTruststoreLocation(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Common/SslConfigsBuilder.cs/#L194"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Common.Config.SslConfigs.html#Org_Apache_Kafka_Common_Config_SslConfigs_SSL_TRUSTSTORE_LOCATION_CONFIG">SSL_TRUSTSTORE_LOCATION_CONFIG</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SslConfigsBuilder WithSslTruststoreLocation(string sslTruststoreLocation)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>sslTruststoreLocation</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MASES.KNet.Common.SslConfigsBuilder.html">SslConfigsBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Common_SslConfigsBuilder_WithSslTruststorePassword_" data-uid="MASES.KNet.Common.SslConfigsBuilder.WithSslTruststorePassword*"></a>
+
+  <h3 id="MASES_KNet_Common_SslConfigsBuilder_WithSslTruststorePassword_Org_Apache_Kafka_Common_Config_Types_Password_" data-uid="MASES.KNet.Common.SslConfigsBuilder.WithSslTruststorePassword(Org.Apache.Kafka.Common.Config.Types.Password)">
+  WithSslTruststorePassword(Password)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Common/SslConfigsBuilder.cs/#L207"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Common.Config.SslConfigs.html#Org_Apache_Kafka_Common_Config_SslConfigs_SSL_TRUSTSTORE_PASSWORD_CONFIG">SSL_TRUSTSTORE_PASSWORD_CONFIG</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SslConfigsBuilder WithSslTruststorePassword(Password sslTruststorePassword)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>sslTruststorePassword</code> <a class="xref" href="Org.Apache.Kafka.Common.Config.Types.Password.html">Password</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MASES.KNet.Common.SslConfigsBuilder.html">SslConfigsBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Common_SslConfigsBuilder_WithSslTruststoreType_" data-uid="MASES.KNet.Common.SslConfigsBuilder.WithSslTruststoreType*"></a>
+
+  <h3 id="MASES_KNet_Common_SslConfigsBuilder_WithSslTruststoreType_System_String_" data-uid="MASES.KNet.Common.SslConfigsBuilder.WithSslTruststoreType(System.String)">
+  WithSslTruststoreType(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Common/SslConfigsBuilder.cs/#L181"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Common.Config.SslConfigs.html#Org_Apache_Kafka_Common_Config_SslConfigs_SSL_TRUSTSTORE_TYPE_CONFIG">SSL_TRUSTSTORE_TYPE_CONFIG</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SslConfigsBuilder WithSslTruststoreType(string sslTruststoreType)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>sslTruststoreType</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MASES.KNet.Common.SslConfigsBuilder.html">SslConfigsBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Common/SslConfigsBuilder.cs/#L29" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <script type="text/javascript">document.write('<div style="text-align: center;">Copyright © 2021 - ' + new Date().getFullYear() + ' MASES s.r.l. | Via San Cesidio 16 - San Valentino in A.C. - PE | P.I. 01932310681</div>');</script>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -102,7 +102,7 @@ Class ConsumerConfigBuilder  <a class="header-action link-secondary" title="View
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class ConsumerConfigBuilder : CommonClientConfigsBuilder&lt;ConsumerConfigBuilder&gt;, INotifyPropertyChanged, IGenericSerDesFactory, IDisposable</code></pre>
+    <pre><code class="lang-csharp hljs">public class ConsumerConfigBuilder : CommonClientConfigsBuilder&lt;ConsumerConfigBuilder&gt;, INotifyPropertyChanged, IGenericSerDesFactory, IDisposable, IEnumerable&lt;KeyValuePair&lt;string, object&gt;&gt;, IEnumerable</code></pre>
   </div>
 
 
@@ -124,6 +124,8 @@ Class ConsumerConfigBuilder  <a class="header-action link-secondary" title="View
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.inotifypropertychanged">INotifyPropertyChanged</a></div>
       <div><a class="xref" href="MASES.KNet.Serialization.IGenericSerDesFactory.html">IGenericSerDesFactory</a></div>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.keyvaluepair-2">KeyValuePair</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;&gt;</div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.ienumerable">IEnumerable</a></div>
     </dd>
   </dl>
 
@@ -131,6 +133,18 @@ Class ConsumerConfigBuilder  <a class="header-action link-secondary" title="View
   <dl class="typelist inheritedMembers">
     <dt>Inherited Members</dt>
     <dd>
+    <div>
+      <a class="xref" href="MASES.KNet.CommonClientConfigsBuilder-1.html#MASES_KNet_CommonClientConfigsBuilder_1_WithSslConfigs_MASES_KNet_Common_SslConfigsBuilder_">CommonClientConfigsBuilder&lt;ConsumerConfigBuilder&gt;.WithSslConfigs(SslConfigsBuilder)</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.CommonClientConfigsBuilder-1.html#MASES_KNet_CommonClientConfigsBuilder_1_WithSaslConfigs_MASES_KNet_Common_SaslConfigsBuilder_">CommonClientConfigsBuilder&lt;ConsumerConfigBuilder&gt;.WithSaslConfigs(SaslConfigsBuilder)</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.CommonClientConfigsBuilder-1.html#MASES_KNet_CommonClientConfigsBuilder_1_ConfigProviders">CommonClientConfigsBuilder&lt;ConsumerConfigBuilder&gt;.ConfigProviders</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.CommonClientConfigsBuilder-1.html#MASES_KNet_CommonClientConfigsBuilder_1_WithConfigProviders_System_String_">CommonClientConfigsBuilder&lt;ConsumerConfigBuilder&gt;.WithConfigProviders(string)</a>
+    </div>
     <div>
       <a class="xref" href="MASES.KNet.CommonClientConfigsBuilder-1.html#MASES_KNet_CommonClientConfigsBuilder_1_BootstrapServers">CommonClientConfigsBuilder&lt;ConsumerConfigBuilder&gt;.BootstrapServers</a>
     </div>
@@ -327,7 +341,13 @@ Class ConsumerConfigBuilder  <a class="header-action link-secondary" title="View
       <a class="xref" href="MASES.KNet.CommonClientConfigsBuilder-1.html#MASES_KNet_CommonClientConfigsBuilder_1_DefaultApiTimeoutMs">CommonClientConfigsBuilder&lt;ConsumerConfigBuilder&gt;.DefaultApiTimeoutMs</a>
     </div>
     <div>
-      <a class="xref" href="MASES.KNet.CommonClientConfigsBuilder-1.html#MASES_KNet_CommonClientConfigsBuilder_1_WithDefaultApiTimeoutMs_System_Int64_">CommonClientConfigsBuilder&lt;ConsumerConfigBuilder&gt;.WithDefaultApiTimeoutMs(long)</a>
+      <a class="xref" href="MASES.KNet.CommonClientConfigsBuilder-1.html#MASES_KNet_CommonClientConfigsBuilder_1_WithDefaultApiTimeoutMs_System_Int32_">CommonClientConfigsBuilder&lt;ConsumerConfigBuilder&gt;.WithDefaultApiTimeoutMs(int)</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.CommonClientConfigsBuilder-1.html#MASES_KNet_CommonClientConfigsBuilder_1_MetadataRecoveryStrategy">CommonClientConfigsBuilder&lt;ConsumerConfigBuilder&gt;.MetadataRecoveryStrategy</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.CommonClientConfigsBuilder-1.html#MASES_KNet_CommonClientConfigsBuilder_1_WithMetadataRecoveryStrategy_System_String_">CommonClientConfigsBuilder&lt;ConsumerConfigBuilder&gt;.WithMetadataRecoveryStrategy(string)</a>
     </div>
     <div>
       <a class="xref" href="MASES.KNet.GenericConfigBuilder-1.html#MASES_KNet_GenericConfigBuilder_1_Create">GenericConfigBuilder&lt;ConsumerConfigBuilder&gt;.Create()</a>
@@ -376,6 +396,9 @@ Class ConsumerConfigBuilder  <a class="header-action link-secondary" title="View
     </div>
     <div>
       <a class="xref" href="MASES.KNet.GenericConfigBuilder-1.html#MASES_KNet_GenericConfigBuilder_1_Dispose">GenericConfigBuilder&lt;ConsumerConfigBuilder&gt;.Dispose()</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.GenericConfigBuilder-1.html#MASES_KNet_GenericConfigBuilder_1_GetEnumerator">GenericConfigBuilder&lt;ConsumerConfigBuilder&gt;.GetEnumerator()</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>

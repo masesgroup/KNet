@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+      <title>Streams SDK of .NET suite for Apache Kafka™ | MASES Group - KNet </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Streams SDK of .NET suite for Apache Kafka™ | MASES Group - KNet ">
+      <meta name="description" content="Describes how to setup RocksDb in Streams SDK of .NET suite for Apache Kafka™">
+      
+      <link rel="icon" href="../images/favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/documentation/articles/rocksdb_configuration.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/logo.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="knet-rocksdb-configuration">KNet: RocksDB configuration</h1>
+
+<p>Apache Kafka™ Streams uses <a href="https://rocksdb.org/">RocksDB</a> as its default storage engine for persistent state stores. KNet Streams SDK exposes the ability to configure RocksDB from .NET via <code>KNetRocksDBConfigSetter.SetRocksDBConfigSetterCallback</code>;
+the default implementation defined from <code>KNetRocksDBConfigSetter.SetRocksDBConfigSetterCallbackDefault</code> enables the usage of per-store handlers based on <code>IRocksDbLifecycleHandler</code></p>
+<h2 id="how-it-works">How it works</h2>
+<p>The callback mechanism is built on two methods of <code>KNetRocksDBConfigSetter</code>:</p>
+<ul>
+<li><strong><code>SetRocksDBConfigSetterCallback(onSetConfig, onClose)</code></strong> — registers a process-wide callback pair. The callback is unique per process: calling this method a second time without a prior <code>ResetRocksDBConfigSetterCallback</code> throws an <code>InvalidOperationException</code>.</li>
+<li><strong><code>SetRocksDBConfigSetterCallbackDefault()</code></strong> — registers a process-wide callback pair managed from <code>KNetRocksDBConfigSetter</code> enabling <code>KNetRocksDBConfigSetter.Register</code> and <code>KNetRocksDBConfigSetter.Unregister</code>.</li>
+<li><strong><code>ResetRocksDBConfigSetterCallback()</code></strong> — deregisters the callbacks and disposes the internal state.</li>
+<li><strong><code>RocksDBConfigSetterCallbackSet</code></strong> — returns <code>true</code> if a callback is currently registered.</li>
+</ul>
+<p>When a Kafka Streams instance initializes a RocksDB state store it invokes <code>onSetConfig</code>; when the store is closed it invokes <code>onClose</code>.
+Inside this callback you can adjust the RocksDB <code>Options</code> instance and place any required .NET objects into a per-store dictionary.<br>
+Objects stored in this dictionary remain alive until the close callback is invoked, which receives the same dictionary so that resources can be cleaned up.</p>
+<div class="WARNING">
+<h5>Warning</h5>
+<p>Any RocksDB object created in <code>onSetConfig</code> that is <strong>not</strong> stored in the <code>IDictionary&lt;string, object&gt;</code> parameter may be collected by the .NET GC while RocksDB is still referencing it, causing unpredictable crashes. Always store all native-referenced objects in the provided dictionary.</p>
+</div>
+<div class="IMPORTANT">
+<h5>Important</h5>
+<p><code>SetRocksDBConfigSetterCallback</code> registers a single callback shared across all state stores in all <code>Streams</code> instances in the process. If multiple topologies with different RocksDB configurations are needed in the same process, use the <code>store</code> name parameter to dispatch the configuration logic within a single <code>onSetConfig</code> implementation.
+Previous limitation is superseded from <code>KNetRocksDBConfigSetter.Register</code> and <code>KNetRocksDBConfigSetter.Unregister</code>.</p>
+</div>
+<h3 id="global-configuration-example">Global configuration example</h3>
+<pre><code class="lang-csharp">KNetRocksDBConfigSetter.SetRocksDBConfigSetterCallback(
+    (store, options, config, data) =&gt;
+    {
+        var cache = new LRUCache(16 * 1024 * 1024);
+        data[&quot;cache&quot;] = cache;
+
+        var table = options.TableFormatConfig().Cast&lt;BlockBasedTableConfig&gt;();
+        table.SetBlockCache(cache);
+        options.SetTableFormatConfig(table);
+    },
+    (store, options, data) =&gt;
+    {
+        if (data.TryGetValue(&quot;cache&quot;, out var x) &amp;&amp; x is Cache cache)
+            cache.Close();
+    });
+</code></pre>
+<h3 id="per-store-customization">Per-store customization</h3>
+<p>For scenarios where specific state stores require different RocksDB settings, you can associate a lifecycle handler to a given storage ID:</p>
+<pre><code class="lang-csharp">KNetRocksDBConfigSetter.Register(&quot;myStore&quot;, new MyRocksDbHandler());
+</code></pre>
+<p>The handler receives configuration and close notifications only for the associated store and uses the same per-store dictionary to retain any managed objects required by RocksDB.</p>
+<p>To remove a handler:</p>
+<pre><code class="lang-csharp">KNetRocksDBConfigSetter.Unregister(&quot;myStore&quot;);
+</code></pre>
+<p>This unified mechanism replaces the implementation seen in <a href="#global-configuration-example">Global configuration example</a> and is the default way to customize RocksDB behavior in KNet Streams SDK: <code>KNetRocksDBConfigSetter.SetRocksDBConfigSetterCallbackDefault</code> is invoked in the static constructor of <code>KNetRocksDBConfigSetter</code> to ensure the infrastructure is ready.</p>
+<h2 id="object-lifetime-and-the-data-dictionary">Object lifetime and the data dictionary</h2>
+<p>RocksDB objects created during configuration (e.g. <code>LRUCache</code>, <code>BlockBasedTableConfig</code>) must remain alive for the entire lifetime of the state store — they are referenced natively by RocksDB. If the .NET GC collects them, RocksDB will crash in a non-deterministic way.</p>
+<p>To manage this, the framework provides each <code>onSetConfig</code> invocation with a dedicated <code>IDictionary&lt;string, object&gt;</code> parameter. Objects stored in this dictionary are held alive by the framework until the corresponding <code>onClose</code> is invoked, at which point the same dictionary is passed back to <code>onClose</code> so the user can dispose resources explicitly.</p>
+<p>The dictionary is keyed internally by the JVM reference pointer of the <code>KNetRocksDBConfigSetter</code> instance — not by store name — so each state store instance gets its own independent dictionary. The store name can however be used as a key <em>within</em> the user dictionary if <code>setConfig</code> is called only once per instance before <code>close</code>.</p>
+<h2 id="activation">Activation</h2>
+<p>The callbacks are invoked only when <code>KNetRocksDBConfigSetter</code> is registered as the RocksDB config setter class:</p>
+<ul>
+<li>using <code>StreamsConfigBuilder</code>:</li>
+</ul>
+<pre><code class="lang-csharp">StreamsConfigBuilder builder = StreamsConfigBuilder.Create();
+builder.RocksDbConfigSetterClass = KNetRocksDBConfigSetter.KNetRocksDBConfigSetterClass;
+</code></pre>
+<ul>
+<li>using <code>Properties</code>:</li>
+</ul>
+<pre><code class="lang-csharp">var properties = new Java.Util.Properties();
+properties.Put(StreamsConfig.ROCKSDB_CONFIG_SETTER_CLASS_CONFIG, KNetRocksDBConfigSetter.KNetRocksDBConfigSetterClass);
+</code></pre>
+<h2 id="examples">Examples</h2>
+<p>The following example corresponds to the <a href="https://docs.confluent.io/platform/current/streams/developer-guide/config-streams.html#rocksdb-config-setter">Confluent RocksDB config setter guide</a>:</p>
+<h3 id="process-wide-example">Process wide example</h3>
+<pre><code class="lang-csharp">void OnSetConfig(string store, Org.Rocksdb.Options options, IKNetConfigurationFromMap configs, IDictionary&lt;string, object&gt; data)
+{
+    // Create a cache and store a reference in data to keep it alive
+    Org.Rocksdb.Cache cache = new Org.Rocksdb.LRUCache(16 * 1024L * 1024L);
+    data.Add(&quot;cache&quot;, cache);
+
+    // See #1 in https://docs.confluent.io/platform/current/streams/developer-guide/config-streams.html#rocksdb-config-setter.
+    // Options.TableFormatConfig() returns the abstract base type TableFormatConfig.
+    // Since no implicit/explicit cast operator is generated by JNetReflector for this hierarchy,
+    // use the JCOBridge Cast&lt;T&gt;() method to obtain the concrete BlockBasedTableConfig instance.
+    BlockBasedTableConfig tableConfig = options.TableFormatConfig().Cast&lt;BlockBasedTableConfig&gt;();
+    tableConfig.SetBlockCache(cache);
+    // See #2 in https://docs.confluent.io/platform/current/streams/developer-guide/config-streams.html#rocksdb-config-setter.
+    tableConfig.SetBlockSize(16 * 1024L);
+    // See #3 in https://docs.confluent.io/platform/current/streams/developer-guide/config-streams.html#rocksdb-config-setter.
+    tableConfig.SetCacheIndexAndFilterBlocks(true);
+    options.SetTableFormatConfig(tableConfig);
+    // See #4 in https://docs.confluent.io/platform/current/streams/developer-guide/config-streams.html#rocksdb-config-setter.
+    options.SetMaxWriteBufferNumber(2);
+}
+
+void OnClose(string store, Org.Rocksdb.Options options, IDictionary&lt;string, object&gt; data)
+{
+    // Retrieve and dispose the cache that was stored during OnSetConfig
+    if (data.TryGetValue(&quot;cache&quot;, out var obj) &amp;&amp; obj is Org.Rocksdb.Cache cache)
+    {
+        cache.Close();
+    }
+}
+
+// Register callbacks — process-wide, call only once
+KNetRocksDBConfigSetter.SetRocksDBConfigSetterCallback(OnSetConfig, OnClose);
+
+StreamsConfigBuilder builder = StreamsConfigBuilder.Create();
+builder.RocksDbConfigSetterClass = KNetRocksDBConfigSetter.KNetRocksDBConfigSetterClass;
+// ... rest of topology setup ...
+Streams streams = new Streams(topology, builder);
+streams.Start();
+
+// When done, deregister
+KNetRocksDBConfigSetter.ResetRocksDBConfigSetterCallback();
+</code></pre>
+<h4 id="per-store-example">Per-store example</h4>
+<pre><code class="lang-csharp">var handler = new RocksDbLifecycleDelegateHandler((options, configs, data) =&gt;
+{
+    // Create a cache and store a reference in data to keep it alive
+    Org.Rocksdb.Cache cache = new Org.Rocksdb.LRUCache(16 * 1024L * 1024L);
+    data.Add(&quot;cache&quot;, cache);
+
+    // See #1 in https://docs.confluent.io/platform/current/streams/developer-guide/config-streams.html#rocksdb-config-setter.
+    // Options.TableFormatConfig() returns the abstract base type TableFormatConfig.
+    // Since no implicit/explicit cast operator is generated by JNetReflector for this hierarchy,
+    // use the JCOBridge Cast&lt;T&gt;() method to obtain the concrete BlockBasedTableConfig instance.
+    BlockBasedTableConfig tableConfig = options.TableFormatConfig().Cast&lt;BlockBasedTableConfig&gt;();
+    tableConfig.SetBlockCache(cache);
+    // See #2 in https://docs.confluent.io/platform/current/streams/developer-guide/config-streams.html#rocksdb-config-setter.
+    tableConfig.SetBlockSize(16 * 1024L);
+    // See #3 in https://docs.confluent.io/platform/current/streams/developer-guide/config-streams.html#rocksdb-config-setter.
+    tableConfig.SetCacheIndexAndFilterBlocks(true);
+    options.SetTableFormatConfig(tableConfig);
+    // See #4 in https://docs.confluent.io/platform/current/streams/developer-guide/config-streams.html#rocksdb-config-setter.
+    options.SetMaxWriteBufferNumber(2);
+},
+(options, data) =&gt;
+{
+    // Retrieve and dispose the cache that was stored during OnSetConfig
+    if (data.TryGetValue(&quot;cache&quot;, out var obj) &amp;&amp; obj is Org.Rocksdb.Cache cache)
+    {
+        cache.Close();
+    }
+});
+
+// Register callbacks — per-store, call only once
+KNetRocksDBConfigSetter.Register(&quot;myStore&quot;, handler);
+
+StreamsConfigBuilder builder = StreamsConfigBuilder.Create();
+builder.RocksDbConfigSetterClass = KNetRocksDBConfigSetter.KNetRocksDBConfigSetterClass;
+// ... rest of topology setup ...
+Streams streams = new Streams(topology, builder);
+streams.Start();
+
+// When done, deregister
+KNetRocksDBConfigSetter.Unregister(&quot;myStore&quot;);
+</code></pre>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/documentation/articles/rocksdb_configuration.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <script type="text/javascript">document.write('<div style="text-align: center;">Copyright © 2021 - ' + new Date().getFullYear() + ' MASES s.r.l. | Via San Cesidio 16 - San Valentino in A.C. - PE | P.I. 01932310681</div>');</script>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

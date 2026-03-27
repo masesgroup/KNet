@@ -321,6 +321,9 @@ Class KNetConnectSourceTask  <a class="header-action link-secondary" title="View
       <a class="xref" href="MASES.KNet.Connect.KNetTask.html#MASES_KNet_Connect_KNetTask_Start_Java_Util_Map_Java_Lang_String_Java_Lang_String__">KNetTask.Start(Map&lt;String, String&gt;)</a>
     </div>
     <div>
+      <a class="xref" href="MASES.KNet.Connect.KNetCommon.html#MASES_KNet_Connect_KNetCommon_LogCheckInterval">KNetCommon.LogCheckInterval</a>
+    </div>
+    <div>
       <a class="xref" href="MASES.KNet.Connect.KNetCommon.html#MASES_KNet_Connect_KNetCommon_UniqueId">KNetCommon.UniqueId</a>
     </div>
     <div>
@@ -471,8 +474,8 @@ Class KNetConnectSourceTask  <a class="header-action link-secondary" title="View
 
   <a id="MASES_KNet_Template_KNetConnect_KNetConnectSourceTask_Start_" data-uid="MASES.KNet.Template.KNetConnect.KNetConnectSourceTask.Start*"></a>
 
-  <h3 id="MASES_KNet_Template_KNetConnect_KNetConnectSourceTask_Start_MASES_KNet_Connect_IKNetConnectConfiguration_" data-uid="MASES.KNet.Template.KNetConnect.KNetConnectSourceTask.Start(MASES.KNet.Connect.IKNetConnectConfiguration)">
-  Start(IKNetConnectConfiguration)
+  <h3 id="MASES_KNet_Template_KNetConnect_KNetConnectSourceTask_Start_MASES_KNet_IKNetConfigurationFromMap_" data-uid="MASES.KNet.Template.KNetConnect.KNetConnectSourceTask.Start(MASES.KNet.IKNetConfigurationFromMap)">
+  Start(IKNetConfigurationFromMap)
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/templates/templates/knetConnectSource/KNetConnectSource.cs/#L95"><i class="bi bi-code-slash"></i></a>
   </h3>
 
@@ -481,13 +484,13 @@ Class KNetConnectSourceTask  <a class="header-action link-secondary" title="View
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override void Start(IKNetConnectConfiguration props)</code></pre>
+    <pre><code class="lang-csharp hljs">public override void Start(IKNetConfigurationFromMap props)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>props</code> <a class="xref" href="MASES.KNet.Connect.IKNetConnectConfiguration.html">IKNetConnectConfiguration</a></dt>
-    <dd><p>The <a class="xref" href="MASES.KNet.Connect.IKNetConnectConfiguration.html">IKNetConnectConfiguration</a> to access the properties returned from Apache Kafka Connect framework: the <a class="xref" href="MASES.KNet.Connect.IKNetCommon.html#MASES_KNet_Connect_IKNetCommon_Properties">Properties</a> contains the info from <a class="xref" href="MASES.KNet.Connect.KNetConnector.html#MASES_KNet_Connect_KNetConnector_TaskConfigs_System_Int32_System_Int32_MASES_KNet_Connect_IKNetTaskConfiguration_">TaskConfigs(int, int, IKNetTaskConfiguration)</a>.</p>
+    <dt><code>props</code> <a class="xref" href="MASES.KNet.IKNetConfigurationFromMap.html">IKNetConfigurationFromMap</a></dt>
+    <dd><p>The <a class="xref" href="MASES.KNet.IKNetConfigurationFromMap.html">IKNetConfigurationFromMap</a> to access the properties returned from Apache Kafka Connect framework: the <a class="xref" href="MASES.KNet.Connect.IKNetCommon.html#MASES_KNet_Connect_IKNetCommon_Properties">Properties</a> contains the info from <a class="xref" href="MASES.KNet.Connect.KNetConnector.html#MASES_KNet_Connect_KNetConnector_TaskConfigs_System_Int32_System_Int32_MASES_KNet_Connect_IKNetTaskConfiguration_">TaskConfigs(int, int, IKNetTaskConfiguration)</a>.</p>
 </dd>
   </dl>
 
