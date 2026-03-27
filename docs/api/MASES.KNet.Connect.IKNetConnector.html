@@ -89,7 +89,7 @@
 
 
   <h1 id="MASES_KNet_Connect_IKNetConnector" data-uid="MASES.KNet.Connect.IKNetConnector" class="text-break">
-Interface IKNetConnector  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Connect/KNetConnector.cs/#L76"><i class="bi bi-code-slash"></i></a>
+Interface IKNetConnector  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Connect/KNetConnector.cs/#L73"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -231,7 +231,7 @@ Interface IKNetConnector  <a class="header-action link-secondary" title="View so
 
   <h3 id="MASES_KNet_Connect_IKNetConnector_ConnectorName" data-uid="MASES.KNet.Connect.IKNetConnector.ConnectorName">
   ConnectorName
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Connect/KNetConnector.cs/#L87"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Connect/KNetConnector.cs/#L84"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>The unique name of the connector</p>
@@ -263,7 +263,7 @@ Interface IKNetConnector  <a class="header-action link-secondary" title="View so
 
   <h3 id="MASES_KNet_Connect_IKNetConnector_TaskClassType" data-uid="MASES.KNet.Connect.IKNetConnector.TaskClassType">
   TaskClassType
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Connect/KNetConnector.cs/#L91"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Connect/KNetConnector.cs/#L88"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a> of task to be allocated, it shall inherits from <a class="xref" href="MASES.KNet.Connect.KNetTask.html">KNetTask</a></p>
@@ -299,7 +299,7 @@ Interface IKNetConnector  <a class="header-action link-secondary" title="View so
 
   <h3 id="MASES_KNet_Connect_IKNetConnector_AllocateTask_System_Int64_" data-uid="MASES.KNet.Connect.IKNetConnector.AllocateTask(System.Int64)">
   AllocateTask(long)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Connect/KNetConnector.cs/#L83"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Connect/KNetConnector.cs/#L80"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Allocates a task object based on <a class="xref" href="MASES.KNet.Connect.KNetTask.html">KNetTask</a></p>
@@ -336,9 +336,9 @@ Interface IKNetConnector  <a class="header-action link-secondary" title="View so
 
   <a id="MASES_KNet_Connect_IKNetConnector_Start_" data-uid="MASES.KNet.Connect.IKNetConnector.Start*"></a>
 
-  <h3 id="MASES_KNet_Connect_IKNetConnector_Start_MASES_KNet_Connect_IKNetConnectConfiguration_" data-uid="MASES.KNet.Connect.IKNetConnector.Start(MASES.KNet.Connect.IKNetConnectConfiguration)">
-  Start(IKNetConnectConfiguration)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Connect/KNetConnector.cs/#L96"><i class="bi bi-code-slash"></i></a>
+  <h3 id="MASES_KNet_Connect_IKNetConnector_Start_MASES_KNet_IKNetConfigurationFromMap_" data-uid="MASES.KNet.Connect.IKNetConnector.Start(MASES.KNet.IKNetConfigurationFromMap)">
+  Start(IKNetConfigurationFromMap)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Connect/KNetConnector.cs/#L93"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Implement the method to execute the start action</p>
@@ -346,13 +346,13 @@ Interface IKNetConnector  <a class="header-action link-secondary" title="View so
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">void Start(IKNetConnectConfiguration configuration)</code></pre>
+    <pre><code class="lang-csharp hljs">void Start(IKNetConfigurationFromMap configuration)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>configuration</code> <a class="xref" href="MASES.KNet.Connect.IKNetConnectConfiguration.html">IKNetConnectConfiguration</a></dt>
-    <dd><p>The <a class="xref" href="MASES.KNet.Connect.IKNetConnectConfiguration.html">IKNetConnectConfiguration</a> to access the properties returned from Apache Kafka Connect framework: the <a class="xref" href="MASES.KNet.Connect.IKNetCommon.html#MASES_KNet_Connect_IKNetCommon_Properties">Properties</a> contains the same info from configuration file.</p>
+    <dt><code>configuration</code> <a class="xref" href="MASES.KNet.IKNetConfigurationFromMap.html">IKNetConfigurationFromMap</a></dt>
+    <dd><p>The <a class="xref" href="MASES.KNet.IKNetConfigurationFromMap.html">IKNetConfigurationFromMap</a> to access the properties returned from Apache Kafka Connect framework: the <a class="xref" href="MASES.KNet.Connect.IKNetCommon.html#MASES_KNet_Connect_IKNetCommon_Properties">Properties</a> contains the same info from configuration file.</p>
 </dd>
   </dl>
 
@@ -371,7 +371,7 @@ Interface IKNetConnector  <a class="header-action link-secondary" title="View so
 
   <h3 id="MASES_KNet_Connect_IKNetConnector_TaskConfigs_System_Int32_System_Int32_MASES_KNet_Connect_IKNetTaskConfiguration_" data-uid="MASES.KNet.Connect.IKNetConnector.TaskConfigs(System.Int32,System.Int32,MASES.KNet.Connect.IKNetTaskConfiguration)">
   TaskConfigs(int, int, IKNetTaskConfiguration)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Connect/KNetConnector.cs/#L107"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Connect/KNetConnector.cs/#L104"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Invoked during allocation of tasks from Apache Kafka Connect</p>
@@ -391,7 +391,7 @@ Interface IKNetConnector  <a class="header-action link-secondary" title="View so
     <dd><p>Max tasks as defined from Apache Kafka Connect framework</p>
 </dd>
     <dt><code>config</code> <a class="xref" href="MASES.KNet.Connect.IKNetTaskConfiguration.html">IKNetTaskConfiguration</a></dt>
-    <dd><p>The <a class="xref" href="MASES.KNet.Connect.IKNetTaskConfiguration.html">IKNetTaskConfiguration</a> to be filled in with properties for the task: the same will be received from <a class="xref" href="MASES.KNet.Connect.KNetTask.html#MASES_KNet_Connect_KNetTask_Start_MASES_KNet_Connect_IKNetConnectConfiguration_">Start(IKNetConnectConfiguration)</a></p>
+    <dd><p>The <a class="xref" href="MASES.KNet.Connect.IKNetTaskConfiguration.html">IKNetTaskConfiguration</a> to be filled in with properties for the task: the same will be received from <a class="xref" href="MASES.KNet.Connect.KNetTask.html#MASES_KNet_Connect_KNetTask_Start_MASES_KNet_IKNetConfigurationFromMap_">Start(IKNetConfigurationFromMap)</a></p>
 </dd>
   </dl>
 
@@ -421,7 +421,7 @@ To configure all <code class="paramref">maxTasks</code> return always <a href="h
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Connect/KNetConnector.cs/#L76" class="edit-link">Edit this page</a>
+          <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Connect/KNetConnector.cs/#L73" class="edit-link">Edit this page</a>
         </div>
 
 

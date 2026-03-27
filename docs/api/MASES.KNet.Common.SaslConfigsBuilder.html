@@ -1,0 +1,3352 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+      <title>Class SaslConfigsBuilder | MASES Group - KNet </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class SaslConfigsBuilder | MASES Group - KNet ">
+      <meta name="description" content="This is a descriptive page of KNet, the .NET suite for Apache Kafka">
+      <meta name="description" content="Common builder for">
+      <link rel="icon" href="../images/favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Common_SaslConfigsBuilder.md&amp;value=---%0Auid%3A%20MASES.KNet.Common.SaslConfigsBuilder%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/logo.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="MASES.KNet.Common.SaslConfigsBuilder">
+
+
+
+  <h1 id="MASES_KNet_Common_SaslConfigsBuilder" data-uid="MASES.KNet.Common.SaslConfigsBuilder" class="text-break">
+Class SaslConfigsBuilder  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Common/SaslConfigsBuilder.cs/#L30"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="MASES.html">MASES</a>.<a class="xref" href="MASES.KNet.html">KNet</a>.<a class="xref" href="MASES.KNet.Common.html">Common</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>MASES.KNet.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Common builder for <a class="xref" href="MASES.KNet.Common.SaslConfigsBuilder.html">SaslConfigsBuilder</a></p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class SaslConfigsBuilder : GenericConfigBuilder&lt;SaslConfigsBuilder&gt;, INotifyPropertyChanged, IGenericSerDesFactory, IDisposable, IEnumerable&lt;KeyValuePair&lt;string, object&gt;&gt;, IEnumerable</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="MASES.KNet.GenericConfigBuilder-1.html">GenericConfigBuilder</a>&lt;<a class="xref" href="MASES.KNet.Common.SaslConfigsBuilder.html">SaslConfigsBuilder</a>&gt;</div>
+      <div><span class="xref">SaslConfigsBuilder</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.inotifypropertychanged">INotifyPropertyChanged</a></div>
+      <div><a class="xref" href="MASES.KNet.Serialization.IGenericSerDesFactory.html">IGenericSerDesFactory</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.keyvaluepair-2">KeyValuePair</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;&gt;</div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.ienumerable">IEnumerable</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="MASES.KNet.GenericConfigBuilder-1.html#MASES_KNet_GenericConfigBuilder_1_Create">GenericConfigBuilder&lt;SaslConfigsBuilder&gt;.Create()</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.GenericConfigBuilder-1.html#MASES_KNet_GenericConfigBuilder_1_CreateFrom__0_">GenericConfigBuilder&lt;SaslConfigsBuilder&gt;.CreateFrom(SaslConfigsBuilder)</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.GenericConfigBuilder-1.html#MASES_KNet_GenericConfigBuilder_1_PropertyChanged">GenericConfigBuilder&lt;SaslConfigsBuilder&gt;.PropertyChanged</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.GenericConfigBuilder-1.html#MASES_KNet_GenericConfigBuilder_1_ExistProperty_System_String_">GenericConfigBuilder&lt;SaslConfigsBuilder&gt;.ExistProperty(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.GenericConfigBuilder-1.html#MASES_KNet_GenericConfigBuilder_1_GetProperty__1_System_String_">GenericConfigBuilder&lt;SaslConfigsBuilder&gt;.GetProperty&lt;TData&gt;(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.GenericConfigBuilder-1.html#MASES_KNet_GenericConfigBuilder_1_SetProperty_System_String_System_Object_">GenericConfigBuilder&lt;SaslConfigsBuilder&gt;.SetProperty(string, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.GenericConfigBuilder-1.html#MASES_KNet_GenericConfigBuilder_1_Clone">GenericConfigBuilder&lt;SaslConfigsBuilder&gt;.Clone()</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.GenericConfigBuilder-1.html#MASES_KNet_GenericConfigBuilder_1_ToProperties">GenericConfigBuilder&lt;SaslConfigsBuilder&gt;.ToProperties()</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.GenericConfigBuilder-1.html#MASES_KNet_GenericConfigBuilder_1_ToMap">GenericConfigBuilder&lt;SaslConfigsBuilder&gt;.ToMap()</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.GenericConfigBuilder-1.html#MASES_KNet_GenericConfigBuilder_1_AutoSelectBuffered">GenericConfigBuilder&lt;SaslConfigsBuilder&gt;.AutoSelectBuffered</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.GenericConfigBuilder-1.html#MASES_KNet_GenericConfigBuilder_1_KeySerDesSelector">GenericConfigBuilder&lt;SaslConfigsBuilder&gt;.KeySerDesSelector</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.GenericConfigBuilder-1.html#MASES_KNet_GenericConfigBuilder_1_ValueSerDesSelector">GenericConfigBuilder&lt;SaslConfigsBuilder&gt;.ValueSerDesSelector</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.GenericConfigBuilder-1.html#MASES_KNet_GenericConfigBuilder_1_BuildKeySerDes__2">GenericConfigBuilder&lt;SaslConfigsBuilder&gt;.BuildKeySerDes&lt;TKey, TJVMTKey&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.GenericConfigBuilder-1.html#MASES_KNet_GenericConfigBuilder_1_BuildValueSerDes__2">GenericConfigBuilder&lt;SaslConfigsBuilder&gt;.BuildValueSerDes&lt;TValue, TJVMTValue&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.GenericConfigBuilder-1.html#MASES_KNet_GenericConfigBuilder_1_Clear">GenericConfigBuilder&lt;SaslConfigsBuilder&gt;.Clear()</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.GenericConfigBuilder-1.html#MASES_KNet_GenericConfigBuilder_1_Dispose">GenericConfigBuilder&lt;SaslConfigsBuilder&gt;.Dispose()</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.GenericConfigBuilder-1.html#MASES_KNet_GenericConfigBuilder_1_GetEnumerator">GenericConfigBuilder&lt;SaslConfigsBuilder&gt;.GetEnumerator()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="MASES_KNet_Common_SaslConfigsBuilder_SaslClientCallbackHandlerClass_" data-uid="MASES.KNet.Common.SaslConfigsBuilder.SaslClientCallbackHandlerClass*"></a>
+
+  <h3 id="MASES_KNet_Common_SaslConfigsBuilder_SaslClientCallbackHandlerClass" data-uid="MASES.KNet.Common.SaslConfigsBuilder.SaslClientCallbackHandlerClass">
+  SaslClientCallbackHandlerClass
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Common/SaslConfigsBuilder.cs/#L178"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Common.Config.SaslConfigs.html#Org_Apache_Kafka_Common_Config_SaslConfigs_SASL_CLIENT_CALLBACK_HANDLER_CLASS">SASL_CLIENT_CALLBACK_HANDLER_CLASS</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Class SaslClientCallbackHandlerClass { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.Class.html">Class</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Common_SaslConfigsBuilder_SaslJaasConfig_" data-uid="MASES.KNet.Common.SaslConfigsBuilder.SaslJaasConfig*"></a>
+
+  <h3 id="MASES_KNet_Common_SaslConfigsBuilder_SaslJaasConfig" data-uid="MASES.KNet.Common.SaslConfigsBuilder.SaslJaasConfig">
+  SaslJaasConfig
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Common/SaslConfigsBuilder.cs/#L165"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Common.Config.SaslConfigs.html#Org_Apache_Kafka_Common_Config_SaslConfigs_SASL_JAAS_CONFIG">SASL_JAAS_CONFIG</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Password SaslJaasConfig { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Apache.Kafka.Common.Config.Types.Password.html">Password</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Common_SaslConfigsBuilder_SaslKerberosKinitCmd_" data-uid="MASES.KNet.Common.SaslConfigsBuilder.SaslKerberosKinitCmd*"></a>
+
+  <h3 id="MASES_KNet_Common_SaslConfigsBuilder_SaslKerberosKinitCmd" data-uid="MASES.KNet.Common.SaslConfigsBuilder.SaslKerberosKinitCmd">
+  SaslKerberosKinitCmd
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Common/SaslConfigsBuilder.cs/#L48"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Common.Config.SaslConfigs.html#Org_Apache_Kafka_Common_Config_SaslConfigs_SASL_KERBEROS_KINIT_CMD">SASL_KERBEROS_KINIT_CMD</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string SaslKerberosKinitCmd { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Common_SaslConfigsBuilder_SaslKerberosMinTimeBeforeRelogin_" data-uid="MASES.KNet.Common.SaslConfigsBuilder.SaslKerberosMinTimeBeforeRelogin*"></a>
+
+  <h3 id="MASES_KNet_Common_SaslConfigsBuilder_SaslKerberosMinTimeBeforeRelogin" data-uid="MASES.KNet.Common.SaslConfigsBuilder.SaslKerberosMinTimeBeforeRelogin">
+  SaslKerberosMinTimeBeforeRelogin
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Common/SaslConfigsBuilder.cs/#L87"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Common.Config.SaslConfigs.html#Org_Apache_Kafka_Common_Config_SaslConfigs_SASL_KERBEROS_MIN_TIME_BEFORE_RELOGIN">SASL_KERBEROS_MIN_TIME_BEFORE_RELOGIN</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public long SaslKerberosMinTimeBeforeRelogin { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Common_SaslConfigsBuilder_SaslKerberosServiceName_" data-uid="MASES.KNet.Common.SaslConfigsBuilder.SaslKerberosServiceName*"></a>
+
+  <h3 id="MASES_KNet_Common_SaslConfigsBuilder_SaslKerberosServiceName" data-uid="MASES.KNet.Common.SaslConfigsBuilder.SaslKerberosServiceName">
+  SaslKerberosServiceName
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Common/SaslConfigsBuilder.cs/#L35"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Common.Config.SaslConfigs.html#Org_Apache_Kafka_Common_Config_SaslConfigs_SASL_KERBEROS_SERVICE_NAME">SASL_KERBEROS_SERVICE_NAME</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string SaslKerberosServiceName { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Common_SaslConfigsBuilder_SaslKerberosTicketRenewJitter_" data-uid="MASES.KNet.Common.SaslConfigsBuilder.SaslKerberosTicketRenewJitter*"></a>
+
+  <h3 id="MASES_KNet_Common_SaslConfigsBuilder_SaslKerberosTicketRenewJitter" data-uid="MASES.KNet.Common.SaslConfigsBuilder.SaslKerberosTicketRenewJitter">
+  SaslKerberosTicketRenewJitter
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Common/SaslConfigsBuilder.cs/#L74"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Common.Config.SaslConfigs.html#Org_Apache_Kafka_Common_Config_SaslConfigs_SASL_KERBEROS_TICKET_RENEW_JITTER">SASL_KERBEROS_TICKET_RENEW_JITTER</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double SaslKerberosTicketRenewJitter { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Common_SaslConfigsBuilder_SaslKerberosTicketRenewWindowFactor_" data-uid="MASES.KNet.Common.SaslConfigsBuilder.SaslKerberosTicketRenewWindowFactor*"></a>
+
+  <h3 id="MASES_KNet_Common_SaslConfigsBuilder_SaslKerberosTicketRenewWindowFactor" data-uid="MASES.KNet.Common.SaslConfigsBuilder.SaslKerberosTicketRenewWindowFactor">
+  SaslKerberosTicketRenewWindowFactor
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Common/SaslConfigsBuilder.cs/#L61"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Common.Config.SaslConfigs.html#Org_Apache_Kafka_Common_Config_SaslConfigs_SASL_KERBEROS_TICKET_RENEW_WINDOW_FACTOR">SASL_KERBEROS_TICKET_RENEW_WINDOW_FACTOR</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double SaslKerberosTicketRenewWindowFactor { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Common_SaslConfigsBuilder_SaslLoginCallbackHandlerClass_" data-uid="MASES.KNet.Common.SaslConfigsBuilder.SaslLoginCallbackHandlerClass*"></a>
+
+  <h3 id="MASES_KNet_Common_SaslConfigsBuilder_SaslLoginCallbackHandlerClass" data-uid="MASES.KNet.Common.SaslConfigsBuilder.SaslLoginCallbackHandlerClass">
+  SaslLoginCallbackHandlerClass
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Common/SaslConfigsBuilder.cs/#L191"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Common.Config.SaslConfigs.html#Org_Apache_Kafka_Common_Config_SaslConfigs_SASL_LOGIN_CALLBACK_HANDLER_CLASS">SASL_LOGIN_CALLBACK_HANDLER_CLASS</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Class SaslLoginCallbackHandlerClass { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.Class.html">Class</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Common_SaslConfigsBuilder_SaslLoginClass_" data-uid="MASES.KNet.Common.SaslConfigsBuilder.SaslLoginClass*"></a>
+
+  <h3 id="MASES_KNet_Common_SaslConfigsBuilder_SaslLoginClass" data-uid="MASES.KNet.Common.SaslConfigsBuilder.SaslLoginClass">
+  SaslLoginClass
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Common/SaslConfigsBuilder.cs/#L204"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Common.Config.SaslConfigs.html#Org_Apache_Kafka_Common_Config_SaslConfigs_SASL_LOGIN_CLASS">SASL_LOGIN_CLASS</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Class SaslLoginClass { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.Class.html">Class</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Common_SaslConfigsBuilder_SaslLoginConnectTimeoutMs_" data-uid="MASES.KNet.Common.SaslConfigsBuilder.SaslLoginConnectTimeoutMs*"></a>
+
+  <h3 id="MASES_KNet_Common_SaslConfigsBuilder_SaslLoginConnectTimeoutMs" data-uid="MASES.KNet.Common.SaslConfigsBuilder.SaslLoginConnectTimeoutMs">
+  SaslLoginConnectTimeoutMs
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Common/SaslConfigsBuilder.cs/#L217"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Common.Config.SaslConfigs.html#Org_Apache_Kafka_Common_Config_SaslConfigs_SASL_LOGIN_CONNECT_TIMEOUT_MS">SASL_LOGIN_CONNECT_TIMEOUT_MS</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int SaslLoginConnectTimeoutMs { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Common_SaslConfigsBuilder_SaslLoginReadTimeoutMs_" data-uid="MASES.KNet.Common.SaslConfigsBuilder.SaslLoginReadTimeoutMs*"></a>
+
+  <h3 id="MASES_KNet_Common_SaslConfigsBuilder_SaslLoginReadTimeoutMs" data-uid="MASES.KNet.Common.SaslConfigsBuilder.SaslLoginReadTimeoutMs">
+  SaslLoginReadTimeoutMs
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Common/SaslConfigsBuilder.cs/#L230"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Common.Config.SaslConfigs.html#Org_Apache_Kafka_Common_Config_SaslConfigs_SASL_LOGIN_READ_TIMEOUT_MS">SASL_LOGIN_READ_TIMEOUT_MS</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int SaslLoginReadTimeoutMs { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Common_SaslConfigsBuilder_SaslLoginRefreshBufferSeconds_" data-uid="MASES.KNet.Common.SaslConfigsBuilder.SaslLoginRefreshBufferSeconds*"></a>
+
+  <h3 id="MASES_KNet_Common_SaslConfigsBuilder_SaslLoginRefreshBufferSeconds" data-uid="MASES.KNet.Common.SaslConfigsBuilder.SaslLoginRefreshBufferSeconds">
+  SaslLoginRefreshBufferSeconds
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Common/SaslConfigsBuilder.cs/#L139"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Common.Config.SaslConfigs.html#Org_Apache_Kafka_Common_Config_SaslConfigs_SASL_LOGIN_REFRESH_BUFFER_SECONDS">SASL_LOGIN_REFRESH_BUFFER_SECONDS</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public short SaslLoginRefreshBufferSeconds { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int16">short</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Common_SaslConfigsBuilder_SaslLoginRefreshMinPeriodSeconds_" data-uid="MASES.KNet.Common.SaslConfigsBuilder.SaslLoginRefreshMinPeriodSeconds*"></a>
+
+  <h3 id="MASES_KNet_Common_SaslConfigsBuilder_SaslLoginRefreshMinPeriodSeconds" data-uid="MASES.KNet.Common.SaslConfigsBuilder.SaslLoginRefreshMinPeriodSeconds">
+  SaslLoginRefreshMinPeriodSeconds
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Common/SaslConfigsBuilder.cs/#L126"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Common.Config.SaslConfigs.html#Org_Apache_Kafka_Common_Config_SaslConfigs_SASL_LOGIN_REFRESH_MIN_PERIOD_SECONDS">SASL_LOGIN_REFRESH_MIN_PERIOD_SECONDS</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public short SaslLoginRefreshMinPeriodSeconds { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int16">short</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Common_SaslConfigsBuilder_SaslLoginRefreshWindowFactor_" data-uid="MASES.KNet.Common.SaslConfigsBuilder.SaslLoginRefreshWindowFactor*"></a>
+
+  <h3 id="MASES_KNet_Common_SaslConfigsBuilder_SaslLoginRefreshWindowFactor" data-uid="MASES.KNet.Common.SaslConfigsBuilder.SaslLoginRefreshWindowFactor">
+  SaslLoginRefreshWindowFactor
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Common/SaslConfigsBuilder.cs/#L100"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Common.Config.SaslConfigs.html#Org_Apache_Kafka_Common_Config_SaslConfigs_SASL_LOGIN_REFRESH_WINDOW_FACTOR">SASL_LOGIN_REFRESH_WINDOW_FACTOR</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double SaslLoginRefreshWindowFactor { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Common_SaslConfigsBuilder_SaslLoginRefreshWindowJitter_" data-uid="MASES.KNet.Common.SaslConfigsBuilder.SaslLoginRefreshWindowJitter*"></a>
+
+  <h3 id="MASES_KNet_Common_SaslConfigsBuilder_SaslLoginRefreshWindowJitter" data-uid="MASES.KNet.Common.SaslConfigsBuilder.SaslLoginRefreshWindowJitter">
+  SaslLoginRefreshWindowJitter
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Common/SaslConfigsBuilder.cs/#L113"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Common.Config.SaslConfigs.html#Org_Apache_Kafka_Common_Config_SaslConfigs_SASL_LOGIN_REFRESH_WINDOW_JITTER">SASL_LOGIN_REFRESH_WINDOW_JITTER</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double SaslLoginRefreshWindowJitter { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Common_SaslConfigsBuilder_SaslLoginRetryBackoffMaxMs_" data-uid="MASES.KNet.Common.SaslConfigsBuilder.SaslLoginRetryBackoffMaxMs*"></a>
+
+  <h3 id="MASES_KNet_Common_SaslConfigsBuilder_SaslLoginRetryBackoffMaxMs" data-uid="MASES.KNet.Common.SaslConfigsBuilder.SaslLoginRetryBackoffMaxMs">
+  SaslLoginRetryBackoffMaxMs
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Common/SaslConfigsBuilder.cs/#L243"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Common.Config.SaslConfigs.html#Org_Apache_Kafka_Common_Config_SaslConfigs_SASL_LOGIN_RETRY_BACKOFF_MAX_MS">SASL_LOGIN_RETRY_BACKOFF_MAX_MS</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public long SaslLoginRetryBackoffMaxMs { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Common_SaslConfigsBuilder_SaslLoginRetryBackoffMs_" data-uid="MASES.KNet.Common.SaslConfigsBuilder.SaslLoginRetryBackoffMs*"></a>
+
+  <h3 id="MASES_KNet_Common_SaslConfigsBuilder_SaslLoginRetryBackoffMs" data-uid="MASES.KNet.Common.SaslConfigsBuilder.SaslLoginRetryBackoffMs">
+  SaslLoginRetryBackoffMs
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Common/SaslConfigsBuilder.cs/#L256"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Common.Config.SaslConfigs.html#Org_Apache_Kafka_Common_Config_SaslConfigs_SASL_LOGIN_RETRY_BACKOFF_MS">SASL_LOGIN_RETRY_BACKOFF_MS</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public long SaslLoginRetryBackoffMs { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Common_SaslConfigsBuilder_SaslMechanism_" data-uid="MASES.KNet.Common.SaslConfigsBuilder.SaslMechanism*"></a>
+
+  <h3 id="MASES_KNet_Common_SaslConfigsBuilder_SaslMechanism" data-uid="MASES.KNet.Common.SaslConfigsBuilder.SaslMechanism">
+  SaslMechanism
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Common/SaslConfigsBuilder.cs/#L152"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Common.Config.SaslConfigs.html#Org_Apache_Kafka_Common_Config_SaslConfigs_SASL_MECHANISM">SASL_MECHANISM</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string SaslMechanism { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Common_SaslConfigsBuilder_SaslOauthBearerAssertionAlgorithm_" data-uid="MASES.KNet.Common.SaslConfigsBuilder.SaslOauthBearerAssertionAlgorithm*"></a>
+
+  <h3 id="MASES_KNet_Common_SaslConfigsBuilder_SaslOauthBearerAssertionAlgorithm" data-uid="MASES.KNet.Common.SaslConfigsBuilder.SaslOauthBearerAssertionAlgorithm">
+  SaslOauthBearerAssertionAlgorithm
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Common/SaslConfigsBuilder.cs/#L334"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Common.Config.SaslConfigs.html#Org_Apache_Kafka_Common_Config_SaslConfigs_SASL_OAUTHBEARER_ASSERTION_ALGORITHM">SASL_OAUTHBEARER_ASSERTION_ALGORITHM</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string SaslOauthBearerAssertionAlgorithm { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Common_SaslConfigsBuilder_SaslOauthBearerAssertionClaimAud_" data-uid="MASES.KNet.Common.SaslConfigsBuilder.SaslOauthBearerAssertionClaimAud*"></a>
+
+  <h3 id="MASES_KNet_Common_SaslConfigsBuilder_SaslOauthBearerAssertionClaimAud" data-uid="MASES.KNet.Common.SaslConfigsBuilder.SaslOauthBearerAssertionClaimAud">
+  SaslOauthBearerAssertionClaimAud
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Common/SaslConfigsBuilder.cs/#L347"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Common.Config.SaslConfigs.html#Org_Apache_Kafka_Common_Config_SaslConfigs_SASL_OAUTHBEARER_ASSERTION_CLAIM_AUD">SASL_OAUTHBEARER_ASSERTION_CLAIM_AUD</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string SaslOauthBearerAssertionClaimAud { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Common_SaslConfigsBuilder_SaslOauthBearerAssertionClaimExpSeconds_" data-uid="MASES.KNet.Common.SaslConfigsBuilder.SaslOauthBearerAssertionClaimExpSeconds*"></a>
+
+  <h3 id="MASES_KNet_Common_SaslConfigsBuilder_SaslOauthBearerAssertionClaimExpSeconds" data-uid="MASES.KNet.Common.SaslConfigsBuilder.SaslOauthBearerAssertionClaimExpSeconds">
+  SaslOauthBearerAssertionClaimExpSeconds
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Common/SaslConfigsBuilder.cs/#L360"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Common.Config.SaslConfigs.html#Org_Apache_Kafka_Common_Config_SaslConfigs_SASL_OAUTHBEARER_ASSERTION_CLAIM_EXP_SECONDS">SASL_OAUTHBEARER_ASSERTION_CLAIM_EXP_SECONDS</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int SaslOauthBearerAssertionClaimExpSeconds { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Common_SaslConfigsBuilder_SaslOauthBearerAssertionClaimIss_" data-uid="MASES.KNet.Common.SaslConfigsBuilder.SaslOauthBearerAssertionClaimIss*"></a>
+
+  <h3 id="MASES_KNet_Common_SaslConfigsBuilder_SaslOauthBearerAssertionClaimIss" data-uid="MASES.KNet.Common.SaslConfigsBuilder.SaslOauthBearerAssertionClaimIss">
+  SaslOauthBearerAssertionClaimIss
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Common/SaslConfigsBuilder.cs/#L373"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Common.Config.SaslConfigs.html#Org_Apache_Kafka_Common_Config_SaslConfigs_SASL_OAUTHBEARER_ASSERTION_CLAIM_ISS">SASL_OAUTHBEARER_ASSERTION_CLAIM_ISS</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string SaslOauthBearerAssertionClaimIss { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Common_SaslConfigsBuilder_SaslOauthBearerAssertionClaimJtiInclude_" data-uid="MASES.KNet.Common.SaslConfigsBuilder.SaslOauthBearerAssertionClaimJtiInclude*"></a>
+
+  <h3 id="MASES_KNet_Common_SaslConfigsBuilder_SaslOauthBearerAssertionClaimJtiInclude" data-uid="MASES.KNet.Common.SaslConfigsBuilder.SaslOauthBearerAssertionClaimJtiInclude">
+  SaslOauthBearerAssertionClaimJtiInclude
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Common/SaslConfigsBuilder.cs/#L386"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Common.Config.SaslConfigs.html#Org_Apache_Kafka_Common_Config_SaslConfigs_SASL_OAUTHBEARER_ASSERTION_CLAIM_JTI_INCLUDE">SASL_OAUTHBEARER_ASSERTION_CLAIM_JTI_INCLUDE</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool SaslOauthBearerAssertionClaimJtiInclude { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Common_SaslConfigsBuilder_SaslOauthBearerAssertionClaimNbfSeconds_" data-uid="MASES.KNet.Common.SaslConfigsBuilder.SaslOauthBearerAssertionClaimNbfSeconds*"></a>
+
+  <h3 id="MASES_KNet_Common_SaslConfigsBuilder_SaslOauthBearerAssertionClaimNbfSeconds" data-uid="MASES.KNet.Common.SaslConfigsBuilder.SaslOauthBearerAssertionClaimNbfSeconds">
+  SaslOauthBearerAssertionClaimNbfSeconds
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Common/SaslConfigsBuilder.cs/#L399"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Common.Config.SaslConfigs.html#Org_Apache_Kafka_Common_Config_SaslConfigs_SASL_OAUTHBEARER_ASSERTION_CLAIM_NBF_SECONDS">SASL_OAUTHBEARER_ASSERTION_CLAIM_NBF_SECONDS</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int SaslOauthBearerAssertionClaimNbfSeconds { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Common_SaslConfigsBuilder_SaslOauthBearerAssertionClaimSub_" data-uid="MASES.KNet.Common.SaslConfigsBuilder.SaslOauthBearerAssertionClaimSub*"></a>
+
+  <h3 id="MASES_KNet_Common_SaslConfigsBuilder_SaslOauthBearerAssertionClaimSub" data-uid="MASES.KNet.Common.SaslConfigsBuilder.SaslOauthBearerAssertionClaimSub">
+  SaslOauthBearerAssertionClaimSub
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Common/SaslConfigsBuilder.cs/#L412"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Common.Config.SaslConfigs.html#Org_Apache_Kafka_Common_Config_SaslConfigs_SASL_OAUTHBEARER_ASSERTION_CLAIM_SUB">SASL_OAUTHBEARER_ASSERTION_CLAIM_SUB</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string SaslOauthBearerAssertionClaimSub { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Common_SaslConfigsBuilder_SaslOauthBearerAssertionFile_" data-uid="MASES.KNet.Common.SaslConfigsBuilder.SaslOauthBearerAssertionFile*"></a>
+
+  <h3 id="MASES_KNet_Common_SaslConfigsBuilder_SaslOauthBearerAssertionFile" data-uid="MASES.KNet.Common.SaslConfigsBuilder.SaslOauthBearerAssertionFile">
+  SaslOauthBearerAssertionFile
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Common/SaslConfigsBuilder.cs/#L425"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Common.Config.SaslConfigs.html#Org_Apache_Kafka_Common_Config_SaslConfigs_SASL_OAUTHBEARER_ASSERTION_FILE">SASL_OAUTHBEARER_ASSERTION_FILE</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string SaslOauthBearerAssertionFile { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Common_SaslConfigsBuilder_SaslOauthBearerAssertionPrivateKeyFile_" data-uid="MASES.KNet.Common.SaslConfigsBuilder.SaslOauthBearerAssertionPrivateKeyFile*"></a>
+
+  <h3 id="MASES_KNet_Common_SaslConfigsBuilder_SaslOauthBearerAssertionPrivateKeyFile" data-uid="MASES.KNet.Common.SaslConfigsBuilder.SaslOauthBearerAssertionPrivateKeyFile">
+  SaslOauthBearerAssertionPrivateKeyFile
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Common/SaslConfigsBuilder.cs/#L438"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Common.Config.SaslConfigs.html#Org_Apache_Kafka_Common_Config_SaslConfigs_SASL_OAUTHBEARER_ASSERTION_PRIVATE_KEY_FILE">SASL_OAUTHBEARER_ASSERTION_PRIVATE_KEY_FILE</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string SaslOauthBearerAssertionPrivateKeyFile { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Common_SaslConfigsBuilder_SaslOauthBearerAssertionPrivateKeyPassphrase_" data-uid="MASES.KNet.Common.SaslConfigsBuilder.SaslOauthBearerAssertionPrivateKeyPassphrase*"></a>
+
+  <h3 id="MASES_KNet_Common_SaslConfigsBuilder_SaslOauthBearerAssertionPrivateKeyPassphrase" data-uid="MASES.KNet.Common.SaslConfigsBuilder.SaslOauthBearerAssertionPrivateKeyPassphrase">
+  SaslOauthBearerAssertionPrivateKeyPassphrase
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Common/SaslConfigsBuilder.cs/#L451"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Common.Config.SaslConfigs.html#Org_Apache_Kafka_Common_Config_SaslConfigs_SASL_OAUTHBEARER_ASSERTION_PRIVATE_KEY_PASSPHRASE">SASL_OAUTHBEARER_ASSERTION_PRIVATE_KEY_PASSPHRASE</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Password SaslOauthBearerAssertionPrivateKeyPassphrase { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Apache.Kafka.Common.Config.Types.Password.html">Password</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Common_SaslConfigsBuilder_SaslOauthBearerAssertionTemplateFile_" data-uid="MASES.KNet.Common.SaslConfigsBuilder.SaslOauthBearerAssertionTemplateFile*"></a>
+
+  <h3 id="MASES_KNet_Common_SaslConfigsBuilder_SaslOauthBearerAssertionTemplateFile" data-uid="MASES.KNet.Common.SaslConfigsBuilder.SaslOauthBearerAssertionTemplateFile">
+  SaslOauthBearerAssertionTemplateFile
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Common/SaslConfigsBuilder.cs/#L464"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Common.Config.SaslConfigs.html#Org_Apache_Kafka_Common_Config_SaslConfigs_SASL_OAUTHBEARER_ASSERTION_TEMPLATE_FILE">SASL_OAUTHBEARER_ASSERTION_TEMPLATE_FILE</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string SaslOauthBearerAssertionTemplateFile { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Common_SaslConfigsBuilder_SaslOauthBearerClientCredentialsClientId_" data-uid="MASES.KNet.Common.SaslConfigsBuilder.SaslOauthBearerClientCredentialsClientId*"></a>
+
+  <h3 id="MASES_KNet_Common_SaslConfigsBuilder_SaslOauthBearerClientCredentialsClientId" data-uid="MASES.KNet.Common.SaslConfigsBuilder.SaslOauthBearerClientCredentialsClientId">
+  SaslOauthBearerClientCredentialsClientId
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Common/SaslConfigsBuilder.cs/#L308"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Common.Config.SaslConfigs.html#Org_Apache_Kafka_Common_Config_SaslConfigs_SASL_OAUTHBEARER_CLIENT_CREDENTIALS_CLIENT_ID">SASL_OAUTHBEARER_CLIENT_CREDENTIALS_CLIENT_ID</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string SaslOauthBearerClientCredentialsClientId { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Common_SaslConfigsBuilder_SaslOauthBearerClientCredentialsClientSecret_" data-uid="MASES.KNet.Common.SaslConfigsBuilder.SaslOauthBearerClientCredentialsClientSecret*"></a>
+
+  <h3 id="MASES_KNet_Common_SaslConfigsBuilder_SaslOauthBearerClientCredentialsClientSecret" data-uid="MASES.KNet.Common.SaslConfigsBuilder.SaslOauthBearerClientCredentialsClientSecret">
+  SaslOauthBearerClientCredentialsClientSecret
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Common/SaslConfigsBuilder.cs/#L321"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Common.Config.SaslConfigs.html#Org_Apache_Kafka_Common_Config_SaslConfigs_SASL_OAUTHBEARER_CLIENT_CREDENTIALS_CLIENT_SECRET">SASL_OAUTHBEARER_CLIENT_CREDENTIALS_CLIENT_SECRET</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Password SaslOauthBearerClientCredentialsClientSecret { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Apache.Kafka.Common.Config.Types.Password.html">Password</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Common_SaslConfigsBuilder_SaslOauthBearerClockSkewSeconds_" data-uid="MASES.KNet.Common.SaslConfigsBuilder.SaslOauthBearerClockSkewSeconds*"></a>
+
+  <h3 id="MASES_KNet_Common_SaslConfigsBuilder_SaslOauthBearerClockSkewSeconds" data-uid="MASES.KNet.Common.SaslConfigsBuilder.SaslOauthBearerClockSkewSeconds">
+  SaslOauthBearerClockSkewSeconds
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Common/SaslConfigsBuilder.cs/#L568"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Common.Config.SaslConfigs.html#Org_Apache_Kafka_Common_Config_SaslConfigs_SASL_OAUTHBEARER_CLOCK_SKEW_SECONDS">SASL_OAUTHBEARER_CLOCK_SKEW_SECONDS</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public long SaslOauthBearerClockSkewSeconds { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Common_SaslConfigsBuilder_SaslOauthBearerExpectedAudience_" data-uid="MASES.KNet.Common.SaslConfigsBuilder.SaslOauthBearerExpectedAudience*"></a>
+
+  <h3 id="MASES_KNet_Common_SaslConfigsBuilder_SaslOauthBearerExpectedAudience" data-uid="MASES.KNet.Common.SaslConfigsBuilder.SaslOauthBearerExpectedAudience">
+  SaslOauthBearerExpectedAudience
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Common/SaslConfigsBuilder.cs/#L581"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Common.Config.SaslConfigs.html#Org_Apache_Kafka_Common_Config_SaslConfigs_SASL_OAUTHBEARER_EXPECTED_AUDIENCE">SASL_OAUTHBEARER_EXPECTED_AUDIENCE</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List SaslOauthBearerExpectedAudience { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.List.html">List</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Common_SaslConfigsBuilder_SaslOauthBearerExpectedIssuer_" data-uid="MASES.KNet.Common.SaslConfigsBuilder.SaslOauthBearerExpectedIssuer*"></a>
+
+  <h3 id="MASES_KNet_Common_SaslConfigsBuilder_SaslOauthBearerExpectedIssuer" data-uid="MASES.KNet.Common.SaslConfigsBuilder.SaslOauthBearerExpectedIssuer">
+  SaslOauthBearerExpectedIssuer
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Common/SaslConfigsBuilder.cs/#L594"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Common.Config.SaslConfigs.html#Org_Apache_Kafka_Common_Config_SaslConfigs_SASL_OAUTHBEARER_EXPECTED_ISSUER">SASL_OAUTHBEARER_EXPECTED_ISSUER</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string SaslOauthBearerExpectedIssuer { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Common_SaslConfigsBuilder_SaslOauthBearerHeaderUrlEncode_" data-uid="MASES.KNet.Common.SaslConfigsBuilder.SaslOauthBearerHeaderUrlEncode*"></a>
+
+  <h3 id="MASES_KNet_Common_SaslConfigsBuilder_SaslOauthBearerHeaderUrlEncode" data-uid="MASES.KNet.Common.SaslConfigsBuilder.SaslOauthBearerHeaderUrlEncode">
+  SaslOauthBearerHeaderUrlEncode
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Common/SaslConfigsBuilder.cs/#L607"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Common.Config.SaslConfigs.html#Org_Apache_Kafka_Common_Config_SaslConfigs_SASL_OAUTHBEARER_HEADER_URLENCODE">SASL_OAUTHBEARER_HEADER_URLENCODE</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool SaslOauthBearerHeaderUrlEncode { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Common_SaslConfigsBuilder_SaslOauthBearerJwksEndpointRefreshMs_" data-uid="MASES.KNet.Common.SaslConfigsBuilder.SaslOauthBearerJwksEndpointRefreshMs*"></a>
+
+  <h3 id="MASES_KNet_Common_SaslConfigsBuilder_SaslOauthBearerJwksEndpointRefreshMs" data-uid="MASES.KNet.Common.SaslConfigsBuilder.SaslOauthBearerJwksEndpointRefreshMs">
+  SaslOauthBearerJwksEndpointRefreshMs
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Common/SaslConfigsBuilder.cs/#L529"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Common.Config.SaslConfigs.html#Org_Apache_Kafka_Common_Config_SaslConfigs_SASL_OAUTHBEARER_JWKS_ENDPOINT_REFRESH_MS">SASL_OAUTHBEARER_JWKS_ENDPOINT_REFRESH_MS</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public long SaslOauthBearerJwksEndpointRefreshMs { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Common_SaslConfigsBuilder_SaslOauthBearerJwksEndpointRetryBackoffMaxMs_" data-uid="MASES.KNet.Common.SaslConfigsBuilder.SaslOauthBearerJwksEndpointRetryBackoffMaxMs*"></a>
+
+  <h3 id="MASES_KNet_Common_SaslConfigsBuilder_SaslOauthBearerJwksEndpointRetryBackoffMaxMs" data-uid="MASES.KNet.Common.SaslConfigsBuilder.SaslOauthBearerJwksEndpointRetryBackoffMaxMs">
+  SaslOauthBearerJwksEndpointRetryBackoffMaxMs
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Common/SaslConfigsBuilder.cs/#L542"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Common.Config.SaslConfigs.html#Org_Apache_Kafka_Common_Config_SaslConfigs_SASL_OAUTHBEARER_JWKS_ENDPOINT_RETRY_BACKOFF_MAX_MS">SASL_OAUTHBEARER_JWKS_ENDPOINT_RETRY_BACKOFF_MAX_MS</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public long SaslOauthBearerJwksEndpointRetryBackoffMaxMs { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Common_SaslConfigsBuilder_SaslOauthBearerJwksEndpointRetryBackoffMs_" data-uid="MASES.KNet.Common.SaslConfigsBuilder.SaslOauthBearerJwksEndpointRetryBackoffMs*"></a>
+
+  <h3 id="MASES_KNet_Common_SaslConfigsBuilder_SaslOauthBearerJwksEndpointRetryBackoffMs" data-uid="MASES.KNet.Common.SaslConfigsBuilder.SaslOauthBearerJwksEndpointRetryBackoffMs">
+  SaslOauthBearerJwksEndpointRetryBackoffMs
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Common/SaslConfigsBuilder.cs/#L555"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Common.Config.SaslConfigs.html#Org_Apache_Kafka_Common_Config_SaslConfigs_SASL_OAUTHBEARER_JWKS_ENDPOINT_RETRY_BACKOFF_MS">SASL_OAUTHBEARER_JWKS_ENDPOINT_RETRY_BACKOFF_MS</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public long SaslOauthBearerJwksEndpointRetryBackoffMs { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Common_SaslConfigsBuilder_SaslOauthBearerJwksEndpointUrl_" data-uid="MASES.KNet.Common.SaslConfigsBuilder.SaslOauthBearerJwksEndpointUrl*"></a>
+
+  <h3 id="MASES_KNet_Common_SaslConfigsBuilder_SaslOauthBearerJwksEndpointUrl" data-uid="MASES.KNet.Common.SaslConfigsBuilder.SaslOauthBearerJwksEndpointUrl">
+  SaslOauthBearerJwksEndpointUrl
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Common/SaslConfigsBuilder.cs/#L516"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Common.Config.SaslConfigs.html#Org_Apache_Kafka_Common_Config_SaslConfigs_SASL_OAUTHBEARER_JWKS_ENDPOINT_URL">SASL_OAUTHBEARER_JWKS_ENDPOINT_URL</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string SaslOauthBearerJwksEndpointUrl { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Common_SaslConfigsBuilder_SaslOauthBearerJwtRetrieverClass_" data-uid="MASES.KNet.Common.SaslConfigsBuilder.SaslOauthBearerJwtRetrieverClass*"></a>
+
+  <h3 id="MASES_KNet_Common_SaslConfigsBuilder_SaslOauthBearerJwtRetrieverClass" data-uid="MASES.KNet.Common.SaslConfigsBuilder.SaslOauthBearerJwtRetrieverClass">
+  SaslOauthBearerJwtRetrieverClass
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Common/SaslConfigsBuilder.cs/#L269"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Common.Config.SaslConfigs.html#Org_Apache_Kafka_Common_Config_SaslConfigs_SASL_OAUTHBEARER_JWT_RETRIEVER_CLASS">SASL_OAUTHBEARER_JWT_RETRIEVER_CLASS</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Class SaslOauthBearerJwtRetrieverClass { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.Class.html">Class</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Common_SaslConfigsBuilder_SaslOauthBearerJwtValidatorClass_" data-uid="MASES.KNet.Common.SaslConfigsBuilder.SaslOauthBearerJwtValidatorClass*"></a>
+
+  <h3 id="MASES_KNet_Common_SaslConfigsBuilder_SaslOauthBearerJwtValidatorClass" data-uid="MASES.KNet.Common.SaslConfigsBuilder.SaslOauthBearerJwtValidatorClass">
+  SaslOauthBearerJwtValidatorClass
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Common/SaslConfigsBuilder.cs/#L282"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Common.Config.SaslConfigs.html#Org_Apache_Kafka_Common_Config_SaslConfigs_SASL_OAUTHBEARER_JWT_VALIDATOR_CLASS">SASL_OAUTHBEARER_JWT_VALIDATOR_CLASS</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Class SaslOauthBearerJwtValidatorClass { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.Class.html">Class</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Common_SaslConfigsBuilder_SaslOauthBearerScope_" data-uid="MASES.KNet.Common.SaslConfigsBuilder.SaslOauthBearerScope*"></a>
+
+  <h3 id="MASES_KNet_Common_SaslConfigsBuilder_SaslOauthBearerScope" data-uid="MASES.KNet.Common.SaslConfigsBuilder.SaslOauthBearerScope">
+  SaslOauthBearerScope
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Common/SaslConfigsBuilder.cs/#L295"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Common.Config.SaslConfigs.html#Org_Apache_Kafka_Common_Config_SaslConfigs_SASL_OAUTHBEARER_SCOPE">SASL_OAUTHBEARER_SCOPE</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string SaslOauthBearerScope { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Common_SaslConfigsBuilder_SaslOauthBearerScopeClaimName_" data-uid="MASES.KNet.Common.SaslConfigsBuilder.SaslOauthBearerScopeClaimName*"></a>
+
+  <h3 id="MASES_KNet_Common_SaslConfigsBuilder_SaslOauthBearerScopeClaimName" data-uid="MASES.KNet.Common.SaslConfigsBuilder.SaslOauthBearerScopeClaimName">
+  SaslOauthBearerScopeClaimName
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Common/SaslConfigsBuilder.cs/#L477"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Common.Config.SaslConfigs.html#Org_Apache_Kafka_Common_Config_SaslConfigs_SASL_OAUTHBEARER_SCOPE_CLAIM_NAME">SASL_OAUTHBEARER_SCOPE_CLAIM_NAME</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string SaslOauthBearerScopeClaimName { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Common_SaslConfigsBuilder_SaslOauthBearerSubClaimName_" data-uid="MASES.KNet.Common.SaslConfigsBuilder.SaslOauthBearerSubClaimName*"></a>
+
+  <h3 id="MASES_KNet_Common_SaslConfigsBuilder_SaslOauthBearerSubClaimName" data-uid="MASES.KNet.Common.SaslConfigsBuilder.SaslOauthBearerSubClaimName">
+  SaslOauthBearerSubClaimName
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Common/SaslConfigsBuilder.cs/#L490"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Common.Config.SaslConfigs.html#Org_Apache_Kafka_Common_Config_SaslConfigs_SASL_OAUTHBEARER_SUB_CLAIM_NAME">SASL_OAUTHBEARER_SUB_CLAIM_NAME</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string SaslOauthBearerSubClaimName { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Common_SaslConfigsBuilder_SaslOauthBearerTokenEndpointUrl_" data-uid="MASES.KNet.Common.SaslConfigsBuilder.SaslOauthBearerTokenEndpointUrl*"></a>
+
+  <h3 id="MASES_KNet_Common_SaslConfigsBuilder_SaslOauthBearerTokenEndpointUrl" data-uid="MASES.KNet.Common.SaslConfigsBuilder.SaslOauthBearerTokenEndpointUrl">
+  SaslOauthBearerTokenEndpointUrl
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Common/SaslConfigsBuilder.cs/#L503"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Common.Config.SaslConfigs.html#Org_Apache_Kafka_Common_Config_SaslConfigs_SASL_OAUTHBEARER_TOKEN_ENDPOINT_URL">SASL_OAUTHBEARER_TOKEN_ENDPOINT_URL</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string SaslOauthBearerTokenEndpointUrl { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="MASES_KNet_Common_SaslConfigsBuilder_WithSaslClientCallbackHandlerClass_" data-uid="MASES.KNet.Common.SaslConfigsBuilder.WithSaslClientCallbackHandlerClass*"></a>
+
+  <h3 id="MASES_KNet_Common_SaslConfigsBuilder_WithSaslClientCallbackHandlerClass_Java_Lang_Class_" data-uid="MASES.KNet.Common.SaslConfigsBuilder.WithSaslClientCallbackHandlerClass(Java.Lang.Class)">
+  WithSaslClientCallbackHandlerClass(Class)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Common/SaslConfigsBuilder.cs/#L182"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Common.Config.SaslConfigs.html#Org_Apache_Kafka_Common_Config_SaslConfigs_SASL_CLIENT_CALLBACK_HANDLER_CLASS">SASL_CLIENT_CALLBACK_HANDLER_CLASS</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SaslConfigsBuilder WithSaslClientCallbackHandlerClass(Class saslClientCallbackHandlerClass)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>saslClientCallbackHandlerClass</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.Class.html">Class</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MASES.KNet.Common.SaslConfigsBuilder.html">SaslConfigsBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Common_SaslConfigsBuilder_WithSaslJaasConfig_" data-uid="MASES.KNet.Common.SaslConfigsBuilder.WithSaslJaasConfig*"></a>
+
+  <h3 id="MASES_KNet_Common_SaslConfigsBuilder_WithSaslJaasConfig_Org_Apache_Kafka_Common_Config_Types_Password_" data-uid="MASES.KNet.Common.SaslConfigsBuilder.WithSaslJaasConfig(Org.Apache.Kafka.Common.Config.Types.Password)">
+  WithSaslJaasConfig(Password)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Common/SaslConfigsBuilder.cs/#L169"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Common.Config.SaslConfigs.html#Org_Apache_Kafka_Common_Config_SaslConfigs_SASL_JAAS_CONFIG">SASL_JAAS_CONFIG</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SaslConfigsBuilder WithSaslJaasConfig(Password saslJaasConfig)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>saslJaasConfig</code> <a class="xref" href="Org.Apache.Kafka.Common.Config.Types.Password.html">Password</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MASES.KNet.Common.SaslConfigsBuilder.html">SaslConfigsBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Common_SaslConfigsBuilder_WithSaslKerberosKinitCmd_" data-uid="MASES.KNet.Common.SaslConfigsBuilder.WithSaslKerberosKinitCmd*"></a>
+
+  <h3 id="MASES_KNet_Common_SaslConfigsBuilder_WithSaslKerberosKinitCmd_System_String_" data-uid="MASES.KNet.Common.SaslConfigsBuilder.WithSaslKerberosKinitCmd(System.String)">
+  WithSaslKerberosKinitCmd(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Common/SaslConfigsBuilder.cs/#L52"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Common.Config.SaslConfigs.html#Org_Apache_Kafka_Common_Config_SaslConfigs_SASL_KERBEROS_KINIT_CMD">SASL_KERBEROS_KINIT_CMD</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SaslConfigsBuilder WithSaslKerberosKinitCmd(string saslKerberosKinitCmd)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>saslKerberosKinitCmd</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MASES.KNet.Common.SaslConfigsBuilder.html">SaslConfigsBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Common_SaslConfigsBuilder_WithSaslKerberosMinTimeBeforeRelogin_" data-uid="MASES.KNet.Common.SaslConfigsBuilder.WithSaslKerberosMinTimeBeforeRelogin*"></a>
+
+  <h3 id="MASES_KNet_Common_SaslConfigsBuilder_WithSaslKerberosMinTimeBeforeRelogin_System_Int64_" data-uid="MASES.KNet.Common.SaslConfigsBuilder.WithSaslKerberosMinTimeBeforeRelogin(System.Int64)">
+  WithSaslKerberosMinTimeBeforeRelogin(long)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Common/SaslConfigsBuilder.cs/#L91"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Common.Config.SaslConfigs.html#Org_Apache_Kafka_Common_Config_SaslConfigs_SASL_KERBEROS_MIN_TIME_BEFORE_RELOGIN">SASL_KERBEROS_MIN_TIME_BEFORE_RELOGIN</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SaslConfigsBuilder WithSaslKerberosMinTimeBeforeRelogin(long saslKerberosMinTimeBeforeRelogin)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>saslKerberosMinTimeBeforeRelogin</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MASES.KNet.Common.SaslConfigsBuilder.html">SaslConfigsBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Common_SaslConfigsBuilder_WithSaslKerberosServiceName_" data-uid="MASES.KNet.Common.SaslConfigsBuilder.WithSaslKerberosServiceName*"></a>
+
+  <h3 id="MASES_KNet_Common_SaslConfigsBuilder_WithSaslKerberosServiceName_System_String_" data-uid="MASES.KNet.Common.SaslConfigsBuilder.WithSaslKerberosServiceName(System.String)">
+  WithSaslKerberosServiceName(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Common/SaslConfigsBuilder.cs/#L39"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Common.Config.SaslConfigs.html#Org_Apache_Kafka_Common_Config_SaslConfigs_SASL_KERBEROS_SERVICE_NAME">SASL_KERBEROS_SERVICE_NAME</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SaslConfigsBuilder WithSaslKerberosServiceName(string saslKerberosServiceName)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>saslKerberosServiceName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MASES.KNet.Common.SaslConfigsBuilder.html">SaslConfigsBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Common_SaslConfigsBuilder_WithSaslKerberosTicketRenewJitter_" data-uid="MASES.KNet.Common.SaslConfigsBuilder.WithSaslKerberosTicketRenewJitter*"></a>
+
+  <h3 id="MASES_KNet_Common_SaslConfigsBuilder_WithSaslKerberosTicketRenewJitter_System_Double_" data-uid="MASES.KNet.Common.SaslConfigsBuilder.WithSaslKerberosTicketRenewJitter(System.Double)">
+  WithSaslKerberosTicketRenewJitter(double)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Common/SaslConfigsBuilder.cs/#L78"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Common.Config.SaslConfigs.html#Org_Apache_Kafka_Common_Config_SaslConfigs_SASL_KERBEROS_TICKET_RENEW_JITTER">SASL_KERBEROS_TICKET_RENEW_JITTER</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SaslConfigsBuilder WithSaslKerberosTicketRenewJitter(double saslKerberosTicketRenewJitter)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>saslKerberosTicketRenewJitter</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MASES.KNet.Common.SaslConfigsBuilder.html">SaslConfigsBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Common_SaslConfigsBuilder_WithSaslKerberosTicketRenewWindowFactor_" data-uid="MASES.KNet.Common.SaslConfigsBuilder.WithSaslKerberosTicketRenewWindowFactor*"></a>
+
+  <h3 id="MASES_KNet_Common_SaslConfigsBuilder_WithSaslKerberosTicketRenewWindowFactor_System_Double_" data-uid="MASES.KNet.Common.SaslConfigsBuilder.WithSaslKerberosTicketRenewWindowFactor(System.Double)">
+  WithSaslKerberosTicketRenewWindowFactor(double)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Common/SaslConfigsBuilder.cs/#L65"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Common.Config.SaslConfigs.html#Org_Apache_Kafka_Common_Config_SaslConfigs_SASL_KERBEROS_TICKET_RENEW_WINDOW_FACTOR">SASL_KERBEROS_TICKET_RENEW_WINDOW_FACTOR</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SaslConfigsBuilder WithSaslKerberosTicketRenewWindowFactor(double saslKerberosTicketRenewWindowFactor)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>saslKerberosTicketRenewWindowFactor</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MASES.KNet.Common.SaslConfigsBuilder.html">SaslConfigsBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Common_SaslConfigsBuilder_WithSaslLoginCallbackHandlerClass_" data-uid="MASES.KNet.Common.SaslConfigsBuilder.WithSaslLoginCallbackHandlerClass*"></a>
+
+  <h3 id="MASES_KNet_Common_SaslConfigsBuilder_WithSaslLoginCallbackHandlerClass_Java_Lang_Class_" data-uid="MASES.KNet.Common.SaslConfigsBuilder.WithSaslLoginCallbackHandlerClass(Java.Lang.Class)">
+  WithSaslLoginCallbackHandlerClass(Class)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Common/SaslConfigsBuilder.cs/#L195"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Common.Config.SaslConfigs.html#Org_Apache_Kafka_Common_Config_SaslConfigs_SASL_LOGIN_CALLBACK_HANDLER_CLASS">SASL_LOGIN_CALLBACK_HANDLER_CLASS</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SaslConfigsBuilder WithSaslLoginCallbackHandlerClass(Class saslLoginCallbackHandlerClass)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>saslLoginCallbackHandlerClass</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.Class.html">Class</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MASES.KNet.Common.SaslConfigsBuilder.html">SaslConfigsBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Common_SaslConfigsBuilder_WithSaslLoginClass_" data-uid="MASES.KNet.Common.SaslConfigsBuilder.WithSaslLoginClass*"></a>
+
+  <h3 id="MASES_KNet_Common_SaslConfigsBuilder_WithSaslLoginClass_Java_Lang_Class_" data-uid="MASES.KNet.Common.SaslConfigsBuilder.WithSaslLoginClass(Java.Lang.Class)">
+  WithSaslLoginClass(Class)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Common/SaslConfigsBuilder.cs/#L208"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Common.Config.SaslConfigs.html#Org_Apache_Kafka_Common_Config_SaslConfigs_SASL_LOGIN_CLASS">SASL_LOGIN_CLASS</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SaslConfigsBuilder WithSaslLoginClass(Class saslLoginClass)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>saslLoginClass</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.Class.html">Class</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MASES.KNet.Common.SaslConfigsBuilder.html">SaslConfigsBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Common_SaslConfigsBuilder_WithSaslLoginConnectTimeoutMs_" data-uid="MASES.KNet.Common.SaslConfigsBuilder.WithSaslLoginConnectTimeoutMs*"></a>
+
+  <h3 id="MASES_KNet_Common_SaslConfigsBuilder_WithSaslLoginConnectTimeoutMs_System_Int32_" data-uid="MASES.KNet.Common.SaslConfigsBuilder.WithSaslLoginConnectTimeoutMs(System.Int32)">
+  WithSaslLoginConnectTimeoutMs(int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Common/SaslConfigsBuilder.cs/#L221"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Common.Config.SaslConfigs.html#Org_Apache_Kafka_Common_Config_SaslConfigs_SASL_LOGIN_CONNECT_TIMEOUT_MS">SASL_LOGIN_CONNECT_TIMEOUT_MS</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SaslConfigsBuilder WithSaslLoginConnectTimeoutMs(int saslLoginConnectTimeoutMs)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>saslLoginConnectTimeoutMs</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MASES.KNet.Common.SaslConfigsBuilder.html">SaslConfigsBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Common_SaslConfigsBuilder_WithSaslLoginReadTimeoutMs_" data-uid="MASES.KNet.Common.SaslConfigsBuilder.WithSaslLoginReadTimeoutMs*"></a>
+
+  <h3 id="MASES_KNet_Common_SaslConfigsBuilder_WithSaslLoginReadTimeoutMs_System_Int32_" data-uid="MASES.KNet.Common.SaslConfigsBuilder.WithSaslLoginReadTimeoutMs(System.Int32)">
+  WithSaslLoginReadTimeoutMs(int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Common/SaslConfigsBuilder.cs/#L234"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Common.Config.SaslConfigs.html#Org_Apache_Kafka_Common_Config_SaslConfigs_SASL_LOGIN_READ_TIMEOUT_MS">SASL_LOGIN_READ_TIMEOUT_MS</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SaslConfigsBuilder WithSaslLoginReadTimeoutMs(int saslLoginReadTimeoutMs)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>saslLoginReadTimeoutMs</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MASES.KNet.Common.SaslConfigsBuilder.html">SaslConfigsBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Common_SaslConfigsBuilder_WithSaslLoginRefreshBufferSeconds_" data-uid="MASES.KNet.Common.SaslConfigsBuilder.WithSaslLoginRefreshBufferSeconds*"></a>
+
+  <h3 id="MASES_KNet_Common_SaslConfigsBuilder_WithSaslLoginRefreshBufferSeconds_System_Int16_" data-uid="MASES.KNet.Common.SaslConfigsBuilder.WithSaslLoginRefreshBufferSeconds(System.Int16)">
+  WithSaslLoginRefreshBufferSeconds(short)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Common/SaslConfigsBuilder.cs/#L143"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Common.Config.SaslConfigs.html#Org_Apache_Kafka_Common_Config_SaslConfigs_SASL_LOGIN_REFRESH_BUFFER_SECONDS">SASL_LOGIN_REFRESH_BUFFER_SECONDS</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SaslConfigsBuilder WithSaslLoginRefreshBufferSeconds(short saslLoginRefreshBufferSeconds)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>saslLoginRefreshBufferSeconds</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int16">short</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MASES.KNet.Common.SaslConfigsBuilder.html">SaslConfigsBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Common_SaslConfigsBuilder_WithSaslLoginRefreshMinPeriodSeconds_" data-uid="MASES.KNet.Common.SaslConfigsBuilder.WithSaslLoginRefreshMinPeriodSeconds*"></a>
+
+  <h3 id="MASES_KNet_Common_SaslConfigsBuilder_WithSaslLoginRefreshMinPeriodSeconds_System_Int16_" data-uid="MASES.KNet.Common.SaslConfigsBuilder.WithSaslLoginRefreshMinPeriodSeconds(System.Int16)">
+  WithSaslLoginRefreshMinPeriodSeconds(short)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Common/SaslConfigsBuilder.cs/#L130"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Common.Config.SaslConfigs.html#Org_Apache_Kafka_Common_Config_SaslConfigs_SASL_LOGIN_REFRESH_MIN_PERIOD_SECONDS">SASL_LOGIN_REFRESH_MIN_PERIOD_SECONDS</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SaslConfigsBuilder WithSaslLoginRefreshMinPeriodSeconds(short saslLoginRefreshMinPeriodSeconds)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>saslLoginRefreshMinPeriodSeconds</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int16">short</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MASES.KNet.Common.SaslConfigsBuilder.html">SaslConfigsBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Common_SaslConfigsBuilder_WithSaslLoginRefreshWindowFactor_" data-uid="MASES.KNet.Common.SaslConfigsBuilder.WithSaslLoginRefreshWindowFactor*"></a>
+
+  <h3 id="MASES_KNet_Common_SaslConfigsBuilder_WithSaslLoginRefreshWindowFactor_System_Double_" data-uid="MASES.KNet.Common.SaslConfigsBuilder.WithSaslLoginRefreshWindowFactor(System.Double)">
+  WithSaslLoginRefreshWindowFactor(double)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Common/SaslConfigsBuilder.cs/#L104"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Common.Config.SaslConfigs.html#Org_Apache_Kafka_Common_Config_SaslConfigs_SASL_LOGIN_REFRESH_WINDOW_FACTOR">SASL_LOGIN_REFRESH_WINDOW_FACTOR</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SaslConfigsBuilder WithSaslLoginRefreshWindowFactor(double saslLoginRefreshWindowFactor)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>saslLoginRefreshWindowFactor</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MASES.KNet.Common.SaslConfigsBuilder.html">SaslConfigsBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Common_SaslConfigsBuilder_WithSaslLoginRefreshWindowJitter_" data-uid="MASES.KNet.Common.SaslConfigsBuilder.WithSaslLoginRefreshWindowJitter*"></a>
+
+  <h3 id="MASES_KNet_Common_SaslConfigsBuilder_WithSaslLoginRefreshWindowJitter_System_Double_" data-uid="MASES.KNet.Common.SaslConfigsBuilder.WithSaslLoginRefreshWindowJitter(System.Double)">
+  WithSaslLoginRefreshWindowJitter(double)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Common/SaslConfigsBuilder.cs/#L117"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Common.Config.SaslConfigs.html#Org_Apache_Kafka_Common_Config_SaslConfigs_SASL_LOGIN_REFRESH_WINDOW_JITTER">SASL_LOGIN_REFRESH_WINDOW_JITTER</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SaslConfigsBuilder WithSaslLoginRefreshWindowJitter(double saslLoginRefreshWindowJitter)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>saslLoginRefreshWindowJitter</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MASES.KNet.Common.SaslConfigsBuilder.html">SaslConfigsBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Common_SaslConfigsBuilder_WithSaslLoginRetryBackoffMaxMs_" data-uid="MASES.KNet.Common.SaslConfigsBuilder.WithSaslLoginRetryBackoffMaxMs*"></a>
+
+  <h3 id="MASES_KNet_Common_SaslConfigsBuilder_WithSaslLoginRetryBackoffMaxMs_System_Int64_" data-uid="MASES.KNet.Common.SaslConfigsBuilder.WithSaslLoginRetryBackoffMaxMs(System.Int64)">
+  WithSaslLoginRetryBackoffMaxMs(long)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Common/SaslConfigsBuilder.cs/#L247"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Common.Config.SaslConfigs.html#Org_Apache_Kafka_Common_Config_SaslConfigs_SASL_LOGIN_RETRY_BACKOFF_MAX_MS">SASL_LOGIN_RETRY_BACKOFF_MAX_MS</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SaslConfigsBuilder WithSaslLoginRetryBackoffMaxMs(long saslLoginRetryBackoffMaxMs)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>saslLoginRetryBackoffMaxMs</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MASES.KNet.Common.SaslConfigsBuilder.html">SaslConfigsBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Common_SaslConfigsBuilder_WithSaslLoginRetryBackoffMs_" data-uid="MASES.KNet.Common.SaslConfigsBuilder.WithSaslLoginRetryBackoffMs*"></a>
+
+  <h3 id="MASES_KNet_Common_SaslConfigsBuilder_WithSaslLoginRetryBackoffMs_System_Int64_" data-uid="MASES.KNet.Common.SaslConfigsBuilder.WithSaslLoginRetryBackoffMs(System.Int64)">
+  WithSaslLoginRetryBackoffMs(long)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Common/SaslConfigsBuilder.cs/#L260"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Common.Config.SaslConfigs.html#Org_Apache_Kafka_Common_Config_SaslConfigs_SASL_LOGIN_RETRY_BACKOFF_MS">SASL_LOGIN_RETRY_BACKOFF_MS</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SaslConfigsBuilder WithSaslLoginRetryBackoffMs(long saslLoginRetryBackoffMs)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>saslLoginRetryBackoffMs</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MASES.KNet.Common.SaslConfigsBuilder.html">SaslConfigsBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Common_SaslConfigsBuilder_WithSaslMechanism_" data-uid="MASES.KNet.Common.SaslConfigsBuilder.WithSaslMechanism*"></a>
+
+  <h3 id="MASES_KNet_Common_SaslConfigsBuilder_WithSaslMechanism_System_String_" data-uid="MASES.KNet.Common.SaslConfigsBuilder.WithSaslMechanism(System.String)">
+  WithSaslMechanism(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Common/SaslConfigsBuilder.cs/#L156"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Common.Config.SaslConfigs.html#Org_Apache_Kafka_Common_Config_SaslConfigs_SASL_MECHANISM">SASL_MECHANISM</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SaslConfigsBuilder WithSaslMechanism(string saslMechanism)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>saslMechanism</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MASES.KNet.Common.SaslConfigsBuilder.html">SaslConfigsBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Common_SaslConfigsBuilder_WithSaslOauthBearerAssertionAlgorithm_" data-uid="MASES.KNet.Common.SaslConfigsBuilder.WithSaslOauthBearerAssertionAlgorithm*"></a>
+
+  <h3 id="MASES_KNet_Common_SaslConfigsBuilder_WithSaslOauthBearerAssertionAlgorithm_System_String_" data-uid="MASES.KNet.Common.SaslConfigsBuilder.WithSaslOauthBearerAssertionAlgorithm(System.String)">
+  WithSaslOauthBearerAssertionAlgorithm(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Common/SaslConfigsBuilder.cs/#L338"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Common.Config.SaslConfigs.html#Org_Apache_Kafka_Common_Config_SaslConfigs_SASL_OAUTHBEARER_ASSERTION_ALGORITHM">SASL_OAUTHBEARER_ASSERTION_ALGORITHM</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SaslConfigsBuilder WithSaslOauthBearerAssertionAlgorithm(string saslOauthBearerAssertionAlgorithm)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>saslOauthBearerAssertionAlgorithm</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MASES.KNet.Common.SaslConfigsBuilder.html">SaslConfigsBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Common_SaslConfigsBuilder_WithSaslOauthBearerAssertionClaimAud_" data-uid="MASES.KNet.Common.SaslConfigsBuilder.WithSaslOauthBearerAssertionClaimAud*"></a>
+
+  <h3 id="MASES_KNet_Common_SaslConfigsBuilder_WithSaslOauthBearerAssertionClaimAud_System_String_" data-uid="MASES.KNet.Common.SaslConfigsBuilder.WithSaslOauthBearerAssertionClaimAud(System.String)">
+  WithSaslOauthBearerAssertionClaimAud(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Common/SaslConfigsBuilder.cs/#L351"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Common.Config.SaslConfigs.html#Org_Apache_Kafka_Common_Config_SaslConfigs_SASL_OAUTHBEARER_ASSERTION_CLAIM_AUD">SASL_OAUTHBEARER_ASSERTION_CLAIM_AUD</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SaslConfigsBuilder WithSaslOauthBearerAssertionClaimAud(string saslOauthBearerAssertionClaimAud)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>saslOauthBearerAssertionClaimAud</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MASES.KNet.Common.SaslConfigsBuilder.html">SaslConfigsBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Common_SaslConfigsBuilder_WithSaslOauthBearerAssertionClaimExpSeconds_" data-uid="MASES.KNet.Common.SaslConfigsBuilder.WithSaslOauthBearerAssertionClaimExpSeconds*"></a>
+
+  <h3 id="MASES_KNet_Common_SaslConfigsBuilder_WithSaslOauthBearerAssertionClaimExpSeconds_System_Int32_" data-uid="MASES.KNet.Common.SaslConfigsBuilder.WithSaslOauthBearerAssertionClaimExpSeconds(System.Int32)">
+  WithSaslOauthBearerAssertionClaimExpSeconds(int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Common/SaslConfigsBuilder.cs/#L364"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Common.Config.SaslConfigs.html#Org_Apache_Kafka_Common_Config_SaslConfigs_SASL_OAUTHBEARER_ASSERTION_CLAIM_EXP_SECONDS">SASL_OAUTHBEARER_ASSERTION_CLAIM_EXP_SECONDS</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SaslConfigsBuilder WithSaslOauthBearerAssertionClaimExpSeconds(int saslOauthBearerAssertionClaimExpSeconds)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>saslOauthBearerAssertionClaimExpSeconds</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MASES.KNet.Common.SaslConfigsBuilder.html">SaslConfigsBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Common_SaslConfigsBuilder_WithSaslOauthBearerAssertionClaimIss_" data-uid="MASES.KNet.Common.SaslConfigsBuilder.WithSaslOauthBearerAssertionClaimIss*"></a>
+
+  <h3 id="MASES_KNet_Common_SaslConfigsBuilder_WithSaslOauthBearerAssertionClaimIss_System_String_" data-uid="MASES.KNet.Common.SaslConfigsBuilder.WithSaslOauthBearerAssertionClaimIss(System.String)">
+  WithSaslOauthBearerAssertionClaimIss(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Common/SaslConfigsBuilder.cs/#L377"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Common.Config.SaslConfigs.html#Org_Apache_Kafka_Common_Config_SaslConfigs_SASL_OAUTHBEARER_ASSERTION_CLAIM_ISS">SASL_OAUTHBEARER_ASSERTION_CLAIM_ISS</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SaslConfigsBuilder WithSaslOauthBearerAssertionClaimIss(string saslOauthBearerAssertionClaimIss)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>saslOauthBearerAssertionClaimIss</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MASES.KNet.Common.SaslConfigsBuilder.html">SaslConfigsBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Common_SaslConfigsBuilder_WithSaslOauthBearerAssertionClaimJtiInclude_" data-uid="MASES.KNet.Common.SaslConfigsBuilder.WithSaslOauthBearerAssertionClaimJtiInclude*"></a>
+
+  <h3 id="MASES_KNet_Common_SaslConfigsBuilder_WithSaslOauthBearerAssertionClaimJtiInclude_System_Boolean_" data-uid="MASES.KNet.Common.SaslConfigsBuilder.WithSaslOauthBearerAssertionClaimJtiInclude(System.Boolean)">
+  WithSaslOauthBearerAssertionClaimJtiInclude(bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Common/SaslConfigsBuilder.cs/#L390"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Common.Config.SaslConfigs.html#Org_Apache_Kafka_Common_Config_SaslConfigs_SASL_OAUTHBEARER_ASSERTION_CLAIM_JTI_INCLUDE">SASL_OAUTHBEARER_ASSERTION_CLAIM_JTI_INCLUDE</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SaslConfigsBuilder WithSaslOauthBearerAssertionClaimJtiInclude(bool saslOauthBearerAssertionClaimJtiInclude)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>saslOauthBearerAssertionClaimJtiInclude</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MASES.KNet.Common.SaslConfigsBuilder.html">SaslConfigsBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Common_SaslConfigsBuilder_WithSaslOauthBearerAssertionClaimNbfSeconds_" data-uid="MASES.KNet.Common.SaslConfigsBuilder.WithSaslOauthBearerAssertionClaimNbfSeconds*"></a>
+
+  <h3 id="MASES_KNet_Common_SaslConfigsBuilder_WithSaslOauthBearerAssertionClaimNbfSeconds_System_Int32_" data-uid="MASES.KNet.Common.SaslConfigsBuilder.WithSaslOauthBearerAssertionClaimNbfSeconds(System.Int32)">
+  WithSaslOauthBearerAssertionClaimNbfSeconds(int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Common/SaslConfigsBuilder.cs/#L403"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Common.Config.SaslConfigs.html#Org_Apache_Kafka_Common_Config_SaslConfigs_SASL_OAUTHBEARER_ASSERTION_CLAIM_NBF_SECONDS">SASL_OAUTHBEARER_ASSERTION_CLAIM_NBF_SECONDS</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SaslConfigsBuilder WithSaslOauthBearerAssertionClaimNbfSeconds(int saslOauthBearerAssertionClaimNbfSeconds)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>saslOauthBearerAssertionClaimNbfSeconds</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MASES.KNet.Common.SaslConfigsBuilder.html">SaslConfigsBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Common_SaslConfigsBuilder_WithSaslOauthBearerAssertionClaimSub_" data-uid="MASES.KNet.Common.SaslConfigsBuilder.WithSaslOauthBearerAssertionClaimSub*"></a>
+
+  <h3 id="MASES_KNet_Common_SaslConfigsBuilder_WithSaslOauthBearerAssertionClaimSub_System_String_" data-uid="MASES.KNet.Common.SaslConfigsBuilder.WithSaslOauthBearerAssertionClaimSub(System.String)">
+  WithSaslOauthBearerAssertionClaimSub(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Common/SaslConfigsBuilder.cs/#L416"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Common.Config.SaslConfigs.html#Org_Apache_Kafka_Common_Config_SaslConfigs_SASL_OAUTHBEARER_ASSERTION_CLAIM_SUB">SASL_OAUTHBEARER_ASSERTION_CLAIM_SUB</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SaslConfigsBuilder WithSaslOauthBearerAssertionClaimSub(string saslOauthBearerAssertionClaimSub)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>saslOauthBearerAssertionClaimSub</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MASES.KNet.Common.SaslConfigsBuilder.html">SaslConfigsBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Common_SaslConfigsBuilder_WithSaslOauthBearerAssertionFile_" data-uid="MASES.KNet.Common.SaslConfigsBuilder.WithSaslOauthBearerAssertionFile*"></a>
+
+  <h3 id="MASES_KNet_Common_SaslConfigsBuilder_WithSaslOauthBearerAssertionFile_System_String_" data-uid="MASES.KNet.Common.SaslConfigsBuilder.WithSaslOauthBearerAssertionFile(System.String)">
+  WithSaslOauthBearerAssertionFile(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Common/SaslConfigsBuilder.cs/#L429"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Common.Config.SaslConfigs.html#Org_Apache_Kafka_Common_Config_SaslConfigs_SASL_OAUTHBEARER_ASSERTION_FILE">SASL_OAUTHBEARER_ASSERTION_FILE</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SaslConfigsBuilder WithSaslOauthBearerAssertionFile(string saslOauthBearerAssertionFile)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>saslOauthBearerAssertionFile</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MASES.KNet.Common.SaslConfigsBuilder.html">SaslConfigsBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Common_SaslConfigsBuilder_WithSaslOauthBearerAssertionPrivateKeyFile_" data-uid="MASES.KNet.Common.SaslConfigsBuilder.WithSaslOauthBearerAssertionPrivateKeyFile*"></a>
+
+  <h3 id="MASES_KNet_Common_SaslConfigsBuilder_WithSaslOauthBearerAssertionPrivateKeyFile_System_String_" data-uid="MASES.KNet.Common.SaslConfigsBuilder.WithSaslOauthBearerAssertionPrivateKeyFile(System.String)">
+  WithSaslOauthBearerAssertionPrivateKeyFile(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Common/SaslConfigsBuilder.cs/#L442"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Common.Config.SaslConfigs.html#Org_Apache_Kafka_Common_Config_SaslConfigs_SASL_OAUTHBEARER_ASSERTION_PRIVATE_KEY_FILE">SASL_OAUTHBEARER_ASSERTION_PRIVATE_KEY_FILE</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SaslConfigsBuilder WithSaslOauthBearerAssertionPrivateKeyFile(string saslOauthBearerAssertionPrivateKeyFile)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>saslOauthBearerAssertionPrivateKeyFile</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MASES.KNet.Common.SaslConfigsBuilder.html">SaslConfigsBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Common_SaslConfigsBuilder_WithSaslOauthBearerAssertionPrivateKeyPassphrase_" data-uid="MASES.KNet.Common.SaslConfigsBuilder.WithSaslOauthBearerAssertionPrivateKeyPassphrase*"></a>
+
+  <h3 id="MASES_KNet_Common_SaslConfigsBuilder_WithSaslOauthBearerAssertionPrivateKeyPassphrase_Org_Apache_Kafka_Common_Config_Types_Password_" data-uid="MASES.KNet.Common.SaslConfigsBuilder.WithSaslOauthBearerAssertionPrivateKeyPassphrase(Org.Apache.Kafka.Common.Config.Types.Password)">
+  WithSaslOauthBearerAssertionPrivateKeyPassphrase(Password)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Common/SaslConfigsBuilder.cs/#L455"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Common.Config.SaslConfigs.html#Org_Apache_Kafka_Common_Config_SaslConfigs_SASL_OAUTHBEARER_ASSERTION_PRIVATE_KEY_PASSPHRASE">SASL_OAUTHBEARER_ASSERTION_PRIVATE_KEY_PASSPHRASE</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SaslConfigsBuilder WithSaslOauthBearerAssertionPrivateKeyPassphrase(Password saslOauthBearerAssertionPrivateKeyPassphrase)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>saslOauthBearerAssertionPrivateKeyPassphrase</code> <a class="xref" href="Org.Apache.Kafka.Common.Config.Types.Password.html">Password</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MASES.KNet.Common.SaslConfigsBuilder.html">SaslConfigsBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Common_SaslConfigsBuilder_WithSaslOauthBearerAssertionTemplateFile_" data-uid="MASES.KNet.Common.SaslConfigsBuilder.WithSaslOauthBearerAssertionTemplateFile*"></a>
+
+  <h3 id="MASES_KNet_Common_SaslConfigsBuilder_WithSaslOauthBearerAssertionTemplateFile_System_String_" data-uid="MASES.KNet.Common.SaslConfigsBuilder.WithSaslOauthBearerAssertionTemplateFile(System.String)">
+  WithSaslOauthBearerAssertionTemplateFile(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Common/SaslConfigsBuilder.cs/#L468"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Common.Config.SaslConfigs.html#Org_Apache_Kafka_Common_Config_SaslConfigs_SASL_OAUTHBEARER_ASSERTION_TEMPLATE_FILE">SASL_OAUTHBEARER_ASSERTION_TEMPLATE_FILE</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SaslConfigsBuilder WithSaslOauthBearerAssertionTemplateFile(string saslOauthBearerAssertionTemplateFile)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>saslOauthBearerAssertionTemplateFile</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MASES.KNet.Common.SaslConfigsBuilder.html">SaslConfigsBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Common_SaslConfigsBuilder_WithSaslOauthBearerClientCredentialsClientId_" data-uid="MASES.KNet.Common.SaslConfigsBuilder.WithSaslOauthBearerClientCredentialsClientId*"></a>
+
+  <h3 id="MASES_KNet_Common_SaslConfigsBuilder_WithSaslOauthBearerClientCredentialsClientId_System_String_" data-uid="MASES.KNet.Common.SaslConfigsBuilder.WithSaslOauthBearerClientCredentialsClientId(System.String)">
+  WithSaslOauthBearerClientCredentialsClientId(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Common/SaslConfigsBuilder.cs/#L312"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Common.Config.SaslConfigs.html#Org_Apache_Kafka_Common_Config_SaslConfigs_SASL_OAUTHBEARER_CLIENT_CREDENTIALS_CLIENT_ID">SASL_OAUTHBEARER_CLIENT_CREDENTIALS_CLIENT_ID</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SaslConfigsBuilder WithSaslOauthBearerClientCredentialsClientId(string saslOauthBearerClientCredentialsClientId)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>saslOauthBearerClientCredentialsClientId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MASES.KNet.Common.SaslConfigsBuilder.html">SaslConfigsBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Common_SaslConfigsBuilder_WithSaslOauthBearerClientCredentialsClientSecret_" data-uid="MASES.KNet.Common.SaslConfigsBuilder.WithSaslOauthBearerClientCredentialsClientSecret*"></a>
+
+  <h3 id="MASES_KNet_Common_SaslConfigsBuilder_WithSaslOauthBearerClientCredentialsClientSecret_Org_Apache_Kafka_Common_Config_Types_Password_" data-uid="MASES.KNet.Common.SaslConfigsBuilder.WithSaslOauthBearerClientCredentialsClientSecret(Org.Apache.Kafka.Common.Config.Types.Password)">
+  WithSaslOauthBearerClientCredentialsClientSecret(Password)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Common/SaslConfigsBuilder.cs/#L325"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Common.Config.SaslConfigs.html#Org_Apache_Kafka_Common_Config_SaslConfigs_SASL_OAUTHBEARER_CLIENT_CREDENTIALS_CLIENT_SECRET">SASL_OAUTHBEARER_CLIENT_CREDENTIALS_CLIENT_SECRET</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SaslConfigsBuilder WithSaslOauthBearerClientCredentialsClientSecret(Password saslOauthBearerClientCredentialsClientSecret)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>saslOauthBearerClientCredentialsClientSecret</code> <a class="xref" href="Org.Apache.Kafka.Common.Config.Types.Password.html">Password</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MASES.KNet.Common.SaslConfigsBuilder.html">SaslConfigsBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Common_SaslConfigsBuilder_WithSaslOauthBearerClockSkewSeconds_" data-uid="MASES.KNet.Common.SaslConfigsBuilder.WithSaslOauthBearerClockSkewSeconds*"></a>
+
+  <h3 id="MASES_KNet_Common_SaslConfigsBuilder_WithSaslOauthBearerClockSkewSeconds_System_Int64_" data-uid="MASES.KNet.Common.SaslConfigsBuilder.WithSaslOauthBearerClockSkewSeconds(System.Int64)">
+  WithSaslOauthBearerClockSkewSeconds(long)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Common/SaslConfigsBuilder.cs/#L572"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Common.Config.SaslConfigs.html#Org_Apache_Kafka_Common_Config_SaslConfigs_SASL_OAUTHBEARER_CLOCK_SKEW_SECONDS">SASL_OAUTHBEARER_CLOCK_SKEW_SECONDS</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SaslConfigsBuilder WithSaslOauthBearerClockSkewSeconds(long saslOauthBearerClockSkewSeconds)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>saslOauthBearerClockSkewSeconds</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MASES.KNet.Common.SaslConfigsBuilder.html">SaslConfigsBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Common_SaslConfigsBuilder_WithSaslOauthBearerExpectedAudience_" data-uid="MASES.KNet.Common.SaslConfigsBuilder.WithSaslOauthBearerExpectedAudience*"></a>
+
+  <h3 id="MASES_KNet_Common_SaslConfigsBuilder_WithSaslOauthBearerExpectedAudience_Java_Util_List_" data-uid="MASES.KNet.Common.SaslConfigsBuilder.WithSaslOauthBearerExpectedAudience(Java.Util.List)">
+  WithSaslOauthBearerExpectedAudience(List)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Common/SaslConfigsBuilder.cs/#L585"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Common.Config.SaslConfigs.html#Org_Apache_Kafka_Common_Config_SaslConfigs_SASL_OAUTHBEARER_EXPECTED_AUDIENCE">SASL_OAUTHBEARER_EXPECTED_AUDIENCE</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SaslConfigsBuilder WithSaslOauthBearerExpectedAudience(List saslOauthBearerExpectedAudience)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>saslOauthBearerExpectedAudience</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.List.html">List</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MASES.KNet.Common.SaslConfigsBuilder.html">SaslConfigsBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Common_SaslConfigsBuilder_WithSaslOauthBearerExpectedIssuer_" data-uid="MASES.KNet.Common.SaslConfigsBuilder.WithSaslOauthBearerExpectedIssuer*"></a>
+
+  <h3 id="MASES_KNet_Common_SaslConfigsBuilder_WithSaslOauthBearerExpectedIssuer_System_String_" data-uid="MASES.KNet.Common.SaslConfigsBuilder.WithSaslOauthBearerExpectedIssuer(System.String)">
+  WithSaslOauthBearerExpectedIssuer(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Common/SaslConfigsBuilder.cs/#L598"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Common.Config.SaslConfigs.html#Org_Apache_Kafka_Common_Config_SaslConfigs_SASL_OAUTHBEARER_EXPECTED_ISSUER">SASL_OAUTHBEARER_EXPECTED_ISSUER</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SaslConfigsBuilder WithSaslOauthBearerExpectedIssuer(string saslOauthBearerExpectedIssuer)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>saslOauthBearerExpectedIssuer</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MASES.KNet.Common.SaslConfigsBuilder.html">SaslConfigsBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Common_SaslConfigsBuilder_WithSaslOauthBearerHeaderUrlEncode_" data-uid="MASES.KNet.Common.SaslConfigsBuilder.WithSaslOauthBearerHeaderUrlEncode*"></a>
+
+  <h3 id="MASES_KNet_Common_SaslConfigsBuilder_WithSaslOauthBearerHeaderUrlEncode_System_Boolean_" data-uid="MASES.KNet.Common.SaslConfigsBuilder.WithSaslOauthBearerHeaderUrlEncode(System.Boolean)">
+  WithSaslOauthBearerHeaderUrlEncode(bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Common/SaslConfigsBuilder.cs/#L611"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Common.Config.SaslConfigs.html#Org_Apache_Kafka_Common_Config_SaslConfigs_SASL_OAUTHBEARER_HEADER_URLENCODE">SASL_OAUTHBEARER_HEADER_URLENCODE</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SaslConfigsBuilder WithSaslOauthBearerHeaderUrlEncode(bool saslOauthBearerHeaderUrlEncode)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>saslOauthBearerHeaderUrlEncode</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MASES.KNet.Common.SaslConfigsBuilder.html">SaslConfigsBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Common_SaslConfigsBuilder_WithSaslOauthBearerJwksEndpointRefreshMs_" data-uid="MASES.KNet.Common.SaslConfigsBuilder.WithSaslOauthBearerJwksEndpointRefreshMs*"></a>
+
+  <h3 id="MASES_KNet_Common_SaslConfigsBuilder_WithSaslOauthBearerJwksEndpointRefreshMs_System_Int64_" data-uid="MASES.KNet.Common.SaslConfigsBuilder.WithSaslOauthBearerJwksEndpointRefreshMs(System.Int64)">
+  WithSaslOauthBearerJwksEndpointRefreshMs(long)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Common/SaslConfigsBuilder.cs/#L533"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Common.Config.SaslConfigs.html#Org_Apache_Kafka_Common_Config_SaslConfigs_SASL_OAUTHBEARER_JWKS_ENDPOINT_REFRESH_MS">SASL_OAUTHBEARER_JWKS_ENDPOINT_REFRESH_MS</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SaslConfigsBuilder WithSaslOauthBearerJwksEndpointRefreshMs(long saslOauthBearerJwksEndpointRefreshMs)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>saslOauthBearerJwksEndpointRefreshMs</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MASES.KNet.Common.SaslConfigsBuilder.html">SaslConfigsBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Common_SaslConfigsBuilder_WithSaslOauthBearerJwksEndpointRetryBackoffMaxMs_" data-uid="MASES.KNet.Common.SaslConfigsBuilder.WithSaslOauthBearerJwksEndpointRetryBackoffMaxMs*"></a>
+
+  <h3 id="MASES_KNet_Common_SaslConfigsBuilder_WithSaslOauthBearerJwksEndpointRetryBackoffMaxMs_System_Int64_" data-uid="MASES.KNet.Common.SaslConfigsBuilder.WithSaslOauthBearerJwksEndpointRetryBackoffMaxMs(System.Int64)">
+  WithSaslOauthBearerJwksEndpointRetryBackoffMaxMs(long)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Common/SaslConfigsBuilder.cs/#L546"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Common.Config.SaslConfigs.html#Org_Apache_Kafka_Common_Config_SaslConfigs_SASL_OAUTHBEARER_JWKS_ENDPOINT_RETRY_BACKOFF_MAX_MS">SASL_OAUTHBEARER_JWKS_ENDPOINT_RETRY_BACKOFF_MAX_MS</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SaslConfigsBuilder WithSaslOauthBearerJwksEndpointRetryBackoffMaxMs(long saslOauthBearerJwksEndpointRetryBackoffMaxMs)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>saslOauthBearerJwksEndpointRetryBackoffMaxMs</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MASES.KNet.Common.SaslConfigsBuilder.html">SaslConfigsBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Common_SaslConfigsBuilder_WithSaslOauthBearerJwksEndpointRetryBackoffMs_" data-uid="MASES.KNet.Common.SaslConfigsBuilder.WithSaslOauthBearerJwksEndpointRetryBackoffMs*"></a>
+
+  <h3 id="MASES_KNet_Common_SaslConfigsBuilder_WithSaslOauthBearerJwksEndpointRetryBackoffMs_System_Int64_" data-uid="MASES.KNet.Common.SaslConfigsBuilder.WithSaslOauthBearerJwksEndpointRetryBackoffMs(System.Int64)">
+  WithSaslOauthBearerJwksEndpointRetryBackoffMs(long)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Common/SaslConfigsBuilder.cs/#L559"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Common.Config.SaslConfigs.html#Org_Apache_Kafka_Common_Config_SaslConfigs_SASL_OAUTHBEARER_JWKS_ENDPOINT_RETRY_BACKOFF_MS">SASL_OAUTHBEARER_JWKS_ENDPOINT_RETRY_BACKOFF_MS</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SaslConfigsBuilder WithSaslOauthBearerJwksEndpointRetryBackoffMs(long saslOauthBearerJwksEndpointRetryBackoffMs)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>saslOauthBearerJwksEndpointRetryBackoffMs</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MASES.KNet.Common.SaslConfigsBuilder.html">SaslConfigsBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Common_SaslConfigsBuilder_WithSaslOauthBearerJwksEndpointUrl_" data-uid="MASES.KNet.Common.SaslConfigsBuilder.WithSaslOauthBearerJwksEndpointUrl*"></a>
+
+  <h3 id="MASES_KNet_Common_SaslConfigsBuilder_WithSaslOauthBearerJwksEndpointUrl_System_String_" data-uid="MASES.KNet.Common.SaslConfigsBuilder.WithSaslOauthBearerJwksEndpointUrl(System.String)">
+  WithSaslOauthBearerJwksEndpointUrl(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Common/SaslConfigsBuilder.cs/#L520"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Common.Config.SaslConfigs.html#Org_Apache_Kafka_Common_Config_SaslConfigs_SASL_OAUTHBEARER_JWKS_ENDPOINT_URL">SASL_OAUTHBEARER_JWKS_ENDPOINT_URL</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SaslConfigsBuilder WithSaslOauthBearerJwksEndpointUrl(string saslOauthBearerJwksEndpointUrl)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>saslOauthBearerJwksEndpointUrl</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MASES.KNet.Common.SaslConfigsBuilder.html">SaslConfigsBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Common_SaslConfigsBuilder_WithSaslOauthBearerJwtRetrieverClass_" data-uid="MASES.KNet.Common.SaslConfigsBuilder.WithSaslOauthBearerJwtRetrieverClass*"></a>
+
+  <h3 id="MASES_KNet_Common_SaslConfigsBuilder_WithSaslOauthBearerJwtRetrieverClass_Java_Lang_Class_" data-uid="MASES.KNet.Common.SaslConfigsBuilder.WithSaslOauthBearerJwtRetrieverClass(Java.Lang.Class)">
+  WithSaslOauthBearerJwtRetrieverClass(Class)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Common/SaslConfigsBuilder.cs/#L273"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Common.Config.SaslConfigs.html#Org_Apache_Kafka_Common_Config_SaslConfigs_SASL_OAUTHBEARER_JWT_RETRIEVER_CLASS">SASL_OAUTHBEARER_JWT_RETRIEVER_CLASS</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SaslConfigsBuilder WithSaslOauthBearerJwtRetrieverClass(Class saslOauthBearerJwtRetrieverClass)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>saslOauthBearerJwtRetrieverClass</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.Class.html">Class</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MASES.KNet.Common.SaslConfigsBuilder.html">SaslConfigsBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Common_SaslConfigsBuilder_WithSaslOauthBearerJwtValidatorClass_" data-uid="MASES.KNet.Common.SaslConfigsBuilder.WithSaslOauthBearerJwtValidatorClass*"></a>
+
+  <h3 id="MASES_KNet_Common_SaslConfigsBuilder_WithSaslOauthBearerJwtValidatorClass_Java_Lang_Class_" data-uid="MASES.KNet.Common.SaslConfigsBuilder.WithSaslOauthBearerJwtValidatorClass(Java.Lang.Class)">
+  WithSaslOauthBearerJwtValidatorClass(Class)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Common/SaslConfigsBuilder.cs/#L286"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Common.Config.SaslConfigs.html#Org_Apache_Kafka_Common_Config_SaslConfigs_SASL_OAUTHBEARER_JWT_VALIDATOR_CLASS">SASL_OAUTHBEARER_JWT_VALIDATOR_CLASS</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SaslConfigsBuilder WithSaslOauthBearerJwtValidatorClass(Class saslOauthBearerJwtValidatorClass)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>saslOauthBearerJwtValidatorClass</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.Class.html">Class</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MASES.KNet.Common.SaslConfigsBuilder.html">SaslConfigsBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Common_SaslConfigsBuilder_WithSaslOauthBearerScope_" data-uid="MASES.KNet.Common.SaslConfigsBuilder.WithSaslOauthBearerScope*"></a>
+
+  <h3 id="MASES_KNet_Common_SaslConfigsBuilder_WithSaslOauthBearerScope_System_String_" data-uid="MASES.KNet.Common.SaslConfigsBuilder.WithSaslOauthBearerScope(System.String)">
+  WithSaslOauthBearerScope(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Common/SaslConfigsBuilder.cs/#L299"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Common.Config.SaslConfigs.html#Org_Apache_Kafka_Common_Config_SaslConfigs_SASL_OAUTHBEARER_SCOPE">SASL_OAUTHBEARER_SCOPE</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SaslConfigsBuilder WithSaslOauthBearerScope(string saslOauthBearerScope)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>saslOauthBearerScope</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MASES.KNet.Common.SaslConfigsBuilder.html">SaslConfigsBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Common_SaslConfigsBuilder_WithSaslOauthBearerScopeClaimName_" data-uid="MASES.KNet.Common.SaslConfigsBuilder.WithSaslOauthBearerScopeClaimName*"></a>
+
+  <h3 id="MASES_KNet_Common_SaslConfigsBuilder_WithSaslOauthBearerScopeClaimName_System_String_" data-uid="MASES.KNet.Common.SaslConfigsBuilder.WithSaslOauthBearerScopeClaimName(System.String)">
+  WithSaslOauthBearerScopeClaimName(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Common/SaslConfigsBuilder.cs/#L481"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Common.Config.SaslConfigs.html#Org_Apache_Kafka_Common_Config_SaslConfigs_SASL_OAUTHBEARER_SCOPE_CLAIM_NAME">SASL_OAUTHBEARER_SCOPE_CLAIM_NAME</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SaslConfigsBuilder WithSaslOauthBearerScopeClaimName(string saslOauthBearerScopeClaimName)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>saslOauthBearerScopeClaimName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MASES.KNet.Common.SaslConfigsBuilder.html">SaslConfigsBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Common_SaslConfigsBuilder_WithSaslOauthBearerSubClaimName_" data-uid="MASES.KNet.Common.SaslConfigsBuilder.WithSaslOauthBearerSubClaimName*"></a>
+
+  <h3 id="MASES_KNet_Common_SaslConfigsBuilder_WithSaslOauthBearerSubClaimName_System_String_" data-uid="MASES.KNet.Common.SaslConfigsBuilder.WithSaslOauthBearerSubClaimName(System.String)">
+  WithSaslOauthBearerSubClaimName(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Common/SaslConfigsBuilder.cs/#L494"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Common.Config.SaslConfigs.html#Org_Apache_Kafka_Common_Config_SaslConfigs_SASL_OAUTHBEARER_SUB_CLAIM_NAME">SASL_OAUTHBEARER_SUB_CLAIM_NAME</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SaslConfigsBuilder WithSaslOauthBearerSubClaimName(string saslOauthBearerSubClaimName)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>saslOauthBearerSubClaimName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MASES.KNet.Common.SaslConfigsBuilder.html">SaslConfigsBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Common_SaslConfigsBuilder_WithSaslOauthBearerTokenEndpointUrl_" data-uid="MASES.KNet.Common.SaslConfigsBuilder.WithSaslOauthBearerTokenEndpointUrl*"></a>
+
+  <h3 id="MASES_KNet_Common_SaslConfigsBuilder_WithSaslOauthBearerTokenEndpointUrl_System_String_" data-uid="MASES.KNet.Common.SaslConfigsBuilder.WithSaslOauthBearerTokenEndpointUrl(System.String)">
+  WithSaslOauthBearerTokenEndpointUrl(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Common/SaslConfigsBuilder.cs/#L507"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Common.Config.SaslConfigs.html#Org_Apache_Kafka_Common_Config_SaslConfigs_SASL_OAUTHBEARER_TOKEN_ENDPOINT_URL">SASL_OAUTHBEARER_TOKEN_ENDPOINT_URL</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SaslConfigsBuilder WithSaslOauthBearerTokenEndpointUrl(string saslOauthBearerTokenEndpointUrl)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>saslOauthBearerTokenEndpointUrl</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MASES.KNet.Common.SaslConfigsBuilder.html">SaslConfigsBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Common/SaslConfigsBuilder.cs/#L30" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <script type="text/javascript">document.write('<div style="text-align: center;">Copyright © 2021 - ' + new Date().getFullYear() + ' MASES s.r.l. | Via San Cesidio 16 - San Valentino in A.C. - PE | P.I. 01932310681</div>');</script>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

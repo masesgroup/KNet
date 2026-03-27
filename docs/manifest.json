@@ -194,6 +194,34 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Common.SaslConfigsBuilder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Common.SaslConfigsBuilder.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MASES.KNet.Common.SaslConfigsBuilder",
+      "Summary": "<p sourcefile=\"api/MASES.KNet.Common.SaslConfigsBuilder.yml\" sourcestartlinenumber=\"1\">Common builder for <xref href=\"MASES.KNet.Common.SaslConfigsBuilder\" data-throw-if-not-resolved=\"false\"></xref></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.Common.SslConfigsBuilder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.Common.SslConfigsBuilder.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MASES.KNet.Common.SslConfigsBuilder",
+      "Summary": "<p sourcefile=\"api/MASES.KNet.Common.SslConfigsBuilder.yml\" sourcestartlinenumber=\"1\">Common builder for <xref href=\"MASES.KNet.Common.SslConfigsBuilder\" data-throw-if-not-resolved=\"false\"></xref></p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/MASES.KNet.Common.TopicConfigBuilder.CleanupPolicyTypes.yml",
       "output": {
         ".html": {
@@ -303,20 +331,6 @@
       "IsMRef": true,
       "Title": "MASES.KNet.Connect.IKNetCommon",
       "Summary": "<p sourcefile=\"api/MASES.KNet.Connect.IKNetCommon.yml\" sourcestartlinenumber=\"1\">Helper interface for <xref href=\"MASES.KNet.Connect.KNetCommon\" data-throw-if-not-resolved=\"false\"></xref></p>\n"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/MASES.KNet.Connect.IKNetConnectConfiguration.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MASES.KNet.Connect.IKNetConnectConfiguration.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "MASES.KNet.Connect.IKNetConnectConfiguration",
-      "Summary": "<p sourcefile=\"api/MASES.KNet.Connect.IKNetConnectConfiguration.yml\" sourcestartlinenumber=\"1\">Interface to simplify access configuration information</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1157,6 +1171,20 @@
       "IsMRef": true,
       "Title": "MASES.KNet.GenericConfigBuilder<T>",
       "Summary": "<p sourcefile=\"api/MASES.KNet.GenericConfigBuilder-1.yml\" sourcestartlinenumber=\"1\">Generic base configuration class</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.IKNetConfigurationFromMap.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.IKNetConfigurationFromMap.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MASES.KNet.IKNetConfigurationFromMap",
+      "Summary": "<p sourcefile=\"api/MASES.KNet.IKNetConfigurationFromMap.yml\" sourcestartlinenumber=\"1\">Interface to simplify access the configuration information reported from JVM as <xref href=\"Java.Util.Map%602\" data-throw-if-not-resolved=\"false\"></xref></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -29188,20 +29216,6 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Org.Apache.Kafka.Streams.Scala.Kstream.package.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Org.Apache.Kafka.Streams.Scala.Kstream.package.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Org.Apache.Kafka.Streams.Scala.Kstream.package",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Scala.Kstream.package.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.2.0/org/apache/kafka/streams/scala/kstream/package.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.2.0/org/apache/kafka/streams/scala/kstream/package.html</a></p>\n"
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/Org.Apache.Kafka.Streams.Scala.Kstream.yml",
       "output": {
         ".html": {
@@ -29283,20 +29297,6 @@
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Streams.Scala.StreamsBuilder",
       "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Scala.StreamsBuilder.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.2.0/org/apache/kafka/streams/scala/StreamsBuilder.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.2.0/org/apache/kafka/streams/scala/StreamsBuilder.html</a></p>\n"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Org.Apache.Kafka.Streams.Scala.package.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Org.Apache.Kafka.Streams.Scala.package.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Org.Apache.Kafka.Streams.Scala.package",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Scala.package.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.2.0/org/apache/kafka/streams/scala/package.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.2.0/org/apache/kafka/streams/scala/package.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -29552,6 +29552,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Streams.State.IRocksDbLifecycleHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Streams.State.IRocksDbLifecycleHandler.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Apache.Kafka.Streams.State.IRocksDbLifecycleHandler",
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.State.IRocksDbLifecycleHandler.yml\" sourcestartlinenumber=\"1\">Defines the RocksDB lifecycle callbacks invoked by KEFCore for a Kafka Streams state store.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Org.Apache.Kafka.Streams.State.ISessionBytesStoreSupplier.yml",
       "output": {
         ".html": {
@@ -29759,6 +29773,34 @@
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Streams.State.IWindowStoreIterator<V>",
       "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.State.IWindowStoreIterator-1.yml\" sourcestartlinenumber=\"1\">.NET interface skeleton to be manually developed following <a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/state/WindowStoreIterator.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/state/WindowStoreIterator.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Streams.State.KNetRocksDBConfigSetter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Streams.State.KNetRocksDBConfigSetter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Apache.Kafka.Streams.State.KNetRocksDBConfigSetter",
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.State.KNetRocksDBConfigSetter.yml\" sourcestartlinenumber=\"1\">Extends <xref href=\"Org.Apache.Kafka.Streams.State.RocksDBConfigSetter\" data-throw-if-not-resolved=\"false\"></xref></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Streams.State.KNetRocksDBConfigSetterCallback.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Streams.State.KNetRocksDBConfigSetterCallback.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Apache.Kafka.Streams.State.KNetRocksDBConfigSetterCallback",
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.State.KNetRocksDBConfigSetterCallback.yml\" sourcestartlinenumber=\"1\">Used to manage <xref href=\"Org.Apache.Kafka.Streams.State.RocksDBConfigSetter\" data-throw-if-not-resolved=\"false\"></xref></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -30053,6 +30095,20 @@
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Streams.State.RocksDBConfigSetter",
       "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.State.RocksDBConfigSetter.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/state/RocksDBConfigSetter.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/state/RocksDBConfigSetter.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Streams.State.RocksDbLifecycleDelegateHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Streams.State.RocksDbLifecycleDelegateHandler.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Apache.Kafka.Streams.State.RocksDbLifecycleDelegateHandler",
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.State.RocksDbLifecycleDelegateHandler.yml\" sourcestartlinenumber=\"1\">Internal <xref href=\"Org.Apache.Kafka.Streams.State.IRocksDbLifecycleHandler\" data-throw-if-not-resolved=\"false\"></xref> implementation wrapping\nthe callback handlers configured through Fluent API.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -32267,6 +32323,3366 @@
       "Summary": null
     },
     {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.AbstractComparator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.AbstractComparator.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.AbstractComparator",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.AbstractComparator.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/AbstractComparator.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/AbstractComparator.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.AbstractEventListener.EnabledEventCallback.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.AbstractEventListener.EnabledEventCallback.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.AbstractEventListener.EnabledEventCallback",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.AbstractEventListener.EnabledEventCallback.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/AbstractEventListener.EnabledEventCallback.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/AbstractEventListener.EnabledEventCallback.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.AbstractEventListener.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.AbstractEventListener.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.AbstractEventListener",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.AbstractEventListener.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/AbstractEventListener.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/AbstractEventListener.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.AbstractEventListenerDirect.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.AbstractEventListenerDirect.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.AbstractEventListenerDirect",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.AbstractEventListenerDirect.yml\" sourcestartlinenumber=\"1\">Direct override of <xref href=\"Org.Rocksdb.AbstractEventListener\" data-throw-if-not-resolved=\"false\"></xref> or its generic type if there is one</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.AbstractImmutableNativeReference.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.AbstractImmutableNativeReference.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.AbstractImmutableNativeReference",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.AbstractImmutableNativeReference.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/AbstractImmutableNativeReference.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/AbstractImmutableNativeReference.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.AbstractNativeReference.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.AbstractNativeReference.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.AbstractNativeReference",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.AbstractNativeReference.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/AbstractNativeReference.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/AbstractNativeReference.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.AbstractRocksIterator-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.AbstractRocksIterator-1.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.AbstractRocksIterator<P>",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.AbstractRocksIterator-1.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/AbstractRocksIterator.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/AbstractRocksIterator.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.AbstractRocksIterator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.AbstractRocksIterator.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.AbstractRocksIterator",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.AbstractRocksIterator.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/AbstractRocksIterator.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/AbstractRocksIterator.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.AbstractSlice-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.AbstractSlice-1.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.AbstractSlice<T>",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.AbstractSlice-1.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/AbstractSlice.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/AbstractSlice.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.AbstractSlice.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.AbstractSlice.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.AbstractSlice",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.AbstractSlice.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/AbstractSlice.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/AbstractSlice.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.AbstractTableFilter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.AbstractTableFilter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.AbstractTableFilter",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.AbstractTableFilter.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/AbstractTableFilter.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/AbstractTableFilter.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.AbstractTraceWriter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.AbstractTraceWriter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.AbstractTraceWriter",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.AbstractTraceWriter.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/AbstractTraceWriter.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/AbstractTraceWriter.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.AbstractTransactionNotifier.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.AbstractTransactionNotifier.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.AbstractTransactionNotifier",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.AbstractTransactionNotifier.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/AbstractTransactionNotifier.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/AbstractTransactionNotifier.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.AbstractWalFilter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.AbstractWalFilter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.AbstractWalFilter",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.AbstractWalFilter.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/AbstractWalFilter.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/AbstractWalFilter.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.AbstractWriteBatch.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.AbstractWriteBatch.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.AbstractWriteBatch",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.AbstractWriteBatch.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/AbstractWriteBatch.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/AbstractWriteBatch.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.AdvancedMutableColumnFamilyOptionsInterface-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.AdvancedMutableColumnFamilyOptionsInterface-1.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.AdvancedMutableColumnFamilyOptionsInterface<T>",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.AdvancedMutableColumnFamilyOptionsInterface-1.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/AdvancedMutableColumnFamilyOptionsInterface.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/AdvancedMutableColumnFamilyOptionsInterface.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.AdvancedMutableColumnFamilyOptionsInterface.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.AdvancedMutableColumnFamilyOptionsInterface.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.AdvancedMutableColumnFamilyOptionsInterface",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.AdvancedMutableColumnFamilyOptionsInterface.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/AdvancedMutableColumnFamilyOptionsInterface.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/AdvancedMutableColumnFamilyOptionsInterface.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.BackgroundErrorReason.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.BackgroundErrorReason.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.BackgroundErrorReason",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.BackgroundErrorReason.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/BackgroundErrorReason.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/BackgroundErrorReason.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.BackupEngineOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.BackupEngineOptions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.BackupEngineOptions",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.BackupEngineOptions.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/BackupEngineOptions.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/BackupEngineOptions.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.BackupInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.BackupInfo.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.BackupInfo",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.BackupInfo.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/BackupInfo.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/BackupInfo.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.BlockBasedTableConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.BlockBasedTableConfig.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.BlockBasedTableConfig",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.BlockBasedTableConfig.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/BlockBasedTableConfig.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/BlockBasedTableConfig.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.BloomFilter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.BloomFilter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.BloomFilter",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.BloomFilter.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/BloomFilter.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/BloomFilter.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.BuiltinComparator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.BuiltinComparator.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.BuiltinComparator",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.BuiltinComparator.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/BuiltinComparator.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/BuiltinComparator.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.ByteBufferGetStatus.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.ByteBufferGetStatus.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.ByteBufferGetStatus",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.ByteBufferGetStatus.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/ByteBufferGetStatus.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/ByteBufferGetStatus.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.Cache.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.Cache.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.Cache",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.Cache.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/Cache.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/Cache.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.CassandraValueMergeOperator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.CassandraValueMergeOperator.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.CassandraValueMergeOperator",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.CassandraValueMergeOperator.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/CassandraValueMergeOperator.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/CassandraValueMergeOperator.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.Checkpoint.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.Checkpoint.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.Checkpoint",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.Checkpoint.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/Checkpoint.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/Checkpoint.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.ChecksumType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.ChecksumType.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.ChecksumType",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.ChecksumType.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/ChecksumType.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/ChecksumType.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.ClockCache.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.ClockCache.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.ClockCache",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.ClockCache.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/ClockCache.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/ClockCache.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.ColumnFamilyDescriptor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.ColumnFamilyDescriptor.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.ColumnFamilyDescriptor",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.ColumnFamilyDescriptor.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/ColumnFamilyDescriptor.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/ColumnFamilyDescriptor.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.ColumnFamilyHandle.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.ColumnFamilyHandle.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.ColumnFamilyHandle",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.ColumnFamilyHandle.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/ColumnFamilyHandle.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/ColumnFamilyHandle.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.ColumnFamilyMetaData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.ColumnFamilyMetaData.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.ColumnFamilyMetaData",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.ColumnFamilyMetaData.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/ColumnFamilyMetaData.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/ColumnFamilyMetaData.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.ColumnFamilyOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.ColumnFamilyOptions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.ColumnFamilyOptions",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.ColumnFamilyOptions.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/ColumnFamilyOptions.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/ColumnFamilyOptions.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.ColumnFamilyOptionsInterface-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.ColumnFamilyOptionsInterface-1.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.ColumnFamilyOptionsInterface<T>",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.ColumnFamilyOptionsInterface-1.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/ColumnFamilyOptionsInterface.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/ColumnFamilyOptionsInterface.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.ColumnFamilyOptionsInterface.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.ColumnFamilyOptionsInterface.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.ColumnFamilyOptionsInterface",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.ColumnFamilyOptionsInterface.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/ColumnFamilyOptionsInterface.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/ColumnFamilyOptionsInterface.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.CompactRangeOptions.BottommostLevelCompaction.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.CompactRangeOptions.BottommostLevelCompaction.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.CompactRangeOptions.BottommostLevelCompaction",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.CompactRangeOptions.BottommostLevelCompaction.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/CompactRangeOptions.BottommostLevelCompaction.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/CompactRangeOptions.BottommostLevelCompaction.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.CompactRangeOptions.Timestamp.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.CompactRangeOptions.Timestamp.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.CompactRangeOptions.Timestamp",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.CompactRangeOptions.Timestamp.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/CompactRangeOptions.Timestamp.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/CompactRangeOptions.Timestamp.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.CompactRangeOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.CompactRangeOptions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.CompactRangeOptions",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.CompactRangeOptions.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/CompactRangeOptions.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/CompactRangeOptions.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.CompactionJobInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.CompactionJobInfo.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.CompactionJobInfo",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.CompactionJobInfo.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/CompactionJobInfo.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/CompactionJobInfo.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.CompactionJobStats.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.CompactionJobStats.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.CompactionJobStats",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.CompactionJobStats.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/CompactionJobStats.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/CompactionJobStats.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.CompactionOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.CompactionOptions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.CompactionOptions",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.CompactionOptions.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/CompactionOptions.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/CompactionOptions.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.CompactionOptionsFIFO.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.CompactionOptionsFIFO.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.CompactionOptionsFIFO",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.CompactionOptionsFIFO.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/CompactionOptionsFIFO.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/CompactionOptionsFIFO.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.CompactionOptionsUniversal.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.CompactionOptionsUniversal.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.CompactionOptionsUniversal",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.CompactionOptionsUniversal.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/CompactionOptionsUniversal.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/CompactionOptionsUniversal.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.CompactionPriority.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.CompactionPriority.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.CompactionPriority",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.CompactionPriority.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/CompactionPriority.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/CompactionPriority.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.CompactionReason.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.CompactionReason.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.CompactionReason",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.CompactionReason.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/CompactionReason.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/CompactionReason.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.CompactionStopStyle.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.CompactionStopStyle.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.CompactionStopStyle",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.CompactionStopStyle.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/CompactionStopStyle.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/CompactionStopStyle.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.CompactionStyle.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.CompactionStyle.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.CompactionStyle",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.CompactionStyle.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/CompactionStyle.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/CompactionStyle.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.ComparatorOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.ComparatorOptions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.ComparatorOptions",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.ComparatorOptions.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/ComparatorOptions.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/ComparatorOptions.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.CompressionOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.CompressionOptions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.CompressionOptions",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.CompressionOptions.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/CompressionOptions.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/CompressionOptions.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.CompressionType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.CompressionType.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.CompressionType",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.CompressionType.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/CompressionType.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/CompressionType.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.ConcurrentTaskLimiter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.ConcurrentTaskLimiter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.ConcurrentTaskLimiter",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.ConcurrentTaskLimiter.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/ConcurrentTaskLimiter.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/ConcurrentTaskLimiter.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.ConcurrentTaskLimiterImpl.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.ConcurrentTaskLimiterImpl.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.ConcurrentTaskLimiterImpl",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.ConcurrentTaskLimiterImpl.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/ConcurrentTaskLimiterImpl.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/ConcurrentTaskLimiterImpl.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.ConfigOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.ConfigOptions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.ConfigOptions",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.ConfigOptions.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/ConfigOptions.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/ConfigOptions.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.DBOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.DBOptions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.DBOptions",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.DBOptions.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/DBOptions.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/DBOptions.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.DBOptionsInterface-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.DBOptionsInterface-1.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.DBOptionsInterface<T>",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.DBOptionsInterface-1.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/DBOptionsInterface.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/DBOptionsInterface.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.DBOptionsInterface.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.DBOptionsInterface.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.DBOptionsInterface",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.DBOptionsInterface.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/DBOptionsInterface.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/DBOptionsInterface.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.DataBlockIndexType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.DataBlockIndexType.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.DataBlockIndexType",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.DataBlockIndexType.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/DataBlockIndexType.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/DataBlockIndexType.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.DbPath.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.DbPath.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.DbPath",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.DbPath.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/DbPath.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/DbPath.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.DirectSlice.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.DirectSlice.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.DirectSlice",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.DirectSlice.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/DirectSlice.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/DirectSlice.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.EncodingType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.EncodingType.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.EncodingType",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.EncodingType.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/EncodingType.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/EncodingType.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.Env.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.Env.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.Env",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.Env.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/Env.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/Env.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.EnvOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.EnvOptions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.EnvOptions",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.EnvOptions.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/EnvOptions.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/EnvOptions.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.EventListener.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.EventListener.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.EventListener",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.EventListener.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/EventListener.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/EventListener.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.EventListenerDirect.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.EventListenerDirect.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.EventListenerDirect",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.EventListenerDirect.yml\" sourcestartlinenumber=\"1\">Direct override of <xref href=\"Org.Rocksdb.EventListener\" data-throw-if-not-resolved=\"false\"></xref> or its generic type if there is one</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.Experimental.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.Experimental.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.Experimental",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.Experimental.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/Experimental.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/Experimental.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.ExportImportFilesMetaData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.ExportImportFilesMetaData.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.ExportImportFilesMetaData",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.ExportImportFilesMetaData.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/ExportImportFilesMetaData.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/ExportImportFilesMetaData.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.ExternalFileIngestionInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.ExternalFileIngestionInfo.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.ExternalFileIngestionInfo",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.ExternalFileIngestionInfo.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/ExternalFileIngestionInfo.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/ExternalFileIngestionInfo.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.FileOperationInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.FileOperationInfo.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.FileOperationInfo",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.FileOperationInfo.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/FileOperationInfo.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/FileOperationInfo.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.Filter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.Filter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.Filter",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.Filter.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/Filter.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/Filter.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.FilterPolicyType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.FilterPolicyType.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.FilterPolicyType",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.FilterPolicyType.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/FilterPolicyType.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/FilterPolicyType.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.FlushJobInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.FlushJobInfo.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.FlushJobInfo",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.FlushJobInfo.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/FlushJobInfo.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/FlushJobInfo.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.FlushOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.FlushOptions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.FlushOptions",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.FlushOptions.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/FlushOptions.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/FlushOptions.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.FlushReason.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.FlushReason.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.FlushReason",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.FlushReason.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/FlushReason.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/FlushReason.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.GetStatus.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.GetStatus.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.GetStatus",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.GetStatus.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/GetStatus.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/GetStatus.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.HashLinkedListMemTableConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.HashLinkedListMemTableConfig.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.HashLinkedListMemTableConfig",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.HashLinkedListMemTableConfig.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/HashLinkedListMemTableConfig.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/HashLinkedListMemTableConfig.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.HashSkipListMemTableConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.HashSkipListMemTableConfig.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.HashSkipListMemTableConfig",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.HashSkipListMemTableConfig.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/HashSkipListMemTableConfig.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/HashSkipListMemTableConfig.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.HistogramData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.HistogramData.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.HistogramData",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.HistogramData.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/HistogramData.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/HistogramData.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.HistogramType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.HistogramType.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.HistogramType",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.HistogramType.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/HistogramType.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/HistogramType.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.Holder-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.Holder-1.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.Holder<T>",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.Holder-1.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/Holder.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/Holder.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.Holder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.Holder.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.Holder",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.Holder.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/Holder.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/Holder.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.HyperClockCache.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.HyperClockCache.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.HyperClockCache",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.HyperClockCache.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/HyperClockCache.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/HyperClockCache.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.IAdvancedMutableColumnFamilyOptionsInterface-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.IAdvancedMutableColumnFamilyOptionsInterface-1.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.IAdvancedMutableColumnFamilyOptionsInterface<T>",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.IAdvancedMutableColumnFamilyOptionsInterface-1.yml\" sourcestartlinenumber=\"1\">.NET interface skeleton to be manually developed following <a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/AdvancedMutableColumnFamilyOptionsInterface.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/AdvancedMutableColumnFamilyOptionsInterface.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.IColumnFamilyOptionsInterface-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.IColumnFamilyOptionsInterface-1.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.IColumnFamilyOptionsInterface<T>",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.IColumnFamilyOptionsInterface-1.yml\" sourcestartlinenumber=\"1\">.NET interface skeleton to be manually developed following <a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/ColumnFamilyOptionsInterface.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/ColumnFamilyOptionsInterface.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.IDBOptionsInterface-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.IDBOptionsInterface-1.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.IDBOptionsInterface<T>",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.IDBOptionsInterface-1.yml\" sourcestartlinenumber=\"1\">.NET interface skeleton to be manually developed following <a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/DBOptionsInterface.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/DBOptionsInterface.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.IEventListener.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.IEventListener.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.IEventListener",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.IEventListener.yml\" sourcestartlinenumber=\"1\">.NET interface for org.mases.knet.generated.org.rocksdb.EventListener implementing <a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/EventListener.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/EventListener.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.IExperimental.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.IExperimental.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.IExperimental",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.IExperimental.yml\" sourcestartlinenumber=\"1\">.NET interface skeleton to be manually developed following <a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/Experimental.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/Experimental.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.ILoggerInterface.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.ILoggerInterface.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.ILoggerInterface",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.ILoggerInterface.yml\" sourcestartlinenumber=\"1\">.NET interface skeleton to be manually developed following <a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/LoggerInterface.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/LoggerInterface.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.IMutableColumnFamilyOptionsInterface-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.IMutableColumnFamilyOptionsInterface-1.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.IMutableColumnFamilyOptionsInterface<T>",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.IMutableColumnFamilyOptionsInterface-1.yml\" sourcestartlinenumber=\"1\">.NET interface skeleton to be manually developed following <a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/MutableColumnFamilyOptionsInterface.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/MutableColumnFamilyOptionsInterface.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.IMutableDBOptionsInterface-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.IMutableDBOptionsInterface-1.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.IMutableDBOptionsInterface<T>",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.IMutableDBOptionsInterface-1.yml\" sourcestartlinenumber=\"1\">.NET interface skeleton to be manually developed following <a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/MutableDBOptionsInterface.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/MutableDBOptionsInterface.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.IMutableOptionKey.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.IMutableOptionKey.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.IMutableOptionKey",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.IMutableOptionKey.yml\" sourcestartlinenumber=\"1\">.NET interface skeleton to be manually developed following <a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/MutableOptionKey.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/MutableOptionKey.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.IRocksIteratorInterface.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.IRocksIteratorInterface.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.IRocksIteratorInterface",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.IRocksIteratorInterface.yml\" sourcestartlinenumber=\"1\">.NET interface skeleton to be manually developed following <a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/RocksIteratorInterface.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/RocksIteratorInterface.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.IStatisticsCollectorCallback.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.IStatisticsCollectorCallback.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.IStatisticsCollectorCallback",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.IStatisticsCollectorCallback.yml\" sourcestartlinenumber=\"1\">.NET interface skeleton to be manually developed following <a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/StatisticsCollectorCallback.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/StatisticsCollectorCallback.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.ITableFilter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.ITableFilter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.ITableFilter",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.ITableFilter.yml\" sourcestartlinenumber=\"1\">.NET interface skeleton to be manually developed following <a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/TableFilter.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/TableFilter.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.ITraceWriter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.ITraceWriter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.ITraceWriter",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.ITraceWriter.yml\" sourcestartlinenumber=\"1\">.NET interface skeleton to be manually developed following <a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/TraceWriter.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/TraceWriter.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.IWalFilter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.IWalFilter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.IWalFilter",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.IWalFilter.yml\" sourcestartlinenumber=\"1\">.NET interface skeleton to be manually developed following <a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/WalFilter.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/WalFilter.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.IWriteBatchInterface.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.IWriteBatchInterface.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.IWriteBatchInterface",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.IWriteBatchInterface.yml\" sourcestartlinenumber=\"1\">.NET interface skeleton to be manually developed following <a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/WriteBatchInterface.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/WriteBatchInterface.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.ImportColumnFamilyOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.ImportColumnFamilyOptions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.ImportColumnFamilyOptions",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.ImportColumnFamilyOptions.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/ImportColumnFamilyOptions.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/ImportColumnFamilyOptions.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.IndexShorteningMode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.IndexShorteningMode.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.IndexShorteningMode",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.IndexShorteningMode.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/IndexShorteningMode.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/IndexShorteningMode.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.IndexType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.IndexType.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.IndexType",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.IndexType.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/IndexType.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/IndexType.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.InfoLogLevel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.InfoLogLevel.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.InfoLogLevel",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.InfoLogLevel.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/InfoLogLevel.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/InfoLogLevel.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.IngestExternalFileOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.IngestExternalFileOptions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.IngestExternalFileOptions",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.IngestExternalFileOptions.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/IngestExternalFileOptions.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/IngestExternalFileOptions.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.KeyMayExist.KeyMayExistEnum.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.KeyMayExist.KeyMayExistEnum.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.KeyMayExist.KeyMayExistEnum",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.KeyMayExist.KeyMayExistEnum.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/KeyMayExist.KeyMayExistEnum.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/KeyMayExist.KeyMayExistEnum.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.KeyMayExist.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.KeyMayExist.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.KeyMayExist",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.KeyMayExist.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/KeyMayExist.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/KeyMayExist.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.LRUCache.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.LRUCache.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.LRUCache",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.LRUCache.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/LRUCache.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/LRUCache.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.LevelMetaData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.LevelMetaData.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.LevelMetaData",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.LevelMetaData.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/LevelMetaData.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/LevelMetaData.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.LiveFileMetaData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.LiveFileMetaData.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.LiveFileMetaData",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.LiveFileMetaData.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/LiveFileMetaData.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/LiveFileMetaData.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.LogFile.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.LogFile.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.LogFile",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.LogFile.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/LogFile.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/LogFile.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.Logger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.Logger.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.Logger",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.Logger.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/Logger.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/Logger.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.LoggerInterface.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.LoggerInterface.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.LoggerInterface",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.LoggerInterface.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/LoggerInterface.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/LoggerInterface.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.LoggerType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.LoggerType.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.LoggerType",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.LoggerType.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/LoggerType.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/LoggerType.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.MemTableConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.MemTableConfig.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.MemTableConfig",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.MemTableConfig.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/MemTableConfig.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/MemTableConfig.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.MemTableInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.MemTableInfo.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.MemTableInfo",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.MemTableInfo.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/MemTableInfo.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/MemTableInfo.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.MemoryUsageType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.MemoryUsageType.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.MemoryUsageType",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.MemoryUsageType.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/MemoryUsageType.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/MemoryUsageType.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.MemoryUtil.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.MemoryUtil.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.MemoryUtil",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.MemoryUtil.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/MemoryUtil.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/MemoryUtil.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.MergeOperator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.MergeOperator.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.MergeOperator",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.MergeOperator.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/MergeOperator.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/MergeOperator.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.MutableColumnFamilyOptions.BlobOption.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.MutableColumnFamilyOptions.BlobOption.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.MutableColumnFamilyOptions.BlobOption",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.MutableColumnFamilyOptions.BlobOption.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/MutableColumnFamilyOptions.BlobOption.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/MutableColumnFamilyOptions.BlobOption.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.MutableColumnFamilyOptions.CompactionOption.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.MutableColumnFamilyOptions.CompactionOption.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.MutableColumnFamilyOptions.CompactionOption",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.MutableColumnFamilyOptions.CompactionOption.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/MutableColumnFamilyOptions.CompactionOption.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/MutableColumnFamilyOptions.CompactionOption.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.MutableColumnFamilyOptions.MemtableOption.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.MutableColumnFamilyOptions.MemtableOption.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.MutableColumnFamilyOptions.MemtableOption",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.MutableColumnFamilyOptions.MemtableOption.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/MutableColumnFamilyOptions.MemtableOption.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/MutableColumnFamilyOptions.MemtableOption.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.MutableColumnFamilyOptions.MiscOption.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.MutableColumnFamilyOptions.MiscOption.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.MutableColumnFamilyOptions.MiscOption",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.MutableColumnFamilyOptions.MiscOption.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/MutableColumnFamilyOptions.MiscOption.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/MutableColumnFamilyOptions.MiscOption.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.MutableColumnFamilyOptions.MutableColumnFamilyOptionsBuilder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.MutableColumnFamilyOptions.MutableColumnFamilyOptionsBuilder.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.MutableColumnFamilyOptions.MutableColumnFamilyOptionsBuilder",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.MutableColumnFamilyOptions.MutableColumnFamilyOptionsBuilder.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/MutableColumnFamilyOptions.MutableColumnFamilyOptionsBuilder.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/MutableColumnFamilyOptions.MutableColumnFamilyOptionsBuilder.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.MutableColumnFamilyOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.MutableColumnFamilyOptions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.MutableColumnFamilyOptions",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.MutableColumnFamilyOptions.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/MutableColumnFamilyOptions.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/MutableColumnFamilyOptions.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.MutableColumnFamilyOptionsInterface-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.MutableColumnFamilyOptionsInterface-1.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.MutableColumnFamilyOptionsInterface<T>",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.MutableColumnFamilyOptionsInterface-1.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/MutableColumnFamilyOptionsInterface.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/MutableColumnFamilyOptionsInterface.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.MutableColumnFamilyOptionsInterface.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.MutableColumnFamilyOptionsInterface.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.MutableColumnFamilyOptionsInterface",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.MutableColumnFamilyOptionsInterface.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/MutableColumnFamilyOptionsInterface.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/MutableColumnFamilyOptionsInterface.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.MutableDBOptionsInterface-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.MutableDBOptionsInterface-1.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.MutableDBOptionsInterface<T>",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.MutableDBOptionsInterface-1.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/MutableDBOptionsInterface.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/MutableDBOptionsInterface.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.MutableDBOptionsInterface.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.MutableDBOptionsInterface.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.MutableDBOptionsInterface",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.MutableDBOptionsInterface.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/MutableDBOptionsInterface.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/MutableDBOptionsInterface.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.MutableOptionKey.ValueType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.MutableOptionKey.ValueType.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.MutableOptionKey.ValueType",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.MutableOptionKey.ValueType.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/MutableOptionKey.ValueType.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/MutableOptionKey.ValueType.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.MutableOptionKey.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.MutableOptionKey.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.MutableOptionKey",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.MutableOptionKey.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/MutableOptionKey.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/MutableOptionKey.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.MutableOptionValue-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.MutableOptionValue-1.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.MutableOptionValue<T>",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.MutableOptionValue-1.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/MutableOptionValue.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/MutableOptionValue.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.MutableOptionValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.MutableOptionValue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.MutableOptionValue",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.MutableOptionValue.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/MutableOptionValue.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/MutableOptionValue.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.NativeComparatorWrapper.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.NativeComparatorWrapper.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.NativeComparatorWrapper",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.NativeComparatorWrapper.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/NativeComparatorWrapper.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/NativeComparatorWrapper.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.NativeLibraryLoader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.NativeLibraryLoader.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.NativeLibraryLoader",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.NativeLibraryLoader.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/NativeLibraryLoader.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/NativeLibraryLoader.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.OperationStage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.OperationStage.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.OperationStage",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.OperationStage.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/OperationStage.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/OperationStage.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.OperationType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.OperationType.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.OperationType",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.OperationType.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/OperationType.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/OperationType.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.OptimisticTransactionDB.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.OptimisticTransactionDB.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.OptimisticTransactionDB",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.OptimisticTransactionDB.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/OptimisticTransactionDB.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/OptimisticTransactionDB.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.OptimisticTransactionOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.OptimisticTransactionOptions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.OptimisticTransactionOptions",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.OptimisticTransactionOptions.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/OptimisticTransactionOptions.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/OptimisticTransactionOptions.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.Options.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.Options.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.Options",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.Options.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/Options.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/Options.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.OptionsUtil.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.OptionsUtil.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.OptionsUtil",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.OptionsUtil.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/OptionsUtil.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/OptionsUtil.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.PerfContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.PerfContext.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.PerfContext",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.PerfContext.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/PerfContext.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/PerfContext.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.PerfLevel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.PerfLevel.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.PerfLevel",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.PerfLevel.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/PerfLevel.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/PerfLevel.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.PersistentCache.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.PersistentCache.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.PersistentCache",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.PersistentCache.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/PersistentCache.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/PersistentCache.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.PlainTableConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.PlainTableConfig.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.PlainTableConfig",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.PlainTableConfig.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/PlainTableConfig.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/PlainTableConfig.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.PrepopulateBlobCache.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.PrepopulateBlobCache.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.PrepopulateBlobCache",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.PrepopulateBlobCache.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/PrepopulateBlobCache.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/PrepopulateBlobCache.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.Priority.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.Priority.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.Priority",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.Priority.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/Priority.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/Priority.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.Range.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.Range.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.Range",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.Range.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/Range.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/Range.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.RateLimiter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.RateLimiter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.RateLimiter",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.RateLimiter.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/RateLimiter.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/RateLimiter.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.RateLimiterMode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.RateLimiterMode.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.RateLimiterMode",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.RateLimiterMode.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/RateLimiterMode.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/RateLimiterMode.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.ReadOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.ReadOptions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.ReadOptions",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.ReadOptions.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/ReadOptions.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/ReadOptions.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.ReadTier.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.ReadTier.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.ReadTier",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.ReadTier.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/ReadTier.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/ReadTier.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.RestoreOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.RestoreOptions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.RestoreOptions",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.RestoreOptions.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/RestoreOptions.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/RestoreOptions.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.ReusedSynchronisationType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.ReusedSynchronisationType.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.ReusedSynchronisationType",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.ReusedSynchronisationType.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/ReusedSynchronisationType.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/ReusedSynchronisationType.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.RocksCallbackObject.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.RocksCallbackObject.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.RocksCallbackObject",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.RocksCallbackObject.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/RocksCallbackObject.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/RocksCallbackObject.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.RocksDB.CountAndSize.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.RocksDB.CountAndSize.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.RocksDB.CountAndSize",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.RocksDB.CountAndSize.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/RocksDB.CountAndSize.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/RocksDB.CountAndSize.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.RocksDB.LiveFiles.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.RocksDB.LiveFiles.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.RocksDB.LiveFiles",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.RocksDB.LiveFiles.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/RocksDB.LiveFiles.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/RocksDB.LiveFiles.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.RocksDB.Version.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.RocksDB.Version.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.RocksDB.Version",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.RocksDB.Version.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/RocksDB.Version.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/RocksDB.Version.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.RocksDB.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.RocksDB.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.RocksDB",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.RocksDB.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/RocksDB.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/RocksDB.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.RocksDBException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.RocksDBException.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.RocksDBException",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.RocksDBException.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/RocksDBException.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/RocksDBException.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.RocksEnv.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.RocksEnv.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.RocksEnv",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.RocksEnv.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/RocksEnv.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/RocksEnv.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.RocksIterator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.RocksIterator.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.RocksIterator",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.RocksIterator.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/RocksIterator.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/RocksIterator.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.RocksIteratorInterface.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.RocksIteratorInterface.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.RocksIteratorInterface",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.RocksIteratorInterface.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/RocksIteratorInterface.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/RocksIteratorInterface.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.RocksMemEnv.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.RocksMemEnv.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.RocksMemEnv",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.RocksMemEnv.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/RocksMemEnv.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/RocksMemEnv.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.RocksMutableObject.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.RocksMutableObject.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.RocksMutableObject",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.RocksMutableObject.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/RocksMutableObject.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/RocksMutableObject.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.RocksObject.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.RocksObject.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.RocksObject",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.RocksObject.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/RocksObject.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/RocksObject.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.SanityLevel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.SanityLevel.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.SanityLevel",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.SanityLevel.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/SanityLevel.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/SanityLevel.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.SizeApproximationFlag.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.SizeApproximationFlag.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.SizeApproximationFlag",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.SizeApproximationFlag.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/SizeApproximationFlag.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/SizeApproximationFlag.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.SkipListMemTableConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.SkipListMemTableConfig.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.SkipListMemTableConfig",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.SkipListMemTableConfig.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/SkipListMemTableConfig.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/SkipListMemTableConfig.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.Slice.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.Slice.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.Slice",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.Slice.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/Slice.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/Slice.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.Snapshot.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.Snapshot.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.Snapshot",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.Snapshot.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/Snapshot.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/Snapshot.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.SstFileManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.SstFileManager.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.SstFileManager",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.SstFileManager.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/SstFileManager.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/SstFileManager.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.SstFileMetaData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.SstFileMetaData.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.SstFileMetaData",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.SstFileMetaData.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/SstFileMetaData.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/SstFileMetaData.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.SstFileReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.SstFileReader.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.SstFileReader",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.SstFileReader.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/SstFileReader.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/SstFileReader.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.SstFileReaderIterator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.SstFileReaderIterator.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.SstFileReaderIterator",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.SstFileReaderIterator.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/SstFileReaderIterator.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/SstFileReaderIterator.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.SstFileWriter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.SstFileWriter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.SstFileWriter",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.SstFileWriter.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/SstFileWriter.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/SstFileWriter.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.SstPartitionerFactory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.SstPartitionerFactory.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.SstPartitionerFactory",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.SstPartitionerFactory.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/SstPartitionerFactory.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/SstPartitionerFactory.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.SstPartitionerFixedPrefixFactory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.SstPartitionerFixedPrefixFactory.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.SstPartitionerFixedPrefixFactory",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.SstPartitionerFixedPrefixFactory.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/SstPartitionerFixedPrefixFactory.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/SstPartitionerFixedPrefixFactory.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.StateType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.StateType.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.StateType",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.StateType.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/StateType.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/StateType.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.Statistics.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.Statistics.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.Statistics",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.Statistics.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/Statistics.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/Statistics.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.StatisticsCollector.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.StatisticsCollector.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.StatisticsCollector",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.StatisticsCollector.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/StatisticsCollector.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/StatisticsCollector.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.StatisticsCollectorCallback.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.StatisticsCollectorCallback.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.StatisticsCollectorCallback",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.StatisticsCollectorCallback.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/StatisticsCollectorCallback.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/StatisticsCollectorCallback.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.StatsCollectorInput.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.StatsCollectorInput.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.StatsCollectorInput",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.StatsCollectorInput.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/StatsCollectorInput.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/StatsCollectorInput.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.StatsLevel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.StatsLevel.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.StatsLevel",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.StatsLevel.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/StatsLevel.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/StatsLevel.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.Status.Code.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.Status.Code.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.Status.Code",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.Status.Code.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/Status.Code.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/Status.Code.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.Status.SubCode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.Status.SubCode.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.Status.SubCode",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.Status.SubCode.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/Status.SubCode.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/Status.SubCode.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.Status.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.Status.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.Status",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.Status.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/Status.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/Status.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.StringAppendOperator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.StringAppendOperator.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.StringAppendOperator",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.StringAppendOperator.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/StringAppendOperator.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/StringAppendOperator.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.TableFileCreationBriefInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.TableFileCreationBriefInfo.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.TableFileCreationBriefInfo",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.TableFileCreationBriefInfo.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/TableFileCreationBriefInfo.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/TableFileCreationBriefInfo.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.TableFileCreationInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.TableFileCreationInfo.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.TableFileCreationInfo",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.TableFileCreationInfo.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/TableFileCreationInfo.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/TableFileCreationInfo.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.TableFileCreationReason.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.TableFileCreationReason.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.TableFileCreationReason",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.TableFileCreationReason.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/TableFileCreationReason.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/TableFileCreationReason.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.TableFileDeletionInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.TableFileDeletionInfo.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.TableFileDeletionInfo",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.TableFileDeletionInfo.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/TableFileDeletionInfo.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/TableFileDeletionInfo.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.TableFilter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.TableFilter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.TableFilter",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.TableFilter.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/TableFilter.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/TableFilter.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.TableFormatConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.TableFormatConfig.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.TableFormatConfig",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.TableFormatConfig.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/TableFormatConfig.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/TableFormatConfig.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.TableProperties.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.TableProperties.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.TableProperties",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.TableProperties.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/TableProperties.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/TableProperties.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.TablePropertiesCollectorFactory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.TablePropertiesCollectorFactory.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.TablePropertiesCollectorFactory",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.TablePropertiesCollectorFactory.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/TablePropertiesCollectorFactory.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/TablePropertiesCollectorFactory.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.ThreadStatus.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.ThreadStatus.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.ThreadStatus",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.ThreadStatus.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/ThreadStatus.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/ThreadStatus.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.ThreadType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.ThreadType.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.ThreadType",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.ThreadType.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/ThreadType.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/ThreadType.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.TickerType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.TickerType.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.TickerType",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.TickerType.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/TickerType.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/TickerType.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.TimedEnv.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.TimedEnv.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.TimedEnv",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.TimedEnv.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/TimedEnv.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/TimedEnv.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.TraceOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.TraceOptions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.TraceOptions",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.TraceOptions.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/TraceOptions.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/TraceOptions.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.TraceWriter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.TraceWriter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.TraceWriter",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.TraceWriter.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/TraceWriter.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/TraceWriter.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.Transaction.TransactionState.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.Transaction.TransactionState.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.Transaction.TransactionState",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.Transaction.TransactionState.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/Transaction.TransactionState.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/Transaction.TransactionState.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.Transaction.WaitingTransactions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.Transaction.WaitingTransactions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.Transaction.WaitingTransactions",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.Transaction.WaitingTransactions.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/Transaction.WaitingTransactions.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/Transaction.WaitingTransactions.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.Transaction.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.Transaction.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.Transaction",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.Transaction.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/Transaction.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/Transaction.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.TransactionDB.DeadlockInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.TransactionDB.DeadlockInfo.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.TransactionDB.DeadlockInfo",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.TransactionDB.DeadlockInfo.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/TransactionDB.DeadlockInfo.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/TransactionDB.DeadlockInfo.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.TransactionDB.DeadlockPath.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.TransactionDB.DeadlockPath.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.TransactionDB.DeadlockPath",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.TransactionDB.DeadlockPath.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/TransactionDB.DeadlockPath.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/TransactionDB.DeadlockPath.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.TransactionDB.KeyLockInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.TransactionDB.KeyLockInfo.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.TransactionDB.KeyLockInfo",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.TransactionDB.KeyLockInfo.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/TransactionDB.KeyLockInfo.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/TransactionDB.KeyLockInfo.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.TransactionDB.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.TransactionDB.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.TransactionDB",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.TransactionDB.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/TransactionDB.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/TransactionDB.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.TransactionDBOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.TransactionDBOptions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.TransactionDBOptions",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.TransactionDBOptions.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/TransactionDBOptions.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/TransactionDBOptions.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.TransactionLogIterator.BatchResult.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.TransactionLogIterator.BatchResult.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.TransactionLogIterator.BatchResult",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.TransactionLogIterator.BatchResult.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/TransactionLogIterator.BatchResult.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/TransactionLogIterator.BatchResult.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.TransactionLogIterator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.TransactionLogIterator.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.TransactionLogIterator",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.TransactionLogIterator.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/TransactionLogIterator.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/TransactionLogIterator.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.TransactionOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.TransactionOptions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.TransactionOptions",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.TransactionOptions.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/TransactionOptions.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/TransactionOptions.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.TtlDB.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.TtlDB.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.TtlDB",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.TtlDB.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/TtlDB.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/TtlDB.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.TxnDBWritePolicy.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.TxnDBWritePolicy.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.TxnDBWritePolicy",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.TxnDBWritePolicy.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/TxnDBWritePolicy.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/TxnDBWritePolicy.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.UInt64AddOperator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.UInt64AddOperator.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.UInt64AddOperator",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.UInt64AddOperator.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/UInt64AddOperator.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/UInt64AddOperator.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.Util.BufferUtil.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.Util.BufferUtil.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.Util.BufferUtil",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.Util.BufferUtil.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/util/BufferUtil.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/util/BufferUtil.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.Util.ByteUtil.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.Util.ByteUtil.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.Util.ByteUtil",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.Util.ByteUtil.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/util/ByteUtil.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/util/ByteUtil.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.Util.BytewiseComparator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.Util.BytewiseComparator.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.Util.BytewiseComparator",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.Util.BytewiseComparator.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/util/BytewiseComparator.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/util/BytewiseComparator.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.Util.Environment.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.Util.Environment.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.Util.Environment",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.Util.Environment.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/util/Environment.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/util/Environment.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.Util.IntComparator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.Util.IntComparator.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.Util.IntComparator",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.Util.IntComparator.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/util/IntComparator.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/util/IntComparator.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.Util.ReverseBytewiseComparator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.Util.ReverseBytewiseComparator.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.Util.ReverseBytewiseComparator",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.Util.ReverseBytewiseComparator.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/util/ReverseBytewiseComparator.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/util/ReverseBytewiseComparator.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.Util.SizeUnit.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.Util.SizeUnit.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.Util.SizeUnit",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.Util.SizeUnit.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/util/SizeUnit.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/util/SizeUnit.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.Util.StdErrLogger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.Util.StdErrLogger.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.Util.StdErrLogger",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.Util.StdErrLogger.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/util/StdErrLogger.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/util/StdErrLogger.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.Util.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.Util.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.Util",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.VectorMemTableConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.VectorMemTableConfig.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.VectorMemTableConfig",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.VectorMemTableConfig.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/VectorMemTableConfig.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/VectorMemTableConfig.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.WALRecoveryMode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.WALRecoveryMode.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.WALRecoveryMode",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.WALRecoveryMode.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/WALRecoveryMode.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/WALRecoveryMode.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.WBWIRocksIterator.WriteEntry.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.WBWIRocksIterator.WriteEntry.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.WBWIRocksIterator.WriteEntry",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.WBWIRocksIterator.WriteEntry.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/WBWIRocksIterator.WriteEntry.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/WBWIRocksIterator.WriteEntry.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.WBWIRocksIterator.WriteType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.WBWIRocksIterator.WriteType.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.WBWIRocksIterator.WriteType",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.WBWIRocksIterator.WriteType.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/WBWIRocksIterator.WriteType.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/WBWIRocksIterator.WriteType.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.WBWIRocksIterator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.WBWIRocksIterator.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.WBWIRocksIterator",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.WBWIRocksIterator.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/WBWIRocksIterator.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/WBWIRocksIterator.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.WalFileType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.WalFileType.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.WalFileType",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.WalFileType.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/WalFileType.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/WalFileType.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.WalFilter.LogRecordFoundResult.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.WalFilter.LogRecordFoundResult.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.WalFilter.LogRecordFoundResult",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.WalFilter.LogRecordFoundResult.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/WalFilter.LogRecordFoundResult.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/WalFilter.LogRecordFoundResult.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.WalFilter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.WalFilter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.WalFilter",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.WalFilter.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/WalFilter.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/WalFilter.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.WalProcessingOption.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.WalProcessingOption.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.WalProcessingOption",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.WalProcessingOption.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/WalProcessingOption.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/WalProcessingOption.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.WriteBatch.Handler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.WriteBatch.Handler.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.WriteBatch.Handler",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.WriteBatch.Handler.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/WriteBatch.Handler.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/WriteBatch.Handler.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.WriteBatch.SavePoint.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.WriteBatch.SavePoint.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.WriteBatch.SavePoint",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.WriteBatch.SavePoint.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/WriteBatch.SavePoint.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/WriteBatch.SavePoint.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.WriteBatch.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.WriteBatch.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.WriteBatch",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.WriteBatch.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/WriteBatch.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/WriteBatch.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.WriteBatchInterface.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.WriteBatchInterface.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.WriteBatchInterface",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.WriteBatchInterface.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/WriteBatchInterface.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/WriteBatchInterface.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.WriteBatchWithIndex.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.WriteBatchWithIndex.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.WriteBatchWithIndex",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.WriteBatchWithIndex.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/WriteBatchWithIndex.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/WriteBatchWithIndex.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.WriteBufferManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.WriteBufferManager.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.WriteBufferManager",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.WriteBufferManager.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/WriteBufferManager.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/WriteBufferManager.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.WriteOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.WriteOptions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.WriteOptions",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.WriteOptions.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/WriteOptions.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/WriteOptions.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.WriteStallCondition.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.WriteStallCondition.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.WriteStallCondition",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.WriteStallCondition.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/WriteStallCondition.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/WriteStallCondition.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.WriteStallInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.WriteStallInfo.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb.WriteStallInfo",
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.WriteStallInfo.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/WriteStallInfo.html\">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/WriteStallInfo.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Rocksdb.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Rocksdb.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Rocksdb",
+      "Summary": null
+    },
+    {
       "type": "Conceptual",
       "source_relative_path": "api/index.md",
       "output": {
@@ -32295,6 +35711,16 @@
       "output": {
         ".html": {
           "relative_path": "articles/API_extensibility.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/backends.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/backends.html"
         }
       },
       "version": ""
@@ -32385,6 +35811,16 @@
       "output": {
         ".html": {
           "relative_path": "articles/roadmap.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/rocksdb_configuration.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/rocksdb_configuration.html"
         }
       },
       "version": ""

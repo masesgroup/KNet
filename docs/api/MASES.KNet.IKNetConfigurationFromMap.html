@@ -2,11 +2,11 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-      <title>Interface IKNetConnectConfiguration | MASES Group - KNet </title>
+      <title>Interface IKNetConfigurationFromMap | MASES Group - KNet </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Interface IKNetConnectConfiguration | MASES Group - KNet ">
+      <meta name="title" content="Interface IKNetConfigurationFromMap | MASES Group - KNet ">
       <meta name="description" content="This is a descriptive page of KNet, the .NET suite for Apache Kafka">
-      <meta name="description" content="Interface to simplify access configuration information">
+      <meta name="description" content="Interface to simplify access the configuration information reported from JVM as">
       <link rel="icon" href="../images/favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_Connect_IKNetConnectConfiguration.md&amp;value=---%0Auid%3A%20MASES.KNet.Connect.IKNetConnectConfiguration%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="docfx:docurl" content="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=MASES_KNet_IKNetConfigurationFromMap.md&amp;value=---%0Auid%3A%20MASES.KNet.IKNetConfigurationFromMap%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -84,25 +84,25 @@
           <nav id="breadcrumb"></nav>
         </div>
 
-        <article data-uid="MASES.KNet.Connect.IKNetConnectConfiguration">
+        <article data-uid="MASES.KNet.IKNetConfigurationFromMap">
 
 
 
-  <h1 id="MASES_KNet_Connect_IKNetConnectConfiguration" data-uid="MASES.KNet.Connect.IKNetConnectConfiguration" class="text-break">
-Interface IKNetConnectConfiguration  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Connect/KNetCommon.cs/#L41"><i class="bi bi-code-slash"></i></a>
+  <h1 id="MASES_KNet_IKNetConfigurationFromMap" data-uid="MASES.KNet.IKNetConfigurationFromMap" class="text-break">
+Interface IKNetConfigurationFromMap  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/KNetConfigurationFromMap.cs/#L32"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
-    <dl><dt>Namespace</dt><dd><a class="xref" href="MASES.html">MASES</a>.<a class="xref" href="MASES.KNet.html">KNet</a>.<a class="xref" href="MASES.KNet.Connect.html">Connect</a></dd></dl>
+    <dl><dt>Namespace</dt><dd><a class="xref" href="MASES.html">MASES</a>.<a class="xref" href="MASES.KNet.html">KNet</a></dd></dl>
   <dl><dt>Assembly</dt><dd>MASES.KNet.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Interface to simplify access configuration information</p>
+  <div class="markdown summary"><p>Interface to simplify access the configuration information reported from JVM as <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map&lt;K, V&gt;</a></p>
 </div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public interface IKNetConnectConfiguration : IEnumerable&lt;KeyValuePair&lt;string, object&gt;&gt;, IEnumerable</code></pre>
+    <pre><code class="lang-csharp hljs">public interface IKNetConfigurationFromMap : IEnumerable&lt;KeyValuePair&lt;string, object&gt;&gt;, IEnumerable</code></pre>
   </div>
 
 
@@ -131,11 +131,11 @@ Interface IKNetConnectConfiguration  <a class="header-action link-secondary" tit
 </h2>
 
 
-  <a id="MASES_KNet_Connect_IKNetConnectConfiguration_Exist_" data-uid="MASES.KNet.Connect.IKNetConnectConfiguration.Exist*"></a>
+  <a id="MASES_KNet_IKNetConfigurationFromMap_Exist_" data-uid="MASES.KNet.IKNetConfigurationFromMap.Exist*"></a>
 
-  <h3 id="MASES_KNet_Connect_IKNetConnectConfiguration_Exist_System_String_" data-uid="MASES.KNet.Connect.IKNetConnectConfiguration.Exist(System.String)">
+  <h3 id="MASES_KNet_IKNetConfigurationFromMap_Exist_System_String_" data-uid="MASES.KNet.IKNetConfigurationFromMap.Exist(System.String)">
   Exist(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Connect/KNetCommon.cs/#L48"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/KNetConfigurationFromMap.cs/#L39"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Returns <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the <code class="paramref">key</code> exist</p>
@@ -170,11 +170,11 @@ Interface IKNetConnectConfiguration  <a class="header-action link-secondary" tit
 
 
 
-  <a id="MASES_KNet_Connect_IKNetConnectConfiguration_GetBoolean_" data-uid="MASES.KNet.Connect.IKNetConnectConfiguration.GetBoolean*"></a>
+  <a id="MASES_KNet_IKNetConfigurationFromMap_GetBoolean_" data-uid="MASES.KNet.IKNetConfigurationFromMap.GetBoolean*"></a>
 
-  <h3 id="MASES_KNet_Connect_IKNetConnectConfiguration_GetBoolean_System_String_" data-uid="MASES.KNet.Connect.IKNetConnectConfiguration.GetBoolean(System.String)">
+  <h3 id="MASES_KNet_IKNetConfigurationFromMap_GetBoolean_System_String_" data-uid="MASES.KNet.IKNetConfigurationFromMap.GetBoolean(System.String)">
   GetBoolean(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Connect/KNetCommon.cs/#L84"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/KNetConfigurationFromMap.cs/#L75"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Returns <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">bool</a> associated to <code class="paramref">key</code></p>
@@ -209,11 +209,11 @@ Interface IKNetConnectConfiguration  <a class="header-action link-secondary" tit
 
 
 
-  <a id="MASES_KNet_Connect_IKNetConnectConfiguration_GetClass_" data-uid="MASES.KNet.Connect.IKNetConnectConfiguration.GetClass*"></a>
+  <a id="MASES_KNet_IKNetConfigurationFromMap_GetClass_" data-uid="MASES.KNet.IKNetConfigurationFromMap.GetClass*"></a>
 
-  <h3 id="MASES_KNet_Connect_IKNetConnectConfiguration_GetClass_System_String_" data-uid="MASES.KNet.Connect.IKNetConnectConfiguration.GetClass(System.String)">
+  <h3 id="MASES_KNet_IKNetConfigurationFromMap_GetClass_System_String_" data-uid="MASES.KNet.IKNetConfigurationFromMap.GetClass(System.String)">
   GetClass(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Connect/KNetCommon.cs/#L102"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/KNetConfigurationFromMap.cs/#L93"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Returns <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.Class.html">Class</a> associated to <code class="paramref">key</code></p>
@@ -248,11 +248,11 @@ Interface IKNetConnectConfiguration  <a class="header-action link-secondary" tit
 
 
 
-  <a id="MASES_KNet_Connect_IKNetConnectConfiguration_GetDouble_" data-uid="MASES.KNet.Connect.IKNetConnectConfiguration.GetDouble*"></a>
+  <a id="MASES_KNet_IKNetConfigurationFromMap_GetDouble_" data-uid="MASES.KNet.IKNetConfigurationFromMap.GetDouble*"></a>
 
-  <h3 id="MASES_KNet_Connect_IKNetConnectConfiguration_GetDouble_System_String_" data-uid="MASES.KNet.Connect.IKNetConnectConfiguration.GetDouble(System.String)">
+  <h3 id="MASES_KNet_IKNetConfigurationFromMap_GetDouble_System_String_" data-uid="MASES.KNet.IKNetConfigurationFromMap.GetDouble(System.String)">
   GetDouble(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Connect/KNetCommon.cs/#L72"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/KNetConfigurationFromMap.cs/#L63"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Returns <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/floating-point-numeric-types">double</a> associated to <code class="paramref">key</code></p>
@@ -287,11 +287,11 @@ Interface IKNetConnectConfiguration  <a class="header-action link-secondary" tit
 
 
 
-  <a id="MASES_KNet_Connect_IKNetConnectConfiguration_GetInt_" data-uid="MASES.KNet.Connect.IKNetConnectConfiguration.GetInt*"></a>
+  <a id="MASES_KNet_IKNetConfigurationFromMap_GetInt_" data-uid="MASES.KNet.IKNetConfigurationFromMap.GetInt*"></a>
 
-  <h3 id="MASES_KNet_Connect_IKNetConnectConfiguration_GetInt_System_String_" data-uid="MASES.KNet.Connect.IKNetConnectConfiguration.GetInt(System.String)">
+  <h3 id="MASES_KNet_IKNetConfigurationFromMap_GetInt_System_String_" data-uid="MASES.KNet.IKNetConfigurationFromMap.GetInt(System.String)">
   GetInt(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Connect/KNetCommon.cs/#L60"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/KNetConfigurationFromMap.cs/#L51"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Returns <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/integral-numeric-types">int</a> associated to <code class="paramref">key</code></p>
@@ -326,11 +326,11 @@ Interface IKNetConnectConfiguration  <a class="header-action link-secondary" tit
 
 
 
-  <a id="MASES_KNet_Connect_IKNetConnectConfiguration_GetList_" data-uid="MASES.KNet.Connect.IKNetConnectConfiguration.GetList*"></a>
+  <a id="MASES_KNet_IKNetConfigurationFromMap_GetList_" data-uid="MASES.KNet.IKNetConfigurationFromMap.GetList*"></a>
 
-  <h3 id="MASES_KNet_Connect_IKNetConnectConfiguration_GetList_System_String_" data-uid="MASES.KNet.Connect.IKNetConnectConfiguration.GetList(System.String)">
+  <h3 id="MASES_KNet_IKNetConfigurationFromMap_GetList_System_String_" data-uid="MASES.KNet.IKNetConfigurationFromMap.GetList(System.String)">
   GetList(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Connect/KNetCommon.cs/#L78"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/KNetConfigurationFromMap.cs/#L69"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Returns <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List&lt;T&gt;</a> of <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/reference-types">string</a> associated to <code class="paramref">key</code></p>
@@ -365,11 +365,11 @@ Interface IKNetConnectConfiguration  <a class="header-action link-secondary" tit
 
 
 
-  <a id="MASES_KNet_Connect_IKNetConnectConfiguration_GetLong_" data-uid="MASES.KNet.Connect.IKNetConnectConfiguration.GetLong*"></a>
+  <a id="MASES_KNet_IKNetConfigurationFromMap_GetLong_" data-uid="MASES.KNet.IKNetConfigurationFromMap.GetLong*"></a>
 
-  <h3 id="MASES_KNet_Connect_IKNetConnectConfiguration_GetLong_System_String_" data-uid="MASES.KNet.Connect.IKNetConnectConfiguration.GetLong(System.String)">
+  <h3 id="MASES_KNet_IKNetConfigurationFromMap_GetLong_System_String_" data-uid="MASES.KNet.IKNetConfigurationFromMap.GetLong(System.String)">
   GetLong(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Connect/KNetCommon.cs/#L66"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/KNetConfigurationFromMap.cs/#L57"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Returns <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/integral-numeric-types">long</a> associated to <code class="paramref">key</code></p>
@@ -404,11 +404,11 @@ Interface IKNetConnectConfiguration  <a class="header-action link-secondary" tit
 
 
 
-  <a id="MASES_KNet_Connect_IKNetConnectConfiguration_GetPassword_" data-uid="MASES.KNet.Connect.IKNetConnectConfiguration.GetPassword*"></a>
+  <a id="MASES_KNet_IKNetConfigurationFromMap_GetPassword_" data-uid="MASES.KNet.IKNetConfigurationFromMap.GetPassword*"></a>
 
-  <h3 id="MASES_KNet_Connect_IKNetConnectConfiguration_GetPassword_System_String_" data-uid="MASES.KNet.Connect.IKNetConnectConfiguration.GetPassword(System.String)">
+  <h3 id="MASES_KNet_IKNetConfigurationFromMap_GetPassword_System_String_" data-uid="MASES.KNet.IKNetConfigurationFromMap.GetPassword(System.String)">
   GetPassword(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Connect/KNetCommon.cs/#L96"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/KNetConfigurationFromMap.cs/#L87"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Returns <a class="xref" href="Org.Apache.Kafka.Common.Config.Types.Password.html">Password</a> associated to <code class="paramref">key</code></p>
@@ -443,11 +443,11 @@ Interface IKNetConnectConfiguration  <a class="header-action link-secondary" tit
 
 
 
-  <a id="MASES_KNet_Connect_IKNetConnectConfiguration_GetShort_" data-uid="MASES.KNet.Connect.IKNetConnectConfiguration.GetShort*"></a>
+  <a id="MASES_KNet_IKNetConfigurationFromMap_GetShort_" data-uid="MASES.KNet.IKNetConfigurationFromMap.GetShort*"></a>
 
-  <h3 id="MASES_KNet_Connect_IKNetConnectConfiguration_GetShort_System_String_" data-uid="MASES.KNet.Connect.IKNetConnectConfiguration.GetShort(System.String)">
+  <h3 id="MASES_KNet_IKNetConfigurationFromMap_GetShort_System_String_" data-uid="MASES.KNet.IKNetConfigurationFromMap.GetShort(System.String)">
   GetShort(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Connect/KNetCommon.cs/#L54"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/KNetConfigurationFromMap.cs/#L45"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Returns <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/integral-numeric-types">short</a> associated to <code class="paramref">key</code></p>
@@ -482,11 +482,11 @@ Interface IKNetConnectConfiguration  <a class="header-action link-secondary" tit
 
 
 
-  <a id="MASES_KNet_Connect_IKNetConnectConfiguration_GetString_" data-uid="MASES.KNet.Connect.IKNetConnectConfiguration.GetString*"></a>
+  <a id="MASES_KNet_IKNetConfigurationFromMap_GetString_" data-uid="MASES.KNet.IKNetConfigurationFromMap.GetString*"></a>
 
-  <h3 id="MASES_KNet_Connect_IKNetConnectConfiguration_GetString_System_String_" data-uid="MASES.KNet.Connect.IKNetConnectConfiguration.GetString(System.String)">
+  <h3 id="MASES_KNet_IKNetConfigurationFromMap_GetString_System_String_" data-uid="MASES.KNet.IKNetConfigurationFromMap.GetString(System.String)">
   GetString(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Connect/KNetCommon.cs/#L90"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/KNetConfigurationFromMap.cs/#L81"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Returns <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/reference-types">string</a> associated to <code class="paramref">key</code></p>
@@ -525,7 +525,7 @@ Interface IKNetConnectConfiguration  <a class="header-action link-secondary" tit
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Connect/KNetCommon.cs/#L41" class="edit-link">Edit this page</a>
+          <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/KNetConfigurationFromMap.cs/#L32" class="edit-link">Edit this page</a>
         </div>
 
 

@@ -89,12 +89,16 @@
 
 <p>To use KNet classes the developer can write code in .NET using the same classes available in the official Apache Kafka™ package.
 If classes or methods are not available yet it is possible to use the approach synthetized in <a href="API_extensibility.html">What to do if an API was not yet implemented</a></p>
+<h2 id="backend-compatibility">Backend compatibility</h2>
+<p>KNet uses the official Apache Kafka™ Java client packages directly. All examples in this page use standard Producer, Consumer, and Admin Client APIs, which communicate with the broker exclusively through the Kafka wire protocol.</p>
+<p>This means the code shown here works with <strong>any broker that implements the Kafka wire protocol</strong> — not only Apache Kafka™ itself. Examples of compatible brokers: <a href="https://redpanda.com/">Redpanda</a>, <a href="https://aws.amazon.com/msk/">Amazon MSK</a>, <a href="https://www.confluent.io/">Confluent Platform / Cloud</a>, <a href="https://aiven.io/kafka">Aiven for Apache Kafka™</a>, <a href="https://www.ibm.com/products/event-streams">IBM Event Streams</a>, <a href="https://www.warpstream.com/">WarpStream</a>, <a href="https://www.automq.com/">AutoMQ</a>, and others.</p>
+<p>See <a href="backends.html">Supported Backends</a> for the full compatibility matrix covering all KNet feature areas.</p>
 <h2 id="environment-setup">Environment setup</h2>
 <p>KNet accepts many command-line switches to customize its behavior. The full list is available at <a href="commandlineswitch.html">Command line switch</a> page.</p>
 <h3 id="jvm-identification">JVM™ identification</h3>
 <p>One of the most important command-line switch is <strong>JVMPath</strong> and it is available in <a href="https://www.jcobridge.com/net-examples/command-line-options/">JCOBridge switches</a>: it can be used to set-up the location of the JVM™ library if JCOBridge is not able to identify a suitable JRE/JDK installation.
 If a developer is using KNet within its own product it is possible to override the <strong>JVMPath</strong> property with a snippet like the following one:</p>
-<pre><code class="lang-c#">    class MyKNetCore : KNetCore
+<pre><code>    class MyKNetCore : KNetCore
     {
         public override string JVMPath
         {
@@ -106,43 +110,39 @@ If a developer is using KNet within its own product it is possible to override t
         }
     }
 </code></pre>
-<div class="IMPORTANT">
-<h5>Important</h5>
+<h5 id="important">Important</h5>
 <p><code>pathToJVM</code> shall be escaped</p>
 <ol>
 <li><code>string pathToJVM = &quot;C:\\Program Files\\Eclipse Adoptium\\jdk-11.0.18.10-hotspot\\bin\\server\\jvm.dll&quot;;</code></li>
 <li><code>string pathToJVM = @&quot;C:\Program Files\Eclipse Adoptium\jdk-11.0.18.10-hotspot\bin\server\jvm.dll&quot;;</code></li>
 </ol>
-</div>
 <h3 id="special-initialization-conditions">Special initialization conditions</h3>
-<p><a href="https://www.jcobridge.com/">JCOBridge</a> try to identify a suitable JRE/JDK installation within the system using some standard mechanism of JRE/JDK: <code>JAVA_HOME</code> environment variable or Windows registry if available.
+<p><a href="https://www.jcobridge.com/">JCOBridge</a> tries to identify a suitable JRE/JDK installation within the system using some standard mechanism of JRE/JDK: <code>JAVA_HOME</code> environment variable or Windows registry if available.
 However it is possible, on Windows operating systems, that the library raises an <strong>InvalidOperationException: Missing Java Key in registry: Couldn't find Java installed on the machine</strong>.
-This means that neither <code>JAVA_HOME</code> nor Windows registry contains information about a default installed JRE/JDK: some vendors may not setup them.
-If the developer/user encounter this condition can do the following steps:</p>
+This means that neither <code>JAVA_HOME</code> nor Windows registry contains information about a default installed JRE/JDK: some vendors may not set them up.
+If the developer/user encounters this condition, they can follow the following steps:</p>
 <ol>
 <li>On a command prompt execute <code>set | findstr JAVA_HOME</code> and verify the result;</li>
 <li>If something was reported maybe the <code>JAVA_HOME</code> environment variable is not set at system level, but at a different level like user level which is not visible from the KNet process that raised the exception;</li>
 <li>Try to set <code>JAVA_HOME</code> at system level e.g. <code>JAVA_HOME=C:\Program Files\Eclipse Adoptium\jdk-11.0.18.10-hotspot\</code>;</li>
 <li>Try to set <code>JCOBRIDGE_JVMPath</code> at system level e.g. <code>JCOBRIDGE_JVMPath=C:\Program Files\Eclipse Adoptium\jdk-11.0.18.10-hotspot\</code>.</li>
 </ol>
-<div class="IMPORTANT">
-<h5>Important</h5>
+<h5 id="important-1">Important</h5>
 <ul>
 <li>One of <code>JCOBRIDGE_JVMPath</code> or <code>JAVA_HOME</code> environment variables or Windows registry (on Windows OSes) shall be available</li>
 <li><code>JCOBRIDGE_JVMPath</code> environment variable takes precedence over <code>JAVA_HOME</code> and Windows registry: you can set <code>JCOBRIDGE_JVMPath</code> to <code>C:\Program Files\Eclipse Adoptium\jdk-11.0.18.10-hotspot\bin\server\jvm.dll</code> and avoid to override <code>JVMPath</code> in your code</li>
 <li>After first initialization steps, <code>JVMPath</code> takes precedence over <code>JCOBRIDGE_JVMPath</code>/<code>JAVA_HOME</code> environment variables or Windows registry</li>
 </ul>
-</div>
 <h3 id="intel-cet-and-knet">Intel CET and KNet</h3>
-<p>KNet uses an embedded JVM™ through JNet/JCOBridge, however JVM™ initialization is incompatible with <a href="https://www.intel.com/content/www/us/en/developer/articles/technical/technical-look-control-flow-enforcement-technology.html">CET</a> because the code used to identify CPU try to modify the return address and this is considered from CET a violation: see <a href="https://github.com/masesgroup/JNet/issues/573#issuecomment-2544249107">this comment</a>.</p>
-<p>From .NET 9 preview 6, <a href="https://learn.microsoft.com/en-us/dotnet/core/compatibility/interop/9.0/cet-support">CET is enabled by default on supported hardware</a> when the final stage produce an executable artifact, i.e. the csproj file contains <code>&lt;OutputType&gt;Exe&lt;/OutputType&gt;</code>.</p>
+<p>KNet uses an embedded JVM™ through JNet/JCOBridge, however JVM™ initialization is incompatible with <a href="https://www.intel.com/content/www/us/en/developer/articles/technical/technical-look-control-flow-enforcement-technology.html">CET</a> because the code used to identify the CPU tries to modify the return address and this is considered by CET a violation: see <a href="https://github.com/masesgroup/JNet/issues/573#issuecomment-2544249107">this comment</a>.</p>
+<p>From .NET 9 preview 6, <a href="https://learn.microsoft.com/en-us/dotnet/core/compatibility/interop/9.0/cet-support">CET is enabled by default on supported hardware</a> when the final stage produces an executable artifact, i.e. the csproj file contains <code>&lt;OutputType&gt;Exe&lt;/OutputType&gt;</code>.</p>
 <p>If the application, upon startup, fails with the error 0xc0000409 (subcode 0x30) it was compiled with CET enabled and it fails during JVM™ initialization.</p>
 <p>To solve the issue there are four possible solutions:</p>
 <ol>
 <li>use a .NET version, e.g. 8, that does not enable CET by default</li>
 <li>Add the following snippet to disable CET on executable (templates available for KNet are ready made and solve this issue):</li>
 </ol>
-<pre><code class="lang-xml">	&lt;PropertyGroup Condition=&quot;'$(TargetFramework)' == 'net9.0'&quot;&gt;
+<pre><code>	&lt;PropertyGroup Condition=&quot;'$(TargetFramework)' == 'net9.0'&quot;&gt;
 		&lt;!--see https://learn.microsoft.com/en-us/dotnet/core/compatibility/interop/9.0/cet-support--&gt;
 		&lt;CETCompat&gt;false&lt;/CETCompat&gt;
 	&lt;/PropertyGroup&gt;
@@ -150,27 +150,27 @@ If the developer/user encounter this condition can do the following steps:</p>
 <ol start="3">
 <li>Use the <code>dotnet</code> app host, as reported in <a href="https://github.com/masesgroup/JCOBridgePublic/issues/7#issuecomment-2550031946">https://github.com/masesgroup/JCOBridgePublic/issues/7#issuecomment-2550031946</a>, with a syntax like:</li>
 </ol>
-<pre><code class="lang-sh">	dotnet MyApplication.dll
+<pre><code>	dotnet MyApplication.dll
 </code></pre>
 <p>instead of the classic:</p>
-<pre><code class="lang-sh">	MyApplication.exe
+<pre><code>	MyApplication.exe
 </code></pre>
 <ol start="4">
 <li>If you want to run the classic application execute the following command in an <strong>elevated shell</strong>:</li>
 </ol>
-<pre><code class="lang-sh">	reg add &quot;HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\MyApplication.exe&quot; /v MitigationOptions /t REG_BINARY /d &quot;0000000000000000000000000000002000&quot; /f
+<pre><code>	reg add &quot;HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\MyApplication.exe&quot; /v MitigationOptions /t REG_BINARY /d &quot;0000000000000000000000000000002000&quot; /f
 </code></pre>
 <p>then run:</p>
-<pre><code class="lang-sh">	MyApplication.exe
+<pre><code>	MyApplication.exe
 </code></pre>
 <p>Use the following to enable again CET:</p>
-<pre><code class="lang-sh">	reg delete &quot;HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\MyApplication.exe&quot; /v MitigationOptions /f
+<pre><code>	reg delete &quot;HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\MyApplication.exe&quot; /v MitigationOptions /f
 </code></pre>
 <h2 id="producer-example">Producer example</h2>
-<p>Below the reader can found two different version of producer examples.</p>
+<p>Below the reader can find two different versions of producer examples.</p>
 <h3 id="simple-producer">Simple producer</h3>
 <p>A basic producer can be like the following one:</p>
-<pre><code class="lang-C#">using MASES.KNet;
+<pre><code>using MASES.KNet;
 using Org.Apache.Kafka™.Clients.Producer;
 using Java.Util;
 using System;
@@ -249,9 +249,9 @@ namespace MASES.KNetTemplate.KNetProducer
 <li>print out the produced data and the resulting RecordMetadata</li>
 </ul>
 <h3 id="producer-with-callback">Producer with Callback</h3>
-<p>A producer with Callback can be like the following one. In this example the reader can highlight a slightly difference from the corresponding Java™ code.
-Surf <a href="">JVM callbacks</a> to go into detail in the callback management from JVM™.</p>
-<pre><code class="lang-C#">using MASES.KNet;
+<p>A producer with Callback can be like the following one. In this example the reader can highlight a slight difference from the corresponding Java™ code.
+See <a href="jvm_callbacks.html">JVM callbacks</a> to go into detail in the callback management from JVM™.</p>
+<pre><code>using MASES.KNet;
 using Org.Apache.Kafka™.Clients.Producer;
 using Java.Util;
 using System;
@@ -334,7 +334,7 @@ namespace MASES.KNetTemplate.KNetProducer
 <li>during initialization prepares the properties</li>
 <li>create a producer using the properties</li>
 <li>create ProducerRecord and send it using the API Send with the attached Callback</li>
-<li>when the operation completed the Callback is called:
+<li>when the operation completes the Callback is called:
 <ul>
 <li>if an Exception was raised it will be printed out</li>
 <li>otherwise the RecordMetadata is printed out</li>
@@ -344,7 +344,7 @@ namespace MASES.KNetTemplate.KNetProducer
 </ul>
 <h2 id="consumer-example">Consumer example</h2>
 <p>A basic consumer can be like the following one:</p>
-<pre><code class="lang-C#">using MASES.KNet;
+<pre><code>using MASES.KNet;
 using Org.Apache.Kafka™.Clients.Consumer;
 using Java.Util;
 using System;
@@ -420,8 +420,8 @@ namespace MASES.KNetTemplate.KNetConsumer
 <ul>
 <li>during initialization prepares the properties,</li>
 <li>create a consumer using the properties</li>
-<li>subscribe and starts consume</li>
-<li>when data are received it logs to the console the information.</li>
+<li>subscribes and starts consuming</li>
+<li>when data are received, it logs to the console the information.</li>
 </ul>
 
 </article>

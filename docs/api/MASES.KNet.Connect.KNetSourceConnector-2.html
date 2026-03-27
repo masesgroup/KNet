@@ -89,7 +89,7 @@
 
 
   <h1 id="MASES_KNet_Connect_KNetSourceConnector_2" data-uid="MASES.KNet.Connect.KNetSourceConnector`2" class="text-break">
-Class KNetSourceConnector&lt;TSourceConnector, TTask&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Connect/KNetSourceConnector.cs/#L55"><i class="bi bi-code-slash"></i></a>
+Class KNetSourceConnector&lt;TSourceConnector, TTask&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Connect/KNetSourceConnector.cs/#L53"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -163,7 +163,7 @@ Class KNetSourceConnector&lt;TSourceConnector, TTask&gt;  <a class="header-actio
       <a class="xref" href="MASES.KNet.Connect.KNetConnector.html#MASES_KNet_Connect_KNetConnector_Start_Java_Util_Map_Java_Lang_String_System_Object__">KNetConnector.Start(Map&lt;String, object&gt;)</a>
     </div>
     <div>
-      <a class="xref" href="MASES.KNet.Connect.KNetConnector.html#MASES_KNet_Connect_KNetConnector_Start_MASES_KNet_Connect_IKNetConnectConfiguration_">KNetConnector.Start(IKNetConnectConfiguration)</a>
+      <a class="xref" href="MASES.KNet.Connect.KNetConnector.html#MASES_KNet_Connect_KNetConnector_Start_MASES_KNet_IKNetConfigurationFromMap_">KNetConnector.Start(IKNetConfigurationFromMap)</a>
     </div>
     <div>
       <a class="xref" href="MASES.KNet.Connect.KNetConnector.html#MASES_KNet_Connect_KNetConnector_TaskConfigs_System_Int32_System_Int32_Java_Util_Map_Java_Lang_String_Java_Lang_String__">KNetConnector.TaskConfigs(int, int, Map&lt;String, String&gt;)</a>
@@ -173,6 +173,9 @@ Class KNetSourceConnector&lt;TSourceConnector, TTask&gt;  <a class="header-actio
     </div>
     <div>
       <a class="xref" href="MASES.KNet.Connect.KNetConnector.html#MASES_KNet_Connect_KNetConnector_Stop">KNetConnector.Stop()</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Connect.KNetCommon.html#MASES_KNet_Connect_KNetCommon_LogCheckInterval">KNetCommon.LogCheckInterval</a>
     </div>
     <div>
       <a class="xref" href="MASES.KNet.Connect.KNetCommon.html#MASES_KNet_Connect_KNetCommon_UniqueId">KNetCommon.UniqueId</a>
@@ -291,7 +294,7 @@ Class KNetSourceConnector&lt;TSourceConnector, TTask&gt;  <a class="header-actio
 
   <h3 id="MASES_KNet_Connect_KNetSourceConnector_2_CanDefineTransactionBoundaries" data-uid="MASES.KNet.Connect.KNetSourceConnector`2.CanDefineTransactionBoundaries">
   CanDefineTransactionBoundaries
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Connect/KNetSourceConnector.cs/#L84"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Connect/KNetSourceConnector.cs/#L82"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Implement the method to return the <a class="xref" href="Org.Apache.Kafka.Connect.Source.ConnectorTransactionBoundaries.html">ConnectorTransactionBoundaries</a> value</p>
@@ -323,7 +326,7 @@ Class KNetSourceConnector&lt;TSourceConnector, TTask&gt;  <a class="header-actio
 
   <h3 id="MASES_KNet_Connect_KNetSourceConnector_2_Context" data-uid="MASES.KNet.Connect.KNetSourceConnector`2.Context">
   Context
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Connect/KNetSourceConnector.cs/#L62"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Connect/KNetSourceConnector.cs/#L60"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>The <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceConnectorContext.html">SourceConnectorContext</a></p>
@@ -355,7 +358,7 @@ Class KNetSourceConnector&lt;TSourceConnector, TTask&gt;  <a class="header-actio
 
   <h3 id="MASES_KNet_Connect_KNetSourceConnector_2_ExactlyOnceSupport" data-uid="MASES.KNet.Connect.KNetSourceConnector`2.ExactlyOnceSupport">
   ExactlyOnceSupport
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Connect/KNetSourceConnector.cs/#L73"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Connect/KNetSourceConnector.cs/#L71"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Implement the method to return the <a class="xref" href="MASES.KNet.Connect.IKNetSourceConnector.html#MASES_KNet_Connect_IKNetSourceConnector_ExactlyOnceSupport">ExactlyOnceSupport</a> value</p>
@@ -387,7 +390,7 @@ Class KNetSourceConnector&lt;TSourceConnector, TTask&gt;  <a class="header-actio
 
   <h3 id="MASES_KNet_Connect_KNetSourceConnector_2_ReflectedRemoteObjectClassName" data-uid="MASES.KNet.Connect.KNetSourceConnector`2.ReflectedRemoteObjectClassName">
   ReflectedRemoteObjectClassName
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Connect/KNetSourceConnector.cs/#L89"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Connect/KNetSourceConnector.cs/#L87"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Set the <a class="xref" href="MASES.KNet.Connect.KNetSourceConnector-2.html#MASES_KNet_Connect_KNetSourceConnector_2_ReflectedRemoteObjectClassName">ReflectedRemoteObjectClassName</a> of the connector to a fixed value</p>
@@ -419,7 +422,7 @@ Class KNetSourceConnector&lt;TSourceConnector, TTask&gt;  <a class="header-actio
 
   <h3 id="MASES_KNet_Connect_KNetSourceConnector_2_TaskClassType" data-uid="MASES.KNet.Connect.KNetSourceConnector`2.TaskClassType">
   TaskClassType
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Connect/KNetSourceConnector.cs/#L93"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Connect/KNetSourceConnector.cs/#L91"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Set the <a class="xref" href="MASES.KNet.Connect.KNetSourceConnector-2.html#MASES_KNet_Connect_KNetSourceConnector_2_TaskClassType">TaskClassType</a> of the connector to the value defined from <code class="typeparamref">TTask</code></p>
@@ -455,7 +458,7 @@ Class KNetSourceConnector&lt;TSourceConnector, TTask&gt;  <a class="header-actio
 
   <h3 id="MASES_KNet_Connect_KNetSourceConnector_2_AlterOffsets_Java_Util_Map_Java_Lang_String_Java_Lang_String__Java_Util_Map_Java_Util_Map_Java_Lang_String_System_Object__Java_Util_Map_Java_Lang_String_System_Object___" data-uid="MASES.KNet.Connect.KNetSourceConnector`2.AlterOffsets(Java.Util.Map{Java.Lang.String,Java.Lang.String},Java.Util.Map{Java.Util.Map{Java.Lang.String,System.Object},Java.Util.Map{Java.Lang.String,System.Object}})">
   AlterOffsets(Map&lt;String, String&gt;, Map&lt;Map&lt;String, object&gt;, Map&lt;String, object&gt;&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Connect/KNetSourceConnector.cs/#L124"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Connect/KNetSourceConnector.cs/#L122"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Invoked when users request to manually alter/reset the offsets for this connector via the Connect worker's REST API. Connectors that manage offsets externally can propagate offset changes to their external system in this method.
@@ -497,7 +500,7 @@ An empty offsets <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util
   <h4 class="section" id="MASES_KNet_Connect_KNetSourceConnector_2_AlterOffsets_Java_Util_Map_Java_Lang_String_Java_Lang_String__Java_Util_Map_Java_Util_Map_Java_Lang_String_System_Object__Java_Util_Map_Java_Lang_String_System_Object____remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p>User requests to alter/reset offsets will be handled by the Connect runtime and will be reflected in the offsets returned by any OffsetStorageReader instances provided to this connector and its tasks.
 Note that altering/resetting offsets is expected to be an idempotent operation and this method should be able to handle being called more than once with the same arguments (which could occur if a user retries the request due to a failure in writing the new offsets to the offsets store, for example).
-Similar to validate, this method may be called by the runtime before the <a class="xref" href="MASES.KNet.Connect.KNetConnector.html#MASES_KNet_Connect_KNetConnector_Start_MASES_KNet_Connect_IKNetConnectConfiguration_">Start(IKNetConnectConfiguration)</a>&gt; method is invoked.</p>
+Similar to validate, this method may be called by the runtime before the <a class="xref" href="MASES.KNet.Connect.KNetConnector.html#MASES_KNet_Connect_KNetConnector_Start_MASES_KNet_IKNetConfigurationFromMap_">Start(IKNetConfigurationFromMap)</a>&gt; method is invoked.</p>
 </div>
 
 
@@ -507,7 +510,7 @@ Similar to validate, this method may be called by the runtime before the <a clas
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Connect/KNetSourceConnector.cs/#L55" class="edit-link">Edit this page</a>
+          <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Connect/KNetSourceConnector.cs/#L53" class="edit-link">Edit this page</a>
         </div>
 
 

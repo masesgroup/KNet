@@ -87,105 +87,102 @@
         <article data-uid="">
 <h1 id="knet-net-suite-for-apache-kafka">KNet: .NET suite for <a href="https://kafka.apache.org/">Apache Kafka™</a></h1>
 
-<p>KNet is a comprehensive .NET suite for <a href="https://kafka.apache.org/">Apache Kafka™</a> providing access to all <a href="https://kafka.apache.org/documentation/#api">APIs</a> and features: Producer, Consumer, Admin, Streams, Connect, backends (KRaft™).</p>
+<p>KNet is a comprehensive .NET suite for <a href="https://kafka.apache.org/">Apache Kafka™</a> that provides direct access to all <a href="https://kafka.apache.org/documentation/#api">Apache Kafka™ APIs</a> and features: Producer, Consumer, Admin, Streams, Connect, and KRaft backend support.</p>
+<p>KNet client-side features are also compatible with any broker that implements the Kafka wire protocol — see <a href="#backend-compatibility">Backend compatibility</a> below.</p>
 <h3 id="libraries-and-tools">Libraries and Tools</h3>
 <table>
 <thead>
 <tr>
-<th style="text-align: center;">KNet</th>
-<th style="text-align: center;">KNetCLI</th>
-<th style="text-align: center;">KNet.Templates</th>
-<th style="text-align: center;">KNetPS</th>
-<th style="text-align: center;">KNetConnect</th>
+<th>KNet</th>
+<th>KNetCLI</th>
+<th>KNet.Templates</th>
+<th>KNetPS</th>
+<th>KNetConnect</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align: center;"><a href="https://www.nuget.org/packages/MASES.KNet"><img src="https://img.shields.io/nuget/v/MASES.KNet" alt="KNet nuget"></a> <a href="https://www.nuget.org/packages/MASES.KNet"><img src="https://img.shields.io/nuget/dt/MASES.KNet" alt="downloads"></a></td>
-<td style="text-align: center;"><a href="https://www.nuget.org/packages/MASES.KNetCLI"><img src="https://img.shields.io/nuget/v/MASES.KNetCLI" alt="KNetCLI nuget"></a> <a href="https://www.nuget.org/packages/MASES.KNetCLI"><img src="https://img.shields.io/nuget/dt/MASES.KNetCLI" alt="downloads"></a></td>
-<td style="text-align: center;"><a href="https://www.nuget.org/packages/MASES.KNet.Templates"><img src="https://img.shields.io/nuget/v/MASES.KNet.Templates" alt="KNet.Templates nuget"></a> <a href="https://www.nuget.org/packages/MASES.KNet.Templates"><img src="https://img.shields.io/nuget/dt/MASES.KNet.Templates" alt="downloads"></a></td>
-<td style="text-align: center;"><a href="https://www.powershellgallery.com/packages/MASES.KNetPS/"><img src="https://img.shields.io/powershellgallery/v/MASES.KNetPS.svg?style=flat-square&amp;label=MASES.KNetPS" alt="KNetPS"></a></td>
-<td style="text-align: center;"><a href="https://www.nuget.org/packages/MASES.KNetConnect"><img src="https://img.shields.io/nuget/v/MASES.KNetConnect" alt="KNetConnect nuget"></a> <a href="https://www.nuget.org/packages/MASES.KNetConnect"><img src="https://img.shields.io/nuget/dt/MASES.KNetConnect" alt="downloads"></a></td>
+<td><a href="https://www.nuget.org/packages/MASES.KNet"><img src="https://img.shields.io/nuget/v/MASES.KNet" alt="KNet nuget"></a> <a href="https://www.nuget.org/packages/MASES.KNet"><img src="https://img.shields.io/nuget/dt/MASES.KNet" alt="downloads"></a></td>
+<td><a href="https://www.nuget.org/packages/MASES.KNetCLI"><img src="https://img.shields.io/nuget/v/MASES.KNetCLI" alt="KNetCLI nuget"></a> <a href="https://www.nuget.org/packages/MASES.KNetCLI"><img src="https://img.shields.io/nuget/dt/MASES.KNetCLI" alt="downloads"></a></td>
+<td><a href="https://www.nuget.org/packages/MASES.KNet.Templates"><img src="https://img.shields.io/nuget/v/MASES.KNet.Templates" alt="KNet.Templates nuget"></a> <a href="https://www.nuget.org/packages/MASES.KNet.Templates"><img src="https://img.shields.io/nuget/dt/MASES.KNet.Templates" alt="downloads"></a></td>
+<td><a href="https://www.powershellgallery.com/packages/MASES.KNetPS/"><img src="https://img.shields.io/powershellgallery/v/MASES.KNetPS.svg?style=flat-square&amp;label=MASES.KNetPS" alt="KNetPS"></a></td>
+<td><a href="https://www.nuget.org/packages/MASES.KNetConnect"><img src="https://img.shields.io/nuget/v/MASES.KNetConnect" alt="KNetConnect nuget"></a> <a href="https://www.nuget.org/packages/MASES.KNetConnect"><img src="https://img.shields.io/nuget/dt/MASES.KNetConnect" alt="downloads"></a></td>
 </tr>
 </tbody>
 </table>
-<h3 id="pipelines">Pipelines</h3>
-<p><a href="https://github.com/masesgroup/KNet/actions/workflows/build.yaml"><img src="https://github.com/masesgroup/KNet/actions/workflows/build.yaml/badge.svg" alt="CI_BUILD"></a>
-<a href="https://github.com/masesgroup/KNet/actions/workflows/codeql-analysis.yml"><img src="https://github.com/masesgroup/KNet/actions/workflows/codeql-analysis.yml/badge.svg" alt="CodeQL"></a>
-<a href="https://github.com/masesgroup/KNet/actions/workflows/release.yaml"><img src="https://github.com/masesgroup/KNet/actions/workflows/release.yaml/badge.svg" alt="CI_RELEASE"></a></p>
 <h3 id="project-disclaimer">Project disclaimer</h3>
-<p>KNet is a suite for Apache Kafka™, curated by MASES Group, can be supported by the open-source community.</p>
-<p>Its primary scope is to support other, public or internal, MASES Group projects: open-source community and commercial entities can use it for their needs and support this project, moreover there are dedicated community and commercial subscription plans.</p>
-<p>The repository code and releases may contain bugs, the release cycle depends from Apache Kafka™ release cycle, critical discovered issues and/or enhancement requested from this or other projects.</p>
-<p>Looking for the help of Apache Kafka™ experts? MASES Group can help you design, build, deploy, and manage Apache Kafka™ clusters and streaming applications.</p>
+<p>KNet is a suite for Apache Kafka™, maintained by MASES Group and open to community contributions.</p>
+<p>Its primary scope is to support other MASES Group projects — both open-source and commercial — though it is freely available for any use. Dedicated community and commercial subscription plans are available.</p>
+<p>The repository and releases may contain bugs. The release cycle follows the Apache Kafka™ release cycle, with additional releases driven by critical issues or enhancement requests from this or other dependent projects.</p>
+<p>Looking for Apache Kafka™ expertise? MASES Group can help you design, build, deploy, and manage Apache Kafka™ clusters and streaming applications.</p>
 <hr>
 <h2 id="scope-of-the-project">Scope of the project</h2>
-<p>This project aims to create a set of libraries and tools to direct access, from .NET, all the features available in the <a href="https://kafka.apache.org/downloads">Apache Kafka™ binary distribution</a>.</p>
-<p>There are many client libraries written to manage communication with Apache Kafka™. Conversely, this project use directly the Java™ packages released from The Apache Foundation giving more than one benefit:</p>
+<p>This project aims to create a set of libraries and tools to directly access, from .NET, all the features available in the <a href="https://kafka.apache.org/downloads">Apache Kafka™ binary distribution</a>.</p>
+<p>There are many client libraries written to manage communication with Apache Kafka™. Conversely, this project uses the Java™ packages released from The Apache Foundation directly, providing several benefits:</p>
 <ul>
-<li>all implemented features are availables at no extra implementation costs, see <a href="usage.html">KNet usage</a>;</li>
-<li>avoids any third party communication protocol implementation;</li>
-<li>access all features made available from Apache Kafka™: the most important are Apache Kafka™ Streams and Apache Kafka™ Connect which does not have any C# implementation;</li>
-<li>measured high <a href="performance.html">performance</a> in many operating conditions.</li>
+<li>all implemented features are available at no extra implementation costs — see <a href="articles/usage.md">KNet usage</a>;</li>
+<li>avoids any third-party communication protocol implementation;</li>
+<li>access to all features made available from Apache Kafka™: the most important are Apache Kafka™ Streams and Apache Kafka™ Connect, which have no native C# implementation;</li>
+<li>measured high <a href="articles/performance.md">performance</a> in many operating conditions.</li>
 </ul>
 <p>Currently the project tries to support, at our best, the <a href="https://kafka.apache.org/downloads">supported Apache Kafka™ binary distribution</a>:</p>
 <table>
 <thead>
 <tr>
-<th style="text-align: center;">KNet</th>
-<th style="text-align: center;">State</th>
-<th style="text-align: center;">Apache Kafka™</th>
-<th style="text-align: center;">Branch</th>
-<th style="text-align: center;">.NET Framework</th>
-<th style="text-align: center;">.NET</th>
-<th style="text-align: center;">JVM™</th>
+<th>KNet</th>
+<th>State</th>
+<th>Apache Kafka™</th>
+<th>Branch</th>
+<th>.NET Framework</th>
+<th>.NET</th>
+<th>JVM™</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align: center;">3.x.x</td>
-<td style="text-align: center;">Active</td>
-<td style="text-align: center;">4.x.x</td>
-<td style="text-align: center;"><a href="https://github.com/masesgroup/KNet">master</a></td>
-<td style="text-align: center;"><a href="https://dotnet.microsoft.com/"><img src="https://img.shields.io/badge/.NET-4.6.2%2B-purple" alt=".NET 4.6.2+"></a></td>
-<td style="text-align: center;"><a href="https://dotnet.microsoft.com/"><img src="https://img.shields.io/badge/.NET-8%2B-purple" alt=".NET 8+"></a></td>
-<td style="text-align: center;"><a href="https://www.oracle.com/java/"><img src="https://img.shields.io/badge/Java-17%2B-blue" alt="Java 17+"></a></td>
+<td>3.x.x</td>
+<td>Active</td>
+<td>4.x.x</td>
+<td><a href="https://github.com/masesgroup/KNet">master</a></td>
+<td><a href="https://dotnet.microsoft.com/"><img src="https://img.shields.io/badge/.NET-4.6.2%2B-purple" alt=".NET 4.6.2+"></a></td>
+<td><a href="https://dotnet.microsoft.com/"><img src="https://img.shields.io/badge/.NET-8%2B-purple" alt=".NET 8+"></a></td>
+<td><a href="https://www.oracle.com/java/"><img src="https://img.shields.io/badge/Java-17%2B-blue" alt="Java 17+"></a></td>
 </tr>
 <tr>
-<td style="text-align: center;">2.9.*</td>
-<td style="text-align: center;">Active</td>
-<td style="text-align: center;">3.9.x</td>
-<td style="text-align: center;"><a href="https://github.com/masesgroup/KNet/tree/release/2.9.X">release/2.9.X</a></td>
-<td style="text-align: center;"><a href="https://dotnet.microsoft.com/"><img src="https://img.shields.io/badge/.NET-4.6.2%2B-purple" alt=".NET 4.6.2+"></a></td>
-<td style="text-align: center;"><a href="https://dotnet.microsoft.com/"><img src="https://img.shields.io/badge/.NET-8%2B-purple" alt=".NET 8+"></a></td>
-<td style="text-align: center;"><a href="https://www.oracle.com/java/"><img src="https://img.shields.io/badge/Java-11%2B-blue" alt="Java 11+"></a></td>
+<td>2.9.*</td>
+<td>Active</td>
+<td>3.9.x</td>
+<td><a href="https://github.com/masesgroup/KNet/tree/release/2.9.X">release/2.9.X</a></td>
+<td><a href="https://dotnet.microsoft.com/"><img src="https://img.shields.io/badge/.NET-4.6.2%2B-purple" alt=".NET 4.6.2+"></a></td>
+<td><a href="https://dotnet.microsoft.com/"><img src="https://img.shields.io/badge/.NET-8%2B-purple" alt=".NET 8+"></a></td>
+<td><a href="https://www.oracle.com/java/"><img src="https://img.shields.io/badge/Java-11%2B-blue" alt="Java 11+"></a></td>
 </tr>
 <tr>
-<td style="text-align: center;">2.8.*</td>
-<td style="text-align: center;">Deprecated</td>
-<td style="text-align: center;">3.8.*</td>
-<td style="text-align: center;"><a href="https://github.com/masesgroup/KNet/tree/release/2.8.X">release/2.8.X</a></td>
-<td style="text-align: center;"><a href="https://dotnet.microsoft.com/"><img src="https://img.shields.io/badge/.NET-4.6.2%2B-purple" alt=".NET 4.6.2+"></a></td>
-<td style="text-align: center;"><a href="https://dotnet.microsoft.com/"><img src="https://img.shields.io/badge/.NET-6%2B-purple" alt=".NET 6+"></a></td>
-<td style="text-align: center;"><a href="https://www.oracle.com/java/"><img src="https://img.shields.io/badge/Java-11%2B-blue" alt="Java 11+"></a></td>
+<td>2.8.*</td>
+<td>Deprecated</td>
+<td>3.8.*</td>
+<td><a href="https://github.com/masesgroup/KNet/tree/release/2.8.X">release/2.8.X</a></td>
+<td><a href="https://dotnet.microsoft.com/"><img src="https://img.shields.io/badge/.NET-4.6.2%2B-purple" alt=".NET 4.6.2+"></a></td>
+<td><a href="https://dotnet.microsoft.com/"><img src="https://img.shields.io/badge/.NET-6%2B-purple" alt=".NET 6+"></a></td>
+<td><a href="https://www.oracle.com/java/"><img src="https://img.shields.io/badge/Java-11%2B-blue" alt="Java 11+"></a></td>
 </tr>
 <tr>
-<td style="text-align: center;">2.7.*</td>
-<td style="text-align: center;">Deprecated</td>
-<td style="text-align: center;">3.7.*</td>
-<td style="text-align: center;"><a href="https://github.com/masesgroup/KNet/tree/release/2.7.X">release/2.7.X</a></td>
-<td style="text-align: center;"><a href="https://dotnet.microsoft.com/"><img src="https://img.shields.io/badge/.NET-4.6.2%2B-purple" alt=".NET 4.6.2+"></a></td>
-<td style="text-align: center;"><a href="https://dotnet.microsoft.com/"><img src="https://img.shields.io/badge/.NET-6%2B-purple" alt=".NET 6+"></a></td>
-<td style="text-align: center;"><a href="https://www.oracle.com/java/"><img src="https://img.shields.io/badge/Java-11%2B-blue" alt="Java 11+"></a></td>
+<td>2.7.*</td>
+<td>Deprecated</td>
+<td>3.7.*</td>
+<td><a href="https://github.com/masesgroup/KNet/tree/release/2.7.X">release/2.7.X</a></td>
+<td><a href="https://dotnet.microsoft.com/"><img src="https://img.shields.io/badge/.NET-4.6.2%2B-purple" alt=".NET 4.6.2+"></a></td>
+<td><a href="https://dotnet.microsoft.com/"><img src="https://img.shields.io/badge/.NET-6%2B-purple" alt=".NET 6+"></a></td>
+<td><a href="https://www.oracle.com/java/"><img src="https://img.shields.io/badge/Java-11%2B-blue" alt="Java 11+"></a></td>
 </tr>
 <tr>
-<td style="text-align: center;">2.6.*</td>
-<td style="text-align: center;">Deprecated</td>
-<td style="text-align: center;">3.6.*</td>
-<td style="text-align: center;"><a href="https://github.com/masesgroup/KNet/tree/release/2.6.X">release/2.6.X</a></td>
-<td style="text-align: center;"><a href="https://dotnet.microsoft.com/"><img src="https://img.shields.io/badge/.NET-4.6.2%2B-purple" alt=".NET 4.6.2+"></a></td>
-<td style="text-align: center;"><a href="https://dotnet.microsoft.com/"><img src="https://img.shields.io/badge/.NET-6%2B-purple" alt=".NET 6+"></a></td>
-<td style="text-align: center;"><a href="https://www.oracle.com/java/"><img src="https://img.shields.io/badge/Java-11%2B-blue" alt="Java 11+"></a></td>
+<td>2.6.*</td>
+<td>Deprecated</td>
+<td>3.6.*</td>
+<td><a href="https://github.com/masesgroup/KNet/tree/release/2.6.X">release/2.6.X</a></td>
+<td><a href="https://dotnet.microsoft.com/"><img src="https://img.shields.io/badge/.NET-4.6.2%2B-purple" alt=".NET 4.6.2+"></a></td>
+<td><a href="https://dotnet.microsoft.com/"><img src="https://img.shields.io/badge/.NET-6%2B-purple" alt=".NET 6+"></a></td>
+<td><a href="https://www.oracle.com/java/"><img src="https://img.shields.io/badge/Java-11%2B-blue" alt="Java 11+"></a></td>
 </tr>
 </tbody>
 </table>
@@ -193,47 +190,55 @@
 <table>
 <thead>
 <tr>
-<th style="text-align: center;">kafka-streams-scala_2.13</th>
-<th style="text-align: center;">kafka-tools</th>
-<th style="text-align: center;">kafka-shell</th>
+<th>kafka-streams-scala_2.13</th>
+<th>kafka-tools</th>
+<th>kafka-shell</th>
+<th></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align: center;"><a href="https://search.maven.org/search?q=g:%22org.apache.kafka%22%20AND%20a:%22kafka-streams-scala_2.13%22"><img src="https://img.shields.io/maven-central/v/org.apache.kafka/kafka-streams-scala_2.13.svg?label=Maven%20Central" alt="Maven Central"></a></td>
-<td style="text-align: center;"><a href="https://search.maven.org/search?q=g:%22org.apache.kafka%22%20AND%20a:%22kafka-tools%22"><img src="https://img.shields.io/maven-central/v/org.apache.kafka/kafka-tools.svg?label=Maven%20Central" alt="Maven Central"></a></td>
-<td style="text-align: center;"><a href="https://search.maven.org/search?q=g:%22org.apache.kafka%22%20AND%20a:%22kafka-shell%22"><img src="https://img.shields.io/maven-central/v/org.apache.kafka/kafka-shell.svg?label=Maven%20Central" alt="Maven Central"></a></td>
+<td><a href="https://search.maven.org/search?q=g:%22org.apache.kafka%22%20AND%20a:%22kafka-streams-scala_2.13%22"><img src="https://img.shields.io/maven-central/v/org.apache.kafka/kafka-streams-scala_2.13.svg?label=Maven%20Central" alt="Maven Central"></a></td>
+<td><a href="https://search.maven.org/search?q=g:%22org.apache.kafka%22%20AND%20a:%22kafka-tools%22"><img src="https://img.shields.io/maven-central/v/org.apache.kafka/kafka-tools.svg?label=Maven%20Central" alt="Maven Central"></a></td>
+<td><a href="https://search.maven.org/search?q=g:%22org.apache.kafka%22%20AND%20a:%22kafka-shell%22"><img src="https://img.shields.io/maven-central/v/org.apache.kafka/kafka-shell.svg?label=Maven%20Central" alt="Maven Central"></a></td>
+<td></td>
+</tr>
+<tr>
+<td>connect-mirror</td>
+<td>connect-file</td>
+<td>connect-basic-auth-extension</td>
+<td>trogdor</td>
+</tr>
+<tr>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+</tr>
+<tr>
+<td><a href="https://search.maven.org/search?q=g:%22org.apache.kafka%22%20AND%20a:%22connect-mirror%22"><img src="https://img.shields.io/maven-central/v/org.apache.kafka/connect-mirror.svg?label=Maven%20Central" alt="Maven Central"></a></td>
+<td><a href="https://search.maven.org/search?q=g:%22org.apache.kafka%22%20AND%20a:%22connect-file%22"><img src="https://img.shields.io/maven-central/v/org.apache.kafka/connect-file.svg?label=Maven%20Central" alt="Maven Central"></a></td>
+<td><a href="https://search.maven.org/search?q=g:%22org.apache.kafka%22%20AND%20a:%22connect-basic-auth-extension%22"><img src="https://img.shields.io/maven-central/v/org.apache.kafka/connect-basic-auth-extension.svg?label=Maven%20Central" alt="Maven Central"></a></td>
+<td><a href="https://search.maven.org/search?q=g:%22org.apache.kafka%22%20AND%20a:%22trogdor%22"><img src="https://img.shields.io/maven-central/v/org.apache.kafka/trogdor.svg?label=Maven%20Central" alt="Maven Central"></a></td>
 </tr>
 </tbody>
 </table>
-<table>
-<thead>
-<tr>
-<th style="text-align: center;">connect-mirror</th>
-<th style="text-align: center;">connect-file</th>
-<th style="text-align: center;">connect-basic-auth-extension</th>
-<th style="text-align: center;">trogdor</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: center;"><a href="https://search.maven.org/search?q=g:%22org.apache.kafka%22%20AND%20a:%22connect-mirror%22"><img src="https://img.shields.io/maven-central/v/org.apache.kafka/connect-mirror.svg?label=Maven%20Central" alt="Maven Central"></a></td>
-<td style="text-align: center;"><a href="https://search.maven.org/search?q=g:%22org.apache.kafka%22%20AND%20a:%22connect-file%22"><img src="https://img.shields.io/maven-central/v/org.apache.kafka/connect-file.svg?label=Maven%20Central" alt="Maven Central"></a></td>
-<td style="text-align: center;"><a href="https://search.maven.org/search?q=g:%22org.apache.kafka%22%20AND%20a:%22connect-basic-auth-extension%22"><img src="https://img.shields.io/maven-central/v/org.apache.kafka/connect-basic-auth-extension.svg?label=Maven%20Central" alt="Maven Central"></a></td>
-<td style="text-align: center;"><a href="https://search.maven.org/search?q=g:%22org.apache.kafka%22%20AND%20a:%22trogdor%22"><img src="https://img.shields.io/maven-central/v/org.apache.kafka/trogdor.svg?label=Maven%20Central" alt="Maven Central"></a></td>
-</tr>
-</tbody>
-</table>
-<h3 id="community-and-contribution">Community and Contribution</h3>
-<p>Do you like the project?</p>
+<hr>
+<h2 id="backend-compatibility">Backend compatibility</h2>
+<p>KNet uses the official Apache Kafka™ Java client packages directly. This architecture has a direct impact on backend compatibility: <strong>not all KNet features have the same compatibility scope</strong>.</p>
+<p><strong>Client-side features</strong> — Producer, Consumer, Admin Client, Kafka Streams, KNet Streams SDK, KNet Connect SDK, KNetPS scriptable cmdlets — communicate with the broker exclusively through the Kafka wire protocol and are therefore compatible with <strong>any broker that implements it</strong>, not only Apache Kafka™ itself.</p>
+<p>Examples of compatible brokers: <a href="https://redpanda.com/">Redpanda</a>, <a href="https://aws.amazon.com/msk/">Amazon MSK</a>, <a href="https://www.confluent.io/">Confluent Platform / Cloud</a>, <a href="https://aiven.io/kafka">Aiven for Apache Kafka™</a>, <a href="https://www.ibm.com/products/event-streams">IBM Event Streams</a>, <a href="https://www.warpstream.com/">WarpStream</a>, <a href="https://www.automq.com/">AutoMQ</a>, and others.</p>
+<blockquote>
+<p><strong>Important</strong>: KNet also includes <strong>server-side features</strong> to start and manage Apache Kafka™ broker nodes, ZooKeeper™ nodes, and KRaft controllers (via KNetCLI, KNetPS, and Docker images). These features are specific to Apache Kafka™ and are not applicable to alternative brokers.</p>
+</blockquote>
+<p>See <a href="articles/backends.md">Supported Backends</a> for the full compatibility matrix covering all KNet feature areas.</p>
+<hr>
+<h3 id="community-and-contributions">Community and contributions</h3>
+<p>If you find KNet useful:</p>
 <ul>
-<li>Request your free <a href="https://www.jcobridge.com/pricing-25/">community subscription</a>.</li>
-</ul>
-<p>Do you want to help us?</p>
-<ul>
-<li>put a ⭐ on this project</li>
-<li>open <a href="https://github.com/masesgroup/KNet/issues">issues</a> to request features or report bugs 🐛</li>
-<li>improves the project with Pull Requests</li>
+<li>Leave a ⭐ on the repository</li>
+<li>Open <a href="https://github.com/masesgroup/KNet/issues">issues</a> to report bugs 🐛 or request features</li>
+<li>Submit Pull Requests to improve the project</li>
 </ul>
 <p>This project adheres to the Contributor <a href="https://github.com/masesgroup/KNet/blob/master/CODE_OF_CONDUCT.md">Covenant code of conduct</a>. By participating, you are expected to uphold this code. Please report unacceptable behavior to coc_reporting@masesgroup.com.</p>
 
