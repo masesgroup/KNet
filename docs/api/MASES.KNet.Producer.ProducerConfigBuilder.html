@@ -102,7 +102,7 @@ Class ProducerConfigBuilder  <a class="header-action link-secondary" title="View
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class ProducerConfigBuilder : CommonClientConfigsBuilder&lt;ProducerConfigBuilder&gt;, INotifyPropertyChanged, IGenericSerDesFactory, IDisposable</code></pre>
+    <pre><code class="lang-csharp hljs">public class ProducerConfigBuilder : CommonClientConfigsBuilder&lt;ProducerConfigBuilder&gt;, INotifyPropertyChanged, IGenericSerDesFactory, IDisposable, IEnumerable&lt;KeyValuePair&lt;string, object&gt;&gt;, IEnumerable</code></pre>
   </div>
 
 
@@ -124,6 +124,8 @@ Class ProducerConfigBuilder  <a class="header-action link-secondary" title="View
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.inotifypropertychanged">INotifyPropertyChanged</a></div>
       <div><a class="xref" href="MASES.KNet.Serialization.IGenericSerDesFactory.html">IGenericSerDesFactory</a></div>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.keyvaluepair-2">KeyValuePair</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;&gt;</div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.ienumerable">IEnumerable</a></div>
     </dd>
   </dl>
 
@@ -131,6 +133,18 @@ Class ProducerConfigBuilder  <a class="header-action link-secondary" title="View
   <dl class="typelist inheritedMembers">
     <dt>Inherited Members</dt>
     <dd>
+    <div>
+      <a class="xref" href="MASES.KNet.CommonClientConfigsBuilder-1.html#MASES_KNet_CommonClientConfigsBuilder_1_WithSslConfigs_MASES_KNet_Common_SslConfigsBuilder_">CommonClientConfigsBuilder&lt;ProducerConfigBuilder&gt;.WithSslConfigs(SslConfigsBuilder)</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.CommonClientConfigsBuilder-1.html#MASES_KNet_CommonClientConfigsBuilder_1_WithSaslConfigs_MASES_KNet_Common_SaslConfigsBuilder_">CommonClientConfigsBuilder&lt;ProducerConfigBuilder&gt;.WithSaslConfigs(SaslConfigsBuilder)</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.CommonClientConfigsBuilder-1.html#MASES_KNet_CommonClientConfigsBuilder_1_ConfigProviders">CommonClientConfigsBuilder&lt;ProducerConfigBuilder&gt;.ConfigProviders</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.CommonClientConfigsBuilder-1.html#MASES_KNet_CommonClientConfigsBuilder_1_WithConfigProviders_System_String_">CommonClientConfigsBuilder&lt;ProducerConfigBuilder&gt;.WithConfigProviders(string)</a>
+    </div>
     <div>
       <a class="xref" href="MASES.KNet.CommonClientConfigsBuilder-1.html#MASES_KNet_CommonClientConfigsBuilder_1_BootstrapServers">CommonClientConfigsBuilder&lt;ProducerConfigBuilder&gt;.BootstrapServers</a>
     </div>
@@ -327,7 +341,19 @@ Class ProducerConfigBuilder  <a class="header-action link-secondary" title="View
       <a class="xref" href="MASES.KNet.CommonClientConfigsBuilder-1.html#MASES_KNet_CommonClientConfigsBuilder_1_DefaultApiTimeoutMs">CommonClientConfigsBuilder&lt;ProducerConfigBuilder&gt;.DefaultApiTimeoutMs</a>
     </div>
     <div>
-      <a class="xref" href="MASES.KNet.CommonClientConfigsBuilder-1.html#MASES_KNet_CommonClientConfigsBuilder_1_WithDefaultApiTimeoutMs_System_Int64_">CommonClientConfigsBuilder&lt;ProducerConfigBuilder&gt;.WithDefaultApiTimeoutMs(long)</a>
+      <a class="xref" href="MASES.KNet.CommonClientConfigsBuilder-1.html#MASES_KNet_CommonClientConfigsBuilder_1_WithDefaultApiTimeoutMs_System_Int32_">CommonClientConfigsBuilder&lt;ProducerConfigBuilder&gt;.WithDefaultApiTimeoutMs(int)</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.CommonClientConfigsBuilder-1.html#MASES_KNet_CommonClientConfigsBuilder_1_MetadataRecoveryStrategy">CommonClientConfigsBuilder&lt;ProducerConfigBuilder&gt;.MetadataRecoveryStrategy</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.CommonClientConfigsBuilder-1.html#MASES_KNet_CommonClientConfigsBuilder_1_WithMetadataRecoveryStrategy_System_String_">CommonClientConfigsBuilder&lt;ProducerConfigBuilder&gt;.WithMetadataRecoveryStrategy(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.CommonClientConfigsBuilder-1.html#MASES_KNet_CommonClientConfigsBuilder_1_MetadataRecoveryRebootstrapTriggerMs">CommonClientConfigsBuilder&lt;ProducerConfigBuilder&gt;.MetadataRecoveryRebootstrapTriggerMs</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.CommonClientConfigsBuilder-1.html#MASES_KNet_CommonClientConfigsBuilder_1_WithMetadataRecoveryRebootstrapTriggerMs_System_Int64_">CommonClientConfigsBuilder&lt;ProducerConfigBuilder&gt;.WithMetadataRecoveryRebootstrapTriggerMs(long)</a>
     </div>
     <div>
       <a class="xref" href="MASES.KNet.GenericConfigBuilder-1.html#MASES_KNet_GenericConfigBuilder_1_Create">GenericConfigBuilder&lt;ProducerConfigBuilder&gt;.Create()</a>
@@ -376,6 +402,9 @@ Class ProducerConfigBuilder  <a class="header-action link-secondary" title="View
     </div>
     <div>
       <a class="xref" href="MASES.KNet.GenericConfigBuilder-1.html#MASES_KNet_GenericConfigBuilder_1_Dispose">GenericConfigBuilder&lt;ProducerConfigBuilder&gt;.Dispose()</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.GenericConfigBuilder-1.html#MASES_KNet_GenericConfigBuilder_1_GetEnumerator">GenericConfigBuilder&lt;ProducerConfigBuilder&gt;.GetEnumerator()</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
@@ -432,7 +461,7 @@ Class ProducerConfigBuilder  <a class="header-action link-secondary" title="View
 
   <h3 id="MASES_KNet_Producer_ProducerConfigBuilder_Acks" data-uid="MASES.KNet.Producer.ProducerConfigBuilder.Acks">
   Acks
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/ProducerConfigBuilder.cs/#L122"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/ProducerConfigBuilder.cs/#L136"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.Producer.ProducerConfig.html#Org_Apache_Kafka_Clients_Producer_ProducerConfig_ACKS_CONFIG">ACKS_CONFIG</a></p>
@@ -496,7 +525,7 @@ Class ProducerConfigBuilder  <a class="header-action link-secondary" title="View
 
   <h3 id="MASES_KNet_Producer_ProducerConfigBuilder_BufferMemory" data-uid="MASES.KNet.Producer.ProducerConfigBuilder.BufferMemory">
   BufferMemory
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/ProducerConfigBuilder.cs/#L211"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/ProducerConfigBuilder.cs/#L225"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.Producer.ProducerConfig.html#Org_Apache_Kafka_Clients_Producer_ProducerConfig_BUFFER_MEMORY_CONFIG">BUFFER_MEMORY_CONFIG</a></p>
@@ -528,7 +557,7 @@ Class ProducerConfigBuilder  <a class="header-action link-secondary" title="View
 
   <h3 id="MASES_KNet_Producer_ProducerConfigBuilder_CompressionGzipLevel" data-uid="MASES.KNet.Producer.ProducerConfigBuilder.CompressionGzipLevel">
   CompressionGzipLevel
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/ProducerConfigBuilder.cs/#L224"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/ProducerConfigBuilder.cs/#L238"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.Producer.ProducerConfig.html#Org_Apache_Kafka_Clients_Producer_ProducerConfig_COMPRESSION_GZIP_LEVEL_CONFIG">COMPRESSION_GZIP_LEVEL_CONFIG</a></p>
@@ -560,7 +589,7 @@ Class ProducerConfigBuilder  <a class="header-action link-secondary" title="View
 
   <h3 id="MASES_KNet_Producer_ProducerConfigBuilder_CompressionLz4Level" data-uid="MASES.KNet.Producer.ProducerConfigBuilder.CompressionLz4Level">
   CompressionLz4Level
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/ProducerConfigBuilder.cs/#L237"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/ProducerConfigBuilder.cs/#L251"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.Producer.ProducerConfig.html#Org_Apache_Kafka_Clients_Producer_ProducerConfig_COMPRESSION_LZ4_LEVEL_CONFIG">COMPRESSION_LZ4_LEVEL_CONFIG</a></p>
@@ -592,7 +621,7 @@ Class ProducerConfigBuilder  <a class="header-action link-secondary" title="View
 
   <h3 id="MASES_KNet_Producer_ProducerConfigBuilder_CompressionType" data-uid="MASES.KNet.Producer.ProducerConfigBuilder.CompressionType">
   CompressionType
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/ProducerConfigBuilder.cs/#L250"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/ProducerConfigBuilder.cs/#L264"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.Producer.ProducerConfig.html#Org_Apache_Kafka_Clients_Producer_ProducerConfig_COMPRESSION_TYPE_CONFIG">COMPRESSION_TYPE_CONFIG</a></p>
@@ -624,7 +653,7 @@ Class ProducerConfigBuilder  <a class="header-action link-secondary" title="View
 
   <h3 id="MASES_KNet_Producer_ProducerConfigBuilder_CompressionZstdLevel" data-uid="MASES.KNet.Producer.ProducerConfigBuilder.CompressionZstdLevel">
   CompressionZstdLevel
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/ProducerConfigBuilder.cs/#L278"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/ProducerConfigBuilder.cs/#L292"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.Producer.ProducerConfig.html#Org_Apache_Kafka_Clients_Producer_ProducerConfig_COMPRESSION_ZSTD_LEVEL_CONFIG">COMPRESSION_ZSTD_LEVEL_CONFIG</a></p>
@@ -656,7 +685,7 @@ Class ProducerConfigBuilder  <a class="header-action link-secondary" title="View
 
   <h3 id="MASES_KNet_Producer_ProducerConfigBuilder_DeliveryTimeoutMs" data-uid="MASES.KNet.Producer.ProducerConfigBuilder.DeliveryTimeoutMs">
   DeliveryTimeoutMs
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/ProducerConfigBuilder.cs/#L172"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/ProducerConfigBuilder.cs/#L186"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.Producer.ProducerConfig.html#Org_Apache_Kafka_Clients_Producer_ProducerConfig_DELIVERY_TIMEOUT_MS_CONFIG">DELIVERY_TIMEOUT_MS_CONFIG</a></p>
@@ -688,7 +717,7 @@ Class ProducerConfigBuilder  <a class="header-action link-secondary" title="View
 
   <h3 id="MASES_KNet_Producer_ProducerConfigBuilder_EnableIdempotence" data-uid="MASES.KNet.Producer.ProducerConfigBuilder.EnableIdempotence">
   EnableIdempotence
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/ProducerConfigBuilder.cs/#L369"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/ProducerConfigBuilder.cs/#L383"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.Producer.ProducerConfig.html#Org_Apache_Kafka_Clients_Producer_ProducerConfig_ENABLE_IDEMPOTENCE_CONFIG">ENABLE_IDEMPOTENCE_CONFIG</a></p>
@@ -720,7 +749,7 @@ Class ProducerConfigBuilder  <a class="header-action link-secondary" title="View
 
   <h3 id="MASES_KNet_Producer_ProducerConfigBuilder_InterceptorClasses" data-uid="MASES.KNet.Producer.ProducerConfigBuilder.InterceptorClasses">
   InterceptorClasses
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/ProducerConfigBuilder.cs/#L356"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/ProducerConfigBuilder.cs/#L370"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.Producer.ProducerConfig.html#Org_Apache_Kafka_Clients_Producer_ProducerConfig_INTERCEPTOR_CLASSES_CONFIG">INTERCEPTOR_CLASSES_CONFIG</a></p>
@@ -752,7 +781,7 @@ Class ProducerConfigBuilder  <a class="header-action link-secondary" title="View
 
   <h3 id="MASES_KNet_Producer_ProducerConfigBuilder_KeySerializerClass" data-uid="MASES.KNet.Producer.ProducerConfigBuilder.KeySerializerClass">
   KeySerializerClass
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/ProducerConfigBuilder.cs/#L304"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/ProducerConfigBuilder.cs/#L318"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.Producer.ProducerConfig.html#Org_Apache_Kafka_Clients_Producer_ProducerConfig_KEY_SERIALIZER_CLASS_CONFIG">KEY_SERIALIZER_CLASS_CONFIG</a></p>
@@ -784,7 +813,7 @@ Class ProducerConfigBuilder  <a class="header-action link-secondary" title="View
 
   <h3 id="MASES_KNet_Producer_ProducerConfigBuilder_LingerMs" data-uid="MASES.KNet.Producer.ProducerConfigBuilder.LingerMs">
   LingerMs
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/ProducerConfigBuilder.cs/#L159"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/ProducerConfigBuilder.cs/#L173"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.Producer.ProducerConfig.html#Org_Apache_Kafka_Clients_Producer_ProducerConfig_LINGER_MS_CONFIG">LINGER_MS_CONFIG</a></p>
@@ -816,7 +845,7 @@ Class ProducerConfigBuilder  <a class="header-action link-secondary" title="View
 
   <h3 id="MASES_KNet_Producer_ProducerConfigBuilder_MaxBlockMs" data-uid="MASES.KNet.Producer.ProducerConfigBuilder.MaxBlockMs">
   MaxBlockMs
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/ProducerConfigBuilder.cs/#L198"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/ProducerConfigBuilder.cs/#L212"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.Producer.ProducerConfig.html#Org_Apache_Kafka_Clients_Producer_ProducerConfig_MAX_BLOCK_MS_CONFIG">MAX_BLOCK_MS_CONFIG</a></p>
@@ -844,11 +873,11 @@ Class ProducerConfigBuilder  <a class="header-action link-secondary" title="View
 
 
 
-  <a id="MASES_KNet_Producer_ProducerConfigBuilder_MaxInFlightRequestPerConnection_" data-uid="MASES.KNet.Producer.ProducerConfigBuilder.MaxInFlightRequestPerConnection*"></a>
+  <a id="MASES_KNet_Producer_ProducerConfigBuilder_MaxInFlightRequestsPerConnection_" data-uid="MASES.KNet.Producer.ProducerConfigBuilder.MaxInFlightRequestsPerConnection*"></a>
 
-  <h3 id="MASES_KNet_Producer_ProducerConfigBuilder_MaxInFlightRequestPerConnection" data-uid="MASES.KNet.Producer.ProducerConfigBuilder.MaxInFlightRequestPerConnection">
-  MaxInFlightRequestPerConnection
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/ProducerConfigBuilder.cs/#L291"><i class="bi bi-code-slash"></i></a>
+  <h3 id="MASES_KNet_Producer_ProducerConfigBuilder_MaxInFlightRequestsPerConnection" data-uid="MASES.KNet.Producer.ProducerConfigBuilder.MaxInFlightRequestsPerConnection">
+  MaxInFlightRequestsPerConnection
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/ProducerConfigBuilder.cs/#L305"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.Producer.ProducerConfig.html#Org_Apache_Kafka_Clients_Producer_ProducerConfig_MAX_IN_FLIGHT_REQUESTS_PER_CONNECTION">MAX_IN_FLIGHT_REQUESTS_PER_CONNECTION</a></p>
@@ -856,7 +885,7 @@ Class ProducerConfigBuilder  <a class="header-action link-secondary" title="View
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int MaxInFlightRequestPerConnection { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public int MaxInFlightRequestsPerConnection { get; set; }</code></pre>
   </div>
 
 
@@ -880,7 +909,7 @@ Class ProducerConfigBuilder  <a class="header-action link-secondary" title="View
 
   <h3 id="MASES_KNet_Producer_ProducerConfigBuilder_MaxRequestSize" data-uid="MASES.KNet.Producer.ProducerConfigBuilder.MaxRequestSize">
   MaxRequestSize
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/ProducerConfigBuilder.cs/#L185"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/ProducerConfigBuilder.cs/#L199"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.Producer.ProducerConfig.html#Org_Apache_Kafka_Clients_Producer_ProducerConfig_MAX_REQUEST_SIZE_CONFIG">MAX_REQUEST_SIZE_CONFIG</a></p>
@@ -940,11 +969,43 @@ Class ProducerConfigBuilder  <a class="header-action link-secondary" title="View
 
 
 
+  <a id="MASES_KNet_Producer_ProducerConfigBuilder_PartitionerAdaptivePartitioningEnable_" data-uid="MASES.KNet.Producer.ProducerConfigBuilder.PartitionerAdaptivePartitioningEnable*"></a>
+
+  <h3 id="MASES_KNet_Producer_ProducerConfigBuilder_PartitionerAdaptivePartitioningEnable" data-uid="MASES.KNet.Producer.ProducerConfigBuilder.PartitionerAdaptivePartitioningEnable">
+  PartitionerAdaptivePartitioningEnable
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/ProducerConfigBuilder.cs/#L108"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.Producer.ProducerConfig.html#Org_Apache_Kafka_Clients_Producer_ProducerConfig_PARTITIONER_ADAPTIVE_PARTITIONING_ENABLE_CONFIG">PARTITIONER_ADAPTIVE_PARTITIONING_ENABLE_CONFIG</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool PartitionerAdaptivePartitioningEnable { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="MASES_KNet_Producer_ProducerConfigBuilder_PartitionerAvailabilityTimeoutMs_" data-uid="MASES.KNet.Producer.ProducerConfigBuilder.PartitionerAvailabilityTimeoutMs*"></a>
 
   <h3 id="MASES_KNet_Producer_ProducerConfigBuilder_PartitionerAvailabilityTimeoutMs" data-uid="MASES.KNet.Producer.ProducerConfigBuilder.PartitionerAvailabilityTimeoutMs">
   PartitionerAvailabilityTimeoutMs
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/ProducerConfigBuilder.cs/#L330"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/ProducerConfigBuilder.cs/#L344"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.Producer.ProducerConfig.html#Org_Apache_Kafka_Clients_Producer_ProducerConfig_PARTITIONER_AVAILABILITY_TIMEOUT_MS_CONFIG">PARTITIONER_AVAILABILITY_TIMEOUT_MS_CONFIG</a></p>
@@ -976,7 +1037,7 @@ Class ProducerConfigBuilder  <a class="header-action link-secondary" title="View
 
   <h3 id="MASES_KNet_Producer_ProducerConfigBuilder_PartitionerClass" data-uid="MASES.KNet.Producer.ProducerConfigBuilder.PartitionerClass">
   PartitionerClass
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/ProducerConfigBuilder.cs/#L343"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/ProducerConfigBuilder.cs/#L357"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.Producer.ProducerConfig.html#Org_Apache_Kafka_Clients_Producer_ProducerConfig_PARTITIONER_CLASS_CONFIG">PARTITIONER_CLASS_CONFIG</a></p>
@@ -1008,7 +1069,7 @@ Class ProducerConfigBuilder  <a class="header-action link-secondary" title="View
 
   <h3 id="MASES_KNet_Producer_ProducerConfigBuilder_PartitionerIgnoreKeys" data-uid="MASES.KNet.Producer.ProducerConfigBuilder.PartitionerIgnoreKeys">
   PartitionerIgnoreKeys
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/ProducerConfigBuilder.cs/#L108"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/ProducerConfigBuilder.cs/#L122"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.Producer.ProducerConfig.html#Org_Apache_Kafka_Clients_Producer_ProducerConfig_PARTITIONER_IGNORE_KEYS_CONFIG">PARTITIONER_IGNORE_KEYS_CONFIG</a></p>
@@ -1040,7 +1101,7 @@ Class ProducerConfigBuilder  <a class="header-action link-secondary" title="View
 
   <h3 id="MASES_KNet_Producer_ProducerConfigBuilder_SecurityProviders" data-uid="MASES.KNet.Producer.ProducerConfigBuilder.SecurityProviders">
   SecurityProviders
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/ProducerConfigBuilder.cs/#L408"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/ProducerConfigBuilder.cs/#L436"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.Producer.ProducerConfig.html#Org_Apache_Kafka_Clients_Producer_ProducerConfig_SECURITY_PROVIDERS_CONFIG">SECURITY_PROVIDERS_CONFIG</a></p>
@@ -1072,7 +1133,7 @@ Class ProducerConfigBuilder  <a class="header-action link-secondary" title="View
 
   <h3 id="MASES_KNet_Producer_ProducerConfigBuilder_TransactionTimeout" data-uid="MASES.KNet.Producer.ProducerConfigBuilder.TransactionTimeout">
   TransactionTimeout
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/ProducerConfigBuilder.cs/#L382"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/ProducerConfigBuilder.cs/#L396"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.Producer.ProducerConfig.html#Org_Apache_Kafka_Clients_Producer_ProducerConfig_TRANSACTION_TIMEOUT_CONFIG">TRANSACTION_TIMEOUT_CONFIG</a></p>
@@ -1100,11 +1161,43 @@ Class ProducerConfigBuilder  <a class="header-action link-secondary" title="View
 
 
 
+  <a id="MASES_KNet_Producer_ProducerConfigBuilder_TransactionTwoPhaseCommitEnable_" data-uid="MASES.KNet.Producer.ProducerConfigBuilder.TransactionTwoPhaseCommitEnable*"></a>
+
+  <h3 id="MASES_KNet_Producer_ProducerConfigBuilder_TransactionTwoPhaseCommitEnable" data-uid="MASES.KNet.Producer.ProducerConfigBuilder.TransactionTwoPhaseCommitEnable">
+  TransactionTwoPhaseCommitEnable
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/ProducerConfigBuilder.cs/#L422"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.Producer.ProducerConfig.html#Org_Apache_Kafka_Clients_Producer_ProducerConfig_TRANSACTION_TWO_PHASE_COMMIT_ENABLE_CONFIG">TRANSACTION_TWO_PHASE_COMMIT_ENABLE_CONFIG</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TransactionTwoPhaseCommitEnable { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="MASES_KNet_Producer_ProducerConfigBuilder_TransactionalId_" data-uid="MASES.KNet.Producer.ProducerConfigBuilder.TransactionalId*"></a>
 
   <h3 id="MASES_KNet_Producer_ProducerConfigBuilder_TransactionalId" data-uid="MASES.KNet.Producer.ProducerConfigBuilder.TransactionalId">
   TransactionalId
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/ProducerConfigBuilder.cs/#L395"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/ProducerConfigBuilder.cs/#L409"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.Producer.ProducerConfig.html#Org_Apache_Kafka_Clients_Producer_ProducerConfig_TRANSACTIONAL_ID_CONFIG">TRANSACTIONAL_ID_CONFIG</a></p>
@@ -1136,7 +1229,7 @@ Class ProducerConfigBuilder  <a class="header-action link-secondary" title="View
 
   <h3 id="MASES_KNet_Producer_ProducerConfigBuilder_ValueSerializerClass" data-uid="MASES.KNet.Producer.ProducerConfigBuilder.ValueSerializerClass">
   ValueSerializerClass
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/ProducerConfigBuilder.cs/#L317"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/ProducerConfigBuilder.cs/#L331"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.Producer.ProducerConfig.html#Org_Apache_Kafka_Clients_Producer_ProducerConfig_VALUE_SERIALIZER_CLASS_CONFIG">VALUE_SERIALIZER_CLASS_CONFIG</a></p>
@@ -1172,7 +1265,7 @@ Class ProducerConfigBuilder  <a class="header-action link-secondary" title="View
 
   <h3 id="MASES_KNet_Producer_ProducerConfigBuilder_WithAcks_MASES_KNet_Producer_ProducerConfigBuilder_AcksTypes_" data-uid="MASES.KNet.Producer.ProducerConfigBuilder.WithAcks(MASES.KNet.Producer.ProducerConfigBuilder.AcksTypes)">
   WithAcks(AcksTypes)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/ProducerConfigBuilder.cs/#L150"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/ProducerConfigBuilder.cs/#L164"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.Producer.ProducerConfig.html#Org_Apache_Kafka_Clients_Producer_ProducerConfig_ACKS_CONFIG">ACKS_CONFIG</a></p>
@@ -1246,7 +1339,7 @@ Class ProducerConfigBuilder  <a class="header-action link-secondary" title="View
 
   <h3 id="MASES_KNet_Producer_ProducerConfigBuilder_WithBufferMemory_System_Int64_" data-uid="MASES.KNet.Producer.ProducerConfigBuilder.WithBufferMemory(System.Int64)">
   WithBufferMemory(long)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/ProducerConfigBuilder.cs/#L215"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/ProducerConfigBuilder.cs/#L229"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.Producer.ProducerConfig.html#Org_Apache_Kafka_Clients_Producer_ProducerConfig_BUFFER_MEMORY_CONFIG">BUFFER_MEMORY_CONFIG</a></p>
@@ -1283,7 +1376,7 @@ Class ProducerConfigBuilder  <a class="header-action link-secondary" title="View
 
   <h3 id="MASES_KNet_Producer_ProducerConfigBuilder_WithCompressionGzipLevel_System_Int32_" data-uid="MASES.KNet.Producer.ProducerConfigBuilder.WithCompressionGzipLevel(System.Int32)">
   WithCompressionGzipLevel(int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/ProducerConfigBuilder.cs/#L228"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/ProducerConfigBuilder.cs/#L242"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.Producer.ProducerConfig.html#Org_Apache_Kafka_Clients_Producer_ProducerConfig_COMPRESSION_GZIP_LEVEL_CONFIG">COMPRESSION_GZIP_LEVEL_CONFIG</a></p>
@@ -1320,7 +1413,7 @@ Class ProducerConfigBuilder  <a class="header-action link-secondary" title="View
 
   <h3 id="MASES_KNet_Producer_ProducerConfigBuilder_WithCompressionLz4Level_System_Int32_" data-uid="MASES.KNet.Producer.ProducerConfigBuilder.WithCompressionLz4Level(System.Int32)">
   WithCompressionLz4Level(int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/ProducerConfigBuilder.cs/#L241"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/ProducerConfigBuilder.cs/#L255"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.Producer.ProducerConfig.html#Org_Apache_Kafka_Clients_Producer_ProducerConfig_COMPRESSION_LZ4_LEVEL_CONFIG">COMPRESSION_LZ4_LEVEL_CONFIG</a></p>
@@ -1357,7 +1450,7 @@ Class ProducerConfigBuilder  <a class="header-action link-secondary" title="View
 
   <h3 id="MASES_KNet_Producer_ProducerConfigBuilder_WithCompressionType_MASES_KNet_Producer_ProducerConfigBuilder_CompressionTypes_" data-uid="MASES.KNet.Producer.ProducerConfigBuilder.WithCompressionType(MASES.KNet.Producer.ProducerConfigBuilder.CompressionTypes)">
   WithCompressionType(CompressionTypes)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/ProducerConfigBuilder.cs/#L269"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/ProducerConfigBuilder.cs/#L283"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.Producer.ProducerConfig.html#Org_Apache_Kafka_Clients_Producer_ProducerConfig_COMPRESSION_TYPE_CONFIG">COMPRESSION_TYPE_CONFIG</a></p>
@@ -1394,7 +1487,7 @@ Class ProducerConfigBuilder  <a class="header-action link-secondary" title="View
 
   <h3 id="MASES_KNet_Producer_ProducerConfigBuilder_WithCompressionZstdLevel_System_Int32_" data-uid="MASES.KNet.Producer.ProducerConfigBuilder.WithCompressionZstdLevel(System.Int32)">
   WithCompressionZstdLevel(int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/ProducerConfigBuilder.cs/#L282"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/ProducerConfigBuilder.cs/#L296"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.Producer.ProducerConfig.html#Org_Apache_Kafka_Clients_Producer_ProducerConfig_COMPRESSION_ZSTD_LEVEL_CONFIG">COMPRESSION_ZSTD_LEVEL_CONFIG</a></p>
@@ -1431,7 +1524,7 @@ Class ProducerConfigBuilder  <a class="header-action link-secondary" title="View
 
   <h3 id="MASES_KNet_Producer_ProducerConfigBuilder_WithDeliveryTimeoutMs_System_Int32_" data-uid="MASES.KNet.Producer.ProducerConfigBuilder.WithDeliveryTimeoutMs(System.Int32)">
   WithDeliveryTimeoutMs(int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/ProducerConfigBuilder.cs/#L176"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/ProducerConfigBuilder.cs/#L190"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.Producer.ProducerConfig.html#Org_Apache_Kafka_Clients_Producer_ProducerConfig_DELIVERY_TIMEOUT_MS_CONFIG">DELIVERY_TIMEOUT_MS_CONFIG</a></p>
@@ -1468,7 +1561,7 @@ Class ProducerConfigBuilder  <a class="header-action link-secondary" title="View
 
   <h3 id="MASES_KNet_Producer_ProducerConfigBuilder_WithEnableIdempotence_System_Boolean_" data-uid="MASES.KNet.Producer.ProducerConfigBuilder.WithEnableIdempotence(System.Boolean)">
   WithEnableIdempotence(bool)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/ProducerConfigBuilder.cs/#L373"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/ProducerConfigBuilder.cs/#L387"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.Producer.ProducerConfig.html#Org_Apache_Kafka_Clients_Producer_ProducerConfig_ENABLE_IDEMPOTENCE_CONFIG">ENABLE_IDEMPOTENCE_CONFIG</a></p>
@@ -1505,7 +1598,7 @@ Class ProducerConfigBuilder  <a class="header-action link-secondary" title="View
 
   <h3 id="MASES_KNet_Producer_ProducerConfigBuilder_WithInterceptorClasses_Java_Util_List_Java_Lang_Class__" data-uid="MASES.KNet.Producer.ProducerConfigBuilder.WithInterceptorClasses(Java.Util.List{Java.Lang.Class})">
   WithInterceptorClasses(List&lt;Class&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/ProducerConfigBuilder.cs/#L360"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/ProducerConfigBuilder.cs/#L374"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.Producer.ProducerConfig.html#Org_Apache_Kafka_Clients_Producer_ProducerConfig_INTERCEPTOR_CLASSES_CONFIG">INTERCEPTOR_CLASSES_CONFIG</a></p>
@@ -1542,7 +1635,7 @@ Class ProducerConfigBuilder  <a class="header-action link-secondary" title="View
 
   <h3 id="MASES_KNet_Producer_ProducerConfigBuilder_WithKeySerializerClass_System_String_" data-uid="MASES.KNet.Producer.ProducerConfigBuilder.WithKeySerializerClass(System.String)">
   WithKeySerializerClass(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/ProducerConfigBuilder.cs/#L308"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/ProducerConfigBuilder.cs/#L322"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.Producer.ProducerConfig.html#Org_Apache_Kafka_Clients_Producer_ProducerConfig_KEY_SERIALIZER_CLASS_CONFIG">KEY_SERIALIZER_CLASS_CONFIG</a></p>
@@ -1579,7 +1672,7 @@ Class ProducerConfigBuilder  <a class="header-action link-secondary" title="View
 
   <h3 id="MASES_KNet_Producer_ProducerConfigBuilder_WithLingerMs_System_Int64_" data-uid="MASES.KNet.Producer.ProducerConfigBuilder.WithLingerMs(System.Int64)">
   WithLingerMs(long)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/ProducerConfigBuilder.cs/#L163"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/ProducerConfigBuilder.cs/#L177"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.Producer.ProducerConfig.html#Org_Apache_Kafka_Clients_Producer_ProducerConfig_LINGER_MS_CONFIG">LINGER_MS_CONFIG</a></p>
@@ -1616,7 +1709,7 @@ Class ProducerConfigBuilder  <a class="header-action link-secondary" title="View
 
   <h3 id="MASES_KNet_Producer_ProducerConfigBuilder_WithMaxBlockMs_System_Int64_" data-uid="MASES.KNet.Producer.ProducerConfigBuilder.WithMaxBlockMs(System.Int64)">
   WithMaxBlockMs(long)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/ProducerConfigBuilder.cs/#L202"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/ProducerConfigBuilder.cs/#L216"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.Producer.ProducerConfig.html#Org_Apache_Kafka_Clients_Producer_ProducerConfig_MAX_BLOCK_MS_CONFIG">MAX_BLOCK_MS_CONFIG</a></p>
@@ -1649,11 +1742,11 @@ Class ProducerConfigBuilder  <a class="header-action link-secondary" title="View
 
 
 
-  <a id="MASES_KNet_Producer_ProducerConfigBuilder_WithMaxInFlightRequestPerConnection_" data-uid="MASES.KNet.Producer.ProducerConfigBuilder.WithMaxInFlightRequestPerConnection*"></a>
+  <a id="MASES_KNet_Producer_ProducerConfigBuilder_WithMaxInFlightRequestsPerConnection_" data-uid="MASES.KNet.Producer.ProducerConfigBuilder.WithMaxInFlightRequestsPerConnection*"></a>
 
-  <h3 id="MASES_KNet_Producer_ProducerConfigBuilder_WithMaxInFlightRequestPerConnection_System_Int32_" data-uid="MASES.KNet.Producer.ProducerConfigBuilder.WithMaxInFlightRequestPerConnection(System.Int32)">
-  WithMaxInFlightRequestPerConnection(int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/ProducerConfigBuilder.cs/#L295"><i class="bi bi-code-slash"></i></a>
+  <h3 id="MASES_KNet_Producer_ProducerConfigBuilder_WithMaxInFlightRequestsPerConnection_System_Int32_" data-uid="MASES.KNet.Producer.ProducerConfigBuilder.WithMaxInFlightRequestsPerConnection(System.Int32)">
+  WithMaxInFlightRequestsPerConnection(int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/ProducerConfigBuilder.cs/#L309"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.Producer.ProducerConfig.html#Org_Apache_Kafka_Clients_Producer_ProducerConfig_MAX_IN_FLIGHT_REQUESTS_PER_CONNECTION">MAX_IN_FLIGHT_REQUESTS_PER_CONNECTION</a></p>
@@ -1661,12 +1754,12 @@ Class ProducerConfigBuilder  <a class="header-action link-secondary" title="View
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ProducerConfigBuilder WithMaxInFlightRequestPerConnection(int maxInFlightRequestPerConnection)</code></pre>
+    <pre><code class="lang-csharp hljs">public ProducerConfigBuilder WithMaxInFlightRequestsPerConnection(int maxInFlightRequestsPerConnection)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>maxInFlightRequestPerConnection</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dt><code>maxInFlightRequestsPerConnection</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
     <dd></dd>
   </dl>
 
@@ -1690,7 +1783,7 @@ Class ProducerConfigBuilder  <a class="header-action link-secondary" title="View
 
   <h3 id="MASES_KNet_Producer_ProducerConfigBuilder_WithMaxRequestSize_System_Int32_" data-uid="MASES.KNet.Producer.ProducerConfigBuilder.WithMaxRequestSize(System.Int32)">
   WithMaxRequestSize(int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/ProducerConfigBuilder.cs/#L189"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/ProducerConfigBuilder.cs/#L203"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.Producer.ProducerConfig.html#Org_Apache_Kafka_Clients_Producer_ProducerConfig_MAX_REQUEST_SIZE_CONFIG">MAX_REQUEST_SIZE_CONFIG</a></p>
@@ -1760,11 +1853,48 @@ Class ProducerConfigBuilder  <a class="header-action link-secondary" title="View
 
 
 
+  <a id="MASES_KNet_Producer_ProducerConfigBuilder_WithPartitionerAdaptivePartitioningEnable_" data-uid="MASES.KNet.Producer.ProducerConfigBuilder.WithPartitionerAdaptivePartitioningEnable*"></a>
+
+  <h3 id="MASES_KNet_Producer_ProducerConfigBuilder_WithPartitionerAdaptivePartitioningEnable_System_Boolean_" data-uid="MASES.KNet.Producer.ProducerConfigBuilder.WithPartitionerAdaptivePartitioningEnable(System.Boolean)">
+  WithPartitionerAdaptivePartitioningEnable(bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/ProducerConfigBuilder.cs/#L112"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.Producer.ProducerConfig.html#Org_Apache_Kafka_Clients_Producer_ProducerConfig_PARTITIONER_ADAPTIVE_PARTITIONING_ENABLE_CONFIG">PARTITIONER_ADAPTIVE_PARTITIONING_ENABLE_CONFIG</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ProducerConfigBuilder WithPartitionerAdaptivePartitioningEnable(bool partitionerAdaptivePartitioningEnable)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>partitionerAdaptivePartitioningEnable</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MASES.KNet.Producer.ProducerConfigBuilder.html">ProducerConfigBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="MASES_KNet_Producer_ProducerConfigBuilder_WithPartitionerAvailabilityTimeoutMs_" data-uid="MASES.KNet.Producer.ProducerConfigBuilder.WithPartitionerAvailabilityTimeoutMs*"></a>
 
   <h3 id="MASES_KNet_Producer_ProducerConfigBuilder_WithPartitionerAvailabilityTimeoutMs_System_Int64_" data-uid="MASES.KNet.Producer.ProducerConfigBuilder.WithPartitionerAvailabilityTimeoutMs(System.Int64)">
   WithPartitionerAvailabilityTimeoutMs(long)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/ProducerConfigBuilder.cs/#L334"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/ProducerConfigBuilder.cs/#L348"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.Producer.ProducerConfig.html#Org_Apache_Kafka_Clients_Producer_ProducerConfig_PARTITIONER_AVAILABILITY_TIMEOUT_MS_CONFIG">PARTITIONER_AVAILABILITY_TIMEOUT_MS_CONFIG</a></p>
@@ -1801,7 +1931,7 @@ Class ProducerConfigBuilder  <a class="header-action link-secondary" title="View
 
   <h3 id="MASES_KNet_Producer_ProducerConfigBuilder_WithPartitionerClass_Java_Lang_Class_" data-uid="MASES.KNet.Producer.ProducerConfigBuilder.WithPartitionerClass(Java.Lang.Class)">
   WithPartitionerClass(Class)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/ProducerConfigBuilder.cs/#L347"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/ProducerConfigBuilder.cs/#L361"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.Producer.ProducerConfig.html#Org_Apache_Kafka_Clients_Producer_ProducerConfig_PARTITIONER_CLASS_CONFIG">PARTITIONER_CLASS_CONFIG</a></p>
@@ -1838,7 +1968,7 @@ Class ProducerConfigBuilder  <a class="header-action link-secondary" title="View
 
   <h3 id="MASES_KNet_Producer_ProducerConfigBuilder_WithPartitionerIgnoreKeys_System_Boolean_" data-uid="MASES.KNet.Producer.ProducerConfigBuilder.WithPartitionerIgnoreKeys(System.Boolean)">
   WithPartitionerIgnoreKeys(bool)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/ProducerConfigBuilder.cs/#L112"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/ProducerConfigBuilder.cs/#L126"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.Producer.ProducerConfig.html#Org_Apache_Kafka_Clients_Producer_ProducerConfig_PARTITIONER_IGNORE_KEYS_CONFIG">PARTITIONER_IGNORE_KEYS_CONFIG</a></p>
@@ -1875,7 +2005,7 @@ Class ProducerConfigBuilder  <a class="header-action link-secondary" title="View
 
   <h3 id="MASES_KNet_Producer_ProducerConfigBuilder_WithSecurityProviders_System_String_" data-uid="MASES.KNet.Producer.ProducerConfigBuilder.WithSecurityProviders(System.String)">
   WithSecurityProviders(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/ProducerConfigBuilder.cs/#L412"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/ProducerConfigBuilder.cs/#L440"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.Producer.ProducerConfig.html#Org_Apache_Kafka_Clients_Producer_ProducerConfig_SECURITY_PROVIDERS_CONFIG">SECURITY_PROVIDERS_CONFIG</a></p>
@@ -1912,7 +2042,7 @@ Class ProducerConfigBuilder  <a class="header-action link-secondary" title="View
 
   <h3 id="MASES_KNet_Producer_ProducerConfigBuilder_WithTransactionTimeout_System_Int32_" data-uid="MASES.KNet.Producer.ProducerConfigBuilder.WithTransactionTimeout(System.Int32)">
   WithTransactionTimeout(int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/ProducerConfigBuilder.cs/#L386"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/ProducerConfigBuilder.cs/#L400"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.Producer.ProducerConfig.html#Org_Apache_Kafka_Clients_Producer_ProducerConfig_TRANSACTION_TIMEOUT_CONFIG">TRANSACTION_TIMEOUT_CONFIG</a></p>
@@ -1945,11 +2075,48 @@ Class ProducerConfigBuilder  <a class="header-action link-secondary" title="View
 
 
 
+  <a id="MASES_KNet_Producer_ProducerConfigBuilder_WithTransactionTwoPhaseCommitEnable_" data-uid="MASES.KNet.Producer.ProducerConfigBuilder.WithTransactionTwoPhaseCommitEnable*"></a>
+
+  <h3 id="MASES_KNet_Producer_ProducerConfigBuilder_WithTransactionTwoPhaseCommitEnable_System_Boolean_" data-uid="MASES.KNet.Producer.ProducerConfigBuilder.WithTransactionTwoPhaseCommitEnable(System.Boolean)">
+  WithTransactionTwoPhaseCommitEnable(bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/ProducerConfigBuilder.cs/#L426"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.Producer.ProducerConfig.html#Org_Apache_Kafka_Clients_Producer_ProducerConfig_TRANSACTION_TWO_PHASE_COMMIT_ENABLE_CONFIG">TRANSACTION_TWO_PHASE_COMMIT_ENABLE_CONFIG</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ProducerConfigBuilder WithTransactionTwoPhaseCommitEnable(bool transactionTwoPhaseCommitEnable)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>transactionTwoPhaseCommitEnable</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MASES.KNet.Producer.ProducerConfigBuilder.html">ProducerConfigBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="MASES_KNet_Producer_ProducerConfigBuilder_WithTransactionalId_" data-uid="MASES.KNet.Producer.ProducerConfigBuilder.WithTransactionalId*"></a>
 
   <h3 id="MASES_KNet_Producer_ProducerConfigBuilder_WithTransactionalId_System_String_" data-uid="MASES.KNet.Producer.ProducerConfigBuilder.WithTransactionalId(System.String)">
   WithTransactionalId(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/ProducerConfigBuilder.cs/#L399"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/ProducerConfigBuilder.cs/#L413"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.Producer.ProducerConfig.html#Org_Apache_Kafka_Clients_Producer_ProducerConfig_TRANSACTIONAL_ID_CONFIG">TRANSACTIONAL_ID_CONFIG</a></p>
@@ -1986,7 +2153,7 @@ Class ProducerConfigBuilder  <a class="header-action link-secondary" title="View
 
   <h3 id="MASES_KNet_Producer_ProducerConfigBuilder_WithValueSerializerClass_System_String_" data-uid="MASES.KNet.Producer.ProducerConfigBuilder.WithValueSerializerClass(System.String)">
   WithValueSerializerClass(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/ProducerConfigBuilder.cs/#L321"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Producer/ProducerConfigBuilder.cs/#L335"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.Producer.ProducerConfig.html#Org_Apache_Kafka_Clients_Producer_ProducerConfig_VALUE_SERIALIZER_CLASS_CONFIG">VALUE_SERIALIZER_CLASS_CONFIG</a></p>

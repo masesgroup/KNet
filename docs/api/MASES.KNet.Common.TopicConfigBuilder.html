@@ -102,7 +102,7 @@ Class TopicConfigBuilder  <a class="header-action link-secondary" title="View so
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class TopicConfigBuilder : GenericConfigBuilder&lt;TopicConfigBuilder&gt;, INotifyPropertyChanged, IGenericSerDesFactory, IDisposable</code></pre>
+    <pre><code class="lang-csharp hljs">public class TopicConfigBuilder : GenericConfigBuilder&lt;TopicConfigBuilder&gt;, INotifyPropertyChanged, IGenericSerDesFactory, IDisposable, IEnumerable&lt;KeyValuePair&lt;string, object&gt;&gt;, IEnumerable</code></pre>
   </div>
 
 
@@ -123,6 +123,8 @@ Class TopicConfigBuilder  <a class="header-action link-secondary" title="View so
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.inotifypropertychanged">INotifyPropertyChanged</a></div>
       <div><a class="xref" href="MASES.KNet.Serialization.IGenericSerDesFactory.html">IGenericSerDesFactory</a></div>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.keyvaluepair-2">KeyValuePair</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;&gt;</div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.ienumerable">IEnumerable</a></div>
     </dd>
   </dl>
 
@@ -177,6 +179,9 @@ Class TopicConfigBuilder  <a class="header-action link-secondary" title="View so
     </div>
     <div>
       <a class="xref" href="MASES.KNet.GenericConfigBuilder-1.html#MASES_KNet_GenericConfigBuilder_1_Dispose">GenericConfigBuilder&lt;TopicConfigBuilder&gt;.Dispose()</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.GenericConfigBuilder-1.html#MASES_KNet_GenericConfigBuilder_1_GetEnumerator">GenericConfigBuilder&lt;TopicConfigBuilder&gt;.GetEnumerator()</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
@@ -382,7 +387,7 @@ Class TopicConfigBuilder  <a class="header-action link-secondary" title="View so
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int DeleteRetentionMs { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public long DeleteRetentionMs { get; set; }</code></pre>
   </div>
 
 
@@ -391,7 +396,7 @@ Class TopicConfigBuilder  <a class="header-action link-secondary" title="View so
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
     <dd></dd>
   </dl>
 
@@ -414,7 +419,7 @@ Class TopicConfigBuilder  <a class="header-action link-secondary" title="View so
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int FileDeleteDelayMs { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public long FileDeleteDelayMs { get; set; }</code></pre>
   </div>
 
 
@@ -423,7 +428,7 @@ Class TopicConfigBuilder  <a class="header-action link-secondary" title="View so
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
     <dd></dd>
   </dl>
 
@@ -446,7 +451,7 @@ Class TopicConfigBuilder  <a class="header-action link-secondary" title="View so
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int FlushMessageInterval { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public long FlushMessageInterval { get; set; }</code></pre>
   </div>
 
 
@@ -455,7 +460,7 @@ Class TopicConfigBuilder  <a class="header-action link-secondary" title="View so
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
     <dd></dd>
   </dl>
 
@@ -478,7 +483,7 @@ Class TopicConfigBuilder  <a class="header-action link-secondary" title="View so
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int FlushMs { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public long FlushMs { get; set; }</code></pre>
   </div>
 
 
@@ -487,7 +492,7 @@ Class TopicConfigBuilder  <a class="header-action link-secondary" title="View so
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
     <dd></dd>
   </dl>
 
@@ -542,7 +547,7 @@ Class TopicConfigBuilder  <a class="header-action link-secondary" title="View so
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int LocalLogRetentionBytes { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public long LocalLogRetentionBytes { get; set; }</code></pre>
   </div>
 
 
@@ -551,7 +556,7 @@ Class TopicConfigBuilder  <a class="header-action link-secondary" title="View so
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
     <dd></dd>
   </dl>
 
@@ -574,7 +579,7 @@ Class TopicConfigBuilder  <a class="header-action link-secondary" title="View so
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int LocalLogRetentionMs { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public long LocalLogRetentionMs { get; set; }</code></pre>
   </div>
 
 
@@ -583,7 +588,7 @@ Class TopicConfigBuilder  <a class="header-action link-secondary" title="View so
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
     <dd></dd>
   </dl>
 
@@ -606,7 +611,7 @@ Class TopicConfigBuilder  <a class="header-action link-secondary" title="View so
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int MaxCompactationLagMs { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public long MaxCompactationLagMs { get; set; }</code></pre>
   </div>
 
 
@@ -615,7 +620,7 @@ Class TopicConfigBuilder  <a class="header-action link-secondary" title="View so
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
     <dd></dd>
   </dl>
 
@@ -798,7 +803,7 @@ Class TopicConfigBuilder  <a class="header-action link-secondary" title="View so
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int MinCompactationLagMs { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public long MinCompactationLagMs { get; set; }</code></pre>
   </div>
 
 
@@ -807,7 +812,7 @@ Class TopicConfigBuilder  <a class="header-action link-secondary" title="View so
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
     <dd></dd>
   </dl>
 
@@ -990,7 +995,7 @@ Class TopicConfigBuilder  <a class="header-action link-secondary" title="View so
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int RetentionBytes { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public long RetentionBytes { get; set; }</code></pre>
   </div>
 
 
@@ -999,7 +1004,7 @@ Class TopicConfigBuilder  <a class="header-action link-secondary" title="View so
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
     <dd></dd>
   </dl>
 
@@ -1022,7 +1027,7 @@ Class TopicConfigBuilder  <a class="header-action link-secondary" title="View so
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int RetentionMs { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public long RetentionMs { get; set; }</code></pre>
   </div>
 
 
@@ -1031,7 +1036,7 @@ Class TopicConfigBuilder  <a class="header-action link-secondary" title="View so
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
     <dd></dd>
   </dl>
 
@@ -1118,7 +1123,7 @@ Class TopicConfigBuilder  <a class="header-action link-secondary" title="View so
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int SegmentJitterMs { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public long SegmentJitterMs { get; set; }</code></pre>
   </div>
 
 
@@ -1127,7 +1132,7 @@ Class TopicConfigBuilder  <a class="header-action link-secondary" title="View so
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
     <dd></dd>
   </dl>
 
@@ -1150,7 +1155,7 @@ Class TopicConfigBuilder  <a class="header-action link-secondary" title="View so
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int SegmentMs { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public long SegmentMs { get; set; }</code></pre>
   </div>
 
 
@@ -1159,7 +1164,7 @@ Class TopicConfigBuilder  <a class="header-action link-secondary" title="View so
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
     <dd></dd>
   </dl>
 
@@ -1393,8 +1398,8 @@ Class TopicConfigBuilder  <a class="header-action link-secondary" title="View so
 
   <a id="MASES_KNet_Common_TopicConfigBuilder_WithDeleteRetentionMs_" data-uid="MASES.KNet.Common.TopicConfigBuilder.WithDeleteRetentionMs*"></a>
 
-  <h3 id="MASES_KNet_Common_TopicConfigBuilder_WithDeleteRetentionMs_System_Int32_" data-uid="MASES.KNet.Common.TopicConfigBuilder.WithDeleteRetentionMs(System.Int32)">
-  WithDeleteRetentionMs(int)
+  <h3 id="MASES_KNet_Common_TopicConfigBuilder_WithDeleteRetentionMs_System_Int64_" data-uid="MASES.KNet.Common.TopicConfigBuilder.WithDeleteRetentionMs(System.Int64)">
+  WithDeleteRetentionMs(long)
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Common/TopicConfigBuilder.cs/#L280"><i class="bi bi-code-slash"></i></a>
   </h3>
 
@@ -1403,12 +1408,12 @@ Class TopicConfigBuilder  <a class="header-action link-secondary" title="View so
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public TopicConfigBuilder WithDeleteRetentionMs(int deleteRetentionMs)</code></pre>
+    <pre><code class="lang-csharp hljs">public TopicConfigBuilder WithDeleteRetentionMs(long deleteRetentionMs)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>deleteRetentionMs</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dt><code>deleteRetentionMs</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
     <dd></dd>
   </dl>
 
@@ -1430,8 +1435,8 @@ Class TopicConfigBuilder  <a class="header-action link-secondary" title="View so
 
   <a id="MASES_KNet_Common_TopicConfigBuilder_WithFileDeleteDelayMs_" data-uid="MASES.KNet.Common.TopicConfigBuilder.WithFileDeleteDelayMs*"></a>
 
-  <h3 id="MASES_KNet_Common_TopicConfigBuilder_WithFileDeleteDelayMs_System_Int32_" data-uid="MASES.KNet.Common.TopicConfigBuilder.WithFileDeleteDelayMs(System.Int32)">
-  WithFileDeleteDelayMs(int)
+  <h3 id="MASES_KNet_Common_TopicConfigBuilder_WithFileDeleteDelayMs_System_Int64_" data-uid="MASES.KNet.Common.TopicConfigBuilder.WithFileDeleteDelayMs(System.Int64)">
+  WithFileDeleteDelayMs(long)
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Common/TopicConfigBuilder.cs/#L267"><i class="bi bi-code-slash"></i></a>
   </h3>
 
@@ -1440,12 +1445,12 @@ Class TopicConfigBuilder  <a class="header-action link-secondary" title="View so
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public TopicConfigBuilder WithFileDeleteDelayMs(int fileDeleteDelayMs)</code></pre>
+    <pre><code class="lang-csharp hljs">public TopicConfigBuilder WithFileDeleteDelayMs(long fileDeleteDelayMs)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>fileDeleteDelayMs</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dt><code>fileDeleteDelayMs</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
     <dd></dd>
   </dl>
 
@@ -1467,8 +1472,8 @@ Class TopicConfigBuilder  <a class="header-action link-secondary" title="View so
 
   <a id="MASES_KNet_Common_TopicConfigBuilder_WithFlushMessageInterval_" data-uid="MASES.KNet.Common.TopicConfigBuilder.WithFlushMessageInterval*"></a>
 
-  <h3 id="MASES_KNet_Common_TopicConfigBuilder_WithFlushMessageInterval_System_Int32_" data-uid="MASES.KNet.Common.TopicConfigBuilder.WithFlushMessageInterval(System.Int32)">
-  WithFlushMessageInterval(int)
+  <h3 id="MASES_KNet_Common_TopicConfigBuilder_WithFlushMessageInterval_System_Int64_" data-uid="MASES.KNet.Common.TopicConfigBuilder.WithFlushMessageInterval(System.Int64)">
+  WithFlushMessageInterval(long)
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Common/TopicConfigBuilder.cs/#L150"><i class="bi bi-code-slash"></i></a>
   </h3>
 
@@ -1477,12 +1482,12 @@ Class TopicConfigBuilder  <a class="header-action link-secondary" title="View so
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public TopicConfigBuilder WithFlushMessageInterval(int flushMessageInterval)</code></pre>
+    <pre><code class="lang-csharp hljs">public TopicConfigBuilder WithFlushMessageInterval(long flushMessageInterval)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>flushMessageInterval</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dt><code>flushMessageInterval</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
     <dd></dd>
   </dl>
 
@@ -1504,8 +1509,8 @@ Class TopicConfigBuilder  <a class="header-action link-secondary" title="View so
 
   <a id="MASES_KNet_Common_TopicConfigBuilder_WithFlushMs_" data-uid="MASES.KNet.Common.TopicConfigBuilder.WithFlushMs*"></a>
 
-  <h3 id="MASES_KNet_Common_TopicConfigBuilder_WithFlushMs_System_Int32_" data-uid="MASES.KNet.Common.TopicConfigBuilder.WithFlushMs(System.Int32)">
-  WithFlushMs(int)
+  <h3 id="MASES_KNet_Common_TopicConfigBuilder_WithFlushMs_System_Int64_" data-uid="MASES.KNet.Common.TopicConfigBuilder.WithFlushMs(System.Int64)">
+  WithFlushMs(long)
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Common/TopicConfigBuilder.cs/#L163"><i class="bi bi-code-slash"></i></a>
   </h3>
 
@@ -1514,12 +1519,12 @@ Class TopicConfigBuilder  <a class="header-action link-secondary" title="View so
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public TopicConfigBuilder WithFlushMs(int flushMs)</code></pre>
+    <pre><code class="lang-csharp hljs">public TopicConfigBuilder WithFlushMs(long flushMs)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>flushMs</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dt><code>flushMs</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
     <dd></dd>
   </dl>
 
@@ -1578,8 +1583,8 @@ Class TopicConfigBuilder  <a class="header-action link-secondary" title="View so
 
   <a id="MASES_KNet_Common_TopicConfigBuilder_WithLocalLogRetentionBytes_" data-uid="MASES.KNet.Common.TopicConfigBuilder.WithLocalLogRetentionBytes*"></a>
 
-  <h3 id="MASES_KNet_Common_TopicConfigBuilder_WithLocalLogRetentionBytes_System_Int32_" data-uid="MASES.KNet.Common.TopicConfigBuilder.WithLocalLogRetentionBytes(System.Int32)">
-  WithLocalLogRetentionBytes(int)
+  <h3 id="MASES_KNet_Common_TopicConfigBuilder_WithLocalLogRetentionBytes_System_Int64_" data-uid="MASES.KNet.Common.TopicConfigBuilder.WithLocalLogRetentionBytes(System.Int64)">
+  WithLocalLogRetentionBytes(long)
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Common/TopicConfigBuilder.cs/#L228"><i class="bi bi-code-slash"></i></a>
   </h3>
 
@@ -1588,12 +1593,12 @@ Class TopicConfigBuilder  <a class="header-action link-secondary" title="View so
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public TopicConfigBuilder WithLocalLogRetentionBytes(int localLogRetentionBytes)</code></pre>
+    <pre><code class="lang-csharp hljs">public TopicConfigBuilder WithLocalLogRetentionBytes(long localLogRetentionBytes)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>localLogRetentionBytes</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dt><code>localLogRetentionBytes</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
     <dd></dd>
   </dl>
 
@@ -1615,8 +1620,8 @@ Class TopicConfigBuilder  <a class="header-action link-secondary" title="View so
 
   <a id="MASES_KNet_Common_TopicConfigBuilder_WithLocalLogRetentionMs_" data-uid="MASES.KNet.Common.TopicConfigBuilder.WithLocalLogRetentionMs*"></a>
 
-  <h3 id="MASES_KNet_Common_TopicConfigBuilder_WithLocalLogRetentionMs_System_Int32_" data-uid="MASES.KNet.Common.TopicConfigBuilder.WithLocalLogRetentionMs(System.Int32)">
-  WithLocalLogRetentionMs(int)
+  <h3 id="MASES_KNet_Common_TopicConfigBuilder_WithLocalLogRetentionMs_System_Int64_" data-uid="MASES.KNet.Common.TopicConfigBuilder.WithLocalLogRetentionMs(System.Int64)">
+  WithLocalLogRetentionMs(long)
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Common/TopicConfigBuilder.cs/#L215"><i class="bi bi-code-slash"></i></a>
   </h3>
 
@@ -1625,12 +1630,12 @@ Class TopicConfigBuilder  <a class="header-action link-secondary" title="View so
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public TopicConfigBuilder WithLocalLogRetentionMs(int localLogRetentionMs)</code></pre>
+    <pre><code class="lang-csharp hljs">public TopicConfigBuilder WithLocalLogRetentionMs(long localLogRetentionMs)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>localLogRetentionMs</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dt><code>localLogRetentionMs</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
     <dd></dd>
   </dl>
 
@@ -1652,8 +1657,8 @@ Class TopicConfigBuilder  <a class="header-action link-secondary" title="View so
 
   <a id="MASES_KNet_Common_TopicConfigBuilder_WithMaxCompactationLagMs_" data-uid="MASES.KNet.Common.TopicConfigBuilder.WithMaxCompactationLagMs*"></a>
 
-  <h3 id="MASES_KNet_Common_TopicConfigBuilder_WithMaxCompactationLagMs_System_Int32_" data-uid="MASES.KNet.Common.TopicConfigBuilder.WithMaxCompactationLagMs(System.Int32)">
-  WithMaxCompactationLagMs(int)
+  <h3 id="MASES_KNet_Common_TopicConfigBuilder_WithMaxCompactationLagMs_System_Int64_" data-uid="MASES.KNet.Common.TopicConfigBuilder.WithMaxCompactationLagMs(System.Int64)">
+  WithMaxCompactationLagMs(long)
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Common/TopicConfigBuilder.cs/#L306"><i class="bi bi-code-slash"></i></a>
   </h3>
 
@@ -1662,12 +1667,12 @@ Class TopicConfigBuilder  <a class="header-action link-secondary" title="View so
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public TopicConfigBuilder WithMaxCompactationLagMs(int maxCompactationLagMs)</code></pre>
+    <pre><code class="lang-csharp hljs">public TopicConfigBuilder WithMaxCompactationLagMs(long maxCompactationLagMs)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>maxCompactationLagMs</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dt><code>maxCompactationLagMs</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
     <dd></dd>
   </dl>
 
@@ -1874,8 +1879,8 @@ Class TopicConfigBuilder  <a class="header-action link-secondary" title="View so
 
   <a id="MASES_KNet_Common_TopicConfigBuilder_WithMinCompactationLagMs_" data-uid="MASES.KNet.Common.TopicConfigBuilder.WithMinCompactationLagMs*"></a>
 
-  <h3 id="MASES_KNet_Common_TopicConfigBuilder_WithMinCompactationLagMs_System_Int32_" data-uid="MASES.KNet.Common.TopicConfigBuilder.WithMinCompactationLagMs(System.Int32)">
-  WithMinCompactationLagMs(int)
+  <h3 id="MASES_KNet_Common_TopicConfigBuilder_WithMinCompactationLagMs_System_Int64_" data-uid="MASES.KNet.Common.TopicConfigBuilder.WithMinCompactationLagMs(System.Int64)">
+  WithMinCompactationLagMs(long)
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Common/TopicConfigBuilder.cs/#L293"><i class="bi bi-code-slash"></i></a>
   </h3>
 
@@ -1884,12 +1889,12 @@ Class TopicConfigBuilder  <a class="header-action link-secondary" title="View so
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public TopicConfigBuilder WithMinCompactationLagMs(int minCompactationLagMs)</code></pre>
+    <pre><code class="lang-csharp hljs">public TopicConfigBuilder WithMinCompactationLagMs(long minCompactationLagMs)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>minCompactationLagMs</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dt><code>minCompactationLagMs</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
     <dd></dd>
   </dl>
 
@@ -2096,8 +2101,8 @@ Class TopicConfigBuilder  <a class="header-action link-secondary" title="View so
 
   <a id="MASES_KNet_Common_TopicConfigBuilder_WithRetentionBytes_" data-uid="MASES.KNet.Common.TopicConfigBuilder.WithRetentionBytes*"></a>
 
-  <h3 id="MASES_KNet_Common_TopicConfigBuilder_WithRetentionBytes_System_Int32_" data-uid="MASES.KNet.Common.TopicConfigBuilder.WithRetentionBytes(System.Int32)">
-  WithRetentionBytes(int)
+  <h3 id="MASES_KNet_Common_TopicConfigBuilder_WithRetentionBytes_System_Int64_" data-uid="MASES.KNet.Common.TopicConfigBuilder.WithRetentionBytes(System.Int64)">
+  WithRetentionBytes(long)
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Common/TopicConfigBuilder.cs/#L176"><i class="bi bi-code-slash"></i></a>
   </h3>
 
@@ -2106,12 +2111,12 @@ Class TopicConfigBuilder  <a class="header-action link-secondary" title="View so
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public TopicConfigBuilder WithRetentionBytes(int retentionBytes)</code></pre>
+    <pre><code class="lang-csharp hljs">public TopicConfigBuilder WithRetentionBytes(long retentionBytes)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>retentionBytes</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dt><code>retentionBytes</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
     <dd></dd>
   </dl>
 
@@ -2133,8 +2138,8 @@ Class TopicConfigBuilder  <a class="header-action link-secondary" title="View so
 
   <a id="MASES_KNet_Common_TopicConfigBuilder_WithRetentionMs_" data-uid="MASES.KNet.Common.TopicConfigBuilder.WithRetentionMs*"></a>
 
-  <h3 id="MASES_KNet_Common_TopicConfigBuilder_WithRetentionMs_System_Int32_" data-uid="MASES.KNet.Common.TopicConfigBuilder.WithRetentionMs(System.Int32)">
-  WithRetentionMs(int)
+  <h3 id="MASES_KNet_Common_TopicConfigBuilder_WithRetentionMs_System_Int64_" data-uid="MASES.KNet.Common.TopicConfigBuilder.WithRetentionMs(System.Int64)">
+  WithRetentionMs(long)
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Common/TopicConfigBuilder.cs/#L189"><i class="bi bi-code-slash"></i></a>
   </h3>
 
@@ -2143,12 +2148,12 @@ Class TopicConfigBuilder  <a class="header-action link-secondary" title="View so
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public TopicConfigBuilder WithRetentionMs(int retentionMs)</code></pre>
+    <pre><code class="lang-csharp hljs">public TopicConfigBuilder WithRetentionMs(long retentionMs)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>retentionMs</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dt><code>retentionMs</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
     <dd></dd>
   </dl>
 
@@ -2244,8 +2249,8 @@ Class TopicConfigBuilder  <a class="header-action link-secondary" title="View so
 
   <a id="MASES_KNet_Common_TopicConfigBuilder_WithSegmentJitterMs_" data-uid="MASES.KNet.Common.TopicConfigBuilder.WithSegmentJitterMs*"></a>
 
-  <h3 id="MASES_KNet_Common_TopicConfigBuilder_WithSegmentJitterMs_System_Int32_" data-uid="MASES.KNet.Common.TopicConfigBuilder.WithSegmentJitterMs(System.Int32)">
-  WithSegmentJitterMs(int)
+  <h3 id="MASES_KNet_Common_TopicConfigBuilder_WithSegmentJitterMs_System_Int64_" data-uid="MASES.KNet.Common.TopicConfigBuilder.WithSegmentJitterMs(System.Int64)">
+  WithSegmentJitterMs(long)
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Common/TopicConfigBuilder.cs/#L124"><i class="bi bi-code-slash"></i></a>
   </h3>
 
@@ -2254,12 +2259,12 @@ Class TopicConfigBuilder  <a class="header-action link-secondary" title="View so
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public TopicConfigBuilder WithSegmentJitterMs(int segmentJitterMs)</code></pre>
+    <pre><code class="lang-csharp hljs">public TopicConfigBuilder WithSegmentJitterMs(long segmentJitterMs)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>segmentJitterMs</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dt><code>segmentJitterMs</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
     <dd></dd>
   </dl>
 
@@ -2281,8 +2286,8 @@ Class TopicConfigBuilder  <a class="header-action link-secondary" title="View so
 
   <a id="MASES_KNet_Common_TopicConfigBuilder_WithSegmentMs_" data-uid="MASES.KNet.Common.TopicConfigBuilder.WithSegmentMs*"></a>
 
-  <h3 id="MASES_KNet_Common_TopicConfigBuilder_WithSegmentMs_System_Int32_" data-uid="MASES.KNet.Common.TopicConfigBuilder.WithSegmentMs(System.Int32)">
-  WithSegmentMs(int)
+  <h3 id="MASES_KNet_Common_TopicConfigBuilder_WithSegmentMs_System_Int64_" data-uid="MASES.KNet.Common.TopicConfigBuilder.WithSegmentMs(System.Int64)">
+  WithSegmentMs(long)
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Common/TopicConfigBuilder.cs/#L111"><i class="bi bi-code-slash"></i></a>
   </h3>
 
@@ -2291,12 +2296,12 @@ Class TopicConfigBuilder  <a class="header-action link-secondary" title="View so
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public TopicConfigBuilder WithSegmentMs(int segmentMs)</code></pre>
+    <pre><code class="lang-csharp hljs">public TopicConfigBuilder WithSegmentMs(long segmentMs)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>segmentMs</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dt><code>segmentMs</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
     <dd></dd>
   </dl>
 

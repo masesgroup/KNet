@@ -1,0 +1,1486 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+      <title>Class MutableColumnFamilyOptionsInterface&lt;T&gt; | MASES Group - KNet </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class MutableColumnFamilyOptionsInterface&lt;T&gt; | MASES Group - KNet ">
+      <meta name="description" content="This is a descriptive page of KNet, the .NET suite for Apache Kafka">
+      <meta name="description" content="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/MutableColumnFamilyOptionsInterface.html">
+      <link rel="icon" href="../images/favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Rocksdb_MutableColumnFamilyOptionsInterface_1.md&amp;value=---%0Auid%3A%20Org.Rocksdb.MutableColumnFamilyOptionsInterface%601%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/logo.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Org.Rocksdb.MutableColumnFamilyOptionsInterface`1">
+
+
+
+  <h1 id="Org_Rocksdb_MutableColumnFamilyOptionsInterface_1" data-uid="Org.Rocksdb.MutableColumnFamilyOptionsInterface`1" class="text-break">
+Class MutableColumnFamilyOptionsInterface&lt;T&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Rocksdb/MutableColumnFamilyOptionsInterface.cs/#L267"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Org.html">Org</a>.<a class="xref" href="Org.Rocksdb.html">Rocksdb</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>MASES.KNet.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p><a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/MutableColumnFamilyOptionsInterface.html">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/MutableColumnFamilyOptionsInterface.html</a></p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class MutableColumnFamilyOptionsInterface&lt;T&gt; : AdvancedMutableColumnFamilyOptionsInterface&lt;T&gt;, IDynamicMetaObjectProvider, IJVMBridgeCore, IEquatable&lt;IJVMBridgeBase&gt;, IDisposable, IJVMBridgeBaseStatic, IJVMBridgeBase, IJVMBridgeDefinition, IMutableColumnFamilyOptionsInterface&lt;T&gt;, IAdvancedMutableColumnFamilyOptionsInterface&lt;T&gt; where T : MutableColumnFamilyOptionsInterface&lt;T&gt;</code></pre>
+  </div>
+
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p><a class="xref" href="Org.Rocksdb.MutableColumnFamilyOptionsInterface-1.html">MutableColumnFamilyOptionsInterface&lt;T&gt;</a></p>
+</dd>
+  </dl>
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject">DynamicObject</a></div>
+      <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html">JVMBridgeBase</a></div>
+      <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase-1.html">JVMBridgeBase</a>&lt;<a class="xref" href="Org.Rocksdb.AdvancedMutableColumnFamilyOptionsInterface-1.html">AdvancedMutableColumnFamilyOptionsInterface</a>&lt;T&gt;&gt;</div>
+      <div><a class="xref" href="Org.Rocksdb.AdvancedMutableColumnFamilyOptionsInterface-1.html">AdvancedMutableColumnFamilyOptionsInterface</a>&lt;T&gt;</div>
+      <div><span class="xref">MutableColumnFamilyOptionsInterface&lt;T&gt;</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.idynamicmetaobjectprovider">IDynamicMetaObjectProvider</a></div>
+      <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeCore.html">IJVMBridgeCore</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeBase.html">IJVMBridgeBase</a>&gt;</div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
+      <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeBaseStatic.html">IJVMBridgeBaseStatic</a></div>
+      <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeBase.html">IJVMBridgeBase</a></div>
+      <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.html">IJVMBridgeDefinition</a></div>
+      <div><a class="xref" href="Org.Rocksdb.IMutableColumnFamilyOptionsInterface-1.html">IMutableColumnFamilyOptionsInterface</a>&lt;T&gt;</div>
+      <div><a class="xref" href="Org.Rocksdb.IAdvancedMutableColumnFamilyOptionsInterface-1.html">IAdvancedMutableColumnFamilyOptionsInterface</a>&lt;T&gt;</div>
+    </dd>
+  </dl>
+
+  <dl class="typelist derived">
+    <dt>Derived</dt>
+    <dd>
+      <div><a class="xref" href="Org.Rocksdb.MutableColumnFamilyOptions.MutableColumnFamilyOptionsBuilder.html">MutableColumnFamilyOptions.MutableColumnFamilyOptionsBuilder</a></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="Org.Rocksdb.AdvancedMutableColumnFamilyOptionsInterface-1.html#Org_Rocksdb_AdvancedMutableColumnFamilyOptionsInterface_1_EnableBlobFiles">AdvancedMutableColumnFamilyOptionsInterface&lt;T&gt;.EnableBlobFiles()</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.AdvancedMutableColumnFamilyOptionsInterface-1.html#Org_Rocksdb_AdvancedMutableColumnFamilyOptionsInterface_1_EnableBlobGarbageCollection">AdvancedMutableColumnFamilyOptionsInterface&lt;T&gt;.EnableBlobGarbageCollection()</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.AdvancedMutableColumnFamilyOptionsInterface-1.html#Org_Rocksdb_AdvancedMutableColumnFamilyOptionsInterface_1_MemtableWholeKeyFiltering">AdvancedMutableColumnFamilyOptionsInterface&lt;T&gt;.MemtableWholeKeyFiltering()</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.AdvancedMutableColumnFamilyOptionsInterface-1.html#Org_Rocksdb_AdvancedMutableColumnFamilyOptionsInterface_1_ParanoidFileChecks">AdvancedMutableColumnFamilyOptionsInterface&lt;T&gt;.ParanoidFileChecks()</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.AdvancedMutableColumnFamilyOptionsInterface-1.html#Org_Rocksdb_AdvancedMutableColumnFamilyOptionsInterface_1_ReportBgIoStats">AdvancedMutableColumnFamilyOptionsInterface&lt;T&gt;.ReportBgIoStats()</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.AdvancedMutableColumnFamilyOptionsInterface-1.html#Org_Rocksdb_AdvancedMutableColumnFamilyOptionsInterface_1_BlobGarbageCollectionAgeCutoff">AdvancedMutableColumnFamilyOptionsInterface&lt;T&gt;.BlobGarbageCollectionAgeCutoff()</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.AdvancedMutableColumnFamilyOptionsInterface-1.html#Org_Rocksdb_AdvancedMutableColumnFamilyOptionsInterface_1_BlobGarbageCollectionForceThreshold">AdvancedMutableColumnFamilyOptionsInterface&lt;T&gt;.BlobGarbageCollectionForceThreshold()</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.AdvancedMutableColumnFamilyOptionsInterface-1.html#Org_Rocksdb_AdvancedMutableColumnFamilyOptionsInterface_1_ExperimentalMempurgeThreshold">AdvancedMutableColumnFamilyOptionsInterface&lt;T&gt;.ExperimentalMempurgeThreshold()</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.AdvancedMutableColumnFamilyOptionsInterface-1.html#Org_Rocksdb_AdvancedMutableColumnFamilyOptionsInterface_1_MaxBytesForLevelMultiplier">AdvancedMutableColumnFamilyOptionsInterface&lt;T&gt;.MaxBytesForLevelMultiplier()</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.AdvancedMutableColumnFamilyOptionsInterface-1.html#Org_Rocksdb_AdvancedMutableColumnFamilyOptionsInterface_1_MemtablePrefixBloomSizeRatio">AdvancedMutableColumnFamilyOptionsInterface&lt;T&gt;.MemtablePrefixBloomSizeRatio()</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.AdvancedMutableColumnFamilyOptionsInterface-1.html#Org_Rocksdb_AdvancedMutableColumnFamilyOptionsInterface_1_BlobFileStartingLevel">AdvancedMutableColumnFamilyOptionsInterface&lt;T&gt;.BlobFileStartingLevel()</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.AdvancedMutableColumnFamilyOptionsInterface-1.html#Org_Rocksdb_AdvancedMutableColumnFamilyOptionsInterface_1_Level0SlowdownWritesTrigger">AdvancedMutableColumnFamilyOptionsInterface&lt;T&gt;.Level0SlowdownWritesTrigger()</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.AdvancedMutableColumnFamilyOptionsInterface-1.html#Org_Rocksdb_AdvancedMutableColumnFamilyOptionsInterface_1_Level0StopWritesTrigger">AdvancedMutableColumnFamilyOptionsInterface&lt;T&gt;.Level0StopWritesTrigger()</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.AdvancedMutableColumnFamilyOptionsInterface-1.html#Org_Rocksdb_AdvancedMutableColumnFamilyOptionsInterface_1_MaxWriteBufferNumber">AdvancedMutableColumnFamilyOptionsInterface&lt;T&gt;.MaxWriteBufferNumber()</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.AdvancedMutableColumnFamilyOptionsInterface-1.html#Org_Rocksdb_AdvancedMutableColumnFamilyOptionsInterface_1_TargetFileSizeMultiplier">AdvancedMutableColumnFamilyOptionsInterface&lt;T&gt;.TargetFileSizeMultiplier()</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.AdvancedMutableColumnFamilyOptionsInterface-1.html#Org_Rocksdb_AdvancedMutableColumnFamilyOptionsInterface_1_MaxBytesForLevelMultiplierAdditional">AdvancedMutableColumnFamilyOptionsInterface&lt;T&gt;.MaxBytesForLevelMultiplierAdditional()</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.AdvancedMutableColumnFamilyOptionsInterface-1.html#Org_Rocksdb_AdvancedMutableColumnFamilyOptionsInterface_1_ArenaBlockSize">AdvancedMutableColumnFamilyOptionsInterface&lt;T&gt;.ArenaBlockSize()</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.AdvancedMutableColumnFamilyOptionsInterface-1.html#Org_Rocksdb_AdvancedMutableColumnFamilyOptionsInterface_1_BlobCompactionReadaheadSize">AdvancedMutableColumnFamilyOptionsInterface&lt;T&gt;.BlobCompactionReadaheadSize()</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.AdvancedMutableColumnFamilyOptionsInterface-1.html#Org_Rocksdb_AdvancedMutableColumnFamilyOptionsInterface_1_BlobFileSize">AdvancedMutableColumnFamilyOptionsInterface&lt;T&gt;.BlobFileSize()</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.AdvancedMutableColumnFamilyOptionsInterface-1.html#Org_Rocksdb_AdvancedMutableColumnFamilyOptionsInterface_1_HardPendingCompactionBytesLimit">AdvancedMutableColumnFamilyOptionsInterface&lt;T&gt;.HardPendingCompactionBytesLimit()</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.AdvancedMutableColumnFamilyOptionsInterface-1.html#Org_Rocksdb_AdvancedMutableColumnFamilyOptionsInterface_1_InplaceUpdateNumLocks">AdvancedMutableColumnFamilyOptionsInterface&lt;T&gt;.InplaceUpdateNumLocks()</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.AdvancedMutableColumnFamilyOptionsInterface-1.html#Org_Rocksdb_AdvancedMutableColumnFamilyOptionsInterface_1_MaxSequentialSkipInIterations">AdvancedMutableColumnFamilyOptionsInterface&lt;T&gt;.MaxSequentialSkipInIterations()</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.AdvancedMutableColumnFamilyOptionsInterface-1.html#Org_Rocksdb_AdvancedMutableColumnFamilyOptionsInterface_1_MaxSuccessiveMerges">AdvancedMutableColumnFamilyOptionsInterface&lt;T&gt;.MaxSuccessiveMerges()</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.AdvancedMutableColumnFamilyOptionsInterface-1.html#Org_Rocksdb_AdvancedMutableColumnFamilyOptionsInterface_1_MemtableHugePageSize">AdvancedMutableColumnFamilyOptionsInterface&lt;T&gt;.MemtableHugePageSize()</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.AdvancedMutableColumnFamilyOptionsInterface-1.html#Org_Rocksdb_AdvancedMutableColumnFamilyOptionsInterface_1_MinBlobSize">AdvancedMutableColumnFamilyOptionsInterface&lt;T&gt;.MinBlobSize()</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.AdvancedMutableColumnFamilyOptionsInterface-1.html#Org_Rocksdb_AdvancedMutableColumnFamilyOptionsInterface_1_PeriodicCompactionSeconds">AdvancedMutableColumnFamilyOptionsInterface&lt;T&gt;.PeriodicCompactionSeconds()</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.AdvancedMutableColumnFamilyOptionsInterface-1.html#Org_Rocksdb_AdvancedMutableColumnFamilyOptionsInterface_1_SoftPendingCompactionBytesLimit">AdvancedMutableColumnFamilyOptionsInterface&lt;T&gt;.SoftPendingCompactionBytesLimit()</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.AdvancedMutableColumnFamilyOptionsInterface-1.html#Org_Rocksdb_AdvancedMutableColumnFamilyOptionsInterface_1_TargetFileSizeBase">AdvancedMutableColumnFamilyOptionsInterface&lt;T&gt;.TargetFileSizeBase()</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.AdvancedMutableColumnFamilyOptionsInterface-1.html#Org_Rocksdb_AdvancedMutableColumnFamilyOptionsInterface_1_Ttl">AdvancedMutableColumnFamilyOptionsInterface&lt;T&gt;.Ttl()</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.AdvancedMutableColumnFamilyOptionsInterface-1.html#Org_Rocksdb_AdvancedMutableColumnFamilyOptionsInterface_1_BlobCompressionType">AdvancedMutableColumnFamilyOptionsInterface&lt;T&gt;.BlobCompressionType()</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.AdvancedMutableColumnFamilyOptionsInterface-1.html#Org_Rocksdb_AdvancedMutableColumnFamilyOptionsInterface_1_PrepopulateBlobCache">AdvancedMutableColumnFamilyOptionsInterface&lt;T&gt;.PrepopulateBlobCache()</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.AdvancedMutableColumnFamilyOptionsInterface-1.html#Org_Rocksdb_AdvancedMutableColumnFamilyOptionsInterface_1_SetArenaBlockSize_System_Int64_">AdvancedMutableColumnFamilyOptionsInterface&lt;T&gt;.SetArenaBlockSize(long)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.AdvancedMutableColumnFamilyOptionsInterface-1.html#Org_Rocksdb_AdvancedMutableColumnFamilyOptionsInterface_1_SetBlobCompactionReadaheadSize_System_Int64_">AdvancedMutableColumnFamilyOptionsInterface&lt;T&gt;.SetBlobCompactionReadaheadSize(long)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.AdvancedMutableColumnFamilyOptionsInterface-1.html#Org_Rocksdb_AdvancedMutableColumnFamilyOptionsInterface_1_SetBlobCompressionType_Org_Rocksdb_CompressionType_">AdvancedMutableColumnFamilyOptionsInterface&lt;T&gt;.SetBlobCompressionType(CompressionType)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.AdvancedMutableColumnFamilyOptionsInterface-1.html#Org_Rocksdb_AdvancedMutableColumnFamilyOptionsInterface_1_SetBlobFileSize_System_Int64_">AdvancedMutableColumnFamilyOptionsInterface&lt;T&gt;.SetBlobFileSize(long)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.AdvancedMutableColumnFamilyOptionsInterface-1.html#Org_Rocksdb_AdvancedMutableColumnFamilyOptionsInterface_1_SetBlobFileStartingLevel_System_Int32_">AdvancedMutableColumnFamilyOptionsInterface&lt;T&gt;.SetBlobFileStartingLevel(int)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.AdvancedMutableColumnFamilyOptionsInterface-1.html#Org_Rocksdb_AdvancedMutableColumnFamilyOptionsInterface_1_SetBlobGarbageCollectionAgeCutoff_System_Double_">AdvancedMutableColumnFamilyOptionsInterface&lt;T&gt;.SetBlobGarbageCollectionAgeCutoff(double)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.AdvancedMutableColumnFamilyOptionsInterface-1.html#Org_Rocksdb_AdvancedMutableColumnFamilyOptionsInterface_1_SetBlobGarbageCollectionForceThreshold_System_Double_">AdvancedMutableColumnFamilyOptionsInterface&lt;T&gt;.SetBlobGarbageCollectionForceThreshold(double)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.AdvancedMutableColumnFamilyOptionsInterface-1.html#Org_Rocksdb_AdvancedMutableColumnFamilyOptionsInterface_1_SetEnableBlobFiles_System_Boolean_">AdvancedMutableColumnFamilyOptionsInterface&lt;T&gt;.SetEnableBlobFiles(bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.AdvancedMutableColumnFamilyOptionsInterface-1.html#Org_Rocksdb_AdvancedMutableColumnFamilyOptionsInterface_1_SetEnableBlobGarbageCollection_System_Boolean_">AdvancedMutableColumnFamilyOptionsInterface&lt;T&gt;.SetEnableBlobGarbageCollection(bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.AdvancedMutableColumnFamilyOptionsInterface-1.html#Org_Rocksdb_AdvancedMutableColumnFamilyOptionsInterface_1_SetExperimentalMempurgeThreshold_System_Double_">AdvancedMutableColumnFamilyOptionsInterface&lt;T&gt;.SetExperimentalMempurgeThreshold(double)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.AdvancedMutableColumnFamilyOptionsInterface-1.html#Org_Rocksdb_AdvancedMutableColumnFamilyOptionsInterface_1_SetHardPendingCompactionBytesLimit_System_Int64_">AdvancedMutableColumnFamilyOptionsInterface&lt;T&gt;.SetHardPendingCompactionBytesLimit(long)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.AdvancedMutableColumnFamilyOptionsInterface-1.html#Org_Rocksdb_AdvancedMutableColumnFamilyOptionsInterface_1_SetInplaceUpdateNumLocks_System_Int64_">AdvancedMutableColumnFamilyOptionsInterface&lt;T&gt;.SetInplaceUpdateNumLocks(long)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.AdvancedMutableColumnFamilyOptionsInterface-1.html#Org_Rocksdb_AdvancedMutableColumnFamilyOptionsInterface_1_SetLevel0SlowdownWritesTrigger_System_Int32_">AdvancedMutableColumnFamilyOptionsInterface&lt;T&gt;.SetLevel0SlowdownWritesTrigger(int)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.AdvancedMutableColumnFamilyOptionsInterface-1.html#Org_Rocksdb_AdvancedMutableColumnFamilyOptionsInterface_1_SetLevel0StopWritesTrigger_System_Int32_">AdvancedMutableColumnFamilyOptionsInterface&lt;T&gt;.SetLevel0StopWritesTrigger(int)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.AdvancedMutableColumnFamilyOptionsInterface-1.html#Org_Rocksdb_AdvancedMutableColumnFamilyOptionsInterface_1_SetMaxBytesForLevelMultiplier_System_Double_">AdvancedMutableColumnFamilyOptionsInterface&lt;T&gt;.SetMaxBytesForLevelMultiplier(double)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.AdvancedMutableColumnFamilyOptionsInterface-1.html#Org_Rocksdb_AdvancedMutableColumnFamilyOptionsInterface_1_SetMaxBytesForLevelMultiplierAdditional_System_Int32___">AdvancedMutableColumnFamilyOptionsInterface&lt;T&gt;.SetMaxBytesForLevelMultiplierAdditional(int[])</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.AdvancedMutableColumnFamilyOptionsInterface-1.html#Org_Rocksdb_AdvancedMutableColumnFamilyOptionsInterface_1_SetMaxSequentialSkipInIterations_System_Int64_">AdvancedMutableColumnFamilyOptionsInterface&lt;T&gt;.SetMaxSequentialSkipInIterations(long)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.AdvancedMutableColumnFamilyOptionsInterface-1.html#Org_Rocksdb_AdvancedMutableColumnFamilyOptionsInterface_1_SetMaxSuccessiveMerges_System_Int64_">AdvancedMutableColumnFamilyOptionsInterface&lt;T&gt;.SetMaxSuccessiveMerges(long)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.AdvancedMutableColumnFamilyOptionsInterface-1.html#Org_Rocksdb_AdvancedMutableColumnFamilyOptionsInterface_1_SetMaxWriteBufferNumber_System_Int32_">AdvancedMutableColumnFamilyOptionsInterface&lt;T&gt;.SetMaxWriteBufferNumber(int)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.AdvancedMutableColumnFamilyOptionsInterface-1.html#Org_Rocksdb_AdvancedMutableColumnFamilyOptionsInterface_1_SetMemtableHugePageSize_System_Int64_">AdvancedMutableColumnFamilyOptionsInterface&lt;T&gt;.SetMemtableHugePageSize(long)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.AdvancedMutableColumnFamilyOptionsInterface-1.html#Org_Rocksdb_AdvancedMutableColumnFamilyOptionsInterface_1_SetMemtablePrefixBloomSizeRatio_System_Double_">AdvancedMutableColumnFamilyOptionsInterface&lt;T&gt;.SetMemtablePrefixBloomSizeRatio(double)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.AdvancedMutableColumnFamilyOptionsInterface-1.html#Org_Rocksdb_AdvancedMutableColumnFamilyOptionsInterface_1_SetMemtableWholeKeyFiltering_System_Boolean_">AdvancedMutableColumnFamilyOptionsInterface&lt;T&gt;.SetMemtableWholeKeyFiltering(bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.AdvancedMutableColumnFamilyOptionsInterface-1.html#Org_Rocksdb_AdvancedMutableColumnFamilyOptionsInterface_1_SetMinBlobSize_System_Int64_">AdvancedMutableColumnFamilyOptionsInterface&lt;T&gt;.SetMinBlobSize(long)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.AdvancedMutableColumnFamilyOptionsInterface-1.html#Org_Rocksdb_AdvancedMutableColumnFamilyOptionsInterface_1_SetParanoidFileChecks_System_Boolean_">AdvancedMutableColumnFamilyOptionsInterface&lt;T&gt;.SetParanoidFileChecks(bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.AdvancedMutableColumnFamilyOptionsInterface-1.html#Org_Rocksdb_AdvancedMutableColumnFamilyOptionsInterface_1_SetPeriodicCompactionSeconds_System_Int64_">AdvancedMutableColumnFamilyOptionsInterface&lt;T&gt;.SetPeriodicCompactionSeconds(long)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.AdvancedMutableColumnFamilyOptionsInterface-1.html#Org_Rocksdb_AdvancedMutableColumnFamilyOptionsInterface_1_SetPrepopulateBlobCache_Org_Rocksdb_PrepopulateBlobCache_">AdvancedMutableColumnFamilyOptionsInterface&lt;T&gt;.SetPrepopulateBlobCache(PrepopulateBlobCache)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.AdvancedMutableColumnFamilyOptionsInterface-1.html#Org_Rocksdb_AdvancedMutableColumnFamilyOptionsInterface_1_SetReportBgIoStats_System_Boolean_">AdvancedMutableColumnFamilyOptionsInterface&lt;T&gt;.SetReportBgIoStats(bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.AdvancedMutableColumnFamilyOptionsInterface-1.html#Org_Rocksdb_AdvancedMutableColumnFamilyOptionsInterface_1_SetSoftPendingCompactionBytesLimit_System_Int64_">AdvancedMutableColumnFamilyOptionsInterface&lt;T&gt;.SetSoftPendingCompactionBytesLimit(long)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.AdvancedMutableColumnFamilyOptionsInterface-1.html#Org_Rocksdb_AdvancedMutableColumnFamilyOptionsInterface_1_SetTargetFileSizeBase_System_Int64_">AdvancedMutableColumnFamilyOptionsInterface&lt;T&gt;.SetTargetFileSizeBase(long)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.AdvancedMutableColumnFamilyOptionsInterface-1.html#Org_Rocksdb_AdvancedMutableColumnFamilyOptionsInterface_1_SetTargetFileSizeMultiplier_System_Int32_">AdvancedMutableColumnFamilyOptionsInterface&lt;T&gt;.SetTargetFileSizeMultiplier(int)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.AdvancedMutableColumnFamilyOptionsInterface-1.html#Org_Rocksdb_AdvancedMutableColumnFamilyOptionsInterface_1_SetTtl_System_Int64_">AdvancedMutableColumnFamilyOptionsInterface&lt;T&gt;.SetTtl(long)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AdvancedMutableColumnFamilyOptionsInterface&lt;T&gt;&gt;.SExecute(IJavaType, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AdvancedMutableColumnFamilyOptionsInterface&lt;T&gt;&gt;.SExecuteWithSignature(IJavaType, string, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AdvancedMutableColumnFamilyOptionsInterface&lt;T&gt;&gt;.SExecute(string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AdvancedMutableColumnFamilyOptionsInterface&lt;T&gt;&gt;.SExecuteWithSignature(string, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AdvancedMutableColumnFamilyOptionsInterface&lt;T&gt;&gt;.SExecute&lt;TReturn&gt;(IJavaType, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AdvancedMutableColumnFamilyOptionsInterface&lt;T&gt;&gt;.SExecuteWithSignature&lt;TReturn&gt;(IJavaType, string, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AdvancedMutableColumnFamilyOptionsInterface&lt;T&gt;&gt;.SExecute&lt;TReturn&gt;(string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AdvancedMutableColumnFamilyOptionsInterface&lt;T&gt;&gt;.SExecuteWithSignature&lt;TReturn&gt;(string, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;AdvancedMutableColumnFamilyOptionsInterface&lt;T&gt;&gt;.SExecute(Type, IJavaType, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;AdvancedMutableColumnFamilyOptionsInterface&lt;T&gt;&gt;.SExecuteWithSignature(Type, IJavaType, string, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;AdvancedMutableColumnFamilyOptionsInterface&lt;T&gt;&gt;.SExecute(Type, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;AdvancedMutableColumnFamilyOptionsInterface&lt;T&gt;&gt;.SExecuteWithSignature(Type, string, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AdvancedMutableColumnFamilyOptionsInterface&lt;T&gt;&gt;.SExecute&lt;TNewClass, TReturn&gt;(IJavaType, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AdvancedMutableColumnFamilyOptionsInterface&lt;T&gt;&gt;.SExecuteWithSignature&lt;TNewClass, TReturn&gt;(IJavaType, string, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AdvancedMutableColumnFamilyOptionsInterface&lt;T&gt;&gt;.SExecute&lt;TNewClass, TReturn&gt;(string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AdvancedMutableColumnFamilyOptionsInterface&lt;T&gt;&gt;.SExecuteWithSignature&lt;TNewClass, TReturn&gt;(string, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;AdvancedMutableColumnFamilyOptionsInterface&lt;T&gt;&gt;.SExecute&lt;TReturn&gt;(Type, IJavaType, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;AdvancedMutableColumnFamilyOptionsInterface&lt;T&gt;&gt;.SExecuteWithSignature&lt;TReturn&gt;(Type, IJavaType, string, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;AdvancedMutableColumnFamilyOptionsInterface&lt;T&gt;&gt;.SExecute&lt;TReturn&gt;(Type, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;AdvancedMutableColumnFamilyOptionsInterface&lt;T&gt;&gt;.SExecuteWithSignature&lt;TReturn&gt;(Type, string, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AdvancedMutableColumnFamilyOptionsInterface&lt;T&gt;&gt;.SExecute&lt;TNewClass, TReturn, TConverter&gt;(IJavaType, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AdvancedMutableColumnFamilyOptionsInterface&lt;T&gt;&gt;.SExecuteWithSignature&lt;TNewClass, TReturn, TConverter&gt;(IJavaType, string, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AdvancedMutableColumnFamilyOptionsInterface&lt;T&gt;&gt;.SExecute&lt;TNewClass, TReturn, TConverter&gt;(string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AdvancedMutableColumnFamilyOptionsInterface&lt;T&gt;&gt;.SExecuteWithSignature&lt;TNewClass, TReturn, TConverter&gt;(string, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;AdvancedMutableColumnFamilyOptionsInterface&lt;T&gt;&gt;.SExecute&lt;TReturn, TConverter&gt;(Type, IJavaType, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;AdvancedMutableColumnFamilyOptionsInterface&lt;T&gt;&gt;.SExecuteWithSignature&lt;TReturn, TConverter&gt;(Type, IJavaType, string, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;AdvancedMutableColumnFamilyOptionsInterface&lt;T&gt;&gt;.SExecute&lt;TReturn, TConverter&gt;(Type, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;AdvancedMutableColumnFamilyOptionsInterface&lt;T&gt;&gt;.SExecuteWithSignature&lt;TReturn, TConverter&gt;(Type, string, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AdvancedMutableColumnFamilyOptionsInterface&lt;T&gt;&gt;.SExecuteArray&lt;TArrayType&gt;(IJavaType, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AdvancedMutableColumnFamilyOptionsInterface&lt;T&gt;&gt;.SExecuteWithSignatureArray&lt;TArrayType&gt;(IJavaType, string, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AdvancedMutableColumnFamilyOptionsInterface&lt;T&gt;&gt;.SExecuteArray&lt;TArrayType&gt;(string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AdvancedMutableColumnFamilyOptionsInterface&lt;T&gt;&gt;.SExecuteWithSignatureArray&lt;TArrayType&gt;(string, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AdvancedMutableColumnFamilyOptionsInterface&lt;T&gt;&gt;.SGetField(IJavaType, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AdvancedMutableColumnFamilyOptionsInterface&lt;T&gt;&gt;.SGetField(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AdvancedMutableColumnFamilyOptionsInterface&lt;T&gt;&gt;.SGetField&lt;TReturn&gt;(IJavaType, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AdvancedMutableColumnFamilyOptionsInterface&lt;T&gt;&gt;.SGetField&lt;TReturn&gt;(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AdvancedMutableColumnFamilyOptionsInterface&lt;T&gt;&gt;.SGetFieldArray&lt;TReturn&gt;(IJavaType, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AdvancedMutableColumnFamilyOptionsInterface&lt;T&gt;&gt;.SGetFieldArray&lt;TReturn&gt;(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AdvancedMutableColumnFamilyOptionsInterface&lt;T&gt;&gt;.SSetField(IJavaType, string, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AdvancedMutableColumnFamilyOptionsInterface&lt;T&gt;&gt;.SSetField(string, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AdvancedMutableColumnFamilyOptionsInterface&lt;T&gt;&gt;.SSetField&lt;TValue&gt;(IJavaType, string, TValue)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AdvancedMutableColumnFamilyOptionsInterface&lt;T&gt;&gt;.SSetField&lt;TValue&gt;(string, TValue)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AdvancedMutableColumnFamilyOptionsInterface&lt;T&gt;&gt;.IsAssignableFrom(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase-1.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_1_IsAssignableFrom_MASES_JCOBridge_C2JBridge_JVMInterop_IJavaType_">JVMBridgeBase&lt;AdvancedMutableColumnFamilyOptionsInterface&lt;T&gt;&gt;.IsAssignableFrom(IJavaType)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase-1.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_1_IsAssignableFrom__1">JVMBridgeBase&lt;AdvancedMutableColumnFamilyOptionsInterface&lt;T&gt;&gt;.IsAssignableFrom&lt;T&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">JVMBridgeBase&lt;AdvancedMutableColumnFamilyOptionsInterface&lt;T&gt;&gt;.New(params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AdvancedMutableColumnFamilyOptionsInterface&lt;T&gt;&gt;.NewWithSignature(string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AdvancedMutableColumnFamilyOptionsInterface&lt;T&gt;&gt;.NewAndWrapsDirect&lt;TNewClass&gt;(string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AdvancedMutableColumnFamilyOptionsInterface&lt;T&gt;&gt;.NewWithSignatureAndWrapsDirect&lt;TNewClass&gt;(string, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase-1.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_1_Execute__1___0___">JVMBridgeBase&lt;AdvancedMutableColumnFamilyOptionsInterface&lt;T&gt;&gt;.Execute&lt;T&gt;(params T[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase-1.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_1_DynBridgeClazz">JVMBridgeBase&lt;AdvancedMutableColumnFamilyOptionsInterface&lt;T&gt;&gt;.DynBridgeClazz</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase-1.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_1_BridgeClazz">JVMBridgeBase&lt;AdvancedMutableColumnFamilyOptionsInterface&lt;T&gt;&gt;.BridgeClazz</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_ReferenceEqualsJVM_MASES_JCOBridge_C2JBridge_JVMBridgeBase_MASES_JCOBridge_C2JBridge_JVMBridgeBase_">JVMBridgeBase.ReferenceEqualsJVM(JVMBridgeBase, JVMBridgeBase)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">JVMBridgeBase.ClazzOf&lt;TClass&gt;(bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">JVMBridgeBase.ClazzOf&lt;TClass&gt;(out Exception, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.ClazzOf(string, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.ClazzOf(string, out Exception, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_RuntimeClassNameOf__1">JVMBridgeBase.RuntimeClassNameOf&lt;T&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase.RuntimeClassNameOf(Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_ClassNameOf__1">JVMBridgeBase.ClassNameOf&lt;T&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_ClassOf__1">JVMBridgeBase.ClassOf&lt;T&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_WrapsDirect__1_MASES_JCOBridge_C2JBridge_JVMInterop_IJavaObject_">JVMBridgeBase.WrapsDirect&lt;TNewClass&gt;(IJavaObject)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_Wraps__1_MASES_JCOBridge_C2JBridge_JVMInterop_IJavaObject_">JVMBridgeBase.Wraps&lt;TNewClass&gt;(IJavaObject)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase.Wraps(Type, IJavaObject, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_Wraps__2_MASES_JCOBridge_C2JBridge_JVMInterop_IJavaObject_">JVMBridgeBase.Wraps&lt;TNewClass, TReturn&gt;(IJavaObject)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase.Wraps&lt;TReturn&gt;(Type, IJavaObject, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_Wraps__3_MASES_JCOBridge_C2JBridge_JVMInterop_IJavaObject_">JVMBridgeBase.Wraps&lt;TNewClass, TReturn, TConverter&gt;(IJavaObject)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase.Wraps&lt;TReturn, TConverter&gt;(Type, IJavaObject)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_MonitorEnter">JVMBridgeBase.MonitorEnter()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_MonitorExit">JVMBridgeBase.MonitorExit()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IsInstanceOf(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsInstanceOf_MASES_JCOBridge_C2JBridge_JVMInterop_IJavaType_">JVMBridgeBase.IsInstanceOf(IJavaType)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsInstanceOf__1">JVMBridgeBase.IsInstanceOf&lt;T&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_RuntimeIsInstanceOf__1">JVMBridgeBase.RuntimeIsInstanceOf&lt;T&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_CastTo__1">JVMBridgeBase.CastTo&lt;TNewClass&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_CastDirect__1">JVMBridgeBase.CastDirect&lt;TNewClass&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_Dispose">JVMBridgeBase.Dispose()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">JVMBridgeBase.Dispose(bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_ToString">JVMBridgeBase.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_Equals_MASES_JCOBridge_C2JBridge_IJVMBridgeBase_">JVMBridgeBase.Equals(IJVMBridgeBase)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">JVMBridgeBase.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_GetHashCode">JVMBridgeBase.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_Notify">JVMBridgeBase.Notify()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_NotifyAll">JVMBridgeBase.NotifyAll()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_Wait">JVMBridgeBase.Wait()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">JVMBridgeBase.Wait(long)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">JVMBridgeBase.Wait(long, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecute(string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteWithSignature(string, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecute&lt;TReturn&gt;(string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteWithSignature&lt;TReturn&gt;(string, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecute&lt;TNewClass, TReturn&gt;(string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteWithSignature&lt;TNewClass, TReturn&gt;(string, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecute&lt;TNewClass, TReturn, TConverter&gt;(string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteWithSignature&lt;TNewClass, TReturn, TConverter&gt;(string, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteArray&lt;TArrayType&gt;(string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteWithSignatureArray&lt;TArrayType&gt;(string, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IGetField(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IGetField&lt;TReturn&gt;(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IGetFieldArray&lt;TReturn&gt;(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.ISetField(string, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.ISetField&lt;TValue&gt;(string, TValue)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">JVMBridgeBase.Throw&lt;TException&gt;(params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">JVMBridgeBase.BiThrow&lt;TException&gt;(params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_DynBridgeInstance">JVMBridgeBase.DynBridgeInstance</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeInstance">JVMBridgeBase.BridgeInstance</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeListener">JVMBridgeBase.IsBridgeListener</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trygetmember">DynamicObject.TryGetMember(GetMemberBinder, out object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trysetmember">DynamicObject.TrySetMember(SetMemberBinder, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trydeletemember">DynamicObject.TryDeleteMember(DeleteMemberBinder)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.tryinvokemember">DynamicObject.TryInvokeMember(InvokeMemberBinder, object[], out object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.tryconvert">DynamicObject.TryConvert(ConvertBinder, out object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trycreateinstance">DynamicObject.TryCreateInstance(CreateInstanceBinder, object[], out object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.tryinvoke">DynamicObject.TryInvoke(InvokeBinder, object[], out object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trybinaryoperation">DynamicObject.TryBinaryOperation(BinaryOperationBinder, object, out object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.tryunaryoperation">DynamicObject.TryUnaryOperation(UnaryOperationBinder, out object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trygetindex">DynamicObject.TryGetIndex(GetIndexBinder, object[], out object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trysetindex">DynamicObject.TrySetIndex(SetIndexBinder, object[], object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trydeleteindex">DynamicObject.TryDeleteIndex(DeleteIndexBinder, object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.getdynamicmembernames">DynamicObject.GetDynamicMemberNames()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.getmetaobject">DynamicObject.GetMetaObject(Expression)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="Org_Rocksdb_MutableColumnFamilyOptionsInterface_1__ctor_" data-uid="Org.Rocksdb.MutableColumnFamilyOptionsInterface`1.#ctor*"></a>
+
+  <h3 id="Org_Rocksdb_MutableColumnFamilyOptionsInterface_1__ctor" data-uid="Org.Rocksdb.MutableColumnFamilyOptionsInterface`1.#ctor">
+  MutableColumnFamilyOptionsInterface()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Rocksdb/MutableColumnFamilyOptionsInterface.cs/#L82"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;MutableColumnFamilyOptionsInterface class represents, in .NET, an instance of a JVM interface or abstract class. This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.&quot;)]
+public MutableColumnFamilyOptionsInterface()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Rocksdb_MutableColumnFamilyOptionsInterface_1__ctor_" data-uid="Org.Rocksdb.MutableColumnFamilyOptionsInterface`1.#ctor*"></a>
+
+  <h3 id="Org_Rocksdb_MutableColumnFamilyOptionsInterface_1__ctor_MASES_JCOBridge_C2JBridge_IJVMBridgeBaseInitializer_" data-uid="Org.Rocksdb.MutableColumnFamilyOptionsInterface`1.#ctor(MASES.JCOBridge.C2JBridge.IJVMBridgeBaseInitializer)">
+  MutableColumnFamilyOptionsInterface(IJVMBridgeBaseInitializer)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Rocksdb/MutableColumnFamilyOptionsInterface.cs/#L87"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Internal constructor: used internally from JCOBridge</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.&quot;)]
+public MutableColumnFamilyOptionsInterface(IJVMBridgeBaseInitializer initializer)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>initializer</code> <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeBaseInitializer.html">IJVMBridgeBaseInitializer</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Rocksdb_MutableColumnFamilyOptionsInterface_1__ctor_" data-uid="Org.Rocksdb.MutableColumnFamilyOptionsInterface`1.#ctor*"></a>
+
+  <h3 id="Org_Rocksdb_MutableColumnFamilyOptionsInterface_1__ctor_System_Object___" data-uid="Org.Rocksdb.MutableColumnFamilyOptionsInterface`1.#ctor(System.Object[])">
+  MutableColumnFamilyOptionsInterface(params object[])
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Rocksdb/MutableColumnFamilyOptionsInterface.cs/#L92"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Generic constructor: it is useful for JCOBridge when there is a derived class which needs to pass arguments to the highest JVMBridgeBase class</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;MutableColumnFamilyOptionsInterface class represents, in .NET, an instance of a JVM interface or abstract class. This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.&quot;)]
+public MutableColumnFamilyOptionsInterface(params object[] args)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>args</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Org_Rocksdb_MutableColumnFamilyOptionsInterface_1_BridgeClassName_" data-uid="Org.Rocksdb.MutableColumnFamilyOptionsInterface`1.BridgeClassName*"></a>
+
+  <h3 id="Org_Rocksdb_MutableColumnFamilyOptionsInterface_1_BridgeClassName" data-uid="Org.Rocksdb.MutableColumnFamilyOptionsInterface`1.BridgeClassName">
+  BridgeClassName
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Rocksdb/MutableColumnFamilyOptionsInterface.cs/#L100"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Java class name to be instantiated</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string BridgeClassName { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Org_Rocksdb_MutableColumnFamilyOptionsInterface_1_IsBridgeAbstract_" data-uid="Org.Rocksdb.MutableColumnFamilyOptionsInterface`1.IsBridgeAbstract*"></a>
+
+  <h3 id="Org_Rocksdb_MutableColumnFamilyOptionsInterface_1_IsBridgeAbstract" data-uid="Org.Rocksdb.MutableColumnFamilyOptionsInterface`1.IsBridgeAbstract">
+  IsBridgeAbstract
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Rocksdb/MutableColumnFamilyOptionsInterface.cs/#L102"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.html#MASES_JCOBridge_C2JBridge_IJVMBridgeDefinition_BridgeClassName">BridgeClassName</a> is an abstract class, i.e. cannot be created an instance</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool IsBridgeAbstract { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Org_Rocksdb_MutableColumnFamilyOptionsInterface_1_IsBridgeCloseable_" data-uid="Org.Rocksdb.MutableColumnFamilyOptionsInterface`1.IsBridgeCloseable*"></a>
+
+  <h3 id="Org_Rocksdb_MutableColumnFamilyOptionsInterface_1_IsBridgeCloseable" data-uid="Org.Rocksdb.MutableColumnFamilyOptionsInterface`1.IsBridgeCloseable">
+  IsBridgeCloseable
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Rocksdb/MutableColumnFamilyOptionsInterface.cs/#L104"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.html#MASES_JCOBridge_C2JBridge_IJVMBridgeDefinition_BridgeClassName">BridgeClassName</a> implements Closeable</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool IsBridgeCloseable { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Org_Rocksdb_MutableColumnFamilyOptionsInterface_1_IsBridgeInterface_" data-uid="Org.Rocksdb.MutableColumnFamilyOptionsInterface`1.IsBridgeInterface*"></a>
+
+  <h3 id="Org_Rocksdb_MutableColumnFamilyOptionsInterface_1_IsBridgeInterface" data-uid="Org.Rocksdb.MutableColumnFamilyOptionsInterface`1.IsBridgeInterface">
+  IsBridgeInterface
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Rocksdb/MutableColumnFamilyOptionsInterface.cs/#L106"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.html#MASES_JCOBridge_C2JBridge_IJVMBridgeDefinition_BridgeClassName">BridgeClassName</a> is an interface, i.e. does not have any public constructor</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool IsBridgeInterface { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Org_Rocksdb_MutableColumnFamilyOptionsInterface_1_IsBridgeStatic_" data-uid="Org.Rocksdb.MutableColumnFamilyOptionsInterface`1.IsBridgeStatic*"></a>
+
+  <h3 id="Org_Rocksdb_MutableColumnFamilyOptionsInterface_1_IsBridgeStatic" data-uid="Org.Rocksdb.MutableColumnFamilyOptionsInterface`1.IsBridgeStatic">
+  IsBridgeStatic
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Rocksdb/MutableColumnFamilyOptionsInterface.cs/#L108"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.html#MASES_JCOBridge_C2JBridge_IJVMBridgeDefinition_BridgeClassName">BridgeClassName</a> is a static class, i.e. does not have any public constructor</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool IsBridgeStatic { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Org_Rocksdb_MutableColumnFamilyOptionsInterface_1_CompressionType_" data-uid="Org.Rocksdb.MutableColumnFamilyOptionsInterface`1.CompressionType*"></a>
+
+  <h3 id="Org_Rocksdb_MutableColumnFamilyOptionsInterface_1_CompressionType" data-uid="Org.Rocksdb.MutableColumnFamilyOptionsInterface`1.CompressionType">
+  CompressionType()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Rocksdb/MutableColumnFamilyOptionsInterface.cs/#L334"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/MutableColumnFamilyOptionsInterface.html#compressionType()">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/MutableColumnFamilyOptionsInterface.html#compressionType()</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CompressionType CompressionType()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Rocksdb.CompressionType.html">CompressionType</a></dt>
+    <dd><p><a class="xref" href="Org.Rocksdb.CompressionType.html">CompressionType</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Rocksdb_MutableColumnFamilyOptionsInterface_1_DisableAutoCompactions_" data-uid="Org.Rocksdb.MutableColumnFamilyOptionsInterface`1.DisableAutoCompactions*"></a>
+
+  <h3 id="Org_Rocksdb_MutableColumnFamilyOptionsInterface_1_DisableAutoCompactions" data-uid="Org.Rocksdb.MutableColumnFamilyOptionsInterface`1.DisableAutoCompactions">
+  DisableAutoCompactions()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Rocksdb/MutableColumnFamilyOptionsInterface.cs/#L294"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/MutableColumnFamilyOptionsInterface.html#disableAutoCompactions()">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/MutableColumnFamilyOptionsInterface.html#disableAutoCompactions()</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool DisableAutoCompactions()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Rocksdb_MutableColumnFamilyOptionsInterface_1_Level0FileNumCompactionTrigger_" data-uid="Org.Rocksdb.MutableColumnFamilyOptionsInterface`1.Level0FileNumCompactionTrigger*"></a>
+
+  <h3 id="Org_Rocksdb_MutableColumnFamilyOptionsInterface_1_Level0FileNumCompactionTrigger" data-uid="Org.Rocksdb.MutableColumnFamilyOptionsInterface`1.Level0FileNumCompactionTrigger">
+  Level0FileNumCompactionTrigger()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Rocksdb/MutableColumnFamilyOptionsInterface.cs/#L302"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/MutableColumnFamilyOptionsInterface.html#level0FileNumCompactionTrigger()">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/MutableColumnFamilyOptionsInterface.html#level0FileNumCompactionTrigger()</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Level0FileNumCompactionTrigger()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Rocksdb_MutableColumnFamilyOptionsInterface_1_MaxBytesForLevelBase_" data-uid="Org.Rocksdb.MutableColumnFamilyOptionsInterface`1.MaxBytesForLevelBase*"></a>
+
+  <h3 id="Org_Rocksdb_MutableColumnFamilyOptionsInterface_1_MaxBytesForLevelBase" data-uid="Org.Rocksdb.MutableColumnFamilyOptionsInterface`1.MaxBytesForLevelBase">
+  MaxBytesForLevelBase()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Rocksdb/MutableColumnFamilyOptionsInterface.cs/#L310"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/MutableColumnFamilyOptionsInterface.html#maxBytesForLevelBase()">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/MutableColumnFamilyOptionsInterface.html#maxBytesForLevelBase()</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public long MaxBytesForLevelBase()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Rocksdb_MutableColumnFamilyOptionsInterface_1_MaxCompactionBytes_" data-uid="Org.Rocksdb.MutableColumnFamilyOptionsInterface`1.MaxCompactionBytes*"></a>
+
+  <h3 id="Org_Rocksdb_MutableColumnFamilyOptionsInterface_1_MaxCompactionBytes" data-uid="Org.Rocksdb.MutableColumnFamilyOptionsInterface`1.MaxCompactionBytes">
+  MaxCompactionBytes()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Rocksdb/MutableColumnFamilyOptionsInterface.cs/#L318"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/MutableColumnFamilyOptionsInterface.html#maxCompactionBytes()">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/MutableColumnFamilyOptionsInterface.html#maxCompactionBytes()</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public long MaxCompactionBytes()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Rocksdb_MutableColumnFamilyOptionsInterface_1_SetCompressionType_" data-uid="Org.Rocksdb.MutableColumnFamilyOptionsInterface`1.SetCompressionType*"></a>
+
+  <h3 id="Org_Rocksdb_MutableColumnFamilyOptionsInterface_1_SetCompressionType_Org_Rocksdb_CompressionType_" data-uid="Org.Rocksdb.MutableColumnFamilyOptionsInterface`1.SetCompressionType(Org.Rocksdb.CompressionType)">
+  SetCompressionType(CompressionType)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Rocksdb/MutableColumnFamilyOptionsInterface.cs/#L343"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/MutableColumnFamilyOptionsInterface.html#setCompressionType(org.rocksdb.CompressionType)">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/MutableColumnFamilyOptionsInterface.html#setCompressionType(org.rocksdb.CompressionType)</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public T SetCompressionType(CompressionType arg0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="Org.Rocksdb.CompressionType.html">CompressionType</a></dt>
+    <dd><p><a class="xref" href="Org.Rocksdb.CompressionType.html">CompressionType</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">T</span></dt>
+    <dd><p><code class="typeparamref">T</code></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Rocksdb_MutableColumnFamilyOptionsInterface_1_SetDisableAutoCompactions_" data-uid="Org.Rocksdb.MutableColumnFamilyOptionsInterface`1.SetDisableAutoCompactions*"></a>
+
+  <h3 id="Org_Rocksdb_MutableColumnFamilyOptionsInterface_1_SetDisableAutoCompactions_System_Boolean_" data-uid="Org.Rocksdb.MutableColumnFamilyOptionsInterface`1.SetDisableAutoCompactions(System.Boolean)">
+  SetDisableAutoCompactions(bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Rocksdb/MutableColumnFamilyOptionsInterface.cs/#L352"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/MutableColumnFamilyOptionsInterface.html#setDisableAutoCompactions(boolean)">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/MutableColumnFamilyOptionsInterface.html#setDisableAutoCompactions(boolean)</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public T SetDisableAutoCompactions(bool arg0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">T</span></dt>
+    <dd><p><code class="typeparamref">T</code></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Rocksdb_MutableColumnFamilyOptionsInterface_1_SetLevel0FileNumCompactionTrigger_" data-uid="Org.Rocksdb.MutableColumnFamilyOptionsInterface`1.SetLevel0FileNumCompactionTrigger*"></a>
+
+  <h3 id="Org_Rocksdb_MutableColumnFamilyOptionsInterface_1_SetLevel0FileNumCompactionTrigger_System_Int32_" data-uid="Org.Rocksdb.MutableColumnFamilyOptionsInterface`1.SetLevel0FileNumCompactionTrigger(System.Int32)">
+  SetLevel0FileNumCompactionTrigger(int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Rocksdb/MutableColumnFamilyOptionsInterface.cs/#L361"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/MutableColumnFamilyOptionsInterface.html#setLevel0FileNumCompactionTrigger(int)">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/MutableColumnFamilyOptionsInterface.html#setLevel0FileNumCompactionTrigger(int)</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public T SetLevel0FileNumCompactionTrigger(int arg0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">T</span></dt>
+    <dd><p><code class="typeparamref">T</code></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Rocksdb_MutableColumnFamilyOptionsInterface_1_SetMaxBytesForLevelBase_" data-uid="Org.Rocksdb.MutableColumnFamilyOptionsInterface`1.SetMaxBytesForLevelBase*"></a>
+
+  <h3 id="Org_Rocksdb_MutableColumnFamilyOptionsInterface_1_SetMaxBytesForLevelBase_System_Int64_" data-uid="Org.Rocksdb.MutableColumnFamilyOptionsInterface`1.SetMaxBytesForLevelBase(System.Int64)">
+  SetMaxBytesForLevelBase(long)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Rocksdb/MutableColumnFamilyOptionsInterface.cs/#L370"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/MutableColumnFamilyOptionsInterface.html#setMaxBytesForLevelBase(long)">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/MutableColumnFamilyOptionsInterface.html#setMaxBytesForLevelBase(long)</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public T SetMaxBytesForLevelBase(long arg0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">T</span></dt>
+    <dd><p><code class="typeparamref">T</code></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Rocksdb_MutableColumnFamilyOptionsInterface_1_SetMaxCompactionBytes_" data-uid="Org.Rocksdb.MutableColumnFamilyOptionsInterface`1.SetMaxCompactionBytes*"></a>
+
+  <h3 id="Org_Rocksdb_MutableColumnFamilyOptionsInterface_1_SetMaxCompactionBytes_System_Int64_" data-uid="Org.Rocksdb.MutableColumnFamilyOptionsInterface`1.SetMaxCompactionBytes(System.Int64)">
+  SetMaxCompactionBytes(long)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Rocksdb/MutableColumnFamilyOptionsInterface.cs/#L379"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/MutableColumnFamilyOptionsInterface.html#setMaxCompactionBytes(long)">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/MutableColumnFamilyOptionsInterface.html#setMaxCompactionBytes(long)</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public T SetMaxCompactionBytes(long arg0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">T</span></dt>
+    <dd><p><code class="typeparamref">T</code></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Rocksdb_MutableColumnFamilyOptionsInterface_1_SetWriteBufferSize_" data-uid="Org.Rocksdb.MutableColumnFamilyOptionsInterface`1.SetWriteBufferSize*"></a>
+
+  <h3 id="Org_Rocksdb_MutableColumnFamilyOptionsInterface_1_SetWriteBufferSize_System_Int64_" data-uid="Org.Rocksdb.MutableColumnFamilyOptionsInterface`1.SetWriteBufferSize(System.Int64)">
+  SetWriteBufferSize(long)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Rocksdb/MutableColumnFamilyOptionsInterface.cs/#L388"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/MutableColumnFamilyOptionsInterface.html#setWriteBufferSize(long)">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/MutableColumnFamilyOptionsInterface.html#setWriteBufferSize(long)</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public T SetWriteBufferSize(long arg0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">T</span></dt>
+    <dd><p><code class="typeparamref">T</code></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Rocksdb_MutableColumnFamilyOptionsInterface_1_WriteBufferSize_" data-uid="Org.Rocksdb.MutableColumnFamilyOptionsInterface`1.WriteBufferSize*"></a>
+
+  <h3 id="Org_Rocksdb_MutableColumnFamilyOptionsInterface_1_WriteBufferSize" data-uid="Org.Rocksdb.MutableColumnFamilyOptionsInterface`1.WriteBufferSize">
+  WriteBufferSize()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Rocksdb/MutableColumnFamilyOptionsInterface.cs/#L326"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/MutableColumnFamilyOptionsInterface.html#writeBufferSize()">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/MutableColumnFamilyOptionsInterface.html#writeBufferSize()</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public long WriteBufferSize()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="operators">Operators
+</h2>
+
+
+  <a id="Org_Rocksdb_MutableColumnFamilyOptionsInterface_1_op_Implicit_" data-uid="Org.Rocksdb.MutableColumnFamilyOptionsInterface`1.op_Implicit*"></a>
+
+  <h3 id="Org_Rocksdb_MutableColumnFamilyOptionsInterface_1_op_Implicit_Org_Rocksdb_MutableColumnFamilyOptionsInterface__0___Org_Rocksdb_MutableColumnFamilyOptionsInterface" data-uid="Org.Rocksdb.MutableColumnFamilyOptionsInterface`1.op_Implicit(Org.Rocksdb.MutableColumnFamilyOptionsInterface{`0})~Org.Rocksdb.MutableColumnFamilyOptionsInterface">
+  implicit operator MutableColumnFamilyOptionsInterface(MutableColumnFamilyOptionsInterface&lt;T&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Rocksdb/MutableColumnFamilyOptionsInterface.cs/#L277"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Converter from <a class="xref" href="Org.Rocksdb.MutableColumnFamilyOptionsInterface-1.html">MutableColumnFamilyOptionsInterface&lt;T&gt;</a> to <a class="xref" href="Org.Rocksdb.MutableColumnFamilyOptionsInterface.html">MutableColumnFamilyOptionsInterface</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static implicit operator MutableColumnFamilyOptionsInterface(MutableColumnFamilyOptionsInterface&lt;T&gt; t)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>t</code> <a class="xref" href="Org.Rocksdb.MutableColumnFamilyOptionsInterface-1.html">MutableColumnFamilyOptionsInterface</a>&lt;T&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Rocksdb.MutableColumnFamilyOptionsInterface.html">MutableColumnFamilyOptionsInterface</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Rocksdb/MutableColumnFamilyOptionsInterface.cs/#L267" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <script type="text/javascript">document.write('<div style="text-align: center;">Copyright © 2021 - ' + new Date().getFullYear() + ' MASES s.r.l. | Via San Cesidio 16 - San Valentino in A.C. - PE | P.I. 01932310681</div>');</script>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

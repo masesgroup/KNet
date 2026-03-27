@@ -1,0 +1,1581 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+      <title>Class TtlDB | MASES Group - KNet </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class TtlDB | MASES Group - KNet ">
+      <meta name="description" content="This is a descriptive page of KNet, the .NET suite for Apache Kafka">
+      <meta name="description" content="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/TtlDB.html">
+      <link rel="icon" href="../images/favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Rocksdb_TtlDB.md&amp;value=---%0Auid%3A%20Org.Rocksdb.TtlDB%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/logo.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Org.Rocksdb.TtlDB">
+
+
+
+  <h1 id="Org_Rocksdb_TtlDB" data-uid="Org.Rocksdb.TtlDB" class="text-break">
+Class TtlDB  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Rocksdb/TtlDB.cs/#L70"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Org.html">Org</a>.<a class="xref" href="Org.Rocksdb.html">Rocksdb</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>MASES.KNet.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p><a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/TtlDB.html">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/TtlDB.html</a></p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class TtlDB : RocksDB, IDynamicMetaObjectProvider, IJVMBridgeCore, IEquatable&lt;IJVMBridgeBase&gt;, IDisposable, IJVMBridgeBaseStatic, IJVMBridgeBase, IJVMBridgeDefinition, IAutoCloseable</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject">DynamicObject</a></div>
+      <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html">JVMBridgeBase</a></div>
+      <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase-1.html">JVMBridgeBase</a>&lt;<a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.AutoCloseable.html">AutoCloseable</a>&gt;</div>
+      <div><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.AutoCloseable.html">AutoCloseable</a></div>
+      <div><a class="xref" href="Org.Rocksdb.AbstractNativeReference.html">AbstractNativeReference</a></div>
+      <div><a class="xref" href="Org.Rocksdb.AbstractImmutableNativeReference.html">AbstractImmutableNativeReference</a></div>
+      <div><a class="xref" href="Org.Rocksdb.RocksObject.html">RocksObject</a></div>
+      <div><a class="xref" href="Org.Rocksdb.RocksDB.html">RocksDB</a></div>
+      <div><span class="xref">TtlDB</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.idynamicmetaobjectprovider">IDynamicMetaObjectProvider</a></div>
+      <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeCore.html">IJVMBridgeCore</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeBase.html">IJVMBridgeBase</a>&gt;</div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
+      <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeBaseStatic.html">IJVMBridgeBaseStatic</a></div>
+      <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeBase.html">IJVMBridgeBase</a></div>
+      <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.html">IJVMBridgeDefinition</a></div>
+      <div><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.IAutoCloseable.html">IAutoCloseable</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_DEFAULT_COLUMN_FAMILY">RocksDB.DEFAULT_COLUMN_FAMILY</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_NOT_FOUND">RocksDB.NOT_FOUND</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_ListColumnFamilies_Org_Rocksdb_Options_Java_Lang_String_">RocksDB.ListColumnFamilies(Options, String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_Open_Java_Lang_String_Java_Util_List_Org_Rocksdb_ColumnFamilyDescriptor__Java_Util_List_Org_Rocksdb_ColumnFamilyHandle__">RocksDB.Open(String, List&lt;ColumnFamilyDescriptor&gt;, List&lt;ColumnFamilyHandle&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_Open_Java_Lang_String_">RocksDB.Open(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_Open_Org_Rocksdb_DBOptions_Java_Lang_String_Java_Util_List_Org_Rocksdb_ColumnFamilyDescriptor__Java_Util_List_Org_Rocksdb_ColumnFamilyHandle__">RocksDB.Open(DBOptions, String, List&lt;ColumnFamilyDescriptor&gt;, List&lt;ColumnFamilyHandle&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_Open_Org_Rocksdb_Options_Java_Lang_String_">RocksDB.Open(Options, String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_OpenAsSecondary_Org_Rocksdb_DBOptions_Java_Lang_String_Java_Lang_String_Java_Util_List_Org_Rocksdb_ColumnFamilyDescriptor__Java_Util_List_Org_Rocksdb_ColumnFamilyHandle__">RocksDB.OpenAsSecondary(DBOptions, String, String, List&lt;ColumnFamilyDescriptor&gt;, List&lt;ColumnFamilyHandle&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_OpenAsSecondary_Org_Rocksdb_Options_Java_Lang_String_Java_Lang_String_">RocksDB.OpenAsSecondary(Options, String, String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_OpenReadOnly_Java_Lang_String_Java_Util_List_Org_Rocksdb_ColumnFamilyDescriptor__Java_Util_List_Org_Rocksdb_ColumnFamilyHandle__">RocksDB.OpenReadOnly(String, List&lt;ColumnFamilyDescriptor&gt;, List&lt;ColumnFamilyHandle&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_OpenReadOnly_Java_Lang_String_">RocksDB.OpenReadOnly(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_OpenReadOnly_Org_Rocksdb_DBOptions_Java_Lang_String_Java_Util_List_Org_Rocksdb_ColumnFamilyDescriptor__Java_Util_List_Org_Rocksdb_ColumnFamilyHandle__System_Boolean_">RocksDB.OpenReadOnly(DBOptions, String, List&lt;ColumnFamilyDescriptor&gt;, List&lt;ColumnFamilyHandle&gt;, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_OpenReadOnly_Org_Rocksdb_DBOptions_Java_Lang_String_Java_Util_List_Org_Rocksdb_ColumnFamilyDescriptor__Java_Util_List_Org_Rocksdb_ColumnFamilyHandle__">RocksDB.OpenReadOnly(DBOptions, String, List&lt;ColumnFamilyDescriptor&gt;, List&lt;ColumnFamilyHandle&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_OpenReadOnly_Org_Rocksdb_Options_Java_Lang_String_System_Boolean_">RocksDB.OpenReadOnly(Options, String, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_OpenReadOnly_Org_Rocksdb_Options_Java_Lang_String_">RocksDB.OpenReadOnly(Options, String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_RocksdbVersion">RocksDB.RocksdbVersion()</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_DestroyDB_Java_Lang_String_Org_Rocksdb_Options_">RocksDB.DestroyDB(String, Options)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_LoadLibrary">RocksDB.LoadLibrary()</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_LoadLibrary_Java_Util_List_Java_Lang_String__">RocksDB.LoadLibrary(List&lt;String&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_ColumnFamilyMetaData">RocksDB.ColumnFamilyMetaData</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_DefaultColumnFamily">RocksDB.DefaultColumnFamily</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_Env">RocksDB.Env</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_LatestSequenceNumber">RocksDB.LatestSequenceNumber</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_LiveFilesMetaData">RocksDB.LiveFilesMetaData</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_Name">RocksDB.Name</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_Options">RocksDB.Options</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_PerfContext">RocksDB.PerfContext</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_PerfLevel">RocksDB.PerfLevel</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_PropertiesOfAllTables">RocksDB.PropertiesOfAllTables</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_Snapshot">RocksDB.Snapshot</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_SortedWalFiles">RocksDB.SortedWalFiles</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_IsClosed">RocksDB.IsClosed()</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_KeyExists_System_Byte___System_Int32_System_Int32_">RocksDB.KeyExists(byte[], int, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_KeyExists_System_Byte___">RocksDB.KeyExists(byte[])</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_KeyExists_Java_Nio_ByteBuffer_">RocksDB.KeyExists(ByteBuffer)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_KeyExists_Org_Rocksdb_ColumnFamilyHandle_System_Byte___System_Int32_System_Int32_">RocksDB.KeyExists(ColumnFamilyHandle, byte[], int, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_KeyExists_Org_Rocksdb_ColumnFamilyHandle_System_Byte___">RocksDB.KeyExists(ColumnFamilyHandle, byte[])</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_KeyExists_Org_Rocksdb_ColumnFamilyHandle_Java_Nio_ByteBuffer_">RocksDB.KeyExists(ColumnFamilyHandle, ByteBuffer)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_KeyExists_Org_Rocksdb_ColumnFamilyHandle_Org_Rocksdb_ReadOptions_System_Byte___System_Int32_System_Int32_">RocksDB.KeyExists(ColumnFamilyHandle, ReadOptions, byte[], int, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_KeyExists_Org_Rocksdb_ColumnFamilyHandle_Org_Rocksdb_ReadOptions_System_Byte___">RocksDB.KeyExists(ColumnFamilyHandle, ReadOptions, byte[])</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_KeyExists_Org_Rocksdb_ColumnFamilyHandle_Org_Rocksdb_ReadOptions_Java_Nio_ByteBuffer_">RocksDB.KeyExists(ColumnFamilyHandle, ReadOptions, ByteBuffer)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_KeyExists_Org_Rocksdb_ReadOptions_System_Byte___System_Int32_System_Int32_">RocksDB.KeyExists(ReadOptions, byte[], int, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_KeyExists_Org_Rocksdb_ReadOptions_System_Byte___">RocksDB.KeyExists(ReadOptions, byte[])</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_KeyExists_Org_Rocksdb_ReadOptions_Java_Nio_ByteBuffer_">RocksDB.KeyExists(ReadOptions, ByteBuffer)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_KeyMayExist_System_Byte___System_Int32_System_Int32_Org_Rocksdb_Holder_System_Byte____">RocksDB.KeyMayExist(byte[], int, int, Holder&lt;byte[]&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_KeyMayExist_System_Byte___Org_Rocksdb_Holder_System_Byte____">RocksDB.KeyMayExist(byte[], Holder&lt;byte[]&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_KeyMayExist_Java_Nio_ByteBuffer_">RocksDB.KeyMayExist(ByteBuffer)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_KeyMayExist_Org_Rocksdb_ColumnFamilyHandle_System_Byte___System_Int32_System_Int32_Org_Rocksdb_Holder_System_Byte____">RocksDB.KeyMayExist(ColumnFamilyHandle, byte[], int, int, Holder&lt;byte[]&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_KeyMayExist_Org_Rocksdb_ColumnFamilyHandle_System_Byte___Org_Rocksdb_Holder_System_Byte____">RocksDB.KeyMayExist(ColumnFamilyHandle, byte[], Holder&lt;byte[]&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_KeyMayExist_Org_Rocksdb_ColumnFamilyHandle_Java_Nio_ByteBuffer_">RocksDB.KeyMayExist(ColumnFamilyHandle, ByteBuffer)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_KeyMayExist_Org_Rocksdb_ColumnFamilyHandle_Org_Rocksdb_ReadOptions_System_Byte___System_Int32_System_Int32_Org_Rocksdb_Holder_System_Byte____">RocksDB.KeyMayExist(ColumnFamilyHandle, ReadOptions, byte[], int, int, Holder&lt;byte[]&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_KeyMayExist_Org_Rocksdb_ColumnFamilyHandle_Org_Rocksdb_ReadOptions_System_Byte___Org_Rocksdb_Holder_System_Byte____">RocksDB.KeyMayExist(ColumnFamilyHandle, ReadOptions, byte[], Holder&lt;byte[]&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_KeyMayExist_Org_Rocksdb_ColumnFamilyHandle_Org_Rocksdb_ReadOptions_Java_Nio_ByteBuffer_">RocksDB.KeyMayExist(ColumnFamilyHandle, ReadOptions, ByteBuffer)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_KeyMayExist_Org_Rocksdb_ReadOptions_System_Byte___System_Int32_System_Int32_Org_Rocksdb_Holder_System_Byte____">RocksDB.KeyMayExist(ReadOptions, byte[], int, int, Holder&lt;byte[]&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_KeyMayExist_Org_Rocksdb_ReadOptions_System_Byte___Org_Rocksdb_Holder_System_Byte____">RocksDB.KeyMayExist(ReadOptions, byte[], Holder&lt;byte[]&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_KeyMayExist_Org_Rocksdb_ReadOptions_Java_Nio_ByteBuffer_">RocksDB.KeyMayExist(ReadOptions, ByteBuffer)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_Get_System_Byte___System_Int32_System_Int32_">RocksDB.Get(byte[], int, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_Get_System_Byte___">RocksDB.Get(byte[])</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_Get_Org_Rocksdb_ColumnFamilyHandle_System_Byte___System_Int32_System_Int32_">RocksDB.Get(ColumnFamilyHandle, byte[], int, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_Get_Org_Rocksdb_ColumnFamilyHandle_System_Byte___">RocksDB.Get(ColumnFamilyHandle, byte[])</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_Get_Org_Rocksdb_ColumnFamilyHandle_Org_Rocksdb_ReadOptions_System_Byte___System_Int32_System_Int32_">RocksDB.Get(ColumnFamilyHandle, ReadOptions, byte[], int, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_Get_Org_Rocksdb_ColumnFamilyHandle_Org_Rocksdb_ReadOptions_System_Byte___">RocksDB.Get(ColumnFamilyHandle, ReadOptions, byte[])</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_Get_Org_Rocksdb_ReadOptions_System_Byte___System_Int32_System_Int32_">RocksDB.Get(ReadOptions, byte[], int, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_Get_Org_Rocksdb_ReadOptions_System_Byte___">RocksDB.Get(ReadOptions, byte[])</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_Get_System_Byte___System_Byte___">RocksDB.Get(byte[], byte[])</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_Get_System_Byte___System_Int32_System_Int32_System_Byte___System_Int32_System_Int32_">RocksDB.Get(byte[], int, int, byte[], int, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_Get_Org_Rocksdb_ColumnFamilyHandle_System_Byte___System_Byte___">RocksDB.Get(ColumnFamilyHandle, byte[], byte[])</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_Get_Org_Rocksdb_ColumnFamilyHandle_System_Byte___System_Int32_System_Int32_System_Byte___System_Int32_System_Int32_">RocksDB.Get(ColumnFamilyHandle, byte[], int, int, byte[], int, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_Get_Org_Rocksdb_ColumnFamilyHandle_Org_Rocksdb_ReadOptions_System_Byte___System_Byte___">RocksDB.Get(ColumnFamilyHandle, ReadOptions, byte[], byte[])</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_Get_Org_Rocksdb_ColumnFamilyHandle_Org_Rocksdb_ReadOptions_System_Byte___System_Int32_System_Int32_System_Byte___System_Int32_System_Int32_">RocksDB.Get(ColumnFamilyHandle, ReadOptions, byte[], int, int, byte[], int, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_Get_Org_Rocksdb_ColumnFamilyHandle_Org_Rocksdb_ReadOptions_Java_Nio_ByteBuffer_Java_Nio_ByteBuffer_">RocksDB.Get(ColumnFamilyHandle, ReadOptions, ByteBuffer, ByteBuffer)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_Get_Org_Rocksdb_ReadOptions_System_Byte___System_Byte___">RocksDB.Get(ReadOptions, byte[], byte[])</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_Get_Org_Rocksdb_ReadOptions_System_Byte___System_Int32_System_Int32_System_Byte___System_Int32_System_Int32_">RocksDB.Get(ReadOptions, byte[], int, int, byte[], int, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_Get_Org_Rocksdb_ReadOptions_Java_Nio_ByteBuffer_Java_Nio_ByteBuffer_">RocksDB.Get(ReadOptions, ByteBuffer, ByteBuffer)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_Level0StopWriteTrigger">RocksDB.Level0StopWriteTrigger()</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_Level0StopWriteTrigger_Org_Rocksdb_ColumnFamilyHandle_">RocksDB.Level0StopWriteTrigger(ColumnFamilyHandle)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_MaxMemCompactionLevel">RocksDB.MaxMemCompactionLevel()</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_MaxMemCompactionLevel_Org_Rocksdb_ColumnFamilyHandle_">RocksDB.MaxMemCompactionLevel(ColumnFamilyHandle)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_NumberLevels">RocksDB.NumberLevels()</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_NumberLevels_Org_Rocksdb_ColumnFamilyHandle_">RocksDB.NumberLevels(ColumnFamilyHandle)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_GetProperty_Java_Lang_String_">RocksDB.GetProperty(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_GetProperty_Org_Rocksdb_ColumnFamilyHandle_Java_Lang_String_">RocksDB.GetProperty(ColumnFamilyHandle, String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_MultiGetAsList_Java_Util_List_System_Byte____">RocksDB.MultiGetAsList(List&lt;byte[]&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_MultiGetAsList_Java_Util_List_Org_Rocksdb_ColumnFamilyHandle__Java_Util_List_System_Byte____">RocksDB.MultiGetAsList(List&lt;ColumnFamilyHandle&gt;, List&lt;byte[]&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_MultiGetAsList_Org_Rocksdb_ReadOptions_Java_Util_List_System_Byte____">RocksDB.MultiGetAsList(ReadOptions, List&lt;byte[]&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_MultiGetAsList_Org_Rocksdb_ReadOptions_Java_Util_List_Org_Rocksdb_ColumnFamilyHandle__Java_Util_List_System_Byte____">RocksDB.MultiGetAsList(ReadOptions, List&lt;ColumnFamilyHandle&gt;, List&lt;byte[]&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_CompactFiles_Org_Rocksdb_CompactionOptions_Java_Util_List_Java_Lang_String__System_Int32_System_Int32_Org_Rocksdb_CompactionJobInfo_">RocksDB.CompactFiles(CompactionOptions, List&lt;String&gt;, int, int, CompactionJobInfo)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_CompactFiles_Org_Rocksdb_CompactionOptions_Org_Rocksdb_ColumnFamilyHandle_Java_Util_List_Java_Lang_String__System_Int32_System_Int32_Org_Rocksdb_CompactionJobInfo_">RocksDB.CompactFiles(CompactionOptions, ColumnFamilyHandle, List&lt;String&gt;, int, int, CompactionJobInfo)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_MultiGetByteBuffers_Java_Util_List_Java_Nio_ByteBuffer__Java_Util_List_Java_Nio_ByteBuffer__">RocksDB.MultiGetByteBuffers(List&lt;ByteBuffer&gt;, List&lt;ByteBuffer&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_MultiGetByteBuffers_Java_Util_List_Org_Rocksdb_ColumnFamilyHandle__Java_Util_List_Java_Nio_ByteBuffer__Java_Util_List_Java_Nio_ByteBuffer__">RocksDB.MultiGetByteBuffers(List&lt;ColumnFamilyHandle&gt;, List&lt;ByteBuffer&gt;, List&lt;ByteBuffer&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_MultiGetByteBuffers_Org_Rocksdb_ReadOptions_Java_Util_List_Java_Nio_ByteBuffer__Java_Util_List_Java_Nio_ByteBuffer__">RocksDB.MultiGetByteBuffers(ReadOptions, List&lt;ByteBuffer&gt;, List&lt;ByteBuffer&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_MultiGetByteBuffers_Org_Rocksdb_ReadOptions_Java_Util_List_Org_Rocksdb_ColumnFamilyHandle__Java_Util_List_Java_Nio_ByteBuffer__Java_Util_List_Java_Nio_ByteBuffer__">RocksDB.MultiGetByteBuffers(ReadOptions, List&lt;ColumnFamilyHandle&gt;, List&lt;ByteBuffer&gt;, List&lt;ByteBuffer&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_CreateColumnFamilies_Java_Util_List_Org_Rocksdb_ColumnFamilyDescriptor__">RocksDB.CreateColumnFamilies(List&lt;ColumnFamilyDescriptor&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_CreateColumnFamilies_Org_Rocksdb_ColumnFamilyOptions_Java_Util_List_System_Byte____">RocksDB.CreateColumnFamilies(ColumnFamilyOptions, List&lt;byte[]&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_NewIterators_Java_Util_List_Org_Rocksdb_ColumnFamilyHandle__Org_Rocksdb_ReadOptions_">RocksDB.NewIterators(List&lt;ColumnFamilyHandle&gt;, ReadOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_NewIterators_Java_Util_List_Org_Rocksdb_ColumnFamilyHandle__">RocksDB.NewIterators(List&lt;ColumnFamilyHandle&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_GetMapProperty_Java_Lang_String_">RocksDB.GetMapProperty(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_GetMapProperty_Org_Rocksdb_ColumnFamilyHandle_Java_Lang_String_">RocksDB.GetMapProperty(ColumnFamilyHandle, String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_GetPropertiesOfAllTables_Org_Rocksdb_ColumnFamilyHandle_">RocksDB.GetPropertiesOfAllTables(ColumnFamilyHandle)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_GetPropertiesOfTablesInRange_Java_Util_List_Org_Rocksdb_Range__">RocksDB.GetPropertiesOfTablesInRange(List&lt;Range&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_GetPropertiesOfTablesInRange_Org_Rocksdb_ColumnFamilyHandle_Java_Util_List_Org_Rocksdb_Range__">RocksDB.GetPropertiesOfTablesInRange(ColumnFamilyHandle, List&lt;Range&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_GetAggregatedLongProperty_Java_Lang_String_">RocksDB.GetAggregatedLongProperty(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_GetLongProperty_Java_Lang_String_">RocksDB.GetLongProperty(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_GetLongProperty_Org_Rocksdb_ColumnFamilyHandle_Java_Lang_String_">RocksDB.GetLongProperty(ColumnFamilyHandle, String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_GetApproximateSizes_Java_Util_List_Org_Rocksdb_Range__Org_Rocksdb_SizeApproximationFlag___">RocksDB.GetApproximateSizes(List&lt;Range&gt;, params SizeApproximationFlag[])</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_GetApproximateSizes_Org_Rocksdb_ColumnFamilyHandle_Java_Util_List_Org_Rocksdb_Range__Org_Rocksdb_SizeApproximationFlag___">RocksDB.GetApproximateSizes(ColumnFamilyHandle, List&lt;Range&gt;, params SizeApproximationFlag[])</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_CreateColumnFamily_Org_Rocksdb_ColumnFamilyDescriptor_">RocksDB.CreateColumnFamily(ColumnFamilyDescriptor)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_CreateColumnFamilyWithImport_Org_Rocksdb_ColumnFamilyDescriptor_Org_Rocksdb_ImportColumnFamilyOptions_Java_Util_List_Org_Rocksdb_ExportImportFilesMetaData__">RocksDB.CreateColumnFamilyWithImport(ColumnFamilyDescriptor, ImportColumnFamilyOptions, List&lt;ExportImportFilesMetaData&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_CreateColumnFamilyWithImport_Org_Rocksdb_ColumnFamilyDescriptor_Org_Rocksdb_ImportColumnFamilyOptions_Org_Rocksdb_ExportImportFilesMetaData_">RocksDB.CreateColumnFamilyWithImport(ColumnFamilyDescriptor, ImportColumnFamilyOptions, ExportImportFilesMetaData)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_GetColumnFamilyMetaData_Org_Rocksdb_ColumnFamilyHandle_">RocksDB.GetColumnFamilyMetaData(ColumnFamilyHandle)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_KeyMayExist_Java_Nio_ByteBuffer_Java_Nio_ByteBuffer_">RocksDB.KeyMayExist(ByteBuffer, ByteBuffer)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_KeyMayExist_Org_Rocksdb_ColumnFamilyHandle_Java_Nio_ByteBuffer_Java_Nio_ByteBuffer_">RocksDB.KeyMayExist(ColumnFamilyHandle, ByteBuffer, ByteBuffer)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_KeyMayExist_Org_Rocksdb_ColumnFamilyHandle_Org_Rocksdb_ReadOptions_Java_Nio_ByteBuffer_Java_Nio_ByteBuffer_">RocksDB.KeyMayExist(ColumnFamilyHandle, ReadOptions, ByteBuffer, ByteBuffer)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_KeyMayExist_Org_Rocksdb_ReadOptions_Java_Nio_ByteBuffer_Java_Nio_ByteBuffer_">RocksDB.KeyMayExist(ReadOptions, ByteBuffer, ByteBuffer)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_GetOptions_Org_Rocksdb_ColumnFamilyHandle_">RocksDB.GetOptions(ColumnFamilyHandle)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_SuggestCompactRange">RocksDB.SuggestCompactRange()</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_SuggestCompactRange_Org_Rocksdb_ColumnFamilyHandle_">RocksDB.SuggestCompactRange(ColumnFamilyHandle)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_GetApproximateMemTableStats_Org_Rocksdb_ColumnFamilyHandle_Org_Rocksdb_Range_">RocksDB.GetApproximateMemTableStats(ColumnFamilyHandle, Range)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_GetApproximateMemTableStats_Org_Rocksdb_Range_">RocksDB.GetApproximateMemTableStats(Range)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_GetLiveFiles">RocksDB.GetLiveFiles()</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_GetLiveFiles_System_Boolean_">RocksDB.GetLiveFiles(bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_NewIterator">RocksDB.NewIterator()</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_NewIterator_Org_Rocksdb_ColumnFamilyHandle_Org_Rocksdb_ReadOptions_">RocksDB.NewIterator(ColumnFamilyHandle, ReadOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_NewIterator_Org_Rocksdb_ColumnFamilyHandle_">RocksDB.NewIterator(ColumnFamilyHandle)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_NewIterator_Org_Rocksdb_ReadOptions_">RocksDB.NewIterator(ReadOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_GetUpdatesSince_System_Int64_">RocksDB.GetUpdatesSince(long)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_CancelAllBackgroundWork_System_Boolean_">RocksDB.CancelAllBackgroundWork(bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_ClipColumnFamily_Org_Rocksdb_ColumnFamilyHandle_System_Byte___System_Byte___">RocksDB.ClipColumnFamily(ColumnFamilyHandle, byte[], byte[])</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_CloseE">RocksDB.CloseE()</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_CompactRange">RocksDB.CompactRange()</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_CompactRange_System_Byte___System_Byte___">RocksDB.CompactRange(byte[], byte[])</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_CompactRange_Org_Rocksdb_ColumnFamilyHandle_System_Byte___System_Byte___Org_Rocksdb_CompactRangeOptions_">RocksDB.CompactRange(ColumnFamilyHandle, byte[], byte[], CompactRangeOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_CompactRange_Org_Rocksdb_ColumnFamilyHandle_System_Byte___System_Byte___">RocksDB.CompactRange(ColumnFamilyHandle, byte[], byte[])</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_CompactRange_Org_Rocksdb_ColumnFamilyHandle_">RocksDB.CompactRange(ColumnFamilyHandle)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_ContinueBackgroundWork">RocksDB.ContinueBackgroundWork()</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_Delete_System_Byte___System_Int32_System_Int32_">RocksDB.Delete(byte[], int, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_Delete_System_Byte___">RocksDB.Delete(byte[])</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_Delete_Org_Rocksdb_ColumnFamilyHandle_System_Byte___System_Int32_System_Int32_">RocksDB.Delete(ColumnFamilyHandle, byte[], int, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_Delete_Org_Rocksdb_ColumnFamilyHandle_System_Byte___">RocksDB.Delete(ColumnFamilyHandle, byte[])</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_Delete_Org_Rocksdb_ColumnFamilyHandle_Org_Rocksdb_WriteOptions_System_Byte___System_Int32_System_Int32_">RocksDB.Delete(ColumnFamilyHandle, WriteOptions, byte[], int, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_Delete_Org_Rocksdb_ColumnFamilyHandle_Org_Rocksdb_WriteOptions_System_Byte___">RocksDB.Delete(ColumnFamilyHandle, WriteOptions, byte[])</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_Delete_Org_Rocksdb_ColumnFamilyHandle_Org_Rocksdb_WriteOptions_Java_Nio_ByteBuffer_">RocksDB.Delete(ColumnFamilyHandle, WriteOptions, ByteBuffer)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_Delete_Org_Rocksdb_WriteOptions_System_Byte___System_Int32_System_Int32_">RocksDB.Delete(WriteOptions, byte[], int, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_Delete_Org_Rocksdb_WriteOptions_System_Byte___">RocksDB.Delete(WriteOptions, byte[])</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_Delete_Org_Rocksdb_WriteOptions_Java_Nio_ByteBuffer_">RocksDB.Delete(WriteOptions, ByteBuffer)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_DeleteFilesInRanges_Org_Rocksdb_ColumnFamilyHandle_Java_Util_List_System_Byte____System_Boolean_">RocksDB.DeleteFilesInRanges(ColumnFamilyHandle, List&lt;byte[]&gt;, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_DeleteRange_System_Byte___System_Byte___">RocksDB.DeleteRange(byte[], byte[])</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_DeleteRange_Org_Rocksdb_ColumnFamilyHandle_System_Byte___System_Byte___">RocksDB.DeleteRange(ColumnFamilyHandle, byte[], byte[])</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_DeleteRange_Org_Rocksdb_ColumnFamilyHandle_Org_Rocksdb_WriteOptions_System_Byte___System_Byte___">RocksDB.DeleteRange(ColumnFamilyHandle, WriteOptions, byte[], byte[])</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_DeleteRange_Org_Rocksdb_WriteOptions_System_Byte___System_Byte___">RocksDB.DeleteRange(WriteOptions, byte[], byte[])</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_DestroyColumnFamilyHandle_Org_Rocksdb_ColumnFamilyHandle_">RocksDB.DestroyColumnFamilyHandle(ColumnFamilyHandle)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_DisableFileDeletions">RocksDB.DisableFileDeletions()</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_DropColumnFamilies_Java_Util_List_Org_Rocksdb_ColumnFamilyHandle__">RocksDB.DropColumnFamilies(List&lt;ColumnFamilyHandle&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_DropColumnFamily_Org_Rocksdb_ColumnFamilyHandle_">RocksDB.DropColumnFamily(ColumnFamilyHandle)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_EnableAutoCompaction_Java_Util_List_Org_Rocksdb_ColumnFamilyHandle__">RocksDB.EnableAutoCompaction(List&lt;ColumnFamilyHandle&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_EnableFileDeletions">RocksDB.EnableFileDeletions()</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_EndTrace">RocksDB.EndTrace()</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_Flush_Org_Rocksdb_FlushOptions_Java_Util_List_Org_Rocksdb_ColumnFamilyHandle__">RocksDB.Flush(FlushOptions, List&lt;ColumnFamilyHandle&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_Flush_Org_Rocksdb_FlushOptions_Org_Rocksdb_ColumnFamilyHandle_">RocksDB.Flush(FlushOptions, ColumnFamilyHandle)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_Flush_Org_Rocksdb_FlushOptions_">RocksDB.Flush(FlushOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_FlushWal_System_Boolean_">RocksDB.FlushWal(bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_IngestExternalFile_Java_Util_List_Java_Lang_String__Org_Rocksdb_IngestExternalFileOptions_">RocksDB.IngestExternalFile(List&lt;String&gt;, IngestExternalFileOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_IngestExternalFile_Org_Rocksdb_ColumnFamilyHandle_Java_Util_List_Java_Lang_String__Org_Rocksdb_IngestExternalFileOptions_">RocksDB.IngestExternalFile(ColumnFamilyHandle, List&lt;String&gt;, IngestExternalFileOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_Merge_System_Byte___System_Byte___">RocksDB.Merge(byte[], byte[])</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_Merge_System_Byte___System_Int32_System_Int32_System_Byte___System_Int32_System_Int32_">RocksDB.Merge(byte[], int, int, byte[], int, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_Merge_Org_Rocksdb_ColumnFamilyHandle_System_Byte___System_Byte___">RocksDB.Merge(ColumnFamilyHandle, byte[], byte[])</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_Merge_Org_Rocksdb_ColumnFamilyHandle_System_Byte___System_Int32_System_Int32_System_Byte___System_Int32_System_Int32_">RocksDB.Merge(ColumnFamilyHandle, byte[], int, int, byte[], int, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_Merge_Org_Rocksdb_ColumnFamilyHandle_Org_Rocksdb_WriteOptions_System_Byte___System_Byte___">RocksDB.Merge(ColumnFamilyHandle, WriteOptions, byte[], byte[])</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_Merge_Org_Rocksdb_ColumnFamilyHandle_Org_Rocksdb_WriteOptions_System_Byte___System_Int32_System_Int32_System_Byte___System_Int32_System_Int32_">RocksDB.Merge(ColumnFamilyHandle, WriteOptions, byte[], int, int, byte[], int, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_Merge_Org_Rocksdb_ColumnFamilyHandle_Org_Rocksdb_WriteOptions_Java_Nio_ByteBuffer_Java_Nio_ByteBuffer_">RocksDB.Merge(ColumnFamilyHandle, WriteOptions, ByteBuffer, ByteBuffer)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_Merge_Org_Rocksdb_WriteOptions_System_Byte___System_Byte___">RocksDB.Merge(WriteOptions, byte[], byte[])</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_Merge_Org_Rocksdb_WriteOptions_System_Byte___System_Int32_System_Int32_System_Byte___System_Int32_System_Int32_">RocksDB.Merge(WriteOptions, byte[], int, int, byte[], int, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_Merge_Org_Rocksdb_WriteOptions_Java_Nio_ByteBuffer_Java_Nio_ByteBuffer_">RocksDB.Merge(WriteOptions, ByteBuffer, ByteBuffer)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_PauseBackgroundWork">RocksDB.PauseBackgroundWork()</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_PromoteL0_System_Int32_">RocksDB.PromoteL0(int)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_PromoteL0_Org_Rocksdb_ColumnFamilyHandle_System_Int32_">RocksDB.PromoteL0(ColumnFamilyHandle, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_Put_System_Byte___System_Byte___">RocksDB.Put(byte[], byte[])</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_Put_System_Byte___System_Int32_System_Int32_System_Byte___System_Int32_System_Int32_">RocksDB.Put(byte[], int, int, byte[], int, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_Put_Org_Rocksdb_ColumnFamilyHandle_System_Byte___System_Byte___">RocksDB.Put(ColumnFamilyHandle, byte[], byte[])</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_Put_Org_Rocksdb_ColumnFamilyHandle_System_Byte___System_Int32_System_Int32_System_Byte___System_Int32_System_Int32_">RocksDB.Put(ColumnFamilyHandle, byte[], int, int, byte[], int, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_Put_Org_Rocksdb_ColumnFamilyHandle_Org_Rocksdb_WriteOptions_System_Byte___System_Byte___">RocksDB.Put(ColumnFamilyHandle, WriteOptions, byte[], byte[])</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_Put_Org_Rocksdb_ColumnFamilyHandle_Org_Rocksdb_WriteOptions_System_Byte___System_Int32_System_Int32_System_Byte___System_Int32_System_Int32_">RocksDB.Put(ColumnFamilyHandle, WriteOptions, byte[], int, int, byte[], int, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_Put_Org_Rocksdb_ColumnFamilyHandle_Org_Rocksdb_WriteOptions_Java_Nio_ByteBuffer_Java_Nio_ByteBuffer_">RocksDB.Put(ColumnFamilyHandle, WriteOptions, ByteBuffer, ByteBuffer)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_Put_Org_Rocksdb_WriteOptions_System_Byte___System_Byte___">RocksDB.Put(WriteOptions, byte[], byte[])</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_Put_Org_Rocksdb_WriteOptions_System_Byte___System_Int32_System_Int32_System_Byte___System_Int32_System_Int32_">RocksDB.Put(WriteOptions, byte[], int, int, byte[], int, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_Put_Org_Rocksdb_WriteOptions_Java_Nio_ByteBuffer_Java_Nio_ByteBuffer_">RocksDB.Put(WriteOptions, ByteBuffer, ByteBuffer)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_ReleaseSnapshot_Org_Rocksdb_Snapshot_">RocksDB.ReleaseSnapshot(Snapshot)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_ResetStats">RocksDB.ResetStats()</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_SetOptions_Org_Rocksdb_ColumnFamilyHandle_Org_Rocksdb_MutableColumnFamilyOptions_">RocksDB.SetOptions(ColumnFamilyHandle, MutableColumnFamilyOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_SingleDelete_System_Byte___">RocksDB.SingleDelete(byte[])</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_SingleDelete_Org_Rocksdb_ColumnFamilyHandle_System_Byte___">RocksDB.SingleDelete(ColumnFamilyHandle, byte[])</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_SingleDelete_Org_Rocksdb_ColumnFamilyHandle_Org_Rocksdb_WriteOptions_System_Byte___">RocksDB.SingleDelete(ColumnFamilyHandle, WriteOptions, byte[])</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_SingleDelete_Org_Rocksdb_WriteOptions_System_Byte___">RocksDB.SingleDelete(WriteOptions, byte[])</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_StartTrace_Org_Rocksdb_TraceOptions_Org_Rocksdb_AbstractTraceWriter_">RocksDB.StartTrace(TraceOptions, AbstractTraceWriter)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_SyncWal">RocksDB.SyncWal()</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_TryCatchUpWithPrimary">RocksDB.TryCatchUpWithPrimary()</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_VerifyChecksum">RocksDB.VerifyChecksum()</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_Write_Org_Rocksdb_WriteOptions_Org_Rocksdb_WriteBatch_">RocksDB.Write(WriteOptions, WriteBatch)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksDB.html#Org_Rocksdb_RocksDB_Write_Org_Rocksdb_WriteOptions_Org_Rocksdb_WriteBatchWithIndex_">RocksDB.Write(WriteOptions, WriteBatchWithIndex)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksObject.html#Org_Rocksdb_RocksObject_NativeHandle">RocksObject.NativeHandle</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.AbstractImmutableNativeReference.html#Org_Rocksdb_AbstractImmutableNativeReference_IsOwningHandle">AbstractImmutableNativeReference.IsOwningHandle()</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.AbstractNativeReference.html#Org_Rocksdb_AbstractNativeReference_Close">AbstractNativeReference.Close()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SExecute(IJavaType, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SExecuteWithSignature(IJavaType, string, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SExecute(string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SExecuteWithSignature(string, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SExecute&lt;TReturn&gt;(IJavaType, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SExecuteWithSignature&lt;TReturn&gt;(IJavaType, string, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SExecute&lt;TReturn&gt;(string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SExecuteWithSignature&lt;TReturn&gt;(string, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;AutoCloseable&gt;.SExecute(Type, IJavaType, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;AutoCloseable&gt;.SExecuteWithSignature(Type, IJavaType, string, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;AutoCloseable&gt;.SExecute(Type, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;AutoCloseable&gt;.SExecuteWithSignature(Type, string, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SExecute&lt;TNewClass, TReturn&gt;(IJavaType, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SExecuteWithSignature&lt;TNewClass, TReturn&gt;(IJavaType, string, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SExecute&lt;TNewClass, TReturn&gt;(string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SExecuteWithSignature&lt;TNewClass, TReturn&gt;(string, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;AutoCloseable&gt;.SExecute&lt;TReturn&gt;(Type, IJavaType, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;AutoCloseable&gt;.SExecuteWithSignature&lt;TReturn&gt;(Type, IJavaType, string, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;AutoCloseable&gt;.SExecute&lt;TReturn&gt;(Type, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;AutoCloseable&gt;.SExecuteWithSignature&lt;TReturn&gt;(Type, string, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SExecute&lt;TNewClass, TReturn, TConverter&gt;(IJavaType, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SExecuteWithSignature&lt;TNewClass, TReturn, TConverter&gt;(IJavaType, string, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SExecute&lt;TNewClass, TReturn, TConverter&gt;(string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SExecuteWithSignature&lt;TNewClass, TReturn, TConverter&gt;(string, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;AutoCloseable&gt;.SExecute&lt;TReturn, TConverter&gt;(Type, IJavaType, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;AutoCloseable&gt;.SExecuteWithSignature&lt;TReturn, TConverter&gt;(Type, IJavaType, string, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;AutoCloseable&gt;.SExecute&lt;TReturn, TConverter&gt;(Type, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;AutoCloseable&gt;.SExecuteWithSignature&lt;TReturn, TConverter&gt;(Type, string, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SExecuteArray&lt;TArrayType&gt;(IJavaType, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SExecuteWithSignatureArray&lt;TArrayType&gt;(IJavaType, string, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SExecuteArray&lt;TArrayType&gt;(string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SExecuteWithSignatureArray&lt;TArrayType&gt;(string, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SGetField(IJavaType, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SGetField(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SGetField&lt;TReturn&gt;(IJavaType, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SGetField&lt;TReturn&gt;(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SGetFieldArray&lt;TReturn&gt;(IJavaType, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SGetFieldArray&lt;TReturn&gt;(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SSetField(IJavaType, string, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SSetField(string, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SSetField&lt;TValue&gt;(IJavaType, string, TValue)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SSetField&lt;TValue&gt;(string, TValue)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.IsAssignableFrom(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase-1.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_1_IsAssignableFrom_MASES_JCOBridge_C2JBridge_JVMInterop_IJavaType_">JVMBridgeBase&lt;AutoCloseable&gt;.IsAssignableFrom(IJavaType)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase-1.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_1_IsAssignableFrom__1">JVMBridgeBase&lt;AutoCloseable&gt;.IsAssignableFrom&lt;T&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">JVMBridgeBase&lt;AutoCloseable&gt;.New(params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.NewWithSignature(string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.NewAndWrapsDirect&lt;TNewClass&gt;(string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.NewWithSignatureAndWrapsDirect&lt;TNewClass&gt;(string, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase-1.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_1_Execute__1___0___">JVMBridgeBase&lt;AutoCloseable&gt;.Execute&lt;T&gt;(params T[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase-1.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_1_DynBridgeClazz">JVMBridgeBase&lt;AutoCloseable&gt;.DynBridgeClazz</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase-1.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_1_BridgeClazz">JVMBridgeBase&lt;AutoCloseable&gt;.BridgeClazz</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_ReferenceEqualsJVM_MASES_JCOBridge_C2JBridge_JVMBridgeBase_MASES_JCOBridge_C2JBridge_JVMBridgeBase_">JVMBridgeBase.ReferenceEqualsJVM(JVMBridgeBase, JVMBridgeBase)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">JVMBridgeBase.ClazzOf&lt;TClass&gt;(bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">JVMBridgeBase.ClazzOf&lt;TClass&gt;(out Exception, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.ClazzOf(string, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.ClazzOf(string, out Exception, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_RuntimeClassNameOf__1">JVMBridgeBase.RuntimeClassNameOf&lt;T&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase.RuntimeClassNameOf(Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_ClassNameOf__1">JVMBridgeBase.ClassNameOf&lt;T&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_ClassOf__1">JVMBridgeBase.ClassOf&lt;T&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_WrapsDirect__1_MASES_JCOBridge_C2JBridge_JVMInterop_IJavaObject_">JVMBridgeBase.WrapsDirect&lt;TNewClass&gt;(IJavaObject)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_Wraps__1_MASES_JCOBridge_C2JBridge_JVMInterop_IJavaObject_">JVMBridgeBase.Wraps&lt;TNewClass&gt;(IJavaObject)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase.Wraps(Type, IJavaObject, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_Wraps__2_MASES_JCOBridge_C2JBridge_JVMInterop_IJavaObject_">JVMBridgeBase.Wraps&lt;TNewClass, TReturn&gt;(IJavaObject)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase.Wraps&lt;TReturn&gt;(Type, IJavaObject, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_Wraps__3_MASES_JCOBridge_C2JBridge_JVMInterop_IJavaObject_">JVMBridgeBase.Wraps&lt;TNewClass, TReturn, TConverter&gt;(IJavaObject)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase.Wraps&lt;TReturn, TConverter&gt;(Type, IJavaObject)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_MonitorEnter">JVMBridgeBase.MonitorEnter()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_MonitorExit">JVMBridgeBase.MonitorExit()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IsInstanceOf(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsInstanceOf_MASES_JCOBridge_C2JBridge_JVMInterop_IJavaType_">JVMBridgeBase.IsInstanceOf(IJavaType)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsInstanceOf__1">JVMBridgeBase.IsInstanceOf&lt;T&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_RuntimeIsInstanceOf__1">JVMBridgeBase.RuntimeIsInstanceOf&lt;T&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_CastTo__1">JVMBridgeBase.CastTo&lt;TNewClass&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_CastDirect__1">JVMBridgeBase.CastDirect&lt;TNewClass&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_Dispose">JVMBridgeBase.Dispose()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">JVMBridgeBase.Dispose(bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_ToString">JVMBridgeBase.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_Equals_MASES_JCOBridge_C2JBridge_IJVMBridgeBase_">JVMBridgeBase.Equals(IJVMBridgeBase)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">JVMBridgeBase.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_GetHashCode">JVMBridgeBase.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_Notify">JVMBridgeBase.Notify()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_NotifyAll">JVMBridgeBase.NotifyAll()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_Wait">JVMBridgeBase.Wait()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">JVMBridgeBase.Wait(long)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">JVMBridgeBase.Wait(long, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecute(string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteWithSignature(string, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecute&lt;TReturn&gt;(string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteWithSignature&lt;TReturn&gt;(string, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecute&lt;TNewClass, TReturn&gt;(string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteWithSignature&lt;TNewClass, TReturn&gt;(string, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecute&lt;TNewClass, TReturn, TConverter&gt;(string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteWithSignature&lt;TNewClass, TReturn, TConverter&gt;(string, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteArray&lt;TArrayType&gt;(string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteWithSignatureArray&lt;TArrayType&gt;(string, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IGetField(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IGetField&lt;TReturn&gt;(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IGetFieldArray&lt;TReturn&gt;(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.ISetField(string, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.ISetField&lt;TValue&gt;(string, TValue)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">JVMBridgeBase.Throw&lt;TException&gt;(params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">JVMBridgeBase.BiThrow&lt;TException&gt;(params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_DynBridgeInstance">JVMBridgeBase.DynBridgeInstance</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeInstance">JVMBridgeBase.BridgeInstance</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeListener">JVMBridgeBase.IsBridgeListener</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trygetmember">DynamicObject.TryGetMember(GetMemberBinder, out object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trysetmember">DynamicObject.TrySetMember(SetMemberBinder, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trydeletemember">DynamicObject.TryDeleteMember(DeleteMemberBinder)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.tryinvokemember">DynamicObject.TryInvokeMember(InvokeMemberBinder, object[], out object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.tryconvert">DynamicObject.TryConvert(ConvertBinder, out object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trycreateinstance">DynamicObject.TryCreateInstance(CreateInstanceBinder, object[], out object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.tryinvoke">DynamicObject.TryInvoke(InvokeBinder, object[], out object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trybinaryoperation">DynamicObject.TryBinaryOperation(BinaryOperationBinder, object, out object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.tryunaryoperation">DynamicObject.TryUnaryOperation(UnaryOperationBinder, out object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trygetindex">DynamicObject.TryGetIndex(GetIndexBinder, object[], out object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trysetindex">DynamicObject.TrySetIndex(SetIndexBinder, object[], object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trydeleteindex">DynamicObject.TryDeleteIndex(DeleteIndexBinder, object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.getdynamicmembernames">DynamicObject.GetDynamicMemberNames()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.getmetaobject">DynamicObject.GetMetaObject(Expression)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="Org_Rocksdb_TtlDB__ctor_" data-uid="Org.Rocksdb.TtlDB.#ctor*"></a>
+
+  <h3 id="Org_Rocksdb_TtlDB__ctor" data-uid="Org.Rocksdb.TtlDB.#ctor">
+  TtlDB()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Rocksdb/TtlDB.cs/#L38"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TtlDB()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Rocksdb_TtlDB__ctor_" data-uid="Org.Rocksdb.TtlDB.#ctor*"></a>
+
+  <h3 id="Org_Rocksdb_TtlDB__ctor_MASES_JCOBridge_C2JBridge_IJVMBridgeBaseInitializer_" data-uid="Org.Rocksdb.TtlDB.#ctor(MASES.JCOBridge.C2JBridge.IJVMBridgeBaseInitializer)">
+  TtlDB(IJVMBridgeBaseInitializer)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Rocksdb/TtlDB.cs/#L42"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Internal constructor: used internally from JCOBridge</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.&quot;)]
+public TtlDB(IJVMBridgeBaseInitializer initializer)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>initializer</code> <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeBaseInitializer.html">IJVMBridgeBaseInitializer</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Rocksdb_TtlDB__ctor_" data-uid="Org.Rocksdb.TtlDB.#ctor*"></a>
+
+  <h3 id="Org_Rocksdb_TtlDB__ctor_System_Object___" data-uid="Org.Rocksdb.TtlDB.#ctor(System.Object[])">
+  TtlDB(params object[])
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Rocksdb/TtlDB.cs/#L47"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Generic constructor: it is useful for JCOBridge when there is a derived class which needs to pass arguments to the highest JVMBridgeBase class</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TtlDB(params object[] args)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>args</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Org_Rocksdb_TtlDB_BridgeClassName_" data-uid="Org.Rocksdb.TtlDB.BridgeClassName*"></a>
+
+  <h3 id="Org_Rocksdb_TtlDB_BridgeClassName" data-uid="Org.Rocksdb.TtlDB.BridgeClassName">
+  BridgeClassName
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Rocksdb/TtlDB.cs/#L54"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Java class name to be instantiated</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string BridgeClassName { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Org_Rocksdb_TtlDB_IsBridgeAbstract_" data-uid="Org.Rocksdb.TtlDB.IsBridgeAbstract*"></a>
+
+  <h3 id="Org_Rocksdb_TtlDB_IsBridgeAbstract" data-uid="Org.Rocksdb.TtlDB.IsBridgeAbstract">
+  IsBridgeAbstract
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Rocksdb/TtlDB.cs/#L56"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.html#MASES_JCOBridge_C2JBridge_IJVMBridgeDefinition_BridgeClassName">BridgeClassName</a> is an abstract class, i.e. cannot be created an instance</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool IsBridgeAbstract { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Org_Rocksdb_TtlDB_IsBridgeCloseable_" data-uid="Org.Rocksdb.TtlDB.IsBridgeCloseable*"></a>
+
+  <h3 id="Org_Rocksdb_TtlDB_IsBridgeCloseable" data-uid="Org.Rocksdb.TtlDB.IsBridgeCloseable">
+  IsBridgeCloseable
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Rocksdb/TtlDB.cs/#L58"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.html#MASES_JCOBridge_C2JBridge_IJVMBridgeDefinition_BridgeClassName">BridgeClassName</a> implements Closeable</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool IsBridgeCloseable { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Org_Rocksdb_TtlDB_IsBridgeInterface_" data-uid="Org.Rocksdb.TtlDB.IsBridgeInterface*"></a>
+
+  <h3 id="Org_Rocksdb_TtlDB_IsBridgeInterface" data-uid="Org.Rocksdb.TtlDB.IsBridgeInterface">
+  IsBridgeInterface
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Rocksdb/TtlDB.cs/#L60"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.html#MASES_JCOBridge_C2JBridge_IJVMBridgeDefinition_BridgeClassName">BridgeClassName</a> is an interface, i.e. does not have any public constructor</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool IsBridgeInterface { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Org_Rocksdb_TtlDB_IsBridgeStatic_" data-uid="Org.Rocksdb.TtlDB.IsBridgeStatic*"></a>
+
+  <h3 id="Org_Rocksdb_TtlDB_IsBridgeStatic" data-uid="Org.Rocksdb.TtlDB.IsBridgeStatic">
+  IsBridgeStatic
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Rocksdb/TtlDB.cs/#L62"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.html#MASES_JCOBridge_C2JBridge_IJVMBridgeDefinition_BridgeClassName">BridgeClassName</a> is a static class, i.e. does not have any public constructor</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool IsBridgeStatic { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Org_Rocksdb_TtlDB_CreateColumnFamilyWithTtl_" data-uid="Org.Rocksdb.TtlDB.CreateColumnFamilyWithTtl*"></a>
+
+  <h3 id="Org_Rocksdb_TtlDB_CreateColumnFamilyWithTtl_Org_Rocksdb_ColumnFamilyDescriptor_System_Int32_" data-uid="Org.Rocksdb.TtlDB.CreateColumnFamilyWithTtl(Org.Rocksdb.ColumnFamilyDescriptor,System.Int32)">
+  CreateColumnFamilyWithTtl(ColumnFamilyDescriptor, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Rocksdb/TtlDB.cs/#L124"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/TtlDB.html#createColumnFamilyWithTtl(org.rocksdb.ColumnFamilyDescriptor,int)">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/TtlDB.html#createColumnFamilyWithTtl(org.rocksdb.ColumnFamilyDescriptor,int)</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ColumnFamilyHandle CreateColumnFamilyWithTtl(ColumnFamilyDescriptor arg0, int arg1)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="Org.Rocksdb.ColumnFamilyDescriptor.html">ColumnFamilyDescriptor</a></dt>
+    <dd><p><a class="xref" href="Org.Rocksdb.ColumnFamilyDescriptor.html">ColumnFamilyDescriptor</a></p>
+</dd>
+    <dt><code>arg1</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Rocksdb.ColumnFamilyHandle.html">ColumnFamilyHandle</a></dt>
+    <dd><p><a class="xref" href="Org.Rocksdb.ColumnFamilyHandle.html">ColumnFamilyHandle</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Rocksdb.RocksDBException.html">RocksDBException</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+  <a id="Org_Rocksdb_TtlDB_Open_" data-uid="Org.Rocksdb.TtlDB.Open*"></a>
+
+  <h3 id="Org_Rocksdb_TtlDB_Open_Org_Rocksdb_DBOptions_Java_Lang_String_Java_Util_List_Org_Rocksdb_ColumnFamilyDescriptor__Java_Util_List_Org_Rocksdb_ColumnFamilyHandle__Java_Util_List_Java_Lang_Integer__System_Boolean_" data-uid="Org.Rocksdb.TtlDB.Open(Org.Rocksdb.DBOptions,Java.Lang.String,Java.Util.List{Org.Rocksdb.ColumnFamilyDescriptor},Java.Util.List{Org.Rocksdb.ColumnFamilyHandle},Java.Util.List{Java.Lang.Integer},System.Boolean)">
+  Open(DBOptions, String, List&lt;ColumnFamilyDescriptor&gt;, List&lt;ColumnFamilyHandle&gt;, List&lt;Integer&gt;, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Rocksdb/TtlDB.cs/#L96"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/TtlDB.html#open(org.rocksdb.DBOptions,java.lang.String,java.util.List,java.util.List,java.util.List,boolean)">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/TtlDB.html#open(org.rocksdb.DBOptions,java.lang.String,java.util.List,java.util.List,java.util.List,boolean)</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TtlDB Open(DBOptions arg0, String arg1, List&lt;ColumnFamilyDescriptor&gt; arg2, List&lt;ColumnFamilyHandle&gt; arg3, List&lt;Integer&gt; arg4, bool arg5)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="Org.Rocksdb.DBOptions.html">DBOptions</a></dt>
+    <dd><p><a class="xref" href="Org.Rocksdb.DBOptions.html">DBOptions</a></p>
+</dd>
+    <dt><code>arg1</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></p>
+</dd>
+    <dt><code>arg2</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.List-1.html">List</a>&lt;<a class="xref" href="Org.Rocksdb.ColumnFamilyDescriptor.html">ColumnFamilyDescriptor</a>&gt;</dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.List.html">List</a></p>
+</dd>
+    <dt><code>arg3</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.List-1.html">List</a>&lt;<a class="xref" href="Org.Rocksdb.ColumnFamilyHandle.html">ColumnFamilyHandle</a>&gt;</dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.List.html">List</a></p>
+</dd>
+    <dt><code>arg4</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.List-1.html">List</a>&lt;<a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.Integer.html">Integer</a>&gt;</dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.List.html">List</a></p>
+</dd>
+    <dt><code>arg5</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Rocksdb.TtlDB.html">TtlDB</a></dt>
+    <dd><p><a class="xref" href="Org.Rocksdb.TtlDB.html">TtlDB</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Rocksdb.RocksDBException.html">RocksDBException</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+  <a id="Org_Rocksdb_TtlDB_Open_" data-uid="Org.Rocksdb.TtlDB.Open*"></a>
+
+  <h3 id="Org_Rocksdb_TtlDB_Open_Org_Rocksdb_Options_Java_Lang_String_System_Int32_System_Boolean_" data-uid="Org.Rocksdb.TtlDB.Open(Org.Rocksdb.Options,Java.Lang.String,System.Int32,System.Boolean)">
+  Open(Options, String, int, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Rocksdb/TtlDB.cs/#L109"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/TtlDB.html#open(org.rocksdb.Options,java.lang.String,int,boolean)">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/TtlDB.html#open(org.rocksdb.Options,java.lang.String,int,boolean)</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TtlDB Open(Options arg0, String arg1, int arg2, bool arg3)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="Org.Rocksdb.Options.html">Options</a></dt>
+    <dd><p><a class="xref" href="Org.Rocksdb.Options.html">Options</a></p>
+</dd>
+    <dt><code>arg1</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></p>
+</dd>
+    <dt><code>arg2</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></p>
+</dd>
+    <dt><code>arg3</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Rocksdb.TtlDB.html">TtlDB</a></dt>
+    <dd><p><a class="xref" href="Org.Rocksdb.TtlDB.html">TtlDB</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Rocksdb.RocksDBException.html">RocksDBException</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Rocksdb/TtlDB.cs/#L70" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <script type="text/javascript">document.write('<div style="text-align: center;">Copyright © 2021 - ' + new Date().getFullYear() + ' MASES s.r.l. | Via San Cesidio 16 - San Valentino in A.C. - PE | P.I. 01932310681</div>');</script>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
