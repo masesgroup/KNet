@@ -102,7 +102,7 @@ Class ProducerConfigBuilder  <a class="header-action link-secondary" title="View
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class ProducerConfigBuilder : CommonClientConfigsBuilder&lt;ProducerConfigBuilder&gt;, INotifyPropertyChanged, IGenericSerDesFactory, IDisposable</code></pre>
+    <pre><code class="lang-csharp hljs">public class ProducerConfigBuilder : CommonClientConfigsBuilder&lt;ProducerConfigBuilder&gt;, INotifyPropertyChanged, IGenericSerDesFactory, IDisposable, IEnumerable&lt;KeyValuePair&lt;string, object&gt;&gt;, IEnumerable</code></pre>
   </div>
 
 
@@ -124,6 +124,8 @@ Class ProducerConfigBuilder  <a class="header-action link-secondary" title="View
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.inotifypropertychanged">INotifyPropertyChanged</a></div>
       <div><a class="xref" href="MASES.KNet.Serialization.IGenericSerDesFactory.html">IGenericSerDesFactory</a></div>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.keyvaluepair-2">KeyValuePair</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;&gt;</div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.ienumerable">IEnumerable</a></div>
     </dd>
   </dl>
 
@@ -131,6 +133,18 @@ Class ProducerConfigBuilder  <a class="header-action link-secondary" title="View
   <dl class="typelist inheritedMembers">
     <dt>Inherited Members</dt>
     <dd>
+    <div>
+      <a class="xref" href="MASES.KNet.CommonClientConfigsBuilder-1.html#MASES_KNet_CommonClientConfigsBuilder_1_WithSslConfigs_MASES_KNet_Common_SslConfigsBuilder_">CommonClientConfigsBuilder&lt;ProducerConfigBuilder&gt;.WithSslConfigs(SslConfigsBuilder)</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.CommonClientConfigsBuilder-1.html#MASES_KNet_CommonClientConfigsBuilder_1_WithSaslConfigs_MASES_KNet_Common_SaslConfigsBuilder_">CommonClientConfigsBuilder&lt;ProducerConfigBuilder&gt;.WithSaslConfigs(SaslConfigsBuilder)</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.CommonClientConfigsBuilder-1.html#MASES_KNet_CommonClientConfigsBuilder_1_ConfigProviders">CommonClientConfigsBuilder&lt;ProducerConfigBuilder&gt;.ConfigProviders</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.CommonClientConfigsBuilder-1.html#MASES_KNet_CommonClientConfigsBuilder_1_WithConfigProviders_System_String_">CommonClientConfigsBuilder&lt;ProducerConfigBuilder&gt;.WithConfigProviders(string)</a>
+    </div>
     <div>
       <a class="xref" href="MASES.KNet.CommonClientConfigsBuilder-1.html#MASES_KNet_CommonClientConfigsBuilder_1_BootstrapServers">CommonClientConfigsBuilder&lt;ProducerConfigBuilder&gt;.BootstrapServers</a>
     </div>
@@ -327,7 +341,13 @@ Class ProducerConfigBuilder  <a class="header-action link-secondary" title="View
       <a class="xref" href="MASES.KNet.CommonClientConfigsBuilder-1.html#MASES_KNet_CommonClientConfigsBuilder_1_DefaultApiTimeoutMs">CommonClientConfigsBuilder&lt;ProducerConfigBuilder&gt;.DefaultApiTimeoutMs</a>
     </div>
     <div>
-      <a class="xref" href="MASES.KNet.CommonClientConfigsBuilder-1.html#MASES_KNet_CommonClientConfigsBuilder_1_WithDefaultApiTimeoutMs_System_Int64_">CommonClientConfigsBuilder&lt;ProducerConfigBuilder&gt;.WithDefaultApiTimeoutMs(long)</a>
+      <a class="xref" href="MASES.KNet.CommonClientConfigsBuilder-1.html#MASES_KNet_CommonClientConfigsBuilder_1_WithDefaultApiTimeoutMs_System_Int32_">CommonClientConfigsBuilder&lt;ProducerConfigBuilder&gt;.WithDefaultApiTimeoutMs(int)</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.CommonClientConfigsBuilder-1.html#MASES_KNet_CommonClientConfigsBuilder_1_MetadataRecoveryStrategy">CommonClientConfigsBuilder&lt;ProducerConfigBuilder&gt;.MetadataRecoveryStrategy</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.CommonClientConfigsBuilder-1.html#MASES_KNet_CommonClientConfigsBuilder_1_WithMetadataRecoveryStrategy_System_String_">CommonClientConfigsBuilder&lt;ProducerConfigBuilder&gt;.WithMetadataRecoveryStrategy(string)</a>
     </div>
     <div>
       <a class="xref" href="MASES.KNet.GenericConfigBuilder-1.html#MASES_KNet_GenericConfigBuilder_1_Create">GenericConfigBuilder&lt;ProducerConfigBuilder&gt;.Create()</a>
@@ -376,6 +396,9 @@ Class ProducerConfigBuilder  <a class="header-action link-secondary" title="View
     </div>
     <div>
       <a class="xref" href="MASES.KNet.GenericConfigBuilder-1.html#MASES_KNet_GenericConfigBuilder_1_Dispose">GenericConfigBuilder&lt;ProducerConfigBuilder&gt;.Dispose()</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.GenericConfigBuilder-1.html#MASES_KNet_GenericConfigBuilder_1_GetEnumerator">GenericConfigBuilder&lt;ProducerConfigBuilder&gt;.GetEnumerator()</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
@@ -748,10 +771,10 @@ Class ProducerConfigBuilder  <a class="header-action link-secondary" title="View
 
 
 
-  <a id="MASES_KNet_Producer_ProducerConfigBuilder_MaxInFlightRequestPerConnection_" data-uid="MASES.KNet.Producer.ProducerConfigBuilder.MaxInFlightRequestPerConnection*"></a>
+  <a id="MASES_KNet_Producer_ProducerConfigBuilder_MaxInFlightRequestsPerConnection_" data-uid="MASES.KNet.Producer.ProducerConfigBuilder.MaxInFlightRequestsPerConnection*"></a>
 
-  <h3 id="MASES_KNet_Producer_ProducerConfigBuilder_MaxInFlightRequestPerConnection" data-uid="MASES.KNet.Producer.ProducerConfigBuilder.MaxInFlightRequestPerConnection">
-  MaxInFlightRequestPerConnection
+  <h3 id="MASES_KNet_Producer_ProducerConfigBuilder_MaxInFlightRequestsPerConnection" data-uid="MASES.KNet.Producer.ProducerConfigBuilder.MaxInFlightRequestsPerConnection">
+  MaxInFlightRequestsPerConnection
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Producer/ProducerConfigBuilder.cs/#L264"><i class="bi bi-code-slash"></i></a>
   </h3>
 
@@ -760,7 +783,7 @@ Class ProducerConfigBuilder  <a class="header-action link-secondary" title="View
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int MaxInFlightRequestPerConnection { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public int MaxInFlightRequestsPerConnection { get; set; }</code></pre>
   </div>
 
 
@@ -1442,10 +1465,10 @@ Class ProducerConfigBuilder  <a class="header-action link-secondary" title="View
 
 
 
-  <a id="MASES_KNet_Producer_ProducerConfigBuilder_WithMaxInFlightRequestPerConnection_" data-uid="MASES.KNet.Producer.ProducerConfigBuilder.WithMaxInFlightRequestPerConnection*"></a>
+  <a id="MASES_KNet_Producer_ProducerConfigBuilder_WithMaxInFlightRequestsPerConnection_" data-uid="MASES.KNet.Producer.ProducerConfigBuilder.WithMaxInFlightRequestsPerConnection*"></a>
 
-  <h3 id="MASES_KNet_Producer_ProducerConfigBuilder_WithMaxInFlightRequestPerConnection_System_Int32_" data-uid="MASES.KNet.Producer.ProducerConfigBuilder.WithMaxInFlightRequestPerConnection(System.Int32)">
-  WithMaxInFlightRequestPerConnection(int)
+  <h3 id="MASES_KNet_Producer_ProducerConfigBuilder_WithMaxInFlightRequestsPerConnection_System_Int32_" data-uid="MASES.KNet.Producer.ProducerConfigBuilder.WithMaxInFlightRequestsPerConnection(System.Int32)">
+  WithMaxInFlightRequestsPerConnection(int)
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Producer/ProducerConfigBuilder.cs/#L268"><i class="bi bi-code-slash"></i></a>
   </h3>
 
@@ -1454,12 +1477,12 @@ Class ProducerConfigBuilder  <a class="header-action link-secondary" title="View
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ProducerConfigBuilder WithMaxInFlightRequestPerConnection(int maxInFlightRequestPerConnection)</code></pre>
+    <pre><code class="lang-csharp hljs">public ProducerConfigBuilder WithMaxInFlightRequestsPerConnection(int maxInFlightRequestsPerConnection)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>maxInFlightRequestPerConnection</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dt><code>maxInFlightRequestsPerConnection</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
     <dd></dd>
   </dl>
 

@@ -163,7 +163,7 @@ Class KNetSinkConnector&lt;TSinkConnector, TTask&gt;  <a class="header-action li
       <a class="xref" href="MASES.KNet.Connect.KNetConnector.html#MASES_KNet_Connect_KNetConnector_Start_Java_Util_Map_Java_Lang_String_System_Object__">KNetConnector.Start(Map&lt;String, object&gt;)</a>
     </div>
     <div>
-      <a class="xref" href="MASES.KNet.Connect.KNetConnector.html#MASES_KNet_Connect_KNetConnector_Start_MASES_KNet_Connect_IKNetConnectConfiguration_">KNetConnector.Start(IKNetConnectConfiguration)</a>
+      <a class="xref" href="MASES.KNet.Connect.KNetConnector.html#MASES_KNet_Connect_KNetConnector_Start_MASES_KNet_IKNetConfigurationFromMap_">KNetConnector.Start(IKNetConfigurationFromMap)</a>
     </div>
     <div>
       <a class="xref" href="MASES.KNet.Connect.KNetConnector.html#MASES_KNet_Connect_KNetConnector_TaskConfigs_System_Int32_System_Int32_Java_Util_Map_Java_Lang_String_Java_Lang_String__">KNetConnector.TaskConfigs(int, int, Map&lt;String, String&gt;)</a>
@@ -173,6 +173,9 @@ Class KNetSinkConnector&lt;TSinkConnector, TTask&gt;  <a class="header-action li
     </div>
     <div>
       <a class="xref" href="MASES.KNet.Connect.KNetConnector.html#MASES_KNet_Connect_KNetConnector_Stop">KNetConnector.Stop()</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Connect.KNetCommon.html#MASES_KNet_Connect_KNetCommon_LogCheckInterval">KNetCommon.LogCheckInterval</a>
     </div>
     <div>
       <a class="xref" href="MASES.KNet.Connect.KNetCommon.html#MASES_KNet_Connect_KNetCommon_UniqueId">KNetCommon.UniqueId</a>
@@ -432,7 +435,7 @@ This map may be empty, but never null. An empty offsets map could indicate that 
   <h4 class="section" id="MASES_KNet_Connect_KNetSinkConnector_2_AlterOffsets_Java_Util_Map_Java_Lang_String_Java_Lang_String__Java_Util_Map_Org_Apache_Kafka_Common_TopicPartition_Java_Lang_Long___remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p>User requests to alter/reset offsets will be handled by the Connect runtime and will be reflected in the offsets for this connector's consumer group.
 Note that altering/resetting offsets is expected to be an idempotent operation and this method should be able to handle being called more than once with the same arguments (which could occur if a user retries the request due to a failure in altering the consumer group offsets, for example).
-Similar to validate, this method may be called by the runtime before the <a class="xref" href="MASES.KNet.Connect.KNetConnector.html#MASES_KNet_Connect_KNetConnector_Start_MASES_KNet_Connect_IKNetConnectConfiguration_">Start(IKNetConnectConfiguration)</a> method is invoked.</p>
+Similar to validate, this method may be called by the runtime before the <a class="xref" href="MASES.KNet.Connect.KNetConnector.html#MASES_KNet_Connect_KNetConnector_Start_MASES_KNet_IKNetConfigurationFromMap_">Start(IKNetConfigurationFromMap)</a> method is invoked.</p>
 </div>
 
 

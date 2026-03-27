@@ -1,0 +1,2372 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+      <title>Class ReadOptions | MASES Group - KNet </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class ReadOptions | MASES Group - KNet ">
+      <meta name="description" content="This is a descriptive page of KNet, the .NET suite for Apache Kafka">
+      <meta name="description" content="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/ReadOptions.html">
+      <link rel="icon" href="../images/favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/masesgroup/KNet/new/release/2.9.X/apiSpec/new?filename=Org_Rocksdb_ReadOptions.md&amp;value=---%0Auid%3A%20Org.Rocksdb.ReadOptions%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/logo.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Org.Rocksdb.ReadOptions">
+
+
+
+  <h1 id="Org_Rocksdb_ReadOptions" data-uid="Org.Rocksdb.ReadOptions" class="text-break">
+Class ReadOptions  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/ReadOptions.cs/#L70"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Org.html">Org</a>.<a class="xref" href="Org.Rocksdb.html">Rocksdb</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>MASES.KNet.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p><a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/ReadOptions.html">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/ReadOptions.html</a></p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class ReadOptions : RocksObject, IDynamicMetaObjectProvider, IJVMBridgeCore, IEquatable&lt;IJVMBridgeBase&gt;, IDisposable, IJVMBridgeBaseStatic, IJVMBridgeBase, IJVMBridgeDefinition, IAutoCloseable</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject">DynamicObject</a></div>
+      <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html">JVMBridgeBase</a></div>
+      <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase-1.html">JVMBridgeBase</a>&lt;<a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.AutoCloseable.html">AutoCloseable</a>&gt;</div>
+      <div><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.AutoCloseable.html">AutoCloseable</a></div>
+      <div><a class="xref" href="Org.Rocksdb.AbstractNativeReference.html">AbstractNativeReference</a></div>
+      <div><a class="xref" href="Org.Rocksdb.AbstractImmutableNativeReference.html">AbstractImmutableNativeReference</a></div>
+      <div><a class="xref" href="Org.Rocksdb.RocksObject.html">RocksObject</a></div>
+      <div><span class="xref">ReadOptions</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.idynamicmetaobjectprovider">IDynamicMetaObjectProvider</a></div>
+      <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeCore.html">IJVMBridgeCore</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeBase.html">IJVMBridgeBase</a>&gt;</div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
+      <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeBaseStatic.html">IJVMBridgeBaseStatic</a></div>
+      <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeBase.html">IJVMBridgeBase</a></div>
+      <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.html">IJVMBridgeDefinition</a></div>
+      <div><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.IAutoCloseable.html">IAutoCloseable</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="Org.Rocksdb.RocksObject.html#Org_Rocksdb_RocksObject_NativeHandle">RocksObject.NativeHandle</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.AbstractImmutableNativeReference.html#Org_Rocksdb_AbstractImmutableNativeReference_IsOwningHandle">AbstractImmutableNativeReference.IsOwningHandle()</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Rocksdb.AbstractNativeReference.html#Org_Rocksdb_AbstractNativeReference_Close">AbstractNativeReference.Close()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SExecute(IJavaType, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SExecuteWithSignature(IJavaType, string, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SExecute(string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SExecuteWithSignature(string, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SExecute&lt;TReturn&gt;(IJavaType, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SExecuteWithSignature&lt;TReturn&gt;(IJavaType, string, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SExecute&lt;TReturn&gt;(string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SExecuteWithSignature&lt;TReturn&gt;(string, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;AutoCloseable&gt;.SExecute(Type, IJavaType, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;AutoCloseable&gt;.SExecuteWithSignature(Type, IJavaType, string, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;AutoCloseable&gt;.SExecute(Type, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;AutoCloseable&gt;.SExecuteWithSignature(Type, string, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SExecute&lt;TNewClass, TReturn&gt;(IJavaType, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SExecuteWithSignature&lt;TNewClass, TReturn&gt;(IJavaType, string, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SExecute&lt;TNewClass, TReturn&gt;(string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SExecuteWithSignature&lt;TNewClass, TReturn&gt;(string, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;AutoCloseable&gt;.SExecute&lt;TReturn&gt;(Type, IJavaType, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;AutoCloseable&gt;.SExecuteWithSignature&lt;TReturn&gt;(Type, IJavaType, string, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;AutoCloseable&gt;.SExecute&lt;TReturn&gt;(Type, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;AutoCloseable&gt;.SExecuteWithSignature&lt;TReturn&gt;(Type, string, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SExecute&lt;TNewClass, TReturn, TConverter&gt;(IJavaType, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SExecuteWithSignature&lt;TNewClass, TReturn, TConverter&gt;(IJavaType, string, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SExecute&lt;TNewClass, TReturn, TConverter&gt;(string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SExecuteWithSignature&lt;TNewClass, TReturn, TConverter&gt;(string, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;AutoCloseable&gt;.SExecute&lt;TReturn, TConverter&gt;(Type, IJavaType, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;AutoCloseable&gt;.SExecuteWithSignature&lt;TReturn, TConverter&gt;(Type, IJavaType, string, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;AutoCloseable&gt;.SExecute&lt;TReturn, TConverter&gt;(Type, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;AutoCloseable&gt;.SExecuteWithSignature&lt;TReturn, TConverter&gt;(Type, string, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SExecuteArray&lt;TArrayType&gt;(IJavaType, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SExecuteWithSignatureArray&lt;TArrayType&gt;(IJavaType, string, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SExecuteArray&lt;TArrayType&gt;(string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SExecuteWithSignatureArray&lt;TArrayType&gt;(string, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SGetField(IJavaType, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SGetField(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SGetField&lt;TReturn&gt;(IJavaType, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SGetField&lt;TReturn&gt;(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SGetFieldArray&lt;TReturn&gt;(IJavaType, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SGetFieldArray&lt;TReturn&gt;(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SSetField(IJavaType, string, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SSetField(string, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SSetField&lt;TValue&gt;(IJavaType, string, TValue)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SSetField&lt;TValue&gt;(string, TValue)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.IsAssignableFrom(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase-1.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_1_IsAssignableFrom_MASES_JCOBridge_C2JBridge_JVMInterop_IJavaType_">JVMBridgeBase&lt;AutoCloseable&gt;.IsAssignableFrom(IJavaType)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase-1.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_1_IsAssignableFrom__1">JVMBridgeBase&lt;AutoCloseable&gt;.IsAssignableFrom&lt;T&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">JVMBridgeBase&lt;AutoCloseable&gt;.New(params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.NewWithSignature(string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.NewAndWrapsDirect&lt;TNewClass&gt;(string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.NewWithSignatureAndWrapsDirect&lt;TNewClass&gt;(string, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase-1.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_1_Execute__1___0___">JVMBridgeBase&lt;AutoCloseable&gt;.Execute&lt;T&gt;(params T[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase-1.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_1_DynBridgeClazz">JVMBridgeBase&lt;AutoCloseable&gt;.DynBridgeClazz</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase-1.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_1_BridgeClazz">JVMBridgeBase&lt;AutoCloseable&gt;.BridgeClazz</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_ReferenceEqualsJVM_MASES_JCOBridge_C2JBridge_JVMBridgeBase_MASES_JCOBridge_C2JBridge_JVMBridgeBase_">JVMBridgeBase.ReferenceEqualsJVM(JVMBridgeBase, JVMBridgeBase)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">JVMBridgeBase.ClazzOf&lt;TClass&gt;(bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">JVMBridgeBase.ClazzOf&lt;TClass&gt;(out Exception, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.ClazzOf(string, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.ClazzOf(string, out Exception, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_RuntimeClassNameOf__1">JVMBridgeBase.RuntimeClassNameOf&lt;T&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase.RuntimeClassNameOf(Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_ClassNameOf__1">JVMBridgeBase.ClassNameOf&lt;T&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_ClassOf__1">JVMBridgeBase.ClassOf&lt;T&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_WrapsDirect__1_MASES_JCOBridge_C2JBridge_JVMInterop_IJavaObject_">JVMBridgeBase.WrapsDirect&lt;TNewClass&gt;(IJavaObject)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_Wraps__1_MASES_JCOBridge_C2JBridge_JVMInterop_IJavaObject_">JVMBridgeBase.Wraps&lt;TNewClass&gt;(IJavaObject)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase.Wraps(Type, IJavaObject, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_Wraps__2_MASES_JCOBridge_C2JBridge_JVMInterop_IJavaObject_">JVMBridgeBase.Wraps&lt;TNewClass, TReturn&gt;(IJavaObject)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase.Wraps&lt;TReturn&gt;(Type, IJavaObject, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_Wraps__3_MASES_JCOBridge_C2JBridge_JVMInterop_IJavaObject_">JVMBridgeBase.Wraps&lt;TNewClass, TReturn, TConverter&gt;(IJavaObject)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase.Wraps&lt;TReturn, TConverter&gt;(Type, IJavaObject)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_MonitorEnter">JVMBridgeBase.MonitorEnter()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_MonitorExit">JVMBridgeBase.MonitorExit()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IsInstanceOf(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsInstanceOf_MASES_JCOBridge_C2JBridge_JVMInterop_IJavaType_">JVMBridgeBase.IsInstanceOf(IJavaType)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsInstanceOf__1">JVMBridgeBase.IsInstanceOf&lt;T&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_RuntimeIsInstanceOf__1">JVMBridgeBase.RuntimeIsInstanceOf&lt;T&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_CastTo__1">JVMBridgeBase.CastTo&lt;TNewClass&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_CastDirect__1">JVMBridgeBase.CastDirect&lt;TNewClass&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_Dispose">JVMBridgeBase.Dispose()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">JVMBridgeBase.Dispose(bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_ToString">JVMBridgeBase.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_Equals_MASES_JCOBridge_C2JBridge_IJVMBridgeBase_">JVMBridgeBase.Equals(IJVMBridgeBase)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">JVMBridgeBase.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_GetHashCode">JVMBridgeBase.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_Notify">JVMBridgeBase.Notify()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_NotifyAll">JVMBridgeBase.NotifyAll()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_Wait">JVMBridgeBase.Wait()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">JVMBridgeBase.Wait(long)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">JVMBridgeBase.Wait(long, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecute(string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteWithSignature(string, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecute&lt;TReturn&gt;(string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteWithSignature&lt;TReturn&gt;(string, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecute&lt;TNewClass, TReturn&gt;(string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteWithSignature&lt;TNewClass, TReturn&gt;(string, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecute&lt;TNewClass, TReturn, TConverter&gt;(string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteWithSignature&lt;TNewClass, TReturn, TConverter&gt;(string, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteArray&lt;TArrayType&gt;(string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteWithSignatureArray&lt;TArrayType&gt;(string, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IGetField(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IGetField&lt;TReturn&gt;(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IGetFieldArray&lt;TReturn&gt;(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.ISetField(string, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.ISetField&lt;TValue&gt;(string, TValue)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">JVMBridgeBase.Throw&lt;TException&gt;(params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">JVMBridgeBase.BiThrow&lt;TException&gt;(params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_DynBridgeInstance">JVMBridgeBase.DynBridgeInstance</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeInstance">JVMBridgeBase.BridgeInstance</a>
+    </div>
+    <div>
+      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeListener">JVMBridgeBase.IsBridgeListener</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trygetmember">DynamicObject.TryGetMember(GetMemberBinder, out object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trysetmember">DynamicObject.TrySetMember(SetMemberBinder, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trydeletemember">DynamicObject.TryDeleteMember(DeleteMemberBinder)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.tryinvokemember">DynamicObject.TryInvokeMember(InvokeMemberBinder, object[], out object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.tryconvert">DynamicObject.TryConvert(ConvertBinder, out object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trycreateinstance">DynamicObject.TryCreateInstance(CreateInstanceBinder, object[], out object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.tryinvoke">DynamicObject.TryInvoke(InvokeBinder, object[], out object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trybinaryoperation">DynamicObject.TryBinaryOperation(BinaryOperationBinder, object, out object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.tryunaryoperation">DynamicObject.TryUnaryOperation(UnaryOperationBinder, out object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trygetindex">DynamicObject.TryGetIndex(GetIndexBinder, object[], out object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trysetindex">DynamicObject.TrySetIndex(SetIndexBinder, object[], object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trydeleteindex">DynamicObject.TryDeleteIndex(DeleteIndexBinder, object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.getdynamicmembernames">DynamicObject.GetDynamicMemberNames()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.getmetaobject">DynamicObject.GetMetaObject(Expression)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="Org_Rocksdb_ReadOptions__ctor_" data-uid="Org.Rocksdb.ReadOptions.#ctor*"></a>
+
+  <h3 id="Org_Rocksdb_ReadOptions__ctor" data-uid="Org.Rocksdb.ReadOptions.#ctor">
+  ReadOptions()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/ReadOptions.cs/#L38"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ReadOptions()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Rocksdb_ReadOptions__ctor_" data-uid="Org.Rocksdb.ReadOptions.#ctor*"></a>
+
+  <h3 id="Org_Rocksdb_ReadOptions__ctor_MASES_JCOBridge_C2JBridge_IJVMBridgeBaseInitializer_" data-uid="Org.Rocksdb.ReadOptions.#ctor(MASES.JCOBridge.C2JBridge.IJVMBridgeBaseInitializer)">
+  ReadOptions(IJVMBridgeBaseInitializer)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/ReadOptions.cs/#L42"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Internal constructor: used internally from JCOBridge</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.&quot;)]
+public ReadOptions(IJVMBridgeBaseInitializer initializer)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>initializer</code> <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeBaseInitializer.html">IJVMBridgeBaseInitializer</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Rocksdb_ReadOptions__ctor_" data-uid="Org.Rocksdb.ReadOptions.#ctor*"></a>
+
+  <h3 id="Org_Rocksdb_ReadOptions__ctor_Org_Rocksdb_ReadOptions_" data-uid="Org.Rocksdb.ReadOptions.#ctor(Org.Rocksdb.ReadOptions)">
+  ReadOptions(ReadOptions)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/ReadOptions.cs/#L86"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/ReadOptions.html#org.rocksdb.ReadOptions(org.rocksdb.ReadOptions)">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/ReadOptions.html#org.rocksdb.ReadOptions(org.rocksdb.ReadOptions)</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ReadOptions(ReadOptions arg0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="Org.Rocksdb.ReadOptions.html">ReadOptions</a></dt>
+    <dd><p><a class="xref" href="Org.Rocksdb.ReadOptions.html">ReadOptions</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Rocksdb_ReadOptions__ctor_" data-uid="Org.Rocksdb.ReadOptions.#ctor*"></a>
+
+  <h3 id="Org_Rocksdb_ReadOptions__ctor_System_Boolean_System_Boolean_" data-uid="Org.Rocksdb.ReadOptions.#ctor(System.Boolean,System.Boolean)">
+  ReadOptions(bool, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/ReadOptions.cs/#L78"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/ReadOptions.html#org.rocksdb.ReadOptions(boolean,boolean)">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/ReadOptions.html#org.rocksdb.ReadOptions(boolean,boolean)</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ReadOptions(bool arg0, bool arg1)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></p>
+</dd>
+    <dt><code>arg1</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Rocksdb_ReadOptions__ctor_" data-uid="Org.Rocksdb.ReadOptions.#ctor*"></a>
+
+  <h3 id="Org_Rocksdb_ReadOptions__ctor_System_Object___" data-uid="Org.Rocksdb.ReadOptions.#ctor(System.Object[])">
+  ReadOptions(params object[])
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/ReadOptions.cs/#L47"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Generic constructor: it is useful for JCOBridge when there is a derived class which needs to pass arguments to the highest JVMBridgeBase class</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ReadOptions(params object[] args)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>args</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Org_Rocksdb_ReadOptions_BridgeClassName_" data-uid="Org.Rocksdb.ReadOptions.BridgeClassName*"></a>
+
+  <h3 id="Org_Rocksdb_ReadOptions_BridgeClassName" data-uid="Org.Rocksdb.ReadOptions.BridgeClassName">
+  BridgeClassName
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/ReadOptions.cs/#L54"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Java class name to be instantiated</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string BridgeClassName { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Org_Rocksdb_ReadOptions_IsBridgeAbstract_" data-uid="Org.Rocksdb.ReadOptions.IsBridgeAbstract*"></a>
+
+  <h3 id="Org_Rocksdb_ReadOptions_IsBridgeAbstract" data-uid="Org.Rocksdb.ReadOptions.IsBridgeAbstract">
+  IsBridgeAbstract
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/ReadOptions.cs/#L56"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.html#MASES_JCOBridge_C2JBridge_IJVMBridgeDefinition_BridgeClassName">BridgeClassName</a> is an abstract class, i.e. cannot be created an instance</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool IsBridgeAbstract { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Org_Rocksdb_ReadOptions_IsBridgeCloseable_" data-uid="Org.Rocksdb.ReadOptions.IsBridgeCloseable*"></a>
+
+  <h3 id="Org_Rocksdb_ReadOptions_IsBridgeCloseable" data-uid="Org.Rocksdb.ReadOptions.IsBridgeCloseable">
+  IsBridgeCloseable
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/ReadOptions.cs/#L58"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.html#MASES_JCOBridge_C2JBridge_IJVMBridgeDefinition_BridgeClassName">BridgeClassName</a> implements Closeable</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool IsBridgeCloseable { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Org_Rocksdb_ReadOptions_IsBridgeInterface_" data-uid="Org.Rocksdb.ReadOptions.IsBridgeInterface*"></a>
+
+  <h3 id="Org_Rocksdb_ReadOptions_IsBridgeInterface" data-uid="Org.Rocksdb.ReadOptions.IsBridgeInterface">
+  IsBridgeInterface
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/ReadOptions.cs/#L60"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.html#MASES_JCOBridge_C2JBridge_IJVMBridgeDefinition_BridgeClassName">BridgeClassName</a> is an interface, i.e. does not have any public constructor</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool IsBridgeInterface { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Org_Rocksdb_ReadOptions_IsBridgeStatic_" data-uid="Org.Rocksdb.ReadOptions.IsBridgeStatic*"></a>
+
+  <h3 id="Org_Rocksdb_ReadOptions_IsBridgeStatic" data-uid="Org.Rocksdb.ReadOptions.IsBridgeStatic">
+  IsBridgeStatic
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/ReadOptions.cs/#L62"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.html#MASES_JCOBridge_C2JBridge_IJVMBridgeDefinition_BridgeClassName">BridgeClassName</a> is a static class, i.e. does not have any public constructor</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool IsBridgeStatic { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Org_Rocksdb_ReadOptions_AutoPrefixMode_" data-uid="Org.Rocksdb.ReadOptions.AutoPrefixMode*"></a>
+
+  <h3 id="Org_Rocksdb_ReadOptions_AutoPrefixMode" data-uid="Org.Rocksdb.ReadOptions.AutoPrefixMode">
+  AutoPrefixMode()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/ReadOptions.cs/#L110"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/ReadOptions.html#autoPrefixMode--">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/ReadOptions.html#autoPrefixMode--</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool AutoPrefixMode()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Rocksdb_ReadOptions_BackgroundPurgeOnIteratorCleanup_" data-uid="Org.Rocksdb.ReadOptions.BackgroundPurgeOnIteratorCleanup*"></a>
+
+  <h3 id="Org_Rocksdb_ReadOptions_BackgroundPurgeOnIteratorCleanup" data-uid="Org.Rocksdb.ReadOptions.BackgroundPurgeOnIteratorCleanup">
+  BackgroundPurgeOnIteratorCleanup()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/ReadOptions.cs/#L118"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/ReadOptions.html#backgroundPurgeOnIteratorCleanup--">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/ReadOptions.html#backgroundPurgeOnIteratorCleanup--</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool BackgroundPurgeOnIteratorCleanup()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Rocksdb_ReadOptions_Deadline_" data-uid="Org.Rocksdb.ReadOptions.Deadline*"></a>
+
+  <h3 id="Org_Rocksdb_ReadOptions_Deadline" data-uid="Org.Rocksdb.ReadOptions.Deadline">
+  Deadline()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/ReadOptions.cs/#L182"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/ReadOptions.html#deadline--">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/ReadOptions.html#deadline--</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public long Deadline()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Rocksdb_ReadOptions_FillCache_" data-uid="Org.Rocksdb.ReadOptions.FillCache*"></a>
+
+  <h3 id="Org_Rocksdb_ReadOptions_FillCache" data-uid="Org.Rocksdb.ReadOptions.FillCache">
+  FillCache()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/ReadOptions.cs/#L126"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/ReadOptions.html#fillCache--">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/ReadOptions.html#fillCache--</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool FillCache()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Rocksdb_ReadOptions_IgnoreRangeDeletions_" data-uid="Org.Rocksdb.ReadOptions.IgnoreRangeDeletions*"></a>
+
+  <h3 id="Org_Rocksdb_ReadOptions_IgnoreRangeDeletions" data-uid="Org.Rocksdb.ReadOptions.IgnoreRangeDeletions">
+  IgnoreRangeDeletions()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/ReadOptions.cs/#L134"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/ReadOptions.html#ignoreRangeDeletions--">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/ReadOptions.html#ignoreRangeDeletions--</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IgnoreRangeDeletions()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Rocksdb_ReadOptions_IoTimeout_" data-uid="Org.Rocksdb.ReadOptions.IoTimeout*"></a>
+
+  <h3 id="Org_Rocksdb_ReadOptions_IoTimeout" data-uid="Org.Rocksdb.ReadOptions.IoTimeout">
+  IoTimeout()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/ReadOptions.cs/#L190"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/ReadOptions.html#ioTimeout--">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/ReadOptions.html#ioTimeout--</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public long IoTimeout()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Rocksdb_ReadOptions_IterStartTs_" data-uid="Org.Rocksdb.ReadOptions.IterStartTs*"></a>
+
+  <h3 id="Org_Rocksdb_ReadOptions_IterStartTs" data-uid="Org.Rocksdb.ReadOptions.IterStartTs">
+  IterStartTs()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/ReadOptions.cs/#L435"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/ReadOptions.html#iterStartTs--">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/ReadOptions.html#iterStartTs--</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Slice IterStartTs()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Rocksdb.Slice.html">Slice</a></dt>
+    <dd><p><a class="xref" href="Org.Rocksdb.Slice.html">Slice</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Rocksdb_ReadOptions_IterateLowerBound_" data-uid="Org.Rocksdb.ReadOptions.IterateLowerBound*"></a>
+
+  <h3 id="Org_Rocksdb_ReadOptions_IterateLowerBound" data-uid="Org.Rocksdb.ReadOptions.IterateLowerBound">
+  IterateLowerBound()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/ReadOptions.cs/#L419"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/ReadOptions.html#iterateLowerBound--">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/ReadOptions.html#iterateLowerBound--</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Slice IterateLowerBound()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Rocksdb.Slice.html">Slice</a></dt>
+    <dd><p><a class="xref" href="Org.Rocksdb.Slice.html">Slice</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Rocksdb_ReadOptions_IterateUpperBound_" data-uid="Org.Rocksdb.ReadOptions.IterateUpperBound*"></a>
+
+  <h3 id="Org_Rocksdb_ReadOptions_IterateUpperBound" data-uid="Org.Rocksdb.ReadOptions.IterateUpperBound">
+  IterateUpperBound()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/ReadOptions.cs/#L427"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/ReadOptions.html#iterateUpperBound--">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/ReadOptions.html#iterateUpperBound--</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Slice IterateUpperBound()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Rocksdb.Slice.html">Slice</a></dt>
+    <dd><p><a class="xref" href="Org.Rocksdb.Slice.html">Slice</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Rocksdb_ReadOptions_MaxSkippableInternalKeys_" data-uid="Org.Rocksdb.ReadOptions.MaxSkippableInternalKeys*"></a>
+
+  <h3 id="Org_Rocksdb_ReadOptions_MaxSkippableInternalKeys" data-uid="Org.Rocksdb.ReadOptions.MaxSkippableInternalKeys">
+  MaxSkippableInternalKeys()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/ReadOptions.cs/#L198"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/ReadOptions.html#maxSkippableInternalKeys--">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/ReadOptions.html#maxSkippableInternalKeys--</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public long MaxSkippableInternalKeys()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Rocksdb_ReadOptions_PinData_" data-uid="Org.Rocksdb.ReadOptions.PinData*"></a>
+
+  <h3 id="Org_Rocksdb_ReadOptions_PinData" data-uid="Org.Rocksdb.ReadOptions.PinData">
+  PinData()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/ReadOptions.cs/#L142"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/ReadOptions.html#pinData--">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/ReadOptions.html#pinData--</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool PinData()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Rocksdb_ReadOptions_PrefixSameAsStart_" data-uid="Org.Rocksdb.ReadOptions.PrefixSameAsStart*"></a>
+
+  <h3 id="Org_Rocksdb_ReadOptions_PrefixSameAsStart" data-uid="Org.Rocksdb.ReadOptions.PrefixSameAsStart">
+  PrefixSameAsStart()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/ReadOptions.cs/#L150"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/ReadOptions.html#prefixSameAsStart--">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/ReadOptions.html#prefixSameAsStart--</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool PrefixSameAsStart()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Rocksdb_ReadOptions_ReadTier_" data-uid="Org.Rocksdb.ReadOptions.ReadTier*"></a>
+
+  <h3 id="Org_Rocksdb_ReadOptions_ReadTier" data-uid="Org.Rocksdb.ReadOptions.ReadTier">
+  ReadTier()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/ReadOptions.cs/#L411"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/ReadOptions.html#readTier--">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/ReadOptions.html#readTier--</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ReadTier ReadTier()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Rocksdb.ReadTier.html">ReadTier</a></dt>
+    <dd><p><a class="xref" href="Org.Rocksdb.ReadTier.html">ReadTier</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Rocksdb_ReadOptions_ReadaheadSize_" data-uid="Org.Rocksdb.ReadOptions.ReadaheadSize*"></a>
+
+  <h3 id="Org_Rocksdb_ReadOptions_ReadaheadSize" data-uid="Org.Rocksdb.ReadOptions.ReadaheadSize">
+  ReadaheadSize()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/ReadOptions.cs/#L206"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/ReadOptions.html#readaheadSize--">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/ReadOptions.html#readaheadSize--</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public long ReadaheadSize()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Rocksdb_ReadOptions_SetAutoPrefixMode_" data-uid="Org.Rocksdb.ReadOptions.SetAutoPrefixMode*"></a>
+
+  <h3 id="Org_Rocksdb_ReadOptions_SetAutoPrefixMode_System_Boolean_" data-uid="Org.Rocksdb.ReadOptions.SetAutoPrefixMode(System.Boolean)">
+  SetAutoPrefixMode(bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/ReadOptions.cs/#L223"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/ReadOptions.html#setAutoPrefixMode-boolean-">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/ReadOptions.html#setAutoPrefixMode-boolean-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ReadOptions SetAutoPrefixMode(bool arg0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Rocksdb.ReadOptions.html">ReadOptions</a></dt>
+    <dd><p><a class="xref" href="Org.Rocksdb.ReadOptions.html">ReadOptions</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Rocksdb_ReadOptions_SetBackgroundPurgeOnIteratorCleanup_" data-uid="Org.Rocksdb.ReadOptions.SetBackgroundPurgeOnIteratorCleanup*"></a>
+
+  <h3 id="Org_Rocksdb_ReadOptions_SetBackgroundPurgeOnIteratorCleanup_System_Boolean_" data-uid="Org.Rocksdb.ReadOptions.SetBackgroundPurgeOnIteratorCleanup(System.Boolean)">
+  SetBackgroundPurgeOnIteratorCleanup(bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/ReadOptions.cs/#L232"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/ReadOptions.html#setBackgroundPurgeOnIteratorCleanup-boolean-">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/ReadOptions.html#setBackgroundPurgeOnIteratorCleanup-boolean-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ReadOptions SetBackgroundPurgeOnIteratorCleanup(bool arg0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Rocksdb.ReadOptions.html">ReadOptions</a></dt>
+    <dd><p><a class="xref" href="Org.Rocksdb.ReadOptions.html">ReadOptions</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Rocksdb_ReadOptions_SetDeadline_" data-uid="Org.Rocksdb.ReadOptions.SetDeadline*"></a>
+
+  <h3 id="Org_Rocksdb_ReadOptions_SetDeadline_System_Int64_" data-uid="Org.Rocksdb.ReadOptions.SetDeadline(System.Int64)">
+  SetDeadline(long)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/ReadOptions.cs/#L241"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/ReadOptions.html#setDeadline-long-">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/ReadOptions.html#setDeadline-long-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ReadOptions SetDeadline(long arg0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Rocksdb.ReadOptions.html">ReadOptions</a></dt>
+    <dd><p><a class="xref" href="Org.Rocksdb.ReadOptions.html">ReadOptions</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Rocksdb_ReadOptions_SetFillCache_" data-uid="Org.Rocksdb.ReadOptions.SetFillCache*"></a>
+
+  <h3 id="Org_Rocksdb_ReadOptions_SetFillCache_System_Boolean_" data-uid="Org.Rocksdb.ReadOptions.SetFillCache(System.Boolean)">
+  SetFillCache(bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/ReadOptions.cs/#L250"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/ReadOptions.html#setFillCache-boolean-">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/ReadOptions.html#setFillCache-boolean-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ReadOptions SetFillCache(bool arg0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Rocksdb.ReadOptions.html">ReadOptions</a></dt>
+    <dd><p><a class="xref" href="Org.Rocksdb.ReadOptions.html">ReadOptions</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Rocksdb_ReadOptions_SetIgnoreRangeDeletions_" data-uid="Org.Rocksdb.ReadOptions.SetIgnoreRangeDeletions*"></a>
+
+  <h3 id="Org_Rocksdb_ReadOptions_SetIgnoreRangeDeletions_System_Boolean_" data-uid="Org.Rocksdb.ReadOptions.SetIgnoreRangeDeletions(System.Boolean)">
+  SetIgnoreRangeDeletions(bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/ReadOptions.cs/#L259"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/ReadOptions.html#setIgnoreRangeDeletions-boolean-">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/ReadOptions.html#setIgnoreRangeDeletions-boolean-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ReadOptions SetIgnoreRangeDeletions(bool arg0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Rocksdb.ReadOptions.html">ReadOptions</a></dt>
+    <dd><p><a class="xref" href="Org.Rocksdb.ReadOptions.html">ReadOptions</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Rocksdb_ReadOptions_SetIoTimeout_" data-uid="Org.Rocksdb.ReadOptions.SetIoTimeout*"></a>
+
+  <h3 id="Org_Rocksdb_ReadOptions_SetIoTimeout_System_Int64_" data-uid="Org.Rocksdb.ReadOptions.SetIoTimeout(System.Int64)">
+  SetIoTimeout(long)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/ReadOptions.cs/#L268"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/ReadOptions.html#setIoTimeout-long-">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/ReadOptions.html#setIoTimeout-long-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ReadOptions SetIoTimeout(long arg0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Rocksdb.ReadOptions.html">ReadOptions</a></dt>
+    <dd><p><a class="xref" href="Org.Rocksdb.ReadOptions.html">ReadOptions</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Rocksdb_ReadOptions_SetIterStartTs_" data-uid="Org.Rocksdb.ReadOptions.SetIterStartTs*"></a>
+
+  <h3 id="Org_Rocksdb_ReadOptions_SetIterStartTs_Org_Rocksdb_AbstractSlice_System_Object__" data-uid="Org.Rocksdb.ReadOptions.SetIterStartTs(Org.Rocksdb.AbstractSlice{System.Object})">
+  SetIterStartTs(AbstractSlice&lt;object&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/ReadOptions.cs/#L295"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/ReadOptions.html#setIterStartTs-org.rocksdb.AbstractSlice-">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/ReadOptions.html#setIterStartTs-org.rocksdb.AbstractSlice-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ReadOptions SetIterStartTs(AbstractSlice&lt;object&gt; arg0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="Org.Rocksdb.AbstractSlice-1.html">AbstractSlice</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
+    <dd><p><a class="xref" href="Org.Rocksdb.AbstractSlice.html">AbstractSlice</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Rocksdb.ReadOptions.html">ReadOptions</a></dt>
+    <dd><p><a class="xref" href="Org.Rocksdb.ReadOptions.html">ReadOptions</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Rocksdb_ReadOptions_SetIterateLowerBound_" data-uid="Org.Rocksdb.ReadOptions.SetIterateLowerBound*"></a>
+
+  <h3 id="Org_Rocksdb_ReadOptions_SetIterateLowerBound_Org_Rocksdb_AbstractSlice_System_Object__" data-uid="Org.Rocksdb.ReadOptions.SetIterateLowerBound(Org.Rocksdb.AbstractSlice{System.Object})">
+  SetIterateLowerBound(AbstractSlice&lt;object&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/ReadOptions.cs/#L277"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/ReadOptions.html#setIterateLowerBound-org.rocksdb.AbstractSlice-">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/ReadOptions.html#setIterateLowerBound-org.rocksdb.AbstractSlice-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ReadOptions SetIterateLowerBound(AbstractSlice&lt;object&gt; arg0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="Org.Rocksdb.AbstractSlice-1.html">AbstractSlice</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
+    <dd><p><a class="xref" href="Org.Rocksdb.AbstractSlice.html">AbstractSlice</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Rocksdb.ReadOptions.html">ReadOptions</a></dt>
+    <dd><p><a class="xref" href="Org.Rocksdb.ReadOptions.html">ReadOptions</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Rocksdb_ReadOptions_SetIterateUpperBound_" data-uid="Org.Rocksdb.ReadOptions.SetIterateUpperBound*"></a>
+
+  <h3 id="Org_Rocksdb_ReadOptions_SetIterateUpperBound_Org_Rocksdb_AbstractSlice_System_Object__" data-uid="Org.Rocksdb.ReadOptions.SetIterateUpperBound(Org.Rocksdb.AbstractSlice{System.Object})">
+  SetIterateUpperBound(AbstractSlice&lt;object&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/ReadOptions.cs/#L286"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/ReadOptions.html#setIterateUpperBound-org.rocksdb.AbstractSlice-">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/ReadOptions.html#setIterateUpperBound-org.rocksdb.AbstractSlice-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ReadOptions SetIterateUpperBound(AbstractSlice&lt;object&gt; arg0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="Org.Rocksdb.AbstractSlice-1.html">AbstractSlice</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
+    <dd><p><a class="xref" href="Org.Rocksdb.AbstractSlice.html">AbstractSlice</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Rocksdb.ReadOptions.html">ReadOptions</a></dt>
+    <dd><p><a class="xref" href="Org.Rocksdb.ReadOptions.html">ReadOptions</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Rocksdb_ReadOptions_SetMaxSkippableInternalKeys_" data-uid="Org.Rocksdb.ReadOptions.SetMaxSkippableInternalKeys*"></a>
+
+  <h3 id="Org_Rocksdb_ReadOptions_SetMaxSkippableInternalKeys_System_Int64_" data-uid="Org.Rocksdb.ReadOptions.SetMaxSkippableInternalKeys(System.Int64)">
+  SetMaxSkippableInternalKeys(long)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/ReadOptions.cs/#L304"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/ReadOptions.html#setMaxSkippableInternalKeys-long-">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/ReadOptions.html#setMaxSkippableInternalKeys-long-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ReadOptions SetMaxSkippableInternalKeys(long arg0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Rocksdb.ReadOptions.html">ReadOptions</a></dt>
+    <dd><p><a class="xref" href="Org.Rocksdb.ReadOptions.html">ReadOptions</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Rocksdb_ReadOptions_SetPinData_" data-uid="Org.Rocksdb.ReadOptions.SetPinData*"></a>
+
+  <h3 id="Org_Rocksdb_ReadOptions_SetPinData_System_Boolean_" data-uid="Org.Rocksdb.ReadOptions.SetPinData(System.Boolean)">
+  SetPinData(bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/ReadOptions.cs/#L313"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/ReadOptions.html#setPinData-boolean-">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/ReadOptions.html#setPinData-boolean-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ReadOptions SetPinData(bool arg0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Rocksdb.ReadOptions.html">ReadOptions</a></dt>
+    <dd><p><a class="xref" href="Org.Rocksdb.ReadOptions.html">ReadOptions</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Rocksdb_ReadOptions_SetPrefixSameAsStart_" data-uid="Org.Rocksdb.ReadOptions.SetPrefixSameAsStart*"></a>
+
+  <h3 id="Org_Rocksdb_ReadOptions_SetPrefixSameAsStart_System_Boolean_" data-uid="Org.Rocksdb.ReadOptions.SetPrefixSameAsStart(System.Boolean)">
+  SetPrefixSameAsStart(bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/ReadOptions.cs/#L322"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/ReadOptions.html#setPrefixSameAsStart-boolean-">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/ReadOptions.html#setPrefixSameAsStart-boolean-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ReadOptions SetPrefixSameAsStart(bool arg0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Rocksdb.ReadOptions.html">ReadOptions</a></dt>
+    <dd><p><a class="xref" href="Org.Rocksdb.ReadOptions.html">ReadOptions</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Rocksdb_ReadOptions_SetReadTier_" data-uid="Org.Rocksdb.ReadOptions.SetReadTier*"></a>
+
+  <h3 id="Org_Rocksdb_ReadOptions_SetReadTier_Org_Rocksdb_ReadTier_" data-uid="Org.Rocksdb.ReadOptions.SetReadTier(Org.Rocksdb.ReadTier)">
+  SetReadTier(ReadTier)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/ReadOptions.cs/#L340"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/ReadOptions.html#setReadTier-org.rocksdb.ReadTier-">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/ReadOptions.html#setReadTier-org.rocksdb.ReadTier-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ReadOptions SetReadTier(ReadTier arg0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="Org.Rocksdb.ReadTier.html">ReadTier</a></dt>
+    <dd><p><a class="xref" href="Org.Rocksdb.ReadTier.html">ReadTier</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Rocksdb.ReadOptions.html">ReadOptions</a></dt>
+    <dd><p><a class="xref" href="Org.Rocksdb.ReadOptions.html">ReadOptions</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Rocksdb_ReadOptions_SetReadaheadSize_" data-uid="Org.Rocksdb.ReadOptions.SetReadaheadSize*"></a>
+
+  <h3 id="Org_Rocksdb_ReadOptions_SetReadaheadSize_System_Int64_" data-uid="Org.Rocksdb.ReadOptions.SetReadaheadSize(System.Int64)">
+  SetReadaheadSize(long)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/ReadOptions.cs/#L331"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/ReadOptions.html#setReadaheadSize-long-">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/ReadOptions.html#setReadaheadSize-long-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ReadOptions SetReadaheadSize(long arg0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Rocksdb.ReadOptions.html">ReadOptions</a></dt>
+    <dd><p><a class="xref" href="Org.Rocksdb.ReadOptions.html">ReadOptions</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Rocksdb_ReadOptions_SetSnapshot_" data-uid="Org.Rocksdb.ReadOptions.SetSnapshot*"></a>
+
+  <h3 id="Org_Rocksdb_ReadOptions_SetSnapshot_Org_Rocksdb_Snapshot_" data-uid="Org.Rocksdb.ReadOptions.SetSnapshot(Org.Rocksdb.Snapshot)">
+  SetSnapshot(Snapshot)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/ReadOptions.cs/#L349"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/ReadOptions.html#setSnapshot-org.rocksdb.Snapshot-">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/ReadOptions.html#setSnapshot-org.rocksdb.Snapshot-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ReadOptions SetSnapshot(Snapshot arg0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="Org.Rocksdb.Snapshot.html">Snapshot</a></dt>
+    <dd><p><a class="xref" href="Org.Rocksdb.Snapshot.html">Snapshot</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Rocksdb.ReadOptions.html">ReadOptions</a></dt>
+    <dd><p><a class="xref" href="Org.Rocksdb.ReadOptions.html">ReadOptions</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Rocksdb_ReadOptions_SetTableFilter_" data-uid="Org.Rocksdb.ReadOptions.SetTableFilter*"></a>
+
+  <h3 id="Org_Rocksdb_ReadOptions_SetTableFilter_Org_Rocksdb_AbstractTableFilter_" data-uid="Org.Rocksdb.ReadOptions.SetTableFilter(Org.Rocksdb.AbstractTableFilter)">
+  SetTableFilter(AbstractTableFilter)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/ReadOptions.cs/#L358"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/ReadOptions.html#setTableFilter-org.rocksdb.AbstractTableFilter-">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/ReadOptions.html#setTableFilter-org.rocksdb.AbstractTableFilter-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ReadOptions SetTableFilter(AbstractTableFilter arg0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="Org.Rocksdb.AbstractTableFilter.html">AbstractTableFilter</a></dt>
+    <dd><p><a class="xref" href="Org.Rocksdb.AbstractTableFilter.html">AbstractTableFilter</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Rocksdb.ReadOptions.html">ReadOptions</a></dt>
+    <dd><p><a class="xref" href="Org.Rocksdb.ReadOptions.html">ReadOptions</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Rocksdb_ReadOptions_SetTailing_" data-uid="Org.Rocksdb.ReadOptions.SetTailing*"></a>
+
+  <h3 id="Org_Rocksdb_ReadOptions_SetTailing_System_Boolean_" data-uid="Org.Rocksdb.ReadOptions.SetTailing(System.Boolean)">
+  SetTailing(bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/ReadOptions.cs/#L367"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/ReadOptions.html#setTailing-boolean-">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/ReadOptions.html#setTailing-boolean-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ReadOptions SetTailing(bool arg0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Rocksdb.ReadOptions.html">ReadOptions</a></dt>
+    <dd><p><a class="xref" href="Org.Rocksdb.ReadOptions.html">ReadOptions</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Rocksdb_ReadOptions_SetTimestamp_" data-uid="Org.Rocksdb.ReadOptions.SetTimestamp*"></a>
+
+  <h3 id="Org_Rocksdb_ReadOptions_SetTimestamp_Org_Rocksdb_AbstractSlice_System_Object__" data-uid="Org.Rocksdb.ReadOptions.SetTimestamp(Org.Rocksdb.AbstractSlice{System.Object})">
+  SetTimestamp(AbstractSlice&lt;object&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/ReadOptions.cs/#L376"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/ReadOptions.html#setTimestamp-org.rocksdb.AbstractSlice-">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/ReadOptions.html#setTimestamp-org.rocksdb.AbstractSlice-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ReadOptions SetTimestamp(AbstractSlice&lt;object&gt; arg0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="Org.Rocksdb.AbstractSlice-1.html">AbstractSlice</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
+    <dd><p><a class="xref" href="Org.Rocksdb.AbstractSlice.html">AbstractSlice</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Rocksdb.ReadOptions.html">ReadOptions</a></dt>
+    <dd><p><a class="xref" href="Org.Rocksdb.ReadOptions.html">ReadOptions</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Rocksdb_ReadOptions_SetTotalOrderSeek_" data-uid="Org.Rocksdb.ReadOptions.SetTotalOrderSeek*"></a>
+
+  <h3 id="Org_Rocksdb_ReadOptions_SetTotalOrderSeek_System_Boolean_" data-uid="Org.Rocksdb.ReadOptions.SetTotalOrderSeek(System.Boolean)">
+  SetTotalOrderSeek(bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/ReadOptions.cs/#L385"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/ReadOptions.html#setTotalOrderSeek-boolean-">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/ReadOptions.html#setTotalOrderSeek-boolean-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ReadOptions SetTotalOrderSeek(bool arg0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Rocksdb.ReadOptions.html">ReadOptions</a></dt>
+    <dd><p><a class="xref" href="Org.Rocksdb.ReadOptions.html">ReadOptions</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Rocksdb_ReadOptions_SetValueSizeSoftLimit_" data-uid="Org.Rocksdb.ReadOptions.SetValueSizeSoftLimit*"></a>
+
+  <h3 id="Org_Rocksdb_ReadOptions_SetValueSizeSoftLimit_System_Int64_" data-uid="Org.Rocksdb.ReadOptions.SetValueSizeSoftLimit(System.Int64)">
+  SetValueSizeSoftLimit(long)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/ReadOptions.cs/#L394"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/ReadOptions.html#setValueSizeSoftLimit-long-">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/ReadOptions.html#setValueSizeSoftLimit-long-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ReadOptions SetValueSizeSoftLimit(long arg0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Rocksdb.ReadOptions.html">ReadOptions</a></dt>
+    <dd><p><a class="xref" href="Org.Rocksdb.ReadOptions.html">ReadOptions</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Rocksdb_ReadOptions_SetVerifyChecksums_" data-uid="Org.Rocksdb.ReadOptions.SetVerifyChecksums*"></a>
+
+  <h3 id="Org_Rocksdb_ReadOptions_SetVerifyChecksums_System_Boolean_" data-uid="Org.Rocksdb.ReadOptions.SetVerifyChecksums(System.Boolean)">
+  SetVerifyChecksums(bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/ReadOptions.cs/#L403"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/ReadOptions.html#setVerifyChecksums-boolean-">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/ReadOptions.html#setVerifyChecksums-boolean-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ReadOptions SetVerifyChecksums(bool arg0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Rocksdb.ReadOptions.html">ReadOptions</a></dt>
+    <dd><p><a class="xref" href="Org.Rocksdb.ReadOptions.html">ReadOptions</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Rocksdb_ReadOptions_Snapshot_" data-uid="Org.Rocksdb.ReadOptions.Snapshot*"></a>
+
+  <h3 id="Org_Rocksdb_ReadOptions_Snapshot" data-uid="Org.Rocksdb.ReadOptions.Snapshot">
+  Snapshot()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/ReadOptions.cs/#L451"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/ReadOptions.html#snapshot--">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/ReadOptions.html#snapshot--</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Snapshot Snapshot()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Rocksdb.Snapshot.html">Snapshot</a></dt>
+    <dd><p><a class="xref" href="Org.Rocksdb.Snapshot.html">Snapshot</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Rocksdb_ReadOptions_Tailing_" data-uid="Org.Rocksdb.ReadOptions.Tailing*"></a>
+
+  <h3 id="Org_Rocksdb_ReadOptions_Tailing" data-uid="Org.Rocksdb.ReadOptions.Tailing">
+  Tailing()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/ReadOptions.cs/#L158"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/ReadOptions.html#tailing--">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/ReadOptions.html#tailing--</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Tailing()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Rocksdb_ReadOptions_Timestamp_" data-uid="Org.Rocksdb.ReadOptions.Timestamp*"></a>
+
+  <h3 id="Org_Rocksdb_ReadOptions_Timestamp" data-uid="Org.Rocksdb.ReadOptions.Timestamp">
+  Timestamp()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/ReadOptions.cs/#L443"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/ReadOptions.html#timestamp--">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/ReadOptions.html#timestamp--</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Slice Timestamp()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Rocksdb.Slice.html">Slice</a></dt>
+    <dd><p><a class="xref" href="Org.Rocksdb.Slice.html">Slice</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Rocksdb_ReadOptions_TotalOrderSeek_" data-uid="Org.Rocksdb.ReadOptions.TotalOrderSeek*"></a>
+
+  <h3 id="Org_Rocksdb_ReadOptions_TotalOrderSeek" data-uid="Org.Rocksdb.ReadOptions.TotalOrderSeek">
+  TotalOrderSeek()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/ReadOptions.cs/#L166"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/ReadOptions.html#totalOrderSeek--">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/ReadOptions.html#totalOrderSeek--</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TotalOrderSeek()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Rocksdb_ReadOptions_ValueSizeSoftLimit_" data-uid="Org.Rocksdb.ReadOptions.ValueSizeSoftLimit*"></a>
+
+  <h3 id="Org_Rocksdb_ReadOptions_ValueSizeSoftLimit" data-uid="Org.Rocksdb.ReadOptions.ValueSizeSoftLimit">
+  ValueSizeSoftLimit()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/ReadOptions.cs/#L214"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/ReadOptions.html#valueSizeSoftLimit--">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/ReadOptions.html#valueSizeSoftLimit--</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public long ValueSizeSoftLimit()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Rocksdb_ReadOptions_VerifyChecksums_" data-uid="Org.Rocksdb.ReadOptions.VerifyChecksums*"></a>
+
+  <h3 id="Org_Rocksdb_ReadOptions_VerifyChecksums" data-uid="Org.Rocksdb.ReadOptions.VerifyChecksums">
+  VerifyChecksums()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/ReadOptions.cs/#L174"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/ReadOptions.html#verifyChecksums--">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/ReadOptions.html#verifyChecksums--</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool VerifyChecksums()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/ReadOptions.cs/#L70" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <script type="text/javascript">document.write('<div style="text-align: center;">Copyright © 2021 - ' + new Date().getFullYear() + ' MASES s.r.l. | Via San Cesidio 16 - San Valentino in A.C. - PE | P.I. 01932310681</div>');</script>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

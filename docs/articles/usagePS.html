@@ -89,16 +89,21 @@
 
 <h2 id="installation">Installation</h2>
 <p>To install the tool executes the following command within a PowerShell shell:</p>
-<pre><code class="lang-powershell">Install-Module -Name MASES.KNetPS
+<pre><code>Install-Module -Name MASES.KNetPS
 </code></pre>
 <p>If the above command fails, reporting errors related to <em>authenticode</em>, use the following command:</p>
-<pre><code class="lang-powershell">Install-Module -Name MASES.KNetPS -SkipPublisherCheck
+<pre><code>Install-Module -Name MASES.KNetPS -SkipPublisherCheck
 </code></pre>
+<h2 id="backend-compatibility">Backend compatibility</h2>
+<p>KNetPS cmdlets are divided into two categories with different backend compatibility scope:</p>
+<p><strong>Scriptable cmdlets and client-side admin tool cmdlets</strong> use the standard Apache Kafka™ client APIs (Producer, Consumer, Admin Client) and are compatible with any broker that implements the Kafka wire protocol — including <a href="https://redpanda.com/">Redpanda</a>, <a href="https://aws.amazon.com/msk/">Amazon MSK</a>, <a href="https://www.confluent.io/">Confluent Platform / Cloud</a>, and others.</p>
+<p><strong>Server-side cmdlets</strong> start, configure, or manage an Apache Kafka™ broker node, ZooKeeper™ node, or KRaft controller directly. These are specific to Apache Kafka™ and are not applicable to alternative brokers.</p>
+<p>See <a href="backends.html">Supported Backends</a> for the full compatibility matrix.</p>
 <h2 id="usage">Usage</h2>
 <p>To use the PowerShell interface (KNetPS) runs the following commands within a <strong>PowerShell</strong> shell:</p>
 <h3 id="initialization">Initialization</h3>
 <p>The following cmdlet must be called prior anything else to initialize the environment:</p>
-<pre><code class="lang-powershell">Start-KNetPS [arguments]
+<pre><code>Start-KNetPS [arguments]
 </code></pre>
 <p>then the user can use objects created using <strong>New-KObject</strong> and other cmdlets, otherwise it is possible to invoke the desired Main-Class command which automatically executes <strong>Start-KNetPS</strong>.</p>
 <p>Here below two simple examples of producer/consumer from PowerShell.
@@ -106,19 +111,16 @@ The examples are very minimal, but demonstrate how send to and receive from an A
 The terms <strong>MY_KAFKA_CLUSTER</strong> shall be replaced with the address of Apache Kafka™ cluster.</p>
 <h3 id="producer">Producer</h3>
 <p>The following snippet builds needed objects to send a record to an Apache Kafka™ cluster:</p>
-<pre><code class="lang-powershell">
-Start-KNetPS
+<pre><code>Start-KNetPS
 $prodConfig = New-ProducerConfigBuilder
 $prodConfig = $prodConfig.WithBootstrapServers(&quot;MY_KAFKA_CLUSTER:9092&quot;)
 $producer = New-KafkaProducer -KeyClass &quot;System.String&quot; -ValueClass &quot;System.String&quot; -Configuration $prodConfig
 $record = New-ProducerRecord -KeyClass &quot;System.String&quot; -Key &quot;MyKey&quot; -ValueClass &quot;System.String&quot; -Value &quot;MyPayload&quot; -Topic &quot;testTopic&quot;
 $sendResult = Invoke-Send -Producer $producer -ProducerRecord $record
-
 </code></pre>
 <h3 id="consumer">Consumer</h3>
 <p>The following snippet builds needed objects to subscribe to an Apache Kafka™ cluster and receives records from the specified topic:</p>
-<pre><code class="lang-powershell">
-Start-KNetPS
+<pre><code>Start-KNetPS
 $builder = New-ConsumerConfigBuilder
 $builder = $builder.WithBootstrapServers(&quot;MY_KAFKA_CLUSTER:9092&quot;)
 $builder = $builder.WithGroupId(&quot;myGroup&quot;)
@@ -127,11 +129,11 @@ $consumer = New-KafkaConsumer -KeyClass &quot;System.String&quot; -ValueClass &q
 Invoke-Subscribe -Consumer $consumer -Topic &quot;testTopic&quot;
 $results = Invoke-Poll -KeyClass &quot;System.String&quot; -ValueClass &quot;System.String&quot; -Consumer $consumer -PollTimeout 10000
 $record = Get-ConsumerRecord -KeyClass &quot;System.String&quot; -ValueClass &quot;System.String&quot; -ConsumerRecords $results
-
 </code></pre>
 <h2 id="cmdlets-available">Cmdlets available</h2>
 <p>KNetPS accepts cmdlets divided by two main groups: Main-Class command cmdlets and Scriptable cmdlets.</p>
 <h3 id="scriptable-cmdlets">Scriptable cmdlets</h3>
+<p>Compatible with any Kafka wire-protocol broker.</p>
 <p>Here a list of cmdlets usable within a script:</p>
 <ul>
 <li><strong>New-AdminClientConfigBuilder</strong>: creates an AdminClientConfigBuilder object which can be extended using fluent APIs</li>
@@ -279,6 +281,10 @@ $record = Get-ConsumerRecord -KeyClass &quot;System.String&quot; -ValueClass &qu
 <li>Arguments: a string containing the arguments accepted from the Java Main-Class</li>
 </ul>
 </li>
+</ul>
+<h4 id="server-side-cmdlets--apache-kafka-only">Server-side cmdlets — Apache Kafka™ only</h4>
+<p>The following cmdlets start or manage an Apache Kafka™ broker node, ZooKeeper™ node, or KRaft controller directly. They are specific to Apache Kafka™ and are not applicable to alternative brokers:</p>
+<ul>
 <li><strong>Start-KafkaStart</strong>: start KafkaStart. The arguments are:
 <ul>
 <li>All available arguments of Start-KNetPS;</li>
@@ -309,6 +315,15 @@ $record = Get-ConsumerRecord -KeyClass &quot;System.String&quot; -ValueClass &qu
 <li>Arguments: a string containing the arguments accepted from the Java Main-Class</li>
 </ul>
 </li>
+<li><strong>Start-StorageTool</strong>: start StorageTool. The arguments are:
+<ul>
+<li>All available arguments of Start-KNetPS;</li>
+<li>Arguments: a string containing the arguments accepted from the Java Main-Class</li>
+</ul>
+</li>
+</ul>
+<h4 id="client-side-cmdlets--compatible-with-any-kafka-wire-protocol-broker">Client-side cmdlets — compatible with any Kafka wire-protocol broker</h4>
+<ul>
 <li><strong>Start-ConsoleConsumer</strong>: start ConsoleConsumer. The arguments are:
 <ul>
 <li>All available arguments of Start-KNetPS;</li>
@@ -352,12 +367,6 @@ $record = Get-ConsumerRecord -KeyClass &quot;System.String&quot; -ValueClass &qu
 </ul>
 </li>
 <li><strong>Start-ReplicaVerificationTool</strong>: start ReplicaVerificationTool. The arguments are:
-<ul>
-<li>All available arguments of Start-KNetPS;</li>
-<li>Arguments: a string containing the arguments accepted from the Java Main-Class</li>
-</ul>
-</li>
-<li><strong>Start-StorageTool</strong>: start StorageTool. The arguments are:
 <ul>
 <li>All available arguments of Start-KNetPS;</li>
 <li>Arguments: a string containing the arguments accepted from the Java Main-Class</li>

@@ -89,7 +89,7 @@
 
 
   <h1 id="MASES_KNet_CommonClientConfigsBuilder_1" data-uid="MASES.KNet.CommonClientConfigsBuilder`1" class="text-break">
-Class CommonClientConfigsBuilder&lt;T&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/CommonClientConfigs.cs/#L30"><i class="bi bi-code-slash"></i></a>
+Class CommonClientConfigsBuilder&lt;T&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/CommonClientConfigs.cs/#L32"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -102,7 +102,7 @@ Class CommonClientConfigsBuilder&lt;T&gt;  <a class="header-action link-secondar
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract class CommonClientConfigsBuilder&lt;T&gt; : GenericConfigBuilder&lt;T&gt;, INotifyPropertyChanged, IGenericSerDesFactory, IDisposable where T : CommonClientConfigsBuilder&lt;T&gt;, new()</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract class CommonClientConfigsBuilder&lt;T&gt; : GenericConfigBuilder&lt;T&gt;, INotifyPropertyChanged, IGenericSerDesFactory, IDisposable, IEnumerable&lt;KeyValuePair&lt;string, object&gt;&gt;, IEnumerable where T : CommonClientConfigsBuilder&lt;T&gt;, new()</code></pre>
   </div>
 
 
@@ -129,6 +129,8 @@ Class CommonClientConfigsBuilder&lt;T&gt;  <a class="header-action link-secondar
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.inotifypropertychanged">INotifyPropertyChanged</a></div>
       <div><a class="xref" href="MASES.KNet.Serialization.IGenericSerDesFactory.html">IGenericSerDesFactory</a></div>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.keyvaluepair-2">KeyValuePair</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;&gt;</div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.ienumerable">IEnumerable</a></div>
     </dd>
   </dl>
 
@@ -194,6 +196,9 @@ Class CommonClientConfigsBuilder&lt;T&gt;  <a class="header-action link-secondar
       <a class="xref" href="MASES.KNet.GenericConfigBuilder-1.html#MASES_KNet_GenericConfigBuilder_1_Dispose">GenericConfigBuilder&lt;T&gt;.Dispose()</a>
     </div>
     <div>
+      <a class="xref" href="MASES.KNet.GenericConfigBuilder-1.html#MASES_KNet_GenericConfigBuilder_1_GetEnumerator">GenericConfigBuilder&lt;T&gt;.GetEnumerator()</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
     </div>
     <div>
@@ -229,7 +234,7 @@ Class CommonClientConfigsBuilder&lt;T&gt;  <a class="header-action link-secondar
 
   <h3 id="MASES_KNet_CommonClientConfigsBuilder_1_BootstrapServers" data-uid="MASES.KNet.CommonClientConfigsBuilder`1.BootstrapServers">
   BootstrapServers
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/CommonClientConfigs.cs/#L36"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/CommonClientConfigs.cs/#L77"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.CommonClientConfigs.html#Org_Apache_Kafka_Clients_CommonClientConfigs_BOOTSTRAP_SERVERS_CONFIG">BOOTSTRAP_SERVERS_CONFIG</a></p>
@@ -261,7 +266,7 @@ Class CommonClientConfigsBuilder&lt;T&gt;  <a class="header-action link-secondar
 
   <h3 id="MASES_KNet_CommonClientConfigsBuilder_1_ClientDnsLookup" data-uid="MASES.KNet.CommonClientConfigsBuilder`1.ClientDnsLookup">
   ClientDnsLookup
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/CommonClientConfigs.cs/#L49"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/CommonClientConfigs.cs/#L90"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.CommonClientConfigs.html#Org_Apache_Kafka_Clients_CommonClientConfigs_CLIENT_DNS_LOOKUP_CONFIG">CLIENT_DNS_LOOKUP_CONFIG</a></p>
@@ -293,7 +298,7 @@ Class CommonClientConfigsBuilder&lt;T&gt;  <a class="header-action link-secondar
 
   <h3 id="MASES_KNet_CommonClientConfigsBuilder_1_ClientId" data-uid="MASES.KNet.CommonClientConfigsBuilder`1.ClientId">
   ClientId
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/CommonClientConfigs.cs/#L101"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/CommonClientConfigs.cs/#L142"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.CommonClientConfigs.html#Org_Apache_Kafka_Clients_CommonClientConfigs_CLIENT_ID_CONFIG">CLIENT_ID_CONFIG</a></p>
@@ -325,7 +330,7 @@ Class CommonClientConfigsBuilder&lt;T&gt;  <a class="header-action link-secondar
 
   <h3 id="MASES_KNet_CommonClientConfigsBuilder_1_ClientRack" data-uid="MASES.KNet.CommonClientConfigsBuilder`1.ClientRack">
   ClientRack
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/CommonClientConfigs.cs/#L114"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/CommonClientConfigs.cs/#L155"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.CommonClientConfigs.html#Org_Apache_Kafka_Clients_CommonClientConfigs_CLIENT_RACK_CONFIG">CLIENT_RACK_CONFIG</a></p>
@@ -353,11 +358,43 @@ Class CommonClientConfigsBuilder&lt;T&gt;  <a class="header-action link-secondar
 
 
 
+  <a id="MASES_KNet_CommonClientConfigsBuilder_1_ConfigProviders_" data-uid="MASES.KNet.CommonClientConfigsBuilder`1.ConfigProviders*"></a>
+
+  <h3 id="MASES_KNet_CommonClientConfigsBuilder_1_ConfigProviders" data-uid="MASES.KNet.CommonClientConfigsBuilder`1.ConfigProviders">
+  ConfigProviders
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/CommonClientConfigs.cs/#L63"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Common.Config.AbstractConfig.html#Org_Apache_Kafka_Common_Config_AbstractConfig_CONFIG_PROVIDERS_CONFIG">CONFIG_PROVIDERS_CONFIG</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string ConfigProviders { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="MASES_KNet_CommonClientConfigsBuilder_1_ConnectionMaxIdleMs_" data-uid="MASES.KNet.CommonClientConfigsBuilder`1.ConnectionMaxIdleMs*"></a>
 
   <h3 id="MASES_KNet_CommonClientConfigsBuilder_1_ConnectionMaxIdleMs" data-uid="MASES.KNet.CommonClientConfigsBuilder`1.ConnectionMaxIdleMs">
   ConnectionMaxIdleMs
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/CommonClientConfigs.cs/#L286"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/CommonClientConfigs.cs/#L327"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.CommonClientConfigs.html#Org_Apache_Kafka_Clients_CommonClientConfigs_CONNECTIONS_MAX_IDLE_MS_CONFIG">CONNECTIONS_MAX_IDLE_MS_CONFIG</a></p>
@@ -389,7 +426,7 @@ Class CommonClientConfigsBuilder&lt;T&gt;  <a class="header-action link-secondar
 
   <h3 id="MASES_KNet_CommonClientConfigsBuilder_1_DefaultApiTimeoutMs" data-uid="MASES.KNet.CommonClientConfigsBuilder`1.DefaultApiTimeoutMs">
   DefaultApiTimeoutMs
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/CommonClientConfigs.cs/#L455"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/CommonClientConfigs.cs/#L496"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.CommonClientConfigs.html#Org_Apache_Kafka_Clients_CommonClientConfigs_DEFAULT_API_TIMEOUT_MS_CONFIG">DEFAULT_API_TIMEOUT_MS_CONFIG</a></p>
@@ -397,7 +434,7 @@ Class CommonClientConfigsBuilder&lt;T&gt;  <a class="header-action link-secondar
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public long DefaultApiTimeoutMs { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public int DefaultApiTimeoutMs { get; set; }</code></pre>
   </div>
 
 
@@ -406,7 +443,7 @@ Class CommonClientConfigsBuilder&lt;T&gt;  <a class="header-action link-secondar
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
     <dd></dd>
   </dl>
 
@@ -421,7 +458,7 @@ Class CommonClientConfigsBuilder&lt;T&gt;  <a class="header-action link-secondar
 
   <h3 id="MASES_KNet_CommonClientConfigsBuilder_1_DefaultListKeySerdeInnerClass" data-uid="MASES.KNet.CommonClientConfigsBuilder`1.DefaultListKeySerdeInnerClass">
   DefaultListKeySerdeInnerClass
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/CommonClientConfigs.cs/#L312"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/CommonClientConfigs.cs/#L353"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.CommonClientConfigs.html#Org_Apache_Kafka_Clients_CommonClientConfigs_DEFAULT_LIST_KEY_SERDE_INNER_CLASS">DEFAULT_LIST_KEY_SERDE_INNER_CLASS</a></p>
@@ -453,7 +490,7 @@ Class CommonClientConfigsBuilder&lt;T&gt;  <a class="header-action link-secondar
 
   <h3 id="MASES_KNet_CommonClientConfigsBuilder_1_DefaultListKeySerdeTypeClass" data-uid="MASES.KNet.CommonClientConfigsBuilder`1.DefaultListKeySerdeTypeClass">
   DefaultListKeySerdeTypeClass
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/CommonClientConfigs.cs/#L338"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/CommonClientConfigs.cs/#L379"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.CommonClientConfigs.html#Org_Apache_Kafka_Clients_CommonClientConfigs_DEFAULT_LIST_KEY_SERDE_TYPE_CLASS">DEFAULT_LIST_KEY_SERDE_TYPE_CLASS</a></p>
@@ -485,7 +522,7 @@ Class CommonClientConfigsBuilder&lt;T&gt;  <a class="header-action link-secondar
 
   <h3 id="MASES_KNet_CommonClientConfigsBuilder_1_DefaultListValueSerdeInnerClass" data-uid="MASES.KNet.CommonClientConfigsBuilder`1.DefaultListValueSerdeInnerClass">
   DefaultListValueSerdeInnerClass
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/CommonClientConfigs.cs/#L325"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/CommonClientConfigs.cs/#L366"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.CommonClientConfigs.html#Org_Apache_Kafka_Clients_CommonClientConfigs_DEFAULT_LIST_VALUE_SERDE_INNER_CLASS">DEFAULT_LIST_VALUE_SERDE_INNER_CLASS</a></p>
@@ -517,7 +554,7 @@ Class CommonClientConfigsBuilder&lt;T&gt;  <a class="header-action link-secondar
 
   <h3 id="MASES_KNet_CommonClientConfigsBuilder_1_DefaultListValueSerdeTypeClass" data-uid="MASES.KNet.CommonClientConfigsBuilder`1.DefaultListValueSerdeTypeClass">
   DefaultListValueSerdeTypeClass
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/CommonClientConfigs.cs/#L351"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/CommonClientConfigs.cs/#L392"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.CommonClientConfigs.html#Org_Apache_Kafka_Clients_CommonClientConfigs_DEFAULT_LIST_VALUE_SERDE_TYPE_CLASS">DEFAULT_LIST_VALUE_SERDE_TYPE_CLASS</a></p>
@@ -549,7 +586,7 @@ Class CommonClientConfigsBuilder&lt;T&gt;  <a class="header-action link-secondar
 
   <h3 id="MASES_KNet_CommonClientConfigsBuilder_1_EnableMetricsPush" data-uid="MASES.KNet.CommonClientConfigsBuilder`1.EnableMetricsPush">
   EnableMetricsPush
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/CommonClientConfigs.cs/#L364"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/CommonClientConfigs.cs/#L405"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.CommonClientConfigs.html#Org_Apache_Kafka_Clients_CommonClientConfigs_ENABLE_METRICS_PUSH_CONFIG">ENABLE_METRICS_PUSH_CONFIG</a></p>
@@ -581,7 +618,7 @@ Class CommonClientConfigsBuilder&lt;T&gt;  <a class="header-action link-secondar
 
   <h3 id="MASES_KNet_CommonClientConfigsBuilder_1_GroupId" data-uid="MASES.KNet.CommonClientConfigsBuilder`1.GroupId">
   GroupId
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/CommonClientConfigs.cs/#L377"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/CommonClientConfigs.cs/#L418"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.CommonClientConfigs.html#Org_Apache_Kafka_Clients_CommonClientConfigs_GROUP_ID_CONFIG">GROUP_ID_CONFIG</a></p>
@@ -613,7 +650,7 @@ Class CommonClientConfigsBuilder&lt;T&gt;  <a class="header-action link-secondar
 
   <h3 id="MASES_KNet_CommonClientConfigsBuilder_1_GroupInstanceId" data-uid="MASES.KNet.CommonClientConfigsBuilder`1.GroupInstanceId">
   GroupInstanceId
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/CommonClientConfigs.cs/#L390"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/CommonClientConfigs.cs/#L431"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.CommonClientConfigs.html#Org_Apache_Kafka_Clients_CommonClientConfigs_GROUP_INSTANCE_ID_CONFIG">GROUP_INSTANCE_ID_CONFIG</a></p>
@@ -645,7 +682,7 @@ Class CommonClientConfigsBuilder&lt;T&gt;  <a class="header-action link-secondar
 
   <h3 id="MASES_KNet_CommonClientConfigsBuilder_1_HeartbeatIntervalMs" data-uid="MASES.KNet.CommonClientConfigsBuilder`1.HeartbeatIntervalMs">
   HeartbeatIntervalMs
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/CommonClientConfigs.cs/#L442"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/CommonClientConfigs.cs/#L483"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.CommonClientConfigs.html#Org_Apache_Kafka_Clients_CommonClientConfigs_HEARTBEAT_INTERVAL_MS_CONFIG">HEARTBEAT_INTERVAL_MS_CONFIG</a></p>
@@ -677,7 +714,7 @@ Class CommonClientConfigsBuilder&lt;T&gt;  <a class="header-action link-secondar
 
   <h3 id="MASES_KNet_CommonClientConfigsBuilder_1_MaxPollIntervalMs" data-uid="MASES.KNet.CommonClientConfigsBuilder`1.MaxPollIntervalMs">
   MaxPollIntervalMs
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/CommonClientConfigs.cs/#L403"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/CommonClientConfigs.cs/#L444"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.CommonClientConfigs.html#Org_Apache_Kafka_Clients_CommonClientConfigs_MAX_POLL_INTERVAL_MS_CONFIG">MAX_POLL_INTERVAL_MS_CONFIG</a></p>
@@ -709,7 +746,7 @@ Class CommonClientConfigsBuilder&lt;T&gt;  <a class="header-action link-secondar
 
   <h3 id="MASES_KNet_CommonClientConfigsBuilder_1_MetadataMaxAge" data-uid="MASES.KNet.CommonClientConfigsBuilder`1.MetadataMaxAge">
   MetadataMaxAge
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/CommonClientConfigs.cs/#L62"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/CommonClientConfigs.cs/#L103"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.CommonClientConfigs.html#Org_Apache_Kafka_Clients_CommonClientConfigs_METADATA_MAX_AGE_CONFIG">METADATA_MAX_AGE_CONFIG</a></p>
@@ -737,11 +774,43 @@ Class CommonClientConfigsBuilder&lt;T&gt;  <a class="header-action link-secondar
 
 
 
+  <a id="MASES_KNet_CommonClientConfigsBuilder_1_MetadataRecoveryStrategy_" data-uid="MASES.KNet.CommonClientConfigsBuilder`1.MetadataRecoveryStrategy*"></a>
+
+  <h3 id="MASES_KNet_CommonClientConfigsBuilder_1_MetadataRecoveryStrategy" data-uid="MASES.KNet.CommonClientConfigsBuilder`1.MetadataRecoveryStrategy">
+  MetadataRecoveryStrategy
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/CommonClientConfigs.cs/#L509"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.CommonClientConfigs.html#Org_Apache_Kafka_Clients_CommonClientConfigs_METADATA_RECOVERY_STRATEGY_CONFIG">METADATA_RECOVERY_STRATEGY_CONFIG</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string MetadataRecoveryStrategy { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="MASES_KNet_CommonClientConfigsBuilder_1_MetricNumSample_" data-uid="MASES.KNet.CommonClientConfigsBuilder`1.MetricNumSample*"></a>
 
   <h3 id="MASES_KNet_CommonClientConfigsBuilder_1_MetricNumSample" data-uid="MASES.KNet.CommonClientConfigsBuilder`1.MetricNumSample">
   MetricNumSample
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/CommonClientConfigs.cs/#L205"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/CommonClientConfigs.cs/#L246"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.CommonClientConfigs.html#Org_Apache_Kafka_Clients_CommonClientConfigs_METRICS_NUM_SAMPLES_CONFIG">METRICS_NUM_SAMPLES_CONFIG</a></p>
@@ -773,7 +842,7 @@ Class CommonClientConfigsBuilder&lt;T&gt;  <a class="header-action link-secondar
 
   <h3 id="MASES_KNet_CommonClientConfigsBuilder_1_MetricRecordingLevel" data-uid="MASES.KNet.CommonClientConfigsBuilder`1.MetricRecordingLevel">
   MetricRecordingLevel
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/CommonClientConfigs.cs/#L219"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/CommonClientConfigs.cs/#L260"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.CommonClientConfigs.html#Org_Apache_Kafka_Clients_CommonClientConfigs_METRICS_RECORDING_LEVEL_CONFIG">METRICS_RECORDING_LEVEL_CONFIG</a></p>
@@ -805,7 +874,7 @@ Class CommonClientConfigsBuilder&lt;T&gt;  <a class="header-action link-secondar
 
   <h3 id="MASES_KNet_CommonClientConfigsBuilder_1_MetricReporterClasses" data-uid="MASES.KNet.CommonClientConfigsBuilder`1.MetricReporterClasses">
   MetricReporterClasses
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/CommonClientConfigs.cs/#L233"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/CommonClientConfigs.cs/#L274"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.CommonClientConfigs.html#Org_Apache_Kafka_Clients_CommonClientConfigs_METRIC_REPORTER_CLASSES_CONFIG">METRIC_REPORTER_CLASSES_CONFIG</a></p>
@@ -837,7 +906,7 @@ Class CommonClientConfigsBuilder&lt;T&gt;  <a class="header-action link-secondar
 
   <h3 id="MASES_KNet_CommonClientConfigsBuilder_1_MetricSampleWindowMs" data-uid="MASES.KNet.CommonClientConfigsBuilder`1.MetricSampleWindowMs">
   MetricSampleWindowMs
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/CommonClientConfigs.cs/#L192"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/CommonClientConfigs.cs/#L233"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.CommonClientConfigs.html#Org_Apache_Kafka_Clients_CommonClientConfigs_METRICS_SAMPLE_WINDOW_MS_CONFIG">METRICS_SAMPLE_WINDOW_MS_CONFIG</a></p>
@@ -869,7 +938,7 @@ Class CommonClientConfigsBuilder&lt;T&gt;  <a class="header-action link-secondar
 
   <h3 id="MASES_KNet_CommonClientConfigsBuilder_1_RebalanceTimeoutMs" data-uid="MASES.KNet.CommonClientConfigsBuilder`1.RebalanceTimeoutMs">
   RebalanceTimeoutMs
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/CommonClientConfigs.cs/#L416"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/CommonClientConfigs.cs/#L457"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.CommonClientConfigs.html#Org_Apache_Kafka_Clients_CommonClientConfigs_REBALANCE_TIMEOUT_MS_CONFIG">REBALANCE_TIMEOUT_MS_CONFIG</a></p>
@@ -901,7 +970,7 @@ Class CommonClientConfigsBuilder&lt;T&gt;  <a class="header-action link-secondar
 
   <h3 id="MASES_KNet_CommonClientConfigsBuilder_1_ReceiveBuffer" data-uid="MASES.KNet.CommonClientConfigsBuilder`1.ReceiveBuffer">
   ReceiveBuffer
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/CommonClientConfigs.cs/#L88"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/CommonClientConfigs.cs/#L129"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.CommonClientConfigs.html#Org_Apache_Kafka_Clients_CommonClientConfigs_RECEIVE_BUFFER_CONFIG">RECEIVE_BUFFER_CONFIG</a></p>
@@ -933,7 +1002,7 @@ Class CommonClientConfigsBuilder&lt;T&gt;  <a class="header-action link-secondar
 
   <h3 id="MASES_KNet_CommonClientConfigsBuilder_1_ReconnectBackoffMaxMs" data-uid="MASES.KNet.CommonClientConfigsBuilder`1.ReconnectBackoffMaxMs">
   ReconnectBackoffMaxMs
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/CommonClientConfigs.cs/#L140"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/CommonClientConfigs.cs/#L181"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.CommonClientConfigs.html#Org_Apache_Kafka_Clients_CommonClientConfigs_RECONNECT_BACKOFF_MAX_MS_CONFIG">RECONNECT_BACKOFF_MAX_MS_CONFIG</a></p>
@@ -965,7 +1034,7 @@ Class CommonClientConfigsBuilder&lt;T&gt;  <a class="header-action link-secondar
 
   <h3 id="MASES_KNet_CommonClientConfigsBuilder_1_ReconnectBackoffMs" data-uid="MASES.KNet.CommonClientConfigsBuilder`1.ReconnectBackoffMs">
   ReconnectBackoffMs
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/CommonClientConfigs.cs/#L127"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/CommonClientConfigs.cs/#L168"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.CommonClientConfigs.html#Org_Apache_Kafka_Clients_CommonClientConfigs_RECONNECT_BACKOFF_MS_CONFIG">RECONNECT_BACKOFF_MS_CONFIG</a></p>
@@ -997,7 +1066,7 @@ Class CommonClientConfigsBuilder&lt;T&gt;  <a class="header-action link-secondar
 
   <h3 id="MASES_KNet_CommonClientConfigsBuilder_1_RequestTimeoutMs" data-uid="MASES.KNet.CommonClientConfigsBuilder`1.RequestTimeoutMs">
   RequestTimeoutMs
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/CommonClientConfigs.cs/#L299"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/CommonClientConfigs.cs/#L340"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.CommonClientConfigs.html#Org_Apache_Kafka_Clients_CommonClientConfigs_REQUEST_TIMEOUT_MS_CONFIG">REQUEST_TIMEOUT_MS_CONFIG</a></p>
@@ -1029,7 +1098,7 @@ Class CommonClientConfigsBuilder&lt;T&gt;  <a class="header-action link-secondar
 
   <h3 id="MASES_KNet_CommonClientConfigsBuilder_1_Retries" data-uid="MASES.KNet.CommonClientConfigsBuilder`1.Retries">
   Retries
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/CommonClientConfigs.cs/#L153"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/CommonClientConfigs.cs/#L194"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.CommonClientConfigs.html#Org_Apache_Kafka_Clients_CommonClientConfigs_RETRIES_CONFIG">RETRIES_CONFIG</a></p>
@@ -1061,7 +1130,7 @@ Class CommonClientConfigsBuilder&lt;T&gt;  <a class="header-action link-secondar
 
   <h3 id="MASES_KNet_CommonClientConfigsBuilder_1_RetryBackoffMaxMs" data-uid="MASES.KNet.CommonClientConfigsBuilder`1.RetryBackoffMaxMs">
   RetryBackoffMaxMs
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/CommonClientConfigs.cs/#L166"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/CommonClientConfigs.cs/#L207"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.CommonClientConfigs.html#Org_Apache_Kafka_Clients_CommonClientConfigs_RETRY_BACKOFF_MAX_MS_CONFIG">RETRY_BACKOFF_MAX_MS_CONFIG</a></p>
@@ -1093,7 +1162,7 @@ Class CommonClientConfigsBuilder&lt;T&gt;  <a class="header-action link-secondar
 
   <h3 id="MASES_KNet_CommonClientConfigsBuilder_1_RetryBackoffMs" data-uid="MASES.KNet.CommonClientConfigsBuilder`1.RetryBackoffMs">
   RetryBackoffMs
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/CommonClientConfigs.cs/#L179"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/CommonClientConfigs.cs/#L220"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.CommonClientConfigs.html#Org_Apache_Kafka_Clients_CommonClientConfigs_RETRY_BACKOFF_MS_CONFIG">RETRY_BACKOFF_MS_CONFIG</a></p>
@@ -1125,7 +1194,7 @@ Class CommonClientConfigsBuilder&lt;T&gt;  <a class="header-action link-secondar
 
   <h3 id="MASES_KNet_CommonClientConfigsBuilder_1_SecurityProtocol" data-uid="MASES.KNet.CommonClientConfigsBuilder`1.SecurityProtocol">
   SecurityProtocol
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/CommonClientConfigs.cs/#L247"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/CommonClientConfigs.cs/#L288"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.CommonClientConfigs.html#Org_Apache_Kafka_Clients_CommonClientConfigs_SECURITY_PROTOCOL_CONFIG">SECURITY_PROTOCOL_CONFIG</a></p>
@@ -1157,7 +1226,7 @@ Class CommonClientConfigsBuilder&lt;T&gt;  <a class="header-action link-secondar
 
   <h3 id="MASES_KNet_CommonClientConfigsBuilder_1_SendBuffer" data-uid="MASES.KNet.CommonClientConfigsBuilder`1.SendBuffer">
   SendBuffer
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/CommonClientConfigs.cs/#L75"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/CommonClientConfigs.cs/#L116"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.CommonClientConfigs.html#Org_Apache_Kafka_Clients_CommonClientConfigs_SEND_BUFFER_CONFIG">SEND_BUFFER_CONFIG</a></p>
@@ -1189,7 +1258,7 @@ Class CommonClientConfigsBuilder&lt;T&gt;  <a class="header-action link-secondar
 
   <h3 id="MASES_KNet_CommonClientConfigsBuilder_1_SessionTimeoutMs" data-uid="MASES.KNet.CommonClientConfigsBuilder`1.SessionTimeoutMs">
   SessionTimeoutMs
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/CommonClientConfigs.cs/#L429"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/CommonClientConfigs.cs/#L470"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.CommonClientConfigs.html#Org_Apache_Kafka_Clients_CommonClientConfigs_SESSION_TIMEOUT_MS_CONFIG">SESSION_TIMEOUT_MS_CONFIG</a></p>
@@ -1221,7 +1290,7 @@ Class CommonClientConfigsBuilder&lt;T&gt;  <a class="header-action link-secondar
 
   <h3 id="MASES_KNet_CommonClientConfigsBuilder_1_SocketConnectionSetupTimeoutMaxMs" data-uid="MASES.KNet.CommonClientConfigsBuilder`1.SocketConnectionSetupTimeoutMaxMs">
   SocketConnectionSetupTimeoutMaxMs
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/CommonClientConfigs.cs/#L273"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/CommonClientConfigs.cs/#L314"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.CommonClientConfigs.html#Org_Apache_Kafka_Clients_CommonClientConfigs_SOCKET_CONNECTION_SETUP_TIMEOUT_MAX_MS_CONFIG">SOCKET_CONNECTION_SETUP_TIMEOUT_MAX_MS_CONFIG</a></p>
@@ -1253,7 +1322,7 @@ Class CommonClientConfigsBuilder&lt;T&gt;  <a class="header-action link-secondar
 
   <h3 id="MASES_KNet_CommonClientConfigsBuilder_1_SocketConnectionSetupTimeoutMs" data-uid="MASES.KNet.CommonClientConfigsBuilder`1.SocketConnectionSetupTimeoutMs">
   SocketConnectionSetupTimeoutMs
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/CommonClientConfigs.cs/#L260"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/CommonClientConfigs.cs/#L301"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.CommonClientConfigs.html#Org_Apache_Kafka_Clients_CommonClientConfigs_SOCKET_CONNECTION_SETUP_TIMEOUT_MS_CONFIG">SOCKET_CONNECTION_SETUP_TIMEOUT_MS_CONFIG</a></p>
@@ -1289,7 +1358,7 @@ Class CommonClientConfigsBuilder&lt;T&gt;  <a class="header-action link-secondar
 
   <h3 id="MASES_KNet_CommonClientConfigsBuilder_1_WithBootstrapServers_System_String_" data-uid="MASES.KNet.CommonClientConfigsBuilder`1.WithBootstrapServers(System.String)">
   WithBootstrapServers(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/CommonClientConfigs.cs/#L40"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/CommonClientConfigs.cs/#L81"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.CommonClientConfigs.html#Org_Apache_Kafka_Clients_CommonClientConfigs_BOOTSTRAP_SERVERS_CONFIG">BOOTSTRAP_SERVERS_CONFIG</a></p>
@@ -1326,7 +1395,7 @@ Class CommonClientConfigsBuilder&lt;T&gt;  <a class="header-action link-secondar
 
   <h3 id="MASES_KNet_CommonClientConfigsBuilder_1_WithClientDnsLookup_System_String_" data-uid="MASES.KNet.CommonClientConfigsBuilder`1.WithClientDnsLookup(System.String)">
   WithClientDnsLookup(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/CommonClientConfigs.cs/#L53"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/CommonClientConfigs.cs/#L94"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.CommonClientConfigs.html#Org_Apache_Kafka_Clients_CommonClientConfigs_CLIENT_DNS_LOOKUP_CONFIG">CLIENT_DNS_LOOKUP_CONFIG</a></p>
@@ -1363,7 +1432,7 @@ Class CommonClientConfigsBuilder&lt;T&gt;  <a class="header-action link-secondar
 
   <h3 id="MASES_KNet_CommonClientConfigsBuilder_1_WithClientId_System_String_" data-uid="MASES.KNet.CommonClientConfigsBuilder`1.WithClientId(System.String)">
   WithClientId(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/CommonClientConfigs.cs/#L105"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/CommonClientConfigs.cs/#L146"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.CommonClientConfigs.html#Org_Apache_Kafka_Clients_CommonClientConfigs_CLIENT_ID_CONFIG">CLIENT_ID_CONFIG</a></p>
@@ -1400,7 +1469,7 @@ Class CommonClientConfigsBuilder&lt;T&gt;  <a class="header-action link-secondar
 
   <h3 id="MASES_KNet_CommonClientConfigsBuilder_1_WithClientRack_System_String_" data-uid="MASES.KNet.CommonClientConfigsBuilder`1.WithClientRack(System.String)">
   WithClientRack(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/CommonClientConfigs.cs/#L118"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/CommonClientConfigs.cs/#L159"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.CommonClientConfigs.html#Org_Apache_Kafka_Clients_CommonClientConfigs_CLIENT_RACK_CONFIG">CLIENT_RACK_CONFIG</a></p>
@@ -1433,11 +1502,48 @@ Class CommonClientConfigsBuilder&lt;T&gt;  <a class="header-action link-secondar
 
 
 
+  <a id="MASES_KNet_CommonClientConfigsBuilder_1_WithConfigProviders_" data-uid="MASES.KNet.CommonClientConfigsBuilder`1.WithConfigProviders*"></a>
+
+  <h3 id="MASES_KNet_CommonClientConfigsBuilder_1_WithConfigProviders_System_String_" data-uid="MASES.KNet.CommonClientConfigsBuilder`1.WithConfigProviders(System.String)">
+  WithConfigProviders(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/CommonClientConfigs.cs/#L67"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.CommonClientConfigs.html#Org_Apache_Kafka_Clients_CommonClientConfigs_METADATA_RECOVERY_STRATEGY_CONFIG">METADATA_RECOVERY_STRATEGY_CONFIG</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public T WithConfigProviders(string configProviders)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>configProviders</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">T</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="MASES_KNet_CommonClientConfigsBuilder_1_WithConnectionMaxIdleMs_" data-uid="MASES.KNet.CommonClientConfigsBuilder`1.WithConnectionMaxIdleMs*"></a>
 
   <h3 id="MASES_KNet_CommonClientConfigsBuilder_1_WithConnectionMaxIdleMs_System_Int64_" data-uid="MASES.KNet.CommonClientConfigsBuilder`1.WithConnectionMaxIdleMs(System.Int64)">
   WithConnectionMaxIdleMs(long)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/CommonClientConfigs.cs/#L290"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/CommonClientConfigs.cs/#L331"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.CommonClientConfigs.html#Org_Apache_Kafka_Clients_CommonClientConfigs_CONNECTIONS_MAX_IDLE_MS_CONFIG">CONNECTIONS_MAX_IDLE_MS_CONFIG</a></p>
@@ -1472,9 +1578,9 @@ Class CommonClientConfigsBuilder&lt;T&gt;  <a class="header-action link-secondar
 
   <a id="MASES_KNet_CommonClientConfigsBuilder_1_WithDefaultApiTimeoutMs_" data-uid="MASES.KNet.CommonClientConfigsBuilder`1.WithDefaultApiTimeoutMs*"></a>
 
-  <h3 id="MASES_KNet_CommonClientConfigsBuilder_1_WithDefaultApiTimeoutMs_System_Int64_" data-uid="MASES.KNet.CommonClientConfigsBuilder`1.WithDefaultApiTimeoutMs(System.Int64)">
-  WithDefaultApiTimeoutMs(long)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/CommonClientConfigs.cs/#L459"><i class="bi bi-code-slash"></i></a>
+  <h3 id="MASES_KNet_CommonClientConfigsBuilder_1_WithDefaultApiTimeoutMs_System_Int32_" data-uid="MASES.KNet.CommonClientConfigsBuilder`1.WithDefaultApiTimeoutMs(System.Int32)">
+  WithDefaultApiTimeoutMs(int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/CommonClientConfigs.cs/#L500"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.CommonClientConfigs.html#Org_Apache_Kafka_Clients_CommonClientConfigs_DEFAULT_API_TIMEOUT_MS_CONFIG">DEFAULT_API_TIMEOUT_MS_CONFIG</a></p>
@@ -1482,12 +1588,12 @@ Class CommonClientConfigsBuilder&lt;T&gt;  <a class="header-action link-secondar
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public T WithDefaultApiTimeoutMs(long defaultApiTimeoutMs)</code></pre>
+    <pre><code class="lang-csharp hljs">public T WithDefaultApiTimeoutMs(int defaultApiTimeoutMs)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>defaultApiTimeoutMs</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dt><code>defaultApiTimeoutMs</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
     <dd></dd>
   </dl>
 
@@ -1511,7 +1617,7 @@ Class CommonClientConfigsBuilder&lt;T&gt;  <a class="header-action link-secondar
 
   <h3 id="MASES_KNet_CommonClientConfigsBuilder_1_WithDefaultListKeySerdeInnerClass_Java_Lang_Class_" data-uid="MASES.KNet.CommonClientConfigsBuilder`1.WithDefaultListKeySerdeInnerClass(Java.Lang.Class)">
   WithDefaultListKeySerdeInnerClass(Class)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/CommonClientConfigs.cs/#L316"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/CommonClientConfigs.cs/#L357"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.CommonClientConfigs.html#Org_Apache_Kafka_Clients_CommonClientConfigs_DEFAULT_LIST_KEY_SERDE_INNER_CLASS">DEFAULT_LIST_KEY_SERDE_INNER_CLASS</a></p>
@@ -1548,7 +1654,7 @@ Class CommonClientConfigsBuilder&lt;T&gt;  <a class="header-action link-secondar
 
   <h3 id="MASES_KNet_CommonClientConfigsBuilder_1_WithDefaultListKeySerdeTypeClass_Java_Lang_Class_" data-uid="MASES.KNet.CommonClientConfigsBuilder`1.WithDefaultListKeySerdeTypeClass(Java.Lang.Class)">
   WithDefaultListKeySerdeTypeClass(Class)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/CommonClientConfigs.cs/#L342"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/CommonClientConfigs.cs/#L383"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.CommonClientConfigs.html#Org_Apache_Kafka_Clients_CommonClientConfigs_DEFAULT_LIST_KEY_SERDE_TYPE_CLASS">DEFAULT_LIST_KEY_SERDE_TYPE_CLASS</a></p>
@@ -1585,7 +1691,7 @@ Class CommonClientConfigsBuilder&lt;T&gt;  <a class="header-action link-secondar
 
   <h3 id="MASES_KNet_CommonClientConfigsBuilder_1_WithDefaultListValueSerdeInnerClass_Java_Lang_Class_" data-uid="MASES.KNet.CommonClientConfigsBuilder`1.WithDefaultListValueSerdeInnerClass(Java.Lang.Class)">
   WithDefaultListValueSerdeInnerClass(Class)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/CommonClientConfigs.cs/#L329"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/CommonClientConfigs.cs/#L370"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.CommonClientConfigs.html#Org_Apache_Kafka_Clients_CommonClientConfigs_DEFAULT_LIST_VALUE_SERDE_INNER_CLASS">DEFAULT_LIST_VALUE_SERDE_INNER_CLASS</a></p>
@@ -1622,7 +1728,7 @@ Class CommonClientConfigsBuilder&lt;T&gt;  <a class="header-action link-secondar
 
   <h3 id="MASES_KNet_CommonClientConfigsBuilder_1_WithDefaultListValueSerdeTypeClass_Java_Lang_Class_" data-uid="MASES.KNet.CommonClientConfigsBuilder`1.WithDefaultListValueSerdeTypeClass(Java.Lang.Class)">
   WithDefaultListValueSerdeTypeClass(Class)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/CommonClientConfigs.cs/#L355"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/CommonClientConfigs.cs/#L396"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.CommonClientConfigs.html#Org_Apache_Kafka_Clients_CommonClientConfigs_DEFAULT_LIST_VALUE_SERDE_TYPE_CLASS">DEFAULT_LIST_VALUE_SERDE_TYPE_CLASS</a></p>
@@ -1659,7 +1765,7 @@ Class CommonClientConfigsBuilder&lt;T&gt;  <a class="header-action link-secondar
 
   <h3 id="MASES_KNet_CommonClientConfigsBuilder_1_WithEnableMetricsPush_System_Boolean_" data-uid="MASES.KNet.CommonClientConfigsBuilder`1.WithEnableMetricsPush(System.Boolean)">
   WithEnableMetricsPush(bool)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/CommonClientConfigs.cs/#L368"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/CommonClientConfigs.cs/#L409"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.CommonClientConfigs.html#Org_Apache_Kafka_Clients_CommonClientConfigs_ENABLE_METRICS_PUSH_CONFIG">ENABLE_METRICS_PUSH_CONFIG</a></p>
@@ -1696,7 +1802,7 @@ Class CommonClientConfigsBuilder&lt;T&gt;  <a class="header-action link-secondar
 
   <h3 id="MASES_KNet_CommonClientConfigsBuilder_1_WithGroupId_System_String_" data-uid="MASES.KNet.CommonClientConfigsBuilder`1.WithGroupId(System.String)">
   WithGroupId(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/CommonClientConfigs.cs/#L381"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/CommonClientConfigs.cs/#L422"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.CommonClientConfigs.html#Org_Apache_Kafka_Clients_CommonClientConfigs_GROUP_ID_CONFIG">GROUP_ID_CONFIG</a></p>
@@ -1733,7 +1839,7 @@ Class CommonClientConfigsBuilder&lt;T&gt;  <a class="header-action link-secondar
 
   <h3 id="MASES_KNet_CommonClientConfigsBuilder_1_WithGroupInstanceId_System_String_" data-uid="MASES.KNet.CommonClientConfigsBuilder`1.WithGroupInstanceId(System.String)">
   WithGroupInstanceId(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/CommonClientConfigs.cs/#L394"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/CommonClientConfigs.cs/#L435"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.CommonClientConfigs.html#Org_Apache_Kafka_Clients_CommonClientConfigs_GROUP_INSTANCE_ID_CONFIG">GROUP_INSTANCE_ID_CONFIG</a></p>
@@ -1770,7 +1876,7 @@ Class CommonClientConfigsBuilder&lt;T&gt;  <a class="header-action link-secondar
 
   <h3 id="MASES_KNet_CommonClientConfigsBuilder_1_WithHeartbeatIntervalMs_System_Int32_" data-uid="MASES.KNet.CommonClientConfigsBuilder`1.WithHeartbeatIntervalMs(System.Int32)">
   WithHeartbeatIntervalMs(int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/CommonClientConfigs.cs/#L446"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/CommonClientConfigs.cs/#L487"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.CommonClientConfigs.html#Org_Apache_Kafka_Clients_CommonClientConfigs_HEARTBEAT_INTERVAL_MS_CONFIG">HEARTBEAT_INTERVAL_MS_CONFIG</a></p>
@@ -1807,7 +1913,7 @@ Class CommonClientConfigsBuilder&lt;T&gt;  <a class="header-action link-secondar
 
   <h3 id="MASES_KNet_CommonClientConfigsBuilder_1_WithMaxPollIntervalMs_System_Int32_" data-uid="MASES.KNet.CommonClientConfigsBuilder`1.WithMaxPollIntervalMs(System.Int32)">
   WithMaxPollIntervalMs(int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/CommonClientConfigs.cs/#L407"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/CommonClientConfigs.cs/#L448"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.CommonClientConfigs.html#Org_Apache_Kafka_Clients_CommonClientConfigs_MAX_POLL_INTERVAL_MS_CONFIG">MAX_POLL_INTERVAL_MS_CONFIG</a></p>
@@ -1844,7 +1950,7 @@ Class CommonClientConfigsBuilder&lt;T&gt;  <a class="header-action link-secondar
 
   <h3 id="MASES_KNet_CommonClientConfigsBuilder_1_WithMetadataMaxAge_System_Int64_" data-uid="MASES.KNet.CommonClientConfigsBuilder`1.WithMetadataMaxAge(System.Int64)">
   WithMetadataMaxAge(long)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/CommonClientConfigs.cs/#L66"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/CommonClientConfigs.cs/#L107"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.CommonClientConfigs.html#Org_Apache_Kafka_Clients_CommonClientConfigs_METADATA_MAX_AGE_CONFIG">METADATA_MAX_AGE_CONFIG</a></p>
@@ -1877,11 +1983,48 @@ Class CommonClientConfigsBuilder&lt;T&gt;  <a class="header-action link-secondar
 
 
 
+  <a id="MASES_KNet_CommonClientConfigsBuilder_1_WithMetadataRecoveryStrategy_" data-uid="MASES.KNet.CommonClientConfigsBuilder`1.WithMetadataRecoveryStrategy*"></a>
+
+  <h3 id="MASES_KNet_CommonClientConfigsBuilder_1_WithMetadataRecoveryStrategy_System_String_" data-uid="MASES.KNet.CommonClientConfigsBuilder`1.WithMetadataRecoveryStrategy(System.String)">
+  WithMetadataRecoveryStrategy(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/CommonClientConfigs.cs/#L513"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.CommonClientConfigs.html#Org_Apache_Kafka_Clients_CommonClientConfigs_METADATA_RECOVERY_STRATEGY_CONFIG">METADATA_RECOVERY_STRATEGY_CONFIG</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public T WithMetadataRecoveryStrategy(string metadataRecoveryStrategy)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>metadataRecoveryStrategy</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">T</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="MASES_KNet_CommonClientConfigsBuilder_1_WithMetricNumSample_" data-uid="MASES.KNet.CommonClientConfigsBuilder`1.WithMetricNumSample*"></a>
 
   <h3 id="MASES_KNet_CommonClientConfigsBuilder_1_WithMetricNumSample_System_Int32_" data-uid="MASES.KNet.CommonClientConfigsBuilder`1.WithMetricNumSample(System.Int32)">
   WithMetricNumSample(int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/CommonClientConfigs.cs/#L209"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/CommonClientConfigs.cs/#L250"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.CommonClientConfigs.html#Org_Apache_Kafka_Clients_CommonClientConfigs_METRICS_NUM_SAMPLES_CONFIG">METRICS_NUM_SAMPLES_CONFIG</a></p>
@@ -1918,7 +2061,7 @@ Class CommonClientConfigsBuilder&lt;T&gt;  <a class="header-action link-secondar
 
   <h3 id="MASES_KNet_CommonClientConfigsBuilder_1_WithMetricRecordingLevel_Org_Apache_Kafka_Common_Metrics_Sensor_RecordingLevel_" data-uid="MASES.KNet.CommonClientConfigsBuilder`1.WithMetricRecordingLevel(Org.Apache.Kafka.Common.Metrics.Sensor.RecordingLevel)">
   WithMetricRecordingLevel(RecordingLevel)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/CommonClientConfigs.cs/#L223"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/CommonClientConfigs.cs/#L264"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.CommonClientConfigs.html#Org_Apache_Kafka_Clients_CommonClientConfigs_METRICS_RECORDING_LEVEL_CONFIG">METRICS_RECORDING_LEVEL_CONFIG</a></p>
@@ -1955,7 +2098,7 @@ Class CommonClientConfigsBuilder&lt;T&gt;  <a class="header-action link-secondar
 
   <h3 id="MASES_KNet_CommonClientConfigsBuilder_1_WithMetricReporterClasses_Java_Util_List_Java_Lang_Class__" data-uid="MASES.KNet.CommonClientConfigsBuilder`1.WithMetricReporterClasses(Java.Util.List{Java.Lang.Class})">
   WithMetricReporterClasses(List&lt;Class&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/CommonClientConfigs.cs/#L238"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/CommonClientConfigs.cs/#L279"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.CommonClientConfigs.html#Org_Apache_Kafka_Clients_CommonClientConfigs_METRIC_REPORTER_CLASSES_CONFIG">METRIC_REPORTER_CLASSES_CONFIG</a></p>
@@ -1992,7 +2135,7 @@ Class CommonClientConfigsBuilder&lt;T&gt;  <a class="header-action link-secondar
 
   <h3 id="MASES_KNet_CommonClientConfigsBuilder_1_WithMetricSampleWindowMs_System_Int64_" data-uid="MASES.KNet.CommonClientConfigsBuilder`1.WithMetricSampleWindowMs(System.Int64)">
   WithMetricSampleWindowMs(long)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/CommonClientConfigs.cs/#L196"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/CommonClientConfigs.cs/#L237"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.CommonClientConfigs.html#Org_Apache_Kafka_Clients_CommonClientConfigs_METRICS_SAMPLE_WINDOW_MS_CONFIG">METRICS_SAMPLE_WINDOW_MS_CONFIG</a></p>
@@ -2029,7 +2172,7 @@ Class CommonClientConfigsBuilder&lt;T&gt;  <a class="header-action link-secondar
 
   <h3 id="MASES_KNet_CommonClientConfigsBuilder_1_WithRebalanceTimeoutMs_System_Int32_" data-uid="MASES.KNet.CommonClientConfigsBuilder`1.WithRebalanceTimeoutMs(System.Int32)">
   WithRebalanceTimeoutMs(int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/CommonClientConfigs.cs/#L420"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/CommonClientConfigs.cs/#L461"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.CommonClientConfigs.html#Org_Apache_Kafka_Clients_CommonClientConfigs_REBALANCE_TIMEOUT_MS_CONFIG">REBALANCE_TIMEOUT_MS_CONFIG</a></p>
@@ -2066,7 +2209,7 @@ Class CommonClientConfigsBuilder&lt;T&gt;  <a class="header-action link-secondar
 
   <h3 id="MASES_KNet_CommonClientConfigsBuilder_1_WithReceiveBuffer_System_Int32_" data-uid="MASES.KNet.CommonClientConfigsBuilder`1.WithReceiveBuffer(System.Int32)">
   WithReceiveBuffer(int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/CommonClientConfigs.cs/#L92"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/CommonClientConfigs.cs/#L133"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.CommonClientConfigs.html#Org_Apache_Kafka_Clients_CommonClientConfigs_RECEIVE_BUFFER_CONFIG">RECEIVE_BUFFER_CONFIG</a></p>
@@ -2103,7 +2246,7 @@ Class CommonClientConfigsBuilder&lt;T&gt;  <a class="header-action link-secondar
 
   <h3 id="MASES_KNet_CommonClientConfigsBuilder_1_WithReconnectBackoffMaxMs_System_Int64_" data-uid="MASES.KNet.CommonClientConfigsBuilder`1.WithReconnectBackoffMaxMs(System.Int64)">
   WithReconnectBackoffMaxMs(long)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/CommonClientConfigs.cs/#L144"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/CommonClientConfigs.cs/#L185"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.CommonClientConfigs.html#Org_Apache_Kafka_Clients_CommonClientConfigs_RECONNECT_BACKOFF_MAX_MS_CONFIG">RECONNECT_BACKOFF_MAX_MS_CONFIG</a></p>
@@ -2140,7 +2283,7 @@ Class CommonClientConfigsBuilder&lt;T&gt;  <a class="header-action link-secondar
 
   <h3 id="MASES_KNet_CommonClientConfigsBuilder_1_WithReconnectBackoffMs_System_Int64_" data-uid="MASES.KNet.CommonClientConfigsBuilder`1.WithReconnectBackoffMs(System.Int64)">
   WithReconnectBackoffMs(long)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/CommonClientConfigs.cs/#L131"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/CommonClientConfigs.cs/#L172"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.CommonClientConfigs.html#Org_Apache_Kafka_Clients_CommonClientConfigs_RECONNECT_BACKOFF_MS_CONFIG">RECONNECT_BACKOFF_MS_CONFIG</a></p>
@@ -2177,7 +2320,7 @@ Class CommonClientConfigsBuilder&lt;T&gt;  <a class="header-action link-secondar
 
   <h3 id="MASES_KNet_CommonClientConfigsBuilder_1_WithRequestTimeoutMs_System_Int32_" data-uid="MASES.KNet.CommonClientConfigsBuilder`1.WithRequestTimeoutMs(System.Int32)">
   WithRequestTimeoutMs(int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/CommonClientConfigs.cs/#L303"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/CommonClientConfigs.cs/#L344"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.CommonClientConfigs.html#Org_Apache_Kafka_Clients_CommonClientConfigs_REQUEST_TIMEOUT_MS_CONFIG">REQUEST_TIMEOUT_MS_CONFIG</a></p>
@@ -2214,7 +2357,7 @@ Class CommonClientConfigsBuilder&lt;T&gt;  <a class="header-action link-secondar
 
   <h3 id="MASES_KNet_CommonClientConfigsBuilder_1_WithRetries_System_Int32_" data-uid="MASES.KNet.CommonClientConfigsBuilder`1.WithRetries(System.Int32)">
   WithRetries(int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/CommonClientConfigs.cs/#L157"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/CommonClientConfigs.cs/#L198"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.CommonClientConfigs.html#Org_Apache_Kafka_Clients_CommonClientConfigs_RETRIES_CONFIG">RETRIES_CONFIG</a></p>
@@ -2251,7 +2394,7 @@ Class CommonClientConfigsBuilder&lt;T&gt;  <a class="header-action link-secondar
 
   <h3 id="MASES_KNet_CommonClientConfigsBuilder_1_WithRetryBackoffMaxMs_System_Int64_" data-uid="MASES.KNet.CommonClientConfigsBuilder`1.WithRetryBackoffMaxMs(System.Int64)">
   WithRetryBackoffMaxMs(long)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/CommonClientConfigs.cs/#L170"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/CommonClientConfigs.cs/#L211"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.CommonClientConfigs.html#Org_Apache_Kafka_Clients_CommonClientConfigs_RETRY_BACKOFF_MAX_MS_CONFIG">RETRY_BACKOFF_MAX_MS_CONFIG</a></p>
@@ -2288,7 +2431,7 @@ Class CommonClientConfigsBuilder&lt;T&gt;  <a class="header-action link-secondar
 
   <h3 id="MASES_KNet_CommonClientConfigsBuilder_1_WithRetryBackoffMs_System_Int64_" data-uid="MASES.KNet.CommonClientConfigsBuilder`1.WithRetryBackoffMs(System.Int64)">
   WithRetryBackoffMs(long)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/CommonClientConfigs.cs/#L183"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/CommonClientConfigs.cs/#L224"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.CommonClientConfigs.html#Org_Apache_Kafka_Clients_CommonClientConfigs_RETRY_BACKOFF_MS_CONFIG">RETRY_BACKOFF_MS_CONFIG</a></p>
@@ -2321,11 +2464,48 @@ Class CommonClientConfigsBuilder&lt;T&gt;  <a class="header-action link-secondar
 
 
 
+  <a id="MASES_KNet_CommonClientConfigsBuilder_1_WithSaslConfigs_" data-uid="MASES.KNet.CommonClientConfigsBuilder`1.WithSaslConfigs*"></a>
+
+  <h3 id="MASES_KNet_CommonClientConfigsBuilder_1_WithSaslConfigs_MASES_KNet_Common_SaslConfigsBuilder_" data-uid="MASES.KNet.CommonClientConfigsBuilder`1.WithSaslConfigs(MASES.KNet.Common.SaslConfigsBuilder)">
+  WithSaslConfigs(SaslConfigsBuilder)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/CommonClientConfigs.cs/#L50"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Associated all properties in <a class="xref" href="MASES.KNet.Common.SaslConfigsBuilder.html">SaslConfigsBuilder</a> to this <code class="typeparamref">T</code> instance</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public T WithSaslConfigs(SaslConfigsBuilder saslConfigsBuilder)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>saslConfigsBuilder</code> <a class="xref" href="MASES.KNet.Common.SaslConfigsBuilder.html">SaslConfigsBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">T</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="MASES_KNet_CommonClientConfigsBuilder_1_WithSecurityProtocol_" data-uid="MASES.KNet.CommonClientConfigsBuilder`1.WithSecurityProtocol*"></a>
 
   <h3 id="MASES_KNet_CommonClientConfigsBuilder_1_WithSecurityProtocol_System_String_" data-uid="MASES.KNet.CommonClientConfigsBuilder`1.WithSecurityProtocol(System.String)">
   WithSecurityProtocol(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/CommonClientConfigs.cs/#L251"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/CommonClientConfigs.cs/#L292"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.CommonClientConfigs.html#Org_Apache_Kafka_Clients_CommonClientConfigs_SECURITY_PROTOCOL_CONFIG">SECURITY_PROTOCOL_CONFIG</a></p>
@@ -2362,7 +2542,7 @@ Class CommonClientConfigsBuilder&lt;T&gt;  <a class="header-action link-secondar
 
   <h3 id="MASES_KNet_CommonClientConfigsBuilder_1_WithSendBuffer_System_Int32_" data-uid="MASES.KNet.CommonClientConfigsBuilder`1.WithSendBuffer(System.Int32)">
   WithSendBuffer(int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/CommonClientConfigs.cs/#L79"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/CommonClientConfigs.cs/#L120"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.CommonClientConfigs.html#Org_Apache_Kafka_Clients_CommonClientConfigs_SEND_BUFFER_CONFIG">SEND_BUFFER_CONFIG</a></p>
@@ -2399,7 +2579,7 @@ Class CommonClientConfigsBuilder&lt;T&gt;  <a class="header-action link-secondar
 
   <h3 id="MASES_KNet_CommonClientConfigsBuilder_1_WithSessionTimeoutMs_System_Int32_" data-uid="MASES.KNet.CommonClientConfigsBuilder`1.WithSessionTimeoutMs(System.Int32)">
   WithSessionTimeoutMs(int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/CommonClientConfigs.cs/#L433"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/CommonClientConfigs.cs/#L474"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.CommonClientConfigs.html#Org_Apache_Kafka_Clients_CommonClientConfigs_SESSION_TIMEOUT_MS_CONFIG">SESSION_TIMEOUT_MS_CONFIG</a></p>
@@ -2436,7 +2616,7 @@ Class CommonClientConfigsBuilder&lt;T&gt;  <a class="header-action link-secondar
 
   <h3 id="MASES_KNet_CommonClientConfigsBuilder_1_WithSocketConnectionSetupTimeoutMaxMs_System_Int64_" data-uid="MASES.KNet.CommonClientConfigsBuilder`1.WithSocketConnectionSetupTimeoutMaxMs(System.Int64)">
   WithSocketConnectionSetupTimeoutMaxMs(long)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/CommonClientConfigs.cs/#L277"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/CommonClientConfigs.cs/#L318"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.CommonClientConfigs.html#Org_Apache_Kafka_Clients_CommonClientConfigs_SOCKET_CONNECTION_SETUP_TIMEOUT_MAX_MS_CONFIG">SOCKET_CONNECTION_SETUP_TIMEOUT_MAX_MS_CONFIG</a></p>
@@ -2473,7 +2653,7 @@ Class CommonClientConfigsBuilder&lt;T&gt;  <a class="header-action link-secondar
 
   <h3 id="MASES_KNet_CommonClientConfigsBuilder_1_WithSocketConnectionSetupTimeoutMs_System_Int64_" data-uid="MASES.KNet.CommonClientConfigsBuilder`1.WithSocketConnectionSetupTimeoutMs(System.Int64)">
   WithSocketConnectionSetupTimeoutMs(long)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/CommonClientConfigs.cs/#L264"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/CommonClientConfigs.cs/#L305"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Manages <a class="xref" href="Org.Apache.Kafka.Clients.CommonClientConfigs.html#Org_Apache_Kafka_Clients_CommonClientConfigs_SOCKET_CONNECTION_SETUP_TIMEOUT_MS_CONFIG">SOCKET_CONNECTION_SETUP_TIMEOUT_MS_CONFIG</a></p>
@@ -2506,11 +2686,48 @@ Class CommonClientConfigsBuilder&lt;T&gt;  <a class="header-action link-secondar
 
 
 
+  <a id="MASES_KNet_CommonClientConfigsBuilder_1_WithSslConfigs_" data-uid="MASES.KNet.CommonClientConfigsBuilder`1.WithSslConfigs*"></a>
+
+  <h3 id="MASES_KNet_CommonClientConfigsBuilder_1_WithSslConfigs_MASES_KNet_Common_SslConfigsBuilder_" data-uid="MASES.KNet.CommonClientConfigsBuilder`1.WithSslConfigs(MASES.KNet.Common.SslConfigsBuilder)">
+  WithSslConfigs(SslConfigsBuilder)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/CommonClientConfigs.cs/#L38"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Associated all properties in <a class="xref" href="MASES.KNet.Common.SslConfigsBuilder.html">SslConfigsBuilder</a> to this <code class="typeparamref">T</code> instance</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public T WithSslConfigs(SslConfigsBuilder sslConfigsBuilder)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>sslConfigsBuilder</code> <a class="xref" href="MASES.KNet.Common.SslConfigsBuilder.html">SslConfigsBuilder</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">T</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/CommonClientConfigs.cs/#L30" class="edit-link">Edit this page</a>
+          <a href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/CommonClientConfigs.cs/#L32" class="edit-link">Edit this page</a>
         </div>
 
 

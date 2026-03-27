@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+      <title>Interface IRocksDbLifecycleHandler | MASES Group - KNet </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Interface IRocksDbLifecycleHandler | MASES Group - KNet ">
+      <meta name="description" content="This is a descriptive page of KNet, the .NET suite for Apache Kafka">
+      <meta name="description" content="Defines the RocksDB lifecycle callbacks invoked by KEFCore for a Kafka Streams state store.">
+      <link rel="icon" href="../images/favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/masesgroup/KNet/new/release/2.9.X/apiSpec/new?filename=Org_Apache_Kafka_Streams_State_IRocksDbLifecycleHandler.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Streams.State.IRocksDbLifecycleHandler%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/logo.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Org.Apache.Kafka.Streams.State.IRocksDbLifecycleHandler">
+
+
+
+  <h1 id="Org_Apache_Kafka_Streams_State_IRocksDbLifecycleHandler" data-uid="Org.Apache.Kafka.Streams.State.IRocksDbLifecycleHandler" class="text-break">
+Interface IRocksDbLifecycleHandler  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Developed/Org/Apache/Kafka/Streams/State/KNetRocksDBConfigSetter.cs/#L39"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Org.html">Org</a>.<a class="xref" href="Org.Apache.html">Apache</a>.<a class="xref" href="Org.Apache.Kafka.html">Kafka</a>.<a class="xref" href="Org.Apache.Kafka.Streams.html">Streams</a>.<a class="xref" href="Org.Apache.Kafka.Streams.State.html">State</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>MASES.KNet.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Defines the RocksDB lifecycle callbacks invoked by KEFCore for a Kafka Streams state store.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface IRocksDbLifecycleHandler</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+  <h2 id="Org_Apache_Kafka_Streams_State_IRocksDbLifecycleHandler_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>Implementations are resolved once during bootstrap and then reused from the
+storage-id runtime map, so they should be thread-safe.</p>
+</div>
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Org_Apache_Kafka_Streams_State_IRocksDbLifecycleHandler_OnClose_" data-uid="Org.Apache.Kafka.Streams.State.IRocksDbLifecycleHandler.OnClose*"></a>
+
+  <h3 id="Org_Apache_Kafka_Streams_State_IRocksDbLifecycleHandler_OnClose_Org_Rocksdb_Options_System_Collections_Generic_IDictionary_System_String_System_Object__" data-uid="Org.Apache.Kafka.Streams.State.IRocksDbLifecycleHandler.OnClose(Org.Rocksdb.Options,System.Collections.Generic.IDictionary{System.String,System.Object})">
+  OnClose(Options, IDictionary&lt;string, object&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Developed/Org/Apache/Kafka/Streams/State/KNetRocksDBConfigSetter.cs/#L75"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Invoked when RocksDB is closing the state store associated to the current entity storage.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void OnClose(Options options, IDictionary&lt;string, object&gt; data)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>options</code> <a class="xref" href="Org.Rocksdb.Options.html">Options</a></dt>
+    <dd><p>The RocksDB <a class="xref" href="Org.Rocksdb.Options.html">Options</a> instance associated to the store.</p>
+</dd>
+    <dt><code>data</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2">IDictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
+    <dd><p>The same per-store dictionary previously provided to
+<a class="xref" href="Org.Apache.Kafka.Streams.State.IRocksDbLifecycleHandler.html#Org_Apache_Kafka_Streams_State_IRocksDbLifecycleHandler_OnSetConfig_Org_Rocksdb_Options_MASES_KNet_IKNetConfigurationFromMap_System_Collections_Generic_IDictionary_System_String_System_Object__">OnSetConfig(Options, IKNetConfigurationFromMap, IDictionary&lt;string, object&gt;)</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="Org_Apache_Kafka_Streams_State_IRocksDbLifecycleHandler_OnClose_Org_Rocksdb_Options_System_Collections_Generic_IDictionary_System_String_System_Object___remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Implementations should retrieve from <code class="paramref">data</code> any resource created during
+<a class="xref" href="Org.Apache.Kafka.Streams.State.IRocksDbLifecycleHandler.html#Org_Apache_Kafka_Streams_State_IRocksDbLifecycleHandler_OnSetConfig_Org_Rocksdb_Options_MASES_KNet_IKNetConfigurationFromMap_System_Collections_Generic_IDictionary_System_String_System_Object__">OnSetConfig(Options, IKNetConfigurationFromMap, IDictionary&lt;string, object&gt;)</a>
+and dispose it explicitly if needed.</p>
+</div>
+
+
+
+
+  <a id="Org_Apache_Kafka_Streams_State_IRocksDbLifecycleHandler_OnSetConfig_" data-uid="Org.Apache.Kafka.Streams.State.IRocksDbLifecycleHandler.OnSetConfig*"></a>
+
+  <h3 id="Org_Apache_Kafka_Streams_State_IRocksDbLifecycleHandler_OnSetConfig_Org_Rocksdb_Options_MASES_KNet_IKNetConfigurationFromMap_System_Collections_Generic_IDictionary_System_String_System_Object__" data-uid="Org.Apache.Kafka.Streams.State.IRocksDbLifecycleHandler.OnSetConfig(Org.Rocksdb.Options,MASES.KNet.IKNetConfigurationFromMap,System.Collections.Generic.IDictionary{System.String,System.Object})">
+  OnSetConfig(Options, IKNetConfigurationFromMap, IDictionary&lt;string, object&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Developed/Org/Apache/Kafka/Streams/State/KNetRocksDBConfigSetter.cs/#L60"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Invoked when RocksDB is configuring the state store associated to the current entity storage.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void OnSetConfig(Options options, IKNetConfigurationFromMap configuration, IDictionary&lt;string, object&gt; data)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>options</code> <a class="xref" href="Org.Rocksdb.Options.html">Options</a></dt>
+    <dd><p>The RocksDB <a class="xref" href="Org.Rocksdb.Options.html">Options</a> instance to be configured.</p>
+</dd>
+    <dt><code>configuration</code> <a class="xref" href="MASES.KNet.IKNetConfigurationFromMap.html">IKNetConfigurationFromMap</a></dt>
+    <dd><p>The KNet <a class="xref" href="MASES.KNet.IKNetConfigurationFromMap.html">IKNetConfigurationFromMap</a> map associated to the callback.</p>
+</dd>
+    <dt><code>data</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2">IDictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
+    <dd><p>A per-store dictionary used to keep managed objects alive for the whole lifetime of the
+underlying RocksDB store instance.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="Org_Apache_Kafka_Streams_State_IRocksDbLifecycleHandler_OnSetConfig_Org_Rocksdb_Options_MASES_KNet_IKNetConfigurationFromMap_System_Collections_Generic_IDictionary_System_String_System_Object___remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Any managed object created during configuration and referenced natively by RocksDB
+(for example <a class="xref" href="Org.Rocksdb.LRUCache.html">LRUCache</a>, <a class="xref" href="Org.Rocksdb.BlockBasedTableConfig.html">BlockBasedTableConfig</a>, or similar objects)
+must be stored in <code class="paramref">data</code>. Otherwise the .NET GC may collect it while
+RocksDB is still holding the native reference, causing non-deterministic crashes.</p>
+<p>
+The same dictionary instance is later passed back to <a class="xref" href="Org.Apache.Kafka.Streams.State.IRocksDbLifecycleHandler.html#Org_Apache_Kafka_Streams_State_IRocksDbLifecycleHandler_OnClose_Org_Rocksdb_Options_System_Collections_Generic_IDictionary_System_String_System_Object__">OnClose(Options, IDictionary&lt;string, object&gt;)</a>,
+so implementations can retrieve and explicitly dispose the resources that were stored here.
+</p>
+</div>
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Developed/Org/Apache/Kafka/Streams/State/KNetRocksDBConfigSetter.cs/#L39" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <script type="text/javascript">document.write('<div style="text-align: center;">Copyright © 2021 - ' + new Date().getFullYear() + ' MASES s.r.l. | Via San Cesidio 16 - San Valentino in A.C. - PE | P.I. 01932310681</div>');</script>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
