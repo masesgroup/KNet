@@ -78,7 +78,6 @@ See [Supported Backends](articles/backends.md) for the full compatibility matrix
 
 If you find KNet useful:
 
-* Request a free [community subscription](https://www.jcobridge.com/pricing-25/)
 * Leave a ⭐ on the repository
 * Open [issues](https://github.com/masesgroup/KNet/issues) to report bugs 🐛 or request features
 * Submit Pull Requests to improve the project
@@ -137,7 +136,7 @@ KNet uses [JNet](https://github.com/masesgroup/JNet), and indeed [JCOBridge](htt
 * **Dynamic code**: enables writing Java™/Scala/Kotlin code seamlessly within a standard .NET application in C#/VB.NET — see this [simple example](https://www.jcobridge.com/net-examples/dotnet-examples/) and [KNet APIs extensibility](articles/API_extensibility.md).
 
 > [!NOTE]
-> [JCOBridge 2.6.\*](https://www.jcobridge.com) can be used free of charge without any obligations. A commercial license must be purchased — or the software uninstalled — if you derive direct or indirect revenue from the product.
+> [JCOBridge 2.6.\*](https://www.jcobridge.com) can be used for free without any obligations. A commercial license must be purchased — or the software uninstalled — if you derive direct or indirect income from its usage.
 
 ### JCOBridge resources
 
