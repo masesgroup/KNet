@@ -18,12 +18,10 @@ KNet client-side features are also compatible with any broker that implements th
 ### Project disclaimer
 
 KNet is a suite for Apache Kafka™, maintained by MASES Group and open to community contributions.
-
 Its primary scope is to support other MASES Group projects — both open-source and commercial — though it is freely available for any use. Dedicated community and commercial subscription plans are available.
-
 The repository and releases may contain bugs. The release cycle follows the Apache Kafka™ release cycle, with additional releases driven by critical issues or enhancement requests from this or other dependent projects.
 
-Looking for Apache Kafka™ expertise? MASES Group can help you design, build, deploy, and manage Apache Kafka™ clusters and streaming applications.
+Looking for Apache Kafka™ expertise? MASES Group can help you design, build, deploy, and manage Apache Kafka™ clusters and streaming applications. [Find out more.](articles/support.md)
 
 ---
 
