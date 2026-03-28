@@ -5,6 +5,7 @@ using System;
 using System.Text;
 using System.Threading;
 using MASES.KNet.Producer;
+using MASES.JNet.Specific;
 
 namespace MASES.KNet.Template.KNetProducer
 {
@@ -50,8 +51,8 @@ namespace MASES.KNet.Template.KNetProducer
                                                     .WithAcks(ProducerConfigBuilder.AcksTypes.All)
                                                     .WithRetries(0)
                                                     .WithLingerMs(1)
-                                                    .WithKeySerializerClass("org.apache.kafka.common.serialization.StringSerializer")
-                                                    .WithValueSerializerClass("org.apache.kafka.common.serialization.StringSerializer")
+                                                    .WithKeySerializerClass(JNetHelper.Class<StringSerializer>()) //  "org.apache.kafka.common.serialization.StringSerializer")
+                                                    .WithValueSerializerClass(JNetHelper.Class<StringSerializer>()) // "org.apache.kafka.common.serialization.StringSerializer")
                                                     .ToProperties();
 
             Serializer<string> keySerializer = null;

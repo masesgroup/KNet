@@ -19,7 +19,6 @@
 using Java.Lang;
 using Java.Util;
 using Org.Apache.Kafka.Clients.Producer;
-using System;
 
 namespace MASES.KNet.Producer
 {
@@ -53,7 +52,6 @@ namespace MASES.KNet.Producer
         /// <summary>
         /// Used from <see cref="CompressionType"/> and <see cref="WithCompressionType(CompressionTypes)"/>
         /// </summary>
-        [Obsolete("Replaced with Org.Apache.Kafka.Common.Record.CompressionType", true)]
         public enum CompressionTypes
         {
             /// <summary>
@@ -263,21 +261,26 @@ namespace MASES.KNet.Producer
         /// <summary>
         /// Manages <see cref="ProducerConfig.COMPRESSION_TYPE_CONFIG"/>
         /// </summary>
-        public Org.Apache.Kafka.Common.Record.CompressionType CompressionType
+        public ProducerConfigBuilder.CompressionTypes CompressionType
         {
             get
             {
-                return Org.Apache.Kafka.Common.Record.CompressionType.ValueOf(GetProperty<string>(ProducerConfig.COMPRESSION_TYPE_CONFIG));
+                var strName = GetProperty<string>(ProducerConfig.COMPRESSION_TYPE_CONFIG);
+                if (System.Enum.TryParse<ProducerConfigBuilder.CompressionTypes>(strName, out var rest))
+                {
+                    return rest;
+                }
+                return ProducerConfigBuilder.CompressionTypes.none;
             }
             set
             {
-                SetProperty(ProducerConfig.COMPRESSION_TYPE_CONFIG, value.ToString());
+                SetProperty(ProducerConfig.COMPRESSION_TYPE_CONFIG, System.Enum.GetName(typeof(ProducerConfigBuilder.CompressionTypes), value).ToLowerInvariant());
             }
         }
         /// <summary>
         /// Manages <see cref="ProducerConfig.COMPRESSION_TYPE_CONFIG"/>
         /// </summary>
-        public ProducerConfigBuilder WithCompressionType(Org.Apache.Kafka.Common.Record.CompressionType compressionType)
+        public ProducerConfigBuilder WithCompressionType(ProducerConfigBuilder.CompressionTypes compressionType)
         {
             var clone = Clone();
             clone.CompressionType = compressionType;

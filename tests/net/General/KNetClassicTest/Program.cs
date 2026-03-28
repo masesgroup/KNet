@@ -17,6 +17,7 @@
 */
 
 using Java.Util;
+using MASES.JNet.Specific;
 using MASES.KNet.Admin;
 using MASES.KNet.Common;
 using MASES.KNet.Consumer;
@@ -169,8 +170,8 @@ namespace MASES.KNetClassicTest
                                                         .WithAcks(ProducerConfigBuilder.AcksTypes.All)
                                                         .WithRetries(0)
                                                         .WithLingerMs(1)
-                                                        .WithKeySerializerClass("org.apache.kafka.common.serialization.StringSerializer")
-                                                        .WithValueSerializerClass("org.apache.kafka.common.serialization.StringSerializer")
+                                                        .WithKeySerializerClass(JNetHelper.Class<StringSerializer>()) // "org.apache.kafka.common.serialization.StringSerializer")
+                                                        .WithValueSerializerClass(JNetHelper.Class<StringSerializer>()) //"org.apache.kafka.common.serialization.StringSerializer")
                                                         .ToProperties();
 
                 Serializer<string> keySerializer = null;

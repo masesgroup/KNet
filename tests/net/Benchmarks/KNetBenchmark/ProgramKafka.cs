@@ -19,6 +19,7 @@
 using Java.Util;
 using MASES.JCOBridge.C2JBridge;
 using MASES.JCOBridge.C2JBridge.JVMInterop;
+using MASES.JNet.Specific;
 using MASES.KNet.Consumer;
 using MASES.KNet.Producer;
 using Org.Apache.Kafka.Clients.Consumer;
@@ -53,8 +54,8 @@ namespace MASES.KNet.Benchmark
                                                         .WithSendBuffer(SocketSendBufferBytes)
                                                         .WithReceiveBuffer(SocketReceiveBufferBytes)
                                                         .WithBufferMemory(128 * 1024 * 1024)
-                                                        .WithKeySerializerClass(Java.Lang.Class.ClassNameOf<Org.Apache.Kafka.Common.Serialization.LongSerializer>())
-                                                        .WithValueSerializerClass(Java.Lang.Class.ClassNameOf<Org.Apache.Kafka.Common.Serialization.ByteArraySerializer>())
+                                                        .WithKeySerializerClass(JNetHelper.Class<LongSerializer>())
+                                                        .WithValueSerializerClass(JNetHelper.Class<ByteArraySerializer>())
                                                         .WithPartitionerIgnoreKeys(true)
                                                         .ToProperties();
                 if (UseSerdes)

@@ -290,7 +290,7 @@ namespace MASES.KNet
         /// <summary>
         /// Manages <see cref="CommonClientConfigs.SECURITY_PROTOCOL_CONFIG"/>
         /// </summary>
-        public T WithSecurityProtocol(string securityProtocol)
+        public T WithSecurityProtocol(SecurityProtocol securityProtocol)
         {
             var clone = Clone();
             clone.SecurityProtocol = securityProtocol;
