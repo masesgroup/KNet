@@ -22,6 +22,7 @@ using MASES.KNet.Common;
 using Org.Apache.Kafka.Clients;
 using Org.Apache.Kafka.Common.Config;
 using Org.Apache.Kafka.Common.Metrics;
+using Org.Apache.Kafka.Common.Security.Auth;
 
 namespace MASES.KNet
 {
@@ -257,7 +258,7 @@ namespace MASES.KNet
         /// <summary>
         /// Manages <see cref="CommonClientConfigs.METRICS_RECORDING_LEVEL_CONFIG"/>
         /// </summary>
-        public Sensor.RecordingLevel MetricRecordingLevel { get { return GetProperty<Sensor.RecordingLevel>(CommonClientConfigs.METRICS_RECORDING_LEVEL_CONFIG); } set { SetProperty(CommonClientConfigs.METRICS_RECORDING_LEVEL_CONFIG, value); } }
+        public Sensor.RecordingLevel MetricRecordingLevel { get { return Sensor.RecordingLevel.ValueOf(GetProperty<string>(CommonClientConfigs.METRICS_RECORDING_LEVEL_CONFIG)); } set { SetProperty(CommonClientConfigs.METRICS_RECORDING_LEVEL_CONFIG, value.ToString()); } }
         /// <summary>
         /// Manages <see cref="CommonClientConfigs.METRICS_RECORDING_LEVEL_CONFIG"/>
         /// </summary>
@@ -285,7 +286,7 @@ namespace MASES.KNet
         /// <summary>
         /// Manages <see cref="CommonClientConfigs.SECURITY_PROTOCOL_CONFIG"/>
         /// </summary>
-        public string SecurityProtocol { get { return GetProperty<string>(CommonClientConfigs.SECURITY_PROTOCOL_CONFIG); } set { SetProperty(CommonClientConfigs.SECURITY_PROTOCOL_CONFIG, value); } }
+        public SecurityProtocol SecurityProtocol { get { return SecurityProtocol.ValueOf(GetProperty<string>(CommonClientConfigs.SECURITY_PROTOCOL_CONFIG)); } set { SetProperty(CommonClientConfigs.SECURITY_PROTOCOL_CONFIG, value.ToString()); } }
         /// <summary>
         /// Manages <see cref="CommonClientConfigs.SECURITY_PROTOCOL_CONFIG"/>
         /// </summary>
@@ -506,11 +507,11 @@ namespace MASES.KNet
         /// <summary>
         /// Manages <see cref="CommonClientConfigs.METADATA_RECOVERY_STRATEGY_CONFIG"/>
         /// </summary>
-        public string MetadataRecoveryStrategy { get { return GetProperty<string>(CommonClientConfigs.METADATA_RECOVERY_STRATEGY_CONFIG); } set { SetProperty(CommonClientConfigs.METADATA_RECOVERY_STRATEGY_CONFIG, value); } }
+        public MetadataRecoveryStrategy MetadataRecoveryStrategy { get { return MetadataRecoveryStrategy.ValueOf(GetProperty<string>(CommonClientConfigs.METADATA_RECOVERY_STRATEGY_CONFIG)); } set { SetProperty(CommonClientConfigs.METADATA_RECOVERY_STRATEGY_CONFIG, value.ToString()); } }
         /// <summary>
         /// Manages <see cref="CommonClientConfigs.METADATA_RECOVERY_STRATEGY_CONFIG"/>
         /// </summary>
-        public T WithMetadataRecoveryStrategy(string metadataRecoveryStrategy)
+        public T WithMetadataRecoveryStrategy(MetadataRecoveryStrategy metadataRecoveryStrategy)
         {
             var clone = Clone();
             clone.MetadataRecoveryStrategy = metadataRecoveryStrategy;

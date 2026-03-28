@@ -174,7 +174,7 @@ namespace MASES.KNet.Consumer
         /// <summary>
         /// Manages <see cref="ConsumerConfig.GROUP_PROTOCOL_CONFIG"/>
         /// </summary>
-        public GroupProtocol GroupProtocol { get { return GetProperty<GroupProtocol>(ConsumerConfig.GROUP_PROTOCOL_CONFIG); } set { SetProperty(ConsumerConfig.GROUP_PROTOCOL_CONFIG, value); } }
+        public GroupProtocol GroupProtocol { get { return GroupProtocol.ValueOf(GetProperty<string>(ConsumerConfig.GROUP_PROTOCOL_CONFIG)); } set { SetProperty(ConsumerConfig.GROUP_PROTOCOL_CONFIG, value.ToString()); } }
         /// <summary>
         /// Manages <see cref="ConsumerConfig.GROUP_PROTOCOL_CONFIG"/>
         /// </summary>
@@ -279,7 +279,7 @@ namespace MASES.KNet.Consumer
         /// Manages <see cref="ConsumerConfig.ISOLATION_LEVEL_CONFIG"/>
         /// </summary>
         // IsolationLevel.READ_COMMITTED.toString().toLowerCase(Locale.ROOT), IsolationLevel.READ_UNCOMMITTED.toString().toLowerCase(Locale.ROOT)
-        public IsolationLevel IsolationLevel { get { return GetProperty<IsolationLevel>(ConsumerConfig.ISOLATION_LEVEL_CONFIG); } set { SetProperty(ConsumerConfig.ISOLATION_LEVEL_CONFIG, value); } }
+        public IsolationLevel IsolationLevel { get { return IsolationLevel.ValueOf(GetProperty<string>(ConsumerConfig.ISOLATION_LEVEL_CONFIG)); } set { SetProperty(ConsumerConfig.ISOLATION_LEVEL_CONFIG, value.ToString()); } }
         /// <summary>
         /// Manages <see cref="ConsumerConfig.ISOLATION_LEVEL_CONFIG"/>
         /// </summary>

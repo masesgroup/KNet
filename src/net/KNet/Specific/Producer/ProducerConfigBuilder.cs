@@ -19,6 +19,7 @@
 using Java.Lang;
 using Java.Util;
 using Org.Apache.Kafka.Clients.Producer;
+using System;
 
 namespace MASES.KNet.Producer
 {
@@ -52,6 +53,7 @@ namespace MASES.KNet.Producer
         /// <summary>
         /// Used from <see cref="CompressionType"/> and <see cref="WithCompressionType(CompressionTypes)"/>
         /// </summary>
+        [Obsolete("Replaced with Org.Apache.Kafka.Common.Record.CompressionType", true)]
         public enum CompressionTypes
         {
             /// <summary>
@@ -261,26 +263,21 @@ namespace MASES.KNet.Producer
         /// <summary>
         /// Manages <see cref="ProducerConfig.COMPRESSION_TYPE_CONFIG"/>
         /// </summary>
-        public ProducerConfigBuilder.CompressionTypes CompressionType
+        public Org.Apache.Kafka.Common.Record.CompressionType CompressionType
         {
             get
             {
-                var strName = GetProperty<string>(ProducerConfig.COMPRESSION_TYPE_CONFIG);
-                if (System.Enum.TryParse<ProducerConfigBuilder.CompressionTypes>(strName, out var rest))
-                {
-                    return rest;
-                }
-                return ProducerConfigBuilder.CompressionTypes.none;
+                return Org.Apache.Kafka.Common.Record.CompressionType.ValueOf(GetProperty<string>(ProducerConfig.COMPRESSION_TYPE_CONFIG));
             }
             set
             {
-                SetProperty(ProducerConfig.COMPRESSION_TYPE_CONFIG, System.Enum.GetName(typeof(ProducerConfigBuilder.CompressionTypes), value).ToLowerInvariant());
+                SetProperty(ProducerConfig.COMPRESSION_TYPE_CONFIG, value.ToString());
             }
         }
         /// <summary>
         /// Manages <see cref="ProducerConfig.COMPRESSION_TYPE_CONFIG"/>
         /// </summary>
-        public ProducerConfigBuilder WithCompressionType(ProducerConfigBuilder.CompressionTypes compressionType)
+        public ProducerConfigBuilder WithCompressionType(Org.Apache.Kafka.Common.Record.CompressionType compressionType)
         {
             var clone = Clone();
             clone.CompressionType = compressionType;
@@ -315,11 +312,11 @@ namespace MASES.KNet.Producer
         /// <summary>
         /// Manages <see cref="ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG"/>
         /// </summary>
-        public string KeySerializerClass { get { return GetProperty<string>(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG); } set { SetProperty(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, value); } }
+        public Class KeySerializerClass { get { return GetProperty<Class>(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG); } set { SetProperty(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, value); } }
         /// <summary>
         /// Manages <see cref="ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG"/>
         /// </summary>
-        public ProducerConfigBuilder WithKeySerializerClass(string keySerializerClass)
+        public ProducerConfigBuilder WithKeySerializerClass(Class keySerializerClass)
         {
             var clone = Clone();
             clone.KeySerializerClass = keySerializerClass;
@@ -328,11 +325,11 @@ namespace MASES.KNet.Producer
         /// <summary>
         /// Manages <see cref="ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG"/>
         /// </summary>
-        public string ValueSerializerClass { get { return GetProperty<string>(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG); } set { SetProperty(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, value); } }
+        public Class ValueSerializerClass { get { return GetProperty<Class>(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG); } set { SetProperty(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, value); } }
         /// <summary>
         /// Manages <see cref="ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG"/>
         /// </summary>
-        public ProducerConfigBuilder WithValueSerializerClass(string valueSerializerClass)
+        public ProducerConfigBuilder WithValueSerializerClass(Class valueSerializerClass)
         {
             var clone = Clone();
             clone.ValueSerializerClass = valueSerializerClass;
