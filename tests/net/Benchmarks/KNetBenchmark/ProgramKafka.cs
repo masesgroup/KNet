@@ -241,8 +241,8 @@ namespace MASES.KNet.Benchmark
                                                         .WithSendBuffer(SocketSendBufferBytes)
                                                         .WithReceiveBuffer(SocketReceiveBufferBytes)
                                                         .WithFetchMinBytes(FetchMinBytes)
-                                                        .WithKeyDeserializerClass(Java.Lang.Class.ClassNameOf<Org.Apache.Kafka.Common.Serialization.LongDeserializer>())
-                                                        .WithValueDeserializerClass(Java.Lang.Class.ClassNameOf<Org.Apache.Kafka.Common.Serialization.ByteArrayDeserializer>())
+                                                        .WithKeyDeserializerClass(Java.Lang.Class.Of<Org.Apache.Kafka.Common.Serialization.LongDeserializer>())
+                                                        .WithValueDeserializerClass(Java.Lang.Class.Of<Org.Apache.Kafka.Common.Serialization.ByteArrayDeserializer>())
                                                         .WithAutoOffsetReset(ConsumerConfigBuilder.AutoOffsetResetTypes.EARLIEST)
                                                         .ToProperties();
                 if (UseSerdes)

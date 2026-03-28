@@ -51,8 +51,8 @@ namespace MASES.KNet.Template.KNetProducer
                                                     .WithAcks(ProducerConfigBuilder.AcksTypes.All)
                                                     .WithRetries(0)
                                                     .WithLingerMs(1)
-                                                    .WithKeySerializerClass(Java.Lang.Class.Of<StringSerializer>()) //  "org.apache.kafka.common.serialization.StringSerializer")
-                                                    .WithValueSerializerClass(Java.Lang.Class.Of<StringSerializer>()) // "org.apache.kafka.common.serialization.StringSerializer")
+                                                    .WithKeySerializerClass(Java.Lang.Class.Of<StringSerializer>())
+                                                    .WithValueSerializerClass(Java.Lang.Class.Of<StringSerializer>())
                                                     .ToProperties();
 
             Serializer<string> keySerializer = null;
