@@ -178,8 +178,8 @@ namespace MASES.KNetClassicTest
                                                         .WithAcks(ProducerConfigBuilder.AcksTypes.All)
                                                         .WithRetries(0)
                                                         .WithLingerMs(1)
-                                                        .WithKeySerializerClass(Java.Lang.Class.Of<StringSerializer>()) // "org.apache.kafka.common.serialization.StringSerializer")
-                                                        .WithValueSerializerClass(Java.Lang.Class.Of<StringSerializer>()) //"org.apache.kafka.common.serialization.StringSerializer")
+                                                        .WithKeySerializerClass(Java.Lang.Class.Of<StringSerializer>())
+                                                        .WithValueSerializerClass(Java.Lang.Class.Of<StringSerializer>())
                                                         .ToProperties();
 
                 Serializer<string> keySerializer = null;
@@ -272,8 +272,8 @@ namespace MASES.KNetClassicTest
                                                         .WithGroupId("test")
                                                         .WithEnableAutoCommit(true)
                                                         .WithAutoCommitIntervalMs(1000)
-                                                        .WithKeyDeserializerClass(Java.Lang.Class.Of<StringDeserializer>()) // "org.apache.kafka.common.serialization.StringDeserializer")
-                                                        .WithValueDeserializerClass(Java.Lang.Class.Of<StringDeserializer>()) // "org.apache.kafka.common.serialization.StringDeserializer")
+                                                        .WithKeyDeserializerClass(Java.Lang.Class.Of<StringDeserializer>())
+                                                        .WithValueDeserializerClass(Java.Lang.Class.Of<StringDeserializer>())
                                                         .ToProperties();
 
                 Deserializer<string> keyDeserializer = null;
