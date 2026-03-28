@@ -74,7 +74,15 @@ namespace MASES.KNetClassicTest
 
                 Console.CancelKeyPress += Console_CancelKeyPress;
                 Console.WriteLine("Press Ctrl-C to exit");
-                resetEvent.WaitOne();
+                if (Environment.GetEnvironmentVariable("GITHUB_ACTIONS") != null)
+                {
+                    resetEvent.WaitOne(5000);
+                    resetEvent.Set();
+                }
+                else
+                {
+                    resetEvent.WaitOne();
+                }
                 Thread.Sleep(2000); // wait the threads exit
             }
             catch (Exception e)

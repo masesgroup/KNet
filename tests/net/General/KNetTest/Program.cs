@@ -78,20 +78,20 @@ namespace MASES.KNetTest
                     {
                         var arg = appArgs[i].ToLowerInvariant();
 
-                        if (arg == "deleteTopic".ToLowerInvariant()) { deleteTopic = true; continue; }
-                        if (arg == "runBuffered".ToLowerInvariant()) { runBuffered = true; continue; }
-                        if (arg == "consoleOutput".ToLowerInvariant()) { consoleOutput = true; continue; }
-                        if (arg == "useProduceCallback".ToLowerInvariant()) { useProduceCallback = true; continue; }
-                        if (arg == "useConsumeCallback".ToLowerInvariant()) { useConsumeCallback = true; continue; }
-                        if (arg == "withExtraValue".ToLowerInvariant()) { withExtraValue = true; NonParallelLimit /= 10; continue; }
-                        if (arg == "withBigExtraValue".ToLowerInvariant()) { withBigExtraValue = true; NonParallelLimit /= 10; continue; }
-                        if (arg == "withBigBigExtraValue".ToLowerInvariant()) { withBigBigExtraValue = true; NonParallelLimit /= 100; continue; }
-                        if (arg == "onlyProduce".ToLowerInvariant()) { onlyProduce = true; continue; }
-                        if (arg == "flushWhileSend".ToLowerInvariant()) { flushWhileSend = true; continue; }
-                        if (arg == "withAck".ToLowerInvariant()) { withAck = true; continue; }
-                        if (arg == "runInParallel".ToLowerInvariant()) { runInParallel = true; continue; }
-                        if (arg == "avoidThrows".ToLowerInvariant()) { avoidThrows = true; continue; }
-                        if (arg == "randomizeTopicName".ToLowerInvariant()) { randomizeTopicName = true; continue; }
+                        if (arg.Equals("deleteTopic", StringComparison.InvariantCultureIgnoreCase)) { deleteTopic = true; continue; }
+                        if (arg.Equals("runBuffered", StringComparison.InvariantCultureIgnoreCase)) { runBuffered = true; continue; }
+                        if (arg.Equals("consoleOutput", StringComparison.InvariantCultureIgnoreCase)) { consoleOutput = true; continue; }
+                        if (arg.Equals("useProduceCallback", StringComparison.InvariantCultureIgnoreCase)) { useProduceCallback = true; continue; }
+                        if (arg.Equals("useConsumeCallback", StringComparison.InvariantCultureIgnoreCase)) { useConsumeCallback = true; continue; }
+                        if (arg.Equals("withExtraValue", StringComparison.InvariantCultureIgnoreCase)) { withExtraValue = true; NonParallelLimit /= 10; continue; }
+                        if (arg.Equals("withBigExtraValue", StringComparison.InvariantCultureIgnoreCase)) { withBigExtraValue = true; NonParallelLimit /= 10; continue; }
+                        if (arg.Equals("withBigBigExtraValue", StringComparison.InvariantCultureIgnoreCase)) { withBigBigExtraValue = true; NonParallelLimit /= 100; continue; }
+                        if (arg.Equals("onlyProduce", StringComparison.InvariantCultureIgnoreCase)) { onlyProduce = true; continue; }
+                        if (arg.Equals("flushWhileSend", StringComparison.InvariantCultureIgnoreCase)) { flushWhileSend = true; continue; }
+                        if (arg.Equals("withAck", StringComparison.InvariantCultureIgnoreCase)) { withAck = true; continue; }
+                        if (arg.Equals("runInParallel", StringComparison.InvariantCultureIgnoreCase)) { runInParallel = true; continue; }
+                        if (arg.Equals("avoidThrows", StringComparison.InvariantCultureIgnoreCase)) { avoidThrows = true; continue; }
+                        if (arg.Equals("randomizeTopicName", StringComparison.InvariantCultureIgnoreCase)) { randomizeTopicName = true; continue; }
                         Console.WriteLine($"Unknown {arg}");
                     }
                 }
