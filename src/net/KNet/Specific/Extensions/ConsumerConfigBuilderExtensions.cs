@@ -16,12 +16,10 @@
 *  Refer to LICENSE for more information.
 */
 
-using MASES.JCOBridge.C2JBridge;
-using Org.Apache.Kafka.Clients.Consumer;
-using Org.Apache.Kafka.Common.Serialization;
-using MASES.KNet.Serialization;
-using System;
 using MASES.KNet.Consumer;
+using MASES.KNet.Serialization;
+using Org.Apache.Kafka.Common.Serialization;
+using System;
 
 namespace MASES.KNet.Extensions
 {
@@ -62,39 +60,39 @@ namespace MASES.KNet.Extensions
 
             if (type == typeof(byte[]))
             {
-                return builder.WithKeyDeserializerClass(JVMBridgeBase.ClassNameOf<ByteArrayDeserializer>());
+                return builder.WithKeyDeserializerClass(Java.Lang.Class.Of<ByteArrayDeserializer>());
             }
             else if (type == typeof(double))
             {
-                return builder.WithKeyDeserializerClass(JVMBridgeBase.ClassNameOf<DoubleDeserializer>());
+                return builder.WithKeyDeserializerClass(Java.Lang.Class.Of<DoubleDeserializer>());
             }
             else if (type == typeof(float))
             {
-                return builder.WithKeyDeserializerClass(JVMBridgeBase.ClassNameOf<FloatDeserializer>());
+                return builder.WithKeyDeserializerClass(Java.Lang.Class.Of<FloatDeserializer>());
             }
             else if (type == typeof(int))
             {
-                return builder.WithKeyDeserializerClass(JVMBridgeBase.ClassNameOf<IntegerDeserializer>());
+                return builder.WithKeyDeserializerClass(Java.Lang.Class.Of<IntegerDeserializer>());
             }
             else if (type == typeof(long))
             {
-                return builder.WithKeyDeserializerClass(JVMBridgeBase.ClassNameOf<LongDeserializer>());
+                return builder.WithKeyDeserializerClass(Java.Lang.Class.Of<LongDeserializer>());
             }
             else if (type == typeof(short))
             {
-                return builder.WithKeyDeserializerClass(JVMBridgeBase.ClassNameOf<ShortDeserializer>());
+                return builder.WithKeyDeserializerClass(Java.Lang.Class.Of<ShortDeserializer>());
             }
             else if (type == typeof(string))
             {
-                return builder.WithKeyDeserializerClass(JVMBridgeBase.ClassNameOf<StringDeserializer>());
+                return builder.WithKeyDeserializerClass(Java.Lang.Class.Of<StringDeserializer>());
             }
             else if (type == typeof(Guid))
             {
-                return builder.WithKeyDeserializerClass(JVMBridgeBase.ClassNameOf<UUIDDeserializer>());
+                return builder.WithKeyDeserializerClass(Java.Lang.Class.Of<UUIDDeserializer>());
             }
             else if (type == typeof(void))
             {
-                return builder.WithKeyDeserializerClass(JVMBridgeBase.ClassNameOf<VoidDeserializer>());
+                return builder.WithKeyDeserializerClass(Java.Lang.Class.Of<VoidDeserializer>());
             }
             // add other
 
@@ -122,39 +120,39 @@ namespace MASES.KNet.Extensions
 
             if (type == typeof(byte[]))
             {
-                return builder.WithValueDeserializerClass(JVMBridgeBase.ClassNameOf<ByteArrayDeserializer>());
+                return builder.WithValueDeserializerClass(Java.Lang.Class.Of<ByteArrayDeserializer>());
             }
             else if (type == typeof(double))
             {
-                return builder.WithValueDeserializerClass(JVMBridgeBase.ClassNameOf<DoubleDeserializer>());
+                return builder.WithValueDeserializerClass(Java.Lang.Class.Of<DoubleDeserializer>());
             }
             else if (type == typeof(float))
             {
-                return builder.WithValueDeserializerClass(JVMBridgeBase.ClassNameOf<FloatDeserializer>());
+                return builder.WithValueDeserializerClass(Java.Lang.Class.Of<FloatDeserializer>());
             }
             else if (type == typeof(int))
             {
-                return builder.WithValueDeserializerClass(JVMBridgeBase.ClassNameOf<IntegerDeserializer>());
+                return builder.WithValueDeserializerClass(Java.Lang.Class.Of<IntegerDeserializer>());
             }
             else if (type == typeof(long))
             {
-                return builder.WithValueDeserializerClass(JVMBridgeBase.ClassNameOf<LongDeserializer>());
+                return builder.WithValueDeserializerClass(Java.Lang.Class.Of<LongDeserializer>());
             }
             else if (type == typeof(short))
             {
-                return builder.WithValueDeserializerClass(JVMBridgeBase.ClassNameOf<ShortDeserializer>());
+                return builder.WithValueDeserializerClass(Java.Lang.Class.Of<ShortDeserializer>());
             }
             else if (type == typeof(string))
             {
-                return builder.WithValueDeserializerClass(JVMBridgeBase.ClassNameOf<StringDeserializer>());
+                return builder.WithValueDeserializerClass(Java.Lang.Class.Of<StringDeserializer>());
             }
             else if (type == typeof(Guid))
             {
-                return builder.WithValueDeserializerClass(JVMBridgeBase.ClassNameOf<UUIDDeserializer>());
+                return builder.WithValueDeserializerClass(Java.Lang.Class.Of<UUIDDeserializer>());
             }
             else if (type == typeof(void))
             {
-                return builder.WithValueDeserializerClass(JVMBridgeBase.ClassNameOf<VoidDeserializer>());
+                return builder.WithValueDeserializerClass(Java.Lang.Class.Of<VoidDeserializer>());
             }
             // add other
 

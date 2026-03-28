@@ -16,13 +16,10 @@
 *  Refer to LICENSE for more information.
 */
 
-using MASES.JCOBridge.C2JBridge;
-using Org.Apache.Kafka.Clients.Producer;
 using Org.Apache.Kafka.Common.Serialization;
 using MASES.KNet.Serialization;
 using System;
 using MASES.KNet.Producer;
-using MASES.JNet.Specific;
 
 namespace MASES.KNet.Extensions
 {
@@ -63,39 +60,39 @@ namespace MASES.KNet.Extensions
 
             if (type == typeof(byte[]))
             {
-                return builder.WithKeySerializerClass(JNetHelper.Class<ByteArraySerializer>());
+                return builder.WithKeySerializerClass(Java.Lang.Class.Of<ByteArraySerializer>());
             }
             else if (type == typeof(double))
             {
-                return builder.WithKeySerializerClass(JNetHelper.Class<DoubleSerializer>());
+                return builder.WithKeySerializerClass(Java.Lang.Class.Of<DoubleSerializer>());
             }
             else if (type == typeof(float))
             {
-                return builder.WithKeySerializerClass(JNetHelper.Class<FloatSerializer>());
+                return builder.WithKeySerializerClass(Java.Lang.Class.Of<FloatSerializer>());
             }
             else if (type == typeof(int))
             {
-                return builder.WithKeySerializerClass(JNetHelper.Class<IntegerSerializer>());
+                return builder.WithKeySerializerClass(Java.Lang.Class.Of<IntegerSerializer>());
             }
             else if (type == typeof(long))
             {
-                return builder.WithKeySerializerClass(JNetHelper.Class<LongSerializer>());
+                return builder.WithKeySerializerClass(Java.Lang.Class.Of<LongSerializer>());
             }
             else if (type == typeof(short))
             {
-                return builder.WithKeySerializerClass(JNetHelper.Class<ShortSerializer>());
+                return builder.WithKeySerializerClass(Java.Lang.Class.Of<ShortSerializer>());
             }
             else if (type == typeof(string))
             {
-                return builder.WithKeySerializerClass(JNetHelper.Class<StringSerializer>());
+                return builder.WithKeySerializerClass(Java.Lang.Class.Of<StringSerializer>());
             }
             else if (type == typeof(Guid))
             {
-                return builder.WithKeySerializerClass(JNetHelper.Class<UUIDSerializer>());
+                return builder.WithKeySerializerClass(Java.Lang.Class.Of<UUIDSerializer>());
             }
             else if (type == typeof(void))
             {
-                return builder.WithKeySerializerClass(JNetHelper.Class<VoidSerializer>());
+                return builder.WithKeySerializerClass(Java.Lang.Class.Of<VoidSerializer>());
             }
             // add other
 
@@ -123,39 +120,39 @@ namespace MASES.KNet.Extensions
 
             if (type == typeof(byte[]))
             {
-                return builder.WithValueSerializerClass(JNetHelper.Class<ByteArraySerializer>());
+                return builder.WithValueSerializerClass(Java.Lang.Class.Of<ByteArraySerializer>());
             }
             else if (type == typeof(double))
             {
-                return builder.WithValueSerializerClass(JNetHelper.Class<DoubleSerializer>());
+                return builder.WithValueSerializerClass(Java.Lang.Class.Of<DoubleSerializer>());
             }
             else if (type == typeof(float))
             {
-                return builder.WithValueSerializerClass(JNetHelper.Class<FloatSerializer>());
+                return builder.WithValueSerializerClass(Java.Lang.Class.Of<FloatSerializer>());
             }
             else if (type == typeof(int))
             {
-                return builder.WithValueSerializerClass(JNetHelper.Class<IntegerSerializer>());
+                return builder.WithValueSerializerClass(Java.Lang.Class.Of<IntegerSerializer>());
             }
             else if (type == typeof(long))
             {
-                return builder.WithValueSerializerClass(JNetHelper.Class<LongSerializer>());
+                return builder.WithValueSerializerClass(Java.Lang.Class.Of<LongSerializer>());
             }
             else if (type == typeof(short))
             {
-                return builder.WithValueSerializerClass(JNetHelper.Class<ShortSerializer>());
+                return builder.WithValueSerializerClass(Java.Lang.Class.Of<ShortSerializer>());
             }
             else if (type == typeof(string))
             {
-                return builder.WithValueSerializerClass(JNetHelper.Class<StringSerializer>());
+                return builder.WithValueSerializerClass(Java.Lang.Class.Of<StringSerializer>());
             }
             else if (type == typeof(Guid))
             {
-                return builder.WithValueSerializerClass(JNetHelper.Class<UUIDSerializer>());
+                return builder.WithValueSerializerClass(Java.Lang.Class.Of<UUIDSerializer>());
             }
             else if (type == typeof(void))
             {
-                return builder.WithValueSerializerClass(JNetHelper.Class<VoidSerializer>());
+                return builder.WithValueSerializerClass(Java.Lang.Class.Of<VoidSerializer>());
             }
             // add other
 

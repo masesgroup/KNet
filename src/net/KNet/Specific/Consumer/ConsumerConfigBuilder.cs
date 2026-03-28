@@ -226,11 +226,11 @@ namespace MASES.KNet.Consumer
         /// <summary>
         /// Manages <see cref="ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG"/>
         /// </summary>
-        public string KeyDeserializerClass { get { return GetProperty<string>(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG); } set { SetProperty(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, value); } }
+        public Class KeyDeserializerClass { get { return GetProperty<Class>(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG); } set { SetProperty(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, value); } }
         /// <summary>
         /// Manages <see cref="ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG"/>
         /// </summary>
-        public ConsumerConfigBuilder WithKeyDeserializerClass(string keyDeserializerClass)
+        public ConsumerConfigBuilder WithKeyDeserializerClass(Class keyDeserializerClass)
         {
             var clone = Clone();
             clone.KeyDeserializerClass = keyDeserializerClass;
@@ -239,11 +239,11 @@ namespace MASES.KNet.Consumer
         /// <summary>
         /// Manages <see cref="ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG"/>
         /// </summary>
-        public string ValueDeserializerClass { get { return GetProperty<string>(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG); } set { SetProperty(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, value); } }
+        public Class ValueDeserializerClass { get { return GetProperty<Class>(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG); } set { SetProperty(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, value); } }
         /// <summary>
         /// Manages <see cref="ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG"/>
         /// </summary>
-        public ConsumerConfigBuilder WithValueDeserializerClass(string valueDeserializerClass)
+        public ConsumerConfigBuilder WithValueDeserializerClass(Class valueDeserializerClass)
         {
             var clone = Clone();
             clone.ValueDeserializerClass = valueDeserializerClass;
