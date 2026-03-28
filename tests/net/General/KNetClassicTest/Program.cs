@@ -76,7 +76,7 @@ namespace MASES.KNetClassicTest
                 Console.WriteLine("Press Ctrl-C to exit");
                 if (Environment.GetEnvironmentVariable("GITHUB_ACTIONS") != null)
                 {
-                    resetEvent.WaitOne(5000);
+                    resetEvent.WaitOne(10000);
                     resetEvent.Set();
                 }
                 else
