@@ -27,12 +27,12 @@ on:
         required: false
         default: true
         type: boolean
-      ExecuteOnWindows:
+      EnableWindowsTests:
         description: 'Executes tests on Windows'
         required: false
         default: false
         type: boolean
-      ExecuteOnMacOS:
+      EnableMacOSTests:
         description: 'Executes tests on MacOS'
         required: false
         default: false
@@ -160,8 +160,8 @@ jobs:
       ExecuteOnMoreOSes: ${{ inputs.ExecuteOnMoreOSes || github.event_name == 'schedule' }}
       ExecuteOnLargerJDKSet: ${{ inputs.ExecuteOnLargerJDKSet || github.ref_name == 'master' || github.event_name == 'schedule' }}
       EnableLinuxTests: true
-      EnableWindowsTests: ${{ inputs.ExecuteOnWindows || github.ref_name == 'master' || github.event_name == 'schedule' }}
-      EnableMacOSTests: ${{ inputs.ExecuteOnMacOS || github.event_name == 'schedule' }}
+      EnableWindowsTests: ${{ inputs.EnableWindowsTests || github.ref_name == 'master' || github.event_name == 'schedule' }}
+      EnableMacOSTests: ${{ inputs.EnableMacOSTests || github.event_name == 'schedule' }}
       UseLastRepositoryBuild: ${{ inputs.UseLastRepositoryBuild || false }}
       ForceContinueOnError: ${{ inputs.ForceContinueOnError || false }}
       UploadServerLogs: ${{ inputs.ForceContinueOnError || false }}
