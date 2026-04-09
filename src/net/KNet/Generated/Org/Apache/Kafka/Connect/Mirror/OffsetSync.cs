@@ -29,7 +29,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
     /// <summary>
     /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.2.0/org/apache/kafka/connect/mirror/OffsetSync.html"/>
     /// </summary>
-    public partial class OffsetSync : Java.Lang.Record
+    public partial class OffsetSync : MASES.JCOBridge.C2JBridge.JVMBridgeBaseCore<OffsetSync>
     {
         const string _bridgeClassName = "org.apache.kafka.connect.mirror.OffsetSync";
         /// <summary>

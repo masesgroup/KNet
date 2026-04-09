@@ -29,7 +29,7 @@ namespace Org.Apache.Kafka.Raft
     /// <summary>
     /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.0/org/apache/kafka/raft/LeaderAndEpoch.html"/>
     /// </summary>
-    public partial class LeaderAndEpoch : Java.Lang.Record
+    public partial class LeaderAndEpoch : MASES.JCOBridge.C2JBridge.JVMBridgeBaseCore<LeaderAndEpoch>
     {
         const string _bridgeClassName = "org.apache.kafka.raft.LeaderAndEpoch";
         /// <summary>
