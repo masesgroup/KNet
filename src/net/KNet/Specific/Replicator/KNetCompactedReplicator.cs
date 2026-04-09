@@ -448,13 +448,14 @@ namespace MASES.KNet.Replicator
             static void OnDemandRetrieve(IConsumer<K, V, TJVMK, TJVMV> consumer, string topic, K key, ILocalDataStorage data)
             {
                 var topicPartition = new Org.Apache.Kafka.Common.TopicPartition(topic, data.Partition);
+                System.GC.SuppressFinalize(topicPartition);
                 var topics = Java.Util.Collections.Singleton(topicPartition);
+                System.GC.SuppressFinalize(topics);
                 try
                 {
                     consumer.Assign(topics);
                     consumer.Seek(topicPartition, data.Offset);
-                    var results = consumer.Poll(TimeSpan.FromMinutes(1));
-                    if (results == null) throw new InvalidOperationException("Failed to get records from remote.");
+                    var results = consumer.Poll(TimeSpan.FromMinutes(1)) ?? throw new InvalidOperationException("Failed to get records from remote.");
                     foreach (var result in results)
                     {
                         if (!Equals(result.Key, key)) continue;
@@ -466,8 +467,8 @@ namespace MASES.KNet.Replicator
                 }
                 finally
                 {
-                    topicPartition?.Dispose();
-                    topics?.Dispose();
+                    System.GC.ReRegisterForFinalize(topicPartition);
+                    System.GC.ReRegisterForFinalize(topics);
                 }
             }
         }
@@ -1047,6 +1048,7 @@ namespace MASES.KNet.Replicator
             bool firstExecution = false;
             int index = (int)o;
             var topics = Java.Util.Collections.Singleton((Java.Lang.String)StateName);
+            System.GC.SuppressFinalize(topics);
             try
             {
                 _consumers[index].Subscribe(topics, _consumerListeners[index]);
@@ -1087,7 +1089,7 @@ namespace MASES.KNet.Replicator
             finally
             {
                 _consumers[index].Unsubscribe();
-                topics?.Dispose();
+                System.GC.ReRegisterForFinalize(topics);
             }
         }
         [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
@@ -1129,11 +1131,12 @@ namespace MASES.KNet.Replicator
 
             if (ConsumerInstances > Partitions) throw new InvalidOperationException("ConsumerInstances cannot be high than Partitions");
 
-            using Java.Util.Properties props = AdminClientConfigBuilder.Create().WithBootstrapServers(BootstrapServers).ToProperties();
-            using var admin = Org.Apache.Kafka.Clients.Admin.KafkaAdminClient.Create(props);
-
             if (AccessRights.HasFlag(AccessRightsType.Write))
             {
+                Java.Util.Properties props = AdminClientConfigBuilder.Create().WithBootstrapServers(BootstrapServers).ToProperties();
+                System.GC.SuppressFinalize(props);
+                using var admin = Org.Apache.Kafka.Clients.Admin.KafkaAdminClient.Create(props);
+
                 var topic = new Org.Apache.Kafka.Clients.Admin.NewTopic(StateName, Partitions, ReplicationFactor);
                 _topicConfig ??= TopicConfigBuilder.Create().WithDeleteRetentionMs(100)
                                                             .WithMinCleanableDirtyRatio(0.01)
@@ -1142,6 +1145,7 @@ namespace MASES.KNet.Replicator
 
                 TopicConfig.CleanupPolicy = TopicConfigBuilder.CleanupPolicyTypes.Compact | TopicConfigBuilder.CleanupPolicyTypes.Delete;
                 topic = topic.Configs(TopicConfig);
+                System.GC.SuppressFinalize(topic);
                 try
                 {
                     admin.CreateTopic(topic);
@@ -1149,6 +1153,7 @@ namespace MASES.KNet.Replicator
                 catch (Org.Apache.Kafka.Common.Errors.TopicExistsException)
                 {
                     var topics = Java.Util.Collections.Singleton((Java.Lang.String)StateName);
+                    System.GC.SuppressFinalize(topics);
                     // recover partitions of the topic
                     try
                     {
@@ -1164,9 +1169,13 @@ namespace MASES.KNet.Replicator
                         }
                     }
                     catch { }
-                    finally { topics?.Dispose(); }
+                    finally { System.GC.ReRegisterForFinalize(topics); }
                 }
-                finally { topic?.Dispose(); }
+                finally 
+                { 
+                    System.GC.ReRegisterForFinalize(topic);
+                    System.GC.ReRegisterForFinalize(props);
+                }
             }
             _disposeKeySerDes = false;
             if (KeySerDesSelector == null && KeySerDes == null && KNetSerialization.IsInternalManaged<K>())
