@@ -272,12 +272,10 @@
     "org.rocksdb.AbstractCompactionFilter",
     "org.rocksdb.AbstractCompactionFilterFactory",
     "org.rocksdb.AbstractMutableOptions",
-    "org.rocksdb.AbstractMutableOptions$AbstractMutableOptionsBuilder",
     "org.rocksdb.AdvancedColumnFamilyOptionsInterface",
     "org.rocksdb.BackupEngine",
     "org.rocksdb.CassandraCompactionFilter",
     "org.rocksdb.MutableDBOptions",
-    "org.rocksdb.MutableDBOptions$MutableDBOptionsBuilder",
     "org.rocksdb.OptionString",
     "org.rocksdb.RemoveEmptyValueCompactionFilter"
   ]
