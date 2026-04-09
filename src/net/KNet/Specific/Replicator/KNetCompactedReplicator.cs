@@ -1131,11 +1131,12 @@ namespace MASES.KNet.Replicator
 
             if (ConsumerInstances > Partitions) throw new InvalidOperationException("ConsumerInstances cannot be high than Partitions");
 
-            using Java.Util.Properties props = AdminClientConfigBuilder.Create().WithBootstrapServers(BootstrapServers).ToProperties();
-            using var admin = Org.Apache.Kafka.Clients.Admin.KafkaAdminClient.Create(props);
-
             if (AccessRights.HasFlag(AccessRightsType.Write))
             {
+                Java.Util.Properties props = AdminClientConfigBuilder.Create().WithBootstrapServers(BootstrapServers).ToProperties();
+                System.GC.SuppressFinalize(props);
+                using var admin = Org.Apache.Kafka.Clients.Admin.KafkaAdminClient.Create(props);
+
                 var topic = new Org.Apache.Kafka.Clients.Admin.NewTopic(StateName, Partitions, ReplicationFactor);
                 _topicConfig ??= TopicConfigBuilder.Create().WithDeleteRetentionMs(100)
                                                             .WithMinCleanableDirtyRatio(0.01)
@@ -1170,7 +1171,11 @@ namespace MASES.KNet.Replicator
                     catch { }
                     finally { System.GC.ReRegisterForFinalize(topics); }
                 }
-                finally { System.GC.ReRegisterForFinalize(topic); }
+                finally 
+                { 
+                    System.GC.ReRegisterForFinalize(topic);
+                    System.GC.ReRegisterForFinalize(props);
+                }
             }
             _disposeKeySerDes = false;
             if (KeySerDesSelector == null && KeySerDes == null && KNetSerialization.IsInternalManaged<K>())
