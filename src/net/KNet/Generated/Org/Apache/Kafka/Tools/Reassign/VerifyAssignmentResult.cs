@@ -29,7 +29,7 @@ namespace Org.Apache.Kafka.Tools.Reassign
     /// <summary>
     /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.2.0/org/apache/kafka/tools/reassign/VerifyAssignmentResult.html"/>
     /// </summary>
-    public partial class VerifyAssignmentResult : Java.Lang.Record
+    public partial class VerifyAssignmentResult : MASES.JCOBridge.C2JBridge.JVMBridgeBaseCore<VerifyAssignmentResult>
     {
         const string _bridgeClassName = "org.apache.kafka.tools.reassign.VerifyAssignmentResult";
         /// <summary>

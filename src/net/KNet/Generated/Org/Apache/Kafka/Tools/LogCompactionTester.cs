@@ -99,7 +99,7 @@ namespace Org.Apache.Kafka.Tools
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.2.0/org/apache/kafka/tools/LogCompactionTester.TestRecord.html"/>
         /// </summary>
-        public partial class TestRecord : Java.Lang.Record
+        public partial class TestRecord : MASES.JCOBridge.C2JBridge.JVMBridgeBaseCore<TestRecord>
         {
             const string _bridgeClassName = "org.apache.kafka.tools.LogCompactionTester$TestRecord";
             /// <summary>

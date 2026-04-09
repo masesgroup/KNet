@@ -99,7 +99,7 @@ namespace Org.Apache.Kafka.Tools
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.2.0/org/apache/kafka/tools/OffsetsUtils.LogOffset.html"/>
         /// </summary>
-        public partial class LogOffset : Java.Lang.Record
+        public partial class LogOffset : Org.Apache.Kafka.Tools.OffsetsUtils.LogOffsetResult
         {
             const string _bridgeClassName = "org.apache.kafka.tools.OffsetsUtils$LogOffset";
             /// <summary>

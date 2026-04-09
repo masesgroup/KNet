@@ -29,7 +29,7 @@ namespace Org.Apache.Kafka.Raft
     /// <summary>
     /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.0/org/apache/kafka/raft/DynamicVoter.html"/>
     /// </summary>
-    public partial class DynamicVoter : Java.Lang.Record
+    public partial class DynamicVoter : MASES.JCOBridge.C2JBridge.JVMBridgeBaseCore<DynamicVoter>
     {
         const string _bridgeClassName = "org.apache.kafka.raft.DynamicVoter";
         /// <summary>
