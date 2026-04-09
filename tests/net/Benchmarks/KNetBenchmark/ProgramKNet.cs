@@ -236,6 +236,7 @@ namespace MASES.KNet.Benchmark
 
                 var consumer = KNetConsumer();
                 var topics = Collections.Singleton((Java.Lang.String)topicName);
+                System.GC.SuppressFinalize(topics);
                 try
                 {
                     int counter = 0;
@@ -270,7 +271,7 @@ namespace MASES.KNet.Benchmark
                 {
                     if (!SharedObjects) { consumer.Dispose(); consumer = null; }
                     rebalanceListener?.Dispose();
-                    topics?.Dispose();
+                    System.GC.ReRegisterForFinalize(topics);
                 }
             }
             catch (Java.Util.Concurrent.ExecutionException ex)
@@ -300,6 +301,7 @@ namespace MASES.KNet.Benchmark
                 var consumer = KNetConsumer();
                 var producer = KNetProducer();
                 var topics = Collections.Singleton((Java.Lang.String)topicName);
+                System.GC.SuppressFinalize(topics);
                 try
                 {
                     int counter = 0;
@@ -337,7 +339,7 @@ namespace MASES.KNet.Benchmark
                         consumer = null;
                         producer = null;
                     }
-                    topics?.Dispose();
+                    System.GC.ReRegisterForFinalize(topics);
                 }
             }
             catch (Java.Util.Concurrent.ExecutionException ex)
@@ -359,6 +361,7 @@ namespace MASES.KNet.Benchmark
                 {
                     ConsumerRebalanceListener rebalanceListener = null;
                     var topics = Collections.Singleton((Java.Lang.String)topicName);
+                    System.GC.SuppressFinalize(topics);
                     try
                     {
                         rebalanceListener = new()
@@ -407,7 +410,7 @@ namespace MASES.KNet.Benchmark
                             consumer = null;
                         }
                         startEvent.Set();
-                        topics?.Dispose();
+                        System.GC.ReRegisterForFinalize(topics);
                     }
                 });
 
