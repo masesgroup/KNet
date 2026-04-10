@@ -25,16 +25,16 @@ using System.Threading;
 
 namespace MASES.KNet.Consumer
 {
-    #region IConsumer<K, V, TJVMK, TJVMV>
+    #region IShareConsumer<K, V, TJVMK, TJVMV>
 
     /// <summary>
-    /// KNet extension of <see cref="Org.Apache.Kafka.Clients.Consumer.IConsumer{K, V}"/>
+    /// KNet extension of <see cref="Org.Apache.Kafka.Clients.Consumer.IShareConsumer{K, V}"/>
     /// </summary>
     /// <typeparam name="K">The key type</typeparam>
     /// <typeparam name="V">The value type</typeparam>
     /// <typeparam name="TJVMK">The JVM type of <typeparamref name="K"/></typeparam>
     /// <typeparam name="TJVMV">The JVM type of <typeparamref name="V"/></typeparam>
-    public interface IConsumer<K, V, TJVMK, TJVMV> : Org.Apache.Kafka.Clients.Consumer.IConsumer<TJVMK, TJVMV>
+    public interface IShareConsumer<K, V, TJVMK, TJVMV> : Org.Apache.Kafka.Clients.Consumer.IShareConsumer<TJVMK, TJVMV>
     {
 #if NET7_0_OR_GREATER
         /// <summary>
@@ -49,15 +49,15 @@ namespace MASES.KNet.Consumer
         int PrefetchThreshold { get; }
 #endif
         /// <summary>
-        /// <see langword="true"/> if the <see cref="IConsumer{K, V, TJVMK, TJVMV}"/> instance is completing async operation
+        /// <see langword="true"/> if the <see cref="IShareConsumer{K, V, TJVMK, TJVMV}"/> instance is completing async operation
         /// </summary>
         bool IsCompleting { get; }
         /// <summary>
-        /// <see langword="true"/> if the <see cref="IConsumer{K, V, TJVMK, TJVMV}"/> instance has an empty set of items in async operation
+        /// <see langword="true"/> if the <see cref="IShareConsumer{K, V, TJVMK, TJVMV}"/> instance has an empty set of items in async operation
         /// </summary>
         bool IsEmpty { get; }
         /// <summary>
-        /// Number of messages in the <see cref="IConsumer{K, V, TJVMK, TJVMV}"/> instance waiting to be processed in async operation
+        /// Number of messages in the <see cref="IShareConsumer{K, V, TJVMK, TJVMV}"/> instance waiting to be processed in async operation
         /// </summary>
         int WaitingMessages { get; }
 #if NET7_0_OR_GREATER
@@ -74,12 +74,6 @@ namespace MASES.KNet.Consumer
         /// </summary>
         /// <param name="cb">The callback <see cref="Action{T}"/></param>
         void SetCallback(Action<ConsumerRecord<K, V, TJVMK, TJVMV>> cb);
-        /// <summary>
-        /// KNet extension for <see cref="Org.Apache.Kafka.Clients.Consumer.Consumer.Poll(Duration)"/>
-        /// </summary>
-        /// <param name="timeoutMs">Timeout in milliseconds</param>
-        /// <returns><see cref="ConsumerRecords{K, V, TJVMK, TJVMV}"/></returns>
-        ConsumerRecords<K, V, TJVMK, TJVMV> Poll(long timeoutMs);
         /// <summary>
         /// KNet extension for <see cref="Org.Apache.Kafka.Clients.Consumer.Consumer.Poll(Duration)"/>
         /// </summary>
@@ -102,7 +96,7 @@ namespace MASES.KNet.Consumer
 
     #endregion
 
-    #region KNetConsumer<K, V, TJVMK, TJVMV>
+    #region KNetShareConsumer<K, V, TJVMK, TJVMV>
 
     /// <summary>
     /// KNet extension of <see cref="Org.Apache.Kafka.Clients.Consumer.KafkaConsumer{K, V}"/>
@@ -111,7 +105,7 @@ namespace MASES.KNet.Consumer
     /// <typeparam name="V">The value type</typeparam>
     /// <typeparam name="TJVMK">The JVM type of <typeparamref name="K"/></typeparam>
     /// <typeparam name="TJVMV">The JVM type of <typeparamref name="V"/></typeparam>
-    public class KNetConsumer<K, V, TJVMK, TJVMV> : Org.Apache.Kafka.Clients.Consumer.KafkaConsumer<TJVMK, TJVMV>, IConsumer<K, V, TJVMK, TJVMV>
+    public class KNetShareConsumer<K, V, TJVMK, TJVMV> : Org.Apache.Kafka.Clients.Consumer.KafkaShareConsumer<TJVMK, TJVMV>, IShareConsumer<K, V, TJVMK, TJVMV>
     {
         readonly bool _autoCreateSerDes = false;
         bool _threadRunning = false;
@@ -122,27 +116,27 @@ namespace MASES.KNet.Consumer
         readonly ISerDes<K, TJVMK> _keyDeserializer;
         readonly ISerDes<V, TJVMV> _valueDeserializer;
         /// <inheritdoc/>
-        public override string BridgeClassName => "org.mases.knet.developed.clients.consumer.KNetConsumer";
+        public override string BridgeClassName => "org.mases.knet.developed.clients.consumer.KNetShareConsumer";
 
-        internal KNetConsumer(Properties props) : base(props) { }
+        internal KNetShareConsumer(Properties props) : base(props) { }
 
         /// <summary>
-        /// Initialize a new instance of <see cref="KNetConsumer{K, V, TJVMK, TJVMV}"/>
+        /// Initialize a new instance of <see cref="KNetShareConsumer{K, V, TJVMK, TJVMV}"/>
         /// </summary>
         /// <param name="configBuilder">An instance of <see cref="ConsumerConfigBuilder"/> </param>
         /// <param name="useJVMCallback"><see langword="true"/> to active callback based mode</param>
-        public KNetConsumer(ConsumerConfigBuilder configBuilder, bool useJVMCallback = false)
+        public KNetShareConsumer(ConsumerConfigBuilder configBuilder, bool useJVMCallback = false)
             : this(configBuilder, configBuilder.BuildKeySerDes<K, TJVMK>(), configBuilder.BuildValueSerDes<V, TJVMV>(), useJVMCallback)
         {
         }
         /// <summary>
-        /// Initialize a new instance of <see cref="KNetConsumer{K, V, TJVMK, TJVMV}"/>
+        /// Initialize a new instance of <see cref="KNetShareConsumer{K, V, TJVMK, TJVMV}"/>
         /// </summary>
         /// <param name="props">The properties to use, see <see cref="ConsumerConfigBuilder"/></param>
         /// <param name="keyDeserializer">Key serializer base on <see cref="SerDes{K, TJVMK}"/></param>
         /// <param name="valueDeserializer">Value serializer base on <see cref="SerDes{ValueTuple, TJVMV}"/></param>
         /// <param name="useJVMCallback"><see langword="true"/> to active callback based mode</param>
-        public KNetConsumer(ConsumerConfigBuilder props, ISerDes<K, TJVMK> keyDeserializer, ISerDes<V, TJVMV> valueDeserializer, bool useJVMCallback = false)
+        public KNetShareConsumer(ConsumerConfigBuilder props, ISerDes<K, TJVMK> keyDeserializer, ISerDes<V, TJVMV> valueDeserializer, bool useJVMCallback = false)
             : base(CheckProperties(props, keyDeserializer, valueDeserializer), keyDeserializer.KafkaDeserializer, valueDeserializer.KafkaDeserializer)
         {
             _keyDeserializer = keyDeserializer;
@@ -168,31 +162,25 @@ namespace MASES.KNet.Consumer
             {
                 props.Put(Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, keyDeserializer.JVMDeserializerClassName);
             }
-            else throw new InvalidOperationException($"KNetConsumer auto manages configuration property {Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG}, remove from configuration.");
+            else throw new InvalidOperationException($"KNetShareConsumer auto manages configuration property {Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG}, remove from configuration.");
 
             if (!props.ContainsKey(Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG))
             {
                 props.Put(Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, valueDeserializer.JVMDeserializerClassName);
             }
-            else throw new InvalidOperationException($"KNetConsumer auto manages configuration property {Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG}, remove from configuration.");
+            else throw new InvalidOperationException($"KNetShareConsumer auto manages configuration property {Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG}, remove from configuration.");
 
             return props;
         }
         /// <summary>
         /// Finalizer
         /// </summary>
-        ~KNetConsumer()
+        ~KNetShareConsumer()
         {
             Dispose();
         }
 
-        /// <inheritdoc cref="IConsumer{K, V, TJVMK, TJVMV}.Poll(long)"/>
-        public new ConsumerRecords<K, V, TJVMK, TJVMV> Poll(long timeoutMs)
-        {
-            var records = base.Poll(timeoutMs);
-            return new ConsumerRecords<K, V, TJVMK, TJVMV>(records, _keyDeserializer, _valueDeserializer);
-        }
-        /// <inheritdoc cref="IConsumer{K, V, TJVMK, TJVMV}.Poll(TimeSpan)"/>
+        /// <inheritdoc cref="IShareConsumer{K, V, TJVMK, TJVMV}.Poll(TimeSpan)"/>
         public ConsumerRecords<K, V, TJVMK, TJVMV> Poll(TimeSpan timeout)
         {
             Duration duration = timeout;
@@ -202,10 +190,7 @@ namespace MASES.KNet.Consumer
                 var records = base.Poll(duration);
                 return new ConsumerRecords<K, V, TJVMK, TJVMV>(records, _keyDeserializer, _valueDeserializer);
             }
-            finally
-            {
-                duration?.Dispose();
-            }
+            finally { disposable?.Dispose(); }
         }
 
         Action<ConsumerRecord<K, V, TJVMK, TJVMV>> actionCallback = null;
@@ -256,14 +241,14 @@ namespace MASES.KNet.Consumer
             base.Dispose(disposing);
         }
 #if NET7_0_OR_GREATER
-        /// <inheritdoc cref="IConsumer{K, V, TJVMK, TJVMV}.ApplyPrefetch(bool, int)"/>
+        /// <inheritdoc cref="IShareConsumer{K, V, TJVMK, TJVMV}.ApplyPrefetch(bool, int)"/>
         public void ApplyPrefetch(bool enablePrefetch = true, int prefetchThreshold = 10)
         {
             IsPrefecth = enablePrefetch;
             PrefetchThreshold = IsPrefecth ? prefetchThreshold : 10;
         }
 #endif
-        /// <inheritdoc cref="IConsumer{K, V, TJVMK, TJVMV}.SetCallback(Action{ConsumerRecord{K, V, TJVMK, TJVMV}})"/>
+        /// <inheritdoc cref="IShareConsumer{K, V, TJVMK, TJVMV}.SetCallback(Action{ConsumerRecord{K, V, TJVMK, TJVMV}})"/>
         public void SetCallback(Action<ConsumerRecord<K, V, TJVMK, TJVMV>> cb)
         {
             actionCallback = cb;
@@ -303,18 +288,18 @@ namespace MASES.KNet.Consumer
             catch { }
         }
 #if NET7_0_OR_GREATER
-        /// <inheritdoc cref="IConsumer{K, V, TJVMK, TJVMV}.IsPrefecth"/>
+        /// <inheritdoc cref="IShareConsumer{K, V, TJVMK, TJVMV}.IsPrefecth"/>
         public bool IsPrefecth { get; private set; } = !(typeof(K).IsValueType && typeof(V).IsValueType);
-        /// <inheritdoc cref="IConsumer{K, V, TJVMK, TJVMV}.PrefetchThreshold"/>
+        /// <inheritdoc cref="IShareConsumer{K, V, TJVMK, TJVMV}.PrefetchThreshold"/>
         public int PrefetchThreshold { get; private set; } = 10;
 #endif
-        /// <inheritdoc cref="IConsumer{K, V, TJVMK, TJVMV}.IsCompleting"/>
+        /// <inheritdoc cref="IShareConsumer{K, V, TJVMK, TJVMV}.IsCompleting"/>
         public bool IsCompleting => !_consumedRecords.IsEmpty || System.Threading.Interlocked.Read(ref _dequeing) != 0;
-        /// <inheritdoc cref="IConsumer{K, V, TJVMK, TJVMV}.IsEmpty"/>
+        /// <inheritdoc cref="IShareConsumer{K, V, TJVMK, TJVMV}.IsEmpty"/>
         public bool IsEmpty => _consumedRecords.IsEmpty;
-        /// <inheritdoc cref="IConsumer{K, V, TJVMK, TJVMV}.WaitingMessages"/>
+        /// <inheritdoc cref="IShareConsumer{K, V, TJVMK, TJVMV}.WaitingMessages"/>
         public int WaitingMessages => _consumedRecords.Count;
-        /// <inheritdoc cref="IConsumer{K, V, TJVMK, TJVMV}.ConsumeAsync(long)"/>
+        /// <inheritdoc cref="IShareConsumer{K, V, TJVMK, TJVMV}.ConsumeAsync(long)"/>
         public bool ConsumeAsync(long timeoutMs)
         {
             if (_consumedRecords == null) throw new ArgumentException("Cannot be used since constructor was called with useJVMCallback set to true.");
@@ -335,12 +320,12 @@ namespace MASES.KNet.Consumer
             }
             return !isEmpty;
         }
-        /// <inheritdoc cref="IConsumer{K, V, TJVMK, TJVMV}.Consume(long, Action{ConsumerRecord{K, V, TJVMK, TJVMV}})"/>
+        /// <inheritdoc cref="IShareConsumer{K, V, TJVMK, TJVMV}.Consume(long, Action{ConsumerRecord{K, V, TJVMK, TJVMV}})"/>
         public void Consume(long timeoutMs, Action<ConsumerRecord<K, V, TJVMK, TJVMV>> callback)
         {
             Duration duration = TimeSpan.FromMilliseconds(timeoutMs);
+            System.GC.SuppressFinalize(duration);
             if (_consumerCallback == null) throw new ArgumentException("Cannot be used since constructor was called with useJVMCallback set to false.");
-            var disposable = JVMBridgeCoreDisposable.Create(duration);
             try
             {
                 actionCallback = callback;
@@ -348,7 +333,7 @@ namespace MASES.KNet.Consumer
             }
             finally
             {
-                duration?.Dispose();
+                System.GC.ReRegisterForFinalize(duration);
                 actionCallback = null;
             }
         }
@@ -356,31 +341,31 @@ namespace MASES.KNet.Consumer
 
     #endregion
 
-    #region KNetConsumer<K, V>
+    #region KNetShareConsumer<K, V>
     /// <summary>
-    /// Extends <see cref="KNetConsumer{K, V, TJVMK, TJVMV}"/> using array of <see cref="byte"/>
+    /// Extends <see cref="KNetShareConsumer{K, V, TJVMK, TJVMV}"/> using array of <see cref="byte"/>
     /// </summary>
     /// <typeparam name="K">The key type</typeparam>
     /// <typeparam name="V">The value type</typeparam>
-    public class KNetConsumer<K, V> : KNetConsumer<K, V, byte[], byte[]>
+    public class KNetShareConsumer<K, V> : KNetShareConsumer<K, V, byte[], byte[]>
     {
         /// <summary>
-        /// Initialize a new instance of <see cref="KNetConsumer{K, V, TJVMK, TJVMV}"/>
+        /// Initialize a new instance of <see cref="KNetShareConsumer{K, V, TJVMK, TJVMV}"/>
         /// </summary>
         /// <param name="configBuilder">An instance of <see cref="ConsumerConfigBuilder"/> </param>
         /// <param name="useJVMCallback"><see langword="true"/> to active callback based mode</param>
-        public KNetConsumer(ConsumerConfigBuilder configBuilder, bool useJVMCallback = false)
+        public KNetShareConsumer(ConsumerConfigBuilder configBuilder, bool useJVMCallback = false)
             : base(configBuilder, useJVMCallback)
         {
         }
         /// <summary>
-        /// Initialize a new instance of <see cref="KNetConsumer{K, V, TJVMK, TJVMV}"/>
+        /// Initialize a new instance of <see cref="KNetShareConsumer{K, V, TJVMK, TJVMV}"/>
         /// </summary>
         /// <param name="props">The properties to use, see <see cref="ConsumerConfigBuilder"/></param>
         /// <param name="keyDeserializer">Key serializer base on <see cref="SerDes{K, TJVMK}"/></param>
         /// <param name="valueDeserializer">Value serializer base on <see cref="SerDes{ValueTuple, TJVMV}"/></param>
         /// <param name="useJVMCallback"><see langword="true"/> to active callback based mode</param>
-        public KNetConsumer(ConsumerConfigBuilder props, ISerDes<K, byte[]> keyDeserializer, ISerDes<V, byte[]> valueDeserializer, bool useJVMCallback = false)
+        public KNetShareConsumer(ConsumerConfigBuilder props, ISerDes<K, byte[]> keyDeserializer, ISerDes<V, byte[]> valueDeserializer, bool useJVMCallback = false)
             : base(props, keyDeserializer, valueDeserializer)
         {
         }
@@ -388,93 +373,93 @@ namespace MASES.KNet.Consumer
 
     #endregion
 
-    #region KNetConsumerBuffered<K, V>
+    #region KNetShareConsumerBuffered<K, V>
     /// <summary>
-    /// Extends <see cref="KNetConsumer{K, V, TJVMK, TJVMV}"/> using <see cref="Java.Nio.ByteBuffer"/>
+    /// Extends <see cref="KNetShareConsumer{K, V, TJVMK, TJVMV}"/> using <see cref="Java.Nio.ByteBuffer"/>
     /// </summary>
     /// <typeparam name="K">The key type</typeparam>
     /// <typeparam name="V">The value type</typeparam>
-    public class KNetConsumerBuffered<K, V> : KNetConsumer<K, V, Java.Nio.ByteBuffer, Java.Nio.ByteBuffer>
+    public class KNetShareConsumerBuffered<K, V> : KNetShareConsumer<K, V, Java.Nio.ByteBuffer, Java.Nio.ByteBuffer>
     {
         /// <summary>
-        /// Initialize a new instance of <see cref="KNetConsumer{K, V, TJVMK, TJVMV}"/>
+        /// Initialize a new instance of <see cref="KNetShareConsumer{K, V, TJVMK, TJVMV}"/>
         /// </summary>
         /// <param name="configBuilder">An instance of <see cref="ConsumerConfigBuilder"/> </param>
         /// <param name="useJVMCallback"><see langword="true"/> to active callback based mode</param>
-        public KNetConsumerBuffered(ConsumerConfigBuilder configBuilder, bool useJVMCallback = false)
+        public KNetShareConsumerBuffered(ConsumerConfigBuilder configBuilder, bool useJVMCallback = false)
             : base(configBuilder, useJVMCallback)
         {
         }
         /// <summary>
-        /// Initialize a new instance of <see cref="KNetConsumer{K, V, TJVMK, TJVMV}"/>
+        /// Initialize a new instance of <see cref="KNetShareConsumer{K, V, TJVMK, TJVMV}"/>
         /// </summary>
         /// <param name="props">The properties to use, see <see cref="ConsumerConfigBuilder"/></param>
         /// <param name="keyDeserializer">Key serializer base on <see cref="SerDes{K, TJVMK}"/></param>
         /// <param name="valueDeserializer">Value serializer base on <see cref="SerDes{ValueTuple, TJVMV}"/></param>
         /// <param name="useJVMCallback"><see langword="true"/> to active callback based mode</param>
-        public KNetConsumerBuffered(ConsumerConfigBuilder props, ISerDes<K, Java.Nio.ByteBuffer> keyDeserializer, ISerDes<V, Java.Nio.ByteBuffer> valueDeserializer, bool useJVMCallback = false)
+        public KNetShareConsumerBuffered(ConsumerConfigBuilder props, ISerDes<K, Java.Nio.ByteBuffer> keyDeserializer, ISerDes<V, Java.Nio.ByteBuffer> valueDeserializer, bool useJVMCallback = false)
             : base(props, keyDeserializer, valueDeserializer)
         {
         }
     }
     #endregion
 
-    #region KNetConsumerKeyBuffered<K, V>
+    #region KNetShareConsumerKeyBuffered<K, V>
     /// <summary>
-    /// Extends <see cref="KNetConsumer{K, V, TJVMK, TJVMV}"/> using <see cref="Java.Nio.ByteBuffer"/> for key
+    /// Extends <see cref="KNetShareConsumer{K, V, TJVMK, TJVMV}"/> using <see cref="Java.Nio.ByteBuffer"/> for key
     /// </summary>
     /// <typeparam name="K">The key type</typeparam>
     /// <typeparam name="V">The value type</typeparam>
-    public class KNetConsumerKeyBuffered<K, V> : KNetConsumer<K, V, Java.Nio.ByteBuffer, byte[]>
+    public class KNetShareConsumerKeyBuffered<K, V> : KNetShareConsumer<K, V, Java.Nio.ByteBuffer, byte[]>
     {
         /// <summary>
-        /// Initialize a new instance of <see cref="KNetConsumer{K, V, TJVMK, TJVMV}"/>
+        /// Initialize a new instance of <see cref="KNetShareConsumer{K, V, TJVMK, TJVMV}"/>
         /// </summary>
         /// <param name="configBuilder">An instance of <see cref="ConsumerConfigBuilder"/> </param>
         /// <param name="useJVMCallback"><see langword="true"/> to active callback based mode</param>
-        public KNetConsumerKeyBuffered(ConsumerConfigBuilder configBuilder, bool useJVMCallback = false)
+        public KNetShareConsumerKeyBuffered(ConsumerConfigBuilder configBuilder, bool useJVMCallback = false)
             : base(configBuilder, useJVMCallback)
         {
         }
         /// <summary>
-        /// Initialize a new instance of <see cref="KNetConsumer{K, V, TJVMK, TJVMV}"/>
+        /// Initialize a new instance of <see cref="KNetShareConsumer{K, V, TJVMK, TJVMV}"/>
         /// </summary>
         /// <param name="props">The properties to use, see <see cref="ConsumerConfigBuilder"/></param>
         /// <param name="keyDeserializer">Key serializer base on <see cref="SerDes{K, TJVMK}"/></param>
         /// <param name="valueDeserializer">Value serializer base on <see cref="SerDes{ValueTuple, TJVMV}"/></param>
         /// <param name="useJVMCallback"><see langword="true"/> to active callback based mode</param>
-        public KNetConsumerKeyBuffered(ConsumerConfigBuilder props, ISerDes<K, Java.Nio.ByteBuffer> keyDeserializer, ISerDes<V, byte[]> valueDeserializer, bool useJVMCallback = false)
+        public KNetShareConsumerKeyBuffered(ConsumerConfigBuilder props, ISerDes<K, Java.Nio.ByteBuffer> keyDeserializer, ISerDes<V, byte[]> valueDeserializer, bool useJVMCallback = false)
             : base(props, keyDeserializer, valueDeserializer)
         {
         }
     }
     #endregion
 
-    #region KNetConsumerValueBuffered<K, V>
+    #region KNetShareConsumerValueBuffered<K, V>
     /// <summary>
-    /// Extends <see cref="KNetConsumer{K, V, TJVMK, TJVMV}"/> using <see cref="Java.Nio.ByteBuffer"/> for value
+    /// Extends <see cref="KNetShareConsumer{K, V, TJVMK, TJVMV}"/> using <see cref="Java.Nio.ByteBuffer"/> for value
     /// </summary>
     /// <typeparam name="K">The key type</typeparam>
     /// <typeparam name="V">The value type</typeparam>
-    public class KNetConsumerValueBuffered<K, V> : KNetConsumer<K, V, byte[], Java.Nio.ByteBuffer>
+    public class KNetShareConsumerValueBuffered<K, V> : KNetShareConsumer<K, V, byte[], Java.Nio.ByteBuffer>
     {
         /// <summary>
-        /// Initialize a new instance of <see cref="KNetConsumer{K, V, TJVMK, TJVMV}"/>
+        /// Initialize a new instance of <see cref="KNetShareConsumer{K, V, TJVMK, TJVMV}"/>
         /// </summary>
         /// <param name="configBuilder">An instance of <see cref="ConsumerConfigBuilder"/> </param>
         /// <param name="useJVMCallback"><see langword="true"/> to active callback based mode</param>
-        public KNetConsumerValueBuffered(ConsumerConfigBuilder configBuilder, bool useJVMCallback = false)
+        public KNetShareConsumerValueBuffered(ConsumerConfigBuilder configBuilder, bool useJVMCallback = false)
             : base(configBuilder, useJVMCallback)
         {
         }
         /// <summary>
-        /// Initialize a new instance of <see cref="KNetConsumer{K, V, TJVMK, TJVMV}"/>
+        /// Initialize a new instance of <see cref="KNetShareConsumer{K, V, TJVMK, TJVMV}"/>
         /// </summary>
         /// <param name="props">The properties to use, see <see cref="ConsumerConfigBuilder"/></param>
         /// <param name="keyDeserializer">Key serializer base on <see cref="SerDes{K, TJVMK}"/></param>
         /// <param name="valueDeserializer">Value serializer base on <see cref="SerDes{ValueTuple, TJVMV}"/></param>
         /// <param name="useJVMCallback"><see langword="true"/> to active callback based mode</param>
-        public KNetConsumerValueBuffered(ConsumerConfigBuilder props, ISerDes<K, byte[]> keyDeserializer, ISerDes<V, Java.Nio.ByteBuffer> valueDeserializer, bool useJVMCallback = false)
+        public KNetShareConsumerValueBuffered(ConsumerConfigBuilder props, ISerDes<K, byte[]> keyDeserializer, ISerDes<V, Java.Nio.ByteBuffer> valueDeserializer, bool useJVMCallback = false)
             : base(props, keyDeserializer, valueDeserializer)
         {
         }
