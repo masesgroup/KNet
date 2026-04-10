@@ -402,6 +402,7 @@ namespace MASES.KNetTest
                 Stopwatch watcherTotal = new Stopwatch();
                 Stopwatch watcher = new Stopwatch();
                 var topics = Collections.Singleton((Java.Lang.String)topicToUse);
+                var disposable = MASES.JCOBridge.C2JBridge.JVMBridgeCoreDisposable.Create(topics);
                 try
                 {
                     using (consumer = new KNetConsumer<string, TestType>(props, keyDeserializer, valueDeserializer))
@@ -472,7 +473,7 @@ namespace MASES.KNetTest
                 {
                     keyDeserializer?.Dispose();
                     valueDeserializer?.Dispose();
-                    topics?.Dispose();
+                    disposable?.Dispose();
                     if (elements != 0) Console.WriteLine($"Total consume time is {watcherTotal.Elapsed}, consume mean time is {TimeSpan.FromTicks(watcherTotal.ElapsedTicks / elements)}, console write mean time is {TimeSpan.FromTicks(watcher.ElapsedTicks / elements)}");
                 }
             }
@@ -630,6 +631,7 @@ namespace MASES.KNetTest
                 Stopwatch watcherTotal = new Stopwatch();
                 Stopwatch watcher = new Stopwatch();
                 var topics = Collections.Singleton((Java.Lang.String)topicToUse);
+                var disposable = MASES.JCOBridge.C2JBridge.JVMBridgeCoreDisposable.Create(topics);
                 try
                 {
                     using (consumer = new KNetConsumerValueBuffered<string, TestType>(props, keyDeserializer, valueDeserializer))
@@ -700,7 +702,7 @@ namespace MASES.KNetTest
                 {
                     keyDeserializer?.Dispose();
                     valueDeserializer?.Dispose();
-                    topics?.Dispose();
+                    disposable?.Dispose();
                     if (elements != 0) Console.WriteLine($"Total consume time is {watcherTotal.Elapsed}, consume mean time is {TimeSpan.FromTicks(watcherTotal.ElapsedTicks / elements)}, console write mean time is {TimeSpan.FromTicks(watcher.ElapsedTicks / elements)}");
                 }
             }

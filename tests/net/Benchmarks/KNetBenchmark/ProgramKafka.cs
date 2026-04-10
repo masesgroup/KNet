@@ -290,7 +290,9 @@ namespace MASES.KNet.Benchmark
 
                 var consumer = KafkaConsumer();
                 Java.Time.Duration duration = TimeSpan.FromMinutes(1);
+                var disposable1 = MASES.JCOBridge.C2JBridge.JVMBridgeCoreDisposable.Create(duration);
                 var topics = Collections.Singleton((Java.Lang.String)topicName);
+                var disposable2 = MASES.JCOBridge.C2JBridge.JVMBridgeCoreDisposable.Create(topics);
                 try
                 {
                     int counter = 0;
@@ -351,8 +353,8 @@ namespace MASES.KNet.Benchmark
                 {
                     if (!SharedObjects) { consumer.Dispose(); consumer = null; }
                     rebalanceListener?.Dispose();
-                    duration?.Dispose();
-                    topics?.Dispose();
+                    disposable1?.Dispose();
+                    disposable2?.Dispose();
                 }
             }
             catch (Java.Util.Concurrent.ExecutionException ex)
@@ -373,7 +375,9 @@ namespace MASES.KNet.Benchmark
                 System.Threading.Thread thread = new System.Threading.Thread(() =>
                 {
                     Java.Time.Duration duration = TimeSpan.FromSeconds(1);
+                    var disposable1 = MASES.JCOBridge.C2JBridge.JVMBridgeCoreDisposable.Create(duration);
                     var topics = Collections.Singleton((Java.Lang.String)topicName);
+                    var disposable2 = MASES.JCOBridge.C2JBridge.JVMBridgeCoreDisposable.Create(topics);
                     ConsumerRebalanceListener rebalanceListener = null;
                     try
                     {
@@ -444,8 +448,8 @@ namespace MASES.KNet.Benchmark
                             consumer = null;
                         }
                         startEvent.Set();
-                        duration?.Dispose();
-                        topics?.Dispose();
+                        disposable1?.Dispose();
+                        disposable2?.Dispose();
                     }
                 });
                 thread.Start();
