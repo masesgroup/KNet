@@ -448,9 +448,9 @@ namespace MASES.KNet.Replicator
             static void OnDemandRetrieve(IConsumer<K, V, TJVMK, TJVMV> consumer, string topic, K key, ILocalDataStorage data)
             {
                 var topicPartition = new Org.Apache.Kafka.Common.TopicPartition(topic, data.Partition);
-                System.GC.SuppressFinalize(topicPartition);
+                var disposable1 = JVMBridgeCoreDisposable.Create(topicPartition);
                 var topics = Java.Util.Collections.Singleton(topicPartition);
-                System.GC.SuppressFinalize(topics);
+                var disposable2 = JVMBridgeCoreDisposable.Create(topics);
                 try
                 {
                     consumer.Assign(topics);
@@ -467,8 +467,8 @@ namespace MASES.KNet.Replicator
                 }
                 finally
                 {
-                    System.GC.ReRegisterForFinalize(topicPartition);
-                    System.GC.ReRegisterForFinalize(topics);
+                    disposable1?.Dispose();
+                    disposable2?.Dispose();
                 }
             }
         }
@@ -1048,7 +1048,7 @@ namespace MASES.KNet.Replicator
             bool firstExecution = false;
             int index = (int)o;
             var topics = Java.Util.Collections.Singleton((Java.Lang.String)StateName);
-            System.GC.SuppressFinalize(topics);
+            var disposable = JVMBridgeCoreDisposable.Create(topics);
             try
             {
                 _consumers[index].Subscribe(topics, _consumerListeners[index]);
@@ -1089,7 +1089,7 @@ namespace MASES.KNet.Replicator
             finally
             {
                 _consumers[index].Unsubscribe();
-                System.GC.ReRegisterForFinalize(topics);
+                disposable?.Dispose();
             }
         }
         [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
@@ -1134,7 +1134,7 @@ namespace MASES.KNet.Replicator
             if (AccessRights.HasFlag(AccessRightsType.Write))
             {
                 Java.Util.Properties props = AdminClientConfigBuilder.Create().WithBootstrapServers(BootstrapServers).ToProperties();
-                System.GC.SuppressFinalize(props);
+                var disposable1 = JVMBridgeCoreDisposable.Create(props);
                 using var admin = Org.Apache.Kafka.Clients.Admin.KafkaAdminClient.Create(props);
 
                 var topic = new Org.Apache.Kafka.Clients.Admin.NewTopic(StateName, Partitions, ReplicationFactor);
@@ -1145,7 +1145,7 @@ namespace MASES.KNet.Replicator
 
                 TopicConfig.CleanupPolicy = TopicConfigBuilder.CleanupPolicyTypes.Compact | TopicConfigBuilder.CleanupPolicyTypes.Delete;
                 topic = topic.Configs(TopicConfig);
-                System.GC.SuppressFinalize(topic);
+                var disposable2 = JVMBridgeCoreDisposable.Create(topic);
                 try
                 {
                     admin.CreateTopic(topic);
@@ -1153,7 +1153,7 @@ namespace MASES.KNet.Replicator
                 catch (Org.Apache.Kafka.Common.Errors.TopicExistsException)
                 {
                     var topics = Java.Util.Collections.Singleton((Java.Lang.String)StateName);
-                    System.GC.SuppressFinalize(topics);
+                    var disposable3 = JVMBridgeCoreDisposable.Create(topics);
                     // recover partitions of the topic
                     try
                     {
@@ -1169,12 +1169,12 @@ namespace MASES.KNet.Replicator
                         }
                     }
                     catch { }
-                    finally { System.GC.ReRegisterForFinalize(topics); }
+                    finally { disposable3?.Dispose(); }
                 }
                 finally 
                 { 
-                    System.GC.ReRegisterForFinalize(topic);
-                    System.GC.ReRegisterForFinalize(props);
+                    disposable2?.Dispose();
+                    disposable1?.Dispose();
                 }
             }
             _disposeKeySerDes = false;

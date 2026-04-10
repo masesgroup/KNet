@@ -98,13 +98,13 @@ namespace Org.Apache.Kafka.Tools
             string[] parameters = strings.ToArray();
 
             StreamsResetter resetter = new();
-            System.GC.SuppressFinalize(resetter);
+            var disposable = MASES.JCOBridge.C2JBridge.JVMBridgeCoreDisposable.Create(resetter);
             Java.Lang.String[] args = parameters.ToJVMArray<Java.Lang.String, string>();
             try
             {
                 return resetter.Execute(args) == 0;
             }
-            finally { System.GC.ReRegisterForFinalize(resetter); }
+            finally { disposable?.Dispose(); }
         }
     }
     #endregion
