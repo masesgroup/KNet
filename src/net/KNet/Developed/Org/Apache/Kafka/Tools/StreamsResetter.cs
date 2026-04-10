@@ -98,7 +98,7 @@ namespace Org.Apache.Kafka.Tools
             string[] parameters = strings.ToArray();
 
             StreamsResetter resetter = new();
-            var disposable = JVMBridgeCoreDisposable.Create(resetter);
+            var disposable = MASES.JCOBridge.C2JBridge.JVMBridgeCoreDisposable.Create(resetter);
             Java.Lang.String[] args = parameters.ToJVMArray<Java.Lang.String, string>();
             try
             {
