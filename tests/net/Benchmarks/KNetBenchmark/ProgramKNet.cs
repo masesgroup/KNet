@@ -236,7 +236,7 @@ namespace MASES.KNet.Benchmark
 
                 var consumer = KNetConsumer();
                 var topics = Collections.Singleton((Java.Lang.String)topicName);
-                var disposable = JVMBridgeCoreDisposable.Create(topics);
+                var disposable = MASES.JCOBridge.C2JBridge.JVMBridgeCoreDisposable.Create(topics);
                 try
                 {
                     int counter = 0;
@@ -301,7 +301,7 @@ namespace MASES.KNet.Benchmark
                 var consumer = KNetConsumer();
                 var producer = KNetProducer();
                 var topics = Collections.Singleton((Java.Lang.String)topicName);
-                var disposable = JVMBridgeCoreDisposable.Create(topics);
+                var disposable = MASES.JCOBridge.C2JBridge.JVMBridgeCoreDisposable.Create(topics);
                 try
                 {
                     int counter = 0;
@@ -361,7 +361,7 @@ namespace MASES.KNet.Benchmark
                 {
                     ConsumerRebalanceListener rebalanceListener = null;
                     var topics = Collections.Singleton((Java.Lang.String)topicName);
-                    var disposable = JVMBridgeCoreDisposable.Create(topics);
+                    var disposable = MASES.JCOBridge.C2JBridge.JVMBridgeCoreDisposable.Create(topics);
                     try
                     {
                         rebalanceListener = new()

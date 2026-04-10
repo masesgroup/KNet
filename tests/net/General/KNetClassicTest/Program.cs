@@ -98,7 +98,7 @@ namespace MASES.KNetClassicTest
                 short replicationFactor = 1;
 
                 topic = new NewTopic(topicName, partitions, replicationFactor);
-                var disposable = JVMBridgeCoreDisposable.Create(topic);
+                var disposable = MASES.JCOBridge.C2JBridge.JVMBridgeCoreDisposable.Create(topic);
                 /**** Direct mode ******
                 var map = Collections.SingletonMap(TopicConfig.CLEANUP_POLICY_CONFIG, TopicConfig.CLEANUP_POLICY_COMPACT);
                 topic.Configs(map);
@@ -304,7 +304,7 @@ namespace MASES.KNetClassicTest
                     };
                 }
                 var topics = Collections.Singleton((Java.Lang.String)topicToUse);
-                var disposable = JVMBridgeCoreDisposable.Create(topics);
+                var disposable = MASES.JCOBridge.C2JBridge.JVMBridgeCoreDisposable.Create(topics);
                 try
                 {
                     using (consumer = useSerdes ? new KafkaConsumer<string, string>(props, keyDeserializer, valueDeserializer) : new KafkaConsumer<string, string>(props))

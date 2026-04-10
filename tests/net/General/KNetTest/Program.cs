@@ -402,7 +402,7 @@ namespace MASES.KNetTest
                 Stopwatch watcherTotal = new Stopwatch();
                 Stopwatch watcher = new Stopwatch();
                 var topics = Collections.Singleton((Java.Lang.String)topicToUse);
-                var disposable = JVMBridgeCoreDisposable.Create(topics);
+                var disposable = MASES.JCOBridge.C2JBridge.JVMBridgeCoreDisposable.Create(topics);
                 try
                 {
                     using (consumer = new KNetConsumer<string, TestType>(props, keyDeserializer, valueDeserializer))
@@ -631,7 +631,7 @@ namespace MASES.KNetTest
                 Stopwatch watcherTotal = new Stopwatch();
                 Stopwatch watcher = new Stopwatch();
                 var topics = Collections.Singleton((Java.Lang.String)topicToUse);
-                var disposable = JVMBridgeCoreDisposable.Create(topics);
+                var disposable = MASES.JCOBridge.C2JBridge.JVMBridgeCoreDisposable.Create(topics);
                 try
                 {
                     using (consumer = new KNetConsumerValueBuffered<string, TestType>(props, keyDeserializer, valueDeserializer))
