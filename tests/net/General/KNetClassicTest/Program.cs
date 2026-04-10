@@ -90,7 +90,7 @@ namespace MASES.KNetClassicTest
         static void CreateTopic()
         {
             NewTopic topic = null;
-            Set<NewTopic> coll = null;
+            //Set<NewTopic> coll = null;
             try
             {
                 string topicName = topicToUse;
@@ -98,7 +98,7 @@ namespace MASES.KNetClassicTest
                 short replicationFactor = 1;
 
                 topic = new NewTopic(topicName, partitions, replicationFactor);
-
+                System.GC.SuppressFinalize(topic);
                 /**** Direct mode ******
                 var map = Collections.SingletonMap(TopicConfig.CLEANUP_POLICY_CONFIG, TopicConfig.CLEANUP_POLICY_COMPACT);
                 topic.Configs(map);
@@ -108,8 +108,6 @@ namespace MASES.KNetClassicTest
                                                                  .WithMinCleanableDirtyRatio(0.01)
                                                                  .WithSegmentMs(100));
 
-                coll = Collections.Singleton(topic);
-
                 /**** Direct mode ******
                 Properties props = new Properties();
                 props.Put(AdminClientConfig.BOOTSTRAP_SERVERS_CONFIG, serverToUse);
@@ -117,21 +115,20 @@ namespace MASES.KNetClassicTest
 
                 Properties props = AdminClientConfigBuilder.Create().WithBootstrapServers(serverToUse).ToProperties();
 
-                using (IAdmin admin = KafkaAdminClient.Create(props))
-                {
-                    /******* standard
-                    // Create a compacted topic
-                    CreateTopicsResult result = admin.CreateTopics(coll);
+                using IAdmin admin = KafkaAdminClient.Create(props);
+                /******* standard
+                // Create a compacted topic
+                coll = Collections.Singleton(topic);
+                CreateTopicsResult result = admin.CreateTopics(coll);
 
-                    // Call values() to get the result for a specific topic
-                    var future = result.Values.Get(topicName);
+                // Call values() to get the result for a specific topic
+                var future = result.Values.Get(topicName);
 
-                    // Call get() to block until the topic creation is complete or has failed
-                    // if creation failed the ExecutionException wraps the underlying cause.
-                    future.Get();
-                    ********/
-                    admin.CreateTopic(topicName, partitions, replicationFactor);
-                }
+                // Call get() to block until the topic creation is complete or has failed
+                // if creation failed the ExecutionException wraps the underlying cause.
+                future.Get();
+                ********/
+                admin.CreateTopic(topicName, partitions, replicationFactor);
             }
             catch (Java.Util.Concurrent.ExecutionException ex)
             {
@@ -145,8 +142,8 @@ namespace MASES.KNetClassicTest
             }
             finally
             {
-                coll?.Dispose();
-                topic?.Dispose();
+                //coll?.Dispose();
+                System.GC.ReRegisterForFinalize(topic);
             }
         }
 
@@ -307,6 +304,7 @@ namespace MASES.KNetClassicTest
                     };
                 }
                 var topics = Collections.Singleton((Java.Lang.String)topicToUse);
+                System.GC.SuppressFinalize(topics);
                 try
                 {
                     using (consumer = useSerdes ? new KafkaConsumer<string, string>(props, keyDeserializer, valueDeserializer) : new KafkaConsumer<string, string>(props))
@@ -331,7 +329,7 @@ namespace MASES.KNetClassicTest
                         keyDeserializer.Dispose();
                         valueDeserializer.Dispose();
                     }
-                    topics?.Dispose();
+                    System.GC.ReRegisterForFinalize(topics);
                 }
             }
             catch (Java.Util.Concurrent.ExecutionException ex)

@@ -98,12 +98,13 @@ namespace Org.Apache.Kafka.Tools
             string[] parameters = strings.ToArray();
 
             StreamsResetter resetter = new();
+            System.GC.SuppressFinalize(resetter);
             Java.Lang.String[] args = parameters.ToJVMArray<Java.Lang.String, string>();
             try
             {
                 return resetter.Execute(args) == 0;
             }
-            finally { resetter.Dispose(); }
+            finally { System.GC.ReRegisterForFinalize(resetter); }
         }
     }
     #endregion
