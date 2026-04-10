@@ -184,7 +184,7 @@ namespace MASES.KNet.Consumer
         public ConsumerRecords<K, V, TJVMK, TJVMV> Poll(TimeSpan timeout)
         {
             Duration duration = timeout;
-            var disposable = JVMBridgeCoreDisposable.Create(duration);
+            var disposable = MASES.JCOBridge.C2JBridge.JVMBridgeCoreDisposable.Create(duration);
             try
             {
                 var records = base.Poll(duration);
@@ -324,7 +324,7 @@ namespace MASES.KNet.Consumer
         public void Consume(long timeoutMs, Action<ConsumerRecord<K, V, TJVMK, TJVMV>> callback)
         {
             Duration duration = TimeSpan.FromMilliseconds(timeoutMs);
-            var disposable = JVMBridgeCoreDisposable.Create(duration);
+            var disposable = MASES.JCOBridge.C2JBridge.JVMBridgeCoreDisposable.Create(duration);
             if (_consumerCallback == null) throw new ArgumentException("Cannot be used since constructor was called with useJVMCallback set to false.");
             try
             {
