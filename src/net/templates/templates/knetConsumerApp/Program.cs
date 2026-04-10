@@ -50,8 +50,8 @@ namespace MASES.KNet.Template.KNetConsumer
                                                     .WithGroupId("test")
                                                     .WithEnableAutoCommit(true)
                                                     .WithAutoCommitIntervalMs(1000)
-                                                    .WithKeyDeserializerClass("org.apache.kafka.common.serialization.StringDeserializer")
-                                                    .WithValueDeserializerClass("org.apache.kafka.common.serialization.StringDeserializer")
+                                                    .WithKeyDeserializerClass(Java.Lang.Class.Of<StringDeserializer>())
+                                                    .WithValueDeserializerClass(Java.Lang.Class.Of<StringDeserializer>())
                                                     .ToProperties();
 
             ConsumerRebalanceListener rebalanceListener = null;

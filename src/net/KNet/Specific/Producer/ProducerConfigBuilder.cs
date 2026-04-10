@@ -274,11 +274,11 @@ namespace MASES.KNet.Producer
         /// <summary>
         /// Manages <see cref="ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG"/>
         /// </summary>
-        public string KeySerializerClass { get { return GetProperty<string>(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG); } set { SetProperty(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, value); } }
+        public Class KeySerializerClass { get { return GetProperty<Class>(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG); } set { SetProperty(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, value); } }
         /// <summary>
         /// Manages <see cref="ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG"/>
         /// </summary>
-        public ProducerConfigBuilder WithKeySerializerClass(string keySerializerClass)
+        public ProducerConfigBuilder WithKeySerializerClass(Class keySerializerClass)
         {
             var clone = Clone();
             clone.KeySerializerClass = keySerializerClass;
@@ -287,11 +287,11 @@ namespace MASES.KNet.Producer
         /// <summary>
         /// Manages <see cref="ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG"/>
         /// </summary>
-        public string ValueSerializerClass { get { return GetProperty<string>(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG); } set { SetProperty(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, value); } }
+        public Class ValueSerializerClass { get { return GetProperty<Class>(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG); } set { SetProperty(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, value); } }
         /// <summary>
         /// Manages <see cref="ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG"/>
         /// </summary>
-        public ProducerConfigBuilder WithValueSerializerClass(string valueSerializerClass)
+        public ProducerConfigBuilder WithValueSerializerClass(Class valueSerializerClass)
         {
             var clone = Clone();
             clone.ValueSerializerClass = valueSerializerClass;
