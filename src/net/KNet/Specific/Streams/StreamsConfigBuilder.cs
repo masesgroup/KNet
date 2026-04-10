@@ -211,20 +211,6 @@ namespace MASES.KNet.Streams
         }
 
         /// <summary>
-        /// Manages <see cref="StreamsConfig.GROUP_PROTOCOL_CONFIG"/>
-        /// </summary>
-        public GroupProtocol GroupProtocol { get { return GroupProtocol.ValueOf(GetProperty<string>(StreamsConfig.GROUP_PROTOCOL_CONFIG)); } set { SetProperty(StreamsConfig.GROUP_PROTOCOL_CONFIG, value.ToString()); } }
-        /// <summary>
-        /// Manages <see cref="StreamsConfig.GROUP_PROTOCOL_CONFIG"/>
-        /// </summary>
-        public StreamsConfigBuilder WithGroupProtocol(GroupProtocol groupProtocol)
-        {
-            var clone = Clone();
-            clone.GroupProtocol = groupProtocol;
-            return clone;
-        }
-
-        /// <summary>
         /// Manages <see cref="StreamsConfig.RACK_AWARE_ASSIGNMENT_NON_OVERLAP_COST_CONFIG"/>
         /// </summary>
         public int RackAwareAssignmentNonOverlapCost { get { return GetProperty<int>(StreamsConfig.RACK_AWARE_ASSIGNMENT_NON_OVERLAP_COST_CONFIG); } set { SetProperty(StreamsConfig.RACK_AWARE_ASSIGNMENT_NON_OVERLAP_COST_CONFIG, value); } }
