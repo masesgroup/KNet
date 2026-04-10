@@ -17,6 +17,7 @@
 */
 
 using Java.Util;
+using MASES.JNet.Specific;
 using MASES.KNet.Admin;
 using MASES.KNet.Common;
 using MASES.KNet.Consumer;
@@ -73,7 +74,15 @@ namespace MASES.KNetClassicTest
 
                 Console.CancelKeyPress += Console_CancelKeyPress;
                 Console.WriteLine("Press Ctrl-C to exit");
-                resetEvent.WaitOne();
+                if (Environment.GetEnvironmentVariable("GITHUB_ACTIONS") != null)
+                {
+                    resetEvent.WaitOne(10000);
+                    resetEvent.Set();
+                }
+                else
+                {
+                    resetEvent.WaitOne();
+                }
                 Thread.Sleep(2000); // wait the threads exit
             }
             catch (Exception e)
@@ -167,8 +176,8 @@ namespace MASES.KNetClassicTest
                                                         .WithAcks(ProducerConfigBuilder.AcksTypes.All)
                                                         .WithRetries(0)
                                                         .WithLingerMs(1)
-                                                        .WithKeySerializerClass("org.apache.kafka.common.serialization.StringSerializer")
-                                                        .WithValueSerializerClass("org.apache.kafka.common.serialization.StringSerializer")
+                                                        .WithKeySerializerClass(Java.Lang.Class.Of<StringSerializer>())
+                                                        .WithValueSerializerClass(Java.Lang.Class.Of<StringSerializer>())
                                                         .ToProperties();
 
                 Serializer<string> keySerializer = null;
@@ -261,8 +270,8 @@ namespace MASES.KNetClassicTest
                                                         .WithGroupId("test")
                                                         .WithEnableAutoCommit(true)
                                                         .WithAutoCommitIntervalMs(1000)
-                                                        .WithKeyDeserializerClass("org.apache.kafka.common.serialization.StringDeserializer")
-                                                        .WithValueDeserializerClass("org.apache.kafka.common.serialization.StringDeserializer")
+                                                        .WithKeyDeserializerClass(Java.Lang.Class.Of<StringDeserializer>())
+                                                        .WithValueDeserializerClass(Java.Lang.Class.Of<StringDeserializer>())
                                                         .ToProperties();
 
                 Deserializer<string> keyDeserializer = null;

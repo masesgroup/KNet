@@ -174,7 +174,7 @@ namespace MASES.KNet.Consumer
         /// <summary>
         /// Manages <see cref="ConsumerConfig.GROUP_PROTOCOL_CONFIG"/>
         /// </summary>
-        public GroupProtocol GroupProtocol { get { return GetProperty<GroupProtocol>(ConsumerConfig.GROUP_PROTOCOL_CONFIG); } set { SetProperty(ConsumerConfig.GROUP_PROTOCOL_CONFIG, value); } }
+        public GroupProtocol GroupProtocol { get { return GroupProtocol.ValueOf(GetProperty<string>(ConsumerConfig.GROUP_PROTOCOL_CONFIG)); } set { SetProperty(ConsumerConfig.GROUP_PROTOCOL_CONFIG, value.ToString()); } }
         /// <summary>
         /// Manages <see cref="ConsumerConfig.GROUP_PROTOCOL_CONFIG"/>
         /// </summary>
@@ -226,11 +226,11 @@ namespace MASES.KNet.Consumer
         /// <summary>
         /// Manages <see cref="ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG"/>
         /// </summary>
-        public string KeyDeserializerClass { get { return GetProperty<string>(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG); } set { SetProperty(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, value); } }
+        public Class KeyDeserializerClass { get { return GetProperty<Class>(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG); } set { SetProperty(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, value); } }
         /// <summary>
         /// Manages <see cref="ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG"/>
         /// </summary>
-        public ConsumerConfigBuilder WithKeyDeserializerClass(string keyDeserializerClass)
+        public ConsumerConfigBuilder WithKeyDeserializerClass(Class keyDeserializerClass)
         {
             var clone = Clone();
             clone.KeyDeserializerClass = keyDeserializerClass;
@@ -239,11 +239,11 @@ namespace MASES.KNet.Consumer
         /// <summary>
         /// Manages <see cref="ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG"/>
         /// </summary>
-        public string ValueDeserializerClass { get { return GetProperty<string>(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG); } set { SetProperty(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, value); } }
+        public Class ValueDeserializerClass { get { return GetProperty<Class>(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG); } set { SetProperty(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, value); } }
         /// <summary>
         /// Manages <see cref="ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG"/>
         /// </summary>
-        public ConsumerConfigBuilder WithValueDeserializerClass(string valueDeserializerClass)
+        public ConsumerConfigBuilder WithValueDeserializerClass(Class valueDeserializerClass)
         {
             var clone = Clone();
             clone.ValueDeserializerClass = valueDeserializerClass;
@@ -279,7 +279,7 @@ namespace MASES.KNet.Consumer
         /// Manages <see cref="ConsumerConfig.ISOLATION_LEVEL_CONFIG"/>
         /// </summary>
         // IsolationLevel.READ_COMMITTED.toString().toLowerCase(Locale.ROOT), IsolationLevel.READ_UNCOMMITTED.toString().toLowerCase(Locale.ROOT)
-        public IsolationLevel IsolationLevel { get { return GetProperty<IsolationLevel>(ConsumerConfig.ISOLATION_LEVEL_CONFIG); } set { SetProperty(ConsumerConfig.ISOLATION_LEVEL_CONFIG, value); } }
+        public IsolationLevel IsolationLevel { get { return IsolationLevel.ValueOf(GetProperty<string>(ConsumerConfig.ISOLATION_LEVEL_CONFIG)); } set { SetProperty(ConsumerConfig.ISOLATION_LEVEL_CONFIG, value.ToString()); } }
         /// <summary>
         /// Manages <see cref="ConsumerConfig.ISOLATION_LEVEL_CONFIG"/>
         /// </summary>

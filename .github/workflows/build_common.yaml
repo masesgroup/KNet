@@ -471,6 +471,11 @@ jobs:
         continue-on-error: ${{ inputs.ForceContinueOnError == true }}
         run: dotnet ${{ github.workspace }}/bin/${{ matrix.framework }}/KNetTest.dll -Log4JConfiguration '${{ github.workspace }}/bin/${{ matrix.framework }}/log4j2.yaml' localhost:9092 useConsumeCallback randomizeTopicName runBuffered withBigBigExtraValue
 
+      - name: Execute KNetClassicTest on ${{ matrix.os }} with ${{ matrix.jdk_vendor }} ${{ matrix.jdk_version }}
+        continue-on-error: ${{ inputs.ForceContinueOnError == true }}
+        shell: pwsh
+        run: dotnet ${{ github.workspace }}/bin/${{ matrix.framework }}/KNetClassicTest.dll -Log4JConfiguration '${{ github.workspace }}/bin/${{ matrix.framework }}/log4j2.yaml'
+
       - name: Execute KNetTestSerDes on ${{ matrix.os }} with ${{ matrix.jdk_vendor }} ${{ matrix.jdk_version }}
         continue-on-error: ${{ inputs.ForceContinueOnError == true }}
         shell: pwsh
@@ -573,6 +578,7 @@ jobs:
           ${{ github.workspace }}\bin\${{ matrix.framework }}\KNetTest.exe -Log4JConfiguration '${{ github.workspace }}\bin\${{ matrix.framework }}\log4j2.yaml' localhost:9092 useConsumeCallback randomizeTopicName withExtraValue
           ${{ github.workspace }}\bin\${{ matrix.framework }}\KNetTest.exe -Log4JConfiguration '${{ github.workspace }}\bin\${{ matrix.framework }}\log4j2.yaml' localhost:9092 useConsumeCallback randomizeTopicName runBuffered
           ${{ github.workspace }}\bin\${{ matrix.framework }}\KNetTest.exe -Log4JConfiguration '${{ github.workspace }}\bin\${{ matrix.framework }}\log4j2.yaml' localhost:9092 useConsumeCallback randomizeTopicName runBuffered withExtraValue
+          ${{ github.workspace }}\bin\${{ matrix.framework }}\KNetClassicTest.exe -Log4JConfiguration '${{ github.workspace }}\bin\${{ matrix.framework }}\log4j2.yaml'
 
       #- name: Start Kafka and execute KNetTest on ${{ matrix.os }} with ${{ matrix.jdk_vendor }} ${{ matrix.jdk_version }}
       #  if: ${{ matrix.os == 'windows-2022' }}
@@ -711,6 +717,11 @@ jobs:
         continue-on-error: ${{ inputs.ForceContinueOnError == true }}
         shell: pwsh
         run: dotnet ${{ github.workspace }}/bin/${{ matrix.framework }}/KNetTest.dll -Log4JConfiguration '${{ github.workspace }}/bin/${{ matrix.framework }}/log4j2.yaml' localhost:9092 useConsumeCallback randomizeTopicName runBuffered withBigBigExtraValue
+
+      - name: Execute KNetClassicTest on ${{ matrix.os }} with ${{ matrix.jdk_vendor }} ${{ matrix.jdk_version }}
+        continue-on-error: ${{ inputs.ForceContinueOnError == true }}
+        shell: pwsh
+        run: dotnet ${{ github.workspace }}/bin/${{ matrix.framework }}/KNetClassicTest.dll -Log4JConfiguration '${{ github.workspace }}/bin/${{ matrix.framework }}/log4j2.yaml'
 
       - name: Execute KNetTestSerDes on ${{ matrix.os }} with ${{ matrix.jdk_vendor }} ${{ matrix.jdk_version }}
         continue-on-error: ${{ inputs.ForceContinueOnError == true }}
