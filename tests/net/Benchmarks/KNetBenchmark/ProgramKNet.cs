@@ -236,7 +236,7 @@ namespace MASES.KNet.Benchmark
 
                 var consumer = KNetConsumer();
                 var topics = Collections.Singleton((Java.Lang.String)topicName);
-                System.GC.SuppressFinalize(topics);
+                var disposable = JVMBridgeCoreDisposable.Create(topics);
                 try
                 {
                     int counter = 0;
@@ -271,7 +271,7 @@ namespace MASES.KNet.Benchmark
                 {
                     if (!SharedObjects) { consumer.Dispose(); consumer = null; }
                     rebalanceListener?.Dispose();
-                    System.GC.ReRegisterForFinalize(topics);
+                    disposable?.Dispose();
                 }
             }
             catch (Java.Util.Concurrent.ExecutionException ex)
@@ -301,7 +301,7 @@ namespace MASES.KNet.Benchmark
                 var consumer = KNetConsumer();
                 var producer = KNetProducer();
                 var topics = Collections.Singleton((Java.Lang.String)topicName);
-                System.GC.SuppressFinalize(topics);
+                var disposable = JVMBridgeCoreDisposable.Create(topics);
                 try
                 {
                     int counter = 0;
@@ -339,7 +339,7 @@ namespace MASES.KNet.Benchmark
                         consumer = null;
                         producer = null;
                     }
-                    System.GC.ReRegisterForFinalize(topics);
+                    disposable?.Dispose();
                 }
             }
             catch (Java.Util.Concurrent.ExecutionException ex)
@@ -361,7 +361,7 @@ namespace MASES.KNet.Benchmark
                 {
                     ConsumerRebalanceListener rebalanceListener = null;
                     var topics = Collections.Singleton((Java.Lang.String)topicName);
-                    System.GC.SuppressFinalize(topics);
+                    var disposable = JVMBridgeCoreDisposable.Create(topics);
                     try
                     {
                         rebalanceListener = new()
@@ -410,7 +410,7 @@ namespace MASES.KNet.Benchmark
                             consumer = null;
                         }
                         startEvent.Set();
-                        System.GC.ReRegisterForFinalize(topics);
+                        disposable?.Dispose();
                     }
                 });
 
