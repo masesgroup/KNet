@@ -204,7 +204,7 @@ namespace MASES.KNet.Consumer
             }
             finally
             {
-                duration?.Dispose();
+                disposable?.Dispose();
             }
         }
 
@@ -348,7 +348,7 @@ namespace MASES.KNet.Consumer
             }
             finally
             {
-                duration?.Dispose();
+                disposable?.Dispose();
                 actionCallback = null;
             }
         }
