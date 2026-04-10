@@ -90,6 +90,7 @@ namespace MASES.KNetClassicTest
         static void CreateTopic()
         {
             NewTopic topic = null;
+            IDisposable disposable = null;
             //Set<NewTopic> coll = null;
             try
             {
@@ -98,7 +99,7 @@ namespace MASES.KNetClassicTest
                 short replicationFactor = 1;
 
                 topic = new NewTopic(topicName, partitions, replicationFactor);
-                var disposable = MASES.JCOBridge.C2JBridge.JVMBridgeCoreDisposable.Create(topic);
+                disposable = MASES.JCOBridge.C2JBridge.JVMBridgeCoreDisposable.Create(topic);
                 /**** Direct mode ******
                 var map = Collections.SingletonMap(TopicConfig.CLEANUP_POLICY_CONFIG, TopicConfig.CLEANUP_POLICY_COMPACT);
                 topic.Configs(map);
