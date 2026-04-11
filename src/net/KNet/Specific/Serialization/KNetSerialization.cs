@@ -536,7 +536,7 @@ namespace MASES.KNet.Serialization
                 var result = _BooleanDeserializer.Deserialize(topic, data);
                 if (result is IJavaObject ijo)
                 {
-                    return JVMBridgeBase.WrapsDirect<Java.Lang.Boolean>(ijo);
+                    return JVMBridgeCore.WrapsDirect<Java.Lang.Boolean>(ijo);
                 }
                 return (bool)result;
             }
@@ -566,7 +566,7 @@ namespace MASES.KNet.Serialization
         public static Java.Nio.ByteBuffer DeserializeByteBuffer(bool fallbackToKafka, string topic, byte[] data)
         {
             if (data == null || data.Length == 0) return default;
-            return JVMBridgeBase.WrapsDirect<Java.Nio.ByteBuffer>(_ByteBufferDeserializer.Deserialize(topic, data) as IJavaObject);
+            return JVMBridgeCore.WrapsDirect<Java.Nio.ByteBuffer>(_ByteBufferDeserializer.Deserialize(topic, data) as IJavaObject);
         }
 
         /// <summary>
@@ -575,7 +575,7 @@ namespace MASES.KNet.Serialization
         public static Org.Apache.Kafka.Common.Utils.Bytes DeserializeBytes(bool fallbackToKafka, string topic, byte[] data)
         {
             if (data == null || data.Length == 0) return default;
-            return JVMBridgeBase.WrapsDirect<Org.Apache.Kafka.Common.Utils.Bytes>(_BytesDeserializer.Deserialize(topic, data) as IJavaObject);
+            return JVMBridgeCore.WrapsDirect<Org.Apache.Kafka.Common.Utils.Bytes>(_BytesDeserializer.Deserialize(topic, data) as IJavaObject);
         }
 
         /// <summary>
@@ -589,7 +589,7 @@ namespace MASES.KNet.Serialization
                 var result = _DoubleDeserializer.Deserialize(topic, data);
                 if (result is IJavaObject ijo)
                 {
-                    return JVMBridgeBase.WrapsDirect<Java.Lang.Double>(ijo);
+                    return JVMBridgeCore.WrapsDirect<Java.Lang.Double>(ijo);
                 }
                 return (double)result;
             }
@@ -617,7 +617,7 @@ namespace MASES.KNet.Serialization
                 var result = _FloatDeserializer.Deserialize(topic, data);
                 if (result is IJavaObject ijo)
                 {
-                    return JVMBridgeBase.WrapsDirect<Java.Lang.Float>(ijo);
+                    return JVMBridgeCore.WrapsDirect<Java.Lang.Float>(ijo);
                 }
                 return (float)result;
             }
@@ -645,7 +645,7 @@ namespace MASES.KNet.Serialization
                 var result = _IntDeserializer.Deserialize(topic, data);
                 if (result is IJavaObject ijo)
                 {
-                    return JVMBridgeBase.WrapsDirect<Java.Lang.Integer>(ijo);
+                    return JVMBridgeCore.WrapsDirect<Java.Lang.Integer>(ijo);
                 }
                 return (int)result;
             }
@@ -698,7 +698,7 @@ namespace MASES.KNet.Serialization
                 var result = _LongDeserializer.Deserialize(topic, data);
                 if (result is IJavaObject ijo)
                 {
-                    return JVMBridgeBase.WrapsDirect<Java.Lang.Long>(ijo);
+                    return JVMBridgeCore.WrapsDirect<Java.Lang.Long>(ijo);
                 }
                 return (long)result;
             }
@@ -751,7 +751,7 @@ namespace MASES.KNet.Serialization
                 var result = _ShortDeserializer.Deserialize(topic, data);
                 if (result is IJavaObject ijo)
                 {
-                    return JVMBridgeBase.WrapsDirect<Java.Lang.Short>(ijo);
+                    return JVMBridgeCore.WrapsDirect<Java.Lang.Short>(ijo);
                 }
                 return (short)result;
             }

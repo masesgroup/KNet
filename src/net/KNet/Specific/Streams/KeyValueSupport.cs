@@ -27,7 +27,7 @@ namespace MASES.KNet.Streams
     /// <summary>
     /// Support class for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/KeyValue.html#org.apache.kafka.streams.KeyValue"/>
     /// </summary>
-    public partial class KeyValueSupport<K, V> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<KeyValueSupport<K, V>>
+    public partial class KeyValueSupport<K, V> : MASES.JCOBridge.C2JBridge.JVMBridgeCore<KeyValueSupport<K, V>>
     {
         readonly IJavaObject _inner;
 

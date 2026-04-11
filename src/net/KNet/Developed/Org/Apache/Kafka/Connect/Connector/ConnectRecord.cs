@@ -37,7 +37,7 @@ namespace Org.Apache.Kafka.Connect.Connector
     /// <typeparam name="R">The class extending <see cref="ConnectRecord{R, TKey, TValue}"/></typeparam>
     /// <typeparam name="TKey">The type of the key to be inserted in Kafka</typeparam>
     /// <typeparam name="TValue">The type of value to be inserted in Kafka</typeparam>
-    public class ConnectRecord<R, TKey, TValue> : JVMBridgeBase<ConnectRecord<R, TKey, TValue>> where R : ConnectRecord<R, TKey, TValue>
+    public class ConnectRecord<R, TKey, TValue> : JVMBridgeCore<ConnectRecord<R, TKey, TValue>> where R : ConnectRecord<R, TKey, TValue>
     {
         /// <inheritdoc/>
         public override bool IsBridgeAbstract => true;
@@ -74,7 +74,7 @@ namespace Org.Apache.Kafka.Connect.Connector
         {
         }
         /// <summary>
-        /// Generic constructor: it is useful for JCOBridge when there is a derived class which needs to pass arguments to the highest JVMBridgeBase class
+        /// Generic constructor: it is useful for JCOBridge when there is a derived class which needs to pass arguments to the highest <see cref="JVMBridgeCore"/> class
         /// </summary>
         protected ConnectRecord(params object[] args) : base(args)
         {

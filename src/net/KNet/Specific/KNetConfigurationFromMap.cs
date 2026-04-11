@@ -247,7 +247,7 @@ namespace MASES.KNet
 
             if (result is IJavaObject obj)
             {
-                var lst = JVMBridgeBase.WrapsDirect<Java.Util.List<Java.Lang.String>>(obj);
+                var lst = JVMBridgeCore.WrapsDirect<Java.Util.List<Java.Lang.String>>(obj);
                 System.Collections.Generic.List<string> newLst = new System.Collections.Generic.List<string>();
                 foreach (var item in lst)
                 {
@@ -323,7 +323,7 @@ namespace MASES.KNet
             }
             else if (result is IJavaObject obj)
             {
-                return JVMBridgeBase.WrapsDirect<Password>(obj);
+                return JVMBridgeCore.WrapsDirect<Password>(obj);
             }
             else throw new InvalidCastException($"Key \"{key}\" returns a value {(result ?? "null")} cannot be converted in Password");
         }
@@ -343,7 +343,7 @@ namespace MASES.KNet
             }
             else if (result is IJavaObject obj)
             {
-                return JVMBridgeBase.WrapsDirect<Java.Lang.Class>(obj);
+                return JVMBridgeCore.WrapsDirect<Java.Lang.Class>(obj);
             }
             else throw new InvalidCastException($"Key \"{key}\" returns a value {(result ?? "null")} cannot be converted in Class");
         }
