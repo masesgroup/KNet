@@ -18,8 +18,6 @@
 
 using Java.Lang;
 using Java.Nio;
-using Javax.Xml.Crypto;
-using MASES.JCOBridge.C2JBridge;
 using Org.Apache.Kafka.Common.Header;
 using Org.Apache.Kafka.Common.Serialization;
 using System;

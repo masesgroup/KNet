@@ -209,6 +209,7 @@ namespace MASES.KNet.Streams
             clone.ProcessingGuarantee = processingGuarantee;
             return clone;
         }
+
         /// <summary>
         /// Manages <see cref="StreamsConfig.RACK_AWARE_ASSIGNMENT_NON_OVERLAP_COST_CONFIG"/>
         /// </summary>
@@ -327,11 +328,11 @@ namespace MASES.KNet.Streams
             return clone;
         }
         /// <summary>
-        /// Manages <see cref="StreamsConfig.BUILT_IN_METRICS_VERSION_CONFIG"/>
+        /// Manages <see cref="StreamsConfig.BUILT_IN_METRICS_VERSION_CONFIG"/>: use <see cref="StreamsConfig.METRICS_LATEST"/>
         /// </summary>
         public string BuiltInMetricsVersion { get { return GetProperty<string>(StreamsConfig.BUILT_IN_METRICS_VERSION_CONFIG); } set { SetProperty(StreamsConfig.BUILT_IN_METRICS_VERSION_CONFIG, value); } }
         /// <summary>
-        /// Manages <see cref="StreamsConfig.BUILT_IN_METRICS_VERSION_CONFIG"/>
+        /// Manages <see cref="StreamsConfig.BUILT_IN_METRICS_VERSION_CONFIG"/>: use <see cref="StreamsConfig.METRICS_LATEST"/>
         /// </summary>
         public StreamsConfigBuilder WithBuiltInMetricsVersion(string builtInMetricsVersion)
         {
