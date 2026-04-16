@@ -29,7 +29,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
     /// <summary>
     /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/kstream/SlidingWindows.html"/>
     /// </summary>
-    public partial class SlidingWindows : MASES.JCOBridge.C2JBridge.JVMBridgeCore<SlidingWindows>
+    public partial class SlidingWindows : MASES.JCOBridge.C2JBridge.JVMBridgeBase<SlidingWindows>
     {
         const string _bridgeClassName = "org.apache.kafka.streams.kstream.SlidingWindows";
         /// <summary>
@@ -43,7 +43,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         public SlidingWindows(params object[] args) : base(args) { }
 
         private static readonly global::System.Exception _LocalBridgeClazzException = null;
-        private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeCore.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
+        private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
         private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw _LocalBridgeClazzException ?? new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
 
         /// <inheritdoc/>

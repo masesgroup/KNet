@@ -29,7 +29,7 @@ namespace Org.Apache.Kafka.Common.Utils
     /// <summary>
     /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/common/utils/Exit.html"/>
     /// </summary>
-    public partial class Exit : MASES.JCOBridge.C2JBridge.JVMBridgeCore<Exit>
+    public partial class Exit : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Exit>
     {
         const string _bridgeClassName = "org.apache.kafka.common.utils.Exit";
         /// <summary>
@@ -43,7 +43,7 @@ namespace Org.Apache.Kafka.Common.Utils
         public Exit(params object[] args) : base(args) { }
 
         private static readonly global::System.Exception _LocalBridgeClazzException = null;
-        private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeCore.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
+        private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
         private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw _LocalBridgeClazzException ?? new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
 
         /// <inheritdoc/>
@@ -62,7 +62,7 @@ namespace Org.Apache.Kafka.Common.Utils
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/common/utils/Exit.Procedure.html"/>
         /// </summary>
-        public partial class Procedure : MASES.JCOBridge.C2JBridge.JVMBridgeCore<Procedure>
+        public partial class Procedure : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Procedure>
         {
             const string _bridgeClassName = "org.apache.kafka.common.utils.Exit$Procedure";
             /// <summary>
@@ -77,7 +77,7 @@ namespace Org.Apache.Kafka.Common.Utils
             public Procedure(params object[] args) : base(args) { }
 
             private static readonly global::System.Exception _LocalBridgeClazzException = null;
-            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeCore.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
+            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
             private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw _LocalBridgeClazzException ?? new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
 
             /// <inheritdoc/>
@@ -100,7 +100,7 @@ namespace Org.Apache.Kafka.Common.Utils
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/common/utils/Exit.ShutdownHookAdder.html"/>
         /// </summary>
-        public partial class ShutdownHookAdder : MASES.JCOBridge.C2JBridge.JVMBridgeCore<ShutdownHookAdder>
+        public partial class ShutdownHookAdder : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ShutdownHookAdder>
         {
             const string _bridgeClassName = "org.apache.kafka.common.utils.Exit$ShutdownHookAdder";
             /// <summary>
@@ -115,7 +115,7 @@ namespace Org.Apache.Kafka.Common.Utils
             public ShutdownHookAdder(params object[] args) : base(args) { }
 
             private static readonly global::System.Exception _LocalBridgeClazzException = null;
-            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeCore.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
+            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
             private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw _LocalBridgeClazzException ?? new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
 
             /// <inheritdoc/>

@@ -29,7 +29,7 @@ namespace Org.Apache.Kafka.Streams.Processor
     /// <summary>
     /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/processor/UsePartitionTimeOnInvalidTimestamp.html"/>
     /// </summary>
-    public partial class UsePartitionTimeOnInvalidTimestamp : MASES.JCOBridge.C2JBridge.JVMBridgeCore<UsePartitionTimeOnInvalidTimestamp>
+    public partial class UsePartitionTimeOnInvalidTimestamp : MASES.JCOBridge.C2JBridge.JVMBridgeBase<UsePartitionTimeOnInvalidTimestamp>
     {
         const string _bridgeClassName = "org.apache.kafka.streams.processor.UsePartitionTimeOnInvalidTimestamp";
         /// <summary>
@@ -43,7 +43,7 @@ namespace Org.Apache.Kafka.Streams.Processor
         public UsePartitionTimeOnInvalidTimestamp(params object[] args) : base(args) { }
 
         private static readonly global::System.Exception _LocalBridgeClazzException = null;
-        private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeCore.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
+        private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
         private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw _LocalBridgeClazzException ?? new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
 
         /// <inheritdoc/>

@@ -29,7 +29,7 @@ namespace Org.Apache.Kafka.Common.Errors
     /// <summary>
     /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/common/errors/NotLeaderOrFollowerException.html"/>
     /// </summary>
-    public partial class NotLeaderOrFollowerException : MASES.JCOBridge.C2JBridge.JVMBridgeCore<NotLeaderOrFollowerException>
+    public partial class NotLeaderOrFollowerException : MASES.JCOBridge.C2JBridge.JVMBridgeBase<NotLeaderOrFollowerException>
     {
         /// <inheritdoc cref="global::System.Exception()"/>
         public NotLeaderOrFollowerException() { }

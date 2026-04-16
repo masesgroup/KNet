@@ -29,7 +29,7 @@ namespace Org.Apache.Kafka.Metadata
     /// <summary>
     /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/3.9.2/org/apache/kafka/metadata/AssignmentsHelper.html"/>
     /// </summary>
-    public partial class AssignmentsHelper : MASES.JCOBridge.C2JBridge.JVMBridgeCore<AssignmentsHelper>
+    public partial class AssignmentsHelper : MASES.JCOBridge.C2JBridge.JVMBridgeBase<AssignmentsHelper>
     {
         const string _bridgeClassName = "org.apache.kafka.metadata.AssignmentsHelper";
         /// <summary>
@@ -43,7 +43,7 @@ namespace Org.Apache.Kafka.Metadata
         public AssignmentsHelper(params object[] args) : base(args) { }
 
         private static readonly global::System.Exception _LocalBridgeClazzException = null;
-        private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeCore.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
+        private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
         private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw _LocalBridgeClazzException ?? new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
 
         /// <inheritdoc/>

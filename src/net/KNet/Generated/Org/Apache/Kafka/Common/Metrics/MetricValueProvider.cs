@@ -29,7 +29,7 @@ namespace Org.Apache.Kafka.Common.Metrics
     /// <summary>
     /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/common/metrics/MetricValueProvider.html"/>
     /// </summary>
-    public partial class MetricValueProvider : MASES.JCOBridge.C2JBridge.JVMBridgeCore<MetricValueProvider>
+    public partial class MetricValueProvider : MASES.JCOBridge.C2JBridge.JVMBridgeBase<MetricValueProvider>
     {
         const string _bridgeClassName = "org.apache.kafka.common.metrics.MetricValueProvider";
         /// <summary>
@@ -44,7 +44,7 @@ namespace Org.Apache.Kafka.Common.Metrics
         public MetricValueProvider(params object[] args) : base(args) { }
 
         private static readonly global::System.Exception _LocalBridgeClazzException = null;
-        private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeCore.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
+        private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
         private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw _LocalBridgeClazzException ?? new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
 
         /// <inheritdoc/>
@@ -68,7 +68,7 @@ namespace Org.Apache.Kafka.Common.Metrics
     /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/common/metrics/MetricValueProvider.html"/>
     /// </summary>
     /// <typeparam name="T"></typeparam>
-    public partial class MetricValueProvider<T> : MASES.JCOBridge.C2JBridge.JVMBridgeCore<MetricValueProvider<T>>
+    public partial class MetricValueProvider<T> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<MetricValueProvider<T>>
     {
         const string _bridgeClassName = "org.apache.kafka.common.metrics.MetricValueProvider";
         /// <summary>
@@ -83,7 +83,7 @@ namespace Org.Apache.Kafka.Common.Metrics
         public MetricValueProvider(params object[] args) : base(args) { }
 
         private static readonly global::System.Exception _LocalBridgeClazzException = null;
-        private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeCore.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
+        private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
         private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw _LocalBridgeClazzException ?? new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
 
         /// <inheritdoc/>

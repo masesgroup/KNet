@@ -29,7 +29,7 @@ namespace Org.Apache.Kafka.Raft
     /// <summary>
     /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.2/org/apache/kafka/raft/KafkaRaftClientDriver.html"/>
     /// </summary>
-    public partial class KafkaRaftClientDriver : MASES.JCOBridge.C2JBridge.JVMBridgeCore<KafkaRaftClientDriver>
+    public partial class KafkaRaftClientDriver : MASES.JCOBridge.C2JBridge.JVMBridgeBase<KafkaRaftClientDriver>
     {
         const string _bridgeClassName = "org.apache.kafka.raft.KafkaRaftClientDriver";
         /// <summary>
@@ -43,7 +43,7 @@ namespace Org.Apache.Kafka.Raft
         public KafkaRaftClientDriver(params object[] args) : base(args) { }
 
         private static readonly global::System.Exception _LocalBridgeClazzException = null;
-        private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeCore.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
+        private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
         private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw _LocalBridgeClazzException ?? new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
 
         /// <inheritdoc/>
@@ -67,7 +67,7 @@ namespace Org.Apache.Kafka.Raft
     /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.2/org/apache/kafka/raft/KafkaRaftClientDriver.html"/>
     /// </summary>
     /// <typeparam name="T"></typeparam>
-    public partial class KafkaRaftClientDriver<T> : MASES.JCOBridge.C2JBridge.JVMBridgeCore<KafkaRaftClientDriver<T>>
+    public partial class KafkaRaftClientDriver<T> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<KafkaRaftClientDriver<T>>
     {
         const string _bridgeClassName = "org.apache.kafka.raft.KafkaRaftClientDriver";
         /// <summary>
@@ -81,7 +81,7 @@ namespace Org.Apache.Kafka.Raft
         public KafkaRaftClientDriver(params object[] args) : base(args) { }
 
         private static readonly global::System.Exception _LocalBridgeClazzException = null;
-        private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeCore.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
+        private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
         private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw _LocalBridgeClazzException ?? new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
 
         /// <inheritdoc/>

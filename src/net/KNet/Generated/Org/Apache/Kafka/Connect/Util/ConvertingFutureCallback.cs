@@ -29,7 +29,7 @@ namespace Org.Apache.Kafka.Connect.Util
     /// <summary>
     /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/3.9.2/org/apache/kafka/connect/util/ConvertingFutureCallback.html"/>
     /// </summary>
-    public partial class ConvertingFutureCallback : MASES.JCOBridge.C2JBridge.JVMBridgeCore<ConvertingFutureCallback>
+    public partial class ConvertingFutureCallback : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ConvertingFutureCallback>
     {
         const string _bridgeClassName = "org.apache.kafka.connect.util.ConvertingFutureCallback";
         /// <summary>
@@ -44,7 +44,7 @@ namespace Org.Apache.Kafka.Connect.Util
         public ConvertingFutureCallback(params object[] args) : base(args) { }
 
         private static readonly global::System.Exception _LocalBridgeClazzException = null;
-        private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeCore.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
+        private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
         private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw _LocalBridgeClazzException ?? new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
 
         /// <inheritdoc/>
@@ -69,7 +69,7 @@ namespace Org.Apache.Kafka.Connect.Util
     /// </summary>
     /// <typeparam name="U"></typeparam>
     /// <typeparam name="T"></typeparam>
-    public partial class ConvertingFutureCallback<U, T> : MASES.JCOBridge.C2JBridge.JVMBridgeCore<ConvertingFutureCallback<U, T>>
+    public partial class ConvertingFutureCallback<U, T> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ConvertingFutureCallback<U, T>>
     {
         const string _bridgeClassName = "org.apache.kafka.connect.util.ConvertingFutureCallback";
         /// <summary>
@@ -84,7 +84,7 @@ namespace Org.Apache.Kafka.Connect.Util
         public ConvertingFutureCallback(params object[] args) : base(args) { }
 
         private static readonly global::System.Exception _LocalBridgeClazzException = null;
-        private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeCore.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
+        private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
         private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw _LocalBridgeClazzException ?? new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
 
         /// <inheritdoc/>

@@ -29,7 +29,7 @@ namespace Org.Apache.Kafka.Tools.Consumer.Group
     /// <summary>
     /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.9.2/org/apache/kafka/tools/consumer/group/CsvUtils.html"/>
     /// </summary>
-    public partial class CsvUtils : MASES.JCOBridge.C2JBridge.JVMBridgeCore<CsvUtils>
+    public partial class CsvUtils : MASES.JCOBridge.C2JBridge.JVMBridgeBase<CsvUtils>
     {
         const string _bridgeClassName = "org.apache.kafka.tools.consumer.group.CsvUtils";
         /// <summary>
@@ -43,7 +43,7 @@ namespace Org.Apache.Kafka.Tools.Consumer.Group
         public CsvUtils(params object[] args) : base(args) { }
 
         private static readonly global::System.Exception _LocalBridgeClazzException = null;
-        private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeCore.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
+        private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
         private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw _LocalBridgeClazzException ?? new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
 
         /// <inheritdoc/>
@@ -62,7 +62,7 @@ namespace Org.Apache.Kafka.Tools.Consumer.Group
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.9.2/org/apache/kafka/tools/consumer/group/CsvUtils.CsvRecordNoGroup.html"/>
         /// </summary>
-        public partial class CsvRecordNoGroup : MASES.JCOBridge.C2JBridge.JVMBridgeCore<CsvRecordNoGroup>
+        public partial class CsvRecordNoGroup : MASES.JCOBridge.C2JBridge.JVMBridgeBase<CsvRecordNoGroup>
         {
             const string _bridgeClassName = "org.apache.kafka.tools.consumer.group.CsvUtils$CsvRecordNoGroup";
             /// <summary>
@@ -76,7 +76,7 @@ namespace Org.Apache.Kafka.Tools.Consumer.Group
             public CsvRecordNoGroup(params object[] args) : base(args) { }
 
             private static readonly global::System.Exception _LocalBridgeClazzException = null;
-            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeCore.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
+            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
             private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw _LocalBridgeClazzException ?? new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
 
             /// <inheritdoc/>
@@ -99,7 +99,7 @@ namespace Org.Apache.Kafka.Tools.Consumer.Group
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.9.2/org/apache/kafka/tools/consumer/group/CsvUtils.CsvRecordWithGroup.html"/>
         /// </summary>
-        public partial class CsvRecordWithGroup : MASES.JCOBridge.C2JBridge.JVMBridgeCore<CsvRecordWithGroup>
+        public partial class CsvRecordWithGroup : MASES.JCOBridge.C2JBridge.JVMBridgeBase<CsvRecordWithGroup>
         {
             const string _bridgeClassName = "org.apache.kafka.tools.consumer.group.CsvUtils$CsvRecordWithGroup";
             /// <summary>
@@ -113,7 +113,7 @@ namespace Org.Apache.Kafka.Tools.Consumer.Group
             public CsvRecordWithGroup(params object[] args) : base(args) { }
 
             private static readonly global::System.Exception _LocalBridgeClazzException = null;
-            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeCore.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
+            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
             private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw _LocalBridgeClazzException ?? new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
 
             /// <inheritdoc/>
