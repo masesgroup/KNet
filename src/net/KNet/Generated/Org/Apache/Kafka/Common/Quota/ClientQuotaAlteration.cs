@@ -29,7 +29,7 @@ namespace Org.Apache.Kafka.Common.Quota
     /// <summary>
     /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/common/quota/ClientQuotaAlteration.html"/>
     /// </summary>
-    public partial class ClientQuotaAlteration : MASES.JCOBridge.C2JBridge.JVMBridgeCore<ClientQuotaAlteration>
+    public partial class ClientQuotaAlteration : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ClientQuotaAlteration>
     {
         const string _bridgeClassName = "org.apache.kafka.common.quota.ClientQuotaAlteration";
         /// <summary>
@@ -43,7 +43,7 @@ namespace Org.Apache.Kafka.Common.Quota
         public ClientQuotaAlteration(params object[] args) : base(args) { }
 
         private static readonly global::System.Exception _LocalBridgeClazzException = null;
-        private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeCore.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
+        private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
         private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw _LocalBridgeClazzException ?? new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
 
         /// <inheritdoc/>
@@ -62,7 +62,7 @@ namespace Org.Apache.Kafka.Common.Quota
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/common/quota/ClientQuotaAlteration.Op.html"/>
         /// </summary>
-        public partial class Op : MASES.JCOBridge.C2JBridge.JVMBridgeCore<Op>
+        public partial class Op : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Op>
         {
             const string _bridgeClassName = "org.apache.kafka.common.quota.ClientQuotaAlteration$Op";
             /// <summary>
@@ -76,7 +76,7 @@ namespace Org.Apache.Kafka.Common.Quota
             public Op(params object[] args) : base(args) { }
 
             private static readonly global::System.Exception _LocalBridgeClazzException = null;
-            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeCore.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
+            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
             private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw _LocalBridgeClazzException ?? new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
 
             /// <inheritdoc/>

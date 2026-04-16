@@ -29,7 +29,7 @@ namespace Org.Apache.Kafka.Connect.Source
     /// <summary>
     /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.2/org/apache/kafka/connect/source/SourceTaskContext.html"/>
     /// </summary>
-    public partial class SourceTaskContext : MASES.JCOBridge.C2JBridge.JVMBridgeCore<SourceTaskContext>
+    public partial class SourceTaskContext : MASES.JCOBridge.C2JBridge.JVMBridgeBase<SourceTaskContext>
     {
         const string _bridgeClassName = "org.apache.kafka.connect.source.SourceTaskContext";
         /// <summary>
@@ -44,7 +44,7 @@ namespace Org.Apache.Kafka.Connect.Source
         public SourceTaskContext(params object[] args) : base(args) { }
 
         private static readonly global::System.Exception _LocalBridgeClazzException = null;
-        private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeCore.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
+        private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
         private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw _LocalBridgeClazzException ?? new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
 
         /// <inheritdoc/>

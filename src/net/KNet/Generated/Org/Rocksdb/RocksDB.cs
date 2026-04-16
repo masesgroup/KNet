@@ -43,7 +43,7 @@ namespace Org.Rocksdb
         public RocksDB(params object[] args) : base(args) { }
 
         private static readonly global::System.Exception _LocalBridgeClazzException = null;
-        private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeCore.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
+        private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
         private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw _LocalBridgeClazzException ?? new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
 
         /// <inheritdoc/>
@@ -62,7 +62,7 @@ namespace Org.Rocksdb
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/RocksDB.CountAndSize.html"/>
         /// </summary>
-        public partial class CountAndSize : MASES.JCOBridge.C2JBridge.JVMBridgeCore<CountAndSize>
+        public partial class CountAndSize : MASES.JCOBridge.C2JBridge.JVMBridgeBase<CountAndSize>
         {
             const string _bridgeClassName = "org.rocksdb.RocksDB$CountAndSize";
             /// <summary>
@@ -76,7 +76,7 @@ namespace Org.Rocksdb
             public CountAndSize(params object[] args) : base(args) { }
 
             private static readonly global::System.Exception _LocalBridgeClazzException = null;
-            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeCore.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
+            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
             private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw _LocalBridgeClazzException ?? new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
 
             /// <inheritdoc/>
@@ -99,7 +99,7 @@ namespace Org.Rocksdb
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/RocksDB.LiveFiles.html"/>
         /// </summary>
-        public partial class LiveFiles : MASES.JCOBridge.C2JBridge.JVMBridgeCore<LiveFiles>
+        public partial class LiveFiles : MASES.JCOBridge.C2JBridge.JVMBridgeBase<LiveFiles>
         {
             const string _bridgeClassName = "org.rocksdb.RocksDB$LiveFiles";
             /// <summary>
@@ -113,7 +113,7 @@ namespace Org.Rocksdb
             public LiveFiles(params object[] args) : base(args) { }
 
             private static readonly global::System.Exception _LocalBridgeClazzException = null;
-            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeCore.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
+            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
             private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw _LocalBridgeClazzException ?? new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
 
             /// <inheritdoc/>
@@ -136,7 +136,7 @@ namespace Org.Rocksdb
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/RocksDB.Version.html"/>
         /// </summary>
-        public partial class Version : MASES.JCOBridge.C2JBridge.JVMBridgeCore<Version>
+        public partial class Version : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Version>
         {
             const string _bridgeClassName = "org.rocksdb.RocksDB$Version";
             /// <summary>
@@ -150,7 +150,7 @@ namespace Org.Rocksdb
             public Version(params object[] args) : base(args) { }
 
             private static readonly global::System.Exception _LocalBridgeClazzException = null;
-            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeCore.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
+            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
             private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw _LocalBridgeClazzException ?? new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
 
             /// <inheritdoc/>

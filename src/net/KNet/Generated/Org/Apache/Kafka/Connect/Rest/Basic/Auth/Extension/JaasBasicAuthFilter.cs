@@ -29,7 +29,7 @@ namespace Org.Apache.Kafka.Connect.Rest.Basic.Auth.Extension
     /// <summary>
     /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-basic-auth-extension/3.9.2/org/apache/kafka/connect/rest/basic/auth/extension/JaasBasicAuthFilter.html"/>
     /// </summary>
-    public partial class JaasBasicAuthFilter : MASES.JCOBridge.C2JBridge.JVMBridgeCore<JaasBasicAuthFilter>
+    public partial class JaasBasicAuthFilter : MASES.JCOBridge.C2JBridge.JVMBridgeBase<JaasBasicAuthFilter>
     {
         const string _bridgeClassName = "org.apache.kafka.connect.rest.basic.auth.extension.JaasBasicAuthFilter";
         /// <summary>
@@ -43,7 +43,7 @@ namespace Org.Apache.Kafka.Connect.Rest.Basic.Auth.Extension
         public JaasBasicAuthFilter(params object[] args) : base(args) { }
 
         private static readonly global::System.Exception _LocalBridgeClazzException = null;
-        private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeCore.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
+        private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
         private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw _LocalBridgeClazzException ?? new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
 
         /// <inheritdoc/>
@@ -76,7 +76,7 @@ namespace Org.Apache.Kafka.Connect.Rest.Basic.Auth.Extension
             public BasicAuthCallBackHandler(params object[] args) : base(args) { }
 
             private static readonly global::System.Exception _LocalBridgeClazzException = null;
-            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeCore.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
+            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
             private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw _LocalBridgeClazzException ?? new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
 
             /// <inheritdoc/>

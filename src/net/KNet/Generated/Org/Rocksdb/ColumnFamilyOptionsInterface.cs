@@ -29,7 +29,7 @@ namespace Org.Rocksdb
     /// <summary>
     /// <see href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/ColumnFamilyOptionsInterface.html"/>
     /// </summary>
-    public partial class ColumnFamilyOptionsInterface : MASES.JCOBridge.C2JBridge.JVMBridgeCore<ColumnFamilyOptionsInterface>
+    public partial class ColumnFamilyOptionsInterface : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ColumnFamilyOptionsInterface>
     {
         const string _bridgeClassName = "org.rocksdb.ColumnFamilyOptionsInterface";
         /// <summary>
@@ -44,7 +44,7 @@ namespace Org.Rocksdb
         public ColumnFamilyOptionsInterface(params object[] args) : base(args) { }
 
         private static readonly global::System.Exception _LocalBridgeClazzException = null;
-        private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeCore.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
+        private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
         private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw _LocalBridgeClazzException ?? new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
 
         /// <inheritdoc/>
@@ -68,7 +68,7 @@ namespace Org.Rocksdb
     /// <see href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/ColumnFamilyOptionsInterface.html"/>
     /// </summary>
     /// <typeparam name="T"><see cref="Org.Rocksdb.ColumnFamilyOptionsInterface{T}"/></typeparam>
-    public partial class ColumnFamilyOptionsInterface<T> : MASES.JCOBridge.C2JBridge.JVMBridgeCore<ColumnFamilyOptionsInterface<T>> where T : Org.Rocksdb.ColumnFamilyOptionsInterface<T>
+    public partial class ColumnFamilyOptionsInterface<T> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ColumnFamilyOptionsInterface<T>> where T : Org.Rocksdb.ColumnFamilyOptionsInterface<T>
     {
         const string _bridgeClassName = "org.rocksdb.ColumnFamilyOptionsInterface";
         /// <summary>
@@ -83,7 +83,7 @@ namespace Org.Rocksdb
         public ColumnFamilyOptionsInterface(params object[] args) : base(args) { }
 
         private static readonly global::System.Exception _LocalBridgeClazzException = null;
-        private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeCore.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
+        private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
         private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw _LocalBridgeClazzException ?? new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
 
         /// <inheritdoc/>

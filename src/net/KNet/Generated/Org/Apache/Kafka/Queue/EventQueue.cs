@@ -44,7 +44,7 @@ namespace Org.Apache.Kafka.Queue
         public EventQueue(params object[] args) : base(args) { }
 
         private static readonly global::System.Exception _LocalBridgeClazzException = null;
-        private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeCore.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
+        private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
         private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw _LocalBridgeClazzException ?? new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
 
         /// <inheritdoc/>
@@ -63,7 +63,7 @@ namespace Org.Apache.Kafka.Queue
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/3.9.2/org/apache/kafka/queue/EventQueue.DeadlineFunction.html"/>
         /// </summary>
-        public partial class DeadlineFunction : MASES.JCOBridge.C2JBridge.JVMBridgeCore<DeadlineFunction>
+        public partial class DeadlineFunction : MASES.JCOBridge.C2JBridge.JVMBridgeBase<DeadlineFunction>
         {
             const string _bridgeClassName = "org.apache.kafka.queue.EventQueue$DeadlineFunction";
             /// <summary>
@@ -77,7 +77,7 @@ namespace Org.Apache.Kafka.Queue
             public DeadlineFunction(params object[] args) : base(args) { }
 
             private static readonly global::System.Exception _LocalBridgeClazzException = null;
-            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeCore.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
+            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
             private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw _LocalBridgeClazzException ?? new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
 
             /// <inheritdoc/>
@@ -100,7 +100,7 @@ namespace Org.Apache.Kafka.Queue
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/3.9.2/org/apache/kafka/queue/EventQueue.EarliestDeadlineFunction.html"/>
         /// </summary>
-        public partial class EarliestDeadlineFunction : MASES.JCOBridge.C2JBridge.JVMBridgeCore<EarliestDeadlineFunction>
+        public partial class EarliestDeadlineFunction : MASES.JCOBridge.C2JBridge.JVMBridgeBase<EarliestDeadlineFunction>
         {
             const string _bridgeClassName = "org.apache.kafka.queue.EventQueue$EarliestDeadlineFunction";
             /// <summary>
@@ -114,7 +114,7 @@ namespace Org.Apache.Kafka.Queue
             public EarliestDeadlineFunction(params object[] args) : base(args) { }
 
             private static readonly global::System.Exception _LocalBridgeClazzException = null;
-            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeCore.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
+            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
             private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw _LocalBridgeClazzException ?? new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
 
             /// <inheritdoc/>
@@ -137,7 +137,7 @@ namespace Org.Apache.Kafka.Queue
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/3.9.2/org/apache/kafka/queue/EventQueue.Event.html"/>
         /// </summary>
-        public partial class Event : MASES.JCOBridge.C2JBridge.JVMBridgeCore<Event>
+        public partial class Event : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Event>
         {
             const string _bridgeClassName = "org.apache.kafka.queue.EventQueue$Event";
             /// <summary>
@@ -152,7 +152,7 @@ namespace Org.Apache.Kafka.Queue
             public Event(params object[] args) : base(args) { }
 
             private static readonly global::System.Exception _LocalBridgeClazzException = null;
-            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeCore.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
+            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
             private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw _LocalBridgeClazzException ?? new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
 
             /// <inheritdoc/>
@@ -189,7 +189,7 @@ namespace Org.Apache.Kafka.Queue
             public EventInsertionType(params object[] args) : base(args) { }
 
             private static readonly global::System.Exception _LocalBridgeClazzException = null;
-            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeCore.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
+            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
             private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw _LocalBridgeClazzException ?? new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
 
             /// <inheritdoc/>
@@ -227,7 +227,7 @@ namespace Org.Apache.Kafka.Queue
             public FailureLoggingEvent(params object[] args) : base(args) { }
 
             private static readonly global::System.Exception _LocalBridgeClazzException = null;
-            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeCore.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
+            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
             private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw _LocalBridgeClazzException ?? new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
 
             /// <inheritdoc/>
@@ -250,7 +250,7 @@ namespace Org.Apache.Kafka.Queue
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/3.9.2/org/apache/kafka/queue/EventQueue.LatestDeadlineFunction.html"/>
         /// </summary>
-        public partial class LatestDeadlineFunction : MASES.JCOBridge.C2JBridge.JVMBridgeCore<LatestDeadlineFunction>
+        public partial class LatestDeadlineFunction : MASES.JCOBridge.C2JBridge.JVMBridgeBase<LatestDeadlineFunction>
         {
             const string _bridgeClassName = "org.apache.kafka.queue.EventQueue$LatestDeadlineFunction";
             /// <summary>
@@ -264,7 +264,7 @@ namespace Org.Apache.Kafka.Queue
             public LatestDeadlineFunction(params object[] args) : base(args) { }
 
             private static readonly global::System.Exception _LocalBridgeClazzException = null;
-            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeCore.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
+            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
             private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw _LocalBridgeClazzException ?? new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
 
             /// <inheritdoc/>
@@ -287,7 +287,7 @@ namespace Org.Apache.Kafka.Queue
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/3.9.2/org/apache/kafka/queue/EventQueue.NoDeadlineFunction.html"/>
         /// </summary>
-        public partial class NoDeadlineFunction : MASES.JCOBridge.C2JBridge.JVMBridgeCore<NoDeadlineFunction>
+        public partial class NoDeadlineFunction : MASES.JCOBridge.C2JBridge.JVMBridgeBase<NoDeadlineFunction>
         {
             const string _bridgeClassName = "org.apache.kafka.queue.EventQueue$NoDeadlineFunction";
             /// <summary>
@@ -301,7 +301,7 @@ namespace Org.Apache.Kafka.Queue
             public NoDeadlineFunction(params object[] args) : base(args) { }
 
             private static readonly global::System.Exception _LocalBridgeClazzException = null;
-            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeCore.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
+            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
             private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw _LocalBridgeClazzException ?? new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
 
             /// <inheritdoc/>
@@ -338,7 +338,7 @@ namespace Org.Apache.Kafka.Queue
             public VoidEvent(params object[] args) : base(args) { }
 
             private static readonly global::System.Exception _LocalBridgeClazzException = null;
-            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeCore.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
+            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
             private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw _LocalBridgeClazzException ?? new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
 
             /// <inheritdoc/>

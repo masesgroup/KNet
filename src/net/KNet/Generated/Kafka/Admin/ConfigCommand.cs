@@ -29,7 +29,7 @@ namespace Kafka.Admin
     /// <summary>
     /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.9.2/kafka/admin/ConfigCommand.html"/>
     /// </summary>
-    public partial class ConfigCommand : MASES.JCOBridge.C2JBridge.JVMBridgeCore<ConfigCommand>, MASES.JCOBridge.C2JBridge.IJVMBridgeMain
+    public partial class ConfigCommand : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ConfigCommand>, MASES.JCOBridge.C2JBridge.IJVMBridgeMain
     {
         const string _bridgeClassName = "kafka.admin.ConfigCommand";
         /// <summary>
@@ -43,7 +43,7 @@ namespace Kafka.Admin
         public ConfigCommand(params object[] args) : base(args) { }
 
         private static readonly global::System.Exception _LocalBridgeClazzException = null;
-        private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeCore.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
+        private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
         private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw _LocalBridgeClazzException ?? new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
 
         /// <inheritdoc/>
@@ -62,7 +62,7 @@ namespace Kafka.Admin
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.9.2/kafka/admin/ConfigCommand.ConfigCommandOptions.html"/>
         /// </summary>
-        public partial class ConfigCommandOptions : MASES.JCOBridge.C2JBridge.JVMBridgeCore<ConfigCommandOptions>
+        public partial class ConfigCommandOptions : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ConfigCommandOptions>
         {
             const string _bridgeClassName = "kafka.admin.ConfigCommand$ConfigCommandOptions";
             /// <summary>
@@ -76,7 +76,7 @@ namespace Kafka.Admin
             public ConfigCommandOptions(params object[] args) : base(args) { }
 
             private static readonly global::System.Exception _LocalBridgeClazzException = null;
-            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeCore.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
+            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
             private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw _LocalBridgeClazzException ?? new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
 
             /// <inheritdoc/>
@@ -99,7 +99,7 @@ namespace Kafka.Admin
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.9.2/kafka/admin/ConfigCommand.ConfigEntity.html"/>
         /// </summary>
-        public partial class ConfigEntity : MASES.JCOBridge.C2JBridge.JVMBridgeCore<ConfigEntity>
+        public partial class ConfigEntity : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ConfigEntity>
         {
             const string _bridgeClassName = "kafka.admin.ConfigCommand$ConfigEntity";
             /// <summary>
@@ -113,7 +113,7 @@ namespace Kafka.Admin
             public ConfigEntity(params object[] args) : base(args) { }
 
             private static readonly global::System.Exception _LocalBridgeClazzException = null;
-            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeCore.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
+            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
             private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw _LocalBridgeClazzException ?? new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
 
             /// <inheritdoc/>
@@ -136,7 +136,7 @@ namespace Kafka.Admin
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka_2.13/3.9.2/kafka/admin/ConfigCommand.Entity.html"/>
         /// </summary>
-        public partial class Entity : MASES.JCOBridge.C2JBridge.JVMBridgeCore<Entity>
+        public partial class Entity : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Entity>
         {
             const string _bridgeClassName = "kafka.admin.ConfigCommand$Entity";
             /// <summary>
@@ -150,7 +150,7 @@ namespace Kafka.Admin
             public Entity(params object[] args) : base(args) { }
 
             private static readonly global::System.Exception _LocalBridgeClazzException = null;
-            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeCore.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
+            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
             private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw _LocalBridgeClazzException ?? new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
 
             /// <inheritdoc/>

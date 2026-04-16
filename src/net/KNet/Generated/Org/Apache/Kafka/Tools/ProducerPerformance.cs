@@ -29,7 +29,7 @@ namespace Org.Apache.Kafka.Tools
     /// <summary>
     /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/3.9.2/org/apache/kafka/tools/ProducerPerformance.html"/>
     /// </summary>
-    public partial class ProducerPerformance : MASES.JCOBridge.C2JBridge.JVMBridgeCore<ProducerPerformance>, MASES.JCOBridge.C2JBridge.IJVMBridgeMain
+    public partial class ProducerPerformance : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ProducerPerformance>, MASES.JCOBridge.C2JBridge.IJVMBridgeMain
     {
         const string _bridgeClassName = "org.apache.kafka.tools.ProducerPerformance";
         /// <summary>
@@ -43,7 +43,7 @@ namespace Org.Apache.Kafka.Tools
         public ProducerPerformance(params object[] args) : base(args) { }
 
         private static readonly global::System.Exception _LocalBridgeClazzException = null;
-        private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeCore.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
+        private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
         private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw _LocalBridgeClazzException ?? new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
 
         /// <inheritdoc/>

@@ -29,7 +29,7 @@ namespace Org.Apache.Kafka.Common.Header
     /// <summary>
     /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/common/header/Header.html"/>
     /// </summary>
-    public partial class Header : MASES.JCOBridge.C2JBridge.JVMBridgeCore<Header>
+    public partial class Header : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Header>
     {
         const string _bridgeClassName = "org.apache.kafka.common.header.Header";
         /// <summary>
@@ -44,7 +44,7 @@ namespace Org.Apache.Kafka.Common.Header
         public Header(params object[] args) : base(args) { }
 
         private static readonly global::System.Exception _LocalBridgeClazzException = null;
-        private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeCore.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
+        private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
         private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw _LocalBridgeClazzException ?? new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
 
         /// <inheritdoc/>

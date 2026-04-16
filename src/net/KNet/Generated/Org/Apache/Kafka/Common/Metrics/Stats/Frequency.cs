@@ -29,7 +29,7 @@ namespace Org.Apache.Kafka.Common.Metrics.Stats
     /// <summary>
     /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/common/metrics/stats/Frequency.html"/>
     /// </summary>
-    public partial class Frequency : MASES.JCOBridge.C2JBridge.JVMBridgeCore<Frequency>
+    public partial class Frequency : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Frequency>
     {
         const string _bridgeClassName = "org.apache.kafka.common.metrics.stats.Frequency";
         /// <summary>
@@ -43,7 +43,7 @@ namespace Org.Apache.Kafka.Common.Metrics.Stats
         public Frequency(params object[] args) : base(args) { }
 
         private static readonly global::System.Exception _LocalBridgeClazzException = null;
-        private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeCore.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
+        private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
         private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw _LocalBridgeClazzException ?? new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
 
         /// <inheritdoc/>

@@ -29,7 +29,7 @@ namespace Org.Apache.Kafka.Raft.Generated
     /// <summary>
     /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.2/org/apache/kafka/raft/generated/QuorumStateData.html"/>
     /// </summary>
-    public partial class QuorumStateData : MASES.JCOBridge.C2JBridge.JVMBridgeCore<QuorumStateData>
+    public partial class QuorumStateData : MASES.JCOBridge.C2JBridge.JVMBridgeBase<QuorumStateData>
     {
         const string _bridgeClassName = "org.apache.kafka.raft.generated.QuorumStateData";
         /// <summary>
@@ -43,7 +43,7 @@ namespace Org.Apache.Kafka.Raft.Generated
         public QuorumStateData(params object[] args) : base(args) { }
 
         private static readonly global::System.Exception _LocalBridgeClazzException = null;
-        private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeCore.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
+        private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
         private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw _LocalBridgeClazzException ?? new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
 
         /// <inheritdoc/>
@@ -62,7 +62,7 @@ namespace Org.Apache.Kafka.Raft.Generated
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/3.9.2/org/apache/kafka/raft/generated/QuorumStateData.Voter.html"/>
         /// </summary>
-        public partial class Voter : MASES.JCOBridge.C2JBridge.JVMBridgeCore<Voter>
+        public partial class Voter : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Voter>
         {
             const string _bridgeClassName = "org.apache.kafka.raft.generated.QuorumStateData$Voter";
             /// <summary>
@@ -76,7 +76,7 @@ namespace Org.Apache.Kafka.Raft.Generated
             public Voter(params object[] args) : base(args) { }
 
             private static readonly global::System.Exception _LocalBridgeClazzException = null;
-            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeCore.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
+            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
             private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw _LocalBridgeClazzException ?? new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
 
             /// <inheritdoc/>
