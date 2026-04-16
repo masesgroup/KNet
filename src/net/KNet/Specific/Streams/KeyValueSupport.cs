@@ -105,7 +105,16 @@ namespace MASES.KNet.Streams
 
         #endregion
 
-        // TODO: complete the class
+        /// <inheritdoc/>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing)
+            {
+                _inner?.Dispose();
+            }
+
+            base.Dispose(disposing);
+        }
     }
     #endregion
 }

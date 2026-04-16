@@ -172,13 +172,6 @@ namespace MASES.KNet.Consumer
 
             return props;
         }
-        /// <summary>
-        /// Finalizer
-        /// </summary>
-        ~KNetShareConsumer()
-        {
-            Dispose();
-        }
 
         /// <inheritdoc cref="IShareConsumer{K, V, TJVMK, TJVMV}.Poll(TimeSpan)"/>
         public ConsumerRecords<K, V, TJVMK, TJVMV> Poll(TimeSpan timeout)

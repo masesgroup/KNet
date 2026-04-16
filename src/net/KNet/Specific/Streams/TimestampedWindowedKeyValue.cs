@@ -19,6 +19,7 @@
 using MASES.KNet.Serialization;
 using MASES.KNet.Streams.Kstream;
 using MASES.KNet.Streams.State;
+using System;
 
 namespace MASES.KNet.Streams
 {
@@ -29,7 +30,7 @@ namespace MASES.KNet.Streams
     /// <typeparam name="V">The value type</typeparam>
     /// <typeparam name="TJVMK">The JVM type of <typeparamref name="K"/></typeparam>
     /// <typeparam name="TJVMV">The JVM type of <typeparamref name="V"/></typeparam>
-    public sealed class TimestampedWindowedKeyValue<K, V, TJVMK, TJVMV> : IGenericSerDesFactoryApplier
+    public sealed class TimestampedWindowedKeyValue<K, V, TJVMK, TJVMV> : IGenericSerDesFactoryApplier, IDisposable
     {
         readonly KeyValueSupport<Org.Apache.Kafka.Streams.Kstream.Windowed<TJVMK>, Org.Apache.Kafka.Streams.State.ValueAndTimestamp<TJVMV>> _valueInner;
         Windowed<K, TJVMK> _key = null;
@@ -44,6 +45,44 @@ namespace MASES.KNet.Streams
             _valueInner = value;
         }
 
+        readonly object _lock = new object();
+        bool _disposed = false;
+        /// <summary>
+        /// Test if this instance was disposed
+        /// </summary>
+        /// <exception cref="ObjectDisposedException">When this instance was disposed</exception>
+        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
+        void CheckDisposed() { lock (_lock) { if (_disposed) throw new ObjectDisposedException(ToString()); } }
+        /// <inheritdoc cref="IDisposable.Dispose"/>
+        public void Dispose()
+        {
+            // Dispose of unmanaged resources.
+            Dispose(true);
+            // Suppress finalization.
+            GC.SuppressFinalize(this);
+        }
+        /// <summary>
+        /// Implements the pattern described in https://learn.microsoft.com/en-en/dotnet/standard/garbage-collection/implementing-dispose
+        /// </summary>
+        /// <param name="disposing">The disposing parameter is a <see langword="bool"/> that indicates whether the method call comes from a <see cref="IDisposable.Dispose"/> method (its value is <see langword="true"/>) or from a finalizer (its value is <see langword="false"/>)</param>
+        void Dispose(bool disposing)
+        {
+            lock (_lock)
+            {
+                if (_disposed)
+                {
+                    return;
+                }
+
+                if (disposing)
+                {
+                    _valueInner?.Dispose();
+                }
+
+                _disposed = true;
+            }
+        }
+
         /// <summary>
         /// KNet implementation of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/KeyValue.html#key"/>
         /// </summary>
@@ -51,6 +90,7 @@ namespace MASES.KNet.Streams
         {
             get
             {
+                CheckDisposed();
                 _key ??= new Windowed<K, TJVMK>(_factory, _valueInner.Key);
                 return _key;
             }
@@ -62,6 +102,7 @@ namespace MASES.KNet.Streams
         {
             get
             {
+                CheckDisposed();
                 _value ??= new ValueAndTimestamp<V, TJVMV>(_factory, _valueInner.Value);
                 return _value;
             }

@@ -17,6 +17,7 @@
 */
 
 using MASES.KNet.Serialization;
+using System;
 
 namespace MASES.KNet.Consumer
 {
@@ -27,7 +28,7 @@ namespace MASES.KNet.Consumer
     /// <typeparam name="V">The value type</typeparam>
     /// <typeparam name="TJVMK">The JVM type of <typeparamref name="K"/></typeparam>
     /// <typeparam name="TJVMV">The JVM type of <typeparamref name="V"/></typeparam>
-    public class ConsumerRecord<K, V, TJVMK, TJVMV>: IGenericSerDesFactoryApplier
+    public class ConsumerRecord<K, V, TJVMK, TJVMV>: IGenericSerDesFactoryApplier, IDisposable
     {
         IDeserializer<K, TJVMK> _keyDeserializer;
         IDeserializer<V, TJVMV> _valueDeserializer;
@@ -64,34 +65,120 @@ namespace MASES.KNet.Consumer
             _factory = factory;
         }
 
+        readonly object _lock = new object();
+        bool _disposed = false;
+        /// <summary>
+        /// Test if this instance was disposed
+        /// </summary>
+        /// <exception cref="ObjectDisposedException">When this instance was disposed</exception>
+        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
+        protected void CheckDisposed() { lock (_lock) { if (_disposed) throw new ObjectDisposedException(ToString()); } }
+        /// <inheritdoc cref="IDisposable.Dispose"/>
+        public void Dispose()
+        {
+            // Dispose of unmanaged resources.
+            Dispose(true);
+            // Suppress finalization.
+            GC.SuppressFinalize(this);
+        }
+        /// <summary>
+        /// Implements the pattern described in https://learn.microsoft.com/en-en/dotnet/standard/garbage-collection/implementing-dispose
+        /// </summary>
+        /// <param name="disposing">The disposing parameter is a <see langword="bool"/> that indicates whether the method call comes from a <see cref="IDisposable.Dispose"/> method (its value is <see langword="true"/>) or from a finalizer (its value is <see langword="false"/>)</param>
+        protected virtual void Dispose(bool disposing)
+        {
+            lock (_lock)
+            {
+                if (_disposed)
+                {
+                    return;
+                }
+
+                if (disposing)
+                {
+                    _record?.Dispose();
+                }
+
+                _disposed = true;
+            }
+        }
+
         string _topic = null;
         /// <inheritdoc cref="Org.Apache.Kafka.Clients.Consumer.ConsumerRecord{K, V}.Topic"/>
-        public string Topic { get { _topic ??= _record.Topic(); return _topic; } }
+        public string Topic { get { CheckDisposed(); _topic ??= _record.Topic(); return _topic; } }
         /// <inheritdoc cref="Org.Apache.Kafka.Clients.Consumer.ConsumerRecord{K, V}.LeaderEpoch"/>
-        public int? LeaderEpoch { get { var epoch = _record.LeaderEpoch(); return epoch.IsPresent() ? epoch.Get() : null; } }
+        public int? LeaderEpoch { get { CheckDisposed(); var epoch = _record.LeaderEpoch(); return epoch.IsPresent() ? epoch.Get() : null; } }
         int? _partition = null;
         /// <inheritdoc cref="Org.Apache.Kafka.Clients.Consumer.ConsumerRecord{K, V}.Partition"/>
-        public int Partition => _partition ??= _record.Partition();
+        public int Partition
+        {
+            get
+            {
+                CheckDisposed(); return _partition ??= _record.Partition();
+            }
+        }
         Org.Apache.Kafka.Common.Header.Headers _headers = null;
         /// <inheritdoc cref="Org.Apache.Kafka.Clients.Consumer.ConsumerRecord{K, V}.Headers"/>
-        public Org.Apache.Kafka.Common.Header.Headers Headers => _headers ??= _record.Headers();
+        public Org.Apache.Kafka.Common.Header.Headers Headers
+        {
+            get
+            {
+                CheckDisposed(); return _headers ??= _record.Headers();
+            }
+        }
         long? _offset = null;
         /// <inheritdoc cref="Org.Apache.Kafka.Clients.Consumer.ConsumerRecord{K, V}.Offset"/>
-        public long Offset => _offset ??= _record.Offset();
+        public long Offset
+        {
+            get
+            {
+                CheckDisposed(); return _offset ??= _record.Offset();
+            }
+        }
         /// <inheritdoc cref="Org.Apache.Kafka.Clients.Consumer.ConsumerRecord{K, V}.DateTime"/>
-        public System.DateTime DateTime => _record.DateTime;
+        public System.DateTime DateTime
+        {
+            get
+            {
+                CheckDisposed(); return _record.DateTime;
+            }
+        }
         long? _timestamp = null;
         /// <inheritdoc cref="Org.Apache.Kafka.Clients.Consumer.ConsumerRecord{K, V}.Timestamp"/>
-        public long Timestamp => _timestamp ??= _record.Timestamp();
+        public long Timestamp
+        {
+            get
+            {
+                CheckDisposed(); return _timestamp ??= _record.Timestamp();
+            }
+        }
         Org.Apache.Kafka.Common.Record.TimestampType _timestampType = null;
         /// <inheritdoc cref="Org.Apache.Kafka.Clients.Consumer.ConsumerRecord{K, V}.TimestampType"/>
-        public Org.Apache.Kafka.Common.Record.TimestampType TimestampType => _timestampType ??= _record.TimestampType();
+        public Org.Apache.Kafka.Common.Record.TimestampType TimestampType
+        {
+            get
+            {
+                CheckDisposed(); return _timestampType ??= _record.TimestampType();
+            }
+        }
         int? _serializedKeySize = null;
         /// <inheritdoc cref="Org.Apache.Kafka.Clients.Consumer.ConsumerRecord{K, V}.SerializedKeySize"/>
-        public int SerializedKeySize => _serializedKeySize ??= _record.SerializedKeySize();
+        public int SerializedKeySize
+        {
+            get
+            {
+                CheckDisposed(); return _serializedKeySize ??= _record.SerializedKeySize();
+            }
+        }
         int? _serializedValueSize = null;
         /// <inheritdoc cref="Org.Apache.Kafka.Clients.Consumer.ConsumerRecord{K, V}.SerializedValueSize"/>
-        public int SerializedValueSize => _serializedValueSize ??= _record.SerializedValueSize();
+        public int SerializedValueSize
+        {
+            get
+            {
+                CheckDisposed(); return _serializedValueSize ??= _record.SerializedValueSize();
+            }
+        }
 
         bool _localKeyDes = false;
         K _localKey = default;
@@ -100,6 +187,7 @@ namespace MASES.KNet.Consumer
         {
             get
             {
+                CheckDisposed();
                 if (!_localKeyDes)
                 {
                     _keyDeserializer ??= _factory?.BuildKeySerDes<K, TJVMK>();
@@ -117,6 +205,7 @@ namespace MASES.KNet.Consumer
         {
             get
             {
+                CheckDisposed();
                 if (!_localValueDes)
                 {
                     _valueDeserializer ??= _factory?.BuildValueSerDes<V, TJVMV>();

@@ -259,13 +259,6 @@ namespace MASES.KNet.Producer
 
             return props;
         }
-        /// <summary>
-        /// Finalizer
-        /// </summary>
-        ~KNetProducer()
-        {
-            Dispose();
-        }
 
         object _disposedLock = new object();
         bool _disposed = false;
