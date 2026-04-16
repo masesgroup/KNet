@@ -312,26 +312,14 @@ namespace MASES.KNet.Producer
         /// <inheritdoc cref="IProducer{K, V, TJVMK, TJVMV}.Send(ProducerRecord{K, V, TJVMK, TJVMV})"/>
         public Future<RecordMetadata> Send(ProducerRecord<K, V, TJVMK, TJVMV> record)
         {
-            Org.Apache.Kafka.Clients.Producer.ProducerRecord<TJVMK, TJVMV> kRecord = null;
-            try
-            {
-                kRecord = KNetProducer<K, V, TJVMK, TJVMV>.ToProducerRecord(record, _keySerializer, _valueSerializer);
-                GC.SuppressFinalize(kRecord);
-                return Send(kRecord);
-            }
-            finally { if (kRecord != null) GC.ReRegisterForFinalize(kRecord); }
+            using Org.Apache.Kafka.Clients.Producer.ProducerRecord<TJVMK, TJVMV> kRecord = KNetProducer<K, V, TJVMK, TJVMV>.ToProducerRecord(record, _keySerializer, _valueSerializer);
+            return Send(kRecord);
         }
         /// <inheritdoc cref="IProducer{K, V, TJVMK, TJVMV}.Send(ProducerRecord{K, V, TJVMK, TJVMV}, Callback)"/>
         public Future<RecordMetadata> Send(ProducerRecord<K, V, TJVMK, TJVMV> record, Callback callback)
         {
-            Org.Apache.Kafka.Clients.Producer.ProducerRecord<TJVMK, TJVMV> kRecord = null;
-            try
-            {
-                kRecord = KNetProducer<K, V, TJVMK, TJVMV>.ToProducerRecord(record, _keySerializer, _valueSerializer);
-                GC.SuppressFinalize(kRecord);
-                return Send(kRecord, callback);
-            }
-            finally { if (kRecord != null) GC.ReRegisterForFinalize(kRecord); }
+            using Org.Apache.Kafka.Clients.Producer.ProducerRecord<TJVMK, TJVMV> kRecord = KNetProducer<K, V, TJVMK, TJVMV>.ToProducerRecord(record, _keySerializer, _valueSerializer);
+            return Send(kRecord, callback);
         }
         /// <inheritdoc cref="IProducer{K, V, TJVMK, TJVMV}.Send(string, int?, long?, K, V, Headers)"/>
         public Future<RecordMetadata> Send(string topic, int? partition, long? timestamp, K key, V value, Headers headers)
