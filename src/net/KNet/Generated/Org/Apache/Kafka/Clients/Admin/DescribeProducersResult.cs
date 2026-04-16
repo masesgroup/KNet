@@ -29,7 +29,7 @@ namespace Org.Apache.Kafka.Clients.Admin
     /// <summary>
     /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.0/org/apache/kafka/clients/admin/DescribeProducersResult.html"/>
     /// </summary>
-    public partial class DescribeProducersResult : MASES.JCOBridge.C2JBridge.JVMBridgeCore<DescribeProducersResult>
+    public partial class DescribeProducersResult : MASES.JCOBridge.C2JBridge.JVMBridgeBase<DescribeProducersResult>
     {
         const string _bridgeClassName = "org.apache.kafka.clients.admin.DescribeProducersResult";
         /// <summary>
@@ -43,7 +43,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         public DescribeProducersResult(params object[] args) : base(args) { }
 
         private static readonly global::System.Exception _LocalBridgeClazzException = null;
-        private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeCore.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
+        private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
         private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw _LocalBridgeClazzException ?? new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
 
         /// <inheritdoc/>
@@ -62,7 +62,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.0/org/apache/kafka/clients/admin/DescribeProducersResult.PartitionProducerState.html"/>
         /// </summary>
-        public partial class PartitionProducerState : MASES.JCOBridge.C2JBridge.JVMBridgeCore<PartitionProducerState>
+        public partial class PartitionProducerState : MASES.JCOBridge.C2JBridge.JVMBridgeBase<PartitionProducerState>
         {
             const string _bridgeClassName = "org.apache.kafka.clients.admin.DescribeProducersResult$PartitionProducerState";
             /// <summary>
@@ -76,7 +76,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             public PartitionProducerState(params object[] args) : base(args) { }
 
             private static readonly global::System.Exception _LocalBridgeClazzException = null;
-            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeCore.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
+            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
             private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw _LocalBridgeClazzException ?? new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
 
             /// <inheritdoc/>

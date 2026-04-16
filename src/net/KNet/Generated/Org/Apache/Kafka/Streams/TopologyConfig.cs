@@ -43,7 +43,7 @@ namespace Org.Apache.Kafka.Streams
         public TopologyConfig(params object[] args) : base(args) { }
 
         private static readonly global::System.Exception _LocalBridgeClazzException = null;
-        private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeCore.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
+        private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
         private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw _LocalBridgeClazzException ?? new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
 
         /// <inheritdoc/>
@@ -62,7 +62,7 @@ namespace Org.Apache.Kafka.Streams
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/TopologyConfig.InternalConfig.html"/>
         /// </summary>
-        public partial class InternalConfig : MASES.JCOBridge.C2JBridge.JVMBridgeCore<InternalConfig>
+        public partial class InternalConfig : MASES.JCOBridge.C2JBridge.JVMBridgeBase<InternalConfig>
         {
             const string _bridgeClassName = "org.apache.kafka.streams.TopologyConfig$InternalConfig";
             /// <summary>
@@ -76,7 +76,7 @@ namespace Org.Apache.Kafka.Streams
             public InternalConfig(params object[] args) : base(args) { }
 
             private static readonly global::System.Exception _LocalBridgeClazzException = null;
-            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeCore.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
+            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
             private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw _LocalBridgeClazzException ?? new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
 
             /// <inheritdoc/>
@@ -99,7 +99,7 @@ namespace Org.Apache.Kafka.Streams
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/TopologyConfig.TaskConfig.html"/>
         /// </summary>
-        public partial class TaskConfig : MASES.JCOBridge.C2JBridge.JVMBridgeCore<TaskConfig>
+        public partial class TaskConfig : MASES.JCOBridge.C2JBridge.JVMBridgeBase<TaskConfig>
         {
             const string _bridgeClassName = "org.apache.kafka.streams.TopologyConfig$TaskConfig";
             /// <summary>
@@ -113,7 +113,7 @@ namespace Org.Apache.Kafka.Streams
             public TaskConfig(params object[] args) : base(args) { }
 
             private static readonly global::System.Exception _LocalBridgeClazzException = null;
-            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeCore.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
+            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
             private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw _LocalBridgeClazzException ?? new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
 
             /// <inheritdoc/>

@@ -29,7 +29,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
     /// <summary>
     /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.0/org/apache/kafka/clients/consumer/ConsumerRecord.html"/>
     /// </summary>
-    public partial class ConsumerRecord : MASES.JCOBridge.C2JBridge.JVMBridgeCore<ConsumerRecord>
+    public partial class ConsumerRecord : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ConsumerRecord>
     {
         const string _bridgeClassName = "org.apache.kafka.clients.consumer.ConsumerRecord";
         /// <summary>
@@ -43,7 +43,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
         public ConsumerRecord(params object[] args) : base(args) { }
 
         private static readonly global::System.Exception _LocalBridgeClazzException = null;
-        private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeCore.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
+        private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
         private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw _LocalBridgeClazzException ?? new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
 
         /// <inheritdoc/>
@@ -68,7 +68,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
     /// </summary>
     /// <typeparam name="K"></typeparam>
     /// <typeparam name="V"></typeparam>
-    public partial class ConsumerRecord<K, V> : MASES.JCOBridge.C2JBridge.JVMBridgeCore<ConsumerRecord<K, V>>
+    public partial class ConsumerRecord<K, V> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ConsumerRecord<K, V>>
     {
         const string _bridgeClassName = "org.apache.kafka.clients.consumer.ConsumerRecord";
         /// <summary>
@@ -82,7 +82,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
         public ConsumerRecord(params object[] args) : base(args) { }
 
         private static readonly global::System.Exception _LocalBridgeClazzException = null;
-        private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeCore.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
+        private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
         private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw _LocalBridgeClazzException ?? new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
 
         /// <inheritdoc/>

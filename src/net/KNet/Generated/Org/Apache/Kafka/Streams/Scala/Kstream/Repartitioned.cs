@@ -29,7 +29,7 @@ namespace Org.Apache.Kafka.Streams.Scala.Kstream
     /// <summary>
     /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.2.0/org/apache/kafka/streams/scala/kstream/Repartitioned.html"/>
     /// </summary>
-    public partial class Repartitioned : MASES.JCOBridge.C2JBridge.JVMBridgeCore<Repartitioned>
+    public partial class Repartitioned : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Repartitioned>
     {
         const string _bridgeClassName = "org.apache.kafka.streams.scala.kstream.Repartitioned";
         /// <summary>
@@ -43,7 +43,7 @@ namespace Org.Apache.Kafka.Streams.Scala.Kstream
         public Repartitioned(params object[] args) : base(args) { }
 
         private static readonly global::System.Exception _LocalBridgeClazzException = null;
-        private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeCore.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
+        private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
         private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw _LocalBridgeClazzException ?? new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
 
         /// <inheritdoc/>

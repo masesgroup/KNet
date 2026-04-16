@@ -29,7 +29,7 @@ namespace Org.Apache.Kafka.Connect.Sink
     /// <summary>
     /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.2.0/org/apache/kafka/connect/sink/ErrantRecordReporter.html"/>
     /// </summary>
-    public partial class ErrantRecordReporter : MASES.JCOBridge.C2JBridge.JVMBridgeCore<ErrantRecordReporter>
+    public partial class ErrantRecordReporter : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ErrantRecordReporter>
     {
         const string _bridgeClassName = "org.apache.kafka.connect.sink.ErrantRecordReporter";
         /// <summary>
@@ -44,7 +44,7 @@ namespace Org.Apache.Kafka.Connect.Sink
         public ErrantRecordReporter(params object[] args) : base(args) { }
 
         private static readonly global::System.Exception _LocalBridgeClazzException = null;
-        private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeCore.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
+        private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
         private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw _LocalBridgeClazzException ?? new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
 
         /// <inheritdoc/>

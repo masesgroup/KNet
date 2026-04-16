@@ -43,7 +43,7 @@ namespace Org.Apache.Kafka.Tools
         public VerifiableShareConsumer(params object[] args) : base(args) { }
 
         private static readonly global::System.Exception _LocalBridgeClazzException = null;
-        private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeCore.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
+        private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
         private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw _LocalBridgeClazzException ?? new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
 
         /// <inheritdoc/>
@@ -76,7 +76,7 @@ namespace Org.Apache.Kafka.Tools
             public AcknowledgementMode(params object[] args) : base(args) { }
 
             private static readonly global::System.Exception _LocalBridgeClazzException = null;
-            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeCore.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
+            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
             private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw _LocalBridgeClazzException ?? new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
 
             /// <inheritdoc/>
@@ -99,7 +99,7 @@ namespace Org.Apache.Kafka.Tools
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.2.0/org/apache/kafka/tools/VerifiableShareConsumer.PartitionData.html"/>
         /// </summary>
-        public partial class PartitionData : MASES.JCOBridge.C2JBridge.JVMBridgeCore<PartitionData>
+        public partial class PartitionData : MASES.JCOBridge.C2JBridge.JVMBridgeBase<PartitionData>
         {
             const string _bridgeClassName = "org.apache.kafka.tools.VerifiableShareConsumer$PartitionData";
             /// <summary>
@@ -113,7 +113,7 @@ namespace Org.Apache.Kafka.Tools
             public PartitionData(params object[] args) : base(args) { }
 
             private static readonly global::System.Exception _LocalBridgeClazzException = null;
-            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeCore.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
+            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
             private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw _LocalBridgeClazzException ?? new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
 
             /// <inheritdoc/>
@@ -136,7 +136,7 @@ namespace Org.Apache.Kafka.Tools
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.2.0/org/apache/kafka/tools/VerifiableShareConsumer.RecordData.html"/>
         /// </summary>
-        public partial class RecordData : MASES.JCOBridge.C2JBridge.JVMBridgeCore<RecordData>
+        public partial class RecordData : MASES.JCOBridge.C2JBridge.JVMBridgeBase<RecordData>
         {
             const string _bridgeClassName = "org.apache.kafka.tools.VerifiableShareConsumer$RecordData";
             /// <summary>
@@ -150,7 +150,7 @@ namespace Org.Apache.Kafka.Tools
             public RecordData(params object[] args) : base(args) { }
 
             private static readonly global::System.Exception _LocalBridgeClazzException = null;
-            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeCore.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
+            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
             private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw _LocalBridgeClazzException ?? new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
 
             /// <inheritdoc/>
@@ -173,7 +173,7 @@ namespace Org.Apache.Kafka.Tools
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.2.0/org/apache/kafka/tools/VerifiableShareConsumer.RecordsConsumed.html"/>
         /// </summary>
-        public partial class RecordsConsumed : MASES.JCOBridge.C2JBridge.JVMBridgeCore<RecordsConsumed>
+        public partial class RecordsConsumed : MASES.JCOBridge.C2JBridge.JVMBridgeBase<RecordsConsumed>
         {
             const string _bridgeClassName = "org.apache.kafka.tools.VerifiableShareConsumer$RecordsConsumed";
             /// <summary>
@@ -187,7 +187,7 @@ namespace Org.Apache.Kafka.Tools
             public RecordsConsumed(params object[] args) : base(args) { }
 
             private static readonly global::System.Exception _LocalBridgeClazzException = null;
-            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeCore.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
+            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
             private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw _LocalBridgeClazzException ?? new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
 
             /// <inheritdoc/>
@@ -224,7 +224,7 @@ namespace Org.Apache.Kafka.Tools
             public RecordSetSummary(params object[] args) : base(args) { }
 
             private static readonly global::System.Exception _LocalBridgeClazzException = null;
-            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeCore.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
+            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
             private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw _LocalBridgeClazzException ?? new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
 
             /// <inheritdoc/>

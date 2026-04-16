@@ -29,7 +29,7 @@ namespace Org.Apache.Kafka.Streams.Query
     /// <summary>
     /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/query/StateQueryRequest.html"/>
     /// </summary>
-    public partial class StateQueryRequest : MASES.JCOBridge.C2JBridge.JVMBridgeCore<StateQueryRequest>
+    public partial class StateQueryRequest : MASES.JCOBridge.C2JBridge.JVMBridgeBase<StateQueryRequest>
     {
         const string _bridgeClassName = "org.apache.kafka.streams.query.StateQueryRequest";
         /// <summary>
@@ -43,7 +43,7 @@ namespace Org.Apache.Kafka.Streams.Query
         public StateQueryRequest(params object[] args) : base(args) { }
 
         private static readonly global::System.Exception _LocalBridgeClazzException = null;
-        private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeCore.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
+        private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
         private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw _LocalBridgeClazzException ?? new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
 
         /// <inheritdoc/>
@@ -62,7 +62,7 @@ namespace Org.Apache.Kafka.Streams.Query
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/query/StateQueryRequest.InStore.html"/>
         /// </summary>
-        public partial class InStore : MASES.JCOBridge.C2JBridge.JVMBridgeCore<InStore>
+        public partial class InStore : MASES.JCOBridge.C2JBridge.JVMBridgeBase<InStore>
         {
             const string _bridgeClassName = "org.apache.kafka.streams.query.StateQueryRequest$InStore";
             /// <summary>
@@ -76,7 +76,7 @@ namespace Org.Apache.Kafka.Streams.Query
             public InStore(params object[] args) : base(args) { }
 
             private static readonly global::System.Exception _LocalBridgeClazzException = null;
-            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeCore.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
+            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
             private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw _LocalBridgeClazzException ?? new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
 
             /// <inheritdoc/>
@@ -104,7 +104,7 @@ namespace Org.Apache.Kafka.Streams.Query
     /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/query/StateQueryRequest.html"/>
     /// </summary>
     /// <typeparam name="R"></typeparam>
-    public partial class StateQueryRequest<R> : MASES.JCOBridge.C2JBridge.JVMBridgeCore<StateQueryRequest<R>>
+    public partial class StateQueryRequest<R> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<StateQueryRequest<R>>
     {
         const string _bridgeClassName = "org.apache.kafka.streams.query.StateQueryRequest";
         /// <summary>
@@ -118,7 +118,7 @@ namespace Org.Apache.Kafka.Streams.Query
         public StateQueryRequest(params object[] args) : base(args) { }
 
         private static readonly global::System.Exception _LocalBridgeClazzException = null;
-        private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeCore.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
+        private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
         private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw _LocalBridgeClazzException ?? new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
 
         /// <inheritdoc/>

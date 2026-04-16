@@ -29,7 +29,7 @@ namespace Org.Apache.Kafka.Raft
     /// <summary>
     /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.0/org/apache/kafka/raft/QuorumState.html"/>
     /// </summary>
-    public partial class QuorumState : MASES.JCOBridge.C2JBridge.JVMBridgeCore<QuorumState>
+    public partial class QuorumState : MASES.JCOBridge.C2JBridge.JVMBridgeBase<QuorumState>
     {
         const string _bridgeClassName = "org.apache.kafka.raft.QuorumState";
         /// <summary>
@@ -43,7 +43,7 @@ namespace Org.Apache.Kafka.Raft
         public QuorumState(params object[] args) : base(args) { }
 
         private static readonly global::System.Exception _LocalBridgeClazzException = null;
-        private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeCore.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
+        private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
         private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw _LocalBridgeClazzException ?? new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
 
         /// <inheritdoc/>

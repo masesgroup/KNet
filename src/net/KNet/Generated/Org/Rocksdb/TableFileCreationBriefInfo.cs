@@ -29,7 +29,7 @@ namespace Org.Rocksdb
     /// <summary>
     /// <see href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/TableFileCreationBriefInfo.html"/>
     /// </summary>
-    public partial class TableFileCreationBriefInfo : MASES.JCOBridge.C2JBridge.JVMBridgeCore<TableFileCreationBriefInfo>
+    public partial class TableFileCreationBriefInfo : MASES.JCOBridge.C2JBridge.JVMBridgeBase<TableFileCreationBriefInfo>
     {
         const string _bridgeClassName = "org.rocksdb.TableFileCreationBriefInfo";
         /// <summary>
@@ -43,7 +43,7 @@ namespace Org.Rocksdb
         public TableFileCreationBriefInfo(params object[] args) : base(args) { }
 
         private static readonly global::System.Exception _LocalBridgeClazzException = null;
-        private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeCore.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
+        private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
         private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw _LocalBridgeClazzException ?? new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
 
         /// <inheritdoc/>
