@@ -29,7 +29,7 @@ namespace Org.Apache.Kafka.Streams.Scala
     /// <summary>
     /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.2.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.html"/>
     /// </summary>
-    public partial class FunctionsCompatConversions : MASES.JCOBridge.C2JBridge.JVMBridgeCore<FunctionsCompatConversions>
+    public partial class FunctionsCompatConversions : MASES.JCOBridge.C2JBridge.JVMBridgeBase<FunctionsCompatConversions>
     {
         const string _bridgeClassName = "org.apache.kafka.streams.scala.FunctionsCompatConversions";
         /// <summary>
@@ -43,7 +43,7 @@ namespace Org.Apache.Kafka.Streams.Scala
         public FunctionsCompatConversions(params object[] args) : base(args) { }
 
         private static readonly global::System.Exception _LocalBridgeClazzException = null;
-        private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeCore.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
+        private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
         private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw _LocalBridgeClazzException ?? new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
 
         /// <inheritdoc/>
@@ -62,7 +62,7 @@ namespace Org.Apache.Kafka.Streams.Scala
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.2.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.AggregatorFromFunction.html"/>
         /// </summary>
-        public partial class AggregatorFromFunction : MASES.JCOBridge.C2JBridge.JVMBridgeCore<AggregatorFromFunction>
+        public partial class AggregatorFromFunction : MASES.JCOBridge.C2JBridge.JVMBridgeBase<AggregatorFromFunction>
         {
             const string _bridgeClassName = "org.apache.kafka.streams.scala.FunctionsCompatConversions$AggregatorFromFunction";
             /// <summary>
@@ -76,7 +76,7 @@ namespace Org.Apache.Kafka.Streams.Scala
             public AggregatorFromFunction(params object[] args) : base(args) { }
 
             private static readonly global::System.Exception _LocalBridgeClazzException = null;
-            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeCore.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
+            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
             private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw _LocalBridgeClazzException ?? new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
 
             /// <inheritdoc/>
@@ -102,7 +102,7 @@ namespace Org.Apache.Kafka.Streams.Scala
         /// <typeparam name="K"></typeparam>
         /// <typeparam name="V"></typeparam>
         /// <typeparam name="VA"></typeparam>
-        public partial class AggregatorFromFunction<K, V, VA> : MASES.JCOBridge.C2JBridge.JVMBridgeCore<AggregatorFromFunction<K, V, VA>>
+        public partial class AggregatorFromFunction<K, V, VA> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<AggregatorFromFunction<K, V, VA>>
         {
             const string _bridgeClassName = "org.apache.kafka.streams.scala.FunctionsCompatConversions$AggregatorFromFunction";
             /// <summary>
@@ -116,7 +116,7 @@ namespace Org.Apache.Kafka.Streams.Scala
             public AggregatorFromFunction(params object[] args) : base(args) { }
 
             private static readonly global::System.Exception _LocalBridgeClazzException = null;
-            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeCore.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
+            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
             private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw _LocalBridgeClazzException ?? new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
 
             /// <inheritdoc/>
@@ -139,7 +139,7 @@ namespace Org.Apache.Kafka.Streams.Scala
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.2.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.FlatValueMapperFromFunction.html"/>
         /// </summary>
-        public partial class FlatValueMapperFromFunction : MASES.JCOBridge.C2JBridge.JVMBridgeCore<FlatValueMapperFromFunction>
+        public partial class FlatValueMapperFromFunction : MASES.JCOBridge.C2JBridge.JVMBridgeBase<FlatValueMapperFromFunction>
         {
             const string _bridgeClassName = "org.apache.kafka.streams.scala.FunctionsCompatConversions$FlatValueMapperFromFunction";
             /// <summary>
@@ -153,7 +153,7 @@ namespace Org.Apache.Kafka.Streams.Scala
             public FlatValueMapperFromFunction(params object[] args) : base(args) { }
 
             private static readonly global::System.Exception _LocalBridgeClazzException = null;
-            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeCore.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
+            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
             private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw _LocalBridgeClazzException ?? new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
 
             /// <inheritdoc/>
@@ -178,7 +178,7 @@ namespace Org.Apache.Kafka.Streams.Scala
         /// </summary>
         /// <typeparam name="V"></typeparam>
         /// <typeparam name="VR"></typeparam>
-        public partial class FlatValueMapperFromFunction<V, VR> : MASES.JCOBridge.C2JBridge.JVMBridgeCore<FlatValueMapperFromFunction<V, VR>>
+        public partial class FlatValueMapperFromFunction<V, VR> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<FlatValueMapperFromFunction<V, VR>>
         {
             const string _bridgeClassName = "org.apache.kafka.streams.scala.FunctionsCompatConversions$FlatValueMapperFromFunction";
             /// <summary>
@@ -192,7 +192,7 @@ namespace Org.Apache.Kafka.Streams.Scala
             public FlatValueMapperFromFunction(params object[] args) : base(args) { }
 
             private static readonly global::System.Exception _LocalBridgeClazzException = null;
-            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeCore.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
+            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
             private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw _LocalBridgeClazzException ?? new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
 
             /// <inheritdoc/>
@@ -215,7 +215,7 @@ namespace Org.Apache.Kafka.Streams.Scala
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.2.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.FlatValueMapperWithKeyFromFunction.html"/>
         /// </summary>
-        public partial class FlatValueMapperWithKeyFromFunction : MASES.JCOBridge.C2JBridge.JVMBridgeCore<FlatValueMapperWithKeyFromFunction>
+        public partial class FlatValueMapperWithKeyFromFunction : MASES.JCOBridge.C2JBridge.JVMBridgeBase<FlatValueMapperWithKeyFromFunction>
         {
             const string _bridgeClassName = "org.apache.kafka.streams.scala.FunctionsCompatConversions$FlatValueMapperWithKeyFromFunction";
             /// <summary>
@@ -229,7 +229,7 @@ namespace Org.Apache.Kafka.Streams.Scala
             public FlatValueMapperWithKeyFromFunction(params object[] args) : base(args) { }
 
             private static readonly global::System.Exception _LocalBridgeClazzException = null;
-            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeCore.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
+            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
             private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw _LocalBridgeClazzException ?? new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
 
             /// <inheritdoc/>
@@ -255,7 +255,7 @@ namespace Org.Apache.Kafka.Streams.Scala
         /// <typeparam name="K"></typeparam>
         /// <typeparam name="V"></typeparam>
         /// <typeparam name="VR"></typeparam>
-        public partial class FlatValueMapperWithKeyFromFunction<K, V, VR> : MASES.JCOBridge.C2JBridge.JVMBridgeCore<FlatValueMapperWithKeyFromFunction<K, V, VR>>
+        public partial class FlatValueMapperWithKeyFromFunction<K, V, VR> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<FlatValueMapperWithKeyFromFunction<K, V, VR>>
         {
             const string _bridgeClassName = "org.apache.kafka.streams.scala.FunctionsCompatConversions$FlatValueMapperWithKeyFromFunction";
             /// <summary>
@@ -269,7 +269,7 @@ namespace Org.Apache.Kafka.Streams.Scala
             public FlatValueMapperWithKeyFromFunction(params object[] args) : base(args) { }
 
             private static readonly global::System.Exception _LocalBridgeClazzException = null;
-            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeCore.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
+            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
             private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw _LocalBridgeClazzException ?? new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
 
             /// <inheritdoc/>
@@ -292,7 +292,7 @@ namespace Org.Apache.Kafka.Streams.Scala
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.2.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.ForeachActionFromFunction.html"/>
         /// </summary>
-        public partial class ForeachActionFromFunction : MASES.JCOBridge.C2JBridge.JVMBridgeCore<ForeachActionFromFunction>
+        public partial class ForeachActionFromFunction : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ForeachActionFromFunction>
         {
             const string _bridgeClassName = "org.apache.kafka.streams.scala.FunctionsCompatConversions$ForeachActionFromFunction";
             /// <summary>
@@ -306,7 +306,7 @@ namespace Org.Apache.Kafka.Streams.Scala
             public ForeachActionFromFunction(params object[] args) : base(args) { }
 
             private static readonly global::System.Exception _LocalBridgeClazzException = null;
-            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeCore.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
+            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
             private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw _LocalBridgeClazzException ?? new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
 
             /// <inheritdoc/>
@@ -331,7 +331,7 @@ namespace Org.Apache.Kafka.Streams.Scala
         /// </summary>
         /// <typeparam name="K"></typeparam>
         /// <typeparam name="V"></typeparam>
-        public partial class ForeachActionFromFunction<K, V> : MASES.JCOBridge.C2JBridge.JVMBridgeCore<ForeachActionFromFunction<K, V>>
+        public partial class ForeachActionFromFunction<K, V> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ForeachActionFromFunction<K, V>>
         {
             const string _bridgeClassName = "org.apache.kafka.streams.scala.FunctionsCompatConversions$ForeachActionFromFunction";
             /// <summary>
@@ -345,7 +345,7 @@ namespace Org.Apache.Kafka.Streams.Scala
             public ForeachActionFromFunction(params object[] args) : base(args) { }
 
             private static readonly global::System.Exception _LocalBridgeClazzException = null;
-            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeCore.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
+            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
             private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw _LocalBridgeClazzException ?? new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
 
             /// <inheritdoc/>
@@ -368,7 +368,7 @@ namespace Org.Apache.Kafka.Streams.Scala
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.2.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.FunctionFromFunction.html"/>
         /// </summary>
-        public partial class FunctionFromFunction : MASES.JCOBridge.C2JBridge.JVMBridgeCore<FunctionFromFunction>
+        public partial class FunctionFromFunction : MASES.JCOBridge.C2JBridge.JVMBridgeBase<FunctionFromFunction>
         {
             const string _bridgeClassName = "org.apache.kafka.streams.scala.FunctionsCompatConversions$FunctionFromFunction";
             /// <summary>
@@ -382,7 +382,7 @@ namespace Org.Apache.Kafka.Streams.Scala
             public FunctionFromFunction(params object[] args) : base(args) { }
 
             private static readonly global::System.Exception _LocalBridgeClazzException = null;
-            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeCore.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
+            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
             private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw _LocalBridgeClazzException ?? new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
 
             /// <inheritdoc/>
@@ -407,7 +407,7 @@ namespace Org.Apache.Kafka.Streams.Scala
         /// </summary>
         /// <typeparam name="V"></typeparam>
         /// <typeparam name="VR"></typeparam>
-        public partial class FunctionFromFunction<V, VR> : MASES.JCOBridge.C2JBridge.JVMBridgeCore<FunctionFromFunction<V, VR>>
+        public partial class FunctionFromFunction<V, VR> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<FunctionFromFunction<V, VR>>
         {
             const string _bridgeClassName = "org.apache.kafka.streams.scala.FunctionsCompatConversions$FunctionFromFunction";
             /// <summary>
@@ -421,7 +421,7 @@ namespace Org.Apache.Kafka.Streams.Scala
             public FunctionFromFunction(params object[] args) : base(args) { }
 
             private static readonly global::System.Exception _LocalBridgeClazzException = null;
-            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeCore.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
+            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
             private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw _LocalBridgeClazzException ?? new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
 
             /// <inheritdoc/>
@@ -444,7 +444,7 @@ namespace Org.Apache.Kafka.Streams.Scala
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.2.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.InitializerFromFunction.html"/>
         /// </summary>
-        public partial class InitializerFromFunction : MASES.JCOBridge.C2JBridge.JVMBridgeCore<InitializerFromFunction>
+        public partial class InitializerFromFunction : MASES.JCOBridge.C2JBridge.JVMBridgeBase<InitializerFromFunction>
         {
             const string _bridgeClassName = "org.apache.kafka.streams.scala.FunctionsCompatConversions$InitializerFromFunction";
             /// <summary>
@@ -458,7 +458,7 @@ namespace Org.Apache.Kafka.Streams.Scala
             public InitializerFromFunction(params object[] args) : base(args) { }
 
             private static readonly global::System.Exception _LocalBridgeClazzException = null;
-            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeCore.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
+            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
             private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw _LocalBridgeClazzException ?? new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
 
             /// <inheritdoc/>
@@ -482,7 +482,7 @@ namespace Org.Apache.Kafka.Streams.Scala
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.2.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.InitializerFromFunction.html"/>
         /// </summary>
         /// <typeparam name="VA"></typeparam>
-        public partial class InitializerFromFunction<VA> : MASES.JCOBridge.C2JBridge.JVMBridgeCore<InitializerFromFunction<VA>>
+        public partial class InitializerFromFunction<VA> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<InitializerFromFunction<VA>>
         {
             const string _bridgeClassName = "org.apache.kafka.streams.scala.FunctionsCompatConversions$InitializerFromFunction";
             /// <summary>
@@ -496,7 +496,7 @@ namespace Org.Apache.Kafka.Streams.Scala
             public InitializerFromFunction(params object[] args) : base(args) { }
 
             private static readonly global::System.Exception _LocalBridgeClazzException = null;
-            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeCore.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
+            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
             private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw _LocalBridgeClazzException ?? new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
 
             /// <inheritdoc/>
@@ -519,7 +519,7 @@ namespace Org.Apache.Kafka.Streams.Scala
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.2.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.KeyValueMapperFromFunction.html"/>
         /// </summary>
-        public partial class KeyValueMapperFromFunction : MASES.JCOBridge.C2JBridge.JVMBridgeCore<KeyValueMapperFromFunction>
+        public partial class KeyValueMapperFromFunction : MASES.JCOBridge.C2JBridge.JVMBridgeBase<KeyValueMapperFromFunction>
         {
             const string _bridgeClassName = "org.apache.kafka.streams.scala.FunctionsCompatConversions$KeyValueMapperFromFunction";
             /// <summary>
@@ -533,7 +533,7 @@ namespace Org.Apache.Kafka.Streams.Scala
             public KeyValueMapperFromFunction(params object[] args) : base(args) { }
 
             private static readonly global::System.Exception _LocalBridgeClazzException = null;
-            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeCore.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
+            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
             private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw _LocalBridgeClazzException ?? new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
 
             /// <inheritdoc/>
@@ -560,7 +560,7 @@ namespace Org.Apache.Kafka.Streams.Scala
         /// <typeparam name="V"></typeparam>
         /// <typeparam name="KR"></typeparam>
         /// <typeparam name="VR"></typeparam>
-        public partial class KeyValueMapperFromFunction<K, V, KR, VR> : MASES.JCOBridge.C2JBridge.JVMBridgeCore<KeyValueMapperFromFunction<K, V, KR, VR>>
+        public partial class KeyValueMapperFromFunction<K, V, KR, VR> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<KeyValueMapperFromFunction<K, V, KR, VR>>
         {
             const string _bridgeClassName = "org.apache.kafka.streams.scala.FunctionsCompatConversions$KeyValueMapperFromFunction";
             /// <summary>
@@ -574,7 +574,7 @@ namespace Org.Apache.Kafka.Streams.Scala
             public KeyValueMapperFromFunction(params object[] args) : base(args) { }
 
             private static readonly global::System.Exception _LocalBridgeClazzException = null;
-            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeCore.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
+            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
             private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw _LocalBridgeClazzException ?? new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
 
             /// <inheritdoc/>
@@ -597,7 +597,7 @@ namespace Org.Apache.Kafka.Streams.Scala
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.2.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.MapperFromFunction.html"/>
         /// </summary>
-        public partial class MapperFromFunction : MASES.JCOBridge.C2JBridge.JVMBridgeCore<MapperFromFunction>
+        public partial class MapperFromFunction : MASES.JCOBridge.C2JBridge.JVMBridgeBase<MapperFromFunction>
         {
             const string _bridgeClassName = "org.apache.kafka.streams.scala.FunctionsCompatConversions$MapperFromFunction";
             /// <summary>
@@ -611,7 +611,7 @@ namespace Org.Apache.Kafka.Streams.Scala
             public MapperFromFunction(params object[] args) : base(args) { }
 
             private static readonly global::System.Exception _LocalBridgeClazzException = null;
-            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeCore.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
+            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
             private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw _LocalBridgeClazzException ?? new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
 
             /// <inheritdoc/>
@@ -637,7 +637,7 @@ namespace Org.Apache.Kafka.Streams.Scala
         /// <typeparam name="T"></typeparam>
         /// <typeparam name="U"></typeparam>
         /// <typeparam name="VR"></typeparam>
-        public partial class MapperFromFunction<T, U, VR> : MASES.JCOBridge.C2JBridge.JVMBridgeCore<MapperFromFunction<T, U, VR>>
+        public partial class MapperFromFunction<T, U, VR> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<MapperFromFunction<T, U, VR>>
         {
             const string _bridgeClassName = "org.apache.kafka.streams.scala.FunctionsCompatConversions$MapperFromFunction";
             /// <summary>
@@ -651,7 +651,7 @@ namespace Org.Apache.Kafka.Streams.Scala
             public MapperFromFunction(params object[] args) : base(args) { }
 
             private static readonly global::System.Exception _LocalBridgeClazzException = null;
-            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeCore.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
+            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
             private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw _LocalBridgeClazzException ?? new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
 
             /// <inheritdoc/>
@@ -674,7 +674,7 @@ namespace Org.Apache.Kafka.Streams.Scala
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.2.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.MergerFromFunction.html"/>
         /// </summary>
-        public partial class MergerFromFunction : MASES.JCOBridge.C2JBridge.JVMBridgeCore<MergerFromFunction>
+        public partial class MergerFromFunction : MASES.JCOBridge.C2JBridge.JVMBridgeBase<MergerFromFunction>
         {
             const string _bridgeClassName = "org.apache.kafka.streams.scala.FunctionsCompatConversions$MergerFromFunction";
             /// <summary>
@@ -688,7 +688,7 @@ namespace Org.Apache.Kafka.Streams.Scala
             public MergerFromFunction(params object[] args) : base(args) { }
 
             private static readonly global::System.Exception _LocalBridgeClazzException = null;
-            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeCore.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
+            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
             private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw _LocalBridgeClazzException ?? new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
 
             /// <inheritdoc/>
@@ -713,7 +713,7 @@ namespace Org.Apache.Kafka.Streams.Scala
         /// </summary>
         /// <typeparam name="K"></typeparam>
         /// <typeparam name="VR"></typeparam>
-        public partial class MergerFromFunction<K, VR> : MASES.JCOBridge.C2JBridge.JVMBridgeCore<MergerFromFunction<K, VR>>
+        public partial class MergerFromFunction<K, VR> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<MergerFromFunction<K, VR>>
         {
             const string _bridgeClassName = "org.apache.kafka.streams.scala.FunctionsCompatConversions$MergerFromFunction";
             /// <summary>
@@ -727,7 +727,7 @@ namespace Org.Apache.Kafka.Streams.Scala
             public MergerFromFunction(params object[] args) : base(args) { }
 
             private static readonly global::System.Exception _LocalBridgeClazzException = null;
-            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeCore.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
+            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
             private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw _LocalBridgeClazzException ?? new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
 
             /// <inheritdoc/>
@@ -750,7 +750,7 @@ namespace Org.Apache.Kafka.Streams.Scala
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.2.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.PredicateFromFunction.html"/>
         /// </summary>
-        public partial class PredicateFromFunction : MASES.JCOBridge.C2JBridge.JVMBridgeCore<PredicateFromFunction>
+        public partial class PredicateFromFunction : MASES.JCOBridge.C2JBridge.JVMBridgeBase<PredicateFromFunction>
         {
             const string _bridgeClassName = "org.apache.kafka.streams.scala.FunctionsCompatConversions$PredicateFromFunction";
             /// <summary>
@@ -764,7 +764,7 @@ namespace Org.Apache.Kafka.Streams.Scala
             public PredicateFromFunction(params object[] args) : base(args) { }
 
             private static readonly global::System.Exception _LocalBridgeClazzException = null;
-            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeCore.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
+            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
             private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw _LocalBridgeClazzException ?? new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
 
             /// <inheritdoc/>
@@ -789,7 +789,7 @@ namespace Org.Apache.Kafka.Streams.Scala
         /// </summary>
         /// <typeparam name="K"></typeparam>
         /// <typeparam name="V"></typeparam>
-        public partial class PredicateFromFunction<K, V> : MASES.JCOBridge.C2JBridge.JVMBridgeCore<PredicateFromFunction<K, V>>
+        public partial class PredicateFromFunction<K, V> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<PredicateFromFunction<K, V>>
         {
             const string _bridgeClassName = "org.apache.kafka.streams.scala.FunctionsCompatConversions$PredicateFromFunction";
             /// <summary>
@@ -803,7 +803,7 @@ namespace Org.Apache.Kafka.Streams.Scala
             public PredicateFromFunction(params object[] args) : base(args) { }
 
             private static readonly global::System.Exception _LocalBridgeClazzException = null;
-            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeCore.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
+            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
             private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw _LocalBridgeClazzException ?? new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
 
             /// <inheritdoc/>
@@ -826,7 +826,7 @@ namespace Org.Apache.Kafka.Streams.Scala
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.2.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.ReducerFromFunction.html"/>
         /// </summary>
-        public partial class ReducerFromFunction : MASES.JCOBridge.C2JBridge.JVMBridgeCore<ReducerFromFunction>
+        public partial class ReducerFromFunction : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ReducerFromFunction>
         {
             const string _bridgeClassName = "org.apache.kafka.streams.scala.FunctionsCompatConversions$ReducerFromFunction";
             /// <summary>
@@ -840,7 +840,7 @@ namespace Org.Apache.Kafka.Streams.Scala
             public ReducerFromFunction(params object[] args) : base(args) { }
 
             private static readonly global::System.Exception _LocalBridgeClazzException = null;
-            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeCore.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
+            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
             private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw _LocalBridgeClazzException ?? new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
 
             /// <inheritdoc/>
@@ -864,7 +864,7 @@ namespace Org.Apache.Kafka.Streams.Scala
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.2.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.ReducerFromFunction.html"/>
         /// </summary>
         /// <typeparam name="V"></typeparam>
-        public partial class ReducerFromFunction<V> : MASES.JCOBridge.C2JBridge.JVMBridgeCore<ReducerFromFunction<V>>
+        public partial class ReducerFromFunction<V> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ReducerFromFunction<V>>
         {
             const string _bridgeClassName = "org.apache.kafka.streams.scala.FunctionsCompatConversions$ReducerFromFunction";
             /// <summary>
@@ -878,7 +878,7 @@ namespace Org.Apache.Kafka.Streams.Scala
             public ReducerFromFunction(params object[] args) : base(args) { }
 
             private static readonly global::System.Exception _LocalBridgeClazzException = null;
-            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeCore.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
+            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
             private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw _LocalBridgeClazzException ?? new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
 
             /// <inheritdoc/>
@@ -901,7 +901,7 @@ namespace Org.Apache.Kafka.Streams.Scala
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.2.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.TransformerSupplierAsJava.html"/>
         /// </summary>
-        public partial class TransformerSupplierAsJava : MASES.JCOBridge.C2JBridge.JVMBridgeCore<TransformerSupplierAsJava>
+        public partial class TransformerSupplierAsJava : MASES.JCOBridge.C2JBridge.JVMBridgeBase<TransformerSupplierAsJava>
         {
             const string _bridgeClassName = "org.apache.kafka.streams.scala.FunctionsCompatConversions$TransformerSupplierAsJava";
             /// <summary>
@@ -915,7 +915,7 @@ namespace Org.Apache.Kafka.Streams.Scala
             public TransformerSupplierAsJava(params object[] args) : base(args) { }
 
             private static readonly global::System.Exception _LocalBridgeClazzException = null;
-            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeCore.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
+            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
             private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw _LocalBridgeClazzException ?? new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
 
             /// <inheritdoc/>
@@ -941,7 +941,7 @@ namespace Org.Apache.Kafka.Streams.Scala
         /// <typeparam name="K"></typeparam>
         /// <typeparam name="V"></typeparam>
         /// <typeparam name="VO"></typeparam>
-        public partial class TransformerSupplierAsJava<K, V, VO> : MASES.JCOBridge.C2JBridge.JVMBridgeCore<TransformerSupplierAsJava<K, V, VO>>
+        public partial class TransformerSupplierAsJava<K, V, VO> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<TransformerSupplierAsJava<K, V, VO>>
         {
             const string _bridgeClassName = "org.apache.kafka.streams.scala.FunctionsCompatConversions$TransformerSupplierAsJava";
             /// <summary>
@@ -955,7 +955,7 @@ namespace Org.Apache.Kafka.Streams.Scala
             public TransformerSupplierAsJava(params object[] args) : base(args) { }
 
             private static readonly global::System.Exception _LocalBridgeClazzException = null;
-            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeCore.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
+            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
             private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw _LocalBridgeClazzException ?? new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
 
             /// <inheritdoc/>
@@ -978,7 +978,7 @@ namespace Org.Apache.Kafka.Streams.Scala
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.2.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.TransformerSupplierFromFunction.html"/>
         /// </summary>
-        public partial class TransformerSupplierFromFunction : MASES.JCOBridge.C2JBridge.JVMBridgeCore<TransformerSupplierFromFunction>
+        public partial class TransformerSupplierFromFunction : MASES.JCOBridge.C2JBridge.JVMBridgeBase<TransformerSupplierFromFunction>
         {
             const string _bridgeClassName = "org.apache.kafka.streams.scala.FunctionsCompatConversions$TransformerSupplierFromFunction";
             /// <summary>
@@ -992,7 +992,7 @@ namespace Org.Apache.Kafka.Streams.Scala
             public TransformerSupplierFromFunction(params object[] args) : base(args) { }
 
             private static readonly global::System.Exception _LocalBridgeClazzException = null;
-            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeCore.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
+            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
             private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw _LocalBridgeClazzException ?? new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
 
             /// <inheritdoc/>
@@ -1018,7 +1018,7 @@ namespace Org.Apache.Kafka.Streams.Scala
         /// <typeparam name="K"></typeparam>
         /// <typeparam name="V"></typeparam>
         /// <typeparam name="VO"></typeparam>
-        public partial class TransformerSupplierFromFunction<K, V, VO> : MASES.JCOBridge.C2JBridge.JVMBridgeCore<TransformerSupplierFromFunction<K, V, VO>>
+        public partial class TransformerSupplierFromFunction<K, V, VO> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<TransformerSupplierFromFunction<K, V, VO>>
         {
             const string _bridgeClassName = "org.apache.kafka.streams.scala.FunctionsCompatConversions$TransformerSupplierFromFunction";
             /// <summary>
@@ -1032,7 +1032,7 @@ namespace Org.Apache.Kafka.Streams.Scala
             public TransformerSupplierFromFunction(params object[] args) : base(args) { }
 
             private static readonly global::System.Exception _LocalBridgeClazzException = null;
-            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeCore.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
+            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
             private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw _LocalBridgeClazzException ?? new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
 
             /// <inheritdoc/>
@@ -1055,7 +1055,7 @@ namespace Org.Apache.Kafka.Streams.Scala
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.2.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.ValueMapperFromFunction.html"/>
         /// </summary>
-        public partial class ValueMapperFromFunction : MASES.JCOBridge.C2JBridge.JVMBridgeCore<ValueMapperFromFunction>
+        public partial class ValueMapperFromFunction : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ValueMapperFromFunction>
         {
             const string _bridgeClassName = "org.apache.kafka.streams.scala.FunctionsCompatConversions$ValueMapperFromFunction";
             /// <summary>
@@ -1069,7 +1069,7 @@ namespace Org.Apache.Kafka.Streams.Scala
             public ValueMapperFromFunction(params object[] args) : base(args) { }
 
             private static readonly global::System.Exception _LocalBridgeClazzException = null;
-            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeCore.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
+            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
             private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw _LocalBridgeClazzException ?? new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
 
             /// <inheritdoc/>
@@ -1094,7 +1094,7 @@ namespace Org.Apache.Kafka.Streams.Scala
         /// </summary>
         /// <typeparam name="V"></typeparam>
         /// <typeparam name="VR"></typeparam>
-        public partial class ValueMapperFromFunction<V, VR> : MASES.JCOBridge.C2JBridge.JVMBridgeCore<ValueMapperFromFunction<V, VR>>
+        public partial class ValueMapperFromFunction<V, VR> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ValueMapperFromFunction<V, VR>>
         {
             const string _bridgeClassName = "org.apache.kafka.streams.scala.FunctionsCompatConversions$ValueMapperFromFunction";
             /// <summary>
@@ -1108,7 +1108,7 @@ namespace Org.Apache.Kafka.Streams.Scala
             public ValueMapperFromFunction(params object[] args) : base(args) { }
 
             private static readonly global::System.Exception _LocalBridgeClazzException = null;
-            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeCore.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
+            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
             private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw _LocalBridgeClazzException ?? new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
 
             /// <inheritdoc/>
@@ -1131,7 +1131,7 @@ namespace Org.Apache.Kafka.Streams.Scala
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.2.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.ValueMapperWithKeyFromFunction.html"/>
         /// </summary>
-        public partial class ValueMapperWithKeyFromFunction : MASES.JCOBridge.C2JBridge.JVMBridgeCore<ValueMapperWithKeyFromFunction>
+        public partial class ValueMapperWithKeyFromFunction : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ValueMapperWithKeyFromFunction>
         {
             const string _bridgeClassName = "org.apache.kafka.streams.scala.FunctionsCompatConversions$ValueMapperWithKeyFromFunction";
             /// <summary>
@@ -1145,7 +1145,7 @@ namespace Org.Apache.Kafka.Streams.Scala
             public ValueMapperWithKeyFromFunction(params object[] args) : base(args) { }
 
             private static readonly global::System.Exception _LocalBridgeClazzException = null;
-            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeCore.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
+            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
             private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw _LocalBridgeClazzException ?? new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
 
             /// <inheritdoc/>
@@ -1171,7 +1171,7 @@ namespace Org.Apache.Kafka.Streams.Scala
         /// <typeparam name="K"></typeparam>
         /// <typeparam name="V"></typeparam>
         /// <typeparam name="VR"></typeparam>
-        public partial class ValueMapperWithKeyFromFunction<K, V, VR> : MASES.JCOBridge.C2JBridge.JVMBridgeCore<ValueMapperWithKeyFromFunction<K, V, VR>>
+        public partial class ValueMapperWithKeyFromFunction<K, V, VR> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ValueMapperWithKeyFromFunction<K, V, VR>>
         {
             const string _bridgeClassName = "org.apache.kafka.streams.scala.FunctionsCompatConversions$ValueMapperWithKeyFromFunction";
             /// <summary>
@@ -1185,7 +1185,7 @@ namespace Org.Apache.Kafka.Streams.Scala
             public ValueMapperWithKeyFromFunction(params object[] args) : base(args) { }
 
             private static readonly global::System.Exception _LocalBridgeClazzException = null;
-            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeCore.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
+            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
             private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw _LocalBridgeClazzException ?? new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
 
             /// <inheritdoc/>
@@ -1208,7 +1208,7 @@ namespace Org.Apache.Kafka.Streams.Scala
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.2.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.ValueTransformerSupplierAsJava.html"/>
         /// </summary>
-        public partial class ValueTransformerSupplierAsJava : MASES.JCOBridge.C2JBridge.JVMBridgeCore<ValueTransformerSupplierAsJava>
+        public partial class ValueTransformerSupplierAsJava : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ValueTransformerSupplierAsJava>
         {
             const string _bridgeClassName = "org.apache.kafka.streams.scala.FunctionsCompatConversions$ValueTransformerSupplierAsJava";
             /// <summary>
@@ -1222,7 +1222,7 @@ namespace Org.Apache.Kafka.Streams.Scala
             public ValueTransformerSupplierAsJava(params object[] args) : base(args) { }
 
             private static readonly global::System.Exception _LocalBridgeClazzException = null;
-            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeCore.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
+            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
             private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw _LocalBridgeClazzException ?? new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
 
             /// <inheritdoc/>
@@ -1247,7 +1247,7 @@ namespace Org.Apache.Kafka.Streams.Scala
         /// </summary>
         /// <typeparam name="V"></typeparam>
         /// <typeparam name="VO"></typeparam>
-        public partial class ValueTransformerSupplierAsJava<V, VO> : MASES.JCOBridge.C2JBridge.JVMBridgeCore<ValueTransformerSupplierAsJava<V, VO>>
+        public partial class ValueTransformerSupplierAsJava<V, VO> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ValueTransformerSupplierAsJava<V, VO>>
         {
             const string _bridgeClassName = "org.apache.kafka.streams.scala.FunctionsCompatConversions$ValueTransformerSupplierAsJava";
             /// <summary>
@@ -1261,7 +1261,7 @@ namespace Org.Apache.Kafka.Streams.Scala
             public ValueTransformerSupplierAsJava(params object[] args) : base(args) { }
 
             private static readonly global::System.Exception _LocalBridgeClazzException = null;
-            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeCore.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
+            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
             private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw _LocalBridgeClazzException ?? new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
 
             /// <inheritdoc/>
@@ -1284,7 +1284,7 @@ namespace Org.Apache.Kafka.Streams.Scala
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.2.0/org/apache/kafka/streams/scala/FunctionsCompatConversions.ValueTransformerSupplierWithKeyAsJava.html"/>
         /// </summary>
-        public partial class ValueTransformerSupplierWithKeyAsJava : MASES.JCOBridge.C2JBridge.JVMBridgeCore<ValueTransformerSupplierWithKeyAsJava>
+        public partial class ValueTransformerSupplierWithKeyAsJava : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ValueTransformerSupplierWithKeyAsJava>
         {
             const string _bridgeClassName = "org.apache.kafka.streams.scala.FunctionsCompatConversions$ValueTransformerSupplierWithKeyAsJava";
             /// <summary>
@@ -1298,7 +1298,7 @@ namespace Org.Apache.Kafka.Streams.Scala
             public ValueTransformerSupplierWithKeyAsJava(params object[] args) : base(args) { }
 
             private static readonly global::System.Exception _LocalBridgeClazzException = null;
-            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeCore.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
+            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
             private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw _LocalBridgeClazzException ?? new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
 
             /// <inheritdoc/>
@@ -1324,7 +1324,7 @@ namespace Org.Apache.Kafka.Streams.Scala
         /// <typeparam name="K"></typeparam>
         /// <typeparam name="V"></typeparam>
         /// <typeparam name="VO"></typeparam>
-        public partial class ValueTransformerSupplierWithKeyAsJava<K, V, VO> : MASES.JCOBridge.C2JBridge.JVMBridgeCore<ValueTransformerSupplierWithKeyAsJava<K, V, VO>>
+        public partial class ValueTransformerSupplierWithKeyAsJava<K, V, VO> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ValueTransformerSupplierWithKeyAsJava<K, V, VO>>
         {
             const string _bridgeClassName = "org.apache.kafka.streams.scala.FunctionsCompatConversions$ValueTransformerSupplierWithKeyAsJava";
             /// <summary>
@@ -1338,7 +1338,7 @@ namespace Org.Apache.Kafka.Streams.Scala
             public ValueTransformerSupplierWithKeyAsJava(params object[] args) : base(args) { }
 
             private static readonly global::System.Exception _LocalBridgeClazzException = null;
-            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeCore.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
+            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
             private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw _LocalBridgeClazzException ?? new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
 
             /// <inheritdoc/>

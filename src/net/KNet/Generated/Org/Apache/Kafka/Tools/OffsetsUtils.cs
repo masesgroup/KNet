@@ -29,7 +29,7 @@ namespace Org.Apache.Kafka.Tools
     /// <summary>
     /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.2.0/org/apache/kafka/tools/OffsetsUtils.html"/>
     /// </summary>
-    public partial class OffsetsUtils : MASES.JCOBridge.C2JBridge.JVMBridgeCore<OffsetsUtils>
+    public partial class OffsetsUtils : MASES.JCOBridge.C2JBridge.JVMBridgeBase<OffsetsUtils>
     {
         const string _bridgeClassName = "org.apache.kafka.tools.OffsetsUtils";
         /// <summary>
@@ -43,7 +43,7 @@ namespace Org.Apache.Kafka.Tools
         public OffsetsUtils(params object[] args) : base(args) { }
 
         private static readonly global::System.Exception _LocalBridgeClazzException = null;
-        private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeCore.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
+        private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
         private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw _LocalBridgeClazzException ?? new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
 
         /// <inheritdoc/>
@@ -76,7 +76,7 @@ namespace Org.Apache.Kafka.Tools
             public Ignore(params object[] args) : base(args) { }
 
             private static readonly global::System.Exception _LocalBridgeClazzException = null;
-            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeCore.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
+            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
             private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw _LocalBridgeClazzException ?? new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
 
             /// <inheritdoc/>
@@ -113,7 +113,7 @@ namespace Org.Apache.Kafka.Tools
             public LogOffset(params object[] args) : base(args) { }
 
             private static readonly global::System.Exception _LocalBridgeClazzException = null;
-            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeCore.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
+            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
             private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw _LocalBridgeClazzException ?? new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
 
             /// <inheritdoc/>
@@ -136,7 +136,7 @@ namespace Org.Apache.Kafka.Tools
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.2.0/org/apache/kafka/tools/OffsetsUtils.LogOffsetResult.html"/>
         /// </summary>
-        public partial class LogOffsetResult : MASES.JCOBridge.C2JBridge.JVMBridgeCore<LogOffsetResult>
+        public partial class LogOffsetResult : MASES.JCOBridge.C2JBridge.JVMBridgeBase<LogOffsetResult>
         {
             const string _bridgeClassName = "org.apache.kafka.tools.OffsetsUtils$LogOffsetResult";
             /// <summary>
@@ -151,7 +151,7 @@ namespace Org.Apache.Kafka.Tools
             public LogOffsetResult(params object[] args) : base(args) { }
 
             private static readonly global::System.Exception _LocalBridgeClazzException = null;
-            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeCore.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
+            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
             private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw _LocalBridgeClazzException ?? new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
 
             /// <inheritdoc/>
@@ -174,7 +174,7 @@ namespace Org.Apache.Kafka.Tools
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.2.0/org/apache/kafka/tools/OffsetsUtils.OffsetsUtilsOptions.html"/>
         /// </summary>
-        public partial class OffsetsUtilsOptions : MASES.JCOBridge.C2JBridge.JVMBridgeCore<OffsetsUtilsOptions>
+        public partial class OffsetsUtilsOptions : MASES.JCOBridge.C2JBridge.JVMBridgeBase<OffsetsUtilsOptions>
         {
             const string _bridgeClassName = "org.apache.kafka.tools.OffsetsUtils$OffsetsUtilsOptions";
             /// <summary>
@@ -188,7 +188,7 @@ namespace Org.Apache.Kafka.Tools
             public OffsetsUtilsOptions(params object[] args) : base(args) { }
 
             private static readonly global::System.Exception _LocalBridgeClazzException = null;
-            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeCore.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
+            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
             private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw _LocalBridgeClazzException ?? new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
 
             /// <inheritdoc/>
@@ -225,7 +225,7 @@ namespace Org.Apache.Kafka.Tools
             public Unknown(params object[] args) : base(args) { }
 
             private static readonly global::System.Exception _LocalBridgeClazzException = null;
-            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeCore.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
+            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
             private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw _LocalBridgeClazzException ?? new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
 
             /// <inheritdoc/>

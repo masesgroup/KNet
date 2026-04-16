@@ -29,7 +29,7 @@ namespace Org.Apache.Kafka.Common.Metrics
     /// <summary>
     /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.0/org/apache/kafka/common/metrics/PluginMetrics.html"/>
     /// </summary>
-    public partial class PluginMetrics : MASES.JCOBridge.C2JBridge.JVMBridgeCore<PluginMetrics>
+    public partial class PluginMetrics : MASES.JCOBridge.C2JBridge.JVMBridgeBase<PluginMetrics>
     {
         const string _bridgeClassName = "org.apache.kafka.common.metrics.PluginMetrics";
         /// <summary>
@@ -44,7 +44,7 @@ namespace Org.Apache.Kafka.Common.Metrics
         public PluginMetrics(params object[] args) : base(args) { }
 
         private static readonly global::System.Exception _LocalBridgeClazzException = null;
-        private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeCore.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
+        private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
         private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw _LocalBridgeClazzException ?? new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
 
         /// <inheritdoc/>

@@ -29,7 +29,7 @@ namespace Org.Apache.Kafka.Streams.Scala.Kstream
     /// <summary>
     /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.2.0/org/apache/kafka/streams/scala/kstream/TimeWindowedCogroupedKStream.html"/>
     /// </summary>
-    public partial class TimeWindowedCogroupedKStream : MASES.JCOBridge.C2JBridge.JVMBridgeCore<TimeWindowedCogroupedKStream>
+    public partial class TimeWindowedCogroupedKStream : MASES.JCOBridge.C2JBridge.JVMBridgeBase<TimeWindowedCogroupedKStream>
     {
         const string _bridgeClassName = "org.apache.kafka.streams.scala.kstream.TimeWindowedCogroupedKStream";
         /// <summary>
@@ -43,7 +43,7 @@ namespace Org.Apache.Kafka.Streams.Scala.Kstream
         public TimeWindowedCogroupedKStream(params object[] args) : base(args) { }
 
         private static readonly global::System.Exception _LocalBridgeClazzException = null;
-        private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeCore.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
+        private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
         private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw _LocalBridgeClazzException ?? new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
 
         /// <inheritdoc/>
@@ -68,7 +68,7 @@ namespace Org.Apache.Kafka.Streams.Scala.Kstream
     /// </summary>
     /// <typeparam name="K"></typeparam>
     /// <typeparam name="V"></typeparam>
-    public partial class TimeWindowedCogroupedKStream<K, V> : MASES.JCOBridge.C2JBridge.JVMBridgeCore<TimeWindowedCogroupedKStream<K, V>>
+    public partial class TimeWindowedCogroupedKStream<K, V> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<TimeWindowedCogroupedKStream<K, V>>
     {
         const string _bridgeClassName = "org.apache.kafka.streams.scala.kstream.TimeWindowedCogroupedKStream";
         /// <summary>
@@ -82,7 +82,7 @@ namespace Org.Apache.Kafka.Streams.Scala.Kstream
         public TimeWindowedCogroupedKStream(params object[] args) : base(args) { }
 
         private static readonly global::System.Exception _LocalBridgeClazzException = null;
-        private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeCore.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
+        private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
         private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw _LocalBridgeClazzException ?? new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
 
         /// <inheritdoc/>

@@ -42,7 +42,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
         public ConsumerPartitionAssignor(params object[] args) : base(args) { InitializeHandlers(); }
         const string _bridgeClassName = "org.mases.knet.generated.org.apache.kafka.clients.consumer.ConsumerPartitionAssignor";
         private static readonly global::System.Exception _LocalBridgeClazzException = null;
-        private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeCore.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
+        private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
         private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw _LocalBridgeClazzException ?? new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
         
         /// <inheritdoc />
@@ -54,7 +54,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.0/org/apache/kafka/clients/consumer/ConsumerPartitionAssignor.Assignment.html"/>
         /// </summary>
-        public partial class Assignment : MASES.JCOBridge.C2JBridge.JVMBridgeCore<Assignment>
+        public partial class Assignment : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Assignment>
         {
             const string _bridgeClassName = "org.apache.kafka.clients.consumer.ConsumerPartitionAssignor$Assignment";
             /// <summary>
@@ -68,7 +68,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
             public Assignment(params object[] args) : base(args) { }
 
             private static readonly global::System.Exception _LocalBridgeClazzException = null;
-            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeCore.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
+            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
             private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw _LocalBridgeClazzException ?? new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
 
             /// <inheritdoc/>
@@ -91,7 +91,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.0/org/apache/kafka/clients/consumer/ConsumerPartitionAssignor.GroupAssignment.html"/>
         /// </summary>
-        public partial class GroupAssignment : MASES.JCOBridge.C2JBridge.JVMBridgeCore<GroupAssignment>
+        public partial class GroupAssignment : MASES.JCOBridge.C2JBridge.JVMBridgeBase<GroupAssignment>
         {
             const string _bridgeClassName = "org.apache.kafka.clients.consumer.ConsumerPartitionAssignor$GroupAssignment";
             /// <summary>
@@ -105,7 +105,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
             public GroupAssignment(params object[] args) : base(args) { }
 
             private static readonly global::System.Exception _LocalBridgeClazzException = null;
-            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeCore.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
+            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
             private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw _LocalBridgeClazzException ?? new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
 
             /// <inheritdoc/>
@@ -128,7 +128,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.0/org/apache/kafka/clients/consumer/ConsumerPartitionAssignor.GroupSubscription.html"/>
         /// </summary>
-        public partial class GroupSubscription : MASES.JCOBridge.C2JBridge.JVMBridgeCore<GroupSubscription>
+        public partial class GroupSubscription : MASES.JCOBridge.C2JBridge.JVMBridgeBase<GroupSubscription>
         {
             const string _bridgeClassName = "org.apache.kafka.clients.consumer.ConsumerPartitionAssignor$GroupSubscription";
             /// <summary>
@@ -142,7 +142,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
             public GroupSubscription(params object[] args) : base(args) { }
 
             private static readonly global::System.Exception _LocalBridgeClazzException = null;
-            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeCore.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
+            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
             private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw _LocalBridgeClazzException ?? new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
 
             /// <inheritdoc/>
@@ -179,7 +179,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
             public RebalanceProtocol(params object[] args) : base(args) { }
 
             private static readonly global::System.Exception _LocalBridgeClazzException = null;
-            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeCore.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
+            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
             private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw _LocalBridgeClazzException ?? new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
 
             /// <inheritdoc/>
@@ -202,7 +202,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.0/org/apache/kafka/clients/consumer/ConsumerPartitionAssignor.Subscription.html"/>
         /// </summary>
-        public partial class Subscription : MASES.JCOBridge.C2JBridge.JVMBridgeCore<Subscription>
+        public partial class Subscription : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Subscription>
         {
             const string _bridgeClassName = "org.apache.kafka.clients.consumer.ConsumerPartitionAssignor$Subscription";
             /// <summary>
@@ -216,7 +216,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
             public Subscription(params object[] args) : base(args) { }
 
             private static readonly global::System.Exception _LocalBridgeClazzException = null;
-            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeCore.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
+            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
             private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw _LocalBridgeClazzException ?? new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
 
             /// <inheritdoc/>
@@ -263,7 +263,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
 
         const string _bridgeClassName = "org.apache.kafka.clients.consumer.ConsumerPartitionAssignor";
         private static readonly global::System.Exception _LocalBridgeClazzException = null;
-        private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeCore.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
+        private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
         private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw _LocalBridgeClazzException ?? new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
 
         /// <inheritdoc/>

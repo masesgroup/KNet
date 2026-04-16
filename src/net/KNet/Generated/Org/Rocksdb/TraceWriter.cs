@@ -29,7 +29,7 @@ namespace Org.Rocksdb
     /// <summary>
     /// <see href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/TraceWriter.html"/>
     /// </summary>
-    public partial class TraceWriter : MASES.JCOBridge.C2JBridge.JVMBridgeCore<TraceWriter>
+    public partial class TraceWriter : MASES.JCOBridge.C2JBridge.JVMBridgeBase<TraceWriter>
     {
         const string _bridgeClassName = "org.rocksdb.TraceWriter";
         /// <summary>
@@ -44,7 +44,7 @@ namespace Org.Rocksdb
         public TraceWriter(params object[] args) : base(args) { }
 
         private static readonly global::System.Exception _LocalBridgeClazzException = null;
-        private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeCore.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
+        private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
         private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw _LocalBridgeClazzException ?? new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
 
         /// <inheritdoc/>
