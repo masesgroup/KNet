@@ -29,7 +29,7 @@ namespace Org.Rocksdb
     /// <summary>
     /// <see href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/Holder.html"/>
     /// </summary>
-    public partial class Holder : MASES.JCOBridge.C2JBridge.JVMBridgeCore<Holder>
+    public partial class Holder : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Holder>
     {
         const string _bridgeClassName = "org.rocksdb.Holder";
         /// <summary>
@@ -43,7 +43,7 @@ namespace Org.Rocksdb
         public Holder(params object[] args) : base(args) { }
 
         private static readonly global::System.Exception _LocalBridgeClazzException = null;
-        private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeCore.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
+        private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
         private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw _LocalBridgeClazzException ?? new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
 
         /// <inheritdoc/>
@@ -67,7 +67,7 @@ namespace Org.Rocksdb
     /// <see href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/Holder.html"/>
     /// </summary>
     /// <typeparam name="T"></typeparam>
-    public partial class Holder<T> : MASES.JCOBridge.C2JBridge.JVMBridgeCore<Holder<T>>
+    public partial class Holder<T> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Holder<T>>
     {
         const string _bridgeClassName = "org.rocksdb.Holder";
         /// <summary>
@@ -81,7 +81,7 @@ namespace Org.Rocksdb
         public Holder(params object[] args) : base(args) { }
 
         private static readonly global::System.Exception _LocalBridgeClazzException = null;
-        private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeCore.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
+        private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
         private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw _LocalBridgeClazzException ?? new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
 
         /// <inheritdoc/>

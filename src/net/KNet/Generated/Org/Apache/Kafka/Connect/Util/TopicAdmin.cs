@@ -43,7 +43,7 @@ namespace Org.Apache.Kafka.Connect.Util
         public TopicAdmin(params object[] args) : base(args) { }
 
         private static readonly global::System.Exception _LocalBridgeClazzException = null;
-        private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeCore.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
+        private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
         private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw _LocalBridgeClazzException ?? new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
 
         /// <inheritdoc/>
@@ -62,7 +62,7 @@ namespace Org.Apache.Kafka.Connect.Util
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.2.0/org/apache/kafka/connect/util/TopicAdmin.NewTopicBuilder.html"/>
         /// </summary>
-        public partial class NewTopicBuilder : MASES.JCOBridge.C2JBridge.JVMBridgeCore<NewTopicBuilder>
+        public partial class NewTopicBuilder : MASES.JCOBridge.C2JBridge.JVMBridgeBase<NewTopicBuilder>
         {
             const string _bridgeClassName = "org.apache.kafka.connect.util.TopicAdmin$NewTopicBuilder";
             /// <summary>
@@ -76,7 +76,7 @@ namespace Org.Apache.Kafka.Connect.Util
             public NewTopicBuilder(params object[] args) : base(args) { }
 
             private static readonly global::System.Exception _LocalBridgeClazzException = null;
-            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeCore.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
+            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
             private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw _LocalBridgeClazzException ?? new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
 
             /// <inheritdoc/>
@@ -99,7 +99,7 @@ namespace Org.Apache.Kafka.Connect.Util
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.2.0/org/apache/kafka/connect/util/TopicAdmin.TopicCreationResponse.html"/>
         /// </summary>
-        public partial class TopicCreationResponse : MASES.JCOBridge.C2JBridge.JVMBridgeCore<TopicCreationResponse>
+        public partial class TopicCreationResponse : MASES.JCOBridge.C2JBridge.JVMBridgeBase<TopicCreationResponse>
         {
             const string _bridgeClassName = "org.apache.kafka.connect.util.TopicAdmin$TopicCreationResponse";
             /// <summary>
@@ -113,7 +113,7 @@ namespace Org.Apache.Kafka.Connect.Util
             public TopicCreationResponse(params object[] args) : base(args) { }
 
             private static readonly global::System.Exception _LocalBridgeClazzException = null;
-            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeCore.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
+            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
             private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw _LocalBridgeClazzException ?? new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
 
             /// <inheritdoc/>

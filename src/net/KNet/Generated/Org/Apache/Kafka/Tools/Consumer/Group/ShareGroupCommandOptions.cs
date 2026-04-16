@@ -29,7 +29,7 @@ namespace Org.Apache.Kafka.Tools.Consumer.Group
     /// <summary>
     /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.2.0/org/apache/kafka/tools/consumer/group/ShareGroupCommandOptions.html"/>
     /// </summary>
-    public partial class ShareGroupCommandOptions : MASES.JCOBridge.C2JBridge.JVMBridgeCore<ShareGroupCommandOptions>
+    public partial class ShareGroupCommandOptions : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ShareGroupCommandOptions>
     {
         const string _bridgeClassName = "org.apache.kafka.tools.consumer.group.ShareGroupCommandOptions";
         /// <summary>
@@ -43,7 +43,7 @@ namespace Org.Apache.Kafka.Tools.Consumer.Group
         public ShareGroupCommandOptions(params object[] args) : base(args) { }
 
         private static readonly global::System.Exception _LocalBridgeClazzException = null;
-        private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeCore.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
+        private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
         private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw _LocalBridgeClazzException ?? new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
 
         /// <inheritdoc/>

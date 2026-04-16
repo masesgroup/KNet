@@ -29,7 +29,7 @@ namespace Org.Apache.Kafka.Clients.Admin
     /// <summary>
     /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.0/org/apache/kafka/clients/admin/AlterPartitionReassignmentsResult.html"/>
     /// </summary>
-    public partial class AlterPartitionReassignmentsResult : MASES.JCOBridge.C2JBridge.JVMBridgeCore<AlterPartitionReassignmentsResult>
+    public partial class AlterPartitionReassignmentsResult : MASES.JCOBridge.C2JBridge.JVMBridgeBase<AlterPartitionReassignmentsResult>
     {
         const string _bridgeClassName = "org.apache.kafka.clients.admin.AlterPartitionReassignmentsResult";
         /// <summary>
@@ -43,7 +43,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         public AlterPartitionReassignmentsResult(params object[] args) : base(args) { }
 
         private static readonly global::System.Exception _LocalBridgeClazzException = null;
-        private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeCore.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
+        private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
         private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw _LocalBridgeClazzException ?? new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
 
         /// <inheritdoc/>

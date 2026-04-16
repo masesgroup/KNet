@@ -29,7 +29,7 @@ namespace Org.Apache.Kafka.Connect.Converters
     /// <summary>
     /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.2.0/org/apache/kafka/connect/converters/DoubleConverter.html"/>
     /// </summary>
-    public partial class DoubleConverter : MASES.JCOBridge.C2JBridge.JVMBridgeCore<DoubleConverter>
+    public partial class DoubleConverter : MASES.JCOBridge.C2JBridge.JVMBridgeBase<DoubleConverter>
     {
         const string _bridgeClassName = "org.apache.kafka.connect.converters.DoubleConverter";
         /// <summary>
@@ -43,7 +43,7 @@ namespace Org.Apache.Kafka.Connect.Converters
         public DoubleConverter(params object[] args) : base(args) { }
 
         private static readonly global::System.Exception _LocalBridgeClazzException = null;
-        private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeCore.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
+        private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
         private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw _LocalBridgeClazzException ?? new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
 
         /// <inheritdoc/>

@@ -29,7 +29,7 @@ namespace Org.Apache.Kafka.Connect.Health
     /// <summary>
     /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.2.0/org/apache/kafka/connect/health/ConnectClusterDetails.html"/>
     /// </summary>
-    public partial class ConnectClusterDetails : MASES.JCOBridge.C2JBridge.JVMBridgeCore<ConnectClusterDetails>
+    public partial class ConnectClusterDetails : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ConnectClusterDetails>
     {
         const string _bridgeClassName = "org.apache.kafka.connect.health.ConnectClusterDetails";
         /// <summary>
@@ -44,7 +44,7 @@ namespace Org.Apache.Kafka.Connect.Health
         public ConnectClusterDetails(params object[] args) : base(args) { }
 
         private static readonly global::System.Exception _LocalBridgeClazzException = null;
-        private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeCore.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
+        private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
         private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw _LocalBridgeClazzException ?? new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
 
         /// <inheritdoc/>

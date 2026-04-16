@@ -43,7 +43,7 @@ namespace Org.Apache.Kafka.Clients
         public Metadata(params object[] args) : base(args) { }
 
         private static readonly global::System.Exception _LocalBridgeClazzException = null;
-        private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeCore.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
+        private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
         private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw _LocalBridgeClazzException ?? new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
 
         /// <inheritdoc/>
@@ -62,7 +62,7 @@ namespace Org.Apache.Kafka.Clients
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.0/org/apache/kafka/clients/Metadata.LeaderAndEpoch.html"/>
         /// </summary>
-        public partial class LeaderAndEpoch : MASES.JCOBridge.C2JBridge.JVMBridgeCore<LeaderAndEpoch>
+        public partial class LeaderAndEpoch : MASES.JCOBridge.C2JBridge.JVMBridgeBase<LeaderAndEpoch>
         {
             const string _bridgeClassName = "org.apache.kafka.clients.Metadata$LeaderAndEpoch";
             /// <summary>
@@ -76,7 +76,7 @@ namespace Org.Apache.Kafka.Clients
             public LeaderAndEpoch(params object[] args) : base(args) { }
 
             private static readonly global::System.Exception _LocalBridgeClazzException = null;
-            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeCore.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
+            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
             private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw _LocalBridgeClazzException ?? new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
 
             /// <inheritdoc/>
@@ -99,7 +99,7 @@ namespace Org.Apache.Kafka.Clients
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.0/org/apache/kafka/clients/Metadata.LeaderIdAndEpoch.html"/>
         /// </summary>
-        public partial class LeaderIdAndEpoch : MASES.JCOBridge.C2JBridge.JVMBridgeCore<LeaderIdAndEpoch>
+        public partial class LeaderIdAndEpoch : MASES.JCOBridge.C2JBridge.JVMBridgeBase<LeaderIdAndEpoch>
         {
             const string _bridgeClassName = "org.apache.kafka.clients.Metadata$LeaderIdAndEpoch";
             /// <summary>
@@ -113,7 +113,7 @@ namespace Org.Apache.Kafka.Clients
             public LeaderIdAndEpoch(params object[] args) : base(args) { }
 
             private static readonly global::System.Exception _LocalBridgeClazzException = null;
-            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeCore.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
+            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
             private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw _LocalBridgeClazzException ?? new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
 
             /// <inheritdoc/>
@@ -136,7 +136,7 @@ namespace Org.Apache.Kafka.Clients
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.0/org/apache/kafka/clients/Metadata.MetadataRequestAndVersion.html"/>
         /// </summary>
-        public partial class MetadataRequestAndVersion : MASES.JCOBridge.C2JBridge.JVMBridgeCore<MetadataRequestAndVersion>
+        public partial class MetadataRequestAndVersion : MASES.JCOBridge.C2JBridge.JVMBridgeBase<MetadataRequestAndVersion>
         {
             const string _bridgeClassName = "org.apache.kafka.clients.Metadata$MetadataRequestAndVersion";
             /// <summary>
@@ -150,7 +150,7 @@ namespace Org.Apache.Kafka.Clients
             public MetadataRequestAndVersion(params object[] args) : base(args) { }
 
             private static readonly global::System.Exception _LocalBridgeClazzException = null;
-            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeCore.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
+            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
             private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw _LocalBridgeClazzException ?? new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
 
             /// <inheritdoc/>

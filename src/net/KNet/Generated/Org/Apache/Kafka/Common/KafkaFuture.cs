@@ -44,7 +44,7 @@ namespace Org.Apache.Kafka.Common
         public KafkaFuture(params object[] args) : base(args) { }
 
         private static readonly global::System.Exception _LocalBridgeClazzException = null;
-        private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeCore.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
+        private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
         private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw _LocalBridgeClazzException ?? new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
 
         /// <inheritdoc/>
@@ -63,7 +63,7 @@ namespace Org.Apache.Kafka.Common
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.0/org/apache/kafka/common/KafkaFuture.BaseFunction.html"/>
         /// </summary>
-        public partial class BaseFunction : MASES.JCOBridge.C2JBridge.JVMBridgeCore<BaseFunction>
+        public partial class BaseFunction : MASES.JCOBridge.C2JBridge.JVMBridgeBase<BaseFunction>
         {
             const string _bridgeClassName = "org.apache.kafka.common.KafkaFuture$BaseFunction";
             /// <summary>
@@ -78,7 +78,7 @@ namespace Org.Apache.Kafka.Common
             public BaseFunction(params object[] args) : base(args) { }
 
             private static readonly global::System.Exception _LocalBridgeClazzException = null;
-            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeCore.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
+            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
             private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw _LocalBridgeClazzException ?? new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
 
             /// <inheritdoc/>
@@ -103,7 +103,7 @@ namespace Org.Apache.Kafka.Common
         /// </summary>
         /// <typeparam name="A"></typeparam>
         /// <typeparam name="B"></typeparam>
-        public partial class BaseFunction<A, B> : MASES.JCOBridge.C2JBridge.JVMBridgeCore<BaseFunction<A, B>>
+        public partial class BaseFunction<A, B> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<BaseFunction<A, B>>
         {
             const string _bridgeClassName = "org.apache.kafka.common.KafkaFuture$BaseFunction";
             /// <summary>
@@ -118,7 +118,7 @@ namespace Org.Apache.Kafka.Common
             public BaseFunction(params object[] args) : base(args) { }
 
             private static readonly global::System.Exception _LocalBridgeClazzException = null;
-            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeCore.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
+            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
             private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw _LocalBridgeClazzException ?? new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
 
             /// <inheritdoc/>
@@ -141,7 +141,7 @@ namespace Org.Apache.Kafka.Common
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.0/org/apache/kafka/common/KafkaFuture.BiConsumer.html"/>
         /// </summary>
-        public partial class BiConsumer : MASES.JCOBridge.C2JBridge.JVMBridgeCore<BiConsumer>
+        public partial class BiConsumer : MASES.JCOBridge.C2JBridge.JVMBridgeBase<BiConsumer>
         {
             const string _bridgeClassName = "org.apache.kafka.common.KafkaFuture$BiConsumer";
             /// <summary>
@@ -156,7 +156,7 @@ namespace Org.Apache.Kafka.Common
             public BiConsumer(params object[] args) : base(args) { }
 
             private static readonly global::System.Exception _LocalBridgeClazzException = null;
-            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeCore.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
+            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
             private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw _LocalBridgeClazzException ?? new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
 
             /// <inheritdoc/>
@@ -181,7 +181,7 @@ namespace Org.Apache.Kafka.Common
         /// </summary>
         /// <typeparam name="A"></typeparam>
         /// <typeparam name="B"></typeparam>
-        public partial class BiConsumer<A, B> : MASES.JCOBridge.C2JBridge.JVMBridgeCore<BiConsumer<A, B>>
+        public partial class BiConsumer<A, B> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<BiConsumer<A, B>>
         {
             const string _bridgeClassName = "org.apache.kafka.common.KafkaFuture$BiConsumer";
             /// <summary>
@@ -196,7 +196,7 @@ namespace Org.Apache.Kafka.Common
             public BiConsumer(params object[] args) : base(args) { }
 
             private static readonly global::System.Exception _LocalBridgeClazzException = null;
-            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeCore.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
+            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
             private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw _LocalBridgeClazzException ?? new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
 
             /// <inheritdoc/>
@@ -239,7 +239,7 @@ namespace Org.Apache.Kafka.Common
         public KafkaFuture(params object[] args) : base(args) { }
 
         private static readonly global::System.Exception _LocalBridgeClazzException = null;
-        private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeCore.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
+        private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
         private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw _LocalBridgeClazzException ?? new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
 
         /// <inheritdoc/>

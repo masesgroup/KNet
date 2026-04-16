@@ -29,7 +29,7 @@ namespace Org.Apache.Kafka.Clients.Admin
     /// <summary>
     /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.0/org/apache/kafka/clients/admin/StreamsGroupMemberDescription.html"/>
     /// </summary>
-    public partial class StreamsGroupMemberDescription : MASES.JCOBridge.C2JBridge.JVMBridgeCore<StreamsGroupMemberDescription>
+    public partial class StreamsGroupMemberDescription : MASES.JCOBridge.C2JBridge.JVMBridgeBase<StreamsGroupMemberDescription>
     {
         const string _bridgeClassName = "org.apache.kafka.clients.admin.StreamsGroupMemberDescription";
         /// <summary>
@@ -43,7 +43,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         public StreamsGroupMemberDescription(params object[] args) : base(args) { }
 
         private static readonly global::System.Exception _LocalBridgeClazzException = null;
-        private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeCore.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
+        private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
         private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw _LocalBridgeClazzException ?? new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
 
         /// <inheritdoc/>
@@ -62,7 +62,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.0/org/apache/kafka/clients/admin/StreamsGroupMemberDescription.Endpoint.html"/>
         /// </summary>
-        public partial class Endpoint : MASES.JCOBridge.C2JBridge.JVMBridgeCore<Endpoint>
+        public partial class Endpoint : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Endpoint>
         {
             const string _bridgeClassName = "org.apache.kafka.clients.admin.StreamsGroupMemberDescription$Endpoint";
             /// <summary>
@@ -76,7 +76,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             public Endpoint(params object[] args) : base(args) { }
 
             private static readonly global::System.Exception _LocalBridgeClazzException = null;
-            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeCore.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
+            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
             private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw _LocalBridgeClazzException ?? new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
 
             /// <inheritdoc/>
@@ -99,7 +99,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.0/org/apache/kafka/clients/admin/StreamsGroupMemberDescription.TaskOffset.html"/>
         /// </summary>
-        public partial class TaskOffset : MASES.JCOBridge.C2JBridge.JVMBridgeCore<TaskOffset>
+        public partial class TaskOffset : MASES.JCOBridge.C2JBridge.JVMBridgeBase<TaskOffset>
         {
             const string _bridgeClassName = "org.apache.kafka.clients.admin.StreamsGroupMemberDescription$TaskOffset";
             /// <summary>
@@ -113,7 +113,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             public TaskOffset(params object[] args) : base(args) { }
 
             private static readonly global::System.Exception _LocalBridgeClazzException = null;
-            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeCore.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
+            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
             private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw _LocalBridgeClazzException ?? new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
 
             /// <inheritdoc/>
