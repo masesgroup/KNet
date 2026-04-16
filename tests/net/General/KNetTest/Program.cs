@@ -242,10 +242,8 @@ namespace MASES.KNetTest
 
                 Console.WriteLine($"Deleting {topicName} using an AdminClient based on {props}");
 
-                using (IAdmin admin = KafkaAdminClient.Create(props))
-                {
-                    admin.DeleteTopic(topicName);
-                }
+                using IAdmin admin = KafkaAdminClient.Create(props);
+                admin.DeleteTopic(topicName);
             }
             catch (Java.Util.Concurrent.ExecutionException ex)
             {
@@ -414,7 +412,7 @@ namespace MASES.KNetTest
                         }
                         else
                         {
-                            var tp = new Org.Apache.Kafka.Common.TopicPartition(topicToUse, 0);
+                            using var tp = new Org.Apache.Kafka.Common.TopicPartition(topicToUse, 0);
                             consumer.Assign(Collections.Singleton(tp));
                             if (_firstOffset != -1)
                             {
@@ -434,7 +432,7 @@ namespace MASES.KNetTest
                         int emptyCycle = 0;
                         while (runInParallel ? !resetEvent.WaitOne(0) : elements < NonParallelLimit)
                         {
-                            var records = consumer.Poll((long)TimeSpan.FromMilliseconds(checkTime).TotalMilliseconds);
+                            using var records = consumer.Poll((long)TimeSpan.FromMilliseconds(checkTime).TotalMilliseconds);
                             watcherTotal.Start();
                             emptyCycle++;
 #if NET7_0_OR_GREATER
@@ -443,14 +441,17 @@ namespace MASES.KNetTest
                             foreach (var item in records)
 #endif
                             {
-                                emptyCycle = 0;
-                                elements++;
-                                watcherTotal.Start();
-                                var str = $"Consuming from Offset = {item.Offset}, Key = {item.Key}, Value = {item.Value}";
-                                watcherTotal.Stop();
-                                watcher.Start();
-                                if (consoleOutput) Console.WriteLine(str);
-                                watcher.Stop();
+                                using (item)
+                                {
+                                    emptyCycle = 0;
+                                    elements++;
+                                    watcherTotal.Start();
+                                    var str = $"Consuming from Offset = {item.Offset}, Key = {item.Key}, Value = {item.Value}";
+                                    watcherTotal.Stop();
+                                    watcher.Start();
+                                    if (consoleOutput) Console.WriteLine(str);
+                                    watcher.Stop();
+                                }
                             }
                             bool elapsedTimeout = !runInParallel && swCycleTime.ElapsedMilliseconds > waitTime;
                             bool tooManyEmptyCycles = elements != 0 && emptyCycle > 5;
@@ -643,7 +644,7 @@ namespace MASES.KNetTest
                         }
                         else
                         {
-                            var tp = new Org.Apache.Kafka.Common.TopicPartition(topicToUse, 0);
+                            using var tp = new Org.Apache.Kafka.Common.TopicPartition(topicToUse, 0);
                             consumer.Assign(Collections.Singleton(tp));
                             if (_firstOffset != -1)
                             {
@@ -663,7 +664,7 @@ namespace MASES.KNetTest
                         int emptyCycle = 0;
                         while (runInParallel ? !resetEvent.WaitOne(0) : elements < NonParallelLimit)
                         {
-                            var records = consumer.Poll((long)TimeSpan.FromMilliseconds(checkTime).TotalMilliseconds);
+                            using var records = consumer.Poll((long)TimeSpan.FromMilliseconds(checkTime).TotalMilliseconds);
                             watcherTotal.Start();
                             emptyCycle++;
 #if NET7_0_OR_GREATER
@@ -672,14 +673,17 @@ namespace MASES.KNetTest
                             foreach (var item in records)
 #endif
                             {
-                                emptyCycle = 0;
-                                elements++;
-                                watcherTotal.Start();
-                                var str = $"Consuming from Offset = {item.Offset}, Key = {item.Key}, Value = {item.Value}";
-                                watcherTotal.Stop();
-                                watcher.Start();
-                                if (consoleOutput) Console.WriteLine(str);
-                                watcher.Stop();
+                                using (item)
+                                {
+                                    emptyCycle = 0;
+                                    elements++;
+                                    watcherTotal.Start();
+                                    var str = $"Consuming from Offset = {item.Offset}, Key = {item.Key}, Value = {item.Value}";
+                                    watcherTotal.Stop();
+                                    watcher.Start();
+                                    if (consoleOutput) Console.WriteLine(str);
+                                    watcher.Stop();
+                                }
                             }
                             bool elapsedTimeout = !runInParallel && swCycleTime.ElapsedMilliseconds > waitTime;
                             bool tooManyEmptyCycles = elements != 0 && emptyCycle > 5;

@@ -222,8 +222,8 @@ namespace MASES.KNetClassicTest
                         {
                             while (!resetEvent.WaitOne(0))
                             {
-                                var record = new Org.Apache.Kafka.Clients.Producer.ProducerRecord<string, string>(topicToUse, i.ToString(), i.ToString());
-                                var result = useCallback ? producer.Send(record, callback) : producer.Send(record);
+                                using var record = new Org.Apache.Kafka.Clients.Producer.ProducerRecord<string, string>(topicToUse, i.ToString(), i.ToString());
+                                using var result = useCallback ? producer.Send(record, callback) : producer.Send(record);
                                 Console.WriteLine($"Producing: {record} with result: {result.Get()}");
                                 producer.Flush();
                                 i++;
@@ -324,10 +324,13 @@ namespace MASES.KNetClassicTest
 
                         while (!resetEvent.WaitOne(0))
                         {
-                            var records = consumer.Poll((long)TimeSpan.FromMilliseconds(200).TotalMilliseconds);
+                            using var records = consumer.Poll((long)TimeSpan.FromMilliseconds(200).TotalMilliseconds);
                             foreach (var item in records)
                             {
-                                Console.WriteLine($"Consuming from Offset = {item.Offset()}, Key = {item.Key()}, Value = {item.Value()}");
+                                using (item)
+                                {
+                                    Console.WriteLine($"Consuming from Offset = {item.Offset()}, Key = {item.Key()}, Value = {item.Value()}");
+                                }
                             }
                         }
                     }
