@@ -16,6 +16,7 @@
 *  Refer to LICENSE for more information.
 */
 
+using Java.Util;
 using MASES.JNet.Specific.Extensions;
 using MASES.KNet.Serialization;
 using MASES.KNet.Streams.Kstream;
@@ -27,7 +28,7 @@ namespace MASES.KNet.Streams
     /// <summary>
     /// KNet extension of <see cref="Org.Apache.Kafka.Streams.StreamsBuilder"/>
     /// </summary>
-    public class StreamsBuilder : IGenericSerDesFactoryApplier
+    public class StreamsBuilder : IGenericSerDesFactoryApplier, IDisposable
     {
         Org.Apache.Kafka.Streams.StreamsBuilder _builder;
         IGenericSerDesFactory _factory;
@@ -49,6 +50,48 @@ namespace MASES.KNet.Streams
         }
 
         StreamsBuilder(IGenericSerDesFactory factory, Org.Apache.Kafka.Streams.StreamsBuilder builder) : base() { _factory = factory; _builder = builder; }
+
+        #endregion
+
+        #region IDisposable
+
+        readonly object _lock = new object();
+        bool _disposed = false;
+        /// <summary>
+        /// Test if this instance was disposed
+        /// </summary>
+        /// <exception cref="ObjectDisposedException">When this instance was disposed</exception>
+        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
+        protected void CheckDisposed() { lock (_lock) { if (_disposed) throw new ObjectDisposedException(ToString()); } }
+        /// <inheritdoc cref="IDisposable.Dispose"/>
+        public void Dispose()
+        {
+            // Dispose of unmanaged resources.
+            Dispose(true);
+            // Suppress finalization.
+            GC.SuppressFinalize(this);
+        }
+        /// <summary>
+        /// Implements the pattern described in https://learn.microsoft.com/en-en/dotnet/standard/garbage-collection/implementing-dispose
+        /// </summary>
+        /// <param name="disposing">The disposing parameter is a <see langword="bool"/> that indicates whether the method call comes from a <see cref="IDisposable.Dispose"/> method (its value is <see langword="true"/>) or from a finalizer (its value is <see langword="false"/>)</param>
+        protected virtual void Dispose(bool disposing)
+        {
+            lock (_lock)
+            {
+                if (_disposed)
+                {
+                    return;
+                }
+
+                if (disposing)
+                {
+                    _builder?.Dispose();
+                }
+
+                _disposed = true;
+            }
+        }
 
         #endregion
         /// <summary>
@@ -79,6 +122,7 @@ namespace MASES.KNet.Streams
         /// <returns><see cref="GlobalKTable{K, V, TJVMK, TJVMV}"/></returns>
         public GlobalKTable<K, V, TJVMK, TJVMV> GlobalTable<K, V, TJVMK, TJVMV>(string arg0, Consumed<K, V, TJVMK, TJVMV> arg1, Materialized<K, V, TJVMK, TJVMV> arg2)
         {
+            CheckDisposed();
             if (arg1 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
             if (arg2 is IGenericSerDesFactoryApplier applier2) applier2.Factory = _factory;
             return new GlobalKTable<K, V, TJVMK, TJVMV>(_factory, _builder.GlobalTable<TJVMK, TJVMV>(arg0, arg1, arg2));
@@ -95,6 +139,7 @@ namespace MASES.KNet.Streams
         /// <returns><see cref="GlobalKTable{K, V, TJVMK, TJVMV}"/></returns>
         public GlobalKTable<K, V, TJVMK, TJVMV> GlobalTable<K, V, TJVMK, TJVMV>(string arg0, Consumed<K, V, TJVMK, TJVMV> arg1)
         {
+            CheckDisposed();
             if (arg1 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
             return new GlobalKTable<K, V, TJVMK, TJVMV>(_factory, _builder.GlobalTable<TJVMK, TJVMV>(arg0, arg1));
         }
@@ -110,6 +155,7 @@ namespace MASES.KNet.Streams
         /// <returns><see cref="GlobalKTable{K, V, TJVMK, TJVMV}"/></returns>
         public GlobalKTable<K, V, TJVMK, TJVMV> GlobalTable<K, V, TJVMK, TJVMV>(string arg0, Materialized<K, V, TJVMK, TJVMV> arg1)
         {
+            CheckDisposed();
             if (arg1 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
             return new GlobalKTable<K, V, TJVMK, TJVMV>(_factory, _builder.GlobalTable<TJVMK, TJVMV>(arg0, arg1));
         }
@@ -124,6 +170,7 @@ namespace MASES.KNet.Streams
         /// <returns><see cref="GlobalKTable{K, V, TJVMK, TJVMV}"/></returns>
         public GlobalKTable<K, V, TJVMK, TJVMV> GlobalTable<K, V, TJVMK, TJVMV>(string arg0)
         {
+            CheckDisposed();
             return new GlobalKTable<K, V, TJVMK, TJVMV>(_factory, _builder.GlobalTable<TJVMK, TJVMV>(arg0));
         }
         /// <summary>
@@ -138,6 +185,7 @@ namespace MASES.KNet.Streams
         /// <returns><see cref="KStream{K, V, TJVMK, TJVMV}"/></returns>
         public KStream<K, V, TJVMK, TJVMV> Stream<K, V, TJVMK, TJVMV>(string arg0, Consumed<K, V, TJVMK, TJVMV> arg1)
         {
+            CheckDisposed();
             if (arg1 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
             return new KStream<K, V, TJVMK, TJVMV>(_factory, _builder.Stream<TJVMK, TJVMV>(arg0));
         }
@@ -152,6 +200,7 @@ namespace MASES.KNet.Streams
         /// <returns><see cref="KStream{K, V, TJVMK, TJVMV}"/></returns>
         public KStream<K, V, TJVMK, TJVMV> Stream<K, V, TJVMK, TJVMV>(string arg0)
         {
+            CheckDisposed();
             return new KStream<K, V, TJVMK, TJVMV>(_factory, _builder.Stream<TJVMK, TJVMV>(arg0));
         }
         /// <summary>
@@ -166,6 +215,7 @@ namespace MASES.KNet.Streams
         /// <returns><see cref="KStream{K, V, TJVMK, TJVMV}"/></returns>
         public KStream<K, V, TJVMK, TJVMV> Stream<K, V, TJVMK, TJVMV>(System.Collections.Generic.IEnumerable<string> arg0, Consumed<K, V, TJVMK, TJVMV> arg1)
         {
+            CheckDisposed();
             if (arg1 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
             return new KStream<K, V, TJVMK, TJVMV>(_factory, _builder.Stream<TJVMK, TJVMV>(arg0.ToJVMCollection<Java.Lang.String, string>(), arg1));
         }
@@ -180,6 +230,7 @@ namespace MASES.KNet.Streams
         /// <returns><see cref="KStream{K, V, TJVMK, TJVMV}"/></returns>
         public KStream<K, V, TJVMK, TJVMV> Stream<K, V, TJVMK, TJVMV>(System.Collections.Generic.IEnumerable<string> arg0)
         {
+            CheckDisposed();
             return new KStream<K, V, TJVMK, TJVMV>(_factory, _builder.Stream<TJVMK, TJVMV>(arg0.ToJVMCollection<Java.Lang.String, string>()));
         }
         /// <summary>
@@ -194,6 +245,7 @@ namespace MASES.KNet.Streams
         /// <returns><see cref="KStream{K, V, TJVMK, TJVMV}"/></returns>
         public KStream<K, V, TJVMK, TJVMV> Stream<K, V, TJVMK, TJVMV>(Java.Util.Regex.Pattern arg0, Consumed<K, V, TJVMK, TJVMV> arg1)
         {
+            CheckDisposed();
             if (arg1 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
             return new KStream<K, V, TJVMK, TJVMV>(_factory, _builder.Stream<TJVMK, TJVMV>(arg0));
         }
@@ -208,6 +260,7 @@ namespace MASES.KNet.Streams
         /// <returns><see cref="KStream{K, V, TJVMK, TJVMV}"/></returns>
         public KStream<K, V, TJVMK, TJVMV> Stream<K, V, TJVMK, TJVMV>(Java.Util.Regex.Pattern arg0)
         {
+            CheckDisposed();
             return new KStream<K, V, TJVMK, TJVMV>(_factory, _builder.Stream<TJVMK, TJVMV>(arg0));
         }
         /// <summary>
@@ -223,6 +276,7 @@ namespace MASES.KNet.Streams
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KTable"/></returns>
         public KTable<K, V, TJVMK, TJVMV> Table<K, V, TJVMK, TJVMV>(string arg0, Consumed<K, V, TJVMK, TJVMV> arg1, Materialized<K, V, TJVMK, TJVMV> arg2)
         {
+            CheckDisposed();
             if (arg1 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
             if (arg2 is IGenericSerDesFactoryApplier applier2) applier2.Factory = _factory;
             return new KTable<K, V, TJVMK, TJVMV>(_factory, _builder.Table<TJVMK, TJVMV>(arg0, arg1, arg2));
@@ -239,6 +293,7 @@ namespace MASES.KNet.Streams
         /// <returns><see cref="KTable{K, V, TJVMK, TJVMV}"/></returns>
         public KTable<K, V, TJVMK, TJVMV> Table<K, V, TJVMK, TJVMV>(string arg0, Consumed<K, V, TJVMK, TJVMV> arg1)
         {
+            CheckDisposed();
             if (arg1 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
             return new KTable<K, V, TJVMK, TJVMV>(_factory, _builder.Table<TJVMK, TJVMV>(arg0, arg1));
         }
@@ -254,6 +309,7 @@ namespace MASES.KNet.Streams
         /// <returns><see cref="KTable{K, V, TJVMK, TJVMV}"/></returns>
         public KTable<K, V, TJVMK, TJVMV> Table<K, V, TJVMK, TJVMV>(string arg0, Materialized<K, V, TJVMK, TJVMV> arg1)
         {
+            CheckDisposed();
             if (arg1 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
             return new KTable<K, V, TJVMK, TJVMV>(_factory, _builder.Table<TJVMK, TJVMV>(arg0, arg1));
         }
@@ -268,6 +324,7 @@ namespace MASES.KNet.Streams
         /// <returns><see cref="KTable{K, V, TJVMK, TJVMV}"/></returns>
         public KTable<K, V, TJVMK, TJVMV> Table<K, V, TJVMK, TJVMV>(string arg0)
         {
+            CheckDisposed();
             return new KTable<K, V, TJVMK, TJVMV>(_factory, _builder.Table<TJVMK, TJVMV>(arg0));
         }
         /// <summary>
@@ -277,6 +334,7 @@ namespace MASES.KNet.Streams
         /// <returns><see cref="StreamsBuilder"/></returns>
         public StreamsBuilder AddStateStore(Org.Apache.Kafka.Streams.State.StoreBuilder arg0)
         {
+            CheckDisposed();
             return new StreamsBuilder(_factory, _builder.AddStateStore(arg0));
         }
         /// <summary>
@@ -285,6 +343,7 @@ namespace MASES.KNet.Streams
         /// <returns><see cref="Topology"/></returns>
         public Topology Build()
         {
+            CheckDisposed();
             return new Topology(_builder.Build(), _factory);
         }
         /// <summary>
@@ -294,6 +353,7 @@ namespace MASES.KNet.Streams
         /// <returns><see cref="Org.Apache.Kafka.Streams.Topology"/></returns>
         public Topology Build(Java.Util.Properties arg0)
         {
+            CheckDisposed();
             return new Topology(_builder.Build(arg0), _factory);
         }
 

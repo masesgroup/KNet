@@ -25,7 +25,7 @@ namespace MASES.KNet.Streams.State
     /// Supporting interface for <see cref="ManagedStore{TStore}"/>
     /// </summary>
     /// <typeparam name="TStore">The Apache Kafka store type</typeparam>
-    public interface IManagedStore<TStore> : IGenericSerDesFactoryApplier
+    public interface IManagedStore<TStore> : IGenericSerDesFactoryApplier, IDisposable
     {
         /// <summary>
         /// Sets store data
@@ -68,6 +68,14 @@ namespace MASES.KNet.Streams.State
         {
             _factory = factory;
             _store = store;
+        }
+        /// <inheritdoc/>
+        public void Dispose()
+        {
+            if (_store is IDisposable disposable)
+            {
+                disposable.Dispose();
+            }
         }
     }
 }

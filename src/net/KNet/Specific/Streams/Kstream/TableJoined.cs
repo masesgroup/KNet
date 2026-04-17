@@ -18,6 +18,7 @@
 
 using MASES.KNet.Serialization;
 using MASES.KNet.Streams.Processor;
+using System;
 
 namespace MASES.KNet.Streams.Kstream
 {
@@ -28,7 +29,7 @@ namespace MASES.KNet.Streams.Kstream
     /// <typeparam name="KO"></typeparam>
     /// <typeparam name="TJVMK">The JVM type of <typeparamref name="K"/></typeparam>
     /// <typeparam name="TJVMKO">The JVM type of <typeparamref name="KO"/></typeparam>
-    public class TableJoined<K, KO, TJVMK, TJVMKO> : IGenericSerDesFactoryApplier
+    public class TableJoined<K, KO, TJVMK, TJVMKO> : IGenericSerDesFactoryApplier, IDisposable
     {
         readonly Org.Apache.Kafka.Streams.Kstream.TableJoined<TJVMK, TJVMKO> _inner;
         IGenericSerDesFactory _factory;
@@ -38,6 +39,48 @@ namespace MASES.KNet.Streams.Kstream
         {
             _inner = inner;
         }
+
+        #region IDisposable
+
+        readonly object _lock = new object();
+        bool _disposed = false;
+        /// <summary>
+        /// Test if this instance was disposed
+        /// </summary>
+        /// <exception cref="ObjectDisposedException">When this instance was disposed</exception>
+        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
+        protected void CheckDisposed() { lock (_lock) { if (_disposed) throw new ObjectDisposedException(ToString()); } }
+        /// <inheritdoc cref="IDisposable.Dispose"/>
+        public void Dispose()
+        {
+            // Dispose of unmanaged resources.
+            Dispose(true);
+            // Suppress finalization.
+            GC.SuppressFinalize(this);
+        }
+        /// <summary>
+        /// Implements the pattern described in https://learn.microsoft.com/en-en/dotnet/standard/garbage-collection/implementing-dispose
+        /// </summary>
+        /// <param name="disposing">The disposing parameter is a <see langword="bool"/> that indicates whether the method call comes from a <see cref="IDisposable.Dispose"/> method (its value is <see langword="true"/>) or from a finalizer (its value is <see langword="false"/>)</param>
+        protected virtual void Dispose(bool disposing)
+        {
+            lock (_lock)
+            {
+                if (_disposed)
+                {
+                    return;
+                }
+
+                if (disposing)
+                {
+                    _inner?.Dispose();
+                }
+
+                _disposed = true;
+            }
+        }
+
+        #endregion
 
         /// <summary>
         /// Converter from <see cref="TableJoined{K, KO, TJVMK, TJVMKO}"/> to <see cref="Org.Apache.Kafka.Streams.Kstream.TableJoined{TJVMK, TJVMKO}"/>
@@ -77,6 +120,7 @@ namespace MASES.KNet.Streams.Kstream
         /// <returns><see cref="TableJoined{K, KO, TJVMK, TJVMKO}"/></returns>
         public TableJoined<K, KO, TJVMK, TJVMKO> WithOtherPartitioner(StreamPartitionerNoValue<KO, TJVMKO> arg0)
         {
+            CheckDisposed();
             _inner?.WithOtherPartitioner(arg0);
             return this;
         }
@@ -87,6 +131,7 @@ namespace MASES.KNet.Streams.Kstream
         /// <returns><see cref="TableJoined{K, KO, TJVMK, TJVMKO}"/></returns>
         public TableJoined<K, KO, TJVMK, TJVMKO> WithPartitioner(StreamPartitionerNoValue<K, TJVMK> arg0)
         {
+            CheckDisposed();
             _inner?.WithPartitioner(arg0);
             return this;
         }

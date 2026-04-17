@@ -19,6 +19,7 @@
 
 using MASES.JCOBridge.C2JBridge;
 using MASES.KNet.Serialization;
+using System;
 
 namespace MASES.KNet.Streams.Kstream
 {
@@ -112,7 +113,7 @@ namespace MASES.KNet.Streams.Kstream
     /// </summary>
     /// <typeparam name="TJVMK">Key JVM type</typeparam>
     /// <typeparam name="TJVMV">Value JVM type</typeparam>
-    public interface IKNetMaterialized<TJVMK, TJVMV>
+    public interface IKNetMaterialized<TJVMK, TJVMV> : IDisposable
     {
         /// <summary>
         /// Supporting method for <see cref="Materialized{K, V, TJVMK, TJVMV, TContainer}"/>
@@ -159,6 +160,50 @@ namespace MASES.KNet.Streams.Kstream
         {
             _windowStore = materialized;
         }
+
+        #region IDisposable
+
+        readonly object _lock = new object();
+        bool _disposed = false;
+        /// <summary>
+        /// Test if this instance was disposed
+        /// </summary>
+        /// <exception cref="ObjectDisposedException">When this instance was disposed</exception>
+        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
+        protected void CheckDisposed() { lock (_lock) { if (_disposed) throw new ObjectDisposedException(ToString()); } }
+        /// <inheritdoc cref="IDisposable.Dispose"/>
+        public void Dispose()
+        {
+            // Dispose of unmanaged resources.
+            Dispose(true);
+            // Suppress finalization.
+            GC.SuppressFinalize(this);
+        }
+        /// <summary>
+        /// Implements the pattern described in https://learn.microsoft.com/en-en/dotnet/standard/garbage-collection/implementing-dispose
+        /// </summary>
+        /// <param name="disposing">The disposing parameter is a <see langword="bool"/> that indicates whether the method call comes from a <see cref="IDisposable.Dispose"/> method (its value is <see langword="true"/>) or from a finalizer (its value is <see langword="false"/>)</param>
+        protected virtual void Dispose(bool disposing)
+        {
+            lock (_lock)
+            {
+                if (_disposed)
+                {
+                    return;
+                }
+
+                if (disposing)
+                {
+                    _keyStore?.Dispose();
+                    _sessionStore?.Dispose();
+                    _windowStore?.Dispose();
+                }
+
+                _disposed = true;
+            }
+        }
+
+        #endregion
 
         /// <summary>
         /// Converter from <see cref="Materialized{K, V, TJVMK, TJVMV, TContainer}"/> to <see cref="Org.Apache.Kafka.Streams.Kstream.Materialized{TJVMK, TJVMV, S}"/>
@@ -262,6 +307,7 @@ namespace MASES.KNet.Streams.Kstream
         /// <returns><typeparamref name="TContainer"/></returns>
         public TContainer WithCachingDisabled()
         {
+            CheckDisposed();
             _keyStore?.WithCachingDisabled();
             _sessionStore?.WithCachingDisabled();
             _windowStore?.WithCachingDisabled();
@@ -273,6 +319,7 @@ namespace MASES.KNet.Streams.Kstream
         /// <returns><typeparamref name="TContainer"/></returns>
         public TContainer WithCachingEnabled()
         {
+            CheckDisposed();
             _keyStore?.WithCachingEnabled();
             _sessionStore?.WithCachingEnabled();
             _windowStore?.WithCachingEnabled();
@@ -285,6 +332,7 @@ namespace MASES.KNet.Streams.Kstream
         /// <returns><typeparamref name="TContainer"/></returns>
         public TContainer WithKeySerde(ISerDes<K, TJVMK> arg0)
         {
+            CheckDisposed();
             _keyStore?.WithKeySerde(arg0.KafkaSerde);
             _sessionStore?.WithKeySerde(arg0.KafkaSerde);
             _windowStore?.WithKeySerde(arg0.KafkaSerde);
@@ -296,6 +344,7 @@ namespace MASES.KNet.Streams.Kstream
         /// <returns><typeparamref name="TContainer"/></returns>
         public TContainer WithLoggingDisabled()
         {
+            CheckDisposed();
             _keyStore?.WithLoggingDisabled();
             _sessionStore?.WithLoggingDisabled();
             _windowStore?.WithLoggingDisabled();
@@ -308,6 +357,7 @@ namespace MASES.KNet.Streams.Kstream
         /// <returns><typeparamref name="TContainer"/></returns>
         public TContainer WithLoggingEnabled(Java.Util.Map<Java.Lang.String, Java.Lang.String> arg0)
         {
+            CheckDisposed();
             _keyStore?.WithLoggingEnabled(arg0);
             _sessionStore?.WithLoggingEnabled(arg0);
             _windowStore?.WithLoggingEnabled(arg0);
@@ -321,6 +371,7 @@ namespace MASES.KNet.Streams.Kstream
         /// <exception cref="Java.Lang.IllegalArgumentException"/>
         public TContainer WithRetention(Java.Time.Duration arg0)
         {
+            CheckDisposed();
             _keyStore?.WithRetention(arg0);
             _sessionStore?.WithRetention(arg0);
             _windowStore?.WithRetention(arg0);
@@ -334,6 +385,7 @@ namespace MASES.KNet.Streams.Kstream
         /// <exception cref="Java.Lang.IllegalArgumentException"/>
         public TContainer WithStoreType(Org.Apache.Kafka.Streams.Kstream.Materialized.StoreType arg0)
         {
+            CheckDisposed();
             _keyStore?.WithStoreType(arg0);
             _sessionStore?.WithStoreType(arg0);
             _windowStore?.WithStoreType(arg0);

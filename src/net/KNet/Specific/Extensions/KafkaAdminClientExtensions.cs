@@ -128,26 +128,16 @@ namespace MASES.KNet.Extensions
         /// </summary>
         public static void CreateTopic(this IAdmin admin, string topicName, int numPartitions = 1, short replicationFactor = 1)
         {
-            NewTopic topic = null;
-            Set<NewTopic> coll = null;
             try
             {
-                topic = new NewTopic(topicName, numPartitions, replicationFactor);
-                coll = Collections.Singleton(topic);
+                using var topic = new NewTopic(topicName, numPartitions, replicationFactor);
+                using var coll = Collections.Singleton(topic);
                 var res = admin.CreateTopics(coll);
                 res.All().Get();
             }
             catch (ExecutionException ex)
             {
                 throw ex.InnerException;
-            }
-            finally
-            { // this piece of code tryies to mitigate the effect of GC object recall
-                if (coll != null && coll.IsBridgeStatic)
-                {
-                    topic.ToString();
-                    coll.ToString();
-                }
             }
         }
         /// <summary>
@@ -155,24 +145,15 @@ namespace MASES.KNet.Extensions
         /// </summary>
         public static void CreateTopic(this IAdmin admin, NewTopic topic)
         {
-            Set<NewTopic> coll = null;
             try
             {
-                coll = Collections.Singleton(topic);
-                var res = admin.CreateTopics(coll);
+                using var coll = Collections.Singleton(topic);
+                using var res = admin.CreateTopics(coll);
                 res.All().Get();
             }
             catch (ExecutionException ex)
             {
                 throw ex.InnerException;
-            }
-            finally
-            { // this piece of code tryies to mitigate the effect of GC object recall
-                if (coll != null && coll.IsBridgeStatic)
-                {
-                    topic.ToString();
-                    coll.ToString();
-                }
             }
         }
         /// <summary>
@@ -209,20 +190,15 @@ namespace MASES.KNet.Extensions
         /// </summary>
         public static void DeleteTopic(this IAdmin admin, string topicName)
         {
-            Set<Java.Lang.String> coll = null;
             try
             {
-                coll = Collections.Singleton((Java.Lang.String)topicName);
-                var res = admin.DeleteTopics(coll);
+                using var coll = Collections.Singleton((Java.Lang.String)topicName);
+                using var res = admin.DeleteTopics(coll);
                 res.All().Get();
             }
             catch (ExecutionException ex)
             {
                 throw ex.InnerException;
-            }
-            finally
-            { // this piece of code tryies to mitigate the effect of GC object recall
-                if (coll != null && coll.IsBridgeStatic) coll.ToString();
             }
         }
         /// <summary>

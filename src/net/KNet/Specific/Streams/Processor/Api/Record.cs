@@ -16,6 +16,7 @@
 *  Refer to LICENSE for more information.
 */
 
+using Java.Util;
 using MASES.KNet.Serialization;
 using System;
 
@@ -28,7 +29,7 @@ namespace MASES.KNet.Streams.Processor.Api
     /// <typeparam name="V">The value type</typeparam>
     /// <typeparam name="TJVMK">The JVM type of <typeparamref name="K"/></typeparam>
     /// <typeparam name="TJVMV">The JVM type of <typeparamref name="V"/></typeparam>
-    public class Record<K, V, TJVMK, TJVMV>
+    public class Record<K, V, TJVMK, TJVMV> : IDisposable
     {
         internal Record(IGenericSerDesFactory builder, Org.Apache.Kafka.Streams.Processor.Api.Record<TJVMK, TJVMV> record, Org.Apache.Kafka.Streams.Processor.Api.RecordMetadata metadata)
         {
@@ -40,6 +41,49 @@ namespace MASES.KNet.Streams.Processor.Api
         readonly IGenericSerDesFactory _builder;
         readonly Org.Apache.Kafka.Streams.Processor.Api.Record<TJVMK, TJVMV> _record;
         readonly Org.Apache.Kafka.Streams.Processor.Api.RecordMetadata _metadata;
+
+        #region IDisposable
+
+        readonly object _lock = new object();
+        bool _disposed = false;
+        /// <summary>
+        /// Test if this instance was disposed
+        /// </summary>
+        /// <exception cref="ObjectDisposedException">When this instance was disposed</exception>
+        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
+        protected void CheckDisposed() { lock (_lock) { if (_disposed) throw new ObjectDisposedException(ToString()); } }
+        /// <inheritdoc cref="IDisposable.Dispose"/>
+        public void Dispose()
+        {
+            // Dispose of unmanaged resources.
+            Dispose(true);
+            // Suppress finalization.
+            GC.SuppressFinalize(this);
+        }
+        /// <summary>
+        /// Implements the pattern described in https://learn.microsoft.com/en-en/dotnet/standard/garbage-collection/implementing-dispose
+        /// </summary>
+        /// <param name="disposing">The disposing parameter is a <see langword="bool"/> that indicates whether the method call comes from a <see cref="IDisposable.Dispose"/> method (its value is <see langword="true"/>) or from a finalizer (its value is <see langword="false"/>)</param>
+        protected virtual void Dispose(bool disposing)
+        {
+            lock (_lock)
+            {
+                if (_disposed)
+                {
+                    return;
+                }
+
+                if (disposing)
+                {
+                    _record?.Dispose();
+                    _metadata?.Dispose();
+                }
+
+                _disposed = true;
+            }
+        }
+
+        #endregion
 
         /// <summary>
         /// Converter from <see cref="Record{K, V, TJVMK, TJVMV}"/> to <see cref="Org.Apache.Kafka.Streams.Processor.Api.Record{K, V}"/>
@@ -55,6 +99,7 @@ namespace MASES.KNet.Streams.Processor.Api
         /// <returns><see cref="Record{NewK, V, TJVMNewK, TJVMV}"/></returns>
         public Record<NewK, V, TJVMNewK, TJVMV> WithKey<NewK, TJVMNewK>(NewK arg0)
         {
+            CheckDisposed();
             var serDes = _builder.BuildKeySerDes<NewK, TJVMNewK>();
             var record = _record.WithKey(serDes.SerializeWithHeaders(_metadata?.Topic(), _record.Headers(), arg0));
             return new Record<NewK, V, TJVMNewK, TJVMV>(_builder, record, _metadata);
@@ -68,6 +113,7 @@ namespace MASES.KNet.Streams.Processor.Api
         /// <returns><see cref="Record{K, NewV, TJVMK, TJVMNewV}"/></returns>
         public Record<K, NewV, TJVMK, TJVMNewV> WithValue<NewV, TJVMNewV>(NewV arg0)
         {
+            CheckDisposed();
             var serDes = _builder.BuildValueSerDes<NewV, TJVMNewV>();
             var record = _record.WithValue(serDes.SerializeWithHeaders(_metadata?.Topic(), _record.Headers(), arg0));
             return new Record<K, NewV, TJVMK, TJVMNewV>(_builder, record, _metadata);
@@ -80,6 +126,7 @@ namespace MASES.KNet.Streams.Processor.Api
         {
             get
             {
+                CheckDisposed();
                 var serDes = _builder.BuildKeySerDes<K, TJVMK>();
                 return serDes.DeserializeWithHeaders(_metadata?.Topic(), _record.Headers(), _record.Key());
             }
@@ -92,6 +139,7 @@ namespace MASES.KNet.Streams.Processor.Api
         {
             get
             {
+                CheckDisposed();
                 var serDes = _builder.BuildValueSerDes<V, TJVMV>();
                 return serDes.DeserializeWithHeaders(_metadata?.Topic(), _record.Headers(), _record.Value());
             }
@@ -99,16 +147,16 @@ namespace MASES.KNet.Streams.Processor.Api
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/processor/api/Record.html#timestamp()"/>
         /// </summary>
-        public long Timestamp => _record.Timestamp();
+        public long Timestamp { get { CheckDisposed(); return _record.Timestamp(); } }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/processor/api/Record.html#timestamp()"/>
         /// </summary>
-        public DateTime DateTime => DateTimeOffset.FromUnixTimeMilliseconds(_record.Timestamp()).DateTime;
+        public DateTime DateTime { get { CheckDisposed(); return DateTimeOffset.FromUnixTimeMilliseconds(_record.Timestamp()).DateTime; } }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/processor/api/Record.html#headers()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.Header.Headers"/></returns>
-        public Org.Apache.Kafka.Common.Header.Headers Headers => _record.Headers();
+        public Org.Apache.Kafka.Common.Header.Headers Headers { get { CheckDisposed(); return _record.Headers(); } }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/processor/api/Record.html#withHeaders(org.apache.kafka.common.header.Headers)"/>
         /// </summary>
@@ -116,6 +164,7 @@ namespace MASES.KNet.Streams.Processor.Api
         /// <returns><see cref="Record{K, V, TJVMK, TJVMV}"/></returns>
         public Record<K, V, TJVMK, TJVMV> WithHeaders(Org.Apache.Kafka.Common.Header.Headers arg0)
         {
+            CheckDisposed();
             var record = _record.WithHeaders(arg0);
             return new Record<K, V, TJVMK, TJVMV>(_builder, record, _metadata);
         }
@@ -126,6 +175,7 @@ namespace MASES.KNet.Streams.Processor.Api
         /// <returns><see cref="Record{K, V, TJVMK, TJVMV}"/></returns>
         public Record<K, V, TJVMK, TJVMV> WithTimestamp(long arg0)
         {
+            CheckDisposed();
             var record = _record.WithTimestamp(arg0);
             return new Record<K, V, TJVMK, TJVMV>(_builder, record, _metadata);
         }
@@ -136,6 +186,7 @@ namespace MASES.KNet.Streams.Processor.Api
         /// <returns><see cref="Record{K, V, TJVMK, TJVMV}"/></returns>
         public Record<K, V, TJVMK, TJVMV> WithDateTime(DateTime arg0)
         {
+            CheckDisposed();
             return WithTimestamp(new DateTimeOffset(arg0).ToUnixTimeMilliseconds());
         }
     }

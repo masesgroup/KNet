@@ -17,6 +17,7 @@
 */
 
 using MASES.KNet.Serialization;
+using System;
 
 namespace MASES.KNet.Streams.Kstream
 {
@@ -27,7 +28,7 @@ namespace MASES.KNet.Streams.Kstream
     /// <typeparam name="V"></typeparam>
     /// <typeparam name="TJVMK">The JVM type of <typeparamref name="K"/></typeparam>
     /// <typeparam name="TJVMV">The JVM type of <typeparamref name="V"/></typeparam>
-    public class SessionWindowedCogroupedKStream<K, V, TJVMK, TJVMV> : IGenericSerDesFactoryApplier
+    public class SessionWindowedCogroupedKStream<K, V, TJVMK, TJVMV> : IGenericSerDesFactoryApplier, IDisposable
     {
         Org.Apache.Kafka.Streams.Kstream.SessionWindowedCogroupedKStream<TJVMK, TJVMV> _inner;
 
@@ -39,6 +40,48 @@ namespace MASES.KNet.Streams.Kstream
             _factory = factory;
             _inner = inner;
         }
+
+        #region IDisposable
+
+        readonly object _lock = new object();
+        bool _disposed = false;
+        /// <summary>
+        /// Test if this instance was disposed
+        /// </summary>
+        /// <exception cref="ObjectDisposedException">When this instance was disposed</exception>
+        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
+        protected void CheckDisposed() { lock (_lock) { if (_disposed) throw new ObjectDisposedException(ToString()); } }
+        /// <inheritdoc cref="IDisposable.Dispose"/>
+        public void Dispose()
+        {
+            // Dispose of unmanaged resources.
+            Dispose(true);
+            // Suppress finalization.
+            GC.SuppressFinalize(this);
+        }
+        /// <summary>
+        /// Implements the pattern described in https://learn.microsoft.com/en-en/dotnet/standard/garbage-collection/implementing-dispose
+        /// </summary>
+        /// <param name="disposing">The disposing parameter is a <see langword="bool"/> that indicates whether the method call comes from a <see cref="IDisposable.Dispose"/> method (its value is <see langword="true"/>) or from a finalizer (its value is <see langword="false"/>)</param>
+        protected virtual void Dispose(bool disposing)
+        {
+            lock (_lock)
+            {
+                if (_disposed)
+                {
+                    return;
+                }
+
+                if (disposing)
+                {
+                    _inner?.Dispose();
+                }
+
+                _disposed = true;
+            }
+        }
+
+        #endregion
 
         /// <summary>
         /// Converter from <see cref="SessionWindowedCogroupedKStream{K, V, TJVMK, TJVMV}"/> to <see cref="Org.Apache.Kafka.Streams.Kstream.SessionWindowedCogroupedKStream{TJVMK, TJVMV}"/>
@@ -56,6 +99,7 @@ namespace MASES.KNet.Streams.Kstream
         /// <returns><see cref="KTable{K, V, TJVMK, TJVMV}"/></returns>
         public KTable<K, V, Org.Apache.Kafka.Streams.Kstream.Windowed<TJVMK>, TJVMV> Aggregate<Arg1objectSuperK>(Initializer<V, TJVMV> arg0, Merger<Arg1objectSuperK, V, TJVMK, TJVMV> arg1, Materialized<K, V,TJVMK, TJVMV> arg2) where Arg1objectSuperK : K
         {
+            CheckDisposed();
             if (arg0 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
             if (arg1 is IGenericSerDesFactoryApplier applier1) applier1.Factory = _factory;
             if (arg2 is IGenericSerDesFactoryApplier applier2) applier2.Factory = _factory;
@@ -72,6 +116,7 @@ namespace MASES.KNet.Streams.Kstream
         /// <returns><see cref="KTable{K, V, TJVMK, TJVMV}"/></returns>
         public KTable<K, V, Org.Apache.Kafka.Streams.Kstream.Windowed<TJVMK>, TJVMV> Aggregate<Arg1objectSuperK>(Initializer<V, TJVMV> arg0, Merger<Arg1objectSuperK, V, TJVMK, TJVMV> arg1, Org.Apache.Kafka.Streams.Kstream.Named arg2, Materialized<K, V, TJVMK, TJVMV> arg3) where Arg1objectSuperK : K
         {
+            CheckDisposed();
             if (arg0 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
             if (arg1 is IGenericSerDesFactoryApplier applier1) applier1.Factory = _factory;
             if (arg3 is IGenericSerDesFactoryApplier applier3) applier3.Factory = _factory;
@@ -87,6 +132,7 @@ namespace MASES.KNet.Streams.Kstream
         /// <returns><see cref="KTable{K, V, TJVMK, TJVMV}"/></returns>
         public KTable<K, V, Org.Apache.Kafka.Streams.Kstream.Windowed<TJVMK>, TJVMV> Aggregate<Arg1objectSuperK>(Initializer<V, TJVMV> arg0, Merger<Arg1objectSuperK, V, TJVMK, TJVMV> arg1, Org.Apache.Kafka.Streams.Kstream.Named arg2) where Arg1objectSuperK : K
         {
+            CheckDisposed();
             if (arg0 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
             if (arg1 is IGenericSerDesFactoryApplier applier1) applier1.Factory = _factory;
             return new KTable<K, V, Org.Apache.Kafka.Streams.Kstream.Windowed<TJVMK>, TJVMV>(_factory, _inner.Aggregate(arg0, arg1, arg2));
@@ -100,6 +146,7 @@ namespace MASES.KNet.Streams.Kstream
         /// <returns><see cref="KTable{K, V, TJVMK, TJVMV}"/></returns>
         public KTable<K, V, Org.Apache.Kafka.Streams.Kstream.Windowed<TJVMK>, TJVMV> Aggregate<Arg1objectSuperK>(Initializer<V, TJVMV> arg0, Merger<Arg1objectSuperK, V, TJVMK, TJVMV> arg1) where Arg1objectSuperK : K
         {
+            CheckDisposed();
             if (arg0 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
             if (arg1 is IGenericSerDesFactoryApplier applier1) applier1.Factory = _factory;
             return new KTable<K, V, Org.Apache.Kafka.Streams.Kstream.Windowed<TJVMK>, TJVMV>(_factory, _inner.Aggregate(arg0, arg1));

@@ -17,6 +17,7 @@
 */
 
 using MASES.KNet.Serialization;
+using System;
 
 namespace MASES.KNet.Streams.Kstream
 {
@@ -29,7 +30,7 @@ namespace MASES.KNet.Streams.Kstream
     /// <typeparam name="TJVMK">The JVM type of <typeparamref name="K"/></typeparam>
     /// <typeparam name="TJVMV1">The JVM type of <typeparamref name="V1"/></typeparam>
     /// <typeparam name="TJVMV2">The JVM type of <typeparamref name="V2"/></typeparam>
-    public class StreamJoined<K, V1, V2, TJVMK, TJVMV1, TJVMV2> : IGenericSerDesFactoryApplier
+    public class StreamJoined<K, V1, V2, TJVMK, TJVMV1, TJVMV2> : IGenericSerDesFactoryApplier, IDisposable
     {
         readonly Org.Apache.Kafka.Streams.Kstream.StreamJoined<TJVMK, TJVMV1, TJVMV2> _inner;
         IGenericSerDesFactory _factory;
@@ -39,6 +40,48 @@ namespace MASES.KNet.Streams.Kstream
         {
             _inner = inner;
         }
+
+        #region IDisposable
+
+        readonly object _lock = new object();
+        bool _disposed = false;
+        /// <summary>
+        /// Test if this instance was disposed
+        /// </summary>
+        /// <exception cref="ObjectDisposedException">When this instance was disposed</exception>
+        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
+        protected void CheckDisposed() { lock (_lock) { if (_disposed) throw new ObjectDisposedException(ToString()); } }
+        /// <inheritdoc cref="IDisposable.Dispose"/>
+        public void Dispose()
+        {
+            // Dispose of unmanaged resources.
+            Dispose(true);
+            // Suppress finalization.
+            GC.SuppressFinalize(this);
+        }
+        /// <summary>
+        /// Implements the pattern described in https://learn.microsoft.com/en-en/dotnet/standard/garbage-collection/implementing-dispose
+        /// </summary>
+        /// <param name="disposing">The disposing parameter is a <see langword="bool"/> that indicates whether the method call comes from a <see cref="IDisposable.Dispose"/> method (its value is <see langword="true"/>) or from a finalizer (its value is <see langword="false"/>)</param>
+        protected virtual void Dispose(bool disposing)
+        {
+            lock (_lock)
+            {
+                if (_disposed)
+                {
+                    return;
+                }
+
+                if (disposing)
+                {
+                    _inner?.Dispose();
+                }
+
+                _disposed = true;
+            }
+        }
+
+        #endregion
 
         /// <summary>
         /// Converter from <see cref="StreamJoined{K, V1, V2, TJVMK, TJVMV1, TJVMV2}"/> to <see cref="Org.Apache.Kafka.Streams.Kstream.StreamJoined{TJVMK, TJVMV1, TJVMV2}"/>
@@ -100,6 +143,7 @@ namespace MASES.KNet.Streams.Kstream
         /// <returns><see cref="StreamJoined{K, V1, V2, TJVMK, TJVMV1, TJVMV2}"/></returns>
         public StreamJoined<K, V1, V2, TJVMK, TJVMV1, TJVMV2> WithDslStoreSuppliers(Org.Apache.Kafka.Streams.State.DslStoreSuppliers arg0)
         {
+            CheckDisposed();
             _inner?.WithDslStoreSuppliers(arg0);
             return this;
         }
@@ -110,6 +154,7 @@ namespace MASES.KNet.Streams.Kstream
         /// <returns><see cref="StreamJoined{K, V1, V2, TJVMK, TJVMV1, TJVMV2}"/></returns>
         public StreamJoined<K, V1, V2, TJVMK, TJVMV1, TJVMV2> WithKeySerde(ISerDes<K, TJVMK> arg0)
         {
+            CheckDisposed();
             _inner?.WithKeySerde(arg0.KafkaSerde);
             return this;
         }
@@ -119,6 +164,7 @@ namespace MASES.KNet.Streams.Kstream
         /// <returns><see cref="StreamJoined{K, V1, V2, TJVMK, TJVMV1, TJVMV2}"/></returns>
         public StreamJoined<K, V1, V2, TJVMK, TJVMV1, TJVMV2> WithLoggingDisabled()
         {
+            CheckDisposed();
             _inner?.WithLoggingDisabled();
             return this;
         }
@@ -129,6 +175,7 @@ namespace MASES.KNet.Streams.Kstream
         /// <returns><see cref="StreamJoined{K, V1, V2, TJVMK, TJVMV1, TJVMV2}"/></returns>
         public StreamJoined<K, V1, V2, TJVMK, TJVMV1, TJVMV2> WithLoggingEnabled(Java.Util.Map<Java.Lang.String, Java.Lang.String> arg0)
         {
+            CheckDisposed();
             _inner?.WithLoggingEnabled(arg0);
             return this;
         }
@@ -139,6 +186,7 @@ namespace MASES.KNet.Streams.Kstream
         /// <returns><see cref="StreamJoined{K, V1, V2, TJVMK, TJVMV1, TJVMV2}"/></returns>
         public StreamJoined<K, V1, V2, TJVMK, TJVMV1, TJVMV2> WithOtherStoreSupplier(Org.Apache.Kafka.Streams.State.WindowBytesStoreSupplier arg0)
         {
+            CheckDisposed();
             _inner?.WithOtherStoreSupplier(arg0);
             return this;
         }
@@ -149,6 +197,7 @@ namespace MASES.KNet.Streams.Kstream
         /// <returns><see cref="StreamJoined{K, V1, V2, TJVMK, TJVMV1, TJVMV2}"/></returns>
         public StreamJoined<K, V1, V2, TJVMK, TJVMV1, TJVMV2> WithOtherValueSerde(ISerDes<V2, TJVMV2> arg0)
         {
+            CheckDisposed();
             _inner?.WithOtherValueSerde(arg0.KafkaSerde);
             return this;
         }
@@ -159,6 +208,7 @@ namespace MASES.KNet.Streams.Kstream
         /// <returns><see cref="StreamJoined{K, V1, V2, TJVMK, TJVMV1, TJVMV2}"/></returns>
         public StreamJoined<K, V1, V2, TJVMK, TJVMV1, TJVMV2> WithStoreName(string arg0)
         {
+            CheckDisposed();
             _inner?.WithStoreName(arg0);
             return this;
         }
@@ -169,6 +219,7 @@ namespace MASES.KNet.Streams.Kstream
         /// <returns><see cref="StreamJoined{K, V1, V2, TJVMK, TJVMV1, TJVMV2}"/></returns>
         public StreamJoined<K, V1, V2, TJVMK, TJVMV1, TJVMV2> WithThisStoreSupplier(Org.Apache.Kafka.Streams.State.WindowBytesStoreSupplier arg0)
         {
+            CheckDisposed();
             _inner?.WithThisStoreSupplier(arg0);
             return this;
         }
@@ -179,6 +230,7 @@ namespace MASES.KNet.Streams.Kstream
         /// <returns><see cref="StreamJoined{K, V1, V2, TJVMK, TJVMV1, TJVMV2}"/></returns>
         public StreamJoined<K, V1, V2, TJVMK, TJVMV1, TJVMV2> WithValueSerde(ISerDes<V1, TJVMV1> arg0)
         {
+            CheckDisposed();
             _inner?.WithValueSerde(arg0.KafkaSerde);
             return this;
         }
