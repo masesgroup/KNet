@@ -46,7 +46,7 @@ namespace MASES.KNet.Streams.Processor.Api
         /// </summary>
         /// <exception cref="ObjectDisposedException">When this instance was disposed</exception>
         [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        protected void CheckDisposed() { lock (_lock) { if (_disposed) throw new ObjectDisposedException(ToString()); } }
+        protected void CheckDisposed() { lock (_lock) { if (_disposed) throw new ObjectDisposedException(nameof(ProcessorContext<KForward, VForward, TJVMKForward, TJVMVForward>)); } }
         /// <inheritdoc cref="IDisposable.Dispose"/>
         public void Dispose()
         {

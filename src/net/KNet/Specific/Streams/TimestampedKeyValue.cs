@@ -17,6 +17,7 @@
 */
 
 using MASES.KNet.Serialization;
+using MASES.KNet.Streams.Processor.Api;
 using MASES.KNet.Streams.State;
 using System;
 
@@ -63,7 +64,7 @@ namespace MASES.KNet.Streams
         /// </summary>
         /// <exception cref="ObjectDisposedException">When this instance was disposed</exception>
         [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        void CheckDisposed() { lock (_lock) { if (_disposed) throw new ObjectDisposedException(ToString()); } }
+        void CheckDisposed() { lock (_lock) { if (_disposed) throw new ObjectDisposedException(nameof(TimestampedKeyValue<K, V, TJVMK, TJVMV>)); } }
         /// <inheritdoc cref="IDisposable.Dispose"/>
         public void Dispose()
         {

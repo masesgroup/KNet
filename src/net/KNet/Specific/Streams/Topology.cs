@@ -20,6 +20,7 @@ using Java.Util;
 using MASES.JNet.Specific.Extensions;
 using MASES.KNet.Serialization;
 using MASES.KNet.Streams.Processor;
+using MASES.KNet.Streams.Processor.Api;
 using System;
 
 namespace MASES.KNet.Streams
@@ -62,7 +63,7 @@ namespace MASES.KNet.Streams
         /// </summary>
         /// <exception cref="ObjectDisposedException">When this instance was disposed</exception>
         [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        protected void CheckDisposed() { lock (_lock) { if (_disposed) throw new ObjectDisposedException(ToString()); } }
+        protected void CheckDisposed() { lock (_lock) { if (_disposed) throw new ObjectDisposedException(nameof(Topology); } }
         /// <inheritdoc cref="IDisposable.Dispose"/>
         public void Dispose()
         {
