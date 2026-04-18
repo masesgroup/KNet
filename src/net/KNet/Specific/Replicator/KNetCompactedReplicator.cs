@@ -1212,6 +1212,7 @@ namespace MASES.KNet.Replicator
                 {
                     _consumerPollThreadWaiter[i] = new ManualResetEvent(false);
                     _consumerPollThreads[i] = new Thread(ConsumerPollHandler);
+                    _consumerPollThreads[i].IsBackground = true;
                     _consumerPollThreads[i].Start(i);
                 }
                 if (WaitHandle.WaitAll(_consumerPollThreadWaiter))

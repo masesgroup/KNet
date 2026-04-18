@@ -152,6 +152,7 @@ namespace MASES.KNet.Consumer
                 _consumedRecords = new();
                 _threadRunning = true;
                 _consumeThread = new(ConsumeHandler);
+                _consumeThread.IsBackground = true;
                 _consumeThread.Start();
             }
         }
