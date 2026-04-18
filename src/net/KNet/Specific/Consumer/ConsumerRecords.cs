@@ -17,9 +17,10 @@
 */
 
 using MASES.KNet.Serialization;
+using System;
 using System.Collections.Generic;
 using System.Threading;
-using System;
+using System.Threading.Tasks;
 
 namespace MASES.KNet.Consumer
 {
@@ -30,7 +31,7 @@ namespace MASES.KNet.Consumer
     /// <typeparam name="V">The value type</typeparam>
     /// <typeparam name="TJVMK">The JVM type of <typeparamref name="K"/></typeparam>
     /// <typeparam name="TJVMV">The JVM type of <typeparamref name="V"/></typeparam>
-    public class ConsumerRecords<K, V, TJVMK, TJVMV> : IEnumerable<ConsumerRecord<K, V, TJVMK, TJVMV>>, IAsyncEnumerable<ConsumerRecord<K, V, TJVMK, TJVMV>>
+    public class ConsumerRecords<K, V, TJVMK, TJVMV> : IEnumerable<ConsumerRecord<K, V, TJVMK, TJVMV>>, IAsyncEnumerable<ConsumerRecord<K, V, TJVMK, TJVMV>>, IDisposable
     {
         readonly ISerDes<K, TJVMK> _keyDeserializer;
         readonly ISerDes<V, TJVMV> _valueDeserializer;
@@ -47,6 +48,37 @@ namespace MASES.KNet.Consumer
             _keyDeserializer = keyDeserializer;
             _valueDeserializer = valueDeserializer;
         }
+
+        volatile int _disposed; // 0 = live, 1 = disposed
+        /// <summary>
+        /// Test if this instance was disposed
+        /// </summary>
+        /// <exception cref="ObjectDisposedException">When this instance was disposed</exception>
+        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
+        protected void CheckDisposed() { if (_disposed != 0) throw new ObjectDisposedException(GetType().Name); }
+        /// <inheritdoc cref="IDisposable.Dispose"/>
+        public void Dispose()
+        {
+            // Dispose of unmanaged resources.
+            Dispose(true);
+            // Suppress finalization.
+            GC.SuppressFinalize(this);
+        }
+        /// <summary>
+        /// Implements the pattern described in https://learn.microsoft.com/en-en/dotnet/standard/garbage-collection/implementing-dispose
+        /// </summary>
+        /// <param name="disposing">The disposing parameter is a <see langword="bool"/> that indicates whether the method call comes from a <see cref="IDisposable.Dispose"/> method (its value is <see langword="true"/>) or from a finalizer (its value is <see langword="false"/>)</param>
+        protected virtual void Dispose(bool disposing)
+        {
+            if (Interlocked.Exchange(ref _disposed, 1) != 0)
+                return;
+
+            if (disposing)
+            {
+                _records?.Dispose();
+            }
+        }
+
 #if NET7_0_OR_GREATER
         /// <summary>
         /// <see langword="true"/> if enumeration will use prefetch and the number of records is more than <see cref="PrefetchThreshold"/>, i.e. the preparation of <see cref="ConsumerRecord{K, V, TJVMK, TJVMV}"/> happens in an external thread
@@ -62,11 +94,25 @@ namespace MASES.KNet.Consumer
         /// <summary>
         /// <see langword="true"/> if the <see cref="ConsumerRecords{K, V, TJVMK, TJVMV}"/> is empty
         /// </summary>
-        public bool IsEmpty => _records.IsEmpty();
+        public bool IsEmpty
+        {
+            get
+            {
+                CheckDisposed();
+                return _records.IsEmpty();
+            }
+        }
         /// <summary>
         /// The number of elements in <see cref="ConsumerRecords{K, V, TJVMK, TJVMV}"/>
         /// </summary>
-        public int Count => _records.Count();
+        public int Count
+        {
+            get
+            {
+                CheckDisposed();
+                return _records.Count();
+            }
+        }
 #if NET7_0_OR_GREATER
         /// <summary>
         /// Set to <see langword="true"/> to enable enumeration with prefetch over <paramref name="prefetchThreshold"/> threshold, i.e. preparation of <see cref="ConsumerRecord{K, V, TJVMK, TJVMV}"/> in external thread 
@@ -77,6 +123,7 @@ namespace MASES.KNet.Consumer
         /// <remarks>Setting <paramref name="prefetchThreshold"/> to a value less, or equal, to 0 and <paramref name="enablePrefetch"/> to <see langword="true"/>, the prefetch is always actived</remarks>
         public ConsumerRecords<K, V, TJVMK, TJVMV> ApplyPrefetch(bool enablePrefetch = true, int prefetchThreshold = 10)
         {
+            CheckDisposed();
             IsPrefecth = enablePrefetch;
             PrefetchThreshold = IsPrefecth ? prefetchThreshold : -1;
             return this;
@@ -90,32 +137,35 @@ namespace MASES.KNet.Consumer
 #endif
         IEnumerator<ConsumerRecord<K, V, TJVMK, TJVMV>> IEnumerable<ConsumerRecord<K, V, TJVMK, TJVMV>>.GetEnumerator()
         {
+            CheckDisposed();
 #if NET7_0_OR_GREATER
             if (UsePrefetch())
                 return new ConsumerRecordsPrefetchableEnumerator<K, V, TJVMK, TJVMV>(_records.Iterator(), _keyDeserializer, _valueDeserializer, false);
             else
 #endif
-                return new ConsumerRecordsEnumerator<K, V, TJVMK, TJVMV>(_records, _keyDeserializer, _valueDeserializer);
+            return new ConsumerRecordsEnumerator<K, V, TJVMK, TJVMV>(_records, _keyDeserializer, _valueDeserializer);
         }
 
         System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator()
         {
+            CheckDisposed();
 #if NET7_0_OR_GREATER
             if (UsePrefetch())
                 return new ConsumerRecordsPrefetchableEnumerator<K, V, TJVMK, TJVMV>(_records.Iterator(), _keyDeserializer, _valueDeserializer, false);
             else
 #endif
-                return new ConsumerRecordsEnumerator<K, V, TJVMK, TJVMV>(_records, _keyDeserializer, _valueDeserializer);
+            return new ConsumerRecordsEnumerator<K, V, TJVMK, TJVMV>(_records, _keyDeserializer, _valueDeserializer);
         }
 
         IAsyncEnumerator<ConsumerRecord<K, V, TJVMK, TJVMV>> IAsyncEnumerable<ConsumerRecord<K, V, TJVMK, TJVMV>>.GetAsyncEnumerator(CancellationToken cancellationToken)
         {
+            CheckDisposed();
 #if NET7_0_OR_GREATER
             if (UsePrefetch())
                 return new ConsumerRecordsPrefetchableEnumerator<K, V, TJVMK, TJVMV>(_records.Iterator(), _keyDeserializer, _valueDeserializer, true, cancellationToken);
             else
 #endif
-                return new ConsumerRecordsEnumerator<K, V, TJVMK, TJVMV>(_records, _keyDeserializer, _valueDeserializer, cancellationToken);
+            return new ConsumerRecordsEnumerator<K, V, TJVMK, TJVMV>(_records, _keyDeserializer, _valueDeserializer, cancellationToken);
         }
     }
 }
