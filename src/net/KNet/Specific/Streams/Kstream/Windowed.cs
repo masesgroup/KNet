@@ -22,78 +22,78 @@ using System.Threading;
 
 namespace MASES.KNet.Streams.Kstream
 {
-	/// <summary>
-	/// KNet implementation of <see cref="Org.Apache.Kafka.Streams.Kstream.Windowed{K}"/>
-	/// </summary>
-	/// <typeparam name="K">The key type</typeparam>
-	/// <typeparam name="TJVMK">The JVM type of <typeparamref name="K"/></typeparam>
-	public class Windowed<K, TJVMK> : IGenericSerDesFactoryApplier, IDisposable
-	{
-		readonly Org.Apache.Kafka.Streams.Kstream.Windowed<TJVMK> _inner;
-		ISerDes<K, TJVMK> _keySerDes = null;
-		IGenericSerDesFactory _factory;
-		IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set => _factory = value; }
+    /// <summary>
+    /// KNet implementation of <see cref="Org.Apache.Kafka.Streams.Kstream.Windowed{K}"/>
+    /// </summary>
+    /// <typeparam name="K">The key type</typeparam>
+    /// <typeparam name="TJVMK">The JVM type of <typeparamref name="K"/></typeparam>
+    public class Windowed<K, TJVMK> : IGenericSerDesFactoryApplier, IDisposable
+    {
+        readonly Org.Apache.Kafka.Streams.Kstream.Windowed<TJVMK> _inner;
+        ISerDes<K, TJVMK> _keySerDes = null;
+        IGenericSerDesFactory _factory;
+        IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set => _factory = value; }
 
-		internal Windowed(IGenericSerDesFactory factory, Org.Apache.Kafka.Streams.Kstream.Windowed<TJVMK> windowed)
-		{
-			_factory = factory;
-			_inner = windowed;
-		}
+        internal Windowed(IGenericSerDesFactory factory, Org.Apache.Kafka.Streams.Kstream.Windowed<TJVMK> windowed)
+        {
+            _factory = factory;
+            _inner = windowed;
+        }
 
-		#region IDisposable
+        #region IDisposable
 
-		volatile int _disposed; // 0 = live, 1 = disposed
-		/// <summary>
-		/// Test if this instance was disposed
-		/// </summary>
-		/// <exception cref="ObjectDisposedException">When this instance was disposed</exception>
-		[System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-		protected void CheckDisposed() { if (_disposed != 0) throw new ObjectDisposedException(GetType().Name); }
-		/// <inheritdoc cref="IDisposable.Dispose"/>
-		public void Dispose()
-		{
-			// Dispose of unmanaged resources.
-			Dispose(true);
-			// Suppress finalization.
-			GC.SuppressFinalize(this);
-		}
-		/// <summary>
-		/// Implements the pattern described in https://learn.microsoft.com/en-en/dotnet/standard/garbage-collection/implementing-dispose
-		/// </summary>
-		/// <param name="disposing">The disposing parameter is a <see langword="bool"/> that indicates whether the method call comes from a <see cref="IDisposable.Dispose"/> method (its value is <see langword="true"/>) or from a finalizer (its value is <see langword="false"/>)</param>
-		protected virtual void Dispose(bool disposing)
-		{
-			if (Interlocked.Exchange(ref _disposed, 1) != 0)
-				return;
+        volatile int _disposed; // 0 = live, 1 = disposed
+        /// <summary>
+        /// Test if this instance was disposed
+        /// </summary>
+        /// <exception cref="ObjectDisposedException">When this instance was disposed</exception>
+        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
+        protected void CheckDisposed() { if (_disposed != 0) throw new ObjectDisposedException(GetType().Name); }
+        /// <inheritdoc cref="IDisposable.Dispose"/>
+        public void Dispose()
+        {
+            // Dispose of unmanaged resources.
+            Dispose(true);
+            // Suppress finalization.
+            GC.SuppressFinalize(this);
+        }
+        /// <summary>
+        /// Implements the pattern described in https://learn.microsoft.com/en-en/dotnet/standard/garbage-collection/implementing-dispose
+        /// </summary>
+        /// <param name="disposing">The disposing parameter is a <see langword="bool"/> that indicates whether the method call comes from a <see cref="IDisposable.Dispose"/> method (its value is <see langword="true"/>) or from a finalizer (its value is <see langword="false"/>)</param>
+        protected virtual void Dispose(bool disposing)
+        {
+            if (Interlocked.Exchange(ref _disposed, 1) != 0)
+                return;
 
-			if (disposing)
-			{
-				_inner?.Dispose();
-			}
-		}
+            if (disposing)
+            {
+                _inner?.Dispose();
+            }
+        }
 
-		#endregion
+        #endregion
 
-		/// <summary>
-		/// Converter from <see cref="Windowed{K, TJVMK}"/> to <see cref="Org.Apache.Kafka.Streams.Kstream.Windowed{K}"/>
-		/// </summary>
-		public static implicit operator Org.Apache.Kafka.Streams.Kstream.Windowed<TJVMK>(Windowed<K, TJVMK> t) => t._inner;
+        /// <summary>
+        /// Converter from <see cref="Windowed{K, TJVMK}"/> to <see cref="Org.Apache.Kafka.Streams.Kstream.Windowed{K}"/>
+        /// </summary>
+        public static implicit operator Org.Apache.Kafka.Streams.Kstream.Windowed<TJVMK>(Windowed<K, TJVMK> t) => t._inner;
 
-		/// <summary>
-		/// KNet implementation of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/kstream/Windowed.html#key()"/>
-		/// </summary>
-		/// <returns><typeparamref name="K"/></returns>
-		public K Key { get { CheckDisposed(); _keySerDes ??= _factory?.BuildKeySerDes<K, TJVMK>(); return _keySerDes.Deserialize(null, _inner.Key()); } }
-		/// <summary>
-		/// KNet implementation of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/kstream/Windowed.html#window()"/>
-		/// </summary>
-		/// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.Window"/></returns>
-		public Org.Apache.Kafka.Streams.Kstream.Window Window
-		{
-			get
-			{
-				CheckDisposed(); return _inner.Window();
-			}
-		}
-	}
+        /// <summary>
+        /// KNet implementation of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/kstream/Windowed.html#key()"/>
+        /// </summary>
+        /// <returns><typeparamref name="K"/></returns>
+        public K Key { get { CheckDisposed(); _keySerDes ??= _factory?.BuildKeySerDes<K, TJVMK>(); return _keySerDes.Deserialize(null, _inner.Key()); } }
+        /// <summary>
+        /// KNet implementation of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/kstream/Windowed.html#window()"/>
+        /// </summary>
+        /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.Window"/></returns>
+        public Org.Apache.Kafka.Streams.Kstream.Window Window
+        {
+            get
+            {
+                CheckDisposed(); return _inner.Window();
+            }
+        }
+    }
 }
