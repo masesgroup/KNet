@@ -105,15 +105,15 @@ namespace MASES.KNetClassicTest
                 int partitions = 1;
                 short replicationFactor = 1;
 
-                using NewTopic topic = new NewTopic(topicName, partitions, replicationFactor);
+                using NewTopic topic1 = new NewTopic(topicName, partitions, replicationFactor);
                 /**** Direct mode ******
                 var map = Collections.SingletonMap(TopicConfig.CLEANUP_POLICY_CONFIG, TopicConfig.CLEANUP_POLICY_COMPACT);
                 topic.Configs(map);
                 *********/
-                topic = topic.Configs(TopicConfigBuilder.Create().WithCleanupPolicy(TopicConfigBuilder.CleanupPolicyTypes.Compact | TopicConfigBuilder.CleanupPolicyTypes.Delete)
-                                                                 .WithDeleteRetentionMs(100)
-                                                                 .WithMinCleanableDirtyRatio(0.01)
-                                                                 .WithSegmentMs(100));
+                using topic = topic1.Configs(TopicConfigBuilder.Create().WithCleanupPolicy(TopicConfigBuilder.CleanupPolicyTypes.Compact | TopicConfigBuilder.CleanupPolicyTypes.Delete)
+                                                                        .WithDeleteRetentionMs(100)
+                                                                        .WithMinCleanableDirtyRatio(0.01)
+                                                                        .WithSegmentMs(100));
 
                 /**** Direct mode ******
                 Properties props = new Properties();
