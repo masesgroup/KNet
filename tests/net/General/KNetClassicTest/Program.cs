@@ -98,8 +98,6 @@ namespace MASES.KNetClassicTest
 
         static void CreateTopic()
         {
-            NewTopic topic = null;
-            IDisposable disposable = null;
             //Set<NewTopic> coll = null;
             try
             {
@@ -107,8 +105,7 @@ namespace MASES.KNetClassicTest
                 int partitions = 1;
                 short replicationFactor = 1;
 
-                topic = new NewTopic(topicName, partitions, replicationFactor);
-                disposable = MASES.JCOBridge.C2JBridge.JVMBridgeCoreDisposable.Create(topic);
+                using NewTopic topic = new NewTopic(topicName, partitions, replicationFactor);
                 /**** Direct mode ******
                 var map = Collections.SingletonMap(TopicConfig.CLEANUP_POLICY_CONFIG, TopicConfig.CLEANUP_POLICY_COMPACT);
                 topic.Configs(map);
@@ -153,7 +150,6 @@ namespace MASES.KNetClassicTest
             finally
             {
                 //coll?.Dispose();
-                disposable?.Dispose();
             }
         }
 
@@ -313,8 +309,7 @@ namespace MASES.KNetClassicTest
                         }
                     };
                 }
-                var topics = Collections.Singleton((Java.Lang.String)topicToUse);
-                var disposable = MASES.JCOBridge.C2JBridge.JVMBridgeCoreDisposable.Create(topics);
+                using var topics = Collections.Singleton((Java.Lang.String)topicToUse);
                 try
                 {
                     using (consumer = useSerdes ? new KafkaConsumer<string, string>(props, keyDeserializer, valueDeserializer) : new KafkaConsumer<string, string>(props))
@@ -339,7 +334,6 @@ namespace MASES.KNetClassicTest
                         keyDeserializer.Dispose();
                         valueDeserializer.Dispose();
                     }
-                    disposable?.Dispose();
                 }
             }
             catch (Java.Util.Concurrent.ExecutionException ex)
