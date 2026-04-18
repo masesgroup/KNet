@@ -398,7 +398,7 @@ namespace MASES.KNet.Streams.Kstream
             return new KTable<K, VR, TJVMK, TJVMVR>(_factory, _inner.OuterJoin<TJVMVR, TJVMVO, TJVMV, TJVMVO, TJVMVR>(arg0, arg1));
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/kstream/KTable.html#join(org.apache.kafka.streams.kstream.KTable,java.util.function.Function,org.apache.kafka.streams.kstream.ValueJoiner,org.apache.kafka.streams.kstream.Materialized)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/kstream/KTable.html#join-org.apache.kafka.streams.kstream.KTable-java.util.function.Function-org.apache.kafka.streams.kstream.ValueJoiner-org.apache.kafka.streams.kstream.Materialized-"/>
         /// </summary>
         /// <param name="arg0"><see cref="KTable{K, V, TJVMK, TJVMV}"/></param>
         /// <param name="arg1"><see cref="Java.Util.Function.Function"/></param>
@@ -499,16 +499,16 @@ namespace MASES.KNet.Streams.Kstream
         /// <typeparam name="TJVMKO">The JVM type of <typeparamref name="KO"/></typeparam>
         /// <typeparam name="TJVMVO">The JVM type of <typeparamref name="VO"/></typeparam>
         /// <returns><see cref="KTable{K, V, TJVMK, TJVMV}"/></returns>
-        public KTable<K, VR, TJVMK, TJVMVR> LeftJoin<VR, KO, VO, TJVMVR, TJVMKO, TJVMVO>(KTable<KO, VO, TJVMKO, TJVMVO> arg0, BiFunction<K, V, KO, TJVMK, TJVMV, TJVMKO> arg1, ValueJoiner<V, VO, VR, TJVMV, TJVMVO, TJVMVR> arg2, Materialized<K, VR, TJVMK, TJVMVR> arg3)
+        public KTable<K, VR, TJVMK, TJVMVR> LeftJoin<VR, KO, VO, TJVMVR, TJVMKO, TJVMVO>(KTable<KO, VO, TJVMKO, TJVMVO> arg0, Function<V, KO, TJVMV, TJVMKO> arg1, ValueJoiner<V, VO, VR, TJVMV, TJVMVO, TJVMVR> arg2, Materialized<K, VR, TJVMK, TJVMVR> arg3)
         {
             CheckDisposed();
             if (arg1 is IGenericSerDesFactoryApplier applier1) applier1.Factory = _factory;
             if (arg2 is IGenericSerDesFactoryApplier applier2) applier2.Factory = _factory;
             if (arg3 is IGenericSerDesFactoryApplier applier3) applier3.Factory = _factory;
-            return new KTable<K, VR, TJVMK, TJVMVR>(_factory, _inner.LeftJoin<TJVMVR, TJVMKO, TJVMVO, TJVMK, TJVMV, TJVMKO, TJVMV, TJVMVO, TJVMVR>(arg0, arg1, arg2, arg3));
+            return new KTable<K, VR, TJVMK, TJVMVR>(_factory, _inner.LeftJoin<TJVMVR, TJVMKO, TJVMVO>(arg0, arg1, arg2, arg3));
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/kstream/KTable.html#leftJoin(org.apache.kafka.streams.kstream.KTable,java.util.function.Function,org.apache.kafka.streams.kstream.ValueJoiner,org.apache.kafka.streams.kstream.TableJoined,org.apache.kafka.streams.kstream.Materialized)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/kstream/KTable.html#leftJoin-org.apache.kafka.streams.kstream.KTable-java.util.function.Function-org.apache.kafka.streams.kstream.ValueJoiner-org.apache.kafka.streams.kstream.TableJoined-org.apache.kafka.streams.kstream.Materialized-"/>
         /// </summary>
         /// <param name="arg0"><see cref="KTable{K, V, TJVMK, TJVMV}"/></param>
         /// <param name="arg1"><see cref="Java.Util.Function.Function"/></param>
@@ -522,17 +522,17 @@ namespace MASES.KNet.Streams.Kstream
         /// <typeparam name="TJVMKO">The JVM type of <typeparamref name="KO"/></typeparam>
         /// <typeparam name="TJVMVO">The JVM type of <typeparamref name="VO"/></typeparam>
         /// <returns><see cref="KTable{K, V, TJVMK, TJVMV}"/></returns>
-        public KTable<K, VR, TJVMK, TJVMVR> LeftJoin<VR, KO, VO, TJVMVR, TJVMKO, TJVMVO>(KTable<KO, VO, TJVMKO, TJVMVO> arg0, BiFunction<K, V, KO, TJVMK, TJVMV, TJVMKO> arg1, ValueJoiner<V, VO, VR, TJVMV, TJVMVO, TJVMVR> arg2, TableJoined<K, KO, TJVMK, TJVMKO> arg3, Materialized<K, VR, TJVMK, TJVMVR> arg4)
+        public KTable<K, VR, TJVMK, TJVMVR> LeftJoin<VR, KO, VO, TJVMVR, TJVMKO, TJVMVO>(KTable<KO, VO, TJVMKO, TJVMVO> arg0, Function<V, KO, TJVMV, TJVMKO> arg1, ValueJoiner<V, VO, VR, TJVMV, TJVMVO, TJVMVR> arg2, TableJoined<K, KO, TJVMK, TJVMKO> arg3, Materialized<K, VR, TJVMK, TJVMVR> arg4)
         {
             CheckDisposed();
             if (arg1 is IGenericSerDesFactoryApplier applier1) applier1.Factory = _factory;
             if (arg2 is IGenericSerDesFactoryApplier applier2) applier2.Factory = _factory;
             if (arg3 is IGenericSerDesFactoryApplier applier3) applier3.Factory = _factory;
             if (arg4 is IGenericSerDesFactoryApplier applier4) applier4.Factory = _factory;
-            return new KTable<K, VR, TJVMK, TJVMVR>(_factory, _inner.LeftJoin<TJVMVR, TJVMKO, TJVMVO, TJVMK, TJVMV, TJVMKO, TJVMV, TJVMVO, TJVMVR>(arg0, arg1, arg2, arg3, arg4));
+            return new KTable<K, VR, TJVMK, TJVMVR>(_factory, _inner.LeftJoin<TJVMVR, TJVMKO, TJVMVO>(arg0, arg1, arg2, arg3, arg4));
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/kstream/KTable.html#leftJoin(org.apache.kafka.streams.kstream.KTable,java.util.function.Function,org.apache.kafka.streams.kstream.ValueJoiner,org.apache.kafka.streams.kstream.TableJoined)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/kstream/KTable.html#leftJoin-org.apache.kafka.streams.kstream.KTable-java.util.function.Function-org.apache.kafka.streams.kstream.ValueJoiner-org.apache.kafka.streams.kstream.TableJoined-"/>
         /// </summary>
         /// <param name="arg0"><see cref="KTable{K, V, TJVMK, TJVMV}"/></param>
         /// <param name="arg1"><see cref="Java.Util.Function.Function"/></param>
@@ -545,16 +545,16 @@ namespace MASES.KNet.Streams.Kstream
         /// <typeparam name="TJVMKO">The JVM type of <typeparamref name="KO"/></typeparam>
         /// <typeparam name="TJVMVO">The JVM type of <typeparamref name="VO"/></typeparam>
         /// <returns><see cref="KTable{K, V, TJVMK, TJVMV}"/></returns>
-        public KTable<K, VR, TJVMK, TJVMVR> LeftJoin<VR, KO, VO, TJVMVR, TJVMKO, TJVMVO>(KTable<KO, VO, TJVMKO, TJVMVO> arg0, BiFunction<K, V, KO, TJVMK, TJVMV, TJVMKO> arg1, ValueJoiner<V, VO, VR, TJVMV, TJVMVO, TJVMVR> arg2, TableJoined<K, KO, TJVMK, TJVMKO> arg3)
+        public KTable<K, VR, TJVMK, TJVMVR> LeftJoin<VR, KO, VO, TJVMVR, TJVMKO, TJVMVO>(KTable<KO, VO, TJVMKO, TJVMVO> arg0, Function<V, KO, TJVMV, TJVMKO> arg1, ValueJoiner<V, VO, VR, TJVMV, TJVMVO, TJVMVR> arg2, TableJoined<K, KO, TJVMK, TJVMKO> arg3)
         {
             CheckDisposed();
             if (arg1 is IGenericSerDesFactoryApplier applier1) applier1.Factory = _factory;
             if (arg2 is IGenericSerDesFactoryApplier applier2) applier2.Factory = _factory;
             if (arg3 is IGenericSerDesFactoryApplier applier3) applier3.Factory = _factory;
-            return new KTable<K, VR, TJVMK, TJVMVR>(_factory, _inner.LeftJoin<TJVMVR, TJVMKO, TJVMVO, TJVMK, TJVMV, TJVMKO, TJVMV, TJVMVO, TJVMVR>(arg0, arg1, arg2, arg3));
+            return new KTable<K, VR, TJVMK, TJVMVR>(_factory, _inner.LeftJoin<TJVMVR, TJVMKO, TJVMVO>(arg0, arg1, arg2, arg3));
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/kstream/KTable.html#leftJoin(org.apache.kafka.streams.kstream.KTable,java.util.function.Function,org.apache.kafka.streams.kstream.ValueJoiner)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/kstream/KTable.html#leftJoin-org.apache.kafka.streams.kstream.KTable-java.util.function.Function-org.apache.kafka.streams.kstream.ValueJoiner-"/>
         /// </summary>
         /// <param name="arg0"><see cref="KTable{K, V, TJVMK, TJVMV}"/></param>
         /// <param name="arg1"><see cref="Java.Util.Function.Function"/></param>
@@ -566,12 +566,12 @@ namespace MASES.KNet.Streams.Kstream
         /// <typeparam name="TJVMKO">The JVM type of <typeparamref name="KO"/></typeparam>
         /// <typeparam name="TJVMVO">The JVM type of <typeparamref name="VO"/></typeparam>
         /// <returns><see cref="KTable{K, V, TJVMK, TJVMV}"/></returns>
-        public KTable<K, VR, TJVMK, TJVMVR> LeftJoin<VR, KO, VO, TJVMVR, TJVMKO, TJVMVO>(KTable<KO, VO, TJVMKO, TJVMVO> arg0, BiFunction<K, V, KO, TJVMK, TJVMV, TJVMKO> arg1, ValueJoiner<V, VO, VR, TJVMV, TJVMVO, TJVMVR> arg2)
+        public KTable<K, VR, TJVMK, TJVMVR> LeftJoin<VR, KO, VO, TJVMVR, TJVMKO, TJVMVO>(KTable<KO, VO, TJVMKO, TJVMVO> arg0, Function<V, KO, TJVMV, TJVMKO> arg1, ValueJoiner<V, VO, VR, TJVMV, TJVMVO, TJVMVR> arg2)
         {
             CheckDisposed();
             if (arg1 is IGenericSerDesFactoryApplier applier1) applier1.Factory = _factory;
             if (arg2 is IGenericSerDesFactoryApplier applier2) applier2.Factory = _factory;
-            return new KTable<K, VR, TJVMK, TJVMVR>(_factory, _inner.LeftJoin<TJVMVR, TJVMKO, TJVMVO, TJVMK, TJVMV, TJVMKO, TJVMV, TJVMVO, TJVMVR>(arg0, arg1, arg2));
+            return new KTable<K, VR, TJVMK, TJVMVR>(_factory, _inner.LeftJoin<TJVMVR, TJVMKO, TJVMVO>(arg0, arg1, arg2));
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/kstream/KTable.html#mapValues-org.apache.kafka.streams.kstream.ValueMapper-org.apache.kafka.streams.kstream.Materialized-"/>
