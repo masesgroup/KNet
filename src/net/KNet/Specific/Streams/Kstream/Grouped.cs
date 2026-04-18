@@ -19,6 +19,7 @@
 using MASES.KNet.Serialization;
 using MASES.KNet.Streams.Processor;
 using System;
+using System.Threading;
 
 namespace MASES.KNet.Streams.Kstream
 {
@@ -42,14 +43,13 @@ namespace MASES.KNet.Streams.Kstream
 
         #region IDisposable
 
-        readonly object _lock = new object();
-        bool _disposed = false;
+        volatile int _disposed; // 0 = live, 1 = disposed
         /// <summary>
         /// Test if this instance was disposed
         /// </summary>
         /// <exception cref="ObjectDisposedException">When this instance was disposed</exception>
         [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        protected void CheckDisposed() { lock (_lock) { if (_disposed) throw new ObjectDisposedException(nameof(Grouped<K, V, TJVMK, TJVMV>)); } }
+        protected void CheckDisposed() { if (_disposed != 0) throw new ObjectDisposedException(GetType().Name); }
         /// <inheritdoc cref="IDisposable.Dispose"/>
         public void Dispose()
         {
@@ -64,19 +64,12 @@ namespace MASES.KNet.Streams.Kstream
         /// <param name="disposing">The disposing parameter is a <see langword="bool"/> that indicates whether the method call comes from a <see cref="IDisposable.Dispose"/> method (its value is <see langword="true"/>) or from a finalizer (its value is <see langword="false"/>)</param>
         protected virtual void Dispose(bool disposing)
         {
-            lock (_lock)
+            if (Interlocked.Exchange(ref _disposed, 1) != 0)
+                return;
+
+            if (disposing)
             {
-                if (_disposed)
-                {
-                    return;
-                }
-
-                if (disposing)
-                {
-                    _inner?.Dispose();
-                }
-
-                _disposed = true;
+                _inner?.Dispose();
             }
         }
 

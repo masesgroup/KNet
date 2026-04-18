@@ -17,14 +17,15 @@
 */
 
 using Java.Util;
-using Org.Apache.Kafka.Common.Header;
-using Org.Apache.Kafka.Clients.Producer;
-using MASES.KNet.Serialization;
 using Java.Util.Concurrent;
 using MASES.JCOBridge.C2JBridge;
-using System.Threading.Tasks;
+using MASES.KNet.Serialization;
+using Org.Apache.Kafka.Clients.Producer;
+using Org.Apache.Kafka.Common.Header;
 using System;
 using System.Collections.Concurrent;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace MASES.KNet.Producer
 {
@@ -260,25 +261,17 @@ namespace MASES.KNet.Producer
             return props;
         }
 
-        object _disposedLock = new object();
-        bool _disposed = false;
+        volatile int _disposed; // 0 = live, 1 = disposed
 
         /// <inheritdoc/>
         protected override void Dispose(bool disposing)
         {
-            lock (_disposedLock)
+            if (Interlocked.Exchange(ref _disposed, 1) == 0)
             {
-                if (!_disposed)
+                if (_autoCreateSerDes)
                 {
-                    try
-                    {
-                        if (_autoCreateSerDes)
-                        {
-                            _keySerializer?.Dispose();
-                            _valueSerializer?.Dispose();
-                        }
-                    }
-                    finally { _disposed = true; }
+                    _keySerializer?.Dispose();
+                    _valueSerializer?.Dispose();
                 }
             }
             base.Dispose(disposing);

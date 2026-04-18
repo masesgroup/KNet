@@ -18,136 +18,129 @@
 
 using MASES.KNet.Serialization;
 using System;
+using System.Threading;
 
 namespace MASES.KNet.Streams.Kstream
 {
-    /// <summary>
-    /// KNet extension of <see cref="Org.Apache.Kafka.Streams.Kstream.Printed{TJVMK, TJVMV}"/>
-    /// </summary>
-    /// <typeparam name="K"></typeparam>
-    /// <typeparam name="V"></typeparam>
-    /// <typeparam name="TJVMK">The JVM type of <typeparamref name="K"/></typeparam>
-    /// <typeparam name="TJVMV">The JVM type of <typeparamref name="V"/></typeparam>
-    public class Printed<K, V, TJVMK, TJVMV> : IGenericSerDesFactoryApplier, IDisposable
-    {
-        readonly Org.Apache.Kafka.Streams.Kstream.Printed<TJVMK, TJVMV> _inner;
-        IGenericSerDesFactory _factory;
-        IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set => _factory = value; }
+	/// <summary>
+	/// KNet extension of <see cref="Org.Apache.Kafka.Streams.Kstream.Printed{TJVMK, TJVMV}"/>
+	/// </summary>
+	/// <typeparam name="K"></typeparam>
+	/// <typeparam name="V"></typeparam>
+	/// <typeparam name="TJVMK">The JVM type of <typeparamref name="K"/></typeparam>
+	/// <typeparam name="TJVMV">The JVM type of <typeparamref name="V"/></typeparam>
+	public class Printed<K, V, TJVMK, TJVMV> : IGenericSerDesFactoryApplier, IDisposable
+	{
+		readonly Org.Apache.Kafka.Streams.Kstream.Printed<TJVMK, TJVMV> _inner;
+		IGenericSerDesFactory _factory;
+		IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set => _factory = value; }
 
-        internal Printed(Org.Apache.Kafka.Streams.Kstream.Printed<TJVMK, TJVMV> inner)
-        {
-            _inner = inner;
-        }
+		internal Printed(Org.Apache.Kafka.Streams.Kstream.Printed<TJVMK, TJVMV> inner)
+		{
+			_inner = inner;
+		}
 
-        #region IDisposable
+		#region IDisposable
 
-        readonly object _lock = new object();
-        bool _disposed = false;
-        /// <summary>
-        /// Test if this instance was disposed
-        /// </summary>
-        /// <exception cref="ObjectDisposedException">When this instance was disposed</exception>
-        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        protected void CheckDisposed() { lock (_lock) { if (_disposed) throw new ObjectDisposedException(nameof(Printed<K, V, TJVMK, TJVMV>)); } }
-        /// <inheritdoc cref="IDisposable.Dispose"/>
-        public void Dispose()
-        {
-            // Dispose of unmanaged resources.
-            Dispose(true);
-            // Suppress finalization.
-            GC.SuppressFinalize(this);
-        }
-        /// <summary>
-        /// Implements the pattern described in https://learn.microsoft.com/en-en/dotnet/standard/garbage-collection/implementing-dispose
-        /// </summary>
-        /// <param name="disposing">The disposing parameter is a <see langword="bool"/> that indicates whether the method call comes from a <see cref="IDisposable.Dispose"/> method (its value is <see langword="true"/>) or from a finalizer (its value is <see langword="false"/>)</param>
-        protected virtual void Dispose(bool disposing)
-        {
-            lock (_lock)
-            {
-                if (_disposed)
-                {
-                    return;
-                }
+		volatile int _disposed; // 0 = live, 1 = disposed
+		/// <summary>
+		/// Test if this instance was disposed
+		/// </summary>
+		/// <exception cref="ObjectDisposedException">When this instance was disposed</exception>
+		[System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
+		protected void CheckDisposed() { if (_disposed != 0) throw new ObjectDisposedException(GetType().Name); }
+		/// <inheritdoc cref="IDisposable.Dispose"/>
+		public void Dispose()
+		{
+			// Dispose of unmanaged resources.
+			Dispose(true);
+			// Suppress finalization.
+			GC.SuppressFinalize(this);
+		}
+		/// <summary>
+		/// Implements the pattern described in https://learn.microsoft.com/en-en/dotnet/standard/garbage-collection/implementing-dispose
+		/// </summary>
+		/// <param name="disposing">The disposing parameter is a <see langword="bool"/> that indicates whether the method call comes from a <see cref="IDisposable.Dispose"/> method (its value is <see langword="true"/>) or from a finalizer (its value is <see langword="false"/>)</param>
+		protected virtual void Dispose(bool disposing)
+		{
+			if (Interlocked.Exchange(ref _disposed, 1) != 0)
+				return;
 
-                if (disposing)
-                {
-                    _inner?.Dispose();
-                }
+			if (disposing)
+			{
+				_inner?.Dispose();
+			}
+		}
 
-                _disposed = true;
-            }
-        }
+		#endregion
 
-        #endregion
+		/// <summary>
+		/// Converter from <see cref="Printed{K, V, TJVMK, TJVMV}"/> to <see cref="Org.Apache.Kafka.Streams.Kstream.Printed{TJVMK, TJVMV}"/>
+		/// </summary>
+		public static implicit operator Org.Apache.Kafka.Streams.Kstream.Printed<TJVMK, TJVMV>(Printed<K, V, TJVMK, TJVMV> t) => t._inner;
 
-        /// <summary>
-        /// Converter from <see cref="Printed{K, V, TJVMK, TJVMV}"/> to <see cref="Org.Apache.Kafka.Streams.Kstream.Printed{TJVMK, TJVMV}"/>
-        /// </summary>
-        public static implicit operator Org.Apache.Kafka.Streams.Kstream.Printed<TJVMK, TJVMV>(Printed<K, V, TJVMK, TJVMV> t) => t._inner;
+		#region Static methods
+		/// <summary>
+		/// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/kstream/Printed.html#toFile(java.lang.String)"/>
+		/// </summary>
+		/// <param name="arg0"><see cref="string"/></param>
+		/// <returns><see cref="Printed{K, V, TJVMK, TJVMV}"/></returns>
+		public static Printed<K, V, TJVMK, TJVMV> ToFile(string arg0)
+		{
+			var cons = Org.Apache.Kafka.Streams.Kstream.Printed<TJVMK, TJVMV>.ToFile(arg0);
+			return new Printed<K, V, TJVMK, TJVMV>(cons);
+		}
+		/// <summary>
+		/// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/kstream/Printed.html#toSysOut()"/>
+		/// </summary>
+		/// <returns><see cref="Printed{K, V, TJVMK, TJVMV}"/></returns>
+		public static Printed<K, V, TJVMK, TJVMV> ToSysOut()
+		{
+			var cons = Org.Apache.Kafka.Streams.Kstream.Printed<TJVMK, TJVMV>.ToSysOut();
+			return new Printed<K, V, TJVMK, TJVMV>(cons);
+		}
 
-        #region Static methods
-        /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/kstream/Printed.html#toFile(java.lang.String)"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
-        /// <returns><see cref="Printed{K, V, TJVMK, TJVMV}"/></returns>
-        public static Printed<K, V, TJVMK, TJVMV> ToFile(string arg0)
-        {
-            var cons = Org.Apache.Kafka.Streams.Kstream.Printed<TJVMK, TJVMV>.ToFile(arg0);
-            return new Printed<K, V, TJVMK, TJVMV>(cons);
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/kstream/Printed.html#toSysOut()"/>
-        /// </summary>
-        /// <returns><see cref="Printed{K, V, TJVMK, TJVMV}"/></returns>
-        public static Printed<K, V, TJVMK, TJVMV> ToSysOut()
-        {
-            var cons = Org.Apache.Kafka.Streams.Kstream.Printed<TJVMK, TJVMV>.ToSysOut();
-            return new Printed<K, V, TJVMK, TJVMV>(cons);
-        }
+		#endregion
 
-        #endregion
+		#region Instance methods
+		/// <summary>
+		/// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/kstream/Printed.html#withKeyValueMapper(org.apache.kafka.streams.kstream.KeyValueMapper)"/>
+		/// </summary>
+		/// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Kstream.KeyValueMapper"/></param>
+		/// <typeparam name="Arg0objectSuperK"><typeparamref name="K"/></typeparam>
+		/// <typeparam name="Arg0objectSuperV"><typeparamref name="V"/></typeparam>
+		/// <returns><see cref="Printed{K, V, TJVMK, TJVMV}"/></returns>
+		public Printed<K, V, TJVMK, TJVMV> WithKeyValueMapper<Arg0objectSuperK, Arg0objectSuperV>(KeyValueMapper<Arg0objectSuperK, Arg0objectSuperV, string, TJVMK, TJVMV, Java.Lang.String> arg0) where Arg0objectSuperK : K where Arg0objectSuperV : V
+		{
+			CheckDisposed();
+			if (arg0 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
+			_inner?.WithKeyValueMapper(arg0);
+			return this;
+		}
+		/// <summary>
+		/// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/kstream/Printed.html#withLabel(java.lang.String)"/>
+		/// </summary>
+		/// <param name="arg0"><see cref="string"/></param>
+		/// <returns><see cref="Printed{K, V, TJVMK, TJVMV}"/></returns>
+		public Printed<K, V, TJVMK, TJVMV> WithLabel(string arg0)
+		{
+			CheckDisposed();
+			_inner?.WithLabel(arg0);
+			return this;
+		}
 
-        #region Instance methods
-        /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/kstream/Printed.html#withKeyValueMapper(org.apache.kafka.streams.kstream.KeyValueMapper)"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Kstream.KeyValueMapper"/></param>
-        /// <typeparam name="Arg0objectSuperK"><typeparamref name="K"/></typeparam>
-        /// <typeparam name="Arg0objectSuperV"><typeparamref name="V"/></typeparam>
-        /// <returns><see cref="Printed{K, V, TJVMK, TJVMV}"/></returns>
-        public Printed<K, V, TJVMK, TJVMV> WithKeyValueMapper<Arg0objectSuperK, Arg0objectSuperV>(KeyValueMapper<Arg0objectSuperK, Arg0objectSuperV, string, TJVMK, TJVMV, Java.Lang.String> arg0) where Arg0objectSuperK : K where Arg0objectSuperV : V
-        {
-            CheckDisposed();
-            if (arg0 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
-            _inner?.WithKeyValueMapper(arg0);
-            return this;
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/kstream/Printed.html#withLabel(java.lang.String)"/>
-        /// </summary>
-        /// <param name="arg0"><see cref="string"/></param>
-        /// <returns><see cref="Printed{K, V, TJVMK, TJVMV}"/></returns>
-        public Printed<K, V, TJVMK, TJVMV> WithLabel(string arg0)
-        {
-            CheckDisposed();
-            _inner?.WithLabel(arg0);
-            return this;
-        }
+		#endregion
+	}
 
-        #endregion
-    }
-
-    /// <summary>
-    /// KNet extension of <see cref="Printed{K, V, TJVMK, TJVMV}"/>
-    /// </summary>
-    /// <typeparam name="K"></typeparam>
-    /// <typeparam name="V"></typeparam>
-    public class Printed<K, V> : Printed<K, V, byte[], byte[]>
-    {
-        Printed(Org.Apache.Kafka.Streams.Kstream.Printed<byte[], byte[]> inner) : base(inner)
-        {
-        }
-    }
+	/// <summary>
+	/// KNet extension of <see cref="Printed{K, V, TJVMK, TJVMV}"/>
+	/// </summary>
+	/// <typeparam name="K"></typeparam>
+	/// <typeparam name="V"></typeparam>
+	public class Printed<K, V> : Printed<K, V, byte[], byte[]>
+	{
+		Printed(Org.Apache.Kafka.Streams.Kstream.Printed<byte[], byte[]> inner) : base(inner)
+		{
+		}
+	}
 }

@@ -19,106 +19,99 @@
 using Java.Util;
 using MASES.KNet.Consumer;
 using MASES.KNet.Producer;
+using System.Threading;
 
 namespace MASES.KNet.Streams
 {
-    /// <summary>
-    /// KNet implementation of <see cref="Org.Apache.Kafka.Streams.KafkaClientSupplier"/>
-    /// </summary>
-    /// <remarks>The default <see cref="Org.Apache.Kafka.Streams.KafkaClientSupplier"/> used from <see cref="Org.Apache.Kafka.Streams.KafkaStreams"/> allocates both <see cref="Org.Apache.Kafka.Clients.Consumer.KafkaConsumer"/> and <see cref="Org.Apache.Kafka.Clients.Producer.KafkaProducer"/>. 
-    /// <see cref="KNetClientSupplier"/> uses <see cref="KNetConsumer{K, V, TJVMK, TJVMV}"/> and <see cref="KNetProducer{K, V, TJVMK, TJVMV}"/>, the instance shall be disposed when no more in use, but still be alive still <see cref="Org.Apache.Kafka.Streams.KafkaStreams"/> is alive.</remarks>
-    public class KNetClientSupplier : Org.Apache.Kafka.Streams.KafkaClientSupplier
-    {
-        private readonly System.Collections.Generic.List<Org.Apache.Kafka.Clients.Admin.Admin> _admins = new();
-        private readonly System.Collections.Generic.List<Org.Apache.Kafka.Clients.Consumer.Consumer<byte[], byte[]>> _consumers = new();
-        private readonly System.Collections.Generic.List<Org.Apache.Kafka.Clients.Producer.Producer<byte[], byte[]>> _producers = new();
-        /// <summary>
-        /// Default initializer
-        /// </summary>
-        public KNetClientSupplier()
-        {
-        }
-        /// <inheritdoc/>
-        public override Org.Apache.Kafka.Clients.Admin.Admin GetAdmin(Map<Java.Lang.String, object> arg0)
-        {
-            var admin = Org.Apache.Kafka.Clients.Admin.Admin.Create(arg0);
-            _admins.Add(admin);
-            return admin;
-        }
-        /// <inheritdoc/>
-        public override Org.Apache.Kafka.Clients.Consumer.Consumer<byte[], byte[]> GetConsumer(Map<Java.Lang.String, object> arg0)
-        {
-            Properties properties = new();
-            properties.PutAll(arg0);
+	/// <summary>
+	/// KNet implementation of <see cref="Org.Apache.Kafka.Streams.KafkaClientSupplier"/>
+	/// </summary>
+	/// <remarks>The default <see cref="Org.Apache.Kafka.Streams.KafkaClientSupplier"/> used from <see cref="Org.Apache.Kafka.Streams.KafkaStreams"/> allocates both <see cref="Org.Apache.Kafka.Clients.Consumer.KafkaConsumer"/> and <see cref="Org.Apache.Kafka.Clients.Producer.KafkaProducer"/>. 
+	/// <see cref="KNetClientSupplier"/> uses <see cref="KNetConsumer{K, V, TJVMK, TJVMV}"/> and <see cref="KNetProducer{K, V, TJVMK, TJVMV}"/>, the instance shall be disposed when no more in use, but still be alive still <see cref="Org.Apache.Kafka.Streams.KafkaStreams"/> is alive.</remarks>
+	public class KNetClientSupplier : Org.Apache.Kafka.Streams.KafkaClientSupplier
+	{
+		private readonly System.Collections.Generic.List<Org.Apache.Kafka.Clients.Admin.Admin> _admins = new();
+		private readonly System.Collections.Generic.List<Org.Apache.Kafka.Clients.Consumer.Consumer<byte[], byte[]>> _consumers = new();
+		private readonly System.Collections.Generic.List<Org.Apache.Kafka.Clients.Producer.Producer<byte[], byte[]>> _producers = new();
+		/// <summary>
+		/// Default initializer
+		/// </summary>
+		public KNetClientSupplier()
+		{
+		}
+		/// <inheritdoc/>
+		public override Org.Apache.Kafka.Clients.Admin.Admin GetAdmin(Map<Java.Lang.String, object> arg0)
+		{
+			var admin = Org.Apache.Kafka.Clients.Admin.Admin.Create(arg0);
+			_admins.Add(admin);
+			return admin;
+		}
+		/// <inheritdoc/>
+		public override Org.Apache.Kafka.Clients.Consumer.Consumer<byte[], byte[]> GetConsumer(Map<Java.Lang.String, object> arg0)
+		{
+			Properties properties = new();
+			properties.PutAll(arg0);
 
-            var consumer =  new KNetConsumer<byte[], byte[], byte[], byte[]>(properties);
-            _consumers.Add(consumer);
-            return consumer;
-        }
-        /// <inheritdoc/>
-        public override Org.Apache.Kafka.Clients.Consumer.Consumer<byte[], byte[]> GetGlobalConsumer(Map<Java.Lang.String, object> arg0)
-        {
-            Properties properties = new();
-            properties.PutAll(arg0);
+			var consumer = new KNetConsumer<byte[], byte[], byte[], byte[]>(properties);
+			_consumers.Add(consumer);
+			return consumer;
+		}
+		/// <inheritdoc/>
+		public override Org.Apache.Kafka.Clients.Consumer.Consumer<byte[], byte[]> GetGlobalConsumer(Map<Java.Lang.String, object> arg0)
+		{
+			Properties properties = new();
+			properties.PutAll(arg0);
 
-            var consumer = new KNetConsumer<byte[], byte[], byte[], byte[]>(properties);
-            _consumers.Add(consumer);
-            return consumer;
-        }
-        /// <inheritdoc/>
-        public override Org.Apache.Kafka.Clients.Producer.Producer<byte[], byte[]> GetProducer(Map<Java.Lang.String, object> arg0)
-        {
-            Properties properties = new();
-            properties.PutAll(arg0);
+			var consumer = new KNetConsumer<byte[], byte[], byte[], byte[]>(properties);
+			_consumers.Add(consumer);
+			return consumer;
+		}
+		/// <inheritdoc/>
+		public override Org.Apache.Kafka.Clients.Producer.Producer<byte[], byte[]> GetProducer(Map<Java.Lang.String, object> arg0)
+		{
+			Properties properties = new();
+			properties.PutAll(arg0);
 
-            var producer = new KNetProducer<byte[], byte[], byte[], byte[]>(properties);
-            _producers.Add(producer);
-            return producer;
-        }
-        /// <inheritdoc/>
-        public override Org.Apache.Kafka.Clients.Consumer.Consumer<byte[], byte[]> GetRestoreConsumer(Map<Java.Lang.String, object> arg0)
-        {
-            Properties properties = new();
-            properties.PutAll(arg0);
+			var producer = new KNetProducer<byte[], byte[], byte[], byte[]>(properties);
+			_producers.Add(producer);
+			return producer;
+		}
+		/// <inheritdoc/>
+		public override Org.Apache.Kafka.Clients.Consumer.Consumer<byte[], byte[]> GetRestoreConsumer(Map<Java.Lang.String, object> arg0)
+		{
+			Properties properties = new();
+			properties.PutAll(arg0);
 
-            var consumer = new KNetConsumer<byte[], byte[], byte[], byte[]>(properties);
-            _consumers.Add(consumer);
-            return consumer;
-        }
+			var consumer = new KNetConsumer<byte[], byte[], byte[], byte[]>(properties);
+			_consumers.Add(consumer);
+			return consumer;
+		}
 
-        object _disposedLock = new object();
-        bool _disposed = false;
-        /// <inheritdoc/>
-        protected override void Dispose(bool disposing)
-        {
-            lock (_disposedLock)
-            {
-                if (!_disposed)
-                {
-                    try
-                    {
-                        foreach (var item in _admins)
-                        {
-                            item?.Dispose();
-                        }
-                        _admins.Clear();
+		volatile int _disposed; // 0 = live, 1 = disposed
+		/// <inheritdoc/>
+		protected override void Dispose(bool disposing)
+		{
+			if (Interlocked.Exchange(ref _disposed, 1) == 0)
+			{
+				foreach (var item in _admins)
+				{
+					item?.Dispose();
+				}
+				_admins.Clear();
 
-                        foreach (var item in _consumers)
-                        {
-                            item?.Dispose();
-                        }
-                        _consumers.Clear();
+				foreach (var item in _consumers)
+				{
+					item?.Dispose();
+				}
+				_consumers.Clear();
 
-                        foreach (var item in _producers)
-                        {
-                            item?.Dispose();
-                        }
-                        _producers.Clear();
-                    }
-                    finally { _disposed = true; }
-                }
-            }
-            base.Dispose(disposing);
-        }
-    }
+				foreach (var item in _producers)
+				{
+					item?.Dispose();
+				}
+				_producers.Clear();
+			}
+			base.Dispose(disposing);
+		}
+	}
 }
