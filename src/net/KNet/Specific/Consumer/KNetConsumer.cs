@@ -211,7 +211,7 @@ namespace MASES.KNet.Consumer
                 if (_consumerCallback != null)
                 {
                     IExecute("setCallback", null);
-                    _consumerCallback?.Dispose();
+                    _consumerCallback.Dispose();
                 }
 
                 _threadRunning = false;

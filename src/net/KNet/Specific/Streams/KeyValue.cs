@@ -54,9 +54,11 @@ namespace MASES.KNet.Streams
 			if (fromPrefetched)
 			{
 				_keySerDes ??= _factory?.BuildKeySerDes<K, TJVMK>();
+				if (_keySerDes == null) throw new InvalidOperationException("Unable to resolve key serializer/deserializer for prefetched KeyValue.");
 				_key = _keySerDes.Deserialize(null, _inner.Key);
 				_keyStored = true;
 				_valueSerDes ??= _factory?.BuildValueSerDes<V, TJVMV>();
+				if (_valueSerDes == null) throw new InvalidOperationException("Unable to resolve value serializer/deserializer for prefetched KeyValue.");
 				_value = _valueSerDes.Deserialize(null, _inner.Value);
 				_valueStored = true;
 			}
