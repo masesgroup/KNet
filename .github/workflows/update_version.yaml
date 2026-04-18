@@ -12,7 +12,7 @@ on:
         required: true
         type: string
       PreReleaseCurrentVersion:
-        description: 'The current version pre-release tag'
+        description: 'The current version pre-release tag (without dash, e.g. rc)'
         required: false
         type: string
       NewVersion:
@@ -20,54 +20,88 @@ on:
         required: true
         type: string
       PreReleaseNewVersion:
-        description: 'The new version pre-release tag'
+        description: 'The new version pre-release tag (without dash, e.g. rc)'
         required: false
         type: string
-        
-# This workflow contains one job called "build_documentation"
+
+# This workflow contains one job called "update_version"
 jobs:
   update_version:
     # The type of runner that the job will run on
     runs-on: windows-2022
 
     # Steps represent a sequence of tasks that will be executed as part of the job
-    steps:   
-      # Runs a set of commands using the runners shell
+    steps:
       # Support longpaths
       - name: Support long paths
         run: git config --system core.longpaths true
-      
+
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v6
         with:
           fetch-depth: '1'
 
+      # Compute pre-release tags with dash (used by nuspec, csproj, props)
+      # psd1 uses the raw input directly (no dash)
+      - name: Compute pre-release tags
+        run: |
+          $preC = if ('${{ inputs.PreReleaseCurrentVersion }}') { '-${{ inputs.PreReleaseCurrentVersion }}' } else { '' }
+          $preN = if ('${{ inputs.PreReleaseNewVersion }}')     { '-${{ inputs.PreReleaseNewVersion }}' }     else { '' }
+          echo "PRE_C=$preC" >> $env:GITHUB_ENV
+          echo "PRE_N=$preN" >> $env:GITHUB_ENV
+
+      # pom.xml: no pre-release, version only
       - run: (Get-Content ${{ github.workspace }}\src\jvm\knet\pom.xml).Replace('<knetVersion>${{ inputs.CurrentVersion }}.0</knetVersion>', '<knetVersion>${{ inputs.NewVersion }}.0</knetVersion>') | Set-Content ${{ github.workspace }}\src\jvm\knet\pom.xml
-      
-      - run: (Get-Content ${{ github.workspace }}\src\net\Common\Common.props).Replace('<Version>${{ inputs.CurrentVersion }}.0${{ inputs.PreReleaseCurrentVersion }}</Version>', '<Version>${{ inputs.NewVersion }}.0${{ inputs.PreReleaseNewVersion }}</Version>') | Set-Content ${{ github.workspace }}\src\net\Common\Common.props
 
-      - run: (Get-Content ${{ github.workspace }}\src\net\KNetCLI\KNetCLI.nuspec).Replace('<version>${{ inputs.CurrentVersion }}${{ inputs.PreReleaseCurrentVersion }}</version>', '<version>${{ inputs.NewVersion }}${{ inputs.PreReleaseNewVersion }}</version>') | Set-Content ${{ github.workspace }}\src\net\KNetCLI\KNetCLI.nuspec
-      - run: (Get-Content ${{ github.workspace }}\src\net\KNetConnect\KNetConnect.nuspec).Replace('<version>${{ inputs.CurrentVersion }}${{ inputs.PreReleaseCurrentVersion }}</version>', '<version>${{ inputs.NewVersion }}${{ inputs.PreReleaseNewVersion }}</version>') | Set-Content ${{ github.workspace }}\src\net\KNetConnect\KNetConnect.nuspec
+      # Common.props: uses dash-prefixed pre-release tag
+      - run: (Get-Content ${{ github.workspace }}\src\net\Common\Common.props).Replace('<Version>${{ inputs.CurrentVersion }}.0${{ env.PRE_C }}</Version>', '<Version>${{ inputs.NewVersion }}.0${{ env.PRE_N }}</Version>') | Set-Content ${{ github.workspace }}\src\net\Common\Common.props
 
-      - run: (Get-Content ${{ github.workspace }}\src\net\KNetPS\MASES.KNetPS.psd1).Replace('${{ inputs.CurrentVersion }}${{ inputs.PreReleaseCurrentVersion }}', '${{ inputs.NewVersion }}${{ inputs.PreReleaseNewVersion }}') | Set-Content ${{ github.workspace }}\src\net\KNetPS\MASES.KNetPS.psd1
-      - run: (Get-Content ${{ github.workspace }}\src\net\KNetPS\MASES.KNetPSCore.psd1).Replace('${{ inputs.CurrentVersion }}${{ inputs.PreReleaseCurrentVersion }}', '${{ inputs.NewVersion }}${{ inputs.PreReleaseNewVersion }}') | Set-Content ${{ github.workspace }}\src\net\KNetPS\MASES.KNetPSCore.psd1
-      - run: (Get-Content ${{ github.workspace }}\src\net\KNetPS\MASES.KNetPSFramework.psd1).Replace('${{ inputs.CurrentVersion }}${{ inputs.PreReleaseCurrentVersion }}', '${{ inputs.NewVersion }}${{ inputs.PreReleaseNewVersion }}') | Set-Content ${{ github.workspace }}\src\net\KNetPS\MASES.KNetPSFramework.psd1
+      # nuspec files: uses dash-prefixed pre-release tag
+      - run: (Get-Content ${{ github.workspace }}\src\net\KNetCLI\KNetCLI.nuspec).Replace('<version>${{ inputs.CurrentVersion }}${{ env.PRE_C }}</version>', '<version>${{ inputs.NewVersion }}${{ env.PRE_N }}</version>') | Set-Content ${{ github.workspace }}\src\net\KNetCLI\KNetCLI.nuspec
+      - run: (Get-Content ${{ github.workspace }}\src\net\KNetConnect\KNetConnect.nuspec).Replace('<version>${{ inputs.CurrentVersion }}${{ env.PRE_C }}</version>', '<version>${{ inputs.NewVersion }}${{ env.PRE_N }}</version>') | Set-Content ${{ github.workspace }}\src\net\KNetConnect\KNetConnect.nuspec
 
-      - run: (Get-Content ${{ github.workspace }}\src\net\templates\templates\knetConnectSink\knetConnectSink.csproj).Replace('${{ inputs.CurrentVersion }}${{ inputs.PreReleaseCurrentVersion }}', '${{ inputs.NewVersion }}${{ inputs.PreReleaseNewVersion }}') | Set-Content ${{ github.workspace }}\src\net\templates\templates\knetConnectSink\knetConnectSink.csproj
-      - run: (Get-Content ${{ github.workspace }}\src\net\templates\templates\knetConnectSource\knetConnectSource.csproj).Replace('${{ inputs.CurrentVersion }}${{ inputs.PreReleaseCurrentVersion }}', '${{ inputs.NewVersion }}${{ inputs.PreReleaseNewVersion }}') | Set-Content ${{ github.workspace }}\src\net\templates\templates\knetConnectSource\knetConnectSource.csproj
-      - run: (Get-Content ${{ github.workspace }}\src\net\templates\templates\knetConsumerApp\knetConsumerApp.csproj).Replace('${{ inputs.CurrentVersion }}${{ inputs.PreReleaseCurrentVersion }}', '${{ inputs.NewVersion }}${{ inputs.PreReleaseNewVersion }}') | Set-Content ${{ github.workspace }}\src\net\templates\templates\knetConsumerApp\knetConsumerApp.csproj
-      - run: (Get-Content ${{ github.workspace }}\src\net\templates\templates\knetPipeStreamApp\knetPipeStreamApp.csproj).Replace('${{ inputs.CurrentVersion }}${{ inputs.PreReleaseCurrentVersion }}', '${{ inputs.NewVersion }}${{ inputs.PreReleaseNewVersion }}') | Set-Content ${{ github.workspace }}\src\net\templates\templates\knetPipeStreamApp\knetPipeStreamApp.csproj
-      - run: (Get-Content ${{ github.workspace }}\src\net\templates\templates\knetProducerApp\knetProducerApp.csproj).Replace('${{ inputs.CurrentVersion }}${{ inputs.PreReleaseCurrentVersion }}', '${{ inputs.NewVersion }}${{ inputs.PreReleaseNewVersion }}') | Set-Content ${{ github.workspace }}\src\net\templates\templates\knetProducerApp\knetProducerApp.csproj
-      
+      # psd1 files: ModuleVersion and Prerelease are updated separately
+      # ModuleVersion accepts only numeric version, Prerelease uses raw input (no dash)
+      - name: Update MASES.KNetPS.psd1
+        run: |
+          $f = '${{ github.workspace }}\src\net\KNetPS\MASES.KNetPS.psd1'
+          (Get-Content $f).
+            Replace("ModuleVersion = '${{ inputs.CurrentVersion }}'", "ModuleVersion = '${{ inputs.NewVersion }}'").
+            Replace("Prerelease = '${{ inputs.PreReleaseCurrentVersion }}'", "Prerelease = '${{ inputs.PreReleaseNewVersion }}'") |
+          Set-Content $f
+
+      - name: Update MASES.KNetPSCore.psd1
+        run: |
+          $f = '${{ github.workspace }}\src\net\KNetPS\MASES.KNetPSCore.psd1'
+          (Get-Content $f).
+            Replace("ModuleVersion = '${{ inputs.CurrentVersion }}'", "ModuleVersion = '${{ inputs.NewVersion }}'").
+            Replace("Prerelease = '${{ inputs.PreReleaseCurrentVersion }}'", "Prerelease = '${{ inputs.PreReleaseNewVersion }}'") |
+          Set-Content $f
+
+      - name: Update MASES.KNetPSFramework.psd1
+        run: |
+          $f = '${{ github.workspace }}\src\net\KNetPS\MASES.KNetPSFramework.psd1'
+          (Get-Content $f).
+            Replace("ModuleVersion = '${{ inputs.CurrentVersion }}'", "ModuleVersion = '${{ inputs.NewVersion }}'").
+            Replace("Prerelease = '${{ inputs.PreReleaseCurrentVersion }}'", "Prerelease = '${{ inputs.PreReleaseNewVersion }}'") |
+          Set-Content $f
+
+      # csproj templates: uses dash-prefixed pre-release tag
+      - run: (Get-Content ${{ github.workspace }}\src\net\templates\templates\knetConnectSink\knetConnectSink.csproj).Replace('${{ inputs.CurrentVersion }}${{ env.PRE_C }}', '${{ inputs.NewVersion }}${{ env.PRE_N }}') | Set-Content ${{ github.workspace }}\src\net\templates\templates\knetConnectSink\knetConnectSink.csproj
+      - run: (Get-Content ${{ github.workspace }}\src\net\templates\templates\knetConnectSource\knetConnectSource.csproj).Replace('${{ inputs.CurrentVersion }}${{ env.PRE_C }}', '${{ inputs.NewVersion }}${{ env.PRE_N }}') | Set-Content ${{ github.workspace }}\src\net\templates\templates\knetConnectSource\knetConnectSource.csproj
+      - run: (Get-Content ${{ github.workspace }}\src\net\templates\templates\knetConsumerApp\knetConsumerApp.csproj).Replace('${{ inputs.CurrentVersion }}${{ env.PRE_C }}', '${{ inputs.NewVersion }}${{ env.PRE_N }}') | Set-Content ${{ github.workspace }}\src\net\templates\templates\knetConsumerApp\knetConsumerApp.csproj
+      - run: (Get-Content ${{ github.workspace }}\src\net\templates\templates\knetPipeStreamApp\knetPipeStreamApp.csproj).Replace('${{ inputs.CurrentVersion }}${{ env.PRE_C }}', '${{ inputs.NewVersion }}${{ env.PRE_N }}') | Set-Content ${{ github.workspace }}\src\net\templates\templates\knetPipeStreamApp\knetPipeStreamApp.csproj
+      - run: (Get-Content ${{ github.workspace }}\src\net\templates\templates\knetProducerApp\knetProducerApp.csproj).Replace('${{ inputs.CurrentVersion }}${{ env.PRE_C }}', '${{ inputs.NewVersion }}${{ env.PRE_N }}') | Set-Content ${{ github.workspace }}\src\net\templates\templates\knetProducerApp\knetProducerApp.csproj
+
       - name: Request a PR to commit changes
         uses: peter-evans/create-pull-request@v8
         with:
           branch-suffix: short-commit-hash
           add-paths: src/*.*
-          commit-message: Update version from ${{ inputs.CurrentVersion }}${{ inputs.PreReleaseCurrentVersion }} to ${{ inputs.NewVersion }}${{ inputs.PreReleaseNewVersion }}
-          title: Update version from ${{ inputs.CurrentVersion }}${{ inputs.PreReleaseCurrentVersion }} to ${{ inputs.NewVersion }}${{ inputs.PreReleaseNewVersion }}
+          commit-message: Update version from ${{ inputs.CurrentVersion }}${{ env.PRE_C }} to ${{ inputs.NewVersion }}${{ env.PRE_N }}
+          title: Update version from ${{ inputs.CurrentVersion }}${{ env.PRE_C }} to ${{ inputs.NewVersion }}${{ env.PRE_N }}
           body: |
             Automated changes by GitHub action fix #121
           reviewers: masesdevelopers
           assignees: masesdevelopers
-          labels: enhancement, Docker, java, KNet, KNetCLI, KNetConnectSDK, KNetPS, KNetSerDes, KNetTemplates, .NET 
+          labels: enhancement, Docker, java, KNet, KNetCLI, KNetConnectSDK, KNetPS, KNetSerDes, KNetTemplates, .NET
