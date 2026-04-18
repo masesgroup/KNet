@@ -246,7 +246,6 @@
     "org.apache.kafka.raft.LogAppendInfo",
     "org.apache.kafka.raft.SegmentPosition",
     "org.apache.kafka.snapshot.SnapshotPath",
-    "org.apache.kafka.streams.kstream.NamedOperation",
     "org.apache.kafka.streams.kstream.TransformerSupplier",
     "org.apache.kafka.streams.kstream.ValueMapperWithKeySupplier",
     "org.apache.kafka.streams.kstream.ValueTransformerSupplier",

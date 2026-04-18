@@ -451,14 +451,17 @@ namespace MASES.KNet.Replicator
                 using var topics = Java.Util.Collections.Singleton(topicPartition);
                 consumer.Assign(topics);
                 consumer.Seek(topicPartition, data.Offset);
-                var results = consumer.Poll(TimeSpan.FromMinutes(1)) ?? throw new InvalidOperationException("Failed to get records from remote.");
+                using var results = consumer.Poll(TimeSpan.FromMinutes(1)) ?? throw new InvalidOperationException("Failed to get records from remote.");
                 foreach (var result in results)
                 {
-                    if (!Equals(result.Key, key)) continue;
-                    if (data.Offset != result.Offset) throw new IndexOutOfRangeException($"Requested offset is {data.Offset} while received offset is {result.Offset}");
-                    data.HasValue = true;
-                    data.Value = result.Value;
-                    break;
+                    using (result)
+                    {
+                        if (!Equals(result.Key, key)) continue;
+                        if (data.Offset != result.Offset) throw new IndexOutOfRangeException($"Requested offset is {data.Offset} while received offset is {result.Offset}");
+                        data.HasValue = true;
+                        data.Value = result.Value;
+                        break;
+                    }
                 }
             }
         }
@@ -1188,6 +1191,7 @@ namespace MASES.KNet.Replicator
                 {
                     _consumerPollThreadWaiter[i] = new ManualResetEvent(false);
                     _consumerPollThreads[i] = new Thread(ConsumerPollHandler);
+                    _consumerPollThreads[i].IsBackground = true;
                     _consumerPollThreads[i].Start(i);
                 }
                 if (WaitHandle.WaitAll(_consumerPollThreadWaiter))

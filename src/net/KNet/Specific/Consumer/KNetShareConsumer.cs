@@ -152,6 +152,7 @@ namespace MASES.KNet.Consumer
                 _consumedRecords = new();
                 _threadRunning = true;
                 _consumeThread = new(ConsumeHandler);
+                _consumeThread.IsBackground = true;
                 _consumeThread.Start();
             }
         }
@@ -172,13 +173,6 @@ namespace MASES.KNet.Consumer
 
             return props;
         }
-        /// <summary>
-        /// Finalizer
-        /// </summary>
-        ~KNetShareConsumer()
-        {
-            Dispose();
-        }
 
         /// <inheritdoc cref="IShareConsumer{K, V, TJVMK, TJVMV}.Poll(TimeSpan)"/>
         public ConsumerRecords<K, V, TJVMK, TJVMV> Poll(TimeSpan timeout)
@@ -195,44 +189,37 @@ namespace MASES.KNet.Consumer
             actionCallback?.Invoke(message);
         }
 
-        object _disposedLock = new object();
-        bool _disposed = false;
+        volatile int _disposed; // 0 = live, 1 = disposed
 
         /// <inheritdoc/>
         protected override void Dispose(bool disposing)
         {
-            lock (_disposedLock)
+            if (Interlocked.Exchange(ref _disposed, 1) == 0)
             {
-                if (!_disposed)
+                if (_consumerCallback != null)
                 {
-                    try
+                    IExecute("setCallback", null);
+                    _consumerCallback.Dispose();
+                }
+
+                _threadRunning = false;
+                if (_consumedRecords != null)
+                {
+                    lock (_consumedRecords)
                     {
-                        if (_consumerCallback != null)
-                        {
-                            IExecute("setCallback", null);
-                            _consumerCallback?.Dispose();
-                        }
-
-                        _threadRunning = false;
-                        if (_consumedRecords != null)
-                        {
-                            lock (_consumedRecords)
-                            {
-                                System.Threading.Monitor.Pulse(_consumedRecords);
-                            }
-                            if (IsCompleting) { _consumeThread?.Join(); }
-                            actionCallback = null;
-                        }
-
-                        if (_autoCreateSerDes)
-                        {
-                            _keyDeserializer?.Dispose();
-                            _valueDeserializer?.Dispose();
-                        }
+                        System.Threading.Monitor.Pulse(_consumedRecords);
                     }
-                    finally { _disposed = true; }
+                    if (IsCompleting) { _consumeThread?.Join(); }
+                    actionCallback = null;
+                }
+
+                if (_autoCreateSerDes)
+                {
+                    _keyDeserializer?.Dispose();
+                    _valueDeserializer?.Dispose();
                 }
             }
+
             base.Dispose(disposing);
         }
 #if NET7_0_OR_GREATER

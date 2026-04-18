@@ -17,14 +17,15 @@
 */
 
 using Java.Util;
-using Org.Apache.Kafka.Common.Header;
-using Org.Apache.Kafka.Clients.Producer;
-using MASES.KNet.Serialization;
 using Java.Util.Concurrent;
 using MASES.JCOBridge.C2JBridge;
-using System.Threading.Tasks;
+using MASES.KNet.Serialization;
+using Org.Apache.Kafka.Clients.Producer;
+using Org.Apache.Kafka.Common.Header;
 using System;
 using System.Collections.Concurrent;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace MASES.KNet.Producer
 {
@@ -259,33 +260,18 @@ namespace MASES.KNet.Producer
 
             return props;
         }
-        /// <summary>
-        /// Finalizer
-        /// </summary>
-        ~KNetProducer()
-        {
-            Dispose();
-        }
 
-        object _disposedLock = new object();
-        bool _disposed = false;
+        volatile int _disposed; // 0 = live, 1 = disposed
 
         /// <inheritdoc/>
         protected override void Dispose(bool disposing)
         {
-            lock (_disposedLock)
+            if (Interlocked.Exchange(ref _disposed, 1) == 0)
             {
-                if (!_disposed)
+                if (_autoCreateSerDes)
                 {
-                    try
-                    {
-                        if (_autoCreateSerDes)
-                        {
-                            _keySerializer?.Dispose();
-                            _valueSerializer?.Dispose();
-                        }
-                    }
-                    finally { _disposed = true; }
+                    _keySerializer?.Dispose();
+                    _valueSerializer?.Dispose();
                 }
             }
             base.Dispose(disposing);
@@ -319,26 +305,14 @@ namespace MASES.KNet.Producer
         /// <inheritdoc cref="IProducer{K, V, TJVMK, TJVMV}.Send(ProducerRecord{K, V, TJVMK, TJVMV})"/>
         public Future<RecordMetadata> Send(ProducerRecord<K, V, TJVMK, TJVMV> record)
         {
-            Org.Apache.Kafka.Clients.Producer.ProducerRecord<TJVMK, TJVMV> kRecord = null;
-            try
-            {
-                kRecord = KNetProducer<K, V, TJVMK, TJVMV>.ToProducerRecord(record, _keySerializer, _valueSerializer);
-                GC.SuppressFinalize(kRecord);
-                return Send(kRecord);
-            }
-            finally { if (kRecord != null) GC.ReRegisterForFinalize(kRecord); }
+            using Org.Apache.Kafka.Clients.Producer.ProducerRecord<TJVMK, TJVMV> kRecord = KNetProducer<K, V, TJVMK, TJVMV>.ToProducerRecord(record, _keySerializer, _valueSerializer);
+            return Send(kRecord);
         }
         /// <inheritdoc cref="IProducer{K, V, TJVMK, TJVMV}.Send(ProducerRecord{K, V, TJVMK, TJVMV}, Callback)"/>
         public Future<RecordMetadata> Send(ProducerRecord<K, V, TJVMK, TJVMV> record, Callback callback)
         {
-            Org.Apache.Kafka.Clients.Producer.ProducerRecord<TJVMK, TJVMV> kRecord = null;
-            try
-            {
-                kRecord = KNetProducer<K, V, TJVMK, TJVMV>.ToProducerRecord(record, _keySerializer, _valueSerializer);
-                GC.SuppressFinalize(kRecord);
-                return Send(kRecord, callback);
-            }
-            finally { if (kRecord != null) GC.ReRegisterForFinalize(kRecord); }
+            using Org.Apache.Kafka.Clients.Producer.ProducerRecord<TJVMK, TJVMV> kRecord = KNetProducer<K, V, TJVMK, TJVMV>.ToProducerRecord(record, _keySerializer, _valueSerializer);
+            return Send(kRecord, callback);
         }
         /// <inheritdoc cref="IProducer{K, V, TJVMK, TJVMV}.Send(string, int?, long?, K, V, Headers)"/>
         public Future<RecordMetadata> Send(string topic, int? partition, long? timestamp, K key, V value, Headers headers)

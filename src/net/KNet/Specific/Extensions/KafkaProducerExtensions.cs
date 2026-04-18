@@ -46,28 +46,32 @@ namespace MASES.KNet.Extensions
         /// </summary>
         public static void Produce<K, V>(this IProducer<K, V> producer, string topic, K key, V value, Action<RecordMetadata, JVMBridgeException> action = null)
         {
-            Produce(producer, new ProducerRecord<K, V>(topic, key, value), action);
+            using var record = new ProducerRecord<K, V>(topic, key, value);
+            Produce(producer, record, action);
         }
         /// <summary>
         /// Produce version of <see cref="IProducer{K, V}.Send(ProducerRecord{K, V})"/>
         /// </summary>
         public static void Produce<K, V>(this IProducer<K, V> producer, string topic, int partition, K key, V value, Action<RecordMetadata, JVMBridgeException> action = null)
         {
-            Produce(producer, new ProducerRecord<K, V>(topic, partition, key, value), action);
+            using var record = new ProducerRecord<K, V>(topic, partition, key, value);
+            Produce(producer, record, action);
         }
         /// <summary>
         /// Produce version of <see cref="IProducer{K, V}.Send(ProducerRecord{K, V})"/>
         /// </summary>
         public static void Produce<K, V>(this IProducer<K, V> producer, string topic, int partition, long timestamp, K key, V value, Action<RecordMetadata, JVMBridgeException> action = null)
         {
-            Produce(producer, new ProducerRecord<K, V>(topic, partition, timestamp, key, value), action);
+            using var record = new ProducerRecord<K, V>(topic, partition, timestamp, key, value);
+            Produce(producer, record, action);
         }
         /// <summary>
         /// Produce version of <see cref="IProducer{K, V}.Send(ProducerRecord{K, V})"/>
         /// </summary>
         public static void Produce<K, V>(this IProducer<K, V> producer, string topic, int partition, DateTime timestamp, K key, V value, Action<RecordMetadata, JVMBridgeException> action = null)
         {
-            Produce(producer, new ProducerRecord<K, V>(topic, partition, timestamp, key, value), action);
+            using var record = new ProducerRecord<K, V>(topic, partition, timestamp, key, value);
+            Produce(producer, record, action);
         }
         /// <summary>
         /// Produce version of <see cref="IProducer{K, V}.Send(ProducerRecord{K, V})"/>
@@ -98,37 +102,41 @@ namespace MASES.KNet.Extensions
         /// </summary>
         public static void Produce<K, V>(this IProducer<K, V> producer, string topic, K key, V value, Callback cb = null)
         {
-            Produce(producer, new ProducerRecord<K, V>(topic, key, value), cb);
+            using var record = new ProducerRecord<K, V>(topic, key, value);
+            Produce(producer, record, cb);
         }
         /// <summary>
         /// Produce version of <see cref="IProducer{K, V}.Send(ProducerRecord{K, V})"/>
         /// </summary>
         public static void Produce<K, V>(this IProducer<K, V> producer, string topic, int partition, K key, V value, Callback cb = null)
         {
-            Produce(producer, new ProducerRecord<K, V>(topic, partition, key, value), cb);
+            using var record = new ProducerRecord<K, V>(topic, partition, key, value);
+            Produce(producer, record, cb);
         }
         /// <summary>
         /// Produce version of <see cref="IProducer{K, V}.Send(ProducerRecord{K, V})"/>
         /// </summary>
         public static void Produce<K, V>(this IProducer<K, V> producer, string topic, int partition, long timestamp, K key, V value, Callback cb = null)
         {
-            Produce(producer, new ProducerRecord<K, V>(topic, partition, timestamp, key, value), cb);
+            using var record = new ProducerRecord<K, V>(topic, partition, timestamp, key, value);
+            Produce(producer, record, cb);
         }
         /// <summary>
         /// Produce version of <see cref="IProducer{K, V}.Send(ProducerRecord{K, V})"/>
         /// </summary>
         public static void Produce<K, V>(this IProducer<K, V> producer, string topic, int partition, DateTime timestamp, K key, V value, Callback cb = null)
         {
-            Produce(producer, new ProducerRecord<K, V>(topic, partition, timestamp, key, value), cb);
+            using var record = new ProducerRecord<K, V>(topic, partition, timestamp, key, value);
+            Produce(producer, record, cb);
         }
         /// <summary>
         /// Produce version of <see cref="IProducer{K, V}.Send(ProducerRecord{K, V})"/>
         /// </summary>
         public static void Produce<K, V>(this IProducer<K, V> producer, ProducerRecord<K, V> record, Callback cb = null)
         {
+            Future<RecordMetadata> result = null;
             try
             {
-                Future<RecordMetadata> result;
                 if (cb != null)
                 {
                     result = producer.Send(record, cb);
@@ -145,6 +153,7 @@ namespace MASES.KNet.Extensions
             }
             finally
             {
+                result?.Dispose();
                 cb?.Dispose();
             }
         }
@@ -153,28 +162,48 @@ namespace MASES.KNet.Extensions
         /// </summary>
         public static async Task ProduceAsync<K, V>(this IProducer<K, V> producer, string topic, K key, V value, Action<RecordMetadata, JVMBridgeException> action = null)
         {
-            await ProduceAsync(producer, new ProducerRecord<K, V>(topic, key, value), action);
+            await ProduceAsyncInternal(producer, new ProducerRecord<K, V>(topic, key, value), action);
         }
         /// <summary>
         /// Produce async version of <see cref="IProducer{K, V}.Send(ProducerRecord{K, V})"/>
         /// </summary>
         public static async Task ProduceAsync<K, V>(this IProducer<K, V> producer, string topic, int partition, K key, V value, Action<RecordMetadata, JVMBridgeException> action = null)
         {
-            await ProduceAsync(producer, new ProducerRecord<K, V>(topic, partition, key, value), action);
+            await ProduceAsyncInternal(producer, new ProducerRecord<K, V>(topic, partition, key, value), action);
         }
         /// <summary>
         /// Produce async version of <see cref="IProducer{K, V}.Send(ProducerRecord{K, V})"/>
         /// </summary>
         public static async Task ProduceAsync<K, V>(this IProducer<K, V> producer, string topic, int partition, long timestamp, K key, V value, Action<RecordMetadata, JVMBridgeException> action = null)
         {
-            await ProduceAsync(producer, new ProducerRecord<K, V>(topic, partition, timestamp, key, value), action);
+            await ProduceAsyncInternal(producer, new ProducerRecord<K, V>(topic, partition, timestamp, key, value), action);
         }
         /// <summary>
         /// Produce async version of <see cref="IProducer{K, V}.Send(ProducerRecord{K, V})"/>
         /// </summary>
         public static async Task ProduceAsync<K, V>(this IProducer<K, V> producer, string topic, int partition, DateTime timestamp, K key, V value, Action<RecordMetadata, JVMBridgeException> action = null)
         {
-            await ProduceAsync(producer, new ProducerRecord<K, V>(topic, partition, timestamp, key, value), action);
+            await ProduceAsyncInternal(producer, new ProducerRecord<K, V>(topic, partition, timestamp, key, value), action);
+        }
+        /// <summary>
+        /// Produce async version of <see cref="IProducer{K, V}.Send(ProducerRecord{K, V})"/>
+        /// </summary>
+        static async Task ProduceAsyncInternal<K, V>(this IProducer<K, V> producer, ProducerRecord<K, V> record, Action<RecordMetadata, JVMBridgeException> action = null)
+        {
+            Task<Task> task = Task.Factory.StartNew(() =>
+            {
+                using (record)
+                {
+                    Produce(producer, record, action);
+                    return Task.CompletedTask;
+                }
+            });
+
+            await task;
+            if (task.Result.Status == TaskStatus.Faulted && task.Result.Exception != null)
+            {
+                throw task.Result.Exception.Flatten().InnerException;
+            }
         }
         /// <summary>
         /// Produce async version of <see cref="IProducer{K, V}.Send(ProducerRecord{K, V})"/>

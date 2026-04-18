@@ -62,6 +62,15 @@ namespace MASES.KNet.Consumer
             Dispose();
             return new ValueTask();
         }
+
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing)
+            {
+                _records?.Dispose();
+            }
+            base.Dispose(disposing);
+        }
     }
 #endif
 }
