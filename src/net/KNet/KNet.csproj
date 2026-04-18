@@ -37,30 +37,15 @@
 	</ItemGroup>
 	<ItemGroup>
 		<None Include="mases.knet.targets" Pack="true" PackagePath="build" />
-		<None Include="..\..\..\jars\*.jar"
-              Exclude="..\..\..\jars\animal-sniffer-annotations-*.jar;
-					   ..\..\..\jars\checker-compat-qual-*.jar;
-					   ..\..\..\jars\failureaccess-*.jar;
-					   ..\..\..\jars\groovy-*.jar;
-					   ..\..\..\jars\grpc-api-*.jar;
-					   ..\..\..\jars\grpc-context-*.jar;
-					   ..\..\..\jars\grpc-protobuf-*.jar;
-					   ..\..\..\jars\grpc-protobuf-lite-*.jar;
-					   ..\..\..\jars\grpc-stub-*.jar;
-					   ..\..\..\jars\guava-30.0-android.jar;
-					   ..\..\..\jars\j2objc-annotations-*.jar;
-					   ..\..\..\jars\jsr305-*.jar;
-					   ..\..\..\jars\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar;
-					   ..\..\..\jars\proto-google-common-protos-*.jar;"
-              Pack="true" PackagePath="build\jars" />
+		<None Include="..\..\..\jars\*.jar" Exclude="..\..\..\jars\animal-sniffer-annotations-*.jar;&#xD;&#xA;					   ..\..\..\jars\checker-compat-qual-*.jar;&#xD;&#xA;					   ..\..\..\jars\failureaccess-*.jar;&#xD;&#xA;					   ..\..\..\jars\groovy-*.jar;&#xD;&#xA;					   ..\..\..\jars\grpc-api-*.jar;&#xD;&#xA;					   ..\..\..\jars\grpc-context-*.jar;&#xD;&#xA;					   ..\..\..\jars\grpc-protobuf-*.jar;&#xD;&#xA;					   ..\..\..\jars\grpc-protobuf-lite-*.jar;&#xD;&#xA;					   ..\..\..\jars\grpc-stub-*.jar;&#xD;&#xA;					   ..\..\..\jars\guava-30.0-android.jar;&#xD;&#xA;					   ..\..\..\jars\j2objc-annotations-*.jar;&#xD;&#xA;					   ..\..\..\jars\jsr305-*.jar;&#xD;&#xA;					   ..\..\..\jars\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar;&#xD;&#xA;					   ..\..\..\jars\proto-google-common-protos-*.jar;" Pack="true" PackagePath="build\jars" />
 		<None Include="..\..\config\**\*" Pack="true" PackagePath="build\config" />
 		<None Include="..\..\documentation\articles\usage.md" Pack="true" PackagePath="\" />
 	</ItemGroup>
 	<ItemGroup>
-		<PackageReference Include="MASES.JNet" Version="2.6.8">
+		<PackageReference Include="MASES.JNet" Version="2.6.9-rc">
 			<IncludeAssets>All</IncludeAssets>
 			<PrivateAssets>None</PrivateAssets>
 		</PackageReference>
-		<PackageReference Include="Microsoft.SourceLink.GitHub" Version="10.0.201" PrivateAssets="All" />
+		<PackageReference Include="Microsoft.SourceLink.GitHub" Version="10.0.202" PrivateAssets="All" />
 	</ItemGroup>
 </Project>
