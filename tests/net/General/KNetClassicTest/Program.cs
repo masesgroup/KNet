@@ -110,10 +110,10 @@ namespace MASES.KNetClassicTest
                 var map = Collections.SingletonMap(TopicConfig.CLEANUP_POLICY_CONFIG, TopicConfig.CLEANUP_POLICY_COMPACT);
                 topic.Configs(map);
                 *********/
-                using topic = topic1.Configs(TopicConfigBuilder.Create().WithCleanupPolicy(TopicConfigBuilder.CleanupPolicyTypes.Compact | TopicConfigBuilder.CleanupPolicyTypes.Delete)
-                                                                        .WithDeleteRetentionMs(100)
-                                                                        .WithMinCleanableDirtyRatio(0.01)
-                                                                        .WithSegmentMs(100));
+                using var topic = topic1.Configs(TopicConfigBuilder.Create().WithCleanupPolicy(TopicConfigBuilder.CleanupPolicyTypes.Compact | TopicConfigBuilder.CleanupPolicyTypes.Delete)
+                                                                            .WithDeleteRetentionMs(100)
+                                                                            .WithMinCleanableDirtyRatio(0.01)
+                                                                            .WithSegmentMs(100));
 
                 /**** Direct mode ******
                 Properties props = new Properties();
