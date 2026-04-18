@@ -447,15 +447,14 @@ namespace MASES.KNet.Replicator
             [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
             static void OnDemandRetrieve(IConsumer<K, V, TJVMK, TJVMV> consumer, string topic, K key, ILocalDataStorage data)
             {
-                var topicPartition = new Org.Apache.Kafka.Common.TopicPartition(topic, data.Partition);
-                var disposable1 = JVMBridgeCoreDisposable.Create(topicPartition);
-                var topics = Java.Util.Collections.Singleton(topicPartition);
-                var disposable2 = JVMBridgeCoreDisposable.Create(topics);
-                try
+                using var topicPartition = new Org.Apache.Kafka.Common.TopicPartition(topic, data.Partition);
+                using var topics = Java.Util.Collections.Singleton(topicPartition);
+                consumer.Assign(topics);
+                consumer.Seek(topicPartition, data.Offset);
+                var results = consumer.Poll(TimeSpan.FromMinutes(1)) ?? throw new InvalidOperationException("Failed to get records from remote.");
+                foreach (var result in results)
                 {
                     consumer.Assign(topics);
-                    consumer.Seek(topicPartition, data.Offset);
-                    using var results = consumer.Poll(TimeSpan.FromMinutes(1)) ?? throw new InvalidOperationException("Failed to get records from remote.");
                     foreach (var result in results)
                     {
                         using (result)
@@ -467,11 +466,6 @@ namespace MASES.KNet.Replicator
                             break;
                         }
                     }
-                }
-                finally
-                {
-                    disposable1?.Dispose();
-                    disposable2?.Dispose();
                 }
             }
         }
@@ -1050,8 +1044,7 @@ namespace MASES.KNet.Replicator
         {
             bool firstExecution = false;
             int index = (int)o;
-            var topics = Java.Util.Collections.Singleton((Java.Lang.String)StateName);
-            var disposable = JVMBridgeCoreDisposable.Create(topics);
+            using var topics = Java.Util.Collections.Singleton((Java.Lang.String)StateName);
             try
             {
                 _consumers[index].Subscribe(topics, _consumerListeners[index]);
@@ -1092,7 +1085,6 @@ namespace MASES.KNet.Replicator
             finally
             {
                 _consumers[index].Unsubscribe();
-                disposable?.Dispose();
             }
         }
         [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
@@ -1136,27 +1128,24 @@ namespace MASES.KNet.Replicator
 
             if (AccessRights.HasFlag(AccessRightsType.Write))
             {
-                Java.Util.Properties props = AdminClientConfigBuilder.Create().WithBootstrapServers(BootstrapServers).ToProperties();
-                var disposable1 = JVMBridgeCoreDisposable.Create(props);
+                using Java.Util.Properties props = AdminClientConfigBuilder.Create().WithBootstrapServers(BootstrapServers).ToProperties();
                 using var admin = Org.Apache.Kafka.Clients.Admin.KafkaAdminClient.Create(props);
 
-                var topic = new Org.Apache.Kafka.Clients.Admin.NewTopic(StateName, Partitions, ReplicationFactor);
+                using var topic1 = new Org.Apache.Kafka.Clients.Admin.NewTopic(StateName, Partitions, ReplicationFactor);
                 _topicConfig ??= TopicConfigBuilder.Create().WithDeleteRetentionMs(100)
                                                             .WithMinCleanableDirtyRatio(0.01)
                                                             .WithSegmentMs(100)
                                                             .WithRetentionBytes(1073741824);
 
                 TopicConfig.CleanupPolicy = TopicConfigBuilder.CleanupPolicyTypes.Compact | TopicConfigBuilder.CleanupPolicyTypes.Delete;
-                topic = topic.Configs(TopicConfig);
-                var disposable2 = JVMBridgeCoreDisposable.Create(topic);
+                using var topic = topic1.Configs(TopicConfig);
                 try
                 {
                     admin.CreateTopic(topic);
                 }
                 catch (Org.Apache.Kafka.Common.Errors.TopicExistsException)
                 {
-                    var topics = Java.Util.Collections.Singleton((Java.Lang.String)StateName);
-                    var disposable3 = JVMBridgeCoreDisposable.Create(topics);
+                    using var topics = Java.Util.Collections.Singleton((Java.Lang.String)StateName);
                     // recover partitions of the topic
                     try
                     {
@@ -1172,12 +1161,6 @@ namespace MASES.KNet.Replicator
                         }
                     }
                     catch { }
-                    finally { disposable3?.Dispose(); }
-                }
-                finally 
-                { 
-                    disposable2?.Dispose();
-                    disposable1?.Dispose();
                 }
             }
             _disposeKeySerDes = false;

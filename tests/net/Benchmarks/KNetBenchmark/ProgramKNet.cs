@@ -235,8 +235,7 @@ namespace MASES.KNet.Benchmark
                 };
 
                 var consumer = KNetConsumer();
-                var topics = Collections.Singleton((Java.Lang.String)topicName);
-                var disposable = MASES.JCOBridge.C2JBridge.JVMBridgeCoreDisposable.Create(topics);
+                using var topics = Collections.Singleton((Java.Lang.String)topicName);
                 try
                 {
                     int counter = 0;
@@ -271,7 +270,6 @@ namespace MASES.KNet.Benchmark
                 {
                     if (!SharedObjects) { consumer.Dispose(); consumer = null; }
                     rebalanceListener?.Dispose();
-                    disposable?.Dispose();
                 }
             }
             catch (Java.Util.Concurrent.ExecutionException ex)
@@ -300,8 +298,7 @@ namespace MASES.KNet.Benchmark
 
                 var consumer = KNetConsumer();
                 var producer = KNetProducer();
-                var topics = Collections.Singleton((Java.Lang.String)topicName);
-                var disposable = MASES.JCOBridge.C2JBridge.JVMBridgeCoreDisposable.Create(topics);
+                using var topics = Collections.Singleton((Java.Lang.String)topicName);
                 try
                 {
                     int counter = 0;
@@ -339,7 +336,6 @@ namespace MASES.KNet.Benchmark
                         consumer = null;
                         producer = null;
                     }
-                    disposable?.Dispose();
                 }
             }
             catch (Java.Util.Concurrent.ExecutionException ex)
@@ -360,8 +356,7 @@ namespace MASES.KNet.Benchmark
                 System.Threading.Thread thread = new System.Threading.Thread(() =>
                 {
                     ConsumerRebalanceListener rebalanceListener = null;
-                    var topics = Collections.Singleton((Java.Lang.String)topicName);
-                    var disposable = MASES.JCOBridge.C2JBridge.JVMBridgeCoreDisposable.Create(topics);
+                    using var topics = Collections.Singleton((Java.Lang.String)topicName);
                     try
                     {
                         rebalanceListener = new()
@@ -410,7 +405,6 @@ namespace MASES.KNet.Benchmark
                             consumer = null;
                         }
                         startEvent.Set();
-                        disposable?.Dispose();
                     }
                 });
 
