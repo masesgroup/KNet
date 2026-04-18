@@ -18,6 +18,8 @@
 
 using MASES.KNet.Serialization;
 using MASES.KNet.Streams.Processor;
+using System;
+using System.Threading;
 
 namespace MASES.KNet.Streams.Kstream
 {
@@ -28,7 +30,7 @@ namespace MASES.KNet.Streams.Kstream
     /// <typeparam name="V"></typeparam>
     /// <typeparam name="TJVMK">The JVM type of <typeparamref name="K"/></typeparam>
     /// <typeparam name="TJVMV">The JVM type of <typeparamref name="V"/></typeparam>
-    public class Produced<K, V, TJVMK, TJVMV> : IGenericSerDesFactoryApplier
+    public class Produced<K, V, TJVMK, TJVMV> : IGenericSerDesFactoryApplier, IDisposable
     {
         StreamPartitioner<K, V, TJVMK, TJVMV> _streamPartitioner = null;
         readonly Org.Apache.Kafka.Streams.Kstream.Produced<TJVMK, TJVMV> _inner;
@@ -48,6 +50,40 @@ namespace MASES.KNet.Streams.Kstream
             _inner = inner;
             _streamPartitioner = streamPartitioner;
         }
+
+        #region IDisposable
+
+        volatile int _disposed; // 0 = live, 1 = disposed
+        /// <summary>
+        /// Test if this instance was disposed
+        /// </summary>
+        /// <exception cref="ObjectDisposedException">When this instance was disposed</exception>
+        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
+        protected void CheckDisposed() { if (_disposed != 0) throw new ObjectDisposedException(GetType().Name); }
+        /// <inheritdoc cref="IDisposable.Dispose"/>
+        public void Dispose()
+        {
+            // Dispose of unmanaged resources.
+            Dispose(true);
+            // Suppress finalization.
+            GC.SuppressFinalize(this);
+        }
+        /// <summary>
+        /// Implements the pattern described in https://learn.microsoft.com/en-en/dotnet/standard/garbage-collection/implementing-dispose
+        /// </summary>
+        /// <param name="disposing">The disposing parameter is a <see langword="bool"/> that indicates whether the method call comes from a <see cref="IDisposable.Dispose"/> method (its value is <see langword="true"/>) or from a finalizer (its value is <see langword="false"/>)</param>
+        protected virtual void Dispose(bool disposing)
+        {
+            if (Interlocked.Exchange(ref _disposed, 1) != 0)
+                return;
+
+            if (disposing)
+            {
+                _inner?.Dispose();
+            }
+        }
+
+        #endregion
 
         /// <summary>
         /// Converter from <see cref="Produced{K, V, TJVMK, TJVMV}"/> to <see cref="Org.Apache.Kafka.Streams.Kstream.Produced{TJVMK, TJVMV}"/>
@@ -129,6 +165,7 @@ namespace MASES.KNet.Streams.Kstream
         /// <returns><see cref="Produced{K, V, TJVMK, TJVMV}"/></returns>
         public Produced<K, V, TJVMK, TJVMV> WithKeySerde(ISerDes<K, TJVMK> arg0)
         {
+            CheckDisposed();
             _inner?.WithKeySerde(arg0.KafkaSerde);
             return this;
         }
@@ -139,6 +176,7 @@ namespace MASES.KNet.Streams.Kstream
         /// <returns><see cref="Produced{K, V, TJVMK, TJVMV}"/></returns>
         public Produced<K, V, TJVMK, TJVMV> WithStreamPartitioner(StreamPartitioner<K, V, TJVMK, TJVMV> arg0)
         {
+            CheckDisposed();
             if (arg0 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
             _streamPartitioner = arg0;
             _inner?.WithStreamPartitioner(arg0);
@@ -151,6 +189,7 @@ namespace MASES.KNet.Streams.Kstream
         /// <returns><see cref="Produced{K, V, TJVMK, TJVMV}"/></returns>
         public Produced<K, V, TJVMK, TJVMV> WithValueSerde(ISerDes<V, TJVMV> arg0)
         {
+            CheckDisposed();
             _inner?.WithValueSerde(arg0.KafkaSerde);
             return this;
         }

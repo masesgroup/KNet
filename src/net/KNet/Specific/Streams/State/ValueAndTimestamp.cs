@@ -16,8 +16,11 @@
 *  Refer to LICENSE for more information.
 */
 
+using Java.Util;
 using MASES.KNet.Serialization;
+using MASES.KNet.Streams.Processor.Api;
 using System;
+using System.Threading;
 
 namespace MASES.KNet.Streams.State
 {
@@ -26,7 +29,7 @@ namespace MASES.KNet.Streams.State
     /// </summary>
     /// <typeparam name="V">The value type</typeparam>
     /// <typeparam name="TJVMV">The JVM type of <typeparamref name="V"/></typeparam>
-    public class ValueAndTimestamp<V, TJVMV> : IGenericSerDesFactoryApplier
+    public class ValueAndTimestamp<V, TJVMV> : IGenericSerDesFactoryApplier, IDisposable
     {
         readonly Org.Apache.Kafka.Streams.State.ValueAndTimestamp<TJVMV> _valueAndTimestamp;
         ISerDes<V, TJVMV> _valueSerDes;
@@ -39,11 +42,45 @@ namespace MASES.KNet.Streams.State
             _valueAndTimestamp = valueAndTimestamp;
         }
 
+        #region IDisposable
+
+        volatile int _disposed; // 0 = live, 1 = disposed
+        /// <summary>
+        /// Test if this instance was disposed
+        /// </summary>
+        /// <exception cref="ObjectDisposedException">When this instance was disposed</exception>
+        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
+        protected void CheckDisposed() { if (_disposed != 0) throw new ObjectDisposedException(GetType().Name); }
+        /// <inheritdoc cref="IDisposable.Dispose"/>
+        public void Dispose()
+        {
+            // Dispose of unmanaged resources.
+            Dispose(true);
+            // Suppress finalization.
+            GC.SuppressFinalize(this);
+        }
+        /// <summary>
+        /// Implements the pattern described in https://learn.microsoft.com/en-en/dotnet/standard/garbage-collection/implementing-dispose
+        /// </summary>
+        /// <param name="disposing">The disposing parameter is a <see langword="bool"/> that indicates whether the method call comes from a <see cref="IDisposable.Dispose"/> method (its value is <see langword="true"/>) or from a finalizer (its value is <see langword="false"/>)</param>
+        protected virtual void Dispose(bool disposing)
+        {
+            if (Interlocked.Exchange(ref _disposed, 1) != 0)
+                return;
+
+            if (disposing)
+            {
+                _valueAndTimestamp?.Dispose();
+            }
+        }
+
+        #endregion
+
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/state/ValueAndTimestamp.html#timestamp()"/>
         /// </summary>
         /// <returns><see cref="long"/></returns>
-        public long Timestamp => _valueAndTimestamp.Timestamp();
+        public long Timestamp { get { CheckDisposed(); return _valueAndTimestamp.Timestamp(); } }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/state/ValueAndTimestamp.html#timestamp()"/>
         /// </summary>
@@ -57,6 +94,7 @@ namespace MASES.KNet.Streams.State
         {
             get
             {
+                CheckDisposed();
                 _valueSerDes ??= _factory?.BuildKeySerDes<V, TJVMV>();
                 var vv = _valueAndTimestamp.Value();
                 return _valueSerDes.Deserialize(null, vv);

@@ -17,6 +17,8 @@
 */
 
 using MASES.KNet.Serialization;
+using System;
+using System.Threading;
 
 namespace MASES.KNet.Streams.Kstream
 {
@@ -27,7 +29,7 @@ namespace MASES.KNet.Streams.Kstream
     /// <typeparam name="V"></typeparam>
     /// <typeparam name="TJVMK">The JVM type of <typeparamref name="K"/></typeparam>
     /// <typeparam name="TJVMV">The JVM type of <typeparamref name="V"/></typeparam>
-    public class KGroupedTable<K, V, TJVMK, TJVMV> : IGenericSerDesFactoryApplier
+    public class KGroupedTable<K, V, TJVMK, TJVMV> : IGenericSerDesFactoryApplier, IDisposable
     {
         Org.Apache.Kafka.Streams.Kstream.KGroupedTable<TJVMK, TJVMV> _inner;
 
@@ -39,6 +41,40 @@ namespace MASES.KNet.Streams.Kstream
             _factory = factory;
             _inner = inner;
         }
+
+        #region IDisposable
+
+        volatile int _disposed; // 0 = live, 1 = disposed
+        /// <summary>
+        /// Test if this instance was disposed
+        /// </summary>
+        /// <exception cref="ObjectDisposedException">When this instance was disposed</exception>
+        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
+        protected void CheckDisposed() { if (_disposed != 0) throw new ObjectDisposedException(GetType().Name); }
+        /// <inheritdoc cref="IDisposable.Dispose"/>
+        public void Dispose()
+        {
+            // Dispose of unmanaged resources.
+            Dispose(true);
+            // Suppress finalization.
+            GC.SuppressFinalize(this);
+        }
+        /// <summary>
+        /// Implements the pattern described in https://learn.microsoft.com/en-en/dotnet/standard/garbage-collection/implementing-dispose
+        /// </summary>
+        /// <param name="disposing">The disposing parameter is a <see langword="bool"/> that indicates whether the method call comes from a <see cref="IDisposable.Dispose"/> method (its value is <see langword="true"/>) or from a finalizer (its value is <see langword="false"/>)</param>
+        protected virtual void Dispose(bool disposing)
+        {
+            if (Interlocked.Exchange(ref _disposed, 1) != 0)
+                return;
+
+            if (disposing)
+            {
+                _inner?.Dispose();
+            }
+        }
+
+        #endregion
 
         /// <summary>
         /// Converter from <see cref="KGroupedTable{K, V,TJVMK, TJVMV}"/> to <see cref="Org.Apache.Kafka.Streams.Kstream.KGroupedTable{TJVMK, TJVMV}"/>
@@ -61,6 +97,7 @@ namespace MASES.KNet.Streams.Kstream
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KTable"/></returns>
         public KTable<K, VR, TJVMK, TJVMVR> Aggregate<VR, TJVMVR, Arg1objectSuperK, Arg1objectSuperV, Arg2objectSuperK, Arg2objectSuperV>(Initializer<VR, TJVMVR> arg0, Aggregator<Arg1objectSuperK, Arg1objectSuperV, VR, TJVMK, TJVMV, TJVMVR> arg1, Aggregator<Arg2objectSuperK, Arg2objectSuperV, VR, TJVMK, TJVMV, TJVMVR> arg2, Materialized<K, VR, TJVMK, TJVMVR> arg3) where Arg1objectSuperK : K where Arg1objectSuperV : V where Arg2objectSuperK : K where Arg2objectSuperV : V
         {
+            CheckDisposed();
             if (arg0 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
             if (arg1 is IGenericSerDesFactoryApplier applier1) applier1.Factory = _factory;
             if (arg2 is IGenericSerDesFactoryApplier applier2) applier2.Factory = _factory;
@@ -84,6 +121,7 @@ namespace MASES.KNet.Streams.Kstream
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KTable"/></returns>
         public KTable<K, VR, TJVMK, TJVMVR> Aggregate<VR, TJVMVR, Arg1objectSuperK, Arg1objectSuperV, Arg2objectSuperK, Arg2objectSuperV>(Initializer<VR, TJVMVR> arg0, Aggregator<Arg1objectSuperK, Arg1objectSuperV, VR, TJVMK, TJVMV, TJVMVR> arg1, Aggregator<Arg2objectSuperK, Arg2objectSuperV, VR, TJVMK, TJVMV, TJVMVR> arg2, Org.Apache.Kafka.Streams.Kstream.Named arg3, Materialized<K, VR, TJVMK, TJVMVR> arg4) where Arg1objectSuperK : K where Arg1objectSuperV : V where Arg2objectSuperK : K where Arg2objectSuperV : V
         {
+            CheckDisposed();
             if (arg0 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
             if (arg1 is IGenericSerDesFactoryApplier applier1) applier1.Factory = _factory;
             if (arg2 is IGenericSerDesFactoryApplier applier2) applier2.Factory = _factory;
@@ -106,6 +144,7 @@ namespace MASES.KNet.Streams.Kstream
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KTable"/></returns>
         public KTable<K, VR, TJVMK, TJVMVR> Aggregate<VR, TJVMVR, Arg1objectSuperK, Arg1objectSuperV, Arg2objectSuperK, Arg2objectSuperV>(Initializer<VR, TJVMVR> arg0, Aggregator<Arg1objectSuperK, Arg1objectSuperV, VR, TJVMK, TJVMV, TJVMVR> arg1, Aggregator<Arg2objectSuperK, Arg2objectSuperV, VR, TJVMK, TJVMV, TJVMVR> arg2, Org.Apache.Kafka.Streams.Kstream.Named arg3) where Arg1objectSuperK : K where Arg1objectSuperV : V where Arg2objectSuperK : K where Arg2objectSuperV : V
         {
+            CheckDisposed();
             if (arg0 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
             if (arg1 is IGenericSerDesFactoryApplier applier1) applier1.Factory = _factory;
             if (arg2 is IGenericSerDesFactoryApplier applier2) applier2.Factory = _factory;
@@ -126,6 +165,7 @@ namespace MASES.KNet.Streams.Kstream
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KTable"/></returns>
         public KTable<K, VR, TJVMK, TJVMVR> Aggregate<VR, TJVMVR, Arg1objectSuperK, Arg1objectSuperV, Arg2objectSuperK, Arg2objectSuperV>(Initializer<VR, TJVMVR> arg0, Aggregator<Arg1objectSuperK, Arg1objectSuperV, VR, TJVMK, TJVMV, TJVMVR> arg1, Aggregator<Arg2objectSuperK, Arg2objectSuperV, VR, TJVMK, TJVMV, TJVMVR> arg2) where Arg1objectSuperK : K where Arg1objectSuperV : V where Arg2objectSuperK : K where Arg2objectSuperV : V
         {
+            CheckDisposed();
             if (arg0 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
             if (arg1 is IGenericSerDesFactoryApplier applier1) applier1.Factory = _factory;
             if (arg2 is IGenericSerDesFactoryApplier applier2) applier2.Factory = _factory;
@@ -137,6 +177,7 @@ namespace MASES.KNet.Streams.Kstream
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KTable"/></returns>
         public KTable<K, long, TJVMK, Java.Lang.Long> Count()
         {
+            CheckDisposed();
             return new KTable<K, long, TJVMK, Java.Lang.Long>(_factory, _inner.Count());
         }
         /// <summary>
@@ -146,6 +187,7 @@ namespace MASES.KNet.Streams.Kstream
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KTable"/></returns>
         public KTable<K, long, TJVMK, Java.Lang.Long> Count(CountingMaterialized<K, TJVMK> arg0)
         {
+            CheckDisposed();
             if (arg0 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
             return new KTable<K, long, TJVMK, Java.Lang.Long>(_factory, _inner.Count(arg0));
         }
@@ -157,6 +199,7 @@ namespace MASES.KNet.Streams.Kstream
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KTable"/></returns>
         public KTable<K, long, TJVMK, Java.Lang.Long> Count(Org.Apache.Kafka.Streams.Kstream.Named arg0, CountingMaterialized<K, TJVMK> arg1)
         {
+            CheckDisposed();
             if (arg1 is IGenericSerDesFactoryApplier applier1) applier1.Factory = _factory;
             return new KTable<K, long, TJVMK, Java.Lang.Long>(_factory, _inner.Count(arg0, arg1));
         }
@@ -167,6 +210,7 @@ namespace MASES.KNet.Streams.Kstream
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KTable"/></returns>
         public KTable<K, long, TJVMK, Java.Lang.Long> Count(Org.Apache.Kafka.Streams.Kstream.Named arg0)
         {
+            CheckDisposed();
             return new KTable<K, long, TJVMK, Java.Lang.Long>(_factory, _inner.Count(arg0));
         }
         /// <summary>
@@ -178,6 +222,7 @@ namespace MASES.KNet.Streams.Kstream
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KTable"/></returns>
         public KTable<K, V, TJVMK, TJVMV> Reduce(Reducer<V, TJVMV> arg0, Reducer<V, TJVMV> arg1, Materialized<K, V, TJVMK, TJVMV> arg2)
         {
+            CheckDisposed();
             if (arg0 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
             if (arg1 is IGenericSerDesFactoryApplier applier1) applier1.Factory = _factory;
             if (arg2 is IGenericSerDesFactoryApplier applier2) applier2.Factory = _factory;
@@ -193,6 +238,7 @@ namespace MASES.KNet.Streams.Kstream
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KTable"/></returns>
         public KTable<K, V, TJVMK, TJVMV> Reduce(Reducer<V, TJVMV> arg0, Reducer<V, TJVMV> arg1, Org.Apache.Kafka.Streams.Kstream.Named arg2, Materialized<K, V, TJVMK, TJVMV> arg3)
         {
+            CheckDisposed();
             if (arg0 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
             if (arg1 is IGenericSerDesFactoryApplier applier1) applier1.Factory = _factory;
             if (arg3 is IGenericSerDesFactoryApplier applier3) applier3.Factory = _factory;
@@ -206,6 +252,7 @@ namespace MASES.KNet.Streams.Kstream
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KTable"/></returns>
         public KTable<K, V, TJVMK, TJVMV> Reduce(Reducer<V, TJVMV> arg0, Reducer<V, TJVMV> arg1)
         {
+            CheckDisposed();
             if (arg0 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
             if (arg1 is IGenericSerDesFactoryApplier applier1) applier1.Factory = _factory;
             return new KTable<K, V, TJVMK, TJVMV>(_factory, _inner.Reduce(arg0, arg1));

@@ -19,6 +19,7 @@
 using Java.Util;
 using MASES.KNet.Consumer;
 using MASES.KNet.Producer;
+using System.Threading;
 
 namespace MASES.KNet.Streams
 {
@@ -51,7 +52,7 @@ namespace MASES.KNet.Streams
             Properties properties = new();
             properties.PutAll(arg0);
 
-            var consumer =  new KNetConsumer<byte[], byte[], byte[], byte[]>(properties);
+            var consumer = new KNetConsumer<byte[], byte[], byte[], byte[]>(properties);
             _consumers.Add(consumer);
             return consumer;
         }
@@ -86,37 +87,29 @@ namespace MASES.KNet.Streams
             return consumer;
         }
 
-        object _disposedLock = new object();
-        bool _disposed = false;
+        volatile int _disposed; // 0 = live, 1 = disposed
         /// <inheritdoc/>
         protected override void Dispose(bool disposing)
         {
-            lock (_disposedLock)
+            if (Interlocked.Exchange(ref _disposed, 1) == 0)
             {
-                if (!_disposed)
+                foreach (var item in _admins)
                 {
-                    try
-                    {
-                        foreach (var item in _admins)
-                        {
-                            item?.Dispose();
-                        }
-                        _admins.Clear();
-
-                        foreach (var item in _consumers)
-                        {
-                            item?.Dispose();
-                        }
-                        _consumers.Clear();
-
-                        foreach (var item in _producers)
-                        {
-                            item?.Dispose();
-                        }
-                        _producers.Clear();
-                    }
-                    finally { _disposed = true; }
+                    item?.Dispose();
                 }
+                _admins.Clear();
+
+                foreach (var item in _consumers)
+                {
+                    item?.Dispose();
+                }
+                _consumers.Clear();
+
+                foreach (var item in _producers)
+                {
+                    item?.Dispose();
+                }
+                _producers.Clear();
             }
             base.Dispose(disposing);
         }

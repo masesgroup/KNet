@@ -226,7 +226,6 @@
     "org.apache.kafka.connect.storage.HeaderConverter",
     "org.apache.kafka.connect.storage.SimpleHeaderConverter",
     "org.apache.kafka.connect.util.SharedTopicAdmin",
-    "org.apache.kafka.streams.kstream.NamedOperation",
     "org.apache.kafka.streams.kstream.TransformerSupplier",
     "org.apache.kafka.streams.kstream.ValueMapperWithKeySupplier",
     "org.apache.kafka.streams.kstream.ValueTransformerSupplier",

@@ -20,13 +20,14 @@ using MASES.KNet.Serialization;
 using MASES.KNet.Streams.Processor;
 using MASES.KNet.Streams.State;
 using System;
+using System.Threading;
 
 namespace MASES.KNet.Streams
 {
     /// <summary>
     /// KNet extension of <see cref="Org.Apache.Kafka.Streams.KafkaStreams"/>
     /// </summary>
-    public class KNetStreams : IGenericSerDesFactoryApplier
+    public class KNetStreams : IGenericSerDesFactoryApplier, IDisposable
     {
         readonly Java.Util.Properties _properties;
         readonly Org.Apache.Kafka.Streams.KafkaStreams _inner;
@@ -90,6 +91,41 @@ namespace MASES.KNet.Streams
             _inner = new Org.Apache.Kafka.Streams.KafkaStreams(arg0, _properties);
             _factory = arg1;
         }
+        #endregion
+
+        #region IDisposable
+
+        volatile int _disposed; // 0 = live, 1 = disposed
+        /// <summary>
+        /// Test if this instance was disposed
+        /// </summary>
+        /// <exception cref="ObjectDisposedException">When this instance was disposed</exception>
+        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
+        protected void CheckDisposed() { if (_disposed != 0) throw new ObjectDisposedException(GetType().Name); }
+        /// <inheritdoc cref="IDisposable.Dispose"/>
+        public void Dispose()
+        {
+            // Dispose of unmanaged resources.
+            Dispose(true);
+            // Suppress finalization.
+            GC.SuppressFinalize(this);
+        }
+        /// <summary>
+        /// Implements the pattern described in https://learn.microsoft.com/en-en/dotnet/standard/garbage-collection/implementing-dispose
+        /// </summary>
+        /// <param name="disposing">The disposing parameter is a <see langword="bool"/> that indicates whether the method call comes from a <see cref="IDisposable.Dispose"/> method (its value is <see langword="true"/>) or from a finalizer (its value is <see langword="false"/>)</param>
+        protected virtual void Dispose(bool disposing)
+        {
+            if (Interlocked.Exchange(ref _disposed, 1) != 0)
+                return;
+
+            if (disposing)
+            {
+                _properties?.Dispose();
+                _inner?.Dispose();
+            }
+        }
+
         #endregion
 
         /// <summary>
