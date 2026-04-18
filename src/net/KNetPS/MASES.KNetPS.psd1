@@ -8,7 +8,7 @@
 
 RootModule = 'MASES.KNetPS.psm1'
 
-ModuleVersion = '3.2.2'
+ModuleVersion = '3.2.3'
 
 CompatiblePSEditions = 'Desktop', 'Core'
 
@@ -118,6 +118,8 @@ AliasesToExport = @()
 PrivateData = @{
 
     PSData = @{
+
+        Prerelease = 'rc'
 
         Tags = @('KNetPS', 'PSEdition_Core', 'PSEdition_Desktop', 'Windows', 'Linux', 'Apache', 'Kafka', 'ApacheKafka', 'Admin', 'Consumer', 'Producer')
 
