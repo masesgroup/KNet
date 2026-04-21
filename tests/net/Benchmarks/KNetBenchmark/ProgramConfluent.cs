@@ -228,7 +228,6 @@ namespace MASES.KNet.Benchmark
                     consumerBuilder.SetKeyDeserializer(confluentKeyDeserializer);
                     consumerBuilder.SetValueDeserializer(confluentValueDeserializer);
                 }
-                consumerBuilder.SetPartitionsAssignedHandler(PartitionsAssignedHandler);
 
                 confluentConsumer = consumerBuilder
                     .SetLogHandler((_, msg) =>

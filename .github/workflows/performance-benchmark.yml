@@ -294,37 +294,37 @@ jobs:
       # ── Produce/Consume benchmark ─────────────────────────────────────────
       - name: Run KNetBenchmark (Produce/Consume) [${{ matrix.framework }}]
         run: |
-          dotnet "${{ github.workspace }}/bin/${{ matrix.framework }}/KNetBenchmark.dll"          \
-            -Log4JConfiguration "${{ github.workspace }}/bin/${{ matrix.framework }}/log4j2.yaml" \
+          dotnet "${{ github.workspace }}/bin/${{ matrix.framework }}/KNetBenchmark.dll"           \
+            -Log4JConfiguration "${{ github.workspace }}/bin/${{ matrix.framework }}/log4j2.yaml"  \
             -Server               localhost:9092                                                   \
-            -ResultsPath          "$RESULTS_DIR"                                                  \
+            -ResultsPath          "$RESULTS_DIR"                                                   \
             -ShowFinalResults                                                                      \
             -ShowIntermediateResults                                                               \
-            -Repeat               ${{ env.BENCH_REPEAT }}                                         \
-            -MinPacketsToExchange ${{ env.BENCH_MIN_PKT }}                                        \
-            -MaxPacketsToExchange ${{ env.BENCH_MAX_PKT }}                                        \
-            -MinPacketLength      ${{ env.BENCH_MIN_LEN }}                                        \
-            -MaxPacketLength      ${{ env.BENCH_MAX_LEN }}                                        \
-            -NoAcks                                                                               \
-            -UseKNetProducer                                                                      \
+            -Repeat               ${{ env.BENCH_REPEAT }}                                          \
+            -MinPacketsToExchange ${{ env.BENCH_MIN_PKT }}                                         \
+            -MaxPacketsToExchange ${{ env.BENCH_MAX_PKT }}                                         \
+            -MinPacketLength      ${{ env.BENCH_MIN_LEN }}                                         \
+            -MaxPacketLength      ${{ env.BENCH_MAX_LEN }}                                         \
+            -NoAcks                                                                                \
+            -UseKNetProducer                                                                       \
             -UseKNetConsumer
 
       # ── Roundtrip benchmark ───────────────────────────────────────────────
       - name: Run KNetRoundTripBenchmark [${{ matrix.framework }}]
         run: |
-          dotnet "${{ github.workspace }}/bin/${{ matrix.framework }}/KNetRoundTripBenchmark.dll"    \
-            -Log4JConfiguration "${{ github.workspace }}/bin/${{ matrix.framework }}/log4j2.yaml"   \
-            -Server               localhost:9092                                                     \
-            -ResultsPath          "$RESULTS_DIR"                                                    \
-            -ShowFinalResults                                                                        \
-            -ShowIntermediateResults                                                                 \
-            -Repeat               ${{ env.BENCH_REPEAT }}                                           \
-            -MinPacketsToExchange ${{ env.BENCH_MIN_PKT }}                                          \
-            -MaxPacketsToExchange ${{ env.BENCH_MAX_PKT }}                                          \
-            -MinPacketLength      ${{ env.BENCH_MIN_LEN }}                                          \
-            -MaxPacketLength      ${{ env.BENCH_MAX_LEN }}                                          \
-            -NoAcks                                                                                 \
-            -UseKNetProducer                                                                        \
+          dotnet "${{ github.workspace }}/bin/${{ matrix.framework }}/KNetRoundTripBenchmark.dll"  \
+            -Log4JConfiguration "${{ github.workspace }}/bin/${{ matrix.framework }}/log4j2.yaml"  \
+            -Server               localhost:9092                                                   \
+            -ResultsPath          "$RESULTS_DIR"                                                   \
+            -ShowFinalResults                                                                      \
+            -ShowIntermediateResults                                                               \
+            -Repeat               ${{ env.BENCH_REPEAT }}                                          \
+            -MinPacketsToExchange ${{ env.BENCH_MIN_PKT }}                                         \
+            -MaxPacketsToExchange ${{ env.BENCH_MAX_PKT }}                                         \
+            -MinPacketLength      ${{ env.BENCH_MIN_LEN }}                                         \
+            -MaxPacketLength      ${{ env.BENCH_MAX_LEN }}                                         \
+            -NoAcks                                                                                \
+            -UseKNetProducer                                                                       \
             -UseKNetConsumer
 
       # ── Upload CSVs — artifact name includes framework to avoid collisions ─
