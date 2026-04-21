@@ -36,9 +36,8 @@ concurrency:
   group: '${{ github.workflow }}-${{ github.ref }}'
   cancel-in-progress: true
 
-# ── Shared env defaults (workflow_dispatch overrides, schedule falls back) ──
 env:
-  BENCH_REPEAT:  ${{ inputs.Repeat                || '1'     }}
+  BENCH_REPEAT:  ${{ inputs.Repeat               || '1'      }}
   BENCH_MIN_PKT: ${{ inputs.MinPacketsToExchange  || '1000'   }}
   BENCH_MAX_PKT: ${{ inputs.MaxPacketsToExchange  || '10000'  }}
   BENCH_MIN_LEN: ${{ inputs.MinPacketLength       || '100'    }}
@@ -47,12 +46,11 @@ env:
 jobs:
 
   # ────────────────────────────────────────────────────────────────────────────
-  # 1. Build benchmark projects on Linux (mirrors build_container_knet pattern)
+  # 1. Build — Windows runner, identical to build_common.yaml build_windows
   # ────────────────────────────────────────────────────────────────────────────
   build_benchmarks:
     name: Build benchmark projects
     runs-on: windows-latest
-
     steps:
       - uses: actions/checkout@v6
         with:
@@ -62,10 +60,10 @@ jobs:
       - uses: actions/setup-dotnet@v5
         with:
           dotnet-version: |
+            8.x
             9.x
             10.x
 
-      # Pre-compile KNet (same flag as build_container_knet)
       - name: Pre compile
         run: dotnet build --no-incremental --configuration Release /p:Platform="Any CPU" /p:NoWarn="0108%3B1030%3B0618" src\net\KNet\KNet.csproj
         env:
@@ -81,20 +79,17 @@ jobs:
       - name: Create JARs
         run: mvn --file ./src/jvm/knet/pom.xml --no-transfer-progress package
 
-      - name: Compile tests
+      - name: Compile tests (includes benchmark projects)
         run: dotnet build --no-incremental --configuration Release /p:Platform="Any CPU" /p:NoWarn="0108%3B1030%3B0618" tests\net\KNetTest.sln
         env:
           GITHUB_TEST_PREPARATION: true
 
-      # Copy support config files (log4j2.yaml, server.properties, …)
       - name: Prepare configuration files
         run: |
-          Copy-Item .github\workflows\support\* -Destination bin\net462\ -Force
-          Copy-Item .github\workflows\support\* -Destination bin\net8.0\ -Force
-          Copy-Item .github\workflows\support\* -Destination bin\net9.0\ -Force
+          Copy-Item .github\workflows\support\* -Destination bin\net8.0\  -Force
+          Copy-Item .github\workflows\support\* -Destination bin\net9.0\  -Force
           Copy-Item .github\workflows\support\* -Destination bin\net10.0\ -Force
 
-      # Save compiled output to cache so run_benchmarks can restore it
       - name: Cache bin net8.0
         uses: actions/cache/save@v5
         with:
@@ -116,6 +111,9 @@ jobs:
           path: ./bin/net10.0/
           key: KNetBenchmark_${{ github.run_number }}_${{ github.run_attempt }}_net10.0_${{ github.sha }}
 
+  # ────────────────────────────────────────────────────────────────────────────
+  # 2. Docker image — identical to build_common.yaml build_container_knet
+  # ────────────────────────────────────────────────────────────────────────────
   build_container_knet:
     runs-on: ubuntu-latest
     outputs:
@@ -126,9 +124,7 @@ jobs:
       contents: read
       attestations: write
       artifact-metadata: write
-    # Steps represent a sequence of tasks that will be executed as part of the job
-    steps:    
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+    steps:
       - uses: actions/checkout@v6
         with:
           fetch-depth: '1'
@@ -144,20 +140,20 @@ jobs:
         run: dotnet build --no-incremental --configuration Release /p:Platform="Any CPU" /p:NoWarn="0108%3B1030%3B0618" src/net/KNet/KNet.csproj
         env:
           GITHUB_SIMPLIFIED_GENERATION: true
-          
+
       - name: Set up Apache Maven Central
         uses: actions/setup-java@v5
-        with: # running setup-java again overwrites the settings.xml
+        with:
           distribution: temurin
           java-version: 17
-          cache: 'maven'
+          cache: maven
 
       - name: Create Jars
         run: mvn --file ./src/jvm/knet/pom.xml --no-transfer-progress package
-        
+
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v4
-        
+
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v4
 
@@ -190,29 +186,30 @@ jobs:
 
       - name: Attest GitHub
         uses: actions/attest-build-provenance@v4
-        id: attest
         with:
           subject-name: ghcr.io/${{ github.repository_owner }}/knet
           subject-digest: ${{ steps.push.outputs.digest }}
           push-to-registry: true
 
       - name: Extract branch name
-        run: |
-          echo "GITHUB_REF_NAME_FOR_DOCKER=$(echo ${{ github.ref_name }} | tr "/" -)" >> $GITHUB_ENV
+        run: echo "GITHUB_REF_NAME_FOR_DOCKER=$(echo ${{ github.ref_name }} | tr '/' '-')" >> $GITHUB_ENV
         shell: bash
 
   # ────────────────────────────────────────────────────────────────────────────
-  # 2. Run benchmarks against the KNet Docker Kafka service (KRaft, no ZK)
-  #    Mirrors the execute_tests_linux pattern from build_common.yaml
+  # 3. Run benchmarks — matrix on framework, one Kafka service per leg
   # ────────────────────────────────────────────────────────────────────────────
   run_benchmarks:
-    name: Run benchmarks
+    name: Benchmark (${{ matrix.framework }})
     needs: [build_benchmarks, build_container_knet]
     runs-on: ubuntu-latest
 
+    strategy:
+      fail-fast: false        # let all legs finish even if one fails
+      matrix:
+        framework: ['net8.0', 'net9.0', 'net10.0']
+
     services:
       kafka:
-        # KNet itself acts as the Kafka broker (KRaft standalone mode)
         image: ghcr.io/${{ github.repository_owner }}/knet:${{ needs.build_container_knet.outputs.GITHUB_REF_NAME_FOR_DOCKER }}
         credentials:
           username: ${{ github.actor }}
@@ -228,73 +225,119 @@ jobs:
       RESULTS_DIR: ${{ github.workspace }}/benchmark-results
 
     steps:
-      - name: Restore bin net9.0 from cache
+      # ── .NET SDK for this matrix leg (mirrors build_common.yaml pattern) ───
+      - uses: actions/setup-dotnet@v5
+        if: matrix.framework == 'net8.0'
+        with:
+          dotnet-version: 8.x
+
+      - uses: actions/setup-dotnet@v5
+        if: matrix.framework == 'net9.0'
+        with:
+          dotnet-version: 9.x
+
+      - uses: actions/setup-dotnet@v5
+        if: matrix.framework == 'net10.0'
+        with:
+          dotnet-version: 10.x
+
+      # ── Restore compiled binaries from build_benchmarks ───────────────────
+      - name: Restore bin ${{ matrix.framework }} from cache
         uses: actions/cache/restore@v5
         with:
           fail-on-cache-miss: true
           enableCrossOsArchive: true
-          path: ./bin/net9.0/
-          key: KNetBenchmark_${{ github.run_number }}_${{ github.run_attempt }}_net9.0_${{ github.sha }}
+          path: ./bin/${{ matrix.framework }}/
+          key: KNetBenchmark_${{ github.run_number }}_${{ github.run_attempt }}_${{ matrix.framework }}_${{ github.sha }}
 
       - name: Create results directory
         run: mkdir -p "$RESULTS_DIR"
 
-      - name: Wait for Kafka (KNet KRaft)
+      # ── Robust Kafka readiness check ──────────────────────────────────────
+      # nc -z only confirms TCP port is open; the broker resets the connection
+      # immediately while still initialising (APIVERSION_QUERY state).
+      # This script sends a minimal ApiVersions v0 Kafka request and waits
+      # until the broker replies before handing off to the benchmarks.
+      - name: Wait for Kafka broker (ApiVersions handshake)
         run: |
-          echo "Waiting for Kafka on localhost:9092..."
-          for i in $(seq 1 30); do
-            nc -z localhost 9092 2>/dev/null && echo "Kafka is ready." && break
-            echo "  attempt $i/30 …"
-            sleep 5
-          done
+          python3 - <<'PYEOF'
+          import socket, struct, sys, time
 
-      # ── Produce/Consume benchmark ──────────────────────────────────────────
-      - name: Run KNetBenchmark (Produce/Consume)
+          HOST, PORT, ATTEMPTS, DELAY = 'localhost', 9092, 40, 5
+
+          # Minimal valid ApiVersions v0 request (Kafka wire protocol)
+          client_id = b'readycheck'
+          payload = (
+              struct.pack('>hhi', 18, 0, 1) +           # ApiKey=18, ApiVersion=0, CorrelationId=1
+              struct.pack('>h', len(client_id)) + client_id
+          )
+          request = struct.pack('>i', len(payload)) + payload
+
+          for attempt in range(1, ATTEMPTS + 1):
+              try:
+                  s = socket.create_connection((HOST, PORT), timeout=5)
+                  s.sendall(request)
+                  # Any 4-byte response header means the broker accepted the handshake
+                  header = s.recv(4)
+                  s.close()
+                  if len(header) == 4:
+                      print(f'Kafka broker ready (attempt {attempt})')
+                      sys.exit(0)
+              except Exception as exc:
+                  print(f'Attempt {attempt}/{ATTEMPTS}: {exc}')
+              time.sleep(DELAY)
+
+          print('ERROR: Kafka broker not ready after timeout')
+          sys.exit(1)
+          PYEOF
+
+      # ── Produce/Consume benchmark ─────────────────────────────────────────
+      - name: Run KNetBenchmark (Produce/Consume) [${{ matrix.framework }}]
         run: |
-          dotnet "${{ github.workspace }}/bin/net9.0/KNetBenchmark.dll"          \
-            -Log4JConfiguration "${{ github.workspace }}/bin/net9.0/log4j2.yaml" \
-            -Server               localhost:9092                                 \
-            -ResultsPath          "$RESULTS_DIR"                                 \
-            -ShowFinalResults                                                    \
-            -ShowIntermediateResults                                             \
-            -Repeat               ${{ env.BENCH_REPEAT }}                        \
-            -MinPacketsToExchange ${{ env.BENCH_MIN_PKT }}                       \
-            -MaxPacketsToExchange ${{ env.BENCH_MAX_PKT }}                       \
-            -MinPacketLength      ${{ env.BENCH_MIN_LEN }}                       \
-            -MaxPacketLength      ${{ env.BENCH_MAX_LEN }}                       \
-            -NoAcks                                                              \
-            -UseKNetProducer                                                     \
+          dotnet "${{ github.workspace }}/bin/${{ matrix.framework }}/KNetBenchmark.dll"          \
+            -Log4JConfiguration "${{ github.workspace }}/bin/${{ matrix.framework }}/log4j2.yaml" \
+            -Server               localhost:9092                                                   \
+            -ResultsPath          "$RESULTS_DIR"                                                  \
+            -ShowFinalResults                                                                      \
+            -ShowIntermediateResults                                                               \
+            -Repeat               ${{ env.BENCH_REPEAT }}                                         \
+            -MinPacketsToExchange ${{ env.BENCH_MIN_PKT }}                                        \
+            -MaxPacketsToExchange ${{ env.BENCH_MAX_PKT }}                                        \
+            -MinPacketLength      ${{ env.BENCH_MIN_LEN }}                                        \
+            -MaxPacketLength      ${{ env.BENCH_MAX_LEN }}                                        \
+            -NoAcks                                                                               \
+            -UseKNetProducer                                                                      \
             -UseKNetConsumer
 
-      # ── Roundtrip benchmark ────────────────────────────────────────────────
-      - name: Run KNetRoundTripBenchmark
+      # ── Roundtrip benchmark ───────────────────────────────────────────────
+      - name: Run KNetRoundTripBenchmark [${{ matrix.framework }}]
         run: |
-          dotnet "${{ github.workspace }}/bin/net9.0/KNetRoundTripBenchmark.dll" \
-            -Log4JConfiguration "${{ github.workspace }}/bin/net9.0/log4j2.yaml" \
-            -Server               localhost:9092                                 \
-            -ResultsPath          "$RESULTS_DIR"                                 \
-            -ShowFinalResults                                                    \
-            -ShowIntermediateResults                                             \
-            -Repeat               ${{ env.BENCH_REPEAT }}                        \
-            -MinPacketsToExchange ${{ env.BENCH_MIN_PKT }}                       \
-            -MaxPacketsToExchange ${{ env.BENCH_MAX_PKT }}                       \
-            -MinPacketLength      ${{ env.BENCH_MIN_LEN }}                       \
-            -MaxPacketLength      ${{ env.BENCH_MAX_LEN }}                       \
-            -NoAcks                                                              \
-            -UseKNetProducer                                                     \
+          dotnet "${{ github.workspace }}/bin/${{ matrix.framework }}/KNetRoundTripBenchmark.dll"    \
+            -Log4JConfiguration "${{ github.workspace }}/bin/${{ matrix.framework }}/log4j2.yaml"   \
+            -Server               localhost:9092                                                     \
+            -ResultsPath          "$RESULTS_DIR"                                                    \
+            -ShowFinalResults                                                                        \
+            -ShowIntermediateResults                                                                 \
+            -Repeat               ${{ env.BENCH_REPEAT }}                                           \
+            -MinPacketsToExchange ${{ env.BENCH_MIN_PKT }}                                          \
+            -MaxPacketsToExchange ${{ env.BENCH_MAX_PKT }}                                          \
+            -MinPacketLength      ${{ env.BENCH_MIN_LEN }}                                          \
+            -MaxPacketLength      ${{ env.BENCH_MAX_LEN }}                                          \
+            -NoAcks                                                                                 \
+            -UseKNetProducer                                                                        \
             -UseKNetConsumer
 
-      # ── Upload raw CSVs as artifact (90-day retention) ─────────────────────
-      - name: Upload raw benchmark results
+      # ── Upload CSVs — artifact name includes framework to avoid collisions ─
+      - name: Upload raw benchmark results [${{ matrix.framework }}]
         uses: actions/upload-artifact@v7
         if: always()
         with:
-          name: benchmark-csv-${{ github.run_number }}
+          name: benchmark-csv-${{ github.run_number }}-${{ matrix.framework }}
           path: ${{ env.RESULTS_DIR }}/**
           retention-days: 90
 
   # ────────────────────────────────────────────────────────────────────────────
-  # 3. Parse CSVs → update performance.md → open a PR
+  # 4. Parse CSVs from ALL matrix legs → update performance.md → open PR
   # ────────────────────────────────────────────────────────────────────────────
   update_docs:
     name: Update performance.md and open PR
@@ -309,11 +352,16 @@ jobs:
         with:
           fetch-depth: '0'
 
-      - name: Download benchmark CSV results
+      # Download all per-framework artifacts into a single flat directory
+      - name: Download all benchmark CSV results
         uses: actions/download-artifact@v4
         with:
-          name: benchmark-csv-${{ github.run_number }}
+          pattern: benchmark-csv-${{ github.run_number }}-*
+          merge-multiple: true      # flatten all legs into a single path
           path: ./benchmark-results
+
+      - name: List downloaded CSVs (debug)
+        run: find ./benchmark-results -name '*.csv' | sort
 
       # ── Python: parse CSVs, compute ratios, patch the doc ─────────────────
       - name: Parse results and update performance.md
@@ -337,7 +385,7 @@ jobs:
           NOW         = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
           LENGTHS     = [100, 1000, 10000, 100000]
 
-          # ── stats ────────────────────────────────────────────────────────
+          # ── stats ─────────────────────────────────────────────────────────
           def mean(lst):
               return sum(lst) / len(lst) if lst else 0.0
 
@@ -354,56 +402,74 @@ jobs:
                   return "N/A"
 
           def bold_if_knet_better(cell):
-              """Bold the cell when the ratio < 100 (KNet faster)."""
               try:
                   v = float(cell.split(" ")[0].replace(",", "."))
                   return f"**{cell}**" if v < 100 else cell
               except (ValueError, IndexError):
                   return cell
 
-          # ── CSV parsing ──────────────────────────────────────────────────
+          # ── CSV parsing ───────────────────────────────────────────────────
           def read_csv(path):
-              # utf-8-sig strips the BOM that .NET adds
               with open(path, newline="", encoding="utf-8-sig") as f:
                   return list(csv.DictReader(f, delimiter=";"))
 
           def aggregate_bench(csv_files):
               """
-              CSV header: NumPackets;Length;KNETProd;KNETCons;ConfluentProd;ConfluentCons
-              Returns dict[(packets, length)] -> {kp, cp, kc, cc} -> list[float]
+              CSV header (Program.cs):
+                NumPackets;Length;KNETProd;KNETCons;ConfluentProd;ConfluentCons
               """
               agg = {}
+              total_rows = 0
               for path in csv_files:
                   for row in read_csv(path):
                       try:
-                          key = (int(row["NumPackets"]), int(row["Length"]))
+                          pkt = int(row["NumPackets"])
+                          lng = int(row["Length"])
+                          kp  = float(row["KNETProd"]      or 0)
+                          cp  = float(row["ConfluentProd"] or 0)
+                          kc  = float(row["KNETCons"]      or 0)
+                          cc  = float(row["ConfluentCons"] or 0)
+                          # Skip rows where Confluent data is zero (failed run)
+                          if cp == 0 and cc == 0:
+                              print(f"  SKIP (Confluent=0): {path} pkt={pkt} len={lng}")
+                              continue
+                          key = (pkt, lng)
                           d = agg.setdefault(key, {"kp": [], "cp": [], "kc": [], "cc": []})
-                          d["kp"].append(float(row["KNETProd"]      or 0))
-                          d["cp"].append(float(row["ConfluentProd"] or 0))
-                          d["kc"].append(float(row["KNETCons"]      or 0))
-                          d["cc"].append(float(row["ConfluentCons"] or 0))
-                      except (KeyError, ValueError):
-                          pass
+                          d["kp"].append(kp);  d["cp"].append(cp)
+                          d["kc"].append(kc);  d["cc"].append(cc)
+                          total_rows += 1
+                      except (KeyError, ValueError) as e:
+                          print(f"  PARSE ERROR {path}: {e} | row={row}")
+              print(f"aggregate_bench: {total_rows} valid rows from {len(csv_files)} file(s)")
               return agg
 
           def aggregate_roundtrip(csv_files):
               """
-              CSV header: NumPackets;Length;KNETMax;KNETMin;KNETMean;ConfluentMax;ConfluentMin;ConfluentMean
-              Returns dict[(packets, length)] -> {km, cm} -> list[float]
+              CSV header (KNetRoundTripBenchmark/Program.cs):
+                NumPackets;Length;KNETMax;KNETMin;KNETMean;ConfluentMax;ConfluentMin;ConfluentMean
               """
               agg = {}
+              total_rows = 0
               for path in csv_files:
                   for row in read_csv(path):
                       try:
-                          key = (int(row["NumPackets"]), int(row["Length"]))
+                          pkt = int(row["NumPackets"])
+                          lng = int(row["Length"])
+                          km  = float(row["KNETMean"]      or 0)
+                          cm  = float(row["ConfluentMean"] or 0)
+                          if cm == 0:
+                              print(f"  SKIP (ConfluentMean=0): {path} pkt={pkt} len={lng}")
+                              continue
+                          key = (pkt, lng)
                           d = agg.setdefault(key, {"km": [], "cm": []})
-                          d["km"].append(float(row["KNETMean"]      or 0))
-                          d["cm"].append(float(row["ConfluentMean"] or 0))
-                      except (KeyError, ValueError):
-                          pass
+                          d["km"].append(km);  d["cm"].append(cm)
+                          total_rows += 1
+                      except (KeyError, ValueError) as e:
+                          print(f"  PARSE ERROR {path}: {e} | row={row}")
+              print(f"aggregate_roundtrip: {total_rows} valid rows from {len(csv_files)} file(s)")
               return agg
 
-          # ── table builder ────────────────────────────────────────────────
+          # ── table builder ─────────────────────────────────────────────────
           HEADER = (
               "|  | 100 bytes | 1 000 bytes | 10 000 bytes | 100 000 bytes |\n"
               "|:---:\t|:---:\t|:---:\t|:---:\t|:---:\t|\n"
@@ -417,23 +483,32 @@ jobs:
                       d  = agg.get((packets, length), {})
                       kl = d.get(k_key, [])
                       cl = d.get(c_key, [])
-                      cell = bold_if_knet_better(
+                      if not kl or not cl:
+                          cols.append("N/A")
+                          continue
+                      cols.append(bold_if_knet_better(
                           f"{ratio_str(mean(kl), mean(cl))} ({ratio_str(sd(kl), sd(cl))})"
-                      )
-                      cols.append(cell)
+                      ))
                   rows += f"| {packets:,} messages | " + " | ".join(cols) + " |\n"
               return HEADER + rows
 
-          # ── load data ────────────────────────────────────────────────────
+          # ── load data ─────────────────────────────────────────────────────
           bench_csvs     = sorted(glob.glob(f"{RESULTS_DIR}/results_*.csv"))
           roundtrip_csvs = sorted(glob.glob(f"{RESULTS_DIR}/roundtrip_results_*.csv"))
 
+          print(f"Found {len(bench_csvs)} bench CSV(s): {bench_csvs}")
+          print(f"Found {len(roundtrip_csvs)} roundtrip CSV(s): {roundtrip_csvs}")
+
           if not bench_csvs and not roundtrip_csvs:
-              print("No CSV files found – nothing to update.")
+              print("No CSV files found – skipping doc update.")
               exit(0)
 
           bench_agg     = aggregate_bench(bench_csvs)
           roundtrip_agg = aggregate_roundtrip(roundtrip_csvs)
+
+          if not bench_agg and not roundtrip_agg:
+              print("All CSVs contain only failed rows – skipping doc update.")
+              exit(0)
 
           bench_packets     = sorted({k[0] for k in bench_agg})
           roundtrip_packets = sorted({k[0] for k in roundtrip_agg})
@@ -448,11 +523,10 @@ jobs:
               f" · commit `{SHA_SHORT}` · {NOW}\n"
           )
 
-          # ── patch performance.md ─────────────────────────────────────────
+          # ── patch performance.md ──────────────────────────────────────────
           doc = Path(DOCS_PATH).read_text(encoding="utf-8")
 
           def replace_block(doc, start_marker, end_marker, new_table):
-              """Replace the content between start_marker and end_marker."""
               pattern = re.compile(
                   rf"({re.escape(start_marker)})(.*?)({re.escape(end_marker)})",
                   re.DOTALL,
@@ -473,10 +547,9 @@ jobs:
           doc = replace_block(doc, ROUNDTRIP_MARKER, SECTION_END, roundtrip_table)
 
           Path(DOCS_PATH).write_text(doc, encoding="utf-8")
-          print(f"performance.md updated successfully.")
+          print("performance.md updated successfully.")
           PYEOF
 
-      # ── Open PR via peter-evans/create-pull-request ────────────────────────
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v7
         with:
@@ -497,6 +570,7 @@ jobs:
             | **CI run** | [#${{ github.run_number }}](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}) |
             | **Commit** | `${{ github.sha }}` |
             | **Trigger** | `${{ github.event_name }}` |
+            | **Frameworks** | `net8.0`, `net9.0`, `net10.0` |
             | **Repetitions** | `${{ env.BENCH_REPEAT }}` |
             | **Packets** | `${{ env.BENCH_MIN_PKT }}` → `${{ env.BENCH_MAX_PKT }}` |
             | **Lengths (bytes)** | `${{ env.BENCH_MIN_LEN }}` → `${{ env.BENCH_MAX_LEN }}` |
@@ -512,7 +586,7 @@ jobs:
           add-paths: src/documentation/articles/performance.md
 
   # ────────────────────────────────────────────────────────────────────────────
-  # 4. Cleanup build caches (mirrors final_cleanup in build_common.yaml)
+  # 5. Cleanup — mirrors final_cleanup in build_common.yaml
   # ────────────────────────────────────────────────────────────────────────────
   cleanup:
     name: Clear build caches
