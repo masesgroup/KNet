@@ -230,7 +230,7 @@ namespace MASES.KNet.Consumer
             PrefetchThreshold = IsPrefecth ? prefetchThreshold : 10;
         }
 #endif
-        /// <inheritdoc cref="IShareConsumer{K, V, TJVMK, TJVMV}.SetCallback(Action{ConsumerRecord{K, V, TJVMK, TJVMV}})"/>
+        /// <inheritdoc cref="IShareConsumer{K, V, TJVMK, TJVMV}.SetCallback(Func{ConsumerRecord{K, V, TJVMK, TJVMV}, bool})"/>
         public void SetCallback(Func<ConsumerRecord<K, V, TJVMK, TJVMV>, bool> cb)
         {
             actionCallback = cb;

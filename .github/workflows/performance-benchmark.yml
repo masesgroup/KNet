@@ -253,34 +253,34 @@ jobs:
         run: |
           dotnet "${{ github.workspace }}/bin/net9.0/KNetBenchmark.dll"       \
             -Log4JConfiguration "${{ github.workspace }}/bin/net9.0/log4j2.yaml" \
-            --Server               localhost:9092             \
-            --ResultsPath          "$RESULTS_DIR"             \
-            --ShowFinalResults                                \
-            --Repeat               ${{ env.BENCH_REPEAT }}   \
-            --MinPacketsToExchange ${{ env.BENCH_MIN_PKT }}  \
-            --MaxPacketsToExchange ${{ env.BENCH_MAX_PKT }}  \
-            --MinPacketLength      ${{ env.BENCH_MIN_LEN }}  \
-            --MaxPacketLength      ${{ env.BENCH_MAX_LEN }}  \
-            --NoAcks                                          \
-            --UseKNetProducer                                 \
-            --UseKNetConsumer
+            -Server               localhost:9092             \
+            -ResultsPath          "$RESULTS_DIR"             \
+            -ShowFinalResults                                \
+            -Repeat               ${{ env.BENCH_REPEAT }}   \
+            -MinPacketsToExchange ${{ env.BENCH_MIN_PKT }}  \
+            -MaxPacketsToExchange ${{ env.BENCH_MAX_PKT }}  \
+            -MinPacketLength      ${{ env.BENCH_MIN_LEN }}  \
+            -MaxPacketLength      ${{ env.BENCH_MAX_LEN }}  \
+            -NoAcks                                          \
+            -UseKNetProducer                                 \
+            -UseKNetConsumer
 
       # ── Roundtrip benchmark ────────────────────────────────────────────────
       - name: Run KNetRoundTripBenchmark
         run: |
           dotnet "${{ github.workspace }}/bin/net9.0/KNetRoundTripBenchmark.dll" \
             -Log4JConfiguration "${{ github.workspace }}/bin/net9.0/log4j2.yaml"    \
-            --Server               localhost:9092             \
-            --ResultsPath          "$RESULTS_DIR"             \
-            --ShowFinalResults                                \
-            --Repeat               ${{ env.BENCH_REPEAT }}   \
-            --MinPacketsToExchange ${{ env.BENCH_MIN_PKT }}  \
-            --MaxPacketsToExchange ${{ env.BENCH_MAX_PKT }}  \
-            --MinPacketLength      ${{ env.BENCH_MIN_LEN }}  \
-            --MaxPacketLength      ${{ env.BENCH_MAX_LEN }}  \
-            --NoAcks                                          \
-            --UseKNetProducer                                 \
-            --UseKNetConsumer
+            -Server               localhost:9092             \
+            -ResultsPath          "$RESULTS_DIR"             \
+            -ShowFinalResults                                \
+            -Repeat               ${{ env.BENCH_REPEAT }}   \
+            -MinPacketsToExchange ${{ env.BENCH_MIN_PKT }}  \
+            -MaxPacketsToExchange ${{ env.BENCH_MAX_PKT }}  \
+            -MinPacketLength      ${{ env.BENCH_MIN_LEN }}  \
+            -MaxPacketLength      ${{ env.BENCH_MAX_LEN }}  \
+            -NoAcks                                          \
+            -UseKNetProducer                                 \
+            -UseKNetConsumer
 
       # ── Upload raw CSVs as artifact (90-day retention) ─────────────────────
       - name: Upload raw benchmark results
