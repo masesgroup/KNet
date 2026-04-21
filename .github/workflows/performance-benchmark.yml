@@ -51,7 +51,7 @@ jobs:
   # ────────────────────────────────────────────────────────────────────────────
   build_benchmarks:
     name: Build benchmark projects
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
 
     steps:
       - uses: actions/checkout@v6
@@ -66,12 +66,8 @@ jobs:
             10.x
 
       # Pre-compile KNet (same flag as build_container_knet)
-      - name: Pre compile KNet
-        run: >
-          dotnet build --no-incremental --configuration Release
-          /p:Platform="Any CPU"
-          /p:NoWarn="0108%3B1030%3B0618"
-          src/net/KNet/KNet.csproj
+      - name: Pre compile
+        run: dotnet build --no-incremental --configuration Release /p:Platform="Any CPU" /p:NoWarn="0108%3B1030%3B0618" src\net\KNet\KNet.csproj
         env:
           GITHUB_SIMPLIFIED_GENERATION: true
 
@@ -85,32 +81,27 @@ jobs:
       - name: Create JARs
         run: mvn --file ./src/jvm/knet/pom.xml --no-transfer-progress package
 
-      # Build the two benchmark projects (same flags as tests build in build_windows)
-      - name: Build KNetBenchmark
-        run: >
-          dotnet build --no-incremental --configuration Release
-          /p:Platform="Any CPU"
-          /p:NoWarn="0108%3B1030%3B0618"
-          tests/net/Benchmarks/KNetBenchmark/KNetBenchmark.csproj
-        env:
-          GITHUB_TEST_PREPARATION: true
-
-      - name: Build KNetRoundTripBenchmark
-        run: >
-          dotnet build --no-incremental --configuration Release
-          /p:Platform="Any CPU"
-          /p:NoWarn="0108%3B1030%3B0618"
-          tests/net/Benchmarks/KNetRoundTripBenchmark/KNetRoundTripBenchmark.csproj
+      - name: Compile tests
+        run: dotnet build --no-incremental --configuration Release /p:Platform="Any CPU" /p:NoWarn="0108%3B1030%3B0618" tests\net\KNetTest.sln
         env:
           GITHUB_TEST_PREPARATION: true
 
       # Copy support config files (log4j2.yaml, server.properties, …)
       - name: Prepare configuration files
         run: |
-          cp .github/workflows/support/* bin/net9.0/  || true
-          cp .github/workflows/support/* bin/net10.0/ || true
+          Copy-Item .github\workflows\support\* -Destination bin\net462\ -Force
+          Copy-Item .github\workflows\support\* -Destination bin\net8.0\ -Force
+          Copy-Item .github\workflows\support\* -Destination bin\net9.0\ -Force
+          Copy-Item .github\workflows\support\* -Destination bin\net10.0\ -Force
 
       # Save compiled output to cache so run_benchmarks can restore it
+      - name: Cache bin net8.0
+        uses: actions/cache/save@v5
+        with:
+          enableCrossOsArchive: true
+          path: ./bin/net8.0/
+          key: KNetBenchmark_${{ github.run_number }}_${{ github.run_attempt }}_net8.0_${{ github.sha }}
+
       - name: Cache bin net9.0
         uses: actions/cache/save@v5
         with:
