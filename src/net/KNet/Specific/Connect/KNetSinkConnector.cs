@@ -73,6 +73,11 @@ namespace MASES.KNet.Connect
                 LogError($"AlterOffsetsInternal failed with {e}");
                 throw;
             }
+            finally
+            {
+                connectorConfig?.Dispose();
+                offsets?.Dispose();
+            }
         }
         /// <summary>
         /// Invoked when users request to manually alter/reset the offsets for this connector via the Connect worker's REST API. Connectors that manage offsets externally can propagate offset changes to their external system in this method. 
@@ -86,7 +91,9 @@ namespace MASES.KNet.Connect
         /// <returns>whether this method has been overridden by the connector; the default implementation returns <see langword="false"/>, and all other implementations (that do not unconditionally throw exceptions) should return <see langword="true"/></returns>
         /// <remarks>User requests to alter/reset offsets will be handled by the Connect runtime and will be reflected in the offsets for this connector's consumer group.
         /// Note that altering/resetting offsets is expected to be an idempotent operation and this method should be able to handle being called more than once with the same arguments (which could occur if a user retries the request due to a failure in altering the consumer group offsets, for example).
-        /// Similar to validate, this method may be called by the runtime before the <see cref="KNetConnector.Start(IKNetConfigurationFromMap)"/> method is invoked.</remarks>
+        /// Similar to validate, this method may be called by the runtime before the <see cref="KNetConnector.Start(IKNetConfigurationFromMap)"/> method is invoked.
+        /// Do not store neither <paramref name="connectorConfig"/> nor <paramref name="offsets"/> for further reuse since their will be disposed when <see cref="AlterOffsets(Map{Java.Lang.String, Java.Lang.String}, Map{Org.Apache.Kafka.Common.TopicPartition, Long})"/> returns.
+        /// </remarks>
         public virtual bool AlterOffsets(Map<Java.Lang.String, Java.Lang.String> connectorConfig, Map<Org.Apache.Kafka.Common.TopicPartition, Long> offsets)
         {
             return false;

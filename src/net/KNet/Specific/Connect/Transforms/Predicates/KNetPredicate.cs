@@ -105,7 +105,7 @@ namespace MASES.KNet.Connect.Transforms.Predicates
         {
             try
             {
-                var record = DataToExchange<ConnectRecord>();
+                using var record = DataToExchange<ConnectRecord>();
                 return Test(record);
             }
             catch (System.Exception e)

@@ -73,6 +73,7 @@ namespace MASES.KNet.Streams.Processor
         /// <summary>
         /// Current <see cref="Org.Apache.Kafka.Streams.Processor.RecordContext"/> metadata of the record
         /// </summary>
+        /// <remarks>The value in <see cref="RecordContext"/> can be diposed (e.g. invoking <see cref="IDisposable.Dispose"/>) at the end of its usage to avoid GC stress</remarks>
         public virtual Org.Apache.Kafka.Streams.Processor.RecordContext RecordContext => _context;
         /// <inheritdoc/>
         public sealed override Java.Lang.String Extract(TJVMK arg0, TJVMV arg1, Org.Apache.Kafka.Streams.Processor.RecordContext arg2)
