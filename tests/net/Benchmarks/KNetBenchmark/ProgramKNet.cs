@@ -239,7 +239,7 @@ namespace MASES.KNet.Benchmark
                 try
                 {
                     int counter = 0;
-                    var deadline = Stopwatch.StartNew();
+                    var noProgressTimer = Stopwatch.StartNew();
                     consumer.Subscribe(topics, rebalanceListener);
                     consumer.SetCallback((message) =>
                     {
@@ -252,6 +252,7 @@ namespace MASES.KNet.Benchmark
                             }
                         }
                         Interlocked.Increment(ref counter);
+                        noProgressTimer.Restart();
                         return true;
                     });
                     while (true)
@@ -266,9 +267,9 @@ namespace MASES.KNet.Benchmark
                             consumer.Unsubscribe();
                             return stopWatch;
                         }
-                        if (deadline.Elapsed > TimeSpan.FromMinutes(5))
+                        if (noProgressTimer.Elapsed > TimeSpan.FromSeconds(30))
                         {
-                            throw new TimeoutException($"ConsumeKafka timed out after 5 min: expected {numpacket} messages, got {counter}");
+                            throw new TimeoutException($"ConsumeKNet timed out after 30 seconds: expected {numpacket} messages, got {counter}");
                         }
                     }
                 }
@@ -358,6 +359,7 @@ namespace MASES.KNet.Benchmark
                 ManualResetEvent startEvent = new ManualResetEvent(false);
                 var consumer = KNetConsumer();
                 var producer = KNetProducer();
+                Exception threadException = null;
 
                 System.Threading.Thread thread = new System.Threading.Thread(() =>
                 {
@@ -379,7 +381,7 @@ namespace MASES.KNet.Benchmark
                         };
                         consumer.Subscribe(topics, rebalanceListener);
                         int counter = 0;
-                        var deadline = Stopwatch.StartNew();
+                        var noProgressTimer = Stopwatch.StartNew();
                         while (true)
                         {
                             var records = consumer.Poll(TimeSpan.FromSeconds(1));
@@ -392,6 +394,7 @@ namespace MASES.KNet.Benchmark
                                     throw new InvalidOperationException($"ConsumeKafka test {testNum}: Incorrect data counter {counter} item.Key {item.Key}");
                                 }
                                 Interlocked.Increment(ref counter);
+                                noProgressTimer.Restart();
                             }
 
                             if (AlwaysCommit) consumer.CommitSync();
@@ -401,11 +404,16 @@ namespace MASES.KNet.Benchmark
                                 consumer.Unsubscribe();
                                 break;
                             }
-                            if (deadline.Elapsed > TimeSpan.FromMinutes(5))
+                            if (noProgressTimer.Elapsed > TimeSpan.FromSeconds(30))
                             {
-                                throw new TimeoutException($"RoundTripConfluent timed out: expected {numpacket} messages, got {counter}");
+                                threadException = new TimeoutException($"RoundTripKNet timed out after 30 seconds: expected {numpacket} messages, got {counter}");
+                                break;
                             }
                         }
+                    }
+                    catch (Exception ex)
+                    {
+                        threadException = ex;  // cattura anche altri errori imprevisti
                     }
                     finally
                     {
@@ -480,6 +488,10 @@ namespace MASES.KNet.Benchmark
                 if (!startEvent.WaitOne(TimeSpan.FromMinutes(10)))
                 {
                     throw new TimeoutException("Consumer thread did not complete in time");
+                }
+                if (threadException != null)
+                {
+                    throw threadException;
                 }
                 totalExecution.Stop();
                 if (ShowIntermediateResults)

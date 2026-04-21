@@ -268,7 +268,7 @@ namespace MASES.KNet.Benchmark
             try
             {
                 consumer.Subscribe(topicName);
-                var deadline = Stopwatch.StartNew();
+                var noProgressTimer = Stopwatch.StartNew();
                 while (true)
                 {
                     var record = consumer.Consume(TimeSpan.FromMinutes(1));
@@ -282,6 +282,8 @@ namespace MASES.KNet.Benchmark
                         }
                         if (AlwaysCommit) consumer.Commit(record);
                         Interlocked.Increment(ref counter);
+                        noProgressTimer.Restart();
+
                     }
                     if (Volatile.Read(ref counter) >= numpacket)
                     {
@@ -294,9 +296,9 @@ namespace MASES.KNet.Benchmark
                         consumer.Unsubscribe();
                         return stopWatch;
                     }
-                    if (deadline.Elapsed > TimeSpan.FromMinutes(5))
+                    if (noProgressTimer.Elapsed > TimeSpan.FromSeconds(30))
                     {
-                        throw new TimeoutException($"ConsumeConfluent timed out after 5 min: expected {numpacket} messages, got {counter}");
+                        throw new TimeoutException($"ConsumeConfluent timed out after 30 seconds: expected {numpacket} messages, got {counter}");
                     }
                 }
             }
@@ -378,6 +380,7 @@ namespace MASES.KNet.Benchmark
                 ManualResetEvent startEvent = new ManualResetEvent(false);
                 var consumer = ConfluentConsumer();
                 var producer = ConfluentProducer();
+                Exception threadException = null;
                 PartitionsAssignedHandler_trampoline = (o1, o2) =>
                 {
                     if (ShowLogs) Console.WriteLine("Assigned: {0}", string.Join(" ", o2.Select((o) => o.ToString()).ToArray()));
@@ -390,7 +393,7 @@ namespace MASES.KNet.Benchmark
                     {
                         consumer.Subscribe(topicName);
                         int counter = 0;
-                        var deadline = Stopwatch.StartNew();
+                        var noProgressTimer = Stopwatch.StartNew();
                         while (true)
                         {
                             var record = consumer.Consume(TimeSpan.FromSeconds(1));
@@ -403,6 +406,7 @@ namespace MASES.KNet.Benchmark
                                     throw new InvalidOperationException($"ConsumeConfluent test {testNum}: Incorrect data counter {counter} item.Key {record.Message.Key}");
                                 }
                                 Interlocked.Increment(ref counter);
+                                noProgressTimer.Restart();
                             }
 
                             if (AlwaysCommit) consumer.Commit(record);
@@ -412,11 +416,16 @@ namespace MASES.KNet.Benchmark
                                 consumer.Unsubscribe();
                                 break;
                             }
-                            if (deadline.Elapsed > TimeSpan.FromMinutes(5))
+                            if (noProgressTimer.Elapsed > TimeSpan.FromSeconds(30))
                             {
-                                throw new TimeoutException($"RoundTripConfluent timed out: expected {numpacket} messages, got {counter}");
+                                threadException = new TimeoutException($"RoundTripConfluent timed out after 30 seconds: expected {numpacket} messages, got {counter}");
+                                break;
                             }
                         }
+                    }
+                    catch (Exception ex)
+                    {
+                        threadException = ex;  // cattura anche altri errori imprevisti
                     }
                     finally
                     {
@@ -506,6 +515,10 @@ namespace MASES.KNet.Benchmark
                 if (!startEvent.WaitOne(TimeSpan.FromMinutes(10)))
                 {
                     throw new TimeoutException("Consumer thread did not complete in time");
+                }
+                if (threadException != null)
+                {
+                    throw threadException;
                 }
                 totalExecution.Stop();
                 if (ShowIntermediateResults)
