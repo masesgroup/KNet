@@ -429,6 +429,7 @@ namespace MASES.KNet.Benchmark
                     }
                     finally
                     {
+                        try { consumer.Unsubscribe(); } catch { }
                         if (!SharedObjects)
                         {
                             consumer.Dispose();

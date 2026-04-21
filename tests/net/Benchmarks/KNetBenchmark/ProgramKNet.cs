@@ -417,6 +417,7 @@ namespace MASES.KNet.Benchmark
                     }
                     finally
                     {
+                        try { consumer.Unsubscribe(); } catch { }
                         rebalanceListener?.Dispose();
                         if (!SharedObjects)
                         {
