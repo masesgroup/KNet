@@ -198,7 +198,7 @@ namespace MASES.KNet.Consumer
 
         bool CallbackMessage(ConsumerRecord<K, V, TJVMK, TJVMV> message)
         {
-           return actionCallback != null ? actionCallback.Invoke(message) : true;
+           return actionCallback == null || actionCallback.Invoke(message);
         }
 
         volatile int _disposed; // 0 = live, 1 = disposed

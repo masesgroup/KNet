@@ -980,7 +980,7 @@ namespace MASES.KNet.Connect
                 try
                 {
                     var result = Poll();
-                    if (result != null)
+                    if (result != null && _arrayList != null)
                     {
                         foreach (var record in result)
                         {

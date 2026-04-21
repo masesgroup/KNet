@@ -52,12 +52,11 @@ namespace MASES.KNet.Consumer
         {
             var record = this.BridgeInstance.Invoke<Org.Apache.Kafka.Clients.Consumer.ConsumerRecord<TJVMK, TJVMV>>("getRecord");
             var knetRecord = new ConsumerRecord<K, V, TJVMK, TJVMV>(record, _keyDeserializer, _valueDeserializer, false);
-            bool dispose = true;
-            try
+            bool dispose = recordReadyFunction(knetRecord);
+            if (dispose)
             {
-                dispose = recordReadyFunction(knetRecord);
+                using (knetRecord) { }
             }
-            finally { if (dispose) knetRecord?.Dispose(); }
         }
 
         public virtual bool RecordReady(ConsumerRecord<K, V, TJVMK, TJVMV> message) { return true; }
