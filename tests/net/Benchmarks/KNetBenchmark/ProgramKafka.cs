@@ -395,6 +395,7 @@ namespace MASES.KNet.Benchmark
 
                         consumer.Subscribe(topics, rebalanceListener);
                         int counter = 0;
+                        var deadline = Stopwatch.StartNew();
                         while (true)
                         {
                             var records = consumer.Poll(duration);
@@ -436,6 +437,10 @@ namespace MASES.KNet.Benchmark
                                 consumer.Unsubscribe();
                                 break;
                             }
+                            if (deadline.Elapsed > TimeSpan.FromMinutes(5))
+                            {
+                                throw new TimeoutException($"RoundTripConfluent timed out: expected {numpacket} messages, got {counter}");
+                            }
                         }
                     }
                     finally
@@ -450,7 +455,10 @@ namespace MASES.KNet.Benchmark
                     }
                 });
                 thread.Start();
-                startEvent.WaitOne();
+                if (!startEvent.WaitOne(TimeSpan.FromMinutes(10)))
+                {
+                    throw new TimeoutException("Consumer thread did not complete in time");
+                }
                 startEvent.Reset();
 
                 Stopwatch totalExecution = Stopwatch.StartNew();
@@ -509,7 +517,10 @@ namespace MASES.KNet.Benchmark
                     stopWatch.Stop();
                     if (!SharedObjects) { producer.Dispose(); producer = null; }
                 }
-                startEvent.WaitOne();
+                if (!startEvent.WaitOne(TimeSpan.FromMinutes(10)))
+                {
+                    throw new TimeoutException("Consumer thread did not complete in time");
+                }
                 totalExecution.Stop();
                 if (ShowIntermediateResults)
                 {

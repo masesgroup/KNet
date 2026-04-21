@@ -323,7 +323,6 @@ jobs:
             -MaxPacketsToExchange ${{ env.BENCH_MAX_PKT }}                                         \
             -MinPacketLength      ${{ env.BENCH_MIN_LEN }}                                         \
             -MaxPacketLength      ${{ env.BENCH_MAX_LEN }}                                         \
-            -NoAcks                                                                                \
             -UseKNetProducer                                                                       \
             -UseKNetConsumer
 
