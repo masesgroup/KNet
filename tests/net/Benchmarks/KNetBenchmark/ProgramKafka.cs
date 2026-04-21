@@ -295,6 +295,7 @@ namespace MASES.KNet.Benchmark
                 {
                     int counter = 0;
                     consumer.Subscribe(topics, rebalanceListener);
+                    var deadline = Stopwatch.StartNew();
                     while (true)
                     {
                         var records = consumer.Poll(duration);
@@ -305,10 +306,10 @@ namespace MASES.KNet.Benchmark
                                 foreach (var item in records)
                                 {
                                     item.Key(); item.Value();
-                                    counter++;
+                                    Interlocked.Increment(ref counter);
                                 }
                             }
-                            else counter += records.Count();
+                            else Interlocked.Add(ref counter, records.Count());
                         }
                         else
                         {
@@ -321,7 +322,7 @@ namespace MASES.KNet.Benchmark
                                     {
                                         throw new InvalidOperationException($"ConsumeKafka test {testNum}: Incorrect data counter {counter} item.Key {item.Item2}");
                                     }
-                                    counter++;
+                                    Interlocked.Increment(ref counter);
                                 }
                             }
                             else
@@ -333,17 +334,21 @@ namespace MASES.KNet.Benchmark
                                     {
                                         throw new InvalidOperationException($"ConsumeKafka test {testNum}: Incorrect data counter {counter} item.Key {item.Key()}");
                                     }
-                                    counter++;
+                                    Interlocked.Increment(ref counter);
                                 }
                             }
                         }
                         if (AlwaysCommit) consumer.CommitSync();
-                        if (counter >= numpacket)
+                        if (Volatile.Read(ref counter) >= numpacket)
                         {
                             consumer.CommitSync();
-                            stopWatch.Stop();
+                            stopWatch?.Stop();
                             consumer.Unsubscribe();
                             return stopWatch;
+                        }
+                        if (deadline.Elapsed > TimeSpan.FromMinutes(5))
+                        {
+                            throw new TimeoutException($"ConsumeKafka timed out after 5 min: expected {numpacket} messages, got {counter}");
                         }
                     }
                 }
@@ -403,7 +408,7 @@ namespace MASES.KNet.Benchmark
                                     {
                                         throw new InvalidOperationException($"ConsumeKafka test {testNum}: Incorrect data counter {counter} item.Key {item.Item1}");
                                     }
-                                    counter++;
+                                    Interlocked.Increment(ref counter);
                                 }
                             }
                             else
@@ -421,11 +426,11 @@ namespace MASES.KNet.Benchmark
                                     {
                                         throw new InvalidOperationException($"ConsumeKafka test {testNum}: Incorrect data counter {counter} item.Key {key}");
                                     }
-                                    counter++;
+                                    Interlocked.Increment(ref counter);
                                 }
                             }
                             if (AlwaysCommit) consumer.CommitSync();
-                            if (counter >= numpacket)
+                            if (Volatile.Read(ref counter) >= numpacket)
                             {
                                 consumer.CommitSync();
                                 consumer.Unsubscribe();

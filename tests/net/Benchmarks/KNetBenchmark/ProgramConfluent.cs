@@ -268,6 +268,7 @@ namespace MASES.KNet.Benchmark
             try
             {
                 consumer.Subscribe(topicName);
+                var deadline = Stopwatch.StartNew();
                 while (true)
                 {
                     var record = consumer.Consume(TimeSpan.FromMinutes(1));
@@ -280,9 +281,9 @@ namespace MASES.KNet.Benchmark
                             throw new InvalidOperationException($"ConsumeConfluent test {testNum}: Incorrect data counter {counter} item.Key {record.Message.Key}");
                         }
                         if (AlwaysCommit) consumer.Commit(record);
-                        counter++;
+                        Interlocked.Increment(ref counter);
                     }
-                    if (counter >= numpacket)
+                    if (Volatile.Read(ref counter) >= numpacket)
                     {
                         try
                         {
@@ -292,6 +293,10 @@ namespace MASES.KNet.Benchmark
                         stopWatch?.Stop();
                         consumer.Unsubscribe();
                         return stopWatch;
+                    }
+                    if (deadline.Elapsed > TimeSpan.FromMinutes(5))
+                    {
+                        throw new TimeoutException($"ConsumeConfluent timed out after 5 min: expected {numpacket} messages, got {counter}");
                     }
                 }
             }
@@ -333,9 +338,9 @@ namespace MASES.KNet.Benchmark
                         };
                         producer.Produce(topicName + "_COPY", message);
                         consumer.Commit(record);
-                        counter++;
+                        Interlocked.Increment(ref counter);
                     }
-                    if (counter >= numpacket)
+                    if (Volatile.Read(ref counter) >= numpacket)
                     {
                         try
                         {
@@ -396,11 +401,11 @@ namespace MASES.KNet.Benchmark
                                 {
                                     throw new InvalidOperationException($"ConsumeConfluent test {testNum}: Incorrect data counter {counter} item.Key {record.Message.Key}");
                                 }
-                                counter++;
+                                Interlocked.Increment(ref counter);
                             }
 
                             if (AlwaysCommit) consumer.Commit(record);
-                            if (counter >= numpacket)
+                            if (Volatile.Read(ref counter) >= numpacket)
                             {
                                 consumer.Commit(record);
                                 consumer.Unsubscribe();
