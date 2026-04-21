@@ -91,7 +91,7 @@ jobs:
           dotnet build --no-incremental --configuration Release
           /p:Platform="Any CPU"
           /p:NoWarn="0108%3B1030%3B0618"
-          tests/net/benchmarks/KNetBenchmark/KNetBenchmark.csproj
+          tests/net/Benchmarks/KNetBenchmark/KNetBenchmark.csproj
         env:
           GITHUB_TEST_PREPARATION: true
 
@@ -100,7 +100,7 @@ jobs:
           dotnet build --no-incremental --configuration Release
           /p:Platform="Any CPU"
           /p:NoWarn="0108%3B1030%3B0618"
-          tests/net/benchmarks/KNetRoundTripBenchmark/KNetRoundTripBenchmark.csproj
+          tests/net/Benchmarks/KNetRoundTripBenchmark/KNetRoundTripBenchmark.csproj
         env:
           GITHUB_TEST_PREPARATION: true
 
@@ -143,26 +143,6 @@ jobs:
           fetch-depth: '1'
           submodules: 'true'
 
-      - name: Get last workflow run of JNet
-        if: ${{ inputs.UseLastRepositoryBuild == true }}
-        shell: bash
-        run: echo "JNET_LAST_RUN=$(curl -sL https://api.github.com/repos/masesgroup/JNet/actions/workflows/build.yaml/runs | jq -r '.workflow_runs[0].id?')" >> $GITHUB_ENV
-
-      - name: Download artifact
-        if: ${{ inputs.UseLastRepositoryBuild == true }}
-        run: gh run download ${{ env.JNET_LAST_RUN }} --name JNetNuGet --repo masesgroup/JNet --dir JNetNuGet
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN_INHERITED }}
-
-      - name: List NuGet packages downloaded
-        if: ${{ inputs.UseLastRepositoryBuild == true }}
-        continue-on-error: ${{ inputs.ForceContinueOnError == true }}
-        run: ls -las ./JNetNuGet/*nupkg
-
-      - name: Add local repo
-        if: ${{ success() && inputs.UseLastRepositoryBuild == true }}
-        run: dotnet nuget add source --name local "${{ github.workspace }}/JNetNuGet/"
-
       - uses: actions/setup-dotnet@v5
         with:
           dotnet-version: |
@@ -194,8 +174,8 @@ jobs:
         uses: docker/login-action@v4
         with:
           registry: ghcr.io
-          username: ${{ secrets.actor }}
-          password: ${{ secrets.GITHUB_TOKEN_INHERITED }}
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Extract metadata (tags, labels) for Docker
         id: meta
