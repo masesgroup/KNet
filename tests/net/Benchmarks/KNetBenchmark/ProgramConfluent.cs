@@ -57,7 +57,20 @@ namespace MASES.KNet.Benchmark
                     producerBuilder.SetValueSerializer(confluentValueSerializer);
                 }
 
-                confluentProducer = producerBuilder.Build();
+                confluentProducer = producerBuilder
+                    .SetLogHandler((_, msg) =>
+                    {
+                        // msg.Level: 0=EMERG … 7=DEBUG  (syslog severity)
+                        if (ShowLogs || msg.Level <= SyslogLevel.Error) // 3 = ERR, 2 = CRIT, …
+                            Console.WriteLine($"[Confluent Producer] {msg.Level} {msg.Facility} {msg.Message}");
+                    })
+                    .SetErrorHandler((_, err) =>
+                    {
+                        // IsFatal = true solo per errori unrecoverable
+                        Console.WriteLine($"[Confluent Producer Error] isFatal={err.IsFatal} code={err.Code} reason={err.Reason}");
+                    })
+                    /* .SetKeySerializer / .SetValueSerializer invariati */
+                    .Build();
             }
             return confluentProducer;
         }
@@ -216,7 +229,20 @@ namespace MASES.KNet.Benchmark
                     consumerBuilder.SetValueDeserializer(confluentValueDeserializer);
                 }
                 consumerBuilder.SetPartitionsAssignedHandler(PartitionsAssignedHandler);
-                confluentConsumer = consumerBuilder.Build();
+
+                confluentConsumer = consumerBuilder
+                    .SetLogHandler((_, msg) =>
+                    {
+                        if (ShowLogs || msg.Level <= SyslogLevel.Error)
+                            Console.WriteLine($"[Confluent Consumer] {msg.Level} {msg.Facility} {msg.Message}");
+                    })
+                    .SetErrorHandler((_, err) =>
+                    {
+                        Console.WriteLine($"[Confluent Consumer Error] isFatal={err.IsFatal} code={err.Code} reason={err.Reason}");
+                    })
+                    .SetPartitionsAssignedHandler(PartitionsAssignedHandler)
+                    /* .SetKeyDeserializer / .SetValueDeserializer invariati */
+                    .Build();
             }
             return confluentConsumer;
         }
