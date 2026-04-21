@@ -484,7 +484,7 @@ namespace MASES.KNet.Benchmark
                         if (ContinuousFlushKNet) producer.Flush();
                     }
                 }
-                finally { producer.Flush(); stopWatch.Stop(); if (!SharedObjects) producer.Dispose(); }
+                finally { producer.Flush(); stopWatch?.Stop(); if (!SharedObjects) producer.Dispose(); }
                 if (!startEvent.WaitOne(TimeSpan.FromMinutes(10)))
                 {
                     throw new TimeoutException("Consumer thread did not complete in time");
