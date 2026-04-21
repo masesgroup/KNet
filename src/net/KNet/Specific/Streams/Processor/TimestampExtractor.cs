@@ -46,6 +46,7 @@ namespace MASES.KNet.Streams.Processor
         /// <summary>
         /// The <see cref="ConsumerRecord{K, V, TJVMK, TJVMV}"/> to be used
         /// </summary>
+        /// <remarks>The value in <see cref="Record"/> can be diposed (e.g. invoking <see cref="IDisposable.Dispose"/>) at the end of its usage to avoid GC stress</remarks>
         public ConsumerRecord<K, V, TJVMK, TJVMV> Record => _record;
         /// <summary>
         /// The highest extracted valid <see cref="DateTime"/> of the current record's partition˙ (could be <see langword="null"/> if unknown)

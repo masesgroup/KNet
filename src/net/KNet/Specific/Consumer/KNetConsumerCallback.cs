@@ -25,7 +25,7 @@ namespace MASES.KNet.Consumer
 {
     interface IKNetConsumerCallback<K, V, TJVMK, TJVMV> : IJVMBridgeBase
     {
-        void RecordReady(ConsumerRecord<K, V, TJVMK, TJVMV> message);
+        bool RecordReady(ConsumerRecord<K, V, TJVMK, TJVMV> message);
     }
 
     class KNetConsumerCallback<K, V, TJVMK, TJVMV> : JVMBridgeListener, IKNetConsumerCallback<K, V, TJVMK, TJVMV>
@@ -35,9 +35,9 @@ namespace MASES.KNet.Consumer
         /// <inheritdoc/>
         public sealed override string BridgeClassName => "org.mases.knet.developed.clients.consumer.KNetConsumerCallback";
 
-        readonly Action<ConsumerRecord<K, V, TJVMK, TJVMV>> recordReadyFunction = null;
-        public virtual Action<ConsumerRecord<K, V, TJVMK, TJVMV>> OnRecordReady { get { return recordReadyFunction; } }
-        public KNetConsumerCallback(Action<ConsumerRecord<K, V, TJVMK, TJVMV>> recordReady, IDeserializer<K, TJVMK> keyDeserializer, IDeserializer<V, TJVMV> valueDeserializer)
+        readonly Func<ConsumerRecord<K, V, TJVMK, TJVMV>, bool> recordReadyFunction = null;
+        public virtual Func<ConsumerRecord<K, V, TJVMK, TJVMV>, bool> OnRecordReady { get { return recordReadyFunction; } }
+        public KNetConsumerCallback(Func<ConsumerRecord<K, V, TJVMK, TJVMV>, bool> recordReady, IDeserializer<K, TJVMK> keyDeserializer, IDeserializer<V, TJVMV> valueDeserializer)
         {
             if (recordReady != null) recordReadyFunction = recordReady;
             else recordReadyFunction = RecordReady;
@@ -51,9 +51,14 @@ namespace MASES.KNet.Consumer
         void OnRecordReadyEventHandler(object sender, CLRListenerEventArgs<CLREventData> data)
         {
             var record = this.BridgeInstance.Invoke<Org.Apache.Kafka.Clients.Consumer.ConsumerRecord<TJVMK, TJVMV>>("getRecord");
-            recordReadyFunction(new ConsumerRecord<K, V, TJVMK, TJVMV>(record, _keyDeserializer, _valueDeserializer, false));
+            var knetRecord = new ConsumerRecord<K, V, TJVMK, TJVMV>(record, _keyDeserializer, _valueDeserializer, false);
+            bool dispose = recordReadyFunction(knetRecord);
+            if (dispose)
+            {
+                using (knetRecord) { }
+            }
         }
 
-        public virtual void RecordReady(ConsumerRecord<K, V, TJVMK, TJVMV> message) { }
+        public virtual bool RecordReady(ConsumerRecord<K, V, TJVMK, TJVMV> message) { return true; }
     }
 }

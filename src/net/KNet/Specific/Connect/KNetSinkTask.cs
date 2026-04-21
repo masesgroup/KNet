@@ -71,9 +71,9 @@ namespace MASES.KNet.Connect
         {
             try
             {
-                Collection<SinkRecord> collection = DataToExchange<Collection<SinkRecord>>();
-                collection = collection.WithPrefetch(UsePrefetch).WithThread(UseThread, ThreadPriority);
-                Put(collection);
+                using Collection<SinkRecord> collection = DataToExchange<Collection<SinkRecord>>();
+                using var collection1 = collection.WithPrefetch(UsePrefetch).WithThread(UseThread, ThreadPriority);
+                Put(collection1);
             }
             catch (System.Exception e)
             {
