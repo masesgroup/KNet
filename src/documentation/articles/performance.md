@@ -114,17 +114,13 @@ Here below a set of results using 1000/10000 messages, in bold the results which
 
 - KNet/Confluent.Kafka™ Produce Average ratio percentage (SD ratio percentage):
 
-|  | 100 bytes | 1000 bytes | 10000 bytes | 100000 bytes |
+|  | 100 bytes | 1 000 bytes | 10 000 bytes | 100 000 bytes |
 |:---:	|:---:	|:---:	|:---:	|:---:	|
-| 1000 messages | 217,8 (193,16) | **82,5 (158,72)** | **84,45 (65,53)** | **86,78 (115,88)** |
-| 10000 messages | 251,97 (357,5) | **73,4 (164,51)** | 104,41 (32,73) | **90,28 (155,2)** |
+| 1,000 messages | 224,40 (81,60) | 115,06 (168,81) | **30,93 (428,51)** | **32,13 (22,98)** |
+| 10,000 messages | 400,14 (1087,70) | **84,98 (11,36)** | **52,94 (N/A)** | **17,50 (N/A)** |
 
-- KNet/Confluent.Kafka™ Consume Average ratio percentage (SD ratio percentage):
 
-|  | 100 bytes | 1000 bytes | 10000 bytes | 100000 bytes |
-|:---:	|:---:	|:---:	|:---:	|:---:	|
-| 1000 messages | **22,09 (263,38)** | **6,39 (547,69)** | **67,44 (22,85)** | 122,77 (270,27) |
-| 10000 messages | **30,51 (203,03)** | **17,88 (9,14)** | 117,37 (281,25) | 135,35 (828,3) |
+> Results automatically updated by CI run [#12](https://github.com/masesgroup/KNet/actions/runs/24751946232) · commit `63dc842` · 2026-04-21 23:41 UTC
 
 #### Analysis
 
@@ -220,10 +216,13 @@ Here below a set of results using 1000/10000 messages, in bold the results which
 
 - KNet/Confluent.Kafka™ Roundtrip Average ratio percentage (SD ratio percentage):
 
-|  | 100 bytes | 1000 bytes | 10000 bytes | 100000 bytes |
+|  | 100 bytes | 1 000 bytes | 10 000 bytes | 100 000 bytes |
 |:---:	|:---:	|:---:	|:---:	|:---:	|
-| 1000 messages | **3,82 (6,86)** | **4,37 (7,34)** | **9,08 (12,33)** | **26,68 (20,42)** |
-| 10000 messages | **18,49 (21,33)** | **16,78 (33,28)** | **32,28 (34,64)** | **48,28 (53,39)** |
+| 1,000 messages | **82,93 (2041,06)** | **58,46 (432,01)** | **58,93 (311,33)** | **60,24 (102,76)** |
+| 10,000 messages | 126,14 (97,72) | 126,79 (N/A) | N/A | N/A |
+
+
+> Results automatically updated by CI run [#12](https://github.com/masesgroup/KNet/actions/runs/24751946232) · commit `63dc842` · 2026-04-21 23:41 UTC
 
 #### Analysis
 
