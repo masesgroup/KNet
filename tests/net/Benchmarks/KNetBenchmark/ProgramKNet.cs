@@ -251,6 +251,7 @@ namespace MASES.KNet.Benchmark
                             }
                         }
                         counter++;
+                        return true;
                     });
                     while (true)
                     {
