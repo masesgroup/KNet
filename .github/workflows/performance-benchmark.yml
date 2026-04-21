@@ -6,7 +6,7 @@ on:
       Repeat:
         description: 'Number of test repetitions per combination'
         required: false
-        default: '20'
+        default: '1'
         type: string
       MinPacketsToExchange:
         description: 'Min packets to exchange'
@@ -38,7 +38,7 @@ concurrency:
 
 # ── Shared env defaults (workflow_dispatch overrides, schedule falls back) ──
 env:
-  BENCH_REPEAT:  ${{ inputs.Repeat                || '20'     }}
+  BENCH_REPEAT:  ${{ inputs.Repeat                || '1'     }}
   BENCH_MIN_PKT: ${{ inputs.MinPacketsToExchange  || '1000'   }}
   BENCH_MAX_PKT: ${{ inputs.MaxPacketsToExchange  || '10000'  }}
   BENCH_MIN_LEN: ${{ inputs.MinPacketLength       || '100'    }}

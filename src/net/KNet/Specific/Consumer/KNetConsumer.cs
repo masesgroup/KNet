@@ -314,7 +314,7 @@ namespace MASES.KNet.Consumer
             }
             return !isEmpty;
         }
-        /// <inheritdoc cref="IConsumer{K, V, TJVMK, TJVMV}.Consume(long, Action{ConsumerRecord{K, V, TJVMK, TJVMV}})"/>
+        /// <inheritdoc cref="IConsumer{K, V, TJVMK, TJVMV}.Consume(long, Func{ConsumerRecord{K, V, TJVMK, TJVMV}, bool})"/>
         public void Consume(long timeoutMs, Func<ConsumerRecord<K, V, TJVMK, TJVMV>, bool> callback)
         {
             using Duration duration = TimeSpan.FromMilliseconds(timeoutMs);
