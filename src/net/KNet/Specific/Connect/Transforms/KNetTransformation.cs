@@ -101,8 +101,8 @@ namespace MASES.KNet.Connect.Transforms
         {
             try
             {
-                var record = DataToExchange<ConnectRecord>();
-                var record1 = Apply(record);
+                using var record = DataToExchange<ConnectRecord>();
+                using var record1 = Apply(record);
                 DataToExchange(record1);
             }
             catch (System.Exception e)
