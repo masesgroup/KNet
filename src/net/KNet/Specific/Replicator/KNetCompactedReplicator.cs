@@ -736,7 +736,7 @@ namespace MASES.KNet.Replicator
 
         bool UpdateModeDelayed => UpdateMode.HasFlag(UpdateModeTypes.Delayed);
 
-        private void OnMessage(ConsumerRecord<K, V, TJVMK, TJVMV> record)
+        private bool OnMessage(ConsumerRecord<K, V, TJVMK, TJVMV> record)
         {
             if (record.Value == null)
             {
@@ -786,6 +786,8 @@ namespace MASES.KNet.Replicator
                     _OnConsumeSyncWaiter.Item2.Set();
                 }
             }
+
+            return true;
         }
 
         private void OnTopicPartitionsAssigned(KNetCompactedConsumerRebalanceListener listener, Java.Util.Collection<Org.Apache.Kafka.Common.TopicPartition> topicPartitions)
