@@ -279,16 +279,26 @@ namespace MASES.KNet.Producer
 
         static Org.Apache.Kafka.Clients.Producer.ProducerRecord<TJVMK, TJVMV> ToProducerRecord(ProducerRecord<K, V, TJVMK, TJVMV> record, ISerializer<K, TJVMK> keySerializer, ISerializer<V, TJVMV> valueSerializer)
         {
+            bool localHeaders = false;
             var headers = record.Headers;
             if ((keySerializer.UseHeaders || valueSerializer.UseHeaders) && headers == null)
             {
+                localHeaders = true;
                 headers = Headers.Create();
             }
-
-            return new Org.Apache.Kafka.Clients.Producer.ProducerRecord<TJVMK, TJVMV>(record.Topic, record.Partition, record.Timestamp,
-                                                      record.Key == null ? null : DataSerialize(keySerializer, record.Topic, record.Key, headers),
-                                                      record.Value == null ? null : DataSerialize(valueSerializer, record.Topic, record.Value, headers),
-                                                      headers);
+            try
+            {
+                return new Org.Apache.Kafka.Clients.Producer.ProducerRecord<TJVMK, TJVMV>(record.Topic, record.Partition, record.Timestamp,
+                                                                                          record.Key == null ? null
+                                                                                                             : DataSerialize(keySerializer, record.Topic, record.Key, headers),
+                                                                                          record.Value == null ? null
+                                                                                                               : DataSerialize(valueSerializer, record.Topic, record.Value, headers),
+                                                                                          headers);
+            }
+            finally
+            {
+                if (localHeaders) headers?.Dispose();
+            }
         }
 
         static TJVMT DataSerialize<T, TJVMT>(ISerializer<T, TJVMT> serializer, string topic, T data, Headers headers)

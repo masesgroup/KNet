@@ -70,10 +70,10 @@ namespace MASES.KNet.Consumer
         void ApplyPrefetch(bool enablePrefetch = true, int prefetchThreshold = 10);
 #endif
         /// <summary>
-        /// Sets the <see cref="Action{T}"/> to use to receive <see cref="ConsumerRecord{K, V, TJVMK, TJVMV}"/>
+        /// Sets the <see cref="Func{T, TResult}"/> to use to receive <see cref="ConsumerRecord{K, V, TJVMK, TJVMV}"/>
         /// </summary>
-        /// <param name="cb">The callback <see cref="Action{T}"/></param>
-        void SetCallback(Action<ConsumerRecord<K, V, TJVMK, TJVMV>> cb);
+        /// <param name="cb">The callback <see cref="Func{T, TResult}"/></param>
+        void SetCallback(Func<ConsumerRecord<K, V, TJVMK, TJVMV>, bool> cb);
         /// <summary>
         /// KNet extension for <see cref="Org.Apache.Kafka.Clients.Consumer.Consumer.Poll(Duration)"/>
         /// </summary>
@@ -90,8 +90,8 @@ namespace MASES.KNet.Consumer
         /// KNet sync extension for <see cref="Org.Apache.Kafka.Clients.Consumer.Consumer.Poll(Duration)"/>
         /// </summary>
         /// <param name="timeoutMs">Timeout in milliseconds</param>
-        /// <param name="callback">The <see cref="Action{T}"/> where receives <see cref="ConsumerRecord{K, V, TJVMK, TJVMV}"/></param>
-        void Consume(long timeoutMs, Action<ConsumerRecord<K, V, TJVMK, TJVMV>> callback);
+        /// <param name="callback">The <see cref="Func{T, TResult}"/> where receives <see cref="ConsumerRecord{K, V, TJVMK, TJVMV}"/>; return <see langword="true"/> from <paramref name="callback"/> to dispose the object</param>
+        void Consume(long timeoutMs, Func<ConsumerRecord<K, V, TJVMK, TJVMV>, bool> callback);
     }
 
     #endregion
@@ -182,11 +182,11 @@ namespace MASES.KNet.Consumer
             return new ConsumerRecords<K, V, TJVMK, TJVMV>(records, _keyDeserializer, _valueDeserializer);
         }
 
-        Action<ConsumerRecord<K, V, TJVMK, TJVMV>> actionCallback = null;
+        Func<ConsumerRecord<K, V, TJVMK, TJVMV>, bool> actionCallback = null;
 
-        void CallbackMessage(ConsumerRecord<K, V, TJVMK, TJVMV> message)
+        bool CallbackMessage(ConsumerRecord<K, V, TJVMK, TJVMV> message)
         {
-            actionCallback?.Invoke(message);
+            return actionCallback == null || actionCallback.Invoke(message);
         }
 
         volatile int _disposed; // 0 = live, 1 = disposed
@@ -231,7 +231,7 @@ namespace MASES.KNet.Consumer
         }
 #endif
         /// <inheritdoc cref="IShareConsumer{K, V, TJVMK, TJVMV}.SetCallback(Action{ConsumerRecord{K, V, TJVMK, TJVMV}})"/>
-        public void SetCallback(Action<ConsumerRecord<K, V, TJVMK, TJVMV>> cb)
+        public void SetCallback(Func<ConsumerRecord<K, V, TJVMK, TJVMV>, bool> cb)
         {
             actionCallback = cb;
         }
@@ -302,8 +302,8 @@ namespace MASES.KNet.Consumer
             }
             return !isEmpty;
         }
-        /// <inheritdoc cref="IShareConsumer{K, V, TJVMK, TJVMV}.Consume(long, Action{ConsumerRecord{K, V, TJVMK, TJVMV}})"/>
-        public void Consume(long timeoutMs, Action<ConsumerRecord<K, V, TJVMK, TJVMV>> callback)
+        /// <inheritdoc cref="IShareConsumer{K, V, TJVMK, TJVMV}.Consume(long, Func{ConsumerRecord{K, V, TJVMK, TJVMV}, bool})"/>
+        public void Consume(long timeoutMs, Func<ConsumerRecord<K, V, TJVMK, TJVMV>, bool> callback)
         {
             using Duration duration = TimeSpan.FromMilliseconds(timeoutMs);
             if (_consumerCallback == null) throw new ArgumentException("Cannot be used since constructor was called with useJVMCallback set to false.");

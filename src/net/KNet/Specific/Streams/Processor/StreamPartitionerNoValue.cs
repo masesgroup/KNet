@@ -64,10 +64,20 @@ namespace MASES.KNet.Streams.Processor
 
             var res = methodToExecute(arg0, _kSerializer.Deserialize(arg0, arg1), arg3);
             if (res == null || res.Count == 0) return Optional<Set<Integer>>.Empty();
-            HashSet<Integer> result = new HashSet<Integer>();
+            using HashSet<Integer> result = new HashSet<Integer>();
             foreach (var item in res)
             {
-                result.Add(item.HasValue ? Integer.ValueOf(item.Value) : null);
+                if (item.HasValue)
+                {
+                    using (var integer = Integer.ValueOf(item.Value))
+                    {
+                        result.Add(integer);
+                    }
+                }
+                else
+                {
+                    result.Add(null);
+                }
             }
             return Optional<Set<Integer>>.Of(result);
         }
