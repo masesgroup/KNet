@@ -544,22 +544,21 @@ jobs:
               packets_list = sorted({k[1] for k in agg if k[0] == variant})
               if not packets_list:
                   return "_No data._\n"
+              # Derive lengths and build the header once (outside the packets loop)
+              lengths = sorted({k[2] for k in agg if k[0] == variant})
+              len_headers = " | ".join(f"{l:,} bytes" for l in lengths)
+              header  = f"|  | {len_headers} |\n"
+              header += "|:---:\t|" + "".join(":---:\t|" for _ in lengths) + "\n"
               rows = ""
               for packets in packets_list:
                   cols = []
-                  lengths = sorted({k[2] for k in agg if k[0] == variant})
-                  # ...
-                  len_headers = " | ".join(f"{l:,} bytes" for l in lengths)
-                  header  = f"|  | {len_headers} |\n"
-                  header += "|:---:\t|" + "".join(":---:\t|" for _ in lengths) + "\n"
-                  # ...
                   for length in lengths:
                       d  = agg.get((variant, packets, length), {})
                       kl = d.get(k_key, [])
                       cl = d.get(c_key, [])
                       cols.append(cell_str(kl, cl) if kl and cl else "N/A")
                   rows += f"| {packets:,} messages | " + " | ".join(cols) + " |\n"
-              return HEADER + rows
+              return header + rows
 
           def build_two_variant_block(agg, k_key, c_key,
                                        knet_label, std_label):
