@@ -259,9 +259,18 @@ namespace MASES.KNet.Consumer
                         System.Threading.Interlocked.Increment(ref _dequeing);
                         try
                         {
+                            if (actionCallback == null) continue;
+                            bool dispose = true;
                             foreach (var item in records)
                             {
-                                actionCallback?.Invoke(item);
+                                try
+                                {
+                                    dispose = actionCallback.Invoke(item);
+                                }
+                                finally
+                                {
+                                    if (dispose) item?.Dispose();
+                                }
                             }
                         }
                         catch { }
@@ -314,7 +323,7 @@ namespace MASES.KNet.Consumer
             }
             return !isEmpty;
         }
-        /// <inheritdoc cref="IConsumer{K, V, TJVMK, TJVMV}.Consume(long, Action{ConsumerRecord{K, V, TJVMK, TJVMV}})"/>
+        /// <inheritdoc cref="IConsumer{K, V, TJVMK, TJVMV}.Consume(long, Func{ConsumerRecord{K, V, TJVMK, TJVMV}, bool})"/>
         public void Consume(long timeoutMs, Func<ConsumerRecord<K, V, TJVMK, TJVMV>, bool> callback)
         {
             using Duration duration = TimeSpan.FromMilliseconds(timeoutMs);
