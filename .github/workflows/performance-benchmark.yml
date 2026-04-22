@@ -202,6 +202,7 @@ jobs:
     name: Benchmark (${{ matrix.framework }})
     needs: [build_benchmarks, build_container_knet]
     runs-on: ubuntu-latest
+    timeout-minutes: 120
 
     strategy:
       fail-fast: false        # let all legs finish even if one fails
@@ -293,6 +294,7 @@ jobs:
 
       # ── Produce/Consume benchmark ─────────────────────────────────────────
       - name: Run KNetBenchmark (Produce/Consume) [${{ matrix.framework }}]
+        timeout-minutes: 60
         run: |
           dotnet "${{ github.workspace }}/bin/${{ matrix.framework }}/KNetBenchmark.dll"           \
             -Log4JConfiguration "${{ github.workspace }}/bin/${{ matrix.framework }}/log4j2.yaml"  \
@@ -309,7 +311,11 @@ jobs:
             -UseKNetConsumer
 
       # ── Roundtrip benchmark ───────────────────────────────────────────────
+      # Note: -NoAcks is intentionally omitted — round-trip latency measurement
+      # requires reliable delivery; acks=0 can silently drop messages and cause
+      # the consumer thread to never reach numpacket.
       - name: Run KNetRoundTripBenchmark [${{ matrix.framework }}]
+        timeout-minutes: 60
         run: |
           dotnet "${{ github.workspace }}/bin/${{ matrix.framework }}/KNetRoundTripBenchmark.dll"  \
             -Log4JConfiguration "${{ github.workspace }}/bin/${{ matrix.framework }}/log4j2.yaml"  \
@@ -322,10 +328,13 @@ jobs:
             -MaxPacketsToExchange ${{ env.BENCH_MAX_PKT }}                                         \
             -MinPacketLength      ${{ env.BENCH_MIN_LEN }}                                         \
             -MaxPacketLength      ${{ env.BENCH_MAX_LEN }}                                         \
+            -FetchMinBytes 1                                                                       \
             -UseKNetProducer                                                                       \
             -UseKNetConsumer
 
       # ── Upload CSVs — artifact name includes framework to avoid collisions ─
+      # Artifacts are kept as separate per-framework directories so the
+      # update_docs job can extract the framework name from the path.
       - name: Upload raw benchmark results [${{ matrix.framework }}]
         uses: actions/upload-artifact@v7
         if: always()
@@ -350,12 +359,16 @@ jobs:
         with:
           fetch-depth: '0'
 
-      # Download all per-framework artifacts into a single flat directory
+      # Download all per-framework artifacts preserving directory structure.
+      # Without merge-multiple the layout is:
+      #   ./benchmark-results/benchmark-csv-<run>-net8.0/results_*.csv
+      #   ./benchmark-results/benchmark-csv-<run>-net9.0/results_*.csv
+      #   ./benchmark-results/benchmark-csv-<run>-net10.0/results_*.csv
+      # The framework name is extracted from the directory name in the Python script.
       - name: Download all benchmark CSV results
         uses: actions/download-artifact@v4
         with:
           pattern: benchmark-csv-${{ github.run_number }}-*
-          merge-multiple: true      # flatten all legs into a single path
           path: ./benchmark-results
 
       - name: List downloaded CSVs (debug)
@@ -381,9 +394,8 @@ jobs:
           SHA_SHORT   = os.environ.get("GITHUB_SHA", "")[:7]
           REPO        = os.environ.get("GITHUB_REPOSITORY", "")
           NOW         = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
-          LENGTHS     = [100, 1000, 10000, 100000]
 
-          # ── stats ─────────────────────────────────────────────────────────
+          # ── stats ──────────────────────────────────────────────────────────
           def mean(lst):
               return sum(lst) / len(lst) if lst else 0.0
 
@@ -406,7 +418,14 @@ jobs:
               except (ValueError, IndexError):
                   return cell
 
-          # ── CSV parsing ───────────────────────────────────────────────────
+          # ── framework detection ────────────────────────────────────────────
+          # Artifact dirs are named benchmark-csv-<run>-<framework>, e.g.
+          # ./benchmark-results/benchmark-csv-42-net9.0/results_*.csv
+          def framework_from_path(path):
+              m = re.search(r'benchmark-csv-\d+-([\w.]+)[/\\]', path)
+              return m.group(1) if m else "unknown"
+
+          # ── CSV parsing ────────────────────────────────────────────────────
           def read_csv(path):
               with open(path, newline="", encoding="utf-8-sig") as f:
                   return list(csv.DictReader(f, delimiter=";"))
@@ -415,10 +434,15 @@ jobs:
               """
               CSV header (Program.cs):
                 NumPackets;Length;KNETProd;KNETCons;ConfluentProd;ConfluentCons
+
+              Key: (framework, packets, length)
+              Produce and consume metrics are stored independently so that a
+              timeout on one side does not suppress the other in the table.
               """
               agg = {}
               total_rows = 0
               for path in csv_files:
+                  fw = framework_from_path(path)
                   for row in read_csv(path):
                       try:
                           pkt = int(row["NumPackets"])
@@ -427,14 +451,18 @@ jobs:
                           cp  = float(row["ConfluentProd"] or 0)
                           kc  = float(row["KNETCons"]      or 0)
                           cc  = float(row["ConfluentCons"] or 0)
-                          # Skip rows where Confluent data is zero (failed run)
-                          if cp == 0 and cc == 0:
-                              print(f"  SKIP (Confluent=0): {path} pkt={pkt} len={lng}")
+                          # Skip rows with no useful data at all
+                          if kp == 0 and cp == 0 and kc == 0 and cc == 0:
+                              print(f"  SKIP (all zeros): {path} fw={fw} pkt={pkt} len={lng}")
                               continue
-                          key = (pkt, lng)
+                          key = (fw, pkt, lng)
                           d = agg.setdefault(key, {"kp": [], "cp": [], "kc": [], "cc": []})
-                          d["kp"].append(kp);  d["cp"].append(cp)
-                          d["kc"].append(kc);  d["cc"].append(cc)
+                          # Append only non-zero values so N/A is shown when a
+                          # metric is missing rather than skewing the average.
+                          if kp > 0: d["kp"].append(kp)
+                          if cp > 0: d["cp"].append(cp)
+                          if kc > 0: d["kc"].append(kc)
+                          if cc > 0: d["cc"].append(cc)
                           total_rows += 1
                       except (KeyError, ValueError) as e:
                           print(f"  PARSE ERROR {path}: {e} | row={row}")
@@ -445,57 +473,73 @@ jobs:
               """
               CSV header (KNetRoundTripBenchmark/Program.cs):
                 NumPackets;Length;KNETMax;KNETMin;KNETMean;ConfluentMax;ConfluentMin;ConfluentMean
+
+              Key: (framework, packets, length)
               """
               agg = {}
               total_rows = 0
               for path in csv_files:
+                  fw = framework_from_path(path)
                   for row in read_csv(path):
                       try:
                           pkt = int(row["NumPackets"])
                           lng = int(row["Length"])
                           km  = float(row["KNETMean"]      or 0)
                           cm  = float(row["ConfluentMean"] or 0)
-                          if cm == 0:
-                              print(f"  SKIP (ConfluentMean=0): {path} pkt={pkt} len={lng}")
+                          if km == 0 and cm == 0:
+                              print(f"  SKIP (all zeros): {path} fw={fw} pkt={pkt} len={lng}")
                               continue
-                          key = (pkt, lng)
+                          key = (fw, pkt, lng)
                           d = agg.setdefault(key, {"km": [], "cm": []})
-                          d["km"].append(km);  d["cm"].append(cm)
+                          if km > 0: d["km"].append(km)
+                          if cm > 0: d["cm"].append(cm)
                           total_rows += 1
                       except (KeyError, ValueError) as e:
                           print(f"  PARSE ERROR {path}: {e} | row={row}")
               print(f"aggregate_roundtrip: {total_rows} valid rows from {len(csv_files)} file(s)")
               return agg
 
-          # ── table builder ─────────────────────────────────────────────────
-          HEADER = (
-              "|  | 100 bytes | 1 000 bytes | 10 000 bytes | 100 000 bytes |\n"
-              "|:---:\t|:---:\t|:---:\t|:---:\t|:---:\t|\n"
-          )
+          # ── table builder ──────────────────────────────────────────────────
+          # Rows: Framework + Packets   Columns: lengths (derived from data)
+          def build_table(agg, k_key, c_key):
+              if not agg:
+                  return "_No data available._\n"
 
-          def build_table(agg, k_key, c_key, packets_list):
+              frameworks   = sorted({k[0] for k in agg})
+              packets_list = sorted({k[1] for k in agg})
+              lengths      = sorted({k[2] for k in agg})
+
+              # Header — length values are formatted with thousands separator
+              len_headers = " | ".join(f"{l:,} bytes" for l in lengths)
+              header  = f"| Framework | Packets | {len_headers} |\n"
+              header += "|:---:|:---:| " + " | ".join(":---:" for _ in lengths) + " |\n"
+
               rows = ""
-              for packets in packets_list:
-                  cols = []
-                  for length in LENGTHS:
-                      d  = agg.get((packets, length), {})
-                      kl = d.get(k_key, [])
-                      cl = d.get(c_key, [])
-                      if not kl or not cl:
-                          cols.append("N/A")
-                          continue
-                      cols.append(bold_if_knet_better(
-                          f"{ratio_str(mean(kl), mean(cl))} ({ratio_str(sd(kl), sd(cl))})"
-                      ))
-                  rows += f"| {packets:,} messages | " + " | ".join(cols) + " |\n"
-              return HEADER + rows
+              for fw in frameworks:
+                  for packets in packets_list:
+                      cols = []
+                      for length in lengths:
+                          d  = agg.get((fw, packets, length), {})
+                          kl = d.get(k_key, [])
+                          cl = d.get(c_key, [])
+                          if not kl or not cl:
+                              cols.append("N/A")
+                              continue
+                          cell = (
+                              f"{ratio_str(mean(kl), mean(cl))}"
+                              f" ({ratio_str(sd(kl), sd(cl))})"
+                          )
+                          cols.append(bold_if_knet_better(cell))
+                      rows += f"| {fw} | {packets:,} | " + " | ".join(cols) + " |\n"
 
-          # ── load data ─────────────────────────────────────────────────────
-          bench_csvs     = sorted(glob.glob(f"{RESULTS_DIR}/results_*.csv"))
-          roundtrip_csvs = sorted(glob.glob(f"{RESULTS_DIR}/roundtrip_results_*.csv"))
+              return header + rows
 
-          print(f"Found {len(bench_csvs)} bench CSV(s): {bench_csvs}")
-          print(f"Found {len(roundtrip_csvs)} roundtrip CSV(s): {roundtrip_csvs}")
+          # ── load data ──────────────────────────────────────────────────────
+          bench_csvs     = sorted(glob.glob(f"{RESULTS_DIR}/**/results_*.csv",          recursive=True))
+          roundtrip_csvs = sorted(glob.glob(f"{RESULTS_DIR}/**/roundtrip_results_*.csv", recursive=True))
+
+          print(f"Found {len(bench_csvs)} bench CSV(s)")
+          print(f"Found {len(roundtrip_csvs)} roundtrip CSV(s)")
 
           if not bench_csvs and not roundtrip_csvs:
               print("No CSV files found – skipping doc update.")
@@ -508,12 +552,9 @@ jobs:
               print("All CSVs contain only failed rows – skipping doc update.")
               exit(0)
 
-          bench_packets     = sorted({k[0] for k in bench_agg})
-          roundtrip_packets = sorted({k[0] for k in roundtrip_agg})
-
-          produce_table   = build_table(bench_agg,     "kp", "cp", bench_packets)
-          consume_table   = build_table(bench_agg,     "kc", "cc", bench_packets)
-          roundtrip_table = build_table(roundtrip_agg, "km", "cm", roundtrip_packets)
+          produce_table   = build_table(bench_agg,     "kp", "cp")
+          consume_table   = build_table(bench_agg,     "kc", "cc")
+          roundtrip_table = build_table(roundtrip_agg, "km", "cm")
 
           run_badge = (
               f"\n> Results automatically updated by CI run "
@@ -521,16 +562,20 @@ jobs:
               f" · commit `{SHA_SHORT}` · {NOW}\n"
           )
 
-          # ── patch performance.md ──────────────────────────────────────────
+          # ── patch performance.md ───────────────────────────────────────────
           doc = Path(DOCS_PATH).read_text(encoding="utf-8")
 
-          def replace_block(doc, start_marker, end_marker, new_table):
+          def replace_block(doc, start_marker, end_marker, new_table, badge):
               pattern = re.compile(
                   rf"({re.escape(start_marker)})(.*?)({re.escape(end_marker)})",
                   re.DOTALL,
               )
-              replacement = rf"\1\n\n{new_table}\n{run_badge}\n\3"
-              result, n = pattern.subn(replacement, doc)
+              # Use a lambda to avoid re.sub interpreting backslashes in the
+              # replacement string (e.g. table cells containing '\' sequences
+              # would be misread as group references and silently corrupt the doc).
+              def make_replacement(m):
+                  return m.group(1) + "\n\n" + new_table + "\n" + badge + "\n" + m.group(3)
+              result, n = pattern.subn(make_replacement, doc)
               if n == 0:
                   print(f"WARNING: marker not found — {start_marker!r}")
               return result
@@ -540,9 +585,9 @@ jobs:
           ROUNDTRIP_MARKER = "- KNet/Confluent.Kafka™ Roundtrip Average ratio percentage (SD ratio percentage):"
           SECTION_END      = "#### Analysis"
 
-          doc = replace_block(doc, PRODUCE_MARKER,   SECTION_END, produce_table)
-          doc = replace_block(doc, CONSUME_MARKER,   SECTION_END, consume_table)
-          doc = replace_block(doc, ROUNDTRIP_MARKER, SECTION_END, roundtrip_table)
+          doc = replace_block(doc, PRODUCE_MARKER,   SECTION_END, produce_table,   run_badge)
+          doc = replace_block(doc, CONSUME_MARKER,   SECTION_END, consume_table,   run_badge)
+          doc = replace_block(doc, ROUNDTRIP_MARKER, SECTION_END, roundtrip_table, run_badge)
 
           Path(DOCS_PATH).write_text(doc, encoding="utf-8")
           print("performance.md updated successfully.")

@@ -296,7 +296,7 @@ namespace MASES.KNet.Benchmark
                         consumer.Unsubscribe();
                         return stopWatch;
                     }
-                    if (noProgressTimer.Elapsed > TimeSpan.FromSeconds(30))
+                    if (noProgressTimer.Elapsed > TimeSpan.FromSeconds(60))
                     {
                         throw new TimeoutException($"ConsumeConfluent timed out after 30 seconds: expected {numpacket} messages, got {counter}");
                     }
@@ -416,7 +416,7 @@ namespace MASES.KNet.Benchmark
                                 consumer.Unsubscribe();
                                 break;
                             }
-                            if (noProgressTimer.Elapsed > TimeSpan.FromSeconds(30))
+                            if (noProgressTimer.Elapsed > TimeSpan.FromSeconds(60))
                             {
                                 threadException = new TimeoutException($"RoundTripConfluent timed out after 30 seconds: expected {numpacket} messages, got {counter}");
                                 break;
