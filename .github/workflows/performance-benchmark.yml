@@ -198,21 +198,21 @@ jobs:
         shell: bash
 
   # ────────────────────────────────────────────────────────────────────────────
-  # 3. Run benchmarks — matrix on framework × variant (knet / standard)
-  #    knet    = -UseKNetProducer -UseKNetConsumer
-  #    standard = no extra flags  (KafkaProducer / KafkaConsumer via JNI)
+  # 3. Run benchmarks — matrix on framework only (3 legs)
+  #    Each leg runs both variants sequentially:
+  #      knet     = -UseKNetProducer -UseKNetConsumer  → results/knet/
+  #      standard = no extra flags (KafkaProducer/Consumer via JNI) → results/standard/
   # ────────────────────────────────────────────────────────────────────────────
   run_benchmarks:
-    name: Benchmark (${{ matrix.framework }} / ${{ matrix.variant }})
+    name: Benchmark (${{ matrix.framework }})
     needs: [build_benchmarks, build_container_knet]
     runs-on: ubuntu-latest
-    timeout-minutes: 120
+    timeout-minutes: 150
 
     strategy:
       fail-fast: false
       matrix:
         framework: ['net8.0', 'net9.0', 'net10.0']
-        variant:   ['knet', 'standard']
 
     services:
       kafka:
@@ -228,7 +228,7 @@ jobs:
 
     env:
       JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ENCODED_2_6_9 }}
-      RESULTS_DIR: ${{ github.workspace }}/benchmark-results/${{ matrix.variant }}
+      RESULTS_DIR: ${{ github.workspace }}/benchmark-results
 
     steps:
       # ── .NET SDK for this matrix leg ────────────────────────────────────────
@@ -256,8 +256,8 @@ jobs:
           path: ./bin/${{ matrix.framework }}/
           key: KNetBenchmark_${{ github.run_number }}_${{ github.run_attempt }}_${{ matrix.framework }}_${{ github.sha }}
 
-      - name: Create results directory
-        run: mkdir -p "$RESULTS_DIR"
+      - name: Create results directories
+        run: mkdir -p "$RESULTS_DIR/knet" "$RESULTS_DIR/standard"
 
       # ── Robust Kafka readiness check ────────────────────────────────────────
       # nc -z only checks TCP; the broker resets connections during APIVERSION_QUERY
@@ -292,67 +292,84 @@ jobs:
           sys.exit(1)
           PYEOF
 
-      # ── Extra flags for the knet variant ─────────────────────────────────────
-      # VARIANT_FLAGS is empty for 'standard', populated for 'knet'
-      - name: Set variant flags
+      # Common args shared by all four benchmark invocations
+      - name: Set common benchmark args
         run: |
-          if [ "${{ matrix.variant }}" = "knet" ]; then
-            echo "VARIANT_FLAGS=-UseKNetProducer -UseKNetConsumer" >> $GITHUB_ENV
-          else
-            echo "VARIANT_FLAGS=" >> $GITHUB_ENV
-          fi
+          echo "BENCH_COMMON_ARGS=-Server localhost:9092 \
+            -ShowFinalResults -ShowIntermediateResults \
+            -Repeat ${{ env.BENCH_REPEAT }} \
+            -MinPacketsToExchange ${{ env.BENCH_MIN_PKT }} \
+            -MaxPacketsToExchange ${{ env.BENCH_MAX_PKT }} \
+            -MinPacketLength ${{ env.BENCH_MIN_LEN }} \
+            -MaxPacketLength ${{ env.BENCH_MAX_LEN }}" >> $GITHUB_ENV
 
-      # ── Produce/Consume benchmark ─────────────────────────────────────────────
-      - name: Run KNetBenchmark [${{ matrix.framework }}/${{ matrix.variant }}]
-        timeout-minutes: 60
-        continue-on-error: true  # partial CSV is still uploaded even on crash
-        run: |
-          dotnet "${{ github.workspace }}/bin/${{ matrix.framework }}/KNetBenchmark.dll"           \
-            -Log4JConfiguration "${{ github.workspace }}/bin/${{ matrix.framework }}/log4j2.yaml"  \
-            -Server               localhost:9092                                                   \
-            -ResultsPath          "$RESULTS_DIR"                                                   \
-            -ShowFinalResults                                                                      \
-            -ShowIntermediateResults                                                               \
-            -Repeat               ${{ env.BENCH_REPEAT }}                                          \
-            -MinPacketsToExchange ${{ env.BENCH_MIN_PKT }}                                         \
-            -MaxPacketsToExchange ${{ env.BENCH_MAX_PKT }}                                         \
-            -MinPacketLength      ${{ env.BENCH_MIN_LEN }}                                         \
-            -MaxPacketLength      ${{ env.BENCH_MAX_LEN }}                                         \
-            ${{ env.VARIANT_FLAGS }}
-
-      # ── Roundtrip benchmark ───────────────────────────────────────────────────
-      # -NoAcks is intentionally omitted for roundtrip: acks=0 can silently drop
-      # messages and the consumer thread would never reach numpacket.
-      - name: Run KNetRoundTripBenchmark [${{ matrix.framework }}/${{ matrix.variant }}]
-        timeout-minutes: 60
+      # ── Produce/Consume — KNet variant ───────────────────────────────────────
+      # timeout(1): send SIGTERM after 25 min; if still alive, SIGKILL after 60 s.
+      # This prevents a stuck consumer from blocking the entire leg.
+      - name: Run KNetBenchmark [knet] [${{ matrix.framework }}]
+        timeout-minutes: 30
         continue-on-error: true
         run: |
-          dotnet "${{ github.workspace }}/bin/${{ matrix.framework }}/KNetRoundTripBenchmark.dll"  \
-            -Log4JConfiguration "${{ github.workspace }}/bin/${{ matrix.framework }}/log4j2.yaml"  \
-            -Server               localhost:9092                                                   \
-            -ResultsPath          "$RESULTS_DIR"                                                   \
-            -ShowFinalResults                                                                      \
-            -ShowIntermediateResults                                                               \
-            -Repeat               ${{ env.BENCH_REPEAT }}                                          \
-            -MinPacketsToExchange ${{ env.BENCH_MIN_PKT }}                                         \
-            -MaxPacketsToExchange ${{ env.BENCH_MAX_PKT }}                                         \
-            -MinPacketLength      ${{ env.BENCH_MIN_LEN }}                                         \
-            -MaxPacketLength      ${{ env.BENCH_MAX_LEN }}                                         \
-            -FetchMinBytes 1                                                                       \
-            ${{ env.VARIANT_FLAGS }}
+          timeout --kill-after=60 1500 \
+            dotnet "${{ github.workspace }}/bin/${{ matrix.framework }}/KNetBenchmark.dll" \
+              -Log4JConfiguration "${{ github.workspace }}/bin/${{ matrix.framework }}/log4j2.yaml" \
+              -ResultsPath "$RESULTS_DIR/knet" \
+              ${{ env.BENCH_COMMON_ARGS }} \
+              -UseKNetProducer -UseKNetConsumer \
+          || echo "KNetBenchmark [knet] exited with $? (timeout or error — partial CSV preserved)"
+
+      # ── Produce/Consume — Standard variant ───────────────────────────────────
+      - name: Run KNetBenchmark [standard] [${{ matrix.framework }}]
+        timeout-minutes: 30
+        continue-on-error: true
+        run: |
+          timeout --kill-after=60 1500 \
+            dotnet "${{ github.workspace }}/bin/${{ matrix.framework }}/KNetBenchmark.dll" \
+              -Log4JConfiguration "${{ github.workspace }}/bin/${{ matrix.framework }}/log4j2.yaml" \
+              -ResultsPath "$RESULTS_DIR/standard" \
+              ${{ env.BENCH_COMMON_ARGS }} \
+          || echo "KNetBenchmark [standard] exited with $? (timeout or error — partial CSV preserved)"
+
+      # ── Roundtrip — KNet variant ──────────────────────────────────────────────
+      # -NoAcks omitted: acks=0 can silently drop messages and the consumer thread
+      # would never reach numpacket, causing an infinite hang.
+      - name: Run KNetRoundTripBenchmark [knet] [${{ matrix.framework }}]
+        timeout-minutes: 30
+        continue-on-error: true
+        run: |
+          timeout --kill-after=60 1500 \
+            dotnet "${{ github.workspace }}/bin/${{ matrix.framework }}/KNetRoundTripBenchmark.dll" \
+              -Log4JConfiguration "${{ github.workspace }}/bin/${{ matrix.framework }}/log4j2.yaml" \
+              -ResultsPath "$RESULTS_DIR/knet" \
+              ${{ env.BENCH_COMMON_ARGS }} \
+              -FetchMinBytes 1 \
+              -UseKNetProducer -UseKNetConsumer \
+          || echo "KNetRoundTripBenchmark [knet] exited with $? (timeout or error — partial CSV preserved)"
+
+      # ── Roundtrip — Standard variant ──────────────────────────────────────────
+      - name: Run KNetRoundTripBenchmark [standard] [${{ matrix.framework }}]
+        timeout-minutes: 30
+        continue-on-error: true
+        run: |
+          timeout --kill-after=60 1500 \
+            dotnet "${{ github.workspace }}/bin/${{ matrix.framework }}/KNetRoundTripBenchmark.dll" \
+              -Log4JConfiguration "${{ github.workspace }}/bin/${{ matrix.framework }}/log4j2.yaml" \
+              -ResultsPath "$RESULTS_DIR/standard" \
+              ${{ env.BENCH_COMMON_ARGS }} \
+              -FetchMinBytes 1 \
+          || echo "KNetRoundTripBenchmark [standard] exited with $? (timeout or error — partial CSV preserved)"
 
       # ── Upload CSVs ────────────────────────────────────────────────────────────
-      # Artifact name encodes both framework and variant so legs don't collide.
-      # The directory layout inside the artifact is:
-      #   knet/results_*.csv
-      #   knet/roundtrip_results_*.csv
-      # (or standard/…) — the Python script uses this path to detect the variant.
-      - name: Upload raw benchmark results [${{ matrix.framework }}/${{ matrix.variant }}]
+      # Artifact name encodes the framework; inside it contains:
+      #   knet/results_*.csv  knet/roundtrip_results_*.csv
+      #   standard/results_*.csv  standard/roundtrip_results_*.csv
+      # The Python script derives the variant from the subdirectory name.
+      - name: Upload raw benchmark results [${{ matrix.framework }}]
         uses: actions/upload-artifact@v7
         if: always()
         with:
-          name: benchmark-csv-${{ github.run_number }}-${{ matrix.framework }}-${{ matrix.variant }}
-          path: ${{ github.workspace }}/benchmark-results/
+          name: benchmark-csv-${{ github.run_number }}-${{ matrix.framework }}
+          path: ${{ env.RESULTS_DIR }}/
           retention-days: 90
 
   # ────────────────────────────────────────────────────────────────────────────
@@ -371,10 +388,11 @@ jobs:
         with:
           fetch-depth: '0'
 
-      # Download all per-framework/variant artifacts preserving the directory
-      # structure so the Python script can derive the variant from the path:
-      #   ./benchmark-results/benchmark-csv-<N>-net9.0-knet/knet/results_*.csv
-      #   ./benchmark-results/benchmark-csv-<N>-net9.0-standard/standard/results_*.csv
+      # Download all per-framework artifacts preserving directory structure.
+      # Each artifact contains two subdirs produced by the same leg:
+      #   ./benchmark-results/benchmark-csv-<N>-net9.0/knet/results_*.csv
+      #   ./benchmark-results/benchmark-csv-<N>-net9.0/standard/results_*.csv
+      # The Python script derives the variant from the subdir name.
       - name: Download all benchmark CSV results
         uses: actions/download-artifact@v4
         with:
@@ -661,7 +679,7 @@ jobs:
             | **CI run** | [#${{ github.run_number }}](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}) |
             | **Commit** | `${{ github.sha }}` |
             | **Trigger** | `${{ github.event_name }}` |
-            | **Frameworks** | `net8.0`, `net9.0`, `net10.0` |
+            | **Frameworks** | `net8.0` / `net9.0` / `net10.0` (knet + standard per leg) |
             | **Repetitions** | `${{ env.BENCH_REPEAT }}` |
             | **Packets** | `${{ env.BENCH_MIN_PKT }}` → `${{ env.BENCH_MAX_PKT }}` |
             | **Lengths (bytes)** | `${{ env.BENCH_MIN_LEN }}` → `${{ env.BENCH_MAX_LEN }}` |
