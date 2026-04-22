@@ -114,17 +114,47 @@ Here below a set of results using 1000/10000 messages, in bold the results which
 
 - KNet/Confluent.Kafka™ Produce Average ratio percentage (SD ratio percentage):
 
-|  | 100 bytes | 1000 bytes | 10000 bytes | 100000 bytes |
+
+_Using **KNetProducer** and **KNetConsumer**_ (`-UseKNetProducer -UseKNetConsumer`):
+
+|  | 100 bytes | 1 000 bytes | 10 000 bytes | 100 000 bytes |
 |:---:	|:---:	|:---:	|:---:	|:---:	|
-| 1000 messages | 217,8 (193,16) | **82,5 (158,72)** | **84,45 (65,53)** | **86,78 (115,88)** |
-| 10000 messages | 251,97 (357,5) | **73,4 (164,51)** | 104,41 (32,73) | **90,28 (155,2)** |
+| 1,000 messages | 214,45 (309,42) | **95,28 (17,23)** | **38,42 (—)** | **36,86 (—)** |
+| 10,000 messages | 214,20 (—) | 156,16 (—) | **49,35 (—)** | **27,71 (—)** |
+| 100,000 messages | 389,70 (—) | 248,40 (—) | N/A | N/A |
+
+_Using **KafkaProducer** and **KafkaConsumer**_ (standard JNI wrappers):
+
+|  | 100 bytes | 1 000 bytes | 10 000 bytes | 100 000 bytes |
+|:---:	|:---:	|:---:	|:---:	|:---:	|
+| 1,000 messages | 147,35 (472,27) | 139,13 (712,45) | **30,54 (15,93)** | **44,97 (75,67)** |
+| 10,000 messages | 506,59 (18,77) | 191,13 (90,23) | **40,36 (238,59)** | **33,78 (82,53)** |
+| 100,000 messages | 523,96 (131,77) | 200,76 (128,51) | **45,85 (42,73)** | N/A |
+
+
+> Results automatically updated by CI run [#16](https://github.com/masesgroup/KNet/actions/runs/24757790232) · commit `181986c` · 2026-04-22 03:16 UTC
 
 - KNet/Confluent.Kafka™ Consume Average ratio percentage (SD ratio percentage):
 
-|  | 100 bytes | 1000 bytes | 10000 bytes | 100000 bytes |
+
+_Using **KNetProducer** and **KNetConsumer**_ (`-UseKNetProducer -UseKNetConsumer`):
+
+|  | 100 bytes | 1 000 bytes | 10 000 bytes | 100 000 bytes |
 |:---:	|:---:	|:---:	|:---:	|:---:	|
-| 1000 messages | **22,09 (263,38)** | **6,39 (547,69)** | **67,44 (22,85)** | 122,77 (270,27) |
-| 10000 messages | **30,51 (203,03)** | **17,88 (9,14)** | 117,37 (281,25) | 135,35 (828,3) |
+| 1,000 messages | 174,80 (1237,57) | 103,72 (133,02) | 140,68 (—) | 179,35 (—) |
+| 10,000 messages | 189,01 (—) | 197,59 (—) | 185,20 (—) | **45,49 (—)** |
+| 100,000 messages | 591,70 (—) | 548,60 (—) | N/A | N/A |
+
+_Using **KafkaProducer** and **KafkaConsumer**_ (standard JNI wrappers):
+
+|  | 100 bytes | 1 000 bytes | 10 000 bytes | 100 000 bytes |
+|:---:	|:---:	|:---:	|:---:	|:---:	|
+| 1,000 messages | **46,46 (1287,10)** | **12,26 (8215,09)** | **29,77 (59,29)** | 111,86 (87,13) |
+| 10,000 messages | **16,01 (130,17)** | **23,37 (444,60)** | **88,76 (1089,52)** | **53,65 (1,45)** |
+| 100,000 messages | **12,98 (33,99)** | **22,10 (4,17)** | 108,80 (47,05) | N/A |
+
+
+> Results automatically updated by CI run [#16](https://github.com/masesgroup/KNet/actions/runs/24757790232) · commit `181986c` · 2026-04-22 03:16 UTC
 
 #### Analysis
 
@@ -220,10 +250,24 @@ Here below a set of results using 1000/10000 messages, in bold the results which
 
 - KNet/Confluent.Kafka™ Roundtrip Average ratio percentage (SD ratio percentage):
 
-|  | 100 bytes | 1000 bytes | 10000 bytes | 100000 bytes |
+
+_Using **KNetProducer** and **KNetConsumer**_ (`-UseKNetProducer -UseKNetConsumer`):
+
+|  | 100 bytes | 1 000 bytes | 10 000 bytes | 100 000 bytes |
 |:---:	|:---:	|:---:	|:---:	|:---:	|
-| 1000 messages | **3,82 (6,86)** | **4,37 (7,34)** | **9,08 (12,33)** | **26,68 (20,42)** |
-| 10000 messages | **18,49 (21,33)** | **16,78 (33,28)** | **32,28 (34,64)** | **48,28 (53,39)** |
+| 1,000 messages | **73,75 (1531,48)** | **53,40 (1378,22)** | **69,13 (—)** | **73,00 (—)** |
+| 10,000 messages | 143,75 (—) | 124,60 (—) | N/A | N/A |
+
+_Using **KafkaProducer** and **KafkaConsumer**_ (standard JNI wrappers):
+
+|  | 100 bytes | 1 000 bytes | 10 000 bytes | 100 000 bytes |
+|:---:	|:---:	|:---:	|:---:	|:---:	|
+| 1,000 messages | **61,85 (1326,71)** | **42,72 (1009,20)** | **37,96 (310,97)** | **50,96 (350,28)** |
+| 10,000 messages | **94,78 (114,69)** | **71,90 (240,34)** | **63,15 (205,71)** | 130908647,57 (1716653301,93) |
+| 100,000 messages | 74283153,42 (1916141177,12) | 51859528,00 (791997773,59) | 11865847,47 (71218347,89) | N/A |
+
+
+> Results automatically updated by CI run [#16](https://github.com/masesgroup/KNet/actions/runs/24757790232) · commit `181986c` · 2026-04-22 03:16 UTC
 
 #### Analysis
 
