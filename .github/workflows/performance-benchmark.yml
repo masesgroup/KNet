@@ -415,14 +415,14 @@ jobs:
           from datetime import datetime, timezone
           from pathlib import Path
 
-          RESULTS_DIR = "./benchmark-results"
-          DOCS_PATH   = "src/documentation/articles/performance.md"
-          RUN_ID      = os.environ.get("GITHUB_RUN_ID", "")
-          RUN_NUM     = os.environ.get("GITHUB_RUN_NUMBER", "?")
-          SHA_SHORT   = os.environ.get("GITHUB_SHA", "")[:7]
-          REPO        = os.environ.get("GITHUB_REPOSITORY", "")
-          NOW         = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
-          LENGTHS     = [100, 1000, 10000, 100000]
+          RESULTS_DIR          = "./benchmark-results"
+          DOCS_PATH            = "src/documentation/articles/performance.md"
+          RUN_ID               = os.environ.get("GITHUB_RUN_ID", "")
+          RUN_NUM              = os.environ.get("GITHUB_RUN_NUMBER", "?")
+          SHA_SHORT            = os.environ.get("GITHUB_SHA", "")[:7]
+          REPO                 = os.environ.get("GITHUB_REPOSITORY", "")
+          NOW                  = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
+          MAX_REASONABLE_RATIO = 10000.0 
 
           # ── statistics ─────────────────────────────────────────────────────
           def mean(lst):
@@ -448,7 +448,14 @@ jobs:
                   return cell
 
           def cell_str(kl, cl):
-              """avg_ratio (sd_ratio) — sd shows '—' when only 1 data point."""
+              if not kl or not cl:
+                  return "N/A"
+              k_mean, c_mean = mean(kl), mean(cl)
+              ratio = k_mean / c_mean * 100 if c_mean else 0
+              if ratio > MAX_REASONABLE_RATIO or ratio <= 0:
+                  print(f"  WARN: suspicious ratio {ratio:.2f} — skipped")
+                  return "N/A"
+                        """avg_ratio (sd_ratio) — sd shows '—' when only 1 data point."""
               avg = ratio_str(mean(kl), mean(cl))
               sk, sc = sd(kl), sd(cl)
               if sk is None or sc is None:
@@ -533,10 +540,6 @@ jobs:
 
           # ── table builder ───────────────────────────────────────────────────
           # Preserves the original format: rows=packets, columns=lengths.
-          HEADER = (
-              "|  | 100 bytes | 1 000 bytes | 10 000 bytes | 100 000 bytes |\n"
-              "|:---:\t|:---:\t|:---:\t|:---:\t|:---:\t|\n"
-          )
 
           def build_single_table(agg, variant, k_key, c_key):
               packets_list = sorted({k[1] for k in agg if k[0] == variant})
@@ -545,7 +548,13 @@ jobs:
               rows = ""
               for packets in packets_list:
                   cols = []
-                  for length in LENGTHS:
+                  lengths = sorted({k[2] for k in agg if k[0] == variant})
+                  # ...
+                  len_headers = " | ".join(f"{l:,} bytes" for l in lengths)
+                  header  = f"|  | {len_headers} |\n"
+                  header += "|:---:\t|" + "".join(":---:\t|" for _ in lengths) + "\n"
+                  # ...
+                  for length in lengths:
                       d  = agg.get((variant, packets, length), {})
                       kl = d.get(k_key, [])
                       cl = d.get(c_key, [])
