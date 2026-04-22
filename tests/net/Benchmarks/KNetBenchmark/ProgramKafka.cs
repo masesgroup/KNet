@@ -456,7 +456,7 @@ namespace MASES.KNet.Benchmark
                     }
                     catch (Exception ex)
                     {
-                        threadException = ex;  // cattura anche altri errori imprevisti
+                        threadException = ex;  
                     }
                     finally
                     {
