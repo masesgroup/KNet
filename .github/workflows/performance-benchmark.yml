@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       Repeat:
-        description: 'Number of test repetitions per combination'
+        description: 'Number of test repetitions per combination (schedule uses 20)'
         required: false
         default: '1'
         type: string
@@ -29,7 +29,7 @@ on:
         default: '100000'
         type: string
   schedule:
-    # Every Monday at 03:00 UTC
+    # Every Monday at 03:00 UTC — runs with 20 repetitions for better statistics
     - cron: '0 3 * * 1'
 
 concurrency:
@@ -37,10 +37,12 @@ concurrency:
   cancel-in-progress: true
 
 env:
-  BENCH_REPEAT:  ${{ inputs.Repeat               || '1'      }}
-  BENCH_MIN_PKT: ${{ inputs.MinPacketsToExchange  || '1000'   }}
-  BENCH_MAX_PKT: ${{ inputs.MaxPacketsToExchange  || '10000'  }}
-  BENCH_MIN_LEN: ${{ inputs.MinPacketLength       || '100'    }}
+  # schedule: inputs.Repeat is empty → fallback to '20'
+  # dispatch: use the provided value (default '1')
+  BENCH_REPEAT:  ${{ inputs.Repeat               || '20'    }}
+  BENCH_MIN_PKT: ${{ inputs.MinPacketsToExchange  || '1000'  }}
+  BENCH_MAX_PKT: ${{ inputs.MaxPacketsToExchange  || '10000' }}
+  BENCH_MIN_LEN: ${{ inputs.MinPacketLength       || '100'   }}
   BENCH_MAX_LEN: ${{ inputs.MaxPacketLength       || '100000' }}
 
 jobs:
@@ -196,18 +198,21 @@ jobs:
         shell: bash
 
   # ────────────────────────────────────────────────────────────────────────────
-  # 3. Run benchmarks — matrix on framework, one Kafka service per leg
+  # 3. Run benchmarks — matrix on framework × variant (knet / standard)
+  #    knet    = -UseKNetProducer -UseKNetConsumer
+  #    standard = no extra flags  (KafkaProducer / KafkaConsumer via JNI)
   # ────────────────────────────────────────────────────────────────────────────
   run_benchmarks:
-    name: Benchmark (${{ matrix.framework }})
+    name: Benchmark (${{ matrix.framework }} / ${{ matrix.variant }})
     needs: [build_benchmarks, build_container_knet]
     runs-on: ubuntu-latest
     timeout-minutes: 120
 
     strategy:
-      fail-fast: false        # let all legs finish even if one fails
+      fail-fast: false
       matrix:
         framework: ['net8.0', 'net9.0', 'net10.0']
+        variant:   ['knet', 'standard']
 
     services:
       kafka:
@@ -223,10 +228,10 @@ jobs:
 
     env:
       JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ENCODED_2_6_9 }}
-      RESULTS_DIR: ${{ github.workspace }}/benchmark-results
+      RESULTS_DIR: ${{ github.workspace }}/benchmark-results/${{ matrix.variant }}
 
     steps:
-      # ── .NET SDK for this matrix leg (mirrors build_common.yaml pattern) ───
+      # ── .NET SDK for this matrix leg ────────────────────────────────────────
       - uses: actions/setup-dotnet@v5
         if: matrix.framework == 'net8.0'
         with:
@@ -242,7 +247,7 @@ jobs:
         with:
           dotnet-version: 10.x
 
-      # ── Restore compiled binaries from build_benchmarks ───────────────────
+      # ── Restore compiled binaries ────────────────────────────────────────────
       - name: Restore bin ${{ matrix.framework }} from cache
         uses: actions/cache/restore@v5
         with:
@@ -254,22 +259,18 @@ jobs:
       - name: Create results directory
         run: mkdir -p "$RESULTS_DIR"
 
-      # ── Robust Kafka readiness check ──────────────────────────────────────
-      # nc -z only confirms TCP port is open; the broker resets the connection
-      # immediately while still initialising (APIVERSION_QUERY state).
-      # This script sends a minimal ApiVersions v0 Kafka request and waits
-      # until the broker replies before handing off to the benchmarks.
+      # ── Robust Kafka readiness check ────────────────────────────────────────
+      # nc -z only checks TCP; the broker resets connections during APIVERSION_QUERY
+      # while still initialising. This script waits for a full Kafka handshake.
       - name: Wait for Kafka broker (ApiVersions handshake)
         run: |
           python3 - <<'PYEOF'
           import socket, struct, sys, time
 
           HOST, PORT, ATTEMPTS, DELAY = 'localhost', 9092, 40, 5
-
-          # Minimal valid ApiVersions v0 request (Kafka wire protocol)
           client_id = b'readycheck'
           payload = (
-              struct.pack('>hhi', 18, 0, 1) +           # ApiKey=18, ApiVersion=0, CorrelationId=1
+              struct.pack('>hhi', 18, 0, 1) +
               struct.pack('>h', len(client_id)) + client_id
           )
           request = struct.pack('>i', len(payload)) + payload
@@ -278,7 +279,6 @@ jobs:
               try:
                   s = socket.create_connection((HOST, PORT), timeout=5)
                   s.sendall(request)
-                  # Any 4-byte response header means the broker accepted the handshake
                   header = s.recv(4)
                   s.close()
                   if len(header) == 4:
@@ -292,9 +292,20 @@ jobs:
           sys.exit(1)
           PYEOF
 
-      # ── Produce/Consume benchmark ─────────────────────────────────────────
-      - name: Run KNetBenchmark (Produce/Consume) [${{ matrix.framework }}]
+      # ── Extra flags for the knet variant ─────────────────────────────────────
+      # VARIANT_FLAGS is empty for 'standard', populated for 'knet'
+      - name: Set variant flags
+        run: |
+          if [ "${{ matrix.variant }}" = "knet" ]; then
+            echo "VARIANT_FLAGS=-UseKNetProducer -UseKNetConsumer" >> $GITHUB_ENV
+          else
+            echo "VARIANT_FLAGS=" >> $GITHUB_ENV
+          fi
+
+      # ── Produce/Consume benchmark ─────────────────────────────────────────────
+      - name: Run KNetBenchmark [${{ matrix.framework }}/${{ matrix.variant }}]
         timeout-minutes: 60
+        continue-on-error: true  # partial CSV is still uploaded even on crash
         run: |
           dotnet "${{ github.workspace }}/bin/${{ matrix.framework }}/KNetBenchmark.dll"           \
             -Log4JConfiguration "${{ github.workspace }}/bin/${{ matrix.framework }}/log4j2.yaml"  \
@@ -307,15 +318,14 @@ jobs:
             -MaxPacketsToExchange ${{ env.BENCH_MAX_PKT }}                                         \
             -MinPacketLength      ${{ env.BENCH_MIN_LEN }}                                         \
             -MaxPacketLength      ${{ env.BENCH_MAX_LEN }}                                         \
-            -UseKNetProducer                                                                       \
-            -UseKNetConsumer
+            ${{ env.VARIANT_FLAGS }}
 
-      # ── Roundtrip benchmark ───────────────────────────────────────────────
-      # Note: -NoAcks is intentionally omitted — round-trip latency measurement
-      # requires reliable delivery; acks=0 can silently drop messages and cause
-      # the consumer thread to never reach numpacket.
-      - name: Run KNetRoundTripBenchmark [${{ matrix.framework }}]
+      # ── Roundtrip benchmark ───────────────────────────────────────────────────
+      # -NoAcks is intentionally omitted for roundtrip: acks=0 can silently drop
+      # messages and the consumer thread would never reach numpacket.
+      - name: Run KNetRoundTripBenchmark [${{ matrix.framework }}/${{ matrix.variant }}]
         timeout-minutes: 60
+        continue-on-error: true
         run: |
           dotnet "${{ github.workspace }}/bin/${{ matrix.framework }}/KNetRoundTripBenchmark.dll"  \
             -Log4JConfiguration "${{ github.workspace }}/bin/${{ matrix.framework }}/log4j2.yaml"  \
@@ -329,22 +339,24 @@ jobs:
             -MinPacketLength      ${{ env.BENCH_MIN_LEN }}                                         \
             -MaxPacketLength      ${{ env.BENCH_MAX_LEN }}                                         \
             -FetchMinBytes 1                                                                       \
-            -UseKNetProducer                                                                       \
-            -UseKNetConsumer
+            ${{ env.VARIANT_FLAGS }}
 
-      # ── Upload CSVs — artifact name includes framework to avoid collisions ─
-      # Artifacts are kept as separate per-framework directories so the
-      # update_docs job can extract the framework name from the path.
-      - name: Upload raw benchmark results [${{ matrix.framework }}]
+      # ── Upload CSVs ────────────────────────────────────────────────────────────
+      # Artifact name encodes both framework and variant so legs don't collide.
+      # The directory layout inside the artifact is:
+      #   knet/results_*.csv
+      #   knet/roundtrip_results_*.csv
+      # (or standard/…) — the Python script uses this path to detect the variant.
+      - name: Upload raw benchmark results [${{ matrix.framework }}/${{ matrix.variant }}]
         uses: actions/upload-artifact@v7
         if: always()
         with:
-          name: benchmark-csv-${{ github.run_number }}-${{ matrix.framework }}
-          path: ${{ env.RESULTS_DIR }}/**
+          name: benchmark-csv-${{ github.run_number }}-${{ matrix.framework }}-${{ matrix.variant }}
+          path: ${{ github.workspace }}/benchmark-results/
           retention-days: 90
 
   # ────────────────────────────────────────────────────────────────────────────
-  # 4. Parse CSVs from ALL matrix legs → update performance.md → open PR
+  # 4. Parse CSVs → update performance.md → open PR
   # ────────────────────────────────────────────────────────────────────────────
   update_docs:
     name: Update performance.md and open PR
@@ -359,12 +371,10 @@ jobs:
         with:
           fetch-depth: '0'
 
-      # Download all per-framework artifacts preserving directory structure.
-      # Without merge-multiple the layout is:
-      #   ./benchmark-results/benchmark-csv-<run>-net8.0/results_*.csv
-      #   ./benchmark-results/benchmark-csv-<run>-net9.0/results_*.csv
-      #   ./benchmark-results/benchmark-csv-<run>-net10.0/results_*.csv
-      # The framework name is extracted from the directory name in the Python script.
+      # Download all per-framework/variant artifacts preserving the directory
+      # structure so the Python script can derive the variant from the path:
+      #   ./benchmark-results/benchmark-csv-<N>-net9.0-knet/knet/results_*.csv
+      #   ./benchmark-results/benchmark-csv-<N>-net9.0-standard/standard/results_*.csv
       - name: Download all benchmark CSV results
         uses: actions/download-artifact@v4
         with:
@@ -374,7 +384,7 @@ jobs:
       - name: List downloaded CSVs (debug)
         run: find ./benchmark-results -name '*.csv' | sort
 
-      # ── Python: parse CSVs, compute ratios, patch the doc ─────────────────
+      # ── Python: parse → compute ratios → patch performance.md ────────────────
       - name: Parse results and update performance.md
         env:
           GITHUB_RUN_ID:     ${{ github.run_id }}
@@ -394,14 +404,15 @@ jobs:
           SHA_SHORT   = os.environ.get("GITHUB_SHA", "")[:7]
           REPO        = os.environ.get("GITHUB_REPOSITORY", "")
           NOW         = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
+          LENGTHS     = [100, 1000, 10000, 100000]
 
-          # ── stats ──────────────────────────────────────────────────────────
+          # ── statistics ─────────────────────────────────────────────────────
           def mean(lst):
               return sum(lst) / len(lst) if lst else 0.0
 
           def sd(lst):
               if len(lst) < 2:
-                  return 0.0
+                  return None            # not enough points
               m = mean(lst)
               return math.sqrt(sum((x - m) ** 2 for x in lst) / (len(lst) - 1))
 
@@ -418,31 +429,39 @@ jobs:
               except (ValueError, IndexError):
                   return cell
 
-          # ── framework detection ────────────────────────────────────────────
-          # Artifact dirs are named benchmark-csv-<run>-<framework>, e.g.
-          # ./benchmark-results/benchmark-csv-42-net9.0/results_*.csv
-          def framework_from_path(path):
-              m = re.search(r'benchmark-csv-\d+-([\w.]+)[/\\]', path)
+          def cell_str(kl, cl):
+              """avg_ratio (sd_ratio) — sd shows '—' when only 1 data point."""
+              avg = ratio_str(mean(kl), mean(cl))
+              sk, sc = sd(kl), sd(cl)
+              if sk is None or sc is None:
+                  sd_part = "—"          # single measurement, no variance
+              else:
+                  sd_part = ratio_str(sk, sc)
+              return bold_if_knet_better(f"{avg} ({sd_part})")
+
+          # ── variant detection ───────────────────────────────────────────────
+          # Path layout:
+          #   benchmark-results/benchmark-csv-<N>-<fw>-<variant>/<variant>/file.csv
+          def variant_from_path(path):
+              m = re.search(r'[/\\](knet|standard)[/\\]', path)
               return m.group(1) if m else "unknown"
 
-          # ── CSV parsing ────────────────────────────────────────────────────
+          # ── CSV parsing ─────────────────────────────────────────────────────
           def read_csv(path):
               with open(path, newline="", encoding="utf-8-sig") as f:
                   return list(csv.DictReader(f, delimiter=";"))
 
           def aggregate_bench(csv_files):
               """
-              CSV header (Program.cs):
-                NumPackets;Length;KNETProd;KNETCons;ConfluentProd;ConfluentCons
-
-              Key: (framework, packets, length)
-              Produce and consume metrics are stored independently so that a
-              timeout on one side does not suppress the other in the table.
+              CSV: NumPackets;Length;KNETProd;KNETCons;ConfluentProd;ConfluentCons
+              Key: (variant, packets, length)  — framework NOT in key so that the
+              3 framework legs contribute separate data points per cell, giving
+              a non-zero SD even with Repeat=1.
               """
               agg = {}
-              total_rows = 0
+              total = 0
               for path in csv_files:
-                  fw = framework_from_path(path)
+                  variant = variant_from_path(path)
                   for row in read_csv(path):
                       try:
                           pkt = int(row["NumPackets"])
@@ -451,35 +470,30 @@ jobs:
                           cp  = float(row["ConfluentProd"] or 0)
                           kc  = float(row["KNETCons"]      or 0)
                           cc  = float(row["ConfluentCons"] or 0)
-                          # Skip rows with no useful data at all
                           if kp == 0 and cp == 0 and kc == 0 and cc == 0:
-                              print(f"  SKIP (all zeros): {path} fw={fw} pkt={pkt} len={lng}")
+                              print(f"  SKIP all-zeros: {path} pkt={pkt} len={lng}")
                               continue
-                          key = (fw, pkt, lng)
-                          d = agg.setdefault(key, {"kp": [], "cp": [], "kc": [], "cc": []})
-                          # Append only non-zero values so N/A is shown when a
-                          # metric is missing rather than skewing the average.
+                          key = (variant, pkt, lng)
+                          d = agg.setdefault(key, {"kp":[],"cp":[],"kc":[],"cc":[]})
                           if kp > 0: d["kp"].append(kp)
                           if cp > 0: d["cp"].append(cp)
                           if kc > 0: d["kc"].append(kc)
                           if cc > 0: d["cc"].append(cc)
-                          total_rows += 1
+                          total += 1
                       except (KeyError, ValueError) as e:
                           print(f"  PARSE ERROR {path}: {e} | row={row}")
-              print(f"aggregate_bench: {total_rows} valid rows from {len(csv_files)} file(s)")
+              print(f"aggregate_bench: {total} rows from {len(csv_files)} file(s)")
               return agg
 
           def aggregate_roundtrip(csv_files):
               """
-              CSV header (KNetRoundTripBenchmark/Program.cs):
-                NumPackets;Length;KNETMax;KNETMin;KNETMean;ConfluentMax;ConfluentMin;ConfluentMean
-
-              Key: (framework, packets, length)
+              CSV: NumPackets;Length;KNETMax;KNETMin;KNETMean;ConfluentMax;ConfluentMin;ConfluentMean
+              Key: (variant, packets, length)
               """
               agg = {}
-              total_rows = 0
+              total = 0
               for path in csv_files:
-                  fw = framework_from_path(path)
+                  variant = variant_from_path(path)
                   for row in read_csv(path):
                       try:
                           pkt = int(row["NumPackets"])
@@ -487,59 +501,57 @@ jobs:
                           km  = float(row["KNETMean"]      or 0)
                           cm  = float(row["ConfluentMean"] or 0)
                           if km == 0 and cm == 0:
-                              print(f"  SKIP (all zeros): {path} fw={fw} pkt={pkt} len={lng}")
+                              print(f"  SKIP all-zeros: {path} pkt={pkt} len={lng}")
                               continue
-                          key = (fw, pkt, lng)
-                          d = agg.setdefault(key, {"km": [], "cm": []})
+                          key = (variant, pkt, lng)
+                          d = agg.setdefault(key, {"km":[],"cm":[]})
                           if km > 0: d["km"].append(km)
                           if cm > 0: d["cm"].append(cm)
-                          total_rows += 1
+                          total += 1
                       except (KeyError, ValueError) as e:
                           print(f"  PARSE ERROR {path}: {e} | row={row}")
-              print(f"aggregate_roundtrip: {total_rows} valid rows from {len(csv_files)} file(s)")
+              print(f"aggregate_roundtrip: {total} rows from {len(csv_files)} file(s)")
               return agg
 
-          # ── table builder ──────────────────────────────────────────────────
-          # Rows: Framework + Packets   Columns: lengths (derived from data)
-          def build_table(agg, k_key, c_key):
-              if not agg:
-                  return "_No data available._\n"
+          # ── table builder ───────────────────────────────────────────────────
+          # Preserves the original format: rows=packets, columns=lengths.
+          HEADER = (
+              "|  | 100 bytes | 1 000 bytes | 10 000 bytes | 100 000 bytes |\n"
+              "|:---:\t|:---:\t|:---:\t|:---:\t|:---:\t|\n"
+          )
 
-              frameworks   = sorted({k[0] for k in agg})
-              packets_list = sorted({k[1] for k in agg})
-              lengths      = sorted({k[2] for k in agg})
-
-              # Header — length values are formatted with thousands separator
-              len_headers = " | ".join(f"{l:,} bytes" for l in lengths)
-              header  = f"| Framework | Packets | {len_headers} |\n"
-              header += "|:---:|:---:| " + " | ".join(":---:" for _ in lengths) + " |\n"
-
+          def build_single_table(agg, variant, k_key, c_key):
+              packets_list = sorted({k[1] for k in agg if k[0] == variant})
+              if not packets_list:
+                  return "_No data._\n"
               rows = ""
-              for fw in frameworks:
-                  for packets in packets_list:
-                      cols = []
-                      for length in lengths:
-                          d  = agg.get((fw, packets, length), {})
-                          kl = d.get(k_key, [])
-                          cl = d.get(c_key, [])
-                          if not kl or not cl:
-                              cols.append("N/A")
-                              continue
-                          cell = (
-                              f"{ratio_str(mean(kl), mean(cl))}"
-                              f" ({ratio_str(sd(kl), sd(cl))})"
-                          )
-                          cols.append(bold_if_knet_better(cell))
-                      rows += f"| {fw} | {packets:,} | " + " | ".join(cols) + " |\n"
+              for packets in packets_list:
+                  cols = []
+                  for length in LENGTHS:
+                      d  = agg.get((variant, packets, length), {})
+                      kl = d.get(k_key, [])
+                      cl = d.get(c_key, [])
+                      cols.append(cell_str(kl, cl) if kl and cl else "N/A")
+                  rows += f"| {packets:,} messages | " + " | ".join(cols) + " |\n"
+              return HEADER + rows
 
-              return header + rows
+          def build_two_variant_block(agg, k_key, c_key,
+                                       knet_label, std_label):
+              """Generate a block with two sub-tables: KNet variant then Standard."""
+              knet_table = build_single_table(agg, "knet",     k_key, c_key)
+              std_table  = build_single_table(agg, "standard", k_key, c_key)
+              return (
+                  f"\n_Using **KNetProducer** and **KNetConsumer**_ (`{knet_label}`):\n\n"
+                  f"{knet_table}\n"
+                  f"_Using **KafkaProducer** and **KafkaConsumer**_ ({std_label}):\n\n"
+                  f"{std_table}"
+              )
 
-          # ── load data ──────────────────────────────────────────────────────
-          bench_csvs     = sorted(glob.glob(f"{RESULTS_DIR}/**/results_*.csv",          recursive=True))
+          # ── load data ───────────────────────────────────────────────────────
+          bench_csvs     = sorted(glob.glob(f"{RESULTS_DIR}/**/results_*.csv",           recursive=True))
           roundtrip_csvs = sorted(glob.glob(f"{RESULTS_DIR}/**/roundtrip_results_*.csv", recursive=True))
 
-          print(f"Found {len(bench_csvs)} bench CSV(s)")
-          print(f"Found {len(roundtrip_csvs)} roundtrip CSV(s)")
+          print(f"Found {len(bench_csvs)} bench CSV(s), {len(roundtrip_csvs)} roundtrip CSV(s)")
 
           if not bench_csvs and not roundtrip_csvs:
               print("No CSV files found – skipping doc update.")
@@ -552,42 +564,74 @@ jobs:
               print("All CSVs contain only failed rows – skipping doc update.")
               exit(0)
 
-          produce_table   = build_table(bench_agg,     "kp", "cp")
-          consume_table   = build_table(bench_agg,     "kc", "cc")
-          roundtrip_table = build_table(roundtrip_agg, "km", "cm")
-
           run_badge = (
               f"\n> Results automatically updated by CI run "
               f"[#{RUN_NUM}](https://github.com/{REPO}/actions/runs/{RUN_ID})"
               f" · commit `{SHA_SHORT}` · {NOW}\n"
           )
 
-          # ── patch performance.md ───────────────────────────────────────────
+          # Build the content blocks that will replace each section
+          produce_block   = build_two_variant_block(
+              bench_agg, "kp", "cp",
+              "-UseKNetProducer -UseKNetConsumer",
+              "standard JNI wrappers"
+          )
+          consume_block   = build_two_variant_block(
+              bench_agg, "kc", "cc",
+              "-UseKNetProducer -UseKNetConsumer",
+              "standard JNI wrappers"
+          )
+          roundtrip_block = build_two_variant_block(
+              roundtrip_agg, "km", "cm",
+              "-UseKNetProducer -UseKNetConsumer",
+              "standard JNI wrappers"
+          )
+
+          # ── patch performance.md ─────────────────────────────────────────────
           doc = Path(DOCS_PATH).read_text(encoding="utf-8")
 
-          def replace_block(doc, start_marker, end_marker, new_table, badge):
+          def replace_block(doc, start_marker, end_marker, new_content, badge):
+              """
+              Replace everything BETWEEN start_marker and end_marker.
+              Both markers are preserved in the output.
+
+              BUG FIX: the Produce section uses CONSUME_MARKER as its end so
+              that CONSUME_MARKER is not swallowed, and the Consume section uses
+              '#### Analysis' as its end.  Using '#### Analysis' as the end for
+              both would make the first substitution consume the entire
+              Produce+Consume block, deleting CONSUME_MARKER and leaving the
+              Consume table empty on every run.
+              """
               pattern = re.compile(
                   rf"({re.escape(start_marker)})(.*?)({re.escape(end_marker)})",
                   re.DOTALL,
               )
-              # Use a lambda to avoid re.sub interpreting backslashes in the
-              # replacement string (e.g. table cells containing '\' sequences
-              # would be misread as group references and silently corrupt the doc).
-              def make_replacement(m):
-                  return m.group(1) + "\n\n" + new_table + "\n" + badge + "\n" + m.group(3)
-              result, n = pattern.subn(make_replacement, doc)
+              def make_repl(m):
+                  return (
+                      m.group(1)      # start_marker preserved
+                      + "\n\n"
+                      + new_content
+                      + "\n"
+                      + badge
+                      + "\n"
+                      + m.group(3)    # end_marker preserved
+                  )
+              result, n = pattern.subn(make_repl, doc)
               if n == 0:
                   print(f"WARNING: marker not found — {start_marker!r}")
               return result
 
+          # Markers exactly as they appear in the doc
           PRODUCE_MARKER   = "- KNet/Confluent.Kafka™ Produce Average ratio percentage (SD ratio percentage):"
           CONSUME_MARKER   = "- KNet/Confluent.Kafka™ Consume Average ratio percentage (SD ratio percentage):"
           ROUNDTRIP_MARKER = "- KNet/Confluent.Kafka™ Roundtrip Average ratio percentage (SD ratio percentage):"
-          SECTION_END      = "#### Analysis"
+          ANALYSIS         = "#### Analysis"
 
-          doc = replace_block(doc, PRODUCE_MARKER,   SECTION_END, produce_table,   run_badge)
-          doc = replace_block(doc, CONSUME_MARKER,   SECTION_END, consume_table,   run_badge)
-          doc = replace_block(doc, ROUNDTRIP_MARKER, SECTION_END, roundtrip_table, run_badge)
+          # Order matters: Produce uses CONSUME_MARKER as end (preserves it);
+          # Consume and Roundtrip both use ANALYSIS as end (two separate occurrences).
+          doc = replace_block(doc, PRODUCE_MARKER,   CONSUME_MARKER, produce_block,   run_badge)
+          doc = replace_block(doc, CONSUME_MARKER,   ANALYSIS,       consume_block,   run_badge)
+          doc = replace_block(doc, ROUNDTRIP_MARKER, ANALYSIS,       roundtrip_block, run_badge)
 
           Path(DOCS_PATH).write_text(doc, encoding="utf-8")
           print("performance.md updated successfully.")
@@ -608,6 +652,10 @@ jobs:
             `src/documentation/articles/performance.md`
             with the latest benchmark run results.
 
+            Each table shows two sub-sections:
+            - **KNetProducer / KNetConsumer** (`-UseKNetProducer -UseKNetConsumer`)
+            - **KafkaProducer / KafkaConsumer** (standard JNI wrappers)
+
             | | |
             |---|---|
             | **CI run** | [#${{ github.run_number }}](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}) |
@@ -618,8 +666,7 @@ jobs:
             | **Packets** | `${{ env.BENCH_MIN_PKT }}` → `${{ env.BENCH_MAX_PKT }}` |
             | **Lengths (bytes)** | `${{ env.BENCH_MIN_LEN }}` → `${{ env.BENCH_MAX_LEN }}` |
 
-            Raw CSV results are attached to the workflow run as artifacts
-            (retained 90 days).
+            Raw CSV results are attached as workflow artifacts (retained 90 days).
 
             > [!NOTE]
             > Please review the updated tables before merging.
