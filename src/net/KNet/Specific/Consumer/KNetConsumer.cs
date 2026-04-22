@@ -259,9 +259,18 @@ namespace MASES.KNet.Consumer
                         System.Threading.Interlocked.Increment(ref _dequeing);
                         try
                         {
+                            if (actionCallback == null) continue;
+                            bool dispose = true;
                             foreach (var item in records)
                             {
-                                actionCallback?.Invoke(item);
+                                try
+                                {
+                                    dispose = actionCallback.Invoke(item);
+                                }
+                                finally
+                                {
+                                    if (dispose) item?.Dispose();
+                                }
                             }
                         }
                         catch { }
