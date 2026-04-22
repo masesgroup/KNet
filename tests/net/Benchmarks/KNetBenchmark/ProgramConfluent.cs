@@ -161,17 +161,24 @@ namespace MASES.KNet.Benchmark
                             swCreateRecord.Stop();
                         }
                         swSendRecord.Start();
-                        if (UseCallback)
+                        try
                         {
-                            producer.Produce(topicName, message, (o) =>
+                            if (UseCallback)
                             {
-                                if (o.Error.IsError) Console.WriteLine(o.Error.ToString());
-                                else if (ShowLogs) Console.WriteLine($"Produced on topic {o.Topic} at offset {o.Offset}");
-                            });
+                                producer.Produce(topicName, message, (o) =>
+                                {
+                                    if (o.Error.IsError) Console.WriteLine(o.Error.ToString());
+                                    else if (ShowLogs) Console.WriteLine($"Produced on topic {o.Topic} at offset {o.Offset}");
+                                });
+                            }
+                            else
+                            {
+                                producer.Produce(topicName, message);
+                            }
                         }
-                        else
+                        catch (ProduceException<long, byte[]> ex) when (ex.Error.Code == ErrorCode.Local_QueueFull)
                         {
-                            producer.Produce(topicName, message);
+                            producer.Poll(TimeSpan.FromMilliseconds(100));
                         }
                         swSendRecord.Stop();
                         if (WithBurst)

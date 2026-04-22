@@ -76,6 +76,7 @@ namespace MASES.KNet.Benchmark
                                     System.Threading.Thread.Sleep(1000); // wait kafka server
                                     CreateTopic(topicNameKNet);
                                 }
+                                WaitForTopic(topicNameKNet, TimeSpan.FromSeconds(30));
 
                                 if (ShowLogs) Console.WriteLine($"Producing on topic {topicNameKNet}");
                                 var KNETProdSW = UseKNetProducer ? ProduceKNet(topicNameKNet, length, packets, CheckOnConsume ? data : null) : ProduceKafka(topicNameKNet, length, packets, CheckOnConsume ? data : null);
@@ -96,6 +97,7 @@ namespace MASES.KNet.Benchmark
                                     System.Threading.Thread.Sleep(1000); // wait kafka server
                                     CreateTopic(topicNameConfluent);
                                 }
+                                WaitForTopic(topicNameConfluent, TimeSpan.FromSeconds(30));
 
                                 if (ShowLogs) Console.WriteLine($"Producing on topic {topicNameConfluent}");
                                 var ConfluentProdSW = ProduceConfluent(topicNameConfluent, length, packets, CheckOnConsume ? data : null);

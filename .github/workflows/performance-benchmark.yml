@@ -11,7 +11,7 @@ on:
       MinPacketsToExchange:
         description: 'Min packets to exchange'
         required: false
-        default: '1000'
+        default: '100'
         type: string
       MaxPacketsToExchange:
         description: 'Max packets to exchange'
@@ -39,8 +39,8 @@ concurrency:
 env:
   # schedule: inputs.Repeat is empty → fallback to '20'
   # dispatch: use the provided value (default '1')
-  BENCH_REPEAT:  ${{ inputs.Repeat               || '20'    }}
-  BENCH_MIN_PKT: ${{ inputs.MinPacketsToExchange  || '1000'  }}
+  BENCH_REPEAT:  ${{ inputs.Repeat                || '20'    }}
+  BENCH_MIN_PKT: ${{ inputs.MinPacketsToExchange  || '100'  }}
   BENCH_MAX_PKT: ${{ inputs.MaxPacketsToExchange  || '10000' }}
   BENCH_MIN_LEN: ${{ inputs.MinPacketLength       || '100'   }}
   BENCH_MAX_LEN: ${{ inputs.MaxPacketLength       || '100000' }}

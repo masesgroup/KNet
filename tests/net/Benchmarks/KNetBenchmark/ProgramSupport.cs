@@ -16,15 +16,16 @@
 *  Refer to LICENSE for more information.
 */
 
+using Confluent.Kafka;
 using Java.Util;
+using MASES.KNet.Admin;
+using MASES.KNet.Extensions;
 using Org.Apache.Kafka.Clients.Admin;
 using Org.Apache.Kafka.Common.Errors;
-using MASES.KNet.Extensions;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
-using MASES.KNet.Admin;
 
 namespace MASES.KNet.Benchmark
 {
@@ -162,6 +163,26 @@ namespace MASES.KNet.Benchmark
                 }
             }
             catch (UnknownTopicOrPartitionException) { }
+        }
+
+        static void WaitForTopic(string topicName, TimeSpan timeout)
+        {
+            var deadline = Stopwatch.StartNew();
+            while (deadline.Elapsed < timeout)
+            {
+                try
+                {
+                    using var adminClient = new AdminClientBuilder(
+                        new Confluent.Kafka.AdminClientConfig { BootstrapServers = Server }).Build();
+                    var meta = adminClient.GetMetadata(topicName, TimeSpan.FromSeconds(5));
+                    if (meta.Topics[0].Error.Code == ErrorCode.NoError
+                        && meta.Topics[0].Partitions.Count > 0)
+                        return;
+                }
+                catch { }
+                System.Threading.Thread.Sleep(500);
+            }
+            throw new System.TimeoutException($"Topic {topicName} not ready after {timeout}");
         }
     }
 }
