@@ -21,11 +21,11 @@ The entire infrastructure performance depends on some elements:
   5. The user application
 
 All elements listed before have their relevance in the evaluation of the performance: surely the first 3 points are the ones with maximum impact.
-The benchmark made in KNet try to focus on the point 3: the benchmarks of the points 1 and 2 are covered from other player. To concentrate on point 3:
-- For points 1 and 2 the tests were done using an infrastructure based on SSD disks, high number of processors and LAN Gigabit ethernet connections: with this configuration the impact on tests from external conditions is reduced and statistically distributed.
-- For point 4: it is covered creating an application that performs the same steps and each time apply the same configuration parameters.
+The benchmark made in KNet try to focus on the point 4: the benchmarks of the points 1, 2 and 3 are covered from other player. To concentrate on point 4:
+- For points 1, 2 and 3 the tests were done using an infrastructure based on SSD disks, high number of processors and LAN Gigabit ethernet connections: with this configuration the impact on tests from external conditions is reduced and statistically distributed.
+- For point 5: it is covered creating an application that performs the same steps and each time apply the same configuration parameters.
 
-With the considerations made in the previous chapter we are going to focus on the point 3: client library. 
+With the considerations made in the previous chapter we are going to focus on the point 4: client library. 
 An absolute approach cannot be followed: as stated before HW and network have an high impact, so the benchmark test program was designed with a compare approach.
 Looking in the Apache Kafka™ clients page the client library which is under development is the one mantained from Confluent.
 The benchmark was designed to compare performances between KNet and Confluent.Kafka™. The comparison between both libraries is listed below:

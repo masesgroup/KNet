@@ -430,7 +430,11 @@ namespace MASES.KNet.Benchmark
             }
             BenchmarkKNetCore.CreateGlobalInstance();
 
-            Console.WriteLine($"Unknown params: {string.Join(", ", BenchmarkKNetCore.FilteredArgs)}");
+            var unknownParams = string.Join(", ", BenchmarkKNetCore.FilteredArgs);
+            if (!string.IsNullOrWhiteSpace(unknownParams))
+            {
+                Console.WriteLine($"Unknown params: {unknownParams}");
+            }
 
             ShowLogs = BenchmarkKNetCore.GlobalInstance.ParsedArgs.Exist(CLIParam.ShowLogs);
             ShowIntermediateResults = BenchmarkKNetCore.GlobalInstance.ParsedArgs.Exist(CLIParam.ShowIntermediateResults);

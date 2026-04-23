@@ -57,7 +57,20 @@ namespace MASES.KNet.Benchmark
                     producerBuilder.SetValueSerializer(confluentValueSerializer);
                 }
 
-                confluentProducer = producerBuilder.Build();
+                confluentProducer = producerBuilder
+                    .SetLogHandler((_, msg) =>
+                    {
+                        // msg.Level: 0=EMERG … 7=DEBUG  (syslog severity)
+                        if (ShowLogs || msg.Level <= SyslogLevel.Error) // 3 = ERR, 2 = CRIT, …
+                            Console.WriteLine($"[Confluent Producer] {msg.Level} {msg.Facility} {msg.Message}");
+                    })
+                    .SetErrorHandler((_, err) =>
+                    {
+                        // IsFatal = true solo per errori unrecoverable
+                        Console.WriteLine($"[Confluent Producer Error] isFatal={err.IsFatal} code={err.Code} reason={err.Reason}");
+                    })
+                    /* .SetKeySerializer / .SetValueSerializer invariati */
+                    .Build();
             }
             return confluentProducer;
         }
@@ -148,17 +161,24 @@ namespace MASES.KNet.Benchmark
                             swCreateRecord.Stop();
                         }
                         swSendRecord.Start();
-                        if (UseCallback)
+                        try
                         {
-                            producer.Produce(topicName, message, (o) =>
+                            if (UseCallback)
                             {
-                                if (o.Error.IsError) Console.WriteLine(o.Error.ToString());
-                                else if (ShowLogs) Console.WriteLine($"Produced on topic {o.Topic} at offset {o.Offset}");
-                            });
+                                producer.Produce(topicName, message, (o) =>
+                                {
+                                    if (o.Error.IsError) Console.WriteLine(o.Error.ToString());
+                                    else if (ShowLogs) Console.WriteLine($"Produced on topic {o.Topic} at offset {o.Offset}");
+                                });
+                            }
+                            else
+                            {
+                                producer.Produce(topicName, message);
+                            }
                         }
-                        else
+                        catch (ProduceException<long, byte[]> ex) when (ex.Error.Code == ErrorCode.Local_QueueFull)
                         {
-                            producer.Produce(topicName, message);
+                            producer.Poll(TimeSpan.FromMilliseconds(100));
                         }
                         swSendRecord.Stop();
                         if (WithBurst)
@@ -215,8 +235,20 @@ namespace MASES.KNet.Benchmark
                     consumerBuilder.SetKeyDeserializer(confluentKeyDeserializer);
                     consumerBuilder.SetValueDeserializer(confluentValueDeserializer);
                 }
-                consumerBuilder.SetPartitionsAssignedHandler(PartitionsAssignedHandler);
-                confluentConsumer = consumerBuilder.Build();
+
+                confluentConsumer = consumerBuilder
+                    .SetLogHandler((_, msg) =>
+                    {
+                        if (ShowLogs || msg.Level <= SyslogLevel.Error)
+                            Console.WriteLine($"[Confluent Consumer] {msg.Level} {msg.Facility} {msg.Message}");
+                    })
+                    .SetErrorHandler((_, err) =>
+                    {
+                        Console.WriteLine($"[Confluent Consumer Error] isFatal={err.IsFatal} code={err.Code} reason={err.Reason}");
+                    })
+                    .SetPartitionsAssignedHandler(PartitionsAssignedHandler)
+                    /* .SetKeyDeserializer / .SetValueDeserializer invariati */
+                    .Build();
             }
             return confluentConsumer;
         }
@@ -243,6 +275,7 @@ namespace MASES.KNet.Benchmark
             try
             {
                 consumer.Subscribe(topicName);
+                var noProgressTimer = Stopwatch.StartNew();
                 while (true)
                 {
                     var record = consumer.Consume(TimeSpan.FromMinutes(1));
@@ -255,9 +288,11 @@ namespace MASES.KNet.Benchmark
                             throw new InvalidOperationException($"ConsumeConfluent test {testNum}: Incorrect data counter {counter} item.Key {record.Message.Key}");
                         }
                         if (AlwaysCommit) consumer.Commit(record);
-                        counter++;
+                        Interlocked.Increment(ref counter);
+                        noProgressTimer.Restart();
+
                     }
-                    if (counter >= numpacket)
+                    if (Volatile.Read(ref counter) >= numpacket)
                     {
                         try
                         {
@@ -267,6 +302,10 @@ namespace MASES.KNet.Benchmark
                         stopWatch?.Stop();
                         consumer.Unsubscribe();
                         return stopWatch;
+                    }
+                    if (noProgressTimer.Elapsed > TimeSpan.FromSeconds(60))
+                    {
+                        throw new TimeoutException($"ConsumeConfluent timed out after 60 seconds: expected {numpacket} messages, got {counter}");
                     }
                 }
             }
@@ -308,9 +347,9 @@ namespace MASES.KNet.Benchmark
                         };
                         producer.Produce(topicName + "_COPY", message);
                         consumer.Commit(record);
-                        counter++;
+                        Interlocked.Increment(ref counter);
                     }
-                    if (counter >= numpacket)
+                    if (Volatile.Read(ref counter) >= numpacket)
                     {
                         try
                         {
@@ -348,6 +387,7 @@ namespace MASES.KNet.Benchmark
                 ManualResetEvent startEvent = new ManualResetEvent(false);
                 var consumer = ConfluentConsumer();
                 var producer = ConfluentProducer();
+                Exception threadException = null;
                 PartitionsAssignedHandler_trampoline = (o1, o2) =>
                 {
                     if (ShowLogs) Console.WriteLine("Assigned: {0}", string.Join(" ", o2.Select((o) => o.ToString()).ToArray()));
@@ -360,6 +400,7 @@ namespace MASES.KNet.Benchmark
                     {
                         consumer.Subscribe(topicName);
                         int counter = 0;
+                        var noProgressTimer = Stopwatch.StartNew();
                         while (true)
                         {
                             var record = consumer.Consume(TimeSpan.FromSeconds(1));
@@ -371,20 +412,31 @@ namespace MASES.KNet.Benchmark
                                 {
                                     throw new InvalidOperationException($"ConsumeConfluent test {testNum}: Incorrect data counter {counter} item.Key {record.Message.Key}");
                                 }
-                                counter++;
+                                Interlocked.Increment(ref counter);
+                                noProgressTimer.Restart();
                             }
 
                             if (AlwaysCommit) consumer.Commit(record);
-                            if (counter >= numpacket)
+                            if (Volatile.Read(ref counter) >= numpacket)
                             {
                                 consumer.Commit(record);
                                 consumer.Unsubscribe();
                                 break;
                             }
+                            if (noProgressTimer.Elapsed > TimeSpan.FromSeconds(60))
+                            {
+                                threadException = new TimeoutException($"RoundTripConfluent timed out after 60 seconds: expected {numpacket} messages, got {counter}");
+                                break;
+                            }
                         }
+                    }
+                    catch (Exception ex)
+                    {
+                        threadException = ex;  
                     }
                     finally
                     {
+                        try { consumer.Unsubscribe(); } catch { }
                         if (!SharedObjects)
                         {
                             consumer.Dispose();
@@ -395,7 +447,10 @@ namespace MASES.KNet.Benchmark
                 });
 
                 thread.Start();
-                startEvent.WaitOne();
+                if (!startEvent.WaitOne(TimeSpan.FromMinutes(10)))
+                {
+                    throw new TimeoutException("Consumer thread did not complete in time");
+                }
                 startEvent.Reset();
 
                 Stopwatch totalExecution = Stopwatch.StartNew();
@@ -465,7 +520,14 @@ namespace MASES.KNet.Benchmark
                     }
                 }
                 finally { producer.Flush(); stopWatch.Stop(); if (!SharedObjects) { producer.Dispose(); producer = null; } }
-                startEvent.WaitOne();
+                if (!startEvent.WaitOne(TimeSpan.FromMinutes(10)))
+                {
+                    throw new TimeoutException("Consumer thread did not complete in time");
+                }
+                if (threadException != null)
+                {
+                    throw threadException;
+                }
                 totalExecution.Stop();
                 if (ShowIntermediateResults)
                 {

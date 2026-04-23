@@ -295,6 +295,7 @@ namespace MASES.KNet.Benchmark
                 {
                     int counter = 0;
                     consumer.Subscribe(topics, rebalanceListener);
+                    var noProgressTimer = Stopwatch.StartNew();
                     while (true)
                     {
                         var records = consumer.Poll(duration);
@@ -305,10 +306,15 @@ namespace MASES.KNet.Benchmark
                                 foreach (var item in records)
                                 {
                                     item.Key(); item.Value();
-                                    counter++;
+                                    Interlocked.Increment(ref counter);
+                                    noProgressTimer.Restart();
                                 }
                             }
-                            else counter += records.Count();
+                            else
+                            {
+                                Interlocked.Add(ref counter, records.Count());
+                                noProgressTimer.Restart();
+                            }
                         }
                         else
                         {
@@ -321,7 +327,8 @@ namespace MASES.KNet.Benchmark
                                     {
                                         throw new InvalidOperationException($"ConsumeKafka test {testNum}: Incorrect data counter {counter} item.Key {item.Item2}");
                                     }
-                                    counter++;
+                                    Interlocked.Increment(ref counter);
+                                    noProgressTimer.Restart();
                                 }
                             }
                             else
@@ -333,17 +340,22 @@ namespace MASES.KNet.Benchmark
                                     {
                                         throw new InvalidOperationException($"ConsumeKafka test {testNum}: Incorrect data counter {counter} item.Key {item.Key()}");
                                     }
-                                    counter++;
+                                    Interlocked.Increment(ref counter);
+                                    noProgressTimer.Restart();
                                 }
                             }
                         }
                         if (AlwaysCommit) consumer.CommitSync();
-                        if (counter >= numpacket)
+                        if (Volatile.Read(ref counter) >= numpacket)
                         {
                             consumer.CommitSync();
-                            stopWatch.Stop();
+                            stopWatch?.Stop();
                             consumer.Unsubscribe();
                             return stopWatch;
+                        }
+                        if (noProgressTimer.Elapsed > TimeSpan.FromSeconds(60))
+                        {
+                            throw new TimeoutException($"ConsumeKafka timed out after 60 seconds: expected {numpacket} messages, got {counter}");
                         }
                     }
                 }
@@ -367,6 +379,7 @@ namespace MASES.KNet.Benchmark
                 ManualResetEvent startEvent = new ManualResetEvent(false);
                 var consumer = KafkaConsumer();
                 var producer = KafkaProducer();
+                Exception threadException = null;
 
                 System.Threading.Thread thread = new System.Threading.Thread(() =>
                 {
@@ -390,6 +403,7 @@ namespace MASES.KNet.Benchmark
 
                         consumer.Subscribe(topics, rebalanceListener);
                         int counter = 0;
+                        var noProgressTimer = Stopwatch.StartNew();
                         while (true)
                         {
                             var records = consumer.Poll(duration);
@@ -403,7 +417,8 @@ namespace MASES.KNet.Benchmark
                                     {
                                         throw new InvalidOperationException($"ConsumeKafka test {testNum}: Incorrect data counter {counter} item.Key {item.Item1}");
                                     }
-                                    counter++;
+                                    Interlocked.Increment(ref counter);
+                                    noProgressTimer.Restart();
                                 }
                             }
                             else
@@ -421,20 +436,31 @@ namespace MASES.KNet.Benchmark
                                     {
                                         throw new InvalidOperationException($"ConsumeKafka test {testNum}: Incorrect data counter {counter} item.Key {key}");
                                     }
-                                    counter++;
+                                    Interlocked.Increment(ref counter);
+                                    noProgressTimer.Restart();
                                 }
                             }
                             if (AlwaysCommit) consumer.CommitSync();
-                            if (counter >= numpacket)
+                            if (Volatile.Read(ref counter) >= numpacket)
                             {
                                 consumer.CommitSync();
                                 consumer.Unsubscribe();
                                 break;
                             }
+                            if (noProgressTimer.Elapsed > TimeSpan.FromSeconds(60))
+                            {
+                                threadException = new TimeoutException($"RoundTripKafka timed out after 60 seconds: expected {numpacket} messages, got {counter}");
+                                break;
+                            }
                         }
+                    }
+                    catch (Exception ex)
+                    {
+                        threadException = ex;  
                     }
                     finally
                     {
+                        try { consumer.Unsubscribe(); } catch { }
                         rebalanceListener?.Dispose();
                         if (!SharedObjects)
                         {
@@ -445,7 +471,10 @@ namespace MASES.KNet.Benchmark
                     }
                 });
                 thread.Start();
-                startEvent.WaitOne();
+                if (!startEvent.WaitOne(TimeSpan.FromMinutes(10)))
+                {
+                    throw new TimeoutException("Consumer thread did not complete in time");
+                }
                 startEvent.Reset();
 
                 Stopwatch totalExecution = Stopwatch.StartNew();
@@ -504,7 +533,14 @@ namespace MASES.KNet.Benchmark
                     stopWatch.Stop();
                     if (!SharedObjects) { producer.Dispose(); producer = null; }
                 }
-                startEvent.WaitOne();
+                if (!startEvent.WaitOne(TimeSpan.FromMinutes(10)))
+                {
+                    throw new TimeoutException("Consumer thread did not complete in time");
+                }
+                if (threadException != null)
+                {
+                    throw threadException;
+                }
                 totalExecution.Stop();
                 if (ShowIntermediateResults)
                 {
