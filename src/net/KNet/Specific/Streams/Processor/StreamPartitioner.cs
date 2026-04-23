@@ -18,6 +18,7 @@
 
 using Java.Lang;
 using Java.Util;
+using MASES.JCOBridge.C2JBridge;
 using MASES.KNet.Serialization;
 using System;
 
@@ -92,6 +93,7 @@ namespace MASES.KNet.Streams.Processor
 
             var res = (OnPartitions != null) ? OnPartitions(this) : Partitions();
             if (res == null || res.Count == 0) return Optional<Set<Integer>>.Empty();
+            using var scope = new JvmBatchDisposeFastScope();
             using HashSet<Integer> result = new HashSet<Integer>();
             foreach (var item in res)
             {

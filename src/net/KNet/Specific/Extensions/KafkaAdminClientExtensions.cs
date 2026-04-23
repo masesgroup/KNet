@@ -132,8 +132,9 @@ namespace MASES.KNet.Extensions
             {
                 using var topic = new NewTopic(topicName, numPartitions, replicationFactor);
                 using var coll = Collections.Singleton(topic);
-                var res = admin.CreateTopics(coll);
-                res.All().Get();
+                using var res = admin.CreateTopics(coll);
+                using var future = res.All();
+                future.Get();
             }
             catch (ExecutionException ex)
             {
@@ -149,7 +150,8 @@ namespace MASES.KNet.Extensions
             {
                 using var coll = Collections.Singleton(topic);
                 using var res = admin.CreateTopics(coll);
-                res.All().Get();
+                using var future = res.All();
+                future.Get();
             }
             catch (ExecutionException ex)
             {
@@ -194,7 +196,8 @@ namespace MASES.KNet.Extensions
             {
                 using var coll = Collections.Singleton((Java.Lang.String)topicName);
                 using var res = admin.DeleteTopics(coll);
-                res.All().Get();
+                using var future = res.All();
+                future.Get();
             }
             catch (ExecutionException ex)
             {
