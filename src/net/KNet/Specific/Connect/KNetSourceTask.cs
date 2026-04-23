@@ -17,6 +17,7 @@
 */
 
 using Java.Util;
+using MASES.JCOBridge.C2JBridge;
 using Org.Apache.Kafka.Connect.Data;
 using Org.Apache.Kafka.Connect.Header;
 using Org.Apache.Kafka.Connect.Source;
@@ -982,6 +983,7 @@ namespace MASES.KNet.Connect
                     var result = Poll();
                     if (result != null && _arrayList != null)
                     {
+                        using var scope = new JvmBatchDisposeFastScope();
                         foreach (var record in result)
                         {
                             using (record)

@@ -17,22 +17,23 @@
 */
 
 using Java.Util;
-using Org.Apache.Kafka.Clients.Admin;
-using Org.Apache.Kafka.Clients.Consumer;
-using Org.Apache.Kafka.Clients.Producer;
+using MASES.JCOBridge.C2JBridge;
+using MASES.KNet.Admin;
+using MASES.KNet.Common;
+using MASES.KNet.Consumer;
 using MASES.KNet.Extensions;
+using MASES.KNet.Producer;
 using MASES.KNet.Serialization;
 using MASES.KNet.Serialization.Json;
 using MASES.KNet.TestCommon;
-using System;
-using System.Threading;
-using MASES.KNet.Admin;
-using MASES.KNet.Producer;
-using MASES.KNet.Consumer;
-using MASES.KNet.Common;
-using System.Diagnostics;
+using Org.Apache.Kafka.Clients.Admin;
+using Org.Apache.Kafka.Clients.Consumer;
+using Org.Apache.Kafka.Clients.Producer;
 using Org.Apache.Kafka.Common.Errors;
+using System;
+using System.Diagnostics;
 using System.Runtime.InteropServices;
+using System.Threading;
 
 namespace MASES.KNetTest
 {
@@ -180,44 +181,42 @@ namespace MASES.KNetTest
                 int partitions = 1;
                 short replicationFactor = 1;
 
-                var topic = new NewTopic(topicName, partitions, replicationFactor);
+                using var topic1 = new NewTopic(topicName, partitions, replicationFactor);
 
                 /**** Direct mode ******
                 var map = Collections.SingletonMap(TopicConfig.CLEANUP_POLICY_CONFIG, TopicConfig.CLEANUP_POLICY_COMPACT);
                 topic.Configs(map);
                 *********/
-                topic = topic.Configs(TopicConfigBuilder.Create().WithCleanupPolicy(TopicConfigBuilder.CleanupPolicyTypes.Compact | TopicConfigBuilder.CleanupPolicyTypes.Delete)
+                using var topic = topic1.Configs(TopicConfigBuilder.Create().WithCleanupPolicy(TopicConfigBuilder.CleanupPolicyTypes.Compact | TopicConfigBuilder.CleanupPolicyTypes.Delete)
                                                                  .WithDeleteRetentionMs(100)
                                                                  .WithMinCleanableDirtyRatio(0.01)
                                                                  .WithMaxMessageBytes(100 * 1024 * 1024)
                                                                  .WithSegmentMs(100));
 
-                var coll = Collections.Singleton(topic);
+                // using var coll = Collections.Singleton(topic);
 
                 /**** Direct mode ******
                 Properties props = new Properties();
                 props.Put(AdminClientConfig.BOOTSTRAP_SERVERS_CONFIG, serverToUse);
                 *******/
 
-                Properties props = AdminClientConfigBuilder.Create().WithBootstrapServers(serverToUse).ToProperties();
+                using Properties props = AdminClientConfigBuilder.Create().WithBootstrapServers(serverToUse).ToProperties();
 
                 Console.WriteLine($"Creating {topic} using an AdminClient based on {props}");
 
-                using (IAdmin admin = KafkaAdminClient.Create(props))
-                {
-                    /******* standard
-                    // Create a compacted topic
-                    CreateTopicsResult result = admin.CreateTopics(coll);
+                using IAdmin admin = KafkaAdminClient.Create(props);
+                /******* standard
+                // Create a compacted topic
+                CreateTopicsResult result = admin.CreateTopics(coll);
 
-                    // Call values() to get the result for a specific topic
-                    var future = result.Values.Get(topicName);
+                // Call values() to get the result for a specific topic
+                var future = result.Values.Get(topicName);
 
-                    // Call get() to block until the topic creation is complete or has failed
-                    // if creation failed the ExecutionException wraps the underlying cause.
-                    future.Get();
-                    ********/
-                    admin.CreateTopic(topic);
-                }
+                // Call get() to block until the topic creation is complete or has failed
+                // if creation failed the ExecutionException wraps the underlying cause.
+                future.Get();
+                ********/
+                admin.CreateTopic(topic);
             }
             catch (Java.Util.Concurrent.ExecutionException ex)
             {
@@ -301,6 +300,7 @@ namespace MASES.KNetTest
                         var baseJNICalls = SharedKNetCore.GlobalInstance.CurrentJNICalls;
                         try
                         {
+                            using var scope = new JvmBatchDisposeFastScope();
                             while (runInParallel ? !resetEvent.WaitOne(0) : i < NonParallelLimit)
                             {
                                 watcher.Start();
@@ -429,6 +429,7 @@ namespace MASES.KNetTest
                         int waitTime = waitMultiplier * 60 * 1000;
                         Stopwatch swCycleTime = Stopwatch.StartNew();
                         int emptyCycle = 0;
+                        using var scope = new JvmBatchDisposeFastScope();
                         while (runInParallel ? !resetEvent.WaitOne(0) : elements < NonParallelLimit)
                         {
                             using var records = consumer.Poll((long)TimeSpan.FromMilliseconds(checkTime).TotalMilliseconds);
@@ -531,6 +532,7 @@ namespace MASES.KNetTest
                         var baseJNICalls = SharedKNetCore.GlobalInstance.CurrentJNICalls;
                         try
                         {
+                            using var scope = new JvmBatchDisposeFastScope();
                             while (runInParallel ? !resetEvent.WaitOne(0) : i < NonParallelLimit)
                             {
                                 watcher.Start();
@@ -659,6 +661,7 @@ namespace MASES.KNetTest
                         int waitTime = waitMultiplier * 60 * 1000;
                         Stopwatch swCycleTime = Stopwatch.StartNew();
                         int emptyCycle = 0;
+                        using var scope = new JvmBatchDisposeFastScope();
                         while (runInParallel ? !resetEvent.WaitOne(0) : elements < NonParallelLimit)
                         {
                             using var records = consumer.Poll((long)TimeSpan.FromMilliseconds(checkTime).TotalMilliseconds);
