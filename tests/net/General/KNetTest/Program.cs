@@ -181,44 +181,42 @@ namespace MASES.KNetTest
                 int partitions = 1;
                 short replicationFactor = 1;
 
-                var topic = new NewTopic(topicName, partitions, replicationFactor);
+                using var topic1 = new NewTopic(topicName, partitions, replicationFactor);
 
                 /**** Direct mode ******
                 var map = Collections.SingletonMap(TopicConfig.CLEANUP_POLICY_CONFIG, TopicConfig.CLEANUP_POLICY_COMPACT);
                 topic.Configs(map);
                 *********/
-                topic = topic.Configs(TopicConfigBuilder.Create().WithCleanupPolicy(TopicConfigBuilder.CleanupPolicyTypes.Compact | TopicConfigBuilder.CleanupPolicyTypes.Delete)
+                using var topic = topic1.Configs(TopicConfigBuilder.Create().WithCleanupPolicy(TopicConfigBuilder.CleanupPolicyTypes.Compact | TopicConfigBuilder.CleanupPolicyTypes.Delete)
                                                                  .WithDeleteRetentionMs(100)
                                                                  .WithMinCleanableDirtyRatio(0.01)
                                                                  .WithMaxMessageBytes(100 * 1024 * 1024)
                                                                  .WithSegmentMs(100));
 
-                var coll = Collections.Singleton(topic);
+                // using var coll = Collections.Singleton(topic);
 
                 /**** Direct mode ******
                 Properties props = new Properties();
                 props.Put(AdminClientConfig.BOOTSTRAP_SERVERS_CONFIG, serverToUse);
                 *******/
 
-                Properties props = AdminClientConfigBuilder.Create().WithBootstrapServers(serverToUse).ToProperties();
+                using Properties props = AdminClientConfigBuilder.Create().WithBootstrapServers(serverToUse).ToProperties();
 
                 Console.WriteLine($"Creating {topic} using an AdminClient based on {props}");
 
-                using (IAdmin admin = KafkaAdminClient.Create(props))
-                {
-                    /******* standard
-                    // Create a compacted topic
-                    CreateTopicsResult result = admin.CreateTopics(coll);
+                using IAdmin admin = KafkaAdminClient.Create(props);
+                /******* standard
+                // Create a compacted topic
+                CreateTopicsResult result = admin.CreateTopics(coll);
 
-                    // Call values() to get the result for a specific topic
-                    var future = result.Values.Get(topicName);
+                // Call values() to get the result for a specific topic
+                var future = result.Values.Get(topicName);
 
-                    // Call get() to block until the topic creation is complete or has failed
-                    // if creation failed the ExecutionException wraps the underlying cause.
-                    future.Get();
-                    ********/
-                    admin.CreateTopic(topic);
-                }
+                // Call get() to block until the topic creation is complete or has failed
+                // if creation failed the ExecutionException wraps the underlying cause.
+                future.Get();
+                ********/
+                admin.CreateTopic(topic);
             }
             catch (Java.Util.Concurrent.ExecutionException ex)
             {
