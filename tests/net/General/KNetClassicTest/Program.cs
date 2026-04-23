@@ -17,6 +17,7 @@
 */
 
 using Java.Util;
+using MASES.JCOBridge.C2JBridge;
 using MASES.JNet.Specific;
 using MASES.KNet.Admin;
 using MASES.KNet.Common;
@@ -216,6 +217,7 @@ namespace MASES.KNetClassicTest
                         }
                         try
                         {
+                            using var scope = new JvmBatchDisposeFastScope();
                             while (!resetEvent.WaitOne(0))
                             {
                                 using var record = new Org.Apache.Kafka.Clients.Producer.ProducerRecord<string, string>(topicToUse, i.ToString(), i.ToString());
@@ -316,7 +318,7 @@ namespace MASES.KNetClassicTest
                     {
                         if (useCallback) consumer.Subscribe(topics, rebalanceListener);
                         else consumer.Subscribe(topics);
-
+                        using var scope = new JvmBatchDisposeFastScope();
                         while (!resetEvent.WaitOne(0))
                         {
                             using var records = consumer.Poll((long)TimeSpan.FromMilliseconds(200).TotalMilliseconds);

@@ -17,22 +17,23 @@
 */
 
 using Java.Util;
-using Org.Apache.Kafka.Clients.Admin;
-using Org.Apache.Kafka.Clients.Consumer;
-using Org.Apache.Kafka.Clients.Producer;
+using MASES.JCOBridge.C2JBridge;
+using MASES.KNet.Admin;
+using MASES.KNet.Common;
+using MASES.KNet.Consumer;
 using MASES.KNet.Extensions;
+using MASES.KNet.Producer;
 using MASES.KNet.Serialization;
 using MASES.KNet.Serialization.Json;
 using MASES.KNet.TestCommon;
-using System;
-using System.Threading;
-using MASES.KNet.Admin;
-using MASES.KNet.Producer;
-using MASES.KNet.Consumer;
-using MASES.KNet.Common;
-using System.Diagnostics;
+using Org.Apache.Kafka.Clients.Admin;
+using Org.Apache.Kafka.Clients.Consumer;
+using Org.Apache.Kafka.Clients.Producer;
 using Org.Apache.Kafka.Common.Errors;
+using System;
+using System.Diagnostics;
 using System.Runtime.InteropServices;
+using System.Threading;
 
 namespace MASES.KNetTest
 {
@@ -301,6 +302,7 @@ namespace MASES.KNetTest
                         var baseJNICalls = SharedKNetCore.GlobalInstance.CurrentJNICalls;
                         try
                         {
+                            using var scope = new JvmBatchDisposeFastScope();
                             while (runInParallel ? !resetEvent.WaitOne(0) : i < NonParallelLimit)
                             {
                                 watcher.Start();
@@ -429,6 +431,7 @@ namespace MASES.KNetTest
                         int waitTime = waitMultiplier * 60 * 1000;
                         Stopwatch swCycleTime = Stopwatch.StartNew();
                         int emptyCycle = 0;
+                        using var scope = new JvmBatchDisposeFastScope();
                         while (runInParallel ? !resetEvent.WaitOne(0) : elements < NonParallelLimit)
                         {
                             using var records = consumer.Poll((long)TimeSpan.FromMilliseconds(checkTime).TotalMilliseconds);
@@ -531,6 +534,7 @@ namespace MASES.KNetTest
                         var baseJNICalls = SharedKNetCore.GlobalInstance.CurrentJNICalls;
                         try
                         {
+                            using var scope = new JvmBatchDisposeFastScope();
                             while (runInParallel ? !resetEvent.WaitOne(0) : i < NonParallelLimit)
                             {
                                 watcher.Start();
@@ -659,6 +663,7 @@ namespace MASES.KNetTest
                         int waitTime = waitMultiplier * 60 * 1000;
                         Stopwatch swCycleTime = Stopwatch.StartNew();
                         int emptyCycle = 0;
+                        using var scope = new JvmBatchDisposeFastScope();
                         while (runInParallel ? !resetEvent.WaitOne(0) : elements < NonParallelLimit)
                         {
                             using var records = consumer.Poll((long)TimeSpan.FromMilliseconds(checkTime).TotalMilliseconds);
