@@ -28,6 +28,11 @@ on:
         required: false
         default: '100000'
         type: string
+      ShowIntermediateResults:
+        description: 'Print intermediate results for each combination (verbose, useful for debugging)'
+        required: false
+        default: false
+        type: boolean
   schedule:
     # Every Monday at 03:00 UTC — runs with 20 repetitions for better statistics
     - cron: '0 3 * * 1'
@@ -292,11 +297,17 @@ jobs:
           sys.exit(1)
           PYEOF
 
-      # Common args shared by all four benchmark invocations
+      # Common args shared by all four benchmark invocations.
+      # -ShowIntermediateResults is opt-in (default false) — it produces a lot of
+      # output and is only useful for debugging individual test combinations.
       - name: Set common benchmark args
         run: |
+          INTERMEDIATE=""
+          if [ "${{ inputs.ShowIntermediateResults }}" = "true" ]; then
+            INTERMEDIATE="-ShowIntermediateResults"
+          fi
           echo "BENCH_COMMON_ARGS=-Server localhost:9092 \
-            -ShowFinalResults -ShowIntermediateResults \
+            -ShowFinalResults $INTERMEDIATE \
             -Repeat ${{ env.BENCH_REPEAT }} \
             -MinPacketsToExchange ${{ env.BENCH_MIN_PKT }} \
             -MaxPacketsToExchange ${{ env.BENCH_MAX_PKT }} \
@@ -402,6 +413,22 @@ jobs:
       - name: List downloaded CSVs (debug)
         run: find ./benchmark-results -name '*.csv' | sort
 
+      # Print raw CSV content so we can verify what values are actually being
+      # compared (times in μs vs throughput) and spot anomalous Confluent values
+      # caused by partial connection failures before the Python parser runs.
+      - name: Dump raw CSV content (debug)
+        run: |
+          echo "=== BENCH CSVs ==="
+          find ./benchmark-results -name 'results_*.csv' | sort | while read f; do
+            echo "--- $f ---"
+            cat "$f"
+          done
+          echo "=== ROUNDTRIP CSVs ==="
+          find ./benchmark-results -name 'roundtrip_results_*.csv' | sort | while read f; do
+            echo "--- $f ---"
+            cat "$f"
+          done
+
       # ── Python: parse → compute ratios → patch performance.md ────────────────
       - name: Parse results and update performance.md
         env:
@@ -415,14 +442,26 @@ jobs:
           from datetime import datetime, timezone
           from pathlib import Path
 
-          RESULTS_DIR          = "./benchmark-results"
-          DOCS_PATH            = "src/documentation/articles/performance.md"
-          RUN_ID               = os.environ.get("GITHUB_RUN_ID", "")
-          RUN_NUM              = os.environ.get("GITHUB_RUN_NUMBER", "?")
-          SHA_SHORT            = os.environ.get("GITHUB_SHA", "")[:7]
-          REPO                 = os.environ.get("GITHUB_REPOSITORY", "")
-          NOW                  = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
-          MAX_REASONABLE_RATIO = 10000.0 
+          RESULTS_DIR = "./benchmark-results"
+          DOCS_PATH   = "src/documentation/articles/performance.md"
+          RUN_ID      = os.environ.get("GITHUB_RUN_ID", "")
+          RUN_NUM     = os.environ.get("GITHUB_RUN_NUMBER", "?")
+          SHA_SHORT   = os.environ.get("GITHUB_SHA", "")[:7]
+          REPO        = os.environ.get("GITHUB_REPOSITORY", "")
+          NOW         = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
+
+          # All CSV values are times in μs — lower is better.
+          # ratio = KNet / Confluent × 100:
+          #   < 100  → KNet faster   → bold
+          #   > 100  → Confluent faster
+          #   ~ 100  → comparable
+          #
+          # Confluent sometimes fails partially and writes a very high value
+          # (e.g. a timeout instead of a real measurement), which would produce
+          # an artificially low ratio making KNet look unrealistically good.
+          # MAX_REASONABLE_RATIO discards those rows: a ratio above this threshold
+          # means one of the two measurements is almost certainly corrupted.
+          MAX_REASONABLE_RATIO = 500.0   # >500% is almost certainly a bad sample
 
           # ── statistics ─────────────────────────────────────────────────────
           def mean(lst):
@@ -497,6 +536,16 @@ jobs:
                           if kp == 0 and cp == 0 and kc == 0 and cc == 0:
                               print(f"  SKIP all-zeros: {path} pkt={pkt} len={lng}")
                               continue
+                          # Guard: discard pairs where the ratio would exceed
+                          # MAX_REASONABLE_RATIO — likely a corrupted/timed-out sample.
+                          def _ratio(a, b):
+                              return a / b * 100 if b > 0 else float('inf')
+                          if kp > 0 and cp > 0 and _ratio(kp, cp) > MAX_REASONABLE_RATIO:
+                              print(f"  SKIP prod ratio={_ratio(kp,cp):.1f}% (>{MAX_REASONABLE_RATIO}): {path} pkt={pkt} len={lng}")
+                              kp = cp = 0
+                          if kc > 0 and cc > 0 and _ratio(kc, cc) > MAX_REASONABLE_RATIO:
+                              print(f"  SKIP cons ratio={_ratio(kc,cc):.1f}% (>{MAX_REASONABLE_RATIO}): {path} pkt={pkt} len={lng}")
+                              kc = cc = 0
                           key = (variant, pkt, lng)
                           d = agg.setdefault(key, {"kp":[],"cp":[],"kc":[],"cc":[]})
                           if kp > 0: d["kp"].append(kp)
@@ -526,6 +575,10 @@ jobs:
                           cm  = float(row["ConfluentMean"] or 0)
                           if km == 0 and cm == 0:
                               print(f"  SKIP all-zeros: {path} pkt={pkt} len={lng}")
+                              continue
+                          # Same sanity guard as for produce/consume
+                          if km > 0 and cm > 0 and km / cm * 100 > MAX_REASONABLE_RATIO:
+                              print(f"  SKIP rt ratio={km/cm*100:.1f}% (>{MAX_REASONABLE_RATIO}): {path} pkt={pkt} len={lng}")
                               continue
                           key = (variant, pkt, lng)
                           d = agg.setdefault(key, {"km":[],"cm":[]})
