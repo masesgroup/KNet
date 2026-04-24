@@ -17,7 +17,6 @@
 */
 
 using MASES.JCOBridge.C2JBridge;
-using Org.Apache.Kafka.Common.Errors;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -62,7 +61,7 @@ namespace MASES.KNet.Benchmark
                                 {
                                     CreateTopic(topicNameKNet);
                                 }
-                                catch (TopicExistsException)
+                                catch (Org.Apache.Kafka.Common.Errors.TopicExistsException)
                                 {
                                     DeleteTopic(topicNameKNet);
                                     System.Threading.Thread.Sleep(1000); // wait kafka server
@@ -83,7 +82,7 @@ namespace MASES.KNet.Benchmark
                                 {
                                     CreateTopic(topicNameConfluent);
                                 }
-                                catch (TopicExistsException)
+                                catch (Org.Apache.Kafka.Common.Errors.TopicExistsException)
                                 {
                                     DeleteTopic(topicNameConfluent);
                                     System.Threading.Thread.Sleep(1000); // wait kafka server
