@@ -119,7 +119,7 @@ PrivateData = @{
 
     PSData = @{
 
-        Prerelease = 'rc'
+        Prerelease = 'rc1'
 
         Tags = @('KNetPS', 'PSEdition_Core', 'PSEdition_Desktop', 'Windows', 'Linux', 'Apache', 'Kafka', 'ApacheKafka', 'Admin', 'Consumer', 'Producer')
 
