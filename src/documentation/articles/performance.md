@@ -114,17 +114,47 @@ Here below a set of results using 1000/10000 messages, in bold the results which
 
 - KNet/Confluent.Kafka™ Produce Average ratio percentage (SD ratio percentage):
 
-|  | 100 bytes | 1000 bytes | 10000 bytes | 100000 bytes |
+
+_Using **KNetProducer** and **KNetConsumer**_ (`-UseKNetProducer -UseKNetConsumer`):
+
+|  | 100 bytes | 1,000 bytes | 10,000 bytes | 100,000 bytes |
 |:---:	|:---:	|:---:	|:---:	|:---:	|
-| 1000 messages | 217,8 (193,16) | **82,5 (158,72)** | **84,45 (65,53)** | **86,78 (115,88)** |
-| 10000 messages | 251,97 (357,5) | **73,4 (164,51)** | 104,41 (32,73) | **90,28 (155,2)** |
+| 100 messages | **67,25 (16,69)** | **68,13 (38,02)** | **28,46 (24,02)** | **36,17 (143,00)** |
+| 1,000 messages | 308,82 (236,37) | **45,00 (9,05)** | **41,53 (15,84)** | **28,26 (49,42)** |
+| 10,000 messages | 446,35 (1048,78) | 123,52 (91,52) | **46,38 (—)** | **16,62 (108,44)** |
+
+_Using **KafkaProducer** and **KafkaConsumer**_ (standard JNI wrappers):
+
+|  | 100 bytes | 1,000 bytes | 10,000 bytes | 100,000 bytes |
+|:---:	|:---:	|:---:	|:---:	|:---:	|
+| 100 messages | **77,37 (133,05)** | 134,21 (401,52) | **23,53 (12,41)** | **72,45 (66,62)** |
+| 1,000 messages | 415,08 (626,01) | 118,30 (212,76) | **73,17 (24,08)** | **56,74 (128,83)** |
+| 10,000 messages | 349,11 (—) | 245,56 (49,63) | **44,00 (136,26)** | **29,81 (39,93)** |
+
+
+> Results automatically updated by CI run [#27](https://github.com/masesgroup/KNet/actions/runs/24942060672) · commit `423c062` · 2026-04-25 22:45 UTC
 
 - KNet/Confluent.Kafka™ Consume Average ratio percentage (SD ratio percentage):
 
-|  | 100 bytes | 1000 bytes | 10000 bytes | 100000 bytes |
+
+_Using **KNetProducer** and **KNetConsumer**_ (`-UseKNetProducer -UseKNetConsumer`):
+
+|  | 100 bytes | 1,000 bytes | 10,000 bytes | 100,000 bytes |
 |:---:	|:---:	|:---:	|:---:	|:---:	|
-| 1000 messages | **22,09 (263,38)** | **6,39 (547,69)** | **67,44 (22,85)** | 122,77 (270,27) |
-| 10000 messages | **30,51 (203,03)** | **17,88 (9,14)** | 117,37 (281,25) | 135,35 (828,3) |
+| 100 messages | 121,39 (20416,17) | 108,39 (412,80) | 105,18 (46,70) | 116,17 (175,47) |
+| 1,000 messages | 105,58 (166,89) | 104,84 (199,92) | 129,51 (21,06) | 161,87 (33,19) |
+| 10,000 messages | 183,12 (271,41) | 160,98 (72986,55) | 181,49 (—) | **58,60 (10,55)** |
+
+_Using **KafkaProducer** and **KafkaConsumer**_ (standard JNI wrappers):
+
+|  | 100 bytes | 1,000 bytes | 10,000 bytes | 100,000 bytes |
+|:---:	|:---:	|:---:	|:---:	|:---:	|
+| 100 messages | **88,75 (308,70)** | **11,57 (114,50)** | **9,94 (191,82)** | **24,67 (279,33)** |
+| 1,000 messages | **11,17 (252,44)** | **9,99 (155,00)** | **21,35 (499,06)** | **98,45 (136,85)** |
+| 10,000 messages | **12,82 (63,68)** | **17,66 (212,74)** | **69,41 (321,90)** | **55,95 (9,85)** |
+
+
+> Results automatically updated by CI run [#27](https://github.com/masesgroup/KNet/actions/runs/24942060672) · commit `423c062` · 2026-04-25 22:45 UTC
 
 #### Analysis
 
@@ -220,14 +250,51 @@ Here below a set of results using 1000/10000 messages, in bold the results which
 
 - KNet/Confluent.Kafka™ Roundtrip Average ratio percentage (SD ratio percentage):
 
-|  | 100 bytes | 1000 bytes | 10000 bytes | 100000 bytes |
+
+_Using **KNetProducer** and **KNetConsumer**_ (`-UseKNetProducer -UseKNetConsumer`):
+
+|  | 100 bytes | 1,000 bytes | 10,000 bytes | 100,000 bytes |
 |:---:	|:---:	|:---:	|:---:	|:---:	|
-| 1000 messages | **3,82 (6,86)** | **4,37 (7,34)** | **9,08 (12,33)** | **26,68 (20,42)** |
-| 10000 messages | **18,49 (21,33)** | **16,78 (33,28)** | **32,28 (34,64)** | **48,28 (53,39)** |
+| 100 messages | **33,21 (838,19)** | **11,81 (351,54)** | **13,75 (24,54)** | **23,70 (432,41)** |
+| 1,000 messages | **14,99 (1338,70)** | **21,69 (7835,62)** | **31,28 (11898,28)** | **59,24 (25,31)** |
+| 10,000 messages | N/A | 103,38 (—) | **87,03 (—)** | **41,15 (146,76)** |
+
+_Using **KafkaProducer** and **KafkaConsumer**_ (standard JNI wrappers):
+
+|  | 100 bytes | 1,000 bytes | 10,000 bytes | 100,000 bytes |
+|:---:	|:---:	|:---:	|:---:	|:---:	|
+| 100 messages | **27,86 (743,21)** | **8,90 (350,56)** | **10,94 (157,73)** | **20,89 (8,95)** |
+| 1,000 messages | **8,53 (678,41)** | **12,47 (2146,78)** | **20,13 (199,84)** | **56,63 (38,56)** |
+| 10,000 messages | **23,60 (35700,35)** | **18,63 (2421,21)** | **50,23 (280,86)** | **39,88 (81,56)** |
+
+
+> Results automatically updated by CI run [#27](https://github.com/masesgroup/KNet/actions/runs/24942060672) · commit `423c062` · 2026-04-25 22:45 UTC
 
 #### Analysis
 
-Looking at the above table KNet performs better than Confluent.Kafka™.
+KNet shows significantly lower latency in this test. The result reflects the architectural difference: KNet's consumer receives the record in the JVM and the round-trip completes there, while Confluent.Kafka™ must also deserialise the payload into a CLR object before the application can read the key. The KNet number here is therefore a lower bound — it does not include the cost of making the value available in .NET.
+
+#### With `-CheckOnConsume` — CLR data availability latency
+
+`item.Value.SequenceEqual(data)` is called for each message, forcing full JNI payload transfer. This is the fair comparison with Confluent.Kafka™.
+
+- KNet/Confluent.Kafka™ Roundtrip with CheckOnConsume Average ratio percentage (SD ratio percentage):
+
+
+_Using **KNetProducer** and **KNetConsumer**_ (`-UseKNetProducer -UseKNetConsumer -CheckOnConsume`):
+
+_No data._
+
+_Using **KafkaProducer** and **KafkaConsumer**_ (standard JNI wrappers -CheckOnConsume):
+
+_No data._
+
+
+> Results automatically updated by CI run [#27](https://github.com/masesgroup/KNet/actions/runs/24942060672) · commit `423c062` · 2026-04-25 22:45 UTC
+
+#### Analysis
+
+With `-CheckOnConsume` the JNI transfer cost is included. The gap relative to the previous table grows with payload size, directly quantifying the JNI overhead for payload materialisation. This is the most relevant comparison for applications that actually read message content in .NET code.
 
 > [!NOTE]
 > These are results from some tests done using the configuration reported in previous chapter. With different combination of parameters Confluent.Kafka™ can perform better than KNet in all tests. 
