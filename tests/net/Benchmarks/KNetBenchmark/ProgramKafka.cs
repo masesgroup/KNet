@@ -146,7 +146,7 @@ namespace MASES.KNet.Benchmark
                         for (int i = 0; i < numpacket; i++)
                         {
                             swSendRecord.Start();
-                            var result = UseCallback ? kafkaproducer.Send(messages[i], kafkaCallback) : kafkaproducer.Send(messages[i]);
+                            using var result = UseCallback ? kafkaproducer.Send(messages[i], kafkaCallback) : kafkaproducer.Send(messages[i]);
                             swSendRecord.Stop();
                             if (WithBurst)
                             {
@@ -184,9 +184,13 @@ namespace MASES.KNet.Benchmark
                             }
                             swSendRecord.Start();
                             if (UseCallback)
-                                kafkaproducer.Send(record, kafkaCallback);
+                            {
+                                using var result = kafkaproducer.Send(record, kafkaCallback);
+                            }
                             else
-                                kafkaproducer.Send(record);
+                            {
+                                using var result = kafkaproducer.Send(record);
+                            }
                             swSendRecord.Stop();
                             if (WithBurst)
                             {
@@ -298,16 +302,19 @@ namespace MASES.KNet.Benchmark
                     var noProgressTimer = Stopwatch.StartNew();
                     while (true)
                     {
-                        var records = consumer.Poll(duration);
+                        using var records = consumer.Poll(duration);
                         if (!CheckOnConsume)
                         {
                             if (ReadAllData)
                             {
                                 foreach (var item in records)
                                 {
-                                    item.Key(); item.Value();
-                                    Interlocked.Increment(ref counter);
-                                    noProgressTimer.Restart();
+                                    using (item)
+                                    {
+                                        item.Key(); item.Value();
+                                        Interlocked.Increment(ref counter);
+                                        noProgressTimer.Restart();
+                                    }
                                 }
                             }
                             else
@@ -320,10 +327,10 @@ namespace MASES.KNet.Benchmark
                         {
                             if (UsePrefetch)
                             {
-                                foreach (var item in records.WithPrefetch().WithThread().WithConvert((o) => { return (o.Value(), o.Key()); }))
+                                foreach (var item in records.WithPrefetch().WithThread().WithConvert((o) => {  using (o) { return (o.Value(), o.Key()); } }))
                                 {
                                     if (!item.Item1.SequenceEqual(data)
-                                        || (!SinglePacket && item.Item2 != counter))
+                                    || (!SinglePacket && item.Item2 != counter))
                                     {
                                         throw new InvalidOperationException($"ConsumeKafka test {testNum}: Incorrect data counter {counter} item.Key {item.Item2}");
                                     }
@@ -335,13 +342,16 @@ namespace MASES.KNet.Benchmark
                             {
                                 foreach (var item in records)
                                 {
-                                    if (!item.Value().SequenceEqual(data)
-                                        || (!SinglePacket && item.Key() != counter))
+                                    using (item)
                                     {
-                                        throw new InvalidOperationException($"ConsumeKafka test {testNum}: Incorrect data counter {counter} item.Key {item.Key()}");
+                                        if (!item.Value().SequenceEqual(data)
+                                        || (!SinglePacket && item.Key() != counter))
+                                        {
+                                            throw new InvalidOperationException($"ConsumeKafka test {testNum}: Incorrect data counter {counter} item.Key {item.Key()}");
+                                        }
+                                        Interlocked.Increment(ref counter);
+                                        noProgressTimer.Restart();
                                     }
-                                    Interlocked.Increment(ref counter);
-                                    noProgressTimer.Restart();
                                 }
                             }
                         }
@@ -406,38 +416,44 @@ namespace MASES.KNet.Benchmark
                         var noProgressTimer = Stopwatch.StartNew();
                         while (true)
                         {
-                            var records = consumer.Poll(duration);
+                            using var records = consumer.Poll(duration);
                             if (UsePrefetch)
                             {
                                 foreach (var item in records.WithPrefetch().WithThread().WithConvert((o) => { return (o.Key(), o.Value()); }))
                                 {
-                                    roundTripTime.Add((double)(DateTime.Now.Ticks - item.Item1) / (TimeSpan.TicksPerMillisecond / 1000));
-
-                                    if (CheckOnConsume && !item.Item2.SequenceEqual(data))
+                                    using (item)
                                     {
-                                        throw new InvalidOperationException($"ConsumeKafka test {testNum}: Incorrect data counter {counter} item.Key {item.Item1}");
+                                        roundTripTime.Add((double)(DateTime.Now.Ticks - item.Item1) / (TimeSpan.TicksPerMillisecond / 1000));
+
+                                        if (CheckOnConsume && !item.Item2.SequenceEqual(data))
+                                        {
+                                            throw new InvalidOperationException($"ConsumeKafka test {testNum}: Incorrect data counter {counter} item.Key {item.Item1}");
+                                        }
+                                        Interlocked.Increment(ref counter);
+                                        noProgressTimer.Restart();
                                     }
-                                    Interlocked.Increment(ref counter);
-                                    noProgressTimer.Restart();
                                 }
                             }
                             else
                             {
                                 foreach (var item in records)
                                 {
-                                    var key = item.Key();
-                                    roundTripTime.Add((double)(DateTime.Now.Ticks - key) / (TimeSpan.TicksPerMillisecond / 1000));
-                                    byte[] value = Array.Empty<byte>();
-                                    if (ReadAllData)
+                                    using (item)
                                     {
-                                        value = item.Value();
+                                        var key = item.Key();
+                                        roundTripTime.Add((double)(DateTime.Now.Ticks - key) / (TimeSpan.TicksPerMillisecond / 1000));
+                                        byte[] value = Array.Empty<byte>();
+                                        if (ReadAllData)
+                                        {
+                                            value = item.Value();
+                                        }
+                                        if (CheckOnConsume && !((ReadAllData ? value : item.Value()).SequenceEqual(data)))
+                                        {
+                                            throw new InvalidOperationException($"ConsumeKafka test {testNum}: Incorrect data counter {counter} item.Key {key}");
+                                        }
+                                        Interlocked.Increment(ref counter);
+                                        noProgressTimer.Restart();
                                     }
-                                    if (CheckOnConsume && !((ReadAllData ? value : item.Value()).SequenceEqual(data)))
-                                    {
-                                        throw new InvalidOperationException($"ConsumeKafka test {testNum}: Incorrect data counter {counter} item.Key {key}");
-                                    }
-                                    Interlocked.Increment(ref counter);
-                                    noProgressTimer.Restart();
                                 }
                             }
                             if (AlwaysCommit) consumer.CommitSync();

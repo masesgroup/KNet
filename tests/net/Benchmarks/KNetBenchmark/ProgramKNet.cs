@@ -312,16 +312,19 @@ namespace MASES.KNet.Benchmark
                     consumer.Subscribe(topics, rebalanceListener);
                     while (true)
                     {
-                        var records = consumer.Poll(TimeSpan.FromMinutes(1));
+                        using var records = consumer.Poll(TimeSpan.FromMinutes(1));
                         foreach (var item in records)
                         {
-                            stopWatch.Stop();
-                            byte[] newVal = new byte[item.Value.Length];
-                            Array.Copy(item.Value, newVal, item.Value.Length);
-                            stopWatch.Start();
-                            var record = new KNet.Producer.ProducerRecord<long, byte[]>(topicName + "_COPY", item.Key, newVal);
-                            producer.Send(record);
-                            Interlocked.Increment(ref counter);
+                            using (item)
+                            {
+                                stopWatch.Stop();
+                                byte[] newVal = new byte[item.Value.Length];
+                                Array.Copy(item.Value, newVal, item.Value.Length);
+                                stopWatch.Start();
+                                var record = new KNet.Producer.ProducerRecord<long, byte[]>(topicName + "_COPY", item.Key, newVal);
+                                producer.Send(record);
+                                Interlocked.Increment(ref counter);
+                            }
                         }
                         producer.Flush();
                         consumer.CommitSync();
@@ -384,17 +387,20 @@ namespace MASES.KNet.Benchmark
                         var noProgressTimer = Stopwatch.StartNew();
                         while (true)
                         {
-                            var records = consumer.Poll(TimeSpan.FromSeconds(1));
+                            using var records = consumer.Poll(TimeSpan.FromSeconds(1));
                             foreach (var item in records)
                             {
-                                roundTripTime.Add((double)(DateTime.Now.Ticks - item.Key) / (TimeSpan.TicksPerMillisecond / 1000));
-
-                                if (CheckOnConsume && !item.Value.SequenceEqual(data))
+                                using (item)
                                 {
-                                    throw new InvalidOperationException($"ConsumeKafka test {testNum}: Incorrect data counter {counter} item.Key {item.Key}");
+                                    roundTripTime.Add((double)(DateTime.Now.Ticks - item.Key) / (TimeSpan.TicksPerMillisecond / 1000));
+
+                                    if (CheckOnConsume && !item.Value.SequenceEqual(data))
+                                    {
+                                        throw new InvalidOperationException($"ConsumeKafka test {testNum}: Incorrect data counter {counter} item.Key {item.Key}");
+                                    }
+                                    Interlocked.Increment(ref counter);
+                                    noProgressTimer.Restart();
                                 }
-                                Interlocked.Increment(ref counter);
-                                noProgressTimer.Restart();
                             }
 
                             if (AlwaysCommit) consumer.CommitSync();
@@ -469,9 +475,13 @@ namespace MASES.KNet.Benchmark
                         }
                         swSendRecord.Start();
                         if (UseCallback)
-                            producer.Send(record, kNetCallback);
+                        {
+                            using var result = producer.Send(record, kNetCallback);
+                        }
                         else
-                            producer.Send(record);
+                        {
+                            using var result = producer.Send(record);
+                        }
                         swSendRecord.Stop();
                         if (WithBurst)
                         {

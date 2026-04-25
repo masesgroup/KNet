@@ -305,10 +305,11 @@ namespace MASES.KNetTest
                             {
                                 watcher.Start();
                                 var record = producer.NewRecord(topicToUse, i.ToString(), new TestType(i, withExtraValue, withBigExtraValue, withBigBigExtraValue));
-                                var result = useProduceCallback ? producer.Send(record, callback) : producer.Send(record);
+                                using var result = useProduceCallback ? producer.Send(record, callback) : producer.Send(record);
                                 if (!runInParallel && _firstOffset == -1)
                                 {
-                                    _firstOffset = result.Get().Offset();
+                                    using var metadata = result.Get();
+                                    _firstOffset = metadata.Offset();
                                 }
                                 watcher.Stop();
                                 if (consoleOutput) Console.WriteLine($"Producing: {record}");
@@ -537,10 +538,11 @@ namespace MASES.KNetTest
                             {
                                 watcher.Start();
                                 var record = producer.NewRecord(topicToUse, i.ToString(), new TestType(i, withExtraValue, withBigExtraValue, withBigBigExtraValue));
-                                var result = useProduceCallback ? producer.Send(record, callback) : producer.Send(record);
+                                using var result = useProduceCallback ? producer.Send(record, callback) : producer.Send(record);
                                 if (!runInParallel && _firstOffset == -1)
                                 {
-                                    _firstOffset = result.Get().Offset();
+                                    using var metadata = result.Get();
+                                    _firstOffset = metadata.Offset();
                                 }
                                 watcher.Stop();
                                 if (consoleOutput) Console.WriteLine($"Producing: {record}");
