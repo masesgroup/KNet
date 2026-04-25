@@ -28,13 +28,8 @@ namespace Org.Apache.Kafka.Clients.Consumer
         /// <inheritdoc cref="IConsumer{K, V}.Poll(Duration)"/>
         public ConsumerRecords<K, V> Poll(long timeoutMs)
         {
-            var duration = Duration.OfMillis(timeoutMs);
-            System.GC.SuppressFinalize(duration);
-            try
-            {
-                return Poll(duration);
-            }
-            finally { System.GC.ReRegisterForFinalize(duration); }
+            using var duration = Duration.OfMillis(timeoutMs);
+            return Poll(duration);
         }
     }
 }

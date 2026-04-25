@@ -45,6 +45,5 @@
 		<PackageReference Include="MASES.JNet" Version="2.6.9-rc3">
 			<IncludeAssets>All</IncludeAssets>
 			<PrivateAssets>None</PrivateAssets>
-		</PackageReference>
-		<PackageReference Include="Microsoft.SourceLink.GitHub" Version="10.0.203" PrivateAssets="All"	</ItemGroup>
+		</PackageReferenceackageReference Include="Microsoft.SourceLink.GitHub" Version="10.0.203" PrivateAssets="All"	</ItemGroup>
 </Project>
