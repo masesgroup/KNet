@@ -449,6 +449,22 @@ jobs:
       - name: List downloaded CSVs (debug)
         run: find ./benchmark-results -name '*.csv' | sort
 
+      # Print raw CSV content so we can verify what values are actually being
+      # compared (times in μs vs throughput) and spot anomalous Confluent values
+      # caused by partial connection failures before the Python parser runs.
+      - name: Dump raw CSV content (debug)
+        run: |
+          echo "=== BENCH CSVs ==="
+          find ./benchmark-results -name 'results_*.csv' | sort | while read f; do
+            echo "--- $f ---"
+            cat "$f"
+          done
+          echo "=== ROUNDTRIP CSVs ==="
+          find ./benchmark-results -name 'roundtrip_results_*.csv' | sort | while read f; do
+            echo "--- $f ---"
+            cat "$f"
+          done
+
       # ── Python: parse → compute ratios → patch performance.md ────────────────
       - name: Parse results and update performance.md
         env:
@@ -469,7 +485,19 @@ jobs:
           SHA_SHORT            = os.environ.get("GITHUB_SHA", "")[:7]
           REPO                 = os.environ.get("GITHUB_REPOSITORY", "")
           NOW                  = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
-          MAX_REASONABLE_RATIO = 10000.0 
+
+          # All CSV values are times in μs — lower is better.
+          # ratio = KNet / Confluent × 100:
+          #   < 100  → KNet faster   → bold
+          #   > 100  → Confluent faster
+          #   ~ 100  → comparable
+          #
+          # Confluent sometimes fails partially and writes a very high value
+          # (e.g. a timeout instead of a real measurement), which would produce
+          # an artificially low ratio making KNet look unrealistically good.
+          # MAX_REASONABLE_RATIO discards those rows: a ratio above this threshold
+          # means one of the two measurements is almost certainly corrupted.
+          MAX_REASONABLE_RATIO = 500.0   # >500% is almost certainly a bad sample
 
           # ── statistics ─────────────────────────────────────────────────────
           def mean(lst):
@@ -544,6 +572,16 @@ jobs:
                           if kp == 0 and cp == 0 and kc == 0 and cc == 0:
                               print(f"  SKIP all-zeros: {path} pkt={pkt} len={lng}")
                               continue
+                          # Guard: discard pairs where the ratio would exceed
+                          # MAX_REASONABLE_RATIO — likely a corrupted/timed-out sample.
+                          def _ratio(a, b):
+                              return a / b * 100 if b > 0 else float('inf')
+                          if kp > 0 and cp > 0 and _ratio(kp, cp) > MAX_REASONABLE_RATIO:
+                              print(f"  SKIP prod ratio={_ratio(kp,cp):.1f}% (>{MAX_REASONABLE_RATIO}): {path} pkt={pkt} len={lng}")
+                              kp = cp = 0
+                          if kc > 0 and cc > 0 and _ratio(kc, cc) > MAX_REASONABLE_RATIO:
+                              print(f"  SKIP cons ratio={_ratio(kc,cc):.1f}% (>{MAX_REASONABLE_RATIO}): {path} pkt={pkt} len={lng}")
+                              kc = cc = 0
                           key = (variant, pkt, lng)
                           d = agg.setdefault(key, {"kp":[],"cp":[],"kc":[],"cc":[]})
                           if kp > 0: d["kp"].append(kp)
@@ -574,6 +612,10 @@ jobs:
                           if km == 0 and cm == 0:
                               print(f"  SKIP all-zeros: {path} pkt={pkt} len={lng}")
                               continue
+                          # Same sanity guard as for produce/consume
+                          if km > 0 and cm > 0 and km / cm * 100 > MAX_REASONABLE_RATIO:
+                              print(f"  SKIP rt ratio={km/cm*100:.1f}% (>{MAX_REASONABLE_RATIO}): {path} pkt={pkt} len={lng}")
+                              continue
                           key = (variant, pkt, lng)
                           d = agg.setdefault(key, {"km":[],"cm":[]})
                           if km > 0: d["km"].append(km)
@@ -591,22 +633,21 @@ jobs:
               packets_list = sorted({k[1] for k in agg if k[0] == variant})
               if not packets_list:
                   return "_No data._\n"
+              # Derive lengths and build the header once (outside the packets loop)
+              lengths = sorted({k[2] for k in agg if k[0] == variant})
+              len_headers = " | ".join(f"{l:,} bytes" for l in lengths)
+              header  = f"|  | {len_headers} |\n"
+              header += "|:---:\t|" + "".join(":---:\t|" for _ in lengths) + "\n"
               rows = ""
               for packets in packets_list:
                   cols = []
-                  lengths = sorted({k[2] for k in agg if k[0] == variant})
-                  # ...
-                  len_headers = " | ".join(f"{l:,} bytes" for l in lengths)
-                  header  = f"|  | {len_headers} |\n"
-                  header += "|:---:\t|" + "".join(":---:\t|" for _ in lengths) + "\n"
-                  # ...
                   for length in lengths:
                       d  = agg.get((variant, packets, length), {})
                       kl = d.get(k_key, [])
                       cl = d.get(c_key, [])
                       cols.append(cell_str(kl, cl) if kl and cl else "N/A")
                   rows += f"| {packets:,} messages | " + " | ".join(cols) + " |\n"
-              return HEADER + rows
+              return header + rows
 
           def build_two_variant_block(agg, k_key, c_key,
                                        knet_label, std_label):
