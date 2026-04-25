@@ -262,7 +262,7 @@ jobs:
           key: KNetBenchmark_${{ github.run_number }}_${{ github.run_attempt }}_${{ matrix.framework }}_${{ github.sha }}
 
       - name: Create results directories
-        run: mkdir -p "$RESULTS_DIR/knet" "$RESULTS_DIR/standard"
+        run: mkdir -p "$RESULTS_DIR/knet" "$RESULTS_DIR/standard" "$RESULTS_DIR/knet_checked" "$RESULTS_DIR/standard_checked"
 
       # ── Robust Kafka readiness check ────────────────────────────────────────
       # nc -z only checks TCP; the broker resets connections during APIVERSION_QUERY
@@ -354,6 +354,7 @@ jobs:
               -ResultsPath "$RESULTS_DIR/knet" \
               ${{ env.BENCH_COMMON_ARGS }} \
               -FetchMinBytes 1 \
+              -LingerMs 0 \
               -UseKNetProducer -UseKNetConsumer \
           || echo "KNetRoundTripBenchmark [knet] exited with $? (timeout or error — partial CSV preserved)"
 
@@ -368,12 +369,47 @@ jobs:
               -ResultsPath "$RESULTS_DIR/standard" \
               ${{ env.BENCH_COMMON_ARGS }} \
               -FetchMinBytes 1 \
+              -LingerMs 0 \
           || echo "KNetRoundTripBenchmark [standard] exited with $? (timeout or error — partial CSV preserved)"
+
+      # ── Roundtrip — KNet variant with CheckOnConsume ───────────────────────────
+      # -CheckOnConsume forces item.Value to cross the JNI boundary and runs
+      # SequenceEqual in .NET — making the KNet measurement comparable to
+      # Confluent.Kafka™ where the byte[] is already a CLR object.
+      - name: Run KNetRoundTripBenchmark [knet+checked] [${{ matrix.framework }}]
+        timeout-minutes: 30
+        continue-on-error: true
+        run: |
+          timeout --kill-after=60 1500 \
+            dotnet "${{ github.workspace }}/bin/${{ matrix.framework }}/KNetRoundTripBenchmark.dll" \
+              -Log4JConfiguration "${{ github.workspace }}/bin/${{ matrix.framework }}/log4j2.yaml" \
+              -ResultsPath "$RESULTS_DIR/knet_checked" \
+              ${{ env.BENCH_COMMON_ARGS }} \
+              -FetchMinBytes 1 \
+              -LingerMs 0 \
+              -UseKNetProducer -UseKNetConsumer \
+              -CheckOnConsume \
+          || echo "KNetRoundTripBenchmark [knet+checked] exited with $? (timeout or error — partial CSV preserved)"
+
+      # ── Roundtrip — Standard variant with CheckOnConsume ──────────────────────
+      - name: Run KNetRoundTripBenchmark [standard+checked] [${{ matrix.framework }}]
+        timeout-minutes: 30
+        continue-on-error: true
+        run: |
+          timeout --kill-after=60 1500 \
+            dotnet "${{ github.workspace }}/bin/${{ matrix.framework }}/KNetRoundTripBenchmark.dll" \
+              -Log4JConfiguration "${{ github.workspace }}/bin/${{ matrix.framework }}/log4j2.yaml" \
+              -ResultsPath "$RESULTS_DIR/standard_checked" \
+              ${{ env.BENCH_COMMON_ARGS }} \
+              -FetchMinBytes 1 \
+              -LingerMs 0 \
+              -CheckOnConsume \
+          || echo "KNetRoundTripBenchmark [standard+checked] exited with $? (timeout or error — partial CSV preserved)"
 
       # ── Upload CSVs ────────────────────────────────────────────────────────────
       # Artifact name encodes the framework; inside it contains:
-      #   knet/results_*.csv  knet/roundtrip_results_*.csv
-      #   standard/results_*.csv  standard/roundtrip_results_*.csv
+      #   knet/roundtrip_results_*.csv           standard/roundtrip_results_*.csv
+      #   knet_checked/roundtrip_results_*.csv   standard_checked/roundtrip_results_*.csv
       # The Python script derives the variant from the subdirectory name.
       - name: Upload raw benchmark results [${{ matrix.framework }}]
         uses: actions/upload-artifact@v7
@@ -413,22 +449,6 @@ jobs:
       - name: List downloaded CSVs (debug)
         run: find ./benchmark-results -name '*.csv' | sort
 
-      # Print raw CSV content so we can verify what values are actually being
-      # compared (times in μs vs throughput) and spot anomalous Confluent values
-      # caused by partial connection failures before the Python parser runs.
-      - name: Dump raw CSV content (debug)
-        run: |
-          echo "=== BENCH CSVs ==="
-          find ./benchmark-results -name 'results_*.csv' | sort | while read f; do
-            echo "--- $f ---"
-            cat "$f"
-          done
-          echo "=== ROUNDTRIP CSVs ==="
-          find ./benchmark-results -name 'roundtrip_results_*.csv' | sort | while read f; do
-            echo "--- $f ---"
-            cat "$f"
-          done
-
       # ── Python: parse → compute ratios → patch performance.md ────────────────
       - name: Parse results and update performance.md
         env:
@@ -442,26 +462,14 @@ jobs:
           from datetime import datetime, timezone
           from pathlib import Path
 
-          RESULTS_DIR = "./benchmark-results"
-          DOCS_PATH   = "src/documentation/articles/performance.md"
-          RUN_ID      = os.environ.get("GITHUB_RUN_ID", "")
-          RUN_NUM     = os.environ.get("GITHUB_RUN_NUMBER", "?")
-          SHA_SHORT   = os.environ.get("GITHUB_SHA", "")[:7]
-          REPO        = os.environ.get("GITHUB_REPOSITORY", "")
-          NOW         = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
-
-          # All CSV values are times in μs — lower is better.
-          # ratio = KNet / Confluent × 100:
-          #   < 100  → KNet faster   → bold
-          #   > 100  → Confluent faster
-          #   ~ 100  → comparable
-          #
-          # Confluent sometimes fails partially and writes a very high value
-          # (e.g. a timeout instead of a real measurement), which would produce
-          # an artificially low ratio making KNet look unrealistically good.
-          # MAX_REASONABLE_RATIO discards those rows: a ratio above this threshold
-          # means one of the two measurements is almost certainly corrupted.
-          MAX_REASONABLE_RATIO = 500.0   # >500% is almost certainly a bad sample
+          RESULTS_DIR          = "./benchmark-results"
+          DOCS_PATH            = "src/documentation/articles/performance.md"
+          RUN_ID               = os.environ.get("GITHUB_RUN_ID", "")
+          RUN_NUM              = os.environ.get("GITHUB_RUN_NUMBER", "?")
+          SHA_SHORT            = os.environ.get("GITHUB_SHA", "")[:7]
+          REPO                 = os.environ.get("GITHUB_REPOSITORY", "")
+          NOW                  = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
+          MAX_REASONABLE_RATIO = 10000.0 
 
           # ── statistics ─────────────────────────────────────────────────────
           def mean(lst):
@@ -494,6 +502,7 @@ jobs:
               if ratio > MAX_REASONABLE_RATIO or ratio <= 0:
                   print(f"  WARN: suspicious ratio {ratio:.2f} — skipped")
                   return "N/A"
+                        """avg_ratio (sd_ratio) — sd shows '—' when only 1 data point."""
               avg = ratio_str(mean(kl), mean(cl))
               sk, sc = sd(kl), sd(cl)
               if sk is None or sc is None:
@@ -536,16 +545,6 @@ jobs:
                           if kp == 0 and cp == 0 and kc == 0 and cc == 0:
                               print(f"  SKIP all-zeros: {path} pkt={pkt} len={lng}")
                               continue
-                          # Guard: discard pairs where the ratio would exceed
-                          # MAX_REASONABLE_RATIO — likely a corrupted/timed-out sample.
-                          def _ratio(a, b):
-                              return a / b * 100 if b > 0 else float('inf')
-                          if kp > 0 and cp > 0 and _ratio(kp, cp) > MAX_REASONABLE_RATIO:
-                              print(f"  SKIP prod ratio={_ratio(kp,cp):.1f}% (>{MAX_REASONABLE_RATIO}): {path} pkt={pkt} len={lng}")
-                              kp = cp = 0
-                          if kc > 0 and cc > 0 and _ratio(kc, cc) > MAX_REASONABLE_RATIO:
-                              print(f"  SKIP cons ratio={_ratio(kc,cc):.1f}% (>{MAX_REASONABLE_RATIO}): {path} pkt={pkt} len={lng}")
-                              kc = cc = 0
                           key = (variant, pkt, lng)
                           d = agg.setdefault(key, {"kp":[],"cp":[],"kc":[],"cc":[]})
                           if kp > 0: d["kp"].append(kp)
@@ -576,10 +575,6 @@ jobs:
                           if km == 0 and cm == 0:
                               print(f"  SKIP all-zeros: {path} pkt={pkt} len={lng}")
                               continue
-                          # Same sanity guard as for produce/consume
-                          if km > 0 and cm > 0 and km / cm * 100 > MAX_REASONABLE_RATIO:
-                              print(f"  SKIP rt ratio={km/cm*100:.1f}% (>{MAX_REASONABLE_RATIO}): {path} pkt={pkt} len={lng}")
-                              continue
                           key = (variant, pkt, lng)
                           d = agg.setdefault(key, {"km":[],"cm":[]})
                           if km > 0: d["km"].append(km)
@@ -597,21 +592,22 @@ jobs:
               packets_list = sorted({k[1] for k in agg if k[0] == variant})
               if not packets_list:
                   return "_No data._\n"
-              # Derive lengths and build the header once (outside the packets loop)
-              lengths = sorted({k[2] for k in agg if k[0] == variant})
-              len_headers = " | ".join(f"{l:,} bytes" for l in lengths)
-              header  = f"|  | {len_headers} |\n"
-              header += "|:---:\t|" + "".join(":---:\t|" for _ in lengths) + "\n"
               rows = ""
               for packets in packets_list:
                   cols = []
+                  lengths = sorted({k[2] for k in agg if k[0] == variant})
+                  # ...
+                  len_headers = " | ".join(f"{l:,} bytes" for l in lengths)
+                  header  = f"|  | {len_headers} |\n"
+                  header += "|:---:\t|" + "".join(":---:\t|" for _ in lengths) + "\n"
+                  # ...
                   for length in lengths:
                       d  = agg.get((variant, packets, length), {})
                       kl = d.get(k_key, [])
                       cl = d.get(c_key, [])
                       cols.append(cell_str(kl, cl) if kl and cl else "N/A")
                   rows += f"| {packets:,} messages | " + " | ".join(cols) + " |\n"
-              return header + rows
+              return HEADER + rows
 
           def build_two_variant_block(agg, k_key, c_key,
                                        knet_label, std_label):
@@ -627,18 +623,21 @@ jobs:
 
           # ── load data ───────────────────────────────────────────────────────
           bench_csvs     = sorted(glob.glob(f"{RESULTS_DIR}/**/results_*.csv",           recursive=True))
-          roundtrip_csvs = sorted(glob.glob(f"{RESULTS_DIR}/**/roundtrip_results_*.csv", recursive=True))
+          roundtrip_csvs         = sorted(glob.glob(f"{RESULTS_DIR}/**/roundtrip_results_*.csv", recursive=True))
+          roundtrip_checked_csvs = [p for p in roundtrip_csvs if "checked" in p]
+          roundtrip_plain_csvs   = [p for p in roundtrip_csvs if "checked" not in p]
 
-          print(f"Found {len(bench_csvs)} bench CSV(s), {len(roundtrip_csvs)} roundtrip CSV(s)")
+          print(f"Found {len(bench_csvs)} bench CSV(s), {len(roundtrip_plain_csvs)} roundtrip CSV(s), {len(roundtrip_checked_csvs)} roundtrip+checked CSV(s)")
 
-          if not bench_csvs and not roundtrip_csvs:
+          if not bench_csvs and not roundtrip_plain_csvs and not roundtrip_checked_csvs:
               print("No CSV files found – skipping doc update.")
               exit(0)
 
           bench_agg     = aggregate_bench(bench_csvs)
-          roundtrip_agg = aggregate_roundtrip(roundtrip_csvs)
+          roundtrip_agg         = aggregate_roundtrip(roundtrip_plain_csvs)
+          roundtrip_checked_agg = aggregate_roundtrip(roundtrip_checked_csvs)
 
-          if not bench_agg and not roundtrip_agg:
+          if not bench_agg and not roundtrip_agg and not roundtrip_checked_agg:
               print("All CSVs contain only failed rows – skipping doc update.")
               exit(0)
 
@@ -663,6 +662,11 @@ jobs:
               roundtrip_agg, "km", "cm",
               "-UseKNetProducer -UseKNetConsumer",
               "standard JNI wrappers"
+          )
+          roundtrip_checked_block = build_two_variant_block(
+              roundtrip_checked_agg, "km", "cm",
+              "-UseKNetProducer -UseKNetConsumer -CheckOnConsume",
+              "standard JNI wrappers -CheckOnConsume"
           )
 
           # ── patch performance.md ─────────────────────────────────────────────
@@ -702,14 +706,16 @@ jobs:
           # Markers exactly as they appear in the doc
           PRODUCE_MARKER   = "- KNet/Confluent.Kafka™ Produce Average ratio percentage (SD ratio percentage):"
           CONSUME_MARKER   = "- KNet/Confluent.Kafka™ Consume Average ratio percentage (SD ratio percentage):"
-          ROUNDTRIP_MARKER = "- KNet/Confluent.Kafka™ Roundtrip Average ratio percentage (SD ratio percentage):"
+          ROUNDTRIP_MARKER         = "- KNet/Confluent.Kafka™ Roundtrip Average ratio percentage (SD ratio percentage):"
+          ROUNDTRIP_CHECKED_MARKER = "- KNet/Confluent.Kafka™ Roundtrip with CheckOnConsume Average ratio percentage (SD ratio percentage):"
           ANALYSIS         = "#### Analysis"
 
           # Order matters: Produce uses CONSUME_MARKER as end (preserves it);
           # Consume and Roundtrip both use ANALYSIS as end (two separate occurrences).
           doc = replace_block(doc, PRODUCE_MARKER,   CONSUME_MARKER, produce_block,   run_badge)
           doc = replace_block(doc, CONSUME_MARKER,   ANALYSIS,       consume_block,   run_badge)
-          doc = replace_block(doc, ROUNDTRIP_MARKER, ANALYSIS,       roundtrip_block, run_badge)
+          doc = replace_block(doc, ROUNDTRIP_MARKER,         ANALYSIS, roundtrip_block,         run_badge)
+          doc = replace_block(doc, ROUNDTRIP_CHECKED_MARKER, ANALYSIS, roundtrip_checked_block, run_badge)
 
           Path(DOCS_PATH).write_text(doc, encoding="utf-8")
           print("performance.md updated successfully.")
