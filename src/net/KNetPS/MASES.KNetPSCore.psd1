@@ -28,7 +28,7 @@ Copyright = 'Copyright (c) 2021-2026 MASES s.r.l.'
 Description = 'PowerShell command line interface of .NET suite for Apache Kafka. KNet is a comprehensive .NET suite for Apache Kafka providing all features: Producer, Consumer, Admin, Streams, Connect, backends (ZooKeeper and Kafka).'
 
 # Minimum version of the Windows PowerShell engine required by this module
-PowerShellVersion = '7.0.0'
+PowerShellVersion = '7.2.0'
 
 # Specifies the compatible PSEditions of the module.
 CompatiblePSEditions = @('Core')
@@ -141,7 +141,7 @@ PrivateData = @{
 
     PSData = @{
 
-        Tags = @('KNetPS', 'PSEdition_Core', 'PSEdition_Desktop', 'Windows', 'Linux', 'ZooKeeper', 'Apache', 'Kafka', 'ApacheKafka', 'Admin', 'Consumer', 'Producer')
+        Tags = @('KNetPS', 'PSEdition_Core', 'Windows', 'Linux', 'ZooKeeper', 'Apache', 'Kafka', 'ApacheKafka', 'Admin', 'Consumer', 'Producer')
 
         LicenseUri = 'https://github.com/masesgroup/KNet/blob/master/LICENSE'
 
