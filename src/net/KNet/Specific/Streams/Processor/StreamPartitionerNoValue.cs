@@ -65,7 +65,7 @@ namespace MASES.KNet.Streams.Processor
 
             var res = methodToExecute(arg0, _kSerializer.Deserialize(arg0, arg1), arg3);
             if (res == null || res.Count == 0) return Optional<Set<Integer>>.Empty();
-            using var scope = new JvmBatchDisposeFastScope();
+            using var scope = new JCOBridgeDisposeFastScope();
             using HashSet<Integer> result = new HashSet<Integer>();
             foreach (var item in res)
             {

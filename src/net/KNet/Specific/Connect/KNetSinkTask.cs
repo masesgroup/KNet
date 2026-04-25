@@ -71,7 +71,7 @@ namespace MASES.KNet.Connect
         {
             try
             {
-                using var scope = new JvmBatchDisposeFastScope();
+                using var scope = new JCOBridgeDisposeFastScope();
                 using Collection<SinkRecord> collection = DataToExchange<Collection<SinkRecord>>();
                 using var collection1 = collection.WithPrefetch(UsePrefetch).WithThread(UseThread, ThreadPriority);
                 Put(collection1);
