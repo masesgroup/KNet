@@ -419,19 +419,16 @@ namespace MASES.KNet.Benchmark
                             using var records = consumer.Poll(duration);
                             if (UsePrefetch)
                             {
-                                foreach (var item in records.WithPrefetch().WithThread().WithConvert((o) => { return (o.Key(), o.Value()); }))
+                                foreach (var item in records.WithPrefetch().WithThread().WithConvert((o) => { using (o) { return (o.Key(), o.Value()); } }))
                                 {
-                                    using (item)
-                                    {
-                                        roundTripTime.Add((double)(DateTime.Now.Ticks - item.Item1) / (TimeSpan.TicksPerMillisecond / 1000));
+                                    roundTripTime.Add((double)(DateTime.Now.Ticks - item.Item1) / (TimeSpan.TicksPerMillisecond / 1000));
 
-                                        if (CheckOnConsume && !item.Item2.SequenceEqual(data))
-                                        {
-                                            throw new InvalidOperationException($"ConsumeKafka test {testNum}: Incorrect data counter {counter} item.Key {item.Item1}");
-                                        }
-                                        Interlocked.Increment(ref counter);
-                                        noProgressTimer.Restart();
+                                    if (CheckOnConsume && !item.Item2.SequenceEqual(data))
+                                    {
+                                        throw new InvalidOperationException($"ConsumeKafka test {testNum}: Incorrect data counter {counter} item.Key {item.Item1}");
                                     }
+                                    Interlocked.Increment(ref counter);
+                                    noProgressTimer.Restart();
                                 }
                             }
                             else
