@@ -447,7 +447,7 @@ namespace MASES.KNet.Replicator
             [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
             static void OnDemandRetrieve(IConsumer<K, V, TJVMK, TJVMV> consumer, string topic, K key, ILocalDataStorage data)
             {
-                using var scope = new JvmBatchDisposeFastScope();
+                using var scope = new JCOBridgeDisposeFastScope();
                 using var topicPartition = new Org.Apache.Kafka.Common.TopicPartition(topic, data.Partition);
                 using var topics = Java.Util.Collections.Singleton(topicPartition);
                 consumer.Assign(topics);
