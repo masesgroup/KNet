@@ -101,7 +101,7 @@ namespace MASES.KNet.Benchmark
                                 // Both KNet and Confluent succeeded for this testIndex:
                                 // write the cumulative row. KNETData and ConfluentData are
                                 // guaranteed non-empty here so Max/Min/Average are safe.
-                                singleTestResultsSb.AppendLine($"{packets};{length};{KNETData.Max()};{KNETData.Min()};{KNETData.Average()};{ConfluentData.Max()};{ConfluentData.Min()};{ConfluentData.Average()};");
+                                singleTestResultsSb.AppendLine($"{packets};{length};{KNETData.Max()};{KNETData.Min()};{KNETData.Average()};{ConfluentData.Max()};{ConfluentData.Min()};{ConfluentData.Average()}");
 
                                 if (ShowIntermediateResults)
                                 {
