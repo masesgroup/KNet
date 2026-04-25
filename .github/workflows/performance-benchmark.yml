@@ -502,7 +502,6 @@ jobs:
               if ratio > MAX_REASONABLE_RATIO or ratio <= 0:
                   print(f"  WARN: suspicious ratio {ratio:.2f} — skipped")
                   return "N/A"
-                        """avg_ratio (sd_ratio) — sd shows '—' when only 1 data point."""
               avg = ratio_str(mean(kl), mean(cl))
               sk, sc = sd(kl), sd(cl)
               if sk is None or sc is None:
