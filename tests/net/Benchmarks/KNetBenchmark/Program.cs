@@ -1,4 +1,4 @@
-﻿/*
+/*
 *  Copyright (c) 2021-2026 MASES s.r.l.
 *
 *  Licensed under the Apache License, Version 2.0 (the "License");
@@ -64,6 +64,15 @@ namespace MASES.KNet.Benchmark
 
                             var topicNameKNet = TopicName("KNET", packets, length, testNum);
                             var topicNameConfluent = TopicName("CONF", packets, length, testNum);
+
+                            // Declare stopwatches here so the finally block can always
+                            // write a row — even when one of the calls times out or throws.
+                            Stopwatch KNETProdSW = new();
+                            Stopwatch KNETConsSW = new();
+                            Stopwatch ConfluentProdSW = new();
+                            Stopwatch ConfluentConsSW = new();
+                            bool testFailed = false;
+
                             try
                             {
                                 try
@@ -76,11 +85,9 @@ namespace MASES.KNet.Benchmark
                                     System.Threading.Thread.Sleep(1000); // wait kafka server
                                     CreateTopic(topicNameKNet);
                                 }
-                                WaitForTopic(topicNameKNet, TimeSpan.FromSeconds(30));
 
                                 if (ShowLogs) Console.WriteLine($"Producing on topic {topicNameKNet}");
-                                var KNETProdSW = UseKNetProducer ? ProduceKNet(topicNameKNet, length, packets, CheckOnConsume ? data : null) : ProduceKafka(topicNameKNet, length, packets, CheckOnConsume ? data : null);
-                                Stopwatch KNETConsSW = new();
+                                KNETProdSW = UseKNetProducer ? ProduceKNet(topicNameKNet, length, packets, CheckOnConsume ? data : null) : ProduceKafka(topicNameKNet, length, packets, CheckOnConsume ? data : null);
                                 if (!ProduceOnly)
                                 {
                                     if (ShowLogs) Console.WriteLine($"Consuming from topic {topicNameKNet}");
@@ -97,11 +104,9 @@ namespace MASES.KNet.Benchmark
                                     System.Threading.Thread.Sleep(1000); // wait kafka server
                                     CreateTopic(topicNameConfluent);
                                 }
-                                WaitForTopic(topicNameConfluent, TimeSpan.FromSeconds(30));
 
                                 if (ShowLogs) Console.WriteLine($"Producing on topic {topicNameConfluent}");
-                                var ConfluentProdSW = ProduceConfluent(topicNameConfluent, length, packets, CheckOnConsume ? data : null);
-                                Stopwatch ConfluentConsSW = new();
+                                ConfluentProdSW = ProduceConfluent(topicNameConfluent, length, packets, CheckOnConsume ? data : null);
                                 if (!ProduceOnly)
                                 {
                                     if (ShowLogs) Console.WriteLine($"Consuming from topic {topicNameConfluent}");
@@ -113,8 +118,6 @@ namespace MASES.KNet.Benchmark
                                 kNetConsumeTimes.Add(KNETConsSW.ElapsedMicroSeconds());
                                 confluentConsumeTimes.Add(ConfluentConsSW.ElapsedMicroSeconds());
 
-                                singleTestResultsSb.AppendLine($"{packets};{length};{KNETProdSW.ElapsedMicroSeconds()};{KNETConsSW?.ElapsedMicroSeconds()};{ConfluentProdSW.ElapsedMicroSeconds()};{ConfluentConsSW?.ElapsedMicroSeconds()}");
-
                                 if (ShowIntermediateResults)
                                 {
                                     if (ProduceOnly)
@@ -123,7 +126,7 @@ namespace MASES.KNet.Benchmark
                                     }
                                     else
                                     {
-                                        Console.WriteLine($"Produce Diff {KNETProdSW.ElapsedMicroSeconds() - ConfluentProdSW.ElapsedMicroSeconds()} us - Consume Diff {KNETConsSW.ElapsedMicroSeconds() - ConfluentConsSW.ElapsedMicroSeconds()}");
+                                        Console.WriteLine($"Produce Diff {KNETProdSW.ElapsedMicroSeconds() - ConfluentProdSW.ElapsedMicroSeconds()} us - Consume Diff {KNETConsSW.ElapsedMicroSeconds() - ConfluentConsSW.ElapsedMicroSeconds()} us");
                                     }
 
                                     Console.WriteLine($"Produce KNET: Total {KNETProdSW.ElapsedMicroSeconds()} us -  Mean {KNETProdSW.MeanMicroSeconds(packets)} us - {KNETProdSW.PacketsPerSeconds(packets)} packets/s - {KNETProdSW.MbPerSecond(packets, length)} Mb/s");
@@ -133,8 +136,42 @@ namespace MASES.KNet.Benchmark
                                     if (!ProduceOnly) Console.WriteLine($"Consume Confluent: Total {ConfluentConsSW.ElapsedMicroSeconds()} us - Mean {ConfluentConsSW.MeanMicroSeconds(packets)} us - {ConfluentConsSW.PacketsPerSeconds(packets)} packets/s - {ConfluentConsSW.MbPerSecond(packets, length)} Mb/s");
                                 }
                             }
+                            catch (Java.Lang.NullPointerException e)
+                            {
+                                // Catch per-combination errors and continue to next combination
+                                // instead of aborting the entire benchmark run.
+                                testFailed = true;
+                                Console.WriteLine($"[SKIP] packets={packets} length={length} test={testNum} — {e.GetType().Name}: {e.Message}");
+                                Exception inner = e.InnerException;
+                                while (inner != null) { Console.WriteLine($"  {inner.Message}"); inner = inner.InnerException; }
+                            }
+                            catch (JVMBridgeException e)
+                            {
+                                testFailed = true;
+                                Console.WriteLine($"[SKIP] packets={packets} length={length} test={testNum} — {e.GetType().Name}: {e.Message}");
+                                Exception inner = e.InnerException;
+                                while (inner != null) { Console.WriteLine($"  {inner.Message}"); inner = inner.InnerException; }
+                            }
+                            catch (Exception e)
+                            {
+                                // This also catches the KNet timeout exception
+                                // ("timed out after 60 seconds: expected N messages, got M")
+                                testFailed = true;
+                                Console.WriteLine($"[SKIP] packets={packets} length={length} test={testNum} — {e.GetType().Name}: {e.Message}");
+                                Exception inner = e.InnerException;
+                                while (inner != null) { Console.WriteLine($"  {inner.Message}"); inner = inner.InnerException; }
+                            }
                             finally
                             {
+                                // Always write the row so the CSV is never truncated.
+                                // Zero values for stopwatches that never started indicate a
+                                // partial/failed run for that combination — the Python parser
+                                // already skips rows where both KNet and Confluent are zero.
+                                if (!testFailed || KNETProdSW.ElapsedMicroSeconds() > 0 || ConfluentProdSW.ElapsedMicroSeconds() > 0)
+                                {
+                                    singleTestResultsSb.AppendLine($"{packets};{length};{KNETProdSW.ElapsedMicroSeconds()};{KNETConsSW.ElapsedMicroSeconds()};{ConfluentProdSW.ElapsedMicroSeconds()};{ConfluentConsSW.ElapsedMicroSeconds()}");
+                                }
+
                                 if (!LeaveTopics)
                                 {
                                     DeleteTopic(topicNameKNet);
@@ -180,36 +217,6 @@ namespace MASES.KNet.Benchmark
                             Console.WriteLine($"KNet/Confluent ratio(%) -> Avg Filtered {100 * (double)kNetConsumeTimes.FilterMinMax().Average() / confluentConsumeTimes.FilterMinMax().Average():####.##} - SD Filtered {100 * (double)kNetConsumeTimes.FilterMinMax().StandardDeviation() / confluentConsumeTimes.FilterMinMax().StandardDeviation():####.##} - CV Filtered {100 * kNetConsumeTimes.FilterMinMax().CoefficientOfVariation() / confluentConsumeTimes.FilterMinMax().CoefficientOfVariation():####.##}");
                         }
                     }
-                }
-            }
-            catch (Java.Lang.NullPointerException e)
-            {
-                Console.WriteLine($"{e.GetType().Name}: {e.StackTrace}");
-                Exception innerException = e.InnerException;
-                while (innerException != null)
-                {
-                    Console.WriteLine(innerException.Message);
-                    innerException = innerException.InnerException;
-                }
-            }
-            catch (JVMBridgeException e)
-            {
-                Console.WriteLine($"{e.GetType().Name}: {e.Message}");
-                Exception innerException = e.InnerException;
-                while (innerException != null)
-                {
-                    Console.WriteLine(innerException.Message);
-                    innerException = innerException.InnerException;
-                }
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e.Message);
-                Exception innerException = e.InnerException;
-                while (innerException != null)
-                {
-                    Console.WriteLine(innerException.Message);
-                    innerException = innerException.InnerException;
                 }
             }
             finally
