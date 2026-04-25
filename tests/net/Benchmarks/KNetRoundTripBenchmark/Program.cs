@@ -95,7 +95,10 @@ namespace MASES.KNet.Benchmark
                                 }
                                 ConfluentData.AddRange(tempConfluentData.Item2);
 
-                                singleTestResultsSb.AppendLine($"{packets};{length};{KNETData.Max()};{KNETData.Min()};{KNETData.Average()};{ConfluentData.Max()};{ConfluentData.Min()};{ConfluentData.Average()};");
+                                // Both KNet and Confluent succeeded for this testIndex:
+                                // write the cumulative row. KNETData and ConfluentData are
+                                // guaranteed non-empty here so Max/Min/Average are safe.
+                                singleTestResultsSb.AppendLine($"{packets};{length};{KNETData.Max()};{KNETData.Min()};{KNETData.Average()};{ConfluentData.Max()};{ConfluentData.Min()};{ConfluentData.Average()}");
 
                                 if (ShowIntermediateResults)
                                 {
@@ -117,12 +120,12 @@ namespace MASES.KNet.Benchmark
                     }
                     if (ShowFinalResults)
                     {
-                        Console.WriteLine($"KNet       microseconds -> Max {KNETData.Max():####.##} - Min {KNETData.Min():####.##} - Avg {KNETData.Average():####.##} - SD {KNETData.StandardDeviation():####.##} - CV {100 * KNETData.StandardDeviation() / KNETData.Average():####.##} %");
-                        Console.WriteLine($"KNet       microseconds -> Avg Filtered {KNETData.FilterMinMax().Average():####.##} - SD Filtered {KNETData.FilterMinMax().StandardDeviation():####.##} - CV Filtered {100 * KNETData.FilterMinMax().StandardDeviation() / KNETData.FilterMinMax().Average():####.##} %");
-                        Console.WriteLine($"Confluent  microseconds -> Max {ConfluentData.Max():####.##} - Min {ConfluentData.Min():####.##} - Avg {ConfluentData.Average():####.##} SD {ConfluentData.StandardDeviation():####.##} - CV {100 * ConfluentData.StandardDeviation() / ConfluentData.Average():####.##} %");
-                        Console.WriteLine($"Confluent  microseconds -> Avg Filtered {ConfluentData.FilterMinMax().Average():####.##} - SD Filtered {ConfluentData.FilterMinMax().StandardDeviation():####.##} - CV Filtered {100 * ConfluentData.FilterMinMax().StandardDeviation() / ConfluentData.FilterMinMax().Average():####.##} %");
-                        Console.WriteLine($"KNet/Confluent ratio(%) -> Max {100 * (double)KNETData.Max() / ConfluentData.Max():####.##} - Min {100 * (double)KNETData.Min() / ConfluentData.Min():####.##} - Avg {100 * (double)KNETData.Average() / ConfluentData.Average():####.##} - SD {100 * (double)KNETData.StandardDeviation() / ConfluentData.StandardDeviation():####.##} - CV {100 * KNETData.CoefficientOfVariation() / ConfluentData.CoefficientOfVariation():####.##}");
-                        Console.WriteLine($"KNet/Confluent ratio(%) -> Avg Filtered {100 * (double)KNETData.FilterMinMax().Average() / ConfluentData.FilterMinMax().Average():####.##} - SD Filtered {100 * (double)KNETData.FilterMinMax().StandardDeviation() / ConfluentData.FilterMinMax().StandardDeviation():####.##} - CV Filtered {100 * KNETData.FilterMinMax().CoefficientOfVariation() / ConfluentData.FilterMinMax().CoefficientOfVariation():####.##}");
+                        Console.WriteLine($"KNet       microseconds -> Max {allKNETData.Max():####.##} - Min {allKNETData.Min():####.##} - Avg {allKNETData.Average():####.##} - SD {allKNETData.StandardDeviation():####.##} - CV {100 * allKNETData.StandardDeviation() / allKNETData.Average():####.##} %");
+                        Console.WriteLine($"KNet       microseconds -> Avg Filtered {allKNETData.FilterMinMax().Average():####.##} - SD Filtered {allKNETData.FilterMinMax().StandardDeviation():####.##} - CV Filtered {100 * allKNETData.FilterMinMax().StandardDeviation() / allKNETData.FilterMinMax().Average():####.##} %");
+                        Console.WriteLine($"Confluent  microseconds -> Max {allConfluentData.Max():####.##} - Min {allConfluentData.Min():####.##} - Avg {allConfluentData.Average():####.##} - SD {allConfluentData.StandardDeviation():####.##} - CV {100 * allConfluentData.StandardDeviation() / allConfluentData.Average():####.##} %");
+                        Console.WriteLine($"Confluent  microseconds -> Avg Filtered {allConfluentData.FilterMinMax().Average():####.##} - SD Filtered {allConfluentData.FilterMinMax().StandardDeviation():####.##} - CV Filtered {100 * allConfluentData.FilterMinMax().StandardDeviation() / allConfluentData.FilterMinMax().Average():####.##} %");
+                        Console.WriteLine($"KNet/Confluent ratio(%) -> Max {100 * (double)allKNETData.Max() / allConfluentData.Max():####.##} - Min {100 * (double)allKNETData.Min() / allConfluentData.Min():####.##} - Avg {100 * (double)allKNETData.Average() / allConfluentData.Average():####.##} - SD {100 * (double)allKNETData.StandardDeviation() / allConfluentData.StandardDeviation():####.##} - CV {100 * allKNETData.CoefficientOfVariation() / allConfluentData.CoefficientOfVariation():####.##}");
+                        Console.WriteLine($"KNet/Confluent ratio(%) -> Avg Filtered {100 * (double)allKNETData.FilterMinMax().Average() / allConfluentData.FilterMinMax().Average():####.##} - SD Filtered {100 * (double)allKNETData.FilterMinMax().StandardDeviation() / allConfluentData.FilterMinMax().StandardDeviation():####.##} - CV Filtered {100 * allKNETData.FilterMinMax().CoefficientOfVariation() / allConfluentData.FilterMinMax().CoefficientOfVariation():####.##}");
                     }
                 }
             }
