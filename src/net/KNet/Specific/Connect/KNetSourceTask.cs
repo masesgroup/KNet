@@ -983,7 +983,7 @@ namespace MASES.KNet.Connect
                     var result = Poll();
                     if (result != null && _arrayList != null)
                     {
-                        using var scope = new JvmBatchDisposeFastScope();
+                        using var scope = new JCOBridgeDisposeFastScope();
                         foreach (var record in result)
                         {
                             using (record)

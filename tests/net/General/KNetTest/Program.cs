@@ -300,7 +300,7 @@ namespace MASES.KNetTest
                         var baseJNICalls = SharedKNetCore.GlobalInstance.CurrentJNICalls;
                         try
                         {
-                            using var scope = new JvmBatchDisposeFastScope();
+                            using var scope = new JCOBridgeDisposeFastScope();
                             while (runInParallel ? !resetEvent.WaitOne(0) : i < NonParallelLimit)
                             {
                                 watcher.Start();
@@ -429,7 +429,7 @@ namespace MASES.KNetTest
                         int waitTime = waitMultiplier * 60 * 1000;
                         Stopwatch swCycleTime = Stopwatch.StartNew();
                         int emptyCycle = 0;
-                        using var scope = new JvmBatchDisposeFastScope();
+                        using var scope = new JCOBridgeDisposeFastScope();
                         while (runInParallel ? !resetEvent.WaitOne(0) : elements < NonParallelLimit)
                         {
                             using var records = consumer.Poll((long)TimeSpan.FromMilliseconds(checkTime).TotalMilliseconds);
@@ -532,7 +532,7 @@ namespace MASES.KNetTest
                         var baseJNICalls = SharedKNetCore.GlobalInstance.CurrentJNICalls;
                         try
                         {
-                            using var scope = new JvmBatchDisposeFastScope();
+                            using var scope = new JCOBridgeDisposeFastScope();
                             while (runInParallel ? !resetEvent.WaitOne(0) : i < NonParallelLimit)
                             {
                                 watcher.Start();
@@ -661,7 +661,7 @@ namespace MASES.KNetTest
                         int waitTime = waitMultiplier * 60 * 1000;
                         Stopwatch swCycleTime = Stopwatch.StartNew();
                         int emptyCycle = 0;
-                        using var scope = new JvmBatchDisposeFastScope();
+                        using var scope = new JCOBridgeDisposeFastScope();
                         while (runInParallel ? !resetEvent.WaitOne(0) : elements < NonParallelLimit)
                         {
                             using var records = consumer.Poll((long)TimeSpan.FromMilliseconds(checkTime).TotalMilliseconds);
