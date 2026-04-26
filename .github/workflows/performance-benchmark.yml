@@ -262,7 +262,7 @@ jobs:
           key: KNetBenchmark_${{ github.run_number }}_${{ github.run_attempt }}_${{ matrix.framework }}_${{ github.sha }}
 
       - name: Create results directories
-        run: mkdir -p "$RESULTS_DIR/knet" "$RESULTS_DIR/standard"
+        run: mkdir -p "$RESULTS_DIR/knet" "$RESULTS_DIR/standard" "$RESULTS_DIR/knet_checked" "$RESULTS_DIR/standard_checked"
 
       # ── Robust Kafka readiness check ────────────────────────────────────────
       # nc -z only checks TCP; the broker resets connections during APIVERSION_QUERY
@@ -354,6 +354,7 @@ jobs:
               -ResultsPath "$RESULTS_DIR/knet" \
               ${{ env.BENCH_COMMON_ARGS }} \
               -FetchMinBytes 1 \
+              -LingerMs 0 \
               -UseKNetProducer -UseKNetConsumer \
           || echo "KNetRoundTripBenchmark [knet] exited with $? (timeout or error — partial CSV preserved)"
 
@@ -368,12 +369,47 @@ jobs:
               -ResultsPath "$RESULTS_DIR/standard" \
               ${{ env.BENCH_COMMON_ARGS }} \
               -FetchMinBytes 1 \
+              -LingerMs 0 \
           || echo "KNetRoundTripBenchmark [standard] exited with $? (timeout or error — partial CSV preserved)"
+
+      # ── Roundtrip — KNet variant with CheckOnConsume ───────────────────────────
+      # -CheckOnConsume forces item.Value to cross the JNI boundary and runs
+      # SequenceEqual in .NET — making the KNet measurement comparable to
+      # Confluent.Kafka™ where the byte[] is already a CLR object.
+      - name: Run KNetRoundTripBenchmark [knet+checked] [${{ matrix.framework }}]
+        timeout-minutes: 30
+        continue-on-error: true
+        run: |
+          timeout --kill-after=60 1500 \
+            dotnet "${{ github.workspace }}/bin/${{ matrix.framework }}/KNetRoundTripBenchmark.dll" \
+              -Log4JConfiguration "${{ github.workspace }}/bin/${{ matrix.framework }}/log4j2.yaml" \
+              -ResultsPath "$RESULTS_DIR/knet_checked" \
+              ${{ env.BENCH_COMMON_ARGS }} \
+              -FetchMinBytes 1 \
+              -LingerMs 0 \
+              -UseKNetProducer -UseKNetConsumer \
+              -CheckOnConsume \
+          || echo "KNetRoundTripBenchmark [knet+checked] exited with $? (timeout or error — partial CSV preserved)"
+
+      # ── Roundtrip — Standard variant with CheckOnConsume ──────────────────────
+      - name: Run KNetRoundTripBenchmark [standard+checked] [${{ matrix.framework }}]
+        timeout-minutes: 30
+        continue-on-error: true
+        run: |
+          timeout --kill-after=60 1500 \
+            dotnet "${{ github.workspace }}/bin/${{ matrix.framework }}/KNetRoundTripBenchmark.dll" \
+              -Log4JConfiguration "${{ github.workspace }}/bin/${{ matrix.framework }}/log4j2.yaml" \
+              -ResultsPath "$RESULTS_DIR/standard_checked" \
+              ${{ env.BENCH_COMMON_ARGS }} \
+              -FetchMinBytes 1 \
+              -LingerMs 0 \
+              -CheckOnConsume \
+          || echo "KNetRoundTripBenchmark [standard+checked] exited with $? (timeout or error — partial CSV preserved)"
 
       # ── Upload CSVs ────────────────────────────────────────────────────────────
       # Artifact name encodes the framework; inside it contains:
-      #   knet/results_*.csv  knet/roundtrip_results_*.csv
-      #   standard/results_*.csv  standard/roundtrip_results_*.csv
+      #   knet/roundtrip_results_*.csv           standard/roundtrip_results_*.csv
+      #   knet_checked/roundtrip_results_*.csv   standard_checked/roundtrip_results_*.csv
       # The Python script derives the variant from the subdirectory name.
       - name: Upload raw benchmark results [${{ matrix.framework }}]
         uses: actions/upload-artifact@v7
@@ -442,13 +478,13 @@ jobs:
           from datetime import datetime, timezone
           from pathlib import Path
 
-          RESULTS_DIR = "./benchmark-results"
-          DOCS_PATH   = "src/documentation/articles/performance.md"
-          RUN_ID      = os.environ.get("GITHUB_RUN_ID", "")
-          RUN_NUM     = os.environ.get("GITHUB_RUN_NUMBER", "?")
-          SHA_SHORT   = os.environ.get("GITHUB_SHA", "")[:7]
-          REPO        = os.environ.get("GITHUB_REPOSITORY", "")
-          NOW         = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
+          RESULTS_DIR          = "./benchmark-results"
+          DOCS_PATH            = "src/documentation/articles/performance.md"
+          RUN_ID               = os.environ.get("GITHUB_RUN_ID", "")
+          RUN_NUM              = os.environ.get("GITHUB_RUN_NUMBER", "?")
+          SHA_SHORT            = os.environ.get("GITHUB_SHA", "")[:7]
+          REPO                 = os.environ.get("GITHUB_REPOSITORY", "")
+          NOW                  = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
 
           # All CSV values are times in μs — lower is better.
           # ratio = KNet / Confluent × 100:
@@ -504,10 +540,21 @@ jobs:
 
           # ── variant detection ───────────────────────────────────────────────
           # Path layout:
-          #   benchmark-results/benchmark-csv-<N>-<fw>-<variant>/<variant>/file.csv
+          #   benchmark-results/benchmark-csv-<N>-<fw>/<variant>/file.csv
+          # Variants: knet, standard, knet_checked, standard_checked.
+          # knet_checked and standard_checked are mapped back to knet/standard
+          # because the checked/plain split is already done by the caller
+          # (roundtrip_checked_csvs vs roundtrip_plain_csvs); inside each
+          # aggregation bucket we only need to know knet vs standard.
           def variant_from_path(path):
-              m = re.search(r'[/\\](knet|standard)[/\\]', path)
-              return m.group(1) if m else "unknown"
+              # Normalise separators so the regex works on Windows paths too
+              p = path.replace("\\", "/")
+              # Match the most specific pattern first (knet_checked before knet)
+              if "/knet_checked/"     in p: return "knet"
+              if "/standard_checked/" in p: return "standard"
+              if "/knet/"             in p: return "knet"
+              if "/standard/"         in p: return "standard"
+              return "unknown"
 
           # ── CSV parsing ─────────────────────────────────────────────────────
           def read_csv(path):
@@ -627,18 +674,21 @@ jobs:
 
           # ── load data ───────────────────────────────────────────────────────
           bench_csvs     = sorted(glob.glob(f"{RESULTS_DIR}/**/results_*.csv",           recursive=True))
-          roundtrip_csvs = sorted(glob.glob(f"{RESULTS_DIR}/**/roundtrip_results_*.csv", recursive=True))
+          roundtrip_csvs         = sorted(glob.glob(f"{RESULTS_DIR}/**/roundtrip_results_*.csv", recursive=True))
+          roundtrip_checked_csvs = [p for p in roundtrip_csvs if "checked" in p]
+          roundtrip_plain_csvs   = [p for p in roundtrip_csvs if "checked" not in p]
 
-          print(f"Found {len(bench_csvs)} bench CSV(s), {len(roundtrip_csvs)} roundtrip CSV(s)")
+          print(f"Found {len(bench_csvs)} bench CSV(s), {len(roundtrip_plain_csvs)} roundtrip CSV(s), {len(roundtrip_checked_csvs)} roundtrip+checked CSV(s)")
 
-          if not bench_csvs and not roundtrip_csvs:
+          if not bench_csvs and not roundtrip_plain_csvs and not roundtrip_checked_csvs:
               print("No CSV files found – skipping doc update.")
               exit(0)
 
           bench_agg     = aggregate_bench(bench_csvs)
-          roundtrip_agg = aggregate_roundtrip(roundtrip_csvs)
+          roundtrip_agg         = aggregate_roundtrip(roundtrip_plain_csvs)
+          roundtrip_checked_agg = aggregate_roundtrip(roundtrip_checked_csvs)
 
-          if not bench_agg and not roundtrip_agg:
+          if not bench_agg and not roundtrip_agg and not roundtrip_checked_agg:
               print("All CSVs contain only failed rows – skipping doc update.")
               exit(0)
 
@@ -663,6 +713,11 @@ jobs:
               roundtrip_agg, "km", "cm",
               "-UseKNetProducer -UseKNetConsumer",
               "standard JNI wrappers"
+          )
+          roundtrip_checked_block = build_two_variant_block(
+              roundtrip_checked_agg, "km", "cm",
+              "-UseKNetProducer -UseKNetConsumer -CheckOnConsume",
+              "standard JNI wrappers -CheckOnConsume"
           )
 
           # ── patch performance.md ─────────────────────────────────────────────
@@ -702,14 +757,16 @@ jobs:
           # Markers exactly as they appear in the doc
           PRODUCE_MARKER   = "- KNet/Confluent.Kafka™ Produce Average ratio percentage (SD ratio percentage):"
           CONSUME_MARKER   = "- KNet/Confluent.Kafka™ Consume Average ratio percentage (SD ratio percentage):"
-          ROUNDTRIP_MARKER = "- KNet/Confluent.Kafka™ Roundtrip Average ratio percentage (SD ratio percentage):"
+          ROUNDTRIP_MARKER         = "- KNet/Confluent.Kafka™ Roundtrip Average ratio percentage (SD ratio percentage):"
+          ROUNDTRIP_CHECKED_MARKER = "- KNet/Confluent.Kafka™ Roundtrip with CheckOnConsume Average ratio percentage (SD ratio percentage):"
           ANALYSIS         = "#### Analysis"
 
           # Order matters: Produce uses CONSUME_MARKER as end (preserves it);
           # Consume and Roundtrip both use ANALYSIS as end (two separate occurrences).
           doc = replace_block(doc, PRODUCE_MARKER,   CONSUME_MARKER, produce_block,   run_badge)
           doc = replace_block(doc, CONSUME_MARKER,   ANALYSIS,       consume_block,   run_badge)
-          doc = replace_block(doc, ROUNDTRIP_MARKER, ANALYSIS,       roundtrip_block, run_badge)
+          doc = replace_block(doc, ROUNDTRIP_MARKER,         ANALYSIS, roundtrip_block,         run_badge)
+          doc = replace_block(doc, ROUNDTRIP_CHECKED_MARKER, ANALYSIS, roundtrip_checked_block, run_badge)
 
           Path(DOCS_PATH).write_text(doc, encoding="utf-8")
           print("performance.md updated successfully.")
