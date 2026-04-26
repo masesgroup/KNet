@@ -540,10 +540,21 @@ jobs:
 
           # ── variant detection ───────────────────────────────────────────────
           # Path layout:
-          #   benchmark-results/benchmark-csv-<N>-<fw>-<variant>/<variant>/file.csv
+          #   benchmark-results/benchmark-csv-<N>-<fw>/<variant>/file.csv
+          # Variants: knet, standard, knet_checked, standard_checked.
+          # knet_checked and standard_checked are mapped back to knet/standard
+          # because the checked/plain split is already done by the caller
+          # (roundtrip_checked_csvs vs roundtrip_plain_csvs); inside each
+          # aggregation bucket we only need to know knet vs standard.
           def variant_from_path(path):
-              m = re.search(r'[/\\](knet|standard)[/\\]', path)
-              return m.group(1) if m else "unknown"
+              # Normalise separators so the regex works on Windows paths too
+              p = path.replace("\\", "/")
+              # Match the most specific pattern first (knet_checked before knet)
+              if "/knet_checked/"     in p: return "knet"
+              if "/standard_checked/" in p: return "standard"
+              if "/knet/"             in p: return "knet"
+              if "/standard/"         in p: return "standard"
+              return "unknown"
 
           # ── CSV parsing ─────────────────────────────────────────────────────
           def read_csv(path):
