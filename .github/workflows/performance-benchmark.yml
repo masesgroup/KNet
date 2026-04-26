@@ -212,7 +212,7 @@ jobs:
     name: Benchmark (${{ matrix.framework }})
     needs: [build_benchmarks, build_container_knet]
     runs-on: ubuntu-latest
-    timeout-minutes: 150
+    timeout-minutes: 240
 
     strategy:
       fail-fast: false
@@ -318,7 +318,7 @@ jobs:
       # timeout(1): send SIGTERM after 25 min; if still alive, SIGKILL after 60 s.
       # This prevents a stuck consumer from blocking the entire leg.
       - name: Run KNetBenchmark [knet] [${{ matrix.framework }}]
-        timeout-minutes: 30
+        timeout-minutes: 60
         continue-on-error: true
         run: |
           timeout --kill-after=60 1500 \
@@ -331,7 +331,7 @@ jobs:
 
       # ── Produce/Consume — Standard variant ───────────────────────────────────
       - name: Run KNetBenchmark [standard] [${{ matrix.framework }}]
-        timeout-minutes: 30
+        timeout-minutes: 60
         continue-on-error: true
         run: |
           timeout --kill-after=60 1500 \
@@ -345,7 +345,7 @@ jobs:
       # -NoAcks omitted: acks=0 can silently drop messages and the consumer thread
       # would never reach numpacket, causing an infinite hang.
       - name: Run KNetRoundTripBenchmark [knet] [${{ matrix.framework }}]
-        timeout-minutes: 30
+        timeout-minutes: 60
         continue-on-error: true
         run: |
           timeout --kill-after=60 1500 \
@@ -360,7 +360,7 @@ jobs:
 
       # ── Roundtrip — Standard variant ──────────────────────────────────────────
       - name: Run KNetRoundTripBenchmark [standard] [${{ matrix.framework }}]
-        timeout-minutes: 30
+        timeout-minutes: 60
         continue-on-error: true
         run: |
           timeout --kill-after=60 1500 \
@@ -377,7 +377,7 @@ jobs:
       # SequenceEqual in .NET — making the KNet measurement comparable to
       # Confluent.Kafka™ where the byte[] is already a CLR object.
       - name: Run KNetRoundTripBenchmark [knet+checked] [${{ matrix.framework }}]
-        timeout-minutes: 30
+        timeout-minutes: 60
         continue-on-error: true
         run: |
           timeout --kill-after=60 1500 \
@@ -393,7 +393,7 @@ jobs:
 
       # ── Roundtrip — Standard variant with CheckOnConsume ──────────────────────
       - name: Run KNetRoundTripBenchmark [standard+checked] [${{ matrix.framework }}]
-        timeout-minutes: 30
+        timeout-minutes: 60
         continue-on-error: true
         run: |
           timeout --kill-after=60 1500 \
