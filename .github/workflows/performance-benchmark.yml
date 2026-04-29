@@ -441,7 +441,7 @@ jobs:
       #   ./benchmark-results/benchmark-csv-<N>-net9.0/standard/results_*.csv
       # The Python script derives the variant from the subdir name.
       - name: Download all benchmark CSV results
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v8
         with:
           pattern: benchmark-csv-${{ github.run_number }}-*
           path: ./benchmark-results
