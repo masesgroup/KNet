@@ -16,16 +16,32 @@ public final class KNetRocksDBConfigSetterCallback implements org.mases.jcobridg
         _internalListener.release();
     }
 
+    public synchronized int getEventIndex(String eventName) {
+        return _internalListener.getEventIndex(eventName);
+    }
+
     public synchronized void raiseEvent(String eventName) {
         _internalListener.raiseEvent(eventName);
+    }
+	
+    public synchronized void raiseEvent(int eventIndex) {
+        _internalListener.raiseEvent(eventIndex);
     }
 
     public synchronized void raiseEvent(String eventName, Object e) {
         _internalListener.raiseEvent(eventName, e);
     }
+	
+    public synchronized void raiseEvent(int eventIndex, Object e) {
+        _internalListener.raiseEvent(eventIndex, e);
+    }
 
     public synchronized void raiseEvent(String eventName, Object e, Object... objects) {
         _internalListener.raiseEvent(eventName, e, objects);
+    }
+	
+    public synchronized void raiseEvent(int eventIndex, Object e, Object... objects) {
+        _internalListener.raiseEvent(eventIndex, e, objects);
     }
 
     public Object getEventData() {
