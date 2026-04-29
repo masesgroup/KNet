@@ -264,7 +264,8 @@ namespace MASES.KNet.Serialization.Json
                         return Newtonsoft.Json.JsonConvert.DeserializeObject<TData>(jsonStr, Options);
                     }
 #else
-                    return System.Text.Json.JsonSerializer.Deserialize<TData>(data.ToStream(), Options)!;
+                    using var db = data.ToDirectBuffer();
+                    return System.Text.Json.JsonSerializer.Deserialize<TData>(db.AsSpan(), Options)!;
 #endif
                 }
             }
@@ -501,7 +502,8 @@ namespace MASES.KNet.Serialization.Json
                         return Newtonsoft.Json.JsonConvert.DeserializeObject<TData>(jsonStr, Options);
                     }
 #else
-                    return System.Text.Json.JsonSerializer.Deserialize<TData>(data.ToStream(), Options)!;
+                    using var db = data.ToDirectBuffer();
+                    return System.Text.Json.JsonSerializer.Deserialize<TData>(db.AsSpan(), Options)!;
 #endif
                 }
             }
