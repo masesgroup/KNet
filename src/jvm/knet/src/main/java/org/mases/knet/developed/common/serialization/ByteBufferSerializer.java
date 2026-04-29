@@ -54,7 +54,7 @@ public class ByteBufferSerializer implements Serializer<ByteBuffer> {
                 sb.rewind();
                 return ret;
             }
-        } catch (IOException iae) {
+        } catch (IOException | IllegalAccessException iae) {
             // fallback to non buffered version
             data.rewind();
 

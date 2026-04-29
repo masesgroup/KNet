@@ -33,7 +33,7 @@ public class ByteBufferDeserializer implements Deserializer<ByteBuffer> {
 
         try {
             return JCSharedBuffer.Create(data);
-        } catch (IOException e) {
+        } catch (IOException | IllegalAccessException e) {
             // fallback to non buffered version
             return ByteBuffer.wrap(data);
         }
