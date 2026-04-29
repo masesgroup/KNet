@@ -42,7 +42,7 @@
 		<None Include="..\..\documentation\articles\usage.md" Pack="true" PackagePath="\" />
 	</ItemGroup>
 	<ItemGroup>
-		<PackageReference Include="MASES.JNet" Version="2.6.9-rc5">
+		<PackageReference Include="MASES.JNet" Version="2.6.9-rc6">
 			<IncludeAssets>All</IncludeAssets>
 			<PrivateAssets>None</PrivateAssets>
 		</PackageReference>
