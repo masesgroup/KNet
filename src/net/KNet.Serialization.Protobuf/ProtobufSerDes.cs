@@ -168,7 +168,12 @@ namespace MASES.KNet.Serialization.Protobuf
                 public override TData DeserializeWithHeaders(string topic, Headers headers, Java.Nio.ByteBuffer data)
                 {
                     if (data == null) return default;
+#if NET462_OR_GREATER_
                     return _parser.ParseFrom(data.ToStream());
+#else
+                    using var db = data.ToDirectBuffer();
+                    return _parser.ParseFrom(db.AsSpan());
+#endif
                 }
             }
         }
@@ -310,7 +315,12 @@ namespace MASES.KNet.Serialization.Protobuf
                 public override TData DeserializeWithHeaders(string topic, Headers headers, Java.Nio.ByteBuffer data)
                 {
                     if (data == null) return default;
+#if NET462_OR_GREATER
                     return _parser.ParseFrom(data.ToStream());
+#else
+                    using var db = data.ToDirectBuffer();
+                    return _parser.ParseFrom(db.AsSpan());
+#endif
                 }
             }
         }
