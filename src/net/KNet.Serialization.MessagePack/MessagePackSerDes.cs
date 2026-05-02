@@ -178,7 +178,11 @@ namespace MASES.KNet.Serialization.MessagePack
                 public override TData DeserializeWithHeaders(string topic, Headers headers, Java.Nio.ByteBuffer data)
                 {
                     if (data == null) return default;
-                    return MessagePackSerializer.Deserialize<TData>(data.ToStream(), MessagePackSerializerOptions);
+                    using (data)
+                    {
+                        using var stream = data.ToStream();
+                        return MessagePackSerializer.Deserialize<TData>(stream, MessagePackSerializerOptions);
+                    }
                 }
             }
         }
@@ -331,7 +335,11 @@ namespace MASES.KNet.Serialization.MessagePack
                 public override TData DeserializeWithHeaders(string topic, Headers headers, Java.Nio.ByteBuffer data)
                 {
                     if (data == null) return default;
-                    return MessagePackSerializer.Deserialize<TData>(data.ToStream(), MessagePackSerializerOptions);
+                    using (data)
+                    {
+                        using var stream = data.ToStream();
+                        return MessagePackSerializer.Deserialize<TData>(stream, MessagePackSerializerOptions);
+                    }
                 }
             }
         }

@@ -249,24 +249,27 @@ namespace MASES.KNet.Serialization.Json
                 {
                     if (_defaultSerDes != null) return _defaultSerDes.DeserializeWithHeaders(topic, headers, data);
                     if (data == null) return default;
+                    using (data)
+                    {
 #if NET462_OR_GREATER
-                    if (UseStreamWithByteBuffer)
-                    {
-                        using (StreamReader sw = new StreamReader(data.ToStream()))
-                        using (Newtonsoft.Json.JsonReader reader = new Newtonsoft.Json.JsonTextReader(sw))
+                        if (UseStreamWithByteBuffer)
                         {
-                            return _serializer.Deserialize<TData>(reader);
+                            using var stream = data.ToStream();
+                            using (StreamReader sw = new StreamReader(stream))
+                            using (Newtonsoft.Json.JsonReader reader = new Newtonsoft.Json.JsonTextReader(sw))
+                            {
+                                return _serializer.Deserialize<TData>(reader);
+                            }
                         }
-                    }
-                    else
-                    {
-                        var jsonStr = Encoding.UTF8.GetString((byte[])data);
-                        return Newtonsoft.Json.JsonConvert.DeserializeObject<TData>(jsonStr, Options);
-                    }
+                        else
+                        {
+                            var jsonStr = Encoding.UTF8.GetString((byte[])data);
+                            return Newtonsoft.Json.JsonConvert.DeserializeObject<TData>(jsonStr, Options);
+                        }
 #else
-                    using var db = data.ToDirectBuffer();
-                    return System.Text.Json.JsonSerializer.Deserialize<TData>(db.AsSpan(), Options)!;
+                        return System.Text.Json.JsonSerializer.Deserialize<TData>(data.ToDirectBuffer().AsSpan(), Options)!;
 #endif
+                    }
                 }
             }
         }
@@ -487,24 +490,27 @@ namespace MASES.KNet.Serialization.Json
                     if (_defaultSerDes != null) return _defaultSerDes.DeserializeWithHeaders(topic, headers, data);
 
                     if (data == null) return default;
+                    using (data)
+                    {
 #if NET462_OR_GREATER
-                    if (UseByteBufferWithStream)
-                    {
-                        using (StreamReader sw = new StreamReader(data.ToStream()))
-                        using (Newtonsoft.Json.JsonReader reader = new Newtonsoft.Json.JsonTextReader(sw))
+                        if (UseByteBufferWithStream)
                         {
-                            return _serializer.Deserialize<TData>(reader);
+                            using var stream = data.ToStream();
+                            using (StreamReader sw = new StreamReader(stream))
+                            using (Newtonsoft.Json.JsonReader reader = new Newtonsoft.Json.JsonTextReader(sw))
+                            {
+                                return _serializer.Deserialize<TData>(reader);
+                            }
                         }
-                    }
-                    else
-                    {
-                        var jsonStr = Encoding.UTF8.GetString((byte[])data);
-                        return Newtonsoft.Json.JsonConvert.DeserializeObject<TData>(jsonStr, Options);
-                    }
+                        else
+                        {
+                            var jsonStr = Encoding.UTF8.GetString((byte[])data);
+                            return Newtonsoft.Json.JsonConvert.DeserializeObject<TData>(jsonStr, Options);
+                        }
 #else
-                    using var db = data.ToDirectBuffer();
-                    return System.Text.Json.JsonSerializer.Deserialize<TData>(db.AsSpan(), Options)!;
+                        return System.Text.Json.JsonSerializer.Deserialize<TData>(data.ToDirectBuffer().AsSpan(), Options)!;
 #endif
+                    }
                 }
             }
         }
