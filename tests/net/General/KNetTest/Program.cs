@@ -327,12 +327,12 @@ namespace MASES.KNetTest
                                 producer.Flush();
                                 watcher.Stop();
                             }
-                            baseJNICalls = SharedKNetCore.GlobalInstance.CurrentJNICalls - baseJNICalls;
                         }
                         finally
                         {
+                            baseJNICalls = SharedKNetCore.GlobalInstance.CurrentJNICalls - baseJNICalls;
                             if (useProduceCallback) callback.Dispose();
-                            if (i != 0) Console.WriteLine($"Flushed {i} elements in {watcher.Elapsed}, produce mean time is {TimeSpan.FromTicks(watcher.ElapsedTicks / i)} with mean JNI Calls {baseJNICalls / i}");
+                            if (i != 0) Console.WriteLine($"Flushed {i} elements in {watcher.Elapsed}, produce mean time is {TimeSpan.FromTicks(watcher.Elapsed.Ticks / i)} with mean JNI Calls {baseJNICalls / i}");
                         }
                     }
                 }
@@ -475,7 +475,7 @@ namespace MASES.KNetTest
                 {
                     keyDeserializer?.Dispose();
                     valueDeserializer?.Dispose();
-                    if (elements != 0) Console.WriteLine($"Total consume time is {watcherTotal.Elapsed}, consume mean time is {TimeSpan.FromTicks(watcherTotal.ElapsedTicks / elements)}, console write mean time is {TimeSpan.FromTicks(watcher.ElapsedTicks / elements)}");
+                    if (elements != 0) Console.WriteLine($"Total consume time is {watcherTotal.Elapsed}, consume mean time is {TimeSpan.FromTicks(watcherTotal.Elapsed.Ticks / elements)}, console write mean time is {TimeSpan.FromTicks(watcher.Elapsed.Ticks / elements)}");
                 }
             }
             catch (Java.Util.Concurrent.ExecutionException ex)
@@ -560,12 +560,12 @@ namespace MASES.KNetTest
                                 producer.Flush();
                                 watcher.Stop();
                             }
-                            baseJNICalls = SharedKNetCore.GlobalInstance.CurrentJNICalls - baseJNICalls;
                         }
                         finally
                         {
+                            baseJNICalls = SharedKNetCore.GlobalInstance.CurrentJNICalls - baseJNICalls;
                             if (useProduceCallback) callback.Dispose();
-                            if (i != 0) Console.WriteLine($"Flushed {i} elements in {watcher.Elapsed}, produce mean time is {TimeSpan.FromTicks(watcher.ElapsedTicks / i)} with mean JNI Calls {baseJNICalls / i}");
+                            if (i != 0) Console.WriteLine($"Flushed {i} elements in {watcher.Elapsed}, produce mean time is {TimeSpan.FromTicks(watcher.Elapsed.Ticks / i)} with mean JNI Calls {baseJNICalls / i}");
                         }
                     }
                 }
@@ -708,7 +708,7 @@ namespace MASES.KNetTest
                 {
                     keyDeserializer?.Dispose();
                     valueDeserializer?.Dispose();
-                    if (elements != 0) Console.WriteLine($"Total consume time is {watcherTotal.Elapsed}, consume mean time is {TimeSpan.FromTicks(watcherTotal.ElapsedTicks / elements)}, console write mean time is {TimeSpan.FromTicks(watcher.ElapsedTicks / elements)}");
+                    if (elements != 0) Console.WriteLine($"Total consume time is {watcherTotal.Elapsed}, consume mean time is {TimeSpan.FromTicks(watcherTotal.Elapsed.Ticks / elements)}, console write mean time is {TimeSpan.FromTicks(watcher.Elapsed.Ticks / elements)}");
                 }
             }
             catch (Java.Util.Concurrent.ExecutionException ex)
