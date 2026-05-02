@@ -30,7 +30,7 @@
 		<None Include="..\..\documentation\articles\usageConnect.md" Pack="true" PackagePath="\" />
 	</ItemGroup>
 	<ItemGroup>
-		<PackageReference Include="MASES.JNetCLICore" Version="2.6.9-rc7" />
+		<PackageReference Include="MASES.JNetCLICore" Version="2.6.9-rc8" />
 		<PackageReference Include="Microsoft.SourceLink.GitHub" Version="10.0.203" PrivateAssets="All" />
 	</ItemGroup>
 	<ItemGroup>
