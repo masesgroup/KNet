@@ -252,11 +252,14 @@ namespace MASES.KNet.Serialization.Avro
                     public override TData DeserializeWithHeaders(string topic, Headers headers, Java.Nio.ByteBuffer data)
                     {
                         if (data == null) return default;
-
-                        BinaryDecoder decoder = new(data.ToStream());
-                        TData t = new TData();
-                        t = SpecificReader.Read(t!, decoder);
-                        return t;
+                        using (data)
+                        {
+                            using var stream = data.ToStream();
+                            BinaryDecoder decoder = new(stream);
+                            TData t = new TData();
+                            t = SpecificReader.Read(t!, decoder);
+                            return t;
+                        }
                     }
                 }
             }
@@ -437,11 +440,14 @@ namespace MASES.KNet.Serialization.Avro
                     public override TData DeserializeWithHeaders(string topic, Headers headers, Java.Nio.ByteBuffer data)
                     {
                         if (data == null) return default;
-
-                        JsonDecoder decoder = new(Schema, data.ToStream());
-                        TData t = new TData();
-                        t = SpecificReader.Read(t!, decoder);
-                        return t;
+                        using (data)
+                        {
+                            using var stream = data.ToStream();
+                            JsonDecoder decoder = new(Schema, stream);
+                            TData t = new TData();
+                            t = SpecificReader.Read(t!, decoder);
+                            return t;
+                        }
                     }
                 }
             }
@@ -629,11 +635,14 @@ namespace MASES.KNet.Serialization.Avro
                     public override TData DeserializeWithHeaders(string topic, Headers headers, Java.Nio.ByteBuffer data)
                     {
                         if (data == null) return default;
-
-                        BinaryDecoder decoder = new(data.ToStream());
-                        TData t = new TData();
-                        t = SpecificReader.Read(t!, decoder);
-                        return t;
+                        using (data)
+                        {
+                            using var stream = data.ToStream();
+                            BinaryDecoder decoder = new(stream);
+                            TData t = new TData();
+                            t = SpecificReader.Read(t!, decoder);
+                            return t;
+                        }
                     }
                 }
             }
@@ -815,11 +824,14 @@ namespace MASES.KNet.Serialization.Avro
                     public override TData DeserializeWithHeaders(string topic, Headers headers, Java.Nio.ByteBuffer data)
                     {
                         if (data == null) return default;
-
-                        JsonDecoder decoder = new(Schema, data.ToStream());
-                        TData t = new TData();
-                        t = SpecificReader.Read(t!, decoder);
-                        return t;
+                        using (data)
+                        {
+                            using var stream = data.ToStream();
+                            JsonDecoder decoder = new(Schema, stream);
+                            TData t = new TData();
+                            t = SpecificReader.Read(t!, decoder);
+                            return t;
+                        }
                     }
                 }
             }
