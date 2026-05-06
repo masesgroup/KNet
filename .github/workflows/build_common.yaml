@@ -364,7 +364,7 @@ jobs:
         run: echo "matrix_mac=[ 'macos-15' ]" >> $GITHUB_OUTPUT
       - id: set-matrix-mac-os-ext
         if: ${{ inputs.ExecuteOnMoreOSes == true }}
-        run: echo "matrix_mac=[ 'macos-14', 'macos-15', 'macos-26' ]" >> $GITHUB_OUTPUT
+        run: echo "matrix_mac=[ 'macos-14', 'macos-15', 'macos-26', 'macos-26-intel' ]" >> $GITHUB_OUTPUT
 
   execute_tests_linux:
     if: ${{ inputs.EnableLinuxTests == true }}
@@ -480,7 +480,10 @@ jobs:
         framework: [ 'net462', 'net8.0', 'net9.0', 'net10.0' ]
         jdk_vendor: ${{ fromJSON(needs.prepare_matrix_data.outputs.matrix_jdk_vendor) }}
         jdk_version: [ '17', '21' ] # only supported LTS versions
-        
+        exclude:
+          - os: windows-11-arm
+            framework: net462
+
     runs-on: ${{ matrix.os }}
     env:
       DOTNET_DbgEnableMiniDump: ${{ inputs.EnableProcessDump }}
