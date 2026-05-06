@@ -220,7 +220,7 @@ namespace MASES.KNet.Serialization.Json
 #if NET462_OR_GREATER
                     if (UseStreamWithByteBuffer)
                     {
-                        var ms = new MemoryStream();
+                        var ms = ByteBuffer.Rent();
                         using (StreamWriter sw = new StreamWriter(ms, new UTF8Encoding(false), 128, true))
                         using (Newtonsoft.Json.JsonWriter writer = new Newtonsoft.Json.JsonTextWriter(sw))
                         {
@@ -234,7 +234,7 @@ namespace MASES.KNet.Serialization.Json
                         return ByteBuffer.From(Encoding.UTF8.GetBytes(jsonStr));
                     }
 #else
-                    var ms = new MemoryStream();
+                    var ms = ByteBuffer.Rent();
                     System.Text.Json.JsonSerializer.Serialize<TData>(ms, data, Options);
                     return ByteBuffer.From(ms);
 #endif
@@ -460,7 +460,7 @@ namespace MASES.KNet.Serialization.Json
 #if NET462_OR_GREATER
                     if (UseByteBufferWithStream)
                     {
-                        var ms = new MemoryStream();
+                        var ms = ByteBuffer.Rent();
                         using (StreamWriter sw = new StreamWriter(ms, new UTF8Encoding(false), 128, true))
                         using (Newtonsoft.Json.JsonWriter writer = new Newtonsoft.Json.JsonTextWriter(sw))
                         {
@@ -474,7 +474,7 @@ namespace MASES.KNet.Serialization.Json
                         return ByteBuffer.From(Encoding.UTF8.GetBytes(jsonStr));
                     }
 #else
-                    var ms = new MemoryStream();
+                    var ms = ByteBuffer.Rent();
                     System.Text.Json.JsonSerializer.Serialize<TData>(ms, data, Options);
                     return ByteBuffer.From(ms);
 #endif
