@@ -165,7 +165,7 @@ namespace MASES.KNet.Serialization.MessagePack
 
                     if (data == null) return null;
 
-                    var ms = new MemoryStream();
+                    var ms = ByteBuffer.Rent(256);
                     MessagePackSerializer.Serialize(ms, data, MessagePackSerializerOptions);
                     return ByteBuffer.From(ms);
                 }
@@ -322,7 +322,7 @@ namespace MASES.KNet.Serialization.MessagePack
 
                     if (data == null) return null;
 
-                    var ms = new MemoryStream();
+                    var ms = ByteBuffer.Rent(256);
                     MessagePackSerializer.Serialize(ms, data, MessagePackSerializerOptions);
                     return ByteBuffer.From(ms);
                 }
