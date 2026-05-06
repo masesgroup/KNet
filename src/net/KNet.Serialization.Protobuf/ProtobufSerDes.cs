@@ -153,7 +153,7 @@ namespace MASES.KNet.Serialization.Protobuf
 
                     if (data == null) return null;
 
-                    var stream = ByteBuffer.Rent(256);
+                    var stream = ByteBuffer.Rent();
                     {
                         data.WriteTo(stream);
                         return ByteBuffer.From(stream);
@@ -303,7 +303,7 @@ namespace MASES.KNet.Serialization.Protobuf
 
                     if (data == null) return null;
 
-                    var stream = ByteBuffer.Rent(256);
+                    var stream = ByteBuffer.Rent();
                     {
                         data.WriteTo(stream);
                         return ByteBuffer.From(stream);

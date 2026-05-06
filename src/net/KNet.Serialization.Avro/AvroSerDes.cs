@@ -238,7 +238,7 @@ namespace MASES.KNet.Serialization.Avro
 
                         if (data == null) return null;
 
-                        var memStream = ByteBuffer.Rent(256);
+                        var memStream = ByteBuffer.Rent();
                         BinaryEncoder encoder = new(memStream);
                         SpecificWriter.Write(data, encoder);
                         return ByteBuffer.From(memStream);
@@ -426,7 +426,7 @@ namespace MASES.KNet.Serialization.Avro
 
                         if (data == null) return null;
 
-                        var memStream = ByteBuffer.Rent(256);
+                        var memStream = ByteBuffer.Rent();
                         JsonEncoder encoder = new(Schema, memStream);
                         SpecificWriter.Write(data, encoder);
                         return ByteBuffer.From(memStream);
@@ -621,7 +621,7 @@ namespace MASES.KNet.Serialization.Avro
 
                         if (data == null) return null;
 
-                        var memStream = ByteBuffer.Rent(256);
+                        var memStream = ByteBuffer.Rent();
                         BinaryEncoder encoder = new(memStream);
                         SpecificWriter.Write(data, encoder);
                         return ByteBuffer.From(memStream);
@@ -810,7 +810,7 @@ namespace MASES.KNet.Serialization.Avro
 
                         if (data == null) return null;
 
-                        var memStream = ByteBuffer.Rent(256);
+                        var memStream = ByteBuffer.Rent();
                         JsonEncoder encoder = new(Schema, memStream);
                         SpecificWriter.Write(data, encoder);
                         return ByteBuffer.From(memStream);
