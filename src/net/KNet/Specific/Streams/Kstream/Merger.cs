@@ -42,6 +42,20 @@ namespace MASES.KNet.Streams.Kstream
         ISerDes<K, TJVMK> _kSerializer = null;
         ISerDes<V, TJVMV> _vSerializer = null;
 
+        /// <inheritdoc/>
+        public Merger()
+        {
+            OnApplyDispose = DisposeResult;
+        }
+        /// <summary>
+        /// Disposes the results of the <see cref="Apply(TJVMK, TJVMV, TJVMV)"/> or <see cref="OnApply"/> operations
+        /// </summary>
+        /// <param name="result">The result to be disposed</param>
+        protected virtual void DisposeResult(TJVMV result)
+        {
+            (result as IDisposable)?.Dispose();
+        }
+
         IGenericSerDesFactory _factory;
         IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set => _factory = value; }
         /// <summary>

@@ -30,6 +30,20 @@ namespace MASES.KNet.Streams.Kstream
     {
         ISerDes<VA, TJVMVA> _valueSerializer = null;
 
+        /// <inheritdoc/>
+        public Initializer()
+        {
+            OnApplyDispose = DisposeResult;
+        }
+        /// <summary>
+        /// Disposes the results of the <see cref="Apply()"/> or <see cref="OnApply2"/> operations
+        /// </summary>
+        /// <param name="result">The result to be disposed</param>
+        protected virtual void DisposeResult(TJVMVA result)
+        {
+            (result as IDisposable)?.Dispose();
+        }
+
         IGenericSerDesFactory _factory;
         IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set => _factory = value; }
         /// <summary>
