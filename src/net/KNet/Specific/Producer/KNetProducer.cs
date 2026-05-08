@@ -291,8 +291,8 @@ namespace MASES.KNet.Producer
             using Java.Lang.Long timestamp = record.Timestamp;
             TJVMK jVMK = record.Key == null ? default : DataSerialize(keySerializer, record.Topic, record.Key, headers);
             TJVMV jVMV = record.Value == null ? default : DataSerialize(valueSerializer, record.Topic, record.Value, headers);
-            IDisposable disposableKey = jVMK as IDisposable;
-            IDisposable disposableValue = jVMV as IDisposable;
+            using IDisposable disposableKey = jVMK as IDisposable;
+            using IDisposable disposableValue = jVMV as IDisposable;
             try
             {
                 return new Org.Apache.Kafka.Clients.Producer.ProducerRecord<TJVMK, TJVMV>(topic, partition, timestamp, jVMK, jVMV, headers);
@@ -300,8 +300,6 @@ namespace MASES.KNet.Producer
             finally
             {
                 if (localHeaders) headers?.Dispose();
-                disposableKey?.Dispose();
-                disposableValue?.Dispose();
             }
         }
 
@@ -333,88 +331,52 @@ namespace MASES.KNet.Producer
         {
             var jKey = _keySerializer.SerializeWithHeaders(topic, headers, key);
             var jValue = _valueSerializer.SerializeWithHeaders(topic, headers, value);
-            try
-            {
-                return IExecute<Future<RecordMetadata>>("send", topic, partition, timestamp, jKey, jValue, headers);
-            }
-            finally
-            {
-                (jKey as IDisposable).Dispose();    
-                (jValue as IDisposable)?.Dispose();
-            }
+            using var keyDisposable = jKey as IDisposable;
+            using var valueDisposable = jValue as IDisposable;
+            return IExecute<Future<RecordMetadata>>("send", topic, partition, timestamp, jKey, jValue, headers);
         }
         /// <inheritdoc cref="IProducer{K, V, TJVMK, TJVMV}.Send(string, int?, long?, K, V)"/>
         public Future<RecordMetadata> Send(string topic, int? partition, long? timestamp, K key, V value)
         {
             var jKey = _keySerializer.Serialize(topic, key);
             var jValue = _valueSerializer.Serialize(topic, value);
-            try
-            {
-                return IExecute<Future<RecordMetadata>>("send", topic, partition, timestamp, jKey, jValue);
-            }
-            finally
-            {
-                (jKey as IDisposable).Dispose();
-                (jValue as IDisposable)?.Dispose();
-            }
+            using var keyDisposable = jKey as IDisposable;
+            using var valueDisposable = jValue as IDisposable;
+            return IExecute<Future<RecordMetadata>>("send", topic, partition, timestamp, jKey, jValue);
         }
         /// <inheritdoc cref="IProducer{K, V, TJVMK, TJVMV}.Send(string, int?, K, V, Headers)"/>
         public Future<RecordMetadata> Send(string topic, int? partition, K key, V value, Headers headers)
         {
             var jKey = _keySerializer.SerializeWithHeaders(topic, headers, key);
             var jValue = _valueSerializer.SerializeWithHeaders(topic, headers, value);
-            try
-            {
-                return IExecute<Future<RecordMetadata>>("send", topic, partition, jKey, jValue, headers);
-            }
-            finally
-            {
-                (jKey as IDisposable).Dispose();
-                (jValue as IDisposable)?.Dispose();
-            }
+            using var keyDisposable = jKey as IDisposable;
+            using var valueDisposable = jValue as IDisposable; 
+            return IExecute<Future<RecordMetadata>>("send", topic, partition, jKey, jValue, headers);
         }
         /// <inheritdoc cref="IProducer{K, V, TJVMK, TJVMV}.Send(string, int?, K, V, Headers)"/>
         public Future<RecordMetadata> Send(string topic, int? partition, K key, V value)
         {
             var jKey = _keySerializer.Serialize(topic, key);
             var jValue = _valueSerializer.Serialize(topic, value);
-            try
-            {
-                return IExecute<Future<RecordMetadata>>("send", topic, partition, jKey, jValue);
-            }
-            finally
-            {
-                (jKey as IDisposable).Dispose();
-                (jValue as IDisposable)?.Dispose();
-            }
+            using var keyDisposable = jKey as IDisposable;
+            using var valueDisposable = jValue as IDisposable; 
+            return IExecute<Future<RecordMetadata>>("send", topic, partition, jKey, jValue);
         }
         /// <inheritdoc cref="IProducer{K, V, TJVMK, TJVMV}.Send(string, K, V)"/>
         public Future<RecordMetadata> Send(string topic, K key, V value)
         {
             var jKey = _keySerializer.Serialize(topic, key);
             var jValue = _valueSerializer.Serialize(topic, value);
-            try
-            {
-                return IExecute<Future<RecordMetadata>>("send", topic, jKey, jValue);
-            }
-            finally
-            {
-                (jKey as IDisposable).Dispose();
-                (jValue as IDisposable)?.Dispose();
-            }
+            using var keyDisposable = jKey as IDisposable;
+            using var valueDisposable = jValue as IDisposable;
+            return IExecute<Future<RecordMetadata>>("send", topic, jKey, jValue);
         }
         /// <inheritdoc cref="IProducer{K, V, TJVMK, TJVMV}.Send(string, V)"/>
         public Future<RecordMetadata> Send(string topic, V value)
         {
             var jValue = _valueSerializer.Serialize(topic, value);
-            try
-            {
-                return IExecute<Future<RecordMetadata>>("send", topic, jValue);
-            }
-            finally
-            {
-                (jValue as IDisposable)?.Dispose();
-            }
+            using var valueDisposable = jValue as IDisposable;
+            return IExecute<Future<RecordMetadata>>("send", topic, jValue);
         }
         /// <inheritdoc cref="IProducer{K, V, TJVMK, TJVMV}.Produce(string, K, V, Action{RecordMetadata, JVMBridgeException})"/>
         public void Produce(string topic, K key, V value, Action<RecordMetadata, JVMBridgeException> action = null)

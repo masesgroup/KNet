@@ -85,40 +85,35 @@ namespace MASES.KNet.Streams.Processor
         /// <inheritdoc/>
         public override Optional<Set<Integer>> Partitions(Java.Lang.String arg0, TJVMK arg1, TJVMV arg2, int arg3)
         {
-            try
-            {
-                _keySet = _valueSet = false;
-                _arg0 = arg0;
-                _arg1 = arg1;
-                _arg2 = arg2;
-                _arg3 = arg3;
+            using var disposable0 = arg0 as IDisposable;
+            using var disposable1 = arg1 as IDisposable;
+            using var disposable2 = arg2 as IDisposable;
 
-                var res = (OnPartitions != null) ? OnPartitions(this) : Partitions();
-                if (res == null || res.Count == 0) return Optional<Set<Integer>>.Empty();
-                using var scope = new JCOBridgeDisposeFastScope();
-                using HashSet<Integer> result = new HashSet<Integer>();
-                foreach (var item in res)
+            _keySet = _valueSet = false;
+            _arg0 = arg0;
+            _arg1 = arg1;
+            _arg2 = arg2;
+            _arg3 = arg3;
+
+            var res = (OnPartitions != null) ? OnPartitions(this) : Partitions();
+            if (res == null || res.Count == 0) return Optional<Set<Integer>>.Empty();
+            using var scope = new JCOBridgeDisposeFastScope();
+            using HashSet<Integer> result = new HashSet<Integer>();
+            foreach (var item in res)
+            {
+                if (item.HasValue)
                 {
-                    if (item.HasValue)
+                    using (var integer = Integer.ValueOf(item.Value))
                     {
-                        using (var integer = Integer.ValueOf(item.Value))
-                        {
-                            result.Add(integer);
-                        }
-                    }
-                    else
-                    {
-                        result.Add(null);
+                        result.Add(integer);
                     }
                 }
-                return Optional<Set<Integer>>.Of(result);
+                else
+                {
+                    result.Add(null);
+                }
             }
-            finally
-            {
-                (arg0 as IDisposable)?.Dispose();
-                (arg1 as IDisposable)?.Dispose();
-                (arg2 as IDisposable)?.Dispose();
-            }
+            return Optional<Set<Integer>>.Of(result);
         }
         /// <summary>
         /// KNet override of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/processor/StreamPartitioner.html#partitions(java.lang.String,java.lang.Object,java.lang.Object,int)"/>

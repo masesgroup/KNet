@@ -51,14 +51,10 @@ namespace MASES.KNet.Streams.State
 
             var r0 = _keySerDes.Serialize(null, arg0);
             var r1 = _keySerDes.Serialize(null, arg1);
-            try { 
+            using var disposable0 = r0 as IDisposable;
+            using var disposable1 = r1 as IDisposable;
+
             return new(factory, Store.Fetch(r0, r1, arg2, arg3));
-            }
-            finally
-            {
-                (r0 as IDisposable)?.Dispose();
-                (r1 as IDisposable)?.Dispose();
-            }
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/state/ReadOnlyWindowStore.html#fetchAll(java.time.Instant,java.time.Instant)"/>
@@ -85,14 +81,9 @@ namespace MASES.KNet.Streams.State
             var _keySerDes = factory?.BuildKeySerDes<K, TJVMK>();
 
             var r0 = _keySerDes.Serialize(null, arg0);
-            try
-            { 
+            using var disposable0 = r0 as IDisposable;
+
             return new(factory, Store.Fetch(r0, arg1, arg2));
-            }
-            finally
-            {
-                (r0 as IDisposable)?.Dispose();
-            }
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/state/ReadOnlyWindowStore.html#fetch(java.lang.Object,long)"/>
@@ -107,14 +98,10 @@ namespace MASES.KNet.Streams.State
 
             var r0 = _keySerDes.Serialize(null, arg0);
             var agg = Store.Fetch(r0, arg1);
-            try
-            { 
+            using var disposable0 = r0 as IDisposable;
+            using var disposable1 = agg as IDisposable;
+
             return new ValueAndTimestamp<V, TJVMV>(factory, agg);
-            }
-            finally
-            {
-                (r0 as IDisposable)?.Dispose();
-            }
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/state/ReadOnlyWindowStore.html#backwardAll()"/>
@@ -137,14 +124,10 @@ namespace MASES.KNet.Streams.State
 
             var r0 = _keySerDes.Serialize(null, arg0);
             var r1 = _keySerDes.Serialize(null, arg1);
-            try { 
+            using var disposable0 = r0 as IDisposable;
+            using var disposable1 = r1 as IDisposable;
+
             return new(factory, Store.BackwardFetch(r0, r1, arg2, arg3));
-            }
-            finally
-            {
-                (r0 as IDisposable)?.Dispose();
-                (r1 as IDisposable)?.Dispose();
-            }
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/state/ReadOnlyWindowStore.html#backwardFetchAll(java.time.Instant,java.time.Instant)"/>
@@ -171,13 +154,9 @@ namespace MASES.KNet.Streams.State
             var _keySerDes = factory?.BuildKeySerDes<K, TJVMK>();
 
             var r0 = _keySerDes.Serialize(null, arg0);
-            try { 
+            using var disposable0 = r0 as IDisposable;
+
             return new(factory, Store.BackwardFetch(r0, arg1, arg2));
-            }
-            finally
-            {
-                (r0 as IDisposable)?.Dispose();
-            }
         }
     }
 

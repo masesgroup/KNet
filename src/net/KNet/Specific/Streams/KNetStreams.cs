@@ -153,11 +153,8 @@ namespace MASES.KNet.Streams
         {
             using Java.Lang.String jArg0 = arg0;
             var tJVMK = arg2.Serialize(null, arg1);
-            try
-            {
-                return _inner.QueryMetadataForKey<TJVMK>(jArg0, tJVMK, arg2.KafkaSerializer);
-            }
-            finally { (tJVMK as IDisposable)?.Dispose(); }
+            using var disposable = tJVMK as IDisposable;
+            return _inner.QueryMetadataForKey<TJVMK>(jArg0, tJVMK, arg2.KafkaSerializer);
         }
         /// <inheritdoc cref="Org.Apache.Kafka.Streams.KafkaStreams.QueryMetadataForKey{K}(Java.Lang.String, K, Org.Apache.Kafka.Common.Serialization.Serializer{K})"/>
         public Org.Apache.Kafka.Streams.KeyQueryMetadata QueryMetadataForKey<K>(string arg0, K arg1, ISerializer<K, byte[]> arg2)
@@ -172,11 +169,8 @@ namespace MASES.KNet.Streams
             var keySerDes = _factory?.BuildKeySerDes<K, TJVMK>();
             using Java.Lang.String jArg0 = arg0;
             var tJVMK = keySerDes.Serialize(null, arg1);
-            try
-            {
-                return _inner.IExecute<Org.Apache.Kafka.Streams.KeyQueryMetadata>("queryMetadataForKey", jArg0, tJVMK, arg2);
-            }
-            finally { (tJVMK as IDisposable)?.Dispose(); }
+            using var disposable = tJVMK as IDisposable;
+            return _inner.IExecute<Org.Apache.Kafka.Streams.KeyQueryMetadata>("queryMetadataForKey", jArg0, tJVMK, arg2);
         }
         /// <inheritdoc cref="Org.Apache.Kafka.Streams.KafkaStreams.QueryMetadataForKey{K}(Java.Lang.String, K, Org.Apache.Kafka.Common.Serialization.Serializer{K})"/>
         public Org.Apache.Kafka.Streams.KeyQueryMetadata QueryMetadataForKey<K>(string arg0, K arg1, StreamPartitioner<K, object> arg2)

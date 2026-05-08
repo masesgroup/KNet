@@ -56,24 +56,19 @@ namespace MASES.KNet.Streams.Utils
         /// <inheritdoc/>
         public override TJVMKO Apply(TJVMV arg0)
         {
-            try
-            {
-                IGenericSerDesFactory factory = null;
-                if (this is IGenericSerDesFactoryApplier applier && (factory = applier.Factory) == null)
-                {
-                    throw new InvalidOperationException("The serialization factory instance was not set.");
-                }
-                _keySerializer ??= factory?.BuildKeySerDes<KO, TJVMKO>();
-                _valueSerializer ??= factory?.BuildValueSerDes<V, TJVMV>();
-                var methodToExecute = (OnApply != null) ? OnApply : Apply;
-                var res = methodToExecute(_valueSerializer.Deserialize(null, arg0));
+            using var disposable0 = arg0 as IDisposable;
 
-                return _keySerializer.Serialize(null, res);
-            }
-            finally
+            IGenericSerDesFactory factory = null;
+            if (this is IGenericSerDesFactoryApplier applier && (factory = applier.Factory) == null)
             {
-                (arg0 as IDisposable)?.Dispose();
+                throw new InvalidOperationException("The serialization factory instance was not set.");
             }
+            _keySerializer ??= factory?.BuildKeySerDes<KO, TJVMKO>();
+            _valueSerializer ??= factory?.BuildValueSerDes<V, TJVMV>();
+            var methodToExecute = (OnApply != null) ? OnApply : Apply;
+            var res = methodToExecute(_valueSerializer.Deserialize(null, arg0));
+
+            return _keySerializer.Serialize(null, res);
         }
         /// <summary>
         /// Executes the Function action in the CLR

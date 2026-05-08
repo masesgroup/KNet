@@ -96,23 +96,18 @@ namespace MASES.KNet.Streams.Kstream
         /// <inheritdoc/>
         public sealed override TJVMV Apply(TJVMK arg0, TJVMV arg1, TJVMV arg2)
         {
-            try
-            {
-                _value1Set = _value2Set = false;
-                _arg0 = arg0;
-                _arg1 = arg1;
-                _arg2 = arg2;
+            using var disposable0 = arg0 as IDisposable;
+            using var disposable1 = arg1 as IDisposable;
+            using var disposable2 = arg2 as IDisposable;
 
-                V res = (OnApply != null) ? OnApply(this) : Apply();
-                _vSerializer ??= Factory?.BuildValueSerDes<V, TJVMV>();
-                return _vSerializer.Serialize(null, res);
-            }
-            finally
-            {
-                (arg0 as IDisposable)?.Dispose();
-                (arg1 as IDisposable)?.Dispose();
-                (arg2 as IDisposable)?.Dispose();
-            }
+            _value1Set = _value2Set = false;
+            _arg0 = arg0;
+            _arg1 = arg1;
+            _arg2 = arg2;
+
+            V res = (OnApply != null) ? OnApply(this) : Apply();
+            _vSerializer ??= Factory?.BuildValueSerDes<V, TJVMV>();
+            return _vSerializer.Serialize(null, res);
         }
 
         /// <inheritdoc cref="Org.Apache.Kafka.Streams.Kstream.Merger{K, V}.Apply(K, V, V)"/>

@@ -80,20 +80,14 @@ namespace MASES.KNet.Streams.Kstream
         /// <inheritdoc/>
         public override TJVMVR Apply(TJVMK arg0, TJVMV arg1)
         {
-            try
-            {
-                _kSerializer ??= Factory?.BuildKeySerDes<K, TJVMK>();
-                _vSerializer ??= Factory?.BuildValueSerDes<V, TJVMV>();
-                _vrSerializer ??= Factory?.BuildValueSerDes<VR, TJVMVR>();
-                var methodToExecute = (OnApply != null) ? OnApply : Apply;
-                var res = methodToExecute(_kSerializer.Deserialize(null, arg0), _vSerializer.Deserialize(null, arg1));
-                return _vrSerializer.Serialize(null, res);
-            }
-            finally
-            {
-                (arg0 as IDisposable)?.Dispose();
-                (arg1 as IDisposable)?.Dispose();
-            }
+            using var disposable0 = arg0 as IDisposable;
+            using var disposable1 = arg1 as IDisposable;
+            _kSerializer ??= Factory?.BuildKeySerDes<K, TJVMK>();
+            _vSerializer ??= Factory?.BuildValueSerDes<V, TJVMV>();
+            _vrSerializer ??= Factory?.BuildValueSerDes<VR, TJVMVR>();
+            var methodToExecute = (OnApply != null) ? OnApply : Apply;
+            var res = methodToExecute(_kSerializer.Deserialize(null, arg0), _vSerializer.Deserialize(null, arg1));
+            return _vrSerializer.Serialize(null, res);
         }
         /// <inheritdoc cref="Org.Apache.Kafka.Streams.Kstream.KeyValueMapper{K, V, VR}.Apply(K, V)"/>
         public virtual VR Apply(K arg0, V arg1)
@@ -178,15 +172,10 @@ namespace MASES.KNet.Streams.Kstream
             var res = methodToExecute(_kSerializer.Deserialize(null, arg0), _vSerializer.Deserialize(null, arg1));
             var jKR = _krSerializer.Serialize(null, res.Item1);
             var jVR = _vrSerializer.Serialize(null, res.Item2);
-            try
-            {
-                return new Org.Apache.Kafka.Streams.KeyValue<TJVMKR, TJVMVR>(jKR, jVR);
-            }
-            finally
-            {
-                (jKR as IDisposable)?.Dispose();
-                (jVR as IDisposable)?.Dispose();
-            }
+
+            using var disposable0 = jKR as IDisposable;
+            using var disposable1 = jVR as IDisposable;
+            return new Org.Apache.Kafka.Streams.KeyValue<TJVMKR, TJVMVR>(jKR, jVR);
         }
         /// <inheritdoc cref="Org.Apache.Kafka.Streams.Kstream.KeyValueMapper{K, V, VR}.Apply(K, V)"/>
         public new virtual (KR, VR) Apply(K arg0, V arg1)
@@ -244,16 +233,11 @@ namespace MASES.KNet.Streams.Kstream
             {
                 var jKR = _krSerializer.Serialize(null, item.Item1);
                 var jVR = _vrSerializer.Serialize(null, item.Item2);
-                try
-                {
-                    var data = new Org.Apache.Kafka.Streams.KeyValue<TJVMKR, TJVMVR>(jKR, jVR);
-                    result.Add(data);
-                }
-                finally
-                {
-                    (jKR as IDisposable)?.Dispose();
-                    (jVR as IDisposable)?.Dispose();
-                }
+
+                using var disposable0 = jKR as IDisposable;
+                using var disposable1 = jVR as IDisposable;
+                using var data = new Org.Apache.Kafka.Streams.KeyValue<TJVMKR, TJVMVR>(jKR, jVR);
+                result.Add(data);
             }
             return result;
         }
