@@ -35,6 +35,20 @@ namespace MASES.KNet.Streams.Kstream
         ISerDes<V, TJVMV> _vSerializer = null;
         ISerDes<VR, TJVMVR> _vrSerializer = null;
 
+        /// <inheritdoc/>
+        public ValueMapper()
+        {
+            OnApplyDispose = DisposeResult;
+        }
+        /// <summary>
+        /// Disposes the results of the <see cref="Apply(TJVMV)"/> or <see cref="OnApply"/> operations
+        /// </summary>
+        /// <param name="result">The result to be disposed</param>
+        protected virtual void DisposeResult(TJVMVR result)
+        {
+            (result as IDisposable)?.Dispose();
+        }
+
         IGenericSerDesFactory _factory;
         IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set => _factory = value; }
         /// <summary>
@@ -61,12 +75,19 @@ namespace MASES.KNet.Streams.Kstream
         /// <inheritdoc/>
         public override TJVMVR Apply(TJVMV arg0)
         {
-            _vSerializer ??= Factory?.BuildValueSerDes<V, TJVMV>();
-            _vrSerializer ??= Factory?.BuildValueSerDes<VR, TJVMVR>();
+            try
+            {
+                _vSerializer ??= Factory?.BuildValueSerDes<V, TJVMV>();
+                _vrSerializer ??= Factory?.BuildValueSerDes<VR, TJVMVR>();
 
-            var methodToExecute = (OnApply != null) ? OnApply : Apply;
-            var res = methodToExecute(_vSerializer.Deserialize(null, arg0));
-            return _vrSerializer.Serialize(null, res);
+                var methodToExecute = (OnApply != null) ? OnApply : Apply;
+                var res = methodToExecute(_vSerializer.Deserialize(null, arg0));
+                return _vrSerializer.Serialize(null, res);
+            }
+            finally
+            {
+                (arg0 as IDisposable)?.Dispose();
+            }
         }
         /// <inheritdoc cref="Org.Apache.Kafka.Streams.Kstream.ValueMapper{V, VR}.Apply(V)"/>
         public virtual VR Apply(V arg0)
@@ -113,7 +134,15 @@ namespace MASES.KNet.Streams.Kstream
             var result = new ArrayList<TJVMVR>();
             foreach (var item in res)
             {
-                result.Add(_vrSerializer.Serialize(null, item));
+                var localValue = _vrSerializer.Serialize(null, item);
+                try
+                {
+                    result.Add(localValue);
+                }
+                finally
+                {
+                    (localValue as IDisposable)?.Dispose();
+                }
             }
             return result;
         }

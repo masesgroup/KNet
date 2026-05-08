@@ -167,7 +167,11 @@ namespace MASES.KNet.Streams.State
         {
             _keySerDes ??= Factory?.BuildKeySerDes<K, TJVMK>();
             var kk = _iterator.PeekNextKey();
-            return _keySerDes.Deserialize(null, kk);
+            try
+            {
+                return _keySerDes.Deserialize(null, kk);
+            }
+            finally { (kk as IDisposable)?.Dispose(); }
         }
         /// <summary>
         /// KNet implementation of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/state/KeyValueIterator.html#close()"/>

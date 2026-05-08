@@ -33,6 +33,20 @@ namespace MASES.KNet.Streams.Utils
         ISerDes<KO, TJVMKO> _keySerializer = null;
         ISerDes<V, TJVMV> _valueSerializer = null;
 
+        /// <inheritdoc/>
+        public Function()
+        {
+            OnApplyDispose = DisposeResult;
+        }
+        /// <summary>
+        /// Disposes the results of the <see cref="Apply(TJVMV)"/> or <see cref="OnApply"/> operations
+        /// </summary>
+        /// <param name="result">The result to be disposed</param>
+        protected virtual void DisposeResult(TJVMKO result)
+        {
+            (result as IDisposable)?.Dispose();
+        }
+
         IGenericSerDesFactory _factory;
         IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set => _factory = value; }
         /// <summary>
@@ -42,17 +56,24 @@ namespace MASES.KNet.Streams.Utils
         /// <inheritdoc/>
         public override TJVMKO Apply(TJVMV arg0)
         {
-            IGenericSerDesFactory factory = null;
-            if (this is IGenericSerDesFactoryApplier applier && (factory = applier.Factory) == null)
+            try
             {
-                throw new InvalidOperationException("The serialization factory instance was not set.");
-            }
-            _keySerializer ??= factory?.BuildKeySerDes<KO, TJVMKO>();
-            _valueSerializer ??= factory?.BuildValueSerDes<V, TJVMV>();
-            var methodToExecute = (OnApply != null) ? OnApply : Apply;
-            var res = methodToExecute(_valueSerializer.Deserialize(null, arg0));
+                IGenericSerDesFactory factory = null;
+                if (this is IGenericSerDesFactoryApplier applier && (factory = applier.Factory) == null)
+                {
+                    throw new InvalidOperationException("The serialization factory instance was not set.");
+                }
+                _keySerializer ??= factory?.BuildKeySerDes<KO, TJVMKO>();
+                _valueSerializer ??= factory?.BuildValueSerDes<V, TJVMV>();
+                var methodToExecute = (OnApply != null) ? OnApply : Apply;
+                var res = methodToExecute(_valueSerializer.Deserialize(null, arg0));
 
-            return _keySerializer.Serialize(null, res);
+                return _keySerializer.Serialize(null, res);
+            }
+            finally
+            {
+                (arg0 as IDisposable)?.Dispose();
+            }
         }
         /// <summary>
         /// Executes the Function action in the CLR

@@ -88,7 +88,8 @@ namespace MASES.KNet.Streams.Kstream
         /// <returns><see cref="TableJoined{K, KO, TJVMK, TJVMKO}"/></returns>
         public static TableJoined<K, KO, TJVMK, TJVMKO> As(string arg0)
         {
-            var cons = Org.Apache.Kafka.Streams.Kstream.TableJoined<TJVMK, TJVMKO>.As(arg0);
+            using Java.Lang.String jString = arg0;
+            var cons = Org.Apache.Kafka.Streams.Kstream.TableJoined<TJVMK, TJVMKO>.As(jString);
             return new TableJoined<K, KO, TJVMK, TJVMKO>(cons);
         }
         /// <summary>

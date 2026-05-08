@@ -36,6 +36,20 @@ namespace MASES.KNet.Streams.Kstream
         bool _value2Set;
         ISerDes<V, TJVMV> _vSerializer = null;
 
+        /// <inheritdoc/>
+        public Reducer()
+        {
+            OnApplyDispose = DisposeResult;
+        }
+        /// <summary>
+        /// Disposes the results of the <see cref="Apply(TJVMV, TJVMV)"/> or <see cref="OnApply"/> operations
+        /// </summary>
+        /// <param name="result">The result to be disposed</param>
+        protected virtual void DisposeResult(TJVMV result)
+        {
+            (result as IDisposable)?.Dispose();
+        }
+
         IGenericSerDesFactory _factory;
         IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set => _factory = value; }
         /// <summary>
@@ -72,13 +86,21 @@ namespace MASES.KNet.Streams.Kstream
         /// <inheritdoc/>
         public override TJVMV Apply(TJVMV arg0, TJVMV arg1)
         {
-            _value1Set = _value2Set = false;
-            _arg0 = arg0;
-            _arg1 = arg1;
+            try
+            {
+                _value1Set = _value2Set = false;
+                _arg0 = arg0;
+                _arg1 = arg1;
 
-            V res = (OnApply != null) ? OnApply(this) : Apply();
-            _vSerializer ??= Factory?.BuildValueSerDes<V, TJVMV>();
-            return _vSerializer.Serialize(null, res);
+                V res = (OnApply != null) ? OnApply(this) : Apply();
+                _vSerializer ??= Factory?.BuildValueSerDes<V, TJVMV>();
+                return _vSerializer.Serialize(null, res);
+            }
+            finally
+            {
+                (arg0 as IDisposable)?.Dispose();
+                (arg1 as IDisposable)?.Dispose();
+            }
         }
 
         /// <inheritdoc cref="Org.Apache.Kafka.Streams.Kstream.Reducer{V}.Apply(V, V)"/>

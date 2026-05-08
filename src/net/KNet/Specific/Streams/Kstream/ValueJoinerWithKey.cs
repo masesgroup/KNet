@@ -48,6 +48,20 @@ namespace MASES.KNet.Streams.Kstream
         ISerDes<V2, TJVMV2> _v2Serializer = null;
         ISerDes<VR, TJVMVR> _vrSerializer = null;
 
+        /// <inheritdoc/>
+        public ValueJoinerWithKey()
+        {
+            OnApplyDispose = DisposeResult;
+        }
+        /// <summary>
+        /// Disposes the results of the <see cref="Apply(TJVMK1, TJVMV1, TJVMV2)"/> or <see cref="OnApply"/> operations
+        /// </summary>
+        /// <param name="result">The result to be disposed</param>
+        protected virtual void DisposeResult(TJVMVR result)
+        {
+            (result as IDisposable)?.Dispose();
+        }
+
         IGenericSerDesFactory _factory;
         IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set => _factory = value; }
         /// <summary>
@@ -85,14 +99,23 @@ namespace MASES.KNet.Streams.Kstream
         /// <inheritdoc/>
         public override TJVMVR Apply(TJVMK1 arg0, TJVMV1 arg1, TJVMV2 arg2)
         {
-            _key1Set = _value1Set = _value2Set = false;
-            _arg0 = arg0;
-            _arg1 = arg1;
-            _arg2 = arg2;
+            try
+            {
+                _key1Set = _value1Set = _value2Set = false;
+                _arg0 = arg0;
+                _arg1 = arg1;
+                _arg2 = arg2;
 
-            VR res = (OnApply != null) ? OnApply(this) : Apply();
-            _vrSerializer ??= Factory?.BuildValueSerDes<VR, TJVMVR>();
-            return _vrSerializer.Serialize(null, res);
+                VR res = (OnApply != null) ? OnApply(this) : Apply();
+                _vrSerializer ??= Factory?.BuildValueSerDes<VR, TJVMVR>();
+                return _vrSerializer.Serialize(null, res);
+            }
+            finally
+            {
+                (arg0 as IDisposable)?.Dispose();
+                (arg1 as IDisposable)?.Dispose();
+                (arg2 as IDisposable)?.Dispose();
+            }
         }
         /// <inheritdoc cref="Org.Apache.Kafka.Streams.Kstream.ValueJoinerWithKey{K1, V1, V2, VR}.Apply(K1, V1, V2)"/>
         public virtual VR Apply()

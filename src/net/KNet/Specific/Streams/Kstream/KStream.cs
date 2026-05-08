@@ -1237,7 +1237,8 @@ namespace MASES.KNet.Streams.Kstream
         {
             CheckDisposed();
             if (arg1 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
-            _inner.To(arg0, arg1);
+            using Java.Lang.String jString = arg0;
+            _inner.To(jString, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/kstream/KStream.html#to(java.lang.String)"/>
@@ -1246,7 +1247,8 @@ namespace MASES.KNet.Streams.Kstream
         public void To(string arg0)
         {
             CheckDisposed();
-            _inner.To(arg0);
+            using Java.Lang.String jString = arg0;
+            _inner.To(jString);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/kstream/KStream.html#to(org.apache.kafka.streams.processor.TopicNameExtractor,org.apache.kafka.streams.kstream.Produced)"/>

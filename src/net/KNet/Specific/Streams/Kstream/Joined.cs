@@ -89,7 +89,8 @@ namespace MASES.KNet.Streams.Kstream
         /// <returns><see cref="Joined{K, V, VO, TJVMK, TJVMV, TJVMVO}"/></returns>
         public static Joined<K, V, VO, TJVMK, TJVMV, TJVMVO> As(string arg0)
         {
-            var cons = Org.Apache.Kafka.Streams.Kstream.Joined<TJVMK, TJVMV, TJVMVO>.As(arg0);
+            using Java.Lang.String jString = arg0;
+            var cons = Org.Apache.Kafka.Streams.Kstream.Joined<TJVMK, TJVMV, TJVMVO>.As(jString);
             return new Joined<K, V, VO, TJVMK, TJVMV, TJVMVO>(cons);
         }
         /// <summary>
@@ -133,7 +134,9 @@ namespace MASES.KNet.Streams.Kstream
         /// <returns><see cref="Joined{K, V, VO, TJVMK, TJVMV, TJVMVO}"/></returns>
         public static Joined<K, V, VO, TJVMK, TJVMV, TJVMVO> With(ISerDes<K, TJVMK> arg0, ISerDes<V, TJVMV> arg1, ISerDes<VO, TJVMVO> arg2, string arg3, System.TimeSpan arg4)
         {
-            var cons = Org.Apache.Kafka.Streams.Kstream.Joined<TJVMK, TJVMV, TJVMVO>.With(arg0.KafkaSerde, arg1.KafkaSerde, arg2.KafkaSerde, arg3, arg4);
+            using Java.Lang.String jString = arg3;
+            using Java.Time.Duration duration = arg4;
+            var cons = Org.Apache.Kafka.Streams.Kstream.Joined<TJVMK, TJVMV, TJVMVO>.With(arg0.KafkaSerde, arg1.KafkaSerde, arg2.KafkaSerde, jString, duration);
             return new Joined<K, V, VO, TJVMK, TJVMV, TJVMVO>(cons);
         }
         /// <summary>
@@ -146,7 +149,8 @@ namespace MASES.KNet.Streams.Kstream
         /// <returns><see cref="Joined{K, V, VO, TJVMK, TJVMV, TJVMVO}"/></returns>
         public static Joined<K, V, VO, TJVMK, TJVMV, TJVMVO> With(ISerDes<K, TJVMK> arg0, ISerDes<V, TJVMV> arg1, ISerDes<VO, TJVMVO> arg2, string arg3)
         {
-            var cons = Org.Apache.Kafka.Streams.Kstream.Joined<TJVMK, TJVMV, TJVMVO>.With(arg0.KafkaSerde, arg1.KafkaSerde, arg2.KafkaSerde, arg3);
+            using Java.Lang.String jString = arg3;
+            var cons = Org.Apache.Kafka.Streams.Kstream.Joined<TJVMK, TJVMV, TJVMVO>.With(arg0.KafkaSerde, arg1.KafkaSerde, arg2.KafkaSerde, jString);
             return new Joined<K, V, VO, TJVMK, TJVMV, TJVMVO>(cons);
         }
         /// <summary>
@@ -173,7 +177,8 @@ namespace MASES.KNet.Streams.Kstream
         public Joined<K, V, VO, TJVMK, TJVMV, TJVMVO> WithGracePeriod(System.TimeSpan arg0)
         {
             CheckDisposed();
-            _inner?.WithGracePeriod(arg0);
+            using Java.Time.Duration duration = arg0;
+            _inner?.WithGracePeriod(duration);
             return this;
         }
         /// <summary>

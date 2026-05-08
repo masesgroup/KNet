@@ -113,7 +113,7 @@ namespace MASES.KNet
             _configuration1 = configuration;
         }
 
-        object GetValue(string key)
+        object GetValue(Java.Lang.String key)
         {
             if (_configuration != null && _configuration.ContainsKey(key))
             {
@@ -134,18 +134,19 @@ namespace MASES.KNet
         /// <inheritdoc/>
         public short GetShort(string key)
         {
+            using Java.Lang.String jString = key;
             if (_configuration1 != null)
             {
-                if (_configuration1.ContainsKey(key))
+                if (_configuration1.ContainsKey(jString))
                 {
-                    var value = _configuration1.Get(key);
+                    using var value = _configuration1.Get(jString);
                     return short.TryParse(value, out var converted) ? converted
                                                                     : throw new InvalidCastException($"Key \"{key}\" returns a value {value} cannot be converted in short"); ;
                 }
                 throw new InvalidOperationException($"Configuration key \"{key}\" is not available.");
             }
 
-            var result = GetValue(key);
+            var result = GetValue(jString);
 
             if (result is short data)
             {
@@ -153,25 +154,26 @@ namespace MASES.KNet
             }
             else if (result is IJavaObject obj)
             {
-                return obj.Convert<short>();
+                using (obj) { return obj.Convert<short>(); }
             }
             else throw new InvalidCastException($"Key \"{key}\" returns a value {(result ?? "null")} cannot be converted in short");
         }
         /// <inheritdoc/>
         public int GetInt(string key)
         {
+            using Java.Lang.String jString = key;
             if (_configuration1 != null)
             {
-                if (_configuration1.ContainsKey(key))
+                if (_configuration1.ContainsKey(jString))
                 {
-                    var value = _configuration1.Get(key);
+                    var value = _configuration1.Get(jString);
                     return int.TryParse(value, out var converted) ? converted
                                                                   : throw new InvalidCastException($"Key \"{key}\" returns a value {value} cannot be converted in int"); ;
                 }
                 throw new InvalidOperationException($"Configuration key \"{key}\" is not available.");
             }
 
-            var result = GetValue(key);
+            var result = GetValue(jString);
 
             if (result is int data)
             {
@@ -179,25 +181,26 @@ namespace MASES.KNet
             }
             else if (result is IJavaObject obj)
             {
-                return obj.Convert<int>();
+                using (obj) { return obj.Convert<int>(); }
             }
             else throw new InvalidCastException($"Key \"{key}\" returns a value {(result ?? "null")} cannot be converted in int");
         }
         /// <inheritdoc/>
         public long GetLong(string key)
         {
+            using Java.Lang.String jString = key;
             if (_configuration1 != null)
             {
-                if (_configuration1.ContainsKey(key))
+                if (_configuration1.ContainsKey(jString))
                 {
-                    var value = _configuration1.Get(key);
+                    var value = _configuration1.Get(jString);
                     return long.TryParse(value, out var converted) ? converted
                                                                    : throw new InvalidCastException($"Key \"{key}\" returns a value {value} cannot be converted in long"); ;
                 }
                 throw new InvalidOperationException($"Configuration key \"{key}\" is not available.");
             }
 
-            var result = GetValue(key);
+            var result = GetValue(jString);
 
             if (result is long data)
             {
@@ -205,25 +208,26 @@ namespace MASES.KNet
             }
             else if (result is IJavaObject obj)
             {
-                return obj.Convert<long>();
+                using (obj) { return obj.Convert<long>(); }
             }
             else throw new InvalidCastException($"Key \"{key}\" returns a value {(result ?? "null")} cannot be converted in long");
         }
         /// <inheritdoc/>
         public double GetDouble(string key)
         {
+            using Java.Lang.String jString = key;
             if (_configuration1 != null)
             {
-                if (_configuration1.ContainsKey(key))
+                if (_configuration1.ContainsKey(jString))
                 {
-                    var value = _configuration1.Get(key);
+                    var value = _configuration1.Get(jString);
                     return double.TryParse(value, out var converted) ? converted
                                                                      : throw new InvalidCastException($"Key \"{key}\" returns a value {value} cannot be converted in double"); ;
                 }
                 throw new InvalidOperationException($"Configuration key \"{key}\" is not available.");
             }
 
-            var result = GetValue(key);
+            var result = GetValue(jString);
 
             if (result is double data)
             {
@@ -231,7 +235,7 @@ namespace MASES.KNet
             }
             else if (result is IJavaObject obj)
             {
-                return obj.Convert<double>();
+                using (obj) { return obj.Convert<double>(); }
             }
             else throw new InvalidCastException($"Key \"{key}\" returns a value {(result ?? "null")} cannot be converted in double");
         }
@@ -242,8 +246,8 @@ namespace MASES.KNet
             {
                 throw new InvalidOperationException($"Cannot manage configuration key \"{key}\" as List.");
             }
-
-            var result = GetValue(key);
+            using Java.Lang.String jString = key;
+            var result = GetValue(jString);
 
             if (result is IJavaObject obj)
             {
@@ -260,18 +264,19 @@ namespace MASES.KNet
         /// <inheritdoc/>
         public bool GetBoolean(string key)
         {
+            using Java.Lang.String jString = key;
             if (_configuration1 != null)
             {
-                if (_configuration1.ContainsKey(key))
+                if (_configuration1.ContainsKey(jString))
                 {
-                    var value = _configuration1.Get(key);
+                    var value = _configuration1.Get(jString);
                     return bool.TryParse(value, out var converted) ? converted
                                                                    : throw new InvalidCastException($"Key \"{key}\" returns a value {value} cannot be converted in bool"); ;
                 }
                 throw new InvalidOperationException($"Configuration key \"{key}\" is not available.");
             }
 
-            var result = GetValue(key);
+            var result = GetValue(jString);
 
             if (result is bool data)
             {
@@ -279,23 +284,24 @@ namespace MASES.KNet
             }
             else if (result is IJavaObject obj)
             {
-                return obj.Convert<bool>();
+                using (obj) { return obj.Convert<bool>(); }
             }
             else throw new InvalidCastException($"Key \"{key}\" returns a value {(result ?? "null")} cannot be converted in bool");
         }
         /// <inheritdoc/>
         public string GetString(string key)
         {
+            using Java.Lang.String jString = key;
             if (_configuration1 != null)
             {
-                if (_configuration1.ContainsKey(key))
+                if (_configuration1.ContainsKey(jString))
                 {
-                    return _configuration1.Get(key);
+                    return _configuration1.Get(jString);
                 }
                 throw new InvalidOperationException($"Configuration key \"{key}\" is not available.");
             }
 
-            var result = GetValue(key);
+            var result = GetValue(jString);
 
             if (result is string data)
             {
@@ -303,7 +309,7 @@ namespace MASES.KNet
             }
             else if (result is IJavaObject obj)
             {
-                return obj.Convert<string>();
+                using (obj) { return obj.Convert<string>(); }
             }
             else throw new InvalidCastException($"Key \"{key}\" returns a value {(result ?? "null")} cannot be converted in string");
         }
@@ -314,8 +320,8 @@ namespace MASES.KNet
             {
                 throw new InvalidOperationException($"Cannot manage configuration key \"{key}\" as Password.");
             }
-
-            var result = GetValue(key);
+            using Java.Lang.String jString = key;
+            var result = GetValue(jString);
 
             if (result is Password data)
             {
@@ -334,8 +340,8 @@ namespace MASES.KNet
             {
                 throw new InvalidOperationException($"Cannot manage configuration key \"{key}\" as Class.");
             }
-
-            var result = GetValue(key);
+            using Java.Lang.String jString = key;
+            var result = GetValue(jString);
 
             if (result is Java.Lang.Class data)
             {
@@ -352,16 +358,26 @@ namespace MASES.KNet
         {
             if (_configuration != null)
             {
-                foreach (var item in _configuration.EntrySet())
+                using var entrySet = _configuration.EntrySet();
+                foreach (var item in entrySet)
                 {
-                    yield return new KeyValuePair<string, object>(item.Key, item.Value);
+                    using (item)
+                    {
+                        using var key = item.Key;
+                        yield return new KeyValuePair<string, object>(key, item.Value);
+                    }
                 }
             }
             else if (_configuration1 != null)
             {
-                foreach (var item in _configuration1.EntrySet())
+                using var entrySet = _configuration1.EntrySet();
+                foreach (var item in entrySet)
                 {
-                    yield return new KeyValuePair<string, object>(item.Key, item.Value);
+                    using (item)
+                    {
+                        using var key = item.Key;
+                        yield return new KeyValuePair<string, object>(key, item.Value);
+                    }
                 }
             }
             else throw new InvalidOperationException("Unable to execute enumeration.");

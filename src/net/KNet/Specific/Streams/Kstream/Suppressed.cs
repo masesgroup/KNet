@@ -86,7 +86,8 @@ namespace MASES.KNet.Streams.Kstream
         /// <returns><see cref="Suppressed{K, TJVMK}"/></returns>
         public static Suppressed<K, TJVMK> UntilTimeLimit(TimeSpan arg0, Org.Apache.Kafka.Streams.Kstream.Suppressed.BufferConfig arg1)
         {
-            var cons = Org.Apache.Kafka.Streams.Kstream.Suppressed<TJVMK>.UntilTimeLimit(arg0, arg1);
+            using Java.Time.Duration duration = arg0;
+            var cons = Org.Apache.Kafka.Streams.Kstream.Suppressed<TJVMK>.UntilTimeLimit(duration, arg1);
             return new Suppressed<K, TJVMK>(cons);
         }
         /// <summary>
