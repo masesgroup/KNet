@@ -91,7 +91,8 @@ namespace MASES.KNet.Streams.Processor.Api
 		public void Forward<K, V, TJVMK, TJVMV>(Record<K, V, TJVMK, TJVMV> arg0, string arg1) where K : KForward where V : VForward where TJVMK : TJVMKForward where TJVMV : TJVMVForward
 		{
 			CheckDisposed();
-			_context.Forward<TJVMK, TJVMV>(arg0, arg1);
+            using Java.Lang.String jString = arg1;
+            _context.Forward<TJVMK, TJVMV>(arg0, jString);
 		}
 		/// <summary>
 		/// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/processor/api/ProcessorContext.html#forward(org.apache.kafka.streams.processor.api.Record)"/>
@@ -120,7 +121,8 @@ namespace MASES.KNet.Streams.Processor.Api
 		public S GetStateStore<S>(string arg0) where S : Org.Apache.Kafka.Streams.Processor.IStateStore
 		{
 			CheckDisposed();
-			return _context.GetStateStore<S>(arg0);
+            using Java.Lang.String jString = arg0;
+            return _context.GetStateStore<S>(jString);
 		}
 		/// <summary>
 		/// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/processor/api/ProcessingContext.html#stateDir()"/>
@@ -132,7 +134,7 @@ namespace MASES.KNet.Streams.Processor.Api
 		/// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/processor/api/ProcessingContext.html#applicationId()"/>
 		/// </summary>
 		/// <returns><see cref="string"/></returns>
-		public string ApplicationId { get { CheckDisposed(); return _context.ApplicationId(); } }
+		public string ApplicationId { get { CheckDisposed(); using var appId = _context.ApplicationId(); return appId; } }
 		/// <summary>
 		/// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/processor/api/ProcessingContext.html#appConfigs()"/>
 		/// </summary>
@@ -146,7 +148,8 @@ namespace MASES.KNet.Streams.Processor.Api
 		public Java.Util.Map<Java.Lang.String, object> AppConfigsWithPrefix(string arg0)
 		{
 			CheckDisposed();
-			return _context.AppConfigsWithPrefix(arg0);
+            using Java.Lang.String jString = arg0;
+            return _context.AppConfigsWithPrefix(jString);
 		}
 		/// <summary>
 		/// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/processor/api/ProcessingContext.html#recordMetadata()"/>
@@ -157,7 +160,7 @@ namespace MASES.KNet.Streams.Processor.Api
 			get
 			{
 				CheckDisposed();
-				var opt = _context.RecordMetadata();
+				using var opt = _context.RecordMetadata();
 				return opt.IsPresent() ? opt.Get() : null;
 			}
 		}
