@@ -174,7 +174,7 @@ namespace MASES.KNet.Serialization.Protobuf
                         using var stream = data.ToStream();
                         return _parser.ParseFrom(stream);
 #else
-                        return _parser.ParseFrom(data.ToDirectBuffer().AsSpan());
+                        return _parser.ParseFrom(data.AsSpan());
 #endif
                     }
                 }
@@ -324,7 +324,7 @@ namespace MASES.KNet.Serialization.Protobuf
                         using var stream = data.ToStream();
                         return _parser.ParseFrom(stream);
 #else
-                        return _parser.ParseFrom(data.ToDirectBuffer().AsSpan());
+                        return _parser.ParseFrom(data.AsSpan());
 #endif
                     }
                 }
