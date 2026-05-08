@@ -86,21 +86,16 @@ namespace MASES.KNet.Streams.Kstream
         /// <inheritdoc/>
         public override TJVMV Apply(TJVMV arg0, TJVMV arg1)
         {
-            try
-            {
-                _value1Set = _value2Set = false;
-                _arg0 = arg0;
-                _arg1 = arg1;
+            using var disposable0 = arg0 as IDisposable;
+            using var disposable1 = arg1 as IDisposable;
 
-                V res = (OnApply != null) ? OnApply(this) : Apply();
-                _vSerializer ??= Factory?.BuildValueSerDes<V, TJVMV>();
-                return _vSerializer.Serialize(null, res);
-            }
-            finally
-            {
-                (arg0 as IDisposable)?.Dispose();
-                (arg1 as IDisposable)?.Dispose();
-            }
+            _value1Set = _value2Set = false;
+            _arg0 = arg0;
+            _arg1 = arg1;
+
+            V res = (OnApply != null) ? OnApply(this) : Apply();
+            _vSerializer ??= Factory?.BuildValueSerDes<V, TJVMV>();
+            return _vSerializer.Serialize(null, res);
         }
 
         /// <inheritdoc cref="Org.Apache.Kafka.Streams.Kstream.Reducer{V}.Apply(V, V)"/>

@@ -72,19 +72,14 @@ namespace MASES.KNet.Streams.Kstream
         /// <inheritdoc/>
         public sealed override bool Test(TJVMK arg0, TJVMV arg1)
         {
-            try
-            {
-                _keySet = _valueSet = false;
-                _arg0 = arg0;
-                _arg1 = arg1;
+            using var disposable0 = arg0 as IDisposable;
+            using var disposable1 = arg1 as IDisposable;
 
-                return (OnTest != null) ? OnTest(this) : Test();
-            }
-            finally
-            {
-                (arg0 as IDisposable)?.Dispose();
-                (arg1 as IDisposable)?.Dispose();
-            }
+            _keySet = _valueSet = false;
+            _arg0 = arg0;
+            _arg1 = arg1;
+
+            return (OnTest != null) ? OnTest(this) : Test();
         }
         /// <inheritdoc cref="Org.Apache.Kafka.Streams.Kstream.Predicate{K, V}.Test(K, V)"/>
         public virtual bool Test()
