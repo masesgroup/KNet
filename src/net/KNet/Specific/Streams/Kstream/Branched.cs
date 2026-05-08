@@ -89,7 +89,8 @@ namespace MASES.KNet.Streams.Kstream
         /// <returns><see cref="Branched{K, V, TJVMK, TJVMV}"/></returns>
         public static Branched<K, V, TJVMK, TJVMV> As(string arg0)
         {
-            var cons = Org.Apache.Kafka.Streams.Kstream.Branched<TJVMK, TJVMV>.As(arg0);
+            using Java.Lang.String jString = arg0;
+            var cons = Org.Apache.Kafka.Streams.Kstream.Branched<TJVMK, TJVMV>.As(jString);
             return new Branched<K, V, TJVMK, TJVMV>(cons);
         }
         /// <summary>
@@ -100,7 +101,8 @@ namespace MASES.KNet.Streams.Kstream
         /// <returns><see cref="Branched{K, V, TJVMK, TJVMV}"/></returns>
         public static Branched<K, V, TJVMK, TJVMV> WithConsumer(KStreamConsumer<K, V, TJVMK, TJVMV> arg0, string arg1)
         {
-            var cons = Org.Apache.Kafka.Streams.Kstream.Branched<TJVMK, TJVMV>.WithConsumer(arg0, arg1);
+            using Java.Lang.String jString = arg1;
+            var cons = Org.Apache.Kafka.Streams.Kstream.Branched<TJVMK, TJVMV>.WithConsumer(arg0, jString);
             return new Branched<K, V, TJVMK, TJVMV>(cons);
         }
         /// <summary>
@@ -121,7 +123,8 @@ namespace MASES.KNet.Streams.Kstream
         /// <returns><see cref="Branched{K, V, TJVMK, TJVMV}"/></returns>
         public static Branched<K, V, TJVMK, TJVMV> WithFunction(KStreamFunction<K, V, TJVMK, TJVMV> arg0, string arg1)
         {
-            var cons = Org.Apache.Kafka.Streams.Kstream.Branched<TJVMK, TJVMV>.WithFunction(arg0, arg1);
+            using Java.Lang.String jString = arg1;
+            var cons = Org.Apache.Kafka.Streams.Kstream.Branched<TJVMK, TJVMV>.WithFunction(arg0, jString);
             return new Branched<K, V, TJVMK, TJVMV>(cons);
         }
         /// <summary>

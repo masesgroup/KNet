@@ -78,12 +78,21 @@ namespace MASES.KNet.Streams.Processor
         /// <inheritdoc/>
         public sealed override Java.Lang.String Extract(TJVMK arg0, TJVMV arg1, Org.Apache.Kafka.Streams.Processor.RecordContext arg2)
         {
-            _keySet = _valueSet = false;
-            _arg0 = arg0;
-            _arg1 = arg1;
-            _context = arg2;
+            try
+            {
+                _keySet = _valueSet = false;
+                _arg0 = arg0;
+                _arg1 = arg1;
+                _context = arg2;
 
-            return (OnExtract != null) ? OnExtract(this) : Extract();
+                return (OnExtract != null) ? OnExtract(this) : Extract();
+            }
+            finally
+            {
+                (arg0 as IDisposable)?.Dispose();
+                (arg1 as IDisposable)?.Dispose();
+                // arg2 voluntary not disposed since the user can store it
+            }
         }
         /// <summary>
         /// KNet override of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/processor/TopicNameExtractor.html#extract(java.lang.Object,java.lang.Object,org.apache.kafka.streams.processor.RecordContext)"/>

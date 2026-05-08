@@ -80,12 +80,20 @@ namespace MASES.KNet.Streams.Kstream
         /// <inheritdoc/>
         public override TJVMVR Apply(TJVMK arg0, TJVMV arg1)
         {
-            _kSerializer ??= Factory?.BuildKeySerDes<K, TJVMK>();
-            _vSerializer ??= Factory?.BuildValueSerDes<V, TJVMV>();
-            _vrSerializer ??= Factory?.BuildValueSerDes<VR, TJVMVR>();
-            var methodToExecute = (OnApply != null) ? OnApply : Apply;
-            var res = methodToExecute(_kSerializer.Deserialize(null, arg0), _vSerializer.Deserialize(null, arg1));
-            return _vrSerializer.Serialize(null, res);
+            try
+            {
+                _kSerializer ??= Factory?.BuildKeySerDes<K, TJVMK>();
+                _vSerializer ??= Factory?.BuildValueSerDes<V, TJVMV>();
+                _vrSerializer ??= Factory?.BuildValueSerDes<VR, TJVMVR>();
+                var methodToExecute = (OnApply != null) ? OnApply : Apply;
+                var res = methodToExecute(_kSerializer.Deserialize(null, arg0), _vSerializer.Deserialize(null, arg1));
+                return _vrSerializer.Serialize(null, res);
+            }
+            finally
+            {
+                (arg0 as IDisposable)?.Dispose();
+                (arg1 as IDisposable)?.Dispose();
+            }
         }
         /// <inheritdoc cref="Org.Apache.Kafka.Streams.Kstream.KeyValueMapper{K, V, VR}.Apply(K, V)"/>
         public virtual VR Apply(K arg0, V arg1)

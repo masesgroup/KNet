@@ -99,7 +99,8 @@ namespace MASES.KNet.Streams.Kstream
         /// <returns><see cref="Repartitioned{K, V, TJVMK, TJVMV}"/></returns>
         public static Repartitioned<K, V, TJVMK, TJVMV> As(string arg0)
         {
-            var cons = Org.Apache.Kafka.Streams.Kstream.Repartitioned<TJVMK, TJVMV>.As(arg0);
+            using Java.Lang.String jString = arg0;
+            var cons = Org.Apache.Kafka.Streams.Kstream.Repartitioned<TJVMK, TJVMV>.As(jString);
             return new Repartitioned<K, V, TJVMK, TJVMV>(cons);
         }
         /// <summary>

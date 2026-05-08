@@ -87,7 +87,8 @@ namespace MASES.KNet.Streams.Kstream
         /// <returns><see cref="Printed{K, V, TJVMK, TJVMV}"/></returns>
         public static Printed<K, V, TJVMK, TJVMV> ToFile(string arg0)
         {
-            var cons = Org.Apache.Kafka.Streams.Kstream.Printed<TJVMK, TJVMV>.ToFile(arg0);
+            using Java.Lang.String jString = arg0;
+            var cons = Org.Apache.Kafka.Streams.Kstream.Printed<TJVMK, TJVMV>.ToFile(jString);
             return new Printed<K, V, TJVMK, TJVMV>(cons);
         }
         /// <summary>
@@ -125,7 +126,8 @@ namespace MASES.KNet.Streams.Kstream
         public Printed<K, V, TJVMK, TJVMV> WithLabel(string arg0)
         {
             CheckDisposed();
-            _inner?.WithLabel(arg0);
+            using Java.Lang.String jString = arg0;
+            _inner?.WithLabel(jString);
             return this;
         }
 

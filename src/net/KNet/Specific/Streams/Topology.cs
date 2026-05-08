@@ -112,7 +112,9 @@ namespace MASES.KNet.Streams
         public Topology AddSink<K, V>(string arg0, string arg1, ISerializer<K, byte[]> arg2, ISerializer<V, byte[]> arg3, params string[] arg4)
         {
             CheckDisposed();
-            var top = _topology.AddSink(arg0, arg1, arg2.KafkaSerializer, arg3.KafkaSerializer, arg4.ToJVMArray<Java.Lang.String, string>());
+            using Java.Lang.String jArg0 = arg0;
+            using Java.Lang.String jArg1 = arg1;
+            var top = _topology.AddSink(jArg0, jArg1, arg2.KafkaSerializer, arg3.KafkaSerializer, arg4.ToJVMArray<Java.Lang.String, string>());
             return new Topology(top, _factory);
         }
         /// <summary>
@@ -133,7 +135,9 @@ namespace MASES.KNet.Streams
         {
             CheckDisposed();
             if (arg4 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
-            var top = _topology.AddSink(arg0, arg1, arg2.KafkaSerializer, arg3.KafkaSerializer, arg4, arg5.ToJVMArray<Java.Lang.String, string>());
+            using Java.Lang.String jArg0 = arg0;
+            using Java.Lang.String jArg1 = arg1;
+            var top = _topology.AddSink(jArg0, jArg1, arg2.KafkaSerializer, arg3.KafkaSerializer, arg4, arg5.ToJVMArray<Java.Lang.String, string>());
             return new Topology(top, _factory);
         }
         /// <summary>
@@ -152,7 +156,10 @@ namespace MASES.KNet.Streams
         {
             CheckDisposed();
             if (arg2 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
-            var top = (arg3.Length == 0) ? _topology.IExecute<Org.Apache.Kafka.Streams.Topology>("addSink", arg0, arg1, arg2) : _topology.IExecute<Org.Apache.Kafka.Streams.Topology>("addSource", arg0, arg1, arg2, arg3);
+            using Java.Lang.String jArg0 = arg0;
+            using Java.Lang.String jArg1 = arg1;
+            var top = (arg3.Length == 0) ? _topology.IExecute<Org.Apache.Kafka.Streams.Topology>("addSink", jArg0, jArg1, arg2) 
+                                         : _topology.IExecute<Org.Apache.Kafka.Streams.Topology>("addSource", jArg0, jArg1, arg2, arg3);
             return new Topology(top, _factory);
         }
         /// <summary>
@@ -168,7 +175,8 @@ namespace MASES.KNet.Streams
         {
             CheckDisposed();
             if (arg1 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
-            var top = _topology.AddSink<byte[], byte[], byte[], byte[]>(arg0, arg1, arg2.ToJVMArray<Java.Lang.String, string>());
+            using Java.Lang.String jArg0 = arg0;
+            var top = _topology.AddSink<byte[], byte[], byte[], byte[]>(jArg0, arg1, arg2.ToJVMArray<Java.Lang.String, string>());
             return new Topology(top, _factory);
         }
         /// <summary>
@@ -186,7 +194,8 @@ namespace MASES.KNet.Streams
         {
             CheckDisposed();
             if (arg1 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
-            var top = _topology.AddSink(arg0, arg1, arg2.KafkaSerializer, arg3.KafkaSerializer, arg4.ToJVMArray<Java.Lang.String, string>());
+            using Java.Lang.String jArg0 = arg0;
+            var top = _topology.AddSink(jArg0, arg1, arg2.KafkaSerializer, arg3.KafkaSerializer, arg4.ToJVMArray<Java.Lang.String, string>());
             return new Topology(top, _factory);
         }
         /// <summary>
@@ -207,7 +216,8 @@ namespace MASES.KNet.Streams
         {
             CheckDisposed();
             if (arg1 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
-            var top = _topology.AddSink(arg0, arg1, arg2.KafkaSerializer, arg3.KafkaSerializer, arg4, arg5.ToJVMArray<Java.Lang.String, string>());
+            using Java.Lang.String jArg0 = arg0;
+            var top = _topology.AddSink(jArg0, arg1, arg2.KafkaSerializer, arg3.KafkaSerializer, arg4, arg5.ToJVMArray<Java.Lang.String, string>());
             return new Topology(top, _factory);
         }
         /// <summary>
@@ -227,7 +237,8 @@ namespace MASES.KNet.Streams
             CheckDisposed();
             if (arg1 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
             if (arg2 is IGenericSerDesFactoryApplier applier1) applier1.Factory = _factory;
-            var top = _topology.AddSink<byte[], byte[], byte[], byte[], byte[], byte[]>(arg0, arg1, arg2, arg3.ToJVMArray<Java.Lang.String, string>());
+            using Java.Lang.String jArg0 = arg0;
+            var top = _topology.AddSink<byte[], byte[], byte[], byte[], byte[], byte[]>(jArg0, arg1, arg2, arg3.ToJVMArray<Java.Lang.String, string>());
             return new Topology(top, _factory);
         }
         /// <summary>
@@ -240,7 +251,9 @@ namespace MASES.KNet.Streams
         public Topology AddSink(string arg0, string arg1, params string[] arg2)
         {
             CheckDisposed();
-            var top = _topology.AddSink(arg0, arg1, arg2.ToJVMArray<Java.Lang.String, string>());
+            using Java.Lang.String jArg0 = arg0;
+            using Java.Lang.String jArg1 = arg1;
+            var top = _topology.AddSink(jArg0, jArg1, arg2.ToJVMArray<Java.Lang.String, string>());
             return new Topology(top, _factory);
         }
         /// <summary>
@@ -252,7 +265,8 @@ namespace MASES.KNet.Streams
         public Topology AddSource(string arg0, params string[] arg1)
         {
             CheckDisposed();
-            var top = _topology.AddSource(arg0, arg1.ToJVMArray<Java.Lang.String, string>());
+            using Java.Lang.String jArg0 = arg0;
+            var top = _topology.AddSource(jArg0, arg1.ToJVMArray<Java.Lang.String, string>());
             return new Topology(top, _factory);
         }
         /// <summary>
@@ -264,7 +278,8 @@ namespace MASES.KNet.Streams
         public Topology AddSource(string arg0, Java.Util.Regex.Pattern arg1)
         {
             CheckDisposed();
-            var top = _topology.AddSource(arg0, arg1);
+            using Java.Lang.String jArg0 = arg0;
+            var top = _topology.AddSource(jArg0, arg1);
             return new Topology(top, _factory);
         }
         /// <summary>
@@ -278,7 +293,9 @@ namespace MASES.KNet.Streams
         public Topology AddSource(string arg0, IDeserializer<object, byte[]> arg1, IDeserializer<object, byte[]> arg2, params string[] arg3)
         {
             CheckDisposed();
-            var top = (arg3.Length == 0) ? _topology.IExecute<Org.Apache.Kafka.Streams.Topology>("addSource", arg0, arg1.KafkaDeserializer, arg2.KafkaDeserializer) : _topology.IExecute<Org.Apache.Kafka.Streams.Topology>("addSource", arg0, arg1.KafkaDeserializer, arg2.KafkaDeserializer, arg3);
+            using Java.Lang.String jArg0 = arg0;
+            var top = (arg3.Length == 0) ? _topology.IExecute<Org.Apache.Kafka.Streams.Topology>("addSource", jArg0, arg1.KafkaDeserializer, arg2.KafkaDeserializer) 
+                                         : _topology.IExecute<Org.Apache.Kafka.Streams.Topology>("addSource", jArg0, arg1.KafkaDeserializer, arg2.KafkaDeserializer, arg3);
             return new Topology(top, _factory);
         }
         /// <summary>
@@ -292,7 +309,8 @@ namespace MASES.KNet.Streams
         public Topology AddSource(string arg0, IDeserializer<object, byte[]> arg1, IDeserializer<object, byte[]> arg2, Java.Util.Regex.Pattern arg3)
         {
             CheckDisposed();
-            var top = _topology.IExecute<Org.Apache.Kafka.Streams.Topology>("addSource", arg0, arg1.KafkaDeserializer, arg2.KafkaDeserializer, arg3);
+            using Java.Lang.String jArg0 = arg0;
+            var top = _topology.IExecute<Org.Apache.Kafka.Streams.Topology>("addSource", jArg0, arg1.KafkaDeserializer, arg2.KafkaDeserializer, arg3);
             return new Topology(top, _factory);
         }
         /// <summary>
@@ -306,7 +324,9 @@ namespace MASES.KNet.Streams
         {
             CheckDisposed();
             if (arg0 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
-            var top = (arg2.Length == 0) ? _topology.IExecute<Org.Apache.Kafka.Streams.Topology>("addSource", arg0, arg1) : _topology.IExecute<Org.Apache.Kafka.Streams.Topology>("addSource", arg0, arg1, arg2);
+            using Java.Lang.String jArg1 = arg1;
+            var top = (arg2.Length == 0) ? _topology.IExecute<Org.Apache.Kafka.Streams.Topology>("addSource", arg0, jArg1) 
+                                         : _topology.IExecute<Org.Apache.Kafka.Streams.Topology>("addSource", arg0, jArg1, arg2);
             return new Topology(top, _factory);
         }
         /// <summary>
@@ -320,7 +340,8 @@ namespace MASES.KNet.Streams
         {
             CheckDisposed();
             if (arg0 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
-            var top = _topology.AddSource(arg0, arg1, arg2);
+            using Java.Lang.String jArg1 = arg1;
+            var top = _topology.AddSource(arg0, jArg1, arg2);
             return new Topology(top, _factory);
         }
         /// <summary>
@@ -333,7 +354,8 @@ namespace MASES.KNet.Streams
         public Topology AddSource(Org.Apache.Kafka.Streams.AutoOffsetReset arg0, string arg1, params string[] arg2)
         {
             CheckDisposed();
-            var top = _topology.AddSource(arg0, arg1, arg2.ToJVMArray<Java.Lang.String, string>());
+            using Java.Lang.String jArg1 = arg1;
+            var top = _topology.AddSource(arg0, jArg1, arg2.ToJVMArray<Java.Lang.String, string>());
             return new Topology(top, _factory);
         }
         /// <summary>
@@ -346,7 +368,8 @@ namespace MASES.KNet.Streams
         public Topology AddSource(Org.Apache.Kafka.Streams.AutoOffsetReset arg0, string arg1, Java.Util.Regex.Pattern arg2)
         {
             CheckDisposed();
-            var top = _topology.AddSource(arg0, arg1, arg2);
+            using Java.Lang.String jArg1 = arg1;
+            var top = _topology.AddSource(arg0, jArg1, arg2);
             return new Topology(top, _factory);
         }
         /// <summary>
@@ -361,7 +384,9 @@ namespace MASES.KNet.Streams
         public Topology AddSource(Org.Apache.Kafka.Streams.AutoOffsetReset arg0, string arg1, IDeserializer<object, byte[]> arg2, IDeserializer<object, byte[]> arg3, params string[] arg4)
         {
             CheckDisposed();
-            var top = (arg4.Length == 0) ? _topology.IExecute<Org.Apache.Kafka.Streams.Topology>("addSource", arg0, arg1, arg2.KafkaDeserializer, arg3.KafkaDeserializer) : _topology.IExecute<Org.Apache.Kafka.Streams.Topology>("addSource", arg0, arg1, arg2.KafkaDeserializer, arg3.KafkaDeserializer, arg4);
+            using Java.Lang.String jArg1 = arg1;
+            var top = (arg4.Length == 0) ? _topology.IExecute<Org.Apache.Kafka.Streams.Topology>("addSource", arg0, jArg1, arg2.KafkaDeserializer, arg3.KafkaDeserializer) 
+                                         : _topology.IExecute<Org.Apache.Kafka.Streams.Topology>("addSource", arg0, jArg1, arg2.KafkaDeserializer, arg3.KafkaDeserializer, arg4);
             return new Topology(top, _factory);
         }
         /// <summary>
@@ -376,7 +401,8 @@ namespace MASES.KNet.Streams
         public Topology AddSource(Org.Apache.Kafka.Streams.AutoOffsetReset arg0, string arg1, IDeserializer<object, byte[]> arg2, IDeserializer<object, byte[]> arg3, Java.Util.Regex.Pattern arg4)
         {
             CheckDisposed();
-            var top = _topology.IExecute<Org.Apache.Kafka.Streams.Topology>("addSource", arg0, arg1, arg2.KafkaDeserializer, arg3.KafkaDeserializer, arg4);
+            using Java.Lang.String jArg1 = arg1;
+            var top = _topology.IExecute<Org.Apache.Kafka.Streams.Topology>("addSource", arg0, jArg1, arg2.KafkaDeserializer, arg3.KafkaDeserializer, arg4);
             return new Topology(top, _factory);
         }
         /// <summary>
@@ -393,7 +419,9 @@ namespace MASES.KNet.Streams
         {
             CheckDisposed();
             if (arg2 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
-            var top = (arg5.Length == 0) ? _topology.IExecute<Org.Apache.Kafka.Streams.Topology>("addSource", arg0, arg1, arg2, arg3.KafkaDeserializer, arg4.KafkaDeserializer) : _topology.IExecute<Org.Apache.Kafka.Streams.Topology>("addSource", arg0, arg1, arg2, arg3.KafkaDeserializer, arg4.KafkaDeserializer, arg5);
+            using Java.Lang.String jArg1 = arg1;
+            var top = (arg5.Length == 0) ? _topology.IExecute<Org.Apache.Kafka.Streams.Topology>("addSource", arg0, jArg1, arg2, arg3.KafkaDeserializer, arg4.KafkaDeserializer) 
+                                         : _topology.IExecute<Org.Apache.Kafka.Streams.Topology>("addSource", arg0, jArg1, arg2, arg3.KafkaDeserializer, arg4.KafkaDeserializer, arg5);
             return new Topology(top, _factory);
         }
         /// <summary>
@@ -410,7 +438,8 @@ namespace MASES.KNet.Streams
         {
             CheckDisposed();
             if (arg2 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
-            var top = _topology.IExecute<Org.Apache.Kafka.Streams.Topology>("addSource", arg0, arg1, arg2, arg3.KafkaDeserializer, arg4.KafkaDeserializer, arg5);
+            using Java.Lang.String jArg1 = arg1;
+            var top = _topology.IExecute<Org.Apache.Kafka.Streams.Topology>("addSource", arg0, jArg1, arg2, arg3.KafkaDeserializer, arg4.KafkaDeserializer, arg5);
             return new Topology(top, _factory);
         }
         /// <summary>
@@ -425,7 +454,8 @@ namespace MASES.KNet.Streams
         {
             CheckDisposed();
             if (arg1 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
-            var top = _topology.AddSource(arg0, arg1, arg2, arg3.ToJVMArray<Java.Lang.String, string>());
+            using Java.Lang.String jArg2 = arg2;
+            var top = _topology.AddSource(arg0, arg1, jArg2, arg3.ToJVMArray<Java.Lang.String, string>());
             return new Topology(top, _factory);
         }
         /// <summary>
@@ -440,7 +470,8 @@ namespace MASES.KNet.Streams
         {
             CheckDisposed();
             if (arg1 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
-            var top = _topology.AddSource(arg0, arg1, arg2, arg3);
+            using Java.Lang.String jArg2 = arg2;
+            var top = _topology.AddSource(arg0, arg1, jArg2, arg3);
             return new Topology(top, _factory);
         }
 

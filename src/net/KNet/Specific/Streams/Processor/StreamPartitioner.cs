@@ -73,7 +73,7 @@ namespace MASES.KNet.Streams.Processor
         /// <summary>
         /// The <typeparamref name="K"/> content
         /// </summary>
-        public virtual K Key { get { if (!_keySet) { _kSerializer ??= Factory?.BuildKeySerDes<K,TJVMK>(); _key = _kSerializer.Deserialize(null, _arg1); _keySet = true; } return _key; } }
+        public virtual K Key { get { if (!_keySet) { _kSerializer ??= Factory?.BuildKeySerDes<K, TJVMK>(); _key = _kSerializer.Deserialize(null, _arg1); _keySet = true; } return _key; } }
         /// <summary>
         /// The <typeparamref name="V"/> content
         /// </summary>
@@ -85,31 +85,40 @@ namespace MASES.KNet.Streams.Processor
         /// <inheritdoc/>
         public override Optional<Set<Integer>> Partitions(Java.Lang.String arg0, TJVMK arg1, TJVMV arg2, int arg3)
         {
-            _keySet = _valueSet = false;
-            _arg0 = arg0;
-            _arg1 = arg1;
-            _arg2 = arg2;
-            _arg3 = arg3;
-
-            var res = (OnPartitions != null) ? OnPartitions(this) : Partitions();
-            if (res == null || res.Count == 0) return Optional<Set<Integer>>.Empty();
-            using var scope = new JCOBridgeDisposeFastScope();
-            using HashSet<Integer> result = new HashSet<Integer>();
-            foreach (var item in res)
+            try
             {
-                if (item.HasValue)
+                _keySet = _valueSet = false;
+                _arg0 = arg0;
+                _arg1 = arg1;
+                _arg2 = arg2;
+                _arg3 = arg3;
+
+                var res = (OnPartitions != null) ? OnPartitions(this) : Partitions();
+                if (res == null || res.Count == 0) return Optional<Set<Integer>>.Empty();
+                using var scope = new JCOBridgeDisposeFastScope();
+                using HashSet<Integer> result = new HashSet<Integer>();
+                foreach (var item in res)
                 {
-                    using (var integer = Integer.ValueOf(item.Value))
+                    if (item.HasValue)
                     {
-                        result.Add(integer);
+                        using (var integer = Integer.ValueOf(item.Value))
+                        {
+                            result.Add(integer);
+                        }
+                    }
+                    else
+                    {
+                        result.Add(null);
                     }
                 }
-                else
-                {
-                    result.Add(null);
-                }
+                return Optional<Set<Integer>>.Of(result);
             }
-            return Optional<Set<Integer>>.Of(result);
+            finally
+            {
+                (arg0 as IDisposable)?.Dispose();
+                (arg1 as IDisposable)?.Dispose();
+                (arg2 as IDisposable)?.Dispose();
+            }
         }
         /// <summary>
         /// KNet override of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/processor/StreamPartitioner.html#partitions(java.lang.String,java.lang.Object,java.lang.Object,int)"/>
