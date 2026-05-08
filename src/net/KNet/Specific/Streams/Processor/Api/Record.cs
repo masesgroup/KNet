@@ -97,12 +97,10 @@ namespace MASES.KNet.Streams.Processor.Api
             using var topic = _metadata?.Topic();
             using var headers = _record.Headers();
             var key = serDes.SerializeWithHeaders(topic, headers, arg0);
-            try
-            {
-                var record = _record.WithKey(key);
-                return new Record<NewK, V, TJVMNewK, TJVMV>(_builder, record, _metadata);
-            }
-            finally { (key as IDisposable)?.Dispose(); }
+            using var disposable = key as IDisposable;
+
+            var record = _record.WithKey(key);
+            return new Record<NewK, V, TJVMNewK, TJVMV>(_builder, record, _metadata);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/processor/api/Record.html#withValue(java.lang.Object)"/>
@@ -118,12 +116,10 @@ namespace MASES.KNet.Streams.Processor.Api
             using var topic = _metadata?.Topic();
             using var headers = _record.Headers();
             var value = serDes.SerializeWithHeaders(topic, headers, arg0);
-            try
-            {
-                var record = _record.WithValue(value);
-                return new Record<K, NewV, TJVMK, TJVMNewV>(_builder, record, _metadata);
-            }
-            finally { (value as IDisposable)?.Dispose(); }
+            using var disposable = value as IDisposable;
+
+            var record = _record.WithValue(value);
+            return new Record<K, NewV, TJVMK, TJVMNewV>(_builder, record, _metadata);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/processor/api/Record.html#key()"/>
@@ -138,14 +134,8 @@ namespace MASES.KNet.Streams.Processor.Api
                 using var topic = _metadata?.Topic();
                 using var headers = _record.Headers();
                 var key = _record.Key();
-                try
-                {
-                    return serDes.DeserializeWithHeaders(topic, headers, key);
-                }
-                finally
-                {
-                    (key as IDisposable)?.Dispose();
-                }
+                using var disposable = key as IDisposable;
+                return serDes.DeserializeWithHeaders(topic, headers, key);
             }
         }
         /// <summary>
@@ -161,14 +151,8 @@ namespace MASES.KNet.Streams.Processor.Api
                 using var topic = _metadata?.Topic();
                 using var headers = _record.Headers();
                 var value = _record.Value();
-                try
-                {
-                    return serDes.DeserializeWithHeaders(topic, headers, value);
-                }
-                finally
-                {
-                    (value as IDisposable)?.Dispose();
-                }
+                using var disposable = value as IDisposable;
+                return serDes.DeserializeWithHeaders(topic, headers, value);
             }
         }
         /// <summary>

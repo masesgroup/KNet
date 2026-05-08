@@ -96,23 +96,17 @@ namespace MASES.KNet.Streams.Kstream
         /// <inheritdoc/>
         public sealed override TJVMVA Apply(TJVMK arg0, TJVMV arg1, TJVMVA arg2)
         {
-            try
-            {
-                _keySet = _valueSet = _aggregateSet = false;
-                _arg0 = arg0;
-                _arg1 = arg1;
-                _arg2 = arg2;
+            _keySet = _valueSet = _aggregateSet = false;
+            _arg0 = arg0;
+            _arg1 = arg1;
+            _arg2 = arg2;
+            using var disposable0 = arg0 as IDisposable;
+            using var disposable1 = arg1 as IDisposable;
+            using var disposable2 = arg2 as IDisposable;
 
-                VA res = (OnApply != null) ? OnApply(this) : Apply();
-                _vaSerializer ??= Factory?.BuildValueSerDes<VA, TJVMVA>();
-                return _vaSerializer.Serialize(null, res);
-            }
-            finally
-            {
-                (arg0 as IDisposable)?.Dispose();
-                (arg1 as IDisposable)?.Dispose();
-                (arg2 as IDisposable)?.Dispose();
-            }
+            VA res = (OnApply != null) ? OnApply(this) : Apply();
+            _vaSerializer ??= Factory?.BuildValueSerDes<VA, TJVMVA>();
+            return _vaSerializer.Serialize(null, res);
         }
         /// <inheritdoc cref="Org.Apache.Kafka.Streams.Kstream.Aggregator{K, V, VAgg}.Apply(K, V, VAgg)"/>
         public virtual VA Apply()

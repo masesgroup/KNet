@@ -75,19 +75,14 @@ namespace MASES.KNet.Streams.Kstream
         /// <inheritdoc/>
         public override TJVMVR Apply(TJVMV arg0)
         {
-            try
-            {
-                _vSerializer ??= Factory?.BuildValueSerDes<V, TJVMV>();
-                _vrSerializer ??= Factory?.BuildValueSerDes<VR, TJVMVR>();
+            using var disposable0 = arg0 as IDisposable;
 
-                var methodToExecute = (OnApply != null) ? OnApply : Apply;
-                var res = methodToExecute(_vSerializer.Deserialize(null, arg0));
-                return _vrSerializer.Serialize(null, res);
-            }
-            finally
-            {
-                (arg0 as IDisposable)?.Dispose();
-            }
+            _vSerializer ??= Factory?.BuildValueSerDes<V, TJVMV>();
+            _vrSerializer ??= Factory?.BuildValueSerDes<VR, TJVMVR>();
+
+            var methodToExecute = (OnApply != null) ? OnApply : Apply;
+            var res = methodToExecute(_vSerializer.Deserialize(null, arg0));
+            return _vrSerializer.Serialize(null, res);
         }
         /// <inheritdoc cref="Org.Apache.Kafka.Streams.Kstream.ValueMapper{V, VR}.Apply(V)"/>
         public virtual VR Apply(V arg0)
@@ -135,14 +130,8 @@ namespace MASES.KNet.Streams.Kstream
             foreach (var item in res)
             {
                 var localValue = _vrSerializer.Serialize(null, item);
-                try
-                {
-                    result.Add(localValue);
-                }
-                finally
-                {
-                    (localValue as IDisposable)?.Dispose();
-                }
+                using var localDisposable = localValue as IDisposable;
+                result.Add(localValue);
             }
             return result;
         }

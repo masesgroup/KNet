@@ -59,26 +59,20 @@ namespace MASES.KNet.Streams.Utils
         /// <inheritdoc/>
         public override TJVMKO Apply(TJVMK o1, TJVMV o2)
         {
-            try
+            using var disposable0 = o1 as IDisposable;
+            using var disposable1 = o2 as IDisposable;
+            IGenericSerDesFactory factory = null;
+            if (this is IGenericSerDesFactoryApplier applier && (factory = applier.Factory) == null)
             {
-                IGenericSerDesFactory factory = null;
-                if (this is IGenericSerDesFactoryApplier applier && (factory = applier.Factory) == null)
-                {
-                    throw new InvalidOperationException("The serialization factory instance was not set.");
-                }
-                _keySerializer ??= factory?.BuildKeySerDes<K, TJVMK>();
-                _keyOutputSerializer ??= factory?.BuildKeySerDes<KO, TJVMKO>();
-                _valueSerializer ??= factory?.BuildValueSerDes<V, TJVMV>();
-                var methodToExecute = (OnApply != null) ? OnApply : Apply;
-                var res = methodToExecute(_keySerializer.Deserialize(null, o1), _valueSerializer.Deserialize(null, o2));
+                throw new InvalidOperationException("The serialization factory instance was not set.");
+            }
+            _keySerializer ??= factory?.BuildKeySerDes<K, TJVMK>();
+            _keyOutputSerializer ??= factory?.BuildKeySerDes<KO, TJVMKO>();
+            _valueSerializer ??= factory?.BuildValueSerDes<V, TJVMV>();
+            var methodToExecute = (OnApply != null) ? OnApply : Apply;
+            var res = methodToExecute(_keySerializer.Deserialize(null, o1), _valueSerializer.Deserialize(null, o2));
 
-                return _keyOutputSerializer.Serialize(null, res);
-            }
-            finally
-            {
-                (o1 as IDisposable)?.Dispose();
-                (o2 as IDisposable)?.Dispose();
-            }
+            return _keyOutputSerializer.Serialize(null, res);
         }
         /// <summary>
         /// Executes the Function action in the CLR
