@@ -48,6 +48,20 @@ namespace MASES.KNet.Streams.Kstream
         ISerDes<V2, TJVMV2> _v2Serializer = null;
         ISerDes<VR, TJVMVR> _vrSerializer = null;
 
+        /// <inheritdoc/>
+        public ValueJoinerWithKey()
+        {
+            OnApplyDispose = DisposeResult;
+        }
+        /// <summary>
+        /// Disposes the results of the <see cref="Apply(TJVMK1, TJVMV1, TJVMV2)"/> or <see cref="OnApply"/> operations
+        /// </summary>
+        /// <param name="result">The result to be disposed</param>
+        protected virtual void DisposeResult(TJVMVR result)
+        {
+            (result as IDisposable)?.Dispose();
+        }
+
         IGenericSerDesFactory _factory;
         IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set => _factory = value; }
         /// <summary>
@@ -85,6 +99,10 @@ namespace MASES.KNet.Streams.Kstream
         /// <inheritdoc/>
         public override TJVMVR Apply(TJVMK1 arg0, TJVMV1 arg1, TJVMV2 arg2)
         {
+            using var disposable0 = arg0 as IDisposable;
+            using var disposable1 = arg1 as IDisposable;
+            using var disposable2 = arg2 as IDisposable;
+
             _key1Set = _value1Set = _value2Set = false;
             _arg0 = arg0;
             _arg1 = arg1;

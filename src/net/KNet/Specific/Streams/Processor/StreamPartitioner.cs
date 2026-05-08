@@ -73,7 +73,7 @@ namespace MASES.KNet.Streams.Processor
         /// <summary>
         /// The <typeparamref name="K"/> content
         /// </summary>
-        public virtual K Key { get { if (!_keySet) { _kSerializer ??= Factory?.BuildKeySerDes<K,TJVMK>(); _key = _kSerializer.Deserialize(null, _arg1); _keySet = true; } return _key; } }
+        public virtual K Key { get { if (!_keySet) { _kSerializer ??= Factory?.BuildKeySerDes<K, TJVMK>(); _key = _kSerializer.Deserialize(null, _arg1); _keySet = true; } return _key; } }
         /// <summary>
         /// The <typeparamref name="V"/> content
         /// </summary>
@@ -85,6 +85,10 @@ namespace MASES.KNet.Streams.Processor
         /// <inheritdoc/>
         public override Optional<Set<Integer>> Partitions(Java.Lang.String arg0, TJVMK arg1, TJVMV arg2, int arg3)
         {
+            using var disposable0 = arg0 as IDisposable;
+            using var disposable1 = arg1 as IDisposable;
+            using var disposable2 = arg2 as IDisposable;
+
             _keySet = _valueSet = false;
             _arg0 = arg0;
             _arg1 = arg1;

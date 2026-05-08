@@ -168,6 +168,8 @@ namespace MASES.KNet.Streams.State
         public Windowed<K, TJVMK> PeekNextKey()
         {
             var kk = _iterator.PeekNextKey();
+            using var disposable0 = kk as IDisposable;
+
             return new Windowed<K, TJVMK>(Factory, kk);
         }
         /// <summary>

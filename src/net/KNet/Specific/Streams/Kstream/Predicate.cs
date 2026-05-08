@@ -72,6 +72,9 @@ namespace MASES.KNet.Streams.Kstream
         /// <inheritdoc/>
         public sealed override bool Test(TJVMK arg0, TJVMV arg1)
         {
+            using var disposable0 = arg0 as IDisposable;
+            using var disposable1 = arg1 as IDisposable;
+
             _keySet = _valueSet = false;
             _arg0 = arg0;
             _arg1 = arg1;

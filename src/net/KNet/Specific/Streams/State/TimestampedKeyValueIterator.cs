@@ -167,6 +167,8 @@ namespace MASES.KNet.Streams.State
         {
             _keySerDes ??= Factory?.BuildKeySerDes<K, TJVMK>();
             var kk = _iterator.PeekNextKey();
+            using var disposable0 = kk as IDisposable;
+
             return _keySerDes.Deserialize(null, kk);
         }
         /// <summary>

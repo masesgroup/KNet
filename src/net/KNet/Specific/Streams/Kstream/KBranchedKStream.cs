@@ -89,11 +89,15 @@ namespace MASES.KNet.Streams.Kstream
         {
             CheckDisposed();
             var dict = new System.Collections.Generic.Dictionary<string, KStream<K, V, TJVMK, TJVMV>>();
-            var map = _inner.DefaultBranch();
-            foreach (var item in map.KeySet())
+            using var map = _inner.DefaultBranch();
+            using var keySet = map.KeySet();
+            foreach (var item in keySet)
             {
-                var kStream = new KStream<K, V, TJVMK, TJVMV>(_factory, map.Get(item));
-                dict.Add(item, kStream);
+                using (item)
+                {
+                    var kStream = new KStream<K, V, TJVMK, TJVMV>(_factory, map.Get(item));
+                    dict.Add(item, kStream);
+                }
             }
 
             return dict;
@@ -108,11 +112,15 @@ namespace MASES.KNet.Streams.Kstream
             CheckDisposed();
             var dict = new System.Collections.Generic.Dictionary<string, KStream<K, V, TJVMK, TJVMV>>();
             if (arg0 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
-            var map = _inner.DefaultBranch(arg0);
-            foreach (var item in map.KeySet())
+            using var map = _inner.DefaultBranch(arg0);
+            using var keySet = map.KeySet();
+            foreach (var item in keySet)
             {
-                var kStream = new KStream<K, V, TJVMK, TJVMV>(_factory, map.Get(item));
-                dict.Add(item, kStream);
+                using (item)
+                {
+                    var kStream = new KStream<K, V, TJVMK, TJVMV>(_factory, map.Get(item));
+                    dict.Add(item, kStream);
+                }
             }
 
             return dict;
@@ -125,11 +133,15 @@ namespace MASES.KNet.Streams.Kstream
         {
             CheckDisposed();
             var dict = new System.Collections.Generic.Dictionary<string, KStream<K, V, TJVMK, TJVMV>>();
-            var map = _inner.NoDefaultBranch();
-            foreach (var item in map.KeySet())
+            using var map = _inner.NoDefaultBranch();
+            using var keySet = map.KeySet();
+            foreach (var item in keySet)
             {
-                var kStream = new KStream<K, V, TJVMK, TJVMV>(_factory, map.Get(item));
-                dict.Add(item, kStream);
+                using (item)
+                {
+                    var kStream = new KStream<K, V, TJVMK, TJVMV>(_factory, map.Get(item));
+                    dict.Add(item, kStream);
+                }
             }
 
             return dict;

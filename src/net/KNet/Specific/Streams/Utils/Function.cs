@@ -33,6 +33,20 @@ namespace MASES.KNet.Streams.Utils
         ISerDes<KO, TJVMKO> _keySerializer = null;
         ISerDes<V, TJVMV> _valueSerializer = null;
 
+        /// <inheritdoc/>
+        public Function()
+        {
+            OnApplyDispose = DisposeResult;
+        }
+        /// <summary>
+        /// Disposes the results of the <see cref="Apply(TJVMV)"/> or <see cref="OnApply"/> operations
+        /// </summary>
+        /// <param name="result">The result to be disposed</param>
+        protected virtual void DisposeResult(TJVMKO result)
+        {
+            (result as IDisposable)?.Dispose();
+        }
+
         IGenericSerDesFactory _factory;
         IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set => _factory = value; }
         /// <summary>
@@ -42,6 +56,8 @@ namespace MASES.KNet.Streams.Utils
         /// <inheritdoc/>
         public override TJVMKO Apply(TJVMV arg0)
         {
+            using var disposable0 = arg0 as IDisposable;
+
             IGenericSerDesFactory factory = null;
             if (this is IGenericSerDesFactoryApplier applier && (factory = applier.Factory) == null)
             {

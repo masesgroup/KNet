@@ -97,6 +97,8 @@ namespace MASES.KNet.Streams.State
                 CheckDisposed();
                 _valueSerDes ??= _factory?.BuildKeySerDes<V, TJVMV>();
                 var vv = _valueAndTimestamp.Value();
+                using var disposable0 = vv as IDisposable;
+
                 return _valueSerDes.Deserialize(null, vv);
             }
         }

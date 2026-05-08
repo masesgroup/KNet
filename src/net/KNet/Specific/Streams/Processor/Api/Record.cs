@@ -94,7 +94,12 @@ namespace MASES.KNet.Streams.Processor.Api
         {
             CheckDisposed();
             var serDes = _builder.BuildKeySerDes<NewK, TJVMNewK>();
-            var record = _record.WithKey(serDes.SerializeWithHeaders(_metadata?.Topic(), _record.Headers(), arg0));
+            using var topic = _metadata?.Topic();
+            using var headers = _record.Headers();
+            var key = serDes.SerializeWithHeaders(topic, headers, arg0);
+            using var disposable = key as IDisposable;
+
+            var record = _record.WithKey(key);
             return new Record<NewK, V, TJVMNewK, TJVMV>(_builder, record, _metadata);
         }
         /// <summary>
@@ -108,7 +113,12 @@ namespace MASES.KNet.Streams.Processor.Api
         {
             CheckDisposed();
             var serDes = _builder.BuildValueSerDes<NewV, TJVMNewV>();
-            var record = _record.WithValue(serDes.SerializeWithHeaders(_metadata?.Topic(), _record.Headers(), arg0));
+            using var topic = _metadata?.Topic();
+            using var headers = _record.Headers();
+            var value = serDes.SerializeWithHeaders(topic, headers, arg0);
+            using var disposable = value as IDisposable;
+
+            var record = _record.WithValue(value);
             return new Record<K, NewV, TJVMK, TJVMNewV>(_builder, record, _metadata);
         }
         /// <summary>
@@ -121,7 +131,11 @@ namespace MASES.KNet.Streams.Processor.Api
             {
                 CheckDisposed();
                 var serDes = _builder.BuildKeySerDes<K, TJVMK>();
-                return serDes.DeserializeWithHeaders(_metadata?.Topic(), _record.Headers(), _record.Key());
+                using var topic = _metadata?.Topic();
+                using var headers = _record.Headers();
+                var key = _record.Key();
+                using var disposable = key as IDisposable;
+                return serDes.DeserializeWithHeaders(topic, headers, key);
             }
         }
         /// <summary>
@@ -134,7 +148,11 @@ namespace MASES.KNet.Streams.Processor.Api
             {
                 CheckDisposed();
                 var serDes = _builder.BuildValueSerDes<V, TJVMV>();
-                return serDes.DeserializeWithHeaders(_metadata?.Topic(), _record.Headers(), _record.Value());
+                using var topic = _metadata?.Topic();
+                using var headers = _record.Headers();
+                var value = _record.Value();
+                using var disposable = value as IDisposable;
+                return serDes.DeserializeWithHeaders(topic, headers, value);
             }
         }
         /// <summary>

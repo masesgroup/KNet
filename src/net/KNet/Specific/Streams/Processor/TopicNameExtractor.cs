@@ -78,6 +78,9 @@ namespace MASES.KNet.Streams.Processor
         /// <inheritdoc/>
         public sealed override Java.Lang.String Extract(TJVMK arg0, TJVMV arg1, Org.Apache.Kafka.Streams.Processor.RecordContext arg2)
         {
+            using var disposable0 = arg0 as IDisposable;
+            using var disposable1 = arg1 as IDisposable;
+
             _keySet = _valueSet = false;
             _arg0 = arg0;
             _arg1 = arg1;

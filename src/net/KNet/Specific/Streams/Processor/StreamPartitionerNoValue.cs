@@ -55,6 +55,9 @@ namespace MASES.KNet.Streams.Processor
         /// <inheritdoc/>
         public override Optional<Set<Integer>> Partitions(Java.Lang.String arg0, TJVMK arg1, Java.Lang.Void arg2, int arg3)
         {
+            using var disposable0 = arg0 as IDisposable;
+            using var disposable1 = arg1 as IDisposable;
+            using var disposable2 = arg2 as IDisposable;
             _kSerializer ??= Factory?.BuildKeySerDes<K, TJVMK>();
             _keySet = false;
             _arg0 = arg0;

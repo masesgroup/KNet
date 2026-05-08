@@ -72,6 +72,8 @@ namespace MASES.KNet.Streams.Kstream
         /// <inheritdoc/>
         public sealed override void Apply(TJVMK arg0, TJVMV arg1)
         {
+            using var disposable0 = arg0 as IDisposable;
+            using var disposable1 = arg1 as IDisposable;
             _kSerializer ??= Factory?.BuildKeySerDes<K, TJVMK>();
             _vSerializer ??= Factory?.BuildValueSerDes<V, TJVMV>();
             _keySet = _valueSet = false;

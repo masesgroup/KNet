@@ -17,6 +17,7 @@
 */
 
 using MASES.KNet.Serialization;
+using System;
 
 namespace MASES.KNet.Streams.State
 {
@@ -50,6 +51,8 @@ namespace MASES.KNet.Streams.State
 
             var r0 = _keySerDes.Serialize(null, arg0);
             var r1 = _keySerDes.Serialize(null, arg1);
+            using var disposable0 = r0 as IDisposable;
+            using var disposable1 = r1 as IDisposable;
 
             return new(factory, Store.Fetch(r0, r1, arg2, arg3));
         }
@@ -78,6 +81,8 @@ namespace MASES.KNet.Streams.State
             var _keySerDes = factory?.BuildKeySerDes<K, TJVMK>();
 
             var r0 = _keySerDes.Serialize(null, arg0);
+            using var disposable0 = r0 as IDisposable;
+
             return new(factory, Store.Fetch(r0, arg1, arg2));
         }
         /// <summary>
@@ -93,6 +98,9 @@ namespace MASES.KNet.Streams.State
 
             var r0 = _keySerDes.Serialize(null, arg0);
             var agg = Store.Fetch(r0, arg1);
+            using var disposable0 = r0 as IDisposable;
+            using var disposable1 = agg as IDisposable;
+
             return new ValueAndTimestamp<V, TJVMV>(factory, agg);
         }
         /// <summary>
@@ -116,6 +124,8 @@ namespace MASES.KNet.Streams.State
 
             var r0 = _keySerDes.Serialize(null, arg0);
             var r1 = _keySerDes.Serialize(null, arg1);
+            using var disposable0 = r0 as IDisposable;
+            using var disposable1 = r1 as IDisposable;
 
             return new(factory, Store.BackwardFetch(r0, r1, arg2, arg3));
         }
@@ -144,6 +154,7 @@ namespace MASES.KNet.Streams.State
             var _keySerDes = factory?.BuildKeySerDes<K, TJVMK>();
 
             var r0 = _keySerDes.Serialize(null, arg0);
+            using var disposable0 = r0 as IDisposable;
 
             return new(factory, Store.BackwardFetch(r0, arg1, arg2));
         }

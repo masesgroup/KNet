@@ -35,6 +35,20 @@ namespace MASES.KNet.Streams.Kstream
         ISerDes<V, TJVMV> _vSerializer = null;
         ISerDes<VR, TJVMVR> _vrSerializer = null;
 
+        /// <inheritdoc/>
+        public ValueMapper()
+        {
+            OnApplyDispose = DisposeResult;
+        }
+        /// <summary>
+        /// Disposes the results of the <see cref="Apply(TJVMV)"/> or <see cref="OnApply"/> operations
+        /// </summary>
+        /// <param name="result">The result to be disposed</param>
+        protected virtual void DisposeResult(TJVMVR result)
+        {
+            (result as IDisposable)?.Dispose();
+        }
+
         IGenericSerDesFactory _factory;
         IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set => _factory = value; }
         /// <summary>
@@ -61,6 +75,8 @@ namespace MASES.KNet.Streams.Kstream
         /// <inheritdoc/>
         public override TJVMVR Apply(TJVMV arg0)
         {
+            using var disposable0 = arg0 as IDisposable;
+
             _vSerializer ??= Factory?.BuildValueSerDes<V, TJVMV>();
             _vrSerializer ??= Factory?.BuildValueSerDes<VR, TJVMVR>();
 
@@ -113,7 +129,9 @@ namespace MASES.KNet.Streams.Kstream
             var result = new ArrayList<TJVMVR>();
             foreach (var item in res)
             {
-                result.Add(_vrSerializer.Serialize(null, item));
+                var localValue = _vrSerializer.Serialize(null, item);
+                using var localDisposable = localValue as IDisposable;
+                result.Add(localValue);
             }
             return result;
         }

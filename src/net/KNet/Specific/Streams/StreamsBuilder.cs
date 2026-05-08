@@ -119,7 +119,8 @@ namespace MASES.KNet.Streams
             CheckDisposed();
             if (arg1 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
             if (arg2 is IGenericSerDesFactoryApplier applier2) applier2.Factory = _factory;
-            return new GlobalKTable<K, V, TJVMK, TJVMV>(_factory, _builder.GlobalTable<TJVMK, TJVMV>(arg0, arg1, arg2));
+            using Java.Lang.String jArg0 = arg0;
+            return new GlobalKTable<K, V, TJVMK, TJVMV>(_factory, _builder.GlobalTable<TJVMK, TJVMV>(jArg0, arg1, arg2));
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/StreamsBuilder.html#globalTable(java.lang.String,org.apache.kafka.streams.kstream.Consumed)"/>
@@ -135,7 +136,8 @@ namespace MASES.KNet.Streams
         {
             CheckDisposed();
             if (arg1 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
-            return new GlobalKTable<K, V, TJVMK, TJVMV>(_factory, _builder.GlobalTable<TJVMK, TJVMV>(arg0, arg1));
+            using Java.Lang.String jArg0 = arg0;
+            return new GlobalKTable<K, V, TJVMK, TJVMV>(_factory, _builder.GlobalTable<TJVMK, TJVMV>(jArg0, arg1));
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/StreamsBuilder.html#globalTable(java.lang.String,org.apache.kafka.streams.kstream.Materialized)"/>
@@ -151,7 +153,8 @@ namespace MASES.KNet.Streams
         {
             CheckDisposed();
             if (arg1 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
-            return new GlobalKTable<K, V, TJVMK, TJVMV>(_factory, _builder.GlobalTable<TJVMK, TJVMV>(arg0, arg1));
+            using Java.Lang.String jArg0 = arg0;
+            return new GlobalKTable<K, V, TJVMK, TJVMV>(_factory, _builder.GlobalTable<TJVMK, TJVMV>(jArg0, arg1));
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/StreamsBuilder.html#globalTable(java.lang.String)"/>
@@ -165,7 +168,8 @@ namespace MASES.KNet.Streams
         public GlobalKTable<K, V, TJVMK, TJVMV> GlobalTable<K, V, TJVMK, TJVMV>(string arg0)
         {
             CheckDisposed();
-            return new GlobalKTable<K, V, TJVMK, TJVMV>(_factory, _builder.GlobalTable<TJVMK, TJVMV>(arg0));
+            using Java.Lang.String jArg0 = arg0;
+            return new GlobalKTable<K, V, TJVMK, TJVMV>(_factory, _builder.GlobalTable<TJVMK, TJVMV>(jArg0));
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/StreamsBuilder.html#stream(java.lang.String,org.apache.kafka.streams.kstream.Consumed)"/>
@@ -181,7 +185,8 @@ namespace MASES.KNet.Streams
         {
             CheckDisposed();
             if (arg1 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
-            return new KStream<K, V, TJVMK, TJVMV>(_factory, _builder.Stream<TJVMK, TJVMV>(arg0));
+            using Java.Lang.String jArg0 = arg0;
+            return new KStream<K, V, TJVMK, TJVMV>(_factory, _builder.Stream<TJVMK, TJVMV>(jArg0));
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/StreamsBuilder.html#stream(java.lang.String)"/>
@@ -195,7 +200,8 @@ namespace MASES.KNet.Streams
         public KStream<K, V, TJVMK, TJVMV> Stream<K, V, TJVMK, TJVMV>(string arg0)
         {
             CheckDisposed();
-            return new KStream<K, V, TJVMK, TJVMV>(_factory, _builder.Stream<TJVMK, TJVMV>(arg0));
+            using Java.Lang.String jArg0 = arg0;
+            return new KStream<K, V, TJVMK, TJVMV>(_factory, _builder.Stream<TJVMK, TJVMV>(jArg0));
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/StreamsBuilder.html#stream(java.util.Collection,org.apache.kafka.streams.kstream.Consumed)"/>
@@ -211,7 +217,8 @@ namespace MASES.KNet.Streams
         {
             CheckDisposed();
             if (arg1 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
-            return new KStream<K, V, TJVMK, TJVMV>(_factory, _builder.Stream<TJVMK, TJVMV>(arg0.ToJVMCollection<Java.Lang.String, string>(), arg1));
+            using var collection = arg0.ToJVMCollection<Java.Lang.String, string>();
+            return new KStream<K, V, TJVMK, TJVMV>(_factory, _builder.Stream<TJVMK, TJVMV>(collection, arg1));
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/StreamsBuilder.html#stream(java.util.Collection)"/>
@@ -225,7 +232,8 @@ namespace MASES.KNet.Streams
         public KStream<K, V, TJVMK, TJVMV> Stream<K, V, TJVMK, TJVMV>(System.Collections.Generic.IEnumerable<string> arg0)
         {
             CheckDisposed();
-            return new KStream<K, V, TJVMK, TJVMV>(_factory, _builder.Stream<TJVMK, TJVMV>(arg0.ToJVMCollection<Java.Lang.String, string>()));
+            using var collection = arg0.ToJVMCollection<Java.Lang.String, string>();
+            return new KStream<K, V, TJVMK, TJVMV>(_factory, _builder.Stream<TJVMK, TJVMV>(collection));
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/StreamsBuilder.html#stream(java.util.regex.Pattern,org.apache.kafka.streams.kstream.Consumed)"/>
@@ -273,7 +281,8 @@ namespace MASES.KNet.Streams
             CheckDisposed();
             if (arg1 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
             if (arg2 is IGenericSerDesFactoryApplier applier2) applier2.Factory = _factory;
-            return new KTable<K, V, TJVMK, TJVMV>(_factory, _builder.Table<TJVMK, TJVMV>(arg0, arg1, arg2));
+            using Java.Lang.String jArg0 = arg0;
+            return new KTable<K, V, TJVMK, TJVMV>(_factory, _builder.Table<TJVMK, TJVMV>(jArg0, arg1, arg2));
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/StreamsBuilder.html#table(java.lang.String,org.apache.kafka.streams.kstream.Consumed)"/>
@@ -289,7 +298,8 @@ namespace MASES.KNet.Streams
         {
             CheckDisposed();
             if (arg1 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
-            return new KTable<K, V, TJVMK, TJVMV>(_factory, _builder.Table<TJVMK, TJVMV>(arg0, arg1));
+            using Java.Lang.String jArg0 = arg0;
+            return new KTable<K, V, TJVMK, TJVMV>(_factory, _builder.Table<TJVMK, TJVMV>(jArg0, arg1));
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/StreamsBuilder.html#table(java.lang.String,org.apache.kafka.streams.kstream.Materialized)"/>
@@ -305,7 +315,8 @@ namespace MASES.KNet.Streams
         {
             CheckDisposed();
             if (arg1 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
-            return new KTable<K, V, TJVMK, TJVMV>(_factory, _builder.Table<TJVMK, TJVMV>(arg0, arg1));
+            using Java.Lang.String jArg0 = arg0;
+            return new KTable<K, V, TJVMK, TJVMV>(_factory, _builder.Table<TJVMK, TJVMV>(jArg0, arg1));
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/StreamsBuilder.html#table(java.lang.String)"/>
@@ -319,7 +330,8 @@ namespace MASES.KNet.Streams
         public KTable<K, V, TJVMK, TJVMV> Table<K, V, TJVMK, TJVMV>(string arg0)
         {
             CheckDisposed();
-            return new KTable<K, V, TJVMK, TJVMV>(_factory, _builder.Table<TJVMK, TJVMV>(arg0));
+            using Java.Lang.String jArg0 = arg0;
+            return new KTable<K, V, TJVMK, TJVMV>(_factory, _builder.Table<TJVMK, TJVMV>(jArg0));
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/StreamsBuilder.html#addStateStore(org.apache.kafka.streams.state.StoreBuilder)"/>

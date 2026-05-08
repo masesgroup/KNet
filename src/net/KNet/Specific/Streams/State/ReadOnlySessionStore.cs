@@ -17,6 +17,7 @@
 */
 
 using MASES.KNet.Serialization;
+using System;
 
 namespace MASES.KNet.Streams.State
 {
@@ -42,6 +43,9 @@ namespace MASES.KNet.Streams.State
 
             var r0 = _keySerDes.Serialize(null, arg0);
             var r1 = _keySerDes.Serialize(null, arg1);
+            using var disposable0 = r0 as IDisposable;
+            using var disposable1 = r1 as IDisposable;
+
             return new WindowedKeyValueIterator<K, AGG, TJVMK, TJVMAGG>(factory, Store.Fetch(r0, r1));
         }
         /// <summary>
@@ -55,6 +59,8 @@ namespace MASES.KNet.Streams.State
             var _keySerDes = factory?.BuildKeySerDes<K, TJVMK>();
 
             var r0 = _keySerDes.Serialize(null, arg0);
+            using var disposable0 = r0 as IDisposable;
+
             return new WindowedKeyValueIterator<K, AGG, TJVMK, TJVMAGG>(factory, Store.Fetch(r0));
         }
         /// <summary>
@@ -72,6 +78,9 @@ namespace MASES.KNet.Streams.State
 
             var r0 = _keySerDes.Serialize(null, arg0);
             var agg = Store.FetchSession(r0, arg1, arg2);
+            using var disposable0 = r0 as IDisposable;
+            using var disposable1 = agg as IDisposable;
+
             return _valueSerDes.Deserialize(null, agg);
         }
         /// <summary>
@@ -89,6 +98,9 @@ namespace MASES.KNet.Streams.State
 
             var r0 = _keySerDes.Serialize(null, arg0);
             var agg = Store.FetchSession(r0, arg1, arg2);
+            using var disposable0 = r0 as IDisposable;
+            using var disposable1 = agg as IDisposable;
+
             return _valueSerDes.Deserialize(null, agg);
         }
         /// <summary>
@@ -104,6 +116,9 @@ namespace MASES.KNet.Streams.State
 
             var r0 = _keySerDes.Serialize(null, arg0);
             var r1 = _keySerDes.Serialize(null, arg1);
+            using var disposable0 = r0 as IDisposable;
+            using var disposable1 = r1 as IDisposable;
+
             return new WindowedKeyValueIterator<K, AGG, TJVMK, TJVMAGG>(factory, Store.BackwardFetch(r0, r1));
         }
         /// <summary>
@@ -117,6 +132,8 @@ namespace MASES.KNet.Streams.State
             var _keySerDes = factory?.BuildKeySerDes<K, TJVMK>();
 
             var r0 = _keySerDes.Serialize(null, arg0);
+            using var disposable0 = r0 as IDisposable;
+
             return new WindowedKeyValueIterator<K, AGG, TJVMK, TJVMAGG>(factory, Store.BackwardFetch(r0));
         }
         /// <summary>
@@ -132,6 +149,8 @@ namespace MASES.KNet.Streams.State
             var _keySerDes = factory?.BuildKeySerDes<K, TJVMK>();
 
             var r0 = _keySerDes.Serialize(null, arg0);
+            using var disposable0 = r0 as IDisposable;
+
             return new WindowedKeyValueIterator<K, AGG, TJVMK, TJVMAGG>(factory, Store.BackwardFindSessions(r0, arg1, arg2));
         }
         /// <summary>
@@ -149,6 +168,9 @@ namespace MASES.KNet.Streams.State
 
             var r0 = _keySerDes.Serialize(null, arg0);
             var r1 = _keySerDes.Serialize(null, arg1);
+            using var disposable0 = r0 as IDisposable;
+            using var disposable1 = r1 as IDisposable;
+
             return new WindowedKeyValueIterator<K, AGG, TJVMK, TJVMAGG>(factory, Store.BackwardFindSessions(r0, r1, arg2, arg3));
         }
         /// <summary>
@@ -166,6 +188,9 @@ namespace MASES.KNet.Streams.State
 
             var r0 = _keySerDes.Serialize(null, arg0);
             var r1 = _keySerDes.Serialize(null, arg1);
+            using var disposable0 = r0 as IDisposable;
+            using var disposable1 = r1 as IDisposable;
+
             return new WindowedKeyValueIterator<K, AGG, TJVMK, TJVMAGG>(factory, Store.BackwardFindSessions(r0, r1, arg2, arg3));
         }
         /// <summary>
@@ -181,6 +206,8 @@ namespace MASES.KNet.Streams.State
             var _keySerDes = factory?.BuildKeySerDes<K, TJVMK>();
 
             var r0 = _keySerDes.Serialize(null, arg0);
+            using var disposable0 = r0 as IDisposable;
+
             return new WindowedKeyValueIterator<K, AGG, TJVMK, TJVMAGG>(factory, Store.BackwardFindSessions(r0, arg1, arg2));
         }
         /// <summary>
@@ -196,6 +223,8 @@ namespace MASES.KNet.Streams.State
             var _keySerDes = factory?.BuildKeySerDes<K, TJVMK>();
 
             var r0 = _keySerDes.Serialize(null, arg0);
+            using var disposable0 = r0 as IDisposable;
+
             return new WindowedKeyValueIterator<K, AGG, TJVMK, TJVMAGG>(factory, Store.BackwardFindSessions(r0, arg1, arg2));
         }
         /// <summary>
@@ -213,6 +242,9 @@ namespace MASES.KNet.Streams.State
 
             var r0 = _keySerDes.Serialize(null, arg0);
             var r1 = _keySerDes.Serialize(null, arg1);
+            using var disposable0 = r0 as IDisposable;
+            using var disposable1 = r1 as IDisposable;
+
             return new WindowedKeyValueIterator<K, AGG, TJVMK, TJVMAGG>(factory, Store.FindSessions(r0, r1, arg2, arg3));
         }
         /// <summary>
@@ -230,6 +262,9 @@ namespace MASES.KNet.Streams.State
 
             var r0 = _keySerDes.Serialize(null, arg0);
             var r1 = _keySerDes.Serialize(null, arg1);
+            using var disposable0 = r0 as IDisposable;
+            using var disposable1 = r1 as IDisposable;
+
             return new WindowedKeyValueIterator<K, AGG, TJVMK, TJVMAGG>(factory, Store.FindSessions(r0, r1, arg2, arg3));
         }
         /// <summary>
@@ -245,6 +280,8 @@ namespace MASES.KNet.Streams.State
             var _keySerDes = factory?.BuildKeySerDes<K, TJVMK>();
 
             var r0 = _keySerDes.Serialize(null, arg0);
+            using var disposable0 = r0 as IDisposable;
+
             return new WindowedKeyValueIterator<K, AGG, TJVMK, TJVMAGG>(factory, Store.FindSessions(r0, arg1, arg2));
         }
     }
