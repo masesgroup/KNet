@@ -36,6 +36,20 @@ namespace MASES.KNet.Streams.Utils
         ISerDes<KO, TJVMKO> _keyOutputSerializer = null;
         ISerDes<V, TJVMV> _valueSerializer = null;
 
+        /// <inheritdoc/>
+        public BiFunction()
+        {
+            OnApplyDispose = DisposeResult;
+        }
+        /// <summary>
+        /// Disposes the results of the <see cref="Apply(TJVMK, TJVMV)"/> or <see cref="OnApply"/> operations
+        /// </summary>
+        /// <param name="result">The result to be disposed</param>
+        protected virtual void DisposeResult(TJVMKO result)
+        {
+            (result as IDisposable)?.Dispose();
+        }
+
         IGenericSerDesFactory _factory;
         IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set => _factory = value; }
         /// <summary>
@@ -45,18 +59,26 @@ namespace MASES.KNet.Streams.Utils
         /// <inheritdoc/>
         public override TJVMKO Apply(TJVMK o1, TJVMV o2)
         {
-            IGenericSerDesFactory factory = null;
-            if (this is IGenericSerDesFactoryApplier applier && (factory = applier.Factory) == null)
+            try
             {
-                throw new InvalidOperationException("The serialization factory instance was not set.");
-            }
-            _keySerializer ??= factory?.BuildKeySerDes<K, TJVMK>();
-            _keyOutputSerializer ??= factory?.BuildKeySerDes<KO, TJVMKO>();
-            _valueSerializer ??= factory?.BuildValueSerDes<V, TJVMV>();
-            var methodToExecute = (OnApply != null) ? OnApply : Apply;
-            var res = methodToExecute(_keySerializer.Deserialize(null, o1), _valueSerializer.Deserialize(null, o2));
+                IGenericSerDesFactory factory = null;
+                if (this is IGenericSerDesFactoryApplier applier && (factory = applier.Factory) == null)
+                {
+                    throw new InvalidOperationException("The serialization factory instance was not set.");
+                }
+                _keySerializer ??= factory?.BuildKeySerDes<K, TJVMK>();
+                _keyOutputSerializer ??= factory?.BuildKeySerDes<KO, TJVMKO>();
+                _valueSerializer ??= factory?.BuildValueSerDes<V, TJVMV>();
+                var methodToExecute = (OnApply != null) ? OnApply : Apply;
+                var res = methodToExecute(_keySerializer.Deserialize(null, o1), _valueSerializer.Deserialize(null, o2));
 
-            return _keyOutputSerializer.Serialize(null, res);
+                return _keyOutputSerializer.Serialize(null, res);
+            }
+            finally
+            {
+                (o1 as IDisposable)?.Dispose();
+                (o2 as IDisposable)?.Dispose();
+            }
         }
         /// <summary>
         /// Executes the Function action in the CLR
