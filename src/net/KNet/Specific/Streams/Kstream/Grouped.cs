@@ -88,7 +88,8 @@ namespace MASES.KNet.Streams.Kstream
         /// <returns><see cref="Grouped{K, V, TJVMK, TJVMV}"/></returns>
         public static Grouped<K, V, TJVMK, TJVMV> As(string arg0)
         {
-            var cons = Org.Apache.Kafka.Streams.Kstream.Grouped<TJVMK, TJVMV>.As(arg0);
+            using Java.Lang.String jString = arg0;
+            var cons = Org.Apache.Kafka.Streams.Kstream.Grouped<TJVMK, TJVMV>.As(jString);
             return new Grouped<K, V, TJVMK, TJVMV>(cons);
         }
         /// <summary>
@@ -120,7 +121,8 @@ namespace MASES.KNet.Streams.Kstream
         /// <returns><see cref="Grouped{K, V, TJVMK, TJVMV}"/></returns>
         public static Grouped<K, V, TJVMK, TJVMV> With(string arg0, ISerDes<K, TJVMK> arg1, ISerDes<V, TJVMV> arg2)
         {
-            var cons = Org.Apache.Kafka.Streams.Kstream.Grouped<TJVMK, TJVMV>.With(arg0, arg1.KafkaSerde, arg2.KafkaSerde);
+            using Java.Lang.String jString = arg0;
+            var cons = Org.Apache.Kafka.Streams.Kstream.Grouped<TJVMK, TJVMV>.With(jString, arg1.KafkaSerde, arg2.KafkaSerde);
             return new Grouped<K, V, TJVMK, TJVMV>(cons);
         }
         /// <summary>

@@ -53,8 +53,13 @@ namespace MASES.KNet.Streams
             if (fromPrefetched)
             {
                 _keySerDes ??= _factory?.BuildKeySerDes<K, TJVMK>();
-                _key = _keySerDes.Deserialize(null, _inner.Key);
-                _keyStored = true;
+                var key = _inner.Key;
+                try
+                {
+                    _key = _keySerDes.Deserialize(null, key);
+                    _keyStored = true;
+                }
+                finally { (key as IDisposable)?.Dispose(); }
             }
         }
 
@@ -99,8 +104,13 @@ namespace MASES.KNet.Streams
                 if (!_keyStored)
                 {
                     _keySerDes ??= _factory?.BuildKeySerDes<K, TJVMK>();
-                    _key = _keySerDes.Deserialize(null, _inner.Key);
-                    _keyStored = true;
+                    var key = _inner.Key;
+                    try
+                    {
+                        _key = _keySerDes.Deserialize(null, key);
+                        _keyStored = true;
+                    }
+                    finally { (key as IDisposable)?.Dispose(); }
                 }
                 return _key;
             }

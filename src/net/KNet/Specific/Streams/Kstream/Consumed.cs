@@ -101,7 +101,8 @@ namespace MASES.KNet.Streams.Kstream
         /// <returns><see cref="Consumed{K, V, TJVMK, TJVMV}"/></returns>
         public static Consumed<K, V, TJVMK, TJVMV> As(string arg0)
         {
-            var cons = Org.Apache.Kafka.Streams.Kstream.Consumed<TJVMK, TJVMV>.As(arg0);
+            using Java.Lang.String jString = arg0;
+            var cons = Org.Apache.Kafka.Streams.Kstream.Consumed<TJVMK, TJVMV>.As(jString);
             return new Consumed<K, V, TJVMK, TJVMV>(cons);
         }
         /// <summary>

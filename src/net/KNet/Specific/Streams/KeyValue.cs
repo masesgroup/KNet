@@ -55,12 +55,22 @@ namespace MASES.KNet.Streams
             {
                 _keySerDes ??= _factory?.BuildKeySerDes<K, TJVMK>();
                 if (_keySerDes == null) throw new InvalidOperationException("Unable to resolve key serializer/deserializer for prefetched KeyValue.");
-                _key = _keySerDes.Deserialize(null, _inner.Key);
-                _keyStored = true;
+                var jKey = _inner.Key;
+                try
+                {
+                    _key = _keySerDes.Deserialize(null, jKey);
+                    _keyStored = true;
+                }
+                finally { (jKey as IDisposable)?.Dispose(); }
                 _valueSerDes ??= _factory?.BuildValueSerDes<V, TJVMV>();
                 if (_valueSerDes == null) throw new InvalidOperationException("Unable to resolve value serializer/deserializer for prefetched KeyValue.");
-                _value = _valueSerDes.Deserialize(null, _inner.Value);
-                _valueStored = true;
+                var jValue = _inner.Value;
+                try
+                {
+                    _value = _valueSerDes.Deserialize(null, jValue);
+                    _valueStored = true;
+                }
+                finally { (jValue as IDisposable)?.Dispose(); }
             }
         }
 
@@ -105,8 +115,13 @@ namespace MASES.KNet.Streams
                 if (!_keyStored)
                 {
                     _keySerDes ??= _factory?.BuildKeySerDes<K, TJVMK>() ?? throw new InvalidOperationException("Key serializer/deserializer is not available.");
-                    _key = _keySerDes.Deserialize(null, _inner.Key);
-                    _keyStored = true;
+                    var key = _inner.Key;
+                    try
+                    {
+                        _key = _keySerDes.Deserialize(null, key);
+                        _keyStored = true;
+                    }
+                    finally { (key as IDisposable)?.Dispose(); }
                 }
                 return _key;
             }
@@ -122,8 +137,13 @@ namespace MASES.KNet.Streams
                 if (!_valueStored)
                 {
                     _valueSerDes ??= _factory?.BuildValueSerDes<V, TJVMV>() ?? throw new InvalidOperationException("Value serializer/deserializer is not available.");
-                    _value = _valueSerDes.Deserialize(null, _inner.Value);
-                    _valueStored = true;
+                    var value = _inner.Value;
+                    try
+                    {
+                        _value = _valueSerDes.Deserialize(null, value);
+                        _valueStored = true;
+                    }
+                    finally { (value as IDisposable)?.Dispose(); }
                 }
                 return _value;
             }

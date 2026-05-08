@@ -94,8 +94,15 @@ namespace MASES.KNet.Streams.Processor.Api
         {
             CheckDisposed();
             var serDes = _builder.BuildKeySerDes<NewK, TJVMNewK>();
-            var record = _record.WithKey(serDes.SerializeWithHeaders(_metadata?.Topic(), _record.Headers(), arg0));
-            return new Record<NewK, V, TJVMNewK, TJVMV>(_builder, record, _metadata);
+            using var topic = _metadata?.Topic();
+            using var headers = _record.Headers();
+            var key = serDes.SerializeWithHeaders(topic, headers, arg0);
+            try
+            {
+                var record = _record.WithKey(key);
+                return new Record<NewK, V, TJVMNewK, TJVMV>(_builder, record, _metadata);
+            }
+            finally { (key as IDisposable)?.Dispose(); }
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/processor/api/Record.html#withValue(java.lang.Object)"/>
@@ -108,8 +115,15 @@ namespace MASES.KNet.Streams.Processor.Api
         {
             CheckDisposed();
             var serDes = _builder.BuildValueSerDes<NewV, TJVMNewV>();
-            var record = _record.WithValue(serDes.SerializeWithHeaders(_metadata?.Topic(), _record.Headers(), arg0));
-            return new Record<K, NewV, TJVMK, TJVMNewV>(_builder, record, _metadata);
+            using var topic = _metadata?.Topic();
+            using var headers = _record.Headers();
+            var value = serDes.SerializeWithHeaders(topic, headers, arg0);
+            try
+            {
+                var record = _record.WithValue(value);
+                return new Record<K, NewV, TJVMK, TJVMNewV>(_builder, record, _metadata);
+            }
+            finally { (value as IDisposable)?.Dispose(); }
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/processor/api/Record.html#key()"/>
@@ -121,7 +135,17 @@ namespace MASES.KNet.Streams.Processor.Api
             {
                 CheckDisposed();
                 var serDes = _builder.BuildKeySerDes<K, TJVMK>();
-                return serDes.DeserializeWithHeaders(_metadata?.Topic(), _record.Headers(), _record.Key());
+                using var topic = _metadata?.Topic();
+                using var headers = _record.Headers();
+                var key = _record.Key();
+                try
+                {
+                    return serDes.DeserializeWithHeaders(topic, headers, key);
+                }
+                finally
+                {
+                    (key as IDisposable)?.Dispose();
+                }
             }
         }
         /// <summary>
@@ -134,7 +158,17 @@ namespace MASES.KNet.Streams.Processor.Api
             {
                 CheckDisposed();
                 var serDes = _builder.BuildValueSerDes<V, TJVMV>();
-                return serDes.DeserializeWithHeaders(_metadata?.Topic(), _record.Headers(), _record.Value());
+                using var topic = _metadata?.Topic();
+                using var headers = _record.Headers();
+                var value = _record.Value();
+                try
+                {
+                    return serDes.DeserializeWithHeaders(topic, headers, value);
+                }
+                finally
+                {
+                    (value as IDisposable)?.Dispose();
+                }
             }
         }
         /// <summary>

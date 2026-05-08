@@ -89,7 +89,8 @@ namespace MASES.KNet.Streams.Kstream
         /// <returns><see cref="StreamJoined{K, V1, V2, TJVMK, TJVMV1, TJVMV2}"/></returns>
         public static StreamJoined<K, V1, V2, TJVMK, TJVMV1, TJVMV2> As(string arg0)
         {
-            var cons = Org.Apache.Kafka.Streams.Kstream.StreamJoined<TJVMK, TJVMV1, TJVMV2>.As(arg0);
+            using Java.Lang.String jString = arg0;
+            var cons = Org.Apache.Kafka.Streams.Kstream.StreamJoined<TJVMK, TJVMV1, TJVMV2>.As(jString);
             return new StreamJoined<K, V1, V2, TJVMK, TJVMV1, TJVMV2>(cons);
         }
         /// <summary>
@@ -202,7 +203,8 @@ namespace MASES.KNet.Streams.Kstream
         public StreamJoined<K, V1, V2, TJVMK, TJVMV1, TJVMV2> WithStoreName(string arg0)
         {
             CheckDisposed();
-            _inner?.WithStoreName(arg0);
+            using Java.Lang.String jString = arg0;
+            _inner?.WithStoreName(jString);
             return this;
         }
         /// <summary>

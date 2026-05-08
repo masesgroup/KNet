@@ -111,8 +111,15 @@ namespace MASES.KNet.Streams
                 {
                     _valueSerDes ??= _factory?.BuildValueSerDes<V, TJVMV>();
                     var kk = _valueInner.Value;
-                    _value = _valueSerDes.Deserialize(null, kk);
-                    _valueStored = true;
+                    try
+                    {
+                        _value = _valueSerDes.Deserialize(null, kk);
+                        _valueStored = true;
+                    }
+                    finally
+                    {
+                        (kk as IDisposable)?.Dispose();
+                    }
                 }
                 return _value;
             }

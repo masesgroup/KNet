@@ -72,13 +72,21 @@ namespace MASES.KNet.Streams.Kstream
         /// <inheritdoc/>
         public sealed override void Apply(TJVMK arg0, TJVMV arg1)
         {
-            _kSerializer ??= Factory?.BuildKeySerDes<K, TJVMK>();
-            _vSerializer ??= Factory?.BuildValueSerDes<V, TJVMV>();
-            _keySet = _valueSet = false;
-            _arg0 = arg0;
-            _arg1 = arg1;
+            try
+            {
+                _kSerializer ??= Factory?.BuildKeySerDes<K, TJVMK>();
+                _vSerializer ??= Factory?.BuildValueSerDes<V, TJVMV>();
+                _keySet = _valueSet = false;
+                _arg0 = arg0;
+                _arg1 = arg1;
 
-            if (OnApply != null) OnApply(this); else Apply();
+                if (OnApply != null) OnApply(this); else Apply();
+            }
+            finally
+            {
+                (arg0 as IDisposable)?.Dispose();
+                (arg1 as IDisposable)?.Dispose();
+            }
         }
         /// <inheritdoc cref="Org.Apache.Kafka.Streams.Kstream.ForeachAction{K, V}.Apply(K, V)"/>
         public virtual void Apply()

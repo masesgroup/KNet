@@ -16,6 +16,7 @@
 *  Refer to LICENSE for more information.
 */
 
+using Java.Time;
 using MASES.KNet.Serialization;
 using MASES.KNet.Streams.Processor;
 using MASES.KNet.Streams.State;
@@ -150,24 +151,38 @@ namespace MASES.KNet.Streams
         /// <inheritdoc cref="Org.Apache.Kafka.Streams.KafkaStreams.QueryMetadataForKey{K}(Java.Lang.String, K, Org.Apache.Kafka.Common.Serialization.Serializer{K})"/>
         public Org.Apache.Kafka.Streams.KeyQueryMetadata QueryMetadataForKey<K, TJVMK>(string arg0, K arg1, ISerializer<K, TJVMK> arg2)
         {
-            return _inner.QueryMetadataForKey<TJVMK>(arg0, arg2.Serialize(null, arg1), arg2.KafkaSerializer);
+            using Java.Lang.String jArg0 = arg0;
+            var tJVMK = arg2.Serialize(null, arg1);
+            try
+            {
+                return _inner.QueryMetadataForKey<TJVMK>(jArg0, tJVMK, arg2.KafkaSerializer);
+            }
+            finally { (tJVMK as IDisposable)?.Dispose(); }
         }
         /// <inheritdoc cref="Org.Apache.Kafka.Streams.KafkaStreams.QueryMetadataForKey{K}(Java.Lang.String, K, Org.Apache.Kafka.Common.Serialization.Serializer{K})"/>
         public Org.Apache.Kafka.Streams.KeyQueryMetadata QueryMetadataForKey<K>(string arg0, K arg1, ISerializer<K, byte[]> arg2)
         {
-            return QueryMetadataForKey<K, byte[]>(arg0, arg1, arg2);
+            using Java.Lang.String jArg0 = arg0;
+            return QueryMetadataForKey<K, byte[]>(jArg0, arg1, arg2);
         }
         /// <inheritdoc cref="Org.Apache.Kafka.Streams.KafkaStreams.QueryMetadataForKey{K, Arg2objectSuperK}(Java.Lang.String, K, Org.Apache.Kafka.Streams.Processor.StreamPartitioner{Arg2objectSuperK, object})"/>
         public Org.Apache.Kafka.Streams.KeyQueryMetadata QueryMetadataForKey<K, TJVMK>(string arg0, K arg1, StreamPartitioner<K, object> arg2)
         {
             if (arg2 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
             var keySerDes = _factory?.BuildKeySerDes<K, TJVMK>();
-            return _inner.IExecute<Org.Apache.Kafka.Streams.KeyQueryMetadata>("queryMetadataForKey", arg0, keySerDes.Serialize(null, arg1), arg2);
+            using Java.Lang.String jArg0 = arg0;
+            var tJVMK = keySerDes.Serialize(null, arg1);
+            try
+            {
+                return _inner.IExecute<Org.Apache.Kafka.Streams.KeyQueryMetadata>("queryMetadataForKey", jArg0, tJVMK, arg2);
+            }
+            finally { (tJVMK as IDisposable)?.Dispose(); }
         }
         /// <inheritdoc cref="Org.Apache.Kafka.Streams.KafkaStreams.QueryMetadataForKey{K}(Java.Lang.String, K, Org.Apache.Kafka.Common.Serialization.Serializer{K})"/>
         public Org.Apache.Kafka.Streams.KeyQueryMetadata QueryMetadataForKey<K>(string arg0, K arg1, StreamPartitioner<K, object> arg2)
         {
-            return QueryMetadataForKey<K, byte[]>(arg0, arg1, arg2);
+            using Java.Lang.String jArg0 = arg0;
+            return QueryMetadataForKey<K, byte[]>(jArg0, arg1, arg2);
         }
         /// <inheritdoc cref="Org.Apache.Kafka.Streams.KafkaStreams.Query{R}(Org.Apache.Kafka.Streams.Query.StateQueryRequest{R})"/>
         public Org.Apache.Kafka.Streams.Query.StateQueryResult<R> Query<R>(Org.Apache.Kafka.Streams.Query.StateQueryRequest<R> arg0)
@@ -191,7 +206,8 @@ namespace MASES.KNet.Streams
         public TKNetManagedStore Store<TKNetManagedStore, TStore>(string storageId, QueryableStoreTypes.StoreType<TKNetManagedStore, TStore> storeType)
             where TKNetManagedStore : ManagedStore<TStore>, IGenericSerDesFactoryApplier, new()
         {
-            var sqp = Org.Apache.Kafka.Streams.StoreQueryParameters<TStore>.FromNameAndType(storageId, storeType.Store);
+            using Java.Lang.String jStorageId = storageId;
+            var sqp = Org.Apache.Kafka.Streams.StoreQueryParameters<TStore>.FromNameAndType(jStorageId, storeType.Store);
             TKNetManagedStore store = new();
             var substore = _inner.Store<TStore>(sqp);
             if (store is IManagedStore<TStore> knetManagedStore)
@@ -207,7 +223,8 @@ namespace MASES.KNet.Streams
         /// <inheritdoc cref="Org.Apache.Kafka.Streams.KafkaStreams.StreamsMetadataForStore(Java.Lang.String)"/>
         public Java.Util.Collection<Org.Apache.Kafka.Streams.StreamsMetadata> StreamsMetadataForStore(string arg0)
         {
-            return _inner.StreamsMetadataForStore(arg0);
+            using Java.Lang.String jStorageId = arg0;
+            return _inner.StreamsMetadataForStore(jStorageId);
         }
         /// <inheritdoc cref="Org.Apache.Kafka.Streams.KafkaStreams.AllLocalStorePartitionLags"/>
         public Java.Util.Map<Java.Lang.String, Java.Util.Map<Java.Lang.Integer, Org.Apache.Kafka.Streams.LagInfo>> AllLocalStorePartitionLags => _inner.AllLocalStorePartitionLags();
@@ -229,7 +246,8 @@ namespace MASES.KNet.Streams
         /// <inheritdoc cref="Org.Apache.Kafka.Streams.KafkaStreams.RemoveStreamThread(Java.Time.Duration)"/>
         public Java.Lang.String RemoveStreamThread(TimeSpan arg0)
         {
-            var res = _inner.RemoveStreamThread(arg0);
+            using Duration jArg0 = arg0;
+            using var res = _inner.RemoveStreamThread(jArg0);
             return res.IsPresent() ? res.Get() : null;
         }
         /// <inheritdoc cref="Org.Apache.Kafka.Streams.KafkaStreams.MetadataForLocalThreads"/>
@@ -239,6 +257,7 @@ namespace MASES.KNet.Streams
         /// <inheritdoc cref="Org.Apache.Kafka.Streams.KafkaStreams.Close()"/>
         public bool Close(TimeSpan arg0)
         {
+            using Duration jArg0 = arg0;
             return _inner.Close(arg0);
         }
         /// <inheritdoc cref="Org.Apache.Kafka.Streams.KafkaStreams.Close(Java.Time.Duration)"/>

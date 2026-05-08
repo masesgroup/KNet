@@ -17,6 +17,7 @@
 */
 
 using MASES.KNet.Serialization;
+using System;
 
 namespace MASES.KNet.Streams.State
 {
@@ -52,8 +53,15 @@ namespace MASES.KNet.Streams.State
 
             var r0 = _keySerDes.Serialize(null, arg0);
             var r1 = _keySerDes.Serialize(null, arg1);
-
-            return new(factory, Store.Range(r0, r1));
+            try
+            {
+                return new(factory, Store.Range(r0, r1));
+            }
+            finally
+            {
+                (r0 as IDisposable)?.Dispose();
+                (r1 as IDisposable)?.Dispose();
+            }
         }
         /// <summary>
         /// KNet implementation of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/state/ReadOnlyKeyValueStore.html#get(java.lang.Object)"/>
@@ -68,15 +76,31 @@ namespace MASES.KNet.Streams.State
 
             var r0 = _keySerDes.Serialize(null, arg0);
             var res = Store.Get(r0);
-            return _valueSerDes.Deserialize(null, res);
+            try
+            {
+                return _valueSerDes.Deserialize(null, res);
+            }
+            finally
+            {
+                (r0 as IDisposable)?.Dispose();
+                (res as IDisposable)?.Dispose();
+            }
         }
         /// <summary>
         /// KNet implementation of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/state/ReadOnlyKeyValueStore.html#prefixScan(java.lang.Object,org.apache.kafka.common.serialization.Serializer)"/>
         /// </summary>
         /// <returns><see cref="KeyValueIterator{K, V, TJVMK, TJVMV}"/></returns>
-        public KeyValueIterator<K, V, TJVMK, TJVMV> PrefixScan<P, TJVMP>(P arg0, ISerDes<P, TJVMP> arg1) 
+        public KeyValueIterator<K, V, TJVMK, TJVMV> PrefixScan<P, TJVMP>(P arg0, ISerDes<P, TJVMP> arg1)
         {
-            return new(Factory, Store.PrefixScan(arg1.Serialize(null, arg0), arg1.KafkaSerializer));
+            var r0 = arg1.Serialize(null, arg0);
+            try
+            {
+                return new(Factory, Store.PrefixScan(r0, arg1.KafkaSerializer));
+            }
+            finally
+            {
+                (r0 as IDisposable)?.Dispose();
+            }
         }
         /// <summary>
         /// KNet implementation of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/state/ReadOnlyKeyValueStore.html#reverseAll()"/>
@@ -96,8 +120,15 @@ namespace MASES.KNet.Streams.State
 
             var r0 = _keySerDes.Serialize(null, arg0);
             var r1 = _keySerDes.Serialize(null, arg1);
-
-            return new(factory, Store.ReverseRange(r0, r1));
+            try
+            {
+                return new(factory, Store.ReverseRange(r0, r1));
+            }
+            finally
+            {
+                (r0 as IDisposable)?.Dispose();
+                (r1 as IDisposable)?.Dispose();
+            }
         }
     }
 

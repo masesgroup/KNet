@@ -98,7 +98,8 @@ namespace MASES.KNet.Streams.Kstream
         /// <returns><see cref="Produced{K, V, TJVMK, TJVMV}"/></returns>
         public static Produced<K, V, TJVMK, TJVMV> As(string arg0)
         {
-            var cons = Org.Apache.Kafka.Streams.Kstream.Produced<TJVMK, TJVMV>.As(arg0);
+            using Java.Lang.String jString = arg0;
+            var cons = Org.Apache.Kafka.Streams.Kstream.Produced<TJVMK, TJVMV>.As(jString);
             return new Produced<K, V, TJVMK, TJVMV>(cons);
         }
         /// <summary>
