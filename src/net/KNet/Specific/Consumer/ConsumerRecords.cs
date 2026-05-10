@@ -143,7 +143,7 @@ namespace MASES.KNet.Consumer
                 return new ConsumerRecordsPrefetchableEnumerator<K, V, TJVMK, TJVMV>(_records.Iterator(), _keyDeserializer, _valueDeserializer, false);
             else
 #endif
-            return new ConsumerRecordsEnumerator<K, V, TJVMK, TJVMV>(_records, _keyDeserializer, _valueDeserializer);
+                return new ConsumerRecordsEnumerator<K, V, TJVMK, TJVMV>(_records, _keyDeserializer, _valueDeserializer);
         }
 
         System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator()
@@ -154,7 +154,7 @@ namespace MASES.KNet.Consumer
                 return new ConsumerRecordsPrefetchableEnumerator<K, V, TJVMK, TJVMV>(_records.Iterator(), _keyDeserializer, _valueDeserializer, false);
             else
 #endif
-            return new ConsumerRecordsEnumerator<K, V, TJVMK, TJVMV>(_records, _keyDeserializer, _valueDeserializer);
+                return new ConsumerRecordsEnumerator<K, V, TJVMK, TJVMV>(_records, _keyDeserializer, _valueDeserializer);
         }
 
         IAsyncEnumerator<ConsumerRecord<K, V, TJVMK, TJVMV>> IAsyncEnumerable<ConsumerRecord<K, V, TJVMK, TJVMV>>.GetAsyncEnumerator(CancellationToken cancellationToken)
@@ -165,7 +165,7 @@ namespace MASES.KNet.Consumer
                 return new ConsumerRecordsPrefetchableEnumerator<K, V, TJVMK, TJVMV>(_records.Iterator(), _keyDeserializer, _valueDeserializer, true, cancellationToken);
             else
 #endif
-            return new ConsumerRecordsEnumerator<K, V, TJVMK, TJVMV>(_records, _keyDeserializer, _valueDeserializer, cancellationToken);
+                return new ConsumerRecordsEnumerator<K, V, TJVMK, TJVMV>(_records, _keyDeserializer, _valueDeserializer, cancellationToken);
         }
     }
 }
