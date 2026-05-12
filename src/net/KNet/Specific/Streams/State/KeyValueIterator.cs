@@ -134,6 +134,13 @@ namespace MASES.KNet.Streams.State
         }
 
         /// <inheritdoc/>
+        protected override void Dispose(bool disposing)
+        {
+            _iterator?.Dispose();
+            base.Dispose(disposing);
+        }
+
+        /// <inheritdoc/>
         protected sealed override object GetEnumerator(bool isAsync, bool usePrefetech, CancellationToken cancellationToken = default)
         {
             IGenericSerDesFactory _factory = Factory;
@@ -144,8 +151,11 @@ namespace MASES.KNet.Streams.State
             {
                 return new PrefetchableLocalEnumerator(_factory, _iterator.BridgeInstance, _keySerDes, _valueSerDes, isAsync, cancellationToken);
             }
+            else
 #endif
-            return new StandardLocalEnumerator(_factory, _iterator.BridgeInstance, _keySerDes, _valueSerDes);
+            {
+                return new StandardLocalEnumerator(_factory, _iterator.BridgeInstance, _keySerDes, _valueSerDes);
+            }
         }
 
         /// <summary>
