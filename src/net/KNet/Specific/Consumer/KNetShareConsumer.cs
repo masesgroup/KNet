@@ -18,9 +18,10 @@
 
 using Java.Time;
 using Java.Util;
+using MASES.JCOBridge.C2JBridge;
+using MASES.KNet.Serialization;
 using System;
 using System.Collections.Concurrent;
-using MASES.KNet.Serialization;
 using System.Threading;
 
 namespace MASES.KNet.Consumer
@@ -247,9 +248,22 @@ namespace MASES.KNet.Consumer
                         System.Threading.Interlocked.Increment(ref _dequeing);
                         try
                         {
-                            foreach (var item in records)
+                            using var scope = new JCOBridgeDisposeFastScope();
+                            using (records)
                             {
-                                actionCallback?.Invoke(item);
+                                if (actionCallback == null) continue;
+                                bool dispose = true;
+                                foreach (var item in records)
+                                {
+                                    try
+                                    {
+                                        dispose = actionCallback.Invoke(item);
+                                    }
+                                    finally
+                                    {
+                                        if (dispose) item?.Dispose();
+                                    }
+                                }
                             }
                         }
                         catch { }

@@ -529,7 +529,7 @@ namespace MASES.KNetTest
 
         static void ConsumeAsyncSomething()
         {
-            Console.WriteLine("Starting ConsumeSomething");
+            Console.WriteLine("Starting ConsumeAsyncSomething");
             try
             {
                 /**** Direct mode ******
@@ -893,7 +893,7 @@ namespace MASES.KNetTest
 
         static void ConsumeAsyncSomethingBuffered()
         {
-            Console.WriteLine("Starting ConsumeSomethingBuffered");
+            Console.WriteLine("Starting ConsumeAsyncSomethingBuffered");
             try
             {
                 /**** Direct mode ******

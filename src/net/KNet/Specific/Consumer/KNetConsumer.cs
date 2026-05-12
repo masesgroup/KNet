@@ -22,6 +22,7 @@ using System;
 using System.Collections.Concurrent;
 using MASES.KNet.Serialization;
 using System.Threading;
+using MASES.JCOBridge.C2JBridge;
 
 namespace MASES.KNet.Consumer
 {
@@ -259,17 +260,21 @@ namespace MASES.KNet.Consumer
                         System.Threading.Interlocked.Increment(ref _dequeing);
                         try
                         {
-                            if (actionCallback == null) continue;
-                            bool dispose = true;
-                            foreach (var item in records)
+                            using var scope = new JCOBridgeDisposeFastScope();
+                            using (records)
                             {
-                                try
+                                if (actionCallback == null) continue;
+                                bool dispose = true;
+                                foreach (var item in records)
                                 {
-                                    dispose = actionCallback.Invoke(item);
-                                }
-                                finally
-                                {
-                                    if (dispose) item?.Dispose();
+                                    try
+                                    {
+                                        dispose = actionCallback.Invoke(item);
+                                    }
+                                    finally
+                                    {
+                                        if (dispose) item?.Dispose();
+                                    }
                                 }
                             }
                         }
