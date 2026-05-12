@@ -83,6 +83,7 @@ namespace MASES.KNet.Consumer
             if (disposing)
             {
                 _records?.Dispose();
+                _recordEnumerator?.Dispose();
                 _recordAsyncEnumerator?.DisposeAsync();
             }
         }
