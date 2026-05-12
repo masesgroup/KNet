@@ -470,7 +470,7 @@ namespace MASES.KNetTest
                         using var scope = new JCOBridgeDisposeFastScope();
                         while (runInParallel ? !resetEvent.WaitOne(0) : elements < NonParallelLimit)
                         {
-                            using var records = consumer.Poll((long)TimeSpan.FromMilliseconds(checkTime).TotalMilliseconds);
+                            using var records = consumer.Poll(checkTime);
                             watcherTotal.Start();
                             if (records.IsEmpty) emptyCycle++;
 #if NET7_0_OR_GREATER
@@ -601,6 +601,7 @@ namespace MASES.KNetTest
                         const int checkTime = 200;
                         int waitTime = waitMultiplier * 60 * 1000;
                         Stopwatch swCycleTime = Stopwatch.StartNew();
+                        Stopwatch consumeAsyncPrecision = new Stopwatch();
                         int emptyCycle = 0;
                         consumer.SetCallback((record) =>
                         {
@@ -616,17 +617,19 @@ namespace MASES.KNetTest
                         });
                         while (runInParallel ? !resetEvent.WaitOne(0) : elements < NonParallelLimit)
                         {
-                            if (!consumer.ConsumeAsync((long)TimeSpan.FromMilliseconds(checkTime).TotalMilliseconds))
+                            consumeAsyncPrecision.Start();
+                            if (!consumer.ConsumeAsync(checkTime))
                             {
                                 Volatile.Write(ref emptyCycle, Volatile.Read(ref emptyCycle) + 1);
                             }
+                            consumeAsyncPrecision.Stop();
                             watcherTotal.Start();
                             bool elapsedTimeout = !runInParallel && swCycleTime.ElapsedMilliseconds > waitTime;
                             bool tooManyEmptyCycles = elements != 0 && Volatile.Read(ref emptyCycle) > maxEmptyCycle;
                             if (elapsedTimeout // exit for elapsed timeout or
                                 || tooManyEmptyCycles) // if we have at least maxEmptyCycle empty cycles after received something
                             {
-                                var str = $"Forcibly exit since no {NonParallelLimit} record was received within {swCycleTime.ElapsedMilliseconds} ms. Current received is {elements} elapsedTimeout {elapsedTimeout} tooManyEmptyCycles {tooManyEmptyCycles}  ";
+                                var str = $"Forcibly exit since no {NonParallelLimit} record was received within {swCycleTime.ElapsedMilliseconds} ms. Current received is {elements} elapsedTimeout {elapsedTimeout} tooManyEmptyCycles {tooManyEmptyCycles} -> {emptyCycle} - {consumeAsyncPrecision.Elapsed}";
                                 if (elements != 0)
                                 {
                                     Console.WriteLine(str);
@@ -835,7 +838,7 @@ namespace MASES.KNetTest
                         using var scope = new JCOBridgeDisposeFastScope();
                         while (runInParallel ? !resetEvent.WaitOne(0) : elements < NonParallelLimit)
                         {
-                            using var records = consumer.Poll((long)TimeSpan.FromMilliseconds(checkTime).TotalMilliseconds);
+                            using var records = consumer.Poll(checkTime);
                             watcherTotal.Start();
                             if (records.IsEmpty) emptyCycle++;
 #if NET7_0_OR_GREATER
@@ -937,6 +940,7 @@ namespace MASES.KNetTest
                 long elements = 0;
                 Stopwatch watcherTotal = new Stopwatch();
                 Stopwatch watcher = new Stopwatch();
+
                 using var topics = Collections.Singleton((Java.Lang.String)topicToUse);
                 try
                 {
@@ -966,6 +970,7 @@ namespace MASES.KNetTest
                         const int checkTime = 200;
                         int waitTime = waitMultiplier * 60 * 1000;
                         Stopwatch swCycleTime = Stopwatch.StartNew();
+                        Stopwatch consumeAsyncPrecision = new Stopwatch();
                         int emptyCycle = 0;
                         consumer.SetCallback((record) =>
                         {
@@ -981,17 +986,19 @@ namespace MASES.KNetTest
                         });
                         while (runInParallel ? !resetEvent.WaitOne(0) : elements < NonParallelLimit)
                         {
-                            if(!consumer.ConsumeAsync((long)TimeSpan.FromMilliseconds(checkTime).TotalMilliseconds))
+                            consumeAsyncPrecision.Start();
+                            if (!consumer.ConsumeAsync(checkTime))
                             {
                                 Volatile.Write(ref emptyCycle, Volatile.Read(ref emptyCycle) + 1);
                             }
+                            consumeAsyncPrecision.Stop();
                             watcherTotal.Start();
                             bool elapsedTimeout = !runInParallel && swCycleTime.ElapsedMilliseconds > waitTime;
                             bool tooManyEmptyCycles = elements != 0 && Volatile.Read(ref emptyCycle) > maxEmptyCycle;
                             if (elapsedTimeout // exit for elapsed timeout or
                                 || tooManyEmptyCycles) // if we have at least maxEmptyCycle empty cycles after received something
                             {
-                                var str = $"Forcibly exit since no {NonParallelLimit} record was received within {swCycleTime.ElapsedMilliseconds} ms. Current received is {elements} elapsedTimeout {elapsedTimeout} tooManyEmptyCycles {tooManyEmptyCycles}  ";
+                                var str = $"Forcibly exit since no {NonParallelLimit} record was received within {swCycleTime.ElapsedMilliseconds} ms. Current received is {elements} elapsedTimeout {elapsedTimeout} tooManyEmptyCycles {tooManyEmptyCycles} -> {emptyCycle} - {consumeAsyncPrecision.Elapsed}";
                                 if (elements != 0)
                                 {
                                     Console.WriteLine(str);
