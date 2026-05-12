@@ -118,6 +118,13 @@ namespace MASES.KNet.Streams.State
         }
 
         /// <inheritdoc/>
+        protected override void Dispose(bool disposing)
+        {
+            _iterator?.Dispose();
+            base.Dispose(disposing);
+        }
+
+        /// <inheritdoc/>
         protected sealed override object GetEnumerator(bool isAsync, bool usePrefetch, CancellationToken cancellationToken = default)
         {
             IGenericSerDesFactory _factory = Factory;
