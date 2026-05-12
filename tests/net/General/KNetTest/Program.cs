@@ -617,9 +617,11 @@ namespace MASES.KNetTest
                         });
                         while (runInParallel ? !resetEvent.WaitOne(0) : elements < NonParallelLimit)
                         {
-                            consumer.ConsumeAsync((long)TimeSpan.FromMilliseconds(checkTime).TotalMilliseconds);
+                            if (!consumer.ConsumeAsync((long)TimeSpan.FromMilliseconds(checkTime).TotalMilliseconds))
+                            {
+                                Volatile.Write(ref emptyCycle, Volatile.Read(ref emptyCycle) + 1);
+                            }
                             watcherTotal.Start();
-                            Volatile.Write(ref emptyCycle, Volatile.Read(ref emptyCycle) + 1);
                             bool elapsedTimeout = !runInParallel && swCycleTime.ElapsedMilliseconds > waitTime;
                             bool tooManyEmptyCycles = elements != 0 && Volatile.Read(ref emptyCycle) > maxEmptyCycle;
                             if (elapsedTimeout // exit for elapsed timeout or
@@ -981,9 +983,11 @@ namespace MASES.KNetTest
                         });
                         while (runInParallel ? !resetEvent.WaitOne(0) : elements < NonParallelLimit)
                         {
-                            consumer.ConsumeAsync((long)TimeSpan.FromMilliseconds(checkTime).TotalMilliseconds);
+                            if(!consumer.ConsumeAsync((long)TimeSpan.FromMilliseconds(checkTime).TotalMilliseconds))
+                            {
+                                Volatile.Write(ref emptyCycle, Volatile.Read(ref emptyCycle) + 1);
+                            }
                             watcherTotal.Start();
-                            Volatile.Write(ref emptyCycle, Volatile.Read(ref emptyCycle) + 1);
                             bool elapsedTimeout = !runInParallel && swCycleTime.ElapsedMilliseconds > waitTime;
                             bool tooManyEmptyCycles = elements != 0 && Volatile.Read(ref emptyCycle) > maxEmptyCycle;
                             if (elapsedTimeout // exit for elapsed timeout or
