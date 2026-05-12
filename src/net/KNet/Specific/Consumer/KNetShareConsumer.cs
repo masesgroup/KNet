@@ -255,14 +255,8 @@ namespace MASES.KNet.Consumer
                                 bool dispose = true;
                                 foreach (var item in records)
                                 {
-                                    try
-                                    {
-                                        dispose = actionCallback.Invoke(item);
-                                    }
-                                    finally
-                                    {
-                                        if (dispose) item?.Dispose();
-                                    }
+                                    dispose = actionCallback.Invoke(item);
+                                    using var itemToDispose = dispose ? item : null;
                                 }
                             }
                         }

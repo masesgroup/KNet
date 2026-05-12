@@ -201,7 +201,7 @@ namespace MASES.KNet.Consumer
 
         bool CallbackMessage(ConsumerRecord<K, V, TJVMK, TJVMV> message)
         {
-           return actionCallback == null || actionCallback.Invoke(message);
+            return actionCallback == null || actionCallback.Invoke(message);
         }
 
         volatile int _disposed; // 0 = live, 1 = disposed
@@ -267,14 +267,8 @@ namespace MASES.KNet.Consumer
                                 bool dispose = true;
                                 foreach (var item in records)
                                 {
-                                    try
-                                    {
-                                        dispose = actionCallback.Invoke(item);
-                                    }
-                                    finally
-                                    {
-                                        if (dispose) item?.Dispose();
-                                    }
+                                    dispose = actionCallback.Invoke(item);
+                                    using var itemToDispose = dispose ? item : null;
                                 }
                             }
                         }
