@@ -175,7 +175,12 @@ namespace MASES.KNet.Benchmark
             }
             finally
             {
-                File.WriteAllText(Path.Combine(ResultsPath, $"roundtrip_results_{DateTime.Now:yyyyMMdd_HHmmss}.csv"), singleTestResultsSb.ToString());
+                var fileToWrite = Path.Combine(ResultsPath, $"roundtrip_results_{DateTime.Now:yyyyMMdd_HHmmss}.csv");
+                File.WriteAllText(fileToWrite, singleTestResultsSb.ToString());
+                if (ShowFinalResults)
+                {
+                    Console.WriteLine($"Written result on {fileToWrite}");
+                }
             }
         }
     }
