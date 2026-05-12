@@ -112,6 +112,7 @@ namespace MASES.KNet.Consumer
         long _dequeing = 0;
         readonly System.Threading.Thread _consumeThread = null;
         readonly ConcurrentQueue<ConsumerRecords<K, V, TJVMK, TJVMV>> _consumedRecords = null;
+        readonly SemaphoreSlim _releaseSignal = new SemaphoreSlim(0);
         readonly KNetConsumerCallback<K, V, TJVMK, TJVMV> _consumerCallback = null;
         readonly ISerDes<K, TJVMK> _keyDeserializer;
         readonly ISerDes<V, TJVMV> _valueDeserializer;
@@ -152,6 +153,7 @@ namespace MASES.KNet.Consumer
                 _consumedRecords = new();
                 _threadRunning = true;
                 _consumeThread = new(ConsumeHandler);
+                _consumeThread.Name = "KNetShareConsumer Async Consume Thread";
                 _consumeThread.IsBackground = true;
                 _consumeThread.Start();
             }
@@ -205,10 +207,7 @@ namespace MASES.KNet.Consumer
                 _threadRunning = false;
                 if (_consumedRecords != null)
                 {
-                    lock (_consumedRecords)
-                    {
-                        System.Threading.Monitor.Pulse(_consumedRecords);
-                    }
+                    _releaseSignal.Release();
                     if (IsCompleting) { _consumeThread?.Join(); }
                     actionCallback = null;
                 }
@@ -242,7 +241,8 @@ namespace MASES.KNet.Consumer
             {
                 while (_threadRunning)
                 {
-                    if (_consumedRecords.TryDequeue(out ConsumerRecords<K, V, TJVMK, TJVMV> records))
+                    _releaseSignal.Wait();
+                    while (_consumedRecords.TryDequeue(out ConsumerRecords<K, V, TJVMK, TJVMV> records))
                     {
                         System.Threading.Interlocked.Increment(ref _dequeing);
                         try
@@ -256,13 +256,6 @@ namespace MASES.KNet.Consumer
                         finally
                         {
                             System.Threading.Interlocked.Decrement(ref _dequeing);
-                        }
-                    }
-                    else if (_threadRunning)
-                    {
-                        lock (_consumedRecords)
-                        {
-                            System.Threading.Monitor.Wait(_consumedRecords);
                         }
                     }
                 }
@@ -295,10 +288,7 @@ namespace MASES.KNet.Consumer
 #else
                 _consumedRecords.Enqueue(results);
 #endif
-                lock (_consumedRecords)
-                {
-                    System.Threading.Monitor.Pulse(_consumedRecords);
-                }
+                _releaseSignal.Release();
             }
             return !isEmpty;
         }
