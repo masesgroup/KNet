@@ -57,10 +57,15 @@ namespace MASES.KNetTest
 
         const string theServer = "localhost:9092";
         const string theTopic = "myTopic";
-
+#if DEBUG
+        static int NonParallelLimit = RuntimeInformation.IsOSPlatform(OSPlatform.Windows) ? 100 : 1000;
+#else
         static int NonParallelLimit = RuntimeInformation.IsOSPlatform(OSPlatform.Windows) ? 10000 : 100000;
+#endif
         static long _firstOffset = -1;
         static readonly int waitMultiplier = 1;
+
+        const int maxEmptyCycle = 20;
 
         static string serverToUse = theServer;
         static string topicToUse = theTopic;
@@ -218,10 +223,10 @@ namespace MASES.KNetTest
                 topic.Configs(map);
                 *********/
                 using var topic = topic1.Configs(TopicConfigBuilder.Create().WithCleanupPolicy(TopicConfigBuilder.CleanupPolicyTypes.Compact | TopicConfigBuilder.CleanupPolicyTypes.Delete)
-                                                                 .WithDeleteRetentionMs(100)
-                                                                 .WithMinCleanableDirtyRatio(0.01)
-                                                                 .WithMaxMessageBytes(100 * 1024 * 1024)
-                                                                 .WithSegmentMs(100));
+                                                                            .WithDeleteRetentionMs(100)
+                                                                            .WithMinCleanableDirtyRatio(0.01)
+                                                                            .WithMaxMessageBytes(100 * 1024 * 1024)
+                                                                            .WithSegmentMs(100));
 
                 // using var coll = Collections.Singleton(topic);
 
@@ -487,11 +492,11 @@ namespace MASES.KNetTest
                                 }
                             }
                             bool elapsedTimeout = !runInParallel && swCycleTime.ElapsedMilliseconds > waitTime;
-                            bool tooManyEmptyCycles = elements != 0 && emptyCycle > 5;
+                            bool tooManyEmptyCycles = elements != 0 && emptyCycle > maxEmptyCycle;
                             if (elapsedTimeout // exit for elapsed timeout or
-                                || tooManyEmptyCycles) // if we have at least 5 empty cycles after received something
+                                || tooManyEmptyCycles) // if we have at least maxEmptyCycle empty cycles after received something
                             {
-                                var str = $"Forcibly exit since no {NonParallelLimit} record was received within {waitTime} ms. Current received is {elements} elapsedTimeout {elapsedTimeout} tooManyEmptyCycles {tooManyEmptyCycles}  ";
+                                var str = $"Forcibly exit since no {NonParallelLimit} record was received within {swCycleTime.ElapsedMilliseconds} ms. Current received is {elements} elapsedTimeout {elapsedTimeout} tooManyEmptyCycles {tooManyEmptyCycles}  ";
                                 if (elements != 0)
                                 {
                                     Console.WriteLine(str);
@@ -600,7 +605,7 @@ namespace MASES.KNetTest
                         using var scope = new JCOBridgeDisposeFastScope();
                         consumer.SetCallback((record) =>
                         {
-                            emptyCycle = 0;
+                            Volatile.Write(ref emptyCycle, 0);
                             elements++;
                             watcherTotal.Start();
                             var str = $"Consuming from Offset = {record.Offset}, Key = {record.Key}, Value = {record.Value}";
@@ -614,13 +619,13 @@ namespace MASES.KNetTest
                         {
                             consumer.ConsumeAsync((long)TimeSpan.FromMilliseconds(checkTime).TotalMilliseconds);
                             watcherTotal.Start();
-                            emptyCycle++;
+                            Volatile.Write(ref emptyCycle, Volatile.Read(ref emptyCycle) + 1);
                             bool elapsedTimeout = !runInParallel && swCycleTime.ElapsedMilliseconds > waitTime;
-                            bool tooManyEmptyCycles = elements != 0 && emptyCycle > 5;
+                            bool tooManyEmptyCycles = elements != 0 && Volatile.Read(ref emptyCycle) > maxEmptyCycle;
                             if (elapsedTimeout // exit for elapsed timeout or
-                                || tooManyEmptyCycles) // if we have at least 5 empty cycles after received something
+                                || tooManyEmptyCycles) // if we have at least maxEmptyCycle empty cycles after received something
                             {
-                                var str = $"Forcibly exit since no {NonParallelLimit} record was received within {waitTime} ms. Current received is {elements} elapsedTimeout {elapsedTimeout} tooManyEmptyCycles {tooManyEmptyCycles}  ";
+                                var str = $"Forcibly exit since no {NonParallelLimit} record was received within {swCycleTime.ElapsedMilliseconds} ms. Current received is {elements} elapsedTimeout {elapsedTimeout} tooManyEmptyCycles {tooManyEmptyCycles}  ";
                                 if (elements != 0)
                                 {
                                     Console.WriteLine(str);
@@ -851,11 +856,11 @@ namespace MASES.KNetTest
                                 }
                             }
                             bool elapsedTimeout = !runInParallel && swCycleTime.ElapsedMilliseconds > waitTime;
-                            bool tooManyEmptyCycles = elements != 0 && emptyCycle > 5;
+                            bool tooManyEmptyCycles = elements != 0 && emptyCycle > maxEmptyCycle;
                             if (elapsedTimeout // exit for elapsed timeout or
-                                || tooManyEmptyCycles) // if we have at least 5 empty cycles after received something
+                                || tooManyEmptyCycles) // if we have at least maxEmptyCycle empty cycles after received something
                             {
-                                var str = $"Forcibly exit since no {NonParallelLimit} record was received within {waitTime} ms. Current received is {elements} elapsedTimeout {elapsedTimeout} tooManyEmptyCycles {tooManyEmptyCycles}  ";
+                                var str = $"Forcibly exit since no {NonParallelLimit} record was received within {swCycleTime.ElapsedMilliseconds} ms. Current received is {elements} elapsedTimeout {elapsedTimeout} tooManyEmptyCycles {tooManyEmptyCycles}  ";
                                 if (elements != 0)
                                 {
                                     Console.WriteLine(str);
@@ -964,7 +969,7 @@ namespace MASES.KNetTest
                         using var scope = new JCOBridgeDisposeFastScope();
                         consumer.SetCallback((record) =>
                         {
-                            emptyCycle = 0;
+                            Volatile.Write(ref emptyCycle, 0);
                             elements++;
                             watcherTotal.Start();
                             var str = $"Consuming from Offset = {record.Offset}, Key = {record.Key}, Value = {record.Value}";
@@ -978,13 +983,13 @@ namespace MASES.KNetTest
                         {
                             consumer.ConsumeAsync((long)TimeSpan.FromMilliseconds(checkTime).TotalMilliseconds);
                             watcherTotal.Start();
-                            emptyCycle++;
+                            Volatile.Write(ref emptyCycle, Volatile.Read(ref emptyCycle) + 1);
                             bool elapsedTimeout = !runInParallel && swCycleTime.ElapsedMilliseconds > waitTime;
-                            bool tooManyEmptyCycles = elements != 0 && emptyCycle > 5;
+                            bool tooManyEmptyCycles = elements != 0 && Volatile.Read(ref emptyCycle) > maxEmptyCycle;
                             if (elapsedTimeout // exit for elapsed timeout or
-                                || tooManyEmptyCycles) // if we have at least 5 empty cycles after received something
+                                || tooManyEmptyCycles) // if we have at least maxEmptyCycle empty cycles after received something
                             {
-                                var str = $"Forcibly exit since no {NonParallelLimit} record was received within {waitTime} ms. Current received is {elements} elapsedTimeout {elapsedTimeout} tooManyEmptyCycles {tooManyEmptyCycles}  ";
+                                var str = $"Forcibly exit since no {NonParallelLimit} record was received within {swCycleTime.ElapsedMilliseconds} ms. Current received is {elements} elapsedTimeout {elapsedTimeout} tooManyEmptyCycles {tooManyEmptyCycles}  ";
                                 if (elements != 0)
                                 {
                                     Console.WriteLine(str);
