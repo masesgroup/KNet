@@ -53,6 +53,7 @@ namespace MASES.KNetTest
         static bool runInParallel = false;
         static bool avoidThrows = false;
         static bool randomizeTopicName = false;
+        static bool useAsyncConsume = false;
 
         const string theServer = "localhost:9092";
         const string theTopic = "myTopic";
@@ -93,6 +94,7 @@ namespace MASES.KNetTest
                         if (arg.Equals("runInParallel", StringComparison.InvariantCultureIgnoreCase)) { runInParallel = true; continue; }
                         if (arg.Equals("avoidThrows", StringComparison.InvariantCultureIgnoreCase)) { avoidThrows = true; continue; }
                         if (arg.Equals("randomizeTopicName", StringComparison.InvariantCultureIgnoreCase)) { randomizeTopicName = true; continue; }
+                        if (arg.Equals("useAsyncConsume", StringComparison.InvariantCultureIgnoreCase)) { useAsyncConsume = true; continue; }
                         Console.WriteLine($"Unknown {arg}");
                     }
                 }
@@ -120,10 +122,20 @@ namespace MASES.KNetTest
                             Name = "produce buffered"
                         };
 
-                        threadConsume = new(ConsumeSomethingBuffered)
+                        if (useAsyncConsume)
                         {
-                            Name = "consume buffered"
-                        };
+                            threadConsume = new(ConsumeAsyncSomethingBuffered)
+                            {
+                                Name = "consume buffered"
+                            };
+                        }
+                        else
+                        {
+                            threadConsume = new(ConsumeSomethingBuffered)
+                            {
+                                Name = "consume buffered"
+                            };
+                        }
                     }
                     else
                     {
@@ -132,10 +144,20 @@ namespace MASES.KNetTest
                             Name = "produce"
                         };
 
-                        threadConsume = new(ConsumeSomething)
+                        if (useAsyncConsume)
                         {
-                            Name = "consume"
-                        };
+                            threadConsume = new(ConsumeAsyncSomething)
+                            {
+                                Name = "consume"
+                            };
+                        }
+                        else
+                        {
+                            threadConsume = new(ConsumeSomething)
+                            {
+                                Name = "consume"
+                            };
+                        }
                     }
                     threadProduce.Start();
                     if (!onlyProduce) threadConsume.Start();
@@ -147,12 +169,20 @@ namespace MASES.KNetTest
                     if (runBuffered)
                     {
                         ProduceSomethingBuffered();
-                        if (!onlyProduce) ConsumeSomethingBuffered();
+                        if (!onlyProduce)
+                        {
+                            if (useAsyncConsume) ConsumeAsyncSomethingBuffered();
+                            else ConsumeSomethingBuffered();
+                        }
                     }
                     else
                     {
                         ProduceSomething();
-                        if (!onlyProduce) ConsumeSomething();
+                        if (!onlyProduce)
+                        {
+                            if (useAsyncConsume) ConsumeAsyncSomething();
+                            else ConsumeSomething();
+                        }
                     }
                 }
                 Thread.Sleep(2000); // wait the threads exit
@@ -396,7 +426,9 @@ namespace MASES.KNetTest
                         }
                     };
                 }
+#if NET7_0_OR_GREATER
                 const bool withPrefetch = true;
+#endif
                 long elements = 0;
                 Stopwatch watcherTotal = new Stopwatch();
                 Stopwatch watcher = new Stopwatch();
@@ -454,6 +486,135 @@ namespace MASES.KNetTest
                                     watcher.Stop();
                                 }
                             }
+                            bool elapsedTimeout = !runInParallel && swCycleTime.ElapsedMilliseconds > waitTime;
+                            bool tooManyEmptyCycles = elements != 0 && emptyCycle > 5;
+                            if (elapsedTimeout // exit for elapsed timeout or
+                                || tooManyEmptyCycles) // if we have at least 5 empty cycles after received something
+                            {
+                                var str = $"Forcibly exit since no {NonParallelLimit} record was received within {waitTime} ms. Current received is {elements} elapsedTimeout {elapsedTimeout} tooManyEmptyCycles {tooManyEmptyCycles}  ";
+                                if (elements != 0)
+                                {
+                                    Console.WriteLine(str);
+                                    break;
+                                }
+                                else throw new InvalidOperationException(str);
+                            }
+                        }
+                        watcherTotal.Stop();
+                    }
+                }
+                finally
+                {
+                    keyDeserializer?.Dispose();
+                    valueDeserializer?.Dispose();
+                    if (elements != 0) Console.WriteLine($"Total consume time is {watcherTotal.Elapsed}, consume mean time is {TimeSpan.FromTicks(watcherTotal.Elapsed.Ticks / elements)}, console write mean time is {TimeSpan.FromTicks(watcher.Elapsed.Ticks / elements)}");
+                }
+            }
+            catch (Java.Util.Concurrent.ExecutionException ex)
+            {
+                if (!avoidThrows) throw;
+                Console.WriteLine("Consumer ended with error: {0}", ex.InnerException.Message);
+            }
+            catch (Exception ex)
+            {
+                if (!avoidThrows) throw;
+                Console.WriteLine("Consumer ended with error: {0}", ex.Message);
+            }
+        }
+
+        static void ConsumeAsyncSomething()
+        {
+            Console.WriteLine("Starting ConsumeSomething");
+            try
+            {
+                /**** Direct mode ******
+                Properties props = new Properties();
+                props.Put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, serverToUse);
+                props.Put(ConsumerConfig.GROUP_ID_CONFIG, "test");
+                props.Put(ConsumerConfig.ENABLE_AUTO_COMMIT_CONFIG, "true");
+                props.Put(ConsumerConfig.AUTO_COMMIT_INTERVAL_MS_CONFIG, "1000");
+                *******/
+
+                ConsumerConfigBuilder props = ConsumerConfigBuilder.Create()
+                                                                   .WithBootstrapServers(serverToUse)
+                                                                   .WithGroupId(Guid.NewGuid().ToString())
+                                                                   .WithAutoOffsetReset(runInParallel ? ConsumerConfigBuilder.AutoOffsetResetTypes.LATEST
+                                                                                                      : ConsumerConfigBuilder.AutoOffsetResetTypes.EARLIEST)
+                                                                   .WithEnableAutoCommit(true)
+                                                                   .WithAutoCommitIntervalMs(1000);
+
+                ISerDesRaw<string> keyDeserializer = DefaultSerDes<string>.NewByteArraySerDes();
+                var valueDeserializer = JsonSerDes.Value<TestType>.NewByteArraySerDes();
+                ConsumerRebalanceListener rebalanceListener = null;
+                KNetConsumer<string, TestType> consumer = null;
+                ManualResetEvent manualResetEvent = new ManualResetEvent(false);
+
+                if (useConsumeCallback)
+                {
+                    rebalanceListener = new ConsumerRebalanceListener()
+                    {
+                        OnOnPartitionsRevoked = (o) =>
+                        {
+                            Console.WriteLine("Revoked: {0}", o.ToString());
+                        },
+                        OnOnPartitionsAssigned = (o) =>
+                        {
+                            Console.WriteLine("Assigned: {0}", o.ToString());
+                            manualResetEvent.Set();
+                        }
+                    };
+                }
+                long elements = 0;
+                Stopwatch watcherTotal = new Stopwatch();
+                Stopwatch watcher = new Stopwatch();
+                using var topics = Collections.Singleton((Java.Lang.String)topicToUse);
+                try
+                {
+                    using (consumer = new KNetConsumer<string, TestType>(props, keyDeserializer, valueDeserializer))
+                    {
+                        if (runInParallel)
+                        {
+                            if (useConsumeCallback) consumer.Subscribe(topics, rebalanceListener);
+                            else consumer.Subscribe(topics);
+                        }
+                        else
+                        {
+                            using var tp = new Org.Apache.Kafka.Common.TopicPartition(topicToUse, 0);
+                            consumer.Assign(Collections.Singleton(tp));
+                            if (_firstOffset != -1)
+                            {
+                                consumer.Seek(tp, _firstOffset);
+                                Console.WriteLine("Seek to: {0}", _firstOffset);
+                            }
+                            else
+                            {
+                                consumer.SeekToBeginning(Collections.Singleton(tp));
+                                Console.WriteLine("SeekToBeginning");
+                            }
+                        }
+                        if (runInParallel && useConsumeCallback) manualResetEvent.WaitOne();
+                        const int checkTime = 200;
+                        int waitTime = waitMultiplier * 60 * 1000;
+                        Stopwatch swCycleTime = Stopwatch.StartNew();
+                        int emptyCycle = 0;
+                        using var scope = new JCOBridgeDisposeFastScope();
+                        consumer.SetCallback((record) =>
+                        {
+                            emptyCycle = 0;
+                            elements++;
+                            watcherTotal.Start();
+                            var str = $"Consuming from Offset = {record.Offset}, Key = {record.Key}, Value = {record.Value}";
+                            watcherTotal.Stop();
+                            watcher.Start();
+                            if (consoleOutput) Console.WriteLine(str);
+                            watcher.Stop();
+                            return true;
+                        });
+                        while (runInParallel ? !resetEvent.WaitOne(0) : elements < NonParallelLimit)
+                        {
+                            consumer.ConsumeAsync((long)TimeSpan.FromMilliseconds(checkTime).TotalMilliseconds);
+                            watcherTotal.Start();
+                            emptyCycle++;
                             bool elapsedTimeout = !runInParallel && swCycleTime.ElapsedMilliseconds > waitTime;
                             bool tooManyEmptyCycles = elements != 0 && emptyCycle > 5;
                             if (elapsedTimeout // exit for elapsed timeout or
@@ -629,7 +790,9 @@ namespace MASES.KNetTest
                         }
                     };
                 }
+#if NET7_0_OR_GREATER
                 const bool withPrefetch = true;
+#endif
                 long elements = 0;
                 Stopwatch watcherTotal = new Stopwatch();
                 Stopwatch watcher = new Stopwatch();
@@ -687,6 +850,135 @@ namespace MASES.KNetTest
                                     watcher.Stop();
                                 }
                             }
+                            bool elapsedTimeout = !runInParallel && swCycleTime.ElapsedMilliseconds > waitTime;
+                            bool tooManyEmptyCycles = elements != 0 && emptyCycle > 5;
+                            if (elapsedTimeout // exit for elapsed timeout or
+                                || tooManyEmptyCycles) // if we have at least 5 empty cycles after received something
+                            {
+                                var str = $"Forcibly exit since no {NonParallelLimit} record was received within {waitTime} ms. Current received is {elements} elapsedTimeout {elapsedTimeout} tooManyEmptyCycles {tooManyEmptyCycles}  ";
+                                if (elements != 0)
+                                {
+                                    Console.WriteLine(str);
+                                    break;
+                                }
+                                else throw new InvalidOperationException(str);
+                            }
+                        }
+                        watcherTotal.Stop();
+                    }
+                }
+                finally
+                {
+                    keyDeserializer?.Dispose();
+                    valueDeserializer?.Dispose();
+                    if (elements != 0) Console.WriteLine($"Total consume time is {watcherTotal.Elapsed}, consume mean time is {TimeSpan.FromTicks(watcherTotal.Elapsed.Ticks / elements)}, console write mean time is {TimeSpan.FromTicks(watcher.Elapsed.Ticks / elements)}");
+                }
+            }
+            catch (Java.Util.Concurrent.ExecutionException ex)
+            {
+                if (!avoidThrows) throw;
+                Console.WriteLine("Consumer ended with error: {0}", ex.InnerException.Message);
+            }
+            catch (Exception ex)
+            {
+                if (!avoidThrows) throw;
+                Console.WriteLine("Consumer ended with error: {0}", ex.Message);
+            }
+        }
+
+        static void ConsumeAsyncSomethingBuffered()
+        {
+            Console.WriteLine("Starting ConsumeSomethingBuffered");
+            try
+            {
+                /**** Direct mode ******
+                Properties props = new Properties();
+                props.Put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, serverToUse);
+                props.Put(ConsumerConfig.GROUP_ID_CONFIG, "test");
+                props.Put(ConsumerConfig.ENABLE_AUTO_COMMIT_CONFIG, "true");
+                props.Put(ConsumerConfig.AUTO_COMMIT_INTERVAL_MS_CONFIG, "1000");
+                *******/
+
+                ConsumerConfigBuilder props = ConsumerConfigBuilder.Create()
+                                                                   .WithBootstrapServers(serverToUse)
+                                                                   .WithGroupId(Guid.NewGuid().ToString())
+                                                                   .WithAutoOffsetReset(runInParallel ? ConsumerConfigBuilder.AutoOffsetResetTypes.LATEST
+                                                                                                      : ConsumerConfigBuilder.AutoOffsetResetTypes.EARLIEST)
+                                                                   .WithEnableAutoCommit(true)
+                                                                   .WithAutoCommitIntervalMs(1000);
+
+                var keyDeserializer = DefaultSerDes<string>.NewByteArraySerDes();
+                var valueDeserializer = JsonSerDes.Value<TestType>.NewByteBufferSerDes();
+                ConsumerRebalanceListener rebalanceListener = null;
+                KNetConsumerValueBuffered<string, TestType> consumer = null;
+                ManualResetEvent manualResetEvent = new ManualResetEvent(false);
+
+                if (useConsumeCallback)
+                {
+                    rebalanceListener = new ConsumerRebalanceListener()
+                    {
+                        OnOnPartitionsRevoked = (o) =>
+                        {
+                            Console.WriteLine("Revoked: {0}", o.ToString());
+                        },
+                        OnOnPartitionsAssigned = (o) =>
+                        {
+                            Console.WriteLine("Assigned: {0}", o.ToString());
+                            manualResetEvent.Set();
+                        }
+                    };
+                }
+                long elements = 0;
+                Stopwatch watcherTotal = new Stopwatch();
+                Stopwatch watcher = new Stopwatch();
+                using var topics = Collections.Singleton((Java.Lang.String)topicToUse);
+                try
+                {
+                    using (consumer = new KNetConsumerValueBuffered<string, TestType>(props, keyDeserializer, valueDeserializer))
+                    {
+                        if (runInParallel)
+                        {
+                            if (useConsumeCallback) consumer.Subscribe(topics, rebalanceListener);
+                            else consumer.Subscribe(topics);
+                        }
+                        else
+                        {
+                            using var tp = new Org.Apache.Kafka.Common.TopicPartition(topicToUse, 0);
+                            consumer.Assign(Collections.Singleton(tp));
+                            if (_firstOffset != -1)
+                            {
+                                consumer.Seek(tp, _firstOffset);
+                                Console.WriteLine("Seek to: {0}", _firstOffset);
+                            }
+                            else
+                            {
+                                consumer.SeekToBeginning(Collections.Singleton(tp));
+                                Console.WriteLine("SeekToBeginning");
+                            }
+                        }
+                        if (runInParallel && useConsumeCallback) manualResetEvent.WaitOne();
+                        const int checkTime = 200;
+                        int waitTime = waitMultiplier * 60 * 1000;
+                        Stopwatch swCycleTime = Stopwatch.StartNew();
+                        int emptyCycle = 0;
+                        using var scope = new JCOBridgeDisposeFastScope();
+                        consumer.SetCallback((record) =>
+                        {
+                            emptyCycle = 0;
+                            elements++;
+                            watcherTotal.Start();
+                            var str = $"Consuming from Offset = {record.Offset}, Key = {record.Key}, Value = {record.Value}";
+                            watcherTotal.Stop();
+                            watcher.Start();
+                            if (consoleOutput) Console.WriteLine(str);
+                            watcher.Stop();
+                            return true;
+                        });
+                        while (runInParallel ? !resetEvent.WaitOne(0) : elements < NonParallelLimit)
+                        {
+                            consumer.ConsumeAsync((long)TimeSpan.FromMilliseconds(checkTime).TotalMilliseconds);
+                            watcherTotal.Start();
+                            emptyCycle++;
                             bool elapsedTimeout = !runInParallel && swCycleTime.ElapsedMilliseconds > waitTime;
                             bool tooManyEmptyCycles = elements != 0 && emptyCycle > 5;
                             if (elapsedTimeout // exit for elapsed timeout or
