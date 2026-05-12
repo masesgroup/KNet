@@ -304,6 +304,7 @@ namespace MASES.KNet.Consumer
 #endif
                 _releaseSignal.Release();
             }
+            else results.Dispose();
             return !isEmpty;
         }
         /// <inheritdoc cref="IShareConsumer{K, V, TJVMK, TJVMV}.Consume(long, Func{ConsumerRecord{K, V, TJVMK, TJVMV}, bool})"/>
