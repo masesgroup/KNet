@@ -602,7 +602,6 @@ namespace MASES.KNetTest
                         int waitTime = waitMultiplier * 60 * 1000;
                         Stopwatch swCycleTime = Stopwatch.StartNew();
                         int emptyCycle = 0;
-                        using var scope = new JCOBridgeDisposeFastScope();
                         consumer.SetCallback((record) =>
                         {
                             Volatile.Write(ref emptyCycle, 0);
@@ -968,7 +967,6 @@ namespace MASES.KNetTest
                         int waitTime = waitMultiplier * 60 * 1000;
                         Stopwatch swCycleTime = Stopwatch.StartNew();
                         int emptyCycle = 0;
-                        using var scope = new JCOBridgeDisposeFastScope();
                         consumer.SetCallback((record) =>
                         {
                             Volatile.Write(ref emptyCycle, 0);
