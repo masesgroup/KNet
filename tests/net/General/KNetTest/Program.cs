@@ -530,6 +530,12 @@ namespace MASES.KNetTest
                                     lastOffset = lastOffsets[0];
                                 }
 
+                                if (tooManyEmptyCycles && elements < lastOffset && !elapsedTimeout)
+                                {
+                                    Console.WriteLine($"Wait some more cycles elements={elements} lastOffset={lastOffset}");
+                                    continue;
+                                }
+
                                 var str = $"Forcibly exit since no {NonParallelLimit} record was received within {swCycleTime.ElapsedMilliseconds} ms. Current received is {elements} over {lastOffset} in topics started from {firstOffset} - elapsedTimeout {elapsedTimeout} tooManyEmptyCycles {tooManyEmptyCycles}";
                                 if (elements != 0)
                                 {
@@ -656,7 +662,7 @@ namespace MASES.KNetTest
                             consumeAsyncPrecision.Start();
                             if (!consumer.ConsumeAsync(checkTime))
                             {
-                                Volatile.Write(ref emptyCycle, Volatile.Read(ref emptyCycle) + 1);
+                                Interlocked.Increment(ref emptyCycle);
                             }
                             consumeAsyncPrecision.Stop();
                             watcherTotal.Start();
@@ -670,6 +676,12 @@ namespace MASES.KNetTest
                                 if (lastOffsets != null)
                                 {
                                     lastOffset = lastOffsets[0];
+                                }
+
+                                if (tooManyEmptyCycles && elements < lastOffset && !elapsedTimeout)
+                                {
+                                    Console.WriteLine($"Wait some more cycles elements={elements} lastOffset={lastOffset}");
+                                    continue;
                                 }
 
                                 var str = $"Forcibly exit since no {NonParallelLimit} record was received within {swCycleTime.ElapsedMilliseconds} ms. Current received is {elements} over {lastOffset} in topics started from {firstOffset} - consumer IsEmpty={consumer.IsEmpty} IsCompleting={consumer.IsCompleting} - elapsedTimeout {elapsedTimeout} tooManyEmptyCycles {tooManyEmptyCycles} -> {emptyCycle} - {consumeAsyncPrecision.Elapsed}";
@@ -915,6 +927,12 @@ namespace MASES.KNetTest
                                     lastOffset = lastOffsets[0];
                                 }
 
+                                if (tooManyEmptyCycles && elements < lastOffset && !elapsedTimeout)
+                                {
+                                    Console.WriteLine($"Wait some more cycles elements={elements} lastOffset={lastOffset}");
+                                    continue;
+                                }
+
                                 var str = $"Forcibly exit since no {NonParallelLimit} record was received within {swCycleTime.ElapsedMilliseconds} ms. Current received is {elements} over {lastOffset} in topics started from {firstOffset} - elapsedTimeout {elapsedTimeout} tooManyEmptyCycles {tooManyEmptyCycles}";
                                 if (elements != 0)
                                 {
@@ -1041,7 +1059,7 @@ namespace MASES.KNetTest
                             consumeAsyncPrecision.Start();
                             if (!consumer.ConsumeAsync(checkTime))
                             {
-                                Volatile.Write(ref emptyCycle, Volatile.Read(ref emptyCycle) + 1);
+                                Interlocked.Increment(ref emptyCycle);
                             }
                             consumeAsyncPrecision.Stop();
                             watcherTotal.Start();
@@ -1055,6 +1073,12 @@ namespace MASES.KNetTest
                                 if (lastOffsets != null)
                                 {
                                     lastOffset = lastOffsets[0];
+                                }
+
+                                if (tooManyEmptyCycles && elements < lastOffset && !elapsedTimeout)
+                                {
+                                    Console.WriteLine($"Wait some more cycles elements={elements} lastOffset={lastOffset}");
+                                    continue;
                                 }
 
                                 var str = $"Forcibly exit since no {NonParallelLimit} record was received within {swCycleTime.ElapsedMilliseconds} ms. Current received is {elements} over {lastOffset} in topics started from {firstOffset} offset - consumer IsEmpty={consumer.IsEmpty} IsCompleting={consumer.IsCompleting} - elapsedTimeout {elapsedTimeout} tooManyEmptyCycles {tooManyEmptyCycles} -> {emptyCycle} - {consumeAsyncPrecision.Elapsed}";
