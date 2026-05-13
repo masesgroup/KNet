@@ -35,6 +35,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.InteropServices;
 using System.Threading;
+using static Org.Apache.Kafka.Clients.Admin.StreamsGroupMemberDescription;
 
 namespace MASES.KNetTest
 {
@@ -494,6 +495,7 @@ namespace MASES.KNetTest
                         Stopwatch swCycleTime = Stopwatch.StartNew();
                         int emptyCycle = 0;
                         long firstOffset = -1;
+                        long lastOffset = -1;
                         using var scope = new JCOBridgeDisposeFastScope();
                         while (runInParallel ? !resetEvent.WaitOne(0) : elements < NonParallelLimit)
                         {
@@ -514,7 +516,10 @@ namespace MASES.KNetTest
                                     elements++;
                                     if (firstOffset == -1) firstOffset = item.Offset;
                                     watcherTotal.Start();
-                                    var str = $"Consuming from Offset = {item.Offset}, Key = {item.Key}, Value = {item.Value}";
+                                    lastOffset = item.Offset;
+                                    var key = item.Key;
+                                    var value = item.Value;
+                                    var str = $"Consuming from Offset = {lastOffset}, Key = {key}, Value = {value}";
                                     watcherTotal.Stop();
                                     watcher.Start();
                                     if (consoleOutput) Console.WriteLine(str);
@@ -526,20 +531,20 @@ namespace MASES.KNetTest
                             if (elapsedTimeout // exit for elapsed timeout or
                                 || tooManyEmptyCycles) // if we have at least maxEmptyCycle empty cycles after received something
                             {
-                                long lastOffset = -1;
+                                long headOffset = -1;
                                 var lastOffsets = LastOffsetOfTopic(topicToUse);
                                 if (lastOffsets != null)
                                 {
-                                    lastOffset = lastOffsets[0];
+                                    headOffset = lastOffsets[0];
                                 }
 
-                                if (tooManyEmptyCycles && elements < lastOffset && !elapsedTimeout)
+                                if (tooManyEmptyCycles && elements < headOffset && !elapsedTimeout)
                                 {
-                                    Console.WriteLine($"Wait some more cycles elements={elements} lastOffset={lastOffset}");
+                                    Console.WriteLine($"Wait some more cycles elements={elements} headOffset={headOffset}");
                                     continue;
                                 }
 
-                                var str = $"Forcibly exit since no {NonParallelLimit} record was received within {swCycleTime.ElapsedMilliseconds} ms. Current received is {elements} over {lastOffset} in topics started from {firstOffset} - elapsedTimeout {elapsedTimeout} tooManyEmptyCycles {tooManyEmptyCycles}";
+                                var str = $"Forcibly exit since no {NonParallelLimit} record was received within {swCycleTime.ElapsedMilliseconds} ms. Current received is {elements} over {headOffset} in topics started from {firstOffset} till {lastOffset} - elapsedTimeout {elapsedTimeout} tooManyEmptyCycles {tooManyEmptyCycles}";
                                 if (elements != 0)
                                 {
                                     Console.WriteLine(str);
@@ -649,13 +654,17 @@ namespace MASES.KNetTest
 
                         int emptyCycle = 0;
                         long firstOffset = -1;
+                        long lastOffset = -1;
                         consumer.SetCallback((record) =>
                         {
                             Volatile.Write(ref emptyCycle, 0);
                             elements++;
                             if (firstOffset == -1) firstOffset = record.Offset;
                             watcherTotal.Start();
-                            var str = $"Consuming from Offset = {record.Offset}, Key = {record.Key}, Value = {record.Value}";
+                            lastOffset = record.Offset;
+                            var key = record.Key;
+                            var value = record.Value;
+                            var str = $"Consuming from Offset = {lastOffset}, Key = {key}, Value = {value}";
                             watcherTotal.Stop();
                             watcher.Start();
                             if (consoleOutput) Console.WriteLine(str);
@@ -675,20 +684,20 @@ namespace MASES.KNetTest
                             if (elapsedTimeout // exit for elapsed timeout or
                                 || tooManyEmptyCycles) // if we have at least maxEmptyCycle empty cycles after received something
                             {
-                                long lastOffset = -1;
+                                long headOffset = -1;
                                 var lastOffsets = LastOffsetOfTopic(topicToUse);
                                 if (lastOffsets != null)
                                 {
-                                    lastOffset = lastOffsets[0];
+                                    headOffset = lastOffsets[0];
                                 }
 
-                                if (tooManyEmptyCycles && elements < lastOffset && !elapsedTimeout)
+                                if (tooManyEmptyCycles && elements < headOffset && !elapsedTimeout)
                                 {
-                                    Console.WriteLine($"Wait some more cycles elements={elements} lastOffset={lastOffset} - consumer IsEmpty={consumer.IsEmpty} IsCompleting={consumer.IsCompleting}");
+                                    Console.WriteLine($"Wait some more cycles elements={elements} headOffset={headOffset} - consumer IsEmpty={consumer.IsEmpty} IsCompleting={consumer.IsCompleting}");
                                     continue;
                                 }
 
-                                var str = $"Forcibly exit since no {NonParallelLimit} record was received within {swCycleTime.ElapsedMilliseconds} ms. Current received is {elements} over {lastOffset} in topics started from {firstOffset} - consumer IsEmpty={consumer.IsEmpty} IsCompleting={consumer.IsCompleting} - elapsedTimeout {elapsedTimeout} tooManyEmptyCycles {tooManyEmptyCycles} -> {emptyCycle} emptyCycles in {consumeAsyncPrecision.Elapsed} ms";
+                                var str = $"Forcibly exit since no {NonParallelLimit} record was received within {swCycleTime.ElapsedMilliseconds} ms. Current received is {elements} over {headOffset} in topics started from {firstOffset} till {lastOffset} - consumer IsEmpty={consumer.IsEmpty} IsCompleting={consumer.IsCompleting} - elapsedTimeout {elapsedTimeout} tooManyEmptyCycles {tooManyEmptyCycles} -> {emptyCycle} emptyCycles in {consumeAsyncPrecision.Elapsed} ms";
                                 if (elements != 0)
                                 {
                                     Console.WriteLine(str);
@@ -894,6 +903,7 @@ namespace MASES.KNetTest
                         Stopwatch swCycleTime = Stopwatch.StartNew();
                         int emptyCycle = 0;
                         long firstOffset = -1;
+                        long lastOffset = -1;
                         using var scope = new JCOBridgeDisposeFastScope();
                         while (runInParallel ? !resetEvent.WaitOne(0) : elements < NonParallelLimit)
                         {
@@ -914,7 +924,10 @@ namespace MASES.KNetTest
                                     elements++;
                                     if (firstOffset == -1) firstOffset = item.Offset;
                                     watcherTotal.Start();
-                                    var str = $"Consuming from Offset = {item.Offset}, Key = {item.Key}, Value = {item.Value}";
+                                    lastOffset = item.Offset;
+                                    var key = item.Key;
+                                    var value = item.Value;
+                                    var str = $"Consuming from Offset = {lastOffset}, Key = {key}, Value = {value}";
                                     watcherTotal.Stop();
                                     watcher.Start();
                                     if (consoleOutput) Console.WriteLine(str);
@@ -926,20 +939,20 @@ namespace MASES.KNetTest
                             if (elapsedTimeout // exit for elapsed timeout or
                                 || tooManyEmptyCycles) // if we have at least maxEmptyCycle empty cycles after received something
                             {
-                                long lastOffset = -1;
+                                long headOffset = -1;
                                 var lastOffsets = LastOffsetOfTopic(topicToUse);
                                 if (lastOffsets != null)
                                 {
-                                    lastOffset = lastOffsets[0];
+                                    headOffset = lastOffsets[0];
                                 }
 
-                                if (tooManyEmptyCycles && elements < lastOffset && !elapsedTimeout)
+                                if (tooManyEmptyCycles && elements < headOffset && !elapsedTimeout)
                                 {
-                                    Console.WriteLine($"Wait some more cycles elements={elements} lastOffset={lastOffset}");
+                                    Console.WriteLine($"Wait some more cycles elements={elements} headOffset={headOffset}");
                                     continue;
                                 }
 
-                                var str = $"Forcibly exit since no {NonParallelLimit} record was received within {swCycleTime.ElapsedMilliseconds} ms. Current received is {elements} over {lastOffset} in topics started from {firstOffset} - elapsedTimeout {elapsedTimeout} tooManyEmptyCycles {tooManyEmptyCycles}";
+                                var str = $"Forcibly exit since no {NonParallelLimit} record was received within {swCycleTime.ElapsedMilliseconds} ms. Current received is {elements} over {headOffset} in topics started from {firstOffset} - elapsedTimeout {elapsedTimeout} tooManyEmptyCycles {tooManyEmptyCycles}";
                                 if (elements != 0)
                                 {
                                     Console.WriteLine(str);
@@ -1047,13 +1060,17 @@ namespace MASES.KNetTest
                         Stopwatch swCycleTime = Stopwatch.StartNew();
                         int emptyCycle = 0;
                         long firstOffset = -1;
+                        long lastOffset = -1;
                         consumer.SetCallback((record) =>
                         {
                             Volatile.Write(ref emptyCycle, 0);
                             elements++;
                             if (firstOffset == -1) firstOffset = record.Offset;
                             watcherTotal.Start();
-                            var str = $"Consuming from Offset = {record.Offset}, Key = {record.Key}, Value = {record.Value}";
+                            lastOffset = record.Offset;
+                            var key = record.Key;
+                            var value = record.Value;
+                            var str = $"Consuming from Offset = {lastOffset}, Key = {key}, Value = {value}";
                             watcherTotal.Stop();
                             watcher.Start();
                             if (consoleOutput) Console.WriteLine(str);
@@ -1073,20 +1090,20 @@ namespace MASES.KNetTest
                             if (elapsedTimeout // exit for elapsed timeout or
                                 || tooManyEmptyCycles) // if we have at least maxEmptyCycle empty cycles after received something
                             {
-                                long lastOffset = -1;
+                                long headOffset = -1;
                                 var lastOffsets = LastOffsetOfTopic(topicToUse);
                                 if (lastOffsets != null)
                                 {
-                                    lastOffset = lastOffsets[0];
+                                    headOffset = lastOffsets[0];
                                 }
 
-                                if (tooManyEmptyCycles && elements < lastOffset && !elapsedTimeout)
+                                if (tooManyEmptyCycles && elements < headOffset && !elapsedTimeout)
                                 {
-                                    Console.WriteLine($"Wait some more cycles elements={elements} lastOffset={lastOffset} - consumer IsEmpty={consumer.IsEmpty} IsCompleting={consumer.IsCompleting}");
+                                    Console.WriteLine($"Wait some more cycles elements={elements} headOffset={headOffset} - consumer IsEmpty={consumer.IsEmpty} IsCompleting={consumer.IsCompleting}");
                                     continue;
                                 }
 
-                                var str = $"Forcibly exit since no {NonParallelLimit} record was received within {swCycleTime.ElapsedMilliseconds} ms. Current received is {elements} over {lastOffset} in topics started from {firstOffset} offset - consumer IsEmpty={consumer.IsEmpty} IsCompleting={consumer.IsCompleting} - elapsedTimeout {elapsedTimeout} tooManyEmptyCycles {tooManyEmptyCycles} -> {emptyCycle} emptyCycles in {consumeAsyncPrecision.Elapsed} ms";
+                                var str = $"Forcibly exit since no {NonParallelLimit} record was received within {swCycleTime.ElapsedMilliseconds} ms. Current received is {elements} over {headOffset} in topics started from {firstOffset} offset - consumer IsEmpty={consumer.IsEmpty} IsCompleting={consumer.IsCompleting} - elapsedTimeout {elapsedTimeout} tooManyEmptyCycles {tooManyEmptyCycles} -> {emptyCycle} emptyCycles in {consumeAsyncPrecision.Elapsed} ms";
                                 if (elements != 0)
                                 {
                                     Console.WriteLine(str);
