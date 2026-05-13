@@ -35,7 +35,6 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.InteropServices;
 using System.Threading;
-using static Org.Apache.Kafka.Clients.Admin.StreamsGroupMemberDescription;
 
 namespace MASES.KNetTest
 {
@@ -225,7 +224,7 @@ namespace MASES.KNetTest
                 var map = Collections.SingletonMap(TopicConfig.CLEANUP_POLICY_CONFIG, TopicConfig.CLEANUP_POLICY_COMPACT);
                 topic.Configs(map);
                 *********/
-                using var topic = topic1.Configs(TopicConfigBuilder.Create().WithCleanupPolicy(TopicConfigBuilder.CleanupPolicyTypes.Compact | TopicConfigBuilder.CleanupPolicyTypes.Delete)
+                using var topic = topic1.Configs(TopicConfigBuilder.Create().WithCleanupPolicy(TopicConfigBuilder.CleanupPolicyTypes.Delete)
                                                                             .WithDeleteRetentionMs(100)
                                                                             .WithMinCleanableDirtyRatio(0.01)
                                                                             .WithMaxMessageBytes(100 * 1024 * 1024)
