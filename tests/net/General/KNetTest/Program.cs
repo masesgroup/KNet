@@ -531,7 +531,7 @@ namespace MASES.KNetTest
                                     lastOffset = lastOffsets[0];
                                 }
 
-                                var str = $"Forcibly exit since no {NonParallelLimit} record was received within {swCycleTime.ElapsedMilliseconds} ms. Current received is {elements} over {lastOffset} in topics started from {firstOffset} offset - elapsedTimeout {elapsedTimeout} tooManyEmptyCycles {tooManyEmptyCycles}  ";
+                                var str = $"Forcibly exit since no {NonParallelLimit} record was received within {swCycleTime.ElapsedMilliseconds} ms. Current received is {elements} over {lastOffset} in topics started from {firstOffset} - consumer IsEmpty={consumer.IsEmpty} IsCompleting={consumer.IsCompleting} - elapsedTimeout {elapsedTimeout} tooManyEmptyCycles {tooManyEmptyCycles}  ";
                                 if (elements != 0)
                                 {
                                     Console.WriteLine(str);
@@ -673,7 +673,7 @@ namespace MASES.KNetTest
                                     lastOffset = lastOffsets[0];
                                 }
 
-                                var str = $"Forcibly exit since no {NonParallelLimit} record was received within {swCycleTime.ElapsedMilliseconds} ms. Current received is {elements} over {lastOffset} in topics started from {firstOffset} offset - elapsedTimeout {elapsedTimeout} tooManyEmptyCycles {tooManyEmptyCycles} -> {emptyCycle} - {consumeAsyncPrecision.Elapsed}";
+                                var str = $"Forcibly exit since no {NonParallelLimit} record was received within {swCycleTime.ElapsedMilliseconds} ms. Current received is {elements} over {lastOffset} in topics started from {firstOffset} - consumer IsEmpty={consumer.IsEmpty} IsCompleting={consumer.IsCompleting} - elapsedTimeout {elapsedTimeout} tooManyEmptyCycles {tooManyEmptyCycles} -> {emptyCycle} - {consumeAsyncPrecision.Elapsed}";
                                 if (elements != 0)
                                 {
                                     Console.WriteLine(str);
@@ -916,7 +916,7 @@ namespace MASES.KNetTest
                                     lastOffset = lastOffsets[0];
                                 }
 
-                                var str = $"Forcibly exit since no {NonParallelLimit} record was received within {swCycleTime.ElapsedMilliseconds} ms. Current received is {elements} over {lastOffset} in topics started from {firstOffset} offset - elapsedTimeout {elapsedTimeout} tooManyEmptyCycles {tooManyEmptyCycles}  ";
+                                var str = $"Forcibly exit since no {NonParallelLimit} record was received within {swCycleTime.ElapsedMilliseconds} ms. Current received is {elements} over {lastOffset} in topics started from {firstOffset} - consumer IsEmpty={consumer.IsEmpty} IsCompleting={consumer.IsCompleting} - elapsedTimeout {elapsedTimeout} tooManyEmptyCycles {tooManyEmptyCycles}  ";
                                 if (elements != 0)
                                 {
                                     Console.WriteLine(str);
@@ -1058,7 +1058,7 @@ namespace MASES.KNetTest
                                     lastOffset = lastOffsets[0];
                                 }
 
-                                var str = $"Forcibly exit since no {NonParallelLimit} record was received within {swCycleTime.ElapsedMilliseconds} ms. Current received is {elements} over {lastOffset} in topics started from {firstOffset} offset - elapsedTimeout {elapsedTimeout} tooManyEmptyCycles {tooManyEmptyCycles} -> {emptyCycle} - {consumeAsyncPrecision.Elapsed}";
+                                var str = $"Forcibly exit since no {NonParallelLimit} record was received within {swCycleTime.ElapsedMilliseconds} ms. Current received is {elements} over {lastOffset} in topics started from {firstOffset} offset - consumer IsEmpty={consumer.IsEmpty} IsCompleting={consumer.IsCompleting} - elapsedTimeout {elapsedTimeout} tooManyEmptyCycles {tooManyEmptyCycles} -> {emptyCycle} - {consumeAsyncPrecision.Elapsed}";
                                 if (elements != 0)
                                 {
                                     Console.WriteLine(str);
