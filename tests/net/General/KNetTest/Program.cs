@@ -493,6 +493,7 @@ namespace MASES.KNetTest
 
                         Stopwatch swCycleTime = Stopwatch.StartNew();
                         int emptyCycle = 0;
+                        long firstOffset = -1;
                         using var scope = new JCOBridgeDisposeFastScope();
                         while (runInParallel ? !resetEvent.WaitOne(0) : elements < NonParallelLimit)
                         {
@@ -509,6 +510,7 @@ namespace MASES.KNetTest
                                 {
                                     emptyCycle = 0;
                                     elements++;
+                                    if (firstOffset == -1) firstOffset = item.Offset;
                                     watcherTotal.Start();
                                     var str = $"Consuming from Offset = {item.Offset}, Key = {item.Key}, Value = {item.Value}";
                                     watcherTotal.Stop();
@@ -529,7 +531,7 @@ namespace MASES.KNetTest
                                     lastOffset = lastOffsets[0];
                                 }
 
-                                var str = $"Forcibly exit since no {NonParallelLimit} record was received within {swCycleTime.ElapsedMilliseconds} ms. Current received is {elements} over {lastOffset} in topics - elapsedTimeout {elapsedTimeout} tooManyEmptyCycles {tooManyEmptyCycles}  ";
+                                var str = $"Forcibly exit since no {NonParallelLimit} record was received within {swCycleTime.ElapsedMilliseconds} ms. Current received is {elements} over {lastOffset} in topics started from {firstOffset} offset - elapsedTimeout {elapsedTimeout} tooManyEmptyCycles {tooManyEmptyCycles}  ";
                                 if (elements != 0)
                                 {
                                     Console.WriteLine(str);
@@ -636,10 +638,12 @@ namespace MASES.KNetTest
                         Stopwatch swCycleTime = Stopwatch.StartNew();
                         Stopwatch consumeAsyncPrecision = new Stopwatch();
                         int emptyCycle = 0;
+                        long firstOffset = -1;
                         consumer.SetCallback((record) =>
                         {
                             Volatile.Write(ref emptyCycle, 0);
                             elements++;
+                            if (firstOffset == -1) firstOffset = record.Offset;
                             watcherTotal.Start();
                             var str = $"Consuming from Offset = {record.Offset}, Key = {record.Key}, Value = {record.Value}";
                             watcherTotal.Stop();
@@ -669,7 +673,7 @@ namespace MASES.KNetTest
                                     lastOffset = lastOffsets[0];
                                 }
 
-                                var str = $"Forcibly exit since no {NonParallelLimit} record was received within {swCycleTime.ElapsedMilliseconds} ms. Current received is {elements} over {lastOffset} in topics - elapsedTimeout {elapsedTimeout} tooManyEmptyCycles {tooManyEmptyCycles} -> {emptyCycle} - {consumeAsyncPrecision.Elapsed}";
+                                var str = $"Forcibly exit since no {NonParallelLimit} record was received within {swCycleTime.ElapsedMilliseconds} ms. Current received is {elements} over {lastOffset} in topics started from {firstOffset} offset - elapsedTimeout {elapsedTimeout} tooManyEmptyCycles {tooManyEmptyCycles} -> {emptyCycle} - {consumeAsyncPrecision.Elapsed}";
                                 if (elements != 0)
                                 {
                                     Console.WriteLine(str);
@@ -874,6 +878,7 @@ namespace MASES.KNetTest
 
                         Stopwatch swCycleTime = Stopwatch.StartNew();
                         int emptyCycle = 0;
+                        long firstOffset = -1;
                         using var scope = new JCOBridgeDisposeFastScope();
                         while (runInParallel ? !resetEvent.WaitOne(0) : elements < NonParallelLimit)
                         {
@@ -890,6 +895,7 @@ namespace MASES.KNetTest
                                 {
                                     emptyCycle = 0;
                                     elements++;
+                                    if (firstOffset == -1) firstOffset = item.Offset;
                                     watcherTotal.Start();
                                     var str = $"Consuming from Offset = {item.Offset}, Key = {item.Key}, Value = {item.Value}";
                                     watcherTotal.Stop();
@@ -910,7 +916,7 @@ namespace MASES.KNetTest
                                     lastOffset = lastOffsets[0];
                                 }
 
-                                var str = $"Forcibly exit since no {NonParallelLimit} record was received within {swCycleTime.ElapsedMilliseconds} ms. Current received is {elements} over {lastOffset} in topics - elapsedTimeout {elapsedTimeout} tooManyEmptyCycles {tooManyEmptyCycles}  ";
+                                var str = $"Forcibly exit since no {NonParallelLimit} record was received within {swCycleTime.ElapsedMilliseconds} ms. Current received is {elements} over {lastOffset} in topics started from {firstOffset} offset - elapsedTimeout {elapsedTimeout} tooManyEmptyCycles {tooManyEmptyCycles}  ";
                                 if (elements != 0)
                                 {
                                     Console.WriteLine(str);
@@ -1017,10 +1023,12 @@ namespace MASES.KNetTest
                         Stopwatch swCycleTime = Stopwatch.StartNew();
                         Stopwatch consumeAsyncPrecision = new Stopwatch();
                         int emptyCycle = 0;
+                        long firstOffset = -1;
                         consumer.SetCallback((record) =>
                         {
                             Volatile.Write(ref emptyCycle, 0);
                             elements++;
+                            if (firstOffset == -1) firstOffset = record.Offset;
                             watcherTotal.Start();
                             var str = $"Consuming from Offset = {record.Offset}, Key = {record.Key}, Value = {record.Value}";
                             watcherTotal.Stop();
@@ -1050,7 +1058,7 @@ namespace MASES.KNetTest
                                     lastOffset = lastOffsets[0];
                                 }
 
-                                var str = $"Forcibly exit since no {NonParallelLimit} record was received within {swCycleTime.ElapsedMilliseconds} ms. Current received is {elements} over {lastOffset} in topics - elapsedTimeout {elapsedTimeout} tooManyEmptyCycles {tooManyEmptyCycles} -> {emptyCycle} - {consumeAsyncPrecision.Elapsed}";
+                                var str = $"Forcibly exit since no {NonParallelLimit} record was received within {swCycleTime.ElapsedMilliseconds} ms. Current received is {elements} over {lastOffset} in topics started from {firstOffset} offset - elapsedTimeout {elapsedTimeout} tooManyEmptyCycles {tooManyEmptyCycles} -> {emptyCycle} - {consumeAsyncPrecision.Elapsed}";
                                 if (elements != 0)
                                 {
                                     Console.WriteLine(str);

@@ -221,15 +221,37 @@ namespace Org.Apache.Kafka.Clients.Admin
     public partial interface IAdmin
     {
         /// <summary>
+        /// Returns the unique cluster id associated to the instance
+        /// </summary>
+        /// <returns>The unique cluster id</returns>
+        string GetClusterId();
+        /// <summary>
         /// Returns a <see cref="System.Collections.Generic.IDictionary{TKey, TValue}"/> containing the last offset for each partition of the <paramref name="topicName"/>
         /// </summary>
         /// <param name="topicName">The topic to be queried</param>
         /// <returns>A <see cref="System.Collections.Generic.IDictionary{TKey, TValue}"/> containing the last offset for each partition</returns>
-        public System.Collections.Generic.IDictionary<int, long> LastPartitionOffsetForTopic(string topicName);
+        System.Collections.Generic.IDictionary<int, long> LastPartitionOffsetForTopic(string topicName);
     }
 
     public partial class Admin
     {
+        /// <inheritdoc/>
+        public string GetClusterId()
+        {
+            try
+            {
+                using var result = this.DescribeCluster();
+                using var future = result?.ClusterId();
+                using var res = future?.Get();
+                return res;
+            }
+            catch (ExecutionException ex)
+            {
+                if (ex.InnerException != null) throw ex.InnerException;
+                throw;
+            }
+        }
+
         /// <inheritdoc/>
         public System.Collections.Generic.IDictionary<int, long> LastPartitionOffsetForTopic(string topicName)
         {
