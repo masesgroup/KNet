@@ -517,6 +517,7 @@ namespace MASES.KNetTest
                                     if (firstOffset == -1) firstOffset = item.Offset;
                                     watcherTotal.Start();
                                     lastOffset = item.Offset;
+                                    if (lastOffset != elements - 1) Console.WriteLine($"Lost message - expected offset {elements - 1} received {lastOffset}");
                                     var key = item.Key;
                                     var value = item.Value;
                                     var str = $"Consuming from Offset = {lastOffset}, Key = {key}, Value = {value}";
@@ -662,6 +663,7 @@ namespace MASES.KNetTest
                             if (firstOffset == -1) firstOffset = record.Offset;
                             watcherTotal.Start();
                             lastOffset = record.Offset;
+                            if (lastOffset != elements - 1) Console.WriteLine($"Lost message - expected offset {elements - 1} received {lastOffset}");
                             var key = record.Key;
                             var value = record.Value;
                             var str = $"Consuming from Offset = {lastOffset}, Key = {key}, Value = {value}";
@@ -925,6 +927,7 @@ namespace MASES.KNetTest
                                     if (firstOffset == -1) firstOffset = item.Offset;
                                     watcherTotal.Start();
                                     lastOffset = item.Offset;
+                                    if (lastOffset != elements - 1) Console.WriteLine($"Lost message - expected offset {elements - 1} received {lastOffset}");
                                     var key = item.Key;
                                     var value = item.Value;
                                     var str = $"Consuming from Offset = {lastOffset}, Key = {key}, Value = {value}";
@@ -1068,6 +1071,7 @@ namespace MASES.KNetTest
                             if (firstOffset == -1) firstOffset = record.Offset;
                             watcherTotal.Start();
                             lastOffset = record.Offset;
+                            if (lastOffset != elements - 1) Console.WriteLine($"Lost message - expected offset {elements - 1} received {lastOffset}");
                             var key = record.Key;
                             var value = record.Value;
                             var str = $"Consuming from Offset = {lastOffset}, Key = {key}, Value = {value}";
