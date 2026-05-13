@@ -231,7 +231,7 @@ namespace MASES.KNetTest
                                                                             .WithDeleteRetentionMs(100)
                                                                             .WithMinCleanableDirtyRatio(0.01)
                                                                             .WithMaxMessageBytes(100 * 1024 * 1024)
-                                                                            .WithSegmentMs(1000));
+                                                                            .WithSegmentMs(10000));
 
                 // using var coll = Collections.Singleton(topic);
 
@@ -501,6 +501,7 @@ namespace MASES.KNetTest
                             using var records = consumer.Poll(checkTime);
                             watcherTotal.Stop();
                             if (records.IsEmpty) emptyCycle++;
+                            else if (consoleOutput) Console.WriteLine($"Rceived {records.Count} records");
 #if NET7_0_OR_GREATER
                             foreach (var item in records.ApplyPrefetch(withPrefetch, prefetchThreshold: 0))
 #else
@@ -900,6 +901,7 @@ namespace MASES.KNetTest
                             using var records = consumer.Poll(checkTime);
                             watcherTotal.Stop();
                             if (records.IsEmpty) emptyCycle++;
+                            else if (consoleOutput) Console.WriteLine($"Rceived {records.Count} records");
 #if NET7_0_OR_GREATER
                             foreach (var item in records.ApplyPrefetch(withPrefetch, prefetchThreshold: 0))
 #else
