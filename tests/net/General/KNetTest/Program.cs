@@ -31,9 +31,11 @@ using Org.Apache.Kafka.Clients.Consumer;
 using Org.Apache.Kafka.Clients.Producer;
 using Org.Apache.Kafka.Common.Errors;
 using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.InteropServices;
 using System.Threading;
+using static Org.Apache.Kafka.Clients.Admin.StreamsGroupMemberDescription;
 
 namespace MASES.KNetTest
 {
@@ -292,6 +294,30 @@ namespace MASES.KNetTest
             }
         }
 
+        static IDictionary<int, long> LastOffsetOfTopic(string topicName)
+        {
+            try
+            {
+                Properties props = AdminClientConfigBuilder.Create().WithBootstrapServers(serverToUse).ToProperties();
+
+                Console.WriteLine($"Deleting {topicName} using an AdminClient based on {props}");
+
+                using IAdmin admin = KafkaAdminClient.Create(props);
+                return admin.LastPartitionOffsetForTopic(topicName);
+            }
+            catch (Java.Util.Concurrent.ExecutionException ex)
+            {
+                if (!avoidThrows) throw;
+                Console.WriteLine(ex.InnerException.Message);
+            }
+            catch (Exception e)
+            {
+                if (!avoidThrows) throw;
+                Console.WriteLine(e.Message);
+            }
+            return null;
+        }
+
         static void ProduceSomething()
         {
             Console.WriteLine("Starting ProduceSomething");
@@ -496,7 +522,14 @@ namespace MASES.KNetTest
                             if (elapsedTimeout // exit for elapsed timeout or
                                 || tooManyEmptyCycles) // if we have at least maxEmptyCycle empty cycles after received something
                             {
-                                var str = $"Forcibly exit since no {NonParallelLimit} record was received within {swCycleTime.ElapsedMilliseconds} ms. Current received is {elements} elapsedTimeout {elapsedTimeout} tooManyEmptyCycles {tooManyEmptyCycles}  ";
+                                long lastOffset = -1;
+                                var lastOffsets = LastOffsetOfTopic(topicToUse);
+                                if (lastOffsets != null)
+                                {
+                                    lastOffset = lastOffsets[0];
+                                }
+
+                                var str = $"Forcibly exit since no {NonParallelLimit} record was received within {swCycleTime.ElapsedMilliseconds} ms. Current received is {elements} over {lastOffset} in topics - elapsedTimeout {elapsedTimeout} tooManyEmptyCycles {tooManyEmptyCycles}  ";
                                 if (elements != 0)
                                 {
                                     Console.WriteLine(str);
@@ -629,7 +662,14 @@ namespace MASES.KNetTest
                             if (elapsedTimeout // exit for elapsed timeout or
                                 || tooManyEmptyCycles) // if we have at least maxEmptyCycle empty cycles after received something
                             {
-                                var str = $"Forcibly exit since no {NonParallelLimit} record was received within {swCycleTime.ElapsedMilliseconds} ms. Current received is {elements} elapsedTimeout {elapsedTimeout} tooManyEmptyCycles {tooManyEmptyCycles} -> {emptyCycle} - {consumeAsyncPrecision.Elapsed}";
+                                long lastOffset = -1;
+                                var lastOffsets = LastOffsetOfTopic(topicToUse);
+                                if (lastOffsets != null)
+                                {
+                                    lastOffset = lastOffsets[0];
+                                }
+
+                                var str = $"Forcibly exit since no {NonParallelLimit} record was received within {swCycleTime.ElapsedMilliseconds} ms. Current received is {elements} over {lastOffset} in topics - elapsedTimeout {elapsedTimeout} tooManyEmptyCycles {tooManyEmptyCycles} -> {emptyCycle} - {consumeAsyncPrecision.Elapsed}";
                                 if (elements != 0)
                                 {
                                     Console.WriteLine(str);
@@ -864,7 +904,14 @@ namespace MASES.KNetTest
                             if (elapsedTimeout // exit for elapsed timeout or
                                 || tooManyEmptyCycles) // if we have at least maxEmptyCycle empty cycles after received something
                             {
-                                var str = $"Forcibly exit since no {NonParallelLimit} record was received within {swCycleTime.ElapsedMilliseconds} ms. Current received is {elements} elapsedTimeout {elapsedTimeout} tooManyEmptyCycles {tooManyEmptyCycles}  ";
+                                long lastOffset = -1;
+                                var lastOffsets = LastOffsetOfTopic(topicToUse);
+                                if (lastOffsets != null)
+                                {
+                                    lastOffset = lastOffsets[0];
+                                }
+
+                                var str = $"Forcibly exit since no {NonParallelLimit} record was received within {swCycleTime.ElapsedMilliseconds} ms. Current received is {elements} over {lastOffset} in topics - elapsedTimeout {elapsedTimeout} tooManyEmptyCycles {tooManyEmptyCycles}  ";
                                 if (elements != 0)
                                 {
                                     Console.WriteLine(str);
@@ -998,7 +1045,14 @@ namespace MASES.KNetTest
                             if (elapsedTimeout // exit for elapsed timeout or
                                 || tooManyEmptyCycles) // if we have at least maxEmptyCycle empty cycles after received something
                             {
-                                var str = $"Forcibly exit since no {NonParallelLimit} record was received within {swCycleTime.ElapsedMilliseconds} ms. Current received is {elements} elapsedTimeout {elapsedTimeout} tooManyEmptyCycles {tooManyEmptyCycles} -> {emptyCycle} - {consumeAsyncPrecision.Elapsed}";
+                                long lastOffset = -1;
+                                var lastOffsets = LastOffsetOfTopic(topicToUse);
+                                if (lastOffsets != null)
+                                {
+                                    lastOffset = lastOffsets[0];
+                                }
+
+                                var str = $"Forcibly exit since no {NonParallelLimit} record was received within {swCycleTime.ElapsedMilliseconds} ms. Current received is {elements} over {lastOffset} in topics - elapsedTimeout {elapsedTimeout} tooManyEmptyCycles {tooManyEmptyCycles} -> {emptyCycle} - {consumeAsyncPrecision.Elapsed}";
                                 if (elements != 0)
                                 {
                                     Console.WriteLine(str);
