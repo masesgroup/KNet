@@ -433,7 +433,7 @@ namespace MASES.KNetTest
 
                 ConsumerConfigBuilder props = ConsumerConfigBuilder.Create()
                                                                    .WithBootstrapServers(serverToUse)
-                                                                   .WithGroupId(Guid.NewGuid().ToString())
+                                                                   .WithGroupId(topicToUse + "-group")
                                                                    .WithAutoOffsetReset(runInParallel ? ConsumerConfigBuilder.AutoOffsetResetTypes.LATEST
                                                                                                       : ConsumerConfigBuilder.AutoOffsetResetTypes.EARLIEST)
                                                                    .WithEnableAutoCommit(true)
@@ -584,7 +584,7 @@ namespace MASES.KNetTest
 
                 ConsumerConfigBuilder props = ConsumerConfigBuilder.Create()
                                                                    .WithBootstrapServers(serverToUse)
-                                                                   .WithGroupId(Guid.NewGuid().ToString())
+                                                                   .WithGroupId(topicToUse + "-group")
                                                                    .WithAutoOffsetReset(runInParallel ? ConsumerConfigBuilder.AutoOffsetResetTypes.LATEST
                                                                                                       : ConsumerConfigBuilder.AutoOffsetResetTypes.EARLIEST)
                                                                    .WithEnableAutoCommit(true)
@@ -830,7 +830,7 @@ namespace MASES.KNetTest
 
                 ConsumerConfigBuilder props = ConsumerConfigBuilder.Create()
                                                                    .WithBootstrapServers(serverToUse)
-                                                                   .WithGroupId(Guid.NewGuid().ToString())
+                                                                   .WithGroupId(topicToUse + "-group")
                                                                    .WithAutoOffsetReset(runInParallel ? ConsumerConfigBuilder.AutoOffsetResetTypes.LATEST
                                                                                                       : ConsumerConfigBuilder.AutoOffsetResetTypes.EARLIEST)
                                                                    .WithEnableAutoCommit(true)
@@ -857,7 +857,9 @@ namespace MASES.KNetTest
                         }
                     };
                 }
-
+#if NET7_0_OR_GREATER
+                const bool withPrefetch = true;
+#endif
                 long elements = 0;
                 Stopwatch watcherTotal = new Stopwatch();
                 Stopwatch watcher = new Stopwatch();
@@ -981,7 +983,7 @@ namespace MASES.KNetTest
 
                 ConsumerConfigBuilder props = ConsumerConfigBuilder.Create()
                                                                    .WithBootstrapServers(serverToUse)
-                                                                   .WithGroupId(Guid.NewGuid().ToString())
+                                                                   .WithGroupId(topicToUse + "-group")
                                                                    .WithAutoOffsetReset(runInParallel ? ConsumerConfigBuilder.AutoOffsetResetTypes.LATEST
                                                                                                       : ConsumerConfigBuilder.AutoOffsetResetTypes.EARLIEST)
                                                                    .WithEnableAutoCommit(true)
