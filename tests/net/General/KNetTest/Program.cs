@@ -68,6 +68,9 @@ namespace MASES.KNetTest
         const int checkTime = 200;
         const int maxEmptyCycle = 200;
         static int waitTime = waitMultiplier * 60 * 1000;
+#if NET7_0_OR_GREATER
+        const bool withPrefetch = false;
+#endif
 
         static string serverToUse = theServer;
         static string topicToUse = theTopic;
@@ -457,9 +460,7 @@ namespace MASES.KNetTest
                         }
                     };
                 }
-#if NET7_0_OR_GREATER
-                const bool withPrefetch = true;
-#endif
+
                 long elements = 0;
                 Stopwatch watcherTotal = new Stopwatch();
                 Stopwatch watcher = new Stopwatch();
@@ -496,8 +497,9 @@ namespace MASES.KNetTest
                         using var scope = new JCOBridgeDisposeFastScope();
                         while (runInParallel ? !resetEvent.WaitOne(0) : elements < NonParallelLimit)
                         {
-                            using var records = consumer.Poll(checkTime);
                             watcherTotal.Start();
+                            using var records = consumer.Poll(checkTime);
+                            watcherTotal.Stop();
                             if (records.IsEmpty) emptyCycle++;
 #if NET7_0_OR_GREATER
                             foreach (var item in records.ApplyPrefetch(withPrefetch, prefetchThreshold: 0))
@@ -612,6 +614,8 @@ namespace MASES.KNetTest
                 long elements = 0;
                 Stopwatch watcherTotal = new Stopwatch();
                 Stopwatch watcher = new Stopwatch();
+                Stopwatch consumeAsyncPrecision = new Stopwatch();
+
                 using var topics = Collections.Singleton((Java.Lang.String)topicToUse);
                 try
                 {
@@ -641,7 +645,7 @@ namespace MASES.KNetTest
 
 
                         Stopwatch swCycleTime = Stopwatch.StartNew();
-                        Stopwatch consumeAsyncPrecision = new Stopwatch();
+
                         int emptyCycle = 0;
                         long firstOffset = -1;
                         consumer.SetCallback((record) =>
@@ -665,7 +669,6 @@ namespace MASES.KNetTest
                                 Interlocked.Increment(ref emptyCycle);
                             }
                             consumeAsyncPrecision.Stop();
-                            watcherTotal.Start();
                             bool elapsedTimeout = !runInParallel && swCycleTime.ElapsedMilliseconds > waitTime;
                             bool tooManyEmptyCycles = elements != 0 && Volatile.Read(ref emptyCycle) > maxEmptyCycle;
                             if (elapsedTimeout // exit for elapsed timeout or
@@ -680,11 +683,11 @@ namespace MASES.KNetTest
 
                                 if (tooManyEmptyCycles && elements < lastOffset && !elapsedTimeout)
                                 {
-                                    Console.WriteLine($"Wait some more cycles elements={elements} lastOffset={lastOffset}");
+                                    Console.WriteLine($"Wait some more cycles elements={elements} lastOffset={lastOffset} - consumer IsEmpty={consumer.IsEmpty} IsCompleting={consumer.IsCompleting}");
                                     continue;
                                 }
 
-                                var str = $"Forcibly exit since no {NonParallelLimit} record was received within {swCycleTime.ElapsedMilliseconds} ms. Current received is {elements} over {lastOffset} in topics started from {firstOffset} - consumer IsEmpty={consumer.IsEmpty} IsCompleting={consumer.IsCompleting} - elapsedTimeout {elapsedTimeout} tooManyEmptyCycles {tooManyEmptyCycles} -> {emptyCycle} - {consumeAsyncPrecision.Elapsed}";
+                                var str = $"Forcibly exit since no {NonParallelLimit} record was received within {swCycleTime.ElapsedMilliseconds} ms. Current received is {elements} over {lastOffset} in topics started from {firstOffset} - consumer IsEmpty={consumer.IsEmpty} IsCompleting={consumer.IsCompleting} - elapsedTimeout {elapsedTimeout} tooManyEmptyCycles {tooManyEmptyCycles} -> {emptyCycle} emptyCycles in {consumeAsyncPrecision.Elapsed} ms";
                                 if (elements != 0)
                                 {
                                     Console.WriteLine(str);
@@ -700,7 +703,7 @@ namespace MASES.KNetTest
                 {
                     keyDeserializer?.Dispose();
                     valueDeserializer?.Dispose();
-                    if (elements != 0) Console.WriteLine($"Total consume time is {watcherTotal.Elapsed}, consume mean time is {TimeSpan.FromTicks(watcherTotal.Elapsed.Ticks / elements)}, console write mean time is {TimeSpan.FromTicks(watcher.Elapsed.Ticks / elements)}");
+                    if (elements != 0) Console.WriteLine($"Total consume time is {watcherTotal.Elapsed} with Poll time {consumeAsyncPrecision.Elapsed}, consume mean time is {TimeSpan.FromTicks(watcherTotal.Elapsed.Ticks / elements)}, console write mean time is {TimeSpan.FromTicks(watcher.Elapsed.Ticks / elements)}");
                 }
             }
             catch (Java.Util.Concurrent.ExecutionException ex)
@@ -854,9 +857,7 @@ namespace MASES.KNetTest
                         }
                     };
                 }
-#if NET7_0_OR_GREATER
-                const bool withPrefetch = true;
-#endif
+
                 long elements = 0;
                 Stopwatch watcherTotal = new Stopwatch();
                 Stopwatch watcher = new Stopwatch();
@@ -893,8 +894,9 @@ namespace MASES.KNetTest
                         using var scope = new JCOBridgeDisposeFastScope();
                         while (runInParallel ? !resetEvent.WaitOne(0) : elements < NonParallelLimit)
                         {
-                            using var records = consumer.Poll(checkTime);
                             watcherTotal.Start();
+                            using var records = consumer.Poll(checkTime);
+                            watcherTotal.Stop();
                             if (records.IsEmpty) emptyCycle++;
 #if NET7_0_OR_GREATER
                             foreach (var item in records.ApplyPrefetch(withPrefetch, prefetchThreshold: 0))
@@ -1009,6 +1011,7 @@ namespace MASES.KNetTest
                 long elements = 0;
                 Stopwatch watcherTotal = new Stopwatch();
                 Stopwatch watcher = new Stopwatch();
+                Stopwatch consumeAsyncPrecision = new Stopwatch();
 
                 using var topics = Collections.Singleton((Java.Lang.String)topicToUse);
                 try
@@ -1038,7 +1041,6 @@ namespace MASES.KNetTest
                         if (runInParallel && useConsumeCallback) manualResetEvent.WaitOne();
 
                         Stopwatch swCycleTime = Stopwatch.StartNew();
-                        Stopwatch consumeAsyncPrecision = new Stopwatch();
                         int emptyCycle = 0;
                         long firstOffset = -1;
                         consumer.SetCallback((record) =>
@@ -1062,7 +1064,6 @@ namespace MASES.KNetTest
                                 Interlocked.Increment(ref emptyCycle);
                             }
                             consumeAsyncPrecision.Stop();
-                            watcherTotal.Start();
                             bool elapsedTimeout = !runInParallel && swCycleTime.ElapsedMilliseconds > waitTime;
                             bool tooManyEmptyCycles = elements != 0 && Volatile.Read(ref emptyCycle) > maxEmptyCycle;
                             if (elapsedTimeout // exit for elapsed timeout or
@@ -1077,11 +1078,11 @@ namespace MASES.KNetTest
 
                                 if (tooManyEmptyCycles && elements < lastOffset && !elapsedTimeout)
                                 {
-                                    Console.WriteLine($"Wait some more cycles elements={elements} lastOffset={lastOffset}");
+                                    Console.WriteLine($"Wait some more cycles elements={elements} lastOffset={lastOffset} - consumer IsEmpty={consumer.IsEmpty} IsCompleting={consumer.IsCompleting}");
                                     continue;
                                 }
 
-                                var str = $"Forcibly exit since no {NonParallelLimit} record was received within {swCycleTime.ElapsedMilliseconds} ms. Current received is {elements} over {lastOffset} in topics started from {firstOffset} offset - consumer IsEmpty={consumer.IsEmpty} IsCompleting={consumer.IsCompleting} - elapsedTimeout {elapsedTimeout} tooManyEmptyCycles {tooManyEmptyCycles} -> {emptyCycle} - {consumeAsyncPrecision.Elapsed}";
+                                var str = $"Forcibly exit since no {NonParallelLimit} record was received within {swCycleTime.ElapsedMilliseconds} ms. Current received is {elements} over {lastOffset} in topics started from {firstOffset} offset - consumer IsEmpty={consumer.IsEmpty} IsCompleting={consumer.IsCompleting} - elapsedTimeout {elapsedTimeout} tooManyEmptyCycles {tooManyEmptyCycles} -> {emptyCycle} emptyCycles in {consumeAsyncPrecision.Elapsed} ms";
                                 if (elements != 0)
                                 {
                                     Console.WriteLine(str);
@@ -1097,7 +1098,7 @@ namespace MASES.KNetTest
                 {
                     keyDeserializer?.Dispose();
                     valueDeserializer?.Dispose();
-                    if (elements != 0) Console.WriteLine($"Total consume time is {watcherTotal.Elapsed}, consume mean time is {TimeSpan.FromTicks(watcherTotal.Elapsed.Ticks / elements)}, console write mean time is {TimeSpan.FromTicks(watcher.Elapsed.Ticks / elements)}");
+                    if (elements != 0) Console.WriteLine($"Total consume time is {watcherTotal.Elapsed} with Poll time {consumeAsyncPrecision.Elapsed}, consume mean time is {TimeSpan.FromTicks(watcherTotal.Elapsed.Ticks / elements)}, console write mean time is {TimeSpan.FromTicks(watcher.Elapsed.Ticks / elements)}");
                 }
             }
             catch (Java.Util.Concurrent.ExecutionException ex)
