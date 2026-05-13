@@ -66,8 +66,9 @@ namespace MASES.KNetTest
 #endif
         static long _firstOffset = -1;
         static readonly int waitMultiplier = 1;
-
-        const int maxEmptyCycle = 20;
+        const int checkTime = 200;
+        const int maxEmptyCycle = 200;
+        static int waitTime = waitMultiplier * 60 * 1000;
 
         static string serverToUse = theServer;
         static string topicToUse = theTopic;
@@ -489,8 +490,7 @@ namespace MASES.KNetTest
                             }
                         }
                         if (runInParallel && useConsumeCallback) manualResetEvent.WaitOne();
-                        const int checkTime = 200;
-                        int waitTime = waitMultiplier * 60 * 1000;
+
                         Stopwatch swCycleTime = Stopwatch.StartNew();
                         int emptyCycle = 0;
                         using var scope = new JCOBridgeDisposeFastScope();
@@ -631,8 +631,8 @@ namespace MASES.KNetTest
                             }
                         }
                         if (runInParallel && useConsumeCallback) manualResetEvent.WaitOne();
-                        const int checkTime = 200;
-                        int waitTime = waitMultiplier * 60 * 1000;
+
+
                         Stopwatch swCycleTime = Stopwatch.StartNew();
                         Stopwatch consumeAsyncPrecision = new Stopwatch();
                         int emptyCycle = 0;
@@ -871,8 +871,7 @@ namespace MASES.KNetTest
                             }
                         }
                         if (runInParallel && useConsumeCallback) manualResetEvent.WaitOne();
-                        const int checkTime = 200;
-                        int waitTime = waitMultiplier * 60 * 1000;
+
                         Stopwatch swCycleTime = Stopwatch.StartNew();
                         int emptyCycle = 0;
                         using var scope = new JCOBridgeDisposeFastScope();
@@ -1014,8 +1013,7 @@ namespace MASES.KNetTest
                             }
                         }
                         if (runInParallel && useConsumeCallback) manualResetEvent.WaitOne();
-                        const int checkTime = 200;
-                        int waitTime = waitMultiplier * 60 * 1000;
+
                         Stopwatch swCycleTime = Stopwatch.StartNew();
                         Stopwatch consumeAsyncPrecision = new Stopwatch();
                         int emptyCycle = 0;
