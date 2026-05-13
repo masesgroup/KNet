@@ -228,7 +228,7 @@ namespace MASES.KNetTest
                                                                             .WithDeleteRetentionMs(100)
                                                                             .WithMinCleanableDirtyRatio(0.01)
                                                                             .WithMaxMessageBytes(100 * 1024 * 1024)
-                                                                            .WithSegmentMs(100));
+                                                                            .WithSegmentMs(1000));
 
                 // using var coll = Collections.Singleton(topic);
 
@@ -300,7 +300,7 @@ namespace MASES.KNetTest
             {
                 Properties props = AdminClientConfigBuilder.Create().WithBootstrapServers(serverToUse).ToProperties();
 
-                Console.WriteLine($"Deleting {topicName} using an AdminClient based on {props}");
+                Console.WriteLine($"LastOffsetOfTopic for {topicName} using an AdminClient based on {props}");
 
                 using IAdmin admin = KafkaAdminClient.Create(props);
                 return admin.LastPartitionOffsetForTopic(topicName);
@@ -530,7 +530,7 @@ namespace MASES.KNetTest
                                     lastOffset = lastOffsets[0];
                                 }
 
-                                var str = $"Forcibly exit since no {NonParallelLimit} record was received within {swCycleTime.ElapsedMilliseconds} ms. Current received is {elements} over {lastOffset} in topics started from {firstOffset} - consumer IsEmpty={consumer.IsEmpty} IsCompleting={consumer.IsCompleting} - elapsedTimeout {elapsedTimeout} tooManyEmptyCycles {tooManyEmptyCycles}  ";
+                                var str = $"Forcibly exit since no {NonParallelLimit} record was received within {swCycleTime.ElapsedMilliseconds} ms. Current received is {elements} over {lastOffset} in topics started from {firstOffset} - elapsedTimeout {elapsedTimeout} tooManyEmptyCycles {tooManyEmptyCycles}";
                                 if (elements != 0)
                                 {
                                     Console.WriteLine(str);
@@ -915,7 +915,7 @@ namespace MASES.KNetTest
                                     lastOffset = lastOffsets[0];
                                 }
 
-                                var str = $"Forcibly exit since no {NonParallelLimit} record was received within {swCycleTime.ElapsedMilliseconds} ms. Current received is {elements} over {lastOffset} in topics started from {firstOffset} - consumer IsEmpty={consumer.IsEmpty} IsCompleting={consumer.IsCompleting} - elapsedTimeout {elapsedTimeout} tooManyEmptyCycles {tooManyEmptyCycles}  ";
+                                var str = $"Forcibly exit since no {NonParallelLimit} record was received within {swCycleTime.ElapsedMilliseconds} ms. Current received is {elements} over {lastOffset} in topics started from {firstOffset} - elapsedTimeout {elapsedTimeout} tooManyEmptyCycles {tooManyEmptyCycles}";
                                 if (elements != 0)
                                 {
                                     Console.WriteLine(str);
