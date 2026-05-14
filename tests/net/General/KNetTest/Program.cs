@@ -36,7 +36,6 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.InteropServices;
 using System.Threading;
-using static Org.Apache.Kafka.Clients.Admin.StreamsGroupMemberDescription;
 
 namespace MASES.KNetTest
 {
@@ -61,7 +60,7 @@ namespace MASES.KNetTest
         const string theServer = "localhost:9092";
         const string theTopic = "myTopic";
 #if DEBUG
-        static int NonParallelLimit = RuntimeInformation.IsOSPlatform(OSPlatform.Windows) ? 100 : 1000;
+        static int NonParallelLimit = RuntimeInformation.IsOSPlatform(OSPlatform.Windows) ? 100_000 : 1000;
 #else
         static int NonParallelLimit = RuntimeInformation.IsOSPlatform(OSPlatform.Windows) ? 10000 : 100000;
 #endif
@@ -890,9 +889,7 @@ namespace MASES.KNetTest
                         }
                     };
                 }
-#if NET7_0_OR_GREATER
-                const bool withPrefetch = true;
-#endif
+
                 long elements = 0;
                 Stopwatch watcherTotal = new Stopwatch();
                 Stopwatch watcher = new Stopwatch();
