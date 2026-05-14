@@ -508,6 +508,9 @@ namespace MASES.KNetTest
                             var positionAfterPoll = consumer.Position(topicPartition);
                             if (records.IsEmpty) emptyCycle++;
                             else if (consoleOutput) Console.WriteLine($"Rceived {records.Count} records");
+
+                            var recordsCount = records.Count;
+                            int forEachIteration = 0;
 #if NET7_0_OR_GREATER
                             foreach (var item in records.ApplyPrefetch(withPrefetch, prefetchThreshold: 0))
 #else
@@ -530,6 +533,15 @@ namespace MASES.KNetTest
                                     if (consoleOutput) Console.WriteLine(str);
                                     watcher.Stop();
                                 }
+                                forEachIteration++;
+                            }
+                            if (recordsCount != (positionAfterPoll - positionBeforePoll))
+                            {
+                                Console.WriteLine($"Missing records - records.Count={recordsCount} positionBeforePoll={positionBeforePoll} positionAfterPoll={positionAfterPoll}");
+                            }
+                            if (forEachIteration != recordsCount)
+                            {
+                                Console.WriteLine($"BATCH TRUNCATED: declared={recordsCount} delivered={forEachIteration}");
                             }
                             bool elapsedTimeout = !runInParallel && swCycleTime.ElapsedMilliseconds > waitTime;
                             bool tooManyEmptyCycles = elements != 0 && emptyCycle > maxEmptyCycle;
@@ -921,6 +933,8 @@ namespace MASES.KNetTest
                             var positionAfterPoll = consumer.Position(topicPartition);
                             if (records.IsEmpty) emptyCycle++;
                             else if (consoleOutput) Console.WriteLine($"Rceived {records.Count} records");
+                            var recordsCount = records.Count;
+                            int forEachIteration = 0;
 #if NET7_0_OR_GREATER
                             foreach (var item in records.ApplyPrefetch(withPrefetch, prefetchThreshold: 0))
 #else
@@ -943,6 +957,15 @@ namespace MASES.KNetTest
                                     if (consoleOutput) Console.WriteLine(str);
                                     watcher.Stop();
                                 }
+                                forEachIteration++;
+                            }
+                            if (recordsCount != (positionAfterPoll - positionBeforePoll))
+                            {
+                                Console.WriteLine($"Missing records - records.Count={recordsCount} positionBeforePoll={positionBeforePoll} positionAfterPoll={positionAfterPoll}");
+                            }
+                            if (forEachIteration != recordsCount)
+                            {
+                                Console.WriteLine($"BATCH TRUNCATED: declared={recordsCount} delivered={forEachIteration}");
                             }
                             bool elapsedTimeout = !runInParallel && swCycleTime.ElapsedMilliseconds > waitTime;
                             bool tooManyEmptyCycles = elements != 0 && emptyCycle > maxEmptyCycle;
