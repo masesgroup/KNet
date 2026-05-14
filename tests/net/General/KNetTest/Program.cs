@@ -29,6 +29,7 @@ using MASES.KNet.TestCommon;
 using Org.Apache.Kafka.Clients.Admin;
 using Org.Apache.Kafka.Clients.Consumer;
 using Org.Apache.Kafka.Clients.Producer;
+using Org.Apache.Kafka.Common;
 using Org.Apache.Kafka.Common.Errors;
 using System;
 using System.Collections.Generic;
@@ -496,12 +497,15 @@ namespace MASES.KNetTest
                         int emptyCycle = 0;
                         long firstOffset = -1;
                         long lastOffset = -1;
+                        TopicPartition topicPartition = new TopicPartition(topicToUse, 0);
                         using var scope = new JCOBridgeDisposeFastScope();
                         while (runInParallel ? !resetEvent.WaitOne(0) : elements < NonParallelLimit)
                         {
+                            var positionBeforePoll = consumer.Position(topicPartition);
                             watcherTotal.Start();
                             using var records = consumer.Poll(checkTime);
                             watcherTotal.Stop();
+                            var positionAfterPoll = consumer.Position(topicPartition);
                             if (records.IsEmpty) emptyCycle++;
                             else if (consoleOutput) Console.WriteLine($"Rceived {records.Count} records");
 #if NET7_0_OR_GREATER
@@ -517,7 +521,7 @@ namespace MASES.KNetTest
                                     if (firstOffset == -1) firstOffset = item.Offset;
                                     watcherTotal.Start();
                                     lastOffset = item.Offset;
-                                    if (lastOffset != elements - 1) Console.WriteLine($"Lost message - expected offset {elements - 1} received {lastOffset}");
+                                    if (lastOffset != elements - 1) Console.WriteLine($"Lost message - expected offset {elements - 1} received {lastOffset} positionBeforePoll={positionBeforePoll} positionAfterPoll={positionAfterPoll}");
                                     var key = item.Key;
                                     var value = item.Value;
                                     var str = $"Consuming from Offset = {lastOffset}, Key = {key}, Value = {value}";
@@ -906,12 +910,15 @@ namespace MASES.KNetTest
                         int emptyCycle = 0;
                         long firstOffset = -1;
                         long lastOffset = -1;
+                        TopicPartition topicPartition = new TopicPartition(topicToUse, 0);
                         using var scope = new JCOBridgeDisposeFastScope();
                         while (runInParallel ? !resetEvent.WaitOne(0) : elements < NonParallelLimit)
                         {
+                            var positionBeforePoll = consumer.Position(topicPartition);
                             watcherTotal.Start();
                             using var records = consumer.Poll(checkTime);
                             watcherTotal.Stop();
+                            var positionAfterPoll = consumer.Position(topicPartition);
                             if (records.IsEmpty) emptyCycle++;
                             else if (consoleOutput) Console.WriteLine($"Rceived {records.Count} records");
 #if NET7_0_OR_GREATER
@@ -927,7 +934,7 @@ namespace MASES.KNetTest
                                     if (firstOffset == -1) firstOffset = item.Offset;
                                     watcherTotal.Start();
                                     lastOffset = item.Offset;
-                                    if (lastOffset != elements - 1) Console.WriteLine($"Lost message - expected offset {elements - 1} received {lastOffset}");
+                                    if (lastOffset != elements - 1) Console.WriteLine($"Lost message - expected offset {elements - 1} received {lastOffset} positionBeforePoll={positionBeforePoll} positionAfterPoll={positionAfterPoll}");
                                     var key = item.Key;
                                     var value = item.Value;
                                     var str = $"Consuming from Offset = {lastOffset}, Key = {key}, Value = {value}";
