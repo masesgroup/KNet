@@ -511,6 +511,7 @@ namespace MASES.KNetTest
 
                             var recordsCount = records.Count;
                             int forEachIteration = 0;
+                            bool jumpWrotten = false;
 #if NET7_0_OR_GREATER
                             foreach (var item in records.ApplyPrefetch(withPrefetch, prefetchThreshold: 0))
 #else
@@ -524,7 +525,11 @@ namespace MASES.KNetTest
                                     if (firstOffset == -1) firstOffset = item.Offset;
                                     watcherTotal.Start();
                                     lastOffset = item.Offset;
-                                    if (lastOffset != elements - 1) Console.WriteLine($"Lost message - expected offset {elements - 1} received {lastOffset} positionBeforePoll={positionBeforePoll} positionAfterPoll={positionAfterPoll}");
+                                    if (!jumpWrotten && lastOffset != elements - 1)
+                                    {
+                                        Console.WriteLine($"Lost message - expected offset {elements - 1} received {lastOffset} positionBeforePoll={positionBeforePoll} positionAfterPoll={positionAfterPoll}");
+                                        jumpWrotten = true;
+                                    }
                                     var key = item.Key;
                                     var value = item.Value;
                                     var str = $"Consuming from Offset = {lastOffset}, Key = {key}, Value = {value}";
@@ -935,6 +940,7 @@ namespace MASES.KNetTest
                             else if (consoleOutput) Console.WriteLine($"Rceived {records.Count} records");
                             var recordsCount = records.Count;
                             int forEachIteration = 0;
+                            bool jumpWrotten = false;
 #if NET7_0_OR_GREATER
                             foreach (var item in records.ApplyPrefetch(withPrefetch, prefetchThreshold: 0))
 #else
@@ -948,7 +954,11 @@ namespace MASES.KNetTest
                                     if (firstOffset == -1) firstOffset = item.Offset;
                                     watcherTotal.Start();
                                     lastOffset = item.Offset;
-                                    if (lastOffset != elements - 1) Console.WriteLine($"Lost message - expected offset {elements - 1} received {lastOffset} positionBeforePoll={positionBeforePoll} positionAfterPoll={positionAfterPoll}");
+                                    if (!jumpWrotten && lastOffset != elements - 1)
+                                    {
+                                        Console.WriteLine($"Lost message - expected offset {elements - 1} received {lastOffset} positionBeforePoll={positionBeforePoll} positionAfterPoll={positionAfterPoll}");
+                                        jumpWrotten = true;
+                                    }
                                     var key = item.Key;
                                     var value = item.Value;
                                     var str = $"Consuming from Offset = {lastOffset}, Key = {key}, Value = {value}";
