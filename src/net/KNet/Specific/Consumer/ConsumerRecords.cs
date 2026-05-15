@@ -135,18 +135,6 @@ namespace MASES.KNet.Consumer
             return _records.Records(arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.0/org/apache/kafka/clients/consumer/ConsumerRecords.html#nextOffsets()"/>
-        /// </summary>
-        /// <returns><see cref="Java.Util.Map"/></returns>
-        public Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Org.Apache.Kafka.Clients.Consumer.OffsetAndMetadata> NextOffsets
-        {
-            get
-            {
-                CheckDisposed();
-                return _records.NextOffsets();
-            }
-        }
-        /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.0/org/apache/kafka/clients/consumer/ConsumerRecords.html#partitions()"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Set"/></returns>
