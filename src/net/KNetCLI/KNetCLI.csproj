@@ -31,7 +31,7 @@
 	</ItemGroup>
 	<ItemGroup>
 		<PackageReference Include="MASES.JNetCLICore" Version="2.6.9-rc95" />
-		<PackageReference Include="Microsoft.SourceLink.GitHub" Version="10.0.203" PrivateAssets="All" />
+		<PackageReference Include="Microsoft.SourceLink.GitHub" Version="10.0.300" PrivateAssets="All" />
 	</ItemGroup>
 	<ItemGroup>
 		<ProjectReference Include="..\KNet\KNet.csproj">
