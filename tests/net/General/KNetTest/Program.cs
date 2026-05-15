@@ -56,7 +56,9 @@ namespace MASES.KNetTest
         static bool avoidThrows = false;
         static bool randomizeTopicName = false;
         static bool useAsyncConsume = false;
+#if NET7_0_OR_GREATER
         static bool withPrefetch = false;
+#endif
 
         const string theServer = "localhost:9092";
         const string theTopic = "myTopic";
@@ -104,7 +106,9 @@ namespace MASES.KNetTest
                         if (arg.Equals("avoidThrows", StringComparison.InvariantCultureIgnoreCase)) { avoidThrows = true; continue; }
                         if (arg.Equals("randomizeTopicName", StringComparison.InvariantCultureIgnoreCase)) { randomizeTopicName = true; continue; }
                         if (arg.Equals("useAsyncConsume", StringComparison.InvariantCultureIgnoreCase)) { useAsyncConsume = true; continue; }
+#if NET7_0_OR_GREATER
                         if (arg.Equals("withPrefetch", StringComparison.InvariantCultureIgnoreCase)) { withPrefetch = true; continue; }
+#endif
                         Console.WriteLine($"Unknown {arg}");
                     }
                 }

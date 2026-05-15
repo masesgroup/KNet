@@ -385,6 +385,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
+        extra_arguments: [ '', 'withPrefetch' ]
         os: ${{ fromJSON(needs.prepare_matrix_data.outputs.matrix_linux_os) }}
         framework: [ 'net8.0', 'net9.0', 'net10.0' ]
         jdk_vendor: ${{ fromJSON(needs.prepare_matrix_data.outputs.matrix_jdk_vendor) }}
@@ -437,38 +438,37 @@ jobs:
           dotnet-version: |
             10.x
 
-      - name: Execute KNetTest on ${{ matrix.os }} with ${{ matrix.jdk_vendor }} ${{ matrix.jdk_version }}
+      - name: Execute KNetTest useConsumeCallback randomizeTopicName ${{ matrix.extra_arguments }} on ${{ matrix.os }} with ${{ matrix.jdk_vendor }} ${{ matrix.jdk_version }}
         continue-on-error: ${{ inputs.ForceContinueOnError == true }}
-        run: dotnet ${{ github.workspace }}/bin/${{ matrix.framework }}/KNetTest.dll -Log4JConfiguration '${{ github.workspace }}/bin/${{ matrix.framework }}/log4j2.yaml' localhost:9092 useConsumeCallback randomizeTopicName
+        run: dotnet ${{ github.workspace }}/bin/${{ matrix.framework }}/KNetTest.dll -Log4JConfiguration '${{ github.workspace }}/bin/${{ matrix.framework }}/log4j2.yaml' localhost:9092 useConsumeCallback randomizeTopicName ${{ matrix.extra_arguments }}
 
-      - name: Execute KNetTest withBigBigExtraValue on ${{ matrix.os }} with ${{ matrix.jdk_vendor }} ${{ matrix.jdk_version }}
+      - name: Execute KNetTest useConsumeCallback randomizeTopicName withBigBigExtraValue ${{ matrix.extra_arguments }} on ${{ matrix.os }} with ${{ matrix.jdk_vendor }} ${{ matrix.jdk_version }}
         continue-on-error: ${{ inputs.ForceContinueOnError == true }}
-        run: dotnet ${{ github.workspace }}/bin/${{ matrix.framework }}/KNetTest.dll -Log4JConfiguration '${{ github.workspace }}/bin/${{ matrix.framework }}/log4j2.yaml' localhost:9092 useConsumeCallback randomizeTopicName withBigBigExtraValue
+        run: dotnet ${{ github.workspace }}/bin/${{ matrix.framework }}/KNetTest.dll -Log4JConfiguration '${{ github.workspace }}/bin/${{ matrix.framework }}/log4j2.yaml' localhost:9092 useConsumeCallback randomizeTopicName withBigBigExtraValue ${{ matrix.extra_arguments }}
 
-      - name: Execute KNetTest runBuffered on ${{ matrix.os }} with ${{ matrix.jdk_vendor }} ${{ matrix.jdk_version }}
+      - name: Execute KNetTest useConsumeCallback randomizeTopicName runBuffered ${{ matrix.extra_arguments }} on ${{ matrix.os }} with ${{ matrix.jdk_vendor }} ${{ matrix.jdk_version }}
         continue-on-error: ${{ inputs.ForceContinueOnError == true }}
-        run: dotnet ${{ github.workspace }}/bin/${{ matrix.framework }}/KNetTest.dll -Log4JConfiguration '${{ github.workspace }}/bin/${{ matrix.framework }}/log4j2.yaml' localhost:9092 useConsumeCallback randomizeTopicName runBuffered
+        run: dotnet ${{ github.workspace }}/bin/${{ matrix.framework }}/KNetTest.dll -Log4JConfiguration '${{ github.workspace }}/bin/${{ matrix.framework }}/log4j2.yaml' localhost:9092 useConsumeCallback randomizeTopicName runBuffered ${{ matrix.extra_arguments }}
 
-      - name: Execute KNetTest runBuffered withBigBigExtraValue on ${{ matrix.os }} with ${{ matrix.jdk_vendor }} ${{ matrix.jdk_version }}
+      - name: Execute KNetTest useConsumeCallback randomizeTopicName runBuffered withBigBigExtraValue ${{ matrix.extra_arguments }} on ${{ matrix.os }} with ${{ matrix.jdk_vendor }} ${{ matrix.jdk_version }}
         continue-on-error: ${{ inputs.ForceContinueOnError == true }}
-        run: dotnet ${{ github.workspace }}/bin/${{ matrix.framework }}/KNetTest.dll -Log4JConfiguration '${{ github.workspace }}/bin/${{ matrix.framework }}/log4j2.yaml' localhost:9092 useConsumeCallback randomizeTopicName runBuffered withBigBigExtraValue
+        run: dotnet ${{ github.workspace }}/bin/${{ matrix.framework }}/KNetTest.dll -Log4JConfiguration '${{ github.workspace }}/bin/${{ matrix.framework }}/log4j2.yaml' localhost:9092 useConsumeCallback randomizeTopicName runBuffered withBigBigExtraValue ${{ matrix.extra_arguments }}
 
-      - name: Execute KNetTest useAsyncConsume on ${{ matrix.os }} with ${{ matrix.jdk_vendor }} ${{ matrix.jdk_version }}
+      - name: Execute KNetTest useConsumeCallback randomizeTopicName useAsyncConsume ${{ matrix.extra_arguments }} on ${{ matrix.os }} with ${{ matrix.jdk_vendor }} ${{ matrix.jdk_version }}
         continue-on-error: ${{ inputs.ForceContinueOnError == true }}
-        run: dotnet ${{ github.workspace }}/bin/${{ matrix.framework }}/KNetTest.dll -Log4JConfiguration '${{ github.workspace }}/bin/${{ matrix.framework }}/log4j2.yaml' localhost:9092 useConsumeCallback randomizeTopicName useAsyncConsume
+        run: dotnet ${{ github.workspace }}/bin/${{ matrix.framework }}/KNetTest.dll -Log4JConfiguration '${{ github.workspace }}/bin/${{ matrix.framework }}/log4j2.yaml' localhost:9092 useConsumeCallback randomizeTopicName useAsyncConsume ${{ matrix.extra_arguments }}
 
-      - name: Execute KNetTest withBigBigExtraValue useAsyncConsume on ${{ matrix.os }} with ${{ matrix.jdk_vendor }} ${{ matrix.jdk_version }}
+      - name: Execute KNetTest useConsumeCallback randomizeTopicName withBigBigExtraValue useAsyncConsume ${{ matrix.extra_arguments }} on ${{ matrix.os }} with ${{ matrix.jdk_vendor }} ${{ matrix.jdk_version }}
         continue-on-error: ${{ inputs.ForceContinueOnError == true }}
-        run: dotnet ${{ github.workspace }}/bin/${{ matrix.framework }}/KNetTest.dll -Log4JConfiguration '${{ github.workspace }}/bin/${{ matrix.framework }}/log4j2.yaml' localhost:9092 useConsumeCallback randomizeTopicName withBigBigExtraValue useAsyncConsume
+        run: dotnet ${{ github.workspace }}/bin/${{ matrix.framework }}/KNetTest.dll -Log4JConfiguration '${{ github.workspace }}/bin/${{ matrix.framework }}/log4j2.yaml' localhost:9092 useConsumeCallback randomizeTopicName withBigBigExtraValue useAsyncConsume ${{ matrix.extra_arguments }}
 
-      - name: Execute KNetTest runBuffered useAsyncConsume on ${{ matrix.os }} with ${{ matrix.jdk_vendor }} ${{ matrix.jdk_version }}
+      - name: Execute KNetTest useConsumeCallback randomizeTopicName runBuffered useAsyncConsume ${{ matrix.extra_arguments }} on ${{ matrix.os }} with ${{ matrix.jdk_vendor }} ${{ matrix.jdk_version }}
         continue-on-error: ${{ inputs.ForceContinueOnError == true }}
-        run: dotnet ${{ github.workspace }}/bin/${{ matrix.framework }}/KNetTest.dll -Log4JConfiguration '${{ github.workspace }}/bin/${{ matrix.framework }}/log4j2.yaml' localhost:9092 useConsumeCallback randomizeTopicName runBuffered useAsyncConsume
+        run: dotnet ${{ github.workspace }}/bin/${{ matrix.framework }}/KNetTest.dll -Log4JConfiguration '${{ github.workspace }}/bin/${{ matrix.framework }}/log4j2.yaml' localhost:9092 useConsumeCallback randomizeTopicName runBuffered useAsyncConsume ${{ matrix.extra_arguments }}
 
-      - name: Execute KNetTest runBuffered withBigBigExtraValue useAsyncConsume on ${{ matrix.os }} with ${{ matrix.jdk_vendor }} ${{ matrix.jdk_version }}
+      - name: Execute KNetTest useConsumeCallback randomizeTopicName runBuffered withBigBigExtraValue useAsyncConsume ${{ matrix.extra_arguments }} on ${{ matrix.os }} with ${{ matrix.jdk_vendor }} ${{ matrix.jdk_version }}
         continue-on-error: ${{ inputs.ForceContinueOnError == true }}
-        run: dotnet ${{ github.workspace }}/bin/${{ matrix.framework }}/KNetTest.dll -Log4JConfiguration '${{ github.workspace }}/bin/${{ matrix.framework }}/log4j2.yaml' localhost:9092 useConsumeCallback randomizeTopicName runBuffered withBigBigExtraValue useAsyncConsume
-
+        run: dotnet ${{ github.workspace }}/bin/${{ matrix.framework }}/KNetTest.dll -Log4JConfiguration '${{ github.workspace }}/bin/${{ matrix.framework }}/log4j2.yaml' localhost:9092 useConsumeCallback randomizeTopicName runBuffered withBigBigExtraValue useAsyncConsume ${{ matrix.extra_arguments }}
 
       - name: Execute KNetClassicTest on ${{ matrix.os }} with ${{ matrix.jdk_vendor }} ${{ matrix.jdk_version }}
         continue-on-error: ${{ inputs.ForceContinueOnError == true }}
@@ -493,6 +493,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
+        extra_arguments: [ '', 'withPrefetch' ]
         os: ${{ fromJSON(needs.prepare_matrix_data.outputs.matrix_win_os) }}
         framework: [ 'net462', 'net8.0', 'net9.0', 'net10.0' ]
         jdk_vendor: ${{ fromJSON(needs.prepare_matrix_data.outputs.matrix_jdk_vendor) }}
@@ -500,6 +501,8 @@ jobs:
         exclude:
           - os: windows-11-arm
             framework: net462
+          - framework: net462
+            extra_arguments: 'withPrefetch'
 
     runs-on: ${{ matrix.os }}
     env:
@@ -576,14 +579,14 @@ jobs:
           knet storagetool format --standalone --ignore-formatted -t 6oTi4odMSVSmroqyy5rubw -c ${{ github.workspace }}/bin/${{ matrix.framework }}/windows_server.properties
           New-Item -Path "${{ github.workspace }}" -Name "logfiles" -ItemType Directory
           Start-Process -RSE ${{ github.workspace }}/logfiles/PWSH_kafka_err.log -RSO ${{ github.workspace }}\logfiles\PWSH_kafka_out.log -FilePath knet -ArgumentList ( 'kafkastart', '-LogPath', '${{ github.workspace }}\logfiles\', '-Log4JConfiguration', '${{ github.workspace }}\bin\${{ matrix.framework }}\log4j2.yaml', '${{ github.workspace }}\bin\${{ matrix.framework }}\windows_server.properties' )
-          ${{ github.workspace }}\bin\${{ matrix.framework }}\KNetTest.exe -Log4JConfiguration '${{ github.workspace }}\bin\${{ matrix.framework }}\log4j2.yaml' localhost:9092 useConsumeCallback randomizeTopicName
-          ${{ github.workspace }}\bin\${{ matrix.framework }}\KNetTest.exe -Log4JConfiguration '${{ github.workspace }}\bin\${{ matrix.framework }}\log4j2.yaml' localhost:9092 useConsumeCallback randomizeTopicName withExtraValue
-          ${{ github.workspace }}\bin\${{ matrix.framework }}\KNetTest.exe -Log4JConfiguration '${{ github.workspace }}\bin\${{ matrix.framework }}\log4j2.yaml' localhost:9092 useConsumeCallback randomizeTopicName runBuffered
-          ${{ github.workspace }}\bin\${{ matrix.framework }}\KNetTest.exe -Log4JConfiguration '${{ github.workspace }}\bin\${{ matrix.framework }}\log4j2.yaml' localhost:9092 useConsumeCallback randomizeTopicName runBuffered withExtraValue
-          ${{ github.workspace }}\bin\${{ matrix.framework }}\KNetTest.exe -Log4JConfiguration '${{ github.workspace }}\bin\${{ matrix.framework }}\log4j2.yaml' localhost:9092 useConsumeCallback randomizeTopicName useAsyncConsume
-          ${{ github.workspace }}\bin\${{ matrix.framework }}\KNetTest.exe -Log4JConfiguration '${{ github.workspace }}\bin\${{ matrix.framework }}\log4j2.yaml' localhost:9092 useConsumeCallback randomizeTopicName withExtraValue useAsyncConsume
-          ${{ github.workspace }}\bin\${{ matrix.framework }}\KNetTest.exe -Log4JConfiguration '${{ github.workspace }}\bin\${{ matrix.framework }}\log4j2.yaml' localhost:9092 useConsumeCallback randomizeTopicName runBuffered useAsyncConsume
-          ${{ github.workspace }}\bin\${{ matrix.framework }}\KNetTest.exe -Log4JConfiguration '${{ github.workspace }}\bin\${{ matrix.framework }}\log4j2.yaml' localhost:9092 useConsumeCallback randomizeTopicName runBuffered withExtraValue useAsyncConsume
+          ${{ github.workspace }}\bin\${{ matrix.framework }}\KNetTest.exe -Log4JConfiguration '${{ github.workspace }}\bin\${{ matrix.framework }}\log4j2.yaml' localhost:9092 useConsumeCallback randomizeTopicName ${{ matrix.extra_arguments }}
+          ${{ github.workspace }}\bin\${{ matrix.framework }}\KNetTest.exe -Log4JConfiguration '${{ github.workspace }}\bin\${{ matrix.framework }}\log4j2.yaml' localhost:9092 useConsumeCallback randomizeTopicName withExtraValue ${{ matrix.extra_arguments }}
+          ${{ github.workspace }}\bin\${{ matrix.framework }}\KNetTest.exe -Log4JConfiguration '${{ github.workspace }}\bin\${{ matrix.framework }}\log4j2.yaml' localhost:9092 useConsumeCallback randomizeTopicName runBuffered ${{ matrix.extra_arguments }}
+          ${{ github.workspace }}\bin\${{ matrix.framework }}\KNetTest.exe -Log4JConfiguration '${{ github.workspace }}\bin\${{ matrix.framework }}\log4j2.yaml' localhost:9092 useConsumeCallback randomizeTopicName runBuffered withExtraValue ${{ matrix.extra_arguments }}
+          ${{ github.workspace }}\bin\${{ matrix.framework }}\KNetTest.exe -Log4JConfiguration '${{ github.workspace }}\bin\${{ matrix.framework }}\log4j2.yaml' localhost:9092 useConsumeCallback randomizeTopicName useAsyncConsume ${{ matrix.extra_arguments }}
+          ${{ github.workspace }}\bin\${{ matrix.framework }}\KNetTest.exe -Log4JConfiguration '${{ github.workspace }}\bin\${{ matrix.framework }}\log4j2.yaml' localhost:9092 useConsumeCallback randomizeTopicName withExtraValue useAsyncConsume ${{ matrix.extra_arguments }}
+          ${{ github.workspace }}\bin\${{ matrix.framework }}\KNetTest.exe -Log4JConfiguration '${{ github.workspace }}\bin\${{ matrix.framework }}\log4j2.yaml' localhost:9092 useConsumeCallback randomizeTopicName runBuffered useAsyncConsume ${{ matrix.extra_arguments }}
+          ${{ github.workspace }}\bin\${{ matrix.framework }}\KNetTest.exe -Log4JConfiguration '${{ github.workspace }}\bin\${{ matrix.framework }}\log4j2.yaml' localhost:9092 useConsumeCallback randomizeTopicName runBuffered withExtraValue useAsyncConsume ${{ matrix.extra_arguments }}
           ${{ github.workspace }}\bin\${{ matrix.framework }}\KNetClassicTest.exe -Log4JConfiguration '${{ github.workspace }}\bin\${{ matrix.framework }}\log4j2.yaml'
 
       #- name: Start Kafka and execute KNetTest on ${{ matrix.os }} with ${{ matrix.jdk_vendor }} ${{ matrix.jdk_version }}
@@ -626,6 +629,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
+        extra_arguments: [ '', 'withPrefetch' ]
         os: ${{ fromJSON(needs.prepare_matrix_data.outputs.matrix_mac_os) }}
         framework: [ 'net8.0', 'net9.0', 'net10.0' ]
         jdk_vendor: ${{ fromJSON(needs.prepare_matrix_data.outputs.matrix_jdk_vendor) }}
@@ -704,46 +708,45 @@ jobs:
           New-Item -Path "${{ github.workspace }}" -Name "logfiles" -ItemType Directory
           Start-Process -RSE ${{ github.workspace }}/logfiles/PWSH_kafka_err.log -RSO ${{ github.workspace }}/logfiles/PWSH_kafka_out.log -FilePath knet -ArgumentList ( 'kafkastart', '-LogPath', '${{ github.workspace }}/logfiles/', '-Log4JConfiguration', '${{ github.workspace }}/bin/${{ matrix.framework }}/log4j2.yaml', '${{ github.workspace }}/bin/${{ matrix.framework }}/server.properties' )
 
-      - name: Execute KNetTest on ${{ matrix.os }} with ${{ matrix.jdk_vendor }} ${{ matrix.jdk_version }}
+      - name: Execute KNetTest useConsumeCallback randomizeTopicName ${{ matrix.extra_arguments }} on ${{ matrix.os }} with ${{ matrix.jdk_vendor }} ${{ matrix.jdk_version }}
         continue-on-error: ${{ inputs.ForceContinueOnError == true }}
         shell: pwsh
-        run: dotnet ${{ github.workspace }}/bin/${{ matrix.framework }}/KNetTest.dll -Log4JConfiguration '${{ github.workspace }}/bin/${{ matrix.framework }}/log4j2.yaml' localhost:9092 useConsumeCallback randomizeTopicName
+        run: dotnet ${{ github.workspace }}/bin/${{ matrix.framework }}/KNetTest.dll -Log4JConfiguration '${{ github.workspace }}/bin/${{ matrix.framework }}/log4j2.yaml' localhost:9092 useConsumeCallback randomizeTopicName ${{ matrix.extra_arguments }}
 
-      - name: Execute KNetTest withBigBigExtraValue on ${{ matrix.os }} with ${{ matrix.jdk_vendor }} ${{ matrix.jdk_version }}
+      - name: Execute KNetTest useConsumeCallback randomizeTopicName withBigBigExtraValue ${{ matrix.extra_arguments }} on ${{ matrix.os }} with ${{ matrix.jdk_vendor }} ${{ matrix.jdk_version }}
         continue-on-error: ${{ inputs.ForceContinueOnError == true }}
         shell: pwsh
-        run: dotnet ${{ github.workspace }}/bin/${{ matrix.framework }}/KNetTest.dll -Log4JConfiguration '${{ github.workspace }}/bin/${{ matrix.framework }}/log4j2.yaml' localhost:9092 useConsumeCallback randomizeTopicName withBigBigExtraValue
+        run: dotnet ${{ github.workspace }}/bin/${{ matrix.framework }}/KNetTest.dll -Log4JConfiguration '${{ github.workspace }}/bin/${{ matrix.framework }}/log4j2.yaml' localhost:9092 useConsumeCallback randomizeTopicName withBigBigExtraValue ${{ matrix.extra_arguments }}
 
-      - name: Execute KNetTest runBuffered on ${{ matrix.os }} with ${{ matrix.jdk_vendor }} ${{ matrix.jdk_version }}
+      - name: Execute KNetTest useConsumeCallback randomizeTopicName runBuffered ${{ matrix.extra_arguments }} on ${{ matrix.os }} with ${{ matrix.jdk_vendor }} ${{ matrix.jdk_version }}
         continue-on-error: ${{ inputs.ForceContinueOnError == true }}
         shell: pwsh
-        run: dotnet ${{ github.workspace }}/bin/${{ matrix.framework }}/KNetTest.dll -Log4JConfiguration '${{ github.workspace }}/bin/${{ matrix.framework }}/log4j2.yaml' localhost:9092 useConsumeCallback randomizeTopicName runBuffered
+        run: dotnet ${{ github.workspace }}/bin/${{ matrix.framework }}/KNetTest.dll -Log4JConfiguration '${{ github.workspace }}/bin/${{ matrix.framework }}/log4j2.yaml' localhost:9092 useConsumeCallback randomizeTopicName runBuffered ${{ matrix.extra_arguments }}
 
-      - name: Execute KNetTest runBuffered withBigBigExtraValue on ${{ matrix.os }} with ${{ matrix.jdk_vendor }} ${{ matrix.jdk_version }}
+      - name: Execute KNetTest useConsumeCallback randomizeTopicName runBuffered withBigBigExtraValue ${{ matrix.extra_arguments }} on ${{ matrix.os }} with ${{ matrix.jdk_vendor }} ${{ matrix.jdk_version }}
         continue-on-error: ${{ inputs.ForceContinueOnError == true }}
         shell: pwsh
-        run: dotnet ${{ github.workspace }}/bin/${{ matrix.framework }}/KNetTest.dll -Log4JConfiguration '${{ github.workspace }}/bin/${{ matrix.framework }}/log4j2.yaml' localhost:9092 useConsumeCallback randomizeTopicName runBuffered withBigBigExtraValue
+        run: dotnet ${{ github.workspace }}/bin/${{ matrix.framework }}/KNetTest.dll -Log4JConfiguration '${{ github.workspace }}/bin/${{ matrix.framework }}/log4j2.yaml' localhost:9092 useConsumeCallback randomizeTopicName runBuffered withBigBigExtraValue ${{ matrix.extra_arguments }}
 
-      - name: Execute KNetTest useAsyncConsume on ${{ matrix.os }} with ${{ matrix.jdk_vendor }} ${{ matrix.jdk_version }}
+      - name: Execute KNetTest useConsumeCallback randomizeTopicName useAsyncConsume ${{ matrix.extra_arguments }} on ${{ matrix.os }} with ${{ matrix.jdk_vendor }} ${{ matrix.jdk_version }}
         continue-on-error: ${{ inputs.ForceContinueOnError == true }}
         shell: pwsh
-        run: dotnet ${{ github.workspace }}/bin/${{ matrix.framework }}/KNetTest.dll -Log4JConfiguration '${{ github.workspace }}/bin/${{ matrix.framework }}/log4j2.yaml' localhost:9092 useConsumeCallback randomizeTopicName useAsyncConsume
+        run: dotnet ${{ github.workspace }}/bin/${{ matrix.framework }}/KNetTest.dll -Log4JConfiguration '${{ github.workspace }}/bin/${{ matrix.framework }}/log4j2.yaml' localhost:9092 useConsumeCallback randomizeTopicName useAsyncConsume ${{ matrix.extra_arguments }}
 
-      - name: Execute KNetTest withBigBigExtraValue useAsyncConsume on ${{ matrix.os }} with ${{ matrix.jdk_vendor }} ${{ matrix.jdk_version }}
+      - name: Execute KNetTest useConsumeCallback randomizeTopicName withBigBigExtraValue useAsyncConsume ${{ matrix.extra_arguments }} on ${{ matrix.os }} with ${{ matrix.jdk_vendor }} ${{ matrix.jdk_version }}
         continue-on-error: ${{ inputs.ForceContinueOnError == true }}
         shell: pwsh
-        run: dotnet ${{ github.workspace }}/bin/${{ matrix.framework }}/KNetTest.dll -Log4JConfiguration '${{ github.workspace }}/bin/${{ matrix.framework }}/log4j2.yaml' localhost:9092 useConsumeCallback randomizeTopicName withBigBigExtraValue useAsyncConsume
+        run: dotnet ${{ github.workspace }}/bin/${{ matrix.framework }}/KNetTest.dll -Log4JConfiguration '${{ github.workspace }}/bin/${{ matrix.framework }}/log4j2.yaml' localhost:9092 useConsumeCallback randomizeTopicName withBigBigExtraValue useAsyncConsume ${{ matrix.extra_arguments }}
 
-      - name: Execute KNetTest runBuffered useAsyncConsume on ${{ matrix.os }} with ${{ matrix.jdk_vendor }} ${{ matrix.jdk_version }}
+      - name: Execute KNetTest useConsumeCallback randomizeTopicName runBuffered useAsyncConsume ${{ matrix.extra_arguments }} on ${{ matrix.os }} with ${{ matrix.jdk_vendor }} ${{ matrix.jdk_version }}
         continue-on-error: ${{ inputs.ForceContinueOnError == true }}
         shell: pwsh
-        run: dotnet ${{ github.workspace }}/bin/${{ matrix.framework }}/KNetTest.dll -Log4JConfiguration '${{ github.workspace }}/bin/${{ matrix.framework }}/log4j2.yaml' localhost:9092 useConsumeCallback randomizeTopicName runBuffered useAsyncConsume
+        run: dotnet ${{ github.workspace }}/bin/${{ matrix.framework }}/KNetTest.dll -Log4JConfiguration '${{ github.workspace }}/bin/${{ matrix.framework }}/log4j2.yaml' localhost:9092 useConsumeCallback randomizeTopicName runBuffered useAsyncConsume ${{ matrix.extra_arguments }}
 
-      - name: Execute KNetTest runBuffered withBigBigExtraValue useAsyncConsume on ${{ matrix.os }} with ${{ matrix.jdk_vendor }} ${{ matrix.jdk_version }}
+      - name: Execute KNetTest useConsumeCallback randomizeTopicName runBuffered withBigBigExtraValue useAsyncConsume ${{ matrix.extra_arguments }} on ${{ matrix.os }} with ${{ matrix.jdk_vendor }} ${{ matrix.jdk_version }}
         continue-on-error: ${{ inputs.ForceContinueOnError == true }}
         shell: pwsh
-        run: dotnet ${{ github.workspace }}/bin/${{ matrix.framework }}/KNetTest.dll -Log4JConfiguration '${{ github.workspace }}/bin/${{ matrix.framework }}/log4j2.yaml' localhost:9092 useConsumeCallback randomizeTopicName runBuffered withBigBigExtraValue useAsyncConsume
-
+        run: dotnet ${{ github.workspace }}/bin/${{ matrix.framework }}/KNetTest.dll -Log4JConfiguration '${{ github.workspace }}/bin/${{ matrix.framework }}/log4j2.yaml' localhost:9092 useConsumeCallback randomizeTopicName runBuffered withBigBigExtraValue useAsyncConsume ${{ matrix.extra_arguments }}
 
       - name: Execute KNetClassicTest on ${{ matrix.os }} with ${{ matrix.jdk_vendor }} ${{ matrix.jdk_version }}
         continue-on-error: ${{ inputs.ForceContinueOnError == true }}
