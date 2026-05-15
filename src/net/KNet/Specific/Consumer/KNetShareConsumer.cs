@@ -57,10 +57,13 @@ namespace MASES.KNet.Consumer
         /// <see langword="true"/> if the <see cref="IShareConsumer{K, V, TJVMK, TJVMV}"/> instance has an empty set of items in async operation
         /// </summary>
         bool IsEmpty { get; }
+        /// <summary>
+        /// Number of messages in the <see cref="IConsumer{K, V, TJVMK, TJVMV}"/> instance waiting to be processed in async operation
+        /// </summary>
         [Obsolete("Use WaitingBatches")]
         int WaitingMessages { get; }
         /// <summary>
-        /// Number of messages in the <see cref="IConsumer{K, V, TJVMK, TJVMV}"/> instance waiting to be processed in async operation
+        /// Number of message batches in the <see cref="IConsumer{K, V, TJVMK, TJVMV}"/> instance waiting to be processed in async operation
         /// </summary>
         int WaitingBatches { get; }
 #if NET7_0_OR_GREATER

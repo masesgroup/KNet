@@ -56,6 +56,7 @@ namespace MASES.KNetTest
         static bool avoidThrows = false;
         static bool randomizeTopicName = false;
         static bool useAsyncConsume = false;
+        static bool withPrefetch = false;
 
         const string theServer = "localhost:9092";
         const string theTopic = "myTopic";
@@ -69,9 +70,6 @@ namespace MASES.KNetTest
         const int checkTime = 200;
         const int maxEmptyCycle = 200;
         static int waitTime = waitMultiplier * 60 * 1000;
-#if NET7_0_OR_GREATER
-        const bool withPrefetch = false;
-#endif
 
         static string serverToUse = theServer;
         static string topicToUse = theTopic;
@@ -106,6 +104,7 @@ namespace MASES.KNetTest
                         if (arg.Equals("avoidThrows", StringComparison.InvariantCultureIgnoreCase)) { avoidThrows = true; continue; }
                         if (arg.Equals("randomizeTopicName", StringComparison.InvariantCultureIgnoreCase)) { randomizeTopicName = true; continue; }
                         if (arg.Equals("useAsyncConsume", StringComparison.InvariantCultureIgnoreCase)) { useAsyncConsume = true; continue; }
+                        if (arg.Equals("withPrefetch", StringComparison.InvariantCultureIgnoreCase)) { withPrefetch = true; continue; }
                         Console.WriteLine($"Unknown {arg}");
                     }
                 }
@@ -119,8 +118,6 @@ namespace MASES.KNetTest
                 topicToUse += "-" + Guid.NewGuid().ToString();
                 Console.WriteLine($"Topic name will be {topicToUse}");
             }
-
-          //  topicToUse = "myTopic-d7ecba5d-e8e9-451e-8945-09a67b582125";
 
             try
             {
