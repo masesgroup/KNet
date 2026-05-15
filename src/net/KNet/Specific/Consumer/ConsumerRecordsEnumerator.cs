@@ -89,6 +89,7 @@ namespace MASES.KNet.Consumer
 
         public ValueTask DisposeAsync()
         {
+            CheckDisposed();
             return _recordAsyncEnumerator.DisposeAsync();
         }
 

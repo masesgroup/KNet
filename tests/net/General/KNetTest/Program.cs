@@ -110,12 +110,17 @@ namespace MASES.KNetTest
                     }
                 }
             }
+#if DEBUG
+            consoleOutput = false;
+#endif
 
             if (randomizeTopicName)
             {
                 topicToUse += "-" + Guid.NewGuid().ToString();
                 Console.WriteLine($"Topic name will be {topicToUse}");
             }
+
+          //  topicToUse = "myTopic-d7ecba5d-e8e9-451e-8945-09a67b582125";
 
             try
             {
@@ -676,6 +681,10 @@ namespace MASES.KNetTest
                         int emptyCycle = 0;
                         long firstOffset = -1;
                         long lastOffset = -1;
+                        TopicPartition topicPartition = new TopicPartition(topicToUse, 0);
+#if NET7_0_OR_GREATER
+                        consumer.ApplyPrefetch(withPrefetch);
+#endif
                         consumer.SetCallback((record) =>
                         {
                             Volatile.Write(ref emptyCycle, 0);
@@ -695,12 +704,14 @@ namespace MASES.KNetTest
                         });
                         while (runInParallel ? !resetEvent.WaitOne(0) : elements < NonParallelLimit)
                         {
+                            var positionBeforePoll = consumer.Position(topicPartition);
                             consumeAsyncPrecision.Start();
                             if (!consumer.ConsumeAsync(checkTime))
                             {
                                 Interlocked.Increment(ref emptyCycle);
                             }
                             consumeAsyncPrecision.Stop();
+                            var positionAfterPoll = consumer.Position(topicPartition);
                             bool elapsedTimeout = !runInParallel && swCycleTime.ElapsedMilliseconds > waitTime;
                             bool tooManyEmptyCycles = elements != 0 && Volatile.Read(ref emptyCycle) > maxEmptyCycle;
                             if (elapsedTimeout // exit for elapsed timeout or
@@ -1101,6 +1112,9 @@ namespace MASES.KNetTest
                         int emptyCycle = 0;
                         long firstOffset = -1;
                         long lastOffset = -1;
+#if NET7_0_OR_GREATER
+                        consumer.ApplyPrefetch(withPrefetch);
+#endif
                         consumer.SetCallback((record) =>
                         {
                             Volatile.Write(ref emptyCycle, 0);
