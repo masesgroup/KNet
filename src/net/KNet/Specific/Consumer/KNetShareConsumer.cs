@@ -18,9 +18,10 @@
 
 using Java.Time;
 using Java.Util;
+using MASES.JCOBridge.C2JBridge;
+using MASES.KNet.Serialization;
 using System;
 using System.Collections.Concurrent;
-using MASES.KNet.Serialization;
 using System.Threading;
 
 namespace MASES.KNet.Consumer
@@ -57,9 +58,14 @@ namespace MASES.KNet.Consumer
         /// </summary>
         bool IsEmpty { get; }
         /// <summary>
-        /// Number of messages in the <see cref="IShareConsumer{K, V, TJVMK, TJVMV}"/> instance waiting to be processed in async operation
+        /// Number of messages in the <see cref="IConsumer{K, V, TJVMK, TJVMV}"/> instance waiting to be processed in async operation
         /// </summary>
+        [Obsolete("Use WaitingBatches")]
         int WaitingMessages { get; }
+        /// <summary>
+        /// Number of message batches in the <see cref="IConsumer{K, V, TJVMK, TJVMV}"/> instance waiting to be processed in async operation
+        /// </summary>
+        int WaitingBatches { get; }
 #if NET7_0_OR_GREATER
         /// <summary>
         /// Set to <see langword="true"/> to enable enumeration with prefetch over <paramref name="prefetchThreshold"/> threshold, i.e. preparation of <see cref="ConsumerRecord{K, V, TJVMK, TJVMV}"/> in external thread 
@@ -70,10 +76,11 @@ namespace MASES.KNet.Consumer
         void ApplyPrefetch(bool enablePrefetch = true, int prefetchThreshold = 10);
 #endif
         /// <summary>
-        /// Sets the <see cref="Func{T, TResult}"/> to use to receive <see cref="ConsumerRecord{K, V, TJVMK, TJVMV}"/>
+        /// Sets the <see cref="Func{T, TResult}"/> to use to receive the <see cref="ConsumerRecord{K, V, TJVMK, TJVMV}"/>
         /// </summary>
         /// <param name="cb">The callback <see cref="Func{T, TResult}"/></param>
-        void SetCallback(Func<ConsumerRecord<K, V, TJVMK, TJVMV>, bool> cb);
+        /// <param name="exceptionCallback">The callback receiving <see cref="Exception"/> thrown in async operations</param>
+        void SetCallback(Func<ConsumerRecord<K, V, TJVMK, TJVMV>, bool> cb, Action<Exception> exceptionCallback = null);
         /// <summary>
         /// KNet extension for <see cref="Org.Apache.Kafka.Clients.Consumer.Consumer.Poll(Duration)"/>
         /// </summary>
@@ -112,6 +119,7 @@ namespace MASES.KNet.Consumer
         long _dequeing = 0;
         readonly System.Threading.Thread _consumeThread = null;
         readonly ConcurrentQueue<ConsumerRecords<K, V, TJVMK, TJVMV>> _consumedRecords = null;
+        readonly SemaphoreSlim _releaseSignal = new SemaphoreSlim(0);
         readonly KNetConsumerCallback<K, V, TJVMK, TJVMV> _consumerCallback = null;
         readonly ISerDes<K, TJVMK> _keyDeserializer;
         readonly ISerDes<V, TJVMV> _valueDeserializer;
@@ -152,6 +160,7 @@ namespace MASES.KNet.Consumer
                 _consumedRecords = new();
                 _threadRunning = true;
                 _consumeThread = new(ConsumeHandler);
+                _consumeThread.Name = "KNetShareConsumer Async Consume Thread";
                 _consumeThread.IsBackground = true;
                 _consumeThread.Start();
             }
@@ -182,11 +191,12 @@ namespace MASES.KNet.Consumer
             return new ConsumerRecords<K, V, TJVMK, TJVMV>(records, _keyDeserializer, _valueDeserializer);
         }
 
-        Func<ConsumerRecord<K, V, TJVMK, TJVMV>, bool> actionCallback = null;
+        Func<ConsumerRecord<K, V, TJVMK, TJVMV>, bool> _actionCallback = null;
+        Action<Exception> _exceptionCallback = null;
 
         bool CallbackMessage(ConsumerRecord<K, V, TJVMK, TJVMV> message)
         {
-            return actionCallback == null || actionCallback.Invoke(message);
+            return _actionCallback == null || _actionCallback.Invoke(message);
         }
 
         volatile int _disposed; // 0 = live, 1 = disposed
@@ -205,12 +215,9 @@ namespace MASES.KNet.Consumer
                 _threadRunning = false;
                 if (_consumedRecords != null)
                 {
-                    lock (_consumedRecords)
-                    {
-                        System.Threading.Monitor.Pulse(_consumedRecords);
-                    }
+                    _releaseSignal.Release();
                     if (IsCompleting) { _consumeThread?.Join(); }
-                    actionCallback = null;
+                    _actionCallback = null;
                 }
 
                 if (_autoCreateSerDes)
@@ -230,10 +237,11 @@ namespace MASES.KNet.Consumer
             PrefetchThreshold = IsPrefecth ? prefetchThreshold : 10;
         }
 #endif
-        /// <inheritdoc cref="IShareConsumer{K, V, TJVMK, TJVMV}.SetCallback(Func{ConsumerRecord{K, V, TJVMK, TJVMV}, bool})"/>
-        public void SetCallback(Func<ConsumerRecord<K, V, TJVMK, TJVMV>, bool> cb)
+        /// <inheritdoc cref="IShareConsumer{K, V, TJVMK, TJVMV}.SetCallback(Func{ConsumerRecord{K, V, TJVMK, TJVMV}, bool}, Action{Exception})"/>
+        public void SetCallback(Func<ConsumerRecord<K, V, TJVMK, TJVMV>, bool> cb, Action<Exception> exceptionCallback = null)
         {
-            actionCallback = cb;
+            _actionCallback = cb;
+            _exceptionCallback = exceptionCallback;
         }
 
         void ConsumeHandler(object o)
@@ -242,28 +250,36 @@ namespace MASES.KNet.Consumer
             {
                 while (_threadRunning)
                 {
-                    if (_consumedRecords.TryDequeue(out ConsumerRecords<K, V, TJVMK, TJVMV> records))
+                    _releaseSignal.Wait();
+                    System.Threading.Interlocked.Increment(ref _dequeing);
+                    try
                     {
-                        System.Threading.Interlocked.Increment(ref _dequeing);
-                        try
+                        while (_consumedRecords.TryDequeue(out ConsumerRecords<K, V, TJVMK, TJVMV> records))
                         {
-                            foreach (var item in records)
+                            try
                             {
-                                actionCallback?.Invoke(item);
+                                using var scope = new JCOBridgeDisposeFastScope();
+                                using (records)
+                                {
+                                    if (_actionCallback == null) continue;
+                                    bool dispose = true;
+                                    foreach (var item in records)
+                                    {
+                                        try
+                                        {
+                                            dispose = _actionCallback.Invoke(item);
+                                        }
+                                        catch (Exception e) { _exceptionCallback?.Invoke(e); }
+                                        using var itemToDispose = dispose ? item : null;
+                                    }
+                                }
                             }
-                        }
-                        catch { }
-                        finally
-                        {
-                            System.Threading.Interlocked.Decrement(ref _dequeing);
+                            catch (Exception e) { _exceptionCallback?.Invoke(e); }
                         }
                     }
-                    else if (_threadRunning)
+                    finally
                     {
-                        lock (_consumedRecords)
-                        {
-                            System.Threading.Monitor.Wait(_consumedRecords);
-                        }
+                        System.Threading.Interlocked.Decrement(ref _dequeing);
                     }
                 }
             }
@@ -281,6 +297,8 @@ namespace MASES.KNet.Consumer
         public bool IsEmpty => _consumedRecords.IsEmpty;
         /// <inheritdoc cref="IShareConsumer{K, V, TJVMK, TJVMV}.WaitingMessages"/>
         public int WaitingMessages => _consumedRecords.Count;
+        /// <inheritdoc cref="IShareConsumer{K, V, TJVMK, TJVMV}.WaitingBatches"/>
+        public int WaitingBatches => _consumedRecords.Count;
         /// <inheritdoc cref="IShareConsumer{K, V, TJVMK, TJVMV}.ConsumeAsync(long)"/>
         public bool ConsumeAsync(long timeoutMs)
         {
@@ -295,11 +313,9 @@ namespace MASES.KNet.Consumer
 #else
                 _consumedRecords.Enqueue(results);
 #endif
-                lock (_consumedRecords)
-                {
-                    System.Threading.Monitor.Pulse(_consumedRecords);
-                }
+                _releaseSignal.Release();
             }
+            else results.Dispose();
             return !isEmpty;
         }
         /// <inheritdoc cref="IShareConsumer{K, V, TJVMK, TJVMV}.Consume(long, Func{ConsumerRecord{K, V, TJVMK, TJVMV}, bool})"/>
@@ -309,12 +325,12 @@ namespace MASES.KNet.Consumer
             if (_consumerCallback == null) throw new ArgumentException("Cannot be used since constructor was called with useJVMCallback set to false.");
             try
             {
-                actionCallback = callback;
+                _actionCallback = callback;
                 IExecute("consume", duration);
             }
             finally
             {
-                actionCallback = null;
+                _actionCallback = null;
             }
         }
     }
