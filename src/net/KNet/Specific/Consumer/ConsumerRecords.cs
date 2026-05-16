@@ -113,6 +113,39 @@ namespace MASES.KNet.Consumer
                 return _records.Count();
             }
         }
+
+        /// <summary>
+        /// Extension of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.0/org/apache/kafka/clients/consumer/ConsumerRecords.html#records(java.lang.String)"/>
+        /// </summary>
+        /// <param name="arg0"><see cref="string"/></param>
+        /// <returns><see cref="Java.Lang.Iterable"/> of </returns>
+        public Java.Lang.Iterable<Org.Apache.Kafka.Clients.Consumer.ConsumerRecord<TJVMK, TJVMV>> Records(string arg0)
+        {
+            CheckDisposed();
+            return _records.Records((Java.Lang.String)arg0);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.0/org/apache/kafka/clients/consumer/ConsumerRecords.html#records(org.apache.kafka.common.TopicPartition)"/>
+        /// </summary>
+        /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.TopicPartition"/></param>
+        /// <returns><see cref="Java.Util.List"/></returns>
+        public Java.Util.List<Org.Apache.Kafka.Clients.Consumer.ConsumerRecord<TJVMK, TJVMV>> Records(Org.Apache.Kafka.Common.TopicPartition arg0)
+        {
+            CheckDisposed();
+            return _records.Records(arg0);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.0/org/apache/kafka/clients/consumer/ConsumerRecords.html#partitions()"/>
+        /// </summary>
+        /// <returns><see cref="Java.Util.Set"/></returns>
+        public Java.Util.Set<Org.Apache.Kafka.Common.TopicPartition> Partitions
+        {
+            get
+            {
+                CheckDisposed();
+                return _records.Partitions();
+            }
+        }
 #if NET7_0_OR_GREATER
         /// <summary>
         /// Set to <see langword="true"/> to enable enumeration with prefetch over <paramref name="prefetchThreshold"/> threshold, i.e. preparation of <see cref="ConsumerRecord{K, V, TJVMK, TJVMV}"/> in external thread 
