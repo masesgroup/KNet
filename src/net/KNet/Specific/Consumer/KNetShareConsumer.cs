@@ -284,6 +284,7 @@ namespace MASES.KNet.Consumer
                 }
             }
             catch { }
+            finally { JCOBridge.C2JBridge.JCOBridge.Global.LowLevelOperations.DetachThread(); }
         }
 #if NET7_0_OR_GREATER
         /// <inheritdoc cref="IShareConsumer{K, V, TJVMK, TJVMV}.IsPrefecth"/>
