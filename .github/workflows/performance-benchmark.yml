@@ -321,7 +321,7 @@ jobs:
         timeout-minutes: 60
         continue-on-error: true
         run: |
-          timeout --kill-after=60 1500 \
+          timeout --kill-after=60 3600 \
             dotnet "${{ github.workspace }}/bin/${{ matrix.framework }}/KNetBenchmark.dll" \
               -Log4JConfiguration "${{ github.workspace }}/bin/${{ matrix.framework }}/log4j2.yaml" \
               -ResultsPath "$RESULTS_DIR/knet" \
@@ -334,7 +334,7 @@ jobs:
         timeout-minutes: 60
         continue-on-error: true
         run: |
-          timeout --kill-after=60 1500 \
+          timeout --kill-after=60 3600 \
             dotnet "${{ github.workspace }}/bin/${{ matrix.framework }}/KNetBenchmark.dll" \
               -Log4JConfiguration "${{ github.workspace }}/bin/${{ matrix.framework }}/log4j2.yaml" \
               -ResultsPath "$RESULTS_DIR/standard" \
@@ -348,7 +348,7 @@ jobs:
         timeout-minutes: 60
         continue-on-error: true
         run: |
-          timeout --kill-after=60 1500 \
+          timeout --kill-after=60 3600 \
             dotnet "${{ github.workspace }}/bin/${{ matrix.framework }}/KNetRoundTripBenchmark.dll" \
               -Log4JConfiguration "${{ github.workspace }}/bin/${{ matrix.framework }}/log4j2.yaml" \
               -ResultsPath "$RESULTS_DIR/knet" \
@@ -363,7 +363,7 @@ jobs:
         timeout-minutes: 60
         continue-on-error: true
         run: |
-          timeout --kill-after=60 1500 \
+          timeout --kill-after=60 3600 \
             dotnet "${{ github.workspace }}/bin/${{ matrix.framework }}/KNetRoundTripBenchmark.dll" \
               -Log4JConfiguration "${{ github.workspace }}/bin/${{ matrix.framework }}/log4j2.yaml" \
               -ResultsPath "$RESULTS_DIR/standard" \
@@ -380,7 +380,7 @@ jobs:
         timeout-minutes: 60
         continue-on-error: true
         run: |
-          timeout --kill-after=60 1500 \
+          timeout --kill-after=60 3600 \
             dotnet "${{ github.workspace }}/bin/${{ matrix.framework }}/KNetRoundTripBenchmark.dll" \
               -Log4JConfiguration "${{ github.workspace }}/bin/${{ matrix.framework }}/log4j2.yaml" \
               -ResultsPath "$RESULTS_DIR/knet_checked" \
@@ -396,7 +396,7 @@ jobs:
         timeout-minutes: 60
         continue-on-error: true
         run: |
-          timeout --kill-after=60 1500 \
+          timeout --kill-after=60 3600 \
             dotnet "${{ github.workspace }}/bin/${{ matrix.framework }}/KNetRoundTripBenchmark.dll" \
               -Log4JConfiguration "${{ github.workspace }}/bin/${{ matrix.framework }}/log4j2.yaml" \
               -ResultsPath "$RESULTS_DIR/standard_checked" \
@@ -777,7 +777,7 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           branch: perf/benchmark-results-${{ github.run_number }}
-          base: master
+          # base: master use the launching branch which is master on scheduled
           commit-message: "perf: update benchmark results [run #${{ github.run_number }}]"
           title: "perf: update benchmark results [run #${{ github.run_number }}]"
           body: |
