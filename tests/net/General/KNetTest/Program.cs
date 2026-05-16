@@ -446,12 +446,35 @@ namespace MASES.KNetTest
                                     emptyCycle = 0;
                                     elements++;
                                     watcherTotal.Start();
-                                    var str = $"Consuming from Offset = {item.Offset}, Key = {item.Key}, Value = {item.Value}";
+                                    lastOffset = item.Offset;
+                                    if (!jumpWrotten && lastOffset != elements - 1)
+                                    {
+                                        string strMsg = $"Lost message - expected offset {elements - 1} received {lastOffset} positionBeforePoll={positionBeforePoll} positionAfterPoll={positionAfterPoll}";
+                                        if (!avoidThrows) throw new InvalidOperationException(strMsg);
+                                        else Console.WriteLine(strMsg);
+                                        jumpWrotten = true;
+                                    }
+                                    var key = item.Key;
+                                    var value = item.Value;
+                                    var str = $"Consuming from Offset = {lastOffset}, Key = {key}, Value = {value}";
                                     watcherTotal.Stop();
                                     watcher.Start();
                                     if (consoleOutput) Console.WriteLine(str);
                                     watcher.Stop();
                                 }
+                                forEachIteration++;
+                            }
+                            if (recordsCount != (positionAfterPoll - positionBeforePoll))
+                            {
+                                var strMsg = $"Missing records - records.Count={recordsCount} positionBeforePoll={positionBeforePoll} positionAfterPoll={positionAfterPoll}";
+                                if (!avoidThrows) throw new InvalidOperationException(strMsg);
+                                else Console.WriteLine(strMsg);
+                            }
+                            if (forEachIteration != recordsCount)
+                            {
+                                var strMsg = $"BATCH TRUNCATED: declared={recordsCount} delivered={forEachIteration}";
+                                if (!avoidThrows) throw new InvalidOperationException(strMsg);
+                                else Console.WriteLine(strMsg);
                             }
                             bool elapsedTimeout = !runInParallel && swCycleTime.ElapsedMilliseconds > waitTime;
                             bool tooManyEmptyCycles = elements != 0 && emptyCycle > 5;
@@ -475,6 +498,178 @@ namespace MASES.KNetTest
                     keyDeserializer?.Dispose();
                     valueDeserializer?.Dispose();
                     if (elements != 0) Console.WriteLine($"Total consume time is {watcherTotal.Elapsed}, consume mean time is {TimeSpan.FromTicks(watcherTotal.Elapsed.Ticks / elements)}, console write mean time is {TimeSpan.FromTicks(watcher.Elapsed.Ticks / elements)}");
+                }
+            }
+            catch (Java.Util.Concurrent.ExecutionException ex)
+            {
+                if (!avoidThrows) throw;
+                Console.WriteLine("Consumer ended with error: {0}", ex.InnerException.Message);
+            }
+            catch (Exception ex)
+            {
+                if (!avoidThrows) throw;
+                Console.WriteLine("Consumer ended with error: {0}", ex.Message);
+            }
+        }
+
+        static void ConsumeAsyncSomething()
+        {
+            Console.WriteLine("Starting ConsumeAsyncSomething");
+            try
+            {
+                /**** Direct mode ******
+                Properties props = new Properties();
+                props.Put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, serverToUse);
+                props.Put(ConsumerConfig.GROUP_ID_CONFIG, "test");
+                props.Put(ConsumerConfig.ENABLE_AUTO_COMMIT_CONFIG, "true");
+                props.Put(ConsumerConfig.AUTO_COMMIT_INTERVAL_MS_CONFIG, "1000");
+                *******/
+
+                ConsumerConfigBuilder props = ConsumerConfigBuilder.Create()
+                                                                   .WithBootstrapServers(serverToUse)
+                                                                   .WithGroupId(topicToUse + "-group")
+                                                                   .WithAutoOffsetReset(runInParallel ? ConsumerConfigBuilder.AutoOffsetResetTypes.LATEST
+                                                                                                      : ConsumerConfigBuilder.AutoOffsetResetTypes.EARLIEST)
+                                                                   .WithEnableAutoCommit(true)
+                                                                   .WithAutoCommitIntervalMs(1000);
+
+                ISerDesRaw<string> keyDeserializer = DefaultSerDes<string>.NewByteArraySerDes();
+                var valueDeserializer = JsonSerDes.Value<TestType>.NewByteArraySerDes();
+                ConsumerRebalanceListener rebalanceListener = null;
+                KNetConsumer<string, TestType> consumer = null;
+                ManualResetEvent manualResetEvent = new ManualResetEvent(false);
+
+                if (useConsumeCallback)
+                {
+                    rebalanceListener = new ConsumerRebalanceListener()
+                    {
+                        OnOnPartitionsRevoked = (o) =>
+                        {
+                            Console.WriteLine("Revoked: {0}", o.ToString());
+                        },
+                        OnOnPartitionsAssigned = (o) =>
+                        {
+                            Console.WriteLine("Assigned: {0}", o.ToString());
+                            manualResetEvent.Set();
+                        }
+                    };
+                }
+                long elements = 0;
+                Stopwatch watcherTotal = new Stopwatch();
+                Stopwatch watcher = new Stopwatch();
+                Stopwatch consumeAsyncPrecision = new Stopwatch();
+
+                using var topics = Collections.Singleton((Java.Lang.String)topicToUse);
+                try
+                {
+                    using (consumer = new KNetConsumer<string, TestType>(props, keyDeserializer, valueDeserializer))
+                    {
+                        if (runInParallel)
+                        {
+                            if (useConsumeCallback) consumer.Subscribe(topics, rebalanceListener);
+                            else consumer.Subscribe(topics);
+                        }
+                        else
+                        {
+                            using var tp = new Org.Apache.Kafka.Common.TopicPartition(topicToUse, 0);
+                            consumer.Assign(Collections.Singleton(tp));
+                            if (_firstOffset != -1)
+                            {
+                                consumer.Seek(tp, _firstOffset);
+                                Console.WriteLine("Seek to: {0}", _firstOffset);
+                            }
+                            else
+                            {
+                                consumer.SeekToBeginning(Collections.Singleton(tp));
+                                Console.WriteLine("SeekToBeginning");
+                            }
+                        }
+                        if (runInParallel && useConsumeCallback) manualResetEvent.WaitOne();
+
+
+                        Stopwatch swCycleTime = Stopwatch.StartNew();
+
+                        int emptyCycle = 0;
+                        long firstOffset = -1;
+                        long lastOffset = -1;
+                        Exception exceptionRaised = null;
+#if NET7_0_OR_GREATER
+                        consumer.ApplyPrefetch(withPrefetch);
+#endif
+                        consumer.SetCallback((record) =>
+                        {
+                            Volatile.Write(ref emptyCycle, 0);
+                            elements++;
+                            if (firstOffset == -1) firstOffset = record.Offset;
+                            watcherTotal.Start();
+                            lastOffset = record.Offset;
+                            if (lastOffset != elements - 1)
+                            {
+                                var strMsg = $"Lost message - expected offset {elements - 1} received {lastOffset}";
+                                if (!avoidThrows) throw new InvalidOperationException(strMsg);
+                                else Console.WriteLine(strMsg);
+                            }
+                            var key = record.Key;
+                            var value = record.Value;
+                            var str = $"Consuming from Offset = {lastOffset}, Key = {key}, Value = {value}";
+                            watcherTotal.Stop();
+                            watcher.Start();
+                            if (consoleOutput) Console.WriteLine(str);
+                            watcher.Stop();
+                            return true;
+                        }, (exception) =>
+                        {
+                            exceptionRaised = exception;
+                        });
+                        while (runInParallel ? !resetEvent.WaitOne(0) : elements < NonParallelLimit)
+                        {
+                            consumeAsyncPrecision.Start();
+                            if (!consumer.ConsumeAsync(checkTime))
+                            {
+                                Interlocked.Increment(ref emptyCycle);
+                            }
+                            consumeAsyncPrecision.Stop();
+                            if (exceptionRaised != null)
+                            {
+                                if (!avoidThrows) throw exceptionRaised;
+                                else Console.WriteLine(exceptionRaised);
+                                exceptionRaised = null;
+                            }
+                            bool elapsedTimeout = !runInParallel && swCycleTime.ElapsedMilliseconds > waitTime;
+                            bool tooManyEmptyCycles = elements != 0 && Volatile.Read(ref emptyCycle) > maxEmptyCycle;
+                            if (elapsedTimeout // exit for elapsed timeout or
+                                || tooManyEmptyCycles) // if we have at least maxEmptyCycle empty cycles after received something
+                            {
+                                long headOffset = -1;
+                                var lastOffsets = LastOffsetOfTopic(topicToUse);
+                                if (lastOffsets != null)
+                                {
+                                    headOffset = lastOffsets[0];
+                                }
+
+                                if (tooManyEmptyCycles && elements < headOffset && !elapsedTimeout)
+                                {
+                                    Console.WriteLine($"Wait some more cycles elements={elements} headOffset={headOffset} - consumer IsEmpty={consumer.IsEmpty} IsCompleting={consumer.IsCompleting}");
+                                    continue;
+                                }
+
+                                var str = $"Forcibly exit since no {NonParallelLimit} record was received within {swCycleTime.ElapsedMilliseconds} ms. Current received is {elements} over {headOffset} in topics started from {firstOffset} till {lastOffset} - consumer IsEmpty={consumer.IsEmpty} IsCompleting={consumer.IsCompleting} - elapsedTimeout {elapsedTimeout} tooManyEmptyCycles {tooManyEmptyCycles} -> {emptyCycle} emptyCycles in {consumeAsyncPrecision.Elapsed} ms";
+                                if (elements != 0)
+                                {
+                                    Console.WriteLine(str);
+                                    break;
+                                }
+                                else throw new InvalidOperationException(str);
+                            }
+                        }
+                        watcherTotal.Stop();
+                    }
+                }
+                finally
+                {
+                    keyDeserializer?.Dispose();
+                    valueDeserializer?.Dispose();
+                    if (elements != 0) Console.WriteLine($"Total consume time is {watcherTotal.Elapsed} with Poll time {consumeAsyncPrecision.Elapsed}, consume mean time is {TimeSpan.FromTicks(watcherTotal.Elapsed.Ticks / elements)}, console write mean time is {TimeSpan.FromTicks(watcher.Elapsed.Ticks / elements)}");
                 }
             }
             catch (Java.Util.Concurrent.ExecutionException ex)
@@ -678,12 +873,35 @@ namespace MASES.KNetTest
                                     emptyCycle = 0;
                                     elements++;
                                     watcherTotal.Start();
-                                    var str = $"Consuming from Offset = {item.Offset}, Key = {item.Key}, Value = {item.Value}";
+                                    lastOffset = item.Offset;
+                                    if (!jumpWrotten && lastOffset != elements - 1)
+                                    {
+                                        var strMsg = $"Lost message - expected offset {elements - 1} received {lastOffset} positionBeforePoll={positionBeforePoll} positionAfterPoll={positionAfterPoll}";
+                                        if (!avoidThrows) throw new InvalidOperationException(strMsg);
+                                        else Console.WriteLine(strMsg);
+                                        jumpWrotten = true;
+                                    }
+                                    var key = item.Key;
+                                    var value = item.Value;
+                                    var str = $"Consuming from Offset = {lastOffset}, Key = {key}, Value = {value}";
                                     watcherTotal.Stop();
                                     watcher.Start();
                                     if (consoleOutput) Console.WriteLine(str);
                                     watcher.Stop();
                                 }
+                                forEachIteration++;
+                            }
+                            if (recordsCount != (positionAfterPoll - positionBeforePoll))
+                            {
+                                var strMsg = $"Missing records - records.Count={recordsCount} positionBeforePoll={positionBeforePoll} positionAfterPoll={positionAfterPoll}";
+                                if (!avoidThrows) throw new InvalidOperationException(strMsg);
+                                else Console.WriteLine(strMsg);
+                            }
+                            if (forEachIteration != recordsCount)
+                            {
+                                var strMsg = $"BATCH TRUNCATED: declared={recordsCount} delivered={forEachIteration}";
+                                if (!avoidThrows) throw new InvalidOperationException(strMsg);
+                                else Console.WriteLine(strMsg);
                             }
                             bool elapsedTimeout = !runInParallel && swCycleTime.ElapsedMilliseconds > waitTime;
                             bool tooManyEmptyCycles = elements != 0 && emptyCycle > 5;
@@ -707,6 +925,176 @@ namespace MASES.KNetTest
                     keyDeserializer?.Dispose();
                     valueDeserializer?.Dispose();
                     if (elements != 0) Console.WriteLine($"Total consume time is {watcherTotal.Elapsed}, consume mean time is {TimeSpan.FromTicks(watcherTotal.Elapsed.Ticks / elements)}, console write mean time is {TimeSpan.FromTicks(watcher.Elapsed.Ticks / elements)}");
+                }
+            }
+            catch (Java.Util.Concurrent.ExecutionException ex)
+            {
+                if (!avoidThrows) throw;
+                Console.WriteLine("Consumer ended with error: {0}", ex.InnerException.Message);
+            }
+            catch (Exception ex)
+            {
+                if (!avoidThrows) throw;
+                Console.WriteLine("Consumer ended with error: {0}", ex.Message);
+            }
+        }
+
+        static void ConsumeAsyncSomethingBuffered()
+        {
+            Console.WriteLine("Starting ConsumeAsyncSomethingBuffered");
+            try
+            {
+                /**** Direct mode ******
+                Properties props = new Properties();
+                props.Put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, serverToUse);
+                props.Put(ConsumerConfig.GROUP_ID_CONFIG, "test");
+                props.Put(ConsumerConfig.ENABLE_AUTO_COMMIT_CONFIG, "true");
+                props.Put(ConsumerConfig.AUTO_COMMIT_INTERVAL_MS_CONFIG, "1000");
+                *******/
+
+                ConsumerConfigBuilder props = ConsumerConfigBuilder.Create()
+                                                                   .WithBootstrapServers(serverToUse)
+                                                                   .WithGroupId(topicToUse + "-group")
+                                                                   .WithAutoOffsetReset(runInParallel ? ConsumerConfigBuilder.AutoOffsetResetTypes.LATEST
+                                                                                                      : ConsumerConfigBuilder.AutoOffsetResetTypes.EARLIEST)
+                                                                   .WithEnableAutoCommit(true)
+                                                                   .WithAutoCommitIntervalMs(1000);
+
+                var keyDeserializer = DefaultSerDes<string>.NewByteArraySerDes();
+                var valueDeserializer = JsonSerDes.Value<TestType>.NewByteBufferSerDes();
+                ConsumerRebalanceListener rebalanceListener = null;
+                KNetConsumerValueBuffered<string, TestType> consumer = null;
+                ManualResetEvent manualResetEvent = new ManualResetEvent(false);
+
+                if (useConsumeCallback)
+                {
+                    rebalanceListener = new ConsumerRebalanceListener()
+                    {
+                        OnOnPartitionsRevoked = (o) =>
+                        {
+                            Console.WriteLine("Revoked: {0}", o.ToString());
+                        },
+                        OnOnPartitionsAssigned = (o) =>
+                        {
+                            Console.WriteLine("Assigned: {0}", o.ToString());
+                            manualResetEvent.Set();
+                        }
+                    };
+                }
+                long elements = 0;
+                Stopwatch watcherTotal = new Stopwatch();
+                Stopwatch watcher = new Stopwatch();
+                Stopwatch consumeAsyncPrecision = new Stopwatch();
+
+                using var topics = Collections.Singleton((Java.Lang.String)topicToUse);
+                try
+                {
+                    using (consumer = new KNetConsumerValueBuffered<string, TestType>(props, keyDeserializer, valueDeserializer))
+                    {
+                        if (runInParallel)
+                        {
+                            if (useConsumeCallback) consumer.Subscribe(topics, rebalanceListener);
+                            else consumer.Subscribe(topics);
+                        }
+                        else
+                        {
+                            using var tp = new Org.Apache.Kafka.Common.TopicPartition(topicToUse, 0);
+                            consumer.Assign(Collections.Singleton(tp));
+                            if (_firstOffset != -1)
+                            {
+                                consumer.Seek(tp, _firstOffset);
+                                Console.WriteLine("Seek to: {0}", _firstOffset);
+                            }
+                            else
+                            {
+                                consumer.SeekToBeginning(Collections.Singleton(tp));
+                                Console.WriteLine("SeekToBeginning");
+                            }
+                        }
+                        if (runInParallel && useConsumeCallback) manualResetEvent.WaitOne();
+
+                        Stopwatch swCycleTime = Stopwatch.StartNew();
+                        int emptyCycle = 0;
+                        long firstOffset = -1;
+                        long lastOffset = -1;
+                        Exception exceptionRaised = null;
+#if NET7_0_OR_GREATER
+                        consumer.ApplyPrefetch(withPrefetch);
+#endif
+                        consumer.SetCallback((record) =>
+                        {
+                            Volatile.Write(ref emptyCycle, 0);
+                            elements++;
+                            if (firstOffset == -1) firstOffset = record.Offset;
+                            watcherTotal.Start();
+                            lastOffset = record.Offset;
+                            if (lastOffset != elements - 1)
+                            {
+                                var strMsg = $"Lost message - expected offset {elements - 1} received {lastOffset}";
+                                if (!avoidThrows) throw new InvalidOperationException(strMsg);
+                                else Console.WriteLine(strMsg);
+                            }
+                            var key = record.Key;
+                            var value = record.Value;
+                            var str = $"Consuming from Offset = {lastOffset}, Key = {key}, Value = {value}";
+                            watcherTotal.Stop();
+                            watcher.Start();
+                            if (consoleOutput) Console.WriteLine(str);
+                            watcher.Stop();
+                            return true;
+                        }, (exception) =>
+                        {
+                            exceptionRaised = exception;
+                        });
+                        while (runInParallel ? !resetEvent.WaitOne(0) : elements < NonParallelLimit)
+                        {
+                            consumeAsyncPrecision.Start();
+                            if (!consumer.ConsumeAsync(checkTime))
+                            {
+                                Interlocked.Increment(ref emptyCycle);
+                            }
+                            consumeAsyncPrecision.Stop();
+                            if (exceptionRaised != null)
+                            {
+                                if (!avoidThrows) throw exceptionRaised;
+                                else Console.WriteLine(exceptionRaised);
+                                exceptionRaised = null;
+                            }
+                            bool elapsedTimeout = !runInParallel && swCycleTime.ElapsedMilliseconds > waitTime;
+                            bool tooManyEmptyCycles = elements != 0 && Volatile.Read(ref emptyCycle) > maxEmptyCycle;
+                            if (elapsedTimeout // exit for elapsed timeout or
+                                || tooManyEmptyCycles) // if we have at least maxEmptyCycle empty cycles after received something
+                            {
+                                long headOffset = -1;
+                                var lastOffsets = LastOffsetOfTopic(topicToUse);
+                                if (lastOffsets != null)
+                                {
+                                    headOffset = lastOffsets[0];
+                                }
+
+                                if (tooManyEmptyCycles && elements < headOffset && !elapsedTimeout)
+                                {
+                                    Console.WriteLine($"Wait some more cycles elements={elements} headOffset={headOffset} - consumer IsEmpty={consumer.IsEmpty} IsCompleting={consumer.IsCompleting}");
+                                    continue;
+                                }
+
+                                var str = $"Forcibly exit since no {NonParallelLimit} record was received within {swCycleTime.ElapsedMilliseconds} ms. Current received is {elements} over {headOffset} in topics started from {firstOffset} offset - consumer IsEmpty={consumer.IsEmpty} IsCompleting={consumer.IsCompleting} - elapsedTimeout {elapsedTimeout} tooManyEmptyCycles {tooManyEmptyCycles} -> {emptyCycle} emptyCycles in {consumeAsyncPrecision.Elapsed} ms";
+                                if (elements != 0)
+                                {
+                                    Console.WriteLine(str);
+                                    break;
+                                }
+                                else throw new InvalidOperationException(str);
+                            }
+                        }
+                        watcherTotal.Stop();
+                    }
+                }
+                finally
+                {
+                    keyDeserializer?.Dispose();
+                    valueDeserializer?.Dispose();
+                    if (elements != 0) Console.WriteLine($"Total consume time is {watcherTotal.Elapsed} with Poll time {consumeAsyncPrecision.Elapsed}, consume mean time is {TimeSpan.FromTicks(watcherTotal.Elapsed.Ticks / elements)}, console write mean time is {TimeSpan.FromTicks(watcher.Elapsed.Ticks / elements)}");
                 }
             }
             catch (Java.Util.Concurrent.ExecutionException ex)
