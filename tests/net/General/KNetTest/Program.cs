@@ -531,7 +531,9 @@ namespace MASES.KNetTest
                                     lastOffset = item.Offset;
                                     if (!jumpWrotten && lastOffset != elements - 1)
                                     {
-                                        Console.WriteLine($"Lost message - expected offset {elements - 1} received {lastOffset} positionBeforePoll={positionBeforePoll} positionAfterPoll={positionAfterPoll}");
+                                        string strMsg = $"Lost message - expected offset {elements - 1} received {lastOffset} positionBeforePoll={positionBeforePoll} positionAfterPoll={positionAfterPoll}";
+                                        if (!avoidThrows) throw new InvalidOperationException(strMsg);
+                                        else Console.WriteLine(strMsg);
                                         jumpWrotten = true;
                                     }
                                     var key = item.Key;
@@ -546,11 +548,15 @@ namespace MASES.KNetTest
                             }
                             if (recordsCount != (positionAfterPoll - positionBeforePoll))
                             {
-                                Console.WriteLine($"Missing records - records.Count={recordsCount} positionBeforePoll={positionBeforePoll} positionAfterPoll={positionAfterPoll}");
+                                var strMsg = $"Missing records - records.Count={recordsCount} positionBeforePoll={positionBeforePoll} positionAfterPoll={positionAfterPoll}";
+                                if (!avoidThrows) throw new InvalidOperationException(strMsg);
+                                else Console.WriteLine(strMsg);
                             }
                             if (forEachIteration != recordsCount)
                             {
-                                Console.WriteLine($"BATCH TRUNCATED: declared={recordsCount} delivered={forEachIteration}");
+                                var strMsg = $"BATCH TRUNCATED: declared={recordsCount} delivered={forEachIteration}";
+                                if (!avoidThrows) throw new InvalidOperationException(strMsg);
+                                else Console.WriteLine(strMsg);
                             }
                             bool elapsedTimeout = !runInParallel && swCycleTime.ElapsedMilliseconds > waitTime;
                             bool tooManyEmptyCycles = elements != 0 && emptyCycle > maxEmptyCycle;
@@ -681,7 +687,7 @@ namespace MASES.KNetTest
                         int emptyCycle = 0;
                         long firstOffset = -1;
                         long lastOffset = -1;
-                        TopicPartition topicPartition = new TopicPartition(topicToUse, 0);
+                        Exception exceptionRaised = null;
 #if NET7_0_OR_GREATER
                         consumer.ApplyPrefetch(withPrefetch);
 #endif
@@ -692,7 +698,12 @@ namespace MASES.KNetTest
                             if (firstOffset == -1) firstOffset = record.Offset;
                             watcherTotal.Start();
                             lastOffset = record.Offset;
-                            if (lastOffset != elements - 1) Console.WriteLine($"Lost message - expected offset {elements - 1} received {lastOffset}");
+                            if (lastOffset != elements - 1)
+                            {
+                                var strMsg = $"Lost message - expected offset {elements - 1} received {lastOffset}";
+                                if (!avoidThrows) throw new InvalidOperationException(strMsg);
+                                else Console.WriteLine(strMsg);
+                            }
                             var key = record.Key;
                             var value = record.Value;
                             var str = $"Consuming from Offset = {lastOffset}, Key = {key}, Value = {value}";
@@ -701,17 +712,24 @@ namespace MASES.KNetTest
                             if (consoleOutput) Console.WriteLine(str);
                             watcher.Stop();
                             return true;
+                        }, (exception) =>
+                        {
+                            exceptionRaised = exception;
                         });
                         while (runInParallel ? !resetEvent.WaitOne(0) : elements < NonParallelLimit)
                         {
-                            var positionBeforePoll = consumer.Position(topicPartition);
                             consumeAsyncPrecision.Start();
                             if (!consumer.ConsumeAsync(checkTime))
                             {
                                 Interlocked.Increment(ref emptyCycle);
                             }
                             consumeAsyncPrecision.Stop();
-                            var positionAfterPoll = consumer.Position(topicPartition);
+                            if (exceptionRaised != null)
+                            {
+                                if (!avoidThrows) throw exceptionRaised;
+                                else Console.WriteLine(exceptionRaised);
+                                exceptionRaised = null;
+                            }
                             bool elapsedTimeout = !runInParallel && swCycleTime.ElapsedMilliseconds > waitTime;
                             bool tooManyEmptyCycles = elements != 0 && Volatile.Read(ref emptyCycle) > maxEmptyCycle;
                             if (elapsedTimeout // exit for elapsed timeout or
@@ -963,7 +981,9 @@ namespace MASES.KNetTest
                                     lastOffset = item.Offset;
                                     if (!jumpWrotten && lastOffset != elements - 1)
                                     {
-                                        Console.WriteLine($"Lost message - expected offset {elements - 1} received {lastOffset} positionBeforePoll={positionBeforePoll} positionAfterPoll={positionAfterPoll}");
+                                        var strMsg = $"Lost message - expected offset {elements - 1} received {lastOffset} positionBeforePoll={positionBeforePoll} positionAfterPoll={positionAfterPoll}";
+                                        if (!avoidThrows) throw new InvalidOperationException(strMsg);
+                                        else Console.WriteLine(strMsg);
                                         jumpWrotten = true;
                                     }
                                     var key = item.Key;
@@ -978,11 +998,15 @@ namespace MASES.KNetTest
                             }
                             if (recordsCount != (positionAfterPoll - positionBeforePoll))
                             {
-                                Console.WriteLine($"Missing records - records.Count={recordsCount} positionBeforePoll={positionBeforePoll} positionAfterPoll={positionAfterPoll}");
+                                var strMsg = $"Missing records - records.Count={recordsCount} positionBeforePoll={positionBeforePoll} positionAfterPoll={positionAfterPoll}";
+                                if (!avoidThrows) throw new InvalidOperationException(strMsg);
+                                else Console.WriteLine(strMsg);
                             }
                             if (forEachIteration != recordsCount)
                             {
-                                Console.WriteLine($"BATCH TRUNCATED: declared={recordsCount} delivered={forEachIteration}");
+                                var strMsg = $"BATCH TRUNCATED: declared={recordsCount} delivered={forEachIteration}";
+                                if (!avoidThrows) throw new InvalidOperationException(strMsg);
+                                else Console.WriteLine(strMsg);
                             }
                             bool elapsedTimeout = !runInParallel && swCycleTime.ElapsedMilliseconds > waitTime;
                             bool tooManyEmptyCycles = elements != 0 && emptyCycle > maxEmptyCycle;
@@ -1111,6 +1135,7 @@ namespace MASES.KNetTest
                         int emptyCycle = 0;
                         long firstOffset = -1;
                         long lastOffset = -1;
+                        Exception exceptionRaised = null;
 #if NET7_0_OR_GREATER
                         consumer.ApplyPrefetch(withPrefetch);
 #endif
@@ -1121,7 +1146,12 @@ namespace MASES.KNetTest
                             if (firstOffset == -1) firstOffset = record.Offset;
                             watcherTotal.Start();
                             lastOffset = record.Offset;
-                            if (lastOffset != elements - 1) Console.WriteLine($"Lost message - expected offset {elements - 1} received {lastOffset}");
+                            if (lastOffset != elements - 1)
+                            {
+                                var strMsg = $"Lost message - expected offset {elements - 1} received {lastOffset}";
+                                if (!avoidThrows) throw new InvalidOperationException(strMsg);
+                                else Console.WriteLine(strMsg);
+                            }
                             var key = record.Key;
                             var value = record.Value;
                             var str = $"Consuming from Offset = {lastOffset}, Key = {key}, Value = {value}";
@@ -1130,6 +1160,9 @@ namespace MASES.KNetTest
                             if (consoleOutput) Console.WriteLine(str);
                             watcher.Stop();
                             return true;
+                        }, (exception) =>
+                        {
+                            exceptionRaised = exception;
                         });
                         while (runInParallel ? !resetEvent.WaitOne(0) : elements < NonParallelLimit)
                         {
@@ -1139,6 +1172,12 @@ namespace MASES.KNetTest
                                 Interlocked.Increment(ref emptyCycle);
                             }
                             consumeAsyncPrecision.Stop();
+                            if (exceptionRaised != null)
+                            {
+                                if (!avoidThrows) throw exceptionRaised;
+                                else Console.WriteLine(exceptionRaised);
+                                exceptionRaised = null;
+                            }
                             bool elapsedTimeout = !runInParallel && swCycleTime.ElapsedMilliseconds > waitTime;
                             bool tooManyEmptyCycles = elements != 0 && Volatile.Read(ref emptyCycle) > maxEmptyCycle;
                             if (elapsedTimeout // exit for elapsed timeout or
