@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       Repeat:
-        description: 'Number of test repetitions per combination (schedule uses 20)'
+        description: 'Number of test repetitions per combination (schedule uses 10)'
         required: false
         default: '1'
         type: string
@@ -34,7 +34,7 @@ on:
         default: false
         type: boolean
   schedule:
-    # Every Monday at 03:00 UTC — runs with 20 repetitions for better statistics
+    # Every Monday at 03:00 UTC — runs with 10 repetitions for better statistics
     - cron: '0 3 * * 1'
 
 concurrency:
@@ -42,9 +42,9 @@ concurrency:
   cancel-in-progress: true
 
 env:
-  # schedule: inputs.Repeat is empty → fallback to '20'
+  # schedule: inputs.Repeat is empty → fallback to '10'
   # dispatch: use the provided value (default '1')
-  BENCH_REPEAT:  ${{ inputs.Repeat                || '20'    }}
+  BENCH_REPEAT:  ${{ inputs.Repeat                || '10'    }}
   BENCH_MIN_PKT: ${{ inputs.MinPacketsToExchange  || '100'  }}
   BENCH_MAX_PKT: ${{ inputs.MaxPacketsToExchange  || '10000' }}
   BENCH_MIN_LEN: ${{ inputs.MinPacketLength       || '100'   }}
