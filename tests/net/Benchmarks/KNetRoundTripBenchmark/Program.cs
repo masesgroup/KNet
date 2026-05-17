@@ -17,6 +17,7 @@
 */
 
 using MASES.JCOBridge.C2JBridge;
+using Org.Apache.Kafka.Common.Errors;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -61,7 +62,7 @@ namespace MASES.KNet.Benchmark
                                 {
                                     CreateTopic(topicNameKNet);
                                 }
-                                catch (Org.Apache.Kafka.Common.Errors.TopicExistsException)
+                                catch (TopicExistsException)
                                 {
                                     DeleteTopic(topicNameKNet);
                                     System.Threading.Thread.Sleep(1000); // wait kafka server
@@ -82,7 +83,7 @@ namespace MASES.KNet.Benchmark
                                 {
                                     CreateTopic(topicNameConfluent);
                                 }
-                                catch (Org.Apache.Kafka.Common.Errors.TopicExistsException)
+                                catch (TopicExistsException)
                                 {
                                     DeleteTopic(topicNameConfluent);
                                     System.Threading.Thread.Sleep(1000); // wait kafka server
@@ -98,34 +99,10 @@ namespace MASES.KNet.Benchmark
                                 }
                                 ConfluentData.AddRange(tempConfluentData.Item2);
 
-                                // Both KNet and Confluent succeeded for this testIndex:
-                                // write the cumulative row. KNETData and ConfluentData are
-                                // guaranteed non-empty here so Max/Min/Average are safe.
-                                singleTestResultsSb.AppendLine($"{packets};{length};{KNETData.Max()};{KNETData.Min()};{KNETData.Average()};{ConfluentData.Max()};{ConfluentData.Min()};{ConfluentData.Average()}");
-
                                 if (ShowIntermediateResults)
                                 {
                                     Console.WriteLine($"RoundTrip KNET-Confluent {testIndex} in {tempKNETData.Item1.Elapsed + tempConfluentData.Item1.Elapsed}: Length {length} Max Diff {tempKNETData.Item2.Max() - tempConfluentData.Item2.Max()} Min Diff {tempKNETData.Item2.Min() - tempConfluentData.Item2.Min()} Mean Diff {tempKNETData.Item2.Average() - tempConfluentData.Item2.Average()}");
                                 }
-                            }
-                            catch (TimeoutException e)
-                            {
-                                // RoundTripKNet sets threadException = new TimeoutException(...)
-                                // and re-throws it. Catch here so the length and packets loops
-                                // continue instead of aborting the entire benchmark run.
-                                Console.WriteLine($"[SKIP] packets={packets} length={length} testIndex={testIndex} — {e.GetType().Name}: {e.Message}");
-                            }
-                            catch (MASES.JCOBridge.C2JBridge.JVMBridgeException e)
-                            {
-                                Console.WriteLine($"[SKIP] packets={packets} length={length} testIndex={testIndex} — {e.GetType().Name}: {e.Message}");
-                                Exception inner = e.InnerException;
-                                while (inner != null) { Console.WriteLine($"  {inner.Message}"); inner = inner.InnerException; }
-                            }
-                            catch (Exception e)
-                            {
-                                Console.WriteLine($"[SKIP] packets={packets} length={length} testIndex={testIndex} — {e.GetType().Name}: {e.Message}");
-                                Exception inner = e.InnerException;
-                                while (inner != null) { Console.WriteLine($"  {inner.Message}"); inner = inner.InnerException; }
                             }
                             finally
                             {
@@ -139,14 +116,21 @@ namespace MASES.KNet.Benchmark
                                 Java.Lang.System.Gc();
                             }
                         }
+                        // Write one row per (packets, length) after ALL repetitions complete.
+                        // KNETData now contains Repeat × packets individual roundtrip
+                        // measurements — one AppendLine per (packets, length), not per testIndex.
+                        if (KNETData.Any() && ConfluentData.Any())
+                        {
+                            singleTestResultsSb.AppendLine($"{packets};{length};{KNETData.Max()};{KNETData.Min()};{KNETData.Average()};{ConfluentData.Max()};{ConfluentData.Min()};{ConfluentData.Average()}");
+                        }
                         allKNETData.AddRange(KNETData);
                         allConfluentData.AddRange(ConfluentData);
                     }
-                    if (ShowFinalResults && allKNETData.Any() && allConfluentData.Any())
+                    if (ShowFinalResults)
                     {
                         Console.WriteLine($"KNet       microseconds -> Max {allKNETData.Max():####.##} - Min {allKNETData.Min():####.##} - Avg {allKNETData.Average():####.##} - SD {allKNETData.StandardDeviation():####.##} - CV {100 * allKNETData.StandardDeviation() / allKNETData.Average():####.##} %");
                         Console.WriteLine($"KNet       microseconds -> Avg Filtered {allKNETData.FilterMinMax().Average():####.##} - SD Filtered {allKNETData.FilterMinMax().StandardDeviation():####.##} - CV Filtered {100 * allKNETData.FilterMinMax().StandardDeviation() / allKNETData.FilterMinMax().Average():####.##} %");
-                        Console.WriteLine($"Confluent  microseconds -> Max {allConfluentData.Max():####.##} - Min {allConfluentData.Min():####.##} - Avg {allConfluentData.Average():####.##} - SD {allConfluentData.StandardDeviation():####.##} - CV {100 * allConfluentData.StandardDeviation() / allConfluentData.Average():####.##} %");
+                        Console.WriteLine($"Confluent  microseconds -> Max {allConfluentData.Max():####.##} - Min {allConfluentData.Min():####.##} - Avg {allConfluentData.Average():####.##} SD {allConfluentData.StandardDeviation():####.##} - CV {100 * allConfluentData.StandardDeviation() / allConfluentData.Average():####.##} %");
                         Console.WriteLine($"Confluent  microseconds -> Avg Filtered {allConfluentData.FilterMinMax().Average():####.##} - SD Filtered {allConfluentData.FilterMinMax().StandardDeviation():####.##} - CV Filtered {100 * allConfluentData.FilterMinMax().StandardDeviation() / allConfluentData.FilterMinMax().Average():####.##} %");
                         Console.WriteLine($"KNet/Confluent ratio(%) -> Max {100 * (double)allKNETData.Max() / allConfluentData.Max():####.##} - Min {100 * (double)allKNETData.Min() / allConfluentData.Min():####.##} - Avg {100 * (double)allKNETData.Average() / allConfluentData.Average():####.##} - SD {100 * (double)allKNETData.StandardDeviation() / allConfluentData.StandardDeviation():####.##} - CV {100 * allKNETData.CoefficientOfVariation() / allConfluentData.CoefficientOfVariation():####.##}");
                         Console.WriteLine($"KNet/Confluent ratio(%) -> Avg Filtered {100 * (double)allKNETData.FilterMinMax().Average() / allConfluentData.FilterMinMax().Average():####.##} - SD Filtered {100 * (double)allKNETData.FilterMinMax().StandardDeviation() / allConfluentData.FilterMinMax().StandardDeviation():####.##} - CV Filtered {100 * allKNETData.FilterMinMax().CoefficientOfVariation() / allConfluentData.FilterMinMax().CoefficientOfVariation():####.##}");
