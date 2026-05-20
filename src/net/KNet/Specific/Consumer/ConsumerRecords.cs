@@ -122,7 +122,8 @@ namespace MASES.KNet.Consumer
         public Java.Lang.Iterable<Org.Apache.Kafka.Clients.Consumer.ConsumerRecord<TJVMK, TJVMV>> Records(string arg0)
         {
             CheckDisposed();
-            return _records.Records((Java.Lang.String)arg0);
+            using Java.Lang.String topic = arg0;
+            return _records.Records(topic);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.0/org/apache/kafka/clients/consumer/ConsumerRecords.html#records(org.apache.kafka.common.TopicPartition)"/>

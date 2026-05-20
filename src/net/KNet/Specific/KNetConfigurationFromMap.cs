@@ -74,6 +74,12 @@ namespace MASES.KNet
         /// <returns>The <see langword="bool"/> associated to <paramref name="key"/></returns>
         bool GetBoolean(string key);
         /// <summary>
+        /// Returns <see langword="Java.Lang.String"/> associated to <paramref name="key"/>
+        /// </summary>
+        /// <param name="key">The key to return</param>
+        /// <returns>The <see langword="Java.Lang.String"/> associated to <paramref name="key"/></returns>
+        Java.Lang.String GetJString(string key);
+        /// <summary>
         /// Returns <see langword="string"/> associated to <paramref name="key"/>
         /// </summary>
         /// <param name="key">The key to return</param>
@@ -129,7 +135,8 @@ namespace MASES.KNet
         /// <inheritdoc/>
         public bool Exist(string key)
         {
-            return (_configuration != null) ? _configuration.ContainsKey(key) : _configuration1.ContainsKey(key);
+            using Java.Lang.String jString = key;
+            return (_configuration != null) ? _configuration.ContainsKey(jString) : _configuration1.ContainsKey(jString);
         }
         /// <inheritdoc/>
         public short GetShort(string key)
@@ -166,7 +173,7 @@ namespace MASES.KNet
             {
                 if (_configuration1.ContainsKey(jString))
                 {
-                    var value = _configuration1.Get(jString);
+                    using var value = _configuration1.Get(jString);
                     return int.TryParse(value, out var converted) ? converted
                                                                   : throw new InvalidCastException($"Key \"{key}\" returns a value {value} cannot be converted in int"); ;
                 }
@@ -193,7 +200,7 @@ namespace MASES.KNet
             {
                 if (_configuration1.ContainsKey(jString))
                 {
-                    var value = _configuration1.Get(jString);
+                    using var value = _configuration1.Get(jString);
                     return long.TryParse(value, out var converted) ? converted
                                                                    : throw new InvalidCastException($"Key \"{key}\" returns a value {value} cannot be converted in long"); ;
                 }
@@ -220,7 +227,7 @@ namespace MASES.KNet
             {
                 if (_configuration1.ContainsKey(jString))
                 {
-                    var value = _configuration1.Get(jString);
+                    using var value = _configuration1.Get(jString);
                     return double.TryParse(value, out var converted) ? converted
                                                                      : throw new InvalidCastException($"Key \"{key}\" returns a value {value} cannot be converted in double"); ;
                 }
@@ -269,7 +276,7 @@ namespace MASES.KNet
             {
                 if (_configuration1.ContainsKey(jString))
                 {
-                    var value = _configuration1.Get(jString);
+                    using var value = _configuration1.Get(jString);
                     return bool.TryParse(value, out var converted) ? converted
                                                                    : throw new InvalidCastException($"Key \"{key}\" returns a value {value} cannot be converted in bool"); ;
                 }
@@ -287,6 +294,31 @@ namespace MASES.KNet
                 using (obj) { return obj.Convert<bool>(); }
             }
             else throw new InvalidCastException($"Key \"{key}\" returns a value {(result ?? "null")} cannot be converted in bool");
+        }
+        /// <inheritdoc/>
+        public Java.Lang.String GetJString(string key)
+        {
+            using Java.Lang.String jString = key;
+            if (_configuration1 != null)
+            {
+                if (_configuration1.ContainsKey(jString))
+                {
+                    return _configuration1.Get(jString);
+                }
+                throw new InvalidOperationException($"Configuration key \"{key}\" is not available.");
+            }
+
+            var result = GetValue(jString);
+
+            if (result is string data)
+            {
+                return data;
+            }
+            else if (result is IJavaObject obj)
+            {
+                return obj.Convert<Java.Lang.String>();
+            }
+            else throw new InvalidCastException($"Key \"{key}\" returns a value {(result ?? "null")} cannot be converted in {nameof(Java.Lang.String)}");
         }
         /// <inheritdoc/>
         public string GetString(string key)

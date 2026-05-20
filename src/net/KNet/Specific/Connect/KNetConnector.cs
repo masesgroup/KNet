@@ -210,7 +210,7 @@ namespace MASES.KNet.Connect
         {
             try
             {
-                Map<Java.Lang.String, Java.Lang.String> props = DataToExchange<Map<Java.Lang.String, Java.Lang.String>>();
+                using Map<Java.Lang.String, Java.Lang.String> props = DataToExchange<Map<Java.Lang.String, Java.Lang.String>>();
                 return TaskConfigs(currentTask, maxTasks, props);
             }
             catch (System.Exception e)
@@ -233,7 +233,9 @@ namespace MASES.KNet.Connect
             props.Clear();
             foreach (var item in dict)
             {
-                props.Put(item.Key, item.Value);
+                using Java.Lang.String key = item.Key;
+                using Java.Lang.String value = item.Value;
+                props.Put(key, value);
             }
             return retVal;
         }
