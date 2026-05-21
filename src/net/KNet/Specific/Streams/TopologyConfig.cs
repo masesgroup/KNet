@@ -64,10 +64,11 @@ namespace MASES.KNet.Streams
         /// Override this method to check and modify the <see cref="Java.Util.Properties"/> returned to underlying <see cref="Org.Apache.Kafka.Streams.KafkaStreams"/>
         /// </summary>
         /// <param name="builder"><see cref="StreamsConfigBuilder"/> to use to return <see cref="Java.Util.Properties"/></param>
-        /// <returns><see cref="Java.Util.Properties"/> used from underlying <see cref="Org.Apache.Kafka.Streams.KafkaStreams"/></returns>
-        protected virtual Java.Util.Properties PrepareProperties(StreamsConfigBuilder builder)
+        /// <returns><see cref="Org.Apache.Kafka.Streams.StreamsConfig"/> used from underlying <see cref="Org.Apache.Kafka.Streams.KafkaStreams"/></returns>
+        protected virtual Org.Apache.Kafka.Streams.StreamsConfig PrepareProperties(StreamsConfigBuilder builder)
         {
-            return OverrideProperties != null ? OverrideProperties(builder) : builder;
+            Java.Util.Properties properties = OverrideProperties != null ? OverrideProperties(builder) : builder;
+            return new Org.Apache.Kafka.Streams.StreamsConfig(properties);
         }
 
         #region Fields
