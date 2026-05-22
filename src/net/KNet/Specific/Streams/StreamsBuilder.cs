@@ -56,7 +56,7 @@ namespace MASES.KNet.Streams
         #endregion
 
         /// <inheritdoc/>
-        public Org.Apache.Kafka.Streams.StreamsBuilder InnerReference => _valueAndTimestamp;
+        public Org.Apache.Kafka.Streams.StreamsBuilder InnerReference => _builder;
 
         #region IDisposable
 
