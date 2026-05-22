@@ -30,7 +30,7 @@ namespace MASES.KNet.Streams
     /// <summary>
     /// KNet extension of <see cref="Org.Apache.Kafka.Streams.StreamsBuilder"/>
     /// </summary>
-    public class StreamsBuilder : IGenericSerDesFactoryApplier, IDisposable
+    public class StreamsBuilder : IKNetInnerReference<Org.Apache.Kafka.Streams.StreamsBuilder>, IGenericSerDesFactoryApplier, IDisposable
     {
         Org.Apache.Kafka.Streams.StreamsBuilder _builder;
         IGenericSerDesFactory _factory;
@@ -54,6 +54,9 @@ namespace MASES.KNet.Streams
         StreamsBuilder(IGenericSerDesFactory factory, Org.Apache.Kafka.Streams.StreamsBuilder builder) : base() { _factory = factory; _builder = builder; }
 
         #endregion
+
+        /// <inheritdoc/>
+        public Org.Apache.Kafka.Streams.StreamsBuilder InnerReference => _valueAndTimestamp;
 
         #region IDisposable
 

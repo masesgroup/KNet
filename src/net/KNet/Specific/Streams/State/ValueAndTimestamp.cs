@@ -29,9 +29,9 @@ namespace MASES.KNet.Streams.State
     /// </summary>
     /// <typeparam name="V">The value type</typeparam>
     /// <typeparam name="TJVMV">The JVM type of <typeparamref name="V"/></typeparam>
-    public class ValueAndTimestamp<V, TJVMV> : IGenericSerDesFactoryApplier, IDisposable
+    public class ValueAndTimestamp<V, TJVMV> : IKNetInnerReference<Org.Apache.Kafka.Streams.State.ValueAndTimestamp<TJVMV>>, IGenericSerDesFactoryApplier, IDisposable
     {
-        readonly Org.Apache.Kafka.Streams.State.ValueAndTimestamp<TJVMV> _valueAndTimestamp;
+        readonly Org.Apache.Kafka.Streams.State.ValueAndTimestamp<TJVMV> _inner;
         ISerDes<V, TJVMV> _valueSerDes;
         IGenericSerDesFactory _factory;
         IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set => _factory = value; }
@@ -39,8 +39,11 @@ namespace MASES.KNet.Streams.State
         internal ValueAndTimestamp(IGenericSerDesFactory factory, Org.Apache.Kafka.Streams.State.ValueAndTimestamp<TJVMV> valueAndTimestamp)
         {
             _factory = factory;
-            _valueAndTimestamp = valueAndTimestamp;
+            _inner = valueAndTimestamp;
         }
+
+        /// <inheritdoc/>
+        public Org.Apache.Kafka.Streams.State.ValueAndTimestamp<TJVMV> InnerReference => _inner;
 
         #region IDisposable
 
@@ -70,7 +73,7 @@ namespace MASES.KNet.Streams.State
 
             if (disposing)
             {
-                _valueAndTimestamp?.Dispose();
+                _inner?.Dispose();
             }
         }
 
@@ -80,7 +83,7 @@ namespace MASES.KNet.Streams.State
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/state/ValueAndTimestamp.html#timestamp()"/>
         /// </summary>
         /// <returns><see cref="long"/></returns>
-        public long Timestamp { get { CheckDisposed(); return _valueAndTimestamp.Timestamp(); } }
+        public long Timestamp { get { CheckDisposed(); return _inner.Timestamp(); } }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/state/ValueAndTimestamp.html#timestamp()"/>
         /// </summary>
@@ -96,7 +99,7 @@ namespace MASES.KNet.Streams.State
             {
                 CheckDisposed();
                 _valueSerDes ??= _factory?.BuildKeySerDes<V, TJVMV>();
-                var vv = _valueAndTimestamp.Value();
+                var vv = _inner.Value();
                 using var disposable0 = vv as IDisposable;
 
                 return _valueSerDes.Deserialize(null, vv);

@@ -30,7 +30,7 @@ namespace MASES.KNet.Streams.Kstream
     /// <typeparam name="V">The value type</typeparam>
     /// <typeparam name="TJVMK">The JVM key typ</typeparam>
     /// <typeparam name="TJVMV">The JVM value type</typeparam>
-    public class Grouped<K, V, TJVMK, TJVMV> : IGenericSerDesFactoryApplier, IDisposable
+    public class Grouped<K, V, TJVMK, TJVMV> : IKNetInnerReference<Org.Apache.Kafka.Streams.Kstream.Grouped<TJVMK, TJVMV>>, IGenericSerDesFactoryApplier, IDisposable
     {
         readonly Org.Apache.Kafka.Streams.Kstream.Grouped<TJVMK, TJVMV> _inner;
         IGenericSerDesFactory _factory;
@@ -40,6 +40,9 @@ namespace MASES.KNet.Streams.Kstream
         {
             _inner = inner;
         }
+
+        /// <inheritdoc/>
+        public Org.Apache.Kafka.Streams.Kstream.Grouped<TJVMK, TJVMV> InnerReference => _inner;
 
         #region IDisposable
 
