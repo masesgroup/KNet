@@ -28,10 +28,6 @@ namespace Org.Apache.Kafka.Streams.Kstream.Internals
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
         /// </summary>
-        public TimeWindow() { }
-        /// <summary>
-        /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
-        /// </summary>
         public TimeWindow(long startMs, long endMs)
             : base(startMs, endMs)
         {

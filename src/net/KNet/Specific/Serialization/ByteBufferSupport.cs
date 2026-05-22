@@ -29,7 +29,7 @@ namespace MASES.KNet.Serialization
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
         /// </summary>
-        public ByteBufferDeserializer() { }
+        public ByteBufferDeserializer() : base(JVMBridgeBase.InitializerInstance) { InvokeInitializer(); }
         /// <summary>
         /// Internal constructor: used internally from JCOBridge
         /// </summary>
@@ -47,7 +47,7 @@ namespace MASES.KNet.Serialization
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
         /// </summary>
-        public ByteBufferSerializer() { }
+        public ByteBufferSerializer() : base(JVMBridgeBase.InitializerInstance) { InvokeInitializer(); }
         /// <summary>
         /// Internal constructor: used internally from JCOBridge
         /// </summary>
@@ -65,7 +65,7 @@ namespace MASES.KNet.Serialization
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
         /// </summary>
-        public Serdes() { }
+        public Serdes() : base(JVMBridgeBase.InitializerInstance) { InvokeInitializer(); }
         /// <summary>
         /// Internal constructor: used internally from JCOBridge
         /// </summary>
@@ -92,16 +92,12 @@ namespace MASES.KNet.Serialization
             /// <summary>
             /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
             /// </summary>
-            public ByteBufferSerde() { }
+            public ByteBufferSerde() : base(JVMBridgeBase.InitializerInstance) { InvokeInitializer(); }
             /// <summary>
             /// Internal constructor: used internally from JCOBridge
             /// </summary>
             [global::System.Obsolete("This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
             public ByteBufferSerde(IJVMBridgeBaseInitializer initializer) : base(initializer) { }
-            /// <summary>
-            /// Generic constructor: it is useful for JCOBridge when there is a derived class which needs to pass arguments to the highest JVMBridgeBase class
-            /// </summary>
-            public ByteBufferSerde(params object[] args) : base(args) { }
 
             private static readonly IJavaType LocalBridgeClazz = ClazzOf(_bridgeClassName);
 
