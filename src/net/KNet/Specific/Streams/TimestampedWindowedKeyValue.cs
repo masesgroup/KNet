@@ -32,7 +32,7 @@ namespace MASES.KNet.Streams
     /// <typeparam name="V">The value type</typeparam>
     /// <typeparam name="TJVMK">The JVM type of <typeparamref name="K"/></typeparam>
     /// <typeparam name="TJVMV">The JVM type of <typeparamref name="V"/></typeparam>
-    public sealed class TimestampedWindowedKeyValue<K, V, TJVMK, TJVMV> : IGenericSerDesFactoryApplier, IDisposable
+    public sealed class TimestampedWindowedKeyValue<K, V, TJVMK, TJVMV> : IKNetInnerReference<KeyValueSupport<Org.Apache.Kafka.Streams.Kstream.Windowed<TJVMK>, Org.Apache.Kafka.Streams.State.ValueAndTimestamp<TJVMV>>>, IGenericSerDesFactoryApplier, IDisposable
     {
         readonly KeyValueSupport<Org.Apache.Kafka.Streams.Kstream.Windowed<TJVMK>, Org.Apache.Kafka.Streams.State.ValueAndTimestamp<TJVMV>> _valueInner;
         Windowed<K, TJVMK> _key = null;
@@ -46,6 +46,9 @@ namespace MASES.KNet.Streams
             _factory = factory;
             _valueInner = value;
         }
+
+        /// <inheritdoc/>
+        public KeyValueSupport<Org.Apache.Kafka.Streams.Kstream.Windowed<TJVMK>, Org.Apache.Kafka.Streams.State.ValueAndTimestamp<TJVMV>> InnerReference => _valueInner;
 
         volatile int _disposed; // 0 = live, 1 = disposed
         /// <summary>

@@ -29,7 +29,7 @@ namespace MASES.KNet.Streams.Kstream
     /// <typeparam name="V"></typeparam>
     /// <typeparam name="TJVMK">The JVM type of <typeparamref name="K"/></typeparam>
     /// <typeparam name="TJVMV">The JVM type of <typeparamref name="V"/></typeparam>
-    public class SessionWindowedCogroupedKStream<K, V, TJVMK, TJVMV> : IGenericSerDesFactoryApplier, IDisposable
+    public class SessionWindowedCogroupedKStream<K, V, TJVMK, TJVMV> : IKNetInnerReference<Org.Apache.Kafka.Streams.Kstream.SessionWindowedCogroupedKStream<TJVMK, TJVMV>>, IGenericSerDesFactoryApplier, IDisposable
     {
         readonly Org.Apache.Kafka.Streams.Kstream.SessionWindowedCogroupedKStream<TJVMK, TJVMV> _inner;
 
@@ -41,6 +41,9 @@ namespace MASES.KNet.Streams.Kstream
             _factory = factory;
             _inner = inner;
         }
+
+        /// <inheritdoc/>
+        public Org.Apache.Kafka.Streams.Kstream.SessionWindowedCogroupedKStream<TJVMK, TJVMV> InnerReference => _inner;
 
         #region IDisposable
 

@@ -31,7 +31,7 @@ namespace MASES.KNet.Streams.Kstream
     /// <typeparam name="V"></typeparam>
     /// <typeparam name="TJVMK">The JVM type of <typeparamref name="K"/></typeparam>
     /// <typeparam name="TJVMV">The JVM type of <typeparamref name="V"/></typeparam>
-    public class Consumed<K, V, TJVMK, TJVMV> : IGenericSerDesFactoryApplier, IDisposable
+    public class Consumed<K, V, TJVMK, TJVMV> : IKNetInnerReference<Org.Apache.Kafka.Streams.Kstream.Consumed<TJVMK, TJVMV>>, IGenericSerDesFactoryApplier, IDisposable
     {
         ISerDes<K, TJVMK> _keySerdes;
         ISerDes<V, TJVMV> _valueSerdes;
@@ -53,6 +53,9 @@ namespace MASES.KNet.Streams.Kstream
         {
             _inner = inner;
         }
+
+        /// <inheritdoc/>
+        public Org.Apache.Kafka.Streams.Kstream.Consumed<TJVMK, TJVMV> InnerReference => _inner;
 
         #region IDisposable
 

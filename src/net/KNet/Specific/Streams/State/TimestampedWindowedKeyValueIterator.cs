@@ -34,7 +34,7 @@ namespace MASES.KNet.Streams.State
     /// <typeparam name="V">The value type</typeparam>
     /// <typeparam name="TJVMK">The JVM type of <typeparamref name="K"/></typeparam>
     /// <typeparam name="TJVMV">The JVM type of <typeparamref name="V"/></typeparam>
-    public sealed class TimestampedWindowedKeyValueIterator<K, V, TJVMK, TJVMV> : CommonIterator<TimestampedWindowedKeyValue<K, V, TJVMK, TJVMV>>
+    public sealed class TimestampedWindowedKeyValueIterator<K, V, TJVMK, TJVMV> : CommonIterator<TimestampedWindowedKeyValue<K, V, TJVMK, TJVMV>>, IKNetInnerReference<Org.Apache.Kafka.Streams.State.KeyValueIterator<Org.Apache.Kafka.Streams.Kstream.Windowed<TJVMK>, Org.Apache.Kafka.Streams.State.ValueAndTimestamp<TJVMV>>>
     {
 #if NET7_0_OR_GREATER
         sealed class PrefetchableLocalEnumerator(IGenericSerDesFactory factory,
@@ -116,6 +116,9 @@ namespace MASES.KNet.Streams.State
         {
             _iterator = iterator;
         }
+
+        /// <inheritdoc/>
+        public Org.Apache.Kafka.Streams.State.KeyValueIterator<Org.Apache.Kafka.Streams.Kstream.Windowed<TJVMK>, Org.Apache.Kafka.Streams.State.ValueAndTimestamp<TJVMV>> InnerReference => _iterator;
 
         /// <inheritdoc/>
         protected override void Dispose(bool disposing)

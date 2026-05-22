@@ -29,7 +29,7 @@ namespace MASES.KNet.Streams
     /// <summary>
     /// KNet implementation of <see cref="Org.Apache.Kafka.Streams.Topology"/>
     /// </summary>
-    public class Topology : IGenericSerDesFactoryApplier, IDisposable
+    public class Topology : IKNetInnerReference<Org.Apache.Kafka.Streams.Topology>, IGenericSerDesFactoryApplier, IDisposable
     {
         readonly Org.Apache.Kafka.Streams.Topology _topology;
         IGenericSerDesFactory _factory;
@@ -54,6 +54,9 @@ namespace MASES.KNet.Streams
         }
 
         #endregion
+
+        /// <inheritdoc/>
+        public Org.Apache.Kafka.Streams.Topology InnerReference => _topology;
 
         #region IDisposable
 
