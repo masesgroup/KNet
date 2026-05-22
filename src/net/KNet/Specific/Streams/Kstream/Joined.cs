@@ -31,7 +31,7 @@ namespace MASES.KNet.Streams.Kstream
     /// <typeparam name="TJVMK">The JVM type of <typeparamref name="K"/></typeparam>
     /// <typeparam name="TJVMV">The JVM type of <typeparamref name="V"/></typeparam>
     /// <typeparam name="TJVMVO">The JVM type of <typeparamref name="VO"/></typeparam>
-    public class Joined<K, V, VO, TJVMK, TJVMV, TJVMVO> : IGenericSerDesFactoryApplier, IDisposable
+    public class Joined<K, V, VO, TJVMK, TJVMV, TJVMVO> : IKNetInnerReference<Org.Apache.Kafka.Streams.Kstream.Joined<TJVMK, TJVMV, TJVMVO>>, IGenericSerDesFactoryApplier, IDisposable
     {
         readonly Org.Apache.Kafka.Streams.Kstream.Joined<TJVMK, TJVMV, TJVMVO> _inner;
         IGenericSerDesFactory _factory;
@@ -41,6 +41,9 @@ namespace MASES.KNet.Streams.Kstream
         {
             _inner = inner;
         }
+
+        /// <inheritdoc/>
+        public Org.Apache.Kafka.Streams.Kstream.Joined<TJVMK, TJVMV, TJVMVO> InnerReference => _inner;
 
         #region IDisposable
 

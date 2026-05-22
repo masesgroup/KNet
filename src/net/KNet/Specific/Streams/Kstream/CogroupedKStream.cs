@@ -30,7 +30,7 @@ namespace MASES.KNet.Streams.Kstream
     /// <typeparam name="VOut"></typeparam>
     /// <typeparam name="TJVMK">The JVM type of <typeparamref name="K"/></typeparam>
     /// <typeparam name="TJVMVOut">The JVM type of <typeparamref name="VOut"/></typeparam>
-    public class CogroupedKStream<K, VOut, TJVMK, TJVMVOut> : IGenericSerDesFactoryApplier, IDisposable
+    public class CogroupedKStream<K, VOut, TJVMK, TJVMVOut> : IKNetInnerReference<Org.Apache.Kafka.Streams.Kstream.CogroupedKStream<TJVMK, TJVMVOut>>, IGenericSerDesFactoryApplier, IDisposable
     {
         Org.Apache.Kafka.Streams.Kstream.CogroupedKStream<TJVMK, TJVMVOut> _inner;
 
@@ -42,6 +42,9 @@ namespace MASES.KNet.Streams.Kstream
             _factory = factory;
             _inner = inner;
         }
+
+        /// <inheritdoc/>
+        public Org.Apache.Kafka.Streams.Kstream.CogroupedKStream<TJVMK, TJVMVOut> InnerReference => _inner;
 
         #region IDisposable
 

@@ -30,7 +30,7 @@ namespace MASES.KNet.Streams.Kstream
     /// <typeparam name="KO"></typeparam>
     /// <typeparam name="TJVMK">The JVM type of <typeparamref name="K"/></typeparam>
     /// <typeparam name="TJVMKO">The JVM type of <typeparamref name="KO"/></typeparam>
-    public class TableJoined<K, KO, TJVMK, TJVMKO> : IGenericSerDesFactoryApplier, IDisposable
+    public class TableJoined<K, KO, TJVMK, TJVMKO> : IKNetInnerReference<Org.Apache.Kafka.Streams.Kstream.TableJoined<TJVMK, TJVMKO>>, IGenericSerDesFactoryApplier, IDisposable
     {
         readonly Org.Apache.Kafka.Streams.Kstream.TableJoined<TJVMK, TJVMKO> _inner;
         IGenericSerDesFactory _factory;
@@ -40,6 +40,9 @@ namespace MASES.KNet.Streams.Kstream
         {
             _inner = inner;
         }
+
+        /// <inheritdoc/>
+        public Org.Apache.Kafka.Streams.Kstream.TableJoined<TJVMK, TJVMKO> InnerReference => _inner;
 
         #region IDisposable
 

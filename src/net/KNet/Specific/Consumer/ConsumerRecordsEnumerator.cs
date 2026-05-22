@@ -24,7 +24,7 @@ using System.Threading.Tasks;
 
 namespace MASES.KNet.Consumer
 {
-    class ConsumerRecordsEnumerator<K, V, TJVMK, TJVMV> : IEnumerator<ConsumerRecord<K, V, TJVMK, TJVMV>>, IAsyncEnumerator<ConsumerRecord<K, V, TJVMK, TJVMV>>
+    class ConsumerRecordsEnumerator<K, V, TJVMK, TJVMV> : IKNetInnerReference<Org.Apache.Kafka.Clients.Consumer.ConsumerRecords<TJVMK, TJVMV>>, IEnumerator<ConsumerRecord<K, V, TJVMK, TJVMV>>, IAsyncEnumerator<ConsumerRecord<K, V, TJVMK, TJVMV>>
     {
         readonly IDeserializer<K, TJVMK> _keyDeserializer;
         readonly IDeserializer<V, TJVMV> _valueDeserializer;
@@ -49,6 +49,9 @@ namespace MASES.KNet.Consumer
             _valueDeserializer = valueDeserializer;
             _cancellationToken = cancellationToken;
         }
+
+        /// <inheritdoc/>
+        public Org.Apache.Kafka.Clients.Consumer.ConsumerRecords<TJVMK, TJVMV> InnerReference => _records;
 
         ConsumerRecord<K, V, TJVMK, TJVMV> IAsyncEnumerator<ConsumerRecord<K, V, TJVMK, TJVMV>>.Current => new ConsumerRecord<K, V, TJVMK, TJVMV>(_recordAsyncEnumerator.Current, _keyDeserializer, _valueDeserializer, false);
 

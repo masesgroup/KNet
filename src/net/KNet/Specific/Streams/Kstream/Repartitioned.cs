@@ -31,7 +31,7 @@ namespace MASES.KNet.Streams.Kstream
     /// <typeparam name="V"></typeparam>
     /// <typeparam name="TJVMK">The JVM type of <typeparamref name="K"/></typeparam>
     /// <typeparam name="TJVMV">The JVM type of <typeparamref name="V"/></typeparam>
-    public class Repartitioned<K, V, TJVMK, TJVMV> : IGenericSerDesFactoryApplier, IDisposable
+    public class Repartitioned<K, V, TJVMK, TJVMV> : IKNetInnerReference<Org.Apache.Kafka.Streams.Kstream.Repartitioned<TJVMK, TJVMV>>, IGenericSerDesFactoryApplier, IDisposable
     {
         StreamPartitioner<K, V, TJVMK, TJVMV> _streamPartitioner = null;
         readonly Org.Apache.Kafka.Streams.Kstream.Repartitioned<TJVMK, TJVMV> _inner;
@@ -51,6 +51,9 @@ namespace MASES.KNet.Streams.Kstream
             _inner = inner;
             _streamPartitioner = streamPartitioner;
         }
+
+        /// <inheritdoc/>
+        public Org.Apache.Kafka.Streams.Kstream.Repartitioned<TJVMK, TJVMV> InnerReference => _inner;
 
         #region IDisposable
 
