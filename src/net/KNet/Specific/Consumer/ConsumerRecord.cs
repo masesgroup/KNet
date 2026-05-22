@@ -29,7 +29,7 @@ namespace MASES.KNet.Consumer
     /// <typeparam name="V">The value type</typeparam>
     /// <typeparam name="TJVMK">The JVM type of <typeparamref name="K"/></typeparam>
     /// <typeparam name="TJVMV">The JVM type of <typeparamref name="V"/></typeparam>
-    public class ConsumerRecord<K, V, TJVMK, TJVMV> : IGenericSerDesFactoryApplier, IDisposable
+    public class ConsumerRecord<K, V, TJVMK, TJVMV> : IKNetInnerReference<Org.Apache.Kafka.Clients.Consumer.ConsumerRecord<TJVMK, TJVMV>>, IGenericSerDesFactoryApplier, IDisposable
     {
         IDeserializer<K, TJVMK> _keyDeserializer;
         IDeserializer<V, TJVMV> _valueDeserializer;
@@ -65,6 +65,8 @@ namespace MASES.KNet.Consumer
             _record = record;
             _factory = factory;
         }
+        /// <inheritdoc/>
+        public Org.Apache.Kafka.Clients.Consumer.ConsumerRecord<TJVMK, TJVMV> InnerReference => _record;
 
         volatile int _disposed; // 0 = live, 1 = disposed
         /// <summary>

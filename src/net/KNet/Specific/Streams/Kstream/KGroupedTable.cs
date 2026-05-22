@@ -29,7 +29,7 @@ namespace MASES.KNet.Streams.Kstream
 	/// <typeparam name="V"></typeparam>
 	/// <typeparam name="TJVMK">The JVM type of <typeparamref name="K"/></typeparam>
 	/// <typeparam name="TJVMV">The JVM type of <typeparamref name="V"/></typeparam>
-	public class KGroupedTable<K, V, TJVMK, TJVMV> : IGenericSerDesFactoryApplier, IDisposable
+	public class KGroupedTable<K, V, TJVMK, TJVMV> : IKNetInnerReference<Org.Apache.Kafka.Streams.Kstream.KGroupedTable<TJVMK, TJVMV>>, IGenericSerDesFactoryApplier, IDisposable
 	{
 		Org.Apache.Kafka.Streams.Kstream.KGroupedTable<TJVMK, TJVMV> _inner;
 
@@ -42,9 +42,12 @@ namespace MASES.KNet.Streams.Kstream
 			_inner = inner;
 		}
 
-		#region IDisposable
+        /// <inheritdoc/>
+        public Org.Apache.Kafka.Streams.Kstream.KGroupedTable<TJVMK, TJVMV> InnerReference => _inner;
 
-		volatile int _disposed; // 0 = live, 1 = disposed
+        #region IDisposable
+
+        volatile int _disposed; // 0 = live, 1 = disposed
 		/// <summary>
 		/// Test if this instance was disposed
 		/// </summary>

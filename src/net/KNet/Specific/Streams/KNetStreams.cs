@@ -28,7 +28,7 @@ namespace MASES.KNet.Streams
     /// <summary>
     /// KNet extension of <see cref="Org.Apache.Kafka.Streams.KafkaStreams"/>
     /// </summary>
-    public class KNetStreams : IGenericSerDesFactoryApplier, IDisposable
+    public class KNetStreams : IKNetInnerReference<Org.Apache.Kafka.Streams.KafkaStreams>, IGenericSerDesFactoryApplier, IDisposable
     {
         readonly Java.Util.Properties _properties;
         readonly Org.Apache.Kafka.Streams.KafkaStreams _inner;
@@ -93,6 +93,9 @@ namespace MASES.KNet.Streams
             _factory = arg1;
         }
         #endregion
+
+        /// <inheritdoc/>
+        public Org.Apache.Kafka.Streams.KafkaStreams InnerReference => _inner;
 
         #region IDisposable
 

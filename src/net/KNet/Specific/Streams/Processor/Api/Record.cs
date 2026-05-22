@@ -30,8 +30,12 @@ namespace MASES.KNet.Streams.Processor.Api
     /// <typeparam name="V">The value type</typeparam>
     /// <typeparam name="TJVMK">The JVM type of <typeparamref name="K"/></typeparam>
     /// <typeparam name="TJVMV">The JVM type of <typeparamref name="V"/></typeparam>
-    public class Record<K, V, TJVMK, TJVMV> : IDisposable
+    public class Record<K, V, TJVMK, TJVMV> : IKNetInnerReference<Org.Apache.Kafka.Streams.Processor.Api.Record<TJVMK, TJVMV>>, IDisposable
     {
+        readonly IGenericSerDesFactory _builder;
+        readonly Org.Apache.Kafka.Streams.Processor.Api.Record<TJVMK, TJVMV> _record;
+        readonly Org.Apache.Kafka.Streams.Processor.Api.RecordMetadata _metadata;
+
         internal Record(IGenericSerDesFactory builder, Org.Apache.Kafka.Streams.Processor.Api.Record<TJVMK, TJVMV> record, Org.Apache.Kafka.Streams.Processor.Api.RecordMetadata metadata)
         {
             _builder = builder;
@@ -39,9 +43,8 @@ namespace MASES.KNet.Streams.Processor.Api
             _metadata = metadata;
         }
 
-        readonly IGenericSerDesFactory _builder;
-        readonly Org.Apache.Kafka.Streams.Processor.Api.Record<TJVMK, TJVMV> _record;
-        readonly Org.Apache.Kafka.Streams.Processor.Api.RecordMetadata _metadata;
+        /// <inheritdoc/>
+        public Org.Apache.Kafka.Streams.Processor.Api.Record<TJVMK, TJVMV> InnerReference => _record;
 
         #region IDisposable
 
