@@ -37,7 +37,7 @@ namespace Org.Apache.Kafka.Streams.Processor
         /// <param name="value">The StreamPartitioner object</param>
         /// <param name="numPartitions">The StreamPartitioner object</param>
         /// <returns>an integer between 0 and <paramref name="numPartitions"/> -1, or -1 if the default partitioning logic should be used</returns>
-        int Partition(Java.Lang.String topic, K key, V value, int numPartitions);
+        Java.Lang.Integer Partition(Java.Lang.String topic, K key, V value, int numPartitions);
 
         /// <summary>
         /// Executes the StreamPartitioner action in the CLR
@@ -56,14 +56,6 @@ namespace Org.Apache.Kafka.Streams.Processor
     /// <remarks>Dispose the object to avoid a resource leak, the object contains a reference to the corresponding JVM object</remarks>
     public partial class StreamPartitioner<K, V> : IStreamPartitioner<K, V>
     {
-        /// <summary>
-        /// Executes the StreamPartitioner action in the CLR
-        /// </summary>
-        /// <param name="topic">The StreamPartitioner object</param>
-        /// <param name="key">The StreamPartitioner object</param>
-        /// <param name="value">The StreamPartitioner object</param>
-        /// <param name="numPartitions">The StreamPartitioner object</param>
-        /// <returns>an integer between 0 and <paramref name="numPartitions"/> -1, or -1 if the default partitioning logic should be used</returns>
-        public virtual int Partition(Java.Lang.String topic, K key, V value, int numPartitions) { return -1; }
+
     }
 }
