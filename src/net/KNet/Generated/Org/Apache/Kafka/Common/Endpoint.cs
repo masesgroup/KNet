@@ -115,6 +115,15 @@ namespace Org.Apache.Kafka.Common
             return IExecuteWithSignature<Java.Lang.String>("listener", "()Ljava/lang/String;");
         }
         /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.0/org/apache/kafka/common/Endpoint.html#listenerName()"/>
+        /// </summary>
+        /// <returns><see cref="Java.Util.Optional"/></returns>
+        [global::System.Obsolete()]
+        public Java.Util.Optional<Java.Lang.String> ListenerName()
+        {
+            return IExecuteWithSignature<Java.Util.Optional<Java.Lang.String>>("listenerName", "()Ljava/util/Optional;");
+        }
+        /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.0/org/apache/kafka/common/Endpoint.html#securityProtocol()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.Security.Auth.SecurityProtocol"/></returns>

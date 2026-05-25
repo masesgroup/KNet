@@ -55,6 +55,41 @@ namespace Org.Apache.Kafka.Streams
         public override bool IsBridgeStatic => false;
 
         // TODO: complete the class
+        #region CloseOptions declaration
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/KafkaStreams.CloseOptions.html"/>
+        /// </summary>
+        [global::System.Obsolete()]
+        public partial class CloseOptions : MASES.JCOBridge.C2JBridge.JVMBridgeBase<CloseOptions>
+        {
+            const string _bridgeClassName = "org.apache.kafka.streams.KafkaStreams$CloseOptions";
+
+            /// <summary>
+            /// Initializer used internally by JCOBridge. Do not use directly.
+            /// </summary>
+            [global::System.Obsolete("This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
+            public CloseOptions(IJVMBridgeBaseInitializer initializer) : base(initializer) { }
+
+            private static readonly global::System.Exception _LocalBridgeClazzException = null;
+            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
+            private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw _LocalBridgeClazzException ?? new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
+
+            /// <inheritdoc/>
+            public override string BridgeClassName => _bridgeClassName;
+            /// <inheritdoc/>
+            public override bool IsBridgeAbstract => false;
+            /// <inheritdoc/>
+            public override bool IsBridgeCloseable => false;
+            /// <inheritdoc/>
+            public override bool IsBridgeInterface => false;
+            /// <inheritdoc/>
+            public override bool IsBridgeStatic => true;
+
+            // TODO: complete the class
+
+        }
+        #endregion
+
         #region State declaration
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/KafkaStreams.State.html"/>
@@ -449,6 +484,17 @@ namespace Org.Apache.Kafka.Streams
             return IExecuteWithSignature<bool>("close", "(Lorg/apache/kafka/streams/CloseOptions;)Z", arg0);
         }
         /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/KafkaStreams.html#close(org.apache.kafka.streams.KafkaStreams.CloseOptions)"/>
+        /// </summary>
+        /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.KafkaStreams.CloseOptions"/></param>
+        /// <returns><see cref="bool"/></returns>
+        /// <exception cref="Java.Lang.IllegalArgumentException"/>
+        [global::System.Obsolete()]
+        public bool Close(Org.Apache.Kafka.Streams.KafkaStreams.CloseOptions arg0)
+        {
+            return IExecuteWithSignature<bool>("close", "(Lorg/apache/kafka/streams/KafkaStreams$CloseOptions;)Z", arg0);
+        }
+        /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/KafkaStreams.html#clientInstanceIds(java.time.Duration)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Time.Duration"/></param>
@@ -530,6 +576,64 @@ namespace Org.Apache.Kafka.Streams
         #endregion
 
         #region Nested classes
+        #region CloseOptions implementation
+        public partial class CloseOptions
+        {
+            #region Constructors
+            /// <summary>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/KafkaStreams.CloseOptions.html#%3Cinit%3E()"/>
+            /// </summary>
+            public CloseOptions() : base(JVMBridgeBase.InitializerInstance)
+            {
+                InvokeInitializer();
+            }
+
+            #endregion
+
+            #region Class/Interface conversion operators
+
+            #endregion
+
+            #region Fields
+
+            #endregion
+
+            #region Static methods
+
+            #endregion
+
+            #region Instance methods
+            /// <summary>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/KafkaStreams.CloseOptions.html#leaveGroup(boolean)"/>
+            /// </summary>
+            /// <param name="arg0"><see cref="bool"/></param>
+            /// <returns><see cref="Org.Apache.Kafka.Streams.KafkaStreams.CloseOptions"/></returns>
+            [global::System.Obsolete()]
+            public Org.Apache.Kafka.Streams.KafkaStreams.CloseOptions LeaveGroup(bool arg0)
+            {
+                return IExecuteWithSignature<Org.Apache.Kafka.Streams.KafkaStreams.CloseOptions>("leaveGroup", "(Z)Lorg/apache/kafka/streams/KafkaStreams$CloseOptions;", arg0);
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/KafkaStreams.CloseOptions.html#timeout(java.time.Duration)"/>
+            /// </summary>
+            /// <param name="arg0"><see cref="Java.Time.Duration"/></param>
+            /// <returns><see cref="Org.Apache.Kafka.Streams.KafkaStreams.CloseOptions"/></returns>
+            [global::System.Obsolete()]
+            public Org.Apache.Kafka.Streams.KafkaStreams.CloseOptions Timeout(Java.Time.Duration arg0)
+            {
+                return IExecuteWithSignature<Org.Apache.Kafka.Streams.KafkaStreams.CloseOptions>("timeout", "(Ljava/time/Duration;)Lorg/apache/kafka/streams/KafkaStreams$CloseOptions;", arg0);
+            }
+
+            #endregion
+
+            #region Nested classes
+
+            #endregion
+
+            // TODO: complete the class
+        }
+        #endregion
+
         #region State implementation
         public partial class State
         {

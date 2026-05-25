@@ -78,6 +78,20 @@ namespace Org.Apache.Kafka.Common.Security
         private static Java.Lang.String _ALLOWED_LOGIN_MODULES_CONFIGContent = default;
         private static bool _ALLOWED_LOGIN_MODULES_CONFIGReady = false; // this is used because in case of generics 
         /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.0/org/apache/kafka/common/security/JaasUtils.html#DISALLOWED_LOGIN_MODULES_CONFIG"/>
+        /// </summary>
+        [global::System.Obsolete()]
+        public static Java.Lang.String DISALLOWED_LOGIN_MODULES_CONFIG { get { if (!_DISALLOWED_LOGIN_MODULES_CONFIGReady) { _DISALLOWED_LOGIN_MODULES_CONFIGContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "DISALLOWED_LOGIN_MODULES_CONFIG"); _DISALLOWED_LOGIN_MODULES_CONFIGReady = true; } return _DISALLOWED_LOGIN_MODULES_CONFIGContent; } }
+        private static Java.Lang.String _DISALLOWED_LOGIN_MODULES_CONFIGContent = default;
+        private static bool _DISALLOWED_LOGIN_MODULES_CONFIGReady = false; // this is used because in case of generics 
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.0/org/apache/kafka/common/security/JaasUtils.html#DISALLOWED_LOGIN_MODULES_DEFAULT"/>
+        /// </summary>
+        [global::System.Obsolete()]
+        public static Java.Lang.String DISALLOWED_LOGIN_MODULES_DEFAULT { get { if (!_DISALLOWED_LOGIN_MODULES_DEFAULTReady) { _DISALLOWED_LOGIN_MODULES_DEFAULTContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "DISALLOWED_LOGIN_MODULES_DEFAULT"); _DISALLOWED_LOGIN_MODULES_DEFAULTReady = true; } return _DISALLOWED_LOGIN_MODULES_DEFAULTContent; } }
+        private static Java.Lang.String _DISALLOWED_LOGIN_MODULES_DEFAULTContent = default;
+        private static bool _DISALLOWED_LOGIN_MODULES_DEFAULTReady = false; // this is used because in case of generics 
+        /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.0/org/apache/kafka/common/security/JaasUtils.html#JAVA_LOGIN_CONFIG_PARAM"/>
         /// </summary>
         public static Java.Lang.String JAVA_LOGIN_CONFIG_PARAM { get { if (!_JAVA_LOGIN_CONFIG_PARAMReady) { _JAVA_LOGIN_CONFIG_PARAMContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "JAVA_LOGIN_CONFIG_PARAM"); _JAVA_LOGIN_CONFIG_PARAMReady = true; } return _JAVA_LOGIN_CONFIG_PARAMContent; } }

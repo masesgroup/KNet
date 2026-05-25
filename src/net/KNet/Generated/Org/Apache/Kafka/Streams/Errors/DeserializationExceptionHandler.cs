@@ -55,6 +55,41 @@ namespace Org.Apache.Kafka.Streams.Errors
         public override bool IsBridgeStatic => false;
 
         // TODO: complete the class
+        #region DeserializationHandlerResponse declaration
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/errors/DeserializationExceptionHandler.DeserializationHandlerResponse.html"/>
+        /// </summary>
+        [global::System.Obsolete()]
+        public partial class DeserializationHandlerResponse : Java.Lang.Enum<Org.Apache.Kafka.Streams.Errors.DeserializationExceptionHandler.DeserializationHandlerResponse>
+        {
+            const string _bridgeClassName = "org.apache.kafka.streams.errors.DeserializationExceptionHandler$DeserializationHandlerResponse";
+
+            /// <summary>
+            /// Initializer used internally by JCOBridge. Do not use directly.
+            /// </summary>
+            [global::System.Obsolete("This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
+            public DeserializationHandlerResponse(IJVMBridgeBaseInitializer initializer) : base(initializer) { }
+
+            private static readonly global::System.Exception _LocalBridgeClazzException = null;
+            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
+            private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw _LocalBridgeClazzException ?? new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
+
+            /// <inheritdoc/>
+            public override string BridgeClassName => _bridgeClassName;
+            /// <inheritdoc/>
+            public override bool IsBridgeAbstract => false;
+            /// <inheritdoc/>
+            public override bool IsBridgeCloseable => false;
+            /// <inheritdoc/>
+            public override bool IsBridgeInterface => false;
+            /// <inheritdoc/>
+            public override bool IsBridgeStatic => true;
+
+            // TODO: complete the class
+
+        }
+        #endregion
+
         #region Response declaration
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/errors/DeserializationExceptionHandler.Response.html"/>
@@ -166,6 +201,30 @@ namespace Org.Apache.Kafka.Streams.Errors
 
         #region Instance methods
         /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/errors/DeserializationExceptionHandler.html#handle(org.apache.kafka.streams.errors.ErrorHandlerContext,org.apache.kafka.clients.consumer.ConsumerRecord,java.lang.Exception)"/>
+        /// </summary>
+        /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Errors.ErrorHandlerContext"/></param>
+        /// <param name="arg1"><see cref="Org.Apache.Kafka.Clients.Consumer.ConsumerRecord"/></param>
+        /// <param name="arg2"><see cref="Java.Lang.Exception"/></param>
+        /// <returns><see cref="Org.Apache.Kafka.Streams.Errors.DeserializationExceptionHandler.DeserializationHandlerResponse"/></returns>
+        [global::System.Obsolete()]
+        public Org.Apache.Kafka.Streams.Errors.DeserializationExceptionHandler.DeserializationHandlerResponse Handle(Org.Apache.Kafka.Streams.Errors.ErrorHandlerContext arg0, Org.Apache.Kafka.Clients.Consumer.ConsumerRecord<byte[], byte[]> arg1, MASES.JCOBridge.C2JBridge.JVMBridgeException arg2)
+        {
+            return IExecuteWithSignature<Org.Apache.Kafka.Streams.Errors.DeserializationExceptionHandler.DeserializationHandlerResponse>("handle", "(Lorg/apache/kafka/streams/errors/ErrorHandlerContext;Lorg/apache/kafka/clients/consumer/ConsumerRecord;Ljava/lang/Exception;)Lorg/apache/kafka/streams/errors/DeserializationExceptionHandler$DeserializationHandlerResponse;", arg0, arg1, arg2);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/errors/DeserializationExceptionHandler.html#handle(org.apache.kafka.streams.processor.ProcessorContext,org.apache.kafka.clients.consumer.ConsumerRecord,java.lang.Exception)"/>
+        /// </summary>
+        /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Processor.ProcessorContext"/></param>
+        /// <param name="arg1"><see cref="Org.Apache.Kafka.Clients.Consumer.ConsumerRecord"/></param>
+        /// <param name="arg2"><see cref="Java.Lang.Exception"/></param>
+        /// <returns><see cref="Org.Apache.Kafka.Streams.Errors.DeserializationExceptionHandler.DeserializationHandlerResponse"/></returns>
+        [global::System.Obsolete()]
+        public Org.Apache.Kafka.Streams.Errors.DeserializationExceptionHandler.DeserializationHandlerResponse Handle(Org.Apache.Kafka.Streams.Processor.ProcessorContext arg0, Org.Apache.Kafka.Clients.Consumer.ConsumerRecord<byte[], byte[]> arg1, MASES.JCOBridge.C2JBridge.JVMBridgeException arg2)
+        {
+            return IExecuteWithSignature<Org.Apache.Kafka.Streams.Errors.DeserializationExceptionHandler.DeserializationHandlerResponse>("handle", "(Lorg/apache/kafka/streams/processor/ProcessorContext;Lorg/apache/kafka/clients/consumer/ConsumerRecord;Ljava/lang/Exception;)Lorg/apache/kafka/streams/errors/DeserializationExceptionHandler$DeserializationHandlerResponse;", arg0, arg1, arg2);
+        }
+        /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/errors/DeserializationExceptionHandler.html#handleError(org.apache.kafka.streams.errors.ErrorHandlerContext,org.apache.kafka.clients.consumer.ConsumerRecord,java.lang.Exception)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Errors.ErrorHandlerContext"/></param>
@@ -180,6 +239,78 @@ namespace Org.Apache.Kafka.Streams.Errors
         #endregion
 
         #region Nested classes
+        #region DeserializationHandlerResponse implementation
+        public partial class DeserializationHandlerResponse
+        {
+            #region Constructors
+
+            #endregion
+
+            #region Class/Interface conversion operators
+
+            #endregion
+
+            #region Fields
+            /// <summary>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/errors/DeserializationExceptionHandler.DeserializationHandlerResponse.html#id"/>
+            /// </summary>
+            public int id { get { if (!_idReady) { _idContent = IGetField<int>("id"); _idReady = true; } return _idContent; } }
+            private int _idContent = default;
+            private bool _idReady = false; // this is used because in case of generics 
+            /// <summary>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/errors/DeserializationExceptionHandler.DeserializationHandlerResponse.html#name"/>
+            /// </summary>
+            public Java.Lang.String name { get { if (!_nameReady) { _nameContent = IGetField<Java.Lang.String>("name"); _nameReady = true; } return _nameContent; } }
+            private Java.Lang.String _nameContent = default;
+            private bool _nameReady = false; // this is used because in case of generics 
+            /// <summary>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/errors/DeserializationExceptionHandler.DeserializationHandlerResponse.html#CONTINUE"/>
+            /// </summary>
+            public static Org.Apache.Kafka.Streams.Errors.DeserializationExceptionHandler.DeserializationHandlerResponse CONTINUE { get { if (!_CONTINUEReady) { _CONTINUEContent = SGetField<Org.Apache.Kafka.Streams.Errors.DeserializationExceptionHandler.DeserializationHandlerResponse>(LocalBridgeClazz, "CONTINUE"); _CONTINUEReady = true; } return _CONTINUEContent; } }
+            private static Org.Apache.Kafka.Streams.Errors.DeserializationExceptionHandler.DeserializationHandlerResponse _CONTINUEContent = default;
+            private static bool _CONTINUEReady = false; // this is used because in case of generics 
+            /// <summary>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/errors/DeserializationExceptionHandler.DeserializationHandlerResponse.html#FAIL"/>
+            /// </summary>
+            public static Org.Apache.Kafka.Streams.Errors.DeserializationExceptionHandler.DeserializationHandlerResponse FAIL { get { if (!_FAILReady) { _FAILContent = SGetField<Org.Apache.Kafka.Streams.Errors.DeserializationExceptionHandler.DeserializationHandlerResponse>(LocalBridgeClazz, "FAIL"); _FAILReady = true; } return _FAILContent; } }
+            private static Org.Apache.Kafka.Streams.Errors.DeserializationExceptionHandler.DeserializationHandlerResponse _FAILContent = default;
+            private static bool _FAILReady = false; // this is used because in case of generics 
+
+            #endregion
+
+            #region Static methods
+            /// <summary>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/errors/DeserializationExceptionHandler.DeserializationHandlerResponse.html#valueOf(java.lang.String)"/>
+            /// </summary>
+            /// <param name="arg0"><see cref="Java.Lang.String"/></param>
+            /// <returns><see cref="Org.Apache.Kafka.Streams.Errors.DeserializationExceptionHandler.DeserializationHandlerResponse"/></returns>
+            public static Org.Apache.Kafka.Streams.Errors.DeserializationExceptionHandler.DeserializationHandlerResponse ValueOf(Java.Lang.String arg0)
+            {
+                return SExecuteWithSignature<Org.Apache.Kafka.Streams.Errors.DeserializationExceptionHandler.DeserializationHandlerResponse>(LocalBridgeClazz, "valueOf", "(Ljava/lang/String;)Lorg/apache/kafka/streams/errors/DeserializationExceptionHandler$DeserializationHandlerResponse;", arg0);
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/errors/DeserializationExceptionHandler.DeserializationHandlerResponse.html#values()"/>
+            /// </summary>
+            /// <returns><see cref="Org.Apache.Kafka.Streams.Errors.DeserializationExceptionHandler.DeserializationHandlerResponse"/></returns>
+            public static Org.Apache.Kafka.Streams.Errors.DeserializationExceptionHandler.DeserializationHandlerResponse[] Values()
+            {
+                return SExecuteWithSignatureArray<Org.Apache.Kafka.Streams.Errors.DeserializationExceptionHandler.DeserializationHandlerResponse>(LocalBridgeClazz, "values", "()[Lorg/apache/kafka/streams/errors/DeserializationExceptionHandler$DeserializationHandlerResponse;");
+            }
+
+            #endregion
+
+            #region Instance methods
+
+            #endregion
+
+            #region Nested classes
+
+            #endregion
+
+            // TODO: complete the class
+        }
+        #endregion
+
         #region Response implementation
         public partial class Response
         {

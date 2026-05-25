@@ -88,6 +88,17 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
         #region Static methods
         /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/kstream/JoinWindows.html#of(java.time.Duration)"/>
+        /// </summary>
+        /// <param name="arg0"><see cref="Java.Time.Duration"/></param>
+        /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.JoinWindows"/></returns>
+        /// <exception cref="Java.Lang.IllegalArgumentException"/>
+        [global::System.Obsolete()]
+        public static Org.Apache.Kafka.Streams.Kstream.JoinWindows Of(Java.Time.Duration arg0)
+        {
+            return SExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.JoinWindows>(LocalBridgeClazz, "of", "(Ljava/time/Duration;)Lorg/apache/kafka/streams/kstream/JoinWindows;", arg0);
+        }
+        /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/kstream/JoinWindows.html#ofTimeDifferenceAndGrace(java.time.Duration,java.time.Duration)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Time.Duration"/></param>
@@ -129,6 +140,17 @@ namespace Org.Apache.Kafka.Streams.Kstream
         public Org.Apache.Kafka.Streams.Kstream.JoinWindows Before(Java.Time.Duration arg0)
         {
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.JoinWindows>("before", "(Ljava/time/Duration;)Lorg/apache/kafka/streams/kstream/JoinWindows;", arg0);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/kstream/JoinWindows.html#grace(java.time.Duration)"/>
+        /// </summary>
+        /// <param name="arg0"><see cref="Java.Time.Duration"/></param>
+        /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.JoinWindows"/></returns>
+        /// <exception cref="Java.Lang.IllegalArgumentException"/>
+        [global::System.Obsolete()]
+        public Org.Apache.Kafka.Streams.Kstream.JoinWindows Grace(Java.Time.Duration arg0)
+        {
+            return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.JoinWindows>("grace", "(Ljava/time/Duration;)Lorg/apache/kafka/streams/kstream/JoinWindows;", arg0);
         }
 
         #endregion

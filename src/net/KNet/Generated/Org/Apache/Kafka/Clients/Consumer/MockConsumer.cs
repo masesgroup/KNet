@@ -107,6 +107,15 @@ namespace Org.Apache.Kafka.Clients.Consumer
         {
             InvokeInitializer(arg0);
         }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.0/org/apache/kafka/clients/consumer/MockConsumer.html#%3Cinit%3E(org.apache.kafka.clients.consumer.OffsetResetStrategy)"/>
+        /// </summary>
+        /// <param name="arg0"><see cref="Org.Apache.Kafka.Clients.Consumer.OffsetResetStrategy"/></param>
+        [global::System.Obsolete()]
+        public MockConsumer(Org.Apache.Kafka.Clients.Consumer.OffsetResetStrategy arg0) : base(JVMBridgeBase.InitializerInstance)
+        {
+            InvokeInitializer(arg0);
+        }
 
         #endregion
 
@@ -368,6 +377,15 @@ namespace Org.Apache.Kafka.Clients.Consumer
         public void Assign(Java.Util.Collection arg0)
         {
             IExecuteWithSignature("assign", "(Ljava/util/Collection;)V", arg0);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.0/org/apache/kafka/clients/consumer/MockConsumer.html#close(java.time.Duration)"/>
+        /// </summary>
+        /// <param name="arg0"><see cref="Java.Time.Duration"/></param>
+        [global::System.Obsolete()]
+        public void Close(Java.Time.Duration arg0)
+        {
+            IExecuteWithSignature("close", "(Ljava/time/Duration;)V", arg0);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.0/org/apache/kafka/clients/consumer/MockConsumer.html#commitAsync()"/>
@@ -719,6 +737,15 @@ namespace Org.Apache.Kafka.Clients.Consumer
         {
             InvokeInitializer(arg0);
         }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.0/org/apache/kafka/clients/consumer/MockConsumer.html#%3Cinit%3E(org.apache.kafka.clients.consumer.OffsetResetStrategy)"/>
+        /// </summary>
+        /// <param name="arg0"><see cref="Org.Apache.Kafka.Clients.Consumer.OffsetResetStrategy"/></param>
+        [global::System.Obsolete()]
+        public MockConsumer(Org.Apache.Kafka.Clients.Consumer.OffsetResetStrategy arg0) : base(JVMBridgeBase.InitializerInstance)
+        {
+            InvokeInitializer(arg0);
+        }
 
         #endregion
 
@@ -985,6 +1012,15 @@ namespace Org.Apache.Kafka.Clients.Consumer
         public void Assign(Java.Util.Collection<Org.Apache.Kafka.Common.TopicPartition> arg0)
         {
             IExecuteWithSignature("assign", "(Ljava/util/Collection;)V", arg0);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.0/org/apache/kafka/clients/consumer/MockConsumer.html#close(java.time.Duration)"/>
+        /// </summary>
+        /// <param name="arg0"><see cref="Java.Time.Duration"/></param>
+        [global::System.Obsolete()]
+        public void Close(Java.Time.Duration arg0)
+        {
+            IExecuteWithSignature("close", "(Ljava/time/Duration;)V", arg0);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.0/org/apache/kafka/clients/consumer/MockConsumer.html#commitAsync()"/>

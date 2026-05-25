@@ -127,6 +127,33 @@ namespace Org.Apache.Kafka.Streams.Scala.Kstream
         {
             return SExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.Consumed<K, V>>(LocalBridgeClazz, "with", "(Lorg/apache/kafka/streams/processor/TimestampExtractor;Lorg/apache/kafka/streams/AutoOffsetReset;Lorg/apache/kafka/common/serialization/Serde;Lorg/apache/kafka/common/serialization/Serde;)Lorg/apache/kafka/streams/kstream/Consumed;", timestampExtractor, resetPolicy, keySerde, valueSerde);
         }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.2.0/org/apache/kafka/streams/scala/kstream/Consumed.html#with(org.apache.kafka.streams.processor.TimestampExtractor,org.apache.kafka.streams.Topology.AutoOffsetReset,org.apache.kafka.common.serialization.Serde,org.apache.kafka.common.serialization.Serde)"/>
+        /// </summary>
+        /// <param name="timestampExtractor"><see cref="Org.Apache.Kafka.Streams.Processor.TimestampExtractor"/></param>
+        /// <param name="resetPolicy"><see cref="Org.Apache.Kafka.Streams.Topology.AutoOffsetReset"/></param>
+        /// <param name="keySerde"><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></param>
+        /// <param name="valueSerde"><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></param>
+        /// <typeparam name="K"></typeparam>
+        /// <typeparam name="V"></typeparam>
+        /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.Consumed"/></returns>
+        public static Org.Apache.Kafka.Streams.Kstream.Consumed<K, V> With<K, V>(Org.Apache.Kafka.Streams.Processor.TimestampExtractor timestampExtractor, Org.Apache.Kafka.Streams.Topology.AutoOffsetReset resetPolicy, Org.Apache.Kafka.Common.Serialization.Serde<K> keySerde, Org.Apache.Kafka.Common.Serialization.Serde<V> valueSerde)
+        {
+            return SExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.Consumed<K, V>>(LocalBridgeClazz, "with", "(Lorg/apache/kafka/streams/processor/TimestampExtractor;Lorg/apache/kafka/streams/Topology$AutoOffsetReset;Lorg/apache/kafka/common/serialization/Serde;Lorg/apache/kafka/common/serialization/Serde;)Lorg/apache/kafka/streams/kstream/Consumed;", timestampExtractor, resetPolicy, keySerde, valueSerde);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.2.0/org/apache/kafka/streams/scala/kstream/Consumed.html#with(org.apache.kafka.streams.Topology.AutoOffsetReset,org.apache.kafka.common.serialization.Serde,org.apache.kafka.common.serialization.Serde)"/>
+        /// </summary>
+        /// <param name="resetPolicy"><see cref="Org.Apache.Kafka.Streams.Topology.AutoOffsetReset"/></param>
+        /// <param name="keySerde"><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></param>
+        /// <param name="valueSerde"><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></param>
+        /// <typeparam name="K"></typeparam>
+        /// <typeparam name="V"></typeparam>
+        /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.Consumed"/></returns>
+        public static Org.Apache.Kafka.Streams.Kstream.Consumed<K, V> With<K, V>(Org.Apache.Kafka.Streams.Topology.AutoOffsetReset resetPolicy, Org.Apache.Kafka.Common.Serialization.Serde<K> keySerde, Org.Apache.Kafka.Common.Serialization.Serde<V> valueSerde)
+        {
+            return SExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.Consumed<K, V>>(LocalBridgeClazz, "with", "(Lorg/apache/kafka/streams/Topology$AutoOffsetReset;Lorg/apache/kafka/common/serialization/Serde;Lorg/apache/kafka/common/serialization/Serde;)Lorg/apache/kafka/streams/kstream/Consumed;", resetPolicy, keySerde, valueSerde);
+        }
 
         #endregion
 

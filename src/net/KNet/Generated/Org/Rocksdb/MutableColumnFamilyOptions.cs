@@ -559,6 +559,13 @@ namespace Org.Rocksdb
             private static Org.Rocksdb.MutableColumnFamilyOptions.MemtableOption _experimental_mempurge_thresholdContent = default;
             private static bool _experimental_mempurge_thresholdReady = false; // this is used because in case of generics 
             /// <summary>
+            /// <see href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/MutableColumnFamilyOptions.MemtableOption.html#filter_deletes"/>
+            /// </summary>
+            [global::System.Obsolete()]
+            public static Org.Rocksdb.MutableColumnFamilyOptions.MemtableOption filter_deletes { get { if (!_filter_deletesReady) { _filter_deletesContent = SGetField<Org.Rocksdb.MutableColumnFamilyOptions.MemtableOption>(LocalBridgeClazz, "filter_deletes"); _filter_deletesReady = true; } return _filter_deletesContent; } }
+            private static Org.Rocksdb.MutableColumnFamilyOptions.MemtableOption _filter_deletesContent = default;
+            private static bool _filter_deletesReady = false; // this is used because in case of generics 
+            /// <summary>
             /// <see href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/MutableColumnFamilyOptions.MemtableOption.html#inplace_update_num_locks"/>
             /// </summary>
             public static Org.Rocksdb.MutableColumnFamilyOptions.MemtableOption inplace_update_num_locks { get { if (!_inplace_update_num_locksReady) { _inplace_update_num_locksContent = SGetField<Org.Rocksdb.MutableColumnFamilyOptions.MemtableOption>(LocalBridgeClazz, "inplace_update_num_locks"); _inplace_update_num_locksReady = true; } return _inplace_update_num_locksContent; } }
@@ -582,6 +589,20 @@ namespace Org.Rocksdb
             public static Org.Rocksdb.MutableColumnFamilyOptions.MemtableOption memtable_huge_page_size { get { if (!_memtable_huge_page_sizeReady) { _memtable_huge_page_sizeContent = SGetField<Org.Rocksdb.MutableColumnFamilyOptions.MemtableOption>(LocalBridgeClazz, "memtable_huge_page_size"); _memtable_huge_page_sizeReady = true; } return _memtable_huge_page_sizeContent; } }
             private static Org.Rocksdb.MutableColumnFamilyOptions.MemtableOption _memtable_huge_page_sizeContent = default;
             private static bool _memtable_huge_page_sizeReady = false; // this is used because in case of generics 
+            /// <summary>
+            /// <see href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/MutableColumnFamilyOptions.MemtableOption.html#memtable_prefix_bloom_bits"/>
+            /// </summary>
+            [global::System.Obsolete()]
+            public static Org.Rocksdb.MutableColumnFamilyOptions.MemtableOption memtable_prefix_bloom_bits { get { if (!_memtable_prefix_bloom_bitsReady) { _memtable_prefix_bloom_bitsContent = SGetField<Org.Rocksdb.MutableColumnFamilyOptions.MemtableOption>(LocalBridgeClazz, "memtable_prefix_bloom_bits"); _memtable_prefix_bloom_bitsReady = true; } return _memtable_prefix_bloom_bitsContent; } }
+            private static Org.Rocksdb.MutableColumnFamilyOptions.MemtableOption _memtable_prefix_bloom_bitsContent = default;
+            private static bool _memtable_prefix_bloom_bitsReady = false; // this is used because in case of generics 
+            /// <summary>
+            /// <see href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/MutableColumnFamilyOptions.MemtableOption.html#memtable_prefix_bloom_probes"/>
+            /// </summary>
+            [global::System.Obsolete()]
+            public static Org.Rocksdb.MutableColumnFamilyOptions.MemtableOption memtable_prefix_bloom_probes { get { if (!_memtable_prefix_bloom_probesReady) { _memtable_prefix_bloom_probesContent = SGetField<Org.Rocksdb.MutableColumnFamilyOptions.MemtableOption>(LocalBridgeClazz, "memtable_prefix_bloom_probes"); _memtable_prefix_bloom_probesReady = true; } return _memtable_prefix_bloom_probesContent; } }
+            private static Org.Rocksdb.MutableColumnFamilyOptions.MemtableOption _memtable_prefix_bloom_probesContent = default;
+            private static bool _memtable_prefix_bloom_probesReady = false; // this is used because in case of generics 
             /// <summary>
             /// <see href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/MutableColumnFamilyOptions.MemtableOption.html#memtable_prefix_bloom_size_ratio"/>
             /// </summary>

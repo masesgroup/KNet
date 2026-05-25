@@ -64,6 +64,51 @@ namespace Org.Apache.Kafka.Clients.Admin
     {
         #region Constructors
         /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.0/org/apache/kafka/clients/admin/ConsumerGroupDescription.html#%3Cinit%3E(java.lang.String,boolean,java.util.Collection,java.lang.String,org.apache.kafka.common.ConsumerGroupState,org.apache.kafka.common.Node,java.util.Set)"/>
+        /// </summary>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
+        /// <param name="arg1"><see cref="bool"/></param>
+        /// <param name="arg2"><see cref="Java.Util.Collection"/></param>
+        /// <param name="arg3"><see cref="Java.Lang.String"/></param>
+        /// <param name="arg4"><see cref="Org.Apache.Kafka.Common.ConsumerGroupState"/></param>
+        /// <param name="arg5"><see cref="Org.Apache.Kafka.Common.Node"/></param>
+        /// <param name="arg6"><see cref="Java.Util.Set"/></param>
+        [global::System.Obsolete()]
+        public ConsumerGroupDescription(Java.Lang.String arg0, bool arg1, Java.Util.Collection<Org.Apache.Kafka.Clients.Admin.MemberDescription> arg2, Java.Lang.String arg3, Org.Apache.Kafka.Common.ConsumerGroupState arg4, Org.Apache.Kafka.Common.Node arg5, Java.Util.Set<Org.Apache.Kafka.Common.Acl.AclOperation> arg6) : base(JVMBridgeBase.InitializerInstance)
+        {
+            InvokeInitializer(arg0, arg1, arg2, arg3, arg4, arg5, arg6);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.0/org/apache/kafka/clients/admin/ConsumerGroupDescription.html#%3Cinit%3E(java.lang.String,boolean,java.util.Collection,java.lang.String,org.apache.kafka.common.ConsumerGroupState,org.apache.kafka.common.Node)"/>
+        /// </summary>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
+        /// <param name="arg1"><see cref="bool"/></param>
+        /// <param name="arg2"><see cref="Java.Util.Collection"/></param>
+        /// <param name="arg3"><see cref="Java.Lang.String"/></param>
+        /// <param name="arg4"><see cref="Org.Apache.Kafka.Common.ConsumerGroupState"/></param>
+        /// <param name="arg5"><see cref="Org.Apache.Kafka.Common.Node"/></param>
+        [global::System.Obsolete()]
+        public ConsumerGroupDescription(Java.Lang.String arg0, bool arg1, Java.Util.Collection<Org.Apache.Kafka.Clients.Admin.MemberDescription> arg2, Java.Lang.String arg3, Org.Apache.Kafka.Common.ConsumerGroupState arg4, Org.Apache.Kafka.Common.Node arg5) : base(JVMBridgeBase.InitializerInstance)
+        {
+            InvokeInitializer(arg0, arg1, arg2, arg3, arg4, arg5);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.0/org/apache/kafka/clients/admin/ConsumerGroupDescription.html#%3Cinit%3E(java.lang.String,boolean,java.util.Collection,java.lang.String,org.apache.kafka.common.GroupType,org.apache.kafka.common.ConsumerGroupState,org.apache.kafka.common.Node,java.util.Set)"/>
+        /// </summary>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
+        /// <param name="arg1"><see cref="bool"/></param>
+        /// <param name="arg2"><see cref="Java.Util.Collection"/></param>
+        /// <param name="arg3"><see cref="Java.Lang.String"/></param>
+        /// <param name="arg4"><see cref="Org.Apache.Kafka.Common.GroupType"/></param>
+        /// <param name="arg5"><see cref="Org.Apache.Kafka.Common.ConsumerGroupState"/></param>
+        /// <param name="arg6"><see cref="Org.Apache.Kafka.Common.Node"/></param>
+        /// <param name="arg7"><see cref="Java.Util.Set"/></param>
+        [global::System.Obsolete()]
+        public ConsumerGroupDescription(Java.Lang.String arg0, bool arg1, Java.Util.Collection<Org.Apache.Kafka.Clients.Admin.MemberDescription> arg2, Java.Lang.String arg3, Org.Apache.Kafka.Common.GroupType arg4, Org.Apache.Kafka.Common.ConsumerGroupState arg5, Org.Apache.Kafka.Common.Node arg6, Java.Util.Set<Org.Apache.Kafka.Common.Acl.AclOperation> arg7) : base(JVMBridgeBase.InitializerInstance)
+        {
+            InvokeInitializer(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7);
+        }
+        /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.0/org/apache/kafka/clients/admin/ConsumerGroupDescription.html#%3Cinit%3E(java.lang.String,boolean,java.util.Collection,java.lang.String,org.apache.kafka.common.GroupType,org.apache.kafka.common.GroupState,org.apache.kafka.common.Node,java.util.Set,java.util.Optional,java.util.Optional)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
@@ -151,6 +196,15 @@ namespace Org.Apache.Kafka.Clients.Admin
         public Java.Util.Set<Org.Apache.Kafka.Common.Acl.AclOperation> AuthorizedOperations()
         {
             return IExecuteWithSignature<Java.Util.Set<Org.Apache.Kafka.Common.Acl.AclOperation>>("authorizedOperations", "()Ljava/util/Set;");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.0/org/apache/kafka/clients/admin/ConsumerGroupDescription.html#state()"/>
+        /// </summary>
+        /// <returns><see cref="Org.Apache.Kafka.Common.ConsumerGroupState"/></returns>
+        [global::System.Obsolete()]
+        public Org.Apache.Kafka.Common.ConsumerGroupState State()
+        {
+            return IExecuteWithSignature<Org.Apache.Kafka.Common.ConsumerGroupState>("state", "()Lorg/apache/kafka/common/ConsumerGroupState;");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.0/org/apache/kafka/clients/admin/ConsumerGroupDescription.html#groupState()"/>

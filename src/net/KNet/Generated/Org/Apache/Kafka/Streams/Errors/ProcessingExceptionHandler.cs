@@ -55,6 +55,41 @@ namespace Org.Apache.Kafka.Streams.Errors
         public override bool IsBridgeStatic => false;
 
         // TODO: complete the class
+        #region ProcessingHandlerResponse declaration
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/errors/ProcessingExceptionHandler.ProcessingHandlerResponse.html"/>
+        /// </summary>
+        [global::System.Obsolete()]
+        public partial class ProcessingHandlerResponse : Java.Lang.Enum<Org.Apache.Kafka.Streams.Errors.ProcessingExceptionHandler.ProcessingHandlerResponse>
+        {
+            const string _bridgeClassName = "org.apache.kafka.streams.errors.ProcessingExceptionHandler$ProcessingHandlerResponse";
+
+            /// <summary>
+            /// Initializer used internally by JCOBridge. Do not use directly.
+            /// </summary>
+            [global::System.Obsolete("This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
+            public ProcessingHandlerResponse(IJVMBridgeBaseInitializer initializer) : base(initializer) { }
+
+            private static readonly global::System.Exception _LocalBridgeClazzException = null;
+            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
+            private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw _LocalBridgeClazzException ?? new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
+
+            /// <inheritdoc/>
+            public override string BridgeClassName => _bridgeClassName;
+            /// <inheritdoc/>
+            public override bool IsBridgeAbstract => false;
+            /// <inheritdoc/>
+            public override bool IsBridgeCloseable => false;
+            /// <inheritdoc/>
+            public override bool IsBridgeInterface => false;
+            /// <inheritdoc/>
+            public override bool IsBridgeStatic => true;
+
+            // TODO: complete the class
+
+        }
+        #endregion
+
         #region Response declaration
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/errors/ProcessingExceptionHandler.Response.html"/>
@@ -166,6 +201,18 @@ namespace Org.Apache.Kafka.Streams.Errors
 
         #region Instance methods
         /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/errors/ProcessingExceptionHandler.html#handle(org.apache.kafka.streams.errors.ErrorHandlerContext,org.apache.kafka.streams.processor.api.Record,java.lang.Exception)"/>
+        /// </summary>
+        /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Errors.ErrorHandlerContext"/></param>
+        /// <param name="arg1"><see cref="Org.Apache.Kafka.Streams.Processor.Api.Record"/></param>
+        /// <param name="arg2"><see cref="Java.Lang.Exception"/></param>
+        /// <returns><see cref="Org.Apache.Kafka.Streams.Errors.ProcessingExceptionHandler.ProcessingHandlerResponse"/></returns>
+        [global::System.Obsolete()]
+        public Org.Apache.Kafka.Streams.Errors.ProcessingExceptionHandler.ProcessingHandlerResponse Handle(Org.Apache.Kafka.Streams.Errors.ErrorHandlerContext arg0, Org.Apache.Kafka.Streams.Processor.Api.Record<object, object> arg1, MASES.JCOBridge.C2JBridge.JVMBridgeException arg2)
+        {
+            return IExecuteWithSignature<Org.Apache.Kafka.Streams.Errors.ProcessingExceptionHandler.ProcessingHandlerResponse>("handle", "(Lorg/apache/kafka/streams/errors/ErrorHandlerContext;Lorg/apache/kafka/streams/processor/api/Record;Ljava/lang/Exception;)Lorg/apache/kafka/streams/errors/ProcessingExceptionHandler$ProcessingHandlerResponse;", arg0, arg1, arg2);
+        }
+        /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/errors/ProcessingExceptionHandler.html#handleError(org.apache.kafka.streams.errors.ErrorHandlerContext,org.apache.kafka.streams.processor.api.Record,java.lang.Exception)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Errors.ErrorHandlerContext"/></param>
@@ -180,6 +227,78 @@ namespace Org.Apache.Kafka.Streams.Errors
         #endregion
 
         #region Nested classes
+        #region ProcessingHandlerResponse implementation
+        public partial class ProcessingHandlerResponse
+        {
+            #region Constructors
+
+            #endregion
+
+            #region Class/Interface conversion operators
+
+            #endregion
+
+            #region Fields
+            /// <summary>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/errors/ProcessingExceptionHandler.ProcessingHandlerResponse.html#id"/>
+            /// </summary>
+            public int id { get { if (!_idReady) { _idContent = IGetField<int>("id"); _idReady = true; } return _idContent; } }
+            private int _idContent = default;
+            private bool _idReady = false; // this is used because in case of generics 
+            /// <summary>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/errors/ProcessingExceptionHandler.ProcessingHandlerResponse.html#name"/>
+            /// </summary>
+            public Java.Lang.String name { get { if (!_nameReady) { _nameContent = IGetField<Java.Lang.String>("name"); _nameReady = true; } return _nameContent; } }
+            private Java.Lang.String _nameContent = default;
+            private bool _nameReady = false; // this is used because in case of generics 
+            /// <summary>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/errors/ProcessingExceptionHandler.ProcessingHandlerResponse.html#CONTINUE"/>
+            /// </summary>
+            public static Org.Apache.Kafka.Streams.Errors.ProcessingExceptionHandler.ProcessingHandlerResponse CONTINUE { get { if (!_CONTINUEReady) { _CONTINUEContent = SGetField<Org.Apache.Kafka.Streams.Errors.ProcessingExceptionHandler.ProcessingHandlerResponse>(LocalBridgeClazz, "CONTINUE"); _CONTINUEReady = true; } return _CONTINUEContent; } }
+            private static Org.Apache.Kafka.Streams.Errors.ProcessingExceptionHandler.ProcessingHandlerResponse _CONTINUEContent = default;
+            private static bool _CONTINUEReady = false; // this is used because in case of generics 
+            /// <summary>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/errors/ProcessingExceptionHandler.ProcessingHandlerResponse.html#FAIL"/>
+            /// </summary>
+            public static Org.Apache.Kafka.Streams.Errors.ProcessingExceptionHandler.ProcessingHandlerResponse FAIL { get { if (!_FAILReady) { _FAILContent = SGetField<Org.Apache.Kafka.Streams.Errors.ProcessingExceptionHandler.ProcessingHandlerResponse>(LocalBridgeClazz, "FAIL"); _FAILReady = true; } return _FAILContent; } }
+            private static Org.Apache.Kafka.Streams.Errors.ProcessingExceptionHandler.ProcessingHandlerResponse _FAILContent = default;
+            private static bool _FAILReady = false; // this is used because in case of generics 
+
+            #endregion
+
+            #region Static methods
+            /// <summary>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/errors/ProcessingExceptionHandler.ProcessingHandlerResponse.html#valueOf(java.lang.String)"/>
+            /// </summary>
+            /// <param name="arg0"><see cref="Java.Lang.String"/></param>
+            /// <returns><see cref="Org.Apache.Kafka.Streams.Errors.ProcessingExceptionHandler.ProcessingHandlerResponse"/></returns>
+            public static Org.Apache.Kafka.Streams.Errors.ProcessingExceptionHandler.ProcessingHandlerResponse ValueOf(Java.Lang.String arg0)
+            {
+                return SExecuteWithSignature<Org.Apache.Kafka.Streams.Errors.ProcessingExceptionHandler.ProcessingHandlerResponse>(LocalBridgeClazz, "valueOf", "(Ljava/lang/String;)Lorg/apache/kafka/streams/errors/ProcessingExceptionHandler$ProcessingHandlerResponse;", arg0);
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/errors/ProcessingExceptionHandler.ProcessingHandlerResponse.html#values()"/>
+            /// </summary>
+            /// <returns><see cref="Org.Apache.Kafka.Streams.Errors.ProcessingExceptionHandler.ProcessingHandlerResponse"/></returns>
+            public static Org.Apache.Kafka.Streams.Errors.ProcessingExceptionHandler.ProcessingHandlerResponse[] Values()
+            {
+                return SExecuteWithSignatureArray<Org.Apache.Kafka.Streams.Errors.ProcessingExceptionHandler.ProcessingHandlerResponse>(LocalBridgeClazz, "values", "()[Lorg/apache/kafka/streams/errors/ProcessingExceptionHandler$ProcessingHandlerResponse;");
+            }
+
+            #endregion
+
+            #region Instance methods
+
+            #endregion
+
+            #region Nested classes
+
+            #endregion
+
+            // TODO: complete the class
+        }
+        #endregion
+
         #region Response implementation
         public partial class Response
         {

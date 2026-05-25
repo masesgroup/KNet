@@ -25,19 +25,20 @@ using MASES.JCOBridge.C2JBridge;
 
 namespace Org.Apache.Kafka.Clients.Admin
 {
-    #region RaftVoterEndpoint declaration
+    #region ClientMetricsResourceListing declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.0/org/apache/kafka/clients/admin/RaftVoterEndpoint.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.0/org/apache/kafka/clients/admin/ClientMetricsResourceListing.html"/>
     /// </summary>
-    public partial class RaftVoterEndpoint : MASES.JCOBridge.C2JBridge.JVMBridgeBase<RaftVoterEndpoint>
+    [global::System.Obsolete()]
+    public partial class ClientMetricsResourceListing : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ClientMetricsResourceListing>
     {
-        const string _bridgeClassName = "org.apache.kafka.clients.admin.RaftVoterEndpoint";
+        const string _bridgeClassName = "org.apache.kafka.clients.admin.ClientMetricsResourceListing";
 
         /// <summary>
         /// Initializer used internally by JCOBridge. Do not use directly.
         /// </summary>
         [global::System.Obsolete("This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
-        public RaftVoterEndpoint(IJVMBridgeBaseInitializer initializer) : base(initializer) { }
+        public ClientMetricsResourceListing(IJVMBridgeBaseInitializer initializer) : base(initializer) { }
 
         private static readonly global::System.Exception _LocalBridgeClazzException = null;
         private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
@@ -59,19 +60,17 @@ namespace Org.Apache.Kafka.Clients.Admin
     }
     #endregion
 
-    #region RaftVoterEndpoint implementation
-    public partial class RaftVoterEndpoint
+    #region ClientMetricsResourceListing implementation
+    public partial class ClientMetricsResourceListing
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.0/org/apache/kafka/clients/admin/RaftVoterEndpoint.html#%3Cinit%3E(java.lang.String,java.lang.String,int)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.0/org/apache/kafka/clients/admin/ClientMetricsResourceListing.html#%3Cinit%3E(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
-        /// <param name="arg1"><see cref="Java.Lang.String"/></param>
-        /// <param name="arg2"><see cref="int"/></param>
-        public RaftVoterEndpoint(Java.Lang.String arg0, Java.Lang.String arg1, int arg2) : base(JVMBridgeBase.InitializerInstance)
+        public ClientMetricsResourceListing(Java.Lang.String arg0) : base(JVMBridgeBase.InitializerInstance)
         {
-            InvokeInitializer(arg0, arg1, arg2);
+            InvokeInitializer(arg0);
         }
 
         #endregion
@@ -90,34 +89,9 @@ namespace Org.Apache.Kafka.Clients.Admin
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.0/org/apache/kafka/clients/admin/RaftVoterEndpoint.html#port()"/>
-        /// </summary>
-        /// <returns><see cref="int"/></returns>
-        public int Port()
-        {
-            return IExecuteWithSignature<int>("port", "()I");
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.0/org/apache/kafka/clients/admin/RaftVoterEndpoint.html#host()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.0/org/apache/kafka/clients/admin/ClientMetricsResourceListing.html#name()"/>
         /// </summary>
         /// <returns><see cref="Java.Lang.String"/></returns>
-        public Java.Lang.String Host()
-        {
-            return IExecuteWithSignature<Java.Lang.String>("host", "()Ljava/lang/String;");
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.0/org/apache/kafka/clients/admin/RaftVoterEndpoint.html#listener()"/>
-        /// </summary>
-        /// <returns><see cref="Java.Lang.String"/></returns>
-        public Java.Lang.String Listener()
-        {
-            return IExecuteWithSignature<Java.Lang.String>("listener", "()Ljava/lang/String;");
-        }
-        /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.0/org/apache/kafka/clients/admin/RaftVoterEndpoint.html#name()"/>
-        /// </summary>
-        /// <returns><see cref="Java.Lang.String"/></returns>
-        [global::System.Obsolete()]
         public Java.Lang.String Name()
         {
             return IExecuteWithSignature<Java.Lang.String>("name", "()Ljava/lang/String;");

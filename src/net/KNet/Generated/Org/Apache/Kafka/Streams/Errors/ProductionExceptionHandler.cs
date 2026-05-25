@@ -55,6 +55,41 @@ namespace Org.Apache.Kafka.Streams.Errors
         public override bool IsBridgeStatic => false;
 
         // TODO: complete the class
+        #region ProductionExceptionHandlerResponse declaration
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/errors/ProductionExceptionHandler.ProductionExceptionHandlerResponse.html"/>
+        /// </summary>
+        [global::System.Obsolete()]
+        public partial class ProductionExceptionHandlerResponse : Java.Lang.Enum<Org.Apache.Kafka.Streams.Errors.ProductionExceptionHandler.ProductionExceptionHandlerResponse>
+        {
+            const string _bridgeClassName = "org.apache.kafka.streams.errors.ProductionExceptionHandler$ProductionExceptionHandlerResponse";
+
+            /// <summary>
+            /// Initializer used internally by JCOBridge. Do not use directly.
+            /// </summary>
+            [global::System.Obsolete("This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
+            public ProductionExceptionHandlerResponse(IJVMBridgeBaseInitializer initializer) : base(initializer) { }
+
+            private static readonly global::System.Exception _LocalBridgeClazzException = null;
+            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
+            private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw _LocalBridgeClazzException ?? new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
+
+            /// <inheritdoc/>
+            public override string BridgeClassName => _bridgeClassName;
+            /// <inheritdoc/>
+            public override bool IsBridgeAbstract => false;
+            /// <inheritdoc/>
+            public override bool IsBridgeCloseable => false;
+            /// <inheritdoc/>
+            public override bool IsBridgeInterface => false;
+            /// <inheritdoc/>
+            public override bool IsBridgeStatic => true;
+
+            // TODO: complete the class
+
+        }
+        #endregion
+
         #region Response declaration
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/errors/ProductionExceptionHandler.Response.html"/>
@@ -200,6 +235,53 @@ namespace Org.Apache.Kafka.Streams.Errors
 
         #region Instance methods
         /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/errors/ProductionExceptionHandler.html#handle(org.apache.kafka.clients.producer.ProducerRecord,java.lang.Exception)"/>
+        /// </summary>
+        /// <param name="arg0"><see cref="Org.Apache.Kafka.Clients.Producer.ProducerRecord"/></param>
+        /// <param name="arg1"><see cref="Java.Lang.Exception"/></param>
+        /// <returns><see cref="Org.Apache.Kafka.Streams.Errors.ProductionExceptionHandler.ProductionExceptionHandlerResponse"/></returns>
+        [global::System.Obsolete()]
+        public Org.Apache.Kafka.Streams.Errors.ProductionExceptionHandler.ProductionExceptionHandlerResponse Handle(Org.Apache.Kafka.Clients.Producer.ProducerRecord<byte[], byte[]> arg0, MASES.JCOBridge.C2JBridge.JVMBridgeException arg1)
+        {
+            return IExecuteWithSignature<Org.Apache.Kafka.Streams.Errors.ProductionExceptionHandler.ProductionExceptionHandlerResponse>("handle", "(Lorg/apache/kafka/clients/producer/ProducerRecord;Ljava/lang/Exception;)Lorg/apache/kafka/streams/errors/ProductionExceptionHandler$ProductionExceptionHandlerResponse;", arg0, arg1);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/errors/ProductionExceptionHandler.html#handle(org.apache.kafka.streams.errors.ErrorHandlerContext,org.apache.kafka.clients.producer.ProducerRecord,java.lang.Exception)"/>
+        /// </summary>
+        /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Errors.ErrorHandlerContext"/></param>
+        /// <param name="arg1"><see cref="Org.Apache.Kafka.Clients.Producer.ProducerRecord"/></param>
+        /// <param name="arg2"><see cref="Java.Lang.Exception"/></param>
+        /// <returns><see cref="Org.Apache.Kafka.Streams.Errors.ProductionExceptionHandler.ProductionExceptionHandlerResponse"/></returns>
+        [global::System.Obsolete()]
+        public Org.Apache.Kafka.Streams.Errors.ProductionExceptionHandler.ProductionExceptionHandlerResponse Handle(Org.Apache.Kafka.Streams.Errors.ErrorHandlerContext arg0, Org.Apache.Kafka.Clients.Producer.ProducerRecord<byte[], byte[]> arg1, MASES.JCOBridge.C2JBridge.JVMBridgeException arg2)
+        {
+            return IExecuteWithSignature<Org.Apache.Kafka.Streams.Errors.ProductionExceptionHandler.ProductionExceptionHandlerResponse>("handle", "(Lorg/apache/kafka/streams/errors/ErrorHandlerContext;Lorg/apache/kafka/clients/producer/ProducerRecord;Ljava/lang/Exception;)Lorg/apache/kafka/streams/errors/ProductionExceptionHandler$ProductionExceptionHandlerResponse;", arg0, arg1, arg2);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/errors/ProductionExceptionHandler.html#handleSerializationException(org.apache.kafka.clients.producer.ProducerRecord,java.lang.Exception)"/>
+        /// </summary>
+        /// <param name="arg0"><see cref="Org.Apache.Kafka.Clients.Producer.ProducerRecord"/></param>
+        /// <param name="arg1"><see cref="Java.Lang.Exception"/></param>
+        /// <returns><see cref="Org.Apache.Kafka.Streams.Errors.ProductionExceptionHandler.ProductionExceptionHandlerResponse"/></returns>
+        [global::System.Obsolete()]
+        public Org.Apache.Kafka.Streams.Errors.ProductionExceptionHandler.ProductionExceptionHandlerResponse HandleSerializationException(Org.Apache.Kafka.Clients.Producer.ProducerRecord arg0, MASES.JCOBridge.C2JBridge.JVMBridgeException arg1)
+        {
+            return IExecuteWithSignature<Org.Apache.Kafka.Streams.Errors.ProductionExceptionHandler.ProductionExceptionHandlerResponse>("handleSerializationException", "(Lorg/apache/kafka/clients/producer/ProducerRecord;Ljava/lang/Exception;)Lorg/apache/kafka/streams/errors/ProductionExceptionHandler$ProductionExceptionHandlerResponse;", arg0, arg1);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/errors/ProductionExceptionHandler.html#handleSerializationException(org.apache.kafka.streams.errors.ErrorHandlerContext,org.apache.kafka.clients.producer.ProducerRecord,java.lang.Exception,org.apache.kafka.streams.errors.ProductionExceptionHandler.SerializationExceptionOrigin)"/>
+        /// </summary>
+        /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Errors.ErrorHandlerContext"/></param>
+        /// <param name="arg1"><see cref="Org.Apache.Kafka.Clients.Producer.ProducerRecord"/></param>
+        /// <param name="arg2"><see cref="Java.Lang.Exception"/></param>
+        /// <param name="arg3"><see cref="Org.Apache.Kafka.Streams.Errors.ProductionExceptionHandler.SerializationExceptionOrigin"/></param>
+        /// <returns><see cref="Org.Apache.Kafka.Streams.Errors.ProductionExceptionHandler.ProductionExceptionHandlerResponse"/></returns>
+        [global::System.Obsolete()]
+        public Org.Apache.Kafka.Streams.Errors.ProductionExceptionHandler.ProductionExceptionHandlerResponse HandleSerializationException(Org.Apache.Kafka.Streams.Errors.ErrorHandlerContext arg0, Org.Apache.Kafka.Clients.Producer.ProducerRecord arg1, MASES.JCOBridge.C2JBridge.JVMBridgeException arg2, Org.Apache.Kafka.Streams.Errors.ProductionExceptionHandler.SerializationExceptionOrigin arg3)
+        {
+            return IExecuteWithSignature<Org.Apache.Kafka.Streams.Errors.ProductionExceptionHandler.ProductionExceptionHandlerResponse>("handleSerializationException", "(Lorg/apache/kafka/streams/errors/ErrorHandlerContext;Lorg/apache/kafka/clients/producer/ProducerRecord;Ljava/lang/Exception;Lorg/apache/kafka/streams/errors/ProductionExceptionHandler$SerializationExceptionOrigin;)Lorg/apache/kafka/streams/errors/ProductionExceptionHandler$ProductionExceptionHandlerResponse;", arg0, arg1, arg2, arg3);
+        }
+        /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/errors/ProductionExceptionHandler.html#handleError(org.apache.kafka.streams.errors.ErrorHandlerContext,org.apache.kafka.clients.producer.ProducerRecord,java.lang.Exception)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Errors.ErrorHandlerContext"/></param>
@@ -226,6 +308,84 @@ namespace Org.Apache.Kafka.Streams.Errors
         #endregion
 
         #region Nested classes
+        #region ProductionExceptionHandlerResponse implementation
+        public partial class ProductionExceptionHandlerResponse
+        {
+            #region Constructors
+
+            #endregion
+
+            #region Class/Interface conversion operators
+
+            #endregion
+
+            #region Fields
+            /// <summary>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/errors/ProductionExceptionHandler.ProductionExceptionHandlerResponse.html#id"/>
+            /// </summary>
+            public int id { get { if (!_idReady) { _idContent = IGetField<int>("id"); _idReady = true; } return _idContent; } }
+            private int _idContent = default;
+            private bool _idReady = false; // this is used because in case of generics 
+            /// <summary>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/errors/ProductionExceptionHandler.ProductionExceptionHandlerResponse.html#name"/>
+            /// </summary>
+            public Java.Lang.String name { get { if (!_nameReady) { _nameContent = IGetField<Java.Lang.String>("name"); _nameReady = true; } return _nameContent; } }
+            private Java.Lang.String _nameContent = default;
+            private bool _nameReady = false; // this is used because in case of generics 
+            /// <summary>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/errors/ProductionExceptionHandler.ProductionExceptionHandlerResponse.html#CONTINUE"/>
+            /// </summary>
+            public static Org.Apache.Kafka.Streams.Errors.ProductionExceptionHandler.ProductionExceptionHandlerResponse CONTINUE { get { if (!_CONTINUEReady) { _CONTINUEContent = SGetField<Org.Apache.Kafka.Streams.Errors.ProductionExceptionHandler.ProductionExceptionHandlerResponse>(LocalBridgeClazz, "CONTINUE"); _CONTINUEReady = true; } return _CONTINUEContent; } }
+            private static Org.Apache.Kafka.Streams.Errors.ProductionExceptionHandler.ProductionExceptionHandlerResponse _CONTINUEContent = default;
+            private static bool _CONTINUEReady = false; // this is used because in case of generics 
+            /// <summary>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/errors/ProductionExceptionHandler.ProductionExceptionHandlerResponse.html#FAIL"/>
+            /// </summary>
+            public static Org.Apache.Kafka.Streams.Errors.ProductionExceptionHandler.ProductionExceptionHandlerResponse FAIL { get { if (!_FAILReady) { _FAILContent = SGetField<Org.Apache.Kafka.Streams.Errors.ProductionExceptionHandler.ProductionExceptionHandlerResponse>(LocalBridgeClazz, "FAIL"); _FAILReady = true; } return _FAILContent; } }
+            private static Org.Apache.Kafka.Streams.Errors.ProductionExceptionHandler.ProductionExceptionHandlerResponse _FAILContent = default;
+            private static bool _FAILReady = false; // this is used because in case of generics 
+            /// <summary>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/errors/ProductionExceptionHandler.ProductionExceptionHandlerResponse.html#RETRY"/>
+            /// </summary>
+            public static Org.Apache.Kafka.Streams.Errors.ProductionExceptionHandler.ProductionExceptionHandlerResponse RETRY { get { if (!_RETRYReady) { _RETRYContent = SGetField<Org.Apache.Kafka.Streams.Errors.ProductionExceptionHandler.ProductionExceptionHandlerResponse>(LocalBridgeClazz, "RETRY"); _RETRYReady = true; } return _RETRYContent; } }
+            private static Org.Apache.Kafka.Streams.Errors.ProductionExceptionHandler.ProductionExceptionHandlerResponse _RETRYContent = default;
+            private static bool _RETRYReady = false; // this is used because in case of generics 
+
+            #endregion
+
+            #region Static methods
+            /// <summary>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/errors/ProductionExceptionHandler.ProductionExceptionHandlerResponse.html#valueOf(java.lang.String)"/>
+            /// </summary>
+            /// <param name="arg0"><see cref="Java.Lang.String"/></param>
+            /// <returns><see cref="Org.Apache.Kafka.Streams.Errors.ProductionExceptionHandler.ProductionExceptionHandlerResponse"/></returns>
+            public static Org.Apache.Kafka.Streams.Errors.ProductionExceptionHandler.ProductionExceptionHandlerResponse ValueOf(Java.Lang.String arg0)
+            {
+                return SExecuteWithSignature<Org.Apache.Kafka.Streams.Errors.ProductionExceptionHandler.ProductionExceptionHandlerResponse>(LocalBridgeClazz, "valueOf", "(Ljava/lang/String;)Lorg/apache/kafka/streams/errors/ProductionExceptionHandler$ProductionExceptionHandlerResponse;", arg0);
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/errors/ProductionExceptionHandler.ProductionExceptionHandlerResponse.html#values()"/>
+            /// </summary>
+            /// <returns><see cref="Org.Apache.Kafka.Streams.Errors.ProductionExceptionHandler.ProductionExceptionHandlerResponse"/></returns>
+            public static Org.Apache.Kafka.Streams.Errors.ProductionExceptionHandler.ProductionExceptionHandlerResponse[] Values()
+            {
+                return SExecuteWithSignatureArray<Org.Apache.Kafka.Streams.Errors.ProductionExceptionHandler.ProductionExceptionHandlerResponse>(LocalBridgeClazz, "values", "()[Lorg/apache/kafka/streams/errors/ProductionExceptionHandler$ProductionExceptionHandlerResponse;");
+            }
+
+            #endregion
+
+            #region Instance methods
+
+            #endregion
+
+            #region Nested classes
+
+            #endregion
+
+            // TODO: complete the class
+        }
+        #endregion
+
         #region Response implementation
         public partial class Response
         {

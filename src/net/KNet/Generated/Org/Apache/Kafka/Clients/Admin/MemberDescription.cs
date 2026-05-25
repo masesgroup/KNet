@@ -64,6 +64,61 @@ namespace Org.Apache.Kafka.Clients.Admin
     {
         #region Constructors
         /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.0/org/apache/kafka/clients/admin/MemberDescription.html#%3Cinit%3E(java.lang.String,java.lang.String,java.lang.String,org.apache.kafka.clients.admin.MemberAssignment)"/>
+        /// </summary>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
+        /// <param name="arg1"><see cref="Java.Lang.String"/></param>
+        /// <param name="arg2"><see cref="Java.Lang.String"/></param>
+        /// <param name="arg3"><see cref="Org.Apache.Kafka.Clients.Admin.MemberAssignment"/></param>
+        [global::System.Obsolete()]
+        public MemberDescription(Java.Lang.String arg0, Java.Lang.String arg1, Java.Lang.String arg2, Org.Apache.Kafka.Clients.Admin.MemberAssignment arg3) : base(JVMBridgeBase.InitializerInstance)
+        {
+            InvokeInitializer(arg0, arg1, arg2, arg3);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.0/org/apache/kafka/clients/admin/MemberDescription.html#%3Cinit%3E(java.lang.String,java.util.Optional,java.lang.String,java.lang.String,org.apache.kafka.clients.admin.MemberAssignment,java.util.Optional,java.util.Optional,java.util.Optional)"/>
+        /// </summary>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
+        /// <param name="arg1"><see cref="Java.Util.Optional"/></param>
+        /// <param name="arg2"><see cref="Java.Lang.String"/></param>
+        /// <param name="arg3"><see cref="Java.Lang.String"/></param>
+        /// <param name="arg4"><see cref="Org.Apache.Kafka.Clients.Admin.MemberAssignment"/></param>
+        /// <param name="arg5"><see cref="Java.Util.Optional"/></param>
+        /// <param name="arg6"><see cref="Java.Util.Optional"/></param>
+        /// <param name="arg7"><see cref="Java.Util.Optional"/></param>
+        [global::System.Obsolete()]
+        public MemberDescription(Java.Lang.String arg0, Java.Util.Optional<Java.Lang.String> arg1, Java.Lang.String arg2, Java.Lang.String arg3, Org.Apache.Kafka.Clients.Admin.MemberAssignment arg4, Java.Util.Optional<Org.Apache.Kafka.Clients.Admin.MemberAssignment> arg5, Java.Util.Optional<Java.Lang.Integer> arg6, Java.Util.Optional<Java.Lang.Boolean> arg7) : base(JVMBridgeBase.InitializerInstance)
+        {
+            InvokeInitializer(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.0/org/apache/kafka/clients/admin/MemberDescription.html#%3Cinit%3E(java.lang.String,java.util.Optional,java.lang.String,java.lang.String,org.apache.kafka.clients.admin.MemberAssignment,java.util.Optional)"/>
+        /// </summary>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
+        /// <param name="arg1"><see cref="Java.Util.Optional"/></param>
+        /// <param name="arg2"><see cref="Java.Lang.String"/></param>
+        /// <param name="arg3"><see cref="Java.Lang.String"/></param>
+        /// <param name="arg4"><see cref="Org.Apache.Kafka.Clients.Admin.MemberAssignment"/></param>
+        /// <param name="arg5"><see cref="Java.Util.Optional"/></param>
+        [global::System.Obsolete()]
+        public MemberDescription(Java.Lang.String arg0, Java.Util.Optional<Java.Lang.String> arg1, Java.Lang.String arg2, Java.Lang.String arg3, Org.Apache.Kafka.Clients.Admin.MemberAssignment arg4, Java.Util.Optional<Org.Apache.Kafka.Clients.Admin.MemberAssignment> arg5) : base(JVMBridgeBase.InitializerInstance)
+        {
+            InvokeInitializer(arg0, arg1, arg2, arg3, arg4, arg5);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.0/org/apache/kafka/clients/admin/MemberDescription.html#%3Cinit%3E(java.lang.String,java.util.Optional,java.lang.String,java.lang.String,org.apache.kafka.clients.admin.MemberAssignment)"/>
+        /// </summary>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
+        /// <param name="arg1"><see cref="Java.Util.Optional"/></param>
+        /// <param name="arg2"><see cref="Java.Lang.String"/></param>
+        /// <param name="arg3"><see cref="Java.Lang.String"/></param>
+        /// <param name="arg4"><see cref="Org.Apache.Kafka.Clients.Admin.MemberAssignment"/></param>
+        [global::System.Obsolete()]
+        public MemberDescription(Java.Lang.String arg0, Java.Util.Optional<Java.Lang.String> arg1, Java.Lang.String arg2, Java.Lang.String arg3, Org.Apache.Kafka.Clients.Admin.MemberAssignment arg4) : base(JVMBridgeBase.InitializerInstance)
+        {
+            InvokeInitializer(arg0, arg1, arg2, arg3, arg4);
+        }
+        /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.0/org/apache/kafka/clients/admin/MemberDescription.html#%3Cinit%3E(java.lang.String,java.util.Optional,java.util.Optional,java.lang.String,java.lang.String,org.apache.kafka.clients.admin.MemberAssignment,java.util.Optional,java.util.Optional,java.util.Optional)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>

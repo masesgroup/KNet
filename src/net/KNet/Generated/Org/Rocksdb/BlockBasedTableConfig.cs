@@ -119,6 +119,15 @@ namespace Org.Rocksdb
             return IExecuteWithSignature<bool>("enableIndexCompression", "()Z");
         }
         /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/BlockBasedTableConfig.html#hashIndexAllowCollision()"/>
+        /// </summary>
+        /// <returns><see cref="bool"/></returns>
+        [global::System.Obsolete()]
+        public bool HashIndexAllowCollision()
+        {
+            return IExecuteWithSignature<bool>("hashIndexAllowCollision", "()Z");
+        }
+        /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/BlockBasedTableConfig.html#noBlockCache()"/>
         /// </summary>
         /// <returns><see cref="bool"/></returns>
@@ -207,6 +216,15 @@ namespace Org.Rocksdb
             return IExecuteWithSignature<int>("blockSizeDeviation", "()I");
         }
         /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/BlockBasedTableConfig.html#cacheNumShardBits()"/>
+        /// </summary>
+        /// <returns><see cref="int"/></returns>
+        [global::System.Obsolete()]
+        public int CacheNumShardBits()
+        {
+            return IExecuteWithSignature<int>("cacheNumShardBits", "()I");
+        }
+        /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/BlockBasedTableConfig.html#formatVersion()"/>
         /// </summary>
         /// <returns><see cref="int"/></returns>
@@ -229,6 +247,15 @@ namespace Org.Rocksdb
         public int ReadAmpBytesPerBit()
         {
             return IExecuteWithSignature<int>("readAmpBytesPerBit", "()I");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/BlockBasedTableConfig.html#blockCacheSize()"/>
+        /// </summary>
+        /// <returns><see cref="long"/></returns>
+        [global::System.Obsolete()]
+        public long BlockCacheSize()
+        {
+            return IExecuteWithSignature<long>("blockCacheSize", "()J");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/BlockBasedTableConfig.html#blockSize()"/>
@@ -263,6 +290,16 @@ namespace Org.Rocksdb
         public Org.Rocksdb.BlockBasedTableConfig SetBlockCache(Org.Rocksdb.Cache arg0)
         {
             return IExecuteWithSignature<Org.Rocksdb.BlockBasedTableConfig>("setBlockCache", "(Lorg/rocksdb/Cache;)Lorg/rocksdb/BlockBasedTableConfig;", arg0);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/BlockBasedTableConfig.html#setBlockCacheSize(long)"/>
+        /// </summary>
+        /// <param name="arg0"><see cref="long"/></param>
+        /// <returns><see cref="Org.Rocksdb.BlockBasedTableConfig"/></returns>
+        [global::System.Obsolete()]
+        public Org.Rocksdb.BlockBasedTableConfig SetBlockCacheSize(long arg0)
+        {
+            return IExecuteWithSignature<Org.Rocksdb.BlockBasedTableConfig>("setBlockCacheSize", "(J)Lorg/rocksdb/BlockBasedTableConfig;", arg0);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/BlockBasedTableConfig.html#setBlockRestartInterval(int)"/>
@@ -310,6 +347,16 @@ namespace Org.Rocksdb
             return IExecuteWithSignature<Org.Rocksdb.BlockBasedTableConfig>("setCacheIndexAndFilterBlocksWithHighPriority", "(Z)Lorg/rocksdb/BlockBasedTableConfig;", arg0);
         }
         /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/BlockBasedTableConfig.html#setCacheNumShardBits(int)"/>
+        /// </summary>
+        /// <param name="arg0"><see cref="int"/></param>
+        /// <returns><see cref="Org.Rocksdb.BlockBasedTableConfig"/></returns>
+        [global::System.Obsolete()]
+        public Org.Rocksdb.BlockBasedTableConfig SetCacheNumShardBits(int arg0)
+        {
+            return IExecuteWithSignature<Org.Rocksdb.BlockBasedTableConfig>("setCacheNumShardBits", "(I)Lorg/rocksdb/BlockBasedTableConfig;", arg0);
+        }
+        /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/BlockBasedTableConfig.html#setChecksumType(org.rocksdb.ChecksumType)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Rocksdb.ChecksumType"/></param>
@@ -346,6 +393,16 @@ namespace Org.Rocksdb
             return IExecuteWithSignature<Org.Rocksdb.BlockBasedTableConfig>("setEnableIndexCompression", "(Z)Lorg/rocksdb/BlockBasedTableConfig;", arg0);
         }
         /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/BlockBasedTableConfig.html#setFilter(org.rocksdb.Filter)"/>
+        /// </summary>
+        /// <param name="arg0"><see cref="Org.Rocksdb.Filter"/></param>
+        /// <returns><see cref="Org.Rocksdb.BlockBasedTableConfig"/></returns>
+        [global::System.Obsolete()]
+        public Org.Rocksdb.BlockBasedTableConfig SetFilter(Org.Rocksdb.Filter arg0)
+        {
+            return IExecuteWithSignature<Org.Rocksdb.BlockBasedTableConfig>("setFilter", "(Lorg/rocksdb/Filter;)Lorg/rocksdb/BlockBasedTableConfig;", arg0);
+        }
+        /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/BlockBasedTableConfig.html#setFilterPolicy(org.rocksdb.Filter)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Rocksdb.Filter"/></param>
@@ -362,6 +419,16 @@ namespace Org.Rocksdb
         public Org.Rocksdb.BlockBasedTableConfig SetFormatVersion(int arg0)
         {
             return IExecuteWithSignature<Org.Rocksdb.BlockBasedTableConfig>("setFormatVersion", "(I)Lorg/rocksdb/BlockBasedTableConfig;", arg0);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/BlockBasedTableConfig.html#setHashIndexAllowCollision(boolean)"/>
+        /// </summary>
+        /// <param name="arg0"><see cref="bool"/></param>
+        /// <returns><see cref="Org.Rocksdb.BlockBasedTableConfig"/></returns>
+        [global::System.Obsolete()]
+        public Org.Rocksdb.BlockBasedTableConfig SetHashIndexAllowCollision(bool arg0)
+        {
+            return IExecuteWithSignature<Org.Rocksdb.BlockBasedTableConfig>("setHashIndexAllowCollision", "(Z)Lorg/rocksdb/BlockBasedTableConfig;", arg0);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/BlockBasedTableConfig.html#setIndexBlockRestartInterval(int)"/>
