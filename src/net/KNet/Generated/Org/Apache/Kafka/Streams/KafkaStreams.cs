@@ -388,6 +388,25 @@ namespace Org.Apache.Kafka.Streams
             return IExecuteWithSignature<bool>("isPaused", "()Z");
         }
         /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/KafkaStreams.html#allMetadata--"/>
+        /// </summary>
+        /// <returns><see cref="Java.Util.Collection"/></returns>
+        [global::System.Obsolete()]
+        public Java.Util.Collection<Org.Apache.Kafka.Streams.State.StreamsMetadata> AllMetadata()
+        {
+            return IExecuteWithSignature<Java.Util.Collection<Org.Apache.Kafka.Streams.State.StreamsMetadata>>("allMetadata", "()Ljava/util/Collection;");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/KafkaStreams.html#allMetadataForStore-java.lang.String-"/>
+        /// </summary>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
+        /// <returns><see cref="Java.Util.Collection"/></returns>
+        [global::System.Obsolete()]
+        public Java.Util.Collection<Org.Apache.Kafka.Streams.State.StreamsMetadata> AllMetadataForStore(Java.Lang.String arg0)
+        {
+            return IExecuteWithSignature<Java.Util.Collection<Org.Apache.Kafka.Streams.State.StreamsMetadata>>("allMetadataForStore", "(Ljava/lang/String;)Ljava/util/Collection;", arg0);
+        }
+        /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/KafkaStreams.html#metadataForAllStreamsClients--"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Collection"/></returns>
@@ -445,6 +464,15 @@ namespace Org.Apache.Kafka.Streams
         public Java.Util.Optional<Java.Lang.String> RemoveStreamThread(Java.Time.Duration arg0)
         {
             return IExecuteWithSignature<Java.Util.Optional<Java.Lang.String>>("removeStreamThread", "(Ljava/time/Duration;)Ljava/util/Optional;", arg0);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/KafkaStreams.html#localThreadsMetadata--"/>
+        /// </summary>
+        /// <returns><see cref="Java.Util.Set"/></returns>
+        [global::System.Obsolete()]
+        public Java.Util.Set<Org.Apache.Kafka.Streams.Processor.ThreadMetadata> LocalThreadsMetadata()
+        {
+            return IExecuteWithSignature<Java.Util.Set<Org.Apache.Kafka.Streams.Processor.ThreadMetadata>>("localThreadsMetadata", "()Ljava/util/Set;");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/KafkaStreams.html#metadataForLocalThreads--"/>
@@ -551,6 +579,15 @@ namespace Org.Apache.Kafka.Streams
         public void SetStateListener(Org.Apache.Kafka.Streams.KafkaStreams.StateListener arg0)
         {
             IExecuteWithSignature("setStateListener", "(Lorg/apache/kafka/streams/KafkaStreams$StateListener;)V", arg0);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/KafkaStreams.html#setUncaughtExceptionHandler-java.lang.Thread.UncaughtExceptionHandler-"/>
+        /// </summary>
+        /// <param name="arg0"><see cref="Java.Lang.Thread.UncaughtExceptionHandler"/></param>
+        [global::System.Obsolete()]
+        public void SetUncaughtExceptionHandler(Java.Lang.Thread.UncaughtExceptionHandler arg0)
+        {
+            IExecuteWithSignature("setUncaughtExceptionHandler", "(Ljava/lang/Thread$UncaughtExceptionHandler;)V", arg0);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/KafkaStreams.html#setUncaughtExceptionHandler-org.apache.kafka.streams.errors.StreamsUncaughtExceptionHandler-"/>

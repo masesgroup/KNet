@@ -143,6 +143,16 @@ namespace Org.Apache.Kafka.Streams.Processor
             IExecuteWithSignature("flush", "()V");
         }
         /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/processor/StateStore.html#init-org.apache.kafka.streams.processor.ProcessorContext-org.apache.kafka.streams.processor.StateStore-"/>
+        /// </summary>
+        /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Processor.ProcessorContext"/></param>
+        /// <param name="arg1"><see cref="Org.Apache.Kafka.Streams.Processor.StateStore"/></param>
+        [global::System.Obsolete()]
+        public void Init(Org.Apache.Kafka.Streams.Processor.ProcessorContext arg0, Org.Apache.Kafka.Streams.Processor.StateStore arg1)
+        {
+            IExecuteWithSignature("init", "(Lorg/apache/kafka/streams/processor/ProcessorContext;Lorg/apache/kafka/streams/processor/StateStore;)V", arg0, arg1);
+        }
+        /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/processor/StateStore.html#query-org.apache.kafka.streams.query.Query-org.apache.kafka.streams.query.PositionBound-org.apache.kafka.streams.query.QueryConfig-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Query.Query"/></param>

@@ -88,6 +88,15 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<Java.Util.Map<Java.Lang.String, Org.Apache.Kafka.Common.KafkaFuture<Java.Lang.Void>>>("topicNameValues", "()Ljava/util/Map;");
         }
         /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/admin/DeleteTopicsResult.html#values--"/>
+        /// </summary>
+        /// <returns><see cref="Java.Util.Map"/></returns>
+        [global::System.Obsolete()]
+        public Java.Util.Map<Java.Lang.String, Org.Apache.Kafka.Common.KafkaFuture<Java.Lang.Void>> Values()
+        {
+            return IExecuteWithSignature<Java.Util.Map<Java.Lang.String, Org.Apache.Kafka.Common.KafkaFuture<Java.Lang.Void>>>("values", "()Ljava/util/Map;");
+        }
+        /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/admin/DeleteTopicsResult.html#topicIdValues--"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Map"/></returns>

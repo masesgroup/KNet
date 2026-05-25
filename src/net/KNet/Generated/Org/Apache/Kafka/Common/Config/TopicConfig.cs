@@ -271,6 +271,20 @@ namespace Org.Apache.Kafka.Common.Config
         private static Java.Lang.String _MESSAGE_DOWNCONVERSION_ENABLE_DOCContent = default;
         private static bool _MESSAGE_DOWNCONVERSION_ENABLE_DOCReady = false; // this is used because in case of generics 
         /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/common/config/TopicConfig.html#MESSAGE_FORMAT_VERSION_CONFIG"/>
+        /// </summary>
+        [global::System.Obsolete()]
+        public static Java.Lang.String MESSAGE_FORMAT_VERSION_CONFIG { get { if (!_MESSAGE_FORMAT_VERSION_CONFIGReady) { _MESSAGE_FORMAT_VERSION_CONFIGContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "MESSAGE_FORMAT_VERSION_CONFIG"); _MESSAGE_FORMAT_VERSION_CONFIGReady = true; } return _MESSAGE_FORMAT_VERSION_CONFIGContent; } }
+        private static Java.Lang.String _MESSAGE_FORMAT_VERSION_CONFIGContent = default;
+        private static bool _MESSAGE_FORMAT_VERSION_CONFIGReady = false; // this is used because in case of generics 
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/common/config/TopicConfig.html#MESSAGE_FORMAT_VERSION_DOC"/>
+        /// </summary>
+        [global::System.Obsolete()]
+        public static Java.Lang.String MESSAGE_FORMAT_VERSION_DOC { get { if (!_MESSAGE_FORMAT_VERSION_DOCReady) { _MESSAGE_FORMAT_VERSION_DOCContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "MESSAGE_FORMAT_VERSION_DOC"); _MESSAGE_FORMAT_VERSION_DOCReady = true; } return _MESSAGE_FORMAT_VERSION_DOCContent; } }
+        private static Java.Lang.String _MESSAGE_FORMAT_VERSION_DOCContent = default;
+        private static bool _MESSAGE_FORMAT_VERSION_DOCReady = false; // this is used because in case of generics 
+        /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/common/config/TopicConfig.html#MESSAGE_TIMESTAMP_AFTER_MAX_MS_CONFIG"/>
         /// </summary>
         public static Java.Lang.String MESSAGE_TIMESTAMP_AFTER_MAX_MS_CONFIG { get { if (!_MESSAGE_TIMESTAMP_AFTER_MAX_MS_CONFIGReady) { _MESSAGE_TIMESTAMP_AFTER_MAX_MS_CONFIGContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "MESSAGE_TIMESTAMP_AFTER_MAX_MS_CONFIG"); _MESSAGE_TIMESTAMP_AFTER_MAX_MS_CONFIGReady = true; } return _MESSAGE_TIMESTAMP_AFTER_MAX_MS_CONFIGContent; } }
@@ -294,6 +308,20 @@ namespace Org.Apache.Kafka.Common.Config
         public static Java.Lang.String MESSAGE_TIMESTAMP_BEFORE_MAX_MS_DOC { get { if (!_MESSAGE_TIMESTAMP_BEFORE_MAX_MS_DOCReady) { _MESSAGE_TIMESTAMP_BEFORE_MAX_MS_DOCContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "MESSAGE_TIMESTAMP_BEFORE_MAX_MS_DOC"); _MESSAGE_TIMESTAMP_BEFORE_MAX_MS_DOCReady = true; } return _MESSAGE_TIMESTAMP_BEFORE_MAX_MS_DOCContent; } }
         private static Java.Lang.String _MESSAGE_TIMESTAMP_BEFORE_MAX_MS_DOCContent = default;
         private static bool _MESSAGE_TIMESTAMP_BEFORE_MAX_MS_DOCReady = false; // this is used because in case of generics 
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/common/config/TopicConfig.html#MESSAGE_TIMESTAMP_DIFFERENCE_MAX_MS_CONFIG"/>
+        /// </summary>
+        [global::System.Obsolete()]
+        public static Java.Lang.String MESSAGE_TIMESTAMP_DIFFERENCE_MAX_MS_CONFIG { get { if (!_MESSAGE_TIMESTAMP_DIFFERENCE_MAX_MS_CONFIGReady) { _MESSAGE_TIMESTAMP_DIFFERENCE_MAX_MS_CONFIGContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "MESSAGE_TIMESTAMP_DIFFERENCE_MAX_MS_CONFIG"); _MESSAGE_TIMESTAMP_DIFFERENCE_MAX_MS_CONFIGReady = true; } return _MESSAGE_TIMESTAMP_DIFFERENCE_MAX_MS_CONFIGContent; } }
+        private static Java.Lang.String _MESSAGE_TIMESTAMP_DIFFERENCE_MAX_MS_CONFIGContent = default;
+        private static bool _MESSAGE_TIMESTAMP_DIFFERENCE_MAX_MS_CONFIGReady = false; // this is used because in case of generics 
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/common/config/TopicConfig.html#MESSAGE_TIMESTAMP_DIFFERENCE_MAX_MS_DOC"/>
+        /// </summary>
+        [global::System.Obsolete()]
+        public static Java.Lang.String MESSAGE_TIMESTAMP_DIFFERENCE_MAX_MS_DOC { get { if (!_MESSAGE_TIMESTAMP_DIFFERENCE_MAX_MS_DOCReady) { _MESSAGE_TIMESTAMP_DIFFERENCE_MAX_MS_DOCContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "MESSAGE_TIMESTAMP_DIFFERENCE_MAX_MS_DOC"); _MESSAGE_TIMESTAMP_DIFFERENCE_MAX_MS_DOCReady = true; } return _MESSAGE_TIMESTAMP_DIFFERENCE_MAX_MS_DOCContent; } }
+        private static Java.Lang.String _MESSAGE_TIMESTAMP_DIFFERENCE_MAX_MS_DOCContent = default;
+        private static bool _MESSAGE_TIMESTAMP_DIFFERENCE_MAX_MS_DOCReady = false; // this is used because in case of generics 
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/common/config/TopicConfig.html#MESSAGE_TIMESTAMP_TYPE_CONFIG"/>
         /// </summary>

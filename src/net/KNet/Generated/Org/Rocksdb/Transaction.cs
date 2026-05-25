@@ -323,6 +323,56 @@ namespace Org.Rocksdb
             return IExecuteWithSignatureArray<byte>("getForUpdate", "(Lorg/rocksdb/ReadOptions;Lorg/rocksdb/ColumnFamilyHandle;[BZ)[B", arg0, arg1, arg2, arg3);
         }
         /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/Transaction.html#multiGet-org.rocksdb.ReadOptions-byte[][]-"/>
+        /// </summary>
+        /// <param name="arg0"><see cref="Org.Rocksdb.ReadOptions"/></param>
+        /// <param name="arg1"><see cref="byte"/></param>
+        /// <returns><see cref="byte"/></returns>
+        /// <exception cref="Org.Rocksdb.RocksDBException"/>
+        [global::System.Obsolete()]
+        public byte[] MultiGet(Org.Rocksdb.ReadOptions arg0, byte[][] arg1)
+        {
+            return IExecuteWithSignatureArray<byte>("multiGet", "(Lorg/rocksdb/ReadOptions;[[B)[[B", arg0, arg1);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/Transaction.html#multiGet-org.rocksdb.ReadOptions-java.util.List-byte[][]-"/>
+        /// </summary>
+        /// <param name="arg0"><see cref="Org.Rocksdb.ReadOptions"/></param>
+        /// <param name="arg1"><see cref="Java.Util.List"/></param>
+        /// <param name="arg2"><see cref="byte"/></param>
+        /// <returns><see cref="byte"/></returns>
+        /// <exception cref="Org.Rocksdb.RocksDBException"/>
+        [global::System.Obsolete()]
+        public byte[] MultiGet(Org.Rocksdb.ReadOptions arg0, Java.Util.List<Org.Rocksdb.ColumnFamilyHandle> arg1, byte[][] arg2)
+        {
+            return IExecuteWithSignatureArray<byte>("multiGet", "(Lorg/rocksdb/ReadOptions;Ljava/util/List;[[B)[[B", arg0, arg1, arg2);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/Transaction.html#multiGetForUpdate-org.rocksdb.ReadOptions-byte[][]-"/>
+        /// </summary>
+        /// <param name="arg0"><see cref="Org.Rocksdb.ReadOptions"/></param>
+        /// <param name="arg1"><see cref="byte"/></param>
+        /// <returns><see cref="byte"/></returns>
+        /// <exception cref="Org.Rocksdb.RocksDBException"/>
+        [global::System.Obsolete()]
+        public byte[] MultiGetForUpdate(Org.Rocksdb.ReadOptions arg0, byte[][] arg1)
+        {
+            return IExecuteWithSignatureArray<byte>("multiGetForUpdate", "(Lorg/rocksdb/ReadOptions;[[B)[[B", arg0, arg1);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/Transaction.html#multiGetForUpdate-org.rocksdb.ReadOptions-java.util.List-byte[][]-"/>
+        /// </summary>
+        /// <param name="arg0"><see cref="Org.Rocksdb.ReadOptions"/></param>
+        /// <param name="arg1"><see cref="Java.Util.List"/></param>
+        /// <param name="arg2"><see cref="byte"/></param>
+        /// <returns><see cref="byte"/></returns>
+        /// <exception cref="Org.Rocksdb.RocksDBException"/>
+        [global::System.Obsolete()]
+        public byte[] MultiGetForUpdate(Org.Rocksdb.ReadOptions arg0, Java.Util.List<Org.Rocksdb.ColumnFamilyHandle> arg1, byte[][] arg2)
+        {
+            return IExecuteWithSignatureArray<byte>("multiGetForUpdate", "(Lorg/rocksdb/ReadOptions;Ljava/util/List;[[B)[[B", arg0, arg1, arg2);
+        }
+        /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/Transaction.html#multiGetAsList-org.rocksdb.ReadOptions-java.util.List-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Rocksdb.ReadOptions"/></param>

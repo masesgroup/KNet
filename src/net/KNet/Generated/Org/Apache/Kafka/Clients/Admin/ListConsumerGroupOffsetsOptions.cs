@@ -95,6 +95,15 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<bool>("requireStable", "()Z");
         }
         /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/admin/ListConsumerGroupOffsetsOptions.html#topicPartitions--"/>
+        /// </summary>
+        /// <returns><see cref="Java.Util.List"/></returns>
+        [global::System.Obsolete()]
+        public Java.Util.List<Org.Apache.Kafka.Common.TopicPartition> TopicPartitions()
+        {
+            return IExecuteWithSignature<Java.Util.List<Org.Apache.Kafka.Common.TopicPartition>>("topicPartitions", "()Ljava/util/List;");
+        }
+        /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/admin/ListConsumerGroupOffsetsOptions.html#requireStable-boolean-"/>
         /// </summary>
         /// <param name="arg0"><see cref="bool"/></param>
@@ -102,6 +111,16 @@ namespace Org.Apache.Kafka.Clients.Admin
         public Org.Apache.Kafka.Clients.Admin.ListConsumerGroupOffsetsOptions RequireStable(bool arg0)
         {
             return IExecuteWithSignature<Org.Apache.Kafka.Clients.Admin.ListConsumerGroupOffsetsOptions>("requireStable", "(Z)Lorg/apache/kafka/clients/admin/ListConsumerGroupOffsetsOptions;", arg0);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/admin/ListConsumerGroupOffsetsOptions.html#topicPartitions-java.util.List-"/>
+        /// </summary>
+        /// <param name="arg0"><see cref="Java.Util.List"/></param>
+        /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.ListConsumerGroupOffsetsOptions"/></returns>
+        [global::System.Obsolete()]
+        public Org.Apache.Kafka.Clients.Admin.ListConsumerGroupOffsetsOptions TopicPartitions(Java.Util.List<Org.Apache.Kafka.Common.TopicPartition> arg0)
+        {
+            return IExecuteWithSignature<Org.Apache.Kafka.Clients.Admin.ListConsumerGroupOffsetsOptions>("topicPartitions", "(Ljava/util/List;)Lorg/apache/kafka/clients/admin/ListConsumerGroupOffsetsOptions;", arg0);
         }
 
         #endregion

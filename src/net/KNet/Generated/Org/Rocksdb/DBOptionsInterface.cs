@@ -378,6 +378,15 @@ namespace Org.Rocksdb
             return IExecuteWithSignature<bool>("writeDbidToManifest", "()Z");
         }
         /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/DBOptionsInterface.html#maxBackgroundFlushes--"/>
+        /// </summary>
+        /// <returns><see cref="int"/></returns>
+        [global::System.Obsolete()]
+        public int MaxBackgroundFlushes()
+        {
+            return IExecuteWithSignature<int>("maxBackgroundFlushes", "()I");
+        }
+        /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/DBOptionsInterface.html#maxBgerrorResumeCount--"/>
         /// </summary>
         /// <returns><see cref="int"/></returns>
@@ -956,6 +965,16 @@ namespace Org.Rocksdb
         public Org.Rocksdb.DBOptionsInterface SetManualWalFlush(bool arg0)
         {
             return IExecuteWithSignature<Org.Rocksdb.DBOptionsInterface>("setManualWalFlush", "(Z)Lorg/rocksdb/DBOptionsInterface;", arg0);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/DBOptionsInterface.html#setMaxBackgroundFlushes-int-"/>
+        /// </summary>
+        /// <param name="arg0"><see cref="int"/></param>
+        /// <returns><see cref="Org.Rocksdb.DBOptionsInterface"/></returns>
+        [global::System.Obsolete()]
+        public Org.Rocksdb.DBOptionsInterface SetMaxBackgroundFlushes(int arg0)
+        {
+            return IExecuteWithSignature<Org.Rocksdb.DBOptionsInterface>("setMaxBackgroundFlushes", "(I)Lorg/rocksdb/DBOptionsInterface;", arg0);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/DBOptionsInterface.html#setMaxBgErrorResumeCount-int-"/>
@@ -1562,6 +1581,15 @@ namespace Org.Rocksdb
             return IExecuteWithSignature<bool>("writeDbidToManifest", "()Z");
         }
         /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/DBOptionsInterface.html#maxBackgroundFlushes--"/>
+        /// </summary>
+        /// <returns><see cref="int"/></returns>
+        [global::System.Obsolete()]
+        public int MaxBackgroundFlushes()
+        {
+            return IExecuteWithSignature<int>("maxBackgroundFlushes", "()I");
+        }
+        /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/DBOptionsInterface.html#maxBgerrorResumeCount--"/>
         /// </summary>
         /// <returns><see cref="int"/></returns>
@@ -2140,6 +2168,16 @@ namespace Org.Rocksdb
         public T SetManualWalFlush(bool arg0)
         {
             return IExecuteWithSignature<T>("setManualWalFlush", "(Z)Lorg/rocksdb/DBOptionsInterface;", arg0);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/DBOptionsInterface.html#setMaxBackgroundFlushes-int-"/>
+        /// </summary>
+        /// <param name="arg0"><see cref="int"/></param>
+        /// <returns><typeparamref name="T"/></returns>
+        [global::System.Obsolete()]
+        public T SetMaxBackgroundFlushes(int arg0)
+        {
+            return IExecuteWithSignature<T>("setMaxBackgroundFlushes", "(I)Lorg/rocksdb/DBOptionsInterface;", arg0);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/DBOptionsInterface.html#setMaxBgErrorResumeCount-int-"/>

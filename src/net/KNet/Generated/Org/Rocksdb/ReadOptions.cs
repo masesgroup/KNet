@@ -136,6 +136,15 @@ namespace Org.Rocksdb
             return IExecuteWithSignature<bool>("ignoreRangeDeletions", "()Z");
         }
         /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/ReadOptions.html#managed--"/>
+        /// </summary>
+        /// <returns><see cref="bool"/></returns>
+        [global::System.Obsolete()]
+        public bool Managed()
+        {
+            return IExecuteWithSignature<bool>("managed", "()Z");
+        }
+        /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/ReadOptions.html#pinData--"/>
         /// </summary>
         /// <returns><see cref="bool"/></returns>
@@ -295,6 +304,16 @@ namespace Org.Rocksdb
         public Org.Rocksdb.ReadOptions SetIterStartTs(Org.Rocksdb.AbstractSlice<object> arg0)
         {
             return IExecuteWithSignature<Org.Rocksdb.ReadOptions>("setIterStartTs", "(Lorg/rocksdb/AbstractSlice;)Lorg/rocksdb/ReadOptions;", arg0);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/ReadOptions.html#setManaged-boolean-"/>
+        /// </summary>
+        /// <param name="arg0"><see cref="bool"/></param>
+        /// <returns><see cref="Org.Rocksdb.ReadOptions"/></returns>
+        [global::System.Obsolete()]
+        public Org.Rocksdb.ReadOptions SetManaged(bool arg0)
+        {
+            return IExecuteWithSignature<Org.Rocksdb.ReadOptions>("setManaged", "(Z)Lorg/rocksdb/ReadOptions;", arg0);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/ReadOptions.html#setMaxSkippableInternalKeys-long-"/>

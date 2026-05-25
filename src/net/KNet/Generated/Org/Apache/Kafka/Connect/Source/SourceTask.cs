@@ -169,6 +169,16 @@ namespace Org.Apache.Kafka.Connect.Source
             IExecuteWithSignature("commitRecord", "(Lorg/apache/kafka/connect/source/SourceRecord;Lorg/apache/kafka/clients/producer/RecordMetadata;)V", arg0, arg1);
         }
         /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.2/org/apache/kafka/connect/source/SourceTask.html#commitRecord-org.apache.kafka.connect.source.SourceRecord-"/>
+        /// </summary>
+        /// <param name="arg0"><see cref="Org.Apache.Kafka.Connect.Source.SourceRecord"/></param>
+        /// <exception cref="Java.Lang.InterruptedException"/>
+        [global::System.Obsolete()]
+        public void CommitRecord(Org.Apache.Kafka.Connect.Source.SourceRecord arg0)
+        {
+            IExecuteWithSignature("commitRecord", "(Lorg/apache/kafka/connect/source/SourceRecord;)V", arg0);
+        }
+        /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.2/org/apache/kafka/connect/source/SourceTask.html#initialize-org.apache.kafka.connect.source.SourceTaskContext-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Connect.Source.SourceTaskContext"/></param>

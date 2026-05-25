@@ -25,20 +25,21 @@ using MASES.JCOBridge.C2JBridge;
 
 namespace Org.Apache.Kafka.Common.Errors
 {
-    #region NotLeaderOrFollowerException declaration
+    #region NotLeaderForPartitionException declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/common/errors/NotLeaderOrFollowerException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/common/errors/NotLeaderForPartitionException.html"/>
     /// </summary>
-    public partial class NotLeaderOrFollowerException : Org.Apache.Kafka.Common.Errors.NotLeaderForPartitionException
+    [global::System.Obsolete()]
+    public partial class NotLeaderForPartitionException : Org.Apache.Kafka.Common.Errors.InvalidMetadataException
     {
         /// <inheritdoc cref="global::System.Exception()"/>
-        public NotLeaderOrFollowerException() { }
+        public NotLeaderForPartitionException() { }
         /// <inheritdoc cref="global::System.Exception(string)"/>
-        public NotLeaderOrFollowerException(string message) : base(message) { }
+        public NotLeaderForPartitionException(string message) : base(message) { }
         /// <inheritdoc cref="global::System.Exception(string, global::System.Exception)"/>
-        public NotLeaderOrFollowerException(string message, global::System.Exception innerException) : base(message, innerException) { }
+        public NotLeaderForPartitionException(string message, global::System.Exception innerException) : base(message, innerException) { }
 
-        const string _bridgeClassName = "org.apache.kafka.common.errors.NotLeaderOrFollowerException";
+        const string _bridgeClassName = "org.apache.kafka.common.errors.NotLeaderForPartitionException";
         /// <inheritdoc/>
         public override string BridgeClassName => _bridgeClassName;
 
@@ -47,8 +48,8 @@ namespace Org.Apache.Kafka.Common.Errors
     }
     #endregion
 
-    #region NotLeaderOrFollowerException implementation
-    public partial class NotLeaderOrFollowerException
+    #region NotLeaderForPartitionException implementation
+    public partial class NotLeaderForPartitionException
     {
         #region Constructors
 

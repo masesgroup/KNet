@@ -87,12 +87,31 @@ namespace Org.Apache.Kafka.Clients.Admin
 
         #region Instance methods
         /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/admin/UpdateFeaturesOptions.html#dryRun--"/>
+        /// </summary>
+        /// <returns><see cref="bool"/></returns>
+        [global::System.Obsolete()]
+        public bool DryRun()
+        {
+            return IExecuteWithSignature<bool>("dryRun", "()Z");
+        }
+        /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/admin/UpdateFeaturesOptions.html#validateOnly--"/>
         /// </summary>
         /// <returns><see cref="bool"/></returns>
         public bool ValidateOnly()
         {
             return IExecuteWithSignature<bool>("validateOnly", "()Z");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/admin/UpdateFeaturesOptions.html#dryRun-boolean-"/>
+        /// </summary>
+        /// <param name="arg0"><see cref="bool"/></param>
+        /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.UpdateFeaturesOptions"/></returns>
+        [global::System.Obsolete()]
+        public Org.Apache.Kafka.Clients.Admin.UpdateFeaturesOptions DryRun(bool arg0)
+        {
+            return IExecuteWithSignature<Org.Apache.Kafka.Clients.Admin.UpdateFeaturesOptions>("dryRun", "(Z)Lorg/apache/kafka/clients/admin/UpdateFeaturesOptions;", arg0);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/admin/UpdateFeaturesOptions.html#validateOnly-boolean-"/>

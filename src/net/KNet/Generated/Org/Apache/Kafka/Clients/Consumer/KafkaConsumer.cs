@@ -341,6 +341,37 @@ namespace Org.Apache.Kafka.Clients.Consumer
             return IExecuteWithSignature<Org.Apache.Kafka.Clients.Consumer.ConsumerRecords>("poll", "(Ljava/time/Duration;)Lorg/apache/kafka/clients/consumer/ConsumerRecords;", arg0);
         }
         /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/KafkaConsumer.html#poll-long-"/>
+        /// </summary>
+        /// <param name="arg0"><see cref="long"/></param>
+        /// <returns><see cref="Org.Apache.Kafka.Clients.Consumer.ConsumerRecords"/></returns>
+        [global::System.Obsolete()]
+        public Org.Apache.Kafka.Clients.Consumer.ConsumerRecords Poll(long arg0)
+        {
+            return IExecuteWithSignature<Org.Apache.Kafka.Clients.Consumer.ConsumerRecords>("poll", "(J)Lorg/apache/kafka/clients/consumer/ConsumerRecords;", arg0);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/KafkaConsumer.html#committed-org.apache.kafka.common.TopicPartition-java.time.Duration-"/>
+        /// </summary>
+        /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.TopicPartition"/></param>
+        /// <param name="arg1"><see cref="Java.Time.Duration"/></param>
+        /// <returns><see cref="Org.Apache.Kafka.Clients.Consumer.OffsetAndMetadata"/></returns>
+        [global::System.Obsolete()]
+        public Org.Apache.Kafka.Clients.Consumer.OffsetAndMetadata Committed(Org.Apache.Kafka.Common.TopicPartition arg0, Java.Time.Duration arg1)
+        {
+            return IExecuteWithSignature<Org.Apache.Kafka.Clients.Consumer.OffsetAndMetadata>("committed", "(Lorg/apache/kafka/common/TopicPartition;Ljava/time/Duration;)Lorg/apache/kafka/clients/consumer/OffsetAndMetadata;", arg0, arg1);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/KafkaConsumer.html#committed-org.apache.kafka.common.TopicPartition-"/>
+        /// </summary>
+        /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.TopicPartition"/></param>
+        /// <returns><see cref="Org.Apache.Kafka.Clients.Consumer.OffsetAndMetadata"/></returns>
+        [global::System.Obsolete()]
+        public Org.Apache.Kafka.Clients.Consumer.OffsetAndMetadata Committed(Org.Apache.Kafka.Common.TopicPartition arg0)
+        {
+            return IExecuteWithSignature<Org.Apache.Kafka.Clients.Consumer.OffsetAndMetadata>("committed", "(Lorg/apache/kafka/common/TopicPartition;)Lorg/apache/kafka/clients/consumer/OffsetAndMetadata;", arg0);
+        }
+        /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/KafkaConsumer.html#clientInstanceId-java.time.Duration-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Time.Duration"/></param>
@@ -801,6 +832,37 @@ namespace Org.Apache.Kafka.Clients.Consumer
         public Org.Apache.Kafka.Clients.Consumer.ConsumerRecords<K, V> Poll(Java.Time.Duration arg0)
         {
             return IExecuteWithSignature<Org.Apache.Kafka.Clients.Consumer.ConsumerRecords<K, V>>("poll", "(Ljava/time/Duration;)Lorg/apache/kafka/clients/consumer/ConsumerRecords;", arg0);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/KafkaConsumer.html#poll-long-"/>
+        /// </summary>
+        /// <param name="arg0"><see cref="long"/></param>
+        /// <returns><see cref="Org.Apache.Kafka.Clients.Consumer.ConsumerRecords"/></returns>
+        [global::System.Obsolete()]
+        public Org.Apache.Kafka.Clients.Consumer.ConsumerRecords<K, V> Poll(long arg0)
+        {
+            return IExecuteWithSignature<Org.Apache.Kafka.Clients.Consumer.ConsumerRecords<K, V>>("poll", "(J)Lorg/apache/kafka/clients/consumer/ConsumerRecords;", arg0);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/KafkaConsumer.html#committed-org.apache.kafka.common.TopicPartition-java.time.Duration-"/>
+        /// </summary>
+        /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.TopicPartition"/></param>
+        /// <param name="arg1"><see cref="Java.Time.Duration"/></param>
+        /// <returns><see cref="Org.Apache.Kafka.Clients.Consumer.OffsetAndMetadata"/></returns>
+        [global::System.Obsolete()]
+        public Org.Apache.Kafka.Clients.Consumer.OffsetAndMetadata Committed(Org.Apache.Kafka.Common.TopicPartition arg0, Java.Time.Duration arg1)
+        {
+            return IExecuteWithSignature<Org.Apache.Kafka.Clients.Consumer.OffsetAndMetadata>("committed", "(Lorg/apache/kafka/common/TopicPartition;Ljava/time/Duration;)Lorg/apache/kafka/clients/consumer/OffsetAndMetadata;", arg0, arg1);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/KafkaConsumer.html#committed-org.apache.kafka.common.TopicPartition-"/>
+        /// </summary>
+        /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.TopicPartition"/></param>
+        /// <returns><see cref="Org.Apache.Kafka.Clients.Consumer.OffsetAndMetadata"/></returns>
+        [global::System.Obsolete()]
+        public Org.Apache.Kafka.Clients.Consumer.OffsetAndMetadata Committed(Org.Apache.Kafka.Common.TopicPartition arg0)
+        {
+            return IExecuteWithSignature<Org.Apache.Kafka.Clients.Consumer.OffsetAndMetadata>("committed", "(Lorg/apache/kafka/common/TopicPartition;)Lorg/apache/kafka/clients/consumer/OffsetAndMetadata;", arg0);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/KafkaConsumer.html#clientInstanceId-java.time.Duration-"/>

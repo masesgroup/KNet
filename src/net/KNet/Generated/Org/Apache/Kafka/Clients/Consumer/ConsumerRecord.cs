@@ -129,6 +129,63 @@ namespace Org.Apache.Kafka.Clients.Consumer
         {
             InvokeInitializer(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10);
         }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/ConsumerRecord.html#org.apache.kafka.clients.consumer.ConsumerRecord(java.lang.String,int,long,long,org.apache.kafka.common.record.TimestampType,java.lang.Long,int,int,java.lang.Object,java.lang.Object,org.apache.kafka.common.header.Headers,java.util.Optional)"/>
+        /// </summary>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
+        /// <param name="arg1"><see cref="int"/></param>
+        /// <param name="arg2"><see cref="long"/></param>
+        /// <param name="arg3"><see cref="long"/></param>
+        /// <param name="arg4"><see cref="Org.Apache.Kafka.Common.Record.TimestampType"/></param>
+        /// <param name="arg5"><see cref="Java.Lang.Long"/></param>
+        /// <param name="arg6"><see cref="int"/></param>
+        /// <param name="arg7"><see cref="int"/></param>
+        /// <param name="arg8"><see cref="object"/></param>
+        /// <param name="arg9"><see cref="object"/></param>
+        /// <param name="arg10"><see cref="Org.Apache.Kafka.Common.Header.Headers"/></param>
+        /// <param name="arg11"><see cref="Java.Util.Optional"/></param>
+        [global::System.Obsolete()]
+        public ConsumerRecord(Java.Lang.String arg0, int arg1, long arg2, long arg3, Org.Apache.Kafka.Common.Record.TimestampType arg4, Java.Lang.Long arg5, int arg6, int arg7, object arg8, object arg9, Org.Apache.Kafka.Common.Header.Headers arg10, Java.Util.Optional arg11) : base(JVMBridgeBase.InitializerInstance)
+        {
+            InvokeInitializer(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/ConsumerRecord.html#org.apache.kafka.clients.consumer.ConsumerRecord(java.lang.String,int,long,long,org.apache.kafka.common.record.TimestampType,java.lang.Long,int,int,java.lang.Object,java.lang.Object,org.apache.kafka.common.header.Headers)"/>
+        /// </summary>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
+        /// <param name="arg1"><see cref="int"/></param>
+        /// <param name="arg2"><see cref="long"/></param>
+        /// <param name="arg3"><see cref="long"/></param>
+        /// <param name="arg4"><see cref="Org.Apache.Kafka.Common.Record.TimestampType"/></param>
+        /// <param name="arg5"><see cref="Java.Lang.Long"/></param>
+        /// <param name="arg6"><see cref="int"/></param>
+        /// <param name="arg7"><see cref="int"/></param>
+        /// <param name="arg8"><see cref="object"/></param>
+        /// <param name="arg9"><see cref="object"/></param>
+        /// <param name="arg10"><see cref="Org.Apache.Kafka.Common.Header.Headers"/></param>
+        [global::System.Obsolete()]
+        public ConsumerRecord(Java.Lang.String arg0, int arg1, long arg2, long arg3, Org.Apache.Kafka.Common.Record.TimestampType arg4, Java.Lang.Long arg5, int arg6, int arg7, object arg8, object arg9, Org.Apache.Kafka.Common.Header.Headers arg10) : base(JVMBridgeBase.InitializerInstance)
+        {
+            InvokeInitializer(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/ConsumerRecord.html#org.apache.kafka.clients.consumer.ConsumerRecord(java.lang.String,int,long,long,org.apache.kafka.common.record.TimestampType,long,int,int,java.lang.Object,java.lang.Object)"/>
+        /// </summary>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
+        /// <param name="arg1"><see cref="int"/></param>
+        /// <param name="arg2"><see cref="long"/></param>
+        /// <param name="arg3"><see cref="long"/></param>
+        /// <param name="arg4"><see cref="Org.Apache.Kafka.Common.Record.TimestampType"/></param>
+        /// <param name="arg5"><see cref="long"/></param>
+        /// <param name="arg6"><see cref="int"/></param>
+        /// <param name="arg7"><see cref="int"/></param>
+        /// <param name="arg8"><see cref="object"/></param>
+        /// <param name="arg9"><see cref="object"/></param>
+        [global::System.Obsolete()]
+        public ConsumerRecord(Java.Lang.String arg0, int arg1, long arg2, long arg3, Org.Apache.Kafka.Common.Record.TimestampType arg4, long arg5, int arg6, int arg7, object arg8, object arg9) : base(JVMBridgeBase.InitializerInstance)
+        {
+            InvokeInitializer(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9);
+        }
 
         #endregion
 
@@ -137,6 +194,13 @@ namespace Org.Apache.Kafka.Clients.Consumer
         #endregion
 
         #region Fields
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/ConsumerRecord.html#NULL_CHECKSUM"/>
+        /// </summary>
+        [global::System.Obsolete()]
+        public static int NULL_CHECKSUM { get { if (!_NULL_CHECKSUMReady) { _NULL_CHECKSUMContent = SGetField<int>(LocalBridgeClazz, "NULL_CHECKSUM"); _NULL_CHECKSUMReady = true; } return _NULL_CHECKSUMContent; } }
+        private static int _NULL_CHECKSUMContent = default;
+        private static bool _NULL_CHECKSUMReady = false; // this is used because in case of generics 
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/ConsumerRecord.html#NULL_SIZE"/>
         /// </summary>
@@ -290,6 +354,63 @@ namespace Org.Apache.Kafka.Clients.Consumer
         {
             InvokeInitializer(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10);
         }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/ConsumerRecord.html#org.apache.kafka.clients.consumer.ConsumerRecord(java.lang.String,int,long,long,org.apache.kafka.common.record.TimestampType,java.lang.Long,int,int,java.lang.Object,java.lang.Object,org.apache.kafka.common.header.Headers,java.util.Optional)"/>
+        /// </summary>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
+        /// <param name="arg1"><see cref="int"/></param>
+        /// <param name="arg2"><see cref="long"/></param>
+        /// <param name="arg3"><see cref="long"/></param>
+        /// <param name="arg4"><see cref="Org.Apache.Kafka.Common.Record.TimestampType"/></param>
+        /// <param name="arg5"><see cref="Java.Lang.Long"/></param>
+        /// <param name="arg6"><see cref="int"/></param>
+        /// <param name="arg7"><see cref="int"/></param>
+        /// <param name="arg8"><typeparamref name="K"/></param>
+        /// <param name="arg9"><typeparamref name="V"/></param>
+        /// <param name="arg10"><see cref="Org.Apache.Kafka.Common.Header.Headers"/></param>
+        /// <param name="arg11"><see cref="Java.Util.Optional"/></param>
+        [global::System.Obsolete()]
+        public ConsumerRecord(Java.Lang.String arg0, int arg1, long arg2, long arg3, Org.Apache.Kafka.Common.Record.TimestampType arg4, Java.Lang.Long arg5, int arg6, int arg7, K arg8, V arg9, Org.Apache.Kafka.Common.Header.Headers arg10, Java.Util.Optional<Java.Lang.Integer> arg11) : base(JVMBridgeBase.InitializerInstance)
+        {
+            InvokeInitializer(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/ConsumerRecord.html#org.apache.kafka.clients.consumer.ConsumerRecord(java.lang.String,int,long,long,org.apache.kafka.common.record.TimestampType,java.lang.Long,int,int,java.lang.Object,java.lang.Object,org.apache.kafka.common.header.Headers)"/>
+        /// </summary>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
+        /// <param name="arg1"><see cref="int"/></param>
+        /// <param name="arg2"><see cref="long"/></param>
+        /// <param name="arg3"><see cref="long"/></param>
+        /// <param name="arg4"><see cref="Org.Apache.Kafka.Common.Record.TimestampType"/></param>
+        /// <param name="arg5"><see cref="Java.Lang.Long"/></param>
+        /// <param name="arg6"><see cref="int"/></param>
+        /// <param name="arg7"><see cref="int"/></param>
+        /// <param name="arg8"><typeparamref name="K"/></param>
+        /// <param name="arg9"><typeparamref name="V"/></param>
+        /// <param name="arg10"><see cref="Org.Apache.Kafka.Common.Header.Headers"/></param>
+        [global::System.Obsolete()]
+        public ConsumerRecord(Java.Lang.String arg0, int arg1, long arg2, long arg3, Org.Apache.Kafka.Common.Record.TimestampType arg4, Java.Lang.Long arg5, int arg6, int arg7, K arg8, V arg9, Org.Apache.Kafka.Common.Header.Headers arg10) : base(JVMBridgeBase.InitializerInstance)
+        {
+            InvokeInitializer(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/ConsumerRecord.html#org.apache.kafka.clients.consumer.ConsumerRecord(java.lang.String,int,long,long,org.apache.kafka.common.record.TimestampType,long,int,int,java.lang.Object,java.lang.Object)"/>
+        /// </summary>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
+        /// <param name="arg1"><see cref="int"/></param>
+        /// <param name="arg2"><see cref="long"/></param>
+        /// <param name="arg3"><see cref="long"/></param>
+        /// <param name="arg4"><see cref="Org.Apache.Kafka.Common.Record.TimestampType"/></param>
+        /// <param name="arg5"><see cref="long"/></param>
+        /// <param name="arg6"><see cref="int"/></param>
+        /// <param name="arg7"><see cref="int"/></param>
+        /// <param name="arg8"><typeparamref name="K"/></param>
+        /// <param name="arg9"><typeparamref name="V"/></param>
+        [global::System.Obsolete()]
+        public ConsumerRecord(Java.Lang.String arg0, int arg1, long arg2, long arg3, Org.Apache.Kafka.Common.Record.TimestampType arg4, long arg5, int arg6, int arg7, K arg8, V arg9) : base(JVMBridgeBase.InitializerInstance)
+        {
+            InvokeInitializer(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9);
+        }
 
         #endregion
 
@@ -302,6 +423,13 @@ namespace Org.Apache.Kafka.Clients.Consumer
         #endregion
 
         #region Fields
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/ConsumerRecord.html#NULL_CHECKSUM"/>
+        /// </summary>
+        [global::System.Obsolete()]
+        public static int NULL_CHECKSUM { get { if (!_NULL_CHECKSUMReady) { _NULL_CHECKSUMContent = SGetField<int>(LocalBridgeClazz, "NULL_CHECKSUM"); _NULL_CHECKSUMReady = true; } return _NULL_CHECKSUMContent; } }
+        private static int _NULL_CHECKSUMContent = default;
+        private static bool _NULL_CHECKSUMReady = false; // this is used because in case of generics 
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/ConsumerRecord.html#NULL_SIZE"/>
         /// </summary>

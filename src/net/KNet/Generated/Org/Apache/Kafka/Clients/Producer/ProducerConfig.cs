@@ -94,6 +94,13 @@ namespace Org.Apache.Kafka.Clients.Producer
         private static Java.Lang.String _ACKS_CONFIGContent = default;
         private static bool _ACKS_CONFIGReady = false; // this is used because in case of generics 
         /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/producer/ProducerConfig.html#AUTO_INCLUDE_JMX_REPORTER_CONFIG"/>
+        /// </summary>
+        [global::System.Obsolete()]
+        public static Java.Lang.String AUTO_INCLUDE_JMX_REPORTER_CONFIG { get { if (!_AUTO_INCLUDE_JMX_REPORTER_CONFIGReady) { _AUTO_INCLUDE_JMX_REPORTER_CONFIGContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "AUTO_INCLUDE_JMX_REPORTER_CONFIG"); _AUTO_INCLUDE_JMX_REPORTER_CONFIGReady = true; } return _AUTO_INCLUDE_JMX_REPORTER_CONFIGContent; } }
+        private static Java.Lang.String _AUTO_INCLUDE_JMX_REPORTER_CONFIGContent = default;
+        private static bool _AUTO_INCLUDE_JMX_REPORTER_CONFIGReady = false; // this is used because in case of generics 
+        /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/producer/ProducerConfig.html#BATCH_SIZE_CONFIG"/>
         /// </summary>
         public static Java.Lang.String BATCH_SIZE_CONFIG { get { if (!_BATCH_SIZE_CONFIGReady) { _BATCH_SIZE_CONFIGContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "BATCH_SIZE_CONFIG"); _BATCH_SIZE_CONFIGReady = true; } return _BATCH_SIZE_CONFIGContent; } }

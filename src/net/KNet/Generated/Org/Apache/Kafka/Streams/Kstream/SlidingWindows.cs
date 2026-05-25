@@ -96,6 +96,18 @@ namespace Org.Apache.Kafka.Streams.Kstream
         {
             return SExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.SlidingWindows>(LocalBridgeClazz, "ofTimeDifferenceWithNoGrace", "(Ljava/time/Duration;)Lorg/apache/kafka/streams/kstream/SlidingWindows;", arg0);
         }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/kstream/SlidingWindows.html#withTimeDifferenceAndGrace-java.time.Duration-java.time.Duration-"/>
+        /// </summary>
+        /// <param name="arg0"><see cref="Java.Time.Duration"/></param>
+        /// <param name="arg1"><see cref="Java.Time.Duration"/></param>
+        /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.SlidingWindows"/></returns>
+        /// <exception cref="Java.Lang.IllegalArgumentException"/>
+        [global::System.Obsolete()]
+        public static Org.Apache.Kafka.Streams.Kstream.SlidingWindows WithTimeDifferenceAndGrace(Java.Time.Duration arg0, Java.Time.Duration arg1)
+        {
+            return SExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.SlidingWindows>(LocalBridgeClazz, "withTimeDifferenceAndGrace", "(Ljava/time/Duration;Ljava/time/Duration;)Lorg/apache/kafka/streams/kstream/SlidingWindows;", arg0, arg1);
+        }
 
         #endregion
 

@@ -88,12 +88,30 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<Java.Util.Map<Java.Lang.String, Org.Apache.Kafka.Common.KafkaFuture<Org.Apache.Kafka.Clients.Admin.TopicDescription>>>("topicNameValues", "()Ljava/util/Map;");
         }
         /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/admin/DescribeTopicsResult.html#values--"/>
+        /// </summary>
+        /// <returns><see cref="Java.Util.Map"/></returns>
+        [global::System.Obsolete()]
+        public Java.Util.Map<Java.Lang.String, Org.Apache.Kafka.Common.KafkaFuture<Org.Apache.Kafka.Clients.Admin.TopicDescription>> Values()
+        {
+            return IExecuteWithSignature<Java.Util.Map<Java.Lang.String, Org.Apache.Kafka.Common.KafkaFuture<Org.Apache.Kafka.Clients.Admin.TopicDescription>>>("values", "()Ljava/util/Map;");
+        }
+        /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/admin/DescribeTopicsResult.html#topicIdValues--"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Map"/></returns>
         public Java.Util.Map<Org.Apache.Kafka.Common.Uuid, Org.Apache.Kafka.Common.KafkaFuture<Org.Apache.Kafka.Clients.Admin.TopicDescription>> TopicIdValues()
         {
             return IExecuteWithSignature<Java.Util.Map<Org.Apache.Kafka.Common.Uuid, Org.Apache.Kafka.Common.KafkaFuture<Org.Apache.Kafka.Clients.Admin.TopicDescription>>>("topicIdValues", "()Ljava/util/Map;");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/admin/DescribeTopicsResult.html#all--"/>
+        /// </summary>
+        /// <returns><see cref="Org.Apache.Kafka.Common.KafkaFuture"/></returns>
+        [global::System.Obsolete()]
+        public Org.Apache.Kafka.Common.KafkaFuture<Java.Util.Map<Java.Lang.String, Org.Apache.Kafka.Clients.Admin.TopicDescription>> All()
+        {
+            return IExecuteWithSignature<Org.Apache.Kafka.Common.KafkaFuture<Java.Util.Map<Java.Lang.String, Org.Apache.Kafka.Clients.Admin.TopicDescription>>>("all", "()Lorg/apache/kafka/common/KafkaFuture;");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/admin/DescribeTopicsResult.html#allTopicNames--"/>

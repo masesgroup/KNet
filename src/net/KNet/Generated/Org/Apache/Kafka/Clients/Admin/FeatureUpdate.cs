@@ -98,6 +98,16 @@ namespace Org.Apache.Kafka.Clients.Admin
     {
         #region Constructors
         /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/admin/FeatureUpdate.html#org.apache.kafka.clients.admin.FeatureUpdate(short,boolean)"/>
+        /// </summary>
+        /// <param name="arg0"><see cref="short"/></param>
+        /// <param name="arg1"><see cref="bool"/></param>
+        [global::System.Obsolete()]
+        public FeatureUpdate(short arg0, bool arg1) : base(JVMBridgeBase.InitializerInstance)
+        {
+            InvokeInitializer(arg0, arg1);
+        }
+        /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/admin/FeatureUpdate.html#org.apache.kafka.clients.admin.FeatureUpdate(short,org.apache.kafka.clients.admin.FeatureUpdate.UpgradeType)"/>
         /// </summary>
         /// <param name="arg0"><see cref="short"/></param>
@@ -122,6 +132,15 @@ namespace Org.Apache.Kafka.Clients.Admin
         #endregion
 
         #region Instance methods
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/admin/FeatureUpdate.html#allowDowngrade--"/>
+        /// </summary>
+        /// <returns><see cref="bool"/></returns>
+        [global::System.Obsolete()]
+        public bool AllowDowngrade()
+        {
+            return IExecuteWithSignature<bool>("allowDowngrade", "()Z");
+        }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/admin/FeatureUpdate.html#upgradeType--"/>
         /// </summary>

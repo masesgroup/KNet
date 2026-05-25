@@ -94,6 +94,16 @@ namespace Org.Apache.Kafka.Streams.Kstream
         {
             return SExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.SessionWindows>(LocalBridgeClazz, "ofInactivityGapWithNoGrace", "(Ljava/time/Duration;)Lorg/apache/kafka/streams/kstream/SessionWindows;", arg0);
         }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/kstream/SessionWindows.html#with-java.time.Duration-"/>
+        /// </summary>
+        /// <param name="arg0"><see cref="Java.Time.Duration"/></param>
+        /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.SessionWindows"/></returns>
+        [global::System.Obsolete()]
+        public static Org.Apache.Kafka.Streams.Kstream.SessionWindows With(Java.Time.Duration arg0)
+        {
+            return SExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.SessionWindows>(LocalBridgeClazz, "with", "(Ljava/time/Duration;)Lorg/apache/kafka/streams/kstream/SessionWindows;", arg0);
+        }
 
         #endregion
 
@@ -113,6 +123,17 @@ namespace Org.Apache.Kafka.Streams.Kstream
         public long InactivityGap()
         {
             return IExecuteWithSignature<long>("inactivityGap", "()J");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/kstream/SessionWindows.html#grace-java.time.Duration-"/>
+        /// </summary>
+        /// <param name="arg0"><see cref="Java.Time.Duration"/></param>
+        /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.SessionWindows"/></returns>
+        /// <exception cref="Java.Lang.IllegalArgumentException"/>
+        [global::System.Obsolete()]
+        public Org.Apache.Kafka.Streams.Kstream.SessionWindows Grace(Java.Time.Duration arg0)
+        {
+            return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.SessionWindows>("grace", "(Ljava/time/Duration;)Lorg/apache/kafka/streams/kstream/SessionWindows;", arg0);
         }
 
         #endregion

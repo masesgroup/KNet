@@ -127,6 +127,13 @@ namespace Org.Apache.Kafka.Clients
         private static Java.Lang.Long _DEFAULT_SOCKET_CONNECTION_SETUP_TIMEOUT_MSContent = default;
         private static bool _DEFAULT_SOCKET_CONNECTION_SETUP_TIMEOUT_MSReady = false; // this is used because in case of generics 
         /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/CommonClientConfigs.html#AUTO_INCLUDE_JMX_REPORTER_CONFIG"/>
+        /// </summary>
+        [global::System.Obsolete()]
+        public static Java.Lang.String AUTO_INCLUDE_JMX_REPORTER_CONFIG { get { if (!_AUTO_INCLUDE_JMX_REPORTER_CONFIGReady) { _AUTO_INCLUDE_JMX_REPORTER_CONFIGContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "AUTO_INCLUDE_JMX_REPORTER_CONFIG"); _AUTO_INCLUDE_JMX_REPORTER_CONFIGReady = true; } return _AUTO_INCLUDE_JMX_REPORTER_CONFIGContent; } }
+        private static Java.Lang.String _AUTO_INCLUDE_JMX_REPORTER_CONFIGContent = default;
+        private static bool _AUTO_INCLUDE_JMX_REPORTER_CONFIGReady = false; // this is used because in case of generics 
+        /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/CommonClientConfigs.html#AUTO_INCLUDE_JMX_REPORTER_DOC"/>
         /// </summary>
         public static Java.Lang.String AUTO_INCLUDE_JMX_REPORTER_DOC { get { if (!_AUTO_INCLUDE_JMX_REPORTER_DOCReady) { _AUTO_INCLUDE_JMX_REPORTER_DOCContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "AUTO_INCLUDE_JMX_REPORTER_DOC"); _AUTO_INCLUDE_JMX_REPORTER_DOCReady = true; } return _AUTO_INCLUDE_JMX_REPORTER_DOCContent; } }

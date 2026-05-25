@@ -91,6 +91,20 @@ namespace Org.Apache.Kafka.Streams.Processor
 
         #region Fields
         /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/processor/TaskId.html#partition"/>
+        /// </summary>
+        [global::System.Obsolete()]
+        public int partition { get { if (!_partitionReady) { _partitionContent = IGetField<int>("partition"); _partitionReady = true; } return _partitionContent; } }
+        private int _partitionContent = default;
+        private bool _partitionReady = false; // this is used because in case of generics 
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/processor/TaskId.html#topicGroupId"/>
+        /// </summary>
+        [global::System.Obsolete()]
+        public int topicGroupId { get { if (!_topicGroupIdReady) { _topicGroupIdContent = IGetField<int>("topicGroupId"); _topicGroupIdReady = true; } return _topicGroupIdContent; } }
+        private int _topicGroupIdContent = default;
+        private bool _topicGroupIdReady = false; // this is used because in case of generics 
+        /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/processor/TaskId.html#NAMED_TOPOLOGY_DELIMITER"/>
         /// </summary>
         public static Java.Lang.String NAMED_TOPOLOGY_DELIMITER { get { if (!_NAMED_TOPOLOGY_DELIMITERReady) { _NAMED_TOPOLOGY_DELIMITERContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "NAMED_TOPOLOGY_DELIMITER"); _NAMED_TOPOLOGY_DELIMITERReady = true; } return _NAMED_TOPOLOGY_DELIMITERContent; } }
@@ -108,6 +122,29 @@ namespace Org.Apache.Kafka.Streams.Processor
         public static Org.Apache.Kafka.Streams.Processor.TaskId Parse(Java.Lang.String arg0)
         {
             return SExecuteWithSignature<Org.Apache.Kafka.Streams.Processor.TaskId>(LocalBridgeClazz, "parse", "(Ljava/lang/String;)Lorg/apache/kafka/streams/processor/TaskId;", arg0);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/processor/TaskId.html#readFrom-java.io.DataInputStream-int-"/>
+        /// </summary>
+        /// <param name="arg0"><see cref="Java.Io.DataInputStream"/></param>
+        /// <param name="arg1"><see cref="int"/></param>
+        /// <returns><see cref="Org.Apache.Kafka.Streams.Processor.TaskId"/></returns>
+        /// <exception cref="Java.Io.IOException"/>
+        [global::System.Obsolete()]
+        public static Org.Apache.Kafka.Streams.Processor.TaskId ReadFrom(Java.Io.DataInputStream arg0, int arg1)
+        {
+            return SExecuteWithSignature<Org.Apache.Kafka.Streams.Processor.TaskId>(LocalBridgeClazz, "readFrom", "(Ljava/io/DataInputStream;I)Lorg/apache/kafka/streams/processor/TaskId;", arg0, arg1);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/processor/TaskId.html#readFrom-java.nio.ByteBuffer-int-"/>
+        /// </summary>
+        /// <param name="arg0"><see cref="Java.Nio.ByteBuffer"/></param>
+        /// <param name="arg1"><see cref="int"/></param>
+        /// <returns><see cref="Org.Apache.Kafka.Streams.Processor.TaskId"/></returns>
+        [global::System.Obsolete()]
+        public static Org.Apache.Kafka.Streams.Processor.TaskId ReadFrom(Java.Nio.ByteBuffer arg0, int arg1)
+        {
+            return SExecuteWithSignature<Org.Apache.Kafka.Streams.Processor.TaskId>(LocalBridgeClazz, "readFrom", "(Ljava/nio/ByteBuffer;I)Lorg/apache/kafka/streams/processor/TaskId;", arg0, arg1);
         }
 
         #endregion
@@ -154,6 +191,27 @@ namespace Org.Apache.Kafka.Streams.Processor
         public Java.Lang.String TopologyName()
         {
             return IExecuteWithSignature<Java.Lang.String>("topologyName", "()Ljava/lang/String;");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/processor/TaskId.html#writeTo-java.io.DataOutputStream-int-"/>
+        /// </summary>
+        /// <param name="arg0"><see cref="Java.Io.DataOutputStream"/></param>
+        /// <param name="arg1"><see cref="int"/></param>
+        /// <exception cref="Java.Io.IOException"/>
+        [global::System.Obsolete()]
+        public void WriteTo(Java.Io.DataOutputStream arg0, int arg1)
+        {
+            IExecuteWithSignature("writeTo", "(Ljava/io/DataOutputStream;I)V", arg0, arg1);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/processor/TaskId.html#writeTo-java.nio.ByteBuffer-int-"/>
+        /// </summary>
+        /// <param name="arg0"><see cref="Java.Nio.ByteBuffer"/></param>
+        /// <param name="arg1"><see cref="int"/></param>
+        [global::System.Obsolete()]
+        public void WriteTo(Java.Nio.ByteBuffer arg0, int arg1)
+        {
+            IExecuteWithSignature("writeTo", "(Ljava/nio/ByteBuffer;I)V", arg0, arg1);
         }
 
         #endregion

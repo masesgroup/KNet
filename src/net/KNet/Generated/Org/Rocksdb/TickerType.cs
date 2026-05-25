@@ -1038,6 +1038,27 @@ namespace Org.Rocksdb
         private static Org.Rocksdb.TickerType _SIM_BLOCK_CACHE_MISSContent = default;
         private static bool _SIM_BLOCK_CACHE_MISSReady = false; // this is used because in case of generics 
         /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/TickerType.html#STALL_L0_NUM_FILES_MICROS"/>
+        /// </summary>
+        [global::System.Obsolete()]
+        public static Org.Rocksdb.TickerType STALL_L0_NUM_FILES_MICROS { get { if (!_STALL_L0_NUM_FILES_MICROSReady) { _STALL_L0_NUM_FILES_MICROSContent = SGetField<Org.Rocksdb.TickerType>(LocalBridgeClazz, "STALL_L0_NUM_FILES_MICROS"); _STALL_L0_NUM_FILES_MICROSReady = true; } return _STALL_L0_NUM_FILES_MICROSContent; } }
+        private static Org.Rocksdb.TickerType _STALL_L0_NUM_FILES_MICROSContent = default;
+        private static bool _STALL_L0_NUM_FILES_MICROSReady = false; // this is used because in case of generics 
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/TickerType.html#STALL_L0_SLOWDOWN_MICROS"/>
+        /// </summary>
+        [global::System.Obsolete()]
+        public static Org.Rocksdb.TickerType STALL_L0_SLOWDOWN_MICROS { get { if (!_STALL_L0_SLOWDOWN_MICROSReady) { _STALL_L0_SLOWDOWN_MICROSContent = SGetField<Org.Rocksdb.TickerType>(LocalBridgeClazz, "STALL_L0_SLOWDOWN_MICROS"); _STALL_L0_SLOWDOWN_MICROSReady = true; } return _STALL_L0_SLOWDOWN_MICROSContent; } }
+        private static Org.Rocksdb.TickerType _STALL_L0_SLOWDOWN_MICROSContent = default;
+        private static bool _STALL_L0_SLOWDOWN_MICROSReady = false; // this is used because in case of generics 
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/TickerType.html#STALL_MEMTABLE_COMPACTION_MICROS"/>
+        /// </summary>
+        [global::System.Obsolete()]
+        public static Org.Rocksdb.TickerType STALL_MEMTABLE_COMPACTION_MICROS { get { if (!_STALL_MEMTABLE_COMPACTION_MICROSReady) { _STALL_MEMTABLE_COMPACTION_MICROSContent = SGetField<Org.Rocksdb.TickerType>(LocalBridgeClazz, "STALL_MEMTABLE_COMPACTION_MICROS"); _STALL_MEMTABLE_COMPACTION_MICROSReady = true; } return _STALL_MEMTABLE_COMPACTION_MICROSContent; } }
+        private static Org.Rocksdb.TickerType _STALL_MEMTABLE_COMPACTION_MICROSContent = default;
+        private static bool _STALL_MEMTABLE_COMPACTION_MICROSReady = false; // this is used because in case of generics 
+        /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/TickerType.html#STALL_MICROS"/>
         /// </summary>
         public static Org.Rocksdb.TickerType STALL_MICROS { get { if (!_STALL_MICROSReady) { _STALL_MICROSContent = SGetField<Org.Rocksdb.TickerType>(LocalBridgeClazz, "STALL_MICROS"); _STALL_MICROSReady = true; } return _STALL_MICROSContent; } }

@@ -214,6 +214,17 @@ namespace Org.Apache.Kafka.Clients.Producer
             IExecuteWithSignature("initTransactions", "()V");
         }
         /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/producer/Producer.html#sendOffsetsToTransaction-java.util.Map-java.lang.String-"/>
+        /// </summary>
+        /// <param name="arg0"><see cref="Java.Util.Map"/></param>
+        /// <param name="arg1"><see cref="Java.Lang.String"/></param>
+        /// <exception cref="Org.Apache.Kafka.Common.Errors.ProducerFencedException"/>
+        [global::System.Obsolete()]
+        public void SendOffsetsToTransaction(Java.Util.Map arg0, Java.Lang.String arg1)
+        {
+            IExecuteWithSignature("sendOffsetsToTransaction", "(Ljava/util/Map;Ljava/lang/String;)V", arg0, arg1);
+        }
+        /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/producer/Producer.html#sendOffsetsToTransaction-java.util.Map-org.apache.kafka.clients.consumer.ConsumerGroupMetadata-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
@@ -374,6 +385,17 @@ namespace Org.Apache.Kafka.Clients.Producer
         public void InitTransactions()
         {
             IExecuteWithSignature("initTransactions", "()V");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/producer/Producer.html#sendOffsetsToTransaction-java.util.Map-java.lang.String-"/>
+        /// </summary>
+        /// <param name="arg0"><see cref="Java.Util.Map"/></param>
+        /// <param name="arg1"><see cref="Java.Lang.String"/></param>
+        /// <exception cref="Org.Apache.Kafka.Common.Errors.ProducerFencedException"/>
+        [global::System.Obsolete()]
+        public void SendOffsetsToTransaction(Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Org.Apache.Kafka.Clients.Consumer.OffsetAndMetadata> arg0, Java.Lang.String arg1)
+        {
+            IExecuteWithSignature("sendOffsetsToTransaction", "(Ljava/util/Map;Ljava/lang/String;)V", arg0, arg1);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/producer/Producer.html#sendOffsetsToTransaction-java.util.Map-org.apache.kafka.clients.consumer.ConsumerGroupMetadata-"/>

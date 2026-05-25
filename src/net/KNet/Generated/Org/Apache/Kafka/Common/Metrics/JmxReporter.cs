@@ -70,6 +70,15 @@ namespace Org.Apache.Kafka.Common.Metrics
         {
             InvokeInitializer();
         }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/common/metrics/JmxReporter.html#org.apache.kafka.common.metrics.JmxReporter(java.lang.String)"/>
+        /// </summary>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
+        [global::System.Obsolete()]
+        public JmxReporter(Java.Lang.String arg0) : base(JVMBridgeBase.InitializerInstance)
+        {
+            InvokeInitializer(arg0);
+        }
 
         #endregion
 

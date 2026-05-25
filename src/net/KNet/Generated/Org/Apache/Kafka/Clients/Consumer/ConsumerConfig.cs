@@ -142,6 +142,13 @@ namespace Org.Apache.Kafka.Clients.Consumer
         private static Java.Lang.String _AUTO_COMMIT_INTERVAL_MS_CONFIGContent = default;
         private static bool _AUTO_COMMIT_INTERVAL_MS_CONFIGReady = false; // this is used because in case of generics 
         /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/ConsumerConfig.html#AUTO_INCLUDE_JMX_REPORTER_CONFIG"/>
+        /// </summary>
+        [global::System.Obsolete()]
+        public static Java.Lang.String AUTO_INCLUDE_JMX_REPORTER_CONFIG { get { if (!_AUTO_INCLUDE_JMX_REPORTER_CONFIGReady) { _AUTO_INCLUDE_JMX_REPORTER_CONFIGContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "AUTO_INCLUDE_JMX_REPORTER_CONFIG"); _AUTO_INCLUDE_JMX_REPORTER_CONFIGReady = true; } return _AUTO_INCLUDE_JMX_REPORTER_CONFIGContent; } }
+        private static Java.Lang.String _AUTO_INCLUDE_JMX_REPORTER_CONFIGContent = default;
+        private static bool _AUTO_INCLUDE_JMX_REPORTER_CONFIGReady = false; // this is used because in case of generics 
+        /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/ConsumerConfig.html#AUTO_OFFSET_RESET_CONFIG"/>
         /// </summary>
         public static Java.Lang.String AUTO_OFFSET_RESET_CONFIG { get { if (!_AUTO_OFFSET_RESET_CONFIGReady) { _AUTO_OFFSET_RESET_CONFIGContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "AUTO_OFFSET_RESET_CONFIG"); _AUTO_OFFSET_RESET_CONFIGReady = true; } return _AUTO_OFFSET_RESET_CONFIGContent; } }

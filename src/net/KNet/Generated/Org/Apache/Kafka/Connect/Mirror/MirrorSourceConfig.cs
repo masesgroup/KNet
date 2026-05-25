@@ -293,6 +293,13 @@ namespace Org.Apache.Kafka.Connect.Mirror
         private static Java.Lang.String _TOPICS_EXCLUDE_DEFAULTContent = default;
         private static bool _TOPICS_EXCLUDE_DEFAULTReady = false; // this is used because in case of generics 
         /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.9.2/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#USE_INCREMENTAL_ALTER_CONFIGS"/>
+        /// </summary>
+        [global::System.Obsolete()]
+        public static Java.Lang.String USE_INCREMENTAL_ALTER_CONFIGS { get { if (!_USE_INCREMENTAL_ALTER_CONFIGSReady) { _USE_INCREMENTAL_ALTER_CONFIGSContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "USE_INCREMENTAL_ALTER_CONFIGS"); _USE_INCREMENTAL_ALTER_CONFIGSReady = true; } return _USE_INCREMENTAL_ALTER_CONFIGSContent; } }
+        private static Java.Lang.String _USE_INCREMENTAL_ALTER_CONFIGSContent = default;
+        private static bool _USE_INCREMENTAL_ALTER_CONFIGSReady = false; // this is used because in case of generics 
+        /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.9.2/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#CONSUMER_POLL_TIMEOUT_MILLIS_DEFAULT"/>
         /// </summary>
         public static long CONSUMER_POLL_TIMEOUT_MILLIS_DEFAULT { get { if (!_CONSUMER_POLL_TIMEOUT_MILLIS_DEFAULTReady) { _CONSUMER_POLL_TIMEOUT_MILLIS_DEFAULTContent = SGetField<long>(LocalBridgeClazz, "CONSUMER_POLL_TIMEOUT_MILLIS_DEFAULT"); _CONSUMER_POLL_TIMEOUT_MILLIS_DEFAULTReady = true; } return _CONSUMER_POLL_TIMEOUT_MILLIS_DEFAULTContent; } }
