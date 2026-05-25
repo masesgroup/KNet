@@ -19,7 +19,6 @@
 using MASES.JCOBridge.C2JBridge;
 using MASES.JCOBridge.C2JBridge.JVMInterop;
 using Java.Util;
-using static System.Net.WebRequestMethods;
 
 namespace Org.Apache.Kafka.Common.Errors
 {
