@@ -57,13 +57,13 @@ namespace MASES.KNet.Streams
                 if (_keySerDes == null) throw new InvalidOperationException("Unable to resolve key serializer/deserializer for prefetched KeyValue.");
                 var jKey = _inner.Key;
                 using var disposable = jKey as IDisposable;
-                _key = _keySerDes.Deserialize(null, jKey);
+                _key = _keySerDes.Deserialize((Java.Lang.String)null, jKey);
                 _keyStored = true;
                 _valueSerDes ??= _factory?.BuildValueSerDes<V, TJVMV>();
                 if (_valueSerDes == null) throw new InvalidOperationException("Unable to resolve value serializer/deserializer for prefetched KeyValue.");
                 var jValue = _inner.Value;
                 using var disposable2 = jValue as IDisposable;
-                _value = _valueSerDes.Deserialize(null, jValue);
+                _value = _valueSerDes.Deserialize((Java.Lang.String)null, jValue);
                 _valueStored = true;
             }
         }
@@ -114,7 +114,7 @@ namespace MASES.KNet.Streams
                     _keySerDes ??= _factory?.BuildKeySerDes<K, TJVMK>() ?? throw new InvalidOperationException("Key serializer/deserializer is not available.");
                     var key = _inner.Key;
                     using var disposable = key as IDisposable;
-                    _key = _keySerDes.Deserialize(null, key);
+                    _key = _keySerDes.Deserialize((Java.Lang.String)null, key);
                     _keyStored = true;
                 }
                 return _key;
@@ -133,7 +133,7 @@ namespace MASES.KNet.Streams
                     _valueSerDes ??= _factory?.BuildValueSerDes<V, TJVMV>() ?? throw new InvalidOperationException("Value serializer/deserializer is not available.");
                     var value = _inner.Value;
                     using var disposable = value as IDisposable;
-                    _value = _valueSerDes.Deserialize(null, value);
+                    _value = _valueSerDes.Deserialize((Java.Lang.String)null, value);
                     _valueStored = true;
                 }
                 return _value;

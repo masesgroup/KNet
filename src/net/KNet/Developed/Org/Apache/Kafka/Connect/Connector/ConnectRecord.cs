@@ -82,11 +82,11 @@ namespace Org.Apache.Kafka.Connect.Connector
         /// <summary>
         /// Topic
         /// </summary>
-        public string Topic => IExecute<string>("topic");
+        public Java.Lang.String Topic => IExecuteWithSignature<Java.Lang.String>("topic", "()Ljava/lang/String;");
         /// <summary>
         /// Partition
         /// </summary>
-        public int KafkaPartition => IExecute<int>("kafkaPartition");
+        public Java.Lang.Integer KafkaPartition =>  IExecuteWithSignature<Java.Lang.Integer>("kafkaPartition", "()Ljava/lang/Integer;");
         /// <summary>
         /// Key
         /// </summary>
@@ -94,7 +94,7 @@ namespace Org.Apache.Kafka.Connect.Connector
         /// <summary>
         /// KeySchema
         /// </summary>
-        public Schema KeySchema => IExecute<Schema>("keySchema");
+        public Schema KeySchema => IExecuteWithSignature<Org.Apache.Kafka.Connect.Data.Schema>("keySchema", "()Lorg/apache/kafka/connect/data/Schema;");
         /// <summary>
         /// Value
         /// </summary>
@@ -102,7 +102,7 @@ namespace Org.Apache.Kafka.Connect.Connector
         /// <summary>
         /// ValueSchema
         /// </summary>
-        public Schema ValueSchema => IExecute<Schema>("valueSchema");
+        public Schema ValueSchema => IExecuteWithSignature<Org.Apache.Kafka.Connect.Data.Schema>("valueSchema", "()Lorg/apache/kafka/connect/data/Schema;");
         /// <summary>
         /// Timestamp
         /// </summary>
@@ -110,7 +110,7 @@ namespace Org.Apache.Kafka.Connect.Connector
         /// <summary>
         /// The <see cref="Headers"/>
         /// </summary>
-        public Headers Headers => IExecute<Headers>("headers");
+        public Headers Headers => IExecuteWithSignature<Org.Apache.Kafka.Connect.Header.Headers>("headers", "()Lorg/apache/kafka/connect/header/Headers;");
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.2/org/apache/kafka/connect/connector/ConnectRecord.html#newRecord(java.lang.String,java.lang.Integer,org.apache.kafka.connect.data.Schema,java.lang.Object,org.apache.kafka.connect.data.Schema,java.lang.Object,java.lang.Long)"/>
         /// </summary>
