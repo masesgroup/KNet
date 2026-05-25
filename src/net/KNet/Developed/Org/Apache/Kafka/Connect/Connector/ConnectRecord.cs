@@ -74,12 +74,6 @@ namespace Org.Apache.Kafka.Connect.Connector
         {
         }
         /// <summary>
-        /// Generic constructor: it is useful for JCOBridge when there is a derived class which needs to pass arguments to the highest JVMBridgeBase class
-        /// </summary>
-        protected ConnectRecord(params object[] args) : base(args)
-        {
-        }
-        /// <summary>
         /// Topic
         /// </summary>
         public Java.Lang.String Topic => IExecuteWithSignature<Java.Lang.String>("topic", "()Ljava/lang/String;");
