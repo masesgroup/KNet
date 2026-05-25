@@ -198,9 +198,9 @@ namespace Org.Apache.Kafka.Streams.Processor
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/processor/ProcessorSupplier.html#get--"/>
         /// </summary>
         /// <returns><see cref="object"/></returns>
-        public object Get()
+        public Org.Apache.Kafka.Streams.Processor.Processor<K, V> Get()
         {
-            return IExecuteWithSignature("get", "()Ljava/lang/Object;");
+            return IExecuteWithSignature< Org.Apache.Kafka.Streams.Processor.Processor<K, V>>("get", "()Ljava/lang/Object;");
         }
 
         #endregion
