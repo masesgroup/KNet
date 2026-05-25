@@ -142,6 +142,7 @@
     "org.apache.kafka.common.security.scram.internals",
     "org.apache.kafka.common.security.token.delegation.internals",
     "org.apache.kafka.common.telemetry.internals",
+    "org.apache.kafka.common.utils.internals",
     "org.apache.kafka.connect.connector.policy",
     "org.apache.kafka.connect.mirror.rest",
     "org.apache.kafka.connect.runtime",
