@@ -35,7 +35,11 @@ namespace MASES.KNet.Serialization
         Deserializer<TJVMT> KafkaDeserializer { get; }
         /// <inheritdoc cref="Org.Apache.Kafka.Common.Serialization.IDeserializer{T}.Deserialize(Java.Lang.String, byte[])"/>
         T Deserialize(string topic, TJVMT data);
+        /// <inheritdoc cref="Org.Apache.Kafka.Common.Serialization.IDeserializer{T}.Deserialize(Java.Lang.String, byte[])"/>
+        T Deserialize(Java.Lang.String topic, TJVMT data);
         /// <inheritdoc cref="Org.Apache.Kafka.Common.Serialization.IDeserializer{T}.Deserialize(Java.Lang.String, Headers, byte[])"/>
         T DeserializeWithHeaders(string topic, Headers headers, TJVMT data);
+        /// <inheritdoc cref="Org.Apache.Kafka.Common.Serialization.IDeserializer{T}.Deserialize(Java.Lang.String, Headers, byte[])"/>
+        T DeserializeWithHeaders(Java.Lang.String topic, Headers headers, TJVMT data);
     }
 }

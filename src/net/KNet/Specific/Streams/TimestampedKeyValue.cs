@@ -56,7 +56,7 @@ namespace MASES.KNet.Streams
                 _keySerDes ??= _factory?.BuildKeySerDes<K, TJVMK>();
                 var key = _inner.Key;
                 using var disposable = key as IDisposable;
-                _key = _keySerDes.Deserialize(null, key);
+                _key = _keySerDes.Deserialize((Java.Lang.String)null, key);
                 _keyStored = true;
             }
         }
@@ -107,7 +107,7 @@ namespace MASES.KNet.Streams
                     _keySerDes ??= _factory?.BuildKeySerDes<K, TJVMK>();
                     var key = _inner.Key;
                     using var disposable = key as IDisposable;
-                    _key = _keySerDes.Deserialize(null, key);
+                    _key = _keySerDes.Deserialize((Java.Lang.String)null, key);
                     _keyStored = true;
                 }
                 return _key;

@@ -81,11 +81,11 @@ namespace MASES.KNet.Streams.Kstream
         /// <summary>
         /// The <typeparamref name="V1"/> content
         /// </summary>
-        public virtual V1 Value1 { get { if (!_value1Set) { _v1Serializer ??= Factory?.BuildValueSerDes<V1, TJVMV1>(); _value1 = _v1Serializer.Deserialize(null, _arg0); _value1Set = true; } return _value1; } }
+        public virtual V1 Value1 { get { if (!_value1Set) { _v1Serializer ??= Factory?.BuildValueSerDes<V1, TJVMV1>(); _value1 = _v1Serializer.Deserialize((Java.Lang.String)null, _arg0); _value1Set = true; } return _value1; } }
         /// <summary>
         /// The <typeparamref name="V2"/> content
         /// </summary>
-        public virtual V2 Value2 { get { if (!_value2Set) { _v2Serializer ??= Factory?.BuildValueSerDes<V2, TJVMV2>(); _value2 = _v2Serializer.Deserialize(null, _arg1); _value2Set = true; } return _value2; } }
+        public virtual V2 Value2 { get { if (!_value2Set) { _v2Serializer ??= Factory?.BuildValueSerDes<V2, TJVMV2>(); _value2 = _v2Serializer.Deserialize((Java.Lang.String)null, _arg1); _value2Set = true; } return _value2; } }
         /// <inheritdoc/>
         public sealed override TJVMVR Apply(TJVMV1 arg0, TJVMV2 arg1)
         {
@@ -98,7 +98,7 @@ namespace MASES.KNet.Streams.Kstream
 
             VR res = (OnApply != null) ? OnApply(this) : Apply();
             _vrSerializer ??= Factory?.BuildValueSerDes<VR, TJVMVR>();
-            return _vrSerializer.Serialize(null, res);
+            return _vrSerializer.Serialize((Java.Lang.String)null, res);
         }
         /// <inheritdoc cref="Org.Apache.Kafka.Streams.Kstream.ValueJoiner{V1, V2, VR}.Apply(V1, V2)"/>>
         public virtual VR Apply()

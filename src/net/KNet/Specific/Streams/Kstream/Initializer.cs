@@ -73,7 +73,7 @@ namespace MASES.KNet.Streams.Kstream
 
             var methodToExecute = (OnApply2 != null) ? OnApply2 : Apply2;
             var res = methodToExecute();
-            return _valueSerializer.Serialize(null, res);
+            return _valueSerializer.Serialize((Java.Lang.String)null, res);
         }
         /// <inheritdoc cref="Org.Apache.Kafka.Streams.Kstream.Initializer{VAgg}.Apply"/>
         public virtual VA Apply2()

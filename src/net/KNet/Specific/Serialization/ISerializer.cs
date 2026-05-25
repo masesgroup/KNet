@@ -35,7 +35,11 @@ namespace MASES.KNet.Serialization
         public Serializer<TJVMT> KafkaSerializer { get; }
         /// <inheritdoc cref="Org.Apache.Kafka.Common.Serialization.ISerializer{T}.Serialize(Java.Lang.String, T)"/>
         TJVMT Serialize(string topic, T data);
+        /// <inheritdoc cref="Org.Apache.Kafka.Common.Serialization.ISerializer{T}.Serialize(Java.Lang.String, T)"/>
+        TJVMT Serialize(Java.Lang.String topic, T data);
         /// <inheritdoc cref="Org.Apache.Kafka.Common.Serialization.ISerializer{T}.Serialize(Java.Lang.String, Headers, T)"/>
         TJVMT SerializeWithHeaders(string topic, Headers headers, T data);
+        /// <inheritdoc cref="Org.Apache.Kafka.Common.Serialization.ISerializer{T}.Serialize(Java.Lang.String, Headers, T)"/>
+        TJVMT SerializeWithHeaders(Java.Lang.String topic, Headers headers, T data);
     }
 }

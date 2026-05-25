@@ -155,7 +155,7 @@ namespace MASES.KNet.Streams
         public Org.Apache.Kafka.Streams.KeyQueryMetadata QueryMetadataForKey<K, TJVMK>(string arg0, K arg1, ISerializer<K, TJVMK> arg2)
         {
             using Java.Lang.String jArg0 = arg0;
-            var tJVMK = arg2.Serialize(null, arg1);
+            var tJVMK = arg2.Serialize((Java.Lang.String)null, arg1);
             using var disposable = tJVMK as IDisposable;
             return _inner.QueryMetadataForKey<TJVMK>(jArg0, tJVMK, arg2.KafkaSerializer);
         }
@@ -171,7 +171,7 @@ namespace MASES.KNet.Streams
             if (arg2 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
             var keySerDes = _factory?.BuildKeySerDes<K, TJVMK>();
             using Java.Lang.String jArg0 = arg0;
-            var tJVMK = keySerDes.Serialize(null, arg1);
+            var tJVMK = keySerDes.Serialize((Java.Lang.String)null, arg1);
             using var disposable = tJVMK as IDisposable;
             return _inner.IExecute<Org.Apache.Kafka.Streams.KeyQueryMetadata>("queryMetadataForKey", jArg0, tJVMK, arg2);
         }
