@@ -64,11 +64,11 @@ namespace MASES.KNet.Streams.Kstream
         /// <summary>
         /// The <typeparamref name="K"/> content
         /// </summary>
-        public virtual K Key { get { if (!_keySet) { _kSerializer ??= Factory?.BuildKeySerDes<K, TJVMK>(); _key = _kSerializer.Deserialize(null, _arg0); _keySet = true; } return _key; } }
+        public virtual K Key { get { if (!_keySet) { _kSerializer ??= Factory?.BuildKeySerDes<K, TJVMK>(); _key = _kSerializer.Deserialize((Java.Lang.String)null, _arg0); _keySet = true; } return _key; } }
         /// <summary>
         /// The <typeparamref name="V"/> content
         /// </summary>
-        public virtual V Value { get { if (!_valueSet) { _vSerializer ??= Factory?.BuildValueSerDes<V, TJVMV>(); _value = _vSerializer.Deserialize(null, _arg1); _valueSet = true; } return _value; } }
+        public virtual V Value { get { if (!_valueSet) { _vSerializer ??= Factory?.BuildValueSerDes<V, TJVMV>(); _value = _vSerializer.Deserialize((Java.Lang.String)null, _arg1); _valueSet = true; } return _value; } }
         /// <inheritdoc/>
         public sealed override bool Test(TJVMK arg0, TJVMV arg1)
         {

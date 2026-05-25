@@ -84,11 +84,11 @@ namespace MASES.KNet.Streams.Kstream
         /// <summary>
         /// The <typeparamref name="K"/> content
         /// </summary>
-        public virtual K Key { get { if (!_keySet) { _kSerializer ??= Factory?.BuildKeySerDes<K, TJVMK>(); _key = _kSerializer.Deserialize(null, _arg0); _keySet = true; } return _key; } }
+        public virtual K Key { get { if (!_keySet) { _kSerializer ??= Factory?.BuildKeySerDes<K, TJVMK>(); _key = _kSerializer.Deserialize((Java.Lang.String)null, _arg0); _keySet = true; } return _key; } }
         /// <summary>
         /// The <typeparamref name="V"/> content
         /// </summary>
-        public virtual V Value { get { if (!_valueSet) { _vSerializer ??= Factory?.BuildValueSerDes<V, TJVMV>(); _value = _vSerializer.Deserialize(null, _arg1); _valueSet = true; } return _value; } }
+        public virtual V Value { get { if (!_valueSet) { _vSerializer ??= Factory?.BuildValueSerDes<V, TJVMV>(); _value = _vSerializer.Deserialize((Java.Lang.String)null, _arg1); _valueSet = true; } return _value; } }
         /// <inheritdoc/>
         public override TJVMVR Apply(TJVMK arg0, TJVMV arg1)
         {
@@ -101,7 +101,7 @@ namespace MASES.KNet.Streams.Kstream
 
             VR res = (OnApply != null) ? OnApply(this) : Apply();
             _vrSerializer ??= Factory?.BuildValueSerDes<VR, TJVMVR>();
-            return _vrSerializer.Serialize(null, res);
+            return _vrSerializer.Serialize((Java.Lang.String)null, res);
         }
         /// <inheritdoc cref="Org.Apache.Kafka.Streams.Kstream.ValueMapperWithKey{K, V, VR}.Apply(K, V)"/>
         public virtual VR Apply()
@@ -147,9 +147,9 @@ namespace MASES.KNet.Streams.Kstream
         /// <remarks>If <see cref="OnApply"/> has a value it takes precedence over corresponding <see cref="Apply()"/> class method</remarks>
         public new System.Func<EnumerableValueMapperWithKey<K, V, VR, TJVMK, TJVMV, TJVMVR>, IEnumerable<VR>> OnApply { get; set; } = null;
         /// <inheritdoc/>
-        public override K Key { get { if (!_keySet) { _kSerializer ??= Factory?.BuildKeySerDes<K, TJVMK>(); _key = _kSerializer.Deserialize(null, _arg0); _keySet = true; } return _key; } }
+        public override K Key { get { if (!_keySet) { _kSerializer ??= Factory?.BuildKeySerDes<K, TJVMK>(); _key = _kSerializer.Deserialize((Java.Lang.String)null, _arg0); _keySet = true; } return _key; } }
         /// <inheritdoc/>
-        public override V Value { get { if (!_valueSet) { _vSerializer ??= Factory?.BuildValueSerDes<V, TJVMV>(); _value = _vSerializer.Deserialize(null, _arg1); _valueSet = true; } return _value; } }
+        public override V Value { get { if (!_valueSet) { _vSerializer ??= Factory?.BuildValueSerDes<V, TJVMV>(); _value = _vSerializer.Deserialize((Java.Lang.String)null, _arg1); _valueSet = true; } return _value; } }
         /// <inheritdoc/>
         public override Java.Lang.Iterable<TJVMVR> Apply(TJVMK arg0, TJVMV arg1)
         {
@@ -162,7 +162,7 @@ namespace MASES.KNet.Streams.Kstream
             var result = new ArrayList<TJVMVR>();
             foreach (var item in res)
             {
-                var localValue = _vrSerializer.Serialize(null, item);
+                var localValue = _vrSerializer.Serialize((Java.Lang.String)null, item);
                 using var localDisposable = localValue as IDisposable;
                 result.Add(localValue);
             }

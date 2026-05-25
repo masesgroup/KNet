@@ -70,9 +70,9 @@ namespace MASES.KNet.Streams.Utils
             _keyOutputSerializer ??= factory?.BuildKeySerDes<KO, TJVMKO>();
             _valueSerializer ??= factory?.BuildValueSerDes<V, TJVMV>();
             var methodToExecute = (OnApply != null) ? OnApply : Apply;
-            var res = methodToExecute(_keySerializer.Deserialize(null, o1), _valueSerializer.Deserialize(null, o2));
+            var res = methodToExecute(_keySerializer.Deserialize((Java.Lang.String)null, o1), _valueSerializer.Deserialize((Java.Lang.String)null, o2));
 
-            return _keyOutputSerializer.Serialize(null, res);
+            return _keyOutputSerializer.Serialize((Java.Lang.String)null, res);
         }
         /// <summary>
         /// Executes the Function action in the CLR

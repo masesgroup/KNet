@@ -53,7 +53,7 @@ namespace MASES.KNet.Streams
             if (fromPrefetched)
             {
                 _valueSerDes ??= _factory?.BuildValueSerDes<V, TJVMV>();
-                _value = _valueSerDes.Deserialize(null, _valueInner.Value);
+                _value = _valueSerDes.Deserialize((Java.Lang.String)null, _valueInner.Value);
                 _valueStored = true;
             }
         }
@@ -116,7 +116,7 @@ namespace MASES.KNet.Streams
                     _valueSerDes ??= _factory?.BuildValueSerDes<V, TJVMV>();
                     var kk = _valueInner.Value;
                     using var disposable = kk as IDisposable;
-                    _value = _valueSerDes.Deserialize(null, kk);
+                    _value = _valueSerDes.Deserialize((Java.Lang.String)null, kk);
                     _valueStored = true;
                 }
                 return _value;

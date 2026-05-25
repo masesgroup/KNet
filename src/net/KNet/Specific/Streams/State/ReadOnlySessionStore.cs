@@ -41,8 +41,8 @@ namespace MASES.KNet.Streams.State
             IGenericSerDesFactory factory = Factory;
             var _keySerDes = factory?.BuildKeySerDes<K, TJVMK>();
 
-            var r0 = _keySerDes.Serialize(null, arg0);
-            var r1 = _keySerDes.Serialize(null, arg1);
+            var r0 = _keySerDes.Serialize((Java.Lang.String)null, arg0);
+            var r1 = _keySerDes.Serialize((Java.Lang.String)null, arg1);
             using var disposable0 = r0 as IDisposable;
             using var disposable1 = r1 as IDisposable;
 
@@ -58,7 +58,7 @@ namespace MASES.KNet.Streams.State
             IGenericSerDesFactory factory = Factory;
             var _keySerDes = factory?.BuildKeySerDes<K, TJVMK>();
 
-            var r0 = _keySerDes.Serialize(null, arg0);
+            var r0 = _keySerDes.Serialize((Java.Lang.String)null, arg0);
             using var disposable0 = r0 as IDisposable;
 
             return new WindowedKeyValueIterator<K, AGG, TJVMK, TJVMAGG>(factory, Store.Fetch(r0));
@@ -76,12 +76,12 @@ namespace MASES.KNet.Streams.State
             var _keySerDes = factory?.BuildKeySerDes<K, TJVMK>();
             var _valueSerDes = factory?.BuildValueSerDes<AGG, TJVMAGG>();
 
-            var r0 = _keySerDes.Serialize(null, arg0);
+            var r0 = _keySerDes.Serialize((Java.Lang.String)null, arg0);
             var agg = Store.FetchSession(r0, arg1, arg2);
             using var disposable0 = r0 as IDisposable;
             using var disposable1 = agg as IDisposable;
 
-            return _valueSerDes.Deserialize(null, agg);
+            return _valueSerDes.Deserialize((Java.Lang.String)null, agg);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/state/ReadOnlySessionStore.html#fetchSession(java.lang.Object,long,long)"/>
@@ -96,12 +96,12 @@ namespace MASES.KNet.Streams.State
             var _keySerDes = factory?.BuildKeySerDes<K, TJVMK>();
             var _valueSerDes = factory?.BuildValueSerDes<AGG, TJVMAGG>();
 
-            var r0 = _keySerDes.Serialize(null, arg0);
+            var r0 = _keySerDes.Serialize((Java.Lang.String)null, arg0);
             var agg = Store.FetchSession(r0, arg1, arg2);
             using var disposable0 = r0 as IDisposable;
             using var disposable1 = agg as IDisposable;
 
-            return _valueSerDes.Deserialize(null, agg);
+            return _valueSerDes.Deserialize((Java.Lang.String)null, agg);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/state/ReadOnlySessionStore.html#backwardFetch(java.lang.Object,java.lang.Object)"/>
@@ -114,8 +114,8 @@ namespace MASES.KNet.Streams.State
             IGenericSerDesFactory factory = Factory;
             var _keySerDes = factory?.BuildKeySerDes<K, TJVMK>();
 
-            var r0 = _keySerDes.Serialize(null, arg0);
-            var r1 = _keySerDes.Serialize(null, arg1);
+            var r0 = _keySerDes.Serialize((Java.Lang.String)null, arg0);
+            var r1 = _keySerDes.Serialize((Java.Lang.String)null, arg1);
             using var disposable0 = r0 as IDisposable;
             using var disposable1 = r1 as IDisposable;
 
@@ -131,7 +131,7 @@ namespace MASES.KNet.Streams.State
             IGenericSerDesFactory factory = Factory;
             var _keySerDes = factory?.BuildKeySerDes<K, TJVMK>();
 
-            var r0 = _keySerDes.Serialize(null, arg0);
+            var r0 = _keySerDes.Serialize((Java.Lang.String)null, arg0);
             using var disposable0 = r0 as IDisposable;
 
             return new WindowedKeyValueIterator<K, AGG, TJVMK, TJVMAGG>(factory, Store.BackwardFetch(r0));
@@ -148,7 +148,7 @@ namespace MASES.KNet.Streams.State
             IGenericSerDesFactory factory = Factory;
             var _keySerDes = factory?.BuildKeySerDes<K, TJVMK>();
 
-            var r0 = _keySerDes.Serialize(null, arg0);
+            var r0 = _keySerDes.Serialize((Java.Lang.String)null, arg0);
             using var disposable0 = r0 as IDisposable;
 
             return new WindowedKeyValueIterator<K, AGG, TJVMK, TJVMAGG>(factory, Store.BackwardFindSessions(r0, arg1, arg2));
@@ -166,8 +166,8 @@ namespace MASES.KNet.Streams.State
             IGenericSerDesFactory factory = Factory;
             var _keySerDes = factory?.BuildKeySerDes<K, TJVMK>();
 
-            var r0 = _keySerDes.Serialize(null, arg0);
-            var r1 = _keySerDes.Serialize(null, arg1);
+            var r0 = _keySerDes.Serialize((Java.Lang.String)null, arg0);
+            var r1 = _keySerDes.Serialize((Java.Lang.String)null, arg1);
             using var disposable0 = r0 as IDisposable;
             using var disposable1 = r1 as IDisposable;
 
@@ -186,8 +186,8 @@ namespace MASES.KNet.Streams.State
             IGenericSerDesFactory factory = Factory;
             var _keySerDes = factory?.BuildKeySerDes<K, TJVMK>();
 
-            var r0 = _keySerDes.Serialize(null, arg0);
-            var r1 = _keySerDes.Serialize(null, arg1);
+            var r0 = _keySerDes.Serialize((Java.Lang.String)null, arg0);
+            var r1 = _keySerDes.Serialize((Java.Lang.String)null, arg1);
             using var disposable0 = r0 as IDisposable;
             using var disposable1 = r1 as IDisposable;
 
@@ -205,7 +205,7 @@ namespace MASES.KNet.Streams.State
             IGenericSerDesFactory factory = Factory;
             var _keySerDes = factory?.BuildKeySerDes<K, TJVMK>();
 
-            var r0 = _keySerDes.Serialize(null, arg0);
+            var r0 = _keySerDes.Serialize((Java.Lang.String)null, arg0);
             using var disposable0 = r0 as IDisposable;
 
             return new WindowedKeyValueIterator<K, AGG, TJVMK, TJVMAGG>(factory, Store.BackwardFindSessions(r0, arg1, arg2));
@@ -222,7 +222,7 @@ namespace MASES.KNet.Streams.State
             IGenericSerDesFactory factory = Factory;
             var _keySerDes = factory?.BuildKeySerDes<K, TJVMK>();
 
-            var r0 = _keySerDes.Serialize(null, arg0);
+            var r0 = _keySerDes.Serialize((Java.Lang.String)null, arg0);
             using var disposable0 = r0 as IDisposable;
 
             return new WindowedKeyValueIterator<K, AGG, TJVMK, TJVMAGG>(factory, Store.BackwardFindSessions(r0, arg1, arg2));
@@ -240,8 +240,8 @@ namespace MASES.KNet.Streams.State
             IGenericSerDesFactory factory = Factory;
             var _keySerDes = factory?.BuildKeySerDes<K, TJVMK>();
 
-            var r0 = _keySerDes.Serialize(null, arg0);
-            var r1 = _keySerDes.Serialize(null, arg1);
+            var r0 = _keySerDes.Serialize((Java.Lang.String)null, arg0);
+            var r1 = _keySerDes.Serialize((Java.Lang.String)null, arg1);
             using var disposable0 = r0 as IDisposable;
             using var disposable1 = r1 as IDisposable;
 
@@ -260,8 +260,8 @@ namespace MASES.KNet.Streams.State
             IGenericSerDesFactory factory = Factory;
             var _keySerDes = factory?.BuildKeySerDes<K, TJVMK>();
 
-            var r0 = _keySerDes.Serialize(null, arg0);
-            var r1 = _keySerDes.Serialize(null, arg1);
+            var r0 = _keySerDes.Serialize((Java.Lang.String)null, arg0);
+            var r1 = _keySerDes.Serialize((Java.Lang.String)null, arg1);
             using var disposable0 = r0 as IDisposable;
             using var disposable1 = r1 as IDisposable;
 
@@ -279,7 +279,7 @@ namespace MASES.KNet.Streams.State
             IGenericSerDesFactory factory = Factory;
             var _keySerDes = factory?.BuildKeySerDes<K, TJVMK>();
 
-            var r0 = _keySerDes.Serialize(null, arg0);
+            var r0 = _keySerDes.Serialize((Java.Lang.String)null, arg0);
             using var disposable0 = r0 as IDisposable;
 
             return new WindowedKeyValueIterator<K, AGG, TJVMK, TJVMAGG>(factory, Store.FindSessions(r0, arg1, arg2));

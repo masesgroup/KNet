@@ -41,8 +41,8 @@ namespace MASES.KNet.Streams.Kstream
             if (_factory == null) return;
             var keySerDes = _factory?.BuildKeySerDes<TKey, byte[]>();
             var valueSerDes = _factory?.BuildValueSerDes<TValue, byte[]>();
-            byte[] key = !_isKeyCheck.HasValue || _isKeyCheck.Value ? keySerDes.Serialize(null, _key): null;
-            byte[] value = !_isKeyCheck.HasValue || !_isKeyCheck.Value ? valueSerDes.Serialize(null, _value) : null;
+            byte[] key = !_isKeyCheck.HasValue || _isKeyCheck.Value ? keySerDes.Serialize((Java.Lang.String)null, _key): null;
+            byte[] value = !_isKeyCheck.HasValue || !_isKeyCheck.Value ? valueSerDes.Serialize((Java.Lang.String)null, _value) : null;
 
             IExecute("setWorkingState", key, value, _isKeyCheck.HasValue ? _isKeyCheck.Value : null);
         }

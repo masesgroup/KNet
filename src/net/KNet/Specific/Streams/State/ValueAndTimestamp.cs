@@ -102,7 +102,7 @@ namespace MASES.KNet.Streams.State
                 var vv = _inner.Value();
                 using var disposable0 = vv as IDisposable;
 
-                return _valueSerDes.Deserialize(null, vv);
+                return _valueSerDes.Deserialize((Java.Lang.String)null, vv);
             }
         }
     }

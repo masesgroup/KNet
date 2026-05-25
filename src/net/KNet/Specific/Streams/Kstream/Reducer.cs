@@ -76,12 +76,12 @@ namespace MASES.KNet.Streams.Kstream
         /// <summary>
         /// The <typeparamref name="V"/> content
         /// </summary>
-        public virtual V Value1 { get { if (!_value1Set) { _vSerializer ??= Factory?.BuildValueSerDes<V, TJVMV>(); _value1 = _vSerializer.Deserialize(null, _arg0); _value1Set = true; } return _value1; } }
+        public virtual V Value1 { get { if (!_value1Set) { _vSerializer ??= Factory?.BuildValueSerDes<V, TJVMV>(); _value1 = _vSerializer.Deserialize((Java.Lang.String)null, _arg0); _value1Set = true; } return _value1; } }
 
         /// <summary>
         /// The <typeparamref name="V"/> content
         /// </summary>
-        public virtual V Value2 { get { if (!_value2Set) { _vSerializer ??= Factory?.BuildValueSerDes<V, TJVMV>(); _value2 = _vSerializer.Deserialize(null, _arg1); _value2Set = true; } return _value2; } }
+        public virtual V Value2 { get { if (!_value2Set) { _vSerializer ??= Factory?.BuildValueSerDes<V, TJVMV>(); _value2 = _vSerializer.Deserialize((Java.Lang.String)null, _arg1); _value2Set = true; } return _value2; } }
 
         /// <inheritdoc/>
         public override TJVMV Apply(TJVMV arg0, TJVMV arg1)
@@ -95,7 +95,7 @@ namespace MASES.KNet.Streams.Kstream
 
             V res = (OnApply != null) ? OnApply(this) : Apply();
             _vSerializer ??= Factory?.BuildValueSerDes<V, TJVMV>();
-            return _vSerializer.Serialize(null, res);
+            return _vSerializer.Serialize((Java.Lang.String)null, res);
         }
 
         /// <inheritdoc cref="Org.Apache.Kafka.Streams.Kstream.Reducer{V}.Apply(V, V)"/>

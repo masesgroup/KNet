@@ -87,15 +87,15 @@ namespace MASES.KNet.Streams.Kstream
         /// <summary>
         /// The <typeparamref name="K1"/> content
         /// </summary>
-        public virtual K1 Key { get { if (!_key1Set) { _k1Serializer ??= Factory?.BuildKeySerDes<K1, TJVMK1>(); _key1 = _k1Serializer.Deserialize(null, _arg0); _key1Set = true; } return _key1; } }
+        public virtual K1 Key { get { if (!_key1Set) { _k1Serializer ??= Factory?.BuildKeySerDes<K1, TJVMK1>(); _key1 = _k1Serializer.Deserialize((Java.Lang.String)null, _arg0); _key1Set = true; } return _key1; } }
         /// <summary>
         /// The <typeparamref name="V1"/> content
         /// </summary>
-        public virtual V1 Value1 { get { if (!_value1Set) { _v1Serializer ??= Factory?.BuildValueSerDes<V1, TJVMV1>(); _value1 = _v1Serializer.Deserialize(null, _arg1); _value1Set = true; } return _value1; } }
+        public virtual V1 Value1 { get { if (!_value1Set) { _v1Serializer ??= Factory?.BuildValueSerDes<V1, TJVMV1>(); _value1 = _v1Serializer.Deserialize((Java.Lang.String)null, _arg1); _value1Set = true; } return _value1; } }
         /// <summary>
         /// The <typeparamref name="V2"/> content
         /// </summary>
-        public virtual V2 Value2 { get { if (!_value2Set) { _v2Serializer ??= Factory?.BuildValueSerDes<V2, TJVMV2>(); _value2 = _v2Serializer.Deserialize(null, _arg2); _value2Set = true; } return _value2; } }
+        public virtual V2 Value2 { get { if (!_value2Set) { _v2Serializer ??= Factory?.BuildValueSerDes<V2, TJVMV2>(); _value2 = _v2Serializer.Deserialize((Java.Lang.String)null, _arg2); _value2Set = true; } return _value2; } }
         /// <inheritdoc/>
         public override TJVMVR Apply(TJVMK1 arg0, TJVMV1 arg1, TJVMV2 arg2)
         {
@@ -110,7 +110,7 @@ namespace MASES.KNet.Streams.Kstream
 
             VR res = (OnApply != null) ? OnApply(this) : Apply();
             _vrSerializer ??= Factory?.BuildValueSerDes<VR, TJVMVR>();
-            return _vrSerializer.Serialize(null, res);
+            return _vrSerializer.Serialize((Java.Lang.String)null, res);
         }
         /// <inheritdoc cref="Org.Apache.Kafka.Streams.Kstream.ValueJoinerWithKey{K1, V1, V2, VR}.Apply(K1, V1, V2)"/>
         public virtual VR Apply()

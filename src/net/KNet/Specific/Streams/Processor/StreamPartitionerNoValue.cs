@@ -47,7 +47,7 @@ namespace MASES.KNet.Streams.Processor
         /// <inheritdoc/>
         public override string Topic => _arg0;
         /// <inheritdoc/>
-        public override K Key { get { if (!_keySet) { _kSerializer ??= Factory?.BuildKeySerDes<K, TJVMK>(); _key = _kSerializer.Deserialize(null, _arg1); _keySet = true; } return _key; } }
+        public override K Key { get { if (!_keySet) { _kSerializer ??= Factory?.BuildKeySerDes<K, TJVMK>(); _key = _kSerializer.Deserialize((Java.Lang.String)null, _arg1); _keySet = true; } return _key; } }
         /// <inheritdoc/>
         public override string Value { get { throw new InvalidOperationException("Value type is Java.Lang.Void"); } }
         /// <inheritdoc/>
