@@ -136,6 +136,7 @@
     "org.apache.kafka.common.metrics.internals",
     "org.apache.kafka.common.network",
     "org.apache.kafka.common.protocol",
+    "org.apache.kafka.common.record.internal",
     "org.apache.kafka.common.requests",
     "org.apache.kafka.common.security.kerberos",
     "org.apache.kafka.common.security.oauthbearer.internals",
