@@ -51,8 +51,8 @@ namespace MASES.KNet.Streams.State
             IGenericSerDesFactory factory = Factory;
             var _keySerDes = factory?.BuildKeySerDes<K, TJVMK>();
 
-            var r0 = _keySerDes.Serialize(null, arg0);
-            var r1 = _keySerDes.Serialize(null, arg1);
+            var r0 = _keySerDes.Serialize((Java.Lang.String)null, arg0);
+            var r1 = _keySerDes.Serialize((Java.Lang.String)null, arg1);
             using var disposable0 = r0 as IDisposable;
             using var disposable1 = r1 as IDisposable;
 
@@ -68,7 +68,7 @@ namespace MASES.KNet.Streams.State
             IGenericSerDesFactory factory = Factory;
             var _keySerDes = factory?.BuildKeySerDes<K, TJVMK>();
 
-            var r0 = _keySerDes.Serialize(null, arg0);
+            var r0 = _keySerDes.Serialize((Java.Lang.String)null, arg0);
             var res = Store.Get(r0);
             using var disposable0 = r0 as IDisposable;
             using var disposable1 = res as IDisposable;
@@ -81,7 +81,7 @@ namespace MASES.KNet.Streams.State
         /// <returns><see cref="TimestampedKeyValueIterator{K, V, TJVMK, TJVMV}"/></returns>
         public TimestampedKeyValueIterator<K, V, TJVMK, TJVMV> PrefixScan<P, TJVMP>(P arg0, ISerDes<P, TJVMP> arg1)
         {
-            var r0 = arg1.Serialize(null, arg0);
+            var r0 = arg1.Serialize((Java.Lang.String)null, arg0);
             using var disposable0 = r0 as IDisposable;
 
             return new(Factory, Store.PrefixScan(r0, arg1.KafkaSerializer));
@@ -102,8 +102,8 @@ namespace MASES.KNet.Streams.State
             IGenericSerDesFactory factory = Factory;
             var _keySerDes = factory?.BuildKeySerDes<K, TJVMK>();
 
-            var r0 = _keySerDes.Serialize(null, arg0);
-            var r1 = _keySerDes.Serialize(null, arg1);
+            var r0 = _keySerDes.Serialize((Java.Lang.String)null, arg0);
+            var r1 = _keySerDes.Serialize((Java.Lang.String)null, arg1);
             using var disposable0 = r0 as IDisposable;
             using var disposable1 = r1 as IDisposable;
 

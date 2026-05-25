@@ -86,8 +86,8 @@ namespace MASES.KNet.Streams.Kstream
             _vSerializer ??= Factory?.BuildValueSerDes<V, TJVMV>();
             _vrSerializer ??= Factory?.BuildValueSerDes<VR, TJVMVR>();
             var methodToExecute = (OnApply != null) ? OnApply : Apply;
-            var res = methodToExecute(_kSerializer.Deserialize(null, arg0), _vSerializer.Deserialize(null, arg1));
-            return _vrSerializer.Serialize(null, res);
+            var res = methodToExecute(_kSerializer.Deserialize((Java.Lang.String)null, arg0), _vSerializer.Deserialize((Java.Lang.String)null, arg1));
+            return _vrSerializer.Serialize((Java.Lang.String)null, res);
         }
         /// <inheritdoc cref="Org.Apache.Kafka.Streams.Kstream.KeyValueMapper{K, V, VR}.Apply(K, V)"/>
         public virtual VR Apply(K arg0, V arg1)
@@ -124,7 +124,7 @@ namespace MASES.KNet.Streams.Kstream
             _kSerializer ??= Factory?.BuildKeySerDes<K, TJVMK>();
             _vSerializer ??= Factory?.BuildValueSerDes<V, TJVMV>();
             var methodToExecute = (OnApply != null) ? OnApply : Apply;
-            var res = methodToExecute(_kSerializer.Deserialize(null, arg0), _vSerializer.Deserialize(null, arg1));
+            var res = methodToExecute(_kSerializer.Deserialize((Java.Lang.String)null, arg0), _vSerializer.Deserialize((Java.Lang.String)null, arg1));
             return res;
         }
     }
@@ -169,9 +169,9 @@ namespace MASES.KNet.Streams.Kstream
             _vrSerializer ??= Factory?.BuildValueSerDes<VR, TJVMVR>();
 
             var methodToExecute = (OnApply != null) ? OnApply : Apply;
-            var res = methodToExecute(_kSerializer.Deserialize(null, arg0), _vSerializer.Deserialize(null, arg1));
-            var jKR = _krSerializer.Serialize(null, res.Item1);
-            var jVR = _vrSerializer.Serialize(null, res.Item2);
+            var res = methodToExecute(_kSerializer.Deserialize((Java.Lang.String)null, arg0), _vSerializer.Deserialize((Java.Lang.String)null, arg1));
+            var jKR = _krSerializer.Serialize((Java.Lang.String)null, res.Item1);
+            var jVR = _vrSerializer.Serialize((Java.Lang.String)null, res.Item2);
 
             using var disposable0 = jKR as IDisposable;
             using var disposable1 = jVR as IDisposable;
@@ -227,12 +227,12 @@ namespace MASES.KNet.Streams.Kstream
             _vrSerializer ??= Factory?.BuildValueSerDes<VR, TJVMVR>();
 
             var methodToExecute = (OnApply != null) ? OnApply : Apply;
-            var res = methodToExecute(_kSerializer.Deserialize(null, arg0), _vSerializer.Deserialize(null, arg1));
+            var res = methodToExecute(_kSerializer.Deserialize((Java.Lang.String)null, arg0), _vSerializer.Deserialize((Java.Lang.String)null, arg1));
             var result = new ArrayList<Org.Apache.Kafka.Streams.KeyValue<TJVMKR, TJVMVR>>();
             foreach (var item in res)
             {
-                var jKR = _krSerializer.Serialize(null, item.Item1);
-                var jVR = _vrSerializer.Serialize(null, item.Item2);
+                var jKR = _krSerializer.Serialize((Java.Lang.String)null, item.Item1);
+                var jVR = _vrSerializer.Serialize((Java.Lang.String)null, item.Item2);
 
                 using var disposable0 = jKR as IDisposable;
                 using var disposable1 = jVR as IDisposable;

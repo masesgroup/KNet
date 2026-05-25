@@ -81,8 +81,8 @@ namespace MASES.KNet.Streams.Kstream
             _vrSerializer ??= Factory?.BuildValueSerDes<VR, TJVMVR>();
 
             var methodToExecute = (OnApply != null) ? OnApply : Apply;
-            var res = methodToExecute(_vSerializer.Deserialize(null, arg0));
-            return _vrSerializer.Serialize(null, res);
+            var res = methodToExecute(_vSerializer.Deserialize((Java.Lang.String)null, arg0));
+            return _vrSerializer.Serialize((Java.Lang.String)null, res);
         }
         /// <inheritdoc cref="Org.Apache.Kafka.Streams.Kstream.ValueMapper{V, VR}.Apply(V)"/>
         public virtual VR Apply(V arg0)
@@ -125,11 +125,11 @@ namespace MASES.KNet.Streams.Kstream
             _vrSerializer ??= Factory?.BuildValueSerDes<VR, TJVMVR>();
 
             var methodToExecute = (OnApply != null) ? OnApply : Apply;
-            var res = methodToExecute(_vSerializer.Deserialize(null, arg0));
+            var res = methodToExecute(_vSerializer.Deserialize((Java.Lang.String)null, arg0));
             var result = new ArrayList<TJVMVR>();
             foreach (var item in res)
             {
-                var localValue = _vrSerializer.Serialize(null, item);
+                var localValue = _vrSerializer.Serialize((Java.Lang.String)null, item);
                 using var localDisposable = localValue as IDisposable;
                 result.Add(localValue);
             }

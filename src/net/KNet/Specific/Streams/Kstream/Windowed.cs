@@ -86,7 +86,7 @@ namespace MASES.KNet.Streams.Kstream
         /// KNet implementation of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/kstream/Windowed.html#key()"/>
         /// </summary>
         /// <returns><typeparamref name="K"/></returns>
-        public K Key { get { CheckDisposed(); _keySerDes ??= _factory?.BuildKeySerDes<K, TJVMK>(); return _keySerDes.Deserialize(null, _inner.Key()); } }
+        public K Key { get { CheckDisposed(); _keySerDes ??= _factory?.BuildKeySerDes<K, TJVMK>(); return _keySerDes.Deserialize((Java.Lang.String)null, _inner.Key()); } }
         /// <summary>
         /// KNet implementation of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/kstream/Windowed.html#window()"/>
         /// </summary>

@@ -49,8 +49,8 @@ namespace MASES.KNet.Streams.State
             IGenericSerDesFactory factory = Factory;
             var _keySerDes = factory?.BuildKeySerDes<K, TJVMK>();
 
-            var r0 = _keySerDes.Serialize(null, arg0);
-            var r1 = _keySerDes.Serialize(null, arg1);
+            var r0 = _keySerDes.Serialize((Java.Lang.String)null, arg0);
+            var r1 = _keySerDes.Serialize((Java.Lang.String)null, arg1);
             using var disposable0 = r0 as IDisposable;
             using var disposable1 = r1 as IDisposable;
 
@@ -80,7 +80,7 @@ namespace MASES.KNet.Streams.State
             IGenericSerDesFactory factory = Factory;
             var _keySerDes = factory?.BuildKeySerDes<K, TJVMK>();
 
-            var r0 = _keySerDes.Serialize(null, arg0);
+            var r0 = _keySerDes.Serialize((Java.Lang.String)null, arg0);
             using var disposable0 = r0 as IDisposable;
 
             return new(factory, Store.Fetch(r0, arg1, arg2));
@@ -96,7 +96,7 @@ namespace MASES.KNet.Streams.State
             IGenericSerDesFactory factory = Factory;
             var _keySerDes = factory?.BuildKeySerDes<K, TJVMK>();
 
-            var r0 = _keySerDes.Serialize(null, arg0);
+            var r0 = _keySerDes.Serialize((Java.Lang.String)null, arg0);
             var agg = Store.Fetch(r0, arg1);
             using var disposable0 = r0 as IDisposable;
             using var disposable1 = agg as IDisposable;
@@ -122,8 +122,8 @@ namespace MASES.KNet.Streams.State
             IGenericSerDesFactory factory = Factory;
             var _keySerDes = factory?.BuildKeySerDes<K, TJVMK>();
 
-            var r0 = _keySerDes.Serialize(null, arg0);
-            var r1 = _keySerDes.Serialize(null, arg1);
+            var r0 = _keySerDes.Serialize((Java.Lang.String)null, arg0);
+            var r1 = _keySerDes.Serialize((Java.Lang.String)null, arg1);
             using var disposable0 = r0 as IDisposable;
             using var disposable1 = r1 as IDisposable;
 
@@ -153,7 +153,7 @@ namespace MASES.KNet.Streams.State
             IGenericSerDesFactory factory = Factory;
             var _keySerDes = factory?.BuildKeySerDes<K, TJVMK>();
 
-            var r0 = _keySerDes.Serialize(null, arg0);
+            var r0 = _keySerDes.Serialize((Java.Lang.String)null, arg0);
             using var disposable0 = r0 as IDisposable;
 
             return new(factory, Store.BackwardFetch(r0, arg1, arg2));
