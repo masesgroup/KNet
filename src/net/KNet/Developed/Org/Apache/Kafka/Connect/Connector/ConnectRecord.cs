@@ -45,10 +45,6 @@ namespace Org.Apache.Kafka.Connect.Connector
         public override string BridgeClassName => "org.apache.kafka.connect.connector.ConnectRecord";
 
         /// <summary>
-        /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
-        /// </summary>
-        public ConnectRecord() { }
-        /// <summary>
         /// Internal constructor: used internally from JCOBridge
         /// </summary>
         [global::System.Obsolete("This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
