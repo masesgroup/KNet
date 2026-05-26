@@ -199,10 +199,6 @@ namespace Org.Apache.Kafka.Connect.Source
     public class SourceRecord<TKey, TValue> : SourceRecord<object, object, TKey, TValue>
     {
         /// <summary>
-        /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
-        /// </summary>
-        public SourceRecord() { }
-        /// <summary>
         /// Internal constructor: used internally from JCOBridge
         /// </summary>
         [global::System.Obsolete("This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
