@@ -55,7 +55,42 @@ namespace Org.Apache.Kafka.Streams
         public override bool IsBridgeStatic => false;
 
         // TODO: complete the class
+        #region AutoOffsetReset declaration
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/Topology.AutoOffsetReset.html"/>
+        /// </summary>
+        [global::System.Obsolete()]
+        public partial class AutoOffsetReset : Java.Lang.Enum<Org.Apache.Kafka.Streams.Topology.AutoOffsetReset>
+        {
+            const string _bridgeClassName = "org.apache.kafka.streams.Topology$AutoOffsetReset";
 
+            /// <summary>
+            /// Initializer used internally by JCOBridge. Do not use directly.
+            /// </summary>
+            [global::System.Obsolete("This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
+            public AutoOffsetReset(IJVMBridgeBaseInitializer initializer) : base(initializer) { }
+
+            private static readonly global::System.Exception _LocalBridgeClazzException = null;
+            private static readonly MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType _LocalBridgeClazz = JVMBridgeBase.ClazzOf(_bridgeClassName, out _LocalBridgeClazzException, false);
+            private static MASES.JCOBridge.C2JBridge.JVMInterop.IJavaType LocalBridgeClazz => _LocalBridgeClazz ?? throw _LocalBridgeClazzException ?? new global::System.InvalidOperationException($"Class {_bridgeClassName} was not found.");
+
+            /// <inheritdoc/>
+            public override string BridgeClassName => _bridgeClassName;
+            /// <inheritdoc/>
+            public override bool IsBridgeAbstract => false;
+            /// <inheritdoc/>
+            public override bool IsBridgeCloseable => false;
+            /// <inheritdoc/>
+            public override bool IsBridgeInterface => false;
+            /// <inheritdoc/>
+            public override bool IsBridgeStatic => true;
+
+            // TODO: complete the class
+
+        }
+        #endregion
+
+    
     }
     #endregion
 
@@ -378,6 +413,72 @@ namespace Org.Apache.Kafka.Streams
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.Topology>("addSource", "(Lorg/apache/kafka/streams/AutoOffsetReset;Ljava/lang/String;Lorg/apache/kafka/streams/processor/TimestampExtractor;Lorg/apache/kafka/common/serialization/Deserializer;Lorg/apache/kafka/common/serialization/Deserializer;Ljava/util/regex/Pattern;)Lorg/apache/kafka/streams/Topology;", arg0, arg1, arg2, arg3, arg4, arg5);
         }
         /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/Topology.html#addSource(org.apache.kafka.streams.Topology.AutoOffsetReset,java.lang.String,org.apache.kafka.common.serialization.Deserializer,org.apache.kafka.common.serialization.Deserializer,java.lang.String...)"/>
+        /// </summary>
+        /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Topology.AutoOffsetReset"/></param>
+        /// <param name="arg1"><see cref="Java.Lang.String"/></param>
+        /// <param name="arg2"><see cref="Org.Apache.Kafka.Common.Serialization.Deserializer"/></param>
+        /// <param name="arg3"><see cref="Org.Apache.Kafka.Common.Serialization.Deserializer"/></param>
+        /// <param name="arg4"><see cref="Java.Lang.String"/></param>
+        /// <typeparam name="K"></typeparam>
+        /// <typeparam name="V"></typeparam>
+        /// <returns><see cref="Org.Apache.Kafka.Streams.Topology"/></returns>
+        [global::System.Obsolete()]
+        public Org.Apache.Kafka.Streams.Topology AddSource<K, V>(Org.Apache.Kafka.Streams.Topology.AutoOffsetReset arg0, Java.Lang.String arg1, Org.Apache.Kafka.Common.Serialization.Deserializer<K> arg2, Org.Apache.Kafka.Common.Serialization.Deserializer<V> arg3, params Java.Lang.String[] arg4)
+        {
+            return IExecuteWithSignature<Org.Apache.Kafka.Streams.Topology>("addSource", "(Lorg/apache/kafka/streams/Topology$AutoOffsetReset;Ljava/lang/String;Lorg/apache/kafka/common/serialization/Deserializer;Lorg/apache/kafka/common/serialization/Deserializer;[Ljava/lang/String;)Lorg/apache/kafka/streams/Topology;", MASES.JNet.Specific.Extensions.JNetCoreExtensions.VarArgRebuild(arg4, arg0, arg1, arg2, arg3));
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/Topology.html#addSource(org.apache.kafka.streams.Topology.AutoOffsetReset,java.lang.String,org.apache.kafka.common.serialization.Deserializer,org.apache.kafka.common.serialization.Deserializer,java.util.regex.Pattern)"/>
+        /// </summary>
+        /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Topology.AutoOffsetReset"/></param>
+        /// <param name="arg1"><see cref="Java.Lang.String"/></param>
+        /// <param name="arg2"><see cref="Org.Apache.Kafka.Common.Serialization.Deserializer"/></param>
+        /// <param name="arg3"><see cref="Org.Apache.Kafka.Common.Serialization.Deserializer"/></param>
+        /// <param name="arg4"><see cref="Java.Util.Regex.Pattern"/></param>
+        /// <typeparam name="K"></typeparam>
+        /// <typeparam name="V"></typeparam>
+        /// <returns><see cref="Org.Apache.Kafka.Streams.Topology"/></returns>
+        [global::System.Obsolete()]
+        public Org.Apache.Kafka.Streams.Topology AddSource<K, V>(Org.Apache.Kafka.Streams.Topology.AutoOffsetReset arg0, Java.Lang.String arg1, Org.Apache.Kafka.Common.Serialization.Deserializer<K> arg2, Org.Apache.Kafka.Common.Serialization.Deserializer<V> arg3, Java.Util.Regex.Pattern arg4)
+        {
+            return IExecuteWithSignature<Org.Apache.Kafka.Streams.Topology>("addSource", "(Lorg/apache/kafka/streams/Topology$AutoOffsetReset;Ljava/lang/String;Lorg/apache/kafka/common/serialization/Deserializer;Lorg/apache/kafka/common/serialization/Deserializer;Ljava/util/regex/Pattern;)Lorg/apache/kafka/streams/Topology;", arg0, arg1, arg2, arg3, arg4);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/Topology.html#addSource(org.apache.kafka.streams.Topology.AutoOffsetReset,java.lang.String,org.apache.kafka.streams.processor.TimestampExtractor,org.apache.kafka.common.serialization.Deserializer,org.apache.kafka.common.serialization.Deserializer,java.lang.String...)"/>
+        /// </summary>
+        /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Topology.AutoOffsetReset"/></param>
+        /// <param name="arg1"><see cref="Java.Lang.String"/></param>
+        /// <param name="arg2"><see cref="Org.Apache.Kafka.Streams.Processor.TimestampExtractor"/></param>
+        /// <param name="arg3"><see cref="Org.Apache.Kafka.Common.Serialization.Deserializer"/></param>
+        /// <param name="arg4"><see cref="Org.Apache.Kafka.Common.Serialization.Deserializer"/></param>
+        /// <param name="arg5"><see cref="Java.Lang.String"/></param>
+        /// <typeparam name="K"></typeparam>
+        /// <typeparam name="V"></typeparam>
+        /// <returns><see cref="Org.Apache.Kafka.Streams.Topology"/></returns>
+        [global::System.Obsolete()]
+        public Org.Apache.Kafka.Streams.Topology AddSource<K, V>(Org.Apache.Kafka.Streams.Topology.AutoOffsetReset arg0, Java.Lang.String arg1, Org.Apache.Kafka.Streams.Processor.TimestampExtractor arg2, Org.Apache.Kafka.Common.Serialization.Deserializer<K> arg3, Org.Apache.Kafka.Common.Serialization.Deserializer<V> arg4, params Java.Lang.String[] arg5)
+        {
+            return IExecuteWithSignature<Org.Apache.Kafka.Streams.Topology>("addSource", "(Lorg/apache/kafka/streams/Topology$AutoOffsetReset;Ljava/lang/String;Lorg/apache/kafka/streams/processor/TimestampExtractor;Lorg/apache/kafka/common/serialization/Deserializer;Lorg/apache/kafka/common/serialization/Deserializer;[Ljava/lang/String;)Lorg/apache/kafka/streams/Topology;", MASES.JNet.Specific.Extensions.JNetCoreExtensions.VarArgRebuild(arg5, arg0, arg1, arg2, arg3, arg4));
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/Topology.html#addSource(org.apache.kafka.streams.Topology.AutoOffsetReset,java.lang.String,org.apache.kafka.streams.processor.TimestampExtractor,org.apache.kafka.common.serialization.Deserializer,org.apache.kafka.common.serialization.Deserializer,java.util.regex.Pattern)"/>
+        /// </summary>
+        /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Topology.AutoOffsetReset"/></param>
+        /// <param name="arg1"><see cref="Java.Lang.String"/></param>
+        /// <param name="arg2"><see cref="Org.Apache.Kafka.Streams.Processor.TimestampExtractor"/></param>
+        /// <param name="arg3"><see cref="Org.Apache.Kafka.Common.Serialization.Deserializer"/></param>
+        /// <param name="arg4"><see cref="Org.Apache.Kafka.Common.Serialization.Deserializer"/></param>
+        /// <param name="arg5"><see cref="Java.Util.Regex.Pattern"/></param>
+        /// <typeparam name="K"></typeparam>
+        /// <typeparam name="V"></typeparam>
+        /// <returns><see cref="Org.Apache.Kafka.Streams.Topology"/></returns>
+        [global::System.Obsolete()]
+        public Org.Apache.Kafka.Streams.Topology AddSource<K, V>(Org.Apache.Kafka.Streams.Topology.AutoOffsetReset arg0, Java.Lang.String arg1, Org.Apache.Kafka.Streams.Processor.TimestampExtractor arg2, Org.Apache.Kafka.Common.Serialization.Deserializer<K> arg3, Org.Apache.Kafka.Common.Serialization.Deserializer<V> arg4, Java.Util.Regex.Pattern arg5)
+        {
+            return IExecuteWithSignature<Org.Apache.Kafka.Streams.Topology>("addSource", "(Lorg/apache/kafka/streams/Topology$AutoOffsetReset;Ljava/lang/String;Lorg/apache/kafka/streams/processor/TimestampExtractor;Lorg/apache/kafka/common/serialization/Deserializer;Lorg/apache/kafka/common/serialization/Deserializer;Ljava/util/regex/Pattern;)Lorg/apache/kafka/streams/Topology;", arg0, arg1, arg2, arg3, arg4, arg5);
+        }
+        /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/Topology.html#addProcessor(java.lang.String,org.apache.kafka.streams.processor.api.ProcessorSupplier,java.lang.String...)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
@@ -503,6 +604,56 @@ namespace Org.Apache.Kafka.Streams
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.Topology>("addSource", "(Lorg/apache/kafka/streams/processor/TimestampExtractor;Ljava/lang/String;Ljava/util/regex/Pattern;)Lorg/apache/kafka/streams/Topology;", arg0, arg1, arg2);
         }
         /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/Topology.html#addSource(org.apache.kafka.streams.Topology.AutoOffsetReset,java.lang.String,java.lang.String...)"/>
+        /// </summary>
+        /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Topology.AutoOffsetReset"/></param>
+        /// <param name="arg1"><see cref="Java.Lang.String"/></param>
+        /// <param name="arg2"><see cref="Java.Lang.String"/></param>
+        /// <returns><see cref="Org.Apache.Kafka.Streams.Topology"/></returns>
+        [global::System.Obsolete()]
+        public Org.Apache.Kafka.Streams.Topology AddSource(Org.Apache.Kafka.Streams.Topology.AutoOffsetReset arg0, Java.Lang.String arg1, params Java.Lang.String[] arg2)
+        {
+            return IExecuteWithSignature<Org.Apache.Kafka.Streams.Topology>("addSource", "(Lorg/apache/kafka/streams/Topology$AutoOffsetReset;Ljava/lang/String;[Ljava/lang/String;)Lorg/apache/kafka/streams/Topology;", MASES.JNet.Specific.Extensions.JNetCoreExtensions.VarArgRebuild(arg2, arg0, arg1));
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/Topology.html#addSource(org.apache.kafka.streams.Topology.AutoOffsetReset,java.lang.String,java.util.regex.Pattern)"/>
+        /// </summary>
+        /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Topology.AutoOffsetReset"/></param>
+        /// <param name="arg1"><see cref="Java.Lang.String"/></param>
+        /// <param name="arg2"><see cref="Java.Util.Regex.Pattern"/></param>
+        /// <returns><see cref="Org.Apache.Kafka.Streams.Topology"/></returns>
+        [global::System.Obsolete()]
+        public Org.Apache.Kafka.Streams.Topology AddSource(Org.Apache.Kafka.Streams.Topology.AutoOffsetReset arg0, Java.Lang.String arg1, Java.Util.Regex.Pattern arg2)
+        {
+            return IExecuteWithSignature<Org.Apache.Kafka.Streams.Topology>("addSource", "(Lorg/apache/kafka/streams/Topology$AutoOffsetReset;Ljava/lang/String;Ljava/util/regex/Pattern;)Lorg/apache/kafka/streams/Topology;", arg0, arg1, arg2);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/Topology.html#addSource(org.apache.kafka.streams.Topology.AutoOffsetReset,org.apache.kafka.streams.processor.TimestampExtractor,java.lang.String,java.lang.String...)"/>
+        /// </summary>
+        /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Topology.AutoOffsetReset"/></param>
+        /// <param name="arg1"><see cref="Org.Apache.Kafka.Streams.Processor.TimestampExtractor"/></param>
+        /// <param name="arg2"><see cref="Java.Lang.String"/></param>
+        /// <param name="arg3"><see cref="Java.Lang.String"/></param>
+        /// <returns><see cref="Org.Apache.Kafka.Streams.Topology"/></returns>
+        [global::System.Obsolete()]
+        public Org.Apache.Kafka.Streams.Topology AddSource(Org.Apache.Kafka.Streams.Topology.AutoOffsetReset arg0, Org.Apache.Kafka.Streams.Processor.TimestampExtractor arg1, Java.Lang.String arg2, params Java.Lang.String[] arg3)
+        {
+            return IExecuteWithSignature<Org.Apache.Kafka.Streams.Topology>("addSource", "(Lorg/apache/kafka/streams/Topology$AutoOffsetReset;Lorg/apache/kafka/streams/processor/TimestampExtractor;Ljava/lang/String;[Ljava/lang/String;)Lorg/apache/kafka/streams/Topology;", MASES.JNet.Specific.Extensions.JNetCoreExtensions.VarArgRebuild(arg3, arg0, arg1, arg2));
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/Topology.html#addSource(org.apache.kafka.streams.Topology.AutoOffsetReset,org.apache.kafka.streams.processor.TimestampExtractor,java.lang.String,java.util.regex.Pattern)"/>
+        /// </summary>
+        /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Topology.AutoOffsetReset"/></param>
+        /// <param name="arg1"><see cref="Org.Apache.Kafka.Streams.Processor.TimestampExtractor"/></param>
+        /// <param name="arg2"><see cref="Java.Lang.String"/></param>
+        /// <param name="arg3"><see cref="Java.Util.Regex.Pattern"/></param>
+        /// <returns><see cref="Org.Apache.Kafka.Streams.Topology"/></returns>
+        [global::System.Obsolete()]
+        public Org.Apache.Kafka.Streams.Topology AddSource(Org.Apache.Kafka.Streams.Topology.AutoOffsetReset arg0, Org.Apache.Kafka.Streams.Processor.TimestampExtractor arg1, Java.Lang.String arg2, Java.Util.Regex.Pattern arg3)
+        {
+            return IExecuteWithSignature<Org.Apache.Kafka.Streams.Topology>("addSource", "(Lorg/apache/kafka/streams/Topology$AutoOffsetReset;Lorg/apache/kafka/streams/processor/TimestampExtractor;Ljava/lang/String;Ljava/util/regex/Pattern;)Lorg/apache/kafka/streams/Topology;", arg0, arg1, arg2, arg3);
+        }
+        /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/Topology.html#connectProcessorAndStateStores(java.lang.String,java.lang.String...)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
@@ -524,7 +675,67 @@ namespace Org.Apache.Kafka.Streams
         #endregion
 
         #region Nested classes
+        #region AutoOffsetReset implementation
+        public partial class AutoOffsetReset
+        {
+            #region Constructors
 
+            #endregion
+
+            #region Class/Interface conversion operators
+
+            #endregion
+
+            #region Fields
+            /// <summary>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/Topology.AutoOffsetReset.html#EARLIEST"/>
+            /// </summary>
+            public static Org.Apache.Kafka.Streams.Topology.AutoOffsetReset EARLIEST { get { if (!_EARLIESTReady) { _EARLIESTContent = SGetField<Org.Apache.Kafka.Streams.Topology.AutoOffsetReset>(LocalBridgeClazz, "EARLIEST"); _EARLIESTReady = true; } return _EARLIESTContent; } }
+            private static Org.Apache.Kafka.Streams.Topology.AutoOffsetReset _EARLIESTContent = default;
+            private static bool _EARLIESTReady = false; // this is used because in case of generics 
+            /// <summary>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/Topology.AutoOffsetReset.html#LATEST"/>
+            /// </summary>
+            public static Org.Apache.Kafka.Streams.Topology.AutoOffsetReset LATEST { get { if (!_LATESTReady) { _LATESTContent = SGetField<Org.Apache.Kafka.Streams.Topology.AutoOffsetReset>(LocalBridgeClazz, "LATEST"); _LATESTReady = true; } return _LATESTContent; } }
+            private static Org.Apache.Kafka.Streams.Topology.AutoOffsetReset _LATESTContent = default;
+            private static bool _LATESTReady = false; // this is used because in case of generics 
+
+            #endregion
+
+            #region Static methods
+            /// <summary>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/Topology.AutoOffsetReset.html#valueOf(java.lang.String)"/>
+            /// </summary>
+            /// <param name="arg0"><see cref="Java.Lang.String"/></param>
+            /// <returns><see cref="Org.Apache.Kafka.Streams.Topology.AutoOffsetReset"/></returns>
+            public static Org.Apache.Kafka.Streams.Topology.AutoOffsetReset ValueOf(Java.Lang.String arg0)
+            {
+                return SExecuteWithSignature<Org.Apache.Kafka.Streams.Topology.AutoOffsetReset>(LocalBridgeClazz, "valueOf", "(Ljava/lang/String;)Lorg/apache/kafka/streams/Topology$AutoOffsetReset;", arg0);
+            }
+            /// <summary>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/Topology.AutoOffsetReset.html#values()"/>
+            /// </summary>
+            /// <returns><see cref="Org.Apache.Kafka.Streams.Topology.AutoOffsetReset"/></returns>
+            public static Org.Apache.Kafka.Streams.Topology.AutoOffsetReset[] Values()
+            {
+                return SExecuteWithSignatureArray<Org.Apache.Kafka.Streams.Topology.AutoOffsetReset>(LocalBridgeClazz, "values", "()[Lorg/apache/kafka/streams/Topology$AutoOffsetReset;");
+            }
+
+            #endregion
+
+            #region Instance methods
+
+            #endregion
+
+            #region Nested classes
+
+            #endregion
+
+            // TODO: complete the class
+        }
+        #endregion
+
+    
         #endregion
 
         // TODO: complete the class

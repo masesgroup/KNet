@@ -64,10 +64,28 @@ namespace Org.Rocksdb
     {
         #region Constructors
         /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/Logger.html#%3Cinit%3E(org.rocksdb.DBOptions)"/>
+        /// </summary>
+        /// <param name="arg0"><see cref="Org.Rocksdb.DBOptions"/></param>
+        [global::System.Obsolete()]
+        public Logger(Org.Rocksdb.DBOptions arg0) : base(JVMBridgeBase.InitializerInstance)
+        {
+            InvokeInitializer(arg0);
+        }
+        /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/Logger.html#%3Cinit%3E(org.rocksdb.InfoLogLevel)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Rocksdb.InfoLogLevel"/></param>
         public Logger(Org.Rocksdb.InfoLogLevel arg0) : base(JVMBridgeBase.InitializerInstance)
+        {
+            InvokeInitializer(arg0);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/Logger.html#%3Cinit%3E(org.rocksdb.Options)"/>
+        /// </summary>
+        /// <param name="arg0"><see cref="Org.Rocksdb.Options"/></param>
+        [global::System.Obsolete()]
+        public Logger(Org.Rocksdb.Options arg0) : base(JVMBridgeBase.InitializerInstance)
         {
             InvokeInitializer(arg0);
         }

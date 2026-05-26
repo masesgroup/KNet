@@ -259,6 +259,20 @@ namespace Org.Apache.Kafka.Common.Config
         private static Java.Lang.String _MAX_MESSAGE_BYTES_DOCContent = default;
         private static bool _MAX_MESSAGE_BYTES_DOCReady = false; // this is used because in case of generics 
         /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.0/org/apache/kafka/common/config/TopicConfig.html#MESSAGE_DOWNCONVERSION_ENABLE_CONFIG"/>
+        /// </summary>
+        [global::System.Obsolete()]
+        public static Java.Lang.String MESSAGE_DOWNCONVERSION_ENABLE_CONFIG { get { if (!_MESSAGE_DOWNCONVERSION_ENABLE_CONFIGReady) { _MESSAGE_DOWNCONVERSION_ENABLE_CONFIGContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "MESSAGE_DOWNCONVERSION_ENABLE_CONFIG"); _MESSAGE_DOWNCONVERSION_ENABLE_CONFIGReady = true; } return _MESSAGE_DOWNCONVERSION_ENABLE_CONFIGContent; } }
+        private static Java.Lang.String _MESSAGE_DOWNCONVERSION_ENABLE_CONFIGContent = default;
+        private static bool _MESSAGE_DOWNCONVERSION_ENABLE_CONFIGReady = false; // this is used because in case of generics 
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.0/org/apache/kafka/common/config/TopicConfig.html#MESSAGE_DOWNCONVERSION_ENABLE_DOC"/>
+        /// </summary>
+        [global::System.Obsolete()]
+        public static Java.Lang.String MESSAGE_DOWNCONVERSION_ENABLE_DOC { get { if (!_MESSAGE_DOWNCONVERSION_ENABLE_DOCReady) { _MESSAGE_DOWNCONVERSION_ENABLE_DOCContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "MESSAGE_DOWNCONVERSION_ENABLE_DOC"); _MESSAGE_DOWNCONVERSION_ENABLE_DOCReady = true; } return _MESSAGE_DOWNCONVERSION_ENABLE_DOCContent; } }
+        private static Java.Lang.String _MESSAGE_DOWNCONVERSION_ENABLE_DOCContent = default;
+        private static bool _MESSAGE_DOWNCONVERSION_ENABLE_DOCReady = false; // this is used because in case of generics 
+        /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.0/org/apache/kafka/common/config/TopicConfig.html#MESSAGE_TIMESTAMP_AFTER_MAX_MS_CONFIG"/>
         /// </summary>
         public static Java.Lang.String MESSAGE_TIMESTAMP_AFTER_MAX_MS_CONFIG { get { if (!_MESSAGE_TIMESTAMP_AFTER_MAX_MS_CONFIGReady) { _MESSAGE_TIMESTAMP_AFTER_MAX_MS_CONFIGContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "MESSAGE_TIMESTAMP_AFTER_MAX_MS_CONFIG"); _MESSAGE_TIMESTAMP_AFTER_MAX_MS_CONFIGReady = true; } return _MESSAGE_TIMESTAMP_AFTER_MAX_MS_CONFIGContent; } }

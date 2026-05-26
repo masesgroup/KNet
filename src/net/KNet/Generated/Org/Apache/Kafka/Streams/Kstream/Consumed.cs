@@ -133,6 +133,19 @@ namespace Org.Apache.Kafka.Streams.Kstream
             return SExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.Consumed>(LocalBridgeClazz, "with", "(Lorg/apache/kafka/common/serialization/Serde;Lorg/apache/kafka/common/serialization/Serde;Lorg/apache/kafka/streams/processor/TimestampExtractor;Lorg/apache/kafka/streams/AutoOffsetReset;)Lorg/apache/kafka/streams/kstream/Consumed;", arg0, arg1, arg2, arg3);
         }
         /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/kstream/Consumed.html#with(org.apache.kafka.common.serialization.Serde,org.apache.kafka.common.serialization.Serde,org.apache.kafka.streams.processor.TimestampExtractor,org.apache.kafka.streams.Topology.AutoOffsetReset)"/>
+        /// </summary>
+        /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></param>
+        /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></param>
+        /// <param name="arg2"><see cref="Org.Apache.Kafka.Streams.Processor.TimestampExtractor"/></param>
+        /// <param name="arg3"><see cref="Org.Apache.Kafka.Streams.Topology.AutoOffsetReset"/></param>
+        /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.Consumed"/></returns>
+        [global::System.Obsolete()]
+        public static Org.Apache.Kafka.Streams.Kstream.Consumed With(Org.Apache.Kafka.Common.Serialization.Serde arg0, Org.Apache.Kafka.Common.Serialization.Serde arg1, Org.Apache.Kafka.Streams.Processor.TimestampExtractor arg2, Org.Apache.Kafka.Streams.Topology.AutoOffsetReset arg3)
+        {
+            return SExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.Consumed>(LocalBridgeClazz, "with", "(Lorg/apache/kafka/common/serialization/Serde;Lorg/apache/kafka/common/serialization/Serde;Lorg/apache/kafka/streams/processor/TimestampExtractor;Lorg/apache/kafka/streams/Topology$AutoOffsetReset;)Lorg/apache/kafka/streams/kstream/Consumed;", arg0, arg1, arg2, arg3);
+        }
+        /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/kstream/Consumed.html#with(org.apache.kafka.common.serialization.Serde,org.apache.kafka.common.serialization.Serde)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></param>
@@ -160,6 +173,16 @@ namespace Org.Apache.Kafka.Streams.Kstream
         {
             return SExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.Consumed>(LocalBridgeClazz, "with", "(Lorg/apache/kafka/streams/processor/TimestampExtractor;)Lorg/apache/kafka/streams/kstream/Consumed;", arg0);
         }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/kstream/Consumed.html#with(org.apache.kafka.streams.Topology.AutoOffsetReset)"/>
+        /// </summary>
+        /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Topology.AutoOffsetReset"/></param>
+        /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.Consumed"/></returns>
+        [global::System.Obsolete()]
+        public static Org.Apache.Kafka.Streams.Kstream.Consumed With(Org.Apache.Kafka.Streams.Topology.AutoOffsetReset arg0)
+        {
+            return SExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.Consumed>(LocalBridgeClazz, "with", "(Lorg/apache/kafka/streams/Topology$AutoOffsetReset;)Lorg/apache/kafka/streams/kstream/Consumed;", arg0);
+        }
 
         #endregion
 
@@ -181,6 +204,16 @@ namespace Org.Apache.Kafka.Streams.Kstream
         public Org.Apache.Kafka.Streams.Kstream.Consumed WithOffsetResetPolicy(Org.Apache.Kafka.Streams.AutoOffsetReset arg0)
         {
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.Consumed>("withOffsetResetPolicy", "(Lorg/apache/kafka/streams/AutoOffsetReset;)Lorg/apache/kafka/streams/kstream/Consumed;", arg0);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/kstream/Consumed.html#withOffsetResetPolicy(org.apache.kafka.streams.Topology.AutoOffsetReset)"/>
+        /// </summary>
+        /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Topology.AutoOffsetReset"/></param>
+        /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.Consumed"/></returns>
+        [global::System.Obsolete()]
+        public Org.Apache.Kafka.Streams.Kstream.Consumed WithOffsetResetPolicy(Org.Apache.Kafka.Streams.Topology.AutoOffsetReset arg0)
+        {
+            return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.Consumed>("withOffsetResetPolicy", "(Lorg/apache/kafka/streams/Topology$AutoOffsetReset;)Lorg/apache/kafka/streams/kstream/Consumed;", arg0);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/kstream/Consumed.html#withTimestampExtractor(org.apache.kafka.streams.processor.TimestampExtractor)"/>
@@ -253,6 +286,19 @@ namespace Org.Apache.Kafka.Streams.Kstream
             return SExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.Consumed<K, V>>(LocalBridgeClazz, "with", "(Lorg/apache/kafka/common/serialization/Serde;Lorg/apache/kafka/common/serialization/Serde;Lorg/apache/kafka/streams/processor/TimestampExtractor;Lorg/apache/kafka/streams/AutoOffsetReset;)Lorg/apache/kafka/streams/kstream/Consumed;", arg0, arg1, arg2, arg3);
         }
         /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/kstream/Consumed.html#with(org.apache.kafka.common.serialization.Serde,org.apache.kafka.common.serialization.Serde,org.apache.kafka.streams.processor.TimestampExtractor,org.apache.kafka.streams.Topology.AutoOffsetReset)"/>
+        /// </summary>
+        /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></param>
+        /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></param>
+        /// <param name="arg2"><see cref="Org.Apache.Kafka.Streams.Processor.TimestampExtractor"/></param>
+        /// <param name="arg3"><see cref="Org.Apache.Kafka.Streams.Topology.AutoOffsetReset"/></param>
+        /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.Consumed"/></returns>
+        [global::System.Obsolete()]
+        public static Org.Apache.Kafka.Streams.Kstream.Consumed<K, V> With(Org.Apache.Kafka.Common.Serialization.Serde<K> arg0, Org.Apache.Kafka.Common.Serialization.Serde<V> arg1, Org.Apache.Kafka.Streams.Processor.TimestampExtractor arg2, Org.Apache.Kafka.Streams.Topology.AutoOffsetReset arg3)
+        {
+            return SExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.Consumed<K, V>>(LocalBridgeClazz, "with", "(Lorg/apache/kafka/common/serialization/Serde;Lorg/apache/kafka/common/serialization/Serde;Lorg/apache/kafka/streams/processor/TimestampExtractor;Lorg/apache/kafka/streams/Topology$AutoOffsetReset;)Lorg/apache/kafka/streams/kstream/Consumed;", arg0, arg1, arg2, arg3);
+        }
+        /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/kstream/Consumed.html#with(org.apache.kafka.common.serialization.Serde,org.apache.kafka.common.serialization.Serde)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></param>
@@ -280,6 +326,16 @@ namespace Org.Apache.Kafka.Streams.Kstream
         {
             return SExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.Consumed<K, V>>(LocalBridgeClazz, "with", "(Lorg/apache/kafka/streams/processor/TimestampExtractor;)Lorg/apache/kafka/streams/kstream/Consumed;", arg0);
         }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/kstream/Consumed.html#with(org.apache.kafka.streams.Topology.AutoOffsetReset)"/>
+        /// </summary>
+        /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Topology.AutoOffsetReset"/></param>
+        /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.Consumed"/></returns>
+        [global::System.Obsolete()]
+        public static Org.Apache.Kafka.Streams.Kstream.Consumed<K, V> With(Org.Apache.Kafka.Streams.Topology.AutoOffsetReset arg0)
+        {
+            return SExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.Consumed<K, V>>(LocalBridgeClazz, "with", "(Lorg/apache/kafka/streams/Topology$AutoOffsetReset;)Lorg/apache/kafka/streams/kstream/Consumed;", arg0);
+        }
 
         #endregion
 
@@ -301,6 +357,16 @@ namespace Org.Apache.Kafka.Streams.Kstream
         public Org.Apache.Kafka.Streams.Kstream.Consumed<K, V> WithOffsetResetPolicy(Org.Apache.Kafka.Streams.AutoOffsetReset arg0)
         {
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.Consumed<K, V>>("withOffsetResetPolicy", "(Lorg/apache/kafka/streams/AutoOffsetReset;)Lorg/apache/kafka/streams/kstream/Consumed;", arg0);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/kstream/Consumed.html#withOffsetResetPolicy(org.apache.kafka.streams.Topology.AutoOffsetReset)"/>
+        /// </summary>
+        /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Topology.AutoOffsetReset"/></param>
+        /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.Consumed"/></returns>
+        [global::System.Obsolete()]
+        public Org.Apache.Kafka.Streams.Kstream.Consumed<K, V> WithOffsetResetPolicy(Org.Apache.Kafka.Streams.Topology.AutoOffsetReset arg0)
+        {
+            return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.Consumed<K, V>>("withOffsetResetPolicy", "(Lorg/apache/kafka/streams/Topology$AutoOffsetReset;)Lorg/apache/kafka/streams/kstream/Consumed;", arg0);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/kstream/Consumed.html#withTimestampExtractor(org.apache.kafka.streams.processor.TimestampExtractor)"/>

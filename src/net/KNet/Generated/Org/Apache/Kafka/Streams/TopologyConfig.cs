@@ -272,6 +272,15 @@ namespace Org.Apache.Kafka.Streams
         {
             return IExecuteWithSignature<Java.Util.Optional<Org.Apache.Kafka.Streams.State.DslStoreSuppliers>>("resolveDslStoreSuppliers", "()Ljava/util/Optional;");
         }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/TopologyConfig.html#parseStoreType()"/>
+        /// </summary>
+        /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.Materialized.StoreType"/></returns>
+        [global::System.Obsolete()]
+        public Org.Apache.Kafka.Streams.Kstream.Materialized.StoreType ParseStoreType()
+        {
+            return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.Materialized.StoreType>("parseStoreType", "()Lorg/apache/kafka/streams/kstream/Materialized$StoreType;");
+        }
 
         #endregion
 

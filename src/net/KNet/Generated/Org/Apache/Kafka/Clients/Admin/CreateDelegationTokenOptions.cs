@@ -103,12 +103,31 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<Java.Util.Optional<Org.Apache.Kafka.Common.Security.Auth.KafkaPrincipal>>("owner", "()Ljava/util/Optional;");
         }
         /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.0/org/apache/kafka/clients/admin/CreateDelegationTokenOptions.html#maxlifeTimeMs()"/>
+        /// </summary>
+        /// <returns><see cref="long"/></returns>
+        [global::System.Obsolete()]
+        public long MaxlifeTimeMs()
+        {
+            return IExecuteWithSignature<long>("maxlifeTimeMs", "()J");
+        }
+        /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.0/org/apache/kafka/clients/admin/CreateDelegationTokenOptions.html#maxLifetimeMs()"/>
         /// </summary>
         /// <returns><see cref="long"/></returns>
         public long MaxLifetimeMs()
         {
             return IExecuteWithSignature<long>("maxLifetimeMs", "()J");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.0/org/apache/kafka/clients/admin/CreateDelegationTokenOptions.html#maxlifeTimeMs(long)"/>
+        /// </summary>
+        /// <param name="arg0"><see cref="long"/></param>
+        /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.CreateDelegationTokenOptions"/></returns>
+        [global::System.Obsolete()]
+        public Org.Apache.Kafka.Clients.Admin.CreateDelegationTokenOptions MaxlifeTimeMs(long arg0)
+        {
+            return IExecuteWithSignature<Org.Apache.Kafka.Clients.Admin.CreateDelegationTokenOptions>("maxlifeTimeMs", "(J)Lorg/apache/kafka/clients/admin/CreateDelegationTokenOptions;", arg0);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.0/org/apache/kafka/clients/admin/CreateDelegationTokenOptions.html#maxLifetimeMs(long)"/>

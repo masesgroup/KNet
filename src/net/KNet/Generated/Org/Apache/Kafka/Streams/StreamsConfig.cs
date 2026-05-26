@@ -114,6 +114,13 @@ namespace Org.Apache.Kafka.Streams
 
         #region Fields
         /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/StreamsConfig.html#DUMMY_THREAD_INDEX"/>
+        /// </summary>
+        [global::System.Obsolete()]
+        public static int DUMMY_THREAD_INDEX { get { if (!_DUMMY_THREAD_INDEXReady) { _DUMMY_THREAD_INDEXContent = SGetField<int>(LocalBridgeClazz, "DUMMY_THREAD_INDEX"); _DUMMY_THREAD_INDEXReady = true; } return _DUMMY_THREAD_INDEXContent; } }
+        private static int _DUMMY_THREAD_INDEXContent = default;
+        private static bool _DUMMY_THREAD_INDEXReady = false; // this is used because in case of generics 
+        /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/StreamsConfig.html#MAX_RACK_AWARE_ASSIGNMENT_TAG_KEY_LENGTH"/>
         /// </summary>
         public static int MAX_RACK_AWARE_ASSIGNMENT_TAG_KEY_LENGTH { get { if (!_MAX_RACK_AWARE_ASSIGNMENT_TAG_KEY_LENGTHReady) { _MAX_RACK_AWARE_ASSIGNMENT_TAG_KEY_LENGTHContent = SGetField<int>(LocalBridgeClazz, "MAX_RACK_AWARE_ASSIGNMENT_TAG_KEY_LENGTH"); _MAX_RACK_AWARE_ASSIGNMENT_TAG_KEY_LENGTHReady = true; } return _MAX_RACK_AWARE_ASSIGNMENT_TAG_KEY_LENGTHContent; } }
@@ -180,11 +187,32 @@ namespace Org.Apache.Kafka.Streams
         private static Java.Lang.String _BUFFERED_RECORDS_PER_PARTITION_CONFIGContent = default;
         private static bool _BUFFERED_RECORDS_PER_PARTITION_CONFIGReady = false; // this is used because in case of generics 
         /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/StreamsConfig.html#BUFFERED_RECORDS_PER_PARTITION_DOC"/>
+        /// </summary>
+        [global::System.Obsolete()]
+        public static Java.Lang.String BUFFERED_RECORDS_PER_PARTITION_DOC { get { if (!_BUFFERED_RECORDS_PER_PARTITION_DOCReady) { _BUFFERED_RECORDS_PER_PARTITION_DOCContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "BUFFERED_RECORDS_PER_PARTITION_DOC"); _BUFFERED_RECORDS_PER_PARTITION_DOCReady = true; } return _BUFFERED_RECORDS_PER_PARTITION_DOCContent; } }
+        private static Java.Lang.String _BUFFERED_RECORDS_PER_PARTITION_DOCContent = default;
+        private static bool _BUFFERED_RECORDS_PER_PARTITION_DOCReady = false; // this is used because in case of generics 
+        /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/StreamsConfig.html#BUILT_IN_METRICS_VERSION_CONFIG"/>
         /// </summary>
         public static Java.Lang.String BUILT_IN_METRICS_VERSION_CONFIG { get { if (!_BUILT_IN_METRICS_VERSION_CONFIGReady) { _BUILT_IN_METRICS_VERSION_CONFIGContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "BUILT_IN_METRICS_VERSION_CONFIG"); _BUILT_IN_METRICS_VERSION_CONFIGReady = true; } return _BUILT_IN_METRICS_VERSION_CONFIGContent; } }
         private static Java.Lang.String _BUILT_IN_METRICS_VERSION_CONFIGContent = default;
         private static bool _BUILT_IN_METRICS_VERSION_CONFIGReady = false; // this is used because in case of generics 
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/StreamsConfig.html#CACHE_MAX_BYTES_BUFFERING_CONFIG"/>
+        /// </summary>
+        [global::System.Obsolete()]
+        public static Java.Lang.String CACHE_MAX_BYTES_BUFFERING_CONFIG { get { if (!_CACHE_MAX_BYTES_BUFFERING_CONFIGReady) { _CACHE_MAX_BYTES_BUFFERING_CONFIGContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "CACHE_MAX_BYTES_BUFFERING_CONFIG"); _CACHE_MAX_BYTES_BUFFERING_CONFIGReady = true; } return _CACHE_MAX_BYTES_BUFFERING_CONFIGContent; } }
+        private static Java.Lang.String _CACHE_MAX_BYTES_BUFFERING_CONFIGContent = default;
+        private static bool _CACHE_MAX_BYTES_BUFFERING_CONFIGReady = false; // this is used because in case of generics 
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/StreamsConfig.html#CACHE_MAX_BYTES_BUFFERING_DOC"/>
+        /// </summary>
+        [global::System.Obsolete()]
+        public static Java.Lang.String CACHE_MAX_BYTES_BUFFERING_DOC { get { if (!_CACHE_MAX_BYTES_BUFFERING_DOCReady) { _CACHE_MAX_BYTES_BUFFERING_DOCContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "CACHE_MAX_BYTES_BUFFERING_DOC"); _CACHE_MAX_BYTES_BUFFERING_DOCReady = true; } return _CACHE_MAX_BYTES_BUFFERING_DOCContent; } }
+        private static Java.Lang.String _CACHE_MAX_BYTES_BUFFERING_DOCContent = default;
+        private static bool _CACHE_MAX_BYTES_BUFFERING_DOCReady = false; // this is used because in case of generics 
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/StreamsConfig.html#CLIENT_ID_CONFIG"/>
         /// </summary>
@@ -222,6 +250,48 @@ namespace Org.Apache.Kafka.Streams
         private static Java.Lang.String _DEFAULT_CLIENT_SUPPLIER_CONFIGContent = default;
         private static bool _DEFAULT_CLIENT_SUPPLIER_CONFIGReady = false; // this is used because in case of generics 
         /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/StreamsConfig.html#DEFAULT_CLIENT_SUPPLIER_DOC"/>
+        /// </summary>
+        [global::System.Obsolete()]
+        public static Java.Lang.String DEFAULT_CLIENT_SUPPLIER_DOC { get { if (!_DEFAULT_CLIENT_SUPPLIER_DOCReady) { _DEFAULT_CLIENT_SUPPLIER_DOCContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "DEFAULT_CLIENT_SUPPLIER_DOC"); _DEFAULT_CLIENT_SUPPLIER_DOCReady = true; } return _DEFAULT_CLIENT_SUPPLIER_DOCContent; } }
+        private static Java.Lang.String _DEFAULT_CLIENT_SUPPLIER_DOCContent = default;
+        private static bool _DEFAULT_CLIENT_SUPPLIER_DOCReady = false; // this is used because in case of generics 
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/StreamsConfig.html#DEFAULT_DESERIALIZATION_EXCEPTION_HANDLER_CLASS_CONFIG"/>
+        /// </summary>
+        [global::System.Obsolete()]
+        public static Java.Lang.String DEFAULT_DESERIALIZATION_EXCEPTION_HANDLER_CLASS_CONFIG { get { if (!_DEFAULT_DESERIALIZATION_EXCEPTION_HANDLER_CLASS_CONFIGReady) { _DEFAULT_DESERIALIZATION_EXCEPTION_HANDLER_CLASS_CONFIGContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "DEFAULT_DESERIALIZATION_EXCEPTION_HANDLER_CLASS_CONFIG"); _DEFAULT_DESERIALIZATION_EXCEPTION_HANDLER_CLASS_CONFIGReady = true; } return _DEFAULT_DESERIALIZATION_EXCEPTION_HANDLER_CLASS_CONFIGContent; } }
+        private static Java.Lang.String _DEFAULT_DESERIALIZATION_EXCEPTION_HANDLER_CLASS_CONFIGContent = default;
+        private static bool _DEFAULT_DESERIALIZATION_EXCEPTION_HANDLER_CLASS_CONFIGReady = false; // this is used because in case of generics 
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/StreamsConfig.html#DEFAULT_DESERIALIZATION_EXCEPTION_HANDLER_CLASS_DOC"/>
+        /// </summary>
+        [global::System.Obsolete()]
+        public static Java.Lang.String DEFAULT_DESERIALIZATION_EXCEPTION_HANDLER_CLASS_DOC { get { if (!_DEFAULT_DESERIALIZATION_EXCEPTION_HANDLER_CLASS_DOCReady) { _DEFAULT_DESERIALIZATION_EXCEPTION_HANDLER_CLASS_DOCContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "DEFAULT_DESERIALIZATION_EXCEPTION_HANDLER_CLASS_DOC"); _DEFAULT_DESERIALIZATION_EXCEPTION_HANDLER_CLASS_DOCReady = true; } return _DEFAULT_DESERIALIZATION_EXCEPTION_HANDLER_CLASS_DOCContent; } }
+        private static Java.Lang.String _DEFAULT_DESERIALIZATION_EXCEPTION_HANDLER_CLASS_DOCContent = default;
+        private static bool _DEFAULT_DESERIALIZATION_EXCEPTION_HANDLER_CLASS_DOCReady = false; // this is used because in case of generics 
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/StreamsConfig.html#DEFAULT_DSL_STORE"/>
+        /// </summary>
+        [global::System.Obsolete()]
+        public static Java.Lang.String DEFAULT_DSL_STORE { get { if (!_DEFAULT_DSL_STOREReady) { _DEFAULT_DSL_STOREContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "DEFAULT_DSL_STORE"); _DEFAULT_DSL_STOREReady = true; } return _DEFAULT_DSL_STOREContent; } }
+        private static Java.Lang.String _DEFAULT_DSL_STOREContent = default;
+        private static bool _DEFAULT_DSL_STOREReady = false; // this is used because in case of generics 
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/StreamsConfig.html#DEFAULT_DSL_STORE_CONFIG"/>
+        /// </summary>
+        [global::System.Obsolete()]
+        public static Java.Lang.String DEFAULT_DSL_STORE_CONFIG { get { if (!_DEFAULT_DSL_STORE_CONFIGReady) { _DEFAULT_DSL_STORE_CONFIGContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "DEFAULT_DSL_STORE_CONFIG"); _DEFAULT_DSL_STORE_CONFIGReady = true; } return _DEFAULT_DSL_STORE_CONFIGContent; } }
+        private static Java.Lang.String _DEFAULT_DSL_STORE_CONFIGContent = default;
+        private static bool _DEFAULT_DSL_STORE_CONFIGReady = false; // this is used because in case of generics 
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/StreamsConfig.html#DEFAULT_DSL_STORE_DOC"/>
+        /// </summary>
+        [global::System.Obsolete()]
+        public static Java.Lang.String DEFAULT_DSL_STORE_DOC { get { if (!_DEFAULT_DSL_STORE_DOCReady) { _DEFAULT_DSL_STORE_DOCContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "DEFAULT_DSL_STORE_DOC"); _DEFAULT_DSL_STORE_DOCReady = true; } return _DEFAULT_DSL_STORE_DOCContent; } }
+        private static Java.Lang.String _DEFAULT_DSL_STORE_DOCContent = default;
+        private static bool _DEFAULT_DSL_STORE_DOCReady = false; // this is used because in case of generics 
+        /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/StreamsConfig.html#DEFAULT_GROUP_PROTOCOL"/>
         /// </summary>
         public static Java.Lang.String DEFAULT_GROUP_PROTOCOL { get { if (!_DEFAULT_GROUP_PROTOCOLReady) { _DEFAULT_GROUP_PROTOCOLContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "DEFAULT_GROUP_PROTOCOL"); _DEFAULT_GROUP_PROTOCOLReady = true; } return _DEFAULT_GROUP_PROTOCOLContent; } }
@@ -234,11 +304,25 @@ namespace Org.Apache.Kafka.Streams
         private static Java.Lang.String _DEFAULT_KEY_SERDE_CLASS_CONFIGContent = default;
         private static bool _DEFAULT_KEY_SERDE_CLASS_CONFIGReady = false; // this is used because in case of generics 
         /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/StreamsConfig.html#DEFAULT_PRODUCTION_EXCEPTION_HANDLER_CLASS_CONFIG"/>
+        /// </summary>
+        [global::System.Obsolete()]
+        public static Java.Lang.String DEFAULT_PRODUCTION_EXCEPTION_HANDLER_CLASS_CONFIG { get { if (!_DEFAULT_PRODUCTION_EXCEPTION_HANDLER_CLASS_CONFIGReady) { _DEFAULT_PRODUCTION_EXCEPTION_HANDLER_CLASS_CONFIGContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "DEFAULT_PRODUCTION_EXCEPTION_HANDLER_CLASS_CONFIG"); _DEFAULT_PRODUCTION_EXCEPTION_HANDLER_CLASS_CONFIGReady = true; } return _DEFAULT_PRODUCTION_EXCEPTION_HANDLER_CLASS_CONFIGContent; } }
+        private static Java.Lang.String _DEFAULT_PRODUCTION_EXCEPTION_HANDLER_CLASS_CONFIGContent = default;
+        private static bool _DEFAULT_PRODUCTION_EXCEPTION_HANDLER_CLASS_CONFIGReady = false; // this is used because in case of generics 
+        /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/StreamsConfig.html#DEFAULT_TIMESTAMP_EXTRACTOR_CLASS_CONFIG"/>
         /// </summary>
         public static Java.Lang.String DEFAULT_TIMESTAMP_EXTRACTOR_CLASS_CONFIG { get { if (!_DEFAULT_TIMESTAMP_EXTRACTOR_CLASS_CONFIGReady) { _DEFAULT_TIMESTAMP_EXTRACTOR_CLASS_CONFIGContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "DEFAULT_TIMESTAMP_EXTRACTOR_CLASS_CONFIG"); _DEFAULT_TIMESTAMP_EXTRACTOR_CLASS_CONFIGReady = true; } return _DEFAULT_TIMESTAMP_EXTRACTOR_CLASS_CONFIGContent; } }
         private static Java.Lang.String _DEFAULT_TIMESTAMP_EXTRACTOR_CLASS_CONFIGContent = default;
         private static bool _DEFAULT_TIMESTAMP_EXTRACTOR_CLASS_CONFIGReady = false; // this is used because in case of generics 
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/StreamsConfig.html#DEFAULT_TIMESTAMP_EXTRACTOR_CLASS_DOC"/>
+        /// </summary>
+        [global::System.Obsolete()]
+        public static Java.Lang.String DEFAULT_TIMESTAMP_EXTRACTOR_CLASS_DOC { get { if (!_DEFAULT_TIMESTAMP_EXTRACTOR_CLASS_DOCReady) { _DEFAULT_TIMESTAMP_EXTRACTOR_CLASS_DOCContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "DEFAULT_TIMESTAMP_EXTRACTOR_CLASS_DOC"); _DEFAULT_TIMESTAMP_EXTRACTOR_CLASS_DOCReady = true; } return _DEFAULT_TIMESTAMP_EXTRACTOR_CLASS_DOCContent; } }
+        private static Java.Lang.String _DEFAULT_TIMESTAMP_EXTRACTOR_CLASS_DOCContent = default;
+        private static bool _DEFAULT_TIMESTAMP_EXTRACTOR_CLASS_DOCReady = false; // this is used because in case of generics 
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/StreamsConfig.html#DEFAULT_VALUE_SERDE_CLASS_CONFIG"/>
         /// </summary>
@@ -263,6 +347,13 @@ namespace Org.Apache.Kafka.Streams
         public static Java.Lang.String ENABLE_METRICS_PUSH_CONFIG { get { if (!_ENABLE_METRICS_PUSH_CONFIGReady) { _ENABLE_METRICS_PUSH_CONFIGContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "ENABLE_METRICS_PUSH_CONFIG"); _ENABLE_METRICS_PUSH_CONFIGReady = true; } return _ENABLE_METRICS_PUSH_CONFIGContent; } }
         private static Java.Lang.String _ENABLE_METRICS_PUSH_CONFIGContent = default;
         private static bool _ENABLE_METRICS_PUSH_CONFIGReady = false; // this is used because in case of generics 
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/StreamsConfig.html#ENABLE_METRICS_PUSH_DOC"/>
+        /// </summary>
+        [global::System.Obsolete()]
+        public static Java.Lang.String ENABLE_METRICS_PUSH_DOC { get { if (!_ENABLE_METRICS_PUSH_DOCReady) { _ENABLE_METRICS_PUSH_DOCContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "ENABLE_METRICS_PUSH_DOC"); _ENABLE_METRICS_PUSH_DOCReady = true; } return _ENABLE_METRICS_PUSH_DOCContent; } }
+        private static Java.Lang.String _ENABLE_METRICS_PUSH_DOCContent = default;
+        private static bool _ENABLE_METRICS_PUSH_DOCReady = false; // this is used because in case of generics 
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/StreamsConfig.html#ENSURE_EXPLICIT_INTERNAL_RESOURCE_NAMING_CONFIG"/>
         /// </summary>
@@ -294,6 +385,13 @@ namespace Org.Apache.Kafka.Streams
         private static Java.Lang.String _GROUP_PROTOCOL_CONFIGContent = default;
         private static bool _GROUP_PROTOCOL_CONFIGReady = false; // this is used because in case of generics 
         /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/StreamsConfig.html#IN_MEMORY"/>
+        /// </summary>
+        [global::System.Obsolete()]
+        public static Java.Lang.String IN_MEMORY { get { if (!_IN_MEMORYReady) { _IN_MEMORYContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "IN_MEMORY"); _IN_MEMORYReady = true; } return _IN_MEMORYContent; } }
+        private static Java.Lang.String _IN_MEMORYContent = default;
+        private static bool _IN_MEMORYReady = false; // this is used because in case of generics 
+        /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/StreamsConfig.html#LOG_SUMMARY_INTERVAL_MS_CONFIG"/>
         /// </summary>
         public static Java.Lang.String LOG_SUMMARY_INTERVAL_MS_CONFIG { get { if (!_LOG_SUMMARY_INTERVAL_MS_CONFIGReady) { _LOG_SUMMARY_INTERVAL_MS_CONFIGContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "LOG_SUMMARY_INTERVAL_MS_CONFIG"); _LOG_SUMMARY_INTERVAL_MS_CONFIGReady = true; } return _LOG_SUMMARY_INTERVAL_MS_CONFIGContent; } }
@@ -311,6 +409,13 @@ namespace Org.Apache.Kafka.Streams
         public static Java.Lang.String MAX_TASK_IDLE_MS_CONFIG { get { if (!_MAX_TASK_IDLE_MS_CONFIGReady) { _MAX_TASK_IDLE_MS_CONFIGContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "MAX_TASK_IDLE_MS_CONFIG"); _MAX_TASK_IDLE_MS_CONFIGReady = true; } return _MAX_TASK_IDLE_MS_CONFIGContent; } }
         private static Java.Lang.String _MAX_TASK_IDLE_MS_CONFIGContent = default;
         private static bool _MAX_TASK_IDLE_MS_CONFIGReady = false; // this is used because in case of generics 
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/StreamsConfig.html#MAX_TASK_IDLE_MS_DOC"/>
+        /// </summary>
+        [global::System.Obsolete()]
+        public static Java.Lang.String MAX_TASK_IDLE_MS_DOC { get { if (!_MAX_TASK_IDLE_MS_DOCReady) { _MAX_TASK_IDLE_MS_DOCContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "MAX_TASK_IDLE_MS_DOC"); _MAX_TASK_IDLE_MS_DOCReady = true; } return _MAX_TASK_IDLE_MS_DOCContent; } }
+        private static Java.Lang.String _MAX_TASK_IDLE_MS_DOCContent = default;
+        private static bool _MAX_TASK_IDLE_MS_DOCReady = false; // this is used because in case of generics 
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/StreamsConfig.html#MAX_WARMUP_REPLICAS_CONFIG"/>
         /// </summary>
@@ -402,6 +507,13 @@ namespace Org.Apache.Kafka.Streams
         private static Java.Lang.String _PROCESSING_EXCEPTION_HANDLER_CLASS_CONFIGContent = default;
         private static bool _PROCESSING_EXCEPTION_HANDLER_CLASS_CONFIGReady = false; // this is used because in case of generics 
         /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/StreamsConfig.html#PROCESSING_EXCEPTION_HANDLER_CLASS_DOC"/>
+        /// </summary>
+        [global::System.Obsolete()]
+        public static Java.Lang.String PROCESSING_EXCEPTION_HANDLER_CLASS_DOC { get { if (!_PROCESSING_EXCEPTION_HANDLER_CLASS_DOCReady) { _PROCESSING_EXCEPTION_HANDLER_CLASS_DOCContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "PROCESSING_EXCEPTION_HANDLER_CLASS_DOC"); _PROCESSING_EXCEPTION_HANDLER_CLASS_DOCReady = true; } return _PROCESSING_EXCEPTION_HANDLER_CLASS_DOCContent; } }
+        private static Java.Lang.String _PROCESSING_EXCEPTION_HANDLER_CLASS_DOCContent = default;
+        private static bool _PROCESSING_EXCEPTION_HANDLER_CLASS_DOCReady = false; // this is used because in case of generics 
+        /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/StreamsConfig.html#PROCESSING_GUARANTEE_CONFIG"/>
         /// </summary>
         public static Java.Lang.String PROCESSING_GUARANTEE_CONFIG { get { if (!_PROCESSING_GUARANTEE_CONFIGReady) { _PROCESSING_GUARANTEE_CONFIGContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "PROCESSING_GUARANTEE_CONFIG"); _PROCESSING_GUARANTEE_CONFIGReady = true; } return _PROCESSING_GUARANTEE_CONFIGContent; } }
@@ -432,6 +544,13 @@ namespace Org.Apache.Kafka.Streams
         private static Java.Lang.String _RACK_AWARE_ASSIGNMENT_NON_OVERLAP_COST_CONFIGContent = default;
         private static bool _RACK_AWARE_ASSIGNMENT_NON_OVERLAP_COST_CONFIGReady = false; // this is used because in case of generics 
         /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/StreamsConfig.html#RACK_AWARE_ASSIGNMENT_NON_OVERLAP_COST_DOC"/>
+        /// </summary>
+        [global::System.Obsolete()]
+        public static Java.Lang.String RACK_AWARE_ASSIGNMENT_NON_OVERLAP_COST_DOC { get { if (!_RACK_AWARE_ASSIGNMENT_NON_OVERLAP_COST_DOCReady) { _RACK_AWARE_ASSIGNMENT_NON_OVERLAP_COST_DOCContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "RACK_AWARE_ASSIGNMENT_NON_OVERLAP_COST_DOC"); _RACK_AWARE_ASSIGNMENT_NON_OVERLAP_COST_DOCReady = true; } return _RACK_AWARE_ASSIGNMENT_NON_OVERLAP_COST_DOCContent; } }
+        private static Java.Lang.String _RACK_AWARE_ASSIGNMENT_NON_OVERLAP_COST_DOCContent = default;
+        private static bool _RACK_AWARE_ASSIGNMENT_NON_OVERLAP_COST_DOCReady = false; // this is used because in case of generics 
+        /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/StreamsConfig.html#RACK_AWARE_ASSIGNMENT_STRATEGY_BALANCE_SUBTOPOLOGY"/>
         /// </summary>
         public static Java.Lang.String RACK_AWARE_ASSIGNMENT_STRATEGY_BALANCE_SUBTOPOLOGY { get { if (!_RACK_AWARE_ASSIGNMENT_STRATEGY_BALANCE_SUBTOPOLOGYReady) { _RACK_AWARE_ASSIGNMENT_STRATEGY_BALANCE_SUBTOPOLOGYContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "RACK_AWARE_ASSIGNMENT_STRATEGY_BALANCE_SUBTOPOLOGY"); _RACK_AWARE_ASSIGNMENT_STRATEGY_BALANCE_SUBTOPOLOGYReady = true; } return _RACK_AWARE_ASSIGNMENT_STRATEGY_BALANCE_SUBTOPOLOGYContent; } }
@@ -443,6 +562,13 @@ namespace Org.Apache.Kafka.Streams
         public static Java.Lang.String RACK_AWARE_ASSIGNMENT_STRATEGY_CONFIG { get { if (!_RACK_AWARE_ASSIGNMENT_STRATEGY_CONFIGReady) { _RACK_AWARE_ASSIGNMENT_STRATEGY_CONFIGContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "RACK_AWARE_ASSIGNMENT_STRATEGY_CONFIG"); _RACK_AWARE_ASSIGNMENT_STRATEGY_CONFIGReady = true; } return _RACK_AWARE_ASSIGNMENT_STRATEGY_CONFIGContent; } }
         private static Java.Lang.String _RACK_AWARE_ASSIGNMENT_STRATEGY_CONFIGContent = default;
         private static bool _RACK_AWARE_ASSIGNMENT_STRATEGY_CONFIGReady = false; // this is used because in case of generics 
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/StreamsConfig.html#RACK_AWARE_ASSIGNMENT_STRATEGY_DOC"/>
+        /// </summary>
+        [global::System.Obsolete()]
+        public static Java.Lang.String RACK_AWARE_ASSIGNMENT_STRATEGY_DOC { get { if (!_RACK_AWARE_ASSIGNMENT_STRATEGY_DOCReady) { _RACK_AWARE_ASSIGNMENT_STRATEGY_DOCContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "RACK_AWARE_ASSIGNMENT_STRATEGY_DOC"); _RACK_AWARE_ASSIGNMENT_STRATEGY_DOCReady = true; } return _RACK_AWARE_ASSIGNMENT_STRATEGY_DOCContent; } }
+        private static Java.Lang.String _RACK_AWARE_ASSIGNMENT_STRATEGY_DOCContent = default;
+        private static bool _RACK_AWARE_ASSIGNMENT_STRATEGY_DOCReady = false; // this is used because in case of generics 
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/StreamsConfig.html#RACK_AWARE_ASSIGNMENT_STRATEGY_MIN_TRAFFIC"/>
         /// </summary>
@@ -467,6 +593,13 @@ namespace Org.Apache.Kafka.Streams
         public static Java.Lang.String RACK_AWARE_ASSIGNMENT_TRAFFIC_COST_CONFIG { get { if (!_RACK_AWARE_ASSIGNMENT_TRAFFIC_COST_CONFIGReady) { _RACK_AWARE_ASSIGNMENT_TRAFFIC_COST_CONFIGContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "RACK_AWARE_ASSIGNMENT_TRAFFIC_COST_CONFIG"); _RACK_AWARE_ASSIGNMENT_TRAFFIC_COST_CONFIGReady = true; } return _RACK_AWARE_ASSIGNMENT_TRAFFIC_COST_CONFIGContent; } }
         private static Java.Lang.String _RACK_AWARE_ASSIGNMENT_TRAFFIC_COST_CONFIGContent = default;
         private static bool _RACK_AWARE_ASSIGNMENT_TRAFFIC_COST_CONFIGReady = false; // this is used because in case of generics 
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/StreamsConfig.html#RACK_AWARE_ASSIGNMENT_TRAFFIC_COST_DOC"/>
+        /// </summary>
+        [global::System.Obsolete()]
+        public static Java.Lang.String RACK_AWARE_ASSIGNMENT_TRAFFIC_COST_DOC { get { if (!_RACK_AWARE_ASSIGNMENT_TRAFFIC_COST_DOCReady) { _RACK_AWARE_ASSIGNMENT_TRAFFIC_COST_DOCContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "RACK_AWARE_ASSIGNMENT_TRAFFIC_COST_DOC"); _RACK_AWARE_ASSIGNMENT_TRAFFIC_COST_DOCReady = true; } return _RACK_AWARE_ASSIGNMENT_TRAFFIC_COST_DOCContent; } }
+        private static Java.Lang.String _RACK_AWARE_ASSIGNMENT_TRAFFIC_COST_DOCContent = default;
+        private static bool _RACK_AWARE_ASSIGNMENT_TRAFFIC_COST_DOCReady = false; // this is used because in case of generics 
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/StreamsConfig.html#RECEIVE_BUFFER_CONFIG"/>
         /// </summary>
@@ -522,6 +655,13 @@ namespace Org.Apache.Kafka.Streams
         private static Java.Lang.String _REUSE_KTABLE_SOURCE_TOPICSContent = default;
         private static bool _REUSE_KTABLE_SOURCE_TOPICSReady = false; // this is used because in case of generics 
         /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/StreamsConfig.html#ROCKS_DB"/>
+        /// </summary>
+        [global::System.Obsolete()]
+        public static Java.Lang.String ROCKS_DB { get { if (!_ROCKS_DBReady) { _ROCKS_DBContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "ROCKS_DB"); _ROCKS_DBReady = true; } return _ROCKS_DBContent; } }
+        private static Java.Lang.String _ROCKS_DBContent = default;
+        private static bool _ROCKS_DBReady = false; // this is used because in case of generics 
+        /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/StreamsConfig.html#ROCKSDB_CONFIG_SETTER_CLASS_CONFIG"/>
         /// </summary>
         public static Java.Lang.String ROCKSDB_CONFIG_SETTER_CLASS_CONFIG { get { if (!_ROCKSDB_CONFIG_SETTER_CLASS_CONFIGReady) { _ROCKSDB_CONFIG_SETTER_CLASS_CONFIGContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "ROCKSDB_CONFIG_SETTER_CLASS_CONFIG"); _ROCKSDB_CONFIG_SETTER_CLASS_CONFIGReady = true; } return _ROCKSDB_CONFIG_SETTER_CLASS_CONFIGContent; } }
@@ -564,6 +704,13 @@ namespace Org.Apache.Kafka.Streams
         private static Java.Lang.String _STATESTORE_CACHE_MAX_BYTES_CONFIGContent = default;
         private static bool _STATESTORE_CACHE_MAX_BYTES_CONFIGReady = false; // this is used because in case of generics 
         /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/StreamsConfig.html#STATESTORE_CACHE_MAX_BYTES_DOC"/>
+        /// </summary>
+        [global::System.Obsolete()]
+        public static Java.Lang.String STATESTORE_CACHE_MAX_BYTES_DOC { get { if (!_STATESTORE_CACHE_MAX_BYTES_DOCReady) { _STATESTORE_CACHE_MAX_BYTES_DOCContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "STATESTORE_CACHE_MAX_BYTES_DOC"); _STATESTORE_CACHE_MAX_BYTES_DOCReady = true; } return _STATESTORE_CACHE_MAX_BYTES_DOCContent; } }
+        private static Java.Lang.String _STATESTORE_CACHE_MAX_BYTES_DOCContent = default;
+        private static bool _STATESTORE_CACHE_MAX_BYTES_DOCReady = false; // this is used because in case of generics 
+        /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/StreamsConfig.html#TASK_ASSIGNOR_CLASS_CONFIG"/>
         /// </summary>
         public static Java.Lang.String TASK_ASSIGNOR_CLASS_CONFIG { get { if (!_TASK_ASSIGNOR_CLASS_CONFIGReady) { _TASK_ASSIGNOR_CLASS_CONFIGContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "TASK_ASSIGNOR_CLASS_CONFIG"); _TASK_ASSIGNOR_CLASS_CONFIGReady = true; } return _TASK_ASSIGNOR_CLASS_CONFIGContent; } }
@@ -575,6 +722,13 @@ namespace Org.Apache.Kafka.Streams
         public static Java.Lang.String TASK_TIMEOUT_MS_CONFIG { get { if (!_TASK_TIMEOUT_MS_CONFIGReady) { _TASK_TIMEOUT_MS_CONFIGContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "TASK_TIMEOUT_MS_CONFIG"); _TASK_TIMEOUT_MS_CONFIGReady = true; } return _TASK_TIMEOUT_MS_CONFIGContent; } }
         private static Java.Lang.String _TASK_TIMEOUT_MS_CONFIGContent = default;
         private static bool _TASK_TIMEOUT_MS_CONFIGReady = false; // this is used because in case of generics 
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/StreamsConfig.html#TASK_TIMEOUT_MS_DOC"/>
+        /// </summary>
+        [global::System.Obsolete()]
+        public static Java.Lang.String TASK_TIMEOUT_MS_DOC { get { if (!_TASK_TIMEOUT_MS_DOCReady) { _TASK_TIMEOUT_MS_DOCContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "TASK_TIMEOUT_MS_DOC"); _TASK_TIMEOUT_MS_DOCReady = true; } return _TASK_TIMEOUT_MS_DOCContent; } }
+        private static Java.Lang.String _TASK_TIMEOUT_MS_DOCContent = default;
+        private static bool _TASK_TIMEOUT_MS_DOCReady = false; // this is used because in case of generics 
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/StreamsConfig.html#TOPIC_PREFIX"/>
         /// </summary>
@@ -696,11 +850,25 @@ namespace Org.Apache.Kafka.Streams
         private static Java.Lang.String _UPGRADE_FROM_CONFIGContent = default;
         private static bool _UPGRADE_FROM_CONFIGReady = false; // this is used because in case of generics 
         /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/StreamsConfig.html#WINDOW_SIZE_MS_CONFIG"/>
+        /// </summary>
+        [global::System.Obsolete()]
+        public static Java.Lang.String WINDOW_SIZE_MS_CONFIG { get { if (!_WINDOW_SIZE_MS_CONFIGReady) { _WINDOW_SIZE_MS_CONFIGContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "WINDOW_SIZE_MS_CONFIG"); _WINDOW_SIZE_MS_CONFIGReady = true; } return _WINDOW_SIZE_MS_CONFIGContent; } }
+        private static Java.Lang.String _WINDOW_SIZE_MS_CONFIGContent = default;
+        private static bool _WINDOW_SIZE_MS_CONFIGReady = false; // this is used because in case of generics 
+        /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/StreamsConfig.html#WINDOW_STORE_CHANGE_LOG_ADDITIONAL_RETENTION_MS_CONFIG"/>
         /// </summary>
         public static Java.Lang.String WINDOW_STORE_CHANGE_LOG_ADDITIONAL_RETENTION_MS_CONFIG { get { if (!_WINDOW_STORE_CHANGE_LOG_ADDITIONAL_RETENTION_MS_CONFIGReady) { _WINDOW_STORE_CHANGE_LOG_ADDITIONAL_RETENTION_MS_CONFIGContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "WINDOW_STORE_CHANGE_LOG_ADDITIONAL_RETENTION_MS_CONFIG"); _WINDOW_STORE_CHANGE_LOG_ADDITIONAL_RETENTION_MS_CONFIGReady = true; } return _WINDOW_STORE_CHANGE_LOG_ADDITIONAL_RETENTION_MS_CONFIGContent; } }
         private static Java.Lang.String _WINDOW_STORE_CHANGE_LOG_ADDITIONAL_RETENTION_MS_CONFIGContent = default;
         private static bool _WINDOW_STORE_CHANGE_LOG_ADDITIONAL_RETENTION_MS_CONFIGReady = false; // this is used because in case of generics 
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/StreamsConfig.html#WINDOWED_INNER_CLASS_SERDE"/>
+        /// </summary>
+        [global::System.Obsolete()]
+        public static Java.Lang.String WINDOWED_INNER_CLASS_SERDE { get { if (!_WINDOWED_INNER_CLASS_SERDEReady) { _WINDOWED_INNER_CLASS_SERDEContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "WINDOWED_INNER_CLASS_SERDE"); _WINDOWED_INNER_CLASS_SERDEReady = true; } return _WINDOWED_INNER_CLASS_SERDEContent; } }
+        private static Java.Lang.String _WINDOWED_INNER_CLASS_SERDEContent = default;
+        private static bool _WINDOWED_INNER_CLASS_SERDEReady = false; // this is used because in case of generics 
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/StreamsConfig.html#MAX_TASK_IDLE_MS_DISABLED"/>
         /// </summary>
@@ -906,6 +1074,15 @@ namespace Org.Apache.Kafka.Streams
             return IExecuteWithSignature<Org.Apache.Kafka.Common.Serialization.SerdeDirect<object>, Org.Apache.Kafka.Common.Serialization.Serde<object>>("defaultValueSerde", "()Lorg/apache/kafka/common/serialization/Serde;");
         }
         /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/StreamsConfig.html#defaultDeserializationExceptionHandler()"/>
+        /// </summary>
+        /// <returns><see cref="Org.Apache.Kafka.Streams.Errors.DeserializationExceptionHandler"/></returns>
+        [global::System.Obsolete()]
+        public Org.Apache.Kafka.Streams.Errors.DeserializationExceptionHandler DefaultDeserializationExceptionHandler()
+        {
+            return IExecuteWithSignature<Org.Apache.Kafka.Streams.Errors.DeserializationExceptionHandler>("defaultDeserializationExceptionHandler", "()Lorg/apache/kafka/streams/errors/DeserializationExceptionHandler;");
+        }
+        /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/StreamsConfig.html#deserializationExceptionHandler()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Errors.DeserializationExceptionHandler"/></returns>
@@ -920,6 +1097,15 @@ namespace Org.Apache.Kafka.Streams
         public Org.Apache.Kafka.Streams.Errors.ProcessingExceptionHandler ProcessingExceptionHandler()
         {
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.Errors.ProcessingExceptionHandler>("processingExceptionHandler", "()Lorg/apache/kafka/streams/errors/ProcessingExceptionHandler;");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/StreamsConfig.html#defaultProductionExceptionHandler()"/>
+        /// </summary>
+        /// <returns><see cref="Org.Apache.Kafka.Streams.Errors.ProductionExceptionHandler"/></returns>
+        [global::System.Obsolete()]
+        public Org.Apache.Kafka.Streams.Errors.ProductionExceptionHandler DefaultProductionExceptionHandler()
+        {
+            return IExecuteWithSignature<Org.Apache.Kafka.Streams.Errors.ProductionExceptionHandler>("defaultProductionExceptionHandler", "()Lorg/apache/kafka/streams/errors/ProductionExceptionHandler;");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/StreamsConfig.html#productionExceptionHandler()"/>

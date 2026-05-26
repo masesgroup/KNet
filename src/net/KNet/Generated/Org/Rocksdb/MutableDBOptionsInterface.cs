@@ -131,6 +131,15 @@ namespace Org.Rocksdb
             return IExecuteWithSignature<bool>("strictBytesPerSync", "()Z");
         }
         /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/MutableDBOptionsInterface.html#maxBackgroundCompactions()"/>
+        /// </summary>
+        /// <returns><see cref="int"/></returns>
+        [global::System.Obsolete()]
+        public int MaxBackgroundCompactions()
+        {
+            return IExecuteWithSignature<int>("maxBackgroundCompactions", "()I");
+        }
+        /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/MutableDBOptionsInterface.html#maxBackgroundJobs()"/>
         /// </summary>
         /// <returns><see cref="int"/></returns>
@@ -289,6 +298,16 @@ namespace Org.Rocksdb
             return IExecuteWithSignature<Org.Rocksdb.MutableDBOptionsInterface>("setDeleteObsoleteFilesPeriodMicros", "(J)Lorg/rocksdb/MutableDBOptionsInterface;", arg0);
         }
         /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/MutableDBOptionsInterface.html#setMaxBackgroundCompactions(int)"/>
+        /// </summary>
+        /// <param name="arg0"><see cref="int"/></param>
+        /// <returns><see cref="Org.Rocksdb.MutableDBOptionsInterface"/></returns>
+        [global::System.Obsolete()]
+        public Org.Rocksdb.MutableDBOptionsInterface SetMaxBackgroundCompactions(int arg0)
+        {
+            return IExecuteWithSignature<Org.Rocksdb.MutableDBOptionsInterface>("setMaxBackgroundCompactions", "(I)Lorg/rocksdb/MutableDBOptionsInterface;", arg0);
+        }
+        /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/MutableDBOptionsInterface.html#setMaxBackgroundJobs(int)"/>
         /// </summary>
         /// <param name="arg0"><see cref="int"/></param>
@@ -437,6 +456,15 @@ namespace Org.Rocksdb
         public bool StrictBytesPerSync()
         {
             return IExecuteWithSignature<bool>("strictBytesPerSync", "()Z");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/MutableDBOptionsInterface.html#maxBackgroundCompactions()"/>
+        /// </summary>
+        /// <returns><see cref="int"/></returns>
+        [global::System.Obsolete()]
+        public int MaxBackgroundCompactions()
+        {
+            return IExecuteWithSignature<int>("maxBackgroundCompactions", "()I");
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/MutableDBOptionsInterface.html#maxBackgroundJobs()"/>
@@ -595,6 +623,16 @@ namespace Org.Rocksdb
         public T SetDeleteObsoleteFilesPeriodMicros(long arg0)
         {
             return IExecuteWithSignature<T>("setDeleteObsoleteFilesPeriodMicros", "(J)Lorg/rocksdb/MutableDBOptionsInterface;", arg0);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/MutableDBOptionsInterface.html#setMaxBackgroundCompactions(int)"/>
+        /// </summary>
+        /// <param name="arg0"><see cref="int"/></param>
+        /// <returns><typeparamref name="T"/></returns>
+        [global::System.Obsolete()]
+        public T SetMaxBackgroundCompactions(int arg0)
+        {
+            return IExecuteWithSignature<T>("setMaxBackgroundCompactions", "(I)Lorg/rocksdb/MutableDBOptionsInterface;", arg0);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/MutableDBOptionsInterface.html#setMaxBackgroundJobs(int)"/>

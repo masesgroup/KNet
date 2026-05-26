@@ -274,6 +274,13 @@ namespace Org.Apache.Kafka.Clients.Producer
         private static Java.Lang.String _PARTITIONER_ADAPTIVE_PARTITIONING_ENABLE_CONFIGContent = default;
         private static bool _PARTITIONER_ADAPTIVE_PARTITIONING_ENABLE_CONFIGReady = false; // this is used because in case of generics 
         /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.0/org/apache/kafka/clients/producer/ProducerConfig.html#PARTITIONER_ADPATIVE_PARTITIONING_ENABLE_CONFIG"/>
+        /// </summary>
+        [global::System.Obsolete()]
+        public static Java.Lang.String PARTITIONER_ADPATIVE_PARTITIONING_ENABLE_CONFIG { get { if (!_PARTITIONER_ADPATIVE_PARTITIONING_ENABLE_CONFIGReady) { _PARTITIONER_ADPATIVE_PARTITIONING_ENABLE_CONFIGContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "PARTITIONER_ADPATIVE_PARTITIONING_ENABLE_CONFIG"); _PARTITIONER_ADPATIVE_PARTITIONING_ENABLE_CONFIGReady = true; } return _PARTITIONER_ADPATIVE_PARTITIONING_ENABLE_CONFIGContent; } }
+        private static Java.Lang.String _PARTITIONER_ADPATIVE_PARTITIONING_ENABLE_CONFIGContent = default;
+        private static bool _PARTITIONER_ADPATIVE_PARTITIONING_ENABLE_CONFIGReady = false; // this is used because in case of generics 
+        /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.0/org/apache/kafka/clients/producer/ProducerConfig.html#PARTITIONER_AVAILABILITY_TIMEOUT_MS_CONFIG"/>
         /// </summary>
         public static Java.Lang.String PARTITIONER_AVAILABILITY_TIMEOUT_MS_CONFIG { get { if (!_PARTITIONER_AVAILABILITY_TIMEOUT_MS_CONFIGReady) { _PARTITIONER_AVAILABILITY_TIMEOUT_MS_CONFIGContent = SGetField<Java.Lang.String>(LocalBridgeClazz, "PARTITIONER_AVAILABILITY_TIMEOUT_MS_CONFIG"); _PARTITIONER_AVAILABILITY_TIMEOUT_MS_CONFIGReady = true; } return _PARTITIONER_AVAILABILITY_TIMEOUT_MS_CONFIGContent; } }

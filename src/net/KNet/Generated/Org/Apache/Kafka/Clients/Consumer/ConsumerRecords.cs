@@ -108,6 +108,15 @@ namespace Org.Apache.Kafka.Clients.Consumer
         {
             InvokeInitializer(arg0, arg1);
         }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.0/org/apache/kafka/clients/consumer/ConsumerRecords.html#%3Cinit%3E(java.util.Map)"/>
+        /// </summary>
+        /// <param name="arg0"><see cref="Java.Util.Map"/></param>
+        [global::System.Obsolete()]
+        public ConsumerRecords(Java.Util.Map arg0) : base(JVMBridgeBase.InitializerInstance)
+        {
+            InvokeInitializer(arg0);
+        }
 
         #endregion
 
@@ -219,6 +228,15 @@ namespace Org.Apache.Kafka.Clients.Consumer
         public ConsumerRecords(Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Java.Util.List<Org.Apache.Kafka.Clients.Consumer.ConsumerRecord<K, V>>> arg0, Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Org.Apache.Kafka.Clients.Consumer.OffsetAndMetadata> arg1) : base(JVMBridgeBase.InitializerInstance)
         {
             InvokeInitializer(arg0, arg1);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.0/org/apache/kafka/clients/consumer/ConsumerRecords.html#%3Cinit%3E(java.util.Map)"/>
+        /// </summary>
+        /// <param name="arg0"><see cref="Java.Util.Map"/></param>
+        [global::System.Obsolete()]
+        public ConsumerRecords(Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Java.Util.List<Org.Apache.Kafka.Clients.Consumer.ConsumerRecord<K, V>>> arg0) : base(JVMBridgeBase.InitializerInstance)
+        {
+            InvokeInitializer(arg0);
         }
 
         #endregion

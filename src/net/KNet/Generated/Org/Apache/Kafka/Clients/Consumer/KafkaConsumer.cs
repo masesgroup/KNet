@@ -365,6 +365,15 @@ namespace Org.Apache.Kafka.Clients.Consumer
             IExecuteWithSignature("close", "()V");
         }
         /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.0/org/apache/kafka/clients/consumer/KafkaConsumer.html#close(java.time.Duration)"/>
+        /// </summary>
+        /// <param name="arg0"><see cref="Java.Time.Duration"/></param>
+        [global::System.Obsolete()]
+        public void Close(Java.Time.Duration arg0)
+        {
+            IExecuteWithSignature("close", "(Ljava/time/Duration;)V", arg0);
+        }
+        /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.0/org/apache/kafka/clients/consumer/KafkaConsumer.html#close(org.apache.kafka.clients.consumer.CloseOptions)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Clients.Consumer.CloseOptions"/></param>
@@ -858,6 +867,15 @@ namespace Org.Apache.Kafka.Clients.Consumer
         public void Close()
         {
             IExecuteWithSignature("close", "()V");
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.0/org/apache/kafka/clients/consumer/KafkaConsumer.html#close(java.time.Duration)"/>
+        /// </summary>
+        /// <param name="arg0"><see cref="Java.Time.Duration"/></param>
+        [global::System.Obsolete()]
+        public void Close(Java.Time.Duration arg0)
+        {
+            IExecuteWithSignature("close", "(Ljava/time/Duration;)V", arg0);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.0/org/apache/kafka/clients/consumer/KafkaConsumer.html#close(org.apache.kafka.clients.consumer.CloseOptions)"/>

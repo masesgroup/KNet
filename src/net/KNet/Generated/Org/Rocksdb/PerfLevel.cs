@@ -102,6 +102,13 @@ namespace Org.Rocksdb
         private static Org.Rocksdb.PerfLevel _ENABLE_TIME_EXCEPT_FOR_MUTEXContent = default;
         private static bool _ENABLE_TIME_EXCEPT_FOR_MUTEXReady = false; // this is used because in case of generics 
         /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/PerfLevel.html#OUT_OF_BOUNDS"/>
+        /// </summary>
+        [global::System.Obsolete()]
+        public static Org.Rocksdb.PerfLevel OUT_OF_BOUNDS { get { if (!_OUT_OF_BOUNDSReady) { _OUT_OF_BOUNDSContent = SGetField<Org.Rocksdb.PerfLevel>(LocalBridgeClazz, "OUT_OF_BOUNDS"); _OUT_OF_BOUNDSReady = true; } return _OUT_OF_BOUNDSContent; } }
+        private static Org.Rocksdb.PerfLevel _OUT_OF_BOUNDSContent = default;
+        private static bool _OUT_OF_BOUNDSReady = false; // this is used because in case of generics 
+        /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/PerfLevel.html#UNINITIALIZED"/>
         /// </summary>
         public static Org.Rocksdb.PerfLevel UNINITIALIZED { get { if (!_UNINITIALIZEDReady) { _UNINITIALIZEDContent = SGetField<Org.Rocksdb.PerfLevel>(LocalBridgeClazz, "UNINITIALIZED"); _UNINITIALIZEDReady = true; } return _UNINITIALIZEDContent; } }

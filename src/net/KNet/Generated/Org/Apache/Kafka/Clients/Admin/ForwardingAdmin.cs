@@ -531,6 +531,15 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<Org.Apache.Kafka.Clients.Admin.FenceProducersResult>("fenceProducers", "(Ljava/util/Collection;Lorg/apache/kafka/clients/admin/FenceProducersOptions;)Lorg/apache/kafka/clients/admin/FenceProducersResult;", arg0, arg1);
         }
         /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.0/org/apache/kafka/clients/admin/ForwardingAdmin.html#listClientMetricsResources(org.apache.kafka.clients.admin.ListClientMetricsResourcesOptions)"/>
+        /// </summary>
+        /// <param name="arg0"><see cref="Org.Apache.Kafka.Clients.Admin.ListClientMetricsResourcesOptions"/></param>
+        /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.ListClientMetricsResourcesResult"/></returns>
+        public Org.Apache.Kafka.Clients.Admin.ListClientMetricsResourcesResult ListClientMetricsResources(Org.Apache.Kafka.Clients.Admin.ListClientMetricsResourcesOptions arg0)
+        {
+            return IExecuteWithSignature<Org.Apache.Kafka.Clients.Admin.ListClientMetricsResourcesResult>("listClientMetricsResources", "(Lorg/apache/kafka/clients/admin/ListClientMetricsResourcesOptions;)Lorg/apache/kafka/clients/admin/ListClientMetricsResourcesResult;", arg0);
+        }
+        /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.0/org/apache/kafka/clients/admin/ForwardingAdmin.html#listConfigResources(java.util.Set,org.apache.kafka.clients.admin.ListConfigResourcesOptions)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Set"/></param>
@@ -549,6 +558,16 @@ namespace Org.Apache.Kafka.Clients.Admin
         public Org.Apache.Kafka.Clients.Admin.ListConsumerGroupOffsetsResult ListConsumerGroupOffsets(Java.Util.Map<Java.Lang.String, Org.Apache.Kafka.Clients.Admin.ListConsumerGroupOffsetsSpec> arg0, Org.Apache.Kafka.Clients.Admin.ListConsumerGroupOffsetsOptions arg1)
         {
             return IExecuteWithSignature<Org.Apache.Kafka.Clients.Admin.ListConsumerGroupOffsetsResult>("listConsumerGroupOffsets", "(Ljava/util/Map;Lorg/apache/kafka/clients/admin/ListConsumerGroupOffsetsOptions;)Lorg/apache/kafka/clients/admin/ListConsumerGroupOffsetsResult;", arg0, arg1);
+        }
+        /// <summary>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.0/org/apache/kafka/clients/admin/ForwardingAdmin.html#listConsumerGroups(org.apache.kafka.clients.admin.ListConsumerGroupsOptions)"/>
+        /// </summary>
+        /// <param name="arg0"><see cref="Org.Apache.Kafka.Clients.Admin.ListConsumerGroupsOptions"/></param>
+        /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.ListConsumerGroupsResult"/></returns>
+        [global::System.Obsolete()]
+        public Org.Apache.Kafka.Clients.Admin.ListConsumerGroupsResult ListConsumerGroups(Org.Apache.Kafka.Clients.Admin.ListConsumerGroupsOptions arg0)
+        {
+            return IExecuteWithSignature<Org.Apache.Kafka.Clients.Admin.ListConsumerGroupsResult>("listConsumerGroups", "(Lorg/apache/kafka/clients/admin/ListConsumerGroupsOptions;)Lorg/apache/kafka/clients/admin/ListConsumerGroupsResult;", arg0);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.0/org/apache/kafka/clients/admin/ForwardingAdmin.html#listGroups(org.apache.kafka.clients.admin.ListGroupsOptions)"/>
