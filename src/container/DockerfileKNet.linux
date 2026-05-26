@@ -10,8 +10,8 @@ ENV KNET_DOCKER_BUILD_ACTIONS=true
 RUN dotnet restore KNetDocker.sln -a $TARGETARCH
 
 # Build and publish a release
-RUN dotnet publish ./KNetCLI/KNetCLI.csproj /p:NoWarn="0108%3B1030%3B0618" --framework net8.0 -c Release -o out -a $TARGETARCH
-RUN dotnet publish ./KNetConnect/KNetConnect.csproj /p:NoWarn="0108%3B1030%3B0618" --framework net8.0 -c Release -o out -a $TARGETARCH
+RUN dotnet publish ./KNetCLI/KNetCLI.csproj /p:NoWarn="0108%3B1030%3B0618%3B0612" --framework net8.0 -c Release -o out -a $TARGETARCH
+RUN dotnet publish ./KNetConnect/KNetConnect.csproj /p:NoWarn="0108%3B1030%3B0618%3B0612" --framework net8.0 -c Release -o out -a $TARGETARCH
 
 # Build runtime image
 FROM mcr.microsoft.com/dotnet/runtime:8.0-noble
