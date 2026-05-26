@@ -43,10 +43,6 @@ namespace Org.Apache.Kafka.Connect.Sink
         /// <param name="source">The <see cref="SinkRecord{TKey, TValue}"/> to convert</param>
         public static implicit operator SinkRecord(SinkRecord<TKey, TValue> source) => source.Cast<SinkRecord>();
         /// <summary>
-        /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
-        /// </summary>
-        public SinkRecord() { }
-        /// <summary>
         /// Internal constructor: used internally from JCOBridge
         /// </summary>
         [global::System.Obsolete("This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
@@ -54,25 +50,25 @@ namespace Org.Apache.Kafka.Connect.Sink
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.2.0/org/apache/kafka/connect/connector/ConnectRecord.html#org.apache.kafka.connect.connector.ConnectRecord(java.lang.String,java.lang.Integer,org.apache.kafka.connect.data.Schema,java.lang.Object,org.apache.kafka.connect.data.Schema,java.lang.Object,java.lang.Long)"/>
         /// </summary>
-        public SinkRecord(string topic, int partition, Schema keySchema, TKey key, Schema valueSchema, TValue value, long kafkaOffset)
-            : base(topic, partition, keySchema, key, valueSchema, value, kafkaOffset)
+        public SinkRecord(string topic, int partition, Schema keySchema, TKey key, Schema valueSchema, TValue value, long kafkaOffset) : base(JVMBridgeBase.InitializerInstance)
         {
+            InvokeInitializer(topic, partition, keySchema, key, valueSchema, value, kafkaOffset);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.2.0/org/apache/kafka/connect/connector/ConnectRecord.html#org.apache.kafka.connect.connector.ConnectRecord(java.lang.String,java.lang.Integer,org.apache.kafka.connect.data.Schema,java.lang.Object,org.apache.kafka.connect.data.Schema,java.lang.Object,java.lang.Long)"/>
         /// </summary>
         public SinkRecord(string topic, int partition, Schema keySchema, TKey key, Schema valueSchema, TValue value, long kafkaOffset,
-                          DateTime timestamp, TimestampType timestampType)
-            : base(topic, partition, keySchema, key, valueSchema, value, kafkaOffset, timestamp, timestampType)
+                          DateTime timestamp, TimestampType timestampType) : base(JVMBridgeBase.InitializerInstance)
         {
+            InvokeInitializer(topic, partition, keySchema, key, valueSchema, value, kafkaOffset, timestamp, timestampType);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.2.0/org/apache/kafka/connect/connector/ConnectRecord.html#org.apache.kafka.connect.connector.ConnectRecord(java.lang.String,java.lang.Integer,org.apache.kafka.connect.data.Schema,java.lang.Object,org.apache.kafka.connect.data.Schema,java.lang.Object,java.lang.Long)"/>
         /// </summary>
         public SinkRecord(string topic, int partition, Schema keySchema, TKey key, Schema valueSchema, TValue value, long kafkaOffset,
-                          DateTime timestamp, TimestampType timestampType, Headers headers)
-            : base(topic, partition, keySchema, key, valueSchema, value, kafkaOffset, timestamp, timestampType, headers)
+                          DateTime timestamp, TimestampType timestampType, Headers headers) : base(JVMBridgeBase.InitializerInstance)
         {
+            InvokeInitializer(topic, partition, keySchema, key, valueSchema, value, kafkaOffset, timestamp, timestampType, headers);
         }
         /// <summary>
         /// Offset in Kafka
