@@ -3,6 +3,7 @@
   "RelativeDestinationJavaListenerPath": "jvm\\knet\\src\\main\\java",
   "JavaListenerBasePackage": "org.mases.knet.generated",
   "PreferMethodWithSignature": true,
+  "ReflectDeprecated": true,
   "OnlyPropertiesForGetterSetter": true,
   "DisableInterfaceMethodGeneration": true,
   "CreateInterfaceInheritance": true,
