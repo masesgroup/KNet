@@ -45,10 +45,6 @@ namespace Org.Apache.Kafka.Connect.Connector
         public override string BridgeClassName => "org.apache.kafka.connect.connector.ConnectRecord";
 
         /// <summary>
-        /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
-        /// </summary>
-        public ConnectRecord() { }
-        /// <summary>
         /// Internal constructor: used internally from JCOBridge
         /// </summary>
         [global::System.Obsolete("This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
@@ -71,12 +67,6 @@ namespace Org.Apache.Kafka.Connect.Connector
                              Schema valueSchema, TValue value,
                              DateTime timestamp, Headers headers)
              : base(topic, kafkaPartition, keySchema, key, valueSchema, value, new DateTimeOffset(timestamp).ToUnixTimeMilliseconds(), headers)
-        {
-        }
-        /// <summary>
-        /// Generic constructor: it is useful for JCOBridge when there is a derived class which needs to pass arguments to the highest JVMBridgeBase class
-        /// </summary>
-        protected ConnectRecord(params object[] args) : base(args)
         {
         }
         /// <summary>
