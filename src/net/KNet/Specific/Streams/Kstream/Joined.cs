@@ -33,7 +33,7 @@ namespace MASES.KNet.Streams.Kstream
     /// <typeparam name="TJVMVO">The JVM type of <typeparamref name="VO"/></typeparam>
     public class Joined<K, V, VO, TJVMK, TJVMV, TJVMVO> : IKNetInnerReference<Org.Apache.Kafka.Streams.Kstream.Joined<TJVMK, TJVMV, TJVMVO>>, IGenericSerDesFactoryApplier, IDisposable
     {
-        readonly Org.Apache.Kafka.Streams.Kstream.Joined<TJVMK, TJVMV, TJVMVO> _inner;
+        Org.Apache.Kafka.Streams.Kstream.Joined<TJVMK, TJVMV, TJVMVO> _inner;
         IGenericSerDesFactory _factory;
         IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set => _factory = value; }
 
@@ -74,6 +74,7 @@ namespace MASES.KNet.Streams.Kstream
             if (disposing)
             {
                 _inner?.Dispose();
+                _inner = null;
             }
         }
 

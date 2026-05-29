@@ -29,7 +29,7 @@ namespace MASES.KNet.Streams.Kstream
     /// <typeparam name="TJVMK">The JVM type of <typeparamref name="K"/></typeparam>
     public class Suppressed<K, TJVMK> : IKNetInnerReference<Org.Apache.Kafka.Streams.Kstream.Suppressed<TJVMK>>, IGenericSerDesFactoryApplier, IDisposable
     {
-        readonly Org.Apache.Kafka.Streams.Kstream.Suppressed<TJVMK> _inner;
+        Org.Apache.Kafka.Streams.Kstream.Suppressed<TJVMK> _inner;
         IGenericSerDesFactory _factory;
         IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set => _factory = value; }
 
@@ -70,6 +70,7 @@ namespace MASES.KNet.Streams.Kstream
             if (disposing)
             {
                 _inner?.Dispose();
+                _inner = null;
             }
         }
 

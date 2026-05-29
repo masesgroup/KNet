@@ -28,7 +28,7 @@ namespace MASES.KNet.Streams.State
     /// <typeparam name="TJVMV">The JVM type of <typeparamref name="V"/></typeparam>
     public class WindowStoreIterator<V, TJVMV> : IGenericSerDesFactoryApplier
     { 
-        readonly Org.Apache.Kafka.Streams.State.WindowStoreIterator<TJVMV> _iterator;
+        Org.Apache.Kafka.Streams.State.WindowStoreIterator<TJVMV> _iterator;
         IGenericSerDesFactory _factory;
         IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set => _factory = value; }
 

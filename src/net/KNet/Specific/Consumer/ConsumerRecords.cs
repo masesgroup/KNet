@@ -33,9 +33,9 @@ namespace MASES.KNet.Consumer
     /// <typeparam name="TJVMV">The JVM type of <typeparamref name="V"/></typeparam>
     public class ConsumerRecords<K, V, TJVMK, TJVMV> : IKNetInnerReference<Org.Apache.Kafka.Clients.Consumer.ConsumerRecords<TJVMK, TJVMV>>, IEnumerable<ConsumerRecord<K, V, TJVMK, TJVMV>>, IAsyncEnumerable<ConsumerRecord<K, V, TJVMK, TJVMV>>, IDisposable
     {
-        readonly ISerDes<K, TJVMK> _keyDeserializer;
-        readonly ISerDes<V, TJVMV> _valueDeserializer;
-        readonly Org.Apache.Kafka.Clients.Consumer.ConsumerRecords<TJVMK, TJVMV> _records;
+        ISerDes<K, TJVMK> _keyDeserializer;
+        ISerDes<V, TJVMV> _valueDeserializer;
+        Org.Apache.Kafka.Clients.Consumer.ConsumerRecords<TJVMK, TJVMV> _records;
         /// <summary>
         /// Initialize a new <see cref="ConsumerRecord{K, V, TJVMK, TJVMV}"/>
         /// </summary>
@@ -79,6 +79,9 @@ namespace MASES.KNet.Consumer
             if (disposing)
             {
                 _records?.Dispose();
+                _records = null;
+                _keyDeserializer = null;
+                _valueDeserializer = null;
             }
         }
 

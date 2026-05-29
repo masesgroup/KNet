@@ -74,7 +74,8 @@ namespace MASES.KNet.Streams.Kstream
 			if (disposing)
 			{
 				_inner?.Dispose();
-			}
+                _inner = null;
+            }
 		}
 
 		#endregion
