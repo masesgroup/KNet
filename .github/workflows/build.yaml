@@ -25,7 +25,7 @@ on:
       ExecuteOnLargerJDKSet:
         description: 'Executes tests on more JDK'
         required: false
-        default: true
+        default: false
         type: boolean
       EnableWindowsTests:
         description: 'Executes tests on Windows'
@@ -164,7 +164,7 @@ jobs:
       EnableMacOSTests: ${{ inputs.EnableMacOSTests || github.event_name == 'schedule' }}
       UseLastRepositoryBuild: ${{ inputs.UseLastRepositoryBuild || false }}
       ForceContinueOnError: ${{ inputs.ForceContinueOnError || false }}
-      UploadServerLogs: ${{ inputs.ForceContinueOnError || false }}
+      UploadServerLogs: ${{ inputs.UploadServerLogs || false }}
       EnableProcessDump: ${{ inputs.EnableProcessDump || '0' }}
       ProcessDumpType: ${{ inputs.ProcessDumpType || '3' }}
       EnableVerboseDiagnosticProcessDump: ${{ inputs.EnableVerboseDiagnosticProcessDump || '0' }}
