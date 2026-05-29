@@ -29,7 +29,7 @@ namespace MASES.KNet.Streams.Kstream
     /// <typeparam name="TJVMK">The JVM type of <typeparamref name="K"/></typeparam>
     public class Windowed<K, TJVMK> : IKNetInnerReference<Org.Apache.Kafka.Streams.Kstream.Windowed<TJVMK>>, IGenericSerDesFactoryApplier, IDisposable
     {
-        readonly Org.Apache.Kafka.Streams.Kstream.Windowed<TJVMK> _inner;
+        Org.Apache.Kafka.Streams.Kstream.Windowed<TJVMK> _inner;
         ISerDes<K, TJVMK> _keySerDes = null;
         IGenericSerDesFactory _factory;
         IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set => _factory = value; }
@@ -72,6 +72,7 @@ namespace MASES.KNet.Streams.Kstream
             if (disposing)
             {
                 _inner?.Dispose();
+                _inner = null;
             }
         }
 

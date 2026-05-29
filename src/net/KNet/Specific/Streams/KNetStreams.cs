@@ -30,9 +30,9 @@ namespace MASES.KNet.Streams
     /// </summary>
     public class KNetStreams : IKNetInnerReference<Org.Apache.Kafka.Streams.KafkaStreams>, IGenericSerDesFactoryApplier, IDisposable
     {
-        readonly Java.Util.Properties _properties;
-        readonly Org.Apache.Kafka.Streams.KafkaStreams _inner;
-        readonly KNetClientSupplier _supplier = null; // used to avoid GC recall
+        Java.Util.Properties _properties;
+        Org.Apache.Kafka.Streams.KafkaStreams _inner;
+        KNetClientSupplier _supplier = null; // used to avoid GC recall
         IGenericSerDesFactory _factory;
         IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set => _factory = value; }
 
@@ -126,7 +126,10 @@ namespace MASES.KNet.Streams
             if (disposing)
             {
                 _properties?.Dispose();
+                _properties = null;
                 _inner?.Dispose();
+                _inner = null;
+                _supplier = null;
             }
         }
 

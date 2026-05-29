@@ -29,7 +29,7 @@ namespace MASES.KNet.Streams
     /// </summary>
     public partial class KeyValueSupport<K, V> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<KeyValueSupport<K, V>>
     {
-        readonly IJavaObject _inner;
+        IJavaObject _inner;
 
         #region Constructors
         /// <summary>
@@ -111,6 +111,7 @@ namespace MASES.KNet.Streams
             if (disposing)
             {
                 _inner?.Dispose();
+                _inner = null;
             }
 
             base.Dispose(disposing);

@@ -31,7 +31,7 @@ namespace MASES.KNet.Streams
     /// <typeparam name="TJVMV">The JVM type of <typeparamref name="V"/></typeparam>
     public sealed class KeyValue<K, V, TJVMK, TJVMV> : IKNetInnerReference<KeyValueSupport<TJVMK, TJVMV>>, IGenericSerDesFactoryApplier, IDisposable
     {
-        readonly KeyValueSupport<TJVMK, TJVMV> _inner = null;
+        KeyValueSupport<TJVMK, TJVMV> _inner = null;
         K _key;
         bool _keyStored;
         V _value;
@@ -98,6 +98,11 @@ namespace MASES.KNet.Streams
             if (disposing)
             {
                 _inner?.Dispose();
+                _inner = null;
+                _key = default;
+                _keyStored = false;
+                _value = default;
+                _valueStored = true;
             }
         }
 
