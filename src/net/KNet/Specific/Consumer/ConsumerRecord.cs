@@ -33,7 +33,7 @@ namespace MASES.KNet.Consumer
     {
         IDeserializer<K, TJVMK> _keyDeserializer;
         IDeserializer<V, TJVMV> _valueDeserializer;
-        readonly Org.Apache.Kafka.Clients.Consumer.ConsumerRecord<TJVMK, TJVMV> _record;
+        Org.Apache.Kafka.Clients.Consumer.ConsumerRecord<TJVMK, TJVMV> _record;
         IGenericSerDesFactory _factory;
         IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set => _factory = value; }
         /// <summary>
@@ -95,6 +95,19 @@ namespace MASES.KNet.Consumer
             if (disposing)
             {
                 _record?.Dispose();
+                _record = null;
+                _headers = null;
+                _topic = null;
+                _partition = null;
+                _offset = null;
+                _timestamp = null;
+                _timestampType = null;
+                _serializedKeySize = null;
+                _serializedValueSize = null;
+                _localKeyDes = false;
+                _localKey = default;
+                _localValueDes = false;
+                _localValue = default;
             }
         }
 

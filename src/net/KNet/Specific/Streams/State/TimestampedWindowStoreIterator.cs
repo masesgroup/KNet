@@ -28,7 +28,7 @@ namespace MASES.KNet.Streams.State
     /// <typeparam name="TJVMV">The JVM value type</typeparam>
     public sealed class TimestampedWindowStoreIterator<V, TJVMV> : IGenericSerDesFactoryApplier
     {
-        readonly Org.Apache.Kafka.Streams.State.WindowStoreIterator<Org.Apache.Kafka.Streams.State.ValueAndTimestamp<TJVMV>> _iterator;
+        Org.Apache.Kafka.Streams.State.WindowStoreIterator<Org.Apache.Kafka.Streams.State.ValueAndTimestamp<TJVMV>> _iterator;
         IGenericSerDesFactory _factory;
         IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set => _factory = value; }
 

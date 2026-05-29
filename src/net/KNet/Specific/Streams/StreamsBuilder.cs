@@ -87,6 +87,7 @@ namespace MASES.KNet.Streams
             if (disposing)
             {
                 _builder?.Dispose();
+                _builder = null;
             }
         }
 

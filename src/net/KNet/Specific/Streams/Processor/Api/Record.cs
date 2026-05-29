@@ -33,8 +33,8 @@ namespace MASES.KNet.Streams.Processor.Api
     public class Record<K, V, TJVMK, TJVMV> : IKNetInnerReference<Org.Apache.Kafka.Streams.Processor.Api.Record<TJVMK, TJVMV>>, IDisposable
     {
         readonly IGenericSerDesFactory _builder;
-        readonly Org.Apache.Kafka.Streams.Processor.Api.Record<TJVMK, TJVMV> _record;
-        readonly Org.Apache.Kafka.Streams.Processor.Api.RecordMetadata _metadata;
+        Org.Apache.Kafka.Streams.Processor.Api.Record<TJVMK, TJVMV> _record;
+        Org.Apache.Kafka.Streams.Processor.Api.RecordMetadata _metadata;
 
         internal Record(IGenericSerDesFactory builder, Org.Apache.Kafka.Streams.Processor.Api.Record<TJVMK, TJVMV> record, Org.Apache.Kafka.Streams.Processor.Api.RecordMetadata metadata)
         {
@@ -75,7 +75,9 @@ namespace MASES.KNet.Streams.Processor.Api
             if (disposing)
             {
                 _record?.Dispose();
+                _record = null;
                 _metadata?.Dispose();
+                _metadata = null;
             }
         }
 

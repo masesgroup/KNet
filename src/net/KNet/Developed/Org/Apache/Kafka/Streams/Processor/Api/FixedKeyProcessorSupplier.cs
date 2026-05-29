@@ -91,6 +91,13 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
         /// </summary>
         public FixedKeyProcessorSupplier() { InitializeHandlers(); }
 
+        /// <inheritdoc/>
+        protected override void Dispose(bool disposing)
+        {
+            m_list.Clear();
+            base.Dispose(disposing);
+        }
+
         #endregion
 
         #region Instance methods

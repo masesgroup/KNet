@@ -37,7 +37,7 @@ namespace MASES.KNet.Streams.Kstream
         ISerDes<V, TJVMV> _valueSerdes;
 
         TimestampExtractor<K, V, TJVMK, TJVMV> _timestampExtractor = null;
-        readonly Org.Apache.Kafka.Streams.Kstream.Consumed<TJVMK, TJVMV> _inner;
+        Org.Apache.Kafka.Streams.Kstream.Consumed<TJVMK, TJVMV> _inner;
         IGenericSerDesFactory _factory;
         IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory
         {
@@ -86,6 +86,7 @@ namespace MASES.KNet.Streams.Kstream
             if (disposing)
             {
                 _inner?.Dispose();
+                _inner = null;
             }
         }
 

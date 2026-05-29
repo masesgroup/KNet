@@ -89,6 +89,13 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
         public ProcessorSupplier() { InitializeHandlers(); }
 
         /// <inheritdoc/>
+        protected override void Dispose(bool disposing)
+        {
+            m_list.Clear();
+            base.Dispose(disposing);
+        }
+
+        /// <inheritdoc/>
         public override string BridgeClassName => "org.mases.knet.developed.streams.processor.api.ProcessorSupplier";
         #endregion
 

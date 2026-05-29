@@ -31,7 +31,7 @@ namespace MASES.KNet.Streams
     /// </summary>
     public class Topology : IKNetInnerReference<Org.Apache.Kafka.Streams.Topology>, IGenericSerDesFactoryApplier, IDisposable
     {
-        readonly Org.Apache.Kafka.Streams.Topology _topology;
+        Org.Apache.Kafka.Streams.Topology _topology;
         IGenericSerDesFactory _factory;
         IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set => _factory = value; }
         #region Constructors
@@ -87,6 +87,7 @@ namespace MASES.KNet.Streams
             if (disposing)
             {
                 _topology?.Dispose();
+                _topology = null;
             }
         }
 

@@ -31,7 +31,7 @@ namespace MASES.KNet.Streams.Processor.Api
 	/// <typeparam name="TJVMVForward">The JVM type of <typeparamref name="VForward"/></typeparam>
 	public class ProcessorContext<KForward, VForward, TJVMKForward, TJVMVForward> : IKNetInnerReference<Org.Apache.Kafka.Streams.Processor.Api.ProcessorContext<TJVMKForward, TJVMVForward>>, IDisposable
 	{
-		readonly Org.Apache.Kafka.Streams.Processor.Api.ProcessorContext<TJVMKForward, TJVMVForward> _context;
+		Org.Apache.Kafka.Streams.Processor.Api.ProcessorContext<TJVMKForward, TJVMVForward> _context;
 
 		internal ProcessorContext(Org.Apache.Kafka.Streams.Processor.Api.ProcessorContext<TJVMKForward, TJVMVForward> context)
 		{
@@ -70,6 +70,7 @@ namespace MASES.KNet.Streams.Processor.Api
 			if (disposing)
 			{
 				_context?.Dispose();
+				_context = null;
 			}
 		}
 

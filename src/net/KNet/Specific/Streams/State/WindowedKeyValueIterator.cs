@@ -118,7 +118,7 @@ namespace MASES.KNet.Streams.State
             }
         }
 
-        readonly Org.Apache.Kafka.Streams.State.KeyValueIterator<Org.Apache.Kafka.Streams.Kstream.Windowed<TJVMK>, TJVMV> _iterator;
+        Org.Apache.Kafka.Streams.State.KeyValueIterator<Org.Apache.Kafka.Streams.Kstream.Windowed<TJVMK>, TJVMV> _iterator;
         ISerDes<V, TJVMV> _valueSerDes = null;
 
         internal WindowedKeyValueIterator(IGenericSerDesFactory factory, Org.Apache.Kafka.Streams.State.KeyValueIterator<Org.Apache.Kafka.Streams.Kstream.Windowed<TJVMK>, TJVMV> iterator)
@@ -134,6 +134,7 @@ namespace MASES.KNet.Streams.State
         protected override void Dispose(bool disposing)
         {
             _iterator?.Dispose();
+            _iterator = null;
             base.Dispose(disposing);
         }
 

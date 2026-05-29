@@ -123,7 +123,7 @@ namespace MASES.KNet.Streams.State
             }
         }
 
-        readonly Org.Apache.Kafka.Streams.State.KeyValueIterator<TJVMK, TJVMV> _iterator;
+        Org.Apache.Kafka.Streams.State.KeyValueIterator<TJVMK, TJVMV> _iterator;
         ISerDes<K, TJVMK> _keySerDes = null;
         ISerDes<V, TJVMV> _valueSerDes = null;
 
@@ -140,6 +140,7 @@ namespace MASES.KNet.Streams.State
         protected override void Dispose(bool disposing)
         {
             _iterator?.Dispose();
+            _iterator = null;
             base.Dispose(disposing);
         }
 
