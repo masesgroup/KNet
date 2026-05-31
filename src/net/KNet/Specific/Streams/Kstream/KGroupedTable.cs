@@ -71,11 +71,12 @@ namespace MASES.KNet.Streams.Kstream
 			if (Interlocked.Exchange(ref _disposed, 1) != 0)
 				return;
 
-            if (disposing)
-            {
-                _inner?.Dispose();
+			if (disposing)
+			{
+				_inner?.Dispose();
+                _inner = null;
             }
-        }
+		}
 
         #endregion
 

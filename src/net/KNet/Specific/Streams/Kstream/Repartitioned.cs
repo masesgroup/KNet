@@ -34,7 +34,7 @@ namespace MASES.KNet.Streams.Kstream
     public class Repartitioned<K, V, TJVMK, TJVMV> : IKNetInnerReference<Org.Apache.Kafka.Streams.Kstream.Repartitioned<TJVMK, TJVMV>>, IGenericSerDesFactoryApplier, IDisposable
     {
         StreamPartitioner<K, V, TJVMK, TJVMV> _streamPartitioner = null;
-        readonly Org.Apache.Kafka.Streams.Kstream.Repartitioned<TJVMK, TJVMV> _inner;
+        Org.Apache.Kafka.Streams.Kstream.Repartitioned<TJVMK, TJVMV> _inner;
         IGenericSerDesFactory _factory;
         IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory
         {
@@ -84,6 +84,7 @@ namespace MASES.KNet.Streams.Kstream
             if (disposing)
             {
                 _inner?.Dispose();
+                _inner = null;
             }
         }
 

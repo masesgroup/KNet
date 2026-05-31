@@ -50,6 +50,13 @@ namespace Org.Apache.Kafka.Streams.Kstream
         public ValueTransformerWithKeySupplier() { InitializeHandlers(); }
 
         /// <inheritdoc/>
+        protected override void Dispose(bool disposing)
+        {
+            m_list.Clear();
+            base.Dispose(disposing);
+        }
+
+        /// <inheritdoc/>
         public override string BridgeClassName => "org.mases.knet.developed.streams.kstream.ValueTransformerWithKeySupplier";
         #endregion
 

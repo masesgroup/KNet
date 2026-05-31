@@ -26,10 +26,10 @@ namespace MASES.KNet.Consumer
 {
     class ConsumerRecordsEnumerator<K, V, TJVMK, TJVMV> : IKNetInnerReference<Org.Apache.Kafka.Clients.Consumer.ConsumerRecords<TJVMK, TJVMV>>, IEnumerator<ConsumerRecord<K, V, TJVMK, TJVMV>>, IAsyncEnumerator<ConsumerRecord<K, V, TJVMK, TJVMV>>
     {
-        readonly IDeserializer<K, TJVMK> _keyDeserializer;
-        readonly IDeserializer<V, TJVMV> _valueDeserializer;
-        readonly CancellationToken _cancellationToken;
-        readonly Org.Apache.Kafka.Clients.Consumer.ConsumerRecords<TJVMK, TJVMV> _records;
+        IDeserializer<K, TJVMK> _keyDeserializer;
+        IDeserializer<V, TJVMV> _valueDeserializer;
+        CancellationToken _cancellationToken;
+        Org.Apache.Kafka.Clients.Consumer.ConsumerRecords<TJVMK, TJVMV> _records;
         IEnumerator<Org.Apache.Kafka.Clients.Consumer.ConsumerRecord<TJVMK, TJVMV>> _recordEnumerator;
         IAsyncEnumerator<Org.Apache.Kafka.Clients.Consumer.ConsumerRecord<TJVMK, TJVMV>> _recordAsyncEnumerator;
 
@@ -87,6 +87,9 @@ namespace MASES.KNet.Consumer
             {
                 _recordEnumerator?.Dispose();
                 _recordAsyncEnumerator?.DisposeAsync();
+                _records = null;
+                _keyDeserializer = null;
+                _valueDeserializer = null;
             }
         }
 
