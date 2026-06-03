@@ -37,7 +37,7 @@ namespace MASES.KNet.Template.KNetConnect
         public override void Put(IEnumerable<SinkRecord> collection)
         {
             // receives the records from Apache Kafka Connect to be used from connector
-            var castedValues = collection.CastTo<string>();
+            var castedValues = collection.CastDirectAndDetach<string>();
 
             foreach (var item in castedValues)
             {

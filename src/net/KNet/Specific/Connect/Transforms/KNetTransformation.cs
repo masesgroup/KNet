@@ -119,11 +119,11 @@ namespace MASES.KNet.Connect.Transforms
 
             if (record.IsInstanceOf<SourceRecord>())
             {
-                return Apply(record.CastTo<SourceRecord>());
+                return Apply(record.CastDirectAndDetach<SourceRecord>());
             }
             else if (record.IsInstanceOf<SinkRecord>())
             {
-                return Apply(record.CastTo<SinkRecord>());
+                return Apply(record.CastDirectAndDetach<SinkRecord>());
             }
             else JVMBridgeException.Throw<ConnectException>($"Cannot manage directly the input, override the method {nameof(Apply)} with generic {nameof(ConnectRecord)} parameter.");
             return null;
