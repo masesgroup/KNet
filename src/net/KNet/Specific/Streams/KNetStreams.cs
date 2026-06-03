@@ -17,6 +17,8 @@
 */
 
 using Java.Time;
+using Java.Util;
+using MASES.JCOBridge.C2JBridge;
 using MASES.KNet.Serialization;
 using MASES.KNet.Streams.Processor;
 using MASES.KNet.Streams.State;
@@ -51,7 +53,7 @@ namespace MASES.KNet.Streams
         public KNetStreams(Topology arg0, StreamsConfigBuilder arg1, Org.Apache.Kafka.Common.Utils.Time arg2)
         {
             _properties = PrepareProperties(arg1);
-            _inner = new Org.Apache.Kafka.Streams.KafkaStreams(arg0, _properties, arg2);
+            _inner = JVMBridgeBase.New<Org.Apache.Kafka.Streams.KafkaStreams>(arg0, _properties, arg2);
             _factory = arg1;
         }
         /// <summary>
@@ -64,7 +66,7 @@ namespace MASES.KNet.Streams
         public KNetStreams(Topology arg0, StreamsConfigBuilder arg1, KNetClientSupplier arg2, Org.Apache.Kafka.Common.Utils.Time arg3)
         {
             _properties = PrepareProperties(arg1);
-            _inner = new Org.Apache.Kafka.Streams.KafkaStreams(arg0, _properties, arg2, arg3);
+            _inner = JVMBridgeBase.New<Org.Apache.Kafka.Streams.KafkaStreams>(arg0, _properties, arg2, arg3);
             _factory = arg1;
             _supplier = arg2;
         }
@@ -77,7 +79,7 @@ namespace MASES.KNet.Streams
         public KNetStreams(Topology arg0, StreamsConfigBuilder arg1, KNetClientSupplier arg2)
         {
             _properties = PrepareProperties(arg1);
-            _inner = new Org.Apache.Kafka.Streams.KafkaStreams(arg0, _properties, arg2);
+            _inner = JVMBridgeBase.New<Org.Apache.Kafka.Streams.KafkaStreams>(arg0, _properties, arg2);
             _factory = arg1;
             _supplier = arg2;
         }
@@ -89,7 +91,7 @@ namespace MASES.KNet.Streams
         public KNetStreams(Topology arg0, StreamsConfigBuilder arg1)
         {
             _properties = PrepareProperties(arg1);
-            _inner = new Org.Apache.Kafka.Streams.KafkaStreams(arg0, _properties);
+            _inner = JVMBridgeBase.New<Org.Apache.Kafka.Streams.KafkaStreams>(arg0, _properties);
             _factory = arg1;
         }
         #endregion

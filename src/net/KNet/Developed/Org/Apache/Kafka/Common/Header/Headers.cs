@@ -44,5 +44,34 @@ namespace Org.Apache.Kafka.Common.Header
         {
             return NewAndWrapsDirect<Headers>("org.apache.kafka.common.header.internals.RecordHeaders", headers);
         }
+
+        /// <summary>
+        /// <see langword="void"/> version of <see cref="Add(String, byte[])"/>
+        /// </summary>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
+        /// <param name="arg1"><see cref="byte"/></param>
+        /// <exception cref="Java.Lang.IllegalStateException"/>
+        public void AddVoid(Java.Lang.String arg0, byte[] arg1)
+        {
+            using var _ = Add(arg0, arg1);
+        }
+        /// <summary>
+        /// <see langword="void"/> version of <see cref="Add(Header)"/>
+        /// </summary>
+        /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Header.Header"/></param>
+        /// <exception cref="Java.Lang.IllegalStateException"/>
+        public void AddVoid(Org.Apache.Kafka.Common.Header.Header arg0)
+        {
+            using var _ = Add(arg0);
+        }
+        /// <summary>
+        /// <see langword="void"/> version of <see cref="Remove(String)"/>
+        /// </summary>
+        /// <param name="arg0"><see cref="Java.Lang.String"/></param>
+        /// <exception cref="Java.Lang.IllegalStateException"/>
+        public void RemoveVoid(Java.Lang.String arg0)
+        {
+            using var _ = Remove(arg0);
+        }
     }
 }

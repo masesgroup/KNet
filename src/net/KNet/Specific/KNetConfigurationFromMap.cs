@@ -396,7 +396,7 @@ namespace MASES.KNet
                     using (item)
                     {
                         using var key = item.Key;
-                        yield return new KeyValuePair<string, object>(key, item.Value);
+                        yield return new KeyValuePair<string, object>(key.ToString(), item.Value);
                     }
                 }
             }
@@ -408,7 +408,7 @@ namespace MASES.KNet
                     using (item)
                     {
                         using var key = item.Key;
-                        yield return new KeyValuePair<string, object>(key, item.Value);
+                        yield return new KeyValuePair<string, object>(key.ToString(), item.Value);
                     }
                 }
             }
