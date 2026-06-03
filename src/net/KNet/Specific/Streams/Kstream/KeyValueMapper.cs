@@ -17,6 +17,7 @@
 */
 
 using Java.Util;
+using MASES.JCOBridge.C2JBridge;
 using MASES.KNet.Serialization;
 using System;
 using System.Collections.Generic;
@@ -228,7 +229,7 @@ namespace MASES.KNet.Streams.Kstream
 
             var methodToExecute = (OnApply != null) ? OnApply : Apply;
             var res = methodToExecute(_kSerializer.Deserialize((Java.Lang.String)null, arg0), _vSerializer.Deserialize((Java.Lang.String)null, arg1));
-            var result = new ArrayList<Org.Apache.Kafka.Streams.KeyValue<TJVMKR, TJVMVR>>();
+            var result = JVMBridgeBase.New<ArrayList<Org.Apache.Kafka.Streams.KeyValue<TJVMKR, TJVMVR>>>();
             foreach (var item in res)
             {
                 var jKR = _krSerializer.Serialize((Java.Lang.String)null, item.Item1);
@@ -236,7 +237,7 @@ namespace MASES.KNet.Streams.Kstream
 
                 using var disposable0 = jKR as IDisposable;
                 using var disposable1 = jVR as IDisposable;
-                using var data = new Org.Apache.Kafka.Streams.KeyValue<TJVMKR, TJVMVR>(jKR, jVR);
+                using var data = JVMBridgeBase.New<Org.Apache.Kafka.Streams.KeyValue<TJVMKR, TJVMVR>>(jKR, jVR);
                 result.Add(data);
             }
             return result;

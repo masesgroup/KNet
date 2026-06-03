@@ -17,6 +17,7 @@
 */
 
 using Java.Util;
+using MASES.JCOBridge.C2JBridge;
 using MASES.JNet.Specific.Extensions;
 using MASES.KNet.Serialization;
 using MASES.KNet.Streams.Processor;
@@ -44,7 +45,7 @@ namespace MASES.KNet.Streams
         public Topology(TopologyConfig arg0)
         {
             if (arg0 is IGenericSerDesFactoryApplier applier) _factory = applier.Factory;
-            _topology = new Org.Apache.Kafka.Streams.Topology(arg0);
+            _topology = JVMBridgeBase.New<Org.Apache.Kafka.Streams.Topology>(arg0);
         }
 
         internal Topology(Org.Apache.Kafka.Streams.Topology topology, IGenericSerDesFactory factory)

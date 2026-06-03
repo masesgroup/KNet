@@ -17,6 +17,7 @@
 */
 
 using Java.Util;
+using MASES.JCOBridge.C2JBridge;
 using MASES.KNet.Serialization;
 using System;
 using System.Collections.Generic;
@@ -126,7 +127,7 @@ namespace MASES.KNet.Streams.Kstream
 
             var methodToExecute = (OnApply != null) ? OnApply : Apply;
             var res = methodToExecute(_vSerializer.Deserialize((Java.Lang.String)null, arg0));
-            var result = new ArrayList<TJVMVR>();
+            var result = JVMBridgeBase.New<ArrayList<TJVMVR>>();
             foreach (var item in res)
             {
                 var localValue = _vrSerializer.Serialize((Java.Lang.String)null, item);
