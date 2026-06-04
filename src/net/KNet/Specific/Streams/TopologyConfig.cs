@@ -16,6 +16,7 @@
 *  Refer to LICENSE for more information.
 */
 
+using MASES.JCOBridge.C2JBridge;
 using MASES.KNet.Serialization;
 using System;
 
@@ -38,7 +39,7 @@ namespace MASES.KNet.Streams
         /// <param name="arg2"><see cref="Java.Util.Properties"/></param>
         public TopologyConfig(string arg0, StreamsConfigBuilder arg1, Java.Util.Properties arg2)
         {
-            _inner = new Org.Apache.Kafka.Streams.TopologyConfig(arg0, PrepareProperties(arg1), arg2);
+            _inner = JVMBridgeBase.New<Org.Apache.Kafka.Streams.TopologyConfig>(arg0, PrepareProperties(arg1), arg2);
             _factory = arg1;
         }
         /// <summary>
@@ -47,7 +48,7 @@ namespace MASES.KNet.Streams
         /// <param name="arg0"><see cref="StreamsConfigBuilder"/></param>
         public TopologyConfig(StreamsConfigBuilder arg0)
         {
-            _inner = new Org.Apache.Kafka.Streams.TopologyConfig(PrepareProperties(arg0));
+            _inner = JVMBridgeBase.New<Org.Apache.Kafka.Streams.TopologyConfig>(PrepareProperties(arg0));
             _factory = arg0;
         }
         #endregion
@@ -68,7 +69,7 @@ namespace MASES.KNet.Streams
         protected virtual Org.Apache.Kafka.Streams.StreamsConfig PrepareProperties(StreamsConfigBuilder builder)
         {
             Java.Util.Properties properties = OverrideProperties != null ? OverrideProperties(builder) : builder;
-            return new Org.Apache.Kafka.Streams.StreamsConfig(properties);
+            return JVMBridgeBase.New<Org.Apache.Kafka.Streams.StreamsConfig>(properties);
         }
 
         #region Fields

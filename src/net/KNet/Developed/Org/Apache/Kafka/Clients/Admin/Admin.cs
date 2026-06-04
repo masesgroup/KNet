@@ -285,7 +285,7 @@ namespace Org.Apache.Kafka.Clients.Admin
                                     var partitionIndex = partition.Partition();
                                     using TopicPartition topicPartition = new(topicName, partitionIndex);
                                     using var offsetSpec = OffsetSpec.Latest();
-                                    hashMap.Put(topicPartition, offsetSpec);
+                                    using var _ = hashMap.Put(topicPartition, offsetSpec);
                                 }
                             }
 

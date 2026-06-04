@@ -53,7 +53,7 @@ namespace MASES.KNet.Streams.State
                 if (input is IJavaObject obj)
                 {
                     return new KeyValue<K, V, TJVMK, TJVMV>(_factory,
-                                                            new KeyValueSupport<TJVMK, TJVMV>(obj),
+                                                            KeyValueSupport<TJVMK, TJVMV>.Create(obj),
                                                             keySerDes, valueSerDes, true);
                 }
                 throw new InvalidCastException($"input is not a valid IJavaObject");
@@ -101,7 +101,7 @@ namespace MASES.KNet.Streams.State
                 if (input is IJavaObject obj)
                 {
                     return new KeyValue<K, V, TJVMK, TJVMV>(_factory,
-                                                            new KeyValueSupport<TJVMK, TJVMV>(obj),
+                                                            KeyValueSupport<TJVMK, TJVMV>.Create(obj),
                                                             _keySerDes,
                                                             _valueSerDes,
                                                             false);
@@ -175,7 +175,7 @@ namespace MASES.KNet.Streams.State
             _keySerDes ??= factory?.BuildKeySerDes<K, TJVMK>();
             _valueSerDes ??= factory?.BuildValueSerDes<V, TJVMV>();
             var kv = _iterator.Next();
-            return new KeyValue<K, V, TJVMK, TJVMV>(factory, new KeyValueSupport<TJVMK, TJVMV>(kv), _keySerDes, _valueSerDes, false);
+            return new KeyValue<K, V, TJVMK, TJVMV>(factory, KeyValueSupport<TJVMK, TJVMV>.Create(kv), _keySerDes, _valueSerDes, false);
         }
         /// <summary>
         /// <see href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Iterator.html#remove()"/>
