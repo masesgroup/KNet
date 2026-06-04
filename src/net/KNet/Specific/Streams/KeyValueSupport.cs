@@ -36,23 +36,26 @@ namespace MASES.KNet.Streams
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
         /// </summary>
         public KeyValueSupport() { }
-        /// <summary>
-        /// Initialize a new instance of <see cref="KeyValueSupport{K, V}"/> from an instance of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/KeyValue.html#org.apache.kafka.streams.KeyValue(java.lang.Object,java.lang.Object)"/>
-        /// </summary>
-        /// <param name="obj">The <see cref="IJavaObject"/> referring <see cref="Org.Apache.Kafka.Streams.KeyValue{K, V}"/></param>
-        public KeyValueSupport(Org.Apache.Kafka.Streams.KeyValue<K,V> obj) : this(obj.BridgeInstance)
-        {
-        }
-        /// <summary>
-        /// Initialize a new instance of <see cref="KeyValueSupport{K, V}"/> from an instance of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/KeyValue.html#org.apache.kafka.streams.KeyValue(java.lang.Object,java.lang.Object)"/>
-        /// </summary>
-        /// <param name="obj">The <see cref="IJavaObject"/> referring <see cref="Org.Apache.Kafka.Streams.KeyValue{K, V}"/></param>
-        public KeyValueSupport(IJavaObject obj) : base(obj)
-        {
-            _inner = obj;
-        }
 
         #endregion
+        /// <summary>
+        /// Initialize a new instance of <see cref="KeyValueSupport{K, V}"/> from an instance of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/KeyValue.html#org.apache.kafka.streams.KeyValue(java.lang.Object,java.lang.Object)"/>
+        /// </summary>
+        /// <param name="obj">The <see cref="IJavaObject"/> referring <see cref="Org.Apache.Kafka.Streams.KeyValue{K, V}"/></param>
+        public static KeyValueSupport<K, V> Create(Org.Apache.Kafka.Streams.KeyValue<K, V> obj)
+        {
+            return Create(obj.BridgeInstance);
+        }
+        /// <summary>
+        /// Initialize a new instance of <see cref="KeyValueSupport{K, V}"/> from an instance of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/KeyValue.html#org.apache.kafka.streams.KeyValue(java.lang.Object,java.lang.Object)"/>
+        /// </summary>
+        /// <param name="obj">The <see cref="IJavaObject"/> referring <see cref="Org.Apache.Kafka.Streams.KeyValue{K, V}"/></param>
+        public static KeyValueSupport<K, V> Create(IJavaObject obj)
+        {
+            var result = MASES.JCOBridge.C2JBridge.JVMBridgeBase.New<KeyValueSupport<K, V>>(obj);
+            result._inner = obj;
+            return result;
+        }
 
         const string _bridgeClassName = "org.mases.knet.developed.streams.KeyValueSupport";
 

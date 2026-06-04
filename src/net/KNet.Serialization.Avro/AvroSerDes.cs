@@ -166,8 +166,8 @@ namespace MASES.KNet.Serialization.Avro
                     /// <inheritdoc cref="SerDes{T, TJVMT}.SerializeWithHeaders(string, Headers, T)"/>
                     public override byte[] SerializeWithHeaders(string topic, Headers headers, TData data)
                     {
-                        headers?.Add(KNetSerialization.KeyTypeIdentifierJVM, keyTypeName);
-                        headers?.Add(KNetSerialization.KeySerializerIdentifierJVM, keySerDesName);
+                        headers?.AddVoid(KNetSerialization.KeyTypeIdentifierJVM, keyTypeName);
+                        headers?.AddVoid(KNetSerialization.KeySerializerIdentifierJVM, keySerDesName);
 
                         if (data == null) return null;
 
@@ -179,8 +179,8 @@ namespace MASES.KNet.Serialization.Avro
                     /// <inheritdoc cref="SerDes{T, TJVMT}.SerializeWithHeaders(Java.Lang.String, Headers, T)"/>
                     public override byte[] SerializeWithHeaders(Java.Lang.String topic, Headers headers, TData data)
                     {
-                        headers?.Add(KNetSerialization.KeyTypeIdentifierJVM, keyTypeName);
-                        headers?.Add(KNetSerialization.KeySerializerIdentifierJVM, keySerDesName);
+                        headers?.AddVoid(KNetSerialization.KeyTypeIdentifierJVM, keyTypeName);
+                        headers?.AddVoid(KNetSerialization.KeySerializerIdentifierJVM, keySerDesName);
 
                         if (data == null) return null;
 
@@ -272,8 +272,8 @@ namespace MASES.KNet.Serialization.Avro
                     /// <inheritdoc cref="SerDes{T, TJVMT}.SerializeWithHeaders(string, Headers, T)"/>
                     public override Java.Nio.ByteBuffer SerializeWithHeaders(string topic, Headers headers, TData data)
                     {
-                        headers?.Add(KNetSerialization.KeyTypeIdentifierJVM, keyTypeName);
-                        headers?.Add(KNetSerialization.KeySerializerIdentifierJVM, keySerDesName);
+                        headers?.AddVoid(KNetSerialization.KeyTypeIdentifierJVM, keyTypeName);
+                        headers?.AddVoid(KNetSerialization.KeySerializerIdentifierJVM, keySerDesName);
 
                         if (data == null) return null;
 
@@ -285,8 +285,8 @@ namespace MASES.KNet.Serialization.Avro
                     /// <inheritdoc cref="SerDes{T, TJVMT}.SerializeWithHeaders(Java.Lang.String, Headers, T)"/>
                     public override Java.Nio.ByteBuffer SerializeWithHeaders(Java.Lang.String topic, Headers headers, TData data)
                     {
-                        headers?.Add(KNetSerialization.KeyTypeIdentifierJVM, keyTypeName);
-                        headers?.Add(KNetSerialization.KeySerializerIdentifierJVM, keySerDesName);
+                        headers?.AddVoid(KNetSerialization.KeyTypeIdentifierJVM, keyTypeName);
+                        headers?.AddVoid(KNetSerialization.KeySerializerIdentifierJVM, keySerDesName);
 
                         if (data == null) return null;
 
@@ -424,8 +424,8 @@ namespace MASES.KNet.Serialization.Avro
                     /// <inheritdoc cref="SerDes{T, TJVMT}.SerializeWithHeaders(string, Headers, T)"/>
                     public override byte[] SerializeWithHeaders(string topic, Headers headers, TData data)
                     {
-                        headers?.Add(KNetSerialization.KeyTypeIdentifierJVM, keyTypeName);
-                        headers?.Add(KNetSerialization.KeySerializerIdentifierJVM, keySerDesName);
+                        headers?.AddVoid(KNetSerialization.KeyTypeIdentifierJVM, keyTypeName);
+                        headers?.AddVoid(KNetSerialization.KeySerializerIdentifierJVM, keySerDesName);
 
                         if (data == null) return null;
 
@@ -437,8 +437,8 @@ namespace MASES.KNet.Serialization.Avro
                     /// <inheritdoc cref="SerDes{T, TJVMT}.SerializeWithHeaders(Java.Lang.String, Headers, T)"/>
                     public override byte[] SerializeWithHeaders(Java.Lang.String topic, Headers headers, TData data)
                     {
-                        headers?.Add(KNetSerialization.KeyTypeIdentifierJVM, keyTypeName);
-                        headers?.Add(KNetSerialization.KeySerializerIdentifierJVM, keySerDesName);
+                        headers?.AddVoid(KNetSerialization.KeyTypeIdentifierJVM, keyTypeName);
+                        headers?.AddVoid(KNetSerialization.KeySerializerIdentifierJVM, keySerDesName);
 
                         if (data == null) return null;
 
@@ -530,8 +530,8 @@ namespace MASES.KNet.Serialization.Avro
                     /// <inheritdoc cref="SerDes{T, TJVMT}.SerializeWithHeaders(string, Headers, T)"/>
                     public override Java.Nio.ByteBuffer SerializeWithHeaders(string topic, Headers headers, TData data)
                     {
-                        headers?.Add(KNetSerialization.KeyTypeIdentifierJVM, keyTypeName);
-                        headers?.Add(KNetSerialization.KeySerializerIdentifierJVM, keySerDesName);
+                        headers?.AddVoid(KNetSerialization.KeyTypeIdentifierJVM, keyTypeName);
+                        headers?.AddVoid(KNetSerialization.KeySerializerIdentifierJVM, keySerDesName);
 
                         if (data == null) return null;
 
@@ -543,8 +543,8 @@ namespace MASES.KNet.Serialization.Avro
                     /// <inheritdoc cref="SerDes{T, TJVMT}.SerializeWithHeaders(Java.Lang.String, Headers, T)"/>
                     public override Java.Nio.ByteBuffer SerializeWithHeaders(Java.Lang.String topic, Headers headers, TData data)
                     {
-                        headers?.Add(KNetSerialization.KeyTypeIdentifierJVM, keyTypeName);
-                        headers?.Add(KNetSerialization.KeySerializerIdentifierJVM, keySerDesName);
+                        headers?.AddVoid(KNetSerialization.KeyTypeIdentifierJVM, keyTypeName);
+                        headers?.AddVoid(KNetSerialization.KeySerializerIdentifierJVM, keySerDesName);
 
                         if (data == null) return null;
 
@@ -689,8 +689,8 @@ namespace MASES.KNet.Serialization.Avro
                     /// <inheritdoc cref="SerDes{T, TJVMT}.SerializeWithHeaders(string, Headers, T)"/>
                     public override byte[] SerializeWithHeaders(string topic, Headers headers, TData data)
                     {
-                        headers?.Add(KNetSerialization.ValueSerializerIdentifierJVM, valueSerDesName);
-                        headers?.Add(KNetSerialization.ValueTypeIdentifierJVM, valueTypeName);
+                        headers?.AddVoid(KNetSerialization.ValueSerializerIdentifierJVM, valueSerDesName);
+                        headers?.AddVoid(KNetSerialization.ValueTypeIdentifierJVM, valueTypeName);
 
                         if (data == null) return null;
 
@@ -702,8 +702,8 @@ namespace MASES.KNet.Serialization.Avro
                     /// <inheritdoc cref="SerDes{T, TJVMT}.SerializeWithHeaders(Java.Lang.String, Headers, T)"/>
                     public override byte[] SerializeWithHeaders(Java.Lang.String topic, Headers headers, TData data)
                     {
-                        headers?.Add(KNetSerialization.ValueSerializerIdentifierJVM, valueSerDesName);
-                        headers?.Add(KNetSerialization.ValueTypeIdentifierJVM, valueTypeName);
+                        headers?.AddVoid(KNetSerialization.ValueSerializerIdentifierJVM, valueSerDesName);
+                        headers?.AddVoid(KNetSerialization.ValueTypeIdentifierJVM, valueTypeName);
 
                         if (data == null) return null;
 
@@ -795,8 +795,8 @@ namespace MASES.KNet.Serialization.Avro
                     /// <inheritdoc cref="SerDes{T, TJVMT}.SerializeWithHeaders(string, Headers, T)"/>
                     public override Java.Nio.ByteBuffer SerializeWithHeaders(string topic, Headers headers, TData data)
                     {
-                        headers?.Add(KNetSerialization.ValueSerializerIdentifierJVM, valueSerDesName);
-                        headers?.Add(KNetSerialization.ValueTypeIdentifierJVM, valueTypeName);
+                        headers?.AddVoid(KNetSerialization.ValueSerializerIdentifierJVM, valueSerDesName);
+                        headers?.AddVoid(KNetSerialization.ValueTypeIdentifierJVM, valueTypeName);
 
                         if (data == null) return null;
 
@@ -808,8 +808,8 @@ namespace MASES.KNet.Serialization.Avro
                     /// <inheritdoc cref="SerDes{T, TJVMT}.SerializeWithHeaders(Java.Lang.String, Headers, T)"/>
                     public override Java.Nio.ByteBuffer SerializeWithHeaders(Java.Lang.String topic, Headers headers, TData data)
                     {
-                        headers?.Add(KNetSerialization.ValueSerializerIdentifierJVM, valueSerDesName);
-                        headers?.Add(KNetSerialization.ValueTypeIdentifierJVM, valueTypeName);
+                        headers?.AddVoid(KNetSerialization.ValueSerializerIdentifierJVM, valueSerDesName);
+                        headers?.AddVoid(KNetSerialization.ValueTypeIdentifierJVM, valueTypeName);
 
                         if (data == null) return null;
 
@@ -948,8 +948,8 @@ namespace MASES.KNet.Serialization.Avro
                     /// <inheritdoc cref="SerDes{T, TJVMT}.SerializeWithHeaders(string, Headers, T)"/>
                     public override byte[] SerializeWithHeaders(string topic, Headers headers, TData data)
                     {
-                        headers?.Add(KNetSerialization.ValueSerializerIdentifierJVM, valueSerDesName);
-                        headers?.Add(KNetSerialization.ValueTypeIdentifierJVM, valueTypeName);
+                        headers?.AddVoid(KNetSerialization.ValueSerializerIdentifierJVM, valueSerDesName);
+                        headers?.AddVoid(KNetSerialization.ValueTypeIdentifierJVM, valueTypeName);
 
                         if (data == null) return null;
 
@@ -961,8 +961,8 @@ namespace MASES.KNet.Serialization.Avro
                     /// <inheritdoc cref="SerDes{T, TJVMT}.SerializeWithHeaders(Java.Lang.String, Headers, T)"/>
                     public override byte[] SerializeWithHeaders(Java.Lang.String topic, Headers headers, TData data)
                     {
-                        headers?.Add(KNetSerialization.ValueSerializerIdentifierJVM, valueSerDesName);
-                        headers?.Add(KNetSerialization.ValueTypeIdentifierJVM, valueTypeName);
+                        headers?.AddVoid(KNetSerialization.ValueSerializerIdentifierJVM, valueSerDesName);
+                        headers?.AddVoid(KNetSerialization.ValueTypeIdentifierJVM, valueTypeName);
 
                         if (data == null) return null;
 
@@ -1054,8 +1054,8 @@ namespace MASES.KNet.Serialization.Avro
                     /// <inheritdoc cref="SerDes{T, TJVMT}.SerializeWithHeaders(string, Headers, T)"/>
                     public override Java.Nio.ByteBuffer SerializeWithHeaders(string topic, Headers headers, TData data)
                     {
-                        headers?.Add(KNetSerialization.ValueSerializerIdentifierJVM, valueSerDesName);
-                        headers?.Add(KNetSerialization.ValueTypeIdentifierJVM, valueTypeName);
+                        headers?.AddVoid(KNetSerialization.ValueSerializerIdentifierJVM, valueSerDesName);
+                        headers?.AddVoid(KNetSerialization.ValueTypeIdentifierJVM, valueTypeName);
 
                         if (data == null) return null;
 
@@ -1067,8 +1067,8 @@ namespace MASES.KNet.Serialization.Avro
                     /// <inheritdoc cref="SerDes{T, TJVMT}.SerializeWithHeaders(Java.Lang.String, Headers, T)"/>
                     public override Java.Nio.ByteBuffer SerializeWithHeaders(Java.Lang.String topic, Headers headers, TData data)
                     {
-                        headers?.Add(KNetSerialization.ValueSerializerIdentifierJVM, valueSerDesName);
-                        headers?.Add(KNetSerialization.ValueTypeIdentifierJVM, valueTypeName);
+                        headers?.AddVoid(KNetSerialization.ValueSerializerIdentifierJVM, valueSerDesName);
+                        headers?.AddVoid(KNetSerialization.ValueTypeIdentifierJVM, valueTypeName);
 
                         if (data == null) return null;
 

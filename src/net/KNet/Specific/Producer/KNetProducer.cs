@@ -248,13 +248,13 @@ namespace MASES.KNet.Producer
         {
             if (!props.ContainsKey(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG))
             {
-                props.Put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, keySerializer.JVMSerializerClassName);
+                using var _ = props.Put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, keySerializer.JVMSerializerClassName) as IDisposable;
             }
             else throw new InvalidOperationException($"KNetProducer auto manages configuration property {ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG}, remove from configuration.");
 
             if (!props.ContainsKey(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG))
             {
-                props.Put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, valueSerializer.JVMSerializerClassName);
+                using var _ = props.Put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, valueSerializer.JVMSerializerClassName) as IDisposable;
             }
             else throw new InvalidOperationException($"KNetProducer auto manages configuration property {ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG}, remove from configuration.");
 
@@ -295,7 +295,7 @@ namespace MASES.KNet.Producer
             using IDisposable disposableValue = jVMV as IDisposable;
             try
             {
-                return new Org.Apache.Kafka.Clients.Producer.ProducerRecord<TJVMK, TJVMV>(topic, partition, timestamp, jVMK, jVMV, headers);
+                return JVMBridgeBase.New<Org.Apache.Kafka.Clients.Producer.ProducerRecord<TJVMK, TJVMV>>(topic, partition, timestamp, jVMK, jVMV, headers);
             }
             finally
             {

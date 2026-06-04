@@ -125,10 +125,10 @@ namespace MASES.KNet
         /// <returns><see cref="Properties"/> containing the properties</returns>
         public Properties ToProperties()
         {
-            Properties props = new();
+            Properties props = JVMBridgeBase.New<Properties>();
             foreach (var item in _options)
             {
-                props.Put(item.Key, item.Value);
+                using var _ = props.Put(item.Key, item.Value) as IDisposable;
             }
 
             return props;
@@ -140,10 +140,10 @@ namespace MASES.KNet
         /// <returns><see cref="Map{String, String}"/> containing the properties</returns>
         public Map<Java.Lang.String, Java.Lang.String> ToMap()
         {
-            HashMap<Java.Lang.String, Java.Lang.String> props = new();
+            HashMap<Java.Lang.String, Java.Lang.String> props = JVMBridgeBase.New<HashMap<Java.Lang.String, Java.Lang.String>>();
             foreach (var item in _options)
             {
-                props.Put(item.Key, Convert.ToString(item.Value, CultureInfo.InvariantCulture));
+                using var _ = props.Put(item.Key, Convert.ToString(item.Value, CultureInfo.InvariantCulture));
             }
 
             return props;
