@@ -35,7 +35,7 @@ namespace MASES.KNet.Streams
         /// <summary>
         /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
         /// </summary>
-        public KeyValueSupport() { }
+        public KeyValueSupport(IJVMBridgeBaseInitializer initializer) : base(initializer) { }
 
         #endregion
         /// <summary>
