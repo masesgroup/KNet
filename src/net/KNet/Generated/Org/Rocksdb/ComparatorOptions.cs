@@ -73,7 +73,7 @@ namespace Org.Rocksdb
         /// <summary>
         /// HPA initializer for ComparatorOptions()
         /// </summary>
-        public static ComparatorOptions New()
+        public static ComparatorOptions CreatePoolableInstance()
         {
             return JVMBridgeBase.New<ComparatorOptions>();
         }

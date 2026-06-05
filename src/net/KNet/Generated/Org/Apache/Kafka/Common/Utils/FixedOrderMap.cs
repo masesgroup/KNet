@@ -109,7 +109,7 @@ namespace Org.Apache.Kafka.Common.Utils
         /// <summary>
         /// HPA initializer for FixedOrderMap()
         /// </summary>
-        public static FixedOrderMap New()
+        public static FixedOrderMap CreatePoolableInstance()
         {
             return JVMBridgeBase.New<FixedOrderMap>();
         }
@@ -154,7 +154,7 @@ namespace Org.Apache.Kafka.Common.Utils
         /// <summary>
         /// HPA initializer for FixedOrderMap()
         /// </summary>
-        public static FixedOrderMap<K, V> New()
+        public static FixedOrderMap<K, V> CreatePoolableInstance()
         {
             return JVMBridgeBase.New<FixedOrderMap<K, V>>();
         }

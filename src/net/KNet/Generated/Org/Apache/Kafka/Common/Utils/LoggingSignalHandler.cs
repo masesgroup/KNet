@@ -75,7 +75,7 @@ namespace Org.Apache.Kafka.Common.Utils
         /// <summary>
         /// HPA initializer for LoggingSignalHandler()
         /// </summary>
-        public static LoggingSignalHandler New()
+        public static LoggingSignalHandler CreatePoolableInstance()
         {
             return JVMBridgeBase.New<LoggingSignalHandler>();
         }

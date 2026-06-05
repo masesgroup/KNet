@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <summary>
         /// HPA initializer for DescribeLogDirsOptions()
         /// </summary>
-        public static DescribeLogDirsOptions New()
+        public static DescribeLogDirsOptions CreatePoolableInstance()
         {
             return JVMBridgeBase.New<DescribeLogDirsOptions>();
         }

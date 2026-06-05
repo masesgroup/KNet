@@ -115,7 +115,7 @@ namespace Org.Apache.Kafka.Clients.Producer
         /// <summary>
         /// HPA initializer for ProducerRecord(Java.Lang.String arg0, Java.Lang.Integer arg1, Java.Lang.Long arg2, object arg3, object arg4, Java.Lang.Iterable arg5)
         /// </summary>
-        public static ProducerRecord New(Java.Lang.String arg0, Java.Lang.Integer arg1, Java.Lang.Long arg2, object arg3, object arg4, Java.Lang.Iterable arg5)
+        public static ProducerRecord CreatePoolableInstance(Java.Lang.String arg0, Java.Lang.Integer arg1, Java.Lang.Long arg2, object arg3, object arg4, Java.Lang.Iterable arg5)
         {
             return JVMBridgeBase.New<ProducerRecord>(arg0, arg1, arg2, arg3, arg4, arg5);
         }
@@ -134,7 +134,7 @@ namespace Org.Apache.Kafka.Clients.Producer
         /// <summary>
         /// HPA initializer for ProducerRecord(Java.Lang.String arg0, Java.Lang.Integer arg1, Java.Lang.Long arg2, object arg3, object arg4)
         /// </summary>
-        public static ProducerRecord New(Java.Lang.String arg0, Java.Lang.Integer arg1, Java.Lang.Long arg2, object arg3, object arg4)
+        public static ProducerRecord CreatePoolableInstance(Java.Lang.String arg0, Java.Lang.Integer arg1, Java.Lang.Long arg2, object arg3, object arg4)
         {
             return JVMBridgeBase.New<ProducerRecord>(arg0, arg1, arg2, arg3, arg4);
         }
@@ -153,7 +153,7 @@ namespace Org.Apache.Kafka.Clients.Producer
         /// <summary>
         /// HPA initializer for ProducerRecord(Java.Lang.String arg0, Java.Lang.Integer arg1, object arg2, object arg3, Java.Lang.Iterable arg4)
         /// </summary>
-        public static ProducerRecord New(Java.Lang.String arg0, Java.Lang.Integer arg1, object arg2, object arg3, Java.Lang.Iterable arg4)
+        public static ProducerRecord CreatePoolableInstance(Java.Lang.String arg0, Java.Lang.Integer arg1, object arg2, object arg3, Java.Lang.Iterable arg4)
         {
             return JVMBridgeBase.New<ProducerRecord>(arg0, arg1, arg2, arg3, arg4);
         }
@@ -171,7 +171,7 @@ namespace Org.Apache.Kafka.Clients.Producer
         /// <summary>
         /// HPA initializer for ProducerRecord(Java.Lang.String arg0, Java.Lang.Integer arg1, object arg2, object arg3)
         /// </summary>
-        public static ProducerRecord New(Java.Lang.String arg0, Java.Lang.Integer arg1, object arg2, object arg3)
+        public static ProducerRecord CreatePoolableInstance(Java.Lang.String arg0, Java.Lang.Integer arg1, object arg2, object arg3)
         {
             return JVMBridgeBase.New<ProducerRecord>(arg0, arg1, arg2, arg3);
         }
@@ -188,7 +188,7 @@ namespace Org.Apache.Kafka.Clients.Producer
         /// <summary>
         /// HPA initializer for ProducerRecord(Java.Lang.String arg0, object arg1, object arg2)
         /// </summary>
-        public static ProducerRecord New(Java.Lang.String arg0, object arg1, object arg2)
+        public static ProducerRecord CreatePoolableInstance(Java.Lang.String arg0, object arg1, object arg2)
         {
             return JVMBridgeBase.New<ProducerRecord>(arg0, arg1, arg2);
         }
@@ -204,7 +204,7 @@ namespace Org.Apache.Kafka.Clients.Producer
         /// <summary>
         /// HPA initializer for ProducerRecord(Java.Lang.String arg0, object arg1)
         /// </summary>
-        public static ProducerRecord New(Java.Lang.String arg0, object arg1)
+        public static ProducerRecord CreatePoolableInstance(Java.Lang.String arg0, object arg1)
         {
             return JVMBridgeBase.New<ProducerRecord>(arg0, arg1);
         }
@@ -303,7 +303,7 @@ namespace Org.Apache.Kafka.Clients.Producer
         /// <summary>
         /// HPA initializer for ProducerRecord(Java.Lang.String arg0, Java.Lang.Integer arg1, Java.Lang.Long arg2, K arg3, V arg4, Java.Lang.Iterable%3COrg.Apache.Kafka.Common.Header.Header%3E arg5)
         /// </summary>
-        public static ProducerRecord<K, V> New(Java.Lang.String arg0, Java.Lang.Integer arg1, Java.Lang.Long arg2, K arg3, V arg4, Java.Lang.Iterable<Org.Apache.Kafka.Common.Header.Header> arg5)
+        public static ProducerRecord<K, V> CreatePoolableInstance(Java.Lang.String arg0, Java.Lang.Integer arg1, Java.Lang.Long arg2, K arg3, V arg4, Java.Lang.Iterable<Org.Apache.Kafka.Common.Header.Header> arg5)
         {
             return JVMBridgeBase.New<ProducerRecord<K, V>>(arg0, arg1, arg2, arg3, arg4, arg5);
         }
@@ -322,7 +322,7 @@ namespace Org.Apache.Kafka.Clients.Producer
         /// <summary>
         /// HPA initializer for ProducerRecord(Java.Lang.String arg0, Java.Lang.Integer arg1, Java.Lang.Long arg2, K arg3, V arg4)
         /// </summary>
-        public static ProducerRecord<K, V> New(Java.Lang.String arg0, Java.Lang.Integer arg1, Java.Lang.Long arg2, K arg3, V arg4)
+        public static ProducerRecord<K, V> CreatePoolableInstance(Java.Lang.String arg0, Java.Lang.Integer arg1, Java.Lang.Long arg2, K arg3, V arg4)
         {
             return JVMBridgeBase.New<ProducerRecord<K, V>>(arg0, arg1, arg2, arg3, arg4);
         }
@@ -341,7 +341,7 @@ namespace Org.Apache.Kafka.Clients.Producer
         /// <summary>
         /// HPA initializer for ProducerRecord(Java.Lang.String arg0, Java.Lang.Integer arg1, K arg2, V arg3, Java.Lang.Iterable%3COrg.Apache.Kafka.Common.Header.Header%3E arg4)
         /// </summary>
-        public static ProducerRecord<K, V> New(Java.Lang.String arg0, Java.Lang.Integer arg1, K arg2, V arg3, Java.Lang.Iterable<Org.Apache.Kafka.Common.Header.Header> arg4)
+        public static ProducerRecord<K, V> CreatePoolableInstance(Java.Lang.String arg0, Java.Lang.Integer arg1, K arg2, V arg3, Java.Lang.Iterable<Org.Apache.Kafka.Common.Header.Header> arg4)
         {
             return JVMBridgeBase.New<ProducerRecord<K, V>>(arg0, arg1, arg2, arg3, arg4);
         }
@@ -359,7 +359,7 @@ namespace Org.Apache.Kafka.Clients.Producer
         /// <summary>
         /// HPA initializer for ProducerRecord(Java.Lang.String arg0, Java.Lang.Integer arg1, K arg2, V arg3)
         /// </summary>
-        public static ProducerRecord<K, V> New(Java.Lang.String arg0, Java.Lang.Integer arg1, K arg2, V arg3)
+        public static ProducerRecord<K, V> CreatePoolableInstance(Java.Lang.String arg0, Java.Lang.Integer arg1, K arg2, V arg3)
         {
             return JVMBridgeBase.New<ProducerRecord<K, V>>(arg0, arg1, arg2, arg3);
         }
@@ -376,7 +376,7 @@ namespace Org.Apache.Kafka.Clients.Producer
         /// <summary>
         /// HPA initializer for ProducerRecord(Java.Lang.String arg0, K arg1, V arg2)
         /// </summary>
-        public static ProducerRecord<K, V> New(Java.Lang.String arg0, K arg1, V arg2)
+        public static ProducerRecord<K, V> CreatePoolableInstance(Java.Lang.String arg0, K arg1, V arg2)
         {
             return JVMBridgeBase.New<ProducerRecord<K, V>>(arg0, arg1, arg2);
         }
@@ -392,7 +392,7 @@ namespace Org.Apache.Kafka.Clients.Producer
         /// <summary>
         /// HPA initializer for ProducerRecord(Java.Lang.String arg0, V arg1)
         /// </summary>
-        public static ProducerRecord<K, V> New(Java.Lang.String arg0, V arg1)
+        public static ProducerRecord<K, V> CreatePoolableInstance(Java.Lang.String arg0, V arg1)
         {
             return JVMBridgeBase.New<ProducerRecord<K, V>>(arg0, arg1);
         }

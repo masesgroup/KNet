@@ -74,7 +74,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
         /// <summary>
         /// HPA initializer for MirrorClient(Java.Util.Map%3CJava.Lang.String, object%3E arg0)
         /// </summary>
-        public static MirrorClient New(Java.Util.Map<Java.Lang.String, object> arg0)
+        public static MirrorClient CreatePoolableInstance(Java.Util.Map<Java.Lang.String, object> arg0)
         {
             return JVMBridgeBase.New<MirrorClient>(arg0);
         }
@@ -89,7 +89,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
         /// <summary>
         /// HPA initializer for MirrorClient(Org.Apache.Kafka.Connect.Mirror.MirrorClientConfig arg0)
         /// </summary>
-        public static MirrorClient New(Org.Apache.Kafka.Connect.Mirror.MirrorClientConfig arg0)
+        public static MirrorClient CreatePoolableInstance(Org.Apache.Kafka.Connect.Mirror.MirrorClientConfig arg0)
         {
             return JVMBridgeBase.New<MirrorClient>(arg0);
         }

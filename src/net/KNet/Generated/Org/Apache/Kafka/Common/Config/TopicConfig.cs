@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Common.Config
         /// <summary>
         /// HPA initializer for TopicConfig()
         /// </summary>
-        public static TopicConfig New()
+        public static TopicConfig CreatePoolableInstance()
         {
             return JVMBridgeBase.New<TopicConfig>();
         }

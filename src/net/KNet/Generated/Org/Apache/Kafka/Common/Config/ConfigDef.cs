@@ -617,7 +617,7 @@ namespace Org.Apache.Kafka.Common.Config
         /// <summary>
         /// HPA initializer for ConfigDef()
         /// </summary>
-        public static ConfigDef New()
+        public static ConfigDef CreatePoolableInstance()
         {
             return JVMBridgeBase.New<ConfigDef>();
         }
@@ -632,7 +632,7 @@ namespace Org.Apache.Kafka.Common.Config
         /// <summary>
         /// HPA initializer for ConfigDef(Org.Apache.Kafka.Common.Config.ConfigDef arg0)
         /// </summary>
-        public static ConfigDef New(Org.Apache.Kafka.Common.Config.ConfigDef arg0)
+        public static ConfigDef CreatePoolableInstance(Org.Apache.Kafka.Common.Config.ConfigDef arg0)
         {
             return JVMBridgeBase.New<ConfigDef>(arg0);
         }
@@ -1297,7 +1297,7 @@ namespace Org.Apache.Kafka.Common.Config
             /// <summary>
             /// HPA initializer for ConfigKey(Java.Lang.String arg0, Org.Apache.Kafka.Common.Config.ConfigDef.Type arg1, object arg2, Org.Apache.Kafka.Common.Config.ConfigDef.Validator arg3, Org.Apache.Kafka.Common.Config.ConfigDef.Importance arg4, Java.Lang.String arg5, Java.Lang.String arg6, int arg7, Org.Apache.Kafka.Common.Config.ConfigDef.Width arg8, Java.Lang.String arg9, Java.Util.List%3CJava.Lang.String%3E arg10, Org.Apache.Kafka.Common.Config.ConfigDef.Recommender arg11, bool arg12)
             /// </summary>
-            public static ConfigKey New(Java.Lang.String arg0, Org.Apache.Kafka.Common.Config.ConfigDef.Type arg1, object arg2, Org.Apache.Kafka.Common.Config.ConfigDef.Validator arg3, Org.Apache.Kafka.Common.Config.ConfigDef.Importance arg4, Java.Lang.String arg5, Java.Lang.String arg6, int arg7, Org.Apache.Kafka.Common.Config.ConfigDef.Width arg8, Java.Lang.String arg9, Java.Util.List<Java.Lang.String> arg10, Org.Apache.Kafka.Common.Config.ConfigDef.Recommender arg11, bool arg12)
+            public static ConfigKey CreatePoolableInstance(Java.Lang.String arg0, Org.Apache.Kafka.Common.Config.ConfigDef.Type arg1, object arg2, Org.Apache.Kafka.Common.Config.ConfigDef.Validator arg3, Org.Apache.Kafka.Common.Config.ConfigDef.Importance arg4, Java.Lang.String arg5, Java.Lang.String arg6, int arg7, Org.Apache.Kafka.Common.Config.ConfigDef.Width arg8, Java.Lang.String arg9, Java.Util.List<Java.Lang.String> arg10, Org.Apache.Kafka.Common.Config.ConfigDef.Recommender arg11, bool arg12)
             {
                 return JVMBridgeBase.New<ConfigKey>(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12);
             }
@@ -1573,7 +1573,7 @@ namespace Org.Apache.Kafka.Common.Config
             /// <summary>
             /// HPA initializer for NonEmptyString()
             /// </summary>
-            public static NonEmptyString New()
+            public static NonEmptyString CreatePoolableInstance()
             {
                 return JVMBridgeBase.New<NonEmptyString>();
             }
@@ -1627,7 +1627,7 @@ namespace Org.Apache.Kafka.Common.Config
             /// <summary>
             /// HPA initializer for NonEmptyStringWithoutControlChars()
             /// </summary>
-            public static NonEmptyStringWithoutControlChars New()
+            public static NonEmptyStringWithoutControlChars CreatePoolableInstance()
             {
                 return JVMBridgeBase.New<NonEmptyStringWithoutControlChars>();
             }
@@ -1689,7 +1689,7 @@ namespace Org.Apache.Kafka.Common.Config
             /// <summary>
             /// HPA initializer for NonNullValidator()
             /// </summary>
-            public static NonNullValidator New()
+            public static NonNullValidator CreatePoolableInstance()
             {
                 return JVMBridgeBase.New<NonNullValidator>();
             }

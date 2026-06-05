@@ -73,7 +73,7 @@ namespace Org.Rocksdb
         /// <summary>
         /// HPA initializer for BloomFilter()
         /// </summary>
-        public static BloomFilter New()
+        public static BloomFilter CreatePoolableInstance()
         {
             return JVMBridgeBase.New<BloomFilter>();
         }
@@ -89,7 +89,7 @@ namespace Org.Rocksdb
         /// <summary>
         /// HPA initializer for BloomFilter(double arg0, bool arg1)
         /// </summary>
-        public static BloomFilter New(double arg0, bool arg1)
+        public static BloomFilter CreatePoolableInstance(double arg0, bool arg1)
         {
             return JVMBridgeBase.New<BloomFilter>(arg0, arg1);
         }
@@ -104,7 +104,7 @@ namespace Org.Rocksdb
         /// <summary>
         /// HPA initializer for BloomFilter(double arg0)
         /// </summary>
-        public static BloomFilter New(double arg0)
+        public static BloomFilter CreatePoolableInstance(double arg0)
         {
             return JVMBridgeBase.New<BloomFilter>(arg0);
         }

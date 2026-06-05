@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Clients.Producer
         /// <summary>
         /// HPA initializer for RoundRobinPartitioner()
         /// </summary>
-        public static RoundRobinPartitioner New()
+        public static RoundRobinPartitioner CreatePoolableInstance()
         {
             return JVMBridgeBase.New<RoundRobinPartitioner>();
         }

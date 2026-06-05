@@ -81,7 +81,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <summary>
         /// HPA initializer for ConsumerGroupDescription(Java.Lang.String arg0, bool arg1, Java.Util.Collection%3COrg.Apache.Kafka.Clients.Admin.MemberDescription%3E arg2, Java.Lang.String arg3, Org.Apache.Kafka.Common.ConsumerGroupState arg4, Org.Apache.Kafka.Common.Node arg5, Java.Util.Set%3COrg.Apache.Kafka.Common.Acl.AclOperation%3E arg6)
         /// </summary>
-        public static ConsumerGroupDescription New(Java.Lang.String arg0, bool arg1, Java.Util.Collection<Org.Apache.Kafka.Clients.Admin.MemberDescription> arg2, Java.Lang.String arg3, Org.Apache.Kafka.Common.ConsumerGroupState arg4, Org.Apache.Kafka.Common.Node arg5, Java.Util.Set<Org.Apache.Kafka.Common.Acl.AclOperation> arg6)
+        public static ConsumerGroupDescription CreatePoolableInstance(Java.Lang.String arg0, bool arg1, Java.Util.Collection<Org.Apache.Kafka.Clients.Admin.MemberDescription> arg2, Java.Lang.String arg3, Org.Apache.Kafka.Common.ConsumerGroupState arg4, Org.Apache.Kafka.Common.Node arg5, Java.Util.Set<Org.Apache.Kafka.Common.Acl.AclOperation> arg6)
         {
             return JVMBridgeBase.New<ConsumerGroupDescription>(arg0, arg1, arg2, arg3, arg4, arg5, arg6);
         }
@@ -102,7 +102,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <summary>
         /// HPA initializer for ConsumerGroupDescription(Java.Lang.String arg0, bool arg1, Java.Util.Collection%3COrg.Apache.Kafka.Clients.Admin.MemberDescription%3E arg2, Java.Lang.String arg3, Org.Apache.Kafka.Common.ConsumerGroupState arg4, Org.Apache.Kafka.Common.Node arg5)
         /// </summary>
-        public static ConsumerGroupDescription New(Java.Lang.String arg0, bool arg1, Java.Util.Collection<Org.Apache.Kafka.Clients.Admin.MemberDescription> arg2, Java.Lang.String arg3, Org.Apache.Kafka.Common.ConsumerGroupState arg4, Org.Apache.Kafka.Common.Node arg5)
+        public static ConsumerGroupDescription CreatePoolableInstance(Java.Lang.String arg0, bool arg1, Java.Util.Collection<Org.Apache.Kafka.Clients.Admin.MemberDescription> arg2, Java.Lang.String arg3, Org.Apache.Kafka.Common.ConsumerGroupState arg4, Org.Apache.Kafka.Common.Node arg5)
         {
             return JVMBridgeBase.New<ConsumerGroupDescription>(arg0, arg1, arg2, arg3, arg4, arg5);
         }
@@ -125,7 +125,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <summary>
         /// HPA initializer for ConsumerGroupDescription(Java.Lang.String arg0, bool arg1, Java.Util.Collection%3COrg.Apache.Kafka.Clients.Admin.MemberDescription%3E arg2, Java.Lang.String arg3, Org.Apache.Kafka.Common.GroupType arg4, Org.Apache.Kafka.Common.ConsumerGroupState arg5, Org.Apache.Kafka.Common.Node arg6, Java.Util.Set%3COrg.Apache.Kafka.Common.Acl.AclOperation%3E arg7)
         /// </summary>
-        public static ConsumerGroupDescription New(Java.Lang.String arg0, bool arg1, Java.Util.Collection<Org.Apache.Kafka.Clients.Admin.MemberDescription> arg2, Java.Lang.String arg3, Org.Apache.Kafka.Common.GroupType arg4, Org.Apache.Kafka.Common.ConsumerGroupState arg5, Org.Apache.Kafka.Common.Node arg6, Java.Util.Set<Org.Apache.Kafka.Common.Acl.AclOperation> arg7)
+        public static ConsumerGroupDescription CreatePoolableInstance(Java.Lang.String arg0, bool arg1, Java.Util.Collection<Org.Apache.Kafka.Clients.Admin.MemberDescription> arg2, Java.Lang.String arg3, Org.Apache.Kafka.Common.GroupType arg4, Org.Apache.Kafka.Common.ConsumerGroupState arg5, Org.Apache.Kafka.Common.Node arg6, Java.Util.Set<Org.Apache.Kafka.Common.Acl.AclOperation> arg7)
         {
             return JVMBridgeBase.New<ConsumerGroupDescription>(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7);
         }
@@ -149,7 +149,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <summary>
         /// HPA initializer for ConsumerGroupDescription(Java.Lang.String arg0, bool arg1, Java.Util.Collection%3COrg.Apache.Kafka.Clients.Admin.MemberDescription%3E arg2, Java.Lang.String arg3, Org.Apache.Kafka.Common.GroupType arg4, Org.Apache.Kafka.Common.GroupState arg5, Org.Apache.Kafka.Common.Node arg6, Java.Util.Set%3COrg.Apache.Kafka.Common.Acl.AclOperation%3E arg7, Java.Util.Optional%3CJava.Lang.Integer%3E arg8, Java.Util.Optional%3CJava.Lang.Integer%3E arg9)
         /// </summary>
-        public static ConsumerGroupDescription New(Java.Lang.String arg0, bool arg1, Java.Util.Collection<Org.Apache.Kafka.Clients.Admin.MemberDescription> arg2, Java.Lang.String arg3, Org.Apache.Kafka.Common.GroupType arg4, Org.Apache.Kafka.Common.GroupState arg5, Org.Apache.Kafka.Common.Node arg6, Java.Util.Set<Org.Apache.Kafka.Common.Acl.AclOperation> arg7, Java.Util.Optional<Java.Lang.Integer> arg8, Java.Util.Optional<Java.Lang.Integer> arg9)
+        public static ConsumerGroupDescription CreatePoolableInstance(Java.Lang.String arg0, bool arg1, Java.Util.Collection<Org.Apache.Kafka.Clients.Admin.MemberDescription> arg2, Java.Lang.String arg3, Org.Apache.Kafka.Common.GroupType arg4, Org.Apache.Kafka.Common.GroupState arg5, Org.Apache.Kafka.Common.Node arg6, Java.Util.Set<Org.Apache.Kafka.Common.Acl.AclOperation> arg7, Java.Util.Optional<Java.Lang.Integer> arg8, Java.Util.Optional<Java.Lang.Integer> arg9)
         {
             return JVMBridgeBase.New<ConsumerGroupDescription>(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9);
         }

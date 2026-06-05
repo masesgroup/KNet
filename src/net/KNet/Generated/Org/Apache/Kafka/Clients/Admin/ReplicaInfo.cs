@@ -76,7 +76,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <summary>
         /// HPA initializer for ReplicaInfo(long arg0, long arg1, bool arg2)
         /// </summary>
-        public static ReplicaInfo New(long arg0, long arg1, bool arg2)
+        public static ReplicaInfo CreatePoolableInstance(long arg0, long arg1, bool arg2)
         {
             return JVMBridgeBase.New<ReplicaInfo>(arg0, arg1, arg2);
         }

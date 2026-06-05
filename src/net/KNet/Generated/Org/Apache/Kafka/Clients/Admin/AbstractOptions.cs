@@ -108,7 +108,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <summary>
         /// HPA initializer for AbstractOptions()
         /// </summary>
-        public static AbstractOptions New()
+        public static AbstractOptions CreatePoolableInstance()
         {
             return JVMBridgeBase.New<AbstractOptions>();
         }
@@ -170,7 +170,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <summary>
         /// HPA initializer for AbstractOptions()
         /// </summary>
-        public static AbstractOptions<T> New()
+        public static AbstractOptions<T> CreatePoolableInstance()
         {
             return JVMBridgeBase.New<AbstractOptions<T>>();
         }

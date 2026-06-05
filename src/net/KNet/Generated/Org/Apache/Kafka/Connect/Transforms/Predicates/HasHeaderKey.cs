@@ -108,7 +108,7 @@ namespace Org.Apache.Kafka.Connect.Transforms.Predicates
         /// <summary>
         /// HPA initializer for HasHeaderKey()
         /// </summary>
-        public static HasHeaderKey New()
+        public static HasHeaderKey CreatePoolableInstance()
         {
             return JVMBridgeBase.New<HasHeaderKey>();
         }
@@ -209,7 +209,7 @@ namespace Org.Apache.Kafka.Connect.Transforms.Predicates
         /// <summary>
         /// HPA initializer for HasHeaderKey()
         /// </summary>
-        public static HasHeaderKey<R> New()
+        public static HasHeaderKey<R> CreatePoolableInstance()
         {
             return JVMBridgeBase.New<HasHeaderKey<R>>();
         }

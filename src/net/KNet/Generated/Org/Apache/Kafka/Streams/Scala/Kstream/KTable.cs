@@ -110,7 +110,7 @@ namespace Org.Apache.Kafka.Streams.Scala.Kstream
         /// <summary>
         /// HPA initializer for KTable(Org.Apache.Kafka.Streams.Kstream.KTable inner)
         /// </summary>
-        public static KTable New(Org.Apache.Kafka.Streams.Kstream.KTable inner)
+        public static KTable CreatePoolableInstance(Org.Apache.Kafka.Streams.Kstream.KTable inner)
         {
             return JVMBridgeBase.New<KTable>(inner);
         }
@@ -198,7 +198,7 @@ namespace Org.Apache.Kafka.Streams.Scala.Kstream
         /// <summary>
         /// HPA initializer for KTable(Org.Apache.Kafka.Streams.Kstream.KTable%3CK, V%3E inner)
         /// </summary>
-        public static KTable<K, V> New(Org.Apache.Kafka.Streams.Kstream.KTable<K, V> inner)
+        public static KTable<K, V> CreatePoolableInstance(Org.Apache.Kafka.Streams.Kstream.KTable<K, V> inner)
         {
             return JVMBridgeBase.New<KTable<K, V>>(inner);
         }

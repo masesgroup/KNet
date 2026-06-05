@@ -159,7 +159,7 @@ namespace Org.Apache.Kafka.Common.Metrics
             /// <summary>
             /// HPA initializer for NamedMeasurable(Org.Apache.Kafka.Common.MetricName arg0, Org.Apache.Kafka.Common.Metrics.Measurable arg1)
             /// </summary>
-            public static NamedMeasurable New(Org.Apache.Kafka.Common.MetricName arg0, Org.Apache.Kafka.Common.Metrics.Measurable arg1)
+            public static NamedMeasurable CreatePoolableInstance(Org.Apache.Kafka.Common.MetricName arg0, Org.Apache.Kafka.Common.Metrics.Measurable arg1)
             {
                 return JVMBridgeBase.New<NamedMeasurable>(arg0, arg1);
             }

@@ -74,7 +74,7 @@ namespace Org.Apache.Kafka.Clients.Producer
         /// <summary>
         /// HPA initializer for ProducerConfig(Java.Util.Map%3CJava.Lang.String, object%3E arg0)
         /// </summary>
-        public static ProducerConfig New(Java.Util.Map<Java.Lang.String, object> arg0)
+        public static ProducerConfig CreatePoolableInstance(Java.Util.Map<Java.Lang.String, object> arg0)
         {
             return JVMBridgeBase.New<ProducerConfig>(arg0);
         }
@@ -89,7 +89,7 @@ namespace Org.Apache.Kafka.Clients.Producer
         /// <summary>
         /// HPA initializer for ProducerConfig(Java.Util.Properties arg0)
         /// </summary>
-        public static ProducerConfig New(Java.Util.Properties arg0)
+        public static ProducerConfig CreatePoolableInstance(Java.Util.Properties arg0)
         {
             return JVMBridgeBase.New<ProducerConfig>(arg0);
         }

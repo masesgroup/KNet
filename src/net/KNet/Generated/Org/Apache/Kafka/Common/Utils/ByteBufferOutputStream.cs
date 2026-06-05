@@ -75,7 +75,7 @@ namespace Org.Apache.Kafka.Common.Utils
         /// <summary>
         /// HPA initializer for ByteBufferOutputStream(int arg0, bool arg1)
         /// </summary>
-        public static ByteBufferOutputStream New(int arg0, bool arg1)
+        public static ByteBufferOutputStream CreatePoolableInstance(int arg0, bool arg1)
         {
             return JVMBridgeBase.New<ByteBufferOutputStream>(arg0, arg1);
         }
@@ -90,7 +90,7 @@ namespace Org.Apache.Kafka.Common.Utils
         /// <summary>
         /// HPA initializer for ByteBufferOutputStream(int arg0)
         /// </summary>
-        public static ByteBufferOutputStream New(int arg0)
+        public static ByteBufferOutputStream CreatePoolableInstance(int arg0)
         {
             return JVMBridgeBase.New<ByteBufferOutputStream>(arg0);
         }
@@ -105,7 +105,7 @@ namespace Org.Apache.Kafka.Common.Utils
         /// <summary>
         /// HPA initializer for ByteBufferOutputStream(Java.Nio.ByteBuffer arg0)
         /// </summary>
-        public static ByteBufferOutputStream New(Java.Nio.ByteBuffer arg0)
+        public static ByteBufferOutputStream CreatePoolableInstance(Java.Nio.ByteBuffer arg0)
         {
             return JVMBridgeBase.New<ByteBufferOutputStream>(arg0);
         }

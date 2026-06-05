@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Common.Utils
         /// <summary>
         /// HPA initializer for SecurityUtils()
         /// </summary>
-        public static SecurityUtils New()
+        public static SecurityUtils CreatePoolableInstance()
         {
             return JVMBridgeBase.New<SecurityUtils>();
         }

@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Common.Metrics
         /// <summary>
         /// HPA initializer for Metrics()
         /// </summary>
-        public static Metrics New()
+        public static Metrics CreatePoolableInstance()
         {
             return JVMBridgeBase.New<Metrics>();
         }
@@ -92,7 +92,7 @@ namespace Org.Apache.Kafka.Common.Metrics
         /// <summary>
         /// HPA initializer for Metrics(Org.Apache.Kafka.Common.Metrics.MetricConfig arg0, Java.Util.List%3COrg.Apache.Kafka.Common.Metrics.MetricsReporter%3E arg1, Org.Apache.Kafka.Common.Utils.Time arg2, bool arg3, Org.Apache.Kafka.Common.Metrics.MetricsContext arg4)
         /// </summary>
-        public static Metrics New(Org.Apache.Kafka.Common.Metrics.MetricConfig arg0, Java.Util.List<Org.Apache.Kafka.Common.Metrics.MetricsReporter> arg1, Org.Apache.Kafka.Common.Utils.Time arg2, bool arg3, Org.Apache.Kafka.Common.Metrics.MetricsContext arg4)
+        public static Metrics CreatePoolableInstance(Org.Apache.Kafka.Common.Metrics.MetricConfig arg0, Java.Util.List<Org.Apache.Kafka.Common.Metrics.MetricsReporter> arg1, Org.Apache.Kafka.Common.Utils.Time arg2, bool arg3, Org.Apache.Kafka.Common.Metrics.MetricsContext arg4)
         {
             return JVMBridgeBase.New<Metrics>(arg0, arg1, arg2, arg3, arg4);
         }
@@ -110,7 +110,7 @@ namespace Org.Apache.Kafka.Common.Metrics
         /// <summary>
         /// HPA initializer for Metrics(Org.Apache.Kafka.Common.Metrics.MetricConfig arg0, Java.Util.List%3COrg.Apache.Kafka.Common.Metrics.MetricsReporter%3E arg1, Org.Apache.Kafka.Common.Utils.Time arg2, bool arg3)
         /// </summary>
-        public static Metrics New(Org.Apache.Kafka.Common.Metrics.MetricConfig arg0, Java.Util.List<Org.Apache.Kafka.Common.Metrics.MetricsReporter> arg1, Org.Apache.Kafka.Common.Utils.Time arg2, bool arg3)
+        public static Metrics CreatePoolableInstance(Org.Apache.Kafka.Common.Metrics.MetricConfig arg0, Java.Util.List<Org.Apache.Kafka.Common.Metrics.MetricsReporter> arg1, Org.Apache.Kafka.Common.Utils.Time arg2, bool arg3)
         {
             return JVMBridgeBase.New<Metrics>(arg0, arg1, arg2, arg3);
         }
@@ -128,7 +128,7 @@ namespace Org.Apache.Kafka.Common.Metrics
         /// <summary>
         /// HPA initializer for Metrics(Org.Apache.Kafka.Common.Metrics.MetricConfig arg0, Java.Util.List%3COrg.Apache.Kafka.Common.Metrics.MetricsReporter%3E arg1, Org.Apache.Kafka.Common.Utils.Time arg2, Org.Apache.Kafka.Common.Metrics.MetricsContext arg3)
         /// </summary>
-        public static Metrics New(Org.Apache.Kafka.Common.Metrics.MetricConfig arg0, Java.Util.List<Org.Apache.Kafka.Common.Metrics.MetricsReporter> arg1, Org.Apache.Kafka.Common.Utils.Time arg2, Org.Apache.Kafka.Common.Metrics.MetricsContext arg3)
+        public static Metrics CreatePoolableInstance(Org.Apache.Kafka.Common.Metrics.MetricConfig arg0, Java.Util.List<Org.Apache.Kafka.Common.Metrics.MetricsReporter> arg1, Org.Apache.Kafka.Common.Utils.Time arg2, Org.Apache.Kafka.Common.Metrics.MetricsContext arg3)
         {
             return JVMBridgeBase.New<Metrics>(arg0, arg1, arg2, arg3);
         }
@@ -145,7 +145,7 @@ namespace Org.Apache.Kafka.Common.Metrics
         /// <summary>
         /// HPA initializer for Metrics(Org.Apache.Kafka.Common.Metrics.MetricConfig arg0, Java.Util.List%3COrg.Apache.Kafka.Common.Metrics.MetricsReporter%3E arg1, Org.Apache.Kafka.Common.Utils.Time arg2)
         /// </summary>
-        public static Metrics New(Org.Apache.Kafka.Common.Metrics.MetricConfig arg0, Java.Util.List<Org.Apache.Kafka.Common.Metrics.MetricsReporter> arg1, Org.Apache.Kafka.Common.Utils.Time arg2)
+        public static Metrics CreatePoolableInstance(Org.Apache.Kafka.Common.Metrics.MetricConfig arg0, Java.Util.List<Org.Apache.Kafka.Common.Metrics.MetricsReporter> arg1, Org.Apache.Kafka.Common.Utils.Time arg2)
         {
             return JVMBridgeBase.New<Metrics>(arg0, arg1, arg2);
         }
@@ -161,7 +161,7 @@ namespace Org.Apache.Kafka.Common.Metrics
         /// <summary>
         /// HPA initializer for Metrics(Org.Apache.Kafka.Common.Metrics.MetricConfig arg0, Org.Apache.Kafka.Common.Utils.Time arg1)
         /// </summary>
-        public static Metrics New(Org.Apache.Kafka.Common.Metrics.MetricConfig arg0, Org.Apache.Kafka.Common.Utils.Time arg1)
+        public static Metrics CreatePoolableInstance(Org.Apache.Kafka.Common.Metrics.MetricConfig arg0, Org.Apache.Kafka.Common.Utils.Time arg1)
         {
             return JVMBridgeBase.New<Metrics>(arg0, arg1);
         }
@@ -176,7 +176,7 @@ namespace Org.Apache.Kafka.Common.Metrics
         /// <summary>
         /// HPA initializer for Metrics(Org.Apache.Kafka.Common.Metrics.MetricConfig arg0)
         /// </summary>
-        public static Metrics New(Org.Apache.Kafka.Common.Metrics.MetricConfig arg0)
+        public static Metrics CreatePoolableInstance(Org.Apache.Kafka.Common.Metrics.MetricConfig arg0)
         {
             return JVMBridgeBase.New<Metrics>(arg0);
         }
@@ -191,7 +191,7 @@ namespace Org.Apache.Kafka.Common.Metrics
         /// <summary>
         /// HPA initializer for Metrics(Org.Apache.Kafka.Common.Utils.Time arg0)
         /// </summary>
-        public static Metrics New(Org.Apache.Kafka.Common.Utils.Time arg0)
+        public static Metrics CreatePoolableInstance(Org.Apache.Kafka.Common.Utils.Time arg0)
         {
             return JVMBridgeBase.New<Metrics>(arg0);
         }

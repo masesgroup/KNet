@@ -107,7 +107,7 @@ namespace Org.Apache.Kafka.Connect.Source
         /// <summary>
         /// HPA initializer for SourceTask()
         /// </summary>
-        public static SourceTask New()
+        public static SourceTask CreatePoolableInstance()
         {
             return JVMBridgeBase.New<SourceTask>();
         }

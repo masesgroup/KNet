@@ -74,7 +74,7 @@ namespace Org.Rocksdb
         /// <summary>
         /// HPA initializer for BackupEngineOptions(Java.Lang.String arg0)
         /// </summary>
-        public static BackupEngineOptions New(Java.Lang.String arg0)
+        public static BackupEngineOptions CreatePoolableInstance(Java.Lang.String arg0)
         {
             return JVMBridgeBase.New<BackupEngineOptions>(arg0);
         }

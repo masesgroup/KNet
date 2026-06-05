@@ -73,7 +73,7 @@ namespace Org.Rocksdb
         /// <summary>
         /// HPA initializer for NativeComparatorWrapper()
         /// </summary>
-        public static NativeComparatorWrapper New()
+        public static NativeComparatorWrapper CreatePoolableInstance()
         {
             return JVMBridgeBase.New<NativeComparatorWrapper>();
         }

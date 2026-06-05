@@ -107,7 +107,7 @@ namespace Org.Apache.Kafka.Tools
         /// <summary>
         /// HPA initializer for AclCommand()
         /// </summary>
-        public static AclCommand New()
+        public static AclCommand CreatePoolableInstance()
         {
             return JVMBridgeBase.New<AclCommand>();
         }
@@ -154,7 +154,7 @@ namespace Org.Apache.Kafka.Tools
             /// <summary>
             /// HPA initializer for AclCommandOptions(Java.Lang.String[] arg0)
             /// </summary>
-            public static AclCommandOptions New(Java.Lang.String[] arg0)
+            public static AclCommandOptions CreatePoolableInstance(Java.Lang.String[] arg0)
             {
                 return JVMBridgeBase.New<AclCommandOptions>(arg0);
             }

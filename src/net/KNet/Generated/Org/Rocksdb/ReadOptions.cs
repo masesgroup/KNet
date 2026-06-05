@@ -73,7 +73,7 @@ namespace Org.Rocksdb
         /// <summary>
         /// HPA initializer for ReadOptions()
         /// </summary>
-        public static ReadOptions New()
+        public static ReadOptions CreatePoolableInstance()
         {
             return JVMBridgeBase.New<ReadOptions>();
         }
@@ -89,7 +89,7 @@ namespace Org.Rocksdb
         /// <summary>
         /// HPA initializer for ReadOptions(bool arg0, bool arg1)
         /// </summary>
-        public static ReadOptions New(bool arg0, bool arg1)
+        public static ReadOptions CreatePoolableInstance(bool arg0, bool arg1)
         {
             return JVMBridgeBase.New<ReadOptions>(arg0, arg1);
         }
@@ -104,7 +104,7 @@ namespace Org.Rocksdb
         /// <summary>
         /// HPA initializer for ReadOptions(Org.Rocksdb.ReadOptions arg0)
         /// </summary>
-        public static ReadOptions New(Org.Rocksdb.ReadOptions arg0)
+        public static ReadOptions CreatePoolableInstance(Org.Rocksdb.ReadOptions arg0)
         {
             return JVMBridgeBase.New<ReadOptions>(arg0);
         }

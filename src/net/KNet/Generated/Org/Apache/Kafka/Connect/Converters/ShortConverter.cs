@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Connect.Converters
         /// <summary>
         /// HPA initializer for ShortConverter()
         /// </summary>
-        public static ShortConverter New()
+        public static ShortConverter CreatePoolableInstance()
         {
             return JVMBridgeBase.New<ShortConverter>();
         }

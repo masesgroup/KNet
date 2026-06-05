@@ -73,7 +73,7 @@ namespace Org.Rocksdb
         /// <summary>
         /// HPA initializer for AbstractWalFilter()
         /// </summary>
-        public static AbstractWalFilter New()
+        public static AbstractWalFilter CreatePoolableInstance()
         {
             return JVMBridgeBase.New<AbstractWalFilter>();
         }

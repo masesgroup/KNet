@@ -75,7 +75,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <summary>
         /// HPA initializer for ClientMetricsResourceListing(Java.Lang.String arg0)
         /// </summary>
-        public static ClientMetricsResourceListing New(Java.Lang.String arg0)
+        public static ClientMetricsResourceListing CreatePoolableInstance(Java.Lang.String arg0)
         {
             return JVMBridgeBase.New<ClientMetricsResourceListing>(arg0);
         }

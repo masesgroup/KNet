@@ -78,7 +78,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <summary>
         /// HPA initializer for MemberDescription(Java.Lang.String arg0, Java.Lang.String arg1, Java.Lang.String arg2, Org.Apache.Kafka.Clients.Admin.MemberAssignment arg3)
         /// </summary>
-        public static MemberDescription New(Java.Lang.String arg0, Java.Lang.String arg1, Java.Lang.String arg2, Org.Apache.Kafka.Clients.Admin.MemberAssignment arg3)
+        public static MemberDescription CreatePoolableInstance(Java.Lang.String arg0, Java.Lang.String arg1, Java.Lang.String arg2, Org.Apache.Kafka.Clients.Admin.MemberAssignment arg3)
         {
             return JVMBridgeBase.New<MemberDescription>(arg0, arg1, arg2, arg3);
         }
@@ -101,7 +101,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <summary>
         /// HPA initializer for MemberDescription(Java.Lang.String arg0, Java.Util.Optional%3CJava.Lang.String%3E arg1, Java.Lang.String arg2, Java.Lang.String arg3, Org.Apache.Kafka.Clients.Admin.MemberAssignment arg4, Java.Util.Optional%3COrg.Apache.Kafka.Clients.Admin.MemberAssignment%3E arg5, Java.Util.Optional%3CJava.Lang.Integer%3E arg6, Java.Util.Optional%3CJava.Lang.Boolean%3E arg7)
         /// </summary>
-        public static MemberDescription New(Java.Lang.String arg0, Java.Util.Optional<Java.Lang.String> arg1, Java.Lang.String arg2, Java.Lang.String arg3, Org.Apache.Kafka.Clients.Admin.MemberAssignment arg4, Java.Util.Optional<Org.Apache.Kafka.Clients.Admin.MemberAssignment> arg5, Java.Util.Optional<Java.Lang.Integer> arg6, Java.Util.Optional<Java.Lang.Boolean> arg7)
+        public static MemberDescription CreatePoolableInstance(Java.Lang.String arg0, Java.Util.Optional<Java.Lang.String> arg1, Java.Lang.String arg2, Java.Lang.String arg3, Org.Apache.Kafka.Clients.Admin.MemberAssignment arg4, Java.Util.Optional<Org.Apache.Kafka.Clients.Admin.MemberAssignment> arg5, Java.Util.Optional<Java.Lang.Integer> arg6, Java.Util.Optional<Java.Lang.Boolean> arg7)
         {
             return JVMBridgeBase.New<MemberDescription>(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7);
         }
@@ -122,7 +122,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <summary>
         /// HPA initializer for MemberDescription(Java.Lang.String arg0, Java.Util.Optional%3CJava.Lang.String%3E arg1, Java.Lang.String arg2, Java.Lang.String arg3, Org.Apache.Kafka.Clients.Admin.MemberAssignment arg4, Java.Util.Optional%3COrg.Apache.Kafka.Clients.Admin.MemberAssignment%3E arg5)
         /// </summary>
-        public static MemberDescription New(Java.Lang.String arg0, Java.Util.Optional<Java.Lang.String> arg1, Java.Lang.String arg2, Java.Lang.String arg3, Org.Apache.Kafka.Clients.Admin.MemberAssignment arg4, Java.Util.Optional<Org.Apache.Kafka.Clients.Admin.MemberAssignment> arg5)
+        public static MemberDescription CreatePoolableInstance(Java.Lang.String arg0, Java.Util.Optional<Java.Lang.String> arg1, Java.Lang.String arg2, Java.Lang.String arg3, Org.Apache.Kafka.Clients.Admin.MemberAssignment arg4, Java.Util.Optional<Org.Apache.Kafka.Clients.Admin.MemberAssignment> arg5)
         {
             return JVMBridgeBase.New<MemberDescription>(arg0, arg1, arg2, arg3, arg4, arg5);
         }
@@ -142,7 +142,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <summary>
         /// HPA initializer for MemberDescription(Java.Lang.String arg0, Java.Util.Optional%3CJava.Lang.String%3E arg1, Java.Lang.String arg2, Java.Lang.String arg3, Org.Apache.Kafka.Clients.Admin.MemberAssignment arg4)
         /// </summary>
-        public static MemberDescription New(Java.Lang.String arg0, Java.Util.Optional<Java.Lang.String> arg1, Java.Lang.String arg2, Java.Lang.String arg3, Org.Apache.Kafka.Clients.Admin.MemberAssignment arg4)
+        public static MemberDescription CreatePoolableInstance(Java.Lang.String arg0, Java.Util.Optional<Java.Lang.String> arg1, Java.Lang.String arg2, Java.Lang.String arg3, Org.Apache.Kafka.Clients.Admin.MemberAssignment arg4)
         {
             return JVMBridgeBase.New<MemberDescription>(arg0, arg1, arg2, arg3, arg4);
         }
@@ -165,7 +165,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <summary>
         /// HPA initializer for MemberDescription(Java.Lang.String arg0, Java.Util.Optional%3CJava.Lang.String%3E arg1, Java.Util.Optional%3CJava.Lang.String%3E arg2, Java.Lang.String arg3, Java.Lang.String arg4, Org.Apache.Kafka.Clients.Admin.MemberAssignment arg5, Java.Util.Optional%3COrg.Apache.Kafka.Clients.Admin.MemberAssignment%3E arg6, Java.Util.Optional%3CJava.Lang.Integer%3E arg7, Java.Util.Optional%3CJava.Lang.Boolean%3E arg8)
         /// </summary>
-        public static MemberDescription New(Java.Lang.String arg0, Java.Util.Optional<Java.Lang.String> arg1, Java.Util.Optional<Java.Lang.String> arg2, Java.Lang.String arg3, Java.Lang.String arg4, Org.Apache.Kafka.Clients.Admin.MemberAssignment arg5, Java.Util.Optional<Org.Apache.Kafka.Clients.Admin.MemberAssignment> arg6, Java.Util.Optional<Java.Lang.Integer> arg7, Java.Util.Optional<Java.Lang.Boolean> arg8)
+        public static MemberDescription CreatePoolableInstance(Java.Lang.String arg0, Java.Util.Optional<Java.Lang.String> arg1, Java.Util.Optional<Java.Lang.String> arg2, Java.Lang.String arg3, Java.Lang.String arg4, Org.Apache.Kafka.Clients.Admin.MemberAssignment arg5, Java.Util.Optional<Org.Apache.Kafka.Clients.Admin.MemberAssignment> arg6, Java.Util.Optional<Java.Lang.Integer> arg7, Java.Util.Optional<Java.Lang.Boolean> arg8)
         {
             return JVMBridgeBase.New<MemberDescription>(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
         }

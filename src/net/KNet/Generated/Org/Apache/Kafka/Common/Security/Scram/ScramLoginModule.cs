@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Common.Security.Scram
         /// <summary>
         /// HPA initializer for ScramLoginModule()
         /// </summary>
-        public static ScramLoginModule New()
+        public static ScramLoginModule CreatePoolableInstance()
         {
             return JVMBridgeBase.New<ScramLoginModule>();
         }

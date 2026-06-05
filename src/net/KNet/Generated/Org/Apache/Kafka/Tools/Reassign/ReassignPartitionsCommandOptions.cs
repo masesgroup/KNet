@@ -74,7 +74,7 @@ namespace Org.Apache.Kafka.Tools.Reassign
         /// <summary>
         /// HPA initializer for ReassignPartitionsCommandOptions(Java.Lang.String[] arg0)
         /// </summary>
-        public static ReassignPartitionsCommandOptions New(Java.Lang.String[] arg0)
+        public static ReassignPartitionsCommandOptions CreatePoolableInstance(Java.Lang.String[] arg0)
         {
             return JVMBridgeBase.New<ReassignPartitionsCommandOptions>(arg0);
         }

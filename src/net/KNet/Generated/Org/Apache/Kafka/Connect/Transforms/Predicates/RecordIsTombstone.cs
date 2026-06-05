@@ -108,7 +108,7 @@ namespace Org.Apache.Kafka.Connect.Transforms.Predicates
         /// <summary>
         /// HPA initializer for RecordIsTombstone()
         /// </summary>
-        public static RecordIsTombstone New()
+        public static RecordIsTombstone CreatePoolableInstance()
         {
             return JVMBridgeBase.New<RecordIsTombstone>();
         }
@@ -209,7 +209,7 @@ namespace Org.Apache.Kafka.Connect.Transforms.Predicates
         /// <summary>
         /// HPA initializer for RecordIsTombstone()
         /// </summary>
-        public static RecordIsTombstone<R> New()
+        public static RecordIsTombstone<R> CreatePoolableInstance()
         {
             return JVMBridgeBase.New<RecordIsTombstone<R>>();
         }

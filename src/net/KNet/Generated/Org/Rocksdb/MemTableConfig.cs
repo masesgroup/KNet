@@ -73,7 +73,7 @@ namespace Org.Rocksdb
         /// <summary>
         /// HPA initializer for MemTableConfig()
         /// </summary>
-        public static MemTableConfig New()
+        public static MemTableConfig CreatePoolableInstance()
         {
             return JVMBridgeBase.New<MemTableConfig>();
         }

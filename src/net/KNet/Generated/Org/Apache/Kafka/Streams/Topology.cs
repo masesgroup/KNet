@@ -108,7 +108,7 @@ namespace Org.Apache.Kafka.Streams
         /// <summary>
         /// HPA initializer for Topology()
         /// </summary>
-        public static Topology New()
+        public static Topology CreatePoolableInstance()
         {
             return JVMBridgeBase.New<Topology>();
         }
@@ -123,7 +123,7 @@ namespace Org.Apache.Kafka.Streams
         /// <summary>
         /// HPA initializer for Topology(Org.Apache.Kafka.Streams.TopologyConfig arg0)
         /// </summary>
-        public static Topology New(Org.Apache.Kafka.Streams.TopologyConfig arg0)
+        public static Topology CreatePoolableInstance(Org.Apache.Kafka.Streams.TopologyConfig arg0)
         {
             return JVMBridgeBase.New<Topology>(arg0);
         }

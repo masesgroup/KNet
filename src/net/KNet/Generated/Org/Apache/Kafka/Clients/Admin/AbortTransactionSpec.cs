@@ -77,7 +77,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <summary>
         /// HPA initializer for AbortTransactionSpec(Org.Apache.Kafka.Common.TopicPartition arg0, long arg1, short arg2, int arg3)
         /// </summary>
-        public static AbortTransactionSpec New(Org.Apache.Kafka.Common.TopicPartition arg0, long arg1, short arg2, int arg3)
+        public static AbortTransactionSpec CreatePoolableInstance(Org.Apache.Kafka.Common.TopicPartition arg0, long arg1, short arg2, int arg3)
         {
             return JVMBridgeBase.New<AbortTransactionSpec>(arg0, arg1, arg2, arg3);
         }

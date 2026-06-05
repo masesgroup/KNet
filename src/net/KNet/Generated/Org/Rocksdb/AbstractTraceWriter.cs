@@ -73,7 +73,7 @@ namespace Org.Rocksdb
         /// <summary>
         /// HPA initializer for AbstractTraceWriter()
         /// </summary>
-        public static AbstractTraceWriter New()
+        public static AbstractTraceWriter CreatePoolableInstance()
         {
             return JVMBridgeBase.New<AbstractTraceWriter>();
         }

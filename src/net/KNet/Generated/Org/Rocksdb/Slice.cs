@@ -75,7 +75,7 @@ namespace Org.Rocksdb
         /// <summary>
         /// HPA initializer for Slice(byte[] arg0, int arg1)
         /// </summary>
-        public static Slice New(byte[] arg0, int arg1)
+        public static Slice CreatePoolableInstance(byte[] arg0, int arg1)
         {
             return JVMBridgeBase.New<Slice>(arg0, arg1);
         }
@@ -90,7 +90,7 @@ namespace Org.Rocksdb
         /// <summary>
         /// HPA initializer for Slice(byte[] arg0)
         /// </summary>
-        public static Slice New(byte[] arg0)
+        public static Slice CreatePoolableInstance(byte[] arg0)
         {
             return JVMBridgeBase.New<Slice>(arg0);
         }
@@ -105,7 +105,7 @@ namespace Org.Rocksdb
         /// <summary>
         /// HPA initializer for Slice(Java.Lang.String arg0)
         /// </summary>
-        public static Slice New(Java.Lang.String arg0)
+        public static Slice CreatePoolableInstance(Java.Lang.String arg0)
         {
             return JVMBridgeBase.New<Slice>(arg0);
         }

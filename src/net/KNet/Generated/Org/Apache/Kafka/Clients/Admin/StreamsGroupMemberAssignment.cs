@@ -110,7 +110,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <summary>
         /// HPA initializer for StreamsGroupMemberAssignment(Java.Util.List%3COrg.Apache.Kafka.Clients.Admin.StreamsGroupMemberAssignment.TaskIds%3E arg0, Java.Util.List%3COrg.Apache.Kafka.Clients.Admin.StreamsGroupMemberAssignment.TaskIds%3E arg1, Java.Util.List%3COrg.Apache.Kafka.Clients.Admin.StreamsGroupMemberAssignment.TaskIds%3E arg2)
         /// </summary>
-        public static StreamsGroupMemberAssignment New(Java.Util.List<Org.Apache.Kafka.Clients.Admin.StreamsGroupMemberAssignment.TaskIds> arg0, Java.Util.List<Org.Apache.Kafka.Clients.Admin.StreamsGroupMemberAssignment.TaskIds> arg1, Java.Util.List<Org.Apache.Kafka.Clients.Admin.StreamsGroupMemberAssignment.TaskIds> arg2)
+        public static StreamsGroupMemberAssignment CreatePoolableInstance(Java.Util.List<Org.Apache.Kafka.Clients.Admin.StreamsGroupMemberAssignment.TaskIds> arg0, Java.Util.List<Org.Apache.Kafka.Clients.Admin.StreamsGroupMemberAssignment.TaskIds> arg1, Java.Util.List<Org.Apache.Kafka.Clients.Admin.StreamsGroupMemberAssignment.TaskIds> arg2)
         {
             return JVMBridgeBase.New<StreamsGroupMemberAssignment>(arg0, arg1, arg2);
         }
@@ -174,7 +174,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             /// <summary>
             /// HPA initializer for TaskIds(Java.Lang.String arg0, Java.Util.List%3CJava.Lang.Integer%3E arg1)
             /// </summary>
-            public static TaskIds New(Java.Lang.String arg0, Java.Util.List<Java.Lang.Integer> arg1)
+            public static TaskIds CreatePoolableInstance(Java.Lang.String arg0, Java.Util.List<Java.Lang.Integer> arg1)
             {
                 return JVMBridgeBase.New<TaskIds>(arg0, arg1);
             }

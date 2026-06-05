@@ -110,7 +110,7 @@ namespace Org.Apache.Kafka.Streams.Scala.Kstream
         /// <summary>
         /// HPA initializer for TimeWindowedKStream(Org.Apache.Kafka.Streams.Kstream.TimeWindowedKStream inner)
         /// </summary>
-        public static TimeWindowedKStream New(Org.Apache.Kafka.Streams.Kstream.TimeWindowedKStream inner)
+        public static TimeWindowedKStream CreatePoolableInstance(Org.Apache.Kafka.Streams.Kstream.TimeWindowedKStream inner)
         {
             return JVMBridgeBase.New<TimeWindowedKStream>(inner);
         }
@@ -183,7 +183,7 @@ namespace Org.Apache.Kafka.Streams.Scala.Kstream
         /// <summary>
         /// HPA initializer for TimeWindowedKStream(Org.Apache.Kafka.Streams.Kstream.TimeWindowedKStream%3CK, V%3E inner)
         /// </summary>
-        public static TimeWindowedKStream<K, V> New(Org.Apache.Kafka.Streams.Kstream.TimeWindowedKStream<K, V> inner)
+        public static TimeWindowedKStream<K, V> CreatePoolableInstance(Org.Apache.Kafka.Streams.Kstream.TimeWindowedKStream<K, V> inner)
         {
             return JVMBridgeBase.New<TimeWindowedKStream<K, V>>(inner);
         }

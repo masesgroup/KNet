@@ -77,7 +77,7 @@ namespace Org.Apache.Kafka.Connect.Health
         /// <summary>
         /// HPA initializer for TaskState(int arg0, Java.Lang.String arg1, Java.Lang.String arg2, Java.Lang.String arg3)
         /// </summary>
-        public static TaskState New(int arg0, Java.Lang.String arg1, Java.Lang.String arg2, Java.Lang.String arg3)
+        public static TaskState CreatePoolableInstance(int arg0, Java.Lang.String arg1, Java.Lang.String arg2, Java.Lang.String arg3)
         {
             return JVMBridgeBase.New<TaskState>(arg0, arg1, arg2, arg3);
         }

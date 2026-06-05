@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
         /// <summary>
         /// HPA initializer for DefaultReplicationPolicy()
         /// </summary>
-        public static DefaultReplicationPolicy New()
+        public static DefaultReplicationPolicy CreatePoolableInstance()
         {
             return JVMBridgeBase.New<DefaultReplicationPolicy>();
         }

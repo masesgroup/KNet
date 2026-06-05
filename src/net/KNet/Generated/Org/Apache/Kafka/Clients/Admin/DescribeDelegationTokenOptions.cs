@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <summary>
         /// HPA initializer for DescribeDelegationTokenOptions()
         /// </summary>
-        public static DescribeDelegationTokenOptions New()
+        public static DescribeDelegationTokenOptions CreatePoolableInstance()
         {
             return JVMBridgeBase.New<DescribeDelegationTokenOptions>();
         }

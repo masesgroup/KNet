@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Connect.Converters
         /// <summary>
         /// HPA initializer for BooleanConverter()
         /// </summary>
-        public static BooleanConverter New()
+        public static BooleanConverter CreatePoolableInstance()
         {
             return JVMBridgeBase.New<BooleanConverter>();
         }

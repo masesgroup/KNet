@@ -78,7 +78,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Assignment
         /// <summary>
         /// HPA initializer for AssignmentConfigs(Java.Lang.Long arg0, Java.Lang.Integer arg1, Java.Lang.Integer arg2, Java.Lang.Long arg3, Java.Util.List%3CJava.Lang.String%3E arg4)
         /// </summary>
-        public static AssignmentConfigs New(Java.Lang.Long arg0, Java.Lang.Integer arg1, Java.Lang.Integer arg2, Java.Lang.Long arg3, Java.Util.List<Java.Lang.String> arg4)
+        public static AssignmentConfigs CreatePoolableInstance(Java.Lang.Long arg0, Java.Lang.Integer arg1, Java.Lang.Integer arg2, Java.Lang.Long arg3, Java.Util.List<Java.Lang.String> arg4)
         {
             return JVMBridgeBase.New<AssignmentConfigs>(arg0, arg1, arg2, arg3, arg4);
         }
@@ -100,7 +100,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Assignment
         /// <summary>
         /// HPA initializer for AssignmentConfigs(long arg0, int arg1, int arg2, long arg3, Java.Util.List%3CJava.Lang.String%3E arg4, int arg5, int arg6, Java.Lang.String arg7)
         /// </summary>
-        public static AssignmentConfigs New(long arg0, int arg1, int arg2, long arg3, Java.Util.List<Java.Lang.String> arg4, int arg5, int arg6, Java.Lang.String arg7)
+        public static AssignmentConfigs CreatePoolableInstance(long arg0, int arg1, int arg2, long arg3, Java.Util.List<Java.Lang.String> arg4, int arg5, int arg6, Java.Lang.String arg7)
         {
             return JVMBridgeBase.New<AssignmentConfigs>(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7);
         }
@@ -122,7 +122,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Assignment
         /// <summary>
         /// HPA initializer for AssignmentConfigs(long arg0, int arg1, int arg2, long arg3, Java.Util.List%3CJava.Lang.String%3E arg4, Java.Util.OptionalInt arg5, Java.Util.OptionalInt arg6, Java.Lang.String arg7)
         /// </summary>
-        public static AssignmentConfigs New(long arg0, int arg1, int arg2, long arg3, Java.Util.List<Java.Lang.String> arg4, Java.Util.OptionalInt arg5, Java.Util.OptionalInt arg6, Java.Lang.String arg7)
+        public static AssignmentConfigs CreatePoolableInstance(long arg0, int arg1, int arg2, long arg3, Java.Util.List<Java.Lang.String> arg4, Java.Util.OptionalInt arg5, Java.Util.OptionalInt arg6, Java.Lang.String arg7)
         {
             return JVMBridgeBase.New<AssignmentConfigs>(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7);
         }

@@ -74,7 +74,7 @@ namespace Org.Apache.Kafka.Common.Config
         /// <summary>
         /// HPA initializer for ConfigTransformer(Java.Util.Map%3CJava.Lang.String, Org.Apache.Kafka.Common.Config.Provider.ConfigProvider%3E arg0)
         /// </summary>
-        public static ConfigTransformer New(Java.Util.Map<Java.Lang.String, Org.Apache.Kafka.Common.Config.Provider.ConfigProvider> arg0)
+        public static ConfigTransformer CreatePoolableInstance(Java.Util.Map<Java.Lang.String, Org.Apache.Kafka.Common.Config.Provider.ConfigProvider> arg0)
         {
             return JVMBridgeBase.New<ConfigTransformer>(arg0);
         }

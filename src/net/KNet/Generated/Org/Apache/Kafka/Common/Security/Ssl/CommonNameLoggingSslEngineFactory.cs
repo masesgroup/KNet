@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Common.Security.Ssl
         /// <summary>
         /// HPA initializer for CommonNameLoggingSslEngineFactory()
         /// </summary>
-        public static CommonNameLoggingSslEngineFactory New()
+        public static CommonNameLoggingSslEngineFactory CreatePoolableInstance()
         {
             return JVMBridgeBase.New<CommonNameLoggingSslEngineFactory>();
         }

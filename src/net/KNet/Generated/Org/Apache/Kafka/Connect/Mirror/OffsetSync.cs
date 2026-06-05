@@ -76,7 +76,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
         /// <summary>
         /// HPA initializer for OffsetSync(Org.Apache.Kafka.Common.TopicPartition topicPartition, long upstreamOffset, long downstreamOffset)
         /// </summary>
-        public static OffsetSync New(Org.Apache.Kafka.Common.TopicPartition topicPartition, long upstreamOffset, long downstreamOffset)
+        public static OffsetSync CreatePoolableInstance(Org.Apache.Kafka.Common.TopicPartition topicPartition, long upstreamOffset, long downstreamOffset)
         {
             return JVMBridgeBase.New<OffsetSync>(topicPartition, upstreamOffset, downstreamOffset);
         }

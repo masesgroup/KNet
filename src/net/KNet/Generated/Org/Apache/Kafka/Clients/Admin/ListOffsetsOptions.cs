@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <summary>
         /// HPA initializer for ListOffsetsOptions()
         /// </summary>
-        public static ListOffsetsOptions New()
+        public static ListOffsetsOptions CreatePoolableInstance()
         {
             return JVMBridgeBase.New<ListOffsetsOptions>();
         }
@@ -88,7 +88,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <summary>
         /// HPA initializer for ListOffsetsOptions(Org.Apache.Kafka.Common.IsolationLevel arg0)
         /// </summary>
-        public static ListOffsetsOptions New(Org.Apache.Kafka.Common.IsolationLevel arg0)
+        public static ListOffsetsOptions CreatePoolableInstance(Org.Apache.Kafka.Common.IsolationLevel arg0)
         {
             return JVMBridgeBase.New<ListOffsetsOptions>(arg0);
         }

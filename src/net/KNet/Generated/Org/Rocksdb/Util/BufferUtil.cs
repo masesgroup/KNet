@@ -73,7 +73,7 @@ namespace Org.Rocksdb.Util
         /// <summary>
         /// HPA initializer for BufferUtil()
         /// </summary>
-        public static BufferUtil New()
+        public static BufferUtil CreatePoolableInstance()
         {
             return JVMBridgeBase.New<BufferUtil>();
         }

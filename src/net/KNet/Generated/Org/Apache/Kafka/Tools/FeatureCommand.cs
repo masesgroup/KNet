@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Tools
         /// <summary>
         /// HPA initializer for FeatureCommand()
         /// </summary>
-        public static FeatureCommand New()
+        public static FeatureCommand CreatePoolableInstance()
         {
             return JVMBridgeBase.New<FeatureCommand>();
         }

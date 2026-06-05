@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Common.Config.Provider
         /// <summary>
         /// HPA initializer for EnvVarConfigProvider()
         /// </summary>
-        public static EnvVarConfigProvider New()
+        public static EnvVarConfigProvider CreatePoolableInstance()
         {
             return JVMBridgeBase.New<EnvVarConfigProvider>();
         }
@@ -88,7 +88,7 @@ namespace Org.Apache.Kafka.Common.Config.Provider
         /// <summary>
         /// HPA initializer for EnvVarConfigProvider(Java.Util.Map%3CJava.Lang.String, Java.Lang.String%3E arg0)
         /// </summary>
-        public static EnvVarConfigProvider New(Java.Util.Map<Java.Lang.String, Java.Lang.String> arg0)
+        public static EnvVarConfigProvider CreatePoolableInstance(Java.Util.Map<Java.Lang.String, Java.Lang.String> arg0)
         {
             return JVMBridgeBase.New<EnvVarConfigProvider>(arg0);
         }

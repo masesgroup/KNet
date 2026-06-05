@@ -108,7 +108,7 @@ namespace Org.Apache.Kafka.Connect.Transforms
         /// <summary>
         /// HPA initializer for Filter()
         /// </summary>
-        public static Filter New()
+        public static Filter CreatePoolableInstance()
         {
             return JVMBridgeBase.New<Filter>();
         }
@@ -209,7 +209,7 @@ namespace Org.Apache.Kafka.Connect.Transforms
         /// <summary>
         /// HPA initializer for Filter()
         /// </summary>
-        public static Filter<R> New()
+        public static Filter<R> CreatePoolableInstance()
         {
             return JVMBridgeBase.New<Filter<R>>();
         }

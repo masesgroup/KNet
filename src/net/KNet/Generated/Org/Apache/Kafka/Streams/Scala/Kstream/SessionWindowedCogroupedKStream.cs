@@ -110,7 +110,7 @@ namespace Org.Apache.Kafka.Streams.Scala.Kstream
         /// <summary>
         /// HPA initializer for SessionWindowedCogroupedKStream(Org.Apache.Kafka.Streams.Kstream.SessionWindowedCogroupedKStream inner)
         /// </summary>
-        public static SessionWindowedCogroupedKStream New(Org.Apache.Kafka.Streams.Kstream.SessionWindowedCogroupedKStream inner)
+        public static SessionWindowedCogroupedKStream CreatePoolableInstance(Org.Apache.Kafka.Streams.Kstream.SessionWindowedCogroupedKStream inner)
         {
             return JVMBridgeBase.New<SessionWindowedCogroupedKStream>(inner);
         }
@@ -164,7 +164,7 @@ namespace Org.Apache.Kafka.Streams.Scala.Kstream
         /// <summary>
         /// HPA initializer for SessionWindowedCogroupedKStream(Org.Apache.Kafka.Streams.Kstream.SessionWindowedCogroupedKStream%3CK, V%3E inner)
         /// </summary>
-        public static SessionWindowedCogroupedKStream<K, V> New(Org.Apache.Kafka.Streams.Kstream.SessionWindowedCogroupedKStream<K, V> inner)
+        public static SessionWindowedCogroupedKStream<K, V> CreatePoolableInstance(Org.Apache.Kafka.Streams.Kstream.SessionWindowedCogroupedKStream<K, V> inner)
         {
             return JVMBridgeBase.New<SessionWindowedCogroupedKStream<K, V>>(inner);
         }

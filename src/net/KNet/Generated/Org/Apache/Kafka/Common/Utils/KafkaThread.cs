@@ -75,7 +75,7 @@ namespace Org.Apache.Kafka.Common.Utils
         /// <summary>
         /// HPA initializer for KafkaThread(Java.Lang.String arg0, bool arg1)
         /// </summary>
-        public static KafkaThread New(Java.Lang.String arg0, bool arg1)
+        public static KafkaThread CreatePoolableInstance(Java.Lang.String arg0, bool arg1)
         {
             return JVMBridgeBase.New<KafkaThread>(arg0, arg1);
         }
@@ -92,7 +92,7 @@ namespace Org.Apache.Kafka.Common.Utils
         /// <summary>
         /// HPA initializer for KafkaThread(Java.Lang.String arg0, Java.Lang.Runnable arg1, bool arg2)
         /// </summary>
-        public static KafkaThread New(Java.Lang.String arg0, Java.Lang.Runnable arg1, bool arg2)
+        public static KafkaThread CreatePoolableInstance(Java.Lang.String arg0, Java.Lang.Runnable arg1, bool arg2)
         {
             return JVMBridgeBase.New<KafkaThread>(arg0, arg1, arg2);
         }

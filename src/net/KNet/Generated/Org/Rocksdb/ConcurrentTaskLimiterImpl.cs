@@ -75,7 +75,7 @@ namespace Org.Rocksdb
         /// <summary>
         /// HPA initializer for ConcurrentTaskLimiterImpl(Java.Lang.String arg0, int arg1)
         /// </summary>
-        public static ConcurrentTaskLimiterImpl New(Java.Lang.String arg0, int arg1)
+        public static ConcurrentTaskLimiterImpl CreatePoolableInstance(Java.Lang.String arg0, int arg1)
         {
             return JVMBridgeBase.New<ConcurrentTaskLimiterImpl>(arg0, arg1);
         }

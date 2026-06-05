@@ -74,7 +74,7 @@ namespace Org.Rocksdb
         /// <summary>
         /// HPA initializer for RestoreOptions(bool arg0)
         /// </summary>
-        public static RestoreOptions New(bool arg0)
+        public static RestoreOptions CreatePoolableInstance(bool arg0)
         {
             return JVMBridgeBase.New<RestoreOptions>(arg0);
         }

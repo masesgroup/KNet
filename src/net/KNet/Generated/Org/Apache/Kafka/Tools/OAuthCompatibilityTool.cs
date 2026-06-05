@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Tools
         /// <summary>
         /// HPA initializer for OAuthCompatibilityTool()
         /// </summary>
-        public static OAuthCompatibilityTool New()
+        public static OAuthCompatibilityTool CreatePoolableInstance()
         {
             return JVMBridgeBase.New<OAuthCompatibilityTool>();
         }

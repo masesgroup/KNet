@@ -108,7 +108,7 @@ namespace Org.Rocksdb
         /// <summary>
         /// HPA initializer for MutableOptionValue()
         /// </summary>
-        public static MutableOptionValue New()
+        public static MutableOptionValue CreatePoolableInstance()
         {
             return JVMBridgeBase.New<MutableOptionValue>();
         }
@@ -153,7 +153,7 @@ namespace Org.Rocksdb
         /// <summary>
         /// HPA initializer for MutableOptionValue()
         /// </summary>
-        public static MutableOptionValue<T> New()
+        public static MutableOptionValue<T> CreatePoolableInstance()
         {
             return JVMBridgeBase.New<MutableOptionValue<T>>();
         }

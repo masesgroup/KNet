@@ -176,7 +176,7 @@ namespace Org.Rocksdb
             /// <summary>
             /// HPA initializer for WriteEntry(Org.Rocksdb.WBWIRocksIterator.WriteType arg0, Org.Rocksdb.DirectSlice arg1, Org.Rocksdb.DirectSlice arg2)
             /// </summary>
-            public static WriteEntry New(Org.Rocksdb.WBWIRocksIterator.WriteType arg0, Org.Rocksdb.DirectSlice arg1, Org.Rocksdb.DirectSlice arg2)
+            public static WriteEntry CreatePoolableInstance(Org.Rocksdb.WBWIRocksIterator.WriteType arg0, Org.Rocksdb.DirectSlice arg1, Org.Rocksdb.DirectSlice arg2)
             {
                 return JVMBridgeBase.New<WriteEntry>(arg0, arg1, arg2);
             }

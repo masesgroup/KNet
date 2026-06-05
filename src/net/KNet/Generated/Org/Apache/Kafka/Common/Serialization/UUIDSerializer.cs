@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Common.Serialization
         /// <summary>
         /// HPA initializer for UUIDSerializer()
         /// </summary>
-        public static UUIDSerializer New()
+        public static UUIDSerializer CreatePoolableInstance()
         {
             return JVMBridgeBase.New<UUIDSerializer>();
         }

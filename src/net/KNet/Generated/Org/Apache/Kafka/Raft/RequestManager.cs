@@ -77,7 +77,7 @@ namespace Org.Apache.Kafka.Raft
         /// <summary>
         /// HPA initializer for RequestManager(Java.Util.Collection%3COrg.Apache.Kafka.Common.Node%3E arg0, int arg1, int arg2, Java.Util.Random arg3)
         /// </summary>
-        public static RequestManager New(Java.Util.Collection<Org.Apache.Kafka.Common.Node> arg0, int arg1, int arg2, Java.Util.Random arg3)
+        public static RequestManager CreatePoolableInstance(Java.Util.Collection<Org.Apache.Kafka.Common.Node> arg0, int arg1, int arg2, Java.Util.Random arg3)
         {
             return JVMBridgeBase.New<RequestManager>(arg0, arg1, arg2, arg3);
         }

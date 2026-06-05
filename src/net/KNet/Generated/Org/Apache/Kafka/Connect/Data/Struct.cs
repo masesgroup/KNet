@@ -74,7 +74,7 @@ namespace Org.Apache.Kafka.Connect.Data
         /// <summary>
         /// HPA initializer for Struct(Org.Apache.Kafka.Connect.Data.Schema arg0)
         /// </summary>
-        public static Struct New(Org.Apache.Kafka.Connect.Data.Schema arg0)
+        public static Struct CreatePoolableInstance(Org.Apache.Kafka.Connect.Data.Schema arg0)
         {
             return JVMBridgeBase.New<Struct>(arg0);
         }

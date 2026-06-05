@@ -74,7 +74,7 @@ namespace Org.Apache.Kafka.Common.Metrics.Stats
         /// <summary>
         /// HPA initializer for SampledStat(double arg0)
         /// </summary>
-        public static SampledStat New(double arg0)
+        public static SampledStat CreatePoolableInstance(double arg0)
         {
             return JVMBridgeBase.New<SampledStat>(arg0);
         }

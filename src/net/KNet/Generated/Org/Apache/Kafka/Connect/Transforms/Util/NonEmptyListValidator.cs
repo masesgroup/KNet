@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Connect.Transforms.Util
         /// <summary>
         /// HPA initializer for NonEmptyListValidator()
         /// </summary>
-        public static NonEmptyListValidator New()
+        public static NonEmptyListValidator CreatePoolableInstance()
         {
             return JVMBridgeBase.New<NonEmptyListValidator>();
         }

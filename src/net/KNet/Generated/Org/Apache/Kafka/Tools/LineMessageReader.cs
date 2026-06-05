@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Tools
         /// <summary>
         /// HPA initializer for LineMessageReader()
         /// </summary>
-        public static LineMessageReader New()
+        public static LineMessageReader CreatePoolableInstance()
         {
             return JVMBridgeBase.New<LineMessageReader>();
         }

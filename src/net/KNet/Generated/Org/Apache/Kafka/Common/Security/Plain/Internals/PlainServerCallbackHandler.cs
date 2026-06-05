@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Common.Security.Plain.Internals
         /// <summary>
         /// HPA initializer for PlainServerCallbackHandler()
         /// </summary>
-        public static PlainServerCallbackHandler New()
+        public static PlainServerCallbackHandler CreatePoolableInstance()
         {
             return JVMBridgeBase.New<PlainServerCallbackHandler>();
         }

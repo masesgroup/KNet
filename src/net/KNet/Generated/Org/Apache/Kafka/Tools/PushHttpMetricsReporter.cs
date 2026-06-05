@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Tools
         /// <summary>
         /// HPA initializer for PushHttpMetricsReporter()
         /// </summary>
-        public static PushHttpMetricsReporter New()
+        public static PushHttpMetricsReporter CreatePoolableInstance()
         {
             return JVMBridgeBase.New<PushHttpMetricsReporter>();
         }

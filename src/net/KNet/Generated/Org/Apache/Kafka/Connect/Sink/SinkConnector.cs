@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Connect.Sink
         /// <summary>
         /// HPA initializer for SinkConnector()
         /// </summary>
-        public static SinkConnector New()
+        public static SinkConnector CreatePoolableInstance()
         {
             return JVMBridgeBase.New<SinkConnector>();
         }

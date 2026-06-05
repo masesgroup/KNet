@@ -74,7 +74,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <summary>
         /// HPA initializer for ForwardingAdmin(Java.Util.Map%3CJava.Lang.String, object%3E arg0)
         /// </summary>
-        public static ForwardingAdmin New(Java.Util.Map<Java.Lang.String, object> arg0)
+        public static ForwardingAdmin CreatePoolableInstance(Java.Util.Map<Java.Lang.String, object> arg0)
         {
             return JVMBridgeBase.New<ForwardingAdmin>(arg0);
         }

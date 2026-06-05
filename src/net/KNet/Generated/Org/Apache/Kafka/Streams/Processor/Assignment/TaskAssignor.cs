@@ -283,7 +283,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Assignment
             /// <summary>
             /// HPA initializer for TaskAssignment(Java.Util.Collection%3COrg.Apache.Kafka.Streams.Processor.Assignment.KafkaStreamsAssignment%3E arg0)
             /// </summary>
-            public static TaskAssignment New(Java.Util.Collection<Org.Apache.Kafka.Streams.Processor.Assignment.KafkaStreamsAssignment> arg0)
+            public static TaskAssignment CreatePoolableInstance(Java.Util.Collection<Org.Apache.Kafka.Streams.Processor.Assignment.KafkaStreamsAssignment> arg0)
             {
                 return JVMBridgeBase.New<TaskAssignment>(arg0);
             }

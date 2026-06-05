@@ -141,7 +141,7 @@ namespace Org.Apache.Kafka.Common.Utils
         /// <summary>
         /// HPA initializer for AppInfoParser()
         /// </summary>
-        public static AppInfoParser New()
+        public static AppInfoParser CreatePoolableInstance()
         {
             return JVMBridgeBase.New<AppInfoParser>();
         }
@@ -215,7 +215,7 @@ namespace Org.Apache.Kafka.Common.Utils
             /// <summary>
             /// HPA initializer for AppInfo(long arg0)
             /// </summary>
-            public static AppInfo New(long arg0)
+            public static AppInfo CreatePoolableInstance(long arg0)
             {
                 return JVMBridgeBase.New<AppInfo>(arg0);
             }

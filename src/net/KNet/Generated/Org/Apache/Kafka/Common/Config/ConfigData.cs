@@ -75,7 +75,7 @@ namespace Org.Apache.Kafka.Common.Config
         /// <summary>
         /// HPA initializer for ConfigData(Java.Util.Map%3CJava.Lang.String, Java.Lang.String%3E arg0, Java.Lang.Long arg1)
         /// </summary>
-        public static ConfigData New(Java.Util.Map<Java.Lang.String, Java.Lang.String> arg0, Java.Lang.Long arg1)
+        public static ConfigData CreatePoolableInstance(Java.Util.Map<Java.Lang.String, Java.Lang.String> arg0, Java.Lang.Long arg1)
         {
             return JVMBridgeBase.New<ConfigData>(arg0, arg1);
         }
@@ -90,7 +90,7 @@ namespace Org.Apache.Kafka.Common.Config
         /// <summary>
         /// HPA initializer for ConfigData(Java.Util.Map%3CJava.Lang.String, Java.Lang.String%3E arg0)
         /// </summary>
-        public static ConfigData New(Java.Util.Map<Java.Lang.String, Java.Lang.String> arg0)
+        public static ConfigData CreatePoolableInstance(Java.Util.Map<Java.Lang.String, Java.Lang.String> arg0)
         {
             return JVMBridgeBase.New<ConfigData>(arg0);
         }

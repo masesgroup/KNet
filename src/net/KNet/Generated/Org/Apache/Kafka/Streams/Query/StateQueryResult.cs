@@ -108,7 +108,7 @@ namespace Org.Apache.Kafka.Streams.Query
         /// <summary>
         /// HPA initializer for StateQueryResult()
         /// </summary>
-        public static StateQueryResult New()
+        public static StateQueryResult CreatePoolableInstance()
         {
             return JVMBridgeBase.New<StateQueryResult>();
         }
@@ -190,7 +190,7 @@ namespace Org.Apache.Kafka.Streams.Query
         /// <summary>
         /// HPA initializer for StateQueryResult()
         /// </summary>
-        public static StateQueryResult<R> New()
+        public static StateQueryResult<R> CreatePoolableInstance()
         {
             return JVMBridgeBase.New<StateQueryResult<R>>();
         }

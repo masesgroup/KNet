@@ -74,7 +74,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Assignment
         /// <summary>
         /// HPA initializer for ProcessId(Java.Util.UUID arg0)
         /// </summary>
-        public static ProcessId New(Java.Util.UUID arg0)
+        public static ProcessId CreatePoolableInstance(Java.Util.UUID arg0)
         {
             return JVMBridgeBase.New<ProcessId>(arg0);
         }

@@ -110,7 +110,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
         /// <summary>
         /// HPA initializer for MockConsumer(Java.Lang.String arg0)
         /// </summary>
-        public static MockConsumer New(Java.Lang.String arg0)
+        public static MockConsumer CreatePoolableInstance(Java.Lang.String arg0)
         {
             return JVMBridgeBase.New<MockConsumer>(arg0);
         }
@@ -126,7 +126,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
         /// <summary>
         /// HPA initializer for MockConsumer(Org.Apache.Kafka.Clients.Consumer.OffsetResetStrategy arg0)
         /// </summary>
-        public static MockConsumer New(Org.Apache.Kafka.Clients.Consumer.OffsetResetStrategy arg0)
+        public static MockConsumer CreatePoolableInstance(Org.Apache.Kafka.Clients.Consumer.OffsetResetStrategy arg0)
         {
             return JVMBridgeBase.New<MockConsumer>(arg0);
         }
@@ -754,7 +754,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
         /// <summary>
         /// HPA initializer for MockConsumer(Java.Lang.String arg0)
         /// </summary>
-        public static MockConsumer<K, V> New(Java.Lang.String arg0)
+        public static MockConsumer<K, V> CreatePoolableInstance(Java.Lang.String arg0)
         {
             return JVMBridgeBase.New<MockConsumer<K, V>>(arg0);
         }
@@ -770,7 +770,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
         /// <summary>
         /// HPA initializer for MockConsumer(Org.Apache.Kafka.Clients.Consumer.OffsetResetStrategy arg0)
         /// </summary>
-        public static MockConsumer<K, V> New(Org.Apache.Kafka.Clients.Consumer.OffsetResetStrategy arg0)
+        public static MockConsumer<K, V> CreatePoolableInstance(Org.Apache.Kafka.Clients.Consumer.OffsetResetStrategy arg0)
         {
             return JVMBridgeBase.New<MockConsumer<K, V>>(arg0);
         }

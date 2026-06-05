@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <summary>
         /// HPA initializer for ElectLeadersOptions()
         /// </summary>
-        public static ElectLeadersOptions New()
+        public static ElectLeadersOptions CreatePoolableInstance()
         {
             return JVMBridgeBase.New<ElectLeadersOptions>();
         }

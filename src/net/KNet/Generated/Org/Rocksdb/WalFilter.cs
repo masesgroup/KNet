@@ -180,7 +180,7 @@ namespace Org.Rocksdb
             /// <summary>
             /// HPA initializer for LogRecordFoundResult(Org.Rocksdb.WalProcessingOption arg0, bool arg1)
             /// </summary>
-            public static LogRecordFoundResult New(Org.Rocksdb.WalProcessingOption arg0, bool arg1)
+            public static LogRecordFoundResult CreatePoolableInstance(Org.Rocksdb.WalProcessingOption arg0, bool arg1)
             {
                 return JVMBridgeBase.New<LogRecordFoundResult>(arg0, arg1);
             }

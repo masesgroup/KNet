@@ -77,7 +77,7 @@ namespace Org.Apache.Kafka.Connect.Health
         /// <summary>
         /// HPA initializer for ConnectorHealth(Java.Lang.String arg0, Org.Apache.Kafka.Connect.Health.ConnectorState arg1, Java.Util.Map%3CJava.Lang.Integer, Org.Apache.Kafka.Connect.Health.TaskState%3E arg2, Org.Apache.Kafka.Connect.Health.ConnectorType arg3)
         /// </summary>
-        public static ConnectorHealth New(Java.Lang.String arg0, Org.Apache.Kafka.Connect.Health.ConnectorState arg1, Java.Util.Map<Java.Lang.Integer, Org.Apache.Kafka.Connect.Health.TaskState> arg2, Org.Apache.Kafka.Connect.Health.ConnectorType arg3)
+        public static ConnectorHealth CreatePoolableInstance(Java.Lang.String arg0, Org.Apache.Kafka.Connect.Health.ConnectorState arg1, Java.Util.Map<Java.Lang.Integer, Org.Apache.Kafka.Connect.Health.TaskState> arg2, Org.Apache.Kafka.Connect.Health.ConnectorType arg3)
         {
             return JVMBridgeBase.New<ConnectorHealth>(arg0, arg1, arg2, arg3);
         }

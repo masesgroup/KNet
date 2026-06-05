@@ -108,7 +108,7 @@ namespace Org.Rocksdb
         /// <summary>
         /// HPA initializer for Holder()
         /// </summary>
-        public static Holder New()
+        public static Holder CreatePoolableInstance()
         {
             return JVMBridgeBase.New<Holder>();
         }
@@ -123,7 +123,7 @@ namespace Org.Rocksdb
         /// <summary>
         /// HPA initializer for Holder(object arg0)
         /// </summary>
-        public static Holder New(object arg0)
+        public static Holder CreatePoolableInstance(object arg0)
         {
             return JVMBridgeBase.New<Holder>(arg0);
         }
@@ -175,7 +175,7 @@ namespace Org.Rocksdb
         /// <summary>
         /// HPA initializer for Holder()
         /// </summary>
-        public static Holder<T> New()
+        public static Holder<T> CreatePoolableInstance()
         {
             return JVMBridgeBase.New<Holder<T>>();
         }
@@ -190,7 +190,7 @@ namespace Org.Rocksdb
         /// <summary>
         /// HPA initializer for Holder(T arg0)
         /// </summary>
-        public static Holder<T> New(T arg0)
+        public static Holder<T> CreatePoolableInstance(T arg0)
         {
             return JVMBridgeBase.New<Holder<T>>(arg0);
         }

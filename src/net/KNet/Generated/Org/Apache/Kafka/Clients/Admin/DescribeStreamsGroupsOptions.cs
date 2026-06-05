@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <summary>
         /// HPA initializer for DescribeStreamsGroupsOptions()
         /// </summary>
-        public static DescribeStreamsGroupsOptions New()
+        public static DescribeStreamsGroupsOptions CreatePoolableInstance()
         {
             return JVMBridgeBase.New<DescribeStreamsGroupsOptions>();
         }

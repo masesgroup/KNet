@@ -176,7 +176,7 @@ namespace Org.Apache.Kafka.Common.Metrics.Stats
         /// <summary>
         /// HPA initializer for Histogram(Org.Apache.Kafka.Common.Metrics.Stats.Histogram.BinScheme arg0)
         /// </summary>
-        public static Histogram New(Org.Apache.Kafka.Common.Metrics.Stats.Histogram.BinScheme arg0)
+        public static Histogram CreatePoolableInstance(Org.Apache.Kafka.Common.Metrics.Stats.Histogram.BinScheme arg0)
         {
             return JVMBridgeBase.New<Histogram>(arg0);
         }
@@ -306,7 +306,7 @@ namespace Org.Apache.Kafka.Common.Metrics.Stats
             /// <summary>
             /// HPA initializer for ConstantBinScheme(int arg0, double arg1, double arg2)
             /// </summary>
-            public static ConstantBinScheme New(int arg0, double arg1, double arg2)
+            public static ConstantBinScheme CreatePoolableInstance(int arg0, double arg1, double arg2)
             {
                 return JVMBridgeBase.New<ConstantBinScheme>(arg0, arg1, arg2);
             }
@@ -379,7 +379,7 @@ namespace Org.Apache.Kafka.Common.Metrics.Stats
             /// <summary>
             /// HPA initializer for LinearBinScheme(int arg0, double arg1)
             /// </summary>
-            public static LinearBinScheme New(int arg0, double arg1)
+            public static LinearBinScheme CreatePoolableInstance(int arg0, double arg1)
             {
                 return JVMBridgeBase.New<LinearBinScheme>(arg0, arg1);
             }

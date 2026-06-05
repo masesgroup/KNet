@@ -74,7 +74,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <summary>
         /// HPA initializer for DescribeClientQuotasResult(Org.Apache.Kafka.Common.KafkaFuture%3CJava.Util.Map%3COrg.Apache.Kafka.Common.Quota.ClientQuotaEntity, Java.Util.Map%3CJava.Lang.String, Java.Lang.Double%3E%3E%3E arg0)
         /// </summary>
-        public static DescribeClientQuotasResult New(Org.Apache.Kafka.Common.KafkaFuture<Java.Util.Map<Org.Apache.Kafka.Common.Quota.ClientQuotaEntity, Java.Util.Map<Java.Lang.String, Java.Lang.Double>>> arg0)
+        public static DescribeClientQuotasResult CreatePoolableInstance(Org.Apache.Kafka.Common.KafkaFuture<Java.Util.Map<Org.Apache.Kafka.Common.Quota.ClientQuotaEntity, Java.Util.Map<Java.Lang.String, Java.Lang.Double>>> arg0)
         {
             return JVMBridgeBase.New<DescribeClientQuotasResult>(arg0);
         }

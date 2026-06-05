@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Streams
         /// <summary>
         /// HPA initializer for StreamsBuilder()
         /// </summary>
-        public static StreamsBuilder New()
+        public static StreamsBuilder CreatePoolableInstance()
         {
             return JVMBridgeBase.New<StreamsBuilder>();
         }
@@ -88,7 +88,7 @@ namespace Org.Apache.Kafka.Streams
         /// <summary>
         /// HPA initializer for StreamsBuilder(Org.Apache.Kafka.Streams.TopologyConfig arg0)
         /// </summary>
-        public static StreamsBuilder New(Org.Apache.Kafka.Streams.TopologyConfig arg0)
+        public static StreamsBuilder CreatePoolableInstance(Org.Apache.Kafka.Streams.TopologyConfig arg0)
         {
             return JVMBridgeBase.New<StreamsBuilder>(arg0);
         }

@@ -144,7 +144,7 @@ namespace Org.Rocksdb
         /// <summary>
         /// HPA initializer for Status(Org.Rocksdb.Status.Code arg0, Org.Rocksdb.Status.SubCode arg1, Java.Lang.String arg2)
         /// </summary>
-        public static Status New(Org.Rocksdb.Status.Code arg0, Org.Rocksdb.Status.SubCode arg1, Java.Lang.String arg2)
+        public static Status CreatePoolableInstance(Org.Rocksdb.Status.Code arg0, Org.Rocksdb.Status.SubCode arg1, Java.Lang.String arg2)
         {
             return JVMBridgeBase.New<Status>(arg0, arg1, arg2);
         }

@@ -75,7 +75,7 @@ namespace Org.Apache.Kafka.Raft
         /// <summary>
         /// HPA initializer for LeaderAndEpoch(Java.Util.OptionalInt leaderId, int epoch)
         /// </summary>
-        public static LeaderAndEpoch New(Java.Util.OptionalInt leaderId, int epoch)
+        public static LeaderAndEpoch CreatePoolableInstance(Java.Util.OptionalInt leaderId, int epoch)
         {
             return JVMBridgeBase.New<LeaderAndEpoch>(leaderId, epoch);
         }

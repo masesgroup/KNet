@@ -108,7 +108,7 @@ namespace Org.Apache.Kafka.Streams
         /// <summary>
         /// HPA initializer for StreamsConfig(Java.Util.Map%3Cobject, object%3E arg0)
         /// </summary>
-        public static StreamsConfig New(Java.Util.Map<object, object> arg0)
+        public static StreamsConfig CreatePoolableInstance(Java.Util.Map<object, object> arg0)
         {
             return JVMBridgeBase.New<StreamsConfig>(arg0);
         }
@@ -910,7 +910,7 @@ namespace Org.Apache.Kafka.Streams
             /// <summary>
             /// HPA initializer for InternalConfig()
             /// </summary>
-            public static InternalConfig New()
+            public static InternalConfig CreatePoolableInstance()
             {
                 return JVMBridgeBase.New<InternalConfig>();
             }

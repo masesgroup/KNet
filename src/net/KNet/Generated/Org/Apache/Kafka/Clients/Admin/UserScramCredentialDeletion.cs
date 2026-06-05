@@ -75,7 +75,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <summary>
         /// HPA initializer for UserScramCredentialDeletion(Java.Lang.String arg0, Org.Apache.Kafka.Clients.Admin.ScramMechanism arg1)
         /// </summary>
-        public static UserScramCredentialDeletion New(Java.Lang.String arg0, Org.Apache.Kafka.Clients.Admin.ScramMechanism arg1)
+        public static UserScramCredentialDeletion CreatePoolableInstance(Java.Lang.String arg0, Org.Apache.Kafka.Clients.Admin.ScramMechanism arg1)
         {
             return JVMBridgeBase.New<UserScramCredentialDeletion>(arg0, arg1);
         }

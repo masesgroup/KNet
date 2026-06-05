@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Tools
         /// <summary>
         /// HPA initializer for LeaderElectionCommand()
         /// </summary>
-        public static LeaderElectionCommand New()
+        public static LeaderElectionCommand CreatePoolableInstance()
         {
             return JVMBridgeBase.New<LeaderElectionCommand>();
         }

@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Common.Metrics.Stats
         /// <summary>
         /// HPA initializer for SimpleRate()
         /// </summary>
-        public static SimpleRate New()
+        public static SimpleRate CreatePoolableInstance()
         {
             return JVMBridgeBase.New<SimpleRate>();
         }

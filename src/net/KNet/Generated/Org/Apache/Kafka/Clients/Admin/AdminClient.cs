@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <summary>
         /// HPA initializer for AdminClient()
         /// </summary>
-        public static AdminClient New()
+        public static AdminClient CreatePoolableInstance()
         {
             return JVMBridgeBase.New<AdminClient>();
         }

@@ -202,7 +202,7 @@ namespace Org.Apache.Kafka.Tools.Filter
             /// <summary>
             /// HPA initializer for CompositeTopicPartitionFilter(Java.Util.List%3COrg.Apache.Kafka.Tools.Filter.TopicPartitionFilter%3E arg0)
             /// </summary>
-            public static CompositeTopicPartitionFilter New(Java.Util.List<Org.Apache.Kafka.Tools.Filter.TopicPartitionFilter> arg0)
+            public static CompositeTopicPartitionFilter CreatePoolableInstance(Java.Util.List<Org.Apache.Kafka.Tools.Filter.TopicPartitionFilter> arg0)
             {
                 return JVMBridgeBase.New<CompositeTopicPartitionFilter>(arg0);
             }
@@ -267,7 +267,7 @@ namespace Org.Apache.Kafka.Tools.Filter
             /// <summary>
             /// HPA initializer for TopicFilterAndPartitionFilter(Org.Apache.Kafka.Tools.Filter.TopicFilter.IncludeList arg0, Org.Apache.Kafka.Tools.Filter.PartitionFilter arg1)
             /// </summary>
-            public static TopicFilterAndPartitionFilter New(Org.Apache.Kafka.Tools.Filter.TopicFilter.IncludeList arg0, Org.Apache.Kafka.Tools.Filter.PartitionFilter arg1)
+            public static TopicFilterAndPartitionFilter CreatePoolableInstance(Org.Apache.Kafka.Tools.Filter.TopicFilter.IncludeList arg0, Org.Apache.Kafka.Tools.Filter.PartitionFilter arg1)
             {
                 return JVMBridgeBase.New<TopicFilterAndPartitionFilter>(arg0, arg1);
             }

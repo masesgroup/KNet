@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Streams.State
         /// <summary>
         /// HPA initializer for Stores()
         /// </summary>
-        public static Stores New()
+        public static Stores CreatePoolableInstance()
         {
             return JVMBridgeBase.New<Stores>();
         }

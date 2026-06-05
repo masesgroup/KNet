@@ -77,7 +77,7 @@ namespace Org.Apache.Kafka.Common.Memory
         /// <summary>
         /// HPA initializer for SimpleMemoryPool(long arg0, int arg1, bool arg2, Org.Apache.Kafka.Common.Metrics.Sensor arg3)
         /// </summary>
-        public static SimpleMemoryPool New(long arg0, int arg1, bool arg2, Org.Apache.Kafka.Common.Metrics.Sensor arg3)
+        public static SimpleMemoryPool CreatePoolableInstance(long arg0, int arg1, bool arg2, Org.Apache.Kafka.Common.Metrics.Sensor arg3)
         {
             return JVMBridgeBase.New<SimpleMemoryPool>(arg0, arg1, arg2, arg3);
         }

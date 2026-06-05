@@ -79,7 +79,7 @@ namespace Org.Rocksdb
         /// <summary>
         /// HPA initializer for PersistentCache(Org.Rocksdb.Env arg0, Java.Lang.String arg1, long arg2, Org.Rocksdb.Logger arg3, bool arg4)
         /// </summary>
-        public static PersistentCache New(Org.Rocksdb.Env arg0, Java.Lang.String arg1, long arg2, Org.Rocksdb.Logger arg3, bool arg4)
+        public static PersistentCache CreatePoolableInstance(Org.Rocksdb.Env arg0, Java.Lang.String arg1, long arg2, Org.Rocksdb.Logger arg3, bool arg4)
         {
             return JVMBridgeBase.New<PersistentCache>(arg0, arg1, arg2, arg3, arg4);
         }

@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <summary>
         /// HPA initializer for DescribeClusterOptions()
         /// </summary>
-        public static DescribeClusterOptions New()
+        public static DescribeClusterOptions CreatePoolableInstance()
         {
             return JVMBridgeBase.New<DescribeClusterOptions>();
         }

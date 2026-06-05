@@ -109,7 +109,7 @@ namespace Org.Apache.Kafka.Common.Config
         /// <summary>
         /// HPA initializer for ConfigResource(Org.Apache.Kafka.Common.Config.ConfigResource.Type arg0, Java.Lang.String arg1)
         /// </summary>
-        public static ConfigResource New(Org.Apache.Kafka.Common.Config.ConfigResource.Type arg0, Java.Lang.String arg1)
+        public static ConfigResource CreatePoolableInstance(Org.Apache.Kafka.Common.Config.ConfigResource.Type arg0, Java.Lang.String arg1)
         {
             return JVMBridgeBase.New<ConfigResource>(arg0, arg1);
         }

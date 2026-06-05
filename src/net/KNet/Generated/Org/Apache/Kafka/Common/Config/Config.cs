@@ -74,7 +74,7 @@ namespace Org.Apache.Kafka.Common.Config
         /// <summary>
         /// HPA initializer for Config(Java.Util.List%3COrg.Apache.Kafka.Common.Config.ConfigValue%3E arg0)
         /// </summary>
-        public static Config New(Java.Util.List<Org.Apache.Kafka.Common.Config.ConfigValue> arg0)
+        public static Config CreatePoolableInstance(Java.Util.List<Org.Apache.Kafka.Common.Config.ConfigValue> arg0)
         {
             return JVMBridgeBase.New<Config>(arg0);
         }

@@ -74,7 +74,7 @@ namespace Org.Apache.Kafka.Tools.Streams
         /// <summary>
         /// HPA initializer for StreamsGroupCommandOptions(Java.Lang.String[] arg0)
         /// </summary>
-        public static StreamsGroupCommandOptions New(Java.Lang.String[] arg0)
+        public static StreamsGroupCommandOptions CreatePoolableInstance(Java.Lang.String[] arg0)
         {
             return JVMBridgeBase.New<StreamsGroupCommandOptions>(arg0);
         }

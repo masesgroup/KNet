@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <summary>
         /// HPA initializer for CreatePartitionsOptions()
         /// </summary>
-        public static CreatePartitionsOptions New()
+        public static CreatePartitionsOptions CreatePoolableInstance()
         {
             return JVMBridgeBase.New<CreatePartitionsOptions>();
         }

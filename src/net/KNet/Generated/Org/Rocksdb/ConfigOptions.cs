@@ -73,7 +73,7 @@ namespace Org.Rocksdb
         /// <summary>
         /// HPA initializer for ConfigOptions()
         /// </summary>
-        public static ConfigOptions New()
+        public static ConfigOptions CreatePoolableInstance()
         {
             return JVMBridgeBase.New<ConfigOptions>();
         }

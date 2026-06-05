@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <summary>
         /// HPA initializer for AlterConsumerGroupOffsetsOptions()
         /// </summary>
-        public static AlterConsumerGroupOffsetsOptions New()
+        public static AlterConsumerGroupOffsetsOptions CreatePoolableInstance()
         {
             return JVMBridgeBase.New<AlterConsumerGroupOffsetsOptions>();
         }
