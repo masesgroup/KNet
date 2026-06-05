@@ -78,7 +78,7 @@ namespace Org.Apache.Kafka.Queue
         /// <summary>
         /// HPA initializer for KafkaEventQueue(Org.Apache.Kafka.Common.Utils.Time arg0, Org.Apache.Kafka.Common.Utils.LogContext arg1, Java.Lang.String arg2, Org.Apache.Kafka.Queue.EventQueue.Event arg3, Java.Util.Function.BiConsumer%3CJava.Lang.Long, Java.Lang.Long%3E arg4)
         /// </summary>
-        public static KafkaEventQueue New(Org.Apache.Kafka.Common.Utils.Time arg0, Org.Apache.Kafka.Common.Utils.LogContext arg1, Java.Lang.String arg2, Org.Apache.Kafka.Queue.EventQueue.Event arg3, Java.Util.Function.BiConsumer<Java.Lang.Long, Java.Lang.Long> arg4)
+        public static KafkaEventQueue Create(Org.Apache.Kafka.Common.Utils.Time arg0, Org.Apache.Kafka.Common.Utils.LogContext arg1, Java.Lang.String arg2, Org.Apache.Kafka.Queue.EventQueue.Event arg3, Java.Util.Function.BiConsumer<Java.Lang.Long, Java.Lang.Long> arg4)
         {
             return JVMBridgeBase.New<KafkaEventQueue>(arg0, arg1, arg2, arg3, arg4);
         }
@@ -96,7 +96,7 @@ namespace Org.Apache.Kafka.Queue
         /// <summary>
         /// HPA initializer for KafkaEventQueue(Org.Apache.Kafka.Common.Utils.Time arg0, Org.Apache.Kafka.Common.Utils.LogContext arg1, Java.Lang.String arg2, Org.Apache.Kafka.Queue.EventQueue.Event arg3)
         /// </summary>
-        public static KafkaEventQueue New(Org.Apache.Kafka.Common.Utils.Time arg0, Org.Apache.Kafka.Common.Utils.LogContext arg1, Java.Lang.String arg2, Org.Apache.Kafka.Queue.EventQueue.Event arg3)
+        public static KafkaEventQueue Create(Org.Apache.Kafka.Common.Utils.Time arg0, Org.Apache.Kafka.Common.Utils.LogContext arg1, Java.Lang.String arg2, Org.Apache.Kafka.Queue.EventQueue.Event arg3)
         {
             return JVMBridgeBase.New<KafkaEventQueue>(arg0, arg1, arg2, arg3);
         }
@@ -113,7 +113,7 @@ namespace Org.Apache.Kafka.Queue
         /// <summary>
         /// HPA initializer for KafkaEventQueue(Org.Apache.Kafka.Common.Utils.Time arg0, Org.Apache.Kafka.Common.Utils.LogContext arg1, Java.Lang.String arg2)
         /// </summary>
-        public static KafkaEventQueue New(Org.Apache.Kafka.Common.Utils.Time arg0, Org.Apache.Kafka.Common.Utils.LogContext arg1, Java.Lang.String arg2)
+        public static KafkaEventQueue Create(Org.Apache.Kafka.Common.Utils.Time arg0, Org.Apache.Kafka.Common.Utils.LogContext arg1, Java.Lang.String arg2)
         {
             return JVMBridgeBase.New<KafkaEventQueue>(arg0, arg1, arg2);
         }

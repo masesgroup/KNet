@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Common.Serialization
         /// <summary>
         /// HPA initializer for StringSerializer()
         /// </summary>
-        public static StringSerializer New()
+        public static StringSerializer Create()
         {
             return JVMBridgeBase.New<StringSerializer>();
         }

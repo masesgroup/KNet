@@ -74,7 +74,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <summary>
         /// HPA initializer for MemberToRemove(Java.Lang.String arg0)
         /// </summary>
-        public static MemberToRemove New(Java.Lang.String arg0)
+        public static MemberToRemove Create(Java.Lang.String arg0)
         {
             return JVMBridgeBase.New<MemberToRemove>(arg0);
         }

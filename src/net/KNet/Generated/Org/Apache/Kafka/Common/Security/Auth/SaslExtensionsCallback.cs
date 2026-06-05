@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Common.Security.Auth
         /// <summary>
         /// HPA initializer for SaslExtensionsCallback()
         /// </summary>
-        public static SaslExtensionsCallback New()
+        public static SaslExtensionsCallback Create()
         {
             return JVMBridgeBase.New<SaslExtensionsCallback>();
         }

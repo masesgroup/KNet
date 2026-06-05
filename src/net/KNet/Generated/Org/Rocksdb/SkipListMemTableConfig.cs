@@ -73,7 +73,7 @@ namespace Org.Rocksdb
         /// <summary>
         /// HPA initializer for SkipListMemTableConfig()
         /// </summary>
-        public static SkipListMemTableConfig New()
+        public static SkipListMemTableConfig Create()
         {
             return JVMBridgeBase.New<SkipListMemTableConfig>();
         }

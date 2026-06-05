@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
         /// <summary>
         /// HPA initializer for DefaultTopicFilter()
         /// </summary>
-        public static DefaultTopicFilter New()
+        public static DefaultTopicFilter Create()
         {
             return JVMBridgeBase.New<DefaultTopicFilter>();
         }

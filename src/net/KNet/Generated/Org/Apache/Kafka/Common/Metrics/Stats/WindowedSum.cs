@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Common.Metrics.Stats
         /// <summary>
         /// HPA initializer for WindowedSum()
         /// </summary>
-        public static WindowedSum New()
+        public static WindowedSum Create()
         {
             return JVMBridgeBase.New<WindowedSum>();
         }

@@ -74,7 +74,7 @@ namespace Org.Apache.Kafka.Deferred
         /// <summary>
         /// HPA initializer for DeferredEventQueue(Org.Apache.Kafka.Common.Utils.LogContext arg0)
         /// </summary>
-        public static DeferredEventQueue New(Org.Apache.Kafka.Common.Utils.LogContext arg0)
+        public static DeferredEventQueue Create(Org.Apache.Kafka.Common.Utils.LogContext arg0)
         {
             return JVMBridgeBase.New<DeferredEventQueue>(arg0);
         }

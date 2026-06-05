@@ -75,7 +75,7 @@ namespace Org.Rocksdb
         /// <summary>
         /// HPA initializer for DbPath(Java.Nio.File.Path arg0, long arg1)
         /// </summary>
-        public static DbPath New(Java.Nio.File.Path arg0, long arg1)
+        public static DbPath Create(Java.Nio.File.Path arg0, long arg1)
         {
             return JVMBridgeBase.New<DbPath>(arg0, arg1);
         }

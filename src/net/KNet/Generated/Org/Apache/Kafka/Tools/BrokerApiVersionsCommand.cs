@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Tools
         /// <summary>
         /// HPA initializer for BrokerApiVersionsCommand()
         /// </summary>
-        public static BrokerApiVersionsCommand New()
+        public static BrokerApiVersionsCommand Create()
         {
             return JVMBridgeBase.New<BrokerApiVersionsCommand>();
         }

@@ -163,7 +163,7 @@ namespace Org.Rocksdb
             /// <summary>
             /// HPA initializer for BatchResult(long arg0, long arg1)
             /// </summary>
-            public static BatchResult New(long arg0, long arg1)
+            public static BatchResult Create(long arg0, long arg1)
             {
                 return JVMBridgeBase.New<BatchResult>(arg0, arg1);
             }

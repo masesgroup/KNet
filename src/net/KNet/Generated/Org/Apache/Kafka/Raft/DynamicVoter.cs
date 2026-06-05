@@ -77,7 +77,7 @@ namespace Org.Apache.Kafka.Raft
         /// <summary>
         /// HPA initializer for DynamicVoter(Org.Apache.Kafka.Common.Uuid directoryId, int nodeId, Java.Lang.String host, int port)
         /// </summary>
-        public static DynamicVoter New(Org.Apache.Kafka.Common.Uuid directoryId, int nodeId, Java.Lang.String host, int port)
+        public static DynamicVoter Create(Org.Apache.Kafka.Common.Uuid directoryId, int nodeId, Java.Lang.String host, int port)
         {
             return JVMBridgeBase.New<DynamicVoter>(directoryId, nodeId, host, port);
         }

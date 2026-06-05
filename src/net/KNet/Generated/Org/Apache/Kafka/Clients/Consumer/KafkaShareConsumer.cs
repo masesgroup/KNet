@@ -112,7 +112,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
         /// <summary>
         /// HPA initializer for KafkaShareConsumer(Java.Util.Map arg0, Org.Apache.Kafka.Common.Serialization.Deserializer arg1, Org.Apache.Kafka.Common.Serialization.Deserializer arg2)
         /// </summary>
-        public static KafkaShareConsumer New(Java.Util.Map arg0, Org.Apache.Kafka.Common.Serialization.Deserializer arg1, Org.Apache.Kafka.Common.Serialization.Deserializer arg2)
+        public static KafkaShareConsumer Create(Java.Util.Map arg0, Org.Apache.Kafka.Common.Serialization.Deserializer arg1, Org.Apache.Kafka.Common.Serialization.Deserializer arg2)
         {
             return JVMBridgeBase.New<KafkaShareConsumer>(arg0, arg1, arg2);
         }
@@ -127,7 +127,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
         /// <summary>
         /// HPA initializer for KafkaShareConsumer(Java.Util.Map arg0)
         /// </summary>
-        public static KafkaShareConsumer New(Java.Util.Map arg0)
+        public static KafkaShareConsumer Create(Java.Util.Map arg0)
         {
             return JVMBridgeBase.New<KafkaShareConsumer>(arg0);
         }
@@ -144,7 +144,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
         /// <summary>
         /// HPA initializer for KafkaShareConsumer(Java.Util.Properties arg0, Org.Apache.Kafka.Common.Serialization.Deserializer arg1, Org.Apache.Kafka.Common.Serialization.Deserializer arg2)
         /// </summary>
-        public static KafkaShareConsumer New(Java.Util.Properties arg0, Org.Apache.Kafka.Common.Serialization.Deserializer arg1, Org.Apache.Kafka.Common.Serialization.Deserializer arg2)
+        public static KafkaShareConsumer Create(Java.Util.Properties arg0, Org.Apache.Kafka.Common.Serialization.Deserializer arg1, Org.Apache.Kafka.Common.Serialization.Deserializer arg2)
         {
             return JVMBridgeBase.New<KafkaShareConsumer>(arg0, arg1, arg2);
         }
@@ -159,7 +159,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
         /// <summary>
         /// HPA initializer for KafkaShareConsumer(Java.Util.Properties arg0)
         /// </summary>
-        public static KafkaShareConsumer New(Java.Util.Properties arg0)
+        public static KafkaShareConsumer Create(Java.Util.Properties arg0)
         {
             return JVMBridgeBase.New<KafkaShareConsumer>(arg0);
         }
@@ -362,7 +362,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
         /// <summary>
         /// HPA initializer for KafkaShareConsumer(Java.Util.Map%3CJava.Lang.String, object%3E arg0, Org.Apache.Kafka.Common.Serialization.Deserializer%3CK%3E arg1, Org.Apache.Kafka.Common.Serialization.Deserializer%3CV%3E arg2)
         /// </summary>
-        public static KafkaShareConsumer<K, V> New(Java.Util.Map<Java.Lang.String, object> arg0, Org.Apache.Kafka.Common.Serialization.Deserializer<K> arg1, Org.Apache.Kafka.Common.Serialization.Deserializer<V> arg2)
+        public static KafkaShareConsumer<K, V> Create(Java.Util.Map<Java.Lang.String, object> arg0, Org.Apache.Kafka.Common.Serialization.Deserializer<K> arg1, Org.Apache.Kafka.Common.Serialization.Deserializer<V> arg2)
         {
             return JVMBridgeBase.New<KafkaShareConsumer<K, V>>(arg0, arg1, arg2);
         }
@@ -377,7 +377,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
         /// <summary>
         /// HPA initializer for KafkaShareConsumer(Java.Util.Map%3CJava.Lang.String, object%3E arg0)
         /// </summary>
-        public static KafkaShareConsumer<K, V> New(Java.Util.Map<Java.Lang.String, object> arg0)
+        public static KafkaShareConsumer<K, V> Create(Java.Util.Map<Java.Lang.String, object> arg0)
         {
             return JVMBridgeBase.New<KafkaShareConsumer<K, V>>(arg0);
         }
@@ -394,7 +394,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
         /// <summary>
         /// HPA initializer for KafkaShareConsumer(Java.Util.Properties arg0, Org.Apache.Kafka.Common.Serialization.Deserializer%3CK%3E arg1, Org.Apache.Kafka.Common.Serialization.Deserializer%3CV%3E arg2)
         /// </summary>
-        public static KafkaShareConsumer<K, V> New(Java.Util.Properties arg0, Org.Apache.Kafka.Common.Serialization.Deserializer<K> arg1, Org.Apache.Kafka.Common.Serialization.Deserializer<V> arg2)
+        public static KafkaShareConsumer<K, V> Create(Java.Util.Properties arg0, Org.Apache.Kafka.Common.Serialization.Deserializer<K> arg1, Org.Apache.Kafka.Common.Serialization.Deserializer<V> arg2)
         {
             return JVMBridgeBase.New<KafkaShareConsumer<K, V>>(arg0, arg1, arg2);
         }
@@ -409,7 +409,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
         /// <summary>
         /// HPA initializer for KafkaShareConsumer(Java.Util.Properties arg0)
         /// </summary>
-        public static KafkaShareConsumer<K, V> New(Java.Util.Properties arg0)
+        public static KafkaShareConsumer<K, V> Create(Java.Util.Properties arg0)
         {
             return JVMBridgeBase.New<KafkaShareConsumer<K, V>>(arg0);
         }

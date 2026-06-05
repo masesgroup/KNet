@@ -75,7 +75,7 @@ namespace Org.Rocksdb
         /// <summary>
         /// HPA initializer for CassandraValueMergeOperator(int arg0, int arg1)
         /// </summary>
-        public static CassandraValueMergeOperator New(int arg0, int arg1)
+        public static CassandraValueMergeOperator Create(int arg0, int arg1)
         {
             return JVMBridgeBase.New<CassandraValueMergeOperator>(arg0, arg1);
         }
@@ -90,7 +90,7 @@ namespace Org.Rocksdb
         /// <summary>
         /// HPA initializer for CassandraValueMergeOperator(int arg0)
         /// </summary>
-        public static CassandraValueMergeOperator New(int arg0)
+        public static CassandraValueMergeOperator Create(int arg0)
         {
             return JVMBridgeBase.New<CassandraValueMergeOperator>(arg0);
         }

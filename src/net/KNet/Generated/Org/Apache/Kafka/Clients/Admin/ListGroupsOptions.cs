@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <summary>
         /// HPA initializer for ListGroupsOptions()
         /// </summary>
-        public static ListGroupsOptions New()
+        public static ListGroupsOptions Create()
         {
             return JVMBridgeBase.New<ListGroupsOptions>();
         }

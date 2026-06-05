@@ -74,7 +74,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <summary>
         /// HPA initializer for DescribeConsumerGroupsResult(Java.Util.Map%3CJava.Lang.String, Org.Apache.Kafka.Common.KafkaFuture%3COrg.Apache.Kafka.Clients.Admin.ConsumerGroupDescription%3E%3E arg0)
         /// </summary>
-        public static DescribeConsumerGroupsResult New(Java.Util.Map<Java.Lang.String, Org.Apache.Kafka.Common.KafkaFuture<Org.Apache.Kafka.Clients.Admin.ConsumerGroupDescription>> arg0)
+        public static DescribeConsumerGroupsResult Create(Java.Util.Map<Java.Lang.String, Org.Apache.Kafka.Common.KafkaFuture<Org.Apache.Kafka.Clients.Admin.ConsumerGroupDescription>> arg0)
         {
             return JVMBridgeBase.New<DescribeConsumerGroupsResult>(arg0);
         }

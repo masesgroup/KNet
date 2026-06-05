@@ -74,7 +74,7 @@ namespace Org.Apache.Kafka.Raft
         /// <summary>
         /// HPA initializer for MetadataLogConfig(Org.Apache.Kafka.Common.Config.AbstractConfig arg0)
         /// </summary>
-        public static MetadataLogConfig New(Org.Apache.Kafka.Common.Config.AbstractConfig arg0)
+        public static MetadataLogConfig Create(Org.Apache.Kafka.Common.Config.AbstractConfig arg0)
         {
             return JVMBridgeBase.New<MetadataLogConfig>(arg0);
         }

@@ -422,7 +422,7 @@ namespace Org.Apache.Kafka.Tools
             /// <summary>
             /// HPA initializer for Ignore()
             /// </summary>
-            public static Ignore New()
+            public static Ignore Create()
             {
                 return JVMBridgeBase.New<Ignore>();
             }
@@ -468,7 +468,7 @@ namespace Org.Apache.Kafka.Tools
             /// <summary>
             /// HPA initializer for LogOffset(long value)
             /// </summary>
-            public static LogOffset New(long value)
+            public static LogOffset Create(long value)
             {
                 return JVMBridgeBase.New<LogOffset>(value);
             }
@@ -559,7 +559,7 @@ namespace Org.Apache.Kafka.Tools
             /// <summary>
             /// HPA initializer for OffsetsUtilsOptions(Java.Util.List%3CJava.Lang.String%3E arg0, Java.Util.List%3CJava.Lang.Long%3E arg1, Java.Util.List%3CJava.Lang.String%3E arg2, Java.Util.List%3CJava.Lang.String%3E arg3, Java.Lang.String arg4, Java.Lang.Long arg5, long arg6)
             /// </summary>
-            public static OffsetsUtilsOptions New(Java.Util.List<Java.Lang.String> arg0, Java.Util.List<Java.Lang.Long> arg1, Java.Util.List<Java.Lang.String> arg2, Java.Util.List<Java.Lang.String> arg3, Java.Lang.String arg4, Java.Lang.Long arg5, long arg6)
+            public static OffsetsUtilsOptions Create(Java.Util.List<Java.Lang.String> arg0, Java.Util.List<Java.Lang.Long> arg1, Java.Util.List<Java.Lang.String> arg2, Java.Util.List<Java.Lang.String> arg3, Java.Lang.String arg4, Java.Lang.Long arg5, long arg6)
             {
                 return JVMBridgeBase.New<OffsetsUtilsOptions>(arg0, arg1, arg2, arg3, arg4, arg5, arg6);
             }
@@ -576,7 +576,7 @@ namespace Org.Apache.Kafka.Tools
             /// <summary>
             /// HPA initializer for OffsetsUtilsOptions(Java.Util.List%3CJava.Lang.String%3E arg0, Java.Util.List%3CJava.Lang.String%3E arg1, long arg2)
             /// </summary>
-            public static OffsetsUtilsOptions New(Java.Util.List<Java.Lang.String> arg0, Java.Util.List<Java.Lang.String> arg1, long arg2)
+            public static OffsetsUtilsOptions Create(Java.Util.List<Java.Lang.String> arg0, Java.Util.List<Java.Lang.String> arg1, long arg2)
             {
                 return JVMBridgeBase.New<OffsetsUtilsOptions>(arg0, arg1, arg2);
             }
@@ -621,7 +621,7 @@ namespace Org.Apache.Kafka.Tools
             /// <summary>
             /// HPA initializer for Unknown()
             /// </summary>
-            public static Unknown New()
+            public static Unknown Create()
             {
                 return JVMBridgeBase.New<Unknown>();
             }

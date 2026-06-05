@@ -142,7 +142,7 @@ namespace Org.Apache.Kafka.Raft
         /// <summary>
         /// HPA initializer for QuorumConfig(Org.Apache.Kafka.Common.Config.AbstractConfig arg0)
         /// </summary>
-        public static QuorumConfig New(Org.Apache.Kafka.Common.Config.AbstractConfig arg0)
+        public static QuorumConfig Create(Org.Apache.Kafka.Common.Config.AbstractConfig arg0)
         {
             return JVMBridgeBase.New<QuorumConfig>(arg0);
         }
@@ -413,7 +413,7 @@ namespace Org.Apache.Kafka.Raft
             /// <summary>
             /// HPA initializer for ControllerQuorumBootstrapServersValidator()
             /// </summary>
-            public static ControllerQuorumBootstrapServersValidator New()
+            public static ControllerQuorumBootstrapServersValidator Create()
             {
                 return JVMBridgeBase.New<ControllerQuorumBootstrapServersValidator>();
             }
@@ -467,7 +467,7 @@ namespace Org.Apache.Kafka.Raft
             /// <summary>
             /// HPA initializer for ControllerQuorumVotersValidator()
             /// </summary>
-            public static ControllerQuorumVotersValidator New()
+            public static ControllerQuorumVotersValidator Create()
             {
                 return JVMBridgeBase.New<ControllerQuorumVotersValidator>();
             }

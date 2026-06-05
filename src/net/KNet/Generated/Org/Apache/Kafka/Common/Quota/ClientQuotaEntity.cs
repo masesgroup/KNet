@@ -74,7 +74,7 @@ namespace Org.Apache.Kafka.Common.Quota
         /// <summary>
         /// HPA initializer for ClientQuotaEntity(Java.Util.Map%3CJava.Lang.String, Java.Lang.String%3E arg0)
         /// </summary>
-        public static ClientQuotaEntity New(Java.Util.Map<Java.Lang.String, Java.Lang.String> arg0)
+        public static ClientQuotaEntity Create(Java.Util.Map<Java.Lang.String, Java.Lang.String> arg0)
         {
             return JVMBridgeBase.New<ClientQuotaEntity>(arg0);
         }

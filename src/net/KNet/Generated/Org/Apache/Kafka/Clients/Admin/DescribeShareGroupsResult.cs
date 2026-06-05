@@ -74,7 +74,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <summary>
         /// HPA initializer for DescribeShareGroupsResult(Java.Util.Map%3CJava.Lang.String, Org.Apache.Kafka.Common.KafkaFuture%3COrg.Apache.Kafka.Clients.Admin.ShareGroupDescription%3E%3E arg0)
         /// </summary>
-        public static DescribeShareGroupsResult New(Java.Util.Map<Java.Lang.String, Org.Apache.Kafka.Common.KafkaFuture<Org.Apache.Kafka.Clients.Admin.ShareGroupDescription>> arg0)
+        public static DescribeShareGroupsResult Create(Java.Util.Map<Java.Lang.String, Org.Apache.Kafka.Common.KafkaFuture<Org.Apache.Kafka.Clients.Admin.ShareGroupDescription>> arg0)
         {
             return JVMBridgeBase.New<DescribeShareGroupsResult>(arg0);
         }

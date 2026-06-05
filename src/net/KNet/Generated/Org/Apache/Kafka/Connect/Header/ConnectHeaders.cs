@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Connect.Header
         /// <summary>
         /// HPA initializer for ConnectHeaders()
         /// </summary>
-        public static ConnectHeaders New()
+        public static ConnectHeaders Create()
         {
             return JVMBridgeBase.New<ConnectHeaders>();
         }
@@ -88,7 +88,7 @@ namespace Org.Apache.Kafka.Connect.Header
         /// <summary>
         /// HPA initializer for ConnectHeaders(Java.Lang.Iterable%3COrg.Apache.Kafka.Connect.Header.Header%3E arg0)
         /// </summary>
-        public static ConnectHeaders New(Java.Lang.Iterable<Org.Apache.Kafka.Connect.Header.Header> arg0)
+        public static ConnectHeaders Create(Java.Lang.Iterable<Org.Apache.Kafka.Connect.Header.Header> arg0)
         {
             return JVMBridgeBase.New<ConnectHeaders>(arg0);
         }

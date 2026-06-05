@@ -75,7 +75,7 @@ namespace Org.Apache.Kafka.Common.Utils
         /// <summary>
         /// HPA initializer for ProducerIdAndEpoch(long arg0, short arg1)
         /// </summary>
-        public static ProducerIdAndEpoch New(long arg0, short arg1)
+        public static ProducerIdAndEpoch Create(long arg0, short arg1)
         {
             return JVMBridgeBase.New<ProducerIdAndEpoch>(arg0, arg1);
         }

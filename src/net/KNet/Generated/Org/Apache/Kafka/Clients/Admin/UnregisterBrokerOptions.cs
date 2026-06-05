@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <summary>
         /// HPA initializer for UnregisterBrokerOptions()
         /// </summary>
-        public static UnregisterBrokerOptions New()
+        public static UnregisterBrokerOptions Create()
         {
             return JVMBridgeBase.New<UnregisterBrokerOptions>();
         }

@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Tools
         /// <summary>
         /// HPA initializer for FeatureCommand()
         /// </summary>
-        public static FeatureCommand New()
+        public static FeatureCommand Create()
         {
             return JVMBridgeBase.New<FeatureCommand>();
         }

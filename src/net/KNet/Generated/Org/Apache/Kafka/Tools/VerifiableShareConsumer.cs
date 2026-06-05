@@ -252,7 +252,7 @@ namespace Org.Apache.Kafka.Tools
         /// <summary>
         /// HPA initializer for VerifiableShareConsumer(Org.Apache.Kafka.Clients.Consumer.KafkaShareConsumer%3CJava.Lang.String, Java.Lang.String%3E arg0, Org.Apache.Kafka.Clients.Admin.Admin arg1, Java.Io.PrintStream arg2, Java.Lang.Integer arg3, Java.Lang.String arg4, Org.Apache.Kafka.Tools.VerifiableShareConsumer.AcknowledgementMode arg5, Java.Lang.String arg6, Java.Lang.String arg7, Java.Lang.Boolean arg8)
         /// </summary>
-        public static VerifiableShareConsumer New(Org.Apache.Kafka.Clients.Consumer.KafkaShareConsumer<Java.Lang.String, Java.Lang.String> arg0, Org.Apache.Kafka.Clients.Admin.Admin arg1, Java.Io.PrintStream arg2, Java.Lang.Integer arg3, Java.Lang.String arg4, Org.Apache.Kafka.Tools.VerifiableShareConsumer.AcknowledgementMode arg5, Java.Lang.String arg6, Java.Lang.String arg7, Java.Lang.Boolean arg8)
+        public static VerifiableShareConsumer Create(Org.Apache.Kafka.Clients.Consumer.KafkaShareConsumer<Java.Lang.String, Java.Lang.String> arg0, Org.Apache.Kafka.Clients.Admin.Admin arg1, Java.Io.PrintStream arg2, Java.Lang.Integer arg3, Java.Lang.String arg4, Org.Apache.Kafka.Tools.VerifiableShareConsumer.AcknowledgementMode arg5, Java.Lang.String arg6, Java.Lang.String arg7, Java.Lang.Boolean arg8)
         {
             return JVMBridgeBase.New<VerifiableShareConsumer>(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
         }
@@ -391,7 +391,7 @@ namespace Org.Apache.Kafka.Tools
             /// <summary>
             /// HPA initializer for PartitionData(Java.Lang.String arg0, int arg1)
             /// </summary>
-            public static PartitionData New(Java.Lang.String arg0, int arg1)
+            public static PartitionData Create(Java.Lang.String arg0, int arg1)
             {
                 return JVMBridgeBase.New<PartitionData>(arg0, arg1);
             }
@@ -453,7 +453,7 @@ namespace Org.Apache.Kafka.Tools
             /// <summary>
             /// HPA initializer for RecordData(Org.Apache.Kafka.Clients.Consumer.ConsumerRecord%3CJava.Lang.String, Java.Lang.String%3E arg0)
             /// </summary>
-            public static RecordData New(Org.Apache.Kafka.Clients.Consumer.ConsumerRecord<Java.Lang.String, Java.Lang.String> arg0)
+            public static RecordData Create(Org.Apache.Kafka.Clients.Consumer.ConsumerRecord<Java.Lang.String, Java.Lang.String> arg0)
             {
                 return JVMBridgeBase.New<RecordData>(arg0);
             }
@@ -540,7 +540,7 @@ namespace Org.Apache.Kafka.Tools
             /// <summary>
             /// HPA initializer for RecordsConsumed(long arg0, Java.Util.List%3COrg.Apache.Kafka.Tools.VerifiableShareConsumer.RecordSetSummary%3E arg1)
             /// </summary>
-            public static RecordsConsumed New(long arg0, Java.Util.List<Org.Apache.Kafka.Tools.VerifiableShareConsumer.RecordSetSummary> arg1)
+            public static RecordsConsumed Create(long arg0, Java.Util.List<Org.Apache.Kafka.Tools.VerifiableShareConsumer.RecordSetSummary> arg1)
             {
                 return JVMBridgeBase.New<RecordsConsumed>(arg0, arg1);
             }
@@ -604,7 +604,7 @@ namespace Org.Apache.Kafka.Tools
             /// <summary>
             /// HPA initializer for RecordSetSummary(Java.Lang.String arg0, int arg1, Java.Util.Set%3CJava.Lang.Long%3E arg2)
             /// </summary>
-            public static RecordSetSummary New(Java.Lang.String arg0, int arg1, Java.Util.Set<Java.Lang.Long> arg2)
+            public static RecordSetSummary Create(Java.Lang.String arg0, int arg1, Java.Util.Set<Java.Lang.Long> arg2)
             {
                 return JVMBridgeBase.New<RecordSetSummary>(arg0, arg1, arg2);
             }

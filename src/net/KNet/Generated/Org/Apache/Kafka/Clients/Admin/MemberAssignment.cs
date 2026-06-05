@@ -74,7 +74,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <summary>
         /// HPA initializer for MemberAssignment(Java.Util.Set%3COrg.Apache.Kafka.Common.TopicPartition%3E arg0)
         /// </summary>
-        public static MemberAssignment New(Java.Util.Set<Org.Apache.Kafka.Common.TopicPartition> arg0)
+        public static MemberAssignment Create(Java.Util.Set<Org.Apache.Kafka.Common.TopicPartition> arg0)
         {
             return JVMBridgeBase.New<MemberAssignment>(arg0);
         }

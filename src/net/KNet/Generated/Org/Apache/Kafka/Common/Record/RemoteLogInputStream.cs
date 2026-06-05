@@ -74,7 +74,7 @@ namespace Org.Apache.Kafka.Common.Record
         /// <summary>
         /// HPA initializer for RemoteLogInputStream(Java.Io.InputStream arg0)
         /// </summary>
-        public static RemoteLogInputStream New(Java.Io.InputStream arg0)
+        public static RemoteLogInputStream Create(Java.Io.InputStream arg0)
         {
             return JVMBridgeBase.New<RemoteLogInputStream>(arg0);
         }

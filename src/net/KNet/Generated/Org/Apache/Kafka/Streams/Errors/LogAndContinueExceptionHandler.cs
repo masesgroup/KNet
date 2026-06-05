@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Streams.Errors
         /// <summary>
         /// HPA initializer for LogAndContinueExceptionHandler()
         /// </summary>
-        public static LogAndContinueExceptionHandler New()
+        public static LogAndContinueExceptionHandler Create()
         {
             return JVMBridgeBase.New<LogAndContinueExceptionHandler>();
         }

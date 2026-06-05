@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Assignment.Assignors
         /// <summary>
         /// HPA initializer for StickyTaskAssignor()
         /// </summary>
-        public static StickyTaskAssignor New()
+        public static StickyTaskAssignor Create()
         {
             return JVMBridgeBase.New<StickyTaskAssignor>();
         }
@@ -88,7 +88,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Assignment.Assignors
         /// <summary>
         /// HPA initializer for StickyTaskAssignor(bool arg0)
         /// </summary>
-        public static StickyTaskAssignor New(bool arg0)
+        public static StickyTaskAssignor Create(bool arg0)
         {
             return JVMBridgeBase.New<StickyTaskAssignor>(arg0);
         }

@@ -83,7 +83,7 @@ namespace Org.Apache.Kafka.Connect.Data
         /// <summary>
         /// HPA initializer for ConnectSchema(Org.Apache.Kafka.Connect.Data.Schema.Type arg0, bool arg1, object arg2, Java.Lang.String arg3, Java.Lang.Integer arg4, Java.Lang.String arg5, Java.Util.Map%3CJava.Lang.String, Java.Lang.String%3E arg6, Java.Util.List%3COrg.Apache.Kafka.Connect.Data.Field%3E arg7, Org.Apache.Kafka.Connect.Data.Schema arg8, Org.Apache.Kafka.Connect.Data.Schema arg9)
         /// </summary>
-        public static ConnectSchema New(Org.Apache.Kafka.Connect.Data.Schema.Type arg0, bool arg1, object arg2, Java.Lang.String arg3, Java.Lang.Integer arg4, Java.Lang.String arg5, Java.Util.Map<Java.Lang.String, Java.Lang.String> arg6, Java.Util.List<Org.Apache.Kafka.Connect.Data.Field> arg7, Org.Apache.Kafka.Connect.Data.Schema arg8, Org.Apache.Kafka.Connect.Data.Schema arg9)
+        public static ConnectSchema Create(Org.Apache.Kafka.Connect.Data.Schema.Type arg0, bool arg1, object arg2, Java.Lang.String arg3, Java.Lang.Integer arg4, Java.Lang.String arg5, Java.Util.Map<Java.Lang.String, Java.Lang.String> arg6, Java.Util.List<Org.Apache.Kafka.Connect.Data.Field> arg7, Org.Apache.Kafka.Connect.Data.Schema arg8, Org.Apache.Kafka.Connect.Data.Schema arg9)
         {
             return JVMBridgeBase.New<ConnectSchema>(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9);
         }
@@ -103,7 +103,7 @@ namespace Org.Apache.Kafka.Connect.Data
         /// <summary>
         /// HPA initializer for ConnectSchema(Org.Apache.Kafka.Connect.Data.Schema.Type arg0, bool arg1, object arg2, Java.Lang.String arg3, Java.Lang.Integer arg4, Java.Lang.String arg5)
         /// </summary>
-        public static ConnectSchema New(Org.Apache.Kafka.Connect.Data.Schema.Type arg0, bool arg1, object arg2, Java.Lang.String arg3, Java.Lang.Integer arg4, Java.Lang.String arg5)
+        public static ConnectSchema Create(Org.Apache.Kafka.Connect.Data.Schema.Type arg0, bool arg1, object arg2, Java.Lang.String arg3, Java.Lang.Integer arg4, Java.Lang.String arg5)
         {
             return JVMBridgeBase.New<ConnectSchema>(arg0, arg1, arg2, arg3, arg4, arg5);
         }
@@ -118,7 +118,7 @@ namespace Org.Apache.Kafka.Connect.Data
         /// <summary>
         /// HPA initializer for ConnectSchema(Org.Apache.Kafka.Connect.Data.Schema.Type arg0)
         /// </summary>
-        public static ConnectSchema New(Org.Apache.Kafka.Connect.Data.Schema.Type arg0)
+        public static ConnectSchema Create(Org.Apache.Kafka.Connect.Data.Schema.Type arg0)
         {
             return JVMBridgeBase.New<ConnectSchema>(arg0);
         }

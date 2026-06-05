@@ -79,7 +79,7 @@ namespace Org.Apache.Kafka.Common
         /// <summary>
         /// HPA initializer for TopicPartitionInfo(int arg0, Org.Apache.Kafka.Common.Node arg1, Java.Util.List%3COrg.Apache.Kafka.Common.Node%3E arg2, Java.Util.List%3COrg.Apache.Kafka.Common.Node%3E arg3, Java.Util.List%3COrg.Apache.Kafka.Common.Node%3E arg4, Java.Util.List%3COrg.Apache.Kafka.Common.Node%3E arg5)
         /// </summary>
-        public static TopicPartitionInfo New(int arg0, Org.Apache.Kafka.Common.Node arg1, Java.Util.List<Org.Apache.Kafka.Common.Node> arg2, Java.Util.List<Org.Apache.Kafka.Common.Node> arg3, Java.Util.List<Org.Apache.Kafka.Common.Node> arg4, Java.Util.List<Org.Apache.Kafka.Common.Node> arg5)
+        public static TopicPartitionInfo Create(int arg0, Org.Apache.Kafka.Common.Node arg1, Java.Util.List<Org.Apache.Kafka.Common.Node> arg2, Java.Util.List<Org.Apache.Kafka.Common.Node> arg3, Java.Util.List<Org.Apache.Kafka.Common.Node> arg4, Java.Util.List<Org.Apache.Kafka.Common.Node> arg5)
         {
             return JVMBridgeBase.New<TopicPartitionInfo>(arg0, arg1, arg2, arg3, arg4, arg5);
         }
@@ -97,7 +97,7 @@ namespace Org.Apache.Kafka.Common
         /// <summary>
         /// HPA initializer for TopicPartitionInfo(int arg0, Org.Apache.Kafka.Common.Node arg1, Java.Util.List%3COrg.Apache.Kafka.Common.Node%3E arg2, Java.Util.List%3COrg.Apache.Kafka.Common.Node%3E arg3)
         /// </summary>
-        public static TopicPartitionInfo New(int arg0, Org.Apache.Kafka.Common.Node arg1, Java.Util.List<Org.Apache.Kafka.Common.Node> arg2, Java.Util.List<Org.Apache.Kafka.Common.Node> arg3)
+        public static TopicPartitionInfo Create(int arg0, Org.Apache.Kafka.Common.Node arg1, Java.Util.List<Org.Apache.Kafka.Common.Node> arg2, Java.Util.List<Org.Apache.Kafka.Common.Node> arg3)
         {
             return JVMBridgeBase.New<TopicPartitionInfo>(arg0, arg1, arg2, arg3);
         }

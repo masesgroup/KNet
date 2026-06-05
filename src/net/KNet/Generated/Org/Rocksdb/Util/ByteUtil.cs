@@ -73,7 +73,7 @@ namespace Org.Rocksdb.Util
         /// <summary>
         /// HPA initializer for ByteUtil()
         /// </summary>
-        public static ByteUtil New()
+        public static ByteUtil Create()
         {
             return JVMBridgeBase.New<ByteUtil>();
         }

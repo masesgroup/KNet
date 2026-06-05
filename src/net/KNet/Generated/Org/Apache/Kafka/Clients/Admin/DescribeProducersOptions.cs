@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <summary>
         /// HPA initializer for DescribeProducersOptions()
         /// </summary>
-        public static DescribeProducersOptions New()
+        public static DescribeProducersOptions Create()
         {
             return JVMBridgeBase.New<DescribeProducersOptions>();
         }

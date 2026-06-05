@@ -76,7 +76,7 @@ namespace Org.Apache.Kafka.Streams.State
         /// <summary>
         /// HPA initializer for DslSessionParams(Java.Lang.String arg0, Java.Time.Duration arg1, Org.Apache.Kafka.Streams.Kstream.EmitStrategy arg2)
         /// </summary>
-        public static DslSessionParams New(Java.Lang.String arg0, Java.Time.Duration arg1, Org.Apache.Kafka.Streams.Kstream.EmitStrategy arg2)
+        public static DslSessionParams Create(Java.Lang.String arg0, Java.Time.Duration arg1, Org.Apache.Kafka.Streams.Kstream.EmitStrategy arg2)
         {
             return JVMBridgeBase.New<DslSessionParams>(arg0, arg1, arg2);
         }

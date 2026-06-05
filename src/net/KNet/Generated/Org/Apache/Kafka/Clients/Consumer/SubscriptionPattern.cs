@@ -74,7 +74,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
         /// <summary>
         /// HPA initializer for SubscriptionPattern(Java.Lang.String arg0)
         /// </summary>
-        public static SubscriptionPattern New(Java.Lang.String arg0)
+        public static SubscriptionPattern Create(Java.Lang.String arg0)
         {
             return JVMBridgeBase.New<SubscriptionPattern>(arg0);
         }

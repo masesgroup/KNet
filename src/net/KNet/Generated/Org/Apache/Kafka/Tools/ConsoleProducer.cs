@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Tools
         /// <summary>
         /// HPA initializer for ConsoleProducer()
         /// </summary>
-        public static ConsoleProducer New()
+        public static ConsoleProducer Create()
         {
             return JVMBridgeBase.New<ConsoleProducer>();
         }

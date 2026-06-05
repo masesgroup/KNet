@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Metadata
         /// <summary>
         /// HPA initializer for AssignmentsHelper()
         /// </summary>
-        public static AssignmentsHelper New()
+        public static AssignmentsHelper Create()
         {
             return JVMBridgeBase.New<AssignmentsHelper>();
         }

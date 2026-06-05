@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Streams.Processor
         /// <summary>
         /// HPA initializer for WallclockTimestampExtractor()
         /// </summary>
-        public static WallclockTimestampExtractor New()
+        public static WallclockTimestampExtractor Create()
         {
             return JVMBridgeBase.New<WallclockTimestampExtractor>();
         }

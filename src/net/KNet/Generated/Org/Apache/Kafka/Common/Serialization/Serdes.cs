@@ -619,7 +619,7 @@ namespace Org.Apache.Kafka.Common.Serialization
         /// <summary>
         /// HPA initializer for Serdes()
         /// </summary>
-        public static Serdes New()
+        public static Serdes Create()
         {
             return JVMBridgeBase.New<Serdes>();
         }
@@ -913,7 +913,7 @@ namespace Org.Apache.Kafka.Common.Serialization
             /// <summary>
             /// HPA initializer for BooleanSerde()
             /// </summary>
-            public static BooleanSerde New()
+            public static BooleanSerde Create()
             {
                 return JVMBridgeBase.New<BooleanSerde>();
             }
@@ -958,7 +958,7 @@ namespace Org.Apache.Kafka.Common.Serialization
             /// <summary>
             /// HPA initializer for ByteArraySerde()
             /// </summary>
-            public static ByteArraySerde New()
+            public static ByteArraySerde Create()
             {
                 return JVMBridgeBase.New<ByteArraySerde>();
             }
@@ -1003,7 +1003,7 @@ namespace Org.Apache.Kafka.Common.Serialization
             /// <summary>
             /// HPA initializer for ByteBufferSerde()
             /// </summary>
-            public static ByteBufferSerde New()
+            public static ByteBufferSerde Create()
             {
                 return JVMBridgeBase.New<ByteBufferSerde>();
             }
@@ -1048,7 +1048,7 @@ namespace Org.Apache.Kafka.Common.Serialization
             /// <summary>
             /// HPA initializer for BytesSerde()
             /// </summary>
-            public static BytesSerde New()
+            public static BytesSerde Create()
             {
                 return JVMBridgeBase.New<BytesSerde>();
             }
@@ -1093,7 +1093,7 @@ namespace Org.Apache.Kafka.Common.Serialization
             /// <summary>
             /// HPA initializer for DoubleSerde()
             /// </summary>
-            public static DoubleSerde New()
+            public static DoubleSerde Create()
             {
                 return JVMBridgeBase.New<DoubleSerde>();
             }
@@ -1138,7 +1138,7 @@ namespace Org.Apache.Kafka.Common.Serialization
             /// <summary>
             /// HPA initializer for FloatSerde()
             /// </summary>
-            public static FloatSerde New()
+            public static FloatSerde Create()
             {
                 return JVMBridgeBase.New<FloatSerde>();
             }
@@ -1183,7 +1183,7 @@ namespace Org.Apache.Kafka.Common.Serialization
             /// <summary>
             /// HPA initializer for IntegerSerde()
             /// </summary>
-            public static IntegerSerde New()
+            public static IntegerSerde Create()
             {
                 return JVMBridgeBase.New<IntegerSerde>();
             }
@@ -1230,7 +1230,7 @@ namespace Org.Apache.Kafka.Common.Serialization
             /// <summary>
             /// HPA initializer for ListSerde(Java.Lang.Class arg0, Org.Apache.Kafka.Common.Serialization.Serde arg1)
             /// </summary>
-            public static ListSerde New(Java.Lang.Class arg0, Org.Apache.Kafka.Common.Serialization.Serde arg1)
+            public static ListSerde Create(Java.Lang.Class arg0, Org.Apache.Kafka.Common.Serialization.Serde arg1)
             {
                 return JVMBridgeBase.New<ListSerde>(arg0, arg1);
             }
@@ -1244,7 +1244,7 @@ namespace Org.Apache.Kafka.Common.Serialization
             /// <summary>
             /// HPA initializer for ListSerde()
             /// </summary>
-            public static ListSerde New()
+            public static ListSerde Create()
             {
                 return JVMBridgeBase.New<ListSerde>();
             }
@@ -1291,7 +1291,7 @@ namespace Org.Apache.Kafka.Common.Serialization
             /// <summary>
             /// HPA initializer for ListSerde(Java.Lang.Class arg0, Org.Apache.Kafka.Common.Serialization.Serde%3CInner%3E arg1)
             /// </summary>
-            public static ListSerde<Inner> New(Java.Lang.Class arg0, Org.Apache.Kafka.Common.Serialization.Serde<Inner> arg1)
+            public static ListSerde<Inner> Create(Java.Lang.Class arg0, Org.Apache.Kafka.Common.Serialization.Serde<Inner> arg1)
             {
                 return JVMBridgeBase.New<ListSerde<Inner>>(arg0, arg1);
             }
@@ -1305,7 +1305,7 @@ namespace Org.Apache.Kafka.Common.Serialization
             /// <summary>
             /// HPA initializer for ListSerde()
             /// </summary>
-            public static ListSerde<Inner> New()
+            public static ListSerde<Inner> Create()
             {
                 return JVMBridgeBase.New<ListSerde<Inner>>();
             }
@@ -1354,7 +1354,7 @@ namespace Org.Apache.Kafka.Common.Serialization
             /// <summary>
             /// HPA initializer for LongSerde()
             /// </summary>
-            public static LongSerde New()
+            public static LongSerde Create()
             {
                 return JVMBridgeBase.New<LongSerde>();
             }
@@ -1399,7 +1399,7 @@ namespace Org.Apache.Kafka.Common.Serialization
             /// <summary>
             /// HPA initializer for ShortSerde()
             /// </summary>
-            public static ShortSerde New()
+            public static ShortSerde Create()
             {
                 return JVMBridgeBase.New<ShortSerde>();
             }
@@ -1444,7 +1444,7 @@ namespace Org.Apache.Kafka.Common.Serialization
             /// <summary>
             /// HPA initializer for StringSerde()
             /// </summary>
-            public static StringSerde New()
+            public static StringSerde Create()
             {
                 return JVMBridgeBase.New<StringSerde>();
             }
@@ -1489,7 +1489,7 @@ namespace Org.Apache.Kafka.Common.Serialization
             /// <summary>
             /// HPA initializer for UUIDSerde()
             /// </summary>
-            public static UUIDSerde New()
+            public static UUIDSerde Create()
             {
                 return JVMBridgeBase.New<UUIDSerde>();
             }
@@ -1534,7 +1534,7 @@ namespace Org.Apache.Kafka.Common.Serialization
             /// <summary>
             /// HPA initializer for VoidSerde()
             /// </summary>
-            public static VoidSerde New()
+            public static VoidSerde Create()
             {
                 return JVMBridgeBase.New<VoidSerde>();
             }
@@ -1581,7 +1581,7 @@ namespace Org.Apache.Kafka.Common.Serialization
             /// <summary>
             /// HPA initializer for WrapperSerde(Org.Apache.Kafka.Common.Serialization.Serializer arg0, Org.Apache.Kafka.Common.Serialization.Deserializer arg1)
             /// </summary>
-            public static WrapperSerde New(Org.Apache.Kafka.Common.Serialization.Serializer arg0, Org.Apache.Kafka.Common.Serialization.Deserializer arg1)
+            public static WrapperSerde Create(Org.Apache.Kafka.Common.Serialization.Serializer arg0, Org.Apache.Kafka.Common.Serialization.Deserializer arg1)
             {
                 return JVMBridgeBase.New<WrapperSerde>(arg0, arg1);
             }
@@ -1680,7 +1680,7 @@ namespace Org.Apache.Kafka.Common.Serialization
             /// <summary>
             /// HPA initializer for WrapperSerde(Org.Apache.Kafka.Common.Serialization.Serializer%3CT%3E arg0, Org.Apache.Kafka.Common.Serialization.Deserializer%3CT%3E arg1)
             /// </summary>
-            public static WrapperSerde<T> New(Org.Apache.Kafka.Common.Serialization.Serializer<T> arg0, Org.Apache.Kafka.Common.Serialization.Deserializer<T> arg1)
+            public static WrapperSerde<T> Create(Org.Apache.Kafka.Common.Serialization.Serializer<T> arg0, Org.Apache.Kafka.Common.Serialization.Deserializer<T> arg1)
             {
                 return JVMBridgeBase.New<WrapperSerde<T>>(arg0, arg1);
             }

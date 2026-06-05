@@ -73,7 +73,7 @@ namespace Org.Rocksdb
         /// <summary>
         /// HPA initializer for CompactionOptionsUniversal()
         /// </summary>
-        public static CompactionOptionsUniversal New()
+        public static CompactionOptionsUniversal Create()
         {
             return JVMBridgeBase.New<CompactionOptionsUniversal>();
         }

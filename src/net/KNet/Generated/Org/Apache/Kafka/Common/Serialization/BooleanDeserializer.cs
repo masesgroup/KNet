@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Common.Serialization
         /// <summary>
         /// HPA initializer for BooleanDeserializer()
         /// </summary>
-        public static BooleanDeserializer New()
+        public static BooleanDeserializer Create()
         {
             return JVMBridgeBase.New<BooleanDeserializer>();
         }

@@ -108,7 +108,7 @@ namespace Org.Apache.Kafka.Common.Security.Plain.Internals
         /// <summary>
         /// HPA initializer for PlainSaslServer(Javax.Security.Auth.Callback.CallbackHandler arg0)
         /// </summary>
-        public static PlainSaslServer New(Javax.Security.Auth.Callback.CallbackHandler arg0)
+        public static PlainSaslServer Create(Javax.Security.Auth.Callback.CallbackHandler arg0)
         {
             return JVMBridgeBase.New<PlainSaslServer>(arg0);
         }
@@ -220,7 +220,7 @@ namespace Org.Apache.Kafka.Common.Security.Plain.Internals
             /// <summary>
             /// HPA initializer for PlainSaslServerFactory()
             /// </summary>
-            public static PlainSaslServerFactory New()
+            public static PlainSaslServerFactory Create()
             {
                 return JVMBridgeBase.New<PlainSaslServerFactory>();
             }

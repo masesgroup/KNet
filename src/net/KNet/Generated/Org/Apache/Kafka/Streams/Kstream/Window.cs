@@ -76,7 +76,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <summary>
         /// HPA initializer for Window(long arg0, long arg1)
         /// </summary>
-        public static Window New(long arg0, long arg1)
+        public static Window Create(long arg0, long arg1)
         {
             return JVMBridgeBase.New<Window>(arg0, arg1);
         }

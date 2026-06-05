@@ -74,7 +74,7 @@ namespace Org.Apache.Kafka.Connect.Converters
         /// <summary>
         /// HPA initializer for NumberConverterConfig(Java.Util.Map%3CJava.Lang.String, object%3E arg0)
         /// </summary>
-        public static NumberConverterConfig New(Java.Util.Map<Java.Lang.String, object> arg0)
+        public static NumberConverterConfig Create(Java.Util.Map<Java.Lang.String, object> arg0)
         {
             return JVMBridgeBase.New<NumberConverterConfig>(arg0);
         }

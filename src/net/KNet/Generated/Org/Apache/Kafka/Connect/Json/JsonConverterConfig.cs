@@ -74,7 +74,7 @@ namespace Org.Apache.Kafka.Connect.Json
         /// <summary>
         /// HPA initializer for JsonConverterConfig(Java.Util.Map%3CJava.Lang.String, object%3E arg0)
         /// </summary>
-        public static JsonConverterConfig New(Java.Util.Map<Java.Lang.String, object> arg0)
+        public static JsonConverterConfig Create(Java.Util.Map<Java.Lang.String, object> arg0)
         {
             return JVMBridgeBase.New<JsonConverterConfig>(arg0);
         }

@@ -109,7 +109,7 @@ namespace Org.Rocksdb
         /// <summary>
         /// HPA initializer for KeyMayExist(Org.Rocksdb.KeyMayExist.KeyMayExistEnum arg0, int arg1)
         /// </summary>
-        public static KeyMayExist New(Org.Rocksdb.KeyMayExist.KeyMayExistEnum arg0, int arg1)
+        public static KeyMayExist Create(Org.Rocksdb.KeyMayExist.KeyMayExistEnum arg0, int arg1)
         {
             return JVMBridgeBase.New<KeyMayExist>(arg0, arg1);
         }

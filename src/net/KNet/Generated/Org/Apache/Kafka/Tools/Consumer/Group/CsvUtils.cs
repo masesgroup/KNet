@@ -141,7 +141,7 @@ namespace Org.Apache.Kafka.Tools.Consumer.Group
         /// <summary>
         /// HPA initializer for CsvUtils()
         /// </summary>
-        public static CsvUtils New()
+        public static CsvUtils Create()
         {
             return JVMBridgeBase.New<CsvUtils>();
         }
@@ -179,7 +179,7 @@ namespace Org.Apache.Kafka.Tools.Consumer.Group
             /// <summary>
             /// HPA initializer for CsvRecordNoGroup()
             /// </summary>
-            public static CsvRecordNoGroup New()
+            public static CsvRecordNoGroup Create()
             {
                 return JVMBridgeBase.New<CsvRecordNoGroup>();
             }
@@ -196,7 +196,7 @@ namespace Org.Apache.Kafka.Tools.Consumer.Group
             /// <summary>
             /// HPA initializer for CsvRecordNoGroup(Java.Lang.String arg0, int arg1, long arg2)
             /// </summary>
-            public static CsvRecordNoGroup New(Java.Lang.String arg0, int arg1, long arg2)
+            public static CsvRecordNoGroup Create(Java.Lang.String arg0, int arg1, long arg2)
             {
                 return JVMBridgeBase.New<CsvRecordNoGroup>(arg0, arg1, arg2);
             }
@@ -266,7 +266,7 @@ namespace Org.Apache.Kafka.Tools.Consumer.Group
             /// <summary>
             /// HPA initializer for CsvRecordWithGroup()
             /// </summary>
-            public static CsvRecordWithGroup New()
+            public static CsvRecordWithGroup Create()
             {
                 return JVMBridgeBase.New<CsvRecordWithGroup>();
             }
@@ -284,7 +284,7 @@ namespace Org.Apache.Kafka.Tools.Consumer.Group
             /// <summary>
             /// HPA initializer for CsvRecordWithGroup(Java.Lang.String arg0, Java.Lang.String arg1, int arg2, long arg3)
             /// </summary>
-            public static CsvRecordWithGroup New(Java.Lang.String arg0, Java.Lang.String arg1, int arg2, long arg3)
+            public static CsvRecordWithGroup Create(Java.Lang.String arg0, Java.Lang.String arg1, int arg2, long arg3)
             {
                 return JVMBridgeBase.New<CsvRecordWithGroup>(arg0, arg1, arg2, arg3);
             }

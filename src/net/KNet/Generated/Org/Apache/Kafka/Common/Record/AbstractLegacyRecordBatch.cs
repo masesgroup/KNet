@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Common.Record
         /// <summary>
         /// HPA initializer for AbstractLegacyRecordBatch()
         /// </summary>
-        public static AbstractLegacyRecordBatch New()
+        public static AbstractLegacyRecordBatch Create()
         {
             return JVMBridgeBase.New<AbstractLegacyRecordBatch>();
         }

@@ -76,7 +76,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
         /// <summary>
         /// HPA initializer for OffsetAndTimestamp(long arg0, long arg1, Java.Util.Optional%3CJava.Lang.Integer%3E arg2)
         /// </summary>
-        public static OffsetAndTimestamp New(long arg0, long arg1, Java.Util.Optional<Java.Lang.Integer> arg2)
+        public static OffsetAndTimestamp Create(long arg0, long arg1, Java.Util.Optional<Java.Lang.Integer> arg2)
         {
             return JVMBridgeBase.New<OffsetAndTimestamp>(arg0, arg1, arg2);
         }
@@ -92,7 +92,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
         /// <summary>
         /// HPA initializer for OffsetAndTimestamp(long arg0, long arg1)
         /// </summary>
-        public static OffsetAndTimestamp New(long arg0, long arg1)
+        public static OffsetAndTimestamp Create(long arg0, long arg1)
         {
             return JVMBridgeBase.New<OffsetAndTimestamp>(arg0, arg1);
         }

@@ -75,7 +75,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <summary>
         /// HPA initializer for SupportedVersionRange(short arg0, short arg1)
         /// </summary>
-        public static SupportedVersionRange New(short arg0, short arg1)
+        public static SupportedVersionRange Create(short arg0, short arg1)
         {
             return JVMBridgeBase.New<SupportedVersionRange>(arg0, arg1);
         }

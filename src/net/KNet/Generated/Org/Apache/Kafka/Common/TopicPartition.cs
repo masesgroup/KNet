@@ -75,7 +75,7 @@ namespace Org.Apache.Kafka.Common
         /// <summary>
         /// HPA initializer for TopicPartition(Java.Lang.String arg0, int arg1)
         /// </summary>
-        public static TopicPartition New(Java.Lang.String arg0, int arg1)
+        public static TopicPartition Create(Java.Lang.String arg0, int arg1)
         {
             return JVMBridgeBase.New<TopicPartition>(arg0, arg1);
         }

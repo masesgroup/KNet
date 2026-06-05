@@ -79,7 +79,7 @@ namespace Org.Apache.Kafka.Common.Security.Token.Delegation
         /// <summary>
         /// HPA initializer for TokenInformation(Java.Lang.String arg0, Org.Apache.Kafka.Common.Security.Auth.KafkaPrincipal arg1, Java.Util.Collection%3COrg.Apache.Kafka.Common.Security.Auth.KafkaPrincipal%3E arg2, long arg3, long arg4, long arg5)
         /// </summary>
-        public static TokenInformation New(Java.Lang.String arg0, Org.Apache.Kafka.Common.Security.Auth.KafkaPrincipal arg1, Java.Util.Collection<Org.Apache.Kafka.Common.Security.Auth.KafkaPrincipal> arg2, long arg3, long arg4, long arg5)
+        public static TokenInformation Create(Java.Lang.String arg0, Org.Apache.Kafka.Common.Security.Auth.KafkaPrincipal arg1, Java.Util.Collection<Org.Apache.Kafka.Common.Security.Auth.KafkaPrincipal> arg2, long arg3, long arg4, long arg5)
         {
             return JVMBridgeBase.New<TokenInformation>(arg0, arg1, arg2, arg3, arg4, arg5);
         }
@@ -100,7 +100,7 @@ namespace Org.Apache.Kafka.Common.Security.Token.Delegation
         /// <summary>
         /// HPA initializer for TokenInformation(Java.Lang.String arg0, Org.Apache.Kafka.Common.Security.Auth.KafkaPrincipal arg1, Org.Apache.Kafka.Common.Security.Auth.KafkaPrincipal arg2, Java.Util.Collection%3COrg.Apache.Kafka.Common.Security.Auth.KafkaPrincipal%3E arg3, long arg4, long arg5, long arg6)
         /// </summary>
-        public static TokenInformation New(Java.Lang.String arg0, Org.Apache.Kafka.Common.Security.Auth.KafkaPrincipal arg1, Org.Apache.Kafka.Common.Security.Auth.KafkaPrincipal arg2, Java.Util.Collection<Org.Apache.Kafka.Common.Security.Auth.KafkaPrincipal> arg3, long arg4, long arg5, long arg6)
+        public static TokenInformation Create(Java.Lang.String arg0, Org.Apache.Kafka.Common.Security.Auth.KafkaPrincipal arg1, Org.Apache.Kafka.Common.Security.Auth.KafkaPrincipal arg2, Java.Util.Collection<Org.Apache.Kafka.Common.Security.Auth.KafkaPrincipal> arg3, long arg4, long arg5, long arg6)
         {
             return JVMBridgeBase.New<TokenInformation>(arg0, arg1, arg2, arg3, arg4, arg5, arg6);
         }

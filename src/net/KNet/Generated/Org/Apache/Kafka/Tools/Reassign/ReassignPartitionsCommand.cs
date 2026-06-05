@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Tools.Reassign
         /// <summary>
         /// HPA initializer for ReassignPartitionsCommand()
         /// </summary>
-        public static ReassignPartitionsCommand New()
+        public static ReassignPartitionsCommand Create()
         {
             return JVMBridgeBase.New<ReassignPartitionsCommand>();
         }

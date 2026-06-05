@@ -75,7 +75,7 @@ namespace Org.Apache.Kafka.Tools.Consumer
         /// <summary>
         /// HPA initializer for ConsoleShareConsumerOptions(Java.Lang.String[] arg0)
         /// </summary>
-        public static ConsoleShareConsumerOptions New(Java.Lang.String[] arg0)
+        public static ConsoleShareConsumerOptions Create(Java.Lang.String[] arg0)
         {
             return JVMBridgeBase.New<ConsoleShareConsumerOptions>(arg0);
         }

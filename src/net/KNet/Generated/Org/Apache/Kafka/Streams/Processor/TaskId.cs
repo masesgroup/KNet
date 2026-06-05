@@ -76,7 +76,7 @@ namespace Org.Apache.Kafka.Streams.Processor
         /// <summary>
         /// HPA initializer for TaskId(int arg0, int arg1, Java.Lang.String arg2)
         /// </summary>
-        public static TaskId New(int arg0, int arg1, Java.Lang.String arg2)
+        public static TaskId Create(int arg0, int arg1, Java.Lang.String arg2)
         {
             return JVMBridgeBase.New<TaskId>(arg0, arg1, arg2);
         }
@@ -92,7 +92,7 @@ namespace Org.Apache.Kafka.Streams.Processor
         /// <summary>
         /// HPA initializer for TaskId(int arg0, int arg1)
         /// </summary>
-        public static TaskId New(int arg0, int arg1)
+        public static TaskId Create(int arg0, int arg1)
         {
             return JVMBridgeBase.New<TaskId>(arg0, arg1);
         }

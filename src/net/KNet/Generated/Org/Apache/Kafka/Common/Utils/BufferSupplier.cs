@@ -107,7 +107,7 @@ namespace Org.Apache.Kafka.Common.Utils
         /// <summary>
         /// HPA initializer for BufferSupplier()
         /// </summary>
-        public static BufferSupplier New()
+        public static BufferSupplier Create()
         {
             return JVMBridgeBase.New<BufferSupplier>();
         }
@@ -181,7 +181,7 @@ namespace Org.Apache.Kafka.Common.Utils
             /// <summary>
             /// HPA initializer for GrowableBufferSupplier()
             /// </summary>
-            public static GrowableBufferSupplier New()
+            public static GrowableBufferSupplier Create()
             {
                 return JVMBridgeBase.New<GrowableBufferSupplier>();
             }

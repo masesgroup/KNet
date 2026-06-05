@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Common.Metrics.Stats
         /// <summary>
         /// HPA initializer for Rate()
         /// </summary>
-        public static Rate New()
+        public static Rate Create()
         {
             return JVMBridgeBase.New<Rate>();
         }
@@ -90,7 +90,7 @@ namespace Org.Apache.Kafka.Common.Metrics.Stats
         /// <summary>
         /// HPA initializer for Rate(Java.Util.Concurrent.TimeUnit arg0, Org.Apache.Kafka.Common.Metrics.Stats.SampledStat arg1, long arg2)
         /// </summary>
-        public static Rate New(Java.Util.Concurrent.TimeUnit arg0, Org.Apache.Kafka.Common.Metrics.Stats.SampledStat arg1, long arg2)
+        public static Rate Create(Java.Util.Concurrent.TimeUnit arg0, Org.Apache.Kafka.Common.Metrics.Stats.SampledStat arg1, long arg2)
         {
             return JVMBridgeBase.New<Rate>(arg0, arg1, arg2);
         }
@@ -106,7 +106,7 @@ namespace Org.Apache.Kafka.Common.Metrics.Stats
         /// <summary>
         /// HPA initializer for Rate(Java.Util.Concurrent.TimeUnit arg0, Org.Apache.Kafka.Common.Metrics.Stats.SampledStat arg1)
         /// </summary>
-        public static Rate New(Java.Util.Concurrent.TimeUnit arg0, Org.Apache.Kafka.Common.Metrics.Stats.SampledStat arg1)
+        public static Rate Create(Java.Util.Concurrent.TimeUnit arg0, Org.Apache.Kafka.Common.Metrics.Stats.SampledStat arg1)
         {
             return JVMBridgeBase.New<Rate>(arg0, arg1);
         }
@@ -121,7 +121,7 @@ namespace Org.Apache.Kafka.Common.Metrics.Stats
         /// <summary>
         /// HPA initializer for Rate(Java.Util.Concurrent.TimeUnit arg0)
         /// </summary>
-        public static Rate New(Java.Util.Concurrent.TimeUnit arg0)
+        public static Rate Create(Java.Util.Concurrent.TimeUnit arg0)
         {
             return JVMBridgeBase.New<Rate>(arg0);
         }
@@ -136,7 +136,7 @@ namespace Org.Apache.Kafka.Common.Metrics.Stats
         /// <summary>
         /// HPA initializer for Rate(Org.Apache.Kafka.Common.Metrics.Stats.SampledStat arg0)
         /// </summary>
-        public static Rate New(Org.Apache.Kafka.Common.Metrics.Stats.SampledStat arg0)
+        public static Rate Create(Org.Apache.Kafka.Common.Metrics.Stats.SampledStat arg0)
         {
             return JVMBridgeBase.New<Rate>(arg0);
         }

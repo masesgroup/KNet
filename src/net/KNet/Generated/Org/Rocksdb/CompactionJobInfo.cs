@@ -73,7 +73,7 @@ namespace Org.Rocksdb
         /// <summary>
         /// HPA initializer for CompactionJobInfo()
         /// </summary>
-        public static CompactionJobInfo New()
+        public static CompactionJobInfo Create()
         {
             return JVMBridgeBase.New<CompactionJobInfo>();
         }

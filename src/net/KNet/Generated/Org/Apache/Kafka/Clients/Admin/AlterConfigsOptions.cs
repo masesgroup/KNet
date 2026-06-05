@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <summary>
         /// HPA initializer for AlterConfigsOptions()
         /// </summary>
-        public static AlterConfigsOptions New()
+        public static AlterConfigsOptions Create()
         {
             return JVMBridgeBase.New<AlterConfigsOptions>();
         }

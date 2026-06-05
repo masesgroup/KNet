@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Connect.Mirror.Formatters
         /// <summary>
         /// HPA initializer for HeartbeatFormatter()
         /// </summary>
-        public static HeartbeatFormatter New()
+        public static HeartbeatFormatter Create()
         {
             return JVMBridgeBase.New<HeartbeatFormatter>();
         }

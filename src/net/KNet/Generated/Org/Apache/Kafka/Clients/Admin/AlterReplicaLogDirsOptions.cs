@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <summary>
         /// HPA initializer for AlterReplicaLogDirsOptions()
         /// </summary>
-        public static AlterReplicaLogDirsOptions New()
+        public static AlterReplicaLogDirsOptions Create()
         {
             return JVMBridgeBase.New<AlterReplicaLogDirsOptions>();
         }

@@ -108,7 +108,7 @@ namespace Org.Apache.Kafka.Connect.Transforms
         /// <summary>
         /// HPA initializer for TimestampRouter()
         /// </summary>
-        public static TimestampRouter New()
+        public static TimestampRouter Create()
         {
             return JVMBridgeBase.New<TimestampRouter>();
         }
@@ -213,7 +213,7 @@ namespace Org.Apache.Kafka.Connect.Transforms
         /// <summary>
         /// HPA initializer for TimestampRouter()
         /// </summary>
-        public static TimestampRouter<R> New()
+        public static TimestampRouter<R> Create()
         {
             return JVMBridgeBase.New<TimestampRouter<R>>();
         }

@@ -75,7 +75,7 @@ namespace Org.Apache.Kafka.Common.Security.Auth
         /// <summary>
         /// HPA initializer for PlaintextAuthenticationContext(Java.Net.InetAddress arg0, Java.Lang.String arg1)
         /// </summary>
-        public static PlaintextAuthenticationContext New(Java.Net.InetAddress arg0, Java.Lang.String arg1)
+        public static PlaintextAuthenticationContext Create(Java.Net.InetAddress arg0, Java.Lang.String arg1)
         {
             return JVMBridgeBase.New<PlaintextAuthenticationContext>(arg0, arg1);
         }

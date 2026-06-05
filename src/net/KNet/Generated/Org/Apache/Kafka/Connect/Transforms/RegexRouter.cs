@@ -108,7 +108,7 @@ namespace Org.Apache.Kafka.Connect.Transforms
         /// <summary>
         /// HPA initializer for RegexRouter()
         /// </summary>
-        public static RegexRouter New()
+        public static RegexRouter Create()
         {
             return JVMBridgeBase.New<RegexRouter>();
         }
@@ -209,7 +209,7 @@ namespace Org.Apache.Kafka.Connect.Transforms
         /// <summary>
         /// HPA initializer for RegexRouter()
         /// </summary>
-        public static RegexRouter<R> New()
+        public static RegexRouter<R> Create()
         {
             return JVMBridgeBase.New<RegexRouter<R>>();
         }

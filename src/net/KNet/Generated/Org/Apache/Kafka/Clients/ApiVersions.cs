@@ -107,7 +107,7 @@ namespace Org.Apache.Kafka.Clients
         /// <summary>
         /// HPA initializer for ApiVersions()
         /// </summary>
-        public static ApiVersions New()
+        public static ApiVersions Create()
         {
             return JVMBridgeBase.New<ApiVersions>();
         }

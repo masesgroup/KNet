@@ -76,7 +76,7 @@ namespace Org.Apache.Kafka.Common
         /// <summary>
         /// HPA initializer for TopicIdPartition(Org.Apache.Kafka.Common.Uuid arg0, int arg1, Java.Lang.String arg2)
         /// </summary>
-        public static TopicIdPartition New(Org.Apache.Kafka.Common.Uuid arg0, int arg1, Java.Lang.String arg2)
+        public static TopicIdPartition Create(Org.Apache.Kafka.Common.Uuid arg0, int arg1, Java.Lang.String arg2)
         {
             return JVMBridgeBase.New<TopicIdPartition>(arg0, arg1, arg2);
         }
@@ -92,7 +92,7 @@ namespace Org.Apache.Kafka.Common
         /// <summary>
         /// HPA initializer for TopicIdPartition(Org.Apache.Kafka.Common.Uuid arg0, Org.Apache.Kafka.Common.TopicPartition arg1)
         /// </summary>
-        public static TopicIdPartition New(Org.Apache.Kafka.Common.Uuid arg0, Org.Apache.Kafka.Common.TopicPartition arg1)
+        public static TopicIdPartition Create(Org.Apache.Kafka.Common.Uuid arg0, Org.Apache.Kafka.Common.TopicPartition arg1)
         {
             return JVMBridgeBase.New<TopicIdPartition>(arg0, arg1);
         }

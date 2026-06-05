@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
         /// <summary>
         /// HPA initializer for DefaultConfigPropertyFilter()
         /// </summary>
-        public static DefaultConfigPropertyFilter New()
+        public static DefaultConfigPropertyFilter Create()
         {
             return JVMBridgeBase.New<DefaultConfigPropertyFilter>();
         }

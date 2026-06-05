@@ -75,7 +75,7 @@ namespace Org.Apache.Kafka.Common
         /// <summary>
         /// HPA initializer for Uuid(long arg0, long arg1)
         /// </summary>
-        public static Uuid New(long arg0, long arg1)
+        public static Uuid Create(long arg0, long arg1)
         {
             return JVMBridgeBase.New<Uuid>(arg0, arg1);
         }

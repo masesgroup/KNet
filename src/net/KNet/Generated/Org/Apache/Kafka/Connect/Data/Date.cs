@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Connect.Data
         /// <summary>
         /// HPA initializer for Date()
         /// </summary>
-        public static Date New()
+        public static Date Create()
         {
             return JVMBridgeBase.New<Date>();
         }

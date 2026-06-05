@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <summary>
         /// HPA initializer for UpdateFeaturesOptions()
         /// </summary>
-        public static UpdateFeaturesOptions New()
+        public static UpdateFeaturesOptions Create()
         {
             return JVMBridgeBase.New<UpdateFeaturesOptions>();
         }

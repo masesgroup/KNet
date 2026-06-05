@@ -86,7 +86,7 @@ namespace Org.Apache.Kafka.Connect.Sink
         /// <summary>
         /// HPA initializer for SinkRecord(Java.Lang.String arg0, int arg1, Org.Apache.Kafka.Connect.Data.Schema arg2, object arg3, Org.Apache.Kafka.Connect.Data.Schema arg4, object arg5, long arg6, Java.Lang.Long arg7, Org.Apache.Kafka.Common.Record.TimestampType arg8, Java.Lang.Iterable%3COrg.Apache.Kafka.Connect.Header.Header%3E arg9, Java.Lang.String arg10, Java.Lang.Integer arg11, long arg12)
         /// </summary>
-        public static SinkRecord New(Java.Lang.String arg0, int arg1, Org.Apache.Kafka.Connect.Data.Schema arg2, object arg3, Org.Apache.Kafka.Connect.Data.Schema arg4, object arg5, long arg6, Java.Lang.Long arg7, Org.Apache.Kafka.Common.Record.TimestampType arg8, Java.Lang.Iterable<Org.Apache.Kafka.Connect.Header.Header> arg9, Java.Lang.String arg10, Java.Lang.Integer arg11, long arg12)
+        public static SinkRecord Create(Java.Lang.String arg0, int arg1, Org.Apache.Kafka.Connect.Data.Schema arg2, object arg3, Org.Apache.Kafka.Connect.Data.Schema arg4, object arg5, long arg6, Java.Lang.Long arg7, Org.Apache.Kafka.Common.Record.TimestampType arg8, Java.Lang.Iterable<Org.Apache.Kafka.Connect.Header.Header> arg9, Java.Lang.String arg10, Java.Lang.Integer arg11, long arg12)
         {
             return JVMBridgeBase.New<SinkRecord>(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12);
         }
@@ -110,7 +110,7 @@ namespace Org.Apache.Kafka.Connect.Sink
         /// <summary>
         /// HPA initializer for SinkRecord(Java.Lang.String arg0, int arg1, Org.Apache.Kafka.Connect.Data.Schema arg2, object arg3, Org.Apache.Kafka.Connect.Data.Schema arg4, object arg5, long arg6, Java.Lang.Long arg7, Org.Apache.Kafka.Common.Record.TimestampType arg8, Java.Lang.Iterable%3COrg.Apache.Kafka.Connect.Header.Header%3E arg9)
         /// </summary>
-        public static SinkRecord New(Java.Lang.String arg0, int arg1, Org.Apache.Kafka.Connect.Data.Schema arg2, object arg3, Org.Apache.Kafka.Connect.Data.Schema arg4, object arg5, long arg6, Java.Lang.Long arg7, Org.Apache.Kafka.Common.Record.TimestampType arg8, Java.Lang.Iterable<Org.Apache.Kafka.Connect.Header.Header> arg9)
+        public static SinkRecord Create(Java.Lang.String arg0, int arg1, Org.Apache.Kafka.Connect.Data.Schema arg2, object arg3, Org.Apache.Kafka.Connect.Data.Schema arg4, object arg5, long arg6, Java.Lang.Long arg7, Org.Apache.Kafka.Common.Record.TimestampType arg8, Java.Lang.Iterable<Org.Apache.Kafka.Connect.Header.Header> arg9)
         {
             return JVMBridgeBase.New<SinkRecord>(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9);
         }
@@ -133,7 +133,7 @@ namespace Org.Apache.Kafka.Connect.Sink
         /// <summary>
         /// HPA initializer for SinkRecord(Java.Lang.String arg0, int arg1, Org.Apache.Kafka.Connect.Data.Schema arg2, object arg3, Org.Apache.Kafka.Connect.Data.Schema arg4, object arg5, long arg6, Java.Lang.Long arg7, Org.Apache.Kafka.Common.Record.TimestampType arg8)
         /// </summary>
-        public static SinkRecord New(Java.Lang.String arg0, int arg1, Org.Apache.Kafka.Connect.Data.Schema arg2, object arg3, Org.Apache.Kafka.Connect.Data.Schema arg4, object arg5, long arg6, Java.Lang.Long arg7, Org.Apache.Kafka.Common.Record.TimestampType arg8)
+        public static SinkRecord Create(Java.Lang.String arg0, int arg1, Org.Apache.Kafka.Connect.Data.Schema arg2, object arg3, Org.Apache.Kafka.Connect.Data.Schema arg4, object arg5, long arg6, Java.Lang.Long arg7, Org.Apache.Kafka.Common.Record.TimestampType arg8)
         {
             return JVMBridgeBase.New<SinkRecord>(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
         }
@@ -154,7 +154,7 @@ namespace Org.Apache.Kafka.Connect.Sink
         /// <summary>
         /// HPA initializer for SinkRecord(Java.Lang.String arg0, int arg1, Org.Apache.Kafka.Connect.Data.Schema arg2, object arg3, Org.Apache.Kafka.Connect.Data.Schema arg4, object arg5, long arg6)
         /// </summary>
-        public static SinkRecord New(Java.Lang.String arg0, int arg1, Org.Apache.Kafka.Connect.Data.Schema arg2, object arg3, Org.Apache.Kafka.Connect.Data.Schema arg4, object arg5, long arg6)
+        public static SinkRecord Create(Java.Lang.String arg0, int arg1, Org.Apache.Kafka.Connect.Data.Schema arg2, object arg3, Org.Apache.Kafka.Connect.Data.Schema arg4, object arg5, long arg6)
         {
             return JVMBridgeBase.New<SinkRecord>(arg0, arg1, arg2, arg3, arg4, arg5, arg6);
         }

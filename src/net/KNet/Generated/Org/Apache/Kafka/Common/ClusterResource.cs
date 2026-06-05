@@ -74,7 +74,7 @@ namespace Org.Apache.Kafka.Common
         /// <summary>
         /// HPA initializer for ClusterResource(Java.Lang.String arg0)
         /// </summary>
-        public static ClusterResource New(Java.Lang.String arg0)
+        public static ClusterResource Create(Java.Lang.String arg0)
         {
             return JVMBridgeBase.New<ClusterResource>(arg0);
         }

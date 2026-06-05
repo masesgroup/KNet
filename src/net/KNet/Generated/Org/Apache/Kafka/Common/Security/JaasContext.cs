@@ -111,7 +111,7 @@ namespace Org.Apache.Kafka.Common.Security
         /// <summary>
         /// HPA initializer for JaasContext(Java.Lang.String arg0, Org.Apache.Kafka.Common.Security.JaasContext.Type arg1, Javax.Security.Auth.Login.Configuration arg2, Org.Apache.Kafka.Common.Config.Types.Password arg3)
         /// </summary>
-        public static JaasContext New(Java.Lang.String arg0, Org.Apache.Kafka.Common.Security.JaasContext.Type arg1, Javax.Security.Auth.Login.Configuration arg2, Org.Apache.Kafka.Common.Config.Types.Password arg3)
+        public static JaasContext Create(Java.Lang.String arg0, Org.Apache.Kafka.Common.Security.JaasContext.Type arg1, Javax.Security.Auth.Login.Configuration arg2, Org.Apache.Kafka.Common.Config.Types.Password arg3)
         {
             return JVMBridgeBase.New<JaasContext>(arg0, arg1, arg2, arg3);
         }

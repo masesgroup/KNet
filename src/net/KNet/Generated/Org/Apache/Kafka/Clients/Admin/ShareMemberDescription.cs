@@ -79,7 +79,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <summary>
         /// HPA initializer for ShareMemberDescription(Java.Lang.String arg0, Java.Util.Optional%3CJava.Lang.String%3E arg1, Java.Lang.String arg2, Java.Lang.String arg3, Org.Apache.Kafka.Clients.Admin.ShareMemberAssignment arg4, int arg5)
         /// </summary>
-        public static ShareMemberDescription New(Java.Lang.String arg0, Java.Util.Optional<Java.Lang.String> arg1, Java.Lang.String arg2, Java.Lang.String arg3, Org.Apache.Kafka.Clients.Admin.ShareMemberAssignment arg4, int arg5)
+        public static ShareMemberDescription Create(Java.Lang.String arg0, Java.Util.Optional<Java.Lang.String> arg1, Java.Lang.String arg2, Java.Lang.String arg3, Org.Apache.Kafka.Clients.Admin.ShareMemberAssignment arg4, int arg5)
         {
             return JVMBridgeBase.New<ShareMemberDescription>(arg0, arg1, arg2, arg3, arg4, arg5);
         }

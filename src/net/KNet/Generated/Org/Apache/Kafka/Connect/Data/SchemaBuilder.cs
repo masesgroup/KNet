@@ -74,7 +74,7 @@ namespace Org.Apache.Kafka.Connect.Data
         /// <summary>
         /// HPA initializer for SchemaBuilder(Org.Apache.Kafka.Connect.Data.Schema.Type arg0)
         /// </summary>
-        public static SchemaBuilder New(Org.Apache.Kafka.Connect.Data.Schema.Type arg0)
+        public static SchemaBuilder Create(Org.Apache.Kafka.Connect.Data.Schema.Type arg0)
         {
             return JVMBridgeBase.New<SchemaBuilder>(arg0);
         }

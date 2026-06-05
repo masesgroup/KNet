@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Tools
         /// <summary>
         /// HPA initializer for ShareConsumerPerformance()
         /// </summary>
-        public static ShareConsumerPerformance New()
+        public static ShareConsumerPerformance Create()
         {
             return JVMBridgeBase.New<ShareConsumerPerformance>();
         }

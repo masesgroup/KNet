@@ -143,7 +143,7 @@ namespace Org.Apache.Kafka.Tools
         /// <summary>
         /// HPA initializer for ManifestWorkspace(Java.Io.PrintStream arg0)
         /// </summary>
-        public static ManifestWorkspace New(Java.Io.PrintStream arg0)
+        public static ManifestWorkspace Create(Java.Io.PrintStream arg0)
         {
             return JVMBridgeBase.New<ManifestWorkspace>(arg0);
         }

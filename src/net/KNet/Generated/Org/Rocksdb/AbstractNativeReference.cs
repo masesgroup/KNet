@@ -73,7 +73,7 @@ namespace Org.Rocksdb
         /// <summary>
         /// HPA initializer for AbstractNativeReference()
         /// </summary>
-        public static AbstractNativeReference New()
+        public static AbstractNativeReference Create()
         {
             return JVMBridgeBase.New<AbstractNativeReference>();
         }

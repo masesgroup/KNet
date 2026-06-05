@@ -79,7 +79,7 @@ namespace Org.Apache.Kafka.Clients.Producer
         /// <summary>
         /// HPA initializer for RecordMetadata(Org.Apache.Kafka.Common.TopicPartition arg0, long arg1, int arg2, long arg3, int arg4, int arg5)
         /// </summary>
-        public static RecordMetadata New(Org.Apache.Kafka.Common.TopicPartition arg0, long arg1, int arg2, long arg3, int arg4, int arg5)
+        public static RecordMetadata Create(Org.Apache.Kafka.Common.TopicPartition arg0, long arg1, int arg2, long arg3, int arg4, int arg5)
         {
             return JVMBridgeBase.New<RecordMetadata>(arg0, arg1, arg2, arg3, arg4, arg5);
         }

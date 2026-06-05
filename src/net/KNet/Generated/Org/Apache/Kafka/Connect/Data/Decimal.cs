@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Connect.Data
         /// <summary>
         /// HPA initializer for Decimal()
         /// </summary>
-        public static Decimal New()
+        public static Decimal Create()
         {
             return JVMBridgeBase.New<Decimal>();
         }

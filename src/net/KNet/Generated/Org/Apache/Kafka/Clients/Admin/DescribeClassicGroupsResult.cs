@@ -74,7 +74,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <summary>
         /// HPA initializer for DescribeClassicGroupsResult(Java.Util.Map%3CJava.Lang.String, Org.Apache.Kafka.Common.KafkaFuture%3COrg.Apache.Kafka.Clients.Admin.ClassicGroupDescription%3E%3E arg0)
         /// </summary>
-        public static DescribeClassicGroupsResult New(Java.Util.Map<Java.Lang.String, Org.Apache.Kafka.Common.KafkaFuture<Org.Apache.Kafka.Clients.Admin.ClassicGroupDescription>> arg0)
+        public static DescribeClassicGroupsResult Create(Java.Util.Map<Java.Lang.String, Org.Apache.Kafka.Common.KafkaFuture<Org.Apache.Kafka.Clients.Admin.ClassicGroupDescription>> arg0)
         {
             return JVMBridgeBase.New<DescribeClassicGroupsResult>(arg0);
         }

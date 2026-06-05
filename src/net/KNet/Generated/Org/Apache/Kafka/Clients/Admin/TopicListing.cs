@@ -76,7 +76,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <summary>
         /// HPA initializer for TopicListing(Java.Lang.String arg0, Org.Apache.Kafka.Common.Uuid arg1, bool arg2)
         /// </summary>
-        public static TopicListing New(Java.Lang.String arg0, Org.Apache.Kafka.Common.Uuid arg1, bool arg2)
+        public static TopicListing Create(Java.Lang.String arg0, Org.Apache.Kafka.Common.Uuid arg1, bool arg2)
         {
             return JVMBridgeBase.New<TopicListing>(arg0, arg1, arg2);
         }

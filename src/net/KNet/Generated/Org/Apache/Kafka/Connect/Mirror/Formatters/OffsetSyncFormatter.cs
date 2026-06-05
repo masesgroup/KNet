@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Connect.Mirror.Formatters
         /// <summary>
         /// HPA initializer for OffsetSyncFormatter()
         /// </summary>
-        public static OffsetSyncFormatter New()
+        public static OffsetSyncFormatter Create()
         {
             return JVMBridgeBase.New<OffsetSyncFormatter>();
         }

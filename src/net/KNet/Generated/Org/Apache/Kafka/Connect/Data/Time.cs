@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Connect.Data
         /// <summary>
         /// HPA initializer for Time()
         /// </summary>
-        public static Time New()
+        public static Time Create()
         {
             return JVMBridgeBase.New<Time>();
         }

@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Connect.Sink
         /// <summary>
         /// HPA initializer for SinkTask()
         /// </summary>
-        public static SinkTask New()
+        public static SinkTask Create()
         {
             return JVMBridgeBase.New<SinkTask>();
         }

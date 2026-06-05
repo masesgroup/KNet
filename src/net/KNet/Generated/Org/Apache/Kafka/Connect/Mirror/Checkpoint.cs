@@ -78,7 +78,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
         /// <summary>
         /// HPA initializer for Checkpoint(Java.Lang.String arg0, Org.Apache.Kafka.Common.TopicPartition arg1, long arg2, long arg3, Java.Lang.String arg4)
         /// </summary>
-        public static Checkpoint New(Java.Lang.String arg0, Org.Apache.Kafka.Common.TopicPartition arg1, long arg2, long arg3, Java.Lang.String arg4)
+        public static Checkpoint Create(Java.Lang.String arg0, Org.Apache.Kafka.Common.TopicPartition arg1, long arg2, long arg3, Java.Lang.String arg4)
         {
             return JVMBridgeBase.New<Checkpoint>(arg0, arg1, arg2, arg3, arg4);
         }

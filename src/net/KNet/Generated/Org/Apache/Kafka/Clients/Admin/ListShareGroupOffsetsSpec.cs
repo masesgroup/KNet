@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <summary>
         /// HPA initializer for ListShareGroupOffsetsSpec()
         /// </summary>
-        public static ListShareGroupOffsetsSpec New()
+        public static ListShareGroupOffsetsSpec Create()
         {
             return JVMBridgeBase.New<ListShareGroupOffsetsSpec>();
         }

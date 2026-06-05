@@ -246,7 +246,7 @@ namespace Org.Apache.Kafka.Connect.Transforms
         /// <summary>
         /// HPA initializer for Cast()
         /// </summary>
-        public static Cast New()
+        public static Cast Create()
         {
             return JVMBridgeBase.New<Cast>();
         }
@@ -348,7 +348,7 @@ namespace Org.Apache.Kafka.Connect.Transforms
             /// <summary>
             /// HPA initializer for Key()
             /// </summary>
-            public static Key New()
+            public static Key Create()
             {
                 return JVMBridgeBase.New<Key>();
             }
@@ -393,7 +393,7 @@ namespace Org.Apache.Kafka.Connect.Transforms
             /// <summary>
             /// HPA initializer for Key()
             /// </summary>
-            public static Key<R> New()
+            public static Key<R> Create()
             {
                 return JVMBridgeBase.New<Key<R>>();
             }
@@ -442,7 +442,7 @@ namespace Org.Apache.Kafka.Connect.Transforms
             /// <summary>
             /// HPA initializer for Value()
             /// </summary>
-            public static Value New()
+            public static Value Create()
             {
                 return JVMBridgeBase.New<Value>();
             }
@@ -487,7 +487,7 @@ namespace Org.Apache.Kafka.Connect.Transforms
             /// <summary>
             /// HPA initializer for Value()
             /// </summary>
-            public static Value<R> New()
+            public static Value<R> Create()
             {
                 return JVMBridgeBase.New<Value<R>>();
             }
@@ -543,7 +543,7 @@ namespace Org.Apache.Kafka.Connect.Transforms
         /// <summary>
         /// HPA initializer for Cast()
         /// </summary>
-        public static Cast<R> New()
+        public static Cast<R> Create()
         {
             return JVMBridgeBase.New<Cast<R>>();
         }

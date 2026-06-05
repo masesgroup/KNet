@@ -109,7 +109,7 @@ namespace Org.Apache.Kafka.Clients.Producer
         /// <summary>
         /// HPA initializer for MockProducer()
         /// </summary>
-        public static MockProducer New()
+        public static MockProducer Create()
         {
             return JVMBridgeBase.New<MockProducer>();
         }
@@ -127,7 +127,7 @@ namespace Org.Apache.Kafka.Clients.Producer
         /// <summary>
         /// HPA initializer for MockProducer(bool arg0, Org.Apache.Kafka.Clients.Producer.Partitioner arg1, Org.Apache.Kafka.Common.Serialization.Serializer arg2, Org.Apache.Kafka.Common.Serialization.Serializer arg3)
         /// </summary>
-        public static MockProducer New(bool arg0, Org.Apache.Kafka.Clients.Producer.Partitioner arg1, Org.Apache.Kafka.Common.Serialization.Serializer arg2, Org.Apache.Kafka.Common.Serialization.Serializer arg3)
+        public static MockProducer Create(bool arg0, Org.Apache.Kafka.Clients.Producer.Partitioner arg1, Org.Apache.Kafka.Common.Serialization.Serializer arg2, Org.Apache.Kafka.Common.Serialization.Serializer arg3)
         {
             return JVMBridgeBase.New<MockProducer>(arg0, arg1, arg2, arg3);
         }
@@ -146,7 +146,7 @@ namespace Org.Apache.Kafka.Clients.Producer
         /// <summary>
         /// HPA initializer for MockProducer(Org.Apache.Kafka.Common.Cluster arg0, bool arg1, Org.Apache.Kafka.Clients.Producer.Partitioner arg2, Org.Apache.Kafka.Common.Serialization.Serializer arg3, Org.Apache.Kafka.Common.Serialization.Serializer arg4)
         /// </summary>
-        public static MockProducer New(Org.Apache.Kafka.Common.Cluster arg0, bool arg1, Org.Apache.Kafka.Clients.Producer.Partitioner arg2, Org.Apache.Kafka.Common.Serialization.Serializer arg3, Org.Apache.Kafka.Common.Serialization.Serializer arg4)
+        public static MockProducer Create(Org.Apache.Kafka.Common.Cluster arg0, bool arg1, Org.Apache.Kafka.Clients.Producer.Partitioner arg2, Org.Apache.Kafka.Common.Serialization.Serializer arg3, Org.Apache.Kafka.Common.Serialization.Serializer arg4)
         {
             return JVMBridgeBase.New<MockProducer>(arg0, arg1, arg2, arg3, arg4);
         }
@@ -518,7 +518,7 @@ namespace Org.Apache.Kafka.Clients.Producer
         /// <summary>
         /// HPA initializer for MockProducer()
         /// </summary>
-        public static MockProducer<K, V> New()
+        public static MockProducer<K, V> Create()
         {
             return JVMBridgeBase.New<MockProducer<K, V>>();
         }
@@ -536,7 +536,7 @@ namespace Org.Apache.Kafka.Clients.Producer
         /// <summary>
         /// HPA initializer for MockProducer(bool arg0, Org.Apache.Kafka.Clients.Producer.Partitioner arg1, Org.Apache.Kafka.Common.Serialization.Serializer%3CK%3E arg2, Org.Apache.Kafka.Common.Serialization.Serializer%3CV%3E arg3)
         /// </summary>
-        public static MockProducer<K, V> New(bool arg0, Org.Apache.Kafka.Clients.Producer.Partitioner arg1, Org.Apache.Kafka.Common.Serialization.Serializer<K> arg2, Org.Apache.Kafka.Common.Serialization.Serializer<V> arg3)
+        public static MockProducer<K, V> Create(bool arg0, Org.Apache.Kafka.Clients.Producer.Partitioner arg1, Org.Apache.Kafka.Common.Serialization.Serializer<K> arg2, Org.Apache.Kafka.Common.Serialization.Serializer<V> arg3)
         {
             return JVMBridgeBase.New<MockProducer<K, V>>(arg0, arg1, arg2, arg3);
         }
@@ -555,7 +555,7 @@ namespace Org.Apache.Kafka.Clients.Producer
         /// <summary>
         /// HPA initializer for MockProducer(Org.Apache.Kafka.Common.Cluster arg0, bool arg1, Org.Apache.Kafka.Clients.Producer.Partitioner arg2, Org.Apache.Kafka.Common.Serialization.Serializer%3CK%3E arg3, Org.Apache.Kafka.Common.Serialization.Serializer%3CV%3E arg4)
         /// </summary>
-        public static MockProducer<K, V> New(Org.Apache.Kafka.Common.Cluster arg0, bool arg1, Org.Apache.Kafka.Clients.Producer.Partitioner arg2, Org.Apache.Kafka.Common.Serialization.Serializer<K> arg3, Org.Apache.Kafka.Common.Serialization.Serializer<V> arg4)
+        public static MockProducer<K, V> Create(Org.Apache.Kafka.Common.Cluster arg0, bool arg1, Org.Apache.Kafka.Clients.Producer.Partitioner arg2, Org.Apache.Kafka.Common.Serialization.Serializer<K> arg3, Org.Apache.Kafka.Common.Serialization.Serializer<V> arg4)
         {
             return JVMBridgeBase.New<MockProducer<K, V>>(arg0, arg1, arg2, arg3, arg4);
         }

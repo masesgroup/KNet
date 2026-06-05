@@ -74,7 +74,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
         /// <summary>
         /// HPA initializer for ConsumerConfig(Java.Util.Map%3CJava.Lang.String, object%3E arg0)
         /// </summary>
-        public static ConsumerConfig New(Java.Util.Map<Java.Lang.String, object> arg0)
+        public static ConsumerConfig Create(Java.Util.Map<Java.Lang.String, object> arg0)
         {
             return JVMBridgeBase.New<ConsumerConfig>(arg0);
         }
@@ -89,7 +89,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
         /// <summary>
         /// HPA initializer for ConsumerConfig(Java.Util.Properties arg0)
         /// </summary>
-        public static ConsumerConfig New(Java.Util.Properties arg0)
+        public static ConsumerConfig Create(Java.Util.Properties arg0)
         {
             return JVMBridgeBase.New<ConsumerConfig>(arg0);
         }

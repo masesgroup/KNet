@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
         /// <summary>
         /// HPA initializer for MirrorHeartbeatTask()
         /// </summary>
-        public static MirrorHeartbeatTask New()
+        public static MirrorHeartbeatTask Create()
         {
             return JVMBridgeBase.New<MirrorHeartbeatTask>();
         }

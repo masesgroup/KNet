@@ -74,7 +74,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <summary>
         /// HPA initializer for DeletedRecords(long arg0)
         /// </summary>
-        public static DeletedRecords New(long arg0)
+        public static DeletedRecords Create(long arg0)
         {
             return JVMBridgeBase.New<DeletedRecords>(arg0);
         }

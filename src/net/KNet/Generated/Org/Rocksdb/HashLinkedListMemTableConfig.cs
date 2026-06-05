@@ -73,7 +73,7 @@ namespace Org.Rocksdb
         /// <summary>
         /// HPA initializer for HashLinkedListMemTableConfig()
         /// </summary>
-        public static HashLinkedListMemTableConfig New()
+        public static HashLinkedListMemTableConfig Create()
         {
             return JVMBridgeBase.New<HashLinkedListMemTableConfig>();
         }

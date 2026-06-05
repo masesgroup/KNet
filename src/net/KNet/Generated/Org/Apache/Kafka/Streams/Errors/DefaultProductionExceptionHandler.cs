@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Streams.Errors
         /// <summary>
         /// HPA initializer for DefaultProductionExceptionHandler()
         /// </summary>
-        public static DefaultProductionExceptionHandler New()
+        public static DefaultProductionExceptionHandler Create()
         {
             return JVMBridgeBase.New<DefaultProductionExceptionHandler>();
         }

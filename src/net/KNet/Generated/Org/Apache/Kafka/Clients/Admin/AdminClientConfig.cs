@@ -74,7 +74,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <summary>
         /// HPA initializer for AdminClientConfig(Java.Util.Map%3Cobject, object%3E arg0)
         /// </summary>
-        public static AdminClientConfig New(Java.Util.Map<object, object> arg0)
+        public static AdminClientConfig Create(Java.Util.Map<object, object> arg0)
         {
             return JVMBridgeBase.New<AdminClientConfig>(arg0);
         }

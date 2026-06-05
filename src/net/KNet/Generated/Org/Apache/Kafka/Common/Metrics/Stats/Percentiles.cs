@@ -112,7 +112,7 @@ namespace Org.Apache.Kafka.Common.Metrics.Stats
         /// <summary>
         /// HPA initializer for Percentiles(int arg0, double arg1, double arg2, Org.Apache.Kafka.Common.Metrics.Stats.Percentiles.BucketSizing arg3, params Org.Apache.Kafka.Common.Metrics.Stats.Percentile[] arg4)
         /// </summary>
-        public static Percentiles New(int arg0, double arg1, double arg2, Org.Apache.Kafka.Common.Metrics.Stats.Percentiles.BucketSizing arg3, params Org.Apache.Kafka.Common.Metrics.Stats.Percentile[] arg4)
+        public static Percentiles Create(int arg0, double arg1, double arg2, Org.Apache.Kafka.Common.Metrics.Stats.Percentiles.BucketSizing arg3, params Org.Apache.Kafka.Common.Metrics.Stats.Percentile[] arg4)
         {
             return JVMBridgeBase.New<Percentiles>(arg0, arg1, arg2, arg3, arg4);
         }
@@ -130,7 +130,7 @@ namespace Org.Apache.Kafka.Common.Metrics.Stats
         /// <summary>
         /// HPA initializer for Percentiles(int arg0, double arg1, Org.Apache.Kafka.Common.Metrics.Stats.Percentiles.BucketSizing arg2, params Org.Apache.Kafka.Common.Metrics.Stats.Percentile[] arg3)
         /// </summary>
-        public static Percentiles New(int arg0, double arg1, Org.Apache.Kafka.Common.Metrics.Stats.Percentiles.BucketSizing arg2, params Org.Apache.Kafka.Common.Metrics.Stats.Percentile[] arg3)
+        public static Percentiles Create(int arg0, double arg1, Org.Apache.Kafka.Common.Metrics.Stats.Percentiles.BucketSizing arg2, params Org.Apache.Kafka.Common.Metrics.Stats.Percentile[] arg3)
         {
             return JVMBridgeBase.New<Percentiles>(arg0, arg1, arg2, arg3);
         }

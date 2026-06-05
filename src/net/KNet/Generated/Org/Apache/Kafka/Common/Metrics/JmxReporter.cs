@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Common.Metrics
         /// <summary>
         /// HPA initializer for JmxReporter()
         /// </summary>
-        public static JmxReporter New()
+        public static JmxReporter Create()
         {
             return JVMBridgeBase.New<JmxReporter>();
         }

@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Common.Metrics.Stats
         /// <summary>
         /// HPA initializer for Avg()
         /// </summary>
-        public static Avg New()
+        public static Avg Create()
         {
             return JVMBridgeBase.New<Avg>();
         }

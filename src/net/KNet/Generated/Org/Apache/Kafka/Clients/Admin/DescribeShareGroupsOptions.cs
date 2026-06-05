@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <summary>
         /// HPA initializer for DescribeShareGroupsOptions()
         /// </summary>
-        public static DescribeShareGroupsOptions New()
+        public static DescribeShareGroupsOptions Create()
         {
             return JVMBridgeBase.New<DescribeShareGroupsOptions>();
         }

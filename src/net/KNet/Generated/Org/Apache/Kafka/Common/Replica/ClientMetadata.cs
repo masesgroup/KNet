@@ -194,7 +194,7 @@ namespace Org.Apache.Kafka.Common.Replica
             /// <summary>
             /// HPA initializer for DefaultClientMetadata(Java.Lang.String arg0, Java.Lang.String arg1, Java.Net.InetAddress arg2, Org.Apache.Kafka.Common.Security.Auth.KafkaPrincipal arg3, Java.Lang.String arg4)
             /// </summary>
-            public static DefaultClientMetadata New(Java.Lang.String arg0, Java.Lang.String arg1, Java.Net.InetAddress arg2, Org.Apache.Kafka.Common.Security.Auth.KafkaPrincipal arg3, Java.Lang.String arg4)
+            public static DefaultClientMetadata Create(Java.Lang.String arg0, Java.Lang.String arg1, Java.Net.InetAddress arg2, Org.Apache.Kafka.Common.Security.Auth.KafkaPrincipal arg3, Java.Lang.String arg4)
             {
                 return JVMBridgeBase.New<DefaultClientMetadata>(arg0, arg1, arg2, arg3, arg4);
             }

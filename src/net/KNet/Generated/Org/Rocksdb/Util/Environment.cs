@@ -73,7 +73,7 @@ namespace Org.Rocksdb.Util
         /// <summary>
         /// HPA initializer for Environment()
         /// </summary>
-        public static Environment New()
+        public static Environment Create()
         {
             return JVMBridgeBase.New<Environment>();
         }

@@ -76,7 +76,7 @@ namespace Org.Apache.Kafka.Common.Config
         /// <summary>
         /// HPA initializer for AbstractConfig(Org.Apache.Kafka.Common.Config.ConfigDef arg0, Java.Util.Map%3Cobject, object%3E arg1, bool arg2)
         /// </summary>
-        public static AbstractConfig New(Org.Apache.Kafka.Common.Config.ConfigDef arg0, Java.Util.Map<object, object> arg1, bool arg2)
+        public static AbstractConfig Create(Org.Apache.Kafka.Common.Config.ConfigDef arg0, Java.Util.Map<object, object> arg1, bool arg2)
         {
             return JVMBridgeBase.New<AbstractConfig>(arg0, arg1, arg2);
         }
@@ -94,7 +94,7 @@ namespace Org.Apache.Kafka.Common.Config
         /// <summary>
         /// HPA initializer for AbstractConfig(Org.Apache.Kafka.Common.Config.ConfigDef arg0, Java.Util.Map%3Cobject, object%3E arg1, Java.Util.Map%3CJava.Lang.String, object%3E arg2, bool arg3)
         /// </summary>
-        public static AbstractConfig New(Org.Apache.Kafka.Common.Config.ConfigDef arg0, Java.Util.Map<object, object> arg1, Java.Util.Map<Java.Lang.String, object> arg2, bool arg3)
+        public static AbstractConfig Create(Org.Apache.Kafka.Common.Config.ConfigDef arg0, Java.Util.Map<object, object> arg1, Java.Util.Map<Java.Lang.String, object> arg2, bool arg3)
         {
             return JVMBridgeBase.New<AbstractConfig>(arg0, arg1, arg2, arg3);
         }
@@ -110,7 +110,7 @@ namespace Org.Apache.Kafka.Common.Config
         /// <summary>
         /// HPA initializer for AbstractConfig(Org.Apache.Kafka.Common.Config.ConfigDef arg0, Java.Util.Map%3Cobject, object%3E arg1)
         /// </summary>
-        public static AbstractConfig New(Org.Apache.Kafka.Common.Config.ConfigDef arg0, Java.Util.Map<object, object> arg1)
+        public static AbstractConfig Create(Org.Apache.Kafka.Common.Config.ConfigDef arg0, Java.Util.Map<object, object> arg1)
         {
             return JVMBridgeBase.New<AbstractConfig>(arg0, arg1);
         }

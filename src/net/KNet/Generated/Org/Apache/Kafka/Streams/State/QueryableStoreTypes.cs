@@ -283,7 +283,7 @@ namespace Org.Apache.Kafka.Streams.State
         /// <summary>
         /// HPA initializer for QueryableStoreTypes()
         /// </summary>
-        public static QueryableStoreTypes New()
+        public static QueryableStoreTypes Create()
         {
             return JVMBridgeBase.New<QueryableStoreTypes>();
         }

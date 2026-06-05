@@ -77,7 +77,7 @@ namespace Org.Rocksdb
         /// <summary>
         /// HPA initializer for HyperClockCache(long arg0, long arg1, int arg2, bool arg3)
         /// </summary>
-        public static HyperClockCache New(long arg0, long arg1, int arg2, bool arg3)
+        public static HyperClockCache Create(long arg0, long arg1, int arg2, bool arg3)
         {
             return JVMBridgeBase.New<HyperClockCache>(arg0, arg1, arg2, arg3);
         }

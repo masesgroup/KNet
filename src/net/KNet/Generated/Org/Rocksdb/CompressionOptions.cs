@@ -73,7 +73,7 @@ namespace Org.Rocksdb
         /// <summary>
         /// HPA initializer for CompressionOptions()
         /// </summary>
-        public static CompressionOptions New()
+        public static CompressionOptions Create()
         {
             return JVMBridgeBase.New<CompressionOptions>();
         }

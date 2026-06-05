@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <summary>
         /// HPA initializer for AlterUserScramCredentialsOptions()
         /// </summary>
-        public static AlterUserScramCredentialsOptions New()
+        public static AlterUserScramCredentialsOptions Create()
         {
             return JVMBridgeBase.New<AlterUserScramCredentialsOptions>();
         }

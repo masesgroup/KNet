@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Tools.Consumer.Group
         /// <summary>
         /// HPA initializer for ShareGroupCommand()
         /// </summary>
-        public static ShareGroupCommand New()
+        public static ShareGroupCommand Create()
         {
             return JVMBridgeBase.New<ShareGroupCommand>();
         }

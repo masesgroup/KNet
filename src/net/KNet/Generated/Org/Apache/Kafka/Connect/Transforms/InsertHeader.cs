@@ -108,7 +108,7 @@ namespace Org.Apache.Kafka.Connect.Transforms
         /// <summary>
         /// HPA initializer for InsertHeader()
         /// </summary>
-        public static InsertHeader New()
+        public static InsertHeader Create()
         {
             return JVMBridgeBase.New<InsertHeader>();
         }
@@ -217,7 +217,7 @@ namespace Org.Apache.Kafka.Connect.Transforms
         /// <summary>
         /// HPA initializer for InsertHeader()
         /// </summary>
-        public static InsertHeader<R> New()
+        public static InsertHeader<R> Create()
         {
             return JVMBridgeBase.New<InsertHeader<R>>();
         }

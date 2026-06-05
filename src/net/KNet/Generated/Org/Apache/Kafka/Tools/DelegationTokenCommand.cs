@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Tools
         /// <summary>
         /// HPA initializer for DelegationTokenCommand()
         /// </summary>
-        public static DelegationTokenCommand New()
+        public static DelegationTokenCommand Create()
         {
             return JVMBridgeBase.New<DelegationTokenCommand>();
         }

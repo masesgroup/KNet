@@ -75,7 +75,7 @@ namespace Org.Apache.Kafka.Common.Acl
         /// <summary>
         /// HPA initializer for AclBindingFilter(Org.Apache.Kafka.Common.Resource.ResourcePatternFilter arg0, Org.Apache.Kafka.Common.Acl.AccessControlEntryFilter arg1)
         /// </summary>
-        public static AclBindingFilter New(Org.Apache.Kafka.Common.Resource.ResourcePatternFilter arg0, Org.Apache.Kafka.Common.Acl.AccessControlEntryFilter arg1)
+        public static AclBindingFilter Create(Org.Apache.Kafka.Common.Resource.ResourcePatternFilter arg0, Org.Apache.Kafka.Common.Acl.AccessControlEntryFilter arg1)
         {
             return JVMBridgeBase.New<AclBindingFilter>(arg0, arg1);
         }

@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Common.Config.Provider
         /// <summary>
         /// HPA initializer for DirectoryConfigProvider()
         /// </summary>
-        public static DirectoryConfigProvider New()
+        public static DirectoryConfigProvider Create()
         {
             return JVMBridgeBase.New<DirectoryConfigProvider>();
         }

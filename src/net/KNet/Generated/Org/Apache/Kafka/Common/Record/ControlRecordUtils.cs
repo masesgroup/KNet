@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Common.Record
         /// <summary>
         /// HPA initializer for ControlRecordUtils()
         /// </summary>
-        public static ControlRecordUtils New()
+        public static ControlRecordUtils Create()
         {
             return JVMBridgeBase.New<ControlRecordUtils>();
         }

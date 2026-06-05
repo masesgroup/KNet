@@ -76,7 +76,7 @@ namespace Org.Apache.Kafka.Connect.Util
         /// <summary>
         /// HPA initializer for TemporaryStage(Java.Lang.String arg0, Org.Apache.Kafka.Connect.Util.Callback%3Cobject%3E arg1, Org.Apache.Kafka.Common.Utils.Time arg2)
         /// </summary>
-        public static TemporaryStage New(Java.Lang.String arg0, Org.Apache.Kafka.Connect.Util.Callback<object> arg1, Org.Apache.Kafka.Common.Utils.Time arg2)
+        public static TemporaryStage Create(Java.Lang.String arg0, Org.Apache.Kafka.Connect.Util.Callback<object> arg1, Org.Apache.Kafka.Common.Utils.Time arg2)
         {
             return JVMBridgeBase.New<TemporaryStage>(arg0, arg1, arg2);
         }

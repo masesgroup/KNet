@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
         /// <summary>
         /// HPA initializer for DefaultGroupFilter()
         /// </summary>
-        public static DefaultGroupFilter New()
+        public static DefaultGroupFilter Create()
         {
             return JVMBridgeBase.New<DefaultGroupFilter>();
         }

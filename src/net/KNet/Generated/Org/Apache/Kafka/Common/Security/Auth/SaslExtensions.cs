@@ -74,7 +74,7 @@ namespace Org.Apache.Kafka.Common.Security.Auth
         /// <summary>
         /// HPA initializer for SaslExtensions(Java.Util.Map%3CJava.Lang.String, Java.Lang.String%3E arg0)
         /// </summary>
-        public static SaslExtensions New(Java.Util.Map<Java.Lang.String, Java.Lang.String> arg0)
+        public static SaslExtensions Create(Java.Util.Map<Java.Lang.String, Java.Lang.String> arg0)
         {
             return JVMBridgeBase.New<SaslExtensions>(arg0);
         }

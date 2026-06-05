@@ -77,7 +77,7 @@ namespace Org.Apache.Kafka.Common.Utils
         /// <summary>
         /// HPA initializer for ExponentialBackoff(long arg0, int arg1, long arg2, double arg3)
         /// </summary>
-        public static ExponentialBackoff New(long arg0, int arg1, long arg2, double arg3)
+        public static ExponentialBackoff Create(long arg0, int arg1, long arg2, double arg3)
         {
             return JVMBridgeBase.New<ExponentialBackoff>(arg0, arg1, arg2, arg3);
         }

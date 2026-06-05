@@ -155,7 +155,7 @@ namespace Org.Apache.Kafka.Shell
             /// <summary>
             /// HPA initializer for Builder()
             /// </summary>
-            public static Builder New()
+            public static Builder Create()
             {
                 return JVMBridgeBase.New<Builder>();
             }

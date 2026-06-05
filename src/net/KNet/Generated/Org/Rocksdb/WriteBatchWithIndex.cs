@@ -73,7 +73,7 @@ namespace Org.Rocksdb
         /// <summary>
         /// HPA initializer for WriteBatchWithIndex()
         /// </summary>
-        public static WriteBatchWithIndex New()
+        public static WriteBatchWithIndex Create()
         {
             return JVMBridgeBase.New<WriteBatchWithIndex>();
         }
@@ -88,7 +88,7 @@ namespace Org.Rocksdb
         /// <summary>
         /// HPA initializer for WriteBatchWithIndex(bool arg0)
         /// </summary>
-        public static WriteBatchWithIndex New(bool arg0)
+        public static WriteBatchWithIndex Create(bool arg0)
         {
             return JVMBridgeBase.New<WriteBatchWithIndex>(arg0);
         }
@@ -105,7 +105,7 @@ namespace Org.Rocksdb
         /// <summary>
         /// HPA initializer for WriteBatchWithIndex(Org.Rocksdb.AbstractComparator arg0, int arg1, bool arg2)
         /// </summary>
-        public static WriteBatchWithIndex New(Org.Rocksdb.AbstractComparator arg0, int arg1, bool arg2)
+        public static WriteBatchWithIndex Create(Org.Rocksdb.AbstractComparator arg0, int arg1, bool arg2)
         {
             return JVMBridgeBase.New<WriteBatchWithIndex>(arg0, arg1, arg2);
         }

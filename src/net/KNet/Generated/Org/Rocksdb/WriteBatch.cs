@@ -141,7 +141,7 @@ namespace Org.Rocksdb
         /// <summary>
         /// HPA initializer for WriteBatch()
         /// </summary>
-        public static WriteBatch New()
+        public static WriteBatch Create()
         {
             return JVMBridgeBase.New<WriteBatch>();
         }
@@ -156,7 +156,7 @@ namespace Org.Rocksdb
         /// <summary>
         /// HPA initializer for WriteBatch(byte[] arg0)
         /// </summary>
-        public static WriteBatch New(byte[] arg0)
+        public static WriteBatch Create(byte[] arg0)
         {
             return JVMBridgeBase.New<WriteBatch>(arg0);
         }
@@ -171,7 +171,7 @@ namespace Org.Rocksdb
         /// <summary>
         /// HPA initializer for WriteBatch(int arg0)
         /// </summary>
-        public static WriteBatch New(int arg0)
+        public static WriteBatch Create(int arg0)
         {
             return JVMBridgeBase.New<WriteBatch>(arg0);
         }
@@ -320,7 +320,7 @@ namespace Org.Rocksdb
             /// <summary>
             /// HPA initializer for Handler()
             /// </summary>
-            public static Handler New()
+            public static Handler Create()
             {
                 return JVMBridgeBase.New<Handler>();
             }
@@ -545,7 +545,7 @@ namespace Org.Rocksdb
             /// <summary>
             /// HPA initializer for SavePoint(long arg0, long arg1, long arg2)
             /// </summary>
-            public static SavePoint New(long arg0, long arg1, long arg2)
+            public static SavePoint Create(long arg0, long arg1, long arg2)
             {
                 return JVMBridgeBase.New<SavePoint>(arg0, arg1, arg2);
             }

@@ -2296,7 +2296,7 @@ namespace Org.Rocksdb
             /// <summary>
             /// HPA initializer for CountAndSize(long arg0, long arg1)
             /// </summary>
-            public static CountAndSize New(long arg0, long arg1)
+            public static CountAndSize Create(long arg0, long arg1)
             {
                 return JVMBridgeBase.New<CountAndSize>(arg0, arg1);
             }
@@ -2391,7 +2391,7 @@ namespace Org.Rocksdb
             /// <summary>
             /// HPA initializer for Version(byte arg0, byte arg1, byte arg2)
             /// </summary>
-            public static Version New(byte arg0, byte arg1, byte arg2)
+            public static Version Create(byte arg0, byte arg1, byte arg2)
             {
                 return JVMBridgeBase.New<Version>(arg0, arg1, arg2);
             }

@@ -413,7 +413,7 @@ namespace Org.Apache.Kafka.Queue
             /// <summary>
             /// HPA initializer for DeadlineFunction(long arg0)
             /// </summary>
-            public static DeadlineFunction New(long arg0)
+            public static DeadlineFunction Create(long arg0)
             {
                 return JVMBridgeBase.New<DeadlineFunction>(arg0);
             }
@@ -481,7 +481,7 @@ namespace Org.Apache.Kafka.Queue
             /// <summary>
             /// HPA initializer for EarliestDeadlineFunction(long arg0)
             /// </summary>
-            public static EarliestDeadlineFunction New(long arg0)
+            public static EarliestDeadlineFunction Create(long arg0)
             {
                 return JVMBridgeBase.New<EarliestDeadlineFunction>(arg0);
             }

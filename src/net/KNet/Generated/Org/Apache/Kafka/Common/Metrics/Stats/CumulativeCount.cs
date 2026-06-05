@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Common.Metrics.Stats
         /// <summary>
         /// HPA initializer for CumulativeCount()
         /// </summary>
-        public static CumulativeCount New()
+        public static CumulativeCount Create()
         {
             return JVMBridgeBase.New<CumulativeCount>();
         }

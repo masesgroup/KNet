@@ -74,7 +74,7 @@ namespace Org.Apache.Kafka.Streams.Query
         /// <summary>
         /// HPA initializer for QueryConfig(bool arg0)
         /// </summary>
-        public static QueryConfig New(bool arg0)
+        public static QueryConfig Create(bool arg0)
         {
             return JVMBridgeBase.New<QueryConfig>(arg0);
         }

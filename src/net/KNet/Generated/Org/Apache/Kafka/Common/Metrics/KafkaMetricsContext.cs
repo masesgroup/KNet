@@ -75,7 +75,7 @@ namespace Org.Apache.Kafka.Common.Metrics
         /// <summary>
         /// HPA initializer for KafkaMetricsContext(Java.Lang.String arg0, Java.Util.Map%3CJava.Lang.String, object%3E arg1)
         /// </summary>
-        public static KafkaMetricsContext New(Java.Lang.String arg0, Java.Util.Map<Java.Lang.String, object> arg1)
+        public static KafkaMetricsContext Create(Java.Lang.String arg0, Java.Util.Map<Java.Lang.String, object> arg1)
         {
             return JVMBridgeBase.New<KafkaMetricsContext>(arg0, arg1);
         }
@@ -90,7 +90,7 @@ namespace Org.Apache.Kafka.Common.Metrics
         /// <summary>
         /// HPA initializer for KafkaMetricsContext(Java.Lang.String arg0)
         /// </summary>
-        public static KafkaMetricsContext New(Java.Lang.String arg0)
+        public static KafkaMetricsContext Create(Java.Lang.String arg0)
         {
             return JVMBridgeBase.New<KafkaMetricsContext>(arg0);
         }

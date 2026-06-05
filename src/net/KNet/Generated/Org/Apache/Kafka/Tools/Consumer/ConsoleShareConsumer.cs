@@ -107,7 +107,7 @@ namespace Org.Apache.Kafka.Tools.Consumer
         /// <summary>
         /// HPA initializer for ConsoleShareConsumer()
         /// </summary>
-        public static ConsoleShareConsumer New()
+        public static ConsoleShareConsumer Create()
         {
             return JVMBridgeBase.New<ConsoleShareConsumer>();
         }
@@ -165,7 +165,7 @@ namespace Org.Apache.Kafka.Tools.Consumer
             /// <summary>
             /// HPA initializer for ConsumerWrapper(Java.Lang.String arg0, Org.Apache.Kafka.Clients.Consumer.ShareConsumer%3Cbyte[], byte[]%3E arg1, long arg2)
             /// </summary>
-            public static ConsumerWrapper New(Java.Lang.String arg0, Org.Apache.Kafka.Clients.Consumer.ShareConsumer<byte[], byte[]> arg1, long arg2)
+            public static ConsumerWrapper Create(Java.Lang.String arg0, Org.Apache.Kafka.Clients.Consumer.ShareConsumer<byte[], byte[]> arg1, long arg2)
             {
                 return JVMBridgeBase.New<ConsumerWrapper>(arg0, arg1, arg2);
             }

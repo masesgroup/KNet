@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Common.Metrics.Stats
         /// <summary>
         /// HPA initializer for CumulativeSum()
         /// </summary>
-        public static CumulativeSum New()
+        public static CumulativeSum Create()
         {
             return JVMBridgeBase.New<CumulativeSum>();
         }
@@ -88,7 +88,7 @@ namespace Org.Apache.Kafka.Common.Metrics.Stats
         /// <summary>
         /// HPA initializer for CumulativeSum(double arg0)
         /// </summary>
-        public static CumulativeSum New(double arg0)
+        public static CumulativeSum Create(double arg0)
         {
             return JVMBridgeBase.New<CumulativeSum>(arg0);
         }

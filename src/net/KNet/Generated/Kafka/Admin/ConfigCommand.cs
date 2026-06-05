@@ -200,7 +200,7 @@ namespace Kafka.Admin
             /// <summary>
             /// HPA initializer for ConfigCommandOptions(Java.Lang.String[] args)
             /// </summary>
-            public static ConfigCommandOptions New(Java.Lang.String[] args)
+            public static ConfigCommandOptions Create(Java.Lang.String[] args)
             {
                 return JVMBridgeBase.New<ConfigCommandOptions>(args);
             }

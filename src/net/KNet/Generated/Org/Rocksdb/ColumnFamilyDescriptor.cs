@@ -75,7 +75,7 @@ namespace Org.Rocksdb
         /// <summary>
         /// HPA initializer for ColumnFamilyDescriptor(byte[] arg0, Org.Rocksdb.ColumnFamilyOptions arg1)
         /// </summary>
-        public static ColumnFamilyDescriptor New(byte[] arg0, Org.Rocksdb.ColumnFamilyOptions arg1)
+        public static ColumnFamilyDescriptor Create(byte[] arg0, Org.Rocksdb.ColumnFamilyOptions arg1)
         {
             return JVMBridgeBase.New<ColumnFamilyDescriptor>(arg0, arg1);
         }
@@ -90,7 +90,7 @@ namespace Org.Rocksdb
         /// <summary>
         /// HPA initializer for ColumnFamilyDescriptor(byte[] arg0)
         /// </summary>
-        public static ColumnFamilyDescriptor New(byte[] arg0)
+        public static ColumnFamilyDescriptor Create(byte[] arg0)
         {
             return JVMBridgeBase.New<ColumnFamilyDescriptor>(arg0);
         }

@@ -74,7 +74,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <summary>
         /// HPA initializer for DeleteRecordsResult(Java.Util.Map%3COrg.Apache.Kafka.Common.TopicPartition, Org.Apache.Kafka.Common.KafkaFuture%3COrg.Apache.Kafka.Clients.Admin.DeletedRecords%3E%3E arg0)
         /// </summary>
-        public static DeleteRecordsResult New(Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Org.Apache.Kafka.Common.KafkaFuture<Org.Apache.Kafka.Clients.Admin.DeletedRecords>> arg0)
+        public static DeleteRecordsResult Create(Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Org.Apache.Kafka.Common.KafkaFuture<Org.Apache.Kafka.Clients.Admin.DeletedRecords>> arg0)
         {
             return JVMBridgeBase.New<DeleteRecordsResult>(arg0);
         }

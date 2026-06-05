@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Clients
         /// <summary>
         /// HPA initializer for DefaultHostResolver()
         /// </summary>
-        public static DefaultHostResolver New()
+        public static DefaultHostResolver Create()
         {
             return JVMBridgeBase.New<DefaultHostResolver>();
         }

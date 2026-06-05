@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Tools.Api
         /// <summary>
         /// HPA initializer for IntegerDecoder()
         /// </summary>
-        public static IntegerDecoder New()
+        public static IntegerDecoder Create()
         {
             return JVMBridgeBase.New<IntegerDecoder>();
         }

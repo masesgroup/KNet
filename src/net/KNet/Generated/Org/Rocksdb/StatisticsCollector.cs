@@ -75,7 +75,7 @@ namespace Org.Rocksdb
         /// <summary>
         /// HPA initializer for StatisticsCollector(Java.Util.List%3COrg.Rocksdb.StatsCollectorInput%3E arg0, int arg1)
         /// </summary>
-        public static StatisticsCollector New(Java.Util.List<Org.Rocksdb.StatsCollectorInput> arg0, int arg1)
+        public static StatisticsCollector Create(Java.Util.List<Org.Rocksdb.StatsCollectorInput> arg0, int arg1)
         {
             return JVMBridgeBase.New<StatisticsCollector>(arg0, arg1);
         }

@@ -110,7 +110,7 @@ namespace Org.Apache.Kafka.Streams.Scala.Kstream
         /// <summary>
         /// HPA initializer for TimeWindowedCogroupedKStream(Org.Apache.Kafka.Streams.Kstream.TimeWindowedCogroupedKStream inner)
         /// </summary>
-        public static TimeWindowedCogroupedKStream New(Org.Apache.Kafka.Streams.Kstream.TimeWindowedCogroupedKStream inner)
+        public static TimeWindowedCogroupedKStream Create(Org.Apache.Kafka.Streams.Kstream.TimeWindowedCogroupedKStream inner)
         {
             return JVMBridgeBase.New<TimeWindowedCogroupedKStream>(inner);
         }
@@ -164,7 +164,7 @@ namespace Org.Apache.Kafka.Streams.Scala.Kstream
         /// <summary>
         /// HPA initializer for TimeWindowedCogroupedKStream(Org.Apache.Kafka.Streams.Kstream.TimeWindowedCogroupedKStream%3CK, V%3E inner)
         /// </summary>
-        public static TimeWindowedCogroupedKStream<K, V> New(Org.Apache.Kafka.Streams.Kstream.TimeWindowedCogroupedKStream<K, V> inner)
+        public static TimeWindowedCogroupedKStream<K, V> Create(Org.Apache.Kafka.Streams.Kstream.TimeWindowedCogroupedKStream<K, V> inner)
         {
             return JVMBridgeBase.New<TimeWindowedCogroupedKStream<K, V>>(inner);
         }

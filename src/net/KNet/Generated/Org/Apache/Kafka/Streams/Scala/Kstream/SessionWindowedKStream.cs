@@ -110,7 +110,7 @@ namespace Org.Apache.Kafka.Streams.Scala.Kstream
         /// <summary>
         /// HPA initializer for SessionWindowedKStream(Org.Apache.Kafka.Streams.Kstream.SessionWindowedKStream inner)
         /// </summary>
-        public static SessionWindowedKStream New(Org.Apache.Kafka.Streams.Kstream.SessionWindowedKStream inner)
+        public static SessionWindowedKStream Create(Org.Apache.Kafka.Streams.Kstream.SessionWindowedKStream inner)
         {
             return JVMBridgeBase.New<SessionWindowedKStream>(inner);
         }
@@ -183,7 +183,7 @@ namespace Org.Apache.Kafka.Streams.Scala.Kstream
         /// <summary>
         /// HPA initializer for SessionWindowedKStream(Org.Apache.Kafka.Streams.Kstream.SessionWindowedKStream%3CK, V%3E inner)
         /// </summary>
-        public static SessionWindowedKStream<K, V> New(Org.Apache.Kafka.Streams.Kstream.SessionWindowedKStream<K, V> inner)
+        public static SessionWindowedKStream<K, V> Create(Org.Apache.Kafka.Streams.Kstream.SessionWindowedKStream<K, V> inner)
         {
             return JVMBridgeBase.New<SessionWindowedKStream<K, V>>(inner);
         }

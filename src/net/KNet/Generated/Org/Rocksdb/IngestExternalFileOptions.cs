@@ -73,7 +73,7 @@ namespace Org.Rocksdb
         /// <summary>
         /// HPA initializer for IngestExternalFileOptions()
         /// </summary>
-        public static IngestExternalFileOptions New()
+        public static IngestExternalFileOptions Create()
         {
             return JVMBridgeBase.New<IngestExternalFileOptions>();
         }
@@ -91,7 +91,7 @@ namespace Org.Rocksdb
         /// <summary>
         /// HPA initializer for IngestExternalFileOptions(bool arg0, bool arg1, bool arg2, bool arg3)
         /// </summary>
-        public static IngestExternalFileOptions New(bool arg0, bool arg1, bool arg2, bool arg3)
+        public static IngestExternalFileOptions Create(bool arg0, bool arg1, bool arg2, bool arg3)
         {
             return JVMBridgeBase.New<IngestExternalFileOptions>(arg0, arg1, arg2, arg3);
         }

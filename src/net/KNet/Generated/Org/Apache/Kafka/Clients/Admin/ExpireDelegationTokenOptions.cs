@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <summary>
         /// HPA initializer for ExpireDelegationTokenOptions()
         /// </summary>
-        public static ExpireDelegationTokenOptions New()
+        public static ExpireDelegationTokenOptions Create()
         {
             return JVMBridgeBase.New<ExpireDelegationTokenOptions>();
         }

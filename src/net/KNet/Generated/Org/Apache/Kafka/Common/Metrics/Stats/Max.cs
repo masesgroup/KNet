@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Common.Metrics.Stats
         /// <summary>
         /// HPA initializer for Max()
         /// </summary>
-        public static Max New()
+        public static Max Create()
         {
             return JVMBridgeBase.New<Max>();
         }

@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
         /// <summary>
         /// HPA initializer for IdentityReplicationPolicy()
         /// </summary>
-        public static IdentityReplicationPolicy New()
+        public static IdentityReplicationPolicy Create()
         {
             return JVMBridgeBase.New<IdentityReplicationPolicy>();
         }

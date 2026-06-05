@@ -73,7 +73,7 @@ namespace Org.Rocksdb
         /// <summary>
         /// HPA initializer for VectorMemTableConfig()
         /// </summary>
-        public static VectorMemTableConfig New()
+        public static VectorMemTableConfig Create()
         {
             return JVMBridgeBase.New<VectorMemTableConfig>();
         }

@@ -75,7 +75,7 @@ namespace Org.Rocksdb.Util
         /// <summary>
         /// HPA initializer for StdErrLogger(Org.Rocksdb.InfoLogLevel arg0, Java.Lang.String arg1)
         /// </summary>
-        public static StdErrLogger New(Org.Rocksdb.InfoLogLevel arg0, Java.Lang.String arg1)
+        public static StdErrLogger Create(Org.Rocksdb.InfoLogLevel arg0, Java.Lang.String arg1)
         {
             return JVMBridgeBase.New<StdErrLogger>(arg0, arg1);
         }
@@ -90,7 +90,7 @@ namespace Org.Rocksdb.Util
         /// <summary>
         /// HPA initializer for StdErrLogger(Org.Rocksdb.InfoLogLevel arg0)
         /// </summary>
-        public static StdErrLogger New(Org.Rocksdb.InfoLogLevel arg0)
+        public static StdErrLogger Create(Org.Rocksdb.InfoLogLevel arg0)
         {
             return JVMBridgeBase.New<StdErrLogger>(arg0);
         }

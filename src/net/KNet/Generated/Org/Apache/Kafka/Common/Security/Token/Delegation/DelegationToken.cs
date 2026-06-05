@@ -75,7 +75,7 @@ namespace Org.Apache.Kafka.Common.Security.Token.Delegation
         /// <summary>
         /// HPA initializer for DelegationToken(Org.Apache.Kafka.Common.Security.Token.Delegation.TokenInformation arg0, byte[] arg1)
         /// </summary>
-        public static DelegationToken New(Org.Apache.Kafka.Common.Security.Token.Delegation.TokenInformation arg0, byte[] arg1)
+        public static DelegationToken Create(Org.Apache.Kafka.Common.Security.Token.Delegation.TokenInformation arg0, byte[] arg1)
         {
             return JVMBridgeBase.New<DelegationToken>(arg0, arg1);
         }

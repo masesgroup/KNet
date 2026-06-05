@@ -107,7 +107,7 @@ namespace Org.Apache.Kafka.Raft.Generated
         /// <summary>
         /// HPA initializer for QuorumStateData()
         /// </summary>
-        public static QuorumStateData New()
+        public static QuorumStateData Create()
         {
             return JVMBridgeBase.New<QuorumStateData>();
         }
@@ -296,7 +296,7 @@ namespace Org.Apache.Kafka.Raft.Generated
             /// <summary>
             /// HPA initializer for Voter()
             /// </summary>
-            public static Voter New()
+            public static Voter Create()
             {
                 return JVMBridgeBase.New<Voter>();
             }

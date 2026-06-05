@@ -110,7 +110,7 @@ namespace Org.Apache.Kafka.Common.Cache
         /// <summary>
         /// HPA initializer for SynchronizedCache(Org.Apache.Kafka.Common.Cache.Cache arg0)
         /// </summary>
-        public static SynchronizedCache New(Org.Apache.Kafka.Common.Cache.Cache arg0)
+        public static SynchronizedCache Create(Org.Apache.Kafka.Common.Cache.Cache arg0)
         {
             return JVMBridgeBase.New<SynchronizedCache>(arg0);
         }
@@ -191,7 +191,7 @@ namespace Org.Apache.Kafka.Common.Cache
         /// <summary>
         /// HPA initializer for SynchronizedCache(Org.Apache.Kafka.Common.Cache.Cache%3CK, V%3E arg0)
         /// </summary>
-        public static SynchronizedCache<K, V> New(Org.Apache.Kafka.Common.Cache.Cache<K, V> arg0)
+        public static SynchronizedCache<K, V> Create(Org.Apache.Kafka.Common.Cache.Cache<K, V> arg0)
         {
             return JVMBridgeBase.New<SynchronizedCache<K, V>>(arg0);
         }

@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <summary>
         /// HPA initializer for AlterClientQuotasOptions()
         /// </summary>
-        public static AlterClientQuotasOptions New()
+        public static AlterClientQuotasOptions Create()
         {
             return JVMBridgeBase.New<AlterClientQuotasOptions>();
         }

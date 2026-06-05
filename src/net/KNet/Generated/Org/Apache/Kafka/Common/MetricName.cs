@@ -77,7 +77,7 @@ namespace Org.Apache.Kafka.Common
         /// <summary>
         /// HPA initializer for MetricName(Java.Lang.String arg0, Java.Lang.String arg1, Java.Lang.String arg2, Java.Util.Map%3CJava.Lang.String, Java.Lang.String%3E arg3)
         /// </summary>
-        public static MetricName New(Java.Lang.String arg0, Java.Lang.String arg1, Java.Lang.String arg2, Java.Util.Map<Java.Lang.String, Java.Lang.String> arg3)
+        public static MetricName Create(Java.Lang.String arg0, Java.Lang.String arg1, Java.Lang.String arg2, Java.Util.Map<Java.Lang.String, Java.Lang.String> arg3)
         {
             return JVMBridgeBase.New<MetricName>(arg0, arg1, arg2, arg3);
         }

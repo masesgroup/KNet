@@ -75,7 +75,7 @@ namespace Org.Apache.Kafka.Common.Record
         /// <summary>
         /// HPA initializer for SimpleRecord(byte[] arg0, byte[] arg1)
         /// </summary>
-        public static SimpleRecord New(byte[] arg0, byte[] arg1)
+        public static SimpleRecord Create(byte[] arg0, byte[] arg1)
         {
             return JVMBridgeBase.New<SimpleRecord>(arg0, arg1);
         }
@@ -90,7 +90,7 @@ namespace Org.Apache.Kafka.Common.Record
         /// <summary>
         /// HPA initializer for SimpleRecord(byte[] arg0)
         /// </summary>
-        public static SimpleRecord New(byte[] arg0)
+        public static SimpleRecord Create(byte[] arg0)
         {
             return JVMBridgeBase.New<SimpleRecord>(arg0);
         }
@@ -105,7 +105,7 @@ namespace Org.Apache.Kafka.Common.Record
         /// <summary>
         /// HPA initializer for SimpleRecord(Java.Nio.ByteBuffer arg0)
         /// </summary>
-        public static SimpleRecord New(Java.Nio.ByteBuffer arg0)
+        public static SimpleRecord Create(Java.Nio.ByteBuffer arg0)
         {
             return JVMBridgeBase.New<SimpleRecord>(arg0);
         }
@@ -123,7 +123,7 @@ namespace Org.Apache.Kafka.Common.Record
         /// <summary>
         /// HPA initializer for SimpleRecord(long arg0, byte[] arg1, byte[] arg2, Org.Apache.Kafka.Common.Header.Header[] arg3)
         /// </summary>
-        public static SimpleRecord New(long arg0, byte[] arg1, byte[] arg2, Org.Apache.Kafka.Common.Header.Header[] arg3)
+        public static SimpleRecord Create(long arg0, byte[] arg1, byte[] arg2, Org.Apache.Kafka.Common.Header.Header[] arg3)
         {
             return JVMBridgeBase.New<SimpleRecord>(arg0, arg1, arg2, arg3);
         }
@@ -140,7 +140,7 @@ namespace Org.Apache.Kafka.Common.Record
         /// <summary>
         /// HPA initializer for SimpleRecord(long arg0, byte[] arg1, byte[] arg2)
         /// </summary>
-        public static SimpleRecord New(long arg0, byte[] arg1, byte[] arg2)
+        public static SimpleRecord Create(long arg0, byte[] arg1, byte[] arg2)
         {
             return JVMBridgeBase.New<SimpleRecord>(arg0, arg1, arg2);
         }
@@ -156,7 +156,7 @@ namespace Org.Apache.Kafka.Common.Record
         /// <summary>
         /// HPA initializer for SimpleRecord(long arg0, byte[] arg1)
         /// </summary>
-        public static SimpleRecord New(long arg0, byte[] arg1)
+        public static SimpleRecord Create(long arg0, byte[] arg1)
         {
             return JVMBridgeBase.New<SimpleRecord>(arg0, arg1);
         }
@@ -174,7 +174,7 @@ namespace Org.Apache.Kafka.Common.Record
         /// <summary>
         /// HPA initializer for SimpleRecord(long arg0, Java.Nio.ByteBuffer arg1, Java.Nio.ByteBuffer arg2, Org.Apache.Kafka.Common.Header.Header[] arg3)
         /// </summary>
-        public static SimpleRecord New(long arg0, Java.Nio.ByteBuffer arg1, Java.Nio.ByteBuffer arg2, Org.Apache.Kafka.Common.Header.Header[] arg3)
+        public static SimpleRecord Create(long arg0, Java.Nio.ByteBuffer arg1, Java.Nio.ByteBuffer arg2, Org.Apache.Kafka.Common.Header.Header[] arg3)
         {
             return JVMBridgeBase.New<SimpleRecord>(arg0, arg1, arg2, arg3);
         }
@@ -191,7 +191,7 @@ namespace Org.Apache.Kafka.Common.Record
         /// <summary>
         /// HPA initializer for SimpleRecord(long arg0, Java.Nio.ByteBuffer arg1, Java.Nio.ByteBuffer arg2)
         /// </summary>
-        public static SimpleRecord New(long arg0, Java.Nio.ByteBuffer arg1, Java.Nio.ByteBuffer arg2)
+        public static SimpleRecord Create(long arg0, Java.Nio.ByteBuffer arg1, Java.Nio.ByteBuffer arg2)
         {
             return JVMBridgeBase.New<SimpleRecord>(arg0, arg1, arg2);
         }
@@ -206,7 +206,7 @@ namespace Org.Apache.Kafka.Common.Record
         /// <summary>
         /// HPA initializer for SimpleRecord(Org.Apache.Kafka.Common.Record.Record arg0)
         /// </summary>
-        public static SimpleRecord New(Org.Apache.Kafka.Common.Record.Record arg0)
+        public static SimpleRecord Create(Org.Apache.Kafka.Common.Record.Record arg0)
         {
             return JVMBridgeBase.New<SimpleRecord>(arg0);
         }

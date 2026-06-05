@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <summary>
         /// HPA initializer for ListConsumerGroupOffsetsSpec()
         /// </summary>
-        public static ListConsumerGroupOffsetsSpec New()
+        public static ListConsumerGroupOffsetsSpec Create()
         {
             return JVMBridgeBase.New<ListConsumerGroupOffsetsSpec>();
         }

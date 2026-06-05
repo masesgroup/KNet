@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Tools
         /// <summary>
         /// HPA initializer for LogDirsCommand()
         /// </summary>
-        public static LogDirsCommand New()
+        public static LogDirsCommand Create()
         {
             return JVMBridgeBase.New<LogDirsCommand>();
         }

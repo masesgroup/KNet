@@ -73,7 +73,7 @@ namespace Org.Rocksdb
         /// <summary>
         /// HPA initializer for PlainTableConfig()
         /// </summary>
-        public static PlainTableConfig New()
+        public static PlainTableConfig Create()
         {
             return JVMBridgeBase.New<PlainTableConfig>();
         }

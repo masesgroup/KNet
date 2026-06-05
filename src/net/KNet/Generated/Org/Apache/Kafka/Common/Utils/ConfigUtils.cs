@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Common.Utils
         /// <summary>
         /// HPA initializer for ConfigUtils()
         /// </summary>
-        public static ConfigUtils New()
+        public static ConfigUtils Create()
         {
             return JVMBridgeBase.New<ConfigUtils>();
         }

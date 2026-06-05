@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Common.Security.Scram
         /// <summary>
         /// HPA initializer for ScramCredentialCallback()
         /// </summary>
-        public static ScramCredentialCallback New()
+        public static ScramCredentialCallback Create()
         {
             return JVMBridgeBase.New<ScramCredentialCallback>();
         }

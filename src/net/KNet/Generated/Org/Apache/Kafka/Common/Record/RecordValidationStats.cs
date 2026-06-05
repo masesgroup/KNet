@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Common.Record
         /// <summary>
         /// HPA initializer for RecordValidationStats()
         /// </summary>
-        public static RecordValidationStats New()
+        public static RecordValidationStats Create()
         {
             return JVMBridgeBase.New<RecordValidationStats>();
         }
@@ -90,7 +90,7 @@ namespace Org.Apache.Kafka.Common.Record
         /// <summary>
         /// HPA initializer for RecordValidationStats(long arg0, int arg1, long arg2)
         /// </summary>
-        public static RecordValidationStats New(long arg0, int arg1, long arg2)
+        public static RecordValidationStats Create(long arg0, int arg1, long arg2)
         {
             return JVMBridgeBase.New<RecordValidationStats>(arg0, arg1, arg2);
         }

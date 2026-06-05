@@ -82,7 +82,7 @@ namespace Org.Rocksdb
         /// <summary>
         /// HPA initializer for HistogramData(double arg0, double arg1, double arg2, double arg3, double arg4, double arg5, long arg6, long arg7, double arg8)
         /// </summary>
-        public static HistogramData New(double arg0, double arg1, double arg2, double arg3, double arg4, double arg5, long arg6, long arg7, double arg8)
+        public static HistogramData Create(double arg0, double arg1, double arg2, double arg3, double arg4, double arg5, long arg6, long arg7, double arg8)
         {
             return JVMBridgeBase.New<HistogramData>(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
         }
@@ -101,7 +101,7 @@ namespace Org.Rocksdb
         /// <summary>
         /// HPA initializer for HistogramData(double arg0, double arg1, double arg2, double arg3, double arg4)
         /// </summary>
-        public static HistogramData New(double arg0, double arg1, double arg2, double arg3, double arg4)
+        public static HistogramData Create(double arg0, double arg1, double arg2, double arg3, double arg4)
         {
             return JVMBridgeBase.New<HistogramData>(arg0, arg1, arg2, arg3, arg4);
         }

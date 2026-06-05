@@ -74,7 +74,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <summary>
         /// HPA initializer for AlterUserScramCredentialsResult(Java.Util.Map%3CJava.Lang.String, Org.Apache.Kafka.Common.KafkaFuture%3CJava.Lang.Void%3E%3E arg0)
         /// </summary>
-        public static AlterUserScramCredentialsResult New(Java.Util.Map<Java.Lang.String, Org.Apache.Kafka.Common.KafkaFuture<Java.Lang.Void>> arg0)
+        public static AlterUserScramCredentialsResult Create(Java.Util.Map<Java.Lang.String, Org.Apache.Kafka.Common.KafkaFuture<Java.Lang.Void>> arg0)
         {
             return JVMBridgeBase.New<AlterUserScramCredentialsResult>(arg0);
         }

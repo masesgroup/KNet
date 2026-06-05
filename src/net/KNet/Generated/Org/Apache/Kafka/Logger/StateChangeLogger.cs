@@ -74,7 +74,7 @@ namespace Org.Apache.Kafka.Logger
         /// <summary>
         /// HPA initializer for StateChangeLogger(int arg0)
         /// </summary>
-        public static StateChangeLogger New(int arg0)
+        public static StateChangeLogger Create(int arg0)
         {
             return JVMBridgeBase.New<StateChangeLogger>(arg0);
         }

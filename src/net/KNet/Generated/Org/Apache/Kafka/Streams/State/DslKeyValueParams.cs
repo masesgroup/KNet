@@ -75,7 +75,7 @@ namespace Org.Apache.Kafka.Streams.State
         /// <summary>
         /// HPA initializer for DslKeyValueParams(Java.Lang.String arg0, bool arg1)
         /// </summary>
-        public static DslKeyValueParams New(Java.Lang.String arg0, bool arg1)
+        public static DslKeyValueParams Create(Java.Lang.String arg0, bool arg1)
         {
             return JVMBridgeBase.New<DslKeyValueParams>(arg0, arg1);
         }

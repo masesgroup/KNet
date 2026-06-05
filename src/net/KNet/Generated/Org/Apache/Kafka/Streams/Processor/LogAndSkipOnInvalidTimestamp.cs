@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Streams.Processor
         /// <summary>
         /// HPA initializer for LogAndSkipOnInvalidTimestamp()
         /// </summary>
-        public static LogAndSkipOnInvalidTimestamp New()
+        public static LogAndSkipOnInvalidTimestamp Create()
         {
             return JVMBridgeBase.New<LogAndSkipOnInvalidTimestamp>();
         }

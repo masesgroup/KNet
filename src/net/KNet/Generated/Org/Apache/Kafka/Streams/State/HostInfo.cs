@@ -75,7 +75,7 @@ namespace Org.Apache.Kafka.Streams.State
         /// <summary>
         /// HPA initializer for HostInfo(Java.Lang.String arg0, int arg1)
         /// </summary>
-        public static HostInfo New(Java.Lang.String arg0, int arg1)
+        public static HostInfo Create(Java.Lang.String arg0, int arg1)
         {
             return JVMBridgeBase.New<HostInfo>(arg0, arg1);
         }

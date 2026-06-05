@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Connect.Rest.Basic.Auth.Extension
         /// <summary>
         /// HPA initializer for BasicAuthSecurityRestExtension()
         /// </summary>
-        public static BasicAuthSecurityRestExtension New()
+        public static BasicAuthSecurityRestExtension Create()
         {
             return JVMBridgeBase.New<BasicAuthSecurityRestExtension>();
         }

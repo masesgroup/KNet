@@ -112,7 +112,7 @@ namespace Org.Apache.Kafka.Streams.State
         /// <summary>
         /// HPA initializer for StateSerdes(Java.Lang.String arg0, Org.Apache.Kafka.Common.Serialization.Serde arg1, Org.Apache.Kafka.Common.Serialization.Serde arg2)
         /// </summary>
-        public static StateSerdes New(Java.Lang.String arg0, Org.Apache.Kafka.Common.Serialization.Serde arg1, Org.Apache.Kafka.Common.Serialization.Serde arg2)
+        public static StateSerdes Create(Java.Lang.String arg0, Org.Apache.Kafka.Common.Serialization.Serde arg1, Org.Apache.Kafka.Common.Serialization.Serde arg2)
         {
             return JVMBridgeBase.New<StateSerdes>(arg0, arg1, arg2);
         }
@@ -319,7 +319,7 @@ namespace Org.Apache.Kafka.Streams.State
         /// <summary>
         /// HPA initializer for StateSerdes(Java.Lang.String arg0, Org.Apache.Kafka.Common.Serialization.Serde%3CK%3E arg1, Org.Apache.Kafka.Common.Serialization.Serde%3CV%3E arg2)
         /// </summary>
-        public static StateSerdes<K, V> New(Java.Lang.String arg0, Org.Apache.Kafka.Common.Serialization.Serde<K> arg1, Org.Apache.Kafka.Common.Serialization.Serde<V> arg2)
+        public static StateSerdes<K, V> Create(Java.Lang.String arg0, Org.Apache.Kafka.Common.Serialization.Serde<K> arg1, Org.Apache.Kafka.Common.Serialization.Serde<V> arg2)
         {
             return JVMBridgeBase.New<StateSerdes<K, V>>(arg0, arg1, arg2);
         }

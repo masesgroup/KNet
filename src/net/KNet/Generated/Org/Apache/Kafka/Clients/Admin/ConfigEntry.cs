@@ -183,7 +183,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <summary>
         /// HPA initializer for ConfigEntry(Java.Lang.String arg0, Java.Lang.String arg1, Org.Apache.Kafka.Clients.Admin.ConfigEntry.ConfigSource arg2, bool arg3, bool arg4, Java.Util.List%3COrg.Apache.Kafka.Clients.Admin.ConfigEntry.ConfigSynonym%3E arg5, Org.Apache.Kafka.Clients.Admin.ConfigEntry.ConfigType arg6, Java.Lang.String arg7)
         /// </summary>
-        public static ConfigEntry New(Java.Lang.String arg0, Java.Lang.String arg1, Org.Apache.Kafka.Clients.Admin.ConfigEntry.ConfigSource arg2, bool arg3, bool arg4, Java.Util.List<Org.Apache.Kafka.Clients.Admin.ConfigEntry.ConfigSynonym> arg5, Org.Apache.Kafka.Clients.Admin.ConfigEntry.ConfigType arg6, Java.Lang.String arg7)
+        public static ConfigEntry Create(Java.Lang.String arg0, Java.Lang.String arg1, Org.Apache.Kafka.Clients.Admin.ConfigEntry.ConfigSource arg2, bool arg3, bool arg4, Java.Util.List<Org.Apache.Kafka.Clients.Admin.ConfigEntry.ConfigSynonym> arg5, Org.Apache.Kafka.Clients.Admin.ConfigEntry.ConfigType arg6, Java.Lang.String arg7)
         {
             return JVMBridgeBase.New<ConfigEntry>(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7);
         }
@@ -199,7 +199,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <summary>
         /// HPA initializer for ConfigEntry(Java.Lang.String arg0, Java.Lang.String arg1)
         /// </summary>
-        public static ConfigEntry New(Java.Lang.String arg0, Java.Lang.String arg1)
+        public static ConfigEntry Create(Java.Lang.String arg0, Java.Lang.String arg1)
         {
             return JVMBridgeBase.New<ConfigEntry>(arg0, arg1);
         }

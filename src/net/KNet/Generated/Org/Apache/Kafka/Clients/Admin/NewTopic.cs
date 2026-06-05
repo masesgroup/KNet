@@ -76,7 +76,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <summary>
         /// HPA initializer for NewTopic(Java.Lang.String arg0, int arg1, short arg2)
         /// </summary>
-        public static NewTopic New(Java.Lang.String arg0, int arg1, short arg2)
+        public static NewTopic Create(Java.Lang.String arg0, int arg1, short arg2)
         {
             return JVMBridgeBase.New<NewTopic>(arg0, arg1, arg2);
         }
@@ -92,7 +92,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <summary>
         /// HPA initializer for NewTopic(Java.Lang.String arg0, Java.Util.Map%3CJava.Lang.Integer, Java.Util.List%3CJava.Lang.Integer%3E%3E arg1)
         /// </summary>
-        public static NewTopic New(Java.Lang.String arg0, Java.Util.Map<Java.Lang.Integer, Java.Util.List<Java.Lang.Integer>> arg1)
+        public static NewTopic Create(Java.Lang.String arg0, Java.Util.Map<Java.Lang.Integer, Java.Util.List<Java.Lang.Integer>> arg1)
         {
             return JVMBridgeBase.New<NewTopic>(arg0, arg1);
         }
@@ -109,7 +109,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <summary>
         /// HPA initializer for NewTopic(Java.Lang.String arg0, Java.Util.Optional%3CJava.Lang.Integer%3E arg1, Java.Util.Optional%3CJava.Lang.Short%3E arg2)
         /// </summary>
-        public static NewTopic New(Java.Lang.String arg0, Java.Util.Optional<Java.Lang.Integer> arg1, Java.Util.Optional<Java.Lang.Short> arg2)
+        public static NewTopic Create(Java.Lang.String arg0, Java.Util.Optional<Java.Lang.Integer> arg1, Java.Util.Optional<Java.Lang.Short> arg2)
         {
             return JVMBridgeBase.New<NewTopic>(arg0, arg1, arg2);
         }

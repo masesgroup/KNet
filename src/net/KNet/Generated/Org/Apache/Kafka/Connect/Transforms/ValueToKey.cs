@@ -108,7 +108,7 @@ namespace Org.Apache.Kafka.Connect.Transforms
         /// <summary>
         /// HPA initializer for ValueToKey()
         /// </summary>
-        public static ValueToKey New()
+        public static ValueToKey Create()
         {
             return JVMBridgeBase.New<ValueToKey>();
         }
@@ -217,7 +217,7 @@ namespace Org.Apache.Kafka.Connect.Transforms
         /// <summary>
         /// HPA initializer for ValueToKey()
         /// </summary>
-        public static ValueToKey<R> New()
+        public static ValueToKey<R> Create()
         {
             return JVMBridgeBase.New<ValueToKey<R>>();
         }

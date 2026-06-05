@@ -74,7 +74,7 @@ namespace Org.Rocksdb
         /// <summary>
         /// HPA initializer for DirectSlice(Java.Lang.String arg0)
         /// </summary>
-        public static DirectSlice New(Java.Lang.String arg0)
+        public static DirectSlice Create(Java.Lang.String arg0)
         {
             return JVMBridgeBase.New<DirectSlice>(arg0);
         }
@@ -90,7 +90,7 @@ namespace Org.Rocksdb
         /// <summary>
         /// HPA initializer for DirectSlice(Java.Nio.ByteBuffer arg0, int arg1)
         /// </summary>
-        public static DirectSlice New(Java.Nio.ByteBuffer arg0, int arg1)
+        public static DirectSlice Create(Java.Nio.ByteBuffer arg0, int arg1)
         {
             return JVMBridgeBase.New<DirectSlice>(arg0, arg1);
         }
@@ -105,7 +105,7 @@ namespace Org.Rocksdb
         /// <summary>
         /// HPA initializer for DirectSlice(Java.Nio.ByteBuffer arg0)
         /// </summary>
-        public static DirectSlice New(Java.Nio.ByteBuffer arg0)
+        public static DirectSlice Create(Java.Nio.ByteBuffer arg0)
         {
             return JVMBridgeBase.New<DirectSlice>(arg0);
         }

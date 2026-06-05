@@ -394,7 +394,7 @@ namespace Org.Apache.Kafka.Raft
             /// <summary>
             /// HPA initializer for ReplicaState(Org.Apache.Kafka.Raft.ReplicaKey arg0, bool arg1, Org.Apache.Kafka.Raft.Endpoints arg2)
             /// </summary>
-            public static ReplicaState New(Org.Apache.Kafka.Raft.ReplicaKey arg0, bool arg1, Org.Apache.Kafka.Raft.Endpoints arg2)
+            public static ReplicaState Create(Org.Apache.Kafka.Raft.ReplicaKey arg0, bool arg1, Org.Apache.Kafka.Raft.Endpoints arg2)
             {
                 return JVMBridgeBase.New<ReplicaState>(arg0, arg1, arg2);
             }

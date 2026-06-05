@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <summary>
         /// HPA initializer for AlterPartitionReassignmentsOptions()
         /// </summary>
-        public static AlterPartitionReassignmentsOptions New()
+        public static AlterPartitionReassignmentsOptions Create()
         {
             return JVMBridgeBase.New<AlterPartitionReassignmentsOptions>();
         }

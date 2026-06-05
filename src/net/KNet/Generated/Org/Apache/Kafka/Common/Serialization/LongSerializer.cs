@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Common.Serialization
         /// <summary>
         /// HPA initializer for LongSerializer()
         /// </summary>
-        public static LongSerializer New()
+        public static LongSerializer Create()
         {
             return JVMBridgeBase.New<LongSerializer>();
         }

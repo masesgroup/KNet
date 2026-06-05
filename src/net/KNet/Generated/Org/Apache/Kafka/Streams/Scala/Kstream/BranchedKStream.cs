@@ -110,7 +110,7 @@ namespace Org.Apache.Kafka.Streams.Scala.Kstream
         /// <summary>
         /// HPA initializer for BranchedKStream(Org.Apache.Kafka.Streams.Kstream.BranchedKStream inner)
         /// </summary>
-        public static BranchedKStream New(Org.Apache.Kafka.Streams.Kstream.BranchedKStream inner)
+        public static BranchedKStream Create(Org.Apache.Kafka.Streams.Kstream.BranchedKStream inner)
         {
             return JVMBridgeBase.New<BranchedKStream>(inner);
         }
@@ -164,7 +164,7 @@ namespace Org.Apache.Kafka.Streams.Scala.Kstream
         /// <summary>
         /// HPA initializer for BranchedKStream(Org.Apache.Kafka.Streams.Kstream.BranchedKStream%3CK, V%3E inner)
         /// </summary>
-        public static BranchedKStream<K, V> New(Org.Apache.Kafka.Streams.Kstream.BranchedKStream<K, V> inner)
+        public static BranchedKStream<K, V> Create(Org.Apache.Kafka.Streams.Kstream.BranchedKStream<K, V> inner)
         {
             return JVMBridgeBase.New<BranchedKStream<K, V>>(inner);
         }

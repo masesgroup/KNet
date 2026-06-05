@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Connect.Json
         /// <summary>
         /// HPA initializer for JsonConverter()
         /// </summary>
-        public static JsonConverter New()
+        public static JsonConverter Create()
         {
             return JVMBridgeBase.New<JsonConverter>();
         }
@@ -88,7 +88,7 @@ namespace Org.Apache.Kafka.Connect.Json
         /// <summary>
         /// HPA initializer for JsonConverter(bool arg0)
         /// </summary>
-        public static JsonConverter New(bool arg0)
+        public static JsonConverter Create(bool arg0)
         {
             return JVMBridgeBase.New<JsonConverter>(arg0);
         }

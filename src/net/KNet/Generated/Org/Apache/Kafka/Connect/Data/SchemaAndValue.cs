@@ -75,7 +75,7 @@ namespace Org.Apache.Kafka.Connect.Data
         /// <summary>
         /// HPA initializer for SchemaAndValue(Org.Apache.Kafka.Connect.Data.Schema arg0, object arg1)
         /// </summary>
-        public static SchemaAndValue New(Org.Apache.Kafka.Connect.Data.Schema arg0, object arg1)
+        public static SchemaAndValue Create(Org.Apache.Kafka.Connect.Data.Schema arg0, object arg1)
         {
             return JVMBridgeBase.New<SchemaAndValue>(arg0, arg1);
         }

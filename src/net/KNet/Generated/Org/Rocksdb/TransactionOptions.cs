@@ -73,7 +73,7 @@ namespace Org.Rocksdb
         /// <summary>
         /// HPA initializer for TransactionOptions()
         /// </summary>
-        public static TransactionOptions New()
+        public static TransactionOptions Create()
         {
             return JVMBridgeBase.New<TransactionOptions>();
         }

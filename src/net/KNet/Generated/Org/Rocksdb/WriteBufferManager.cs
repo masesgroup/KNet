@@ -76,7 +76,7 @@ namespace Org.Rocksdb
         /// <summary>
         /// HPA initializer for WriteBufferManager(long arg0, Org.Rocksdb.Cache arg1, bool arg2)
         /// </summary>
-        public static WriteBufferManager New(long arg0, Org.Rocksdb.Cache arg1, bool arg2)
+        public static WriteBufferManager Create(long arg0, Org.Rocksdb.Cache arg1, bool arg2)
         {
             return JVMBridgeBase.New<WriteBufferManager>(arg0, arg1, arg2);
         }
@@ -92,7 +92,7 @@ namespace Org.Rocksdb
         /// <summary>
         /// HPA initializer for WriteBufferManager(long arg0, Org.Rocksdb.Cache arg1)
         /// </summary>
-        public static WriteBufferManager New(long arg0, Org.Rocksdb.Cache arg1)
+        public static WriteBufferManager Create(long arg0, Org.Rocksdb.Cache arg1)
         {
             return JVMBridgeBase.New<WriteBufferManager>(arg0, arg1);
         }

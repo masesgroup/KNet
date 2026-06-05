@@ -111,7 +111,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
         /// <summary>
         /// HPA initializer for ConsumerRecords(Java.Util.Map arg0, Java.Util.Map arg1)
         /// </summary>
-        public static ConsumerRecords New(Java.Util.Map arg0, Java.Util.Map arg1)
+        public static ConsumerRecords Create(Java.Util.Map arg0, Java.Util.Map arg1)
         {
             return JVMBridgeBase.New<ConsumerRecords>(arg0, arg1);
         }
@@ -127,7 +127,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
         /// <summary>
         /// HPA initializer for ConsumerRecords(Java.Util.Map arg0)
         /// </summary>
-        public static ConsumerRecords New(Java.Util.Map arg0)
+        public static ConsumerRecords Create(Java.Util.Map arg0)
         {
             return JVMBridgeBase.New<ConsumerRecords>(arg0);
         }
@@ -244,7 +244,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
         /// <summary>
         /// HPA initializer for ConsumerRecords(Java.Util.Map%3COrg.Apache.Kafka.Common.TopicPartition, Java.Util.List%3COrg.Apache.Kafka.Clients.Consumer.ConsumerRecord%3CK, V%3E%3E%3E arg0, Java.Util.Map%3COrg.Apache.Kafka.Common.TopicPartition, Org.Apache.Kafka.Clients.Consumer.OffsetAndMetadata%3E arg1)
         /// </summary>
-        public static ConsumerRecords<K, V> New(Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Java.Util.List<Org.Apache.Kafka.Clients.Consumer.ConsumerRecord<K, V>>> arg0, Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Org.Apache.Kafka.Clients.Consumer.OffsetAndMetadata> arg1)
+        public static ConsumerRecords<K, V> Create(Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Java.Util.List<Org.Apache.Kafka.Clients.Consumer.ConsumerRecord<K, V>>> arg0, Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Org.Apache.Kafka.Clients.Consumer.OffsetAndMetadata> arg1)
         {
             return JVMBridgeBase.New<ConsumerRecords<K, V>>(arg0, arg1);
         }
@@ -260,7 +260,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
         /// <summary>
         /// HPA initializer for ConsumerRecords(Java.Util.Map%3COrg.Apache.Kafka.Common.TopicPartition, Java.Util.List%3COrg.Apache.Kafka.Clients.Consumer.ConsumerRecord%3CK, V%3E%3E%3E arg0)
         /// </summary>
-        public static ConsumerRecords<K, V> New(Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Java.Util.List<Org.Apache.Kafka.Clients.Consumer.ConsumerRecord<K, V>>> arg0)
+        public static ConsumerRecords<K, V> Create(Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Java.Util.List<Org.Apache.Kafka.Clients.Consumer.ConsumerRecord<K, V>>> arg0)
         {
             return JVMBridgeBase.New<ConsumerRecords<K, V>>(arg0);
         }

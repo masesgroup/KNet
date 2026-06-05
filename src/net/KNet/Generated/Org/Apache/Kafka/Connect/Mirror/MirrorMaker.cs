@@ -76,7 +76,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
         /// <summary>
         /// HPA initializer for MirrorMaker(Java.Util.Map%3CJava.Lang.String, Java.Lang.String%3E arg0, Java.Util.List%3CJava.Lang.String%3E arg1, Org.Apache.Kafka.Common.Utils.Time arg2)
         /// </summary>
-        public static MirrorMaker New(Java.Util.Map<Java.Lang.String, Java.Lang.String> arg0, Java.Util.List<Java.Lang.String> arg1, Org.Apache.Kafka.Common.Utils.Time arg2)
+        public static MirrorMaker Create(Java.Util.Map<Java.Lang.String, Java.Lang.String> arg0, Java.Util.List<Java.Lang.String> arg1, Org.Apache.Kafka.Common.Utils.Time arg2)
         {
             return JVMBridgeBase.New<MirrorMaker>(arg0, arg1, arg2);
         }
@@ -92,7 +92,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
         /// <summary>
         /// HPA initializer for MirrorMaker(Java.Util.Map%3CJava.Lang.String, Java.Lang.String%3E arg0, Java.Util.List%3CJava.Lang.String%3E arg1)
         /// </summary>
-        public static MirrorMaker New(Java.Util.Map<Java.Lang.String, Java.Lang.String> arg0, Java.Util.List<Java.Lang.String> arg1)
+        public static MirrorMaker Create(Java.Util.Map<Java.Lang.String, Java.Lang.String> arg0, Java.Util.List<Java.Lang.String> arg1)
         {
             return JVMBridgeBase.New<MirrorMaker>(arg0, arg1);
         }
@@ -107,7 +107,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
         /// <summary>
         /// HPA initializer for MirrorMaker(Java.Util.Map%3CJava.Lang.String, Java.Lang.String%3E arg0)
         /// </summary>
-        public static MirrorMaker New(Java.Util.Map<Java.Lang.String, Java.Lang.String> arg0)
+        public static MirrorMaker Create(Java.Util.Map<Java.Lang.String, Java.Lang.String> arg0)
         {
             return JVMBridgeBase.New<MirrorMaker>(arg0);
         }
@@ -124,7 +124,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
         /// <summary>
         /// HPA initializer for MirrorMaker(Org.Apache.Kafka.Connect.Mirror.MirrorMakerConfig arg0, Java.Util.List%3CJava.Lang.String%3E arg1, Org.Apache.Kafka.Common.Utils.Time arg2)
         /// </summary>
-        public static MirrorMaker New(Org.Apache.Kafka.Connect.Mirror.MirrorMakerConfig arg0, Java.Util.List<Java.Lang.String> arg1, Org.Apache.Kafka.Common.Utils.Time arg2)
+        public static MirrorMaker Create(Org.Apache.Kafka.Connect.Mirror.MirrorMakerConfig arg0, Java.Util.List<Java.Lang.String> arg1, Org.Apache.Kafka.Common.Utils.Time arg2)
         {
             return JVMBridgeBase.New<MirrorMaker>(arg0, arg1, arg2);
         }

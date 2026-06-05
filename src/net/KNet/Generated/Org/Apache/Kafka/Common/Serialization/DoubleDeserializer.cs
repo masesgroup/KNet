@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Common.Serialization
         /// <summary>
         /// HPA initializer for DoubleDeserializer()
         /// </summary>
-        public static DoubleDeserializer New()
+        public static DoubleDeserializer Create()
         {
             return JVMBridgeBase.New<DoubleDeserializer>();
         }

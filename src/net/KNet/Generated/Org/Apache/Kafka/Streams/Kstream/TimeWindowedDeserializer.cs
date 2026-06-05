@@ -108,7 +108,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <summary>
         /// HPA initializer for TimeWindowedDeserializer()
         /// </summary>
-        public static TimeWindowedDeserializer New()
+        public static TimeWindowedDeserializer Create()
         {
             return JVMBridgeBase.New<TimeWindowedDeserializer>();
         }
@@ -124,7 +124,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <summary>
         /// HPA initializer for TimeWindowedDeserializer(Org.Apache.Kafka.Common.Serialization.Deserializer arg0, Java.Lang.Long arg1)
         /// </summary>
-        public static TimeWindowedDeserializer New(Org.Apache.Kafka.Common.Serialization.Deserializer arg0, Java.Lang.Long arg1)
+        public static TimeWindowedDeserializer Create(Org.Apache.Kafka.Common.Serialization.Deserializer arg0, Java.Lang.Long arg1)
         {
             return JVMBridgeBase.New<TimeWindowedDeserializer>(arg0, arg1);
         }
@@ -222,7 +222,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <summary>
         /// HPA initializer for TimeWindowedDeserializer()
         /// </summary>
-        public static TimeWindowedDeserializer<T> New()
+        public static TimeWindowedDeserializer<T> Create()
         {
             return JVMBridgeBase.New<TimeWindowedDeserializer<T>>();
         }
@@ -238,7 +238,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <summary>
         /// HPA initializer for TimeWindowedDeserializer(Org.Apache.Kafka.Common.Serialization.Deserializer%3CT%3E arg0, Java.Lang.Long arg1)
         /// </summary>
-        public static TimeWindowedDeserializer<T> New(Org.Apache.Kafka.Common.Serialization.Deserializer<T> arg0, Java.Lang.Long arg1)
+        public static TimeWindowedDeserializer<T> Create(Org.Apache.Kafka.Common.Serialization.Deserializer<T> arg0, Java.Lang.Long arg1)
         {
             return JVMBridgeBase.New<TimeWindowedDeserializer<T>>(arg0, arg1);
         }

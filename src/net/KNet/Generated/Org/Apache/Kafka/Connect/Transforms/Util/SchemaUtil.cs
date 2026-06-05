@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Connect.Transforms.Util
         /// <summary>
         /// HPA initializer for SchemaUtil()
         /// </summary>
-        public static SchemaUtil New()
+        public static SchemaUtil Create()
         {
             return JVMBridgeBase.New<SchemaUtil>();
         }

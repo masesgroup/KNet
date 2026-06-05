@@ -77,7 +77,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <summary>
         /// HPA initializer for LogDirDescription(Org.Apache.Kafka.Common.Errors.ApiException arg0, Java.Util.Map%3COrg.Apache.Kafka.Common.TopicPartition, Org.Apache.Kafka.Clients.Admin.ReplicaInfo%3E arg1, long arg2, long arg3)
         /// </summary>
-        public static LogDirDescription New(Org.Apache.Kafka.Common.Errors.ApiException arg0, Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Org.Apache.Kafka.Clients.Admin.ReplicaInfo> arg1, long arg2, long arg3)
+        public static LogDirDescription Create(Org.Apache.Kafka.Common.Errors.ApiException arg0, Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Org.Apache.Kafka.Clients.Admin.ReplicaInfo> arg1, long arg2, long arg3)
         {
             return JVMBridgeBase.New<LogDirDescription>(arg0, arg1, arg2, arg3);
         }
@@ -93,7 +93,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <summary>
         /// HPA initializer for LogDirDescription(Org.Apache.Kafka.Common.Errors.ApiException arg0, Java.Util.Map%3COrg.Apache.Kafka.Common.TopicPartition, Org.Apache.Kafka.Clients.Admin.ReplicaInfo%3E arg1)
         /// </summary>
-        public static LogDirDescription New(Org.Apache.Kafka.Common.Errors.ApiException arg0, Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Org.Apache.Kafka.Clients.Admin.ReplicaInfo> arg1)
+        public static LogDirDescription Create(Org.Apache.Kafka.Common.Errors.ApiException arg0, Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Org.Apache.Kafka.Clients.Admin.ReplicaInfo> arg1)
         {
             return JVMBridgeBase.New<LogDirDescription>(arg0, arg1);
         }

@@ -76,7 +76,7 @@ namespace Org.Apache.Kafka.Connect.Data
         /// <summary>
         /// HPA initializer for Field(Java.Lang.String arg0, int arg1, Org.Apache.Kafka.Connect.Data.Schema arg2)
         /// </summary>
-        public static Field New(Java.Lang.String arg0, int arg1, Org.Apache.Kafka.Connect.Data.Schema arg2)
+        public static Field Create(Java.Lang.String arg0, int arg1, Org.Apache.Kafka.Connect.Data.Schema arg2)
         {
             return JVMBridgeBase.New<Field>(arg0, arg1, arg2);
         }

@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Snapshot
         /// <summary>
         /// HPA initializer for Snapshots()
         /// </summary>
-        public static Snapshots New()
+        public static Snapshots Create()
         {
             return JVMBridgeBase.New<Snapshots>();
         }

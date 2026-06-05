@@ -108,7 +108,7 @@ namespace Org.Apache.Kafka.Tools.Filter
         /// <summary>
         /// HPA initializer for TopicFilter(Java.Lang.String arg0)
         /// </summary>
-        public static TopicFilter New(Java.Lang.String arg0)
+        public static TopicFilter Create(Java.Lang.String arg0)
         {
             return JVMBridgeBase.New<TopicFilter>(arg0);
         }
@@ -164,7 +164,7 @@ namespace Org.Apache.Kafka.Tools.Filter
             /// <summary>
             /// HPA initializer for IncludeList(Java.Lang.String arg0)
             /// </summary>
-            public static IncludeList New(Java.Lang.String arg0)
+            public static IncludeList Create(Java.Lang.String arg0)
             {
                 return JVMBridgeBase.New<IncludeList>(arg0);
             }

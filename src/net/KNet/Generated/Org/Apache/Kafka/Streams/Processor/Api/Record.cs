@@ -113,7 +113,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
         /// <summary>
         /// HPA initializer for Record(object arg0, object arg1, long arg2, Org.Apache.Kafka.Common.Header.Headers arg3)
         /// </summary>
-        public static Record New(object arg0, object arg1, long arg2, Org.Apache.Kafka.Common.Header.Headers arg3)
+        public static Record Create(object arg0, object arg1, long arg2, Org.Apache.Kafka.Common.Header.Headers arg3)
         {
             return JVMBridgeBase.New<Record>(arg0, arg1, arg2, arg3);
         }
@@ -130,7 +130,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
         /// <summary>
         /// HPA initializer for Record(object arg0, object arg1, long arg2)
         /// </summary>
-        public static Record New(object arg0, object arg1, long arg2)
+        public static Record Create(object arg0, object arg1, long arg2)
         {
             return JVMBridgeBase.New<Record>(arg0, arg1, arg2);
         }
@@ -247,7 +247,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
         /// <summary>
         /// HPA initializer for Record(K arg0, V arg1, long arg2, Org.Apache.Kafka.Common.Header.Headers arg3)
         /// </summary>
-        public static Record<K, V> New(K arg0, V arg1, long arg2, Org.Apache.Kafka.Common.Header.Headers arg3)
+        public static Record<K, V> Create(K arg0, V arg1, long arg2, Org.Apache.Kafka.Common.Header.Headers arg3)
         {
             return JVMBridgeBase.New<Record<K, V>>(arg0, arg1, arg2, arg3);
         }
@@ -264,7 +264,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
         /// <summary>
         /// HPA initializer for Record(K arg0, V arg1, long arg2)
         /// </summary>
-        public static Record<K, V> New(K arg0, V arg1, long arg2)
+        public static Record<K, V> Create(K arg0, V arg1, long arg2)
         {
             return JVMBridgeBase.New<Record<K, V>>(arg0, arg1, arg2);
         }

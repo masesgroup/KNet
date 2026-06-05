@@ -77,7 +77,7 @@ namespace Org.Apache.Kafka.Common
         /// <summary>
         /// HPA initializer for Endpoint(Java.Lang.String arg0, Org.Apache.Kafka.Common.Security.Auth.SecurityProtocol arg1, Java.Lang.String arg2, int arg3)
         /// </summary>
-        public static Endpoint New(Java.Lang.String arg0, Org.Apache.Kafka.Common.Security.Auth.SecurityProtocol arg1, Java.Lang.String arg2, int arg3)
+        public static Endpoint Create(Java.Lang.String arg0, Org.Apache.Kafka.Common.Security.Auth.SecurityProtocol arg1, Java.Lang.String arg2, int arg3)
         {
             return JVMBridgeBase.New<Endpoint>(arg0, arg1, arg2, arg3);
         }

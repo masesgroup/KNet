@@ -76,7 +76,7 @@ namespace Org.Apache.Kafka.Common.Metrics.Stats
         /// <summary>
         /// HPA initializer for Meter(Java.Util.Concurrent.TimeUnit arg0, Org.Apache.Kafka.Common.MetricName arg1, Org.Apache.Kafka.Common.MetricName arg2)
         /// </summary>
-        public static Meter New(Java.Util.Concurrent.TimeUnit arg0, Org.Apache.Kafka.Common.MetricName arg1, Org.Apache.Kafka.Common.MetricName arg2)
+        public static Meter Create(Java.Util.Concurrent.TimeUnit arg0, Org.Apache.Kafka.Common.MetricName arg1, Org.Apache.Kafka.Common.MetricName arg2)
         {
             return JVMBridgeBase.New<Meter>(arg0, arg1, arg2);
         }
@@ -94,7 +94,7 @@ namespace Org.Apache.Kafka.Common.Metrics.Stats
         /// <summary>
         /// HPA initializer for Meter(Java.Util.Concurrent.TimeUnit arg0, Org.Apache.Kafka.Common.Metrics.Stats.SampledStat arg1, Org.Apache.Kafka.Common.MetricName arg2, Org.Apache.Kafka.Common.MetricName arg3)
         /// </summary>
-        public static Meter New(Java.Util.Concurrent.TimeUnit arg0, Org.Apache.Kafka.Common.Metrics.Stats.SampledStat arg1, Org.Apache.Kafka.Common.MetricName arg2, Org.Apache.Kafka.Common.MetricName arg3)
+        public static Meter Create(Java.Util.Concurrent.TimeUnit arg0, Org.Apache.Kafka.Common.Metrics.Stats.SampledStat arg1, Org.Apache.Kafka.Common.MetricName arg2, Org.Apache.Kafka.Common.MetricName arg3)
         {
             return JVMBridgeBase.New<Meter>(arg0, arg1, arg2, arg3);
         }
@@ -110,7 +110,7 @@ namespace Org.Apache.Kafka.Common.Metrics.Stats
         /// <summary>
         /// HPA initializer for Meter(Org.Apache.Kafka.Common.MetricName arg0, Org.Apache.Kafka.Common.MetricName arg1)
         /// </summary>
-        public static Meter New(Org.Apache.Kafka.Common.MetricName arg0, Org.Apache.Kafka.Common.MetricName arg1)
+        public static Meter Create(Org.Apache.Kafka.Common.MetricName arg0, Org.Apache.Kafka.Common.MetricName arg1)
         {
             return JVMBridgeBase.New<Meter>(arg0, arg1);
         }
@@ -127,7 +127,7 @@ namespace Org.Apache.Kafka.Common.Metrics.Stats
         /// <summary>
         /// HPA initializer for Meter(Org.Apache.Kafka.Common.Metrics.Stats.SampledStat arg0, Org.Apache.Kafka.Common.MetricName arg1, Org.Apache.Kafka.Common.MetricName arg2)
         /// </summary>
-        public static Meter New(Org.Apache.Kafka.Common.Metrics.Stats.SampledStat arg0, Org.Apache.Kafka.Common.MetricName arg1, Org.Apache.Kafka.Common.MetricName arg2)
+        public static Meter Create(Org.Apache.Kafka.Common.Metrics.Stats.SampledStat arg0, Org.Apache.Kafka.Common.MetricName arg1, Org.Apache.Kafka.Common.MetricName arg2)
         {
             return JVMBridgeBase.New<Meter>(arg0, arg1, arg2);
         }

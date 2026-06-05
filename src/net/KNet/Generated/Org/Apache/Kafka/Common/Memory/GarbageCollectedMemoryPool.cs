@@ -77,7 +77,7 @@ namespace Org.Apache.Kafka.Common.Memory
         /// <summary>
         /// HPA initializer for GarbageCollectedMemoryPool(long arg0, int arg1, bool arg2, Org.Apache.Kafka.Common.Metrics.Sensor arg3)
         /// </summary>
-        public static GarbageCollectedMemoryPool New(long arg0, int arg1, bool arg2, Org.Apache.Kafka.Common.Metrics.Sensor arg3)
+        public static GarbageCollectedMemoryPool Create(long arg0, int arg1, bool arg2, Org.Apache.Kafka.Common.Metrics.Sensor arg3)
         {
             return JVMBridgeBase.New<GarbageCollectedMemoryPool>(arg0, arg1, arg2, arg3);
         }

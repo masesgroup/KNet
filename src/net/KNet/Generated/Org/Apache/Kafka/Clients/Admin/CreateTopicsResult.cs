@@ -184,7 +184,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             /// <summary>
             /// HPA initializer for TopicMetadataAndConfig(Org.Apache.Kafka.Common.Errors.ApiException arg0)
             /// </summary>
-            public static TopicMetadataAndConfig New(Org.Apache.Kafka.Common.Errors.ApiException arg0)
+            public static TopicMetadataAndConfig Create(Org.Apache.Kafka.Common.Errors.ApiException arg0)
             {
                 return JVMBridgeBase.New<TopicMetadataAndConfig>(arg0);
             }
@@ -202,7 +202,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             /// <summary>
             /// HPA initializer for TopicMetadataAndConfig(Org.Apache.Kafka.Common.Uuid arg0, int arg1, int arg2, Org.Apache.Kafka.Clients.Admin.Config arg3)
             /// </summary>
-            public static TopicMetadataAndConfig New(Org.Apache.Kafka.Common.Uuid arg0, int arg1, int arg2, Org.Apache.Kafka.Clients.Admin.Config arg3)
+            public static TopicMetadataAndConfig Create(Org.Apache.Kafka.Common.Uuid arg0, int arg1, int arg2, Org.Apache.Kafka.Clients.Admin.Config arg3)
             {
                 return JVMBridgeBase.New<TopicMetadataAndConfig>(arg0, arg1, arg2, arg3);
             }

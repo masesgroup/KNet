@@ -73,7 +73,7 @@ namespace Org.Rocksdb
         /// <summary>
         /// HPA initializer for TableFormatConfig()
         /// </summary>
-        public static TableFormatConfig New()
+        public static TableFormatConfig Create()
         {
             return JVMBridgeBase.New<TableFormatConfig>();
         }

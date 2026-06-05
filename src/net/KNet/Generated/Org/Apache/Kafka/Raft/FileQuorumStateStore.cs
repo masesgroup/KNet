@@ -74,7 +74,7 @@ namespace Org.Apache.Kafka.Raft
         /// <summary>
         /// HPA initializer for FileQuorumStateStore(Java.Io.File arg0)
         /// </summary>
-        public static FileQuorumStateStore New(Java.Io.File arg0)
+        public static FileQuorumStateStore Create(Java.Io.File arg0)
         {
             return JVMBridgeBase.New<FileQuorumStateStore>(arg0);
         }

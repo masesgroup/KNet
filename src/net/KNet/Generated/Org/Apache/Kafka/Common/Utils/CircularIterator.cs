@@ -109,7 +109,7 @@ namespace Org.Apache.Kafka.Common.Utils
         /// <summary>
         /// HPA initializer for CircularIterator(Java.Util.Collection arg0)
         /// </summary>
-        public static CircularIterator New(Java.Util.Collection arg0)
+        public static CircularIterator Create(Java.Util.Collection arg0)
         {
             return JVMBridgeBase.New<CircularIterator>(arg0);
         }
@@ -186,7 +186,7 @@ namespace Org.Apache.Kafka.Common.Utils
         /// <summary>
         /// HPA initializer for CircularIterator(Java.Util.Collection%3CT%3E arg0)
         /// </summary>
-        public static CircularIterator<T> New(Java.Util.Collection<T> arg0)
+        public static CircularIterator<T> Create(Java.Util.Collection<T> arg0)
         {
             return JVMBridgeBase.New<CircularIterator<T>>(arg0);
         }

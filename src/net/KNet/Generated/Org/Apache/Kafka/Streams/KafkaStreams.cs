@@ -263,7 +263,7 @@ namespace Org.Apache.Kafka.Streams
         /// <summary>
         /// HPA initializer for KafkaStreams(Org.Apache.Kafka.Streams.Topology arg0, Java.Util.Properties arg1, Org.Apache.Kafka.Common.Utils.Time arg2)
         /// </summary>
-        public static KafkaStreams New(Org.Apache.Kafka.Streams.Topology arg0, Java.Util.Properties arg1, Org.Apache.Kafka.Common.Utils.Time arg2)
+        public static KafkaStreams Create(Org.Apache.Kafka.Streams.Topology arg0, Java.Util.Properties arg1, Org.Apache.Kafka.Common.Utils.Time arg2)
         {
             return JVMBridgeBase.New<KafkaStreams>(arg0, arg1, arg2);
         }
@@ -281,7 +281,7 @@ namespace Org.Apache.Kafka.Streams
         /// <summary>
         /// HPA initializer for KafkaStreams(Org.Apache.Kafka.Streams.Topology arg0, Java.Util.Properties arg1, Org.Apache.Kafka.Streams.KafkaClientSupplier arg2, Org.Apache.Kafka.Common.Utils.Time arg3)
         /// </summary>
-        public static KafkaStreams New(Org.Apache.Kafka.Streams.Topology arg0, Java.Util.Properties arg1, Org.Apache.Kafka.Streams.KafkaClientSupplier arg2, Org.Apache.Kafka.Common.Utils.Time arg3)
+        public static KafkaStreams Create(Org.Apache.Kafka.Streams.Topology arg0, Java.Util.Properties arg1, Org.Apache.Kafka.Streams.KafkaClientSupplier arg2, Org.Apache.Kafka.Common.Utils.Time arg3)
         {
             return JVMBridgeBase.New<KafkaStreams>(arg0, arg1, arg2, arg3);
         }
@@ -298,7 +298,7 @@ namespace Org.Apache.Kafka.Streams
         /// <summary>
         /// HPA initializer for KafkaStreams(Org.Apache.Kafka.Streams.Topology arg0, Java.Util.Properties arg1, Org.Apache.Kafka.Streams.KafkaClientSupplier arg2)
         /// </summary>
-        public static KafkaStreams New(Org.Apache.Kafka.Streams.Topology arg0, Java.Util.Properties arg1, Org.Apache.Kafka.Streams.KafkaClientSupplier arg2)
+        public static KafkaStreams Create(Org.Apache.Kafka.Streams.Topology arg0, Java.Util.Properties arg1, Org.Apache.Kafka.Streams.KafkaClientSupplier arg2)
         {
             return JVMBridgeBase.New<KafkaStreams>(arg0, arg1, arg2);
         }
@@ -314,7 +314,7 @@ namespace Org.Apache.Kafka.Streams
         /// <summary>
         /// HPA initializer for KafkaStreams(Org.Apache.Kafka.Streams.Topology arg0, Java.Util.Properties arg1)
         /// </summary>
-        public static KafkaStreams New(Org.Apache.Kafka.Streams.Topology arg0, Java.Util.Properties arg1)
+        public static KafkaStreams Create(Org.Apache.Kafka.Streams.Topology arg0, Java.Util.Properties arg1)
         {
             return JVMBridgeBase.New<KafkaStreams>(arg0, arg1);
         }
@@ -331,7 +331,7 @@ namespace Org.Apache.Kafka.Streams
         /// <summary>
         /// HPA initializer for KafkaStreams(Org.Apache.Kafka.Streams.Topology arg0, Org.Apache.Kafka.Streams.StreamsConfig arg1, Org.Apache.Kafka.Common.Utils.Time arg2)
         /// </summary>
-        public static KafkaStreams New(Org.Apache.Kafka.Streams.Topology arg0, Org.Apache.Kafka.Streams.StreamsConfig arg1, Org.Apache.Kafka.Common.Utils.Time arg2)
+        public static KafkaStreams Create(Org.Apache.Kafka.Streams.Topology arg0, Org.Apache.Kafka.Streams.StreamsConfig arg1, Org.Apache.Kafka.Common.Utils.Time arg2)
         {
             return JVMBridgeBase.New<KafkaStreams>(arg0, arg1, arg2);
         }
@@ -348,7 +348,7 @@ namespace Org.Apache.Kafka.Streams
         /// <summary>
         /// HPA initializer for KafkaStreams(Org.Apache.Kafka.Streams.Topology arg0, Org.Apache.Kafka.Streams.StreamsConfig arg1, Org.Apache.Kafka.Streams.KafkaClientSupplier arg2)
         /// </summary>
-        public static KafkaStreams New(Org.Apache.Kafka.Streams.Topology arg0, Org.Apache.Kafka.Streams.StreamsConfig arg1, Org.Apache.Kafka.Streams.KafkaClientSupplier arg2)
+        public static KafkaStreams Create(Org.Apache.Kafka.Streams.Topology arg0, Org.Apache.Kafka.Streams.StreamsConfig arg1, Org.Apache.Kafka.Streams.KafkaClientSupplier arg2)
         {
             return JVMBridgeBase.New<KafkaStreams>(arg0, arg1, arg2);
         }
@@ -364,7 +364,7 @@ namespace Org.Apache.Kafka.Streams
         /// <summary>
         /// HPA initializer for KafkaStreams(Org.Apache.Kafka.Streams.Topology arg0, Org.Apache.Kafka.Streams.StreamsConfig arg1)
         /// </summary>
-        public static KafkaStreams New(Org.Apache.Kafka.Streams.Topology arg0, Org.Apache.Kafka.Streams.StreamsConfig arg1)
+        public static KafkaStreams Create(Org.Apache.Kafka.Streams.Topology arg0, Org.Apache.Kafka.Streams.StreamsConfig arg1)
         {
             return JVMBridgeBase.New<KafkaStreams>(arg0, arg1);
         }
@@ -639,7 +639,7 @@ namespace Org.Apache.Kafka.Streams
             /// <summary>
             /// HPA initializer for CloseOptions()
             /// </summary>
-            public static CloseOptions New()
+            public static CloseOptions Create()
             {
                 return JVMBridgeBase.New<CloseOptions>();
             }

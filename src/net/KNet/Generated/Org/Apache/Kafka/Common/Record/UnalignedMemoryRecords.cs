@@ -74,7 +74,7 @@ namespace Org.Apache.Kafka.Common.Record
         /// <summary>
         /// HPA initializer for UnalignedMemoryRecords(Java.Nio.ByteBuffer arg0)
         /// </summary>
-        public static UnalignedMemoryRecords New(Java.Nio.ByteBuffer arg0)
+        public static UnalignedMemoryRecords Create(Java.Nio.ByteBuffer arg0)
         {
             return JVMBridgeBase.New<UnalignedMemoryRecords>(arg0);
         }

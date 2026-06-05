@@ -74,7 +74,7 @@ namespace Org.Apache.Kafka.Connect.Cli
         /// <summary>
         /// HPA initializer for ConnectStandalone(params Java.Lang.String[] arg0)
         /// </summary>
-        public static ConnectStandalone New(params Java.Lang.String[] arg0)
+        public static ConnectStandalone Create(params Java.Lang.String[] arg0)
         {
             return JVMBridgeBase.New<ConnectStandalone>(arg0);
         }

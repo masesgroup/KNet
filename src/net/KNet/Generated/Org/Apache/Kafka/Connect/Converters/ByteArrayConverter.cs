@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Connect.Converters
         /// <summary>
         /// HPA initializer for ByteArrayConverter()
         /// </summary>
-        public static ByteArrayConverter New()
+        public static ByteArrayConverter Create()
         {
             return JVMBridgeBase.New<ByteArrayConverter>();
         }

@@ -76,7 +76,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <summary>
         /// HPA initializer for RaftVoterEndpoint(Java.Lang.String arg0, Java.Lang.String arg1, int arg2)
         /// </summary>
-        public static RaftVoterEndpoint New(Java.Lang.String arg0, Java.Lang.String arg1, int arg2)
+        public static RaftVoterEndpoint Create(Java.Lang.String arg0, Java.Lang.String arg1, int arg2)
         {
             return JVMBridgeBase.New<RaftVoterEndpoint>(arg0, arg1, arg2);
         }

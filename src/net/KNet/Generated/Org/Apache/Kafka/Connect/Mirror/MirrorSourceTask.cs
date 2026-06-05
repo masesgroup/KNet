@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
         /// <summary>
         /// HPA initializer for MirrorSourceTask()
         /// </summary>
-        public static MirrorSourceTask New()
+        public static MirrorSourceTask Create()
         {
             return JVMBridgeBase.New<MirrorSourceTask>();
         }

@@ -74,7 +74,7 @@ namespace Org.Apache.Kafka.Streams.Scala
         /// <summary>
         /// HPA initializer for StreamsBuilder(Org.Apache.Kafka.Streams.StreamsBuilder inner)
         /// </summary>
-        public static StreamsBuilder New(Org.Apache.Kafka.Streams.StreamsBuilder inner)
+        public static StreamsBuilder Create(Org.Apache.Kafka.Streams.StreamsBuilder inner)
         {
             return JVMBridgeBase.New<StreamsBuilder>(inner);
         }

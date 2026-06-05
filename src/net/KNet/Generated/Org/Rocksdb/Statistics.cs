@@ -73,7 +73,7 @@ namespace Org.Rocksdb
         /// <summary>
         /// HPA initializer for Statistics()
         /// </summary>
-        public static Statistics New()
+        public static Statistics Create()
         {
             return JVMBridgeBase.New<Statistics>();
         }
@@ -89,7 +89,7 @@ namespace Org.Rocksdb
         /// <summary>
         /// HPA initializer for Statistics(Java.Util.EnumSet%3COrg.Rocksdb.HistogramType%3E arg0, Org.Rocksdb.Statistics arg1)
         /// </summary>
-        public static Statistics New(Java.Util.EnumSet<Org.Rocksdb.HistogramType> arg0, Org.Rocksdb.Statistics arg1)
+        public static Statistics Create(Java.Util.EnumSet<Org.Rocksdb.HistogramType> arg0, Org.Rocksdb.Statistics arg1)
         {
             return JVMBridgeBase.New<Statistics>(arg0, arg1);
         }
@@ -104,7 +104,7 @@ namespace Org.Rocksdb
         /// <summary>
         /// HPA initializer for Statistics(Java.Util.EnumSet%3COrg.Rocksdb.HistogramType%3E arg0)
         /// </summary>
-        public static Statistics New(Java.Util.EnumSet<Org.Rocksdb.HistogramType> arg0)
+        public static Statistics Create(Java.Util.EnumSet<Org.Rocksdb.HistogramType> arg0)
         {
             return JVMBridgeBase.New<Statistics>(arg0);
         }
@@ -119,7 +119,7 @@ namespace Org.Rocksdb
         /// <summary>
         /// HPA initializer for Statistics(Org.Rocksdb.Statistics arg0)
         /// </summary>
-        public static Statistics New(Org.Rocksdb.Statistics arg0)
+        public static Statistics Create(Org.Rocksdb.Statistics arg0)
         {
             return JVMBridgeBase.New<Statistics>(arg0);
         }

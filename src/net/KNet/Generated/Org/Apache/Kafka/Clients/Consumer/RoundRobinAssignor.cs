@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
         /// <summary>
         /// HPA initializer for RoundRobinAssignor()
         /// </summary>
-        public static RoundRobinAssignor New()
+        public static RoundRobinAssignor Create()
         {
             return JVMBridgeBase.New<RoundRobinAssignor>();
         }

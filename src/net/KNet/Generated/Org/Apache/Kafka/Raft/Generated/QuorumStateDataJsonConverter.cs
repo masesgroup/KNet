@@ -107,7 +107,7 @@ namespace Org.Apache.Kafka.Raft.Generated
         /// <summary>
         /// HPA initializer for QuorumStateDataJsonConverter()
         /// </summary>
-        public static QuorumStateDataJsonConverter New()
+        public static QuorumStateDataJsonConverter Create()
         {
             return JVMBridgeBase.New<QuorumStateDataJsonConverter>();
         }
@@ -145,7 +145,7 @@ namespace Org.Apache.Kafka.Raft.Generated
             /// <summary>
             /// HPA initializer for VoterJsonConverter()
             /// </summary>
-            public static VoterJsonConverter New()
+            public static VoterJsonConverter Create()
             {
                 return JVMBridgeBase.New<VoterJsonConverter>();
             }

@@ -73,7 +73,7 @@ namespace Org.Rocksdb
         /// <summary>
         /// HPA initializer for UInt64AddOperator()
         /// </summary>
-        public static UInt64AddOperator New()
+        public static UInt64AddOperator Create()
         {
             return JVMBridgeBase.New<UInt64AddOperator>();
         }

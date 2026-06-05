@@ -73,7 +73,7 @@ namespace Org.Rocksdb
         /// <summary>
         /// HPA initializer for FlushOptions()
         /// </summary>
-        public static FlushOptions New()
+        public static FlushOptions Create()
         {
             return JVMBridgeBase.New<FlushOptions>();
         }

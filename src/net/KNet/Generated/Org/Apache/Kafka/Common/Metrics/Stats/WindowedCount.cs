@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Common.Metrics.Stats
         /// <summary>
         /// HPA initializer for WindowedCount()
         /// </summary>
-        public static WindowedCount New()
+        public static WindowedCount Create()
         {
             return JVMBridgeBase.New<WindowedCount>();
         }

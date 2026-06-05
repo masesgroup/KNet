@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <summary>
         /// HPA initializer for DeleteRecordsOptions()
         /// </summary>
-        public static DeleteRecordsOptions New()
+        public static DeleteRecordsOptions Create()
         {
             return JVMBridgeBase.New<DeleteRecordsOptions>();
         }

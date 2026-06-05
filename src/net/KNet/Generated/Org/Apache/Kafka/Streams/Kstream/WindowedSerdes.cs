@@ -211,7 +211,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <summary>
         /// HPA initializer for WindowedSerdes()
         /// </summary>
-        public static WindowedSerdes New()
+        public static WindowedSerdes Create()
         {
             return JVMBridgeBase.New<WindowedSerdes>();
         }
@@ -291,7 +291,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
             /// <summary>
             /// HPA initializer for SessionWindowedSerde()
             /// </summary>
-            public static SessionWindowedSerde New()
+            public static SessionWindowedSerde Create()
             {
                 return JVMBridgeBase.New<SessionWindowedSerde>();
             }
@@ -306,7 +306,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
             /// <summary>
             /// HPA initializer for SessionWindowedSerde(Org.Apache.Kafka.Common.Serialization.Serde arg0)
             /// </summary>
-            public static SessionWindowedSerde New(Org.Apache.Kafka.Common.Serialization.Serde arg0)
+            public static SessionWindowedSerde Create(Org.Apache.Kafka.Common.Serialization.Serde arg0)
             {
                 return JVMBridgeBase.New<SessionWindowedSerde>(arg0);
             }
@@ -351,7 +351,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
             /// <summary>
             /// HPA initializer for SessionWindowedSerde()
             /// </summary>
-            public static SessionWindowedSerde<T> New()
+            public static SessionWindowedSerde<T> Create()
             {
                 return JVMBridgeBase.New<SessionWindowedSerde<T>>();
             }
@@ -366,7 +366,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
             /// <summary>
             /// HPA initializer for SessionWindowedSerde(Org.Apache.Kafka.Common.Serialization.Serde%3CT%3E arg0)
             /// </summary>
-            public static SessionWindowedSerde<T> New(Org.Apache.Kafka.Common.Serialization.Serde<T> arg0)
+            public static SessionWindowedSerde<T> Create(Org.Apache.Kafka.Common.Serialization.Serde<T> arg0)
             {
                 return JVMBridgeBase.New<SessionWindowedSerde<T>>(arg0);
             }
@@ -415,7 +415,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
             /// <summary>
             /// HPA initializer for TimeWindowedSerde()
             /// </summary>
-            public static TimeWindowedSerde New()
+            public static TimeWindowedSerde Create()
             {
                 return JVMBridgeBase.New<TimeWindowedSerde>();
             }
@@ -431,7 +431,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
             /// <summary>
             /// HPA initializer for TimeWindowedSerde(Org.Apache.Kafka.Common.Serialization.Serde arg0, long arg1)
             /// </summary>
-            public static TimeWindowedSerde New(Org.Apache.Kafka.Common.Serialization.Serde arg0, long arg1)
+            public static TimeWindowedSerde Create(Org.Apache.Kafka.Common.Serialization.Serde arg0, long arg1)
             {
                 return JVMBridgeBase.New<TimeWindowedSerde>(arg0, arg1);
             }
@@ -485,7 +485,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
             /// <summary>
             /// HPA initializer for TimeWindowedSerde()
             /// </summary>
-            public static TimeWindowedSerde<T> New()
+            public static TimeWindowedSerde<T> Create()
             {
                 return JVMBridgeBase.New<TimeWindowedSerde<T>>();
             }
@@ -501,7 +501,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
             /// <summary>
             /// HPA initializer for TimeWindowedSerde(Org.Apache.Kafka.Common.Serialization.Serde%3CT%3E arg0, long arg1)
             /// </summary>
-            public static TimeWindowedSerde<T> New(Org.Apache.Kafka.Common.Serialization.Serde<T> arg0, long arg1)
+            public static TimeWindowedSerde<T> Create(Org.Apache.Kafka.Common.Serialization.Serde<T> arg0, long arg1)
             {
                 return JVMBridgeBase.New<TimeWindowedSerde<T>>(arg0, arg1);
             }

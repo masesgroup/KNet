@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Common.Security.Oauthbearer
         /// <summary>
         /// HPA initializer for JwtBearerJwtRetriever()
         /// </summary>
-        public static JwtBearerJwtRetriever New()
+        public static JwtBearerJwtRetriever Create()
         {
             return JVMBridgeBase.New<JwtBearerJwtRetriever>();
         }
@@ -88,7 +88,7 @@ namespace Org.Apache.Kafka.Common.Security.Oauthbearer
         /// <summary>
         /// HPA initializer for JwtBearerJwtRetriever(Org.Apache.Kafka.Common.Utils.Time arg0)
         /// </summary>
-        public static JwtBearerJwtRetriever New(Org.Apache.Kafka.Common.Utils.Time arg0)
+        public static JwtBearerJwtRetriever Create(Org.Apache.Kafka.Common.Utils.Time arg0)
         {
             return JVMBridgeBase.New<JwtBearerJwtRetriever>(arg0);
         }

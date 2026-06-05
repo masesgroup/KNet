@@ -144,7 +144,7 @@ namespace Org.Apache.Kafka.Streams
         /// <summary>
         /// HPA initializer for TopologyConfig(Java.Lang.String arg0, Org.Apache.Kafka.Streams.StreamsConfig arg1, Java.Util.Properties arg2)
         /// </summary>
-        public static TopologyConfig New(Java.Lang.String arg0, Org.Apache.Kafka.Streams.StreamsConfig arg1, Java.Util.Properties arg2)
+        public static TopologyConfig Create(Java.Lang.String arg0, Org.Apache.Kafka.Streams.StreamsConfig arg1, Java.Util.Properties arg2)
         {
             return JVMBridgeBase.New<TopologyConfig>(arg0, arg1, arg2);
         }
@@ -159,7 +159,7 @@ namespace Org.Apache.Kafka.Streams
         /// <summary>
         /// HPA initializer for TopologyConfig(Org.Apache.Kafka.Streams.StreamsConfig arg0)
         /// </summary>
-        public static TopologyConfig New(Org.Apache.Kafka.Streams.StreamsConfig arg0)
+        public static TopologyConfig Create(Org.Apache.Kafka.Streams.StreamsConfig arg0)
         {
             return JVMBridgeBase.New<TopologyConfig>(arg0);
         }
@@ -285,7 +285,7 @@ namespace Org.Apache.Kafka.Streams
             /// <summary>
             /// HPA initializer for InternalConfig()
             /// </summary>
-            public static InternalConfig New()
+            public static InternalConfig Create()
             {
                 return JVMBridgeBase.New<InternalConfig>();
             }

@@ -766,7 +766,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
             /// <summary>
             /// HPA initializer for Assignment(Java.Util.List%3COrg.Apache.Kafka.Common.TopicPartition%3E arg0, Java.Nio.ByteBuffer arg1)
             /// </summary>
-            public static Assignment New(Java.Util.List<Org.Apache.Kafka.Common.TopicPartition> arg0, Java.Nio.ByteBuffer arg1)
+            public static Assignment Create(Java.Util.List<Org.Apache.Kafka.Common.TopicPartition> arg0, Java.Nio.ByteBuffer arg1)
             {
                 return JVMBridgeBase.New<Assignment>(arg0, arg1);
             }
@@ -781,7 +781,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
             /// <summary>
             /// HPA initializer for Assignment(Java.Util.List%3COrg.Apache.Kafka.Common.TopicPartition%3E arg0)
             /// </summary>
-            public static Assignment New(Java.Util.List<Org.Apache.Kafka.Common.TopicPartition> arg0)
+            public static Assignment Create(Java.Util.List<Org.Apache.Kafka.Common.TopicPartition> arg0)
             {
                 return JVMBridgeBase.New<Assignment>(arg0);
             }
@@ -843,7 +843,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
             /// <summary>
             /// HPA initializer for GroupAssignment(Java.Util.Map%3CJava.Lang.String, Org.Apache.Kafka.Clients.Consumer.ConsumerPartitionAssignor.Assignment%3E arg0)
             /// </summary>
-            public static GroupAssignment New(Java.Util.Map<Java.Lang.String, Org.Apache.Kafka.Clients.Consumer.ConsumerPartitionAssignor.Assignment> arg0)
+            public static GroupAssignment Create(Java.Util.Map<Java.Lang.String, Org.Apache.Kafka.Clients.Consumer.ConsumerPartitionAssignor.Assignment> arg0)
             {
                 return JVMBridgeBase.New<GroupAssignment>(arg0);
             }
@@ -897,7 +897,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
             /// <summary>
             /// HPA initializer for GroupSubscription(Java.Util.Map%3CJava.Lang.String, Org.Apache.Kafka.Clients.Consumer.ConsumerPartitionAssignor.Subscription%3E arg0)
             /// </summary>
-            public static GroupSubscription New(Java.Util.Map<Java.Lang.String, Org.Apache.Kafka.Clients.Consumer.ConsumerPartitionAssignor.Subscription> arg0)
+            public static GroupSubscription Create(Java.Util.Map<Java.Lang.String, Org.Apache.Kafka.Clients.Consumer.ConsumerPartitionAssignor.Subscription> arg0)
             {
                 return JVMBridgeBase.New<GroupSubscription>(arg0);
             }
@@ -1028,7 +1028,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
             /// <summary>
             /// HPA initializer for Subscription(Java.Util.List%3CJava.Lang.String%3E arg0, Java.Nio.ByteBuffer arg1, Java.Util.List%3COrg.Apache.Kafka.Common.TopicPartition%3E arg2, int arg3, Java.Util.Optional%3CJava.Lang.String%3E arg4)
             /// </summary>
-            public static Subscription New(Java.Util.List<Java.Lang.String> arg0, Java.Nio.ByteBuffer arg1, Java.Util.List<Org.Apache.Kafka.Common.TopicPartition> arg2, int arg3, Java.Util.Optional<Java.Lang.String> arg4)
+            public static Subscription Create(Java.Util.List<Java.Lang.String> arg0, Java.Nio.ByteBuffer arg1, Java.Util.List<Org.Apache.Kafka.Common.TopicPartition> arg2, int arg3, Java.Util.Optional<Java.Lang.String> arg4)
             {
                 return JVMBridgeBase.New<Subscription>(arg0, arg1, arg2, arg3, arg4);
             }
@@ -1045,7 +1045,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
             /// <summary>
             /// HPA initializer for Subscription(Java.Util.List%3CJava.Lang.String%3E arg0, Java.Nio.ByteBuffer arg1, Java.Util.List%3COrg.Apache.Kafka.Common.TopicPartition%3E arg2)
             /// </summary>
-            public static Subscription New(Java.Util.List<Java.Lang.String> arg0, Java.Nio.ByteBuffer arg1, Java.Util.List<Org.Apache.Kafka.Common.TopicPartition> arg2)
+            public static Subscription Create(Java.Util.List<Java.Lang.String> arg0, Java.Nio.ByteBuffer arg1, Java.Util.List<Org.Apache.Kafka.Common.TopicPartition> arg2)
             {
                 return JVMBridgeBase.New<Subscription>(arg0, arg1, arg2);
             }
@@ -1061,7 +1061,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
             /// <summary>
             /// HPA initializer for Subscription(Java.Util.List%3CJava.Lang.String%3E arg0, Java.Nio.ByteBuffer arg1)
             /// </summary>
-            public static Subscription New(Java.Util.List<Java.Lang.String> arg0, Java.Nio.ByteBuffer arg1)
+            public static Subscription Create(Java.Util.List<Java.Lang.String> arg0, Java.Nio.ByteBuffer arg1)
             {
                 return JVMBridgeBase.New<Subscription>(arg0, arg1);
             }
@@ -1076,7 +1076,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
             /// <summary>
             /// HPA initializer for Subscription(Java.Util.List%3CJava.Lang.String%3E arg0)
             /// </summary>
-            public static Subscription New(Java.Util.List<Java.Lang.String> arg0)
+            public static Subscription Create(Java.Util.List<Java.Lang.String> arg0)
             {
                 return JVMBridgeBase.New<Subscription>(arg0);
             }

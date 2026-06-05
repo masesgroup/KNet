@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <summary>
         /// HPA initializer for ListConfigResourcesOptions()
         /// </summary>
-        public static ListConfigResourcesOptions New()
+        public static ListConfigResourcesOptions Create()
         {
             return JVMBridgeBase.New<ListConfigResourcesOptions>();
         }

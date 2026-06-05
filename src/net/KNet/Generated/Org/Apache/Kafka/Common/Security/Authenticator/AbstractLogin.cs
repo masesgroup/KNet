@@ -107,7 +107,7 @@ namespace Org.Apache.Kafka.Common.Security.Authenticator
         /// <summary>
         /// HPA initializer for AbstractLogin()
         /// </summary>
-        public static AbstractLogin New()
+        public static AbstractLogin Create()
         {
             return JVMBridgeBase.New<AbstractLogin>();
         }
@@ -173,7 +173,7 @@ namespace Org.Apache.Kafka.Common.Security.Authenticator
             /// <summary>
             /// HPA initializer for DefaultLoginCallbackHandler()
             /// </summary>
-            public static DefaultLoginCallbackHandler New()
+            public static DefaultLoginCallbackHandler Create()
             {
                 return JVMBridgeBase.New<DefaultLoginCallbackHandler>();
             }

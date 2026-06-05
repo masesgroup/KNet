@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Common.Config
         /// <summary>
         /// HPA initializer for SaslConfigs()
         /// </summary>
-        public static SaslConfigs New()
+        public static SaslConfigs Create()
         {
             return JVMBridgeBase.New<SaslConfigs>();
         }

@@ -80,7 +80,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <summary>
         /// HPA initializer for ShareGroupDescription(Java.Lang.String arg0, Java.Util.Collection%3COrg.Apache.Kafka.Clients.Admin.ShareMemberDescription%3E arg1, Org.Apache.Kafka.Common.GroupState arg2, Org.Apache.Kafka.Common.Node arg3, int arg4, int arg5, Java.Util.Set%3COrg.Apache.Kafka.Common.Acl.AclOperation%3E arg6)
         /// </summary>
-        public static ShareGroupDescription New(Java.Lang.String arg0, Java.Util.Collection<Org.Apache.Kafka.Clients.Admin.ShareMemberDescription> arg1, Org.Apache.Kafka.Common.GroupState arg2, Org.Apache.Kafka.Common.Node arg3, int arg4, int arg5, Java.Util.Set<Org.Apache.Kafka.Common.Acl.AclOperation> arg6)
+        public static ShareGroupDescription Create(Java.Lang.String arg0, Java.Util.Collection<Org.Apache.Kafka.Clients.Admin.ShareMemberDescription> arg1, Org.Apache.Kafka.Common.GroupState arg2, Org.Apache.Kafka.Common.Node arg3, int arg4, int arg5, Java.Util.Set<Org.Apache.Kafka.Common.Acl.AclOperation> arg6)
         {
             return JVMBridgeBase.New<ShareGroupDescription>(arg0, arg1, arg2, arg3, arg4, arg5, arg6);
         }
@@ -100,7 +100,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <summary>
         /// HPA initializer for ShareGroupDescription(Java.Lang.String arg0, Java.Util.Collection%3COrg.Apache.Kafka.Clients.Admin.ShareMemberDescription%3E arg1, Org.Apache.Kafka.Common.GroupState arg2, Org.Apache.Kafka.Common.Node arg3, int arg4, int arg5)
         /// </summary>
-        public static ShareGroupDescription New(Java.Lang.String arg0, Java.Util.Collection<Org.Apache.Kafka.Clients.Admin.ShareMemberDescription> arg1, Org.Apache.Kafka.Common.GroupState arg2, Org.Apache.Kafka.Common.Node arg3, int arg4, int arg5)
+        public static ShareGroupDescription Create(Java.Lang.String arg0, Java.Util.Collection<Org.Apache.Kafka.Clients.Admin.ShareMemberDescription> arg1, Org.Apache.Kafka.Common.GroupState arg2, Org.Apache.Kafka.Common.Node arg3, int arg4, int arg5)
         {
             return JVMBridgeBase.New<ShareGroupDescription>(arg0, arg1, arg2, arg3, arg4, arg5);
         }

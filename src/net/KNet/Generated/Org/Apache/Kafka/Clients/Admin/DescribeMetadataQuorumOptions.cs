@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <summary>
         /// HPA initializer for DescribeMetadataQuorumOptions()
         /// </summary>
-        public static DescribeMetadataQuorumOptions New()
+        public static DescribeMetadataQuorumOptions Create()
         {
             return JVMBridgeBase.New<DescribeMetadataQuorumOptions>();
         }

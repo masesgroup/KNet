@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Tools
         /// <summary>
         /// HPA initializer for ReplicaVerificationTool()
         /// </summary>
-        public static ReplicaVerificationTool New()
+        public static ReplicaVerificationTool Create()
         {
             return JVMBridgeBase.New<ReplicaVerificationTool>();
         }

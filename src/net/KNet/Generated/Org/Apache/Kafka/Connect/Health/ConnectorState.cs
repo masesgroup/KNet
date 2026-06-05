@@ -76,7 +76,7 @@ namespace Org.Apache.Kafka.Connect.Health
         /// <summary>
         /// HPA initializer for ConnectorState(Java.Lang.String arg0, Java.Lang.String arg1, Java.Lang.String arg2)
         /// </summary>
-        public static ConnectorState New(Java.Lang.String arg0, Java.Lang.String arg1, Java.Lang.String arg2)
+        public static ConnectorState Create(Java.Lang.String arg0, Java.Lang.String arg1, Java.Lang.String arg2)
         {
             return JVMBridgeBase.New<ConnectorState>(arg0, arg1, arg2);
         }

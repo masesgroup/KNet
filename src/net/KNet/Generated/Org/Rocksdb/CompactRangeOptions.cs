@@ -141,7 +141,7 @@ namespace Org.Rocksdb
         /// <summary>
         /// HPA initializer for CompactRangeOptions()
         /// </summary>
-        public static CompactRangeOptions New()
+        public static CompactRangeOptions Create()
         {
             return JVMBridgeBase.New<CompactRangeOptions>();
         }
@@ -412,7 +412,7 @@ namespace Org.Rocksdb
             /// <summary>
             /// HPA initializer for Timestamp()
             /// </summary>
-            public static Timestamp New()
+            public static Timestamp Create()
             {
                 return JVMBridgeBase.New<Timestamp>();
             }
@@ -428,7 +428,7 @@ namespace Org.Rocksdb
             /// <summary>
             /// HPA initializer for Timestamp(long arg0, long arg1)
             /// </summary>
-            public static Timestamp New(long arg0, long arg1)
+            public static Timestamp Create(long arg0, long arg1)
             {
                 return JVMBridgeBase.New<Timestamp>(arg0, arg1);
             }

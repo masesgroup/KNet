@@ -78,7 +78,7 @@ namespace Org.Apache.Kafka.Common.Metrics
         /// <summary>
         /// HPA initializer for KafkaMetric(object arg0, Org.Apache.Kafka.Common.MetricName arg1, Org.Apache.Kafka.Common.Metrics.MetricValueProvider%3Cobject%3E arg2, Org.Apache.Kafka.Common.Metrics.MetricConfig arg3, Org.Apache.Kafka.Common.Utils.Time arg4)
         /// </summary>
-        public static KafkaMetric New(object arg0, Org.Apache.Kafka.Common.MetricName arg1, Org.Apache.Kafka.Common.Metrics.MetricValueProvider<object> arg2, Org.Apache.Kafka.Common.Metrics.MetricConfig arg3, Org.Apache.Kafka.Common.Utils.Time arg4)
+        public static KafkaMetric Create(object arg0, Org.Apache.Kafka.Common.MetricName arg1, Org.Apache.Kafka.Common.Metrics.MetricValueProvider<object> arg2, Org.Apache.Kafka.Common.Metrics.MetricConfig arg3, Org.Apache.Kafka.Common.Utils.Time arg4)
         {
             return JVMBridgeBase.New<KafkaMetric>(arg0, arg1, arg2, arg3, arg4);
         }

@@ -77,7 +77,7 @@ namespace Org.Apache.Kafka.Common
         /// <summary>
         /// HPA initializer for MetricNameTemplate(Java.Lang.String arg0, Java.Lang.String arg1, Java.Lang.String arg2, params Java.Lang.String[] arg3)
         /// </summary>
-        public static MetricNameTemplate New(Java.Lang.String arg0, Java.Lang.String arg1, Java.Lang.String arg2, params Java.Lang.String[] arg3)
+        public static MetricNameTemplate Create(Java.Lang.String arg0, Java.Lang.String arg1, Java.Lang.String arg2, params Java.Lang.String[] arg3)
         {
             return JVMBridgeBase.New<MetricNameTemplate>(MASES.JNet.Specific.Extensions.JNetCoreExtensions.VarArgRebuild(arg3, arg0, arg1, arg2));
         }
@@ -95,7 +95,7 @@ namespace Org.Apache.Kafka.Common
         /// <summary>
         /// HPA initializer for MetricNameTemplate(Java.Lang.String arg0, Java.Lang.String arg1, Java.Lang.String arg2, Java.Util.Set%3CJava.Lang.String%3E arg3)
         /// </summary>
-        public static MetricNameTemplate New(Java.Lang.String arg0, Java.Lang.String arg1, Java.Lang.String arg2, Java.Util.Set<Java.Lang.String> arg3)
+        public static MetricNameTemplate Create(Java.Lang.String arg0, Java.Lang.String arg1, Java.Lang.String arg2, Java.Util.Set<Java.Lang.String> arg3)
         {
             return JVMBridgeBase.New<MetricNameTemplate>(arg0, arg1, arg2, arg3);
         }

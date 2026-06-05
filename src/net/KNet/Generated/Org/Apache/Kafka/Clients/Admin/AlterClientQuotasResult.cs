@@ -74,7 +74,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <summary>
         /// HPA initializer for AlterClientQuotasResult(Java.Util.Map%3COrg.Apache.Kafka.Common.Quota.ClientQuotaEntity, Org.Apache.Kafka.Common.KafkaFuture%3CJava.Lang.Void%3E%3E arg0)
         /// </summary>
-        public static AlterClientQuotasResult New(Java.Util.Map<Org.Apache.Kafka.Common.Quota.ClientQuotaEntity, Org.Apache.Kafka.Common.KafkaFuture<Java.Lang.Void>> arg0)
+        public static AlterClientQuotasResult Create(Java.Util.Map<Org.Apache.Kafka.Common.Quota.ClientQuotaEntity, Org.Apache.Kafka.Common.KafkaFuture<Java.Lang.Void>> arg0)
         {
             return JVMBridgeBase.New<AlterClientQuotasResult>(arg0);
         }

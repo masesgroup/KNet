@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <summary>
         /// HPA initializer for RemoveMembersFromConsumerGroupOptions()
         /// </summary>
-        public static RemoveMembersFromConsumerGroupOptions New()
+        public static RemoveMembersFromConsumerGroupOptions Create()
         {
             return JVMBridgeBase.New<RemoveMembersFromConsumerGroupOptions>();
         }
@@ -88,7 +88,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <summary>
         /// HPA initializer for RemoveMembersFromConsumerGroupOptions(Java.Util.Collection%3COrg.Apache.Kafka.Clients.Admin.MemberToRemove%3E arg0)
         /// </summary>
-        public static RemoveMembersFromConsumerGroupOptions New(Java.Util.Collection<Org.Apache.Kafka.Clients.Admin.MemberToRemove> arg0)
+        public static RemoveMembersFromConsumerGroupOptions Create(Java.Util.Collection<Org.Apache.Kafka.Clients.Admin.MemberToRemove> arg0)
         {
             return JVMBridgeBase.New<RemoveMembersFromConsumerGroupOptions>(arg0);
         }

@@ -111,7 +111,7 @@ namespace Org.Apache.Kafka.Common.Utils
         /// <summary>
         /// HPA initializer for MappedIterator(Java.Util.Iterator arg0, Java.Util.Function.Function arg1)
         /// </summary>
-        public static MappedIterator New(Java.Util.Iterator arg0, Java.Util.Function.Function arg1)
+        public static MappedIterator Create(Java.Util.Iterator arg0, Java.Util.Function.Function arg1)
         {
             return JVMBridgeBase.New<MappedIterator>(arg0, arg1);
         }
@@ -174,7 +174,7 @@ namespace Org.Apache.Kafka.Common.Utils
         /// <summary>
         /// HPA initializer for MappedIterator(Java.Util.Iterator%3CF%3E arg0, Java.Util.Function.Function%3CF, T%3E arg1)
         /// </summary>
-        public static MappedIterator<F, T> New(Java.Util.Iterator<F> arg0, Java.Util.Function.Function<F, T> arg1)
+        public static MappedIterator<F, T> Create(Java.Util.Iterator<F> arg0, Java.Util.Function.Function<F, T> arg1)
         {
             return JVMBridgeBase.New<MappedIterator<F, T>>(arg0, arg1);
         }

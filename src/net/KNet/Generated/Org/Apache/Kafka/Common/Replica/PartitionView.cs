@@ -167,7 +167,7 @@ namespace Org.Apache.Kafka.Common.Replica
             /// <summary>
             /// HPA initializer for DefaultPartitionView(Java.Util.Set%3COrg.Apache.Kafka.Common.Replica.ReplicaView%3E arg0, Org.Apache.Kafka.Common.Replica.ReplicaView arg1)
             /// </summary>
-            public static DefaultPartitionView New(Java.Util.Set<Org.Apache.Kafka.Common.Replica.ReplicaView> arg0, Org.Apache.Kafka.Common.Replica.ReplicaView arg1)
+            public static DefaultPartitionView Create(Java.Util.Set<Org.Apache.Kafka.Common.Replica.ReplicaView> arg0, Org.Apache.Kafka.Common.Replica.ReplicaView arg1)
             {
                 return JVMBridgeBase.New<DefaultPartitionView>(arg0, arg1);
             }

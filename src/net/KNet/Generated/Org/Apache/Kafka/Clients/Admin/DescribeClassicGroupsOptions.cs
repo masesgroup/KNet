@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <summary>
         /// HPA initializer for DescribeClassicGroupsOptions()
         /// </summary>
-        public static DescribeClassicGroupsOptions New()
+        public static DescribeClassicGroupsOptions Create()
         {
             return JVMBridgeBase.New<DescribeClassicGroupsOptions>();
         }

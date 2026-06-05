@@ -75,7 +75,7 @@ namespace Org.Apache.Kafka.Clients
         /// <summary>
         /// HPA initializer for LeastLoadedNode(Org.Apache.Kafka.Common.Node arg0, bool arg1)
         /// </summary>
-        public static LeastLoadedNode New(Org.Apache.Kafka.Common.Node arg0, bool arg1)
+        public static LeastLoadedNode Create(Org.Apache.Kafka.Common.Node arg0, bool arg1)
         {
             return JVMBridgeBase.New<LeastLoadedNode>(arg0, arg1);
         }

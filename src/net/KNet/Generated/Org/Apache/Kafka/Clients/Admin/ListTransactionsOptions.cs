@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <summary>
         /// HPA initializer for ListTransactionsOptions()
         /// </summary>
-        public static ListTransactionsOptions New()
+        public static ListTransactionsOptions Create()
         {
             return JVMBridgeBase.New<ListTransactionsOptions>();
         }

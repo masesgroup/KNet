@@ -108,7 +108,7 @@ namespace Org.Apache.Kafka.Common.Serialization
         /// <summary>
         /// HPA initializer for ListSerializer()
         /// </summary>
-        public static ListSerializer New()
+        public static ListSerializer Create()
         {
             return JVMBridgeBase.New<ListSerializer>();
         }
@@ -123,7 +123,7 @@ namespace Org.Apache.Kafka.Common.Serialization
         /// <summary>
         /// HPA initializer for ListSerializer(Org.Apache.Kafka.Common.Serialization.Serializer arg0)
         /// </summary>
-        public static ListSerializer New(Org.Apache.Kafka.Common.Serialization.Serializer arg0)
+        public static ListSerializer Create(Org.Apache.Kafka.Common.Serialization.Serializer arg0)
         {
             return JVMBridgeBase.New<ListSerializer>(arg0);
         }
@@ -215,7 +215,7 @@ namespace Org.Apache.Kafka.Common.Serialization
         /// <summary>
         /// HPA initializer for ListSerializer()
         /// </summary>
-        public static ListSerializer<Inner> New()
+        public static ListSerializer<Inner> Create()
         {
             return JVMBridgeBase.New<ListSerializer<Inner>>();
         }
@@ -230,7 +230,7 @@ namespace Org.Apache.Kafka.Common.Serialization
         /// <summary>
         /// HPA initializer for ListSerializer(Org.Apache.Kafka.Common.Serialization.Serializer%3CInner%3E arg0)
         /// </summary>
-        public static ListSerializer<Inner> New(Org.Apache.Kafka.Common.Serialization.Serializer<Inner> arg0)
+        public static ListSerializer<Inner> Create(Org.Apache.Kafka.Common.Serialization.Serializer<Inner> arg0)
         {
             return JVMBridgeBase.New<ListSerializer<Inner>>(arg0);
         }

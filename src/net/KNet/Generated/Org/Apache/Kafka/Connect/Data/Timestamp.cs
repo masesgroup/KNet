@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Connect.Data
         /// <summary>
         /// HPA initializer for Timestamp()
         /// </summary>
-        public static Timestamp New()
+        public static Timestamp Create()
         {
             return JVMBridgeBase.New<Timestamp>();
         }

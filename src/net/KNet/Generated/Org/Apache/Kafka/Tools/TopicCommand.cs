@@ -141,7 +141,7 @@ namespace Org.Apache.Kafka.Tools
         /// <summary>
         /// HPA initializer for TopicCommand()
         /// </summary>
-        public static TopicCommand New()
+        public static TopicCommand Create()
         {
             return JVMBridgeBase.New<TopicCommand>();
         }
@@ -198,7 +198,7 @@ namespace Org.Apache.Kafka.Tools
             /// <summary>
             /// HPA initializer for TopicCommandOptions(Java.Lang.String[] arg0)
             /// </summary>
-            public static TopicCommandOptions New(Java.Lang.String[] arg0)
+            public static TopicCommandOptions Create(Java.Lang.String[] arg0)
             {
                 return JVMBridgeBase.New<TopicCommandOptions>(arg0);
             }
@@ -429,7 +429,7 @@ namespace Org.Apache.Kafka.Tools
             /// <summary>
             /// HPA initializer for TopicService(Java.Util.Properties arg0, Java.Util.Optional%3CJava.Lang.String%3E arg1)
             /// </summary>
-            public static TopicService New(Java.Util.Properties arg0, Java.Util.Optional<Java.Lang.String> arg1)
+            public static TopicService Create(Java.Util.Properties arg0, Java.Util.Optional<Java.Lang.String> arg1)
             {
                 return JVMBridgeBase.New<TopicService>(arg0, arg1);
             }
@@ -444,7 +444,7 @@ namespace Org.Apache.Kafka.Tools
             /// <summary>
             /// HPA initializer for TopicService(Org.Apache.Kafka.Clients.Admin.Admin arg0)
             /// </summary>
-            public static TopicService New(Org.Apache.Kafka.Clients.Admin.Admin arg0)
+            public static TopicService Create(Org.Apache.Kafka.Clients.Admin.Admin arg0)
             {
                 return JVMBridgeBase.New<TopicService>(arg0);
             }

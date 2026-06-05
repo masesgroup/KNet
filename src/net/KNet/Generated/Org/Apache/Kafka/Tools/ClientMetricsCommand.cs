@@ -141,7 +141,7 @@ namespace Org.Apache.Kafka.Tools
         /// <summary>
         /// HPA initializer for ClientMetricsCommand()
         /// </summary>
-        public static ClientMetricsCommand New()
+        public static ClientMetricsCommand Create()
         {
             return JVMBridgeBase.New<ClientMetricsCommand>();
         }
@@ -188,7 +188,7 @@ namespace Org.Apache.Kafka.Tools
             /// <summary>
             /// HPA initializer for ClientMetricsCommandOptions(Java.Lang.String[] arg0)
             /// </summary>
-            public static ClientMetricsCommandOptions New(Java.Lang.String[] arg0)
+            public static ClientMetricsCommandOptions Create(Java.Lang.String[] arg0)
             {
                 return JVMBridgeBase.New<ClientMetricsCommandOptions>(arg0);
             }
@@ -330,7 +330,7 @@ namespace Org.Apache.Kafka.Tools
             /// <summary>
             /// HPA initializer for ClientMetricsService(Java.Util.Properties arg0)
             /// </summary>
-            public static ClientMetricsService New(Java.Util.Properties arg0)
+            public static ClientMetricsService Create(Java.Util.Properties arg0)
             {
                 return JVMBridgeBase.New<ClientMetricsService>(arg0);
             }

@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
         /// <summary>
         /// HPA initializer for StickyAssignor()
         /// </summary>
-        public static StickyAssignor New()
+        public static StickyAssignor Create()
         {
             return JVMBridgeBase.New<StickyAssignor>();
         }

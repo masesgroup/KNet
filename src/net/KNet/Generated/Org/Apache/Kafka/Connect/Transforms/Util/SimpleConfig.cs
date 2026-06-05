@@ -75,7 +75,7 @@ namespace Org.Apache.Kafka.Connect.Transforms.Util
         /// <summary>
         /// HPA initializer for SimpleConfig(Org.Apache.Kafka.Common.Config.ConfigDef arg0, Java.Util.Map%3Cobject, object%3E arg1)
         /// </summary>
-        public static SimpleConfig New(Org.Apache.Kafka.Common.Config.ConfigDef arg0, Java.Util.Map<object, object> arg1)
+        public static SimpleConfig Create(Org.Apache.Kafka.Common.Config.ConfigDef arg0, Java.Util.Map<object, object> arg1)
         {
             return JVMBridgeBase.New<SimpleConfig>(arg0, arg1);
         }

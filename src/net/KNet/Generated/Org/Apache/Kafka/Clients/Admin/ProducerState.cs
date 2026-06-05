@@ -79,7 +79,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <summary>
         /// HPA initializer for ProducerState(long arg0, int arg1, int arg2, long arg3, Java.Util.OptionalInt arg4, Java.Util.OptionalLong arg5)
         /// </summary>
-        public static ProducerState New(long arg0, int arg1, int arg2, long arg3, Java.Util.OptionalInt arg4, Java.Util.OptionalLong arg5)
+        public static ProducerState Create(long arg0, int arg1, int arg2, long arg3, Java.Util.OptionalInt arg4, Java.Util.OptionalLong arg5)
         {
             return JVMBridgeBase.New<ProducerState>(arg0, arg1, arg2, arg3, arg4, arg5);
         }

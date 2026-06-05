@@ -83,7 +83,7 @@ namespace Org.Apache.Kafka.Raft
         /// <summary>
         /// HPA initializer for ProspectiveState(Org.Apache.Kafka.Common.Utils.Time arg0, int arg1, int arg2, Java.Util.OptionalInt arg3, Org.Apache.Kafka.Raft.Endpoints arg4, Java.Util.Optional%3COrg.Apache.Kafka.Raft.ReplicaKey%3E arg5, Org.Apache.Kafka.Raft.VoterSet arg6, Java.Util.Optional%3COrg.Apache.Kafka.Raft.LogOffsetMetadata%3E arg7, int arg8, Org.Apache.Kafka.Common.Utils.LogContext arg9)
         /// </summary>
-        public static ProspectiveState New(Org.Apache.Kafka.Common.Utils.Time arg0, int arg1, int arg2, Java.Util.OptionalInt arg3, Org.Apache.Kafka.Raft.Endpoints arg4, Java.Util.Optional<Org.Apache.Kafka.Raft.ReplicaKey> arg5, Org.Apache.Kafka.Raft.VoterSet arg6, Java.Util.Optional<Org.Apache.Kafka.Raft.LogOffsetMetadata> arg7, int arg8, Org.Apache.Kafka.Common.Utils.LogContext arg9)
+        public static ProspectiveState Create(Org.Apache.Kafka.Common.Utils.Time arg0, int arg1, int arg2, Java.Util.OptionalInt arg3, Org.Apache.Kafka.Raft.Endpoints arg4, Java.Util.Optional<Org.Apache.Kafka.Raft.ReplicaKey> arg5, Org.Apache.Kafka.Raft.VoterSet arg6, Java.Util.Optional<Org.Apache.Kafka.Raft.LogOffsetMetadata> arg7, int arg8, Org.Apache.Kafka.Common.Utils.LogContext arg9)
         {
             return JVMBridgeBase.New<ProspectiveState>(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9);
         }

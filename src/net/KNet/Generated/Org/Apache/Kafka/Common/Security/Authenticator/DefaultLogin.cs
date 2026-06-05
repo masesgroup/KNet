@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Common.Security.Authenticator
         /// <summary>
         /// HPA initializer for DefaultLogin()
         /// </summary>
-        public static DefaultLogin New()
+        public static DefaultLogin Create()
         {
             return JVMBridgeBase.New<DefaultLogin>();
         }

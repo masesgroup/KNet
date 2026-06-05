@@ -76,7 +76,7 @@ namespace Org.Apache.Kafka.Common.Record
         /// <summary>
         /// HPA initializer for LegacyRecord(Java.Nio.ByteBuffer arg0, Java.Lang.Long arg1, Org.Apache.Kafka.Common.Record.TimestampType arg2)
         /// </summary>
-        public static LegacyRecord New(Java.Nio.ByteBuffer arg0, Java.Lang.Long arg1, Org.Apache.Kafka.Common.Record.TimestampType arg2)
+        public static LegacyRecord Create(Java.Nio.ByteBuffer arg0, Java.Lang.Long arg1, Org.Apache.Kafka.Common.Record.TimestampType arg2)
         {
             return JVMBridgeBase.New<LegacyRecord>(arg0, arg1, arg2);
         }
@@ -91,7 +91,7 @@ namespace Org.Apache.Kafka.Common.Record
         /// <summary>
         /// HPA initializer for LegacyRecord(Java.Nio.ByteBuffer arg0)
         /// </summary>
-        public static LegacyRecord New(Java.Nio.ByteBuffer arg0)
+        public static LegacyRecord Create(Java.Nio.ByteBuffer arg0)
         {
             return JVMBridgeBase.New<LegacyRecord>(arg0);
         }

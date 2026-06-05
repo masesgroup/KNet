@@ -184,7 +184,7 @@ namespace Org.Apache.Kafka.Common.Replica
             /// <summary>
             /// HPA initializer for DefaultReplicaView(Org.Apache.Kafka.Common.Node arg0, long arg1, long arg2)
             /// </summary>
-            public static DefaultReplicaView New(Org.Apache.Kafka.Common.Node arg0, long arg1, long arg2)
+            public static DefaultReplicaView Create(Org.Apache.Kafka.Common.Node arg0, long arg1, long arg2)
             {
                 return JVMBridgeBase.New<DefaultReplicaView>(arg0, arg1, arg2);
             }

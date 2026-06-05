@@ -74,7 +74,7 @@ namespace Org.Apache.Kafka.Raft
         /// <summary>
         /// HPA initializer for DynamicVoters(Java.Util.Collection%3COrg.Apache.Kafka.Raft.DynamicVoter%3E arg0)
         /// </summary>
-        public static DynamicVoters New(Java.Util.Collection<Org.Apache.Kafka.Raft.DynamicVoter> arg0)
+        public static DynamicVoters Create(Java.Util.Collection<Org.Apache.Kafka.Raft.DynamicVoter> arg0)
         {
             return JVMBridgeBase.New<DynamicVoters>(arg0);
         }

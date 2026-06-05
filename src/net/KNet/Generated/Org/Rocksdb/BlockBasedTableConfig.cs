@@ -73,7 +73,7 @@ namespace Org.Rocksdb
         /// <summary>
         /// HPA initializer for BlockBasedTableConfig()
         /// </summary>
-        public static BlockBasedTableConfig New()
+        public static BlockBasedTableConfig Create()
         {
             return JVMBridgeBase.New<BlockBasedTableConfig>();
         }

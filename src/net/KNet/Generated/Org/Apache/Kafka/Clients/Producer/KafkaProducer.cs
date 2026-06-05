@@ -112,7 +112,7 @@ namespace Org.Apache.Kafka.Clients.Producer
         /// <summary>
         /// HPA initializer for KafkaProducer(Java.Util.Map arg0, Org.Apache.Kafka.Common.Serialization.Serializer arg1, Org.Apache.Kafka.Common.Serialization.Serializer arg2)
         /// </summary>
-        public static KafkaProducer New(Java.Util.Map arg0, Org.Apache.Kafka.Common.Serialization.Serializer arg1, Org.Apache.Kafka.Common.Serialization.Serializer arg2)
+        public static KafkaProducer Create(Java.Util.Map arg0, Org.Apache.Kafka.Common.Serialization.Serializer arg1, Org.Apache.Kafka.Common.Serialization.Serializer arg2)
         {
             return JVMBridgeBase.New<KafkaProducer>(arg0, arg1, arg2);
         }
@@ -127,7 +127,7 @@ namespace Org.Apache.Kafka.Clients.Producer
         /// <summary>
         /// HPA initializer for KafkaProducer(Java.Util.Map arg0)
         /// </summary>
-        public static KafkaProducer New(Java.Util.Map arg0)
+        public static KafkaProducer Create(Java.Util.Map arg0)
         {
             return JVMBridgeBase.New<KafkaProducer>(arg0);
         }
@@ -144,7 +144,7 @@ namespace Org.Apache.Kafka.Clients.Producer
         /// <summary>
         /// HPA initializer for KafkaProducer(Java.Util.Properties arg0, Org.Apache.Kafka.Common.Serialization.Serializer arg1, Org.Apache.Kafka.Common.Serialization.Serializer arg2)
         /// </summary>
-        public static KafkaProducer New(Java.Util.Properties arg0, Org.Apache.Kafka.Common.Serialization.Serializer arg1, Org.Apache.Kafka.Common.Serialization.Serializer arg2)
+        public static KafkaProducer Create(Java.Util.Properties arg0, Org.Apache.Kafka.Common.Serialization.Serializer arg1, Org.Apache.Kafka.Common.Serialization.Serializer arg2)
         {
             return JVMBridgeBase.New<KafkaProducer>(arg0, arg1, arg2);
         }
@@ -159,7 +159,7 @@ namespace Org.Apache.Kafka.Clients.Producer
         /// <summary>
         /// HPA initializer for KafkaProducer(Java.Util.Properties arg0)
         /// </summary>
-        public static KafkaProducer New(Java.Util.Properties arg0)
+        public static KafkaProducer Create(Java.Util.Properties arg0)
         {
             return JVMBridgeBase.New<KafkaProducer>(arg0);
         }
@@ -339,7 +339,7 @@ namespace Org.Apache.Kafka.Clients.Producer
         /// <summary>
         /// HPA initializer for KafkaProducer(Java.Util.Map%3CJava.Lang.String, object%3E arg0, Org.Apache.Kafka.Common.Serialization.Serializer%3CK%3E arg1, Org.Apache.Kafka.Common.Serialization.Serializer%3CV%3E arg2)
         /// </summary>
-        public static KafkaProducer<K, V> New(Java.Util.Map<Java.Lang.String, object> arg0, Org.Apache.Kafka.Common.Serialization.Serializer<K> arg1, Org.Apache.Kafka.Common.Serialization.Serializer<V> arg2)
+        public static KafkaProducer<K, V> Create(Java.Util.Map<Java.Lang.String, object> arg0, Org.Apache.Kafka.Common.Serialization.Serializer<K> arg1, Org.Apache.Kafka.Common.Serialization.Serializer<V> arg2)
         {
             return JVMBridgeBase.New<KafkaProducer<K, V>>(arg0, arg1, arg2);
         }
@@ -354,7 +354,7 @@ namespace Org.Apache.Kafka.Clients.Producer
         /// <summary>
         /// HPA initializer for KafkaProducer(Java.Util.Map%3CJava.Lang.String, object%3E arg0)
         /// </summary>
-        public static KafkaProducer<K, V> New(Java.Util.Map<Java.Lang.String, object> arg0)
+        public static KafkaProducer<K, V> Create(Java.Util.Map<Java.Lang.String, object> arg0)
         {
             return JVMBridgeBase.New<KafkaProducer<K, V>>(arg0);
         }
@@ -371,7 +371,7 @@ namespace Org.Apache.Kafka.Clients.Producer
         /// <summary>
         /// HPA initializer for KafkaProducer(Java.Util.Properties arg0, Org.Apache.Kafka.Common.Serialization.Serializer%3CK%3E arg1, Org.Apache.Kafka.Common.Serialization.Serializer%3CV%3E arg2)
         /// </summary>
-        public static KafkaProducer<K, V> New(Java.Util.Properties arg0, Org.Apache.Kafka.Common.Serialization.Serializer<K> arg1, Org.Apache.Kafka.Common.Serialization.Serializer<V> arg2)
+        public static KafkaProducer<K, V> Create(Java.Util.Properties arg0, Org.Apache.Kafka.Common.Serialization.Serializer<K> arg1, Org.Apache.Kafka.Common.Serialization.Serializer<V> arg2)
         {
             return JVMBridgeBase.New<KafkaProducer<K, V>>(arg0, arg1, arg2);
         }
@@ -386,7 +386,7 @@ namespace Org.Apache.Kafka.Clients.Producer
         /// <summary>
         /// HPA initializer for KafkaProducer(Java.Util.Properties arg0)
         /// </summary>
-        public static KafkaProducer<K, V> New(Java.Util.Properties arg0)
+        public static KafkaProducer<K, V> Create(Java.Util.Properties arg0)
         {
             return JVMBridgeBase.New<KafkaProducer<K, V>>(arg0);
         }

@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Common
         /// <summary>
         /// HPA initializer for DirectoryId()
         /// </summary>
-        public static DirectoryId New()
+        public static DirectoryId Create()
         {
             return JVMBridgeBase.New<DirectoryId>();
         }

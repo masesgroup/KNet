@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Common.Security.Scram
         /// <summary>
         /// HPA initializer for ScramExtensionsCallback()
         /// </summary>
-        public static ScramExtensionsCallback New()
+        public static ScramExtensionsCallback Create()
         {
             return JVMBridgeBase.New<ScramExtensionsCallback>();
         }

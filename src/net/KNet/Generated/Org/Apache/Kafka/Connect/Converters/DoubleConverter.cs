@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Connect.Converters
         /// <summary>
         /// HPA initializer for DoubleConverter()
         /// </summary>
-        public static DoubleConverter New()
+        public static DoubleConverter Create()
         {
             return JVMBridgeBase.New<DoubleConverter>();
         }

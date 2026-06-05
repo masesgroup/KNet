@@ -109,7 +109,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <summary>
         /// HPA initializer for AlterConfigOp(Org.Apache.Kafka.Clients.Admin.ConfigEntry arg0, Org.Apache.Kafka.Clients.Admin.AlterConfigOp.OpType arg1)
         /// </summary>
-        public static AlterConfigOp New(Org.Apache.Kafka.Clients.Admin.ConfigEntry arg0, Org.Apache.Kafka.Clients.Admin.AlterConfigOp.OpType arg1)
+        public static AlterConfigOp Create(Org.Apache.Kafka.Clients.Admin.ConfigEntry arg0, Org.Apache.Kafka.Clients.Admin.AlterConfigOp.OpType arg1)
         {
             return JVMBridgeBase.New<AlterConfigOp>(arg0, arg1);
         }

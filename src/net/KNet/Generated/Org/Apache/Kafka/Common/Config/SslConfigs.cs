@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Common.Config
         /// <summary>
         /// HPA initializer for SslConfigs()
         /// </summary>
-        public static SslConfigs New()
+        public static SslConfigs Create()
         {
             return JVMBridgeBase.New<SslConfigs>();
         }

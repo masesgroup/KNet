@@ -74,7 +74,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
         /// <summary>
         /// HPA initializer for MirrorSourceTaskConfig(Java.Util.Map%3CJava.Lang.String, Java.Lang.String%3E arg0)
         /// </summary>
-        public static MirrorSourceTaskConfig New(Java.Util.Map<Java.Lang.String, Java.Lang.String> arg0)
+        public static MirrorSourceTaskConfig Create(Java.Util.Map<Java.Lang.String, Java.Lang.String> arg0)
         {
             return JVMBridgeBase.New<MirrorSourceTaskConfig>(arg0);
         }

@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
         /// <summary>
         /// HPA initializer for RangeAssignor()
         /// </summary>
-        public static RangeAssignor New()
+        public static RangeAssignor Create()
         {
             return JVMBridgeBase.New<RangeAssignor>();
         }

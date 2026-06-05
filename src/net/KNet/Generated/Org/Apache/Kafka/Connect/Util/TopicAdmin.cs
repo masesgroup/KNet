@@ -143,7 +143,7 @@ namespace Org.Apache.Kafka.Connect.Util
         /// <summary>
         /// HPA initializer for TopicAdmin(Java.Util.Map%3CJava.Lang.String, object%3E arg0, Org.Apache.Kafka.Clients.Admin.Admin arg1)
         /// </summary>
-        public static TopicAdmin New(Java.Util.Map<Java.Lang.String, object> arg0, Org.Apache.Kafka.Clients.Admin.Admin arg1)
+        public static TopicAdmin Create(Java.Util.Map<Java.Lang.String, object> arg0, Org.Apache.Kafka.Clients.Admin.Admin arg1)
         {
             return JVMBridgeBase.New<TopicAdmin>(arg0, arg1);
         }
@@ -158,7 +158,7 @@ namespace Org.Apache.Kafka.Connect.Util
         /// <summary>
         /// HPA initializer for TopicAdmin(Java.Util.Map%3CJava.Lang.String, object%3E arg0)
         /// </summary>
-        public static TopicAdmin New(Java.Util.Map<Java.Lang.String, object> arg0)
+        public static TopicAdmin Create(Java.Util.Map<Java.Lang.String, object> arg0)
         {
             return JVMBridgeBase.New<TopicAdmin>(arg0);
         }
@@ -439,7 +439,7 @@ namespace Org.Apache.Kafka.Connect.Util
             /// <summary>
             /// HPA initializer for TopicCreationResponse(Java.Util.Set%3CJava.Lang.String%3E arg0, Java.Util.Set%3CJava.Lang.String%3E arg1)
             /// </summary>
-            public static TopicCreationResponse New(Java.Util.Set<Java.Lang.String> arg0, Java.Util.Set<Java.Lang.String> arg1)
+            public static TopicCreationResponse Create(Java.Util.Set<Java.Lang.String> arg0, Java.Util.Set<Java.Lang.String> arg1)
             {
                 return JVMBridgeBase.New<TopicCreationResponse>(arg0, arg1);
             }

@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Common.Security.Plain
         /// <summary>
         /// HPA initializer for PlainLoginModule()
         /// </summary>
-        public static PlainLoginModule New()
+        public static PlainLoginModule Create()
         {
             return JVMBridgeBase.New<PlainLoginModule>();
         }

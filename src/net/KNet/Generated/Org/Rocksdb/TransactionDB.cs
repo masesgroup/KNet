@@ -365,7 +365,7 @@ namespace Org.Rocksdb
             /// <summary>
             /// HPA initializer for DeadlockPath(Org.Rocksdb.TransactionDB.DeadlockInfo[] arg0, bool arg1)
             /// </summary>
-            public static DeadlockPath New(Org.Rocksdb.TransactionDB.DeadlockInfo[] arg0, bool arg1)
+            public static DeadlockPath Create(Org.Rocksdb.TransactionDB.DeadlockInfo[] arg0, bool arg1)
             {
                 return JVMBridgeBase.New<DeadlockPath>(arg0, arg1);
             }
@@ -421,7 +421,7 @@ namespace Org.Rocksdb
             /// <summary>
             /// HPA initializer for KeyLockInfo(Java.Lang.String arg0, long[] arg1, bool arg2)
             /// </summary>
-            public static KeyLockInfo New(Java.Lang.String arg0, long[] arg1, bool arg2)
+            public static KeyLockInfo Create(Java.Lang.String arg0, long[] arg1, bool arg2)
             {
                 return JVMBridgeBase.New<KeyLockInfo>(arg0, arg1, arg2);
             }

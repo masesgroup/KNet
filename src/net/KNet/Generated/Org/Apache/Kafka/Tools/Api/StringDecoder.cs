@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Tools.Api
         /// <summary>
         /// HPA initializer for StringDecoder()
         /// </summary>
-        public static StringDecoder New()
+        public static StringDecoder Create()
         {
             return JVMBridgeBase.New<StringDecoder>();
         }

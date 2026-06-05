@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Tools
         /// <summary>
         /// HPA initializer for DeleteRecordsCommand()
         /// </summary>
-        public static DeleteRecordsCommand New()
+        public static DeleteRecordsCommand Create()
         {
             return JVMBridgeBase.New<DeleteRecordsCommand>();
         }

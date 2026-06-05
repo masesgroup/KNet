@@ -77,7 +77,7 @@ namespace Org.Apache.Kafka.Common.Metrics.Stats
         /// <summary>
         /// HPA initializer for Frequencies(int arg0, double arg1, double arg2, params Org.Apache.Kafka.Common.Metrics.Stats.Frequency[] arg3)
         /// </summary>
-        public static Frequencies New(int arg0, double arg1, double arg2, params Org.Apache.Kafka.Common.Metrics.Stats.Frequency[] arg3)
+        public static Frequencies Create(int arg0, double arg1, double arg2, params Org.Apache.Kafka.Common.Metrics.Stats.Frequency[] arg3)
         {
             return JVMBridgeBase.New<Frequencies>(arg0, arg1, arg2, arg3);
         }

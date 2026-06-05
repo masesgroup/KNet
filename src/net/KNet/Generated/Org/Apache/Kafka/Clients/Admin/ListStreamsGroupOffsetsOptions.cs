@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <summary>
         /// HPA initializer for ListStreamsGroupOffsetsOptions()
         /// </summary>
-        public static ListStreamsGroupOffsetsOptions New()
+        public static ListStreamsGroupOffsetsOptions Create()
         {
             return JVMBridgeBase.New<ListStreamsGroupOffsetsOptions>();
         }

@@ -110,7 +110,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <summary>
         /// HPA initializer for Windowed(object arg0, Org.Apache.Kafka.Streams.Kstream.Window arg1)
         /// </summary>
-        public static Windowed New(object arg0, Org.Apache.Kafka.Streams.Kstream.Window arg1)
+        public static Windowed Create(object arg0, Org.Apache.Kafka.Streams.Kstream.Window arg1)
         {
             return JVMBridgeBase.New<Windowed>(arg0, arg1);
         }
@@ -173,7 +173,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <summary>
         /// HPA initializer for Windowed(K arg0, Org.Apache.Kafka.Streams.Kstream.Window arg1)
         /// </summary>
-        public static Windowed<K> New(K arg0, Org.Apache.Kafka.Streams.Kstream.Window arg1)
+        public static Windowed<K> Create(K arg0, Org.Apache.Kafka.Streams.Kstream.Window arg1)
         {
             return JVMBridgeBase.New<Windowed<K>>(arg0, arg1);
         }

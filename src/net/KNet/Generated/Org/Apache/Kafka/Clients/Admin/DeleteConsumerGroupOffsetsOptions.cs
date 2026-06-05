@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <summary>
         /// HPA initializer for DeleteConsumerGroupOffsetsOptions()
         /// </summary>
-        public static DeleteConsumerGroupOffsetsOptions New()
+        public static DeleteConsumerGroupOffsetsOptions Create()
         {
             return JVMBridgeBase.New<DeleteConsumerGroupOffsetsOptions>();
         }

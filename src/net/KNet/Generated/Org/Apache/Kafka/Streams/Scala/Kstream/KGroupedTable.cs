@@ -110,7 +110,7 @@ namespace Org.Apache.Kafka.Streams.Scala.Kstream
         /// <summary>
         /// HPA initializer for KGroupedTable(Org.Apache.Kafka.Streams.Kstream.KGroupedTable inner)
         /// </summary>
-        public static KGroupedTable New(Org.Apache.Kafka.Streams.Kstream.KGroupedTable inner)
+        public static KGroupedTable Create(Org.Apache.Kafka.Streams.Kstream.KGroupedTable inner)
         {
             return JVMBridgeBase.New<KGroupedTable>(inner);
         }
@@ -175,7 +175,7 @@ namespace Org.Apache.Kafka.Streams.Scala.Kstream
         /// <summary>
         /// HPA initializer for KGroupedTable(Org.Apache.Kafka.Streams.Kstream.KGroupedTable%3CK, V%3E inner)
         /// </summary>
-        public static KGroupedTable<K, V> New(Org.Apache.Kafka.Streams.Kstream.KGroupedTable<K, V> inner)
+        public static KGroupedTable<K, V> Create(Org.Apache.Kafka.Streams.Kstream.KGroupedTable<K, V> inner)
         {
             return JVMBridgeBase.New<KGroupedTable<K, V>>(inner);
         }

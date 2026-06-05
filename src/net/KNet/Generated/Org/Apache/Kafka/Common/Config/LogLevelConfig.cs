@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Common.Config
         /// <summary>
         /// HPA initializer for LogLevelConfig()
         /// </summary>
-        public static LogLevelConfig New()
+        public static LogLevelConfig Create()
         {
             return JVMBridgeBase.New<LogLevelConfig>();
         }

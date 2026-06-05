@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <summary>
         /// HPA initializer for CreateTopicsOptions()
         /// </summary>
-        public static CreateTopicsOptions New()
+        public static CreateTopicsOptions Create()
         {
             return JVMBridgeBase.New<CreateTopicsOptions>();
         }

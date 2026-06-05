@@ -75,7 +75,7 @@ namespace Org.Apache.Kafka.Common.Utils
         /// <summary>
         /// HPA initializer for ChildFirstClassLoader(Java.Lang.String arg0, Java.Lang.ClassLoader arg1)
         /// </summary>
-        public static ChildFirstClassLoader New(Java.Lang.String arg0, Java.Lang.ClassLoader arg1)
+        public static ChildFirstClassLoader Create(Java.Lang.String arg0, Java.Lang.ClassLoader arg1)
         {
             return JVMBridgeBase.New<ChildFirstClassLoader>(arg0, arg1);
         }

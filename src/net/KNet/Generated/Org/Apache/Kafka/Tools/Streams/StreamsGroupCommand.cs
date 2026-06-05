@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Tools.Streams
         /// <summary>
         /// HPA initializer for StreamsGroupCommand()
         /// </summary>
-        public static StreamsGroupCommand New()
+        public static StreamsGroupCommand Create()
         {
             return JVMBridgeBase.New<StreamsGroupCommand>();
         }

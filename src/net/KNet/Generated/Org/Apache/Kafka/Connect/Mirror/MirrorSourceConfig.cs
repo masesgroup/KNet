@@ -74,7 +74,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
         /// <summary>
         /// HPA initializer for MirrorSourceConfig(Java.Util.Map%3CJava.Lang.String, Java.Lang.String%3E arg0)
         /// </summary>
-        public static MirrorSourceConfig New(Java.Util.Map<Java.Lang.String, Java.Lang.String> arg0)
+        public static MirrorSourceConfig Create(Java.Util.Map<Java.Lang.String, Java.Lang.String> arg0)
         {
             return JVMBridgeBase.New<MirrorSourceConfig>(arg0);
         }
@@ -90,7 +90,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
         /// <summary>
         /// HPA initializer for MirrorSourceConfig(Org.Apache.Kafka.Common.Config.ConfigDef arg0, Java.Util.Map%3CJava.Lang.String, Java.Lang.String%3E arg1)
         /// </summary>
-        public static MirrorSourceConfig New(Org.Apache.Kafka.Common.Config.ConfigDef arg0, Java.Util.Map<Java.Lang.String, Java.Lang.String> arg1)
+        public static MirrorSourceConfig Create(Org.Apache.Kafka.Common.Config.ConfigDef arg0, Java.Util.Map<Java.Lang.String, Java.Lang.String> arg1)
         {
             return JVMBridgeBase.New<MirrorSourceConfig>(arg0, arg1);
         }

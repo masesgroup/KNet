@@ -74,7 +74,7 @@ namespace Org.Apache.Kafka.Common.Security.Plain
         /// <summary>
         /// HPA initializer for PlainAuthenticateCallback(char[] arg0)
         /// </summary>
-        public static PlainAuthenticateCallback New(char[] arg0)
+        public static PlainAuthenticateCallback Create(char[] arg0)
         {
             return JVMBridgeBase.New<PlainAuthenticateCallback>(arg0);
         }

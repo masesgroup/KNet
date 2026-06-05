@@ -108,7 +108,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <summary>
         /// HPA initializer for SessionWindowedSerializer()
         /// </summary>
-        public static SessionWindowedSerializer New()
+        public static SessionWindowedSerializer Create()
         {
             return JVMBridgeBase.New<SessionWindowedSerializer>();
         }
@@ -123,7 +123,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <summary>
         /// HPA initializer for SessionWindowedSerializer(Org.Apache.Kafka.Common.Serialization.Serializer arg0)
         /// </summary>
-        public static SessionWindowedSerializer New(Org.Apache.Kafka.Common.Serialization.Serializer arg0)
+        public static SessionWindowedSerializer Create(Org.Apache.Kafka.Common.Serialization.Serializer arg0)
         {
             return JVMBridgeBase.New<SessionWindowedSerializer>(arg0);
         }
@@ -218,7 +218,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <summary>
         /// HPA initializer for SessionWindowedSerializer()
         /// </summary>
-        public static SessionWindowedSerializer<T> New()
+        public static SessionWindowedSerializer<T> Create()
         {
             return JVMBridgeBase.New<SessionWindowedSerializer<T>>();
         }
@@ -233,7 +233,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <summary>
         /// HPA initializer for SessionWindowedSerializer(Org.Apache.Kafka.Common.Serialization.Serializer%3CT%3E arg0)
         /// </summary>
-        public static SessionWindowedSerializer<T> New(Org.Apache.Kafka.Common.Serialization.Serializer<T> arg0)
+        public static SessionWindowedSerializer<T> Create(Org.Apache.Kafka.Common.Serialization.Serializer<T> arg0)
         {
             return JVMBridgeBase.New<SessionWindowedSerializer<T>>(arg0);
         }

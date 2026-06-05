@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Clients.Producer
         /// <summary>
         /// HPA initializer for PreparedTxnState()
         /// </summary>
-        public static PreparedTxnState New()
+        public static PreparedTxnState Create()
         {
             return JVMBridgeBase.New<PreparedTxnState>();
         }
@@ -88,7 +88,7 @@ namespace Org.Apache.Kafka.Clients.Producer
         /// <summary>
         /// HPA initializer for PreparedTxnState(Java.Lang.String arg0)
         /// </summary>
-        public static PreparedTxnState New(Java.Lang.String arg0)
+        public static PreparedTxnState Create(Java.Lang.String arg0)
         {
             return JVMBridgeBase.New<PreparedTxnState>(arg0);
         }

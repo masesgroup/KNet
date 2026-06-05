@@ -77,7 +77,7 @@ namespace Org.Apache.Kafka.Common.Security.Scram
         /// <summary>
         /// HPA initializer for ScramCredential(byte[] arg0, byte[] arg1, byte[] arg2, int arg3)
         /// </summary>
-        public static ScramCredential New(byte[] arg0, byte[] arg1, byte[] arg2, int arg3)
+        public static ScramCredential Create(byte[] arg0, byte[] arg1, byte[] arg2, int arg3)
         {
             return JVMBridgeBase.New<ScramCredential>(arg0, arg1, arg2, arg3);
         }

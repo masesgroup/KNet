@@ -83,7 +83,7 @@ namespace Org.Apache.Kafka.Streams.Errors.Internals
         /// <summary>
         /// HPA initializer for DefaultErrorHandlerContext(Org.Apache.Kafka.Streams.Processor.ProcessorContext arg0, Java.Lang.String arg1, int arg2, long arg3, Org.Apache.Kafka.Common.Header.Headers arg4, Java.Lang.String arg5, Org.Apache.Kafka.Streams.Processor.TaskId arg6, long arg7, byte[] arg8, byte[] arg9)
         /// </summary>
-        public static DefaultErrorHandlerContext New(Org.Apache.Kafka.Streams.Processor.ProcessorContext arg0, Java.Lang.String arg1, int arg2, long arg3, Org.Apache.Kafka.Common.Header.Headers arg4, Java.Lang.String arg5, Org.Apache.Kafka.Streams.Processor.TaskId arg6, long arg7, byte[] arg8, byte[] arg9)
+        public static DefaultErrorHandlerContext Create(Org.Apache.Kafka.Streams.Processor.ProcessorContext arg0, Java.Lang.String arg1, int arg2, long arg3, Org.Apache.Kafka.Common.Header.Headers arg4, Java.Lang.String arg5, Org.Apache.Kafka.Streams.Processor.TaskId arg6, long arg7, byte[] arg8, byte[] arg9)
         {
             return JVMBridgeBase.New<DefaultErrorHandlerContext>(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9);
         }

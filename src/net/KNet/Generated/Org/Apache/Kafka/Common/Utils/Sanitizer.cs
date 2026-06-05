@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Common.Utils
         /// <summary>
         /// HPA initializer for Sanitizer()
         /// </summary>
-        public static Sanitizer New()
+        public static Sanitizer Create()
         {
             return JVMBridgeBase.New<Sanitizer>();
         }

@@ -74,7 +74,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
         /// <summary>
         /// HPA initializer for MirrorCheckpointConfig(Java.Util.Map%3CJava.Lang.String, Java.Lang.String%3E arg0)
         /// </summary>
-        public static MirrorCheckpointConfig New(Java.Util.Map<Java.Lang.String, Java.Lang.String> arg0)
+        public static MirrorCheckpointConfig Create(Java.Util.Map<Java.Lang.String, Java.Lang.String> arg0)
         {
             return JVMBridgeBase.New<MirrorCheckpointConfig>(arg0);
         }
@@ -90,7 +90,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
         /// <summary>
         /// HPA initializer for MirrorCheckpointConfig(Org.Apache.Kafka.Common.Config.ConfigDef arg0, Java.Util.Map%3CJava.Lang.String, Java.Lang.String%3E arg1)
         /// </summary>
-        public static MirrorCheckpointConfig New(Org.Apache.Kafka.Common.Config.ConfigDef arg0, Java.Util.Map<Java.Lang.String, Java.Lang.String> arg1)
+        public static MirrorCheckpointConfig Create(Org.Apache.Kafka.Common.Config.ConfigDef arg0, Java.Util.Map<Java.Lang.String, Java.Lang.String> arg1)
         {
             return JVMBridgeBase.New<MirrorCheckpointConfig>(arg0, arg1);
         }

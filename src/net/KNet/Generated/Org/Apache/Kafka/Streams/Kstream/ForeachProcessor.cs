@@ -112,7 +112,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <summary>
         /// HPA initializer for ForeachProcessor(Org.Apache.Kafka.Streams.Kstream.ForeachAction arg0)
         /// </summary>
-        public static ForeachProcessor New(Org.Apache.Kafka.Streams.Kstream.ForeachAction arg0)
+        public static ForeachProcessor Create(Org.Apache.Kafka.Streams.Kstream.ForeachAction arg0)
         {
             return JVMBridgeBase.New<ForeachProcessor>(arg0);
         }
@@ -170,7 +170,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <summary>
         /// HPA initializer for ForeachProcessor(Org.Apache.Kafka.Streams.Kstream.ForeachAction%3CK, V%3E arg0)
         /// </summary>
-        public static ForeachProcessor<K, V> New(Org.Apache.Kafka.Streams.Kstream.ForeachAction<K, V> arg0)
+        public static ForeachProcessor<K, V> Create(Org.Apache.Kafka.Streams.Kstream.ForeachAction<K, V> arg0)
         {
             return JVMBridgeBase.New<ForeachProcessor<K, V>>(arg0);
         }

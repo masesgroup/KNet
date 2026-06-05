@@ -74,7 +74,7 @@ namespace Org.Apache.Kafka.Common.Utils
         /// <summary>
         /// HPA initializer for Bytes(byte[] arg0)
         /// </summary>
-        public static Bytes New(byte[] arg0)
+        public static Bytes Create(byte[] arg0)
         {
             return JVMBridgeBase.New<Bytes>(arg0);
         }

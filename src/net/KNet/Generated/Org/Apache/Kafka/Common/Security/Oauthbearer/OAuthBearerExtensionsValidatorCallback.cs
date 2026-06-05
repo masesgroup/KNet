@@ -75,7 +75,7 @@ namespace Org.Apache.Kafka.Common.Security.Oauthbearer
         /// <summary>
         /// HPA initializer for OAuthBearerExtensionsValidatorCallback(Org.Apache.Kafka.Common.Security.Oauthbearer.OAuthBearerToken arg0, Org.Apache.Kafka.Common.Security.Auth.SaslExtensions arg1)
         /// </summary>
-        public static OAuthBearerExtensionsValidatorCallback New(Org.Apache.Kafka.Common.Security.Oauthbearer.OAuthBearerToken arg0, Org.Apache.Kafka.Common.Security.Auth.SaslExtensions arg1)
+        public static OAuthBearerExtensionsValidatorCallback Create(Org.Apache.Kafka.Common.Security.Oauthbearer.OAuthBearerToken arg0, Org.Apache.Kafka.Common.Security.Auth.SaslExtensions arg1)
         {
             return JVMBridgeBase.New<OAuthBearerExtensionsValidatorCallback>(arg0, arg1);
         }

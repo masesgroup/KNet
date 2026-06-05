@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Connect.Converters
         /// <summary>
         /// HPA initializer for LongConverter()
         /// </summary>
-        public static LongConverter New()
+        public static LongConverter Create()
         {
             return JVMBridgeBase.New<LongConverter>();
         }

@@ -76,7 +76,7 @@ namespace Org.Rocksdb
         /// <summary>
         /// HPA initializer for ClockCache(long arg0, int arg1, bool arg2)
         /// </summary>
-        public static ClockCache New(long arg0, int arg1, bool arg2)
+        public static ClockCache Create(long arg0, int arg1, bool arg2)
         {
             return JVMBridgeBase.New<ClockCache>(arg0, arg1, arg2);
         }
@@ -92,7 +92,7 @@ namespace Org.Rocksdb
         /// <summary>
         /// HPA initializer for ClockCache(long arg0, int arg1)
         /// </summary>
-        public static ClockCache New(long arg0, int arg1)
+        public static ClockCache Create(long arg0, int arg1)
         {
             return JVMBridgeBase.New<ClockCache>(arg0, arg1);
         }
@@ -107,7 +107,7 @@ namespace Org.Rocksdb
         /// <summary>
         /// HPA initializer for ClockCache(long arg0)
         /// </summary>
-        public static ClockCache New(long arg0)
+        public static ClockCache Create(long arg0)
         {
             return JVMBridgeBase.New<ClockCache>(arg0);
         }

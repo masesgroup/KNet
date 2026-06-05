@@ -96,7 +96,7 @@ namespace Org.Apache.Kafka.Common.Security.Ssl
         /// <summary>
         /// HPA initializer for SslPrincipalMapper(Java.Lang.String arg0)
         /// </summary>
-        public static SslPrincipalMapper New(Java.Lang.String arg0)
+        public static SslPrincipalMapper Create(Java.Lang.String arg0)
         {
             return JVMBridgeBase.New<SslPrincipalMapper>(arg0);
         }

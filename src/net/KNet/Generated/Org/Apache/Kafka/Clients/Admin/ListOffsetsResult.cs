@@ -108,7 +108,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <summary>
         /// HPA initializer for ListOffsetsResult(Java.Util.Map%3COrg.Apache.Kafka.Common.TopicPartition, Org.Apache.Kafka.Common.KafkaFuture%3COrg.Apache.Kafka.Clients.Admin.ListOffsetsResult.ListOffsetsResultInfo%3E%3E arg0)
         /// </summary>
-        public static ListOffsetsResult New(Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Org.Apache.Kafka.Common.KafkaFuture<Org.Apache.Kafka.Clients.Admin.ListOffsetsResult.ListOffsetsResultInfo>> arg0)
+        public static ListOffsetsResult Create(Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Org.Apache.Kafka.Common.KafkaFuture<Org.Apache.Kafka.Clients.Admin.ListOffsetsResult.ListOffsetsResultInfo>> arg0)
         {
             return JVMBridgeBase.New<ListOffsetsResult>(arg0);
         }
@@ -166,7 +166,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             /// <summary>
             /// HPA initializer for ListOffsetsResultInfo(long arg0, long arg1, Java.Util.Optional%3CJava.Lang.Integer%3E arg2)
             /// </summary>
-            public static ListOffsetsResultInfo New(long arg0, long arg1, Java.Util.Optional<Java.Lang.Integer> arg2)
+            public static ListOffsetsResultInfo Create(long arg0, long arg1, Java.Util.Optional<Java.Lang.Integer> arg2)
             {
                 return JVMBridgeBase.New<ListOffsetsResultInfo>(arg0, arg1, arg2);
             }

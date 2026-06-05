@@ -82,7 +82,7 @@ namespace Org.Apache.Kafka.Raft
         /// <summary>
         /// HPA initializer for FollowerState(Org.Apache.Kafka.Common.Utils.Time arg0, int arg1, int arg2, Org.Apache.Kafka.Raft.Endpoints arg3, Java.Util.Optional%3COrg.Apache.Kafka.Raft.ReplicaKey%3E arg4, Java.Util.Set%3CJava.Lang.Integer%3E arg5, Java.Util.Optional%3COrg.Apache.Kafka.Raft.LogOffsetMetadata%3E arg6, int arg7, Org.Apache.Kafka.Common.Utils.LogContext arg8)
         /// </summary>
-        public static FollowerState New(Org.Apache.Kafka.Common.Utils.Time arg0, int arg1, int arg2, Org.Apache.Kafka.Raft.Endpoints arg3, Java.Util.Optional<Org.Apache.Kafka.Raft.ReplicaKey> arg4, Java.Util.Set<Java.Lang.Integer> arg5, Java.Util.Optional<Org.Apache.Kafka.Raft.LogOffsetMetadata> arg6, int arg7, Org.Apache.Kafka.Common.Utils.LogContext arg8)
+        public static FollowerState Create(Org.Apache.Kafka.Common.Utils.Time arg0, int arg1, int arg2, Org.Apache.Kafka.Raft.Endpoints arg3, Java.Util.Optional<Org.Apache.Kafka.Raft.ReplicaKey> arg4, Java.Util.Set<Java.Lang.Integer> arg5, Java.Util.Optional<Org.Apache.Kafka.Raft.LogOffsetMetadata> arg6, int arg7, Org.Apache.Kafka.Common.Utils.LogContext arg8)
         {
             return JVMBridgeBase.New<FollowerState>(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
         }

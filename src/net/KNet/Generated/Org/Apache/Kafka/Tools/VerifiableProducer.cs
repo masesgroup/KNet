@@ -80,7 +80,7 @@ namespace Org.Apache.Kafka.Tools
         /// <summary>
         /// HPA initializer for VerifiableProducer(Org.Apache.Kafka.Clients.Producer.KafkaProducer%3CJava.Lang.String, Java.Lang.String%3E arg0, Java.Lang.String arg1, int arg2, int arg3, Java.Lang.Integer arg4, Java.Lang.Long arg5, Java.Lang.Integer arg6)
         /// </summary>
-        public static VerifiableProducer New(Org.Apache.Kafka.Clients.Producer.KafkaProducer<Java.Lang.String, Java.Lang.String> arg0, Java.Lang.String arg1, int arg2, int arg3, Java.Lang.Integer arg4, Java.Lang.Long arg5, Java.Lang.Integer arg6)
+        public static VerifiableProducer Create(Org.Apache.Kafka.Clients.Producer.KafkaProducer<Java.Lang.String, Java.Lang.String> arg0, Java.Lang.String arg1, int arg2, int arg3, Java.Lang.Integer arg4, Java.Lang.Long arg5, Java.Lang.Integer arg6)
         {
             return JVMBridgeBase.New<VerifiableProducer>(arg0, arg1, arg2, arg3, arg4, arg5, arg6);
         }

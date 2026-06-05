@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Connect.Data
         /// <summary>
         /// HPA initializer for SchemaProjector()
         /// </summary>
-        public static SchemaProjector New()
+        public static SchemaProjector Create()
         {
             return JVMBridgeBase.New<SchemaProjector>();
         }

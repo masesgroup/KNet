@@ -78,7 +78,7 @@ namespace Org.Apache.Kafka.Common
         /// <summary>
         /// HPA initializer for Node(int arg0, Java.Lang.String arg1, int arg2, Java.Lang.String arg3, bool arg4)
         /// </summary>
-        public static Node New(int arg0, Java.Lang.String arg1, int arg2, Java.Lang.String arg3, bool arg4)
+        public static Node Create(int arg0, Java.Lang.String arg1, int arg2, Java.Lang.String arg3, bool arg4)
         {
             return JVMBridgeBase.New<Node>(arg0, arg1, arg2, arg3, arg4);
         }
@@ -96,7 +96,7 @@ namespace Org.Apache.Kafka.Common
         /// <summary>
         /// HPA initializer for Node(int arg0, Java.Lang.String arg1, int arg2, Java.Lang.String arg3)
         /// </summary>
-        public static Node New(int arg0, Java.Lang.String arg1, int arg2, Java.Lang.String arg3)
+        public static Node Create(int arg0, Java.Lang.String arg1, int arg2, Java.Lang.String arg3)
         {
             return JVMBridgeBase.New<Node>(arg0, arg1, arg2, arg3);
         }
@@ -113,7 +113,7 @@ namespace Org.Apache.Kafka.Common
         /// <summary>
         /// HPA initializer for Node(int arg0, Java.Lang.String arg1, int arg2)
         /// </summary>
-        public static Node New(int arg0, Java.Lang.String arg1, int arg2)
+        public static Node Create(int arg0, Java.Lang.String arg1, int arg2)
         {
             return JVMBridgeBase.New<Node>(arg0, arg1, arg2);
         }

@@ -75,7 +75,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <summary>
         /// HPA initializer for UserScramCredentialsDescription(Java.Lang.String arg0, Java.Util.List%3COrg.Apache.Kafka.Clients.Admin.ScramCredentialInfo%3E arg1)
         /// </summary>
-        public static UserScramCredentialsDescription New(Java.Lang.String arg0, Java.Util.List<Org.Apache.Kafka.Clients.Admin.ScramCredentialInfo> arg1)
+        public static UserScramCredentialsDescription Create(Java.Lang.String arg0, Java.Util.List<Org.Apache.Kafka.Clients.Admin.ScramCredentialInfo> arg1)
         {
             return JVMBridgeBase.New<UserScramCredentialsDescription>(arg0, arg1);
         }

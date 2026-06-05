@@ -74,7 +74,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <summary>
         /// HPA initializer for ListConsumerGroupsOptions()
         /// </summary>
-        public static ListConsumerGroupsOptions New()
+        public static ListConsumerGroupsOptions Create()
         {
             return JVMBridgeBase.New<ListConsumerGroupsOptions>();
         }

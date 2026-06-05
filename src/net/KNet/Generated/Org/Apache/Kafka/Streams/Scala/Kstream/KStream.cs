@@ -110,7 +110,7 @@ namespace Org.Apache.Kafka.Streams.Scala.Kstream
         /// <summary>
         /// HPA initializer for KStream(Org.Apache.Kafka.Streams.Kstream.KStream inner)
         /// </summary>
-        public static KStream New(Org.Apache.Kafka.Streams.Kstream.KStream inner)
+        public static KStream Create(Org.Apache.Kafka.Streams.Kstream.KStream inner)
         {
             return JVMBridgeBase.New<KStream>(inner);
         }
@@ -280,7 +280,7 @@ namespace Org.Apache.Kafka.Streams.Scala.Kstream
         /// <summary>
         /// HPA initializer for KStream(Org.Apache.Kafka.Streams.Kstream.KStream%3CK, V%3E inner)
         /// </summary>
-        public static KStream<K, V> New(Org.Apache.Kafka.Streams.Kstream.KStream<K, V> inner)
+        public static KStream<K, V> Create(Org.Apache.Kafka.Streams.Kstream.KStream<K, V> inner)
         {
             return JVMBridgeBase.New<KStream<K, V>>(inner);
         }

@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Connect.Transforms.Util
         /// <summary>
         /// HPA initializer for RegexValidator()
         /// </summary>
-        public static RegexValidator New()
+        public static RegexValidator Create()
         {
             return JVMBridgeBase.New<RegexValidator>();
         }

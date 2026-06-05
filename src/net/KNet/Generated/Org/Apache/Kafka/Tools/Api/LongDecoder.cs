@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Tools.Api
         /// <summary>
         /// HPA initializer for LongDecoder()
         /// </summary>
-        public static LongDecoder New()
+        public static LongDecoder Create()
         {
             return JVMBridgeBase.New<LongDecoder>();
         }

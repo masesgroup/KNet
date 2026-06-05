@@ -109,7 +109,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
         /// <summary>
         /// HPA initializer for MockShareConsumer()
         /// </summary>
-        public static MockShareConsumer New()
+        public static MockShareConsumer Create()
         {
             return JVMBridgeBase.New<MockShareConsumer>();
         }
@@ -325,7 +325,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
         /// <summary>
         /// HPA initializer for MockShareConsumer()
         /// </summary>
-        public static MockShareConsumer<K, V> New()
+        public static MockShareConsumer<K, V> Create()
         {
             return JVMBridgeBase.New<MockShareConsumer<K, V>>();
         }

@@ -76,7 +76,7 @@ namespace Org.Apache.Kafka.Common.Security.Auth
         /// <summary>
         /// HPA initializer for KafkaPrincipal(Java.Lang.String arg0, Java.Lang.String arg1, bool arg2)
         /// </summary>
-        public static KafkaPrincipal New(Java.Lang.String arg0, Java.Lang.String arg1, bool arg2)
+        public static KafkaPrincipal Create(Java.Lang.String arg0, Java.Lang.String arg1, bool arg2)
         {
             return JVMBridgeBase.New<KafkaPrincipal>(arg0, arg1, arg2);
         }
@@ -92,7 +92,7 @@ namespace Org.Apache.Kafka.Common.Security.Auth
         /// <summary>
         /// HPA initializer for KafkaPrincipal(Java.Lang.String arg0, Java.Lang.String arg1)
         /// </summary>
-        public static KafkaPrincipal New(Java.Lang.String arg0, Java.Lang.String arg1)
+        public static KafkaPrincipal Create(Java.Lang.String arg0, Java.Lang.String arg1)
         {
             return JVMBridgeBase.New<KafkaPrincipal>(arg0, arg1);
         }
