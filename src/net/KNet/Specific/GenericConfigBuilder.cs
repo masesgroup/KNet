@@ -125,7 +125,7 @@ namespace MASES.KNet
         /// <returns><see cref="Properties"/> containing the properties</returns>
         public Properties ToProperties()
         {
-            Properties props = JVMBridgeBase.New<Properties>();
+            Properties props = Properties.CreatePoolableInstance();
             foreach (var item in _options)
             {
                 using var _ = props.Put(item.Key, item.Value) as IDisposable;
@@ -140,7 +140,7 @@ namespace MASES.KNet
         /// <returns><see cref="Map{String, String}"/> containing the properties</returns>
         public Map<Java.Lang.String, Java.Lang.String> ToMap()
         {
-            HashMap<Java.Lang.String, Java.Lang.String> props = JVMBridgeBase.New<HashMap<Java.Lang.String, Java.Lang.String>>();
+            HashMap<Java.Lang.String, Java.Lang.String> props = HashMap<Java.Lang.String, Java.Lang.String>.CreatePoolableInstance();
             foreach (var item in _options)
             {
                 using var _ = props.Put(item.Key, Convert.ToString(item.Value, CultureInfo.InvariantCulture));

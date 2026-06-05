@@ -229,7 +229,7 @@ namespace MASES.KNet.Streams.Kstream
 
             var methodToExecute = (OnApply != null) ? OnApply : Apply;
             var res = methodToExecute(_kSerializer.Deserialize((Java.Lang.String)null, arg0), _vSerializer.Deserialize((Java.Lang.String)null, arg1));
-            var result = JVMBridgeBase.New<ArrayList<Org.Apache.Kafka.Streams.KeyValue<TJVMKR, TJVMVR>>>();
+            var result = ArrayList<Org.Apache.Kafka.Streams.KeyValue<TJVMKR, TJVMVR>>.CreatePoolableInstance();
             foreach (var item in res)
             {
                 var jKR = _krSerializer.Serialize((Java.Lang.String)null, item.Item1);
