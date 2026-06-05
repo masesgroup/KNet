@@ -17,14 +17,15 @@
 */
 
 using Java.Util;
-using System.Globalization;
-using System;
-using MASES.KNet.Serialization;
-using System.Linq;
-using System.Collections.Concurrent;
 using MASES.JCOBridge.C2JBridge;
-using System.Collections.Generic;
+using MASES.JNet.Specific.Extensions;
+using MASES.KNet.Serialization;
+using System;
 using System.Collections;
+using System.Collections.Concurrent;
+using System.Collections.Generic;
+using System.Globalization;
+using System.Linq;
 
 namespace MASES.KNet
 {
@@ -125,10 +126,10 @@ namespace MASES.KNet
         /// <returns><see cref="Properties"/> containing the properties</returns>
         public Properties ToProperties()
         {
-            Properties props = JVMBridgeBase.New<Properties>();
+            Properties props = Properties.CreatePoolableInstance();
             foreach (var item in _options)
             {
-                using var _ = props.Put(item.Key, item.Value) as IDisposable;
+                props.Put(item.Key, item.Value).DisposeIfDisposable();
             }
 
             return props;
@@ -140,10 +141,10 @@ namespace MASES.KNet
         /// <returns><see cref="Map{String, String}"/> containing the properties</returns>
         public Map<Java.Lang.String, Java.Lang.String> ToMap()
         {
-            HashMap<Java.Lang.String, Java.Lang.String> props = JVMBridgeBase.New<HashMap<Java.Lang.String, Java.Lang.String>>();
+            HashMap<Java.Lang.String, Java.Lang.String> props = HashMap<Java.Lang.String, Java.Lang.String>.CreatePoolableInstance();
             foreach (var item in _options)
             {
-                using var _ = props.Put(item.Key, Convert.ToString(item.Value, CultureInfo.InvariantCulture));
+                props.Put(item.Key, Convert.ToString(item.Value, CultureInfo.InvariantCulture)).DisposeIfDisposable();
             }
 
             return props;

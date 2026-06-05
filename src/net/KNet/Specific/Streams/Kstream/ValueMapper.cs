@@ -127,7 +127,7 @@ namespace MASES.KNet.Streams.Kstream
 
             var methodToExecute = (OnApply != null) ? OnApply : Apply;
             var res = methodToExecute(_vSerializer.Deserialize((Java.Lang.String)null, arg0));
-            var result = JVMBridgeBase.New<ArrayList<TJVMVR>>();
+            var result = ArrayList<TJVMVR>.CreatePoolableInstance();
             foreach (var item in res)
             {
                 var localValue = _vrSerializer.Serialize((Java.Lang.String)null, item);
