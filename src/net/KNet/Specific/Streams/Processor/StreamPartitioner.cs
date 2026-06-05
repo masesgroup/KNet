@@ -98,7 +98,7 @@ namespace MASES.KNet.Streams.Processor
             var res = (OnPartitions != null) ? OnPartitions(this) : Partitions();
             if (res == null || res.Count == 0) return Optional<Set<Integer>>.Empty();
             using var scope = new JCOBridgeDisposeFastScope();
-            using HashSet<Integer> result = JVMBridgeBase.New<HashSet<Integer>>();
+            using HashSet<Integer> result = HashSet<Integer>.CreatePoolableInstance();
             foreach (var item in res)
             {
                 if (item.HasValue)

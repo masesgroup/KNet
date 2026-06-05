@@ -50,7 +50,7 @@ namespace MASES.KNet.Streams
         /// <inheritdoc/>
         public override Org.Apache.Kafka.Clients.Consumer.Consumer<byte[], byte[]> GetConsumer(Map<Java.Lang.String, object> arg0)
         {
-            Properties properties = JVMBridgeBase.New<Properties>();
+            Properties properties = Properties.CreatePoolableInstance();
             properties.PutAll(arg0);
 
             var consumer = new KNetConsumer<byte[], byte[], byte[], byte[]>(properties);
@@ -60,7 +60,7 @@ namespace MASES.KNet.Streams
         /// <inheritdoc/>
         public override Org.Apache.Kafka.Clients.Consumer.Consumer<byte[], byte[]> GetGlobalConsumer(Map<Java.Lang.String, object> arg0)
         {
-            Properties properties = JVMBridgeBase.New<Properties>();
+            Properties properties = Properties.CreatePoolableInstance();
             properties.PutAll(arg0);
 
             var consumer = new KNetConsumer<byte[], byte[], byte[], byte[]>(properties);
@@ -70,7 +70,7 @@ namespace MASES.KNet.Streams
         /// <inheritdoc/>
         public override Org.Apache.Kafka.Clients.Producer.Producer<byte[], byte[]> GetProducer(Map<Java.Lang.String, object> arg0)
         {
-            Properties properties = JVMBridgeBase.New<Properties>();
+            Properties properties = Properties.CreatePoolableInstance();
             properties.PutAll(arg0);
 
             var producer = new KNetProducer<byte[], byte[], byte[], byte[]>(properties);
@@ -80,7 +80,7 @@ namespace MASES.KNet.Streams
         /// <inheritdoc/>
         public override Org.Apache.Kafka.Clients.Consumer.Consumer<byte[], byte[]> GetRestoreConsumer(Map<Java.Lang.String, object> arg0)
         {
-            Properties properties = JVMBridgeBase.New<Properties>();
+            Properties properties = Properties.CreatePoolableInstance();
             properties.PutAll(arg0);
 
             var consumer = new KNetConsumer<byte[], byte[], byte[], byte[]>(properties);

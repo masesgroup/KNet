@@ -159,7 +159,7 @@ namespace MASES.KNet.Streams.Kstream
 
             IEnumerable<VR> res = (OnApply != null) ? OnApply(this) : Apply();
             _vrSerializer ??= Factory?.BuildValueSerDes<VR, TJVMVR>();
-            var result = JVMBridgeBase.New<ArrayList<TJVMVR>>();
+            var result = ArrayList<TJVMVR>.CreatePoolableInstance();
             foreach (var item in res)
             {
                 var localValue = _vrSerializer.Serialize((Java.Lang.String)null, item);
