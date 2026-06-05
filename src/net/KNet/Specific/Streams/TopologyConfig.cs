@@ -39,7 +39,7 @@ namespace MASES.KNet.Streams
         /// <param name="arg2"><see cref="Java.Util.Properties"/></param>
         public TopologyConfig(string arg0, StreamsConfigBuilder arg1, Java.Util.Properties arg2)
         {
-            _inner = JVMBridgeBase.New<Org.Apache.Kafka.Streams.TopologyConfig>(arg0, PrepareProperties(arg1), arg2);
+            _inner = Org.Apache.Kafka.Streams.TopologyConfig.New(arg0, PrepareProperties(arg1), arg2);
             _factory = arg1;
         }
         /// <summary>
@@ -48,7 +48,7 @@ namespace MASES.KNet.Streams
         /// <param name="arg0"><see cref="StreamsConfigBuilder"/></param>
         public TopologyConfig(StreamsConfigBuilder arg0)
         {
-            _inner = JVMBridgeBase.New<Org.Apache.Kafka.Streams.TopologyConfig>(PrepareProperties(arg0));
+            _inner = Org.Apache.Kafka.Streams.TopologyConfig.New(PrepareProperties(arg0));
             _factory = arg0;
         }
         #endregion
@@ -69,7 +69,7 @@ namespace MASES.KNet.Streams
         protected virtual Org.Apache.Kafka.Streams.StreamsConfig PrepareProperties(StreamsConfigBuilder builder)
         {
             Java.Util.Properties properties = OverrideProperties != null ? OverrideProperties(builder) : builder;
-            return JVMBridgeBase.New<Org.Apache.Kafka.Streams.StreamsConfig>(properties);
+            return Org.Apache.Kafka.Streams.StreamsConfig.New(properties);
         }
 
         #region Fields

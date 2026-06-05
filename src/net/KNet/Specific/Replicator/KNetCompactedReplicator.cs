@@ -448,7 +448,7 @@ namespace MASES.KNet.Replicator
             static void OnDemandRetrieve(IConsumer<K, V, TJVMK, TJVMV> consumer, string topic, K key, ILocalDataStorage data)
             {
                 using var scope = new JCOBridgeDisposeFastScope();
-                using var topicPartition = JVMBridgeBase.New<Org.Apache.Kafka.Common.TopicPartition>(topic, data.Partition);
+                using var topicPartition = Org.Apache.Kafka.Common.TopicPartition.New(topic, data.Partition);
                 using var topics = Java.Util.Collections.Singleton(topicPartition);
                 consumer.Assign(topics);
                 consumer.Seek(topicPartition, data.Offset);
