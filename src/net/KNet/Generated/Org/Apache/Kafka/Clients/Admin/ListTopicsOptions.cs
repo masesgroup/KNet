@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <summary>
         /// HPA initializer for ListTopicsOptions()
         /// </summary>
-        public static ListTopicsOptions New()
+        public static ListTopicsOptions CreatePoolableInstance()
         {
             return JVMBridgeBase.New<ListTopicsOptions>();
         }

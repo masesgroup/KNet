@@ -75,7 +75,7 @@ namespace Org.Rocksdb
         /// <summary>
         /// HPA initializer for SstFileWriter(Org.Rocksdb.EnvOptions arg0, Org.Rocksdb.Options arg1)
         /// </summary>
-        public static SstFileWriter New(Org.Rocksdb.EnvOptions arg0, Org.Rocksdb.Options arg1)
+        public static SstFileWriter CreatePoolableInstance(Org.Rocksdb.EnvOptions arg0, Org.Rocksdb.Options arg1)
         {
             return JVMBridgeBase.New<SstFileWriter>(arg0, arg1);
         }

@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Tools
         /// <summary>
         /// HPA initializer for ProducerPerformance()
         /// </summary>
-        public static ProducerPerformance New()
+        public static ProducerPerformance CreatePoolableInstance()
         {
             return JVMBridgeBase.New<ProducerPerformance>();
         }

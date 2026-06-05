@@ -77,7 +77,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <summary>
         /// HPA initializer for GroupListing(Java.Lang.String arg0, Java.Util.Optional%3COrg.Apache.Kafka.Common.GroupType%3E arg1, Java.Lang.String arg2, Java.Util.Optional%3COrg.Apache.Kafka.Common.GroupState%3E arg3)
         /// </summary>
-        public static GroupListing New(Java.Lang.String arg0, Java.Util.Optional<Org.Apache.Kafka.Common.GroupType> arg1, Java.Lang.String arg2, Java.Util.Optional<Org.Apache.Kafka.Common.GroupState> arg3)
+        public static GroupListing CreatePoolableInstance(Java.Lang.String arg0, Java.Util.Optional<Org.Apache.Kafka.Common.GroupType> arg1, Java.Lang.String arg2, Java.Util.Optional<Org.Apache.Kafka.Common.GroupState> arg3)
         {
             return JVMBridgeBase.New<GroupListing>(arg0, arg1, arg2, arg3);
         }

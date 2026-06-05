@@ -74,7 +74,7 @@ namespace Org.Apache.Kafka.Connect.Cli
         /// <summary>
         /// HPA initializer for ConnectDistributed(params Java.Lang.String[] arg0)
         /// </summary>
-        public static ConnectDistributed New(params Java.Lang.String[] arg0)
+        public static ConnectDistributed CreatePoolableInstance(params Java.Lang.String[] arg0)
         {
             return JVMBridgeBase.New<ConnectDistributed>(arg0);
         }

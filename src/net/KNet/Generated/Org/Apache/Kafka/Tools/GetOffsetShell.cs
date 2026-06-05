@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Tools
         /// <summary>
         /// HPA initializer for GetOffsetShell()
         /// </summary>
-        public static GetOffsetShell New()
+        public static GetOffsetShell CreatePoolableInstance()
         {
             return JVMBridgeBase.New<GetOffsetShell>();
         }

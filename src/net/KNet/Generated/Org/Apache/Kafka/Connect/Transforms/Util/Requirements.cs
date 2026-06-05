@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Connect.Transforms.Util
         /// <summary>
         /// HPA initializer for Requirements()
         /// </summary>
-        public static Requirements New()
+        public static Requirements CreatePoolableInstance()
         {
             return JVMBridgeBase.New<Requirements>();
         }

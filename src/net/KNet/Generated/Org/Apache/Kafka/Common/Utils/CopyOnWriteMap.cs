@@ -109,7 +109,7 @@ namespace Org.Apache.Kafka.Common.Utils
         /// <summary>
         /// HPA initializer for CopyOnWriteMap()
         /// </summary>
-        public static CopyOnWriteMap New()
+        public static CopyOnWriteMap CreatePoolableInstance()
         {
             return JVMBridgeBase.New<CopyOnWriteMap>();
         }
@@ -124,7 +124,7 @@ namespace Org.Apache.Kafka.Common.Utils
         /// <summary>
         /// HPA initializer for CopyOnWriteMap(Java.Util.Map arg0)
         /// </summary>
-        public static CopyOnWriteMap New(Java.Util.Map arg0)
+        public static CopyOnWriteMap CreatePoolableInstance(Java.Util.Map arg0)
         {
             return JVMBridgeBase.New<CopyOnWriteMap>(arg0);
         }
@@ -311,7 +311,7 @@ namespace Org.Apache.Kafka.Common.Utils
         /// <summary>
         /// HPA initializer for CopyOnWriteMap()
         /// </summary>
-        public static CopyOnWriteMap<K, V> New()
+        public static CopyOnWriteMap<K, V> CreatePoolableInstance()
         {
             return JVMBridgeBase.New<CopyOnWriteMap<K, V>>();
         }
@@ -326,7 +326,7 @@ namespace Org.Apache.Kafka.Common.Utils
         /// <summary>
         /// HPA initializer for CopyOnWriteMap(Java.Util.Map%3CK, V%3E arg0)
         /// </summary>
-        public static CopyOnWriteMap<K, V> New(Java.Util.Map<K, V> arg0)
+        public static CopyOnWriteMap<K, V> CreatePoolableInstance(Java.Util.Map<K, V> arg0)
         {
             return JVMBridgeBase.New<CopyOnWriteMap<K, V>>(arg0);
         }

@@ -78,7 +78,7 @@ namespace Org.Rocksdb
         /// <summary>
         /// HPA initializer for RateLimiter(long arg0, long arg1, int arg2, Org.Rocksdb.RateLimiterMode arg3, bool arg4)
         /// </summary>
-        public static RateLimiter New(long arg0, long arg1, int arg2, Org.Rocksdb.RateLimiterMode arg3, bool arg4)
+        public static RateLimiter CreatePoolableInstance(long arg0, long arg1, int arg2, Org.Rocksdb.RateLimiterMode arg3, bool arg4)
         {
             return JVMBridgeBase.New<RateLimiter>(arg0, arg1, arg2, arg3, arg4);
         }
@@ -96,7 +96,7 @@ namespace Org.Rocksdb
         /// <summary>
         /// HPA initializer for RateLimiter(long arg0, long arg1, int arg2, Org.Rocksdb.RateLimiterMode arg3)
         /// </summary>
-        public static RateLimiter New(long arg0, long arg1, int arg2, Org.Rocksdb.RateLimiterMode arg3)
+        public static RateLimiter CreatePoolableInstance(long arg0, long arg1, int arg2, Org.Rocksdb.RateLimiterMode arg3)
         {
             return JVMBridgeBase.New<RateLimiter>(arg0, arg1, arg2, arg3);
         }
@@ -113,7 +113,7 @@ namespace Org.Rocksdb
         /// <summary>
         /// HPA initializer for RateLimiter(long arg0, long arg1, int arg2)
         /// </summary>
-        public static RateLimiter New(long arg0, long arg1, int arg2)
+        public static RateLimiter CreatePoolableInstance(long arg0, long arg1, int arg2)
         {
             return JVMBridgeBase.New<RateLimiter>(arg0, arg1, arg2);
         }
@@ -129,7 +129,7 @@ namespace Org.Rocksdb
         /// <summary>
         /// HPA initializer for RateLimiter(long arg0, long arg1)
         /// </summary>
-        public static RateLimiter New(long arg0, long arg1)
+        public static RateLimiter CreatePoolableInstance(long arg0, long arg1)
         {
             return JVMBridgeBase.New<RateLimiter>(arg0, arg1);
         }
@@ -144,7 +144,7 @@ namespace Org.Rocksdb
         /// <summary>
         /// HPA initializer for RateLimiter(long arg0)
         /// </summary>
-        public static RateLimiter New(long arg0)
+        public static RateLimiter CreatePoolableInstance(long arg0)
         {
             return JVMBridgeBase.New<RateLimiter>(arg0);
         }

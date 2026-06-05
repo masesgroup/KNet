@@ -75,7 +75,7 @@ namespace Org.Apache.Kafka.Common.Metrics
         /// <summary>
         /// HPA initializer for Quota(double arg0, bool arg1)
         /// </summary>
-        public static Quota New(double arg0, bool arg1)
+        public static Quota CreatePoolableInstance(double arg0, bool arg1)
         {
             return JVMBridgeBase.New<Quota>(arg0, arg1);
         }

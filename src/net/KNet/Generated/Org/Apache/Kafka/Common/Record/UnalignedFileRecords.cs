@@ -76,7 +76,7 @@ namespace Org.Apache.Kafka.Common.Record
         /// <summary>
         /// HPA initializer for UnalignedFileRecords(Java.Nio.Channels.FileChannel arg0, long arg1, int arg2)
         /// </summary>
-        public static UnalignedFileRecords New(Java.Nio.Channels.FileChannel arg0, long arg1, int arg2)
+        public static UnalignedFileRecords CreatePoolableInstance(Java.Nio.Channels.FileChannel arg0, long arg1, int arg2)
         {
             return JVMBridgeBase.New<UnalignedFileRecords>(arg0, arg1, arg2);
         }

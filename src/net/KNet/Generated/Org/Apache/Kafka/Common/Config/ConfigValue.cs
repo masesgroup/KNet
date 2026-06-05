@@ -77,7 +77,7 @@ namespace Org.Apache.Kafka.Common.Config
         /// <summary>
         /// HPA initializer for ConfigValue(Java.Lang.String arg0, object arg1, Java.Util.List%3Cobject%3E arg2, Java.Util.List%3CJava.Lang.String%3E arg3)
         /// </summary>
-        public static ConfigValue New(Java.Lang.String arg0, object arg1, Java.Util.List<object> arg2, Java.Util.List<Java.Lang.String> arg3)
+        public static ConfigValue CreatePoolableInstance(Java.Lang.String arg0, object arg1, Java.Util.List<object> arg2, Java.Util.List<Java.Lang.String> arg3)
         {
             return JVMBridgeBase.New<ConfigValue>(arg0, arg1, arg2, arg3);
         }
@@ -92,7 +92,7 @@ namespace Org.Apache.Kafka.Common.Config
         /// <summary>
         /// HPA initializer for ConfigValue(Java.Lang.String arg0)
         /// </summary>
-        public static ConfigValue New(Java.Lang.String arg0)
+        public static ConfigValue CreatePoolableInstance(Java.Lang.String arg0)
         {
             return JVMBridgeBase.New<ConfigValue>(arg0);
         }

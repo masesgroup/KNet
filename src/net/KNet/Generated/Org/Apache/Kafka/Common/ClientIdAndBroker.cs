@@ -76,7 +76,7 @@ namespace Org.Apache.Kafka.Common
         /// <summary>
         /// HPA initializer for ClientIdAndBroker(Java.Lang.String arg0, Java.Lang.String arg1, int arg2)
         /// </summary>
-        public static ClientIdAndBroker New(Java.Lang.String arg0, Java.Lang.String arg1, int arg2)
+        public static ClientIdAndBroker CreatePoolableInstance(Java.Lang.String arg0, Java.Lang.String arg1, int arg2)
         {
             return JVMBridgeBase.New<ClientIdAndBroker>(arg0, arg1, arg2);
         }

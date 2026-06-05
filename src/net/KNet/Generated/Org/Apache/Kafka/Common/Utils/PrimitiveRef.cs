@@ -141,7 +141,7 @@ namespace Org.Apache.Kafka.Common.Utils
         /// <summary>
         /// HPA initializer for PrimitiveRef()
         /// </summary>
-        public static PrimitiveRef New()
+        public static PrimitiveRef CreatePoolableInstance()
         {
             return JVMBridgeBase.New<PrimitiveRef>();
         }

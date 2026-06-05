@@ -74,7 +74,7 @@ namespace Org.Rocksdb
         /// <summary>
         /// HPA initializer for TimedEnv(Org.Rocksdb.Env arg0)
         /// </summary>
-        public static TimedEnv New(Org.Rocksdb.Env arg0)
+        public static TimedEnv CreatePoolableInstance(Org.Rocksdb.Env arg0)
         {
             return JVMBridgeBase.New<TimedEnv>(arg0);
         }

@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <summary>
         /// HPA initializer for RemoveRaftVoterOptions()
         /// </summary>
-        public static RemoveRaftVoterOptions New()
+        public static RemoveRaftVoterOptions CreatePoolableInstance()
         {
             return JVMBridgeBase.New<RemoveRaftVoterOptions>();
         }

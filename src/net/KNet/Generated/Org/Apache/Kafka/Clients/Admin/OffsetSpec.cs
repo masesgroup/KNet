@@ -311,7 +311,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <summary>
         /// HPA initializer for OffsetSpec()
         /// </summary>
-        public static OffsetSpec New()
+        public static OffsetSpec CreatePoolableInstance()
         {
             return JVMBridgeBase.New<OffsetSpec>();
         }
@@ -406,7 +406,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             /// <summary>
             /// HPA initializer for EarliestLocalSpec()
             /// </summary>
-            public static EarliestLocalSpec New()
+            public static EarliestLocalSpec CreatePoolableInstance()
             {
                 return JVMBridgeBase.New<EarliestLocalSpec>();
             }
@@ -451,7 +451,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             /// <summary>
             /// HPA initializer for EarliestPendingUploadSpec()
             /// </summary>
-            public static EarliestPendingUploadSpec New()
+            public static EarliestPendingUploadSpec CreatePoolableInstance()
             {
                 return JVMBridgeBase.New<EarliestPendingUploadSpec>();
             }
@@ -496,7 +496,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             /// <summary>
             /// HPA initializer for EarliestSpec()
             /// </summary>
-            public static EarliestSpec New()
+            public static EarliestSpec CreatePoolableInstance()
             {
                 return JVMBridgeBase.New<EarliestSpec>();
             }
@@ -541,7 +541,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             /// <summary>
             /// HPA initializer for LatestSpec()
             /// </summary>
-            public static LatestSpec New()
+            public static LatestSpec CreatePoolableInstance()
             {
                 return JVMBridgeBase.New<LatestSpec>();
             }
@@ -586,7 +586,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             /// <summary>
             /// HPA initializer for LatestTieredSpec()
             /// </summary>
-            public static LatestTieredSpec New()
+            public static LatestTieredSpec CreatePoolableInstance()
             {
                 return JVMBridgeBase.New<LatestTieredSpec>();
             }
@@ -631,7 +631,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             /// <summary>
             /// HPA initializer for MaxTimestampSpec()
             /// </summary>
-            public static MaxTimestampSpec New()
+            public static MaxTimestampSpec CreatePoolableInstance()
             {
                 return JVMBridgeBase.New<MaxTimestampSpec>();
             }

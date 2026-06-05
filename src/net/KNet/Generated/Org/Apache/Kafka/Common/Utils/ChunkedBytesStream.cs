@@ -77,7 +77,7 @@ namespace Org.Apache.Kafka.Common.Utils
         /// <summary>
         /// HPA initializer for ChunkedBytesStream(Java.Io.InputStream arg0, Org.Apache.Kafka.Common.Utils.BufferSupplier arg1, int arg2, bool arg3)
         /// </summary>
-        public static ChunkedBytesStream New(Java.Io.InputStream arg0, Org.Apache.Kafka.Common.Utils.BufferSupplier arg1, int arg2, bool arg3)
+        public static ChunkedBytesStream CreatePoolableInstance(Java.Io.InputStream arg0, Org.Apache.Kafka.Common.Utils.BufferSupplier arg1, int arg2, bool arg3)
         {
             return JVMBridgeBase.New<ChunkedBytesStream>(arg0, arg1, arg2, arg3);
         }

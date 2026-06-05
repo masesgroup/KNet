@@ -141,7 +141,7 @@ namespace Org.Apache.Kafka.Tools
         /// <summary>
         /// HPA initializer for GroupsCommand()
         /// </summary>
-        public static GroupsCommand New()
+        public static GroupsCommand CreatePoolableInstance()
         {
             return JVMBridgeBase.New<GroupsCommand>();
         }
@@ -188,7 +188,7 @@ namespace Org.Apache.Kafka.Tools
             /// <summary>
             /// HPA initializer for GroupsCommandOptions(Java.Lang.String[] arg0)
             /// </summary>
-            public static GroupsCommandOptions New(Java.Lang.String[] arg0)
+            public static GroupsCommandOptions CreatePoolableInstance(Java.Lang.String[] arg0)
             {
                 return JVMBridgeBase.New<GroupsCommandOptions>(arg0);
             }
@@ -306,7 +306,7 @@ namespace Org.Apache.Kafka.Tools
             /// <summary>
             /// HPA initializer for GroupsService(Java.Util.Properties arg0)
             /// </summary>
-            public static GroupsService New(Java.Util.Properties arg0)
+            public static GroupsService CreatePoolableInstance(Java.Util.Properties arg0)
             {
                 return JVMBridgeBase.New<GroupsService>(arg0);
             }

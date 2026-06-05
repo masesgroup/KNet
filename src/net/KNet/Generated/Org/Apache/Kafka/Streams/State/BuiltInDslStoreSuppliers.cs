@@ -141,7 +141,7 @@ namespace Org.Apache.Kafka.Streams.State
         /// <summary>
         /// HPA initializer for BuiltInDslStoreSuppliers()
         /// </summary>
-        public static BuiltInDslStoreSuppliers New()
+        public static BuiltInDslStoreSuppliers CreatePoolableInstance()
         {
             return JVMBridgeBase.New<BuiltInDslStoreSuppliers>();
         }
@@ -187,7 +187,7 @@ namespace Org.Apache.Kafka.Streams.State
             /// <summary>
             /// HPA initializer for InMemoryDslStoreSuppliers()
             /// </summary>
-            public static InMemoryDslStoreSuppliers New()
+            public static InMemoryDslStoreSuppliers CreatePoolableInstance()
             {
                 return JVMBridgeBase.New<InMemoryDslStoreSuppliers>();
             }
@@ -259,7 +259,7 @@ namespace Org.Apache.Kafka.Streams.State
             /// <summary>
             /// HPA initializer for RocksDBDslStoreSuppliers()
             /// </summary>
-            public static RocksDBDslStoreSuppliers New()
+            public static RocksDBDslStoreSuppliers CreatePoolableInstance()
             {
                 return JVMBridgeBase.New<RocksDBDslStoreSuppliers>();
             }

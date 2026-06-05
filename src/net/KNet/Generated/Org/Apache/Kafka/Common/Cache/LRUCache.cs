@@ -110,7 +110,7 @@ namespace Org.Apache.Kafka.Common.Cache
         /// <summary>
         /// HPA initializer for LRUCache(int arg0)
         /// </summary>
-        public static LRUCache New(int arg0)
+        public static LRUCache CreatePoolableInstance(int arg0)
         {
             return JVMBridgeBase.New<LRUCache>(arg0);
         }
@@ -191,7 +191,7 @@ namespace Org.Apache.Kafka.Common.Cache
         /// <summary>
         /// HPA initializer for LRUCache(int arg0)
         /// </summary>
-        public static LRUCache<K, V> New(int arg0)
+        public static LRUCache<K, V> CreatePoolableInstance(int arg0)
         {
             return JVMBridgeBase.New<LRUCache<K, V>>(arg0);
         }

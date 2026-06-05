@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <summary>
         /// HPA initializer for DescribeAclsOptions()
         /// </summary>
-        public static DescribeAclsOptions New()
+        public static DescribeAclsOptions CreatePoolableInstance()
         {
             return JVMBridgeBase.New<DescribeAclsOptions>();
         }

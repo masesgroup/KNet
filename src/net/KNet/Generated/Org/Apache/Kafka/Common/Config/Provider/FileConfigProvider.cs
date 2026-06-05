@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Common.Config.Provider
         /// <summary>
         /// HPA initializer for FileConfigProvider()
         /// </summary>
-        public static FileConfigProvider New()
+        public static FileConfigProvider CreatePoolableInstance()
         {
             return JVMBridgeBase.New<FileConfigProvider>();
         }

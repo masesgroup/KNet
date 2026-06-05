@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Connect.Util
         /// <summary>
         /// HPA initializer for InstantiableClassValidator()
         /// </summary>
-        public static InstantiableClassValidator New()
+        public static InstantiableClassValidator CreatePoolableInstance()
         {
             return JVMBridgeBase.New<InstantiableClassValidator>();
         }

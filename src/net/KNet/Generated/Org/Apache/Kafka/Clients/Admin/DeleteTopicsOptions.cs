@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <summary>
         /// HPA initializer for DeleteTopicsOptions()
         /// </summary>
-        public static DeleteTopicsOptions New()
+        public static DeleteTopicsOptions CreatePoolableInstance()
         {
             return JVMBridgeBase.New<DeleteTopicsOptions>();
         }

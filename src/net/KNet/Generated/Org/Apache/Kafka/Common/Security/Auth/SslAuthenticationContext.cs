@@ -76,7 +76,7 @@ namespace Org.Apache.Kafka.Common.Security.Auth
         /// <summary>
         /// HPA initializer for SslAuthenticationContext(Javax.Net.Ssl.SSLSession arg0, Java.Net.InetAddress arg1, Java.Lang.String arg2)
         /// </summary>
-        public static SslAuthenticationContext New(Javax.Net.Ssl.SSLSession arg0, Java.Net.InetAddress arg1, Java.Lang.String arg2)
+        public static SslAuthenticationContext CreatePoolableInstance(Javax.Net.Ssl.SSLSession arg0, Java.Net.InetAddress arg1, Java.Lang.String arg2)
         {
             return JVMBridgeBase.New<SslAuthenticationContext>(arg0, arg1, arg2);
         }

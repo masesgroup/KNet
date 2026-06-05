@@ -73,7 +73,7 @@ namespace Org.Rocksdb
         /// <summary>
         /// HPA initializer for Options()
         /// </summary>
-        public static Options New()
+        public static Options CreatePoolableInstance()
         {
             return JVMBridgeBase.New<Options>();
         }
@@ -89,7 +89,7 @@ namespace Org.Rocksdb
         /// <summary>
         /// HPA initializer for Options(Org.Rocksdb.DBOptions arg0, Org.Rocksdb.ColumnFamilyOptions arg1)
         /// </summary>
-        public static Options New(Org.Rocksdb.DBOptions arg0, Org.Rocksdb.ColumnFamilyOptions arg1)
+        public static Options CreatePoolableInstance(Org.Rocksdb.DBOptions arg0, Org.Rocksdb.ColumnFamilyOptions arg1)
         {
             return JVMBridgeBase.New<Options>(arg0, arg1);
         }
@@ -104,7 +104,7 @@ namespace Org.Rocksdb
         /// <summary>
         /// HPA initializer for Options(Org.Rocksdb.Options arg0)
         /// </summary>
-        public static Options New(Org.Rocksdb.Options arg0)
+        public static Options CreatePoolableInstance(Org.Rocksdb.Options arg0)
         {
             return JVMBridgeBase.New<Options>(arg0);
         }

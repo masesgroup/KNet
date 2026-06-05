@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Common.Serialization
         /// <summary>
         /// HPA initializer for VoidDeserializer()
         /// </summary>
-        public static VoidDeserializer New()
+        public static VoidDeserializer CreatePoolableInstance()
         {
             return JVMBridgeBase.New<VoidDeserializer>();
         }

@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Connect.Converters
         /// <summary>
         /// HPA initializer for IntegerConverter()
         /// </summary>
-        public static IntegerConverter New()
+        public static IntegerConverter CreatePoolableInstance()
         {
             return JVMBridgeBase.New<IntegerConverter>();
         }

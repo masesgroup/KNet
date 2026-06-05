@@ -76,7 +76,7 @@ namespace Org.Apache.Kafka.Connect.Health
         /// <summary>
         /// HPA initializer for AbstractState(Java.Lang.String arg0, Java.Lang.String arg1, Java.Lang.String arg2)
         /// </summary>
-        public static AbstractState New(Java.Lang.String arg0, Java.Lang.String arg1, Java.Lang.String arg2)
+        public static AbstractState CreatePoolableInstance(Java.Lang.String arg0, Java.Lang.String arg1, Java.Lang.String arg2)
         {
             return JVMBridgeBase.New<AbstractState>(arg0, arg1, arg2);
         }

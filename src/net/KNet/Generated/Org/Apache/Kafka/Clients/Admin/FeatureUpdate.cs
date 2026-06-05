@@ -109,7 +109,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <summary>
         /// HPA initializer for FeatureUpdate(short arg0, Org.Apache.Kafka.Clients.Admin.FeatureUpdate.UpgradeType arg1)
         /// </summary>
-        public static FeatureUpdate New(short arg0, Org.Apache.Kafka.Clients.Admin.FeatureUpdate.UpgradeType arg1)
+        public static FeatureUpdate CreatePoolableInstance(short arg0, Org.Apache.Kafka.Clients.Admin.FeatureUpdate.UpgradeType arg1)
         {
             return JVMBridgeBase.New<FeatureUpdate>(arg0, arg1);
         }

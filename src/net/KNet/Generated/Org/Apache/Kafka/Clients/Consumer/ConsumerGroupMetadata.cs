@@ -78,7 +78,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
         /// <summary>
         /// HPA initializer for ConsumerGroupMetadata(Java.Lang.String arg0, int arg1, Java.Lang.String arg2, Java.Util.Optional%3CJava.Lang.String%3E arg3)
         /// </summary>
-        public static ConsumerGroupMetadata New(Java.Lang.String arg0, int arg1, Java.Lang.String arg2, Java.Util.Optional<Java.Lang.String> arg3)
+        public static ConsumerGroupMetadata CreatePoolableInstance(Java.Lang.String arg0, int arg1, Java.Lang.String arg2, Java.Util.Optional<Java.Lang.String> arg3)
         {
             return JVMBridgeBase.New<ConsumerGroupMetadata>(arg0, arg1, arg2, arg3);
         }
@@ -94,7 +94,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
         /// <summary>
         /// HPA initializer for ConsumerGroupMetadata(Java.Lang.String arg0)
         /// </summary>
-        public static ConsumerGroupMetadata New(Java.Lang.String arg0)
+        public static ConsumerGroupMetadata CreatePoolableInstance(Java.Lang.String arg0)
         {
             return JVMBridgeBase.New<ConsumerGroupMetadata>(arg0);
         }

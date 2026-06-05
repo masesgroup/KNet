@@ -149,7 +149,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             /// <summary>
             /// HPA initializer for PartitionProducerState(Java.Util.List%3COrg.Apache.Kafka.Clients.Admin.ProducerState%3E arg0)
             /// </summary>
-            public static PartitionProducerState New(Java.Util.List<Org.Apache.Kafka.Clients.Admin.ProducerState> arg0)
+            public static PartitionProducerState CreatePoolableInstance(Java.Util.List<Org.Apache.Kafka.Clients.Admin.ProducerState> arg0)
             {
                 return JVMBridgeBase.New<PartitionProducerState>(arg0);
             }

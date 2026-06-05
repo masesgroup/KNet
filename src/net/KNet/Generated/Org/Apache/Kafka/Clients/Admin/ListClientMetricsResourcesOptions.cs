@@ -74,7 +74,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <summary>
         /// HPA initializer for ListClientMetricsResourcesOptions()
         /// </summary>
-        public static ListClientMetricsResourcesOptions New()
+        public static ListClientMetricsResourcesOptions CreatePoolableInstance()
         {
             return JVMBridgeBase.New<ListClientMetricsResourcesOptions>();
         }

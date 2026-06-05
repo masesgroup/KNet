@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Connect.Util
         /// <summary>
         /// HPA initializer for ConnectorUtils()
         /// </summary>
-        public static ConnectorUtils New()
+        public static ConnectorUtils CreatePoolableInstance()
         {
             return JVMBridgeBase.New<ConnectorUtils>();
         }

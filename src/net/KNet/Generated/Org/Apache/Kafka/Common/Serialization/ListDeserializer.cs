@@ -110,7 +110,7 @@ namespace Org.Apache.Kafka.Common.Serialization
         /// <summary>
         /// HPA initializer for ListDeserializer(Java.Lang.Class arg0, Org.Apache.Kafka.Common.Serialization.Deserializer arg1)
         /// </summary>
-        public static ListDeserializer New(Java.Lang.Class arg0, Org.Apache.Kafka.Common.Serialization.Deserializer arg1)
+        public static ListDeserializer CreatePoolableInstance(Java.Lang.Class arg0, Org.Apache.Kafka.Common.Serialization.Deserializer arg1)
         {
             return JVMBridgeBase.New<ListDeserializer>(arg0, arg1);
         }
@@ -124,7 +124,7 @@ namespace Org.Apache.Kafka.Common.Serialization
         /// <summary>
         /// HPA initializer for ListDeserializer()
         /// </summary>
-        public static ListDeserializer New()
+        public static ListDeserializer CreatePoolableInstance()
         {
             return JVMBridgeBase.New<ListDeserializer>();
         }
@@ -217,7 +217,7 @@ namespace Org.Apache.Kafka.Common.Serialization
         /// <summary>
         /// HPA initializer for ListDeserializer(Java.Lang.Class arg0, Org.Apache.Kafka.Common.Serialization.Deserializer%3CInner%3E arg1)
         /// </summary>
-        public static ListDeserializer<Inner> New(Java.Lang.Class arg0, Org.Apache.Kafka.Common.Serialization.Deserializer<Inner> arg1)
+        public static ListDeserializer<Inner> CreatePoolableInstance(Java.Lang.Class arg0, Org.Apache.Kafka.Common.Serialization.Deserializer<Inner> arg1)
         {
             return JVMBridgeBase.New<ListDeserializer<Inner>>(arg0, arg1);
         }
@@ -231,7 +231,7 @@ namespace Org.Apache.Kafka.Common.Serialization
         /// <summary>
         /// HPA initializer for ListDeserializer()
         /// </summary>
-        public static ListDeserializer<Inner> New()
+        public static ListDeserializer<Inner> CreatePoolableInstance()
         {
             return JVMBridgeBase.New<ListDeserializer<Inner>>();
         }

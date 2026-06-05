@@ -73,7 +73,7 @@ namespace Org.Rocksdb
         /// <summary>
         /// HPA initializer for TransactionDBOptions()
         /// </summary>
-        public static TransactionDBOptions New()
+        public static TransactionDBOptions CreatePoolableInstance()
         {
             return JVMBridgeBase.New<TransactionDBOptions>();
         }

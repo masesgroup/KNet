@@ -111,7 +111,7 @@ namespace Org.Apache.Kafka.Streams
         /// <summary>
         /// HPA initializer for KeyValue(object arg0, object arg1)
         /// </summary>
-        public static KeyValue New(object arg0, object arg1)
+        public static KeyValue CreatePoolableInstance(object arg0, object arg1)
         {
             return JVMBridgeBase.New<KeyValue>(arg0, arg1);
         }
@@ -176,7 +176,7 @@ namespace Org.Apache.Kafka.Streams
         /// <summary>
         /// HPA initializer for KeyValue(K arg0, V arg1)
         /// </summary>
-        public static KeyValue<K, V> New(K arg0, V arg1)
+        public static KeyValue<K, V> CreatePoolableInstance(K arg0, V arg1)
         {
             return JVMBridgeBase.New<KeyValue<K, V>>(arg0, arg1);
         }

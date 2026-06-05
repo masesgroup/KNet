@@ -75,7 +75,7 @@ namespace Org.Apache.Kafka.Common.Resource
         /// <summary>
         /// HPA initializer for Resource(Org.Apache.Kafka.Common.Resource.ResourceType arg0, Java.Lang.String arg1)
         /// </summary>
-        public static Resource New(Org.Apache.Kafka.Common.Resource.ResourceType arg0, Java.Lang.String arg1)
+        public static Resource CreatePoolableInstance(Org.Apache.Kafka.Common.Resource.ResourceType arg0, Java.Lang.String arg1)
         {
             return JVMBridgeBase.New<Resource>(arg0, arg1);
         }

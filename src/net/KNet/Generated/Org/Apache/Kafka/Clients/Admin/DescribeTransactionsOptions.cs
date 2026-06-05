@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <summary>
         /// HPA initializer for DescribeTransactionsOptions()
         /// </summary>
-        public static DescribeTransactionsOptions New()
+        public static DescribeTransactionsOptions CreatePoolableInstance()
         {
             return JVMBridgeBase.New<DescribeTransactionsOptions>();
         }

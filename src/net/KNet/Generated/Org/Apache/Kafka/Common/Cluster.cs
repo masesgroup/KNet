@@ -81,7 +81,7 @@ namespace Org.Apache.Kafka.Common
         /// <summary>
         /// HPA initializer for Cluster(Java.Lang.String arg0, Java.Util.Collection%3COrg.Apache.Kafka.Common.Node%3E arg1, Java.Util.Collection%3COrg.Apache.Kafka.Common.PartitionInfo%3E arg2, Java.Util.Set%3CJava.Lang.String%3E arg3, Java.Util.Set%3CJava.Lang.String%3E arg4, Java.Util.Set%3CJava.Lang.String%3E arg5, Org.Apache.Kafka.Common.Node arg6, Java.Util.Map%3CJava.Lang.String, Org.Apache.Kafka.Common.Uuid%3E arg7)
         /// </summary>
-        public static Cluster New(Java.Lang.String arg0, Java.Util.Collection<Org.Apache.Kafka.Common.Node> arg1, Java.Util.Collection<Org.Apache.Kafka.Common.PartitionInfo> arg2, Java.Util.Set<Java.Lang.String> arg3, Java.Util.Set<Java.Lang.String> arg4, Java.Util.Set<Java.Lang.String> arg5, Org.Apache.Kafka.Common.Node arg6, Java.Util.Map<Java.Lang.String, Org.Apache.Kafka.Common.Uuid> arg7)
+        public static Cluster CreatePoolableInstance(Java.Lang.String arg0, Java.Util.Collection<Org.Apache.Kafka.Common.Node> arg1, Java.Util.Collection<Org.Apache.Kafka.Common.PartitionInfo> arg2, Java.Util.Set<Java.Lang.String> arg3, Java.Util.Set<Java.Lang.String> arg4, Java.Util.Set<Java.Lang.String> arg5, Org.Apache.Kafka.Common.Node arg6, Java.Util.Map<Java.Lang.String, Org.Apache.Kafka.Common.Uuid> arg7)
         {
             return JVMBridgeBase.New<Cluster>(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7);
         }
@@ -102,7 +102,7 @@ namespace Org.Apache.Kafka.Common
         /// <summary>
         /// HPA initializer for Cluster(Java.Lang.String arg0, Java.Util.Collection%3COrg.Apache.Kafka.Common.Node%3E arg1, Java.Util.Collection%3COrg.Apache.Kafka.Common.PartitionInfo%3E arg2, Java.Util.Set%3CJava.Lang.String%3E arg3, Java.Util.Set%3CJava.Lang.String%3E arg4, Java.Util.Set%3CJava.Lang.String%3E arg5, Org.Apache.Kafka.Common.Node arg6)
         /// </summary>
-        public static Cluster New(Java.Lang.String arg0, Java.Util.Collection<Org.Apache.Kafka.Common.Node> arg1, Java.Util.Collection<Org.Apache.Kafka.Common.PartitionInfo> arg2, Java.Util.Set<Java.Lang.String> arg3, Java.Util.Set<Java.Lang.String> arg4, Java.Util.Set<Java.Lang.String> arg5, Org.Apache.Kafka.Common.Node arg6)
+        public static Cluster CreatePoolableInstance(Java.Lang.String arg0, Java.Util.Collection<Org.Apache.Kafka.Common.Node> arg1, Java.Util.Collection<Org.Apache.Kafka.Common.PartitionInfo> arg2, Java.Util.Set<Java.Lang.String> arg3, Java.Util.Set<Java.Lang.String> arg4, Java.Util.Set<Java.Lang.String> arg5, Org.Apache.Kafka.Common.Node arg6)
         {
             return JVMBridgeBase.New<Cluster>(arg0, arg1, arg2, arg3, arg4, arg5, arg6);
         }
@@ -122,7 +122,7 @@ namespace Org.Apache.Kafka.Common
         /// <summary>
         /// HPA initializer for Cluster(Java.Lang.String arg0, Java.Util.Collection%3COrg.Apache.Kafka.Common.Node%3E arg1, Java.Util.Collection%3COrg.Apache.Kafka.Common.PartitionInfo%3E arg2, Java.Util.Set%3CJava.Lang.String%3E arg3, Java.Util.Set%3CJava.Lang.String%3E arg4, Org.Apache.Kafka.Common.Node arg5)
         /// </summary>
-        public static Cluster New(Java.Lang.String arg0, Java.Util.Collection<Org.Apache.Kafka.Common.Node> arg1, Java.Util.Collection<Org.Apache.Kafka.Common.PartitionInfo> arg2, Java.Util.Set<Java.Lang.String> arg3, Java.Util.Set<Java.Lang.String> arg4, Org.Apache.Kafka.Common.Node arg5)
+        public static Cluster CreatePoolableInstance(Java.Lang.String arg0, Java.Util.Collection<Org.Apache.Kafka.Common.Node> arg1, Java.Util.Collection<Org.Apache.Kafka.Common.PartitionInfo> arg2, Java.Util.Set<Java.Lang.String> arg3, Java.Util.Set<Java.Lang.String> arg4, Org.Apache.Kafka.Common.Node arg5)
         {
             return JVMBridgeBase.New<Cluster>(arg0, arg1, arg2, arg3, arg4, arg5);
         }
@@ -141,7 +141,7 @@ namespace Org.Apache.Kafka.Common
         /// <summary>
         /// HPA initializer for Cluster(Java.Lang.String arg0, Java.Util.Collection%3COrg.Apache.Kafka.Common.Node%3E arg1, Java.Util.Collection%3COrg.Apache.Kafka.Common.PartitionInfo%3E arg2, Java.Util.Set%3CJava.Lang.String%3E arg3, Java.Util.Set%3CJava.Lang.String%3E arg4)
         /// </summary>
-        public static Cluster New(Java.Lang.String arg0, Java.Util.Collection<Org.Apache.Kafka.Common.Node> arg1, Java.Util.Collection<Org.Apache.Kafka.Common.PartitionInfo> arg2, Java.Util.Set<Java.Lang.String> arg3, Java.Util.Set<Java.Lang.String> arg4)
+        public static Cluster CreatePoolableInstance(Java.Lang.String arg0, Java.Util.Collection<Org.Apache.Kafka.Common.Node> arg1, Java.Util.Collection<Org.Apache.Kafka.Common.PartitionInfo> arg2, Java.Util.Set<Java.Lang.String> arg3, Java.Util.Set<Java.Lang.String> arg4)
         {
             return JVMBridgeBase.New<Cluster>(arg0, arg1, arg2, arg3, arg4);
         }

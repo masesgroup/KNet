@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Connect.Json
         /// <summary>
         /// HPA initializer for JsonDeserializer()
         /// </summary>
-        public static JsonDeserializer New()
+        public static JsonDeserializer CreatePoolableInstance()
         {
             return JVMBridgeBase.New<JsonDeserializer>();
         }

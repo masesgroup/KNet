@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
         /// <summary>
         /// HPA initializer for MirrorCheckpointTask()
         /// </summary>
-        public static MirrorCheckpointTask New()
+        public static MirrorCheckpointTask CreatePoolableInstance()
         {
             return JVMBridgeBase.New<MirrorCheckpointTask>();
         }

@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Connect.Util
         /// <summary>
         /// HPA initializer for RetryUtil()
         /// </summary>
-        public static RetryUtil New()
+        public static RetryUtil CreatePoolableInstance()
         {
             return JVMBridgeBase.New<RetryUtil>();
         }

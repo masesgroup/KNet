@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <summary>
         /// HPA initializer for DescribeFeaturesOptions()
         /// </summary>
-        public static DescribeFeaturesOptions New()
+        public static DescribeFeaturesOptions CreatePoolableInstance()
         {
             return JVMBridgeBase.New<DescribeFeaturesOptions>();
         }

@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Common.Security.Oauthbearer
         /// <summary>
         /// HPA initializer for ClientJwtValidator()
         /// </summary>
-        public static ClientJwtValidator New()
+        public static ClientJwtValidator CreatePoolableInstance()
         {
             return JVMBridgeBase.New<ClientJwtValidator>();
         }

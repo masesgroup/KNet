@@ -83,7 +83,7 @@ namespace Org.Apache.Kafka.Connect.Source
         /// <summary>
         /// HPA initializer for SourceRecord(Java.Util.Map%3CJava.Lang.String, object%3E arg0, Java.Util.Map%3CJava.Lang.String, object%3E arg1, Java.Lang.String arg2, Java.Lang.Integer arg3, Org.Apache.Kafka.Connect.Data.Schema arg4, object arg5, Org.Apache.Kafka.Connect.Data.Schema arg6, object arg7, Java.Lang.Long arg8, Java.Lang.Iterable%3COrg.Apache.Kafka.Connect.Header.Header%3E arg9)
         /// </summary>
-        public static SourceRecord New(Java.Util.Map<Java.Lang.String, object> arg0, Java.Util.Map<Java.Lang.String, object> arg1, Java.Lang.String arg2, Java.Lang.Integer arg3, Org.Apache.Kafka.Connect.Data.Schema arg4, object arg5, Org.Apache.Kafka.Connect.Data.Schema arg6, object arg7, Java.Lang.Long arg8, Java.Lang.Iterable<Org.Apache.Kafka.Connect.Header.Header> arg9)
+        public static SourceRecord CreatePoolableInstance(Java.Util.Map<Java.Lang.String, object> arg0, Java.Util.Map<Java.Lang.String, object> arg1, Java.Lang.String arg2, Java.Lang.Integer arg3, Org.Apache.Kafka.Connect.Data.Schema arg4, object arg5, Org.Apache.Kafka.Connect.Data.Schema arg6, object arg7, Java.Lang.Long arg8, Java.Lang.Iterable<Org.Apache.Kafka.Connect.Header.Header> arg9)
         {
             return JVMBridgeBase.New<SourceRecord>(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9);
         }
@@ -106,7 +106,7 @@ namespace Org.Apache.Kafka.Connect.Source
         /// <summary>
         /// HPA initializer for SourceRecord(Java.Util.Map%3CJava.Lang.String, object%3E arg0, Java.Util.Map%3CJava.Lang.String, object%3E arg1, Java.Lang.String arg2, Java.Lang.Integer arg3, Org.Apache.Kafka.Connect.Data.Schema arg4, object arg5, Org.Apache.Kafka.Connect.Data.Schema arg6, object arg7, Java.Lang.Long arg8)
         /// </summary>
-        public static SourceRecord New(Java.Util.Map<Java.Lang.String, object> arg0, Java.Util.Map<Java.Lang.String, object> arg1, Java.Lang.String arg2, Java.Lang.Integer arg3, Org.Apache.Kafka.Connect.Data.Schema arg4, object arg5, Org.Apache.Kafka.Connect.Data.Schema arg6, object arg7, Java.Lang.Long arg8)
+        public static SourceRecord CreatePoolableInstance(Java.Util.Map<Java.Lang.String, object> arg0, Java.Util.Map<Java.Lang.String, object> arg1, Java.Lang.String arg2, Java.Lang.Integer arg3, Org.Apache.Kafka.Connect.Data.Schema arg4, object arg5, Org.Apache.Kafka.Connect.Data.Schema arg6, object arg7, Java.Lang.Long arg8)
         {
             return JVMBridgeBase.New<SourceRecord>(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
         }
@@ -128,7 +128,7 @@ namespace Org.Apache.Kafka.Connect.Source
         /// <summary>
         /// HPA initializer for SourceRecord(Java.Util.Map%3CJava.Lang.String, object%3E arg0, Java.Util.Map%3CJava.Lang.String, object%3E arg1, Java.Lang.String arg2, Java.Lang.Integer arg3, Org.Apache.Kafka.Connect.Data.Schema arg4, object arg5, Org.Apache.Kafka.Connect.Data.Schema arg6, object arg7)
         /// </summary>
-        public static SourceRecord New(Java.Util.Map<Java.Lang.String, object> arg0, Java.Util.Map<Java.Lang.String, object> arg1, Java.Lang.String arg2, Java.Lang.Integer arg3, Org.Apache.Kafka.Connect.Data.Schema arg4, object arg5, Org.Apache.Kafka.Connect.Data.Schema arg6, object arg7)
+        public static SourceRecord CreatePoolableInstance(Java.Util.Map<Java.Lang.String, object> arg0, Java.Util.Map<Java.Lang.String, object> arg1, Java.Lang.String arg2, Java.Lang.Integer arg3, Org.Apache.Kafka.Connect.Data.Schema arg4, object arg5, Org.Apache.Kafka.Connect.Data.Schema arg6, object arg7)
         {
             return JVMBridgeBase.New<SourceRecord>(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7);
         }
@@ -148,7 +148,7 @@ namespace Org.Apache.Kafka.Connect.Source
         /// <summary>
         /// HPA initializer for SourceRecord(Java.Util.Map%3CJava.Lang.String, object%3E arg0, Java.Util.Map%3CJava.Lang.String, object%3E arg1, Java.Lang.String arg2, Java.Lang.Integer arg3, Org.Apache.Kafka.Connect.Data.Schema arg4, object arg5)
         /// </summary>
-        public static SourceRecord New(Java.Util.Map<Java.Lang.String, object> arg0, Java.Util.Map<Java.Lang.String, object> arg1, Java.Lang.String arg2, Java.Lang.Integer arg3, Org.Apache.Kafka.Connect.Data.Schema arg4, object arg5)
+        public static SourceRecord CreatePoolableInstance(Java.Util.Map<Java.Lang.String, object> arg0, Java.Util.Map<Java.Lang.String, object> arg1, Java.Lang.String arg2, Java.Lang.Integer arg3, Org.Apache.Kafka.Connect.Data.Schema arg4, object arg5)
         {
             return JVMBridgeBase.New<SourceRecord>(arg0, arg1, arg2, arg3, arg4, arg5);
         }
@@ -169,7 +169,7 @@ namespace Org.Apache.Kafka.Connect.Source
         /// <summary>
         /// HPA initializer for SourceRecord(Java.Util.Map%3CJava.Lang.String, object%3E arg0, Java.Util.Map%3CJava.Lang.String, object%3E arg1, Java.Lang.String arg2, Org.Apache.Kafka.Connect.Data.Schema arg3, object arg4, Org.Apache.Kafka.Connect.Data.Schema arg5, object arg6)
         /// </summary>
-        public static SourceRecord New(Java.Util.Map<Java.Lang.String, object> arg0, Java.Util.Map<Java.Lang.String, object> arg1, Java.Lang.String arg2, Org.Apache.Kafka.Connect.Data.Schema arg3, object arg4, Org.Apache.Kafka.Connect.Data.Schema arg5, object arg6)
+        public static SourceRecord CreatePoolableInstance(Java.Util.Map<Java.Lang.String, object> arg0, Java.Util.Map<Java.Lang.String, object> arg1, Java.Lang.String arg2, Org.Apache.Kafka.Connect.Data.Schema arg3, object arg4, Org.Apache.Kafka.Connect.Data.Schema arg5, object arg6)
         {
             return JVMBridgeBase.New<SourceRecord>(arg0, arg1, arg2, arg3, arg4, arg5, arg6);
         }
@@ -188,7 +188,7 @@ namespace Org.Apache.Kafka.Connect.Source
         /// <summary>
         /// HPA initializer for SourceRecord(Java.Util.Map%3CJava.Lang.String, object%3E arg0, Java.Util.Map%3CJava.Lang.String, object%3E arg1, Java.Lang.String arg2, Org.Apache.Kafka.Connect.Data.Schema arg3, object arg4)
         /// </summary>
-        public static SourceRecord New(Java.Util.Map<Java.Lang.String, object> arg0, Java.Util.Map<Java.Lang.String, object> arg1, Java.Lang.String arg2, Org.Apache.Kafka.Connect.Data.Schema arg3, object arg4)
+        public static SourceRecord CreatePoolableInstance(Java.Util.Map<Java.Lang.String, object> arg0, Java.Util.Map<Java.Lang.String, object> arg1, Java.Lang.String arg2, Org.Apache.Kafka.Connect.Data.Schema arg3, object arg4)
         {
             return JVMBridgeBase.New<SourceRecord>(arg0, arg1, arg2, arg3, arg4);
         }

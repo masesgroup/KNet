@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <summary>
         /// HPA initializer for DeleteAclsOptions()
         /// </summary>
-        public static DeleteAclsOptions New()
+        public static DeleteAclsOptions CreatePoolableInstance()
         {
             return JVMBridgeBase.New<DeleteAclsOptions>();
         }

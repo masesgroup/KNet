@@ -77,7 +77,7 @@ namespace Org.Apache.Kafka.Common.Acl
         /// <summary>
         /// HPA initializer for AccessControlEntryFilter(Java.Lang.String arg0, Java.Lang.String arg1, Org.Apache.Kafka.Common.Acl.AclOperation arg2, Org.Apache.Kafka.Common.Acl.AclPermissionType arg3)
         /// </summary>
-        public static AccessControlEntryFilter New(Java.Lang.String arg0, Java.Lang.String arg1, Org.Apache.Kafka.Common.Acl.AclOperation arg2, Org.Apache.Kafka.Common.Acl.AclPermissionType arg3)
+        public static AccessControlEntryFilter CreatePoolableInstance(Java.Lang.String arg0, Java.Lang.String arg1, Org.Apache.Kafka.Common.Acl.AclOperation arg2, Org.Apache.Kafka.Common.Acl.AclPermissionType arg3)
         {
             return JVMBridgeBase.New<AccessControlEntryFilter>(arg0, arg1, arg2, arg3);
         }

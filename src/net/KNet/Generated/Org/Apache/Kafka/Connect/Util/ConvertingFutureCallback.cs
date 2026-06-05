@@ -109,7 +109,7 @@ namespace Org.Apache.Kafka.Connect.Util
         /// <summary>
         /// HPA initializer for ConvertingFutureCallback()
         /// </summary>
-        public static ConvertingFutureCallback New()
+        public static ConvertingFutureCallback CreatePoolableInstance()
         {
             return JVMBridgeBase.New<ConvertingFutureCallback>();
         }
@@ -124,7 +124,7 @@ namespace Org.Apache.Kafka.Connect.Util
         /// <summary>
         /// HPA initializer for ConvertingFutureCallback(Org.Apache.Kafka.Connect.Util.Callback arg0)
         /// </summary>
-        public static ConvertingFutureCallback New(Org.Apache.Kafka.Connect.Util.Callback arg0)
+        public static ConvertingFutureCallback CreatePoolableInstance(Org.Apache.Kafka.Connect.Util.Callback arg0)
         {
             return JVMBridgeBase.New<ConvertingFutureCallback>(arg0);
         }
@@ -251,7 +251,7 @@ namespace Org.Apache.Kafka.Connect.Util
         /// <summary>
         /// HPA initializer for ConvertingFutureCallback()
         /// </summary>
-        public static ConvertingFutureCallback<U, T> New()
+        public static ConvertingFutureCallback<U, T> CreatePoolableInstance()
         {
             return JVMBridgeBase.New<ConvertingFutureCallback<U, T>>();
         }
@@ -266,7 +266,7 @@ namespace Org.Apache.Kafka.Connect.Util
         /// <summary>
         /// HPA initializer for ConvertingFutureCallback(Org.Apache.Kafka.Connect.Util.Callback%3CT%3E arg0)
         /// </summary>
-        public static ConvertingFutureCallback<U, T> New(Org.Apache.Kafka.Connect.Util.Callback<T> arg0)
+        public static ConvertingFutureCallback<U, T> CreatePoolableInstance(Org.Apache.Kafka.Connect.Util.Callback<T> arg0)
         {
             return JVMBridgeBase.New<ConvertingFutureCallback<U, T>>(arg0);
         }

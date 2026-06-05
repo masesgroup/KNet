@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <summary>
         /// HPA initializer for DeleteStreamsGroupOffsetsOptions()
         /// </summary>
-        public static DeleteStreamsGroupOffsetsOptions New()
+        public static DeleteStreamsGroupOffsetsOptions CreatePoolableInstance()
         {
             return JVMBridgeBase.New<DeleteStreamsGroupOffsetsOptions>();
         }

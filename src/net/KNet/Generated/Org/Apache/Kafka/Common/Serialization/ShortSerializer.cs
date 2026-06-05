@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Common.Serialization
         /// <summary>
         /// HPA initializer for ShortSerializer()
         /// </summary>
-        public static ShortSerializer New()
+        public static ShortSerializer CreatePoolableInstance()
         {
             return JVMBridgeBase.New<ShortSerializer>();
         }

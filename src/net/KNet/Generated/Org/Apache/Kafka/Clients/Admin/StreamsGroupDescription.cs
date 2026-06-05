@@ -82,7 +82,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <summary>
         /// HPA initializer for StreamsGroupDescription(Java.Lang.String arg0, int arg1, int arg2, int arg3, Java.Util.Collection%3COrg.Apache.Kafka.Clients.Admin.StreamsGroupSubtopologyDescription%3E arg4, Java.Util.Collection%3COrg.Apache.Kafka.Clients.Admin.StreamsGroupMemberDescription%3E arg5, Org.Apache.Kafka.Common.GroupState arg6, Org.Apache.Kafka.Common.Node arg7, Java.Util.Set%3COrg.Apache.Kafka.Common.Acl.AclOperation%3E arg8)
         /// </summary>
-        public static StreamsGroupDescription New(Java.Lang.String arg0, int arg1, int arg2, int arg3, Java.Util.Collection<Org.Apache.Kafka.Clients.Admin.StreamsGroupSubtopologyDescription> arg4, Java.Util.Collection<Org.Apache.Kafka.Clients.Admin.StreamsGroupMemberDescription> arg5, Org.Apache.Kafka.Common.GroupState arg6, Org.Apache.Kafka.Common.Node arg7, Java.Util.Set<Org.Apache.Kafka.Common.Acl.AclOperation> arg8)
+        public static StreamsGroupDescription CreatePoolableInstance(Java.Lang.String arg0, int arg1, int arg2, int arg3, Java.Util.Collection<Org.Apache.Kafka.Clients.Admin.StreamsGroupSubtopologyDescription> arg4, Java.Util.Collection<Org.Apache.Kafka.Clients.Admin.StreamsGroupMemberDescription> arg5, Org.Apache.Kafka.Common.GroupState arg6, Org.Apache.Kafka.Common.Node arg7, Java.Util.Set<Org.Apache.Kafka.Common.Acl.AclOperation> arg8)
         {
             return JVMBridgeBase.New<StreamsGroupDescription>(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
         }

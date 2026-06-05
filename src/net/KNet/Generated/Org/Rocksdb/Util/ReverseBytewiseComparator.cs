@@ -74,7 +74,7 @@ namespace Org.Rocksdb.Util
         /// <summary>
         /// HPA initializer for ReverseBytewiseComparator(Org.Rocksdb.ComparatorOptions arg0)
         /// </summary>
-        public static ReverseBytewiseComparator New(Org.Rocksdb.ComparatorOptions arg0)
+        public static ReverseBytewiseComparator CreatePoolableInstance(Org.Rocksdb.ComparatorOptions arg0)
         {
             return JVMBridgeBase.New<ReverseBytewiseComparator>(arg0);
         }

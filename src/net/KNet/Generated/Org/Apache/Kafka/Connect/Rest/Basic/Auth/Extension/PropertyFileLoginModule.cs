@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Connect.Rest.Basic.Auth.Extension
         /// <summary>
         /// HPA initializer for PropertyFileLoginModule()
         /// </summary>
-        public static PropertyFileLoginModule New()
+        public static PropertyFileLoginModule CreatePoolableInstance()
         {
             return JVMBridgeBase.New<PropertyFileLoginModule>();
         }

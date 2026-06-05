@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Connect.Data
         /// <summary>
         /// HPA initializer for Values()
         /// </summary>
-        public static Values New()
+        public static Values CreatePoolableInstance()
         {
             return JVMBridgeBase.New<Values>();
         }

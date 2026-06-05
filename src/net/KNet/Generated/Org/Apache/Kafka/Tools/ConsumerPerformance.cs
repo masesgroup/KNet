@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Tools
         /// <summary>
         /// HPA initializer for ConsumerPerformance()
         /// </summary>
-        public static ConsumerPerformance New()
+        public static ConsumerPerformance CreatePoolableInstance()
         {
             return JVMBridgeBase.New<ConsumerPerformance>();
         }

@@ -74,7 +74,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <summary>
         /// HPA initializer for DescribeStreamsGroupsResult(Java.Util.Map%3CJava.Lang.String, Org.Apache.Kafka.Common.KafkaFuture%3COrg.Apache.Kafka.Clients.Admin.StreamsGroupDescription%3E%3E arg0)
         /// </summary>
-        public static DescribeStreamsGroupsResult New(Java.Util.Map<Java.Lang.String, Org.Apache.Kafka.Common.KafkaFuture<Org.Apache.Kafka.Clients.Admin.StreamsGroupDescription>> arg0)
+        public static DescribeStreamsGroupsResult CreatePoolableInstance(Java.Util.Map<Java.Lang.String, Org.Apache.Kafka.Common.KafkaFuture<Org.Apache.Kafka.Clients.Admin.StreamsGroupDescription>> arg0)
         {
             return JVMBridgeBase.New<DescribeStreamsGroupsResult>(arg0);
         }

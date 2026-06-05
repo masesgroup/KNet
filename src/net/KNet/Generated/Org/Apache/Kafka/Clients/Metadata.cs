@@ -416,7 +416,7 @@ namespace Org.Apache.Kafka.Clients
             /// <summary>
             /// HPA initializer for LeaderAndEpoch(Java.Util.Optional%3COrg.Apache.Kafka.Common.Node%3E arg0, Java.Util.Optional%3CJava.Lang.Integer%3E arg1)
             /// </summary>
-            public static LeaderAndEpoch New(Java.Util.Optional<Org.Apache.Kafka.Common.Node> arg0, Java.Util.Optional<Java.Lang.Integer> arg1)
+            public static LeaderAndEpoch CreatePoolableInstance(Java.Util.Optional<Org.Apache.Kafka.Common.Node> arg0, Java.Util.Optional<Java.Lang.Integer> arg1)
             {
                 return JVMBridgeBase.New<LeaderAndEpoch>(arg0, arg1);
             }
@@ -479,7 +479,7 @@ namespace Org.Apache.Kafka.Clients
             /// <summary>
             /// HPA initializer for LeaderIdAndEpoch(Java.Util.Optional%3CJava.Lang.Integer%3E arg0, Java.Util.Optional%3CJava.Lang.Integer%3E arg1)
             /// </summary>
-            public static LeaderIdAndEpoch New(Java.Util.Optional<Java.Lang.Integer> arg0, Java.Util.Optional<Java.Lang.Integer> arg1)
+            public static LeaderIdAndEpoch CreatePoolableInstance(Java.Util.Optional<Java.Lang.Integer> arg0, Java.Util.Optional<Java.Lang.Integer> arg1)
             {
                 return JVMBridgeBase.New<LeaderIdAndEpoch>(arg0, arg1);
             }

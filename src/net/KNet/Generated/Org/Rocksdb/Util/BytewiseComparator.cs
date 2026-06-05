@@ -74,7 +74,7 @@ namespace Org.Rocksdb.Util
         /// <summary>
         /// HPA initializer for BytewiseComparator(Org.Rocksdb.ComparatorOptions arg0)
         /// </summary>
-        public static BytewiseComparator New(Org.Rocksdb.ComparatorOptions arg0)
+        public static BytewiseComparator CreatePoolableInstance(Org.Rocksdb.ComparatorOptions arg0)
         {
             return JVMBridgeBase.New<BytewiseComparator>(arg0);
         }

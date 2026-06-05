@@ -81,7 +81,7 @@ namespace Org.Apache.Kafka.Raft
         /// <summary>
         /// HPA initializer for ResignedState(Org.Apache.Kafka.Common.Utils.Time arg0, int arg1, int arg2, Java.Util.Set%3CJava.Lang.Integer%3E arg3, long arg4, Java.Util.List%3COrg.Apache.Kafka.Raft.ReplicaKey%3E arg5, Org.Apache.Kafka.Raft.Endpoints arg6, Org.Apache.Kafka.Common.Utils.LogContext arg7)
         /// </summary>
-        public static ResignedState New(Org.Apache.Kafka.Common.Utils.Time arg0, int arg1, int arg2, Java.Util.Set<Java.Lang.Integer> arg3, long arg4, Java.Util.List<Org.Apache.Kafka.Raft.ReplicaKey> arg5, Org.Apache.Kafka.Raft.Endpoints arg6, Org.Apache.Kafka.Common.Utils.LogContext arg7)
+        public static ResignedState CreatePoolableInstance(Org.Apache.Kafka.Common.Utils.Time arg0, int arg1, int arg2, Java.Util.Set<Java.Lang.Integer> arg3, long arg4, Java.Util.List<Org.Apache.Kafka.Raft.ReplicaKey> arg5, Org.Apache.Kafka.Raft.Endpoints arg6, Org.Apache.Kafka.Common.Utils.LogContext arg7)
         {
             return JVMBridgeBase.New<ResignedState>(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7);
         }

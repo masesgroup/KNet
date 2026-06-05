@@ -108,7 +108,7 @@ namespace Org.Apache.Kafka.Common.Utils
         /// <summary>
         /// HPA initializer for AbstractIterator()
         /// </summary>
-        public static AbstractIterator New()
+        public static AbstractIterator CreatePoolableInstance()
         {
             return JVMBridgeBase.New<AbstractIterator>();
         }
@@ -184,7 +184,7 @@ namespace Org.Apache.Kafka.Common.Utils
         /// <summary>
         /// HPA initializer for AbstractIterator()
         /// </summary>
-        public static AbstractIterator<T> New()
+        public static AbstractIterator<T> CreatePoolableInstance()
         {
             return JVMBridgeBase.New<AbstractIterator<T>>();
         }

@@ -73,7 +73,7 @@ namespace Org.Rocksdb
         /// <summary>
         /// HPA initializer for ImportColumnFamilyOptions()
         /// </summary>
-        public static ImportColumnFamilyOptions New()
+        public static ImportColumnFamilyOptions CreatePoolableInstance()
         {
             return JVMBridgeBase.New<ImportColumnFamilyOptions>();
         }

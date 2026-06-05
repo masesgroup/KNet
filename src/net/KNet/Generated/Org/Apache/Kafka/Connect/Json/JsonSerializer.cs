@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Connect.Json
         /// <summary>
         /// HPA initializer for JsonSerializer()
         /// </summary>
-        public static JsonSerializer New()
+        public static JsonSerializer CreatePoolableInstance()
         {
             return JVMBridgeBase.New<JsonSerializer>();
         }

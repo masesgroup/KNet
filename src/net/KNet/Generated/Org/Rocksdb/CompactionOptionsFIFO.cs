@@ -73,7 +73,7 @@ namespace Org.Rocksdb
         /// <summary>
         /// HPA initializer for CompactionOptionsFIFO()
         /// </summary>
-        public static CompactionOptionsFIFO New()
+        public static CompactionOptionsFIFO CreatePoolableInstance()
         {
             return JVMBridgeBase.New<CompactionOptionsFIFO>();
         }

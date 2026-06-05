@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Connect.Converters
         /// <summary>
         /// HPA initializer for FloatConverter()
         /// </summary>
-        public static FloatConverter New()
+        public static FloatConverter CreatePoolableInstance()
         {
             return JVMBridgeBase.New<FloatConverter>();
         }

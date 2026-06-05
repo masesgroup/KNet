@@ -80,7 +80,7 @@ namespace Org.Apache.Kafka.Tools
         /// <summary>
         /// HPA initializer for VerifiableConsumer(Org.Apache.Kafka.Clients.Consumer.KafkaConsumer%3CJava.Lang.String, Java.Lang.String%3E arg0, Java.Io.PrintStream arg1, Java.Lang.String arg2, int arg3, bool arg4, bool arg5, bool arg6)
         /// </summary>
-        public static VerifiableConsumer New(Org.Apache.Kafka.Clients.Consumer.KafkaConsumer<Java.Lang.String, Java.Lang.String> arg0, Java.Io.PrintStream arg1, Java.Lang.String arg2, int arg3, bool arg4, bool arg5, bool arg6)
+        public static VerifiableConsumer CreatePoolableInstance(Org.Apache.Kafka.Clients.Consumer.KafkaConsumer<Java.Lang.String, Java.Lang.String> arg0, Java.Io.PrintStream arg1, Java.Lang.String arg2, int arg3, bool arg4, bool arg5, bool arg6)
         {
             return JVMBridgeBase.New<VerifiableConsumer>(arg0, arg1, arg2, arg3, arg4, arg5, arg6);
         }

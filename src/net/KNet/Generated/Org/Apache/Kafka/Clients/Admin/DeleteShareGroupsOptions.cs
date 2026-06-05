@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <summary>
         /// HPA initializer for DeleteShareGroupsOptions()
         /// </summary>
-        public static DeleteShareGroupsOptions New()
+        public static DeleteShareGroupsOptions CreatePoolableInstance()
         {
             return JVMBridgeBase.New<DeleteShareGroupsOptions>();
         }

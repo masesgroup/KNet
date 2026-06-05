@@ -75,7 +75,7 @@ namespace Org.Rocksdb
         /// <summary>
         /// HPA initializer for Range(Org.Rocksdb.Slice arg0, Org.Rocksdb.Slice arg1)
         /// </summary>
-        public static Range New(Org.Rocksdb.Slice arg0, Org.Rocksdb.Slice arg1)
+        public static Range CreatePoolableInstance(Org.Rocksdb.Slice arg0, Org.Rocksdb.Slice arg1)
         {
             return JVMBridgeBase.New<Range>(arg0, arg1);
         }

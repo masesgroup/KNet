@@ -114,7 +114,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
         /// <summary>
         /// HPA initializer for ConsumerRecord(Java.Lang.String arg0, int arg1, long arg2, object arg3, object arg4)
         /// </summary>
-        public static ConsumerRecord New(Java.Lang.String arg0, int arg1, long arg2, object arg3, object arg4)
+        public static ConsumerRecord CreatePoolableInstance(Java.Lang.String arg0, int arg1, long arg2, object arg3, object arg4)
         {
             return JVMBridgeBase.New<ConsumerRecord>(arg0, arg1, arg2, arg3, arg4);
         }
@@ -140,7 +140,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
         /// <summary>
         /// HPA initializer for ConsumerRecord(Java.Lang.String arg0, int arg1, long arg2, long arg3, Org.Apache.Kafka.Common.Record.TimestampType arg4, int arg5, int arg6, object arg7, object arg8, Org.Apache.Kafka.Common.Header.Headers arg9, Java.Util.Optional arg10, Java.Util.Optional arg11)
         /// </summary>
-        public static ConsumerRecord New(Java.Lang.String arg0, int arg1, long arg2, long arg3, Org.Apache.Kafka.Common.Record.TimestampType arg4, int arg5, int arg6, object arg7, object arg8, Org.Apache.Kafka.Common.Header.Headers arg9, Java.Util.Optional arg10, Java.Util.Optional arg11)
+        public static ConsumerRecord CreatePoolableInstance(Java.Lang.String arg0, int arg1, long arg2, long arg3, Org.Apache.Kafka.Common.Record.TimestampType arg4, int arg5, int arg6, object arg7, object arg8, Org.Apache.Kafka.Common.Header.Headers arg9, Java.Util.Optional arg10, Java.Util.Optional arg11)
         {
             return JVMBridgeBase.New<ConsumerRecord>(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11);
         }
@@ -165,7 +165,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
         /// <summary>
         /// HPA initializer for ConsumerRecord(Java.Lang.String arg0, int arg1, long arg2, long arg3, Org.Apache.Kafka.Common.Record.TimestampType arg4, int arg5, int arg6, object arg7, object arg8, Org.Apache.Kafka.Common.Header.Headers arg9, Java.Util.Optional arg10)
         /// </summary>
-        public static ConsumerRecord New(Java.Lang.String arg0, int arg1, long arg2, long arg3, Org.Apache.Kafka.Common.Record.TimestampType arg4, int arg5, int arg6, object arg7, object arg8, Org.Apache.Kafka.Common.Header.Headers arg9, Java.Util.Optional arg10)
+        public static ConsumerRecord CreatePoolableInstance(Java.Lang.String arg0, int arg1, long arg2, long arg3, Org.Apache.Kafka.Common.Record.TimestampType arg4, int arg5, int arg6, object arg7, object arg8, Org.Apache.Kafka.Common.Header.Headers arg9, Java.Util.Optional arg10)
         {
             return JVMBridgeBase.New<ConsumerRecord>(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10);
         }
@@ -319,7 +319,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
         /// <summary>
         /// HPA initializer for ConsumerRecord(Java.Lang.String arg0, int arg1, long arg2, K arg3, V arg4)
         /// </summary>
-        public static ConsumerRecord<K, V> New(Java.Lang.String arg0, int arg1, long arg2, K arg3, V arg4)
+        public static ConsumerRecord<K, V> CreatePoolableInstance(Java.Lang.String arg0, int arg1, long arg2, K arg3, V arg4)
         {
             return JVMBridgeBase.New<ConsumerRecord<K, V>>(arg0, arg1, arg2, arg3, arg4);
         }
@@ -345,7 +345,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
         /// <summary>
         /// HPA initializer for ConsumerRecord(Java.Lang.String arg0, int arg1, long arg2, long arg3, Org.Apache.Kafka.Common.Record.TimestampType arg4, int arg5, int arg6, K arg7, V arg8, Org.Apache.Kafka.Common.Header.Headers arg9, Java.Util.Optional%3CJava.Lang.Integer%3E arg10, Java.Util.Optional%3CJava.Lang.Short%3E arg11)
         /// </summary>
-        public static ConsumerRecord<K, V> New(Java.Lang.String arg0, int arg1, long arg2, long arg3, Org.Apache.Kafka.Common.Record.TimestampType arg4, int arg5, int arg6, K arg7, V arg8, Org.Apache.Kafka.Common.Header.Headers arg9, Java.Util.Optional<Java.Lang.Integer> arg10, Java.Util.Optional<Java.Lang.Short> arg11)
+        public static ConsumerRecord<K, V> CreatePoolableInstance(Java.Lang.String arg0, int arg1, long arg2, long arg3, Org.Apache.Kafka.Common.Record.TimestampType arg4, int arg5, int arg6, K arg7, V arg8, Org.Apache.Kafka.Common.Header.Headers arg9, Java.Util.Optional<Java.Lang.Integer> arg10, Java.Util.Optional<Java.Lang.Short> arg11)
         {
             return JVMBridgeBase.New<ConsumerRecord<K, V>>(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11);
         }
@@ -370,7 +370,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
         /// <summary>
         /// HPA initializer for ConsumerRecord(Java.Lang.String arg0, int arg1, long arg2, long arg3, Org.Apache.Kafka.Common.Record.TimestampType arg4, int arg5, int arg6, K arg7, V arg8, Org.Apache.Kafka.Common.Header.Headers arg9, Java.Util.Optional%3CJava.Lang.Integer%3E arg10)
         /// </summary>
-        public static ConsumerRecord<K, V> New(Java.Lang.String arg0, int arg1, long arg2, long arg3, Org.Apache.Kafka.Common.Record.TimestampType arg4, int arg5, int arg6, K arg7, V arg8, Org.Apache.Kafka.Common.Header.Headers arg9, Java.Util.Optional<Java.Lang.Integer> arg10)
+        public static ConsumerRecord<K, V> CreatePoolableInstance(Java.Lang.String arg0, int arg1, long arg2, long arg3, Org.Apache.Kafka.Common.Record.TimestampType arg4, int arg5, int arg6, K arg7, V arg8, Org.Apache.Kafka.Common.Header.Headers arg9, Java.Util.Optional<Java.Lang.Integer> arg10)
         {
             return JVMBridgeBase.New<ConsumerRecord<K, V>>(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10);
         }

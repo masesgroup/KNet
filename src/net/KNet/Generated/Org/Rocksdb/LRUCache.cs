@@ -78,7 +78,7 @@ namespace Org.Rocksdb
         /// <summary>
         /// HPA initializer for LRUCache(long arg0, int arg1, bool arg2, double arg3, double arg4)
         /// </summary>
-        public static LRUCache New(long arg0, int arg1, bool arg2, double arg3, double arg4)
+        public static LRUCache CreatePoolableInstance(long arg0, int arg1, bool arg2, double arg3, double arg4)
         {
             return JVMBridgeBase.New<LRUCache>(arg0, arg1, arg2, arg3, arg4);
         }
@@ -96,7 +96,7 @@ namespace Org.Rocksdb
         /// <summary>
         /// HPA initializer for LRUCache(long arg0, int arg1, bool arg2, double arg3)
         /// </summary>
-        public static LRUCache New(long arg0, int arg1, bool arg2, double arg3)
+        public static LRUCache CreatePoolableInstance(long arg0, int arg1, bool arg2, double arg3)
         {
             return JVMBridgeBase.New<LRUCache>(arg0, arg1, arg2, arg3);
         }
@@ -113,7 +113,7 @@ namespace Org.Rocksdb
         /// <summary>
         /// HPA initializer for LRUCache(long arg0, int arg1, bool arg2)
         /// </summary>
-        public static LRUCache New(long arg0, int arg1, bool arg2)
+        public static LRUCache CreatePoolableInstance(long arg0, int arg1, bool arg2)
         {
             return JVMBridgeBase.New<LRUCache>(arg0, arg1, arg2);
         }
@@ -129,7 +129,7 @@ namespace Org.Rocksdb
         /// <summary>
         /// HPA initializer for LRUCache(long arg0, int arg1)
         /// </summary>
-        public static LRUCache New(long arg0, int arg1)
+        public static LRUCache CreatePoolableInstance(long arg0, int arg1)
         {
             return JVMBridgeBase.New<LRUCache>(arg0, arg1);
         }
@@ -144,7 +144,7 @@ namespace Org.Rocksdb
         /// <summary>
         /// HPA initializer for LRUCache(long arg0)
         /// </summary>
-        public static LRUCache New(long arg0)
+        public static LRUCache CreatePoolableInstance(long arg0)
         {
             return JVMBridgeBase.New<LRUCache>(arg0);
         }

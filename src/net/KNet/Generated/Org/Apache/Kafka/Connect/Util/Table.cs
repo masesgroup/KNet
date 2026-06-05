@@ -110,7 +110,7 @@ namespace Org.Apache.Kafka.Connect.Util
         /// <summary>
         /// HPA initializer for Table()
         /// </summary>
-        public static Table New()
+        public static Table CreatePoolableInstance()
         {
             return JVMBridgeBase.New<Table>();
         }
@@ -212,7 +212,7 @@ namespace Org.Apache.Kafka.Connect.Util
         /// <summary>
         /// HPA initializer for Table()
         /// </summary>
-        public static Table<R, C, V> New()
+        public static Table<R, C, V> CreatePoolableInstance()
         {
             return JVMBridgeBase.New<Table<R, C, V>>();
         }

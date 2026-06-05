@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Tools
         /// <summary>
         /// HPA initializer for MetadataQuorumCommand()
         /// </summary>
-        public static MetadataQuorumCommand New()
+        public static MetadataQuorumCommand CreatePoolableInstance()
         {
             return JVMBridgeBase.New<MetadataQuorumCommand>();
         }

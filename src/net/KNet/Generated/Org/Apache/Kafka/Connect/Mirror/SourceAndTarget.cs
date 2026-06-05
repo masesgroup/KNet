@@ -75,7 +75,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
         /// <summary>
         /// HPA initializer for SourceAndTarget(Java.Lang.String arg0, Java.Lang.String arg1)
         /// </summary>
-        public static SourceAndTarget New(Java.Lang.String arg0, Java.Lang.String arg1)
+        public static SourceAndTarget CreatePoolableInstance(Java.Lang.String arg0, Java.Lang.String arg1)
         {
             return JVMBridgeBase.New<SourceAndTarget>(arg0, arg1);
         }

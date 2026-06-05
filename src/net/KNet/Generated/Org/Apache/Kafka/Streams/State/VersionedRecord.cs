@@ -111,7 +111,7 @@ namespace Org.Apache.Kafka.Streams.State
         /// <summary>
         /// HPA initializer for VersionedRecord(object arg0, long arg1, long arg2)
         /// </summary>
-        public static VersionedRecord New(object arg0, long arg1, long arg2)
+        public static VersionedRecord CreatePoolableInstance(object arg0, long arg1, long arg2)
         {
             return JVMBridgeBase.New<VersionedRecord>(arg0, arg1, arg2);
         }
@@ -127,7 +127,7 @@ namespace Org.Apache.Kafka.Streams.State
         /// <summary>
         /// HPA initializer for VersionedRecord(object arg0, long arg1)
         /// </summary>
-        public static VersionedRecord New(object arg0, long arg1)
+        public static VersionedRecord CreatePoolableInstance(object arg0, long arg1)
         {
             return JVMBridgeBase.New<VersionedRecord>(arg0, arg1);
         }
@@ -199,7 +199,7 @@ namespace Org.Apache.Kafka.Streams.State
         /// <summary>
         /// HPA initializer for VersionedRecord(V arg0, long arg1, long arg2)
         /// </summary>
-        public static VersionedRecord<V> New(V arg0, long arg1, long arg2)
+        public static VersionedRecord<V> CreatePoolableInstance(V arg0, long arg1, long arg2)
         {
             return JVMBridgeBase.New<VersionedRecord<V>>(arg0, arg1, arg2);
         }
@@ -215,7 +215,7 @@ namespace Org.Apache.Kafka.Streams.State
         /// <summary>
         /// HPA initializer for VersionedRecord(V arg0, long arg1)
         /// </summary>
-        public static VersionedRecord<V> New(V arg0, long arg1)
+        public static VersionedRecord<V> CreatePoolableInstance(V arg0, long arg1)
         {
             return JVMBridgeBase.New<VersionedRecord<V>>(arg0, arg1);
         }

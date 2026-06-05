@@ -73,7 +73,7 @@ namespace Org.Rocksdb
         /// <summary>
         /// HPA initializer for TraceOptions()
         /// </summary>
-        public static TraceOptions New()
+        public static TraceOptions CreatePoolableInstance()
         {
             return JVMBridgeBase.New<TraceOptions>();
         }
@@ -88,7 +88,7 @@ namespace Org.Rocksdb
         /// <summary>
         /// HPA initializer for TraceOptions(long arg0)
         /// </summary>
-        public static TraceOptions New(long arg0)
+        public static TraceOptions CreatePoolableInstance(long arg0)
         {
             return JVMBridgeBase.New<TraceOptions>(arg0);
         }

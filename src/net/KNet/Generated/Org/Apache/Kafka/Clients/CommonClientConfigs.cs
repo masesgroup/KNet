@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Clients
         /// <summary>
         /// HPA initializer for CommonClientConfigs()
         /// </summary>
-        public static CommonClientConfigs New()
+        public static CommonClientConfigs CreatePoolableInstance()
         {
             return JVMBridgeBase.New<CommonClientConfigs>();
         }

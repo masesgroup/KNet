@@ -73,7 +73,7 @@ namespace Org.Rocksdb
         /// <summary>
         /// HPA initializer for StringAppendOperator()
         /// </summary>
-        public static StringAppendOperator New()
+        public static StringAppendOperator CreatePoolableInstance()
         {
             return JVMBridgeBase.New<StringAppendOperator>();
         }
@@ -88,7 +88,7 @@ namespace Org.Rocksdb
         /// <summary>
         /// HPA initializer for StringAppendOperator(char arg0)
         /// </summary>
-        public static StringAppendOperator New(char arg0)
+        public static StringAppendOperator CreatePoolableInstance(char arg0)
         {
             return JVMBridgeBase.New<StringAppendOperator>(arg0);
         }
@@ -103,7 +103,7 @@ namespace Org.Rocksdb
         /// <summary>
         /// HPA initializer for StringAppendOperator(Java.Lang.String arg0)
         /// </summary>
-        public static StringAppendOperator New(Java.Lang.String arg0)
+        public static StringAppendOperator CreatePoolableInstance(Java.Lang.String arg0)
         {
             return JVMBridgeBase.New<StringAppendOperator>(arg0);
         }

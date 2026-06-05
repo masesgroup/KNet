@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
         /// <summary>
         /// HPA initializer for CooperativeStickyAssignor()
         /// </summary>
-        public static CooperativeStickyAssignor New()
+        public static CooperativeStickyAssignor CreatePoolableInstance()
         {
             return JVMBridgeBase.New<CooperativeStickyAssignor>();
         }

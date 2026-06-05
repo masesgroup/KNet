@@ -76,7 +76,7 @@ namespace Org.Apache.Kafka.Streams
         /// <summary>
         /// HPA initializer for KeyQueryMetadata(Org.Apache.Kafka.Streams.State.HostInfo arg0, Java.Util.Set%3COrg.Apache.Kafka.Streams.State.HostInfo%3E arg1, int arg2)
         /// </summary>
-        public static KeyQueryMetadata New(Org.Apache.Kafka.Streams.State.HostInfo arg0, Java.Util.Set<Org.Apache.Kafka.Streams.State.HostInfo> arg1, int arg2)
+        public static KeyQueryMetadata CreatePoolableInstance(Org.Apache.Kafka.Streams.State.HostInfo arg0, Java.Util.Set<Org.Apache.Kafka.Streams.State.HostInfo> arg1, int arg2)
         {
             return JVMBridgeBase.New<KeyQueryMetadata>(arg0, arg1, arg2);
         }

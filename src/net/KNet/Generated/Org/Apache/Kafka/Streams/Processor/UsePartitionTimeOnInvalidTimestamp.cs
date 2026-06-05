@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Streams.Processor
         /// <summary>
         /// HPA initializer for UsePartitionTimeOnInvalidTimestamp()
         /// </summary>
-        public static UsePartitionTimeOnInvalidTimestamp New()
+        public static UsePartitionTimeOnInvalidTimestamp CreatePoolableInstance()
         {
             return JVMBridgeBase.New<UsePartitionTimeOnInvalidTimestamp>();
         }

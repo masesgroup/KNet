@@ -80,7 +80,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <summary>
         /// HPA initializer for TransactionDescription(int arg0, Org.Apache.Kafka.Clients.Admin.TransactionState arg1, long arg2, int arg3, long arg4, Java.Util.OptionalLong arg5, Java.Util.Set%3COrg.Apache.Kafka.Common.TopicPartition%3E arg6)
         /// </summary>
-        public static TransactionDescription New(int arg0, Org.Apache.Kafka.Clients.Admin.TransactionState arg1, long arg2, int arg3, long arg4, Java.Util.OptionalLong arg5, Java.Util.Set<Org.Apache.Kafka.Common.TopicPartition> arg6)
+        public static TransactionDescription CreatePoolableInstance(int arg0, Org.Apache.Kafka.Clients.Admin.TransactionState arg1, long arg2, int arg3, long arg4, Java.Util.OptionalLong arg5, Java.Util.Set<Org.Apache.Kafka.Common.TopicPartition> arg6)
         {
             return JVMBridgeBase.New<TransactionDescription>(arg0, arg1, arg2, arg3, arg4, arg5, arg6);
         }

@@ -75,7 +75,7 @@ namespace Org.Apache.Kafka.Connect.Util
         /// <summary>
         /// HPA initializer for SafeObjectInputStream(Java.Io.InputStream arg0)
         /// </summary>
-        public static SafeObjectInputStream New(Java.Io.InputStream arg0)
+        public static SafeObjectInputStream CreatePoolableInstance(Java.Io.InputStream arg0)
         {
             return JVMBridgeBase.New<SafeObjectInputStream>(arg0);
         }

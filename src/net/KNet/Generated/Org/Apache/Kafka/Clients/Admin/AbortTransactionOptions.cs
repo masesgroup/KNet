@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <summary>
         /// HPA initializer for AbortTransactionOptions()
         /// </summary>
-        public static AbortTransactionOptions New()
+        public static AbortTransactionOptions CreatePoolableInstance()
         {
             return JVMBridgeBase.New<AbortTransactionOptions>();
         }

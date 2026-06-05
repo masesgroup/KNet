@@ -75,7 +75,7 @@ namespace Org.Apache.Kafka.Common.Metrics.Stats
         /// <summary>
         /// HPA initializer for Percentile(Org.Apache.Kafka.Common.MetricName arg0, double arg1)
         /// </summary>
-        public static Percentile New(Org.Apache.Kafka.Common.MetricName arg0, double arg1)
+        public static Percentile CreatePoolableInstance(Org.Apache.Kafka.Common.MetricName arg0, double arg1)
         {
             return JVMBridgeBase.New<Percentile>(arg0, arg1);
         }
