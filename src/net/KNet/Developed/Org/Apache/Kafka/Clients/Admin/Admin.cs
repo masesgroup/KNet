@@ -20,6 +20,7 @@ using Java.Time;
 using Java.Util;
 using Java.Util.Concurrent;
 using MASES.JCOBridge.C2JBridge;
+using MASES.JNet.Specific.Extensions;
 using Org.Apache.Kafka.Clients.Consumer;
 using Org.Apache.Kafka.Common;
 using Org.Apache.Kafka.Common.Acl;
@@ -281,7 +282,7 @@ namespace Org.Apache.Kafka.Clients.Admin
                                     var partitionIndex = partition.Partition();
                                     using TopicPartition topicPartition = new(topicName, partitionIndex);
                                     using var offsetSpec = OffsetSpec.Latest();
-                                    using var _ = hashMap.Put(topicPartition, offsetSpec);
+                                    hashMap.Put(topicPartition, offsetSpec).DisposeIfDisposable();
                                 }
                             }
 

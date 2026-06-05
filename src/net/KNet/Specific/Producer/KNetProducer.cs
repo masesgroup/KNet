@@ -19,6 +19,7 @@
 using Java.Util;
 using Java.Util.Concurrent;
 using MASES.JCOBridge.C2JBridge;
+using MASES.JNet.Specific.Extensions;
 using MASES.KNet.Serialization;
 using Org.Apache.Kafka.Clients.Producer;
 using Org.Apache.Kafka.Common.Header;
@@ -248,13 +249,13 @@ namespace MASES.KNet.Producer
         {
             if (!props.ContainsKey(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG))
             {
-                using var _ = props.Put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, keySerializer.JVMSerializerClassName) as IDisposable;
+                props.Put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, keySerializer.JVMSerializerClassName).DisposeIfDisposable();
             }
             else throw new InvalidOperationException($"KNetProducer auto manages configuration property {ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG}, remove from configuration.");
 
             if (!props.ContainsKey(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG))
             {
-                using var _ = props.Put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, valueSerializer.JVMSerializerClassName) as IDisposable;
+                props.Put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, valueSerializer.JVMSerializerClassName).DisposeIfDisposable();
             }
             else throw new InvalidOperationException($"KNetProducer auto manages configuration property {ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG}, remove from configuration.");
 
