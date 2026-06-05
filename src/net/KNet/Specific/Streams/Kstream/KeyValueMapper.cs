@@ -237,7 +237,7 @@ namespace MASES.KNet.Streams.Kstream
 
                 using var disposable0 = jKR as IDisposable;
                 using var disposable1 = jVR as IDisposable;
-                using var data = Org.Apache.Kafka.Streams.KeyValue<TJVMKR, TJVMVR>.New(jKR, jVR);
+                using var data = Org.Apache.Kafka.Streams.KeyValue<TJVMKR, TJVMVR>.CreatePoolableInstance(jKR, jVR);
                 result.Add(data);
             }
             return result;

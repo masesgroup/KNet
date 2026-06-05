@@ -295,7 +295,7 @@ namespace MASES.KNet.Producer
             using IDisposable disposableValue = jVMV as IDisposable;
             try
             {
-                return Org.Apache.Kafka.Clients.Producer.ProducerRecord<TJVMK, TJVMV>.New(topic, partition, timestamp, jVMK, jVMV, headers);
+                return Org.Apache.Kafka.Clients.Producer.ProducerRecord<TJVMK, TJVMV>.CreatePoolableInstance(topic, partition, timestamp, jVMK, jVMV, headers);
             }
             finally
             {

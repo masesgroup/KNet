@@ -53,7 +53,7 @@ namespace MASES.KNet.Streams
         public KNetStreams(Topology arg0, StreamsConfigBuilder arg1, Org.Apache.Kafka.Common.Utils.Time arg2)
         {
             _properties = PrepareProperties(arg1);
-            _inner = Org.Apache.Kafka.Streams.KafkaStreams.New(arg0, _properties, arg2);
+            _inner = Org.Apache.Kafka.Streams.KafkaStreams.CreatePoolableInstance(arg0, _properties, arg2);
             _factory = arg1;
         }
         /// <summary>
@@ -66,7 +66,7 @@ namespace MASES.KNet.Streams
         public KNetStreams(Topology arg0, StreamsConfigBuilder arg1, KNetClientSupplier arg2, Org.Apache.Kafka.Common.Utils.Time arg3)
         {
             _properties = PrepareProperties(arg1);
-            _inner = Org.Apache.Kafka.Streams.KafkaStreams.New(arg0, _properties, arg2, arg3);
+            _inner = Org.Apache.Kafka.Streams.KafkaStreams.CreatePoolableInstance(arg0, _properties, arg2, arg3);
             _factory = arg1;
             _supplier = arg2;
         }
@@ -79,7 +79,7 @@ namespace MASES.KNet.Streams
         public KNetStreams(Topology arg0, StreamsConfigBuilder arg1, KNetClientSupplier arg2)
         {
             _properties = PrepareProperties(arg1);
-            _inner = Org.Apache.Kafka.Streams.KafkaStreams.New(arg0, _properties, arg2);
+            _inner = Org.Apache.Kafka.Streams.KafkaStreams.CreatePoolableInstance(arg0, _properties, arg2);
             _factory = arg1;
             _supplier = arg2;
         }
@@ -91,7 +91,7 @@ namespace MASES.KNet.Streams
         public KNetStreams(Topology arg0, StreamsConfigBuilder arg1)
         {
             _properties = PrepareProperties(arg1);
-            _inner = Org.Apache.Kafka.Streams.KafkaStreams.New(arg0, _properties);
+            _inner = Org.Apache.Kafka.Streams.KafkaStreams.CreatePoolableInstance(arg0, _properties);
             _factory = arg1;
         }
         #endregion
