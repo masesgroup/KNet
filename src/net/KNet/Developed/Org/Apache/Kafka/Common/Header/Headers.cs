@@ -18,6 +18,7 @@
 
 using Java.Lang;
 using MASES.JCOBridge.C2JBridge.JVMInterop;
+using MASES.JNet.Specific.Extensions;
 
 namespace Org.Apache.Kafka.Common.Header
 {
@@ -53,7 +54,7 @@ namespace Org.Apache.Kafka.Common.Header
         /// <exception cref="Java.Lang.IllegalStateException"/>
         public void AddVoid(Java.Lang.String arg0, byte[] arg1)
         {
-            using var _ = Add(arg0, arg1);
+            Add(arg0, arg1).DisposeIfDisposable();
         }
         /// <summary>
         /// <see langword="void"/> version of <see cref="Add(Header)"/>
@@ -62,7 +63,7 @@ namespace Org.Apache.Kafka.Common.Header
         /// <exception cref="Java.Lang.IllegalStateException"/>
         public void AddVoid(Org.Apache.Kafka.Common.Header.Header arg0)
         {
-            using var _ = Add(arg0);
+            Add(arg0).DisposeIfDisposable();
         }
         /// <summary>
         /// <see langword="void"/> version of <see cref="Remove(String)"/>
@@ -71,7 +72,7 @@ namespace Org.Apache.Kafka.Common.Header
         /// <exception cref="Java.Lang.IllegalStateException"/>
         public void RemoveVoid(Java.Lang.String arg0)
         {
-            using var _ = Remove(arg0);
+            Remove(arg0).DisposeIfDisposable();
         }
     }
 }
