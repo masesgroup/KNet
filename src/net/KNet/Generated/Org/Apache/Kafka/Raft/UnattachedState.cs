@@ -81,7 +81,7 @@ namespace Org.Apache.Kafka.Raft
         /// <summary>
         /// HPA initializer for UnattachedState(Org.Apache.Kafka.Common.Utils.Time arg0, int arg1, Java.Util.OptionalInt arg2, Java.Util.Optional%3COrg.Apache.Kafka.Raft.ReplicaKey%3E arg3, Java.Util.Set%3CJava.Lang.Integer%3E arg4, Java.Util.Optional%3COrg.Apache.Kafka.Raft.LogOffsetMetadata%3E arg5, long arg6, Org.Apache.Kafka.Common.Utils.LogContext arg7)
         /// </summary>
-        public static UnattachedState New(Org.Apache.Kafka.Common.Utils.Time arg0, int arg1, Java.Util.OptionalInt arg2, Java.Util.Optional<Org.Apache.Kafka.Raft.ReplicaKey> arg3, Java.Util.Set<Java.Lang.Integer> arg4, Java.Util.Optional<Org.Apache.Kafka.Raft.LogOffsetMetadata> arg5, long arg6, Org.Apache.Kafka.Common.Utils.LogContext arg7)
+        public static UnattachedState CreatePoolableInstance(Org.Apache.Kafka.Common.Utils.Time arg0, int arg1, Java.Util.OptionalInt arg2, Java.Util.Optional<Org.Apache.Kafka.Raft.ReplicaKey> arg3, Java.Util.Set<Java.Lang.Integer> arg4, Java.Util.Optional<Org.Apache.Kafka.Raft.LogOffsetMetadata> arg5, long arg6, Org.Apache.Kafka.Common.Utils.LogContext arg7)
         {
             return JVMBridgeBase.New<UnattachedState>(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7);
         }

@@ -116,7 +116,7 @@ namespace Org.Apache.Kafka.Connect.Connector
         /// <summary>
         /// HPA initializer for ConnectRecord(Java.Lang.String arg0, Java.Lang.Integer arg1, Org.Apache.Kafka.Connect.Data.Schema arg2, object arg3, Org.Apache.Kafka.Connect.Data.Schema arg4, object arg5, Java.Lang.Long arg6, Java.Lang.Iterable arg7)
         /// </summary>
-        public static ConnectRecord New(Java.Lang.String arg0, Java.Lang.Integer arg1, Org.Apache.Kafka.Connect.Data.Schema arg2, object arg3, Org.Apache.Kafka.Connect.Data.Schema arg4, object arg5, Java.Lang.Long arg6, Java.Lang.Iterable arg7)
+        public static ConnectRecord CreatePoolableInstance(Java.Lang.String arg0, Java.Lang.Integer arg1, Org.Apache.Kafka.Connect.Data.Schema arg2, object arg3, Org.Apache.Kafka.Connect.Data.Schema arg4, object arg5, Java.Lang.Long arg6, Java.Lang.Iterable arg7)
         {
             return JVMBridgeBase.New<ConnectRecord>(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7);
         }
@@ -137,7 +137,7 @@ namespace Org.Apache.Kafka.Connect.Connector
         /// <summary>
         /// HPA initializer for ConnectRecord(Java.Lang.String arg0, Java.Lang.Integer arg1, Org.Apache.Kafka.Connect.Data.Schema arg2, object arg3, Org.Apache.Kafka.Connect.Data.Schema arg4, object arg5, Java.Lang.Long arg6)
         /// </summary>
-        public static ConnectRecord New(Java.Lang.String arg0, Java.Lang.Integer arg1, Org.Apache.Kafka.Connect.Data.Schema arg2, object arg3, Org.Apache.Kafka.Connect.Data.Schema arg4, object arg5, Java.Lang.Long arg6)
+        public static ConnectRecord CreatePoolableInstance(Java.Lang.String arg0, Java.Lang.Integer arg1, Org.Apache.Kafka.Connect.Data.Schema arg2, object arg3, Org.Apache.Kafka.Connect.Data.Schema arg4, object arg5, Java.Lang.Long arg6)
         {
             return JVMBridgeBase.New<ConnectRecord>(arg0, arg1, arg2, arg3, arg4, arg5, arg6);
         }
@@ -285,7 +285,7 @@ namespace Org.Apache.Kafka.Connect.Connector
         /// <summary>
         /// HPA initializer for ConnectRecord(Java.Lang.String arg0, Java.Lang.Integer arg1, Org.Apache.Kafka.Connect.Data.Schema arg2, object arg3, Org.Apache.Kafka.Connect.Data.Schema arg4, object arg5, Java.Lang.Long arg6, Java.Lang.Iterable%3COrg.Apache.Kafka.Connect.Header.Header%3E arg7)
         /// </summary>
-        public static ConnectRecord<R> New(Java.Lang.String arg0, Java.Lang.Integer arg1, Org.Apache.Kafka.Connect.Data.Schema arg2, object arg3, Org.Apache.Kafka.Connect.Data.Schema arg4, object arg5, Java.Lang.Long arg6, Java.Lang.Iterable<Org.Apache.Kafka.Connect.Header.Header> arg7)
+        public static ConnectRecord<R> CreatePoolableInstance(Java.Lang.String arg0, Java.Lang.Integer arg1, Org.Apache.Kafka.Connect.Data.Schema arg2, object arg3, Org.Apache.Kafka.Connect.Data.Schema arg4, object arg5, Java.Lang.Long arg6, Java.Lang.Iterable<Org.Apache.Kafka.Connect.Header.Header> arg7)
         {
             return JVMBridgeBase.New<ConnectRecord<R>>(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7);
         }
@@ -306,7 +306,7 @@ namespace Org.Apache.Kafka.Connect.Connector
         /// <summary>
         /// HPA initializer for ConnectRecord(Java.Lang.String arg0, Java.Lang.Integer arg1, Org.Apache.Kafka.Connect.Data.Schema arg2, object arg3, Org.Apache.Kafka.Connect.Data.Schema arg4, object arg5, Java.Lang.Long arg6)
         /// </summary>
-        public static ConnectRecord<R> New(Java.Lang.String arg0, Java.Lang.Integer arg1, Org.Apache.Kafka.Connect.Data.Schema arg2, object arg3, Org.Apache.Kafka.Connect.Data.Schema arg4, object arg5, Java.Lang.Long arg6)
+        public static ConnectRecord<R> CreatePoolableInstance(Java.Lang.String arg0, Java.Lang.Integer arg1, Org.Apache.Kafka.Connect.Data.Schema arg2, object arg3, Org.Apache.Kafka.Connect.Data.Schema arg4, object arg5, Java.Lang.Long arg6)
         {
             return JVMBridgeBase.New<ConnectRecord<R>>(arg0, arg1, arg2, arg3, arg4, arg5, arg6);
         }

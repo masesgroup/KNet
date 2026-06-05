@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Common.Replica
         /// <summary>
         /// HPA initializer for RackAwareReplicaSelector()
         /// </summary>
-        public static RackAwareReplicaSelector New()
+        public static RackAwareReplicaSelector CreatePoolableInstance()
         {
             return JVMBridgeBase.New<RackAwareReplicaSelector>();
         }

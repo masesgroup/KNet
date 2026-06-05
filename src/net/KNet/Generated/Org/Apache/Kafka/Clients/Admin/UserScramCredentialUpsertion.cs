@@ -77,7 +77,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <summary>
         /// HPA initializer for UserScramCredentialUpsertion(Java.Lang.String arg0, Org.Apache.Kafka.Clients.Admin.ScramCredentialInfo arg1, byte[] arg2, byte[] arg3)
         /// </summary>
-        public static UserScramCredentialUpsertion New(Java.Lang.String arg0, Org.Apache.Kafka.Clients.Admin.ScramCredentialInfo arg1, byte[] arg2, byte[] arg3)
+        public static UserScramCredentialUpsertion CreatePoolableInstance(Java.Lang.String arg0, Org.Apache.Kafka.Clients.Admin.ScramCredentialInfo arg1, byte[] arg2, byte[] arg3)
         {
             return JVMBridgeBase.New<UserScramCredentialUpsertion>(arg0, arg1, arg2, arg3);
         }
@@ -94,7 +94,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <summary>
         /// HPA initializer for UserScramCredentialUpsertion(Java.Lang.String arg0, Org.Apache.Kafka.Clients.Admin.ScramCredentialInfo arg1, byte[] arg2)
         /// </summary>
-        public static UserScramCredentialUpsertion New(Java.Lang.String arg0, Org.Apache.Kafka.Clients.Admin.ScramCredentialInfo arg1, byte[] arg2)
+        public static UserScramCredentialUpsertion CreatePoolableInstance(Java.Lang.String arg0, Org.Apache.Kafka.Clients.Admin.ScramCredentialInfo arg1, byte[] arg2)
         {
             return JVMBridgeBase.New<UserScramCredentialUpsertion>(arg0, arg1, arg2);
         }
@@ -111,7 +111,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <summary>
         /// HPA initializer for UserScramCredentialUpsertion(Java.Lang.String arg0, Org.Apache.Kafka.Clients.Admin.ScramCredentialInfo arg1, Java.Lang.String arg2)
         /// </summary>
-        public static UserScramCredentialUpsertion New(Java.Lang.String arg0, Org.Apache.Kafka.Clients.Admin.ScramCredentialInfo arg1, Java.Lang.String arg2)
+        public static UserScramCredentialUpsertion CreatePoolableInstance(Java.Lang.String arg0, Org.Apache.Kafka.Clients.Admin.ScramCredentialInfo arg1, Java.Lang.String arg2)
         {
             return JVMBridgeBase.New<UserScramCredentialUpsertion>(arg0, arg1, arg2);
         }

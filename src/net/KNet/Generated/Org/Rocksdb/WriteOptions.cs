@@ -73,7 +73,7 @@ namespace Org.Rocksdb
         /// <summary>
         /// HPA initializer for WriteOptions()
         /// </summary>
-        public static WriteOptions New()
+        public static WriteOptions CreatePoolableInstance()
         {
             return JVMBridgeBase.New<WriteOptions>();
         }
@@ -88,7 +88,7 @@ namespace Org.Rocksdb
         /// <summary>
         /// HPA initializer for WriteOptions(Org.Rocksdb.WriteOptions arg0)
         /// </summary>
-        public static WriteOptions New(Org.Rocksdb.WriteOptions arg0)
+        public static WriteOptions CreatePoolableInstance(Org.Rocksdb.WriteOptions arg0)
         {
             return JVMBridgeBase.New<WriteOptions>(arg0);
         }

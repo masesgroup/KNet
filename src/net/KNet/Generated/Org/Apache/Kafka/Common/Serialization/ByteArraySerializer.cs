@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Common.Serialization
         /// <summary>
         /// HPA initializer for ByteArraySerializer()
         /// </summary>
-        public static ByteArraySerializer New()
+        public static ByteArraySerializer CreatePoolableInstance()
         {
             return JVMBridgeBase.New<ByteArraySerializer>();
         }

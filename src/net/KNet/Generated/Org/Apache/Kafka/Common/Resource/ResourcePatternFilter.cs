@@ -76,7 +76,7 @@ namespace Org.Apache.Kafka.Common.Resource
         /// <summary>
         /// HPA initializer for ResourcePatternFilter(Org.Apache.Kafka.Common.Resource.ResourceType arg0, Java.Lang.String arg1, Org.Apache.Kafka.Common.Resource.PatternType arg2)
         /// </summary>
-        public static ResourcePatternFilter New(Org.Apache.Kafka.Common.Resource.ResourceType arg0, Java.Lang.String arg1, Org.Apache.Kafka.Common.Resource.PatternType arg2)
+        public static ResourcePatternFilter CreatePoolableInstance(Org.Apache.Kafka.Common.Resource.ResourceType arg0, Java.Lang.String arg1, Org.Apache.Kafka.Common.Resource.PatternType arg2)
         {
             return JVMBridgeBase.New<ResourcePatternFilter>(arg0, arg1, arg2);
         }

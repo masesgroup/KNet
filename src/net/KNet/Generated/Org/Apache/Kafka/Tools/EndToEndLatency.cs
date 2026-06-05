@@ -107,7 +107,7 @@ namespace Org.Apache.Kafka.Tools
         /// <summary>
         /// HPA initializer for EndToEndLatency()
         /// </summary>
-        public static EndToEndLatency New()
+        public static EndToEndLatency CreatePoolableInstance()
         {
             return JVMBridgeBase.New<EndToEndLatency>();
         }
@@ -154,7 +154,7 @@ namespace Org.Apache.Kafka.Tools
             /// <summary>
             /// HPA initializer for EndToEndLatencyCommandOptions(Java.Lang.String[] arg0)
             /// </summary>
-            public static EndToEndLatencyCommandOptions New(Java.Lang.String[] arg0)
+            public static EndToEndLatencyCommandOptions CreatePoolableInstance(Java.Lang.String[] arg0)
             {
                 return JVMBridgeBase.New<EndToEndLatencyCommandOptions>(arg0);
             }

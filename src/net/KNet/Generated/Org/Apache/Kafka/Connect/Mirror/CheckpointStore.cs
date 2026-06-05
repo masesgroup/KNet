@@ -75,7 +75,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
         /// <summary>
         /// HPA initializer for CheckpointStore(Org.Apache.Kafka.Connect.Mirror.MirrorCheckpointTaskConfig arg0, Java.Util.Set%3CJava.Lang.String%3E arg1)
         /// </summary>
-        public static CheckpointStore New(Org.Apache.Kafka.Connect.Mirror.MirrorCheckpointTaskConfig arg0, Java.Util.Set<Java.Lang.String> arg1)
+        public static CheckpointStore CreatePoolableInstance(Org.Apache.Kafka.Connect.Mirror.MirrorCheckpointTaskConfig arg0, Java.Util.Set<Java.Lang.String> arg1)
         {
             return JVMBridgeBase.New<CheckpointStore>(arg0, arg1);
         }

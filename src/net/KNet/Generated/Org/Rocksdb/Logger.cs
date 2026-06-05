@@ -75,7 +75,7 @@ namespace Org.Rocksdb
         /// <summary>
         /// HPA initializer for Logger(Org.Rocksdb.DBOptions arg0)
         /// </summary>
-        public static Logger New(Org.Rocksdb.DBOptions arg0)
+        public static Logger CreatePoolableInstance(Org.Rocksdb.DBOptions arg0)
         {
             return JVMBridgeBase.New<Logger>(arg0);
         }
@@ -90,7 +90,7 @@ namespace Org.Rocksdb
         /// <summary>
         /// HPA initializer for Logger(Org.Rocksdb.InfoLogLevel arg0)
         /// </summary>
-        public static Logger New(Org.Rocksdb.InfoLogLevel arg0)
+        public static Logger CreatePoolableInstance(Org.Rocksdb.InfoLogLevel arg0)
         {
             return JVMBridgeBase.New<Logger>(arg0);
         }
@@ -106,7 +106,7 @@ namespace Org.Rocksdb
         /// <summary>
         /// HPA initializer for Logger(Org.Rocksdb.Options arg0)
         /// </summary>
-        public static Logger New(Org.Rocksdb.Options arg0)
+        public static Logger CreatePoolableInstance(Org.Rocksdb.Options arg0)
         {
             return JVMBridgeBase.New<Logger>(arg0);
         }

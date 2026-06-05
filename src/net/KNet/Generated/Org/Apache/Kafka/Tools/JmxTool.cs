@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Tools
         /// <summary>
         /// HPA initializer for JmxTool()
         /// </summary>
-        public static JmxTool New()
+        public static JmxTool CreatePoolableInstance()
         {
             return JVMBridgeBase.New<JmxTool>();
         }

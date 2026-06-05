@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Common.Config
         /// <summary>
         /// HPA initializer for SecurityConfig()
         /// </summary>
-        public static SecurityConfig New()
+        public static SecurityConfig CreatePoolableInstance()
         {
             return JVMBridgeBase.New<SecurityConfig>();
         }

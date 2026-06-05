@@ -109,7 +109,7 @@ namespace Org.Apache.Kafka.Common.Quota
         /// <summary>
         /// HPA initializer for ClientQuotaAlteration(Org.Apache.Kafka.Common.Quota.ClientQuotaEntity arg0, Java.Util.Collection%3COrg.Apache.Kafka.Common.Quota.ClientQuotaAlteration.Op%3E arg1)
         /// </summary>
-        public static ClientQuotaAlteration New(Org.Apache.Kafka.Common.Quota.ClientQuotaEntity arg0, Java.Util.Collection<Org.Apache.Kafka.Common.Quota.ClientQuotaAlteration.Op> arg1)
+        public static ClientQuotaAlteration CreatePoolableInstance(Org.Apache.Kafka.Common.Quota.ClientQuotaEntity arg0, Java.Util.Collection<Org.Apache.Kafka.Common.Quota.ClientQuotaAlteration.Op> arg1)
         {
             return JVMBridgeBase.New<ClientQuotaAlteration>(arg0, arg1);
         }
@@ -165,7 +165,7 @@ namespace Org.Apache.Kafka.Common.Quota
             /// <summary>
             /// HPA initializer for Op(Java.Lang.String arg0, Java.Lang.Double arg1)
             /// </summary>
-            public static Op New(Java.Lang.String arg0, Java.Lang.Double arg1)
+            public static Op CreatePoolableInstance(Java.Lang.String arg0, Java.Lang.Double arg1)
             {
                 return JVMBridgeBase.New<Op>(arg0, arg1);
             }

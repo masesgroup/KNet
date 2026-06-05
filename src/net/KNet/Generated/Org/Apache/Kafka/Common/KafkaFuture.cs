@@ -248,7 +248,7 @@ namespace Org.Apache.Kafka.Common
         /// <summary>
         /// HPA initializer for KafkaFuture()
         /// </summary>
-        public static KafkaFuture New()
+        public static KafkaFuture CreatePoolableInstance()
         {
             return JVMBridgeBase.New<KafkaFuture>();
         }
@@ -572,7 +572,7 @@ namespace Org.Apache.Kafka.Common
         /// <summary>
         /// HPA initializer for KafkaFuture()
         /// </summary>
-        public static KafkaFuture<T> New()
+        public static KafkaFuture<T> CreatePoolableInstance()
         {
             return JVMBridgeBase.New<KafkaFuture<T>>();
         }

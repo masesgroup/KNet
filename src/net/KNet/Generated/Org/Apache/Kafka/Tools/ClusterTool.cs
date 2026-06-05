@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Tools
         /// <summary>
         /// HPA initializer for ClusterTool()
         /// </summary>
-        public static ClusterTool New()
+        public static ClusterTool CreatePoolableInstance()
         {
             return JVMBridgeBase.New<ClusterTool>();
         }

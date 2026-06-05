@@ -115,7 +115,7 @@ namespace Org.Apache.Kafka.Clients
         /// <summary>
         /// HPA initializer for GroupRebalanceConfig(int arg0, int arg1, int arg2, Java.Lang.String arg3, Java.Util.Optional%3CJava.Lang.String%3E arg4, Java.Lang.String arg5, long arg6, long arg7)
         /// </summary>
-        public static GroupRebalanceConfig New(int arg0, int arg1, int arg2, Java.Lang.String arg3, Java.Util.Optional<Java.Lang.String> arg4, Java.Lang.String arg5, long arg6, long arg7)
+        public static GroupRebalanceConfig CreatePoolableInstance(int arg0, int arg1, int arg2, Java.Lang.String arg3, Java.Util.Optional<Java.Lang.String> arg4, Java.Lang.String arg5, long arg6, long arg7)
         {
             return JVMBridgeBase.New<GroupRebalanceConfig>(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7);
         }
@@ -131,7 +131,7 @@ namespace Org.Apache.Kafka.Clients
         /// <summary>
         /// HPA initializer for GroupRebalanceConfig(Org.Apache.Kafka.Common.Config.AbstractConfig arg0, Org.Apache.Kafka.Clients.GroupRebalanceConfig.ProtocolType arg1)
         /// </summary>
-        public static GroupRebalanceConfig New(Org.Apache.Kafka.Common.Config.AbstractConfig arg0, Org.Apache.Kafka.Clients.GroupRebalanceConfig.ProtocolType arg1)
+        public static GroupRebalanceConfig CreatePoolableInstance(Org.Apache.Kafka.Common.Config.AbstractConfig arg0, Org.Apache.Kafka.Clients.GroupRebalanceConfig.ProtocolType arg1)
         {
             return JVMBridgeBase.New<GroupRebalanceConfig>(arg0, arg1);
         }

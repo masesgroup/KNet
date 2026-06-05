@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <summary>
         /// HPA initializer for DescribeUserScramCredentialsOptions()
         /// </summary>
-        public static DescribeUserScramCredentialsOptions New()
+        public static DescribeUserScramCredentialsOptions CreatePoolableInstance()
         {
             return JVMBridgeBase.New<DescribeUserScramCredentialsOptions>();
         }

@@ -142,7 +142,7 @@ namespace Org.Apache.Kafka.Common.Security.Oauthbearer
         /// <summary>
         /// HPA initializer for BrokerJwtValidator()
         /// </summary>
-        public static BrokerJwtValidator New()
+        public static BrokerJwtValidator CreatePoolableInstance()
         {
             return JVMBridgeBase.New<BrokerJwtValidator>();
         }

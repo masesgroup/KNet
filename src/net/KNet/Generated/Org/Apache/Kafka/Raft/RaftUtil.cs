@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Raft
         /// <summary>
         /// HPA initializer for RaftUtil()
         /// </summary>
-        public static RaftUtil New()
+        public static RaftUtil CreatePoolableInstance()
         {
             return JVMBridgeBase.New<RaftUtil>();
         }

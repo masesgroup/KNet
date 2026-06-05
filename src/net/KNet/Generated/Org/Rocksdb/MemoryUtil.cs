@@ -73,7 +73,7 @@ namespace Org.Rocksdb
         /// <summary>
         /// HPA initializer for MemoryUtil()
         /// </summary>
-        public static MemoryUtil New()
+        public static MemoryUtil CreatePoolableInstance()
         {
             return JVMBridgeBase.New<MemoryUtil>();
         }

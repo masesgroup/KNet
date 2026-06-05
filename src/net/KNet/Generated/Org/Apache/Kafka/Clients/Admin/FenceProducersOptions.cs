@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <summary>
         /// HPA initializer for FenceProducersOptions()
         /// </summary>
-        public static FenceProducersOptions New()
+        public static FenceProducersOptions CreatePoolableInstance()
         {
             return JVMBridgeBase.New<FenceProducersOptions>();
         }

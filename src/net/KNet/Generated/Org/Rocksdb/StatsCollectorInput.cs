@@ -75,7 +75,7 @@ namespace Org.Rocksdb
         /// <summary>
         /// HPA initializer for StatsCollectorInput(Org.Rocksdb.Statistics arg0, Org.Rocksdb.StatisticsCollectorCallback arg1)
         /// </summary>
-        public static StatsCollectorInput New(Org.Rocksdb.Statistics arg0, Org.Rocksdb.StatisticsCollectorCallback arg1)
+        public static StatsCollectorInput CreatePoolableInstance(Org.Rocksdb.Statistics arg0, Org.Rocksdb.StatisticsCollectorCallback arg1)
         {
             return JVMBridgeBase.New<StatsCollectorInput>(arg0, arg1);
         }

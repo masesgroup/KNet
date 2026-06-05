@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Common.Metrics
         /// <summary>
         /// HPA initializer for MetricConfig()
         /// </summary>
-        public static MetricConfig New()
+        public static MetricConfig CreatePoolableInstance()
         {
             return JVMBridgeBase.New<MetricConfig>();
         }

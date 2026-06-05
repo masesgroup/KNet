@@ -116,7 +116,7 @@ namespace Org.Apache.Kafka.Connect.Util
         /// <summary>
         /// HPA initializer for KafkaBasedLog(Java.Lang.String arg0, Java.Util.Map arg1, Java.Util.Map arg2, Java.Util.Function.Supplier arg3, Org.Apache.Kafka.Connect.Util.Callback arg4, Org.Apache.Kafka.Common.Utils.Time arg5, Java.Util.Function.Consumer arg6)
         /// </summary>
-        public static KafkaBasedLog New(Java.Lang.String arg0, Java.Util.Map arg1, Java.Util.Map arg2, Java.Util.Function.Supplier arg3, Org.Apache.Kafka.Connect.Util.Callback arg4, Org.Apache.Kafka.Common.Utils.Time arg5, Java.Util.Function.Consumer arg6)
+        public static KafkaBasedLog CreatePoolableInstance(Java.Lang.String arg0, Java.Util.Map arg1, Java.Util.Map arg2, Java.Util.Function.Supplier arg3, Org.Apache.Kafka.Connect.Util.Callback arg4, Org.Apache.Kafka.Common.Utils.Time arg5, Java.Util.Function.Consumer arg6)
         {
             return JVMBridgeBase.New<KafkaBasedLog>(arg0, arg1, arg2, arg3, arg4, arg5, arg6);
         }
@@ -277,7 +277,7 @@ namespace Org.Apache.Kafka.Connect.Util
         /// <summary>
         /// HPA initializer for KafkaBasedLog(Java.Lang.String arg0, Java.Util.Map%3CJava.Lang.String, object%3E arg1, Java.Util.Map%3CJava.Lang.String, object%3E arg2, Java.Util.Function.Supplier%3COrg.Apache.Kafka.Connect.Util.TopicAdmin%3E arg3, Org.Apache.Kafka.Connect.Util.Callback%3COrg.Apache.Kafka.Clients.Consumer.ConsumerRecord%3CK, V%3E%3E arg4, Org.Apache.Kafka.Common.Utils.Time arg5, Java.Util.Function.Consumer%3COrg.Apache.Kafka.Connect.Util.TopicAdmin%3E arg6)
         /// </summary>
-        public static KafkaBasedLog<K, V> New(Java.Lang.String arg0, Java.Util.Map<Java.Lang.String, object> arg1, Java.Util.Map<Java.Lang.String, object> arg2, Java.Util.Function.Supplier<Org.Apache.Kafka.Connect.Util.TopicAdmin> arg3, Org.Apache.Kafka.Connect.Util.Callback<Org.Apache.Kafka.Clients.Consumer.ConsumerRecord<K, V>> arg4, Org.Apache.Kafka.Common.Utils.Time arg5, Java.Util.Function.Consumer<Org.Apache.Kafka.Connect.Util.TopicAdmin> arg6)
+        public static KafkaBasedLog<K, V> CreatePoolableInstance(Java.Lang.String arg0, Java.Util.Map<Java.Lang.String, object> arg1, Java.Util.Map<Java.Lang.String, object> arg2, Java.Util.Function.Supplier<Org.Apache.Kafka.Connect.Util.TopicAdmin> arg3, Org.Apache.Kafka.Connect.Util.Callback<Org.Apache.Kafka.Clients.Consumer.ConsumerRecord<K, V>> arg4, Org.Apache.Kafka.Common.Utils.Time arg5, Java.Util.Function.Consumer<Org.Apache.Kafka.Connect.Util.TopicAdmin> arg6)
         {
             return JVMBridgeBase.New<KafkaBasedLog<K, V>>(arg0, arg1, arg2, arg3, arg4, arg5, arg6);
         }

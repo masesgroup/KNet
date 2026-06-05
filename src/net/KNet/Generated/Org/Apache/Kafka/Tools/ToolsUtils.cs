@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Tools
         /// <summary>
         /// HPA initializer for ToolsUtils()
         /// </summary>
-        public static ToolsUtils New()
+        public static ToolsUtils CreatePoolableInstance()
         {
             return JVMBridgeBase.New<ToolsUtils>();
         }

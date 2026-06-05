@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Common.Serialization
         /// <summary>
         /// HPA initializer for IntegerDeserializer()
         /// </summary>
-        public static IntegerDeserializer New()
+        public static IntegerDeserializer CreatePoolableInstance()
         {
             return JVMBridgeBase.New<IntegerDeserializer>();
         }

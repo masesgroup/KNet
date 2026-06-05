@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Clients
         /// <summary>
         /// HPA initializer for ManualMetadataUpdater()
         /// </summary>
-        public static ManualMetadataUpdater New()
+        public static ManualMetadataUpdater CreatePoolableInstance()
         {
             return JVMBridgeBase.New<ManualMetadataUpdater>();
         }
@@ -88,7 +88,7 @@ namespace Org.Apache.Kafka.Clients
         /// <summary>
         /// HPA initializer for ManualMetadataUpdater(Java.Util.List%3COrg.Apache.Kafka.Common.Node%3E arg0)
         /// </summary>
-        public static ManualMetadataUpdater New(Java.Util.List<Org.Apache.Kafka.Common.Node> arg0)
+        public static ManualMetadataUpdater CreatePoolableInstance(Java.Util.List<Org.Apache.Kafka.Common.Node> arg0)
         {
             return JVMBridgeBase.New<ManualMetadataUpdater>(arg0);
         }

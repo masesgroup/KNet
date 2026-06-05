@@ -76,7 +76,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <summary>
         /// HPA initializer for TransactionListing(Java.Lang.String arg0, long arg1, Org.Apache.Kafka.Clients.Admin.TransactionState arg2)
         /// </summary>
-        public static TransactionListing New(Java.Lang.String arg0, long arg1, Org.Apache.Kafka.Clients.Admin.TransactionState arg2)
+        public static TransactionListing CreatePoolableInstance(Java.Lang.String arg0, long arg1, Org.Apache.Kafka.Clients.Admin.TransactionState arg2)
         {
             return JVMBridgeBase.New<TransactionListing>(arg0, arg1, arg2);
         }

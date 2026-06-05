@@ -75,7 +75,7 @@ namespace Org.Apache.Kafka.Raft
         /// <summary>
         /// HPA initializer for LogOffsetMetadata(long arg0, Java.Util.Optional%3COrg.Apache.Kafka.Raft.OffsetMetadata%3E arg1)
         /// </summary>
-        public static LogOffsetMetadata New(long arg0, Java.Util.Optional<Org.Apache.Kafka.Raft.OffsetMetadata> arg1)
+        public static LogOffsetMetadata CreatePoolableInstance(long arg0, Java.Util.Optional<Org.Apache.Kafka.Raft.OffsetMetadata> arg1)
         {
             return JVMBridgeBase.New<LogOffsetMetadata>(arg0, arg1);
         }
@@ -90,7 +90,7 @@ namespace Org.Apache.Kafka.Raft
         /// <summary>
         /// HPA initializer for LogOffsetMetadata(long arg0)
         /// </summary>
-        public static LogOffsetMetadata New(long arg0)
+        public static LogOffsetMetadata CreatePoolableInstance(long arg0)
         {
             return JVMBridgeBase.New<LogOffsetMetadata>(arg0);
         }

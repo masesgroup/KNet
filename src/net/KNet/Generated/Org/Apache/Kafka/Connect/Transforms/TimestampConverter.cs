@@ -246,7 +246,7 @@ namespace Org.Apache.Kafka.Connect.Transforms
         /// <summary>
         /// HPA initializer for TimestampConverter()
         /// </summary>
-        public static TimestampConverter New()
+        public static TimestampConverter CreatePoolableInstance()
         {
             return JVMBridgeBase.New<TimestampConverter>();
         }
@@ -372,7 +372,7 @@ namespace Org.Apache.Kafka.Connect.Transforms
             /// <summary>
             /// HPA initializer for Key()
             /// </summary>
-            public static Key New()
+            public static Key CreatePoolableInstance()
             {
                 return JVMBridgeBase.New<Key>();
             }
@@ -417,7 +417,7 @@ namespace Org.Apache.Kafka.Connect.Transforms
             /// <summary>
             /// HPA initializer for Key()
             /// </summary>
-            public static Key<R> New()
+            public static Key<R> CreatePoolableInstance()
             {
                 return JVMBridgeBase.New<Key<R>>();
             }
@@ -466,7 +466,7 @@ namespace Org.Apache.Kafka.Connect.Transforms
             /// <summary>
             /// HPA initializer for Value()
             /// </summary>
-            public static Value New()
+            public static Value CreatePoolableInstance()
             {
                 return JVMBridgeBase.New<Value>();
             }
@@ -511,7 +511,7 @@ namespace Org.Apache.Kafka.Connect.Transforms
             /// <summary>
             /// HPA initializer for Value()
             /// </summary>
-            public static Value<R> New()
+            public static Value<R> CreatePoolableInstance()
             {
                 return JVMBridgeBase.New<Value<R>>();
             }
@@ -567,7 +567,7 @@ namespace Org.Apache.Kafka.Connect.Transforms
         /// <summary>
         /// HPA initializer for TimestampConverter()
         /// </summary>
-        public static TimestampConverter<R> New()
+        public static TimestampConverter<R> CreatePoolableInstance()
         {
             return JVMBridgeBase.New<TimestampConverter<R>>();
         }

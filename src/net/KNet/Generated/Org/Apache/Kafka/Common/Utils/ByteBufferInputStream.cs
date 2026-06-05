@@ -74,7 +74,7 @@ namespace Org.Apache.Kafka.Common.Utils
         /// <summary>
         /// HPA initializer for ByteBufferInputStream(Java.Nio.ByteBuffer arg0)
         /// </summary>
-        public static ByteBufferInputStream New(Java.Nio.ByteBuffer arg0)
+        public static ByteBufferInputStream CreatePoolableInstance(Java.Nio.ByteBuffer arg0)
         {
             return JVMBridgeBase.New<ByteBufferInputStream>(arg0);
         }

@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Common.Metrics.Stats
         /// <summary>
         /// HPA initializer for Value()
         /// </summary>
-        public static Value New()
+        public static Value CreatePoolableInstance()
         {
             return JVMBridgeBase.New<Value>();
         }

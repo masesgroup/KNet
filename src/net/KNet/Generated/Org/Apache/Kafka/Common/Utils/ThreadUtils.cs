@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Common.Utils
         /// <summary>
         /// HPA initializer for ThreadUtils()
         /// </summary>
-        public static ThreadUtils New()
+        public static ThreadUtils CreatePoolableInstance()
         {
             return JVMBridgeBase.New<ThreadUtils>();
         }

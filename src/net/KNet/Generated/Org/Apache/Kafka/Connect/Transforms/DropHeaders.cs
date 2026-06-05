@@ -108,7 +108,7 @@ namespace Org.Apache.Kafka.Connect.Transforms
         /// <summary>
         /// HPA initializer for DropHeaders()
         /// </summary>
-        public static DropHeaders New()
+        public static DropHeaders CreatePoolableInstance()
         {
             return JVMBridgeBase.New<DropHeaders>();
         }
@@ -213,7 +213,7 @@ namespace Org.Apache.Kafka.Connect.Transforms
         /// <summary>
         /// HPA initializer for DropHeaders()
         /// </summary>
-        public static DropHeaders<R> New()
+        public static DropHeaders<R> CreatePoolableInstance()
         {
             return JVMBridgeBase.New<DropHeaders<R>>();
         }

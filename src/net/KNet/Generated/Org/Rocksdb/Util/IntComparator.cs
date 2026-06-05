@@ -74,7 +74,7 @@ namespace Org.Rocksdb.Util
         /// <summary>
         /// HPA initializer for IntComparator(Org.Rocksdb.ComparatorOptions arg0)
         /// </summary>
-        public static IntComparator New(Org.Rocksdb.ComparatorOptions arg0)
+        public static IntComparator CreatePoolableInstance(Org.Rocksdb.ComparatorOptions arg0)
         {
             return JVMBridgeBase.New<IntComparator>(arg0);
         }

@@ -78,7 +78,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <summary>
         /// HPA initializer for TopicDescription(Java.Lang.String arg0, bool arg1, Java.Util.List%3COrg.Apache.Kafka.Common.TopicPartitionInfo%3E arg2, Java.Util.Set%3COrg.Apache.Kafka.Common.Acl.AclOperation%3E arg3, Org.Apache.Kafka.Common.Uuid arg4)
         /// </summary>
-        public static TopicDescription New(Java.Lang.String arg0, bool arg1, Java.Util.List<Org.Apache.Kafka.Common.TopicPartitionInfo> arg2, Java.Util.Set<Org.Apache.Kafka.Common.Acl.AclOperation> arg3, Org.Apache.Kafka.Common.Uuid arg4)
+        public static TopicDescription CreatePoolableInstance(Java.Lang.String arg0, bool arg1, Java.Util.List<Org.Apache.Kafka.Common.TopicPartitionInfo> arg2, Java.Util.Set<Org.Apache.Kafka.Common.Acl.AclOperation> arg3, Org.Apache.Kafka.Common.Uuid arg4)
         {
             return JVMBridgeBase.New<TopicDescription>(arg0, arg1, arg2, arg3, arg4);
         }
@@ -96,7 +96,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <summary>
         /// HPA initializer for TopicDescription(Java.Lang.String arg0, bool arg1, Java.Util.List%3COrg.Apache.Kafka.Common.TopicPartitionInfo%3E arg2, Java.Util.Set%3COrg.Apache.Kafka.Common.Acl.AclOperation%3E arg3)
         /// </summary>
-        public static TopicDescription New(Java.Lang.String arg0, bool arg1, Java.Util.List<Org.Apache.Kafka.Common.TopicPartitionInfo> arg2, Java.Util.Set<Org.Apache.Kafka.Common.Acl.AclOperation> arg3)
+        public static TopicDescription CreatePoolableInstance(Java.Lang.String arg0, bool arg1, Java.Util.List<Org.Apache.Kafka.Common.TopicPartitionInfo> arg2, Java.Util.Set<Org.Apache.Kafka.Common.Acl.AclOperation> arg3)
         {
             return JVMBridgeBase.New<TopicDescription>(arg0, arg1, arg2, arg3);
         }
@@ -113,7 +113,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <summary>
         /// HPA initializer for TopicDescription(Java.Lang.String arg0, bool arg1, Java.Util.List%3COrg.Apache.Kafka.Common.TopicPartitionInfo%3E arg2)
         /// </summary>
-        public static TopicDescription New(Java.Lang.String arg0, bool arg1, Java.Util.List<Org.Apache.Kafka.Common.TopicPartitionInfo> arg2)
+        public static TopicDescription CreatePoolableInstance(Java.Lang.String arg0, bool arg1, Java.Util.List<Org.Apache.Kafka.Common.TopicPartitionInfo> arg2)
         {
             return JVMBridgeBase.New<TopicDescription>(arg0, arg1, arg2);
         }

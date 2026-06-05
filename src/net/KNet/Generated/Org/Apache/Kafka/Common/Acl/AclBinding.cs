@@ -75,7 +75,7 @@ namespace Org.Apache.Kafka.Common.Acl
         /// <summary>
         /// HPA initializer for AclBinding(Org.Apache.Kafka.Common.Resource.ResourcePattern arg0, Org.Apache.Kafka.Common.Acl.AccessControlEntry arg1)
         /// </summary>
-        public static AclBinding New(Org.Apache.Kafka.Common.Resource.ResourcePattern arg0, Org.Apache.Kafka.Common.Acl.AccessControlEntry arg1)
+        public static AclBinding CreatePoolableInstance(Org.Apache.Kafka.Common.Resource.ResourcePattern arg0, Org.Apache.Kafka.Common.Acl.AccessControlEntry arg1)
         {
             return JVMBridgeBase.New<AclBinding>(arg0, arg1);
         }

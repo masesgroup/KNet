@@ -73,7 +73,7 @@ namespace Org.Rocksdb
         /// <summary>
         /// HPA initializer for OptimisticTransactionOptions()
         /// </summary>
-        public static OptimisticTransactionOptions New()
+        public static OptimisticTransactionOptions CreatePoolableInstance()
         {
             return JVMBridgeBase.New<OptimisticTransactionOptions>();
         }

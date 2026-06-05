@@ -175,7 +175,7 @@ namespace Org.Apache.Kafka.Tools
         /// <summary>
         /// HPA initializer for LogCompactionTester()
         /// </summary>
-        public static LogCompactionTester New()
+        public static LogCompactionTester CreatePoolableInstance()
         {
             return JVMBridgeBase.New<LogCompactionTester>();
         }
@@ -257,7 +257,7 @@ namespace Org.Apache.Kafka.Tools
             /// <summary>
             /// HPA initializer for TestRecord(Java.Lang.String topic, int key, long value, bool delete)
             /// </summary>
-            public static TestRecord New(Java.Lang.String topic, int key, long value, bool delete)
+            public static TestRecord CreatePoolableInstance(Java.Lang.String topic, int key, long value, bool delete)
             {
                 return JVMBridgeBase.New<TestRecord>(topic, key, value, delete);
             }
@@ -350,7 +350,7 @@ namespace Org.Apache.Kafka.Tools
             /// <summary>
             /// HPA initializer for TestRecordUtils()
             /// </summary>
-            public static TestRecordUtils New()
+            public static TestRecordUtils CreatePoolableInstance()
             {
                 return JVMBridgeBase.New<TestRecordUtils>();
             }

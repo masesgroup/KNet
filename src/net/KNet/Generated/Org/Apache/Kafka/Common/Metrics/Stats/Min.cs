@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Common.Metrics.Stats
         /// <summary>
         /// HPA initializer for Min()
         /// </summary>
-        public static Min New()
+        public static Min CreatePoolableInstance()
         {
             return JVMBridgeBase.New<Min>();
         }

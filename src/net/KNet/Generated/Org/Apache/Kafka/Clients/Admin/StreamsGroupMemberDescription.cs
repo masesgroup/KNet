@@ -156,7 +156,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <summary>
         /// HPA initializer for StreamsGroupMemberDescription(Java.Lang.String arg0, int arg1, Java.Util.Optional%3CJava.Lang.String%3E arg2, Java.Util.Optional%3CJava.Lang.String%3E arg3, Java.Lang.String arg4, Java.Lang.String arg5, int arg6, Java.Lang.String arg7, Java.Util.Optional%3COrg.Apache.Kafka.Clients.Admin.StreamsGroupMemberDescription.Endpoint%3E arg8, Java.Util.Map%3CJava.Lang.String, Java.Lang.String%3E arg9, Java.Util.List%3COrg.Apache.Kafka.Clients.Admin.StreamsGroupMemberDescription.TaskOffset%3E arg10, Java.Util.List%3COrg.Apache.Kafka.Clients.Admin.StreamsGroupMemberDescription.TaskOffset%3E arg11, Org.Apache.Kafka.Clients.Admin.StreamsGroupMemberAssignment arg12, Org.Apache.Kafka.Clients.Admin.StreamsGroupMemberAssignment arg13, bool arg14)
         /// </summary>
-        public static StreamsGroupMemberDescription New(Java.Lang.String arg0, int arg1, Java.Util.Optional<Java.Lang.String> arg2, Java.Util.Optional<Java.Lang.String> arg3, Java.Lang.String arg4, Java.Lang.String arg5, int arg6, Java.Lang.String arg7, Java.Util.Optional<Org.Apache.Kafka.Clients.Admin.StreamsGroupMemberDescription.Endpoint> arg8, Java.Util.Map<Java.Lang.String, Java.Lang.String> arg9, Java.Util.List<Org.Apache.Kafka.Clients.Admin.StreamsGroupMemberDescription.TaskOffset> arg10, Java.Util.List<Org.Apache.Kafka.Clients.Admin.StreamsGroupMemberDescription.TaskOffset> arg11, Org.Apache.Kafka.Clients.Admin.StreamsGroupMemberAssignment arg12, Org.Apache.Kafka.Clients.Admin.StreamsGroupMemberAssignment arg13, bool arg14)
+        public static StreamsGroupMemberDescription CreatePoolableInstance(Java.Lang.String arg0, int arg1, Java.Util.Optional<Java.Lang.String> arg2, Java.Util.Optional<Java.Lang.String> arg3, Java.Lang.String arg4, Java.Lang.String arg5, int arg6, Java.Lang.String arg7, Java.Util.Optional<Org.Apache.Kafka.Clients.Admin.StreamsGroupMemberDescription.Endpoint> arg8, Java.Util.Map<Java.Lang.String, Java.Lang.String> arg9, Java.Util.List<Org.Apache.Kafka.Clients.Admin.StreamsGroupMemberDescription.TaskOffset> arg10, Java.Util.List<Org.Apache.Kafka.Clients.Admin.StreamsGroupMemberDescription.TaskOffset> arg11, Org.Apache.Kafka.Clients.Admin.StreamsGroupMemberAssignment arg12, Org.Apache.Kafka.Clients.Admin.StreamsGroupMemberAssignment arg13, bool arg14)
         {
             return JVMBridgeBase.New<StreamsGroupMemberDescription>(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14);
         }
@@ -316,7 +316,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             /// <summary>
             /// HPA initializer for Endpoint(Java.Lang.String arg0, int arg1)
             /// </summary>
-            public static Endpoint New(Java.Lang.String arg0, int arg1)
+            public static Endpoint CreatePoolableInstance(Java.Lang.String arg0, int arg1)
             {
                 return JVMBridgeBase.New<Endpoint>(arg0, arg1);
             }
@@ -380,7 +380,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             /// <summary>
             /// HPA initializer for TaskOffset(Java.Lang.String arg0, int arg1, long arg2)
             /// </summary>
-            public static TaskOffset New(Java.Lang.String arg0, int arg1, long arg2)
+            public static TaskOffset CreatePoolableInstance(Java.Lang.String arg0, int arg1, long arg2)
             {
                 return JVMBridgeBase.New<TaskOffset>(arg0, arg1, arg2);
             }

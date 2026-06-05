@@ -108,7 +108,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <summary>
         /// HPA initializer for SessionWindowedDeserializer()
         /// </summary>
-        public static SessionWindowedDeserializer New()
+        public static SessionWindowedDeserializer CreatePoolableInstance()
         {
             return JVMBridgeBase.New<SessionWindowedDeserializer>();
         }
@@ -123,7 +123,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <summary>
         /// HPA initializer for SessionWindowedDeserializer(Org.Apache.Kafka.Common.Serialization.Deserializer arg0)
         /// </summary>
-        public static SessionWindowedDeserializer New(Org.Apache.Kafka.Common.Serialization.Deserializer arg0)
+        public static SessionWindowedDeserializer CreatePoolableInstance(Org.Apache.Kafka.Common.Serialization.Deserializer arg0)
         {
             return JVMBridgeBase.New<SessionWindowedDeserializer>(arg0);
         }
@@ -202,7 +202,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <summary>
         /// HPA initializer for SessionWindowedDeserializer()
         /// </summary>
-        public static SessionWindowedDeserializer<T> New()
+        public static SessionWindowedDeserializer<T> CreatePoolableInstance()
         {
             return JVMBridgeBase.New<SessionWindowedDeserializer<T>>();
         }
@@ -217,7 +217,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <summary>
         /// HPA initializer for SessionWindowedDeserializer(Org.Apache.Kafka.Common.Serialization.Deserializer%3CT%3E arg0)
         /// </summary>
-        public static SessionWindowedDeserializer<T> New(Org.Apache.Kafka.Common.Serialization.Deserializer<T> arg0)
+        public static SessionWindowedDeserializer<T> CreatePoolableInstance(Org.Apache.Kafka.Common.Serialization.Deserializer<T> arg0)
         {
             return JVMBridgeBase.New<SessionWindowedDeserializer<T>>(arg0);
         }

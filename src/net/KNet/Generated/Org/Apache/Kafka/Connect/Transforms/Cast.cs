@@ -246,7 +246,7 @@ namespace Org.Apache.Kafka.Connect.Transforms
         /// <summary>
         /// HPA initializer for Cast()
         /// </summary>
-        public static Cast New()
+        public static Cast CreatePoolableInstance()
         {
             return JVMBridgeBase.New<Cast>();
         }
@@ -348,7 +348,7 @@ namespace Org.Apache.Kafka.Connect.Transforms
             /// <summary>
             /// HPA initializer for Key()
             /// </summary>
-            public static Key New()
+            public static Key CreatePoolableInstance()
             {
                 return JVMBridgeBase.New<Key>();
             }
@@ -393,7 +393,7 @@ namespace Org.Apache.Kafka.Connect.Transforms
             /// <summary>
             /// HPA initializer for Key()
             /// </summary>
-            public static Key<R> New()
+            public static Key<R> CreatePoolableInstance()
             {
                 return JVMBridgeBase.New<Key<R>>();
             }
@@ -442,7 +442,7 @@ namespace Org.Apache.Kafka.Connect.Transforms
             /// <summary>
             /// HPA initializer for Value()
             /// </summary>
-            public static Value New()
+            public static Value CreatePoolableInstance()
             {
                 return JVMBridgeBase.New<Value>();
             }
@@ -487,7 +487,7 @@ namespace Org.Apache.Kafka.Connect.Transforms
             /// <summary>
             /// HPA initializer for Value()
             /// </summary>
-            public static Value<R> New()
+            public static Value<R> CreatePoolableInstance()
             {
                 return JVMBridgeBase.New<Value<R>>();
             }
@@ -543,7 +543,7 @@ namespace Org.Apache.Kafka.Connect.Transforms
         /// <summary>
         /// HPA initializer for Cast()
         /// </summary>
-        public static Cast<R> New()
+        public static Cast<R> CreatePoolableInstance()
         {
             return JVMBridgeBase.New<Cast<R>>();
         }

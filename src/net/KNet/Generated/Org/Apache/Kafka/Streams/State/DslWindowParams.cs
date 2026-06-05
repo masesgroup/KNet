@@ -80,7 +80,7 @@ namespace Org.Apache.Kafka.Streams.State
         /// <summary>
         /// HPA initializer for DslWindowParams(Java.Lang.String arg0, Java.Time.Duration arg1, Java.Time.Duration arg2, bool arg3, Org.Apache.Kafka.Streams.Kstream.EmitStrategy arg4, bool arg5, bool arg6)
         /// </summary>
-        public static DslWindowParams New(Java.Lang.String arg0, Java.Time.Duration arg1, Java.Time.Duration arg2, bool arg3, Org.Apache.Kafka.Streams.Kstream.EmitStrategy arg4, bool arg5, bool arg6)
+        public static DslWindowParams CreatePoolableInstance(Java.Lang.String arg0, Java.Time.Duration arg1, Java.Time.Duration arg2, bool arg3, Org.Apache.Kafka.Streams.Kstream.EmitStrategy arg4, bool arg5, bool arg6)
         {
             return JVMBridgeBase.New<DslWindowParams>(arg0, arg1, arg2, arg3, arg4, arg5, arg6);
         }

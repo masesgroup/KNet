@@ -175,7 +175,7 @@ namespace Org.Apache.Kafka.Common.Annotation
         /// <summary>
         /// HPA initializer for InterfaceStability()
         /// </summary>
-        public static InterfaceStability New()
+        public static InterfaceStability CreatePoolableInstance()
         {
             return JVMBridgeBase.New<InterfaceStability>();
         }

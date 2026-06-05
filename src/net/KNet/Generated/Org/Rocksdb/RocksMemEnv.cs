@@ -74,7 +74,7 @@ namespace Org.Rocksdb
         /// <summary>
         /// HPA initializer for RocksMemEnv(Org.Rocksdb.Env arg0)
         /// </summary>
-        public static RocksMemEnv New(Org.Rocksdb.Env arg0)
+        public static RocksMemEnv CreatePoolableInstance(Org.Rocksdb.Env arg0)
         {
             return JVMBridgeBase.New<RocksMemEnv>(arg0);
         }

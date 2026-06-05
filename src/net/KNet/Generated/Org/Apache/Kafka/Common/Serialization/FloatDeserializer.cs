@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Common.Serialization
         /// <summary>
         /// HPA initializer for FloatDeserializer()
         /// </summary>
-        public static FloatDeserializer New()
+        public static FloatDeserializer CreatePoolableInstance()
         {
             return JVMBridgeBase.New<FloatDeserializer>();
         }

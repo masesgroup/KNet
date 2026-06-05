@@ -75,7 +75,7 @@ namespace Org.Apache.Kafka.Connect.Transforms.Field
         /// <summary>
         /// HPA initializer for SingleFieldPath(Java.Lang.String arg0, Org.Apache.Kafka.Connect.Transforms.Field.FieldSyntaxVersion arg1)
         /// </summary>
-        public static SingleFieldPath New(Java.Lang.String arg0, Org.Apache.Kafka.Connect.Transforms.Field.FieldSyntaxVersion arg1)
+        public static SingleFieldPath CreatePoolableInstance(Java.Lang.String arg0, Org.Apache.Kafka.Connect.Transforms.Field.FieldSyntaxVersion arg1)
         {
             return JVMBridgeBase.New<SingleFieldPath>(arg0, arg1);
         }

@@ -75,7 +75,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
         /// <summary>
         /// HPA initializer for OffsetAndMetadata(long arg0, Java.Lang.String arg1)
         /// </summary>
-        public static OffsetAndMetadata New(long arg0, Java.Lang.String arg1)
+        public static OffsetAndMetadata CreatePoolableInstance(long arg0, Java.Lang.String arg1)
         {
             return JVMBridgeBase.New<OffsetAndMetadata>(arg0, arg1);
         }
@@ -92,7 +92,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
         /// <summary>
         /// HPA initializer for OffsetAndMetadata(long arg0, Java.Util.Optional%3CJava.Lang.Integer%3E arg1, Java.Lang.String arg2)
         /// </summary>
-        public static OffsetAndMetadata New(long arg0, Java.Util.Optional<Java.Lang.Integer> arg1, Java.Lang.String arg2)
+        public static OffsetAndMetadata CreatePoolableInstance(long arg0, Java.Util.Optional<Java.Lang.Integer> arg1, Java.Lang.String arg2)
         {
             return JVMBridgeBase.New<OffsetAndMetadata>(arg0, arg1, arg2);
         }
@@ -107,7 +107,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
         /// <summary>
         /// HPA initializer for OffsetAndMetadata(long arg0)
         /// </summary>
-        public static OffsetAndMetadata New(long arg0)
+        public static OffsetAndMetadata CreatePoolableInstance(long arg0)
         {
             return JVMBridgeBase.New<OffsetAndMetadata>(arg0);
         }

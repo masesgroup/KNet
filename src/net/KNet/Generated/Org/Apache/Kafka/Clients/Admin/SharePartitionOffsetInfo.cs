@@ -76,7 +76,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <summary>
         /// HPA initializer for SharePartitionOffsetInfo(long arg0, Java.Util.Optional%3CJava.Lang.Integer%3E arg1, Java.Util.Optional%3CJava.Lang.Long%3E arg2)
         /// </summary>
-        public static SharePartitionOffsetInfo New(long arg0, Java.Util.Optional<Java.Lang.Integer> arg1, Java.Util.Optional<Java.Lang.Long> arg2)
+        public static SharePartitionOffsetInfo CreatePoolableInstance(long arg0, Java.Util.Optional<Java.Lang.Integer> arg1, Java.Util.Optional<Java.Lang.Long> arg2)
         {
             return JVMBridgeBase.New<SharePartitionOffsetInfo>(arg0, arg1, arg2);
         }

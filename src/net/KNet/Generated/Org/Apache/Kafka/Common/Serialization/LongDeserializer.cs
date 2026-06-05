@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Common.Serialization
         /// <summary>
         /// HPA initializer for LongDeserializer()
         /// </summary>
-        public static LongDeserializer New()
+        public static LongDeserializer CreatePoolableInstance()
         {
             return JVMBridgeBase.New<LongDeserializer>();
         }

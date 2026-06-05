@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Common.Utils
         /// <summary>
         /// HPA initializer for LogContext()
         /// </summary>
-        public static LogContext New()
+        public static LogContext CreatePoolableInstance()
         {
             return JVMBridgeBase.New<LogContext>();
         }
@@ -88,7 +88,7 @@ namespace Org.Apache.Kafka.Common.Utils
         /// <summary>
         /// HPA initializer for LogContext(Java.Lang.String arg0)
         /// </summary>
-        public static LogContext New(Java.Lang.String arg0)
+        public static LogContext CreatePoolableInstance(Java.Lang.String arg0)
         {
             return JVMBridgeBase.New<LogContext>(arg0);
         }

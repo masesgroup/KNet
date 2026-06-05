@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Streams.Processor
         /// <summary>
         /// HPA initializer for FailOnInvalidTimestamp()
         /// </summary>
-        public static FailOnInvalidTimestamp New()
+        public static FailOnInvalidTimestamp CreatePoolableInstance()
         {
             return JVMBridgeBase.New<FailOnInvalidTimestamp>();
         }

@@ -130,7 +130,7 @@ namespace Org.Apache.Kafka.Common.Utils
         /// <summary>
         /// HPA initializer for Shell(long arg0)
         /// </summary>
-        public static Shell New(long arg0)
+        public static Shell CreatePoolableInstance(long arg0)
         {
             return JVMBridgeBase.New<Shell>(arg0);
         }
@@ -238,7 +238,7 @@ namespace Org.Apache.Kafka.Common.Utils
             /// <summary>
             /// HPA initializer for ShellCommandExecutor(Java.Lang.String[] arg0, long arg1)
             /// </summary>
-            public static ShellCommandExecutor New(Java.Lang.String[] arg0, long arg1)
+            public static ShellCommandExecutor CreatePoolableInstance(Java.Lang.String[] arg0, long arg1)
             {
                 return JVMBridgeBase.New<ShellCommandExecutor>(arg0, arg1);
             }

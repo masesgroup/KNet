@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Tools.Consumer.Group
         /// <summary>
         /// HPA initializer for ConsumerGroupCommand()
         /// </summary>
-        public static ConsumerGroupCommand New()
+        public static ConsumerGroupCommand CreatePoolableInstance()
         {
             return JVMBridgeBase.New<ConsumerGroupCommand>();
         }

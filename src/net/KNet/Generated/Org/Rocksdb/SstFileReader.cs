@@ -74,7 +74,7 @@ namespace Org.Rocksdb
         /// <summary>
         /// HPA initializer for SstFileReader(Org.Rocksdb.Options arg0)
         /// </summary>
-        public static SstFileReader New(Org.Rocksdb.Options arg0)
+        public static SstFileReader CreatePoolableInstance(Org.Rocksdb.Options arg0)
         {
             return JVMBridgeBase.New<SstFileReader>(arg0);
         }

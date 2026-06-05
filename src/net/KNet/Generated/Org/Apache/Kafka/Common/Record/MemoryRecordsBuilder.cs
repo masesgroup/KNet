@@ -538,7 +538,7 @@ namespace Org.Apache.Kafka.Common.Record
             /// <summary>
             /// HPA initializer for RecordsInfo(long arg0, long arg1)
             /// </summary>
-            public static RecordsInfo New(long arg0, long arg1)
+            public static RecordsInfo CreatePoolableInstance(long arg0, long arg1)
             {
                 return JVMBridgeBase.New<RecordsInfo>(arg0, arg1);
             }

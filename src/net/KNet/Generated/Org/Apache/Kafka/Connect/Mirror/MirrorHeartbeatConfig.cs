@@ -74,7 +74,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
         /// <summary>
         /// HPA initializer for MirrorHeartbeatConfig(Java.Util.Map%3CJava.Lang.String, Java.Lang.String%3E arg0)
         /// </summary>
-        public static MirrorHeartbeatConfig New(Java.Util.Map<Java.Lang.String, Java.Lang.String> arg0)
+        public static MirrorHeartbeatConfig CreatePoolableInstance(Java.Util.Map<Java.Lang.String, Java.Lang.String> arg0)
         {
             return JVMBridgeBase.New<MirrorHeartbeatConfig>(arg0);
         }

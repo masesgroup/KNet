@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Tools
         /// <summary>
         /// HPA initializer for ConnectPluginPath()
         /// </summary>
-        public static ConnectPluginPath New()
+        public static ConnectPluginPath CreatePoolableInstance()
         {
             return JVMBridgeBase.New<ConnectPluginPath>();
         }

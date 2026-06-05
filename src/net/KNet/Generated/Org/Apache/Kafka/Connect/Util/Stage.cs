@@ -75,7 +75,7 @@ namespace Org.Apache.Kafka.Connect.Util
         /// <summary>
         /// HPA initializer for Stage(Java.Lang.String arg0, long arg1)
         /// </summary>
-        public static Stage New(Java.Lang.String arg0, long arg1)
+        public static Stage CreatePoolableInstance(Java.Lang.String arg0, long arg1)
         {
             return JVMBridgeBase.New<Stage>(arg0, arg1);
         }

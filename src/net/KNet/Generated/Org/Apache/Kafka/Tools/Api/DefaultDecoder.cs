@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Tools.Api
         /// <summary>
         /// HPA initializer for DefaultDecoder()
         /// </summary>
-        public static DefaultDecoder New()
+        public static DefaultDecoder CreatePoolableInstance()
         {
             return JVMBridgeBase.New<DefaultDecoder>();
         }

@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <summary>
         /// HPA initializer for ListPartitionReassignmentsOptions()
         /// </summary>
-        public static ListPartitionReassignmentsOptions New()
+        public static ListPartitionReassignmentsOptions CreatePoolableInstance()
         {
             return JVMBridgeBase.New<ListPartitionReassignmentsOptions>();
         }

@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Streams.Errors.Internals
         /// <summary>
         /// HPA initializer for ExceptionHandlerUtils()
         /// </summary>
-        public static ExceptionHandlerUtils New()
+        public static ExceptionHandlerUtils CreatePoolableInstance()
         {
             return JVMBridgeBase.New<ExceptionHandlerUtils>();
         }

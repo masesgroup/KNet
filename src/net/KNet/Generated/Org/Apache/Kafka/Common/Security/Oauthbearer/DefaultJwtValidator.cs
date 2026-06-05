@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Common.Security.Oauthbearer
         /// <summary>
         /// HPA initializer for DefaultJwtValidator()
         /// </summary>
-        public static DefaultJwtValidator New()
+        public static DefaultJwtValidator CreatePoolableInstance()
         {
             return JVMBridgeBase.New<DefaultJwtValidator>();
         }

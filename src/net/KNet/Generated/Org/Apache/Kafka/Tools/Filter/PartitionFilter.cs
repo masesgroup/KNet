@@ -228,7 +228,7 @@ namespace Org.Apache.Kafka.Tools.Filter
             /// <summary>
             /// HPA initializer for PartitionRangeFilter(int arg0, int arg1)
             /// </summary>
-            public static PartitionRangeFilter New(int arg0, int arg1)
+            public static PartitionRangeFilter CreatePoolableInstance(int arg0, int arg1)
             {
                 return JVMBridgeBase.New<PartitionRangeFilter>(arg0, arg1);
             }
@@ -283,7 +283,7 @@ namespace Org.Apache.Kafka.Tools.Filter
             /// <summary>
             /// HPA initializer for PartitionsSetFilter(Java.Util.Set%3CJava.Lang.Integer%3E arg0)
             /// </summary>
-            public static PartitionsSetFilter New(Java.Util.Set<Java.Lang.Integer> arg0)
+            public static PartitionsSetFilter CreatePoolableInstance(Java.Util.Set<Java.Lang.Integer> arg0)
             {
                 return JVMBridgeBase.New<PartitionsSetFilter>(arg0);
             }
@@ -338,7 +338,7 @@ namespace Org.Apache.Kafka.Tools.Filter
             /// <summary>
             /// HPA initializer for UniquePartitionFilter(int arg0)
             /// </summary>
-            public static UniquePartitionFilter New(int arg0)
+            public static UniquePartitionFilter CreatePoolableInstance(int arg0)
             {
                 return JVMBridgeBase.New<UniquePartitionFilter>(arg0);
             }

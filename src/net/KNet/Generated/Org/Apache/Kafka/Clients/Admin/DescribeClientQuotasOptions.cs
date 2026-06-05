@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <summary>
         /// HPA initializer for DescribeClientQuotasOptions()
         /// </summary>
-        public static DescribeClientQuotasOptions New()
+        public static DescribeClientQuotasOptions CreatePoolableInstance()
         {
             return JVMBridgeBase.New<DescribeClientQuotasOptions>();
         }

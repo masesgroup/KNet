@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Connect.Mirror.Formatters
         /// <summary>
         /// HPA initializer for CheckpointFormatter()
         /// </summary>
-        public static CheckpointFormatter New()
+        public static CheckpointFormatter CreatePoolableInstance()
         {
             return JVMBridgeBase.New<CheckpointFormatter>();
         }

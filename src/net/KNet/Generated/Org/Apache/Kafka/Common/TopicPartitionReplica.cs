@@ -76,7 +76,7 @@ namespace Org.Apache.Kafka.Common
         /// <summary>
         /// HPA initializer for TopicPartitionReplica(Java.Lang.String arg0, int arg1, int arg2)
         /// </summary>
-        public static TopicPartitionReplica New(Java.Lang.String arg0, int arg1, int arg2)
+        public static TopicPartitionReplica CreatePoolableInstance(Java.Lang.String arg0, int arg1, int arg2)
         {
             return JVMBridgeBase.New<TopicPartitionReplica>(arg0, arg1, arg2);
         }

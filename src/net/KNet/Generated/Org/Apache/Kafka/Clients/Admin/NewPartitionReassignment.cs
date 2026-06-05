@@ -74,7 +74,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <summary>
         /// HPA initializer for NewPartitionReassignment(Java.Util.List%3CJava.Lang.Integer%3E arg0)
         /// </summary>
-        public static NewPartitionReassignment New(Java.Util.List<Java.Lang.Integer> arg0)
+        public static NewPartitionReassignment CreatePoolableInstance(Java.Util.List<Java.Lang.Integer> arg0)
         {
             return JVMBridgeBase.New<NewPartitionReassignment>(arg0);
         }

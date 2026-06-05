@@ -74,7 +74,7 @@ namespace Org.Apache.Kafka.Common.Config.Types
         /// <summary>
         /// HPA initializer for Password(Java.Lang.String arg0)
         /// </summary>
-        public static Password New(Java.Lang.String arg0)
+        public static Password CreatePoolableInstance(Java.Lang.String arg0)
         {
             return JVMBridgeBase.New<Password>(arg0);
         }

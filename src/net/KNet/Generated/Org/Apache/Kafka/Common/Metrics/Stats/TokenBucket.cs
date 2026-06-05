@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Common.Metrics.Stats
         /// <summary>
         /// HPA initializer for TokenBucket()
         /// </summary>
-        public static TokenBucket New()
+        public static TokenBucket CreatePoolableInstance()
         {
             return JVMBridgeBase.New<TokenBucket>();
         }
@@ -88,7 +88,7 @@ namespace Org.Apache.Kafka.Common.Metrics.Stats
         /// <summary>
         /// HPA initializer for TokenBucket(Java.Util.Concurrent.TimeUnit arg0)
         /// </summary>
-        public static TokenBucket New(Java.Util.Concurrent.TimeUnit arg0)
+        public static TokenBucket CreatePoolableInstance(Java.Util.Concurrent.TimeUnit arg0)
         {
             return JVMBridgeBase.New<TokenBucket>(arg0);
         }

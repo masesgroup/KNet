@@ -78,7 +78,7 @@ namespace Org.Apache.Kafka.Common.Security.Auth
         /// <summary>
         /// HPA initializer for SaslAuthenticationContext(Javax.Security.Sasl.SaslServer arg0, Org.Apache.Kafka.Common.Security.Auth.SecurityProtocol arg1, Java.Net.InetAddress arg2, Java.Lang.String arg3, Java.Util.Optional%3CJavax.Net.Ssl.SSLSession%3E arg4)
         /// </summary>
-        public static SaslAuthenticationContext New(Javax.Security.Sasl.SaslServer arg0, Org.Apache.Kafka.Common.Security.Auth.SecurityProtocol arg1, Java.Net.InetAddress arg2, Java.Lang.String arg3, Java.Util.Optional<Javax.Net.Ssl.SSLSession> arg4)
+        public static SaslAuthenticationContext CreatePoolableInstance(Javax.Security.Sasl.SaslServer arg0, Org.Apache.Kafka.Common.Security.Auth.SecurityProtocol arg1, Java.Net.InetAddress arg2, Java.Lang.String arg3, Java.Util.Optional<Javax.Net.Ssl.SSLSession> arg4)
         {
             return JVMBridgeBase.New<SaslAuthenticationContext>(arg0, arg1, arg2, arg3, arg4);
         }
@@ -96,7 +96,7 @@ namespace Org.Apache.Kafka.Common.Security.Auth
         /// <summary>
         /// HPA initializer for SaslAuthenticationContext(Javax.Security.Sasl.SaslServer arg0, Org.Apache.Kafka.Common.Security.Auth.SecurityProtocol arg1, Java.Net.InetAddress arg2, Java.Lang.String arg3)
         /// </summary>
-        public static SaslAuthenticationContext New(Javax.Security.Sasl.SaslServer arg0, Org.Apache.Kafka.Common.Security.Auth.SecurityProtocol arg1, Java.Net.InetAddress arg2, Java.Lang.String arg3)
+        public static SaslAuthenticationContext CreatePoolableInstance(Javax.Security.Sasl.SaslServer arg0, Org.Apache.Kafka.Common.Security.Auth.SecurityProtocol arg1, Java.Net.InetAddress arg2, Java.Lang.String arg3)
         {
             return JVMBridgeBase.New<SaslAuthenticationContext>(arg0, arg1, arg2, arg3);
         }

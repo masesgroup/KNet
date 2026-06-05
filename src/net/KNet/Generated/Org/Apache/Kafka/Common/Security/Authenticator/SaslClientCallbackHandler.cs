@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Common.Security.Authenticator
         /// <summary>
         /// HPA initializer for SaslClientCallbackHandler()
         /// </summary>
-        public static SaslClientCallbackHandler New()
+        public static SaslClientCallbackHandler CreatePoolableInstance()
         {
             return JVMBridgeBase.New<SaslClientCallbackHandler>();
         }

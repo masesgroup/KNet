@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Tools
         /// <summary>
         /// HPA initializer for StreamsResetter()
         /// </summary>
-        public static StreamsResetter New()
+        public static StreamsResetter CreatePoolableInstance()
         {
             return JVMBridgeBase.New<StreamsResetter>();
         }

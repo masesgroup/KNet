@@ -75,7 +75,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <summary>
         /// HPA initializer for ScramCredentialInfo(Org.Apache.Kafka.Clients.Admin.ScramMechanism arg0, int arg1)
         /// </summary>
-        public static ScramCredentialInfo New(Org.Apache.Kafka.Clients.Admin.ScramMechanism arg0, int arg1)
+        public static ScramCredentialInfo CreatePoolableInstance(Org.Apache.Kafka.Clients.Admin.ScramMechanism arg0, int arg1)
         {
             return JVMBridgeBase.New<ScramCredentialInfo>(arg0, arg1);
         }

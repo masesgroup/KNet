@@ -79,7 +79,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <summary>
         /// HPA initializer for ConsumerGroupListing(Java.Lang.String arg0, bool arg1, Java.Util.Optional%3COrg.Apache.Kafka.Common.ConsumerGroupState%3E arg2, Java.Util.Optional%3COrg.Apache.Kafka.Common.GroupType%3E arg3)
         /// </summary>
-        public static ConsumerGroupListing New(Java.Lang.String arg0, bool arg1, Java.Util.Optional<Org.Apache.Kafka.Common.ConsumerGroupState> arg2, Java.Util.Optional<Org.Apache.Kafka.Common.GroupType> arg3)
+        public static ConsumerGroupListing CreatePoolableInstance(Java.Lang.String arg0, bool arg1, Java.Util.Optional<Org.Apache.Kafka.Common.ConsumerGroupState> arg2, Java.Util.Optional<Org.Apache.Kafka.Common.GroupType> arg3)
         {
             return JVMBridgeBase.New<ConsumerGroupListing>(arg0, arg1, arg2, arg3);
         }
@@ -97,7 +97,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <summary>
         /// HPA initializer for ConsumerGroupListing(Java.Lang.String arg0, bool arg1, Java.Util.Optional%3COrg.Apache.Kafka.Common.ConsumerGroupState%3E arg2)
         /// </summary>
-        public static ConsumerGroupListing New(Java.Lang.String arg0, bool arg1, Java.Util.Optional<Org.Apache.Kafka.Common.ConsumerGroupState> arg2)
+        public static ConsumerGroupListing CreatePoolableInstance(Java.Lang.String arg0, bool arg1, Java.Util.Optional<Org.Apache.Kafka.Common.ConsumerGroupState> arg2)
         {
             return JVMBridgeBase.New<ConsumerGroupListing>(arg0, arg1, arg2);
         }
@@ -113,7 +113,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <summary>
         /// HPA initializer for ConsumerGroupListing(Java.Lang.String arg0, bool arg1)
         /// </summary>
-        public static ConsumerGroupListing New(Java.Lang.String arg0, bool arg1)
+        public static ConsumerGroupListing CreatePoolableInstance(Java.Lang.String arg0, bool arg1)
         {
             return JVMBridgeBase.New<ConsumerGroupListing>(arg0, arg1);
         }
@@ -130,7 +130,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <summary>
         /// HPA initializer for ConsumerGroupListing(Java.Lang.String arg0, Java.Util.Optional%3COrg.Apache.Kafka.Common.GroupState%3E arg1, bool arg2)
         /// </summary>
-        public static ConsumerGroupListing New(Java.Lang.String arg0, Java.Util.Optional<Org.Apache.Kafka.Common.GroupState> arg1, bool arg2)
+        public static ConsumerGroupListing CreatePoolableInstance(Java.Lang.String arg0, Java.Util.Optional<Org.Apache.Kafka.Common.GroupState> arg1, bool arg2)
         {
             return JVMBridgeBase.New<ConsumerGroupListing>(arg0, arg1, arg2);
         }
@@ -148,7 +148,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <summary>
         /// HPA initializer for ConsumerGroupListing(Java.Lang.String arg0, Java.Util.Optional%3COrg.Apache.Kafka.Common.GroupState%3E arg1, Java.Util.Optional%3COrg.Apache.Kafka.Common.GroupType%3E arg2, bool arg3)
         /// </summary>
-        public static ConsumerGroupListing New(Java.Lang.String arg0, Java.Util.Optional<Org.Apache.Kafka.Common.GroupState> arg1, Java.Util.Optional<Org.Apache.Kafka.Common.GroupType> arg2, bool arg3)
+        public static ConsumerGroupListing CreatePoolableInstance(Java.Lang.String arg0, Java.Util.Optional<Org.Apache.Kafka.Common.GroupState> arg1, Java.Util.Optional<Org.Apache.Kafka.Common.GroupType> arg2, bool arg3)
         {
             return JVMBridgeBase.New<ConsumerGroupListing>(arg0, arg1, arg2, arg3);
         }

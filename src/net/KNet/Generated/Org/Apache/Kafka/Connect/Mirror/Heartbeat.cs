@@ -76,7 +76,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
         /// <summary>
         /// HPA initializer for Heartbeat(Java.Lang.String arg0, Java.Lang.String arg1, long arg2)
         /// </summary>
-        public static Heartbeat New(Java.Lang.String arg0, Java.Lang.String arg1, long arg2)
+        public static Heartbeat CreatePoolableInstance(Java.Lang.String arg0, Java.Lang.String arg1, long arg2)
         {
             return JVMBridgeBase.New<Heartbeat>(arg0, arg1, arg2);
         }

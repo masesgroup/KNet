@@ -142,7 +142,7 @@ namespace Org.Apache.Kafka.Common.Security.Authenticator
         /// <summary>
         /// HPA initializer for CredentialCache()
         /// </summary>
-        public static CredentialCache New()
+        public static CredentialCache CreatePoolableInstance()
         {
             return JVMBridgeBase.New<CredentialCache>();
         }
@@ -203,7 +203,7 @@ namespace Org.Apache.Kafka.Common.Security.Authenticator
             /// <summary>
             /// HPA initializer for Cache(Java.Lang.Class arg0)
             /// </summary>
-            public static Cache New(Java.Lang.Class arg0)
+            public static Cache CreatePoolableInstance(Java.Lang.Class arg0)
             {
                 return JVMBridgeBase.New<Cache>(arg0);
             }
@@ -285,7 +285,7 @@ namespace Org.Apache.Kafka.Common.Security.Authenticator
             /// <summary>
             /// HPA initializer for Cache(Java.Lang.Class arg0)
             /// </summary>
-            public static Cache<C> New(Java.Lang.Class arg0)
+            public static Cache<C> CreatePoolableInstance(Java.Lang.Class arg0)
             {
                 return JVMBridgeBase.New<Cache<C>>(arg0);
             }

@@ -74,7 +74,7 @@ namespace Org.Rocksdb
         /// <summary>
         /// HPA initializer for SstPartitionerFixedPrefixFactory(long arg0)
         /// </summary>
-        public static SstPartitionerFixedPrefixFactory New(long arg0)
+        public static SstPartitionerFixedPrefixFactory CreatePoolableInstance(long arg0)
         {
             return JVMBridgeBase.New<SstPartitionerFixedPrefixFactory>(arg0);
         }

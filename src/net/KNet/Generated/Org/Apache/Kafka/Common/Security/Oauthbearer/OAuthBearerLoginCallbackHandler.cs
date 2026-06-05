@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Common.Security.Oauthbearer
         /// <summary>
         /// HPA initializer for OAuthBearerLoginCallbackHandler()
         /// </summary>
-        public static OAuthBearerLoginCallbackHandler New()
+        public static OAuthBearerLoginCallbackHandler CreatePoolableInstance()
         {
             return JVMBridgeBase.New<OAuthBearerLoginCallbackHandler>();
         }

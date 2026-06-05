@@ -141,7 +141,7 @@ namespace Org.Apache.Kafka.Common.Utils
         /// <summary>
         /// HPA initializer for Exit()
         /// </summary>
-        public static Exit New()
+        public static Exit CreatePoolableInstance()
         {
             return JVMBridgeBase.New<Exit>();
         }

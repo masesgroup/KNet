@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Common.Security.Ssl
         /// <summary>
         /// HPA initializer for DefaultSslEngineFactory()
         /// </summary>
-        public static DefaultSslEngineFactory New()
+        public static DefaultSslEngineFactory CreatePoolableInstance()
         {
             return JVMBridgeBase.New<DefaultSslEngineFactory>();
         }

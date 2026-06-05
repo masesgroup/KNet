@@ -73,7 +73,7 @@ namespace Org.Rocksdb
         /// <summary>
         /// HPA initializer for EnvOptions()
         /// </summary>
-        public static EnvOptions New()
+        public static EnvOptions CreatePoolableInstance()
         {
             return JVMBridgeBase.New<EnvOptions>();
         }
@@ -88,7 +88,7 @@ namespace Org.Rocksdb
         /// <summary>
         /// HPA initializer for EnvOptions(Org.Rocksdb.DBOptions arg0)
         /// </summary>
-        public static EnvOptions New(Org.Rocksdb.DBOptions arg0)
+        public static EnvOptions CreatePoolableInstance(Org.Rocksdb.DBOptions arg0)
         {
             return JVMBridgeBase.New<EnvOptions>(arg0);
         }

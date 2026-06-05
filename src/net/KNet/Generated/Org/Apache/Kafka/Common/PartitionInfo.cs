@@ -79,7 +79,7 @@ namespace Org.Apache.Kafka.Common
         /// <summary>
         /// HPA initializer for PartitionInfo(Java.Lang.String arg0, int arg1, Org.Apache.Kafka.Common.Node arg2, Org.Apache.Kafka.Common.Node[] arg3, Org.Apache.Kafka.Common.Node[] arg4, Org.Apache.Kafka.Common.Node[] arg5)
         /// </summary>
-        public static PartitionInfo New(Java.Lang.String arg0, int arg1, Org.Apache.Kafka.Common.Node arg2, Org.Apache.Kafka.Common.Node[] arg3, Org.Apache.Kafka.Common.Node[] arg4, Org.Apache.Kafka.Common.Node[] arg5)
+        public static PartitionInfo CreatePoolableInstance(Java.Lang.String arg0, int arg1, Org.Apache.Kafka.Common.Node arg2, Org.Apache.Kafka.Common.Node[] arg3, Org.Apache.Kafka.Common.Node[] arg4, Org.Apache.Kafka.Common.Node[] arg5)
         {
             return JVMBridgeBase.New<PartitionInfo>(arg0, arg1, arg2, arg3, arg4, arg5);
         }
@@ -98,7 +98,7 @@ namespace Org.Apache.Kafka.Common
         /// <summary>
         /// HPA initializer for PartitionInfo(Java.Lang.String arg0, int arg1, Org.Apache.Kafka.Common.Node arg2, Org.Apache.Kafka.Common.Node[] arg3, Org.Apache.Kafka.Common.Node[] arg4)
         /// </summary>
-        public static PartitionInfo New(Java.Lang.String arg0, int arg1, Org.Apache.Kafka.Common.Node arg2, Org.Apache.Kafka.Common.Node[] arg3, Org.Apache.Kafka.Common.Node[] arg4)
+        public static PartitionInfo CreatePoolableInstance(Java.Lang.String arg0, int arg1, Org.Apache.Kafka.Common.Node arg2, Org.Apache.Kafka.Common.Node[] arg3, Org.Apache.Kafka.Common.Node[] arg4)
         {
             return JVMBridgeBase.New<PartitionInfo>(arg0, arg1, arg2, arg3, arg4);
         }

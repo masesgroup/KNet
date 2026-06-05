@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Connect.Json
         /// <summary>
         /// HPA initializer for JsonSchema()
         /// </summary>
-        public static JsonSchema New()
+        public static JsonSchema CreatePoolableInstance()
         {
             return JVMBridgeBase.New<JsonSchema>();
         }

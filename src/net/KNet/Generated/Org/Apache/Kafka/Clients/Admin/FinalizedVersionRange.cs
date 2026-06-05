@@ -75,7 +75,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <summary>
         /// HPA initializer for FinalizedVersionRange(short arg0, short arg1)
         /// </summary>
-        public static FinalizedVersionRange New(short arg0, short arg1)
+        public static FinalizedVersionRange CreatePoolableInstance(short arg0, short arg1)
         {
             return JVMBridgeBase.New<FinalizedVersionRange>(arg0, arg1);
         }

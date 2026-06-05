@@ -80,7 +80,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <summary>
         /// HPA initializer for ClassicGroupDescription(Java.Lang.String arg0, Java.Lang.String arg1, Java.Lang.String arg2, Java.Util.Collection%3COrg.Apache.Kafka.Clients.Admin.MemberDescription%3E arg3, Org.Apache.Kafka.Common.ClassicGroupState arg4, Org.Apache.Kafka.Common.Node arg5, Java.Util.Set%3COrg.Apache.Kafka.Common.Acl.AclOperation%3E arg6)
         /// </summary>
-        public static ClassicGroupDescription New(Java.Lang.String arg0, Java.Lang.String arg1, Java.Lang.String arg2, Java.Util.Collection<Org.Apache.Kafka.Clients.Admin.MemberDescription> arg3, Org.Apache.Kafka.Common.ClassicGroupState arg4, Org.Apache.Kafka.Common.Node arg5, Java.Util.Set<Org.Apache.Kafka.Common.Acl.AclOperation> arg6)
+        public static ClassicGroupDescription CreatePoolableInstance(Java.Lang.String arg0, Java.Lang.String arg1, Java.Lang.String arg2, Java.Util.Collection<Org.Apache.Kafka.Clients.Admin.MemberDescription> arg3, Org.Apache.Kafka.Common.ClassicGroupState arg4, Org.Apache.Kafka.Common.Node arg5, Java.Util.Set<Org.Apache.Kafka.Common.Acl.AclOperation> arg6)
         {
             return JVMBridgeBase.New<ClassicGroupDescription>(arg0, arg1, arg2, arg3, arg4, arg5, arg6);
         }
@@ -100,7 +100,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <summary>
         /// HPA initializer for ClassicGroupDescription(Java.Lang.String arg0, Java.Lang.String arg1, Java.Lang.String arg2, Java.Util.Collection%3COrg.Apache.Kafka.Clients.Admin.MemberDescription%3E arg3, Org.Apache.Kafka.Common.ClassicGroupState arg4, Org.Apache.Kafka.Common.Node arg5)
         /// </summary>
-        public static ClassicGroupDescription New(Java.Lang.String arg0, Java.Lang.String arg1, Java.Lang.String arg2, Java.Util.Collection<Org.Apache.Kafka.Clients.Admin.MemberDescription> arg3, Org.Apache.Kafka.Common.ClassicGroupState arg4, Org.Apache.Kafka.Common.Node arg5)
+        public static ClassicGroupDescription CreatePoolableInstance(Java.Lang.String arg0, Java.Lang.String arg1, Java.Lang.String arg2, Java.Util.Collection<Org.Apache.Kafka.Clients.Admin.MemberDescription> arg3, Org.Apache.Kafka.Common.ClassicGroupState arg4, Org.Apache.Kafka.Common.Node arg5)
         {
             return JVMBridgeBase.New<ClassicGroupDescription>(arg0, arg1, arg2, arg3, arg4, arg5);
         }

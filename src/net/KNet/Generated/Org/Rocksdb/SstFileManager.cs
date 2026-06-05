@@ -79,7 +79,7 @@ namespace Org.Rocksdb
         /// <summary>
         /// HPA initializer for SstFileManager(Org.Rocksdb.Env arg0, Org.Rocksdb.Logger arg1, long arg2, double arg3, long arg4)
         /// </summary>
-        public static SstFileManager New(Org.Rocksdb.Env arg0, Org.Rocksdb.Logger arg1, long arg2, double arg3, long arg4)
+        public static SstFileManager CreatePoolableInstance(Org.Rocksdb.Env arg0, Org.Rocksdb.Logger arg1, long arg2, double arg3, long arg4)
         {
             return JVMBridgeBase.New<SstFileManager>(arg0, arg1, arg2, arg3, arg4);
         }
@@ -98,7 +98,7 @@ namespace Org.Rocksdb
         /// <summary>
         /// HPA initializer for SstFileManager(Org.Rocksdb.Env arg0, Org.Rocksdb.Logger arg1, long arg2, double arg3)
         /// </summary>
-        public static SstFileManager New(Org.Rocksdb.Env arg0, Org.Rocksdb.Logger arg1, long arg2, double arg3)
+        public static SstFileManager CreatePoolableInstance(Org.Rocksdb.Env arg0, Org.Rocksdb.Logger arg1, long arg2, double arg3)
         {
             return JVMBridgeBase.New<SstFileManager>(arg0, arg1, arg2, arg3);
         }
@@ -116,7 +116,7 @@ namespace Org.Rocksdb
         /// <summary>
         /// HPA initializer for SstFileManager(Org.Rocksdb.Env arg0, Org.Rocksdb.Logger arg1, long arg2)
         /// </summary>
-        public static SstFileManager New(Org.Rocksdb.Env arg0, Org.Rocksdb.Logger arg1, long arg2)
+        public static SstFileManager CreatePoolableInstance(Org.Rocksdb.Env arg0, Org.Rocksdb.Logger arg1, long arg2)
         {
             return JVMBridgeBase.New<SstFileManager>(arg0, arg1, arg2);
         }
@@ -133,7 +133,7 @@ namespace Org.Rocksdb
         /// <summary>
         /// HPA initializer for SstFileManager(Org.Rocksdb.Env arg0, Org.Rocksdb.Logger arg1)
         /// </summary>
-        public static SstFileManager New(Org.Rocksdb.Env arg0, Org.Rocksdb.Logger arg1)
+        public static SstFileManager CreatePoolableInstance(Org.Rocksdb.Env arg0, Org.Rocksdb.Logger arg1)
         {
             return JVMBridgeBase.New<SstFileManager>(arg0, arg1);
         }
@@ -149,7 +149,7 @@ namespace Org.Rocksdb
         /// <summary>
         /// HPA initializer for SstFileManager(Org.Rocksdb.Env arg0)
         /// </summary>
-        public static SstFileManager New(Org.Rocksdb.Env arg0)
+        public static SstFileManager CreatePoolableInstance(Org.Rocksdb.Env arg0)
         {
             return JVMBridgeBase.New<SstFileManager>(arg0);
         }

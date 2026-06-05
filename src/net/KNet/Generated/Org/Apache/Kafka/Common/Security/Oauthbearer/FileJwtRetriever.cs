@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Common.Security.Oauthbearer
         /// <summary>
         /// HPA initializer for FileJwtRetriever()
         /// </summary>
-        public static FileJwtRetriever New()
+        public static FileJwtRetriever CreatePoolableInstance()
         {
             return JVMBridgeBase.New<FileJwtRetriever>();
         }

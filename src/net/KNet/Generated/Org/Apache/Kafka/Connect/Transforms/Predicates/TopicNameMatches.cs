@@ -108,7 +108,7 @@ namespace Org.Apache.Kafka.Connect.Transforms.Predicates
         /// <summary>
         /// HPA initializer for TopicNameMatches()
         /// </summary>
-        public static TopicNameMatches New()
+        public static TopicNameMatches CreatePoolableInstance()
         {
             return JVMBridgeBase.New<TopicNameMatches>();
         }
@@ -209,7 +209,7 @@ namespace Org.Apache.Kafka.Connect.Transforms.Predicates
         /// <summary>
         /// HPA initializer for TopicNameMatches()
         /// </summary>
-        public static TopicNameMatches<R> New()
+        public static TopicNameMatches<R> CreatePoolableInstance()
         {
             return JVMBridgeBase.New<TopicNameMatches<R>>();
         }

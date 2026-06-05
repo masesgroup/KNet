@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Tools
         /// <summary>
         /// HPA initializer for TransactionalMessageCopier()
         /// </summary>
-        public static TransactionalMessageCopier New()
+        public static TransactionalMessageCopier CreatePoolableInstance()
         {
             return JVMBridgeBase.New<TransactionalMessageCopier>();
         }
