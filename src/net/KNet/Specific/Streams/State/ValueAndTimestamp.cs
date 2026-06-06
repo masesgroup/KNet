@@ -81,17 +81,17 @@ namespace MASES.KNet.Streams.State
         #endregion
 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/state/ValueAndTimestamp.html#timestamp()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/state/ValueAndTimestamp.html#timestamp()"/>
         /// </summary>
         /// <returns><see cref="long"/></returns>
         public long Timestamp { get { CheckDisposed(); return _inner.Timestamp(); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/state/ValueAndTimestamp.html#timestamp()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/state/ValueAndTimestamp.html#timestamp()"/>
         /// </summary>
         /// <returns><see cref="DateTime"/></returns>
         public DateTime DateTime => DateTimeOffset.FromUnixTimeMilliseconds(Timestamp).DateTime;
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/state/ValueAndTimestamp.html#value()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/state/ValueAndTimestamp.html#value()"/>
         /// </summary>
         /// <returns><typeparamref name="V"/></returns>
         public V Value

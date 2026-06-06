@@ -25,7 +25,7 @@ namespace MASES.KNet.Streams
 {
     #region KeyValueSupport<K, V>
     /// <summary>
-    /// Support class for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/KeyValue.html#org.apache.kafka.streams.KeyValue"/>
+    /// Support class for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/KeyValue.html#org.apache.kafka.streams.KeyValue"/>
     /// </summary>
     public partial class KeyValueSupport<K, V> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<KeyValueSupport<K, V>>
     {
@@ -39,7 +39,7 @@ namespace MASES.KNet.Streams
 
         #endregion
         /// <summary>
-        /// Initialize a new instance of <see cref="KeyValueSupport{K, V}"/> from an instance of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/KeyValue.html#org.apache.kafka.streams.KeyValue(java.lang.Object,java.lang.Object)"/>
+        /// Initialize a new instance of <see cref="KeyValueSupport{K, V}"/> from an instance of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/KeyValue.html#org.apache.kafka.streams.KeyValue(java.lang.Object,java.lang.Object)"/>
         /// </summary>
         /// <param name="obj">The <see cref="IJavaObject"/> referring <see cref="Org.Apache.Kafka.Streams.KeyValue{K, V}"/></param>
         public static KeyValueSupport<K, V> Create(Org.Apache.Kafka.Streams.KeyValue<K, V> obj)
@@ -47,7 +47,7 @@ namespace MASES.KNet.Streams
             return Create(obj.BridgeInstance);
         }
         /// <summary>
-        /// Initialize a new instance of <see cref="KeyValueSupport{K, V}"/> from an instance of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/KeyValue.html#org.apache.kafka.streams.KeyValue(java.lang.Object,java.lang.Object)"/>
+        /// Initialize a new instance of <see cref="KeyValueSupport{K, V}"/> from an instance of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/KeyValue.html#org.apache.kafka.streams.KeyValue(java.lang.Object,java.lang.Object)"/>
         /// </summary>
         /// <param name="obj">The <see cref="IJavaObject"/> referring <see cref="Org.Apache.Kafka.Streams.KeyValue{K, V}"/></param>
         public static KeyValueSupport<K, V> Create(IJavaObject obj)
